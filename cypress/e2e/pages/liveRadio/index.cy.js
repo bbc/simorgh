@@ -7,6 +7,54 @@ const tests = [e2eTests];
 
 const testSuites = [
   {
+    path: '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
+    service: 'afaanoromoo',
+    runforEnv: ['local', 'live'],
+    tests,
+  },
+  {
+    path: '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
+    service: 'afaanoromoo',
+    runforEnv: ['local', 'live'],
+    tests,
+  },
+  {
+    path: '/afrique/bbc_afrique_radio/liveradio',
+    service: 'afrique',
+    runforEnv: ['local', 'live'],
+    tests,
+  },
+  {
+    path: '/amharic/bbc_amharic_radio/liveradio',
+    service: 'amharic',
+    runforEnv: ['local', 'live'],
+    tests,
+  },
+  {
+    path: '/arabic/bbc_arabic_radio/liveradio',
+    service: 'arabic',
+    runforEnv: ['local', 'live'],
+    tests,
+  },
+  {
+    path: '/bengali/bbc_bangla_radio/liveradio',
+    service: 'bengali',
+    runforEnv: ['local', 'live'],
+    tests,
+  },
+  {
+    path: '/bengali/bbc_bangla_radio/liveradio',
+    service: 'bengali',
+    runforEnv: ['local', 'live'],
+    tests,
+  },
+  {
+    path: '/burmese/bbc_burmese_radio/liveradio',
+    service: 'burmese',
+    runforEnv: ['local', 'live'],
+    tests,
+  },
+  {
     path: '/gahuza/bbc_gahuza_radio/liveradio',
     service: 'gahuza',
     runforEnv: ['local', 'live'],
@@ -132,60 +180,12 @@ const testSuites = [
     runforEnv: ['local', 'live'],
     tests,
   },
-  {
-    path: '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
-    service: 'afaanoromoo',
-    runforEnv: ['local', 'live'],
-    tests,
-  },
-  {
-    path: '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
-    service: 'afaanoromoo',
-    runforEnv: ['local', 'live'],
-    tests,
-  },
-  {
-    path: '/afrique/bbc_afrique_radio/liveradio',
-    service: 'afrique',
-    runforEnv: ['local', 'live'],
-    tests,
-  },
-  {
-    path: '/amharic/bbc_amharic_radio/liveradio',
-    service: 'amharic',
-    runforEnv: ['local', 'live'],
-    tests,
-  },
-  {
-    path: '/arabic/bbc_arabic_radio/liveradio',
-    service: 'arabic',
-    runforEnv: ['local', 'live'],
-    tests,
-  },
-  {
-    path: '/bengali/bbc_bangla_radio/liveradio',
-    service: 'bengali',
-    runforEnv: ['local', 'live'],
-    tests,
-  },
-  {
-    path: '/bengali/bbc_bangla_radio/liveradio',
-    service: 'bengali',
-    runforEnv: ['local', 'live'],
-    tests,
-  },
-  {
-    path: '/burmese/bbc_burmese_radio/liveradio',
-    service: 'burmese',
-    runforEnv: ['local', 'live'],
-    tests,
-  },
 ];
 
 const testEnvSuites = testSuites.map(testSuite => {
   return {
     ...testSuite,
-    path: `${testSuite.path}?renderer_env=live`,
+    path: testSuite.path,
     runforEnv: ['test'],
   };
 });
