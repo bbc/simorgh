@@ -1,11 +1,11 @@
-const path = require('path');
-const fs = require('fs');
+import path from 'path';
+import fs from 'fs';
 
+// const filename = fileURLToPath(import.meta.url);
+// const dirname = path.dirname(filename);
 const appDirectory = fs.realpathSync(process.cwd());
-
 const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
-
-module.exports = {
+export default {
   webpackDirAlias: {
     '#app': resolvePath('src/app'),
     '#src': resolvePath('src'),
