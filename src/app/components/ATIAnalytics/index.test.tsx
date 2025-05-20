@@ -1023,14 +1023,30 @@ describe('ATI Analytics Container', () => {
         metadata: { atiAnalytics },
       } = articleDataNews;
 
-      render(<ATIAnalytics atiData={atiAnalytics} />, {
-        ...defaultRenderProps,
-        atiData: atiAnalytics,
-        isAmp: false,
-        pageData: articleDataNews,
-        pageType: ARTICLE_PAGE,
-        isUK: true,
-      });
+      // @ts-expect-error - only partial data required to manually set 'useReverb' to false
+      const serviceContextProps: ServiceConfig = {
+        atiAnalyticsAppName: 'atiAnalyticsAppName',
+        atiAnalyticsProducerId: 'atiAnalyticsProducerId',
+        atiAnalyticsProducerName: 'atiAnalyticsProducerName',
+        service: 'news',
+        brandName: 'brandName',
+        lang: 'en-GB',
+        useReverb: false,
+      };
+
+      render(
+        <ServiceContext.Provider value={serviceContextProps}>
+          <ATIAnalytics atiData={atiAnalytics} />
+        </ServiceContext.Provider>,
+        {
+          ...defaultRenderProps,
+          atiData: atiAnalytics,
+          isAmp: false,
+          pageData: articleDataNews,
+          pageType: ARTICLE_PAGE,
+          isUK: true,
+        },
+      );
 
       const { reverbParams } = mockCanonical.mock.calls[0][0];
 
