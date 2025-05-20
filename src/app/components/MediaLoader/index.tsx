@@ -309,10 +309,8 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
             type={mediaType}
             css={[
               styles.figure(embedded),
-              playerConfig?.ui?.skin === 'classic' && [
-                isPortraitVideo && styles.captionPortrait,
-              ],
               isAudio && styles.captionAudio,
+              !isAudio && [isPortraitVideo && styles.captionPortrait],
             ]}
           />
         )}
