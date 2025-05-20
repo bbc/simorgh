@@ -9,6 +9,7 @@ export const assertMessageBannerComponentView = ({
   componentTrackingContentType,
   useReverb,
   path,
+  applicationType,
 }) => {
   it('should send a view event for the Message Banner component', () => {
     interceptATIAnalyticsBeacons();
@@ -23,6 +24,7 @@ export const assertMessageBannerComponentView = ({
       pageIdentifier,
       contentType: componentTrackingContentType || contentType,
       useReverb,
+      applicationType,
     });
   });
 };
@@ -33,6 +35,7 @@ export const assertMessageBannerComponentClick = ({
   componentTrackingContentType,
   useReverb,
   path,
+  applicationType,
 }) => {
   it('should send a click event for the Message Banner component', () => {
     interceptATIAnalyticsBeacons();
@@ -50,6 +53,7 @@ export const assertMessageBannerComponentClick = ({
       pageIdentifier,
       contentType: componentTrackingContentType || contentType,
       useReverb,
+      applicationType,
     });
   });
 };

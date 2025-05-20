@@ -52,6 +52,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
     metadata: { atiAnalytics },
   } = pageData;
   const itemList = getItemList({ curations, name: brandName });
+
   return (
     <>
       <ChartbeatAnalytics title={title} />
