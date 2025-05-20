@@ -3910,28 +3910,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@loadable/component@npm:5.16.4":
-  version: 5.16.4
-  resolution: "@loadable/component@npm:5.16.4"
+"@loadable/component@npm:5.16.7":
+  version: 5.16.7
+  resolution: "@loadable/component@npm:5.16.7"
   dependencies:
     "@babel/runtime": "npm:^7.12.18"
     hoist-non-react-statics: "npm:^3.3.1"
     react-is: "npm:^16.12.0"
   peerDependencies:
-    react: ^16.3.0 || ^17.0.0 || ^18.0.0
-  checksum: 10/ff434e13df559184f6bc85155a72edfbd1d6b814dfd06cb066908e8fc27f6265fa905bb72bf2fb139074d7777491c22c4d44ce077a4f4852157928ff7118de46
+    react: ^16.3.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+  checksum: 10/2ddec033ae94b9411dcc34a8ef2e08c338e6f887ae3e426af8c726be4f9f7cc64e4379fce6a96bf50611e4e557f848e3c15b6947a731a363bb44a7a0aea62af1
   languageName: node
   linkType: hard
 
-"@loadable/server@npm:5.16.5":
-  version: 5.16.5
-  resolution: "@loadable/server@npm:5.16.5"
+"@loadable/server@npm:5.16.7":
+  version: 5.16.7
+  resolution: "@loadable/server@npm:5.16.7"
   dependencies:
     lodash: "npm:^4.17.15"
   peerDependencies:
     "@loadable/component": ^5.0.1
-    react: ^16.3.0 || ^17.0.0 || ^18.0.0
-  checksum: 10/6b1b65d403deff4e7882a0a1df2b1da5e31aa8c4956ef0292a5ff2e6eee9177b545b40a5974eccf8613491c49632324c2bd9aec959c8bc4b83a702dbf2f09472
+    react: ^16.3.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+  checksum: 10/7ba2640b058bcff1a45d437892914b5612ffc516d79717f256a1140f96e9d76fb05adccbf40d0cad3906af6a7e9a58194e24dc85938538ce9bed0e5e81b6c584
   languageName: node
   linkType: hard
 
@@ -15963,8 +15963,8 @@ __metadata:
     "@esbuild/win32-arm64": "npm:0.25.4"
     "@esbuild/win32-x64": "npm:0.25.4"
     "@loadable/babel-plugin": "npm:5.16.1"
-    "@loadable/component": "npm:5.16.4"
-    "@loadable/server": "npm:5.16.5"
+    "@loadable/component": "npm:5.16.7"
+    "@loadable/server": "npm:5.16.7"
     "@loadable/webpack-plugin": "npm:5.15.2"
     "@optimizely/react-sdk": "npm:3.2.3"
     "@storybook/addon-a11y": "npm:8.6.12"
