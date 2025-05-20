@@ -266,10 +266,8 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
         css={[
           styles.figure(embedded),
           isAudio && styles.audioFigure,
-          !isAudio && [
-            isPortraitVideo && styles.portraitFigure(embedded),
-            isLandscapeVideo && styles.landscapeFigure,
-          ],
+          !isAudio && [isPortraitVideo && styles.portraitFigure(embedded)],
+          isLandscapeVideo && styles.landscapeFigure,
         ]}
       >
         {isAmp ? (
