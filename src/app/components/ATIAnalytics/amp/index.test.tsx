@@ -3,9 +3,7 @@ import React from 'react';
 import { render } from '../../react-testing-library-with-providers';
 import AmpATIAnalytics from '.';
 import { ReverbBeaconConfig } from '../types';
-
-const splitUrl = (url: string) =>
-  url.replace(/&/g, ',').replace(/\?/g, ',').split(',');
+import splitUrl from '../atiUrl/splitUrl';
 
 describe('Amp ATI Analytics', () => {
   const atiBaseUrl = 'https://foobar.com?';
