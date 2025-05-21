@@ -8,12 +8,6 @@
     "./src/app/legacy/psammead/psammead-locales/**/*.*",
     "./cypress/**/*.*"
   ],
-  "resolutions": {
-    "@optimizely/js-sdk-utils": "0.4.0",
-    "winston@3.8.2": "patch:winston@npm:3.8.2#.yarn/patches/winston-npm-3.8.2-2035e9cac4.patch",
-    "cookie": "0.7.1",
-    "react-is": "19.0.0"
-  },
   "workspaces": {
     "packages": [
       "ws-nextjs-app",
@@ -96,6 +90,9 @@
     "url": "https://github.com/bbc/simorgh/issues"
   },
   "homepage": "https://github.com/bbc/simorgh#readme",
+  "resolutions": {
+    "react-is": "19"
+  },
   "dependencies": {
     "@bbc/reverb-url-helper": "https://mybbc-analytics.files.bbci.co.uk/reverb-url-helper/bbc-reverb-url-helper-1.0.2.tgz",
     "@bbc/web-vitals": "2.5.3",
