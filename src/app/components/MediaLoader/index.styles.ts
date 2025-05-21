@@ -1,5 +1,3 @@
-import { PageTypes } from '#app/models/types/global';
-import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
@@ -55,39 +53,35 @@ export default {
       !isEmbedded && commonMarginSpacing,
     ],
 
-  audioMediaContainer:
-    (pageType: PageTypes) =>
-    ({ mq, spacings }: Theme) =>
-      css({
-        height: '165px',
-        ...(pageType === LIVE_PAGE && {
-          height: '130px',
-          margin: `0 0 ${spacings.FULL}rem 0`,
-          [mq.GROUP_2_MIN_WIDTH]: {
-            padding: `0 ${spacings.FULL}rem`,
-          },
-          [`@media (min-width: 548px)`]: {
-            padding: '0 0',
-          },
-          [mq.GROUP_3_MIN_WIDTH]: {
-            marginInlineEnd: `${spacings.DOUBLE}rem`,
-          },
-          [mq.GROUP_4_MIN_WIDTH]: {
-            marginInlineStart: `-${spacings.DOUBLE}rem`,
-          },
-        }),
-      }),
+  audioMediaContainer: ({ mq, spacings }: Theme) =>
+    css({
+      height: '165px',
+      '.audio-post &&': {
+        height: '140px',
+        margin: `0 0 ${spacings.FULL}rem 0`,
+        [mq.GROUP_2_MIN_WIDTH]: {
+          padding: `0 ${spacings.FULL}rem`,
+        },
+        [`@media (min-width: 548px)`]: {
+          padding: '0 0',
+        },
+        [mq.GROUP_3_MIN_WIDTH]: {
+          marginInlineEnd: `${spacings.DOUBLE}rem`,
+        },
+        [mq.GROUP_4_MIN_WIDTH]: {
+          marginInlineStart: `-${spacings.DOUBLE}rem`,
+        },
+      },
+    }),
 
-  audioFigure:
-    (pageType: PageTypes) =>
-    ({ spacings }: Theme) =>
-      css({
-        ...(pageType === LIVE_PAGE && {
-          margin: `0 0 ${spacings.FULL}rem 0`,
-          aspectRatio: '16 / 9',
-          overflow: 'hidden',
-        }),
-      }),
+  audioFigure: ({ spacings }: Theme) =>
+    css({
+      '.audio-post': {
+        margin: `0 0 ${spacings.FULL}rem 0`,
+        aspectRatio: '16 / 9',
+        overflow: 'hidden',
+      },
+    }),
 
   standardMediaContainer: ({ palette }: Theme) =>
     css({
