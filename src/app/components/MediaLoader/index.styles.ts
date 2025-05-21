@@ -54,6 +54,8 @@ export default {
   audioFigure: ({ spacings }: Theme) =>
     css({
       margin: `0 0 ${spacings.FULL}rem 0`,
+      aspectRatio: '16 / 9',
+      overflow: 'hidden',
     }),
 
   audioMediaContainer: ({ mq, spacings }: Theme) =>
