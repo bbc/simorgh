@@ -11,7 +11,8 @@ const portraitVideoFixture = {
         },
       ],
       headlines: {
-        promoHeadline: '1. 4 erros de quem estuda para concursos públicos (9x16)',
+        promoHeadline:
+          '1. 4 erros de quem estuda para concursos públicos (9x16)',
       },
       link: {
         path: '/programmes/p01wjx7v',
