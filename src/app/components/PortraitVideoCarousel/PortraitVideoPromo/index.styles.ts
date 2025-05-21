@@ -5,16 +5,17 @@ import {
   PROMO_ITEM_WIDTH_GROUP_4_MIN,
   PROMO_ITEM_WIDTH_GROUP_5_MIN,
   PROMO_ITEM_WIDTH_MIN,
-} from '../const';
+} from '../constants';
 
+const BORDER_THICKNESS = 2;
 const customFocusIndicatorStyle = (innerColor: string, outerColor: string) => ({
-  boxShadow: `0 0 0 ${pixelsToRem(2)}rem ${innerColor}`,
-  outline: `${pixelsToRem(2)}rem solid ${outerColor}`,
-  outlineOffset: `${pixelsToRem(2)}rem`,
+  boxShadow: `0 0 0 ${pixelsToRem(BORDER_THICKNESS)}rem ${innerColor}`,
+  outline: `${pixelsToRem(BORDER_THICKNESS)}rem solid ${outerColor}`,
+  outlineOffset: `${pixelsToRem(BORDER_THICKNESS)}rem`,
 });
 
 const styles = {
-  button: ({ mq, palette }: Theme) =>
+  container: ({ mq }: Theme) =>
     css({
       all: 'unset',
       scrollSnapAlign: 'start',
@@ -22,7 +23,6 @@ const styles = {
       display: 'block',
       position: 'relative',
       overflow: 'hidden',
-      cursor: 'pointer',
       [mq.GROUP_1_MIN_WIDTH]: {
         flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH_MIN)}rem`,
       },
@@ -35,17 +35,17 @@ const styles = {
       [mq.GROUP_5_MIN_WIDTH]: {
         flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH_GROUP_5_MIN)}rem`,
       },
+    }),
+  button: ({ palette }: Theme) =>
+    css({
+      all: 'unset',
+      position: 'absolute',
+      inset: 0,
+      cursor: 'pointer',
       [`&[type='button']:focus-visible`]: {
+        inset: `${pixelsToRem(BORDER_THICKNESS * 2)}rem`,
         ...customFocusIndicatorStyle(palette.WHITE, palette.BLACK),
       },
-    }),
-  image: () =>
-    css({
-      width: '100%',
-      height: 'auto',
-      objectFit: 'cover',
-      aspectRatio: '9/16',
-      display: 'block',
     }),
   gradientOverlay: ({ spacings }: Theme) =>
     css({
@@ -56,8 +56,6 @@ const styles = {
       padding: `${pixelsToRem(28)}rem ${spacings.FULL}rem ${spacings.FULL}rem`,
       background:
         'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 24%, rgba(0, 0, 0, 1) 100%)',
-
-      zIndex: 1,
     }),
   durationContainer: ({ palette }: Theme) =>
     css({
@@ -85,7 +83,6 @@ const styles = {
       'button:focus-visible &': {
         ...customFocusIndicatorStyle(palette.BLACK, palette.WHITE),
       },
-      zIndex: 2,
     }),
 };
 

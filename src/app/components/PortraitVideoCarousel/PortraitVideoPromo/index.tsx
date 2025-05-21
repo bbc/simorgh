@@ -11,21 +11,31 @@ import { useContext } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
 
+const DEFAULT_TRANSLATION = {
+  video: 'video',
+  watch: 'Watch',
+  duration: 'Duration',
+};
 export default (item: PortraitVideoPromoProps) => {
   const { images, headlines, video, onClick } = item;
-  const { translations } = useContext(ServiceContext);
+  const {
+    translations: { media = DEFAULT_TRANSLATION },
+  } = useContext(ServiceContext);
 
   const imageUrl = images?.[0]?.url;
   const alt = images?.[0]?.altText || '';
   const headline = headlines?.promoHeadline || '';
   const mediaISO8601Duration = video?.version.duration;
-  const mediaType = 'video';
+  const {
+    video: mediaType,
+    watch: actionType,
+    duration: durationTranslation,
+  } = media;
 
-  const durationTranslation = translations?.media?.duration || 'Duration';
   let durationString = '';
   let durationSpokenString = '';
   if (mediaISO8601Duration) {
-    const separator = ':';
+    const separator = ',';
     const momentDuration = moment.duration(mediaISO8601Duration, 'seconds');
     durationString = formatDuration({
       duration: momentDuration,
@@ -37,29 +47,36 @@ export default (item: PortraitVideoPromoProps) => {
     });
   }
 
-  const hiddenText = `${headline}, ${mediaType}, ${mediaISO8601Duration ? `${durationTranslation}  ${durationSpokenString}, ` : ''}Play ${mediaType}`;
-
   return (
-    <button type="button" onClick={onClick} css={styles.button}>
-      <div css={styles.gradientOverlay}>
-        {mediaISO8601Duration && (
-          <div css={styles.durationContainer} aria-hidden="true">
-            <Play css={styles.playIcon} />
-            <time>
-              <Text size="brevier" css={styles.duration}>
-                {durationString}
-              </Text>
-            </time>
-          </div>
-        )}
-        <Text size="pica" as="p" fontVariant="sansBold" css={styles.title}>
-          <VisuallyHiddenText>{hiddenText}</VisuallyHiddenText>
-          <span aria-hidden="true">{headline}</span>
-        </Text>
-      </div>
+    <div css={styles.container}>
       {imageUrl && (
-        <Image alt={alt} src={imageUrl} css={styles.image} lazyLoad />
+        <Image alt={alt} src={imageUrl} aspectRatio={[9, 16]} lazyLoad />
       )}
-    </button>
+      <button type="button" onClick={onClick} css={styles.button}>
+        <div css={styles.gradientOverlay}>
+          {mediaISO8601Duration && (
+            <div css={styles.durationContainer} aria-hidden="true">
+              <Play css={styles.playIcon} />
+              <time dateTime={mediaISO8601Duration}>
+                <Text size="brevier" css={styles.duration}>
+                  {durationString}
+                </Text>
+              </time>
+            </div>
+          )}
+          <Text size="pica" as="p" fontVariant="sansBold" css={styles.title}>
+            <VisuallyHiddenText>
+              {actionType} {mediaType},{' '}
+            </VisuallyHiddenText>
+            <span>{headline}</span>
+            {mediaISO8601Duration && (
+              <VisuallyHiddenText>
+                , {durationTranslation} {durationSpokenString}
+              </VisuallyHiddenText>
+            )}
+          </Text>
+        </div>
+      </button>
+    </div>
   );
 };

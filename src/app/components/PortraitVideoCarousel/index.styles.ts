@@ -1,6 +1,6 @@
 import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
-import { PROMO_ITEM_WIDTH_MIN } from './const';
+import { PROMO_ITEM_WIDTH_MIN } from './constants';
 
 const styles = {
   heading: ({ fontSizes, fontVariants, palette }: Theme) =>
