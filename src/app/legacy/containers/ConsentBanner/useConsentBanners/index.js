@@ -139,7 +139,8 @@ const useConsentBanner = (
     const userHasExplicitCookie =
       EXPLICIT_COOKIE_ACCEPTED_VALUES.includes(explicitCookie);
     const shouldShowCookieBanner =
-      (!userHasExplicitCookie && showCookieBannerBasedOnCountry) ||
+      !userHasExplicitCookie &&
+      showCookieBannerBasedOnCountry &&
       !isChromatic();
     const shouldShowPrivacyBanner =
       privacyToggle &&
