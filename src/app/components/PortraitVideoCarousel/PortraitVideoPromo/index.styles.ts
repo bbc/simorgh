@@ -1,6 +1,6 @@
 import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
-import { calculateWidth, PROMO_ITEM_WIDTH_MIN } from '../utils';
+import { calculatePromoWidth, PROMO_ITEM_WIDTH_MIN } from '../styleUtils';
 
 const BORDER_THICKNESS = 2;
 const customFocusIndicatorStyle = (innerColor: string, outerColor: string) => ({
@@ -19,20 +19,40 @@ const styles = {
       position: 'relative',
       overflow: 'hidden',
       minWidth: `${pixelsToRem(PROMO_ITEM_WIDTH_MIN)}rem`,
+      flexGrow: 0,
+      flexShrink: 0,
       [mq.GROUP_1_MIN_WIDTH]: {
-        flex: `0 0 ${calculateWidth({ itemCount: 2, gapWidth: spacings.FULL })}`,
+        flexBasis: calculatePromoWidth({
+          itemCount: 2,
+          gapWidth: spacings.FULL,
+        }),
       },
       [mq.GROUP_3_MIN_WIDTH]: {
-        flex: `0 0 ${calculateWidth({ itemCount: 3, gapWidth: spacings.DOUBLE })}`,
+        flexBasis: calculatePromoWidth({
+          itemCount: 3,
+          gapWidth: spacings.DOUBLE,
+        }),
         [mq.POINTER]: {
-          flex: `0 0 ${calculateWidth({ itemCount: 3, gapWidth: spacings.DOUBLE, navButtonAffordance: true })}`,
+          flexBasis: calculatePromoWidth({
+            itemCount: 3,
+            gapWidth: spacings.DOUBLE,
+            navButtonAffordance: true,
+          }),
         },
       },
       [mq.GROUP_4_MIN_WIDTH]: {
-        flex: `0 0 ${calculateWidth({ itemCount: 4, gapWidth: spacings.DOUBLE, navButtonAffordance: true })}`,
+        flexBasis: calculatePromoWidth({
+          itemCount: 4,
+          gapWidth: spacings.DOUBLE,
+          navButtonAffordance: true,
+        }),
       },
       [mq.GROUP_5_MIN_WIDTH]: {
-        flex: `0 0 ${calculateWidth({ itemCount: 6, gapWidth: spacings.DOUBLE, navButtonAffordance: true })}`,
+        flexBasis: calculatePromoWidth({
+          itemCount: 6,
+          gapWidth: spacings.DOUBLE,
+          navButtonAffordance: true,
+        }),
       },
     }),
   button: ({ palette }: Theme) =>

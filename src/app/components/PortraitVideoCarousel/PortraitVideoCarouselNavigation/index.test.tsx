@@ -6,7 +6,7 @@ import {
   fireEvent,
 } from '#app/components/react-testing-library-with-providers';
 import PortraitCarouselNavigation from '.';
-import { PROMO_ITEM_WIDTH_MIN } from '../utils';
+import { PROMO_ITEM_WIDTH_MIN } from '../styleUtils';
 
 jest.useFakeTimers();
 

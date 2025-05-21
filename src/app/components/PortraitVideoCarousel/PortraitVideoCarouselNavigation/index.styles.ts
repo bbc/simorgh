@@ -1,14 +1,6 @@
 import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
-import NO_JS_CLASSNAME from '#app/lib/noJs.const';
-import {
-  calculateWidth,
-  NAVIGATION_BUFFER,
-  NAVIGATION_BUTTON_RATIO,
-} from '../utils';
-
-const calculateNavContainerWidth = (itemCount: number) =>
-  `calc((${calculateWidth({ itemCount, navButtonAffordance: true })} * ${NAVIGATION_BUTTON_RATIO}) + ${NAVIGATION_BUFFER})`;
+import { calculateVariedNavContainerWidths } from '../styleUtils';
 
 const styles = {
   buttonGroupOverlay: ({ mq }: Theme) =>
@@ -20,34 +12,17 @@ const styles = {
       height: '100%',
       backgroundColor: 'rgba(253, 253, 253, 0.6)',
       zIndex: 1,
-      [mq.GROUP_3_MIN_WIDTH]: {
-        [mq.POINTER]: {
-          display: 'flex',
-          width: calculateNavContainerWidth(3),
-        },
-      },
-      [mq.GROUP_4_MIN_WIDTH]: {
-        display: 'flex',
-        width: calculateNavContainerWidth(4),
-      },
-      [mq.GROUP_5_MIN_WIDTH]: {
-        display: 'flex',
-        width: calculateNavContainerWidth(6),
-      },
+      ...calculateVariedNavContainerWidths({ mq, display: 'flex' }),
     }),
-  buttonGroup: ({ mq }: Theme) =>
+  buttonGroup: ({ mq, spacings }: Theme) =>
     css({
-      display: 'none',
-      [`.${NO_JS_CLASSNAME} &`]: {
-        display: 'none',
-      },
       [mq.GROUP_3_MIN_WIDTH]: {
         width: '100%',
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        gap: '0.25rem',
+        gap: `${spacings.HALF}rem`,
       },
     }),
   navButton: ({ palette, spacings }: Theme) =>

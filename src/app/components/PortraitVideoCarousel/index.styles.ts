@@ -1,4 +1,5 @@
 import { css, Theme } from '@emotion/react';
+import { calculateVariedNavContainerWidths } from './styleUtils';
 
 const styles = {
   section: ({ mq, spacings }: Theme) =>
@@ -49,9 +50,14 @@ const styles = {
     }),
   endBlankItem: ({ mq }: Theme) =>
     css({
-      [mq.GROUP_2_MAX_WIDTH]: {
-        display: 'none',
-      },
+      display: 'none',
+      flexGrow: 0,
+      flexShrink: 0,
+      ...calculateVariedNavContainerWidths({
+        mq,
+        display: 'block',
+        widthParameter: 'flexBasis',
+      }),
     }),
 };
 

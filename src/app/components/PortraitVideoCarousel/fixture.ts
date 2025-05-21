@@ -11,7 +11,7 @@ const portraitVideoFixture = {
         },
       ],
       headlines: {
-        promoHeadline: '4 erros de quem estuda para concursos públicos (9x16)',
+        promoHeadline: '1. 4 erros de quem estuda para concursos públicos (9x16)',
       },
       link: {
         path: '/programmes/p01wjx7v',
@@ -34,7 +34,7 @@ const portraitVideoFixture = {
         },
       ],
       headlines: {
-        promoHeadline: 'Article with portrait video embed (2)',
+        promoHeadline: '2. Article with portrait video embed (2)',
       },
       link: {
         path: '/portuguese/articles/cgp62emnrk5o',
@@ -57,7 +57,7 @@ const portraitVideoFixture = {
         },
       ],
       headlines: {
-        promoHeadline: 'Europa se armando para guerra? (9x16)',
+        promoHeadline: '3. Europa se armando para guerra? (9x16)',
       },
       link: {
         path: '/programmes/p01wjx5y',
@@ -80,7 +80,7 @@ const portraitVideoFixture = {
         },
       ],
       headlines: {
-        promoHeadline: 'China: a Nova Rota da Seda (9x16)',
+        promoHeadline: '4. China: a Nova Rota da Seda (9x16)',
       },
       link: {
         path: '/programmes/p01wjx4r',
@@ -103,7 +103,7 @@ const portraitVideoFixture = {
         },
       ],
       headlines: {
-        promoHeadline: 'O estudante acusado no Reino Unido (9x16)',
+        promoHeadline: '5. O estudante acusado no Reino Unido (9x16)',
       },
       link: {
         path: '/programmes/p01wjx3q',
@@ -126,7 +126,7 @@ const portraitVideoFixture = {
         },
       ],
       headlines: {
-        promoHeadline: 'Por que evitar glicose para emagrecer (9x16)',
+        promoHeadline: '6. Por que evitar glicose para emagrecer (9x16)',
       },
       link: {
         path: '/programmes/p01wjx3g',
@@ -149,7 +149,7 @@ const portraitVideoFixture = {
         },
       ],
       headlines: {
-        promoHeadline: 'Papa Francisco recebe alta (9x16)',
+        promoHeadline: '7. Papa Francisco recebe alta (9x16)',
       },
       link: {
         path: '/programmes/p01wjx35',
@@ -173,7 +173,7 @@ const portraitVideoFixture = {
         },
       ],
       headlines: {
-        promoHeadline: '4 erros de quem estuda (9x16)',
+        promoHeadline: '8. 4 erros de quem estuda (9x16)',
       },
       link: {
         path: '/programmes/p01wjx7v',
@@ -196,7 +196,7 @@ const portraitVideoFixture = {
         },
       ],
       headlines: {
-        promoHeadline: 'Armas nucleares (9x16)',
+        promoHeadline: '9. Armas nucleares (9x16)',
       },
       link: {
         path: '/portuguese/articles/cgp62emnrk5o',
@@ -219,7 +219,7 @@ const portraitVideoFixture = {
         },
       ],
       headlines: {
-        promoHeadline: 'Corrida armamentista (9x16)',
+        promoHeadline: '10. Corrida armamentista (9x16)',
       },
       link: {
         path: '/programmes/p01wjx5y',

@@ -8,7 +8,6 @@ import {
   PortraitVideoPromoProps,
 } from '#app/models/types/portraitVideo';
 import styles from './index.styles';
-import promoStyles from './PortraitVideoPromo/index.styles';
 import PortraitVideoModal from '../PortraitVideoModal';
 import { BumpLoader } from '../MediaLoader';
 import PortraitVideoPromo from './PortraitVideoPromo';
@@ -59,7 +58,7 @@ const PortraitVideoCarousel = ({
                 onClick={() => handlePromoClick(item)}
               />
             ))}
-            <div css={[promoStyles.container, styles.endBlankItem]} />
+            <div css={[styles.endBlankItem]} />
           </div>
           <PortraitCarouselNavigation scrollPaneRef={scrollRef} />
         </div>
