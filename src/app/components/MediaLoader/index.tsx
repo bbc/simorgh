@@ -111,6 +111,7 @@ const MediaContainer = ({
 }: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
   const isAudio = isAudioPlayer(playerConfig);
+  const { pageType } = useContext(RequestContext);
 
   useEffect(() => {
     try {
@@ -169,7 +170,11 @@ const MediaContainer = ({
     <div
       ref={playerElementRef}
       data-e2e="media-player"
-      css={isAudio ? styles.audioMediaContainer : styles.standardMediaContainer}
+      css={
+        isAudio
+          ? styles.audioMediaContainer(pageType)
+          : styles.standardMediaContainer
+      }
     >
       <noscript>
         <Message message={noJsMessage} />
@@ -237,8 +242,8 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
   } = config;
 
   const captionBlock = getCaptionBlock(blocks, pageType);
-  const isPortraitVideo = orientation === 'portrait';
-  const isLandscapeVideo = orientation === 'landscape';
+  const isPortrait = orientation === 'portrait';
+  const isLandscape = orientation === 'landscape';
   const isAudio = isAudioPlayer(playerConfig);
 
   const {
@@ -267,8 +272,8 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
           styles.figure(embedded),
           isAudio && styles.audioFigure,
           !isAudio && [
-            isPortraitVideo && styles.portraitFigure(embedded),
-            isLandscapeVideo && styles.landscapeFigure,
+            isPortrait && styles.portraitFigure(embedded),
+            isLandscape && styles.landscapeFigure,
           ],
         ]}
       >
@@ -304,13 +309,13 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
         )}
         {captionBlock && (
           <Caption
-            className={isPortraitVideo ? 'portrait-caption' : ''}
+            className={isPortrait ? 'portrait-caption' : ''}
             block={captionBlock}
             type={mediaType}
             css={[
               styles.figure(embedded),
               isAudio && styles.captionAudio,
-              !isAudio && [isPortraitVideo && styles.captionPortrait],
+              !isAudio && [isPortrait && styles.captionPortrait],
             ]}
           />
         )}
