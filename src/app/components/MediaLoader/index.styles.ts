@@ -57,7 +57,7 @@ export default {
     css({
       height: '165px',
       '.audio-post &&': {
-        height: '130px',
+        height: '140px',
         margin: `0 0 ${spacings.FULL}rem 0`,
         [mq.GROUP_2_MIN_WIDTH]: {
           padding: `0 ${spacings.FULL}rem`,
