@@ -55,37 +55,33 @@ export default {
       !isEmbedded && commonMarginSpacing,
     ],
 
-  audioMediaContainer:
-    (pageType: PageTypes) =>
-    ({ mq, spacings }: Theme) =>
-      css({
-        height: '165px',
-        ...(pageType === LIVE_PAGE && {
-          height: '130px',
-          margin: `0 0 ${spacings.FULL}rem 0`,
-          [mq.GROUP_2_MIN_WIDTH]: {
-            padding: `0 ${spacings.FULL}rem`,
-          },
-          [`@media (min-width: 548px)`]: {
-            padding: '0 0',
-          },
-          [mq.GROUP_3_MIN_WIDTH]: {
-            marginInlineEnd: `${spacings.DOUBLE}rem`,
-          },
-          [mq.GROUP_4_MIN_WIDTH]: {
-            marginInlineStart: `-${spacings.DOUBLE}rem`,
-          },
-        }),
-      }),
+  audioMediaContainer: ({ mq, spacings }: Theme) =>
+    css({
+      height: '165px',
+      '.audio-post &&': {
+        height: '130px',
+        margin: `0 0 ${spacings.FULL}rem 0`,
+        [mq.GROUP_2_MIN_WIDTH]: {
+          padding: `0 ${spacings.FULL}rem`,
+        },
+        [`@media (min-width: 548px)`]: {
+          padding: '0 0',
+        },
+        [mq.GROUP_3_MIN_WIDTH]: {
+          marginInlineEnd: `${spacings.DOUBLE}rem`,
+        },
+        [mq.GROUP_4_MIN_WIDTH]: {
+          marginInlineStart: `-${spacings.DOUBLE}rem`,
+        },
+      },
+    }),
 
-  audioFigure:
-    (pageType: PageTypes) =>
-    ({ spacings }: Theme) =>
-      css({
-        ...(pageType === LIVE_PAGE && {
-          margin: `0 0 ${spacings.FULL}rem 0`,
-        }),
-      }),
+  audioFigure: ({ spacings }: Theme) =>
+    css({
+      '.audio-post': {
+        margin: `0 0 ${spacings.FULL}rem 0`,
+      },
+    }),
 
   standardMediaContainer: ({ palette }: Theme) =>
     css({

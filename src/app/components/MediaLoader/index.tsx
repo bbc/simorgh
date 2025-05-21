@@ -111,7 +111,6 @@ const MediaContainer = ({
 }: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
   const isAudio = isAudioPlayer(playerConfig);
-  const { pageType } = useContext(RequestContext);
 
   useEffect(() => {
     try {
@@ -170,11 +169,7 @@ const MediaContainer = ({
     <div
       ref={playerElementRef}
       data-e2e="media-player"
-      css={
-        isAudio
-          ? styles.audioMediaContainer(pageType)
-          : styles.standardMediaContainer
-      }
+      css={isAudio ? styles.audioMediaContainer : styles.standardMediaContainer}
     >
       <noscript>
         <Message message={noJsMessage} />
@@ -270,7 +265,7 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
         className={className}
         css={[
           styles.figure(embedded),
-          isAudio && styles.audioFigure(pageType),
+          isAudio && styles.audioFigure,
           !isAudio && [
             isPortrait && styles.portraitFigure(embedded),
             isLandscape && styles.landscapeFigure,
