@@ -23,11 +23,12 @@ export default [
       '**/index.stories.jsx',
       '**/index.amp.stories.jsx',
       '.storybook/**/*',
+      'ws-nextjs-app/public/vendor/**/*',
     ],
   },
   js.configs.recommended,
   {
-    files: ['**/*.{js,jsx}'],
+    files: ['src/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       globals: {
         ...globals.browser,
@@ -68,6 +69,7 @@ export default [
       'max-len': 'off',
       'import/no-unresolved': 'error',
       'import/extensions': 'off',
+      'import/prefer-default-export': 'warn',
       'no-only-tests/no-only-tests': 'error',
       'no-unsafe-optional-chaining': 'error',
     },
@@ -81,11 +83,14 @@ export default [
     },
   },
   {
-    files: ['**/*.{ts,tsx}'],
+    files: ['src/**/*.{ts,tsx}'],
     languageOptions: {
+      globals: {
+        ...globals.node,
+      },
       parser: tsParser,
       parserOptions: {
-        project: './tsconfig.json', // Ensure this points to your tsconfig.json
+        project: './tsconfig.json',
       },
     },
     plugins: {
@@ -102,6 +107,22 @@ export default [
         },
       ],
       '@typescript-eslint/prefer-optional-chain': ['error'],
+    },
+    settings: {
+      'import/resolver': {
+        node: {
+          extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        },
+        alias: {
+          map: [
+            ['#app', './src/app'],
+            ['#server', './src/server'],
+            ['#lib', './src/lib'],
+          ],
+          extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        },
+        alias: eslintDirAlias,
+      },
     },
   },
 ];
