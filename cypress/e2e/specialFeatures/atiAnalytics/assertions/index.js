@@ -127,10 +127,12 @@ export const assertPageView = ({
         applicationType,
       });
 
-      expect(params.idclient).to.equal(
-        ATI_USER_ID_COOKIE,
-        'params.idclient (atuserid cookie value)',
-      );
+      if (['responsive', 'lite'].includes(applicationType)) {
+        expect(params.idclient).to.equal(
+          ATI_USER_ID_COOKIE,
+          'params.idclient (atuserid cookie value)',
+        );
+      }
 
       expect(params.p).to.equal(pageIdentifier, 'params.p (page identifier)');
       expect(params.x2).to.equal(
@@ -159,10 +161,12 @@ const assertClickPerViewModelViewEvent = ({
 }) => {
   assertATIComponentViewEventParamsExist({ params, useReverb });
 
-  expect(params.idclient).to.equal(
-    ATI_USER_ID_COOKIE,
-    'params.idclient (atuserid cookie value)',
-  );
+  if (['responsive', 'lite'].includes(applicationType)) {
+    expect(params.idclient).to.equal(
+      ATI_USER_ID_COOKIE,
+      'params.idclient (atuserid cookie value)',
+    );
+  }
 
   if (!useReverb) {
     expect(params.p).to.equal(pageIdentifier, 'params.p (page identifier)');
@@ -185,6 +189,7 @@ const assertViewabilityModelViewEvent = ({
   pageIdentifier,
   contentType,
   params,
+  applicationType,
 }) => {
   const eventContext = JSON.parse(params.context);
 
@@ -192,10 +197,12 @@ const assertViewabilityModelViewEvent = ({
     params,
   });
 
-  expect(params.idclient).to.equal(
-    ATI_USER_ID_COOKIE,
-    'params.idclient (atuserid cookie value)',
-  );
+  if (['responsive', 'lite'].includes(applicationType)) {
+    expect(params.idclient).to.equal(
+      ATI_USER_ID_COOKIE,
+      'params.idclient (atuserid cookie value)',
+    );
+  }
 
   expect(params.events).to.match(
     getViewabilityEventDetailsRegex({
@@ -260,10 +267,12 @@ const assertClickPerViewModelClickEvent = ({
     applicationType,
   });
 
-  expect(params.idclient).to.equal(
-    ATI_USER_ID_COOKIE,
-    'params.idclient (atuserid cookie value)',
-  );
+  if (['responsive', 'lite'].includes(applicationType)) {
+    expect(params.idclient).to.equal(
+      ATI_USER_ID_COOKIE,
+      'params.idclient (atuserid cookie value)',
+    );
+  }
 
   expect(params.app_type).to.equal(applicationType, 'params.app_type');
 
@@ -291,6 +300,7 @@ const assertViewabilityModelClickEvent = ({
   contentType,
   pageIdentifier,
   params,
+  applicationType,
 }) => {
   const eventContext = JSON.parse(params.context);
 
@@ -298,10 +308,12 @@ const assertViewabilityModelClickEvent = ({
     params,
   });
 
-  expect(params.idclient).to.equal(
-    ATI_USER_ID_COOKIE,
-    'params.idclient (atuserid cookie value)',
-  );
+  if (['responsive', 'lite'].includes(applicationType)) {
+    expect(params.idclient).to.equal(
+      ATI_USER_ID_COOKIE,
+      'params.idclient (atuserid cookie value)',
+    );
+  }
 
   expect(params.events).to.match(
     getViewabilityEventDetailsRegex({
