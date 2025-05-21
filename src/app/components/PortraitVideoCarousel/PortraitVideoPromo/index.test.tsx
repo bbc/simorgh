@@ -31,8 +31,8 @@ describe('PortraitVideoPromo', () => {
     const heading = textContents?.[1]?.innerHTML;
     const duration = textContents?.[2]?.innerHTML;
 
-    const concatenatedText = `${watchVideo}${heading}${duration}`;
-    expect(concatenatedText).toBe(
+    const screenreaderText = `${watchVideo}${heading}${duration}`;
+    expect(screenreaderText).toBe(
       'Assista Vídeo, Sample Heading, Duration 0,13',
     );
   });
