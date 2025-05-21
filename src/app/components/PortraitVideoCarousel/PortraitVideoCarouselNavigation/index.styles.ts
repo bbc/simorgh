@@ -1,23 +1,38 @@
 import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import NO_JS_CLASSNAME from '#app/lib/noJs.const';
+import {
+  calculateWidth,
+  NAVIGATION_BUFFER,
+  NAVIGATION_BUTTON_RATIO,
+} from '../utils';
+
+const calculateNavContainerWidth = (itemCount: number) =>
+  `calc((${calculateWidth({ itemCount, navButtonAffordance: true })} * ${NAVIGATION_BUTTON_RATIO}) + ${NAVIGATION_BUFFER})`;
 
 const styles = {
   buttonGroupOverlay: ({ mq }: Theme) =>
     css({
       display: 'none',
-      [`.${NO_JS_CLASSNAME} &`]: {
-        display: 'none',
-      },
+      position: 'absolute',
+      top: 0,
+      insetInlineEnd: 0,
+      height: '100%',
+      backgroundColor: 'rgba(253, 253, 253, 0.6)',
+      zIndex: 1,
       [mq.GROUP_3_MIN_WIDTH]: {
+        [mq.POINTER]: {
+          display: 'flex',
+          width: calculateNavContainerWidth(3),
+        },
+      },
+      [mq.GROUP_4_MIN_WIDTH]: {
         display: 'flex',
-        position: 'absolute',
-        top: 0,
-        insetInlineEnd: 0,
-        width: '7rem',
-        height: '100%',
-        backgroundColor: 'rgba(253, 253, 253, 0.6)',
-        zIndex: 1,
+        width: calculateNavContainerWidth(4),
+      },
+      [mq.GROUP_5_MIN_WIDTH]: {
+        display: 'flex',
+        width: calculateNavContainerWidth(6),
       },
     }),
   buttonGroup: ({ mq }: Theme) =>

@@ -1,11 +1,6 @@
 import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
-import {
-  PROMO_ITEM_WIDTH_GROUP_3_MIN,
-  PROMO_ITEM_WIDTH_GROUP_4_MIN,
-  PROMO_ITEM_WIDTH_GROUP_5_MIN,
-  PROMO_ITEM_WIDTH_MIN,
-} from '../constants';
+import { calculateWidth, PROMO_ITEM_WIDTH_MIN } from '../utils';
 
 const BORDER_THICKNESS = 2;
 const customFocusIndicatorStyle = (innerColor: string, outerColor: string) => ({
@@ -15,7 +10,7 @@ const customFocusIndicatorStyle = (innerColor: string, outerColor: string) => ({
 });
 
 const styles = {
-  container: ({ mq }: Theme) =>
+  container: ({ mq, spacings }: Theme) =>
     css({
       all: 'unset',
       scrollSnapAlign: 'start',
@@ -23,17 +18,21 @@ const styles = {
       display: 'block',
       position: 'relative',
       overflow: 'hidden',
+      minWidth: `${pixelsToRem(PROMO_ITEM_WIDTH_MIN)}rem`,
       [mq.GROUP_1_MIN_WIDTH]: {
-        flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH_MIN)}rem`,
+        flex: `0 0 ${calculateWidth({ itemCount: 2, gapWidth: spacings.FULL })}`,
       },
       [mq.GROUP_3_MIN_WIDTH]: {
-        flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH_GROUP_3_MIN)}rem`,
+        flex: `0 0 ${calculateWidth({ itemCount: 3, gapWidth: spacings.DOUBLE })}`,
+        [mq.POINTER]: {
+          flex: `0 0 ${calculateWidth({ itemCount: 3, gapWidth: spacings.DOUBLE, navButtonAffordance: true })}`,
+        },
       },
       [mq.GROUP_4_MIN_WIDTH]: {
-        flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH_GROUP_4_MIN)}rem`,
+        flex: `0 0 ${calculateWidth({ itemCount: 4, gapWidth: spacings.DOUBLE, navButtonAffordance: true })}`,
       },
       [mq.GROUP_5_MIN_WIDTH]: {
-        flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH_GROUP_5_MIN)}rem`,
+        flex: `0 0 ${calculateWidth({ itemCount: 6, gapWidth: spacings.DOUBLE, navButtonAffordance: true })}`,
       },
     }),
   button: ({ palette }: Theme) =>

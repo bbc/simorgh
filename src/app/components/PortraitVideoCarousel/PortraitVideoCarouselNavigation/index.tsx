@@ -8,7 +8,7 @@ import {
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
 import { LeftChevron, RightChevron } from '../../icons';
-import { PROMO_ITEM_WIDTH_MIN } from '../constants';
+import { PROMO_ITEM_WIDTH_MIN } from '../utils';
 
 const defaultTranslations = {
   scrollLeft: 'Scroll left',
