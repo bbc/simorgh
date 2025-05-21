@@ -1,5 +1,3 @@
-import { PageTypes } from '#app/models/types/global';
-import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
