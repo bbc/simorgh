@@ -78,12 +78,16 @@ export default {
         }),
       }),
 
-  audioFigure: ({ spacings }: Theme) =>
-    css({
-      margin: `0 0 ${spacings.FULL}rem 0`,
-      aspectRatio: '16 / 9',
-      overflow: 'hidden',
-    }),
+  audioFigure:
+    (pageType: PageTypes) =>
+    ({ spacings }: Theme) =>
+      css({
+        ...(pageType === LIVE_PAGE && {
+          margin: `0 0 ${spacings.FULL}rem 0`,
+          aspectRatio: '16 / 9',
+          overflow: 'hidden',
+        }),
+      }),
 
   standardMediaContainer: ({ palette }: Theme) =>
     css({
