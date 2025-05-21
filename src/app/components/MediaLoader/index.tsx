@@ -111,6 +111,7 @@ const MediaContainer = ({
 }: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
   const isAudio = isAudioPlayer(playerConfig);
+  const { pageType } = useContext(RequestContext);
 
   useEffect(() => {
     try {
@@ -169,7 +170,11 @@ const MediaContainer = ({
     <div
       ref={playerElementRef}
       data-e2e="media-player"
-      css={isAudio ? styles.audioMediaContainer : styles.standardMediaContainer}
+      css={
+        isAudio
+          ? styles.audioMediaContainer(pageType)
+          : styles.standardMediaContainer
+      }
     >
       <noscript>
         <Message message={noJsMessage} />

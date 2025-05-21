@@ -242,33 +242,6 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 
 .emotion-10 {
   height: 165px;
-  margin: 0 0 0.5rem 0;
-}
-
-@media (min-width: 25rem) {
-  .emotion-10 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width: 548px) {
-  .emotion-10 {
-    padding: 0 0;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-10 {
-    -webkit-margin-end: 1rem;
-    margin-inline-end: 1rem;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-10 {
-    -webkit-margin-start: -1rem;
-    margin-inline-start: -1rem;
-  }
 }
 
 .emotion-11 {
