@@ -18,6 +18,7 @@ const ContextWrap = ({
   origin,
   children,
   comscoreAnalyticsToggle,
+  showCookieBannerBasedOnCountry,
   personalisation = defaultPersonalisation,
 }) => {
   const requestContextValue = useMemo(
@@ -39,6 +40,7 @@ const ContextWrap = ({
       statusCode={200}
       bbcOrigin={origin}
       pathname="/pathname"
+      showCookieBannerBasedOnCountry={showCookieBannerBasedOnCountry}
     >
       <ServiceContextProvider service="pidgin">
         <ToggleContext.Provider value={requestContextValue}>
@@ -75,6 +77,7 @@ describe('Comscore Analytics Container', () => {
           pageType={ARTICLE_PAGE}
           origin="bbc.com"
           comscoreAnalyticsToggle
+          showCookieBannerBasedOnCountry={false}
         >
           <ComscoreAnalytics />
         </ContextWrap>,
@@ -82,6 +85,22 @@ describe('Comscore Analytics Container', () => {
 
       expect(container.firstChild).not.toBeNull();
       expect(container.firstChild).toMatchSnapshot();
+    });
+
+    it('should return null when country-based cookie banner is enabled', () => {
+      const { container } = render(
+        <ContextWrap
+          platform="amp"
+          pageType={ARTICLE_PAGE}
+          origin="bbc.com"
+          comscoreAnalyticsToggle
+          showCookieBannerBasedOnCountry
+        >
+          <ComscoreAnalytics />
+        </ContextWrap>,
+      );
+
+      expect(container.firstChild).toBeNull();
     });
   });
 
