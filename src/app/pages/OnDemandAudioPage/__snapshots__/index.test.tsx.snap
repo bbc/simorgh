@@ -363,33 +363,6 @@ exports[`OnDemand Radio Page  should match snapshot 1`] = `
 
 .emotion-24 {
   height: 165px;
-  margin: 0 0 0.5rem 0;
-}
-
-@media (min-width: 25rem) {
-  .emotion-24 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width: 548px) {
-  .emotion-24 {
-    padding: 0 0;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-24 {
-    -webkit-margin-end: 1rem;
-    margin-inline-end: 1rem;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-24 {
-    -webkit-margin-start: -1rem;
-    margin-inline-start: -1rem;
-  }
 }
 
 .emotion-25 {
