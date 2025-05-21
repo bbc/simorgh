@@ -28,6 +28,7 @@ export default {
       }),
 
   landscapeFigure: () => css({ aspectRatio: '16 / 9' }),
+
   portraitFigure:
     (isEmbedded = false) =>
     ({ mq }: Theme) => [
@@ -53,10 +54,6 @@ export default {
       }),
       !isEmbedded && commonMarginSpacing,
     ],
-  audioFigure: ({ spacings }: Theme) =>
-    css({
-      margin: `0 0 ${spacings.FULL}rem 0`,
-    }),
 
   audioMediaContainer:
     (pageType: PageTypes) =>
@@ -80,6 +77,11 @@ export default {
           },
         }),
       }),
+
+  audioFigure: ({ spacings }: Theme) =>
+    css({
+      margin: `0 0 ${spacings.FULL}rem 0`,
+    }),
 
   standardMediaContainer: ({ palette }: Theme) =>
     css({
