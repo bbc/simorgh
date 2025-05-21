@@ -78,9 +78,9 @@ export default {
     css({
       '.audio-post': {
         margin: `0 0 ${spacings.FULL}rem 0`,
-        aspectRatio: '16 / 9',
-        overflow: 'hidden',
       },
+      aspectRatio: '16 / 9',
+      overflow: 'hidden',
     }),
 
   standardMediaContainer: ({ palette }: Theme) =>
