@@ -78,10 +78,14 @@ export default {
         }),
       }),
 
-  audioFigure: ({ spacings }: Theme) =>
-    css({
-      margin: `0 0 ${spacings.FULL}rem 0`,
-    }),
+  audioFigure:
+    (pageType: PageTypes) =>
+    ({ spacings }: Theme) =>
+      css({
+        ...(pageType === LIVE_PAGE && {
+          margin: `0 0 ${spacings.FULL}rem 0`,
+        }),
+      }),
 
   standardMediaContainer: ({ palette }: Theme) =>
     css({
