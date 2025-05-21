@@ -67,7 +67,7 @@ export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
           css={styles.navButton}
           data-testid="pv-scroll-left"
         >
-          <LeftChevron />
+          <LeftChevron dir={dir} />
         </button>
         <button
           type="button"
@@ -77,7 +77,7 @@ export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
           css={styles.navButton}
           data-testid="pv-scroll-right"
         >
-          <RightChevron />
+          <RightChevron dir={dir} />
         </button>
       </div>
     </div>

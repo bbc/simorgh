@@ -1,3 +1,4 @@
+import { Direction } from '#app/models/types/global';
 import React from 'react';
 
 export const Ellipsis = () => (
@@ -11,7 +12,13 @@ export const Ellipsis = () => (
     <path d="M1.6 18.8h5.8v-5.6H1.6v5.6zm11.5 0h5.8v-5.6h-5.8v5.6zm11.5 0h5.8v-5.6h-5.8v5.6z" />
   </svg>
 );
-export const LeftChevron = ({ className }: { className?: string }) => (
+
+type ChevronProps = {
+  className?: string;
+  dir?: Direction;
+};
+
+export const LeftChevron = ({ className, dir = 'ltr' }: ChevronProps) => (
   <svg
     viewBox="0 0 32 32"
     focusable="false"
@@ -20,11 +27,15 @@ export const LeftChevron = ({ className }: { className?: string }) => (
     height="12"
     className={className}
   >
-    <path d="M10.4 14.3L26.5 31h-6.4L5.5 16 20.1 1h6.4L10.4 17.7v-3.4z" />
+    {dir === 'ltr' ? (
+      <path d="M10.4 14.3L26.5 31h-6.4L5.5 16 20.1 1h6.4L10.4 17.7v-3.4z" />
+    ) : (
+      <path d="M21.6 14.3L5.5 31h6.4l14.6-15L11.9 1H5.5l16.1 16.7v-3.4z" />
+    )}
   </svg>
 );
 
-export const RightChevron = ({ className }: { className?: string }) => (
+export const RightChevron = ({ className, dir = 'ltr' }: ChevronProps) => (
   <svg
     viewBox="0 0 32 32"
     focusable="false"
@@ -33,7 +44,11 @@ export const RightChevron = ({ className }: { className?: string }) => (
     height="12"
     className={className}
   >
-    <path d="M21.6 14.3L5.5 31h6.4l14.6-15L11.9 1H5.5l16.1 16.7v-3.4z" />
+    {dir === 'ltr' ? (
+      <path d="M21.6 14.3L5.5 31h6.4l14.6-15L11.9 1H5.5l16.1 16.7v-3.4z" />
+    ) : (
+      <path d="M10.4 14.3L26.5 31h-6.4L5.5 16 20.1 1h6.4L10.4 17.7v-3.4z" />
+    )}
   </svg>
 );
 
