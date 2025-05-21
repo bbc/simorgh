@@ -2,6 +2,9 @@
 const { merge } = require('webpack-merge');
 const fs = require('fs');
 const path = require('path');
+const DevServer = require('webpack-dev-server');
+const url = require('url');
+const { Chalk } = require('chalk');
 const MomentTimezoneInclude = require('./src/app/legacy/psammead/moment-timezone-include/src');
 const { webpackDirAlias } = require('./dirAlias');
 
@@ -45,6 +48,21 @@ const getBaseConfig = BUNDLE_TYPE => ({
   devServer: {
     devMiddleware: {
       stats,
+    },
+    onListening() {
+      const hostname = DevServer.findIp('v4', false);
+
+      // eslint-disable-next-line no-console
+      console.info(
+        new Chalk().green.bold(
+          `<i> [webpack-dev-server] Local IP: ${url.format({
+            protocol: 'http',
+            hostname,
+            port: 7080,
+            pathname: '/',
+          })}`,
+        ),
+      );
     },
   },
   stats,
