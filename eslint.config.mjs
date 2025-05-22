@@ -3,8 +3,8 @@ import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
 import globals from 'globals';
 import babelParser from '@babel/eslint-parser';
-import tsParser from '@typescript-eslint/parser';
 import tsPlugin from '@typescript-eslint/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
 import jsxA11Y from 'eslint-plugin-jsx-a11y';
 import cypress from 'eslint-plugin-cypress';
 import json from 'eslint-plugin-json';
@@ -19,23 +19,52 @@ const { eslintDirAlias } = dirAlias;
 export default [
   {
     ignores: [
+      '**/build/**/*',
       '**/tz/**/*',
       '**/index.stories.jsx',
       '**/index.amp.stories.jsx',
       '.storybook/**/*',
       'ws-nextjs-app/public/vendor/**/*',
+      'ws-nextjs-app/build/**/*',
+      'storybook_dist/**/*',
+      '**/webpack.config.*.js',
+      './webpack.config.*.js',
+      './webpack.config.js',
+      'ws-nextjs-app/cypress/**/*',
+      '**/*.png',
+      '**/*.jpg',
+      '**/*.jpeg',
+      '**/*.gif',
+      '**/*.svg',
+      '**/*.sh',
+      '**/*.json',
+      '**/*.gz',
+      '**/*.md',
+      '**/*.snap',
+      '**/*.env',
+      '**/*.gitattributes',
+      '**/*.yml',
+      '**/*.xml',
+      '**/*.zip',
+      '**/*.html',
+      '**/.DS_Store',
+      '**/.gitignore',
+      '**/.husky/**/*',
+      '**/.nojekyll',
+      '**/.nvmrc',
+      '**/.prettierrc',
+      '**/.yarn/**/*',
     ],
   },
-  js.configs.recommended,
   {
-    files: ['src/**/*.{js,jsx,ts,tsx}'],
+    files: ['src/**/*.{js,jsx}', 'cypress/**/*.{js,jsx}'], // JavaScript files
     languageOptions: {
       globals: {
         ...globals.browser,
         ...globals.jest,
         ...globals.node,
       },
-      parser: babelParser,
+      parser: babelParser, // Use babelParser for JavaScript files
       ecmaVersion: 2017,
       sourceType: 'module',
       parserOptions: {
@@ -76,7 +105,7 @@ export default [
     settings: {
       'import/resolver': {
         node: {
-          extensions: ['.js', '.jsx', '.ts', '.tsx'],
+          extensions: ['.js', '.jsx'],
         },
         alias: eslintDirAlias,
       },
@@ -86,15 +115,188 @@ export default [
     files: ['src/**/*.{ts,tsx}'],
     languageOptions: {
       globals: {
+        ...globals.browser,
+        ...globals.jest,
         ...globals.node,
       },
-      parser: tsParser,
+      parser: tsParser, // Use @typescript-eslint/parser for TypeScript files
       parserOptions: {
-        project: './tsconfig.json',
+        project: './tsconfig.json', // Enable type-aware linting
       },
     },
     plugins: {
       '@typescript-eslint': tsPlugin,
+      react,
+      'jsx-a11y': jsxA11Y,
+      'react-hooks': reactHooks,
+      cypress,
+      json,
+      import: importPlugin,
+      'no-only-tests': noOnlyTests,
+    },
+    rules: {
+      '@typescript-eslint/no-use-before-define': ['error'],
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
+        {
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^_',
+        },
+      ],
+      '@typescript-eslint/prefer-optional-chain': ['error'], // TypeScript-specific rule
+      'react/jsx-uses-react': 'off',
+      'react/react-in-jsx-scope': 'off',
+      'react/jsx-uses-vars': 'error',
+      'react/prop-types': 'off',
+      'react/display-name': 'off',
+      'jsx-a11y/alt-text': 'error',
+      'jsx-a11y/anchor-is-valid': 'warn',
+      'jsx-a11y/aria-role': 'error',
+      'jsx-a11y/no-autofocus': 'warn',
+      'arrow-body-style': 'off',
+      'prefer-arrow-callback': 'off',
+      'max-len': 'off',
+      'import/no-unresolved': 'error',
+      'import/extensions': 'off',
+      'import/prefer-default-export': 'warn',
+      'no-only-tests/no-only-tests': 'error',
+      'no-unsafe-optional-chaining': 'error',
+    },
+    settings: {
+      'import/resolver': {
+        node: {
+          extensions: ['.ts', '.tsx'],
+        },
+        typescript: {
+          project: './tsconfig.json', // Point to your tsconfig.json
+        },
+        alias: eslintDirAlias,
+      },
+    },
+  },
+  // {
+  //   files: ['ws-nextjs-app/next.config.js'], // Target next.config.js specifically
+  //   languageOptions: {
+  //     globals: {
+  //       ...globals.node, // Enable Node.js globals
+  //     },
+  //   },
+  //   rules: {
+  //     'no-undef': 'off', // Disable no-undef for Node.js globals
+  //   },
+  // },
+  // {
+  //   files: ['webpack.config.*.js'], // Target Webpack configuration files
+  //   languageOptions: {
+  //     globals: {
+  //       ...globals.node, // Enable Node.js globals
+  //     },
+  //   },
+  //   rules: {
+  //     'no-undef': 'off', // Disable no-undef for Node.js globals
+  //     'import/no-dynamic-require': 'off', // Allow dynamic require in Webpack
+  //   },
+  // },
+  // {
+  //   files: [
+  //     'ws-nextjs-app/**/*.{ts,tsx}',
+  //     '!ws-nextjs-app/cypress/**/*',
+  //     '!ws-nextjs-app/cypress.config.ts',
+
+  //     '!ws-nextjs-app/tsconfig.json',
+  //   ], // TypeScript files in ws-nextjs-app
+  //   languageOptions: {
+  //     globals: {
+  //       ...globals.browser,
+  //       ...globals.jest,
+  //       ...globals.node,
+  //     },
+  //     parser: tsParser, // Use @typescript-eslint/parser for TypeScript files
+  //     parserOptions: {
+  //       project: './ws-nextjs-app/tsconfig.json', // Use the tsconfig.json in ws-nextjs-app
+  //     },
+  //   },
+  //   plugins: {
+  //     '@typescript-eslint': tsPlugin,
+  //     react,
+  //     'jsx-a11y': jsxA11Y,
+  //     'react-hooks': reactHooks,
+  //     cypress,
+  //     json,
+  //     import: importPlugin,
+  //     'no-only-tests': noOnlyTests,
+  //   },
+  //   rules: {
+  //     '@typescript-eslint/no-use-before-define': ['error'],
+  //     '@typescript-eslint/no-unused-vars': [
+  //       'warn',
+  //       {
+  //         argsIgnorePattern: '^_',
+  //         varsIgnorePattern: '^_',
+  //         caughtErrorsIgnorePattern: '^_',
+  //       },
+  //     ],
+  //     '@typescript-eslint/prefer-optional-chain': ['error'], // TypeScript-specific rule
+  //     'react/jsx-uses-react': 'off',
+  //     'react/react-in-jsx-scope': 'off',
+  //     'react/jsx-uses-vars': 'error',
+  //     'react/prop-types': 'off',
+  //     'react/display-name': 'off',
+  //     'jsx-a11y/alt-text': 'error',
+  //     'jsx-a11y/anchor-is-valid': 'warn',
+  //     'jsx-a11y/aria-role': 'error',
+  //     'jsx-a11y/no-autofocus': 'warn',
+  //     'arrow-body-style': 'off',
+  //     'prefer-arrow-callback': 'off',
+  //     'max-len': 'off',
+  //     'import/no-unresolved': 'error',
+  //     'import/extensions': 'off',
+  //     'import/prefer-default-export': 'warn',
+  //     'no-only-tests/no-only-tests': 'error',
+  //     'no-unsafe-optional-chaining': 'error',
+  //   },
+  //   settings: {
+  //     'import/resolver': {
+  //       node: {
+  //         extensions: ['.ts', '.tsx'],
+  //       },
+  //       typescript: {
+  //         project: './ws-nextjs-app/tsconfig.json', // Point to the correct tsconfig.json
+  //       },
+  //       alias: eslintDirAlias,
+  //     },
+  //   },
+  // },
+  {
+    files: [
+      'ws-nextjs-app/**/*.{ts,tsx}', // General TypeScript files in ws-nextjs-app
+      'ws-nextjs-app/**/*.test.{ts,tsx}', // Test files in ws-nextjs-app
+    ],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.jest,
+        ...globals.node,
+        describe: true,
+        it: true,
+        expect: true,
+        document: true,
+      },
+      parser: tsParser, // Use @typescript-eslint/parser for TypeScript files
+      parserOptions: {
+        project: './ws-nextjs-app/tsconfig.json', // Use the tsconfig.json in ws-nextjs-app
+      },
+    },
+    plugins: {
+      '@typescript-eslint': tsPlugin,
+      react,
+      'jsx-a11y': jsxA11Y,
+      'react-hooks': reactHooks,
+      cypress,
+      json,
+      import: importPlugin,
+      'no-only-tests': noOnlyTests,
     },
     rules: {
       '@typescript-eslint/no-use-before-define': ['error'],
@@ -107,22 +309,25 @@ export default [
         },
       ],
       '@typescript-eslint/prefer-optional-chain': ['error'],
+      'no-undef': 'off', // Disable no-undef for test globals
     },
-    settings: {
-      'import/resolver': {
-        node: {
-          extensions: ['.js', '.jsx', '.ts', '.tsx'],
-        },
-        alias: {
-          map: [
-            ['#app', './src/app'],
-            ['#server', './src/server'],
-            ['#lib', './src/lib'],
-          ],
-          extensions: ['.js', '.jsx', '.ts', '.tsx'],
-        },
-        alias: eslintDirAlias,
+  },
+  {
+    files: ['**/*.test.{ts,tsx}', '!ws-nextjs-app/**/*.test.{ts,tsx}'], // Test files outside ws-nextjs-app
+    languageOptions: {
+      globals: {
+        describe: true,
+        it: true,
+        expect: true,
+        document: true,
       },
+      parser: tsParser,
+      parserOptions: {
+        project: './tsconfig.json', // Use root tsconfig.json
+      },
+    },
+    rules: {
+      'no-undef': 'off',
     },
   },
 ];
