@@ -115,7 +115,10 @@ export const assertPageView = ({
     interceptATIAnalyticsBeacons();
     cy.visit(path, { retryOnStatusCodeFailure: true });
 
-    const atiPageViewAlias = useReverb ? ATI_PAGE_VIEW_REVERB : ATI_PAGE_VIEW;
+    const atiPageViewAlias =
+      useReverb && applicationType !== 'amp'
+        ? ATI_PAGE_VIEW_REVERB
+        : ATI_PAGE_VIEW;
 
     cy.wait(`@${atiPageViewAlias}`).then(({ request }) => {
       const params = getATIParamsFromURL(request.url);
