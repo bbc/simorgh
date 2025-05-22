@@ -54,8 +54,9 @@ const getBaseConfig = BUNDLE_TYPE => ({
 
       // eslint-disable-next-line no-console
       console.info(
+        '<i>',
         new Chalk().green.bold(
-          `<i> [webpack-dev-server] Local IP: http://${host}:${port}/`,
+          `[webpack-dev-server] Local IP: http://${host}:${port}/`,
         ),
       );
     },
