@@ -1,10 +1,10 @@
 import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
-import { calculatePromoWidth, PROMO_ITEM_WIDTH_MIN } from '../styleUtils';
 import {
   twoPixelFocusIndicatorThickness,
   twoPixelFocusIndicatorStyle,
 } from '#app/components/ThemeProvider/focusIndicator';
+import { calculatePromoWidth, PROMO_ITEM_WIDTH_MIN } from '../styleUtils';
 
 const styles = {
   container: ({ mq, spacings }: Theme) =>
