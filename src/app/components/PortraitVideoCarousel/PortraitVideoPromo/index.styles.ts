@@ -1,13 +1,10 @@
 import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { calculatePromoWidth, PROMO_ITEM_WIDTH_MIN } from '../styleUtils';
-
-const BORDER_THICKNESS = 2;
-const customFocusIndicatorStyle = (innerColor: string, outerColor: string) => ({
-  boxShadow: `0 0 0 ${pixelsToRem(BORDER_THICKNESS)}rem ${innerColor}`,
-  outline: `${pixelsToRem(BORDER_THICKNESS)}rem solid ${outerColor}`,
-  outlineOffset: `${pixelsToRem(BORDER_THICKNESS)}rem`,
-});
+import {
+  twoPixelFocusIndicatorThickness,
+  twoPixelFocusIndicatorStyle,
+} from '#app/components/ThemeProvider/focusIndicator';
 
 const styles = {
   container: ({ mq, spacings }: Theme) =>
@@ -62,8 +59,8 @@ const styles = {
       inset: 0,
       cursor: 'pointer',
       [`&[type='button']:focus-visible`]: {
-        inset: `${pixelsToRem(BORDER_THICKNESS * 2)}rem`,
-        ...customFocusIndicatorStyle(palette.WHITE, palette.BLACK),
+        inset: `${pixelsToRem(twoPixelFocusIndicatorThickness * 2)}rem`,
+        ...twoPixelFocusIndicatorStyle(palette.WHITE, palette.BLACK),
       },
     }),
   gradientOverlay: ({ spacings }: Theme) =>
@@ -100,7 +97,7 @@ const styles = {
         textDecoration: 'underline',
       },
       'button:focus-visible &': {
-        ...customFocusIndicatorStyle(palette.BLACK, palette.WHITE),
+        ...twoPixelFocusIndicatorStyle(palette.BLACK, palette.WHITE),
       },
     }),
 };

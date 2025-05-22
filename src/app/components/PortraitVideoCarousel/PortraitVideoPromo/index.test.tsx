@@ -34,9 +34,7 @@ describe('PortraitVideoPromo', () => {
     const duration = textContents?.[2]?.innerHTML;
 
     const screenreaderText = `${watchVideo}${heading}${duration}`;
-    expect(screenreaderText).toBe(
-      'Assista Vídeo, Sample Heading, Duration 0,13',
-    );
+    expect(screenreaderText).toBe('Play Vídeo, Sample Heading, Duration 0,13');
   });
 
   it('Should not show a visually hidden duration if no duration is given', () => {
