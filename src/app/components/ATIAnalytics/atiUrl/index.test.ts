@@ -1,18 +1,13 @@
 import { resetWindowValue } from '#psammead/psammead-test-helpers/src';
 import { Platforms } from '#app/models/types/global';
 import * as genericLabelHelpers from '../../../lib/analyticsUtils';
-import isLive from '../../../lib/utilities/isLive';
 import {
   buildATIPageTrackPath,
   buildATIEventTrackUrl,
   buildReverbAnalyticsModel,
   buildReverbPageSectionEventModel,
 } from '.';
-
-jest.mock('../../../lib/utilities/isLive', () => ({
-  __esModule: true,
-  default: jest.fn(),
-}));
+import splitUrl from './splitUrl';
 
 jest.mock('#app/lib/config/optimizely', () => ({ flagKey: 'mockFlagKey' }));
 
@@ -21,9 +16,6 @@ const mockAndSet = ({ name, source }, response) => {
   source[name] = jest.fn(); // eslint-disable-line no-param-reassign
   source[name].mockImplementation(() => response);
 };
-
-const splitUrl = (url: string) =>
-  url.replace(/&/g, ',').replace(/\?/g, ',').split(',');
 
 const analyticsUtilFunctions = [
   { name: 'getDestination', source: genericLabelHelpers },
@@ -471,11 +463,7 @@ describe('Reverb', () => {
       });
     });
 
-    describe('LOCAL, TEST and PREVIEW - Viewability Model', () => {
-      beforeEach(() => {
-        (isLive as jest.Mock).mockImplementationOnce(() => false);
-      });
-
+    describe('Viewability Model', () => {
       it('should return the correct event details for the Reverb page section view event model', () => {
         const reverbPageSectionViewEventModel =
           buildReverbPageSectionEventModel(input);
@@ -580,76 +568,8 @@ describe('Reverb', () => {
           },
           isClick: false,
           experience: {
-            engine_id: 'optimizely.mockFlagKey.variant_1',
-          },
-        });
-      });
-    });
-
-    describe('LIVE - Click-Per-View (CPV) Model', () => {
-      beforeEach(() => {
-        (isLive as jest.Mock).mockImplementationOnce(() => true);
-      });
-
-      it('should return the correct event details for the Reverb page section view event model', () => {
-        const reverbPageSectionViewEventModel =
-          buildReverbPageSectionEventModel(input);
-
-        expect(reverbPageSectionViewEventModel.eventDetails).toEqual({
-          eventName: 'sectionView',
-          eventPublisher: 'impression',
-          componentName: 'top-stories',
-          container: '1234',
-          attribute: 'top-stories',
-          metadata: 'format',
-          placement: 'mundo.page',
-          source: 'advertiserID',
-          result: 'http://localhost',
-          isClick: false,
-        });
-      });
-
-      it('should return the correct event details for the Reverb page section click event model', () => {
-        const reverbPageSectionViewEventModel =
-          buildReverbPageSectionEventModel({
-            ...input,
-            type: 'click',
-          });
-
-        expect(reverbPageSectionViewEventModel.eventDetails).toEqual({
-          eventName: 'sectionClick',
-          eventPublisher: 'click',
-          componentName: 'top-stories',
-          container: '1234',
-          attribute: 'top-stories',
-          metadata: 'format',
-          placement: 'mundo.page',
-          source: 'advertiserID',
-          result: 'http://localhost',
-          isClick: true,
-        });
-      });
-
-      it('should add experiment fields if experimentVariant is present', () => {
-        const reverbPageSectionViewEventModel =
-          buildReverbPageSectionEventModel({
-            ...input,
-            experimentVariant: 'variant_1',
-          });
-
-        expect(reverbPageSectionViewEventModel.eventDetails).toEqual({
-          eventName: 'sectionView',
-          eventPublisher: 'impression',
-          componentName: 'top-stories',
-          container: '1234',
-          attribute: 'top-stories',
-          metadata: 'format',
-          placement: 'mundo.page',
-          source: 'advertiserID',
-          result: 'http://localhost',
-          isClick: false,
-          personalisation: {
-            EXP: 'mockFlagKey::variant_1',
+            engine_type: ['experimentation'],
+            engine_id: ['optimizely.mockFlagKey.variant_1'],
           },
         });
       });
