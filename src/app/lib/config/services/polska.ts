@@ -13,6 +13,7 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-polska',
     atiAnalyticsProducerId: '135',
     atiAnalyticsProducerName: 'POLSKA',
+    useReverb: true,
     chartbeatDomain: 'polska.bbc.co.uk',
     brandName: 'BBC News Polska',
     product: 'BBC News',
@@ -369,10 +370,6 @@ export const service: DefaultServiceConfig = {
           text: 'Pliki cookie',
         },
         {
-          href: 'https://www.bbc.com/polska/send/u203797512',
-          text: 'Skontaktuj się z nami',
-        },
-        {
           href: 'https://www.bbc.com/ws/languages',
           text: 'Inne języki',
         },
@@ -387,20 +384,6 @@ export const service: DefaultServiceConfig = {
         'BBC. BBC nie ponosi odpowiedzialności za treści na stronach zewnętrznych.',
     },
     timezone: 'Europe/Warsaw',
-    navigation: [
-      {
-        title: 'News',
-        url: '/polska',
-      },
-      {
-        title: 'Polska',
-        url: '/polska/topics/cly1xdxypzet',
-      },
-      {
-        title: 'Wojna w Ukrainie',
-        url: '/polska/topics/c8x8n9y15qnt',
-      },
-    ],
   },
 };
 export default withContext(service);
