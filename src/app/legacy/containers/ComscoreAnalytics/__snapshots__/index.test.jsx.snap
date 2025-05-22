@@ -11,5 +11,3 @@ exports[`Comscore Analytics Container AMP should render comscore amp-analytics c
   </script>
 </amp-analytics>
 `;
-
-exports[`Comscore Analytics Container Canonical should render comscore script when on canonical 1`] = `<div />`;
