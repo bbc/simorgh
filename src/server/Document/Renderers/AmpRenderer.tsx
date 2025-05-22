@@ -1,5 +1,5 @@
 /* eslint-disable react/no-danger */
-import React from 'react';
+import React, { useContext } from 'react';
 import {
   AMP_SCRIPT,
   AMP_NO_SCRIPT,
@@ -10,6 +10,10 @@ import {
 import { AMP_GEO_SCRIPT } from '#components/AmpGeo';
 import { BaseRendererProps } from './types';
 
+interface Props extends BaseRendererProps {
+  data: Record<string, unknown>;
+}
+
 export default function AmpRenderer({
   helmetMetaTags,
   helmetLinkTags,
@@ -19,7 +23,9 @@ export default function AmpRenderer({
   ids,
   styles,
   title,
-}: BaseRendererProps) {
+  data,
+}: Props) {
+  const { showCookieBannerBasedOnCountry } = data;
   return (
     <html lang="en-GB" {...htmlAttrs}>
       <head>
@@ -37,8 +43,12 @@ export default function AmpRenderer({
           <style amp-boilerplate="">{AMP_NO_SCRIPT}</style>
         </noscript>
         {AMP_JS}
-        {AMP_GEO_SCRIPT}
-        {AMP_CONSENT_JS}
+        {!showCookieBannerBasedOnCountry && (
+          <>
+            {AMP_GEO_SCRIPT}
+            {AMP_CONSENT_JS}
+          </>
+        )}
         {AMP_ANALYTICS_JS}
       </head>
       <body className="amp-geo-pending">
