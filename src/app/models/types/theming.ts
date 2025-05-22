@@ -461,6 +461,12 @@ export type BrandSVG = {
     minY?: number;
     minX?: number;
   };
+  // mobileViewbox?: {
+  //   height?: number;
+  //   width?: number;
+  //   minY?: number;
+  //   minX?: number;
+  // };
 };
 
 export type GridWidths = {

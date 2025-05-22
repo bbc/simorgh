@@ -141,7 +141,8 @@ const LocalisedBrandName = ({
     <VisuallyHiddenText id={brandId}>{product}</VisuallyHiddenText>
   );
 };
-
+// An option?: render two StyledBrand with varying viewbox sizes
+// & optional css display on GEL 1 breakpoint
 const StyledBrand = ({
   linkId,
   product,
@@ -159,6 +160,7 @@ const StyledBrand = ({
           svg.viewbox.width,
           svg.viewbox.height,
         ].join(' ')}
+        // mobileViewbox={svg.mobileViewbox}
         xmlns="http://www.w3.org/2000/svg"
         focusable="false"
         aria-hidden="true"
