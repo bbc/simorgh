@@ -25,7 +25,9 @@ describe('PortraitVideoPromo', () => {
       { service: 'portuguese' },
     );
 
-    const textContents = container.querySelector('p')?.querySelectorAll('span');
+    const textContents = container
+      .querySelector('span[data-testid="text-contents"]')
+      ?.querySelectorAll('span');
 
     const watchVideo = textContents?.[0]?.innerHTML;
     const heading = textContents?.[1]?.innerHTML;
@@ -45,7 +47,9 @@ describe('PortraitVideoPromo', () => {
       { service: 'portuguese' },
     );
 
-    const textContents = container.querySelector('p')?.querySelectorAll('span');
+    const textContents = container
+      .querySelector('span[data-testid="text-contents"]')
+      ?.querySelectorAll('span');
     const duration = textContents?.[2]?.innerHTML;
     expect(duration).toBeUndefined();
   });
