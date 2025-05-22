@@ -13,7 +13,7 @@ import styles from './index.styles';
 
 const DEFAULT_TRANSLATION = {
   video: 'video',
-  watch: 'Watch',
+  play: 'Play',
   duration: 'Duration',
 };
 export default (item: PortraitVideoPromoProps) => {
@@ -28,7 +28,7 @@ export default (item: PortraitVideoPromoProps) => {
   const mediaISO8601Duration = video?.version.duration;
   const {
     video: mediaType,
-    watch: actionType,
+    play: actionType,
     duration: durationTranslation,
   } = media;
 
