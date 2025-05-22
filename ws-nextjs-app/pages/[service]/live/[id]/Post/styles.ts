@@ -114,7 +114,7 @@ export default {
     }),
   audioPost: ({ mq, spacings }: Theme) =>
     css({
-      '& [data-e2e="media-player"]': {
+      '& .media-player': {
         height: '140px',
         margin: `0 0 ${spacings.FULL}rem 0`,
         [mq.GROUP_2_MIN_WIDTH]: {

@@ -169,6 +169,7 @@ const MediaContainer = ({
     <div
       ref={playerElementRef}
       data-e2e="media-player"
+      className="media-player"
       css={isAudio ? styles.audioMediaContainer : styles.standardMediaContainer}
     >
       <noscript>
@@ -262,7 +263,7 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
       }
       <figure
         data-e2e="media-loader__container"
-        className={className}
+        className={`media-container ${className}`}
         css={[
           styles.figure(embedded),
           !isAudio && [
