@@ -9,7 +9,7 @@ export default () => {
       'https://cdn.ampproject.org/v0/amp-analytics-0.1.js',
     ];
 
-    const concentRequiredScripts = [
+    const consentRequiredScripts = [
       'https://cdn.ampproject.org/v0/amp-geo-0.1.js',
       'https://cdn.ampproject.org/v0/amp-consent-0.1.js',
     ];
@@ -20,7 +20,7 @@ export default () => {
       ).toBeInTheDocument();
     });
 
-    concentRequiredScripts.forEach(ampScript => {
+    consentRequiredScripts.forEach(ampScript => {
       expect(
         document.querySelector(`head script[src="${ampScript}"]`),
       ).not.toBeInTheDocument();
