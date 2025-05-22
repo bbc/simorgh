@@ -12,8 +12,8 @@ describe('PortraitVideoCarousel', () => {
     });
 
     const portraitVideoItems = (container as unknown as HTMLElement)
-      .querySelector('div[data-testid="pv-scroll-panel"]')
-      ?.querySelectorAll('button');
+      .querySelector('ul[data-testid="pv-scroll-panel"]')
+      ?.querySelectorAll('li');
 
     expect(portraitVideoItems?.length).toBe(fixture.items.length);
   });
