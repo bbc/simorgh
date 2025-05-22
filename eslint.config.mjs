@@ -65,13 +65,8 @@ export default [
         ...globals.node,
       },
       parser: babelParser, // Use babelParser for JavaScript files
-      ecmaVersion: 2017,
-      sourceType: 'module',
       parserOptions: {
-        ecmaFeatures: {
-          jsx: true,
-        },
-        requireConfigFile: false,
+        project: true,
       },
     },
     plugins: {
@@ -121,7 +116,7 @@ export default [
       },
       parser: tsParser, // Use @typescript-eslint/parser for TypeScript files
       parserOptions: {
-        project: './tsconfig.json', // Enable type-aware linting
+        project: true,
       },
     },
     plugins: {
@@ -285,7 +280,7 @@ export default [
       },
       parser: tsParser, // Use @typescript-eslint/parser for TypeScript files
       parserOptions: {
-        project: './ws-nextjs-app/tsconfig.json', // Use the tsconfig.json in ws-nextjs-app
+        project: true,
       },
     },
     plugins: {
@@ -312,22 +307,28 @@ export default [
       'no-undef': 'off', // Disable no-undef for test globals
     },
   },
-  {
-    files: ['**/*.test.{ts,tsx}', '!ws-nextjs-app/**/*.test.{ts,tsx}'], // Test files outside ws-nextjs-app
-    languageOptions: {
-      globals: {
-        describe: true,
-        it: true,
-        expect: true,
-        document: true,
-      },
-      parser: tsParser,
-      parserOptions: {
-        project: './tsconfig.json', // Use root tsconfig.json
-      },
-    },
-    rules: {
-      'no-undef': 'off',
-    },
-  },
+  // {
+  //   files: ['**/*.test.{ts,tsx}', '!ws-nextjs-app/**/*.test.{ts,tsx}'], // Test files outside ws-nextjs-app
+  //   languageOptions: {
+  //     globals: {
+  //       describe: true,
+  //       it: true,
+  //       expect: true,
+  //       document: true,
+  //     },
+  //     parser: tsParser,
+  //     // parserOptions: {
+  //     //   ecmaVersion: 2017,
+  //     //   sourceType: 'module',
+  //     //   ecmaFeatures: {
+  //     //     jsx: true,
+  //     //   },
+  //     //   requireConfigFile: false,
+  //     //   tsconfigRootDir: import.meta.dirname,
+  //     // },
+  //   },
+  //   rules: {
+  //     'no-undef': 'off',
+  //   },
+  // },
 ];
