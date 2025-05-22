@@ -31,7 +31,14 @@ const BrandContainer = ({
   const svgRatio = brandSVG && brandSVG.ratio;
   const minWidth = svgRatio * svgMinHeight;
   const maxWidth = svgRatio * svgMaxHeight;
-  const longBrands = ['afaanoromoo', 'azeri', 'kyrgyz', 'russian', 'serbian'];
+  const longBrands = [
+    'afaanoromoo',
+    'azeri',
+    'kyrgyz',
+    'russian',
+    'serbian',
+    'ws',
+  ];
   return (
     <StyledBrand
       product={product}
