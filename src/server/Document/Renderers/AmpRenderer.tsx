@@ -1,5 +1,5 @@
 /* eslint-disable react/no-danger */
-import React, { useContext } from 'react';
+import React from 'react';
 import {
   AMP_SCRIPT,
   AMP_NO_SCRIPT,
