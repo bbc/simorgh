@@ -19,24 +19,20 @@ const styles = {
       margin: 0,
       display: 'grid',
       listStyleType: 'none',
-      gap: `${spacings.DOUBLE}rem`,
+      gap: `${spacings.TRIPLE}rem`,
       [mq.GROUP_2_MIN_WIDTH]: {
         gridTemplateColumns: 'repeat(2, 1fr)',
-        gap: `${spacings.TRIPLE}rem`,
       },
     }),
-  item: ({ spacings, mq }: Theme) =>
+  item: ({ spacings }: Theme) =>
     css({
       position: 'relative',
       display: 'flex',
       minWidth: '0',
       alignItems: 'center',
       gap: `${spacings.FULL}rem`,
-      [mq.GROUP_3_MIN_WIDTH]: {
-        gap: `${spacings.DOUBLE}rem`,
-      },
     }),
-  link: ({ palette, fontVariants, fontSizes, mq }: Theme) =>
+  link: ({ palette, fontVariants, fontSizes }: Theme) =>
     css({
       color: palette.GREY_10,
       textDecoration: 'none',
@@ -49,19 +45,12 @@ const styles = {
         textDecoration: 'underline',
       },
       '::before': {
-        [mq.GROUP_3_MIN_WIDTH]: {
-          top: `${pixelsToRem(-12)}rem`,
-          bottom: `${pixelsToRem(-12)}rem`,
-          insetBlock: `${pixelsToRem(-12)}rem`,
-        },
         position: 'absolute',
-        top: `${pixelsToRem(-6)}rem`,
         right: 0,
-        bottom: `${pixelsToRem(-6)}rem`,
         left: 0,
+        top: `${pixelsToRem(-12)}rem`,
+        bottom: `${pixelsToRem(-12)}rem`,
         content: '""',
-        insetBlock: `${pixelsToRem(-6)}rem`,
-        insetInline: '0px',
       },
     }),
 };

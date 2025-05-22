@@ -7,7 +7,7 @@ The link has a tap area. The component uses the curation `visualStyle` of `LINKS
 
 | Name      | type      | Description                                          |
 | --------- | --------- | ---------------------------------------------------- |
-| title     | string    | The H2 title of the social links section             |
+| title     | string    | The H2 title of the useful links section             |
 | position  | number    | The position of the curation item                    |
 | summaries | Summary[] | List of summary objects as returned from Simorgh BFF |
 
