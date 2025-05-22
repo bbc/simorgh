@@ -64,7 +64,12 @@ export default (item: PortraitVideoPromoProps) => {
               </time>
             </div>
           )}
-          <Text size="pica" as="p" fontVariant="sansBold" css={styles.title}>
+          <Text
+            size="pica"
+            fontVariant="sansBold"
+            css={styles.title}
+            data-testid="text-contents"
+          >
             <VisuallyHiddenText>
               {actionType} {mediaType},{' '}
             </VisuallyHiddenText>

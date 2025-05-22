@@ -25,14 +25,16 @@ describe('PortraitVideoPromo', () => {
       { service: 'portuguese' },
     );
 
-    const textContents = container.querySelector('p')?.querySelectorAll('span');
+    const textContents = container
+      .querySelector('span[data-testid="text-contents"]')
+      ?.querySelectorAll('span');
 
     const watchVideo = textContents?.[0]?.innerHTML;
     const heading = textContents?.[1]?.innerHTML;
     const duration = textContents?.[2]?.innerHTML;
 
-    const concatenatedText = `${watchVideo}${heading}${duration}`;
-    expect(concatenatedText).toBe(
+    const screenreaderText = `${watchVideo}${heading}${duration}`;
+    expect(screenreaderText).toBe(
       'Assista Vídeo, Sample Heading, Duration 0,13',
     );
   });
@@ -45,7 +47,9 @@ describe('PortraitVideoPromo', () => {
       { service: 'portuguese' },
     );
 
-    const textContents = container.querySelector('p')?.querySelectorAll('span');
+    const textContents = container
+      .querySelector('span[data-testid="text-contents"]')
+      ?.querySelectorAll('span');
     const duration = textContents?.[2]?.innerHTML;
     expect(duration).toBeUndefined();
   });
