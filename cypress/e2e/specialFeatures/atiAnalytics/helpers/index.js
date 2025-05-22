@@ -10,6 +10,8 @@ export const ATI_PAGE_VIEW = 'ati-page-view';
 
 export const ATI_PAGE_VIEW_REVERB = 'ati-page-view-reverb';
 
+export const ATI_USER_ID_COOKIE = 'atuserid-cookie-value';
+
 const SCROLLABLE_NAVIGATION = 'scrollable-navigation';
 const DROPDOWN_NAVIGATION = 'dropdown-navigation';
 const TOP_STORIES = 'top-stories';
@@ -163,4 +165,8 @@ export const getPathWithSuffix = ({ path, suffix = '' }) => {
   const { pathname, search } = new URL(`https://www.bbc.com${path}`);
 
   return `${pathname}${suffix}${search}`;
+};
+
+export const setUserIDCookie = () => {
+  cy.setCookie('atuserid', JSON.stringify({ val: ATI_USER_ID_COOKIE }));
 };
