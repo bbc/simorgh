@@ -28,8 +28,10 @@ export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
   const checkScrollButtons = useCallback(() => {
     if (!scrollPaneRef.current) return;
     const { scrollLeft, scrollWidth, clientWidth } = scrollPaneRef.current;
-    setCanScrollLeft(scrollLeft > 0);
-    setCanScrollRight(scrollLeft + clientWidth < scrollWidth);
+
+    const absoluteLeftValue = Math.abs(scrollLeft);
+    setCanScrollLeft(absoluteLeftValue > 0);
+    setCanScrollRight(absoluteLeftValue + clientWidth + 1 < scrollWidth);
   }, [scrollPaneRef]);
 
   const scroll = (buttonTriggered: ScrollDirection) => {
