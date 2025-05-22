@@ -17,7 +17,7 @@ const PortraitVideoCarousel = ({
   title,
   items,
 }: PortraitVideoCarouselProps) => {
-  const scrollRef = useRef<HTMLDivElement>(null);
+  const scrollRef = useRef<HTMLUListElement>(null);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedItem, setSelectedItem] =
@@ -46,7 +46,8 @@ const PortraitVideoCarousel = ({
       >
         <h2 css={styles.heading}>{title}</h2>
         <div css={styles.carouselContainer}>
-          <div
+          <PortraitCarouselNavigation scrollPaneRef={scrollRef} />
+          <ul
             ref={scrollRef}
             css={styles.carousel}
             data-testid="pv-scroll-panel"
@@ -59,8 +60,7 @@ const PortraitVideoCarousel = ({
               />
             ))}
             <div css={[styles.endBlankItem]} />
-          </div>
-          <PortraitCarouselNavigation scrollPaneRef={scrollRef} />
+          </ul>
         </div>
         {isModalOpen &&
           selectedItem &&

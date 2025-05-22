@@ -2,6 +2,8 @@ import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { calculateVariedNavContainerWidths } from '../styleUtils';
 
+const BUTTON_WIDTH_PX = 44;
+
 const styles = {
   buttonGroupOverlay: ({ mq }: Theme) =>
     css({
@@ -14,23 +16,23 @@ const styles = {
       zIndex: 1,
       ...calculateVariedNavContainerWidths({ mq, display: 'flex' }),
     }),
-  buttonGroup: ({ mq, spacings }: Theme) =>
+  buttonGroup: ({ spacings }: Theme) =>
     css({
-      [mq.GROUP_3_MIN_WIDTH]: {
-        width: '100%',
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
-        gap: `${spacings.HALF}rem`,
-      },
+      width: '100%',
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center',
+      gap: `${spacings.HALF}rem`,
+      padding: `0 ${spacings.FULL}rem`,
     }),
   navButton: ({ palette, spacings }: Theme) =>
     css({
       backgroundColor: palette.BLACK,
       border: 'none',
-      width: `${pixelsToRem(44)}rem`,
-      height: `${pixelsToRem(44)}rem`,
+      width: '100%',
+      maxWidth: `${pixelsToRem(BUTTON_WIDTH_PX)}rem`,
+      aspectRatio: '1/1',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',

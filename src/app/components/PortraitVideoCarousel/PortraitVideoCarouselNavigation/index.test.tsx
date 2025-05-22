@@ -28,7 +28,7 @@ const createMockScrollElementRef = ({
       addEventListener: jest.fn(),
       removeEventListener: jest.fn(),
     },
-  } as unknown as RefObject<HTMLDivElement>;
+  } as unknown as RefObject<HTMLUListElement>;
 
   (mockHTMLElementRef.current.scrollBy as jest.Mock).mockImplementation(
     ({ left }) => {

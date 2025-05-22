@@ -10,20 +10,21 @@ import styles from './index.styles';
 import { LeftChevron, RightChevron } from '../../icons';
 import { PROMO_ITEM_WIDTH_MIN } from '../styleUtils';
 
-const defaultTranslations = {
-  scrollLeft: 'Scroll left',
-  scrollRight: 'Scroll right',
+const DEFAULT_TRANSLATION = {
+  scrollToPrevious: 'Scroll to previous item',
+  scrollToNext: 'Scroll to next item',
 };
 
 export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
   const {
     dir,
-    translations: { carousel = defaultTranslations },
+    translations: { carousel = DEFAULT_TRANSLATION },
   } = useContext(ServiceContext);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
 
-  const { scrollLeft: scrollLeftAria, scrollRight: scrollRightAria } = carousel;
+  const { scrollToPrevious: scrollLeftAria, scrollToNext: scrollRightAria } =
+    carousel;
 
   const checkScrollButtons = useCallback(() => {
     if (!scrollPaneRef.current) return;

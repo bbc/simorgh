@@ -48,7 +48,7 @@ export default (item: PortraitVideoPromoProps) => {
   }
 
   return (
-    <div css={styles.container}>
+    <li css={styles.container}>
       {imageUrl && (
         <Image alt={alt} src={imageUrl} aspectRatio={[9, 16]} lazyLoad />
       )}
@@ -82,6 +82,6 @@ export default (item: PortraitVideoPromoProps) => {
           </Text>
         </div>
       </button>
-    </div>
+    </li>
   );
 };
