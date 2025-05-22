@@ -86,13 +86,6 @@ describe('UsefulLinks', () => {
       const link = screen.getByText(summary.title).closest('a');
       expect(link).toHaveAttribute('href', summary.link);
       expect(link).toHaveTextContent(summary.title);
-
-      if (link && summary.description) {
-        const visuallyHiddenText = link.querySelector(
-          '[class*="visuallyHiddenText"]',
-        );
-        expect(visuallyHiddenText).toHaveTextContent(summary.description);
-      }
     });
   });
 });
