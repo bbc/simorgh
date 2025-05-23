@@ -46,16 +46,16 @@ const baseServiceConfig = {
   showAdPlaceholder: true,
   showRelatedTopics: true,
   podcastPromo: {
-    title: 'телеграм',
+    title: 'Viber',
     brandTitle: 'Як дізнатися головне про Україну та світ?',
-    brandDescription: 'Стежте за BBC News Україна в телеграмі.',
+    brandDescription: 'Стежте за BBC News Україна у Viber!',
     image: {
-      src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0l8hlvk.png',
-      alt: 'Чнтайте наш телеграм',
+      src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0ld00bz.jpg',
+      alt: 'Підписуйтесь на наш Viber',
     },
     linkLabel: {
-      text: 'Підпишіться на наш канал тут!',
-      href: 'https://t.me/bbcukrainian',
+      text: 'Підписуйтеся на канал тут!',
+      href: 'https://invite.viber.com/?g2=AQAYCiHrGU3SlUeR%2FZaHRAQ4%2FGdXWGFgaUOXbMnWlHpIli4mBJEfTyN%2FHRPjb7GW&lang=en',
     },
     skipLink: {
       text: 'Пропустити %title% і продовжити',
