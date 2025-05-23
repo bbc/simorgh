@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import Brand from '#psammead/psammead-brand/src';
 import { useTheme } from '@emotion/react';
+import getBrandPath from '#lib/utilities/getBrandPath';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
 
@@ -39,6 +40,15 @@ const BrandContainer = ({
     'serbian',
     'ws',
   ];
+
+  const { service: brandService, variant: brandVariant } = getBrandPath(
+    service,
+    variant,
+  );
+  const brandPath = brandVariant
+    ? `/${brandService}/${brandVariant}`
+    : `/${brandService}`;
+
   return (
     <StyledBrand
       product={product}
@@ -47,7 +57,7 @@ const BrandContainer = ({
       minWidth={minWidth}
       maxWidth={maxWidth}
       svg={brandSVG}
-      url={`/${service}${variant ? `/${variant}` : ''}`}
+      url={brandPath}
       skipLink={skipLink}
       scriptLink={scriptLink}
       isLongBrand={longBrands.includes(service)}
