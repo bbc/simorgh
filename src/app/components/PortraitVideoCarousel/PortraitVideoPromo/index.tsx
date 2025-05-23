@@ -7,7 +7,7 @@ import { Play } from '#app/components/icons';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import moment from 'moment';
 import formatDuration from '#app/lib/utilities/formatDuration';
-import { useContext } from 'react';
+import { useContext, FocusEvent } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
 import { PROMO_ITEM_WIDTH_MIN } from '../styleUtils';
@@ -48,6 +48,14 @@ export default (item: PortraitVideoPromoProps) => {
     });
   }
 
+  const onFocusListener = (event: FocusEvent<HTMLButtonElement>) => {
+    event.target.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
+      inline: 'center',
+    });
+  };
+
   return (
     <li css={styles.container}>
       {imageUrl && (
@@ -59,7 +67,13 @@ export default (item: PortraitVideoPromoProps) => {
           lazyLoad
         />
       )}
-      <button type="button" onClick={onClick} css={styles.button}>
+      <button
+        type="button"
+        onClick={onClick}
+        css={styles.button}
+        onFocus={onFocusListener}
+        data-testid="promo-button"
+      >
         <div css={styles.gradientOverlay}>
           <div css={styles.forcedColourBackground}>
             {mediaISO8601Duration && (

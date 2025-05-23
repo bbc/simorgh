@@ -97,9 +97,6 @@ describe('PortraitCarouselNavigation', () => {
 
     const leftButton = screen.getByTestId('pv-scroll-left');
 
-    fireEvent.click(leftButton);
-    jest.runAllTimers();
-
     await act(async () => {
       fireEvent.click(leftButton);
       jest.runAllTimers();
