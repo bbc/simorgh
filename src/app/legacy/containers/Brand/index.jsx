@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import Brand from '#psammead/psammead-brand/src';
 import { useTheme } from '@emotion/react';
-import getBrandPath from '#lib/utilities/getBrandPath';
+import { servicesWithVariants } from '#lib/utilities/variantHandler';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
 
@@ -41,10 +41,26 @@ const BrandContainer = ({
     'ws',
   ];
 
-  const { service: brandService, variant: brandVariant } = getBrandPath(
+  const getBrandURL = (serviceName, variantName) => {
+    if (serviceName === 'ws') {
+      return {
+        service: 'ws/languages',
+      };
+    }
+    if (
+      variantName &&
+      servicesWithVariants[serviceName]?.includes(variantName)
+    ) {
+      return { service: serviceName, variant: variantName };
+    }
+    return { service: serviceName };
+  };
+
+  const { service: brandService, variant: brandVariant } = getBrandURL(
     service,
     variant,
   );
+
   const brandPath = brandVariant
     ? `/${brandService}/${brandVariant}`
     : `/${brandService}`;

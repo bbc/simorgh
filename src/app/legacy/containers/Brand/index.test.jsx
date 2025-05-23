@@ -13,6 +13,52 @@ const BrandContainerWithContext = (skipLink, scriptLink, linkId) => (
 const mockSkipLink = <div data-testid="skip-link">Skip Link</div>;
 const mockScriptLink = <div data-testid="script-link">Script Link</div>;
 
+describe('getBrandURL', () => {
+  it('should return ws/languages for ws service', () => {
+    const { container } = render(BrandContainerWithContext(), {
+      service: 'ws',
+    });
+    const brandLink = container.querySelector('a');
+    expect(brandLink.getAttribute('href')).toEqual('/ws/languages');
+  });
+
+  it('should return service with variant when valid', () => {
+    const { container } = render(BrandContainerWithContext(), {
+      service: 'serbian',
+      variant: 'lat',
+    });
+    const brandLink = container.querySelector('a');
+    expect(brandLink.getAttribute('href')).toEqual('/serbian/lat');
+  });
+
+  it('should return service without variant for services that do not support variants', () => {
+    const { container } = render(BrandContainerWithContext(), {
+      service: 'news',
+      variant: 'simp',
+    });
+    const brandLink = container.querySelector('a');
+    expect(brandLink.getAttribute('href')).toEqual('/news');
+  });
+
+  it('should return service without variant when variant is undefined', () => {
+    const { container } = render(BrandContainerWithContext(), {
+      service: 'serbian',
+      variant: undefined,
+    });
+    const brandLink = container.querySelector('a');
+    expect(brandLink.getAttribute('href')).toEqual('/serbian');
+  });
+
+  it('should return service without variant when variant is not valid for the service', () => {
+    const { container } = render(BrandContainerWithContext(), {
+      service: 'serbian',
+      variant: 'simp',
+    });
+    const brandLink = container.querySelector('a');
+    expect(brandLink.getAttribute('href')).toEqual('/serbian');
+  });
+});
+
 describe(`BrandContainer`, () => {
   suppressPropWarnings(['linkId', 'StyledBrand', 'null']);
   suppressPropWarnings(['linkId', 'LocalisedBrandName', 'null']);
