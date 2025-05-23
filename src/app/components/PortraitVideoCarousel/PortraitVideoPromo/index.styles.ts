@@ -66,22 +66,31 @@ const styles = {
   gradientOverlay: ({ spacings }: Theme) =>
     css({
       position: 'absolute',
-      bottom: 0,
-      left: 0,
-      right: 0,
+      inset: 'auto 0 0 0',
       padding: `${pixelsToRem(28)}rem ${spacings.FULL}rem ${spacings.FULL}rem`,
       background:
         'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 24%, rgba(0, 0, 0, 1) 100%)',
     }),
-  durationContainer: ({ palette }: Theme) =>
+  forcedColourBackground: ({ mq }: Theme) =>
     css({
-      display: 'flex',
+      [mq.FORCED_COLOURS]: {
+        backgroundColor: 'canvas',
+      },
+    }),
+  durationContainer: ({ palette, mq }: Theme) =>
+    css({
+      display: 'inline-flex',
       alignItems: 'center',
       color: palette.WHITE,
+      [mq.FORCED_COLOURS]: {
+        backgroundColor: 'canvas',
+      },
     }),
   playIcon: () =>
     css({
       fill: 'currentcolor',
+      width: `${pixelsToRem(12)}rem`,
+      height: `${pixelsToRem(12)}rem`,
     }),
   duration: ({ palette, spacings }: Theme) =>
     css({

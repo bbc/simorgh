@@ -10,6 +10,7 @@ import formatDuration from '#app/lib/utilities/formatDuration';
 import { useContext } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
+import { PROMO_ITEM_WIDTH_MIN } from '../constants';
 
 const DEFAULT_TRANSLATION = {
   video: 'video',
@@ -50,36 +51,44 @@ export default (item: PortraitVideoPromoProps) => {
   return (
     <li css={styles.container}>
       {imageUrl && (
-        <Image alt={alt} src={imageUrl} aspectRatio={[9, 16]} lazyLoad />
+        <Image
+          alt={alt}
+          src={imageUrl}
+          aspectRatio={[9, 16]}
+          width={PROMO_ITEM_WIDTH_MIN}
+          lazyLoad
+        />
       )}
       <button type="button" onClick={onClick} css={styles.button}>
         <div css={styles.gradientOverlay}>
-          {mediaISO8601Duration && (
-            <div css={styles.durationContainer} aria-hidden="true">
-              <Play css={styles.playIcon} />
-              <time dateTime={mediaISO8601Duration}>
-                <Text size="brevier" css={styles.duration}>
-                  {durationString}
-                </Text>
-              </time>
-            </div>
-          )}
-          <Text
-            size="pica"
-            fontVariant="sansBold"
-            css={styles.title}
-            data-testid="text-contents"
-          >
-            <VisuallyHiddenText>
-              {actionType} {mediaType},{' '}
-            </VisuallyHiddenText>
-            <span>{headline}</span>
+          <div css={styles.forcedColourBackground}>
             {mediaISO8601Duration && (
-              <VisuallyHiddenText>
-                , {durationTranslation} {durationSpokenString}
-              </VisuallyHiddenText>
+              <div css={styles.durationContainer} aria-hidden="true">
+                <Play css={styles.playIcon} />
+                <time dateTime={mediaISO8601Duration}>
+                  <Text size="brevier" css={styles.duration}>
+                    {durationString}
+                  </Text>
+                </time>
+              </div>
             )}
-          </Text>
+            <Text
+              size="pica"
+              fontVariant="sansBold"
+              css={styles.title}
+              data-testid="text-contents"
+            >
+              <VisuallyHiddenText>
+                {actionType} {mediaType},{' '}
+              </VisuallyHiddenText>
+              <span>{headline}</span>
+              {mediaISO8601Duration && (
+                <VisuallyHiddenText>
+                  , {durationTranslation} {durationSpokenString}
+                </VisuallyHiddenText>
+              )}
+            </Text>
+          </div>
         </div>
       </button>
     </li>
