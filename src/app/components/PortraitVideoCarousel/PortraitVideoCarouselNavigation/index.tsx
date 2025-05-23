@@ -11,8 +11,8 @@ import { LeftChevron, RightChevron } from '../../icons';
 import { PROMO_ITEM_WIDTH_MIN } from '../styleUtils';
 
 const DEFAULT_TRANSLATION = {
-  scrollToPrevious: 'Scroll to previous item',
-  scrollToNext: 'Scroll to next item',
+  previous: 'Scroll to previous item',
+  next: 'Scroll to next item',
 };
 
 export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
@@ -23,8 +23,7 @@ export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
 
-  const { scrollToPrevious: scrollLeftAria, scrollToNext: scrollRightAria } =
-    carousel;
+  const { previous: previousAria, next: nextAria } = carousel;
 
   const checkScrollButtons = useCallback(() => {
     if (!scrollPaneRef.current) return;
@@ -64,7 +63,7 @@ export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
       <div css={styles.buttonGroup}>
         <button
           type="button"
-          aria-label={scrollLeftAria}
+          aria-label={previousAria}
           onClick={() => scroll(dir === 'ltr' ? 'left' : 'right')}
           disabled={!canScrollLeft}
           css={styles.navButton}
@@ -74,7 +73,7 @@ export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
         </button>
         <button
           type="button"
-          aria-label={scrollRightAria}
+          aria-label={nextAria}
           onClick={() => scroll(dir === 'ltr' ? 'right' : 'left')}
           disabled={!canScrollRight}
           css={styles.navButton}

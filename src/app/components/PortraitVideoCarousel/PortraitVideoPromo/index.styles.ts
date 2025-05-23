@@ -20,18 +20,18 @@ const styles = {
       flexShrink: 0,
       [mq.GROUP_1_MIN_WIDTH]: {
         flexBasis: calculatePromoWidth({
-          itemCount: 2,
+          fitForNItems: 2,
           gapWidth: spacings.FULL,
         }),
       },
       [mq.GROUP_3_MIN_WIDTH]: {
         flexBasis: calculatePromoWidth({
-          itemCount: 3,
+          fitForNItems: 3,
           gapWidth: spacings.DOUBLE,
         }),
         [mq.POINTER]: {
           flexBasis: calculatePromoWidth({
-            itemCount: 3,
+            fitForNItems: 3,
             gapWidth: spacings.DOUBLE,
             navButtonAffordance: true,
           }),
@@ -39,14 +39,14 @@ const styles = {
       },
       [mq.GROUP_4_MIN_WIDTH]: {
         flexBasis: calculatePromoWidth({
-          itemCount: 4,
+          fitForNItems: 4,
           gapWidth: spacings.DOUBLE,
           navButtonAffordance: true,
         }),
       },
       [mq.GROUP_5_MIN_WIDTH]: {
         flexBasis: calculatePromoWidth({
-          itemCount: 6,
+          fitForNItems: 5,
           gapWidth: spacings.DOUBLE,
           navButtonAffordance: true,
         }),

@@ -12,7 +12,7 @@ describe('PortraitVideoCarousel', () => {
     });
 
     const portraitVideoItems = (container as unknown as HTMLElement)
-      .querySelector('ul[data-testid="pv-scroll-panel"]')
+      .querySelector('ul[data-testid="pv-carousel"]')
       ?.querySelectorAll('li');
 
     expect(portraitVideoItems?.length).toBe(fixture.items.length);

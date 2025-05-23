@@ -47,17 +47,17 @@ const styles = {
         display: 'none',
       },
       scrollbarWidth: 'none',
-    }),
-  endBlankItem: ({ mq }: Theme) =>
-    css({
-      display: 'none',
-      flexGrow: 0,
-      flexShrink: 0,
-      ...calculateVariedNavContainerWidths({
-        mq,
-        display: 'block',
-        widthParameter: 'flexBasis',
-      }),
+      '&:after': {
+        content: '""',
+        display: 'none',
+        flexGrow: 0,
+        flexShrink: 0,
+        ...calculateVariedNavContainerWidths({
+          mq,
+          display: 'block',
+          widthParameter: 'flexBasis',
+        }),
+      },
     }),
 };
 

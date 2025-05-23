@@ -253,8 +253,8 @@ export const service: DefaultServiceConfig = {
         closeVideo: 'Sair',
       },
       carousel: {
-        scrollToPrevious: 'Scroll to previous item',
-        scrollToNext: 'Scroll to next item',
+        previous: 'Scroll to previous item',
+        next: 'Scroll to next item',
       },
       socialEmbed: {
         caption: {

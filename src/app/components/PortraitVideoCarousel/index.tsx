@@ -47,11 +47,7 @@ const PortraitVideoCarousel = ({
         <h2 css={styles.heading}>{title}</h2>
         <div css={styles.carouselContainer}>
           <PortraitCarouselNavigation scrollPaneRef={scrollRef} />
-          <ul
-            ref={scrollRef}
-            css={styles.carousel}
-            data-testid="pv-scroll-panel"
-          >
+          <ul ref={scrollRef} css={styles.carousel} data-testid="pv-carousel">
             {items.map(item => (
               <PortraitVideoPromo
                 {...item}
@@ -59,7 +55,6 @@ const PortraitVideoCarousel = ({
                 onClick={() => handlePromoClick(item)}
               />
             ))}
-            <div css={[styles.endBlankItem]} />
           </ul>
         </div>
         {isModalOpen &&

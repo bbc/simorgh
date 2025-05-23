@@ -5,18 +5,18 @@ export const NAVIGATION_BUTTON_RATIO = 0.5;
 export const PROMO_PEEK_RATIO = 0.33;
 
 export const calculatePromoWidth = ({
-  itemCount,
+  fitForNItems,
   gapWidth = 0,
   navButtonAffordance = false,
 }: {
-  itemCount: number;
+  fitForNItems: number;
   gapWidth?: number;
   navButtonAffordance?: boolean;
 }) =>
-  `calc((100% / ${itemCount + (navButtonAffordance ? NAVIGATION_BUTTON_RATIO : PROMO_PEEK_RATIO)}) - ${gapWidth}rem)`;
+  `calc((100% / ${fitForNItems + (navButtonAffordance ? NAVIGATION_BUTTON_RATIO : PROMO_PEEK_RATIO)}) - ${gapWidth}rem)`;
 
-const calculateNavContainerWidth = (itemCount: number) =>
-  `calc(${calculatePromoWidth({ itemCount, navButtonAffordance: true })} * ${NAVIGATION_BUTTON_RATIO})`;
+const calculateNavContainerWidth = (fitForNItems: number) =>
+  `calc(${calculatePromoWidth({ fitForNItems, navButtonAffordance: true })} * ${NAVIGATION_BUTTON_RATIO})`;
 
 export const calculateVariedNavContainerWidths = ({
   mq,
@@ -39,6 +39,6 @@ export const calculateVariedNavContainerWidths = ({
   },
   [mq.GROUP_5_MIN_WIDTH]: {
     display,
-    [widthParameter]: calculateNavContainerWidth(6),
+    [widthParameter]: calculateNavContainerWidth(5),
   },
 });
