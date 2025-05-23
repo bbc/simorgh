@@ -41,7 +41,7 @@ const BrandContainer = ({
     'ws',
   ];
 
-  const getBrandURL = (serviceName, variantName) => {
+  const getBrandPath = (serviceName, variantName) => {
     if (serviceName === 'ws') {
       return {
         service: 'ws/languages',
@@ -56,7 +56,7 @@ const BrandContainer = ({
     return { service: serviceName };
   };
 
-  const { service: brandService, variant: brandVariant } = getBrandURL(
+  const { service: brandService, variant: brandVariant } = getBrandPath(
     service,
     variant,
   );
