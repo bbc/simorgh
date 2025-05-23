@@ -55,7 +55,7 @@ const baseServiceConfig = {
     },
     linkLabel: {
       text: 'Підписуйтеся на канал тут!',
-      href: 'https://invite.viber.com/?g2=AQAYCiHrGU3SlUeR%2FZaHRAQ4%2FGdXWGFgaUOXbMnWlHpIli4mBJEfTyN%2FHRPjb7GW&lang=en',
+      href: 'https://invite.viber.com/?g2=AQAYCiHrGU3SlUeR%2FZaHRAQ4%2FGdXWGFgaUOXbMnWlHpIli4mBJEfTyN%2FHRPjb7GW',
     },
     skipLink: {
       text: 'Пропустити %title% і продовжити',
