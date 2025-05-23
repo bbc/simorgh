@@ -42,28 +42,17 @@ const BrandContainer = ({
   ];
 
   const getBrandPath = (serviceName, variantName) => {
+    let brandPath = variantName
+      ? `/${serviceName}/${variantName}`
+      : `/${serviceName}`;
+
     if (serviceName === 'ws') {
-      return {
-        service: 'ws/languages',
-      };
+      brandPath = 'ws/languages';
     }
-    if (
-      variantName &&
-      servicesWithVariants[serviceName]?.includes(variantName)
-    ) {
-      return { service: serviceName, variant: variantName };
-    }
-    return { service: serviceName };
+    return brandPath;
   };
 
-  const { service: brandService, variant: brandVariant } = getBrandPath(
-    service,
-    variant,
-  );
-
-  const brandPath = brandVariant
-    ? `/${brandService}/${brandVariant}`
-    : `/${brandService}`;
+  const brandPath = getBrandPath(service, variant);
 
   return (
     <StyledBrand
