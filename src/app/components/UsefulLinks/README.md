@@ -7,16 +7,16 @@ The link has a tap area. The component uses the curation `visualStyle` of `LINKS
 
 | Name      | type      | Description                                          |
 | --------- | --------- | ---------------------------------------------------- |
+| id        | string    | (optional) default id value: useful-links-1          |
 | title     | string    | The H2 title of the useful links section             |
-| position  | number    | The position of the curation item                    |
 | summaries | Summary[] | List of summary objects as returned from Simorgh BFF |
 
 ## How to use
 
 ```tsx
 <UsefulLinks
-  summaries={summaries}
-  position={position}
+  id={id}
   title={title}
+  summaries={summaries}
 />
 ```
