@@ -5,6 +5,7 @@ import {
 import {
   ATI_PAGE_VIEW,
   ATI_PAGE_VIEW_REVERB,
+  ATI_USER_ID_COOKIE,
   getATIParamsFromURL,
   interceptATIAnalyticsBeacons,
 } from '../helpers';
@@ -129,6 +130,13 @@ export const assertPageView = ({
         applicationType,
       });
 
+      if (['responsive', 'lite'].includes(applicationType)) {
+        expect(params.idclient).to.equal(
+          ATI_USER_ID_COOKIE,
+          'params.idclient (atuserid cookie value)',
+        );
+      }
+
       expect(params.p).to.equal(pageIdentifier, 'params.p (page identifier)');
       expect(params.x2).to.equal(
         `[${applicationType}]`,
@@ -156,6 +164,13 @@ const assertClickPerViewModelViewEvent = ({
 }) => {
   assertATIComponentViewEventParamsExist({ params, useReverb });
 
+  if (['responsive', 'lite'].includes(applicationType)) {
+    expect(params.idclient).to.equal(
+      ATI_USER_ID_COOKIE,
+      'params.idclient (atuserid cookie value)',
+    );
+  }
+
   if (!useReverb) {
     expect(params.p).to.equal(pageIdentifier, 'params.p (page identifier)');
   }
@@ -177,12 +192,20 @@ const assertViewabilityModelViewEvent = ({
   pageIdentifier,
   contentType,
   params,
+  applicationType,
 }) => {
   const eventContext = JSON.parse(params.context);
 
   assertReverbViewabilityComponentEventParamsExist({
     params,
   });
+
+  if (['responsive', 'lite'].includes(applicationType)) {
+    expect(params.idclient).to.equal(
+      ATI_USER_ID_COOKIE,
+      'params.idclient (atuserid cookie value)',
+    );
+  }
 
   expect(params.events).to.match(
     getViewabilityEventDetailsRegex({
@@ -247,6 +270,13 @@ const assertClickPerViewModelClickEvent = ({
     applicationType,
   });
 
+  if (['responsive', 'lite'].includes(applicationType)) {
+    expect(params.idclient).to.equal(
+      ATI_USER_ID_COOKIE,
+      'params.idclient (atuserid cookie value)',
+    );
+  }
+
   expect(params.app_type).to.equal(applicationType, 'params.app_type');
 
   if (useReverb) {
@@ -273,12 +303,20 @@ const assertViewabilityModelClickEvent = ({
   contentType,
   pageIdentifier,
   params,
+  applicationType,
 }) => {
   const eventContext = JSON.parse(params.context);
 
   assertReverbViewabilityComponentEventParamsExist({
     params,
   });
+
+  if (['responsive', 'lite'].includes(applicationType)) {
+    expect(params.idclient).to.equal(
+      ATI_USER_ID_COOKIE,
+      'params.idclient (atuserid cookie value)',
+    );
+  }
 
   expect(params.events).to.match(
     getViewabilityEventDetailsRegex({
