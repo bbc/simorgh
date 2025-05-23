@@ -258,6 +258,16 @@ export const service: DefaultServiceConfig = {
           lang: 'en-GB',
         },
       ],
+      extraLinks: [
+        {
+          href: 'https://bbcnews.bbcstudios.com',
+          text: 'BBC Studios Commercial Opportunities',
+        },
+        {
+          href: 'https://www.bbc.co.uk/programmes/articles/2x9tqt6mc05vB2S37j8MWMJ/global-short-wave-frequencies',
+          text: 'Global Shortwave Frequencies',
+        },
+      ],
       copyrightText:
         'BBC. The BBC is not responsible for the content of external sites.',
     },

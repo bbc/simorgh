@@ -84,6 +84,14 @@ export default {
       columnGap: `${spacings.DOUBLE}rem`,
       breakInside: 'avoid-column',
     }),
+  listExtraLinks: ({ mq }: Theme) =>
+    css({
+      [mq.GROUP_1_AND_GROUP_2]: {
+        gridTemplateColumns: 'repeat(1, 1fr)',
+        coulumnCount: 1,
+        gridAutoFlow: 'row',
+      },
+    }),
 };
 
 export const gridTemplateRows = ({
