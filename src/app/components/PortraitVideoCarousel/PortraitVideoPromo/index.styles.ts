@@ -4,7 +4,7 @@ import {
   twoPixelFocusIndicatorThickness,
   twoPixelFocusIndicatorStyle,
 } from '#app/components/ThemeProvider/focusIndicator';
-import { calculatePromoWidth, PROMO_ITEM_WIDTH_MIN } from '../styleUtils';
+import { calculatePromoWidth, PROMO_ITEM_WIDTH_MIN } from '../utils/styleUtils';
 
 const styles = {
   container: ({ mq, spacings }: Theme) =>

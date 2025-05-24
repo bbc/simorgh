@@ -1,5 +1,5 @@
 import { css, Theme } from '@emotion/react';
-import { calculateVariedNavContainerWidths } from './styleUtils';
+import { calculateVariedNavContainerWidths } from './utils/styleUtils';
 
 const styles = {
   section: ({ mq, spacings }: Theme) =>

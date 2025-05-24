@@ -10,7 +10,7 @@ import formatDuration from '#app/lib/utilities/formatDuration';
 import { useContext, FocusEvent } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
-import { PROMO_ITEM_WIDTH_MIN } from '../styleUtils';
+import { PROMO_ITEM_WIDTH_MIN } from '../utils/styleUtils';
 
 const DEFAULT_TRANSLATION = {
   video: 'video',
