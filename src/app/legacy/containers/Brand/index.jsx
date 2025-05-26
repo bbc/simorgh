@@ -17,6 +17,14 @@ const StyledBrand = styled(Brand)`
   }
 `;
 
+export const getBrandPath = (serviceName, variantName) => {
+  if (serviceName === 'ws') return '/ws/languages';
+  if (variantName && servicesWithVariants[serviceName]?.includes(variantName)) {
+    return `/${serviceName}/${variantName}`;
+  }
+  return `/${serviceName}`;
+};
+
 const BrandContainer = ({
   skipLink = null,
   scriptLink = null,
@@ -41,29 +49,7 @@ const BrandContainer = ({
     'ws',
   ];
 
-  const getBrandPath = (serviceName, variantName) => {
-    if (serviceName === 'ws') {
-      return {
-        service: 'ws/languages',
-      };
-    }
-    if (
-      variantName &&
-      servicesWithVariants[serviceName]?.includes(variantName)
-    ) {
-      return { service: serviceName, variant: variantName };
-    }
-    return { service: serviceName };
-  };
-
-  const { service: brandService, variant: brandVariant } = getBrandPath(
-    service,
-    variant,
-  );
-
-  const brandPath = brandVariant
-    ? `/${brandService}/${brandVariant}`
-    : `/${brandService}`;
+  const brandPath = getBrandPath(service, variant);
 
   return (
     <StyledBrand
