@@ -20,7 +20,7 @@ const styles = {
       color: palette.GREY_10,
       margin: `${spacings.DOUBLE}rem 0 0 0`,
       [mq.GROUP_3_MIN_WIDTH]: {
-        margin: `${spacings.DOUBLE}rem 0 00`,
+        margin: `${spacings.DOUBLE}rem 0 0 0`,
       },
     }),
   carouselContainer: () =>

@@ -23,7 +23,7 @@ export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
 
-  const { previous: previousAria, next: nextAria } = carousel;
+  const { previous: isScrollableLeft, next: isScrollableRight } = carousel;
 
   const checkScrollButtons = useCallback(() => {
     if (!scrollPaneRef.current) return;
@@ -63,7 +63,7 @@ export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
       <div css={styles.buttonGroup}>
         <button
           type="button"
-          aria-label={previousAria}
+          aria-label={isScrollableLeft}
           onClick={() => scroll(dir === 'ltr' ? 'left' : 'right')}
           disabled={!canScrollLeft}
           css={styles.navButton}
@@ -73,7 +73,7 @@ export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
         </button>
         <button
           type="button"
-          aria-label={nextAria}
+          aria-label={isScrollableRight}
           onClick={() => scroll(dir === 'ltr' ? 'right' : 'left')}
           disabled={!canScrollRight}
           css={styles.navButton}
