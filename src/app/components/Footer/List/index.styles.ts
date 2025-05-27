@@ -86,9 +86,9 @@ export default {
     }),
   listExtraLinks: ({ mq }: Theme) =>
     css({
-      [mq.GROUP_1_AND_GROUP_2]: {
+      [mq.GROUP_2_MAX_WIDTH]: {
         gridTemplateColumns: 'repeat(1, 1fr)',
-        coulumnCount: 1,
+        columnCount: 1,
         gridAutoFlow: 'row',
       },
     }),
