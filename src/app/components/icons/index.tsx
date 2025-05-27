@@ -13,44 +13,83 @@ export const Ellipsis = () => (
   </svg>
 );
 
+export const LeftChevron = ({ className }: { className?: string }) => (
+  <svg
+    viewBox="0 0 32 32"
+    focusable="false"
+    aria-hidden="true"
+    width="12"
+    height="12"
+    className={className}
+  >
+    <path d="M10.4 14.3L26.5 31h-6.4L5.5 16 20.1 1h6.4L10.4 17.7v-3.4z" />
+  </svg>
+);
+
+export const RightChevron = ({ className }: { className?: string }) => (
+  <svg
+    viewBox="0 0 32 32"
+    focusable="false"
+    aria-hidden="true"
+    width="12"
+    height="12"
+    className={className}
+  >
+    <path d="M21.6 14.3L5.5 31h6.4l14.6-15L11.9 1H5.5l16.1 16.7v-3.4z" />
+  </svg>
+);
+
+export enum ChevronOrientation {
+  BACKWARD = 'backward',
+  FORWARD = 'forward',
+}
+
 type ChevronProps = {
   className?: string;
   dir?: Direction;
+  orientation: ChevronOrientation;
 };
 
-export const LeftChevron = ({ className, dir = 'ltr' }: ChevronProps) => (
-  <svg
-    viewBox="0 0 32 32"
-    focusable="false"
-    aria-hidden="true"
-    width="12"
-    height="12"
-    className={className}
-  >
-    {dir === 'ltr' ? (
+export const Chevron = ({
+  className,
+  dir = 'ltr',
+  orientation,
+}: ChevronProps) => {
+  let normalisedDirection = null;
+  const paths = {
+    [ChevronOrientation.BACKWARD]: (
       <path d="M10.4 14.3L26.5 31h-6.4L5.5 16 20.1 1h6.4L10.4 17.7v-3.4z" />
-    ) : (
+    ),
+    [ChevronOrientation.FORWARD]: (
       <path d="M21.6 14.3L5.5 31h6.4l14.6-15L11.9 1H5.5l16.1 16.7v-3.4z" />
-    )}
-  </svg>
-);
+    ),
+  };
 
-export const RightChevron = ({ className, dir = 'ltr' }: ChevronProps) => (
-  <svg
-    viewBox="0 0 32 32"
-    focusable="false"
-    aria-hidden="true"
-    width="12"
-    height="12"
-    className={className}
-  >
-    {dir === 'ltr' ? (
-      <path d="M21.6 14.3L5.5 31h6.4l14.6-15L11.9 1H5.5l16.1 16.7v-3.4z" />
-    ) : (
-      <path d="M10.4 14.3L26.5 31h-6.4L5.5 16 20.1 1h6.4L10.4 17.7v-3.4z" />
-    )}
-  </svg>
-);
+  if (orientation === ChevronOrientation.BACKWARD) {
+    normalisedDirection =
+      dir === 'ltr' ? ChevronOrientation.BACKWARD : ChevronOrientation.FORWARD;
+  }
+
+  if (orientation === ChevronOrientation.FORWARD) {
+    normalisedDirection =
+      dir === 'ltr' ? ChevronOrientation.FORWARD : ChevronOrientation.BACKWARD;
+  }
+
+  if (!normalisedDirection) return null;
+
+  return (
+    <svg
+      viewBox="0 0 32 32"
+      focusable="false"
+      aria-hidden="true"
+      width="12"
+      height="12"
+      className={className}
+    >
+      {paths[normalisedDirection]}
+    </svg>
+  );
+};
 
 export const Clock = ({ className }: { className?: string }) => (
   <svg

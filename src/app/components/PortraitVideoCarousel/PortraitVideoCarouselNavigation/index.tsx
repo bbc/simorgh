@@ -6,8 +6,8 @@ import {
   PortraitVideoCarouselNavigationProps,
 } from '#app/models/types/portraitVideo';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import { Chevron, ChevronOrientation } from '#app/components/icons';
 import styles from './index.styles';
-import { LeftChevron, RightChevron } from '../../icons';
 import { PROMO_ITEM_WIDTH_MIN } from '../utils/styleUtils';
 
 const DEFAULT_TRANSLATION = {
@@ -69,7 +69,7 @@ export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
           css={styles.navButton}
           data-testid="pv-scroll-left"
         >
-          <LeftChevron dir={dir} />
+          <Chevron orientation={ChevronOrientation.BACKWARD} dir={dir} />
         </button>
         <button
           type="button"
@@ -79,7 +79,7 @@ export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
           css={styles.navButton}
           data-testid="pv-scroll-right"
         >
-          <RightChevron dir={dir} />
+          <Chevron orientation={ChevronOrientation.FORWARD} dir={dir} />
         </button>
       </div>
     </div>
