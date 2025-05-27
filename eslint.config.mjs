@@ -13,6 +13,7 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import importPlugin from 'eslint-plugin-import';
 import noOnlyTests from 'eslint-plugin-no-only-tests';
 import dirAlias from './dirAlias.mjs';
+import prettier from 'eslint-plugin-prettier';
 
 const { eslintDirAlias } = dirAlias;
 
@@ -77,6 +78,7 @@ export default [
       json,
       import: importPlugin,
       'no-only-tests': noOnlyTests,
+      prettier: prettier,
     },
     rules: {
       'react/jsx-uses-react': 'off',
@@ -131,6 +133,7 @@ export default [
       json,
       import: importPlugin,
       'no-only-tests': noOnlyTests,
+      prettier: prettier,
     },
     rules: {
       '@typescript-eslint/no-use-before-define': ['error'],
@@ -205,6 +208,7 @@ export default [
       json,
       import: importPlugin,
       'no-only-tests': noOnlyTests,
+      prettier: prettier,
     },
     rules: {
       '@typescript-eslint/no-use-before-define': ['error'],
@@ -242,6 +246,7 @@ export default [
       json,
       import: importPlugin,
       'no-only-tests': noOnlyTests,
+      prettier: prettier,
     },
     rules: {
       'react/jsx-uses-react': 'off',
