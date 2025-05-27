@@ -12,7 +12,7 @@ import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import importPlugin from 'eslint-plugin-import';
 import noOnlyTests from 'eslint-plugin-no-only-tests';
-import * as dirAlias from './dirAlias.mjs';
+import dirAlias from './dirAlias.mjs';
 
 const { eslintDirAlias } = dirAlias;
 
@@ -102,7 +102,10 @@ export default [
         node: {
           extensions: ['.js', '.jsx'],
         },
-        alias: eslintDirAlias,
+        alias: {
+          map: eslintDirAlias.map,
+          extensions: eslintDirAlias.extensions,
+        },
       },
     },
   },
@@ -161,108 +164,18 @@ export default [
     settings: {
       'import/resolver': {
         node: {
-          extensions: ['.ts', '.tsx'],
+          extensions: ['.js', '.jsx', '.ts', '.tsx'],
         },
         typescript: {
           project: './tsconfig.json', // Point to your tsconfig.json
         },
-        alias: eslintDirAlias,
+        alias: {
+          map: eslintDirAlias.map,
+          extensions: eslintDirAlias.extensions,
+        },
       },
     },
   },
-  // {
-  //   files: ['ws-nextjs-app/next.config.js'], // Target next.config.js specifically
-  //   languageOptions: {
-  //     globals: {
-  //       ...globals.node, // Enable Node.js globals
-  //     },
-  //   },
-  //   rules: {
-  //     'no-undef': 'off', // Disable no-undef for Node.js globals
-  //   },
-  // },
-  // {
-  //   files: ['webpack.config.*.js'], // Target Webpack configuration files
-  //   languageOptions: {
-  //     globals: {
-  //       ...globals.node, // Enable Node.js globals
-  //     },
-  //   },
-  //   rules: {
-  //     'no-undef': 'off', // Disable no-undef for Node.js globals
-  //     'import/no-dynamic-require': 'off', // Allow dynamic require in Webpack
-  //   },
-  // },
-  // {
-  //   files: [
-  //     'ws-nextjs-app/**/*.{ts,tsx}',
-  //     '!ws-nextjs-app/cypress/**/*',
-  //     '!ws-nextjs-app/cypress.config.ts',
-
-  //     '!ws-nextjs-app/tsconfig.json',
-  //   ], // TypeScript files in ws-nextjs-app
-  //   languageOptions: {
-  //     globals: {
-  //       ...globals.browser,
-  //       ...globals.jest,
-  //       ...globals.node,
-  //     },
-  //     parser: tsParser, // Use @typescript-eslint/parser for TypeScript files
-  //     parserOptions: {
-  //       project: './ws-nextjs-app/tsconfig.json', // Use the tsconfig.json in ws-nextjs-app
-  //     },
-  //   },
-  //   plugins: {
-  //     '@typescript-eslint': tsPlugin,
-  //     react,
-  //     'jsx-a11y': jsxA11Y,
-  //     'react-hooks': reactHooks,
-  //     cypress,
-  //     json,
-  //     import: importPlugin,
-  //     'no-only-tests': noOnlyTests,
-  //   },
-  //   rules: {
-  //     '@typescript-eslint/no-use-before-define': ['error'],
-  //     '@typescript-eslint/no-unused-vars': [
-  //       'warn',
-  //       {
-  //         argsIgnorePattern: '^_',
-  //         varsIgnorePattern: '^_',
-  //         caughtErrorsIgnorePattern: '^_',
-  //       },
-  //     ],
-  //     '@typescript-eslint/prefer-optional-chain': ['error'], // TypeScript-specific rule
-  //     'react/jsx-uses-react': 'off',
-  //     'react/react-in-jsx-scope': 'off',
-  //     'react/jsx-uses-vars': 'error',
-  //     'react/prop-types': 'off',
-  //     'react/display-name': 'off',
-  //     'jsx-a11y/alt-text': 'error',
-  //     'jsx-a11y/anchor-is-valid': 'warn',
-  //     'jsx-a11y/aria-role': 'error',
-  //     'jsx-a11y/no-autofocus': 'warn',
-  //     'arrow-body-style': 'off',
-  //     'prefer-arrow-callback': 'off',
-  //     'max-len': 'off',
-  //     'import/no-unresolved': 'error',
-  //     'import/extensions': 'off',
-  //     'import/prefer-default-export': 'warn',
-  //     'no-only-tests/no-only-tests': 'error',
-  //     'no-unsafe-optional-chaining': 'error',
-  //   },
-  //   settings: {
-  //     'import/resolver': {
-  //       node: {
-  //         extensions: ['.ts', '.tsx'],
-  //       },
-  //       typescript: {
-  //         project: './ws-nextjs-app/tsconfig.json', // Point to the correct tsconfig.json
-  //       },
-  //       alias: eslintDirAlias,
-  //     },
-  //   },
-  // },
   {
     files: [
       'ws-nextjs-app/**/*.{ts,tsx}', // General TypeScript files in ws-nextjs-app
@@ -307,28 +220,4 @@ export default [
       'no-undef': 'off', // Disable no-undef for test globals
     },
   },
-  // {
-  //   files: ['**/*.test.{ts,tsx}', '!ws-nextjs-app/**/*.test.{ts,tsx}'], // Test files outside ws-nextjs-app
-  //   languageOptions: {
-  //     globals: {
-  //       describe: true,
-  //       it: true,
-  //       expect: true,
-  //       document: true,
-  //     },
-  //     parser: tsParser,
-  //     // parserOptions: {
-  //     //   ecmaVersion: 2017,
-  //     //   sourceType: 'module',
-  //     //   ecmaFeatures: {
-  //     //     jsx: true,
-  //     //   },
-  //     //   requireConfigFile: false,
-  //     //   tsconfigRootDir: import.meta.dirname,
-  //     // },
-  //   },
-  //   rules: {
-  //     'no-undef': 'off',
-  //   },
-  // },
 ];
