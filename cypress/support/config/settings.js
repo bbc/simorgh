@@ -538,7 +538,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -853,7 +852,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
@@ -1039,10 +1037,6 @@ module.exports = () => ({
         smoke: false,
       },
 
-      onDemandAudio: {
-        environments: undefined,
-        smoke: false,
-      },
       onDemandTV: {
         environments: {
           live: {
@@ -1498,7 +1492,6 @@ module.exports = () => ({
         smoke: false,
       },
 
-      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -1736,7 +1729,6 @@ module.exports = () => ({
         smoke: false,
       },
 
-      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -2266,7 +2258,6 @@ module.exports = () => ({
         smoke: false,
       },
 
-      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -2390,8 +2381,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-
-      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
@@ -2577,7 +2566,6 @@ module.exports = () => ({
         smoke: true,
       },
 
-      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
@@ -2631,7 +2619,6 @@ module.exports = () => ({
     variant: 'default',
     pageTypes: {
       errorPage404: { environments: undefined, smoke: false },
-      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
@@ -3092,7 +3079,6 @@ module.exports = () => ({
         smoke: false,
       },
 
-      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -3321,7 +3307,6 @@ module.exports = () => ({
         smoke: false,
       },
 
-      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -3552,7 +3537,6 @@ module.exports = () => ({
         smoke: false,
       },
 
-      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
@@ -3601,7 +3585,6 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -3700,7 +3683,6 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -3800,7 +3782,6 @@ module.exports = () => ({
         smoke: false,
       },
 
-      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -4044,7 +4025,6 @@ module.exports = () => ({
     variant: 'default',
     pageTypes: {
       errorPage404: { environments: undefined, smoke: false },
-      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
@@ -4426,7 +4406,6 @@ module.exports = () => ({
         smoke: false,
       },
 
-      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: {
         environments: {
           live: {
@@ -4557,7 +4536,6 @@ module.exports = () => ({
         smoke: false,
       },
 
-      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -4798,7 +4776,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -4905,7 +4882,6 @@ module.exports = () => ({
         smoke: false,
       },
 
-      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -5012,7 +4988,6 @@ module.exports = () => ({
         smoke: false,
       },
 
-      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -5151,7 +5126,6 @@ module.exports = () => ({
         smoke: false,
       },
 
-      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: {
         environments: {
           live: {
@@ -5591,7 +5565,6 @@ module.exports = () => ({
     variant: 'cyr',
     pageTypes: {
       errorPage404: { environments: undefined, smoke: false },
-      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
@@ -5608,7 +5581,6 @@ module.exports = () => ({
     variant: 'lat',
     pageTypes: {
       errorPage404: { environments: undefined, smoke: false },
-      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
@@ -5642,7 +5614,6 @@ module.exports = () => ({
         smoke: false,
       },
 
-      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -5748,7 +5719,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
