@@ -61,8 +61,6 @@ const Image = ({
   hasCaption,
 }: PropsWithChildren<Props>) => {
   const { pageType, isLite, isAmp } = useContext(RequestContext);
-  console.log('RequestContext', RequestContext);
-  console.log('isAmp>>>>>>>', isAmp);
   const [isLoaded, setIsLoaded] = useState(false);
   if (isLite) return null;
 
