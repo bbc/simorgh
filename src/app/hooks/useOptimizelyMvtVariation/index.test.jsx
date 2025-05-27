@@ -1,12 +1,17 @@
 import React from 'react';
 import { renderHook } from '#app/components/react-testing-library-with-providers';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import { OptimizelyProvider } from '@optimizely/react-sdk';
 import useOptimizelyMvtVariation from '.';
 import * as activateExperiment from './activateExperiment';
 
 const spyActivateExperiment = jest
   .spyOn(activateExperiment, 'default')
   .mockImplementation(jest.fn());
+
+const optimizely = {
+  setUser: jest.fn(() => Promise.resolve()),
+};
 
 describe('useOptimizelyMvtVariation custom hook', () => {
   beforeEach(() => {
@@ -22,7 +27,9 @@ describe('useOptimizelyMvtVariation custom hook', () => {
       pathname: 'bar',
     };
     const wrapper = ({ children }) => (
-      <RequestContextProvider {...props}>{children}</RequestContextProvider>
+      <OptimizelyProvider optimizely={optimizely} isServerSide>
+        <RequestContextProvider {...props}>{children}</RequestContextProvider>
+      </OptimizelyProvider>
     );
     return renderHook(() => useOptimizelyMvtVariation(flagId), {
       wrapper,
