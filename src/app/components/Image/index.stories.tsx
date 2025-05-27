@@ -1,6 +1,5 @@
 import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import Image from '.';
 import md from './README.md';
