@@ -18,7 +18,7 @@ const styles = {
       color: palette.GREY_10,
       margin: `${spacings.DOUBLE}rem 0 0 0`,
       [mq.GROUP_3_MIN_WIDTH]: {
-        margin: `${spacings.DOUBLE}rem 0 0 0`,
+        margin: `${spacings.TRIPLE}rem 0 0 0`,
       },
     }),
   carouselContainer: () =>
@@ -33,11 +33,11 @@ const styles = {
       flex: 1,
       overflowX: 'auto',
       scrollSnapType: 'x mandatory',
-      padding: `${spacings.DOUBLE}rem 0`,
+      margin: `${spacings.DOUBLE}rem 0`,
       columnGap: `${spacings.FULL}rem`,
       [mq.GROUP_3_MIN_WIDTH]: {
         columnGap: `${spacings.DOUBLE}rem`,
-        padding: `${spacings.TRIPLE}rem 0`,
+        margin: `${spacings.TRIPLE}rem 0`,
       },
       scrollBehavior: 'smooth',
       WebkitOverflowScrolling: 'touch',
