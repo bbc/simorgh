@@ -73,8 +73,7 @@ export default (html: string) => {
         );
       }
     });
-  } catch (error) {
-     
+  } catch (_error) {
     (() => {})();
   }
 

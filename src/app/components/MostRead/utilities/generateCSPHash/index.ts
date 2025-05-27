@@ -21,8 +21,7 @@ const generateCSPHash = ({
       .replace(/=/g, '')
       .replace(/\+/g, '-')
       .replace(/\//g, '_')}`;
-  } catch (err) {
-     
+  } catch (_err) {
     console.warn(
       `Failed to create hash with params script = ${script}, 
       sha = ${sha}, 
