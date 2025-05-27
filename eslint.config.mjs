@@ -27,6 +27,7 @@ export default [
       '.storybook/**/*',
       'ws-nextjs-app/public/vendor/**/*',
       'ws-nextjs-app/build/**/*',
+      'ws-nextjs-app/cypress.config.ts',
       'storybook_dist/**/*',
       '**/webpack.config.*.js',
       './webpack.config.*.js',
