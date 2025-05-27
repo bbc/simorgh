@@ -75,7 +75,7 @@ const runValidator = async () => {
     const filteredResults = results.map(result => {
       if (result.status !== 'PASS') {
         const isProtocolFail = result.errors.every(
-          error => error.code === 'INVALID_URL_PROTOCOL',
+          { code } => code === 'INVALID_URL_PROTOCOL',
         );
         if (isProtocolFail) {
           result.status = 'PASS';
