@@ -217,7 +217,85 @@ export default [
         },
       ],
       '@typescript-eslint/prefer-optional-chain': ['error'],
+      'import/prefer-default-export': 'warn',
       'no-undef': 'off', // Disable no-undef for test globals
+    },
+  },
+  {
+    files: ['src/**/*.{js,jsx}', 'cypress/**/*.{js,jsx}'], // JavaScript files
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.jest,
+        ...globals.node,
+      },
+      parser: babelParser, // Use babelParser for JavaScript files
+      parserOptions: {
+        project: true,
+      },
+    },
+    plugins: {
+      react,
+      'jsx-a11y': jsxA11Y,
+      'react-hooks': reactHooks,
+      cypress,
+      json,
+      import: importPlugin,
+      'no-only-tests': noOnlyTests,
+    },
+    rules: {
+      'react/jsx-uses-react': 'off',
+      'react/react-in-jsx-scope': 'off',
+      'react/jsx-uses-vars': 'error',
+      'react/prop-types': 'off',
+      'react/display-name': 'off',
+      'jsx-a11y/alt-text': 'error',
+      'jsx-a11y/anchor-is-valid': 'warn',
+      'jsx-a11y/aria-role': 'error',
+      'jsx-a11y/no-autofocus': 'warn',
+      'arrow-body-style': 'off',
+      'prefer-arrow-callback': 'off',
+      'max-len': 'off',
+      'import/no-unresolved': 'error',
+      'import/extensions': 'off',
+      'import/prefer-default-export': 'warn',
+      'no-only-tests/no-only-tests': 'error',
+      'no-unsafe-optional-chaining': 'error',
+    },
+    settings: {
+      'import/resolver': {
+        node: {
+          extensions: ['.js', '.jsx'],
+        },
+        alias: {
+          map: eslintDirAlias.map,
+          extensions: eslintDirAlias.extensions,
+        },
+      },
+    },
+  },
+  {
+    files: [
+      'public/**/*.js',
+      'ws-nextjs-app/public/**/*.js', // this one is a js file, whereas the other ws-nextjs-app files are ts
+      'scripts/**/*.js',
+    ],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+      },
+      parser: babelParser,
+      parserOptions: {
+        ecmaVersion: 2021,
+        sourceType: 'module',
+      },
+    },
+    plugins: {
+      import: importPlugin,
+    },
+    rules: {
+      'import/prefer-default-export': 'warn',
+      'import/extensions': 'off',
     },
   },
 ];
