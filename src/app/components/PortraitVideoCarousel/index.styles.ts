@@ -33,11 +33,10 @@ const styles = {
       flex: 1,
       overflowX: 'auto',
       scrollSnapType: 'x mandatory',
-      margin: `${spacings.DOUBLE}rem 0`,
       columnGap: `${spacings.FULL}rem`,
       [mq.GROUP_3_MIN_WIDTH]: {
         columnGap: `${spacings.DOUBLE}rem`,
-        margin: `${spacings.TRIPLE}rem 0`,
+        padding: `${spacings.FULL}rem 0`,
       },
       scrollBehavior: 'smooth',
       WebkitOverflowScrolling: 'touch',
