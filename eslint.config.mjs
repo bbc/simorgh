@@ -91,12 +91,8 @@ export default [
       'jsx-a11y/anchor-is-valid': 'warn',
       'jsx-a11y/aria-role': 'error',
       'jsx-a11y/no-autofocus': 'warn',
-      'arrow-body-style': 'off',
-      'prefer-arrow-callback': 'off',
-      'max-len': 'off',
       'import/no-unresolved': 'error',
       'import/extensions': 'off',
-      'import/prefer-default-export': 'warn',
       'no-only-tests/no-only-tests': 'error',
       'no-unsafe-optional-chaining': 'error',
     },
@@ -156,12 +152,8 @@ export default [
       'jsx-a11y/anchor-is-valid': 'warn',
       'jsx-a11y/aria-role': 'error',
       'jsx-a11y/no-autofocus': 'warn',
-      'arrow-body-style': 'off',
-      'prefer-arrow-callback': 'off',
-      'max-len': 'off',
       'import/no-unresolved': 'error',
       'import/extensions': 'off',
-      'import/prefer-default-export': 'warn',
       'no-only-tests/no-only-tests': 'error',
       'no-unsafe-optional-chaining': 'error',
     },
@@ -222,7 +214,6 @@ export default [
         },
       ],
       '@typescript-eslint/prefer-optional-chain': ['error'],
-      'import/prefer-default-export': 'warn',
       'no-undef': 'off', // Disable no-undef for test globals
     },
   },
@@ -259,12 +250,9 @@ export default [
       'jsx-a11y/anchor-is-valid': 'warn',
       'jsx-a11y/aria-role': 'error',
       'jsx-a11y/no-autofocus': 'warn',
-      'arrow-body-style': 'off',
-      'prefer-arrow-callback': 'off',
       'max-len': 'off',
       'import/no-unresolved': 'error',
       'import/extensions': 'off',
-      'import/prefer-default-export': 'warn',
       'no-only-tests/no-only-tests': 'error',
       'no-unsafe-optional-chaining': 'error',
     },
@@ -280,28 +268,27 @@ export default [
       },
     },
   },
-  {
-    files: [
-      'public/**/*.js',
-      'ws-nextjs-app/public/**/*.js', // this one is a js file, whereas the other ws-nextjs-app files are ts
-      'scripts/**/*.js',
-    ],
-    languageOptions: {
-      globals: {
-        ...globals.browser,
-      },
-      parser: babelParser,
-      parserOptions: {
-        ecmaVersion: 2021,
-        sourceType: 'module',
-      },
-    },
-    plugins: {
-      import: importPlugin,
-    },
-    rules: {
-      'import/prefer-default-export': 'warn',
-      'import/extensions': 'off',
-    },
-  },
+  // {
+  //   files: [
+  //     'public/**/*.js',
+  //     'ws-nextjs-app/public/**/*.js', // this one is a js file, whereas the other ws-nextjs-app files are ts
+  //     'scripts/**/*.js',
+  //   ],
+  //   languageOptions: {
+  //     globals: {
+  //       ...globals.browser,
+  //     },
+  //     parser: babelParser,
+  //     parserOptions: {
+  //       ecmaVersion: 2021,
+  //       sourceType: 'module',
+  //     },
+  //   },
+  //   plugins: {
+  //     import: importPlugin,
+  //   },
+  //   rules: {
+  //     'import/extensions': 'off',
+  //   },
+  // },
 ];
