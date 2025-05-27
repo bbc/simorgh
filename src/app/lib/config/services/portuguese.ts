@@ -253,8 +253,8 @@ export const service: DefaultServiceConfig = {
         closeVideo: 'Sair',
       },
       carousel: {
-        scrollLeft: 'Scroll left',
-        scrollRight: 'Scroll right',
+        previous: 'Scroll to previous item',
+        next: 'Scroll to next item',
       },
       socialEmbed: {
         caption: {

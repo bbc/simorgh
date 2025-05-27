@@ -4,15 +4,10 @@ import {
   twoPixelFocusIndicatorThickness,
   twoPixelFocusIndicatorStyle,
 } from '#app/components/ThemeProvider/focusIndicator';
-import {
-  PROMO_ITEM_WIDTH_GROUP_3_MIN,
-  PROMO_ITEM_WIDTH_GROUP_4_MIN,
-  PROMO_ITEM_WIDTH_GROUP_5_MIN,
-  PROMO_ITEM_WIDTH_MIN,
-} from '../constants';
+import { calculatePromoWidth, PROMO_ITEM_WIDTH_MIN } from '../utils/styleUtils';
 
 const styles = {
-  container: ({ mq }: Theme) =>
+  container: ({ mq, spacings }: Theme) =>
     css({
       all: 'unset',
       scrollSnapAlign: 'start',
@@ -20,17 +15,44 @@ const styles = {
       display: 'block',
       position: 'relative',
       overflow: 'hidden',
+      minWidth: `${pixelsToRem(PROMO_ITEM_WIDTH_MIN)}rem`,
+      flexGrow: 0,
+      flexShrink: 0,
+      [mq.GROUP_0_MAX_WIDTH]: {
+        width: `${pixelsToRem(PROMO_ITEM_WIDTH_MIN)}rem`,
+      },
       [mq.GROUP_1_MIN_WIDTH]: {
-        flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH_MIN)}rem`,
+        flexBasis: calculatePromoWidth({
+          fitForNItems: 2,
+          gapWidth: spacings.FULL,
+        }),
       },
       [mq.GROUP_3_MIN_WIDTH]: {
-        flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH_GROUP_3_MIN)}rem`,
+        flexBasis: calculatePromoWidth({
+          fitForNItems: 3,
+          gapWidth: spacings.DOUBLE,
+        }),
+        [mq.POINTER]: {
+          flexBasis: calculatePromoWidth({
+            fitForNItems: 3,
+            gapWidth: spacings.DOUBLE,
+            navButtonAffordance: true,
+          }),
+        },
       },
       [mq.GROUP_4_MIN_WIDTH]: {
-        flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH_GROUP_4_MIN)}rem`,
+        flexBasis: calculatePromoWidth({
+          fitForNItems: 4,
+          gapWidth: spacings.DOUBLE,
+          navButtonAffordance: true,
+        }),
       },
       [mq.GROUP_5_MIN_WIDTH]: {
-        flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH_GROUP_5_MIN)}rem`,
+        flexBasis: calculatePromoWidth({
+          fitForNItems: 5,
+          gapWidth: spacings.DOUBLE,
+          navButtonAffordance: true,
+        }),
       },
     }),
   button: ({ palette }: Theme) =>

@@ -199,8 +199,8 @@ export interface Translations {
   infoBannerLabel?: string;
   ugc?: Partial<UgcTranslations>;
   carousel?: {
-    scrollLeft?: string;
-    scrollRight?: string;
+    previous?: string;
+    next?: string;
   };
 }
 
