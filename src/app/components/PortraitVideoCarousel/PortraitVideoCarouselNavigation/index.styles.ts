@@ -2,8 +2,6 @@ import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { calculateVariedNavContainerWidths } from '../utils/styleUtils';
 
-const BUTTON_WIDTH_PX = 44;
-
 const styles = {
   buttonGroupOverlay: ({ mq }: Theme) =>
     css({
@@ -31,12 +29,13 @@ const styles = {
       backgroundColor: palette.BLACK,
       border: 'none',
       width: '100%',
-      maxWidth: `${pixelsToRem(BUTTON_WIDTH_PX)}rem`,
+      maxWidth: `${pixelsToRem(44)}rem`,
       aspectRatio: '1/1',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
       cursor: 'pointer',
+      color: palette.GREY_2,
       '&:disabled': {
         opacity: 0.2,
         cursor: 'not-allowed',
@@ -44,7 +43,7 @@ const styles = {
       '& svg': {
         width: `${spacings.DOUBLE}rem`,
         height: `${spacings.DOUBLE}rem`,
-        fill: palette.GREY_2,
+        fill: 'currentcolor',
       },
     }),
 };
