@@ -264,7 +264,7 @@ export const service: DefaultServiceConfig = {
           text: 'BBC Studios Commercial Opportunities',
         },
         {
-          href: 'https://www.bbc.co.uk/programmes/articles/2x9tqt6mc05vB2S37j8MWMJ/global-short-wave-frequencies',
+          href: 'https://www.bbc.com/programmes/articles/2x9tqt6mc05vB2S37j8MWMJ/global-short-wave-frequencies',
           text: 'Global Shortwave Frequencies',
         },
       ],
