@@ -285,16 +285,7 @@ describe('Image - AMP pages', () => {
   });
 
   it('should render 2 nested amp-img tags both with alt text', () => {
-    render(
-      <RequestContextProvider
-        isAmp
-        pageType="article"
-        pathname=""
-        service="afaanoromoo"
-      >
-        <Fixture />
-      </RequestContextProvider>,
-    );
+    render(<Fixture />, { isAmp: true });
 
     const imageEls = screen.getAllByAltText('Test image alt text');
     expect(imageEls.length).toBe(1);
@@ -312,16 +303,7 @@ describe('Image - AMP pages', () => {
   });
 
   it('should render image with correct width and height attributes', () => {
-    render(
-      <RequestContextProvider
-        isAmp
-        pageType="article"
-        pathname=""
-        service="afaanoromoo"
-      >
-        <Fixture />
-      </RequestContextProvider>,
-    );
+    render(<Fixture />, { isAmp: true });
 
     const imageEl = screen.getAllByAltText('Test image alt text');
     expect(imageEl[0]).toHaveAttribute('width', '500');
@@ -406,18 +388,12 @@ describe('Image - AMP pages', () => {
 
   it('should match markup for basic image', () => {
     const { container } = render(
-      <RequestContextProvider
-        isAmp
-        pageType="article"
-        pathname=""
-        service="afaanoromoo"
-      >
-        <Image
-          alt="Test image alt text"
-          src="/test-image-500.jpg"
-          aspectRatio={[16, 9]}
-        />
-      </RequestContextProvider>,
+      <Image
+        alt="Test image alt text"
+        src="/test-image-500.jpg"
+        aspectRatio={[16, 9]}
+      />,
+      { isAmp: true },
     );
 
     expect(removeStyles(container)).toMatchInlineSnapshot(`
@@ -436,19 +412,13 @@ describe('Image - AMP pages', () => {
 
   it('should match markup for a responsive image', () => {
     const { container } = render(
-      <RequestContextProvider
-        isAmp
-        pageType="article"
-        pathname=""
-        service="afaanoromoo"
-      >
-        <Image
-          alt="Test image alt text"
-          src="/test-image-500.jpg"
-          srcSet="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
-          aspectRatio={[16, 9]}
-        />
-      </RequestContextProvider>,
+      <Image
+        alt="Test image alt text"
+        src="/test-image-500.jpg"
+        srcSet="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
+        aspectRatio={[16, 9]}
+      />,
+      { isAmp: true },
     );
 
     expect(removeStyles(container)).toMatchInlineSnapshot(`
@@ -468,23 +438,17 @@ describe('Image - AMP pages', () => {
 
   it('should match markup for a responsive jpg image', () => {
     const { container } = render(
-      <RequestContextProvider
-        isAmp
-        pageType="article"
-        pathname=""
-        service="afaanoromoo"
-      >
-        <Image
-          alt="Test image alt text"
-          src="/test-image-500.webp"
-          srcSet="/test-image-200.webp 200w, /test-image-500.webp 500w"
-          sizes="(max-width: 600px) 480px, 800px"
-          mediaType="image/webp"
-          fallbackSrcSet="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
-          fallbackMediaType="image/jpeg"
-          aspectRatio={[16, 9]}
-        />
-      </RequestContextProvider>,
+      <Image
+        alt="Test image alt text"
+        src="/test-image-500.webp"
+        srcSet="/test-image-200.webp 200w, /test-image-500.webp 500w"
+        sizes="(max-width: 600px) 480px, 800px"
+        mediaType="image/webp"
+        fallbackSrcSet="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
+        fallbackMediaType="image/jpeg"
+        aspectRatio={[16, 9]}
+      />,
+      { isAmp: true },
     );
 
     expect(removeStyles(container)).toMatchInlineSnapshot(`

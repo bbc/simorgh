@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { RequestContextProvider } from '#contexts/RequestContext';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import Image from '.';
 import md from './README.md';
@@ -42,10 +42,17 @@ export const ResponsiveWebPWithJpegFallback = () => (
 );
 
 export const BasicAMPImage = () => (
-  <Image
-    alt="A penguin stands on an ice floe"
-    src="https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/164AF/production/_110911319_antartica.jpg"
-  />
+  <RequestContextProvider
+    isApp
+    pageType="article"
+    pathname=""
+    service="afaanoromoo"
+  >
+    <Image
+      alt="A penguin stands on an ice floe"
+      src="https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/164AF/production/_110911319_antartica.jpg"
+    />
+  </RequestContextProvider>
 );
 
 export const ResponsiveAMPImage = () => (
