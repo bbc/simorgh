@@ -237,6 +237,7 @@ export const service: DefaultServiceConfig = {
         photogallery: 'Galeria de fotos',
         video: 'Vídeo',
         listen: 'Listen',
+        play: 'Play',
         watch: 'Assista',
         watchMoments: 'Assista',
         listenLive: 'Ouça ao vivo',
