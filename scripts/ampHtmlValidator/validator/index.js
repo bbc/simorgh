@@ -78,6 +78,7 @@ const runValidator = async () => {
           error => error.code === 'INVALID_URL_PROTOCOL',
         );
         if (isProtocolFail) {
+          // eslint-disable-next-line no-param-reassign
           result.status = 'PASS';
         }
       }
