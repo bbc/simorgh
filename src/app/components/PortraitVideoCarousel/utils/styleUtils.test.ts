@@ -1,4 +1,4 @@
-import { Theme, useTheme } from '@emotion/react';
+import { Theme } from '@emotion/react';
 
 import {
   calculatePromoWidth,
