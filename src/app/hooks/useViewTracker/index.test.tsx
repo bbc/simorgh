@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+ 
 
 import React, { createContext, ReactNode } from 'react';
 import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
@@ -136,7 +136,7 @@ const reverbMock = {
   userActionEvent: jest.fn(),
 };
 
-// eslint-disable-next-line no-underscore-dangle
+ 
 window.__reverb = {
   __reverbLoadedPromise: Promise.resolve(reverbMock),
 };

@@ -31,7 +31,7 @@ const MediaPlayerPlaceholder = ({
   } = mediaInfo ?? {};
 
   return (
-    // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
+     
     <div
       onClick={onClick}
       css={styles.placeholder}
@@ -44,7 +44,7 @@ const MediaPlayerPlaceholder = ({
       />
       <PlayButton
         css={styles.playButton}
-        // eslint-disable-next-line @typescript-eslint/no-empty-function
+         
         onClick={() => {}}
         title={title}
         datetime={datetime}

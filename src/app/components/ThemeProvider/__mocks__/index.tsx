@@ -138,7 +138,7 @@ const ThemeProvider = ({ children, service, ...rest }: Props) => {
   const ThemeProviderSynchronous =
     variant === 'default' || !variant
       ? themeProviders[service]
-      : // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      :  
         // @ts-ignore - TODO: come back to this
         themeProviders[service][variant];
 

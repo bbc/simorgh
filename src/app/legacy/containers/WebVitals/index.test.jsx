@@ -72,7 +72,7 @@ describe('WebVitals', () => {
         featureToggle: true,
         personalisationEnabled: true,
       };
-      /* eslint-disable no-console */
+       
       const { error } = console.error;
 
       console.error = jest.fn();
@@ -89,7 +89,7 @@ describe('WebVitals', () => {
       );
 
       console.error = error;
-      /* eslint-enable no-console */
+       
     });
   });
 });

@@ -1,4 +1,4 @@
-/* eslint-disable camelcase */
+ 
 export type ampParams = {
   'amp-clickable': boolean;
   'amp-image-height': number;

@@ -1,4 +1,4 @@
-/* eslint-disable no-template-curly-in-string */
+ 
 import getAmpDestination from './index';
 
 describe('getAmpDestination', () => {

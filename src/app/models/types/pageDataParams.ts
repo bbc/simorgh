@@ -6,7 +6,7 @@ export default interface PageDataParams extends ParsedUrlQuery {
   page?: string;
   service: Services;
   variant?: string[];
-  // eslint-disable-next-line camelcase
+   
   renderer_env?: string;
   resolvedUrl: string;
   pageType: PageTypes;

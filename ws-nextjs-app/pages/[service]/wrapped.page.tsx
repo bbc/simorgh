@@ -35,7 +35,7 @@ interface PageDataParams extends ParsedUrlQuery {
   page?: string;
   service: Services;
   variant?: Variants;
-  // eslint-disable-next-line camelcase
+   
   renderer_env?: string;
 }
 

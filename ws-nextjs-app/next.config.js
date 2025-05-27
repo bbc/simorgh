@@ -1,4 +1,4 @@
-/* eslint-disable no-param-reassign */
+ 
 const dotenv = require('dotenv');
 const MomentTimezoneInclude = require('../src/app/legacy/psammead/moment-timezone-include/src');
 const { getClientEnvVars } = require('../src/clientEnvVars');

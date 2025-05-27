@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-/* eslint-disable cypress/no-unnecessary-waiting */
+ 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 import topicTagsTest from '../../support/helpers/topicTagsTest';
@@ -53,14 +53,14 @@ export const testsThatAlwaysRunForAllPages = ({
                     // the JQuery element into a Cypress wrapped element so we can execute Cypress commands on it
 
                     // Images are lazy loaded so we need to scroll to them, check they have loaded before getting currentSrc
-                    // eslint-disable-next-line cypress/unsafe-to-chain-command
+                     
                     cy.wrap($img)
                       .scrollIntoView()
                       .should('be.visible')
                       .then($visibleImg => {
                         const src = $visibleImg.attr('src');
                         cy.log(src);
-                        // eslint-disable-next-line no-unused-expressions
+                         
                         expect(src.endsWith('.webp')).to.be.true;
                       });
                   },

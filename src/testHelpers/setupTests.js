@@ -57,7 +57,7 @@ const didSuppressWarning = (message, ...rest) => {
   return false;
 };
 
-// eslint-disable-next-line no-console
+ 
 console.error = (message, ...rest) => {
   if (didSuppressWarning(message, ...rest)) return;
 
@@ -80,7 +80,7 @@ Please fix the following:
 global.setImmediate =
   global.setImmediate || ((fn, ...args) => global.setTimeout(fn, 0, ...args));
 
-// eslint-disable-next-line no-console
+ 
 console.warn = (message, ...rest) => {
   if (didSuppressWarning(message, ...rest)) return;
   warn(message, ...rest);

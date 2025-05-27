@@ -17,7 +17,7 @@ describe('generateTimeFormats', () => {
     let hasError = false;
     jest.isolateModules(() => {
       try {
-        // eslint-disable-next-line global-require
+         
         require('./generateTimeFormats');
       } catch (e) {
         hasError = true;
@@ -34,7 +34,7 @@ describe('generateTimeFormats', () => {
     let hasError = false;
     jest.isolateModules(() => {
       try {
-        // eslint-disable-next-line global-require
+         
         require('./generateTimeFormats');
       } catch (e) {
         hasError = true;

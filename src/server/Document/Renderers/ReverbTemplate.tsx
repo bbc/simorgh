@@ -5,7 +5,7 @@ const ReverbTemplate = () => {
   return (
     <>
       <script
-        // eslint-disable-next-line react/no-danger
+         
         dangerouslySetInnerHTML={{
           __html: `
             window.__reverb = {};

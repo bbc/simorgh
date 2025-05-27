@@ -1,6 +1,6 @@
 // The pageview request needs to have the ${base} value not interpolated.
-/* eslint-disable no-template-curly-in-string */
-/* eslint-disable prefer-template */
+ 
+ 
 import { reverbUrlHelper } from '@bbc/reverb-url-helper';
 import { ATIAnalyticsProps } from '../types';
 

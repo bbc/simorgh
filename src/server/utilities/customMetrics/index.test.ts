@@ -1,5 +1,5 @@
-/* eslint-disable import/first */
-/* eslint-disable import/order */
+ 
+ 
 import sendCustomMetric, { Params } from '.';
 
 const metricParams = {

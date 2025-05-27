@@ -1,4 +1,4 @@
-/* eslint-disable react/no-danger */
+ 
 import React from 'react';
 import { EmotionCritical } from '@emotion/server/create-instance';
 

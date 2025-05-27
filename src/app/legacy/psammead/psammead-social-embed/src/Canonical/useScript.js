@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
  */
 const useScript = src => {
   const [isLoaded, setIsLoaded] = useState(false);
-  // eslint-disable-next-line consistent-return
+   
   useEffect(() => {
     const hasScript = !!document.querySelector(`head script[src="${src}"]`);
 

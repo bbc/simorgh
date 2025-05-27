@@ -1,4 +1,4 @@
-/* eslint-disable import/prefer-default-export */
+ 
 import { ampOnly as mostReadAssertions } from '../mostReadPage/mostReadAssertions';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959

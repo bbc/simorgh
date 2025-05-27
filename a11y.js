@@ -80,7 +80,7 @@ Object.keys(pageTypes).map(pageType => {
     .map(pageUrl => `${baseUrl}${pageUrl}`)
     .forEach(url =>
       pageWidths.forEach(width =>
-        // eslint-disable-next-line no-undef
+         
         page(url, { width, hide: pageTypes[pageType] }),
       ),
     );

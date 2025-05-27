@@ -22,7 +22,7 @@ const generateCSPHash = ({
       .replace(/\+/g, '-')
       .replace(/\//g, '_')}`;
   } catch (err) {
-    // eslint-disable-next-line no-console
+     
     console.warn(
       `Failed to create hash with params script = ${script}, 
       sha = ${sha}, 

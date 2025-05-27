@@ -1,4 +1,4 @@
-/* eslint-disable */
+ 
 const moment = require('moment');
 require('moment/locale/hi');
 

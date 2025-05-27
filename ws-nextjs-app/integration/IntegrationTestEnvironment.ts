@@ -1,5 +1,5 @@
-/* eslint-disable import/no-relative-packages */
-/* eslint-disable no-console */
+ 
+ 
 import { TestEnvironment } from 'jest-environment-jsdom';
 import type {
   JestEnvironmentConfig,

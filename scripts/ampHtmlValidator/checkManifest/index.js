@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+ 
 import { JSDOM } from 'jsdom';
 
 const getManifestFile = async url => {

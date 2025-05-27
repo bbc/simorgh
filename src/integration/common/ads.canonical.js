@@ -25,7 +25,7 @@ export default () => {
 
       let adConfig;
 
-      // eslint-disable-next-line no-restricted-syntax
+       
       for (const script of scripts) {
         if (script.innerHTML.includes('pageAds: true')) {
           adConfig = script;

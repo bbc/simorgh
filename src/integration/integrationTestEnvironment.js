@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+ 
 
 const JsdomEnvironment = require('jest-environment-jsdom').TestEnvironment;
 const fetchDom = require('./utils/fetchDom');

@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+ 
 const fs = require('fs');
 
 const getCategoryScores = data => {
@@ -28,7 +28,7 @@ const logRow = (category, scoreValue, budgetValue, isPassing) => ({
 const compareToBudget = (categories, scoreResult, scoreBudget) => {
   let result = true;
   const logArray = [];
-  // eslint-disable-next-line consistent-return
+   
   categories.forEach(prop => {
     const isPassing = isAboveThreshold(scoreResult[prop], scoreBudget[prop]);
     const passLog = logRow(

@@ -5,7 +5,7 @@ export default requests => {
   let totalSize = 0;
   const requestSizes = [];
 
-  // eslint-disable-next-line cypress/unsafe-to-chain-command
+   
   return cy
     .wrap(requests)
     .each(({ url, isCompressed, contentLength }) => {

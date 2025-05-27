@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
+ 
 import React from 'react';
 import { Services } from '#app/models/types/global';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';

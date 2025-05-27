@@ -1,4 +1,4 @@
-/* eslint-disable no-underscore-dangle */
+ 
 import toggles from '.';
 
 describe('Toggles Config', () => {

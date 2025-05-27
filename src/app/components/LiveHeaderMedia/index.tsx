@@ -18,9 +18,9 @@ import VisuallyHiddenText from '../VisuallyHiddenText';
 import { Close, Play } from '../icons';
 
 type WarningItem = {
-  // eslint-disable-next-line camelcase
+   
   warning_code: string;
-  // eslint-disable-next-line camelcase
+   
   short_description: string;
 };
 

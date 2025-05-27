@@ -1,4 +1,4 @@
-/* eslint-disable no-eval */
+ 
 import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
 import sendPageViewBeaconOperaMini from '.';
 
@@ -13,7 +13,7 @@ let documentReferrerSpy: jest.SpyInstance;
 
 describe('sendPageViewBeaconOperaMini', () => {
   class OperaMiniMock {
-    // eslint-disable-next-line class-methods-use-this
+     
     get [Symbol.toStringTag]() {
       return 'OperaMini';
     }

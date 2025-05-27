@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/anchor-has-content */
+ 
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import React, { PropsWithChildren, useContext } from 'react';
@@ -85,7 +85,7 @@ const FrostedGlassPromo = ({
 
   // The ClickableArea component is an anchor ("a") element
   // Anchors cannot be self-closing under the HTML spec
-  /* eslint-disable react/self-closing-comp */
+   
   return (
     <div css={styles.componentWrapper} data-testid={`frosted-promo-${index}`}>
       <a

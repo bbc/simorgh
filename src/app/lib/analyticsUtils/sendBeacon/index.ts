@@ -114,7 +114,7 @@ const reverbHandlers = {
 const callReverb = async (eventDetails: ReverbEventDetails) => {
   const { eventName } = eventDetails;
 
-  // eslint-disable-next-line no-underscore-dangle
+   
   window.__reverb.__reverbLoadedPromise.then(
     async reverb => {
       if (!reverb.isReady()) await reverb.initialise();

@@ -83,7 +83,7 @@ export default function FormScreen({
       </Heading>
       {description && (
         <div
-          // eslint-disable-next-line react/no-danger
+           
           dangerouslySetInnerHTML={{ __html: description }}
           css={styles.description}
         />
@@ -104,7 +104,7 @@ export default function FormScreen({
             <div css={styles.privacyContainer}>
               <strong css={styles.privacyHeading}>{dataPolicyHeading}</strong>
               <div
-                // eslint-disable-next-line react/no-danger
+                 
                 dangerouslySetInnerHTML={{ __html: privacyNotice }}
                 css={styles.privacyNotice}
               />

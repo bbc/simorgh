@@ -1,4 +1,4 @@
-/* eslint-disable */
+ 
 /*
  * © Jordan Tart https://github.com/jtart
  * https://github.com/jtart/react-universal-app

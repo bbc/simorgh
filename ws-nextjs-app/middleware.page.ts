@@ -1,4 +1,4 @@
-/* eslint-disable import/prefer-default-export */
+ 
 import { NextResponse, NextRequest } from 'next/server';
 
 import addPlatformToRequestChainHeader from '#server/utilities/addPlatformToRequestChainHeader';

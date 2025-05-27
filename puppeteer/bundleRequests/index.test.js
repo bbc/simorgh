@@ -1,4 +1,4 @@
-/* eslint-disable no-underscore-dangle */
+ 
 import shouldSmokeTest from '../../cypress/support/helpers/shouldSmokeTest';
 import serviceHasPageType from '../../cypress/support/helpers/serviceHasPageType';
 import config from '../../cypress/support/config/services';

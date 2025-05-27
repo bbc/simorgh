@@ -8,7 +8,7 @@ const newLinksData = rawTimezones.links.map(link => link.split('|'));
 // newZonesData with all links expanded into their own distinct timezone.
 const newZonesDataUnlinked = newLinksData.reduce((zones, link) => {
   const newEntry = { ...newZonesData.find(z => z.name === link[0]) };
-  newEntry.name = link[1]; // eslint-disable-line prefer-destructuring
+  newEntry.name = link[1];  
   zones.push(newEntry);
   return zones;
 }, newZonesData);

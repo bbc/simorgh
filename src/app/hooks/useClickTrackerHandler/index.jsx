@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+ 
 import { useContext, useCallback, useState } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
 import useOptimizelyMvtVariation from '#app/hooks/useOptimizelyMvtVariation';

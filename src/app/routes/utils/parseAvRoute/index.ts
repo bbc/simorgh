@@ -90,7 +90,7 @@ const extractVariant = (query: Query): Variants | null => {
 const extractPlatform = (query: Query): Platform | null => {
   let platform: Platform | null = null;
 
-  // eslint-disable-next-line no-restricted-syntax
+   
   for (const id of query ?? []) {
     if (CPS_ID_REGEX.test(id)) {
       platform = 'cps';

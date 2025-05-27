@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+ 
 import React from 'react';
 import addInlineScript from '.';
 

@@ -1,4 +1,4 @@
-/* eslint-disable cypress/no-unnecessary-waiting */
+ 
 import {
   getCookieBannerCanonical,
   getCookieBannerAcceptCanonical,

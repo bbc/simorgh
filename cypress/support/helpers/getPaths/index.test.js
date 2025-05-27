@@ -1,5 +1,5 @@
-/* eslint-disable import/no-unresolved */
-/* eslint-disable global-require */
+ 
+ 
 describe('getPaths', () => {
   jest.mock('../../config/services', () => {
     return {

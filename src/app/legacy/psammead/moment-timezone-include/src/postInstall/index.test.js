@@ -4,7 +4,7 @@ jest.mock('../writeNewTimezoneData', () => jest.fn());
 
 describe('postInstall', () => {
   it('Should call writeNewTimezoneData', () => {
-    require('./index'); // eslint-disable-line global-require
+    require('./index');  
     expect(writeNewTimezoneData).toHaveBeenCalledTimes(1);
   });
 });

@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+ 
 import setCookieOven from './setCookieOven';
 
 const { origin } = window.location;

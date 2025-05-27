@@ -74,7 +74,7 @@ export default (html: string) => {
       }
     });
   } catch (error) {
-    // eslint-disable-next-line @typescript-eslint/no-empty-function
+     
     (() => {})();
   }
 
