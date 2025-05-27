@@ -1,5 +1,6 @@
 import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import Image from '.';
 import md from './README.md';
@@ -56,11 +57,18 @@ export const BasicAMPImage = () => (
 );
 
 export const ResponsiveAMPImage = () => (
-  <Image
-    alt="A penguin stands on an ice floe"
-    src="https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/164AF/production/_110911319_antartica.jpg"
-    srcSet="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/164AF/production/_110911319_antartica.jpg 240w, https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/164AF/production/_110911319_antartica.jpg 624w"
-  />
+  <RequestContextProvider
+    isApp
+    pageType="article"
+    pathname=""
+    service="afaanoromoo"
+  >
+    <Image
+      alt="A penguin stands on an ice floe"
+      src="https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/164AF/production/_110911319_antartica.jpg"
+      srcSet="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/164AF/production/_110911319_antartica.jpg 240w, https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/164AF/production/_110911319_antartica.jpg 624w"
+    />
+  </RequestContextProvider>
 );
 
 export const AMPWebPWithJpegFallback = () => (

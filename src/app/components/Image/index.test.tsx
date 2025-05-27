@@ -10,7 +10,6 @@ import Image from '.';
 import BASE64_PLACEHOLDER_IMAGE from './base64Placeholder';
 
 import { SHADOW } from '../ThemeProvider/palette';
-import { RequestContextProvider } from '../../contexts/RequestContext';
 
 const removeStyles = (el: HTMLElement) => {
   const dom = new JSDOM(el.innerHTML.replace(/class=".+?"/gm, ''));
@@ -245,7 +244,7 @@ describe('Image - Canonical', () => {
 
 describe('Image - AMP pages', () => {
   it('should preload when preload is true', async () => {
-    render(<Fixture preload />);
+    render(<Fixture preload />, { isAmp: true });
 
     await waitFor(() => {
       const linkEl = document.head.querySelector('link');
