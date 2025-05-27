@@ -17,12 +17,12 @@ const StyledBrand = styled(Brand)`
   }
 `;
 
-export const getBrandPath = (serviceName, variantName) => {
-  if (serviceName === 'ws') return '/ws/languages';
-  if (variantName && servicesWithVariants[serviceName]?.includes(variantName)) {
-    return `/${serviceName}/${variantName}`;
+export const getBrandPath = (service, variant) => {
+  if (service === 'ws') return '/ws/languages';
+  if (variant && servicesWithVariants[service]?.includes(variant)) {
+    return `/${service}/${variant}`;
   }
-  return `/${serviceName}`;
+  return `/${service}`;
 };
 
 const BrandContainer = ({
