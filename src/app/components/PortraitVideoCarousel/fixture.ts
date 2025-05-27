@@ -16,6 +16,14 @@ const portraitVideoFixture = {
       link: {
         path: '/programmes/p01wjx7v',
       },
+      video: {
+        id: 'p01wjx7v',
+        version: {
+          duration: 'PT13S',
+          kind: 'programme',
+          territories: ['uk', 'nonuk'],
+        },
+      },
     },
     {
       id: 'urn:bbc:optimo:asset:cgp62emnrk5o',
@@ -30,6 +38,14 @@ const portraitVideoFixture = {
       },
       link: {
         path: '/portuguese/articles/cgp62emnrk5o',
+      },
+      video: {
+        id: 'p01wjx6g',
+        version: {
+          duration: 'PT13S',
+          kind: 'programme',
+          territories: ['uk', 'nonuk'],
+        },
       },
     },
     {
@@ -46,6 +62,14 @@ const portraitVideoFixture = {
       link: {
         path: '/programmes/p01wjx5y',
       },
+      video: {
+        id: 'p01wjx5y',
+        version: {
+          duration: 'PT13S',
+          kind: 'programme',
+          territories: ['uk', 'nonuk'],
+        },
+      },
     },
     {
       id: 'urn:bbc:pips:pid:p01wjx4r',
@@ -60,6 +84,14 @@ const portraitVideoFixture = {
       },
       link: {
         path: '/programmes/p01wjx4r',
+      },
+      video: {
+        id: 'p01wjx4r',
+        version: {
+          duration: 'PT13S',
+          kind: 'programme',
+          territories: ['uk', 'nonuk'],
+        },
       },
     },
     {
@@ -76,6 +108,14 @@ const portraitVideoFixture = {
       link: {
         path: '/programmes/p01wjx3q',
       },
+      video: {
+        id: 'p01wjx3q',
+        version: {
+          duration: 'PT13S',
+          kind: 'programme',
+          territories: ['uk', 'nonuk'],
+        },
+      },
     },
     {
       id: 'urn:bbc:pips:pid:p01wjx3g',
@@ -91,6 +131,14 @@ const portraitVideoFixture = {
       link: {
         path: '/programmes/p01wjx3g',
       },
+      video: {
+        id: 'p01wjx3g',
+        version: {
+          duration: 'PT13S',
+          kind: 'programme',
+          territories: ['uk', 'nonuk'],
+        },
+      },
     },
     {
       id: 'urn:bbc:pips:pid:p01wjx35',
@@ -105,6 +153,14 @@ const portraitVideoFixture = {
       },
       link: {
         path: '/programmes/p01wjx35',
+      },
+      video: {
+        id: 'p01wjx35',
+        version: {
+          duration: 'PT13S',
+          kind: 'programme',
+          territories: ['uk', 'nonuk'],
+        },
       },
     },
     {
@@ -122,6 +178,14 @@ const portraitVideoFixture = {
       link: {
         path: '/programmes/p01wjx7v',
       },
+      video: {
+        id: 'p01wjx7v1',
+        version: {
+          duration: 'PT13S',
+          kind: 'programme',
+          territories: ['uk', 'nonuk'],
+        },
+      },
     },
     {
       id: 'urn:bbc:optimo:asset:cgp62emnrk5o1',
@@ -137,6 +201,14 @@ const portraitVideoFixture = {
       link: {
         path: '/portuguese/articles/cgp62emnrk5o',
       },
+      video: {
+        id: 'p01wjx6z',
+        version: {
+          duration: 'PT13S',
+          kind: 'programme',
+          territories: ['uk', 'nonuk'],
+        },
+      },
     },
     {
       id: 'urn:bbc:pips:pid:p01wjx5y1',
@@ -151,6 +223,14 @@ const portraitVideoFixture = {
       },
       link: {
         path: '/programmes/p01wjx5y',
+      },
+      video: {
+        id: 'p01wjx5y1',
+        version: {
+          duration: 'PT13S',
+          kind: 'programme',
+          territories: ['uk', 'nonuk'],
+        },
       },
     },
   ],

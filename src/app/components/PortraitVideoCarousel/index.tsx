@@ -13,8 +13,6 @@ import { BumpLoader } from '../MediaLoader';
 import PortraitVideoPromo from './PortraitVideoPromo';
 import PortraitCarouselNavigation from './PortraitVideoCarouselNavigation';
 
-export const PROMO_ITEM_WIDTH = 180;
-
 const PortraitVideoCarousel = ({
   title,
   items,

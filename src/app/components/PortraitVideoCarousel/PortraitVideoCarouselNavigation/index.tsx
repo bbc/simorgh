@@ -8,7 +8,7 @@ import {
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
 import { LeftChevron, RightChevron } from '../../icons';
-import { PROMO_ITEM_WIDTH } from '..';
+import { PROMO_ITEM_WIDTH_MIN } from '../constants';
 
 const defaultTranslations = {
   scrollLeft: 'Scroll left',
@@ -35,7 +35,7 @@ export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
   const scroll = (buttonTriggered: ScrollDirection) => {
     if (!scrollPaneRef.current) return;
     const scrollAmount =
-      buttonTriggered === 'left' ? -PROMO_ITEM_WIDTH : PROMO_ITEM_WIDTH;
+      buttonTriggered === 'left' ? -PROMO_ITEM_WIDTH_MIN : PROMO_ITEM_WIDTH_MIN;
     scrollPaneRef.current.scrollBy({
       left: scrollAmount,
       behavior: 'smooth',
