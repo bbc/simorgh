@@ -46,15 +46,11 @@ export enum ChevronOrientation {
 
 type ChevronProps = {
   className?: string;
-  dir?: Direction;
+  dir: Direction;
   orientation: ChevronOrientation;
 };
 
-export const Chevron = ({
-  className,
-  dir = 'ltr',
-  orientation,
-}: ChevronProps) => {
+export const Chevron = ({ className, dir, orientation }: ChevronProps) => {
   let normalisedDirection = null;
   const paths = {
     [ChevronOrientation.BACKWARD]: (
