@@ -14,7 +14,7 @@ const urls = [
   {
     service: 'polska',
     local: '/polska',
-    test: '/polska',
+    test: '',
     live: '',
   },
   {
