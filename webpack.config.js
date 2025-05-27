@@ -4,8 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const DevServer = require('webpack-dev-server');
 const MomentTimezoneInclude = require('./src/app/legacy/psammead/moment-timezone-include/src');
-const { webpackDirAlias } = require('./dirAlias.mjs');
-
+const { webpackDirAlias } = require('./dirAlias');
 const appDirectory = fs.realpathSync(process.cwd());
 const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 

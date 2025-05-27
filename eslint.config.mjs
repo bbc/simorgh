@@ -1,4 +1,4 @@
-// filepath: /Applications/Code/simorgh/eslint.config.js
+import { eslintDirAlias } from './dirAlias.js';
 import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
 import globals from 'globals';
@@ -12,10 +12,7 @@ import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import importPlugin from 'eslint-plugin-import';
 import noOnlyTests from 'eslint-plugin-no-only-tests';
-import dirAlias from './dirAlias.mjs';
 import prettier from 'eslint-plugin-prettier';
-
-const { eslintDirAlias } = dirAlias;
 
 export default [
   {
