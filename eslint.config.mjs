@@ -138,7 +138,7 @@ export default [
         'warn',
         {
           argsIgnorePattern: '^_',
-          varsIgnorePattern: '^_',
+          varsIgnorePattern: '^(jsx|_)', // jsx is required for Emotion's CSS-in-JS functionality to work with JSX syntax even if not used in the file
           caughtErrorsIgnorePattern: '^_',
         },
       ],
@@ -209,7 +209,7 @@ export default [
         'warn',
         {
           argsIgnorePattern: '^_',
-          varsIgnorePattern: '^_',
+          varsIgnorePattern: '^(jsx|_)', // jsx is required for Emotion's CSS-in-JS functionality to work with JSX syntax even if not used in the file
           caughtErrorsIgnorePattern: '^_',
         },
       ],
@@ -268,27 +268,4 @@ export default [
       },
     },
   },
-  // {
-  //   files: [
-  //     'public/**/*.js',
-  //     'ws-nextjs-app/public/**/*.js', // this one is a js file, whereas the other ws-nextjs-app files are ts
-  //     'scripts/**/*.js',
-  //   ],
-  //   languageOptions: {
-  //     globals: {
-  //       ...globals.browser,
-  //     },
-  //     parser: babelParser,
-  //     parserOptions: {
-  //       ecmaVersion: 2021,
-  //       sourceType: 'module',
-  //     },
-  //   },
-  //   plugins: {
-  //     import: importPlugin,
-  //   },
-  //   rules: {
-  //     'import/extensions': 'off',
-  //   },
-  // },
 ];
