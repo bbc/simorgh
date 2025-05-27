@@ -1,6 +1,6 @@
  
  
-/* eslint-disable import/prefer-default-export */
+ 
 import envConfig from '../../support/config/envs';
 import config from '../../support/config/services';
 

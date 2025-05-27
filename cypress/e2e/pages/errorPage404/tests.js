@@ -1,4 +1,4 @@
-/* eslint-disable import/prefer-default-export */
+ 
 import config from '../../../support/config/services';
 import envConfig from '../../../support/config/envs';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
