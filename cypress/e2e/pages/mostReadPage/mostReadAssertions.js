@@ -1,4 +1,4 @@
-/* eslint-disable import/no-unresolved */
+ 
 import appConfig from '#src/server/utilities/serviceConfigs';
 import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
 import { serviceNumerals } from '#app/components/MostRead/Canonical/Rank';
