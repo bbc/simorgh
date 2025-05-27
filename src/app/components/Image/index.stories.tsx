@@ -43,7 +43,6 @@ export const ResponsiveWebPWithJpegFallback = () => (
 
 export const BasicAMPImage = () => (
   <Image
-    isAmp
     alt="A penguin stands on an ice floe"
     src="https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/164AF/production/_110911319_antartica.jpg"
   />
@@ -51,7 +50,6 @@ export const BasicAMPImage = () => (
 
 export const ResponsiveAMPImage = () => (
   <Image
-    isAmp
     alt="A penguin stands on an ice floe"
     src="https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/164AF/production/_110911319_antartica.jpg"
     srcSet="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/164AF/production/_110911319_antartica.jpg 240w, https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/164AF/production/_110911319_antartica.jpg 624w"
@@ -60,7 +58,6 @@ export const ResponsiveAMPImage = () => (
 
 export const AMPWebPWithJpegFallback = () => (
   <Image
-    isAmp
     alt="A penguin stands on an ice floe"
     src="https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/164AF/production/_110911319_antartica.jpg"
     srcSet="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/164AF/production/_110911319_antartica.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/164AF/production/_110911319_antartica.jpg.webp 624w"
