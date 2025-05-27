@@ -18,6 +18,9 @@ const styles = {
       minWidth: `${pixelsToRem(PROMO_ITEM_WIDTH_MIN)}rem`,
       flexGrow: 0,
       flexShrink: 0,
+      [mq.GROUP_0_MAX_WIDTH]: {
+        width: `${pixelsToRem(PROMO_ITEM_WIDTH_MIN)}rem`,
+      },
       [mq.GROUP_1_MIN_WIDTH]: {
         flexBasis: calculatePromoWidth({
           fitForNItems: 2,
