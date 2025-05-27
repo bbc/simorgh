@@ -36,6 +36,11 @@ describe('useOptimizelyMvtVariation custom hook', () => {
     }).result.current;
   };
 
+  it('should return null if optimizely is not defined', () => {
+    const { result } = renderHook(() => useOptimizelyMvtVariation('foo'));
+    expect(result.current).toEqual(null);
+  });
+
   it('should return null if mvtExperiments is falsy', () => {
     const result = renderUseOptimizelyMvtVariation(undefined, 'foo');
     expect(result).toEqual(null);
