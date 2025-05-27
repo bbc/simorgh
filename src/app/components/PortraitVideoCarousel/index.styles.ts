@@ -12,11 +12,9 @@ const styles = {
         margin: `${spacings.DOUBLE}rem 0`,
       },
     }),
-  heading: ({ fontSizes, fontVariants, palette, mq, spacings }: Theme) =>
+  heading: ({ palette, mq, spacings }: Theme) =>
     css({
       display: 'inline-block',
-      ...fontVariants.sansBold,
-      ...fontSizes.doublePica,
       color: palette.GREY_10,
       margin: `${spacings.DOUBLE}rem 0 0 0`,
       [mq.GROUP_3_MIN_WIDTH]: {

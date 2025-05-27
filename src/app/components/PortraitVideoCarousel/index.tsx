@@ -12,6 +12,7 @@ import PortraitVideoModal from '../PortraitVideoModal';
 import { BumpLoader } from '../MediaLoader';
 import PortraitVideoPromo from './PortraitVideoPromo';
 import PortraitCarouselNavigation from './PortraitVideoCarouselNavigation';
+import Heading from '../Heading';
 
 const PortraitVideoCarousel = ({
   title,
@@ -44,7 +45,14 @@ const PortraitVideoCarousel = ({
         data-testid="portrait-video-carousel"
         css={styles.section}
       >
-        <h2 css={styles.heading}>{title}</h2>
+        <Heading
+          level={2}
+          size="doublePica"
+          fontVariant="sansBold"
+          css={styles.heading}
+        >
+          {title}
+        </Heading>
         <div css={styles.carouselContainer}>
           <PortraitCarouselNavigation scrollPaneRef={scrollRef} />
           <ul ref={scrollRef} css={styles.carousel} data-testid="pv-carousel">
