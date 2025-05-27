@@ -49,7 +49,6 @@ const MaskedImage = ({
       <Image
         alt={altText}
         src={imageUrl}
-        isAmp={isAmp}
         srcSet={primarySrcset || undefined}
         fallbackSrcSet={fallbackSrcset || undefined}
         mediaType={primaryMimeType || undefined}

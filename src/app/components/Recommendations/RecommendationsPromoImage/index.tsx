@@ -35,7 +35,6 @@ const RecommendationsImage = ({
 
   return (
     <Image
-      isAmp={isAmp}
       alt={altText}
       aspectRatio={[width, height]}
       src={src}
