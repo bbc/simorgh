@@ -27,16 +27,17 @@ export default ({
       if (!headerBlocks || !contentBlocks) return null;
 
       const headlineBlock = headerBlocks.find(
-        block => block.type === 'headline',
+        (block: OptimoBlock) => block.type === 'headline',
       );
 
       const paragraphBlocks = contentBlocks.filter(
-        block => block.type === 'paragraph',
+        (block: OptimoBlock) => block.type === 'paragraph',
       );
 
-      const imageBlock = contentBlocks.find(block => block.type === 'image');
+      const imageBlock = contentBlocks.find(
+        (block: OptimoBlock) => block.type === 'image',
+      );
 
-      // @ts-expect-error - deeply nested
       const imageSource = imageBlock?.model?.blocks.find(
         (block: OptimoBlock) => block.type === 'rawImage',
       );
@@ -44,7 +45,6 @@ export default ({
       return {
         '@type': 'BlogPosting',
         headline:
-          // @ts-expect-error - deeply nested
           headlineBlock?.model.blocks?.[0]?.model.blocks?.[0]?.model.text ??
           null,
         publisher: {

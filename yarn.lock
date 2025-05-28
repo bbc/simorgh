@@ -5056,6 +5056,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/cypress@npm:1.1.6":
+  version: 1.1.6
+  resolution: "@types/cypress@npm:1.1.6"
+  dependencies:
+    cypress: "npm:*"
+  checksum: 10/8b9243b093ede3edc8eeeb99fa89b8b778bdeca5194707f320ebbd939f27d9b61153dc4cc63cf70e59d1e0d6ef6e21696bb66e47eb4391e936d4fe86173a32eb
+  languageName: node
+  linkType: hard
+
 "@types/doctrine@npm:^0.0.9":
   version: 0.0.9
   resolution: "@types/doctrine@npm:0.0.9"
@@ -8183,7 +8192,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:14.4.0":
+"cypress@npm:*, cypress@npm:14.4.0":
   version: 14.4.0
   resolution: "cypress@npm:14.4.0"
   dependencies:
@@ -16197,6 +16206,7 @@ __metadata:
     "@testing-library/react": "npm:16.3.0"
     "@testing-library/react-hooks": "npm:8.0.1"
     "@testing-library/user-event": "npm:14.6.1"
+    "@types/cypress": "npm:1.1.6"
     "@types/jest": "npm:29.5.14"
     "@types/js-cookie": "npm:^3.0.3"
     "@types/jsdom": "npm:21.1.7"
