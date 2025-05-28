@@ -27,7 +27,8 @@ const ContinueReadingButton = ({
   };
 
   const viewRef = useViewTracker(eventTrackingData);
-  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+  const { onClick: clickTrackerHandler } =
+    useClickTrackerHandler(eventTrackingData);
 
   const handleEvent = (
     event:
@@ -43,6 +44,7 @@ const ContinueReadingButton = ({
     }
 
     event.preventDefault();
+    clickTrackerHandler?.(event);
     setShowAllContent();
   };
 
@@ -100,8 +102,7 @@ const ContinueReadingButton = ({
       onKeyDown={handleEvent}
       onTouchStart={handleEvent}
       data-testid="read-more-button"
-      ref={viewRef}
-      {...clickTrackerHandler}
+      {...viewRef}
     >
       <Text fontVariant="sansBold">{continueReading}</Text>
       {variation === 'B' && <TriangleDown />}
