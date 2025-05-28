@@ -15,7 +15,6 @@ const styles = {
       display: 'block',
       position: 'relative',
       overflow: 'hidden',
-      minWidth: `${pixelsToRem(PROMO_ITEM_WIDTH_MIN)}rem`,
       flexGrow: 0,
       flexShrink: 0,
       [mq.GROUP_0_MAX_WIDTH]: {
