@@ -274,7 +274,7 @@ describe('Image - AMP pages', () => {
   });
 
   it('should not preload by default', async () => {
-    render(<Fixture />);
+    render(<Fixture />, { isAmp: true });
 
     await waitFor(() => {
       const linkEl = document.head.querySelector('link');
@@ -292,7 +292,7 @@ describe('Image - AMP pages', () => {
   });
 
   it('should render jpg image', () => {
-    render(<Fixture />);
+    render(<Fixture />, { isAmp: true });
 
     const imageEls = screen.getAllByAltText('Test image alt text');
     expect(imageEls[0]).toHaveAttribute(
@@ -310,7 +310,7 @@ describe('Image - AMP pages', () => {
   });
 
   it('should render a placeholder image by default', () => {
-    render(<Fixture />);
+    render(<Fixture />, { isAmp: true });
     const imageEl = screen.getAllByAltText('Test image alt text')[0];
 
     expect(imageEl.parentNode).toHaveStyle({
@@ -336,7 +336,7 @@ describe('Image - AMP pages', () => {
   });
 
   it('should not render a placeholder image when placeholder is false', () => {
-    render(<Fixture placeholder={false} />);
+    render(<Fixture placeholder={false} />, { isAmp: true });
     const imageEl = screen.getAllByAltText('Test image alt text')[0];
     expect(imageEl.parentNode).not.toHaveStyle({
       backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
@@ -344,7 +344,7 @@ describe('Image - AMP pages', () => {
   });
 
   it('should render the container with an aspect ratio based on width and height', () => {
-    render(<Fixture />);
+    render(<Fixture />, { isAmp: true });
 
     const imageEl = screen.getAllByAltText('Test image alt text')[0];
 
@@ -354,7 +354,7 @@ describe('Image - AMP pages', () => {
   });
 
   it('should render the container with no fixed aspect ratio if no width, height or aspect ratio is provided', () => {
-    render(<Fixture width={undefined} height={undefined} />);
+    render(<Fixture width={undefined} height={undefined} />, { isAmp: true });
 
     const imageEl = screen.getAllByAltText('Test image alt text')[0];
 
@@ -376,7 +376,7 @@ describe('Image - AMP pages', () => {
   });
 
   it('should render the container with a custom aspect ratio that overrides aspect ratio based on image width and height', () => {
-    render(<Fixture aspectRatio={[4, 3]} />);
+    render(<Fixture aspectRatio={[4, 3]} />, { isAmp: true });
 
     const imageEl = screen.getAllByAltText('Test image alt text')[0];
 
