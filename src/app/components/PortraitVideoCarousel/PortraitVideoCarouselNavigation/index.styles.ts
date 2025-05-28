@@ -10,7 +10,7 @@ const styles = {
       top: 0,
       insetInlineEnd: 0,
       height: '100%',
-      backgroundColor: 'rgba(253, 253, 253, 0.6)',
+      backgroundColor: 'rgba(255, 255, 255, 0.75)',
       zIndex: 1,
       ...calculateVariedNavContainerWidths({ mq, display: 'flex' }),
     }),
