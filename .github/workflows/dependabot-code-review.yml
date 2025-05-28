@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: Dependabot Code Review
+on:
+  pull_request:
+    branches:
+      - '**'
+
+jobs:
+  run:
+    name: Leave a kind message after updates
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greet the reader
+        uses: slackapi/slack-github-action@v2.1.0
+        with:
+          webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+          webhook-type: incoming-webhook
+          payload: |
+            text: "Greetings!"
