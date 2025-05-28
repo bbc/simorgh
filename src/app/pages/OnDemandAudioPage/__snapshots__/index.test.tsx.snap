@@ -1350,7 +1350,7 @@ exports[`OnDemand Radio Page  should match snapshot 1`] = `
           data-e2e="media-loader__container"
         >
           <div
-            class="emotion-24"
+            class="media-player emotion-24"
             data-e2e="media-player"
           >
             <noscript />
