@@ -1,5 +1,10 @@
 import React from 'react';
-import { render } from '#app/components/react-testing-library-with-providers';
+import {
+  screen,
+  render,
+  act,
+  fireEvent,
+} from '#app/components/react-testing-library-with-providers';
 import PortraitVideoPromo from '.';
 
 describe('PortraitVideoPromo', () => {
@@ -68,5 +73,31 @@ describe('PortraitVideoPromo', () => {
       'img[src="https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8g.jpg"]',
     );
     expect(heading).toBeInTheDocument();
+  });
+
+  it('Should scroll to the center when tabbed', async () => {
+    const sampleHeadlines = {
+      promoHeadline: 'Sample Heading',
+    };
+
+    await act(async () => {
+      render(<PortraitVideoPromo id="testId" headlines={sampleHeadlines} />, {
+        service: 'portuguese',
+      });
+    });
+
+    const promoButton = screen.getByTestId('promo-button');
+    promoButton.scrollIntoView = jest.fn();
+
+    await act(async () => {
+      fireEvent.focusIn(promoButton);
+      jest.runAllTimers();
+    });
+
+    expect(promoButton.scrollIntoView).toHaveBeenCalledWith({
+      behavior: 'smooth',
+      block: 'nearest',
+      inline: 'center',
+    });
   });
 });
