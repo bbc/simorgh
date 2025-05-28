@@ -1,4 +1,4 @@
-name: Dependabot Code Review
+name: Dependabot
 on:
   pull_request:
     types:
