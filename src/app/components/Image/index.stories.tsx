@@ -43,8 +43,7 @@ export const ResponsiveWebPWithJpegFallback = () => (
 
 export const BasicAMPImage = () => (
   <RequestContextProvider
-    // eslint-disable-next-line react/jsx-boolean-value
-    isAmp={true}
+    isAmp
     pageType="article"
     pathname="/afaanoromoo"
     service="afaanoromoo"
@@ -58,8 +57,7 @@ export const BasicAMPImage = () => (
 
 export const ResponsiveAMPImage = () => (
   <RequestContextProvider
-    // eslint-disable-next-line react/jsx-boolean-value
-    isAmp={true}
+    isAmp
     pageType="article"
     pathname="/afaanoromoo"
     service="afaanoromoo"
@@ -74,8 +72,7 @@ export const ResponsiveAMPImage = () => (
 
 export const AMPWebPWithJpegFallback = () => (
   <RequestContextProvider
-    // eslint-disable-next-line react/jsx-boolean-value
-    isAmp={true}
+    isAmp
     pageType="article"
     pathname="/afaanoromoo"
     service="afaanoromoo"
