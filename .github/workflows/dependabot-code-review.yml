@@ -11,9 +11,6 @@ jobs:
     name: Request Code Review
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout the repo
-        uses: actions/checkout@v4
-
       - name: Post Slack Message
         uses: slackapi/slack-github-action@v2.1.0
         with:
@@ -21,15 +18,56 @@ jobs:
           webhook-type: incoming-webhook
           payload: |
             "text": "Please review this Pull Request:"
-            "attachments": [
+            "blocks": [
               {
-                "color": "#38146b",
-                "title": "${{ github.event.pull_request.title }}",
-                "title_link": "${{ github.event.pull_request.html_url }}",
-                "fields": [
-                  {
-                    "value": "Repo: ${{ github.event.pull_request.head.repo.name }}\nAuthor: ${{ github.event.pull_request.user.login }}\nFiles changed: ${{ github.event.pull_request.changed_files }}"
-                  }
-                ]
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "*<${{ github.event.pull_request.html_url }}|${{github.event.pull_request.title}}>*"
+                }
               }
             ]
+
+
+            		          # {
+              #   "type": "section",
+              #   "fields": [
+              #     {
+              #       "type": "mrkdwn",
+              #       "text": "*Repo:* ${{ github.event.pull_request.head.repo.name }}"
+              #     },
+              #     {
+              #       "type": "mrkdwn",
+              #       "text": "*Author:* ${{ github.event.pull_request.user.login }}"
+              #     },
+              #     {
+              #       "type": "mrkdwn",
+              #       "text": "*Files Changed:* ${{ github.event.pull_request.changed_files }}"
+              #     }
+              #   ]
+          # }
+          # {
+          #   "type": "actions",
+          #   "elements": [
+          #     {
+          #       "type": "button",
+          #       "text": {
+          #         "type": "plain_text",
+          #         "emoji": true,
+          #         "text": "Approve"
+          #       },
+          #       "style": "primary",
+          #       "value": "click_me_123"
+          #     },
+          #     {
+          #       "type": "button",
+          #       "text": {
+          #         "type": "plain_text",
+          #         "emoji": true,
+          #         "text": "Deny"
+          #       },
+          #       "style": "danger",
+          #       "value": "click_me_123"
+          #     }
+          #   ]
+          # }
