@@ -366,6 +366,7 @@ describe('Image - AMP pages', () => {
   it('should render the container with a custom aspect ratio when provided', () => {
     render(
       <Fixture aspectRatio={[4, 3]} width={undefined} height={undefined} />,
+      { isAmp: true },
     );
 
     const imageEl = screen.getAllByAltText('Test image alt text')[0];
