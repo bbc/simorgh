@@ -18,5 +18,6 @@ jobs:
         uses: slackapi/slack-github-action@v2.1.0
         with:
           payload-file-path: '.github/workflows/dependabot-code-review/payload.json'
+          payload-templated: true
           webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
           webhook-type: incoming-webhook
