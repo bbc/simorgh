@@ -22,7 +22,7 @@ export default {
     enabled: true,
   },
   mostRead: {
-    enabled: false,
+    enabled: true,
   },
   nielsenAnalytics: {
     enabled: true,

@@ -142,7 +142,7 @@ exports[`Toggles Config when application environment is test should contain corr
     "enabled": true,
   },
   "mostRead": {
-    "enabled": false,
+    "enabled": true,
   },
   "nielsenAnalytics": {
     "enabled": true,
