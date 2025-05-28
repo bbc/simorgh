@@ -7,7 +7,7 @@ const json = require('eslint-plugin-json');
 const jsxA11Y = require('eslint-plugin-jsx-a11y');
 const reactHooks = require('eslint-plugin-react-hooks');
 const cypress = require('eslint-plugin-cypress');
-const _import = require('eslint-plugin-import');
+// const _import = require('eslint-plugin-import');
 const noOnlyTests = require('eslint-plugin-no-only-tests');
 
 const { fixupPluginRules } = require('@eslint/compat');
@@ -60,7 +60,7 @@ module.exports = defineConfig([
       'jsx-a11y': jsxA11Y,
       'react-hooks': fixupPluginRules(reactHooks),
       cypress,
-      import: fixupPluginRules(_import),
+      // import: fixupPluginRules(_import),
       'no-only-tests': noOnlyTests,
     },
 
