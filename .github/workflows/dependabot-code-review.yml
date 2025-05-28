@@ -1,8 +1,8 @@
 name: Dependabot Code Review
 on:
   pull_request:
-    # types:
-    #   - opened
+    types:
+      - opened
     branches:
       - '**'
 
@@ -13,7 +13,7 @@ jobs:
   run:
     name: Request Code Review
     runs-on: ubuntu-latest
-    # if: github.event.pull_request.user.login == 'dependabot[bot]'
+    if: github.event.pull_request.user.login == 'dependabot[bot]'
     steps:
       - name: Approve PR
         run: gh pr review --approve "$PR_URL"
