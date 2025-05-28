@@ -73,14 +73,22 @@ export const ResponsiveAMPImage = () => (
 );
 
 export const AMPWebPWithJpegFallback = () => (
-  <Image
-    alt="A penguin stands on an ice floe"
-    src="https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/164AF/production/_110911319_antartica.jpg"
-    srcSet="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/164AF/production/_110911319_antartica.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/164AF/production/_110911319_antartica.jpg.webp 624w"
-    mediaType="image/webp"
-    fallbackSrcSet="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/164AF/production/_110911319_antartica.jpg 240w, https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/164AF/production/_110911319_antartica.jpg 624w"
-    fallbackMediaType="image/jpeg"
-  />
+  <RequestContextProvider
+    // eslint-disable-next-line react/jsx-boolean-value
+    isAmp={true}
+    pageType="article"
+    pathname="/afaanoromoo"
+    service="afaanoromoo"
+  >
+    <Image
+      alt="A penguin stands on an ice floe"
+      src="https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/164AF/production/_110911319_antartica.jpg"
+      srcSet="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/164AF/production/_110911319_antartica.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/164AF/production/_110911319_antartica.jpg.webp 624w"
+      mediaType="image/webp"
+      fallbackSrcSet="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/164AF/production/_110911319_antartica.jpg 240w, https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/164AF/production/_110911319_antartica.jpg 624w"
+      fallbackMediaType="image/jpeg"
+    />
+  </RequestContextProvider>
 );
 
 BasicAMPImage.decorators = [AmpDecorator];

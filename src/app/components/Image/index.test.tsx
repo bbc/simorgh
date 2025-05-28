@@ -264,7 +264,7 @@ describe('Image - AMP pages', () => {
   });
 
   it('should not preload when preload is false', async () => {
-    render(<Fixture preload={false} />);
+    render(<Fixture preload={false} />, { isAmp: true });
 
     await waitFor(() => {
       const linkEl = document.head.querySelector('link');
