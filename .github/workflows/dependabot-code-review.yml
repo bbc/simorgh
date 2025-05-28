@@ -1,8 +1,8 @@
-# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
-
 name: Dependabot Code Review
 on:
   pull_request:
+    # types:
+    #   - opened
     branches:
       - '**'
 
@@ -14,7 +14,6 @@ jobs:
       - name: Greet the reader
         uses: slackapi/slack-github-action@v2.1.0
         with:
+          payload-file-path: './dependabot-code-review/payload.json'
           webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
           webhook-type: incoming-webhook
-          payload: |
-            text: "Greetings!"
