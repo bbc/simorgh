@@ -100,6 +100,9 @@ type MediaContainerProps = {
   noJsMessage?: string;
 };
 
+const isAudioPlayer = (playerConfig: PlayerConfig) =>
+  playerConfig?.ui?.skin === 'audio';
+
 const MediaContainer = ({
   playerConfig,
   showAds,
@@ -107,6 +110,7 @@ const MediaContainer = ({
   noJsMessage,
 }: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
+  const isAudio = isAudioPlayer(playerConfig);
 
   useEffect(() => {
     try {
@@ -165,11 +169,8 @@ const MediaContainer = ({
     <div
       ref={playerElementRef}
       data-e2e="media-player"
-      css={
-        playerConfig?.ui?.skin === 'audio'
-          ? styles.audioMediaContainer
-          : styles.standardMediaContainer
-      }
+      className="media-player"
+      css={isAudio ? styles.audioMediaContainer : styles.standardMediaContainer}
     >
       <noscript>
         <Message message={noJsMessage} />
@@ -237,7 +238,9 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
   } = config;
 
   const captionBlock = getCaptionBlock(blocks, pageType);
-  const isPortraitVideo = orientation === 'portrait';
+  const isPortrait = orientation === 'portrait';
+  const isLandscape = orientation === 'landscape';
+  const isAudio = isAudioPlayer(playerConfig);
 
   const {
     placeholderSrc,
@@ -263,9 +266,9 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
         className={className}
         css={[
           styles.figure(embedded),
-          playerConfig?.ui?.skin === 'classic' && [
-            orientation === 'portrait' && styles.portraitFigure(embedded),
-            orientation === 'landscape' && styles.landscapeFigure,
+          !isAudio && [
+            isPortrait && styles.portraitFigure(embedded),
+            isLandscape && styles.landscapeFigure,
           ],
         ]}
       >
@@ -301,10 +304,13 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
         )}
         {captionBlock && (
           <Caption
-            className={isPortraitVideo ? 'portrait-caption' : ''}
+            className={isPortrait ? 'portrait-caption' : ''}
             block={captionBlock}
             type={mediaType}
-            css={isPortraitVideo && styles.captionPortrait}
+            css={[
+              isAudio && styles.captionAudio,
+              !isAudio && [isPortrait && styles.captionPortrait],
+            ]}
           />
         )}
       </figure>
