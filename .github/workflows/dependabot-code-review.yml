@@ -17,16 +17,16 @@ jobs:
           webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
           webhook-type: incoming-webhook
           payload: |
-            "text": "Please review this Pull Request:"
-            "blocks": [
-              {
-                "type": "section",
-                "text": {
-                  "type": "mrkdwn",
-                  "text": "*<${{ github.event.pull_request.html_url }}|${{github.event.pull_request.title}}>*"
-                }
-              }
-            ]
+            "text": "Please review this Pull Request: *<${{ github.event.pull_request.html_url }}|${{github.event.pull_request.title}}>*"
+            # "blocks": [
+            #   {
+            #     "type": "section",
+            #     "text": {
+            #       "type": "mrkdwn",
+            #       "text": "*<${{ github.event.pull_request.html_url }}|${{github.event.pull_request.title}}>*"
+            #     }
+            #   }
+            # ]
 
 
             		          # {
