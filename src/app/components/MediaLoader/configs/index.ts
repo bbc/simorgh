@@ -1,5 +1,6 @@
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
 import clipMedia from './clipMedia';
+import portraitClipMedia from './portraitClipMedia';
 import aresMedia from './aresMedia';
 import tv from './tv';
 import liveRadio from './liveRadio';
@@ -16,6 +17,7 @@ import liveMedia from './liveMedia';
 const BLOCK_TYPES = [
   'aresMedia',
   'clipMedia',
+  'portraitClipMedia',
   'tv',
   'liveRadio',
   'audio',
@@ -29,6 +31,7 @@ const blockTypeMapping: Record<
 > = {
   aresMedia,
   clipMedia,
+  portraitClipMedia,
   tv,
   liveRadio,
   audio,

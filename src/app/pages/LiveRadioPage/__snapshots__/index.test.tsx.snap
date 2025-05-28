@@ -1118,7 +1118,9 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
         <div
           class="emotion-10"
           data-e2e="media-player"
-        />
+        >
+          <noscript />
+        </div>
       </figure>
     </div>
   </main>

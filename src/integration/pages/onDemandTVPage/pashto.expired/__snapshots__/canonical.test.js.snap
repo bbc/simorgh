@@ -11,7 +11,7 @@ exports[`Canonical Pashto On Demand TV Page Analytics ATI tracking pixel excludi
 />
 `;
 
-exports[`Canonical Pashto On Demand TV Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/"`;
+exports[`Canonical Pashto On Demand TV Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
 
 exports[`Canonical Pashto On Demand TV Page Analytics ATI tracking pixel search params 1`] = `
 [

@@ -174,6 +174,7 @@ const ArticlePage = ({
   const experimentVariant = useOptimizelyMvtVariation(
     OPTIMIZELY_CONFIG.ruleKey,
   );
+
   const isInExperiment = experimentVariant && experimentVariant !== 'off';
 
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;

@@ -1,131 +1,94 @@
 /** @jsx jsx */
+/* @jsxFrag React.Fragment */
 import { jsx } from '@emotion/react';
-import { useContext, useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
+import {
+  PortraitVideoCarouselProps,
+  PortraitVideoPromoProps,
+} from '#app/models/types/portraitVideo';
+import styles from './index.styles';
+import PortraitVideoModal from '../PortraitVideoModal';
+import { BumpLoader } from '../MediaLoader';
+import PortraitVideoPromo from './PortraitVideoPromo';
+import PortraitCarouselNavigation from './PortraitVideoCarouselNavigation';
 import Heading from '../Heading';
-import { LeftChevron, RightChevron } from '../icons';
-import styles, { PROMO_ITEM_WIDTH } from './index.styles';
-import { ServiceContext } from '../../contexts/ServiceContext';
-
-interface PortraitVideoItem {
-  id: string;
-  images?: { url: string; altText?: string }[];
-  headlines?: { promoHeadline?: string };
-  link?: { path: string };
-}
-
-interface PortraitVideoCarouselProps {
-  title: string;
-  items: PortraitVideoItem[];
-}
 
 const PortraitVideoCarousel = ({
   title,
   items,
 }: PortraitVideoCarouselProps) => {
-  const { dir } = useContext(ServiceContext);
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(false);
+  const scrollRef = useRef<HTMLUListElement>(null);
 
-  const checkScrollButtons = () => {
-    if (!scrollRef.current) return;
-    const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedItem, setSelectedItem] =
+    useState<PortraitVideoPromoProps | null>(null);
 
-    setCanScrollLeft(scrollLeft > 0);
-    setCanScrollRight(scrollLeft + clientWidth < scrollWidth);
-  };
-
-  const scroll = (direction: 'left' | 'right') => {
-    if (!scrollRef.current) return;
-    const scrollAmount =
-      direction === 'left' ? -PROMO_ITEM_WIDTH : PROMO_ITEM_WIDTH;
-    scrollRef.current.scrollBy({
-      left: scrollAmount,
-      behavior: 'smooth',
-    });
-
-    setTimeout(checkScrollButtons, 100);
-  };
-
-  useEffect(() => {
-    const scrollElement = scrollRef.current;
-    if (scrollElement) {
-      scrollElement.addEventListener('scroll', checkScrollButtons);
+  const handlePromoClick = (item: PortraitVideoPromoProps) => {
+    if (item.video) {
+      setSelectedItem(item);
+      setIsModalOpen(true);
     }
+  };
 
-    checkScrollButtons();
-
-    return () => {
-      if (scrollElement) {
-        scrollElement.removeEventListener('scroll', checkScrollButtons);
-      }
-    };
-  }, [items]);
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedItem(null);
+  };
 
   return (
-    <section
-      aria-label={title}
-      role="region"
-      data-testid="portrait-video-carousel"
-    >
-      <h2 css={styles.heading}>{title}</h2>
-
-      <div css={styles.scrollContainer}>
-        <div ref={scrollRef} css={styles.scrollWrapper}>
-          {items.map(item => {
-            const image = item.images?.[0]?.url;
-            const alt = item.images?.[0]?.altText || '';
-            const headline = item.headlines?.promoHeadline || '';
-            const href = item.link?.path || '#';
-
-            return (
-              <a key={item.id} href={href} css={styles.promoItem}>
-                {image && (
-                  <img
-                    src={image}
-                    alt={alt}
-                    css={styles.image}
-                    loading="lazy"
-                  />
-                )}
-                <div css={styles.gradientOverlay}>
-                  <Heading
-                    level={3}
-                    size="longPrimer"
-                    css={styles.promoHeading}
-                  >
-                    {headline}
-                  </Heading>
-                </div>
-              </a>
-            );
-          })}
-          <div css={[styles.promoItem, styles.endBlankItem]} />
+    <>
+      <BumpLoader />
+      <section
+        aria-label={title}
+        role="region"
+        data-testid="portrait-video-carousel"
+        css={styles.section}
+      >
+        <Heading
+          level={2}
+          size="doublePica"
+          fontVariant="sansBold"
+          css={styles.heading}
+        >
+          {title}
+        </Heading>
+        <div css={styles.carouselContainer}>
+          <PortraitCarouselNavigation scrollPaneRef={scrollRef} />
+          <ul ref={scrollRef} css={styles.carousel} data-testid="pv-carousel">
+            {items.map(item => (
+              <PortraitVideoPromo
+                {...item}
+                key={item.id}
+                onClick={() => handlePromoClick(item)}
+              />
+            ))}
+          </ul>
         </div>
-        <div css={styles.buttonGroupOverlay}>
-          <div css={styles.buttonGroup}>
-            <button
-              type="button"
-              aria-label="Scroll left"
-              onClick={() => scroll(dir === 'ltr' ? 'left' : 'right')}
-              disabled={!canScrollLeft}
-              css={styles.navButton}
-            >
-              <LeftChevron />
-            </button>
-            <button
-              type="button"
-              aria-label="Scroll right"
-              onClick={() => scroll(dir === 'ltr' ? 'right' : 'left')}
-              disabled={!canScrollRight}
-              css={styles.navButton}
-            >
-              <RightChevron />
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
+        {isModalOpen &&
+          selectedItem &&
+          createPortal(
+            <PortraitVideoModal
+              items={items.map(item => ({
+                id: item.video?.id || '',
+                title: item.headlines?.promoHeadline || '',
+                versionId: item.video?.version?.id || '',
+                duration: item.video?.version?.duration || 'PT0M0S',
+                kind: item.video?.version?.kind || 'programme',
+                territories: item.video?.version?.territories || [],
+                guidance: null,
+                isEmbeddingAllowed: item.video?.isEmbeddingAllowed ?? true,
+                images: item.images || [],
+              }))}
+              initialVideoIndex={items.findIndex(
+                i => i.id === selectedItem?.id,
+              )}
+              onClose={handleCloseModal}
+            />,
+            document.body,
+          )}
+      </section>
+    </>
   );
 };
 
