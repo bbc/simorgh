@@ -28,7 +28,7 @@ export const service: DefaultServiceConfig = {
     imageCopyrightOffscreenText: 'Image source, ',
     locale: 'en_GB',
     datetimeLocale: 'en-gb',
-    service: 'news',
+    service: 'ws',
     serviceName: 'News',
     languageName: 'English',
     twitterCreator: '@BBCNews',

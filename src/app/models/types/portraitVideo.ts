@@ -41,7 +41,7 @@ export interface PortraitVideoPromoProps {
 }
 
 export interface PortraitVideoCarouselNavigationProps {
-  scrollPaneRef: RefObject<HTMLDivElement | null>;
+  scrollPaneRef: RefObject<HTMLUListElement | null>;
 }
 
 export interface PortraitVideoCarouselProps {
