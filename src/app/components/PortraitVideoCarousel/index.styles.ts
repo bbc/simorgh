@@ -16,9 +16,9 @@ const styles = {
     css({
       display: 'inline-block',
       color: palette.GREY_10,
-      margin: `${spacings.DOUBLE}rem 0 0 0`,
+      margin: `0`,
       [mq.GROUP_3_MIN_WIDTH]: {
-        margin: `${spacings.TRIPLE}rem 0 0 0`,
+        margin: `${spacings.DOUBLE}rem 0 0 0`,
       },
     }),
   carouselContainer: () =>
