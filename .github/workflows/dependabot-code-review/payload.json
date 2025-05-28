@@ -12,23 +12,6 @@
       ]
     },
     {
-      "color": "#007a5a",
-      "fields": [
-        {
-          "value": ""
-        }
-      ],
-      "actions": [
-        {
-          "type": "button",
-          "text": "I'm reviewing this",
-          "value": "im-reviewing",
-          "name": "im-reviewing",
-          "style": "default"
-        }
-      ]
-    },
-    {
       "color": "#ff3223",
       "fields": [
         {
