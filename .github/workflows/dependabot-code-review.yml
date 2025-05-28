@@ -6,11 +6,27 @@ on:
     branches:
       - '**'
 
+permissions:
+  pull-requests: write
+
 jobs:
   run:
     name: Request Code Review
     runs-on: ubuntu-latest
+    # if: github.event.pull_request.user.login == 'dependabot[bot]'
     steps:
+      - name: Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@d7267f607e9d3fb96fc2fbe83e0af444713e90b7
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+
+      - name: Approve PR
+        run: gh pr review --approve "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
       - name: Post Slack Message
         uses: slackapi/slack-github-action@v2.1.0
         with:
@@ -18,52 +34,3 @@ jobs:
           webhook-type: incoming-webhook
           payload: |
             "text": "Please review this Pull Request: ${{ github.event.pull_request.html_url }}"
-          # "blocks": [
-          #   {
-          #     "type": "section",
-
-          #   }
-          # ]
-
-          # {
-          #   "type": "section",
-          #   "fields": [
-          #     {
-          #       "type": "mrkdwn",
-          #       "text": "*Repo:* ${{ github.event.pull_request.head.repo.name }}"
-          #     },
-          #     {
-          #       "type": "mrkdwn",
-          #       "text": "*Author:* ${{ github.event.pull_request.user.login }}"
-          #     },
-          #     {
-          #       "type": "mrkdwn",
-          #       "text": "*Files Changed:* ${{ github.event.pull_request.changed_files }}"
-          #     }
-          #   ]
-          # }
-          # {
-          #   "type": "actions",
-          #   "elements": [
-          #     {
-          #       "type": "button",
-          #       "text": {
-          #         "type": "plain_text",
-          #         "emoji": true,
-          #         "text": "Approve"
-          #       },
-          #       "style": "primary",
-          #       "value": "click_me_123"
-          #     },
-          #     {
-          #       "type": "button",
-          #       "text": {
-          #         "type": "plain_text",
-          #         "emoji": true,
-          #         "text": "Deny"
-          #       },
-          #       "style": "danger",
-          #       "value": "click_me_123"
-          #     }
-          #   ]
-          # }
