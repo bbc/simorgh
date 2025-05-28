@@ -12,13 +12,14 @@ import PortraitVideoModal from '../PortraitVideoModal';
 import { BumpLoader } from '../MediaLoader';
 import PortraitVideoPromo from './PortraitVideoPromo';
 import PortraitCarouselNavigation from './PortraitVideoCarouselNavigation';
+import Heading from '../Heading';
 
 const PortraitVideoCarousel = ({
   title,
   items,
   groupTrackingId,
 }: PortraitVideoCarouselProps) => {
-  const scrollRef = useRef<HTMLDivElement>(null);
+  const scrollRef = useRef<HTMLUListElement>(null);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedItem, setSelectedItem] =
@@ -43,14 +44,19 @@ const PortraitVideoCarousel = ({
         aria-label={title}
         role="region"
         data-testid="portrait-video-carousel"
+        css={styles.section}
       >
-        <h2 css={styles.heading}>{title}</h2>
-        <div css={styles.scrollContainer}>
-          <div
-            ref={scrollRef}
-            css={styles.scrollWrapper}
-            data-testid="pv-scroll-panel"
-          >
+        <Heading
+          level={2}
+          size="doublePica"
+          fontVariant="sansBold"
+          css={styles.heading}
+        >
+          {title}
+        </Heading>
+        <div css={styles.carouselContainer}>
+          <PortraitCarouselNavigation scrollPaneRef={scrollRef} />
+          <ul ref={scrollRef} css={styles.carousel} data-testid="pv-carousel">
             {items.map((item, index) => (
               <PortraitVideoPromo
                 {...item}
@@ -63,9 +69,7 @@ const PortraitVideoCarousel = ({
                 }}
               />
             ))}
-            <div css={[styles.promo, styles.endBlankItem]} />
-          </div>
-          <PortraitCarouselNavigation scrollPaneRef={scrollRef} />
+          </ul>
         </div>
         {isModalOpen &&
           selectedItem &&

@@ -6,30 +6,32 @@ import {
   PortraitVideoCarouselNavigationProps,
 } from '#app/models/types/portraitVideo';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import { Chevron, ChevronOrientation } from '#app/components/icons';
 import styles from './index.styles';
-import { LeftChevron, RightChevron } from '../../icons';
-import { PROMO_ITEM_WIDTH_MIN } from '../const';
+import { PROMO_ITEM_WIDTH_MIN } from '../utils/styleUtils';
 
-const defaultTranslations = {
-  scrollLeft: 'Scroll left',
-  scrollRight: 'Scroll right',
+const DEFAULT_TRANSLATION = {
+  previous: 'Scroll to previous item',
+  next: 'Scroll to next item',
 };
 
 export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
   const {
     dir,
-    translations: { carousel = defaultTranslations },
+    translations: { carousel = DEFAULT_TRANSLATION },
   } = useContext(ServiceContext);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
 
-  const { scrollLeft: scrollLeftAria, scrollRight: scrollRightAria } = carousel;
+  const { previous: isScrollableLeft, next: isScrollableRight } = carousel;
 
   const checkScrollButtons = useCallback(() => {
     if (!scrollPaneRef.current) return;
     const { scrollLeft, scrollWidth, clientWidth } = scrollPaneRef.current;
-    setCanScrollLeft(scrollLeft > 0);
-    setCanScrollRight(scrollLeft + clientWidth < scrollWidth);
+
+    const absoluteLeftValue = Math.abs(scrollLeft);
+    setCanScrollLeft(absoluteLeftValue > 0);
+    setCanScrollRight(absoluteLeftValue + clientWidth + 1 < scrollWidth);
   }, [scrollPaneRef]);
 
   const scroll = (buttonTriggered: ScrollDirection) => {
@@ -61,23 +63,23 @@ export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
       <div css={styles.buttonGroup}>
         <button
           type="button"
-          aria-label={scrollLeftAria}
+          aria-label={isScrollableLeft}
           onClick={() => scroll(dir === 'ltr' ? 'left' : 'right')}
           disabled={!canScrollLeft}
           css={styles.navButton}
           data-testid="pv-scroll-left"
         >
-          <LeftChevron />
+          <Chevron orientation={ChevronOrientation.BACKWARD} dir={dir} />
         </button>
         <button
           type="button"
-          aria-label={scrollRightAria}
+          aria-label={isScrollableRight}
           onClick={() => scroll(dir === 'ltr' ? 'right' : 'left')}
           disabled={!canScrollRight}
           css={styles.navButton}
           data-testid="pv-scroll-right"
         >
-          <RightChevron />
+          <Chevron orientation={ChevronOrientation.FORWARD} dir={dir} />
         </button>
       </div>
     </div>

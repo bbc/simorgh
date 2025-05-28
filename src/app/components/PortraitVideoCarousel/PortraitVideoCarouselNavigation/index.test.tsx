@@ -6,7 +6,7 @@ import {
   fireEvent,
 } from '#app/components/react-testing-library-with-providers';
 import PortraitCarouselNavigation from '.';
-import { PROMO_ITEM_WIDTH_MIN } from '../const';
+import { PROMO_ITEM_WIDTH_MIN } from '../utils/styleUtils';
 
 jest.useFakeTimers();
 
@@ -28,7 +28,7 @@ const createMockScrollElementRef = ({
       addEventListener: jest.fn(),
       removeEventListener: jest.fn(),
     },
-  } as unknown as RefObject<HTMLDivElement>;
+  } as unknown as RefObject<HTMLUListElement>;
 
   (mockHTMLElementRef.current.scrollBy as jest.Mock).mockImplementation(
     ({ left }) => {
@@ -96,9 +96,6 @@ describe('PortraitCarouselNavigation', () => {
     });
 
     const leftButton = screen.getByTestId('pv-scroll-left');
-
-    fireEvent.click(leftButton);
-    jest.runAllTimers();
 
     await act(async () => {
       fireEvent.click(leftButton);

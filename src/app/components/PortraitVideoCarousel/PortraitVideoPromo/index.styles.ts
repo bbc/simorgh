@@ -1,20 +1,13 @@
 import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import {
-  PROMO_ITEM_WIDTH_GROUP_3_MIN,
-  PROMO_ITEM_WIDTH_GROUP_4_MIN,
-  PROMO_ITEM_WIDTH_GROUP_5_MIN,
-  PROMO_ITEM_WIDTH_MIN,
-} from '../const';
-
-const customFocusIndicatorStyle = (innerColor: string, outerColor: string) => ({
-  boxShadow: `0 0 0 ${pixelsToRem(2)}rem ${innerColor}`,
-  outline: `${pixelsToRem(2)}rem solid ${outerColor}`,
-  outlineOffset: `${pixelsToRem(2)}rem`,
-});
+  twoPixelFocusIndicatorThickness,
+  twoPixelFocusIndicatorStyle,
+} from '#app/components/ThemeProvider/focusIndicator';
+import { calculatePromoWidth, PROMO_ITEM_WIDTH_MIN } from '../utils/styleUtils';
 
 const styles = {
-  button: ({ mq, palette }: Theme) =>
+  container: ({ mq, spacings }: Theme) =>
     css({
       all: 'unset',
       scrollSnapAlign: 'start',
@@ -22,52 +15,85 @@ const styles = {
       display: 'block',
       position: 'relative',
       overflow: 'hidden',
-      cursor: 'pointer',
+      minWidth: `${pixelsToRem(PROMO_ITEM_WIDTH_MIN)}rem`,
+      flexGrow: 0,
+      flexShrink: 0,
+      [mq.GROUP_0_MAX_WIDTH]: {
+        width: `${pixelsToRem(PROMO_ITEM_WIDTH_MIN)}rem`,
+      },
       [mq.GROUP_1_MIN_WIDTH]: {
-        flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH_MIN)}rem`,
+        flexBasis: calculatePromoWidth({
+          fitForNItems: 2,
+          gapWidth: spacings.FULL,
+        }),
       },
       [mq.GROUP_3_MIN_WIDTH]: {
-        flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH_GROUP_3_MIN)}rem`,
+        flexBasis: calculatePromoWidth({
+          fitForNItems: 3,
+          gapWidth: spacings.DOUBLE,
+        }),
+        [mq.POINTER]: {
+          flexBasis: calculatePromoWidth({
+            fitForNItems: 3,
+            gapWidth: spacings.DOUBLE,
+            navButtonAffordance: true,
+          }),
+        },
       },
       [mq.GROUP_4_MIN_WIDTH]: {
-        flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH_GROUP_4_MIN)}rem`,
+        flexBasis: calculatePromoWidth({
+          fitForNItems: 4,
+          gapWidth: spacings.DOUBLE,
+          navButtonAffordance: true,
+        }),
       },
       [mq.GROUP_5_MIN_WIDTH]: {
-        flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH_GROUP_5_MIN)}rem`,
-      },
-      [`&[type='button']:focus-visible`]: {
-        ...customFocusIndicatorStyle(palette.WHITE, palette.BLACK),
+        flexBasis: calculatePromoWidth({
+          fitForNItems: 5,
+          gapWidth: spacings.DOUBLE,
+          navButtonAffordance: true,
+        }),
       },
     }),
-  image: () =>
+  button: ({ palette }: Theme) =>
     css({
-      width: '100%',
-      height: 'auto',
-      objectFit: 'cover',
-      aspectRatio: '9/16',
-      display: 'block',
+      all: 'unset',
+      position: 'absolute',
+      inset: 0,
+      cursor: 'pointer',
+      [`&[type='button']:focus-visible`]: {
+        inset: `${pixelsToRem(twoPixelFocusIndicatorThickness * 2)}rem`,
+        ...twoPixelFocusIndicatorStyle(palette.WHITE, palette.BLACK),
+      },
     }),
   gradientOverlay: ({ spacings }: Theme) =>
     css({
       position: 'absolute',
-      bottom: 0,
-      left: 0,
-      right: 0,
+      inset: 'auto 0 0 0',
       padding: `${pixelsToRem(28)}rem ${spacings.FULL}rem ${spacings.FULL}rem`,
       background:
         'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 24%, rgba(0, 0, 0, 1) 100%)',
-
-      zIndex: 1,
     }),
-  durationContainer: ({ palette }: Theme) =>
+  forcedColourBackground: ({ mq }: Theme) =>
     css({
-      display: 'flex',
+      [mq.FORCED_COLOURS]: {
+        backgroundColor: 'canvas',
+      },
+    }),
+  durationContainer: ({ palette, mq }: Theme) =>
+    css({
+      display: 'inline-flex',
       alignItems: 'center',
       color: palette.WHITE,
+      [mq.FORCED_COLOURS]: {
+        backgroundColor: 'canvas',
+      },
     }),
   playIcon: () =>
     css({
       fill: 'currentcolor',
+      width: `${pixelsToRem(12)}rem`,
+      height: `${pixelsToRem(12)}rem`,
     }),
   duration: ({ palette, spacings }: Theme) =>
     css({
@@ -83,9 +109,8 @@ const styles = {
         textDecoration: 'underline',
       },
       'button:focus-visible &': {
-        ...customFocusIndicatorStyle(palette.BLACK, palette.WHITE),
+        ...twoPixelFocusIndicatorStyle(palette.BLACK, palette.WHITE),
       },
-      zIndex: 2,
     }),
 };
 

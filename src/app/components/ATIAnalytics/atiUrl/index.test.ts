@@ -7,6 +7,7 @@ import {
   buildReverbAnalyticsModel,
   buildReverbEventModel,
 } from '.';
+import splitUrl from './splitUrl';
 
 jest.mock('#app/lib/config/optimizely', () => ({ flagKey: 'mockFlagKey' }));
 
@@ -15,9 +16,6 @@ const mockAndSet = ({ name, source }, response) => {
   source[name] = jest.fn(); // eslint-disable-line no-param-reassign
   source[name].mockImplementation(() => response);
 };
-
-const splitUrl = (url: string) =>
-  url.replace(/&/g, ',').replace(/\?/g, ',').split(',');
 
 const analyticsUtilFunctions = [
   { name: 'getDestination', source: genericLabelHelpers },

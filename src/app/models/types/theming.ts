@@ -101,6 +101,8 @@ interface MediaQueries {
   GROUP_5_MIN_WIDTH: string;
   /** @media screen and (forced-colors: active) */
   FORCED_COLOURS: string;
+  /** @media (pointer: fine) */
+  POINTER: string;
 }
 
 interface Spacings {
