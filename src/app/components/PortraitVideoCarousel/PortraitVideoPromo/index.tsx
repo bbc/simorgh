@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/react';
+import { jsx, useTheme } from '@emotion/react';
 import { PortraitVideoPromoProps } from '#app/models/types/portraitVideo';
 import Image from '#app/components/Image';
 import Text from '#app/components/Text';
@@ -9,8 +9,8 @@ import moment from 'moment';
 import formatDuration from '#app/lib/utilities/formatDuration';
 import { useContext, FocusEvent } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import getSrcSets from '#app/utilities/getSrcSets';
 import styles from './index.styles';
-import { PROMO_ITEM_WIDTH_MIN } from '../utils/styleUtils';
 
 const DEFAULT_TRANSLATION = {
   video: 'video',
@@ -18,12 +18,14 @@ const DEFAULT_TRANSLATION = {
   duration: 'Duration',
 };
 export default (item: PortraitVideoPromoProps) => {
+  const { mq } = useTheme();
   const { images, headlines, video, onClick } = item;
   const {
     translations: { media = DEFAULT_TRANSLATION },
   } = useContext(ServiceContext);
 
   const imageUrl = images?.[0]?.url;
+  const imageUrlTemplate = images?.[0]?.urlTemplate;
   const alt = images?.[0]?.altText || '';
   const headline = headlines?.promoHeadline || '';
   const mediaISO8601Duration = video?.version.duration;
@@ -56,14 +58,22 @@ export default (item: PortraitVideoPromoProps) => {
     });
   };
 
+  const srcSets = getSrcSets({
+    imageUrlTemplate,
+    mq,
+    imageWidthSmall: 64,
+    imageWidthLarge: 256,
+  });
+
   return (
     <li css={styles.container}>
-      {imageUrl && (
+      {imageUrl && srcSets && (
         <Image
           alt={alt}
           src={imageUrl}
           aspectRatio={[9, 16]}
-          width={PROMO_ITEM_WIDTH_MIN}
+          srcSet={srcSets.srcSet}
+          sizes={srcSets.sizes}
           lazyLoad
         />
       )}

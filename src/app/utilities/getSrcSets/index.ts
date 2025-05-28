@@ -1,7 +1,7 @@
 import { Theme } from '@emotion/react';
 
 type FuncParams = {
-  imageUrlTemplate: string;
+  imageUrlTemplate?: string;
   mq: Theme['mq'];
   imageWidthSmall?: number;
   imageWidthLarge?: number;
@@ -15,6 +15,8 @@ export default ({
 }: FuncParams) => {
   const IMAGE_SRC_SMALL_2X_UPSCALE_WIDTH = imageWidthSmall * 2;
   const IMAGE_SRC_LARGE_2X_UPSCALE_WIDTH = imageWidthLarge * 2;
+
+  if (imageUrlTemplate == null) return null;
 
   const replaceWidth = (width: number) =>
     imageUrlTemplate?.replace('{width}', `${width}`);
