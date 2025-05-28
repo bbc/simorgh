@@ -21,12 +21,14 @@ export default (item: PortraitVideoPromoProps) => {
   const { mq } = useTheme();
   const { images, headlines, video, onClick } = item;
   const {
+    defaultImage,
+    defaultImageAltText,
     translations: { media = DEFAULT_TRANSLATION },
   } = useContext(ServiceContext);
 
-  const imageUrl = images?.[0]?.url;
+  const imageUrl = images?.[2]?.url ?? defaultImage;
   const imageUrlTemplate = images?.[0]?.urlTemplate;
-  const alt = images?.[0]?.altText || '';
+  const alt = images?.[0]?.altText || defaultImageAltText;
   const headline = headlines?.promoHeadline || '';
   const mediaISO8601Duration = video?.version.duration;
   const {
@@ -67,16 +69,14 @@ export default (item: PortraitVideoPromoProps) => {
 
   return (
     <li css={styles.container}>
-      {imageUrl && srcSets && (
-        <Image
-          alt={alt}
-          src={imageUrl}
-          aspectRatio={[9, 16]}
-          srcSet={srcSets.srcSet}
-          sizes={srcSets.sizes}
-          lazyLoad
-        />
-      )}
+      <Image
+        alt={alt}
+        src={imageUrl}
+        aspectRatio={[9, 16]}
+        srcSet={srcSets?.srcSet}
+        sizes={srcSets?.sizes}
+        lazyLoad
+      />
       <button
         type="button"
         onClick={onClick}
