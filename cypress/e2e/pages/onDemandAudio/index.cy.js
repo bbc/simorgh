@@ -12,12 +12,6 @@ const testSuites = [
     tests,
   },
   {
-    path: ['/afaanoromoo/bbc_afaanoromoo_radio/w3cszx1y?renderer_env=live'],
-    service: 'afaanoromoo',
-    runforEnv: ['local'],
-    tests,
-  },
-  {
     path: '/afaanoromoo/bbc_afaanoromoo_radio/w3ct1wc0', // On Demand Episode
     service: 'afaanoromoo',
     runforEnv: ['live'],
@@ -42,12 +36,6 @@ const testSuites = [
     tests,
   },
   {
-    path: '/afrique/bbc_afrique_radio/w172xqydyfv659p?renderer_env=live',
-    service: 'afrique',
-    runforEnv: 'local',
-    tests,
-  },
-  {
     path: '/amharic/bbc_amharic_radio/programmes/w13xttnt', // On Demand Brand,
     service: 'amharic',
     runforEnv: ['test', 'live'],
@@ -57,12 +45,6 @@ const testSuites = [
     path: '/amharic/bbc_amharic_radio/w3ct1lqy', // On Demand Episode
     service: 'amharic',
     runforEnv: ['test', 'live'],
-    tests,
-  },
-  {
-    path: '/amharic/bbc_amharic_radio/w3csz5r9?renderer_env=live',
-    service: 'amharic',
-    runforEnv: 'local',
     tests,
   },
   {
@@ -84,13 +66,7 @@ const testSuites = [
     tests,
   },
   {
-    path: '/arabic/bbc_arabic_radio/w3ct01yb?renderer_env=live', // On Demand Episode
-    service: 'arabic',
-    runforEnv: ['local'],
-    tests,
-  },
-  {
-    path: '/arabic/podcasts/p02pc9qc?renderer_env=live', // Podcast Brand
+    path: '/arabic/podcasts/p02pc9qc', // Podcast Brand
     service: 'arabic',
     runforEnv: ['local', 'test', 'live'],
     tests,
@@ -99,12 +75,6 @@ const testSuites = [
     path: '/arabic/podcasts/p02pc9qc/p09kwwfs', // Podcast Episode
     service: 'arabic',
     runforEnv: ['test', 'live'],
-    tests,
-  },
-  {
-    path: '/arabic/podcasts/p02pc9qc/p08wtg4d?renderer_env=live', // Podcast Episode
-    service: 'arabic',
-    runforEnv: ['local'],
     tests,
   },
   {
@@ -126,21 +96,9 @@ const testSuites = [
     tests,
   },
   {
-    path: '/bengali/bbc_bangla_radio/w172x0562jxntqx?renderer_env=live',
-    service: 'bengali',
-    runforEnv: ['local'],
-    tests,
-  },
-  {
     path: '/burmese/bbc_burmese_radio/programmes/p0340rnm', // On Demand Brand
     service: 'burmese',
     runforEnv: ['test', 'live'],
-    tests,
-  },
-  {
-    path: '/burmese/bbc_burmese_radio/w3csz62h?renderer_env=live', // On Demand Brand
-    service: 'burmese',
-    runforEnv: ['local'],
     tests,
   },
   {
@@ -150,21 +108,15 @@ const testSuites = [
     tests,
   },
   {
-    path: '/burmese/podcasts/p02pc9lh?renderer_env=live', // Podcast brand
+    path: '/burmese/podcasts/p02pc9lh', // Podcast brand
     service: 'burmese',
-    runforEnv: ['local', 'test', 'live'],
+    runforEnv: ['test', 'live'],
     tests,
   },
   {
     path: '/burmese/podcasts/p02pc9lh/p09kzply', // Podcast Episode
     service: 'burmese',
     runforEnv: ['test', 'live'],
-    tests,
-  },
-  {
-    path: '/burmese/podcasts/p02pc9lh/p0967thw?renderer_env=live', // Podcast Episode
-    service: 'burmese',
-    runforEnv: ['local'],
     tests,
   },
   {
@@ -180,7 +132,7 @@ const testSuites = [
     tests,
   },
   {
-    path: '/gahuza/podcasts/p07yh8hb?renderer_env=live', // Podcast Brand
+    path: '/gahuza/podcasts/p07yh8hb', // Podcast Brand
     service: 'gahuza',
     runforEnv: ['local', 'test', 'live'],
     tests,
@@ -189,18 +141,6 @@ const testSuites = [
     path: '/gahuza/podcasts/p07yh8hb/p09km4t4', // Podcast Episode
     service: 'gahuza',
     runforEnv: ['test', 'live'],
-    tests,
-  },
-  {
-    path: '/gahuza/podcasts/p07yh8hb/p094vs2n?renderer_env=live', // Podcast Episode
-    service: 'gahuza',
-    runforEnv: ['local'],
-    tests,
-  },
-  {
-    path: '/gahuza/bbc_gahuza_radio/w172x7rkcj6v0vz?renderer_env=live',
-    service: 'gahuza',
-    runforEnv: ['local'],
     tests,
   },
   {
@@ -228,9 +168,9 @@ const testSuites = [
     tests,
   },
   {
-    path: '/hausa/podcasts/p08mlgcb?renderer_env=live', // Podcast Brand
+    path: '/hausa/podcasts/p08mlgcb', // Podcast Brand
     service: 'hausa',
-    runforEnv: ['local', 'test', 'live'],
+    runforEnv: ['test', 'live'],
     tests,
   },
   {
@@ -240,33 +180,15 @@ const testSuites = [
     tests,
   },
   {
-    path: '/hausa/podcasts/p08mlgcb/p095k3hd?renderer_env=live', // Podcast Episode
-    service: 'hausa',
-    runforEnv: ['local'],
-    tests,
-  },
-  {
-    path: '/hausa/bbc_hausa_radio/w3cszrwm?renderer_env=live',
-    service: 'hausa',
-    runforEnv: ['local'],
-    tests,
-  },
-  {
-    path: '/hindi/podcasts/p0552909?renderer_env=live', // Podcast Brand
+    path: '/hindi/podcasts/p0552909', // Podcast Brand
     service: 'hindi',
-    runforEnv: ['local', 'test', 'live'],
+    runforEnv: ['test', 'live'],
     tests,
   },
   {
     path: '/hindi/podcasts/p0552909/p09kjqjm', // Podcast Episode
     service: 'hindi',
     runforEnv: ['test', 'live'],
-    tests,
-  },
-  {
-    path: '/hindi/podcasts/p0552909/p0964mwl?renderer_env=live', // Podcast Episode
-    service: 'hindi',
-    runforEnv: ['local'],
     tests,
   },
   {
@@ -282,27 +204,15 @@ const testSuites = [
     tests,
   },
   {
-    path: '/indonesia/podcasts/p02pc9v6?renderer_env=live', // Podcast Brand
+    path: '/indonesia/podcasts/p02pc9v6', // Podcast Brand
     service: 'indonesia',
-    runforEnv: ['local', 'test', 'live'],
+    runforEnv: ['test', 'live'],
     tests,
   },
   {
     path: '/indonesia/podcasts/p02pc9v6/p09l1mhb', // Podcast Episode
     service: 'indonesia',
     runforEnv: ['test', 'live'],
-    tests,
-  },
-  {
-    path: '/indonesia/bbc_indonesian_radio/w172xh267fpn19l?renderer_env=live', // On Demand Episode
-    service: 'indonesia',
-    runforEnv: 'local',
-    tests,
-  },
-  {
-    path: '/indonesia/podcasts/p02pc9v6/p096mj9z?renderer_env=live', // Podcast Episode
-    service: 'indonesia',
-    runforEnv: 'local',
     tests,
   },
   {
@@ -324,12 +234,6 @@ const testSuites = [
     tests,
   },
   {
-    path: '/korean/bbc_korean_radio/w3ct0kn5?renderer_env=live',
-    service: 'korean',
-    runforEnv: 'local',
-    tests,
-  },
-  {
     path: '/kyrgyz/bbc_kyrgyz_radio/programmes/p0340xth', // On Demand Brand
     service: 'kyrgyz',
     runforEnv: ['test', 'live'],
@@ -342,27 +246,15 @@ const testSuites = [
     tests,
   },
   {
-    path: '/kyrgyz/bbc_kyrgyz_radio/w3cszwmc?renderer_env=live',
-    service: 'kyrgyz',
-    runforEnv: 'local',
-    tests,
-  },
-  {
-    path: '/marathi/podcasts/p09431p4?renderer_env=live', // Podcast Brand
+    path: '/marathi/podcasts/p09431p4', // Podcast Brand
     service: 'marathi',
-    runforEnv: ['local', 'test', 'live'],
+    runforEnv: ['test', 'live'],
     tests,
   },
   {
     path: '/marathi/podcasts/p09431p4/p0f1vp21', // Podcast Episode
     service: 'marathi',
     runforEnv: ['test', 'live'],
-    tests,
-  },
-  {
-    path: '/marathi/podcasts/p09431p4/p09bplch?renderer_env=live', // Podcast Episode
-    service: 'marathi',
-    runforEnv: 'local',
     tests,
   },
   {
@@ -386,19 +278,7 @@ const testSuites = [
   {
     path: '/nepali/podcasts/p02pc9w3', // Podcast Brand
     service: 'nepali',
-    runforEnv: ['local', 'test', 'live'],
-    tests,
-  },
-  {
-    path: '/nepali/podcasts/p02pc9w3/p086v2bv?renderer_env=live', // Podcast Episode
-    service: 'nepali',
-    runforEnv: 'local',
-    tests,
-  },
-  {
-    path: '/nepali/bbc_nepali_radio/w172x83pnptp1s8?renderer_env=live',
-    service: 'nepali',
-    runforEnv: 'local',
+    runforEnv: ['test', 'live'],
     tests,
   },
   {
@@ -420,12 +300,6 @@ const testSuites = [
     tests,
   },
   {
-    path: '/pashto/bbc_pashto_radio/w3ct0lz1?renderer_env=live',
-    service: 'pashto',
-    runforEnv: 'local',
-    tests,
-  },
-  {
     path: '/persian/bbc_dari_radio/programmes/p0340v0s', // On Demand Brand Dari
     service: 'persian',
     runforEnv: 'live',
@@ -444,7 +318,7 @@ const testSuites = [
     tests,
   },
   {
-    path: '/persian/podcasts/p02pc9wf?renderer_env=live', // Podcast Brand
+    path: '/persian/podcasts/p02pc9wf', // Podcast Brand
     service: 'persian',
     runforEnv: ['local', 'test', 'live'],
     tests,
@@ -456,19 +330,7 @@ const testSuites = [
     tests,
   },
   {
-    path: '/persian/bbc_dari_radio/w3csz7mf?renderer_env=live',
-    service: 'persian',
-    runforEnv: 'local',
-    tests,
-  },
-  {
-    path: '/persian/podcasts/p02pc9wf/p095lyj1?renderer_env=live', // Podcast Episode
-    service: 'persian',
-    runforEnv: 'local',
-    tests,
-  },
-  {
-    path: '/portuguese/podcasts/p07r3r3t?renderer_env=live', // Podcast Brand
+    path: '/portuguese/podcasts/p07r3r3t', // Podcast Brand
     service: 'portuguese',
     runforEnv: ['local', 'test', 'live'],
     tests,
@@ -480,27 +342,15 @@ const testSuites = [
     tests,
   },
   {
-    path: '/portuguese/podcasts/p07r3r3t/p083x9gr?renderer_env=live', // Podcast Episode
-    service: 'portuguese',
-    runforEnv: 'local',
-    tests,
-  },
-  {
     path: '/russian/podcasts/p05607v8/p06x0tn3', // Podcast Episode
     service: 'russian',
     runforEnv: ['test', 'live'],
     tests,
   },
   {
-    path: '/russian/podcasts/p05607v8?renderer_env=live', // Podcast Brand
+    path: '/russian/podcasts/p05607v8', // Podcast Brand
     service: 'russian',
-    runforEnv: ['local', 'test', 'live'],
-    tests,
-  },
-  {
-    path: '/russian/podcasts/p05607v8/p06xlzvx?renderer_env=live', // Podcast Episode
-    service: 'russian',
-    runforEnv: 'local',
+    runforEnv: ['test', 'live'],
     tests,
   },
   {
@@ -513,12 +363,6 @@ const testSuites = [
     path: '/somali/bbc_somali_radio/w172xzzpp131z23', // On Demand Episode
     service: 'somali',
     runforEnv: ['test', 'live'],
-    tests,
-  },
-  {
-    path: '/somali/bbc_somali_radio/w172x90wfxd2qh4?renderer_env=live',
-    service: 'somali',
-    runforEnv: 'local',
     tests,
   },
   {
@@ -540,12 +384,6 @@ const testSuites = [
     tests,
   },
   {
-    path: '/swahili/bbc_swahili_radio/w172x94ky63591m?renderer_env=live', // On Demand Episode
-    service: 'swahili',
-    runforEnv: ['local'],
-    tests,
-  },
-  {
     path: '/tamil/bbc_tamil_radio/programmes/p03412jh', // On Demand Brand
     service: 'tamil',
     runforEnv: ['test', 'live'],
@@ -555,12 +393,6 @@ const testSuites = [
     path: '/tamil/bbc_tamil_radio/w172y03bbzbnwc0', // On Demand Episode
     service: 'tamil',
     runforEnv: ['test', 'live'],
-    tests,
-  },
-  {
-    path: '/tamil/bbc_tamil_radio/w172x966tn9jwmh?renderer_env=live',
-    service: 'tamil',
-    runforEnv: 'local',
     tests,
   },
   {
@@ -576,12 +408,6 @@ const testSuites = [
     tests,
   },
   {
-    path: '/tigrinya/bbc_tigrinya_radio/w3cszzz1?renderer_env=live',
-    service: 'tigrinya',
-    runforEnv: 'local',
-    tests,
-  },
-  {
     path: '/urdu/bbc_urdu_radio/programmes/p03413l5', // On Demand Brand
     service: 'urdu',
     runforEnv: ['test', 'live'],
@@ -594,12 +420,6 @@ const testSuites = [
     tests,
   },
   {
-    path: '/urdu/bbc_urdu_radio/w172y03qq2blt8p?renderer_env=live', // On Demand Episode
-    service: 'urdu',
-    runforEnv: 'local',
-    tests,
-  },
-  {
     path: '/uzbek/bbc_uzbek_radio/programmes/p03414fb', // On Demand Brand
     service: 'uzbek',
     runforEnv: ['test', 'live'],
@@ -609,12 +429,6 @@ const testSuites = [
     path: '/uzbek/bbc_uzbek_radio/w172y044spy82mn', // On Demand Episode
     service: 'uzbek',
     runforEnv: ['test', 'live'],
-    tests,
-  },
-  {
-    path: '/uzbek/bbc_uzbek_radio/w172x9f9qjcq3lm?renderer_env=live',
-    service: 'uzbek',
-    runforEnv: 'local',
     tests,
   },
   {
@@ -636,21 +450,9 @@ const testSuites = [
     tests,
   },
   {
-    path: '/zhongwen/simp/podcasts/p02pc9xp?renderer_env=live', // Podcast Brand
+    path: '/zhongwen/simp/podcasts/p02pc9xp', // Podcast Brand
     service: 'zhongwen',
-    runforEnv: ['local', 'test', 'live'],
-    tests,
-  },
-  {
-    path: '/zhongwen/simp/bbc_cantonese_radio/w172xn6l7ng41qb?renderer_env=live', // Brand
-    service: 'zhongwen',
-    runforEnv: 'local',
-    tests,
-  },
-  {
-    path: '/zhongwen/simp/podcasts/p02pc9xp/p0968qrl?renderer_env=live', // Podcast Episode
-    service: 'zhongwen',
-    runforEnv: 'local',
+    runforEnv: ['test', 'live'],
     tests,
   },
   {
@@ -672,21 +474,9 @@ const testSuites = [
     tests,
   },
   {
-    path: '/zhongwen/trad/podcasts/p02pc9xp?renderer_env=live', // Podcast Brand
+    path: '/zhongwen/trad/podcasts/p02pc9xp', // Podcast Brand
     service: 'zhongwen',
-    runforEnv: ['local', 'test', 'live'],
-    tests,
-  },
-  {
-    path: '/zhongwen/trad/bbc_cantonese_radio/w172xf3r5x8hw4v?renderer_env=live', // Brand
-    service: 'zhongwen',
-    runforEnv: 'local',
-    tests,
-  },
-  {
-    path: '/zhongwen/trad/podcasts/p02pc9xp/p0968qrl?renderer_env=live', // Podcast Episode
-    service: 'zhongwen',
-    runforEnv: 'local',
+    runforEnv: ['test', 'live'],
     tests,
   },
 ];
