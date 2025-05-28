@@ -8,12 +8,15 @@ on:
 
 jobs:
   run:
-    name: Leave a kind message after updates
+    name: Request Code Review
     runs-on: ubuntu-latest
     steps:
-      - name: Greet the reader
+      - name: Checkout the repo
+        uses: actions/checkout@v4
+
+      - name: Post Slack Message
         uses: slackapi/slack-github-action@v2.1.0
         with:
-          payload-file-path: './dependabot-code-review/payload.json'
+          payload-file-path: '.github/workflows/dependabot-code-review/payload.json'
           webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
           webhook-type: incoming-webhook
