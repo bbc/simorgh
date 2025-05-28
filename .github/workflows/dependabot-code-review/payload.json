@@ -1,5 +1,5 @@
 {
-  "text": "Please review this Pull Request",
+  "text": "Please review this Pull Request: ${{ github.event.pull_request.html_url }}",
   "attachments": [
     {
       "color": "#38146b",
@@ -8,13 +8,6 @@
       "fields": [
         {
           "value": "Repo: ${{ github.event.pull_request.head.repo.name }}\nAuthor: ${{ github.event.pull_request.user.login }}\nFiles changed: ${{ github.event.pull_request.changed_files }}"
-        }
-      ],
-      "actions": [
-        {
-          "type": "button",
-          "text": "Pull Request",
-          "url": "${{ github.event.pull_request.html_url }}"
         }
       ]
     },
