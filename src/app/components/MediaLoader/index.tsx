@@ -308,7 +308,6 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
             block={captionBlock}
             type={mediaType}
             css={[
-              styles.figure(embedded),
               isAudio && styles.captionAudio,
               !isAudio && [isPortrait && styles.captionPortrait],
             ]}
