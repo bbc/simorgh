@@ -21,12 +21,14 @@ const styles = {
         width: `${pixelsToRem(PROMO_ITEM_WIDTH_MIN)}rem`,
       },
       [mq.GROUP_1_MIN_WIDTH]: {
+        minWidth: `${pixelsToRem(PROMO_ITEM_WIDTH_MIN)}rem`,
         flexBasis: calculatePromoWidth({
           fitForNItems: 2,
           gapWidth: spacings.FULL,
         }),
       },
       [mq.GROUP_3_MIN_WIDTH]: {
+        minWidth: 'unset',
         flexBasis: calculatePromoWidth({
           fitForNItems: 3,
           gapWidth: spacings.DOUBLE,
