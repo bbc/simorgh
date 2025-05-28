@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import Brand from '#psammead/psammead-brand/src';
 import { useTheme } from '@emotion/react';
+import { servicesWithVariants } from '#lib/utilities/variantHandler';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
 
@@ -15,6 +16,14 @@ const StyledBrand = styled(Brand)`
     }
   }
 `;
+
+export const getBrandPath = (service, variant) => {
+  if (service === 'ws') return '/ws/languages';
+  if (variant && servicesWithVariants[service]?.includes(variant)) {
+    return `/${service}/${variant}`;
+  }
+  return `/${service}`;
+};
 
 const BrandContainer = ({
   skipLink = null,
@@ -31,7 +40,17 @@ const BrandContainer = ({
   const svgRatio = brandSVG && brandSVG.ratio;
   const minWidth = svgRatio * svgMinHeight;
   const maxWidth = svgRatio * svgMaxHeight;
-  const longBrands = ['afaanoromoo', 'azeri', 'kyrgyz', 'russian', 'serbian'];
+  const longBrands = [
+    'afaanoromoo',
+    'azeri',
+    'kyrgyz',
+    'russian',
+    'serbian',
+    'ws',
+  ];
+
+  const brandPath = getBrandPath(service, variant);
+
   return (
     <StyledBrand
       product={product}
@@ -40,7 +59,7 @@ const BrandContainer = ({
       minWidth={minWidth}
       maxWidth={maxWidth}
       svg={brandSVG}
-      url={`/${service}${variant ? `/${variant}` : ''}`}
+      url={brandPath}
       skipLink={skipLink}
       scriptLink={scriptLink}
       isLongBrand={longBrands.includes(service)}

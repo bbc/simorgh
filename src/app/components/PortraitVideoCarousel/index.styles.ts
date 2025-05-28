@@ -1,55 +1,59 @@
 import { css, Theme } from '@emotion/react';
-import pixelsToRem from '#app/utilities/pixelsToRem';
-import { PROMO_ITEM_WIDTH } from '.';
+import { calculateVariedNavContainerWidths } from './utils/styleUtils';
 
 const styles = {
-  heading: ({ fontSizes, fontVariants, palette }: Theme) =>
+  section: ({ mq, spacings }: Theme) =>
     css({
-      ...fontVariants.sansBold,
-      ...fontSizes.doublePica,
-      color: palette.GREY_10,
+      margin: `${spacings.DOUBLE}rem 0`,
+      [mq.GROUP_1_MIN_WIDTH]: {
+        margin: `${spacings.TRIPLE}rem 0`,
+      },
+      [mq.GROUP_3_MIN_WIDTH]: {
+        margin: `${spacings.DOUBLE}rem 0`,
+      },
     }),
-  scrollContainer: () =>
+  heading: ({ palette, mq, spacings }: Theme) =>
+    css({
+      display: 'inline-block',
+      color: palette.GREY_10,
+      margin: `${spacings.DOUBLE}rem 0 0 0`,
+      [mq.GROUP_3_MIN_WIDTH]: {
+        margin: `${spacings.TRIPLE}rem 0 0 0`,
+      },
+    }),
+  carouselContainer: () =>
     css({
       position: 'relative',
       display: 'flex',
       alignItems: 'center',
     }),
-  scrollWrapper: ({ spacings }: Theme) =>
+  carousel: ({ spacings, mq }: Theme) =>
     css({
       display: 'flex',
+      flex: 1,
       overflowX: 'auto',
       scrollSnapType: 'x mandatory',
-      gap: `${spacings.DOUBLE}rem`,
+      columnGap: `${spacings.FULL}rem`,
+      [mq.GROUP_3_MIN_WIDTH]: {
+        columnGap: `${spacings.DOUBLE}rem`,
+        padding: `${spacings.FULL}rem 0`,
+      },
       scrollBehavior: 'smooth',
       WebkitOverflowScrolling: 'touch',
       '&::-webkit-scrollbar': {
         display: 'none',
       },
       scrollbarWidth: 'none',
-      flex: 1,
-      padding: `${spacings.FULL}rem 0`,
-    }),
-  promo: ({ mq }: Theme) =>
-    css({
-      scrollSnapAlign: 'start',
-      flex: '0 0 35%',
-      textDecoration: 'none',
-      display: 'block',
-      position: 'relative',
-      overflow: 'hidden',
-
-      [mq.GROUP_3_MIN_WIDTH]: {
-        flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH)}rem`,
-      },
-    }),
-  endBlankItem: ({ mq }: Theme) =>
-    css({
-      display: 'none',
-
-      [mq.GROUP_3_MIN_WIDTH]: {
-        display: 'block',
-        flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH / 1.5)}rem`,
+      '&:after': {
+        content: '""',
+        display: 'none',
+        flexGrow: 0,
+        flexShrink: 0,
+        ...calculateVariedNavContainerWidths({
+          mq,
+          display: 'block',
+          widthParameter: 'flexBasis',
+        }),
       },
     }),
 };

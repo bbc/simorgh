@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Consent Banner Container should correctly render amp banner 1`] = `
+exports[`Consent Banner Container should correctly render amp banner when country-based cookie logic is disabled 1`] = `
 <div>
   <div>
     Amp Cookie banner
