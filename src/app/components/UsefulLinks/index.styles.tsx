@@ -40,16 +40,12 @@ const styles = {
       ...fontVariants.sansBold,
       paddingTop: `${pixelsToRem(12)}rem`,
       paddingBottom: `${pixelsToRem(12)}rem`,
+      width: '100%',
       '&:visited': {
         color: palette.GREY_6,
       },
       '&:hover, &:focus': {
         textDecoration: 'underline',
-      },
-      '::before': {
-        position: 'absolute',
-        inset: 0,
-        content: '""',
       },
     }),
 };
