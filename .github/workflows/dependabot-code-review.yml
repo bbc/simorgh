@@ -28,6 +28,9 @@ jobs:
         uses: poseidon/wait-for-status-checks@v0.6.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          delay: 300s
+          interval: 60s
+          ignore: 'Request Code Review & Approve PR if checks pass'
 
       - name: Approve PR
         run: gh pr review --approve "$PR_URL"
