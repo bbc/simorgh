@@ -141,7 +141,6 @@ const getVideoComponent =
 
 const ArticlePage = ({
   pageData,
-  continueReadingEnabled = false,
 }: {
   pageData: Article;
   continueReadingEnabled?: boolean;
@@ -166,116 +165,119 @@ const ArticlePage = ({
   const experimentVariant = useOptimizelyMvtVariation(
     OPTIMIZELY_CONFIG.ruleKey,
   );
-console.log('Experiment Variant:', experimentVariant);
-const isInExperiment = experimentVariant && experimentVariant !== 'off';
-const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
-const adcampaign = pageData?.metadata?.adCampaignKeyword;
+  console.log('Experiment Variant:', experimentVariant);
+  const isInExperiment = experimentVariant && experimentVariant !== 'off';
+  const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
+  const adcampaign = pageData?.metadata?.adCampaignKeyword;
 
-const {
-  metadata: { atiAnalytics },
-  mostRead: mostReadInitialData,
-} = pageData;
+  const {
+    metadata: { atiAnalytics },
+    mostRead: mostReadInitialData,
+  } = pageData;
 
-const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
-const { enabled: liteCTAShows } = useToggle('liteSiteCTA');
+  const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
+  const { enabled: liteCTAShows } = useToggle('liteSiteCTA');
 
-const headline = getHeadline(pageData) ?? '';
-const description = getSummary(pageData) || getHeadline(pageData);
-const firstPublished = getFirstPublished(pageData);
-const lastPublished = getLastPublished(pageData);
-const aboutTags = getAboutTags(pageData);
-const topics = pageData?.metadata?.topics ?? [];
-const blocks = pageData?.content?.model?.blocks ?? [];
-const startsWithHeading = blocks?.[0]?.type === 'headline' || false;
-const bylineBlock = blocks.find(
-  block => block.type === 'byline',
-) as OptimoBylineBlock;
+  const headline = getHeadline(pageData) ?? '';
+  const description = getSummary(pageData) || getHeadline(pageData);
+  const firstPublished = getFirstPublished(pageData);
+  const lastPublished = getLastPublished(pageData);
+  const aboutTags = getAboutTags(pageData);
+  const topics = pageData?.metadata?.topics ?? [];
+  const blocks = pageData?.content?.model?.blocks ?? [];
+  const startsWithHeading = blocks?.[0]?.type === 'headline' || false;
+  const bylineBlock = blocks.find(
+    block => block.type === 'byline',
+  ) as OptimoBylineBlock;
 
-const bylineContribBlocks = bylineBlock?.model?.blocks || [];
+  const bylineContribBlocks = bylineBlock?.model?.blocks || [];
 
-const bylineLinkedData = bylineExtractor(bylineContribBlocks);
+  const bylineLinkedData = bylineExtractor(bylineContribBlocks);
 
-const hasByline = !!bylineLinkedData;
+  const hasByline = !!bylineLinkedData;
 
-const articleAuthorTwitterHandle = hasByline
-  ? getAuthorTwitterHandle(blocks)
-  : null;
+  const articleAuthorTwitterHandle = hasByline
+    ? getAuthorTwitterHandle(blocks)
+    : null;
 
-const taggings = pageData?.metadata?.passport?.taggings ?? [];
-const formats = pageData?.metadata?.passport?.predicates?.formats ?? [];
+  const taggings = pageData?.metadata?.passport?.taggings ?? [];
+  const formats = pageData?.metadata?.passport?.predicates?.formats ?? [];
 
-const isPGL = pageData?.metadata?.type === PHOTO_GALLERY_PAGE;
-const isSTY = pageData?.metadata?.type === STORY_PAGE;
-const isCPS = isPGL || isSTY;
-const isTC2Asset = pageData?.metadata?.analyticsLabels?.contentId
-  ?.split(':')
-  ?.includes('topcat');
+  const isPGL = pageData?.metadata?.type === PHOTO_GALLERY_PAGE;
+  const isSTY = pageData?.metadata?.type === STORY_PAGE;
+  const isCPS = isPGL || isSTY;
+  const isTC2Asset = pageData?.metadata?.analyticsLabels?.contentId
+    ?.split(':')
+    ?.includes('topcat');
 
-const atiData = {
-  ...atiAnalytics,
-  ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
-  ...(isInExperiment && { experimentVariant }),
-};
+  const atiData = {
+    ...atiAnalytics,
+    ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
+    ...(isInExperiment && { experimentVariant }),
+  };
 
-const componentsToRender = {
-  visuallyHiddenHeadline,
-  headline: getHeadlineComponent,
-  subheadline: Headings,
-  audio: MediaLoader,
-  video: getVideoComponent(translations),
-  text,
-  image: getImageComponent(preloadLeadImageToggle),
-  timestamp: getTimestampComponent(
-    hasByline,
-    bylineContribBlocks,
-    firstPublished,
-    lastPublished,
-  ),
-  social: SocialEmbedContainer,
-  embed: UnsupportedEmbed,
-  embedHtml: EmbedHtml,
-  oEmbed: OEmbedLoader,
-  embedImages: EmbedImages,
-  embedUploader: Uploader,
-  group: gist,
-  links: ScrollablePromo,
-  mpu: getMpuComponent(allowAdvertising),
-  wsoj: getWsojComponent,
-  disclaimer: DisclaimerWithPaddingOverride,
-  podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
-};
+  const componentsToRender = {
+    visuallyHiddenHeadline,
+    headline: getHeadlineComponent,
+    subheadline: Headings,
+    audio: MediaLoader,
+    video: getVideoComponent(translations),
+    text,
+    image: getImageComponent(preloadLeadImageToggle),
+    timestamp: getTimestampComponent(
+      hasByline,
+      bylineContribBlocks,
+      firstPublished,
+      lastPublished,
+    ),
+    social: SocialEmbedContainer,
+    embed: UnsupportedEmbed,
+    embedHtml: EmbedHtml,
+    oEmbed: OEmbedLoader,
+    embedImages: EmbedImages,
+    embedUploader: Uploader,
+    group: gist,
+    links: ScrollablePromo,
+    mpu: getMpuComponent(allowAdvertising),
+    wsoj: getWsojComponent,
+    disclaimer: DisclaimerWithPaddingOverride,
+    podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
+  };
 
-const visuallyHiddenBlock = {
-  id: null,
-  model: { blocks: [singleTextBlock(headline)] },
-  type: 'visuallyHiddenHeadline',
-};
+  const visuallyHiddenBlock = {
+    id: null,
+    model: { blocks: [singleTextBlock(headline)] },
+    type: 'visuallyHiddenHeadline',
+  };
 
-const articleBlocks = startsWithHeading
-  ? blocks
-  : [visuallyHiddenBlock, ...blocks];
+  const articleBlocks = startsWithHeading
+    ? blocks
+    : [visuallyHiddenBlock, ...blocks];
 
-const promoImageBlocks =
-  pageData?.promo?.images?.defaultPromoImage?.blocks ?? [];
+  const promoImageBlocks =
+    pageData?.promo?.images?.defaultPromoImage?.blocks ?? [];
 
-const promoImageAltTextBlock = filterForBlockType(promoImageBlocks, 'altText');
+  const promoImageAltTextBlock = filterForBlockType(
+    promoImageBlocks,
+    'altText',
+  );
 
-const promoImageRawBlock = filterForBlockType(promoImageBlocks, 'rawImage');
-const promoImageAltText =
-  promoImageAltTextBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
+  const promoImageRawBlock = filterForBlockType(promoImageBlocks, 'rawImage');
+  const promoImageAltText =
+    promoImageAltTextBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
 
-const promoImage = promoImageRawBlock?.model?.locator;
+  const promoImage = promoImageRawBlock?.model?.locator;
 
-const showTopics = Boolean(showRelatedTopics && topics.length > 0);
+  const showTopics = Boolean(showRelatedTopics && topics.length > 0);
 
-const showContinueReadingButton = Boolean(
-  !isAmp &&
-    !isLite &&
-    !isApp &&
-    (experimentVariant === 'read-more-a' ||
-      experimentVariant === 'read-more-b'),
-);
-console.log('showContinueReadingButton:', showContinueReadingButton);
+  const showContinueReadingButton = Boolean(
+    !isAmp &&
+      !isLite &&
+      !isApp &&
+      (experimentVariant === 'read-more-a' ||
+        experimentVariant === 'read-more-b'),
+  );
+  console.log('showContinueReadingButton:', showContinueReadingButton);
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics atiData={atiData} />
