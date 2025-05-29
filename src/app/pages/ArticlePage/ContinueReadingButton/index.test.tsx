@@ -19,7 +19,7 @@ describe('ContinueReadingButton', () => {
       <ContinueReadingButton
         showAllContent={false}
         setShowAllContent={mockSetShowAllContent}
-        variation="A"
+        variation="read-more-a"
       />,
     );
 
@@ -31,7 +31,7 @@ describe('ContinueReadingButton', () => {
       <ContinueReadingButton
         showAllContent
         setShowAllContent={mockSetShowAllContent}
-        variation="A"
+        variation="read-more-a"
       />,
     );
 
@@ -43,7 +43,7 @@ describe('ContinueReadingButton', () => {
       <ContinueReadingButton
         showAllContent={false}
         setShowAllContent={mockSetShowAllContent}
-        variation="A"
+        variation="read-more-a"
       />,
     );
 
@@ -56,7 +56,7 @@ describe('ContinueReadingButton', () => {
       <ContinueReadingButton
         showAllContent={false}
         setShowAllContent={mockSetShowAllContent}
-        variation="B"
+        variation="read-more-b"
       />,
     );
 
@@ -69,7 +69,7 @@ describe('ContinueReadingButton', () => {
       <ContinueReadingButton
         showAllContent={false}
         setShowAllContent={mockSetShowAllContent}
-        variation="B"
+        variation="read-more-b"
       />,
     );
 
@@ -82,7 +82,7 @@ describe('ContinueReadingButton', () => {
       <ContinueReadingButton
         showAllContent={false}
         setShowAllContent={mockSetShowAllContent}
-        variation="A"
+        variation="read-more-a"
       />,
     );
 
@@ -95,7 +95,7 @@ describe('ContinueReadingButton', () => {
       <ContinueReadingButton
         showAllContent={false}
         setShowAllContent={mockSetShowAllContent}
-        variation="B"
+        variation="read-more-b"
       />,
     );
 
@@ -108,7 +108,7 @@ describe('ContinueReadingButton', () => {
       <ContinueReadingButton
         showAllContent={false}
         setShowAllContent={mockSetShowAllContent}
-        variation="A"
+        variation="read-more-a"
       />,
     );
 
@@ -130,7 +130,7 @@ describe('ContinueReadingButton', () => {
           <ContinueReadingButton
             showAllContent={false}
             setShowAllContent={mockSetShowAllContent}
-            variation="A"
+            variation="read-more-a"
           />,
         );
 
@@ -154,7 +154,7 @@ describe('ContinueReadingButton', () => {
           <ContinueReadingButton
             showAllContent={false}
             setShowAllContent={mockSetShowAllContent}
-            variation="A"
+            variation="read-more-a"
           />,
         );
 
@@ -166,7 +166,7 @@ describe('ContinueReadingButton', () => {
           <ContinueReadingButton
             showAllContent={false}
             setShowAllContent={mockSetShowAllContent}
-            variation="A"
+            variation="read-more-a"
           />,
         );
 
