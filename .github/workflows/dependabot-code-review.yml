@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   run:
-    name: Request Code Review
+    name: Request Code Review & Approve PR if checks pass
     runs-on: ubuntu-latest
     # if: github.event.pull_request.user.login == 'dependabot[bot]'
     steps:
