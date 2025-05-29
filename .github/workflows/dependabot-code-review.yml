@@ -1,20 +1,26 @@
 name: Dependabot
 on:
   pull_request:
-    types:
-      - opened
+    # types:
+    #   - opened
     branches:
       - '**'
 
 permissions:
   pull-requests: write
+  checks: read
 
 jobs:
   run:
     name: Request Code Review
     runs-on: ubuntu-latest
-    if: github.event.pull_request.user.login == 'dependabot[bot]'
+    # if: github.event.pull_request.user.login == 'dependabot[bot]'
     steps:
+      - name: Ensure all checks passing
+        uses: poseidon/wait-for-status-checks@v0.6.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Approve PR
         run: gh pr review --approve "$PR_URL"
         env:
