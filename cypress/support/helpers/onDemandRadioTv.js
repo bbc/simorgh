@@ -32,7 +32,7 @@ export const getEmbedUrl = ({ body, language, isAmp }) => {
 };
 
 export const getEpisodeAvailability = ({ mediaBlocks }) =>
-  mediaBlocks[0]?.model?.availability === 'available';
+  mediaBlocks?.[0]?.model?.availability === 'available';
 
 export const isBrand = jsonData => {
   const pageID = path(
