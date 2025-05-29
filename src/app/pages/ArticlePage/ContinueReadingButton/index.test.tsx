@@ -38,7 +38,7 @@ describe('ContinueReadingButton', () => {
     expect(queryByTestId('read-more-button')).not.toBeInTheDocument();
   });
 
-  it('applies the correct styles for variation A', () => {
+  it('applies the correct styles for variation read-more-a', () => {
     const { getByTestId } = render(
       <ContinueReadingButton
         showAllContent={false}
@@ -51,20 +51,33 @@ describe('ContinueReadingButton', () => {
     expect(button).toHaveStyle('background-color: #141414');
   });
 
-  it('applies the correct styles for variation B', () => {
+  it('applies the correct styles for variation read-more-a-and-top-stories', () => {
     const { getByTestId } = render(
       <ContinueReadingButton
         showAllContent={false}
         setShowAllContent={mockSetShowAllContent}
-        variation="read-more-b"
+        variation="read-more-a-and-top-stories"
       />,
     );
 
     const button = getByTestId('read-more-button');
-    expect(button).toHaveStyle('background-color: #F6F6F6');
+    expect(button).toHaveStyle('background-color: #141414');
   });
 
-  it('renders the SVG icon when variation is B', () => {
+   it('applies the correct styles for variation read-more-b', () => {
+     const { getByTestId } = render(
+       <ContinueReadingButton
+         showAllContent={false}
+         setShowAllContent={mockSetShowAllContent}
+         variation="read-more-b"
+       />,
+     );
+
+     const button = getByTestId('read-more-button');
+     expect(button).toHaveStyle('background-color: #F6F6F6');
+   });
+
+  it('renders the SVG icon when variation is read-more-b', () => {
     const { container } = render(
       <ContinueReadingButton
         showAllContent={false}
@@ -77,7 +90,7 @@ describe('ContinueReadingButton', () => {
     expect(svg).toBeInTheDocument();
   });
 
-  it('does not render the SVG icon when variation is A', () => {
+  it('does not render the SVG icon when variation is read-more-b', () => {
     const { container } = render(
       <ContinueReadingButton
         showAllContent={false}
@@ -90,7 +103,7 @@ describe('ContinueReadingButton', () => {
     expect(svg).not.toBeInTheDocument();
   });
 
-  it('applies border-bottom for variation B', () => {
+  it('applies border-bottom for variation read-more-b', () => {
     const { getByTestId } = render(
       <ContinueReadingButton
         showAllContent={false}
@@ -103,7 +116,7 @@ describe('ContinueReadingButton', () => {
     expect(button).toHaveStyle('border-bottom: 0.0625rem solid #B0B2B4');
   });
 
-  it('does not apply border-bottom for variation A', () => {
+  it('does not apply border-bottom for variation read-more-b', () => {
     const { getByTestId } = render(
       <ContinueReadingButton
         showAllContent={false}
