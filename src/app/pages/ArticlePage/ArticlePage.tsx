@@ -274,10 +274,11 @@ const ArticlePage = ({
     !isAmp &&
       !isLite &&
       !isApp &&
-      (experimentVariant === 'read-more-a' ||
-        experimentVariant === 'read-more-b' ||
-        'read-more-a-and-top-stories'),
+      ['read-more-a', 'read-more-b', 'read-more-a-and-top-stories'].includes(
+        experimentVariant,
+      ),
   );
+
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics atiData={atiData} />
