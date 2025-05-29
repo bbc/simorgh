@@ -5,6 +5,7 @@ import {
   AMP_NO_SCRIPT,
   AMP_JS,
   AMP_ANALYTICS_JS,
+  AMP_GEO_JS,
 } from '#psammead/psammead-assets/src/amp-boilerplate';
 import { BaseRendererProps } from './types';
 
@@ -36,6 +37,7 @@ export default function AmpRenderer({
         </noscript>
         {AMP_JS}
         {AMP_ANALYTICS_JS}
+        {AMP_GEO_JS}
       </head>
       <body className="amp-geo-pending">
         <div id="root" dangerouslySetInnerHTML={{ __html: html || '' }} />

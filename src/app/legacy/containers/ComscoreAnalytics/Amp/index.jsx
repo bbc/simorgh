@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Should it be removed?
 const AmpComscoreAnalytics = () => (
   <amp-analytics type="comscore">
     <script

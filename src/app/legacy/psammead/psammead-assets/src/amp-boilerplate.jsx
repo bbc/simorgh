@@ -32,6 +32,14 @@ export const AMP_BIND_JS = (
   />
 );
 
+export const AMP_GEO_JS = (
+  <script
+    async
+    custom-element="amp-geo"
+    src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+  />
+);
+
 export const AMP_LIST_JS = (
   <script
     async
