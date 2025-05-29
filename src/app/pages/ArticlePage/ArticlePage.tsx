@@ -165,7 +165,7 @@ const ArticlePage = ({
   const experimentVariant = useOptimizelyMvtVariation(
     OPTIMIZELY_CONFIG.ruleKey,
   );
-  console.log('Experiment Variant:', experimentVariant);
+
   const isInExperiment = experimentVariant && experimentVariant !== 'off';
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
@@ -275,9 +275,9 @@ const ArticlePage = ({
       !isLite &&
       !isApp &&
       (experimentVariant === 'read-more-a' ||
-        experimentVariant === 'read-more-b'),
+        experimentVariant === 'read-more-b' ||
+        'read-more-a-and-top-stories'),
   );
-  console.log('showContinueReadingButton:', showContinueReadingButton);
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics atiData={atiData} />

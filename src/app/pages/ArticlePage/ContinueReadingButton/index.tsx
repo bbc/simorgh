@@ -12,7 +12,11 @@ import styles from './index.styles';
 type Props = {
   showAllContent: boolean;
   setShowAllContent: () => void;
-  variation: 'read-more-a' | 'read-more-b' | null;
+  variation:
+    | 'read-more-a'
+    | 'read-more-b'
+    | 'read-more-a-and-top-stories'
+    | null;
   liteCTAShows?: boolean;
 };
 
@@ -91,7 +95,7 @@ const ContinueReadingButton = ({
 
   // Display variations of button based on variation
   const buttonStyle =
-    variation === 'read-more-a'
+    variation === 'read-more-a' || variation === 'read-more-a-and-top-stories'
       ? styles.continueReadingButtonA
       : styles.continueReadingButtonB;
 
