@@ -30,6 +30,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           delay: 300s
           interval: 60s
+          timeout: 900s
           ignore: 'Request Code Review & Approve PR if checks pass'
 
       - name: Approve PR
