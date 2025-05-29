@@ -84,7 +84,7 @@ export const TopicTags = ({
           <SingleTopicTagItem
             as="li"
             backgroundColour={tagBackgroundColour}
-            // eslint-disable-next-line react/no-array-index-key
+             
             key={index}
             service={service}
             script={script}

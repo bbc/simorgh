@@ -52,9 +52,9 @@ describe('Starting the service', () => {
     forkSpy.mockRestore();
     cpusSpy.mockRestore();
     serverStartStub.mockRestore();
-    // eslint-disable-next-line no-underscore-dangle
+     
     cluster._events.fork = [];
-    // eslint-disable-next-line no-underscore-dangle
+     
     cluster._events.exit = [];
     if (Object.keys(cluster.workers).length > 0) {
       cluster.disconnect(done);

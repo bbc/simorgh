@@ -5,7 +5,7 @@ import CanonicalComscore from '.';
 
 describe('Canonical Comscore Analytics ', () => {
   beforeEach(() => {
-    /* eslint-disable no-underscore-dangle */
+     
     window._comscore = [];
   });
 

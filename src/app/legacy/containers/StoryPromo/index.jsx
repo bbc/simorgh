@@ -40,9 +40,9 @@ const SingleColumnStoryPromo = styled(StoryPromo)`
   }
 `;
 
-// eslint-disable-next-line consistent-return
+ 
 const extractAltText = blocks => {
-  // eslint-disable-next-line no-restricted-syntax
+   
   for (const block of blocks) {
     if (block.type === 'paragraph') {
       return block.model.text;
@@ -80,7 +80,7 @@ const StoryPromoImage = ({
     return <ImagePlaceholder ratio={landscapeRatio} />;
   }
 
-  // eslint-disable-next-line prefer-const
+   
   let { height, width, path, altText, copyrightHolder } = imageValues;
   let originCode = getOriginCode(path);
   let locator = getLocator(path);

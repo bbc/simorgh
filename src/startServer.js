@@ -44,7 +44,7 @@ const startApplicationInstance = () => {
     module.hot.accept('./server', () => {
       logger.info('🔁  Hot Module Replacement reloading `./server`...');
       server.removeListener('request', currentApp);
-      const newApp = require('./server').default; // eslint-disable-line global-require
+      const newApp = require('./server').default;  
       server.on('request', newApp);
       currentApp = newApp;
     });
@@ -84,5 +84,5 @@ const startCluster = () => {
   }
 };
 
-// eslint-disable-next-line import/prefer-default-export
+ 
 export { startCluster };

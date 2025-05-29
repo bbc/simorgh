@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+ 
 import React from 'react';
 import { render, waitFor, act } from '@testing-library/react';
 import { OptimizelyProvider } from '@optimizely/react-sdk';

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-// eslint-disable-next-line import/prefer-default-export
+ 
 export const ComponentUsingContext = ({ context }) => {
   const value = useContext(context);
   /* JSON.stringify returns functions as null, so for the case of the font

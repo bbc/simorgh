@@ -1,4 +1,4 @@
-/* eslint-disable no-undef */
+ 
 const getServiceName = serviceConfig => {
   if (serviceConfig.default) {
     return service.default.service;

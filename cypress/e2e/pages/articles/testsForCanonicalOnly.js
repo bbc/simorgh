@@ -1,4 +1,4 @@
-/* eslint-disable import/prefer-default-export */
+ 
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import envConfig from '../../../support/config/envs';
 import appToggles from '../../../support/helpers/useAppToggles';

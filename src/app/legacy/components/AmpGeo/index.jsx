@@ -21,7 +21,7 @@ const AmpGeo = () => (
   <amp-geo layout="nodisplay">
     <script
       type="application/json"
-      // eslint-disable-next-line react/no-danger
+       
       dangerouslySetInnerHTML={{ __html: JSON.stringify(configuration) }}
     />
   </amp-geo>

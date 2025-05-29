@@ -6,7 +6,7 @@ import * as getOriginContext from './getOriginContext';
 import * as getEnv from './getEnv';
 import * as getMetaUrls from './getMetaUrls';
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+ 
 const { RequestContextProvider, RequestContext } = require('./index');
 
 const Component = () => {

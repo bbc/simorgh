@@ -8,7 +8,7 @@ import BannerText from './Text';
 import getDataAttribute from './getDataAttribute';
 
 const Button = (message, onClick, dataAttribute) => (
-  // eslint-disable-next-line react/no-unknown-property
+   
   <button type="button" on={onClick} {...dataAttribute}>
     {message}
   </button>
@@ -18,7 +18,7 @@ const HideButton = (onClick, dataAttribute, type) => (
   <button
     className="focusIndicatorRemove"
     type="button"
-    // eslint-disable-next-line react/no-unknown-property
+     
     on={onClick}
     {...dataAttribute}
   >
@@ -30,7 +30,7 @@ const HideButton = (onClick, dataAttribute, type) => (
 );
 
 const Anchor = (message, href, onClick, dataAttribute) => (
-  // eslint-disable-next-line react/no-unknown-property
+   
   <a href={href} on={onClick} {...dataAttribute}>
     {message}
   </a>

@@ -1,5 +1,5 @@
-/* eslint-disable cypress/no-unnecessary-waiting */
-/* eslint-disable consistent-return */
+ 
+ 
 import path from 'ramda/src/path';
 import { getEpisodeAvailability } from '../../../support/helpers/onDemandRadioTv';
 import envConfig from '../../../support/config/envs';

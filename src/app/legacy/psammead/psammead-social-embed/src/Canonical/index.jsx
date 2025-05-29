@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+ 
 import React, { memo, useContext, useEffect } from 'react';
 import styled from '@emotion/styled';
 import { RequestContext } from '#app/contexts/RequestContext';
@@ -166,7 +166,7 @@ const CanonicalEmbed = ({ provider, oEmbed, onRender = null }) => {
     if (onRender && hasLoadedLibrary && onLibraryLoad) {
       onLibraryLoad(onRender);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+     
   }, [hasLoadedLibrary]);
 
   return (

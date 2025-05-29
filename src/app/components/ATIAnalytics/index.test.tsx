@@ -1,4 +1,4 @@
-/* eslint-disable no-template-curly-in-string */
+ 
 import React from 'react';
 import { articleDataNews } from '#pages/ArticlePage/fixtureData';
 import styUkrainianAssetData from '#data/ukrainian/cpsAssets/news-53561143.json';

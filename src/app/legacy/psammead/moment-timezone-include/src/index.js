@@ -11,7 +11,7 @@ function MomentTimezoneInclude(options = {}) {
   return new webpack.NormalModuleReplacementPlugin(
     /data[\\/]packed[\\/]latest\.json$/,
     resource => {
-      resource.request = replaceOriginalTimezoneData(); // eslint-disable-line no-param-reassign
+      resource.request = replaceOriginalTimezoneData();  
     },
   );
 }

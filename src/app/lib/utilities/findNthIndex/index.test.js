@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+ 
 import findNthIndex from '.';
 
 const buildArray = length =>

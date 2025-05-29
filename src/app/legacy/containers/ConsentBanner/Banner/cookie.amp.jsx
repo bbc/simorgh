@@ -237,7 +237,7 @@ export const AmpCookieSettingsButton = ({ children, lang, className }) => {
 
   return (
     <button
-      // eslint-disable-next-line react/no-unknown-property
+       
       on={on}
       type="button"
       data-testid="amp-cookie-settings-button"
@@ -295,7 +295,7 @@ const AmpCookieBanner = ({
               <OptionsItem script={script} service={service}>
                 <button
                   type="button"
-                  // eslint-disable-next-line react/no-unknown-property
+                   
                   on="tap:AMP.setState({ isManagingSettings: true }), manageCookiesHeading.focus"
                 >
                   {initial.manage}

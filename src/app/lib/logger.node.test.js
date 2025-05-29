@@ -1,4 +1,4 @@
-/* eslint-disable global-require */
+ 
 const fs = require('fs');
 
 jest.mock('fs');

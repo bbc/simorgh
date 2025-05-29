@@ -9,7 +9,7 @@ Importing it as an ES6 module seems to be what is recommended in the docs:
   https://lokeshdhakar.com/projects/color-thief/#getting-started
 */
 
-/* eslint-disable */
+ 
 if (!t)
   var t = {
     map: function (t, r) {

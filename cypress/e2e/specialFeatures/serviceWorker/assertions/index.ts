@@ -1,3 +1,4 @@
+/// <reference types="cypress" />
 /* eslint-disable no-console */
 /* eslint-disable no-unused-expressions */
 const SERVICE_WORKER_CACHE = 'simorghCache_v1';
@@ -6,19 +7,19 @@ export const serviceWorkerIsAvailable = () => {
   it('Service Worker is available', () => {
     cy.window().then(win => {
       const { serviceWorker } = win.navigator;
-      expect(serviceWorker).not.to.be.null;
+      assert.isDefined(serviceWorker, 'Service worker is undefined');
     });
   });
 };
 
-export const serviceWorkerIsRegistered = ({ service }) => {
+export const serviceWorkerIsRegistered = ({ service }: { service: string }) => {
   it('Service Worker is registered', () => {
     cy.window().then(win => {
       win.navigator.serviceWorker.getRegistrations().then(registrations => {
-        const serviceWorkerInScope = registrations.find(registration => {
-          return registration.scope.endsWith(`${service}/`);
-        });
-        expect(serviceWorkerInScope).not.to.be.null;
+        const serviceWorkerInScope = registrations.find(registration =>
+          registration.scope.endsWith(`${service}/`),
+        ) as ServiceWorkerRegistration | undefined;
+        assert.isDefined(serviceWorkerInScope, 'Service worker is undefined');
       });
     });
   });
@@ -31,7 +32,11 @@ export const serviceWorkerCaching = () => {
         win.caches
           .keys()
           .then(keys => {
-            expect(keys).to.include('simorghCache_v1');
+            assert.include(
+              keys,
+              'simorghCache_v1',
+              `Expected keys to include 'simorghCache_v1', but got: ${JSON.stringify(keys)}`,
+            );
           })
           .catch(err => console.error(err));
       });
@@ -45,10 +50,7 @@ export const serviceWorkerCaching = () => {
             simorghCache
               .keys()
               .then(keys => {
-                expect(
-                  keys,
-                  `${JSON.stringify(keys)}`,
-                ).to.have.lengthOf.greaterThan(0);
+                assert.isAbove(keys.length, 0, `${JSON.stringify(keys)}`);
               })
               .catch(err => console.error(err));
           })
@@ -76,10 +78,11 @@ export const serviceWorkerCaching = () => {
                   .flat()
                   .filter(url => url.includes(cachedItem));
 
-                expect(
-                  matchingItems,
-                  `${JSON.stringify(matchingItems)}`,
-                ).to.have.lengthOf.greaterThan(0);
+                assert.isAbove(
+                  matchingItems.length,
+                  0,
+                  `Matching items: ${JSON.stringify(matchingItems)}`,
+                );
               });
             })
             .catch(err => console.error(err)),
@@ -91,7 +94,7 @@ export const serviceWorkerCaching = () => {
       cy.window().then(win => {
         win.caches.open(SERVICE_WORKER_CACHE).then(simorghCache =>
           simorghCache.keys().then(keys => {
-            const matchingCachedItems = [];
+            const matchingCachedItems: string[] = [];
             const urls = keys.map(({ url }) => url).flat();
             cacheableItems.forEach(cachedItem => {
               const matchingItems = urls.filter(url =>
@@ -102,10 +105,10 @@ export const serviceWorkerCaching = () => {
             const difference = urls.filter(
               x => !matchingCachedItems.includes(x),
             );
-            expect(
+            assert.isEmpty(
               difference,
               `unknown cacheable items - ${JSON.stringify(difference)}`,
-            ).to.be.empty;
+            );
           }),
         );
       });

@@ -13,13 +13,15 @@
     "**/*.tsx",
     "../src/**/*.d.ts",
     "next.config.js",
-    "integration/IntegrationTestEnvironment.ts"
+    "integration/IntegrationTestEnvironment.ts",
+    "**/*.test.ts",
+    "**/*.test.tsx",
   ],
   "exclude": [
     "node_modules",
     "build",
     "src/app/legacy/**/*",
-    "cypress",
-    "cypress.config.ts"
+    "cypress.config.ts",
+    "**/*.json"
   ]
 }

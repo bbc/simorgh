@@ -1,6 +1,6 @@
-/* eslint-disable no-console */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
+ 
+ 
+ 
 import React, { createContext } from 'react';
 import { OptimizelyProvider } from '@optimizely/react-sdk';
 import userEvent from '@testing-library/user-event';
@@ -62,7 +62,7 @@ const defaultOptimizely = {
   user: { attributes: { foo: 'bar' }, id: 'test' },
 };
 
-// eslint-disable-next-line no-underscore-dangle
+ 
 window.__reverb = {
   __reverbLoadedPromise: Promise.resolve(reverbMock),
 };
@@ -282,7 +282,7 @@ describe('useClickTrackerHandler', () => {
 
         return (
           <div>
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+            { }
             <a
               href="https://www.bbc.com/pidgin/articles/c93gd1yxng1o"
               onClick={handleClick}

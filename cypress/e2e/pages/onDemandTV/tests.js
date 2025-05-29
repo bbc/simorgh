@@ -1,4 +1,4 @@
-/* eslint-disable consistent-return */
+ 
 import path from 'ramda/src/path';
 import envConfig from '../../../support/config/envs';
 import {

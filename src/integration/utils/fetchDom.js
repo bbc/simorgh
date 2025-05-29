@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+ 
 
 // https://github.com/node-fetch/node-fetch/issues/1624#issuecomment-1407717012
 const dns = require('node:dns');

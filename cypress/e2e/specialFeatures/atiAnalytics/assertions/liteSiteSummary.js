@@ -3,7 +3,7 @@ import { assertATIComponentClickEvent } from '.';
 
 const { LITE_SITE_SUMMARY } = COMPONENTS;
 
-// eslint-disable-next-line import/prefer-default-export
+ 
 export const assertLiteSiteSummaryComponentToMainSiteClick = ({
   pageIdentifier,
   contentType,

@@ -1,4 +1,4 @@
-/* eslint-disable react/no-danger */
+ 
 import React from 'react';
 import IfAboveIE9 from '#app/legacy/components/IfAboveIE9Comment';
 import NO_JS_CLASSNAME from '#app/lib/noJs.const';

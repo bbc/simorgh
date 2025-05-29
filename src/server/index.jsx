@@ -1,5 +1,5 @@
-/* eslint-disable no-console */
-/* eslint-disable camelcase */
+ 
+ 
 import express from 'express';
 import compression from 'compression';
 import ramdaPath from 'ramda/src/path';

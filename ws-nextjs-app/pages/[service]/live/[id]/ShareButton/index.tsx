@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/aria-role */
+ 
 /** @jsx jsx */
 import { useContext, useRef } from 'react';
 import { jsx } from '@emotion/react';
@@ -63,7 +63,7 @@ const ShareButton = ({
         title: headline,
       });
     } catch (error) {
-      // eslint-disable-next-line no-console
+       
       console.log('Error sharing', error);
     }
 

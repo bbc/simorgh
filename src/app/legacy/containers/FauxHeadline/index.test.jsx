@@ -41,7 +41,7 @@ describe('FauxHeadline', () => {
 
     describe('with plain text', () => {
       describe('headline', () => {
-        // eslint-disable-next-line no-shadow
+         
         const data = {
           blocks: blocksSingleFragment('Plain headline', []),
         };

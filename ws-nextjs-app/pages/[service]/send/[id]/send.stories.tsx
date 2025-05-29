@@ -21,7 +21,7 @@ const Component = ({
   fixtureData,
 }: {
   initialScreen: FormScreen;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+   
   fixtureData: any;
 }) => {
   const { data } = fixtureData;

@@ -1,4 +1,4 @@
-/* eslint-disable import/no-relative-packages */
+ 
 import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
 import { testsThatAlwaysRunForAllPages as testsForAllPages } from '../testsForAllPages';
 import { testsThatFollowSmokeTestConfigForAllCanonicalPages as testsForAllCanonicalPages } from '../testsForAllCanonicalPages';

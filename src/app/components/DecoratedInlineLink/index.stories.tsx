@@ -86,7 +86,7 @@ export const InlineLinkWithOnClick = () => (
     ]}
     locator=""
     isExternal
-    // eslint-disable-next-line no-alert
+     
     onClick={() => alert('HELLO WORLD!')}
   />
 );

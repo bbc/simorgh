@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+ 
 const amphtmlValidator = require('amphtml-validator');
 const { getPageUrls } = require('../../../cypress/support/helpers/getPageUrls');
 

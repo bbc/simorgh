@@ -256,7 +256,7 @@ export const AmpMenuButton = ({
     <amp-state id="menuState">
       <script
         type="application/json"
-        /* eslint-disable-next-line react/no-danger */
+         
         dangerouslySetInnerHTML={{ __html: JSON.stringify(initialState) }}
       />
     </amp-state>

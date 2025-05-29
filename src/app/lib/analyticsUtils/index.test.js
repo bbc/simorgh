@@ -1,4 +1,4 @@
-/* eslint-disable no-template-curly-in-string */
+ 
 import Cookie from 'js-cookie';
 import {
   setWindowValue,
@@ -287,11 +287,11 @@ describe('analyticsUtils', () => {
     beforeEach(() => {
       Cookie.remove('loc_serve');
     });
-    // eslint-disable-next-line global-require
+     
     returnsNullWhenOffClient(require('./index').isLocServeCookieSet);
 
     it('should return true if cookie is set', () => {
-      const { isLocServeCookieSet } = require('./index'); // eslint-disable-line global-require
+      const { isLocServeCookieSet } = require('./index');  
 
       Cookie.set('loc_serve', 'value');
 
@@ -301,7 +301,7 @@ describe('analyticsUtils', () => {
     });
 
     it('should return false if cookie is not set', () => {
-      const { isLocServeCookieSet } = require('./index'); // eslint-disable-line global-require
+      const { isLocServeCookieSet } = require('./index');  
 
       const locServeCookie = isLocServeCookieSet();
 

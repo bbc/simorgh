@@ -1,7 +1,7 @@
 const moment = require('moment');
 const numerals = require('../src/numerals/index');
 
-// eslint-disable-next-line prettier/prettier
+ 
 const pashtoGregorianMonths =
   'جنوري_فبروري_مارچ_اپریل_می_جون_جولای_اګست_سپتمبر_اکتوبر_نومبر_ډیسمبر'.split(
     '_'

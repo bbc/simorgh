@@ -157,7 +157,7 @@ describe('MediaArticlePage', () => {
   });
 
   it('should render image with the .webp image extension', async () => {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+     
     const imageBlock = pidginPageData.content.model.blocks[6] as any;
     const imageAltText =
       imageBlock.model.blocks[0].model.blocks[0].model.blocks[0].model.text;

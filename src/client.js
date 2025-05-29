@@ -1,4 +1,4 @@
-/* eslint-disable react/jsx-filename-extension  */
+ 
 import React from 'react';
 import createCache from '@emotion/cache';
 import { CacheProvider } from '@emotion/react';
@@ -46,7 +46,7 @@ if (SIMORGH_DATA_PATH === WINDOW_LOCATION_PATH) {
 }
 
 if (process.env.NODE_ENV === 'production') {
-  // eslint-disable-next-line no-console
+   
   console.log(template, ...templateStyles);
 }
 

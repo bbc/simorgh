@@ -22,7 +22,7 @@ const AmpNielsenAnalytics = ({ apid, section }) => (
     <amp-analytics type="nielsen">
       <script
         type="application/json"
-        /* eslint-disable-next-line react/no-danger */
+         
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             vars: {

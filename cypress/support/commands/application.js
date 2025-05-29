@@ -34,7 +34,7 @@ export const testResponseCodeAndType = ({
           }
 
           // Wait before retrying to allow for transient problems to go away
-          // eslint-disable-next-line cypress/no-unnecessary-waiting
+           
           cy.wait(5000).testResponseCodeAndType({
             path,
             responseCode,
@@ -77,7 +77,7 @@ export const testResponseCodeAndTypeRetry = ({
           }
 
           // Wait before retrying to allow for transient problems to go away
-          // eslint-disable-next-line cypress/no-unnecessary-waiting
+           
           cy.wait(5000).testResponseCodeAndTypeRetry({
             path,
             responseCode,

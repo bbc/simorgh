@@ -1,7 +1,7 @@
 const moment = require('moment');
 
 moment.defineLocale('ig', {
-  // eslint-disable-next-line prettier/prettier
+   
   months:
     'Jenụwarị_Febụwarị_Maachị_Eprel_Mee_Juun_Julaị_Ọgọọst_Septemba_Ọktọba_Nọvemba_Disemba'.split(
       '_'

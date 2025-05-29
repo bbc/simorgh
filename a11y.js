@@ -5,7 +5,7 @@
  * for further information
  */
 
-const { getPageUrls } = require('./cypress/support/helpers/getPageUrls');
+const { getPageUrls } = require('./cypress/support/helpers/getPageUrls.js');
 
 // allPageWidths = [240, 360, 600, 1008, 1280];
 // Run a11y on 360px only since designs are done in this width
@@ -73,7 +73,6 @@ const pageTypes = {
   topicPage: [],
 };
 
-// eslint-disable-next-line array-callback-return
 Object.keys(pageTypes).map(pageType => {
   getPageUrls({ pageType, environment, isSmoke })
     .toString()
@@ -81,7 +80,7 @@ Object.keys(pageTypes).map(pageType => {
     .map(pageUrl => `${baseUrl}${pageUrl}`)
     .forEach(url =>
       pageWidths.forEach(width =>
-        // eslint-disable-next-line no-undef
+         
         page(url, { width, hide: pageTypes[pageType] }),
       ),
     );

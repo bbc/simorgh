@@ -1,4 +1,4 @@
-/* eslint-disable import/prefer-default-export */
+ 
 
 import path from 'ramda/src/path';
 import config from '../../../support/config/services';

@@ -1,4 +1,4 @@
-/* eslint-disable react/no-danger */
+ 
 import React, { ReactElement, PropsWithChildren } from 'react';
 import { BaseRendererProps } from './types';
 import ComponentTracking from './ComponentTracking';

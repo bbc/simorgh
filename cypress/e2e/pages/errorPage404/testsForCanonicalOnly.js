@@ -1,4 +1,4 @@
-/* eslint-disable import/prefer-default-export */
+ 
 import getErrorPath from './getErrorPath';
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.

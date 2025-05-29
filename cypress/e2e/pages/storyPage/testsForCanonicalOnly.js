@@ -1,4 +1,4 @@
-/* eslint-disable cypress/no-unnecessary-waiting */
+ 
 import path from 'ramda/src/path';
 import runCanonicalAdsTests from '../../../support/helpers/adsTests/testsForCanonicalOnly';
 

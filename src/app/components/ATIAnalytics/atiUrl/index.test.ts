@@ -13,7 +13,7 @@ jest.mock('#app/lib/config/optimizely', () => ({ flagKey: 'mockFlagKey' }));
 
 // @ts-expect-error required for testing purposes
 const mockAndSet = ({ name, source }, response) => {
-  source[name] = jest.fn(); // eslint-disable-line no-param-reassign
+  source[name] = jest.fn();  
   source[name].mockImplementation(() => response);
 };
 

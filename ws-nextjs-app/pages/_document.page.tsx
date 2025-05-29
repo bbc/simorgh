@@ -1,4 +1,4 @@
-/* eslint-disable react/no-danger */
+ 
 import Document, {
   DocumentContext,
   Head,

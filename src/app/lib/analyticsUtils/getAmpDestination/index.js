@@ -7,7 +7,7 @@ const getAmpDestination = ({ PS, GNL }) => {
    ** https://amp.dev/documentation/components/amp-geo/
    */
 
-  // eslint-disable-next-line no-template-curly-in-string
+   
   const ampGeo = '${ampGeo}'; // String representing the list of matched groups (comma delimited) e.g. eea,gbOrUnknown
   const ampGeoMatchesGbOrUnknown = `$MATCH(${ampGeo}, gbOrUnknown, 0)`; // Checks for presence of 'gbOrUnknown' and returns 'gbOrUnknown' if found
   const isGbOrUnknown = `$EQUALS(${ampGeoMatchesGbOrUnknown}, gbOrUnknown)`; // Returns 'true' if the result of the $MATCH was 'gbOrUnknown'

@@ -1,4 +1,4 @@
-// eslint-disable-next-line import/named
+ 
 import { getUrlPath, getQueryString } from '.';
 
 const queryString = '?param=test&qs=1';

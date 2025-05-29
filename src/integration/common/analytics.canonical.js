@@ -1,4 +1,4 @@
-/* eslint-disable no-restricted-syntax */
+ 
 export default () => {
   describe('Analytics', () => {
     const noscriptImage = document.querySelector('noscript');

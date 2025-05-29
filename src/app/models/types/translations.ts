@@ -1,4 +1,4 @@
-/* eslint-disable camelcase */
+ 
 export interface Translations {
   pagination?: {
     page?: string;

@@ -1,4 +1,4 @@
-/* eslint-disable camelcase */
+ 
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import { useContext } from 'react';

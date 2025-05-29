@@ -9,7 +9,7 @@ const pageType = 'onDemandAudio';
 Object.keys(config)
   .filter(service => serviceHasPageType(service, pageType))
   .forEach(serviceId => {
-    // eslint-disable-next-line prefer-const
+     
     let { variant, name: service } = config[serviceId];
 
     const paths = getPaths(serviceId, pageType);

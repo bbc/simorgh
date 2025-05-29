@@ -1,4 +1,4 @@
-/* eslint-disable prefer-template */
+ 
 export const lpad = s => s.toString().padStart(2, '0');
 // the duration argument should be a moment duration!
 const formatDuration = ({ duration, separator = ':', padMinutes = false }) => {

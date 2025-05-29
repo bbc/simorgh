@@ -6,13 +6,9 @@ const getOriginContext = (bbcOrigin: string | null) => {
   if (bbcOrigin) {
     origin = bbcOrigin;
   } else if (process?.env && getEnvConfig().SIMORGH_APP_ENV === 'local') {
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+     
     origin = getEnvConfig().SIMORGH_BASE_URL!;
-  } else if (
-    typeof window !== 'undefined' &&
-    window.location &&
-    window.location.origin
-  ) {
+  } else if (typeof window !== 'undefined' && window?.location?.origin) {
     origin = window.location.origin;
   }
 

@@ -207,7 +207,7 @@ export const getAtUserId = () => {
     try {
       cookie = JSON.parse(cookie);
     } catch (error) {
-      // eslint-disable-next-line no-console
+       
       console.log(error);
       cookie = null;
     }
@@ -227,7 +227,7 @@ export const getAtUserId = () => {
 export const sanitise = initialString =>
   initialString ? initialString.trim().replace(/\s/g, '%20') : null;
 
-const isValidDateTime = dateTime => !isNaN(dateTime); // eslint-disable-line no-restricted-globals
+const isValidDateTime = dateTime => !isNaN(dateTime);  
 
 const getISODate = unixTimestamp => {
   const date = new Date(unixTimestamp);

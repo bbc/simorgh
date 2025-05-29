@@ -1,11 +1,10 @@
-/* eslint-disable import/no-dynamic-require, global-require */
+/* eslint-disable import/no-dynamic-require */
 const { merge } = require('webpack-merge');
 const fs = require('fs');
 const path = require('path');
 const DevServer = require('webpack-dev-server');
 const MomentTimezoneInclude = require('./src/app/legacy/psammead/moment-timezone-include/src');
 const { webpackDirAlias } = require('./dirAlias');
-
 const appDirectory = fs.realpathSync(process.cwd());
 const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 
@@ -52,7 +51,6 @@ const getBaseConfig = BUNDLE_TYPE => ({
       const host = DevServer.findIp('v4', false);
       const port = process.env.PORT || 7080;
 
-      // eslint-disable-next-line no-console
       console.info(
         '<i>',
         new Chalk().green.bold(

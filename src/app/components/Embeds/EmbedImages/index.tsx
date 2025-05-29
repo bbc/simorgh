@@ -7,7 +7,7 @@ import styles from './index.styles';
 import Image from '../../Image';
 
 type Props = {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+   
   blocks: any;
 };
 

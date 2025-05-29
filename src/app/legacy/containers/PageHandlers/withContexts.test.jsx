@@ -60,7 +60,7 @@ describe('withContexts HOC', () => {
     let container;
 
     await act(
-      // eslint-disable-next-line no-return-assign
+       
       async () => ({ container } = render(<ContextsHOC {...props} />)),
     );
 

@@ -3,7 +3,7 @@ import {
   MEDIA_ASSET_EXPIRED,
   MEDIA_METADATA_UNAVAILABLE,
 } from '#lib/logger.const';
-/* eslint-disable import/prefer-default-export */
+ 
 
 export const logMediaError = ({ logger, mediaBlock, url }) => {
   const { statusCode } = mediaBlock;

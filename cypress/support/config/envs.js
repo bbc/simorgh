@@ -43,9 +43,9 @@ const config = {
 const geoLocate = (conf, isUk = false) => {
   if (!isUk) return conf;
 
-  // eslint-disable-next-line no-param-reassign
+   
   conf.baseUrl = conf.baseUrl.replace('.com', '.co.uk');
-  // eslint-disable-next-line no-param-reassign
+   
   conf.dataUrl = conf.dataUrl.replace('.com', '.co.uk');
 
   return conf;

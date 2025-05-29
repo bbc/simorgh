@@ -9,7 +9,7 @@ type ChartbeatConfig = {
   authors?: string;
   virtualReferrer: string | null;
   idSync?: {
-    // eslint-disable-next-line camelcase
+     
     bbc_hid: string;
   };
 };

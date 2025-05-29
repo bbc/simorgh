@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+ 
 
 const { exec, spawn } = require('child_process');
 const argv = require('minimist')(process.argv.slice(2));

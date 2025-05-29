@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+ 
 
 class Logger {
   constructor() {

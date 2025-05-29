@@ -40,7 +40,7 @@ const KNOWN_ERRORS = [
   'requireLazy is not defined',
 ];
 
-// eslint-disable-next-line consistent-return
+ 
 Cypress.on('uncaught:exception', (err, runnable, promise) => {
   // returning false here prevents Cypress from failing the test
   if (

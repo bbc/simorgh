@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-/* eslint-disable no-console */
+ 
 
 import { JSDOM } from 'jsdom';
 import fetchDom from './fetchDom';

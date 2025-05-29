@@ -1,8 +1,8 @@
-/* eslint-disable no-useless-return */
-/* eslint-disable import/prefer-default-export */
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
-/* eslint-disable no-restricted-globals */
+ 
+ 
+ 
+ 
+ 
 const version = 'v0.2.5';
 const cacheName = 'simorghCache_v1';
 

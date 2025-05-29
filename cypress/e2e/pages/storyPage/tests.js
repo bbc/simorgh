@@ -1,4 +1,4 @@
-/* eslint-disable import/prefer-default-export */
+ 
 import path from 'ramda/src/path';
 import { crossPlatform as mostReadAssertions } from '../mostReadPage/mostReadAssertions';
 import getAppEnv from '../../../support/helpers/getAppEnv';

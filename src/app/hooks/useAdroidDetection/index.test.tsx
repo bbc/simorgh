@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
+ 
 import { renderHook } from '@testing-library/react';
 import useAndroidDetection from '.';
 
