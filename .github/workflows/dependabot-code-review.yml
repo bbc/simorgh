@@ -16,7 +16,15 @@ jobs:
     runs-on: ubuntu-latest
     # if: github.event.pull_request.user.login == 'dependabot[bot]'
     steps:
-      - name: Ensure all checks passing
+      - name: Request Code Review on Slack
+        uses: slackapi/slack-github-action@v2.1.0
+        with:
+          webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+          webhook-type: incoming-webhook
+          payload: |
+            "text": "Please review ${{ github.event.pull_request.html_url }}"
+
+      - name: Ensure all checks passing before auto approval
         uses: poseidon/wait-for-status-checks@v0.6.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -26,11 +34,3 @@ jobs:
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
           GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-
-      - name: Post Slack Message
-        uses: slackapi/slack-github-action@v2.1.0
-        with:
-          webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
-          webhook-type: incoming-webhook
-          payload: |
-            "text": "Please review ${{ github.event.pull_request.html_url }}"
