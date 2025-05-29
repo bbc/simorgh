@@ -6,4 +6,8 @@
 const filterForBlockType = (arrayOfBlocks, type) =>
   arrayOfBlocks?.filter(block => (block ? block.type === type : null))?.[0];
 
-export default filterForBlockType;
+// Filters array of blocks for all blocks of given type - used for portrait video
+const filterAllBlocksOfType = (arrayOfBlocks, type) =>
+  arrayOfBlocks?.filter(block => block?.type === type);
+
+export { filterForBlockType as default, filterAllBlocksOfType };

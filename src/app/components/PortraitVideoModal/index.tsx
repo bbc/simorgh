@@ -33,30 +33,29 @@ const PortraitVideoModal = ({
 }: PortraitVideoModalProps) => {
   const modalRef = useRef<HTMLDialogElement>(null);
   const [currentVideoIndex, setCurrentIndex] = useState(initialVideoIndex);
-  const video = items[currentVideoIndex];
 
-  const block: PortraitClipMediaBlock = {
+  const blocks: PortraitClipMediaBlock[] = items.map(item => ({
     type: 'portraitClipMedia',
     model: {
       type: 'video',
-      images: video.images.map(img => ({
+      images: item.images.map(img => ({
         source: img.url,
         urlTemplate: img.urlTemplate,
       })),
       video: {
-        id: video.id,
-        title: video.title,
+        id: item.id,
+        title: item.title,
         version: {
-          id: video.versionId,
-          duration: video.duration,
-          kind: video.kind,
-          guidance: video.guidance,
-          territories: video.territories,
+          id: item.versionId,
+          duration: item.duration,
+          kind: item.kind,
+          guidance: item.guidance,
+          territories: item.territories,
         },
-        isEmbeddingAllowed: video.isEmbeddingAllowed,
+        isEmbeddingAllowed: item.isEmbeddingAllowed,
       },
     },
-  };
+  }));
 
   const handlePrev = () => {
     if (currentVideoIndex > 0) {
@@ -103,7 +102,7 @@ const PortraitVideoModal = ({
           <LeftChevron />
         </button>
 
-        <MediaLoader blocks={[block]} />
+        <MediaLoader blocks={blocks} />
 
         <button
           type="button"
