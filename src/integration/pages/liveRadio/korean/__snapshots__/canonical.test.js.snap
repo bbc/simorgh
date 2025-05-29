@@ -11,7 +11,7 @@ exports[`Canonical Korean Live Radio Page Analytics ATI tracking pixel excluding
 />
 `;
 
-exports[`Canonical Korean Live Radio Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/"`;
+exports[`Canonical Korean Live Radio Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
 
 exports[`Canonical Korean Live Radio Page Analytics ATI tracking pixel search params 1`] = `
 [
@@ -126,26 +126,33 @@ exports[`Canonical Korean Live Radio Page Header Navigation link should match te
 
 exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 2`] = `
 {
+  "text": "2025 대선",
+  "url": "/korean/topics/crldxe422e0t",
+}
+`;
+
+exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 3`] = `
+{
   "text": "비디오",
   "url": "/korean/topics/cnwng7v0e54t",
 }
 `;
 
-exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 3`] = `
+exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 4`] = `
 {
   "text": "라디오",
   "url": "/korean/bbc_korean_radio/programmes/w13xttll",
 }
 `;
 
-exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 4`] = `
+exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 5`] = `
 {
   "text": "다운로드",
   "url": "/korean/downloads",
 }
 `;
 
-exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 5`] = `
+exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 6`] = `
 {
   "text": "TOP 뉴스",
   "url": "/korean/popular/read",
@@ -160,9 +167,13 @@ exports[`Canonical Korean Live Radio Page Media Loader renders a valid container
   data-e2e="media-loader__container"
 >
   <div
-    class="bbc-1eq7znh"
+    class="media-player bbc-1ty1x88"
     data-e2e="media-player"
-  />
+  >
+    <noscript>
+      &lt;div&gt;&lt;div class="bbc-i4t8f7"&gt;&lt;strong class="bbc-pow7hy"&gt;사용 기기에서 미디어 재생이 지원되지 않습니다&lt;/strong&gt;&lt;/div&gt;&lt;/div&gt;
+    </noscript>
+  </div>
 </figure>
 `;
 

@@ -77,6 +77,9 @@ jest.mock('#app/hooks/useOptimizelyMvtVariation', () => ({
   __esModule: true,
   default: jest.fn(),
 }));
+jest.mock('#src/app/components/ATIAnalytics', () => () => (
+  <div>ATI Analytics</div>
+));
 
 describe('Routes', () => {
   beforeEach(() => {
@@ -201,7 +204,7 @@ describe('Routes', () => {
           service: 'kyrgyz',
         });
         const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
-          'АКШ: жаңы президент ким экенин аныктаган штаттар кайсылар?';
+          'Кыргыз-өзбек алакаcы: сандар жана фактылар';
 
         expect(
           await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
