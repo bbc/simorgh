@@ -48,8 +48,7 @@ const styles = {
       },
       '::before': {
         position: 'absolute',
-        right: 0,
-        left: 0,
+        inset: 0,
         content: '""',
       },
     }),
