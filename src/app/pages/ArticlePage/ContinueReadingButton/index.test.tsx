@@ -117,7 +117,10 @@ describe('ContinueReadingButton', () => {
   });
 
   describe('Event Tracking', () => {
-    const eventTrackingData = { componentName: 'read-more-button' };
+    const eventTrackingData = {
+      componentName: 'read-more-button',
+      sendOptimizelyEvents: true,
+    };
 
     describe('View tracking', () => {
       const viewTrackerSpy = jest.spyOn(viewTracking, 'default');

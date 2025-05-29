@@ -24,6 +24,7 @@ const ContinueReadingButton = ({
 }: Props) => {
   const eventTrackingData: EventTrackingMetadata = {
     componentName: 'read-more-button',
+    sendOptimizelyEvents: true,
   };
 
   const viewRef = useViewTracker(eventTrackingData);
