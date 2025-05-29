@@ -1,9 +1,8 @@
-FROM node:18-alpine
+FROM node:22-alpine
 
-RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories \
-    && apk add chromium
+RUN apk add chromium
 
-RUN npm install -g @lhci/cli@0.12.x
+RUN npm install -g @lhci/cli@0.14.x
 
 FROM scratch
 COPY --from=0 . .
