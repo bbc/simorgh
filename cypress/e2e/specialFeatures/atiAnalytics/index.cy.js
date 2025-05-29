@@ -71,7 +71,7 @@ import {
   assertTopStoriesComponentClick,
   assertTopStoriesComponentView,
 } from './assertions/topStories';
-import { getPathWithSuffix } from './helpers';
+import { getPathWithSuffix, setUserIDCookie } from './helpers';
 
 const canonicalTestSuites = [
   {
@@ -472,7 +472,7 @@ const ampTestSuites = canonicalTestSuites.filter(supportsAmp).map(testSuite => {
   return {
     ...testSuite,
     path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
-    useReverb: false,
+    useReverb: true,
     applicationType: 'amp',
     tests: [assertPageView],
   };
@@ -513,5 +513,5 @@ const liteTestSuites = canonicalTestSuites
 
 runTestsForPage({
   testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],
-  testIsolation: true,
+  beforeAll: [setUserIDCookie],
 });

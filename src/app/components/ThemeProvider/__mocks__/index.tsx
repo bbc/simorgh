@@ -55,6 +55,7 @@ import vietnamese from '../themes/vietnamese';
 import yoruba from '../themes/yoruba';
 import zhongwenSimp from '../themes/zhongwen/simp';
 import zhongwenTrad from '../themes/zhongwen/trad';
+import ws from '../themes/ws';
 
 type ThemeProvider = {
   [index: string]: React.FC<Props> | { [index: string]: React.FC<Props> };
@@ -122,6 +123,7 @@ const themeProviders: ThemeProvider = {
     simp: zhongwenSimp,
     trad: zhongwenTrad,
   },
+  ws,
 };
 
 interface Props extends StoryProps {

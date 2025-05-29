@@ -52,11 +52,12 @@ export const WithAdsEnabled = (_, { service, variant }) => (
   <Component service={service} variant={variant} withAds />
 );
 
-export const HindiCollectiveNewsroomPublication = (
-  _,
-  { variant },
-) => <Component service="hindi" variant={variant} />;
+export const HindiCollectiveNewsroomPublication = (_, { variant }) => (
+  <Component service="hindi" variant={variant} />
+);
 
 export const SportWithoutTrustProjectLink = (_, { variant }) => (
   <Component service="sport" variant={variant} />
 );
+
+export const WorldServiceGlobalHomepage = () => <Component service="ws" />;
