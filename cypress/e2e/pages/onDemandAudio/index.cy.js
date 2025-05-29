@@ -12,12 +12,6 @@ const testSuites = [
     tests,
   },
   {
-    path: '/afaanoromoo/bbc_afaanoromoo_radio/w3ct1wc0', // On Demand Episode
-    service: 'afaanoromoo',
-    runforEnv: ['live'],
-    tests,
-  },
-  {
     path: '/afaanoromoo/bbc_afaanoromoo_radio/w3ct1wd4', // On Demand Episode
     service: 'afaanoromoo',
     runforEnv: ['live'],
@@ -50,13 +44,7 @@ const testSuites = [
   {
     path: '/arabic/bbc_arabic_radio/programmes/p030vh2y', // On Demand Brand
     service: 'arabic',
-    runforEnv: 'live',
-    tests,
-  },
-  {
-    path: '/arabic/bbc_arabic_radio/programmes/p030vh25', // On Demand Brand
-    service: 'arabic',
-    runforEnv: 'test',
+    runforEnv: ['test', 'live'],
     tests,
   },
   {
@@ -79,12 +67,6 @@ const testSuites = [
   },
   {
     path: '/bengali/bbc_bangla_radio/programmes/p030vjwg', // On Demand Brand
-    service: 'bengali',
-    runforEnv: ['live'],
-    tests,
-  },
-  {
-    path: '/bengali/bbc_bangla_radio/programmes/p030vjwm', // On Demand Brand
     service: 'bengali',
     runforEnv: ['live'],
     tests,
@@ -146,25 +128,13 @@ const testSuites = [
   {
     path: '/hausa/bbc_hausa_radio/programmes/p030s4mh', // On Demand Brand
     service: 'hausa',
-    runforEnv: ['live'],
-    tests,
-  },
-  {
-    path: '/hausa/bbc_hausa_radio/programmes/p030s4mx', // On Demand Brand
-    service: 'hausa',
-    runforEnv: ['test'],
+    runforEnv: ['test', 'live'],
     tests,
   },
   {
     path: '/hausa/bbc_hausa_radio/w3ct1qzn', // On Demand Episode
     service: 'hausa',
-    runforEnv: ['live'],
-    tests,
-  },
-  {
-    path: '/hausa/bbc_hausa_radio/w3ct1033', // On Demand Episode
-    service: 'hausa',
-    runforEnv: ['test'],
+    runforEnv: ['test', 'live'],
     tests,
   },
   {
@@ -218,13 +188,7 @@ const testSuites = [
   {
     path: '/korean/bbc_korean_radio/programmes/w13xttll', // On Demand Brand
     service: 'korean',
-    runforEnv: 'live',
-    tests,
-  },
-  {
-    path: '/korean/bbc_korean_radio/programmes/w13xttlm', // On Demand Brand
-    service: 'korean',
-    runforEnv: 'test',
+    runforEnv: ['test', 'live'],
     tests,
   },
   {
@@ -284,13 +248,7 @@ const testSuites = [
   {
     path: '/pashto/bbc_pashto_radio/programmes/p0340yr4', // On Demand Brand
     service: 'pashto',
-    runforEnv: 'live',
-    tests,
-  },
-  {
-    path: '/pashto/bbc_pashto_radio/programmes/p0340ysc', // On Demand Brand
-    service: 'pashto',
-    runforEnv: 'test',
+    runforEnv: ['test', 'live'],
     tests,
   },
   {
@@ -302,13 +260,7 @@ const testSuites = [
   {
     path: '/persian/bbc_dari_radio/programmes/p0340v0s', // On Demand Brand Dari
     service: 'persian',
-    runforEnv: 'live',
-    tests,
-  },
-  {
-    path: '/persian/bbc_dari_radio/programmes/p0364sj5', // On Demand Brand Dari
-    service: 'persian',
-    runforEnv: 'test',
+    runforEnv: ['test', 'live'],
     tests,
   },
   {
@@ -368,13 +320,7 @@ const testSuites = [
   {
     path: '/swahili/bbc_swahili_radio/programmes/p03411mj', // On Demand Brand
     service: 'swahili',
-    runforEnv: ['live'],
-    tests,
-  },
-  {
-    path: '/swahili/bbc_swahili_radio/programmes/p030s7gh', // On Demand Brand
-    service: 'swahili',
-    runforEnv: ['test'],
+    runforEnv: ['test', 'live'],
     tests,
   },
   {
