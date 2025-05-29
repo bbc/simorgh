@@ -15,19 +15,20 @@ const styles = {
       display: 'block',
       position: 'relative',
       overflow: 'hidden',
-      minWidth: `${pixelsToRem(PROMO_ITEM_WIDTH_MIN)}rem`,
       flexGrow: 0,
       flexShrink: 0,
       [mq.GROUP_0_MAX_WIDTH]: {
         width: `${pixelsToRem(PROMO_ITEM_WIDTH_MIN)}rem`,
       },
       [mq.GROUP_1_MIN_WIDTH]: {
+        minWidth: `${pixelsToRem(PROMO_ITEM_WIDTH_MIN)}rem`,
         flexBasis: calculatePromoWidth({
           fitForNItems: 2,
           gapWidth: spacings.FULL,
         }),
       },
       [mq.GROUP_3_MIN_WIDTH]: {
+        minWidth: 'unset',
         flexBasis: calculatePromoWidth({
           fitForNItems: 3,
           gapWidth: spacings.DOUBLE,

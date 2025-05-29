@@ -57,11 +57,13 @@ describe('PortraitVideoPromo', () => {
     expect(duration).toBeUndefined();
   });
 
-  it('Should contain an image', () => {
+  it('Should contain the correct image from the BFF response', () => {
     const sampleImages = [
       {
-        url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8g.jpg',
-        altText: 'alternative text',
+        url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8v.jpg',
+        urlTemplate:
+          'https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8v.jpg',
+        altText: 'Corrida armamentista na Europa',
       },
     ];
 
@@ -69,10 +71,21 @@ describe('PortraitVideoPromo', () => {
       <PortraitVideoPromo id="testId" images={sampleImages} />,
     );
 
-    const heading = container.querySelector(
-      'img[src="https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8g.jpg"]',
+    const image = container.querySelector(
+      'img[src="https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8v.jpg"]',
     );
-    expect(heading).toBeInTheDocument();
+
+    expect(image).toBeInTheDocument();
+  });
+
+  it('Should contain a default image if not image src is provided in the BFF response', () => {
+    const { container } = render(<PortraitVideoPromo id="testId" />);
+
+    const image = container.querySelector(
+      'img[src="https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png"]',
+    );
+
+    expect(image).toBeInTheDocument();
   });
 
   it('Should scroll to the center when tabbed', async () => {
