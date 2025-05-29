@@ -240,7 +240,6 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 }
 
 .emotion-10 {
-  background-color: #FFFFFF;
   height: 165px;
 }
 
@@ -1116,9 +1115,11 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
         data-e2e="media-loader__container"
       >
         <div
-          class="emotion-10"
+          class="media-player emotion-10"
           data-e2e="media-player"
-        />
+        >
+          <noscript />
+        </div>
       </figure>
     </div>
   </main>

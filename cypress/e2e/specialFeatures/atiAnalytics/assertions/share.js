@@ -8,6 +8,7 @@ export const assertShareComponentView = ({
   contentType,
   useReverb,
   path,
+  applicationType,
 }) => {
   it('should send a view event for the Share component', () => {
     interceptATIAnalyticsBeacons();
@@ -22,6 +23,7 @@ export const assertShareComponentView = ({
       pageIdentifier,
       contentType,
       useReverb,
+      applicationType,
     });
   });
 };
@@ -31,6 +33,7 @@ export const assertShareComponentClick = ({
   contentType,
   useReverb,
   path,
+  applicationType,
 }) => {
   it('should send a click event for the Share component', () => {
     interceptATIAnalyticsBeacons();
@@ -48,6 +51,7 @@ export const assertShareComponentClick = ({
       pageIdentifier,
       contentType,
       useReverb,
+      applicationType,
     });
   });
 };

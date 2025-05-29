@@ -13,9 +13,11 @@ export const COMPONENT_NAMES = {
   RADIO_SCHEDULE: 'radio-schedule',
   EMBED: 'embed',
   BILLBOARD: 'billboard',
+  PORTRAIT_VIDEO_CAROUSEL: 'portrait-video-carousel',
+  SOCIAL_LINKS: 'social-links',
 } as const;
 
-const { NONE, BANNER, COLLECTION, RANKED } = VISUAL_STYLE;
+const { NONE, BANNER, COLLECTION, RANKED, INSITU, LINKS } = VISUAL_STYLE;
 const { MINIMUM, LOW, NORMAL, HIGH, MAXIMUM } = VISUAL_PROMINENCE;
 const {
   MESSAGE_BANNER,
@@ -26,6 +28,8 @@ const {
   RADIO_SCHEDULE,
   EMBED,
   BILLBOARD,
+  PORTRAIT_VIDEO_CAROUSEL,
+  SOCIAL_LINKS,
 } = COMPONENT_NAMES;
 
 export default ({
@@ -51,6 +55,8 @@ export default ({
     [`${NONE}_${HIGH}`]: HIERARCHICAL_CURATION_GRID,
     [`${COLLECTION}_${HIGH}`]: HIERARCHICAL_CURATION_GRID,
     [`${RANKED}_${NORMAL}`]: MOST_READ,
+    [`${INSITU}_${NORMAL}`]: PORTRAIT_VIDEO_CAROUSEL,
+    [`${LINKS}_${NORMAL}`]: SOCIAL_LINKS,
   };
 
   const visualStyleAndProminence = `${visualStyle}_${visualProminence}`;

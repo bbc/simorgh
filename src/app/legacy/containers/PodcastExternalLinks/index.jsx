@@ -97,7 +97,7 @@ const PodcastExternalLink = ({ linkUrl, children, aria }) => {
       service={service}
       script={script}
       dir={dir}
-      onClick={clickTrackerRef}
+      {...clickTrackerRef}
       {...aria}
     >
       {children}
@@ -117,7 +117,7 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
 
   const viewTrackerRef = useViewTracker(eventTrackingData);
 
-  if (!links.length) return null;
+  if (!links?.length) return null;
 
   const defaultTranslation = 'This podcast is also available on';
   const title = pathOr(

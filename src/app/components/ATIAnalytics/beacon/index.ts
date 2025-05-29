@@ -49,6 +49,7 @@ export const sendEventBeacon = async ({
         type,
         advertiserID,
         url,
+        experimentVariant,
       })
     : null;
 

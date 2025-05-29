@@ -22,7 +22,7 @@ const NOTO_SERIF_BENGALI_FONTS_DIR =
   'https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifBengali/v1.00/';
 
 const REITH_QALAM_FONTS_DIR =
-  'https://ws-downloads.files.bbci.co.uk/fonts/ReithQalam/v1.210/';
+  'https://ws-downloads.files.bbci.co.uk/fonts/ReithQalam/v1.310/';
 
 export const REITH_SERIF_REGULAR = {
   '@font-face': {

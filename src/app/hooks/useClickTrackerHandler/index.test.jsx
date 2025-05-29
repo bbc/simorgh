@@ -1,12 +1,14 @@
+/* eslint-disable no-console */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { createContext } from 'react';
+import { OptimizelyProvider } from '@optimizely/react-sdk';
 import userEvent from '@testing-library/user-event';
 import { waitFor } from '@testing-library/dom';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import * as trackingToggle from '#hooks/useTrackingToggle';
-import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
-import constructATIUrl from '#src/server/utilities/liteATITracking/constructATIUrl';
+import constructATIUrl from '#app/lib/analyticsUtils/staticATITracking/constructATIUrl';
+import useOptimizelyMvtVariation from '../useOptimizelyMvtVariation';
 import {
   AllTheProviders,
   render,
@@ -22,6 +24,7 @@ import useClickTrackerHandler from '.';
 const trackingToggleSpy = jest.spyOn(trackingToggle, 'default');
 
 const { location } = window;
+const { error } = console;
 
 const urlToObject = url => {
   const { origin, pathname, searchParams } = new URL(url);
@@ -35,7 +38,7 @@ const urlToObject = url => {
 
 process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
 
-const defaultProps = {
+const eventTrackingData = {
   componentName: 'brand',
   format: 'CHD=promo::2',
 };
@@ -45,6 +48,26 @@ const defaultToggles = {
     enabled: true,
   },
 };
+
+const reverbMock = {
+  isReady: jest.fn(),
+  initialise: jest.fn(() => Promise.resolve()),
+  viewEvent: jest.fn(),
+  userActionEvent: jest.fn(),
+};
+
+const defaultOptimizely = {
+  track: jest.fn(),
+  close: jest.fn(),
+  user: { attributes: { foo: 'bar' }, id: 'test' },
+};
+
+// eslint-disable-next-line no-underscore-dangle
+window.__reverb = {
+  __reverbLoadedPromise: Promise.resolve(reverbMock),
+};
+
+jest.mock('#app/hooks/useOptimizelyMvtVariation', () => jest.fn());
 
 const wrapper = ({ children }) => (
   <AllTheProviders
@@ -64,7 +87,7 @@ const TestComponent = ({ hookProps }) => {
   const handleClick = useClickTrackerHandler(hookProps);
 
   return (
-    <div data-testid="test-component" onClick={handleClick}>
+    <div data-testid="test-component" {...handleClick}>
       <a href="https://bbc.com/pidgin">Link</a>
       <button type="button">Button</button>
     </div>
@@ -76,7 +99,7 @@ const TestComponentSingleLink = ({ hookProps }) => {
 
   return (
     <div data-testid="test-component">
-      <a href="https://bbc.com/pidgin" onClick={handleClick}>
+      <a href="https://bbc.com/pidgin" {...handleClick}>
         Link
       </a>
     </div>
@@ -89,6 +112,8 @@ jest.mock('#app/lib/utilities/getUUID', () =>
 
 beforeEach(() => {
   jest.clearAllMocks();
+  console.error = jest.fn();
+
   const { href, assign, ...rest } = window.location;
   delete window.location;
   window.location = {
@@ -96,6 +121,8 @@ beforeEach(() => {
     assign: jest.fn(),
     ...rest,
   };
+
+  useOptimizelyMvtVariation.mockReturnValue(null);
 
   jest.replaceProperty(
     serviceContextModule,
@@ -111,19 +138,22 @@ beforeEach(() => {
 
 afterEach(() => {
   window.location = location;
+  console.error = error;
 });
 
 describe('useClickTrackerHandler', () => {
   describe('Click tracking', () => {
     it('should return a function', () => {
       const { result } = renderHook(
-        () => useClickTrackerHandler(defaultProps),
+        () => useClickTrackerHandler(eventTrackingData),
         {
           wrapper,
         },
       );
 
-      expect(result.current).toBeInstanceOf(Function);
+      const { onClick } = result.current;
+
+      expect(onClick).toBeInstanceOf(Function);
     });
 
     it('should send a single tracking request on click', async () => {
@@ -133,7 +163,7 @@ describe('useClickTrackerHandler', () => {
 
       const spyFetch = jest.spyOn(global, 'fetch');
       const { getByTestId } = render(
-        <TestComponent hookProps={defaultProps} />,
+        <TestComponent hookProps={eventTrackingData} />,
         {
           atiData: atiAnalytics,
           pageData: pidginData,
@@ -175,13 +205,16 @@ describe('useClickTrackerHandler', () => {
     });
 
     it('should not send a tracking request if the toggle is disabled', async () => {
-      trackingToggleSpy.mockImplementationOnce(() => false);
+      trackingToggleSpy
+        .mockImplementationOnce(() => false)
+        .mockImplementationOnce(() => false);
+
       const {
         metadata: { atiAnalytics },
       } = pidginData;
 
       const { getByTestId } = render(
-        <TestComponent hookProps={defaultProps} />,
+        <TestComponent hookProps={eventTrackingData} />,
         {
           atiData: atiAnalytics,
           pageData: pidginData,
@@ -202,14 +235,17 @@ describe('useClickTrackerHandler', () => {
         metadata: { atiAnalytics },
       } = pidginData;
 
-      const { getByText } = render(<TestComponent hookProps={defaultProps} />, {
-        atiData: atiAnalytics,
-        pageData: pidginData,
-        pageType: STORY_PAGE,
-        pathname: '/pidgin',
-        service: 'pidgin',
-        toggles: defaultToggles,
-      });
+      const { getByText } = render(
+        <TestComponent hookProps={eventTrackingData} />,
+        {
+          atiData: atiAnalytics,
+          pageData: pidginData,
+          pageType: STORY_PAGE,
+          pathname: '/pidgin',
+          service: 'pidgin',
+          toggles: defaultToggles,
+        },
+      );
 
       await act(() => userEvent.click(getByText('Button')));
 
@@ -220,6 +256,61 @@ describe('useClickTrackerHandler', () => {
         pathname: '/',
         searchParams: {
           atc: 'PUB-[article-sty]-[brand]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[]',
+          hl: expect.stringMatching(/^.+?x.+?x.+?$/),
+          idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
+          lng: 'en-US',
+          p: 'news::pidgin.news.story.51745682.page',
+          r: '0x0x24x24',
+          re: '1024x768',
+          s: '598343',
+          s2: '70',
+          type: 'AT',
+        },
+      });
+
+      jest.restoreAllMocks();
+    });
+
+    it('should send tracking request with the URL of the next page on click of a link', async () => {
+      const {
+        metadata: { atiAnalytics },
+      } = pidginData;
+
+      const TestLink = () => {
+        const { onClick: handleClick } =
+          useClickTrackerHandler(eventTrackingData);
+
+        return (
+          <div>
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+            <a
+              href="https://www.bbc.com/pidgin/articles/c93gd1yxng1o"
+              onClick={handleClick}
+            >
+              Link
+            </a>
+          </div>
+        );
+      };
+
+      const { getByText } = render(<TestLink />, {
+        atiData: atiAnalytics,
+        pageData: pidginData,
+        pageType: STORY_PAGE,
+        pathname: '/pidgin',
+        service: 'pidgin',
+        toggles: defaultToggles,
+      });
+
+      await act(() => userEvent.click(getByText('Link')));
+
+      const [[viewEventUrl]] = global.fetch.mock.calls;
+
+      expect(urlToObject(viewEventUrl)).toEqual({
+        origin: 'https://logws1363.ati-host.net',
+        pathname: '/',
+        searchParams: {
+          atc: 'PUB-[article-sty]-[brand]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[https://www.bbc.com/pidgin/articles/c93gd1yxng1o]',
           hl: expect.stringMatching(/^.+?x.+?x.+?$/),
           idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
           lng: 'en-US',
@@ -248,8 +339,8 @@ describe('useClickTrackerHandler', () => {
         const handleClick = useClickTrackerHandler(parentHookProps);
 
         return (
-          <div onClick={handleClick}>
-            <TestComponent hookProps={defaultProps} />
+          <div {...handleClick}>
+            <TestComponent hookProps={eventTrackingData} />
           </div>
         );
       };
@@ -301,7 +392,9 @@ describe('useClickTrackerHandler', () => {
       });
 
       const { getByText } = render(
-        <TestComponentSingleLink hookProps={{ ...defaultProps, href: url }} />,
+        <TestComponentSingleLink
+          hookProps={{ ...eventTrackingData, href: url }}
+        />,
         {
           atiData: atiAnalytics,
           pageData: pidginData,
@@ -328,14 +421,17 @@ describe('useClickTrackerHandler', () => {
         metadata: { atiAnalytics },
       } = pidginData;
 
-      const { getByText } = render(<TestComponent hookProps={defaultProps} />, {
-        atiData: atiAnalytics,
-        pageData: pidginData,
-        pageType: STORY_PAGE,
-        pathname: '/pidgin',
-        service: 'pidgin',
-        toggles: defaultToggles,
-      });
+      const { getByText } = render(
+        <TestComponent hookProps={eventTrackingData} />,
+        {
+          atiData: atiAnalytics,
+          pageData: pidginData,
+          pageType: STORY_PAGE,
+          pathname: '/pidgin',
+          service: 'pidgin',
+          toggles: defaultToggles,
+        },
+      );
 
       act(() => {
         fireEvent.contextMenu(getByText('Button'));
@@ -352,7 +448,11 @@ describe('useClickTrackerHandler', () => {
 
       const { getByText } = render(
         <TestComponent
-          hookProps={{ ...defaultProps, href: url, preventNavigation: true }}
+          hookProps={{
+            ...eventTrackingData,
+            href: url,
+            preventNavigation: true,
+          }}
         />,
         {
           atiData: atiAnalytics,
@@ -379,7 +479,7 @@ describe('useClickTrackerHandler', () => {
       } = pidginData;
 
       const { getByTestId } = render(
-        <TestComponent hookProps={{ ...defaultProps, campaignID }} />,
+        <TestComponent hookProps={{ ...eventTrackingData, campaignID }} />,
         {
           atiData: atiAnalytics,
           pageData: pidginData,
@@ -399,25 +499,19 @@ describe('useClickTrackerHandler', () => {
       );
     });
 
-    it('should use "optimizelyMetricNameOverride" property if provided in eventTrackingData object', async () => {
-      const mockOptimizelyTrack = jest.fn();
-      const mockUserId = 'test';
-      const mockAttributes = { foo: 'bar' };
+    it('should use componentName property if provided in eventTrackingData object', async () => {
+      useOptimizelyMvtVariation.mockReturnValue('variation_a');
 
-      const mockOptimizely = {
-        optimizely: {
-          track: mockOptimizelyTrack,
-          user: { attributes: mockAttributes, id: mockUserId },
-          getVariation: jest.fn(() => 'off'),
-        },
-        optimizelyMetricNameOverride: 'myEvent',
-      };
       const {
         metadata: { atiAnalytics },
       } = pidginData;
 
       const { getByTestId } = render(
-        <TestComponent hookProps={{ ...defaultProps, ...mockOptimizely }} />,
+        <OptimizelyProvider optimizely={defaultOptimizely} isServerSide>
+          <TestComponent
+            hookProps={{ ...eventTrackingData, sendOptimizelyEvents: true }}
+          />
+        </OptimizelyProvider>,
         {
           atiData: atiAnalytics,
           pageData: pidginData,
@@ -430,38 +524,27 @@ describe('useClickTrackerHandler', () => {
 
       fireEvent.click(getByTestId('test-component'));
 
-      expect(mockOptimizelyTrack).toHaveBeenCalledTimes(1);
-      expect(mockOptimizelyTrack).toHaveBeenCalledWith(
-        'myEvent_clicks',
-        mockUserId,
-        {
-          'clicked_canonical-lite-cta': true,
-          foo: 'bar',
-        },
+      expect(defaultOptimizely.track).toHaveBeenCalledTimes(1);
+      expect(defaultOptimizely.track).toHaveBeenCalledWith(
+        'brand-clicks',
+        defaultOptimizely.user.id,
+        { foo: 'bar' },
       );
     });
 
     it('should fire event to Optimizely if optimizely object exists', async () => {
-      const mockOptimizelyTrack = jest.fn();
-      const mockUserId = 'test';
-      const mockAttributes = { foo: 'bar' };
-      const mockOverrideAttributes = {
-        ...mockAttributes,
-        [`clicked_${OPTIMIZELY_CONFIG.viewClickAttributeId}`]: true,
-      };
-      const mockOptimizely = {
-        optimizely: {
-          track: mockOptimizelyTrack,
-          user: { attributes: mockAttributes, id: mockUserId },
-          getVariation: jest.fn(() => 'off'),
-        },
-      };
+      useOptimizelyMvtVariation.mockReturnValue('variation_a');
+
       const {
         metadata: { atiAnalytics },
       } = pidginData;
 
       const { getByTestId } = render(
-        <TestComponent hookProps={{ ...defaultProps, ...mockOptimizely }} />,
+        <OptimizelyProvider optimizely={defaultOptimizely} isServerSide>
+          <TestComponent
+            hookProps={{ ...eventTrackingData, sendOptimizelyEvents: true }}
+          />
+        </OptimizelyProvider>,
         {
           atiData: atiAnalytics,
           pageData: pidginData,
@@ -474,11 +557,11 @@ describe('useClickTrackerHandler', () => {
 
       fireEvent.click(getByTestId('test-component'));
 
-      expect(mockOptimizelyTrack).toHaveBeenCalledTimes(1);
-      expect(mockOptimizelyTrack).toHaveBeenCalledWith(
-        'component_clicks',
-        mockUserId,
-        mockOverrideAttributes,
+      expect(defaultOptimizely.track).toHaveBeenCalledTimes(1);
+      expect(defaultOptimizely.track).toHaveBeenCalledWith(
+        'brand-clicks',
+        defaultOptimizely.user.id,
+        { foo: 'bar' },
       );
     });
 
@@ -491,7 +574,9 @@ describe('useClickTrackerHandler', () => {
       } = pidginData;
 
       const { getByTestId } = render(
-        <TestComponent hookProps={{ ...defaultProps, ...mockOptimizely }} />,
+        <TestComponent
+          hookProps={{ ...eventTrackingData, ...mockOptimizely }}
+        />,
         {
           atiData: atiAnalytics,
           pageData: pidginData,
@@ -507,122 +592,190 @@ describe('useClickTrackerHandler', () => {
       expect(mockOptimizelyTrack).toHaveBeenCalledTimes(0);
     });
   });
+});
 
-  describe('Error handling', () => {
-    it('should not throw error and not send event to ATI when no tracking data passed into hook', async () => {
-      const {
-        metadata: { atiAnalytics },
-      } = pidginData;
-
-      const { container, getByText } = render(
-        <TestComponent hookProps={undefined} />,
-        {
-          atiData: atiAnalytics,
-          pageData: pidginData,
-          pageType: STORY_PAGE,
-          pathname: '/pidgin',
-          service: 'pidgin',
-          toggles: defaultToggles,
-        },
-      );
-
-      await act(() => userEvent.click(getByText('Button')));
-
-      expect(container.error).toBeUndefined();
-      expect(global.fetch).not.toHaveBeenCalled();
-    });
-
-    it('should not throw error and not send event to ATI when no pageData is provided from context providers', async () => {
-      const { container, getByText } = render(
-        <TestComponent hookProps={defaultProps} />,
-        {
-          atiData: undefined,
-          pageData: undefined,
-          pageType: STORY_PAGE,
-          pathname: '/pidgin',
-          service: 'pidgin',
-          toggles: defaultToggles,
-        },
-      );
-
-      await act(() => userEvent.click(getByText('Button')));
-
-      expect(container.error).toBeUndefined();
-      expect(global.fetch).not.toHaveBeenCalled();
-    });
-
-    it('should not throw error and not send event to ATI when unexpected data passed into hook', async () => {
-      const trackingData = {
-        foo: 'bar',
-      };
-
-      const {
-        metadata: { atiAnalytics },
-      } = pidginData;
-
-      const { container, getByText } = render(
-        <TestComponent hookProps={trackingData} />,
-        {
-          atiData: atiAnalytics,
-          pageData: pidginData,
-          pageType: STORY_PAGE,
-          pathname: '/pidgin',
-          service: 'pidgin',
-          toggles: defaultToggles,
-        },
-      );
-
-      await act(() => userEvent.click(getByText('Button')));
-
-      expect(container.error).toBeUndefined();
-      expect(global.fetch).not.toHaveBeenCalled();
-    });
-
-    it('should not throw error and not send event to ATI when unexpected data type passed into hook', async () => {
-      const trackingData = ['unexpected data type'];
-
-      const {
-        metadata: { atiAnalytics },
-      } = pidginData;
-
-      const { container, getByText } = render(
-        <TestComponent hookProps={trackingData} />,
-        {
-          atiData: atiAnalytics,
-          pageData: pidginData,
-          pageType: STORY_PAGE,
-          pathname: '/pidgin',
-          service: 'pidgin',
-          toggles: defaultToggles,
-        },
-      );
-
-      await act(() => userEvent.click(getByText('Button')));
-
-      expect(container.error).toBeUndefined();
-      expect(global.fetch).not.toHaveBeenCalled();
-    });
+describe('Click tracking - Reverb', () => {
+  beforeEach(() => {
+    jest.replaceProperty(
+      serviceContextModule,
+      'ServiceContext',
+      createContext({
+        atiAnalyticsProducerId: '70',
+        atiAnalyticsProducerName: 'PIDGIN',
+        service: 'pidgin',
+        useReverb: true,
+      }),
+    );
   });
 
-  describe('Lite Site - Click tracking', () => {
-    it('Returns a valid ati tracking url given the input props', () => {
-      const { result } = renderHook(
-        () =>
-          constructATIUrl({
-            eventTrackingData: {
-              ...defaultProps,
-              campaignID: 'custom-campaign',
-            },
-            eventType: 'click',
-          }),
-        {
-          wrapper,
-        },
-      );
+  it('should trigger a beacon for a click event', async () => {
+    const {
+      metadata: { atiAnalytics },
+    } = pidginData;
 
-      expect(result.current).toContain(
-        'atc=PUB-[custom-campaign]-[brand]-[]-[CHD=promo::2]-[]-[]-[]-[]&type=AT',
+    const TestLink = () => {
+      const { onClick: handleClick } =
+        useClickTrackerHandler(eventTrackingData);
+
+      return (
+        <div>
+          <a
+            href="https://www.bbc.com/pidgin/articles/c93gd1yxng1o"
+            onClick={handleClick}
+          >
+            Link
+          </a>
+        </div>
       );
+    };
+
+    const { getByText } = render(<TestLink />, {
+      atiData: atiAnalytics,
+      pageData: pidginData,
+      pageType: STORY_PAGE,
+      pathname: '/pidgin',
+      service: 'pidgin',
+      toggles: defaultToggles,
     });
+
+    await act(() => userEvent.click(getByText('Link')));
+
+    expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+    expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+      'viewability',
+      '',
+      {
+        event: { action: 'select', category: 'viewability' },
+        group: { name: 'article-sty' },
+        item: {
+          link: 'https://www.bbc.com/pidgin/articles/c93gd1yxng1o',
+          name: 'brand',
+        },
+      },
+      undefined,
+      undefined,
+      true,
+    );
+
+    jest.restoreAllMocks();
+  });
+});
+
+describe('Error handling', () => {
+  it('should not throw error and not send event to ATI when no tracking data passed into hook', async () => {
+    const {
+      metadata: { atiAnalytics },
+    } = pidginData;
+
+    const { container, getByText } = render(
+      <TestComponent hookProps={undefined} />,
+      {
+        atiData: atiAnalytics,
+        pageData: pidginData,
+        pageType: STORY_PAGE,
+        pathname: '/pidgin',
+        service: 'pidgin',
+        toggles: defaultToggles,
+      },
+    );
+
+    await act(() => userEvent.click(getByText('Button')));
+
+    expect(container.error).toBeUndefined();
+    expect(global.fetch).not.toHaveBeenCalled();
+  });
+
+  it('should not throw error and not send event to ATI when no pageData is provided from context providers', async () => {
+    const { container, getByText } = render(
+      <TestComponent hookProps={eventTrackingData} />,
+      {
+        atiData: undefined,
+        pageData: undefined,
+        pageType: STORY_PAGE,
+        pathname: '/pidgin',
+        service: 'pidgin',
+        toggles: defaultToggles,
+      },
+    );
+
+    await act(() => userEvent.click(getByText('Button')));
+
+    expect(container.error).toBeUndefined();
+    expect(global.fetch).not.toHaveBeenCalled();
+  });
+
+  it('should not throw error and not send event to ATI when unexpected data passed into hook', async () => {
+    const trackingData = {
+      foo: 'bar',
+    };
+
+    const {
+      metadata: { atiAnalytics },
+    } = pidginData;
+
+    const { container, getByText } = render(
+      <TestComponent hookProps={trackingData} />,
+      {
+        atiData: atiAnalytics,
+        pageData: pidginData,
+        pageType: STORY_PAGE,
+        pathname: '/pidgin',
+        service: 'pidgin',
+        toggles: defaultToggles,
+      },
+    );
+
+    await act(() => userEvent.click(getByText('Button')));
+
+    expect(container.error).toBeUndefined();
+    expect(global.fetch).not.toHaveBeenCalled();
+  });
+
+  it('should not throw error and not send event to ATI when unexpected data type passed into hook', async () => {
+    const trackingData = ['unexpected data type'];
+
+    const {
+      metadata: { atiAnalytics },
+    } = pidginData;
+
+    const { container, getByText } = render(
+      <TestComponent hookProps={trackingData} />,
+      {
+        atiData: atiAnalytics,
+        pageData: pidginData,
+        pageType: STORY_PAGE,
+        pathname: '/pidgin',
+        service: 'pidgin',
+        toggles: defaultToggles,
+      },
+    );
+
+    await act(() => userEvent.click(getByText('Button')));
+
+    expect(container.error).toBeUndefined();
+    expect(global.fetch).not.toHaveBeenCalled();
+  });
+});
+
+describe('Lite Site - Click tracking', () => {
+  it('Returns a valid ati tracking url given the input props', () => {
+    const { result } = renderHook(
+      () =>
+        constructATIUrl({
+          eventTrackingData: {
+            ...eventTrackingData,
+            campaignID: 'custom-campaign',
+          },
+          eventType: 'click',
+          isStatic: true,
+        }),
+      {
+        wrapper,
+      },
+    );
+
+    expect(result.current).toContain(
+      'atc=PUB-[custom-campaign]-[brand]-[]-[CHD=promo::2]-[]-[]-[]-[]&type=AT',
+    );
   });
 });
