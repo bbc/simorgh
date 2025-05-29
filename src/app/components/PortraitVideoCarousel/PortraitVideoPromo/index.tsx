@@ -26,7 +26,7 @@ export default (item: PortraitVideoPromoProps) => {
     translations: { media = DEFAULT_TRANSLATION },
   } = useContext(ServiceContext);
 
-  const imageUrl = images?.[2]?.url ?? defaultImage;
+  const imageUrl = images?.[0]?.url ?? defaultImage;
   const imageUrlTemplate = images?.[0]?.urlTemplate;
   const alt = images?.[0]?.altText || defaultImageAltText;
   const headline = headlines?.promoHeadline || '';

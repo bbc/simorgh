@@ -1,6 +1,6 @@
 import { Theme } from '@emotion/react';
 
-type FuncParams = {
+type GetSrcSetsParams = {
   imageUrlTemplate?: string;
   mq: Theme['mq'];
   imageWidthSmall?: number;
@@ -12,7 +12,7 @@ export default ({
   mq,
   imageWidthSmall = 128,
   imageWidthLarge = 512,
-}: FuncParams) => {
+}: GetSrcSetsParams) => {
   const IMAGE_SRC_SMALL_2X_UPSCALE_WIDTH = imageWidthSmall * 2;
   const IMAGE_SRC_LARGE_2X_UPSCALE_WIDTH = imageWidthLarge * 2;
 
