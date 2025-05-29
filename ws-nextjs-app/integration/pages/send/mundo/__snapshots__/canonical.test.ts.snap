@@ -141,6 +141,20 @@ exports[`Canonical Send Header Navigation link should match text and url 10`] = 
 }
 `;
 
+exports[`Canonical Send Header Navigation link should match text and url 11`] = `
+{
+  "text": "Hay Festival",
+  "url": "/mundo/topics/cr50y7p7qyqt",
+}
+`;
+
+exports[`Canonical Send Header Navigation link should match text and url 12`] = `
+{
+  "text": "Centroamérica cuenta",
+  "url": "/mundo/topics/c404v5z1k8wt",
+}
+`;
+
 exports[`Canonical Send UGC form should render a heading 1`] = `"Escríbenos"`;
 
 exports[`Canonical Send UGC form should render a submit button 1`] = `"Enviar"`;

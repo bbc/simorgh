@@ -246,6 +246,20 @@ exports[`AMP Story Page Header Navigation link should match text and url 10`] = 
 }
 `;
 
+exports[`AMP Story Page Header Navigation link should match text and url 11`] = `
+{
+  "text": "Hay Festival",
+  "url": "/mundo/topics/cr50y7p7qyqt",
+}
+`;
+
+exports[`AMP Story Page Header Navigation link should match text and url 12`] = `
+{
+  "text": "Centroamérica cuenta",
+  "url": "/mundo/topics/c404v5z1k8wt",
+}
+`;
+
 exports[`AMP Story Page Image Caption should match text 1`] = `"Pie de foto, Llegó el día de la salida de Reino Unido de la UE."`;
 
 exports[`AMP Story Page Image should match snapshot 1`] = `
