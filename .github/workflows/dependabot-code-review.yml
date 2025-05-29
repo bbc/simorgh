@@ -1,4 +1,4 @@
-name: Dependabot
+name: Dependabot Review & Approve
 on:
   pull_request:
     # types:
