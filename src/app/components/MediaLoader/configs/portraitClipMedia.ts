@@ -1,5 +1,4 @@
 import moment from 'moment-timezone';
-
 import buildIChefURL from '#lib/utilities/ichefURL';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import {
@@ -28,72 +27,82 @@ export default ({
     'portraitClipMedia',
   );
 
-  const { images, video, type } = portraitClipMediaBlock?.model || {};
-
-  const { source, urlTemplate: locator } = images?.[1] ?? {};
-
-  const originCode = source?.replace('Image', '');
+  const { model = {} } = portraitClipMediaBlock || {};
+  const { video, images, type = 'video' } = model as any;
 
   const versionID = video?.version?.id;
-
-  const clipISO8601Duration = video?.version?.duration;
-
-  const rawDuration = moment.duration(clipISO8601Duration).asSeconds();
-
-  const title = video?.title;
-
-  const videoId = video?.id;
+  const kind = video?.version?.kind || 'programme';
+  const duration = moment
+    .duration(video?.version?.duration || 'PT0S')
+    .asSeconds();
 
   const captionBlock = getCaptionBlock(blocks, 'live');
-
   const caption =
     captionBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
 
-  const kind = video?.version?.kind || 'programme';
+  const holdingImageURL = buildIChefURL({
+    originCode: images?.[1]?.source?.replace('Image', '') ?? '',
+    locator: images?.[1]?.urlTemplate ?? '',
+    resolution: DEFAULT_WIDTH,
+  });
 
-  const guidanceMessage = video?.version?.guidance;
+  // multiple hardcoded minimal playlist to test SMP vertical swipe
+  const playlistItems: PlaylistItem[] = [
+    { versionID, kind, duration },
+    { versionID, kind, duration },
+    { versionID, kind, duration },
+    { versionID, kind, duration },
+    { versionID, kind, duration },
+    { versionID, kind, duration },
+    { versionID, kind, duration },
+    { versionID, kind, duration },
+  ];
 
   const showAds = shouldDisplayAds({
     adsEnabled,
     showAdsBasedOnLocation,
-    duration: rawDuration,
+    duration,
   });
 
-  const embeddingAllowed = video?.isEmbeddingAllowed ?? false;
+  if (showAds) {
+    playlistItems.unshift({ kind: 'advert' });
+  }
 
-  const holdingImageURL = buildIChefURL({
-    originCode,
-    locator,
-    resolution: DEFAULT_WIDTH,
+  const externalEmbedUrl = getExternalEmbedUrl({
+    id,
+    versionID,
+    lang,
   });
-
-  const items: PlaylistItem[] = [{ versionID, kind, duration: rawDuration }];
-
-  if (showAds) items.unshift({ kind: 'advert' });
-
-  const externalEmbedUrl = getExternalEmbedUrl({ id, versionID, lang });
 
   return {
-    mediaType: type || 'video',
+    mediaType: type,
     playerConfig: {
       ...basePlayerConfig,
       ...(externalEmbedUrl && { externalEmbedUrl }),
       autoplay: true,
       playlistObject: {
-        title,
+        title: video?.title,
         summary: caption || '',
         holdingImageURL,
-        items,
-        ...(guidanceMessage && { guidance: guidanceMessage }),
-        ...(embeddingAllowed && { embedRights: 'allowed' }),
+        items: playlistItems,
       },
       ui: {
         ...basePlayerConfig.ui,
+        swipable: {
+          enabled: true,
+          direction: 'Y',
+        },
+        controls: {
+          enabled: true,
+          includeNextButton: true,
+          includePreviousButton: true,
+        },
+
         ...(type === 'audio' && AUDIO_UI_CONFIG),
       },
       statsObject: {
         ...basePlayerConfig.statsObject,
-        ...(videoId && { clipPID: videoId }),
+        ...(video?.id && { clipPID: video.id }),
       },
     },
     showAds,
