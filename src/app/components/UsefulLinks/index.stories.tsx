@@ -11,6 +11,7 @@ import {
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
 import UsefulLinks from '.';
+import metadata from './metadata.json';
 import readme from './README.md';
 
 const getUsefulLinksData = (numberOfItems?: number): Curation => {
@@ -54,6 +55,7 @@ export default {
   Component,
   title: 'Components/UsefulLinks',
   parameters: {
+    metadata,
     docs: { readme },
   },
 };

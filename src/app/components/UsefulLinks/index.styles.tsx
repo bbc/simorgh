@@ -7,11 +7,11 @@ const styles = {
       marginTop: `${spacings.QUADRUPLE}rem`,
       marginBottom: `${spacings.TRIPLE}rem`,
     }),
-  heading: ({ fontSizes, fontVariants, spacings }: Theme) =>
+  heading: ({ fontSizes, fontVariants }: Theme) =>
     css({
       ...fontSizes.doublePica,
       ...fontVariants.sansBold,
-      marginBottom: `${spacings.TRIPLE}rem`,
+      marginBottom: `${pixelsToRem(12)}rem`,
     }),
   unorderedList: ({ spacings, mq }: Theme) =>
     css({
@@ -19,7 +19,7 @@ const styles = {
       margin: 0,
       display: 'grid',
       listStyleType: 'none',
-      gap: `${spacings.TRIPLE}rem`,
+      columnGap: `${spacings.TRIPLE}rem`,
       [mq.GROUP_2_MIN_WIDTH]: {
         gridTemplateColumns: 'repeat(2, 1fr)',
       },
@@ -38,6 +38,8 @@ const styles = {
       textDecoration: 'none',
       ...fontSizes.pica,
       ...fontVariants.sansBold,
+      paddingTop: `${pixelsToRem(12)}rem`,
+      paddingBottom: `${pixelsToRem(12)}rem`,
       '&:visited': {
         color: palette.GREY_6,
       },
@@ -48,8 +50,6 @@ const styles = {
         position: 'absolute',
         right: 0,
         left: 0,
-        top: `${pixelsToRem(-12)}rem`,
-        bottom: `${pixelsToRem(-12)}rem`,
         content: '""',
       },
     }),
