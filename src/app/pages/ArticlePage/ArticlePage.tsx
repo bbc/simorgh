@@ -75,13 +75,6 @@ import ContinueReadingButton from './ContinueReadingButton';
 import ArticleHeadline from './ArticleHeadline';
 import isPortraitVideo from '../utils/isPortraitVideo';
 
-const serviceMapping: Record<string, 'A' | 'B'> = {
-  pidgin: 'A',
-  urdu: 'A',
-  mundo: 'B',
-  arabic: 'B',
-};
-
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
     <ImageWithCaption
@@ -157,7 +150,6 @@ const ArticlePage = ({
   const { isApp, isAmp, isLite } = useContext(RequestContext);
 
   const {
-    service,
     articleAuthor,
     isTrustProjectParticipant,
     showRelatedTopics,
@@ -280,14 +272,8 @@ const ArticlePage = ({
 
   const showTopics = Boolean(showRelatedTopics && topics.length > 0);
 
-  const continueReadingButtonVariation = serviceMapping[service] ?? null;
-
   const showContinueReadingButton = Boolean(
-    continueReadingEnabled &&
-      continueReadingButtonVariation &&
-      !isAmp &&
-      !isLite &&
-      !isApp,
+    continueReadingEnabled && !isAmp && !isLite && !isApp,
   );
 
   return (
@@ -355,7 +341,7 @@ const ArticlePage = ({
               <ContinueReadingButton
                 showAllContent={showAllContent}
                 setShowAllContent={() => setShowAllContent(true)}
-                variation={continueReadingButtonVariation}
+                variation={experimentVariant}
                 liteCTAShows={liteCTAShows}
               />
             )}
