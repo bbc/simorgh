@@ -166,116 +166,116 @@ const ArticlePage = ({
   const experimentVariant = useOptimizelyMvtVariation(
     OPTIMIZELY_CONFIG.ruleKey,
   );
+console.log('Experiment Variant:', experimentVariant);
+const isInExperiment = experimentVariant && experimentVariant !== 'off';
+const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
+const adcampaign = pageData?.metadata?.adCampaignKeyword;
 
-  const isInExperiment = experimentVariant && experimentVariant !== 'off';
+const {
+  metadata: { atiAnalytics },
+  mostRead: mostReadInitialData,
+} = pageData;
 
-  const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
-  const adcampaign = pageData?.metadata?.adCampaignKeyword;
+const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
+const { enabled: liteCTAShows } = useToggle('liteSiteCTA');
 
-  const {
-    metadata: { atiAnalytics },
-    mostRead: mostReadInitialData,
-  } = pageData;
+const headline = getHeadline(pageData) ?? '';
+const description = getSummary(pageData) || getHeadline(pageData);
+const firstPublished = getFirstPublished(pageData);
+const lastPublished = getLastPublished(pageData);
+const aboutTags = getAboutTags(pageData);
+const topics = pageData?.metadata?.topics ?? [];
+const blocks = pageData?.content?.model?.blocks ?? [];
+const startsWithHeading = blocks?.[0]?.type === 'headline' || false;
+const bylineBlock = blocks.find(
+  block => block.type === 'byline',
+) as OptimoBylineBlock;
 
-  const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
-  const { enabled: liteCTAShows } = useToggle('liteSiteCTA');
+const bylineContribBlocks = bylineBlock?.model?.blocks || [];
 
-  const headline = getHeadline(pageData) ?? '';
-  const description = getSummary(pageData) || getHeadline(pageData);
-  const firstPublished = getFirstPublished(pageData);
-  const lastPublished = getLastPublished(pageData);
-  const aboutTags = getAboutTags(pageData);
-  const topics = pageData?.metadata?.topics ?? [];
-  const blocks = pageData?.content?.model?.blocks ?? [];
-  const startsWithHeading = blocks?.[0]?.type === 'headline' || false;
-  const bylineBlock = blocks.find(
-    block => block.type === 'byline',
-  ) as OptimoBylineBlock;
+const bylineLinkedData = bylineExtractor(bylineContribBlocks);
 
-  const bylineContribBlocks = bylineBlock?.model?.blocks || [];
+const hasByline = !!bylineLinkedData;
 
-  const bylineLinkedData = bylineExtractor(bylineContribBlocks);
+const articleAuthorTwitterHandle = hasByline
+  ? getAuthorTwitterHandle(blocks)
+  : null;
 
-  const hasByline = !!bylineLinkedData;
+const taggings = pageData?.metadata?.passport?.taggings ?? [];
+const formats = pageData?.metadata?.passport?.predicates?.formats ?? [];
 
-  const articleAuthorTwitterHandle = hasByline
-    ? getAuthorTwitterHandle(blocks)
-    : null;
+const isPGL = pageData?.metadata?.type === PHOTO_GALLERY_PAGE;
+const isSTY = pageData?.metadata?.type === STORY_PAGE;
+const isCPS = isPGL || isSTY;
+const isTC2Asset = pageData?.metadata?.analyticsLabels?.contentId
+  ?.split(':')
+  ?.includes('topcat');
 
-  const taggings = pageData?.metadata?.passport?.taggings ?? [];
-  const formats = pageData?.metadata?.passport?.predicates?.formats ?? [];
+const atiData = {
+  ...atiAnalytics,
+  ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
+  ...(isInExperiment && { experimentVariant }),
+};
 
-  const isPGL = pageData?.metadata?.type === PHOTO_GALLERY_PAGE;
-  const isSTY = pageData?.metadata?.type === STORY_PAGE;
-  const isCPS = isPGL || isSTY;
-  const isTC2Asset = pageData?.metadata?.analyticsLabels?.contentId
-    ?.split(':')
-    ?.includes('topcat');
+const componentsToRender = {
+  visuallyHiddenHeadline,
+  headline: getHeadlineComponent,
+  subheadline: Headings,
+  audio: MediaLoader,
+  video: getVideoComponent(translations),
+  text,
+  image: getImageComponent(preloadLeadImageToggle),
+  timestamp: getTimestampComponent(
+    hasByline,
+    bylineContribBlocks,
+    firstPublished,
+    lastPublished,
+  ),
+  social: SocialEmbedContainer,
+  embed: UnsupportedEmbed,
+  embedHtml: EmbedHtml,
+  oEmbed: OEmbedLoader,
+  embedImages: EmbedImages,
+  embedUploader: Uploader,
+  group: gist,
+  links: ScrollablePromo,
+  mpu: getMpuComponent(allowAdvertising),
+  wsoj: getWsojComponent,
+  disclaimer: DisclaimerWithPaddingOverride,
+  podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
+};
 
-  const atiData = {
-    ...atiAnalytics,
-    ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
-    ...(isInExperiment && { experimentVariant }),
-  };
+const visuallyHiddenBlock = {
+  id: null,
+  model: { blocks: [singleTextBlock(headline)] },
+  type: 'visuallyHiddenHeadline',
+};
 
-  const componentsToRender = {
-    visuallyHiddenHeadline,
-    headline: getHeadlineComponent,
-    subheadline: Headings,
-    audio: MediaLoader,
-    video: getVideoComponent(translations),
-    text,
-    image: getImageComponent(preloadLeadImageToggle),
-    timestamp: getTimestampComponent(
-      hasByline,
-      bylineContribBlocks,
-      firstPublished,
-      lastPublished,
-    ),
-    social: SocialEmbedContainer,
-    embed: UnsupportedEmbed,
-    embedHtml: EmbedHtml,
-    oEmbed: OEmbedLoader,
-    embedImages: EmbedImages,
-    embedUploader: Uploader,
-    group: gist,
-    links: ScrollablePromo,
-    mpu: getMpuComponent(allowAdvertising),
-    wsoj: getWsojComponent,
-    disclaimer: DisclaimerWithPaddingOverride,
-    podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
-  };
+const articleBlocks = startsWithHeading
+  ? blocks
+  : [visuallyHiddenBlock, ...blocks];
 
-  const visuallyHiddenBlock = {
-    id: null,
-    model: { blocks: [singleTextBlock(headline)] },
-    type: 'visuallyHiddenHeadline',
-  };
+const promoImageBlocks =
+  pageData?.promo?.images?.defaultPromoImage?.blocks ?? [];
 
-  const articleBlocks = startsWithHeading
-    ? blocks
-    : [visuallyHiddenBlock, ...blocks];
+const promoImageAltTextBlock = filterForBlockType(promoImageBlocks, 'altText');
 
-  const promoImageBlocks =
-    pageData?.promo?.images?.defaultPromoImage?.blocks ?? [];
+const promoImageRawBlock = filterForBlockType(promoImageBlocks, 'rawImage');
+const promoImageAltText =
+  promoImageAltTextBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
 
-  const promoImageAltTextBlock = filterForBlockType(
-    promoImageBlocks,
-    'altText',
-  );
+const promoImage = promoImageRawBlock?.model?.locator;
 
-  const promoImageRawBlock = filterForBlockType(promoImageBlocks, 'rawImage');
-  const promoImageAltText =
-    promoImageAltTextBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
+const showTopics = Boolean(showRelatedTopics && topics.length > 0);
 
-  const promoImage = promoImageRawBlock?.model?.locator;
-
-  const showTopics = Boolean(showRelatedTopics && topics.length > 0);
-
-  const showContinueReadingButton = Boolean(
-    continueReadingEnabled && !isAmp && !isLite && !isApp,
-  );
-
+const showContinueReadingButton = Boolean(
+  !isAmp &&
+    !isLite &&
+    !isApp &&
+    (experimentVariant === 'read-more-a' ||
+      experimentVariant === 'read-more-b'),
+);
+console.log('showContinueReadingButton:', showContinueReadingButton);
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics atiData={atiData} />
