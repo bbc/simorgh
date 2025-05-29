@@ -1,6 +1,6 @@
 FROM node:22-alpine
 
-RUN apk add --no-cache chromium
+RUN apk add chromium
 
 RUN npm install -g @lhci/cli@0.14.x
 
