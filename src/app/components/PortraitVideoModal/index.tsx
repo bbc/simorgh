@@ -21,15 +21,10 @@ interface PortraitVideoModalProps {
       urlTemplate?: string;
     }[];
   }[];
-  initialVideoIndex: number;
   onClose: () => void;
 }
 
-const PortraitVideoModal = ({
-  items,
-  initialVideoIndex,
-  onClose,
-}: PortraitVideoModalProps) => {
+const PortraitVideoModal = ({ items, onClose }: PortraitVideoModalProps) => {
   const modalRef = useRef<HTMLDialogElement>(null);
 
   const blocks: PortraitClipMediaBlock[] = items.map(item => ({
