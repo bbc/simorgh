@@ -6,27 +6,24 @@ import { getDestination } from '#app/lib/analyticsUtils';
 import { ATIAnalyticsProps } from '../types';
 
 type GeoVariantEvaluationParamters = {
-  app_name: string;
+  appName: string;
   destination: string;
   ampAnalyticsRequestConfiguration: {
     base: string;
     pageview: string;
-  }
-}
+  };
+};
 
-const useGeoVariantDestinationForSupportedServices = ({
-  app_name,
+const applyGeoVariantDestinationForSupportedServices = ({
+  appName,
   destination,
   ampAnalyticsRequestConfiguration,
 }: GeoVariantEvaluationParamters) => {
-  if(![
-    'news',
-    'news-cymrufyw',
-    'news-naidheachdan',
-    'sport',
-  ].includes(app_name)) {
+  if (
+    !['news', 'news-cymrufyw', 'news-naidheachdan', 'sport'].includes(appName)
+  ) {
     return ampAnalyticsRequestConfiguration;
-  };
+  }
 
   const { pageview } = ampAnalyticsRequestConfiguration;
   const ampDestination = getDestination('amp', destination);
@@ -34,7 +31,7 @@ const useGeoVariantDestinationForSupportedServices = ({
   return {
     ...ampAnalyticsRequestConfiguration,
     pageview: pageview.replace(/s=\d+&/, `s=${ampDestination}&`), // Use destination derived via amp-geo
-  }
+  };
 };
 
 const ampAnalyticsJson = ({
@@ -49,7 +46,7 @@ const ampAnalyticsJson = ({
         pageview: '${base}' + pageviewParams,
       };
 
-  const app_name =
+  const appName =
     reverbParams?.params.page.additionalProperties?.app_name ?? '';
   const destination = reverbParams?.params.page.destination ?? '';
 
@@ -59,8 +56,8 @@ const ampAnalyticsJson = ({
       xhrpost: false,
       image: true,
     },
-    requests: useGeoVariantDestinationForSupportedServices({
-      app_name,
+    requests: applyGeoVariantDestinationForSupportedServices({
+      appName,
       destination,
       ampAnalyticsRequestConfiguration,
     }),

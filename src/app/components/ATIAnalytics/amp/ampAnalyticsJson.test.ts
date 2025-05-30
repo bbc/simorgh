@@ -1,3 +1,4 @@
+/* eslint-disable no-template-curly-in-string */
 import { ReverbBeaconConfig } from '../types';
 import ampAnalyticsJson from './ampAnalyticsJson';
 
@@ -31,13 +32,10 @@ describe('AMP ATI Analytics', () => {
           name: 'gahuza.articles.cly1jw4x585o.page',
           producer: 'GAHUZA',
           additionalProperties: {
-            app_name: 'news-gahuza',
             app_type: 'amp',
             content_language: 'rw',
             product_platform: null,
-            // eslint-disable-next-line no-template-curly-in-string
             referrer_url: '${documentReferrer}',
-            // eslint-disable-next-line no-template-curly-in-string
             x5: '${sourceUrl}',
             x8: 'simorgh',
             x9: "US%20irashishikariza%20u%20Rwanda%20na%20DR%20Congo%20kugera%20ku%20mahoro%20bikazana%20n'ishoramari%20rya%20miliyari%20z'amadorari",
@@ -62,13 +60,25 @@ describe('AMP ATI Analytics', () => {
     };
 
     it.each`
-      environment | destination                 | baseUrl
-      ${'local'}  | ${'WS_NEWS_LANGUAGES_TEST'} | ${'https://logws1363.ati-host.net/hit.xiti?'}
-      ${'test'}   | ${'WS_NEWS_LANGUAGES_TEST'} | ${'https://logws1363.ati-host.net/hit.xiti?'}
-      ${'live'}   | ${'WS_NEWS_LANGUAGES'}      | ${'https://a1.api.bbc.co.uk/hit.xiti?'}
+      environment | destination                 | appName                | baseUrl
+      ${'local'}  | ${'WS_NEWS_LANGUAGES_TEST'} | ${'news-gahuza'}       | ${'https://logws1363.ati-host.net/hit.xiti?'}
+      ${'test'}   | ${'WS_NEWS_LANGUAGES_TEST'} | ${'news-gahuza'}       | ${'https://logws1363.ati-host.net/hit.xiti?'}
+      ${'live'}   | ${'WS_NEWS_LANGUAGES'}      | ${'news-gahuza'}       | ${'https://a1.api.bbc.co.uk/hit.xiti?'}
+      ${'test'}   | ${'NEWS_PS'}                | ${'news'}              | ${'https://logws1363.ati-host.net/hit.xiti?'}
+      ${'live'}   | ${'NEWS_PS_TEST'}           | ${'news'}              | ${'https://a1.api.bbc.co.uk/hit.xiti?'}
+      ${'test'}   | ${'NEWS_LANGUAGES_PS'}      | ${'news-cymrufyw'}     | ${'https://logws1363.ati-host.net/hit.xiti?'}
+      ${'live'}   | ${'NEWS_LANGUAGES_PS_TEST'} | ${'news-cymrufyw'}     | ${'https://a1.api.bbc.co.uk/hit.xiti?'}
+      ${'test'}   | ${'NEWS_LANGUAGES_PS'}      | ${'news-naidheachdan'} | ${'https://logws1363.ati-host.net/hit.xiti?'}
+      ${'live'}   | ${'NEWS_LANGUAGES_PS_TEST'} | ${'news-naidheachdan'} | ${'https://a1.api.bbc.co.uk/hit.xiti?'}
+      ${'test'}   | ${'PS_HOMEPAGE'}            | ${'scotland'}          | ${'https://logws1363.ati-host.net/hit.xiti?'}
+      ${'live'}   | ${'PS_HOMEPAGE_TEST'}       | ${'scotland'}          | ${'https://a1.api.bbc.co.uk/hit.xiti?'}
+      ${'test'}   | ${'NEWSROUND'}              | ${'newsround'}         | ${'https://logws1363.ati-host.net/hit.xiti?'}
+      ${'live'}   | ${'NEWSROUND_TEST'}         | ${'newsround'}         | ${'https://a1.api.bbc.co.uk/hit.xiti?'}
+      ${'test'}   | ${'SPORT_PS'}               | ${'sport'}             | ${'https://logws1363.ati-host.net/hit.xiti?'}
+      ${'live'}   | ${'SPORT_PS_TEST'}          | ${'sport'}             | ${'https://a1.api.bbc.co.uk/hit.xiti?'}
     `(
-      'should match this JSON structure for environment - $environment',
-      ({ environment, destination, baseUrl }) => {
+      'should match this JSON structure for destination - $destination and app name - $appName in environment - $environment',
+      ({ environment, destination, appName, baseUrl }) => {
         const reverbParams = {
           ...mockReverbParams,
           params: {
@@ -77,6 +87,10 @@ describe('AMP ATI Analytics', () => {
             page: {
               ...mockReverbParams.params.page,
               destination,
+              additionalProperties: {
+                ...mockReverbParams.params.page.additionalProperties,
+                app_name: appName,
+              },
             },
           },
         };
@@ -84,8 +98,24 @@ describe('AMP ATI Analytics', () => {
         const expectedDestination: { [key: string]: string } = {
           WS_NEWS_LANGUAGES_TEST: '598343',
           WS_NEWS_LANGUAGES: '598342',
+          NEWS_PS:
+            '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598285, 598287)',
+          NEWS_PS_TEST:
+            '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598286, 598288)',
+          NEWS_LANGUAGES_PS:
+            '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598291, 598289)',
+          NEWS_LANGUAGES_PS_TEST:
+            '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598292, 598290)',
+          PS_HOMEPAGE: '598273',
+          PS_HOMEPAGE_TEST: '598274',
+          NEWSROUND: '598293',
+          NEWSROUND_TEST: '598294',
+          SPORT_PS:
+            '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598310, 598308)',
+          SPORT_PS_TEST:
+            '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598311, 598309)',
         };
-        const expectedPageViewParams = `\${base}s=${expectedDestination[destination]}&s2=40&p=gahuza.articles.cly1jw4x585o.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Aoptimo%3Aasset%3Acly1jw4x585o]&x2=[amp]&x3=[news-gahuza]&x4=[rw]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[US%2520irashishikariza%2520u%2520Rwanda%2520na%2520DR%2520Congo%2520kugera%2520ku%2520mahoro%2520bikazana%2520n'ishoramari%2520rya%2520miliyari%2520z'amadorari]&x11=[2025-05-02T07%3A00%3A25.419Z]&x12=[2025-05-02T07%3A00%3A25.419Z]&x13=[Democratic%2BRepublic%2Bof%2BCongo~Rwanda~March%2B23%2BMovement~M23%2Boffensive]&x14=[3548f44f-46f5-4e6e-8628-3f668f161691~8125f2a9-3259-4f35-ab75-d9a6577fdc88~b03e7bfd-9a46-4053-aeed-f9f55f5e5567~c78c7532-43b3-490d-ad5b-0fc47b906e42]&x17=[Democratic%2BRepublic%2Bof%2BCongo~Rwanda~March%2B23%2BMovement~M23%2Boffensive]&ref=\${documentReferrer}`;
+        const expectedPageViewParams = `\${base}s=${expectedDestination[destination]}&s2=40&p=gahuza.articles.cly1jw4x585o.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Aoptimo%3Aasset%3Acly1jw4x585o]&x2=[amp]&x3=[${appName}]&x4=[rw]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[US%2520irashishikariza%2520u%2520Rwanda%2520na%2520DR%2520Congo%2520kugera%2520ku%2520mahoro%2520bikazana%2520n'ishoramari%2520rya%2520miliyari%2520z'amadorari]&x11=[2025-05-02T07%3A00%3A25.419Z]&x12=[2025-05-02T07%3A00%3A25.419Z]&x13=[Democratic%2BRepublic%2Bof%2BCongo~Rwanda~March%2B23%2BMovement~M23%2Boffensive]&x14=[3548f44f-46f5-4e6e-8628-3f668f161691~8125f2a9-3259-4f35-ab75-d9a6577fdc88~b03e7bfd-9a46-4053-aeed-f9f55f5e5567~c78c7532-43b3-490d-ad5b-0fc47b906e42]&x17=[Democratic%2BRepublic%2Bof%2BCongo~Rwanda~March%2B23%2BMovement~M23%2Boffensive]&ref=\${documentReferrer}`;
 
         expect(
           ampAnalyticsJson({
