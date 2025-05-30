@@ -62,8 +62,6 @@ export const MostReadLink = ({
     OPTIMIZELY_CONFIG.flagKeys[experimentFlagKey].flagKey,
   );
 
-  console.log('myExperiementVariation', myExperiementVariation);
-
   let myExperimentText;
 
   if (myExperiementVariation != null) {

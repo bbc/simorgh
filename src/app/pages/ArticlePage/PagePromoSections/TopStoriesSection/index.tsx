@@ -2,6 +2,7 @@
 
 import { jsx, useTheme } from '@emotion/react';
 import { useContext } from 'react';
+import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 import useViewTracker from '#hooks/useViewTracker';
 import { EventTrackingBlock } from '#app/models/types/eventTracking';
 import SectionLabel from '#psammead/psammead-section-label/src';
@@ -62,6 +63,7 @@ const TopStoriesSection = ({
 }) => {
   const { translations, script, service } = useContext(ServiceContext);
   const { optimizely } = useContext(OptimizelyContext);
+  const experimentFlagKey = 'dummy_experiment_1';
 
   const eventTrackingData = {
     block: {
@@ -72,7 +74,25 @@ const TopStoriesSection = ({
     },
   };
   const eventTrackingDataSend = eventTrackingData?.block;
-  const viewTracker = useViewTracker(eventTrackingDataSend);
+  const viewTracker = useViewTracker(
+    eventTrackingDataSend,
+    experimentFlagKey,
+    true,
+  );
+
+  // added in dummy ab test code
+  const myExperiementVariation = useOptimizelyVariation(
+    // keeping it simple
+    experimentFlagKey,
+  );
+
+  let myExperimentText;
+
+  if (myExperiementVariation != null) {
+    myExperimentText =
+      (myExperiementVariation as unknown as string) ??
+      'No Experiment Variation Found';
+  }
 
   const {
     palette: { GREY_2 },
@@ -131,6 +151,7 @@ const TopStoriesSection = ({
           )}
         </PromoList>
       )}
+      <span>{myExperimentText}</span>
     </section>
   );
 };

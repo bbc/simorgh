@@ -26,7 +26,7 @@ const OPTIMIZELY_CONFIG = {
       // This is the key for the 'rule' that is attached to the experiment
       flagKey: 'dummy_experiment_1',
       ruleKey: 'dummy_test_ab_1',
-      viewClickAttributeId: 'x',
+      viewClickAttributeId: 'top-stories', // check
       variationMappings: {
         control: 'control',
         variation_1: 'variation_1',

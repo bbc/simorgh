@@ -45,23 +45,16 @@ const useClickTrackerHandler = (
 
   const { optimizely } = useContext(OptimizelyContext);
 
-  // const optimizelyVariation = useOptimizelyMvtVariation(
-  //   // Updated
-  //   OPTIMIZELY_CONFIG.flagKeys[experimentFlagKey],
-  // );
   let optimizelyVariation;
 
   if (experimentFlagKey) {
     if (isClientSide) {
       // TODO - better approach
       // eslint-disable-next-line react-hooks/rules-of-hooks
-      optimizelyVariation = useOptimizelyVariation(
-        // @ts-expect-error - TODO - I think it's because config is not typed
-        experimentFlagKey,
-      );
+      optimizelyVariation = useOptimizelyVariation(experimentFlagKey);
       console.log(
-        'optimizelyVariation in clickTracker, experiment, clientside',
-        optimizelyVariation,
+        'clickTracker, experiment, clientside',
+        `${experimentFlagKey} - ${optimizelyVariation} - ${componentName}`,
       );
     }
     // TODO - better approach

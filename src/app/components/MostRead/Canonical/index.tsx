@@ -37,7 +37,11 @@ const MostRead = ({
     mostRead: { lastUpdated, numberOfItems = 5 },
   } = useContext(ServiceContext);
 
-  const viewTracker = useViewTracker(eventTrackingData, experimentFlagKey);
+  const viewTracker = useViewTracker(
+    eventTrackingData,
+    experimentFlagKey,
+    true,
+  );
 
   const locale = serviceDatetimeLocale || datetimeLocale;
 
