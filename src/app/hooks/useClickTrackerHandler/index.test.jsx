@@ -608,14 +608,45 @@ describe('Click tracking - Reverb', () => {
     );
   });
 
-  it('should trigger a beacon for a click event', async () => {
+  it.each([
+    {
+      title: 'should trigger a beacon for a click event',
+      trackingData: { ...eventTrackingData },
+      expectedItemEvent: {
+        link: 'https://www.bbc.com/pidgin/articles/c93gd1yxng1o',
+        name: 'brand',
+      },
+    },
+    {
+      title: 'should trigger a beacon for an item level click event',
+      trackingData: {
+        ...eventTrackingData,
+        componentName: 'portrait-video',
+        itemTracker: {
+          type: 'portrait-video-promo',
+          text: 'Rollercoaster facts... while riding a rollercoaster',
+          position: 1,
+          duration: 73000,
+          resourceId: 'test-resource-id',
+        },
+      },
+      expectedItemEvent: {
+        duration: 73000,
+        link: 'https://www.bbc.com/pidgin/articles/c93gd1yxng1o',
+        name: 'portrait-video',
+        position: 1,
+        resource_id: 'test-resource-id',
+        text: 'Rollercoaster facts... while riding a rollercoaster',
+        type: 'portrait-video-promo',
+      },
+    },
+  ])('$title', async ({ trackingData, expectedItemEvent }) => {
     const {
       metadata: { atiAnalytics },
     } = pidginData;
 
     const TestLink = () => {
-      const { onClick: handleClick } =
-        useClickTrackerHandler(eventTrackingData);
+      const { onClick: handleClick } = useClickTrackerHandler(trackingData);
 
       return (
         <div>
@@ -647,10 +678,7 @@ describe('Click tracking - Reverb', () => {
       {
         event: { action: 'select', category: 'viewability' },
         group: { name: 'article-sty' },
-        item: {
-          link: 'https://www.bbc.com/pidgin/articles/c93gd1yxng1o',
-          name: 'brand',
-        },
+        item: expectedItemEvent,
       },
       undefined,
       undefined,
