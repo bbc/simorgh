@@ -45,7 +45,7 @@ export default function AmpRenderer({
         {AMP_JS}
         {AMP_GEO_SCRIPT}
         {AMP_ANALYTICS_JS}
-        {!showCookieBannerBasedOnCountry && <>{AMP_CONSENT_JS}</>}
+        {!showCookieBannerBasedOnCountry && AMP_CONSENT_JS}
       </head>
       <body className="amp-geo-pending">
         <div id="root" dangerouslySetInnerHTML={{ __html: html || '' }} />

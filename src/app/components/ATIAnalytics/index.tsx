@@ -3,9 +3,9 @@ import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import CanonicalATIAnalytics from './canonical';
 import AmpATIAnalytics from './amp';
+import AmpGeo from '../../legacy/components/AmpGeo';
 import { ATIProps } from './types';
 import { buildATIUrl, buildReverbParams } from './params';
-import AmpGeo from '#app/legacy/components/AmpGeo';
 
 const ATIAnalytics = ({ atiData = {} }: ATIProps) => {
   const requestContext = useContext(RequestContext);
