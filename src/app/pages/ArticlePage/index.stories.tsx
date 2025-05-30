@@ -117,7 +117,6 @@ const ComponentWithServiceContext = ({
   service = 'news',
   podcastEnabled = false,
   electionBanner = false,
-  continueReadingEnabled = false,
   articleLiteSiteLinkEnabled = false,
 }: Props) => {
   const memoisedServiceContext = useMemo(
@@ -150,7 +149,6 @@ const ComponentWithServiceContext = ({
               secondaryColumn: data.secondaryData,
               mostRead: data.secondaryData.mostRead,
             }}
-            continueReadingEnabled={continueReadingEnabled}
           />
         </ThemeProvider>
       </ServiceContext.Provider>
