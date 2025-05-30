@@ -66,14 +66,14 @@ export const service: DefaultServiceConfig = {
       relatedTopics: 'اړونده مطالب',
       navMenuText: 'برخې',
       liteSite: {
-        onboardingMessage: 
+        onboardingMessage:
           'تاسې د وېب‌سایټ داسې بڼه ګورئ چې یوازې متن لري او لږ انټرنېټ کاروي. که غواړئ عکسونه او ویډیوګانې وګورئ، نو د وېب‌سایټ اصلي (لومړنۍ) بڼې ته ورشئ.',
         toMainSite: 'د وېب‌سایټ اصلي بڼې ته مې وروله',
         informationPage:
           'د وېب‌سایټ دې بڼې په اړه چې ډېر انټرنېټ نه مصرفوي نور معلومات دلته موندلای شئ.',
         informationPageLink: 'https://www.bbc.com/pashto/articles/ce9vxxy2zkpo',
         dataSaving: 'دې لپاره چې انټرنېټ مو لږ مصرف شي، یوازې متن ولولئ',
-        articleDataSavingLinkText: 
+        articleDataSavingLinkText:
           'دې لپاره چې انټرنېټ مو لږ مصرف شي، یوازې متن ولولئ',
       },
       mediaAssetPage: {
