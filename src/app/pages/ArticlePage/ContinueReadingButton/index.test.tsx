@@ -19,7 +19,7 @@ describe('ContinueReadingButton', () => {
       <ContinueReadingButton
         showAllContent={false}
         setShowAllContent={mockSetShowAllContent}
-        variation="read-more-a"
+        variation="read_more_a"
       />,
     );
 
@@ -31,19 +31,19 @@ describe('ContinueReadingButton', () => {
       <ContinueReadingButton
         showAllContent
         setShowAllContent={mockSetShowAllContent}
-        variation="read-more-a"
+        variation="read_more_a"
       />,
     );
 
     expect(queryByTestId('read-more-button')).not.toBeInTheDocument();
   });
 
-  it('applies the correct styles for variation read-more-a', () => {
+  it('applies the correct styles for variation read_more_a', () => {
     const { getByTestId } = render(
       <ContinueReadingButton
         showAllContent={false}
         setShowAllContent={mockSetShowAllContent}
-        variation="read-more-a"
+        variation="read_more_a"
       />,
     );
 
@@ -51,12 +51,12 @@ describe('ContinueReadingButton', () => {
     expect(button).toHaveStyle('background-color: #141414');
   });
 
-  it('applies the correct styles for variation read-more-a-and-top-stories', () => {
+  it('applies the correct styles for variation read_more_a_and_top_stories', () => {
     const { getByTestId } = render(
       <ContinueReadingButton
         showAllContent={false}
         setShowAllContent={mockSetShowAllContent}
-        variation="read-more-a-and-top-stories"
+        variation="read_more_a_and_top_stories"
       />,
     );
 
@@ -64,12 +64,12 @@ describe('ContinueReadingButton', () => {
     expect(button).toHaveStyle('background-color: #141414');
   });
 
-  it('applies the correct styles for variation read-more-b', () => {
+  it('applies the correct styles for variation read_more_b', () => {
     const { getByTestId } = render(
       <ContinueReadingButton
         showAllContent={false}
         setShowAllContent={mockSetShowAllContent}
-        variation="read-more-b"
+        variation="read_more_b"
       />,
     );
 
@@ -77,12 +77,12 @@ describe('ContinueReadingButton', () => {
     expect(button).toHaveStyle('background-color: #F6F6F6');
   });
 
-  it('renders the SVG icon when variation is read-more-b', () => {
+  it('renders the SVG icon when variation is read_more_b', () => {
     const { container } = render(
       <ContinueReadingButton
         showAllContent={false}
         setShowAllContent={mockSetShowAllContent}
-        variation="read-more-b"
+        variation="read_more_b"
       />,
     );
 
@@ -90,12 +90,12 @@ describe('ContinueReadingButton', () => {
     expect(svg).toBeInTheDocument();
   });
 
-  it('does not render the SVG icon when variation is read-more-b', () => {
+  it('does not render the SVG icon when variation is read_more_b', () => {
     const { container } = render(
       <ContinueReadingButton
         showAllContent={false}
         setShowAllContent={mockSetShowAllContent}
-        variation="read-more-a"
+        variation="read_more_a"
       />,
     );
 
@@ -103,12 +103,12 @@ describe('ContinueReadingButton', () => {
     expect(svg).not.toBeInTheDocument();
   });
 
-  it('applies border-bottom for variation read-more-b', () => {
+  it('applies border-bottom for variation read_more_b', () => {
     const { getByTestId } = render(
       <ContinueReadingButton
         showAllContent={false}
         setShowAllContent={mockSetShowAllContent}
-        variation="read-more-b"
+        variation="read_more_b"
       />,
     );
 
@@ -116,12 +116,12 @@ describe('ContinueReadingButton', () => {
     expect(button).toHaveStyle('border-bottom: 0.0625rem solid #B0B2B4');
   });
 
-  it('does not apply border-bottom for variation read-more-b', () => {
+  it('does not apply border-bottom for variation read_more_b', () => {
     const { getByTestId } = render(
       <ContinueReadingButton
         showAllContent={false}
         setShowAllContent={mockSetShowAllContent}
-        variation="read-more-a"
+        variation="read_more_a"
       />,
     );
 
@@ -143,7 +143,7 @@ describe('ContinueReadingButton', () => {
           <ContinueReadingButton
             showAllContent={false}
             setShowAllContent={mockSetShowAllContent}
-            variation="read-more-a"
+            variation="read_more_a"
           />,
         );
 
@@ -167,7 +167,7 @@ describe('ContinueReadingButton', () => {
           <ContinueReadingButton
             showAllContent={false}
             setShowAllContent={mockSetShowAllContent}
-            variation="read-more-a"
+            variation="read_more_a"
           />,
         );
 
@@ -179,7 +179,7 @@ describe('ContinueReadingButton', () => {
           <ContinueReadingButton
             showAllContent={false}
             setShowAllContent={mockSetShowAllContent}
-            variation="read-more-a"
+            variation="read_more_a"
           />,
         );
 

@@ -139,12 +139,7 @@ const getVideoComponent =
     );
   };
 
-const ArticlePage = ({
-  pageData,
-}: {
-  pageData: Article;
-  continueReadingEnabled?: boolean;
-}) => {
+const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const { isApp, isAmp, isLite } = useContext(RequestContext);
 
@@ -274,11 +269,10 @@ const ArticlePage = ({
     !isAmp &&
       !isLite &&
       !isApp &&
-      ['read-more-a', 'read-more-b', 'read-more-a-and-top-stories'].includes(
+      ['read_more_a', 'read_more_b', 'read_more_a_and_top_stories'].includes(
         experimentVariant,
       ),
   );
-
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics atiData={atiData} />
