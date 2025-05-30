@@ -2,6 +2,7 @@
 import { useContext, useCallback, useState } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
 import useOptimizelyMvtVariation from '#app/hooks/useOptimizelyMvtVariation';
+import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
 import constructStaticATIUrl from '#app/lib/analyticsUtils/staticATITracking/constructATIUrl';
 import {
@@ -19,6 +20,7 @@ import { isValidClick } from './clickTypes';
 const useClickTrackerHandler = (
   eventTrackingData = {},
   experimentFlagKey = '',
+  isClientSide = false,
 ) => {
   const {
     pageIdentifier,
@@ -43,10 +45,32 @@ const useClickTrackerHandler = (
 
   const { optimizely } = useContext(OptimizelyContext);
 
-  const optimizelyVariation = useOptimizelyMvtVariation(
-    // Updated
-    OPTIMIZELY_CONFIG.flagKeys[experimentFlagKey],
-  );
+  // const optimizelyVariation = useOptimizelyMvtVariation(
+  //   // Updated
+  //   OPTIMIZELY_CONFIG.flagKeys[experimentFlagKey],
+  // );
+  let optimizelyVariation;
+
+  if (experimentFlagKey) {
+    if (isClientSide) {
+      // TODO - better approach
+      // eslint-disable-next-line react-hooks/rules-of-hooks
+      optimizelyVariation = useOptimizelyVariation(
+        // @ts-expect-error - TODO - I think it's because config is not typed
+        experimentFlagKey,
+      );
+      console.log(
+        'optimizelyVariation in clickTracker, experiment, clientside',
+        optimizelyVariation,
+      );
+    }
+    // TODO - better approach
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    optimizelyVariation = useOptimizelyMvtVariation(
+      // @ts-expect-error - TODO - I think it's because config is not typed
+      OPTIMIZELY_CONFIG.flagKeys[experimentFlagKey].flagKey,
+    );
+  }
 
   return useCallback(
     async event => {
@@ -142,13 +166,18 @@ const useClickTrackerHandler = (
   );
 };
 
-export default (eventTrackingData = {}, experimentFlagKey = '') => {
+export default (
+  eventTrackingData = {},
+  experimentFlagKey = '',
+  isClientSide = false,
+) => {
   const { isAmp } = useContext(RequestContext);
   const isHydrated = useHydrationDetection();
 
   const clickTracker = useClickTrackerHandler(
     eventTrackingData,
     experimentFlagKey,
+    isClientSide,
   );
   // Don't think we need experiment here?
   const staticAtiUrl = constructStaticATIUrl({

@@ -4,6 +4,7 @@ const OPTIMIZELY_CONFIG = {
     // This is the key of the whole experiment
     header_a_a_test: {
       // This is the key for the 'rule' that is attached to the experiment
+      flagKey: 'header_a_a_test',
       ruleKey: 'header_a_a_test',
       variationMappings: {
         on: 'on',
@@ -12,6 +13,7 @@ const OPTIMIZELY_CONFIG = {
     },
     dummy_experiment: {
       // This is the key for the 'rule' that is attached to the experiment
+      flagKey: 'dummy_experiment',
       ruleKey: 'dummy_test_ab',
       viewClickAttributeId: 'most-read', // check
       variationMappings: {
@@ -22,6 +24,7 @@ const OPTIMIZELY_CONFIG = {
     },
     dummy_experiment_1: {
       // This is the key for the 'rule' that is attached to the experiment
+      flagKey: 'dummy_experiment_1',
       ruleKey: 'dummy_test_ab_1',
       viewClickAttributeId: 'x',
       variationMappings: {

@@ -52,18 +52,15 @@ export const MostReadLink = ({
   const clickTrackerHandler = useClickTrackerHandler(
     eventTrackingData,
     experimentFlagKey,
+    // isClientSide
+    true,
   );
 
   // added in dummy ab test code
   const myExperiementVariation = useOptimizelyVariation(
     // @ts-expect-error - TODO - fix type issue
-    OPTIMIZELY_CONFIG.flagKeys.experimentFlagKey,
+    OPTIMIZELY_CONFIG.flagKeys[experimentFlagKey].flagKey,
   );
-
-  // // added in dummy ab test code
-  // const myExperiementVariation = useOptimizelyVariation(
-  //   OPTIMIZELY_CONFIG.flagKeys.dummy_experiment,
-  // );
 
   console.log('myExperiementVariation', myExperiementVariation);
 

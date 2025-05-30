@@ -6,6 +6,7 @@ import { useContext, useEffect, useState, useRef, useCallback } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { OptimizelyContext } from '@optimizely/react-sdk';
 import useOptimizelyMvtVariation from '#app/hooks/useOptimizelyMvtVariation';
+import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 import {
   STATIC_ATI_VIEW_TRACKING,
   VIEW_EVENT,
@@ -24,6 +25,7 @@ const MIN_VIEWED_PERCENT = 0.5;
 const getComponentViewTracker = (
   eventTrackingData?: EventTrackingData,
   experimentFlagKey?: string,
+  isClientSide?: boolean,
 ) => {
   const {
     componentName,
@@ -45,13 +47,22 @@ const getComponentViewTracker = (
 
   const { optimizely } = useContext(OptimizelyContext);
 
-  let optimizelyVariation = '';
+  let optimizelyVariation: any;
 
   if (experimentFlagKey) {
+    if (isClientSide) {
+      optimizelyVariation = useOptimizelyVariation(
+        // @ts-expect-error - TODO - I think it's because config is not typed
+        OPTIMIZELY_CONFIG.flagKeys[experimentFlagKey].flagKey,
+      );
+    }
     optimizelyVariation = useOptimizelyMvtVariation(
       // @ts-expect-error - TODO - I think it's because config is not typed
-      OPTIMIZELY_CONFIG.flagKeys[experimentFlagKey],
+      OPTIMIZELY_CONFIG.flagKeys[experimentFlagKey].flagKey,
     );
+  }
+  if (experimentFlagKey) {
+    console.log("I'm in useViewTracker", optimizelyVariation);
   }
 
   const observer = useRef(null);
@@ -189,12 +200,14 @@ const getComponentViewTracker = (
 export default (
   eventTrackingData?: EventTrackingData,
   experimentFlagKey?: string,
+  isClientSide?: boolean,
 ): any => {
   const { isLite } = useContext(RequestContext);
 
   const viewTracker = getComponentViewTracker(
     eventTrackingData,
     experimentFlagKey,
+    isClientSide,
   );
 
   // don't think I need experimentFlagKey here
