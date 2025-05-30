@@ -15,12 +15,12 @@ export default () => {
         document.querySelector(`head script[src="${ampScript}"]`),
       ).toBeInTheDocument();
     });
+  });
 
-    it('AMP Geo config', () => {
-      expect(
-        document.querySelector('body amp-geo > script[type="application/json"]')
-          .textContent,
-      ).toMatchSnapshot();
-    });
+  it('AMP Geo config', () => {
+    expect(
+      document.querySelector('body amp-geo > script[type="application/json"]')
+        .textContent,
+    ).toMatchSnapshot();
   });
 };
