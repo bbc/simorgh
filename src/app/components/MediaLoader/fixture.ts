@@ -335,6 +335,55 @@ export const livePageClipMediaBlock = {
   },
 };
 
+export const homePagePortraitClipMediaBlocks = [
+  {
+    type: 'portraitClipMedia',
+    model: {
+      video: {
+        id: 'p0abc001',
+        title: 'Portrait Video 1',
+        isEmbeddingAllowed: true,
+        version: {
+          id: 'p0abc002',
+          duration: 'PT1M',
+          kind: 'programme',
+          territories: ['bbc_world_service'],
+        },
+      },
+      images: [
+        {},
+        {
+          urlTemplate: 'p0abc001.jpg',
+          source: 'www.test.bbc.com/aportraitmediathing',
+        },
+      ],
+    },
+  },
+  {
+    type: 'portraitClipMedia',
+    model: {
+      video: {
+        id: 'p0abc003',
+        title: 'Portrait Video 2',
+        isEmbeddingAllowed: true,
+        version: {
+          id: 'p0abc004',
+          duration: 'PT2M',
+          kind: 'programme',
+          territories: ['bbc_world_service'],
+        },
+      },
+      images: [
+        {},
+        {
+          urlTemplate: 'p0abc002.jpg',
+          source: 'www.test.bbc.com/aportraitmediathing',
+        },
+      ],
+    },
+  },
+];
+
 export const onDemandTvBlock = {
   type: 'tv',
   model: {

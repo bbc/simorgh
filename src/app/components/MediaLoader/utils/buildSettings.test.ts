@@ -18,6 +18,7 @@ import buildSettings from './buildSettings';
 import {
   aresMediaBlocks,
   clipMediaBlocks,
+  homePagePortraitClipMediaBlocks,
   buildAresMediaPlayerBlock,
   aresMediaBlock,
   aresMediaLiveStreamBlocks,
@@ -132,6 +133,55 @@ describe('buildSettings', () => {
       expect(result?.playerConfig.playlistObject?.items[0]).toStrictEqual({
         kind: 'advert',
       });
+    });
+  });
+
+  describe('Portrait Clip Media', () => {
+    it('Should return a valid playlist of portrait video items for the homepage', () => {
+      const result = buildSettings({
+        ...baseSettings,
+        blocks: homePagePortraitClipMediaBlocks as MediaBlock[],
+        pageType: 'home',
+      });
+
+      expect(result?.playerConfig.playlistObject?.items).toEqual([
+        {
+          versionID: 'p0abc002',
+          kind: 'programme',
+          duration: 60,
+          embedRights: 'allowed',
+          vpid: 'p0abc001',
+          serviceID: 'bbc_world_service',
+          title: 'Portrait Video 1',
+          guidance: undefined,
+          territories: ['bbc_world_service'],
+          images: [
+            {},
+            {
+              urlTemplate: 'p0abc001.jpg',
+              source: 'www.test.bbc.com/aportraitmediathing',
+            },
+          ],
+        },
+        {
+          versionID: 'p0abc004',
+          kind: 'programme',
+          duration: 120,
+          embedRights: 'allowed',
+          vpid: 'p0abc003',
+          serviceID: 'bbc_world_service',
+          title: 'Portrait Video 2',
+          guidance: undefined,
+          territories: ['bbc_world_service'],
+          images: [
+            {},
+            {
+              urlTemplate: 'p0abc002.jpg',
+              source: 'www.test.bbc.com/aportraitmediathing',
+            },
+          ],
+        },
+      ]);
     });
   });
 
