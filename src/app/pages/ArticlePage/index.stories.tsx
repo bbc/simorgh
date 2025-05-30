@@ -65,7 +65,6 @@ type Props = {
   service?: Services;
   podcastEnabled?: boolean;
   electionBanner?: boolean;
-  continueReadingEnabled?: boolean;
   articleLiteSiteLinkEnabled?: boolean;
 };
 
