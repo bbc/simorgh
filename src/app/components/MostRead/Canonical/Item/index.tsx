@@ -82,8 +82,9 @@ export const MostReadLink = ({
         href={href}
         {...clickTrackerHandler}
       >
-        {title} - {myExperimentText}
+        {title}
       </a>
+      <span>{myExperimentText}</span>
       {children && <div css={styles.timestamp}>{children}</div>}
     </div>
   );
