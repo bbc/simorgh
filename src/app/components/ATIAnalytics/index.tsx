@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
+import AmpGeo from '#app/legacy/components/AmpGeo';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import CanonicalATIAnalytics from './canonical';
 import AmpATIAnalytics from './amp';
@@ -31,10 +32,13 @@ const ATIAnalytics = ({ atiData = {} }: ATIProps) => {
   }
 
   return isAmp ? (
-    <AmpATIAnalytics
-      pageviewParams={urlPageViewParams}
-      reverbParams={reverbParams}
-    />
+    <>
+      <AmpGeo />
+      <AmpATIAnalytics
+        pageviewParams={urlPageViewParams}
+        reverbParams={reverbParams}
+      />
+    </>
   ) : (
     <CanonicalATIAnalytics
       pageviewParams={urlPageViewParams}

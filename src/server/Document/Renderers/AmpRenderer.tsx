@@ -36,8 +36,8 @@ export default function AmpRenderer({
           <style amp-boilerplate="">{AMP_NO_SCRIPT}</style>
         </noscript>
         {AMP_JS}
-        {AMP_ANALYTICS_JS}
         {AMP_GEO_JS}
+        {AMP_ANALYTICS_JS}
       </head>
       <body className="amp-geo-pending">
         <div id="root" dangerouslySetInnerHTML={{ __html: html || '' }} />
