@@ -2,8 +2,40 @@
 /* eslint-disable no-template-curly-in-string */
 /* eslint-disable prefer-template */
 import { reverbUrlHelper } from '@bbc/reverb-url-helper';
-import { ATIAnalyticsProps } from '../types';
 import { getDestination } from '#app/lib/analyticsUtils';
+import { ATIAnalyticsProps } from '../types';
+
+type GeoVariantEvaluationParamters = {
+  app_name: string;
+  destination: string;
+  ampAnalyticsRequestConfiguration: {
+    base: string;
+    pageview: string;
+  }
+}
+
+const useGeoVariantDestinationForSupportedServices = ({
+  app_name,
+  destination,
+  ampAnalyticsRequestConfiguration,
+}: GeoVariantEvaluationParamters) => {
+  if(![
+    'news',
+    'news-cymrufyw',
+    'news-naidheachdan',
+    'sport',
+  ].includes(app_name)) {
+    return ampAnalyticsRequestConfiguration;
+  };
+
+  const { pageview } = ampAnalyticsRequestConfiguration;
+  const ampDestination = getDestination('amp', destination);
+
+  return {
+    ...ampAnalyticsRequestConfiguration,
+    pageview: pageview.replace(/s=\d+&/, `s=${ampDestination}&`), // Use destination derived via amp-geo
+  }
+};
 
 const ampAnalyticsJson = ({
   baseUrl,
@@ -17,14 +49,9 @@ const ampAnalyticsJson = ({
         pageview: '${base}' + pageviewParams,
       };
 
-  const {
-    params: { page: destination } = {},
-  } = reverbParams ?? {};
-  const ampDestination = getDestination('amp', destination);
-  const { base, pageview } = ampAnalyticsRequestConfiguration;
-
-  // Use destination derived via amp-geo
-  pageview.replace(/s=\d+&/, `s=${ampDestination}&`);
+  const app_name =
+    reverbParams?.params.page.additionalProperties?.app_name ?? '';
+  const destination = reverbParams?.params.page.destination ?? '';
 
   return {
     transport: {
@@ -32,7 +59,11 @@ const ampAnalyticsJson = ({
       xhrpost: false,
       image: true,
     },
-    requests: { base, pageview },
+    requests: useGeoVariantDestinationForSupportedServices({
+      app_name,
+      destination,
+      ampAnalyticsRequestConfiguration,
+    }),
     triggers: { trackPageview: { on: 'visible', request: 'pageview' } },
   };
 };
