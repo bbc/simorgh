@@ -12,7 +12,6 @@ import {
 import { RequestContext } from '#app/contexts/RequestContext';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import useTrackingToggle from '../useTrackingToggle';
-import OPTIMIZELY_CONFIG from '../../lib/config/optimizely';
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon/index';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { isValidClick } from './clickTypes';
@@ -47,22 +46,14 @@ const useClickTrackerHandler = (
 
   let optimizelyVariation;
 
-  if (experimentFlagKey) {
-    if (isClientSide) {
-      // TODO - better approach
-      // eslint-disable-next-line react-hooks/rules-of-hooks
-      optimizelyVariation = useOptimizelyVariation(experimentFlagKey);
-      console.log(
-        'clickTracker, experiment, clientside',
-        `${experimentFlagKey} - ${optimizelyVariation} - ${componentName}`,
-      );
-    }
+  if (isClientSide) {
     // TODO - better approach
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    optimizelyVariation = useOptimizelyMvtVariation(
-      // @ts-expect-error - TODO - I think it's because config is not typed
-      OPTIMIZELY_CONFIG.flagKeys[experimentFlagKey].flagKey,
-    );
+    optimizelyVariation = useOptimizelyVariation(experimentFlagKey);
+  } else {
+    // TODO - better approach
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    optimizelyVariation = useOptimizelyMvtVariation(experimentFlagKey);
   }
 
   return useCallback(
@@ -91,7 +82,6 @@ const useClickTrackerHandler = (
           event.stopPropagation();
           event.preventDefault();
 
-          // optimizely has loaded
           if (optimizely && sendOptimizelyEvents && optimizelyVariation) {
             const overrideAttributes = optimizely?.user.attributes;
 
@@ -120,7 +110,6 @@ const useClickTrackerHandler = (
               useReverb,
               ...(optimizelyVariation &&
                 optimizelyVariation !== 'off' && {
-                  // this has value
                   experimentVariant: optimizelyVariation,
                 }),
             });

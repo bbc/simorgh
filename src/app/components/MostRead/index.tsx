@@ -3,7 +3,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import { OptimizelyContext, ReactSDKClient } from '@optimizely/react-sdk';
+import { ReactSDKClient } from '@optimizely/react-sdk';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Canonical from './Canonical';
 import Amp from './Amp';
@@ -86,7 +86,7 @@ const CanonicalMostRead = ({
   columnLayout?: ColumnLayout;
   size: Size;
   eventTrackingData: {
-    optimizely?: ReactSDKClient | null | undefined;
+    optimizely?: ReactSDKClient | null | undefined; // update?
     componentName: string;
   };
   experimentFlagKey?: string;
@@ -118,7 +118,6 @@ const MostRead = ({
   sendOptimizelyEvents = true,
 }: MostReadProps) => {
   const { isAmp, pageType, variant } = useContext(RequestContext);
-  const { optimizely } = useContext(OptimizelyContext);
   const {
     service,
     mostRead: { hasMostRead },
@@ -147,9 +146,7 @@ const MostRead = ({
 
   const eventTrackingData = {
     ...blockLevelEventTrackingData,
-    ...(sendOptimizelyEvents && {
-      optimizely,
-    }),
+    sendOptimizelyEvents,
   };
 
   return isAmp ? (

@@ -49,19 +49,11 @@ const getComponentViewTracker = (
 
   let optimizelyVariation: any;
 
-  if (experimentFlagKey) {
-    if (isClientSide) {
-      // TODO - better approach
-      optimizelyVariation = useOptimizelyVariation(experimentFlagKey);
-      console.log(
-        'viewTracker, experiment, clientside',
-        `${experimentFlagKey} - ${optimizelyVariation} - ${componentName}`,
-      );
-    }
-    optimizelyVariation = useOptimizelyMvtVariation(
-      // @ts-expect-error - TODO - I think it's because config is not typed
-      OPTIMIZELY_CONFIG.flagKeys[experimentFlagKey].flagKey,
-    );
+  if (isClientSide) {
+    // TODO - better approach
+    optimizelyVariation = useOptimizelyVariation(experimentFlagKey);
+  } else {
+    optimizelyVariation = useOptimizelyMvtVariation(experimentFlagKey);
   }
 
   const observer = useRef(null);
