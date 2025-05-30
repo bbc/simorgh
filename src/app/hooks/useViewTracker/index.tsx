@@ -71,7 +71,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     };
 
     const options = {
-      threshold,
+      threshold: [threshold],
     };
 
     // @ts-expect-error current element won't be null
