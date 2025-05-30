@@ -269,7 +269,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     !isAmp &&
       !isLite &&
       !isApp &&
-      ['read_more_a', 'read_more_b', 'read_more_a_and_top_stories'].includes(
+      ['read-more-a', 'read-more-b', 'read-more-a-and-top-stories'].includes(
         experimentVariant,
       ),
   );

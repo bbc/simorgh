@@ -13,9 +13,9 @@ type Props = {
   showAllContent: boolean;
   setShowAllContent: () => void;
   variation:
-    | 'read_more_a'
-    | 'read_more_b'
-    | 'read_more_a_and_top_stories'
+    | 'read-more-a'
+    | 'read-more-b'
+    | 'read-more-a-and-top-stories'
     | null;
   liteCTAShows?: boolean;
 };
@@ -95,7 +95,7 @@ const ContinueReadingButton = ({
 
   // Display variations of button based on variation
   const buttonStyle =
-    variation === 'read_more_a' || variation === 'read_more_a_and_top_stories'
+    variation === 'read-more-a' || variation === 'read-more-a-and-top-stories'
       ? styles.continueReadingButtonA
       : styles.continueReadingButtonB;
 
@@ -106,11 +106,11 @@ const ContinueReadingButton = ({
       onMouseDown={handleEvent}
       onKeyDown={handleEvent}
       onTouchStart={handleEvent}
-      data-testid="read_more_button"
+      data-testid="read-more-button"
       {...viewRef}
     >
       <Text fontVariant="sansBold">{continueReading}</Text>
-      {variation === 'read_more_b' && <TriangleDown />}
+      {variation === 'read-more-b' && <TriangleDown />}
     </button>
   );
 };
