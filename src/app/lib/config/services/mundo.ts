@@ -421,10 +421,6 @@ export const service: DefaultServiceConfig = {
         url: '/mundo/topics/cdr5613yzwqt',
       },
       {
-        title: 'Hay Festival',
-        url: '/mundo/topics/cr50y7p7qyqt',
-      },
-      {
         title: 'Economía',
         url: '/mundo/topics/c06gq9v4xp3t',
       },
