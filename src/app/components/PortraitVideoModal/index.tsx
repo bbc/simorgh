@@ -1,10 +1,9 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import MediaLoader from '#app/components/MediaLoader';
 import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
 import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
-import { LeftChevron, RightChevron } from '../icons';
 import styles from './index.styles';
 
 interface PortraitVideoModalProps {
@@ -32,7 +31,6 @@ const PortraitVideoModal = ({
   onClose,
 }: PortraitVideoModalProps) => {
   const modalRef = useRef<HTMLDialogElement>(null);
-  const [currentVideoIndex, setCurrentIndex] = useState(initialVideoIndex);
 
   const blocks: PortraitClipMediaBlock[] = items.map(item => ({
     type: 'portraitClipMedia',
@@ -57,18 +55,6 @@ const PortraitVideoModal = ({
     },
   }));
 
-  const handlePrev = () => {
-    if (currentVideoIndex > 0) {
-      setCurrentIndex(i => i - 1);
-    }
-  };
-
-  const handleNext = () => {
-    if (currentVideoIndex < items.length - 1) {
-      setCurrentIndex(i => i + 1);
-    }
-  };
-
   useEffect(() => {
     if (modalRef.current) {
       modalRef.current.showModal();
@@ -92,27 +78,7 @@ const PortraitVideoModal = ({
       </button>
 
       <div css={styles.navWrapper}>
-        <button
-          type="button"
-          onClick={handlePrev}
-          disabled={currentVideoIndex === 0}
-          aria-label="Previous video"
-          css={styles.navButton}
-        >
-          <LeftChevron />
-        </button>
-
-        <MediaLoader blocks={blocks} />
-
-        <button
-          type="button"
-          onClick={handleNext}
-          disabled={currentVideoIndex === items.length - 1}
-          aria-label="Next video"
-          css={styles.navButton}
-        >
-          <RightChevron />
-        </button>
+        <MediaLoader blocks={blocks} uniqueId={items[initialVideoIndex].id} />
       </div>
     </dialog>
   );
