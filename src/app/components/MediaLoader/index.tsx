@@ -260,7 +260,7 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
       }
       <figure
         data-e2e="media-loader__container"
-        className={className}
+        className={`media-container ${className}`}
         css={[
           styles.figure(embedded),
           playerConfig?.ui?.skin === 'classic' && [

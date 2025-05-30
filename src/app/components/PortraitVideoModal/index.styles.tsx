@@ -57,6 +57,9 @@ const styles = {
     gap: '0.5rem', // spacing between buttons and video
     width: '100%',
     height: '100%',
+    '.media-container': {
+      maxWidth: '25%',
+    },
   }),
 
   navButton: ({ palette, spacings }: Theme) =>
