@@ -1,8 +1,6 @@
 import moment from 'moment-timezone';
 import buildIChefURL from '#lib/utilities/ichefURL';
-import filterForBlockType, {
-  filterAllBlocksOfType,
-} from '#lib/utilities/blockHandlers';
+import filterForBlockType from '#lib/utilities/blockHandlers';
 import {
   PortraitClipMediaBlock,
   ConfigBuilderProps,
@@ -38,11 +36,11 @@ export default ({
     };
   }
 
-  const portraitClipMediaBlocks: PortraitClipMediaBlock[] =
-    filterAllBlocksOfType(
-      blocks,
-      'portraitClipMedia',
-    ) as PortraitClipMediaBlock[];
+  const portraitClipMediaBlocks: PortraitClipMediaBlock[] = filterForBlockType(
+    blocks,
+    'portraitClipMedia',
+    { multiple: true },
+  ) as PortraitClipMediaBlock[];
 
   const playlistItems: PlaylistItem[] = portraitClipMediaBlocks.map(block => {
     const { model } = block;

@@ -2,12 +2,15 @@
 // Contains various helper functions for managing props as well as finding specific
 // elements and blocks within them
 
-// Filters array of blocks for a single block of given type
-const filterForBlockType = (arrayOfBlocks, type) =>
-  arrayOfBlocks?.filter(block => (block ? block.type === type : null))?.[0];
+// filters an array of blocks for a given type and Returns the first match by default
+// pass `{ multiple: true }` to get all matching blocks.
+const filterForBlockType = (
+  arrayOfBlocks,
+  type,
+  options = { multiple: false },
+) => {
+  const filtered = arrayOfBlocks?.filter(block => block?.type === type);
+  return options.multiple ? filtered : filtered?.[0];
+};
 
-// Filters array of blocks for all blocks of given type - used for portrait video
-const filterAllBlocksOfType = (arrayOfBlocks, type) =>
-  arrayOfBlocks?.filter(block => block?.type === type);
-
-export { filterForBlockType as default, filterAllBlocksOfType };
+export default filterForBlockType;
