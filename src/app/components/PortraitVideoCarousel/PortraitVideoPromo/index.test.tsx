@@ -5,7 +5,7 @@ import {
   act,
   fireEvent,
 } from '#app/components/react-testing-library-with-providers';
-import * as useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import * as useViewTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import PortraitVideoPromo from '.';
 
 describe('PortraitVideoPromo', () => {
@@ -93,13 +93,13 @@ describe('PortraitVideoPromo', () => {
     expect(image).toBeInTheDocument();
   });
 
-  it('Should initialise the useClickTracker hook with the correct data', async () => {
+  it('Should initialise the useViewTracker hook with the correct data', async () => {
     const sampleHeadlines = { promoHeadline: 'Sample Heading' };
     const groupTracker = {
       itemCount: 15,
       resourceId: 'test-group-resource-id',
     };
-    const clickTrackerSpy = jest.spyOn(useClickTrackerHandler, 'default');
+    const clickTrackerSpy = jest.spyOn(useViewTrackerHandler, 'default');
 
     await act(async () => {
       render(
@@ -124,6 +124,7 @@ describe('PortraitVideoPromo', () => {
         text: 'Sample Heading',
         type: 'portrait-video-promo',
       },
+      viewThreshold: 1,
     });
   });
 
