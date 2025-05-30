@@ -25,6 +25,7 @@ import {
 import ATIAnalytics from '.';
 import * as amp from './amp';
 import * as canonical from './canonical';
+import * as ampGeo from '../../legacy/components/AmpGeo';
 
 (analyticsUtils.getAtUserId as jest.Mock) = jest.fn();
 (analyticsUtils.getCurrentTime as jest.Mock) = jest
@@ -1115,6 +1116,44 @@ describe('ATI Analytics Container', () => {
           x18: false,
         },
       });
+    });
+
+    it('should call AmpGeo when platform is Amp', () => {
+      const mockAmpGeo = jest.fn().mockReturnValue('amp-return-value');
+
+      // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
+      ampGeo.default = mockAmpGeo;
+      const {
+        metadata: { atiAnalytics },
+      } = articleDataNews;
+
+      // @ts-expect-error - only partial data required to manually set 'useReverb' to true
+      const serviceContextProps: ServiceConfig = {
+        atiAnalyticsAppName: 'atiAnalyticsAppName',
+        atiAnalyticsProducerId: 'atiAnalyticsProducerId',
+        atiAnalyticsProducerName: 'atiAnalyticsProducerName',
+        service: 'pidgin',
+        brandName: 'brandName',
+        lang: 'pcm',
+        useReverb: true,
+      };
+
+      render(
+        <ServiceContext.Provider value={serviceContextProps}>
+          <ATIAnalytics atiData={atiAnalytics} />
+        </ServiceContext.Provider>,
+        {
+          ...defaultRenderProps,
+          atiData: atiAnalytics,
+          isAmp: true,
+          pageData: articleDataNews,
+          pageType: ARTICLE_PAGE,
+          service: 'pidgin',
+          isUK: true,
+        },
+      );
+
+      expect(mockAmpGeo).toHaveBeenCalled();
     });
   });
 });
