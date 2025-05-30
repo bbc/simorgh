@@ -23,7 +23,7 @@ describe('ContinueReadingButton', () => {
       />,
     );
 
-    expect(getByTestId('read-more-button')).toBeInTheDocument();
+    expect(getByTestId('read_more_button')).toBeInTheDocument();
   });
 
   it('does not render the button when showAllContent is true', () => {
@@ -35,7 +35,7 @@ describe('ContinueReadingButton', () => {
       />,
     );
 
-    expect(queryByTestId('read-more-button')).not.toBeInTheDocument();
+    expect(queryByTestId('read_more_button')).not.toBeInTheDocument();
   });
 
   it('applies the correct styles for variation read_more_a', () => {
@@ -47,7 +47,7 @@ describe('ContinueReadingButton', () => {
       />,
     );
 
-    const button = getByTestId('read-more-button');
+    const button = getByTestId('read_more_button');
     expect(button).toHaveStyle('background-color: #141414');
   });
 
@@ -60,7 +60,7 @@ describe('ContinueReadingButton', () => {
       />,
     );
 
-    const button = getByTestId('read-more-button');
+    const button = getByTestId('read_more_button');
     expect(button).toHaveStyle('background-color: #141414');
   });
 
@@ -73,7 +73,7 @@ describe('ContinueReadingButton', () => {
       />,
     );
 
-    const button = getByTestId('read-more-button');
+    const button = getByTestId('read_more_button');
     expect(button).toHaveStyle('background-color: #F6F6F6');
   });
 
@@ -90,7 +90,7 @@ describe('ContinueReadingButton', () => {
     expect(svg).toBeInTheDocument();
   });
 
-  it('does not render the SVG icon when variation is read_more_b', () => {
+  it('does not render the SVG icon when variation is read_more_a', () => {
     const { container } = render(
       <ContinueReadingButton
         showAllContent={false}
@@ -112,11 +112,11 @@ describe('ContinueReadingButton', () => {
       />,
     );
 
-    const button = getByTestId('read-more-button');
+    const button = getByTestId('read_more_button');
     expect(button).toHaveStyle('border-bottom: 0.0625rem solid #B0B2B4');
   });
 
-  it('does not apply border-bottom for variation read_more_b', () => {
+  it('does not apply border-bottom for variation read_more_a', () => {
     const { getByTestId } = render(
       <ContinueReadingButton
         showAllContent={false}
@@ -125,13 +125,13 @@ describe('ContinueReadingButton', () => {
       />,
     );
 
-    const button = getByTestId('read-more-button');
+    const button = getByTestId('read_more_button');
     expect(button.style.borderBottom).toBe('');
   });
 
   describe('Event Tracking', () => {
     const eventTrackingData = {
-      componentName: 'read-more-button',
+      componentName: 'read_more_button',
       sendOptimizelyEvents: true,
     };
 
@@ -183,7 +183,7 @@ describe('ContinueReadingButton', () => {
           />,
         );
 
-        const button = getByTestId('read-more-button') as HTMLElement;
+        const button = getByTestId('read_more_button') as HTMLElement;
         fireEvent.mouseDown(button);
 
         // Verify that the mockSetShowAllContent function is called
