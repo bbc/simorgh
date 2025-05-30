@@ -18,6 +18,7 @@ export default ({
     sendOptimizelyEvents,
     itemTracker,
     groupTracker,
+    viewThreshold,
   } = eventTrackingData || {};
 
   const {
@@ -48,5 +49,6 @@ export default ({
     sendOptimizelyEvents,
     itemTracker,
     groupTracker,
+    viewThreshold,
   };
 };

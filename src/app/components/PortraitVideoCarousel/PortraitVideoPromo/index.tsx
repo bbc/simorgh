@@ -81,6 +81,7 @@ export default (item: PortraitVideoPromoProps) => {
   const eventTrackingData = {
     componentName: `portrait-video-promo-${adjustedItemPosition}`,
     groupTracker,
+    viewThreshold: 1,
     itemTracker: {
       type: 'portrait-video-promo',
       text: headline,
