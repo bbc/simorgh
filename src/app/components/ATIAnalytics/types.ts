@@ -163,6 +163,22 @@ export interface ATIEventTrackingProps {
   experimentVariant?: string;
   ampExperimentName?: string;
   preventNavigation?: string;
+  itemTracker?: ItemTracker;
+  groupTracker?: GroupTracker;
+  viewThreshold?: number;
+}
+
+export interface ItemTracker {
+  type?: string;
+  text?: string;
+  position?: number;
+  duration?: number;
+  resourceId?: string;
+}
+
+export interface GroupTracker {
+  itemCount?: number;
+  resourceId?: string;
 }
 
 export interface ATIPageTrackingProps {
