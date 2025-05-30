@@ -78,7 +78,7 @@ const PortraitVideoModal = ({
       </button>
 
       <div css={styles.navWrapper}>
-        <MediaLoader blocks={blocks} uniqueId={items[initialVideoIndex].id} />
+        <MediaLoader blocks={blocks} />
       </div>
     </dialog>
   );

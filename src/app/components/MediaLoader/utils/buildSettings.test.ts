@@ -137,7 +137,7 @@ describe('buildSettings', () => {
   });
 
   describe('Portrait Clip Media', () => {
-    it('Should return a valid playlist of portrait video items for the homepage', () => {
+    it('Should return a playlist of portrait video items for the homepage', () => {
       const result = buildSettings({
         ...baseSettings,
         blocks: homePagePortraitClipMediaBlocks as MediaBlock[],
