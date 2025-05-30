@@ -155,8 +155,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
+  // Temporary - to not break server side
+  const getExperiment = 'header_a_a_test';
+
   const experimentVariant = useOptimizelyMvtVariation(
-    OPTIMIZELY_CONFIG.ruleKey,
+    // TODO - without hard coded experiment
+    OPTIMIZELY_CONFIG.flagKeys[getExperiment].ruleKey,
   );
 
   const isInExperiment = experimentVariant && experimentVariant !== 'off';
@@ -342,13 +346,14 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           size="default"
           headingBackgroundColour={GREY_2}
           mobileDivider={showTopics}
-          sendOptimizelyEvents={false}
+          // will this work?
+          sendOptimizelyEvents
         />
       )}
       {isInExperiment && (
         <>
-          <OptimizelyArticleCompleteTracking />
-          <OptimizelyPageViewTracking />
+          <OptimizelyArticleCompleteTracking flagKey={getExperiment} />
+          <OptimizelyPageViewTracking flagKey={getExperiment} />
         </>
       )}
     </div>

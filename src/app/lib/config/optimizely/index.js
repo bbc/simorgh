@@ -1,10 +1,36 @@
-export default {
-  // This is the key of the whole experiment
-  flagKey: 'header_a_a_test',
-  // This is the key for the 'rule' that is attached to the experiment
-  ruleKey: 'header_a_a_test',
-  variationMappings: {
-    on: 'on',
-    off: 'off',
+const OPTIMIZELY_CONFIG = {
+  // These are the key of multiple experiments
+  flagKeys: {
+    // This is the key of the whole experiment
+    header_a_a_test: {
+      // This is the key for the 'rule' that is attached to the experiment
+      ruleKey: 'header_a_a_test',
+      variationMappings: {
+        on: 'on',
+        off: 'off',
+      },
+    },
+    dummy_experiment: {
+      // This is the key for the 'rule' that is attached to the experiment
+      ruleKey: 'dummy_test_ab',
+      viewClickAttributeId: 'most-read', // check
+      variationMappings: {
+        control: 'control',
+        variation_1: 'variation_1',
+        variation_2: 'variation_2',
+      },
+    },
+    dummy_experiment_1: {
+      // This is the key for the 'rule' that is attached to the experiment
+      ruleKey: 'dummy_test_ab_1',
+      viewClickAttributeId: 'x',
+      variationMappings: {
+        control: 'control',
+        variation_1: 'variation_1',
+        variation_2: 'variation_2',
+      },
+    },
   },
 };
+
+export default OPTIMIZELY_CONFIG;

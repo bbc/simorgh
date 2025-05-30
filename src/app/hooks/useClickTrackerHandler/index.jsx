@@ -16,7 +16,10 @@ import { sendEventBeacon } from '../../components/ATIAnalytics/beacon/index';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { isValidClick } from './clickTypes';
 
-const useClickTrackerHandler = (eventTrackingData = {}) => {
+const useClickTrackerHandler = (
+  eventTrackingData = {},
+  experimentFlagKey = '',
+) => {
   const {
     pageIdentifier,
     producerId,
@@ -39,8 +42,10 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
   const { service, useReverb } = useContext(ServiceContext);
 
   const { optimizely } = useContext(OptimizelyContext);
+
   const optimizelyVariation = useOptimizelyMvtVariation(
-    OPTIMIZELY_CONFIG.ruleKey,
+    // Updated
+    OPTIMIZELY_CONFIG.flagKeys[experimentFlagKey],
   );
 
   return useCallback(
@@ -69,6 +74,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
           event.stopPropagation();
           event.preventDefault();
 
+          // optimizely has loaded
           if (optimizely && sendOptimizelyEvents && optimizelyVariation) {
             const overrideAttributes = optimizely?.user.attributes;
 
@@ -97,6 +103,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
               useReverb,
               ...(optimizelyVariation &&
                 optimizelyVariation !== 'off' && {
+                  // this has value
                   experimentVariant: optimizelyVariation,
                 }),
             });
@@ -135,11 +142,15 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
   );
 };
 
-export default (eventTrackingData = {}) => {
+export default (eventTrackingData = {}, experimentFlagKey = '') => {
   const { isAmp } = useContext(RequestContext);
   const isHydrated = useHydrationDetection();
 
-  const clickTracker = useClickTrackerHandler(eventTrackingData);
+  const clickTracker = useClickTrackerHandler(
+    eventTrackingData,
+    experimentFlagKey,
+  );
+  // Don't think we need experiment here?
   const staticAtiUrl = constructStaticATIUrl({
     eventTrackingData,
     eventType: CLICK_EVENT,

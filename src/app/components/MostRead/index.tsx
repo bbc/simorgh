@@ -77,6 +77,7 @@ const CanonicalMostRead = ({
   columnLayout,
   size,
   eventTrackingData,
+  experimentFlagKey,
 }: {
   data: MostReadData | undefined;
   className: string;
@@ -88,6 +89,7 @@ const CanonicalMostRead = ({
     optimizely?: ReactSDKClient | null | undefined;
     componentName: string;
   };
+  experimentFlagKey?: string;
 }) =>
   data ? (
     <MostReadSection className={className}>
@@ -100,6 +102,7 @@ const CanonicalMostRead = ({
         columnLayout={columnLayout}
         size={size}
         eventTrackingData={eventTrackingData}
+        experimentFlagKey={experimentFlagKey}
       />
     </MostReadSection>
   ) : null;
@@ -111,7 +114,8 @@ const MostRead = ({
   mobileDivider = false,
   headingBackgroundColour = WHITE,
   className = '',
-  sendOptimizelyEvents = false,
+  // will this work?
+  sendOptimizelyEvents = true,
 }: MostReadProps) => {
   const { isAmp, pageType, variant } = useContext(RequestContext);
   const { optimizely } = useContext(OptimizelyContext);
@@ -119,6 +123,9 @@ const MostRead = ({
     service,
     mostRead: { hasMostRead },
   } = useContext(ServiceContext);
+
+  // example
+  const experimentFlagKey = 'dummy_experiment';
 
   const { enabled } = useToggle('mostRead');
 
@@ -163,6 +170,7 @@ const MostRead = ({
       columnLayout={columnLayout}
       size={size}
       eventTrackingData={eventTrackingData}
+      experimentFlagKey={experimentFlagKey}
     />
   );
 };

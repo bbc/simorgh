@@ -12,7 +12,7 @@ const getScrollDepth = () =>
       100,
   );
 
-const useOptimizelyScrollDepth = () => {
+const useOptimizelyScrollDepth = flagKey => {
   const { isAmp } = useContext(RequestContext);
   const { optimizely } = useContext(OptimizelyContext);
   const [scrollDepth, setScrollDepth] = useState(0);
@@ -21,7 +21,10 @@ const useOptimizelyScrollDepth = () => {
   const [scrollSeventyFive, setScrollSeventyFive] = useState(false);
   const [scrollHundred, setScrollHundred] = useState(false);
 
-  const experimentVariation = useOptimizelyVariation(OPTIMIZELY_CONFIG.flagKey);
+  // Updated
+  const experimentVariation = useOptimizelyVariation(
+    OPTIMIZELY_CONFIG.flagKeys[flagKey],
+  );
   const hasVariationKey = experimentVariation !== null;
 
   const sendScrollEvents = hasVariationKey && !isAmp;

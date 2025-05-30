@@ -60,8 +60,13 @@ const PageLayoutWrapper = ({
   const reportingPageType = pageType?.replace(/ /g, '');
   let wordCount: wordCountType = 0;
   let propsForOJExperiment = {};
+
+  // Temporary - to not break server side
+  const getExperiment = 'header_a_a_test';
+
   const experimentVariant = useOptimizelyMvtVariation(
-    OPTIMIZELY_CONFIG.ruleKey,
+    // TODO - without hard coded experiment
+    OPTIMIZELY_CONFIG.flagKeys[getExperiment].ruleKey,
   );
   if (pageType === 'article') {
     wordCount = pageData?.content?.model?.blocks

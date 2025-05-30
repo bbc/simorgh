@@ -17,6 +17,7 @@ interface MostReadProps {
   eventTrackingData?: {
     componentName: string;
   };
+  experimentFlagKey?: string;
 }
 
 const MostRead = ({
@@ -24,6 +25,7 @@ const MostRead = ({
   size,
   data,
   eventTrackingData,
+  experimentFlagKey,
 }: MostReadProps) => {
   const {
     service,
@@ -34,7 +36,8 @@ const MostRead = ({
     timezone,
     mostRead: { lastUpdated, numberOfItems = 5 },
   } = useContext(ServiceContext);
-  const viewTracker = useViewTracker(eventTrackingData);
+
+  const viewTracker = useViewTracker(eventTrackingData, experimentFlagKey);
 
   const locale = serviceDatetimeLocale || datetimeLocale;
 
@@ -74,6 +77,7 @@ const MostRead = ({
                 href={href}
                 size={size}
                 eventTrackingData={eventTrackingData}
+                experimentFlagKey={experimentFlagKey}
               >
                 {shouldRenderLastUpdated(timestamp) && timestamp && (
                   <LastUpdated

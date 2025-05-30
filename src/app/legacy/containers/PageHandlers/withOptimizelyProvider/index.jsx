@@ -52,10 +52,12 @@ const withOptimizelyProvider = Component => {
       } else {
         mobile = false;
       }
+      console.log('optimizely', optimizely);
     }
 
     return (
       <OptimizelyProvider
+        // has info in
         optimizely={optimizely}
         isServerSide
         timeout={TIMEOUT_INTERVAL}

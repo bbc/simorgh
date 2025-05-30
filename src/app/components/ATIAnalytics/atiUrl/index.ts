@@ -491,7 +491,8 @@ export const buildReverbAnalyticsModel = ({
           x17: categoryName,
           x18: isLocServeCookieSet(),
           ...(experimentVariant && {
-            mv_test: OPTIMIZELY_CONFIG.flagKey,
+            // @ts-expect-error - TO DO - Type error
+            mv_test: OPTIMIZELY_CONFIG.flagKeys[experimentVariant],
             mv_creation: `${experimentVariant}`,
           }),
         },
@@ -551,7 +552,8 @@ export const buildReverbPageSectionEventModel = ({
         experience: {
           engine_type: ['experimentation'],
           engine_id: [
-            `optimizely.${OPTIMIZELY_CONFIG.flagKey}.${experimentVariant}`,
+            // @ts-expect-error - TO DO - Type error
+            `optimizely.${OPTIMIZELY_CONFIG.flagKeys[experimentVariant]}.${experimentVariant}`,
           ],
         },
       }),

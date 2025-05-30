@@ -4,7 +4,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 
-const OptimizelyArticleCompleteTracking = () => {
+const OptimizelyArticleCompleteTracking = flagKey => {
   const ref = useRef();
   const observer = useRef();
   const { isAmp } = useContext(RequestContext);
@@ -12,7 +12,10 @@ const OptimizelyArticleCompleteTracking = () => {
   const [pageCompleteSent, setPageCompleteSent] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
-  const experimentVariation = useOptimizelyVariation(OPTIMIZELY_CONFIG.flagKey);
+  // Updated
+  const experimentVariation = useOptimizelyVariation(
+    OPTIMIZELY_CONFIG.flagKeys[flagKey],
+  );
 
   const sendPageCompleteEvent =
     experimentVariation && !isAmp && !pageCompleteSent && isVisible;

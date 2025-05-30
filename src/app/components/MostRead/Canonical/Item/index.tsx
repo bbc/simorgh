@@ -2,6 +2,8 @@
 import React, { PropsWithChildren } from 'react';
 import { jsx } from '@emotion/react';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
+import OPTIMIZELY_CONFIG from '#lib/config/optimizely'; // Added import
+import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation'; // Added import
 import styles from './index.styles';
 import {
   mostReadListGridProps,
@@ -45,8 +47,33 @@ export const MostReadLink = ({
   children,
   size,
   eventTrackingData,
+  experimentFlagKey,
 }: PropsWithChildren<MostReadLinkProps>) => {
-  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+  const clickTrackerHandler = useClickTrackerHandler(
+    eventTrackingData,
+    experimentFlagKey,
+  );
+
+  // added in dummy ab test code
+  const myExperiementVariation = useOptimizelyVariation(
+    // @ts-expect-error - TODO - fix type issue
+    OPTIMIZELY_CONFIG.flagKeys.experimentFlagKey,
+  );
+
+  // // added in dummy ab test code
+  // const myExperiementVariation = useOptimizelyVariation(
+  //   OPTIMIZELY_CONFIG.flagKeys.dummy_experiment,
+  // );
+
+  console.log('myExperiementVariation', myExperiementVariation);
+
+  let myExperimentText;
+
+  if (myExperiementVariation != null) {
+    myExperimentText =
+      (myExperiementVariation as unknown as string) ??
+      'No Experiment Variation Found';
+  }
 
   return (
     <div css={getItemCss({ dir, size })} dir={dir}>
@@ -55,7 +82,7 @@ export const MostReadLink = ({
         href={href}
         {...clickTrackerHandler}
       >
-        {title}
+        {title} - {myExperimentText}
       </a>
       {children && <div css={styles.timestamp}>{children}</div>}
     </div>

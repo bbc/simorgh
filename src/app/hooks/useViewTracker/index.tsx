@@ -21,7 +21,10 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 const VIEWED_DURATION_MS = 1000;
 const MIN_VIEWED_PERCENT = 0.5;
 
-const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
+const getComponentViewTracker = (
+  eventTrackingData?: EventTrackingData,
+  experimentFlagKey?: string,
+) => {
   const {
     componentName,
     format,
@@ -41,9 +44,15 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
   });
 
   const { optimizely } = useContext(OptimizelyContext);
-  const optimizelyVariation = useOptimizelyMvtVariation(
-    OPTIMIZELY_CONFIG.ruleKey,
-  );
+
+  let optimizelyVariation = '';
+
+  if (experimentFlagKey) {
+    optimizelyVariation = useOptimizelyMvtVariation(
+      // @ts-expect-error - TODO - I think it's because config is not typed
+      OPTIMIZELY_CONFIG.flagKeys[experimentFlagKey],
+    );
+  }
 
   const observer = useRef(null);
   const timer = useRef(null);
@@ -177,11 +186,18 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
   return viewTracker;
 };
 
-export default (eventTrackingData?: EventTrackingData): any => {
+export default (
+  eventTrackingData?: EventTrackingData,
+  experimentFlagKey?: string,
+): any => {
   const { isLite } = useContext(RequestContext);
 
-  const viewTracker = getComponentViewTracker(eventTrackingData);
+  const viewTracker = getComponentViewTracker(
+    eventTrackingData,
+    experimentFlagKey,
+  );
 
+  // don't think I need experimentFlagKey here
   const staticATIUrl = constructStaticATIUrl({
     eventTrackingData,
     eventType: VIEW_EVENT,
