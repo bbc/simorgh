@@ -64,18 +64,18 @@ describe('ContinueReadingButton', () => {
     expect(button).toHaveStyle('background-color: #141414');
   });
 
-   it('applies the correct styles for variation read-more-b', () => {
-     const { getByTestId } = render(
-       <ContinueReadingButton
-         showAllContent={false}
-         setShowAllContent={mockSetShowAllContent}
-         variation="read-more-b"
-       />,
-     );
+  it('applies the correct styles for variation read-more-b', () => {
+    const { getByTestId } = render(
+      <ContinueReadingButton
+        showAllContent={false}
+        setShowAllContent={mockSetShowAllContent}
+        variation="read-more-b"
+      />,
+    );
 
-     const button = getByTestId('read-more-button');
-     expect(button).toHaveStyle('background-color: #F6F6F6');
-   });
+    const button = getByTestId('read-more-button');
+    expect(button).toHaveStyle('background-color: #F6F6F6');
+  });
 
   it('renders the SVG icon when variation is read-more-b', () => {
     const { container } = render(
