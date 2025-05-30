@@ -25,7 +25,6 @@ import {
 import ATIAnalytics from '.';
 import * as amp from './amp';
 import * as canonical from './canonical';
-import * as ampGeo from '../../legacy/components/AmpGeo';
 
 (analyticsUtils.getAtUserId as jest.Mock) = jest.fn();
 (analyticsUtils.getCurrentTime as jest.Mock) = jest
@@ -1118,11 +1117,7 @@ describe('ATI Analytics Container', () => {
       });
     });
 
-    it('should call AmpGeo when platform is Amp', () => {
-      const mockAmpGeo = jest.fn().mockReturnValue('amp-return-value');
-
-      // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
-      ampGeo.default = mockAmpGeo;
+    it('should render the AmpGeo component when platform is Amp', () => {
       const {
         metadata: { atiAnalytics },
       } = articleDataNews;
@@ -1138,7 +1133,7 @@ describe('ATI Analytics Container', () => {
         useReverb: true,
       };
 
-      render(
+      const { container } = render(
         <ServiceContext.Provider value={serviceContextProps}>
           <ATIAnalytics atiData={atiAnalytics} />
         </ServiceContext.Provider>,
@@ -1153,7 +1148,11 @@ describe('ATI Analytics Container', () => {
         },
       );
 
-      expect(mockAmpGeo).toHaveBeenCalled();
+      expect(container.querySelectorAll('amp-geo').length).toEqual(1);
+      const ampGeo = container.querySelector('amp-geo');
+      expect(
+        ampGeo?.querySelectorAll('script[type="application/json"]').length,
+      ).toEqual(1);
     });
   });
 });
