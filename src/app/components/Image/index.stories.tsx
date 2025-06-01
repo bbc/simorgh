@@ -5,7 +5,6 @@ import Image from '.';
 import md from './README.md';
 
 type ImgWithAmpProps = {
-  isAmp?: boolean;
   alt: string;
   src: string;
   srcSet?: string;
@@ -15,7 +14,6 @@ type ImgWithAmpProps = {
 };
 
 const ImgWithAmp = ({
-  isAmp,
   alt,
   src,
   srcSet,
@@ -24,7 +22,7 @@ const ImgWithAmp = ({
   fallbackMediaType,
 }: ImgWithAmpProps) => (
   <RequestContextProvider
-    isAmp={isAmp}
+    isAmp
     pageType="article"
     pathname="/afaanoromoo"
     service="afaanoromoo"
