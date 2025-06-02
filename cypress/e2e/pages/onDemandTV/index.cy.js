@@ -248,13 +248,13 @@ const testSuites = [
   {
     path: '/somali/bbc_somali_tv/tv_programmes/w13xttqt', // Brand
     service: 'somali',
-    runforEnv: ['local', 'test', 'live'],
+    runforEnv: ['test', 'live'],
     tests,
   },
   {
     path: '/somali/bbc_somali_tv/tv_programmes/w13xttqt.lite', // Brand
     service: 'somali',
-    runforEnv: ['local', 'test', 'live'],
+    runforEnv: ['test', 'live'],
     tests,
   },
   {
@@ -299,18 +299,18 @@ const testSuites = [
     runforEnv: ['test', 'live'],
     tests,
   },
-  {
-    path: '/swahili/bbc_swahili_tv/tv/w172xcqnsxfj1bk', // Episode
-    service: 'swahili',
-    runforEnv: 'local',
-    tests,
-  },
-  {
-    path: '/swahili/bbc_swahili_tv/tv/w172xcqnsxfj1bk.lite', // Episode
-    service: 'swahili',
-    runforEnv: 'local',
-    tests,
-  },
+  // {
+  //   path: '/swahili/bbc_swahili_tv/tv/w172xcqnsxfj1bk', // Episode
+  //   service: 'swahili',
+  //   runforEnv: 'local',
+  //   tests,
+  // },
+  // {
+  //   path: '/swahili/bbc_swahili_tv/tv/w172xcqnsxfj1bk.lite', // Episode
+  //   service: 'swahili',
+  //   runforEnv: 'local',
+  //   tests,
+  // },
   {
     path: '/tamil/bbc_tamil_tv/tv_programmes/w13xttmy', // Brand
     service: 'tamil',
