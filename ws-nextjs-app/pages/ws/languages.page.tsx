@@ -4,12 +4,9 @@ import { GetServerSideProps } from 'next';
 import { STATIC_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
 import getInitialData from '#app/routes/homePage/getInitialData';
 import { Agent } from 'undici';
-import nodeLogger from '#app/lib/logger.node';
 import { LanguagesPageProps } from './types';
 
-const logger = nodeLogger(__filename);
-
-const HomePage = dynamic(() => import('#pages/HomePage'));
+const HomePage = dynamic(() => import('#pages/HomePage/HomePage'));
 const LanguagesPageLayout = dynamic(() => import('./LanguagesPageLayout'));
 
 export const getServerSideProps: GetServerSideProps = async context => {
@@ -33,7 +30,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
     });
 
     if (initialData?.error) {
-      logger.info('Initial data error: ', initialData);
       context.res.statusCode = initialData.status;
       return {
         props: {
