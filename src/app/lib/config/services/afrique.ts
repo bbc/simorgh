@@ -59,6 +59,7 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Tout voir',
       home: 'Accueil',
+      continueReading: 'Continuer la lecture',
       currentPage: 'Page en cours',
       skipLinkText: 'Aller au contenu',
       relatedContent: 'Lire plus',
