@@ -46,7 +46,7 @@ const cspHeaderResponse = ({ request }: { request: NextRequest }) => {
     isAmp,
     isLive,
     service,
-    nonce = crypto.randomBytes(16).toString('hex'),
+    nonce: crypto.randomBytes(16).toString('hex'),
   });
 
   const BUMP4SpecificConditions = {
