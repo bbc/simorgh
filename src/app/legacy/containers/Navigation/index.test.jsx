@@ -208,11 +208,12 @@ describe('Navigation Container', () => {
   });
 
   it.each`
-    description                              | blocks              | experimentVariant        | shouldRender
-    ${'render Scrollable Promo Top Stories'} | ${topStoriesBlocks} | ${'top-bar-top-stories'} | ${true}
-    ${'render Scrollable Promo Most Read'}   | ${mostReadBlocks}   | ${'top-bar-most-read'}   | ${true}
-    ${'not render Scrollable Promo'}         | ${mostReadBlocks}   | ${'off'}                 | ${false}
-    ${'not render Scrollable Promo'}         | ${mostReadBlocks}   | ${null}                  | ${false}
+    description                                                                 | blocks              | experimentVariant                | shouldRender
+    ${'render Scrollable Promo Top Stories'}                                    | ${topStoriesBlocks} | ${'top-bar-top-stories'}         | ${true}
+    ${'render Scrollable Promo Top Stories variant also with read more button'} | ${topStoriesBlocks} | ${'read-more-a-and-top-stories'} | ${true}
+    ${'render Scrollable Promo Most Read'}                                      | ${mostReadBlocks}   | ${'top-bar-most-read'}           | ${true}
+    ${'not render Scrollable Promo'}                                            | ${mostReadBlocks}   | ${'off'}                         | ${false}
+    ${'not render Scrollable Promo'}                                            | ${mostReadBlocks}   | ${null}                          | ${false}
   `(
     'should $description when experiment variant is $experimentVariant',
     ({ blocks, experimentVariant, shouldRender }) => {
