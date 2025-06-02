@@ -172,9 +172,13 @@ const ScrollablePromo = ({
   }
 
   let title;
-  if (experimentVariant === 'top_bar_top_stories') {
+  if (
+    ['top-bar-top-stories', 'read-more-a-and-top-stories'].includes(
+      experimentVariant,
+    )
+  ) {
     title = translations.topStoriesTitle || 'Top Stories';
-  } else if (experimentVariant === 'top_bar_most_read') {
+  } else if (experimentVariant === 'top-bar-most-read') {
     title = mostRead.header || 'Most Read';
   } else {
     title =

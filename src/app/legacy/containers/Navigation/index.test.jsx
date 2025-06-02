@@ -209,8 +209,8 @@ describe('Navigation Container', () => {
 
   it.each`
     description                              | blocks              | experimentVariant        | shouldRender
-    ${'render Scrollable Promo Top Stories'} | ${topStoriesBlocks} | ${'top_bar_top_stories'} | ${true}
-    ${'render Scrollable Promo Most Read'}   | ${mostReadBlocks}   | ${'top_bar_most_read'}   | ${true}
+    ${'render Scrollable Promo Top Stories'} | ${topStoriesBlocks} | ${'top-bar-top-stories'} | ${true}
+    ${'render Scrollable Promo Most Read'}   | ${mostReadBlocks}   | ${'top-bar-most-read'}   | ${true}
     ${'not render Scrollable Promo'}         | ${mostReadBlocks}   | ${'off'}                 | ${false}
     ${'not render Scrollable Promo'}         | ${mostReadBlocks}   | ${null}                  | ${false}
   `(
