@@ -1,6 +1,6 @@
 // Should be moved into integration/pages/index.js once all pages have ATI
 Cypress.Commands.add('hasNoscriptImgAtiUrl', atiUrl => {
-  cy.get('noscript[id="analytics-noscript"')
+  cy.get('noscript[id="analytics-noscript"]')
     .invoke('text')
     .then(text => {
       const noscriptString = text.toString();
