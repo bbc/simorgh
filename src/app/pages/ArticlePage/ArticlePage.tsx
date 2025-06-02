@@ -342,6 +342,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                 liteCTAShows={liteCTAShows}
               />
             )}
+            {isInExperiment && (
+              <>
+                <OptimizelyArticleCompleteTracking />
+                <OptimizelyPageViewTracking />
+              </>
+            )}
           </main>
           {showTopics && (
             <RelatedTopics
@@ -376,12 +382,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           mobileDivider={showTopics}
           sendOptimizelyEvents={false}
         />
-      )}
-      {isInExperiment && (
-        <>
-          <OptimizelyArticleCompleteTracking />
-          <OptimizelyPageViewTracking />
-        </>
       )}
     </div>
   );
