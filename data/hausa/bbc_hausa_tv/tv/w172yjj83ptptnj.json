@@ -3,11 +3,11 @@
     "metadata": {
       "type": "On Demand TV",
       "atiAnalytics": {
-        "pageIdentifier": "hausa.bbc_hausa_tv.tv.w172xtnf6j8vmwq.page",
+        "pageIdentifier": "hausa.bbc_hausa_tv.tv.w172yjj83ptptnj.page",
         "contentType": "player-episode",
         "pageTitle": "Labaran Talabijin - BBC News Hausa",
         "language": "ha",
-        "contentId": "urn:bbc:pips:w172xtnf6j8vmwq"
+        "contentId": "urn:bbc:pips:w172yjj83ptptnj"
       }
     },
     "language": "ha",
@@ -16,27 +16,18 @@
     "headline": "Labaran Talabijin",
     "shortSynopsis": "Sashen Hausa na BBC ya fara gabatar da shirin talabijin a ranakun Litinin zuwa Juma'a na kowane mako.",
     "mediumSynopsis": "Sashen Hausa na BBC ya fara gabatar da shirin talabijin a ranakun Litinin zuwa Juma'a na kowane mako.",
-    "id": "urn:bbc:ares:ws_media:page:bbc_hausa_tv/w172xtnf6j8vmwq",
+    "id": "urn:bbc:ares:ws_media:page:bbc_hausa_tv/w172yjj83ptptnj",
     "brandId": "w13xttn0",
-    "episodeId": "w172xtnf6j8vmwq",
+    "episodeId": "w172yjj83ptptnj",
     "masterBrand": "bbc_hausa_tv",
-    "releaseDateTimeStamp": "2021-06-08T00:00:00.000Z",
+    "releaseDateTimeStamp": "2023-03-24T00:00:00.000Z",
     "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b216l.png",
     "imageAltText": null,
     "promoBrandTitle": "Labaran Talabijin",
-    "durationISO8601": null,
+    "durationISO8601": "PT10M",
     "thumbnailImageUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p08b216l.png",
-    "episodeAvailability": "expired",
+    "episodeAvailability": "available",
     "recentEpisodes": [
-      {
-        "id": "w172yjj83ptptnj",
-        "brandTitle": "Labaran Talabijin",
-        "episodeTitle": "Labaran Talabijin",
-        "timestamp": "2023-03-24T00:00:00.000Z",
-        "duration": "PT10M",
-        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b216l.png",
-        "altText": "Labaran Talabijin"
-      },
       {
         "id": "w172yjj7rfhxp1p",
         "brandTitle": "Labaran Talabijin",
@@ -207,13 +198,22 @@
         "duration": "PT10M",
         "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b216l.png",
         "altText": "Labaran Talabijin"
+      },
+      {
+        "id": "w172yjj6nmk6mls",
+        "brandTitle": "Labaran Talabijin",
+        "episodeTitle": "Labaran Talabijin",
+        "timestamp": "2023-02-20T00:00:00.000Z",
+        "duration": "PT10M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b216l.png",
+        "altText": "Labaran Talabijin"
       }
     ],
     "mediaBlocks": [
       {
         "type": "tv",
         "model": {
-          "id": "w172xtnf6j8vmwq",
+          "id": "w172yjj83ptptnj",
           "subType": "episode",
           "format": "Video",
           "title": "Labaran Talabijin",
@@ -224,8 +224,24 @@
           "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b216l.png",
           "embedding": false,
           "advertising": false,
-          "versions": [],
-          "availability": "notAvailable",
+          "versions": [
+            {
+              "versionId": "w1msjs6nklgnjg1",
+              "types": ["Original"],
+              "duration": 600,
+              "durationISO8601": "PT10M",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true,
+                "world": false
+              },
+              "availableFrom": "2023-03-24T20:10:00.000Z",
+              "availabilityStatus": "available",
+              "availableUntil": null
+            }
+          ],
+          "availability": "available",
           "smpKind": "programme",
           "episodeTitle": "Labaran Talabijin",
           "type": "media"
@@ -235,7 +251,7 @@
         "type": "mediaOverrides",
         "model": {
           "language": "ha",
-          "pageIdentifierOverride": "hausa.bbc_hausa_tv.tv.w172xtnf6j8vmwq.page"
+          "pageIdentifierOverride": "hausa.bbc_hausa_tv.tv.w172yjj83ptptnj.page"
         }
       }
     ]

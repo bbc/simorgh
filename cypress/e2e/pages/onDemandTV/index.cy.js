@@ -48,7 +48,7 @@ const testSuites = [
     tests,
   },
   {
-    path: '/hausa/bbc_hausa_tv/tv/w172xtnf6j8vmwq', // Episode
+    path: '/hausa/bbc_hausa_tv/tv/w172yjj83ptptnj', // Episode
     service: 'hausa',
     runforEnv: ['local', 'test', 'live'],
     tests,
