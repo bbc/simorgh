@@ -15,6 +15,8 @@ import {
 
 import { bbcDomains, advertisingServiceCountryDomains } from './domainLists';
 
+const nonce = '7088dae1fe17eee6bf8a2ccbcf9ac115';
+
 // Express Fixtures
 const req = ({ urlExample = '', originExample = '' } = {}) => ({
   url: urlExample,
@@ -221,6 +223,7 @@ describe('cspHeader', () => {
         ...advertisingServiceCountryDomains,
         "'self'",
         "'unsafe-inline'",
+        `'nonce-${nonce}'`,
       ].sort(),
       styleSrcExpectation: [
         ...bbcDomains,
@@ -416,6 +419,7 @@ describe('cspHeader', () => {
         ...advertisingServiceCountryDomains,
         "'self'",
         "'unsafe-inline'",
+        `'nonce-${nonce}'`,
       ].sort(),
       styleSrcExpectation: [
         ...bbcDomains,
@@ -480,7 +484,7 @@ describe('cspHeader', () => {
         });
 
         it(`Then it has this scriptSrc`, () => {
-          expect(generateScriptSrc({ isAmp, isLive })).toEqual(
+          expect(generateScriptSrc({ isAmp, isLive, nonce })).toEqual(
             scriptSrcExpectation,
           );
         });
@@ -502,7 +506,7 @@ describe('cspHeader', () => {
         it(`Then injectCspHeader middleware applies the correct Content-Security-Policy header`, () => {
           process.env.SIMORGH_APP_ENV = isLive ? 'live' : 'test';
 
-          injectCspHeader(req({ urlExample, originExample }), res, next);
+          injectCspHeader(req({ urlExample, originExample }), res, next, nonce);
 
           expect(next).toHaveBeenCalled();
 
@@ -529,7 +533,7 @@ describe('cspHeader', () => {
           process.env.SIMORGH_APP_ENV = isLive ? 'live' : 'test';
           process.env.SIMORGH_CSP_REPORTING_ENDPOINT = 'mocked-value';
 
-          injectCspHeader(req({ urlExample, originExample }), res, next);
+          injectCspHeader(req({ urlExample, originExample }), res, next, nonce);
 
           expect(headers['report-to']).toEqual(
             JSON.stringify({
