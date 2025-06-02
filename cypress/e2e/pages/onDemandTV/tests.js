@@ -55,10 +55,6 @@ export default ({ service, pageType, path, variant = 'default' }) => {
       describe('Recent Episodes component', () => {
         it('should be displayed if the toggle is on, and shows the expected number of items', function test() {
           cy.fixture(`toggles/${service}.json`).then(toggles => {
-            // const recentEpisodesEnabled = path(
-            //   ['recentVideoEpisodes', 'enabled'],
-            //   toggles,
-            // );
             const recentEpisodesEnabled = toggles?.recentVideoEpisodes?.enabled;
             cy.log(
               `Recent Episodes component enabled? ${recentEpisodesEnabled}`,
