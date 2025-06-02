@@ -31,6 +31,8 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
     producerName,
     preventNavigation,
     sendOptimizelyEvents,
+    groupTracker,
+    itemTracker,
   } = extractATITrackingProps({ eventTrackingData, eventType: CLICK_EVENT });
 
   const { trackingIsEnabled } = useTrackingToggle(componentName);
@@ -95,6 +97,8 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
               url: url || nextPageUrl,
               detailedPlacement,
               useReverb,
+              ...(groupTracker && { groupTracker }),
+              ...(itemTracker && { itemTracker }),
               ...(optimizelyVariation &&
                 optimizelyVariation !== 'off' && {
                   experimentVariant: optimizelyVariation,
@@ -131,6 +135,8 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
       optimizelyVariation,
       detailedPlacement,
       useReverb,
+      itemTracker,
+      groupTracker,
     ],
   );
 };

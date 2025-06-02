@@ -17,6 +17,7 @@ import Heading from '../Heading';
 const PortraitVideoCarousel = ({
   title,
   items,
+  groupTrackingId,
 }: PortraitVideoCarouselProps) => {
   const scrollRef = useRef<HTMLUListElement>(null);
 
@@ -56,11 +57,16 @@ const PortraitVideoCarousel = ({
         <div css={styles.carouselContainer}>
           <PortraitCarouselNavigation scrollPaneRef={scrollRef} />
           <ul ref={scrollRef} css={styles.carousel} data-testid="pv-carousel">
-            {items.map(item => (
+            {items.map((item, index) => (
               <PortraitVideoPromo
                 {...item}
                 key={item.id}
                 onClick={() => handlePromoClick(item)}
+                itemPosition={index}
+                groupTracker={{
+                  itemCount: items.length,
+                  resourceId: groupTrackingId,
+                }}
               />
             ))}
           </ul>
