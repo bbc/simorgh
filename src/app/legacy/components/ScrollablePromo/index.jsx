@@ -158,7 +158,10 @@ const ScrollablePromo = ({
   const eventTrackingData = {
     componentName: `edoj${blockGroupIndex}`,
     format: 'CHD=edoj',
-    ...(experimentVariant && { sendOptimizelyEvents: true }),
+    ...(experimentVariant && {
+      componentName: 'top-bar-oj',
+      sendOptimizelyEvents: true,
+    }),
   };
 
   const viewTracker = useViewTracker(eventTrackingData);

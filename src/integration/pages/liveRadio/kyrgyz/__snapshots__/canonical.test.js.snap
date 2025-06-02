@@ -167,7 +167,7 @@ exports[`Canonical Kyrgyz Live Radio Page Media Loader renders a valid container
   data-e2e="media-loader__container"
 >
   <div
-    class="bbc-1eq7znh"
+    class="media-player bbc-1ty1x88"
     data-e2e="media-player"
   >
     <noscript>

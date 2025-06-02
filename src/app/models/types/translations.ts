@@ -45,6 +45,7 @@ export interface Translations {
     404: TranslationsError;
     500: TranslationsError;
   };
+  continueReading?: string;
   byline?: {
     author?: string;
     articleInformation?: string;
@@ -199,8 +200,8 @@ export interface Translations {
   infoBannerLabel?: string;
   ugc?: Partial<UgcTranslations>;
   carousel?: {
-    scrollLeft?: string;
-    scrollRight?: string;
+    previous?: string;
+    next?: string;
   };
 }
 

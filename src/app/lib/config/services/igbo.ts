@@ -57,6 +57,7 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Lee ha niile',
       home: 'Akụkọ',
+      continueReading: 'Gaa n’ihu gụọ',
       currentPage: 'Peegi ị nọ ugbua',
       skipLinkText: 'Wụga n’ọdịnaya',
       relatedContent: "Ihe ndị ọzọ n'akụkọ a",
