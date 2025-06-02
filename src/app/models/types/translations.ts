@@ -45,6 +45,7 @@ export interface Translations {
     404: TranslationsError;
     500: TranslationsError;
   };
+  continueReading?: string;
   byline?: {
     author?: string;
     articleInformation?: string;
@@ -151,6 +152,7 @@ export interface Translations {
     bbc_yoruba_radio?: OnDemandRadioTvTranslations;
     listen: string;
     watch: string;
+    play?: string;
     watchMoments?: string;
     listenLive?: string;
     listenNext?: string;
@@ -198,8 +200,8 @@ export interface Translations {
   infoBannerLabel?: string;
   ugc?: Partial<UgcTranslations>;
   carousel?: {
-    scrollLeft?: string;
-    scrollRight?: string;
+    previous?: string;
+    next?: string;
   };
 }
 

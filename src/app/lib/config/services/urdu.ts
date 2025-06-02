@@ -77,6 +77,7 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'سب دیکھیں',
       home: 'صفحۂ اول',
+      continueReading: 'پڑھتے رہیے',
       currentPage: 'موجودہ صفحہ',
       skipLinkText: 'مواد پر جائیں',
       relatedContent: 'اسی بارے میں',

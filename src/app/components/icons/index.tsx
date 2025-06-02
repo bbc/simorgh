@@ -1,3 +1,4 @@
+import { Direction } from '#app/models/types/global';
 import React from 'react';
 
 export const Ellipsis = () => (
@@ -11,6 +12,7 @@ export const Ellipsis = () => (
     <path d="M1.6 18.8h5.8v-5.6H1.6v5.6zm11.5 0h5.8v-5.6h-5.8v5.6zm11.5 0h5.8v-5.6h-5.8v5.6z" />
   </svg>
 );
+
 export const LeftChevron = ({ className }: { className?: string }) => (
   <svg
     viewBox="0 0 32 32"
@@ -36,6 +38,54 @@ export const RightChevron = ({ className }: { className?: string }) => (
     <path d="M21.6 14.3L5.5 31h6.4l14.6-15L11.9 1H5.5l16.1 16.7v-3.4z" />
   </svg>
 );
+
+export enum ChevronOrientation {
+  BACKWARD = 'backward',
+  FORWARD = 'forward',
+}
+
+type ChevronProps = {
+  className?: string;
+  dir: Direction;
+  orientation: ChevronOrientation;
+};
+
+export const Chevron = ({ className, dir, orientation }: ChevronProps) => {
+  let normalisedDirection = null;
+  const paths = {
+    [ChevronOrientation.BACKWARD]: (
+      <path d="M10.4 14.3L26.5 31h-6.4L5.5 16 20.1 1h6.4L10.4 17.7v-3.4z" />
+    ),
+    [ChevronOrientation.FORWARD]: (
+      <path d="M21.6 14.3L5.5 31h6.4l14.6-15L11.9 1H5.5l16.1 16.7v-3.4z" />
+    ),
+  };
+
+  if (orientation === ChevronOrientation.BACKWARD) {
+    normalisedDirection =
+      dir === 'ltr' ? ChevronOrientation.BACKWARD : ChevronOrientation.FORWARD;
+  }
+
+  if (orientation === ChevronOrientation.FORWARD) {
+    normalisedDirection =
+      dir === 'ltr' ? ChevronOrientation.FORWARD : ChevronOrientation.BACKWARD;
+  }
+
+  if (!normalisedDirection) return null;
+
+  return (
+    <svg
+      viewBox="0 0 32 32"
+      focusable="false"
+      aria-hidden="true"
+      width="12"
+      height="12"
+      className={className}
+    >
+      {paths[normalisedDirection]}
+    </svg>
+  );
+};
 
 export const Clock = ({ className }: { className?: string }) => (
   <svg
@@ -155,5 +205,17 @@ export const Play = ({ className }: { className?: string }) => (
     aria-hidden="true"
   >
     <path d="M29 16 5.8 1v30z" />
+  </svg>
+);
+
+export const TriangleDown = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    className={className}
+    focusable="false"
+    aria-hidden="true"
+  >
+    <path d="M26.7 12.6 16 23.2 5.3 12.6V8.8h21.4z" />
   </svg>
 );

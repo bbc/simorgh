@@ -237,6 +237,7 @@ export const service: DefaultServiceConfig = {
         photogallery: 'Galeria de fotos',
         video: 'Vídeo',
         listen: 'Listen',
+        play: 'Play',
         watch: 'Assista',
         watchMoments: 'Assista',
         listenLive: 'Ouça ao vivo',
@@ -252,8 +253,8 @@ export const service: DefaultServiceConfig = {
         closeVideo: 'Sair',
       },
       carousel: {
-        scrollLeft: 'Scroll left',
-        scrollRight: 'Scroll right',
+        previous: 'Scroll to previous item',
+        next: 'Scroll to next item',
       },
       socialEmbed: {
         caption: {

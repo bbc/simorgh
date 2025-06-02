@@ -6,7 +6,7 @@ import {
   fireEvent,
 } from '#app/components/react-testing-library-with-providers';
 import PortraitCarouselNavigation from '.';
-import { PROMO_ITEM_WIDTH } from '..';
+import { PROMO_ITEM_WIDTH_MIN } from '../utils/styleUtils';
 
 jest.useFakeTimers();
 
@@ -22,13 +22,13 @@ const createMockScrollElementRef = ({
   const mockHTMLElementRef = {
     current: {
       scrollLeft: startScrollPosition,
-      scrollWidth: PROMO_ITEM_WIDTH * itemCount,
-      clientWidth: PROMO_ITEM_WIDTH * paneWidth,
+      scrollWidth: PROMO_ITEM_WIDTH_MIN * itemCount,
+      clientWidth: PROMO_ITEM_WIDTH_MIN * paneWidth,
       scrollBy: jest.fn(),
       addEventListener: jest.fn(),
       removeEventListener: jest.fn(),
     },
-  } as unknown as RefObject<HTMLDivElement>;
+  } as unknown as RefObject<HTMLUListElement>;
 
   (mockHTMLElementRef.current.scrollBy as jest.Mock).mockImplementation(
     ({ left }) => {
@@ -40,7 +40,7 @@ const createMockScrollElementRef = ({
 };
 
 describe('PortraitCarouselNavigation', () => {
-  it(`Should scroll items by ${PROMO_ITEM_WIDTH}px when the right button is clicked`, async () => {
+  it(`Should scroll items by ${PROMO_ITEM_WIDTH_MIN}px when the right button is clicked`, async () => {
     const mockRef = createMockScrollElementRef({
       startScrollPosition: 0,
       itemCount: 3,
@@ -59,12 +59,12 @@ describe('PortraitCarouselNavigation', () => {
       jest.runAllTimers();
     });
 
-    expect(mockRef.current.scrollLeft).toBe(PROMO_ITEM_WIDTH * 2);
+    expect(mockRef.current.scrollLeft).toBe(PROMO_ITEM_WIDTH_MIN * 2);
   });
 
-  it(`Should scroll items by negative ${PROMO_ITEM_WIDTH}px when the left button is clicked`, async () => {
+  it(`Should scroll items by negative ${PROMO_ITEM_WIDTH_MIN}px when the left button is clicked`, async () => {
     const mockRef = createMockScrollElementRef({
-      startScrollPosition: PROMO_ITEM_WIDTH * 2,
+      startScrollPosition: PROMO_ITEM_WIDTH_MIN * 2,
       itemCount: 3,
       paneWidth: 1,
     });
@@ -97,9 +97,6 @@ describe('PortraitCarouselNavigation', () => {
 
     const leftButton = screen.getByTestId('pv-scroll-left');
 
-    fireEvent.click(leftButton);
-    jest.runAllTimers();
-
     await act(async () => {
       fireEvent.click(leftButton);
       jest.runAllTimers();
@@ -129,7 +126,7 @@ describe('PortraitCarouselNavigation', () => {
       jest.runAllTimers();
     });
 
-    expect(mockRef.current.scrollLeft).toBe(PROMO_ITEM_WIDTH * 3);
+    expect(mockRef.current.scrollLeft).toBe(PROMO_ITEM_WIDTH_MIN * 3);
     expect(rightButton).toBeDisabled();
   });
 });
