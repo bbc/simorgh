@@ -53,34 +53,9 @@ export default {
       !isEmbedded && commonMarginSpacing,
     ],
 
-  audioMediaContainer: ({ mq, spacings }: Theme) =>
+  audioMediaContainer: () =>
     css({
       height: '165px',
-      '.audio-post &&': {
-        height: '140px',
-        margin: `0 0 ${spacings.FULL}rem 0`,
-        [mq.GROUP_2_MIN_WIDTH]: {
-          padding: `0 ${spacings.FULL}rem`,
-        },
-        [`@media (min-width: 548px)`]: {
-          padding: '0 0',
-        },
-        [mq.GROUP_3_MIN_WIDTH]: {
-          marginInlineEnd: `${spacings.DOUBLE}rem`,
-        },
-        [mq.GROUP_4_MIN_WIDTH]: {
-          marginInlineStart: `-${spacings.DOUBLE}rem`,
-        },
-      },
-    }),
-
-  audioFigure: ({ spacings }: Theme) =>
-    css({
-      '.audio-post': {
-        margin: `0 0 ${spacings.FULL}rem 0`,
-      },
-      aspectRatio: '16 / 9',
-      overflow: 'hidden',
     }),
 
   standardMediaContainer: ({ palette }: Theme) =>

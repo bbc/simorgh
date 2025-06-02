@@ -1085,7 +1085,9 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 }
 
 <div>
-  <noscript />
+  <noscript
+    id="analytics-noscript"
+  />
   <div>
     chartbeat
   </div>
@@ -1115,7 +1117,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
         data-e2e="media-loader__container"
       >
         <div
-          class="emotion-10"
+          class="media-player emotion-10"
           data-e2e="media-player"
         >
           <noscript />

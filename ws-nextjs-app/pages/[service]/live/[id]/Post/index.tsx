@@ -157,7 +157,7 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
       <MediaLoader blocks={props.blocks} css={styles.bodyMedia} />
     ),
     audio: (props: { blocks: MediaBlock[] }) => (
-      <MediaLoader blocks={props.blocks} className="audio-post" />
+      <MediaLoader blocks={props.blocks} css={styles.audioPost} />
     ),
     social: SocialEmbedContainer,
   };

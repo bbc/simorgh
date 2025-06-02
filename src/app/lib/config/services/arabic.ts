@@ -50,16 +50,16 @@ export const service: DefaultServiceConfig = {
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     podcastPromo: {
       title: 'يستحق الانتباه',
-      brandTitle: 'حسابنا الرسمي على واتساب',
+      brandTitle: `قناة "مجلة +"`,
       brandDescription:
-        'تابعوا التغطية الشاملة من بي بي سي نيوز عربي على واتساب.',
+        'يمكنك مطالعة مجموعة متنوعة من المقالات الشيقة والملهمة والتقارير المفيدة.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0k7ksmj.png',
-        alt: 'حسابنا الرسمي على واتساب',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0lcr91j.png',
+        alt: 'اشترك في قناة "مجلة +" على تطبيق WhatsApp',
       },
       linkLabel: {
         text: 'اضغط هنا',
-        href: 'https://www.whatsapp.com/channel/0029Val8KlE5a24BsTvuVd2e',
+        href: 'https://www.whatsapp.com/channel/0029Vb1TlQt2Jl8JhwFNNv2m',
       },
       skipLink: {
         text: 'تخطى %title% وواصل القراءة',
@@ -78,6 +78,7 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'المزيد',
       home: 'الرئيسية',
+      continueReading: 'واصل القراءة',
       currentPage: 'الصفحة الحالية',
       skipLinkText: 'إذهب الى المحتوى',
       relatedContent: 'المزيد حول هذه القصة',

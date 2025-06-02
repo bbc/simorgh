@@ -169,6 +169,7 @@ const MediaContainer = ({
     <div
       ref={playerElementRef}
       data-e2e="media-player"
+      className="media-player"
       css={isAudio ? styles.audioMediaContainer : styles.standardMediaContainer}
     >
       <noscript>
@@ -265,7 +266,6 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
         className={className}
         css={[
           styles.figure(embedded),
-          isAudio && styles.audioFigure,
           !isAudio && [
             isPortrait && styles.portraitFigure(embedded),
             isLandscape && styles.landscapeFigure,
@@ -308,7 +308,6 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
             block={captionBlock}
             type={mediaType}
             css={[
-              styles.figure(embedded),
               isAudio && styles.captionAudio,
               !isAudio && [isPortrait && styles.captionPortrait],
             ]}
