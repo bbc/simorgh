@@ -125,6 +125,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       embed={embed}
                       portraitVideo={portraitVideo}
                       renderVisuallyHiddenH2Title={position === 0}
+                      curationId={curationId}
                     />
                     {index === indexOfFirstNonBanner && <MPU />}
                   </React.Fragment>
