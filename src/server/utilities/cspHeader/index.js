@@ -1,9 +1,10 @@
 import csp from 'helmet-csp';
+import crypto from 'crypto';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import isLiveEnv from '#lib/utilities/isLive';
 import { cspDirectives } from './directives';
 
-const injectCspHeader = (req, res, next) => {
+const injectCspHeader = (req, res, next, nonce = crypto.randomBytes(16).toString("hex")) => {
   const { isAmp, service } = getRouteProps(req.url);
 
   res.setHeader(
@@ -25,6 +26,7 @@ const injectCspHeader = (req, res, next) => {
     isAmp,
     isLive: isLiveEnv(),
     service,
+    nonce
   });
 
   const middleware = csp({
