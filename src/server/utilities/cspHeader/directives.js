@@ -322,7 +322,11 @@ export const generateMediaSrc = () => {
 
 export const generateScriptSrc = ({ isAmp, isLive, nonce }) => {
   if (!isLive && isAmp) return directives.scriptSrc.ampNonLive.sort();
-  if (!isLive && !isAmp) return [`'nonce-${nonce}'`, ...directives.scriptSrc.canonicalNonLive].sort();
+  if (!isLive && !isAmp)
+    return [
+      `'nonce-${nonce}'`,
+      ...directives.scriptSrc.canonicalNonLive,
+    ].sort();
   if (isLive && isAmp) return directives.scriptSrc.ampLive.sort();
   return [`'nonce-${nonce}'`, ...directives.scriptSrc.canonicalLive].sort();
 };
