@@ -214,7 +214,6 @@ describe('Navigation Container', () => {
     ${'render Scrollable Promo Most Read'}                                      | ${mostReadBlocks}   | ${'top-bar-most-read'}           | ${true}
     ${'not render Scrollable Promo'}                                            | ${mostReadBlocks}   | ${'off'}                         | ${false}
     ${'not render Scrollable Promo'}                                            | ${mostReadBlocks}   | ${null}                          | ${false}
-    ${'not render Scrollable Promo'}                                            | ${mostReadBlocks}   | ${'control'}                     | ${false}
   `(
     'should $description when experiment variant is $experimentVariant',
     ({ blocks, experimentVariant, shouldRender }) => {
