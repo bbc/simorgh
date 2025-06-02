@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import crypto from 'crypto';
 import { cspDirectives } from '#server/utilities/cspHeader/directives';
 import fallbackServiceParam from '#app/routes/utils/fetchPageData/utils/getRouteProps/fallbackServiceParam';
 import isAmpPath from '#app/routes/utils/isAmpPath';
@@ -45,6 +46,7 @@ const cspHeaderResponse = ({ request }: { request: NextRequest }) => {
     isAmp,
     isLive,
     service,
+    nonce = crypto.randomBytes(16).toString('hex'),
   });
 
   const BUMP4SpecificConditions = {
