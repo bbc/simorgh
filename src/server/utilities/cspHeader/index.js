@@ -4,7 +4,12 @@ import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import isLiveEnv from '#lib/utilities/isLive';
 import { cspDirectives } from './directives';
 
-const injectCspHeader = (req, res, next, nonce = crypto.randomBytes(16).toString("hex")) => {
+const injectCspHeader = (
+  req,
+  res,
+  next,
+  nonce = crypto.randomBytes(16).toString('hex'),
+) => {
   const { isAmp, service } = getRouteProps(req.url);
 
   res.setHeader(
@@ -26,7 +31,7 @@ const injectCspHeader = (req, res, next, nonce = crypto.randomBytes(16).toString
     isAmp,
     isLive: isLiveEnv(),
     service,
-    nonce
+    nonce,
   });
 
   const middleware = csp({
