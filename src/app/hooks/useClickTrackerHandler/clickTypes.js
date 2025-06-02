@@ -39,7 +39,17 @@ export const isNotModifiedLeftClick = event =>
   isLeftClick(event.button) &&
   !(event.metaKey || event.altKey || event.ctrlKey || event.shiftKey);
 
-export const isValidClick = event =>
-  isMiddleClick(event.button) ||
-  isNotModifiedLeftClick(event) ||
-  isOpenClicked(event);
+const isEnterKey = key => key === 'Enter' || key === 'Return';
+
+const isTouchEvent = event =>
+  event.type === 'touchstart' || event.type === 'touchend';
+
+export const isValidClick = event => {
+  return (
+    isTouchEvent(event) ||
+    isEnterKey(event.key) ||
+    isMiddleClick(event.button) ||
+    isNotModifiedLeftClick(event) ||
+    isOpenClicked(event)
+  );
+};
