@@ -65,6 +65,19 @@ describe('ScrollablePromo', () => {
       expect(container).toHaveTextContent(expectedHeadline);
     });
 
+    it('should display Top Stories content when experimentVariant is read-more-a-and-top-stories', () => {
+      const { container } = render(
+        <ScrollablePromo
+          block={topStoriesBlocks[0]}
+          experimentVariant="read-more-a-and-top-stories"
+        />,
+      );
+      const expectedHeadline =
+        topStoriesBlocks[0].headlines.promoHeadline.blocks[0].model.blocks[0]
+          .model.text;
+      expect(container).toHaveTextContent(expectedHeadline);
+    });
+
     it('should display Most Read content when experimentVariant is top-bar-most-read', () => {
       const { container } = render(
         <ScrollablePromo
