@@ -23,7 +23,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
     const initialData = await getInitialData({
       service,
       path: '/pidgin',
-      // path: context?.resolvedUrl,
       pageType,
       variant: undefined,
       getAgent: () => Promise.resolve({} as Agent),
@@ -40,6 +39,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
           pageData: {
             metadata: {
               type: pageType,
+              atiAnalytics: {},
             },
           },
           pageType,
@@ -58,10 +58,11 @@ export const getServerSideProps: GetServerSideProps = async context => {
         isAmp: false,
         isNextJs: true,
         page: null,
-        pageData: initialData?.pageData,
+        pageData: {
+          ...initialData?.pageData,
+        },
         pageType,
         pathname: '/pidgin',
-        // pathname: context?.resolvedUrl,
         service,
         status: initialData?.status,
         timeOnServer: Date.now(),
@@ -79,6 +80,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       pageData: {
         metadata: {
           type: pageType,
+          atiAnalytics: {},
         },
       },
       pageType,
