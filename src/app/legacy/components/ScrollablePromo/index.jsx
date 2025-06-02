@@ -161,6 +161,7 @@ const ScrollablePromo = ({
     ...(experimentVariant && {
       componentName: 'top-bar-oj',
       sendOptimizelyEvents: true,
+      viewThreshold: 0,
     }),
   };
 
