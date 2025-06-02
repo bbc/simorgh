@@ -177,6 +177,17 @@ describe('ScrollablePromo', () => {
       expect(queryByText('Popular Reads')).toBeNull();
     });
 
+    it('it should display Top Stories label when experimentVariant is read-more-a-and-top-stories', () => {
+      const { getByText, queryByText } = render(
+        <ScrollablePromo
+          blocks={topStoriesBlocks}
+          experimentVariant="read-more-a-and-top-stories"
+        />,
+      );
+      expect(getByText('Top Stories')).toBeVisible();
+      expect(queryByText('Popular Reads')).toBeNull();
+    });
+
     it('it should display Most Read label when experimentVariant is top-bar-most-read', () => {
       const { getByText, queryByText } = render(
         <ScrollablePromo
