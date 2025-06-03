@@ -348,6 +348,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               />
             )}
           </main>
+          {isInExperiment && (
+            <>
+              <OptimizelyArticleCompleteTracking flagKey={getExperiment} />
+              <OptimizelyPageViewTracking flagKey={getExperiment} />
+            </>
+          )}
           {showTopics && (
             <RelatedTopics
               css={[
@@ -386,12 +392,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           // updated
           sendOptimizelyEvents
         />
-      )}
-      {isInExperiment && (
-        <>
-          <OptimizelyArticleCompleteTracking flagKey={getExperiment} />
-          <OptimizelyPageViewTracking flagKey={getExperiment} />
-        </>
       )}
     </div>
   );
