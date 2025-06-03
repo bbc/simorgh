@@ -59,7 +59,7 @@ export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
   }, [checkScrollButtons, scrollPaneRef]);
 
   return (
-    <div css={styles.buttonGroupOverlay}>
+    <div css={styles.buttonGroupOverlay} aria-hidden="true">
       <div css={styles.buttonGroup}>
         <button
           type="button"
