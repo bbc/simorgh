@@ -1,1 +1,1 @@
--       @simorgh
+*       @simorgh
