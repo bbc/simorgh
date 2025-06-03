@@ -13,8 +13,6 @@ import AUDIO_UI_CONFIG from './constants';
 const DEFAULT_WIDTH = 512;
 
 export default ({
-  id,
-  lang,
   blocks,
   basePlayerConfig,
   adsEnabled = false,
