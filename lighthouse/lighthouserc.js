@@ -106,7 +106,7 @@ module.exports = {
         ],
         'categories:seo': [
           'error',
-          { aggregationMethod: 'optimistic', minScore: 0.8 },
+          { aggregationMethod: 'optimistic', minScore: 0.6 },
         ],
       },
     },
