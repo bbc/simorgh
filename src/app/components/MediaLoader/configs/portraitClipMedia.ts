@@ -7,7 +7,6 @@ import {
   ConfigBuilderReturnProps,
   PlaylistItem,
 } from '../types';
-import getCaptionBlock from '../utils/getCaptionBlock';
 import shouldDisplayAds from '../utils/shouldDisplayAds';
 import { getExternalEmbedUrl } from '../utils/urlConstructors';
 import AUDIO_UI_CONFIG from './constants';
@@ -71,10 +70,6 @@ export default ({
     playlistItems.unshift({ kind: 'advert' });
   }
 
-  const captionBlock = getCaptionBlock(blocks, 'live');
-  const caption =
-    captionBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
-
   const holdingImageURL = buildIChefURL({
     originCode:
       firstBlock?.model?.images?.[1]?.source?.replace('Image', '') ?? '',
@@ -96,7 +91,6 @@ export default ({
       autoplay: true,
       playlistObject: {
         title: firstBlock?.model?.video?.title,
-        summary: caption || '',
         holdingImageURL,
         items: playlistItems,
       },
