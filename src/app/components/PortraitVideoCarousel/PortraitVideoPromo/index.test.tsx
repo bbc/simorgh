@@ -5,9 +5,14 @@ import {
   act,
   fireEvent,
 } from '#app/components/react-testing-library-with-providers';
+import * as useViewTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import PortraitVideoPromo from '.';
 
 describe('PortraitVideoPromo', () => {
+  beforeAll(() => {
+    jest.useFakeTimers();
+  });
+
   it('Should contain a visually hidden text with required screen reader details for the component', () => {
     const sampleHeadlines = {
       promoHeadline: 'Sample Heading',
@@ -86,6 +91,41 @@ describe('PortraitVideoPromo', () => {
     );
 
     expect(image).toBeInTheDocument();
+  });
+
+  it('Should initialise the useViewTracker hook with the correct data', async () => {
+    const sampleHeadlines = { promoHeadline: 'Sample Heading' };
+    const groupTracker = {
+      itemCount: 15,
+      resourceId: 'test-group-resource-id',
+    };
+    const clickTrackerSpy = jest.spyOn(useViewTrackerHandler, 'default');
+
+    await act(async () => {
+      render(
+        <PortraitVideoPromo
+          id="testId"
+          groupTracker={groupTracker}
+          itemPosition={2}
+          headlines={sampleHeadlines}
+        />,
+      );
+    });
+
+    expect(clickTrackerSpy).toHaveBeenCalledWith({
+      componentName: 'portrait-video-promo-3',
+      groupTracker: {
+        itemCount: 15,
+        resourceId: 'test-group-resource-id',
+      },
+      itemTracker: {
+        position: 3,
+        resourceId: 'testId',
+        text: 'Sample Heading',
+        type: 'portrait-video-promo',
+      },
+      viewThreshold: 1,
+    });
   });
 
   it('Should scroll to the center when tabbed', async () => {

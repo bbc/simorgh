@@ -78,6 +78,7 @@ type Props = {
   isApp?: boolean;
   promo?: boolean | null;
   isAmp?: boolean;
+  isLite?: boolean;
   id?: string | null;
 };
 
@@ -90,6 +91,7 @@ const Context = ({
   isApp = false,
   promo = null,
   isAmp = false,
+  isLite = false,
   id,
 }: PropsWithChildren<Props> = {}) => {
   const appInput = {
@@ -98,6 +100,7 @@ const Context = ({
     showAdsBasedOnLocation,
     isApp,
     isAmp,
+    isLite,
     id,
   };
 
