@@ -8,7 +8,6 @@ import {
   PlaylistItem,
 } from '../types';
 import shouldDisplayAds from '../utils/shouldDisplayAds';
-import { getExternalEmbedUrl } from '../utils/urlConstructors';
 import AUDIO_UI_CONFIG from './constants';
 
 const DEFAULT_WIDTH = 512;
@@ -77,17 +76,10 @@ export default ({
     resolution: DEFAULT_WIDTH,
   });
 
-  const externalEmbedUrl = getExternalEmbedUrl({
-    id,
-    versionID: firstBlock?.model?.video?.version?.id,
-    lang,
-  });
-
   return {
     mediaType: firstBlock?.model?.type ?? 'video',
     playerConfig: {
       ...basePlayerConfig,
-      ...(externalEmbedUrl && { externalEmbedUrl }),
       autoplay: true,
       playlistObject: {
         title: firstBlock?.model?.video?.title,
