@@ -13,6 +13,7 @@ exports[`Canonical Articles Embed Images should match snapshot 1`] = `
       alt="CPS vs Optimo usage. .  ."
       class="bbc-139onq"
       height="1252"
+      loading="eager"
       src="https://ichef.bbci.co.uk/news/1632/idt2-test/idt2/793f648b-b17f-489a-a473-9e5a71f12684/image/816"
       style="aspect-ratio:1632 / 1252"
       width="1632"

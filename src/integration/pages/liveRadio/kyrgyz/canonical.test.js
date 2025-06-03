@@ -6,5 +6,5 @@
 import runCanonicalTests from '../canonicalTests';
 
 describe('Canonical Kyrgyz Live Radio Page', () => {
-  runCanonicalTests(service);
+  runCanonicalTests({ service, pageType });
 });

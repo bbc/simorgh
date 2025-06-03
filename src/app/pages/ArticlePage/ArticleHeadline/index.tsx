@@ -5,46 +5,57 @@ import React, { useContext } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useToggle from '#hooks/useToggle';
-import CallToActionLinkWithChevron from '#app/components/CallToActionLinkWithChevron';
+import CallToActionLink from '#app/components/CallToActionLink';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Headings from '#containers/Headings';
 import { ComponentToRenderProps } from '../types';
 import styles from './index.styles';
 
 const ArticleHeadline = (props: ComponentToRenderProps) => {
-  const { pathname, isLite } = useContext(RequestContext);
+  const { pathname, isLite, isAmp, isApp } = useContext(RequestContext);
   const { translations } = useContext(ServiceContext);
-  const eventTrackingData = { componentName: 'canonical-lite-cta' };
-  const { enabled: showCTA } = useToggle('liteSiteCTA');
-  const viewRef = useViewTracker(eventTrackingData);
+  const eventTrackingData = {
+    componentName: 'article-lite-site-link',
+  };
+  const { enabled: articleLiteSiteLinkEnabled } = useToggle(
+    'articleLiteSiteLink',
+  );
+  const viewTracker = useViewTracker(eventTrackingData);
 
   const articleDataSavingLinkText =
     translations?.liteSite?.articleDataSavingLinkText ?? 'Data saving version';
 
-  const showLiteCTAOnCanonical: boolean = !isLite && showCTA;
+  const isCanonical = !(isLite || isAmp || isApp);
+
+  const showArticleLiteSiteLink = isCanonical && articleLiteSiteLinkEnabled;
 
   return (
     <>
       <Headings
         className="article-heading"
         {...props}
-        {...(showLiteCTAOnCanonical && {
-          css: styles.headlineStylesOverride,
+        {...(showArticleLiteSiteLink && {
+          css: styles.reducePadding,
         })}
       />
-      {showLiteCTAOnCanonical && (
+      {showArticleLiteSiteLink && (
         <div
-          css={styles.liteCTAContainer}
-          ref={viewRef}
-          data-e2e="to-lite-site"
+          css={styles.liteSiteLinkContainer}
+          {...viewTracker}
+          data-e2e="article-lite-site-link"
         >
-          <CallToActionLinkWithChevron
+          <CallToActionLink
+            url={`${pathname}.lite`}
             eventTrackingData={eventTrackingData}
-            href={`${pathname}.lite`}
-            css={styles.liteCTA}
+            css={styles.liteSiteLink}
+            alignWithMargin
+            size="brevier"
           >
-            {articleDataSavingLinkText}
-          </CallToActionLinkWithChevron>
+            <CallToActionLink.Text>
+              {articleDataSavingLinkText}
+            </CallToActionLink.Text>
+            <CallToActionLink.Chevron />
+          </CallToActionLink>
         </div>
       )}
     </>

@@ -22,7 +22,7 @@ const NOTO_SERIF_BENGALI_FONTS_DIR =
   'https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifBengali/v1.00/';
 
 const REITH_QALAM_FONTS_DIR =
-  'https://ws-downloads.files.bbci.co.uk/fonts/ReithQalam/v1.210/';
+  'https://ws-downloads.files.bbci.co.uk/fonts/ReithQalam/v1.310/';
 
 const REITH_SERIF_LIGHT = {
   name: 'BBCReithSerif_WNumbers_Lt',
@@ -65,6 +65,7 @@ const REITH_SANS_BOLD = {
 };
 
 const NOTO_SERIF_SINHALA_REGULAR = {
+  name: 'Noto_Serif_Sinhala',
   fontFamily: 'Noto Serif Sinhala',
   fontWeight: 400,
   fontStyle: 'normal',
@@ -74,6 +75,7 @@ const NOTO_SERIF_SINHALA_REGULAR = {
 };
 
 const NOTO_SERIF_SINHALA_BOLD = {
+  name: 'Noto_Serif_Sinhala_B',
   fontFamily: 'Noto Serif Sinhala',
   fontWeight: 700,
   fontStyle: 'normal',
@@ -83,6 +85,7 @@ const NOTO_SERIF_SINHALA_BOLD = {
 };
 
 const NOTO_SANS_TAMIL_REGULAR = {
+  name: 'Noto_Sans_Tamil',
   fontFamily: 'Noto Sans Tamil',
   fontWeight: 400,
   fontStyle: 'normal',
@@ -92,6 +95,7 @@ const NOTO_SANS_TAMIL_REGULAR = {
 };
 
 const NOTO_SANS_TAMIL_BOLD = {
+  name: 'Noto_Sans_Tamil_B',
   fontFamily: 'Noto Sans Tamil',
   fontWeight: 700,
   fontStyle: 'normal',
@@ -101,6 +105,7 @@ const NOTO_SANS_TAMIL_BOLD = {
 };
 
 const NOTO_SANS_TELUGU_REGULAR = {
+  name: 'Noto_Sans_Telugu',
   fontFamily: 'Noto Sans Telugu',
   fontWeight: 400,
   fontStyle: 'normal',
@@ -110,6 +115,7 @@ const NOTO_SANS_TELUGU_REGULAR = {
 };
 
 const NOTO_SANS_TELUGU_BOLD = {
+  name: 'Noto_Sans_Telugu_B',
   fontFamily: 'Noto Sans Telugu',
   fontWeight: 700,
   fontStyle: 'normal',
@@ -119,6 +125,7 @@ const NOTO_SANS_TELUGU_BOLD = {
 };
 
 const NOTO_SANS_GUJARATI_REGULAR = {
+  name: 'Noto_Sans_Gujarati',
   fontFamily: 'Noto Sans Gujarati',
   fontWeight: 400,
   fontStyle: 'normal',
@@ -128,6 +135,7 @@ const NOTO_SANS_GUJARATI_REGULAR = {
 };
 
 const NOTO_SANS_GUJARATI_BOLD = {
+  name: 'Noto_Sans_Gujarati_B',
   fontFamily: 'Noto Sans Gujarati',
   fontWeight: 700,
   fontStyle: 'normal',
@@ -137,6 +145,7 @@ const NOTO_SANS_GUJARATI_BOLD = {
 };
 
 const NOTO_SANS_ETHIOPIC_REGULAR = {
+  name: 'Noto_Sans_Ethiopic',
   fontFamily: 'Noto Sans Ethiopic',
   fontWeight: 400,
   fontStyle: 'normal',
@@ -146,6 +155,7 @@ const NOTO_SANS_ETHIOPIC_REGULAR = {
 };
 
 const NOTO_SANS_ETHIOPIC_BOLD = {
+  name: 'Noto_Sans_Ethiopic_B',
   fontFamily: 'Noto Sans Ethiopic',
   fontWeight: 700,
   fontStyle: 'normal',
@@ -155,6 +165,7 @@ const NOTO_SANS_ETHIOPIC_BOLD = {
 };
 
 const PADAUK_REGULAR = {
+  name: 'Padauk',
   fontFamily: 'Padauk',
   fontWeight: 400,
   fontStyle: 'normal',
@@ -164,6 +175,7 @@ const PADAUK_REGULAR = {
 };
 
 const PADAUK_BOLD = {
+  name: 'Padauk_B',
   fontFamily: 'Padauk',
   fontWeight: 700,
   fontStyle: 'normal',
@@ -194,7 +206,7 @@ const REITH_QALAM_REGULAR = {
   name: 'qalamNormal',
   fontFamily: 'BBC Reith Qalam',
   fontWeight: 400,
-  varsion: 'v1.210',
+  version: 'v1.310',
   fontStyle: 'normal',
   src: `${REITH_QALAM_FONTS_DIR}normal.woff2`,
   fontDisplay: 'optional',
@@ -204,7 +216,7 @@ const REITH_QALAM_BOLD = {
   name: 'qalamBold',
   fontFamily: 'BBC Reith Qalam',
   fontWeight: 700,
-  varsion: 'v1.210',
+  version: 'v1.310',
   fontStyle: 'normal',
   src: `${REITH_QALAM_FONTS_DIR}bold.woff2`,
   fontDisplay: 'optional',
@@ -215,6 +227,7 @@ export default (service: string) => {
     case 'news':
     case 'newsround':
     case 'mundo':
+    case 'polska':
     case 'portuguese':
     case 'russian':
     case 'sport':

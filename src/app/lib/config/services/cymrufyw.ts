@@ -13,6 +13,7 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-cymrufyw',
     atiAnalyticsProducerId: '100',
     atiAnalyticsProducerName: 'WALES',
+    useReverb: true,
     chartbeatDomain: 'cymrufyw.bbc.co.uk',
     brandName: 'BBC Cymru Fyw',
     product: 'BBC News',
@@ -315,16 +316,13 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'Mwyaf poblogaidd',
+      header: 'Popular Reads',
       lastUpdated: 'Diweddariad diwethaf:',
       numberOfItems: 5,
       hasMostRead: false,
     },
     radioSchedule: {
       hasRadioSchedule: false,
-    },
-    recommendations: {
-      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {

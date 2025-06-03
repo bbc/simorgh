@@ -272,7 +272,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Соңку',
     },
     mostRead: {
-      header: 'Эң көп окулгандар',
+      header: 'Көп окулгандар',
       lastUpdated: 'Акыркы жаңылоо:',
       numberOfItems: 5,
       hasMostRead: true,
@@ -281,7 +281,11 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'Эң көп окулгандар',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

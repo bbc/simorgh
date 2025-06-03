@@ -2,7 +2,6 @@
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/cbca275e184057982f27/test_coverage)](https://codeclimate.com/github/bbc/simorgh/test_coverage)
 [![Known Vulnerabilities](https://snyk.io/test/github/bbc/simorgh/badge.svg)](https://snyk.io/test/github/bbc/simorgh)
-[![Maintainability](https://api.codeclimate.com/v1/badges/cbca275e184057982f27/maintainability)](https://codeclimate.com/github/bbc/simorgh/maintainability)
 [![Storybook](https://cdn.jsdelivr.net/gh/storybooks/brand@master/badge/badge-storybook.svg)](https://bbc.github.io/simorgh/)
 
 BBC World Service News websites are rendered using Simorgh, a ReactJS based application. Simorgh also renders AMP news article pages for World Service, Public Service News and BBC Sport.
@@ -234,12 +233,6 @@ No BFF_PATH set as environment variable, you will not have access to topics
 ```
 
 Internal developers who need to work on topic pages locally should contact the team for access.
-
-### Recommendations
-
-Recommendations in story pages also use internal BBC data labs API's. It requires adding the key/value pair in `envConfig/secret.env` file for them to appear locally.
-
-Internal developers who need to work on article pages locally should contact the team for access.
 
 ### Other page types
 

@@ -148,7 +148,7 @@ export interface RadioSchedule {
 }
 
 export interface Recommendations {
-  hasStoryRecommendations: boolean;
+  header?: string;
   skipLink?: {
     text: string;
     endTextVisuallyHidden: string;
@@ -166,6 +166,7 @@ export interface Footer {
   trustProjectLink?: FooterLink;
   externalLink?: FooterLink;
   links?: FooterLink[];
+  extraLinks?: FooterLink[];
   copyrightText?: string;
   collectiveNewsroomText?: string;
 }

@@ -58,6 +58,7 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Tazama zote',
       home: 'Habari',
+      continueReading: 'Endelea kusoma',
       currentPage: 'Ukurasa uliopo ',
       skipLinkText: 'Ruka hadi maelezo',
       relatedContent: 'Maelezo zaidi kuhusu taarifa hii',
@@ -272,7 +273,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'Gumzo mitandaoni',
     },
     mostRead: {
-      header: 'Iliyosomwa zaidi',
+      header: 'Zinazovuma zaidi',
       lastUpdated: 'Imeboreshwa mwisho:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -283,7 +284,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'Muda %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'Iliyosomwa zaidi',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
