@@ -4,7 +4,6 @@ import {
   VIEWABILITY_CLICK_EVENT,
 } from '#app/lib/analyticsUtils/analytics.const';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import {
   getDestination,
   getAppType,
@@ -34,6 +33,9 @@ import {
  * For AMP pages, certain browser and device values are determined
  * https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md#device-and-browser
  */
+
+// TO DO - fix so not hardcoded
+const hardCodedExperiment = 'header_a_a_test';
 
 export const buildATIPageTrackPath = ({
   appName,
@@ -493,7 +495,7 @@ export const buildReverbAnalyticsModel = ({
           x18: isLocServeCookieSet(),
           ...(experimentVariant && {
             // TODO - hardcoded to not break serverside
-            mv_test: OPTIMIZELY_CONFIG.flagKeys.header_a_a_test.flagKey,
+            mv_test: hardCodedExperiment,
             mv_creation: `${experimentVariant}`,
           }),
         },
@@ -572,7 +574,7 @@ export const buildReverbEventModel = ({
           engine_type: ['experimentation'],
           engine_id: [
             // TODO - hardcoded to not break serverside
-            `optimizely.${OPTIMIZELY_CONFIG.flagKeys.header_a_a_test.flagKey}.${experimentVariant}`,
+            `optimizely.${hardCodedExperiment}.${experimentVariant}`,
           ],
         },
       }),
