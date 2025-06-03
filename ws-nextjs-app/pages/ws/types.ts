@@ -3,7 +3,6 @@ import { Curation } from '#app/models/types/curationData';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 
 export interface LanguagesPageProps {
-  isTestEnvironment: boolean;
   pageData: {
     id?: string;
     title: string;
