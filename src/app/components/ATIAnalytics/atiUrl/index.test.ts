@@ -365,6 +365,47 @@ describe('Reverb', () => {
       });
     });
 
+    it('should return the correct Reverb analytics model for AMP', () => {
+      const reverbAnalyticsModel = buildReverbAnalyticsModel({
+        ...input,
+        platform: 'amp' as Platforms,
+      });
+
+      const pageParams = {
+        contentId: 'contentId',
+        contentType: 'contentType',
+        destination: 'statsDestination',
+        name: 'pageIdentifier',
+        producer: 'producerName',
+        additionalProperties: {
+          app_name: 'news',
+          app_type: 'getAppType',
+          content_language: 'language',
+          product_platform: null,
+          referrer_url: 'getReferrer',
+          x5: 'getHref',
+          x8: 'libraryVersion',
+          x9: 'sanitise',
+          x10: '',
+          x11: 'timePublished',
+          x12: 'timeUpdated',
+          x13: 'ldpThingLabels',
+          x14: 'ldpThingIds',
+          x16: 'campaign1~campaign2',
+          x17: 'categoryName',
+          x18: 'isLocServeCookieSet',
+        },
+      };
+      const userParams = { isSignedIn: false };
+
+      expect(reverbAnalyticsModel.params.page).toEqual(pageParams);
+      expect(reverbAnalyticsModel.params.user).toEqual(userParams);
+
+      expect(reverbAnalyticsModel.eventDetails).toEqual({
+        eventName: 'pageView',
+      });
+    });
+
     it('should add experiment fields if experimentVariant is present', () => {
       const reverbAnalyticsModel = buildReverbAnalyticsModel({
         ...input,
