@@ -2,6 +2,7 @@
 import React, { PropsWithChildren } from 'react';
 import { jsx } from '@emotion/react';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
+import useViewTracker from '#hooks/useViewTracker'; // Added import
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely'; // Added import
 import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation'; // Added import
 import styles from './index.styles';
@@ -56,6 +57,12 @@ export const MostReadLink = ({
     true,
   );
 
+  const viewTracker = useViewTracker(
+    eventTrackingData,
+    experimentFlagKey,
+    true,
+  );
+
   // added in dummy ab test code
   const myExperiementVariation = useOptimizelyVariation(
     // @ts-expect-error - TODO - fix type issue
@@ -76,6 +83,7 @@ export const MostReadLink = ({
         css={[styles.link, size === 'default' && styles.defaultLink]}
         href={href}
         {...clickTrackerHandler}
+        {...viewTracker}
       >
         {title}
       </a>

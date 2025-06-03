@@ -5,6 +5,7 @@ import { ForwardedRef, forwardRef } from 'react';
 import { getIsLive } from '#lib/utilities/getStoryPromoInfo';
 import Promo from '#components/OptimoPromos';
 import { EventTrackingBlock } from '#app/models/types/eventTracking';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler'; // Added import
 
 import styles from './index.styles';
 import { TopStoryItem } from '../types';
@@ -68,13 +69,26 @@ type TopStoriesItemProps = {
   item: TopStoryItem;
   ariaLabelledBy: string;
   eventTrackingData?: EventTrackingBlock | null;
+  experimentFlagKey?: string;
 };
 
 const TopStoriesItem = forwardRef(
   (
-    { item, ariaLabelledBy, eventTrackingData = null }: TopStoriesItemProps,
+    {
+      item,
+      ariaLabelledBy,
+      eventTrackingData = null,
+      experimentFlagKey,
+    }: TopStoriesItemProps,
     viewTracker: ForwardedRef<HTMLDivElement>,
   ) => {
+    const eventTrackingDataSend = eventTrackingData?.block;
+    const clickTrackerHandler = useClickTrackerHandler(
+      eventTrackingDataSend,
+      experimentFlagKey,
+      // isClientSide
+      true,
+    );
     if (!item || Object.keys(item).length === 0) return null;
 
     const itemExtractor = {
@@ -102,12 +116,17 @@ const TopStoriesItem = forwardRef(
     const titleHasContent = titleTag === 'h3';
 
     return (
-      <div css={styles.topStoriesWrapper} {...viewTracker}>
+      <div
+        css={styles.topStoriesWrapper}
+        {...viewTracker}
+        {...clickTrackerHandler}
+      >
         <Promo
           to={assetUri || uri || canonicalUrl}
           ariaLabelledBy={ariaLabelledBy}
           mediaType={mediaType}
-          eventTrackingData={eventTrackingData}
+          // TODO - refactor outside of this PR?
+          eventTrackingData={eventTrackingDataSend}
         >
           <Promo.ContentWrapper>
             <Promo.Title

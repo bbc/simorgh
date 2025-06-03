@@ -19,6 +19,7 @@ type TopStoriesListProps = {
   index: number;
   eventTrackingData: EventTrackingBlock;
   viewTracker: React.Ref<HTMLDivElement>;
+  experimentFlagKey?: string;
 };
 
 const renderTopStoriesList = ({
@@ -26,6 +27,7 @@ const renderTopStoriesList = ({
   index,
   eventTrackingData,
   viewTracker,
+  experimentFlagKey,
 }: TopStoriesListProps) => {
   const contentType = item?.contentType ?? '';
   const assetUri = item?.locators?.assetUri ?? '';
@@ -48,6 +50,7 @@ const renderTopStoriesList = ({
         ariaLabelledBy={ariaLabelledBy}
         ref={viewTracker}
         eventTrackingData={eventTrackingData}
+        experimentFlagKey={experimentFlagKey}
       />
     </PromoItem>
   );
@@ -134,6 +137,7 @@ const TopStoriesSection = ({
           ariaLabelledBy={ariaLabelledBy}
           ref={viewTracker}
           eventTrackingData={eventTrackingData}
+          experimentFlagKey={experimentFlagKey}
         />
       ) : (
         <PromoList css={styles.promoList}>
@@ -143,6 +147,7 @@ const TopStoriesSection = ({
               index,
               eventTrackingData,
               viewTracker,
+              experimentFlagKey,
             }),
           )}
         </PromoList>
