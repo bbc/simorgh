@@ -96,6 +96,7 @@ export default ({
       },
       ui: {
         ...basePlayerConfig.ui,
+        ...(firstBlock?.model?.type === 'audio' && AUDIO_UI_CONFIG),
         swipable: {
           enabled: true,
           direction: 'Y',
@@ -105,7 +106,6 @@ export default ({
           includeNextButton: true,
           includePreviousButton: true,
         },
-        ...(firstBlock?.model?.type === 'audio' && AUDIO_UI_CONFIG),
       },
       statsObject: {
         ...basePlayerConfig.statsObject,
