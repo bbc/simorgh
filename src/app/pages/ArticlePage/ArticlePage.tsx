@@ -1,6 +1,6 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { jsx, useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
@@ -71,6 +71,7 @@ import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
 import styles from './ArticlePage.styles';
 import { ComponentToRenderProps, TimeStampProps } from './types';
+import ContinueReadingButton from './ContinueReadingButton';
 import ArticleHeadline from './ArticleHeadline';
 import isPortraitVideo from '../utils/isPortraitVideo';
 
@@ -139,7 +140,8 @@ const getVideoComponent =
   };
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
-  const { isApp } = useContext(RequestContext);
+  const [showAllContent, setShowAllContent] = useState(false);
+  const { isApp, isAmp, isLite } = useContext(RequestContext);
 
   const {
     articleAuthor,
@@ -160,7 +162,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   );
 
   const isInExperiment = experimentVariant && experimentVariant !== 'off';
-
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
 
@@ -170,6 +171,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   } = pageData;
 
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
+  const { enabled: liteCTAShows } = useToggle('liteSiteCTA');
+
   const headline = getHeadline(pageData) ?? '';
   const description = getSummary(pageData) || getHeadline(pageData);
   const firstPublished = getFirstPublished(pageData);
@@ -262,6 +265,14 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const showTopics = Boolean(showRelatedTopics && topics.length > 0);
 
+  const showContinueReadingButton = Boolean(
+    !isAmp &&
+      !isLite &&
+      !isApp &&
+      ['read-more-a', 'read-more-b', 'read-more-a-and-top-stories'].includes(
+        experimentVariant,
+      ),
+  );
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics atiData={atiData} />
@@ -310,15 +321,36 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
       <div css={styles.grid}>
         <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
-          <main css={styles.mainContent} role="main">
+          <main
+            css={[
+              styles.mainContent,
+              ...(showContinueReadingButton
+                ? [!showAllContent && styles.contentHidden(liteCTAShows)]
+                : []),
+            ]}
+            role="main"
+          >
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
             />
+            {showContinueReadingButton && (
+              <ContinueReadingButton
+                showAllContent={showAllContent}
+                setShowAllContent={() => setShowAllContent(true)}
+                variation={experimentVariant}
+                liteCTAShows={liteCTAShows}
+              />
+            )}
           </main>
           {showTopics && (
             <RelatedTopics
-              css={styles.relatedTopics}
+              css={[
+                styles.relatedTopics,
+                ...(showContinueReadingButton
+                  ? [!showAllContent && styles.hideRelatedTopics]
+                  : []),
+              ]}
               topics={topics}
               mobileDivider={false}
               backgroundColour={GREY_2}
