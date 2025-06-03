@@ -17,7 +17,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     'public, stale-if-error=300, stale-while-revalidate=120, max-age=30',
   );
 
-  const { id } = context.query as PageDataParams;
+  const { id, renderer_env: rendererEnv } = context.query as PageDataParams;
   const baseProps = {
     error: null,
     isAmp: false,
@@ -46,7 +46,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     id,
     service: 'pidgin',
     variant: undefined,
-    rendererEnv: 'live',
+    rendererEnv,
     resolvedUrl: '/pidgin',
     pageType: HOME_PAGE,
   });
