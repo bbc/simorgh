@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import AmpGeo from '#components/AmpGeo';
 import useToggle from '#hooks/useToggle';
 import Banner from './Banner/index.amp';
 
@@ -45,7 +44,6 @@ const Amp = () => {
   const { enabled: privacyToggle } = useToggle('privacyPolicy');
   return (
     <AmpConsentWrapper>
-      <AmpGeo />
       <amp-consent id="consent" layout="nodisplay">
         {jsonInlinedScript(ampConsentData)}
         <div id="consent-prompt">

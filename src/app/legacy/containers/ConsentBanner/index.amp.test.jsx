@@ -81,15 +81,6 @@ describe('Amp Consent Banner Container', () => {
     );
   });
 
-  it('should render a single amp-geo element containing inlined JSON', () => {
-    AmpContainer = require('./index.amp').default;
-    ({ container } = render(<AmpContainer />));
-
-    expect(container.querySelectorAll('amp-geo').length).toEqual(1);
-    const ampGeo = container.querySelector('amp-geo');
-    expectNodeToContainInlinedJSON(ampGeo);
-  });
-
   it('should render a single amp-consent element containing inlined JSON', () => {
     AmpContainer = require('./index.amp').default;
     ({ container } = render(<AmpContainer />));
