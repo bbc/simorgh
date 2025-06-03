@@ -22,66 +22,80 @@ export default ({
   adsEnabled = false,
   showAdsBasedOnLocation = false,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
-  const portraitClipMediaBlock: PortraitClipMediaBlock = filterForBlockType(
+  const firstBlock = filterForBlockType(
     blocks,
     'portraitClipMedia',
-  );
+  ) as PortraitClipMediaBlock;
 
-  const { model = {} } = portraitClipMediaBlock || {};
-  const { video, images, type = 'video' } = model as any;
+  if (!firstBlock) {
+    return {
+      mediaType: 'video',
+      playerConfig: basePlayerConfig,
+      showAds: false,
+      orientation: 'portrait',
+    };
+  }
 
-  const versionID = video?.version?.id;
-  const kind = video?.version?.kind || 'programme';
-  const duration = moment
-    .duration(video?.version?.duration || 'PT0S')
-    .asSeconds();
+  const portraitClipMediaBlocks: PortraitClipMediaBlock[] = filterForBlockType(
+    blocks,
+    'portraitClipMedia',
+    { multiple: true },
+  ) as PortraitClipMediaBlock[];
 
-  const captionBlock = getCaptionBlock(blocks, 'live');
-  const caption =
-    captionBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
+  const playlistItems: PlaylistItem[] = portraitClipMediaBlocks.map(block => {
+    const { model } = block;
+    const { video, images } = model;
+    const version = video?.version;
 
-  const holdingImageURL = buildIChefURL({
-    originCode: images?.[1]?.source?.replace('Image', '') ?? '',
-    locator: images?.[1]?.urlTemplate ?? '',
-    resolution: DEFAULT_WIDTH,
+    return {
+      versionID: version?.id,
+      kind: version?.kind || 'programme',
+      duration: moment.duration(version?.duration || 'PT0S').asSeconds(),
+      embedRights: video?.isEmbeddingAllowed ? 'allowed' : undefined,
+      vpid: video?.id,
+      serviceID: version?.territories?.[0],
+      title: video?.title,
+      guidance: version?.guidance,
+      territories: version?.territories,
+      images,
+    };
   });
-
-  // multiple hardcoded minimal playlist to test SMP vertical swipe
-  const playlistItems: PlaylistItem[] = [
-    { versionID, kind, duration },
-    { versionID, kind, duration },
-    { versionID, kind, duration },
-    { versionID, kind, duration },
-    { versionID, kind, duration },
-    { versionID, kind, duration },
-    { versionID, kind, duration },
-    { versionID, kind, duration },
-  ];
 
   const showAds = shouldDisplayAds({
     adsEnabled,
     showAdsBasedOnLocation,
-    duration,
+    duration: playlistItems[0]?.duration ?? 0,
   });
 
   if (showAds) {
     playlistItems.unshift({ kind: 'advert' });
   }
 
+  const captionBlock = getCaptionBlock(blocks, 'live');
+  const caption =
+    captionBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
+
+  const holdingImageURL = buildIChefURL({
+    originCode:
+      firstBlock?.model?.images?.[1]?.source?.replace('Image', '') ?? '',
+    locator: firstBlock?.model?.images?.[1]?.urlTemplate ?? '',
+    resolution: DEFAULT_WIDTH,
+  });
+
   const externalEmbedUrl = getExternalEmbedUrl({
     id,
-    versionID,
+    versionID: firstBlock?.model?.video?.version?.id,
     lang,
   });
 
   return {
-    mediaType: type,
+    mediaType: firstBlock?.model?.type ?? 'video',
     playerConfig: {
       ...basePlayerConfig,
       ...(externalEmbedUrl && { externalEmbedUrl }),
       autoplay: true,
       playlistObject: {
-        title: video?.title,
+        title: firstBlock?.model?.video?.title,
         summary: caption || '',
         holdingImageURL,
         items: playlistItems,
@@ -97,12 +111,13 @@ export default ({
           includeNextButton: true,
           includePreviousButton: true,
         },
-
-        ...(type === 'audio' && AUDIO_UI_CONFIG),
+        ...(firstBlock?.model?.type === 'audio' && AUDIO_UI_CONFIG),
       },
       statsObject: {
         ...basePlayerConfig.statsObject,
-        ...(video?.id && { clipPID: video.id }),
+        ...(firstBlock?.model?.video?.id && {
+          clipPID: firstBlock.model.video.id,
+        }),
       },
     },
     showAds,
