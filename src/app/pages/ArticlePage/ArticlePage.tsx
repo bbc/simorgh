@@ -20,6 +20,8 @@ import SocialEmbedContainer from '#containers/SocialEmbed';
 import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
+// TO DO
+// import OPTIMIZELY_CONFIG from '#app/lib/config/optimizely';
 
 import {
   getArticleId,

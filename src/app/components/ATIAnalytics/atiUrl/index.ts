@@ -4,6 +4,8 @@ import {
   VIEWABILITY_CLICK_EVENT,
 } from '#app/lib/analyticsUtils/analytics.const';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+// TO DO
+// import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import {
   getDestination,
   getAppType,

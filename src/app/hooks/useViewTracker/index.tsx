@@ -16,7 +16,8 @@ import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingP
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon';
 import useTrackingToggle from '../useTrackingToggle';
-import OPTIMIZELY_CONFIG from '../../lib/config/optimizely';
+// TO DO
+// import OPTIMIZELY_CONFIG from '../../lib/config/optimizely';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 const VIEWED_DURATION_MS = 1000;
