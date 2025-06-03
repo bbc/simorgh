@@ -3,33 +3,30 @@ import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import ThemeProvider from '#app/components/ThemeProvider';
 import { Services } from '#app/models/types/global';
-import socialLinksFixture from '#data/kyrgyz/topics/cvpv9djp9qqt.json';
+import fixture from '#data/kyrgyz/topics/cvpv9djp9qqt.json';
 import {
   Curation,
   Summary,
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
-import SocialLinks from '.';
+import UsefulLinks from '.';
 import metadata from './metadata.json';
 import readme from './README.md';
 
-const getSocialLinksData = (numberOfItems?: number): Curation => {
-  const socialLinksCuration = socialLinksFixture.data.curations.find(
-    curation => {
-      return (
-        curation.visualStyle === VISUAL_STYLE.LINKS &&
-        curation.visualProminence === VISUAL_PROMINENCE.NORMAL
-      );
-    },
-  ) as Curation;
+const getUsefulLinksData = (numberOfItems?: number): Curation => {
+  const curations = fixture.data.curations.find(curation => {
+    return (
+      curation.visualStyle === VISUAL_STYLE.LINKS &&
+      curation.visualProminence === VISUAL_PROMINENCE.LOW
+    );
+  }) as Curation;
 
-  if (!socialLinksCuration.summaries || !numberOfItems)
-    return socialLinksCuration;
+  if (!curations.summaries || !numberOfItems) return curations;
 
   return {
-    ...socialLinksCuration,
-    summaries: socialLinksCuration.summaries.slice(0, numberOfItems),
+    ...curations,
+    summaries: curations.summaries.slice(0, numberOfItems),
   };
 };
 
@@ -44,9 +41,9 @@ const Component = ({
     <ToggleContextProvider>
       <ThemeProvider service={service}>
         <ServiceContextProvider service={service}>
-          <SocialLinks
+          <UsefulLinks
             summaries={curation.summaries as Summary[]}
-            title={curation.title || 'Social Links'}
+            title={curation.title || 'Useful Links'}
           />
         </ServiceContextProvider>
       </ThemeProvider>
@@ -56,7 +53,7 @@ const Component = ({
 
 export default {
   Component,
-  title: 'Components/SocialLinks',
+  title: 'Components/UsefulLinks',
   parameters: {
     metadata,
     docs: { readme },
@@ -64,13 +61,13 @@ export default {
 };
 
 export const Example = () => (
-  <Component curation={getSocialLinksData()} service="mundo" />
+  <Component curation={getUsefulLinksData()} service="mundo" />
 );
 
 export const SingleLink = () => (
-  <Component curation={getSocialLinksData(1)} service="mundo" />
+  <Component curation={getUsefulLinksData(1)} service="mundo" />
 );
 
 export const OddNumberOfLinks = () => (
-  <Component curation={getSocialLinksData(5)} service="mundo" />
+  <Component curation={getUsefulLinksData(3)} service="mundo" />
 );

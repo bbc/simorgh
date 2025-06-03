@@ -4,6 +4,8 @@ updates:
     directory: '/'
     schedule:
       interval: 'weekly'
+    reviewers:
+      - 'bbc/simorgh'
     ignore:
       - dependency-name: 'webpack'
         update-types: ['version-update:semver-major']
