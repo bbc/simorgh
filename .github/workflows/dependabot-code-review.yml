@@ -1,8 +1,8 @@
 name: Dependabot Review & Approve
 on:
   pull_request:
-    # types:
-    #   - opened
+    types:
+      - opened
     branches:
       - '**'
 
@@ -14,7 +14,7 @@ jobs:
   run:
     name: Request Code Review & Approve PR if checks pass
     runs-on: ubuntu-latest
-    # if: github.event.pull_request.user.login == 'dependabot[bot]'
+    if: github.event.pull_request.user.login == 'dependabot[bot]'
     steps:
       - name: Request Code Review on Slack
         uses: slackapi/slack-github-action@v2.1.0
