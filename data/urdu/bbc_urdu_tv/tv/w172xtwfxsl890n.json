@@ -3,11 +3,11 @@
     "metadata": {
       "type": "On Demand TV",
       "atiAnalytics": {
-        "pageIdentifier": "urdu.bbc_urdu_tv.tv.w172xtwkxr1xtlz.page",
+        "pageIdentifier": "urdu.bbc_urdu_tv.tv.w172xtwfxsl890n.page",
         "contentType": "player-episode",
         "pageTitle": "سیربین ٹی وی پروگرام آن ڈیمانڈ - BBC News اردو",
         "language": "ur",
-        "contentId": "urn:bbc:pips:w172xtwkxr1xtlz"
+        "contentId": "urn:bbc:pips:w172xtwfxsl890n"
       }
     },
     "language": "ur",
@@ -16,23 +16,32 @@
     "headline": "سیربین ٹی وی پروگرام آن ڈیمانڈ",
     "shortSynopsis": "سیربین پیر سے جمعہ پاکستان کے مقامی وقت کے مطابق شام سات بجے بی بی سی اردو ڈاٹ کام پر۔",
     "mediumSynopsis": "سیربین پیر سے جمعہ پاکستان کے مقامی وقت کے مطابق شام سات بجے بی بی سی اردو ڈاٹ کام پر۔",
-    "id": "urn:bbc:ares:ws_media:page:bbc_urdu_tv/w172xtwkxr1xtlz",
+    "id": "urn:bbc:ares:ws_media:page:bbc_urdu_tv/w172xtwfxsl890n",
     "brandId": "w13xttn1",
-    "episodeId": "w172xtwkxr1xtlz",
+    "episodeId": "w172xtwfxsl890n",
     "masterBrand": "bbc_urdu_tv",
-    "releaseDateTimeStamp": "2021-08-26T00:00:00.000Z",
+    "releaseDateTimeStamp": "2021-06-09T00:00:00.000Z",
     "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23yf.png",
     "imageAltText": null,
     "promoBrandTitle": "سیربین ٹی وی پروگرام آن ڈیمانڈ",
-    "durationISO8601": "PT10M5S",
+    "durationISO8601": null,
     "thumbnailImageUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p08b23yf.png",
-    "episodeAvailability": "available",
+    "episodeAvailability": "expired",
     "recentEpisodes": [
       {
         "id": "w172xtwkxr20qj2",
         "brandTitle": "سیربین ٹی وی پروگرام آن ڈیمانڈ",
         "episodeTitle": "سیربین ٹی وی پروگرام آن ڈیمانڈ",
         "timestamp": "2021-08-27T00:00:00.000Z",
+        "duration": "PT10M5S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b23yf.png",
+        "altText": "سیربین ٹی وی پروگرام آن ڈیمانڈ"
+      },
+      {
+        "id": "w172xtwkxr1xtlz",
+        "brandTitle": "سیربین ٹی وی پروگرام آن ڈیمانڈ",
+        "episodeTitle": "سیربین ٹی وی پروگرام آن ڈیمانڈ",
+        "timestamp": "2021-08-26T00:00:00.000Z",
         "duration": "PT10M5S",
         "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b23yf.png",
         "altText": "سیربین ٹی وی پروگرام آن ڈیمانڈ"
@@ -198,22 +207,13 @@
         "duration": "PT10M5S",
         "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b23yf.png",
         "altText": "سیربین ٹی وی پروگرام آن ڈیمانڈ"
-      },
-      {
-        "id": "w172xtwjgnsqb8j",
-        "brandTitle": "سیربین ٹی وی پروگرام آن ڈیمانڈ",
-        "episodeTitle": "سیربین ٹی وی پروگرام آن ڈیمانڈ",
-        "timestamp": "2021-07-28T00:00:00.000Z",
-        "duration": "PT10M5S",
-        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b23yf.png",
-        "altText": "سیربین ٹی وی پروگرام آن ڈیمانڈ"
       }
     ],
     "mediaBlocks": [
       {
         "type": "tv",
         "model": {
-          "id": "w172xtwkxr1xtlz",
+          "id": "w172xtwfxsl890n",
           "subType": "episode",
           "format": "Video",
           "title": "سیربین ٹی وی پروگرام آن ڈیمانڈ",
@@ -225,24 +225,8 @@
           "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23yf.png",
           "embedding": false,
           "advertising": false,
-          "versions": [
-            {
-              "versionId": "w1msj186ylmhn8v",
-              "types": ["Original"],
-              "duration": 605,
-              "durationISO8601": "PT10M5S",
-              "warnings": {},
-              "availableTerritories": {
-                "uk": false,
-                "nonUk": false,
-                "world": true
-              },
-              "availableFrom": "2021-08-26T14:10:05.000Z",
-              "availabilityStatus": "available",
-              "availableUntil": null
-            }
-          ],
-          "availability": "available",
+          "versions": [],
+          "availability": "notAvailable",
           "smpKind": "programme",
           "episodeTitle": "سیربین ٹی وی پروگرام آن ڈیمانڈ",
           "type": "media"
@@ -252,7 +236,7 @@
         "type": "mediaOverrides",
         "model": {
           "language": "ur",
-          "pageIdentifierOverride": "urdu.bbc_urdu_tv.tv.w172xtwkxr1xtlz.page"
+          "pageIdentifierOverride": "urdu.bbc_urdu_tv.tv.w172xtwfxsl890n.page"
         }
       }
     ]
