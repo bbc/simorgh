@@ -7,16 +7,16 @@ The link has a tap area that includes the image/placeholder. The component uses 
 
 | Name      | type      | Description                                          |
 | --------- | --------- | ---------------------------------------------------- |
+| id        | string    | (optional) default id value: social-links-1          |
 | title     | string    | The H2 title of the social links section             |
-| position  | number    | The position of the curation item                    |
 | summaries | Summary[] | List of summary objects as returned from Simorgh BFF |
 
 ## How to use
 
 ```tsx
-<SocialLinks
-  summaries={summaries}
-  position={position}
+<UsefulLinks
+  id={id}
   title={title}
+  summaries={summaries}
 />
 ```
