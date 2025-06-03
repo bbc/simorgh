@@ -58,6 +58,7 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'அனைத்தும் பார்க்க',
       home: 'முகப்பு',
+      continueReading: 'தொடர்ந்து படியுங்கள்',
       currentPage: 'தற்போதுள்ள பக்கம்',
       skipLinkText: 'உள்ளடக்கத்துக்குத் தாண்டிச் செல்க',
       relatedContent: 'தொடர்புடைய உள்ளடக்கம்',

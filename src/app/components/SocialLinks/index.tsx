@@ -4,7 +4,6 @@ import React, { useContext, useId } from 'react';
 import { jsx } from '@emotion/react';
 import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
 import { Summary } from '#app/models/types/curationData';
-import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { createSrcsets } from '#lib/utilities/srcSet';
 import getLocator from '#lib/utilities/imageSrcHelpers/locator';
@@ -94,8 +93,6 @@ const SocialLinks = ({
   summaries = [],
   id = 'social-links-1',
 }: SocialLinksProps) => {
-  const { dir } = useContext(ServiceContext);
-
   if (!summaries.length) {
     return null;
   }
@@ -109,11 +106,11 @@ const SocialLinks = ({
       data-testid={id}
       css={styles.container}
     >
-      <Heading level={2} id={id} css={styles.heading} dir={dir}>
+      <Heading level={2} id={id} css={styles.heading}>
         {title}
       </Heading>
       {hasMultipleItems ? (
-        <ul css={styles.unorderedList} dir={dir} role="list">
+        <ul css={styles.unorderedList} role="list">
           {summaries.map(summary => {
             return (
               <li css={styles.item} key={summary.title}>
@@ -123,7 +120,7 @@ const SocialLinks = ({
           })}
         </ul>
       ) : (
-        <div css={styles.item} dir={dir}>
+        <div css={styles.item}>
           <SocialLink summary={summaries[0]} />
         </div>
       )}
