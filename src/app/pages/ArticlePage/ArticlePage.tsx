@@ -342,13 +342,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                 liteCTAShows={liteCTAShows}
               />
             )}
+            {isInExperiment && <OptimizelyArticleCompleteTracking />}
           </main>
-          {isInExperiment && (
-            <>
-              <OptimizelyArticleCompleteTracking />
-              <OptimizelyPageViewTracking />
-            </>
-          )}
+          {isInExperiment && <OptimizelyPageViewTracking />}
           {showTopics && (
             <RelatedTopics
               css={[
