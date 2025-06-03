@@ -17,7 +17,7 @@ const AmpATIAnalytics = ({
   reverbParams,
 }: ATIAnalyticsProps) => {
   return (
-    <amp-analytics data-e2e='ati-amp-analytics'>
+    <amp-analytics data-e2e="ati-amp-analytics">
       {JsonInlinedScript(
         getAmpAnalyticsJson({
           baseUrl: getEnvConfig().SIMORGH_ATI_BASE_URL,

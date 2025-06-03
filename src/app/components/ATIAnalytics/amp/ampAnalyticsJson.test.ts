@@ -1,5 +1,5 @@
 /* eslint-disable no-template-curly-in-string */
-import { getExpectedAtiDestination } from '#cypress/e2e/specialFeatures/atiAnalytics/helpers';
+import { getExpectedAtiDestination } from '../../../../../cypress/e2e/specialFeatures/atiAnalytics/helpers';
 import { ReverbBeaconConfig } from '../types';
 import ampAnalyticsJson from './ampAnalyticsJson';
 
@@ -65,7 +65,7 @@ describe('AMP ATI Analytics', () => {
       ${'local'}  | ${'WS_NEWS_LANGUAGES_TEST'} | ${'news-gahuza'}       | ${'gahuza'}       | ${'https://logws1363.ati-host.net/hit.xiti?'}
       ${'test'}   | ${'WS_NEWS_LANGUAGES_TEST'} | ${'news-gahuza'}       | ${'gahuza'}       | ${'https://logws1363.ati-host.net/hit.xiti?'}
       ${'live'}   | ${'WS_NEWS_LANGUAGES'}      | ${'news-gahuza'}       | ${'gahuza'}       | ${'https://a1.api.bbc.co.uk/hit.xiti?'}
-      ${'live'}   | ${'NEWS_PS'}                | ${'news'}              | ${'news'}         | ${'https://a1.api.bbc.co.uk/hit.xiti?'} 
+      ${'live'}   | ${'NEWS_PS'}                | ${'news'}              | ${'news'}         | ${'https://a1.api.bbc.co.uk/hit.xiti?'}
       ${'test'}   | ${'NEWS_PS_TEST'}           | ${'news'}              | ${'news'}         | ${'https://logws1363.ati-host.net/hit.xiti?'}
       ${'live'}   | ${'NEWS_LANGUAGES_PS'}      | ${'news-cymrufyw'}     | ${'cymrufyw'}     | ${'https://a1.api.bbc.co.uk/hit.xiti?'}
       ${'test'}   | ${'NEWS_LANGUAGES_PS_TEST'} | ${'news-cymrufyw'}     | ${'cymrufyw'}     | ${'https://logws1363.ati-host.net/hit.xiti?'}
