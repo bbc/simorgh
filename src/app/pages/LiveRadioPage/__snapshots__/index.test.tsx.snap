@@ -1085,7 +1085,9 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 }
 
 <div>
-  <noscript />
+  <noscript
+    id="analytics-noscript"
+  />
   <div>
     chartbeat
   </div>

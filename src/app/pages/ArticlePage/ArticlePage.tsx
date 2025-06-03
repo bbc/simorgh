@@ -343,6 +343,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               />
             )}
           </main>
+          {isInExperiment && (
+            <>
+              <OptimizelyArticleCompleteTracking />
+              <OptimizelyPageViewTracking />
+            </>
+          )}
           {showTopics && (
             <RelatedTopics
               css={[
@@ -376,12 +382,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           mobileDivider={showTopics}
           sendOptimizelyEvents={false}
         />
-      )}
-      {isInExperiment && (
-        <>
-          <OptimizelyArticleCompleteTracking />
-          <OptimizelyPageViewTracking />
-        </>
       )}
     </div>
   );
