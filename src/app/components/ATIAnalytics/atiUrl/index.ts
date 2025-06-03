@@ -508,7 +508,7 @@ export const buildReverbAnalyticsModel = ({
   return reverbVariables;
 };
 
-export const buildReverbPageSectionEventModel = ({
+export const buildReverbEventModel = ({
   pageIdentifier,
   producerName,
   statsDestination,
@@ -518,7 +518,18 @@ export const buildReverbPageSectionEventModel = ({
   advertiserID,
   url,
   experimentVariant,
+  itemTracker = {},
+  groupTracker = {},
 }: ATIEventTrackingProps): ReverbBeaconConfig => {
+  const {
+    type: itemType,
+    text,
+    position,
+    duration,
+    resourceId: itemResourceId,
+  } = itemTracker;
+  const { itemCount, resourceId: groupResourceId } = groupTracker;
+
   return {
     params: {
       page: {
@@ -540,9 +551,16 @@ export const buildReverbPageSectionEventModel = ({
         ...(advertiserID && { attribution: advertiserID }),
         name: componentName,
         ...(url && { link: url }),
+        ...(itemType && { type: itemType }),
+        ...(text && { text }),
+        ...(position && { position }),
+        ...(duration && { duration }),
+        ...(itemResourceId && { resource_id: itemResourceId }),
       },
       group: {
         name: campaignID,
+        ...(itemCount && { item_count: itemCount }),
+        ...(groupResourceId && { resource_id: groupResourceId }),
       },
       event: {
         category: 'viewability',

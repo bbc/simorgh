@@ -40,6 +40,9 @@ const getComponentViewTracker = (
     campaignID,
     detailedPlacement,
     sendOptimizelyEvents,
+    groupTracker,
+    itemTracker,
+    viewThreshold,
   } = extractATITrackingProps({
     eventTrackingData,
     eventType: VIEW_EVENT,
@@ -64,7 +67,7 @@ const getComponentViewTracker = (
 
   const { service, useReverb } = useContext(ServiceContext);
 
-  const initObserver = async () => {
+  const initObserver = async (threshold = MIN_VIEWED_PERCENT) => {
     if (typeof window.IntersectionObserver === 'undefined') {
       // Polyfill IntersectionObserver, e.g. for IE11
       await import('intersection-observer');
@@ -79,7 +82,7 @@ const getComponentViewTracker = (
     };
 
     const options = {
-      threshold: [MIN_VIEWED_PERCENT],
+      threshold: [threshold],
     };
 
     // @ts-expect-error current element won't be null
@@ -133,6 +136,8 @@ const getComponentViewTracker = (
             url,
             detailedPlacement,
             useReverb,
+            ...(groupTracker && { groupTracker }),
+            ...(itemTracker && { itemTracker }),
             ...(optimizelyVariation &&
               optimizelyVariation !== 'off' && {
                 experimentVariant: optimizelyVariation,
@@ -174,15 +179,17 @@ const getComponentViewTracker = (
     optimizelyVariation,
     detailedPlacement,
     useReverb,
+    itemTracker,
+    groupTracker,
   ]);
 
   const viewTracker = useCallback(
     async (element: HTMLElement) => {
       if (!element || !trackingIsEnabled || eventSent) return;
-      if (!observer.current) await initObserver();
+      if (!observer.current) await initObserver(viewThreshold);
       (observer.current as unknown as IntersectionObserver)?.observe(element);
     },
-    [trackingIsEnabled, eventSent],
+    [trackingIsEnabled, eventSent, viewThreshold],
   );
 
   return viewTracker;

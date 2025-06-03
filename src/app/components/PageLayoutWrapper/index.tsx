@@ -86,9 +86,13 @@ const PageLayoutWrapper = ({
     const mostReadItems = pageData.mostRead?.items;
 
     let dataForOJExperiment;
-    if (experimentVariant === 'top_bar_top_stories') {
+    if (
+      ['top-bar-top-stories', 'read-more-a-and-top-stories'].includes(
+        experimentVariant,
+      )
+    ) {
       dataForOJExperiment = topStories;
-    } else if (experimentVariant === 'top_bar_most_read' && mostReadItems) {
+    } else if (experimentVariant === 'top-bar-most-read' && mostReadItems) {
       dataForOJExperiment = mostReadItems;
     }
 

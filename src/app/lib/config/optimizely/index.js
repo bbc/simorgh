@@ -2,10 +2,10 @@ const OPTIMIZELY_CONFIG = {
   // These are the key of multiple experiments
   flagKeys: {
     // This is the key of the whole experiment
-    header_a_a_test: {
+    newswb_ws_topbarojs_read_more: {
+      flagKey: 'newswb_ws_topbarojs_read_more',
       // This is the key for the 'rule' that is attached to the experiment
-      flagKey: 'header_a_a_test',
-      ruleKey: 'header_a_a_test',
+      ruleKey: 'newswb_ws_topbarojs_read_more',
       variationMappings: {
         on: 'on',
         off: 'off',

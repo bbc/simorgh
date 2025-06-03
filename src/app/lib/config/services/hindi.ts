@@ -77,6 +77,7 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'सब देखें',
       home: 'होम पेज',
+      continueReading: 'पढ़ना जारी रखें',
       currentPage: 'मौजूदा पन्ना',
       skipLinkText: 'सामग्री को स्किप करें',
       relatedContent: 'संबंधित समाचार',
