@@ -39,6 +39,14 @@ const billboardCuration = kyrgyzHomePage.data.curations.find(
     summaries.length > 0,
 );
 
+const usefulLinksCuration = kyrgyzFixture.data.curations.find(
+  ({ visualStyle, visualProminence, summaries }) =>
+    visualStyle === LINKS &&
+    visualProminence === LOW &&
+    summaries &&
+    summaries.length > 0,
+);
+
 const socialLinksCuration = kyrgyzFixture.data.curations.find(
   ({ visualStyle, visualProminence, summaries }) =>
     visualStyle === LINKS &&
@@ -77,6 +85,11 @@ const components = {
     visualStyle: BANNER,
     visualProminence: MAXIMUM,
     summaries: billboardCuration?.summaries,
+  },
+  'useful-links-1': {
+    visualStyle: LINKS,
+    visualProminence: LOW,
+    summaries: usefulLinksCuration?.summaries,
   },
   'social-links-1': {
     visualStyle: LINKS,
