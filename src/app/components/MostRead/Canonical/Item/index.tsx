@@ -50,24 +50,18 @@ export const MostReadLink = ({
   eventTrackingData,
   experimentFlagKey,
 }: PropsWithChildren<MostReadLinkProps>) => {
-  const clickTrackerHandler = useClickTrackerHandler(
-    eventTrackingData,
-    experimentFlagKey,
-    // isClientSide
-    true,
-  );
-
-  const viewTracker = useViewTracker(
-    eventTrackingData,
-    experimentFlagKey,
-    true,
-  );
-
   // added in dummy ab test code
   const myExperiementVariation = useOptimizelyVariation(
     // @ts-expect-error - TODO - fix type issue
     OPTIMIZELY_CONFIG.flagKeys[experimentFlagKey].flagKey,
   );
+
+  const clickTrackerHandler = useClickTrackerHandler(
+    eventTrackingData,
+    myExperiementVariation,
+  );
+
+  const viewTracker = useViewTracker(eventTrackingData, myExperiementVariation);
 
   let myExperimentText;
 

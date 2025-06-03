@@ -1,8 +1,6 @@
 /* eslint-disable no-console */
 import { useContext, useCallback, useState } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
-import useOptimizelyMvtVariation from '#app/hooks/useOptimizelyMvtVariation';
-import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
 import constructStaticATIUrl from '#app/lib/analyticsUtils/staticATITracking/constructATIUrl';
 import {
@@ -18,8 +16,7 @@ import { isValidClick } from './clickTypes';
 
 const useClickTrackerHandler = (
   eventTrackingData = {},
-  experimentFlagKey = '',
-  isClientSide = false,
+  optimizelyVariation = '',
 ) => {
   const {
     pageIdentifier,
@@ -45,18 +42,6 @@ const useClickTrackerHandler = (
   const { service, useReverb } = useContext(ServiceContext);
 
   const { optimizely } = useContext(OptimizelyContext);
-
-  let optimizelyVariation;
-
-  if (isClientSide) {
-    // TODO - better approach
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    optimizelyVariation = useOptimizelyVariation(experimentFlagKey);
-  } else {
-    // TODO - better approach
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    optimizelyVariation = useOptimizelyMvtVariation(experimentFlagKey);
-  }
 
   return useCallback(
     async event => {
@@ -84,7 +69,11 @@ const useClickTrackerHandler = (
           event.stopPropagation();
           event.preventDefault();
 
-          if (optimizely && sendOptimizelyEvents && optimizelyVariation) {
+          if (
+            optimizely &&
+            (optimizelyVariation || optimizelyVariation !== 'off') &&
+            sendOptimizelyEvents
+          ) {
             const overrideAttributes = optimizely?.user.attributes;
 
             optimizely.track(
@@ -154,18 +143,13 @@ const useClickTrackerHandler = (
   );
 };
 
-export default (
-  eventTrackingData = {},
-  experimentFlagKey = '',
-  isClientSide = false,
-) => {
+export default (eventTrackingData = {}, optimizelyVariation = '') => {
   const { isAmp } = useContext(RequestContext);
   const isHydrated = useHydrationDetection();
 
   const clickTracker = useClickTrackerHandler(
     eventTrackingData,
-    experimentFlagKey,
-    isClientSide,
+    optimizelyVariation,
   );
   // Don't think we need experiment here?
   const staticAtiUrl = constructStaticATIUrl({

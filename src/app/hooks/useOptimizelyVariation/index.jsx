@@ -21,7 +21,7 @@ const useOptimizelyVariation = (
       { overrideAttributes },
     );
 
-    const [variation, setVariation] = useState(null);
+    const [variation, setVariation] = useState(undefined);
 
     useEffect(() => {
       if (isClientReady && !didTimeout) {
@@ -32,7 +32,7 @@ const useOptimizelyVariation = (
     return variation;
   }
 
-  return true;
+  return '';
 };
 
 export default useOptimizelyVariation;

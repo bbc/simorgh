@@ -5,8 +5,6 @@ import { useContext, useEffect, useState, useRef, useCallback } from 'react';
 
 import { RequestContext } from '#app/contexts/RequestContext';
 import { OptimizelyContext } from '@optimizely/react-sdk';
-import useOptimizelyMvtVariation from '#app/hooks/useOptimizelyMvtVariation';
-import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 import {
   STATIC_ATI_VIEW_TRACKING,
   VIEW_EVENT,
@@ -25,8 +23,7 @@ const MIN_VIEWED_PERCENT = 0.5;
 
 const getComponentViewTracker = (
   eventTrackingData?: EventTrackingData,
-  experimentFlagKey?: string,
-  isClientSide?: boolean,
+  optimizelyVariation?: string,
 ) => {
   const {
     componentName,
@@ -50,15 +47,6 @@ const getComponentViewTracker = (
   });
 
   const { optimizely } = useContext(OptimizelyContext);
-
-  let optimizelyVariation: any;
-
-  if (isClientSide) {
-    // TODO - better approach
-    optimizelyVariation = useOptimizelyVariation(experimentFlagKey);
-  } else {
-    optimizelyVariation = useOptimizelyMvtVariation(experimentFlagKey);
-  }
 
   const observer = useRef(null);
   const timer = useRef(null);
@@ -111,8 +99,23 @@ const getComponentViewTracker = (
           !eventSent,
         ].every(Boolean);
 
+        console.log(
+          campaignID,
+          componentName,
+          pageIdentifier,
+          platform,
+          producerId,
+          producerName,
+          service,
+          statsDestination,
+        );
+
         if (shouldSendEvent) {
-          if (optimizely && sendOptimizelyEvents && optimizelyVariation) {
+          if (
+            optimizely &&
+            (optimizelyVariation || optimizelyVariation !== 'off') &&
+            sendOptimizelyEvents
+          ) {
             const overrideAttributes = optimizely?.user.attributes;
 
             optimizely.track(
@@ -198,15 +201,13 @@ const getComponentViewTracker = (
 
 export default (
   eventTrackingData?: EventTrackingData,
-  experimentFlagKey?: string,
-  isClientSide?: boolean,
+  optimizelyVariation?: string,
 ): any => {
   const { isLite } = useContext(RequestContext);
 
   const viewTracker = getComponentViewTracker(
     eventTrackingData,
-    experimentFlagKey,
-    isClientSide,
+    optimizelyVariation,
   );
 
   // don't think I need experimentFlagKey here
