@@ -14,6 +14,7 @@ export const COMPONENT_NAMES = {
   EMBED: 'embed',
   BILLBOARD: 'billboard',
   PORTRAIT_VIDEO_CAROUSEL: 'portrait-video-carousel',
+  USEFUL_LINKS: 'useful-links',
   SOCIAL_LINKS: 'social-links',
 } as const;
 
@@ -29,6 +30,7 @@ const {
   EMBED,
   BILLBOARD,
   PORTRAIT_VIDEO_CAROUSEL,
+  USEFUL_LINKS,
   SOCIAL_LINKS,
 } = COMPONENT_NAMES;
 
@@ -56,6 +58,7 @@ export default ({
     [`${COLLECTION}_${HIGH}`]: HIERARCHICAL_CURATION_GRID,
     [`${RANKED}_${NORMAL}`]: MOST_READ,
     [`${INSITU}_${NORMAL}`]: PORTRAIT_VIDEO_CAROUSEL,
+    [`${LINKS}_${LOW}`]: USEFUL_LINKS,
     [`${LINKS}_${NORMAL}`]: SOCIAL_LINKS,
   };
 
