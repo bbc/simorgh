@@ -7,16 +7,12 @@ import {
   ConfigBuilderReturnProps,
   PlaylistItem,
 } from '../types';
-import getCaptionBlock from '../utils/getCaptionBlock';
 import shouldDisplayAds from '../utils/shouldDisplayAds';
-import { getExternalEmbedUrl } from '../utils/urlConstructors';
 import AUDIO_UI_CONFIG from './constants';
 
 const DEFAULT_WIDTH = 512;
 
 export default ({
-  id,
-  lang,
   blocks,
   basePlayerConfig,
   adsEnabled = false,
@@ -47,6 +43,11 @@ export default ({
     const { video, images } = model;
     const version = video?.version;
 
+    // prefer portrait-oriented image if available (based on our bff structure) fallback to first available
+    const image = images?.[1] || images?.[0];
+    const originCode = image?.source?.replace('Image', '');
+    const locator = image?.urlTemplate;
+
     return {
       versionID: version?.id,
       kind: version?.kind || 'programme',
@@ -58,6 +59,10 @@ export default ({
       guidance: version?.guidance,
       territories: version?.territories,
       images,
+      holdingImageURL:
+        originCode && locator
+          ? buildIChefURL({ originCode, locator, resolution: DEFAULT_WIDTH })
+          : undefined,
     };
   });
 
@@ -71,10 +76,6 @@ export default ({
     playlistItems.unshift({ kind: 'advert' });
   }
 
-  const captionBlock = getCaptionBlock(blocks, 'live');
-  const caption =
-    captionBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
-
   const holdingImageURL = buildIChefURL({
     originCode:
       firstBlock?.model?.images?.[1]?.source?.replace('Image', '') ?? '',
@@ -82,26 +83,19 @@ export default ({
     resolution: DEFAULT_WIDTH,
   });
 
-  const externalEmbedUrl = getExternalEmbedUrl({
-    id,
-    versionID: firstBlock?.model?.video?.version?.id,
-    lang,
-  });
-
   return {
     mediaType: firstBlock?.model?.type ?? 'video',
     playerConfig: {
       ...basePlayerConfig,
-      ...(externalEmbedUrl && { externalEmbedUrl }),
       autoplay: true,
       playlistObject: {
         title: firstBlock?.model?.video?.title,
-        summary: caption || '',
         holdingImageURL,
         items: playlistItems,
       },
       ui: {
         ...basePlayerConfig.ui,
+        ...(firstBlock?.model?.type === 'audio' && AUDIO_UI_CONFIG),
         swipable: {
           enabled: true,
           direction: 'Y',
@@ -111,7 +105,6 @@ export default ({
           includeNextButton: true,
           includePreviousButton: true,
         },
-        ...(firstBlock?.model?.type === 'audio' && AUDIO_UI_CONFIG),
       },
       statsObject: {
         ...basePlayerConfig.statsObject,
