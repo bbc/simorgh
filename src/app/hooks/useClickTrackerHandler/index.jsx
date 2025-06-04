@@ -14,10 +14,7 @@ import { sendEventBeacon } from '../../components/ATIAnalytics/beacon/index';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { isValidClick } from './clickTypes';
 
-const useClickTrackerHandler = (
-  eventTrackingData = {},
-  optimizelyVariation = '',
-) => {
+const useClickTrackerHandler = (eventTrackingData = {}) => {
   const {
     pageIdentifier,
     producerId,
@@ -32,6 +29,7 @@ const useClickTrackerHandler = (
     producerName,
     preventNavigation,
     sendOptimizelyEvents,
+    optimizelyVariation,
     groupTracker,
     itemTracker,
   } = extractATITrackingProps({ eventTrackingData, eventType: CLICK_EVENT });
@@ -71,7 +69,8 @@ const useClickTrackerHandler = (
 
           if (
             optimizely &&
-            (optimizelyVariation || optimizelyVariation !== 'off') &&
+            optimizelyVariation &&
+            optimizelyVariation !== 'off' &&
             sendOptimizelyEvents
           ) {
             const overrideAttributes = optimizely?.user.attributes;
@@ -143,14 +142,11 @@ const useClickTrackerHandler = (
   );
 };
 
-export default (eventTrackingData = {}, optimizelyVariation = '') => {
+export default (eventTrackingData = {}) => {
   const { isAmp } = useContext(RequestContext);
   const isHydrated = useHydrationDetection();
 
-  const clickTracker = useClickTrackerHandler(
-    eventTrackingData,
-    optimizelyVariation,
-  );
+  const clickTracker = useClickTrackerHandler(eventTrackingData);
   // Don't think we need experiment here?
   const staticAtiUrl = constructStaticATIUrl({
     eventTrackingData,
