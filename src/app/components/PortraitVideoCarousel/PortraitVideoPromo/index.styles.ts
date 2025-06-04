@@ -75,7 +75,7 @@ const styles = {
       background:
         'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 24%, rgba(0, 0, 0, 1) 100%)',
     }),
-  forcedColourAndTitleFocus: ({ mq, palette }: Theme) =>
+  textWrapper: ({ mq, palette }: Theme) =>
     css({
       [mq.FORCED_COLOURS]: {
         backgroundColor: 'canvas',
