@@ -468,15 +468,39 @@ const supportsAmp = ({ contentType }) =>
     contentType,
   );
 
-const ampTestSuites = canonicalTestSuites.filter(supportsAmp).map(testSuite => {
-  return {
-    ...testSuite,
-    path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
-    useReverb: true,
-    applicationType: 'amp',
-    tests: [assertPageView],
-  };
-});
+const ampTestSuites = canonicalTestSuites
+  .filter(supportsAmp)
+  .map(testSuite => {
+    return {
+      ...testSuite,
+      path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
+      useReverb: true,
+      applicationType: 'amp',
+      tests: [assertPageView],
+    };
+  })
+  .concat([
+    {
+      path: 'news/articles/c0g992jmmkko.amp',
+      runforEnv: ['local', 'test'],
+      service: 'news',
+      pageIdentifier: 'news.articles.c0g992jmmkko.page',
+      applicationType: 'amp',
+      contentType: 'article',
+      useReverb: true,
+      tests: [assertPageView],
+    },
+    {
+      path: '/news/articles/c9djwv3q6w9o.amp',
+      runforEnv: ['live'],
+      service: 'news',
+      pageIdentifier: 'news.articles.c9djwv3q6w9o.page',
+      applicationType: 'amp',
+      contentType: 'article',
+      useReverb: true,
+      tests: [assertPageView],
+    },
+  ]);
 
 const supportsLite = ({ path }) => !path.startsWith('/persian/afghanistan');
 
