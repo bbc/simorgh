@@ -55,13 +55,18 @@ const CanonicalATIAnalytics = ({
     if (!isOperaProxy()) sendBeacon(atiPageViewUrl, reverbBeaconConfig);
   }, [atiPageViewUrl, reverbBeaconConfig]);
 
+  const reverbBeaconConfigString = JSON.stringify(reverbBeaconConfig).replace(
+    /"/g,
+    "'",
+  );
+
   return (
     <>
       {addScript({ script: addSendStaticBeaconToWindow() })}
       {isLite &&
         addScript({
           script: sendPageViewBeaconLite,
-          parameters: atiPageViewUrlString,
+          parameters: [atiPageViewUrlString, reverbBeaconConfigString],
         })}
       {!isLite &&
         addScript({

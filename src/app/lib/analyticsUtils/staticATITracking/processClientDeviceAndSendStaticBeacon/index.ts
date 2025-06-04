@@ -1,7 +1,18 @@
+import { ReverbBeaconConfig } from '#app/components/ATIAnalytics/types';
+import { reverbUrlHelper } from '@bbc/reverb-url-helper';
+
 /* istanbul ignore next */
 export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
-  window.processClientDeviceAndSendStaticBeacon = atiURL => {
-    if (atiURL) {
+  window.processClientDeviceAndSendStaticBeacon = (atiURL, reverbParams) => {
+    if (reverbParams) {
+      const url = reverbUrlHelper.getStaticSitePageViewUrl(
+        reverbParams,
+        window,
+        navigator,
+        document,
+      );
+      window.sendStaticBeacon(`${url}&helloWorld=true`);
+    } else if (atiURL) {
       const {
         screen: { width, height, colorDepth, pixelDepth },
         innerWidth,
@@ -77,8 +88,8 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
   };
 };
 
-export default (atiURL: string) => {
+export default (atiURL: string, reverbParams: ReverbBeaconConfig) => {
   window.addEventListener('load', () => {
-    window.processClientDeviceAndSendStaticBeacon(atiURL);
+    window.processClientDeviceAndSendStaticBeacon(atiURL, reverbParams);
   });
 };

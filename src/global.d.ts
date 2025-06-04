@@ -1,5 +1,6 @@
 import { ReverbClient } from '#models/types/eventTracking';
 import { BumpType } from '#app/components/MediaLoader/types';
+import { ReverbBeaconConfig } from '#app/components/ATIAnalytics/types';
 
 declare global {
   interface Window {
@@ -43,7 +44,10 @@ declare global {
       cmd: { push: () => void };
     };
     sendStaticBeacon: (url: string, data?: BodyInit | null) => boolean;
-    processClientDeviceAndSendStaticBeacon: (url: string) => void;
+    processClientDeviceAndSendStaticBeacon: (
+      url: string,
+      reverbParams: ReverbBeaconConfig,
+    ) => void;
   }
 }
 
