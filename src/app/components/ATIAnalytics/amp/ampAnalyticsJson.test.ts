@@ -105,16 +105,16 @@ describe('AMP ATI Analytics', () => {
           `\${base}s=${expectedDestination}`,
           's2=40',
           'p=gahuza.articles.cly1jw4x585o.page',
-          'r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}',
-          're=\${availableScreenWidth}x\${availableScreenHeight}',
-          'hl=\${timestamp}',
-          'lng=\${browserLanguage}',
+          'r=${screenWidth}x${screenHeight}x${screenColorDepth}',
+          're=${availableScreenWidth}x${availableScreenHeight}',
+          'hl=${timestamp}',
+          'lng=${browserLanguage}',
           'x1=[urn%3Abbc%3Aoptimo%3Aasset%3Acly1jw4x585o]',
           'x2=[amp]',
           `x3=[${appName}]`,
           'x4=[rw]',
-          'x5=[\${sourceUrl}]',
-          'x6=[\${documentReferrer}]',
+          'x5=[${sourceUrl}]',
+          'x6=[${documentReferrer}]',
           'x7=[article]',
           'x8=[simorgh]',
           "x9=[US%2520irashishikariza%2520u%2520Rwanda%2520na%2520DR%2520Congo%2520kugera%2520ku%2520mahoro%2520bikazana%2520n'ishoramari%2520rya%2520miliyari%2520z'amadorari]",
@@ -123,7 +123,7 @@ describe('AMP ATI Analytics', () => {
           'x13=[Democratic%2BRepublic%2Bof%2BCongo~Rwanda~March%2B23%2BMovement~M23%2Boffensive]',
           'x14=[3548f44f-46f5-4e6e-8628-3f668f161691~8125f2a9-3259-4f35-ab75-d9a6577fdc88~b03e7bfd-9a46-4053-aeed-f9f55f5e5567~c78c7532-43b3-490d-ad5b-0fc47b906e42]',
           'x17=[Democratic%2BRepublic%2Bof%2BCongo~Rwanda~March%2B23%2BMovement~M23%2Boffensive]',
-          'ref=\${documentReferrer}',
+          'ref=${documentReferrer}',
         ];
 
         const ampAnalyticsJsonConfiguration = ampAnalyticsJson({
@@ -131,12 +131,12 @@ describe('AMP ATI Analytics', () => {
           pageviewParams: 'param1=value1&param2=value2',
           reverbParams,
         });
-        const { requests: { base, pageview } } = ampAnalyticsJsonConfiguration;
+        const {
+          requests: { base, pageview },
+        } = ampAnalyticsJsonConfiguration;
         const parsedPageView = pageview.split('&');
-        
-        expect(
-          ampAnalyticsJsonConfiguration
-        ).toEqual({
+
+        expect(ampAnalyticsJsonConfiguration).toEqual({
           transport: {
             beacon: false,
             xhrpost: false,
@@ -148,7 +148,7 @@ describe('AMP ATI Analytics', () => {
           },
           triggers: { trackPageview: { on: 'visible', request: 'pageview' } },
         });
-        
+
         expect(base).toEqual(`${baseUrl}`);
 
         expect(parsedPageView).toEqual(expectedPageViewParams);
