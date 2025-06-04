@@ -65,6 +65,15 @@ export const service: DefaultServiceConfig = {
       relatedContent: 'Lire plus',
       relatedTopics: 'Sujets associés',
       navMenuText: 'Rubriques',
+      liteSite: {
+        onboardingMessage: 'Vous visualisez une version texte de ce site web qui utilise moins de données. Voir la version principale du site, avec toutes les images et vidéos.',
+        toMainSite: 'Me rediriger vers le site principal',
+        informationPage:
+          'En savoir plus sur cette version économe en données',
+        informationPageLink: 'https://www.bbc.com/afrique/articles/c861e868x5eo',
+        dataSaving: 'Lire uniquement le texte pour utiliser moins de données',
+        articleDataSavingLinkText: 'Lire uniquement le texte pour utiliser moins de données',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Lecteur média',
         audioPlayer: 'Lecteur audio',
@@ -375,10 +384,12 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Vidéos',
         url: '/afrique/topics/cz4vn9gyd6rt',
+        hideOnLiteSite: true,
       },
       {
         title: 'Nos émissions',
         url: '/afrique/topics/c88nzggm8gxt',
+        hideOnLiteSite: true,
       },
     ],
   },
