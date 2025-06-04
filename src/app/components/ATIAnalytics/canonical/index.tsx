@@ -4,7 +4,7 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { Helmet } from 'react-helmet';
 import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
-import sendPageViewBeaconLite from '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon';
+import sendPageViewBeaconLite, { addReverbUrlHelper } from '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon';
 import sendBeacon from '#app/lib/analyticsUtils/sendBeacon';
 import addInlineScript, {
   InlineScriptProps,
@@ -60,9 +60,20 @@ const CanonicalATIAnalytics = ({
     "'",
   );
 
+  console.log('###################');
+  console.log('Config');
+  console.log(reverbBeaconConfigString);
+  console.log('###################');
+
+  console.log('###################');
+  console.log('Function');
+  console.log(addReverbUrlHelper());
+  console.log('###################');
+
   return (
     <>
       {addScript({ script: addSendStaticBeaconToWindow() })}
+      {isLite && addScript({ script: addReverbUrlHelper() })}
       {isLite &&
         addScript({
           script: sendPageViewBeaconLite,

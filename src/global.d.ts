@@ -44,6 +44,12 @@ declare global {
       cmd: { push: () => void };
     };
     sendStaticBeacon: (url: string, data?: BodyInit | null) => boolean;
+    getStaticSitePageViewUrl: (
+      reverbParams: ReverbBeaconConfig,
+      window: Window,
+      navigator: Navigator,
+      document: Document,
+    ) => string;
     processClientDeviceAndSendStaticBeacon: (
       url: string,
       reverbParams: ReverbBeaconConfig,

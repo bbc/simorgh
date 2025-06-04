@@ -1,16 +1,21 @@
 import { ReverbBeaconConfig } from '#app/components/ATIAnalytics/types';
 import { reverbUrlHelper } from '@bbc/reverb-url-helper';
 
+export const addReverbUrlHelper = () => `
+    window.getStaticSitePageViewUrl = ${reverbUrlHelper.getStaticSitePageViewUrl}
+`;
+
 /* istanbul ignore next */
 export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
   window.processClientDeviceAndSendStaticBeacon = (atiURL, reverbParams) => {
     if (reverbParams) {
-      const url = reverbUrlHelper.getStaticSitePageViewUrl(
+      const url = window.getStaticSitePageViewUrl(
         reverbParams,
         window,
         navigator,
         document,
       );
+
       window.sendStaticBeacon(`${url}&helloWorld=true`);
     } else if (atiURL) {
       const {
