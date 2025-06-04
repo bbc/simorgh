@@ -1113,7 +1113,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
         Infos, musique et sports
       </p>
       <figure
-        class="emotion-9"
+        class="media-container emotion-9"
         data-e2e="media-loader__container"
       >
         <div
