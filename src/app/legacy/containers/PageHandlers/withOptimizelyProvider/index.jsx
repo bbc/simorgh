@@ -59,7 +59,6 @@ const withOptimizelyProvider = Component => {
 
     return (
       <OptimizelyProvider
-        // has info in
         optimizely={optimizely}
         isServerSide
         timeout={TIMEOUT_INTERVAL}
