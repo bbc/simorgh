@@ -162,6 +162,8 @@ describe('buildSettings', () => {
               source: 'www.test.bbc.com/aportraitmediathing',
             },
           ],
+          holdingImageURL:
+            'https://ichef.bbci.co.uk/ace/ws/512/www.test.bbc.com/aportraitmediathing/p0abc001.jpg.webp',
         },
         {
           versionID: 'p0abc004',
@@ -180,6 +182,8 @@ describe('buildSettings', () => {
               source: 'www.test.bbc.com/aportraitmediathing',
             },
           ],
+          holdingImageURL:
+            'https://ichef.bbci.co.uk/ace/ws/512/www.test.bbc.com/aportraitmediathing/p0abc002.jpg.webp',
         },
       ]);
     });
