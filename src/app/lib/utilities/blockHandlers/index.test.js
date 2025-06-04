@@ -51,7 +51,7 @@ describe('filterForBlockType', () => {
     expect(result).toBeUndefined();
   });
 
-  it('returns all matching blocks if multiple: true', () => {
+  it('returns all matching blocks if returnAllMatchingBlocks: true', () => {
     const extendedBlocks = [
       ...blocks,
       {
@@ -70,13 +70,15 @@ describe('filterForBlockType', () => {
       },
     ];
     const result = filterForBlockType(extendedBlocks, 'text', {
-      multiple: true,
+      returnAllMatchingBlocks: true,
     });
     expect(result).toEqual([blocks[0], extendedBlocks[3]]);
   });
 
-  it('returns empty array if multiple: true and no matches', () => {
-    const result = filterForBlockType(blocks, 'map', { multiple: true });
+  it('returns empty array if returnAllMatchingBlocks: true and no matches', () => {
+    const result = filterForBlockType(blocks, 'map', {
+      returnAllMatchingBlocks: true,
+    });
     expect(result).toEqual([]);
   });
 

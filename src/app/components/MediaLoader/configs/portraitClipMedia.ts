@@ -34,7 +34,7 @@ export default ({
   const portraitClipMediaBlocks: PortraitClipMediaBlock[] = filterForBlockType(
     blocks,
     'portraitClipMedia',
-    { multiple: true },
+    { returnAllMatchingBlocks: true },
   ) as PortraitClipMediaBlock[];
 
   const playlistItems: PlaylistItem[] = portraitClipMediaBlocks.map(block => {
