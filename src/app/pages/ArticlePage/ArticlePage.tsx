@@ -347,15 +347,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                 liteCTAShows={liteCTAShows}
               />
             )}
-            {isInExperiment && <OptimizelyArticleCompleteTracking />}
+            {/* {isInExperiment && <OptimizelyArticleCompleteTracking />} */}
           </main>
-          {isInExperiment && (
-            <>
-              <OptimizelyPageViewTracking flagKey={getExperiment} />
-               // TO DO - added in for development - not used in current expeirment
-              <OptimizelyArticleCompleteTracking flagKey={getExperiment} />
-            </>
-          )}
+          {/* // removed isInExperiment check for development */}
+          {/* // TO DO - Update following spike copying logic from OptimizelyArticleCompleteTracking */}
+          <OptimizelyPageViewTracking flagKey={getExperiment} />
+          {/* // TO DO - added in for development - not used in current expeirment */}
+          <OptimizelyArticleCompleteTracking />
           {showTopics && (
             <RelatedTopics
               css={[
