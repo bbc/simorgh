@@ -43,6 +43,11 @@ export default ({
     const { video, images } = model;
     const version = video?.version;
 
+    // prefer portrait-oriented image if available (based on our bff structure) fallback to first available
+    const image = images?.[1] || images?.[0];
+    const originCode = image?.source?.replace('Image', '');
+    const locator = image?.urlTemplate;
+
     return {
       versionID: version?.id,
       kind: version?.kind || 'programme',
@@ -54,6 +59,10 @@ export default ({
       guidance: version?.guidance,
       territories: version?.territories,
       images,
+      holdingImageURL:
+        originCode && locator
+          ? buildIChefURL({ originCode, locator, resolution: DEFAULT_WIDTH })
+          : undefined,
     };
   });
 
