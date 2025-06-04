@@ -158,12 +158,13 @@ describe('buildSettings', () => {
           images: [
             {},
             {
-              urlTemplate: 'p0abc001.jpg',
+              urlTemplate:
+                'https://ichef.bbci.co.uk/images/ic/{width}xn/p0abc001.jpg',
               source: 'www.test.bbc.com/aportraitmediathing',
             },
           ],
           holdingImageURL:
-            'https://ichef.bbci.co.uk/ace/ws/512/www.test.bbc.com/aportraitmediathing/p0abc001.jpg.webp',
+            'https://ichef.bbci.co.uk/images/ic/512xn/p0abc001.jpg',
         },
         {
           versionID: 'p0abc004',
@@ -178,12 +179,13 @@ describe('buildSettings', () => {
           images: [
             {},
             {
-              urlTemplate: 'p0abc002.jpg',
+              urlTemplate:
+                'https://ichef.bbci.co.uk/images/ic/{width}xn/p0abc002.jpg',
               source: 'www.test.bbc.com/aportraitmediathing',
             },
           ],
           holdingImageURL:
-            'https://ichef.bbci.co.uk/ace/ws/512/www.test.bbc.com/aportraitmediathing/p0abc002.jpg.webp',
+            'https://ichef.bbci.co.uk/images/ic/512xn/p0abc002.jpg',
         },
       ]);
     });

@@ -353,7 +353,8 @@ export const homePagePortraitClipMediaBlocks = [
       images: [
         {},
         {
-          urlTemplate: 'p0abc001.jpg',
+          urlTemplate:
+            'https://ichef.bbci.co.uk/images/ic/{width}xn/p0abc001.jpg',
           source: 'www.test.bbc.com/aportraitmediathing',
         },
       ],
@@ -376,7 +377,8 @@ export const homePagePortraitClipMediaBlocks = [
       images: [
         {},
         {
-          urlTemplate: 'p0abc002.jpg',
+          urlTemplate:
+            'https://ichef.bbci.co.uk/images/ic/{width}xn/p0abc002.jpg',
           source: 'www.test.bbc.com/aportraitmediathing',
         },
       ],

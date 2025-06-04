@@ -1,5 +1,4 @@
 import moment from 'moment-timezone';
-import buildIChefURL from '#lib/utilities/ichefURL';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import {
   PortraitClipMediaBlock,
@@ -45,8 +44,10 @@ export default ({
 
     // prefer portrait-oriented image if available (based on our bff structure) fallback to first available
     const image = images?.[1] || images?.[0];
-    const originCode = image?.source?.replace('Image', '');
-    const locator = image?.urlTemplate;
+    const holdingImageURL = image?.urlTemplate?.replace(
+      '{width}',
+      `${DEFAULT_WIDTH}`,
+    );
 
     return {
       versionID: version?.id,
@@ -59,10 +60,7 @@ export default ({
       guidance: version?.guidance,
       territories: version?.territories,
       images,
-      holdingImageURL:
-        originCode && locator
-          ? buildIChefURL({ originCode, locator, resolution: DEFAULT_WIDTH })
-          : undefined,
+      holdingImageURL,
     };
   });
 
@@ -76,12 +74,11 @@ export default ({
     playlistItems.unshift({ kind: 'advert' });
   }
 
-  const holdingImageURL = buildIChefURL({
-    originCode:
-      firstBlock?.model?.images?.[1]?.source?.replace('Image', '') ?? '',
-    locator: firstBlock?.model?.images?.[1]?.urlTemplate ?? '',
-    resolution: DEFAULT_WIDTH,
-  });
+  const fallbackHoldingImageURL =
+    firstBlock?.model?.images?.[1]?.urlTemplate?.replace(
+      '{width}',
+      `${DEFAULT_WIDTH}`,
+    );
 
   return {
     mediaType: firstBlock?.model?.type ?? 'video',
@@ -90,7 +87,7 @@ export default ({
       autoplay: true,
       playlistObject: {
         title: firstBlock?.model?.video?.title,
-        holdingImageURL,
+        holdingImageURL: fallbackHoldingImageURL,
         items: playlistItems,
       },
       ui: {
