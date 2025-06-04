@@ -3,10 +3,11 @@
     "metadata": {
       "type": "On Demand TV",
       "atiAnalytics": {
-        "pageIdentifier": "hausa.bbc_hausa_tv.tv.w172yjj7rfhxp1p.page",
+        "pageIdentifier": "hausa.bbc_hausa_tv.tv.w172yjj83ptptnj.page",
         "contentType": "player-episode",
         "pageTitle": "Labaran Talabijin - BBC News Hausa",
-        "contentId": "urn:bbc:pips:w172yjj7rfhxp1p"
+        "language": "ha",
+        "contentId": "urn:bbc:pips:w172yjj83ptptnj"
       }
     },
     "language": "ha",
@@ -15,11 +16,11 @@
     "headline": "Labaran Talabijin",
     "shortSynopsis": "Sashen Hausa na BBC ya fara gabatar da shirin talabijin a ranakun Litinin zuwa Juma'a na kowane mako.",
     "mediumSynopsis": "Sashen Hausa na BBC ya fara gabatar da shirin talabijin a ranakun Litinin zuwa Juma'a na kowane mako.",
-    "id": "urn:bbc:ares:ws_media:page:bbc_hausa_tv/w172yjj7rfhxp1p",
+    "id": "urn:bbc:ares:ws_media:page:bbc_hausa_tv/w172yjj83ptptnj",
     "brandId": "w13xttn0",
-    "episodeId": "w172yjj7rfhxp1p",
+    "episodeId": "w172yjj83ptptnj",
     "masterBrand": "bbc_hausa_tv",
-    "releaseDateTimeStamp": "2023-03-17T00:00:00.000Z",
+    "releaseDateTimeStamp": "2023-03-24T00:00:00.000Z",
     "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b216l.png",
     "imageAltText": null,
     "promoBrandTitle": "Labaran Talabijin",
@@ -28,10 +29,10 @@
     "episodeAvailability": "available",
     "recentEpisodes": [
       {
-        "id": "w172yjj83ptptnj",
+        "id": "w172yjj7rfhxp1p",
         "brandTitle": "Labaran Talabijin",
         "episodeTitle": "Labaran Talabijin",
-        "timestamp": "2023-03-24T00:00:00.000Z",
+        "timestamp": "2023-03-17T00:00:00.000Z",
         "duration": "PT10M",
         "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b216l.png",
         "altText": "Labaran Talabijin"
@@ -212,7 +213,7 @@
       {
         "type": "tv",
         "model": {
-          "id": "w172yjj7rfhxp1p",
+          "id": "w172yjj83ptptnj",
           "subType": "episode",
           "format": "Video",
           "title": "Labaran Talabijin",
@@ -225,7 +226,7 @@
           "advertising": false,
           "versions": [
             {
-              "versionId": "w1msjs6n6b4wcv6",
+              "versionId": "w1msjs6nklgnjg1",
               "types": ["Original"],
               "duration": 600,
               "durationISO8601": "PT10M",
@@ -235,7 +236,7 @@
                 "nonUk": true,
                 "world": false
               },
-              "availableFrom": "2023-03-17T20:10:00.000Z",
+              "availableFrom": "2023-03-24T20:10:00.000Z",
               "availabilityStatus": "available",
               "availableUntil": null
             }
@@ -250,7 +251,7 @@
         "type": "mediaOverrides",
         "model": {
           "language": "ha",
-          "pageIdentifierOverride": "hausa.bbc_hausa_tv.tv.w172yjj7rfhxp1p.page"
+          "pageIdentifierOverride": "hausa.bbc_hausa_tv.tv.w172yjj83ptptnj.page"
         }
       }
     ]

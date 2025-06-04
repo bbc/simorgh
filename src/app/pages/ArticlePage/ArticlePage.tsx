@@ -347,11 +347,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                 liteCTAShows={liteCTAShows}
               />
             )}
+            {isInExperiment && <OptimizelyArticleCompleteTracking />}
           </main>
           {isInExperiment && (
             <>
-              <OptimizelyArticleCompleteTracking flagKey={getExperiment} />
               <OptimizelyPageViewTracking flagKey={getExperiment} />
+               // TO DO - added in for development - not used in current expeirment
+              <OptimizelyArticleCompleteTracking flagKey={getExperiment} />
             </>
           )}
           {showTopics && (
