@@ -1,11 +1,13 @@
 /* eslint-disable import/no-relative-packages */
 import { LIVE_PAGE } from '../../../../../src/app/routes/utils/pageTypes';
 import { assertPageView } from '../../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions';
+import { setUserIDCookie } from '../../../../../cypress/e2e/specialFeatures/atiAnalytics/helpers';
+
 import {
   assertScrollableNavigationComponentView,
   assertScrollableNavigationComponentClick,
 } from '../../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions/navigation';
-import { assertLiteSiteCTAComponentClick } from '../../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions/liteSiteCta';
+import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions/liteSiteSummary';
 
 import runTestsForPage from '../../../support/helpers/runTestsForPage';
 
@@ -49,7 +51,7 @@ const liteTestSuites = canonicalTestSuites.map(testSuite => {
       !test.name.toLowerCase().includes('click'),
   );
 
-  liteSiteTests.push(assertLiteSiteCTAComponentClick);
+  liteSiteTests.push(assertLiteSiteSummaryComponentToMainSiteClick);
 
   return {
     ...testSuite,
@@ -62,6 +64,7 @@ const liteTestSuites = canonicalTestSuites.map(testSuite => {
 
 runTestsForPage({
   testSuites: [...canonicalTestSuites, ...liteTestSuites],
-  testIsolation: true,
+  // @ts-expect-error missing type definitions
+  beforeAll: [setUserIDCookie],
   pageType: 'all',
 });

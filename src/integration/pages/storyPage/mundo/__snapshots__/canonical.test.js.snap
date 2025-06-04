@@ -11,7 +11,7 @@ exports[`Canonical Story Page Analytics ATI tracking pixel excluding src 1`] = `
 />
 `;
 
-exports[`Canonical Story Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/"`;
+exports[`Canonical Story Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
 
 exports[`Canonical Story Page Analytics ATI tracking pixel search params 1`] = `
 [
@@ -159,8 +159,8 @@ exports[`Canonical Story Page Header Navigation link should match text and url 3
 
 exports[`Canonical Story Page Header Navigation link should match text and url 4`] = `
 {
-  "text": "Hay Festival",
-  "url": "/mundo/topics/cr50y7p7qyqt",
+  "text": "EE.UU.",
+  "url": "/mundo/topics/cdr5613yzwqt",
 }
 `;
 
@@ -196,6 +196,20 @@ exports[`Canonical Story Page Header Navigation link should match text and url 9
 {
   "text": "Tecnología",
   "url": "/mundo/topics/cyx5krnw38vt",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 10`] = `
+{
+  "text": "Hay Festival",
+  "url": "/mundo/topics/cr50y7p7qyqt",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 11`] = `
+{
+  "text": "Centroamérica cuenta",
+  "url": "/mundo/topics/c404v5z1k8wt",
 }
 `;
 

@@ -83,13 +83,13 @@ const PromoList = ({
   blocks,
   experimentVariant,
   viewTracker,
-  onClick,
+  clickTracker,
   a11yAttributes,
 }) => {
   const { dir } = useContext(ServiceContext);
   const isOperaMini = useOperaMiniDetection();
   const listBlocks =
-    experimentVariant === 'top_bar_most_read'
+    experimentVariant === 'top-bar-most-read'
       ? blocks.slice(0, 5)
       : blocks.slice(0, 3);
 
@@ -115,7 +115,7 @@ const PromoList = ({
             <Promo
               block={block}
               experimentVariant={experimentVariant}
-              onClick={onClick}
+              clickTracker={clickTracker}
             />
           </List>
         );

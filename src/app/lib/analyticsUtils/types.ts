@@ -3,7 +3,7 @@ import { ATIEventTrackingProps } from '#app/components/ATIAnalytics/types';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import {
   CLICK_EVENT,
-  LITE_ATI_VIEW_TRACKING,
+  STATIC_ATI_VIEW_TRACKING,
   VIEW_EVENT,
 } from './analytics.const';
 
@@ -18,5 +18,5 @@ export type EventTrackingProps = {
 
 export type ViewTracker = {
   ref?: any;
-  [LITE_ATI_VIEW_TRACKING]?: string;
+  [STATIC_ATI_VIEW_TRACKING]?: string;
 };

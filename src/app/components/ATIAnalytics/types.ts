@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import { PageTypes, Platforms, Services } from '../../models/types/global';
 import { RequestContextProps } from '../../contexts/RequestContext';
 import { ServiceConfig } from '../../models/types/serviceConfig';
@@ -98,10 +99,50 @@ export interface ReverbDetailsProviders {
   atiData: ATIData;
 }
 
+export type ReverbPageVars = {
+  name?: string | null;
+  additionalProperties?: {
+    app_name?: string | null;
+    content_language?: string | null;
+    type?: string | null;
+  };
+  destination?: string | null;
+  producer?: string | null;
+  contentId?: string | null;
+  contentType?: string | null;
+};
+
+export type ReverbUserVars = {
+  isSignedIn: boolean;
+};
+
+export type ReverbEventDetails = {
+  anchorElement?: HTMLElement;
+  experience?: {
+    engine_type: Array<string>;
+    engine_id: Array<string>;
+  };
+  event?: {
+    category: string;
+    action: 'select' | 'view';
+  };
+  eventName: 'pageView' | 'sectionView' | 'sectionClick';
+  eventPublisher?: string;
+  group?: string | object;
+  isClick?: boolean;
+  item?: string | object;
+  originalEvent?: Event;
+};
+
+export type ReverbBeaconConfig = {
+  params: { page: ReverbPageVars; user: ReverbUserVars };
+  eventDetails: ReverbEventDetails;
+};
+
 export interface ATIAnalyticsProps {
   baseUrl?: string;
   pageviewParams: string;
-  reverbParams?: object | null;
+  reverbParams?: ReverbBeaconConfig | null;
 }
 
 export interface ATIEventTrackingProps {
@@ -122,6 +163,22 @@ export interface ATIEventTrackingProps {
   experimentVariant?: string;
   ampExperimentName?: string;
   preventNavigation?: string;
+  itemTracker?: ItemTracker;
+  groupTracker?: GroupTracker;
+  viewThreshold?: number;
+}
+
+export interface ItemTracker {
+  type?: string;
+  text?: string;
+  position?: number;
+  duration?: number;
+  resourceId?: string;
+}
+
+export interface GroupTracker {
+  itemCount?: number;
+  resourceId?: string;
 }
 
 export interface ATIPageTrackingProps {

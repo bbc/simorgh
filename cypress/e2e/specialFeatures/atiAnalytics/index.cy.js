@@ -12,11 +12,11 @@ import {
   assertLatestMediaComponentClick,
   assertLatestMediaComponentView,
 } from './assertions/latestMedia';
-import { assertLiteSiteCTAComponentClick } from './assertions/liteSiteCta';
+import { assertLiteSiteSummaryComponentToMainSiteClick } from './assertions/liteSiteSummary';
 import {
-  assertCanonicalToLiteSiteCTAComponentClick,
-  assertCanonicalToLiteSiteCTAComponentView,
-} from './assertions/canonicalLiteSiteCta';
+  assertArticleLiteSiteLinkComponentClick,
+  assertArticleLiteSiteLinkComponentView,
+} from './assertions/articleLiteSiteLink';
 import {
   assertMessageBannerComponentClick,
   assertMessageBannerComponentView,
@@ -64,16 +64,30 @@ import {
   assertScrollablePromoComponentView,
 } from './assertions/scrollablePromo';
 import {
-  assertTopStoriesComponentClick,
-  assertTopStoriesComponentView,
-} from './assertions/topStories';
-import {
   assertSocialEmbedComponentClick,
   assertSocialEmbedComponentView,
 } from './assertions/socialEmbed';
-import { getPathWithSuffix } from './helpers';
+import {
+  assertTopStoriesComponentClick,
+  assertTopStoriesComponentView,
+} from './assertions/topStories';
+import { getPathWithSuffix, setUserIDCookie } from './helpers';
 
 const canonicalTestSuites = [
+  {
+    path: '/afrique',
+    runforEnv: ['local', 'test'],
+    service: 'afrique',
+    pageIdentifier: 'afrique.page',
+    applicationType: 'responsive',
+    contentType: 'index-home',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertBillboardComponentView,
+      assertBillboardComponentClick,
+    ],
+  },
   {
     path: '/afrique/bbc_afrique_radio/programmes/p030s6dq',
     runforEnv: ['local', 'test', 'live'],
@@ -120,6 +134,8 @@ const canonicalTestSuites = [
     useReverb: true,
     tests: [
       assertPageView,
+      assertArticleLiteSiteLinkComponentView,
+      assertArticleLiteSiteLinkComponentClick,
       assertTopStoriesComponentView,
       assertTopStoriesComponentClick,
       assertFeaturesAnalysisComponentView,
@@ -132,8 +148,6 @@ const canonicalTestSuites = [
       assertRelatedContentComponentClick,
       assertMostReadComponentView,
       assertMostReadComponentClick,
-      assertCanonicalToLiteSiteCTAComponentView,
-      assertCanonicalToLiteSiteCTAComponentClick,
     ],
   },
   {
@@ -207,7 +221,7 @@ const canonicalTestSuites = [
     ],
   },
   {
-    path: '/hindi/articles/c9w59wnx27ro?renderer_env=live',
+    path: '/hindi/articles/c9w59wnx27ro',
     runforEnv: ['local', 'live'],
     service: 'hindi',
     pageIdentifier: 'hindi.articles.c9w59wnx27ro.page',
@@ -219,7 +233,6 @@ const canonicalTestSuites = [
       assertTopStoriesComponentView,
       assertTopStoriesComponentClick,
       assertFeaturesAnalysisComponentView,
-      assertFeaturesAnalysisComponentClick,
       assertRecommendationsComponentView,
       assertRecommendationsComponentClick,
       assertPodcastPromoComponentView,
@@ -253,7 +266,7 @@ const canonicalTestSuites = [
     ],
   },
   {
-    path: '/marathi/topics/c1wmk63rjkvt?renderer_env=live',
+    path: '/marathi/topics/c1wmk63rjkvt',
     runforEnv: ['local', 'live'],
     service: 'marathi',
     pageIdentifier: 'marathi.topics.c1wmk63rjkvt.page',
@@ -297,24 +310,8 @@ const canonicalTestSuites = [
     ],
   },
   {
-    path: '/pidgin?renderer_env=test',
-    runforEnv: ['local', 'test'],
-    service: 'pidgin',
-    pageIdentifier: 'pidgin.page',
-    applicationType: 'responsive',
-    contentType: 'index-home',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertBillboardComponentView,
-      assertBillboardComponentClick,
-      assertMostReadComponentView,
-      assertMostReadComponentClick,
-    ],
-  },
-  {
-    path: '/pidgin/articles/ce9wk6glg4lo?renderer_env=live',
-    runforEnv: ['local', 'test'],
+    path: '/pidgin/articles/ce9wk6glg4lo',
+    runforEnv: ['local', 'live'],
     service: 'pidgin',
     pageIdentifier: 'pidgin.articles.ce9wk6glg4lo.page',
     applicationType: 'responsive',
@@ -325,7 +322,6 @@ const canonicalTestSuites = [
       assertTopStoriesComponentView,
       assertTopStoriesComponentClick,
       assertFeaturesAnalysisComponentView,
-      assertFeaturesAnalysisComponentClick,
       assertSocialEmbedComponentView,
       assertSocialEmbedComponentClick,
       assertRelatedTopicsComponentView,
@@ -377,6 +373,30 @@ const canonicalTestSuites = [
       assertRelatedContentComponentView,
       assertRelatedContentComponentClick,
     ],
+  },
+  {
+    path: '/polska',
+    runforEnv: ['local'],
+    service: 'polska',
+    pageIdentifier: 'polska.page',
+    applicationType: 'responsive',
+    contentType: 'index-home',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertMessageBannerComponentView,
+      assertMessageBannerComponentClick,
+    ],
+  },
+  {
+    path: '/polska/articles/c639526lxlro',
+    runforEnv: ['local'],
+    service: 'polska',
+    pageIdentifier: 'polska.articles.c639526lxlro.page',
+    applicationType: 'responsive',
+    contentType: 'article',
+    useReverb: true,
+    tests: [assertPageView],
   },
   {
     path: '/portuguese/podcasts/p07r3r3t',
@@ -448,15 +468,39 @@ const supportsAmp = ({ contentType }) =>
     contentType,
   );
 
-const ampTestSuites = canonicalTestSuites.filter(supportsAmp).map(testSuite => {
-  return {
-    ...testSuite,
-    path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
-    useReverb: false,
-    applicationType: 'amp',
-    tests: [assertPageView],
-  };
-});
+const ampTestSuites = canonicalTestSuites
+  .filter(supportsAmp)
+  .map(testSuite => {
+    return {
+      ...testSuite,
+      path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
+      useReverb: true,
+      applicationType: 'amp',
+      tests: [assertPageView],
+    };
+  })
+  .concat([
+    {
+      path: 'news/articles/c0g992jmmkko.amp',
+      runforEnv: ['local', 'test'],
+      service: 'news',
+      pageIdentifier: 'news.articles.c0g992jmmkko.page',
+      applicationType: 'amp',
+      contentType: 'article',
+      useReverb: true,
+      tests: [assertPageView],
+    },
+    {
+      path: '/news/articles/c9djwv3q6w9o.amp',
+      runforEnv: ['live'],
+      service: 'news',
+      pageIdentifier: 'news.articles.c9djwv3q6w9o.page',
+      applicationType: 'amp',
+      contentType: 'article',
+      useReverb: true,
+      tests: [assertPageView],
+    },
+  ]);
 
 const supportsLite = ({ path }) => !path.startsWith('/persian/afghanistan');
 
@@ -465,22 +509,22 @@ const liteTestSuites = canonicalTestSuites
   .map(testSuite => {
     const excludedLiteTests = [
       assertPodcastPromoComponentView, // Podcast promo removed from lite article pages
+      assertPodcastPromoComponentClick, // Podcast promo removed from lite article pages
       assertDropdownNavigationComponentView, // Dropdown navigation removed from all pages, as it requires JS
+      assertDropdownNavigationComponentClick, // Dropdown navigation removed from all pages, as it requires JS
       assertSocialEmbedComponentView, // Social embeds removed from lite article pages
-      assertCanonicalToLiteSiteCTAComponentView, // Canonical to Lite Site CTA only displayed on canonical pages
-      assertCanonicalToLiteSiteCTAComponentClick, // Canonical to Lite Site CTA only displayed on canonical pages
+      assertSocialEmbedComponentClick, // Social embeds removed from lite article pages
+      assertArticleLiteSiteLinkComponentView, // Lite Site Link only displayed on canonical article pages
+      assertArticleLiteSiteLinkComponentClick, // Lite Site Link only displayed on canonical article pages
+      assertFeaturesAnalysisComponentClick, // Features & Analysis component click event test not working on lite pages
     ];
 
     const liteSiteTests = testSuite.tests.filter(
-      test =>
-        test.name !== assertMostReadComponentClick.name &&
-        // Exclude component click tests, as component click support is not supported on all components yet
-        !test.name.toLowerCase().includes('click') &&
-        !excludedLiteTests.includes(test),
+      test => !excludedLiteTests.includes(test),
     );
 
-    // All lite enabled pages should have the LiteSiteCTA component
-    liteSiteTests.push(...[assertLiteSiteCTAComponentClick]);
+    // All lite enabled pages should have the Lite Site Summary component
+    liteSiteTests.push(assertLiteSiteSummaryComponentToMainSiteClick);
 
     return {
       ...testSuite,
@@ -493,5 +537,5 @@ const liteTestSuites = canonicalTestSuites
 
 runTestsForPage({
   testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],
-  testIsolation: true,
+  beforeAll: [setUserIDCookie],
 });

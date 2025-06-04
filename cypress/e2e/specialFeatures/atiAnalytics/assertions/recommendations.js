@@ -8,6 +8,7 @@ export const assertRecommendationsComponentView = ({
   contentType,
   useReverb,
   path,
+  applicationType,
 }) => {
   it('should send a view event for the Recommendations component', () => {
     interceptATIAnalyticsBeacons();
@@ -22,6 +23,7 @@ export const assertRecommendationsComponentView = ({
       pageIdentifier,
       contentType,
       useReverb,
+      applicationType,
     });
   });
 };
@@ -31,6 +33,7 @@ export const assertRecommendationsComponentClick = ({
   contentType,
   useReverb,
   path,
+  applicationType,
 }) => {
   it('should send a click event for the Recommendations component', () => {
     interceptATIAnalyticsBeacons();
@@ -51,6 +54,7 @@ export const assertRecommendationsComponentClick = ({
       pageIdentifier,
       contentType,
       useReverb,
+      applicationType,
     });
   });
 };

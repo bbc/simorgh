@@ -3,107 +3,110 @@ import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
 import assertPageWeight from './assertions/liteSiteWeight';
 
 const tests = [assertPageWeight];
-const liteTestSuites = [
+
+const runforEnv = 'local';
+
+const testSuites = [
   {
-    path: '/hindi.lite?renderer_env=live',
+    path: '/hindi.lite',
     service: 'hindi',
-    runforEnv: 'local',
+    runforEnv,
     pageType: 'Home',
     tests,
   },
   {
-    path: '/mundo/articles/cddylv9g8z0o.lite?renderer_env=live',
-    runforEnv: 'local',
+    path: '/mundo/articles/cddylv9g8z0o.lite',
+    runforEnv,
     pageType: 'Optimo Article',
     tests,
   },
   {
-    path: '/nepali/bbc_nepali_radio/liveradio.lite?renderer_env=live',
-    runforEnv: 'local',
+    path: '/nepali/bbc_nepali_radio/liveradio.lite',
+    runforEnv,
     pageType: 'Live Radio',
     tests,
   },
   {
-    path: '/arabic/media-53135426.lite?renderer_env=live',
-    runforEnv: 'local',
+    path: '/arabic/media-53135426.lite',
+    runforEnv,
     pageType: 'CPS Media Article with Live Stream',
     tests,
   },
   {
-    path: '/marathi/popular/read.lite?renderer_env=live',
-    runforEnv: 'local',
+    path: '/mundo/popular/read.lite',
+    runforEnv,
     pageType: 'Most Read',
     tests,
   },
   {
-    path: '/gahuza/bbc_gahuza_radio/programmes/p0340x2m.lite?renderer_env=live',
-    runforEnv: 'local',
+    path: '/gahuza/bbc_gahuza_radio/programmes/p0340x2m.lite',
+    runforEnv,
     pageType: 'On Demand Audio - Brand',
     tests,
   },
   {
-    path: '/gahuza/bbc_gahuza_radio/w3ct1v5v.lite?renderer_env=live',
-    runforEnv: 'local',
+    path: '/gahuza/bbc_gahuza_radio/w3ct7wjx.lite',
+    runforEnv,
     pageType: 'On Demand Audio - Episode',
     tests,
   },
   {
-    path: '/gahuza/podcasts/p07yh8hb.lite?renderer_env=live',
-    runforEnv: 'local',
+    path: '/gahuza/podcasts/p07yh8hb.lite',
+    runforEnv,
     pageType: 'Podcast - Brand',
     tests,
   },
   {
-    path: '/gahuza/podcasts/p07yh8hb/p094vs2n.lite?renderer_env=live',
-    runforEnv: 'local',
+    path: '/gahuza/podcasts/p07yh8hb/p094vs2n.lite',
+    runforEnv,
     pageType: 'Podcast - Episode',
     tests,
   },
   {
-    path: '/tigrinya/news-51249937.lite?renderer_env=live',
-    runforEnv: 'local',
-    pageType: 'CPS Media Article',
+    path: '/persian/media-49522521.lite',
+    runforEnv,
+    pageType: 'CPS Media Article with Live Stream',
     tests,
   },
   {
-    path: '/hausa/articles/clm3n4pdeymo.lite?renderer_env=live',
-    runforEnv: 'local',
+    path: '/hausa/articles/c4nvy27mervo.lite',
+    runforEnv,
     pageType: 'Optimo Media Article',
     tests,
   },
   {
-    path: '/nepali/news-50627370.lite?renderer_env=live',
-    runforEnv: 'local',
+    path: '/arabic/art-and-culture-38260491.lite',
+    runforEnv,
     pageType: 'CPS Photo Gallery (PGL)',
     tests,
   },
   {
-    path: '/arabic/sports-54278377.lite?renderer_env=live',
-    runforEnv: 'local',
+    path: '/mundo/noticias-56669604.lite',
+    runforEnv,
     pageType: 'CPS Story (STY)',
     tests,
   },
   {
-    path: '/hindi/topics/cm5m26q8qxpt.lite?renderer_env=live',
-    runforEnv: 'local',
+    path: '/hindi/topics/cm5m26q8qxpt.lite',
+    runforEnv,
     pageType: 'Topic',
     tests,
   },
   {
-    path: '/afrique/bbc_afrique_tv/tv_programmes/w13xttmz.lite?renderer_env=live',
-    runforEnv: 'local',
+    path: '/afrique/bbc_afrique_tv/tv_programmes/w13xttmz.lite',
+    runforEnv,
     pageType: 'On Demand TV - Brand',
     tests,
   },
   {
-    path: '/afrique/bbc_afrique_tv/tv/w172xtjgc2szrpv.lite?renderer_env=live',
-    runforEnv: 'local',
+    path: '/urdu/bbc_urdu_tv/tv/w172xtwfxsl890n.lite',
+    runforEnv,
     pageType: 'On Demand TV - Episode',
     tests,
   },
 ];
 
 runTestsForPage({
-  testSuites: [...liteTestSuites],
+  testSuites,
   testIsolation: true,
 });
