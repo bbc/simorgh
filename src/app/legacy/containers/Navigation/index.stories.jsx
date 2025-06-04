@@ -1,6 +1,6 @@
 import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import {
   topStoriesBlocks,
   mostReadBlocks,
@@ -12,7 +12,7 @@ const Component = ({ isAmp = false, service, propsForOJExperiment = null }) => (
   <RequestContextProvider
     isAmp={isAmp}
     service={service}
-    pageType={FRONT_PAGE}
+    pageType={HOME_PAGE}
     pathname="/pathname"
   >
     <Navigation propsForOJExperiment={propsForOJExperiment} />

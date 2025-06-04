@@ -13,6 +13,7 @@ const baseServiceConfig = {
   atiAnalyticsAppName: 'news-zhongwen',
   atiAnalyticsProducerId: '38',
   atiAnalyticsProducerName: 'CHINESE',
+  useReverb: true,
   chartbeatDomain: 'zhongwen.bbc.co.uk',
   brandName: 'BBC News 中文',
   product: 'BBC News',
@@ -27,13 +28,10 @@ const baseServiceConfig = {
   twitterSite: '@bbcchinese',
   isTrustProjectParticipant: true,
   script: noAscendersOrDescenders,
-  manifestPath: '/manifest.json',
+  manifestPath: '/zhongwen/manifest.json',
   swPath: '/sw.js',
   radioSchedule: {
     hasRadioSchedule: false,
-  },
-  recommendations: {
-    hasStoryRecommendations: false,
   },
   podcastPromo: {
     title: 'Podcast',
@@ -59,7 +57,7 @@ export const service: ZhongwenConfig = {
   simp: {
     ...baseServiceConfig,
     externalLinkText: ', 外部',
-    frontPageTitle: '主页',
+    homePageTitle: '主页',
     lang: `zh-hans`,
     locale: `zh-hans`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
@@ -114,10 +112,17 @@ export const service: ZhongwenConfig = {
       copyrightText: 'BBC. BBC对外部网站内容不负责任。',
     },
     mostRead: {
-      header: '热读',
+      header: '热门内容',
       lastUpdated: '最近更新：',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    recommendations: {
+      header: '热读',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     navigation: [
       {
@@ -372,7 +377,7 @@ export const service: ZhongwenConfig = {
     isoLang: 'zh-Hant',
     datetimeLocale: 'zh-tw',
     externalLinkText: ', 外部',
-    frontPageTitle: '主頁',
+    homePageTitle: '主頁',
     defaultCaptionOffscreenText: '說明文字，',
     audioCaptionOffscreenText: '音频加注文字，',
     videoCaptionOffscreenText: '音頻加註文字，',
@@ -422,10 +427,17 @@ export const service: ZhongwenConfig = {
       copyrightText: 'BBC. BBC對外部網站內容不負責任。',
     },
     mostRead: {
-      header: '熱讀',
+      header: '熱門內容',
       lastUpdated: '最近更新：',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    recommendations: {
+      header: '熱讀',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     navigation: [
       {

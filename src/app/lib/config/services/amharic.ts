@@ -41,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/amharic/institutional-49283133',
     isTrustProjectParticipant: true,
     script: noAscendersOrDescenders,
-    manifestPath: '/manifest.json',
+    manifestPath: '/amharic/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'ዜና',
+    homePageTitle: 'ዜና',
     showAdPlaceholder: false,
     showRelatedTopics: true,
     podcastPromo: {
@@ -334,7 +334,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'ብዙ የተነበቡ',
+      header: 'በስፋት የተነበቡ',
       lastUpdated: 'በመጨረሻ ማሻሻያ የተደረገበት',
       numberOfItems: 10,
       hasMostRead: true,
@@ -345,7 +345,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'ርዝመት %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'ብዙ የተነበቡ',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

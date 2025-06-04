@@ -7,22 +7,23 @@ export const assertRecentAudioEpisodesComponentView = ({
   pageIdentifier,
   contentType,
   useReverb,
+  path,
+  applicationType,
 }) => {
   it('should send a view event for the Recent Audio Episodes component', () => {
-    cy.url().then(url => {
-      interceptATIAnalyticsBeacons();
-      cy.visit(url);
+    interceptATIAnalyticsBeacons();
+    cy.visit(path);
 
-      cy.get('[data-e2e="recent-episodes-list"]').scrollIntoView({
-        duration: 1000,
-      });
+    cy.get('[data-e2e="recent-episodes-list"]').scrollIntoView({
+      duration: 1000,
+    });
 
-      assertATIComponentViewEvent({
-        component: RECENT_AUDIO_EPISODES,
-        pageIdentifier,
-        contentType,
-        useReverb,
-      });
+    assertATIComponentViewEvent({
+      component: RECENT_AUDIO_EPISODES,
+      pageIdentifier,
+      contentType,
+      useReverb,
+      applicationType,
     });
   });
 };
@@ -31,31 +32,26 @@ export const assertRecentAudioEpisodesComponentClick = ({
   pageIdentifier,
   contentType,
   useReverb,
+  path,
+  applicationType,
 }) => {
   it('should send a click event for the Recent Audio Episodes component', () => {
-    cy.url().then(url => {
-      interceptATIAnalyticsBeacons();
-      cy.visit(url);
+    interceptATIAnalyticsBeacons();
+    cy.visit(path);
 
-      cy.get('[data-e2e="recent-episodes-list"]').scrollIntoView({
-        duration: 1000,
-      });
+    cy.get('[data-e2e="recent-episodes-list"]').scrollIntoView({
+      duration: 1000,
+    });
 
-      // Click on first item
-      cy.get('[data-e2e="recent-episodes-list"]')
-        .find('a')
-        .first()
-        .click({ force: true });
+    // Click on first item
+    cy.get('[data-e2e="recent-episodes-list"]').find('a').first().click();
 
-      assertATIComponentClickEvent({
-        component: RECENT_AUDIO_EPISODES,
-        pageIdentifier,
-        contentType,
-        useReverb,
-      });
-
-      // return to previous page
-      cy.visit(url);
+    assertATIComponentClickEvent({
+      component: RECENT_AUDIO_EPISODES,
+      pageIdentifier,
+      contentType,
+      useReverb,
+      applicationType,
     });
   });
 };

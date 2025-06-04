@@ -12,6 +12,7 @@ const baseServiceConfig = {
   atiAnalyticsAppName: 'news-uzbek',
   atiAnalyticsProducerId: '96',
   atiAnalyticsProducerName: 'UZBEK',
+  useReverb: true,
   chartbeatDomain: 'uzbek.bbc.co.uk',
   product: 'BBC News',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/uzbek.png',
@@ -21,13 +22,10 @@ const baseServiceConfig = {
   twitterCreator: '@bbcuzbek',
   twitterSite: '@bbcuzbek',
   isTrustProjectParticipant: true,
-  manifestPath: '/manifest.json',
+  manifestPath: '/uzbek/manifest.json',
   swPath: '/sw.js',
   radioSchedule: {
     hasRadioSchedule: false,
-  },
-  recommendations: {
-    hasStoryRecommendations: false,
   },
   showAdPlaceholder: true,
   showRelatedTopics: true,
@@ -43,9 +41,9 @@ const defaultCyrillicConfig = {
   brandName: "BBC News O'zbek",
   datetimeLocale: `uz`,
   externalLinkText: ', ташқи',
-  frontPageTitle: 'Бош саҳифа',
-  lang: `uz-Cyrl`,
-  locale: `uz-UZ`,
+  homePageTitle: 'Бош саҳифа',
+  lang: 'uz-cyrl',
+  locale: 'uz-UZ',
   // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
   isoLang: 'uz',
   noBylinesPolicy:
@@ -282,10 +280,17 @@ const defaultCyrillicConfig = {
     latestMediaTitle: 'Сўнгги',
   },
   mostRead: {
-    header: 'Энг кўп ўқилган',
+    header: 'Оммабоп мақолалар',
     lastUpdated: 'Сўнгги янгиланиш:',
     numberOfItems: 5,
     hasMostRead: true,
+  },
+  recommendations: {
+    header: 'Энг кўп ўқилган',
+    skipLink: {
+      text: 'Skip %title% and continue reading',
+      endTextVisuallyHidden: 'End of %title%',
+    },
   },
   footer: {
     trustProjectLink: {
@@ -379,9 +384,9 @@ export const service: UzbekConfig = {
     brandName: "BBC News O'zbek",
     datetimeLocale: `uz-latn`,
     externalLinkText: ', tashqi',
-    frontPageTitle: 'Bosh sahifa',
-    lang: `uz-Cyrl`,
-    locale: `uz-UZ`,
+    homePageTitle: 'Bosh sahifa',
+    lang: 'uz-latn',
+    locale: 'uz-UZ',
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'uz',
     noBylinesPolicy:
@@ -617,10 +622,17 @@ export const service: UzbekConfig = {
       latestMediaTitle: 'So‘nggi',
     },
     mostRead: {
-      header: 'Eng ko‘p o‘qilgan',
+      header: 'Ommabop maqolalar',
       lastUpdated: 'So‘nggi yangilanish:',
       numberOfItems: 5,
       hasMostRead: true,
+    },
+    recommendations: {
+      header: 'Eng ko‘p o‘qilgan',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

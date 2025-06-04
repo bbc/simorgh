@@ -360,6 +360,14 @@ describe('buildSettings', () => {
               'http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/12/08/131208135805_iraq_blast_640x360_bbc_nocredit.jpg',
             items: [
               {
+                href: 'https://wsodprogrf.akamaized.net/arabic/3gp/2013/12/iraqblast_16x9_lo.3gp',
+                kind: 'programme',
+              },
+              {
+                href: 'https://wsodprogrf.akamaized.net/zhongwen/simp/3gp/2013/12/iraqblast_16x9_hi.3gp',
+                kind: 'programme',
+              },
+              {
                 href: 'https://wsodprogrf.akamaized.net/arabic/dps/2013/12/iraqblast_16x9_lo.mp4',
                 kind: 'programme',
               },
@@ -928,7 +936,6 @@ describe('buildSettings', () => {
           appType: 'responsive',
           autoplay: false,
           counterName: 'hausa.bbc_hausa_radio.liveradio.page',
-          superResponsive: true,
           playlistObject: {
             items: [
               {
@@ -966,6 +973,7 @@ describe('buildSettings', () => {
               enabled: true,
             },
           },
+          superResponsive: false,
         },
         mediaType: 'liveRadio',
         showAds: false,
@@ -1011,7 +1019,7 @@ describe('buildSettings', () => {
           autoplay: false,
           appName: 'news-afrique',
           counterName: 'afrique.bbc_afrique_radio.w172zn0kxd65h3g.page',
-          superResponsive: true,
+          superResponsive: false,
           statsObject: {
             destination: 'WS_NEWS_LANGUAGES',
             producer: 'AFRIQUE',

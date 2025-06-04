@@ -13,6 +13,7 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-nepali',
     atiAnalyticsProducerId: '63',
     atiAnalyticsProducerName: 'NEPALI',
+    useReverb: true,
     chartbeatDomain: 'nepali.bbc.co.uk',
     brandName: 'BBC News नेपाली',
     product: 'BBC News',
@@ -40,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/nepali/institutional-50318130',
     isTrustProjectParticipant: true,
     script: devanagari,
-    manifestPath: '/manifest.json',
+    manifestPath: '/nepali/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'मुख पृष्ठ',
+    homePageTitle: 'मुख पृष्ठ',
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -265,7 +266,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'अन‌ि यो पनि',
     },
     mostRead: {
-      header: 'धेरै पढिएको',
+      header: 'धेरै रुचाइएको',
       lastUpdated: 'मा अन्तिम चोटि अद्यावधिक',
       numberOfItems: 5,
       hasMostRead: true,
@@ -276,7 +277,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'अवधि %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'धेरै पढिएको',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

@@ -5,10 +5,10 @@ import AmpComscoreAnalytics from './Amp';
 import CanonicalComscoreAnalytics from './Canonical';
 
 const ComscoreAnalytics = () => {
-  const { isAmp } = useContext(RequestContext);
+  const { isAmp, showCookieBannerBasedOnCountry } = useContext(RequestContext);
   const { enabled } = useToggle('comscoreAnalytics');
 
-  if (!enabled) {
+  if (!enabled || (isAmp && showCookieBannerBasedOnCountry)) {
     return null;
   }
 

@@ -19,8 +19,8 @@ const OptimizelyPageViewTracking = () => {
 
   useEffect(() => {
     if (sendPageViewEvent) {
-      optimizely.onReady().then(() => {
-        optimizely.track('page_views');
+      optimizely?.onReady().then(() => {
+        optimizely.track('page-views');
         setPageViewSent(true);
       });
     }

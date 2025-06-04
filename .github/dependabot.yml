@@ -4,9 +4,9 @@ updates:
     directory: '/'
     schedule:
       interval: 'weekly'
+      day: 'wednesday'
+      time: '16:00'
     ignore:
-      - dependency-name: '@loadable/*'
-        update-types: ['version-update:semver-major']
       - dependency-name: 'webpack'
         update-types: ['version-update:semver-major']
       - dependency-name: 'winston'
@@ -15,14 +15,11 @@ updates:
         update-types: ['version-update:semver-major']
       - dependency-name: '@typescript-eslint/eslint-plugin'
         update-types: ['version-update:semver-major']
-      # Opera Mini unsupported packages
-      - dependency-name: 'uuid' # https://github.com/bbc/simorgh/pull/11840
-      - dependency-name: '@types/uuid' # https://github.com/bbc/simorgh/pull/11840
-      # https://jira.dev.bbc.co.uk/browse/NEWSWORLDSERVICE-1478 react-router & react-router-dom
+      # https://jira.dev.bbc.co.uk/browse/NEWSWORLDSERVICE-2164: Migrate all page types to Next.js + Lambda to remove Express + EC2 infrastructure
+      - dependency-name: 'react-router-config'
       - dependency-name: 'react-router-dom'
-      - dependency-name: 'react-router'
-      # https://jira.dev.bbc.co.uk/browse/NEWSWORLDSERVICE-2099: Delete path-to-regexp dependency
-      - dependency-name: 'path-to-regexp'
+      - dependency-name: 'express'
+        update-types: ['version-update:semver-major']
     labels:
       - 'dependencies'
     groups:

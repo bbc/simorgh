@@ -16,7 +16,6 @@ import mapAssetData from './fixtures/mediaAssetPage.json';
 import { render } from '../react-testing-library-with-providers';
 import {
   ARTICLE_PAGE,
-  FRONT_PAGE,
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
   STORY_PAGE,
@@ -267,88 +266,6 @@ describe('ATI Analytics Container', () => {
         x13: '[Royal+Wedding+2018~Duchess+of+Sussex]',
         x14: '[2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc]',
         x17: '[Royal+Wedding+2018~Duchess+of+Sussex]',
-        ref: '${documentReferrer}',
-      });
-    });
-  });
-
-  describe('pageType=frontPage', () => {
-    it('should call CanonicalATIAnalytics when platform is canonical', () => {
-      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
-      // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
-      canonical.default = mockCanonical;
-
-      render(<ATIAnalytics data={articleDataNews} />, {
-        ...defaultRenderProps,
-        isAmp: false,
-        pageData: articleDataNews,
-        pageType: FRONT_PAGE,
-        service: 'news',
-        isUK: true,
-      });
-
-      const { pageviewParams } = mockCanonical.mock.calls[0][0];
-
-      const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams),
-      );
-
-      expect(parsedATIParams).toEqual({
-        s: '598286',
-        s2: '64',
-        p: 'news.page',
-        r: '0x0x24x24',
-        re: '1024x768',
-        hl: '00-00-00',
-        lng: 'en-US',
-        x2: '[responsive]',
-        x3: '[news]',
-        x4: '[en-gb]',
-        x5: '[http%3A%2F%2Flocalhost%2F]',
-        x7: '[index-home]',
-        x8: '[simorgh]',
-        x11: '[1970-01-01T00:00:00.000Z]',
-        x12: '[1970-01-01T00:00:00.000Z]',
-      });
-    });
-
-    it('should call AmpATIAnalytics when platform is Amp', () => {
-      const mockAmp = jest.fn().mockReturnValue('amp-return-value');
-
-      // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
-      amp.default = mockAmp;
-
-      render(<ATIAnalytics data={articleDataNews} />, {
-        ...defaultRenderProps,
-        isAmp: true,
-        pageData: articleDataNews,
-        pageType: FRONT_PAGE,
-        service: 'news',
-      });
-
-      const { pageviewParams } = mockAmp.mock.calls[0][0];
-
-      const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams),
-      );
-
-      expect(parsedATIParams).toEqual({
-        s: '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598286, 598288)',
-        s2: '64',
-        p: 'news.page',
-        r: '${screenWidth}x${screenHeight}x${screenColorDepth}',
-        re: '${availableScreenWidth}x${availableScreenHeight}',
-        hl: '00-00-00',
-        lng: '${browserLanguage}',
-        x2: '[amp]',
-        x3: '[news]',
-        x4: '[en-gb]',
-        x5: '[${sourceUrl}]',
-        x6: '[${documentReferrer}]',
-        x7: '[index-home]',
-        x8: '[simorgh]',
-        x11: '[1970-01-01T00:00:00.000Z]',
-        x12: '[1970-01-01T00:00:00.000Z]',
         ref: '${documentReferrer}',
       });
     });
@@ -1106,19 +1023,136 @@ describe('ATI Analytics Container', () => {
         metadata: { atiAnalytics },
       } = articleDataNews;
 
-      render(<ATIAnalytics atiData={atiAnalytics} />, {
-        ...defaultRenderProps,
-        atiData: atiAnalytics,
-        isAmp: false,
-        pageData: articleDataNews,
-        pageType: ARTICLE_PAGE,
-        service: 'mundo',
-        isUK: true,
-      });
+      // @ts-expect-error - only partial data required to manually set 'useReverb' to false
+      const serviceContextProps: ServiceConfig = {
+        atiAnalyticsAppName: 'atiAnalyticsAppName',
+        atiAnalyticsProducerId: 'atiAnalyticsProducerId',
+        atiAnalyticsProducerName: 'atiAnalyticsProducerName',
+        service: 'news',
+        brandName: 'brandName',
+        lang: 'en-GB',
+        useReverb: false,
+      };
+
+      render(
+        <ServiceContext.Provider value={serviceContextProps}>
+          <ATIAnalytics atiData={atiAnalytics} />
+        </ServiceContext.Provider>,
+        {
+          ...defaultRenderProps,
+          atiData: atiAnalytics,
+          isAmp: false,
+          pageData: articleDataNews,
+          pageType: ARTICLE_PAGE,
+          isUK: true,
+        },
+      );
 
       const { reverbParams } = mockCanonical.mock.calls[0][0];
 
       expect(reverbParams).toBeNull();
+    });
+
+    it('should call AmpATIAnalytics when platform is Amp', () => {
+      const mockAmp = jest.fn().mockReturnValue('amp-return-value');
+
+      // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
+      amp.default = mockAmp;
+      const {
+        metadata: { atiAnalytics },
+      } = articleDataNews;
+
+      // @ts-expect-error - only partial data required to manually set 'useReverb' to true
+      const serviceContextProps: ServiceConfig = {
+        atiAnalyticsAppName: 'atiAnalyticsAppName',
+        atiAnalyticsProducerId: 'atiAnalyticsProducerId',
+        atiAnalyticsProducerName: 'atiAnalyticsProducerName',
+        service: 'pidgin',
+        brandName: 'brandName',
+        lang: 'pcm',
+        useReverb: true,
+      };
+
+      render(
+        <ServiceContext.Provider value={serviceContextProps}>
+          <ATIAnalytics atiData={atiAnalytics} />
+        </ServiceContext.Provider>,
+        {
+          ...defaultRenderProps,
+          atiData: atiAnalytics,
+          isAmp: true,
+          pageData: articleDataNews,
+          pageType: ARTICLE_PAGE,
+          service: 'pidgin',
+          isUK: true,
+        },
+      );
+
+      const { reverbParams } = mockAmp.mock.calls[0][0];
+
+      expect(reverbParams.params.page).toEqual({
+        contentId: 'urn:bbc:optimo:c0000000001o',
+        contentType: 'article',
+        destination: 'WS_NEWS_LANGUAGES_TEST',
+        name: 'news.articles.c0000000001o.page',
+        producer: 'atiAnalyticsProducerName',
+        additionalProperties: {
+          app_name: 'atiAnalyticsAppName',
+          app_type: 'amp',
+          content_language: 'en-gb',
+          product_platform: null,
+          referrer_url: '${documentReferrer}',
+          x5: '${sourceUrl}',
+          x8: 'simorgh',
+          x9: 'Article%20Headline%20for%20SEO',
+          x10: null,
+          x11: '2018-01-01T12:01:00.000Z',
+          x12: '2018-01-01T14:00:00.000Z',
+          x13: 'Royal+Wedding+2018~Duchess+of+Sussex',
+          x14: '2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc',
+          x16: '',
+          x17: 'Royal+Wedding+2018~Duchess+of+Sussex',
+          x18: false,
+        },
+      });
+    });
+
+    it('should render the AmpGeo component when platform is Amp', () => {
+      const {
+        metadata: { atiAnalytics },
+      } = articleDataNews;
+
+      // @ts-expect-error - only partial data required to manually set 'useReverb' to true
+      const serviceContextProps: ServiceConfig = {
+        atiAnalyticsAppName: 'atiAnalyticsAppName',
+        atiAnalyticsProducerId: 'atiAnalyticsProducerId',
+        atiAnalyticsProducerName: 'atiAnalyticsProducerName',
+        service: 'pidgin',
+        brandName: 'brandName',
+        lang: 'pcm',
+        useReverb: true,
+      };
+
+      const { container } = render(
+        <ServiceContext.Provider value={serviceContextProps}>
+          <ATIAnalytics atiData={atiAnalytics} />
+        </ServiceContext.Provider>,
+        {
+          ...defaultRenderProps,
+          atiData: atiAnalytics,
+          isAmp: true,
+          pageData: articleDataNews,
+          pageType: ARTICLE_PAGE,
+          service: 'pidgin',
+          isUK: true,
+        },
+      );
+
+      expect(container.querySelectorAll('amp-geo').length).toEqual(1);
+      const ampGeo = container.querySelector('amp-geo');
+      expect(
+        ampGeo?.querySelectorAll('script[type="application/json"]').length,
+      ).toEqual(1);
     });
   });
 });

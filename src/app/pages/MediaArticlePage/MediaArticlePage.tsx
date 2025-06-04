@@ -65,17 +65,23 @@ import styles from './MediaArticlePage.styles';
 import { ComponentToRenderProps, TimestampProps } from './types';
 import checkIsLiveMedia from './utils/checkIsLiveMedia';
 
+import isPortraitVideo from '../utils/isPortraitVideo';
+
 const getAudioVideoComponent =
   (isCpsMap: boolean) => (props: ComponentToRenderProps) => {
     const { blocks } = props;
+    const isPortrait = isPortraitVideo(blocks);
+    const className = isPortrait ? 'portrait-media-loader' : '';
+
     return (
       <div
         css={({ spacings }: Theme) => [
           `padding-top: ${spacings.TRIPLE}rem`,
           isCpsMap && styles.cafMediaPlayer,
+          isPortrait && styles.portraitVideoPlayer,
         ]}
       >
-        <MediaLoader blocks={blocks as MediaBlock[]} />
+        <MediaLoader blocks={blocks as MediaBlock[]} className={className} />
       </div>
     );
   };
@@ -248,8 +254,8 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
         title={headline}
         author={articleAuthor}
         twitterHandle={articleAuthorTwitterHandle}
-        firstPublished={firstPublished}
-        lastPublished={lastPublished}
+        firstPublished={!isLiveMedia && firstPublished}
+        lastPublished={!isLiveMedia && lastPublished}
         section={getArticleSection(pageData)}
         aboutTags={aboutTags}
         mentionsTags={getMentions(pageData)}

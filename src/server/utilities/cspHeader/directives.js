@@ -45,7 +45,11 @@ const advertisingDirectives = {
   ],
   defaultSrc: [...bbcDomains, 'https://*.googlesyndication.com'],
   styleSrc: ['https://fonts.googleapis.com'],
-  fontSrc: ['https://fonts.gstatic.com'],
+  fontSrc: [
+    'https://fonts.gstatic.com',
+    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/',
+    'https://*.teads.tv',
+  ],
 };
 
 const directives = {
@@ -270,14 +274,12 @@ const directives = {
     canonicalLive: [
       ...bbcDomains,
       'data:', // localstorage
-      'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/', // Adverts
       ...advertisingDirectives.fontSrc,
     ],
     ampNonLive: [...bbcDomains],
     canonicalNonLive: [
       ...bbcDomains,
       'data:',
-      'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/', // Adverts
       ...advertisingDirectives.fontSrc,
     ],
   },

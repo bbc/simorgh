@@ -1,5 +1,6 @@
 import { interceptATIAnalyticsBeacons, COMPONENTS } from '../helpers';
 import { assertATIComponentClickEvent, assertATIComponentViewEvent } from '.';
+import runIfToggleEnabled from '../../../../support/helpers/runIfToggleEnabled';
 
 const { MOST_READ } = COMPONENTS;
 
@@ -7,20 +8,28 @@ export const assertMostReadComponentView = ({
   pageIdentifier,
   contentType,
   useReverb,
+  path,
+  service,
+  applicationType,
 }) => {
-  it('should send a view event for the Most Read component', () => {
-    cy.url().then(url => {
-      interceptATIAnalyticsBeacons();
-      cy.visit(url);
+  it(`should send a view event for the Most Read component`, function test() {
+    runIfToggleEnabled({
+      service,
+      toggleName: 'mostRead',
+      testContext: this,
+    });
 
-      cy.get('[data-e2e="most-read"]').scrollIntoView({ duration: 1000 });
+    interceptATIAnalyticsBeacons();
+    cy.visit(path);
 
-      assertATIComponentViewEvent({
-        component: MOST_READ,
-        pageIdentifier,
-        contentType,
-        useReverb,
-      });
+    cy.get('[data-e2e="most-read"]').scrollIntoView({ duration: 1000 });
+
+    assertATIComponentViewEvent({
+      component: MOST_READ,
+      pageIdentifier,
+      contentType,
+      useReverb,
+      applicationType,
     });
   });
 };
@@ -29,26 +38,31 @@ export const assertMostReadComponentClick = ({
   pageIdentifier,
   contentType,
   useReverb,
+  path,
+  service,
+  applicationType,
 }) => {
-  it('should send a click event for the Most Read component', () => {
-    cy.url().then(url => {
-      interceptATIAnalyticsBeacons();
-      cy.visit(url);
+  it('should send a click event for the Most Read component', function test() {
+    runIfToggleEnabled({
+      service,
+      toggleName: 'mostRead',
+      testContext: this,
+    });
 
-      cy.get('[data-e2e="most-read"]').scrollIntoView({ duration: 1000 });
+    interceptATIAnalyticsBeacons();
+    cy.visit(path);
 
-      // Click on first item
-      cy.get('[data-e2e="most-read"]').find('a').first().click();
+    cy.get('[data-e2e="most-read"]').scrollIntoView({ duration: 1000 });
 
-      assertATIComponentClickEvent({
-        component: MOST_READ,
-        pageIdentifier,
-        contentType,
-        useReverb,
-      });
+    // Click on first item
+    cy.get('[data-e2e="most-read"]').find('a').first().click();
 
-      // return to previous page
-      cy.visit(url);
+    assertATIComponentClickEvent({
+      component: MOST_READ,
+      pageIdentifier,
+      contentType,
+      useReverb,
+      applicationType,
     });
   });
 };

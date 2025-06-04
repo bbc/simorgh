@@ -13,6 +13,7 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-mundo',
     atiAnalyticsProducerId: '62',
     atiAnalyticsProducerName: 'MUNDO',
+    useReverb: true,
     chartbeatDomain: 'mundo.bbc.co.uk',
     brandName: 'BBC News Mundo',
     product: 'BBC News',
@@ -40,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/mundo/institucional-51359666',
     isTrustProjectParticipant: true,
     script: latinWithDiacritics,
-    manifestPath: '/manifest.json',
+    manifestPath: '/mundo/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Noticias',
+    homePageTitle: 'Noticias',
     iTunesAppId: 515255747,
     showAdPlaceholder: true,
     showRelatedTopics: true,
@@ -56,8 +57,6 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'Publicidad',
       },
-      recommendationTitle: 'Recomendamos',
-      splitRecommendationTitle: 'Más recomendaciones',
       seeAll: 'Ver todo',
       home: 'Página de inicio',
       currentPage: 'Página actual',
@@ -344,7 +343,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'Más leídas',
+      header: 'Lecturas más populares',
       lastUpdated: 'Última actualización:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -353,7 +352,7 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'Más leídas',
       skipLink: {
         text: 'Saltar %title% y continuar leyendo',
         endTextVisuallyHidden: 'Final de %title%',
@@ -418,8 +417,8 @@ export const service: DefaultServiceConfig = {
         url: '/mundo/topics/c2lej05epw5t',
       },
       {
-        title: 'Hay Festival',
-        url: '/mundo/topics/cr50y7p7qyqt',
+        title: 'EE.UU.',
+        url: '/mundo/topics/cdr5613yzwqt',
       },
       {
         title: 'Economía',
@@ -440,6 +439,14 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Tecnología',
         url: '/mundo/topics/cyx5krnw38vt',
+      },
+      {
+        title: 'Hay Festival',
+        url: '/mundo/topics/cr50y7p7qyqt',
+      },
+      {
+        title: 'Centroamérica cuenta',
+        url: '/mundo/topics/c404v5z1k8wt',
       },
     ],
   },

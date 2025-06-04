@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const ManifestContainer = () => {
-  const { manifestPath, service } = useContext(ServiceContext);
+  const { manifestPath } = useContext(ServiceContext);
 
   if (!manifestPath) {
     return null;
@@ -11,7 +11,7 @@ const ManifestContainer = () => {
 
   return (
     <Helmet>
-      <link rel="manifest" href={`/${service}${manifestPath}`} />
+      <link rel="manifest" href={`${manifestPath}`} />
     </Helmet>
   );
 };

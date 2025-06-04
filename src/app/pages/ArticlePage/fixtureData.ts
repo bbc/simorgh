@@ -20,7 +20,7 @@ const blocksWithHeadlineAndText = (blockValues: (object | string)[]) => {
   ];
 };
 
-const blocksWithHeadlineTexAndByline = (blockValues: (object | string)[]) => {
+const blocksWithHeadlineTextAndByline = (blockValues: (object | string)[]) => {
   const [headlineText, paragraphText, twitterHandle] = blockValues;
 
   return [
@@ -739,7 +739,7 @@ export const articleDataPidginWithByline = articleDataBuilder(
   'Article summary in Pidgin',
   emptyThings,
   undefined,
-  blocksWithHeadlineTexAndByline,
+  blocksWithHeadlineTextAndByline,
 ) as unknown as Article;
 
 export const articlePglDataPidgin = articleDataBuilder(
@@ -794,6 +794,156 @@ export const articleStyDataPidgin = articleDataBuilder(
     pageTitle: 'Article Headline for SEO in Pidgin',
   },
   'STY',
+) as unknown as Article;
+
+export const articleDataPidginWithPV = articleDataBuilder(
+  'cwl08rd38l6o',
+  'Pidgin',
+  'pcm',
+  'http://www.bbc.co.uk/ontologies/passport/home/Pidgin',
+  [
+    'Article Headline in Pidgin',
+    'A paragraph in Pidgin.',
+    {
+      id: '9eea8935',
+      type: 'video',
+      model: {
+        locator: 'urn:bbc:pips:pid:p0l0sm0w',
+        blocks: [
+          {
+            id: '326c14fc',
+            type: 'aresMedia',
+            model: {
+              blocks: [
+                {
+                  id: 'b6ceabfb',
+                  blockId: 'urn:bbc:ares::clip:p0l0sm0w',
+                  type: 'aresMediaMetadata',
+                  model: {
+                    id: 'p0l0sm0w',
+                    subType: 'clip',
+                    format: 'video',
+                    title:
+                      'A trágica história da dupla que unia mágica e tigres em Las Vegas',
+                    synopses: {
+                      short: 'some synopsis',
+                      long: 'some synopsis',
+                      medium: 'some synopsis',
+                    },
+                    imageUrl: 'ichef.bbci.co.uk/images/ic/$recipe/p0l0zkm2.jpg',
+                    embedding: true,
+                    advertising: true,
+                    versions: [
+                      {
+                        versionId: 'p0l0sm10',
+                        types: ['Portrait'],
+                        duration: 88,
+                        durationISO8601: 'PT1M28S',
+                        warnings: {},
+                        availableTerritories: {
+                          uk: true,
+                          nonUk: true,
+                        },
+                        availableFrom: 1743098855000,
+                      },
+                    ],
+                    syndication: {
+                      destinations: ['default'],
+                    },
+                    smpKind: 'programme',
+                    webcastVersions: [],
+                  },
+                  position: [2, 2, 1],
+                },
+              ],
+            },
+            position: [2, 2],
+          },
+        ],
+      },
+      position: [2],
+    },
+  ],
+  'Article Headline for SEO in Pidgin',
+  'Article Headline for Promo in Pidgin',
+  'Article summary in Pidgin',
+  emptyThings,
+  true,
+) as unknown as Article;
+
+export const articleDataPortugueseWithPV = articleDataBuilder(
+  'cwl08rd38l6o',
+  'Portuguese',
+  'pcm',
+  'http://www.bbc.co.uk/ontologies/passport/home/Pidgin',
+  [
+    'Article Headline in Portuguese',
+    'A paragraph in Portuguese.',
+    {
+      id: '9eea8935',
+      type: 'video',
+      model: {
+        locator: 'urn:bbc:pips:pid:p0l0sm0w',
+        blocks: [
+          {
+            id: '326c14fc',
+            type: 'aresMedia',
+            model: {
+              blocks: [
+                {
+                  id: 'b6ceabfb',
+                  blockId: 'urn:bbc:ares::clip:p0l0sm0w',
+                  type: 'aresMediaMetadata',
+                  model: {
+                    id: 'p0l0sm0w',
+                    subType: 'clip',
+                    format: 'video',
+                    title:
+                      'A trágica história da dupla que unia mágica e tigres em Las Vegas',
+                    synopses: {
+                      short: 'some synopsis',
+                      long: 'some synopsis',
+                      medium: 'some synopsis',
+                    },
+                    imageUrl: 'ichef.bbci.co.uk/images/ic/$recipe/p0l0zkm2.jpg',
+                    embedding: true,
+                    advertising: true,
+                    versions: [
+                      {
+                        versionId: 'p0l0sm10',
+                        types: ['Portrait'],
+                        duration: 88,
+                        durationISO8601: 'PT1M28S',
+                        warnings: {},
+                        availableTerritories: {
+                          uk: true,
+                          nonUk: true,
+                        },
+                        availableFrom: 1743098855000,
+                      },
+                    ],
+                    syndication: {
+                      destinations: ['default'],
+                    },
+                    smpKind: 'programme',
+                    webcastVersions: [],
+                  },
+                  position: [2, 2, 1],
+                },
+              ],
+            },
+            position: [2, 2],
+          },
+        ],
+      },
+      position: [2],
+    },
+  ],
+  'Article Headline for SEO in Portuguese',
+  'Article Headline for Promo in Portuguese',
+  'Article summary in Portuguese',
+  emptyThings,
+  true,
 ) as unknown as Article;
 
 export const bylineWithNoAuthor = [
@@ -1729,229 +1879,6 @@ export const bylineWithAllData = [
     },
   },
 ] as OptimoBylineContributorBlock[];
-
-export const sampleRecommendations = [
-  {
-    locators: {
-      optimoUrn: 'urn:bbc:optimo:asset:sample_1',
-      canonicalUrl: 'https://www.bbc.com/turkce/articles/sample_1',
-    },
-    timestamp: 1673623343213,
-    language: 'tr',
-    headlines: {
-      promoHeadline: {
-        blocks: [
-          {
-            type: 'text',
-            model: {
-              blocks: [
-                {
-                  type: 'paragraph',
-                  model: {
-                    text: 'SAMPLE RECOMMENDATION 1 - HEADLINE',
-                    blocks: [
-                      {
-                        type: 'fragment',
-                        model: {
-                          text: 'SAMPLE RECOMMENDATION 1 - HEADLINE',
-                          attributes: [],
-                        },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    },
-    images: {
-      defaultPromoImage: {
-        blocks: [
-          {
-            type: 'altText',
-            model: {
-              blocks: [
-                {
-                  type: 'text',
-                  model: {
-                    blocks: [
-                      {
-                        type: 'paragraph',
-                        model: {
-                          text: 'SAMPLE RECOMMENDATION 1',
-                          blocks: [
-                            {
-                              type: 'fragment',
-                              model: {
-                                text: 'SAMPLE RECOMMENDATION 1',
-                                attributes: [],
-                              },
-                            },
-                          ],
-                        },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-          {
-            type: 'rawImage',
-            model: {
-              width: 1024,
-              height: 576,
-              locator: '536b/live/62a1ce50-92c4-11ed-af5e-49f6c6402e4d.jpg',
-              originCode: 'cpsprodpb',
-              copyrightHolder: 'Getty Images',
-              suitableForSyndication: true,
-            },
-          },
-        ],
-      },
-    },
-    summary: {
-      blocks: [
-        {
-          type: 'text',
-          model: {
-            blocks: [
-              {
-                type: 'paragraph',
-                model: {
-                  text: 'SAMPLE RECOMMENDATION 1 - IMAGE TEXT',
-                  blocks: [
-                    {
-                      type: 'fragment',
-                      model: {
-                        text: 'SAMPLE RECOMMENDATION 1 - IMAGE TEXT',
-                        attributes: [],
-                      },
-                    },
-                  ],
-                },
-              },
-            ],
-          },
-        },
-      ],
-    },
-    id: 'urn:bbc:ares::article:sample_1',
-    type: 'optimo',
-  },
-  {
-    locators: {
-      optimoUrn: 'urn:bbc:optimo:asset:sample_2',
-      canonicalUrl: 'https://www.bbc.com/turkce/articles/sample_2',
-    },
-    timestamp: 1673623343213,
-    language: 'tr',
-    headlines: {
-      promoHeadline: {
-        blocks: [
-          {
-            type: 'text',
-            model: {
-              blocks: [
-                {
-                  type: 'paragraph',
-                  model: {
-                    text: 'SAMPLE RECOMMENDATION 2 - HEADLINE',
-                    blocks: [
-                      {
-                        type: 'fragment',
-                        model: {
-                          text: 'SAMPLE RECOMMENDATION 2 - HEADLINE',
-                          attributes: [],
-                        },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    },
-    images: {
-      defaultPromoImage: {
-        blocks: [
-          {
-            type: 'altText',
-            model: {
-              blocks: [
-                {
-                  type: 'text',
-                  model: {
-                    blocks: [
-                      {
-                        type: 'paragraph',
-                        model: {
-                          text: 'SAMPLE RECOMMENDATION 2',
-                          blocks: [
-                            {
-                              type: 'fragment',
-                              model: {
-                                text: 'SAMPLE RECOMMENDATION 2',
-                                attributes: [],
-                              },
-                            },
-                          ],
-                        },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-          {
-            type: 'rawImage',
-            model: {
-              width: 1024,
-              height: 576,
-              locator: '536b/live/62a1ce50-92c4-11ed-af5e-49f6c6402e4d.jpg',
-              originCode: 'cpsprodpb',
-              copyrightHolder: 'Getty Images',
-              suitableForSyndication: true,
-            },
-          },
-        ],
-      },
-    },
-    summary: {
-      blocks: [
-        {
-          type: 'text',
-          model: {
-            blocks: [
-              {
-                type: 'paragraph',
-                model: {
-                  text: 'SAMPLE RECOMMENDATION 2 - IMAGE TEXT',
-                  blocks: [
-                    {
-                      type: 'fragment',
-                      model: {
-                        text: 'SAMPLE RECOMMENDATION 2 - IMAGE TEXT',
-                        attributes: [],
-                      },
-                    },
-                  ],
-                },
-              },
-            ],
-          },
-        },
-      ],
-    },
-    id: 'urn:bbc:ares::article:sample_2',
-    type: 'optimo',
-  },
-];
 
 export const passportTaggings = [
   {

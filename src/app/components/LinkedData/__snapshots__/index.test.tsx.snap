@@ -319,7 +319,7 @@ exports[`LinkedData should correctly render linked data for articles with byline
 }
 `;
 
-exports[`LinkedData should correctly render linked data for front pages 1`] = `
+exports[`LinkedData should correctly render linked data for home pages 1`] = `
 {
   "@context": "http://schema.org",
   "@graph": [

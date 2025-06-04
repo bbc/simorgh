@@ -34,6 +34,7 @@ export default ({
         ...basePlayerConfig.ui,
         ...AUDIO_UI_CONFIG,
       },
+      superResponsive: false,
     },
     mediaType: 'audio',
     showAds: false,

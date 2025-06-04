@@ -10,7 +10,7 @@ import { Global, jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import styles from './index.styles';
 import { RequestContext } from '../../contexts/RequestContext';
-import { FRONT_PAGE, HOME_PAGE } from '../../routes/utils/pageTypes';
+import { HOME_PAGE } from '../../routes/utils/pageTypes';
 
 type Props = {
   alt: string;
@@ -77,24 +77,18 @@ const Image = ({
     aspectRatioY as number,
   );
 
-  const hasFallback =
-    srcSet &&
-    fallbackSrcSet &&
-    (pageType === FRONT_PAGE || pageType === HOME_PAGE);
+  const hasFallback = srcSet && fallbackSrcSet && pageType === HOME_PAGE;
   const ImageWrapper = hasFallback ? 'picture' : Fragment;
   const ampImgLayout = hasDimensions ? 'responsive' : 'fill';
   const getImgSrcSet = () => {
     if (!hasFallback) return srcSet;
-    if (pageType !== FRONT_PAGE && pageType !== HOME_PAGE) {
+    if (pageType !== HOME_PAGE) {
       return fallbackSrcSet;
     }
     return undefined;
   };
   const getImgSizes = () => {
-    if (
-      (!hasFallback && srcSet) ||
-      (pageType !== FRONT_PAGE && pageType !== HOME_PAGE)
-    ) {
+    if ((!hasFallback && srcSet) || pageType !== HOME_PAGE) {
       return sizes;
     }
     return undefined;
@@ -164,24 +158,23 @@ const Image = ({
           </>
         ) : (
           <ImageWrapper>
-            {hasFallback &&
-              (pageType === FRONT_PAGE || pageType === HOME_PAGE) && (
-                <>
-                  <source srcSet={srcSet} type={mediaType} sizes={sizes} />
-                  <source
-                    srcSet={fallbackSrcSet}
-                    type={fallbackMediaType}
-                    sizes={sizes}
-                  />
-                </>
-              )}
+            {hasFallback && pageType === HOME_PAGE && (
+              <>
+                <source srcSet={srcSet} type={mediaType} sizes={sizes} />
+                <source
+                  srcSet={fallbackSrcSet}
+                  type={fallbackMediaType}
+                  sizes={sizes}
+                />
+              </>
+            )}
             <img
               onLoad={() => setIsLoaded(true)}
               src={src}
               {...(srcSet && { srcSet: imgSrcSet })}
               {...(imgSizes && { sizes: imgSizes })}
               alt={alt}
-              loading={lazyLoad ? 'lazy' : undefined}
+              loading={lazyLoad ? 'lazy' : 'eager'}
               width={width}
               height={height}
               css={[

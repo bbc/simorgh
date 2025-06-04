@@ -11,7 +11,7 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import newsMostReadData from '../../../../data/news/mostRead/index.json';
 import MediaArticlePage from './MediaArticlePage';
 import ThemeProvider from '../../components/ThemeProvider';
-import { pidginPageData } from './fixtureData';
+import { arabicLiveTvPageData, pidginPageData } from './fixtureData';
 import { Services } from '../../models/types/global';
 
 jest.mock('../../components/ThemeProvider');
@@ -20,6 +20,10 @@ jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });
+
+jest.mock('#src/app/components/ATIAnalytics', () => () => (
+  <div>ATI Analytics</div>
+));
 
 type ContextProps = {
   service: Services;
@@ -180,5 +184,54 @@ describe('MediaArticlePage', () => {
 
     expect(src).toEqual(imageURL);
     expect(srcset).toEqual(expectedSrcSetURLs);
+  });
+
+  it('should render article:modified_time and article:published_time for normal media pages', async () => {
+    render(
+      <Context service="pidgin">
+        <MediaArticlePage pageData={pidginPageData as unknown as Article} />
+      </Context>,
+    );
+
+    const helmetContent = Helmet.peek()?.metaTags;
+    const modifiedTime = helmetContent.find(
+      meta => meta.name === 'article:modified_time',
+    );
+
+    const publishedTime = helmetContent.find(
+      meta => meta.name === 'article:published_time',
+    );
+
+    expect(modifiedTime).toEqual({
+      name: 'article:modified_time',
+      content: '2023-01-17T14:15:57.894Z',
+    });
+
+    expect(publishedTime).toEqual({
+      name: 'article:published_time',
+      content: '2023-01-17T14:03:06.410Z',
+    });
+  });
+
+  it('should NOT render article:modified_time and article:published_time for media pages with a live stream', async () => {
+    render(
+      <Context service="arabic">
+        <MediaArticlePage
+          pageData={arabicLiveTvPageData as unknown as Article}
+        />
+      </Context>,
+    );
+
+    const helmetContent = Helmet.peek()?.metaTags;
+    const modifiedTime = helmetContent.find(
+      meta => meta.name === 'article:modified_time',
+    );
+
+    const publishedTime = helmetContent.find(
+      meta => meta.name === 'article:published_time',
+    );
+
+    expect(modifiedTime).toBeUndefined();
+    expect(publishedTime).toBeUndefined();
   });
 });

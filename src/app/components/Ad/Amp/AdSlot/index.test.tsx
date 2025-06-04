@@ -20,15 +20,6 @@ describe('Amp AdSlot', () => {
       );
       expect(container).toMatchSnapshot();
     });
-
-    // This will be removed when ukchina frontpage is decommissioned
-    it('should correctly render a mpu AdSlot', () => {
-      const { container } = render(
-        <AdSlot service="mundo" slotType="mpu" pageType="frontPage" />,
-        { service: 'mundo' },
-      );
-      expect(container).toMatchSnapshot();
-    });
   });
 });
 

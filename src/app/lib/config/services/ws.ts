@@ -28,7 +28,7 @@ export const service: DefaultServiceConfig = {
     imageCopyrightOffscreenText: 'Image source, ',
     locale: 'en_GB',
     datetimeLocale: 'en-gb',
-    service: 'news',
+    service: 'ws',
     serviceName: 'News',
     languageName: 'English',
     twitterCreator: '@BBCNews',
@@ -37,8 +37,7 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
     isTrustProjectParticipant: true,
     script: latin,
-    manifestPath: '/articles/manifest.json',
-    frontPageTitle: 'Home',
+    homePageTitle: 'Home',
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
@@ -210,16 +209,13 @@ export const service: DefaultServiceConfig = {
       socialEmbed: {},
     },
     mostRead: {
-      header: 'Most read',
+      header: 'Popular Reads',
       lastUpdated: 'Last updated:',
       numberOfItems: 10,
-      hasMostRead: true,
+      hasMostRead: false,
     },
     radioSchedule: {
       hasRadioSchedule: false,
-    },
-    recommendations: {
-      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {
@@ -260,6 +256,16 @@ export const service: DefaultServiceConfig = {
           href: '#',
           text: 'Do not share or sell my info',
           lang: 'en-GB',
+        },
+      ],
+      extraLinks: [
+        {
+          href: 'https://bbcnews.bbcstudios.com',
+          text: 'BBC Studios Commercial Opportunities',
+        },
+        {
+          href: 'https://www.bbc.com/programmes/articles/2x9tqt6mc05vB2S37j8MWMJ/global-short-wave-frequencies',
+          text: 'Global Shortwave Frequencies',
         },
       ],
       copyrightText:

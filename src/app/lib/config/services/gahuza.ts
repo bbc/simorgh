@@ -41,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/gahuza/institutional-49283343',
     isTrustProjectParticipant: true,
     script: latin,
-    manifestPath: '/manifest.json',
+    manifestPath: '/gahuza/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: "Urupapuro rw'itangiriro",
+    homePageTitle: "Urupapuro rw'itangiriro",
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
@@ -82,6 +82,7 @@ export const service: DefaultServiceConfig = {
           'Ibindi vyerekeye ingene urwo rubuga rugutwara uburyo (ama mega) buke',
         informationPageLink: 'https://www.bbc.com/gahuza/articles/cn7y7pvem0vo',
         dataSaving: 'Ahagusaba uburyo (ama mega) buke',
+        articleDataSavingLinkText: 'Inyandiko gusa',
       },
       mediaAssetPage: {
         mediaPlayer: 'Ibikinwa',
@@ -293,7 +294,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Ibiheruka',
     },
     mostRead: {
-      header: 'Ibisomwa cane',
+      header: 'Izisomwa na benshi',
       lastUpdated: 'Ibiheruka kuvugururwa:',
       numberOfItems: 5,
       hasMostRead: true,
@@ -304,7 +305,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'Umwanya bimara %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'Ibisomwa cane',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

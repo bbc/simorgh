@@ -10,11 +10,15 @@ import { RequestContextProvider } from '#app/contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import articleData from '#data/news/articles/c0g992jmmkko.json';
 import articleDataBurmese from '#data/burmese/articles/cn0exdy1jzvo.json';
+import articleDataGahuza from '#data/gahuza/articles/c5y51yxeg53o.json';
+import articleDataArabic from '#data/arabic/articles/cn0m90verwvo.json';
 import articleDataWithRelatedContent from '#data/afrique/articles/c7yn6nznljdo.json';
 import articleDataWithSingleRelatedContent from '#data/afrique/articles/cz216x22106o.json';
 import articleDataWithPodcastPromo from '#data/russian/articles/c61q94n3rm3o.json';
 import articleNewsWithPodcastPromo from '#data/news/articles/crkxdvxzwxk2.json';
 import articleDataWithElectionTag from '#data/mundo/articles/c206j730722o.json';
+import articleDataWithPortraitVideo from '#data/mundo/articles/c1xv2q1gewvo.json';
+import articleDataWithPortraitVideoRTL from '#data/persian/articles/c149pnldynxo.json';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import { service as newsConfig } from '#app/lib/config/services/news';
@@ -61,6 +65,7 @@ type Props = {
   service?: Services;
   podcastEnabled?: boolean;
   electionBanner?: boolean;
+  articleLiteSiteLinkEnabled?: boolean;
 };
 
 const ComponentWithContext = ({
@@ -68,6 +73,7 @@ const ComponentWithContext = ({
   service = 'news',
   podcastEnabled = false,
   electionBanner = false,
+  articleLiteSiteLinkEnabled = false,
 }: Props) => {
   return (
     <ToggleContextProvider
@@ -77,6 +83,7 @@ const ComponentWithContext = ({
         frostedPromo: { enabled: true, value: 1 },
         podcastPromo: { enabled: podcastEnabled },
         electionBanner: { enabled: electionBanner },
+        articleLiteSiteLink: { enabled: articleLiteSiteLinkEnabled },
       }}
     >
       {/* Service set to news to enable most read. Article data is in english */}
@@ -110,6 +117,7 @@ const ComponentWithServiceContext = ({
   service = 'news',
   podcastEnabled = false,
   electionBanner = false,
+  articleLiteSiteLinkEnabled = false,
 }: Props) => {
   const memoisedServiceContext = useMemo(
     () => ({ ...serviceContextMock, service }),
@@ -124,6 +132,9 @@ const ComponentWithServiceContext = ({
         frostedPromo: { enabled: true, value: 1 },
         podcastPromo: { enabled: podcastEnabled },
         electionBanner: { enabled: electionBanner },
+        articleLiteSiteLink: {
+          enabled: articleLiteSiteLinkEnabled,
+        },
       }}
     >
       {/* Service set to news to enable most read. Article data is in english */}
@@ -218,6 +229,17 @@ export const ArticlePageWithPodcastNews = () => (
   />
 );
 
+export const ArticlePageWithPortraitVideo = () => (
+  <ComponentWithContext data={articleDataWithPortraitVideo} service="mundo" />
+);
+
+export const ArticlePageWithPortraitVideoRightToLeft = () => (
+  <ComponentWithContext
+    data={articleDataWithPortraitVideoRTL}
+    service="persian"
+  />
+);
+
 export const ArticlePageWithElectionBanner = {
   render: () => (
     <ComponentWithServiceContext
@@ -229,4 +251,39 @@ export const ArticlePageWithElectionBanner = {
   parameters: {
     chromatic: { disableSnapshot: true },
   },
+};
+
+export const ArticlePageWithLiteSiteLink = {
+  render: (_: StoryArgs, { service }: StoryProps) => (
+    <ComponentWithContext
+      data={articleData}
+      service={service}
+      articleLiteSiteLinkEnabled
+    />
+  ),
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+};
+
+export const TestArticlePageWithLiteSiteLink = {
+  render: () => (
+    <ComponentWithContext
+      data={articleDataGahuza}
+      service="gahuza"
+      articleLiteSiteLinkEnabled
+    />
+  ),
+  tags: ['!dev'],
+};
+
+export const TestArticlePageWithLiteSiteLinkRTL = {
+  render: () => (
+    <ComponentWithContext
+      data={articleDataArabic}
+      service="arabic"
+      articleLiteSiteLinkEnabled
+    />
+  ),
+  tags: ['!dev'],
 };

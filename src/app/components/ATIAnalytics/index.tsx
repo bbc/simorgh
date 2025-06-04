@@ -3,10 +3,11 @@ import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import CanonicalATIAnalytics from './canonical';
 import AmpATIAnalytics from './amp';
+import AmpGeo from '../../legacy/components/AmpGeo';
 import { ATIProps } from './types';
 import { buildATIUrl, buildReverbParams } from './params';
 
-const ATIAnalytics = ({ data, atiData }: ATIProps) => {
+const ATIAnalytics = ({ atiData = {} }: ATIProps) => {
   const requestContext = useContext(RequestContext);
   const serviceContext = useContext(ServiceContext);
   const { isAmp } = requestContext;
@@ -15,7 +16,6 @@ const ATIAnalytics = ({ data, atiData }: ATIProps) => {
   const urlPageViewParams = buildATIUrl({
     requestContext,
     serviceContext,
-    data,
     atiData,
   }) as string;
 
@@ -23,7 +23,7 @@ const ATIAnalytics = ({ data, atiData }: ATIProps) => {
     ? buildReverbParams({
         requestContext,
         serviceContext,
-        atiData: atiData || {},
+        atiData,
       })
     : null;
 
@@ -32,7 +32,13 @@ const ATIAnalytics = ({ data, atiData }: ATIProps) => {
   }
 
   return isAmp ? (
-    <AmpATIAnalytics pageviewParams={urlPageViewParams} />
+    <>
+      <AmpGeo />
+      <AmpATIAnalytics
+        pageviewParams={urlPageViewParams}
+        reverbParams={reverbParams}
+      />
+    </>
   ) : (
     <CanonicalATIAnalytics
       pageviewParams={urlPageViewParams}

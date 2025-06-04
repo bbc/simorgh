@@ -1,49 +1,22 @@
 /* eslint-disable no-console */
 import { useContext, useCallback, useState } from 'react';
-import { buildATIEventTrackUrl } from '#app/components/ATIAnalytics/atiUrl';
+import { OptimizelyContext } from '@optimizely/react-sdk';
+import useOptimizelyMvtVariation from '#app/hooks/useOptimizelyMvtVariation';
+import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
+import constructStaticATIUrl from '#app/lib/analyticsUtils/staticATITracking/constructATIUrl';
+import {
+  CLICK_EVENT,
+  STATIC_ATI_CLICK_TRACKING,
+} from '#app/lib/analyticsUtils/analytics.const';
 import { RequestContext } from '#app/contexts/RequestContext';
-import { EventTrackingContext } from '../../contexts/EventTrackingContext';
+import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import useTrackingToggle from '../useTrackingToggle';
 import OPTIMIZELY_CONFIG from '../../lib/config/optimizely';
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon/index';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { isValidClick } from './clickTypes';
 
-const EVENT_TYPE = 'click';
-export const LITE_ATI_TRACKING = 'data-lite-ati-tracking';
-
-const extractTrackingProps = (props = {}) => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const eventTrackingContext = useContext(EventTrackingContext);
-
-  const { componentName, url, advertiserID, format, detailedPlacement } = props;
-  const {
-    pageIdentifier,
-    platform,
-    producerId,
-    statsDestination,
-    producerName,
-  } = eventTrackingContext;
-
-  const campaignID = props?.campaignID || eventTrackingContext?.campaignID;
-
-  return {
-    pageIdentifier,
-    producerId,
-    platform,
-    statsDestination,
-    componentName,
-    campaignID,
-    format,
-    type: EVENT_TYPE,
-    advertiserID,
-    url,
-    detailedPlacement,
-    producerName,
-  };
-};
-
-const useClickTrackerHandler = (props = {}) => {
+const useClickTrackerHandler = (eventTrackingData = {}) => {
   const {
     pageIdentifier,
     producerId,
@@ -56,16 +29,21 @@ const useClickTrackerHandler = (props = {}) => {
     url,
     detailedPlacement,
     producerName,
-  } = extractTrackingProps(props);
-
-  const preventNavigation = props?.preventNavigation;
-  const optimizely = props?.optimizely;
-  const optimizelyMetricNameOverride = props?.optimizelyMetricNameOverride;
+    preventNavigation,
+    sendOptimizelyEvents,
+    groupTracker,
+    itemTracker,
+  } = extractATITrackingProps({ eventTrackingData, eventType: CLICK_EVENT });
 
   const { trackingIsEnabled } = useTrackingToggle(componentName);
   const [clicked, setClicked] = useState(false);
 
   const { service, useReverb } = useContext(ServiceContext);
+
+  const { optimizely } = useContext(OptimizelyContext);
+  const optimizelyVariation = useOptimizelyMvtVariation(
+    OPTIMIZELY_CONFIG.ruleKey,
+  );
 
   return useCallback(
     async event => {
@@ -93,29 +71,19 @@ const useClickTrackerHandler = (props = {}) => {
           event.stopPropagation();
           event.preventDefault();
 
-          if (optimizely) {
-            const eventName = OPTIMIZELY_CONFIG.viewClickAttributeId;
-
-            const overrideAttributes = {
-              ...optimizely.user.attributes,
-              [`clicked_${eventName}`]: true,
-            };
+          if (optimizely && sendOptimizelyEvents && optimizelyVariation) {
+            const overrideAttributes = optimizely?.user.attributes;
 
             optimizely.track(
-              optimizelyMetricNameOverride
-                ? `${optimizelyMetricNameOverride}_clicks`
-                : 'component_clicks',
+              `${componentName}-clicks`,
               optimizely.user.id,
               overrideAttributes,
             );
           }
 
-          const optimizelyVariation =
-            optimizely?.getVariation(OPTIMIZELY_CONFIG.ruleKey) || null;
-
           try {
             await sendEventBeacon({
-              type: EVENT_TYPE,
+              type: CLICK_EVENT,
               campaignID,
               componentName,
               format,
@@ -126,9 +94,11 @@ const useClickTrackerHandler = (props = {}) => {
               service,
               advertiserID,
               statsDestination,
-              url,
+              url: url || nextPageUrl,
               detailedPlacement,
               useReverb,
+              ...(groupTracker && { groupTracker }),
+              ...(itemTracker && { itemTracker }),
               ...(optimizelyVariation &&
                 optimizelyVariation !== 'off' && {
                   experimentVariant: optimizelyVariation,
@@ -160,27 +130,35 @@ const useClickTrackerHandler = (props = {}) => {
       url,
       advertiserID,
       format,
+      sendOptimizelyEvents,
       optimizely,
-      optimizelyMetricNameOverride,
+      optimizelyVariation,
       detailedPlacement,
       useReverb,
+      itemTracker,
+      groupTracker,
     ],
   );
 };
 
-export const useConstructLiteSiteATIEventTrackUrl = (props = {}) => {
-  const atiTrackingParams = extractTrackingProps(props);
-  return buildATIEventTrackUrl(atiTrackingParams);
+export default (eventTrackingData = {}) => {
+  const { isAmp } = useContext(RequestContext);
+  const isHydrated = useHydrationDetection();
+
+  const clickTracker = useClickTrackerHandler(eventTrackingData);
+  const staticAtiUrl = constructStaticATIUrl({
+    eventTrackingData,
+    eventType: CLICK_EVENT,
+    isStatic: !isHydrated,
+  });
+
+  const enableStaticTracking = !isHydrated && !isAmp;
+
+  return {
+    ...(enableStaticTracking && {
+      [STATIC_ATI_CLICK_TRACKING]: staticAtiUrl,
+    }),
+
+    ...(isHydrated && { onClick: clickTracker }),
+  };
 };
-
-export const useATIClickTrackerHandler = (props = {}) => {
-  const { isLite } = useContext(RequestContext);
-  const clickTrackerHandler = useClickTrackerHandler(props);
-  const liteHandler = useConstructLiteSiteATIEventTrackUrl(props);
-
-  return isLite
-    ? { [LITE_ATI_TRACKING]: liteHandler }
-    : { onClick: clickTrackerHandler };
-};
-
-export default useClickTrackerHandler;

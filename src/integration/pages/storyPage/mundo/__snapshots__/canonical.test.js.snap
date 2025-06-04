@@ -11,7 +11,7 @@ exports[`Canonical Story Page Analytics ATI tracking pixel excluding src 1`] = `
 />
 `;
 
-exports[`Canonical Story Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/"`;
+exports[`Canonical Story Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
 
 exports[`Canonical Story Page Analytics ATI tracking pixel search params 1`] = `
 [
@@ -159,8 +159,8 @@ exports[`Canonical Story Page Header Navigation link should match text and url 3
 
 exports[`Canonical Story Page Header Navigation link should match text and url 4`] = `
 {
-  "text": "Hay Festival",
-  "url": "/mundo/topics/cr50y7p7qyqt",
+  "text": "EE.UU.",
+  "url": "/mundo/topics/cdr5613yzwqt",
 }
 `;
 
@@ -199,6 +199,20 @@ exports[`Canonical Story Page Header Navigation link should match text and url 9
 }
 `;
 
+exports[`Canonical Story Page Header Navigation link should match text and url 10`] = `
+{
+  "text": "Hay Festival",
+  "url": "/mundo/topics/cr50y7p7qyqt",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 11`] = `
+{
+  "text": "Centroamérica cuenta",
+  "url": "/mundo/topics/c404v5z1k8wt",
+}
+`;
+
 exports[`Canonical Story Page Image Caption should match text 1`] = `"Pie de foto, Llegó el día de la salida de Reino Unido de la UE."`;
 
 exports[`Canonical Story Page Image should match snapshot 1`] = `
@@ -206,6 +220,7 @@ exports[`Canonical Story Page Image should match snapshot 1`] = `
   alt="A person holding a union jack umbrella in front of Big Ben"
   class="bbc-139onq"
   height="549"
+  loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"
   src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg.webp"
   srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg.webp 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg.webp 624w, https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg.webp 800w"

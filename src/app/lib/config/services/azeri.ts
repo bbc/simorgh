@@ -41,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/azeri/institutional-49283479',
     isTrustProjectParticipant: true,
     script: latinWithDiacritics,
-    manifestPath: '/manifest.json',
+    manifestPath: '/azeri/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Xəbərlər, Qaynar Xəbərlər, Analiz, Video',
+    homePageTitle: 'Xəbərlər, Qaynar Xəbərlər, Analiz, Video',
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -262,9 +262,41 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'Digər xəbərlər',
       featuresAnalysisTitle: 'Bunları da oxuyun',
+      ugc: {
+        // Optional
+        optional: 'vacib deyil',
+
+        // File upload
+        fileUploadLiveRegionText: `Göndərdikləriniz bunlardır: `,
+        fileUploadListHeading: `Göndərdikləriniz bunlardır:`,
+        fileUploadButton: 'Faylı seçin',
+
+        // Submit button
+        submitButton: 'Göndərin',
+
+        // Messaging
+        referenceNumber: 'İstinad nömrəniz',
+        retentionPeriodDays: `Bizə göndərdiyiniz məlumatları {{days}} günədək saxlayacağıq. Ondan istifadə etmədiyimiz halda bizə göndərdiyiniz bu və digər məlumatları siləcəyik.`,
+        privacyInfoHtml: `Sizin məlumatlarınızı qoruyuruq – ətraflı {{privacyInfoLink}} oxuyun.`,
+        emailToHtml: `Fikrinizi dəyişsəniz və ya məlumatlarınızdan istifadə etməyimizi istəmirsinizsə, {{emailLink}} emailinə yazın. İstinad nömrənizi də qeyd edin.`,
+        removalGuidelineText: `Lakin proqramlarımız və ya saytımız üçün məlumat göndərmisinizsə və biz ondan istifadə etmişiksə, onu silmək mümkün olmayacaq.`,
+
+        // Form Screen
+        dataPolicyHeading: 'Bizim informasiya siyasə timiz',
+
+        // Uploading Screen
+        uploadingHeading: 'Yüklənir',
+        uploadingDescription: 'Zəhmət olmasa, yüklənmə bitənədək gözləyin.',
+
+        // Success Screen
+        successHeading: 'Mesaj göndərildi!',
+        successDescription: 'Əlaqə saxladığınız üçün təşəkkür edirik.',
+        privacyPolicyLinkHref: 'https://www.bbc.com/usingthebbc/privacy',
+        privacyPolicyLinkText: 'Məxfilik siyasətimizi',
+      },
     },
     mostRead: {
-      header: 'Ən çox oxunan',
+      header: 'Geniş oxunanlar',
       lastUpdated: 'Ən son yeniləmə:',
       numberOfItems: 5,
       hasMostRead: true,
@@ -273,7 +305,11 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'Ən çox oxunan',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

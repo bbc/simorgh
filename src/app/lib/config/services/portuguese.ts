@@ -13,6 +13,7 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-portuguese',
     atiAnalyticsProducerId: '33',
     atiAnalyticsProducerName: 'BRASIL',
+    useReverb: true,
     chartbeatDomain: 'brasil.bbc.co.uk', // this is meant to be different to the service name
     brandName: 'BBC News Brasil',
     product: 'BBC News',
@@ -42,24 +43,24 @@ export const service: DefaultServiceConfig = {
       'https://www.bbc.com/portuguese/institutional-50054434',
     isTrustProjectParticipant: true,
     script: latinWithDiacritics,
-    manifestPath: '/manifest.json',
+    manifestPath: '/portuguese/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Notícias, vídeos, análise e contexto em português',
+    homePageTitle: 'Notícias, vídeos, análise e contexto em português',
     passportHomes: ['brasil'],
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
-      title: 'Novo podcast investigativo: A Raposa',
-      brandTitle: 'Novo podcast investigativo: A Raposa',
+      title: 'Whatsapp',
+      brandTitle: 'No WhatsApp',
       brandDescription:
-        'Uma tonelada de cocaína, três brasileiros inocentes e a busca por um suspeito inglês',
+        'Agora você pode receber as notícias da BBC News Brasil no seu celular',
       image: {
-        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0k38tc4.jpg',
-        alt: 'Logo: A Raposa',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0hvq254.png',
+        alt: 'BBC Brasil no WhatsApp',
       },
       linkLabel: {
-        text: 'Episódios',
-        href: 'https://www.bbc.com/portuguese/podcasts/p0cyhvny',
+        text: 'Clique para se inscrever',
+        href: 'https://www.whatsapp.com/channel/0029VaVHa4S6rsQrlMVx8c0b',
       },
       skipLink: {
         text: 'Pule %title% e continue lendo',
@@ -76,8 +77,6 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'Publicidade',
       },
-      recommendationTitle: 'Matérias recomendadas',
-      splitRecommendationTitle: 'Mais matérias recomendadas',
       seeAll: 'Ver todos',
       home: 'Início',
       currentPage: 'Página atual',
@@ -238,7 +237,9 @@ export const service: DefaultServiceConfig = {
         photogallery: 'Galeria de fotos',
         video: 'Vídeo',
         listen: 'Listen',
+        play: 'Play',
         watch: 'Assista',
+        watchMoments: 'Assista',
         listenLive: 'Ouça ao vivo',
         listenNext: 'Ouça o próximo',
         liveLabel: 'AO VIVO',
@@ -250,6 +251,10 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'O podcast está disponível em',
         download: 'Baixar episódio',
         closeVideo: 'Sair',
+      },
+      carousel: {
+        previous: 'Scroll to previous item',
+        next: 'Scroll to next item',
       },
       socialEmbed: {
         caption: {
@@ -357,7 +362,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'Mais lidas',
+      header: 'Mais clicadas',
       lastUpdated: 'Última atualização:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -366,7 +371,7 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'Mais lidas',
       skipLink: {
         text: 'Pule %title% e continue lendo',
         endTextVisuallyHidden: 'Fim do %title%',
@@ -451,8 +456,8 @@ export const service: DefaultServiceConfig = {
         url: '/portuguese/topics/c9y2j35dn2zt',
       },
       {
-        title: 'BBC Lê',
-        url: '/portuguese/topics/cxndrr1qgllt',
+        title: 'Podcasts',
+        url: '/portuguese/topics/cx2ggnx4j72t',
       },
     ],
   },

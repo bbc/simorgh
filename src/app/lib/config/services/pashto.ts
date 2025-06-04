@@ -15,6 +15,7 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-pashto',
     atiAnalyticsProducerId: '68',
     atiAnalyticsProducerName: 'PASHTO',
+    useReverb: true,
     brandName: 'BBC News پښتو',
     chartbeatDomain: 'pashto.bbc.co.uk',
     serviceLocalizedName: 'پښتو',
@@ -42,9 +43,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/pashto/institutional-49283007',
     isTrustProjectParticipant: true,
     script: arabic,
-    manifestPath: '/manifest.json',
+    manifestPath: '/pashto/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'کور پاڼه',
+    homePageTitle: 'کور پاڼه',
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -64,6 +65,17 @@ export const service: DefaultServiceConfig = {
       relatedContent: 'ورته مطالب',
       relatedTopics: 'اړونده مطالب',
       navMenuText: 'برخې',
+      liteSite: {
+        onboardingMessage:
+          'تاسې د وېب‌سایټ داسې بڼه ګورئ چې یوازې متن لري او لږ انټرنېټ کاروي. که غواړئ عکسونه او ویډیوګانې وګورئ، نو د وېب‌سایټ اصلي (لومړنۍ) بڼې ته ورشئ.',
+        toMainSite: 'د وېب‌سایټ اصلي بڼې ته مې وروله',
+        informationPage:
+          'د وېب‌سایټ دې بڼې په اړه چې ډېر انټرنېټ نه مصرفوي نور معلومات دلته موندلای شئ.',
+        informationPageLink: 'https://www.bbc.com/pashto/articles/ce9vxxy2zkpo',
+        dataSaving: 'دې لپاره چې انټرنېټ مو لږ مصرف شي، یوازې متن ولولئ',
+        articleDataSavingLinkText:
+          'دې لپاره چې انټرنېټ مو لږ مصرف شي، یوازې متن ولولئ',
+      },
       mediaAssetPage: {
         mediaPlayer: 'میډیا پلیئر',
         audioPlayer: 'اډیو پلیئر',
@@ -277,7 +289,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'ځانګړي مطالب',
     },
     mostRead: {
-      header: 'ډېر لوستل شوي',
+      header: 'تر ټولو ډېر لوستل شوي',
       lastUpdated: 'د خپرېدو نیټه',
       numberOfItems: 10,
       hasMostRead: true,
@@ -290,7 +302,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: '%duration% موده',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'ډېر لوستل شوي',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
@@ -376,6 +392,7 @@ export const service: DefaultServiceConfig = {
       {
         title: 'راډیویي خپرونې',
         url: '/pashto/topics/c9xz1ekw79nt',
+        hideOnLiteSite: true,
       },
     ],
   },

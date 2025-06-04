@@ -391,6 +391,7 @@ export const optimobase = optimoBaseFontStyles;
 export const pashto = reithQalamStyles;
 export const persian = reithQalamStyles;
 export const pidgin = helmetFontStyles;
+export const polska = latinReithFontStyles;
 export const portuguese = latinReithFontStyles;
 export const punjabi = punjabiStyles;
 export const russian = latinReithFontStyles;

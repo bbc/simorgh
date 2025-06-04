@@ -35,8 +35,6 @@ const removeAmp = (path: string) => path.split('.')[0];
 const getArticleId = (path: string) => path.match(/(c[a-zA-Z0-9]{10,}o)/)?.[1];
 const getCpsId = (path: string) => removeLeadingSlash(path);
 const getTVAudioId = (path: string) => removeLeadingSlash(path);
-const getFrontPageId = (path: string) =>
-  `${removeLeadingSlash(path)}/front_page`;
 const getTipoId = (path: string) => path.match(/(c[a-zA-Z0-9]{10,}t)/)?.[1];
 const getUgcId = (path: string) => path.match(/(u[a-zA-Z0-9]{8,})/)?.[1];
 const isOptimoIdCheck = (path: string) =>
@@ -45,20 +43,10 @@ const isCpsIdCheck = (path: string) =>
   /([0-9]{5,9}|[a-z0-9\-_]+-[0-9]{5,9})$/.test(path);
 const isTipoIdCheck = (path: string) => /(c[a-zA-Z0-9]{10,}t)/.test(path);
 
-const isFrontPage = ({
-  path,
-  service,
-  variant,
-}: {
-  path: string;
-  service: Services;
-  variant?: Variants;
-}) => (variant ? path === `/${service}/${variant}` : path === `/${service}`);
-
 interface GetIdProps {
   pageType: PageTypes;
   service?: Services;
-  variant?: Variants;
+  variant?: Variants | null;
   env: Environments;
 }
 
@@ -78,17 +66,7 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
       };
       break;
     case CPS_ASSET:
-      getIdFunction = (path: string) => {
-        /**
-         * Legacy Front Pages are curated in CPS and fetched from the BFF using the CPS_ASSET page type
-         * This functionality will be removed once all front pages migrated to the new HomePage
-         *  */
-        return env !== 'local' &&
-          service &&
-          isFrontPage({ path, service, variant })
-          ? getFrontPageId(path)
-          : getCpsId(path);
-      };
+      getIdFunction = (path: string) => getCpsId(path);
       break;
     case HOME_PAGE:
       getIdFunction = () => {
@@ -162,7 +140,7 @@ export interface UrlConstructParams {
   pathname: string;
   pageType: PageTypes;
   service?: Services;
-  variant?: Variants;
+  variant?: Variants | null;
   page?: string;
   isAmp?: boolean;
   disableRadioSchedule?: boolean;
@@ -254,12 +232,13 @@ const constructPageFetchUrl = ({
         break;
       }
       case LIVE_PAGE: {
+        const [liveID] = pathname.split('.');
         const variantPath = variant ? `/${variant}` : '';
         const host = `http://${process.env.HOSTNAME || 'localhost'}`;
         const port = process.env.PORT ? `:${process.env.PORT}` : '';
         // pathname is the ID of the Live page without /service/live/, and supports both Tipo & CPS IDs
         fetchUrl = Url(
-          `${host}${port}/api/local/${service}/live/${pathname}${variantPath}`,
+          `${host}${port}/api/local/${service}/live/${liveID}${variantPath}`,
         );
         break;
       }

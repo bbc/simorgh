@@ -1,7 +1,7 @@
 /* eslint-disable react/no-danger */
 import React, { ReactElement, PropsWithChildren } from 'react';
-import liteATIClickTracking from '#src/server/utilities/liteATIClickTracking';
 import { BaseRendererProps } from './types';
+import ComponentTracking from './ComponentTracking';
 
 interface Props extends BaseRendererProps {
   bodyContent: ReactElement;
@@ -23,13 +23,13 @@ export default function LitePageRenderer({
         {title}
         {helmetMetaTags}
         {helmetLinkTags}
-        {helmetScriptTags}
         <style dangerouslySetInnerHTML={{ __html: styles }} />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(${liteATIClickTracking.toString()})()`,
-          }}
+        {/* IMPORTANT: ComponentTracking MUST come before helmetScriptTags due to synchronous calls from helmetScriptTags to functions within ComponentTracking */}
+        <ComponentTracking
+          enableStaticClickTrackingOnOperaMiniOnly={false}
+          trackComponentViews
         />
+        {helmetScriptTags}
       </head>
       <body>{bodyContent}</body>
     </html>

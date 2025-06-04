@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import { jsx, useTheme } from '@emotion/react';
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import useViewTracker from '#hooks/useViewTracker';
 import { EventTrackingBlock } from '#app/models/types/eventTracking';
 import SectionLabel from '#psammead/psammead-section-label/src';
@@ -18,14 +18,14 @@ type TopStoriesListProps = {
   item: TopStoryItem;
   index: number;
   eventTrackingData: EventTrackingBlock;
-  viewRef: React.Ref<HTMLDivElement>;
+  viewTracker: React.Ref<HTMLDivElement>;
 };
 
 const renderTopStoriesList = ({
   item,
   index,
   eventTrackingData,
-  viewRef,
+  viewTracker,
 }: TopStoriesListProps) => {
   const contentType = item?.contentType ?? '';
   const assetUri = item?.locators?.assetUri ?? '';
@@ -46,7 +46,7 @@ const renderTopStoriesList = ({
       <TopStoriesItem
         item={item}
         ariaLabelledBy={ariaLabelledBy}
-        ref={viewRef}
+        ref={viewTracker}
         eventTrackingData={eventTrackingData}
       />
     </PromoItem>
@@ -68,12 +68,11 @@ const TopStoriesSection = ({
       componentName: 'top-stories',
       ...(sendOptimizelyEvents && {
         optimizely,
-        optimizelyMetricNameOverride: 'top_stories',
       }),
     },
   };
   const eventTrackingDataSend = eventTrackingData?.block;
-  const viewRef = useViewTracker(eventTrackingDataSend);
+  const viewTracker = useViewTracker(eventTrackingDataSend);
 
   const {
     palette: { GREY_2 },
@@ -117,13 +116,18 @@ const TopStoriesSection = ({
         <TopStoriesItem
           item={content[0]}
           ariaLabelledBy={ariaLabelledBy}
-          ref={viewRef}
+          ref={viewTracker}
           eventTrackingData={eventTrackingData}
         />
       ) : (
         <PromoList css={styles.promoList}>
           {content.map((item, index) =>
-            renderTopStoriesList({ item, index, eventTrackingData, viewRef }),
+            renderTopStoriesList({
+              item,
+              index,
+              eventTrackingData,
+              viewTracker,
+            }),
           )}
         </PromoList>
       )}

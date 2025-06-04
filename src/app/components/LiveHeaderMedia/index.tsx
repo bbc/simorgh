@@ -47,8 +47,10 @@ const LiveHeaderMedia = ({
   const eventTrackingData: EventTrackingMetadata = {
     componentName: 'live-header-media',
   };
-  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
-  const viewRef = useViewTracker(eventTrackingData);
+
+  const { onClick: clickTrackerHandler } =
+    useClickTrackerHandler(eventTrackingData);
+  const viewTracker = useViewTracker(eventTrackingData);
 
   let warningLevel = WARNING_LEVELS.NO_WARNING;
 
@@ -68,11 +70,14 @@ const LiveHeaderMedia = ({
 
   const {
     model: {
-      masterbrand: { networkName },
       synopses: { short },
       version: { vpid, warnings },
     },
   } = mediaItem;
+
+  const titleHasPunctuation = regexPunctuationSymbols.test(
+    short.trim().slice(-1),
+  );
 
   if (warnings) {
     const { warning } = warnings;
@@ -90,8 +95,6 @@ const LiveHeaderMedia = ({
     warningLevel = WARNING_LEVELS[highestWarning.warning_code];
   }
 
-  const titleHasPunctuation = short.slice(-1).match(regexPunctuationSymbols);
-
   const clickToggleMedia = () => {
     const mediaPlayer = window.mediaPlayers?.[vpid];
     if (showMedia) {
@@ -108,7 +111,7 @@ const LiveHeaderMedia = ({
   };
 
   const handleClick = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
-    clickTrackerHandler(e);
+    if (clickTrackerHandler) clickTrackerHandler(e);
     clickToggleMedia();
   };
 
@@ -126,11 +129,6 @@ const LiveHeaderMedia = ({
       {showMedia && <VisuallyHiddenText>{closeVideo}, </VisuallyHiddenText>}
       <Text size="pica" fontVariant="sansBold" as="span">
         {short}
-        {!titleHasPunctuation && ','}
-      </Text>
-      <Text size="pica" fontVariant="sansRegular" as="span">
-        {' '}
-        {networkName}
       </Text>
     </Text>
   );
@@ -141,7 +139,7 @@ const LiveHeaderMedia = ({
         <p>{description}</p>
         <strong>{noJs}</strong>
       </noscript>
-      <div css={styles.componentContainer} ref={viewRef}>
+      <div css={styles.componentContainer} {...viewTracker}>
         <button
           type="button"
           onClick={e => handleClick(e)}
@@ -162,7 +160,9 @@ const LiveHeaderMedia = ({
                 css={styles.guidanceMessage}
                 data-testid="warning-message"
               >
-                <VisuallyHiddenText>, </VisuallyHiddenText>
+                <VisuallyHiddenText>
+                  {titleHasPunctuation ? ' ' : ', '}
+                </VisuallyHiddenText>
                 {warnings.warning_text}
               </Text>
             )}
