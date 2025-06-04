@@ -21,10 +21,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 const VIEWED_DURATION_MS = 1000;
 const MIN_VIEWED_PERCENT = 0.5;
 
-const getComponentViewTracker = (
-  eventTrackingData?: EventTrackingData,
-  optimizelyVariation?: string,
-) => {
+const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
   const {
     componentName,
     format,
@@ -38,6 +35,7 @@ const getComponentViewTracker = (
     campaignID,
     detailedPlacement,
     sendOptimizelyEvents,
+    optimizelyVariation,
     groupTracker,
     itemTracker,
     viewThreshold,
@@ -98,17 +96,6 @@ const getComponentViewTracker = (
           trackingIsEnabled,
           !eventSent,
         ].every(Boolean);
-
-        console.log(
-          campaignID,
-          componentName,
-          pageIdentifier,
-          platform,
-          producerId,
-          producerName,
-          service,
-          statsDestination,
-        );
 
         if (shouldSendEvent) {
           if (
@@ -199,16 +186,10 @@ const getComponentViewTracker = (
   return viewTracker;
 };
 
-export default (
-  eventTrackingData?: EventTrackingData,
-  optimizelyVariation?: string,
-): any => {
+export default (eventTrackingData?: EventTrackingData): any => {
   const { isLite } = useContext(RequestContext);
 
-  const viewTracker = getComponentViewTracker(
-    eventTrackingData,
-    optimizelyVariation,
-  );
+  const viewTracker = getComponentViewTracker(eventTrackingData);
 
   // don't think I need experimentFlagKey here
   const staticATIUrl = constructStaticATIUrl({

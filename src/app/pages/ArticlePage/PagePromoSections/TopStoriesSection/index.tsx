@@ -66,24 +66,22 @@ const TopStoriesSection = ({
   const { translations, script, service } = useContext(ServiceContext);
   const experimentFlagKey = 'dummy_experiment_1';
 
-  const eventTrackingData = {
-    block: {
-      componentName: 'top-stories',
-      sendOptimizelyEvents,
-    },
-  };
-  const eventTrackingDataSend = eventTrackingData?.block;
-  const viewTracker = useViewTracker(
-    eventTrackingDataSend,
-    experimentFlagKey,
-    true,
-  );
-
   // added in dummy ab test code
   const myExperiementVariation = useOptimizelyVariation(
     // keeping it simple
     experimentFlagKey,
   );
+
+  const eventTrackingData = {
+    block: {
+      componentName: 'top-stories',
+      sendOptimizelyEvents,
+      optimizelyVariation: myExperiementVariation,
+    },
+  };
+  const eventTrackingDataSend = eventTrackingData?.block;
+
+  const viewTracker = useViewTracker(eventTrackingDataSend);
 
   let myExperimentText;
 

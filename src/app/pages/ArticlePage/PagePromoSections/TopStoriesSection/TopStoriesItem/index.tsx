@@ -74,21 +74,12 @@ type TopStoriesItemProps = {
 
 const TopStoriesItem = forwardRef(
   (
-    {
-      item,
-      ariaLabelledBy,
-      eventTrackingData = null,
-      experimentFlagKey,
-    }: TopStoriesItemProps,
+    { item, ariaLabelledBy, eventTrackingData = null }: TopStoriesItemProps,
     viewTracker: ForwardedRef<HTMLDivElement>,
   ) => {
     const eventTrackingDataSend = eventTrackingData?.block;
-    const clickTrackerHandler = useClickTrackerHandler(
-      eventTrackingDataSend,
-      experimentFlagKey,
-      // isClientSide
-      true,
-    );
+    const clickTrackerHandler = useClickTrackerHandler(eventTrackingDataSend);
+
     if (!item || Object.keys(item).length === 0) return null;
 
     const itemExtractor = {
