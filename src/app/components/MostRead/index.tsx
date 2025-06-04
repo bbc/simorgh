@@ -3,6 +3,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 import { ReactSDKClient } from '@optimizely/react-sdk';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Canonical from './Canonical';
@@ -77,7 +78,6 @@ const CanonicalMostRead = ({
   columnLayout,
   size,
   eventTrackingData,
-  experimentFlagKey,
 }: {
   data: MostReadData | undefined;
   className: string;
@@ -88,8 +88,8 @@ const CanonicalMostRead = ({
   eventTrackingData: {
     optimizely?: ReactSDKClient | null | undefined; // update?
     componentName: string;
+    optimizelyVariation?: string | undefined;
   };
-  experimentFlagKey?: string;
 }) =>
   data ? (
     <MostReadSection className={className}>
@@ -102,7 +102,6 @@ const CanonicalMostRead = ({
         columnLayout={columnLayout}
         size={size}
         eventTrackingData={eventTrackingData}
-        experimentFlagKey={experimentFlagKey}
       />
     </MostReadSection>
   ) : null;
@@ -125,6 +124,8 @@ const MostRead = ({
 
   // example
   const experimentFlagKey = 'dummy_experiment';
+  // added in dummy ab test code
+  const myExperiementVariation = useOptimizelyVariation(experimentFlagKey);
 
   const { enabled } = useToggle('mostRead');
 
@@ -147,6 +148,7 @@ const MostRead = ({
   const eventTrackingData = {
     ...blockLevelEventTrackingData,
     sendOptimizelyEvents,
+    optimizelyVariation: myExperiementVariation,
   };
 
   return isAmp ? (
@@ -167,7 +169,6 @@ const MostRead = ({
       columnLayout={columnLayout}
       size={size}
       eventTrackingData={eventTrackingData}
-      experimentFlagKey={experimentFlagKey}
     />
   );
 };

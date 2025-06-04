@@ -31,8 +31,8 @@ export interface MostReadLinkProps {
   size: Size;
   eventTrackingData?: {
     componentName: string;
+    optimizelyVariation?: string | undefined;
   };
-  experimentFlagKey?: string;
 }
 
 type ArticleSource = 'cps' | 'optimo';

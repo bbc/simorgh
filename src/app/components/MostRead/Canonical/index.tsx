@@ -16,8 +16,8 @@ interface MostReadProps {
   data: MostReadData;
   eventTrackingData?: {
     componentName: string;
+    optimizelyVariation?: string | undefined;
   };
-  experimentFlagKey?: string;
 }
 
 const MostRead = ({
@@ -25,7 +25,6 @@ const MostRead = ({
   size,
   data,
   eventTrackingData,
-  experimentFlagKey,
 }: MostReadProps) => {
   const {
     service,
@@ -77,7 +76,6 @@ const MostRead = ({
                 href={href}
                 size={size}
                 eventTrackingData={eventTrackingData}
-                experimentFlagKey={experimentFlagKey}
               >
                 {shouldRenderLastUpdated(timestamp) && timestamp && (
                   <LastUpdated
