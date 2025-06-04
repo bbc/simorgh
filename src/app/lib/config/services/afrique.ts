@@ -69,8 +69,7 @@ export const service: DefaultServiceConfig = {
         onboardingMessage:
           'Vous visualisez une version texte de ce site web qui utilise moins de données. Voir la version principale du site, avec toutes les images et vidéos.',
         toMainSite: 'Me rediriger vers le site principal',
-        informationPage:
-          'En savoir plus sur cette version économe en données',
+        informationPage: 'En savoir plus sur cette version économe en données',
         informationPageLink:
           'https://www.bbc.com/afrique/articles/c861e868x5eo',
         dataSaving: 'Lire uniquement le texte pour utiliser moins de données',
