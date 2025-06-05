@@ -3,7 +3,7 @@ import { render, screen, act } from '@testing-library/react';
 import SidebarLabel from '.';
 
 // mock useStorybookApi
-jest.mock('@storybook/manager-api', () => ({
+jest.mock('storybook/manager-api', () => ({
   useStorybookApi: jest.fn(() => {
     return {
       getData: () => {

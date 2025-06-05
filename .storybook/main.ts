@@ -1,3 +1,5 @@
+import { createRequire } from 'node:module';
+import { dirname, join } from 'node:path';
 /* eslint-disable no-param-reassign */
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 
@@ -6,8 +8,10 @@ import webpack from 'webpack';
 import {
   getProjectRoot,
   resolvePathInStorybookCache,
-} from '@storybook/core-common';
+} from 'storybook/internal/common';
 import { webpackDirAlias } from '../dirAlias';
+
+const require = createRequire(import.meta.url);
 
 const storybookConfig: StorybookConfig = {
   staticDirs: ['./static', { from: '../data', to: 'data' }],
@@ -25,14 +29,10 @@ const storybookConfig: StorybookConfig = {
     '../src/**/*.mdx',
   ],
   addons: [
-    '@storybook/addon-backgrounds',
-    '@storybook/addon-a11y',
-    '@storybook/addon-viewport',
-    '@storybook/addon-controls',
-    '@storybook/addon-toolbars',
-    './SidebarLabel/preset.cjs',
+    getAbsolutePath('@storybook/addon-a11y'),
+    // getAbsolutePath('./SidebarLabel/preset.cjs'),
     {
-      name: '@storybook/addon-docs',
+      name: getAbsolutePath('@storybook/addon-docs'),
       options: {
         configureJSX: true,
         babelOptions: {},
@@ -106,13 +106,16 @@ const storybookConfig: StorybookConfig = {
     return config;
   },
   framework: {
-    name: '@storybook/react-webpack5',
+    name: getAbsolutePath('@storybook/react-webpack5'),
     options: {},
   },
   docs: {
     defaultName: 'README',
-    autodocs: true,
   },
 };
 
 export default storybookConfig;
+
+function getAbsolutePath(value: string): any {
+  return dirname(require.resolve(join(value, 'package.json')));
+}

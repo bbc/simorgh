@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Global } from '@emotion/react';
 import isChromatic from 'chromatic/isChromatic';
 import { forceVisible } from 'react-lazyload';
-import { Preview } from '@storybook/react';
+import { Preview } from '@storybook/react-webpack5';
 import GlobalStyles from '../src/app/legacy/psammead/psammead-styles/src/global-styles';
 import DocsDecorator from './DocsDecorator';
 import ThemeProvider from '../src/app/components/ThemeProvider';
@@ -550,12 +550,14 @@ const preview: Preview = {
       },
     },
   },
+
   initialGlobals: {
     service: {
       service: 'news',
       variant: 'default',
     },
   },
+
   parameters: {
     passArgsFirst: false,
     options: {
@@ -639,6 +641,7 @@ const preview: Preview = {
       },
     },
   },
+
   decorators: [
     // @ts-expect-error - global context doesn't have types for custom properties like service
     withServicesDecorator(),
@@ -715,5 +718,7 @@ const preview: Preview = {
       </ToggleContextProvider>
     ),
   ],
+
+  tags: ['autodocs']
 };
 export default preview;
