@@ -19,7 +19,7 @@ const renderNoScriptTrackingPixel = (
   reverbParams: ATIAnalyticsPropsExport['reverbParams'],
 ) => {
   return (
-    <noscript>
+    <noscript id="analytics-noscript">
       <img
         height="1px"
         width="1px"

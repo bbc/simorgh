@@ -102,6 +102,7 @@ export interface ReverbDetailsProviders {
 export type ReverbPageVars = {
   name?: string | null;
   additionalProperties?: {
+    app_name?: string | null;
     content_language?: string | null;
     type?: string | null;
   };
