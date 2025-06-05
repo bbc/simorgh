@@ -1,0 +1,791 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical A11y I can see the skip to content link 1`] = `"Vá para o conteúdo"`;
+
+exports[`Canonical Analytics ATI tracking pixel excluding src 1`] = `
+<img
+  alt=""
+  height="1px"
+  style="position:absolute"
+  width="1px"
+/>
+`;
+
+exports[`Canonical Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
+
+exports[`Canonical Analytics ATI tracking pixel search params 1`] = `
+[
+  {
+    "s": "598343",
+  },
+  {
+    "s2": "33",
+  },
+  {
+    "p": "portuguese.page",
+  },
+  {
+    "x1": "[urn:bbc:tipo:topic:c7pe2jj9l7mt]",
+  },
+  {
+    "x2": "[responsive]",
+  },
+  {
+    "x3": "[news-portuguese]",
+  },
+  {
+    "x4": "[pt-BR]",
+  },
+  {
+    "x7": "[index-home]",
+  },
+  {
+    "x8": "[simorgh-nojs]",
+  },
+  {
+    "x9": "[Portuguese]",
+  },
+]
+`;
+
+exports[`Canonical Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, Brasil",
+  "url": "/portuguese",
+}
+`;
+
+exports[`Canonical Footer Anchors should match text and url 2`] = `
+{
+  "text": "Por que você pode confiar na BBC",
+  "url": "https://www.bbc.com/portuguese/institutional-50054434",
+}
+`;
+
+exports[`Canonical Footer Anchors should match text and url 3`] = `
+{
+  "text": "Termos de Uso",
+  "url": "https://www.bbc.com/portuguese/institutional-36202448",
+}
+`;
+
+exports[`Canonical Footer Anchors should match text and url 4`] = `
+{
+  "text": "Sobre a BBC",
+  "url": "https://www.bbc.com/portuguese/institutional-36202452",
+}
+`;
+
+exports[`Canonical Footer Anchors should match text and url 5`] = `
+{
+  "text": "Política de privacidade",
+  "url": "https://www.bbc.com/portuguese/institutional-36202454",
+}
+`;
+
+exports[`Canonical Footer Anchors should match text and url 6`] = `
+{
+  "text": "Cookies",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical Footer Anchors should match text and url 7`] = `
+{
+  "text": "Contate a BBC",
+  "url": "https://www.bbc.co.uk/portuguese/send/u50853599",
+}
+`;
+
+exports[`Canonical Footer Anchors should match text and url 8`] = `
+{
+  "text": "BBC News em outras línguas",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`Canonical Footer Anchors should match text and url 9`] = `
+{
+  "text": "Leia sobre nossa política em relação a links externos.",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+}
+`;
+
+exports[`Canonical Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/portuguese"`;
+
+exports[`Canonical Footer Paragraphs should match text 1`] = `"© 2025 BBC. A BBC não se responsabiliza pelo conteúdo de sites externos. Leia sobre nossa política em relação a links externos."`;
+
+exports[`Canonical Header I can see the branding 1`] = `"BBC News, Brasil"`;
+
+exports[`Canonical Header Navigation link should match text and url 1`] = `
+{
+  "text": "Página atual, Notícias",
+  "url": "/portuguese",
+}
+`;
+
+exports[`Canonical Header Navigation link should match text and url 2`] = `
+{
+  "text": "Brasil",
+  "url": "/portuguese/topics/cz74k717pw5t",
+}
+`;
+
+exports[`Canonical Header Navigation link should match text and url 3`] = `
+{
+  "text": "Internacional",
+  "url": "/portuguese/topics/cmdm4ynm24kt",
+}
+`;
+
+exports[`Canonical Header Navigation link should match text and url 4`] = `
+{
+  "text": "Economia",
+  "url": "/portuguese/topics/cvjp2jr0k9rt",
+}
+`;
+
+exports[`Canonical Header Navigation link should match text and url 5`] = `
+{
+  "text": "Saúde",
+  "url": "/portuguese/topics/c340q430z4vt",
+}
+`;
+
+exports[`Canonical Header Navigation link should match text and url 6`] = `
+{
+  "text": "Ciência",
+  "url": "/portuguese/topics/cr50y580rjxt",
+}
+`;
+
+exports[`Canonical Header Navigation link should match text and url 7`] = `
+{
+  "text": "Tecnologia",
+  "url": "/portuguese/topics/c404v027pd4t",
+}
+`;
+
+exports[`Canonical Header Navigation link should match text and url 8`] = `
+{
+  "text": "Vídeos",
+  "url": "/portuguese/topics/c9y2j35dn2zt",
+}
+`;
+
+exports[`Canonical Header Navigation link should match text and url 9`] = `
+{
+  "text": "Podcasts",
+  "url": "/portuguese/topics/cx2ggnx4j72t",
+}
+`;
+
+exports[`Canonical Home Page A11y I can see the skip to content link 1`] = `"Vá para o conteúdo"`;
+
+exports[`Canonical Home Page Analytics ATI tracking pixel excluding src 1`] = `
+<img
+  alt=""
+  height="1px"
+  style="position:absolute"
+  width="1px"
+/>
+`;
+
+exports[`Canonical Home Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
+
+exports[`Canonical Home Page Analytics ATI tracking pixel search params 1`] = `
+[
+  {
+    "s": "598343",
+  },
+  {
+    "s2": "33",
+  },
+  {
+    "p": "portuguese.page",
+  },
+  {
+    "x1": "[urn:bbc:tipo:topic:c7pe2jj9l7mt]",
+  },
+  {
+    "x2": "[responsive]",
+  },
+  {
+    "x3": "[news-portuguese]",
+  },
+  {
+    "x4": "[pt-BR]",
+  },
+  {
+    "x7": "[index-home]",
+  },
+  {
+    "x8": "[simorgh-nojs]",
+  },
+  {
+    "x9": "[Portuguese]",
+  },
+]
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, Brasil",
+  "url": "/portuguese",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 2`] = `
+{
+  "text": "Por que você pode confiar na BBC",
+  "url": "https://www.bbc.com/portuguese/institutional-50054434",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 3`] = `
+{
+  "text": "Termos de Uso",
+  "url": "https://www.bbc.com/portuguese/institutional-36202448",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 4`] = `
+{
+  "text": "Sobre a BBC",
+  "url": "https://www.bbc.com/portuguese/institutional-36202452",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 5`] = `
+{
+  "text": "Política de privacidade",
+  "url": "https://www.bbc.com/portuguese/institutional-36202454",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 6`] = `
+{
+  "text": "Cookies",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 7`] = `
+{
+  "text": "Contate a BBC",
+  "url": "https://www.bbc.co.uk/portuguese/send/u50853599",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 8`] = `
+{
+  "text": "BBC News em outras línguas",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 9`] = `
+{
+  "text": "Leia sobre nossa política em relação a links externos.",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+}
+`;
+
+exports[`Canonical Home Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/portuguese"`;
+
+exports[`Canonical Home Page Footer Paragraphs should match text 1`] = `"© 2025 BBC. A BBC não se responsabiliza pelo conteúdo de sites externos. Leia sobre nossa política em relação a links externos."`;
+
+exports[`Canonical Home Page Header I can see the branding 1`] = `"BBC News, Brasil"`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 1`] = `
+{
+  "text": "Página atual, Notícias",
+  "url": "/portuguese",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 2`] = `
+{
+  "text": "Brasil",
+  "url": "/portuguese/topics/cz74k717pw5t",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 3`] = `
+{
+  "text": "Internacional",
+  "url": "/portuguese/topics/cmdm4ynm24kt",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 4`] = `
+{
+  "text": "Economia",
+  "url": "/portuguese/topics/cvjp2jr0k9rt",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 5`] = `
+{
+  "text": "Saúde",
+  "url": "/portuguese/topics/c340q430z4vt",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 6`] = `
+{
+  "text": "Ciência",
+  "url": "/portuguese/topics/cr50y580rjxt",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 7`] = `
+{
+  "text": "Tecnologia",
+  "url": "/portuguese/topics/c404v027pd4t",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 8`] = `
+{
+  "text": "Vídeos",
+  "url": "/portuguese/topics/c9y2j35dn2zt",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 9`] = `
+{
+  "text": "Podcasts",
+  "url": "/portuguese/topics/cx2ggnx4j72t",
+}
+`;
+
+exports[`Canonical Home Page Main heading should match text 1`] = `"BBC News, Brasil - Início"`;
+
+exports[`Canonical Home Page Page content First item in the first curation is the correct headline 1`] = `"Title of the page"`;
+
+exports[`Canonical Home Page Page content First item in the first curation is the correct image 1`] = `
+<img
+  alt="The description of the image"
+  class="bbc-1n7fa9-image-imageFixedAspectRatio"
+  loading="eager"
+  src="https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/73e5/test/959c2380-ec2f-11ee-9173-83ca10832ce2.jpg.webp"
+  style="aspect-ratio:16 / 9"
+/>
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 1`] = `
+{
+  "sizes": null,
+  "url": "http://localhost:7080/portuguese/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 2`] = `
+{
+  "sizes": "72x72",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 3`] = `
+{
+  "sizes": "96x96",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 4`] = `
+{
+  "sizes": "128x128",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 5`] = `
+{
+  "sizes": "144x144",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 6`] = `
+{
+  "sizes": "152x152",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 7`] = `
+{
+  "sizes": "180x180",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 8`] = `
+{
+  "sizes": "192x192",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 9`] = `
+{
+  "sizes": "384x384",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 10`] = `
+{
+  "sizes": "512x512",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-512x512.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Canonical link 1`] = `"http://localhost:7080/portuguese"`;
+
+exports[`Canonical Home Page SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical Home Page SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical Home Page SEO Heading level 1 1`] = `"BBC News, Brasil - Início"`;
+
+exports[`Canonical Home Page SEO Lang attribute 1`] = `"pt-BR"`;
+
+exports[`Canonical Home Page SEO Linked data should match text 1`] = `
+{
+  "@context": "http://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "headline": "Portuguese",
+      "image": {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://news.files.bbci.co.uk/include/articles/public/portuguese/images/metadata/poster-1024x576.png",
+        "width": 1024,
+      },
+      "inLanguage": {
+        "@type": "Language",
+        "alternateName": "pt-BR",
+        "name": "Portuguese",
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:7080/portuguese",
+        "@type": "WebPage",
+        "name": "Portuguese",
+      },
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/include/articles/public/portuguese/images/metadata/poster-1024x576.png",
+          "width": 1024,
+        },
+        "name": "BBC News Brasil",
+        "publishingPrinciples": "https://www.bbc.com/portuguese/institutional-50054434",
+      },
+      "thumbnailUrl": "https://news.files.bbci.co.uk/include/articles/public/portuguese/images/metadata/poster-1024x576.png",
+      "url": "http://localhost:7080/portuguese",
+    },
+    {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://www.bbc.com/",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 2,
+          "url": "https://news.files.bbci.com/include/vjsthasia/403-india_election_results_day/hindi/tally-include/embed",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 3,
+          "url": "https://www.bbc.com/mundo/articles/c0ny73k281vo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 4,
+          "url": "https://www.bbc.com/pidgin/articles/cvl1jnp2nrqo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 5,
+          "url": "https://www.bbc.com/pidgin/live/c7p765ynk9qt",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 6,
+          "url": "https://flo.uri.sh/story/2070814/embed",
+        },
+      ],
+      "name": "BBC News Brasil",
+      "numberOfItems": 6,
+    },
+  ],
+}
+`;
+
+exports[`Canonical Home Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/include/articles/public/portuguese/images/metadata/poster-1024x576.png"`;
+
+exports[`Canonical Home Page SEO OG image alt 1`] = `"BBC News Brasil"`;
+
+exports[`Canonical Home Page SEO OG locale 1`] = `"pt-BR"`;
+
+exports[`Canonical Home Page SEO OG site name 1`] = `"BBC News Brasil"`;
+
+exports[`Canonical Home Page SEO OG title 1`] = `"Notícias, vídeos, análise e contexto em português - BBC News Brasil"`;
+
+exports[`Canonical Home Page SEO OG type 1`] = `"website"`;
+
+exports[`Canonical Home Page SEO OG url 1`] = `"http://localhost:7080/portuguese"`;
+
+exports[`Canonical Home Page SEO Page title 1`] = `"Notícias, vídeos, análise e contexto em português - BBC News Brasil"`;
+
+exports[`Canonical Home Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
+
+exports[`Canonical Home Page SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical Home Page SEO Twitter creator 1`] = `"@bbcbrasil"`;
+
+exports[`Canonical Home Page SEO Twitter image alt 1`] = `"BBC News Brasil"`;
+
+exports[`Canonical Home Page SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/include/articles/public/portuguese/images/metadata/poster-1024x576.png"`;
+
+exports[`Canonical Home Page SEO Twitter site 1`] = `"@bbcbrasil"`;
+
+exports[`Canonical Home Page SEO Twitter title 1`] = `"Notícias, vídeos, análise e contexto em português - BBC News Brasil"`;
+
+exports[`Canonical Home Page Timestamp should match text and date 1`] = `
+{
+  "date": "PT1M10S",
+  "text": "01:10",
+}
+`;
+
+exports[`Canonical Main heading should match text 1`] = `"BBC News, Brasil - Início"`;
+
+exports[`Canonical Page content First item in the first curation is the correct headline 1`] = `"Title of the page"`;
+
+exports[`Canonical Page content First item in the first curation is the correct image 1`] = `
+<img
+  alt="The description of the image"
+  class="bbc-1n7fa9-image-imageFixedAspectRatio"
+  loading="eager"
+  src="https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/73e5/test/959c2380-ec2f-11ee-9173-83ca10832ce2.jpg.webp"
+  style="aspect-ratio:16 / 9"
+/>
+`;
+
+exports[`Canonical SEO Apple Touch Icon should match attributes 1`] = `
+{
+  "sizes": null,
+  "url": "http://localhost:7080/portuguese/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical SEO Apple Touch Icon should match attributes 2`] = `
+{
+  "sizes": "72x72",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`Canonical SEO Apple Touch Icon should match attributes 3`] = `
+{
+  "sizes": "96x96",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`Canonical SEO Apple Touch Icon should match attributes 4`] = `
+{
+  "sizes": "128x128",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`Canonical SEO Apple Touch Icon should match attributes 5`] = `
+{
+  "sizes": "144x144",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`Canonical SEO Apple Touch Icon should match attributes 6`] = `
+{
+  "sizes": "152x152",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`Canonical SEO Apple Touch Icon should match attributes 7`] = `
+{
+  "sizes": "180x180",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`Canonical SEO Apple Touch Icon should match attributes 8`] = `
+{
+  "sizes": "192x192",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical SEO Apple Touch Icon should match attributes 9`] = `
+{
+  "sizes": "384x384",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`Canonical SEO Apple Touch Icon should match attributes 10`] = `
+{
+  "sizes": "512x512",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-512x512.png",
+}
+`;
+
+exports[`Canonical SEO Canonical link 1`] = `"http://localhost:7080/portuguese"`;
+
+exports[`Canonical SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical SEO Heading level 1 1`] = `"BBC News, Brasil - Início"`;
+
+exports[`Canonical SEO Lang attribute 1`] = `"pt-BR"`;
+
+exports[`Canonical SEO Linked data should match text 1`] = `
+{
+  "@context": "http://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "headline": "Portuguese",
+      "image": {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://news.files.bbci.co.uk/include/articles/public/portuguese/images/metadata/poster-1024x576.png",
+        "width": 1024,
+      },
+      "inLanguage": {
+        "@type": "Language",
+        "alternateName": "pt-BR",
+        "name": "Portuguese",
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:7080/portuguese",
+        "@type": "WebPage",
+        "name": "Portuguese",
+      },
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/include/articles/public/portuguese/images/metadata/poster-1024x576.png",
+          "width": 1024,
+        },
+        "name": "BBC News Brasil",
+        "publishingPrinciples": "https://www.bbc.com/portuguese/institutional-50054434",
+      },
+      "thumbnailUrl": "https://news.files.bbci.co.uk/include/articles/public/portuguese/images/metadata/poster-1024x576.png",
+      "url": "http://localhost:7080/portuguese",
+    },
+    {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://www.bbc.com/",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 2,
+          "url": "https://news.files.bbci.com/include/vjsthasia/403-india_election_results_day/hindi/tally-include/embed",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 3,
+          "url": "https://www.bbc.com/mundo/articles/c0ny73k281vo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 4,
+          "url": "https://www.bbc.com/pidgin/articles/cvl1jnp2nrqo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 5,
+          "url": "https://www.bbc.com/pidgin/live/c7p765ynk9qt",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 6,
+          "url": "https://flo.uri.sh/story/2070814/embed",
+        },
+      ],
+      "name": "BBC News Brasil",
+      "numberOfItems": 6,
+    },
+  ],
+}
+`;
+
+exports[`Canonical SEO OG image 1`] = `"https://news.files.bbci.co.uk/include/articles/public/portuguese/images/metadata/poster-1024x576.png"`;
+
+exports[`Canonical SEO OG image alt 1`] = `"BBC News Brasil"`;
+
+exports[`Canonical SEO OG locale 1`] = `"pt-BR"`;
+
+exports[`Canonical SEO OG site name 1`] = `"BBC News Brasil"`;
+
+exports[`Canonical SEO OG title 1`] = `"Notícias, vídeos, análise e contexto em português - BBC News Brasil"`;
+
+exports[`Canonical SEO OG type 1`] = `"website"`;
+
+exports[`Canonical SEO OG url 1`] = `"http://localhost:7080/portuguese"`;
+
+exports[`Canonical SEO Page title 1`] = `"Notícias, vídeos, análise e contexto em português - BBC News Brasil"`;
+
+exports[`Canonical SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
+
+exports[`Canonical SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical SEO Twitter creator 1`] = `"@bbcbrasil"`;
+
+exports[`Canonical SEO Twitter image alt 1`] = `"BBC News Brasil"`;
+
+exports[`Canonical SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/include/articles/public/portuguese/images/metadata/poster-1024x576.png"`;
+
+exports[`Canonical SEO Twitter site 1`] = `"@bbcbrasil"`;
+
+exports[`Canonical SEO Twitter title 1`] = `"Notícias, vídeos, análise e contexto em português - BBC News Brasil"`;
+
+exports[`Canonical Timestamp should match text and date 1`] = `
+{
+  "date": "PT1M10S",
+  "text": "01:10",
+}
+`;

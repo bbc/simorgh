@@ -1,0 +1,135 @@
+/**
+ * @service portuguese
+ * @pathname /portuguese
+ */
+
+import { data as pageData } from '../../../../../data/portuguese/homePage/index.json';
+
+describe('Canonical', () => {
+  it('should render the correct number of curations, including most read, radio schedule, portrait video & VJ embed', () => {
+    const curationsWithSummaries = pageData.curations.filter(
+      ({ summaries, mostRead, radioSchedule, embed, portraitVideo }) =>
+        (summaries && summaries?.length > 0) ||
+        mostRead ||
+        radioSchedule ||
+        embed ||
+        portraitVideo,
+    );
+
+    const numberOfCurations = document.querySelectorAll('main h2').length;
+    expect(numberOfCurations).toEqual(curationsWithSummaries.length);
+  });
+
+  it('should have an unordered list of videos with the correct number of promos for each portrait video carousel', () => {
+    const portraitVideoCurations = pageData.curations.filter(
+      curation =>
+        curation.portraitVideo && Array.isArray(curation.portraitVideo.items),
+    );
+
+    const videoCarousels = document.querySelectorAll(
+      '[data-testid="portrait-video-carousel"] ul',
+    );
+
+    expect(videoCarousels.length).toEqual(portraitVideoCurations.length);
+
+    portraitVideoCurations.forEach((curation, index) => {
+      const videoList = videoCarousels[index];
+      const numberOfItems = curation.portraitVideo.items.length;
+
+      expect(videoList).toBeInTheDocument();
+      expect(videoList.tagName).toBe('UL');
+      expect(videoList.children.length).toBeGreaterThan(6);
+      expect(videoList.children.length).toEqual(numberOfItems);
+    });
+  });
+
+  it('should have left and right scroll buttons', () => {
+    const carousels = document.querySelectorAll(
+      '[data-testid="portrait-video-carousel"]',
+    );
+    carousels.forEach(carousel => {
+      const scrollLeftButton = carousel.querySelector(
+        '[data-testid="pv-scroll-left"]',
+      );
+      const scrollRightButton = carousel.querySelector(
+        '[data-testid="pv-scroll-right"]',
+      );
+      expect(scrollLeftButton).toBeInTheDocument();
+      expect(scrollRightButton).toBeInTheDocument();
+      // cannot test the scroll functionality in a JSDOM environment with no rendering or actual scrolling
+      // also cannot test whether these appear or disappear due to screen width, as although they are in the document,
+      // these tests always sees them as not visible, as well as always disabled
+    });
+  });
+
+  it('should render each video promo item with a button containing the correct text', () => {
+    const carousels = document.querySelectorAll(
+      '[data-testid="portrait-video-carousel"] ul[data-testid="pv-carousel"]',
+    );
+
+    const portraitVideoCurations = pageData.curations.filter(
+      curation =>
+        curation.portraitVideo && Array.isArray(curation.portraitVideo.items),
+    );
+
+    carousels.forEach((carousel, carouselIndex) => {
+      const promoButtons = carousel.querySelectorAll(
+        '[data-testid="promo-button"]',
+      );
+      const videoItems =
+        portraitVideoCurations[carouselIndex]?.portraitVideo?.items || [];
+      promoButtons.forEach((button, buttonIndex) => {
+        const textContents = button.querySelector(
+          '[data-testid="text-contents"]',
+        );
+        expect(textContents).toBeInTheDocument();
+        const expectedTitle = videoItems[buttonIndex]?.headlines?.promoHeadline;
+
+        expect(textContents?.textContent).toContain(expectedTitle);
+      });
+    });
+  });
+
+  it('should render each video promo item with a duration element', () => {
+    const carousels = document.querySelectorAll(
+      '[data-testid="portrait-video-carousel"] ul[data-testid="pv-carousel"]',
+    );
+    carousels.forEach(carousel => {
+      const promoButtons = carousel.querySelectorAll(
+        '[data-testid="promo-button"]',
+      );
+      promoButtons.forEach(button => {
+        // Check that the button contains a duration element
+        const duration = button.querySelector('time > span');
+        expect(duration).toBeInTheDocument();
+        expect(duration.textContent).toMatch(/\d{2}:\d{2}/);
+      });
+    });
+  });
+  it('should render each video promo item with an image', () => {
+    const carousels = document.querySelectorAll(
+      '[data-testid="portrait-video-carousel"] ul[data-testid="pv-carousel"]',
+    );
+
+    const portraitVideoCurations = pageData.curations.filter(
+      curation =>
+        curation.portraitVideo && Array.isArray(curation.portraitVideo.items),
+    );
+
+    carousels.forEach((carousel, carouselIndex) => {
+      const promoItems = carousel.querySelectorAll('li');
+      const videoItems =
+        portraitVideoCurations[carouselIndex]?.portraitVideo?.items || [];
+
+      promoItems.forEach((item, itemIndex) => {
+        const image = item.querySelector('img');
+        expect(image).toBeInTheDocument();
+
+        const expectedImages = videoItems[itemIndex]?.images || [];
+
+        const expectedAlt = expectedImages[0].altText;
+        expect(image?.getAttribute('alt')).toBe(expectedAlt);
+      });
+    });
+  });
+});
