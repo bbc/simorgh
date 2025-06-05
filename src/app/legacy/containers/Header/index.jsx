@@ -10,7 +10,6 @@ import {
   ERROR_PAGE,
 } from '#app/routes/utils/pageTypes';
 import LiteSiteSummary from '#app/components/LiteSiteSummary';
-import useViewTracker from '#app/hooks/useViewTracker';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ConsentBanner from '../ConsentBanner';
 import NavigationContainer from '../Navigation';
@@ -58,11 +57,6 @@ const HeaderContainer = ({ propsForOJExperiment }) => {
 
   const brandRef = useRef(null);
 
-  const viewTracker = useViewTracker({
-    componentName: 'header',
-    sendOptimizelyEvents: true,
-  });
-
   // `serviceLang` is defined when the language the page is written in is different to the
   // language of the service. `serviceLang` is used to override the page language.
   // However, the skip to content link remains set in the page language.
@@ -95,7 +89,7 @@ const HeaderContainer = ({ propsForOJExperiment }) => {
   if (isApp) return null;
 
   return (
-    <header role="banner" lang={serviceLang} {...viewTracker}>
+    <header role="banner" lang={serviceLang}>
       {isAmp ? (
         <Header
           linkId="brandLink"

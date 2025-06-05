@@ -1,3 +1,4 @@
+import { GroupTracker } from '#app/components/ATIAnalytics/types';
 import { RefObject } from 'react';
 
 export interface PortraitVideoPromoProps {
@@ -38,6 +39,8 @@ export interface PortraitVideoPromoProps {
   };
   onClick?: () => void;
   key?: string;
+  groupTracker?: GroupTracker;
+  itemPosition?: number;
 }
 
 export interface PortraitVideoCarouselNavigationProps {
@@ -46,6 +49,7 @@ export interface PortraitVideoCarouselNavigationProps {
 
 export interface PortraitVideoCarouselProps {
   title: string;
+  groupTrackingId?: string;
   items: PortraitVideoPromoProps[];
 }
 

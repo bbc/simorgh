@@ -72,6 +72,7 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'सर्व पाहा',
       home: 'बातम्या',
+      continueReading: 'पुढे वाचा',
       currentPage: 'सध्याचे पान',
       skipLinkText: 'थेट मजकुरावर जा',
       relatedContent: 'संबंधित मजकूर',

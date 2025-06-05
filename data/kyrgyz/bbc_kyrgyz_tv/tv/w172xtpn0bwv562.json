@@ -3,10 +3,11 @@
     "metadata": {
       "type": "On Demand TV",
       "atiAnalytics": {
-        "pageIdentifier": "kyrgyz.bbc_kyrgyz_tv.tv.w172xcgmgcj9864.page",
+        "pageIdentifier": "kyrgyz.bbc_kyrgyz_tv.tv.w172xtpn0bwv562.page",
         "contentType": "player-episode",
         "pageTitle": "Би-Би-Си ТВ жаңылыктары - BBC News Кыргыз КызMATы",
-        "contentId": "urn:bbc:pips:w172xcgmgcj9864"
+        "language": "ky",
+        "contentId": "urn:bbc:pips:w172xtpn0bwv562"
       }
     },
     "language": "ky",
@@ -15,11 +16,11 @@
     "headline": "Би-Би-Си ТВ жаңылыктары",
     "shortSynopsis": "Би-Би-Си Кыргыз кызматынын эл аралык жаңылыктарын көрүңүз.",
     "mediumSynopsis": "Би-Би-Си Кыргыз кызматынын эл аралык жаңылыктарын көрүңүз.",
-    "id": "urn:bbc:ares:ws_media:page:bbc_kyrgyz_tv/w172xcgmgcj9864",
+    "id": "urn:bbc:ares:ws_media:page:bbc_kyrgyz_tv/w172xtpn0bwv562",
     "brandId": "w13xttqx",
-    "episodeId": "w172xcgmgcj9864",
+    "episodeId": "w172xtpn0bwv562",
     "masterBrand": "bbc_kyrgyz_tv",
-    "releaseDateTimeStamp": "2020-11-23T00:00:00.000Z",
+    "releaseDateTimeStamp": "2021-06-09T00:00:00.000Z",
     "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b24cn.png",
     "imageAltText": null,
     "promoBrandTitle": "Би-Би-Си ТВ жаңылыктары",
@@ -28,181 +29,181 @@
     "episodeAvailability": "expired",
     "recentEpisodes": [
       {
-        "id": "w172zm921pcfxpt",
+        "id": "w173014wgqfsbrp",
         "brandTitle": "Би-Би-Си ТВ жаңылыктары",
         "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
-        "timestamp": "2024-11-19T00:00:00.000Z",
+        "timestamp": "2025-05-30T00:00:00.000Z",
         "duration": "PT15M",
         "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
         "altText": "Би-Би-Си ТВ жаңылыктары"
       },
       {
-        "id": "w172zm921pcc0sq",
+        "id": "w173014wgqfpfvl",
         "brandTitle": "Би-Би-Си ТВ жаңылыктары",
         "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
-        "timestamp": "2024-11-18T00:00:00.000Z",
+        "timestamp": "2025-05-29T00:00:00.000Z",
         "duration": "PT15M",
         "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
         "altText": "Би-Би-Си ТВ жаңылыктары"
       },
       {
-        "id": "w172zm91pf1ygt8",
+        "id": "w173014wgqfljyh",
         "brandTitle": "Би-Би-Си ТВ жаңылыктары",
         "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
-        "timestamp": "2024-11-15T00:00:00.000Z",
+        "timestamp": "2025-05-28T00:00:00.000Z",
         "duration": "PT15M",
         "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
         "altText": "Би-Би-Си ТВ жаңылыктары"
       },
       {
-        "id": "w172zm91pf1vkx5",
+        "id": "w173014wgqfhn1d",
         "brandTitle": "Би-Би-Си ТВ жаңылыктары",
         "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
-        "timestamp": "2024-11-14T00:00:00.000Z",
+        "timestamp": "2025-05-27T00:00:00.000Z",
         "duration": "PT15M",
         "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
         "altText": "Би-Би-Си ТВ жаңылыктары"
       },
       {
-        "id": "w172zm91pf1rp02",
+        "id": "w173014wgqfdr49",
         "brandTitle": "Би-Би-Си ТВ жаңылыктары",
         "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
-        "timestamp": "2024-11-13T00:00:00.000Z",
+        "timestamp": "2025-05-26T00:00:00.000Z",
         "duration": "PT15M",
         "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
         "altText": "Би-Би-Си ТВ жаңылыктары"
       },
       {
-        "id": "w172zm91pf1ns2z",
+        "id": "w173014w3g4064v",
         "brandTitle": "Би-Би-Си ТВ жаңылыктары",
         "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
-        "timestamp": "2024-11-12T00:00:00.000Z",
+        "timestamp": "2025-05-23T00:00:00.000Z",
         "duration": "PT15M",
         "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
         "altText": "Би-Би-Си ТВ жаңылыктары"
       },
       {
-        "id": "w172zm91pf1kw5w",
+        "id": "w173014w3g3x97r",
         "brandTitle": "Би-Би-Си ТВ жаңылыктары",
         "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
-        "timestamp": "2024-11-11T00:00:00.000Z",
+        "timestamp": "2025-05-22T00:00:00.000Z",
         "duration": "PT15M",
         "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
         "altText": "Би-Би-Си ТВ жаңылыктары"
       },
       {
-        "id": "w172zm91b4r5b6f",
+        "id": "w173014w3g3tdbn",
         "brandTitle": "Би-Би-Си ТВ жаңылыктары",
         "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
-        "timestamp": "2024-11-08T00:00:00.000Z",
+        "timestamp": "2025-05-21T00:00:00.000Z",
         "duration": "PT15M",
         "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
         "altText": "Би-Би-Си ТВ жаңылыктары"
       },
       {
-        "id": "w172zm91b4r2f9b",
+        "id": "w173014w3g3qhfk",
         "brandTitle": "Би-Би-Си ТВ жаңылыктары",
         "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
-        "timestamp": "2024-11-07T00:00:00.000Z",
+        "timestamp": "2025-05-20T00:00:00.000Z",
         "duration": "PT15M",
         "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
         "altText": "Би-Би-Си ТВ жаңылыктары"
       },
       {
-        "id": "w172zm91b4qzjd7",
+        "id": "w173014w3g3mljg",
         "brandTitle": "Би-Би-Си ТВ жаңылыктары",
         "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
-        "timestamp": "2024-11-06T00:00:00.000Z",
+        "timestamp": "2025-05-19T00:00:00.000Z",
         "duration": "PT15M",
         "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
         "altText": "Би-Би-Си ТВ жаңылыктары"
       },
       {
-        "id": "w172zm91b4qwmh4",
+        "id": "w173014vr5t71k0",
         "brandTitle": "Би-Би-Си ТВ жаңылыктары",
         "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
-        "timestamp": "2024-11-05T00:00:00.000Z",
+        "timestamp": "2025-05-16T00:00:00.000Z",
         "duration": "PT15M",
         "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
         "altText": "Би-Би-Си ТВ жаңылыктары"
       },
       {
-        "id": "w172zm91b4qsql1",
+        "id": "w173014vr5t44mx",
         "brandTitle": "Би-Би-Си ТВ жаңылыктары",
         "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
-        "timestamp": "2024-11-04T00:00:00.000Z",
+        "timestamp": "2025-05-15T00:00:00.000Z",
         "duration": "PT15M",
         "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
         "altText": "Би-Би-Си ТВ жаңылыктары"
       },
       {
-        "id": "w172zm90ywfd5ll",
+        "id": "w173014vr5t17qt",
         "brandTitle": "Би-Би-Си ТВ жаңылыктары",
         "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
-        "timestamp": "2024-11-01T00:00:00.000Z",
+        "timestamp": "2025-05-14T00:00:00.000Z",
         "duration": "PT15M",
         "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
         "altText": "Би-Би-Си ТВ жаңылыктары"
       },
       {
-        "id": "w172zm90ywf98ph",
+        "id": "w173014vr5sybtq",
         "brandTitle": "Би-Би-Си ТВ жаңылыктары",
         "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
-        "timestamp": "2024-10-31T00:00:00.000Z",
+        "timestamp": "2025-05-13T00:00:00.000Z",
         "duration": "PT15M",
         "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
         "altText": "Би-Би-Си ТВ жаңылыктары"
       },
       {
-        "id": "w172zm90ywf6csd",
+        "id": "w173014vr5svfxm",
         "brandTitle": "Би-Би-Си ТВ жаңылыктары",
         "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
-        "timestamp": "2024-10-30T00:00:00.000Z",
+        "timestamp": "2025-05-12T00:00:00.000Z",
         "duration": "PT15M",
         "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
         "altText": "Би-Би-Си ТВ жаңылыктары"
       },
       {
-        "id": "w172zm90ywf3gw9",
+        "id": "w173014vcxhfwy5",
         "brandTitle": "Би-Би-Си ТВ жаңылыктары",
         "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
-        "timestamp": "2024-10-29T00:00:00.000Z",
+        "timestamp": "2025-05-09T00:00:00.000Z",
         "duration": "PT15M",
         "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
         "altText": "Би-Би-Си ТВ жаңылыктары"
       },
       {
-        "id": "w172zm90ywf0kz6",
+        "id": "w173014vcxhc012",
         "brandTitle": "Би-Би-Си ТВ жаңылыктары",
         "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
-        "timestamp": "2024-10-28T00:00:00.000Z",
+        "timestamp": "2025-05-08T00:00:00.000Z",
         "duration": "PT15M",
         "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
         "altText": "Би-Би-Си ТВ жаңылыктары"
       },
       {
-        "id": "w172zm90lm3m0zr",
+        "id": "w173014vcxh833z",
         "brandTitle": "Би-Би-Си ТВ жаңылыктары",
         "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
-        "timestamp": "2024-10-25T00:00:00.000Z",
+        "timestamp": "2025-05-07T00:00:00.000Z",
         "duration": "PT15M",
         "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
         "altText": "Би-Би-Си ТВ жаңылыктары"
       },
       {
-        "id": "w172zm90lm3j42n",
+        "id": "w173014vcxh566w",
         "brandTitle": "Би-Би-Си ТВ жаңылыктары",
         "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
-        "timestamp": "2024-10-24T00:00:00.000Z",
+        "timestamp": "2025-05-06T00:00:00.000Z",
         "duration": "PT15M",
         "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
         "altText": "Би-Би-Си ТВ жаңылыктары"
       },
       {
-        "id": "w172zm90lm3f75k",
+        "id": "w173014vcxh299s",
         "brandTitle": "Би-Би-Си ТВ жаңылыктары",
         "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
-        "timestamp": "2024-10-23T00:00:00.000Z",
+        "timestamp": "2025-05-05T00:00:00.000Z",
         "duration": "PT15M",
         "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
         "altText": "Би-Би-Си ТВ жаңылыктары"
@@ -212,7 +213,7 @@
       {
         "type": "tv",
         "model": {
-          "id": "w172xcgmgcj9864",
+          "id": "w172xtpn0bwv562",
           "subType": "episode",
           "format": "Video",
           "title": "Би-Би-Си ТВ жаңылыктары",
@@ -234,7 +235,7 @@
         "type": "mediaOverrides",
         "model": {
           "language": "ky",
-          "pageIdentifierOverride": "kyrgyz.bbc_kyrgyz_tv.tv.w172xcgmgcj9864.page"
+          "pageIdentifierOverride": "kyrgyz.bbc_kyrgyz_tv.tv.w172xtpn0bwv562.page"
         }
       }
     ]

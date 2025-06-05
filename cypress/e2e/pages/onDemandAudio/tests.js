@@ -1,10 +1,9 @@
 /* eslint-disable cypress/no-unnecessary-waiting */
 /* eslint-disable consistent-return */
-import path from 'ramda/src/path';
 import { getEpisodeAvailability } from '../../../support/helpers/onDemandRadioTv';
 import envConfig from '../../../support/config/envs';
 
-export default ({ service, pageType, variant }) => {
+export default ({ service, pageType, path, variant = 'default' }) => {
   describe(`Tests for ${service} ${pageType}`, () => {
     describe(
       'Audio Player',
@@ -15,9 +14,7 @@ export default ({ service, pageType, variant }) => {
         it('should render a valid media player', () => {
           cy.getPageDataFromWindow().then(({ pageData }) => {
             if (!getEpisodeAvailability(pageData)) {
-              return cy.log(
-                `Episode is not available: ${Cypress.env('currentPath')}`,
-              );
+              return cy.log(`Episode is not available: ${path}}`);
             }
 
             cy.get('[data-e2e="media-loader__container"]').should('be.visible');
@@ -33,24 +30,20 @@ export default ({ service, pageType, variant }) => {
         it('should be displayed if the toggle is on, and shows the expected number of items', function test() {
           let toggleName;
 
-          if (Cypress.env('currentPath').includes('podcasts')) {
+          if (path?.includes('podcasts')) {
             toggleName = 'recentPodcastEpisodes';
           } else {
             toggleName = 'recentAudioEpisodes';
           }
           cy.fixture(`toggles/${service}.json`).then(toggles => {
-            const recentEpisodesEnabled = path(
-              [toggleName, 'enabled'],
-              toggles,
-            );
+            const recentEpisodesEnabled = toggles?.[toggleName]?.enabled;
+
             cy.log(
               `Recent Episodes component enabled? ${recentEpisodesEnabled}`,
             );
             // There cannot be more episodes shown than the max allowed
             if (recentEpisodesEnabled) {
-              const recentEpisodesMaxNumber = Number(
-                path([toggleName, 'value'], toggles),
-              );
+              const recentEpisodesMaxNumber = toggles?.[toggleName]?.value;
 
               cy.getPageDataFromWindow().then(data => {
                 const { recentEpisodes } = data;
@@ -79,10 +72,7 @@ export default ({ service, pageType, variant }) => {
         it('should be displayed if there is enough schedule data', function test() {
           cy.getPageDataFromWindow().then(({ pageData }) => {
             cy.fixture(`toggles/${service}.json`).then(toggles => {
-              const scheduleIsEnabled = path(
-                ['onDemandRadioSchedule', 'enabled'],
-                toggles,
-              );
+              const scheduleIsEnabled = toggles?.onDemandRadioSchedule?.enabled;
               cy.log(
                 `On Demand Radio Page configured for Radio Schedule? ${scheduleIsEnabled}`,
               );

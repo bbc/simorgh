@@ -1,3 +1,4 @@
+import { eea, gbOrUnknown } from '#app/lib/utilities/cookieCountries';
 import {
   VIEW_EVENT,
   VIEWABILITY_CLICK_EVENT,
@@ -8,10 +9,22 @@ import {
   ATI_USER_ID_COOKIE,
   getATIParamsFromURL,
   interceptATIAnalyticsBeacons,
+  getExpectedAtiDestination,
 } from '../helpers';
+import environment from '../../../../support/helpers/getAppEnv';
 
 const usesReverbViewabilityModel = applicationType =>
   applicationType !== 'lite';
+
+const getAppName = service => {
+  if (service === 'ws') {
+    return '[news]';
+  }
+
+  return ['archive', 'news', 'newsround', 'scotland', 'sport'].includes(service)
+    ? `[${service}]`
+    : `[news-${service}]`;
+};
 
 const assertATIPageViewEventParamsExist = ({
   params,
@@ -49,6 +62,34 @@ const assertATIPageViewEventParamsExist = ({
     expect(params).to.have.property('x13'); // ldp things
     expect(params).to.have.property('x17'); // category
   }
+};
+
+const assertLocationSpecificPianoDestinationExists = ({ service }) => {
+  cy.get(
+    'head script[src*="https://cdn.ampproject.org/v0/amp-geo-0.1.js"]',
+  ).should('exist');
+
+  cy.get('amp-geo script[type="application/json"]').should(script => {
+    const ampGeoContent = JSON.parse(script.text());
+
+    expect(ampGeoContent).to.eql({
+      AmpBind: true,
+      ISOCountryGroups: {
+        eea,
+        gbOrUnknown,
+      },
+    });
+  });
+
+  cy.get(
+    '[data-e2e="ati-amp-analytics"] script[type="application/json"]',
+  ).should(script => {
+    const ampAnalyticsContent = script.text();
+
+    expect(ampAnalyticsContent).to.contain(
+      `s=${getExpectedAtiDestination({ service, applicationEnv: environment() })}`,
+    );
+  });
 };
 
 const assertATIComponentViewEventParamsExist = ({ params, useReverb }) => {
@@ -143,7 +184,7 @@ export const assertPageView = ({
         'params.x2 (application type)',
       );
       expect(params.x3).to.equal(
-        `[news-${service}]`,
+        getAppName(service),
         'params.x3 (application name)',
       );
       expect(params.x7).to.equal(
@@ -151,6 +192,10 @@ export const assertPageView = ({
         'params.x7 (content type)',
       );
     });
+
+    if (applicationType === 'amp') {
+      assertLocationSpecificPianoDestinationExists({ service });
+    }
   });
 };
 

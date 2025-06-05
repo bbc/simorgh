@@ -71,6 +71,7 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Duba su baki daya',
       home: 'Labaran Duniya',
+      continueReading: 'Ci gaba da karantawa',
       currentPage: 'Shafin da ake ciki',
       skipLinkText: 'Tsallaka zuwa abubuwan da ke ciki',
       relatedContent: 'Karin bayani',
