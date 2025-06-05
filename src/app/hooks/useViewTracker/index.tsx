@@ -35,6 +35,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     campaignID,
     detailedPlacement,
     sendOptimizelyEvents,
+    experimentName,
     optimizelyVariation,
     groupTracker,
     itemTracker,
@@ -132,6 +133,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
             ...(itemTracker && { itemTracker }),
             ...(optimizelyVariation &&
               optimizelyVariation !== 'off' && {
+                experimentName,
                 experimentVariant: optimizelyVariation,
               }),
           });
@@ -168,6 +170,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     url,
     sendOptimizelyEvents,
     optimizely,
+    experimentName,
     optimizelyVariation,
     detailedPlacement,
     useReverb,

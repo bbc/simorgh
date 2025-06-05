@@ -77,6 +77,7 @@ const TopStoriesSection = ({
       componentName: 'top-stories',
       sendOptimizelyEvents,
       optimizelyVariation: myExperiementVariation,
+      experimentName: experimentFlagKey,
     },
   };
   const eventTrackingDataSend = eventTrackingData?.block;

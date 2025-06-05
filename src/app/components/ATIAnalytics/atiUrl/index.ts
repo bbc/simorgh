@@ -521,6 +521,7 @@ export const buildReverbEventModel = ({
   type,
   advertiserID,
   url,
+  experimentName,
   experimentVariant,
   itemTracker = {},
   groupTracker = {},
@@ -576,7 +577,7 @@ export const buildReverbEventModel = ({
           engine_type: ['experimentation'],
           engine_id: [
             // TODO - hardcoded to not break serverside
-            `optimizely.${hardCodedExperiment}.${experimentVariant}`,
+            `optimizely.${experimentName}.${experimentVariant}`,
           ],
         },
       }),

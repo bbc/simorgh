@@ -148,6 +148,7 @@ const MostRead = ({
   const eventTrackingData = {
     ...blockLevelEventTrackingData,
     sendOptimizelyEvents,
+    experimentName: experimentFlagKey,
     optimizelyVariation: myExperiementVariation,
   };
 

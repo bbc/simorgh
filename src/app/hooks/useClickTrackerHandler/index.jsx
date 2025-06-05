@@ -29,6 +29,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
     producerName,
     preventNavigation,
     sendOptimizelyEvents,
+    experimentName,
     optimizelyVariation,
     groupTracker,
     itemTracker,
@@ -102,6 +103,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
               ...(itemTracker && { itemTracker }),
               ...(optimizelyVariation &&
                 optimizelyVariation !== 'off' && {
+                  experimentName,
                   experimentVariant: optimizelyVariation,
                 }),
             });
@@ -133,6 +135,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
       format,
       sendOptimizelyEvents,
       optimizely,
+      experimentName,
       optimizelyVariation,
       detailedPlacement,
       useReverb,
