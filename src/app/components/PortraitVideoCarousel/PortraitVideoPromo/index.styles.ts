@@ -82,6 +82,7 @@ const styles = {
       },
       'button:focus-visible &, button:hover &': {
         textDecoration: 'underline',
+        textDecorationColor: palette.WHITE,
       },
       'button:focus-visible &': {
         ...twoPixelFocusIndicatorStyle(palette.BLACK, palette.WHITE),
@@ -112,6 +113,8 @@ const styles = {
       display: 'block',
       color: palette.WHITE,
       margin: `${spacings.FULL}rem 0 0 0`,
+      textDecorationColor: palette.WHITE,
+      '&focus, &:hover': { textDecorationColor: palette.WHITE },
     }),
 };
 
