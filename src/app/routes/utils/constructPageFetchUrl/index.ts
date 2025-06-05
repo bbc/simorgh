@@ -219,11 +219,15 @@ const constructPageFetchUrl = ({
         fetchUrl = Url(`/${id}`);
         break;
       case HOME_PAGE: {
-        const host = `http://${process.env.HOSTNAME || 'localhost'}`;
-        const port = process.env.PORT ? `:${process.env.PORT}` : '';
-        fetchUrl = Url(
-          `${host}${port}/api/local/${service}/homePage/${variant ? `${variant}` : 'index'}`,
-        );
+        if (process.env?.NEXTJS) {
+          const host = `http://${process.env.HOSTNAME || 'localhost'}`;
+          const port = process.env.PORT ? `:${process.env.PORT}` : '';
+          fetchUrl = Url(
+            `${host}${port}/api/local/${service}/homePage/${variant ? `${variant}` : 'index'}`,
+          );
+        } else {
+          fetchUrl = Url(`/${service}${variant ? `/${variant}` : ''}`);
+        }
         break;
       }
       case MOST_READ_PAGE:

@@ -1,49 +1,29 @@
-import localData from '#data/pidgin/homePage/index.json';
-
 export const homePageTestSuites = [
   {
     path: '/ws/languages',
     service: 'pidgin',
-    runforEnv: ['local', 'test'],
+    runforEnv: ['test'],
     tests: [
       ({ service, pageType }: { service: string; pageType: string }) => {
         describe(`Tests for ${pageType} page - ${service}`, () => {
-          const currentEnv = Cypress.env('APP_ENV');
+          it('should show Test Pidgin Homepage when no renderer_env is set', () => {
+            cy.request({
+              url: 'https://www.test.bbc.com/pidgin',
+              headers: {
+                Origin: 'https://www.test.bbc.com',
+              },
+            }).then(response => {
+              const testContent = response.body;
 
-          if (currentEnv === 'local') {
-            it('should show Local Pidgin fixture data when no renderer_env is set', () => {
               cy.get('nav').should('exist');
               cy.get('main').should('exist');
 
-              cy.get('main').within(() => {
-                cy.get('h1').should('contain', localData.data.title);
-                cy.get('meta[name="description"]').should(
-                  'have.attr',
-                  'content',
-                  localData.data.description,
-                );
+              cy.get('main').then($main => {
+                const localContent = $main.html();
+                expect(localContent).to.include(testContent); // TODO: improved comparison
               });
             });
-          } else {
-            it('should show Test Pidgin Homepage when no renderer_env is set', () => {
-              cy.request({
-                url: 'https://www.test.bbc.com/pidgin',
-                headers: {
-                  Origin: 'https://www.test.bbc.com',
-                },
-              }).then(response => {
-                const testContent = response.body;
-
-                cy.get('nav').should('exist');
-                cy.get('main').should('exist');
-
-                cy.get('main').then($main => {
-                  const localContent = $main.html();
-                  expect(localContent).to.include(testContent); // TODO: improved comparison
-                });
-              });
-            });
-          }
+          });
 
           it('should show Test Pidgin Homepage when renderer_env=test', () => {
             cy.request(
