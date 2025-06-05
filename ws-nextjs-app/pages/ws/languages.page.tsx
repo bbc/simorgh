@@ -45,7 +45,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
   const { data } = await getPageData({
     id,
     service: 'pidgin',
-    variant: undefined,
     rendererEnv,
     resolvedUrl: '/pidgin',
     pageType: HOME_PAGE,
