@@ -73,6 +73,14 @@ export type PlaylistItem = {
   embedRights?: 'allowed';
   vpid?: string;
   serviceID?: string;
+  title?: string;
+  guidance?: string | null;
+  territories?: string[];
+  images?: {
+    source: string;
+    urlTemplate?: string;
+  }[];
+  holdingImageURL?: string;
 };
 
 export type LegacyPlayListItem = {

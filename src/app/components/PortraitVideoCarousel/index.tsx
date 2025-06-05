@@ -22,19 +22,20 @@ const PortraitVideoCarousel = ({
   const scrollRef = useRef<HTMLUListElement>(null);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedItem, setSelectedItem] =
-    useState<PortraitVideoPromoProps | null>(null);
+  const [selectedItemIndex, setSelectedItemIndex] = useState<number | null>(
+    null,
+  );
 
-  const handlePromoClick = (item: PortraitVideoPromoProps) => {
+  const handlePromoClick = (item: PortraitVideoPromoProps, index: number) => {
     if (item.video) {
-      setSelectedItem(item);
+      setSelectedItemIndex(index);
       setIsModalOpen(true);
     }
   };
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
-    setSelectedItem(null);
+    setSelectedItemIndex(null);
   };
 
   return (
@@ -61,7 +62,7 @@ const PortraitVideoCarousel = ({
               <PortraitVideoPromo
                 {...item}
                 key={item.id}
-                onClick={() => handlePromoClick(item)}
+                onClick={() => handlePromoClick(item, index)}
                 itemPosition={index}
                 groupTracker={{
                   itemCount: items.length,
@@ -72,7 +73,7 @@ const PortraitVideoCarousel = ({
           </ul>
         </div>
         {isModalOpen &&
-          selectedItem &&
+          selectedItemIndex !== null &&
           createPortal(
             <PortraitVideoModal
               items={items.map(item => ({
@@ -86,6 +87,7 @@ const PortraitVideoCarousel = ({
                 isEmbeddingAllowed: item.video?.isEmbeddingAllowed ?? true,
                 images: item.images || [],
               }))}
+              initialVideoIndex={selectedItemIndex}
               onClose={handleCloseModal}
             />,
             document.body,

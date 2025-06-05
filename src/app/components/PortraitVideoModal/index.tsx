@@ -22,12 +22,22 @@ interface PortraitVideoModalProps {
     }[];
   }[];
   onClose: () => void;
+  initialVideoIndex?: number;
 }
 
-const PortraitVideoModal = ({ items, onClose }: PortraitVideoModalProps) => {
+const PortraitVideoModal = ({
+  items,
+  onClose,
+  initialVideoIndex = 0,
+}: PortraitVideoModalProps) => {
   const modalRef = useRef<HTMLDialogElement>(null);
 
-  const blocks: PortraitClipMediaBlock[] = items.map(item => ({
+  const reorderedItems = [
+    ...items.slice(initialVideoIndex),
+    ...items.slice(0, initialVideoIndex),
+  ];
+
+  const blocks: PortraitClipMediaBlock[] = reorderedItems.map(item => ({
     type: 'portraitClipMedia',
     model: {
       type: 'video',
@@ -71,7 +81,6 @@ const PortraitVideoModal = ({ items, onClose }: PortraitVideoModalProps) => {
       >
         {navigationIcons.cross}
       </button>
-
       <div css={styles.navWrapper}>
         <MediaLoader blocks={blocks} />
       </div>
