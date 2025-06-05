@@ -491,10 +491,10 @@ const ampTestSuites = canonicalTestSuites
       tests: [assertPageView],
     },
     {
-      path: '/news/articles/c5ll353v7y9o.amp',
+      path: '/news/articles/c9djwv3q6w9o.amp',
       runforEnv: ['live'],
       service: 'news',
-      pageIdentifier: 'news.articles.c5ll353v7y9o.page',
+      pageIdentifier: 'news.articles.c9djwv3q6w9o.page',
       applicationType: 'amp',
       contentType: 'article',
       useReverb: true,

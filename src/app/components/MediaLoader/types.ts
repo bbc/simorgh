@@ -49,10 +49,20 @@ export type PlayerUiConfig = {
   baseColour?: string;
   colourOnBaseColour?: string;
   fallbackBackgroundColour?: string;
-  controls?: { enabled: boolean; volumeSlider?: boolean };
+  controls?: {
+    enabled: boolean;
+    volumeSlider?: boolean;
+    includeNextButton?: boolean;
+    includePreviousButton?: boolean;
+  };
+
   locale?: { lang: string };
   subtitles?: { enabled: boolean; defaultOn: boolean };
   fullscreen?: { enabled: boolean };
+  swipable?: {
+    enabled: boolean;
+    direction: 'Y' | 'X';
+  };
 };
 
 export type PlaylistItem = {
