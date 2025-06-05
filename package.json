@@ -230,7 +230,7 @@
     "mocha-junit-reporter": "2.2.1",
     "npm-run-all2": "8.0.4",
     "prettier": "3.5.3",
-    "puppeteer": "24.9.0",
+    "puppeteer": "24.10.0",
     "retry": "0.13.1",
     "start-server-nestjs-webpack-plugin": "2.2.5",
     "storybook": "8.6.14",
