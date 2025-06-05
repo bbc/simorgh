@@ -9,6 +9,8 @@ import moment from 'moment';
 import formatDuration from '#app/lib/utilities/formatDuration';
 import { useContext, FocusEvent } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import useViewTracker from '#app/hooks/useViewTracker';
 import getSrcSets from '#app/utilities/getSrcSets';
 import styles from './index.styles';
 
@@ -19,7 +21,15 @@ const DEFAULT_TRANSLATION = {
 };
 export default (item: PortraitVideoPromoProps) => {
   const { mq } = useTheme();
-  const { images, headlines, video, onClick } = item;
+  const {
+    id,
+    images,
+    headlines,
+    video,
+    onClick,
+    itemPosition = 0,
+    groupTracker,
+  } = item;
   const {
     defaultImage,
     defaultImageAltText,
@@ -36,12 +46,12 @@ export default (item: PortraitVideoPromoProps) => {
     play: actionType,
     duration: durationTranslation,
   } = media;
-
+  let momentDuration = null;
   let durationString = '';
   let durationSpokenString = '';
   if (mediaISO8601Duration) {
     const separator = ',';
-    const momentDuration = moment.duration(mediaISO8601Duration, 'seconds');
+    momentDuration = moment.duration(mediaISO8601Duration, 'seconds');
     durationString = formatDuration({
       duration: momentDuration,
       padMinutes: true,
@@ -67,6 +77,31 @@ export default (item: PortraitVideoPromoProps) => {
     imageWidthLarge: 256,
   });
 
+  const adjustedItemPosition = itemPosition + 1;
+  const eventTrackingData = {
+    componentName: `portrait-video-promo-${adjustedItemPosition}`,
+    groupTracker,
+    viewThreshold: 1,
+    itemTracker: {
+      type: 'portrait-video-promo',
+      text: headline,
+      position: adjustedItemPosition,
+      ...(momentDuration && { duration: momentDuration.asSeconds() }),
+      resourceId: id,
+    },
+  };
+
+  const viewTracker = useViewTracker(eventTrackingData);
+  const { onClick: clickTrackerHandler } =
+    useClickTrackerHandler(eventTrackingData);
+
+  const handleClick = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+    if (clickTrackerHandler) {
+      clickTrackerHandler(e);
+    }
+    if (onClick) onClick();
+  };
+
   return (
     <li css={styles.container}>
       <Image
@@ -79,9 +114,10 @@ export default (item: PortraitVideoPromoProps) => {
       />
       <button
         type="button"
-        onClick={onClick}
         css={styles.button}
         onFocus={onFocusListener}
+        onClick={e => handleClick(e)}
+        {...viewTracker}
         data-testid="promo-button"
       >
         <div css={styles.gradientOverlay}>

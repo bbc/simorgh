@@ -18,6 +18,7 @@ import { GHOST } from '../ThemeProvider/palette';
 import Embed from '../Embeds/OEmbed';
 import Billboard from '../Billboard';
 import PortraitVideoCarousel from '../PortraitVideoCarousel';
+import UsefulLinks from '../UsefulLinks';
 import SocialLinks from '../SocialLinks';
 import styles from './index.styles';
 
@@ -31,6 +32,7 @@ const {
   EMBED,
   BILLBOARD,
   PORTRAIT_VIDEO_CAROUSEL,
+  USEFUL_LINKS,
   SOCIAL_LINKS,
 } = COMPONENT_NAMES;
 
@@ -62,6 +64,7 @@ export default ({
   embed,
   portraitVideo,
   renderVisuallyHiddenH2Title = false,
+  curationId,
 }: Curation) => {
   const componentName = getComponentName({
     visualStyle,
@@ -158,10 +161,22 @@ export default ({
         !isLive()
       ) {
         return (
-          <PortraitVideoCarousel title={title} items={portraitVideo.items} />
+          <PortraitVideoCarousel
+            title={title}
+            items={portraitVideo.items}
+            {...(curationId && { groupTrackingId: curationId })}
+          />
         );
       }
       return null;
+    case USEFUL_LINKS:
+      return (
+        <UsefulLinks
+          summaries={summaries}
+          title={title}
+          id={`useful-links-${nthCurationByStyleAndProminence}`}
+        />
+      );
     case SOCIAL_LINKS:
       return (
         <SocialLinks
