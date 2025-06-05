@@ -23,14 +23,12 @@ const storybookConfig: StorybookConfig = {
     '../src/app/pages/**/*.stories.@(t|j)sx',
     './DocsDecorator/**/*.stories.@(t|j)sx',
     './StorybookComponents/**/*.stories.@(t|j)sx',
-    './SidebarLabel/**/*.stories.@(t|j)sx',
     '../ws-nextjs-app/**/*.stories.tsx',
     '../docs/**/*.mdx',
     '../src/**/*.mdx',
   ],
   addons: [
     getAbsolutePath('@storybook/addon-a11y'),
-    // getAbsolutePath('./SidebarLabel/preset.cjs'),
     {
       name: getAbsolutePath('@storybook/addon-docs'),
       options: {
