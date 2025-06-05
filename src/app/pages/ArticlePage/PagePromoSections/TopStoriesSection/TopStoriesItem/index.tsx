@@ -116,7 +116,7 @@ const TopStoriesItem = forwardRef(
           to={assetUri || uri || canonicalUrl}
           ariaLabelledBy={ariaLabelledBy}
           mediaType={mediaType}
-          // TODO - refactor outside of this PR?
+          // TODO - wasn't getting eventTrackingDataSend - refactor outside of this PR?
           eventTrackingData={eventTrackingDataSend}
         >
           <Promo.ContentWrapper>

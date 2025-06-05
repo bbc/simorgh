@@ -14,8 +14,6 @@ import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingP
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon';
 import useTrackingToggle from '../useTrackingToggle';
-// TO DO
-// import OPTIMIZELY_CONFIG from '../../lib/config/optimizely';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 const VIEWED_DURATION_MS = 1000;
@@ -195,7 +193,6 @@ export default (eventTrackingData?: EventTrackingData): any => {
 
   const viewTracker = getComponentViewTracker(eventTrackingData);
 
-  // don't think I need experimentFlagKey here
   const staticATIUrl = constructStaticATIUrl({
     eventTrackingData,
     eventType: VIEW_EVENT,

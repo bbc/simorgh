@@ -9,9 +9,6 @@ const useOptimizelyMvtVariation = id => {
 
   if (!optimizely) return null;
 
-  // added
-  if (!id) return null;
-
   if (!mvtExperiments || mvtExperiments.length === 0 || id === null) {
     return null;
   }

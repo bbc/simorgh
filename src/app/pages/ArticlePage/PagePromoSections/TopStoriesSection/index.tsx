@@ -64,13 +64,10 @@ const TopStoriesSection = ({
   sendOptimizelyEvents?: boolean;
 }) => {
   const { translations, script, service } = useContext(ServiceContext);
+
   const experimentFlagKey = 'dummy_experiment_1';
 
-  // added in dummy ab test code
-  const myExperiementVariation = useOptimizelyVariation(
-    // keeping it simple
-    experimentFlagKey,
-  );
+  const myExperiementVariation = useOptimizelyVariation(experimentFlagKey);
 
   const eventTrackingData = {
     block: {

@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { useDecision } from '@optimizely/react-sdk';
 
+// TODO - changed for development
 const isClientSide = true;
 
 // ALTHOUGH THIS FUNCTION BREAKS REACT RULES BY USING CONDITIONAL HOOKS,
@@ -21,6 +22,7 @@ const useOptimizelyVariation = (
       { overrideAttributes },
     );
 
+    // TODO - changed for development
     const [variation, setVariation] = useState(undefined);
 
     useEffect(() => {
@@ -31,7 +33,7 @@ const useOptimizelyVariation = (
 
     return variation;
   }
-
+  // TODO - changed for development
   return '';
 };
 

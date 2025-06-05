@@ -8,8 +8,6 @@ import { Helmet } from 'react-helmet';
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
 import { PageTypes } from '#app/models/types/global';
 import useOptimizelyMvtVariation from '#app/hooks/useOptimizelyMvtVariation';
-// TO DO
-// import OPTIMIZELY_CONFIG from '#app/lib/config/optimizely';
 import { TopStoryItem } from '../../pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import WebVitals from '../../legacy/containers/WebVitals';
 import HeaderContainer from '../../legacy/containers/Header';
@@ -62,12 +60,11 @@ const PageLayoutWrapper = ({
   let wordCount: wordCountType = 0;
   let propsForOJExperiment = {};
 
-  // Temporary - to not break server side
-  const getExperiment = 'header_a_a_test';
+  // TODO - config
+  const activeServerSideExperiment = 'newswb_ws_topbarojs_read_more';
 
   const experimentVariant = useOptimizelyMvtVariation(
-    // TODO - without hard coded experiment
-    getExperiment,
+    activeServerSideExperiment,
   );
   if (pageType === 'article') {
     wordCount = pageData?.content?.model?.blocks

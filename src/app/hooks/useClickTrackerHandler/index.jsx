@@ -150,7 +150,6 @@ export default (eventTrackingData = {}) => {
   const isHydrated = useHydrationDetection();
 
   const clickTracker = useClickTrackerHandler(eventTrackingData);
-  // Don't think we need experiment here?
   const staticAtiUrl = constructStaticATIUrl({
     eventTrackingData,
     eventType: CLICK_EVENT,

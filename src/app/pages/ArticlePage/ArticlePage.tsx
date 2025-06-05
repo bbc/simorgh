@@ -20,8 +20,6 @@ import SocialEmbedContainer from '#containers/SocialEmbed';
 import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
-// TO DO
-// import OPTIMIZELY_CONFIG from '#app/lib/config/optimizely';
 
 import {
   getArticleId,
@@ -158,12 +156,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
-  // Temporary - to not break server side
-  const getExperiment = 'header_a_a_test';
+  // TO DO - Config
+  const activeServerSideExperiment = 'newswb_ws_topbarojs_read_more';
 
   const experimentVariant = useOptimizelyMvtVariation(
-    // TODO - without hard coded experiment
-    getExperiment,
+    activeServerSideExperiment,
   );
 
   const isInExperiment = experimentVariant && experimentVariant !== 'off';
@@ -347,12 +344,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                 liteCTAShows={liteCTAShows}
               />
             )}
+            {/* // removed isInExperiment check for development */}
             {/* {isInExperiment && <OptimizelyArticleCompleteTracking />} */}
           </main>
-          {/* // removed isInExperiment check for development */}
           {/* // TO DO - Update following spike copying logic from OptimizelyArticleCompleteTracking */}
-          <OptimizelyPageViewTracking flagKey={getExperiment} />
-          {/* // TO DO - added in for development - not used in current expeirment */}
+          <OptimizelyPageViewTracking flagKey={activeServerSideExperiment} />
+          {/* // TO DO - added and updated for development - not used in current expeirment */}
           <OptimizelyArticleCompleteTracking />
           {showTopics && (
             <RelatedTopics
@@ -374,11 +371,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           />
         </div>
         {!isApp && !isPGL && (
-          <SecondaryColumn
-            pageData={pageData}
-            // updated
-            sendOptimizelyEvents
-          />
+          <SecondaryColumn pageData={pageData} sendOptimizelyEvents />
         )}
       </div>
       {!isApp && !isPGL && (
@@ -389,7 +382,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           size="default"
           headingBackgroundColour={GREY_2}
           mobileDivider={showTopics}
-          // updated
           sendOptimizelyEvents
         />
       )}

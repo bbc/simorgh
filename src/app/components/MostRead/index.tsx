@@ -86,7 +86,7 @@ const CanonicalMostRead = ({
   columnLayout?: ColumnLayout;
   size: Size;
   eventTrackingData: {
-    optimizely?: ReactSDKClient | null | undefined; // update?
+    optimizely?: ReactSDKClient | null | undefined;
     componentName: string;
     optimizelyVariation?: string | undefined;
   };
@@ -113,7 +113,6 @@ const MostRead = ({
   mobileDivider = false,
   headingBackgroundColour = WHITE,
   className = '',
-  // will this work?
   sendOptimizelyEvents = true,
 }: MostReadProps) => {
   const { isAmp, pageType, variant } = useContext(RequestContext);
@@ -122,9 +121,7 @@ const MostRead = ({
     mostRead: { hasMostRead },
   } = useContext(ServiceContext);
 
-  // example
   const experimentFlagKey = 'dummy_experiment';
-  // added in dummy ab test code
   const myExperiementVariation = useOptimizelyVariation(experimentFlagKey);
 
   const { enabled } = useToggle('mostRead');

@@ -4,8 +4,6 @@ import {
   VIEWABILITY_CLICK_EVENT,
 } from '#app/lib/analyticsUtils/analytics.const';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-// TO DO
-// import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import {
   getDestination,
   getAppType,
@@ -36,8 +34,8 @@ import {
  * https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md#device-and-browser
  */
 
-// TO DO - fix so not hardcoded
-const hardCodedExperiment = 'header_a_a_test';
+// TO DO - config?
+const activeServerSideExperiment = 'newswb_ws_topbarojs_read_more';
 
 export const buildATIPageTrackPath = ({
   appName,
@@ -228,7 +226,6 @@ export const buildATIPageTrackPath = ({
       value: getATIMarketingString(href, campaignType),
       wrap: false,
     },
-    // TODO
     ...(experimentVariant
       ? [
           {
@@ -496,8 +493,7 @@ export const buildReverbAnalyticsModel = ({
           x17: categoryName,
           x18: isLocServeCookieSet(),
           ...(experimentVariant && {
-            // TODO - hardcoded to not break serverside
-            mv_test: hardCodedExperiment,
+            mv_test: activeServerSideExperiment,
             mv_creation: `${experimentVariant}`,
           }),
         },
@@ -575,10 +571,7 @@ export const buildReverbEventModel = ({
       ...(experimentVariant && {
         experience: {
           engine_type: ['experimentation'],
-          engine_id: [
-            // TODO - hardcoded to not break serverside
-            `optimizely.${experimentName}.${experimentVariant}`,
-          ],
+          engine_id: [`optimizely.${experimentName}.${experimentVariant}`],
         },
       }),
     },
