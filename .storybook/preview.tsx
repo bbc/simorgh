@@ -552,6 +552,7 @@ const preview: Preview = {
   },
 
   initialGlobals: {
+    backgrounds: { value: 'White' },
     service: {
       service: 'news',
       variant: 'default',
@@ -581,17 +582,12 @@ const preview: Preview = {
       container: DocsDecorator,
     },
     backgrounds: {
-      default: 'CPS',
-      values: [
-        {
-          name: 'Optimo',
-          value: '#F6F6F6',
-        },
-        {
-          name: 'CPS',
-          value: '#FFFFFF',
-        },
-      ],
+      options: {
+        dark: { name: 'Dark', value: '#141414' },
+        light: { name: 'Light', value: '#F7F9F2' },
+        White: { name: 'White', value: '#FFFFFF' },
+        Optimo: { name: 'Optimo', value: '#F6F6F6' },
+      },
     },
     chromatic: {
       delay: 5000,
@@ -719,6 +715,6 @@ const preview: Preview = {
     ),
   ],
 
-  tags: ['autodocs']
+  tags: ['autodocs'],
 };
 export default preview;
