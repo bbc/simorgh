@@ -1,0 +1,1976 @@
+{
+  "data": {
+    "title": "News",
+    "description": "",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Title of the page",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/73e5/test/959c2380-ec2f-11ee-9173-83ca10832ce2.jpg.webp",
+            "description": "Summary / description",
+            "imageAlt": "The description of the image",
+            "id": "cymew11pmlg6t"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "India Election",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://news.files.bbci.com/include/vjsthasia/403-india_election_results_day/hindi/tally-include/embed",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "https%3A%2F%2Fnews.files.bbci.co.uk%2Finclude%2Fvjsthasia%2F403-india_election_results_day%2Fhindi%2Ftally-include%2Fembed"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:e42ffdab-652b-4c77-87c8-fbbb38b4cc2b",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "Curation with Election Banner",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE"
+      },
+      {
+        "curationId": "urn:bbc:tipo:list:65faa8a9-78d7-46ea-a159-9bc06c6146f5",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "Curation with a mix of PIDs and Optimo articles with portrait video embeds",
+        "visualProminence": "NORMAL",
+        "visualStyle": "INSITU",
+       "portraitVideo": {
+          "items": [
+            {
+              "id": "urn:bbc:pips:pid:p01wjx7v",
+              "urns": {
+                "pipsPid": "urn:bbc:pips:pid:p01wjx7v"
+              },
+              "images": [
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8g.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8g.jpg",
+                  "altText": "The feeling of not knowing where to start, the lack of a routine",
+                  "type": "socialImage",
+                  "source": "pipsImage",
+                  "height": 1728,
+                  "width": 972,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8g.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8g.jpg",
+                  "altText": "The feeling of not knowing where to start, the lack of a routine",
+                  "type": "promoImage",
+                  "source": "pipsImage",
+                  "height": 1728,
+                  "width": 972,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": "p01wjx7v",
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "4 mistakes people make when studying for public service exams (9x16)",
+                "seoHeadline": "4 mistakes people make when studying for public service exams (9x16)",
+                "promoHeadline": "4 mistakes people make when studying for public service exams (9x16)",
+                "socialHeadline": "4 mistakes people make when studying for public service exams (9x16)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "programmes.av.p01wjx7v.page",
+                  "contentId": "urn:bbc:pips:pid:p01wjx7v",
+                  "producer": "PROGRAMMES"
+                }
+              },
+              "description": "The feeling of not knowing where to start, the lack of a routine",
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "The feeling of not knowing where to start, the lack of a routine",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "The feeling of not knowing where to start, the lack of a routine",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "lastPublished": "2025-03-27T15:12:57Z",
+              "firstPublished": null,
+              "video": {
+                "id": "p01wjx7v",
+                "title": "4 mistakes people make when studying for public service exams (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx8g.jpg",
+                  "altText": "The feeling of not knowing where to start, the lack of a routine",
+                  "width": 972,
+                  "height": 1728,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx7x",
+                  "duration": "PT1M10S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "nonuk",
+                    "uk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": true,
+                "isEmbeddingAllowed": true,
+                "isUnavailable": false
+              },
+              "attributions": null,
+              "link": {
+                "path": "/programmes/p01wjx7v"
+              },
+              "section": null,
+              "isSharingAllowed": true,
+              "reactions": null
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cdrqd0m5nlmo",
+              "urns": {
+                "optimoId": "urn:bbc:optimo:asset:cdrqd0m5nlmo"
+              },
+              "images": [
+                {
+                  "type": "socialImage",
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8s.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8s.jpg",
+                  "altText": "At least 53 prisoners escaped from Katacane prison in Indonesia",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.bbci.co.uk/ace/standard/1024/cpsdevpb/42c1/test/7900c530-0e0e-11f0-a9e9-f552fbd9336f.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/42c1/test/7900c530-0e0e-11f0-a9e9-f552fbd9336f.jpg",
+                  "altText": "test",
+                  "type": "promoImage",
+                  "source": "tipoCuration",
+                  "height": 976,
+                  "width": 549,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": null,
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "Article with portrait video embed (1)",
+                "seoHeadline": "Article with portrait video embed (1)",
+                "promoHeadline": "Optimo article with portrait video embed (1)",
+                "socialHeadline": "Article with portrait video embed (1)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "portuguese.articles.cdrqd0m5nlmo.page",
+                  "contentId": "urn:bbc:optimo:asset:cdrqd0m5nlmo",
+                  "producer": "BRASIL",
+                  "additionalProperties": {
+                    "custom_var_1": "2025-03-31T08:49:44.458Z",
+                    "custom_var_2": "2025-03-31T08:49:44.458Z"
+                  }
+                }
+              },
+              "description": null,
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": []
+                }
+              },
+              "lastPublished": "2025-03-31T08:49:44.458Z",
+              "firstPublished": "2025-03-31T08:49:44.458Z",
+              "video": {
+                "id": "p01wjx6d",
+                "title": "Watch mass escape from prison in Indonesia (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx8s.jpg",
+                  "altText": "At least 53 prisoners escaped from Katacane prison in Indonesia",
+                  "width": 546,
+                  "height": 972,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx6g",
+                  "duration": "PT13S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "uk",
+                    "nonuk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": false,
+                "isEmbeddingAllowed": false,
+                "isUnavailable": false
+              },
+              "attributions": [
+                {
+                  "title": "Brasil",
+                  "link": {
+                    "path": "/brasil"
+                  }
+                }
+              ],
+              "link": {
+                "path": "/portuguese/articles/cdrqd0m5nlmo"
+              },
+              "section": null,
+              "adCampaignKeyword": null,
+              "adCategory": null,
+              "adSubCategory": null,
+              "isSharingAllowed": true,
+              "topics": [],
+              "reactions": {
+                "disliked": {
+                  "total": 0,
+                  "lastUpdated": null
+                },
+                "liked": {
+                  "total": 0,
+                  "lastUpdated": null
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cgp62emnrk5o",
+              "urns": {
+                "optimoId": "urn:bbc:optimo:asset:cgp62emnrk5o"
+              },
+              "images": [
+                {
+                  "type": "socialImage",
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx7z.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx7z.jpg",
+                  "altText": "Today nine countries possess nuclear weapons",
+                  "source": "pipsImage",
+                  "height": 1728,
+                  "width": 972,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.bbci.co.uk/ace/standard/1024/cpsdevpb/3106/test/8568bc10-0e0e-11f0-a9e9-f552fbd9336f.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/3106/test/8568bc10-0e0e-11f0-a9e9-f552fbd9336f.jpg",
+                  "altText": "Test",
+                  "type": "promoImage",
+                  "source": "tipoCuration",
+                  "height": 976,
+                  "width": 549,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": null,
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "Article with portrait video embed (2)",
+                "seoHeadline": "Article with portrait video embed (2)",
+                "promoHeadline": "Article with portrait video embed (2)",
+                "socialHeadline": "Article with portrait video embed (2)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "portuguese.articles.cgp62emnrk5o.page",
+                  "contentId": "urn:bbc:optimo:asset:cgp62emnrk5o",
+                  "producer": "BRASIL",
+                  "additionalProperties": {
+                    "custom_var_1": "2025-03-31T08:51:05.635Z",
+                    "custom_var_2": "2025-03-31T08:51:05.635Z"
+                  }
+                }
+              },
+              "description": null,
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": []
+                }
+              },
+              "lastPublished": "2025-03-31T08:51:05.635Z",
+              "firstPublished": "2025-03-31T08:51:05.635Z",
+              "video": {
+                "id": "p01wjx6z",
+                "title": "Brazil's former secret projects to acquire nuclear weapons (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx7z.jpg",
+                  "altText": "Today nine countries possess nuclear weapons",
+                  "width": 972,
+                  "height": 1728,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx71",
+                  "duration": "PT20S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "uk",
+                    "nonuk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": false,
+                "isEmbeddingAllowed": false,
+                "isUnavailable": false
+              },
+              "attributions": [
+                {
+                  "title": "Brasil",
+                  "link": {
+                    "path": "/brasil"
+                  }
+                }
+              ],
+              "link": {
+                "path": "/portuguese/articles/cgp62emnrk5o"
+              },
+              "section": null,
+              "adCampaignKeyword": null,
+              "adCategory": null,
+              "adSubCategory": null,
+              "isSharingAllowed": true,
+              "topics": [],
+              "reactions": {
+                "disliked": {
+                  "total": 0,
+                  "lastUpdated": null
+                },
+                "liked": {
+                  "total": 0,
+                  "lastUpdated": null
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:pips:pid:p01wjx5y",
+              "urns": {
+                "pipsPid": "urn:bbc:pips:pid:p01wjx5y"
+              },
+              "images": [
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8v.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8v.jpg",
+                  "altText": "Europe is in a kind of 'arms race' amid the alliance crisis",
+                  "type": "socialImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8v.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8v.jpg",
+                  "altText": "Europe is in a kind of 'arms race' amid the alliance crisis",
+                  "type": "promoImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": "p01wjx5y",
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "Is Europe arming for war? Continent increases military spending with eyes on US and Russia (9x16)",
+                "seoHeadline": "Is Europe arming for war? Continent increases military spending with eyes on US and Russia (9x16)",
+                "promoHeadline": "Is Europe arming for war? Continent increases military spending with eyes on US and Russia (9x16)",
+                "socialHeadline": "Is Europe arming for war? Continent increases military spending with eyes on US and Russia (9x16)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "programmes.av.p01wjx5y.page",
+                  "contentId": "urn:bbc:pips:pid:p01wjx5y",
+                  "producer": "PROGRAMMES"
+                }
+              },
+              "description": "Europe is in a kind of 'arms race' amid the alliance crisis",
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Europe is in a kind of 'arms race' amid the alliance crisis",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Europe is in a kind of 'arms race' amid the alliance crisis",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "lastPublished": "2025-03-27T15:07:22Z",
+              "firstPublished": null,
+              "video": {
+                "id": "p01wjx5y",
+                "title": "Is Europe arming for war? Continent increases military spending with eyes on US and Russia (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx8v.jpg",
+                  "altText": "Europe is in a kind of 'arms race' amid the alliance crisis",
+                  "width": 546,
+                  "height": 972,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx60",
+                  "duration": "PT30S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "nonuk",
+                    "uk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": false,
+                "isEmbeddingAllowed": true,
+                "isUnavailable": false
+              },
+              "attributions": null,
+              "link": {
+                "path": "/programmes/p01wjx5y"
+              },
+              "section": null,
+              "isSharingAllowed": true,
+              "reactions": null
+            },
+            {
+              "id": "urn:bbc:pips:pid:p01wjx4r",
+              "urns": {
+                "pipsPid": "urn:bbc:pips:pid:p01wjx4r"
+              },
+              "images": [
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx5j.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx5j.jpg",
+                  "altText": "The New Silk Road, or Belt and Road, is considered the largest strategy",
+                  "type": "socialImage",
+                  "source": "pipsImage",
+                  "height": 1728,
+                  "width": 972,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx5j.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx5j.jpg",
+                  "altText": "The New Silk Road, or Belt and Road, is considered the largest strategy",
+                  "type": "promoImage",
+                  "source": "pipsImage",
+                  "height": 1728,
+                  "width": 972,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": "p01wjx4r",
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "China: what is the New Silk Road, crucial to Beijing's geopolitical strategy (9x16)",
+                "seoHeadline": "China: what is the New Silk Road, crucial to Beijing's geopolitical strategy (9x16)",
+                "promoHeadline": "China: what is the New Silk Road, crucial to Beijing's geopolitical strategy (9x16)",
+                "socialHeadline": "China: what is the New Silk Road, crucial to Beijing's geopolitical strategy (9x16)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "programmes.av.p01wjx4r.page",
+                  "contentId": "urn:bbc:pips:pid:p01wjx4r",
+                  "producer": "PROGRAMMES"
+                }
+              },
+              "description": "The New Silk Road, or Belt and Road, is considered the largest strategy",
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "The New Silk Road, or Belt and Road, is considered the largest strategy",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "The New Silk Road, or Belt and Road, is considered the largest strategy",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "lastPublished": "2025-03-27T15:02:02Z",
+              "firstPublished": null,
+              "video": {
+                "id": "p01wjx4r",
+                "title": "China: what is the New Silk Road, crucial to Beijing's geopolitical strategy (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx5j.jpg",
+                  "altText": "The New Silk Road, or Belt and Road, is considered the largest strategy",
+                  "width": 972,
+                  "height": 1728,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx4t",
+                  "duration": "PT1M10S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "nonuk",
+                    "uk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": true,
+                "isEmbeddingAllowed": true,
+                "isUnavailable": false
+              },
+              "attributions": null,
+              "link": {
+                "path": "/programmes/p01wjx4r"
+              },
+              "section": null,
+              "isSharingAllowed": true,
+              "reactions": null
+            },
+            {
+              "id": "urn:bbc:pips:pid:p01wjx3g",
+              "urns": {
+                "pipsPid": "urn:bbc:pips:pid:p01wjx3g"
+              },
+              "images": [
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx48.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx48.jpg",
+                  "altText": "From time to time, some mechanism of the human body is 'rediscovered' by the internet",
+                  "type": "socialImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx48.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx48.jpg",
+                  "altText": "From time to time, some mechanism of the human body is 'rediscovered' by the internet",
+                  "type": "promoImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": "p01wjx3g",
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "The trend of avoiding glucose spikes to lose weight — and why it makes sense (9x16)",
+                "seoHeadline": "The trend of avoiding glucose spikes to lose weight — and why it makes sense (9x16)",
+                "promoHeadline": "The trend of avoiding glucose spikes to lose weight — and why it makes sense (9x16)",
+                "socialHeadline": "The trend of avoiding glucose spikes to lose weight — and why it makes sense (9x16)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "programmes.av.p01wjx3g.page",
+                  "contentId": "urn:bbc:pips:pid:p01wjx3g",
+                  "producer": "PROGRAMMES"
+                }
+              },
+              "description": "From time to time, some mechanism of the human body is 'rediscovered' by the internet",
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "From time to time, some mechanism of the human body is 'rediscovered' by the internet",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "From time to time, some mechanism of the human body is 'rediscovered' by the internet",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "lastPublished": "2025-03-27T14:58:30Z",
+              "firstPublished": null,
+              "video": {
+                "id": "p01wjx3g",
+                "title": "The trend of avoiding glucose spikes to lose weight — and why it makes sense (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx48.jpg",
+                  "altText": "From time to time, some mechanism of the human body is 'rediscovered' by the internet",
+                  "width": 546,
+                  "height": 972,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx3j",
+                  "duration": "PT13S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "nonuk",
+                    "uk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": false,
+                "isEmbeddingAllowed": true,
+                "isUnavailable": false
+              },
+              "attributions": null,
+              "link": {
+                "path": "/programmes/p01wjx3g"
+              },
+              "section": null,
+              "isSharingAllowed": true,
+              "reactions": null
+            },
+            {
+              "id": "urn:bbc:pips:pid:p01wjx35",
+              "urns": {
+                "pipsPid": "urn:bbc:pips:pid:p01wjx35"
+              },
+              "images": [
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx3l.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx3l.jpg",
+                  "altText": "After 37 days of hospitalization, Pope Francis was discharged from the hospital",
+                  "type": "socialImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx3l.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx3l.jpg",
+                  "altText": "After 37 days of hospitalization, Pope Francis was discharged from the hospital",
+                  "type": "promoImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": "p01wjx35",
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "Pope Francis reunites with faithful after leaving hospital in Rome (9x16)",
+                "seoHeadline": "Pope Francis reunites with faithful after leaving hospital in Rome (9x16)",
+                "promoHeadline": "Pope Francis reunites with faithful after leaving hospital in Rome (9x16)",
+                "socialHeadline": "Pope Francis reunites with faithful after leaving hospital in Rome (9x16)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "programmes.av.p01wjx35.page",
+                  "contentId": "urn:bbc:pips:pid:p01wjx35",
+                  "producer": "PROGRAMMES"
+                }
+              },
+              "description": "After 37 days of hospitalization, Pope Francis was discharged from the hospital",
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "After 37 days of hospitalization, Pope Francis was discharged from the hospital",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "After 37 days of hospitalization, Pope Francis was discharged from the hospital",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "lastPublished": "2025-03-27T14:55:51Z",
+              "firstPublished": null,
+              "video": {
+                "id": "p01wjx35",
+                "title": "Pope Francis reunites with faithful after leaving hospital in Rome (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx3l.jpg",
+                  "altText": "After 37 days of hospitalization, Pope Francis was discharged from the hospital",
+                  "width": 546,
+                  "height": 972,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx37",
+                  "duration": "PT13S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "nonuk",
+                    "uk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": false,
+                "isEmbeddingAllowed": true,
+                "isUnavailable": false
+              },
+              "attributions": null,
+              "link": {
+                "path": "/programmes/p01wjx35"
+              },
+              "section": null,
+              "isSharingAllowed": true,
+              "reactions": null
+            },
+            {
+              "id": "urn:bbc:pips:pid:p01wjx29",
+              "urns": {
+                "pipsPid": "urn:bbc:pips:pid:p01wjx29"
+              },
+              "images": [
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx3n.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx3n.jpg",
+                  "altText": "Indian Lalit Patidar, 18, was recognized by Guinness World Records",
+                  "type": "socialImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx3n.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx3n.jpg",
+                  "altText": "Indian Lalit Patidar, 18, was recognized by Guinness World Records",
+                  "type": "promoImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": "p01wjx29",
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "The Indian recognized as the 'hairiest person in the world' (9x16)",
+                "seoHeadline": "The Indian recognized as the 'hairiest person in the world' (9x16)",
+                "promoHeadline": "The Indian recognized as the 'hairiest person in the world' (9x16)",
+                "socialHeadline": "The Indian recognized as the 'hairiest person in the world' (9x16)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "programmes.av.p01wjx29.page",
+                  "contentId": "urn:bbc:pips:pid:p01wjx29",
+                  "producer": "PROGRAMMES"
+                }
+              },
+              "description": "Indian Lalit Patidar, 18, was recognized by Guinness World Records",
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Indian Lalit Patidar, 18, was recognized by Guinness World Records",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Indian Lalit Patidar, 18, was recognized by Guinness World Records",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "lastPublished": "2025-03-27T14:52:37Z",
+              "firstPublished": null,
+              "video": {
+                "id": "p01wjx29",
+                "title": "The Indian recognized as the 'hairiest person in the world' (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx3n.jpg",
+                  "altText": "Indian Lalit Patidar, 18, was recognized by Guinness World Records",
+                  "width": 546,
+                  "height": 972,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx2c",
+                  "duration": "PT30S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "nonuk",
+                    "uk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": false,
+                "isEmbeddingAllowed": true,
+                "isUnavailable": false
+              },
+              "attributions": null,
+              "link": {
+                "path": "/programmes/p01wjx29"
+              },
+              "section": null,
+              "isSharingAllowed": true,
+              "reactions": null
+            },
+            {
+              "id": "urn:bbc:pips:pid:p01wjx1y",
+              "urns": {
+                "pipsPid": "urn:bbc:pips:pid:p01wjx1y"
+              },
+              "images": [
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8z.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8z.jpg",
+                  "altText": "Volodymyr Zelensky stated that representatives from his country and the US",
+                  "type": "socialImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8z.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8z.jpg",
+                  "altText": "Volodymyr Zelensky stated that representatives from his country and the US",
+                  "type": "promoImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": "p01wjx1y",
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "Why is it so difficult for Ukraine and Russia to make peace? (9x16)",
+                "seoHeadline": "Why is it so difficult for Ukraine and Russia to make peace? (9x16)",
+                "promoHeadline": "Why is it so difficult for Ukraine and Russia to make peace? (9x16)",
+                "socialHeadline": "Why is it so difficult for Ukraine and Russia to make peace? (9x16)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "programmes.av.p01wjx1y.page",
+                  "contentId": "urn:bbc:pips:pid:p01wjx1y",
+                  "producer": "PROGRAMMES"
+                }
+              },
+              "description": "Volodymyr Zelensky stated that representatives from his country and the US",
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Volodymyr Zelensky stated that representatives from his country and the US",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Volodymyr Zelensky stated that representatives from his country and the US",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "lastPublished": "2025-03-27T14:50:45Z",
+              "firstPublished": null,
+              "video": {
+                "id": "p01wjx1y",
+                "title": "Why is it so difficult for Ukraine and Russia to make peace? (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx8z.jpg",
+                  "altText": "Volodymyr Zelensky stated that representatives from his country and the US",
+                  "width": 546,
+                  "height": 972,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx20",
+                  "duration": "PT46S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "nonuk",
+                    "uk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": true,
+                "isEmbeddingAllowed": true,
+                "isUnavailable": false
+              },
+              "attributions": null,
+              "link": {
+                "path": "/programmes/p01wjx1y"
+              },
+              "section": null,
+              "isSharingAllowed": true,
+              "reactions": null
+            }
+          ]
+        }
+      },
+      {
+        "curationId": "urn:bbc:tipo:list:6232419d-33d5-4f53-a708-235b78a328fc",
+        "curationType": "tipo-curation",
+        "position": 2,
+        "title": "Portrait video carousel - PIDs only",
+        "visualProminence": "NORMAL",
+        "visualStyle": "INSITU",
+        "portraitVideo": {
+          "items": [
+            {
+              "id": "urn:bbc:pips:pid:p01wjx7v",
+              "urns": {
+                "pipsPid": "urn:bbc:pips:pid:p01wjx7v"
+              },
+              "images": [
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8g.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8g.jpg",
+                  "altText": "The feeling of not knowing where to start, the lack of a routine",
+                  "type": "socialImage",
+                  "source": "pipsImage",
+                  "height": 1728,
+                  "width": 972,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8g.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8g.jpg",
+                  "altText": "The feeling of not knowing where to start, the lack of a routine",
+                  "type": "promoImage",
+                  "source": "pipsImage",
+                  "height": 1728,
+                  "width": 972,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": "p01wjx7v",
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "4 mistakes people make when studying for public service exams (9x16)",
+                "seoHeadline": "4 mistakes people make when studying for public service exams (9x16)",
+                "promoHeadline": "4 mistakes people make when studying for public service exams (9x16)",
+                "socialHeadline": "4 mistakes people make when studying for public service exams (9x16)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "programmes.av.p01wjx7v.page",
+                  "contentId": "urn:bbc:pips:pid:p01wjx7v",
+                  "producer": "PROGRAMMES"
+                }
+              },
+              "description": "The feeling of not knowing where to start, the lack of a routine",
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "The feeling of not knowing where to start, the lack of a routine",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "The feeling of not knowing where to start, the lack of a routine",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "lastPublished": "2025-03-27T15:12:57Z",
+              "firstPublished": null,
+              "video": {
+                "id": "p01wjx7v",
+                "title": "4 mistakes people make when studying for public service exams (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx8g.jpg",
+                  "altText": "The feeling of not knowing where to start, the lack of a routine",
+                  "width": 972,
+                  "height": 1728,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx7x",
+                  "duration": "PT1M10S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "nonuk",
+                    "uk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": true,
+                "isEmbeddingAllowed": true,
+                "isUnavailable": false
+              },
+              "attributions": null,
+              "link": {
+                "path": "/programmes/p01wjx7v"
+              },
+              "section": null,
+              "isSharingAllowed": true,
+              "reactions": null
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cdrqd0m5nlmo",
+              "urns": {
+                "optimoId": "urn:bbc:optimo:asset:cdrqd0m5nlmo"
+              },
+              "images": [
+                {
+                  "type": "socialImage",
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8s.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8s.jpg",
+                  "altText": "At least 53 prisoners escaped from Katacane prison in Indonesia",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.bbci.co.uk/ace/standard/1024/cpsdevpb/42c1/test/7900c530-0e0e-11f0-a9e9-f552fbd9336f.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/42c1/test/7900c530-0e0e-11f0-a9e9-f552fbd9336f.jpg",
+                  "altText": "test",
+                  "type": "promoImage",
+                  "source": "tipoCuration",
+                  "height": 976,
+                  "width": 549,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": null,
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "Article with portrait video embed (1)",
+                "seoHeadline": "Article with portrait video embed (1)",
+                "promoHeadline": "Optimo article with portrait video embed (1)",
+                "socialHeadline": "Article with portrait video embed (1)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "portuguese.articles.cdrqd0m5nlmo.page",
+                  "contentId": "urn:bbc:optimo:asset:cdrqd0m5nlmo",
+                  "producer": "BRASIL",
+                  "additionalProperties": {
+                    "custom_var_1": "2025-03-31T08:49:44.458Z",
+                    "custom_var_2": "2025-03-31T08:49:44.458Z"
+                  }
+                }
+              },
+              "description": null,
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": []
+                }
+              },
+              "lastPublished": "2025-03-31T08:49:44.458Z",
+              "firstPublished": "2025-03-31T08:49:44.458Z",
+              "video": {
+                "id": "p01wjx6d",
+                "title": "Watch mass escape from prison in Indonesia (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx8s.jpg",
+                  "altText": "At least 53 prisoners escaped from Katacane prison in Indonesia",
+                  "width": 546,
+                  "height": 972,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx6g",
+                  "duration": "PT13S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "uk",
+                    "nonuk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": false,
+                "isEmbeddingAllowed": false,
+                "isUnavailable": false
+              },
+              "attributions": [
+                {
+                  "title": "Brasil",
+                  "link": {
+                    "path": "/brasil"
+                  }
+                }
+              ],
+              "link": {
+                "path": "/portuguese/articles/cdrqd0m5nlmo"
+              },
+              "section": null,
+              "adCampaignKeyword": null,
+              "adCategory": null,
+              "adSubCategory": null,
+              "isSharingAllowed": true,
+              "topics": [],
+              "reactions": {
+                "disliked": {
+                  "total": 0,
+                  "lastUpdated": null
+                },
+                "liked": {
+                  "total": 0,
+                  "lastUpdated": null
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cgp62emnrk5o",
+              "urns": {
+                "optimoId": "urn:bbc:optimo:asset:cgp62emnrk5o"
+              },
+              "images": [
+                {
+                  "type": "socialImage",
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx7z.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx7z.jpg",
+                  "altText": "Today nine countries possess nuclear weapons",
+                  "source": "pipsImage",
+                  "height": 1728,
+                  "width": 972,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.bbci.co.uk/ace/standard/1024/cpsdevpb/3106/test/8568bc10-0e0e-11f0-a9e9-f552fbd9336f.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/3106/test/8568bc10-0e0e-11f0-a9e9-f552fbd9336f.jpg",
+                  "altText": "Test",
+                  "type": "promoImage",
+                  "source": "tipoCuration",
+                  "height": 976,
+                  "width": 549,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": null,
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "Article with portrait video embed (2)",
+                "seoHeadline": "Article with portrait video embed (2)",
+                "promoHeadline": "Article with portrait video embed (2)",
+                "socialHeadline": "Article with portrait video embed (2)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "portuguese.articles.cgp62emnrk5o.page",
+                  "contentId": "urn:bbc:optimo:asset:cgp62emnrk5o",
+                  "producer": "BRASIL",
+                  "additionalProperties": {
+                    "custom_var_1": "2025-03-31T08:51:05.635Z",
+                    "custom_var_2": "2025-03-31T08:51:05.635Z"
+                  }
+                }
+              },
+              "description": null,
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": []
+                }
+              },
+              "lastPublished": "2025-03-31T08:51:05.635Z",
+              "firstPublished": "2025-03-31T08:51:05.635Z",
+              "video": {
+                "id": "p01wjx6z",
+                "title": "Brazil's former secret projects to acquire nuclear weapons (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx7z.jpg",
+                  "altText": "Today nine countries possess nuclear weapons",
+                  "width": 972,
+                  "height": 1728,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx71",
+                  "duration": "PT20S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "uk",
+                    "nonuk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": false,
+                "isEmbeddingAllowed": false,
+                "isUnavailable": false
+              },
+              "attributions": [
+                {
+                  "title": "Brasil",
+                  "link": {
+                    "path": "/brasil"
+                  }
+                }
+              ],
+              "link": {
+                "path": "/portuguese/articles/cgp62emnrk5o"
+              },
+              "section": null,
+              "adCampaignKeyword": null,
+              "adCategory": null,
+              "adSubCategory": null,
+              "isSharingAllowed": true,
+              "topics": [],
+              "reactions": {
+                "disliked": {
+                  "total": 0,
+                  "lastUpdated": null
+                },
+                "liked": {
+                  "total": 0,
+                  "lastUpdated": null
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:pips:pid:p01wjx5y",
+              "urns": {
+                "pipsPid": "urn:bbc:pips:pid:p01wjx5y"
+              },
+              "images": [
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8v.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8v.jpg",
+                  "altText": "Europe is in a kind of 'arms race' amid the alliance crisis",
+                  "type": "socialImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8v.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8v.jpg",
+                  "altText": "Europe is in a kind of 'arms race' amid the alliance crisis",
+                  "type": "promoImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": "p01wjx5y",
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "Is Europe arming for war? Continent increases military spending with eyes on US and Russia (9x16)",
+                "seoHeadline": "Is Europe arming for war? Continent increases military spending with eyes on US and Russia (9x16)",
+                "promoHeadline": "Is Europe arming for war? Continent increases military spending with eyes on US and Russia (9x16)",
+                "socialHeadline": "Is Europe arming for war? Continent increases military spending with eyes on US and Russia (9x16)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "programmes.av.p01wjx5y.page",
+                  "contentId": "urn:bbc:pips:pid:p01wjx5y",
+                  "producer": "PROGRAMMES"
+                }
+              },
+              "description": "Europe is in a kind of 'arms race' amid the alliance crisis",
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Europe is in a kind of 'arms race' amid the alliance crisis",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Europe is in a kind of 'arms race' amid the alliance crisis",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "lastPublished": "2025-03-27T15:07:22Z",
+              "firstPublished": null,
+              "video": {
+                "id": "p01wjx5y",
+                "title": "Is Europe arming for war? Continent increases military spending with eyes on US and Russia (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx8v.jpg",
+                  "altText": "Europe is in a kind of 'arms race' amid the alliance crisis",
+                  "width": 546,
+                  "height": 972,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx60",
+                  "duration": "PT30S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "nonuk",
+                    "uk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": false,
+                "isEmbeddingAllowed": true,
+                "isUnavailable": false
+              },
+              "attributions": null,
+              "link": {
+                "path": "/programmes/p01wjx5y"
+              },
+              "section": null,
+              "isSharingAllowed": true,
+              "reactions": null
+            },
+            {
+              "id": "urn:bbc:pips:pid:p01wjx4r",
+              "urns": {
+                "pipsPid": "urn:bbc:pips:pid:p01wjx4r"
+              },
+              "images": [
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx5j.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx5j.jpg",
+                  "altText": "The New Silk Road, or Belt and Road, is considered the largest strategy",
+                  "type": "socialImage",
+                  "source": "pipsImage",
+                  "height": 1728,
+                  "width": 972,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx5j.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx5j.jpg",
+                  "altText": "The New Silk Road, or Belt and Road, is considered the largest strategy",
+                  "type": "promoImage",
+                  "source": "pipsImage",
+                  "height": 1728,
+                  "width": 972,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": "p01wjx4r",
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "China: what is the New Silk Road, crucial to Beijing's geopolitical strategy (9x16)",
+                "seoHeadline": "China: what is the New Silk Road, crucial to Beijing's geopolitical strategy (9x16)",
+                "promoHeadline": "China: what is the New Silk Road, crucial to Beijing's geopolitical strategy (9x16)",
+                "socialHeadline": "China: what is the New Silk Road, crucial to Beijing's geopolitical strategy (9x16)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "programmes.av.p01wjx4r.page",
+                  "contentId": "urn:bbc:pips:pid:p01wjx4r",
+                  "producer": "PROGRAMMES"
+                }
+              },
+              "description": "The New Silk Road, or Belt and Road, is considered the largest strategy",
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "The New Silk Road, or Belt and Road, is considered the largest strategy",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "The New Silk Road, or Belt and Road, is considered the largest strategy",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "lastPublished": "2025-03-27T15:02:02Z",
+              "firstPublished": null,
+              "video": {
+                "id": "p01wjx4r",
+                "title": "China: what is the New Silk Road, crucial to Beijing's geopolitical strategy (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx5j.jpg",
+                  "altText": "The New Silk Road, or Belt and Road, is considered the largest strategy",
+                  "width": 972,
+                  "height": 1728,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx4t",
+                  "duration": "PT1M10S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "nonuk",
+                    "uk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": true,
+                "isEmbeddingAllowed": true,
+                "isUnavailable": false
+              },
+              "attributions": null,
+              "link": {
+                "path": "/programmes/p01wjx4r"
+              },
+              "section": null,
+              "isSharingAllowed": true,
+              "reactions": null
+            },
+            {
+              "id": "urn:bbc:pips:pid:p01wjx3g",
+              "urns": {
+                "pipsPid": "urn:bbc:pips:pid:p01wjx3g"
+              },
+              "images": [
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx48.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx48.jpg",
+                  "altText": "From time to time, some mechanism of the human body is 'rediscovered' by the internet",
+                  "type": "socialImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx48.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx48.jpg",
+                  "altText": "From time to time, some mechanism of the human body is 'rediscovered' by the internet",
+                  "type": "promoImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": "p01wjx3g",
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "The trend of avoiding glucose spikes to lose weight — and why it makes sense (9x16)",
+                "seoHeadline": "The trend of avoiding glucose spikes to lose weight — and why it makes sense (9x16)",
+                "promoHeadline": "The trend of avoiding glucose spikes to lose weight — and why it makes sense (9x16)",
+                "socialHeadline": "The trend of avoiding glucose spikes to lose weight — and why it makes sense (9x16)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "programmes.av.p01wjx3g.page",
+                  "contentId": "urn:bbc:pips:pid:p01wjx3g",
+                  "producer": "PROGRAMMES"
+                }
+              },
+              "description": "From time to time, some mechanism of the human body is 'rediscovered' by the internet",
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "From time to time, some mechanism of the human body is 'rediscovered' by the internet",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "From time to time, some mechanism of the human body is 'rediscovered' by the internet",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "lastPublished": "2025-03-27T14:58:30Z",
+              "firstPublished": null,
+              "video": {
+                "id": "p01wjx3g",
+                "title": "The trend of avoiding glucose spikes to lose weight — and why it makes sense (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx48.jpg",
+                  "altText": "From time to time, some mechanism of the human body is 'rediscovered' by the internet",
+                  "width": 546,
+                  "height": 972,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx3j",
+                  "duration": "PT13S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "nonuk",
+                    "uk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": false,
+                "isEmbeddingAllowed": true,
+                "isUnavailable": false
+              },
+              "attributions": null,
+              "link": {
+                "path": "/programmes/p01wjx3g"
+              },
+              "section": null,
+              "isSharingAllowed": true,
+              "reactions": null
+            },
+            {
+              "id": "urn:bbc:pips:pid:p01wjx35",
+              "urns": {
+                "pipsPid": "urn:bbc:pips:pid:p01wjx35"
+              },
+              "images": [
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx3l.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx3l.jpg",
+                  "altText": "After 37 days of hospitalization, Pope Francis was discharged from the hospital",
+                  "type": "socialImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx3l.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx3l.jpg",
+                  "altText": "After 37 days of hospitalization, Pope Francis was discharged from the hospital",
+                  "type": "promoImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": "p01wjx35",
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "Pope Francis reunites with faithful after leaving hospital in Rome (9x16)",
+                "seoHeadline": "Pope Francis reunites with faithful after leaving hospital in Rome (9x16)",
+                "promoHeadline": "Pope Francis reunites with faithful after leaving hospital in Rome (9x16)",
+                "socialHeadline": "Pope Francis reunites with faithful after leaving hospital in Rome (9x16)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "programmes.av.p01wjx35.page",
+                  "contentId": "urn:bbc:pips:pid:p01wjx35",
+                  "producer": "PROGRAMMES"
+                }
+              },
+              "description": "After 37 days of hospitalization, Pope Francis was discharged from the hospital",
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "After 37 days of hospitalization, Pope Francis was discharged from the hospital",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "After 37 days of hospitalization, Pope Francis was discharged from the hospital",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "lastPublished": "2025-03-27T14:55:51Z",
+              "firstPublished": null,
+              "video": {
+                "id": "p01wjx35",
+                "title": "Pope Francis reunites with faithful after leaving hospital in Rome (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx3l.jpg",
+                  "altText": "After 37 days of hospitalization, Pope Francis was discharged from the hospital",
+                  "width": 546,
+                  "height": 972,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx37",
+                  "duration": "PT13S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "nonuk",
+                    "uk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": false,
+                "isEmbeddingAllowed": true,
+                "isUnavailable": false
+              },
+              "attributions": null,
+              "link": {
+                "path": "/programmes/p01wjx35"
+              },
+              "section": null,
+              "isSharingAllowed": true,
+              "reactions": null
+            },
+            {
+              "id": "urn:bbc:pips:pid:p01wjx29",
+              "urns": {
+                "pipsPid": "urn:bbc:pips:pid:p01wjx29"
+              },
+              "images": [
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx3n.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx3n.jpg",
+                  "altText": "Indian Lalit Patidar, 18, was recognized by Guinness World Records",
+                  "type": "socialImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx3n.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx3n.jpg",
+                  "altText": "Indian Lalit Patidar, 18, was recognized by Guinness World Records",
+                  "type": "promoImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": "p01wjx29",
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "The Indian recognized as the 'hairiest person in the world' (9x16)",
+                "seoHeadline": "The Indian recognized as the 'hairiest person in the world' (9x16)",
+                "promoHeadline": "The Indian recognized as the 'hairiest person in the world' (9x16)",
+                "socialHeadline": "The Indian recognized as the 'hairiest person in the world' (9x16)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "programmes.av.p01wjx29.page",
+                  "contentId": "urn:bbc:pips:pid:p01wjx29",
+                  "producer": "PROGRAMMES"
+                }
+              },
+              "description": "Indian Lalit Patidar, 18, was recognized by Guinness World Records",
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Indian Lalit Patidar, 18, was recognized by Guinness World Records",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Indian Lalit Patidar, 18, was recognized by Guinness World Records",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "lastPublished": "2025-03-27T14:52:37Z",
+              "firstPublished": null,
+              "video": {
+                "id": "p01wjx29",
+                "title": "The Indian recognized as the 'hairiest person in the world' (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx3n.jpg",
+                  "altText": "Indian Lalit Patidar, 18, was recognized by Guinness World Records",
+                  "width": 546,
+                  "height": 972,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx2c",
+                  "duration": "PT30S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "nonuk",
+                    "uk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": false,
+                "isEmbeddingAllowed": true,
+                "isUnavailable": false
+              },
+              "attributions": null,
+              "link": {
+                "path": "/programmes/p01wjx29"
+              },
+              "section": null,
+              "isSharingAllowed": true,
+              "reactions": null
+            },
+            {
+              "id": "urn:bbc:pips:pid:p01wjx1y",
+              "urns": {
+                "pipsPid": "urn:bbc:pips:pid:p01wjx1y"
+              },
+              "images": [
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8z.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8z.jpg",
+                  "altText": "Volodymyr Zelensky stated that representatives from his country and the US",
+                  "type": "socialImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8z.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8z.jpg",
+                  "altText": "Volodymyr Zelensky stated that representatives from his country and the US",
+                  "type": "promoImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": "p01wjx1y",
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "Why is it so difficult for Ukraine and Russia to make peace? (9x16)",
+                "seoHeadline": "Why is it so difficult for Ukraine and Russia to make peace? (9x16)",
+                "promoHeadline": "Why is it so difficult for Ukraine and Russia to make peace? (9x16)",
+                "socialHeadline": "Why is it so difficult for Ukraine and Russia to make peace? (9x16)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "programmes.av.p01wjx1y.page",
+                  "contentId": "urn:bbc:pips:pid:p01wjx1y",
+                  "producer": "PROGRAMMES"
+                }
+              },
+              "description": "Volodymyr Zelensky stated that representatives from his country and the US",
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Volodymyr Zelensky stated that representatives from his country and the US",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Volodymyr Zelensky stated that representatives from his country and the US",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "lastPublished": "2025-03-27T14:50:45Z",
+              "firstPublished": null,
+              "video": {
+                "id": "p01wjx1y",
+                "title": "Why is it so difficult for Ukraine and Russia to make peace? (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx8z.jpg",
+                  "altText": "Volodymyr Zelensky stated that representatives from his country and the US",
+                  "width": 546,
+                  "height": 972,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx20",
+                  "duration": "PT46S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "nonuk",
+                    "uk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": true,
+                "isEmbeddingAllowed": true,
+                "isUnavailable": false
+              },
+              "attributions": null,
+              "link": {
+                "path": "/programmes/p01wjx1y"
+              },
+              "section": null,
+              "isSharingAllowed": true,
+              "reactions": null
+            }
+          ]
+        }
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Template article 4",
+            "firstPublished": "2023-08-15T14:12:01.110Z",
+            "lastPublished": "2023-08-15T14:12:01.110Z",
+            "link": "https://www.bbc.com/mundo/articles/c0ny73k281vo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/4414/test/146c2c30-3b75-11ee-93b4-83c41441672b.jpg.webp",
+            "description": "Probo lorem partem pro ex, unum prima expetenda eos ne. Melius viderer quaestio nec te.",
+            "imageAlt": "Bird",
+            "id": "c0ny73k281vo"
+          },
+          {
+            "type": "video",
+            "duration": "PT54S",
+            "isLive": false,
+            "title": "Video Test",
+            "firstPublished": "2022-10-27T16:32:50.346Z",
+            "lastPublished": "2022-10-27T16:32:50.346Z",
+            "link": "https://www.bbc.com/pidgin/articles/cvl1jnp2nrqo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "cvl1jnp2nrqo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Israeli tanks shell Jabalia camp as heavy fighting continues in north Gaza",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/pidgin/live/c7p765ynk9qt",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "description": "The refugee camp has been hit by hundreds of shells, where Hamas says 100,000 people are still sheltering",
+            "id": "c7p765ynk9qt"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:c7a25923-a150-4ec1-8135-68e8b13a5342",
+        "curationType": "tipo-curation",
+        "position": 3,
+        "title": "Curation Visual Style None, Prominence Normal, No VJ",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Pirâmide etária brasileira em 1940",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://flo.uri.sh/story/2070814/embed",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "https%3A%2F%2Fflo.uri.sh%2Fstory%2F2070814%2Fembed"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:f124f62b-496c-49b9-9df4-ee57a313732c",
+        "curationType": "tipo-curation",
+        "position": 5,
+        "title": "Curation with Flourish Embed",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:c7pe2jj9l7mt",
+        "contentType": "index-home",
+        "pageIdentifier": "news.page",
+        "pageTitle": "News"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}
