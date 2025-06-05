@@ -92,7 +92,7 @@ export const OJTopBarTopStories = (_, { service }) => (
   <ScrollablePromoComponent
     data={topStoriesBlocks}
     service={service}
-    experimentVariant="top_bar_top_stories"
+    experimentVariant="top-bar-top-stories"
   />
 );
 
@@ -100,7 +100,7 @@ export const OJTopBarTopStoriesWithLiveLabel = (_, { service }) => (
   <ScrollablePromoComponent
     data={topStoriesBlocksWithLiveItem}
     service={service}
-    experimentVariant="top_bar_top_stories"
+    experimentVariant="top-bar-top-stories"
   />
 );
 
@@ -108,7 +108,7 @@ export const OJTopBarMostRead = (_, { service }) => (
   <ScrollablePromoComponent
     data={mostReadBlocks}
     service={service}
-    experimentVariant="top_bar_most_read"
+    experimentVariant="top-bar-most-read"
   />
 );
 
@@ -116,6 +116,6 @@ export const OJTopBarMostReadRTL = () => (
   <ScrollablePromoComponent
     data={mostReadBlocksRTL}
     service="arabic"
-    experimentVariant="top_bar_most_read"
+    experimentVariant="top-bar-most-read"
   />
 );

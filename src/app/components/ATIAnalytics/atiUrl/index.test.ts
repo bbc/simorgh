@@ -5,7 +5,7 @@ import {
   buildATIPageTrackPath,
   buildATIEventTrackUrl,
   buildReverbAnalyticsModel,
-  buildReverbPageSectionEventModel,
+  buildReverbEventModel,
 } from '.';
 import splitUrl from './splitUrl';
 
@@ -365,6 +365,47 @@ describe('Reverb', () => {
       });
     });
 
+    it('should return the correct Reverb analytics model for AMP', () => {
+      const reverbAnalyticsModel = buildReverbAnalyticsModel({
+        ...input,
+        platform: 'amp' as Platforms,
+      });
+
+      const pageParams = {
+        contentId: 'contentId',
+        contentType: 'contentType',
+        destination: 'statsDestination',
+        name: 'pageIdentifier',
+        producer: 'producerName',
+        additionalProperties: {
+          app_name: 'news',
+          app_type: 'getAppType',
+          content_language: 'language',
+          product_platform: null,
+          referrer_url: 'getReferrer',
+          x5: 'getHref',
+          x8: 'libraryVersion',
+          x9: 'sanitise',
+          x10: '',
+          x11: 'timePublished',
+          x12: 'timeUpdated',
+          x13: 'ldpThingLabels',
+          x14: 'ldpThingIds',
+          x16: 'campaign1~campaign2',
+          x17: 'categoryName',
+          x18: 'isLocServeCookieSet',
+        },
+      };
+      const userParams = { isSignedIn: false };
+
+      expect(reverbAnalyticsModel.params.page).toEqual(pageParams);
+      expect(reverbAnalyticsModel.params.user).toEqual(userParams);
+
+      expect(reverbAnalyticsModel.eventDetails).toEqual({
+        eventName: 'pageView',
+      });
+    });
+
     it('should add experiment fields if experimentVariant is present', () => {
       const reverbAnalyticsModel = buildReverbAnalyticsModel({
         ...input,
@@ -403,7 +444,7 @@ describe('Reverb', () => {
     });
   });
 
-  describe('buildReverbPageSectionEventModel', () => {
+  describe('buildReverbEventModel', () => {
     const input = {
       pageIdentifier: 'mundo.page',
       producerName: 'MUNDO',
@@ -417,8 +458,7 @@ describe('Reverb', () => {
     };
 
     it('should return the correct Reverb page section view event model', () => {
-      const reverbPageSectionViewEventModel =
-        buildReverbPageSectionEventModel(input);
+      const reverbPageSectionViewEventModel = buildReverbEventModel(input);
 
       const pageSectionViewEventParams = {
         destination: 'statsDestination',
@@ -435,7 +475,7 @@ describe('Reverb', () => {
     });
 
     it('should return the correct Reverb page section click event model', () => {
-      const reverbPageSectionViewEventModel = buildReverbPageSectionEventModel({
+      const reverbPageSectionViewEventModel = buildReverbEventModel({
         ...input,
         type: 'click',
       });
@@ -455,18 +495,56 @@ describe('Reverb', () => {
     });
 
     it('should return the correct Reverb user object configuration', () => {
-      const reverbPageSectionViewEventModel =
-        buildReverbPageSectionEventModel(input);
+      const reverbPageSectionViewEventModel = buildReverbEventModel(input);
 
       expect(reverbPageSectionViewEventModel.params.user).toEqual({
         isSignedIn: false,
       });
     });
 
+    it('should return the correct Reverb item event model', () => {
+      const componentSpecificTrack = buildReverbEventModel({
+        ...input,
+        itemTracker: {
+          type: 'portrait-video-promo',
+          text: 'Rollercoaster facts... while riding a rollercoaster',
+          position: 1,
+          duration: 73000,
+          resourceId: 'testResourceId',
+        },
+      });
+
+      expect(componentSpecificTrack.eventDetails.item).toEqual({
+        attribution: 'advertiserID',
+        duration: 73000,
+        link: 'http://localhost',
+        name: 'top-stories',
+        position: 1,
+        resource_id: 'testResourceId',
+        text: 'Rollercoaster facts... while riding a rollercoaster',
+        type: 'portrait-video-promo',
+      });
+    });
+
+    it('should return the correct Reverb group event model', () => {
+      const blockSpecificTrack = buildReverbEventModel({
+        ...input,
+        groupTracker: {
+          itemCount: 11,
+          resourceId: 'blockLevelResourceId',
+        },
+      });
+
+      expect(blockSpecificTrack.eventDetails.group).toEqual({
+        item_count: 11,
+        name: '1234',
+        resource_id: 'blockLevelResourceId',
+      });
+    });
+
     describe('Viewability Model', () => {
       it('should return the correct event details for the Reverb page section view event model', () => {
-        const reverbPageSectionViewEventModel =
-          buildReverbPageSectionEventModel(input);
+        const reverbPageSectionViewEventModel = buildReverbEventModel(input);
 
         expect(reverbPageSectionViewEventModel.eventDetails).toEqual({
           eventName: 'sectionView',
@@ -488,11 +566,10 @@ describe('Reverb', () => {
       });
 
       it('should return the correct event details for the Reverb page section click event model', () => {
-        const reverbPageSectionViewEventModel =
-          buildReverbPageSectionEventModel({
-            ...input,
-            type: 'click',
-          });
+        const reverbPageSectionViewEventModel = buildReverbEventModel({
+          ...input,
+          type: 'click',
+        });
 
         expect(reverbPageSectionViewEventModel.eventDetails).toEqual({
           eventName: 'sectionClick',
@@ -524,8 +601,9 @@ describe('Reverb', () => {
           type: 'view',
         };
 
-        const reverbPageSectionViewEventModel =
-          buildReverbPageSectionEventModel(inputWithAdvertiserIDAndUrlMissing);
+        const reverbPageSectionViewEventModel = buildReverbEventModel(
+          inputWithAdvertiserIDAndUrlMissing,
+        );
 
         expect(reverbPageSectionViewEventModel.eventDetails).toEqual({
           eventName: 'sectionView',
@@ -545,11 +623,10 @@ describe('Reverb', () => {
       });
 
       it('should add experiment fields if experimentVariant is present', () => {
-        const reverbPageSectionViewEventModel =
-          buildReverbPageSectionEventModel({
-            ...input,
-            experimentVariant: 'variant_1',
-          });
+        const reverbPageSectionViewEventModel = buildReverbEventModel({
+          ...input,
+          experimentVariant: 'variant_1',
+        });
 
         expect(reverbPageSectionViewEventModel.eventDetails).toEqual({
           eventName: 'sectionView',

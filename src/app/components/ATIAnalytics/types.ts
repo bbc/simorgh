@@ -102,6 +102,7 @@ export interface ReverbDetailsProviders {
 export type ReverbPageVars = {
   name?: string | null;
   additionalProperties?: {
+    app_name?: string | null;
     content_language?: string | null;
     type?: string | null;
   };
@@ -162,6 +163,22 @@ export interface ATIEventTrackingProps {
   experimentVariant?: string;
   ampExperimentName?: string;
   preventNavigation?: string;
+  itemTracker?: ItemTracker;
+  groupTracker?: GroupTracker;
+  viewThreshold?: number;
+}
+
+export interface ItemTracker {
+  type?: string;
+  text?: string;
+  position?: number;
+  duration?: number;
+  resourceId?: string;
+}
+
+export interface GroupTracker {
+  itemCount?: number;
+  resourceId?: string;
 }
 
 export interface ATIPageTrackingProps {

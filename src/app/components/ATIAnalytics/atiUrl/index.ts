@@ -479,7 +479,7 @@ export const buildReverbAnalyticsModel = ({
           content_language: language,
           product_platform: onOnionTld() ? 'tor-bbc' : null,
           referrer_url: referrer,
-          x5: href && encodeURIComponent(href),
+          x5: href && (platform === 'amp' ? href : encodeURIComponent(href)),
           x8: libraryVersion,
           x9: sanitise(pageTitle),
           x10: nationsProducer && nationsProducer,
@@ -506,7 +506,7 @@ export const buildReverbAnalyticsModel = ({
   return reverbVariables;
 };
 
-export const buildReverbPageSectionEventModel = ({
+export const buildReverbEventModel = ({
   pageIdentifier,
   producerName,
   statsDestination,
@@ -516,7 +516,18 @@ export const buildReverbPageSectionEventModel = ({
   advertiserID,
   url,
   experimentVariant,
+  itemTracker = {},
+  groupTracker = {},
 }: ATIEventTrackingProps): ReverbBeaconConfig => {
+  const {
+    type: itemType,
+    text,
+    position,
+    duration,
+    resourceId: itemResourceId,
+  } = itemTracker;
+  const { itemCount, resourceId: groupResourceId } = groupTracker;
+
   return {
     params: {
       page: {
@@ -538,9 +549,16 @@ export const buildReverbPageSectionEventModel = ({
         ...(advertiserID && { attribution: advertiserID }),
         name: componentName,
         ...(url && { link: url }),
+        ...(itemType && { type: itemType }),
+        ...(text && { text }),
+        ...(position && { position }),
+        ...(duration && { duration }),
+        ...(itemResourceId && { resource_id: itemResourceId }),
       },
       group: {
         name: campaignID,
+        ...(itemCount && { item_count: itemCount }),
+        ...(groupResourceId && { resource_id: groupResourceId }),
       },
       event: {
         category: 'viewability',

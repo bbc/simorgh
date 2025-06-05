@@ -244,7 +244,7 @@ describe('Image - Canonical', () => {
 
 describe('Image - AMP pages', () => {
   it('should preload when preload is true', async () => {
-    render(<Fixture isAmp preload />);
+    render(<Fixture preload />, { isAmp: true });
 
     await waitFor(() => {
       const linkEl = document.head.querySelector('link');
@@ -264,7 +264,7 @@ describe('Image - AMP pages', () => {
   });
 
   it('should not preload when preload is false', async () => {
-    render(<Fixture isAmp preload={false} />);
+    render(<Fixture preload={false} />, { isAmp: true });
 
     await waitFor(() => {
       const linkEl = document.head.querySelector('link');
@@ -274,7 +274,7 @@ describe('Image - AMP pages', () => {
   });
 
   it('should not preload by default', async () => {
-    render(<Fixture isAmp />);
+    render(<Fixture />, { isAmp: true });
 
     await waitFor(() => {
       const linkEl = document.head.querySelector('link');
@@ -284,7 +284,7 @@ describe('Image - AMP pages', () => {
   });
 
   it('should render 2 nested amp-img tags both with alt text', () => {
-    render(<Fixture isAmp />);
+    render(<Fixture />, { isAmp: true });
 
     const imageEls = screen.getAllByAltText('Test image alt text');
     expect(imageEls.length).toBe(1);
@@ -292,7 +292,7 @@ describe('Image - AMP pages', () => {
   });
 
   it('should render jpg image', () => {
-    render(<Fixture isAmp />);
+    render(<Fixture />, { isAmp: true });
 
     const imageEls = screen.getAllByAltText('Test image alt text');
     expect(imageEls[0]).toHaveAttribute(
@@ -302,7 +302,7 @@ describe('Image - AMP pages', () => {
   });
 
   it('should render image with correct width and height attributes', () => {
-    render(<Fixture isAmp />);
+    render(<Fixture />, { isAmp: true });
 
     const imageEl = screen.getAllByAltText('Test image alt text');
     expect(imageEl[0]).toHaveAttribute('width', '500');
@@ -310,7 +310,7 @@ describe('Image - AMP pages', () => {
   });
 
   it('should render a placeholder image by default', () => {
-    render(<Fixture isAmp />);
+    render(<Fixture />, { isAmp: true });
     const imageEl = screen.getAllByAltText('Test image alt text')[0];
 
     expect(imageEl.parentNode).toHaveStyle({
@@ -319,7 +319,7 @@ describe('Image - AMP pages', () => {
   });
 
   it('should render a placeholder image when placeholder is true', () => {
-    render(<Fixture isAmp />);
+    render(<Fixture />, { isAmp: true });
     const imageEl = screen.getAllByAltText('Test image alt text')[0];
     expect(imageEl.parentNode).toHaveStyle({
       backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
@@ -327,7 +327,7 @@ describe('Image - AMP pages', () => {
   });
 
   it('should render a dark placeholder image when darkPlaceholder is true', () => {
-    render(<Fixture isAmp darkPlaceholder />);
+    render(<Fixture darkPlaceholder />, { isAmp: true });
     const imageEl = screen.getAllByAltText('Test image alt text')[0];
     expect(imageEl.parentNode).toHaveStyle({
       backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
@@ -336,7 +336,7 @@ describe('Image - AMP pages', () => {
   });
 
   it('should not render a placeholder image when placeholder is false', () => {
-    render(<Fixture placeholder={false} isAmp />);
+    render(<Fixture placeholder={false} />, { isAmp: true });
     const imageEl = screen.getAllByAltText('Test image alt text')[0];
     expect(imageEl.parentNode).not.toHaveStyle({
       backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
@@ -344,7 +344,7 @@ describe('Image - AMP pages', () => {
   });
 
   it('should render the container with an aspect ratio based on width and height', () => {
-    render(<Fixture isAmp />);
+    render(<Fixture />, { isAmp: true });
 
     const imageEl = screen.getAllByAltText('Test image alt text')[0];
 
@@ -354,7 +354,7 @@ describe('Image - AMP pages', () => {
   });
 
   it('should render the container with no fixed aspect ratio if no width, height or aspect ratio is provided', () => {
-    render(<Fixture width={undefined} height={undefined} isAmp />);
+    render(<Fixture width={undefined} height={undefined} />, { isAmp: true });
 
     const imageEl = screen.getAllByAltText('Test image alt text')[0];
 
@@ -365,12 +365,8 @@ describe('Image - AMP pages', () => {
 
   it('should render the container with a custom aspect ratio when provided', () => {
     render(
-      <Fixture
-        aspectRatio={[4, 3]}
-        width={undefined}
-        height={undefined}
-        isAmp
-      />,
+      <Fixture aspectRatio={[4, 3]} width={undefined} height={undefined} />,
+      { isAmp: true },
     );
 
     const imageEl = screen.getAllByAltText('Test image alt text')[0];
@@ -381,7 +377,7 @@ describe('Image - AMP pages', () => {
   });
 
   it('should render the container with a custom aspect ratio that overrides aspect ratio based on image width and height', () => {
-    render(<Fixture aspectRatio={[4, 3]} isAmp />);
+    render(<Fixture aspectRatio={[4, 3]} />, { isAmp: true });
 
     const imageEl = screen.getAllByAltText('Test image alt text')[0];
 
@@ -393,11 +389,11 @@ describe('Image - AMP pages', () => {
   it('should match markup for basic image', () => {
     const { container } = render(
       <Image
-        isAmp
         alt="Test image alt text"
         src="/test-image-500.jpg"
         aspectRatio={[16, 9]}
       />,
+      { isAmp: true },
     );
 
     expect(removeStyles(container)).toMatchInlineSnapshot(`
@@ -417,12 +413,12 @@ describe('Image - AMP pages', () => {
   it('should match markup for a responsive image', () => {
     const { container } = render(
       <Image
-        isAmp
         alt="Test image alt text"
         src="/test-image-500.jpg"
         srcSet="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
         aspectRatio={[16, 9]}
       />,
+      { isAmp: true },
     );
 
     expect(removeStyles(container)).toMatchInlineSnapshot(`
@@ -443,7 +439,6 @@ describe('Image - AMP pages', () => {
   it('should match markup for a responsive jpg image', () => {
     const { container } = render(
       <Image
-        isAmp
         alt="Test image alt text"
         src="/test-image-500.webp"
         srcSet="/test-image-200.webp 200w, /test-image-500.webp 500w"
@@ -453,6 +448,7 @@ describe('Image - AMP pages', () => {
         fallbackMediaType="image/jpeg"
         aspectRatio={[16, 9]}
       />,
+      { isAmp: true },
     );
 
     expect(removeStyles(container)).toMatchInlineSnapshot(`

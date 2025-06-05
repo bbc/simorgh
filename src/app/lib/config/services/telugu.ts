@@ -57,6 +57,7 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'అన్నీ చూడండి',
       home: 'హోమ్',
+      continueReading: 'ఇంకా చదవండి',
       currentPage: 'ప్రస్తుత పేజీ',
       skipLinkText: 'కంటెంట్‌కు వెళ్లండి',
       relatedContent: 'సంబంధిత కథనాలు',

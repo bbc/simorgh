@@ -99,7 +99,7 @@ const testSuites = [
     tests,
   },
   {
-    path: '/urdu/bbc_urdu_tv/tv/w172xtwkxr1xtlz.lite',
+    path: '/urdu/bbc_urdu_tv/tv/w172xtwfxsl890n.lite',
     runforEnv,
     pageType: 'On Demand TV - Episode',
     tests,
