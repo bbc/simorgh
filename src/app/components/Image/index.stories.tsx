@@ -1,40 +1,21 @@
 import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
-import Image from '.';
+import Image, { ImageProps } from '.';
 import md from './README.md';
 
-type ImgWithAmpProps = {
-  alt: string;
-  src: string;
-  srcSet?: string;
-  mediaType?: string;
-  fallbackSrcSet?: string;
-  fallbackMediaType?: string;
-};
-
-const ImgWithAmp = ({
-  alt,
-  src,
-  srcSet,
-  mediaType,
-  fallbackSrcSet,
-  fallbackMediaType,
-}: ImgWithAmpProps) => (
+const ImgWithAmp = (props: ImageProps) => (
   <RequestContextProvider
     isAmp
     pageType="article"
     pathname="/afaanoromoo"
     service="afaanoromoo"
   >
-    <Image
-      alt={alt}
-      src={src}
-      srcSet={srcSet}
-      mediaType={mediaType}
-      fallbackSrcSet={fallbackSrcSet}
-      fallbackMediaType={fallbackMediaType}
-    />
+    <div style={{ height: '100vh' }}>
+      <div style={{ height: '40vh' }}>
+        <Image {...props} />
+      </div>
+    </div>
   </RequestContextProvider>
 );
 
