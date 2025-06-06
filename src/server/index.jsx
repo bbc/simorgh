@@ -244,7 +244,7 @@ server.get(
         isAmp,
       });
 
-      const { isUK, showCookieBannerBasedOnCountry, ECT, DeviceMemory } =
+      const { isUK, showCookieBannerBasedOnCountry, ECT } =
         extractHeaders(headers);
 
       data.toggles = toggles;
@@ -254,7 +254,7 @@ server.get(
       data.showCookieBannerBasedOnCountry = showCookieBannerBasedOnCountry;
       data.isUK = isUK;
       data.isLite =
-        isLite || ['slow-2g', '2g', '3g'].includes(ECT) || DeviceMemory < 1;
+        isLite || ['slow-2g', '2g', '3g'].includes(ECT);
 
       let { status } = data;
       // Set derivedPageType based on returned page data
@@ -348,8 +348,9 @@ server.get(
           'onion-location',
           `https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion${urlPath}`,
         );
-        const clientHints = 'ECT,Device-Memory';
+        const clientHints = 'ECT';
         res.set('accept-ch', clientHints);
+        res.set('critical-ch', clientHints);
 
         const allVaryHeaders = ['X-Country', ...clientHints.split(',')];
         const mvtVaryHeaders = !isAmp && getMvtVaryHeaders(mvtExperiments);
