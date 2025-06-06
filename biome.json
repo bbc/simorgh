@@ -2,15 +2,22 @@
   "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
   "vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
   "files": { "ignoreUnknown": false, "ignore": ["cypress"] },
-  "formatter": { "enabled": true, "indentStyle": "tab" },
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "lineWidth": 80,
+    "attributePosition": "auto",
+    "bracketSpacing": true
+  },
   "organizeImports": { "enabled": true },
   "linter": {
     "enabled": true,
     "rules": {
       "recommended": false,
-      "a11y": {
-        "useKeyWithClickEvents": "error"
-      },
+      "a11y": { "useKeyWithClickEvents": "error" },
       "correctness": {
         "noUndeclaredVariables": "error",
         "useExhaustiveDependencies": "warn",
@@ -21,15 +28,12 @@
         "noDangerouslySetInnerHtmlWithChildren": "error",
         "noGlobalEval": "error"
       },
-      "style": {
-        "noParameterAssign": "error",
-        "useImportType": "off"
-      },
+      "style": { "noParameterAssign": "error", "useImportType": "off" },
       "suspicious": {
         "noArrayIndexKey": "error",
         "noAssignInExpressions": "error",
-        "noExplicitAny": "off",
         "noConsole": "warn",
+        "noExplicitAny": "off",
         "noGlobalAssign": "error",
         "useValidTypeof": "error"
       }
@@ -45,7 +49,12 @@
     ]
   },
   "javascript": {
-    "formatter": { "quoteStyle": "double" },
+    "formatter": {
+      "trailingCommas": "all",
+      "semicolons": "always",
+      "arrowParentheses": "asNeeded",
+      "quoteStyle": "single"
+    },
     "globals": [
       "React",
       "BufferEncoding",
