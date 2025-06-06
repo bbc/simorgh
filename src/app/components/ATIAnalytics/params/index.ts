@@ -3,6 +3,7 @@ import {
   buildPageATIParams,
   buildPageReverbParams,
 } from './buildParams';
+import { sanitizeUrl } from '../../../lib/analyticsUtils';
 import {
   ATIConfigurationDetailsProviders,
   ReverbDetailsProviders,
@@ -13,7 +14,8 @@ export const buildATIUrl = ({
   serviceContext,
   atiData,
 }: ATIConfigurationDetailsProviders) => {
-  return buildPageATIUrl({ atiData, requestContext, serviceContext });
+  const rawUrl = buildPageATIUrl({ atiData, requestContext, serviceContext });
+  return sanitizeUrl(rawUrl);
 };
 
 export const buildReverbParams = ({

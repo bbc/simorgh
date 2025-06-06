@@ -2,6 +2,12 @@ import Cookie from 'js-cookie';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import Url from 'url-parse';
+
+export const sanitizeUrl = url => {
+  const div = document.createElement('div');
+  div.innerText = url;
+  return div.innerHTML;
+};
 import onClient from '#lib/utilities/onClient';
 import getUUID from '#lib/utilities/getUUID';
 import isOperaProxy from '#lib/utilities/isOperaProxy';
