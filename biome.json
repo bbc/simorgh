@@ -1,7 +1,23 @@
 {
   "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
   "vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
-  "files": { "ignoreUnknown": false, "ignore": ["cypress"] },
+  "files": {
+    "ignoreUnknown": false,
+    "include": [
+      "./src/**/*",
+      "./ws-nextjs-app/**/*",
+      "./data/**/*",
+      "./webpack.config*"
+    ],
+    "ignore": [
+      "cypress",
+      "./src/integration/**/*",
+      "./ws-nextjs-app/integration/**/*",
+      "./ws-nextjs-app/public/**/*",
+      "./ws-nextjs-app/build/**/*",
+      "src/app/hooks/useImageColour/colorthief.js"
+    ]
+  },
   "formatter": {
     "enabled": true,
     "formatWithErrors": false,
@@ -10,17 +26,7 @@
     "lineEnding": "lf",
     "lineWidth": 80,
     "attributePosition": "auto",
-    "bracketSpacing": true,
-    "include": [
-      "./src/**/*",
-      "./data/**/*",
-      "./cypress/**/*",
-      "./webpack.config*"
-    ],
-    "ignore": [
-      "./src/integration/**/*",
-      "src/app/hooks/useImageColour/colorthief.js"
-    ]
+    "bracketSpacing": true
   },
   "organizeImports": { "enabled": true },
   "linter": {
@@ -47,17 +53,7 @@
         "noGlobalAssign": "error",
         "useValidTypeof": "error"
       }
-    },
-    "include": [
-      "./src/**/*",
-      "./data/**/*",
-      "./cypress/**/*",
-      "./webpack.config*"
-    ],
-    "ignore": [
-      "./src/integration/**/*",
-      "src/app/hooks/useImageColour/colorthief.js"
-    ]
+    }
   },
   "javascript": {
     "formatter": {
