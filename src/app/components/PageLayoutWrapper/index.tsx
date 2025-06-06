@@ -7,6 +7,8 @@ import { Helmet } from 'react-helmet';
 
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
 import { PageTypes } from '#app/models/types/global';
+import useOptimizelyMvtVariation from '#app/hooks/useOptimizelyMvtVariation';
+import OPTIMIZELY_CONFIG from '#app/lib/config/optimizely';
 import { TopStoryItem } from '../../pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import WebVitals from '../../legacy/containers/WebVitals';
 import HeaderContainer from '../../legacy/containers/Header';
@@ -58,6 +60,9 @@ const PageLayoutWrapper = ({
   const reportingPageType = pageType?.replace(/ /g, '');
   let wordCount: wordCountType = 0;
   let propsForOJExperiment = {};
+  const experimentVariant = useOptimizelyMvtVariation(
+    OPTIMIZELY_CONFIG.ruleKey,
+  );
   if (pageType === 'article') {
     wordCount = pageData?.content?.model?.blocks
       ?.filter(block => block.type === 'text')
@@ -74,27 +79,15 @@ const PageLayoutWrapper = ({
 
     const topStories = pageData.secondaryColumn?.topStories;
     const mostReadItems = pageData.mostRead?.items;
-    const servicesForVariantA = ['pidgin', 'hindi', 'urdu', 'uzbek', 'hausa'];
-    const servicesForVariantB = ['mundo', 'burmese', 'arabic'];
 
-    let variantValue;
-
-    if (servicesForVariantA.includes(service)) {
-      variantValue = 'A';
-    } else if (servicesForVariantB.includes(service)) {
-      variantValue = 'B';
-    } else {
-      variantValue = 'none';
-    }
-    const experimentVariant: 'A' | 'B' | 'none' = ['A', 'B'].includes(
-      variantValue,
-    )
-      ? (variantValue as 'A' | 'B')
-      : 'none';
     let dataForOJExperiment;
-    if (experimentVariant === 'A') {
+    if (
+      ['top-bar-top-stories', 'read-more-a-and-top-stories'].includes(
+        experimentVariant,
+      )
+    ) {
       dataForOJExperiment = topStories;
-    } else if (experimentVariant === 'B' && mostReadItems) {
+    } else if (experimentVariant === 'top-bar-most-read' && mostReadItems) {
       dataForOJExperiment = mostReadItems;
     }
 

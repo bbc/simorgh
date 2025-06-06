@@ -57,6 +57,7 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'అన్నీ చూడండి',
       home: 'హోమ్',
+      continueReading: 'ఇంకా చదవండి',
       currentPage: 'ప్రస్తుత పేజీ',
       skipLinkText: 'కంటెంట్‌కు వెళ్లండి',
       relatedContent: 'సంబంధిత కథనాలు',
@@ -274,7 +275,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'తాజా వార్తలు',
     },
     mostRead: {
-      header: 'ఎక్కువమంది చదివినవి',
+      header: 'పాపులర్',
       lastUpdated: 'చివరిగా అప్‌డేట్ అయిన తేదీ:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -283,7 +284,11 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'ఎక్కువమంది చదివినవి',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

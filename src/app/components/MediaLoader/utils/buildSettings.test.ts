@@ -18,6 +18,7 @@ import buildSettings from './buildSettings';
 import {
   aresMediaBlocks,
   clipMediaBlocks,
+  homePagePortraitClipMediaBlocks,
   buildAresMediaPlayerBlock,
   aresMediaBlock,
   aresMediaLiveStreamBlocks,
@@ -132,6 +133,61 @@ describe('buildSettings', () => {
       expect(result?.playerConfig.playlistObject?.items[0]).toStrictEqual({
         kind: 'advert',
       });
+    });
+  });
+
+  describe('Portrait Clip Media', () => {
+    it('Should return a playlist of portrait video items for the homepage', () => {
+      const result = buildSettings({
+        ...baseSettings,
+        blocks: homePagePortraitClipMediaBlocks as MediaBlock[],
+        pageType: 'home',
+      });
+
+      expect(result?.playerConfig.playlistObject?.items).toEqual([
+        {
+          versionID: 'p0abc002',
+          kind: 'programme',
+          duration: 60,
+          embedRights: 'allowed',
+          vpid: 'p0abc001',
+          serviceID: 'bbc_world_service',
+          title: 'Portrait Video 1',
+          guidance: undefined,
+          territories: ['bbc_world_service'],
+          images: [
+            {},
+            {
+              urlTemplate:
+                'https://ichef.bbci.co.uk/images/ic/{width}xn/p0abc001.jpg',
+              source: 'www.test.bbc.com/aportraitmediathing',
+            },
+          ],
+          holdingImageURL:
+            'https://ichef.bbci.co.uk/images/ic/512xn/p0abc001.jpg',
+        },
+        {
+          versionID: 'p0abc004',
+          kind: 'programme',
+          duration: 120,
+          embedRights: 'allowed',
+          vpid: 'p0abc003',
+          serviceID: 'bbc_world_service',
+          title: 'Portrait Video 2',
+          guidance: undefined,
+          territories: ['bbc_world_service'],
+          images: [
+            {},
+            {
+              urlTemplate:
+                'https://ichef.bbci.co.uk/images/ic/{width}xn/p0abc002.jpg',
+              source: 'www.test.bbc.com/aportraitmediathing',
+            },
+          ],
+          holdingImageURL:
+            'https://ichef.bbci.co.uk/images/ic/512xn/p0abc002.jpg',
+        },
+      ]);
     });
   });
 
@@ -359,6 +415,14 @@ describe('buildSettings', () => {
             holdingImageURL:
               'http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/12/08/131208135805_iraq_blast_640x360_bbc_nocredit.jpg',
             items: [
+              {
+                href: 'https://wsodprogrf.akamaized.net/arabic/3gp/2013/12/iraqblast_16x9_lo.3gp',
+                kind: 'programme',
+              },
+              {
+                href: 'https://wsodprogrf.akamaized.net/zhongwen/simp/3gp/2013/12/iraqblast_16x9_hi.3gp',
+                kind: 'programme',
+              },
               {
                 href: 'https://wsodprogrf.akamaized.net/arabic/dps/2013/12/iraqblast_16x9_lo.mp4',
                 kind: 'programme',

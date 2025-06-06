@@ -94,8 +94,8 @@ exports[`Canonical Send Header Navigation link should match text and url 3`] = `
 
 exports[`Canonical Send Header Navigation link should match text and url 4`] = `
 {
-  "text": "Hay Festival",
-  "url": "/mundo/topics/cr50y7p7qyqt",
+  "text": "EE.UU.",
+  "url": "/mundo/topics/cdr5613yzwqt",
 }
 `;
 
@@ -131,6 +131,20 @@ exports[`Canonical Send Header Navigation link should match text and url 9`] = `
 {
   "text": "Tecnología",
   "url": "/mundo/topics/cyx5krnw38vt",
+}
+`;
+
+exports[`Canonical Send Header Navigation link should match text and url 10`] = `
+{
+  "text": "Hay Festival",
+  "url": "/mundo/topics/cr50y7p7qyqt",
+}
+`;
+
+exports[`Canonical Send Header Navigation link should match text and url 11`] = `
+{
+  "text": "Centroamérica cuenta",
+  "url": "/mundo/topics/c404v5z1k8wt",
 }
 `;
 

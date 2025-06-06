@@ -57,14 +57,25 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'Publicités',
       },
-      recommendationTitle: 'Recommended articles',
       seeAll: 'Tout voir',
       home: 'Accueil',
+      continueReading: 'Continuer la lecture',
       currentPage: 'Page en cours',
       skipLinkText: 'Aller au contenu',
       relatedContent: 'Lire plus',
       relatedTopics: 'Sujets associés',
       navMenuText: 'Rubriques',
+      liteSite: {
+        onboardingMessage:
+          'Vous visualisez une version texte de ce site web qui utilise moins de données. Voir la version principale du site, avec toutes les images et vidéos.',
+        toMainSite: 'Me rediriger vers le site principal',
+        informationPage: 'En savoir plus sur cette version économe en données',
+        informationPageLink:
+          'https://www.bbc.com/afrique/articles/c861e868x5eo',
+        dataSaving: 'Lire uniquement le texte pour utiliser moins de données',
+        articleDataSavingLinkText:
+          'Lire uniquement le texte pour utiliser moins de données',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Lecteur média',
         audioPlayer: 'Lecteur audio',
@@ -273,7 +284,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'Le choix de la rédaction',
     },
     mostRead: {
-      header: 'Les plus lus',
+      header: 'Les plus populaires',
       lastUpdated: 'Dernière mise à jour:',
       numberOfItems: 5,
       hasMostRead: true,
@@ -284,7 +295,7 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'Durée %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'Les plus lus',
       skipLink: {
         text: 'Skip %title% and continue reading',
         endTextVisuallyHidden: 'End of %title%',
@@ -375,10 +386,12 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Vidéos',
         url: '/afrique/topics/cz4vn9gyd6rt',
+        hideOnLiteSite: true,
       },
       {
         title: 'Nos émissions',
         url: '/afrique/topics/c88nzggm8gxt',
+        hideOnLiteSite: true,
       },
     ],
   },

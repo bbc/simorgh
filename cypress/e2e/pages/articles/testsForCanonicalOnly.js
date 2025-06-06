@@ -3,6 +3,7 @@ import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import envConfig from '../../../support/config/envs';
 import appToggles from '../../../support/helpers/useAppToggles';
 import { getBlockData, getBlockByType, getVideoEmbedUrl } from './helpers';
+import runIfToggleEnabled from '../../../support/helpers/runIfToggleEnabled';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasCaption = service => service === 'news';
@@ -72,18 +73,37 @@ export default ({ service, pageType, variant = 'default' }) =>
       });
     }
 
+    it('should have a lite site link', function test() {
+      runIfToggleEnabled({
+        service,
+        toggleName: 'articleLiteSiteLink',
+        testContext: this,
+      });
+      cy.get('[data-e2e="article-lite-site-link"]').within(() => {
+        cy.get('a')
+          .should('have.attr', 'href')
+          .then($href => {
+            cy.get('a').click();
+            cy.url().should('contain', $href).should('contain', '.lite');
+          });
+      });
+      cy.go('back');
+    });
+
     describe('Media Player: Canonical', () => {
       it('should render a visible placeholder image', () => {
         cy.window().then(win => {
           const media = getBlockData('video', win.SIMORGH_DATA.pageData);
 
           if (media) {
-            cy.get('[data-e2e="media-loader__container"]').within(() => {
-              cy.get('[data-e2e="media-loader__placeholder"] img')
-                .should('be.visible')
-                .should('have.attr', 'src')
-                .should('not.be.empty');
-            });
+            cy.get('[data-e2e="media-loader__container"]')
+              .first()
+              .within(() => {
+                cy.get('[data-e2e="media-loader__placeholder"] img')
+                  .should('be.visible')
+                  .should('have.attr', 'src')
+                  .should('not.be.empty');
+              });
           }
         });
       });
@@ -123,17 +143,19 @@ export default ({ service, pageType, variant = 'default' }) =>
             const aresMediaBlocks = media.model.blocks[1].model.blocks[0];
             const { durationISO8601 } = aresMediaBlocks.model.versions[0];
 
-            cy.get('[data-e2e="media-loader__container"]').within(() => {
-              cy.get('button')
-                .should('be.visible')
-                .within(() => {
-                  cy.get('svg').should('be.visible');
-                  cy.get('time')
-                    .should('be.visible')
-                    .should('have.attr', 'datetime')
-                    .and('eq', durationISO8601);
-                });
-            });
+            cy.get('[data-e2e="media-loader__container"]')
+              .first()
+              .within(() => {
+                cy.get('button')
+                  .should('be.visible')
+                  .within(() => {
+                    cy.get('svg').should('be.visible');
+                    cy.get('time')
+                      .should('be.visible')
+                      .should('have.attr', 'datetime')
+                      .and('eq', durationISO8601);
+                  });
+              });
           }
         });
       });

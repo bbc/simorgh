@@ -20,7 +20,6 @@ type Props = {
   fallbackMediaType?: string;
   fallbackSrcSet?: string;
   height?: number;
-  isAmp?: boolean;
   lazyLoad?: boolean;
   placeholder?: boolean;
   darkPlaceholder?: boolean;
@@ -48,7 +47,6 @@ const Image = ({
   fallbackMediaType,
   fallbackSrcSet,
   height,
-  isAmp = false,
   lazyLoad = false,
   placeholder = true,
   darkPlaceholder = false,
@@ -62,7 +60,7 @@ const Image = ({
   fetchPriority,
   hasCaption,
 }: PropsWithChildren<Props>) => {
-  const { pageType, isLite } = useContext(RequestContext);
+  const { pageType, isLite, isAmp } = useContext(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
   if (isLite) return null;
 
@@ -174,7 +172,7 @@ const Image = ({
               {...(srcSet && { srcSet: imgSrcSet })}
               {...(imgSizes && { sizes: imgSizes })}
               alt={alt}
-              loading={lazyLoad ? 'lazy' : undefined}
+              loading={lazyLoad ? 'lazy' : 'eager'}
               width={width}
               height={height}
               css={[

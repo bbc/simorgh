@@ -46,7 +46,7 @@ const StyledList = styled.li`
       @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}){
         margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING};
         &:first-child {
-          margin-${dir === 'ltr' ? 'left' : 'right'}: ${experimentVariant && experimentVariant !== 'none' ? 0 : GEL_SPACING};
+          margin-${dir === 'ltr' ? 'left' : 'right'}: ${experimentVariant && experimentVariant !== 'off' ? 0 : GEL_SPACING};
         }
         &:last-child {
           margin-${dir === 'ltr' ? 'right' : 'left'}: ${GEL_SPACING};
@@ -56,7 +56,7 @@ const StyledList = styled.li`
         margin-${dir === 'ltr' ? `left` : `right`}: ${GEL_SPACING_DBL};  
 
         &:first-child {
-          margin-${dir === 'ltr' ? 'left' : 'right'}: ${experimentVariant && experimentVariant !== 'none' ? 0 : GEL_SPACING_DBL};
+          margin-${dir === 'ltr' ? 'left' : 'right'}: ${experimentVariant && experimentVariant !== 'off' ? 0 : GEL_SPACING_DBL};
         }
       }
       @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}){
@@ -83,22 +83,25 @@ const PromoList = ({
   blocks,
   experimentVariant,
   viewTracker,
-  onClick,
-  ...a11yAttributes
+  clickTracker,
+  a11yAttributes,
 }) => {
   const { dir } = useContext(ServiceContext);
   const isOperaMini = useOperaMiniDetection();
   const listBlocks =
-    experimentVariant === 'B' ? blocks.slice(0, 5) : blocks.slice(0, 3);
+    experimentVariant === 'top-bar-most-read'
+      ? blocks.slice(0, 5)
+      : blocks.slice(0, 3);
 
   const ScrollPromo = isOperaMini ? OperaScrollPromo : StandardScrollPromo;
   const List = isOperaMini ? OperaStyledList : StyledList;
+
   return (
     <ScrollPromo
       dir={dir}
       role="list"
       isOperaMini={isOperaMini}
-      ref={viewTracker}
+      {...viewTracker}
       {...a11yAttributes}
     >
       {listBlocks.map((block, index) => {
@@ -112,7 +115,7 @@ const PromoList = ({
             <Promo
               block={block}
               experimentVariant={experimentVariant}
-              onClick={onClick}
+              clickTracker={clickTracker}
             />
           </List>
         );

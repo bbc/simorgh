@@ -101,7 +101,7 @@ const TimeStamp = styled(PromoTimestamp)`
   color: ${({ theme }) => theme.isDarkUi && theme.palette.GREY_6};
 `;
 
-const Promo = ({ block, experimentVariant, onClick }) => {
+const Promo = ({ block, experimentVariant, clickTracker }) => {
   const { script, service, serviceDatetimeLocale } = useContext(ServiceContext);
   let title;
   let href;
@@ -109,8 +109,10 @@ const Promo = ({ block, experimentVariant, onClick }) => {
   let aresLinkBlock;
   let timestamp;
   let isLive;
+
   switch (experimentVariant) {
-    case 'A': {
+    case 'top-bar-top-stories':
+    case 'read-more-a-and-top-stories': {
       const overtypedHeadline = block?.headlines?.overtyped ?? '';
       const mainHeadline = block?.headlines?.headline ?? '';
       const headlineBlockText =
@@ -140,7 +142,7 @@ const Promo = ({ block, experimentVariant, onClick }) => {
       isLive = block.isLive;
       break;
     }
-    case 'B':
+    case 'top-bar-most-read':
       title = block.title;
       href = block.href;
       break;
@@ -177,7 +179,7 @@ const Promo = ({ block, experimentVariant, onClick }) => {
         href={href}
         service={service}
         script={script}
-        onClick={onClick}
+        {...clickTracker}
         experimentVariant={experimentVariant}
       >
         {isLive && <LiveLabel />}

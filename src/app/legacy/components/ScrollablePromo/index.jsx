@@ -54,7 +54,7 @@ const ScrollablePromoContainer = styled.div`
   }
   ${({ experimentVariant }) =>
     experimentVariant &&
-    experimentVariant !== 'none' &&
+    experimentVariant !== 'off' &&
     `
     padding: 0 ${GEL_SPACING} ${GEL_SPACING_DBL};
     margin: 0rem;
@@ -154,22 +154,32 @@ const ScrollablePromo = ({
 }) => {
   const { script, service, dir, translations, mostRead } =
     useContext(ServiceContext);
+
   const eventTrackingData = {
     componentName: `edoj${blockGroupIndex}`,
     format: 'CHD=edoj',
+    ...(experimentVariant && {
+      componentName: 'top-bar-oj',
+      sendOptimizelyEvents: true,
+      viewThreshold: 0,
+    }),
   };
 
-  const viewRef = useViewTracker(eventTrackingData);
-  const handleClickTracking = useClickTrackerHandler(eventTrackingData);
+  const viewTracker = useViewTracker(eventTrackingData);
+  const clickTracker = useClickTrackerHandler(eventTrackingData);
 
   if (!blocks || isEmpty(blocks)) {
     return null;
   }
 
   let title;
-  if (experimentVariant === 'A') {
+  if (
+    ['top-bar-top-stories', 'read-more-a-and-top-stories'].includes(
+      experimentVariant,
+    )
+  ) {
     title = translations.topStoriesTitle || 'Top Stories';
-  } else if (experimentVariant === 'B') {
+  } else if (experimentVariant === 'top-bar-most-read') {
     title = mostRead.header || 'Most Read';
   } else {
     title =
@@ -218,8 +228,9 @@ const ScrollablePromo = ({
           <PromoList
             blocks={blocks}
             experimentVariant={experimentVariant}
-            viewTracker={viewRef}
-            {...a11yAttributes}
+            viewTracker={viewTracker}
+            clickTracker={clickTracker}
+            a11yAttributes={a11yAttributes}
           />
         </GridItemMediumNoMargin>
       </ScrollablePromoContainer>
@@ -238,14 +249,14 @@ const ScrollablePromo = ({
         </LabelComponent>
       )}
       {isSingleItem ? (
-        <PromoWrapper dir={dir} ref={viewRef}>
-          <Promo block={blocksWithoutTitle[0]} onClick={handleClickTracking} />
+        <PromoWrapper dir={dir} {...viewTracker}>
+          <Promo block={blocksWithoutTitle[0]} clickTracker={clickTracker} />
         </PromoWrapper>
       ) : (
         <PromoList
           blocks={blocksWithoutTitle}
-          viewTracker={viewRef}
-          onClick={handleClickTracking}
+          viewTracker={viewTracker}
+          clickTracker={clickTracker}
         />
       )}
     </GridItemMediumNoMargin>

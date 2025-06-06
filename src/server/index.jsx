@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable camelcase */
 import express from 'express';
 import compression from 'compression';
@@ -19,12 +20,11 @@ import {
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { BAD_REQUEST, INTERNAL_SERVER_ERROR, OK } from '#lib/statusCodes.const';
 import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
+import isLocal from '#app/lib/utilities/isLocal';
 import injectCspHeader from './utilities/cspHeader';
 import logResponseTime from './utilities/logResponseTime';
 import renderDocument from './Document';
 import {
-  articleManifestPath,
-  articleSwPath,
   homePageManifestPath,
   homePageSwPath,
 } from '../app/routes/utils/regex';
@@ -112,7 +112,7 @@ server
  * Application env routes
  */
 server
-  .get([articleSwPath, homePageSwPath], (req, res) => {
+  .get(homePageSwPath, (req, res) => {
     const swPath = `${__dirname}/public/sw.js`;
     res.set(
       `Cache-Control`,
@@ -125,7 +125,7 @@ server
       }
     });
   })
-  .get([articleManifestPath, homePageManifestPath], async ({ params }, res) => {
+  .get(homePageManifestPath, async ({ params }, res) => {
     const { service } = params;
     const variant = defaultServiceVariants[service] || 'default';
     const manifestPath = `${__dirname}/public${serviceConfigs[service][variant].manifestPath}`;
@@ -287,7 +287,9 @@ server.get(
           url,
           variant,
         });
-      } catch ({ message }) {
+      } catch (error) {
+        const { message } = error;
+
         status = 500;
         sendCustomMetric({
           metricName: NON_200_RESPONSE,
@@ -295,6 +297,10 @@ server.get(
           pageType: derivedPageType,
           requestUrl: url,
         });
+
+        if (isLocal()) {
+          console.error(error);
+        }
 
         logger.error(SERVER_SIDE_REQUEST_FAILED, {
           status,

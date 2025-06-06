@@ -1,48 +1,397 @@
-import config from '../../../support/config/services';
-import appConfig from '../../../../src/server/utilities/serviceConfigs';
-import getPaths from '../../../support/helpers/getPaths';
-import serviceHasPageType from '../../../support/helpers/serviceHasPageType';
-import testsForCanonicalOnly from './testsForCanonicalOnly';
-import testsForAMPOnly from './testsForAMPOnly';
+import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
+import { HOME_PAGE } from '../../../../src/app/routes/utils/pageTypes';
+import assertScriptSwitch from './assertions';
 
-const hasVariant = serviceName => {
-  return config[serviceName] && config[serviceName].variant !== 'default';
-};
+const testSuites = [
+  // Home pages Serbian
+  {
+    path: '/serbian/cyr',
+    service: 'serbian',
+    variant: 'cyr',
+    otherVariant: 'lat',
+    pageType: HOME_PAGE,
+    runforEnv: ['local', 'test', 'live'],
+    tests: [assertScriptSwitch],
+  },
+  {
+    path: '/serbian/lat',
+    service: 'serbian',
+    variant: 'lat',
+    otherVariant: 'cyr',
+    pageType: HOME_PAGE,
+    runforEnv: ['local', 'test', 'live'],
+    tests: [assertScriptSwitch],
+  },
+  // Home pages Uzbek
+  {
+    path: '/uzbek/cyr',
+    service: 'uzbek',
+    variant: 'cyr',
+    otherVariant: 'lat',
+    pageType: HOME_PAGE,
+    runforEnv: ['local', 'test', 'live'],
+    tests: [assertScriptSwitch],
+  },
+  {
+    path: '/uzbek/lat',
+    service: 'uzbek',
+    variant: 'lat',
+    otherVariant: 'cyr',
+    pageType: HOME_PAGE,
+    runforEnv: ['local', 'test', 'live'],
+    tests: [assertScriptSwitch],
+  },
+  // Home pages Zhongwen
+  {
+    path: '/zhongwen/simp',
+    service: 'zhongwen',
+    variant: 'simp',
+    otherVariant: 'trad',
+    pageType: HOME_PAGE,
+    runforEnv: ['local', 'test', 'live'],
+    tests: [assertScriptSwitch],
+  },
+  {
+    path: '/zhongwen/trad',
+    service: 'zhongwen',
+    variant: 'trad',
+    otherVariant: 'simp',
+    pageType: HOME_PAGE,
+    runforEnv: ['local', 'test', 'live'],
+    tests: [assertScriptSwitch],
+  },
+  // Articles pages Serbian
+  {
+    path: '/serbian/articles/c805k05kr73o/cyr',
+    service: 'serbian',
+    variant: 'cyr',
+    otherVariant: 'lat',
+    runforEnv: ['local'],
+    tests: [assertScriptSwitch],
+  },
+  {
+    path: '/serbian/articles/c805k05kr73o/lat',
+    service: 'serbian',
+    variant: 'lat',
+    otherVariant: 'cyr',
+    runforEnv: ['local'],
+    tests: [assertScriptSwitch],
+  },
+  {
+    path: '/serbian/articles/c45n4pv61vno/cyr',
+    service: 'serbian',
+    variant: 'cyr',
+    otherVariant: 'lat',
+    runforEnv: ['test'],
+    tests: [assertScriptSwitch],
+  },
+  {
+    path: '/serbian/articles/c45n4pv61vno/lat',
+    service: 'serbian',
+    variant: 'lat',
+    otherVariant: 'cyr',
+    runforEnv: ['test'],
+    tests: [assertScriptSwitch],
+  },
+  {
+    path: '/serbian/articles/cx2g6k2k4xxo/cyr',
+    service: 'serbian',
+    variant: 'cyr',
+    otherVariant: 'lat',
+    runforEnv: ['live'],
+    tests: [assertScriptSwitch],
+  },
+  {
+    path: '/serbian/articles/cx2g6k2k4xxo/lat',
+    service: 'serbian',
+    variant: 'lat',
+    otherVariant: 'cyr',
+    runforEnv: ['live'],
+    tests: [assertScriptSwitch],
+  },
+  // Articles pages Uzbek
+  {
+    path: '/uzbek/articles/cxj3rjxm6r0o/cyr',
+    service: 'uzbek',
+    variant: 'cyr',
+    otherVariant: 'lat',
+    runforEnv: ['local'],
+    tests: [assertScriptSwitch],
+  },
+  {
+    path: '/uzbek/articles/cxj3rjxm6r0o/lat',
+    service: 'uzbek',
+    variant: 'lat',
+    otherVariant: 'cyr',
+    runforEnv: ['local'],
+    tests: [assertScriptSwitch],
+  },
+  {
+    path: '/uzbek/articles/c7xe5yl1xeno/cyr',
+    service: 'uzbek',
+    variant: 'cyr',
+    otherVariant: 'lat',
+    runforEnv: ['test'],
+    tests: [assertScriptSwitch],
+  },
+  {
+    path: '/uzbek/articles/c7xe5yl1xeno/lat',
+    service: 'uzbek',
+    variant: 'lat',
+    otherVariant: 'cyr',
+    runforEnv: ['test'],
+    tests: [assertScriptSwitch],
+  },
+  {
+    path: '/uzbek/articles/ce347g8zqd0o/cyr',
+    service: 'uzbek',
+    variant: 'cyr',
+    otherVariant: 'lat',
+    runforEnv: ['live'],
+    tests: [assertScriptSwitch],
+  },
+  {
+    path: '/uzbek/articles/ce347g8zqd0o/lat',
+    service: 'uzbek',
+    variant: 'lat',
+    otherVariant: 'cyr',
+    runforEnv: ['live'],
+    tests: [assertScriptSwitch],
+  },
+  // Articles pages Zhongwen
+  {
+    path: '/zhongwen/articles/c3xd4x9prgyo/trad',
+    service: 'zhongwen',
+    variant: 'trad',
+    otherVariant: 'simp',
+    runforEnv: ['local'],
+    tests: [assertScriptSwitch],
+  },
+  {
+    path: '/zhongwen/articles/c3xd4x9prgyo/simp',
+    service: 'zhongwen',
+    variant: 'simp',
+    otherVariant: 'trad',
+    runforEnv: ['local'],
+    tests: [assertScriptSwitch],
+  },
+  {
+    path: '/zhongwen/articles/cq17q5896n9o/trad',
+    service: 'zhongwen',
+    variant: 'trad',
+    otherVariant: 'simp',
+    runforEnv: ['test'],
+    tests: [assertScriptSwitch],
+  },
+  {
+    path: '/zhongwen/articles/cq17q5896n9o/simp',
+    service: 'zhongwen',
+    variant: 'simp',
+    otherVariant: 'trad',
+    runforEnv: ['test'],
+    tests: [assertScriptSwitch],
+  },
+  {
+    path: '/zhongwen/articles/cy4lej5ep15o/trad',
+    service: 'zhongwen',
+    variant: 'trad',
+    otherVariant: 'simp',
+    runforEnv: ['live'],
+    tests: [assertScriptSwitch],
+  },
+  {
+    path: '/zhongwen/articles/cy4lej5ep15o/simp',
+    service: 'zhongwen',
+    variant: 'simp',
+    otherVariant: 'trad',
+    runforEnv: ['live'],
+    tests: [assertScriptSwitch],
+  },
+  // Topic pages Serbian
+  {
+    path: '/serbian/topics/c1gd303q6y6t/cyr',
+    service: 'serbian',
+    variant: 'cyr',
+    otherVariant: 'lat',
+    runforEnv: ['local'],
+    tests: [assertScriptSwitch],
+  },
+  {
+    path: '/serbian/topics/c1gd303q6y6t/lat',
+    service: 'serbian',
+    variant: 'lat',
+    otherVariant: 'cyr',
+    runforEnv: ['local'],
+    tests: [assertScriptSwitch],
+  },
+  {
+    path: '/serbian/topics/c06g871g3knt/cyr',
+    service: 'serbian',
+    variant: 'cyr',
+    otherVariant: 'lat',
+    runforEnv: ['test', 'live'],
+    tests: [assertScriptSwitch],
+  },
+  {
+    path: '/serbian/topics/c06g871g3knt/lat',
+    service: 'serbian',
+    variant: 'lat',
+    otherVariant: 'cyr',
+    runforEnv: ['test', 'live'],
+    tests: [assertScriptSwitch],
+  },
+  // Topic pages Uzbek
+  {
+    path: '/uzbek/topics/c8y949r98pgt/cyr',
+    service: 'uzbek',
+    variant: 'cyr',
+    otherVariant: 'lat',
+    runforEnv: ['local'],
+    tests: [assertScriptSwitch],
+  },
+  {
+    path: '/uzbek/topics/c8y949r98pgt/lat',
+    service: 'uzbek',
+    variant: 'lat',
+    otherVariant: 'cyr',
+    runforEnv: ['local'],
+    tests: [assertScriptSwitch],
+  },
+  {
+    path: '/uzbek/topics/cg72626n7yyt/cyr',
+    service: 'uzbek',
+    variant: 'cyr',
+    otherVariant: 'lat',
+    runforEnv: ['test', 'live'],
+    tests: [assertScriptSwitch],
+  },
+  {
+    path: '/uzbek/topics/cg72626n7yyt/lat',
+    service: 'uzbek',
+    variant: 'lat',
+    otherVariant: 'cyr',
+    runforEnv: ['test', 'live'],
+    tests: [assertScriptSwitch],
+  },
+  // Topic pages Zhongwen
+  {
+    path: '/zhongwen/topics/cjnz1d612jzt/simp',
+    service: 'zhongwen',
+    variant: 'simp',
+    otherVariant: 'trad',
+    runforEnv: ['test', 'live'],
+    tests: [assertScriptSwitch],
+  },
+  {
+    path: '/zhongwen/topics/cjnz1d612jzt/trad',
+    service: 'zhongwen',
+    variant: 'trad',
+    otherVariant: 'simp',
+    runforEnv: ['test', 'live'],
+    tests: [assertScriptSwitch],
+  },
+  // Most Read Serbian
+  {
+    path: '/serbian/cyr/popular/read',
+    service: 'serbian',
+    variant: 'cyr',
+    otherVariant: 'lat',
+    runforEnv: ['local', 'test', 'live'],
+    tests: [assertScriptSwitch],
+  },
+  {
+    path: '/serbian/lat/popular/read',
+    service: 'serbian',
+    variant: 'lat',
+    otherVariant: 'cyr',
+    runforEnv: ['local', 'test', 'live'],
+    tests: [assertScriptSwitch],
+  },
+  // Most Read zhongwen
+  {
+    path: '/zhongwen/simp/popular/read',
+    service: 'zhongwen',
+    variant: 'simp',
+    otherVariant: 'trad',
+    runforEnv: ['local', 'test', 'live'],
+    tests: [assertScriptSwitch],
+  },
+  {
+    path: '/zhongwen/trad/popular/read',
+    service: 'zhongwen',
+    variant: 'trad',
+    otherVariant: 'simp',
+    runforEnv: ['local', 'test', 'live'],
+    tests: [assertScriptSwitch],
+  },
+  // MAP Serbian
+  {
+    path: '/serbian/cyr/23279016',
+    service: 'serbian',
+    variant: 'cyr',
+    otherVariant: 'lat',
+    runforEnv: ['test'],
+    tests: [assertScriptSwitch],
+  },
+  {
+    path: '/serbian/cyr/srbija-52895074',
+    service: 'serbian',
+    variant: 'cyr',
+    otherVariant: 'lat',
+    runforEnv: ['live'],
+    tests: [assertScriptSwitch],
+  },
+  {
+    path: '/serbian/lat/srbija-52895074',
+    service: 'serbian',
+    variant: 'lat',
+    otherVariant: 'cyr',
+    runforEnv: ['live'],
+    tests: [assertScriptSwitch],
+  },
+  {
+    path: '/serbian/cyr/srbija-52895074',
+    service: 'serbian',
+    variant: 'cyr',
+    otherVariant: 'lat',
+    runforEnv: ['live'],
+    tests: [assertScriptSwitch],
+  },
+  // MAP Zhongwen
+  {
+    path: '/zhongwen/simp/uk-23283128',
+    service: 'zhongwen',
+    variant: 'simp',
+    otherVariant: 'trad',
+    runforEnv: ['test'],
+    tests: [assertScriptSwitch],
+  },
+  {
+    path: '/zhongwen/trad/uk-23283128',
+    service: 'zhongwen',
+    variant: 'trad',
+    otherVariant: 'simp',
+    runforEnv: ['test'],
+    tests: [assertScriptSwitch],
+  },
+  {
+    path: '/zhongwen/simp/world-53107744',
+    service: 'zhongwen',
+    variant: 'simp',
+    otherVariant: 'trad',
+    runforEnv: ['live'],
+    tests: [assertScriptSwitch],
+  },
+  {
+    path: '/zhongwen/trad/world-53107744',
+    service: 'zhongwen',
+    variant: 'trad',
+    otherVariant: 'simp',
+    runforEnv: ['live'],
+    tests: [assertScriptSwitch],
+  },
+];
 
-Object.keys(config)
-  .filter(hasVariant)
-  .forEach(serviceId => {
-    const { variant } = config[serviceId];
-    const serviceName = config[serviceId].name;
-    const { scriptLink } = appConfig[serviceName][variant];
-    const scriptLinkVariant = scriptLink && scriptLink.variant;
-
-    Object.keys(config[serviceId].pageTypes)
-      .filter(
-        pageType =>
-          serviceHasPageType(serviceId, pageType) &&
-          !pageType.includes('error'),
-      )
-      .forEach(pageType => {
-        const paths = getPaths(serviceId, pageType);
-        paths.forEach(path => {
-          testsForCanonicalOnly({
-            serviceId,
-            serviceName,
-            pageType,
-            path,
-            variant,
-            otherVariant: scriptLinkVariant,
-          });
-        });
-        paths
-          .map(path => `${path}.amp`)
-          .forEach(path => {
-            testsForAMPOnly({
-              serviceName,
-              pageType,
-              path,
-            });
-          });
-      });
-  });
+runTestsForPage({
+  testSuites,
+});

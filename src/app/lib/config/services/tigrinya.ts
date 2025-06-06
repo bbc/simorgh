@@ -263,7 +263,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'ናይ መወዳእታ',
     },
     mostRead: {
-      header: 'ብብዝሒ ዝተነበ',
+      header: 'ዝያዳ ዝተነበ',
       lastUpdated: 'ንመወዳእታ እዋን ዝተመሓየሸሉ:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -274,7 +274,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'ዕምሪ ፈነወ %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'ብብዝሒ ዝተነበ',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

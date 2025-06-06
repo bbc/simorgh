@@ -49,10 +49,20 @@ export type PlayerUiConfig = {
   baseColour?: string;
   colourOnBaseColour?: string;
   fallbackBackgroundColour?: string;
-  controls?: { enabled: boolean; volumeSlider?: boolean };
+  controls?: {
+    enabled: boolean;
+    volumeSlider?: boolean;
+    includeNextButton?: boolean;
+    includePreviousButton?: boolean;
+  };
+
   locale?: { lang: string };
   subtitles?: { enabled: boolean; defaultOn: boolean };
   fullscreen?: { enabled: boolean };
+  swipable?: {
+    enabled: boolean;
+    direction: 'Y' | 'X';
+  };
 };
 
 export type PlaylistItem = {
@@ -218,6 +228,29 @@ export type ClipMediaBlock = {
   };
 };
 
+export type PortraitClipMediaBlock = {
+  type: 'portraitClipMedia';
+  model: {
+    type: MediaType;
+    images: {
+      source: string;
+      urlTemplate?: string;
+    }[];
+    video: {
+      id: string;
+      title: string;
+      version: {
+        id: string;
+        duration: string;
+        kind: string;
+        guidance: string | null;
+        territories: string[];
+      };
+      isEmbeddingAllowed: boolean;
+    };
+  };
+};
+
 export type LegacyMediaBlock = {
   type: 'legacyMedia';
   content: {
@@ -267,6 +300,7 @@ export type MediaCollection = {
 export type MediaBlock =
   | AresMediaBlock
   | ClipMediaBlock
+  | PortraitClipMediaBlock
   | LegacyMediaBlock
   | LiveRadioBlock
   | OnDemandTVBlock

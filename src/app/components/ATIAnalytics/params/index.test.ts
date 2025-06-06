@@ -6,8 +6,6 @@ import {
   PHOTO_GALLERY_PAGE,
   MEDIA_ARTICLE_PAGE,
   HOME_PAGE,
-  ERROR_PAGE,
-  LIVE_PAGE,
 } from '../../../routes/utils/pageTypes';
 import { buildATIUrl, buildATIEventTrackingParams } from '.';
 import * as buildPageATIFunctionImports from './buildParams';
@@ -384,17 +382,6 @@ describe('ATIAnalytics params', () => {
           }),
         );
       });
-      it.each([HOME_PAGE, ERROR_PAGE, LIVE_PAGE])(
-        'should return empty object {} because %s page type is not supported',
-        pageType => {
-          const url = buildATIUrl({
-            requestContext: { ...requestContext, pageType },
-            data: {},
-            serviceContext,
-          });
-          expect(url).toStrictEqual({});
-        },
-      );
     });
   });
 

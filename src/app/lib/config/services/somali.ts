@@ -58,6 +58,7 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Arag dhammaan',
       home: 'War',
+      continueReading: 'Ka sii wad akhrinta',
       currentPage: 'Bogga hadda',
       skipLinkText: 'U gudub qaybta macluumaadka',
       relatedContent: 'Warar kale oo dheeraad ah oo la xiriira qodobkan',
@@ -273,7 +274,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Arrimhii u danbeeyey',
     },
     mostRead: {
-      header: 'Ugu akhris badan',
+      header: 'Popular Reads',
       lastUpdated: 'Markii ugu dambeysay ee la cusbooneysiiyay:',
       numberOfItems: 5,
       hasMostRead: true,
@@ -284,7 +285,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'Muddada %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'Ugu akhris badan',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

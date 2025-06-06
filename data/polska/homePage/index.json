@@ -1,0 +1,114 @@
+{
+  "data": {
+    "title": "polska strona tematyczna",
+    "description": "polish topic page",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Polski artykuł testowy",
+            "firstPublished": "2025-03-26T10:40:12.938Z",
+            "lastPublished": "2025-03-26T10:40:12.938Z",
+            "link": "https://www.bbc.comundefined/",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/a567/test/96cb3ac0-0a2e-11f0-8e5b-11eec158954c.jpg.webp",
+            "imageAlt": "Rzeszow",
+            "id": "c639526lxlro"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:e354a43d-d1d1-47e0-8c87-f1537c997368",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "Top Stories",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Dlaczego ufamy BBC",
+            "firstPublished": "2025-05-02T15:09:18.515Z",
+            "lastPublished": "2025-05-02T15:09:18.515Z",
+            "link": "https://www.bbc.comundefined/",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/9f19/test/aa6d7eb0-2768-11f0-a1f5-892b5fb4d5f4.png.webp",
+            "imageAlt": "A bbc news polska promo image",
+            "id": "cx31jx7xx8do"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:a7ad6bcf-3a1d-4e50-b347-e5a6e7e2c349",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "Obiektywnie. Wnikliwie. Po polsku.",
+        "visualProminence": "NORMAL",
+        "additionalText": {
+          "plainText": "Zrozumienie wymaga spojrzenia na całość. Analiza rzucająca światło na fakty. Dziennikarstwo, któremu możesz zaufać."
+        },
+        "visualStyle": "BANNER"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Pope's funeral brings memories of my Polish grandfather",
+            "firstPublished": "2025-05-02T13:24:50.511Z",
+            "lastPublished": "2025-05-02T13:24:50.511Z",
+            "link": "https://www.bbc.comundefined/",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "c63rw61l7peo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:2252d91a-dbb1-46f4-a57e-c7d5318a310f",
+        "curationType": "tipo-curation",
+        "position": 2,
+        "title": "Kasia Maduro",
+        "visualProminence": "NORMAL",
+        "visualStyle": "BANNER"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "BBC Polska survey",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&FormId=M3FYDo5W1kSAHSJmvFLlz9mfKXHLFnxIlQ0VU46Zu1ZUQjJIN0lTM081NzlOWUlQNUpQTUNWQzlBMS4u&Token=f22be96820b6450d934f2763982045c7",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/dd74/test/64e03c90-2766-11f0-a1f5-892b5fb4d5f4.png.webp",
+            "imageAlt": "A question mark icon",
+            "id": "https%3A%2F%2Fforms.office.com%2FPages%2FDesignPageV2.aspx%3Fsubpage%3Ddesign%26FormId%3DM3FYDo5W1kSAHSJmvFLlz9mfKXHLFnxIlQ0VU46Zu1ZUQjJIN0lTM081NzlOWUlQNUpQTUNWQzlBMS4u%26Token%3Df22be96820b6450d934f2763982045c7"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&FormId=M3FYDo5W1kSAHSJmvFLlz9mfKXHLFnxIlQ0VU46Zu1ZUQjJIN0lTM081NzlOWUlQNUpQTUNWQzlBMS4u&Token=f22be96820b6450d934f2763982045c7",
+        "curationId": "urn:bbc:tipo:list:95f3c550-3e8c-4154-babc-52daf8f3594c",
+        "curationType": "tipo-curation",
+        "position": 3,
+        "title": "BBC News Polska user survey",
+        "visualProminence": "NORMAL",
+        "additionalText": { "plainText": "BBC News Polska user survey" },
+        "visualStyle": "BANNER"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:cpqr492886k4t",
+        "contentType": "index-home",
+        "pageIdentifier": "polska.page",
+        "pageTitle": "polska strona tematyczna"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}
