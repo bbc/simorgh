@@ -22,19 +22,20 @@ const PortraitVideoCarousel = ({
   const scrollRef = useRef<HTMLUListElement>(null);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedItem, setSelectedItem] =
-    useState<PortraitVideoPromoProps | null>(null);
+  const [selectedItemIndex, setSelectedItemIndex] = useState<number | null>(
+    null,
+  );
 
-  const handlePromoClick = (item: PortraitVideoPromoProps) => {
-    if (item.video) {
-      setSelectedItem(item);
+  const handlePromoClick = (index: number) => {
+    if (items[index]?.video) {
+      setSelectedItemIndex(index);
       setIsModalOpen(true);
     }
   };
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
-    setSelectedItem(null);
+    setSelectedItemIndex(null);
   };
 
   return (
@@ -57,11 +58,11 @@ const PortraitVideoCarousel = ({
         <div css={styles.carouselContainer}>
           <PortraitCarouselNavigation scrollPaneRef={scrollRef} />
           <ul ref={scrollRef} css={styles.carousel} data-testid="pv-carousel">
-            {items.map((item, index) => (
+            {items.map((item: PortraitVideoPromoProps, index) => (
               <PortraitVideoPromo
                 {...item}
                 key={item.id}
-                onClick={() => handlePromoClick(item)}
+                onClick={() => handlePromoClick(index)}
                 itemPosition={index}
                 groupTracker={{
                   itemCount: items.length,
@@ -72,7 +73,7 @@ const PortraitVideoCarousel = ({
           </ul>
         </div>
         {isModalOpen &&
-          selectedItem &&
+          selectedItemIndex !== null &&
           createPortal(
             <PortraitVideoModal
               items={items.map(item => ({
@@ -82,10 +83,11 @@ const PortraitVideoCarousel = ({
                 duration: item.video?.version?.duration || 'PT0M0S',
                 kind: item.video?.version?.kind || 'programme',
                 territories: item.video?.version?.territories || [],
-                guidance: null,
+                guidance: item.video?.version?.guidance || null,
                 isEmbeddingAllowed: item.video?.isEmbeddingAllowed ?? true,
                 images: item.images || [],
               }))}
+              initialVideoIndex={selectedItemIndex}
               onClose={handleCloseModal}
             />,
             document.body,

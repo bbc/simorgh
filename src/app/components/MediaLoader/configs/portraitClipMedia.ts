@@ -17,12 +17,13 @@ export default ({
   adsEnabled = false,
   showAdsBasedOnLocation = false,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
-  const firstBlock = filterForBlockType(
+  const portraitClipMediaBlocks = filterForBlockType(
     blocks,
     'portraitClipMedia',
-  ) as PortraitClipMediaBlock;
+    { returnAllMatchingBlocks: true },
+  ) as PortraitClipMediaBlock[];
 
-  if (!firstBlock) {
+  if (!portraitClipMediaBlocks?.length) {
     return {
       mediaType: 'video',
       playerConfig: basePlayerConfig,
@@ -31,18 +32,10 @@ export default ({
     };
   }
 
-  const portraitClipMediaBlocks: PortraitClipMediaBlock[] = filterForBlockType(
-    blocks,
-    'portraitClipMedia',
-    { returnAllMatchingBlocks: true },
-  ) as PortraitClipMediaBlock[];
-
   const playlistItems: PlaylistItem[] = portraitClipMediaBlocks.map(block => {
     const { model } = block;
     const { video, images } = model;
     const version = video?.version;
-
-    // prefer portrait-oriented image if available (based on our bff structure) fallback to first available
     const image = images?.[1] || images?.[0];
     const holdingImageURL = image?.urlTemplate?.replace(
       '{width}',
@@ -56,8 +49,8 @@ export default ({
       embedRights: video?.isEmbeddingAllowed ? 'allowed' : undefined,
       vpid: video?.id,
       serviceID: version?.territories?.[0],
-      title: video?.title,
-      guidance: version?.guidance,
+      title: video?.title ?? '',
+      guidance: version?.guidance ?? undefined,
       territories: version?.territories,
       images,
       holdingImageURL,
@@ -74,25 +67,42 @@ export default ({
     playlistItems.unshift({ kind: 'advert' });
   }
 
-  const fallbackHoldingImageURL =
-    firstBlock?.model?.images?.[1]?.urlTemplate?.replace(
-      '{width}',
-      `${DEFAULT_WIDTH}`,
-    );
+  const current = playlistItems[0];
+  const previous = playlistItems[1] ? playlistItems[0] : undefined;
+  const next = playlistItems[1];
 
   return {
-    mediaType: firstBlock?.model?.type ?? 'video',
+    mediaType: 'video',
     playerConfig: {
       ...basePlayerConfig,
       autoplay: true,
       playlistObject: {
-        title: firstBlock?.model?.video?.title,
-        holdingImageURL: fallbackHoldingImageURL,
-        items: playlistItems,
+        title: current?.title ?? '',
+        holdingImageURL: current?.holdingImageURL ?? '',
+        items: [current],
+        queuedPlaylist: next
+          ? {
+              title: next.title ?? '',
+              holdingImageURL: next.holdingImageURL ?? '',
+              items: [next],
+              guidance: next.guidance ?? undefined,
+              embedRights: next.embedRights,
+            }
+          : undefined,
+        previousPlaylist: previous
+          ? {
+              title: previous.title ?? '',
+              holdingImageURL: previous.holdingImageURL ?? '',
+              items: [previous],
+              guidance: previous.guidance ?? undefined,
+              embedRights: previous.embedRights,
+            }
+          : undefined,
       },
       ui: {
         ...basePlayerConfig.ui,
-        ...(firstBlock?.model?.type === 'audio' && AUDIO_UI_CONFIG),
+        ...(portraitClipMediaBlocks[0]?.model?.type === 'audio' &&
+          AUDIO_UI_CONFIG),
         swipable: {
           enabled: true,
           direction: 'Y',
@@ -105,8 +115,8 @@ export default ({
       },
       statsObject: {
         ...basePlayerConfig.statsObject,
-        ...(firstBlock?.model?.video?.id && {
-          clipPID: firstBlock.model.video.id,
+        ...(current?.vpid && {
+          clipPID: current.vpid,
         }),
       },
     },

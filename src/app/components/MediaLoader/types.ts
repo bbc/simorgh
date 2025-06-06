@@ -29,17 +29,24 @@ export type PlayerConfig = {
   };
   mediator?: { host: string };
   ui: PlayerUiConfig;
-  playlistObject?: {
-    title: string;
-    summary?: string;
-    holdingImageURL?: string;
-    items: PlaylistItem[] | LegacyPlayListItem[];
-    guidance?: string;
-    embedRights?: 'allowed';
-    liveRewind?: boolean;
-    simulcast?: boolean;
-    warning?: string;
-  };
+  playlistObject?: PlaylistWithContext;
+};
+
+export type PlaylistWithContext = Playlist & {
+  queuedPlaylist?: Playlist;
+  previousPlaylist?: Playlist;
+};
+
+export type Playlist = {
+  title: string;
+  summary?: string;
+  holdingImageURL?: string;
+  items: PlaylistItem[] | LegacyPlayListItem[];
+  guidance?: string;
+  embedRights?: 'allowed';
+  liveRewind?: boolean;
+  simulcast?: boolean;
+  warning?: string;
 };
 
 export type PlayerUiConfig = {
@@ -55,7 +62,6 @@ export type PlayerUiConfig = {
     includeNextButton?: boolean;
     includePreviousButton?: boolean;
   };
-
   locale?: { lang: string };
   subtitles?: { enabled: boolean; defaultOn: boolean };
   fullscreen?: { enabled: boolean };
@@ -73,6 +79,14 @@ export type PlaylistItem = {
   embedRights?: 'allowed';
   vpid?: string;
   serviceID?: string;
+  title?: string;
+  guidance?: string | null;
+  territories?: string[];
+  images?: {
+    source: string;
+    urlTemplate?: string;
+  }[];
+  holdingImageURL?: string;
 };
 
 export type LegacyPlayListItem = {
