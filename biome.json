@@ -11,10 +11,10 @@
     ],
     "ignore": [
       "cypress",
-      "./src/integration/**/*",
-      "./ws-nextjs-app/integration/**/*",
-      "./ws-nextjs-app/public/**/*",
-      "./ws-nextjs-app/build/**/*",
+      "src/integration/**/*",
+      "ws-nextjs-app/integration/**/*",
+      "ws-nextjs-app/public/**/*",
+      "ws-nextjs-app/build/**/*",
       "src/app/hooks/useImageColour/colorthief.js"
     ]
   },
@@ -34,6 +34,9 @@
     "rules": {
       "recommended": false,
       "a11y": { "useKeyWithClickEvents": "error" },
+      "complexity": {
+        "useOptionalChain": "error"
+      },
       "correctness": {
         "noUndeclaredVariables": "error",
         "useExhaustiveDependencies": "warn",
@@ -75,19 +78,5 @@
       "afterAll",
       "test"
     ]
-  },
-  "overrides": [
-    {
-      "include": ["**/*.{ts,tsx}"],
-      "linter": {
-        "rules": {
-          "complexity": { "useOptionalChain": "error" },
-          "correctness": {
-            "noInvalidUseBeforeDeclaration": "error",
-            "noUnusedVariables": "warn"
-          }
-        }
-      }
-    }
-  ]
+  }
 }
