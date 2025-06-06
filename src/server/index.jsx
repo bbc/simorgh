@@ -253,8 +253,7 @@ server.get(
       data.showAdsBasedOnLocation = headers['bbc-adverts'] === 'true';
       data.showCookieBannerBasedOnCountry = showCookieBannerBasedOnCountry;
       data.isUK = isUK;
-      data.isLite =
-        isLite || ['slow-2g', '2g', '3g'].includes(ECT);
+      data.isLite = isLite || ['slow-2g', '2g', '3g'].includes(ECT);
 
       let { status } = data;
       // Set derivedPageType based on returned page data
