@@ -10,7 +10,15 @@
     "lineEnding": "lf",
     "lineWidth": 80,
     "attributePosition": "auto",
-    "bracketSpacing": true
+    "bracketSpacing": true,
+    "ignore": [
+      "**/node_modules/**/*",
+      "**/dist/**/*",
+      "**/build/**/*",
+      "**/coverage/**/*",
+      "**/.vscode/**/*",
+      "**/.yarn/**/*"
+    ]
   },
   "organizeImports": { "enabled": true },
   "linter": {
