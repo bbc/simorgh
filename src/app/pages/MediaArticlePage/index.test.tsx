@@ -21,6 +21,10 @@ jest.mock('../../components/ChartbeatAnalytics', () => {
   return ChartbeatAnalytics;
 });
 
+jest.mock('#src/app/components/ATIAnalytics', () => () => (
+  <div>ATI Analytics</div>
+));
+
 type ContextProps = {
   service: Services;
   adsToggledOn?: boolean;

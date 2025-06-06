@@ -10,6 +10,10 @@ import {
 import { AMP_GEO_SCRIPT } from '#components/AmpGeo';
 import { BaseRendererProps } from './types';
 
+interface Props extends BaseRendererProps {
+  data: Record<string, unknown>;
+}
+
 export default function AmpRenderer({
   helmetMetaTags,
   helmetLinkTags,
@@ -19,7 +23,9 @@ export default function AmpRenderer({
   ids,
   styles,
   title,
-}: BaseRendererProps) {
+  data,
+}: Props) {
+  const { showCookieBannerBasedOnCountry } = data;
   return (
     <html lang="en-GB" {...htmlAttrs}>
       <head>
@@ -39,8 +45,8 @@ export default function AmpRenderer({
         </noscript>
         {AMP_JS}
         {AMP_GEO_SCRIPT}
-        {AMP_CONSENT_JS}
         {AMP_ANALYTICS_JS}
+        {!showCookieBannerBasedOnCountry && AMP_CONSENT_JS}
       </head>
       <body className="amp-geo-pending">
         {/* biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation> */}

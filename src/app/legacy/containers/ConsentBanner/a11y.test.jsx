@@ -37,6 +37,7 @@ const AmpBannerWithContext = ({ service, serviceConfig, variant }) => {
       pageType={HOME_PAGE}
       pathname="/"
       service={service}
+      showCookieBannerBasedOnCountry={false}
     >
       <ToggleContext.Provider value={toggleContextValue}>
         <UserContextProvider>

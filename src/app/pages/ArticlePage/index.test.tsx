@@ -41,7 +41,7 @@ import {
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ArticlePage from './ArticlePage';
 import ThemeProvider from '../../components/ThemeProvider';
-import ATIAnalytics from '../../components/ATIAnalytics';
+import * as ATIAnalytics from '../../components/ATIAnalytics';
 
 jest.mock('../../components/ThemeProvider');
 
@@ -49,7 +49,9 @@ jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });
-jest.mock('../../components/ATIAnalytics');
+
+const atiAnalyticsSpy = jest.spyOn(ATIAnalytics, 'default');
+atiAnalyticsSpy.mockImplementation(() => <div>ATI Analytics</div>);
 
 jest.mock('#app/legacy/containers/OptimizelyArticleCompleteTracking');
 jest.mock('#app/legacy/containers/OptimizelyPageViewTracking');
@@ -76,6 +78,7 @@ type Props = {
   isApp?: boolean;
   promo?: boolean | null;
   isAmp?: boolean;
+  isLite?: boolean;
   id?: string | null;
 };
 
@@ -88,6 +91,7 @@ const Context = ({
   isApp = false,
   promo = null,
   isAmp = false,
+  isLite = false,
   id,
 }: PropsWithChildren<Props> = {}) => {
   const appInput = {
@@ -96,6 +100,7 @@ const Context = ({
     showAdsBasedOnLocation,
     isApp,
     isAmp,
+    isLite,
     id,
   };
 
@@ -130,14 +135,6 @@ beforeEach(() => {
 
 afterEach(() => {
   delete process.env.SIMORGH_ICHEF_BASE_URL;
-
-  (ATIAnalytics as jest.Mock).mockImplementation(
-    jest.requireActual('../../components/ATIAnalytics').default,
-  );
-});
-
-afterAll(() => {
-  (ATIAnalytics as jest.Mock).mockReset();
 });
 
 describe('Article Page', () => {
@@ -838,15 +835,13 @@ describe('Article Page', () => {
     });
 
     it('should add brandname to page title in atiAnalytics', async () => {
-      (ATIAnalytics as jest.Mock).mockImplementation(() => <div />);
-
       render(
         <Context service="pidgin">
           <ArticlePage pageData={articlePglDataPidgin} />
         </Context>,
       );
 
-      expect(ATIAnalytics).toHaveBeenLastCalledWith(
+      expect(atiAnalyticsSpy).toHaveBeenLastCalledWith(
         {
           atiData: {
             categoryName: null,
@@ -873,24 +868,25 @@ describe('Article Page', () => {
       );
 
       const helmetContent = Helmet.peek();
-      const schemaType = JSON.parse(helmetContent.scriptTags[2].innerHTML)[
-        '@graph'
-      ][0]['@type'];
+
+      const linkedData = helmetContent.scriptTags.find(
+        ({ type }) => type === 'application/ld+json',
+      ) || { innerHTML: '' };
+
+      const schemaType = JSON.parse(linkedData.innerHTML)['@graph'][0]['@type'];
 
       expect(schemaType).toEqual('Article');
     });
   });
   describe('when rendering an STY page', () => {
     it('should add brandname to page title in atiAnalytics', async () => {
-      (ATIAnalytics as jest.Mock).mockImplementation(() => <div />);
-
       render(
         <Context service="pidgin">
           <ArticlePage pageData={articleStyDataPidgin} />
         </Context>,
       );
 
-      expect(ATIAnalytics).toHaveBeenLastCalledWith(
+      expect(atiAnalyticsSpy).toHaveBeenLastCalledWith(
         {
           atiData: {
             categoryName: null,

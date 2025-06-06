@@ -2,6 +2,7 @@ import React from 'react';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import fixture from '../../../../data/pidgin/topics/c95y35941vrt.json';
 import mundoFixture from '../../../../data/mundo/topics/c1en6xwmpkvt.json';
+import kyrgyzFixture from '../../../../data/kyrgyz/topics/cvpv9djp9qqt.json';
 import kyrgyzHomePage from '../../../../data/kyrgyz/homePage/index.json';
 import { data as kyrgyzMostRead } from '../../../../data/kyrgyz/mostRead/index.json';
 import afriqueHomePage from '../../../../data/afrique/homePage/index.json';
@@ -19,7 +20,7 @@ import { RadioScheduleData } from '../../models/types/radioSchedule';
 
 jest.mock('../ThemeProvider');
 
-const { NONE, BANNER, RANKED, COLLECTION } = VISUAL_STYLE;
+const { NONE, BANNER, RANKED, COLLECTION, LINKS } = VISUAL_STYLE;
 const { NORMAL, HIGH, LOW, MAXIMUM, MINIMUM } = VISUAL_PROMINENCE;
 
 const messageBannerCuration = kyrgyzHomePage.data.curations.find(
@@ -34,6 +35,22 @@ const billboardCuration = kyrgyzHomePage.data.curations.find(
   ({ visualStyle, visualProminence, summaries }) =>
     visualStyle === BANNER &&
     visualProminence === MAXIMUM &&
+    summaries &&
+    summaries.length > 0,
+);
+
+const usefulLinksCuration = kyrgyzFixture.data.curations.find(
+  ({ visualStyle, visualProminence, summaries }) =>
+    visualStyle === LINKS &&
+    visualProminence === LOW &&
+    summaries &&
+    summaries.length > 0,
+);
+
+const socialLinksCuration = kyrgyzFixture.data.curations.find(
+  ({ visualStyle, visualProminence, summaries }) =>
+    visualStyle === LINKS &&
+    visualProminence === NORMAL &&
     summaries &&
     summaries.length > 0,
 );
@@ -68,6 +85,16 @@ const components = {
     visualStyle: BANNER,
     visualProminence: MAXIMUM,
     summaries: billboardCuration?.summaries,
+  },
+  'useful-links-1': {
+    visualStyle: LINKS,
+    visualProminence: LOW,
+    summaries: usefulLinksCuration?.summaries,
+  },
+  'social-links-1': {
+    visualStyle: LINKS,
+    visualProminence: NORMAL,
+    summaries: socialLinksCuration?.summaries,
   },
 };
 

@@ -4,7 +4,7 @@ import {
   screen,
 } from '../../../components/react-testing-library-with-providers';
 import { suppressPropWarnings } from '../../psammead/psammead-test-helpers/src';
-import BrandContainer from '.';
+import BrandContainer, { getBrandPath } from '.';
 
 const BrandContainerWithContext = (skipLink, scriptLink, linkId) => (
   <BrandContainer skipLink={skipLink} scriptLink={scriptLink} linkId={linkId} />
@@ -12,6 +12,29 @@ const BrandContainerWithContext = (skipLink, scriptLink, linkId) => (
 
 const mockSkipLink = <div data-testid="skip-link">Skip Link</div>;
 const mockScriptLink = <div data-testid="script-link">Script Link</div>;
+
+describe('getBrandPath', () => {
+  it('should return /ws/languages for ws service', () => {
+    expect(getBrandPath('ws')).toBe('/ws/languages');
+    expect(getBrandPath('ws', 'cyr')).toBe('/ws/languages');
+  });
+
+  it('should return /[service]/[variant] when valid', () => {
+    expect(getBrandPath('serbian', 'lat')).toBe('/serbian/lat');
+  });
+
+  it('should return /[service] for services that do not support variants', () => {
+    expect(getBrandPath('news', 'simp')).toBe('/news');
+  });
+
+  it('should return /[service] when variant is undefined', () => {
+    expect(getBrandPath('serbian')).toBe('/serbian');
+  });
+
+  it('should return /[service] when variant is not valid for the service', () => {
+    expect(getBrandPath('serbian', 'simp')).toBe('/serbian');
+  });
+});
 
 describe(`BrandContainer`, () => {
   suppressPropWarnings(['linkId', 'StyledBrand', 'null']);

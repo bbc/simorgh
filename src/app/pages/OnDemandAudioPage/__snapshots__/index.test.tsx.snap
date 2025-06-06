@@ -361,7 +361,6 @@ exports[`OnDemand Radio Page  should match snapshot 1`] = `
 }
 
 .emotion-24 {
-  background-color: #FFFFFF;
   height: 165px;
 }
 
@@ -1264,7 +1263,9 @@ exports[`OnDemand Radio Page  should match snapshot 1`] = `
 }
 
 <div>
-  <noscript />
+  <div>
+    ATI Analytics
+  </div>
   <div>
     chartbeat
   </div>
@@ -1345,11 +1346,11 @@ exports[`OnDemand Radio Page  should match snapshot 1`] = `
           </div>
         </div>
         <figure
-          class="emotion-23"
+          class="media-container emotion-23"
           data-e2e="media-loader__container"
         >
           <div
-            class="emotion-24"
+            class="media-player emotion-24"
             data-e2e="media-player"
           >
             <noscript />
@@ -3189,7 +3190,9 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
 }
 
 <div>
-  <noscript />
+  <div>
+    ATI Analytics
+  </div>
   <div>
     chartbeat
   </div>
@@ -5087,7 +5090,9 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 }
 
 <div>
-  <noscript />
+  <div>
+    ATI Analytics
+  </div>
   <div>
     chartbeat
   </div>

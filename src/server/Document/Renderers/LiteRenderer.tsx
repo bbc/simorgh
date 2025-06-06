@@ -22,15 +22,13 @@ export default function LitePageRenderer({
         {title}
         {helmetMetaTags}
         {helmetLinkTags}
-        {helmetScriptTags}
-        <style
-          // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
-          dangerouslySetInnerHTML={{ __html: styles }}
-        />
+        <style dangerouslySetInnerHTML={{ __html: styles }} />
+        {/* IMPORTANT: ComponentTracking MUST come before helmetScriptTags due to synchronous calls from helmetScriptTags to functions within ComponentTracking */}
         <ComponentTracking
           enableStaticClickTrackingOnOperaMiniOnly={false}
-          trackComponentViews={true}
+          trackComponentViews
         />
+        {helmetScriptTags}
       </head>
       <body>{bodyContent}</body>
     </html>

@@ -204,7 +204,10 @@ module.exports = ({
         exclude({ name, path }) {
           return (
             name === '@babel/runtime' &&
-            path === './~/@emotion/react/~/@babel/runtime'
+            [
+              './~/@emotion/react/~/@babel/runtime',
+              './~/@loadable/component/~/@babel/runtime',
+            ].includes(path)
           );
         },
       }),

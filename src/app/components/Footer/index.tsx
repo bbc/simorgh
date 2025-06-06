@@ -24,10 +24,18 @@ export default () => {
   const {
     externalLink,
     links,
+    extraLinks,
     copyrightText,
     trustProjectLink,
     collectiveNewsroomText,
   } = footer;
+
+  const extraLinkElements =
+    Array.isArray(extraLinks) && extraLinks.length > 0
+      ? extraLinks.map(({ id, text, href, lang }) => (
+          <Link key={id || href} text={text} href={href} lang={lang} />
+        ))
+      : [];
 
   const elements = links
     ?.map(({ id, text, href, lang }) => {
@@ -72,6 +80,9 @@ export default () => {
         }
       >
         <List elements={elements} trustProjectLink={trustProjectLink} />
+        {extraLinkElements.length > 0 && (
+          <List elements={extraLinkElements} extraLinks />
+        )}
         {collectiveNewsroomText && (
           <p css={styles.paragraphWithBorderBottom}>{collectiveNewsroomText}</p>
         )}

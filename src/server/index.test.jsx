@@ -1340,14 +1340,14 @@ describe('Server', () => {
     service: 'pashto',
     serviceId: 'bbc_pashto_tv',
     brandEpisode: 'tv',
-    mediaId: 'w172xcldhhrhmcf',
+    mediaId: 'w172xtq7x8660m1',
   });
 
   testOnDemandTvEpisodePages({
     platform: 'canonical',
     service: 'pashto',
     serviceId: 'bbc_pashto_tv',
-    mediaId: 'w172xcldhhrhmcf',
+    mediaId: 'w172xtq7x8660m1',
   });
 
   testAssetPages({

@@ -166,6 +166,7 @@ export interface Footer {
   trustProjectLink?: FooterLink;
   externalLink?: FooterLink;
   links?: FooterLink[];
+  extraLinks?: FooterLink[];
   copyrightText?: string;
   collectiveNewsroomText?: string;
 }
