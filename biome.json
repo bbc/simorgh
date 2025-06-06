@@ -28,7 +28,7 @@
       "suspicious": {
         "noArrayIndexKey": "error",
         "noAssignInExpressions": "error",
-        "noExplicitAny": "warn",
+        "noExplicitAny": "off",
         "noConsole": "warn",
         "noGlobalAssign": "error",
         "useValidTypeof": "error"
@@ -40,7 +40,8 @@
       "**/index.amp.stories.jsx",
       ".storybook/**/*",
       "src/integration/**/*",
-      "src/app/hooks/useImageColour/colorthief.js"
+      "src/app/hooks/useImageColour/colorthief.js",
+      "webpack.config.*"
     ]
   },
   "javascript": {
