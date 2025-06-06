@@ -32,12 +32,7 @@ const PortraitVideoModal = ({
 }: PortraitVideoModalProps) => {
   const modalRef = useRef<HTMLDialogElement>(null);
 
-  const reordered = [
-    ...items.slice(initialVideoIndex),
-    ...items.slice(0, initialVideoIndex),
-  ];
-
-  const blocks: PortraitClipMediaBlock[] = reordered.map(item => ({
+  const blocks: PortraitClipMediaBlock[] = items.map(item => ({
     type: 'portraitClipMedia',
     model: {
       type: 'video',
@@ -83,7 +78,7 @@ const PortraitVideoModal = ({
       </button>
 
       <div css={styles.navWrapper}>
-        <MediaLoader blocks={blocks} />
+        <MediaLoader blocks={blocks} initialVideoIndex={initialVideoIndex} />
       </div>
     </dialog>
   );

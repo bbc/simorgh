@@ -184,9 +184,16 @@ type Props = {
   className?: string;
   embedded?: boolean;
   uniqueId?: string;
+  initialVideoIndex?: number;
 };
 
-const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
+const MediaLoader = ({
+  blocks,
+  className,
+  embedded,
+  uniqueId,
+  initialVideoIndex,
+}: Props) => {
   const { lang, service, translations } = useContext(ServiceContext);
   const { pageIdentifier } = useContext(EventTrackingContext);
   const { enabled: adsEnabled } = useToggle('ads');
@@ -224,6 +231,7 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
     adsEnabled,
     showAdsBasedOnLocation,
     embedded,
+    initialVideoIndex,
   });
 
   if (!config) return null;

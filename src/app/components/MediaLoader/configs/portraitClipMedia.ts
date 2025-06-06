@@ -16,7 +16,10 @@ export default ({
   basePlayerConfig,
   adsEnabled = false,
   showAdsBasedOnLocation = false,
-}: ConfigBuilderProps): ConfigBuilderReturnProps => {
+  initialVideoIndex = 0,
+}: ConfigBuilderProps & {
+  initialVideoIndex?: number;
+}): ConfigBuilderReturnProps => {
   const portraitClipMediaBlocks = filterForBlockType(
     blocks,
     'portraitClipMedia',
@@ -60,16 +63,21 @@ export default ({
   const showAds = shouldDisplayAds({
     adsEnabled,
     showAdsBasedOnLocation,
-    duration: playlistItems[0]?.duration ?? 0,
+    duration: playlistItems[initialVideoIndex]?.duration ?? 0,
   });
+
+  const validIndex = Math.max(
+    0,
+    Math.min(initialVideoIndex, playlistItems.length - 1),
+  );
+
+  const current = playlistItems[validIndex];
+  const previous = playlistItems[validIndex - 1];
+  const next = playlistItems[validIndex + 1];
 
   if (showAds) {
     playlistItems.unshift({ kind: 'advert' });
   }
-
-  const current = playlistItems[0];
-  const previous = playlistItems[1] ? playlistItems[0] : undefined;
-  const next = playlistItems[1];
 
   return {
     mediaType: 'video',

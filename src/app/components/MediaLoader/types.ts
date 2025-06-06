@@ -105,6 +105,7 @@ export type ConfigBuilderProps = {
   embedUrl?: string;
   embedded?: boolean;
   lang: string;
+  initialVideoIndex?: number;
 };
 
 export type Orientations = 'landscape' | 'portrait';
@@ -337,4 +338,5 @@ export type BuildConfigProps = {
   adsEnabled?: boolean;
   showAdsBasedOnLocation?: boolean;
   embedded?: boolean;
+  initialVideoIndex?: number;
 };
