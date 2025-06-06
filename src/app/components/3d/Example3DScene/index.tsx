@@ -33,10 +33,10 @@ const Example3DScene: React.FC = () => {
 
       // rendering the scene
       const renderScene = () => {
-        cube.rotation.x += 0.01;
-        cube.rotation.y += 0.01;
+        // cube.rotation.x += 0.01;
+        // cube.rotation.y += 0.01;
         renderer.render(scene, camera);
-        requestAnimationFrame(renderScene);
+        // requestAnimationFrame(renderScene);
       };
 
       renderScene();

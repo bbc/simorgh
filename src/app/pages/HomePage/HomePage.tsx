@@ -4,10 +4,6 @@
 
 // 3JS Imports
 import Example3DScene from '#app/components/3d/Example3DScene';
-
-
-
-import { Canvas } from '@react-three/fiber';
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
