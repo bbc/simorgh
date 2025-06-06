@@ -11,13 +11,15 @@
     "lineWidth": 80,
     "attributePosition": "auto",
     "bracketSpacing": true,
+    "include": [
+      "./src/**/*",
+      "./data/**/*",
+      "./cypress/**/*",
+      "./webpack.config*"
+    ],
     "ignore": [
-      "**/node_modules/**/*",
-      "**/dist/**/*",
-      "**/build/**/*",
-      "**/coverage/**/*",
-      "**/.vscode/**/*",
-      "**/.yarn/**/*"
+      "./src/integration/**/*",
+      "src/app/hooks/useImageColour/colorthief.js"
     ]
   },
   "organizeImports": { "enabled": true },
@@ -46,14 +48,15 @@
         "useValidTypeof": "error"
       }
     },
+    "include": [
+      "./src/**/*",
+      "./data/**/*",
+      "./cypress/**/*",
+      "./webpack.config*"
+    ],
     "ignore": [
-      "**/tz/**",
-      "**/index.stories.jsx",
-      "**/index.amp.stories.jsx",
-      ".storybook/**/*",
-      "src/integration/**/*",
-      "src/app/hooks/useImageColour/colorthief.js",
-      "webpack.config.*"
+      "./src/integration/**/*",
+      "src/app/hooks/useImageColour/colorthief.js"
     ]
   },
   "javascript": {
