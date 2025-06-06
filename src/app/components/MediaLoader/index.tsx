@@ -131,6 +131,49 @@ const MediaContainer = ({
               mediaPlayers[uniqueId] = mediaPlayer;
             }
           }
+          mediaPlayer.bind('playlistLoaded', event => {
+            const { playlist } = event;
+            const currentId =
+              playlist?.items?.[0]?.vpid || playlist?.items?.[0]?.versionID;
+
+            const allItems =
+              playerConfig?.playlistObject?.itemsList ??
+              playerConfig?.playlistObject?.items;
+
+            const currentIndex = allItems?.findIndex(
+              item => item.vpid === currentId || item.versionID === currentId,
+            );
+
+            const previous = allItems?.[currentIndex - 1];
+            const next = allItems?.[currentIndex + 1];
+
+            if (next) {
+              mediaPlayer.queuePlaylist({
+                title: next.title ?? '',
+                holdingImageURL: next.holdingImageURL ?? '',
+                items: [next],
+                guidance: next.guidance ?? undefined,
+                embedRights: next.embedRights,
+              });
+            }
+
+            if (previous) {
+              mediaPlayer.setPreviousPlaylist({
+                title: previous.title ?? '',
+                holdingImageURL: previous.holdingImageURL ?? '',
+                items: [previous],
+                guidance: previous.guidance ?? undefined,
+                embedRights: previous.embedRights,
+              });
+            }
+
+            mediaPlayer.updateUiConfig({
+              controls: {
+                alwaysEnableNextButton: Boolean(next),
+                alwaysEnablePreviousButton: Boolean(previous),
+              },
+            });
+          });
 
           if (showAds) {
             const adTag = await window.dotcom.ads.getAdTag();

@@ -106,6 +106,7 @@ export default ({
               embedRights: previous.embedRights,
             }
           : undefined,
+        itemsList: playlistItems,
       },
       ui: {
         ...basePlayerConfig.ui,

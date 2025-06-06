@@ -35,6 +35,7 @@ export type PlayerConfig = {
 export type PlaylistWithContext = Playlist & {
   queuedPlaylist?: Playlist;
   previousPlaylist?: Playlist;
+  itemsList?: PlaylistItem[];
 };
 
 export type Playlist = {
@@ -143,7 +144,7 @@ export type Player = {
   load: () => void;
   play: () => void;
   pause: () => void;
-  bind: (event: string, callback: () => void) => void;
+  bind: (event: string, callback: (event?: any) => void) => void;
   loadPlugin: (
     pluginName: { [key: string]: string },
     parameters: {
@@ -155,6 +156,9 @@ export type Player = {
     },
   ) => void;
   player: { paused: () => boolean };
+  queuePlaylist?: (playlist: Playlist) => void;
+  setPreviousPlaylist?: (playlist: Playlist) => void;
+  updateUiConfig?: (uiConfig: PlayerUiConfig) => void;
 };
 
 export type BumpType = {
