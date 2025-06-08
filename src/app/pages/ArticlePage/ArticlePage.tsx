@@ -21,6 +21,7 @@ import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
 import OPTIMIZELY_CONFIG from '#app/lib/config/optimizely';
+import QuickExitButton from '#app/components/QuickExitButton';
 
 import {
   getArticleId,
@@ -141,7 +142,7 @@ const getVideoComponent =
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
-  const { isApp, isAmp, isLite } = useContext(RequestContext);
+  const { isApp, isAmp, isLite, service } = useContext(RequestContext);
 
   const {
     articleAuthor,
@@ -273,9 +274,14 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         experimentVariant,
       ),
   );
+
+  const showQuickExitButton = ['persian', 'korean', 'russian'].includes(
+    service,
+  );
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics atiData={atiData} />
+
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
         title={headline}
@@ -319,6 +325,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
       )}
       <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
+      {showQuickExitButton && <QuickExitButton />}
       <div css={styles.grid}>
         <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
           <main

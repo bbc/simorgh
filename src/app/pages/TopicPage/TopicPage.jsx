@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import Curation from '#app/components/Curation';
+import QuickExitButton from '#app/components/QuickExitButton';
 import AdContainer from '../../components/Ad';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
@@ -16,7 +17,7 @@ import getItemList from '../../lib/seoUtils/getItemList';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
 
 const TopicPage = ({ pageData }) => {
-  const { lang, translations, brandName } = useContext(ServiceContext);
+  const { lang, translations, brandName, service } = useContext(ServiceContext);
   const {
     title,
     description,
@@ -44,10 +45,13 @@ const TopicPage = ({ pageData }) => {
   const pageTitle = `${title}, ${translatedPage}`;
 
   const itemList = getItemList({ curations, name: brandName });
-
+  const showQuickExitButton = ['persian', 'korean', 'russian'].includes(
+    service,
+  );
   return (
     <>
       <AdContainer slotType="leaderboard" />
+      {showQuickExitButton && <QuickExitButton />}
       <main css={styles.main} role="main">
         <div css={styles.inner}>
           <ATIAnalytics atiData={atiAnalytics} />
