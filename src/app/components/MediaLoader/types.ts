@@ -9,6 +9,18 @@ import {
 import { OptimoImageBlock } from '#app/models/types/optimo';
 import { Translations } from '#app/models/types/translations';
 
+export type Playlist = {
+  title: string;
+  summary?: string;
+  holdingImageURL?: string;
+  items: PlaylistItem[] | LegacyPlayListItem[];
+  guidance?: string;
+  embedRights?: 'allowed';
+  liveRewind?: boolean;
+  simulcast?: boolean;
+  warning?: string;
+};
+
 export type PlayerConfig = {
   autoplay?: boolean;
   preload?: string;
@@ -29,25 +41,7 @@ export type PlayerConfig = {
   };
   mediator?: { host: string };
   ui: PlayerUiConfig;
-  playlistObject?: PlaylistWithContext;
-};
-
-export type PlaylistWithContext = Playlist & {
-  queuedPlaylist?: Playlist;
-  previousPlaylist?: Playlist;
-  itemsList?: PlaylistItem[];
-};
-
-export type Playlist = {
-  title: string;
-  summary?: string;
-  holdingImageURL?: string;
-  items: PlaylistItem[] | LegacyPlayListItem[];
-  guidance?: string;
-  embedRights?: 'allowed';
-  liveRewind?: boolean;
-  simulcast?: boolean;
-  warning?: string;
+  playlistObject?: Playlist;
 };
 
 export type PlayerUiConfig = {
