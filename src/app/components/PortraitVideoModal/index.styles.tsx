@@ -2,6 +2,7 @@ import { css, Theme } from '@emotion/react';
 
 const styles = {
   dialog: css({
+    overflow: 'hidden',
     width: '100%',
     maxWidth: '100%',
     height: '100%',

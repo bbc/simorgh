@@ -6,16 +6,12 @@ import {
   ConfigBuilderReturnProps,
   PlaylistItem,
 } from '../types';
-import shouldDisplayAds from '../utils/shouldDisplayAds';
-import AUDIO_UI_CONFIG from './constants';
 
 const DEFAULT_WIDTH = 512;
 
 export default ({
   blocks,
   basePlayerConfig,
-  adsEnabled = false,
-  showAdsBasedOnLocation = false,
   initialVideoIndex = 0,
 }: ConfigBuilderProps & {
   initialVideoIndex?: number;
@@ -25,15 +21,6 @@ export default ({
     'portraitClipMedia',
     { returnAllMatchingBlocks: true },
   ) as PortraitClipMediaBlock[];
-
-  if (!portraitClipMediaBlocks?.length) {
-    return {
-      mediaType: 'video',
-      playerConfig: basePlayerConfig,
-      showAds: false,
-      orientation: 'portrait',
-    };
-  }
 
   const playlistItems: PlaylistItem[] = portraitClipMediaBlocks.map(block => {
     const { model } = block;
@@ -51,19 +38,10 @@ export default ({
       duration: moment.duration(version?.duration || 'PT0S').asSeconds(),
       embedRights: video?.isEmbeddingAllowed ? 'allowed' : undefined,
       vpid: video?.id,
-      serviceID: version?.territories?.[0],
       title: video?.title ?? '',
       guidance: version?.guidance ?? undefined,
-      territories: version?.territories,
-      images,
       holdingImageURL,
     };
-  });
-
-  const showAds = shouldDisplayAds({
-    adsEnabled,
-    showAdsBasedOnLocation,
-    duration: playlistItems[initialVideoIndex]?.duration ?? 0,
   });
 
   const validIndex = Math.max(
@@ -75,10 +53,6 @@ export default ({
   const previous = playlistItems[validIndex - 1];
   const next = playlistItems[validIndex + 1];
 
-  if (showAds) {
-    playlistItems.unshift({ kind: 'advert' });
-  }
-
   return {
     mediaType: 'video',
     playerConfig: {
@@ -88,30 +62,27 @@ export default ({
         title: current?.title ?? '',
         holdingImageURL: current?.holdingImageURL ?? '',
         items: [current],
-        queuedPlaylist: next
-          ? {
-              title: next.title ?? '',
-              holdingImageURL: next.holdingImageURL ?? '',
-              items: [next],
-              guidance: next.guidance ?? undefined,
-              embedRights: next.embedRights,
-            }
-          : undefined,
-        previousPlaylist: previous
-          ? {
-              title: previous.title ?? '',
-              holdingImageURL: previous.holdingImageURL ?? '',
-              items: [previous],
-              guidance: previous.guidance ?? undefined,
-              embedRights: previous.embedRights,
-            }
-          : undefined,
-        itemsList: playlistItems,
+        ...(next && {
+          queuedPlaylist: {
+            title: next.title ?? '',
+            holdingImageURL: next.holdingImageURL ?? '',
+            items: [next],
+            guidance: next.guidance ?? undefined,
+            embedRights: next.embedRights,
+          },
+        }),
+        ...(previous && {
+          previousPlaylist: {
+            title: previous.title ?? '',
+            holdingImageURL: previous.holdingImageURL ?? '',
+            items: [previous],
+            guidance: previous.guidance ?? undefined,
+            embedRights: previous.embedRights,
+          },
+        }),
       },
       ui: {
         ...basePlayerConfig.ui,
-        ...(portraitClipMediaBlocks[0]?.model?.type === 'audio' &&
-          AUDIO_UI_CONFIG),
         swipable: {
           enabled: true,
           direction: 'Y',
@@ -124,12 +95,10 @@ export default ({
       },
       statsObject: {
         ...basePlayerConfig.statsObject,
-        ...(current?.vpid && {
-          clipPID: current.vpid,
-        }),
+        ...(current?.vpid && { clipPID: current.vpid }),
       },
     },
-    showAds,
+    showAds: false,
     orientation: 'portrait',
   };
 };
