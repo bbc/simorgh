@@ -21,6 +21,19 @@ export type Playlist = {
   warning?: string;
 };
 
+export type PlaylistItem = {
+  versionID?: string;
+  kind: string;
+  duration?: number;
+  live?: boolean;
+  serviceID?: string;
+};
+
+export type LegacyPlayListItem = {
+  href: string;
+  kind: string;
+};
+
 export type PlayerConfig = {
   autoplay?: boolean;
   preload?: string;
@@ -64,24 +77,6 @@ export type PlayerUiConfig = {
     enabled: boolean;
     direction: 'Y' | 'X';
   };
-};
-
-export type PlaylistItem = {
-  versionID?: string;
-  kind: string;
-  duration?: number;
-  live?: boolean;
-  embedRights?: 'allowed';
-  vpid?: string;
-  serviceID?: string;
-  title?: string;
-  guidance?: string | null;
-  holdingImageURL?: string;
-};
-
-export type LegacyPlayListItem = {
-  href: string;
-  kind: string;
 };
 
 export type ConfigBuilderProps = {

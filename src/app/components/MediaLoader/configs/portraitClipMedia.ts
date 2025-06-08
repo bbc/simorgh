@@ -4,7 +4,6 @@ import {
   PortraitClipMediaBlock,
   ConfigBuilderProps,
   ConfigBuilderReturnProps,
-  PlaylistItem,
 } from '../types';
 
 const DEFAULT_WIDTH = 512;
@@ -22,11 +21,12 @@ export default ({
     { returnAllMatchingBlocks: true },
   ) as PortraitClipMediaBlock[];
 
-  const playlistItems: PlaylistItem[] = portraitClipMediaBlocks.map(block => {
+  const playlistItems = portraitClipMediaBlocks.map(block => {
     const { model } = block;
     const { video, images } = model;
     const version = video?.version;
     const image = images?.[1] || images?.[0];
+
     const holdingImageURL = image?.urlTemplate?.replace(
       '{width}',
       `${DEFAULT_WIDTH}`,
@@ -62,24 +62,8 @@ export default ({
         title: current?.title ?? '',
         holdingImageURL: current?.holdingImageURL ?? '',
         items: [current],
-        ...(next && {
-          queuedPlaylist: {
-            title: next.title ?? '',
-            holdingImageURL: next.holdingImageURL ?? '',
-            items: [next],
-            guidance: next.guidance ?? undefined,
-            embedRights: next.embedRights,
-          },
-        }),
-        ...(previous && {
-          previousPlaylist: {
-            title: previous.title ?? '',
-            holdingImageURL: previous.holdingImageURL ?? '',
-            items: [previous],
-            guidance: previous.guidance ?? undefined,
-            embedRights: previous.embedRights,
-          },
-        }),
+        ...(next && { queuedPlaylist: { items: [next] } }),
+        ...(previous && { previousPlaylist: { items: [previous] } }),
       },
       ui: {
         ...basePlayerConfig.ui,
