@@ -151,41 +151,10 @@ describe('buildSettings', () => {
           duration: 60,
           embedRights: 'allowed',
           vpid: 'p0abc001',
-          serviceID: 'bbc_world_service',
           title: 'Portrait Video 1',
           guidance: undefined,
-          territories: ['bbc_world_service'],
-          images: [
-            {},
-            {
-              urlTemplate:
-                'https://ichef.bbci.co.uk/images/ic/{width}xn/p0abc001.jpg',
-              source: 'www.test.bbc.com/aportraitmediathing',
-            },
-          ],
           holdingImageURL:
             'https://ichef.bbci.co.uk/images/ic/512xn/p0abc001.jpg',
-        },
-        {
-          versionID: 'p0abc004',
-          kind: 'programme',
-          duration: 120,
-          embedRights: 'allowed',
-          vpid: 'p0abc003',
-          serviceID: 'bbc_world_service',
-          title: 'Portrait Video 2',
-          guidance: undefined,
-          territories: ['bbc_world_service'],
-          images: [
-            {},
-            {
-              urlTemplate:
-                'https://ichef.bbci.co.uk/images/ic/{width}xn/p0abc002.jpg',
-              source: 'www.test.bbc.com/aportraitmediathing',
-            },
-          ],
-          holdingImageURL:
-            'https://ichef.bbci.co.uk/images/ic/512xn/p0abc002.jpg',
         },
       ]);
     });
