@@ -86,9 +86,6 @@ const PortraitVideoCarousel = ({
                 isEmbeddingAllowed: item.video?.isEmbeddingAllowed ?? true,
                 images: item.images || [],
               }))}
-              initialVideoIndex={items.findIndex(
-                i => i.id === selectedItem?.id,
-              )}
               onClose={handleCloseModal}
             />,
             document.body,
