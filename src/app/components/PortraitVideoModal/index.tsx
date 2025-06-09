@@ -88,20 +88,23 @@ const PortraitVideoModal = ({
     const next = blocks?.[currentIndex + 1]?.model;
 
     if (next) {
+      const [fallbackImage, portraitImage] = next?.images || [];
+
       player.queuePlaylist({
         title: next?.video?.title ?? '',
         holdingImageURL: setImageWidth(
-          (next?.images?.[1] || next?.images?.[0])?.urlTemplate,
+          (portraitImage || fallbackImage)?.urlTemplate,
         ),
         items: [{ versionID: next?.video?.version?.id }],
       });
     }
 
     if (previous) {
+      const [fallbackImage, portraitImage] = previous?.images || [];
       player.setPreviousPlaylist({
         title: previous?.video?.title ?? '',
         holdingImageURL: setImageWidth(
-          (previous?.images?.[1] || previous?.images?.[0])?.urlTemplate,
+          (portraitImage || fallbackImage)?.urlTemplate,
         ),
         items: [{ versionID: previous?.video?.version?.id }],
       });

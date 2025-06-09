@@ -19,12 +19,14 @@ export default ({
   const { model }: PortraitClipMediaBlock =
     filterForBlockType(blocks, 'portraitClipMedia') ?? {};
 
-  const { video, images = [] } = model || {};
+  const { video, images = [] } = model;
 
-  const { id, title, version } = video || {};
+  const { id, title, version } = video;
+
+  const [fallbackImage, portraitImage] = images;
 
   const holdingImageURL = setImageWidth(
-    (images?.[1] || images?.[0])?.urlTemplate,
+    (portraitImage || fallbackImage)?.urlTemplate,
   );
 
   const items: PlaylistItem[] = [

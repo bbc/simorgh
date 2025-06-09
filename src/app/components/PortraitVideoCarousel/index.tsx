@@ -73,7 +73,7 @@ const PortraitVideoCarousel = ({
           </ul>
         </div>
         {isModalOpen &&
-          selectedVideoIndex &&
+          selectedVideoIndex !== null &&
           createPortal(
             <PortraitVideoModal
               items={items.map(item => ({
