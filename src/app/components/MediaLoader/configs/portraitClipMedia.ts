@@ -1,6 +1,4 @@
 import moment from 'moment-timezone';
-
-import buildIChefURL from '#lib/utilities/ichefURL';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import {
   PortraitClipMediaBlock,
@@ -8,92 +6,108 @@ import {
   ConfigBuilderReturnProps,
   PlaylistItem,
 } from '../types';
-import getCaptionBlock from '../utils/getCaptionBlock';
 import shouldDisplayAds from '../utils/shouldDisplayAds';
-import { getExternalEmbedUrl } from '../utils/urlConstructors';
 import AUDIO_UI_CONFIG from './constants';
 
 const DEFAULT_WIDTH = 512;
 
 export default ({
-  id,
-  lang,
   blocks,
   basePlayerConfig,
   adsEnabled = false,
   showAdsBasedOnLocation = false,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
-  const portraitClipMediaBlock: PortraitClipMediaBlock = filterForBlockType(
+  const firstBlock = filterForBlockType(
     blocks,
     'portraitClipMedia',
-  );
+  ) as PortraitClipMediaBlock;
 
-  const { images, video, type } = portraitClipMediaBlock?.model || {};
+  if (!firstBlock) {
+    return {
+      mediaType: 'video',
+      playerConfig: basePlayerConfig,
+      showAds: false,
+      orientation: 'portrait',
+    };
+  }
 
-  const { source, urlTemplate: locator } = images?.[1] ?? {};
+  const portraitClipMediaBlocks: PortraitClipMediaBlock[] = filterForBlockType(
+    blocks,
+    'portraitClipMedia',
+    { returnAllMatchingBlocks: true },
+  ) as PortraitClipMediaBlock[];
 
-  const originCode = source?.replace('Image', '');
+  const playlistItems: PlaylistItem[] = portraitClipMediaBlocks.map(block => {
+    const { model } = block;
+    const { video, images } = model;
+    const version = video?.version;
 
-  const versionID = video?.version?.id;
+    // prefer portrait-oriented image if available (based on our bff structure) fallback to first available
+    const image = images?.[1] || images?.[0];
+    const holdingImageURL = image?.urlTemplate?.replace(
+      '{width}',
+      `${DEFAULT_WIDTH}`,
+    );
 
-  const clipISO8601Duration = video?.version?.duration;
-
-  const rawDuration = moment.duration(clipISO8601Duration).asSeconds();
-
-  const title = video?.title;
-
-  const videoId = video?.id;
-
-  const captionBlock = getCaptionBlock(blocks, 'live');
-
-  const caption =
-    captionBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
-
-  const kind = video?.version?.kind || 'programme';
-
-  const guidanceMessage = video?.version?.guidance;
+    return {
+      versionID: version?.id,
+      kind: version?.kind || 'programme',
+      duration: moment.duration(version?.duration || 'PT0S').asSeconds(),
+      embedRights: video?.isEmbeddingAllowed ? 'allowed' : undefined,
+      vpid: video?.id,
+      serviceID: version?.territories?.[0],
+      title: video?.title,
+      guidance: version?.guidance,
+      territories: version?.territories,
+      images,
+      holdingImageURL,
+    };
+  });
 
   const showAds = shouldDisplayAds({
     adsEnabled,
     showAdsBasedOnLocation,
-    duration: rawDuration,
+    duration: playlistItems[0]?.duration ?? 0,
   });
 
-  const embeddingAllowed = video?.isEmbeddingAllowed ?? false;
+  if (showAds) {
+    playlistItems.unshift({ kind: 'advert' });
+  }
 
-  const holdingImageURL = buildIChefURL({
-    originCode,
-    locator,
-    resolution: DEFAULT_WIDTH,
-  });
-
-  const items: PlaylistItem[] = [{ versionID, kind, duration: rawDuration }];
-
-  if (showAds) items.unshift({ kind: 'advert' });
-
-  const externalEmbedUrl = getExternalEmbedUrl({ id, versionID, lang });
+  const fallbackHoldingImageURL =
+    firstBlock?.model?.images?.[1]?.urlTemplate?.replace(
+      '{width}',
+      `${DEFAULT_WIDTH}`,
+    );
 
   return {
-    mediaType: type || 'video',
+    mediaType: firstBlock?.model?.type ?? 'video',
     playerConfig: {
       ...basePlayerConfig,
-      ...(externalEmbedUrl && { externalEmbedUrl }),
       autoplay: true,
       playlistObject: {
-        title,
-        summary: caption || '',
-        holdingImageURL,
-        items,
-        ...(guidanceMessage && { guidance: guidanceMessage }),
-        ...(embeddingAllowed && { embedRights: 'allowed' }),
+        title: firstBlock?.model?.video?.title,
+        holdingImageURL: fallbackHoldingImageURL,
+        items: playlistItems,
       },
       ui: {
         ...basePlayerConfig.ui,
-        ...(type === 'audio' && AUDIO_UI_CONFIG),
+        ...(firstBlock?.model?.type === 'audio' && AUDIO_UI_CONFIG),
+        swipable: {
+          enabled: true,
+          direction: 'Y',
+        },
+        controls: {
+          enabled: true,
+          includeNextButton: true,
+          includePreviousButton: true,
+        },
       },
       statsObject: {
         ...basePlayerConfig.statsObject,
-        ...(videoId && { clipPID: videoId }),
+        ...(firstBlock?.model?.video?.id && {
+          clipPID: firstBlock.model.video.id,
+        }),
       },
     },
     showAds,
