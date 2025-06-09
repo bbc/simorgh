@@ -68,7 +68,8 @@ export const service: DefaultServiceConfig = {
         onboardingMessage:
           'Hii ni tovuti ya maandishi pekee ambayo inatumia data kidogo. Tazama toleo kuu la tovuti likijumuisha picha na video zote.',
         toMainSite: 'Bofya kuelekea tovuti kuu',
-        informationPage: 'Pata maelezo zaidi kuhusu toleo hili la linalotumia kiasi kidogo cha data',
+        informationPage:
+          'Pata maelezo zaidi kuhusu toleo hili la linalotumia kiasi kidogo cha data',
         informationPageLink:
           'https://www.bbc.com/swahili/articles/cpw79gwzkv1o',
         dataSaving: 'Usomaji maandishi tu kupunguza gharama za data',
