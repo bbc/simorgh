@@ -73,8 +73,7 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
         .replace('{browserViewportResolution}', params.re)
         .replace('{timestamp}', params.hl)
         .replace('{language}', params.lng)
-        .replace('x6=[{referrer}]', `x6=[${params.ref}]`)
-        .replace('ref={referrer}', `ref=${params.ref}`)
+        .replaceAll('{referrer}', params.ref)
         .replace('{idclient}', params.idclient);
 
       window.sendStaticBeacon(processedReverbUrl);
