@@ -56,7 +56,12 @@ const PortraitVideoCarousel = ({
         </Heading>
         <div css={styles.carouselContainer}>
           <PortraitCarouselNavigation scrollPaneRef={scrollRef} />
-          <ul ref={scrollRef} css={styles.carousel} data-testid="pv-carousel">
+          <ul
+            ref={scrollRef}
+            css={styles.carousel}
+            data-testid="pv-carousel"
+            tabIndex={-1}
+          >
             {items.map((item, index) => (
               <PortraitVideoPromo
                 {...item}
@@ -86,9 +91,6 @@ const PortraitVideoCarousel = ({
                 isEmbeddingAllowed: item.video?.isEmbeddingAllowed ?? true,
                 images: item.images || [],
               }))}
-              initialVideoIndex={items.findIndex(
-                i => i.id === selectedItem?.id,
-              )}
               onClose={handleCloseModal}
             />,
             document.body,
