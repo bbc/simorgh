@@ -7,7 +7,7 @@ import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
 import styles from './index.styles';
 import { setImageWidth } from '../MediaLoader/configs/portraitClipMedia';
 
-interface PortraitVideoModalProps {
+export interface PortraitVideoModalProps {
   items: {
     id: string;
     title: string;
@@ -111,6 +111,7 @@ const PortraitVideoModal = ({
   return (
     <dialog ref={modalRef} css={styles.dialog}>
       <button
+        data-testid="close-modal-button"
         type="button"
         css={styles.closeButton}
         onClick={onClose}
