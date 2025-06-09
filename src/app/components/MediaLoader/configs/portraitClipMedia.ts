@@ -42,6 +42,7 @@ export default ({
     playerConfig: {
       ...basePlayerConfig,
       autoplay: true,
+      supportFakeFullscreen: true,
       playlistObject: {
         title,
         holdingImageURL,

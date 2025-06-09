@@ -165,6 +165,7 @@ describe('buildSettings', () => {
             swipable: { direction: 'Y', enabled: true },
           },
           superResponsive: true,
+          supportFakeFullscreen: true,
           counterName: 'live_coverage.testID.page',
           statsObject: {
             destination: 'WS_NEWS_LANGUAGES',

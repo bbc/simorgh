@@ -42,7 +42,7 @@ export type PlayerConfig = {
   counterName?: string;
   appType: 'amp' | 'responsive';
   appName: `news-${Services}` | 'news';
-  supportFakeFullscreen: boolean;
+  supportFakeFullscreen?: boolean;
   insideIframe?: boolean;
   embeddedOffsite?: boolean;
   externalEmbedUrl?: string;
