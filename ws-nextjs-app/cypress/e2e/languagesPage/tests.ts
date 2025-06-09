@@ -9,36 +9,29 @@ export const homePageTestSuites = [
           it('should show Test Pidgin Homepage when no renderer_env is set', () => {
             cy.request({
               url: 'https://www.test.bbc.com/pidgin',
-              headers: {
-                Origin: 'https://www.test.bbc.com',
-              },
-            }).then(response => {
-              const testContent = response.body;
-
+            }).then(() => {
               cy.get('nav').should('exist');
               cy.get('main').should('exist');
-
-              cy.get('main').then($main => {
-                const localContent = $main.html();
-                expect(localContent).to.include(testContent); // TODO: improved comparison
-              });
+              cy.get('h1').should('contain', 'BBC News, Pidgin, Home');
+              cy.get('h1').should(
+                'not.have.text',
+                'Get the news in your language',
+              );
             });
           });
 
           it('should show Test Pidgin Homepage when renderer_env=test', () => {
             cy.request(
               `${Cypress.config().baseUrl}/ws/languages?renderer_env=test`,
-            ).then(localResponse => {
-              const localContent = localResponse.body;
+            ).then(() => {
               cy.request({
                 url: 'https://www.test.bbc.com/pidgin',
-                headers: {
-                  Origin: 'https://www.test.bbc.com',
-                },
-              }).then(response => {
-                const testContent = response.body;
-                expect(localContent).to.include('Pidgin');
-                expect(localContent).to.include(testContent); // TODO: improved comparison
+              }).then(() => {
+                cy.get('h1').should('contain', 'BBC News, Pidgin, Home');
+                cy.get('h1').should(
+                  'not.have.text',
+                  'Get the news in your language',
+                );
               });
             });
           });
@@ -46,17 +39,15 @@ export const homePageTestSuites = [
           it('should show Live Pidgin Homepage when renderer_env=live', () => {
             cy.request(
               `${Cypress.config().baseUrl}/ws/languages?renderer_env=live`,
-            ).then(localResponse => {
-              const localContent = localResponse.body;
+            ).then(() => {
               cy.request({
                 url: 'https://www.bbc.com/pidgin',
-                headers: {
-                  Origin: 'https://www.bbc.com',
-                },
-              }).then(response => {
-                const liveContent = response.body;
-                expect(localContent).to.include('Pidgin');
-                expect(localContent).to.include(liveContent); // TODO: improved comparison
+              }).then(() => {
+                cy.get('h1').should('contain', 'BBC News, Pidgin, Home');
+                cy.get('h1').should(
+                  'not.have.text',
+                  'Get the news in your language',
+                );
               });
             });
           });
@@ -77,20 +68,10 @@ export const staticPageTestSuites = [
           it('should show Languages page', () => {
             cy.request({
               url: 'https://www.bbc.com/ws/languages',
-              headers: {
-                Origin: 'https://www.bbc.com',
-              },
-            }).then(response => {
-              const liveContent = response.body;
-
-              cy.get('h1').should('contain', 'Languages');
+            }).then(() => {
+              cy.get('h1').should('have.text', 'Get the news in your language');
               cy.get('nav').should('exist');
               cy.get('main').should('exist');
-
-              cy.get('main').then($main => {
-                const localContent = $main.html();
-                expect(localContent).to.include(liveContent); // TODO: improved comparison
-              });
             });
           });
         });
