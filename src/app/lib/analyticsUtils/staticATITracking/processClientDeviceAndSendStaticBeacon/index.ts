@@ -64,7 +64,8 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
 
     if (navigator.language) params.lng = navigator.language;
     if (user.val) params.idclient = user.val;
-    if (document.referrer) params.ref = document.referrer;
+    
+    params.ref = document.referrer || '';
 
     if (reverbURL) {
       const processedReverbUrl = reverbURL
@@ -72,7 +73,8 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
         .replace('{browserViewportResolution}', params.re)
         .replace('{timestamp}', params.hl)
         .replace('{language}', params.lng)
-        .replaceAll('{referrer}', params.ref)
+        .replace('x6=[{referrer}]', `x6=[${params.ref}]`)
+        .replace('ref={referrer}', `ref=${params.ref}`)
         .replace('{idclient}', params.idclient);
 
       window.sendStaticBeacon(processedReverbUrl);
