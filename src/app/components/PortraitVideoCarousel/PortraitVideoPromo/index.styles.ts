@@ -75,10 +75,17 @@ const styles = {
       background:
         'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 24%, rgba(0, 0, 0, 1) 100%)',
     }),
-  forcedColourBackground: ({ mq }: Theme) =>
+  textWrapper: ({ mq, palette }: Theme) =>
     css({
       [mq.FORCED_COLOURS]: {
         backgroundColor: 'canvas',
+      },
+      'button:focus-visible &, button:hover &': {
+        textDecoration: 'underline',
+        textDecorationColor: palette.WHITE,
+      },
+      'button:focus-visible &': {
+        ...twoPixelFocusIndicatorStyle(palette.BLACK, palette.WHITE),
       },
     }),
   durationContainer: ({ palette, mq }: Theme) =>
@@ -106,12 +113,8 @@ const styles = {
       display: 'block',
       color: palette.WHITE,
       margin: `${spacings.FULL}rem 0 0 0`,
-      'button:focus-visible &, button:hover &': {
-        textDecoration: 'underline',
-      },
-      'button:focus-visible &': {
-        ...twoPixelFocusIndicatorStyle(palette.BLACK, palette.WHITE),
-      },
+      textDecorationColor: palette.WHITE,
+      '&focus, &:hover': { textDecorationColor: palette.WHITE },
     }),
 };
 
