@@ -144,19 +144,49 @@ describe('buildSettings', () => {
         pageType: 'home',
       });
 
-      expect(result?.playerConfig.playlistObject?.items).toEqual([
-        {
-          versionID: 'p0abc002',
-          kind: 'programme',
-          duration: 60,
-          embedRights: 'allowed',
-          vpid: 'p0abc001',
-          title: 'Portrait Video 1',
-          guidance: undefined,
-          holdingImageURL:
-            'https://ichef.bbci.co.uk/images/ic/512xn/p0abc001.jpg',
+      expect(result).toStrictEqual({
+        mediaType: 'video',
+        playerConfig: {
+          autoplay: true,
+          product: 'news',
+          enableToucan: true,
+          appType: 'responsive',
+          appName: 'news-serbian',
+          ui: {
+            skin: 'classic',
+            controls: {
+              enabled: true,
+              includeNextButton: true,
+              includePreviousButton: true,
+            },
+            locale: { lang: 'sr-latn' },
+            subtitles: { defaultOn: true, enabled: true },
+            fullscreen: { enabled: true },
+            swipable: { direction: 'Y', enabled: true },
+          },
+          superResponsive: true,
+          counterName: 'live_coverage.testID.page',
+          statsObject: {
+            destination: 'WS_NEWS_LANGUAGES',
+            producer: 'SERBIAN',
+            clipPID: 'p0abc001',
+          },
+          playlistObject: {
+            title: 'Portrait Video 1',
+            holdingImageURL:
+              'https://ichef.bbci.co.uk/images/ic/512xn/p0abc001.jpg',
+            items: [
+              {
+                duration: 60,
+                kind: 'programme',
+                versionID: 'p0abc002',
+              },
+            ],
+          },
         },
-      ]);
+        showAds: false,
+        orientation: 'portrait',
+      });
     });
   });
 

@@ -4,13 +4,7 @@
 
 // filters an array of blocks for a given type and Returns the first match by default
 // pass `{ returnAllMatchingBlocks: true }` to get all matching blocks.
-const filterForBlockType = (
-  arrayOfBlocks,
-  type,
-  options = { returnAllMatchingBlocks: false },
-) => {
-  const filtered = arrayOfBlocks?.filter(block => block?.type === type);
-  return options.returnAllMatchingBlocks ? filtered : filtered?.[0];
-};
+const filterForBlockType = (arrayOfBlocks, type) =>
+  arrayOfBlocks?.filter(block => block?.type === type)?.[0];
 
 export default filterForBlockType;

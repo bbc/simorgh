@@ -98,6 +98,7 @@ type MediaContainerProps = {
   showAds: boolean;
   uniqueId?: string;
   noJsMessage?: string;
+  playlistLoadedCallback?: (e?: Event) => void;
 };
 
 const isAudioPlayer = (playerConfig: PlayerConfig) =>
@@ -108,6 +109,7 @@ const MediaContainer = ({
   showAds,
   uniqueId,
   noJsMessage,
+  playlistLoadedCallback,
 }: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
   const isAudio = isAudioPlayer(playerConfig);
@@ -131,6 +133,13 @@ const MediaContainer = ({
               mediaPlayers[uniqueId] = mediaPlayer;
             }
           }
+
+          if (playlistLoadedCallback) {
+            mediaPlayer.bind('playlistLoaded', e => {
+              playlistLoadedCallback?.(e);
+            });
+          }
+
           if (showAds) {
             const adTag = await window.dotcom.ads.getAdTag();
             mediaPlayer.loadPlugin(
@@ -162,7 +171,7 @@ const MediaContainer = ({
     } catch (error) {
       logger.error(MEDIA_PLAYER_STATUS, error);
     }
-  }, [playerConfig, showAds, uniqueId]);
+  }, [playerConfig, showAds, uniqueId, playlistLoadedCallback]);
 
   return (
     <div
@@ -183,7 +192,7 @@ type Props = {
   className?: string;
   embedded?: boolean;
   uniqueId?: string;
-  initialVideoIndex?: number;
+  playlistLoadedCallback?: (e?: Event) => void;
 };
 
 const MediaLoader = ({
@@ -191,7 +200,7 @@ const MediaLoader = ({
   className,
   embedded,
   uniqueId,
-  initialVideoIndex,
+  playlistLoadedCallback,
 }: Props) => {
   const { lang, service, translations } = useContext(ServiceContext);
   const { pageIdentifier } = useContext(EventTrackingContext);
@@ -230,7 +239,6 @@ const MediaLoader = ({
     adsEnabled,
     showAdsBasedOnLocation,
     embedded,
-    initialVideoIndex,
   });
 
   if (!config) return null;
@@ -305,6 +313,7 @@ const MediaLoader = ({
                 showAds={showAds}
                 uniqueId={uniqueId}
                 noJsMessage={noJsMessage}
+                playlistLoadedCallback={playlistLoadedCallback}
               />
             )}
           </>

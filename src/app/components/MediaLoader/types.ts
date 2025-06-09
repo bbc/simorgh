@@ -90,7 +90,6 @@ export type ConfigBuilderProps = {
   embedUrl?: string;
   embedded?: boolean;
   lang: string;
-  initialVideoIndex?: number;
 };
 
 export type Orientations = 'landscape' | 'portrait';
@@ -128,7 +127,7 @@ export type Player = {
   load: () => void;
   play: () => void;
   pause: () => void;
-  bind: (event: string, callback: () => void) => void;
+  bind: (event: string, callback: (e?: Event) => void) => void;
   loadPlugin: (
     pluginName: { [key: string]: string },
     parameters: {
@@ -322,5 +321,4 @@ export type BuildConfigProps = {
   adsEnabled?: boolean;
   showAdsBasedOnLocation?: boolean;
   embedded?: boolean;
-  initialVideoIndex?: number;
 };

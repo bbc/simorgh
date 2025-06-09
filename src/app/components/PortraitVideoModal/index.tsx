@@ -5,6 +5,7 @@ import MediaLoader from '#app/components/MediaLoader';
 import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
 import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
 import styles from './index.styles';
+import { setImageWidth } from '../MediaLoader/configs/portraitClipMedia';
 
 interface PortraitVideoModalProps {
   items: {
@@ -22,13 +23,13 @@ interface PortraitVideoModalProps {
     }[];
   }[];
   onClose: () => void;
-  initialVideoIndex: number;
+  selectedVideoIndex: number;
 }
 
 const PortraitVideoModal = ({
   items,
   onClose,
-  initialVideoIndex,
+  selectedVideoIndex,
 }: PortraitVideoModalProps) => {
   const modalRef = useRef<HTMLDialogElement>(null);
 
@@ -66,6 +67,45 @@ const PortraitVideoModal = ({
     };
   }, []);
 
+  const playlistLoadedCallback = (e?: Event) => {
+    const player = window.embeddedMedia.api.players().bbcMediaPlayer0;
+
+    // @ts-expect-error - playlist is a custom SMP field
+    const { playlist } = e || {};
+
+    const currentId =
+      playlist?.items?.[0]?.vpid || playlist?.items?.[0]?.versionID;
+
+    const currentIndex = blocks?.findIndex(
+      item =>
+        item.model.video.id === currentId ||
+        item.model.video.version.id === currentId,
+    );
+
+    const previous = blocks?.[currentIndex - 1]?.model;
+    const next = blocks?.[currentIndex + 1]?.model;
+
+    if (next) {
+      player.queuePlaylist({
+        title: next?.video?.title ?? '',
+        holdingImageURL: setImageWidth(
+          (next?.images?.[1] || next?.images?.[0])?.urlTemplate,
+        ),
+        items: [{ versionID: next?.video?.version?.id }],
+      });
+    }
+
+    if (previous) {
+      player.setPreviousPlaylist({
+        title: previous?.video?.title ?? '',
+        holdingImageURL: setImageWidth(
+          (previous?.images?.[1] || previous?.images?.[0])?.urlTemplate,
+        ),
+        items: [{ versionID: previous?.video?.version?.id }],
+      });
+    }
+  };
+
   return (
     <dialog ref={modalRef} css={styles.dialog}>
       <button
@@ -78,7 +118,10 @@ const PortraitVideoModal = ({
       </button>
 
       <div css={styles.navWrapper}>
-        <MediaLoader blocks={blocks} initialVideoIndex={initialVideoIndex} />
+        <MediaLoader
+          blocks={[blocks[selectedVideoIndex]]}
+          playlistLoadedCallback={playlistLoadedCallback}
+        />
       </div>
     </dialog>
   );

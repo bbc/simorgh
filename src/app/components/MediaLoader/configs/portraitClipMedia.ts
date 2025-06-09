@@ -4,54 +4,36 @@ import {
   PortraitClipMediaBlock,
   ConfigBuilderProps,
   ConfigBuilderReturnProps,
+  PlaylistItem,
 } from '../types';
 
 const DEFAULT_WIDTH = 512;
 
+export const setImageWidth = (url?: string) =>
+  url?.replace('{width}', String(DEFAULT_WIDTH));
+
 export default ({
   blocks,
   basePlayerConfig,
-  initialVideoIndex = 0,
-}: ConfigBuilderProps & {
-  initialVideoIndex?: number;
-}): ConfigBuilderReturnProps => {
-  const portraitClipMediaBlocks = filterForBlockType(
-    blocks,
-    'portraitClipMedia',
-    { returnAllMatchingBlocks: true },
-  ) as PortraitClipMediaBlock[];
+}: ConfigBuilderProps): ConfigBuilderReturnProps => {
+  const { model }: PortraitClipMediaBlock =
+    filterForBlockType(blocks, 'portraitClipMedia') ?? {};
 
-  const playlistItems = portraitClipMediaBlocks.map(block => {
-    const { model } = block;
-    const { video, images } = model;
-    const version = video?.version;
-    const image = images?.[1] || images?.[0];
+  const { video, images = [] } = model || {};
 
-    const holdingImageURL = image?.urlTemplate?.replace(
-      '{width}',
-      `${DEFAULT_WIDTH}`,
-    );
+  const { id, title, version } = video || {};
 
-    return {
-      versionID: version?.id,
-      kind: version?.kind || 'programme',
-      duration: moment.duration(version?.duration || 'PT0S').asSeconds(),
-      embedRights: video?.isEmbeddingAllowed ? 'allowed' : undefined,
-      vpid: video?.id,
-      title: video?.title ?? '',
-      guidance: version?.guidance ?? undefined,
-      holdingImageURL,
-    };
-  });
-
-  const validIndex = Math.max(
-    0,
-    Math.min(initialVideoIndex, playlistItems.length - 1),
+  const holdingImageURL = setImageWidth(
+    (images?.[1] || images?.[0])?.urlTemplate,
   );
 
-  const current = playlistItems[validIndex];
-  const previous = playlistItems[validIndex - 1];
-  const next = playlistItems[validIndex + 1];
+  const items: PlaylistItem[] = [
+    {
+      versionID: version?.id,
+      kind: version?.kind,
+      duration: moment.duration(version?.duration || 'PT0S').asSeconds(),
+    },
+  ];
 
   return {
     mediaType: 'video',
@@ -59,11 +41,9 @@ export default ({
       ...basePlayerConfig,
       autoplay: true,
       playlistObject: {
-        title: current?.title ?? '',
-        holdingImageURL: current?.holdingImageURL ?? '',
-        items: [current],
-        ...(next && { queuedPlaylist: { items: [next] } }),
-        ...(previous && { previousPlaylist: { items: [previous] } }),
+        title,
+        holdingImageURL,
+        items,
       },
       ui: {
         ...basePlayerConfig.ui,
@@ -79,7 +59,7 @@ export default ({
       },
       statsObject: {
         ...basePlayerConfig.statsObject,
-        ...(current?.vpid && { clipPID: current.vpid }),
+        ...(id && { clipPID: id }),
       },
     },
     showAds: false,
