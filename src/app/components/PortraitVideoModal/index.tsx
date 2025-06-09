@@ -68,7 +68,7 @@ const PortraitVideoModal = ({
   }, []);
 
   const playlistLoadedCallback = (e?: Event) => {
-    const player = window.embeddedMedia.api.players().bbcMediaPlayer0;
+    const player = window?.embeddedMedia?.api?.players()?.bbcMediaPlayer0;
 
     // @ts-expect-error - playlist is a custom SMP field
     const { playlist } = e || {};
