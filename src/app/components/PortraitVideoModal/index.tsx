@@ -70,6 +70,8 @@ const PortraitVideoModal = ({
   const playlistLoadedCallback = (e?: Event) => {
     const player = window?.embeddedMedia?.api?.players()?.bbcMediaPlayer0;
 
+    if (!player) return;
+
     // @ts-expect-error - playlist is a custom SMP field
     const { playlist } = e || {};
 
