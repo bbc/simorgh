@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Global } from '@emotion/react';
 import isChromatic from 'chromatic/isChromatic';
 import { forceVisible } from 'react-lazyload';
-import { Preview } from '@storybook/react';
+import { Preview } from '@storybook/react-webpack5';
 import GlobalStyles from '../src/app/legacy/psammead/psammead-styles/src/global-styles';
 import DocsDecorator from './DocsDecorator';
 import ThemeProvider from '../src/app/components/ThemeProvider';
@@ -550,12 +550,15 @@ const preview: Preview = {
       },
     },
   },
+
   initialGlobals: {
+    backgrounds: { value: 'White' },
     service: {
       service: 'news',
       variant: 'default',
     },
   },
+
   parameters: {
     passArgsFirst: false,
     options: {
@@ -579,17 +582,12 @@ const preview: Preview = {
       container: DocsDecorator,
     },
     backgrounds: {
-      default: 'CPS',
-      values: [
-        {
-          name: 'Optimo',
-          value: '#F6F6F6',
-        },
-        {
-          name: 'CPS',
-          value: '#FFFFFF',
-        },
-      ],
+      options: {
+        dark: { name: 'Dark', value: '#141414' },
+        light: { name: 'Light', value: '#F7F9F2' },
+        White: { name: 'White', value: '#FFFFFF' },
+        Optimo: { name: 'Optimo', value: '#F6F6F6' },
+      },
     },
     chromatic: {
       delay: 5000,
@@ -639,6 +637,7 @@ const preview: Preview = {
       },
     },
   },
+
   decorators: [
     // @ts-expect-error - global context doesn't have types for custom properties like service
     withServicesDecorator(),
@@ -715,5 +714,7 @@ const preview: Preview = {
       </ToggleContextProvider>
     ),
   ],
+
+  tags: ['autodocs'],
 };
 export default preview;
