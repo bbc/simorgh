@@ -64,6 +64,18 @@ export const service: DefaultServiceConfig = {
       relatedContent: 'Maelezo zaidi kuhusu taarifa hii',
       relatedTopics: 'Mada zinazohusiana',
       navMenuText: 'Yaliyomo',
+      liteSite: {
+        onboardingMessage:
+          'Hii ni tovuti ya maandishi pekee ambayo inatumia data kidogo. Tazama toleo kuu la tovuti likijumuisha picha na video zote.',
+        toMainSite: 'Bofya kuelekea tovuti kuu',
+        informationPage:
+          'Pata maelezo zaidi kuhusu toleo hili la linalotumia kiasi kidogo cha data',
+        informationPageLink:
+          'https://www.bbc.com/swahili/articles/cpw79gwzkv1o',
+        dataSaving: 'Usomaji maandishi tu kupunguza gharama za data',
+        articleDataSavingLinkText:
+          'Usomaji maandishi tu kupunguza gharama za data',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Kicheza Nyenzo',
         audioPlayer: 'Kicheza Sauti',
@@ -358,10 +370,12 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Video',
         url: '/swahili/topics/cz40xlzvj6kt',
+        hideOnLiteSite: true,
       },
       {
         title: 'Vipindi vya Redio',
         url: '/swahili/topics/ckrdle3133xt',
+        hideOnLiteSite: true,
       },
     ],
   },
