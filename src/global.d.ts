@@ -43,7 +43,10 @@ declare global {
       cmd: { push: () => void };
     };
     sendStaticBeacon: (url: string, data?: BodyInit | null) => boolean;
-    processClientDeviceAndSendStaticBeacon: (url: string) => void;
+    processClientDeviceAndSendStaticBeacon: (
+      atiUrl: string,
+      reverbUrl?: string,
+    ) => void;
   }
 }
 
