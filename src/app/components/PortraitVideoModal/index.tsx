@@ -119,7 +119,7 @@ const PortraitVideoModal = ({
 
       <div css={styles.navWrapper}>
         <MediaLoader
-          blocks={[blocks[selectedVideoIndex]]}
+          blocks={[blocks?.[selectedVideoIndex]]}
           playlistLoadedCallback={playlistLoadedCallback}
         />
       </div>
