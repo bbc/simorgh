@@ -121,7 +121,7 @@ export default (item: PortraitVideoPromoProps) => {
         data-testid="promo-button"
       >
         <div css={styles.gradientOverlay}>
-          <div css={styles.forcedColourBackground}>
+          <div css={styles.textWrapper}>
             {mediaISO8601Duration && (
               <div css={styles.durationContainer} aria-hidden="true">
                 <Play css={styles.playIcon} />
