@@ -75,8 +75,9 @@ const PortraitVideoModal = ({
     // @ts-expect-error - playlist is a custom SMP field
     const { playlist } = e || {};
 
-    const currentId =
-      playlist?.items?.[0]?.vpid || playlist?.items?.[0]?.versionID;
+    const [currentItem] = playlist?.items || [];
+
+    const currentId = currentItem?.vpid || currentItem?.versionID;
 
     const currentIndex = blocks?.findIndex(
       item =>
@@ -87,6 +88,18 @@ const PortraitVideoModal = ({
     const previous = blocks?.[currentIndex - 1]?.model;
     const next = blocks?.[currentIndex + 1]?.model;
 
+    if (previous) {
+      const [fallbackImage, portraitImage] = previous?.images || [];
+
+      player.setPreviousPlaylist({
+        title: previous?.video?.title ?? '',
+        holdingImageURL: setImageWidth(
+          (portraitImage || fallbackImage)?.urlTemplate,
+        ),
+        items: [{ versionID: previous?.video?.version?.id }],
+      });
+    }
+
     if (next) {
       const [fallbackImage, portraitImage] = next?.images || [];
 
@@ -96,17 +109,6 @@ const PortraitVideoModal = ({
           (portraitImage || fallbackImage)?.urlTemplate,
         ),
         items: [{ versionID: next?.video?.version?.id }],
-      });
-    }
-
-    if (previous) {
-      const [fallbackImage, portraitImage] = previous?.images || [];
-      player.setPreviousPlaylist({
-        title: previous?.video?.title ?? '',
-        holdingImageURL: setImageWidth(
-          (portraitImage || fallbackImage)?.urlTemplate,
-        ),
-        items: [{ versionID: previous?.video?.version?.id }],
       });
     }
   };
