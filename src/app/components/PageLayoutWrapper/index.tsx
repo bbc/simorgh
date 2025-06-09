@@ -9,6 +9,7 @@ import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
 import { PageTypes } from '#app/models/types/global';
 import useOptimizelyMvtVariation from '#app/hooks/useOptimizelyMvtVariation';
 import OPTIMIZELY_CONFIG from '#app/lib/config/optimizely';
+import useIsPWA from '#app/hooks/useIsPWA';
 import { TopStoryItem } from '../../pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import WebVitals from '../../legacy/containers/WebVitals';
 import HeaderContainer from '../../legacy/containers/Header';
@@ -54,6 +55,7 @@ const PageLayoutWrapper = ({
 }: PropsWithChildren<Props>) => {
   const { service } = useContext(ServiceContext);
   const { isLite, isAmp } = useContext(RequestContext);
+  const isPWA = useIsPWA();
 
   const isErrorPage = ![200].includes(status) || !status;
   const pageType = pageData?.metadata?.type;
@@ -96,7 +98,11 @@ const PageLayoutWrapper = ({
       experimentVariant,
     };
   }
-  const serviceFonts = fontFacesLazy(service);
+
+  const serviceFonts = fontFacesLazy(service, isPWA);
+  // TODO: TEMP - used for testing
+  console.log({ serviceFonts, isPWA });
+
   const fontJs =
     isLite ||
     isAmp ||

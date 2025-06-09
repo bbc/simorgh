@@ -1,3 +1,5 @@
+import { Services } from '#app/models/types/global';
+
 const REITH_FONTS_DIR = 'https://static.files.bbci.co.uk/fonts/reith/r2.512/';
 
 const NOTO_SERIF_SINHALA_FONTS_DIR =
@@ -222,7 +224,47 @@ const REITH_QALAM_BOLD = {
   fontDisplay: 'optional',
 };
 
-export default (service: string) => {
+const getPWAFontFaces = (service: Services) => {
+  switch (service) {
+    case 'afaanoromoo':
+    case 'afrique':
+    case 'gahuza':
+    case 'hausa':
+    case 'igbo':
+    case 'pidgin':
+    case 'somali':
+    case 'swahili':
+    case 'yoruba':
+      return [
+        REITH_SANS_BOLD,
+        REITH_SANS_REGULAR,
+        REITH_SERIF_MEDIUM,
+        REITH_SERIF_LIGHT,
+      ];
+    // TODO: Review fonts
+    case 'vietnamese':
+    case 'indonesia':
+    case 'azeri':
+    case 'kyrgyz':
+    case 'ukrainian':
+      return undefined;
+    // TODO: Differentiate by variant
+    case 'uzbek':
+    case 'serbian':
+      return undefined;
+    default:
+      return undefined;
+  }
+};
+
+export default (service: Services, isPWA: boolean) => {
+  if (isPWA) {
+    const PWASpecificFont = getPWAFontFaces(service);
+    if (PWASpecificFont) {
+      return PWASpecificFont;
+    }
+  }
+
   switch (service) {
     case 'news':
     case 'newsround':

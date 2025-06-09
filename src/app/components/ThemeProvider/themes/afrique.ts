@@ -3,8 +3,17 @@ import latinScript from '../fontScripts/latin';
 import helmetFontVariants from '../fontVariants/helmet';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/afrique';
+import latinWithDiacriticsScript from '../fontScripts/latinWithDiacritics';
+import reithVariants from '../fontVariants/reith';
 
-const afriqueTheme = {
+import {
+  REITH_SANS_BOLD,
+  REITH_SANS_REGULAR,
+  REITH_SERIF_MEDIUM,
+  REITH_SERIF_LIGHT,
+} from '../fontFaces';
+
+const baseTheme = {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -20,4 +29,26 @@ const afriqueTheme = {
   brandSVG,
 };
 
-export default withThemeProvider(afriqueTheme);
+// TODO: review fonts
+const pwaTheme = {
+  typography: {
+    script: latinWithDiacriticsScript,
+    fontFaces: [
+      REITH_SANS_BOLD,
+      REITH_SANS_REGULAR,
+      REITH_SERIF_MEDIUM,
+      REITH_SERIF_LIGHT,
+    ],
+    fontVariants: reithVariants,
+  },
+  palette: {
+    // TODO: TEMP - used for testing
+    BRAND_BACKGROUND: 'blue',
+    BRAND_LOGO: WHITE,
+    BRAND_FOREGROUND: GHOST,
+    BRAND_HIGHLIGHT: WHITE,
+    BRAND_BORDER: POSTBOX_30,
+  },
+};
+
+export default withThemeProvider(baseTheme, pwaTheme);
