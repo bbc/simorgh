@@ -10,6 +10,8 @@ export default ({ service }) => {
           const testId = $section.attr('data-testid');
           if (testId && testId.includes('message-banner')) {
             cy.log(`No picture tag on message banners ${testId}`);
+          } else if (testId && testId.includes('portrait-video-carousel')) {
+            cy.log(`No picture tag on portrait video images ${testId}`); // do we need picture tags here?
           } else {
             cy.wrap($img).parent().should('match', 'picture');
           }
@@ -39,6 +41,43 @@ export default ({ service }) => {
       });
     });
   });
+
+  describe('Portrait Video Curations', () => {
+    // open and close could be 2 separate tests, but would be largely duplicated or tests reliant on the previous ones state for the modal to be open
+    it('should open the portrait video modal when a promo is clicked and close it when the modal close button is clicked', () => {
+      cy.get('body').then($body => {
+        if ($body.find('[data-testid="portrait-video-carousel"]').length > 0) {
+          cy.get('[data-testid="portrait-video-carousel"]')
+            .first()
+            .within(() => {
+              cy.get('[data-testid="promo-button"]').first().click();
+            });
+
+          cy.get('dialog[open]')
+            .should('exist')
+            .and('be.visible')
+            .within(() => {
+              cy.get('[data-e2e="media-loader__container"]')
+                .should('exist')
+                .and('be.visible');
+              cy.get('[data-e2e="media-player"]')
+                .should('exist')
+                .and('be.visible');
+
+              cy.get('button[aria-label="Close modal"]')
+                .should('exist')
+                .and('be.visible')
+                .click();
+            });
+
+          cy.get('dialog[open]').should('not.exist');
+        } else {
+          cy.log('No portrait video carousel found on the page');
+        }
+      });
+    });
+  });
+
   if (getAppEnv() === 'local') {
     runAdsTests({ service });
   }

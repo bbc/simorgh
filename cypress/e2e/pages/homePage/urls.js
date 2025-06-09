@@ -1,5 +1,12 @@
 const urls = [
   {
+    // put in alphabetical order when not testing
+    service: 'portuguese',
+    local: '/portuguese',
+    test: '/portuguese?renderer_env=test',
+    live: '/portuguese',
+  },
+  {
     service: 'kyrgyz',
     local: '/kyrgyz',
     test: '/kyrgyz',
