@@ -59,7 +59,7 @@ export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
   }, [checkScrollButtons, scrollPaneRef]);
 
   return (
-    <div css={styles.buttonGroupOverlay} tabIndex={-1} aria-hidden="true">
+    <div css={styles.buttonGroupOverlay} aria-hidden="true">
       <div css={styles.buttonGroup}>
         <button
           type="button"
@@ -67,6 +67,7 @@ export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
           onClick={() => scroll(dir === 'ltr' ? 'left' : 'right')}
           disabled={!canScrollLeft}
           css={styles.navButton}
+          tabIndex={-1}
           data-testid="pv-scroll-left"
         >
           <Chevron orientation={ChevronOrientation.BACKWARD} dir={dir} />
@@ -77,6 +78,7 @@ export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
           onClick={() => scroll(dir === 'ltr' ? 'right' : 'left')}
           disabled={!canScrollRight}
           css={styles.navButton}
+          tabIndex={-1}
           data-testid="pv-scroll-right"
         >
           <Chevron orientation={ChevronOrientation.FORWARD} dir={dir} />
