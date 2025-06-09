@@ -3,7 +3,6 @@
 // elements and blocks within them
 
 // filters an array of blocks for a given type and Returns the first match by default
-// pass `{ returnAllMatchingBlocks: true }` to get all matching blocks.
 const filterForBlockType = (arrayOfBlocks, type) =>
   arrayOfBlocks?.filter(block => block?.type === type)?.[0];
 
