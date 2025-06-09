@@ -47,6 +47,7 @@ const buildSettings = ({
     enableToucan: true,
     appType: isAmp ? 'amp' : 'responsive',
     appName: service !== 'news' ? `news-${service}` : 'news',
+    supportFakeFullscreen: true,
     ui: {
       skin: 'classic',
       controls: { enabled: true },

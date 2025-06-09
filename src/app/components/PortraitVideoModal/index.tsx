@@ -125,12 +125,11 @@ const PortraitVideoModal = ({
         {navigationIcons.cross}
       </button>
 
-      <div css={styles.navWrapper}>
-        <MediaLoader
-          blocks={[blocks?.[selectedVideoIndex]]}
-          playlistLoadedCallback={playlistLoadedCallback}
-        />
-      </div>
+      <MediaLoader
+        css={styles.mediaWrapper}
+        blocks={[blocks?.[selectedVideoIndex]]}
+        playlistLoadedCallback={playlistLoadedCallback}
+      />
     </dialog>
   );
 };

@@ -12,6 +12,10 @@ const styles = {
     border: 'none',
     margin: 0,
     padding: 0,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
 
     '&::backdrop': {
       backgroundColor: 'rgba(0, 0, 0, 0.9)',
@@ -36,17 +40,23 @@ const styles = {
       },
     }),
 
-  navWrapper: css({
-    position: 'relative',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '100%',
-    height: '100%',
-    '.media-container': {
-      maxWidth: '25%',
-    },
-  }),
+  mediaWrapper: ({ mq }: Theme) =>
+    css({
+      '&.media-container': {
+        width: 'auto',
+        height: '100%',
+        maxWidth: '100%',
+        maxHeight: '85%',
+        margin: 0,
+        marginInline: 0,
+      },
+
+      [mq.GROUP_5_MIN_WIDTH]: {
+        '&.media-container': {
+          maxHeight: '90%',
+        },
+      },
+    }),
 };
 
 export default styles;
