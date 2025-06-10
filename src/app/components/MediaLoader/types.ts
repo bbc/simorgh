@@ -9,6 +9,31 @@ import {
 import { OptimoImageBlock } from '#app/models/types/optimo';
 import { Translations } from '#app/models/types/translations';
 
+export type Playlist = {
+  title: string;
+  summary?: string;
+  holdingImageURL?: string;
+  items: PlaylistItem[] | LegacyPlayListItem[];
+  guidance?: string;
+  embedRights?: 'allowed';
+  liveRewind?: boolean;
+  simulcast?: boolean;
+  warning?: string;
+};
+
+export type PlaylistItem = {
+  versionID?: string;
+  kind: string;
+  duration?: number;
+  live?: boolean;
+  serviceID?: string;
+};
+
+export type LegacyPlayListItem = {
+  href: string;
+  kind: string;
+};
+
 export type PlayerConfig = {
   autoplay?: boolean;
   preload?: string;
@@ -17,6 +42,7 @@ export type PlayerConfig = {
   counterName?: string;
   appType: 'amp' | 'responsive';
   appName: `news-${Services}` | 'news';
+  supportFakeFullscreen?: boolean;
   insideIframe?: boolean;
   embeddedOffsite?: boolean;
   externalEmbedUrl?: string;
@@ -29,17 +55,7 @@ export type PlayerConfig = {
   };
   mediator?: { host: string };
   ui: PlayerUiConfig;
-  playlistObject?: {
-    title: string;
-    summary?: string;
-    holdingImageURL?: string;
-    items: PlaylistItem[] | LegacyPlayListItem[];
-    guidance?: string;
-    embedRights?: 'allowed';
-    liveRewind?: boolean;
-    simulcast?: boolean;
-    warning?: string;
-  };
+  playlistObject?: Playlist;
 };
 
 export type PlayerUiConfig = {
@@ -55,7 +71,6 @@ export type PlayerUiConfig = {
     includeNextButton?: boolean;
     includePreviousButton?: boolean;
   };
-
   locale?: { lang: string };
   subtitles?: { enabled: boolean; defaultOn: boolean };
   fullscreen?: { enabled: boolean };
@@ -63,21 +78,6 @@ export type PlayerUiConfig = {
     enabled: boolean;
     direction: 'Y' | 'X';
   };
-};
-
-export type PlaylistItem = {
-  versionID?: string;
-  kind: string;
-  duration?: number;
-  live?: boolean;
-  embedRights?: 'allowed';
-  vpid?: string;
-  serviceID?: string;
-};
-
-export type LegacyPlayListItem = {
-  href: string;
-  kind: string;
 };
 
 export type ConfigBuilderProps = {
@@ -128,7 +128,7 @@ export type Player = {
   load: () => void;
   play: () => void;
   pause: () => void;
-  bind: (event: string, callback: () => void) => void;
+  bind: (event: string, callback: (e?: Event) => void) => void;
   loadPlugin: (
     pluginName: { [key: string]: string },
     parameters: {
@@ -244,7 +244,6 @@ export type PortraitClipMediaBlock = {
         duration: string;
         kind: string;
         guidance: string | null;
-        territories: string[];
       };
       isEmbeddingAllowed: boolean;
     };
