@@ -1,16 +1,45 @@
-import { STATIC_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
+import { HOME_PAGE, LIVE_PAGE } from '#app/routes/utils/pageTypes';
+import * as assertions from './assertions/languagesPage';
 import runTestsForPage from '../../support/helpers/runTestsForPage';
 
-import { homePageTestSuites, staticPageTestSuites } from './tests';
+const homePageTestSuites = [
+  {
+    path: '/ws/languages',
+    service: 'pidgin',
+    runforEnv: ['local'],
+    tests: [assertions.assertPidginHomepage],
+  },
+  {
+    path: '/ws/languages?renderer_env=test',
+    service: 'pidgin',
+    runforEnv: ['local'],
+    tests: [assertions.assertPidginHomepage],
+  },
+  {
+    path: '/ws/languages?renderer_env=live',
+    service: 'pidgin',
+    runforEnv: ['local'],
+    tests: [assertions.assertPidginHomepage],
+  },
+];
 
-describe('Languages Page E2E', () => {
-  runTestsForPage({
-    pageType: STATIC_PAGE,
-    testSuites: staticPageTestSuites,
-  });
+const staticPageTestSuites = [
+  {
+    path: '/ws/languages',
+    service: 'ws',
+    runforEnv: ['live'],
+    tests: [assertions.assertWSLanguagesPage],
+  },
+];
 
-  runTestsForPage({
-    pageType: HOME_PAGE,
-    testSuites: homePageTestSuites,
-  });
+runTestsForPage({
+  testSuites: staticPageTestSuites,
+  testIsolation: true,
+  pageType: LIVE_PAGE,
+});
+
+runTestsForPage({
+  testSuites: homePageTestSuites,
+  testIsolation: true,
+  pageType: HOME_PAGE,
 });
