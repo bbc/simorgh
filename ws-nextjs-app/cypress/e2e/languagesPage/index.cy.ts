@@ -1,4 +1,4 @@
-import { HOME_PAGE, LIVE_PAGE } from '#app/routes/utils/pageTypes';
+import { STATIC_PAGE } from '#app/routes/utils/pageTypes';
 import { assertPidginHomepage, assertWSLanguagesPage } from './assertions';
 import runTestsForPage from '../../support/helpers/runTestsForPage';
 
@@ -33,13 +33,7 @@ const staticPageTestSuites = [
 ];
 
 runTestsForPage({
-  testSuites: staticPageTestSuites,
+  testSuites: [...homePageTestSuites, ...staticPageTestSuites],
   testIsolation: true,
-  pageType: LIVE_PAGE,
-});
-
-runTestsForPage({
-  testSuites: homePageTestSuites,
-  testIsolation: true,
-  pageType: HOME_PAGE,
+  pageType: STATIC_PAGE,
 });
