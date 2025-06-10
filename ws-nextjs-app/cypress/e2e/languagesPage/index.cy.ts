@@ -1,5 +1,5 @@
 import { HOME_PAGE, LIVE_PAGE } from '#app/routes/utils/pageTypes';
-import * as assertions from './assertions/languagesPage';
+import { assertPidginHomepage, assertWSLanguagesPage } from './assertions';
 import runTestsForPage from '../../support/helpers/runTestsForPage';
 
 const homePageTestSuites = [
@@ -7,19 +7,19 @@ const homePageTestSuites = [
     path: '/ws/languages',
     service: 'pidgin',
     runforEnv: ['test'],
-    tests: [assertions.assertPidginHomepage],
+    tests: [assertPidginHomepage],
   },
   {
     path: '/ws/languages?renderer_env=test',
     service: 'pidgin',
     runforEnv: ['test'],
-    tests: [assertions.assertPidginHomepage],
+    tests: [assertPidginHomepage],
   },
   {
     path: '/ws/languages?renderer_env=live',
     service: 'pidgin',
     runforEnv: ['test'],
-    tests: [assertions.assertPidginHomepage],
+    tests: [assertPidginHomepage],
   },
 ];
 
@@ -28,7 +28,7 @@ const staticPageTestSuites = [
     path: '/ws/languages',
     service: 'ws',
     runforEnv: ['live'],
-    tests: [assertions.assertWSLanguagesPage],
+    tests: [assertWSLanguagesPage],
   },
 ];
 
