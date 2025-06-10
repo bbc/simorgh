@@ -5,11 +5,7 @@ import Metadata from '#app/components/Metadata';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './styles';
 import { PageProps } from './types';
-import { FormContext, FormContextProvider } from './FormContext';
-import FormScreen from './FormScreen';
-import SuccessScreen from './SuccessScreen';
-import ErrorScreen from './ErrorScreen';
-import UploadingScreen from './UploadingScreen';
+import FormManager from './Form';
 import GenericMessage from './GenericMessage';
 import fallbackTranslations from './fallbackTranslations';
 import ClosedScreen from './ClosedScreen';
@@ -62,16 +58,16 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
             </noscript>
             <div css={styles.screenContainer}>
               {campaignStatus === 'open' ? (
-                <FormContextProvider
+                <FormManager
                   initialScreen={initialScreen}
                   fields={fields}
                 >
-                  <FormContext.Consumer>
+                  <FormManager.Context.Consumer>
                     {({ screen }) => {
                       switch (screen) {
                         case 'form':
                           return (
-                            <FormScreen
+                            <FormManager.FormScreen
                               title={title}
                               description={description}
                               sectionTitle={sectionTitle}
@@ -80,10 +76,10 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
                             />
                           );
                         case 'uploading':
-                          return <UploadingScreen title={title} />;
+                          return <FormManager.UploadingScreen title={title} />;
                         case 'success':
                           return (
-                            <SuccessScreen
+                            <FormManager.SuccessScreen
                               title={title}
                               replyEmailAddress={settings.replyEmailAddress}
                               retentionPeriod={settings.retentionPeriodDays}
@@ -91,11 +87,11 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
                           );
                         case 'error':
                         default:
-                          return <ErrorScreen title={title} />;
+                          return <FormManager.ErrorScreen title={title} />;
                       }
                     }}
-                  </FormContext.Consumer>
-                </FormContextProvider>
+                  </FormManager.Context.Consumer>
+                </FormManager>
               ) : (
                 <ClosedScreen title={title} closingTime={closingTime} />
               )}

@@ -6,7 +6,7 @@ import mundoFormFixture from '#data/mundo/send/test2qq3x8vt.json';
 import somaliFormFixture from '#data/somali/send/u130092370.json';
 import hausaClosedFormFixture from '#data/hausa/send/u143732177.json';
 import UGCPage from './UGCPageLayout';
-import { FormScreen, PageProps } from './types';
+import { Screen, PageProps } from './types';
 
 const NextRouterWrapper = ({ children }: PropsWithChildren) => (
   <RouterContext.Provider
@@ -20,7 +20,7 @@ const Component = ({
   initialScreen = 'form',
   fixtureData,
 }: {
-  initialScreen: FormScreen;
+  initialScreen: Screen;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   fixtureData: any;
 }) => {

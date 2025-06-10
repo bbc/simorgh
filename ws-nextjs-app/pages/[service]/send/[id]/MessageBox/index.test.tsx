@@ -5,7 +5,7 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import * as AndroidDetectionModule from '#hooks/useAdroidDetection';
 import ErrorSummaryBox from './ErrorSummaryBox';
-import * as FormContextModule from '../FormContext';
+import * as FormContextModule from '../Form';
 import { InvalidMessageCodes } from '../types';
 
 jest.mock('next/router', () => ({

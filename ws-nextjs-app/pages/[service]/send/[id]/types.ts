@@ -109,10 +109,10 @@ export type FieldData = ValidationConditions & {
   wasInvalid: boolean;
 };
 
-export type FormScreen = 'form' | 'uploading' | 'success' | 'error';
+export type Screen = 'form' | 'uploading' | 'success' | 'error';
 
 export type PageProps = {
-  initialScreen?: FormScreen;
+  initialScreen?: Screen;
   pageData: {
     title: string;
     description: string;
