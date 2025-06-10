@@ -56,8 +56,7 @@ const CanonicalATIAnalytics = ({
     if (!isOperaProxy()) sendBeacon(atiPageViewUrl, reverbBeaconConfig);
   }, [atiPageViewUrl, reverbBeaconConfig]);
 
-  const liteSiteReverbURL =
-    reverbUrlHelper.getLiteSitePageViewUrl(reverbParams);
+  const liteSiteReverbURL = reverbUrlHelper.getLitePageViewUrl(reverbParams);
 
   return (
     <>
