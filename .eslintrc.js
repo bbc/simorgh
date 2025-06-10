@@ -75,7 +75,7 @@ module.exports = {
       },
     ],
     'import/extensions': [1, { json: 'ignorePackages' }],
-    'jsx-a11y/no-redundant-roles': 'off',
+    'jsx-a11y/no-redundant-roles': 'error',
     'no-only-tests/no-only-tests': 'error',
     'no-unsafe-optional-chaining': 'error',
   },
