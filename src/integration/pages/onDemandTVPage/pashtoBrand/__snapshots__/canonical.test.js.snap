@@ -11,7 +11,7 @@ exports[`Canonical On Demand T V Page Analytics ATI tracking pixel excluding src
 />
 `;
 
-exports[`Canonical On Demand T V Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/"`;
+exports[`Canonical On Demand T V Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
 
 exports[`Canonical On Demand T V Page Analytics ATI tracking pixel search params 1`] = `
 [
@@ -352,7 +352,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
 
 exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`] = `
 <figure
-  class="bbc-7rf7s3"
+  class="media-container bbc-1ayt58x"
   data-e2e="media-loader__container"
 >
   <div

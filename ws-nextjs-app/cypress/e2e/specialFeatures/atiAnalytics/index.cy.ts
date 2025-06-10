@@ -1,11 +1,13 @@
 /* eslint-disable import/no-relative-packages */
 import { LIVE_PAGE } from '../../../../../src/app/routes/utils/pageTypes';
 import { assertPageView } from '../../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions';
+import { setUserIDCookie } from '../../../../../cypress/e2e/specialFeatures/atiAnalytics/helpers';
+
 import {
   assertScrollableNavigationComponentView,
   assertScrollableNavigationComponentClick,
 } from '../../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions/navigation';
-import { assertLiteSiteCTAComponentClick } from '../../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions/liteSiteCta';
+import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions/liteSiteSummary';
 
 import runTestsForPage from '../../../support/helpers/runTestsForPage';
 
@@ -26,10 +28,10 @@ const canonicalTestSuites = [
     ],
   },
   {
-    path: '/pidgin/live/c7p765ynk9qt',
+    path: '/mundo/live/c7dkx155e626t',
     runforEnv: ['local', 'test'],
-    service: 'pidgin',
-    pageIdentifier: 'live_coverage.c7p765ynk9qt.page',
+    service: 'mundo',
+    pageIdentifier: 'live_coverage.c7dkx155e626t.page',
     applicationType: 'responsive',
     contentType: 'live-coverage',
     componentTrackingContentType: LIVE_PAGE,
@@ -43,9 +45,13 @@ const canonicalTestSuites = [
 ];
 
 const liteTestSuites = canonicalTestSuites.map(testSuite => {
-  const isBurmese = testSuite.service === 'burmese';
-  const liteSiteTests = [assertPageView, ...(isBurmese ? [assertLiteSiteCTAComponentClick] : [])];
+  const liteSiteTests = testSuite.tests.filter(
+    test =>
+      // Exclude component click tests, as component click support is not supported on all components yet
+      !test.name.toLowerCase().includes('click'),
+  );
 
+  liteSiteTests.push(assertLiteSiteSummaryComponentToMainSiteClick);
 
   return {
     ...testSuite,
@@ -58,6 +64,7 @@ const liteTestSuites = canonicalTestSuites.map(testSuite => {
 
 runTestsForPage({
   testSuites: [...canonicalTestSuites, ...liteTestSuites],
-  testIsolation: true,
+  // @ts-expect-error missing type definitions
+  beforeAll: [setUserIDCookie],
   pageType: 'all',
 });

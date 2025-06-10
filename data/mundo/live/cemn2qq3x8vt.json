@@ -1,0 +1,1825 @@
+{
+  "data": {
+    "title": "WS live events template",
+    "description": "A summary / description of the live events page",
+    "visibility": true,
+    "language": "es",
+    "headerImage": {
+      "url": "https://ichef.bbci.co.uk/ace/standard/480/cpsdevpb/1921/test/9b318a20-c681-11ee-9cfe-dd6b961b2ea5.jpg",
+      "urlTemplate": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1921/test/9b318a20-c681-11ee-9cfe-dd6b961b2ea5.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Test",
+      "copyright": "BBC"
+    },
+    "promoImage": {
+      "url": "https://ichef.bbci.co.uk/ace/standard/480/cpsdevpb/e93e/test/cf378ef0-82cf-11ee-a4f7-81d33ca36b1f.jpg",
+      "urlTemplate": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/e93e/test/cf378ef0-82cf-11ee-a4f7-81d33ca36b1f.jpg",
+      "height": 576,
+      "width": 768,
+      "altText": "Microphones",
+      "copyright": "BBC",
+      "suitableForSyndication": false
+    },
+    "syndicationPromoImage": {
+      "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/bbc/images/metadata/poster-1024x576.png",
+      "brandedUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/bbc/images/metadata/poster-1024x576.png",
+      "altText": "BBC logo",
+      "copyright": "BBC",
+      "suitableForSyndication": true,
+      "isPlaceholder": true,
+      "width": 1024,
+      "height": 576
+    },
+    "home": "mundo",
+    "section": null,
+    "commercialInfo": {
+      "adCategory": null,
+      "adSubCategory": null,
+      "hasAdvertising": false
+    },
+    "sportDataEvent": { "id": null },
+    "eavisEvent": { "id": null },
+    "article": { "id": null },
+    "mediaCollections": null,
+    "keyHighlight": null,
+    "electionBanner": { "id": null },
+    "supportingLinks": { "id": null },
+    "riddle": { "id": null },
+    "ugcCampaign": { "id": null },
+    "seo": {
+      "seoTitle": "This is the SEO title",
+      "seoDescription": "This is the SEO description",
+      "datePublished": "2023-11-14T09:23:00.000Z",
+      "dateModified": "2024-03-12T12:22:44.000Z"
+    },
+    "endDateTime": "2024-10-18T08:22:00.000Z",
+    "startDateTime": "2023-11-14T09:23:00.000Z",
+    "firstPublishedDateTime": null,
+    "type": "live-coverage",
+    "dataSource": "TIPO",
+    "isLive": false,
+    "summaryPoints": {
+      "id": "urn:bbc:optimo:asset:c94xdrp2eyjo",
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "06fa1b31",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "701ed55d",
+                    "type": "unorderedList",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "14d4c519",
+                          "type": "listItem",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "440564a1",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "LeBlanc, compartiendo una serie de fotos junto a Perry, escribió en Instagram: \"Los momentos que pasamos juntos están honestamente entre los momentos favoritos de mi vida\".",
+                                  "blocks": [
+                                    {
+                                      "id": "f5e858ad",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "LeBlanc, compartiendo una serie de fotos junto a Perry, escribió en Instagram: \"Los momentos que pasamos juntos están honestamente entre los momentos favoritos de mi vida\".",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "id": "e7edb13c",
+                          "type": "listItem",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "2997796c",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "\"Fue un honor compartir escenario contigo y llamarte mi amigo\".",
+                                  "blocks": [
+                                    {
+                                      "id": "07f876cb",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "\"Fue un honor compartir escenario contigo y llamarte mi amigo\".",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "id": "8188394a",
+                          "type": "listItem",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "b7a526af",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "\"Siempre sonreiré cuando piense en ti y nunca te olvidaré. Nunca.",
+                                  "blocks": [
+                                    {
+                                      "id": "c6027cf0",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "\"Siempre sonreiré ",
+                                        "attributes": []
+                                      }
+                                    },
+                                    {
+                                      "id": "c2c362d6",
+                                      "type": "urlLink",
+                                      "model": {
+                                        "text": "cuando piense en ti y nunca te olvidaré",
+                                        "blocks": [
+                                          {
+                                            "id": "a8813a90",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "cuando piense en ti y nunca te olvidaré",
+                                              "attributes": []
+                                            }
+                                          }
+                                        ],
+                                        "locator": "https://www.bbc.com",
+                                        "isExternal": false
+                                      }
+                                    },
+                                    {
+                                      "id": "33b80262",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": ". Nunca.",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "id": "fb4788b3",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "\"Extiende tus alas y vuela hermano, finalmente eres libre\".",
+                                  "blocks": [
+                                    {
+                                      "id": "7353caa8",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "\"Extiende tus alas y vuela hermano, finalmente eres libre\".",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "liveTextStream": {
+      "id": "EEDEC512D830475F93EEEE48E7847AD3",
+      "contributors": "John Smith",
+      "content": {
+        "data": {
+          "results": [
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "c7aa98cf",
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "d8de3057",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "aa2a695e",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "9x16 portrait video",
+                                    "blocks": [
+                                      {
+                                        "id": "ce393485",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "9x16 portrait video",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "6360a9d7",
+                      "type": "paragraph",
+                      "model": { "text": "", "blocks": [] }
+                    },
+                    {
+                      "id": "7de91959",
+                      "type": "video",
+                      "model": {
+                        "locator": "urn:bbc:pips:pid:p01vzzck",
+                        "blocks": [
+                          {
+                            "id": "0355135e",
+                            "type": "clipMedia",
+                            "model": {
+                              "id": "urn:bbc:pips:pid:p01vzzck",
+                              "urns": {
+                                "pipsPid": "urn:bbc:pips:pid:p01vzzck"
+                              },
+                              "images": [
+                                {
+                                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01vzzf1.jpg",
+                                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01vzzf1.jpg",
+                                  "altText": "Keyframe #5",
+                                  "type": "socialImage",
+                                  "source": "pipsImage",
+                                  "height": 1080,
+                                  "width": 1920,
+                                  "orientation": "landscape"
+                                },
+                                {
+                                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01vzzf1.jpg",
+                                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01vzzf1.jpg",
+                                  "altText": "Keyframe #5",
+                                  "type": "promoImage",
+                                  "source": "pipsImage",
+                                  "height": 1080,
+                                  "width": 1920,
+                                  "orientation": "landscape"
+                                }
+                              ],
+                              "assetPath": "p01vzzck",
+                              "type": "video",
+                              "headlines": {
+                                "primaryHeadline": "9x16 video",
+                                "seoHeadline": "9x16 video",
+                                "promoHeadline": "9x16 video",
+                                "socialHeadline": "9x16 video"
+                              },
+                              "analytics": {
+                                "page": {
+                                  "name": "programmes.av.p01vzzck.page",
+                                  "contentId": "urn:bbc:pips:pid:p01vzzck",
+                                  "producer": "PROGRAMMES"
+                                }
+                              },
+                              "description": "Vertical video test",
+                              "summary": {
+                                "type": "text",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "type": "paragraph",
+                                      "model": {
+                                        "text": "Vertical video test",
+                                        "blocks": [
+                                          {
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "Vertical video test",
+                                              "attributes": []
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              "lastPublished": "2024-03-12T12:11:22Z",
+                              "firstPublished": null,
+                              "video": {
+                                "id": "p01vzzck",
+                                "title": "9x16 video",
+                                "holdingImage": {
+                                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01vzzf1.jpg",
+                                  "altText": "Keyframe #5",
+                                  "width": 1920,
+                                  "height": 1080,
+                                  "orientation": "landscape"
+                                },
+                                "version": {
+                                  "id": "p01vzzcm",
+                                  "duration": "PT13S",
+                                  "kind": "programme",
+                                  "guidance": null,
+                                  "territories": ["nonuk", "uk"],
+                                  "orientation": "portrait"
+                                },
+                                "isAdvertisingAllowed": false,
+                                "isEmbeddingAllowed": true,
+                                "isUnavailable": false
+                              },
+                              "attributions": null,
+                              "link": { "path": "/programmes/p01vzzck" },
+                              "section": null,
+                              "isSharingAllowed": true,
+                              "reactions": null
+                            }
+                          },
+                          {
+                            "id": "56d6d6c8",
+                            "type": "caption",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "d8dbaf19",
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "id": "f67e075d",
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Vertical video test",
+                                          "blocks": [
+                                            {
+                                              "id": "98e7b920",
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Vertical video test",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:59f07acb-1e31-4aef-8d4a-ee8730d70ad6",
+              "type": "POST",
+              "options": { "isBreakingNews": false },
+              "dates": {
+                "firstPublished": "2024-03-12T12:22:44.000Z",
+                "lastPublished": "2024-03-12T12:22:44.000Z",
+                "time": null,
+                "curated": "2024-03-12T12:22:46.671Z"
+              },
+              "titles": [{ "title": null, "source": "primary" }],
+              "descriptions": [{ "text": null, "source": "summary" }],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "30dc5fd1",
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "bf9d408a",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "c28a6e7a",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Text post to test updates",
+                                    "blocks": [
+                                      {
+                                        "id": "5245f26c",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Text post to test updates",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "30980305",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Some text",
+                        "blocks": [
+                          {
+                            "id": "8947eadd",
+                            "type": "fragment",
+                            "model": { "text": "Some text", "attributes": [] }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:d9083cdc-3a9b-4b79-a8ac-43050070ba78",
+              "type": "POST",
+              "options": { "isBreakingNews": false },
+              "dates": {
+                "firstPublished": "2023-12-14T11:47:32.000Z",
+                "lastPublished": "2023-12-14T11:47:32.000Z",
+                "time": null,
+                "curated": "2023-12-14T11:47:33.267Z"
+              },
+              "titles": [{ "title": null, "source": "primary" }],
+              "descriptions": [{ "text": null, "source": "summary" }],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "17fb9a6c",
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "69d10017",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "f78ecfb6",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Silver PID post playing on-demand (not live)",
+                                    "blocks": [
+                                      {
+                                        "id": "df80f85a",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Silver PID post playing on-demand (not live)",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "def2f8e8",
+                      "type": "paragraph",
+                      "model": { "text": "", "blocks": [] }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:7a7ff327-3930-426a-a9b0-f746e68795cb",
+              "type": "POST",
+              "options": { "isBreakingNews": false },
+              "dates": {
+                "firstPublished": "2023-12-14T11:42:23.000Z",
+                "lastPublished": "2023-12-14T11:42:23.000Z",
+                "time": null,
+                "curated": "2023-12-14T11:42:24.746Z"
+              },
+              "titles": [{ "title": null, "source": "primary" }],
+              "descriptions": [{ "text": null, "source": "summary" }],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "e9dc3fa2",
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "c0da4196",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "ea627256",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Post with embedded audio",
+                                    "blocks": [
+                                      {
+                                        "id": "62d297cd",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Post with embedded audio",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "e2ef0f77",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Audio",
+                        "blocks": [
+                          {
+                            "id": "8535e29f",
+                            "type": "fragment",
+                            "model": { "text": "Audio", "attributes": [] }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "a34c1375",
+                      "type": "audio",
+                      "model": {
+                        "locator": "urn:bbc:pips:pid:p01vqk5l",
+                        "blocks": [
+                          {
+                            "id": "fbcbace2",
+                            "type": "clipMedia",
+                            "model": {
+                              "id": "urn:bbc:pips:pid:p01vqk5l",
+                              "urns": {
+                                "pipsPid": "urn:bbc:pips:pid:p01vqk5l"
+                              },
+                              "images": [
+                                {
+                                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01vkjg8.png",
+                                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01vkjg8.png",
+                                  "altText": "BBC flat logo 2023 default image",
+                                  "type": "socialImage",
+                                  "source": "pipsImage",
+                                  "height": 1080,
+                                  "width": 1920,
+                                  "orientation": "landscape"
+                                },
+                                {
+                                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01vkjg8.png",
+                                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01vkjg8.png",
+                                  "altText": "BBC flat logo 2023 default image",
+                                  "type": "promoImage",
+                                  "source": "pipsImage",
+                                  "height": 1080,
+                                  "width": 1920,
+                                  "orientation": "landscape"
+                                }
+                              ],
+                              "assetPath": "p01vqk5l",
+                              "type": "audio",
+                              "headlines": {
+                                "primaryHeadline": "a",
+                                "seoHeadline": "a",
+                                "promoHeadline": "a",
+                                "socialHeadline": "a"
+                              },
+                              "analytics": {
+                                "page": {
+                                  "name": "programmes.av.p01vqk5l.page",
+                                  "contentId": "urn:bbc:pips:pid:p01vqk5l",
+                                  "producer": "PROGRAMMES"
+                                }
+                              },
+                              "description": "a",
+                              "summary": {
+                                "type": "text",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "type": "paragraph",
+                                      "model": {
+                                        "text": "a",
+                                        "blocks": [
+                                          {
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "a",
+                                              "attributes": []
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              "lastPublished": "2023-10-10T11:48:18Z",
+                              "firstPublished": null,
+                              "video": {
+                                "id": "p01vqk5l",
+                                "title": "a",
+                                "holdingImage": {
+                                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01vkjg8.png",
+                                  "altText": "BBC flat logo 2023 default image",
+                                  "width": 1920,
+                                  "height": 1080,
+                                  "orientation": "landscape"
+                                },
+                                "version": {
+                                  "id": "p01vqk5n",
+                                  "duration": "PT27S",
+                                  "kind": "audio",
+                                  "guidance": null,
+                                  "territories": ["nonuk", "uk"],
+                                  "orientation": "landscape"
+                                },
+                                "isAdvertisingAllowed": false,
+                                "isEmbeddingAllowed": true,
+                                "isUnavailable": false
+                              },
+                              "attributions": null,
+                              "link": { "path": "/programmes/p01vqk5l" },
+                              "section": null,
+                              "isSharingAllowed": true,
+                              "reactions": null
+                            }
+                          },
+                          {
+                            "id": "86a57c84",
+                            "type": "caption",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "ae34319a",
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "id": "3e31235d",
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "caption for audio",
+                                          "blocks": [
+                                            {
+                                              "id": "790c9e05",
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "caption for audio",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:c40c0735-cff0-415f-95fa-b72a8f5a97a3",
+              "type": "POST",
+              "options": { "isBreakingNews": false },
+              "dates": {
+                "firstPublished": "2023-11-17T16:30:52.000Z",
+                "lastPublished": "2023-12-05T15:55:18.000Z",
+                "time": null,
+                "curated": "2023-11-17T16:30:53.254Z"
+              },
+              "titles": [{ "title": null, "source": "primary" }],
+              "descriptions": [{ "text": null, "source": "summary" }],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "e7e5f2e7",
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "9b5d5499",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "f6393d28",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Another text post",
+                                    "blocks": [
+                                      {
+                                        "id": "6fa2d07b",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Another text post",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "c64cfb05",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Just a quick post to test that timestamps are relative. Lorem ipsum and all the rest of it.",
+                        "blocks": [
+                          {
+                            "id": "2e7c7f6b",
+                            "type": "fragment",
+                            "model": {
+                              "text": "Just a quick post to test that timestamps are relative. Lorem ipsum and all the rest of it.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:2dbffbf8-87e3-4379-b141-691347493daf",
+              "type": "POST",
+              "options": { "isBreakingNews": false },
+              "dates": {
+                "firstPublished": "2023-11-16T11:26:35.000Z",
+                "lastPublished": "2023-11-16T11:36:56.000Z",
+                "time": null,
+                "curated": "2023-11-16T11:26:35.787Z"
+              },
+              "titles": [{ "title": null, "source": "primary" }],
+              "descriptions": [{ "text": null, "source": "summary" }],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "06b38f5c",
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "19a8bbbf",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "19b0c300",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Post with embedded video",
+                                    "blocks": [
+                                      {
+                                        "id": "42b80f57",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Post with embedded video",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "fd3dd409",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Video",
+                        "blocks": [
+                          {
+                            "id": "1865018b",
+                            "type": "fragment",
+                            "model": { "text": "Video", "attributes": [] }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "253a1f02",
+                      "type": "video",
+                      "model": {
+                        "locator": "urn:bbc:pips:pid:p01vl10w",
+                        "blocks": [
+                          {
+                            "id": "38235fa3",
+                            "type": "clipMedia",
+                            "model": {
+                              "id": "urn:bbc:pips:pid:p01vl10w",
+                              "urns": {
+                                "pipsPid": "urn:bbc:pips:pid:p01vl10w"
+                              },
+                              "images": [
+                                {
+                                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01vl114.jpg",
+                                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01vl114.jpg",
+                                  "altText": "The thirteenth doctor starts glowing, with the tardis just behind her.",
+                                  "type": "socialImage",
+                                  "source": "pipsImage",
+                                  "height": 720,
+                                  "width": 1280,
+                                  "orientation": "landscape"
+                                },
+                                {
+                                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01vl114.jpg",
+                                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01vl114.jpg",
+                                  "altText": "The thirteenth doctor starts glowing, with the tardis just behind her.",
+                                  "type": "promoImage",
+                                  "source": "pipsImage",
+                                  "height": 720,
+                                  "width": 1280,
+                                  "orientation": "landscape"
+                                }
+                              ],
+                              "assetPath": "p01vl10w",
+                              "type": "video",
+                              "headlines": {
+                                "primaryHeadline": "The thirteenth doctor regenerates...but into who?",
+                                "seoHeadline": "The thirteenth doctor regenerates...but into who?",
+                                "promoHeadline": "The thirteenth doctor regenerates...but into who?",
+                                "socialHeadline": "The thirteenth doctor regenerates...but into who?"
+                              },
+                              "analytics": {
+                                "page": {
+                                  "name": "programmes.av.p01vl10w.page",
+                                  "contentId": "urn:bbc:pips:pid:p01vl10w",
+                                  "producer": "PROGRAMMES"
+                                }
+                              },
+                              "description": "The thirteenth doctor regenerates.",
+                              "summary": {
+                                "type": "text",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "type": "paragraph",
+                                      "model": {
+                                        "text": "The thirteenth doctor regenerates.",
+                                        "blocks": [
+                                          {
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "The thirteenth doctor regenerates.",
+                                              "attributes": []
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              "lastPublished": "2023-08-15T11:05:33Z",
+                              "firstPublished": null,
+                              "video": {
+                                "id": "p01vl10w",
+                                "title": "The thirteenth doctor regenerates...but into who?",
+                                "holdingImage": {
+                                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01vl114.jpg",
+                                  "altText": "The thirteenth doctor starts glowing, with the tardis just behind her.",
+                                  "width": 1280,
+                                  "height": 720,
+                                  "orientation": "landscape"
+                                },
+                                "version": {
+                                  "id": "p01vl10y",
+                                  "duration": "PT1M57S",
+                                  "kind": "programme",
+                                  "guidance": null,
+                                  "territories": ["nonuk", "uk"],
+                                  "orientation": "landscape"
+                                },
+                                "isAdvertisingAllowed": false,
+                                "isEmbeddingAllowed": true,
+                                "isUnavailable": false
+                              },
+                              "attributions": null,
+                              "link": { "path": "/programmes/p01vl10w" },
+                              "section": null,
+                              "isSharingAllowed": true,
+                              "reactions": null
+                            }
+                          },
+                          {
+                            "id": "bbb49b5b",
+                            "type": "caption",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "ea991c52",
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "id": "ef7cd4d3",
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "The thirteenth doctor regenerates.",
+                                          "blocks": [
+                                            {
+                                              "id": "fac2d2ed",
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "The thirteenth doctor regenerates.",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:2d47bfbb-e11d-4545-840e-2a885d32c9c0",
+              "type": "POST",
+              "options": { "isBreakingNews": false },
+              "dates": {
+                "firstPublished": "2023-11-14T16:54:15.000Z",
+                "lastPublished": "2023-12-05T15:55:41.000Z",
+                "time": null,
+                "curated": "2023-11-14T16:54:16.564Z"
+              },
+              "titles": [{ "title": null, "source": "primary" }],
+              "descriptions": [{ "text": null, "source": "summary" }],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "c0a4f8bb",
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "2e362dd5",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "e09b0b7f",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Post with Twitter embed tagged as breaking",
+                                    "blocks": [
+                                      {
+                                        "id": "6fea1758",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Post with Twitter embed tagged as breaking",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "2b21d47d",
+                      "type": "paragraph",
+                      "model": { "text": "", "blocks": [] }
+                    },
+                    {
+                      "id": "87640fe1",
+                      "type": "social",
+                      "model": {
+                        "source": "https://twitter.com/WhiteHouse/status/1724230668085862493",
+                        "blocks": [
+                          {
+                            "id": "ccda1718",
+                            "type": "renditions",
+                            "model": {
+                              "locator": "",
+                              "blocks": [
+                                {
+                                  "id": "c4760e5c",
+                                  "type": "aresOEmbed",
+                                  "model": {
+                                    "oembed": {
+                                      "provider_name": "twitter",
+                                      "url": "https://twitter.com/WhiteHouse/status/1724230668085862493",
+                                      "html": "<blockquote class=\"twitter-tweet\"><a href=\"https://twitter.com/WhiteHouse/status/1724230668085862493\">View original content on Twitter</a></blockquote>"
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:9a1e99fc-5bf2-4644-ab2e-7f0f9c6c72f3",
+              "type": "POST",
+              "options": { "isBreakingNews": true },
+              "dates": {
+                "firstPublished": "2023-11-14T15:17:11.000Z",
+                "lastPublished": "2023-11-14T16:57:16.000Z",
+                "time": null,
+                "curated": "2023-11-14T15:17:11.844Z"
+              },
+              "titles": [{ "title": null, "source": "primary" }],
+              "descriptions": [{ "text": null, "source": "summary" }],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "65097c98",
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "a027ec3a",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "8830ae44",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Post with bullet points and link",
+                                    "blocks": [
+                                      {
+                                        "id": "14716c9b",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Post with bullet points and link",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "bcef4b55",
+                      "type": "unorderedList",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "cfb07101",
+                            "type": "listItem",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "c20d91a2",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "\n      La preocupación ha llegado hasta Xi, que hace poco pronunció un discurso sobre la necesidad de la",
+                                    "attributes": []
+                                  }
+                                },
+                                {
+                                  "id": "60d7bede",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "cultura del matrimonio y la procreación\".",
+                                    "attributes": ["bold"]
+                                  }
+                                },
+                                {
+                                  "id": "977e03df",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "También habló de \"reforzar la orientación\" para formar la opinión de los jóvenes sobre el matrimonio, los hijos y la familia.\n    ",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "id": "9b0a5caf",
+                            "type": "listItem",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "a6b5e91f",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "\n      No es que los funcionarios chinos no lo hayan ",
+                                    "attributes": []
+                                  }
+                                },
+                                {
+                                  "id": "2e03a1a7",
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "intentado",
+                                    "locator": "https://bbc.com",
+                                    "blocks": [
+                                      {
+                                        "id": "d348758d",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "intentado",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "id": "c9411630",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": ".\n    ",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "id": "017ca20c",
+                            "type": "listItem",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "b2efb401",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "\n      En todo el país,",
+                                    "attributes": []
+                                  }
+                                },
+                                {
+                                  "id": "60a839a1",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "los burócratas se han movilizado para incentivar a los jóvenes a casarse y a las parejas a seguir casadas y tener hijos.",
+                                    "attributes": ["bold"]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "id": "11ac9f11",
+                            "type": "listItem",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "aebf458e",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "\n      A principios de este año, una pequeña ciudad de la provincia oriental de Zhejiang anunció que",
+                                    "attributes": []
+                                  }
+                                },
+                                {
+                                  "id": "a01ded21",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "ofrecería a las parejas 1.000 yuanes (US$137) como \"recompensa\" si la novia tenía 25 años o menos.",
+                                    "attributes": ["bold"]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:d552e191-6d1c-4c3d-90c2-bb960e9d389f",
+              "type": "POST",
+              "options": { "isBreakingNews": false },
+              "dates": {
+                "firstPublished": "2023-11-14T15:15:50.000Z",
+                "lastPublished": "2023-11-14T15:15:50.000Z",
+                "time": null,
+                "curated": "2023-11-14T15:15:50.975Z"
+              },
+              "titles": [{ "title": null, "source": "primary" }],
+              "descriptions": [{ "text": null, "source": "summary" }],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "bd2bf79c",
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "a862053e",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "b80f248b",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Post with image",
+                                    "blocks": [
+                                      {
+                                        "id": "b139c832",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Post with image",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "e075b4c1",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Algunas de las citas han sido peores que otras, dice, porque tiene una condición que la mayoría de los hombres que conoce parecen incapaces de aceptar: no quiere tener hijos.",
+                        "blocks": [
+                          {
+                            "id": "cd086dde",
+                            "type": "fragment",
+                            "model": {
+                              "text": "Algunas de las citas han sido peores que otras, dice, porque tiene una condición que la mayoría de los hombres que conoce parecen incapaces de aceptar: no quiere tener hijos.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "e534dd03",
+                      "type": "paragraph",
+                      "model": { "text": "", "blocks": [] }
+                    },
+                    {
+                      "id": "b9fab211",
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "1200dc6c",
+                            "type": "rawImage",
+                            "model": {
+                              "height": 1080,
+                              "width": 1920,
+                              "locator": "vivo/test/images/2023/11/14/9404abb5-3212-40ec-801c-f45170172bc5.png",
+                              "originCode": "cpsdevpb",
+                              "copyrightHolder": "BBC"
+                            }
+                          },
+                          {
+                            "id": "d49f8ca0",
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "6de5e33c",
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "id": "9b108a9c",
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Image",
+                                          "blocks": [
+                                            {
+                                              "id": "bf4dcfc6",
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Image",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "id": "d87f65fa",
+                            "type": "caption",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "12a909dc",
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "id": "0c2e71e1",
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Image caption",
+                                          "blocks": [
+                                            {
+                                              "id": "c8023333",
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Image caption",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:f3827a4f-e037-4a79-bb53-66e898fc4a13",
+              "type": "POST",
+              "options": { "isBreakingNews": false },
+              "dates": {
+                "firstPublished": "2023-11-14T15:12:07.000Z",
+                "lastPublished": "2023-11-14T15:12:07.000Z",
+                "time": null,
+                "curated": "2023-11-14T15:12:08.232Z"
+              },
+              "titles": [{ "title": null, "source": "primary" }],
+              "descriptions": [{ "text": null, "source": "summary" }],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "2feca4a8",
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "5b2368cb",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "596aab77",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Post headline",
+                                    "blocks": [
+                                      {
+                                        "id": "b2982ab9",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Post headline",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "808d26ec",
+                      "type": "subheadline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "926e0cdb",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "77d2a2e9",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Post sub-headline",
+                                    "blocks": [
+                                      {
+                                        "id": "e8e87414",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Post sub-headline",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "4b131503",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Algunas de las citas han sido peores que otras, dice, porque tiene una condición que la mayoría de los hombres que conoce parecen incapaces de aceptar: no quiere tener hijos.",
+                        "blocks": [
+                          {
+                            "id": "1d9c0ff3",
+                            "type": "fragment",
+                            "model": {
+                              "text": "Algunas de las citas han sido peores que otras, dice, porque tiene una condición que la mayoría de los hombres que conoce parecen incapaces de aceptar: no quiere tener hijos.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "a0eec33f",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "\"Tener hijos es muy agotador y no me gustan los niños\", asegura Chen, que tiene unos 20 años y sólo quiere compartir su apellido. \"Pero es imposible encontrar a un hombre que no quiera tener hijos.Para un hombre no tener hijos... Es como matarlo\".",
+                        "blocks": [
+                          {
+                            "id": "fd874352",
+                            "type": "fragment",
+                            "model": { "text": "\"", "attributes": [] }
+                          },
+                          {
+                            "id": "fb4d1e78",
+                            "type": "fragment",
+                            "model": {
+                              "text": "Tener hijos es muy agotador y no me gustan los niños",
+                              "attributes": ["bold"]
+                            }
+                          },
+                          {
+                            "id": "35f11479",
+                            "type": "fragment",
+                            "model": {
+                              "text": "\", asegura Chen, que tiene unos 20 años y sólo quiere compartir su apellido. \"Pero es imposible encontrar a un hombre que no quiera tener hijos.",
+                              "attributes": []
+                            }
+                          },
+                          {
+                            "id": "b24a3227",
+                            "type": "fragment",
+                            "model": {
+                              "text": "Para un hombre no tener hijos... Es como matarlo\".",
+                              "attributes": ["bold"]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "00ca61ff",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "A pesar de la sucesión de citas infructuosas, la presión por casarse no ha disminuido.La hace estar a punto de \"explotar\", afirma.",
+                        "blocks": [
+                          {
+                            "id": "4e52af2d",
+                            "type": "fragment",
+                            "model": {
+                              "text": "A pesar de la sucesión de citas infructuosas, la presión por casarse no ha disminuido.",
+                              "attributes": []
+                            }
+                          },
+                          {
+                            "id": "3bd9632a",
+                            "type": "fragment",
+                            "model": {
+                              "text": "La hace estar a punto de \"explotar\"",
+                              "attributes": ["bold"]
+                            }
+                          },
+                          {
+                            "id": "5b834592",
+                            "type": "fragment",
+                            "model": { "text": ", afirma.", "attributes": [] }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "21c1eddd",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "No sólo los padres de Chen quieren que se case y tenga hijos. A medida que caen en picado las tasas de matrimonios y natalidad,el Partido Comunista Chino anima a millones de mujeres y hombres jóvenes a revertir la tendencia.",
+                        "blocks": [
+                          {
+                            "id": "fb39c179",
+                            "type": "fragment",
+                            "model": {
+                              "text": "No sólo los padres de Chen quieren que se case y tenga hijos. A medida que caen en picado las tasas de matrimonios y natalidad,",
+                              "attributes": []
+                            }
+                          },
+                          {
+                            "id": "9f2f0500",
+                            "type": "fragment",
+                            "model": {
+                              "text": "el Partido Comunista Chino anima a millones de mujeres y hombres jóvenes a revertir la tendencia.",
+                              "attributes": ["bold"]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:c9aacf08-2351-4c5e-bdae-c48a023eeb2d",
+              "type": "POST",
+              "options": { "isBreakingNews": false },
+              "dates": {
+                "firstPublished": "2023-11-14T15:11:07.000Z",
+                "lastPublished": "2023-11-14T15:11:07.000Z",
+                "time": null,
+                "curated": "2023-11-14T15:11:09.125Z"
+              },
+              "titles": [{ "title": null, "source": "primary" }],
+              "descriptions": [{ "text": null, "source": "summary" }],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            }
+          ],
+          "page": { "index": 1, "total": 1 }
+        }
+      }
+    },
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:cemn2qq3x8vt",
+        "contentType": "live-coverage",
+        "pageIdentifier": "live_coverage.cemn2qq3x8vt.page",
+        "pageTitle": "This is the SEO title",
+        "timePublished": "2023-11-14T09:23:00.000Z",
+        "timeUpdated": "2024-03-12T12:22:44.000Z"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

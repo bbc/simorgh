@@ -11,7 +11,7 @@ exports[`Canonical Media Article Page Analytics ATI tracking pixel excluding src
 />
 `;
 
-exports[`Canonical Media Article Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/"`;
+exports[`Canonical Media Article Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
 
 exports[`Canonical Media Article Page Analytics ATI tracking pixel search params 1`] = `
 [

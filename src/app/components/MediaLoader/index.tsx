@@ -26,6 +26,7 @@ import styles from './index.styles';
 import { getBootstrapSrc } from '../Ad/Canonical';
 import Metadata from './Metadata';
 import AmpMediaLoader from './Amp';
+import Message from './Message';
 
 const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
   MEDIA_ARTICLE_PAGE,
@@ -34,7 +35,7 @@ const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
 
 const logger = nodeLogger(__filename);
 
-const BumpLoader = () => (
+export const BumpLoader = () => (
   <Helmet>
     <script
       type="text/javascript"
@@ -96,14 +97,22 @@ type MediaContainerProps = {
   playerConfig: PlayerConfig;
   showAds: boolean;
   uniqueId?: string;
+  noJsMessage?: string;
+  playlistLoadedCallback?: (e?: Event) => void;
 };
+
+const isAudioPlayer = (playerConfig: PlayerConfig) =>
+  playerConfig?.ui?.skin === 'audio';
 
 const MediaContainer = ({
   playerConfig,
   showAds,
   uniqueId,
+  noJsMessage,
+  playlistLoadedCallback,
 }: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
+  const isAudio = isAudioPlayer(playerConfig);
 
   useEffect(() => {
     try {
@@ -123,6 +132,12 @@ const MediaContainer = ({
             } else {
               mediaPlayers[uniqueId] = mediaPlayer;
             }
+          }
+
+          if (playlistLoadedCallback) {
+            mediaPlayer.bind('playlistLoaded', e => {
+              playlistLoadedCallback?.(e);
+            });
           }
 
           if (showAds) {
@@ -156,18 +171,19 @@ const MediaContainer = ({
     } catch (error) {
       logger.error(MEDIA_PLAYER_STATUS, error);
     }
-  }, [playerConfig, showAds, uniqueId]);
+  }, [playerConfig, showAds, uniqueId, playlistLoadedCallback]);
 
   return (
     <div
       ref={playerElementRef}
       data-e2e="media-player"
-      css={
-        playerConfig?.ui?.skin === 'audio'
-          ? styles.audioMediaContainer
-          : styles.standardMediaContainer
-      }
-    />
+      className="media-player"
+      css={isAudio ? styles.audioMediaContainer : styles.standardMediaContainer}
+    >
+      <noscript>
+        <Message message={noJsMessage} />
+      </noscript>
+    </div>
   );
 };
 
@@ -176,10 +192,17 @@ type Props = {
   className?: string;
   embedded?: boolean;
   uniqueId?: string;
+  playlistLoadedCallback?: (e?: Event) => void;
 };
 
-const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
-  const { lang, translations } = useContext(ServiceContext);
+const MediaLoader = ({
+  blocks,
+  className,
+  embedded,
+  uniqueId,
+  playlistLoadedCallback,
+}: Props) => {
+  const { lang, service, translations } = useContext(ServiceContext);
   const { pageIdentifier } = useContext(EventTrackingContext);
   const { enabled: adsEnabled } = useToggle('ads');
 
@@ -187,7 +210,6 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
     id,
     pageType,
     statsDestination,
-    service,
     isAmp,
     isLite,
     showAdsBasedOnLocation,
@@ -231,6 +253,9 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
   } = config;
 
   const captionBlock = getCaptionBlock(blocks, pageType);
+  const isPortrait = orientation === 'portrait';
+  const isLandscape = orientation === 'landscape';
+  const isAudio = isAudioPlayer(playerConfig);
 
   const {
     placeholderSrc,
@@ -239,9 +264,9 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
     mediaInfo,
   } = placeholderConfig ?? {};
 
-  const hasPlaceholder = Boolean(showPlaceholder && placeholderSrc);
+  const noJsMessage = translatedNoJSMessage || translations?.media?.noJs;
 
-  const showPortraitTitle = orientation === 'portrait' && !embedded;
+  const hasPlaceholder = Boolean(showPlaceholder && placeholderSrc);
 
   return (
     <>
@@ -251,19 +276,14 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
           <Metadata blocks={blocks} embedURL={playerConfig?.externalEmbedUrl} />
         )
       }
-      {showPortraitTitle && (
-        <strong css={styles.titlePortrait}>
-          {translations.media.watchMoments || 'Watch Moments'}
-        </strong>
-      )}
       <figure
         data-e2e="media-loader__container"
-        className={className}
+        className={`media-container${className ? ` ${className}` : ''}`}
         css={[
           styles.figure(embedded),
-          playerConfig?.ui?.skin === 'classic' && [
-            orientation === 'portrait' && styles.portraitFigure(embedded),
-            orientation === 'landscape' && styles.landscapeFigure,
+          !isAudio && [
+            isPortrait && styles.portraitFigure(embedded),
+            isLandscape && styles.landscapeFigure,
           ],
         ]}
       >
@@ -273,7 +293,7 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
             title={mediaInfo?.title}
             placeholderSrc={placeholderSrc}
             placeholderSrcset={placeholderSrcset}
-            noJsMessage={translatedNoJSMessage}
+            noJsMessage={noJsMessage}
           />
         ) : (
           <>
@@ -283,7 +303,7 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
               <Placeholder
                 src={placeholderSrc}
                 srcSet={placeholderSrcset}
-                noJsMessage={translatedNoJSMessage}
+                noJsMessage={noJsMessage}
                 mediaInfo={mediaInfo}
                 onClick={() => setShowPlaceholder(false)}
               />
@@ -292,15 +312,21 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
                 playerConfig={playerConfig}
                 showAds={showAds}
                 uniqueId={uniqueId}
+                noJsMessage={noJsMessage}
+                playlistLoadedCallback={playlistLoadedCallback}
               />
             )}
           </>
         )}
         {captionBlock && (
           <Caption
+            className={isPortrait ? 'portrait-caption' : ''}
             block={captionBlock}
             type={mediaType}
-            css={orientation === 'portrait' && styles.captionPortrait}
+            css={[
+              isAudio && styles.captionAudio,
+              !isAudio && [isPortrait && styles.captionPortrait],
+            ]}
           />
         )}
       </figure>

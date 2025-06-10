@@ -45,7 +45,7 @@ export default ({ service, pageData, displayAds }) => {
 
   describe('Embed', () => {
     const embedComponent = document.querySelector('[data-testid="embed"]');
-    if (service === 'hindi') {
+    if (service === 'marathi') {
       it('should be in the document', () => {
         expect(embedComponent).toBeInTheDocument();
       });
