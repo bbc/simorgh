@@ -4,6 +4,7 @@ const portraitVideoFixture = {
   items: [
     {
       id: 'urn:bbc:pips:pid:p01wjx7v',
+      title: '4 erros de quem estuda para concursos públicos',
       images: [
         {
           url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8g.jpg',
@@ -26,11 +27,15 @@ const portraitVideoFixture = {
           duration: 'PT13S',
           kind: 'programme',
           territories: ['uk', 'nonuk'],
+          versionId: 'p01wjx7v1',
+          guidance: null,
+          isEmbeddingAllowed: true,
         },
       },
     },
     {
       id: 'urn:bbc:optimo:asset:cgp62emnrk5o',
+      title: 'Hoje nove países possuem armas nucleares',
       images: [
         {
           url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx7z.jpg',
@@ -51,11 +56,15 @@ const portraitVideoFixture = {
           duration: 'PT13S',
           kind: 'programme',
           territories: ['uk', 'nonuk'],
+          versionId: 'p01wjx6z',
+          guidance: null,
+          isEmbeddingAllowed: true,
         },
       },
     },
     {
       id: 'urn:bbc:pips:pid:p01wjx5y',
+      title: 'Corrida armamentista na Europa',
       images: [
         {
           url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8v.jpg',
@@ -76,11 +85,15 @@ const portraitVideoFixture = {
           duration: 'PT13S',
           kind: 'programme',
           territories: ['uk', 'nonuk'],
+          versionId: 'p01wjx5y1',
+          guidance: null,
+          isEmbeddingAllowed: true,
         },
       },
     },
     {
       id: 'urn:bbc:pips:pid:p01wjx4r',
+      title: 'A Nova Rota da Seda',
       images: [
         {
           url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx5j.jpg',
@@ -102,11 +115,15 @@ const portraitVideoFixture = {
           duration: 'PT13S',
           kind: 'programme',
           territories: ['uk', 'nonuk'],
+          versionId: 'p01wjx4r',
+          guidance: null,
+          isEmbeddingAllowed: true,
         },
       },
     },
     {
       id: 'urn:bbc:pips:pid:p01wjx3q',
+      title: 'O estudante acusado no Reino Unido',
       images: [
         {
           url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx51.jpg',
@@ -127,11 +144,15 @@ const portraitVideoFixture = {
           duration: 'PT13S',
           kind: 'programme',
           territories: ['uk', 'nonuk'],
+          versionId: 'p01wjx3q',
+          guidance: null,
+          isEmbeddingAllowed: true,
         },
       },
     },
     {
       id: 'urn:bbc:pips:pid:p01wjx3g',
+      title: 'Por que evitar glicose para emagrecer',
       images: [
         {
           url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx48.jpg',
@@ -152,11 +173,15 @@ const portraitVideoFixture = {
           duration: 'PT13S',
           kind: 'programme',
           territories: ['uk', 'nonuk'],
+          versionId: 'p01wjx3g',
+          guidance: null,
+          isEmbeddingAllowed: true,
         },
       },
     },
     {
       id: 'urn:bbc:pips:pid:p01wjx35',
+      title: 'Papa Francisco recebe alta',
       images: [
         {
           url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx3l.jpg',
@@ -177,11 +202,15 @@ const portraitVideoFixture = {
           duration: 'PT13S',
           kind: 'programme',
           territories: ['uk', 'nonuk'],
+          versionId: 'p01wjx35',
+          guidance: null,
+          isEmbeddingAllowed: true,
         },
       },
     },
     {
       id: 'urn:bbc:pips:pid:p01wjx7v1',
+      title: '4 erros de quem estuda para concursos públicos',
       images: [
         {
           url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8g.jpg',
@@ -203,11 +232,15 @@ const portraitVideoFixture = {
           duration: 'PT13S',
           kind: 'programme',
           territories: ['uk', 'nonuk'],
+          versionId: 'p01wjx7v1',
+          guidance: null,
+          isEmbeddingAllowed: true,
         },
       },
     },
     {
       id: 'urn:bbc:optimo:asset:cgp62emnrk5o1',
+      title: 'Hoje nove países possuem armas nucleares',
       images: [
         {
           url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx7z.jpg',
@@ -228,11 +261,15 @@ const portraitVideoFixture = {
           duration: 'PT13S',
           kind: 'programme',
           territories: ['uk', 'nonuk'],
+          versionId: 'p01wjx6z',
+          guidance: null,
+          isEmbeddingAllowed: true,
         },
       },
     },
     {
       id: 'urn:bbc:pips:pid:p01wjx5y1',
+      title: 'Corrida armamentista na Europa',
       images: [
         {
           url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8v.jpg',
@@ -249,10 +286,14 @@ const portraitVideoFixture = {
       },
       video: {
         id: 'p01wjx5y1',
+
         version: {
           duration: 'PT13S',
           kind: 'programme',
           territories: ['uk', 'nonuk'],
+          versionId: 'p01wjx5y1',
+          guidance: null,
+          isEmbeddingAllowed: true,
         },
       },
     },

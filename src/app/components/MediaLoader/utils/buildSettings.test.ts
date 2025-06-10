@@ -144,50 +144,50 @@ describe('buildSettings', () => {
         pageType: 'home',
       });
 
-      expect(result?.playerConfig.playlistObject?.items).toEqual([
-        {
-          versionID: 'p0abc002',
-          kind: 'programme',
-          duration: 60,
-          embedRights: 'allowed',
-          vpid: 'p0abc001',
-          serviceID: 'bbc_world_service',
-          title: 'Portrait Video 1',
-          guidance: undefined,
-          territories: ['bbc_world_service'],
-          images: [
-            {},
-            {
-              urlTemplate:
-                'https://ichef.bbci.co.uk/images/ic/{width}xn/p0abc001.jpg',
-              source: 'www.test.bbc.com/aportraitmediathing',
+      expect(result).toStrictEqual({
+        mediaType: 'video',
+        playerConfig: {
+          autoplay: true,
+          product: 'news',
+          enableToucan: true,
+          appType: 'responsive',
+          appName: 'news-serbian',
+          ui: {
+            skin: 'classic',
+            controls: {
+              enabled: true,
+              includeNextButton: true,
+              includePreviousButton: true,
             },
-          ],
-          holdingImageURL:
-            'https://ichef.bbci.co.uk/images/ic/512xn/p0abc001.jpg',
+            locale: { lang: 'sr-latn' },
+            subtitles: { defaultOn: true, enabled: true },
+            fullscreen: { enabled: true },
+            swipable: { direction: 'Y', enabled: true },
+          },
+          superResponsive: true,
+          supportFakeFullscreen: true,
+          counterName: 'live_coverage.testID.page',
+          statsObject: {
+            destination: 'WS_NEWS_LANGUAGES',
+            producer: 'SERBIAN',
+            clipPID: 'p0abc001',
+          },
+          playlistObject: {
+            title: 'Portrait Video 1',
+            holdingImageURL:
+              'https://ichef.bbci.co.uk/images/ic/512xn/p0abc001.jpg',
+            items: [
+              {
+                duration: 60,
+                kind: 'programme',
+                versionID: 'p0abc002',
+              },
+            ],
+          },
         },
-        {
-          versionID: 'p0abc004',
-          kind: 'programme',
-          duration: 120,
-          embedRights: 'allowed',
-          vpid: 'p0abc003',
-          serviceID: 'bbc_world_service',
-          title: 'Portrait Video 2',
-          guidance: undefined,
-          territories: ['bbc_world_service'],
-          images: [
-            {},
-            {
-              urlTemplate:
-                'https://ichef.bbci.co.uk/images/ic/{width}xn/p0abc002.jpg',
-              source: 'www.test.bbc.com/aportraitmediathing',
-            },
-          ],
-          holdingImageURL:
-            'https://ichef.bbci.co.uk/images/ic/512xn/p0abc002.jpg',
-        },
-      ]);
+        showAds: false,
+        orientation: 'portrait',
+      });
     });
   });
 
