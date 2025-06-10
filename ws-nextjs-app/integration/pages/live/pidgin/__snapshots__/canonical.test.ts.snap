@@ -224,7 +224,7 @@ exports[`Canonical Live Media Loader renders a placeholder 1`] = `
 
 exports[`Canonical Live Media Loader renders a valid container 1`] = `
 <figure
-  class="css-1cyic3f"
+  class="media-container css-1c2jhne"
   data-e2e="media-loader__container"
 >
   <div
@@ -306,7 +306,7 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
     </div>
   </div>
   <figcaption
-    class="css-12vqlmi"
+    class="css-1dw163z"
     dir="ltr"
   >
     <span

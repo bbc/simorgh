@@ -83,6 +83,7 @@ import {
   GROUP_4_ONLY,
   GROUP_5_MIN_WIDTH,
   FORCED_COLOURS,
+  POINTER,
 } from './mediaQueries';
 import {
   HALF,
@@ -214,6 +215,7 @@ const withThemeProvider = ({
       GROUP_4_ONLY,
       GROUP_5_MIN_WIDTH,
       FORCED_COLOURS,
+      POINTER,
     },
     palette: {
       ARCHIVE_BLUE,

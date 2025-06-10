@@ -111,7 +111,8 @@ const Promo = ({ block, experimentVariant, clickTracker }) => {
   let isLive;
 
   switch (experimentVariant) {
-    case 'top_bar_top_stories': {
+    case 'top-bar-top-stories':
+    case 'read-more-a-and-top-stories': {
       const overtypedHeadline = block?.headlines?.overtyped ?? '';
       const mainHeadline = block?.headlines?.headline ?? '';
       const headlineBlockText =
@@ -141,7 +142,7 @@ const Promo = ({ block, experimentVariant, clickTracker }) => {
       isLive = block.isLive;
       break;
     }
-    case 'top_bar_most_read':
+    case 'top-bar-most-read':
       title = block.title;
       href = block.href;
       break;

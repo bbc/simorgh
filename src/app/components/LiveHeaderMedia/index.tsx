@@ -70,11 +70,14 @@ const LiveHeaderMedia = ({
 
   const {
     model: {
-      masterbrand: { networkName },
       synopses: { short },
       version: { vpid, warnings },
     },
   } = mediaItem;
+
+  const titleHasPunctuation = regexPunctuationSymbols.test(
+    short.trim().slice(-1),
+  );
 
   if (warnings) {
     const { warning } = warnings;
@@ -91,8 +94,6 @@ const LiveHeaderMedia = ({
 
     warningLevel = WARNING_LEVELS[highestWarning.warning_code];
   }
-
-  const titleHasPunctuation = short.slice(-1).match(regexPunctuationSymbols);
 
   const clickToggleMedia = () => {
     const mediaPlayer = window.mediaPlayers?.[vpid];
@@ -128,11 +129,6 @@ const LiveHeaderMedia = ({
       {showMedia && <VisuallyHiddenText>{closeVideo}, </VisuallyHiddenText>}
       <Text size="pica" fontVariant="sansBold" as="span">
         {short}
-        {!titleHasPunctuation && ','}
-      </Text>
-      <Text size="pica" fontVariant="sansRegular" as="span">
-        {' '}
-        {networkName}
       </Text>
     </Text>
   );
@@ -164,7 +160,9 @@ const LiveHeaderMedia = ({
                 css={styles.guidanceMessage}
                 data-testid="warning-message"
               >
-                <VisuallyHiddenText>, </VisuallyHiddenText>
+                <VisuallyHiddenText>
+                  {titleHasPunctuation ? ' ' : ', '}
+                </VisuallyHiddenText>
                 {warnings.warning_text}
               </Text>
             )}

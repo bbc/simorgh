@@ -58,6 +58,7 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'அனைத்தும் பார்க்க',
       home: 'முகப்பு',
+      continueReading: 'தொடர்ந்து படியுங்கள்',
       currentPage: 'தற்போதுள்ள பக்கம்',
       skipLinkText: 'உள்ளடக்கத்துக்குத் தாண்டிச் செல்க',
       relatedContent: 'தொடர்புடைய உள்ளடக்கம்',
@@ -244,6 +245,8 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'அடுத்த வானொலி நிகழ்ச்சி',
         duration: 'கால அளவு',
         recentEpisodes: 'முந்தைய நிகழ்ச்சிகள்',
+        podcastExternalLinks: 'இந்த பாட்காஸ்ட் இங்கே கிடைக்கும்',
+        download: 'எபிசோடை பதிவிறக்கம் செய்ய',
         closeVideo: 'மூடுக',
       },
       socialEmbed: {

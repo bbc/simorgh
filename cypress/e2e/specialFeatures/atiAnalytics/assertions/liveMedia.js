@@ -8,6 +8,7 @@ export const assertLiveMediaComponentView = ({
   contentType,
   useReverb,
   path,
+  applicationType,
 }) => {
   it('should send a view event for the Live Media component', () => {
     interceptATIAnalyticsBeacons();
@@ -22,6 +23,7 @@ export const assertLiveMediaComponentView = ({
       pageIdentifier,
       contentType,
       useReverb,
+      applicationType,
     });
   });
 };
@@ -31,6 +33,7 @@ export const assertLiveMediaComponentClick = ({
   contentType,
   useReverb,
   path,
+  applicationType,
 }) => {
   it('should send a click event for the Live Media component', () => {
     interceptATIAnalyticsBeacons();
@@ -47,6 +50,7 @@ export const assertLiveMediaComponentClick = ({
       pageIdentifier,
       contentType,
       useReverb,
+      applicationType,
     });
   });
 };

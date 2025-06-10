@@ -1,4 +1,9 @@
-export default ({ pageType, testSuites, testIsolation = false }) => {
+export default ({
+  pageType,
+  testSuites,
+  beforeAll = [],
+  testIsolation = false,
+}) => {
   testSuites.forEach(testData => {
     const { path, tests, runforEnv, ...params } = testData;
 
@@ -6,6 +11,7 @@ export default ({ pageType, testSuites, testIsolation = false }) => {
     if (runforEnv.includes(cypressEnv)) {
       describe(`${Cypress.config().baseUrl}${path}`, { testIsolation }, () => {
         before(() => {
+          beforeAll.forEach(runBeforeAll => runBeforeAll());
           cy.visit(path);
         });
 

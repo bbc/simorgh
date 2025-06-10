@@ -11,7 +11,7 @@ exports[`Canonical Articles Analytics ATI tracking pixel excluding src 1`] = `
 />
 `;
 
-exports[`Canonical Articles Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/"`;
+exports[`Canonical Articles Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
 
 exports[`Canonical Articles Analytics ATI tracking pixel search params 1`] = `
 [
@@ -384,7 +384,7 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
 
 exports[`Canonical Articles Media Loader renders a valid container 1`] = `
 <figure
-  class="bbc-1hu5uc3"
+  class="media-container bbc-1hu5uc3"
   data-e2e="media-loader__container"
 >
   <div
@@ -460,7 +460,7 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
     </div>
   </div>
   <figcaption
-    class="bbc-17ps87o"
+    class="bbc-1vlmip3"
     dir="rtl"
   >
     <span

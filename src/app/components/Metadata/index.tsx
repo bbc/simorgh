@@ -12,10 +12,7 @@ import {
   renderAppleItunesApp,
 } from './utils';
 import { IconSizes, MetadataProps, Tag } from './types';
-import {
-  defaultTranslations,
-  liteEnabledServices,
-} from '../LiteSiteCta/liteSiteConfig';
+import defaultTranslations from '../LiteSiteSummary/defaultTranslations';
 
 const ENGLISH_SERVICES = ['news', 'sport', 'ws'];
 const FACEBOOK_APP_ID = '1609039196070050';
@@ -132,7 +129,6 @@ const MetadataContainer = ({
   const { liteSite = defaultTranslations } = translations;
   const { dataSaving } = liteSite;
 
-  const showLiteTitle = isLite && liteEnabledServices.includes(service);
   const litePageTitle = `${title} - ${dataSaving}: ${brandName}`;
   const pageTitle = `${title} - ${brandName}`;
   const socialTitle = `${socialHeadline || title} - ${brandName}`;
@@ -159,7 +155,7 @@ const MetadataContainer = ({
         name="viewport"
         content="width=device-width, initial-scale=1, minimum-scale=1"
       />
-      <title>{showLiteTitle ? litePageTitle : pageTitle}</title>
+      <title>{isLite ? litePageTitle : pageTitle}</title>
       <link rel="canonical" href={canonicalToUse} />
       {isEnglishService && alternateLinksEnglishSites.map(renderAlternateLinks)}
       {isoLang &&

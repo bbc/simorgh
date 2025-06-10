@@ -101,7 +101,6 @@ describe('Service Worker', () => {
         ${undefined} | ${false}   | ${'swPath is undefined'}
         ${undefined} | ${false}   | ${'swPath is null'}
         ${''}        | ${false}   | ${'swPath is empty'}
-        ${'swPath'}  | ${true}    | ${'service worker not supported on local environment on amp as it requires https'}
       `(
         'when swPath is $swPath and isLocalEnv is $isLocalEnv because $reason',
         ({ swPath, isLocalEnv }) => {
