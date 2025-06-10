@@ -33,6 +33,16 @@ declare global {
       bumpVersion: string[],
       callback: (Bump: BumpType) => void,
     ) => void;
+    embeddedMedia: {
+      api: {
+        players: () => {
+          bbcMediaPlayer0: {
+            queuePlaylist: (object) => void;
+            setPreviousPlaylist: (object) => void;
+          };
+        };
+      };
+    };
     mediaPlayers: Record<string, Player>;
     dotcom: {
       ads: {
