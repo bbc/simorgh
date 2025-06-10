@@ -18,8 +18,9 @@ const Component = (_: StoryArgs, __: Props) => {
   return (
     <PortraitVideoModal
       items={flattenedItems}
-      initialVideoIndex={0}
-      onClose={() => console.log('Modal closed')}
+      selectedVideoIndex={0}
+      // eslint-disable-next-line @typescript-eslint/no-empty-function
+      onClose={() => {}}
     />
   );
 };
