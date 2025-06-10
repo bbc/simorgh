@@ -25,4 +25,15 @@ describe('PortraitVideoCarousel', () => {
       fixture.title,
     );
   });
+  it('Should render the PortraitCarouselNavigation component', async () => {
+    await act(async () => {
+      render(<Component {...fixture} />);
+    });
+
+    const leftButton = screen.getByTestId('pv-scroll-left');
+    const rightButton = screen.getByTestId('pv-scroll-right');
+
+    expect(leftButton).toBeInTheDocument();
+    expect(rightButton).toBeInTheDocument();
+  });
 });
