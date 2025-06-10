@@ -120,7 +120,7 @@ const PortraitVideoModal = ({
         type="button"
         css={styles.closeButton}
         onClick={onClose}
-        aria-label="Close modal"
+        aria-label="Close modal" // Shall we change this text because is the word modal known to people?
       >
         {navigationIcons.cross}
       </button>

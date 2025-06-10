@@ -16,6 +16,9 @@ describe('PortraitVideoModal', () => {
     render(
       <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,
     );
+
+    const modal = screen.getByRole('dialog');
+    expect(modal).toBeInTheDocument();
   });
 
   it('should close the modal when the close button is clicked', () => {
@@ -24,6 +27,7 @@ describe('PortraitVideoModal', () => {
     );
 
     const closeButton = screen.getByTestId('close-modal-button');
+    expect(closeButton).toHaveAttribute('aria-label', 'Close modal');
     closeButton.click();
 
     expect(mockClose).toHaveBeenCalled();
