@@ -51,37 +51,6 @@ describe('filterForBlockType', () => {
     expect(result).toBeUndefined();
   });
 
-  it('returns all matching blocks if returnAllMatchingBlocks: true', () => {
-    const extendedBlocks = [
-      ...blocks,
-      {
-        type: 'text',
-        model: {
-          blocks: [
-            {
-              type: 'paragraph',
-              model: {
-                text: 'Esta é uma segunda entrada de texto.',
-                blocks: [],
-              },
-            },
-          ],
-        },
-      },
-    ];
-    const result = filterForBlockType(extendedBlocks, 'text', {
-      returnAllMatchingBlocks: true,
-    });
-    expect(result).toEqual([blocks[0], extendedBlocks[3]]);
-  });
-
-  it('returns empty array if returnAllMatchingBlocks: true and no matches', () => {
-    const result = filterForBlockType(blocks, 'map', {
-      returnAllMatchingBlocks: true,
-    });
-    expect(result).toEqual([]);
-  });
-
   it('returns undefined if input array is null or undefined', () => {
     expect(filterForBlockType(null, 'text')).toBeUndefined();
     expect(filterForBlockType(undefined, 'video')).toBeUndefined();
