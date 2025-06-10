@@ -10,7 +10,7 @@ https://static.test.files.bbci.co.uk/ws/simorgh1-preview-assets/public/static/js
 http://localhost:7080/static/js/reverb/reverb-3.10.1.js on LOCAL
 ```
 
-## How to update comscore script
+## How to update Reverb script
 
 1. Get the latest version of the Reverb script from the Reverb team.
 2. Minify the new Reverb script.
