@@ -1,5 +1,6 @@
 const portraitVideoFixture = {
   title: 'Portrait Video Carousel',
+  curationId: 'urn:bbc:tipo:list:65faa8a9-78d7-46ea-a159-9bc06c6146f5',
   items: [
     {
       id: 'urn:bbc:pips:pid:p01wjx7v',
@@ -7,6 +8,8 @@ const portraitVideoFixture = {
       images: [
         {
           url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8g.jpg',
+          urlTemplate:
+            'https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8g.jpg',
           altText:
             'A sensação de não saber por onde começar, a falta de uma rotina',
         },
@@ -36,6 +39,8 @@ const portraitVideoFixture = {
       images: [
         {
           url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx7z.jpg',
+          urlTemplate:
+            'https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx7z.jpg',
           altText: 'Hoje nove países possuem armas nucleares',
         },
       ],
@@ -63,6 +68,8 @@ const portraitVideoFixture = {
       images: [
         {
           url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8v.jpg',
+          urlTemplate:
+            'https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8v.jpg',
           altText: 'A Europa está em uma espécie de "corrida armamentista"',
         },
       ],
@@ -90,6 +97,9 @@ const portraitVideoFixture = {
       images: [
         {
           url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx5j.jpg',
+          urlTemplate:
+            'https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx5j.jpg',
+
           altText: 'A Nova Rota da Seda',
         },
       ],
@@ -117,6 +127,8 @@ const portraitVideoFixture = {
       images: [
         {
           url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx51.jpg',
+          urlTemplate:
+            'https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx51.jpg',
           altText: 'Estupradores em série no Reino Unido',
         },
       ],
@@ -144,6 +156,8 @@ const portraitVideoFixture = {
       images: [
         {
           url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx48.jpg',
+          urlTemplate:
+            'https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx48.jpg',
           altText: 'Evitar picos de glicose',
         },
       ],
@@ -171,6 +185,8 @@ const portraitVideoFixture = {
       images: [
         {
           url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx3l.jpg',
+          urlTemplate:
+            'https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx3l.jpg',
           altText: 'Papa Francisco recebe alta',
         },
       ],
@@ -198,6 +214,8 @@ const portraitVideoFixture = {
       images: [
         {
           url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8g.jpg',
+          urlTemplate:
+            'https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8g.jpg',
           altText:
             'A sensação de não saber por onde começar, a falta de uma rotina',
         },
@@ -226,6 +244,8 @@ const portraitVideoFixture = {
       images: [
         {
           url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx7z.jpg',
+          urlTemplate:
+            'https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx7z.jpg',
           altText: 'Hoje nove países possuem armas nucleares',
         },
       ],
@@ -253,6 +273,8 @@ const portraitVideoFixture = {
       images: [
         {
           url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8v.jpg',
+          urlTemplate:
+            'https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8v.jpg',
           altText: 'Corrida armamentista na Europa',
         },
       ],
