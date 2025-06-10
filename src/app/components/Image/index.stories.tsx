@@ -11,10 +11,8 @@ const ImgWithAmp = (props: ImageProps) => (
     pathname="/afaanoromoo"
     service="afaanoromoo"
   >
-    <div style={{ height: '100vh' }}>
-      <div style={{ height: '40vh' }}>
-        <Image {...props} />
-      </div>
+    <div style={{ height: '40vh' }}>
+      <Image {...props} />
     </div>
   </RequestContextProvider>
 );
