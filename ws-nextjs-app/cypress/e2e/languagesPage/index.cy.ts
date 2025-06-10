@@ -6,19 +6,19 @@ const homePageTestSuites = [
   {
     path: '/ws/languages',
     service: 'pidgin',
-    runforEnv: ['local'],
+    runforEnv: ['test'],
     tests: [assertions.assertPidginHomepage],
   },
   {
     path: '/ws/languages?renderer_env=test',
     service: 'pidgin',
-    runforEnv: ['local'],
+    runforEnv: ['test'],
     tests: [assertions.assertPidginHomepage],
   },
   {
     path: '/ws/languages?renderer_env=live',
     service: 'pidgin',
-    runforEnv: ['local'],
+    runforEnv: ['test'],
     tests: [assertions.assertPidginHomepage],
   },
 ];
