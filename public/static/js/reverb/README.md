@@ -26,4 +26,3 @@ envConfig/preview2.env
 envConfig/local.env
 ```
 
-5. The `comscoreScript` variable will also need updating here: `src/app/containers/ComscoreAnalytics/Canonical/index.jsx` to have the latest version number.
