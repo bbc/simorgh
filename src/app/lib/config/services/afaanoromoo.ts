@@ -78,6 +78,17 @@ export const service: DefaultServiceConfig = {
       relatedContent: 'Odeessa kana irratti dabalata',
       relatedTopics: 'Mata dureewwan walitti dhiyaatan',
       navMenuText: 'Kutaawwan',
+      liteSite: {
+        onboardingMessage:
+          'Kan argaa jirtan oduu barreefamaan qofa marsaritii keenya daataa xiqqaan hojjetudha. Fuula isa guutuu suuraaleefi viidiyoowwan qabate banadhaa.',
+        toMainSite: 'Gara fuula marsariitii guutuutti na geessi',
+        informationPage:
+          'Filannoo daataa qusatu fayyadamu kanarratti hubannoo dabalataaf',
+        informationPageLink:
+          'https://www.bbc.com/afaanoromoo/articles/cx2qk33rg1po',
+        dataSaving: 'Daataa qusachuuf barreefama qofa dubbisi',
+        articleDataSavingLinkText: 'Daataa qusachuuf barreefama qofa dubbisi',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -361,6 +372,7 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Viidiyoo',
         url: '/afaanoromoo/topics/ck0dg7dpjwwt',
+        hideOnLiteSite: true,
       },
       {
         title: 'Siyaasa',
