@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { useContext } from 'react';
+import { use } from 'react';
 
 import { RequestContext } from '#contexts/RequestContext';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
@@ -17,7 +17,7 @@ const RecommendationsItem = ({
 }: {
   recommendation: Recommendation | null;
 }) => {
-  const { isLite } = useContext(RequestContext);
+  const { isLite } = use(RequestContext);
 
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 

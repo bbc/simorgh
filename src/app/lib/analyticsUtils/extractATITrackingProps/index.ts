@@ -1,12 +1,12 @@
+import { use } from 'react';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
-import { useContext } from 'react';
 import { EventTrackingData, EventTrackingProps } from '../types';
 
 export default ({
   eventTrackingData,
   eventType,
 }: EventTrackingProps): EventTrackingData => {
-  const eventTrackingContext = useContext(EventTrackingContext);
+  const eventTrackingContext = use(EventTrackingContext);
 
   const {
     componentName = '',
