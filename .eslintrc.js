@@ -76,6 +76,13 @@ module.exports = {
     ],
     'import/extensions': [1, { json: 'ignorePackages' }],
     'jsx-a11y/no-redundant-roles': 'off',
+    'jsx-a11y/aria-role': [
+      2,
+      {
+        allowedInvalidRoles: ['text'],
+        ignoreNonDOM: false,
+      },
+    ],
     'no-only-tests/no-only-tests': 'error',
     'no-unsafe-optional-chaining': 'error',
   },
