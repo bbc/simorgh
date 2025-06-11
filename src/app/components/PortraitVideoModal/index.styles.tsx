@@ -35,6 +35,7 @@ const styles = {
       border: `${pixelsToRem(2)}rem solid ${palette.WHITE}`,
       cursor: 'pointer',
       padding: 0,
+      zIndex: 2,
 
       [mq.GROUP_2_MIN_WIDTH]: {
         display: 'flex',
@@ -61,11 +62,12 @@ const styles = {
         maxHeight: '100%',
         margin: 0,
         marginInline: 0,
+        zIndex: 1,
       },
 
       [mq.GROUP_2_MIN_WIDTH]: {
         '&.media-container': {
-          maxHeight: '80%',
+          maxHeight: '90%',
         },
       },
     }),
