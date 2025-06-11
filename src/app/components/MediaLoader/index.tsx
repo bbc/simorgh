@@ -123,8 +123,6 @@ const MediaContainer = ({
             playerConfig,
           );
 
-          mediaPlayer.load();
-
           if (uniqueId != null) {
             const { mediaPlayers } = window;
             if (mediaPlayers == null) {
@@ -134,11 +132,18 @@ const MediaContainer = ({
             }
           }
 
-          if (playlistLoadedCallback) {
-            mediaPlayer.bind('playlistLoaded', e => {
-              playlistLoadedCallback?.(e);
-            });
-          }
+          // Need to check device width too
+
+          // if (playlistLoadedCallback) {
+          mediaPlayer.bind('playlistLoaded', e => {
+            playlistLoadedCallback?.(e);
+
+            if (playerConfig.supportFakeFullscreen) {
+              console.log('derp');
+              mediaPlayer.dispatchEvent('fullScreenPlugin.launchFullscreen');
+            }
+          });
+          // }
 
           if (showAds) {
             const adTag = await window.dotcom.ads.getAdTag();
@@ -166,6 +171,8 @@ const MediaContainer = ({
               );
             });
           }
+
+          mediaPlayer.load();
         }
       });
     } catch (error) {

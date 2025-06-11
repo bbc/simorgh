@@ -48,6 +48,9 @@ export default ({
         holdingImageURL,
         items,
       },
+      plugins: {
+        toLoad: [{ html: '/smpPlugins/fullscreen.js', playerOnly: true }],
+      },
       ui: {
         ...basePlayerConfig.ui,
         swipable: {
@@ -59,6 +62,7 @@ export default ({
           includeNextButton: true,
           includePreviousButton: true,
         },
+        fullscreen: { enabled: false },
       },
       statsObject: {
         ...basePlayerConfig.statsObject,

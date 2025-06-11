@@ -56,6 +56,9 @@ export type PlayerConfig = {
   mediator?: { host: string };
   ui: PlayerUiConfig;
   playlistObject?: Playlist;
+  plugins?: {
+    toLoad: { html: string; playerOnly?: boolean }[];
+  };
 };
 
 export type PlayerUiConfig = {
@@ -123,7 +126,7 @@ export type MediaInfo = {
 export type Player = {
   dispatchEvent(
     dispatchEvent: string,
-    parameters: { updatedAdTag: string },
+    parameters?: { updatedAdTag: string },
   ): void;
   load: () => void;
   play: () => void;
@@ -131,7 +134,7 @@ export type Player = {
   bind: (event: string, callback: (e?: Event) => void) => void;
   loadPlugin: (
     pluginName: { [key: string]: string },
-    parameters: {
+    parameters?: {
       name: string;
       data: {
         adTag: string;
