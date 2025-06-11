@@ -49,6 +49,7 @@ export default ({
         items,
       },
       plugins: {
+        // URL probably needs to be absolute path when deployed
         toLoad: [{ html: '/smpPlugins/fullscreen.js', playerOnly: true }],
       },
       ui: {
@@ -62,7 +63,7 @@ export default ({
           includeNextButton: true,
           includePreviousButton: true,
         },
-        fullscreen: { enabled: false, useCloseIconForExitFullscreen: true },
+        fullscreen: { enabled: true, useCloseIconForExitFullscreen: true },
       },
       statsObject: {
         ...basePlayerConfig.statsObject,
