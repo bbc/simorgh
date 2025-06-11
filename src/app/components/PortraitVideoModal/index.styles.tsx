@@ -37,6 +37,10 @@ const styles = {
       padding: 0,
       zIndex: 2,
 
+      '&:hover, &:focus-visible': {
+        backgroundColor: palette.POSTBOX,
+      },
+
       [mq.GROUP_2_MIN_WIDTH]: {
         display: 'flex',
       },
@@ -46,10 +50,11 @@ const styles = {
       },
 
       svg: {
+        color: palette.WHITE,
+
         [mq.FORCED_COLOURS]: {
           fill: 'canvasText',
         },
-        color: palette.WHITE,
       },
     }),
 
