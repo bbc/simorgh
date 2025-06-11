@@ -1,41 +1,49 @@
+import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
 const styles = {
-  dialog: css({
-    overflow: 'hidden',
-    width: '100%',
-    maxWidth: '100%',
-    height: '100%',
-    maxHeight: '100%',
-    position: 'relative',
-    backgroundColor: 'transparent',
-    border: 'none',
-    margin: 0,
-    padding: 0,
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
+  dialog: () =>
+    css({
+      overflow: 'hidden',
+      width: '100%',
+      maxWidth: '100%',
+      height: '100%',
+      maxHeight: '100%',
+      position: 'relative',
+      backgroundColor: 'transparent',
+      border: 'none',
+      margin: 0,
+      padding: 0,
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
 
-    '&::backdrop': {
-      backgroundColor: 'rgba(0, 0, 0, 0.9)',
-    },
-  }),
+      '&::backdrop': {
+        backgroundColor: 'rgba(20, 20, 20, 0.9)',
+        backdropFilter: 'blur(0.2rem)',
+      },
+    }),
 
-  closeButton: ({ palette }: Theme) =>
+  closeButton: ({ mq, spacings, palette }: Theme) =>
     css({
       display: 'flex',
       position: 'absolute',
-      top: '1rem',
-      right: '1rem',
-      fontSize: '1.5rem',
+      top: `${spacings.DOUBLE}rem`,
+      right: `${spacings.DOUBLE}rem`,
       background: 'transparent',
-      border: 'none',
+      border: `${pixelsToRem(2)}rem solid ${palette.WHITE}`,
       cursor: 'pointer',
-      zIndex: 2,
+      padding: 0,
+
+      [mq.FORCED_COLOURS]: {
+        border: `${pixelsToRem(2)}rem solid canvasText`,
+      },
 
       svg: {
-        fill: 'currentcolor',
+        [mq.FORCED_COLOURS]: {
+          fill: 'canvasText',
+        },
         color: palette.WHITE,
       },
     }),
