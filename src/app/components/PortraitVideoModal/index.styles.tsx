@@ -27,7 +27,7 @@ const styles = {
 
   closeButton: ({ mq, spacings, palette }: Theme) =>
     css({
-      display: 'flex',
+      display: 'none',
       position: 'absolute',
       top: `${spacings.DOUBLE}rem`,
       right: `${spacings.DOUBLE}rem`,
@@ -35,6 +35,10 @@ const styles = {
       border: `${pixelsToRem(2)}rem solid ${palette.WHITE}`,
       cursor: 'pointer',
       padding: 0,
+
+      [mq.GROUP_2_MIN_WIDTH]: {
+        display: 'flex',
+      },
 
       [mq.FORCED_COLOURS]: {
         border: `${pixelsToRem(2)}rem solid canvasText`,
@@ -54,14 +58,14 @@ const styles = {
         width: 'auto',
         height: '100%',
         maxWidth: '100%',
-        maxHeight: '85%',
+        maxHeight: '100%',
         margin: 0,
         marginInline: 0,
       },
 
-      [mq.GROUP_5_MIN_WIDTH]: {
+      [mq.GROUP_2_MIN_WIDTH]: {
         '&.media-container': {
-          maxHeight: '90%',
+          maxHeight: '80%',
         },
       },
     }),
