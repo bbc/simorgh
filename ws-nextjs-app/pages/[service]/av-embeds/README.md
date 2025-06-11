@@ -10,7 +10,7 @@ See [BFF Response for AV Embed](https://github.com/bbc/fabl-modules/tree/main/mo
 
 ## How routes are handled
 
-There are no direct app routes connected to this component, because av-embeds are inteded to be served as a raw piece of HTML outside any kind of framework. (In other words: There is no .page.tsx file exposed here, because this component is not intended to be run within our Next.js app, it's intended to be embedded into thid party sites as raw HTML.)
+There are no direct app routes connected to this component, because av-embeds are intended to be served as a raw piece of HTML outside any kind of framework. (In other words: There is no .page.tsx file exposed here, because this component is not intended to be run within our Next.js app, it's intended to be embedded into third party sites as raw HTML / within an iFrame)
 
 Instead of exposing its own .page.tsx endpoint, this component makes use of the root catch-all `[service]/[[...]].page.tsx` endpoint. An `if` clause within [`[service]/[[...]].page.tsx`](https://github.com/bbc/simorgh/blob/latest/ws-nextjs-app/pages/%5Bservice%5D/%5B%5B...%5D%5D.page.tsx#L42C2-L45C4) invokes handleAvRoute.ts to request the appropriate data from our BFF, which is then passed over to an instance of [AvEmbedsPageLayout](https://github.com/bbc/simorgh/blob/latest/ws-nextjs-app/pages/%5Bservice%5D/%5B%5B...%5D%5D.page.tsx#L24C5-L25C47).
 
