@@ -35,7 +35,7 @@ Routes that match this construct are correlated to the routes outlined in [Belfr
 
 ## Component Structure
 
-A AV Embed can be found here: <https://www.bbc.com/ws/av-embeds/articles/c9wg48wz1rxo/p0lhc718/hi/amp>
+An AV Embed can be found here: https://www.bbc.com/ws/av-embeds/articles/c9wg48wz1rxo/p0lhc718/hi/amp
 
 Component file structure
 
