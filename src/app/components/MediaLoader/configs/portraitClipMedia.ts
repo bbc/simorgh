@@ -62,7 +62,7 @@ export default ({
           includeNextButton: true,
           includePreviousButton: true,
         },
-        fullscreen: { enabled: false },
+        fullscreen: { enabled: false, useCloseIconForExitFullscreen: true },
       },
       statsObject: {
         ...basePlayerConfig.statsObject,

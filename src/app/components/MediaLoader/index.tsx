@@ -132,18 +132,15 @@ const MediaContainer = ({
             }
           }
 
-          // Need to check device width too
-
-          // if (playlistLoadedCallback) {
           mediaPlayer.bind('playlistLoaded', e => {
             playlistLoadedCallback?.(e);
 
+            // Need to check device width too
             if (playerConfig.supportFakeFullscreen) {
               console.log('derp');
               mediaPlayer.dispatchEvent('fullScreenPlugin.launchFullscreen');
             }
           });
-          // }
 
           if (showAds) {
             const adTag = await window.dotcom.ads.getAdTag();

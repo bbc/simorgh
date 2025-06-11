@@ -76,7 +76,7 @@ export type PlayerUiConfig = {
   };
   locale?: { lang: string };
   subtitles?: { enabled: boolean; defaultOn: boolean };
-  fullscreen?: { enabled: boolean };
+  fullscreen?: { enabled: boolean; useCloseIconForExitFullscreen?: boolean };
   swipable?: {
     enabled: boolean;
     direction: 'Y' | 'X';
