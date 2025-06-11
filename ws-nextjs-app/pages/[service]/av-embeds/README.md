@@ -48,4 +48,4 @@ Component file structure
             ├── _app.page.tsx
             ├── _document.page.tsx
 
-The AvEmbedsPageLayout component is essentially an instance of the MediaLoader component with the `embedded` property set to true. More information about this can be found [over here](https://github.com/bbc/simorgh/blob/latest/src/app/components/MediaLoader/README.md). 
+The AvEmbedsPageLayout component is essentially an instance of the MediaLoader component with the `embedded` property set to true. For more information see the [MediaLoader README](https://github.com/bbc/simorgh/blob/latest/src/app/components/MediaLoader/README.md). 
