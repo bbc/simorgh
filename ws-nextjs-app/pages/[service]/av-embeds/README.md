@@ -1,4 +1,4 @@
-# AV Embed
+# AV
 
 ## Description
 
@@ -7,7 +7,7 @@ AV Embeds routes deliver BBC media to thrid party websites.
 ## BFF Response
 
 BFF details for AV Embed pages can be found here:
-[BFF Send Response](https://github.com/bbc/fabl-modules/tree/main/modules/application/simorgh-bff#send)
+[BFF Send Response](https://github.com/bbc/fabl-modules/tree/main/modules/application/simorgh-bff#av-embed)
 
 ## How routes are handled
 
