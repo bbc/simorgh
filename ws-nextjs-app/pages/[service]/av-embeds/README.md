@@ -24,7 +24,7 @@ This route matches the file structure of this repo:
             ├── _app.page.tsx
             ├── _document.page.tsx
 
-Routes that match this construct are correlated to the routes outlined in belfrage [over here](https://github.com/bbc/belfrage/blob/master/lib/routes/routefiles/world_service.ex#L1764C1-L1798C6), some examples are:
+Routes that match this construct are correlated to the routes outlined in [Belfrage](https://github.com/bbc/belfrage/blob/master/lib/routes/routefiles/world_service.ex#L1764C1-L1798C6), some examples are:
 
 | Service | URL |
 |--|--|
