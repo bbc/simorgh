@@ -1,11 +1,13 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { useEffect, useRef } from 'react';
+import { use, useEffect, useRef } from 'react';
 import MediaLoader from '#app/components/MediaLoader';
 import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
 import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
 import { setImageWidth } from '../MediaLoader/configs/portraitClipMedia';
+import VisuallyHiddenText from '../VisuallyHiddenText';
 
 export interface PortraitVideoModalProps {
   items: {
@@ -31,7 +33,13 @@ const PortraitVideoModal = ({
   onClose,
   selectedVideoIndex,
 }: PortraitVideoModalProps) => {
+  const {
+    translations: {
+      media: { closeVideo = 'Close' },
+    },
+  } = use(ServiceContext);
   const modalRef = useRef<HTMLDialogElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
 
   const blocks: PortraitClipMediaBlock[] = items.map(item => ({
     type: 'portraitClipMedia',
@@ -59,6 +67,9 @@ const PortraitVideoModal = ({
   useEffect(() => {
     if (modalRef.current) {
       modalRef.current.showModal();
+      modalRef.current.scrollTop = 0;
+      closeButtonRef.current?.focus();
+
       document.body.style.overflow = 'hidden';
     }
 
@@ -116,13 +127,15 @@ const PortraitVideoModal = ({
   return (
     <dialog ref={modalRef} css={styles.dialog}>
       <button
-        data-testid="close-modal-button"
+        ref={closeButtonRef}
         type="button"
+        data-testid="close-modal-button"
         css={styles.closeButton}
+        className="focusIndicatorInvert"
         onClick={onClose}
-        aria-label="Close modal"
       >
         {navigationIcons.cross}
+        <VisuallyHiddenText>{closeVideo}</VisuallyHiddenText>
       </button>
 
       <MediaLoader
