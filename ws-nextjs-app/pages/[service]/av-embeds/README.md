@@ -2,7 +2,7 @@
 
 ## Description
 
-AV Embeds routes deliver BBC media to thrid party websites.
+AV Embeds routes deliver BBC media to third party websites.
 
 ## BFF Response
 
