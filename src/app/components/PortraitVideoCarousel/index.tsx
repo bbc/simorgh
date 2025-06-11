@@ -59,6 +59,7 @@ const PortraitVideoCarousel = ({
             css={styles.carousel}
             data-testid="pv-carousel"
             tabIndex={-1}
+            role="list"
           >
             {items.map((item, index) => (
               <PortraitVideoPromo
