@@ -1,6 +1,8 @@
 import moment from 'moment-timezone';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import onClient from '#app/lib/utilities/onClient';
+import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#app/legacy/psammead/gel-foundations/src/breakpoints';
 import {
   PortraitClipMediaBlock,
   ConfigBuilderProps,
@@ -43,6 +45,19 @@ export default ({
     SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
   } = getEnvConfig();
 
+  let isMobile = false;
+
+  if (onClient()) {
+    const matchMedia = window.matchMedia(
+      `(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`,
+    );
+    if (matchMedia.matches) {
+      isMobile = true;
+    } else {
+      isMobile = false;
+    }
+  }
+
   return {
     mediaType: 'video',
     playerConfig: {
@@ -68,12 +83,15 @@ export default ({
           enabled: true,
           direction: 'Y',
         },
+        poster: {
+          availableWhenSettingUp: true,
+        },
         controls: {
           enabled: true,
           includeNextButton: true,
           includePreviousButton: true,
         },
-        fullscreen: { enabled: true, useCloseIconForExitFullscreen: true },
+        fullscreen: { enabled: isMobile, useCloseIconForExitFullscreen: true },
       },
       statsObject: {
         ...basePlayerConfig.statsObject,

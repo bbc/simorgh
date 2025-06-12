@@ -81,6 +81,9 @@ export type PlayerUiConfig = {
     enabled: boolean;
     direction: 'Y' | 'X';
   };
+  poster?: {
+    availableWhenSettingUp: boolean;
+  };
 };
 
 export type ConfigBuilderProps = {
