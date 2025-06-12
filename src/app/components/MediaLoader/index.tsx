@@ -196,9 +196,6 @@ type Props = {
   className?: string;
   embedded?: boolean;
   uniqueId?: string;
-  playlistLoadedCallback?: (e?: Event) => void;
-  pluginLoadedCallback?: () => void;
-  exitFullscreenCallback?: () => void;
   eventMapping?: Record<MediaPlayerEvents, () => void>;
 };
 
