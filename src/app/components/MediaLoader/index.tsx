@@ -99,6 +99,8 @@ type MediaContainerProps = {
   uniqueId?: string;
   noJsMessage?: string;
   playlistLoadedCallback?: (e?: Event) => void;
+  pluginLoadedCallback?: () => void;
+  exitFullscreenCallback?: () => void;
 };
 
 const isAudioPlayer = (playerConfig: PlayerConfig) =>
@@ -110,6 +112,8 @@ const MediaContainer = ({
   uniqueId,
   noJsMessage,
   playlistLoadedCallback,
+  pluginLoadedCallback,
+  exitFullscreenCallback,
 }: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
   const isAudio = isAudioPlayer(playerConfig);
@@ -132,9 +136,23 @@ const MediaContainer = ({
             }
           }
 
-          mediaPlayer.bind('playlistLoaded', e => {
-            playlistLoadedCallback?.(e);
-          });
+          if (pluginLoadedCallback) {
+            mediaPlayer.bind('pluginLoaded', () => {
+              pluginLoadedCallback?.();
+            });
+          }
+
+          if (playlistLoadedCallback) {
+            mediaPlayer.bind('playlistLoaded', e => {
+              playlistLoadedCallback?.(e);
+            });
+          }
+
+          if (exitFullscreenCallback) {
+            mediaPlayer.bind('fullscreenExit', () => {
+              exitFullscreenCallback?.();
+            });
+          }
 
           if (showAds) {
             const adTag = await window.dotcom.ads.getAdTag();
@@ -169,7 +187,14 @@ const MediaContainer = ({
     } catch (error) {
       logger.error(MEDIA_PLAYER_STATUS, error);
     }
-  }, [playerConfig, showAds, uniqueId, playlistLoadedCallback]);
+  }, [
+    playerConfig,
+    showAds,
+    uniqueId,
+    playlistLoadedCallback,
+    pluginLoadedCallback,
+    exitFullscreenCallback,
+  ]);
 
   return (
     <div
@@ -191,6 +216,8 @@ type Props = {
   embedded?: boolean;
   uniqueId?: string;
   playlistLoadedCallback?: (e?: Event) => void;
+  pluginLoadedCallback?: () => void;
+  exitFullscreenCallback?: () => void;
 };
 
 const MediaLoader = ({
@@ -199,6 +226,8 @@ const MediaLoader = ({
   embedded,
   uniqueId,
   playlistLoadedCallback,
+  pluginLoadedCallback,
+  exitFullscreenCallback,
 }: Props) => {
   const { lang, service, translations } = useContext(ServiceContext);
   const { pageIdentifier } = useContext(EventTrackingContext);
@@ -312,6 +341,8 @@ const MediaLoader = ({
                 uniqueId={uniqueId}
                 noJsMessage={noJsMessage}
                 playlistLoadedCallback={playlistLoadedCallback}
+                pluginLoadedCallback={pluginLoadedCallback}
+                exitFullscreenCallback={exitFullscreenCallback}
               />
             )}
           </>

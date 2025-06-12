@@ -83,8 +83,6 @@ const PortraitVideoModal = ({
 
     if (!player) return;
 
-    player.dispatchEvent('fullScreenPlugin.launchFullscreen');
-
     // @ts-expect-error - playlist is a custom SMP field
     const { playlist } = e || {};
 
@@ -126,6 +124,12 @@ const PortraitVideoModal = ({
     }
   };
 
+  const pluginLoadedCallback = () => {
+    const player = window?.embeddedMedia?.api?.players()?.bbcMediaPlayer0;
+
+    player.dispatchEvent('fullScreenPlugin.launchFullscreen');
+  };
+
   return (
     <dialog ref={modalRef} css={styles.dialog}>
       <button
@@ -139,11 +143,12 @@ const PortraitVideoModal = ({
         {navigationIcons.cross}
         <VisuallyHiddenText>{closeVideo}</VisuallyHiddenText>
       </button>
-
       <MediaLoader
         css={styles.mediaWrapper}
         blocks={[blocks?.[selectedVideoIndex]]}
         playlistLoadedCallback={playlistLoadedCallback}
+        pluginLoadedCallback={pluginLoadedCallback}
+        exitFullscreenCallback={onClose}
       />
     </dialog>
   );

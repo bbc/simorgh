@@ -1,6 +1,4 @@
 /* eslint-disable no-unused-vars */
-/* eslint-disable func-names */
-/* eslint-disable no-use-before-define */
 
 class FullScreenPlugin {
   pluginInitialisation(pluginUtils) {
@@ -9,7 +7,6 @@ class FullScreenPlugin {
     this.playerInterface.addEventListener(
       'fullScreenPlugin.launchFullscreen',
       () => {
-        console.log('hello from fullScreenPluginListener');
         if (!this.playerInterface.uiInfo.isFullscreen) {
           this.playerInterface.toggleFullscreen();
         }
@@ -18,7 +15,7 @@ class FullScreenPlugin {
   }
 }
 
-const runPlugin = function () {
+const runPlugin = () => {
   const fullScreenPlugin = new FullScreenPlugin();
 
   return fullScreenPlugin;

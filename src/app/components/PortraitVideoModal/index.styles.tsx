@@ -41,7 +41,7 @@ const styles = {
         backgroundColor: palette.POSTBOX,
       },
 
-      [mq.GROUP_2_MIN_WIDTH]: {
+      [mq.GROUP_3_MIN_WIDTH]: {
         display: 'flex',
       },
 
@@ -70,7 +70,7 @@ const styles = {
         zIndex: 1,
       },
 
-      [mq.GROUP_2_MIN_WIDTH]: {
+      [mq.GROUP_3_MIN_WIDTH]: {
         '&.media-container': {
           maxHeight: '90%',
         },

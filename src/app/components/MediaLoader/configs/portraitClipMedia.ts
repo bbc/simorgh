@@ -2,7 +2,7 @@ import moment from 'moment-timezone';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import onClient from '#app/lib/utilities/onClient';
-import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#app/legacy/psammead/gel-foundations/src/breakpoints';
+import { GROUP_3_MIN_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 import {
   PortraitClipMediaBlock,
   ConfigBuilderProps,
@@ -49,7 +49,7 @@ export default ({
 
   if (onClient()) {
     const matchMedia = window.matchMedia(
-      `(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`,
+      `(max-width: ${GROUP_3_MIN_WIDTH_BP}rem)`,
     );
     if (matchMedia.matches) {
       isMobile = true;
@@ -69,14 +69,16 @@ export default ({
         holdingImageURL,
         items,
       },
-      plugins: {
-        toLoad: [
-          {
-            html: `${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}smpPlugins/fullscreen.js`,
-            playerOnly: true,
-          },
-        ],
-      },
+      ...(isMobile && {
+        plugins: {
+          toLoad: [
+            {
+              html: `${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}smpPlugins/fullscreen.js`,
+              playerOnly: true,
+            },
+          ],
+        },
+      }),
       ui: {
         ...basePlayerConfig.ui,
         swipable: {
@@ -91,7 +93,10 @@ export default ({
           includeNextButton: true,
           includePreviousButton: true,
         },
-        fullscreen: { enabled: isMobile, useCloseIconForExitFullscreen: true },
+        fullscreen: {
+          enabled: isMobile,
+          useCloseIconForExitFullscreen: true,
+        },
       },
       statsObject: {
         ...basePlayerConfig.statsObject,
