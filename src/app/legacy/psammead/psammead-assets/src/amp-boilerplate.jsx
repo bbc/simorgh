@@ -32,6 +32,7 @@ export const AMP_BIND_JS = (
   />
 );
 
+// TODO ?
 export const AMP_GEO_JS = (
   <script
     async

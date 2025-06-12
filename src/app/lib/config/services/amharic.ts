@@ -76,6 +76,16 @@ export const service: DefaultServiceConfig = {
       relatedContent: 'በዚህ ዘገባ ላይ ተጨማሪ መረጃ',
       relatedTopics: 'ተያያዥ ርዕሶች',
       navMenuText: 'ክፍሎች',
+      liteSite: {
+        onboardingMessage:
+          'ይህ ዝቅተኛ ዳታ ለሚጠቀም ጽሁፍ ብቻ የሚቀርብበት የቢቢሲ አማርኛ ድረ ገጽ ነው።',
+        toMainSite: 'ወደ ሙሉው የቢቢሲ አማርኛ ድረ ገጽ ለመመለስ',
+        informationPage: 'ዳታን ለመቆጠብ ስለሚያስችለው የቢቢሲ አማርኛ ድረ ገጽ ለማወቅ ይህንን ያንብቡ',
+        informationPageLink:
+          'https://www.bbc.com/amharic/articles/c93lkdyenpno',
+        dataSaving: 'ዳታን በመቆጠብ ጽሑፍ ብቻ ለማንበብ',
+        articleDataSavingLinkText: 'ዳታን በመቆጠብ ጽሑፍ ብቻ ለማንበብ',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -434,6 +444,7 @@ export const service: DefaultServiceConfig = {
       {
         title: 'ቪዲዮ',
         url: '/amharic/topics/c917ezk2pmvt',
+        hideOnLiteSite: true,
       },
       {
         title: 'በጣም የተወደዱ',

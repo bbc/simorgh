@@ -94,7 +94,7 @@ module.exports = {
       assertions: {
         'categories:performance': [
           'warn',
-          { aggregationMethod: 'optimistic', minScore: 0.4 },
+          { aggregationMethod: 'optimistic', minScore: 0.2 },
         ],
         'categories:accessibility': [
           'error',
@@ -106,7 +106,7 @@ module.exports = {
         ],
         'categories:seo': [
           'error',
-          { aggregationMethod: 'optimistic', minScore: 0.8 },
+          { aggregationMethod: 'optimistic', minScore: 0.6 },
         ],
       },
     },

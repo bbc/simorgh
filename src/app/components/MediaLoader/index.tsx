@@ -98,6 +98,7 @@ type MediaContainerProps = {
   showAds: boolean;
   uniqueId?: string;
   noJsMessage?: string;
+  playlistLoadedCallback?: (e?: Event) => void;
 };
 
 const isAudioPlayer = (playerConfig: PlayerConfig) =>
@@ -108,6 +109,7 @@ const MediaContainer = ({
   showAds,
   uniqueId,
   noJsMessage,
+  playlistLoadedCallback,
 }: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
   const isAudio = isAudioPlayer(playerConfig);
@@ -130,6 +132,12 @@ const MediaContainer = ({
             } else {
               mediaPlayers[uniqueId] = mediaPlayer;
             }
+          }
+
+          if (playlistLoadedCallback) {
+            mediaPlayer.bind('playlistLoaded', e => {
+              playlistLoadedCallback?.(e);
+            });
           }
 
           if (showAds) {
@@ -163,7 +171,7 @@ const MediaContainer = ({
     } catch (error) {
       logger.error(MEDIA_PLAYER_STATUS, error);
     }
-  }, [playerConfig, showAds, uniqueId]);
+  }, [playerConfig, showAds, uniqueId, playlistLoadedCallback]);
 
   return (
     <div
@@ -184,9 +192,16 @@ type Props = {
   className?: string;
   embedded?: boolean;
   uniqueId?: string;
+  playlistLoadedCallback?: (e?: Event) => void;
 };
 
-const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
+const MediaLoader = ({
+  blocks,
+  className,
+  embedded,
+  uniqueId,
+  playlistLoadedCallback,
+}: Props) => {
   const { lang, service, translations } = useContext(ServiceContext);
   const { pageIdentifier } = useContext(EventTrackingContext);
   const { enabled: adsEnabled } = useToggle('ads');
@@ -263,7 +278,7 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
       }
       <figure
         data-e2e="media-loader__container"
-        className={className}
+        className={`media-container${className ? ` ${className}` : ''}`}
         css={[
           styles.figure(embedded),
           !isAudio && [
@@ -298,6 +313,7 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
                 showAds={showAds}
                 uniqueId={uniqueId}
                 noJsMessage={noJsMessage}
+                playlistLoadedCallback={playlistLoadedCallback}
               />
             )}
           </>
