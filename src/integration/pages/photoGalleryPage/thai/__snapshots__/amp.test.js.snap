@@ -164,13 +164,6 @@ exports[`AMP Photo Gallery Page Footer Anchors should match text and url 9`] = `
 }
 `;
 
-exports[`AMP Photo Gallery Page Footer Cookie Settings Button should match text and on handler 1`] = `
-{
-  "on": "tap:consent.prompt, cookie.show, AMP.setState({ isManagingSettings: true })",
-  "text": "Do not share or sell my info",
-}
-`;
-
 exports[`AMP Photo Gallery Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/thai"`;
 
 exports[`AMP Photo Gallery Page Footer Paragraphs should match text 1`] = `"© 2025 บีบีซี. บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาของเว็บไซต์ภายนอก. นโยบายของเราเรื่องการเชื่อมต่อไปยังลิงก์ภายนอก. อ่านเกี่ยวกับแนวทางของเราในการติดต่อกับลิงก์ภายนอก"`;

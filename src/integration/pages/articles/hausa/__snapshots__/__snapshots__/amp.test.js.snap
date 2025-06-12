@@ -67,13 +67,6 @@ exports[`AMP Articles Footer Anchors should match text and url 9`] = `
 }
 `;
 
-exports[`AMP Articles Footer Cookie Settings Button should match text and on handler 1`] = `
-{
-  "on": "tap:consent.prompt, cookie.show, AMP.setState({ isManagingSettings: true })",
-  "text": "Do not share or sell my info",
-}
-`;
-
 exports[`AMP Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/hausa"`;
 
 exports[`AMP Articles Footer Paragraphs should match text 1`] = `"© 2025 BBC. BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba.  Karanta hanyoyin da muke bi dangane da adireshin waje."`;

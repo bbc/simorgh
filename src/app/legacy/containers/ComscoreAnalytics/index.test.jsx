@@ -61,19 +61,54 @@ const ContextWrap = ({
 };
 
 describe('Comscore Analytics Container', () => {
-  it('should return null if page is AMP', () => {
-    const { container } = render(
-      <ContextWrap
-        platform="amp"
-        pageType={ARTICLE_PAGE}
-        origin="bbc.com"
-        comscoreAnalyticsToggle={false}
-      >
-        <ComscoreAnalytics />
-      </ContextWrap>,
-    );
+  describe('AMP', () => {
+    it('should return null when toggle is disabled', () => {
+      const { container } = render(
+        <ContextWrap
+          platform="amp"
+          pageType={ARTICLE_PAGE}
+          origin="bbc.com"
+          comscoreAnalyticsToggle={false}
+        >
+          <ComscoreAnalytics />
+        </ContextWrap>,
+      );
 
-    expect(container).toBeEmptyDOMElement();
+      expect(container).toBeEmptyDOMElement();
+    });
+
+    it('should render comscore amp-analytics component', () => {
+      const { container } = render(
+        <ContextWrap
+          platform="amp"
+          pageType={ARTICLE_PAGE}
+          origin="bbc.com"
+          comscoreAnalyticsToggle
+          showCookieBannerBasedOnCountry={false}
+        >
+          <ComscoreAnalytics />
+        </ContextWrap>,
+      );
+
+      expect(container.firstChild).not.toBeNull();
+      expect(container.firstChild).toMatchSnapshot();
+    });
+
+    it('should return null when country-based cookie logic is enabled', () => {
+      const { container } = render(
+        <ContextWrap
+          platform="amp"
+          pageType={ARTICLE_PAGE}
+          origin="bbc.com"
+          comscoreAnalyticsToggle
+          showCookieBannerBasedOnCountry
+        >
+          <ComscoreAnalytics />
+        </ContextWrap>,
+      );
+
+      expect(container.firstChild).toBeNull();
+    });
   });
 
   describe('Canonical', () => {

@@ -167,13 +167,6 @@ exports[`AMP Media Article Page Footer Anchors should match text and url 9`] = `
 }
 `;
 
-exports[`AMP Media Article Page Footer Cookie Settings Button should match text and on handler 1`] = `
-{
-  "on": "tap:consent.prompt, cookie.show, AMP.setState({ isManagingSettings: true })",
-  "text": "Do not share or sell my info",
-}
-`;
-
 exports[`AMP Media Article Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
 
 exports[`AMP Media Article Page Footer Paragraphs should match text 1`] = `"© 2025 BBC. De external site no concern BBC. De way wey we de take go external link."`;

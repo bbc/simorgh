@@ -32,15 +32,6 @@ export const AMP_BIND_JS = (
   />
 );
 
-// TODO ?
-export const AMP_GEO_JS = (
-  <script
-    async
-    custom-element="amp-geo"
-    src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
-  />
-);
-
 export const AMP_LIST_JS = (
   <script
     async
@@ -58,14 +49,6 @@ export const AMP_MUSTACHE_JS = (
 );
 
 export const AMP_ADS_JS = (
-  <script
-    async
-    custom-element="amp-ad"
-    src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"
-  />
-);
-
-export const AMP_AD = (
   <script
     async
     custom-element="amp-ad"
