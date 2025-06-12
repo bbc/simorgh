@@ -2,7 +2,10 @@
 import { jsx } from '@emotion/react';
 import { use, useEffect, useRef } from 'react';
 import MediaLoader from '#app/components/MediaLoader';
-import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
+import {
+  PortraitClipMediaBlock,
+  SMPEvent,
+} from '#app/components/MediaLoader/types';
 import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
@@ -78,12 +81,11 @@ const PortraitVideoModal = ({
     };
   }, []);
 
-  const playlistLoadedCallback = (e?: Event) => {
+  const playlistLoadedCallback = (e?: SMPEvent) => {
     const player = window?.embeddedMedia?.api?.players()?.bbcMediaPlayer0;
 
     if (!player) return;
 
-    // @ts-expect-error - playlist is a custom SMP field
     const { playlist } = e || {};
 
     const [currentItem] = playlist?.items || [];

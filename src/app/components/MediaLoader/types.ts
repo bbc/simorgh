@@ -9,13 +9,19 @@ import {
 import { OptimoImageBlock } from '#app/models/types/optimo';
 import { Translations } from '#app/models/types/translations';
 
+export type SMPEvent = Event & {
+  playlist?: {
+    items: PlaylistItem[];
+  };
+};
+
 export type MediaPlayerEvents =
   | 'playlistLoaded'
   | 'pluginLoaded'
   | 'fullscreenExit';
 
 export type EventMapping = Partial<
-  Record<MediaPlayerEvents, (_e?: Event) => void>
+  Record<MediaPlayerEvents, (_e?: SMPEvent) => void>
 >;
 
 export type Playlist = {
@@ -36,6 +42,7 @@ export type PlaylistItem = {
   duration?: number;
   live?: boolean;
   serviceID?: string;
+  vpid?: string;
 };
 
 export type LegacyPlayListItem = {
