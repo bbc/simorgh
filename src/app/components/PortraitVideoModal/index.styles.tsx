@@ -35,7 +35,6 @@ const styles = {
       border: `${pixelsToRem(2)}rem solid ${palette.WHITE}`,
       cursor: 'pointer',
       padding: 0,
-      zIndex: 2,
 
       '&:hover, &:focus-visible': {
         backgroundColor: palette.POSTBOX,
@@ -67,7 +66,6 @@ const styles = {
         maxHeight: '100%',
         margin: 0,
         marginInline: 0,
-        zIndex: 1,
       },
 
       [mq.GROUP_3_MIN_WIDTH]: {
