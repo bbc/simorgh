@@ -4,12 +4,12 @@ import { css, Theme } from '@emotion/react';
 const styles = {
   dialog: () =>
     css({
+      position: 'fixed',
       overflow: 'hidden',
       width: '100%',
       maxWidth: '100%',
       height: '100%',
       maxHeight: '100%',
-      position: 'relative',
       backgroundColor: 'transparent',
       border: 'none',
       margin: 0,
