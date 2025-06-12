@@ -141,9 +141,10 @@ const MediaContainer = ({
           // Bind any events passed in to the player
           if (eventMapping && Object.keys(eventMapping || {}).length > 0) {
             Object.keys(eventMapping).forEach(bindingKey => {
-              const handler = eventMapping[bindingKey as MediaPlayerEvents];
+              const key = bindingKey as MediaPlayerEvents;
+              const handler = eventMapping[key];
 
-              if (handler) mediaPlayer.bind(bindingKey, handler);
+              if (handler) mediaPlayer.bind(key, handler);
             });
           }
 
