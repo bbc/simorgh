@@ -146,9 +146,11 @@ const PortraitVideoModal = ({
       <MediaLoader
         css={styles.mediaWrapper}
         blocks={[blocks?.[selectedVideoIndex]]}
-        playlistLoadedCallback={playlistLoadedCallback}
-        pluginLoadedCallback={pluginLoadedCallback}
-        exitFullscreenCallback={onClose}
+        eventMapping={{
+          playlistLoaded: playlistLoadedCallback,
+          pluginLoaded: pluginLoadedCallback,
+          fullscreenExit: onClose,
+        }}
       />
     </dialog>
   );

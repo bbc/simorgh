@@ -9,6 +9,11 @@ import {
 import { OptimoImageBlock } from '#app/models/types/optimo';
 import { Translations } from '#app/models/types/translations';
 
+export type MediaPlayerEvents =
+  | 'playlistLoaded'
+  | 'pluginLoaded'
+  | 'fullscreenExit';
+
 export type Playlist = {
   title: string;
   summary?: string;

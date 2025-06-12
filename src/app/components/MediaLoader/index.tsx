@@ -15,7 +15,7 @@ import {
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { PageTypes } from '#app/models/types/global';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
-import { BumpType, MediaBlock, PlayerConfig } from './types';
+import { BumpType, MediaBlock, MediaPlayerEvents, PlayerConfig } from './types';
 import Caption from '../Caption';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
@@ -98,9 +98,7 @@ type MediaContainerProps = {
   showAds: boolean;
   uniqueId?: string;
   noJsMessage?: string;
-  playlistLoadedCallback?: (e?: Event) => void;
-  pluginLoadedCallback?: () => void;
-  exitFullscreenCallback?: () => void;
+  eventMapping?: Record<MediaPlayerEvents, (_e?: Event) => void>;
 };
 
 const isAudioPlayer = (playerConfig: PlayerConfig) =>
@@ -111,9 +109,7 @@ const MediaContainer = ({
   showAds,
   uniqueId,
   noJsMessage,
-  playlistLoadedCallback,
-  pluginLoadedCallback,
-  exitFullscreenCallback,
+  eventMapping,
 }: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
   const isAudio = isAudioPlayer(playerConfig);
@@ -136,22 +132,14 @@ const MediaContainer = ({
             }
           }
 
-          if (pluginLoadedCallback) {
-            mediaPlayer.bind('pluginLoaded', () => {
-              pluginLoadedCallback?.();
-            });
-          }
-
-          if (playlistLoadedCallback) {
-            mediaPlayer.bind('playlistLoaded', e => {
-              playlistLoadedCallback?.(e);
-            });
-          }
-
-          if (exitFullscreenCallback) {
-            mediaPlayer.bind('fullscreenExit', () => {
-              exitFullscreenCallback?.();
-            });
+          // Bind any events passed in to the player
+          if (eventMapping && Object.keys(eventMapping || {}).length > 0) {
+            Object.keys(eventMapping).map(bindingKey =>
+              mediaPlayer.bind(
+                bindingKey,
+                eventMapping[bindingKey as MediaPlayerEvents],
+              ),
+            );
           }
 
           if (showAds) {
@@ -187,14 +175,7 @@ const MediaContainer = ({
     } catch (error) {
       logger.error(MEDIA_PLAYER_STATUS, error);
     }
-  }, [
-    playerConfig,
-    showAds,
-    uniqueId,
-    playlistLoadedCallback,
-    pluginLoadedCallback,
-    exitFullscreenCallback,
-  ]);
+  }, [playerConfig, showAds, uniqueId, eventMapping]);
 
   return (
     <div
@@ -218,6 +199,7 @@ type Props = {
   playlistLoadedCallback?: (e?: Event) => void;
   pluginLoadedCallback?: () => void;
   exitFullscreenCallback?: () => void;
+  eventMapping?: Record<MediaPlayerEvents, () => void>;
 };
 
 const MediaLoader = ({
@@ -225,9 +207,7 @@ const MediaLoader = ({
   className,
   embedded,
   uniqueId,
-  playlistLoadedCallback,
-  pluginLoadedCallback,
-  exitFullscreenCallback,
+  eventMapping,
 }: Props) => {
   const { lang, service, translations } = useContext(ServiceContext);
   const { pageIdentifier } = useContext(EventTrackingContext);
@@ -340,9 +320,7 @@ const MediaLoader = ({
                 showAds={showAds}
                 uniqueId={uniqueId}
                 noJsMessage={noJsMessage}
-                playlistLoadedCallback={playlistLoadedCallback}
-                pluginLoadedCallback={pluginLoadedCallback}
-                exitFullscreenCallback={exitFullscreenCallback}
+                eventMapping={eventMapping}
               />
             )}
           </>
