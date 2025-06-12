@@ -14,6 +14,8 @@ export type MediaPlayerEvents =
   | 'pluginLoaded'
   | 'fullscreenExit';
 
+export type EventMapping = Partial<Record<MediaPlayerEvents, () => void>>;
+
 export type Playlist = {
   title: string;
   summary?: string;

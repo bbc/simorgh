@@ -15,7 +15,13 @@ import {
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { PageTypes } from '#app/models/types/global';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
-import { BumpType, MediaBlock, MediaPlayerEvents, PlayerConfig } from './types';
+import {
+  BumpType,
+  EventMapping,
+  MediaBlock,
+  MediaPlayerEvents,
+  PlayerConfig,
+} from './types';
 import Caption from '../Caption';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
@@ -98,7 +104,7 @@ type MediaContainerProps = {
   showAds: boolean;
   uniqueId?: string;
   noJsMessage?: string;
-  eventMapping?: Record<MediaPlayerEvents, (_e?: Event) => void>;
+  eventMapping?: EventMapping;
 };
 
 const isAudioPlayer = (playerConfig: PlayerConfig) =>
@@ -134,12 +140,11 @@ const MediaContainer = ({
 
           // Bind any events passed in to the player
           if (eventMapping && Object.keys(eventMapping || {}).length > 0) {
-            Object.keys(eventMapping).map(bindingKey =>
-              mediaPlayer.bind(
-                bindingKey,
-                eventMapping[bindingKey as MediaPlayerEvents],
-              ),
-            );
+            Object.keys(eventMapping).forEach(bindingKey => {
+              const handler = eventMapping[bindingKey as MediaPlayerEvents];
+
+              if (handler) mediaPlayer.bind(bindingKey, handler);
+            });
           }
 
           if (showAds) {
@@ -196,7 +201,7 @@ type Props = {
   className?: string;
   embedded?: boolean;
   uniqueId?: string;
-  eventMapping?: Record<MediaPlayerEvents, () => void>;
+  eventMapping?: EventMapping;
 };
 
 const MediaLoader = ({
