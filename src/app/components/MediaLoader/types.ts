@@ -23,7 +23,7 @@ export type Playlist = {
 
 export type PlaylistItem = {
   versionID?: string;
-  kind: string;
+  kind?: string;
   duration?: number;
   live?: boolean;
   serviceID?: string;
@@ -142,6 +142,8 @@ export type Player = {
       };
     },
   ) => void;
+  queuePlaylist: (playlist: Playlist) => void;
+  setPreviousPlaylist: (playlist: Playlist) => void;
   player: { paused: () => boolean };
 };
 

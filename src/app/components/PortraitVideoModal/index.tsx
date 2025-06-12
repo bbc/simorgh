@@ -83,6 +83,8 @@ const PortraitVideoModal = ({
 
     if (!player) return;
 
+    player.dispatchEvent('fullScreenPlugin.launchFullscreen');
+
     // @ts-expect-error - playlist is a custom SMP field
     const { playlist } = e || {};
 

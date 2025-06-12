@@ -1,5 +1,6 @@
 import moment from 'moment-timezone';
 import filterForBlockType from '#lib/utilities/blockHandlers';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import {
   PortraitClipMediaBlock,
   ConfigBuilderProps,
@@ -37,6 +38,11 @@ export default ({
     },
   ];
 
+  const {
+    SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
+    SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
+  } = getEnvConfig();
+
   return {
     mediaType: 'video',
     playerConfig: {
@@ -49,8 +55,12 @@ export default ({
         items,
       },
       plugins: {
-        // URL probably needs to be absolute path when deployed
-        toLoad: [{ html: '/smpPlugins/fullscreen.js', playerOnly: true }],
+        toLoad: [
+          {
+            html: `${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}smpPlugins/fullscreen.js`,
+            playerOnly: true,
+          },
+        ],
       },
       ui: {
         ...basePlayerConfig.ui,
