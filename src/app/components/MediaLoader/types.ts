@@ -9,7 +9,7 @@ import {
 import { OptimoImageBlock } from '#app/models/types/optimo';
 import { Translations } from '#app/models/types/translations';
 
-export type SMPEvent = Event & {
+export type SMPEvent = {
   playlist?: {
     items: PlaylistItem[];
   };
@@ -150,7 +150,7 @@ export type Player = {
   load: () => void;
   play: () => void;
   pause: () => void;
-  bind: (event: string, callback: (e?: Event) => void) => void;
+  bind: (event: string, callback: (e?: SMPEvent) => void) => void;
   loadPlugin: (
     pluginName: { [key: string]: string },
     parameters?: {
