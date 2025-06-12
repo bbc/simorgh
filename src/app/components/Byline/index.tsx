@@ -62,7 +62,7 @@ const Byline = ({
                   <Image
                     css={BylineCss.imageSrc}
                     src={authorImage}
-                    alt=""
+                    alt={authorName}
                     placeholder={false}
                     aspectRatio={[1, 1]}
                   />
@@ -71,7 +71,7 @@ const Byline = ({
               <li>
                 {authorTopicUrl ? (
                   <React.Fragment>
-                    <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
+                    <VisuallyHiddenText>{`${author}, ${authorName}`}</VisuallyHiddenText>
                     <a
                       css={[BylineCss.link]}
                       href={authorTopicUrl}
@@ -144,11 +144,16 @@ const Byline = ({
               ) : null}
               {location ? (
                 <li>
-                  <span role="text" css={BylineCss.location}>
+                  <span
+                    role="text"
+                    css={BylineCss.location}
+                    aria-label={`${reportingFrom} ${location}`}
+                  >
                     <Text
                       css={BylineCss.reportingFromText}
                       size="brevier"
                       fontVariant="sansRegularItalic"
+                      
                     >
                       {`${reportingFrom} `}{' '}
                     </Text>
@@ -156,6 +161,7 @@ const Byline = ({
                       css={BylineCss.locationText}
                       size="brevier"
                       fontVariant="sansRegular"
+                      
                     >
                       {location}
                     </Text>
