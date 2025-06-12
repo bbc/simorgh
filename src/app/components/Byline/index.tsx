@@ -153,7 +153,6 @@ const Byline = ({
                       css={BylineCss.reportingFromText}
                       size="brevier"
                       fontVariant="sansRegularItalic"
-                      
                     >
                       {`${reportingFrom} `}{' '}
                     </Text>
@@ -161,7 +160,6 @@ const Byline = ({
                       css={BylineCss.locationText}
                       size="brevier"
                       fontVariant="sansRegular"
-                      
                     >
                       {location}
                     </Text>
