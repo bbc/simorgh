@@ -161,8 +161,11 @@ describe('buildSettings', () => {
             },
             locale: { lang: 'sr-latn' },
             subtitles: { defaultOn: true, enabled: true },
-            fullscreen: { enabled: true },
+            fullscreen: { enabled: true, useCloseIconForExitFullscreen: true },
             swipable: { direction: 'Y', enabled: true },
+            poster: {
+              availableWhenSettingUp: true,
+            },
           },
           superResponsive: true,
           supportFakeFullscreen: true,
@@ -181,6 +184,14 @@ describe('buildSettings', () => {
                 duration: 60,
                 kind: 'programme',
                 versionID: 'p0abc002',
+              },
+            ],
+          },
+          plugins: {
+            toLoad: [
+              {
+                html: 'http://localhost:7080/smpPlugins/fullscreen.js',
+                playerOnly: true,
               },
             ],
           },
