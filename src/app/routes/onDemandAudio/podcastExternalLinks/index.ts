@@ -1,7 +1,6 @@
 import nodeLogger from '#lib/logger.node';
 import { PODCAST_SERVICE_MISSING } from '#lib/logger.const';
 import { PodcastExternalLinksParams, ExternalLinks } from './types';
-import tamil from '#app/lib/config/services/tamil';
 
 const logger = nodeLogger(__filename);
 
