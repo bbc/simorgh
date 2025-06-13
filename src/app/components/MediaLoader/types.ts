@@ -66,8 +66,8 @@ export type PlayerConfig = {
   statsObject: {
     clipPID?: string | null;
     episodePID?: string | null;
-    destination: string;
-    producer: string | '';
+    destination?: string;
+    producer?: string | '';
   };
   mediator?: { host: string };
   ui: PlayerUiConfig;
@@ -161,8 +161,11 @@ export type Player = {
       };
     },
   ) => void;
-  queuePlaylist: (playlist: Playlist) => void;
-  setPreviousPlaylist: (playlist: Playlist) => void;
+  queuePlaylist: (playlist: Playlist, options?: Partial<PlayerConfig>) => void;
+  setPreviousPlaylist: (
+    playlist: Playlist,
+    options?: Partial<PlayerConfig>,
+  ) => void;
   player: { paused: () => boolean };
 };
 

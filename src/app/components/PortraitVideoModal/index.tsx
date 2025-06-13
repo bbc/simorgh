@@ -104,25 +104,31 @@ const PortraitVideoModal = ({
     if (previous) {
       const [fallbackImage, portraitImage] = previous?.images || [];
 
-      player.setPreviousPlaylist({
-        title: previous?.video?.title ?? '',
-        holdingImageURL: setImageWidth(
-          (portraitImage || fallbackImage)?.urlTemplate,
-        ),
-        items: [{ versionID: previous?.video?.version?.id }],
-      });
+      player.setPreviousPlaylist(
+        {
+          title: previous?.video?.title ?? '',
+          holdingImageURL: setImageWidth(
+            (portraitImage || fallbackImage)?.urlTemplate,
+          ),
+          items: [{ versionID: previous?.video?.version?.id }],
+        },
+        { statsObject: { clipPID: previous?.video?.id } },
+      );
     }
 
     if (next) {
       const [fallbackImage, portraitImage] = next?.images || [];
 
-      player.queuePlaylist({
-        title: next?.video?.title ?? '',
-        holdingImageURL: setImageWidth(
-          (portraitImage || fallbackImage)?.urlTemplate,
-        ),
-        items: [{ versionID: next?.video?.version?.id }],
-      });
+      player.queuePlaylist(
+        {
+          title: next?.video?.title ?? '',
+          holdingImageURL: setImageWidth(
+            (portraitImage || fallbackImage)?.urlTemplate,
+          ),
+          items: [{ versionID: next?.video?.version?.id }],
+        },
+        { statsObject: { clipPID: next?.video?.id } },
+      );
     }
   };
 
