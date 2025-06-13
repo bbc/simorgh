@@ -6,27 +6,17 @@ import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 
 const OptimizelyPageMetrics = ({ pageView, pageDepth, pageComplete }) => {
-  // from articleComplete
   const ref = useRef();
-  // from articleComplete
   const observer = useRef();
-  // Both
   const { isAmp } = useContext(RequestContext);
-  // Both
   const { optimizely } = useContext(OptimizelyContext);
-  // from pageView
   const [pageViewSent, setPageViewSent] = useState(false);
-  // from articleComplete
   const [pageCompleteSent, setPageCompleteSent] = useState(false);
-  // from articleComplete
   const [isVisible, setIsVisible] = useState(false);
 
-  // Both - for refactor
   const experimentVariation = useOptimizelyVariation(OPTIMIZELY_CONFIG.flagKey);
-  // from articleComplete
   const hasVariationKey = experimentVariation !== null;
 
-  // from articleComplete
   const sendPageCompleteEvent =
     pageComplete &&
     experimentVariation &&
@@ -34,14 +24,11 @@ const OptimizelyPageMetrics = ({ pageView, pageDepth, pageComplete }) => {
     !pageCompleteSent &&
     isVisible;
 
-  // from pageView
   const sendPageViewEvent =
     pageView && hasVariationKey && !isAmp && !pageViewSent;
 
-  // from pageView
   useOptimizelyScrollDepth(pageDepth);
 
-  // from pageView
   useEffect(() => {
     if (sendPageViewEvent) {
       optimizely?.onReady().then(() => {
@@ -51,7 +38,6 @@ const OptimizelyPageMetrics = ({ pageView, pageDepth, pageComplete }) => {
     }
   }, [sendPageViewEvent, optimizely]);
 
-  // start articleComplete
   const initObserver = async () => {
     if (typeof window.IntersectionObserver === 'undefined') {
       // Polyfill IntersectionObserver, e.g. for IE11
@@ -81,9 +67,7 @@ const OptimizelyPageMetrics = ({ pageView, pageDepth, pageComplete }) => {
   }, [sendPageCompleteEvent, optimizely]);
 
   if (isAmp) return null;
-  // end articleComplete
 
-  // combined
   return sendPageCompleteEvent ? <div ref={ref} aria-hidden="true" /> : null;
 };
 
