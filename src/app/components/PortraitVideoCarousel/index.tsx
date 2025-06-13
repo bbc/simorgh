@@ -76,7 +76,9 @@ const PortraitVideoCarousel = ({
             ))}
           </ul>
         </div>
-        <PortraitVideoNoJs />
+        <noscript>
+          <PortraitVideoNoJs />
+        </noscript>
         {isModalOpen &&
           selectedVideoIndex !== null &&
           createPortal(
