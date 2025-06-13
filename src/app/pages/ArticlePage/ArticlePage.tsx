@@ -5,7 +5,7 @@ import { jsx, useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
 import useOptimizelyMvtVariation from '#app/hooks/useOptimizelyMvtVariation';
-import OptimizelyPageMetrics from '#app/legacy/containers/OptimizelyPageMetrics';
+import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
 import Headings from '#containers/Headings';
