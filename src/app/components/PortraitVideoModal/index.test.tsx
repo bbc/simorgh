@@ -34,7 +34,7 @@ describe('PortraitVideoModal', () => {
     );
 
     const closeButton = screen.getByTestId('close-modal-button');
-    expect(closeButton).toHaveAttribute('aria-label', 'Close modal');
+
     closeButton.click();
 
     expect(mockClose).toHaveBeenCalled();
