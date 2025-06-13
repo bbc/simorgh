@@ -36,9 +36,9 @@ const getDownloadLink = (versionId: string) => ({
 
 export const getPodcastExternalLinks = async ({
   service,
+  variant,
   brandId,
   versionId,
-  variant,
 }: PodcastExternalLinksParams): Promise<ExternalLinks[]> => {
   try {
     // @ts-expect-error type Services can't be used to index type
@@ -53,7 +53,7 @@ export const getPodcastExternalLinks = async ({
   } catch (err) {
     logger.warn(PODCAST_SERVICE_MISSING, {
       service,
-      brandPid: brandId,
+      brandId,
       variant,
     });
   }
