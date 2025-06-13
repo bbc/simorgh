@@ -1,49 +1,2150 @@
 {
   "data": {
-    "title": "Notícias, vídeos, análise e contexto em português - BBC News Brasil",
-    "description": "Na BBC Brasil você fica por dentro do que acontece no Brasil e no mundo. Com redações em Londres e São Paulo e mais de 200 repórteres internacionais, nossa cobertura leva a você as principais notícias de política, economia, ciência, saúde e comportamento.",
+    "title": "Portuguese",
+    "description": "",
     "pageType": "home",
     "curations": [
       {
         "summaries": [
           {
             "type": "article",
-            "title": "John Wycliffe: a história do homem que foi 'torturado depois de morto' por ter traduzido a Bíblia",
-            "firstPublished": "2023-04-03T10:00:04.115Z",
-            "link": "https://www.bbc.com/portuguese/articles/c88455z0725o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1b86/live/ce109c10-d14f-11ed-a99e-b92595fd4ef3.jpg",
-            "description": "Ele foi condenado pela Igreja Católica por heresia 10 anos após sua morte, em 1384, e quase 30 anos depois, seus restos mortais foram retirados do túmulo e queimados.",
-            "imageAlt": "John Wycliffe",
-            "id": "c88455z0725o"
+            "isLive": false,
+            "title": "Title of the page",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/73e5/test/959c2380-ec2f-11ee-9173-83ca10832ce2.jpg.webp",
+            "description": "Summary / description",
+            "imageAlt": "The description of the image",
+            "id": "cymew11pmlg6t"
           },
           {
-            "type": "article",
-            "title": "Peixe é filmado a recorde de 8,3 mil metros de profundidade no Japão",
-            "firstPublished": "2023-04-01T19:26:34.122Z",
-            "link": "https://www.bbc.com/portuguese/articles/c98ne7gnn47o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b125/live/1e11e1a0-d0c0-11ed-b323-29280ab4cf4a.jpg",
-            "description": "\"Fico frustrado quando as pessoas dizem que não sabemos nada sobre o fundo do mar. Nós sabemos. As coisas estão mudando muito rápido\", diz o pesquisador Alan Jamieson",
-            "imageAlt": "Peixe gelatinoso ",
-            "id": "c98ne7gnn47o"
-          },
-          {
-            "type": "article",
-            "title": "A síndrome inventada por médicos italianos que salvou dezenas de judeus dos nazistas ",
-            "firstPublished": "2023-03-31T18:28:56.681Z",
-            "link": "https://www.bbc.com/portuguese/articles/cw9rr2jnq0do",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/fc25/live/16930ee0-cecc-11ed-be2e-754a65c11505.jpg",
-            "description": "Três médicos de um hospital romano, administrado pela Igreja Católica, levaram os alemães a acreditar que um grupo de judeus havia contraído uma doença mortal e contagiosa.",
-            "imageAlt": "Roma",
-            "id": "cw9rr2jnq0do"
+            "type": "link",
+            "isLive": false,
+            "title": "India Election",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://news.files.bbci.com/include/vjsthasia/403-india_election_results_day/hindi/tally-include/embed",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "https%3A%2F%2Fnews.files.bbci.co.uk%2Finclude%2Fvjsthasia%2F403-india_election_results_day%2Fhindi%2Ftally-include%2Fembed"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:a339175f-b6de-4d46-a00a-237baccd6646",
+        "curationId": "urn:bbc:tipo:list:e42ffdab-652b-4c77-87c8-fbbb38b4cc2b",
         "curationType": "tipo-curation",
         "position": 0,
-        "title": "Leia mais",
-        "visualProminence": "HIGH"
+        "title": "Curation with Election Banner",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE"
+      },
+      {
+        "curationId": "urn:bbc:tipo:list:65faa8a9-78d7-46ea-a159-9bc06c6146f5",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "Curation with a mix of PIDs and Optimo articles with portrait video embeds",
+        "visualProminence": "NORMAL",
+        "visualStyle": "INSITU",
+        "portraitVideo": {
+          "items": [
+            {
+              "id": "urn:bbc:pips:pid:p01wjx7v",
+              "urns": {
+                "pipsPid": "urn:bbc:pips:pid:p01wjx7v"
+              },
+              "images": [
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8g.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8g.jpg",
+                  "altText": "A sensação de não saber por onde começar, a falta de uma rotina",
+                  "type": "socialImage",
+                  "source": "pipsImage",
+                  "height": 1728,
+                  "width": 972,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8g.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8g.jpg",
+                  "altText": "A sensação de não saber por onde começar, a falta de uma rotina",
+                  "type": "promoImage",
+                  "source": "pipsImage",
+                  "height": 1728,
+                  "width": 972,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": "p01wjx7v",
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "4 erros de quem estuda para concursos públicos (9x16)",
+                "seoHeadline": "4 erros de quem estuda para concursos públicos (9x16)",
+                "promoHeadline": "4 erros de quem estuda para concursos públicos (9x16)",
+                "socialHeadline": "4 erros de quem estuda para concursos públicos (9x16)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "programmes.av.p01wjx7v.page",
+                  "contentId": "urn:bbc:pips:pid:p01wjx7v",
+                  "producer": "PROGRAMMES"
+                }
+              },
+              "description": "A sensação de não saber por onde começar, a falta de uma rotina",
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "A sensação de não saber por onde começar, a falta de uma rotina",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "A sensação de não saber por onde começar, a falta de uma rotina",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "lastPublished": "2025-03-27T15:12:57Z",
+              "firstPublished": null,
+              "video": {
+                "id": "p01wjx7v",
+                "title": "4 erros de quem estuda para concursos públicos (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx8g.jpg",
+                  "altText": "A sensação de não saber por onde começar, a falta de uma rotina",
+                  "width": 972,
+                  "height": 1728,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx7x",
+                  "duration": "PT1M10S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "nonuk",
+                    "uk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": true,
+                "isEmbeddingAllowed": true,
+                "isUnavailable": false
+              },
+              "attributions": null,
+              "link": {
+                "path": "/programmes/p01wjx7v"
+              },
+              "section": null,
+              "isSharingAllowed": true,
+              "reactions": null
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cdrqd0m5nlmo",
+              "urns": {
+                "optimoId": "urn:bbc:optimo:asset:cdrqd0m5nlmo"
+              },
+              "images": [
+                {
+                  "type": "socialImage",
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8s.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8s.jpg",
+                  "altText": "Pelo menos 53 presos escaparam da prisão de Katacane, na Indonésia",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.bbci.co.uk/ace/standard/1024/cpsdevpb/42c1/test/7900c530-0e0e-11f0-a9e9-f552fbd9336f.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/42c1/test/7900c530-0e0e-11f0-a9e9-f552fbd9336f.jpg",
+                  "altText": "test",
+                  "type": "promoImage",
+                  "source": "tipoCuration",
+                  "height": 976,
+                  "width": 549,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": null,
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "Article with portrait video embed (1)",
+                "seoHeadline": "Article with portrait video embed (1)",
+                "promoHeadline": "Optimo article with portrait video embed (1)",
+                "socialHeadline": "Article with portrait video embed (1)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "portuguese.articles.cdrqd0m5nlmo.page",
+                  "contentId": "urn:bbc:optimo:asset:cdrqd0m5nlmo",
+                  "producer": "BRASIL",
+                  "additionalProperties": {
+                    "custom_var_1": "2025-03-31T08:49:44.458Z",
+                    "custom_var_2": "2025-03-31T08:49:44.458Z"
+                  }
+                }
+              },
+              "description": null,
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": []
+                }
+              },
+              "lastPublished": "2025-03-31T08:49:44.458Z",
+              "firstPublished": "2025-03-31T08:49:44.458Z",
+              "video": {
+                "id": "p01wjx6d",
+                "title": "Veja fuga em massa de prisão na Indonésia (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx8s.jpg",
+                  "altText": "Pelo menos 53 presos escaparam da prisão de Katacane, na Indonésia",
+                  "width": 546,
+                  "height": 972,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx6g",
+                  "duration": "PT13S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "uk",
+                    "nonuk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": false,
+                "isEmbeddingAllowed": false,
+                "isUnavailable": false
+              },
+              "attributions": [
+                {
+                  "title": "Brasil",
+                  "link": {
+                    "path": "/brasil"
+                  }
+                }
+              ],
+              "link": {
+                "path": "/portuguese/articles/cdrqd0m5nlmo"
+              },
+              "section": null,
+              "adCampaignKeyword": null,
+              "adCategory": null,
+              "adSubCategory": null,
+              "isSharingAllowed": true,
+              "topics": [],
+              "reactions": {
+                "disliked": {
+                  "total": 0,
+                  "lastUpdated": null
+                },
+                "liked": {
+                  "total": 0,
+                  "lastUpdated": null
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cgp62emnrk5o",
+              "urns": {
+                "optimoId": "urn:bbc:optimo:asset:cgp62emnrk5o"
+              },
+              "images": [
+                {
+                  "type": "socialImage",
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx7z.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx7z.jpg",
+                  "altText": "Hoje nove países possuem armas nucleares",
+                  "source": "pipsImage",
+                  "height": 1728,
+                  "width": 972,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.bbci.co.uk/ace/standard/1024/cpsdevpb/3106/test/8568bc10-0e0e-11f0-a9e9-f552fbd9336f.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/3106/test/8568bc10-0e0e-11f0-a9e9-f552fbd9336f.jpg",
+                  "altText": "Test",
+                  "type": "promoImage",
+                  "source": "tipoCuration",
+                  "height": 976,
+                  "width": 549,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": null,
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "Article with portrait video embed (2)",
+                "seoHeadline": "Article with portrait video embed (2)",
+                "promoHeadline": "Article with portrait video embed (2)",
+                "socialHeadline": "Article with portrait video embed (2)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "portuguese.articles.cgp62emnrk5o.page",
+                  "contentId": "urn:bbc:optimo:asset:cgp62emnrk5o",
+                  "producer": "BRASIL",
+                  "additionalProperties": {
+                    "custom_var_1": "2025-03-31T08:51:05.635Z",
+                    "custom_var_2": "2025-03-31T08:51:05.635Z"
+                  }
+                }
+              },
+              "description": null,
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": []
+                }
+              },
+              "lastPublished": "2025-03-31T08:51:05.635Z",
+              "firstPublished": "2025-03-31T08:51:05.635Z",
+              "video": {
+                "id": "p01wjx6z",
+                "title": "Os antigos projetos secretos do Brasil para ter arma nuclear (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx7z.jpg",
+                  "altText": "Hoje nove países possuem armas nucleares",
+                  "width": 972,
+                  "height": 1728,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx71",
+                  "duration": "PT20S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "uk",
+                    "nonuk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": false,
+                "isEmbeddingAllowed": false,
+                "isUnavailable": false
+              },
+              "attributions": [
+                {
+                  "title": "Brasil",
+                  "link": {
+                    "path": "/brasil"
+                  }
+                }
+              ],
+              "link": {
+                "path": "/portuguese/articles/cgp62emnrk5o"
+              },
+              "section": null,
+              "adCampaignKeyword": null,
+              "adCategory": null,
+              "adSubCategory": null,
+              "isSharingAllowed": true,
+              "topics": [],
+              "reactions": {
+                "disliked": {
+                  "total": 0,
+                  "lastUpdated": null
+                },
+                "liked": {
+                  "total": 0,
+                  "lastUpdated": null
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:pips:pid:p01wjx5y",
+              "urns": {
+                "pipsPid": "urn:bbc:pips:pid:p01wjx5y"
+              },
+              "images": [
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8v.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8v.jpg",
+                  "altText": "A Europa está em uma espécie de \"corrida armamentista\" diante da crise da aliança",
+                  "type": "socialImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8v.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8v.jpg",
+                  "altText": "A Europa está em uma espécie de \"corrida armamentista\" diante da crise da aliança",
+                  "type": "promoImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": "p01wjx5y",
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "Europa se armando para guerra? Continente eleva gastos militares de olho em EUA e Rússia (9x16)",
+                "seoHeadline": "Europa se armando para guerra? Continente eleva gastos militares de olho em EUA e Rússia (9x16)",
+                "promoHeadline": "Europa se armando para guerra? Continente eleva gastos militares de olho em EUA e Rússia (9x16)",
+                "socialHeadline": "Europa se armando para guerra? Continente eleva gastos militares de olho em EUA e Rússia (9x16)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "programmes.av.p01wjx5y.page",
+                  "contentId": "urn:bbc:pips:pid:p01wjx5y",
+                  "producer": "PROGRAMMES"
+                }
+              },
+              "description": "A Europa está em uma espécie de \"corrida armamentista\" diante da crise da aliança",
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "A Europa está em uma espécie de \"corrida armamentista\" diante da crise da aliança",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "A Europa está em uma espécie de \"corrida armamentista\" diante da crise da aliança",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "lastPublished": "2025-03-27T15:07:22Z",
+              "firstPublished": null,
+              "video": {
+                "id": "p01wjx5y",
+                "title": "Europa se armando para guerra? Continente eleva gastos militares de olho em EUA e Rússia (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx8v.jpg",
+                  "altText": "A Europa está em uma espécie de \"corrida armamentista\" diante da crise da aliança",
+                  "width": 546,
+                  "height": 972,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx60",
+                  "duration": "PT30S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "nonuk",
+                    "uk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": false,
+                "isEmbeddingAllowed": true,
+                "isUnavailable": false
+              },
+              "attributions": null,
+              "link": {
+                "path": "/programmes/p01wjx5y"
+              },
+              "section": null,
+              "isSharingAllowed": true,
+              "reactions": null
+            },
+            {
+              "id": "urn:bbc:pips:pid:p01wjx4r",
+              "urns": {
+                "pipsPid": "urn:bbc:pips:pid:p01wjx4r"
+              },
+              "images": [
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx5j.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx5j.jpg",
+                  "altText": "A Nova Rota da Seda, ou Cinturão e Rota, é considerada a maior estratégia",
+                  "type": "socialImage",
+                  "source": "pipsImage",
+                  "height": 1728,
+                  "width": 972,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx5j.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx5j.jpg",
+                  "altText": "A Nova Rota da Seda, ou Cinturão e Rota, é considerada a maior estratégia",
+                  "type": "promoImage",
+                  "source": "pipsImage",
+                  "height": 1728,
+                  "width": 972,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": "p01wjx4r",
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "China: o que é a Nova Rota da Seda, crucial na estratégia geopolítica de Pequim (9x16)",
+                "seoHeadline": "China: o que é a Nova Rota da Seda, crucial na estratégia geopolítica de Pequim (9x16)",
+                "promoHeadline": "China: o que é a Nova Rota da Seda, crucial na estratégia geopolítica de Pequim (9x16)",
+                "socialHeadline": "China: o que é a Nova Rota da Seda, crucial na estratégia geopolítica de Pequim (9x16)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "programmes.av.p01wjx4r.page",
+                  "contentId": "urn:bbc:pips:pid:p01wjx4r",
+                  "producer": "PROGRAMMES"
+                }
+              },
+              "description": "A Nova Rota da Seda, ou Cinturão e Rota, é considerada a maior estratégia",
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "A Nova Rota da Seda, ou Cinturão e Rota, é considerada a maior estratégia",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "A Nova Rota da Seda, ou Cinturão e Rota, é considerada a maior estratégia",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "lastPublished": "2025-03-27T15:02:02Z",
+              "firstPublished": null,
+              "video": {
+                "id": "p01wjx4r",
+                "title": "China: o que é a Nova Rota da Seda, crucial na estratégia geopolítica de Pequim (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx5j.jpg",
+                  "altText": "A Nova Rota da Seda, ou Cinturão e Rota, é considerada a maior estratégia",
+                  "width": 972,
+                  "height": 1728,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx4t",
+                  "duration": "PT1M10S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "nonuk",
+                    "uk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": true,
+                "isEmbeddingAllowed": true,
+                "isUnavailable": false
+              },
+              "attributions": null,
+              "link": {
+                "path": "/programmes/p01wjx4r"
+              },
+              "section": null,
+              "isSharingAllowed": true,
+              "reactions": null
+            },
+            {
+              "id": "urn:bbc:pips:pid:p01wjx3q",
+              "urns": {
+                "pipsPid": "urn:bbc:pips:pid:p01wjx3q"
+              },
+              "images": [
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx51.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx51.jpg",
+                  "altText": "text",
+                  "type": "socialImage",
+                  "source": "pipsImage",
+                  "height": 1728,
+                  "width": 972,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx51.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx51.jpg",
+                  "altText": "text",
+                  "type": "promoImage",
+                  "source": "pipsImage",
+                  "height": 1728,
+                  "width": 972,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": "p01wjx3q",
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "O estudante que pode ser um dos maiores estupradores do Reino Unido (9x16)",
+                "seoHeadline": "O estudante que pode ser um dos maiores estupradores do Reino Unido (9x16)",
+                "promoHeadline": "O estudante que pode ser um dos maiores estupradores do Reino Unido (9x16)",
+                "socialHeadline": "O estudante que pode ser um dos maiores estupradores do Reino Unido (9x16)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "programmes.av.p01wjx3q.page",
+                  "contentId": "urn:bbc:pips:pid:p01wjx3q",
+                  "producer": "PROGRAMMES"
+                }
+              },
+              "description": "Zhenhao Zou, um cidadão chinês de 28 anos, foi acusado de drogar e estuprar",
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Zhenhao Zou, um cidadão chinês de 28 anos, foi acusado de drogar e estuprar",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Zhenhao Zou, um cidadão chinês de 28 anos, foi acusado de drogar e estuprar",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "lastPublished": "2025-03-27T15:00:23Z",
+              "firstPublished": null,
+              "video": {
+                "id": "p01wjx3q",
+                "title": "O estudante que pode ser um dos maiores estupradores do Reino Unido (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx51.jpg",
+                  "altText": "text",
+                  "width": 972,
+                  "height": 1728,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx3s",
+                  "duration": "PT20S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "nonuk",
+                    "uk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": false,
+                "isEmbeddingAllowed": true,
+                "isUnavailable": false
+              },
+              "attributions": null,
+              "link": {
+                "path": "/programmes/p01wjx3q"
+              },
+              "section": null,
+              "isSharingAllowed": true,
+              "reactions": null
+            },
+            {
+              "id": "urn:bbc:pips:pid:p01wjx3g",
+              "urns": {
+                "pipsPid": "urn:bbc:pips:pid:p01wjx3g"
+              },
+              "images": [
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx48.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx48.jpg",
+                  "altText": "De tempos em tempos, algum mecanismo do corpo humano é 'redescoberto' pela internet",
+                  "type": "socialImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx48.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx48.jpg",
+                  "altText": "De tempos em tempos, algum mecanismo do corpo humano é 'redescoberto' pela internet",
+                  "type": "promoImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": "p01wjx3g",
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "A onda de evitar picos de glicose para emagrecer — e por que ela faz sentido (9x16)",
+                "seoHeadline": "A onda de evitar picos de glicose para emagrecer — e por que ela faz sentido (9x16)",
+                "promoHeadline": "A onda de evitar picos de glicose para emagrecer — e por que ela faz sentido (9x16)",
+                "socialHeadline": "A onda de evitar picos de glicose para emagrecer — e por que ela faz sentido (9x16)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "programmes.av.p01wjx3g.page",
+                  "contentId": "urn:bbc:pips:pid:p01wjx3g",
+                  "producer": "PROGRAMMES"
+                }
+              },
+              "description": "De tempos em tempos, algum mecanismo do corpo humano é 'redescoberto' pela internet",
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "De tempos em tempos, algum mecanismo do corpo humano é 'redescoberto' pela internet",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "De tempos em tempos, algum mecanismo do corpo humano é 'redescoberto' pela internet",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "lastPublished": "2025-03-27T14:58:30Z",
+              "firstPublished": null,
+              "video": {
+                "id": "p01wjx3g",
+                "title": "A onda de evitar picos de glicose para emagrecer — e por que ela faz sentido (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx48.jpg",
+                  "altText": "De tempos em tempos, algum mecanismo do corpo humano é 'redescoberto' pela internet",
+                  "width": 546,
+                  "height": 972,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx3j",
+                  "duration": "PT13S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "nonuk",
+                    "uk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": false,
+                "isEmbeddingAllowed": true,
+                "isUnavailable": false
+              },
+              "attributions": null,
+              "link": {
+                "path": "/programmes/p01wjx3g"
+              },
+              "section": null,
+              "isSharingAllowed": true,
+              "reactions": null
+            },
+            {
+              "id": "urn:bbc:pips:pid:p01wjx35",
+              "urns": {
+                "pipsPid": "urn:bbc:pips:pid:p01wjx35"
+              },
+              "images": [
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx3l.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx3l.jpg",
+                  "altText": "Após 37 dias de internação, o papa Francisco recebeu alta do hospital",
+                  "type": "socialImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx3l.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx3l.jpg",
+                  "altText": "Após 37 dias de internação, o papa Francisco recebeu alta do hospital",
+                  "type": "promoImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": "p01wjx35",
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "Papa Francisco reencontra fiéis ao deixar hospital em Roma (9x16)",
+                "seoHeadline": "Papa Francisco reencontra fiéis ao deixar hospital em Roma (9x16)",
+                "promoHeadline": "Papa Francisco reencontra fiéis ao deixar hospital em Roma (9x16)",
+                "socialHeadline": "Papa Francisco reencontra fiéis ao deixar hospital em Roma (9x16)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "programmes.av.p01wjx35.page",
+                  "contentId": "urn:bbc:pips:pid:p01wjx35",
+                  "producer": "PROGRAMMES"
+                }
+              },
+              "description": "Após 37 dias de internação, o papa Francisco recebeu alta do hospital",
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Após 37 dias de internação, o papa Francisco recebeu alta do hospital",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Após 37 dias de internação, o papa Francisco recebeu alta do hospital",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "lastPublished": "2025-03-27T14:55:51Z",
+              "firstPublished": null,
+              "video": {
+                "id": "p01wjx35",
+                "title": "Papa Francisco reencontra fiéis ao deixar hospital em Roma (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx3l.jpg",
+                  "altText": "Após 37 dias de internação, o papa Francisco recebeu alta do hospital",
+                  "width": 546,
+                  "height": 972,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx37",
+                  "duration": "PT13S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "nonuk",
+                    "uk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": false,
+                "isEmbeddingAllowed": true,
+                "isUnavailable": false
+              },
+              "attributions": null,
+              "link": {
+                "path": "/programmes/p01wjx35"
+              },
+              "section": null,
+              "isSharingAllowed": true,
+              "reactions": null
+            },
+            {
+              "id": "urn:bbc:pips:pid:p01wjx29",
+              "urns": {
+                "pipsPid": "urn:bbc:pips:pid:p01wjx29"
+              },
+              "images": [
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx3n.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx3n.jpg",
+                  "altText": "O indiano Lalit Patidar, de 18 anos, foi reconhecido pelo Guinness World Records",
+                  "type": "socialImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx3n.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx3n.jpg",
+                  "altText": "O indiano Lalit Patidar, de 18 anos, foi reconhecido pelo Guinness World Records",
+                  "type": "promoImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": "p01wjx29",
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "O indiano reconhecido como 'pessoa mais peluda do mundo' (9x16)",
+                "seoHeadline": "O indiano reconhecido como 'pessoa mais peluda do mundo' (9x16)",
+                "promoHeadline": "O indiano reconhecido como 'pessoa mais peluda do mundo' (9x16)",
+                "socialHeadline": "O indiano reconhecido como 'pessoa mais peluda do mundo' (9x16)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "programmes.av.p01wjx29.page",
+                  "contentId": "urn:bbc:pips:pid:p01wjx29",
+                  "producer": "PROGRAMMES"
+                }
+              },
+              "description": "O indiano Lalit Patidar, de 18 anos, foi reconhecido pelo Guinness World Records",
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "O indiano Lalit Patidar, de 18 anos, foi reconhecido pelo Guinness World Records",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "O indiano Lalit Patidar, de 18 anos, foi reconhecido pelo Guinness World Records",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "lastPublished": "2025-03-27T14:52:37Z",
+              "firstPublished": null,
+              "video": {
+                "id": "p01wjx29",
+                "title": "O indiano reconhecido como 'pessoa mais peluda do mundo' (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx3n.jpg",
+                  "altText": "O indiano Lalit Patidar, de 18 anos, foi reconhecido pelo Guinness World Records",
+                  "width": 546,
+                  "height": 972,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx2c",
+                  "duration": "PT30S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "nonuk",
+                    "uk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": false,
+                "isEmbeddingAllowed": true,
+                "isUnavailable": false
+              },
+              "attributions": null,
+              "link": {
+                "path": "/programmes/p01wjx29"
+              },
+              "section": null,
+              "isSharingAllowed": true,
+              "reactions": null
+            },
+            {
+              "id": "urn:bbc:pips:pid:p01wjx1y",
+              "urns": {
+                "pipsPid": "urn:bbc:pips:pid:p01wjx1y"
+              },
+              "images": [
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8z.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8z.jpg",
+                  "altText": "Volodymyr Zelensky afirmou que representantes do seu país e dos EUA",
+                  "type": "socialImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8z.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8z.jpg",
+                  "altText": "Volodymyr Zelensky afirmou que representantes do seu país e dos EUA",
+                  "type": "promoImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": "p01wjx1y",
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "Por que é tão difícil para Ucrânia e Rússia selarem paz (9x16)",
+                "seoHeadline": "Por que é tão difícil para Ucrânia e Rússia selarem paz (9x16)",
+                "promoHeadline": "Por que é tão difícil para Ucrânia e Rússia selarem paz (9x16)",
+                "socialHeadline": "Por que é tão difícil para Ucrânia e Rússia selarem paz (9x16)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "programmes.av.p01wjx1y.page",
+                  "contentId": "urn:bbc:pips:pid:p01wjx1y",
+                  "producer": "PROGRAMMES"
+                }
+              },
+              "description": "Volodymyr Zelensky afirmou que representantes do seu país e dos EUA",
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Volodymyr Zelensky afirmou que representantes do seu país e dos EUA",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Volodymyr Zelensky afirmou que representantes do seu país e dos EUA",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "lastPublished": "2025-03-27T14:50:45Z",
+              "firstPublished": null,
+              "video": {
+                "id": "p01wjx1y",
+                "title": "Por que é tão difícil para Ucrânia e Rússia selarem paz (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx8z.jpg",
+                  "altText": "Volodymyr Zelensky afirmou que representantes do seu país e dos EUA",
+                  "width": 546,
+                  "height": 972,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx20",
+                  "duration": "PT46S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "nonuk",
+                    "uk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": true,
+                "isEmbeddingAllowed": true,
+                "isUnavailable": false
+              },
+              "attributions": null,
+              "link": {
+                "path": "/programmes/p01wjx1y"
+              },
+              "section": null,
+              "isSharingAllowed": true,
+              "reactions": null
+            }
+          ]
+        }
+      },
+      {
+        "curationId": "urn:bbc:tipo:list:6232419d-33d5-4f53-a708-235b78a328fc",
+        "curationType": "tipo-curation",
+        "position": 2,
+        "title": "Portrait video carousel - PIDs only",
+        "visualProminence": "NORMAL",
+        "visualStyle": "INSITU",
+        "portraitVideo": {
+          "items": [
+            {
+              "id": "urn:bbc:pips:pid:p01wjx35",
+              "urns": {
+                "pipsPid": "urn:bbc:pips:pid:p01wjx35"
+              },
+              "images": [
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx3l.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx3l.jpg",
+                  "altText": "Após 37 dias de internação, o papa Francisco recebeu alta do hospital",
+                  "type": "socialImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx3l.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx3l.jpg",
+                  "altText": "Após 37 dias de internação, o papa Francisco recebeu alta do hospital",
+                  "type": "promoImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": "p01wjx35",
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "Papa Francisco reencontra fiéis ao deixar hospital em Roma (9x16)",
+                "seoHeadline": "Papa Francisco reencontra fiéis ao deixar hospital em Roma (9x16)",
+                "promoHeadline": "Papa Francisco reencontra fiéis ao deixar hospital em Roma (9x16)",
+                "socialHeadline": "Papa Francisco reencontra fiéis ao deixar hospital em Roma (9x16)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "programmes.av.p01wjx35.page",
+                  "contentId": "urn:bbc:pips:pid:p01wjx35",
+                  "producer": "PROGRAMMES"
+                }
+              },
+              "description": "Após 37 dias de internação, o papa Francisco recebeu alta do hospital",
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Após 37 dias de internação, o papa Francisco recebeu alta do hospital",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Após 37 dias de internação, o papa Francisco recebeu alta do hospital",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "lastPublished": "2025-03-27T14:55:51Z",
+              "firstPublished": null,
+              "video": {
+                "id": "p01wjx35",
+                "title": "Papa Francisco reencontra fiéis ao deixar hospital em Roma (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx3l.jpg",
+                  "altText": "Após 37 dias de internação, o papa Francisco recebeu alta do hospital",
+                  "width": 546,
+                  "height": 972,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx37",
+                  "duration": "PT13S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "nonuk",
+                    "uk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": false,
+                "isEmbeddingAllowed": true,
+                "isUnavailable": false
+              },
+              "attributions": null,
+              "link": {
+                "path": "/programmes/p01wjx35"
+              },
+              "section": null,
+              "isSharingAllowed": true,
+              "reactions": null
+            },
+            {
+              "id": "urn:bbc:pips:pid:p01wjx1y",
+              "urns": {
+                "pipsPid": "urn:bbc:pips:pid:p01wjx1y"
+              },
+              "images": [
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8z.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8z.jpg",
+                  "altText": "Volodymyr Zelensky afirmou que representantes do seu país e dos EUA",
+                  "type": "socialImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.bbci.co.uk/ace/standard/1024/cpsdevpb/3bfc/test/2a128080-0b20-11f0-a9e9-f552fbd9336f.png",
+                  "urlTemplate": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/3bfc/test/2a128080-0b20-11f0-a9e9-f552fbd9336f.png",
+                  "altText": "Test",
+                  "type": "promoImage",
+                  "source": "tipoCuration",
+                  "height": 2880,
+                  "width": 1620,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": "p01wjx1y",
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "Por que é tão difícil para Ucrânia e Rússia selarem paz (9x16)",
+                "seoHeadline": "Por que é tão difícil para Ucrânia e Rússia selarem paz (9x16)",
+                "promoHeadline": "Por que é tão difícil para Ucrânia e Rússia selarem paz (9x16)",
+                "socialHeadline": "Por que é tão difícil para Ucrânia e Rússia selarem paz (9x16)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "programmes.av.p01wjx1y.page",
+                  "contentId": "urn:bbc:pips:pid:p01wjx1y",
+                  "producer": "PROGRAMMES"
+                }
+              },
+              "description": "Volodymyr Zelensky afirmou que representantes do seu país e dos EUA",
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Volodymyr Zelensky afirmou que representantes do seu país e dos EUA",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Volodymyr Zelensky afirmou que representantes do seu país e dos EUA",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "lastPublished": "2025-03-27T14:50:45Z",
+              "firstPublished": null,
+              "video": {
+                "id": "p01wjx1y",
+                "title": "Por que é tão difícil para Ucrânia e Rússia selarem paz (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx8z.jpg",
+                  "altText": "Volodymyr Zelensky afirmou que representantes do seu país e dos EUA",
+                  "width": 546,
+                  "height": 972,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx20",
+                  "duration": "PT46S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "nonuk",
+                    "uk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": true,
+                "isEmbeddingAllowed": true,
+                "isUnavailable": false
+              },
+              "attributions": null,
+              "link": {
+                "path": "/programmes/p01wjx1y"
+              },
+              "section": null,
+              "isSharingAllowed": true,
+              "reactions": null
+            },
+            {
+              "id": "urn:bbc:pips:pid:p01wjx29",
+              "urns": {
+                "pipsPid": "urn:bbc:pips:pid:p01wjx29"
+              },
+              "images": [
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx3n.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx3n.jpg",
+                  "altText": "O indiano Lalit Patidar, de 18 anos, foi reconhecido pelo Guinness World Records",
+                  "type": "socialImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx3n.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx3n.jpg",
+                  "altText": "O indiano Lalit Patidar, de 18 anos, foi reconhecido pelo Guinness World Records",
+                  "type": "promoImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": "p01wjx29",
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "O indiano reconhecido como 'pessoa mais peluda do mundo' (9x16)",
+                "seoHeadline": "O indiano reconhecido como 'pessoa mais peluda do mundo' (9x16)",
+                "promoHeadline": "O indiano reconhecido como 'pessoa mais peluda do mundo' (9x16)",
+                "socialHeadline": "O indiano reconhecido como 'pessoa mais peluda do mundo' (9x16)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "programmes.av.p01wjx29.page",
+                  "contentId": "urn:bbc:pips:pid:p01wjx29",
+                  "producer": "PROGRAMMES"
+                }
+              },
+              "description": "O indiano Lalit Patidar, de 18 anos, foi reconhecido pelo Guinness World Records",
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "O indiano Lalit Patidar, de 18 anos, foi reconhecido pelo Guinness World Records",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "O indiano Lalit Patidar, de 18 anos, foi reconhecido pelo Guinness World Records",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "lastPublished": "2025-03-27T14:52:37Z",
+              "firstPublished": null,
+              "video": {
+                "id": "p01wjx29",
+                "title": "O indiano reconhecido como 'pessoa mais peluda do mundo' (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx3n.jpg",
+                  "altText": "O indiano Lalit Patidar, de 18 anos, foi reconhecido pelo Guinness World Records",
+                  "width": 546,
+                  "height": 972,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx2c",
+                  "duration": "PT30S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "nonuk",
+                    "uk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": false,
+                "isEmbeddingAllowed": true,
+                "isUnavailable": false
+              },
+              "attributions": null,
+              "link": {
+                "path": "/programmes/p01wjx29"
+              },
+              "section": null,
+              "isSharingAllowed": true,
+              "reactions": null
+            },
+            {
+              "id": "urn:bbc:pips:pid:p01wjx3g",
+              "urns": {
+                "pipsPid": "urn:bbc:pips:pid:p01wjx3g"
+              },
+              "images": [
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx48.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx48.jpg",
+                  "altText": "De tempos em tempos, algum mecanismo do corpo humano é 'redescoberto' pela internet",
+                  "type": "socialImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx48.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx48.jpg",
+                  "altText": "De tempos em tempos, algum mecanismo do corpo humano é 'redescoberto' pela internet",
+                  "type": "promoImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": "p01wjx3g",
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "A onda de evitar picos de glicose para emagrecer — e por que ela faz sentido (9x16)",
+                "seoHeadline": "A onda de evitar picos de glicose para emagrecer — e por que ela faz sentido (9x16)",
+                "promoHeadline": "A onda de evitar picos de glicose para emagrecer — e por que ela faz sentido (9x16)",
+                "socialHeadline": "A onda de evitar picos de glicose para emagrecer — e por que ela faz sentido (9x16)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "programmes.av.p01wjx3g.page",
+                  "contentId": "urn:bbc:pips:pid:p01wjx3g",
+                  "producer": "PROGRAMMES"
+                }
+              },
+              "description": "De tempos em tempos, algum mecanismo do corpo humano é 'redescoberto' pela internet",
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "De tempos em tempos, algum mecanismo do corpo humano é 'redescoberto' pela internet",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "De tempos em tempos, algum mecanismo do corpo humano é 'redescoberto' pela internet",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "lastPublished": "2025-03-27T14:58:30Z",
+              "firstPublished": null,
+              "video": {
+                "id": "p01wjx3g",
+                "title": "A onda de evitar picos de glicose para emagrecer — e por que ela faz sentido (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx48.jpg",
+                  "altText": "De tempos em tempos, algum mecanismo do corpo humano é 'redescoberto' pela internet",
+                  "width": 546,
+                  "height": 972,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx3j",
+                  "duration": "PT13S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "nonuk",
+                    "uk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": false,
+                "isEmbeddingAllowed": true,
+                "isUnavailable": false
+              },
+              "attributions": null,
+              "link": {
+                "path": "/programmes/p01wjx3g"
+              },
+              "section": null,
+              "isSharingAllowed": true,
+              "reactions": null
+            },
+            {
+              "id": "urn:bbc:pips:pid:p01wjx3q",
+              "urns": {
+                "pipsPid": "urn:bbc:pips:pid:p01wjx3q"
+              },
+              "images": [
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx51.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx51.jpg",
+                  "altText": "text",
+                  "type": "socialImage",
+                  "source": "pipsImage",
+                  "height": 1728,
+                  "width": 972,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx51.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx51.jpg",
+                  "altText": "text",
+                  "type": "promoImage",
+                  "source": "pipsImage",
+                  "height": 1728,
+                  "width": 972,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": "p01wjx3q",
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "O estudante que pode ser um dos maiores estupradores do Reino Unido (9x16)",
+                "seoHeadline": "O estudante que pode ser um dos maiores estupradores do Reino Unido (9x16)",
+                "promoHeadline": "O estudante que pode ser um dos maiores estupradores do Reino Unido (9x16)",
+                "socialHeadline": "O estudante que pode ser um dos maiores estupradores do Reino Unido (9x16)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "programmes.av.p01wjx3q.page",
+                  "contentId": "urn:bbc:pips:pid:p01wjx3q",
+                  "producer": "PROGRAMMES"
+                }
+              },
+              "description": "Zhenhao Zou, um cidadão chinês de 28 anos, foi acusado de drogar e estuprar",
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Zhenhao Zou, um cidadão chinês de 28 anos, foi acusado de drogar e estuprar",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Zhenhao Zou, um cidadão chinês de 28 anos, foi acusado de drogar e estuprar",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "lastPublished": "2025-03-27T15:00:23Z",
+              "firstPublished": null,
+              "video": {
+                "id": "p01wjx3q",
+                "title": "O estudante que pode ser um dos maiores estupradores do Reino Unido (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx51.jpg",
+                  "altText": "text",
+                  "width": 972,
+                  "height": 1728,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx3s",
+                  "duration": "PT20S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "nonuk",
+                    "uk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": false,
+                "isEmbeddingAllowed": true,
+                "isUnavailable": false
+              },
+              "attributions": null,
+              "link": {
+                "path": "/programmes/p01wjx3q"
+              },
+              "section": null,
+              "isSharingAllowed": true,
+              "reactions": null
+            },
+            {
+              "id": "urn:bbc:pips:pid:p01wjx4r",
+              "urns": {
+                "pipsPid": "urn:bbc:pips:pid:p01wjx4r"
+              },
+              "images": [
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx5j.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx5j.jpg",
+                  "altText": "A Nova Rota da Seda, ou Cinturão e Rota, é considerada a maior estratégia",
+                  "type": "socialImage",
+                  "source": "pipsImage",
+                  "height": 1728,
+                  "width": 972,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx5j.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx5j.jpg",
+                  "altText": "A Nova Rota da Seda, ou Cinturão e Rota, é considerada a maior estratégia",
+                  "type": "promoImage",
+                  "source": "pipsImage",
+                  "height": 1728,
+                  "width": 972,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": "p01wjx4r",
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "China: o que é a Nova Rota da Seda, crucial na estratégia geopolítica de Pequim (9x16)",
+                "seoHeadline": "China: o que é a Nova Rota da Seda, crucial na estratégia geopolítica de Pequim (9x16)",
+                "promoHeadline": "China: o que é a Nova Rota da Seda, crucial na estratégia geopolítica de Pequim (9x16)",
+                "socialHeadline": "China: o que é a Nova Rota da Seda, crucial na estratégia geopolítica de Pequim (9x16)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "programmes.av.p01wjx4r.page",
+                  "contentId": "urn:bbc:pips:pid:p01wjx4r",
+                  "producer": "PROGRAMMES"
+                }
+              },
+              "description": "A Nova Rota da Seda, ou Cinturão e Rota, é considerada a maior estratégia",
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "A Nova Rota da Seda, ou Cinturão e Rota, é considerada a maior estratégia",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "A Nova Rota da Seda, ou Cinturão e Rota, é considerada a maior estratégia",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "lastPublished": "2025-03-27T15:02:02Z",
+              "firstPublished": null,
+              "video": {
+                "id": "p01wjx4r",
+                "title": "China: o que é a Nova Rota da Seda, crucial na estratégia geopolítica de Pequim (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx5j.jpg",
+                  "altText": "A Nova Rota da Seda, ou Cinturão e Rota, é considerada a maior estratégia",
+                  "width": 972,
+                  "height": 1728,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx4t",
+                  "duration": "PT1M10S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "nonuk",
+                    "uk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": true,
+                "isEmbeddingAllowed": true,
+                "isUnavailable": false
+              },
+              "attributions": null,
+              "link": {
+                "path": "/programmes/p01wjx4r"
+              },
+              "section": null,
+              "isSharingAllowed": true,
+              "reactions": null
+            },
+            {
+              "id": "urn:bbc:pips:pid:p01wjx5y",
+              "urns": {
+                "pipsPid": "urn:bbc:pips:pid:p01wjx5y"
+              },
+              "images": [
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8v.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8v.jpg",
+                  "altText": "A Europa está em uma espécie de \"corrida armamentista\" diante da crise da aliança",
+                  "type": "socialImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8v.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8v.jpg",
+                  "altText": "A Europa está em uma espécie de \"corrida armamentista\" diante da crise da aliança",
+                  "type": "promoImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": "p01wjx5y",
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "Europa se armando para guerra? Continente eleva gastos militares de olho em EUA e Rússia (9x16)",
+                "seoHeadline": "Europa se armando para guerra? Continente eleva gastos militares de olho em EUA e Rússia (9x16)",
+                "promoHeadline": "Europa se armando para guerra? Continente eleva gastos militares de olho em EUA e Rússia (9x16)",
+                "socialHeadline": "Europa se armando para guerra? Continente eleva gastos militares de olho em EUA e Rússia (9x16)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "programmes.av.p01wjx5y.page",
+                  "contentId": "urn:bbc:pips:pid:p01wjx5y",
+                  "producer": "PROGRAMMES"
+                }
+              },
+              "description": "A Europa está em uma espécie de \"corrida armamentista\" diante da crise da aliança",
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "A Europa está em uma espécie de \"corrida armamentista\" diante da crise da aliança",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "A Europa está em uma espécie de \"corrida armamentista\" diante da crise da aliança",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "lastPublished": "2025-03-27T15:07:22Z",
+              "firstPublished": null,
+              "video": {
+                "id": "p01wjx5y",
+                "title": "Europa se armando para guerra? Continente eleva gastos militares de olho em EUA e Rússia (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx8v.jpg",
+                  "altText": "A Europa está em uma espécie de \"corrida armamentista\" diante da crise da aliança",
+                  "width": 546,
+                  "height": 972,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx60",
+                  "duration": "PT30S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "nonuk",
+                    "uk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": false,
+                "isEmbeddingAllowed": true,
+                "isUnavailable": false
+              },
+              "attributions": null,
+              "link": {
+                "path": "/programmes/p01wjx5y"
+              },
+              "section": null,
+              "isSharingAllowed": true,
+              "reactions": null
+            },
+            {
+              "id": "urn:bbc:pips:pid:p01wjx6d",
+              "urns": {
+                "pipsPid": "urn:bbc:pips:pid:p01wjx6d"
+              },
+              "images": [
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8s.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8s.jpg",
+                  "altText": "Pelo menos 53 presos escaparam da prisão de Katacane, na Indonésia",
+                  "type": "socialImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8s.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8s.jpg",
+                  "altText": "Pelo menos 53 presos escaparam da prisão de Katacane, na Indonésia",
+                  "type": "promoImage",
+                  "source": "pipsImage",
+                  "height": 972,
+                  "width": 546,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": "p01wjx6d",
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "Veja fuga em massa de prisão na Indonésia (9x16)",
+                "seoHeadline": "Veja fuga em massa de prisão na Indonésia (9x16)",
+                "promoHeadline": "Veja fuga em massa de prisão na Indonésia (9x16)",
+                "socialHeadline": "Veja fuga em massa de prisão na Indonésia (9x16)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "programmes.av.p01wjx6d.page",
+                  "contentId": "urn:bbc:pips:pid:p01wjx6d",
+                  "producer": "PROGRAMMES"
+                }
+              },
+              "description": "Pelo menos 53 presos escaparam da prisão de Katacane, na Indonésia",
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Pelo menos 53 presos escaparam da prisão de Katacane, na Indonésia",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Pelo menos 53 presos escaparam da prisão de Katacane, na Indonésia",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "lastPublished": "2025-03-27T15:08:51Z",
+              "firstPublished": null,
+              "video": {
+                "id": "p01wjx6d",
+                "title": "Veja fuga em massa de prisão na Indonésia (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx8s.jpg",
+                  "altText": "Pelo menos 53 presos escaparam da prisão de Katacane, na Indonésia",
+                  "width": 546,
+                  "height": 972,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx6g",
+                  "duration": "PT13S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "nonuk",
+                    "uk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": false,
+                "isEmbeddingAllowed": true,
+                "isUnavailable": false
+              },
+              "attributions": null,
+              "link": {
+                "path": "/programmes/p01wjx6d"
+              },
+              "section": null,
+              "isSharingAllowed": true,
+              "reactions": null
+            },
+            {
+              "id": "urn:bbc:pips:pid:p01wjx6z",
+              "urns": {
+                "pipsPid": "urn:bbc:pips:pid:p01wjx6z"
+              },
+              "images": [
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx7z.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx7z.jpg",
+                  "altText": "Hoje nove países possuem armas nucleares",
+                  "type": "socialImage",
+                  "source": "pipsImage",
+                  "height": 1728,
+                  "width": 972,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx7z.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx7z.jpg",
+                  "altText": "Hoje nove países possuem armas nucleares",
+                  "type": "promoImage",
+                  "source": "pipsImage",
+                  "height": 1728,
+                  "width": 972,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": "p01wjx6z",
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "Os antigos projetos secretos do Brasil para ter arma nuclear (9x16)",
+                "seoHeadline": "Os antigos projetos secretos do Brasil para ter arma nuclear (9x16)",
+                "promoHeadline": "Os antigos projetos secretos do Brasil para ter arma nuclear (9x16)",
+                "socialHeadline": "Os antigos projetos secretos do Brasil para ter arma nuclear (9x16)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "programmes.av.p01wjx6z.page",
+                  "contentId": "urn:bbc:pips:pid:p01wjx6z",
+                  "producer": "PROGRAMMES"
+                }
+              },
+              "description": "Hoje nove países possuem armas nucleares",
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Hoje nove países possuem armas nucleares",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Hoje nove países possuem armas nucleares",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "lastPublished": "2025-03-27T15:10:34Z",
+              "firstPublished": null,
+              "video": {
+                "id": "p01wjx6z",
+                "title": "Os antigos projetos secretos do Brasil para ter arma nuclear (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx7z.jpg",
+                  "altText": "Hoje nove países possuem armas nucleares",
+                  "width": 972,
+                  "height": 1728,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx71",
+                  "duration": "PT20S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "nonuk",
+                    "uk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": false,
+                "isEmbeddingAllowed": true,
+                "isUnavailable": false
+              },
+              "attributions": null,
+              "link": {
+                "path": "/programmes/p01wjx6z"
+              },
+              "section": null,
+              "isSharingAllowed": true,
+              "reactions": null
+            },
+            {
+              "id": "urn:bbc:pips:pid:p01wjx7v",
+              "urns": {
+                "pipsPid": "urn:bbc:pips:pid:p01wjx7v"
+              },
+              "images": [
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8g.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8g.jpg",
+                  "altText": "A sensação de não saber por onde começar, a falta de uma rotina",
+                  "type": "socialImage",
+                  "source": "pipsImage",
+                  "height": 1728,
+                  "width": 972,
+                  "orientation": "portrait"
+                },
+                {
+                  "url": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8g.jpg",
+                  "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8g.jpg",
+                  "altText": "A sensação de não saber por onde começar, a falta de uma rotina",
+                  "type": "promoImage",
+                  "source": "pipsImage",
+                  "height": 1728,
+                  "width": 972,
+                  "orientation": "portrait"
+                }
+              ],
+              "assetPath": "p01wjx7v",
+              "type": "video",
+              "headlines": {
+                "primaryHeadline": "4 erros de quem estuda para concursos públicos (9x16)",
+                "seoHeadline": "4 erros de quem estuda para concursos públicos (9x16)",
+                "promoHeadline": "4 erros de quem estuda para concursos públicos (9x16)",
+                "socialHeadline": "4 erros de quem estuda para concursos públicos (9x16)"
+              },
+              "analytics": {
+                "page": {
+                  "name": "programmes.av.p01wjx7v.page",
+                  "contentId": "urn:bbc:pips:pid:p01wjx7v",
+                  "producer": "PROGRAMMES"
+                }
+              },
+              "description": "A sensação de não saber por onde começar, a falta de uma rotina",
+              "summary": {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "A sensação de não saber por onde começar, a falta de uma rotina",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "A sensação de não saber por onde começar, a falta de uma rotina",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "lastPublished": "2025-03-27T15:12:57Z",
+              "firstPublished": null,
+              "video": {
+                "id": "p01wjx7v",
+                "title": "4 erros de quem estuda para concursos públicos (9x16)",
+                "holdingImage": {
+                  "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx8g.jpg",
+                  "altText": "A sensação de não saber por onde começar, a falta de uma rotina",
+                  "width": 972,
+                  "height": 1728,
+                  "orientation": "portrait"
+                },
+                "version": {
+                  "id": "p01wjx7x",
+                  "duration": "PT1M10S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": [
+                    "nonuk",
+                    "uk"
+                  ],
+                  "orientation": "portrait"
+                },
+                "isAdvertisingAllowed": true,
+                "isEmbeddingAllowed": true,
+                "isUnavailable": false
+              },
+              "attributions": null,
+              "link": {
+                "path": "/programmes/p01wjx7v"
+              },
+              "section": null,
+              "isSharingAllowed": true,
+              "reactions": null
+            }
+          ]
+        }
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Template article 4",
+            "firstPublished": "2023-08-15T14:12:01.110Z",
+            "lastPublished": "2023-08-15T14:12:01.110Z",
+            "link": "https://www.bbc.com/mundo/articles/c0ny73k281vo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/4414/test/146c2c30-3b75-11ee-93b4-83c41441672b.jpg.webp",
+            "description": "Probo lorem partem pro ex, unum prima expetenda eos ne. Melius viderer quaestio nec te.",
+            "imageAlt": "Bird",
+            "id": "c0ny73k281vo"
+          },
+          {
+            "type": "video",
+            "duration": "PT54S",
+            "isLive": false,
+            "title": "Video Test",
+            "firstPublished": "2022-10-27T16:32:50.346Z",
+            "lastPublished": "2022-10-27T16:32:50.346Z",
+            "link": "https://www.bbc.com/pidgin/articles/cvl1jnp2nrqo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "cvl1jnp2nrqo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Israeli tanks shell Jabalia camp as heavy fighting continues in north Gaza",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/pidgin/live/c7p765ynk9qt",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "description": "The refugee camp has been hit by hundreds of shells, where Hamas says 100,000 people are still sheltering",
+            "id": "c7p765ynk9qt"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:c7a25923-a150-4ec1-8135-68e8b13a5342",
+        "curationType": "tipo-curation",
+        "position": 3,
+        "title": "Curation Visual Style None, Prominence Normal, No VJ",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Pirâmide etária brasileira em 1940",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://flo.uri.sh/story/2070814/embed",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "https%3A%2F%2Fflo.uri.sh%2Fstory%2F2070814%2Fembed"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:f124f62b-496c-49b9-9df4-ee57a313732c",
+        "curationType": "tipo-curation",
+        "position": 5,
+        "title": "Curation with Flourish Embed",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE"
       }
     ],
     "metadata": {
@@ -51,10 +2152,9 @@
         "contentId": "urn:bbc:tipo:topic:c7pe2jj9l7mt",
         "contentType": "index-home",
         "pageIdentifier": "portuguese.page",
-        "pageTitle": "Notícias, vídeos, análise e contexto em português - BBC News Brasil"
+        "pageTitle": "Portuguese"
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "dataSource": "Data is from live TIPO"
+  "contentType": "application/json; charset=utf-8"
 }

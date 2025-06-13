@@ -9,6 +9,47 @@ import {
 import { OptimoImageBlock } from '#app/models/types/optimo';
 import { Translations } from '#app/models/types/translations';
 
+export type SMPEvent = {
+  playlist?: {
+    items: PlaylistItem[];
+  };
+};
+
+export type MediaPlayerEvents =
+  | 'playlistLoaded'
+  | 'pluginLoaded'
+  | 'fullscreenExit';
+
+export type EventMapping = Partial<
+  Record<MediaPlayerEvents, (_e?: SMPEvent) => void>
+>;
+
+export type Playlist = {
+  title: string;
+  summary?: string;
+  holdingImageURL?: string;
+  items: PlaylistItem[] | LegacyPlayListItem[];
+  guidance?: string;
+  embedRights?: 'allowed';
+  liveRewind?: boolean;
+  simulcast?: boolean;
+  warning?: string;
+};
+
+export type PlaylistItem = {
+  versionID?: string;
+  kind?: string;
+  duration?: number;
+  live?: boolean;
+  serviceID?: string;
+  vpid?: string;
+};
+
+export type LegacyPlayListItem = {
+  href: string;
+  kind: string;
+};
+
 export type PlayerConfig = {
   autoplay?: boolean;
   preload?: string;
@@ -17,6 +58,7 @@ export type PlayerConfig = {
   counterName?: string;
   appType: 'amp' | 'responsive';
   appName: `news-${Services}` | 'news';
+  supportFakeFullscreen?: boolean;
   insideIframe?: boolean;
   embeddedOffsite?: boolean;
   externalEmbedUrl?: string;
@@ -29,16 +71,9 @@ export type PlayerConfig = {
   };
   mediator?: { host: string };
   ui: PlayerUiConfig;
-  playlistObject?: {
-    title: string;
-    summary?: string;
-    holdingImageURL?: string;
-    items: PlaylistItem[] | LegacyPlayListItem[];
-    guidance?: string;
-    embedRights?: 'allowed';
-    liveRewind?: boolean;
-    simulcast?: boolean;
-    warning?: string;
+  playlistObject?: Playlist;
+  plugins?: {
+    toLoad: { html: string; playerOnly?: boolean }[];
   };
 };
 
@@ -49,25 +84,22 @@ export type PlayerUiConfig = {
   baseColour?: string;
   colourOnBaseColour?: string;
   fallbackBackgroundColour?: string;
-  controls?: { enabled: boolean; volumeSlider?: boolean };
+  controls?: {
+    enabled: boolean;
+    volumeSlider?: boolean;
+    includeNextButton?: boolean;
+    includePreviousButton?: boolean;
+  };
   locale?: { lang: string };
   subtitles?: { enabled: boolean; defaultOn: boolean };
-  fullscreen?: { enabled: boolean };
-};
-
-export type PlaylistItem = {
-  versionID?: string;
-  kind: string;
-  duration?: number;
-  live?: boolean;
-  embedRights?: 'allowed';
-  vpid?: string;
-  serviceID?: string;
-};
-
-export type LegacyPlayListItem = {
-  href: string;
-  kind: string;
+  fullscreen?: { enabled: boolean; useCloseIconForExitFullscreen?: boolean };
+  swipable?: {
+    enabled: boolean;
+    direction: 'Y' | 'X';
+  };
+  poster?: {
+    availableWhenSettingUp: boolean;
+  };
 };
 
 export type ConfigBuilderProps = {
@@ -113,15 +145,15 @@ export type MediaInfo = {
 export type Player = {
   dispatchEvent(
     dispatchEvent: string,
-    parameters: { updatedAdTag: string },
+    parameters?: { updatedAdTag: string },
   ): void;
   load: () => void;
   play: () => void;
   pause: () => void;
-  bind: (event: string, callback: () => void) => void;
+  bind: (event: MediaPlayerEvents, callback: (e?: SMPEvent) => void) => void;
   loadPlugin: (
     pluginName: { [key: string]: string },
-    parameters: {
+    parameters?: {
       name: string;
       data: {
         adTag: string;
@@ -129,6 +161,8 @@ export type Player = {
       };
     },
   ) => void;
+  queuePlaylist: (playlist: Playlist) => void;
+  setPreviousPlaylist: (playlist: Playlist) => void;
   player: { paused: () => boolean };
 };
 
@@ -218,6 +252,28 @@ export type ClipMediaBlock = {
   };
 };
 
+export type PortraitClipMediaBlock = {
+  type: 'portraitClipMedia';
+  model: {
+    type: MediaType;
+    images: {
+      source: string;
+      urlTemplate?: string;
+    }[];
+    video: {
+      id: string;
+      title: string;
+      version: {
+        id: string;
+        duration: string;
+        kind: string;
+        guidance: string | null;
+      };
+      isEmbeddingAllowed: boolean;
+    };
+  };
+};
+
 export type LegacyMediaBlock = {
   type: 'legacyMedia';
   content: {
@@ -267,6 +323,7 @@ export type MediaCollection = {
 export type MediaBlock =
   | AresMediaBlock
   | ClipMediaBlock
+  | PortraitClipMediaBlock
   | LegacyMediaBlock
   | LiveRadioBlock
   | OnDemandTVBlock

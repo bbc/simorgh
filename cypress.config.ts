@@ -144,7 +144,6 @@ export default defineConfig({
       '**/pages/**/helpers.js',
       '**/pages/**/getErrorPath.js',
       '**/pages/**/mostReadAssertions.js',
-      '**/123PlaygroundForTests/**',
       '**/specialFeatures/utilities/**',
       '**/specialFeatures/**/testsForAMPOnly.js',
       '**/specialFeatures/**/testsForCanonicalOnly.js',

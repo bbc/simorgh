@@ -68,14 +68,15 @@ export default {
       [mq.FORCED_COLOURS]: { fill: 'linkText' },
     }),
 
-  link: ({ mq }: Theme) =>
+  link: ({ mq, palette }: Theme) =>
     css({
       display: 'inline-block',
       textDecoration: 'none',
       paddingInlineEnd: '2.75rem',
       '&:focus, &:hover': {
-        '.byline__link-text': {
+        '.byline-link': {
           textDecoration: 'underline',
+          color: palette.POSTBOX,
         },
       },
       [mq.FORCED_COLOURS]: {

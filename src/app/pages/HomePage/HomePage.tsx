@@ -52,6 +52,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
     metadata: { atiAnalytics },
   } = pageData;
   const itemList = getItemList({ curations, name: brandName });
+
   return (
     <>
       <ChartbeatAnalytics title={title} />
@@ -92,6 +93,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                   mostRead,
                   radioSchedule,
                   embed,
+                  portraitVideo,
                 },
                 index,
               ) => {
@@ -121,9 +123,10 @@ const HomePage = ({ pageData }: HomePageProps) => {
                         nthCurationByStyleAndProminence
                       }
                       embed={embed}
+                      portraitVideo={portraitVideo}
                       renderVisuallyHiddenH2Title={position === 0}
+                      curationId={curationId}
                     />
-
                     {index === indexOfFirstNonBanner && <MPU />}
                   </React.Fragment>
                 );
