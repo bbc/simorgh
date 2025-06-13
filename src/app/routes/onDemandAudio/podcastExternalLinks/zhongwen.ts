@@ -1,4 +1,4 @@
-const common = {
+const shared = {
   p02pc9xp: [
     {
       linkText: 'Spotify',
@@ -15,8 +15,8 @@ const common = {
 };
 
 const externalLinks = {
-  simp: { ...common },
-  trad: { ...common },
+  simp: { ...shared },
+  trad: { ...shared },
 };
 
 export default externalLinks;

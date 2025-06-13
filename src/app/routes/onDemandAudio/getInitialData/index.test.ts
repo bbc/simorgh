@@ -4,7 +4,7 @@ import { FetchMock } from 'jest-fetch-mock';
 import * as fetchBFF from '#app/routes/utils/fetchDataFromBFF';
 import gahuzaOnDemandAudio from '#data/gahuza/bbc_gahuza_radio/p02pcb5c.json';
 import isTest from '#app/lib/utilities/isTest';
-import gahuzaExternalLinks from '../tempData/podcastExternalLinks/gahuza';
+import gahuzaExternalLinks from '../podcastExternalLinks/gahuza';
 import getInitialData from '.';
 
 const { env } = process;

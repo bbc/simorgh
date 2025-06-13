@@ -1,6 +1,6 @@
-import pathOr from 'ramda/src/pathOr';
 import nodeLogger from '#lib/logger.node';
 import { PODCAST_SERVICE_MISSING } from '#lib/logger.const';
+import { PodcastExternalLinksParams, ExternalLinks } from './types';
 
 const logger = nodeLogger(__filename);
 
@@ -22,37 +22,38 @@ const podcastExternalLinks = {
   zhongwen: () => import('./zhongwen'),
 };
 
-const getRssLink = brandPid => ({
+const getRssLink = (brandPid: string) => ({
   linkUrl: `https://podcasts.files.bbci.co.uk/${brandPid}.rss`,
   linkText: 'RSS',
   linkType: 'rss',
 });
 
-// Burmese podcast experiment - remove hardcoded linkText when rolling out to other services
-const getDownloadLink = versionId => ({
+const getDownloadLink = (versionId: string) => ({
   linkUrl: `https://open.live.bbc.co.uk/mediaselector/6/redir/version/2.0/mediaset/audio-nondrm-download-low/proto/https/vpid/${versionId}.mp3`,
   linkText: `Download`,
   linkType: 'download',
 });
 
-export const getPodcastExternalLinks = async (
+export const getPodcastExternalLinks = async ({
   service,
-  brandPid,
+  brandId,
   versionId,
-  variant = 'default',
-) => {
+  variant,
+}: PodcastExternalLinksParams): Promise<ExternalLinks[]> => {
   try {
-    const linkData = await podcastExternalLinks[service]();
+    // @ts-expect-error type Services can't be used to index type
+    const { default: linkData } = await podcastExternalLinks[service]();
     if (!linkData) return [];
-    if (!brandPid) return [];
+    if (!brandId) return [];
 
-    const links = pathOr([], ['default', variant, brandPid], linkData);
+    const links =
+      (variant ? linkData[variant][brandId] : linkData[brandId]) || [];
 
-    return [...links, getRssLink(brandPid), getDownloadLink(versionId)];
+    return [...links, getRssLink(brandId), getDownloadLink(versionId)];
   } catch (err) {
     logger.warn(PODCAST_SERVICE_MISSING, {
       service,
-      brandPid,
+      brandPid: brandId,
       variant,
     });
   }
