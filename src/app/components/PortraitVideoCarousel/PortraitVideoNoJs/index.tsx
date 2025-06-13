@@ -17,11 +17,11 @@ export default () => {
   } = useContext(ServiceContext);
 
   return (
-    <div css={style.container}>
+    <noscript css={style.container}>
       <Warning css={style.icon} />
       <Text css={style.message} as="p">
         {noJs}
       </Text>
-    </div>
+    </noscript>
   );
 };

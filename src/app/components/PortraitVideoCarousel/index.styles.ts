@@ -26,6 +26,9 @@ const styles = {
       position: 'relative',
       display: 'flex',
       alignItems: 'center',
+      '.no-js &': {
+        display: 'none',
+      },
     }),
   carousel: ({ spacings, mq }: Theme) =>
     css({
