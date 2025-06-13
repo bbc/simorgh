@@ -82,7 +82,7 @@ describe('Get initial data for on demand radio', () => {
       'https://ichef.bbci.co.uk/images/ic/1024x576/p082wk67.jpg',
     );
     expect(pageData?.externalLinks).toEqual([
-      ...gahuzaExternalLinks.default.p07yh8hb,
+      ...gahuzaExternalLinks.p07yh8hb,
       {
         linkText: 'RSS',
         linkUrl: 'https://podcasts.files.bbci.co.uk/p07yh8hb.rss',
