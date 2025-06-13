@@ -260,7 +260,7 @@ describe('Optimizely Page Complete tracking', () => {
 
     const { container } = render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
-        <OptimizelyPageMetrics pageView />
+        <OptimizelyPageMetrics />
       </ContextWrap>,
     );
 
@@ -276,6 +276,7 @@ describe('Optimizely Page Complete tracking', () => {
 
     await Promise.resolve();
 
+    // still does this
     expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
     expect(optimizely.track).toHaveBeenCalledTimes(0);
   });

@@ -24,7 +24,7 @@ const useOptimizelyScrollDepth = pageDepth => {
   const experimentVariation = useOptimizelyVariation(OPTIMIZELY_CONFIG.flagKey);
   const hasVariationKey = experimentVariation !== null;
 
-  const sendScrollEvents = !pageDepth && hasVariationKey && !isAmp;
+  const sendScrollEvents = pageDepth && hasVariationKey && !isAmp;
 
   useEffect(() => {
     if (!sendScrollEvents) {
