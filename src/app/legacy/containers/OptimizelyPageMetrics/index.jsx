@@ -68,7 +68,7 @@ const OptimizelyPageMetrics = ({ pageView, pageDepth, pageComplete }) => {
 
   if (isAmp) return null;
 
-  return sendPageCompleteEvent ? <div ref={ref} aria-hidden="true" /> : null;
+  return pageComplete ? <div ref={ref} aria-hidden="true" /> : null;
 };
 
 export default OptimizelyPageMetrics;
