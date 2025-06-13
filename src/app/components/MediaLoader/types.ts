@@ -21,7 +21,7 @@ export type MediaPlayerEvents =
   | 'fullscreenExit';
 
 export type EventMapping = Partial<
-  Record<MediaPlayerEvents, (_e?: SMPEvent) => void>
+  Record<MediaPlayerEvents, (_e: SMPEvent) => void>
 >;
 
 export type Playlist = {
@@ -150,7 +150,7 @@ export type Player = {
   load: () => void;
   play: () => void;
   pause: () => void;
-  bind: (event: MediaPlayerEvents, callback: (e?: SMPEvent) => void) => void;
+  bind: (event: MediaPlayerEvents, callback: (e: SMPEvent) => void) => void;
   loadPlugin: (
     pluginName: { [key: string]: string },
     parameters?: {
