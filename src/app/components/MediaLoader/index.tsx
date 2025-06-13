@@ -15,7 +15,13 @@ import {
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { PageTypes } from '#app/models/types/global';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
-import { BumpType, MediaBlock, PlayerConfig } from './types';
+import {
+  BumpType,
+  EventMapping,
+  MediaBlock,
+  MediaPlayerEvents,
+  PlayerConfig,
+} from './types';
 import Caption from '../Caption';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
@@ -98,7 +104,7 @@ type MediaContainerProps = {
   showAds: boolean;
   uniqueId?: string;
   noJsMessage?: string;
-  playlistLoadedCallback?: (e?: Event) => void;
+  eventMapping?: EventMapping;
 };
 
 const isAudioPlayer = (playerConfig: PlayerConfig) =>
@@ -109,7 +115,7 @@ const MediaContainer = ({
   showAds,
   uniqueId,
   noJsMessage,
-  playlistLoadedCallback,
+  eventMapping,
 }: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
   const isAudio = isAudioPlayer(playerConfig);
@@ -123,8 +129,6 @@ const MediaContainer = ({
             playerConfig,
           );
 
-          mediaPlayer.load();
-
           if (uniqueId != null) {
             const { mediaPlayers } = window;
             if (mediaPlayers == null) {
@@ -134,9 +138,13 @@ const MediaContainer = ({
             }
           }
 
-          if (playlistLoadedCallback) {
-            mediaPlayer.bind('playlistLoaded', e => {
-              playlistLoadedCallback?.(e);
+          // Bind any events passed in to the player
+          if (eventMapping && Object.keys(eventMapping || {}).length > 0) {
+            Object.keys(eventMapping).forEach(bindingKey => {
+              const key = bindingKey as MediaPlayerEvents;
+              const handler = eventMapping[key];
+
+              if (handler) mediaPlayer.bind(key, handler);
             });
           }
 
@@ -166,12 +174,14 @@ const MediaContainer = ({
               );
             });
           }
+
+          mediaPlayer.load();
         }
       });
     } catch (error) {
       logger.error(MEDIA_PLAYER_STATUS, error);
     }
-  }, [playerConfig, showAds, uniqueId, playlistLoadedCallback]);
+  }, [playerConfig, showAds, uniqueId, eventMapping]);
 
   return (
     <div
@@ -192,7 +202,7 @@ type Props = {
   className?: string;
   embedded?: boolean;
   uniqueId?: string;
-  playlistLoadedCallback?: (e?: Event) => void;
+  eventMapping?: EventMapping;
 };
 
 const MediaLoader = ({
@@ -200,7 +210,7 @@ const MediaLoader = ({
   className,
   embedded,
   uniqueId,
-  playlistLoadedCallback,
+  eventMapping,
 }: Props) => {
   const { lang, service, translations } = useContext(ServiceContext);
   const { pageIdentifier } = useContext(EventTrackingContext);
@@ -313,7 +323,7 @@ const MediaLoader = ({
                 showAds={showAds}
                 uniqueId={uniqueId}
                 noJsMessage={noJsMessage}
-                playlistLoadedCallback={playlistLoadedCallback}
+                eventMapping={eventMapping}
               />
             )}
           </>
