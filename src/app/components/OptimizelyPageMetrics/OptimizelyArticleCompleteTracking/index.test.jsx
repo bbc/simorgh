@@ -7,7 +7,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 
-import OptimizelyPageMetrics from '.';
+import OptimizelyArticleCompleteTracking from '.';
 
 jest.mock('#hooks/useOptimizelyVariation', () => jest.fn(() => null));
 
@@ -90,44 +90,50 @@ describe('Optimizely Page Complete tracking', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
-  // add more
-  // rewrite
-  it('should not call Optimizely track function for Article Page on page render if no props are supplied', async () => {
-    useOptimizelyVariation.mockReturnValue('variation_1');
 
-    render(
+  it('should return a function that can be assigned to an element to observe for intersections', () => {
+    const { container } = render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
-        <OptimizelyPageMetrics />
+        <OptimizelyArticleCompleteTracking />
       </ContextWrap>,
     );
 
-    await waitFor(() => {
-      expect(optimizely.track).toHaveBeenCalledTimes(0);
-    });
+    const element = container.getElementsByTagName('div')[0];
+    const { observe } = getObserverInstance(element);
+
+    expect(observe).toHaveBeenCalledWith(element);
   });
 
-  it('should not call Optimizely track function for Article Page on page render if ...trackPageView', async () => {
-    useOptimizelyVariation.mockReturnValue('variation_1');
-
-    render(
-      <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
-        <OptimizelyPageMetrics trackPageView />
-      </ContextWrap>,
-    );
-
-    await waitFor(() => {
-      expect(optimizely.track).toHaveBeenCalledTimes(1);
-      expect(optimizely.track).toHaveBeenCalledWith('page-views');
-    });
-  });
-
-  // rewrite so it's checking whats being called
-  it.skip('should not send tracking event when pageComplete is false', async () => {
+  it('should not send tracking event when element is not in view', async () => {
     useOptimizelyVariation.mockReturnValue('variation_1');
 
     const { container } = render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
-        <OptimizelyPageMetrics />
+        <OptimizelyArticleCompleteTracking />
+      </ContextWrap>,
+    );
+
+    const element = container.getElementsByTagName('div')[0];
+    const observerInstance = getObserverInstance(element);
+
+    act(() => {
+      triggerIntersection({
+        changes: [{ isIntersecting: false }],
+        observer: observerInstance,
+      });
+    });
+
+    await Promise.resolve();
+
+    expect(optimizely.track).not.toHaveBeenCalled();
+  });
+
+  it('should not send tracking event when element is in view, but not in experiment variation', async () => {
+    useOptimizelyVariation.mockReturnValue(null);
+
+    const { container } = render(
+      <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
+        <OptimizelyArticleCompleteTracking />
       </ContextWrap>,
     );
 
@@ -143,23 +149,34 @@ describe('Optimizely Page Complete tracking', () => {
 
     await Promise.resolve();
 
-    expect(global.IntersectionObserver).toHaveBeenCalledTimes(0);
-    expect(optimizely.track).toHaveBeenCalledTimes(0);
+    expect(optimizely.track).not.toHaveBeenCalled();
   });
 
-  // rewrite
-  it('should do both things', async () => {
+  it('should not return intersecting element when on AMP', async () => {
+    useOptimizelyVariation.mockReturnValue('variation_1');
+
+    const { container } = render(
+      <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp>
+        <OptimizelyArticleCompleteTracking />
+      </ContextWrap>,
+    );
+
+    const elements = container.getElementsByTagName('div');
+
+    await waitFor(() => {
+      expect(elements.length).toBe(0);
+    });
+  });
+
+  it('should send tracking event when element is in view and in experiment variation', async () => {
     useOptimizelyVariation.mockReturnValue('variation_1');
 
     const { container } = render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
-        <OptimizelyPageMetrics trackPageView trackPageComplete />
+        <OptimizelyArticleCompleteTracking />
       </ContextWrap>,
     );
 
-    await waitFor(() => {
-      expect(optimizely.track).toHaveBeenCalledTimes(1);
-    });
     const element = container.getElementsByTagName('div')[0];
     const observerInstance = getObserverInstance(element);
 
@@ -173,40 +190,6 @@ describe('Optimizely Page Complete tracking', () => {
     await Promise.resolve();
 
     expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
-    expect(optimizely.track).toHaveBeenCalledTimes(2);
-  });
-
-  // reqrite - not sure this is a valid test
-  it('should do both things when component used in two places', async () => {
-    useOptimizelyVariation.mockReturnValue('variation_1');
-
-    const { container } = render(
-      <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
-        <main>
-          <OptimizelyPageMetrics trackPageComplete />
-        </main>
-        {/* pretty sure I'm not actually checking scroll depth */}
-        <OptimizelyPageMetrics trackPageView trackPageDepth />
-      </ContextWrap>,
-    );
-
-    await waitFor(() => {
-      expect(optimizely.track).toHaveBeenCalledTimes(1);
-    });
-    const element = container.getElementsByTagName('div')[0];
-    const observerInstance = getObserverInstance(element);
-
-    act(() => {
-      triggerIntersection({
-        changes: [{ isIntersecting: true }],
-        observer: observerInstance,
-      });
-    });
-
-    await Promise.resolve();
-
-    // is this ok?
-    expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
-    expect(optimizely.track).toHaveBeenCalledTimes(2);
+    expect(optimizely.track).toHaveBeenCalledTimes(1);
   });
 });

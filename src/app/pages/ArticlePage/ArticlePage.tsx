@@ -341,16 +341,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                 liteCTAShows={liteCTAShows}
               />
             )}
-            {isInExperiment && (
-              <OptimizelyPageMetrics
-                pageView={false}
-                pageDepth={false}
-                pageComplete
-              />
-            )}
+            {isInExperiment && <OptimizelyPageMetrics trackPageComplete />}
           </main>
           {isInExperiment && (
-            <OptimizelyPageMetrics pageView pageDepth pageComplete={false} />
+            <OptimizelyPageMetrics trackPageView trackPageDepth />
           )}
           {showTopics && (
             <RelatedTopics
