@@ -1,6 +1,7 @@
 import nodeLogger from '#lib/logger.node';
 import { PODCAST_SERVICE_MISSING } from '#lib/logger.const';
 import { PodcastExternalLinksParams, ExternalLinks } from './types';
+import tamil from '#app/lib/config/services/tamil';
 
 const logger = nodeLogger(__filename);
 
@@ -17,6 +18,7 @@ const podcastExternalLinks = {
   persian: () => import('./persian'),
   portuguese: () => import('./portuguese'),
   russian: () => import('./russian'),
+  tamil: () => import('./tamil'),
   ukrainian: () => import('./ukrainian'),
   urdu: () => import('./urdu'),
   zhongwen: () => import('./zhongwen'),
