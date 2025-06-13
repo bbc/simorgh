@@ -6,7 +6,7 @@ import fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
 import overrideRendererOnTest from '#app/routes/utils/overrideRendererOnTest';
 import isTest from '#app/lib/utilities/isTest';
 import getErrorStatusCode from '#app/routes/utils/fetchPageData/utils/getErrorStatusCode';
-import { getPodcastExternalLinks } from '#app/routes/onDemandAudio/podcastExternalLinks';
+import getPodcastExternalLinks from '#app/routes/onDemandAudio/podcastExternalLinks';
 import nodeLogger from '#lib/logger.node';
 
 const logger = nodeLogger(__filename);

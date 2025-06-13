@@ -4,25 +4,6 @@ import { PodcastExternalLinksParams, ExternalLinks } from './types';
 
 const logger = nodeLogger(__filename);
 
-const podcastExternalLinks = {
-  arabic: () => import('./arabic'),
-  burmese: () => import('./burmese'),
-  gahuza: () => import('./gahuza'),
-  hausa: () => import('./hausa'),
-  hindi: () => import('./hindi'),
-  indonesia: () => import('./indonesia'),
-  kyrgyz: () => import('./kyrgyz'),
-  marathi: () => import('./marathi'),
-  nepali: () => import('./nepali'),
-  persian: () => import('./persian'),
-  portuguese: () => import('./portuguese'),
-  russian: () => import('./russian'),
-  tamil: () => import('./tamil'),
-  ukrainian: () => import('./ukrainian'),
-  urdu: () => import('./urdu'),
-  zhongwen: () => import('./zhongwen'),
-};
-
 const getRssLink = (brandPid: string) => ({
   linkUrl: `https://podcasts.files.bbci.co.uk/${brandPid}.rss`,
   linkText: 'RSS',
@@ -35,15 +16,14 @@ const getDownloadLink = (versionId: string) => ({
   linkType: 'download',
 });
 
-export const getPodcastExternalLinks = async ({
+export default async ({
   service,
   variant,
   brandId,
   versionId,
 }: PodcastExternalLinksParams): Promise<ExternalLinks[]> => {
   try {
-    // @ts-expect-error type Services can't be used to index type
-    const { default: linkData } = await podcastExternalLinks[service]();
+    const { default: linkData } = await import(`./${service}`);
     if (!linkData) return [];
     if (!brandId) return [];
 
@@ -60,5 +40,3 @@ export const getPodcastExternalLinks = async ({
   }
   return [];
 };
-
-export default podcastExternalLinks;

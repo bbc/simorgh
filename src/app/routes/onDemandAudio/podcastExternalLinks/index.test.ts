@@ -1,4 +1,4 @@
-import { getPodcastExternalLinks } from '.';
+import getPodcastExternalLinks from '.';
 import hausaExternalLinks from './hausa';
 import zhongwenExternalLinks from './zhongwen';
 
