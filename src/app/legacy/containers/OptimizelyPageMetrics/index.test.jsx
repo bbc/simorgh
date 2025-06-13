@@ -132,6 +132,20 @@ describe('Optimizely Page View tracking', () => {
       expect(optimizely.track).toHaveBeenCalledTimes(0);
     });
   });
+
+  it('should not call Optimizely track function for Article Page on page render if pageView is false', async () => {
+    useOptimizelyVariation.mockReturnValue('variation_1');
+
+    render(
+      <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
+        <OptimizelyPageMetrics />
+      </ContextWrap>,
+    );
+
+    await waitFor(() => {
+      expect(optimizely.track).toHaveBeenCalledTimes(0);
+    });
+  });
 });
 
 describe('Optimizely Page Complete tracking', () => {
@@ -240,4 +254,98 @@ describe('Optimizely Page Complete tracking', () => {
     expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
     expect(optimizely.track).toHaveBeenCalledTimes(1);
   });
+
+  it('should not send tracking event when pageComplete is false', async () => {
+    useOptimizelyVariation.mockReturnValue('variation_1');
+
+    const { container } = render(
+      <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
+        <OptimizelyPageMetrics pageView />
+      </ContextWrap>,
+    );
+
+    const element = container.getElementsByTagName('div')[0];
+    const observerInstance = getObserverInstance(element);
+
+    act(() => {
+      triggerIntersection({
+        changes: [{ isIntersecting: true }],
+        observer: observerInstance,
+      });
+    });
+
+    await Promise.resolve();
+
+    expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
+    expect(optimizely.track).toHaveBeenCalledTimes(0);
+  });
 });
+
+describe('Optimizely combined tracking', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+  // rewrite
+  it('should do both things', async () => {
+    useOptimizelyVariation.mockReturnValue('variation_1');
+
+    const { container } = render(
+      <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
+        <OptimizelyPageMetrics pageView pageComplete />
+      </ContextWrap>,
+    );
+
+    await waitFor(() => {
+      expect(optimizely.track).toHaveBeenCalledTimes(1);
+    });
+    const element = container.getElementsByTagName('div')[0];
+    const observerInstance = getObserverInstance(element);
+
+    act(() => {
+      triggerIntersection({
+        changes: [{ isIntersecting: true }],
+        observer: observerInstance,
+      });
+    });
+
+    await Promise.resolve();
+
+    expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
+    expect(optimizely.track).toHaveBeenCalledTimes(2);
+  });
+
+  // reqrite - not sure this is a valid test
+  it('should do both things when component used in two places', async () => {
+    useOptimizelyVariation.mockReturnValue('variation_1');
+
+    const { container } = render(
+      <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
+        <main>
+          <OptimizelyPageMetrics pageComplete />
+        </main>
+        {/* including or not including pageComplete here makes no difference */}
+        <OptimizelyPageMetrics pageView pageComplete />
+      </ContextWrap>,
+    );
+
+    await waitFor(() => {
+      expect(optimizely.track).toHaveBeenCalledTimes(1);
+    });
+    const element = container.getElementsByTagName('div')[0];
+    const observerInstance = getObserverInstance(element);
+
+    act(() => {
+      triggerIntersection({
+        changes: [{ isIntersecting: true }],
+        observer: observerInstance,
+      });
+    });
+
+    await Promise.resolve();
+
+    // is this ok?
+    expect(global.IntersectionObserver).toHaveBeenCalledTimes(2);
+    expect(optimizely.track).toHaveBeenCalledTimes(2);
+  });
+});
+// add scroll depth checks?
