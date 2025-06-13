@@ -1,7 +1,7 @@
 import mundoLiveFixture from '#data/mundo/live/c7dkx155e626t.json';
 import React from 'react';
 import LiveHeaderMedia from '.';
-import { MediaCollection } from '../MediaLoader/types';
+import { MediaCollection, Player } from '../MediaLoader/types';
 import {
   screen,
   render,
@@ -63,7 +63,7 @@ describe('liveMediaStream', () => {
         play: jest.fn(),
         pause: jest.fn(),
       },
-    };
+    } as unknown as Record<string, Player>;
 
     render(
       <LiveHeaderMedia mediaCollection={fixtureData as MediaCollection[]} />,
@@ -81,7 +81,7 @@ describe('liveMediaStream', () => {
         play: jest.fn(),
         pause: jest.fn(),
       },
-    };
+    } as unknown as Record<string, Player>;
     render(
       <LiveHeaderMedia mediaCollection={fixtureData as MediaCollection[]} />,
     );
@@ -154,7 +154,7 @@ describe('liveMediaStream', () => {
         play: jest.fn(),
         pause: jest.fn(),
       },
-    };
+    } as unknown as Record<string, Player>;
 
     render(
       <LiveHeaderMedia mediaCollection={fixtureData as MediaCollection[]} />,
@@ -269,7 +269,7 @@ describe('liveMediaStream', () => {
           play: jest.fn(),
           pause: jest.fn(),
         },
-      };
+      } as unknown as Record<string, Player>;
 
       const { container } = render(
         <LiveHeaderMedia mediaCollection={fixtureData as MediaCollection[]} />,
