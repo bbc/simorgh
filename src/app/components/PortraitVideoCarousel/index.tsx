@@ -10,6 +10,7 @@ import { BumpLoader } from '../MediaLoader';
 import PortraitVideoPromo from './PortraitVideoPromo';
 import PortraitCarouselNavigation from './PortraitVideoCarouselNavigation';
 import Heading from '../Heading';
+import PortraitVideoNoJs from './PortraitVideoNoJs';
 
 const PortraitVideoCarousel = ({
   title,
@@ -52,29 +53,32 @@ const PortraitVideoCarousel = ({
         >
           {title}
         </Heading>
-        <div css={styles.carouselContainer}>
-          <PortraitCarouselNavigation scrollPaneRef={scrollRef} />
-          <ul
-            ref={scrollRef}
-            css={styles.carousel}
-            data-testid="pv-carousel"
-            tabIndex={-1}
-            role="list"
-          >
-            {items.map((item, index) => (
-              <PortraitVideoPromo
-                {...item}
-                key={item.id}
-                onClick={() => handlePromoClick(index)}
-                itemPosition={index}
-                groupTracker={{
-                  itemCount: items.length,
-                  resourceId: groupTrackingId,
-                }}
-              />
-            ))}
-          </ul>
-        </div>
+        {false && (
+          <div css={styles.carouselContainer}>
+            <PortraitCarouselNavigation scrollPaneRef={scrollRef} />
+            <ul
+              ref={scrollRef}
+              css={styles.carousel}
+              data-testid="pv-carousel"
+              tabIndex={-1}
+              role="list"
+            >
+              {items.map((item, index) => (
+                <PortraitVideoPromo
+                  {...item}
+                  key={item.id}
+                  onClick={() => handlePromoClick(index)}
+                  itemPosition={index}
+                  groupTracker={{
+                    itemCount: items.length,
+                    resourceId: groupTrackingId,
+                  }}
+                />
+              ))}
+            </ul>
+          </div>
+        )}
+        <PortraitVideoNoJs />
         {isModalOpen &&
           selectedVideoIndex !== null &&
           createPortal(
