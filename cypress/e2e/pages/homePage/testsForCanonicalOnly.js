@@ -79,6 +79,9 @@ export default ({ service }) => {
     it('should scroll through the promos using the left and right scroll buttons', () => {
       cy.get('body').then($body => {
         if ($body.find('[data-testid="portrait-video-carousel"]').length > 0) {
+          // Left/right are only visible >= 600px viewport width
+          cy.viewport(600, 800);
+
           cy.get('[data-testid="portrait-video-carousel"]')
             .first()
             .within(() => {
