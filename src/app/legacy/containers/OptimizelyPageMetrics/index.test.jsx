@@ -324,8 +324,8 @@ describe('Optimizely combined tracking', () => {
         <main>
           <OptimizelyPageMetrics pageComplete />
         </main>
-        {/* including or not including pageComplete here makes no difference */}
-        <OptimizelyPageMetrics pageView pageComplete />
+        {/* pretty sure I'm not actually checking scroll depth */}
+        <OptimizelyPageMetrics pageView pageDepth />
       </ContextWrap>,
     );
 

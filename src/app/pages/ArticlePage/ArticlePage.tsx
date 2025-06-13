@@ -5,8 +5,7 @@ import { jsx, useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
 import useOptimizelyMvtVariation from '#app/hooks/useOptimizelyMvtVariation';
-import OptimizelyArticleCompleteTracking from '#app/legacy/containers/OptimizelyArticleCompleteTracking';
-import OptimizelyPageViewTracking from '#app/legacy/containers/OptimizelyPageViewTracking';
+import OptimizelyPageMetrics from '#app/legacy/containers/OptimizelyPageMetrics';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
 import Headings from '#containers/Headings';
@@ -342,9 +341,17 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                 liteCTAShows={liteCTAShows}
               />
             )}
-            {isInExperiment && <OptimizelyArticleCompleteTracking />}
+            {isInExperiment && (
+              <OptimizelyPageMetrics
+                pageView={false}
+                pageDepth={false}
+                pageComplete
+              />
+            )}
           </main>
-          {isInExperiment && <OptimizelyPageViewTracking />}
+          {isInExperiment && (
+            <OptimizelyPageMetrics pageView pageDepth pageComplete={false} />
+          )}
           {showTopics && (
             <RelatedTopics
               css={[
