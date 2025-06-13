@@ -23,12 +23,13 @@ export default async ({
   versionId,
 }: PodcastExternalLinksParams): Promise<ExternalLinks[]> => {
   try {
-    const { default: linkData } = await import(`./${service}`);
-    if (!linkData) return [];
+    const { default: externalLinks } = await import(`./${service}`);
+    if (!externalLinks) return [];
     if (!brandId) return [];
 
     const links =
-      (variant ? linkData[variant][brandId] : linkData[brandId]) || [];
+      (variant ? externalLinks[variant][brandId] : externalLinks[brandId]) ||
+      [];
 
     return [...links, getRssLink(brandId), getDownloadLink(versionId)];
   } catch (err) {
