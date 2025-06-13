@@ -112,6 +112,9 @@ export const service: DefaultServiceConfig = {
           callToActionLinkUrl: 'https://www.bbc.com/sinhala',
         },
       },
+      byline: {
+        reportingFrom: 'වාර්තාකරණය',
+      },
       consentBanner: {
         privacy: {
           title:
@@ -221,6 +224,7 @@ export const service: DefaultServiceConfig = {
         },
         listen: 'සවන්දෙන්න',
         watch: 'නරඹන්න',
+        watchMoments: 'වීඩියෝව නරඹන්න',
         listenLive: 'සජීව ශ්‍රවණය',
         liveLabel: 'සජීවී.',
         nextLabel: 'NEXT',
