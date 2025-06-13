@@ -64,7 +64,7 @@ export default ({ service }) => {
                 .should('exist')
                 .and('be.visible');
 
-              cy.get('button[aria-label="Close modal"]')
+              cy.get('button[data-testid="close-modal-button"]')
                 .should('exist')
                 .and('be.visible')
                 .click();
