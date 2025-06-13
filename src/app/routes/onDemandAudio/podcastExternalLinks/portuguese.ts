@@ -1,4 +1,4 @@
-const externalLinks = {
+export default {
   p07r3r3t: [
     {
       linkText: 'Spotify',
@@ -86,5 +86,3 @@ const externalLinks = {
     },
   ],
 };
-
-export default externalLinks;

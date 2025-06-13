@@ -14,9 +14,7 @@ const shared = {
   ],
 };
 
-const externalLinks = {
+export default {
   simp: { ...shared },
   trad: { ...shared },
 };
-
-export default externalLinks;
