@@ -36,6 +36,15 @@ describe('getPodcastExternalLinks', () => {
     expect(links).toEqual([]);
   });
 
+  it('should return an empty array if no configuration exists for that service', async () => {
+    const links = await getPodcastExternalLinks({
+      service: 'news',
+      brandId: 'brandId',
+      versionId: 'versionId',
+    });
+    expect(links).toEqual([]);
+  });
+
   it('should return an empty array when brand is null', async () => {
     const links = await getPodcastExternalLinks({
       service: 'hausa',
