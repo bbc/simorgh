@@ -78,7 +78,7 @@ export const service: DefaultServiceConfig = {
       navMenuText: 'ክፍሎች',
       liteSite: {
         onboardingMessage:
-          'ይህ ዝቅተኛ ዳታ ለሚጠቀም ጽሁፍ ብቻ የሚቀርብበት የቢቢሲ አማርኛ ድረ ገጽ ነው።',
+          'ይህ ዝቅተኛ ዳታን በመጠቀም ጽሑፍ ብቻ የሚቀርብበት የቢቢሲ አማርኛ ድረ ገጽ ነው',
         toMainSite: 'ወደ ሙሉው የቢቢሲ አማርኛ ድረ ገጽ ለመመለስ',
         informationPage: 'ዳታን ለመቆጠብ ስለሚያስችለው የቢቢሲ አማርኛ ድረ ገጽ ለማወቅ ይህንን ያንብቡ',
         informationPageLink:

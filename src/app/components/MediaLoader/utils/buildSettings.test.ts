@@ -62,7 +62,7 @@ describe('buildSettings', () => {
       expect(result).toStrictEqual({
         mediaType: 'video',
         playerConfig: {
-          autoplay: true,
+          autoplay: false,
           product: 'news',
           statsObject: {
             clipPID: 'p01thw20',
@@ -137,7 +137,14 @@ describe('buildSettings', () => {
   });
 
   describe('Portrait Clip Media', () => {
-    it('Should return a playlist of portrait video items for the homepage', () => {
+    it('Should return a playlist of portrait video items for the homepage for mobile', () => {
+      window.matchMedia = jest.fn().mockImplementation(query => {
+        return {
+          matches: true,
+          media: query,
+        };
+      });
+
       const result = buildSettings({
         ...baseSettings,
         blocks: homePagePortraitClipMediaBlocks as MediaBlock[],
@@ -161,8 +168,82 @@ describe('buildSettings', () => {
             },
             locale: { lang: 'sr-latn' },
             subtitles: { defaultOn: true, enabled: true },
-            fullscreen: { enabled: true },
+            fullscreen: { enabled: true, useCloseIconForExitFullscreen: true },
             swipable: { direction: 'Y', enabled: true },
+            poster: {
+              availableWhenSettingUp: true,
+            },
+          },
+          superResponsive: true,
+          supportFakeFullscreen: true,
+          counterName: 'live_coverage.testID.page',
+          statsObject: {
+            destination: 'WS_NEWS_LANGUAGES',
+            producer: 'SERBIAN',
+            clipPID: 'p0abc001',
+          },
+          playlistObject: {
+            title: 'Portrait Video 1',
+            holdingImageURL:
+              'https://ichef.bbci.co.uk/images/ic/512xn/p0abc001.jpg',
+            items: [
+              {
+                duration: 60,
+                kind: 'programme',
+                versionID: 'p0abc002',
+              },
+            ],
+          },
+          plugins: {
+            toLoad: [
+              {
+                html: 'http://localhost:7080/smpPlugins/fullscreen.js',
+                playerOnly: true,
+              },
+            ],
+          },
+        },
+        showAds: false,
+        orientation: 'portrait',
+      });
+    });
+
+    it('should return a playlist of portrait video items for the homepage for desktop', () => {
+      window.matchMedia = jest.fn().mockImplementation(query => {
+        return {
+          matches: false,
+          media: query,
+        };
+      });
+      const result = buildSettings({
+        ...baseSettings,
+        blocks: homePagePortraitClipMediaBlocks as MediaBlock[],
+        pageType: 'home',
+        isAmp: false,
+      });
+
+      expect(result).toStrictEqual({
+        mediaType: 'video',
+        playerConfig: {
+          autoplay: true,
+          product: 'news',
+          enableToucan: true,
+          appType: 'responsive',
+          appName: 'news-serbian',
+          ui: {
+            skin: 'classic',
+            controls: {
+              enabled: true,
+              includeNextButton: true,
+              includePreviousButton: true,
+            },
+            locale: { lang: 'sr-latn' },
+            subtitles: { defaultOn: true, enabled: true },
+            fullscreen: { enabled: false, useCloseIconForExitFullscreen: true },
+            swipable: { direction: 'Y', enabled: true },
+            poster: {
+              availableWhenSettingUp: true,
+            },
           },
           superResponsive: true,
           supportFakeFullscreen: true,
