@@ -27,7 +27,6 @@ const baseTheme = {
   brandSVG,
 };
 
-// TODO: review fonts
 const pwaTheme = {
   typography: {
     script: latinScript,

@@ -38,14 +38,6 @@ const pwaTheme = {
     ],
     fontVariants: reithVariants,
   },
-  palette: {
-    // TODO: TEMP - used for testing
-    BRAND_BACKGROUND: 'blue',
-    BRAND_LOGO: WHITE,
-    BRAND_FOREGROUND: GHOST,
-    BRAND_HIGHLIGHT: WHITE,
-    BRAND_BORDER: POSTBOX_30,
-  },
 };
 
 export default withThemeProvider(yorubaTheme, pwaTheme);
