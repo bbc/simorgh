@@ -62,7 +62,7 @@ describe('buildSettings', () => {
       expect(result).toStrictEqual({
         mediaType: 'video',
         playerConfig: {
-          autoplay: true,
+          autoplay: false,
           product: 'news',
           statsObject: {
             clipPID: 'p01thw20',
