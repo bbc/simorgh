@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 
 /**
- * Custom hook to determine if the application is running in a PWA display mode.
- * @returns {boolean} True if the app is likely in a PWA display mode, false otherwise.
+ * A hook to determine if the application is running in a PWA display mode.
+ * @returns {boolean} True if the app is running in a PWA display mode, false otherwise.
  */
 
 const useIsPWA = (): boolean => {

@@ -11,7 +11,7 @@ import {
   REITH_SERIF_LIGHT,
 } from '../fontFaces';
 
-const baseTheme = {
+const afriqueTheme = {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -40,4 +40,4 @@ const pwaTheme = {
   },
 };
 
-export default withThemeProvider(baseTheme, pwaTheme);
+export default withThemeProvider(afriqueTheme, pwaTheme);
