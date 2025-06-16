@@ -154,10 +154,9 @@ const PortraitVideoModal = ({
 
       const player = window?.embeddedMedia?.api?.players()?.bbcMediaPlayer0;
 
-      // Pause any players if the modal is closed instantly
+      // Pause any player if the modal is closed instantly
       if (player) player.pause();
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
