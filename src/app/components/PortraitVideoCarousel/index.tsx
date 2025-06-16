@@ -53,6 +53,9 @@ const PortraitVideoCarousel = ({
         >
           {title}
         </Heading>
+        <noscript>
+          <PortraitVideoNoJs />
+        </noscript>
         <div css={styles.carouselContainer}>
           <PortraitCarouselNavigation scrollPaneRef={scrollRef} />
           <ul
@@ -76,9 +79,6 @@ const PortraitVideoCarousel = ({
             ))}
           </ul>
         </div>
-        <noscript>
-          <PortraitVideoNoJs />
-        </noscript>
         {isModalOpen &&
           selectedVideoIndex !== null &&
           createPortal(
