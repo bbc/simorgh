@@ -9,6 +9,21 @@ import {
 import { OptimoImageBlock } from '#app/models/types/optimo';
 import { Translations } from '#app/models/types/translations';
 
+export type SMPEvent = {
+  playlist?: {
+    items: PlaylistItem[];
+  };
+};
+
+export type MediaPlayerEvents =
+  | 'playlistLoaded'
+  | 'pluginLoaded'
+  | 'fullscreenExit';
+
+export type EventMapping = Partial<
+  Record<MediaPlayerEvents, (_e: SMPEvent) => void>
+>;
+
 export type Playlist = {
   title: string;
   summary?: string;
@@ -23,10 +38,11 @@ export type Playlist = {
 
 export type PlaylistItem = {
   versionID?: string;
-  kind: string;
+  kind?: string;
   duration?: number;
   live?: boolean;
   serviceID?: string;
+  vpid?: string;
 };
 
 export type LegacyPlayListItem = {
@@ -50,12 +66,15 @@ export type PlayerConfig = {
   statsObject: {
     clipPID?: string | null;
     episodePID?: string | null;
-    destination: string;
-    producer: string | '';
+    destination?: string;
+    producer?: string | '';
   };
   mediator?: { host: string };
   ui: PlayerUiConfig;
   playlistObject?: Playlist;
+  plugins?: {
+    toLoad: { html: string; playerOnly?: boolean }[];
+  };
 };
 
 export type PlayerUiConfig = {
@@ -73,10 +92,13 @@ export type PlayerUiConfig = {
   };
   locale?: { lang: string };
   subtitles?: { enabled: boolean; defaultOn: boolean };
-  fullscreen?: { enabled: boolean };
+  fullscreen?: { enabled: boolean; useCloseIconForExitFullscreen?: boolean };
   swipable?: {
     enabled: boolean;
     direction: 'Y' | 'X';
+  };
+  poster?: {
+    availableWhenSettingUp: boolean;
   };
 };
 
@@ -123,21 +145,26 @@ export type MediaInfo = {
 export type Player = {
   dispatchEvent(
     dispatchEvent: string,
-    parameters: { updatedAdTag: string },
+    parameters?: { updatedAdTag: string },
   ): void;
   load: () => void;
   play: () => void;
   pause: () => void;
-  bind: (event: string, callback: (e?: Event) => void) => void;
+  bind: (event: MediaPlayerEvents, callback: (e: SMPEvent) => void) => void;
   loadPlugin: (
     pluginName: { [key: string]: string },
-    parameters: {
+    parameters?: {
       name: string;
       data: {
         adTag: string;
         debug: boolean;
       };
     },
+  ) => void;
+  queuePlaylist: (playlist: Playlist, options?: Partial<PlayerConfig>) => void;
+  setPreviousPlaylist: (
+    playlist: Playlist,
+    options?: Partial<PlayerConfig>,
   ) => void;
   player: { paused: () => boolean };
 };

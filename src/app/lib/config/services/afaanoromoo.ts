@@ -80,14 +80,14 @@ export const service: DefaultServiceConfig = {
       navMenuText: 'Kutaawwan',
       liteSite: {
         onboardingMessage:
-          'Kan argaa jirtan oduu barreefamaan qofa marsaritii keenya daataa xiqqaan hojjetudha. Fuula isa guutuu suuraaleefi viidiyoowwan qabate banadhaa.',
+          'Kan argaa jirtan oduu barreeffamaan qofa marsaritii keenya daataa xiqqaan hojjetudha. Fuula isa guutuu suuraaleefi viidiyoowwan qabate banadhaa.',
         toMainSite: 'Gara fuula marsariitii guutuutti na geessi',
         informationPage:
           'Filannoo daataa qusatu fayyadamu kanarratti hubannoo dabalataaf',
         informationPageLink:
           'https://www.bbc.com/afaanoromoo/articles/cx2qk33rg1po',
-        dataSaving: 'Daataa qusachuuf barreefama qofa dubbisi',
-        articleDataSavingLinkText: 'Daataa qusachuuf barreefama qofa dubbisi',
+        dataSaving: 'Daataa qusachuuf barreeffama qofa dubbisi',
+        articleDataSavingLinkText: 'Daataa qusachuuf barreeffama qofa dubbisi',
       },
       mediaAssetPage: {
         mediaPlayer: 'Media player',
