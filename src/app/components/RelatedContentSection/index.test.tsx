@@ -18,6 +18,11 @@ import { OptimoBlock } from '../../models/types/optimo';
 
 jest.mock('../ThemeProvider');
 
+jest.mock('#app/hooks/useIsPWA', () => ({
+  __esModule: true,
+  default: () => false,
+}));
+
 type Props = {
   fixtureData: OptimoBlock[];
   service?: Services;
