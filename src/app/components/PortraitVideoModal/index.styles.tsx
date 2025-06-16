@@ -1,51 +1,79 @@
+import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
 const styles = {
-  dialog: css({
-    width: '100%',
-    maxWidth: '100%',
-    height: '100%',
-    maxHeight: '100%',
-    position: 'relative',
-    backgroundColor: 'transparent',
-    border: 'none',
-    margin: 0,
-    padding: 0,
-
-    '&::backdrop': {
-      backgroundColor: 'rgba(0, 0, 0, 0.9)',
-    },
-  }),
-
-  closeButton: ({ palette }: Theme) =>
+  dialog: () =>
     css({
-      display: 'flex',
-      position: 'absolute',
-      top: '1rem',
-      right: '1rem',
-      fontSize: '1.5rem',
-      background: 'transparent',
+      position: 'fixed',
+      overflow: 'hidden',
+      width: '100%',
+      maxWidth: '100%',
+      height: '100%',
+      maxHeight: '100%',
+      backgroundColor: 'transparent',
       border: 'none',
-      cursor: 'pointer',
-      zIndex: 2,
+      margin: 0,
+      padding: 0,
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
 
-      svg: {
-        fill: 'currentcolor',
-        color: palette.WHITE,
+      '&::backdrop': {
+        backgroundColor: 'rgba(20, 20, 20, 0.9)',
+        backdropFilter: 'blur(0.2rem)',
       },
     }),
 
-  navWrapper: css({
-    position: 'relative',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '100%',
-    height: '100%',
-    '.media-container': {
-      maxWidth: '25%',
-    },
-  }),
+  closeButton: ({ mq, spacings, palette }: Theme) =>
+    css({
+      display: 'none',
+      position: 'absolute',
+      top: `${spacings.DOUBLE}rem`,
+      right: `${spacings.DOUBLE}rem`,
+      background: 'transparent',
+      border: `${pixelsToRem(2)}rem solid ${palette.WHITE}`,
+      cursor: 'pointer',
+      padding: 0,
+
+      '&:hover, &:focus-visible': {
+        backgroundColor: palette.POSTBOX,
+      },
+
+      [mq.GROUP_3_MIN_WIDTH]: {
+        display: 'flex',
+      },
+
+      [mq.FORCED_COLOURS]: {
+        border: `${pixelsToRem(2)}rem solid canvasText`,
+      },
+
+      svg: {
+        color: palette.WHITE,
+
+        [mq.FORCED_COLOURS]: {
+          fill: 'canvasText',
+        },
+      },
+    }),
+
+  mediaWrapper: ({ mq }: Theme) =>
+    css({
+      '&.media-container': {
+        width: 'auto',
+        height: '100%',
+        maxWidth: '100%',
+        maxHeight: '100%',
+        margin: 0,
+        marginInline: 0,
+      },
+
+      [mq.GROUP_3_MIN_WIDTH]: {
+        '&.media-container': {
+          maxHeight: '90%',
+        },
+      },
+    }),
 };
 
 export default styles;
