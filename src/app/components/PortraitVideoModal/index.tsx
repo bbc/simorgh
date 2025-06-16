@@ -144,12 +144,19 @@ const PortraitVideoModal = ({
 
       const handleBackdropClick = (event: MouseEvent | TouchEvent) => {
         if (event.target === event.currentTarget) {
-          modalRef.current?.close();
+          onClose();
+        }
+      };
+
+      const handleKeyDown = (event: KeyboardEvent) => {
+        if (event.key === 'Escape') {
+          onClose();
         }
       };
 
       modalRef.current.addEventListener('mousedown', handleBackdropClick);
       modalRef.current.addEventListener('touchstart', handleBackdropClick);
+      modalRef.current.addEventListener('keydown', handleKeyDown);
     }
 
     return () => {
@@ -160,10 +167,11 @@ const PortraitVideoModal = ({
       // Pause any player if the modal is closed instantly
       if (player) player.pause();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
-    <dialog ref={modalRef} css={styles.dialog} onClose={onClose}>
+    <dialog ref={modalRef} css={styles.dialog}>
       <button
         ref={closeButtonRef}
         type="button"

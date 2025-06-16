@@ -40,6 +40,17 @@ describe('PortraitVideoModal', () => {
     expect(mockClose).toHaveBeenCalled();
   });
 
+  it('should close the modal when the escape key is pressed', () => {
+    render(
+      <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,
+    );
+
+    const dialog = screen.getByRole('dialog');
+    fireEvent.keyDown(dialog, { key: 'Escape', code: 'Escape' });
+
+    expect(mockClose).toHaveBeenCalled();
+  });
+
   it('should not close the modal when clicking outside the modal with a mouse', () => {
     render(
       <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,
@@ -48,7 +59,7 @@ describe('PortraitVideoModal', () => {
     const dialog = screen.getByRole('dialog');
     fireEvent.mouseDown(dialog);
 
-    expect(HTMLDialogElement.prototype.close).toHaveBeenCalled();
+    expect(mockClose).toHaveBeenCalled();
   });
 
   it('should not close the modal when clicking outside the modal with touch', () => {
@@ -59,7 +70,7 @@ describe('PortraitVideoModal', () => {
     const dialog = screen.getByRole('dialog');
     fireEvent.touchStart(dialog);
 
-    expect(HTMLDialogElement.prototype.close).toHaveBeenCalled();
+    expect(mockClose).toHaveBeenCalled();
   });
 
   describe('playlistLoadedCallback', () => {
