@@ -16,6 +16,7 @@ declare namespace React.JSX {
     srcSet?: string;
     width?: number;
     placeholder?: string | boolean;
+    role?: string;
   }
 
   interface ImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {

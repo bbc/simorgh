@@ -31,6 +31,7 @@ export type ImageProps = {
   width?: number;
   fetchPriority?: 'high';
   hasCaption?: boolean;
+  role?: string;
 };
 
 const roundNumber = (num: number) => Math.round(num * 100) / 100;
@@ -59,6 +60,7 @@ const Image = ({
   children,
   fetchPriority,
   hasCaption,
+  role,
 }: PropsWithChildren<ImageProps>) => {
   const { pageType, isLite, isAmp } = useContext(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -187,6 +189,7 @@ const Image = ({
                   ? `${aspectRatioX} / ${aspectRatioY}`
                   : 'auto',
               }} // aspectRatio used in combination with the objectFit:cover will center the image horizontally and vertically if aspectRatio prop is different from image's intrinsic aspect ratio
+              role={role}
             />
           </ImageWrapper>
         )}
