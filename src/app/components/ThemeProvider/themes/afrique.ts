@@ -3,9 +3,7 @@ import latinScript from '../fontScripts/latin';
 import helmetFontVariants from '../fontVariants/helmet';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/afrique';
-import latinWithDiacriticsScript from '../fontScripts/latinWithDiacritics';
 import reithVariants from '../fontVariants/reith';
-
 import {
   REITH_SANS_BOLD,
   REITH_SANS_REGULAR,
@@ -32,7 +30,7 @@ const baseTheme = {
 // TODO: review fonts
 const pwaTheme = {
   typography: {
-    script: latinWithDiacriticsScript,
+    script: latinScript,
     fontFaces: [
       REITH_SANS_BOLD,
       REITH_SANS_REGULAR,
@@ -40,14 +38,6 @@ const pwaTheme = {
       REITH_SERIF_LIGHT,
     ],
     fontVariants: reithVariants,
-  },
-  palette: {
-    // TODO: TEMP - used for testing
-    BRAND_BACKGROUND: 'blue',
-    BRAND_LOGO: WHITE,
-    BRAND_FOREGROUND: GHOST,
-    BRAND_HIGHLIGHT: WHITE,
-    BRAND_BORDER: POSTBOX_30,
   },
 };
 

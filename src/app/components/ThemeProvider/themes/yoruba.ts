@@ -3,6 +3,13 @@ import latinScript from '../fontScripts/latin';
 import helmetFontVariants from '../fontVariants/helmet';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/yoruba';
+import reithVariants from '../fontVariants/reith';
+import {
+  REITH_SANS_BOLD,
+  REITH_SANS_REGULAR,
+  REITH_SERIF_MEDIUM,
+  REITH_SERIF_LIGHT,
+} from '../fontFaces';
 
 const yorubaTheme = {
   palette: {
@@ -20,4 +27,25 @@ const yorubaTheme = {
   brandSVG,
 };
 
-export default withThemeProvider(yorubaTheme);
+const pwaTheme = {
+  typography: {
+    script: latinScript,
+    fontFaces: [
+      REITH_SANS_BOLD,
+      REITH_SANS_REGULAR,
+      REITH_SERIF_MEDIUM,
+      REITH_SERIF_LIGHT,
+    ],
+    fontVariants: reithVariants,
+  },
+  palette: {
+    // TODO: TEMP - used for testing
+    BRAND_BACKGROUND: 'blue',
+    BRAND_LOGO: WHITE,
+    BRAND_FOREGROUND: GHOST,
+    BRAND_HIGHLIGHT: WHITE,
+    BRAND_BORDER: POSTBOX_30,
+  },
+};
+
+export default withThemeProvider(yorubaTheme, pwaTheme);

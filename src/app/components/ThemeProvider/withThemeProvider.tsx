@@ -17,13 +17,11 @@ export type ServiceTheme = {
   brandSVG: BrandSVG;
 };
 
-export const useEnvironmentTheme = (
+export const useMergeTheme = (
   baseTheme: ServiceTheme,
   pwaTheme?: Partial<ServiceTheme>,
 ): ServiceTheme => {
   const isPWA = useIsPWA();
-
-  console.log(`useServiceTheme`, { isPWA, baseTheme, pwaTheme });
 
   return useMemo(() => {
     if (isPWA && pwaTheme) {
@@ -51,7 +49,7 @@ const withThemeProvider = (
   const ThemeProvider = ({ children }: PropsWithChildren) => {
     const { isAmp, isLite, pageType } = useContext(RequestContext);
 
-    const brandTheme = useEnvironmentTheme(baseTheme, pwaTheme);
+    const brandTheme = useMergeTheme(baseTheme, pwaTheme);
 
     return (
       <EmotionThemeProvider

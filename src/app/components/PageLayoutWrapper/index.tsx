@@ -100,8 +100,6 @@ const PageLayoutWrapper = ({
   }
 
   const serviceFonts = fontFacesLazy(service, isPWA);
-  // TODO: TEMP - used for testing
-  console.log({ serviceFonts, isPWA });
 
   const fontJs =
     isLite ||

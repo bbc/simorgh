@@ -3,6 +3,13 @@ import cyrillicScript from '../fontScripts/cyrillic';
 import helmetFontVariants from '../fontVariants/helmet';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/kyrgyz';
+import {
+  REITH_SANS_BOLD,
+  REITH_SANS_REGULAR,
+  REITH_SERIF_MEDIUM,
+  REITH_SERIF_LIGHT,
+} from '../fontFaces';
+import reithVariants from '../fontVariants/reith';
 
 const kyrgyzTheme = {
   palette: {
@@ -20,4 +27,17 @@ const kyrgyzTheme = {
   brandSVG,
 };
 
-export default withThemeProvider(kyrgyzTheme);
+const pwaTheme = {
+  typography: {
+    script: cyrillicScript,
+    fontFaces: [
+      REITH_SANS_BOLD,
+      REITH_SANS_REGULAR,
+      REITH_SERIF_MEDIUM,
+      REITH_SERIF_LIGHT,
+    ],
+    fontVariants: reithVariants,
+  },
+};
+
+export default withThemeProvider(kyrgyzTheme, pwaTheme);
