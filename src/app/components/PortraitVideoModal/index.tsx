@@ -136,31 +136,37 @@ const PortraitVideoModal = ({
   const blocks = getBlocks(items);
 
   useEffect(() => {
-    if (modalRef.current) {
-      modalRef.current.showModal();
-      modalRef.current.scrollTop = 0;
+    const handleBackdropClick = (event: MouseEvent | TouchEvent) => {
+      if (event.target === event.currentTarget) {
+        onClose();
+      }
+    };
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        onClose();
+      }
+    };
+
+    const dialog = modalRef.current;
+
+    if (dialog) {
+      dialog.showModal?.();
+      dialog.scrollTop = 0;
       closeButtonRef.current?.focus();
       document.body.style.overflow = 'hidden';
 
-      const handleBackdropClick = (event: MouseEvent | TouchEvent) => {
-        if (event.target === event.currentTarget) {
-          onClose();
-        }
-      };
-
-      const handleKeyDown = (event: KeyboardEvent) => {
-        if (event.key === 'Escape') {
-          onClose();
-        }
-      };
-
-      modalRef.current.addEventListener('mousedown', handleBackdropClick);
-      modalRef.current.addEventListener('touchstart', handleBackdropClick);
-      modalRef.current.addEventListener('keydown', handleKeyDown);
+      dialog.addEventListener('mousedown', handleBackdropClick);
+      dialog.addEventListener('touchstart', handleBackdropClick);
+      dialog.addEventListener('keydown', handleKeyDown);
     }
 
     return () => {
       document.body.removeAttribute('style');
+
+      dialog?.removeEventListener('mousedown', handleBackdropClick);
+      dialog?.removeEventListener('touchstart', handleBackdropClick);
+      dialog?.removeEventListener('keydown', handleKeyDown);
 
       const player = getPlayerInstance();
 
