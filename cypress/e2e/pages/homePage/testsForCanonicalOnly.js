@@ -43,6 +43,9 @@ export default ({ service }) => {
   });
 
   describe('Portrait Video Curations', () => {
+    beforeEach(() => {
+      cy.viewport(600, 800);
+    });
     // open and close could be 2 separate tests, but would be largely duplicated or tests reliant on the previous ones state for the modal to be open
     it('should open the portrait video modal when a promo is clicked and close it when the modal close button is clicked', () => {
       cy.get('body').then($body => {
@@ -77,11 +80,13 @@ export default ({ service }) => {
       });
     });
     it('should scroll through the promos using the left and right scroll buttons', () => {
+      cy.window().then(win => {
+        cy.log(`Viewport width: ${win.innerWidth}`);
+      });
       cy.get('body').then($body => {
         if ($body.find('[data-testid="portrait-video-carousel"]').length > 0) {
-          // Left/right are only visible >= 600px viewport width
-          cy.viewport(600, 800);
-
+          // // Left/right are only visible >= 600px viewport width
+          // cy.viewport(600, 800);
           cy.get('[data-testid="portrait-video-carousel"]')
             .first()
             .within(() => {
