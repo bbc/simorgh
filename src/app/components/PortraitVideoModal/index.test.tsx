@@ -14,7 +14,8 @@ const mockClose = jest.fn();
 const mockPlayer = {
   queuePlaylist: jest.fn(),
   setPreviousPlaylist: jest.fn(),
-} as unknown as Player;
+  pause: jest.fn(),
+} satisfies Partial<Player>;
 
 describe('PortraitVideoModal', () => {
   beforeAll(() => {
@@ -73,6 +74,40 @@ describe('PortraitVideoModal', () => {
     expect(mockClose).toHaveBeenCalled();
   });
 
+  it('should perform clean-up when component is unmounted', () => {
+    Object.defineProperty(window, 'embeddedMedia', {
+      writable: true,
+      value: {
+        api: {
+          players: () => ({ bbcMediaPlayer0: mockPlayer }),
+        },
+      },
+    });
+
+    const { unmount } = render(
+      <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,
+    );
+
+    const dialog = screen.getByRole<HTMLDialogElement>('dialog');
+    const removeEventListenerSpy = jest.spyOn(dialog, 'removeEventListener');
+
+    unmount();
+
+    expect(removeEventListenerSpy).toHaveBeenCalledWith(
+      'mousedown',
+      expect.any(Function),
+    );
+    expect(removeEventListenerSpy).toHaveBeenCalledWith(
+      'touchstart',
+      expect.any(Function),
+    );
+    expect(removeEventListenerSpy).toHaveBeenCalledWith(
+      'keydown',
+      expect.any(Function),
+    );
+    expect(mockPlayer.pause).toHaveBeenCalled();
+  });
+
   describe('playlistLoadedCallback', () => {
     beforeEach(() => {
       jest.clearAllMocks();
@@ -90,9 +125,9 @@ describe('PortraitVideoModal', () => {
     it('should call the playlistLoadedCallback and call queuePlaylist for the next video', () => {
       const blocks = getBlocks(items);
 
-      const mockSMPEvent = {
+      const mockSMPEvent: SMPEvent = {
         playlist: { items: [{ versionID: items[0].versionId }] },
-      } as SMPEvent;
+      };
 
       playlistLoadedCallback(mockSMPEvent, blocks);
 
@@ -113,9 +148,9 @@ describe('PortraitVideoModal', () => {
     it('should call the playlistLoadedCallback and call setPreviousPlaylist for the previous video and queuePlaylist for the next video', () => {
       const blocks = getBlocks(items);
 
-      const mockSMPEvent = {
+      const mockSMPEvent: SMPEvent = {
         playlist: { items: [{ versionID: items[1].versionId }] },
-      } as SMPEvent;
+      };
 
       playlistLoadedCallback(mockSMPEvent, blocks);
 
@@ -143,9 +178,9 @@ describe('PortraitVideoModal', () => {
     it('should call playlistLoadedCallback and setPreviousPlaylist if there are no next videos', () => {
       const blocks = getBlocks(items);
 
-      const mockSMPEvent = {
+      const mockSMPEvent: SMPEvent = {
         playlist: { items: [{ versionID: items[items.length - 1].versionId }] },
-      } as SMPEvent;
+      };
 
       playlistLoadedCallback(mockSMPEvent, blocks);
 
