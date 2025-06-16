@@ -18,6 +18,7 @@ const getServiceBundleRegex = service => {
 };
 
 const staticLibraryScripts = 'comscore|reverb';
+const staticLibraryScriptIds = 'main|reverb';
 
 export const assertLoadsExpectedBundles = ({ service }) => {
   it('only loads expected js bundles', () => {
@@ -29,7 +30,7 @@ export const assertLoadsExpectedBundles = ({ service }) => {
       .forEach(url => {
         expect(url).toMatch(
           new RegExp(
-            `(\\/static\\/js\\/(?:${staticLibraryScripts}\\/)?(modern.)?(main|framework|commons|shared|${serviceRegex}|frosted_promo|themes|.+Page).+?.js)|(\\/static\\/.+?-lib.+?.js)|${service}\\/(articles\\/)?sw\\.js`,
+            `(\\/static\\/js\\/(?:${staticLibraryScripts}\\/)?(modern.)?(${staticLibraryScriptIds}|framework|commons|shared|${serviceRegex}|frosted_promo|themes|.+Page).+?.js)|(\\/static\\/.+?-lib.+?.js)|${service}\\/(articles\\/)?sw\\.js`,
             'g',
           ),
         );
