@@ -66,20 +66,20 @@ describe('Byline', () => {
   it('should render all listitems correctly', () => {
     render(<Byline blocks={bylineWithPngPhoto} />);
 
-    const contributorList = screen.getAllByRole('listitem');
-    const contributorDetails = within(contributorList[0]).getAllByRole(
+    const contributorLists = screen.getAllByRole('list');
+    const firstContributorItems = within(contributorLists[0]).getAllByRole(
       'listitem',
     );
 
-    expect(contributorDetails.length).toBe(5);
+    expect(firstContributorItems.length).toBe(5);
   });
 
   it('should correctly use the buildIChefURL function to create the image url', () => {
     render(<Byline blocks={bylineWithPngPhoto} />);
 
-    const imageSrc = screen.getAllByRole('presentation');
+    const imageSrc = screen.getByRole('img');
 
-    expect(imageSrc[0]).toHaveAttribute(
+    expect(imageSrc).toHaveAttribute(
       'src',
       'https://ichef.bbci.co.uk/ace/ws/160/cpsprodpb/f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png.webp',
     );
@@ -139,7 +139,7 @@ describe('Byline', () => {
     const TwitterLink = screen.getByText('@MayeniJones');
     const Links = screen.getAllByRole('link');
     const Location = screen.getByText('Lagos, Nigeria');
-    const Image = screen.getByRole('presentation');
+    const Image = screen.getByRole('img');
 
     expect(AuthorLink).toBeInTheDocument();
     expect(TwitterLink).toBeInTheDocument();
