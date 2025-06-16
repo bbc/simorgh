@@ -7,7 +7,7 @@ import styles from './index.styles';
 import { RequestContext } from '../../contexts/RequestContext';
 import { HOME_PAGE } from '../../routes/utils/pageTypes';
 
-type Props = {
+export type ImageProps = {
   alt: string;
   aspectRatio?: [x: number, y: number];
   attribution?: string;
@@ -54,7 +54,7 @@ const Image = ({
   children,
   fetchPriority,
   hasCaption,
-}: PropsWithChildren<Props>) => {
+}: PropsWithChildren<ImageProps>) => {
   const { pageType, isLite, isAmp } = use(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
   if (isLite) return null;
