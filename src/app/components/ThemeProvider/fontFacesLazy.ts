@@ -239,7 +239,7 @@ const REITH_FOR_PWA_SERVICES = [
   'swahili',
   'ukrainian',
   'uzbek',
-  'vietnamese',
+  'vietnamese', // TODO - to be confirmed re. the support
   'yoruba',
 ];
 
