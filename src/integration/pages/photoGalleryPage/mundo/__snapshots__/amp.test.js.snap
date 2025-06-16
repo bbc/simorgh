@@ -2,6 +2,8 @@
 
 exports[`AMP Photo Gallery Page A11y I can see the skip to content link 1`] = `"Ir al contenido"`;
 
+exports[`AMP Photo Gallery Page AMP Geo config 1`] = `"{"AmpBind":true,"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"],"gbOrUnknown":["gb","gg","im","je","uk","unknown"]}}"`;
+
 exports[`AMP Photo Gallery Page Analytics ATI 1`] = `
 {
   "requests": {
@@ -153,13 +155,6 @@ exports[`AMP Photo Gallery Page Footer Anchors should match text and url 9`] = `
 {
   "text": "Lee sobre nuestra postura acerca de enlaces externos.",
   "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
-}
-`;
-
-exports[`AMP Photo Gallery Page Footer Cookie Settings Button should match text and on handler 1`] = `
-{
-  "on": "tap:consent.prompt, cookie.show, AMP.setState({ isManagingSettings: true })",
-  "text": "Do not share or sell my info",
 }
 `;
 

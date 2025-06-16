@@ -21,7 +21,7 @@ export type MediaPlayerEvents =
   | 'fullscreenExit';
 
 export type EventMapping = Partial<
-  Record<MediaPlayerEvents, (_e?: SMPEvent) => void>
+  Record<MediaPlayerEvents, (_e: SMPEvent) => void>
 >;
 
 export type Playlist = {
@@ -66,8 +66,8 @@ export type PlayerConfig = {
   statsObject: {
     clipPID?: string | null;
     episodePID?: string | null;
-    destination: string;
-    producer: string | '';
+    destination?: string;
+    producer?: string | '';
   };
   mediator?: { host: string };
   ui: PlayerUiConfig;
@@ -150,7 +150,7 @@ export type Player = {
   load: () => void;
   play: () => void;
   pause: () => void;
-  bind: (event: MediaPlayerEvents, callback: (e?: SMPEvent) => void) => void;
+  bind: (event: MediaPlayerEvents, callback: (e: SMPEvent) => void) => void;
   loadPlugin: (
     pluginName: { [key: string]: string },
     parameters?: {
@@ -161,8 +161,11 @@ export type Player = {
       };
     },
   ) => void;
-  queuePlaylist: (playlist: Playlist) => void;
-  setPreviousPlaylist: (playlist: Playlist) => void;
+  queuePlaylist: (playlist: Playlist, options?: Partial<PlayerConfig>) => void;
+  setPreviousPlaylist: (
+    playlist: Playlist,
+    options?: Partial<PlayerConfig>,
+  ) => void;
   player: { paused: () => boolean };
 };
 
