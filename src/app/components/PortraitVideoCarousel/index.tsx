@@ -10,6 +10,7 @@ import { BumpLoader } from '../MediaLoader';
 import PortraitVideoPromo from './PortraitVideoPromo';
 import PortraitCarouselNavigation from './PortraitVideoCarouselNavigation';
 import Heading from '../Heading';
+import PortraitVideoNoJs from './PortraitVideoNoJs';
 
 const PortraitVideoCarousel = ({
   title,
@@ -75,6 +76,9 @@ const PortraitVideoCarousel = ({
             ))}
           </ul>
         </div>
+        <noscript>
+          <PortraitVideoNoJs />
+        </noscript>
         {isModalOpen &&
           selectedVideoIndex !== null &&
           createPortal(
