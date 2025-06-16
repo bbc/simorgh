@@ -1,4 +1,5 @@
 import { css, Theme } from '@emotion/react';
+import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 import { calculateVariedNavContainerWidths } from './utils/styleUtils';
 
 const styles = {
@@ -26,7 +27,7 @@ const styles = {
       position: 'relative',
       display: 'flex',
       alignItems: 'center',
-      '.no-js &': {
+      [`.${NO_JS_CLASSNAME} &`]: {
         display: 'none',
       },
     }),
