@@ -28,6 +28,11 @@ describe('PortraitVideoModal', () => {
     render(
       <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,
     );
+
+    const modal = screen.getByRole<HTMLDialogElement>('dialog');
+
+    expect(modal.showModal).toHaveBeenCalled();
+    expect(modal).toBeInTheDocument();
   });
 
   it('should close the modal when the close button is clicked', () => {
