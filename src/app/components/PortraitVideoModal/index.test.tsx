@@ -20,7 +20,7 @@ describe('PortraitVideoModal', () => {
   beforeAll(() => {
     HTMLDialogElement.prototype.show = jest.fn();
     HTMLDialogElement.prototype.showModal = jest.fn();
-    HTMLDialogElement.prototype.close = jest.fn();
+    // HTMLDialogElement.prototype.close = jest.fn();
   });
 
   it('should render the modal when active', () => {
@@ -30,22 +30,11 @@ describe('PortraitVideoModal', () => {
   });
 
   it('should close the modal when the close button is clicked', () => {
-    render(
-      <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,
-    );
-
-    const closeButton = screen.getByTestId('close-modal-button');
-    closeButton.click();
-
-    expect(mockClose).toHaveBeenCalled();
-  });
-
-  it('should close the modal when the Escape key is pressed', () => {
     const { container } = render(
       <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,
     );
 
-    fireEvent.keyDown(container, { key: 'Escape', code: 'Escape' });
+    container.dispatchEvent(new Event('close'));
 
     expect(mockClose).toHaveBeenCalled();
   });

@@ -138,25 +138,13 @@ const PortraitVideoModal = ({
       modalRef.current.scrollTop = 0;
       closeButtonRef.current?.focus();
 
+      modalRef.current.addEventListener('close', onClose);
+
       document.body.style.overflow = 'hidden';
     }
 
     return () => {
       document.body.removeAttribute('style');
-    };
-  }, []);
-
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        onClose();
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
