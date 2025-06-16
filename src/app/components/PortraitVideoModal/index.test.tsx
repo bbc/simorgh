@@ -1,6 +1,10 @@
 import React from 'react';
 import Component, { playlistLoadedCallback, getBlocks } from '.';
-import { screen, render } from '../react-testing-library-with-providers';
+import {
+  screen,
+  render,
+  fireEvent,
+} from '../react-testing-library-with-providers';
 import items from './fixture';
 import { Player, SMPEvent } from '../MediaLoader/types';
 import { setImageWidth } from '../MediaLoader/configs/portraitClipMedia';
@@ -32,6 +36,16 @@ describe('PortraitVideoModal', () => {
 
     const closeButton = screen.getByTestId('close-modal-button');
     closeButton.click();
+
+    expect(mockClose).toHaveBeenCalled();
+  });
+
+  it('should close the modal when the Escape key is pressed', () => {
+    const { container } = render(
+      <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,
+    );
+
+    fireEvent.keyDown(container, { key: 'Escape', code: 'Escape' });
 
     expect(mockClose).toHaveBeenCalled();
   });
