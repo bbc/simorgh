@@ -87,6 +87,8 @@ export default ({
 
   const externalEmbedUrl = getExternalEmbedUrl({ id, versionID, lang });
 
+  const isAudio = type === 'audio';
+
   return {
     mediaType: type || 'video',
     playerConfig: {
@@ -102,14 +104,16 @@ export default ({
       },
       ui: {
         ...basePlayerConfig.ui,
-        ...(type === 'audio' && AUDIO_UI_CONFIG),
+        ...(isAudio && AUDIO_UI_CONFIG),
       },
+      ...(isAudio && { superResponsive: false }),
       statsObject: {
         ...basePlayerConfig.statsObject,
         ...(videoId && { clipPID: videoId }),
       },
     },
-    ...(type !== 'audio' && { placeholderConfig }),
+    ...(!isAudio && { placeholderConfig }),
+
     showAds,
   };
 };
