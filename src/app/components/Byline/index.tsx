@@ -58,7 +58,6 @@ const Byline = ({
                     BylineCss.ImageWrapper,
                     isRtl ? BylineCss.imageRtl : BylineCss.imageLtr,
                   ]}
-                  role="presentation"
                 >
                   <Image
                     css={BylineCss.imageSrc}
@@ -66,6 +65,7 @@ const Byline = ({
                     alt={authorName}
                     placeholder={false}
                     aspectRatio={[1, 1]}
+                    role="presentation"
                   />
                 </li>
               )}
