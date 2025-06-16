@@ -36,6 +36,28 @@ describe('PortraitVideoModal', () => {
     expect(mockClose).toHaveBeenCalled();
   });
 
+  it('should not close the modal when clicking outside the modal with a mouse', () => {
+    render(
+      <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,
+    );
+
+    const dialog = screen.getByRole('dialog');
+    dialog.dispatchEvent(new MouseEvent('mousedown'));
+
+    expect(HTMLDialogElement.prototype.close).toHaveBeenCalled();
+  });
+
+  it('should not close the modal when clicking outside the modal with touch', () => {
+    render(
+      <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,
+    );
+
+    const dialog = screen.getByRole('dialog');
+    dialog.dispatchEvent(new TouchEvent('touchstart'));
+
+    expect(HTMLDialogElement.prototype.close).toHaveBeenCalled();
+  });
+
   describe('playlistLoadedCallback', () => {
     beforeEach(() => {
       jest.clearAllMocks();
