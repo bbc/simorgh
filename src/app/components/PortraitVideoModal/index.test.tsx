@@ -1,6 +1,10 @@
 import React from 'react';
 import Component, { playlistLoadedCallback, getBlocks } from '.';
-import { screen, render } from '../react-testing-library-with-providers';
+import {
+  screen,
+  render,
+  fireEvent,
+} from '../react-testing-library-with-providers';
 import items from './fixture';
 import { Player, SMPEvent } from '../MediaLoader/types';
 import { setImageWidth } from '../MediaLoader/configs/portraitClipMedia';
@@ -42,7 +46,7 @@ describe('PortraitVideoModal', () => {
     );
 
     const dialog = screen.getByRole('dialog');
-    dialog.dispatchEvent(new MouseEvent('mousedown'));
+    fireEvent.mouseDown(dialog);
 
     expect(HTMLDialogElement.prototype.close).toHaveBeenCalled();
   });
@@ -53,7 +57,7 @@ describe('PortraitVideoModal', () => {
     );
 
     const dialog = screen.getByRole('dialog');
-    dialog.dispatchEvent(new TouchEvent('touchstart'));
+    fireEvent.touchStart(dialog);
 
     expect(HTMLDialogElement.prototype.close).toHaveBeenCalled();
   });
