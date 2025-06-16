@@ -65,6 +65,7 @@ const Byline = ({
                     alt={authorName}
                     placeholder={false}
                     aspectRatio={[1, 1]}
+                    role="presentation"
                   />
                 </li>
               )}
