@@ -20,7 +20,6 @@ describe('useIsPWA', () => {
 
   it('returns false when not in any PWA display mode', () => {
     mockMatchMedia({ '(display-mode: browser)': true });
-
     const { result } = renderHook(() => useIsPWA());
     expect(result.current).toBe(false);
   });
@@ -30,41 +29,22 @@ describe('useIsPWA', () => {
     expect(result.current).toBe(false);
   });
 
-  it('returns true when display-mode: standalone', () => {
-    mockMatchMedia({ '(display-mode: standalone)': true });
-
-    const { result } = renderHook(() => useIsPWA());
-    expect(result.current).toBe(true);
-  });
-
-  it('returns true when display-mode: minimal-ui', () => {
-    mockMatchMedia({ '(display-mode: minimal-ui)': true });
-
-    const { result } = renderHook(() => useIsPWA());
-    expect(result.current).toBe(true);
-  });
-
-  it('returns true when display-mode: fullscreen', () => {
-    mockMatchMedia({ '(display-mode: fullscreen)': true });
-
-    const { result } = renderHook(() => useIsPWA());
-    expect(result.current).toBe(true);
-  });
-
-  it('returns true when display-mode: window-controls-overlay', () => {
-    mockMatchMedia({ '(display-mode: window-controls-overlay)': true });
-
-    const { result } = renderHook(() => useIsPWA());
-    expect(result.current).toBe(true);
-  });
-
   it('returns true when iOS standalone', () => {
     mockMatchMedia({});
-
     jest
       .spyOn(window, 'navigator', 'get')
       .mockImplementation(() => ({ standalone: true }) as unknown as Navigator);
+    const { result } = renderHook(() => useIsPWA());
+    expect(result.current).toBe(true);
+  });
 
+  it.each([
+    '(display-mode: standalone)',
+    '(display-mode: minimal-ui)',
+    '(display-mode: fullscreen)',
+    '(display-mode: window-controls-overlay)',
+  ])('returns true when %s is matched', mediaQuery => {
+    mockMatchMedia({ [mediaQuery]: true });
     const { result } = renderHook(() => useIsPWA());
     expect(result.current).toBe(true);
   });
