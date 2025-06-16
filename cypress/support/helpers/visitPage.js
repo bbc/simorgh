@@ -1,3 +1,5 @@
+import { forcePointerFine } from '../commands/application';
+
 export default (path, pageType) => {
   const expectedContentType = 'text/html';
   const isErrorPage = pageType.includes('error');
@@ -27,6 +29,10 @@ export default (path, pageType) => {
   );
 
   cy.visit(path, {
+    onBeforeLoad(win) {
+      forcePointerFine(win);
+    },
+
     failOnStatusCode,
     retryOnStatusCodeFailure,
   });
