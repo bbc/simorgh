@@ -82,6 +82,13 @@ export default ({ service }) => {
     it('should scroll through the promos using the left and right scroll buttons', () => {
       cy.window().then(win => {
         cy.log(`Viewport width: ${win.innerWidth}`);
+        cy.forcePointerFine();
+      });
+
+      cy.window().then(win => {
+        const pointerFineMatches = win.matchMedia('(pointer: fine)').matches;
+        cy.log(`pointer: fine matches: ${pointerFineMatches}`);
+        expect(pointerFineMatches).to.equal(true);
       });
       cy.get('body').then($body => {
         if ($body.find('[data-testid="portrait-video-carousel"]').length > 0) {

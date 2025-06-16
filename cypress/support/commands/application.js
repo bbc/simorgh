@@ -97,7 +97,22 @@ export const getPageDataFromWindow = () => {
     return pageData;
   });
 };
+export const forcePointerFine = () => {
+  cy.window().then(win => {
+    cy.stub(win, 'matchMedia').callsFake(query => ({
+      matches: query.includes('pointer: fine'),
+      media: query,
+      onchange: null,
+      addListener: () => {},
+      removeListener: () => {},
+      addEventListener: () => {},
+      removeEventListener: () => {},
+      dispatchEvent: () => false,
+    }));
+  });
+};
 
 Cypress.Commands.add('testResponseCodeAndType', testResponseCodeAndType);
 Cypress.Commands.add('testResponseCodeAndTypeRetry', testResponseCodeAndType);
 Cypress.Commands.add('getPageDataFromWindow', getPageDataFromWindow);
+Cypress.Commands.add('forcePointerFine', forcePointerFine);
