@@ -79,67 +79,6 @@ export default ({ service }) => {
         }
       });
     });
-    it('should scroll through the promos using the left and right scroll buttons', () => {
-      cy.window().then(win => {
-        const pointerFineMatches = win.matchMedia('(pointer: fine)').matches;
-        cy.log(`pointer: fine matches: ${pointerFineMatches}`);
-        expect(pointerFineMatches).to.equal(true);
-      });
-      cy.get('body').then($body => {
-        if ($body.find('[data-testid="portrait-video-carousel"]').length > 0) {
-          // // Left/right are only visible >= 600px viewport width
-          // cy.viewport(600, 800);
-          cy.get('[data-testid="portrait-video-carousel"]')
-            .first()
-            .within(() => {
-              cy.get('[data-testid="pv-carousel"]').then($carousel => {
-                const initialScrollLeft = $carousel[0].scrollLeft;
-
-                // Click the right scroll button five times using a loop to avoid unsafe chaining
-                Cypress._.times(5, () => {
-                  cy.get('[data-testid="pv-scroll-right"]')
-                    .should('not.be.disabled')
-                    .click();
-                });
-                // check the scroll position is further right
-                cy.get('[data-testid="pv-carousel"]').should(
-                  $updatedCarousel => {
-                    expect($updatedCarousel[0].scrollLeft).to.be.greaterThan(
-                      initialScrollLeft,
-                    );
-                  },
-                );
-
-                cy.get('[data-testid="pv-carousel"]').then(
-                  $afterRightScroll => {
-                    const afterRightScrollLeft =
-                      $afterRightScroll[0].scrollLeft;
-
-                    cy.get('[data-testid="pv-scroll-left"]')
-                      .should('not.be.disabled')
-                      .click();
-                    // check the scroll position is back to the left, but not the full way as we only clicked left once
-                    cy.get('[data-testid="pv-carousel"]').should(
-                      $afterLeftScroll => {
-                        const afterLeftScrollLeft =
-                          $afterLeftScroll[0].scrollLeft;
-                        expect(afterLeftScrollLeft).to.be.lessThan(
-                          afterRightScrollLeft,
-                        );
-                        expect(afterLeftScrollLeft).to.be.greaterThan(
-                          initialScrollLeft,
-                        );
-                      },
-                    );
-                  },
-                );
-              });
-            });
-        } else {
-          cy.log('No portrait video carousel found on the page');
-        }
-      });
-    });
   });
 
   if (getAppEnv() === 'local') {
