@@ -12,11 +12,14 @@ import styles from './index.styles';
 import { setImageWidth } from '../MediaLoader/configs/portraitClipMedia';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 
+const getPlayerInstance = () =>
+  window?.embeddedMedia?.api?.players()?.bbcMediaPlayer0;
+
 export const playlistLoadedCallback = (
   e: SMPEvent,
   blocks: PortraitClipMediaBlock[],
 ) => {
-  const player = window?.embeddedMedia?.api?.players()?.bbcMediaPlayer0;
+  const player = getPlayerInstance();
 
   if (!player) return;
 
@@ -67,7 +70,7 @@ export const playlistLoadedCallback = (
 };
 
 const pluginLoadedCallback = () => {
-  const player = window?.embeddedMedia?.api?.players()?.bbcMediaPlayer0;
+  const player = getPlayerInstance();
 
   player.dispatchEvent('fullScreenPlugin.launchFullscreen');
 };
@@ -152,7 +155,7 @@ const PortraitVideoModal = ({
     return () => {
       document.body.removeAttribute('style');
 
-      const player = window?.embeddedMedia?.api?.players()?.bbcMediaPlayer0;
+      const player = getPlayerInstance();
 
       // Pause any player if the modal is closed instantly
       if (player) player.pause();
