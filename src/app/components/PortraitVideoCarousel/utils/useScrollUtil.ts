@@ -1,21 +1,14 @@
 import { ScrollDirection } from '#app/models/types/portraitVideo';
-import { Dispatch, RefObject, SetStateAction, useCallback } from 'react';
+import { RefObject, useCallback, useEffect, useState } from 'react';
 import { PROMO_ITEM_WIDTH_MIN } from './styleUtils';
 
 type UseCheckScrollButtonParameterType = {
   scrollPaneRef: RefObject<HTMLUListElement | null>;
-  setCanScrollLeft: Dispatch<SetStateAction<boolean>>;
-  setCanScrollRight: Dispatch<SetStateAction<boolean>>;
 };
 
-export default ({
-  scrollPaneRef,
-  setCanScrollLeft,
-  setCanScrollRight,
-}: UseCheckScrollButtonParameterType) => {
-  if (!scrollPaneRef?.current) {
-    return { checkScrollButtons: () => null, scroll: () => null };
-  }
+export default ({ scrollPaneRef }: UseCheckScrollButtonParameterType) => {
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
 
   const checkScrollButtons = useCallback(() => {
     if (!scrollPaneRef.current) return;
@@ -23,7 +16,7 @@ export default ({
 
     const absoluteLeftValue = Math.abs(scrollLeft);
     setCanScrollLeft(absoluteLeftValue > 0);
-    setCanScrollRight(absoluteLeftValue + clientWidth + 1 < scrollWidth);
+    setCanScrollRight(absoluteLeftValue + clientWidth + 4 < scrollWidth);
   }, [scrollPaneRef, setCanScrollLeft, setCanScrollRight]);
 
   const scroll = (buttonTriggered: ScrollDirection) => {
@@ -39,5 +32,18 @@ export default ({
     setTimeout(checkScrollButtons, 100);
   };
 
-  return { checkScrollButtons, scroll };
+  useEffect(() => {
+    const scrollElement = scrollPaneRef.current;
+    if (scrollElement) {
+      scrollElement.addEventListener('scroll', checkScrollButtons);
+    }
+    checkScrollButtons();
+    return () => {
+      if (scrollElement) {
+        scrollElement.removeEventListener('scroll', checkScrollButtons);
+      }
+    };
+  }, [checkScrollButtons, scrollPaneRef]);
+
+  return { scroll, canScrollLeft, canScrollRight };
 };

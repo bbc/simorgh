@@ -20,28 +20,12 @@ export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
     dir,
     translations: { carousel = DEFAULT_TRANSLATION },
   } = useContext(ServiceContext);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(false);
-  const { checkScrollButtons, scroll } = useScrollUtil({
+
+  const { scroll, canScrollLeft, canScrollRight } = useScrollUtil({
     scrollPaneRef,
-    setCanScrollLeft,
-    setCanScrollRight,
   });
 
   const { previous: isScrollableLeft, next: isScrollableRight } = carousel;
-
-  useEffect(() => {
-    const scrollElement = scrollPaneRef.current;
-    if (scrollElement) {
-      scrollElement.addEventListener('scroll', checkScrollButtons);
-    }
-    checkScrollButtons();
-    return () => {
-      if (scrollElement) {
-        scrollElement.removeEventListener('scroll', checkScrollButtons);
-      }
-    };
-  }, [checkScrollButtons, scrollPaneRef]);
 
   return (
     <div css={styles.buttonGroupOverlay} aria-hidden="true">
