@@ -1,4 +1,4 @@
-import { Services, Variants } from '#app/models/types/global';
+import { Services } from '#app/models/types/global';
 
 const REITH_FONTS_DIR = 'https://static.files.bbci.co.uk/fonts/reith/r2.512/';
 
