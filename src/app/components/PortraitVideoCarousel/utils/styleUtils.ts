@@ -16,7 +16,7 @@ export const calculatePromoWidth = ({
   `calc((100% / ${fitForNItems + (navButtonAffordance ? NAVIGATION_BUTTON_RATIO : PROMO_PEEK_RATIO)}) - ${gapWidth}rem)`;
 
 const calculateNavContainerWidth = (fitForNItems: number) =>
-  `calc(${calculatePromoWidth({ fitForNItems, navButtonAffordance: true })} * ${NAVIGATION_BUTTON_RATIO})`;
+  `calc((${calculatePromoWidth({ fitForNItems, navButtonAffordance: true })} * ${NAVIGATION_BUTTON_RATIO}) + 4px)`;
 
 export const calculateVariedNavContainerWidths = ({
   mq,

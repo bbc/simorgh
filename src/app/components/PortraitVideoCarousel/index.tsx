@@ -1,7 +1,7 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
 import { jsx } from '@emotion/react';
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { PortraitVideoCarouselProps } from '#app/models/types/portraitVideo';
 import styles from './index.styles';
@@ -20,6 +20,7 @@ const PortraitVideoCarousel = ({
   const scrollRef = useRef<HTMLUListElement>(null);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [scrollPanelRight, setScrollPanelRight] = useState<number | null>(null);
   const [selectedVideoIndex, setSelectedVideoIndex] = useState<number | null>(
     null,
   );
@@ -35,6 +36,14 @@ const PortraitVideoCarousel = ({
     setIsModalOpen(false);
     setSelectedVideoIndex(null);
   };
+
+  useEffect(() => {
+    const scrollBound = scrollRef.current?.getBoundingClientRect();
+    if (scrollBound) {
+      const { right } = scrollBound;
+      setScrollPanelRight(right);
+    }
+  }, []);
 
   return (
     <>
@@ -75,6 +84,7 @@ const PortraitVideoCarousel = ({
                   itemCount: items.length,
                   resourceId: groupTrackingId,
                 }}
+                {...(scrollPanelRight && { scrollPanelRight })}
               />
             ))}
           </ul>

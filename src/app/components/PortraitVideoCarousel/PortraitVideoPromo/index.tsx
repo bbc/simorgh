@@ -29,6 +29,7 @@ export default (item: PortraitVideoPromoProps) => {
     onClick,
     itemPosition = 0,
     groupTracker,
+    scrollPanelRight,
   } = item;
   const {
     defaultImage,
@@ -63,11 +64,18 @@ export default (item: PortraitVideoPromoProps) => {
   }
 
   const onFocusListener = (event: FocusEvent<HTMLButtonElement>) => {
-    event.target.scrollIntoView({
-      behavior: 'smooth',
-      block: 'nearest',
-      inline: 'center',
-    });
+    const itemBounds = event.target.getBoundingClientRect();
+    if (itemBounds != null && scrollPanelRight != null) {
+      const { right } = itemBounds;
+      if (right >= scrollPanelRight) {
+        console.log('SHOULD SCROLL');
+      }
+    }
+    // event.target.scrollIntoView({
+    //   behavior: 'smooth',
+    //   block: 'nearest',
+    //   inline: 'center',
+    // });
   };
 
   const srcSets = getSrcSets({

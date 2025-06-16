@@ -42,6 +42,7 @@ export interface PortraitVideoPromoProps {
   key?: string;
   groupTracker?: GroupTracker;
   itemPosition?: number;
+  scrollPanelRight?: number;
 }
 
 export interface PortraitVideoCarouselNavigationProps {
