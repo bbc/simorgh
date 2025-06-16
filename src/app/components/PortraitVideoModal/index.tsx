@@ -137,17 +137,16 @@ const PortraitVideoModal = ({
       modalRef.current.showModal();
       modalRef.current.scrollTop = 0;
       closeButtonRef.current?.focus();
+      document.body.style.overflow = 'hidden';
 
       const handleBackdropClick = (event: MouseEvent | TouchEvent) => {
         if (event.target === event.currentTarget) {
-          onClose();
+          modalRef.current?.close();
         }
       };
 
       modalRef.current.addEventListener('mousedown', handleBackdropClick);
       modalRef.current.addEventListener('touchstart', handleBackdropClick);
-
-      document.body.style.overflow = 'hidden';
     }
 
     return () => {

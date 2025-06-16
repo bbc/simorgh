@@ -1,6 +1,6 @@
 import React from 'react';
 import Component, { playlistLoadedCallback, getBlocks } from '.';
-import { render } from '../react-testing-library-with-providers';
+import { screen, render } from '../react-testing-library-with-providers';
 import items from './fixture';
 import { Player, SMPEvent } from '../MediaLoader/types';
 import { setImageWidth } from '../MediaLoader/configs/portraitClipMedia';
@@ -26,11 +26,12 @@ describe('PortraitVideoModal', () => {
   });
 
   it('should close the modal when the close button is clicked', () => {
-    const { container } = render(
+    render(
       <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,
     );
 
-    container.dispatchEvent(new Event('close'));
+    const closeButton = screen.getByTestId('close-modal-button');
+    closeButton.click();
 
     expect(mockClose).toHaveBeenCalled();
   });
