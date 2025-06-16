@@ -138,19 +138,16 @@ const PortraitVideoModal = ({
       modalRef.current.scrollTop = 0;
       closeButtonRef.current?.focus();
 
-      modalRef.current.addEventListener('close', onClose);
-
       document.body.style.overflow = 'hidden';
     }
 
     return () => {
       document.body.removeAttribute('style');
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
-    <dialog ref={modalRef} css={styles.dialog}>
+    <dialog ref={modalRef} css={styles.dialog} onClose={onClose}>
       <button
         ref={closeButtonRef}
         type="button"

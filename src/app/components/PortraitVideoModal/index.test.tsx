@@ -1,10 +1,6 @@
 import React from 'react';
 import Component, { playlistLoadedCallback, getBlocks } from '.';
-import {
-  screen,
-  render,
-  fireEvent,
-} from '../react-testing-library-with-providers';
+import { render } from '../react-testing-library-with-providers';
 import items from './fixture';
 import { Player, SMPEvent } from '../MediaLoader/types';
 import { setImageWidth } from '../MediaLoader/configs/portraitClipMedia';
@@ -20,7 +16,7 @@ describe('PortraitVideoModal', () => {
   beforeAll(() => {
     HTMLDialogElement.prototype.show = jest.fn();
     HTMLDialogElement.prototype.showModal = jest.fn();
-    // HTMLDialogElement.prototype.close = jest.fn();
+    HTMLDialogElement.prototype.close = jest.fn();
   });
 
   it('should render the modal when active', () => {
