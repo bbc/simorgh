@@ -31,7 +31,6 @@ export type ImageProps = {
   width?: number;
   fetchPriority?: 'high';
   hasCaption?: boolean;
-  role?: string;
 };
 
 const roundNumber = (num: number) => Math.round(num * 100) / 100;
@@ -60,7 +59,6 @@ const Image = ({
   children,
   fetchPriority,
   hasCaption,
-  role,
 }: PropsWithChildren<ImageProps>) => {
   const { pageType, isLite, isAmp } = useContext(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
