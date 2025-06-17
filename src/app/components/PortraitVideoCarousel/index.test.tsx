@@ -25,6 +25,7 @@ describe('PortraitVideoCarousel', () => {
       fixture.title,
     );
   });
+
   it('Should render the PortraitCarouselNavigation component', async () => {
     await act(async () => {
       render(<Component {...fixture} />);
