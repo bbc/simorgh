@@ -3,30 +3,15 @@
  * @pathname /portuguese
  */
 
+import numberOfCurationsTest from '#src/integration/common/numberOfCurations';
 import { data as pageData } from '../../../../../data/portuguese/homePage/index.json';
 
 describe('Canonical', () => {
-  let portraitVideoCurations;
-
-  beforeAll(() => {
-    portraitVideoCurations = pageData.curations.filter(
-      curation =>
-        curation.portraitVideo && Array.isArray(curation.portraitVideo.items),
-    );
-  });
-  it('should render the correct number of curations, including most read, radio schedule, portrait video & VJ embed', () => {
-    const curationsWithSummaries = pageData.curations.filter(
-      ({ summaries, mostRead, radioSchedule, embed, portraitVideo }) =>
-        (summaries && summaries?.length > 0) ||
-        mostRead ||
-        radioSchedule ||
-        embed ||
-        portraitVideo,
-    );
-
-    const numberOfCurations = document.querySelectorAll('main h2').length;
-    expect(numberOfCurations).toEqual(curationsWithSummaries.length);
-  });
+  numberOfCurationsTest(pageData);
+  const portraitVideoCurations = pageData.curations.filter(
+    curation =>
+      curation.portraitVideo && Array.isArray(curation.portraitVideo.items),
+  );
 
   it('should have an unordered list of videos with the correct number of promos for each portrait video carousel', () => {
     const videoCarousels = document.querySelectorAll(

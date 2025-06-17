@@ -1,3 +1,4 @@
+import numberOfCurations from '#src/integration/common/numberOfCurations';
 import {
   runCoreCanonicalTests,
   runMostReadTests,
@@ -11,24 +12,10 @@ export default ({ service, pageData, displayAds }) => {
   runCoreCanonicalTests();
   runCanonicalAnalyticsTests();
   runMostReadTests();
-
+  numberOfCurations(pageData);
   if (displayAds) {
     runCanonicalAdsTests();
   }
-
-  it('should render the correct number of curations, including most read, radio schedule, portrait video & VJ embed', () => {
-    const curationsWithSummaries = pageData.curations.filter(
-      ({ summaries, mostRead, radioSchedule, embed, portraitVideo }) =>
-        (summaries && summaries?.length > 0) ||
-        mostRead ||
-        radioSchedule ||
-        embed ||
-        portraitVideo,
-    );
-
-    const numberOfCurations = document.querySelectorAll('main h2').length;
-    expect(numberOfCurations).toEqual(curationsWithSummaries.length);
-  });
 
   describe('Radio Schedule', () => {
     const radioScheduleComponent = document.getElementById('Radio-Schedule');
