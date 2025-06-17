@@ -12,6 +12,7 @@ import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import { regexPunctuationSymbols } from '#app/lib/utilities/idSanitiser';
+import { service as newsConfig } from '#lib/config/services/news';
 import styles from './index.styles';
 import WARNING_LEVELS from '../MediaLoader/configs/warningLevels';
 import VisuallyHiddenText from '../VisuallyHiddenText';
@@ -31,8 +32,7 @@ type LiveHeaderMediaProps = {
 
 const DEFAULT_WATCH__NOW = 'Watch Live';
 const DEFAULT_CLOSE_VIDEO = 'Close video';
-const DEFAULT_NO_JS_MESSAGE =
-  'This video cannot play in your browser. Please enable JavaScript or try a different browser.';
+const DEFAULT_NO_JS_MESSAGE = newsConfig.default.translations.media.noJs;
 
 const MemoizedMediaPlayer = memo(MediaLoader);
 

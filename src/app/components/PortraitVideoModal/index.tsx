@@ -12,11 +12,14 @@ import styles from './index.styles';
 import { setImageWidth } from '../MediaLoader/configs/portraitClipMedia';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 
+const getPlayerInstance = () =>
+  window?.embeddedMedia?.api?.players()?.bbcMediaPlayer0;
+
 export const playlistLoadedCallback = (
   e: SMPEvent,
   blocks: PortraitClipMediaBlock[],
 ) => {
-  const player = window?.embeddedMedia?.api?.players()?.bbcMediaPlayer0;
+  const player = getPlayerInstance();
 
   if (!player) return;
 
@@ -67,7 +70,7 @@ export const playlistLoadedCallback = (
 };
 
 const pluginLoadedCallback = () => {
-  const player = window?.embeddedMedia?.api?.players()?.bbcMediaPlayer0;
+  const player = getPlayerInstance();
 
   player.dispatchEvent('fullScreenPlugin.launchFullscreen');
 };
@@ -133,17 +136,44 @@ const PortraitVideoModal = ({
   const blocks = getBlocks(items);
 
   useEffect(() => {
-    if (modalRef.current) {
-      modalRef.current.showModal();
-      modalRef.current.scrollTop = 0;
-      closeButtonRef.current?.focus();
+    const handleBackdropClick = (event: MouseEvent | TouchEvent) => {
+      if (event.target === event.currentTarget) {
+        onClose();
+      }
+    };
 
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        onClose();
+      }
+    };
+
+    const dialog = modalRef.current;
+
+    if (dialog) {
+      dialog.showModal?.();
+      dialog.scrollTop = 0;
+      closeButtonRef.current?.focus();
       document.body.style.overflow = 'hidden';
+
+      dialog.addEventListener('mousedown', handleBackdropClick);
+      dialog.addEventListener('touchstart', handleBackdropClick);
+      dialog.addEventListener('keydown', handleKeyDown);
     }
 
     return () => {
       document.body.removeAttribute('style');
+
+      dialog?.removeEventListener('mousedown', handleBackdropClick);
+      dialog?.removeEventListener('touchstart', handleBackdropClick);
+      dialog?.removeEventListener('keydown', handleKeyDown);
+
+      const player = getPlayerInstance();
+
+      // Pause any player if the modal is closed instantly
+      if (player) player.pause();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
