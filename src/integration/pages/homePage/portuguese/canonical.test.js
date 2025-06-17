@@ -6,6 +6,14 @@
 import { data as pageData } from '../../../../../data/portuguese/homePage/index.json';
 
 describe('Canonical', () => {
+  let portraitVideoCurations;
+
+  beforeAll(() => {
+    portraitVideoCurations = pageData.curations.filter(
+      curation =>
+        curation.portraitVideo && Array.isArray(curation.portraitVideo.items),
+    );
+  });
   it('should render the correct number of curations, including most read, radio schedule, portrait video & VJ embed', () => {
     const curationsWithSummaries = pageData.curations.filter(
       ({ summaries, mostRead, radioSchedule, embed, portraitVideo }) =>
@@ -21,11 +29,6 @@ describe('Canonical', () => {
   });
 
   it('should have an unordered list of videos with the correct number of promos for each portrait video carousel', () => {
-    const portraitVideoCurations = pageData.curations.filter(
-      curation =>
-        curation.portraitVideo && Array.isArray(curation.portraitVideo.items),
-    );
-
     const videoCarousels = document.querySelectorAll(
       '[data-testid="portrait-video-carousel"] ul',
     );
@@ -67,11 +70,6 @@ describe('Canonical', () => {
       '[data-testid="portrait-video-carousel"] ul[data-testid="pv-carousel"]',
     );
 
-    const portraitVideoCurations = pageData.curations.filter(
-      curation =>
-        curation.portraitVideo && Array.isArray(curation.portraitVideo.items),
-    );
-
     carousels.forEach((carousel, carouselIndex) => {
       const promoButtons = carousel.querySelectorAll(
         '[data-testid="promo-button"]',
@@ -109,11 +107,6 @@ describe('Canonical', () => {
   it('should render each video promo item with an image', () => {
     const carousels = document.querySelectorAll(
       '[data-testid="portrait-video-carousel"] ul[data-testid="pv-carousel"]',
-    );
-
-    const portraitVideoCurations = pageData.curations.filter(
-      curation =>
-        curation.portraitVideo && Array.isArray(curation.portraitVideo.items),
     );
 
     carousels.forEach((carousel, carouselIndex) => {
