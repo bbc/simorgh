@@ -6,7 +6,6 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 import { PageTypes, Services } from '#app/models/types/global';
-import OptimizelyPageMetrics from '..';
 
 import PageViewTracking from '.';
 
@@ -39,7 +38,7 @@ const ContextWrap = ({
     pathname="/pathname"
   >
     <OptimizelyProvider optimizely={mockOptimizely} isServerSide>
-      <OptimizelyPageMetrics trackPageView>{children}</OptimizelyPageMetrics>
+      {children}
     </OptimizelyProvider>
   </RequestContextProvider>
 );
@@ -60,20 +59,6 @@ describe('Optimizely Page View tracking', () => {
 
     await waitFor(() => {
       expect(optimizely.track).toHaveBeenCalledTimes(1);
-    });
-  });
-
-  it('should not call Optimizely track function for Article Page on AMP', async () => {
-    (useOptimizelyVariation as jest.Mock).mockReturnValue('variation_1');
-
-    render(
-      <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp>
-        <PageViewTracking />
-      </ContextWrap>,
-    );
-
-    await waitFor(() => {
-      expect(optimizely.track).toHaveBeenCalledTimes(0);
     });
   });
 

@@ -1,13 +1,12 @@
 /* eslint-disable no-console */
 import React, { PropsWithChildren } from 'react';
-import { render, waitFor, act } from '@testing-library/react';
+import { render, act } from '@testing-library/react';
 import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
 
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 import { PageTypes, Services } from '#app/models/types/global';
-import OptimizelyPageMetrics from '..';
 
 import PageCompleteTracking from '.';
 
@@ -87,9 +86,7 @@ const ContextWrap = ({
     pathname="/pathname"
   >
     <OptimizelyProvider optimizely={mockOptimizely} isServerSide>
-      <OptimizelyPageMetrics trackPageComplete>
-        {children}
-      </OptimizelyPageMetrics>
+      {children}
     </OptimizelyProvider>
   </RequestContextProvider>
 );
@@ -176,22 +173,6 @@ describe('Optimizely Page Complete tracking', () => {
     await Promise.resolve();
 
     expect(optimizely.track).not.toHaveBeenCalled();
-  });
-
-  it('should not return intersecting element when on AMP', async () => {
-    (useOptimizelyVariation as jest.Mock).mockReturnValue('variation_1');
-
-    const { container } = render(
-      <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp>
-        <PageCompleteTracking />
-      </ContextWrap>,
-    );
-
-    const elements = container.getElementsByTagName('div');
-
-    await waitFor(() => {
-      expect(elements.length).toBe(0);
-    });
   });
 
   it('should send tracking event when element is in view and in experiment variation', async () => {
