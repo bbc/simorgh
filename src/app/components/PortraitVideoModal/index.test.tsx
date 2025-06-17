@@ -1,6 +1,10 @@
 import React from 'react';
 import Component, { playlistLoadedCallback, getBlocks } from '.';
-import { screen, render } from '../react-testing-library-with-providers';
+import {
+  screen,
+  render,
+  fireEvent,
+} from '../react-testing-library-with-providers';
 import items from './fixture';
 import { Player, SMPEvent } from '../MediaLoader/types';
 import { setImageWidth } from '../MediaLoader/configs/portraitClipMedia';
@@ -10,7 +14,8 @@ const mockClose = jest.fn();
 const mockPlayer = {
   queuePlaylist: jest.fn(),
   setPreviousPlaylist: jest.fn(),
-} as unknown as Player;
+  pause: jest.fn(),
+} satisfies Partial<Player>;
 
 describe('PortraitVideoModal', () => {
   beforeAll(() => {
@@ -24,7 +29,9 @@ describe('PortraitVideoModal', () => {
       <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,
     );
 
-    const modal = screen.getByRole('dialog');
+    const modal = screen.getByRole<HTMLDialogElement>('dialog');
+
+    expect(modal.showModal).toHaveBeenCalled();
     expect(modal).toBeInTheDocument();
   });
 
@@ -38,6 +45,73 @@ describe('PortraitVideoModal', () => {
     closeButton.click();
 
     expect(mockClose).toHaveBeenCalled();
+  });
+
+  it('should close the modal when the escape key is pressed', () => {
+    render(
+      <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,
+    );
+
+    const dialog = screen.getByRole('dialog');
+    fireEvent.keyDown(dialog, { key: 'Escape', code: 'Escape' });
+
+    expect(mockClose).toHaveBeenCalled();
+  });
+
+  it('should not close the modal when clicking outside the modal with a mouse', () => {
+    render(
+      <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,
+    );
+
+    const dialog = screen.getByRole('dialog');
+    fireEvent.mouseDown(dialog);
+
+    expect(mockClose).toHaveBeenCalled();
+  });
+
+  it('should not close the modal when clicking outside the modal with touch', () => {
+    render(
+      <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,
+    );
+
+    const dialog = screen.getByRole('dialog');
+    fireEvent.touchStart(dialog);
+
+    expect(mockClose).toHaveBeenCalled();
+  });
+
+  it('should perform clean-up when component is unmounted', () => {
+    Object.defineProperty(window, 'embeddedMedia', {
+      writable: true,
+      value: {
+        api: {
+          players: () => ({ bbcMediaPlayer0: mockPlayer }),
+        },
+      },
+    });
+
+    const { unmount } = render(
+      <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,
+    );
+
+    const dialog = screen.getByRole<HTMLDialogElement>('dialog');
+    const removeEventListenerSpy = jest.spyOn(dialog, 'removeEventListener');
+
+    unmount();
+
+    expect(removeEventListenerSpy).toHaveBeenCalledWith(
+      'mousedown',
+      expect.any(Function),
+    );
+    expect(removeEventListenerSpy).toHaveBeenCalledWith(
+      'touchstart',
+      expect.any(Function),
+    );
+    expect(removeEventListenerSpy).toHaveBeenCalledWith(
+      'keydown',
+      expect.any(Function),
+    );
+    expect(mockPlayer.pause).toHaveBeenCalled();
   });
 
   describe('playlistLoadedCallback', () => {
@@ -57,9 +131,9 @@ describe('PortraitVideoModal', () => {
     it('should call the playlistLoadedCallback and call queuePlaylist for the next video', () => {
       const blocks = getBlocks(items);
 
-      const mockSMPEvent = {
+      const mockSMPEvent: SMPEvent = {
         playlist: { items: [{ versionID: items[0].versionId }] },
-      } as SMPEvent;
+      };
 
       playlistLoadedCallback(mockSMPEvent, blocks);
 
@@ -80,9 +154,9 @@ describe('PortraitVideoModal', () => {
     it('should call the playlistLoadedCallback and call setPreviousPlaylist for the previous video and queuePlaylist for the next video', () => {
       const blocks = getBlocks(items);
 
-      const mockSMPEvent = {
+      const mockSMPEvent: SMPEvent = {
         playlist: { items: [{ versionID: items[1].versionId }] },
-      } as SMPEvent;
+      };
 
       playlistLoadedCallback(mockSMPEvent, blocks);
 
@@ -110,9 +184,9 @@ describe('PortraitVideoModal', () => {
     it('should call playlistLoadedCallback and setPreviousPlaylist if there are no next videos', () => {
       const blocks = getBlocks(items);
 
-      const mockSMPEvent = {
+      const mockSMPEvent: SMPEvent = {
         playlist: { items: [{ versionID: items[items.length - 1].versionId }] },
-      } as SMPEvent;
+      };
 
       playlistLoadedCallback(mockSMPEvent, blocks);
 
