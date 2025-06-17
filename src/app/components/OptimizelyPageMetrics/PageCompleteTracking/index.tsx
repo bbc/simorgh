@@ -4,8 +4,8 @@ import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 
 const PageCompleteTracking = () => {
-  const ref = useRef();
-  const observer = useRef();
+  const ref = useRef(null);
+  const observer = useRef(null);
   const { optimizely } = useContext(OptimizelyContext);
   const [pageCompleteSent, setPageCompleteSent] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -20,16 +20,18 @@ const PageCompleteTracking = () => {
       // Polyfill IntersectionObserver, e.g. for IE11
       await import('intersection-observer');
     }
+    // @ts-expect-error current element won't be null
     observer.current = new IntersectionObserver(([entry]) =>
       setIsVisible(entry.isIntersecting),
     );
-
+    // @ts-expect-error current element won't be null
     observer.current.observe(ref.current);
   };
 
   useEffect(() => {
     initObserver();
     return () => {
+      // @ts-expect-error current element won't be null
       observer.current.disconnect();
     };
   }, []);
