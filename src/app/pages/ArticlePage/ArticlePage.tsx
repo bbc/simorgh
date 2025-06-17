@@ -127,11 +127,11 @@ const getVideoComponent =
   (translations: Translations) => (props: ComponentToRenderProps) => {
     const { blocks } = props;
 
-    const title = translations.media.watchMoments || 'Watch Moments';
+    const title = translations.media.watchMoments;
 
     return (
       <>
-        {isPortraitVideo(blocks) && (
+        {isPortraitVideo(blocks) && title && (
           <strong css={styles.portraitVideoTitle}>{title}</strong>
         )}
         <MediaLoader blocks={blocks as MediaBlock[]} />
