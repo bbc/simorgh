@@ -2,13 +2,7 @@ import { mergeDeepLeft } from 'ramda';
 import latinWithDiacriticsScript from '../../fontScripts/latinWithDiacritics';
 import withThemeProvider from '../../withThemeProvider';
 import baseUzbekTheme from './base';
-import reithVariants from '../../fontVariants/reith';
-import {
-  REITH_SANS_BOLD,
-  REITH_SANS_REGULAR,
-  REITH_SERIF_MEDIUM,
-  REITH_SERIF_LIGHT,
-} from '../../fontFaces';
+import getPWATypographyTheme from '../getPWATypographyTheme';
 
 const uzbekLatinTheme = mergeDeepLeft(
   {
@@ -19,17 +13,7 @@ const uzbekLatinTheme = mergeDeepLeft(
   baseUzbekTheme,
 );
 
-const pwaTheme = {
-  typography: {
-    script: latinWithDiacriticsScript,
-    fontFaces: [
-      REITH_SANS_BOLD,
-      REITH_SANS_REGULAR,
-      REITH_SERIF_MEDIUM,
-      REITH_SERIF_LIGHT,
-    ],
-    fontVariants: reithVariants,
-  },
-};
-
-export default withThemeProvider(uzbekLatinTheme, pwaTheme);
+export default withThemeProvider(
+  uzbekLatinTheme,
+  getPWATypographyTheme(latinWithDiacriticsScript),
+);

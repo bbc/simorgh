@@ -224,7 +224,7 @@ const REITH_QALAM_BOLD = {
   fontDisplay: 'optional',
 };
 
-const REITH_FOR_PWA_SERVICES = [
+const REITH_FOR_PWA_SERVICES: Services[] = [
   'afaanoromoo',
   'afrique',
   'azeri',

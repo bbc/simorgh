@@ -11,13 +11,13 @@ import getThemeConfig from './getThemeConfig';
 const isDarkUiPage = (pageType: PageTypes) =>
   pageType === MEDIA_ARTICLE_PAGE || pageType === TV_PAGE;
 
-export type ServiceTheme = {
+type ServiceTheme = {
   palette: BrandPalette;
   typography: Typography;
   brandSVG: BrandSVG;
 };
 
-export const useMergeTheme = (
+const useMergeTheme = (
   baseTheme: ServiceTheme,
   pwaTheme?: Partial<ServiceTheme>,
 ): ServiceTheme => {
@@ -27,15 +27,10 @@ export const useMergeTheme = (
     if (isPWA && pwaTheme) {
       return {
         ...baseTheme,
-        palette: {
-          ...baseTheme.palette,
-          ...pwaTheme.palette,
-        },
         typography: {
           ...baseTheme.typography,
           ...pwaTheme.typography,
         },
-        brandSVG: pwaTheme.brandSVG || baseTheme.brandSVG,
       };
     }
     return baseTheme;

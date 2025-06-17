@@ -3,13 +3,7 @@ import latinScript from '../fontScripts/latin';
 import helmetFontVariants from '../fontVariants/helmet';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/igbo';
-import {
-  REITH_SANS_BOLD,
-  REITH_SANS_REGULAR,
-  REITH_SERIF_MEDIUM,
-  REITH_SERIF_LIGHT,
-} from '../fontFaces';
-import reithVariants from '../fontVariants/reith';
+import getPWATypographyTheme from './getPWATypographyTheme';
 
 const igboTheme = {
   palette: {
@@ -27,17 +21,4 @@ const igboTheme = {
   brandSVG,
 };
 
-const pwaTheme = {
-  typography: {
-    script: latinScript,
-    fontFaces: [
-      REITH_SANS_BOLD,
-      REITH_SANS_REGULAR,
-      REITH_SERIF_MEDIUM,
-      REITH_SERIF_LIGHT,
-    ],
-    fontVariants: reithVariants,
-  },
-};
-
-export default withThemeProvider(igboTheme, pwaTheme);
+export default withThemeProvider(igboTheme, getPWATypographyTheme());

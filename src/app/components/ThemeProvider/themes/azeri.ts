@@ -3,13 +3,7 @@ import latinWithDiacriticsScript from '../fontScripts/latinWithDiacritics';
 import helmetFontVariants from '../fontVariants/helmet';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/azeri';
-import reithVariants from '../fontVariants/reith';
-import {
-  REITH_SANS_BOLD,
-  REITH_SANS_REGULAR,
-  REITH_SERIF_MEDIUM,
-  REITH_SERIF_LIGHT,
-} from '../fontFaces';
+import getPWATypographyTheme from './getPWATypographyTheme';
 
 const azeriTheme = {
   palette: {
@@ -27,17 +21,7 @@ const azeriTheme = {
   brandSVG,
 };
 
-const pwaTheme = {
-  typography: {
-    script: latinWithDiacriticsScript,
-    fontFaces: [
-      REITH_SANS_BOLD,
-      REITH_SANS_REGULAR,
-      REITH_SERIF_MEDIUM,
-      REITH_SERIF_LIGHT,
-    ],
-    fontVariants: reithVariants,
-  },
-};
-
-export default withThemeProvider(azeriTheme, pwaTheme);
+export default withThemeProvider(
+  azeriTheme,
+  getPWATypographyTheme(latinWithDiacriticsScript),
+);

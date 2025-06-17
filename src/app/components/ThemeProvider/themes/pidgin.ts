@@ -3,13 +3,7 @@ import latin from '../fontScripts/latin';
 import helmetFontVariants from '../fontVariants/helmet';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/pidgin';
-import {
-  REITH_SANS_BOLD,
-  REITH_SANS_REGULAR,
-  REITH_SERIF_MEDIUM,
-  REITH_SERIF_LIGHT,
-} from '../fontFaces';
-import reithVariants from '../fontVariants/reith';
+import getPWATypographyTheme from './getPWATypographyTheme';
 
 const pidginTheme = {
   palette: {
@@ -27,17 +21,4 @@ const pidginTheme = {
   brandSVG,
 };
 
-const pwaTheme = {
-  typography: {
-    script: latin,
-    fontFaces: [
-      REITH_SANS_BOLD,
-      REITH_SANS_REGULAR,
-      REITH_SERIF_MEDIUM,
-      REITH_SERIF_LIGHT,
-    ],
-    fontVariants: reithVariants,
-  },
-};
-
-export default withThemeProvider(pidginTheme, pwaTheme);
+export default withThemeProvider(pidginTheme, getPWATypographyTheme());
