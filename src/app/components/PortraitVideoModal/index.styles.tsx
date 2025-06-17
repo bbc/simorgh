@@ -2,9 +2,10 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
 const styles = {
-  dialog: () =>
+  modal: () =>
     css({
       position: 'fixed',
+      inset: 0,
       overflow: 'hidden',
       width: '100%',
       maxWidth: '100%',
@@ -18,8 +19,12 @@ const styles = {
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
+      zIndex: 2,
 
-      '&::backdrop': {
+      '&::after': {
+        content: '""',
+        position: 'absolute',
+        inset: 0,
         backgroundColor: 'rgba(20, 20, 20, 0.9)',
         backdropFilter: 'blur(0.2rem)',
       },
@@ -35,6 +40,7 @@ const styles = {
       border: `${pixelsToRem(2)}rem solid ${palette.WHITE}`,
       cursor: 'pointer',
       padding: 0,
+      zIndex: 1,
 
       '&:hover, &:focus-visible': {
         backgroundColor: palette.POSTBOX,
@@ -66,6 +72,7 @@ const styles = {
         maxHeight: '100%',
         margin: 0,
         marginInline: 0,
+        zIndex: 1,
       },
 
       [mq.GROUP_3_MIN_WIDTH]: {
