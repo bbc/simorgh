@@ -100,6 +100,26 @@ export default ({ service }) => {
         }
       });
     });
+
+    it('should close the modal when the Escape key is pressed', () => {
+      cy.get('body').then($body => {
+        if ($body.find('[data-testid="portrait-video-carousel"]').length > 0) {
+          cy.get('[data-testid="portrait-video-carousel"]')
+            .first()
+            .within(() => {
+              cy.get('[data-testid="promo-button"]').first().click();
+            });
+
+          cy.get('dialog[open]').should('exist').and('be.visible');
+
+          cy.get('body').type('{esc}');
+
+          cy.get('dialog[open]').should('not.exist');
+        } else {
+          cy.log('No portrait video carousel found on the page');
+        }
+      });
+    });
   });
 
   if (getAppEnv() === 'local') {
