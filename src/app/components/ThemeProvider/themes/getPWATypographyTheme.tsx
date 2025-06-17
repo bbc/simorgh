@@ -1,5 +1,3 @@
-// Assumes latinScript, REITH_SANS_BOLD, REITH_SANS_REGULAR, REITH_SERIF_MEDIUM, REITH_SERIF_LIGHT, and reithVariants are already imported
-
 import { TypographyScript } from '#models/types/theming';
 import reithVariants from '../fontVariants/reith';
 import latinScript from '../fontScripts/latin';
