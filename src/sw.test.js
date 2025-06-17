@@ -212,8 +212,12 @@ describe('Service Worker', () => {
       'https://static.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-72x72.png?v=1',
       'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-144x144.png?v=2',
       'https://static.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-144x144.png?v=2',
-      // Reverb
-      'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.9.2.js',
+      // Reverb - preview1, preview2, test & live
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/static/js/reverb/reverb-3.10.1.js',
+      'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/static/js/reverb/reverb-3.10.1.js',
+      'https://static.test.files.bbci.co.uk/ws/simorgh1-preview-assets/public/static/js/reverb/reverb-3.10.1.js',
+      'https://static.test.files.bbci.co.uk/ws/simorgh2-preview-assets/public/static/js/reverb/reverb-3.10.1.js',
+      // Smart Tag
       'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/smarttag-5.29.4.min.js',
     ];
 
