@@ -43,7 +43,7 @@ const IntersectionObserver = jest.fn(cb => {
 
 const getObserverInstance = (element: HTMLElement) => {
   try {
-    // fix this
+    // @ts-expect-error required for testing purposes
     const [instance] = Array.from(observers).find(([, item]) =>
       item.elements.has(element),
     );
