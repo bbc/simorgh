@@ -27,22 +27,22 @@ const useOptimizelyScrollDepth = () => {
     }
 
     if (scrollDepth >= 25 && !scrollTwentyFive) {
-      optimizely.track('scroll25');
+      optimizely?.track('scroll25');
       setScrollTwentyFive(true);
     }
 
     if (scrollDepth >= 50 && !scrollFifty) {
-      optimizely.track('scroll50');
+      optimizely?.track('scroll50');
       setScrollFifty(true);
     }
 
     if (scrollDepth >= 75 && !scrollSeventyFive) {
-      optimizely.track('scroll75');
+      optimizely?.track('scroll75');
       setScrollSeventyFive(true);
     }
 
     if (scrollDepth >= 100 && !scrollHundred) {
-      optimizely.track('scroll100');
+      optimizely?.track('scroll100');
       setScrollHundred(true);
     }
 
@@ -55,7 +55,8 @@ const useOptimizelyScrollDepth = () => {
         () => setScrollDepth(getScrollDepth),
         {
           passive: true,
-        },
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        } as any,
       );
   }, [
     optimizely,
