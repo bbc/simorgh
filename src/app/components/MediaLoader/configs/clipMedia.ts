@@ -93,6 +93,7 @@ export default ({
     mediaType: type || 'video',
     playerConfig: {
       ...basePlayerConfig,
+      autoplay: false,
       ...(externalEmbedUrl && { externalEmbedUrl }),
       playlistObject: {
         title,
