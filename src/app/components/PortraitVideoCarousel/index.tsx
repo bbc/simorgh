@@ -3,16 +3,14 @@
 import { jsx } from '@emotion/react';
 import React, { useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import {
-  PortraitVideoCarouselProps,
-  PortraitVideoPromoProps,
-} from '#app/models/types/portraitVideo';
+import { PortraitVideoCarouselProps } from '#app/models/types/portraitVideo';
 import styles from './index.styles';
 import PortraitVideoModal from '../PortraitVideoModal';
 import { BumpLoader } from '../MediaLoader';
 import PortraitVideoPromo from './PortraitVideoPromo';
 import PortraitCarouselNavigation from './PortraitVideoCarouselNavigation';
 import Heading from '../Heading';
+import PortraitVideoNoJs from './PortraitVideoNoJs';
 
 const PortraitVideoCarousel = ({
   title,
@@ -22,19 +20,20 @@ const PortraitVideoCarousel = ({
   const scrollRef = useRef<HTMLUListElement>(null);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedItem, setSelectedItem] =
-    useState<PortraitVideoPromoProps | null>(null);
+  const [selectedVideoIndex, setSelectedVideoIndex] = useState<number | null>(
+    null,
+  );
 
-  const handlePromoClick = (item: PortraitVideoPromoProps) => {
-    if (item.video) {
-      setSelectedItem(item);
+  const handlePromoClick = (index: number) => {
+    if (items[index]?.video) {
+      setSelectedVideoIndex(index);
       setIsModalOpen(true);
     }
   };
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
-    setSelectedItem(null);
+    setSelectedVideoIndex(null);
   };
 
   return (
@@ -54,14 +53,23 @@ const PortraitVideoCarousel = ({
         >
           {title}
         </Heading>
+        <noscript>
+          <PortraitVideoNoJs />
+        </noscript>
         <div css={styles.carouselContainer}>
           <PortraitCarouselNavigation scrollPaneRef={scrollRef} />
-          <ul ref={scrollRef} css={styles.carousel} data-testid="pv-carousel">
+          <ul
+            ref={scrollRef}
+            css={styles.carousel}
+            data-testid="pv-carousel"
+            tabIndex={-1}
+            role="list"
+          >
             {items.map((item, index) => (
               <PortraitVideoPromo
                 {...item}
                 key={item.id}
-                onClick={() => handlePromoClick(item)}
+                onClick={() => handlePromoClick(index)}
                 itemPosition={index}
                 groupTracker={{
                   itemCount: items.length,
@@ -72,7 +80,7 @@ const PortraitVideoCarousel = ({
           </ul>
         </div>
         {isModalOpen &&
-          selectedItem &&
+          selectedVideoIndex !== null &&
           createPortal(
             <PortraitVideoModal
               items={items.map(item => ({
@@ -82,13 +90,11 @@ const PortraitVideoCarousel = ({
                 duration: item.video?.version?.duration || 'PT0M0S',
                 kind: item.video?.version?.kind || 'programme',
                 territories: item.video?.version?.territories || [],
-                guidance: null,
+                guidance: item.video?.version?.guidance || null,
                 isEmbeddingAllowed: item.video?.isEmbeddingAllowed ?? true,
                 images: item.images || [],
               }))}
-              initialVideoIndex={items.findIndex(
-                i => i.id === selectedItem?.id,
-              )}
+              selectedVideoIndex={selectedVideoIndex}
               onClose={handleCloseModal}
             />,
             document.body,

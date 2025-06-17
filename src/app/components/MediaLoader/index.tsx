@@ -15,7 +15,13 @@ import {
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { PageTypes } from '#app/models/types/global';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
-import { BumpType, MediaBlock, PlayerConfig } from './types';
+import {
+  BumpType,
+  EventMapping,
+  MediaBlock,
+  MediaPlayerEvents,
+  PlayerConfig,
+} from './types';
 import Caption from '../Caption';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
@@ -98,6 +104,7 @@ type MediaContainerProps = {
   showAds: boolean;
   uniqueId?: string;
   noJsMessage?: string;
+  eventMapping?: EventMapping;
 };
 
 const isAudioPlayer = (playerConfig: PlayerConfig) =>
@@ -108,6 +115,7 @@ const MediaContainer = ({
   showAds,
   uniqueId,
   noJsMessage,
+  eventMapping,
 }: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
   const isAudio = isAudioPlayer(playerConfig);
@@ -121,8 +129,6 @@ const MediaContainer = ({
             playerConfig,
           );
 
-          mediaPlayer.load();
-
           if (uniqueId != null) {
             const { mediaPlayers } = window;
             if (mediaPlayers == null) {
@@ -130,6 +136,16 @@ const MediaContainer = ({
             } else {
               mediaPlayers[uniqueId] = mediaPlayer;
             }
+          }
+
+          // Bind any events passed in to the player
+          if (eventMapping && Object.keys(eventMapping || {}).length > 0) {
+            Object.keys(eventMapping).forEach(bindingKey => {
+              const key = bindingKey as MediaPlayerEvents;
+              const handler = eventMapping[key];
+
+              if (handler) mediaPlayer.bind(key, handler);
+            });
           }
 
           if (showAds) {
@@ -158,12 +174,14 @@ const MediaContainer = ({
               );
             });
           }
+
+          mediaPlayer.load();
         }
       });
     } catch (error) {
       logger.error(MEDIA_PLAYER_STATUS, error);
     }
-  }, [playerConfig, showAds, uniqueId]);
+  }, [playerConfig, showAds, uniqueId, eventMapping]);
 
   return (
     <div
@@ -184,9 +202,16 @@ type Props = {
   className?: string;
   embedded?: boolean;
   uniqueId?: string;
+  eventMapping?: EventMapping;
 };
 
-const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
+const MediaLoader = ({
+  blocks,
+  className,
+  embedded,
+  uniqueId,
+  eventMapping,
+}: Props) => {
   const { lang, service, translations } = useContext(ServiceContext);
   const { pageIdentifier } = useContext(EventTrackingContext);
   const { enabled: adsEnabled } = useToggle('ads');
@@ -263,7 +288,7 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
       }
       <figure
         data-e2e="media-loader__container"
-        className={className}
+        className={`media-container${className ? ` ${className}` : ''}`}
         css={[
           styles.figure(embedded),
           !isAudio && [
@@ -298,6 +323,7 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
                 showAds={showAds}
                 uniqueId={uniqueId}
                 noJsMessage={noJsMessage}
+                eventMapping={eventMapping}
               />
             )}
           </>

@@ -1,83 +1,77 @@
+import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
 const styles = {
-  dialog: css({
-    width: '100%',
-    maxWidth: '100%',
-    height: '100%',
-    maxHeight: '100%',
-    position: 'relative', // anchor the nav buttons
-    backgroundColor: 'transparent',
-    border: 'none',
-    margin: 0,
-    padding: 0,
-
-    // Dialog backdrop styles
-    '&::backdrop': {
-      backgroundColor: 'rgba(0, 0, 0, 0.9)',
-    },
-  }),
-
-  closeButton: ({ palette }: Theme) =>
+  dialog: () =>
     css({
-      display: 'flex',
-      position: 'absolute',
-      top: '1rem',
-      right: '1rem',
-      fontSize: '1.5rem',
-      background: 'transparent',
+      position: 'fixed',
+      overflow: 'hidden',
+      width: '100%',
+      maxWidth: '100%',
+      height: '100%',
+      maxHeight: '100%',
+      backgroundColor: 'transparent',
       border: 'none',
-      cursor: 'pointer',
-      zIndex: 2,
+      margin: 0,
+      padding: 0,
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
 
-      svg: {
-        fill: 'currentcolor',
-        color: palette.WHITE,
+      '&::backdrop': {
+        backgroundColor: 'rgba(20, 20, 20, 0.9)',
+        backdropFilter: 'blur(0.2rem)',
       },
     }),
 
-  // tightly wraps nav buttons to edge of video
-  navButtonWrapper: css({
-    position: 'absolute',
-    top: '50%',
-    transform: 'translateY(-50%)',
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'space-between',
-    padding: '0 0.5rem',
-    pointerEvents: 'none', // so only buttons can be clicked
-    zIndex: 2,
-  }),
-
-  navWrapper: css({
-    position: 'relative',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: '0.5rem', // spacing between buttons and video
-    width: '100%',
-    height: '100%',
-  }),
-
-  navButton: ({ palette, spacings }: Theme) =>
+  closeButton: ({ mq, spacings, palette }: Theme) =>
     css({
-      pointerEvents: 'auto',
-      backgroundColor: palette.BLACK,
-      border: 'none',
-      width: `${spacings.FULL * 3}rem`,
-      height: `${spacings.FULL * 3}rem`,
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
+      display: 'none',
+      position: 'absolute',
+      top: `${spacings.DOUBLE}rem`,
+      right: `${spacings.DOUBLE}rem`,
+      background: 'transparent',
+      border: `${pixelsToRem(2)}rem solid ${palette.WHITE}`,
       cursor: 'pointer',
-      '&:disabled': {
-        opacity: 0.3,
-        cursor: 'not-allowed',
+      padding: 0,
+
+      '&:hover, &:focus-visible': {
+        backgroundColor: palette.POSTBOX,
       },
-      '& svg': {
-        fill: palette.WHITE,
-        width: '1.5rem',
-        height: '1.5rem',
+
+      [mq.GROUP_3_MIN_WIDTH]: {
+        display: 'flex',
+      },
+
+      [mq.FORCED_COLOURS]: {
+        border: `${pixelsToRem(2)}rem solid canvasText`,
+      },
+
+      svg: {
+        color: palette.WHITE,
+
+        [mq.FORCED_COLOURS]: {
+          fill: 'canvasText',
+        },
+      },
+    }),
+
+  mediaWrapper: ({ mq }: Theme) =>
+    css({
+      '&.media-container': {
+        width: 'auto',
+        height: '100%',
+        maxWidth: '100%',
+        maxHeight: '100%',
+        margin: 0,
+        marginInline: 0,
+      },
+
+      [mq.GROUP_3_MIN_WIDTH]: {
+        '&.media-container': {
+          maxHeight: '90%',
+        },
       },
     }),
 };

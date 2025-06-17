@@ -481,7 +481,7 @@ export const buildReverbAnalyticsModel = ({
           content_language: language,
           product_platform: onOnionTld() ? 'tor-bbc' : null,
           referrer_url: referrer,
-          x5: href && encodeURIComponent(href),
+          x5: href && (platform === 'amp' ? href : encodeURIComponent(href)),
           x8: libraryVersion,
           x9: sanitise(pageTitle),
           x10: nationsProducer && nationsProducer,
