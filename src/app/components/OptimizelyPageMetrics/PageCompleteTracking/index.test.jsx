@@ -6,6 +6,7 @@ import { OptimizelyProvider } from '@optimizely/react-sdk';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
+import OptimizelyPageMetrics from '..';
 
 import PageCompleteTracking from '.';
 
@@ -65,7 +66,9 @@ const ContextWrap = ({ pageType, isAmp, children, service }) => (
     pathname="/pathname"
   >
     <OptimizelyProvider optimizely={optimizely} isServerSide>
-      {children}
+      <OptimizelyPageMetrics trackPageComplete>
+        {children}
+      </OptimizelyPageMetrics>
     </OptimizelyProvider>
   </RequestContextProvider>
 );
