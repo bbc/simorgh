@@ -3,7 +3,7 @@
  * @pathname /portuguese
  */
 
-import numberOfCurationsTest from '#src/integration/common/numberOfCurations';
+import numberOfCurationsTest from '#src/integration/pages/homePage/numberOfCurations';
 import { data as pageData } from '../../../../../data/portuguese/homePage/index.json';
 
 describe('Canonical', () => {
