@@ -132,7 +132,7 @@ describe('buildSettings', () => {
       expect(result).toStrictEqual({
         mediaType: 'audio',
         playerConfig: {
-          autoplay: true,
+          autoplay: false,
           product: 'news',
           statsObject: {
             clipPID: 'p01vqk5l',
@@ -145,7 +145,7 @@ describe('buildSettings', () => {
           appName: 'news-serbian',
           appType: 'responsive',
           counterName: 'live_coverage.testID.page',
-          superResponsive: true,
+          superResponsive: false,
           playlistObject: {
             title: 'a',
             summary:
