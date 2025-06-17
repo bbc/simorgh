@@ -3,7 +3,7 @@ import { OptimizelyContext } from '@optimizely/react-sdk';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 
-const OptimizelyArticleCompleteTracking = () => {
+const OptimizelyPageCompleteTracking = () => {
   const ref = useRef();
   const observer = useRef();
   const { optimizely } = useContext(OptimizelyContext);
@@ -46,4 +46,4 @@ const OptimizelyArticleCompleteTracking = () => {
   return <div ref={ref} aria-hidden="true" />;
 };
 
-export default OptimizelyArticleCompleteTracking;
+export default OptimizelyPageCompleteTracking;

@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
-// import useOptimizelyScrollDepth from '#hooks/useOptimizelyScrollDepth';
-import OptimizelyArticleCompleteTracking from './OptimizelyArticleCompleteTracking';
+import OptimizelyPageCompleteTracking from './OptimizelyPageCompleteTracking';
 import OptimizelyPageViewTracking from './OptimizelyPageViewTracking';
 import OptimizelyScrollDepth from './OptimizelyScrollDepth';
 
@@ -14,9 +13,7 @@ const OptimizelyPageMetrics = ({
   if (isAmp) return null;
   return (
     <>
-      {trackPageComplete && <OptimizelyArticleCompleteTracking />}
-      {/* eslint-disable-next-line react-hooks/rules-of-hooks */}
-      {/* {trackPageDepth && useOptimizelyScrollDepth()} */}
+      {trackPageComplete && <OptimizelyPageCompleteTracking />}
       {trackPageDepth && <OptimizelyScrollDepth />}
       {trackPageView && <OptimizelyPageViewTracking />}
     </>
