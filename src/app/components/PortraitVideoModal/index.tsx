@@ -1,33 +1,84 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { useEffect, useRef } from 'react';
+import { use, useEffect, useRef } from 'react';
 import MediaLoader from '#app/components/MediaLoader';
-import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
+import {
+  PortraitClipMediaBlock,
+  SMPEvent,
+} from '#app/components/MediaLoader/types';
 import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
+import { setImageWidth } from '../MediaLoader/configs/portraitClipMedia';
+import VisuallyHiddenText from '../VisuallyHiddenText';
 
-interface PortraitVideoModalProps {
-  items: {
-    id: string;
-    title: string;
-    versionId: string;
-    duration: string;
-    kind: string;
-    guidance: string | null;
-    territories: string[];
-    isEmbeddingAllowed: boolean;
-    images: {
-      url: string;
-      urlTemplate?: string;
-    }[];
-  }[];
-  onClose: () => void;
-}
+const getPlayerInstance = () =>
+  window?.embeddedMedia?.api?.players()?.bbcMediaPlayer0;
 
-const PortraitVideoModal = ({ items, onClose }: PortraitVideoModalProps) => {
-  const modalRef = useRef<HTMLDialogElement>(null);
+export const playlistLoadedCallback = (
+  e: SMPEvent,
+  blocks: PortraitClipMediaBlock[],
+) => {
+  const player = getPlayerInstance();
 
-  const blocks: PortraitClipMediaBlock[] = items.map(item => ({
+  if (!player) return;
+
+  const { playlist } = e || {};
+
+  const [currentItem] = playlist?.items || [];
+
+  const currentId = currentItem?.vpid || currentItem?.versionID;
+
+  const currentIndex = blocks?.findIndex(
+    item =>
+      item.model.video.id === currentId ||
+      item.model.video.version.id === currentId,
+  );
+
+  const previous = blocks?.[currentIndex - 1]?.model;
+  const next = blocks?.[currentIndex + 1]?.model;
+
+  if (previous) {
+    const [fallbackImage, portraitImage] = previous?.images || [];
+
+    player.setPreviousPlaylist(
+      {
+        title: previous?.video?.title ?? '',
+        holdingImageURL: setImageWidth(
+          (portraitImage || fallbackImage)?.urlTemplate,
+        ),
+        items: [{ versionID: previous?.video?.version?.id }],
+      },
+      { statsObject: { clipPID: previous?.video?.id } },
+    );
+  }
+
+  if (next) {
+    const [fallbackImage, portraitImage] = next?.images || [];
+
+    player.queuePlaylist(
+      {
+        title: next?.video?.title ?? '',
+        holdingImageURL: setImageWidth(
+          (portraitImage || fallbackImage)?.urlTemplate,
+        ),
+        items: [{ versionID: next?.video?.version?.id }],
+      },
+      { statsObject: { clipPID: next?.video?.id } },
+    );
+  }
+};
+
+const pluginLoadedCallback = () => {
+  const player = getPlayerInstance();
+
+  player.dispatchEvent('fullScreenPlugin.launchFullscreen');
+};
+
+export const getBlocks = (
+  items: PortraitVideoModalProps['items'],
+): PortraitClipMediaBlock[] =>
+  items.map(item => ({
     type: 'portraitClipMedia',
     model: {
       type: 'video',
@@ -50,31 +101,103 @@ const PortraitVideoModal = ({ items, onClose }: PortraitVideoModalProps) => {
     },
   }));
 
+export interface PortraitVideoModalProps {
+  items: {
+    id: string;
+    title: string;
+    versionId: string;
+    duration: string;
+    kind: string;
+    guidance: string | null;
+    territories: string[];
+    isEmbeddingAllowed: boolean;
+    images: {
+      url: string;
+      urlTemplate?: string;
+    }[];
+  }[];
+  onClose: () => void;
+  selectedVideoIndex: number;
+}
+
+const PortraitVideoModal = ({
+  items,
+  onClose,
+  selectedVideoIndex,
+}: PortraitVideoModalProps) => {
+  const {
+    translations: {
+      media: { closeVideo = 'Close' },
+    },
+  } = use(ServiceContext);
+  const modalRef = useRef<HTMLDialogElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+
+  const blocks = getBlocks(items);
+
   useEffect(() => {
-    if (modalRef.current) {
-      modalRef.current.showModal();
+    const handleBackdropClick = (event: MouseEvent | TouchEvent) => {
+      if (event.target === event.currentTarget) {
+        onClose();
+      }
+    };
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        onClose();
+      }
+    };
+
+    const dialog = modalRef.current;
+
+    if (dialog) {
+      dialog.showModal?.();
+      dialog.scrollTop = 0;
+      closeButtonRef.current?.focus();
       document.body.style.overflow = 'hidden';
+
+      dialog.addEventListener('mousedown', handleBackdropClick);
+      dialog.addEventListener('touchstart', handleBackdropClick);
+      dialog.addEventListener('keydown', handleKeyDown);
     }
 
     return () => {
       document.body.removeAttribute('style');
+
+      dialog?.removeEventListener('mousedown', handleBackdropClick);
+      dialog?.removeEventListener('touchstart', handleBackdropClick);
+      dialog?.removeEventListener('keydown', handleKeyDown);
+
+      const player = getPlayerInstance();
+
+      // Pause any player if the modal is closed instantly
+      if (player) player.pause();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <dialog ref={modalRef} css={styles.dialog}>
       <button
+        ref={closeButtonRef}
         type="button"
+        data-testid="close-modal-button"
         css={styles.closeButton}
+        className="focusIndicatorInvert"
         onClick={onClose}
-        aria-label="Close modal"
       >
         {navigationIcons.cross}
+        <VisuallyHiddenText>{closeVideo}</VisuallyHiddenText>
       </button>
-
-      <div css={styles.navWrapper}>
-        <MediaLoader blocks={blocks} />
-      </div>
+      <MediaLoader
+        css={styles.mediaWrapper}
+        blocks={[blocks?.[selectedVideoIndex]]}
+        eventMapping={{
+          playlistLoaded: e => playlistLoadedCallback(e, blocks),
+          pluginLoaded: pluginLoadedCallback,
+          fullscreenExit: onClose,
+        }}
+      />
     </dialog>
   );
 };

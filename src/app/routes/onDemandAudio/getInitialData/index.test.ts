@@ -4,7 +4,7 @@ import { FetchMock } from 'jest-fetch-mock';
 import * as fetchBFF from '#app/routes/utils/fetchDataFromBFF';
 import gahuzaOnDemandAudio from '#data/gahuza/bbc_gahuza_radio/p02pcb5c.json';
 import isTest from '#app/lib/utilities/isTest';
-import gahuzaExternalLinks from '../tempData/podcastExternalLinks/gahuza';
+import gahuzaExternalLinks from '../podcastExternalLinks/gahuza';
 import getInitialData from '.';
 
 const { env } = process;
@@ -82,7 +82,7 @@ describe('Get initial data for on demand radio', () => {
       'https://ichef.bbci.co.uk/images/ic/1024x576/p082wk67.jpg',
     );
     expect(pageData?.externalLinks).toEqual([
-      ...gahuzaExternalLinks.default.p07yh8hb,
+      ...gahuzaExternalLinks.p07yh8hb,
       {
         linkText: 'RSS',
         linkUrl: 'https://podcasts.files.bbci.co.uk/p07yh8hb.rss',

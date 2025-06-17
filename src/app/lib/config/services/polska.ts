@@ -12,7 +12,7 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-polska',
     atiAnalyticsProducerId: '135',
-    atiAnalyticsProducerName: 'POLSKA',
+    atiAnalyticsProducerName: 'POLISH',
     useReverb: true,
     chartbeatDomain: 'polska.bbc.co.uk',
     brandName: 'BBC News Polska',
@@ -326,7 +326,7 @@ export const service: DefaultServiceConfig = {
     mostRead: {
       header: 'Najczęściej czytane',
       lastUpdated: 'Ostatnio zaktualizowane:',
-      numberOfItems: 10,
+      numberOfItems: 5,
       hasMostRead: true,
     },
     radioSchedule: {

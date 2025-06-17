@@ -1,116 +1,109 @@
 import moment from 'moment-timezone';
 import filterForBlockType from '#lib/utilities/blockHandlers';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import onClient from '#app/lib/utilities/onClient';
+import { GROUP_3_MIN_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 import {
   PortraitClipMediaBlock,
   ConfigBuilderProps,
   ConfigBuilderReturnProps,
   PlaylistItem,
 } from '../types';
-import shouldDisplayAds from '../utils/shouldDisplayAds';
-import AUDIO_UI_CONFIG from './constants';
 
 const DEFAULT_WIDTH = 512;
+
+export const setImageWidth = (url?: string) =>
+  url?.replace('{width}', String(DEFAULT_WIDTH));
 
 export default ({
   blocks,
   basePlayerConfig,
-  adsEnabled = false,
-  showAdsBasedOnLocation = false,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
-  const firstBlock = filterForBlockType(
-    blocks,
-    'portraitClipMedia',
-  ) as PortraitClipMediaBlock;
+  const { model }: PortraitClipMediaBlock =
+    filterForBlockType(blocks, 'portraitClipMedia') ?? {};
 
-  if (!firstBlock) {
-    return {
-      mediaType: 'video',
-      playerConfig: basePlayerConfig,
-      showAds: false,
-      orientation: 'portrait',
-    };
-  }
+  const { video, images = [] } = model;
 
-  const portraitClipMediaBlocks: PortraitClipMediaBlock[] = filterForBlockType(
-    blocks,
-    'portraitClipMedia',
-    { returnAllMatchingBlocks: true },
-  ) as PortraitClipMediaBlock[];
+  const { id, title, version } = video;
 
-  const playlistItems: PlaylistItem[] = portraitClipMediaBlocks.map(block => {
-    const { model } = block;
-    const { video, images } = model;
-    const version = video?.version;
+  const [fallbackImage, portraitImage] = images;
 
-    // prefer portrait-oriented image if available (based on our bff structure) fallback to first available
-    const image = images?.[1] || images?.[0];
-    const holdingImageURL = image?.urlTemplate?.replace(
-      '{width}',
-      `${DEFAULT_WIDTH}`,
-    );
+  const holdingImageURL = setImageWidth(
+    (portraitImage || fallbackImage)?.urlTemplate,
+  );
 
-    return {
+  const items: PlaylistItem[] = [
+    {
       versionID: version?.id,
-      kind: version?.kind || 'programme',
+      kind: version?.kind,
       duration: moment.duration(version?.duration || 'PT0S').asSeconds(),
-      embedRights: video?.isEmbeddingAllowed ? 'allowed' : undefined,
-      vpid: video?.id,
-      serviceID: version?.territories?.[0],
-      title: video?.title,
-      guidance: version?.guidance,
-      territories: version?.territories,
-      images,
-      holdingImageURL,
-    };
-  });
+    },
+  ];
 
-  const showAds = shouldDisplayAds({
-    adsEnabled,
-    showAdsBasedOnLocation,
-    duration: playlistItems[0]?.duration ?? 0,
-  });
+  const {
+    SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
+    SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
+  } = getEnvConfig();
 
-  if (showAds) {
-    playlistItems.unshift({ kind: 'advert' });
-  }
+  let isMobile = false;
 
-  const fallbackHoldingImageURL =
-    firstBlock?.model?.images?.[1]?.urlTemplate?.replace(
-      '{width}',
-      `${DEFAULT_WIDTH}`,
+  if (onClient()) {
+    const matchMedia = window.matchMedia(
+      `(max-width: ${GROUP_3_MIN_WIDTH_BP}rem)`,
     );
+    if (matchMedia.matches) {
+      isMobile = true;
+    } else {
+      isMobile = false;
+    }
+  }
 
   return {
-    mediaType: firstBlock?.model?.type ?? 'video',
+    mediaType: 'video',
     playerConfig: {
       ...basePlayerConfig,
       autoplay: true,
+      supportFakeFullscreen: true,
       playlistObject: {
-        title: firstBlock?.model?.video?.title,
-        holdingImageURL: fallbackHoldingImageURL,
-        items: playlistItems,
+        title,
+        holdingImageURL,
+        items,
       },
+      ...(isMobile && {
+        plugins: {
+          toLoad: [
+            {
+              html: `${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}smpPlugins/fullscreen.js`,
+              playerOnly: true,
+            },
+          ],
+        },
+      }),
       ui: {
         ...basePlayerConfig.ui,
-        ...(firstBlock?.model?.type === 'audio' && AUDIO_UI_CONFIG),
         swipable: {
           enabled: true,
           direction: 'Y',
+        },
+        poster: {
+          availableWhenSettingUp: true,
         },
         controls: {
           enabled: true,
           includeNextButton: true,
           includePreviousButton: true,
         },
+        fullscreen: {
+          enabled: isMobile,
+          useCloseIconForExitFullscreen: true,
+        },
       },
       statsObject: {
         ...basePlayerConfig.statsObject,
-        ...(firstBlock?.model?.video?.id && {
-          clipPID: firstBlock.model.video.id,
-        }),
+        ...(id && { clipPID: id }),
       },
     },
-    showAds,
+    showAds: false,
     orientation: 'portrait',
   };
 };
