@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { render, waitFor } from '@testing-library/react';
-import { OptimizelyProvider } from '@optimizely/react-sdk';
+import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
 
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
+import { PageTypes, Services } from '#app/models/types/global';
 import OptimizelyPageMetrics from '..';
 
 import PageViewTracking from '.';
@@ -15,16 +16,29 @@ const optimizely = {
   onReady: jest.fn(() => Promise.resolve()),
   track: jest.fn(),
   setUser: jest.fn(() => Promise.resolve()),
-};
+} as unknown as ReactSDKClient;
 
-const ContextWrap = ({ pageType, isAmp, children, service }) => (
+interface Props {
+  pageType: PageTypes;
+  isAmp: boolean;
+  service: Services;
+  mockOptimizely?: ReactSDKClient;
+}
+
+const ContextWrap = ({
+  pageType,
+  isAmp,
+  children,
+  service,
+  mockOptimizely = optimizely,
+}: PropsWithChildren<Props>) => (
   <RequestContextProvider
     isAmp={isAmp}
     pageType={pageType}
     service={service}
     pathname="/pathname"
   >
-    <OptimizelyProvider optimizely={optimizely} isServerSide>
+    <OptimizelyProvider optimizely={mockOptimizely} isServerSide>
       <OptimizelyPageMetrics trackPageView>{children}</OptimizelyPageMetrics>
     </OptimizelyProvider>
   </RequestContextProvider>
@@ -36,7 +50,7 @@ describe('Optimizely Page View tracking', () => {
   });
 
   it('should call Optimizely track function for Article Page on page render', async () => {
-    useOptimizelyVariation.mockReturnValue('variation_1');
+    (useOptimizelyVariation as jest.Mock).mockReturnValue('variation_1');
 
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
@@ -50,7 +64,7 @@ describe('Optimizely Page View tracking', () => {
   });
 
   it('should not call Optimizely track function for Article Page on AMP', async () => {
-    useOptimizelyVariation.mockReturnValue('variation_1');
+    (useOptimizelyVariation as jest.Mock).mockReturnValue('variation_1');
 
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp>
@@ -64,7 +78,7 @@ describe('Optimizely Page View tracking', () => {
   });
 
   it('should not call Optimizely track function for users not in an experiment', async () => {
-    useOptimizelyVariation.mockReturnValue(null);
+    (useOptimizelyVariation as jest.Mock).mockReturnValue(null);
 
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>

@@ -1,11 +1,12 @@
 /* eslint-disable no-console */
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { render, waitFor, act } from '@testing-library/react';
-import { OptimizelyProvider } from '@optimizely/react-sdk';
+import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
 
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
+import { PageTypes, Services } from '#app/models/types/global';
 import OptimizelyPageMetrics from '..';
 
 import PageCompleteTracking from '.';
@@ -16,7 +17,7 @@ const optimizely = {
   onReady: jest.fn(() => Promise.resolve()),
   track: jest.fn(),
   setUser: jest.fn(() => Promise.resolve()),
-};
+} as unknown as ReactSDKClient;
 
 const observers = new Map();
 
@@ -40,8 +41,9 @@ const IntersectionObserver = jest.fn(cb => {
   return instance;
 });
 
-const getObserverInstance = element => {
+const getObserverInstance = (element: HTMLElement) => {
   try {
+    // @ts-expect-error for testing purposes
     const [instance] = Array.from(observers).find(([, item]) =>
       item.elements.has(element),
     );
@@ -52,20 +54,39 @@ const getObserverInstance = element => {
   }
 };
 
-const triggerIntersection = ({ changes, observer }) => {
+const triggerIntersection = ({
+  changes,
+  observer,
+}: {
+  changes: Partial<IntersectionObserverEntry>[];
+  observer: IntersectionObserver;
+}) => {
   const item = observers.get(observer);
 
   item.callback(changes);
 };
 
-const ContextWrap = ({ pageType, isAmp, children, service }) => (
+interface Props {
+  pageType: PageTypes;
+  isAmp: boolean;
+  service: Services;
+  mockOptimizely?: ReactSDKClient;
+}
+
+const ContextWrap = ({
+  pageType,
+  isAmp,
+  children,
+  service,
+  mockOptimizely = optimizely,
+}: PropsWithChildren<Props>) => (
   <RequestContextProvider
     isAmp={isAmp}
     pageType={pageType}
     service={service}
     pathname="/pathname"
   >
-    <OptimizelyProvider optimizely={optimizely} isServerSide>
+    <OptimizelyProvider optimizely={mockOptimizely} isServerSide>
       <OptimizelyPageMetrics trackPageComplete>
         {children}
       </OptimizelyPageMetrics>
@@ -79,6 +100,8 @@ beforeEach(() => {
   jest.clearAllMocks();
   jest.useFakeTimers();
   console.error = jest.fn();
+
+  // @ts-expect-error mocking required for tests
   global.IntersectionObserver = IntersectionObserver;
 });
 
@@ -108,7 +131,7 @@ describe('Optimizely Page Complete tracking', () => {
   });
 
   it('should not send tracking event when element is not in view', async () => {
-    useOptimizelyVariation.mockReturnValue('variation_1');
+    (useOptimizelyVariation as jest.Mock).mockReturnValue('variation_1');
 
     const { container } = render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
@@ -132,7 +155,7 @@ describe('Optimizely Page Complete tracking', () => {
   });
 
   it('should not send tracking event when element is in view, but not in experiment variation', async () => {
-    useOptimizelyVariation.mockReturnValue(null);
+    (useOptimizelyVariation as jest.Mock).mockReturnValue(null);
 
     const { container } = render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
@@ -156,7 +179,7 @@ describe('Optimizely Page Complete tracking', () => {
   });
 
   it('should not return intersecting element when on AMP', async () => {
-    useOptimizelyVariation.mockReturnValue('variation_1');
+    (useOptimizelyVariation as jest.Mock).mockReturnValue('variation_1');
 
     const { container } = render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp>
@@ -172,7 +195,7 @@ describe('Optimizely Page Complete tracking', () => {
   });
 
   it('should send tracking event when element is in view and in experiment variation', async () => {
-    useOptimizelyVariation.mockReturnValue('variation_1');
+    (useOptimizelyVariation as jest.Mock).mockReturnValue('variation_1');
 
     const { container } = render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
