@@ -50,6 +50,7 @@ describe('useOptimizelyScrollDepth', () => {
   });
 
   it('should call add event listener with scroll', () => {
+    useOptimizelyVariation.mockReturnValue('variation_1');
     renderHook(() => useOptimizelyScrollDepth());
 
     expect(addEventListenerSpy).toHaveBeenCalledWith(
@@ -60,6 +61,7 @@ describe('useOptimizelyScrollDepth', () => {
   });
 
   it('should call remove event listener with scroll', () => {
+    useOptimizelyVariation.mockReturnValue('variation_1');
     renderHook(() => useOptimizelyScrollDepth());
 
     cleanup();
@@ -88,6 +90,7 @@ describe('useOptimizelyScrollDepth', () => {
   });
 
   it('should fire event when scroll depth reaches 25% threshold', () => {
+    useOptimizelyVariation.mockReturnValue('variation_1');
     const { result } = renderHook(() => useOptimizelyScrollDepth(), {
       wrapper,
     });
@@ -101,6 +104,7 @@ describe('useOptimizelyScrollDepth', () => {
   });
 
   it('should only fire event once when scroll depth reaches 25% threshold multiple times.', () => {
+    useOptimizelyVariation.mockReturnValue('variation_1');
     const { result } = renderHook(() => useOptimizelyScrollDepth(), {
       wrapper,
     });
@@ -115,6 +119,7 @@ describe('useOptimizelyScrollDepth', () => {
   });
 
   it('should fire event when scroll depth reaches 50% threshold and lower thresholds', () => {
+    useOptimizelyVariation.mockReturnValue('variation_1');
     const { result } = renderHook(() => useOptimizelyScrollDepth(), {
       wrapper,
     });
@@ -128,6 +133,7 @@ describe('useOptimizelyScrollDepth', () => {
   });
 
   it('should only fire event once when scroll depth reaches 50% threshold multiple times.', () => {
+    useOptimizelyVariation.mockReturnValue('variation_1');
     const { result } = renderHook(() => useOptimizelyScrollDepth(), {
       wrapper,
     });
@@ -142,6 +148,7 @@ describe('useOptimizelyScrollDepth', () => {
   });
 
   it('should fire event when scroll depth reaches 75% threshold and lower thresholds', () => {
+    useOptimizelyVariation.mockReturnValue('variation_1');
     const { result } = renderHook(() => useOptimizelyScrollDepth(), {
       wrapper,
     });
@@ -155,6 +162,7 @@ describe('useOptimizelyScrollDepth', () => {
   });
 
   it('should only fire event once when scroll depth reaches 75% threshold multiple times.', () => {
+    useOptimizelyVariation.mockReturnValue('variation_1');
     const { result } = renderHook(() => useOptimizelyScrollDepth(), {
       wrapper,
     });
@@ -169,6 +177,7 @@ describe('useOptimizelyScrollDepth', () => {
   });
 
   it('should fire event when scroll depth reaches 100% threshold and lower thresholds', () => {
+    useOptimizelyVariation.mockReturnValue('variation_1');
     const { result } = renderHook(() => useOptimizelyScrollDepth(), {
       wrapper,
     });
@@ -182,6 +191,7 @@ describe('useOptimizelyScrollDepth', () => {
   });
 
   it('should only fire event once when scroll depth reaches 100% threshold multiple times.', () => {
+    useOptimizelyVariation.mockReturnValue('variation_1');
     const { result } = renderHook(() => useOptimizelyScrollDepth(), {
       wrapper,
     });

@@ -9,6 +9,7 @@ describe('ScrollDepthTracking', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
+
   it('calls useOptimizelyScrollDepth on render', () => {
     render(<ScrollDepthTracking />);
     expect(useOptimizelyScrollDepth).toHaveBeenCalled();

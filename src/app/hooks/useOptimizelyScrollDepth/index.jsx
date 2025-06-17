@@ -20,10 +20,9 @@ const useOptimizelyScrollDepth = () => {
   const [scrollHundred, setScrollHundred] = useState(false);
 
   const experimentVariation = useOptimizelyVariation(OPTIMIZELY_CONFIG.flagKey);
-  const sendScrollEvents = experimentVariation !== null;
 
   useEffect(() => {
-    if (!sendScrollEvents) {
+    if (!experimentVariation) {
       return () => undefined;
     }
 
@@ -65,7 +64,7 @@ const useOptimizelyScrollDepth = () => {
     scrollHundred,
     scrollSeventyFive,
     scrollTwentyFive,
-    sendScrollEvents,
+    experimentVariation,
   ]);
 
   return {
