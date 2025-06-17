@@ -7,7 +7,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 
-import OptimizelyPageCompleteTracking from '.';
+import PageCompleteTracking from '.';
 
 jest.mock('#hooks/useOptimizelyVariation', () => jest.fn(() => null));
 
@@ -94,7 +94,7 @@ describe('Optimizely Page Complete tracking', () => {
   it('should return a function that can be assigned to an element to observe for intersections', () => {
     const { container } = render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
-        <OptimizelyPageCompleteTracking />
+        <PageCompleteTracking />
       </ContextWrap>,
     );
 
@@ -109,7 +109,7 @@ describe('Optimizely Page Complete tracking', () => {
 
     const { container } = render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
-        <OptimizelyPageCompleteTracking />
+        <PageCompleteTracking />
       </ContextWrap>,
     );
 
@@ -133,7 +133,7 @@ describe('Optimizely Page Complete tracking', () => {
 
     const { container } = render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
-        <OptimizelyPageCompleteTracking />
+        <PageCompleteTracking />
       </ContextWrap>,
     );
 
@@ -157,7 +157,7 @@ describe('Optimizely Page Complete tracking', () => {
 
     const { container } = render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp>
-        <OptimizelyPageCompleteTracking />
+        <PageCompleteTracking />
       </ContextWrap>,
     );
 
@@ -173,7 +173,7 @@ describe('Optimizely Page Complete tracking', () => {
 
     const { container } = render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
-        <OptimizelyPageCompleteTracking />
+        <PageCompleteTracking />
       </ContextWrap>,
     );
 

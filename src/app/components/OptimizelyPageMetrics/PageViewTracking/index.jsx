@@ -4,7 +4,7 @@ import useOptimizelyScrollDepth from '#hooks/useOptimizelyScrollDepth';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 
-const OptimizelyPageViewTracking = () => {
+const PageViewTracking = () => {
   const { optimizely } = useContext(OptimizelyContext);
   const [pageViewSent, setPageViewSent] = useState(false);
 
@@ -26,4 +26,4 @@ const OptimizelyPageViewTracking = () => {
   return null;
 };
 
-export default OptimizelyPageViewTracking;
+export default PageViewTracking;

@@ -1,8 +1,8 @@
 import useOptimizelyScrollDepth from '#hooks/useOptimizelyScrollDepth';
 
-const OptimizelyScrollDepth = () => {
+const ScrollDepthTracking = () => {
   useOptimizelyScrollDepth();
   return null;
 };
 
-export default OptimizelyScrollDepth;
+export default ScrollDepthTracking;

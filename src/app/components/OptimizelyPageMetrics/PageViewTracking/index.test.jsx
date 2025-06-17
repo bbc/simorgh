@@ -6,7 +6,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 
-import OptimizelyPageViewTracking from '.';
+import PageViewTracking from '.';
 
 jest.mock('#hooks/useOptimizelyVariation', () => jest.fn(() => null));
 
@@ -39,7 +39,7 @@ describe('Optimizely Page View tracking', () => {
 
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
-        <OptimizelyPageViewTracking />
+        <PageViewTracking />
       </ContextWrap>,
     );
 
@@ -53,7 +53,7 @@ describe('Optimizely Page View tracking', () => {
 
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp>
-        <OptimizelyPageViewTracking />
+        <PageViewTracking />
       </ContextWrap>,
     );
 
@@ -67,7 +67,7 @@ describe('Optimizely Page View tracking', () => {
 
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
-        <OptimizelyPageViewTracking />
+        <PageViewTracking />
       </ContextWrap>,
     );
 

@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
-import OptimizelyPageCompleteTracking from './OptimizelyPageCompleteTracking';
-import OptimizelyPageViewTracking from './OptimizelyPageViewTracking';
-import OptimizelyScrollDepth from './OptimizelyScrollDepth';
+import PageCompleteTracking from './PageCompleteTracking';
+import ScrollDepthTracking from './ScrollDepthTracking';
+import PageViewTracking from './PageViewTracking';
 
 const OptimizelyPageMetrics = ({
   trackPageView = false,
@@ -13,9 +13,9 @@ const OptimizelyPageMetrics = ({
   if (isAmp) return null;
   return (
     <>
-      {trackPageComplete && <OptimizelyPageCompleteTracking />}
-      {trackPageDepth && <OptimizelyScrollDepth />}
-      {trackPageView && <OptimizelyPageViewTracking />}
+      {trackPageComplete && <PageCompleteTracking />}
+      {trackPageDepth && <ScrollDepthTracking />}
+      {trackPageView && <PageViewTracking />}
     </>
   );
 };
