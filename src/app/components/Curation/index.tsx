@@ -6,7 +6,6 @@ import {
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
 import RadioSchedule from '#app/legacy/containers/RadioSchedule';
-import isLive from '#app/lib/utilities/isLive';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
@@ -157,8 +156,7 @@ export default ({
     case PORTRAIT_VIDEO_CAROUSEL:
       if (
         portraitVideo?.items &&
-        portraitVideo?.items?.length > 0 &&
-        !isLive()
+        portraitVideo?.items?.length > 0
       ) {
         return (
           <PortraitVideoCarousel
