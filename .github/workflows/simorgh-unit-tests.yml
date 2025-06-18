@@ -7,6 +7,46 @@ permissions:
   contents: read
 
 jobs:
+  install:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [22.x]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Cache Node Modules
+        id: cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            node_modules
+            ws-nextjs-app/node_modules
+          key: node-modules-${{ hashFiles('yarn.lock', 'ws-nextjs-app/yarn.lock') }}
+
+      - name: Install Node Modules
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: ./scripts/installNodeModules.sh
+
+      - name: Simorgh E2E Build
+        uses: cypress-io/github-action@v6
+        with:
+          runTests: false
+          build: yarn build
+
+      - name: Save Simorgh E2E Build
+        uses: actions/upload-artifact@v4
+        with:
+          name: simorgh-build
+          if-no-files-found: error
+          path: build
+
   build:
     runs-on: ubuntu-latest
     strategy:
@@ -35,12 +75,15 @@ jobs:
             ws-nextjs-app/node_modules
           key: node-modules-${{ hashFiles('yarn.lock', 'ws-nextjs-app/yarn.lock') }}
 
+      - name: Download the Simorgh build folder
+        uses: actions/download-artifact@v4
+        with:
+          name: simorgh-build
+          path: build
+
       - name: Install Node Modules
         if: steps.cache.outputs.cache-hit != 'true'
         run: ./scripts/installNodeModules.sh
-
-      - name: Build Simorgh - Express App
-        run: yarn build
 
       - name: Unit Tests
         run: |
