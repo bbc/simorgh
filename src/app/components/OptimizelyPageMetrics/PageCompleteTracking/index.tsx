@@ -1,7 +1,6 @@
 import React, { useState, useContext, useEffect, useRef } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
-import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
-import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
+import { experiments } from './experiments';
 
 const PageCompleteTracking = () => {
   const ref = useRef(null);
@@ -10,10 +9,7 @@ const PageCompleteTracking = () => {
   const [pageCompleteSent, setPageCompleteSent] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
-  const experimentVariation = useOptimizelyVariation(OPTIMIZELY_CONFIG.flagKey);
-
-  const sendPageCompleteEvent =
-    experimentVariation && !pageCompleteSent && isVisible;
+  const sendPageCompleteEvent = experiments && !pageCompleteSent && isVisible;
 
   const initObserver = async () => {
     if (typeof window.IntersectionObserver === 'undefined') {
@@ -39,7 +35,14 @@ const PageCompleteTracking = () => {
   useEffect(() => {
     if (sendPageCompleteEvent) {
       optimizely?.onReady().then(() => {
-        optimizely.track('article_completes');
+        const decisions = optimizely.decideAll();
+        const isUserInAnyExperiments = experiments.some(
+          experimentName => !(decisions[experimentName].variationKey === 'off'),
+        );
+
+        if (isUserInAnyExperiments) {
+          optimizely.track('article_completes');
+        }
         setPageCompleteSent(true);
       });
     }

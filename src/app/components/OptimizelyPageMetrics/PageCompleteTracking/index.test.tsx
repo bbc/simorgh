@@ -1,22 +1,30 @@
 /* eslint-disable no-console */
 import React, { PropsWithChildren } from 'react';
 import { render, act } from '@testing-library/react';
-import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
-
+import {
+  OptimizelyProvider,
+  ReactSDKClient,
+  OptimizelyDecision,
+} from '@optimizely/react-sdk';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 import { PageTypes, Services } from '#app/models/types/global';
 
 import PageCompleteTracking from '.';
-
-jest.mock('#hooks/useOptimizelyVariation', () => jest.fn(() => null));
 
 const optimizely = {
   onReady: jest.fn(() => Promise.resolve()),
   track: jest.fn(),
   setUser: jest.fn(() => Promise.resolve()),
+  decideAll: jest.fn(() => ({
+    mockExperiment1: { variationKey: 'variation_1' } as OptimizelyDecision,
+    mockExperiment2: { variationKey: 'variation_1' } as OptimizelyDecision,
+  })),
 } satisfies Partial<ReactSDKClient>;
+
+jest.mock('./experiments', () => ({
+  experiments: ['mockExperiment1', 'mockExperiment2'],
+}));
 
 const observers = new Map();
 
@@ -131,8 +139,6 @@ describe('Optimizely Page Complete tracking', () => {
   });
 
   it('should not send tracking event when element is not in view', async () => {
-    (useOptimizelyVariation as jest.Mock).mockReturnValue('variation_1');
-
     const { container } = render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
         <PageCompleteTracking />
@@ -155,10 +161,21 @@ describe('Optimizely Page Complete tracking', () => {
   });
 
   it('should not send tracking event when element is in view, but not in experiment variation', async () => {
-    (useOptimizelyVariation as jest.Mock).mockReturnValue(null);
-
+    const customOptimizely = {
+      ...optimizely,
+      decideAll: jest.fn(() => ({
+        mockExperiment1: { variationKey: 'off' },
+        mockExperiment2: { variationKey: 'off' },
+      })),
+    };
     const { container } = render(
-      <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
+      <ContextWrap
+        pageType={ARTICLE_PAGE}
+        service="news"
+        isAmp={false}
+        // fix?
+        mockOptimizely={customOptimizely as unknown as ReactSDKClient}
+      >
         <PageCompleteTracking />
       </ContextWrap>,
     );
@@ -179,8 +196,6 @@ describe('Optimizely Page Complete tracking', () => {
   });
 
   it('should send tracking event when element is in view and in experiment variation', async () => {
-    (useOptimizelyVariation as jest.Mock).mockReturnValue('variation_1');
-
     const { container } = render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
         <PageCompleteTracking />
