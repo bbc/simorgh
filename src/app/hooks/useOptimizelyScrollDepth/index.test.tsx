@@ -80,7 +80,6 @@ describe('useOptimizelyScrollDepth', () => {
     expect(removeEventListenerSpy).toHaveBeenCalledWith(
       'scroll',
       expect.any(Function),
-      { passive: true },
     );
   });
 

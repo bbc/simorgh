@@ -50,13 +50,8 @@ const useOptimizelyScrollDepth = () => {
       passive: true,
     });
     return () =>
-      document.removeEventListener(
-        'scroll',
-        () => setScrollDepth(getScrollDepth),
-        {
-          passive: true,
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        } as any,
+      document.removeEventListener('scroll', () =>
+        setScrollDepth(getScrollDepth),
       );
   }, [
     optimizely,
