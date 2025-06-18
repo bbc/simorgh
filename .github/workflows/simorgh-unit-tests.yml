@@ -7,46 +7,8 @@ permissions:
   contents: read
 
 jobs:
-  install:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [22.x]
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: Cache Node Modules
-        id: cache
-        uses: actions/cache@v4
-        with:
-          path: |
-            node_modules
-            ws-nextjs-app/node_modules
-          key: node-modules-${{ hashFiles('yarn.lock', 'ws-nextjs-app/yarn.lock') }}
-
-      - name: Install Node Modules
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: ./scripts/installNodeModules.sh
-
-      - name: Simorgh Express Build
-        run: yarn build
-
-      - name: Save Simorgh Express Build
-        uses: actions/upload-artifact@v4
-        with:
-          name: simorgh-build
-          if-no-files-found: error
-          path: build
-
   build:
     runs-on: ubuntu-latest
-    needs: install
     strategy:
       fail-fast: false
       matrix:
@@ -65,7 +27,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Cache Node Modules
-        id: cache
+        id: cache_node
         uses: actions/cache@v4
         with:
           path: |
@@ -74,17 +36,19 @@ jobs:
           key: node-modules-${{ hashFiles('yarn.lock', 'ws-nextjs-app/yarn.lock') }}
 
       - name: Install Node Modules
-        if: steps.cache.outputs.cache-hit != 'true'
+        if: steps.cache_node.outputs.cache-hit != 'true'
         run: ./scripts/installNodeModules.sh
 
-      - name: Download the Simorgh build folder
-        uses: actions/download-artifact@v4
+      - name: Cache Build Directory
+        id: cache_build
+        uses: actions/cache@v4
         with:
-          name: simorgh-build
           path: build
+          key: build-${{ hashFiles('build/server.js') }}
 
-      - name: List contents of build directory
-        run: ls -R build
+      - name: Build Simorgh - Express App
+        if: steps.cache_build.outputs.cache-hit != 'true'
+        run: yarn build
 
       - name: Unit Tests
         run: |
