@@ -102,7 +102,7 @@ jobs:
           path: ws-nextjs-app/build
 
       - name: Install Node Modules
-        run: yarn
+        run: ./scripts/installNodeModules.sh
 
       - name: Unit Tests - Express App
         run: yarn test:unit:ci --shard=${{ strategy.job-index }}/${{ strategy.job-index }}
