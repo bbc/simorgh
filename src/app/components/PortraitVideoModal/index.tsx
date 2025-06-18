@@ -127,10 +127,10 @@ const PortraitVideoModal = ({
 }: PortraitVideoModalProps) => {
   const {
     translations: {
-      media: { closeVideo = 'Close' },
+      media: { closeVideo = 'Close', modalLabel = 'Media player' },
     },
   } = use(ServiceContext);
-  const modalRef = useRef<HTMLDialogElement>(null);
+  const modalRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
 
   const blocks = getBlocks(items);
@@ -148,25 +148,27 @@ const PortraitVideoModal = ({
       }
     };
 
-    const dialog = modalRef.current;
+    const modal = modalRef.current;
+    const reactRootElement = document.getElementById('root');
 
-    if (dialog) {
-      dialog.showModal?.();
-      dialog.scrollTop = 0;
+    if (modal) {
+      modal.scrollTop = 0;
       closeButtonRef.current?.focus();
       document.body.style.overflow = 'hidden';
+      reactRootElement?.setAttribute('inert', 'true');
 
-      dialog.addEventListener('mousedown', handleBackdropClick);
-      dialog.addEventListener('touchstart', handleBackdropClick);
-      dialog.addEventListener('keydown', handleKeyDown);
+      modal.addEventListener('mousedown', handleBackdropClick);
+      modal.addEventListener('touchstart', handleBackdropClick);
+      modal.addEventListener('keydown', handleKeyDown);
     }
 
     return () => {
       document.body.removeAttribute('style');
+      reactRootElement?.removeAttribute('inert');
 
-      dialog?.removeEventListener('mousedown', handleBackdropClick);
-      dialog?.removeEventListener('touchstart', handleBackdropClick);
-      dialog?.removeEventListener('keydown', handleKeyDown);
+      modal?.removeEventListener('mousedown', handleBackdropClick);
+      modal?.removeEventListener('touchstart', handleBackdropClick);
+      modal?.removeEventListener('keydown', handleKeyDown);
 
       const player = getPlayerInstance();
 
@@ -177,7 +179,13 @@ const PortraitVideoModal = ({
   }, []);
 
   return (
-    <dialog ref={modalRef} css={styles.dialog}>
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-label={modalLabel}
+      ref={modalRef}
+      css={styles.modal}
+    >
       <button
         ref={closeButtonRef}
         type="button"
@@ -198,7 +206,7 @@ const PortraitVideoModal = ({
           fullscreenExit: onClose,
         }}
       />
-    </dialog>
+    </div>
   );
 };
 

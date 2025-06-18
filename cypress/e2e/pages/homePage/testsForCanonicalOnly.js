@@ -56,7 +56,7 @@ export default ({ service }) => {
               cy.get('[data-testid="promo-button"]').first().click();
             });
 
-          cy.get('dialog[open]')
+          cy.get('div[role="dialog"]')
             .should('exist')
             .and('be.visible')
             .within(() => {
@@ -73,7 +73,7 @@ export default ({ service }) => {
                 .click();
             });
 
-          cy.get('dialog[open]').should('not.exist');
+          cy.get('div[role="dialog"]').should('not.exist');
         } else {
           cy.log('No portrait video carousel found on the page');
         }
@@ -89,12 +89,12 @@ export default ({ service }) => {
               cy.get('[data-testid="promo-button"]').first().click();
             });
 
-          cy.get('dialog[open]').should('exist').and('be.visible');
+          cy.get('div[role="dialog"]').should('exist').and('be.visible');
 
           // cy.root() gets the root element of the current subject (in this case, the open modal dialog).
           cy.root().click('top');
 
-          cy.get('dialog[open]').should('not.exist');
+          cy.get('div[role="dialog"]').should('not.exist');
         } else {
           cy.log('No portrait video carousel found on the page');
         }
@@ -110,11 +110,11 @@ export default ({ service }) => {
               cy.get('[data-testid="promo-button"]').first().click();
             });
 
-          cy.get('dialog[open]').should('exist').and('be.visible');
+          cy.get('div[role="dialog"]').should('exist').and('be.visible');
 
           cy.get('body').type('{esc}');
 
-          cy.get('dialog[open]').should('not.exist');
+          cy.get('div[role="dialog"]').should('not.exist');
         } else {
           cy.log('No portrait video carousel found on the page');
         }

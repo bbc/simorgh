@@ -18,21 +18,26 @@ const mockPlayer = {
 } satisfies Partial<Player>;
 
 describe('PortraitVideoModal', () => {
-  beforeAll(() => {
-    HTMLDialogElement.prototype.show = jest.fn();
-    HTMLDialogElement.prototype.showModal = jest.fn();
-    HTMLDialogElement.prototype.close = jest.fn();
-  });
-
   it('should render the modal when active', () => {
     render(
       <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,
     );
 
-    const modal = screen.getByRole<HTMLDialogElement>('dialog');
+    const modal = screen.getByRole('dialog');
 
-    expect(modal.showModal).toHaveBeenCalled();
     expect(modal).toBeInTheDocument();
+  });
+
+  it('should set the root React element to "inert" when the modal is open', () => {
+    render(
+      <div id="root">
+        <Component selectedVideoIndex={0} items={items} onClose={mockClose} />
+      </div>,
+    );
+
+    const rootElement = document.getElementById('root');
+
+    expect(rootElement).toHaveAttribute('inert');
   });
 
   it('should close the modal when the close button is clicked', () => {
@@ -94,7 +99,7 @@ describe('PortraitVideoModal', () => {
       <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,
     );
 
-    const dialog = screen.getByRole<HTMLDialogElement>('dialog');
+    const dialog = screen.getByRole('dialog');
     const removeEventListenerSpy = jest.spyOn(dialog, 'removeEventListener');
 
     unmount();
