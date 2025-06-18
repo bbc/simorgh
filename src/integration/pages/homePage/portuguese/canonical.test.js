@@ -104,10 +104,9 @@ describe('Canonical', () => {
         const image = item.querySelector('img');
         expect(image).toBeInTheDocument();
 
-        const expectedImages = videoItems[itemIndex]?.images || [];
-
-        const expectedAlt = expectedImages[0].altText;
-        expect(image?.getAttribute('alt')).toBe(expectedAlt);
+        const [expectedImage] = videoItems[itemIndex]?.images || [];
+        const { altText } = expectedImage || {};
+        expect(image?.getAttribute('alt')).toBe(altText);
       });
     });
   });
