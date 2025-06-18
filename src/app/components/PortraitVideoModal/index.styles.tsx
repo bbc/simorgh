@@ -27,6 +27,7 @@ const styles = {
         inset: 0,
         backgroundColor: 'rgba(20, 20, 20, 0.9)',
         backdropFilter: 'blur(0.2rem)',
+        zIndex: 0,
       },
     }),
 

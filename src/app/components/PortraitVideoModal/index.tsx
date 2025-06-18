@@ -176,7 +176,7 @@ const PortraitVideoModal = ({
   }, []);
 
   return (
-    <div role="dialog" aria-modal ref={modalRef} css={styles.modal}>
+    <div role="dialog" aria-modal="true" ref={modalRef} css={styles.modal}>
       <button
         ref={closeButtonRef}
         type="button"
