@@ -1,4 +1,4 @@
-name: Simorgh CI - Unit Tests
+name: Unit Tests - NextJS
 on:
   pull_request:
     branches:
@@ -10,10 +10,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
-      fail-fast: false
       matrix:
         node-version: [22.x]
-        containers: [1, 2, 3, 4]
     env:
       CI: true
 
@@ -39,10 +37,10 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: ./scripts/installNodeModules.sh
 
-      - name: Build Simorgh - Express App
+      - name: Build Simorgh - Next.JS App
+        working-directory: ./ws-nextjs-app
         run: yarn build
 
-      - name: Unit Tests - Express App
-        run: |
-          export INDEX=$((${{ strategy.job-index }} + 1))
-          yarn test:unit:ci --shard=$INDEX/${{ strategy.job-total }}
+      - name: Unit Tests - Next.JS App
+        working-directory: ./ws-nextjs-app
+        run: yarn test
