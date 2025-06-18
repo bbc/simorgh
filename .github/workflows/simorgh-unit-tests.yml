@@ -34,13 +34,10 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: ./scripts/installNodeModules.sh
 
-      - name: Simorgh E2E Build
-        uses: cypress-io/github-action@v6
-        with:
-          runTests: false
-          build: yarn build
+      - name: Simorgh Express Build
+        run: yarn build
 
-      - name: Save Simorgh E2E Build
+      - name: Save Simorgh Express Build
         uses: actions/upload-artifact@v4
         with:
           name: simorgh-build
