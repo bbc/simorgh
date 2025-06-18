@@ -909,8 +909,8 @@ describe('Article Page', () => {
   describe('when rendering an article page with a portrait video', () => {
     it.each`
       pageData                       | service         | expected     | title     | translation
-      ${articleDataPidginWithPV}     | ${'pidgin'}     | ${undefined} | ${' not'} | ${' no'}
       ${articleDataPortugueseWithPV} | ${'portuguese'} | ${'Assista'} | ${''}     | ${' a'}
+      ${articleDataPidginWithPV}     | ${'pidgin'}     | ${undefined} | ${' not'} | ${' no'}
     `(
       `should$title render the title if there is$translation "WatchMoments" translation`,
       ({ pageData, service, expected }) => {
