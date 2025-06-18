@@ -1,11 +1,7 @@
 /* eslint-disable no-console */
 import React, { PropsWithChildren } from 'react';
 import { render, act } from '@testing-library/react';
-import {
-  OptimizelyProvider,
-  ReactSDKClient,
-  OptimizelyDecision,
-} from '@optimizely/react-sdk';
+import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { PageTypes, Services } from '#app/models/types/global';
@@ -16,15 +12,7 @@ const optimizely = {
   onReady: jest.fn(() => Promise.resolve()),
   track: jest.fn(),
   setUser: jest.fn(() => Promise.resolve()),
-  decideAll: jest.fn(() => ({
-    mockExperiment1: { variationKey: 'variation_1' } as OptimizelyDecision,
-    mockExperiment2: { variationKey: 'variation_1' } as OptimizelyDecision,
-  })),
 } satisfies Partial<ReactSDKClient>;
-
-jest.mock('../experimentsForPageMetrics', () => ({
-  experimentsForPageCompleteTracking: ['mockExperiment1', 'mockExperiment2'],
-}));
 
 const observers = new Map();
 
@@ -161,21 +149,8 @@ describe('Optimizely Page Complete tracking', () => {
   });
 
   it('should not send tracking event when element is in view, but not in experiment variation', async () => {
-    const customOptimizely = {
-      ...optimizely,
-      decideAll: jest.fn(() => ({
-        mockExperiment1: { variationKey: 'off' },
-        mockExperiment2: { variationKey: 'off' },
-      })),
-    };
     const { container } = render(
-      <ContextWrap
-        pageType={ARTICLE_PAGE}
-        service="news"
-        isAmp={false}
-        // fix?
-        mockOptimizely={customOptimizely as unknown as ReactSDKClient}
-      >
+      <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
         <PageCompleteTracking />
       </ContextWrap>,
     );

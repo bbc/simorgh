@@ -1,17 +1,8 @@
-// TODO - any running serverside and client side experiments which collect metric PageCompleteTracking
-export const experimentsForPageCompleteTracking: string[] = [
-  'dummy_experiment',
-  'dummy_experiment_1',
-];
+/* eslint-disable import/prefer-default-export */
 
-// TODO - any running serverside and client side experiments which collect metric PageViewTracking
-export const experimentsForPageViewTracking: string[] = [
-  'dummy_experiment',
-  'dummy_experiment_1',
-];
-
-// TODO - any running serverside and client side experiments which collect metric ScrollDepthTracking
-export const experimentsForScrollDepthTracking: string[] = [
+// Any running serverside and client side experiments which collect metricss
+// TOOD - decide if we want to pass this as props instead
+export const experimentsForPageMetrics: string[] = [
   'dummy_experiment',
   'dummy_experiment_1',
 ];
