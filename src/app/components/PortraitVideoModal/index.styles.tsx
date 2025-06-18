@@ -2,6 +2,12 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
 const styles = {
+  bodyOverflowHidden: () =>
+    css({
+      body: {
+        overflow: 'hidden',
+      },
+    }),
   modal: () =>
     css({
       position: 'fixed',

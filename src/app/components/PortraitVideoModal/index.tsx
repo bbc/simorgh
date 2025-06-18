@@ -153,10 +153,9 @@ const PortraitVideoModal = ({
     const reactRootElement = document.getElementById('root');
 
     if (modal) {
-      document.body.classList.add('body-overflow-hidden');
-      reactRootElement?.setAttribute('inert', 'true');
-
       closeButtonRef.current?.focus();
+
+      reactRootElement?.setAttribute('inert', 'true');
 
       modal.addEventListener('mousedown', handleBackdropClick);
       modal.addEventListener('touchstart', handleBackdropClick);
@@ -164,7 +163,6 @@ const PortraitVideoModal = ({
     }
 
     return () => {
-      document.body.classList.remove('body-overflow-hidden');
       reactRootElement?.removeAttribute('inert');
 
       modal?.removeEventListener('mousedown', handleBackdropClick);
@@ -181,7 +179,7 @@ const PortraitVideoModal = ({
 
   return (
     <>
-      <Global styles={{ '.body-overflow-hidden': { overflow: 'hidden' } }} />
+      <Global styles={styles.bodyOverflowHidden} />
       <div
         role="dialog"
         aria-modal="true"
