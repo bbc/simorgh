@@ -41,6 +41,6 @@ jobs:
         working-directory: ./ws-nextjs-app
         run: yarn build
 
-      - name: Unit Tests - Next.JS App
+      - name: Unit Tests
         working-directory: ./ws-nextjs-app
         run: yarn test
