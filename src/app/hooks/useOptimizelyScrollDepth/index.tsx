@@ -1,7 +1,5 @@
 import { useEffect, useState, useContext } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
-import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
-import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 
 const getScrollDepth = () =>
   Math.floor(
@@ -11,7 +9,7 @@ const getScrollDepth = () =>
       100,
   );
 
-const useOptimizelyScrollDepth = () => {
+const useOptimizelyScrollDepth = (experiments: string[]) => {
   const { optimizely } = useContext(OptimizelyContext);
   const [scrollDepth, setScrollDepth] = useState(0);
   const [scrollTwentyFive, setScrollTwentyFive] = useState(false);
@@ -19,40 +17,50 @@ const useOptimizelyScrollDepth = () => {
   const [scrollSeventyFive, setScrollSeventyFive] = useState(false);
   const [scrollHundred, setScrollHundred] = useState(false);
 
-  const experimentVariation = useOptimizelyVariation(OPTIMIZELY_CONFIG.flagKey);
-
+  // improve - calling decisions a lot
   useEffect(() => {
-    if (!experimentVariation) {
-      return () => undefined;
-    }
+    if (experiments && optimizely) {
+      const decisions = optimizely.decideAll();
+      if (decisions) {
+        const isUserInAnyExperiments = experiments.some(
+          experimentName => !(decisions[experimentName].variationKey === 'off'),
+        );
+        if (isUserInAnyExperiments) {
+          if (scrollDepth >= 25 && !scrollTwentyFive) {
+            optimizely?.track('scroll25');
+            setScrollTwentyFive(true);
+          }
 
-    if (scrollDepth >= 25 && !scrollTwentyFive) {
-      optimizely?.track('scroll25');
-      setScrollTwentyFive(true);
-    }
+          if (scrollDepth >= 50 && !scrollFifty) {
+            optimizely?.track('scroll50');
+            setScrollFifty(true);
+          }
 
-    if (scrollDepth >= 50 && !scrollFifty) {
-      optimizely?.track('scroll50');
-      setScrollFifty(true);
-    }
+          if (scrollDepth >= 75 && !scrollSeventyFive) {
+            optimizely?.track('scroll75');
+            setScrollSeventyFive(true);
+          }
 
-    if (scrollDepth >= 75 && !scrollSeventyFive) {
-      optimizely?.track('scroll75');
-      setScrollSeventyFive(true);
-    }
+          if (scrollDepth >= 100 && !scrollHundred) {
+            optimizely?.track('scroll100');
+            setScrollHundred(true);
+          }
 
-    if (scrollDepth >= 100 && !scrollHundred) {
-      optimizely?.track('scroll100');
-      setScrollHundred(true);
+          document.addEventListener(
+            'scroll',
+            () => setScrollDepth(getScrollDepth),
+            {
+              passive: true,
+            },
+          );
+          return () =>
+            document.removeEventListener('scroll', () =>
+              setScrollDepth(getScrollDepth),
+            );
+        }
+      }
     }
-
-    document.addEventListener('scroll', () => setScrollDepth(getScrollDepth), {
-      passive: true,
-    });
-    return () =>
-      document.removeEventListener('scroll', () =>
-        setScrollDepth(getScrollDepth),
-      );
+    return () => undefined;
   }, [
     optimizely,
     scrollDepth,
@@ -60,7 +68,7 @@ const useOptimizelyScrollDepth = () => {
     scrollHundred,
     scrollSeventyFive,
     scrollTwentyFive,
-    experimentVariation,
+    experiments,
   ]);
 
   return {
