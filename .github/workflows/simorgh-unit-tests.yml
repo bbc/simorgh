@@ -72,7 +72,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: install
     strategy:
-      fail-fast: true
+      fail-fast: false
       matrix:
         node-version: [22.x]
         containers: [1, 2, 3, 4]
@@ -107,7 +107,6 @@ jobs:
       - name: Unit Tests - Express App
         run: |
           export INDEX=$((${{ strategy.job-index }} + 1))
-          echo $INDEX/${{ strategy.job-total }}
           yarn test:unit:ci --shard=$INDEX/${{ strategy.job-total }}
 
       - name: Unit Tests - Next.JS App
