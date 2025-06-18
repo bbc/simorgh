@@ -1,6 +1,7 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/react';
-import { use, useEffect, useRef } from 'react';
+/* @jsxFrag React.Fragment */
+import { Global, jsx } from '@emotion/react';
+import React, { use, useEffect, useRef } from 'react';
 import MediaLoader from '#app/components/MediaLoader';
 import {
   PortraitClipMediaBlock,
@@ -152,9 +153,8 @@ const PortraitVideoModal = ({
     const reactRootElement = document.getElementById('root');
 
     if (modal) {
-      modal.scrollTop = 0;
       closeButtonRef.current?.focus();
-      document.body.style.overflow = 'hidden';
+
       reactRootElement?.setAttribute('inert', 'true');
 
       modal.addEventListener('mousedown', handleBackdropClick);
@@ -163,7 +163,6 @@ const PortraitVideoModal = ({
     }
 
     return () => {
-      document.body.removeAttribute('style');
       reactRootElement?.removeAttribute('inert');
 
       modal?.removeEventListener('mousedown', handleBackdropClick);
@@ -179,34 +178,37 @@ const PortraitVideoModal = ({
   }, []);
 
   return (
-    <div
-      role="dialog"
-      aria-modal="true"
-      aria-label={modalLabel}
-      ref={modalRef}
-      css={styles.modal}
-    >
-      <button
-        ref={closeButtonRef}
-        type="button"
-        data-testid="close-modal-button"
-        css={styles.closeButton}
-        className="focusIndicatorInvert"
-        onClick={onClose}
+    <>
+      <Global styles={styles.bodyOverflowHidden} />
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-label={modalLabel}
+        ref={modalRef}
+        css={styles.modal}
       >
-        {navigationIcons.cross}
-        <VisuallyHiddenText>{closeVideo}</VisuallyHiddenText>
-      </button>
-      <MediaLoader
-        css={styles.mediaWrapper}
-        blocks={[blocks?.[selectedVideoIndex]]}
-        eventMapping={{
-          playlistLoaded: e => playlistLoadedCallback(e, blocks),
-          pluginLoaded: pluginLoadedCallback,
-          fullscreenExit: onClose,
-        }}
-      />
-    </div>
+        <button
+          ref={closeButtonRef}
+          type="button"
+          data-testid="close-modal-button"
+          css={styles.closeButton}
+          className="focusIndicatorInvert"
+          onClick={onClose}
+        >
+          {navigationIcons.cross}
+          <VisuallyHiddenText>{closeVideo}</VisuallyHiddenText>
+        </button>
+        <MediaLoader
+          css={styles.mediaWrapper}
+          blocks={[blocks?.[selectedVideoIndex]]}
+          eventMapping={{
+            playlistLoaded: e => playlistLoadedCallback(e, blocks),
+            pluginLoaded: pluginLoadedCallback,
+            fullscreenExit: onClose,
+          }}
+        />
+      </div>
+    </>
   );
 };
 
