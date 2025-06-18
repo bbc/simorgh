@@ -19,7 +19,7 @@ const styles = {
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      zIndex: 2,
+      zIndex: 100,
 
       '&::after': {
         content: '""',
