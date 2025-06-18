@@ -3,6 +3,7 @@
 import React, { useContext, useState } from 'react';
 import { jsx, useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
+import enabledExperimentList from '#server/utilities/mvtHeader/enabledExperimentsList';
 import { singleTextBlock } from '#app/models/blocks';
 import useOptimizelyMvtVariation from '#app/hooks/useOptimizelyMvtVariation';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
@@ -19,7 +20,6 @@ import SocialEmbedContainer from '#containers/SocialEmbed';
 import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
-import OPTIMIZELY_CONFIG from '#app/lib/config/optimizely';
 
 import {
   getArticleId,
@@ -157,7 +157,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   } = useTheme();
 
   const experimentVariant = useOptimizelyMvtVariation(
-    OPTIMIZELY_CONFIG.ruleKey,
+    // assuming this will the same as rulekey
+    enabledExperimentList[0]?.name,
   );
 
   const isInExperiment = experimentVariant && experimentVariant !== 'off';
