@@ -908,11 +908,11 @@ describe('Article Page', () => {
 
   describe('when rendering an article page with a portrait video', () => {
     it.each`
-      pageData                       | service         | expected
-      ${articleDataPidginWithPV}     | ${'pidgin'}     | ${'Watch Moments'}
-      ${articleDataPortugueseWithPV} | ${'portuguese'} | ${'Assista'}
+      pageData                       | service         | expected     | title     | translation
+      ${articleDataPidginWithPV}     | ${'pidgin'}     | ${undefined} | ${' not'} | ${' no'}
+      ${articleDataPortugueseWithPV} | ${'portuguese'} | ${'Assista'} | ${''}     | ${' a'}
     `(
-      `should render the $expected title with the MediaLoader component`,
+      `should$title render the title if there is$translation "WatchMoments" translation`,
       ({ pageData, service, expected }) => {
         render(
           <Context service={service}>
@@ -921,7 +921,12 @@ describe('Article Page', () => {
         );
 
         const title = screen.queryByRole('strong');
-        expect(title?.textContent).toEqual(expected);
+        if (expected) {
+          expect(title).toBeInTheDocument();
+          expect(title?.textContent).toEqual(expected);
+        } else {
+          expect(title).not.toBeInTheDocument();
+        }
       },
     );
   });
