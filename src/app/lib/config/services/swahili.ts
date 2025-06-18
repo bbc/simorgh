@@ -46,6 +46,24 @@ export const service: DefaultServiceConfig = {
     homePageTitle: 'Swahili',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'Whatsapp',
+      brandTitle: 'BBC Swahili sasa kwenye WhatsApp',
+      brandDescription:
+        'Pata habari za kina kutoka BBC News Swahili, moja kwa moja kupitia WhatsApp.',
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0ljr69d.png',
+        alt: 'BBC Swahili WhatsApp bofya kutufuatilia',
+      },
+      linkLabel: {
+        text: 'Bonyeza hapa kujiunga',
+        href: 'https://www.whatsapp.com/channel/0029Vaguu59FcowC5O1Nl01o',
+      },
+      skipLink: {
+        text: 'Hauhitaji %title%',
+        endTextVisuallyHidden: 'Mwisho wa %title%',
+      },
+    },
     translations: {
       pagination: {
         page: 'Ukurasa',
