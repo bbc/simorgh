@@ -28,6 +28,18 @@ describe('PortraitVideoModal', () => {
     expect(modal).toBeInTheDocument();
   });
 
+  it('should set the root React element to "inert" when the modal is open', () => {
+    render(
+      <div id="root">
+        <Component selectedVideoIndex={0} items={items} onClose={mockClose} />
+      </div>,
+    );
+
+    const rootElement = document.getElementById('root');
+
+    expect(rootElement).toHaveAttribute('inert');
+  });
+
   it('should close the modal when the close button is clicked', () => {
     render(
       <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,

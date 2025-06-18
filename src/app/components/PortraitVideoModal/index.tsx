@@ -149,11 +149,13 @@ const PortraitVideoModal = ({
     };
 
     const modal = modalRef.current;
+    const reactRootElement = document.getElementById('root');
 
     if (modal) {
       modal.scrollTop = 0;
       closeButtonRef.current?.focus();
       document.body.style.overflow = 'hidden';
+      reactRootElement?.setAttribute('inert', 'true');
 
       modal.addEventListener('mousedown', handleBackdropClick);
       modal.addEventListener('touchstart', handleBackdropClick);
@@ -162,6 +164,7 @@ const PortraitVideoModal = ({
 
     return () => {
       document.body.removeAttribute('style');
+      reactRootElement?.removeAttribute('inert');
 
       modal?.removeEventListener('mousedown', handleBackdropClick);
       modal?.removeEventListener('touchstart', handleBackdropClick);
