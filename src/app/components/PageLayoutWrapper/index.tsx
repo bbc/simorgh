@@ -8,7 +8,7 @@ import { Helmet } from 'react-helmet';
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
 import { PageTypes } from '#app/models/types/global';
 import useOptimizelyMvtVariation from '#app/hooks/useOptimizelyMvtVariation';
-import OPTIMIZELY_CONFIG from '#app/lib/config/optimizely';
+import enabledExperimentList from '#server/utilities/mvtHeader/enabledExperimentsList';
 import { TopStoryItem } from '../../pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import WebVitals from '../../legacy/containers/WebVitals';
 import HeaderContainer from '../../legacy/containers/Header';
@@ -61,7 +61,7 @@ const PageLayoutWrapper = ({
   let wordCount: wordCountType = 0;
   let propsForOJExperiment = {};
   const experimentVariant = useOptimizelyMvtVariation(
-    OPTIMIZELY_CONFIG.ruleKey,
+    enabledExperimentList[0]?.name,
   );
   if (pageType === 'article') {
     wordCount = pageData?.content?.model?.blocks

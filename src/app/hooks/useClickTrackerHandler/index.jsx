@@ -1,7 +1,6 @@
 /* eslint-disable no-console */
 import { useContext, useCallback, useState } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
-import useOptimizelyMvtVariation from '#app/hooks/useOptimizelyMvtVariation';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
 import constructStaticATIUrl from '#app/lib/analyticsUtils/staticATITracking/constructATIUrl';
 import {
@@ -11,7 +10,6 @@ import {
 import { RequestContext } from '#app/contexts/RequestContext';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import useTrackingToggle from '../useTrackingToggle';
-import OPTIMIZELY_CONFIG from '../../lib/config/optimizely';
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon/index';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { isValidClick } from './clickTypes';
@@ -31,6 +29,8 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
     producerName,
     preventNavigation,
     sendOptimizelyEvents,
+    experimentName,
+    optimizelyVariation,
     groupTracker,
     itemTracker,
   } = extractATITrackingProps({ eventTrackingData, eventType: CLICK_EVENT });
@@ -41,9 +41,6 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
   const { service, useReverb } = useContext(ServiceContext);
 
   const { optimizely } = useContext(OptimizelyContext);
-  const optimizelyVariation = useOptimizelyMvtVariation(
-    OPTIMIZELY_CONFIG.ruleKey,
-  );
 
   return useCallback(
     async event => {
@@ -71,7 +68,12 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
           event.stopPropagation();
           event.preventDefault();
 
-          if (optimizely && sendOptimizelyEvents && optimizelyVariation) {
+          if (
+            optimizely &&
+            optimizelyVariation &&
+            optimizelyVariation !== 'off' &&
+            sendOptimizelyEvents
+          ) {
             const overrideAttributes = optimizely?.user.attributes;
 
             optimizely.track(
@@ -101,6 +103,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
               ...(itemTracker && { itemTracker }),
               ...(optimizelyVariation &&
                 optimizelyVariation !== 'off' && {
+                  experimentName,
                   experimentVariant: optimizelyVariation,
                 }),
             });
@@ -132,6 +135,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
       format,
       sendOptimizelyEvents,
       optimizely,
+      experimentName,
       optimizelyVariation,
       detailedPlacement,
       useReverb,

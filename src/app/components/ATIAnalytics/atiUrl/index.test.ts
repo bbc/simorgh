@@ -9,7 +9,9 @@ import {
 } from '.';
 import splitUrl from './splitUrl';
 
-jest.mock('#app/lib/config/optimizely', () => ({ flagKey: 'mockFlagKey' }));
+jest.mock('#server/utilities/mvtHeader/enabledExperimentsList', () => [
+  { name: 'mockFlagKey' },
+]);
 
 // @ts-expect-error required for testing purposes
 const mockAndSet = ({ name, source }, response) => {
@@ -625,6 +627,7 @@ describe('Reverb', () => {
       it('should add experiment fields if experimentVariant is present', () => {
         const reverbPageSectionViewEventModel = buildReverbEventModel({
           ...input,
+          experimentName: 'mockFlagKey',
           experimentVariant: 'variant_1',
         });
 

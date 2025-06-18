@@ -4,7 +4,7 @@ import {
   VIEWABILITY_CLICK_EVENT,
 } from '#app/lib/analyticsUtils/analytics.const';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
+import enabledExperimentList from '#server/utilities/mvtHeader/enabledExperimentsList';
 import {
   getDestination,
   getAppType,
@@ -491,7 +491,7 @@ export const buildReverbAnalyticsModel = ({
           x17: categoryName,
           x18: isLocServeCookieSet(),
           ...(experimentVariant && {
-            mv_test: OPTIMIZELY_CONFIG.flagKey,
+            mv_test: enabledExperimentList[0]?.name,
             mv_creation: `${experimentVariant}`,
           }),
         },
@@ -515,6 +515,7 @@ export const buildReverbEventModel = ({
   type,
   advertiserID,
   url,
+  experimentName,
   experimentVariant,
   itemTracker = {},
   groupTracker = {},
@@ -568,9 +569,7 @@ export const buildReverbEventModel = ({
       ...(experimentVariant && {
         experience: {
           engine_type: ['experimentation'],
-          engine_id: [
-            `optimizely.${OPTIMIZELY_CONFIG.flagKey}.${experimentVariant}`,
-          ],
+          engine_id: [`optimizely.${experimentName}.${experimentVariant}`],
         },
       }),
     },

@@ -160,6 +160,7 @@ export interface ATIEventTrackingProps {
   url?: string;
   detailedPlacement?: string;
   useReverb?: boolean;
+  experimentName?: string;
   experimentVariant?: string;
   ampExperimentName?: string;
   preventNavigation?: string;
