@@ -127,7 +127,7 @@ const PortraitVideoModal = ({
 }: PortraitVideoModalProps) => {
   const {
     translations: {
-      media: { closeVideo = 'Close' },
+      media: { closeVideo = 'Close', modalLabel = 'Media modal' },
     },
   } = use(ServiceContext);
   const modalRef = useRef<HTMLDivElement>(null);
@@ -176,7 +176,13 @@ const PortraitVideoModal = ({
   }, []);
 
   return (
-    <div role="dialog" aria-modal="true" ref={modalRef} css={styles.modal}>
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-label={modalLabel}
+      ref={modalRef}
+      css={styles.modal}
+    >
       <button
         ref={closeButtonRef}
         type="button"
