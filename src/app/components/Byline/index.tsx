@@ -71,7 +71,7 @@ const Byline = ({
               )}
               <li>
                 {authorTopicUrl ? (
-                  <React.Fragment>
+                  <>
                     <VisuallyHiddenText>{`${author}, ${authorName}`}</VisuallyHiddenText>
                     <a
                       css={[BylineCss.link]}
@@ -92,7 +92,7 @@ const Byline = ({
                         <RightChevron css={BylineCss.authorChevron} />
                       )}
                     </a>
-                  </React.Fragment>
+                  </>
                 ) : (
                   <span role="text">
                     <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>

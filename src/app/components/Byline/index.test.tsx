@@ -58,18 +58,17 @@ describe('Byline', () => {
   it('should render a list when required data is passed correctly', () => {
     render(<Byline blocks={bylineWithNameAndRole} />);
 
-    const list = screen.getAllByRole('list');
+    const [list] = screen.getAllByRole('list');
 
-    expect(list[0]).toBeInTheDocument();
+    expect(list).toBeInTheDocument();
   });
 
   it('should render all listitems correctly', () => {
     render(<Byline blocks={bylineWithPngPhoto} />);
 
-    const contributorLists = screen.getAllByRole('list');
-    const firstContributorItems = within(contributorLists[0]).getAllByRole(
-      'listitem',
-    );
+    const [firstContributor] = screen.getAllByRole('list');
+    const firstContributorItems =
+      within(firstContributor).getAllByRole('listitem');
 
     expect(firstContributorItems.length).toBe(5);
   });

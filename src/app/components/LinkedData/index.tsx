@@ -20,8 +20,8 @@ type OrgAuthor = {
 };
 
 type AuthorStructure = {
-  image?: string | undefined;
-  sameAs?: (string | undefined)[] | undefined;
+  image?: string;
+  sameAs?: string[];
   '@type': string;
   name: string | undefined;
 };
@@ -138,7 +138,9 @@ const LinkedData = ({
     const { authorName, authorTopicUrl, twitterLink, authorImage, location } =
       data || {};
 
-    const sameAs = [authorTopicUrl, twitterLink].filter(Boolean);
+    const sameAs = [authorTopicUrl, twitterLink].filter(
+      (link): link is string => Boolean(link),
+    );
     if (location) {
       if (!places.includes(location)) {
         places.push(location);
@@ -173,7 +175,7 @@ const LinkedData = ({
   let author: OrgAuthor | Author = orgAuthor;
 
   if (hasByline && bylineAuthors && bylineAuthors.length > 0) {
-    author = bylineAuthors.length === 1 ? bylineAuthors?.[0] : bylineAuthors;
+    author = bylineAuthors.length === 1 ? bylineAuthors[0] : bylineAuthors;
   }
   const linkedData = {
     '@type': type,
