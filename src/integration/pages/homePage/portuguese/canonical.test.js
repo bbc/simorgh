@@ -8,6 +8,7 @@ import { data as pageData } from '../../../../../data/portuguese/homePage/index.
 
 describe('Canonical', () => {
   numberOfCurationsTest(pageData);
+
   const portraitVideoCurations = pageData.curations.filter(
     curation =>
       curation.portraitVideo && Array.isArray(curation.portraitVideo.items),
