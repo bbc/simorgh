@@ -65,7 +65,7 @@ jobs:
           ./cc-test-reporter before-build
 
       - name: Unit Tests - Express App
-        run: yarn test:unit
+        run: yarn test:unit:ci --shard=1/1
 
       - name: Unit Tests - Next.JS App
         working-directory: ./ws-nextjs-app
