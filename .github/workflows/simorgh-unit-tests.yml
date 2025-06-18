@@ -78,6 +78,7 @@ jobs:
         with:
           name: simorgh-build
           path: build
+        run: ls -R build
 
       - name: Install Node Modules
         if: steps.cache.outputs.cache-hit != 'true'
