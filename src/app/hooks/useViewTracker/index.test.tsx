@@ -44,7 +44,7 @@ const IntersectionObserver = jest.fn(cb => {
 const getObserverInstance = (element: HTMLElement) => {
   try {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
+    // @ts-ignore - Required for testing purposes. Using @ts-expect-error causes github actions to fail.
     const [instance] = Array.from(observers).find(([, item]) =>
       item.elements.has(element),
     );
