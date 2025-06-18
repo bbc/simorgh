@@ -193,7 +193,7 @@
     "cypress": "14.4.0",
     "cypress-axe": "1.6.0",
     "cypress-multi-reporters": "2.0.5",
-    "cypress-split": "1.24.0",
+    "cypress-split": "1.24.18",
     "cypress-terminal-report": "7.2.0",
     "depcheck": "1.4.7",
     "duplicate-package-checker-webpack-plugin": "3.0.0",
