@@ -14,6 +14,7 @@ jest.mock('#hooks/useOptimizelyVariation', () => jest.fn(() => null));
 const optimizely = {
   onReady: jest.fn(() => Promise.resolve()),
   track: jest.fn(),
+  setUser: jest.fn(() => Promise.resolve()),
 };
 
 const observers = new Map();

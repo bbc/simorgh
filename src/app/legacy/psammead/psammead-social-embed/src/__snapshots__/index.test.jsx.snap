@@ -326,6 +326,7 @@ exports[`AmpSocialEmbed should render correctly for Facebook 1`] = `
   border-radius: 0;
   padding: 0.5rem;
   cursor: pointer;
+  color: #000000;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -349,6 +350,21 @@ exports[`AmpSocialEmbed should render correctly for Facebook 1`] = `
   border: 0.0625rem solid #B80000;
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-7 {
+    background-color: canvas;
+    color: canvasText;
+    border: 0.0625rem solid canvasText;
+  }
+
+  .emotion-7:hover,
+  .emotion-7:focus {
+    background-color: canvas;
+    color: canvasText;
+    border: 0.0625rem solid canvasText;
+  }
 }
 
 .emotion-7:focus-visible {
@@ -602,6 +618,7 @@ exports[`AmpSocialEmbed should render correctly for Instagram 1`] = `
   border-radius: 0;
   padding: 0.5rem;
   cursor: pointer;
+  color: #000000;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -625,6 +642,21 @@ exports[`AmpSocialEmbed should render correctly for Instagram 1`] = `
   border: 0.0625rem solid #B80000;
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-7 {
+    background-color: canvas;
+    color: canvasText;
+    border: 0.0625rem solid canvasText;
+  }
+
+  .emotion-7:hover,
+  .emotion-7:focus {
+    background-color: canvas;
+    color: canvasText;
+    border: 0.0625rem solid canvasText;
+  }
 }
 
 .emotion-7:focus-visible {
@@ -879,6 +911,7 @@ exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
   border-radius: 0;
   padding: 0.5rem;
   cursor: pointer;
+  color: #000000;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -902,6 +935,21 @@ exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
   border: 0.0625rem solid #B80000;
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-7 {
+    background-color: canvas;
+    color: canvasText;
+    border: 0.0625rem solid canvasText;
+  }
+
+  .emotion-7:hover,
+  .emotion-7:focus {
+    background-color: canvas;
+    color: canvasText;
+    border: 0.0625rem solid canvasText;
+  }
 }
 
 .emotion-7:focus-visible {
@@ -928,7 +976,7 @@ exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
       href="#skip-twitter-content"
     >
       <span>
-        Skip Twitter content
+        Skip X content
       </span>
     </a>
     <div
@@ -940,17 +988,17 @@ exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
         class="emotion-5"
         data-testid="banner-heading"
       >
-        Allow Twitter content?
+        Allow X content?
       </strong>
       <p
         class="emotion-6"
         data-testid="banner-body"
       >
-        This article contains content provided by Twitter.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Twitter 
+        This article contains content provided by X.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read X 
         <a
           aria-label="cookie policy, external"
           class="focusIndicatorReducedWidth"
-          href="https://help.twitter.com/en/rules-and-policies/twitter-cookies"
+          href="https://help.x.com/en/rules-and-policies/x-cookies"
         >
           cookie policy
         </a>
@@ -958,7 +1006,7 @@ exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
         <a
           aria-label="privacy policy, external"
           class="focusIndicatorReducedWidth"
-          href="https://twitter.com/en/privacy"
+          href="https://x.com/en/privacy"
         >
           privacy policy
         </a>
@@ -989,7 +1037,7 @@ exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
       id="skip-twitter-content"
       tabindex="-1"
     >
-      End of Twitter content
+      End of X content
     </p>
   </div>
 </div>
@@ -1058,7 +1106,7 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
 
 .emotion-4 {
   margin: 0;
-  background-color: transparent;
+  background-color: 'transparent';
 }
 
 .emotion-6 {
@@ -1160,6 +1208,7 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
   border-radius: 0;
   padding: 0.5rem;
   cursor: pointer;
+  color: #000000;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1183,6 +1232,21 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
   border: 0.0625rem solid #B80000;
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-9 {
+    background-color: canvas;
+    color: canvasText;
+    border: 0.0625rem solid canvasText;
+  }
+
+  .emotion-9:hover,
+  .emotion-9:focus {
+    background-color: canvas;
+    color: canvasText;
+    border: 0.0625rem solid canvasText;
+  }
 }
 
 .emotion-9:focus-visible {
@@ -1703,7 +1767,7 @@ exports[`CanonicalSocialEmbed Twitter should render correctly for Twitter 1`] = 
     href="#skip-twitter-content"
   >
     <span>
-      Skip Twitter content
+      Skip X content
     </span>
   </a>
   <div
@@ -1733,7 +1797,7 @@ exports[`CanonicalSocialEmbed Twitter should render correctly for Twitter 1`] = 
     id="skip-twitter-content"
     tabindex="-1"
   >
-    End of Twitter content
+    End of X content
   </p>
 </div>
 `;
@@ -1801,7 +1865,7 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
 
 .emotion-4 {
   margin: 0;
-  background-color: transparent;
+  background-color: 'transparent';
 }
 
 .emotion-6 {
@@ -1876,7 +1940,7 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
   class="emotion-0 emotion-1"
 >
   <a
-    aria-describedby=":r9:"
+    aria-describedby="«r9»"
     class="focusIndicatorRemove emotion-2 emotion-3"
     href="#skip-youtube-content"
   >
@@ -1901,7 +1965,7 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
     </div>
     <small
       class="emotion-8 emotion-9"
-      id=":r9:"
+      id="«r9»"
     >
       undefined
     </small>
@@ -2219,7 +2283,7 @@ exports[`CanonicalSocialEmbed should render a notice when there is no oEmbed res
       href="#skip-twitter-content"
     >
       <span>
-        Skip Twitter content
+        Skip X content
       </span>
     </a>
     <div
@@ -2231,10 +2295,10 @@ exports[`CanonicalSocialEmbed should render a notice when there is no oEmbed res
         Sorry but we're having trouble displaying this content
       </p>
       <a
-        aria-label="View content on Twitter, external"
+        aria-label="View content on X, external"
         href="embed-url"
       >
-        View content on Twitter
+        View content on X
       </a>
       <small>
         Warning: BBC is not responsible for third party content
@@ -2245,7 +2309,7 @@ exports[`CanonicalSocialEmbed should render a notice when there is no oEmbed res
       id="skip-twitter-content"
       tabindex="-1"
     >
-      End of Twitter content
+      End of X content
     </p>
   </div>
   <noscript />

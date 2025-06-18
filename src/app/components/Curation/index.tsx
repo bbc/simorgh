@@ -6,6 +6,7 @@ import {
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
 import RadioSchedule from '#app/legacy/containers/RadioSchedule';
+import isLive from '#app/lib/utilities/isLive';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
@@ -16,6 +17,9 @@ import MostRead from '../MostRead';
 import { GHOST } from '../ThemeProvider/palette';
 import Embed from '../Embeds/OEmbed';
 import Billboard from '../Billboard';
+import PortraitVideoCarousel from '../PortraitVideoCarousel';
+import UsefulLinks from '../UsefulLinks';
+import SocialLinks from '../SocialLinks';
 import styles from './index.styles';
 
 const {
@@ -27,6 +31,9 @@ const {
   RADIO_SCHEDULE,
   EMBED,
   BILLBOARD,
+  PORTRAIT_VIDEO_CAROUSEL,
+  USEFUL_LINKS,
+  SOCIAL_LINKS,
 } = COMPONENT_NAMES;
 
 const { NONE } = VISUAL_STYLE;
@@ -55,6 +62,9 @@ export default ({
   radioSchedule,
   nthCurationByStyleAndProminence = 1,
   embed,
+  portraitVideo,
+  renderVisuallyHiddenH2Title = false,
+  curationId,
 }: Curation) => {
   const componentName = getComponentName({
     visualStyle,
@@ -65,6 +75,7 @@ export default ({
   const GridComponent = getGridComponent(componentName);
 
   const isFirstCuration = position === 0;
+
   const curationSubheading = title || topStoriesTitle;
   const id =
     `${visualProminence}-${visualStyle}-${nthCurationByStyleAndProminence}`.toLowerCase();
@@ -92,7 +103,7 @@ export default ({
           <div css={styles.billboardContainer}>
             <Billboard
               heading={firstSummary.title}
-              description={description}
+              description={description as string}
               link={summaryLink}
               image={imageUrl}
               id={billboardId}
@@ -135,33 +146,71 @@ export default ({
         />
       );
     case RADIO_SCHEDULE:
-      return <RadioSchedule initialData={radioSchedule} />;
+      return (
+        <RadioSchedule
+          initialData={radioSchedule}
+          toggleName="homePageRadioSchedule"
+        />
+      );
     case EMBED:
       return embed ? <Embed oembed={embed} /> : null;
+    case PORTRAIT_VIDEO_CAROUSEL:
+      if (
+        portraitVideo?.items &&
+        portraitVideo?.items?.length > 0 &&
+        !isLive()
+      ) {
+        return (
+          <PortraitVideoCarousel
+            title={title}
+            items={portraitVideo.items}
+            {...(curationId && { groupTrackingId: curationId })}
+          />
+        );
+      }
+      return null;
+    case USEFUL_LINKS:
+      return (
+        <UsefulLinks
+          summaries={summaries}
+          title={title}
+          id={`useful-links-${nthCurationByStyleAndProminence}`}
+        />
+      );
+    case SOCIAL_LINKS:
+      return (
+        <SocialLinks
+          summaries={summaries}
+          title={title}
+          id={`social-links-${nthCurationByStyleAndProminence}`}
+        />
+      );
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:
       if (summaries.length > 0) {
-        return curationLength > 1 && (title || isFirstCuration) ? (
+        return curationLength > 1 ? (
           <section aria-labelledby={id} role="region">
-            {isFirstCuration ? (
-              <VisuallyHiddenText id={id} as="h2">
-                {curationSubheading}
-              </VisuallyHiddenText>
-            ) : (
-              <Subheading id={id} link={link}>
-                {curationSubheading}
-              </Subheading>
-            )}
+            {curationSubheading &&
+              (renderVisuallyHiddenH2Title ? (
+                <VisuallyHiddenText id={id} as="h2">
+                  {curationSubheading}
+                </VisuallyHiddenText>
+              ) : (
+                <Subheading id={id} link={link}>
+                  {curationSubheading}
+                </Subheading>
+              ))}
             <GridComponent
               summaries={summaries}
-              headingLevel={3} // if there are multiple curations, each curation's heading will be h2 and the promos within will be h3
+              headingLevel={3}
+              isFirstCuration={isFirstCuration}
             />
           </section>
         ) : (
           <GridComponent
             summaries={summaries}
-            headingLevel={2} // if there is only one curation, all promos should be h2
+            headingLevel={2} // if there is only one curation, all promos should be h2, and no subheading
             isFirstCuration={isFirstCuration}
           />
         );

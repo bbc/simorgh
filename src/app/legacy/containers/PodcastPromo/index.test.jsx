@@ -115,7 +115,7 @@ describe('Inline', () => {
   it('should render the "Episodes" call to action in a paragraph element', () => {
     const { getByText } = render(<PromoWithContext inline />);
 
-    expect(getByText('эпизоды').closest('p')).toBeInTheDocument();
+    expect(getByText('Подписывайтесь').closest('p')).toBeInTheDocument();
   });
 
   it('SVGs should use focusable=false and aria-hidden=true to ensure the icon is not focusable in the tabbing order (IE 11)', () => {
@@ -201,7 +201,7 @@ describe('SecondaryColumn', () => {
   it('should render the "Episodes" call to action in a paragraph element', () => {
     const { getByText } = render(<PromoWithContext />);
 
-    expect(getByText('эпизоды').closest('p')).toBeInTheDocument();
+    expect(getByText('Подписывайтесь').closest('p')).toBeInTheDocument();
   });
 
   it('SVGs should use focusable=false and aria-hidden=true to ensure the icon is not focusable in the tabbing order (IE 11)', () => {

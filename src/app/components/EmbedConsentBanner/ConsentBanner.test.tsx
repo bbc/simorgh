@@ -95,7 +95,7 @@ describe('Embed Consent Banner - Content', () => {
     );
   });
 
-  it('should render a Twitter consent banner with correct content for Mundo service', () => {
+  it('should render a X consent banner with correct content for Mundo service', () => {
     render(
       <ConsentBanner
         provider="twitter"
@@ -109,9 +109,9 @@ describe('Embed Consent Banner - Content', () => {
     const heading = screen.getByTestId('banner-heading');
     const body = screen.getByTestId('banner-body');
 
-    expect(heading.textContent).toEqual('¿Permitir el contenido de Twitter?');
+    expect(heading.textContent).toEqual('¿Permitir el contenido de X?');
     expect(body.textContent).toEqual(
-      "Este artículo contiene contenido proporcionado por Twitter. Solicitamos tu permiso antes de que algo  se cargue, ya que ese sitio  puede estar usando cookies y otras tecnologías. Es posible que quieras leer política de cookies y política de privacidad de Twitter antes de aceptar. Para ver este contenido, selecciona 'aceptar y continuar'.",
+      "Este artículo contiene contenido proporcionado por X. Solicitamos tu permiso antes de que algo  se cargue, ya que ese sitio  puede estar usando cookies y otras tecnologías. Es posible que quieras leer política de cookies y política de privacidad de X antes de aceptar. Para ver este contenido, selecciona 'aceptar y continuar'.",
     );
   });
 

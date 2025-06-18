@@ -12,13 +12,15 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
   }
 }
 
-.emotion-0::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  border-bottom: 0.0625rem solid #E6E8EA;
+@media (min-width: 62.9375rem) {
+  .emotion-0::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-bottom: 0.0625rem solid #E6E8EA;
+  }
 }
 
 .emotion-0 .e11sm0on2::after {

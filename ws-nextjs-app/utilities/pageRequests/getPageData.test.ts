@@ -1,10 +1,12 @@
-import loggerMock from '#testHelpers/loggerMock';
 import * as fetchPageData from '#app/routes/utils/fetchPageData';
 import * as getToggles from '#app/lib/utilities/getToggles';
+import * as fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
 import getPageData from './getPageData';
 
 const agent = { cert: 'cert', ca: 'ca', key: 'key' };
-jest.mock('../undiciAgent', () => jest.fn(() => Promise.resolve(agent)));
+jest.mock('#server/utilities/getAgent', () =>
+  jest.fn(() => Promise.resolve(agent)),
+);
 
 describe('getPageData', () => {
   beforeEach(() => {
@@ -26,26 +28,50 @@ describe('getPageData', () => {
 
       jest.spyOn(getToggles, 'default').mockResolvedValue(toggleResponse);
 
-      const { data: actualData, toggles: actualToggles } = await getPageData(
-        {
-          id: 'u50853489',
-          service: 'mundo',
-          rendererEnv: undefined,
-          resolvedUrl: '/mundo/send/u50853489',
-        },
-        {
-          pageType: 'ugcForm',
-          service: 'mundo',
-          variant: undefined,
-        },
-        loggerMock,
-      );
+      const { data: actualData, toggles: actualToggles } = await getPageData({
+        id: 'u50853489',
+        service: 'mundo',
+        variant: undefined,
+        rendererEnv: undefined,
+        resolvedUrl: '/mundo/send/u50853489',
+        pageType: 'ugcForm',
+      });
 
       expect(actualData).toStrictEqual({
         pageData: fetchDataResponse,
         status: 200,
       });
       expect(actualToggles).toStrictEqual(toggleResponse);
+    });
+
+    it('Cleans malicious query parameters', async () => {
+      const fetchDataResponse = { title: 'UGC Form Title!' };
+
+      const toggleResponse = {
+        toggles: { testToggle: { enabled: true } },
+      };
+
+      jest.spyOn(fetchPageData, 'default').mockResolvedValue({
+        status: 200,
+        json: { data: fetchDataResponse },
+      });
+
+      jest.spyOn(getToggles, 'default').mockResolvedValue(toggleResponse);
+
+      const fetchDataFromBFFSpy = jest.spyOn(fetchDataFromBFF, 'default');
+
+      await getPageData({
+        id: 'u50853489',
+        service: 'mundo',
+        variant: undefined,
+        rendererEnv: 'live&evilParam=evil',
+        resolvedUrl: '/mundo/send/u50853489',
+        pageType: 'ugcForm',
+      });
+
+      expect(fetchDataFromBFFSpy.mock.calls[0][0].pathname).toEqual(
+        'u50853489?renderer_env=live',
+      );
     });
 
     it('Returns page data and status 404 for an invalid page', async () => {
@@ -61,20 +87,14 @@ describe('getPageData', () => {
 
       jest.spyOn(getToggles, 'default').mockResolvedValue(toggleResponse);
 
-      const { data: actualData, toggles: actualToggles } = await getPageData(
-        {
-          id: 'u50853489',
-          service: 'mundo',
-          rendererEnv: undefined,
-          resolvedUrl: '/mundo/send/u50853489',
-        },
-        {
-          pageType: 'ugcForm',
-          service: 'mundo',
-          variant: undefined,
-        },
-        loggerMock,
-      );
+      const { data: actualData, toggles: actualToggles } = await getPageData({
+        id: 'u50853489',
+        service: 'mundo',
+        variant: undefined,
+        rendererEnv: undefined,
+        resolvedUrl: '/mundo/send/u50853489',
+        pageType: 'ugcForm',
+      });
 
       expect(actualData).toStrictEqual({
         error: errorMessage,

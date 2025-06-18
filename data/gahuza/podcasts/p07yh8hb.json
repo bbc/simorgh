@@ -1,330 +1,137 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares:ws_media:brand:bbc_gahuza_radio/p07yh8hb",
-    "locators": { "pid": "p096621h", "brandPid": "p07yh8hb" },
-    "type": "WSRADIO",
-    "createdBy": "bbc_gahuza_radio",
+  "data": {
+    "metadata": {
+      "type": "Podcast",
+      "atiAnalytics": {
+        "pageIdentifier": "gahuza.bbc_gahuza_radio.podcasts.programmes.p07yh8hb.page",
+        "contentType": "player-episode",
+        "pageTitle": "Baza Muganga - BBC News Gahuza",
+        "language": "rw",
+        "contentId": "urn:bbc:pips:p07yh8hb"
+      }
+    },
     "language": "rw",
-    "lastUpdated": 1612889474546,
-    "firstPublished": 1612548597000,
-    "lastPublished": 1612548597000,
-    "timestamp": 1612548597000,
-    "options": {},
-    "analyticsLabels": {
-      "pageTitle": "Baza Muganga - BBC News Gahuza",
-      "pageIdentifier": "gahuza.bbc_gahuza_radio.programmes.p07yh8hb.page",
-      "producerId": "40",
-      "contentType": "player-episode",
-      "producer": "GAHUZA"
-    },
-    "tags": {},
-    "version": "v1.3.11",
-    "blockTypes": ["media"],
-    "title": "Baza Muganga",
-    "releaseDateTimeStamp": 1612483200000,
-    "atiAnalytics": {}
-  },
-  "content": {
-    "blocks": [
+    "brandTitle": "Baza Muganga",
+    "episodeTitle": "Ikiganiro cyo kuwa 29/11/2024",
+    "headline": "Baza Muganga",
+    "shortSynopsis": "Kurikira ikiganiro Bazamuganga kuri BBC Gahuzamiryango",
+    "mediumSynopsis": "",
+    "id": "urn:bbc:ares:ws_media:brand:bbc_gahuza_radio/p07yh8hb",
+    "brandId": "p07yh8hb",
+    "episodeId": "p0k7t82p",
+    "masterBrand": "bbc_gahuza_radio",
+    "releaseDateTimeStamp": "2024-11-29T00:00:00.000Z",
+    "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p082wk67.jpg",
+    "imageAltText": "",
+    "promoBrandTitle": "Baza Muganga",
+    "durationISO8601": "PT5M45S",
+    "thumbnailImageUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p082wk67.jpg",
+    "episodeAvailability": "available",
+    "recentEpisodes": [
       {
-        "id": "p096621h",
-        "subType": "episode",
-        "format": "Audio",
-        "title": "",
-        "synopses": {
-          "short": "Kurikira ikiganiro Bazamuganga kuri BBC Gahuzamiryango."
-        },
-        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p082wk67.jpg",
-        "embedding": false,
-        "advertising": false,
-        "versions": [
-          {
-            "versionId": "p09661q9",
-            "types": ["Podcast"],
-            "duration": 357,
-            "durationISO8601": "PT5M57S",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": true,
-              "world": false
-            },
-            "availableUntil": 1615140480000,
-            "availableFrom": 1612548480000,
-            "availabilityStatus": "available"
-          }
-        ],
-        "availability": "available",
-        "smpKind": "radioProgramme",
-        "episodeTitle": "Ikiganiro cyo kuwa 05/02/2021",
-        "type": "media"
-      }
-    ]
-  },
-  "promo": {
-    "headlines": { "headline": "Baza Muganga" },
-    "locators": { "pid": "p096621h", "brandPid": "p07yh8hb" },
-    "media": {
-      "id": "p096621h",
-      "subType": "episode",
-      "format": "Audio",
-      "title": "",
-      "synopses": {
-        "short": "Kurikira ikiganiro Bazamuganga kuri BBC Gahuzamiryango."
+        "id": "p0k6cby1",
+        "brandTitle": "Baza Muganga",
+        "episodeTitle": "BBC Gahuzamiryango/ Baza Muganga",
+        "timestamp": "2024-11-22T00:00:00.000Z",
+        "duration": "PT6M2S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p082wk67.jpg",
+        "altText": "Baza Muganga"
       },
-      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p082wk67.jpg",
-      "embedding": false,
-      "advertising": false,
-      "versions": [
-        {
-          "versionId": "p09661q9",
-          "types": ["Podcast"],
-          "duration": 357,
-          "durationISO8601": "PT5M57S",
-          "warnings": {},
-          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
-          "availableUntil": 1615140480000,
-          "availableFrom": 1612548480000,
-          "availabilityStatus": "available"
-        }
-      ],
-      "availability": "available",
-      "smpKind": "radioProgramme",
-      "episodeTitle": "Ikiganiro cyo kuwa 05/02/2021",
-      "type": "media"
-    },
-    "indexImage": {
-      "id": "",
-      "subType": "index",
-      "href": "ichef.bbci.co.uk/images/ic/$recipe/p082wk67.jpg",
-      "path": "ichef.bbci.co.uk/images/ic/$recipe/p082wk67.jpg",
-      "height": 0,
-      "width": 0,
-      "altText": null,
-      "copyrightHolder": null,
-      "type": "image"
-    },
-    "releaseDateTimestamp": 1612483200000,
-    "brand": { "pid": "p07yh8hb", "title": "Baza Muganga" },
-    "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/p096621h",
-    "type": "ws_radio"
-  },
-  "relatedContent": {
-    "site": {
-      "subType": "site",
-      "name": "Gahuza",
-      "uri": "/gahuza",
-      "type": "simple"
-    },
-    "groups": [
       {
-        "type": "other-episode",
-        "promos": [
-          {
-            "headlines": { "headline": "Baza Muganga" },
-            "locators": { "pid": "p095jtct", "brandPid": "p07yh8hb" },
-            "media": {
-              "id": "p095jtct",
-              "subType": "episode",
-              "format": "Audio",
-              "title": "",
-              "synopses": { "short": "Baza muganga kuri BBC gahuzamiryango" },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p082wk67.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "p095jt1q",
-                  "types": ["Podcast"],
-                  "duration": 345,
-                  "durationISO8601": "PT5M45S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableUntil": 1614533280000,
-                  "availableFrom": 1611941280000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "radioProgramme",
-              "episodeTitle": "Baza muganga 29/01/2021",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p082wk67.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p082wk67.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1611878400000,
-            "brand": { "pid": "p07yh8hb", "title": "Baza Muganga" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/p095jtct",
-            "type": "ws_radio"
-          },
-          {
-            "headlines": { "headline": "Baza Muganga" },
-            "locators": { "pid": "p094vs2n", "brandPid": "p07yh8hb" },
-            "media": {
-              "id": "p094vs2n",
-              "subType": "episode",
-              "format": "Audio",
-              "title": "",
-              "synopses": { "short": "Baza Muganga 22/01/2021" },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p082wk67.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "p094vrh5",
-                  "types": ["Podcast"],
-                  "duration": 345,
-                  "durationISO8601": "PT5M45S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableUntil": 1613928780000,
-                  "availableFrom": 1611336780000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "radioProgramme",
-              "episodeTitle": "Baza Muganga 22/01/2021",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p082wk67.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p082wk67.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1611273600000,
-            "brand": { "pid": "p07yh8hb", "title": "Baza Muganga" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/p094vs2n",
-            "type": "ws_radio"
-          },
-          {
-            "headlines": { "headline": "Baza Muganga" },
-            "locators": { "pid": "p0944r77", "brandPid": "p07yh8hb" },
-            "media": {
-              "id": "p0944r77",
-              "subType": "episode",
-              "format": "Audio",
-              "title": "",
-              "synopses": {
-                "short": "Ikiganiro ku guca imvyaro ku bagore kandi igihe kitaragera"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p082wk67.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "p0944qzd",
-                  "types": ["Podcast"],
-                  "duration": 370,
-                  "durationISO8601": "PT6M10S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableUntil": 1613323380000,
-                  "availableFrom": 1610731380000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "radioProgramme",
-              "episodeTitle": "Ikiganiro Bazamuganga co kuri uno wa gatanu itariki 15/01/2021",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p082wk67.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p082wk67.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1610668800000,
-            "brand": { "pid": "p07yh8hb", "title": "Baza Muganga" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/p0944r77",
-            "type": "ws_radio"
-          },
-          {
-            "headlines": { "headline": "Baza Muganga" },
-            "locators": { "pid": "p07yh9qm", "brandPid": "p07yh8hb" },
-            "media": {
-              "id": "p07yh9qm",
-              "subType": "episode",
-              "format": "Audio",
-              "title": "",
-              "synopses": {
-                "short": "Ikiganiro Baza Muganga gitegurwa na BBC Gahuzamiryango."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p082wk67.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "p07yh6z4",
-                  "types": ["Podcast"],
-                  "duration": 8,
-                  "durationISO8601": "PT8S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1576840260000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "radioProgramme",
-              "episodeTitle": "Welcome to Baza Muganga",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p082wk67.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p082wk67.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1576800000000,
-            "brand": { "pid": "p07yh8hb", "title": "Baza Muganga" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/p07yh9qm",
-            "type": "ws_radio"
-          }
-        ]
+        "id": "p0k4x0jm",
+        "brandTitle": "Baza Muganga",
+        "episodeTitle": "Baza Muganga 15/11/2024",
+        "timestamp": "2024-11-15T00:00:00.000Z",
+        "duration": "PT5M58S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p082wk67.jpg",
+        "altText": "Baza Muganga"
+      },
+      {
+        "id": "p0k396c8",
+        "brandTitle": "Baza Muganga",
+        "episodeTitle": "Ikiganiro cyo kuwa 08/11/2024",
+        "timestamp": "2024-11-08T00:00:00.000Z",
+        "duration": "PT6M2S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p082wk67.jpg",
+        "altText": "Baza Muganga"
+      },
+      {
+        "id": "p0f0xlq5",
+        "brandTitle": "Baza Muganga",
+        "episodeTitle": "Bazamuganga 03/02/2023",
+        "timestamp": "2023-02-03T00:00:00.000Z",
+        "duration": "PT5M29S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p082wk67.jpg",
+        "altText": "Baza Muganga"
+      },
+      {
+        "id": "p0b99rb5",
+        "brandTitle": "Baza Muganga",
+        "episodeTitle": "Bazamuganga 10/12/2021: Ikiganiro ku ndwara ya Otite cyangwa Umuhaha",
+        "timestamp": "2021-12-10T00:00:00.000Z",
+        "duration": "PT4M20S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p082wk67.jpg",
+        "altText": "Baza Muganga"
+      },
+      {
+        "id": "p07yh9qm",
+        "brandTitle": "Baza Muganga",
+        "episodeTitle": "Welcome to Baza Muganga",
+        "timestamp": "2019-12-20T00:00:00.000Z",
+        "duration": "PT8S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p082wk67.jpg",
+        "altText": "Baza Muganga"
       }
-    ]
-  }
+    ],
+    "mediaBlocks": [
+      {
+        "type": "audio",
+        "model": {
+          "id": "p0k7t82p",
+          "subType": "episode",
+          "format": "Audio",
+          "title": "Baza Muganga",
+          "synopses": {
+            "short": "Kurikira ikiganiro Bazamuganga kuri BBC Gahuzamiryango"
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p082wk67.jpg",
+          "embedding": true,
+          "advertising": false,
+          "versions": [
+            {
+              "versionId": "p0k7t7vq",
+              "types": ["Podcast"],
+              "duration": 345,
+              "durationISO8601": "PT5M45S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true,
+                "world": false
+              },
+              "availableUntil": "2024-12-29T17:04:00.000Z",
+              "availableFrom": "2024-11-29T17:04:00.000Z",
+              "availabilityStatus": "available"
+            }
+          ],
+          "availability": "available",
+          "smpKind": "radioProgramme",
+          "episodeTitle": "Ikiganiro cyo kuwa 29/11/2024",
+          "type": "media"
+        }
+      },
+      {
+        "type": "mediaOverrides",
+        "model": {
+          "language": "rw",
+          "pageIdentifierOverride": "gahuza.bbc_gahuza_radio.podcasts.p0k7t82p.page"
+        }
+      }
+    ],
+    "isPodcast": true,
+    "summary": "Kurikira ikiganiro Bazamuganga kuri BBC Gahuzamiryango",
+    "radioScheduleData": null,
+    "externalLinkVersionId": "p0k7t7vq"
+  },
+  "contentType": "application/json; charset=utf-8"
 }

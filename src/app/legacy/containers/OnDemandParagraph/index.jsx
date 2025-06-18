@@ -13,13 +13,18 @@ const StyledParagraphComponent = styled(ParagraphComponent)`
   }
 `;
 
-const OnDemandParagraphContainer = ({ idAttr = null, text }) => {
+const OnDemandParagraphContainer = ({ idAttr = null, text, testid = '' }) => {
   const { script, service } = useContext(ServiceContext);
 
   if (!text) return null;
 
   return (
-    <StyledParagraphComponent script={script} service={service} id={idAttr}>
+    <StyledParagraphComponent
+      script={script}
+      service={service}
+      id={idAttr}
+      {...(testid && { 'data-testid': testid })}
+    >
       {text}
     </StyledParagraphComponent>
   );

@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'sport',
     atiAnalyticsProducerId: '85',
+    atiAnalyticsProducerName: 'SPORT',
+    useReverb: true,
     chartbeatDomain: 'bbc.co.uk',
     brandName: 'BBC Sport',
     product: 'BBC Sport',
@@ -34,8 +36,9 @@ export const service: DefaultServiceConfig = {
     twitterSite: '@BBCSport',
     isTrustProjectParticipant: false,
     script: latin,
-    manifestPath: '/articles/manifest.json',
-    frontPageTitle: 'Home',
+    manifestPath:
+      'https://static.files.bbci.co.uk/core/manifest.1ccdbcfd4cc3bf889128a50903c2b22c81758637.json',
+    homePageTitle: 'Home',
     showAdPlaceholder: false,
     showRelatedTopics: false,
     translations: {
@@ -59,6 +62,10 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Posted at',
         summary: 'Summary',
         shareButtonText: 'Share',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'At a glance',
       error: {
@@ -113,7 +120,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'OK',
           reject: "Find out what's changed",
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/privacy-policy/',
         },
         cookie: {
           amp: {
@@ -202,16 +209,13 @@ export const service: DefaultServiceConfig = {
       socialEmbed: {},
     },
     mostRead: {
-      header: 'Most read',
+      header: 'Popular Reads',
       lastUpdated: 'Last updated:',
       numberOfItems: 10,
       hasMostRead: false,
     },
     radioSchedule: {
       hasRadioSchedule: false,
-    },
-    recommendations: {
-      hasStoryRecommendations: false,
     },
     footer: {
       externalLink: {

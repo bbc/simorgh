@@ -8,7 +8,6 @@ import {
   MvtExperiment,
 } from '#app/models/types/global';
 import getStatsDestination from './getStatsDestination';
-import getStatsPageIdentifier from './getStatsPageIdentifier';
 import getOriginContext from './getOriginContext';
 import getEnv from './getEnv';
 import getMetaUrls from './getMetaUrls';
@@ -20,13 +19,11 @@ export type RequestContextProps = {
   canonicalLink: string;
   canonicalUkLink: string;
   canonicalNonUkLink: string;
-  counterName: string | null;
   env: Environments;
   id: string | null;
   isAmp: boolean;
   isApp: boolean;
   isLite: boolean;
-  isCaf: boolean;
   isNextJs: boolean;
   isUK: boolean;
   mvtExperiments?: MvtExperiment[] | null;
@@ -35,12 +32,10 @@ export type RequestContextProps = {
   derivedPageType: string | null;
   pathname: string;
   platform: Platforms;
-  previousPath: string | null;
   service: Services;
   showAdsBasedOnLocation: boolean;
   showCookieBannerBasedOnCountry: boolean;
   statsDestination: string;
-  statsPageIdentifier: string | null;
   statusCode: number | null;
   timeOnServer: number | null;
   variant: Variants | null;
@@ -54,14 +49,12 @@ type RequestProviderProps = {
   bbcOrigin?: string | null;
   derivedPageType?: string | null;
   id?: string | null;
-  isAmp: boolean;
+  isAmp?: boolean;
   isApp?: boolean;
   isLite?: boolean;
-  isCaf?: boolean;
   isNextJs?: boolean;
   pageType: PageTypes;
   pathname: string;
-  previousPath?: string | null;
   service: Services;
   showAdsBasedOnLocation?: boolean;
   showCookieBannerBasedOnCountry?: boolean;
@@ -70,7 +63,6 @@ type RequestProviderProps = {
   mvtExperiments?: MvtExperiment[] | null;
   variant?: Variants | null;
   isUK?: boolean | null;
-  counterName?: string | null;
 };
 
 export const RequestContextProvider = ({
@@ -78,15 +70,13 @@ export const RequestContextProvider = ({
   derivedPageType = null,
   children,
   id = null,
-  isAmp,
+  isAmp = false,
   isApp = false,
   isLite = false,
-  isCaf = false,
   isNextJs = false,
   mvtExperiments = null,
   pageType,
   pathname,
-  previousPath = null,
   service,
   showAdsBasedOnLocation = false,
   showCookieBannerBasedOnCountry = true,
@@ -94,10 +84,10 @@ export const RequestContextProvider = ({
   timeOnServer = null,
   variant = null,
   isUK = null,
-  counterName = null,
 }: PropsWithChildren<RequestProviderProps>) => {
-  const { origin } = getOriginContext(bbcOrigin);
+  let { origin } = getOriginContext(bbcOrigin);
   const env: Environments = getEnv(origin);
+  if (isNextJs && env === 'local') origin = 'http://localhost:7081';
   const formattedIsUK = isUK ?? false;
 
   const getPlatform = (): Platforms => {
@@ -106,6 +96,8 @@ export const RequestContextProvider = ({
         return 'app';
       case isAmp:
         return 'amp';
+      case isLite:
+        return 'lite';
       default:
         return 'canonical';
     }
@@ -116,11 +108,6 @@ export const RequestContextProvider = ({
     isUK: platform === 'amp' ? true : formattedIsUK, // getDestination requires that statsDestination is a PS variant on AMP
     env,
     service,
-  });
-  const statsPageIdentifier = getStatsPageIdentifier({
-    pageType,
-    service,
-    id,
   });
 
   const value = useMemo(
@@ -134,32 +121,26 @@ export const RequestContextProvider = ({
       isAmp,
       isApp,
       isLite,
-      isCaf,
       isNextJs,
       platform,
       statsDestination,
-      statsPageIdentifier,
       statusCode,
-      previousPath,
       variant,
       timeOnServer,
       showAdsBasedOnLocation,
       showCookieBannerBasedOnCountry,
       service,
       pathname,
-      counterName,
       ...getMetaUrls(origin, pathname),
       mvtExperiments,
     }),
     [
-      counterName,
       derivedPageType,
       env,
       formattedIsUK,
       id,
       isAmp,
       isApp,
-      isCaf,
       isLite,
       isNextJs,
       mvtExperiments,
@@ -167,12 +148,10 @@ export const RequestContextProvider = ({
       pageType,
       pathname,
       platform,
-      previousPath,
       service,
       showAdsBasedOnLocation,
       showCookieBannerBasedOnCountry,
       statsDestination,
-      statsPageIdentifier,
       statusCode,
       timeOnServer,
       variant,

@@ -1,0 +1,267 @@
+{
+  "data": {
+    "isPodcast": false,
+    "metadata": {
+      "type": "On Demand Radio",
+      "atiAnalytics": {
+        "pageIdentifier": "pashto.bbc_pashto_radio.programmes.p0340ys9.page",
+        "contentType": "player-episode",
+        "pageTitle": "ستاسې غږ - BBC News پښتو",
+        "contentId": "urn:bbc:pips:w3ct7ddg"
+      }
+    },
+    "language": "ps",
+    "brandTitle": "ستاسې غږ",
+    "episodeTitle": "Talking Point",
+    "headline": "ستاسې غږ",
+    "shortSynopsis": "د اورېدونکو نظرونه",
+    "id": "urn:bbc:ares:ws_media:brand:bbc_pashto_radio/p0340ys9",
+    "brandId": "p0340ys9",
+    "summary": "د اورېدونکو نظرونه",
+    "contentType": "player-episode",
+    "episodeId": "w3ct7ddg",
+    "masterBrand": "bbc_pashto_radio",
+    "releaseDateTimeStamp": 1732492800000,
+    "pageTitle": "ستاسې غږ - BBC News پښتو",
+    "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sct4.png",
+    "imageAltText": null,
+    "promoBrandTitle": "ستاسې غږ",
+    "durationISO8601": "PT59M30S",
+    "thumbnailImageUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p0k5sct4.png",
+    "episodeAvailability": "available",
+    "radioScheduleData": [
+      {
+        "id": "p0jzdl48",
+        "state": "next",
+        "startTime": "2024-11-26T12:00:00.000Z",
+        "link": "/pashto/bbc_pashto_radio/w3ct7cxs",
+        "brandTitle": "ځانگړې مرکه او عيني شاهد خپرونه ",
+        "summary": "دا خپرونه له بي‌ بي سي پښتو اورئ",
+        "duration": "PT1H"
+      },
+      {
+        "id": "p0jzbd6g",
+        "state": "onDemand",
+        "startTime": "2024-11-26T05:00:00.000Z",
+        "link": "/pashto/bbc_pashto_radio/w172zzqwck8nxv1",
+        "brandTitle": "د نن خبرې",
+        "summary": "د اورېدونکو نظرونه او وړانديزونه\n",
+        "duration": "PT29M30S"
+      },
+      {
+        "id": "p0jzbd6b",
+        "state": "onDemand",
+        "startTime": "2024-11-26T03:00:00.000Z",
+        "link": "/pashto/bbc_pashto_radio/w3ct7ch8",
+        "brandTitle": "دویمه سهارنۍ خپرونه",
+        "summary": "دوهمه سهارنۍ خبري راډيويي خپرونه",
+        "duration": "PT29M30S"
+      },
+      {
+        "id": "p0jz971h",
+        "state": "onDemand",
+        "startTime": "2024-11-26T02:00:00.000Z",
+        "link": "/pashto/bbc_pashto_radio/w3ct7c7c",
+        "brandTitle": "لومړنۍ سهارنۍ خپرونه",
+        "summary": "لومړۍ  سهارنۍ  خبري راډيويي خپرونه",
+        "duration": "PT29M30S"
+      }
+    ],
+    "recentEpisodes": [
+      {
+        "id": "w3ct7dfl",
+        "brandTitle": "ستاسې غږ",
+        "episodeTitle": "Talking Point",
+        "timestamp": "2024-11-24T00:00:00.000Z",
+        "duration": "PT29M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5sct4.png",
+        "altText": "ستاسې غږ"
+      },
+      {
+        "id": "w3ct7dgq",
+        "brandTitle": "ستاسې غږ",
+        "episodeTitle": "Talking Point",
+        "timestamp": "2024-11-21T00:00:00.000Z",
+        "duration": "PT29M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5sct4.png",
+        "altText": "ستاسې غږ"
+      },
+      {
+        "id": "w3ct7dhv",
+        "brandTitle": "ستاسې غږ",
+        "episodeTitle": "Talking Point",
+        "timestamp": "2024-11-19T00:00:00.000Z",
+        "duration": "PT29M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5sct4.png",
+        "altText": "ستاسې غږ"
+      },
+      {
+        "id": "w3ct7ddf",
+        "brandTitle": "ستاسې غږ",
+        "episodeTitle": "Talking Point",
+        "timestamp": "2024-11-18T00:00:00.000Z",
+        "duration": "PT59M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5sct4.png",
+        "altText": "ستاسې غږ"
+      },
+      {
+        "id": "w3ct7dfk",
+        "brandTitle": "ستاسې غږ",
+        "episodeTitle": "Talking Point",
+        "timestamp": "2024-11-17T00:00:00.000Z",
+        "duration": "PT29M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5sct4.png",
+        "altText": "ستاسې غږ"
+      },
+      {
+        "id": "w3ct7dgp",
+        "brandTitle": "ستاسې غږ",
+        "episodeTitle": "Talking Point",
+        "timestamp": "2024-11-14T00:00:00.000Z",
+        "duration": "PT29M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5sct4.png",
+        "altText": "ستاسې غږ"
+      },
+      {
+        "id": "w3ct7dht",
+        "brandTitle": "ستاسې غږ",
+        "episodeTitle": "Talking Point",
+        "timestamp": "2024-11-12T00:00:00.000Z",
+        "duration": "PT29M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5sct4.png",
+        "altText": "ستاسې غږ"
+      },
+      {
+        "id": "w3ct7ddd",
+        "brandTitle": "ستاسې غږ",
+        "episodeTitle": "Talking Point",
+        "timestamp": "2024-11-11T00:00:00.000Z",
+        "duration": "PT59M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5sct4.png",
+        "altText": "ستاسې غږ"
+      },
+      {
+        "id": "w3ct7dfj",
+        "brandTitle": "ستاسې غږ",
+        "episodeTitle": "Talking Point",
+        "timestamp": "2024-11-10T00:00:00.000Z",
+        "duration": "PT29M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5sct4.png",
+        "altText": "ستاسې غږ"
+      },
+      {
+        "id": "w3ct7dgn",
+        "brandTitle": "ستاسې غږ",
+        "episodeTitle": "Talking Point",
+        "timestamp": "2024-11-07T00:00:00.000Z",
+        "duration": "PT29M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5sct4.png",
+        "altText": "ستاسې غږ"
+      },
+      {
+        "id": "w3ct7dhs",
+        "brandTitle": "ستاسې غږ",
+        "episodeTitle": "Talking Point",
+        "timestamp": "2024-11-05T00:00:00.000Z",
+        "duration": "PT29M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5sct4.png",
+        "altText": "ستاسې غږ"
+      },
+      {
+        "id": "w3ct7ddc",
+        "brandTitle": "ستاسې غږ",
+        "episodeTitle": "Talking Point",
+        "timestamp": "2024-11-04T00:00:00.000Z",
+        "duration": "PT59M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5sct4.png",
+        "altText": "ستاسې غږ"
+      },
+      {
+        "id": "w3ct7dfh",
+        "brandTitle": "ستاسې غږ",
+        "episodeTitle": "Talking Point",
+        "timestamp": "2024-11-03T00:00:00.000Z",
+        "duration": "PT29M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5sct4.png",
+        "altText": "ستاسې غږ"
+      },
+      {
+        "id": "w3ct7dgm",
+        "brandTitle": "ستاسې غږ",
+        "episodeTitle": "Talking Point",
+        "timestamp": "2024-10-31T00:00:00.000Z",
+        "duration": "PT29M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5sct4.png",
+        "altText": "ستاسې غږ"
+      },
+      {
+        "id": "w3ct7dhr",
+        "brandTitle": "ستاسې غږ",
+        "episodeTitle": "Talking Point",
+        "timestamp": "2024-10-29T00:00:00.000Z",
+        "duration": "PT29M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5sct4.png",
+        "altText": "ستاسې غږ"
+      },
+      {
+        "id": "w3ct6kfk",
+        "brandTitle": "ستاسې غږ",
+        "episodeTitle": "Talking Point",
+        "timestamp": "2024-10-28T00:00:00.000Z",
+        "duration": "PT59M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5sct4.png",
+        "altText": "ستاسې غږ"
+      },
+      {
+        "id": "w3ct6kgp",
+        "brandTitle": "ستاسې غږ",
+        "episodeTitle": "ستاسې غږ",
+        "timestamp": "2024-10-27T00:00:00.000Z",
+        "duration": "PT29M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5sct4.png",
+        "altText": "ستاسې غږ"
+      }
+    ],
+    "externalLinkVersionId": "w4hr3h03",
+    "mediaBlocks": [
+      {
+        "type": "audio",
+        "model": {
+          "id": "w3ct7ddg",
+          "subType": "episode",
+          "format": "Audio",
+          "title": "25/11/2024 GMT",
+          "synopses": {
+            "short": "د اورېدونکو نظرونه",
+            "medium": "د اورېدونکو نظرونه",
+            "long": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sct4.png",
+          "embedding": false,
+          "advertising": false,
+          "versions": [
+            {
+              "versionId": "w4hr3h03",
+              "types": ["Original"],
+              "duration": 3570,
+              "durationISO8601": "PT59M30S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true,
+                "world": false
+              },
+              "availableUntil": "2024-12-25T13:00:00.000Z",
+              "availableFrom": "2024-11-25T13:00:00.000Z",
+              "availabilityStatus": "available"
+            }
+          ],
+          "availability": "available",
+          "smpKind": "radioProgramme",
+          "episodeTitle": "Talking Point",
+          "type": "media"
+        }
+      }
+    ]
+  }
+}

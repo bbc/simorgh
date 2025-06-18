@@ -1,22 +1,34 @@
 import { css, Theme } from '@emotion/react';
 import NO_JS_CLASSNAME from '#app/lib/noJs.const';
+import pixelsToRem from '#app/utilities/pixelsToRem';
 import { focusIndicatorThickness } from '../../ThemeProvider/focusIndicator';
 
 const styles = {
-  placeholder: ({ palette }: Theme) =>
+  placeholder: ({ palette, mq }: Theme) =>
     css({
       position: 'relative',
-      aspectRatio: '16 / 9',
       cursor: 'pointer',
+      height: '100%',
+
       [`.${NO_JS_CLASSNAME} &`]: {
         cursor: 'default',
       },
       '&:hover, &:focus': {
-        '.focusIndicatorRemove': {
+        '> button': {
           backgroundColor: palette.POSTBOX,
         },
       },
+      [mq.FORCED_COLOURS]: {
+        '&:hover, &:focus': {
+          '> button': {
+            backgroundColor: 'canvas',
+            border: `${pixelsToRem(3)}rem solid canvasText`,
+            '> time': { textDecoration: 'underline' },
+          },
+        },
+      },
     }),
+
   playButton: ({ palette }: Theme) =>
     css({
       position: 'absolute',
@@ -37,6 +49,7 @@ const styles = {
         border: `${focusIndicatorThickness} solid ${palette.BLACK}`,
       },
     }),
+
   guidance: () =>
     css({
       zIndex: '1',

@@ -1,19 +1,26 @@
-import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
-import { MOST_READ_PAGE } from '../../utils/pageTypes';
-import handleError from '../../utils/handleError';
-import fetchDataFromBFF from '../../utils/fetchDataFromBFF';
-import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
-import nodeLogger from '../../../lib/logger.node';
+import getErrorStatusCode from '#app/routes/utils/fetchPageData/utils/getErrorStatusCode';
+import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
+import handleError from '#app/routes/utils/handleError';
+import fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
+import { BFF_FETCH_ERROR } from '#lib/logger.const';
+import nodeLogger from '#lib/logger.node';
 
 const logger = nodeLogger(__filename);
 
-export default async ({ service, variant, pageType, path: pathname }) => {
+export default async ({
+  service,
+  variant,
+  pageType,
+  path: pathname,
+  getAgent,
+}) => {
   try {
     const { status, json } = await fetchDataFromBFF({
       pathname,
       service,
       variant,
       pageType: MOST_READ_PAGE,
+      getAgent,
     });
 
     if (!json?.data) {

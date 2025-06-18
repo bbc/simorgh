@@ -1,26 +1,26 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import { ServiceContext } from '../../../contexts/ServiceContext';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
+import { render } from '../../../components/react-testing-library-with-providers';
 import BulletedListItemContainer from './index';
 import { listItemA, listItemB } from '../BulletedList/fixtures';
 
 describe('BulletedListItemContainer', () => {
-  shouldMatchSnapshot(
-    'should render text correctly',
-    <ServiceContext.Provider
-      value={{ script: latin, service: 'news', dir: 'ltr' }}
-    >
-      <BulletedListItemContainer blocks={listItemA.model.blocks} />
-    </ServiceContext.Provider>,
-  );
+  it('should render text correctly', () => {
+    const { container } = render(
+      <BulletedListItemContainer blocks={listItemA.model.blocks} />,
+      {
+        service: 'news',
+      },
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render rtl text correctly',
-    <ServiceContext.Provider
-      value={{ script: latin, service: 'news', dir: 'rtl' }}
-    >
-      <BulletedListItemContainer blocks={listItemB.model.blocks} />
-    </ServiceContext.Provider>,
-  );
+  it('should render rtl text correctly', () => {
+    const { container } = render(
+      <BulletedListItemContainer blocks={listItemB.model.blocks} />,
+      {
+        service: 'arabic',
+      },
+    );
+    expect(container).toMatchSnapshot();
+  });
 });

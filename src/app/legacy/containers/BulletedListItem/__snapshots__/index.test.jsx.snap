@@ -7,7 +7,7 @@ exports[`BulletedListItemContainer should render rtl text correctly 1`] = `
 
 <div>
   <li
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     role="listitem"
   >
     It is unordered
@@ -22,7 +22,7 @@ exports[`BulletedListItemContainer should render text correctly 1`] = `
 
 <div>
   <li
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     role="listitem"
   >
     Here is a list

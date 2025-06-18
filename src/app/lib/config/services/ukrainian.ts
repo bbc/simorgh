@@ -16,6 +16,8 @@ const baseServiceConfig = {
   articleTimestampPrefix: 'Оновлено: ',
   atiAnalyticsAppName: 'news-ukrainian',
   atiAnalyticsProducerId: '94',
+  atiAnalyticsProducerName: 'UKRAINIAN',
+  useReverb: true,
   chartbeatDomain: 'ukrainian.bbc.co.uk',
   brandName: 'BBC News Україна',
   product: 'BBC News',
@@ -38,22 +40,22 @@ const baseServiceConfig = {
   publishingPrinciples: 'https://www.bbc.com/ukrainian/institutional-50170368',
   isTrustProjectParticipant: true,
   script: cyrillic,
-  manifestPath: '/manifest.json',
+  manifestPath: '/ukrainian/manifest.json',
   swPath: '/sw.js',
-  frontPageTitle: 'Новини',
+  homePageTitle: 'Новини',
   showAdPlaceholder: true,
   showRelatedTopics: true,
   podcastPromo: {
-    title: 'подкаст',
-    brandTitle: 'Що це було',
-    brandDescription: 'Головна історія тижня, яку пояснюють наші журналісти',
+    title: 'Viber',
+    brandTitle: 'Як дізнатися головне про Україну та світ?',
+    brandDescription: 'Стежте за BBC News Україна у Viber!',
     image: {
-      src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09jrvvq.jpg',
-      alt: 'Що це було',
+      src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0ld00bz.jpg',
+      alt: 'Підписуйтесь на наш Viber',
     },
     linkLabel: {
-      text: 'Випуски',
-      href: 'https://www.bbc.com/ukrainian/podcasts/p09jsy3h',
+      text: 'Підписуйтеся на канал тут!',
+      href: 'https://invite.viber.com/?g2=AQAYCiHrGU3SlUeR%2FZaHRAQ4%2FGdXWGFgaUOXbMnWlHpIli4mBJEfTyN%2FHRPjb7GW',
     },
     skipLink: {
       text: 'Пропустити %title% і продовжити',
@@ -86,6 +88,10 @@ const baseServiceConfig = {
       postedAt: 'Опубілковано о',
       summary: 'Стисло',
       shareButtonText: 'Поділитися',
+    },
+    downloads: {
+      instructions: 'You can download and view today’s news.',
+      title: 'File Download',
     },
     gist: 'Стисло',
     error: {
@@ -141,7 +147,7 @@ const baseServiceConfig = {
         },
         accept: 'ОК',
         reject: 'Подивитися, що змінилося',
-        rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
+        rejectUrl: 'https://www.bbc.com/usingthebbc/privacy-policy/',
       },
       cookie: {
         amp: {
@@ -239,6 +245,7 @@ const baseServiceConfig = {
       recentEpisodes: 'Більше',
       podcastExternalLinks: 'Цей подкаст доступний у',
       download: 'Завантажити епізод',
+      closeVideo: 'Вийти',
     },
     socialEmbed: {
       caption: {
@@ -275,7 +282,7 @@ const baseServiceConfig = {
     ...secondaryColumnTranslations,
   },
   mostRead: {
-    header: 'Найпопулярніше',
+    header: 'Найбільше читають',
     lastUpdated: 'Останнє оновлення:',
     numberOfItems: 10,
     hasMostRead: true,
@@ -284,7 +291,11 @@ const baseServiceConfig = {
     hasRadioSchedule: false,
   },
   recommendations: {
-    hasStoryRecommendations: false,
+    header: 'Найпопулярніше',
+    skipLink: {
+      text: 'Skip %title% and continue reading',
+      endTextVisuallyHidden: 'End of %title%',
+    },
   },
   footer: {
     trustProjectLink: {
@@ -313,6 +324,10 @@ const baseServiceConfig = {
         text: 'Напишіть на ВВС',
       },
       {
+        href: 'https://www.bbc.com/ws/languages',
+        text: 'Новини ВВС іншими мовами',
+      },
+      {
         id: 'COOKIE_SETTINGS',
         href: '#',
         text: 'Do not share or sell my info',
@@ -333,11 +348,11 @@ const baseServiceConfig = {
     },
     {
       title: 'Історії',
-      url: '/ukrainian/53725237',
+      url: '/ukrainian/topics/czrxg3vzy44t',
     },
     {
       title: 'Відео',
-      url: '/ukrainian/55425840',
+      url: '/ukrainian/topics/c44vmzqkzqqt',
     },
     {
       title: 'Книга року BBC',

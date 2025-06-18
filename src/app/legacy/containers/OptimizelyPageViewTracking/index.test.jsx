@@ -13,6 +13,7 @@ jest.mock('#hooks/useOptimizelyVariation', () => jest.fn(() => null));
 const optimizely = {
   onReady: jest.fn(() => Promise.resolve()),
   track: jest.fn(),
+  setUser: jest.fn(() => Promise.resolve()),
 };
 
 const ContextWrap = ({ pageType, isAmp, children, service }) => (

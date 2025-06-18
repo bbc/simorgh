@@ -1,6 +1,6 @@
 import { LiveRadioPage } from '#pages';
 import { liveRadioPath } from '#app/routes/utils/regex';
-import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
+import { LIVE_RADIO_PAGE } from '#app/routes/utils/pageTypes';
 import getInitialData from './getInitialData';
 
 export default {
@@ -8,5 +8,5 @@ export default {
   exact: true,
   component: LiveRadioPage,
   getInitialData,
-  pageType: MEDIA_PAGE,
+  pageType: LIVE_RADIO_PAGE,
 };

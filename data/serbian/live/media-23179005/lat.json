@@ -1,0 +1,77 @@
+{
+  "data": {
+    "title": "Live test page",
+    "description": "Live test page",
+    "language": "sr-Latn",
+    "headerImage": null,
+    "promoImage": null,
+    "home": "serbian",
+    "section": {
+      "subType": "index",
+      "name": "Media",
+      "uri": "/serbian/lat/media",
+      "urlIdentifier": "/serbian/lat/media",
+      "type": "simple"
+    },
+    "sportDataEvent": {
+      "id": null
+    },
+    "eavisEvent": {
+      "id": null
+    },
+    "article": {
+      "id": null
+    },
+    "mediaCollections": null,
+    "keyHighlight": {
+      "id": null
+    },
+    "electionBanner": {
+      "id": null
+    },
+    "supportingLinks": {
+      "id": null
+    },
+    "seo": {
+      "seoTitle": "Live test page",
+      "seoDescription": "Live test page",
+      "datePublished": "2018-01-10T15:00:00.000Z",
+      "dateModified": "2018-01-10T15:00:00.000Z"
+    },
+    "endDateTime": "2018-01-10T22:00:00.000Z",
+    "startDateTime": "2018-01-10T15:00:00.000Z",
+    "firstPublishedDateTime": "2018-01-10T15:39:37.000Z",
+    "type": "live-coverage",
+    "commercialInfo": {
+      "adCategory": null,
+      "adSubCategory": null,
+      "hasAdvertising": true
+    },
+    "dataSource": "ARES",
+    "isLive": false,
+    "summaryPoints": {
+      "id": null,
+      "content": null
+    },
+    "liveTextStream": {
+      "id": "CA389631A6F1FA49841763024D90DAFD",
+      "contributors": null,
+      "content": {
+        "data": {
+          "results": [],
+          "page": null
+        }
+      }
+    },
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:cps:curie:asset:b3ee2819-0ee3-304a-ad87-a7d533fc22e5",
+        "contentType": "live-coverage",
+        "pageIdentifier": "serbianlat.embedded_media.live_coverage.23179005.page",
+        "pageTitle": "Live test page",
+        "timePublished": "2018-01-10T15:00:00.000Z",
+        "timeUpdated": "2018-01-10T15:00:00.000Z"
+      }
+    }
+  }
+}

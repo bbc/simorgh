@@ -1,0 +1,505 @@
+{
+  "data": {
+    "title": "Početna stranica",
+    "description": "Srpska početna stranica",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Međunarodni dan menopauze: Promena kroz koju prolazi svaka žena overtyped2",
+            "firstPublished": "2024-10-18T11:59:35.000Z",
+            "lastPublished": "2024-10-18T14:10:33.050Z",
+            "link": "https://www.bbc.com/serbian/articles/c45n4pv61vno/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/3d07/test/7ea19630-8d4a-11ef-8e34-ef6bbfe11731.jpg.webp",
+            "description": "Između 45 i 55 godina kreću prvi simptomi.",
+            "imageAlt": "Promena kod svake žene",
+            "id": "c45n4pv61vno"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Obrazovanje u Srbiji: Priče onih koji su se posle velike pauze optimo overtyped2",
+            "firstPublished": "2024-10-10T13:06:13.117Z",
+            "lastPublished": "2024-10-10T13:06:13.117Z",
+            "link": "https://www.bbc.com/serbian/articles/c3x8zzpdy8ko/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/0806/test/dcd61aa0-8705-11ef-befc-6554bf4e69f9.jpg.webp",
+            "description": "summary text ",
+            "imageAlt": "alternative text",
+            "id": "c3x8zzpdy8ko"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Upala pluća: Od bezazlene do smrtonosne bolesti Optimo article",
+            "firstPublished": "2024-11-12T10:20:44.546Z",
+            "lastPublished": "2024-11-12T10:20:44.546Z",
+            "link": "https://www.bbc.com/serbian/articles/cdkvrw4gplqo/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/9a27/test/75c6f8e0-a0df-11ef-b4f6-4568dfb1f4fc.jpg.webp",
+            "description": "Malaksalost, visoka temperatura i snažan kašalj danima su mučili Zorana Pajića.\n\n",
+            "imageAlt": "alt text",
+            "id": "cdkvrw4gplqo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Pravoslavni Božić u svetu CPS overtyped",
+            "firstPublished": "2018-01-15T14:49:20.000Z",
+            "lastPublished": "2018-01-15T14:49:20.000Z",
+            "link": "https://www.bbc.com/serbian/lat/23181025",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/18302/test/_63647099_f93401e7-cca7-4660-8f41-df1e42e63060.jpg.webp",
+            "description": "updated",
+            "imageAlt": "*",
+            "id": "91d1ed9d-78a1-0d48-ac45-25218323f1f7"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:99e68e2e-fdb3-4797-9416-81301745e259",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "Najvažnije updated",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Pogledaj kanal",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.whatsapp.com/channel/0029VaVHa4S6rsQrlMVx8c0b",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/0409/test/6d7272a0-abfc-11ef-b4f6-4568dfb1f4fc.png.webp",
+            "description": "Summary in item",
+            "imageAlt": "whatsapp updated",
+            "id": "https%3A%2F%2Fwww.whatsapp.com%2Fchannel%2F0029VaVHa4S6rsQrlMVx8c0b"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:cf5cf997-7eae-4af8-a934-16d466229413",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "BBC News na srpskom i na WhatsApp udpated",
+        "visualProminence": "NORMAL",
+        "additionalText": {
+          "plainText": "Summary in curation settings"
+        },
+        "visualStyle": "BANNER"
+      },
+      {
+        "summaries": [],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:6300d37a-525e-44b1-ac14-cd8ef58e89ba",
+        "curationType": "tipo-curation",
+        "position": 2,
+        "title": "Ed's choice",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "U potrazi za istinom o dugotrajnom shorthand external",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/serbian/resources/idt-40c9a7fc-8e5b-4641-93aa-a4e3c66b0f5a",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/84d8/test/79bfa6d0-ac02-11ef-b4f6-4568dfb1f4fc.jpg.webp",
+            "imageAlt": "Rando",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fserbian%2Fresources%2Fidt-40c9a7fc-8e5b-4641-93aa-a4e3c66b0f5a"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Long Covid: Thousands of NHS staff risk losing pay",
+            "firstPublished": "2023-01-30T15:09:32.000Z",
+            "lastPublished": "2023-01-30T15:14:02.000Z",
+            "link": "https://www.bbc.com/news/health-23553049",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/12153/test/_63976047_jellyfish.jpg.webp",
+            "description": "Analysis by BBC Panorama suggests between 5,00 and 10,00 NHS staff risk losing their pay.",
+            "imageAlt": "A jellyfish",
+            "id": "753f9c8e-99ba-45e1-ac97-525e9bae18d2"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Upala pluća: Od bezazlene do smrtonosne bolesti",
+            "firstPublished": "2024-11-13T08:19:19.922Z",
+            "lastPublished": "2024-11-13T08:19:19.922Z",
+            "link": "https://www.bbc.com/serbian/articles/c63g1zl3envo/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/9a27/test/75c6f8e0-a0df-11ef-b4f6-4568dfb1f4fc.jpg.webp",
+            "imageAlt": "alt text",
+            "id": "c63g1zl3envo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Upala pluća: Od bezazlene do smrtonosne bolesti",
+            "firstPublished": "2024-11-13T08:20:07.009Z",
+            "lastPublished": "2024-11-13T08:20:07.009Z",
+            "link": "https://www.bbc.com/serbian/articles/c3yn189pzvgo/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/9a27/test/75c6f8e0-a0df-11ef-b4f6-4568dfb1f4fc.jpg.webp",
+            "imageAlt": "alt text",
+            "id": "c3yn189pzvgo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Uhapšeno 56 osoba osumnjičenih za cps overtyped2",
+            "firstPublished": "2017-12-04T16:28:33.000Z",
+            "lastPublished": "2017-12-04T16:28:33.000Z",
+            "link": "https://www.bbc.com/serbian/lat/media-23169612",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg.webp",
+            "description": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
+            "imageAlt": "Kruševca",
+            "id": "c6bb4a52-3ea8-9f4a-a849-974dd8795a47"
+          },
+          {
+            "type": "video",
+            "duration": "PT1M4S",
+            "isLive": false,
+            "title": "„Ne mazite ga“: Zašto robotski psi patroliraju Trampovim media page updated",
+            "firstPublished": "2024-11-26T16:22:38.346Z",
+            "lastPublished": "2024-11-26T16:22:38.346Z",
+            "link": "https://www.bbc.com/serbian/articles/cx306dyme0jo/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/0496/test/9bd0b5b0-ac12-11ef-b4f6-4568dfb1f4fc.jpg.webp",
+            "imageAlt": "robot",
+            "id": "cx306dyme0jo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:bdcfa795-9c66-4938-a223-08d66efa8653",
+        "curationType": "tipo-curation",
+        "position": 3,
+        "title": "Litijum u Srbiji updated",
+        "visualProminence": "NORMAL",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Istorijski povratak Donalda Trampa: Kako će uticati na svet?",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.youtube.com/watch?v=Ld7_XJtdbL4",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/845d/test/d8fde4b0-ac00-11ef-b4f6-4568dfb1f4fc.jpg.webp",
+            "imageAlt": "rando updated",
+            "id": "https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DLd7_XJtdbL4"
+          },
+          {
+            "type": "video",
+            "isLive": false,
+            "title": "Šta je BRIKS i da li je zaista alternativa Evropskoj uniji",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.youtube.com/watch?v=ilkRlzO9KAs",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/19fa/test/b1ee80f0-ac00-11ef-b4f6-4568dfb1f4fc.jpg.webp",
+            "imageAlt": "rando updated",
+            "id": "https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DilkRlzO9KAs"
+          },
+          {
+            "type": "video",
+            "isLive": false,
+            "title": "Litijum: Šta je, kako se i gde eksploatiše, ima li alternativu i zašto u Srbiji izaziva proteste? updated",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://youtu.be/NtGPCivX8-E",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/c30a/test/92b5cc20-ac00-11ef-b4f6-4568dfb1f4fc.jpg.webp",
+            "imageAlt": "rando updated",
+            "id": "https%3A%2F%2Fyoutu.be%2FNtGPCivX8-E"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Od Sirije, preko Srbije do Evrope: Izbeglički put jednog dečaka ka sreći updated",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://youtu.be/KJCwSDh4KnQ",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/3b46/test/350481c0-ac00-11ef-b4f6-4568dfb1f4fc.jpg.webp",
+            "imageAlt": "rando alt tag updated",
+            "id": "https%3A%2F%2Fyoutu.be%2FKJCwSDh4KnQ"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:912528c4-da49-490a-9757-85af4ad13107",
+        "curationType": "tipo-curation",
+        "position": 4,
+        "title": "Na Jutjubu updated2",
+        "visualProminence": "NORMAL",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Jutjubu updated",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.youtube.com/",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/61e9/test/e2dd8d90-ac01-11ef-b4f6-4568dfb1f4fc.png.webp",
+            "imageAlt": "YouTube updated",
+            "id": "https%3A%2F%2Fwww.youtube.com%2F%40bbcnewsnasrpskom"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Faisbuk bitly updated",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://bit.ly/3ZeGrsH",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/9b05/test/a0726110-ac01-11ef-b4f6-4568dfb1f4fc.png.webp",
+            "imageAlt": "Facebook",
+            "id": "https%3A%2F%2Fbit.ly%2F3ZeGrsH"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:61790769-2829-4bb0-ae2f-e7744a58f882",
+        "curationType": "tipo-curation",
+        "position": 5,
+        "title": "Društvenoj mreži updated2",
+        "visualProminence": "NORMAL",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "curationId": "urn:bbc:onward-journeys:most:read?=site=News",
+        "curationType": "most-popular",
+        "position": 6,
+        "title": "Najčitanije",
+        "visualProminence": "NORMAL",
+        "visualStyle": "RANKED",
+        "link": "https://www.bbc.com/serbian/lat/popular/read",
+        "mostRead": {
+          "generated": "2025-03-12T15:06:56.694Z",
+          "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+          "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
+          "items": [
+            {
+              "id": "bed59bb0-13e8-d441-9ac2-70d58ab92379",
+              "rank": 1,
+              "title": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 26",
+              "href": "/serbian/lat/media-23169623",
+              "timestamp": "2017-12-04T16:30:53.000Z",
+              "indexImage": {
+                "id": "63603672",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
+                "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
+                "height": 351,
+                "width": 624,
+                "altText": "Kruševca",
+                "caption": "Kruševca",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              }
+            },
+            {
+              "id": "c893a22a-b367-e743-90ec-737606624e7b",
+              "rank": 2,
+              "title": "test, please ignore",
+              "href": "/serbian/lat/23200492",
+              "timestamp": "2018-05-16T12:59:55.000Z",
+              "indexImage": {
+                "id": "63678857",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/1286F/test/_63678857_20160421-olimpia-grecia-alm_0525_edit_2.jpg",
+                "path": "/cpsdevpb/1286F/test/_63678857_20160421-olimpia-grecia-alm_0525_edit_2.jpg",
+                "height": 261,
+                "width": 464,
+                "altText": "test2",
+                "caption": "test2",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "allowSyndication": false,
+                "type": "image"
+              }
+            },
+            {
+              "id": "05a64eb2-12b3-1742-b149-6cd4b050b572",
+              "rank": 3,
+              "title": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 6",
+              "href": "/serbian/lat/media-23169493",
+              "timestamp": "2017-12-04T16:23:59.000Z",
+              "indexImage": {
+                "id": "63603672",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
+                "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
+                "height": 351,
+                "width": 624,
+                "altText": "Kruševca",
+                "caption": "Kruševca",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              }
+            },
+            {
+              "id": "1849c8f5-dac1-294b-a0b5-823b119b1e6e",
+              "rank": 4,
+              "title": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 29",
+              "href": "/serbian/lat/media-23169626",
+              "timestamp": "2017-12-04T16:31:24.000Z",
+              "indexImage": {
+                "id": "63603672",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
+                "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
+                "height": 351,
+                "width": 624,
+                "altText": "Kruševca",
+                "caption": "Kruševca",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              }
+            },
+            {
+              "id": "5bae7009-f4cc-884b-b23b-5e9f99c9990e",
+              "rank": 5,
+              "title": "Otvorene ZOI 2014",
+              "href": "/serbian/lat/23181035",
+              "timestamp": "2018-01-15T15:19:05.000Z",
+              "indexImage": {
+                "id": "63647321",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/3056/test/_63647321_9d11631e-d9df-4566-8780-0d39cf4c4301.jpg",
+                "path": "/cpsdevpb/3056/test/_63647321_9d11631e-d9df-4566-8780-0d39cf4c4301.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "p",
+                "caption": "Olimpijske maskote",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              }
+            },
+            {
+              "id": "9fdff7d7-a6c9-4840-b79f-d111bbb7a4e1",
+              "rank": 6,
+              "title": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 27",
+              "href": "/serbian/lat/media-23169624",
+              "timestamp": "2017-12-04T16:31:03.000Z",
+              "indexImage": {
+                "id": "63603672",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
+                "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
+                "height": 351,
+                "width": 624,
+                "altText": "Kruševca",
+                "caption": "Kruševca",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              }
+            },
+            {
+              "id": "82cc4275-a7b5-6d4a-a6ff-59c592c2ba47",
+              "rank": 7,
+              "title": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 8",
+              "href": "/serbian/lat/media-23169495",
+              "timestamp": "2017-12-04T16:25:28.000Z",
+              "indexImage": {
+                "id": "63603672",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
+                "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
+                "height": 351,
+                "width": 624,
+                "altText": "Kruševca",
+                "caption": "Kruševca",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              }
+            },
+            {
+              "id": "42765cca-a2ef-0742-8f78-f24c59d78caf",
+              "rank": 8,
+              "title": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 7",
+              "href": "/serbian/lat/media-23169494",
+              "timestamp": "2017-12-04T16:24:09.000Z",
+              "indexImage": {
+                "id": "63603672",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
+                "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
+                "height": 351,
+                "width": 624,
+                "altText": "Kruševca",
+                "caption": "Kruševca",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              }
+            },
+            {
+              "id": "7dcb9041-b854-1c49-beae-9cbfc39f7ad8",
+              "rank": 9,
+              "title": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 11",
+              "href": "/serbian/lat/media-23169608",
+              "timestamp": "2018-03-06T15:20:58.000Z",
+              "indexImage": {
+                "id": "63603672",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
+                "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
+                "height": 351,
+                "width": 624,
+                "altText": "Kruševca",
+                "caption": "Kruševca",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "allowSyndication": true,
+                "type": "image"
+              }
+            },
+            {
+              "id": "151206d3-aff2-e949-976c-e9acb326ab45",
+              "rank": 10,
+              "title": "Beba panda odmara nakon prvog javnog nastupa",
+              "href": "/serbian/lat/23180965",
+              "timestamp": "2018-01-15T15:10:46.000Z",
+              "indexImage": {
+                "id": "63647061",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/3ECA/test/_63647061_3ab61d2e-e5f4-48d9-9e5c-0dceb5350fc6.jpg",
+                "path": "/cpsdevpb/3ECA/test/_63647061_3ab61d2e-e5f4-48d9-9e5c-0dceb5350fc6.jpg",
+                "height": 1152,
+                "width": 2048,
+                "altText": "p",
+                "caption": "Juang Meng danas ima jednu obavezu menje",
+                "copyrightHolder": "Reuters",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:c6zr6pp47w7t",
+        "contentType": "index-home",
+        "pageIdentifier": "serbianlat.page",
+        "pageTitle": "Početna stranica"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

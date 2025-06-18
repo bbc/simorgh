@@ -4,15 +4,13 @@
  */
 
 import runGistTests from '../gistTests';
-import runMediaPlayerCaptionTests from '../mediaPlayerCaption';
-import runMediaPlayerPlaceholderTests from '../mediaPlayerPlaceholderTestsCanonical';
 import runImageCopyrightBBC from '../imageCopyrightBBC';
+import runMediaPlayerTests from '../../../common/mediaPlayer';
 
 describe('Canonical', () => {
   describe(pageType, () => {
     runGistTests();
-    runMediaPlayerCaptionTests();
-    runMediaPlayerPlaceholderTests();
+    runMediaPlayerTests(pageType);
     runImageCopyrightBBC();
   });
 });

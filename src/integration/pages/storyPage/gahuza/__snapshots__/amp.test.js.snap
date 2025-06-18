@@ -3,11 +3,11 @@
 exports[`Amp Story Page Includes IDT2 I can see a fallback image 1`] = `
 <amp-img
   alt="Map: St. Albans"
-  attribution=""
+  class="bbc-image"
   fallback=""
   height="720"
   layout="responsive"
-  src="https://www.test.bbc.com/ws/includes/idt2/3686672a-0a64-4cdb-91c6-ae9ed0f214f7/image/640"
+  src="https://ichef.bbci.co.uk/news/1280/idt2-test/idt2/3686672a-0a64-4cdb-91c6-ae9ed0f214f7/image/640"
   width="1280"
 />
 `;

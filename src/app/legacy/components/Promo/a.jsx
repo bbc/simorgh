@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 const A = styled.a`
   color: ${props => props.theme.palette.GREY_10};
   text-decoration: none;
+  display: block;
   &:hover,
   &:focus {
     text-decoration: underline;

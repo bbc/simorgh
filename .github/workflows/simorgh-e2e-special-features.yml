@@ -1,0 +1,39 @@
+name: Cypress E2E - Special Features
+on:
+  pull_request:
+    branches:
+      - '**'
+permissions:
+  contents: read
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [22.x]
+    env:
+      CI: true
+      LOG_LEVEL: 'error'
+      CYPRESS_SKIP_EU: true
+      CYPRESS_SMOKE: true
+      CYPRESS_APP_ENV: 'local'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Add bbc.com domain
+        run: sudo echo "127.0.0.1 localhost.bbc.com" | sudo tee -a /etc/hosts
+
+      - name: Run Simorgh E2Es (Special Features)
+        uses: cypress-io/github-action@v6
+        with:
+          build: yarn build
+          start: yarn start
+          command: yarn cypress:special-features

@@ -20,6 +20,7 @@ const fallbackTranslations: UgcTranslations = {
   submitButton: 'Submit',
 
   // Validation
+  errorSummary: 'There’s a problem, please check your:',
   validationRequired: `There's something missing.`,
   validationInvalidEmail: `That doesn't look right. Please enter a proper email address.`,
   validationInvalidTelephone: 'NEEDS IMPLEMENTATION',

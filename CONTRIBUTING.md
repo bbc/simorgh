@@ -11,12 +11,11 @@ Please familiarise yourself with our:
 - [Code of conduct](https://github.com/bbc/simorgh/blob/latest/.github/CODE_OF_CONDUCT.md)
 - [Coding Standards](https://github.com/bbc/simorgh/blob/latest/docs/Coding-Standards/README.md)
 - [Contributing guidelines](https://github.com/bbc/simorgh/blob/latest/CONTRIBUTING.md) (you are here)
-- [Guide to Code Reviews](https://github.com/bbc/simorgh/blob/latest/docs/Code-Reviews.stories.mdx)
-- [Github Project Board Guide](https://github.com/bbc/simorgh/blob/latest/docs/Project-Board-Guide.stories.mdx)
-- [GPG Signing Guide](docs/GPG-Signing-Guide.stories.mdx)
+- [Guide to Code Reviews](https://github.com/bbc/simorgh/blob/latest/docs/Code-Reviews.mdx)
+- [GPG Signing Guide](https://github.com/bbc/simorgh/blob/latest/docs/GPG-Signing-Guide.mdx)
 - [Primary README](https://github.com/bbc/simorgh/blob/latest/README.md)
-- [Recommended Tools](https://github.com/bbc/simorgh/blob/latest/docs/Recommended-Tools.stories.mdx)
-- [Troubleshooting](https://github.com/bbc/simorgh/blob/latest/docs/Troubleshooting.stories.mdx)
+- [Recommended Tools](https://github.com/bbc/simorgh/blob/latest/docs/Recommended-Tools.mdx)
+- [Troubleshooting](https://github.com/bbc/simorgh/blob/latest/docs/Troubleshooting.mdx)
 
 NB there is further documentation colocated with relevant code. The above list is an index of the top-level documentation of our repo.
 
@@ -27,8 +26,6 @@ Before starting a pull request, firstly search through [existing issues](https:/
 If the work you want to carry out is not captured in an issue, please open one. Otherwise you risk spending a lot of time working on something that the project's developers might not want to merge into the project.
 
 There are issue templates available for bug fix and feature requests, so you know what details to include.
-
-Once you find an issue you would like to work on, please see this [guide about our project board workflow](https://github.com/bbc/simorgh/blob/latest/docs/Project-Board-Guide.stories.mdx)
 
 ## Pull Requests
 
@@ -87,7 +84,7 @@ git pull upstream latest
 
 ### Your work
 
-> We recommend you have a valid GPG key set up in GitHub. **All commits should be GPG signed** We have a very small [guide](docs/GPG-Signing-Guide.stories.mdx) for setting up GPG signing on macOS.
+> We recommend you have a valid GPG key set up in GitHub. **All commits should be GPG signed** We have a very small [guide](https://github.com/bbc/simorgh/blob/latest/docs/GPG-Signing-Guide.mdx) for setting up GPG signing on macOS. Without the GPG signing, we cannot guarantee that your work will be merged. 
 
 Create a new topic branch (off the main project `latest` branch) that will contain your feature, change, or fix:
 

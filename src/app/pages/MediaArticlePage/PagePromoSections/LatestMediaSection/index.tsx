@@ -1,9 +1,6 @@
 /** @jsx jsx */
-import { useContext } from 'react';
+import { Ref, useContext } from 'react';
 import { jsx } from '@emotion/react';
-import path from 'ramda/src/path';
-import isEmpty from 'ramda/src/isEmpty';
-
 import SectionLabel from '#psammead/psammead-section-label/src';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import PromoItem from '../../../../legacy/components/OptimoPromos/PromoItem/index.styles';
@@ -19,7 +16,7 @@ const renderLatestMediaList = (
   item: LatestMedia,
   index: number,
   eventTrackingData: EventTrackingBlock,
-  viewRef: () => Promise<void>,
+  viewTracker: Ref<HTMLDivElement>,
 ) => {
   const ariaLabelledBy = generatePromoId({
     sectionType: 'latest-media',
@@ -35,7 +32,7 @@ const renderLatestMediaList = (
       <LatestMediaItem
         item={item}
         ariaLabelledBy={ariaLabelledBy}
-        ref={viewRef}
+        ref={viewTracker}
         eventTrackingData={eventTrackingData}
       />
     </PromoItem>
@@ -50,16 +47,17 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
       componentName: 'latest',
     },
   };
-  const eventTrackingDataSend = path<EventTrackingBlock>(
-    ['block'],
-    eventTrackingData,
-  );
-  const viewRef = useViewTracker(eventTrackingDataSend);
+
+  const eventTrackingDataSend = eventTrackingData?.block;
+
+  const viewTracker = useViewTracker(eventTrackingDataSend);
   const LABEL_ID = 'latest-media-heading';
 
-  if (!content || isEmpty(content)) return null;
+  if (!content || content?.length === 0) return null;
+
   const hasSingleItem = content.length === 1;
   const singleItem = content[0];
+
   const ariaLabelledBy = generatePromoId({
     sectionType: 'latest-media',
     assetUri: null,
@@ -95,14 +93,14 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
           <LatestMediaItem
             item={singleItem}
             ariaLabelledBy={ariaLabelledBy}
-            ref={viewRef}
+            ref={viewTracker}
             eventTrackingData={eventTrackingData}
           />
         </div>
       ) : (
         <PromoList css={styles.latestMediaGridWrapper}>
           {content.map((item, index) =>
-            renderLatestMediaList(item, index, eventTrackingData, viewRef),
+            renderLatestMediaList(item, index, eventTrackingData, viewTracker),
           )}
         </PromoList>
       )}

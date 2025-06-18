@@ -1,0 +1,3014 @@
+{
+  "data": {
+    "title": "واشنطن تقول إنها تواصل العمل مع مصر وقطر لتمديد الهدنة في غزة، وحماس تفرج عن 8 رهائن من الدفعة السابعة",
+    "description": "متابعة مستمرة لآخر تطورات الحرب على غزة",
+    "language": "ar",
+    "headerImage": {
+      "height": 945,
+      "width": 1680,
+      "altText": "الضفة الغربية",
+      "copyright": "Getty Images",
+      "url": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/F206/production/_131885916_gettyimages-1806661248.jpg",
+      "urlTemplate": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/F206/production/_131885916_gettyimages-1806661248.jpg",
+      "ichefType": "ace"
+    },
+    "promoImage": {
+      "height": 576,
+      "width": 1024,
+      "altText": "حماس",
+      "copyright": "Getty Images",
+      "url": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/17A37/production/_131832869_gettyimages-1810311886.jpg",
+      "urlTemplate": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/17A37/production/_131832869_gettyimages-1810311886.jpg",
+      "ichefType": "ace"
+    },
+    "home": "arabic",
+    "section": {
+      "subType": "index",
+      "name": "الرئيسية",
+      "uri": "/arabic/front_page",
+      "urlIdentifier": "/arabic/front_page",
+      "type": "simple"
+    },
+    "sportDataEvent": { "id": null },
+    "eavisEvent": { "id": null },
+    "article": { "id": null },
+    "mediaCollections": null,
+    "keyHighlight": { "id": null },
+    "electionBanner": { "id": null },
+    "supportingLinks": { "id": null },
+    "seo": {
+      "seoTitle": "واشنطن تقول إنها تواصل العمل مع مصر وقطر لتمديد الهدنة في غزة، وحماس تفرج عن 8 رهائن من الدفعة السابعة",
+      "seoDescription": "متابعة مستمرة لآخر تطورات الحرب على غزة",
+      "datePublished": "2023-11-29T00:00:00.000Z",
+      "dateModified": "2023-11-30T23:19:29.000Z"
+    },
+    "endDateTime": "2023-12-01T00:00:00.000Z",
+    "startDateTime": "2023-11-29T00:00:00.000Z",
+    "firstPublishedDateTime": "2023-11-29T22:58:32.000Z",
+    "type": "live-coverage",
+    "commercialInfo": {
+      "adCategory": null,
+      "adSubCategory": null,
+      "hasAdvertising": true
+    },
+    "dataSource": "ARES",
+    "isLive": false,
+    "summaryPoints": { "id": null, "content": null },
+    "liveTextStream": {
+      "id": "3CFE876A75E449DD9EDF3D62CD84737B",
+      "contributors": null,
+      "content": {
+        "data": {
+          "results": [
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "4637e809",
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "dd762405",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "18ce7072",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "عائلة من \"بدو إسرائيل\" لم تفرح بإطلاق سراح أبنائها من غزة",
+                                    "blocks": [
+                                      {
+                                        "id": "dfca7873",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "عائلة من \"بدو إسرائيل\" لم تفرح بإطلاق سراح أبنائها من غزة",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "6dbabc70",
+                      "type": "subheadline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "b1aba825",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "112b4e68",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "إفادة آنا فوستر، من القدس",
+                                    "blocks": [
+                                      {
+                                        "id": "fae1f283",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "إفادة آنا فوستر، من القدس",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "b076ff70",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "تعيش عائلة الزيادنة من البدو في جنوب إسرائيل مشاعر مختلطة من الفرح والقلق، رغم الإفراج عن اثنين من أبنائها أخذتهم حماس رهائن يوم 7 أكتوبر/ تشرين الأول.",
+                        "blocks": [
+                          {
+                            "id": "0b504180",
+                            "type": "fragment",
+                            "model": {
+                              "text": "تعيش عائلة الزيادنة من البدو في جنوب إسرائيل مشاعر مختلطة من الفرح والقلق، رغم الإفراج عن اثنين من أبنائها أخذتهم حماس رهائن يوم 7 أكتوبر/ تشرين الأول.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "fb7d6c2c",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "عندما التقيت نعيمة الزيادنة بالأمس، كانت لا تستطيع\nأن تفهم لماذا لم يتم إطلاق سراح أبنائها عائشة، 16 عاما، وشقيقها بلال، 18 عاما،\nحتى الآن. وهم من بين عدد صغير من الرهائن الذي أخذتهم حركة حماس من جنوب إسرائيل.",
+                        "blocks": [
+                          {
+                            "id": "fa1ba568",
+                            "type": "fragment",
+                            "model": {
+                              "text": "عندما التقيت نعيمة الزيادنة بالأمس، كانت لا تستطيع\nأن تفهم لماذا لم يتم إطلاق سراح أبنائها عائشة، 16 عاما، وشقيقها بلال، 18 عاما،\nحتى الآن. وهم من بين عدد صغير من الرهائن الذي أخذتهم حركة حماس من جنوب إسرائيل.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "7c4d871d",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "وباعتبار بلال وعائشة مسلمين ويتحدثان اللغة العربية،\nكانت الأسرة تأمل أن يتم إطلاق سراحهما بمجرد بدء اتفاق الهدنة، لكن لم يتم ذلك.",
+                        "blocks": [
+                          {
+                            "id": "47f1eeb0",
+                            "type": "fragment",
+                            "model": {
+                              "text": "وباعتبار بلال وعائشة مسلمين ويتحدثان اللغة العربية،\nكانت الأسرة تأمل أن يتم إطلاق سراحهما بمجرد بدء اتفاق الهدنة، لكن لم يتم ذلك.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "9a295553",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "وصفت لي نعيمة لوعة الانتظار للحصول على الأخبار كل\nيوم، وحين يتم إصدار قوائم الرهائن المفرج عنهم حديثا، دون وجود أسماء أبنائها.",
+                        "blocks": [
+                          {
+                            "id": "235b697d",
+                            "type": "fragment",
+                            "model": {
+                              "text": "وصفت لي نعيمة لوعة الانتظار للحصول على الأخبار كل\nيوم، وحين يتم إصدار قوائم الرهائن المفرج عنهم حديثا، دون وجود أسماء أبنائها.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "568acfb2",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "لكن عائلة الزيادنة كانت على موعد مع الفرح ليلة\nالأربعاء، وتم التأكد من عودة عائشة وبلال إلى إسرائيل بعد 55 يوماً من الانتظار. ",
+                        "blocks": [
+                          {
+                            "id": "ee2f610f",
+                            "type": "fragment",
+                            "model": {
+                              "text": "لكن عائلة الزيادنة كانت على موعد مع الفرح ليلة\nالأربعاء، وتم التأكد من عودة عائشة وبلال إلى إسرائيل بعد 55 يوماً من الانتظار. ",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "50bee15b",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "وكانوا من بين المجموعة الصغيرة الأخيرة من الأطفال المحتجزين كرهائن داخل غزة.",
+                        "blocks": [
+                          {
+                            "id": "be8b6897",
+                            "type": "fragment",
+                            "model": {
+                              "text": "وكانوا من بين المجموعة الصغيرة الأخيرة من الأطفال المحتجزين كرهائن داخل غزة.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "7bb7beba",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "كانت لحظة جميلة للعائلة ولكن بها مرارة أيضاً، لأن\nوالدهم يوسف وشقيقهم الأكبر حمزة، 22 عاما، محتجزين أيضا لدى حماس. ",
+                        "blocks": [
+                          {
+                            "id": "b8511069",
+                            "type": "fragment",
+                            "model": {
+                              "text": "كانت لحظة جميلة للعائلة ولكن بها مرارة أيضاً، لأن\nوالدهم يوسف وشقيقهم الأكبر حمزة، 22 عاما، محتجزين أيضا لدى حماس. ",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "05b403cb",
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "741dfb09",
+                            "type": "rawImage",
+                            "model": {
+                              "height": 351,
+                              "width": 624,
+                              "locator": "vivo/live/images/2023/11/30/1818f2d1-6cc7-49af-b9bf-44df5ba05207.jpg",
+                              "originCode": "cpsprodpb",
+                              "copyrightHolder": "Zyadna family"
+                            }
+                          },
+                          {
+                            "id": "cd70b56d",
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "54acf96e",
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "id": "09cf68b6",
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "حماس أفرجت عن بلال وشقيقته عائشة ولا تزال تحجز والدهما يوسف وشقيقهما حمزة",
+                                          "blocks": [
+                                            {
+                                              "id": "deff2f58",
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "حماس أفرجت عن بلال وشقيقته عائشة ولا تزال تحجز والدهما يوسف وشقيقهما حمزة",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "id": "e0704ba0",
+                            "type": "caption",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "7ec59db6",
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "id": "722222c4",
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "حماس أفرجت عن بلال وشقيقته عائشة ولا تزال تحجز والدهما يوسف وشقيقهما حمزة",
+                                          "blocks": [
+                                            {
+                                              "id": "f4e7335e",
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "حماس أفرجت عن بلال وشقيقته عائشة ولا تزال تحجز والدهما يوسف وشقيقهما حمزة",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:00611c5b-3fa5-4cc5-95d3-4d5046f90567",
+              "type": "POST",
+              "options": { "isBreakingNews": false },
+              "dates": {
+                "firstPublished": "2023-11-30T23:19:29.000Z",
+                "lastPublished": "2023-11-30T23:19:29.000Z",
+                "time": null,
+                "curated": "2023-11-30T23:19:30.108Z"
+              },
+              "titles": [{ "title": null, "source": "primary" }],
+              "descriptions": [{ "text": null, "source": "summary" }],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "2e2e49be",
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "64d6c50c",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "b33cfa4c",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "وسائل إعلام فلسطينية: اشتباكات عنيفة وإطلاق قنابل غاز بكثافة في بلدة بيتونيا، قبيل وصول حافلة المعتقلين من سجن عوفر ضمن الدفعة السابعة من صفقة تبادل الأسرى",
+                                    "blocks": [
+                                      {
+                                        "id": "5fe1bd1a",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "وسائل إعلام فلسطينية: اشتباكات عنيفة وإطلاق قنابل غاز بكثافة في بلدة بيتونيا، قبيل وصول حافلة المعتقلين من سجن عوفر ضمن الدفعة السابعة من صفقة تبادل الأسرى",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "d836261d",
+                      "type": "paragraph",
+                      "model": { "text": "", "blocks": [] }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:6362d2ef-26df-49c8-9b52-c6373709f8e3",
+              "type": "POST",
+              "options": { "isBreakingNews": true },
+              "dates": {
+                "firstPublished": "2023-11-30T23:11:24.000Z",
+                "lastPublished": "2023-11-30T23:11:24.000Z",
+                "time": null,
+                "curated": "2023-11-30T23:11:24.834Z"
+              },
+              "titles": [{ "title": null, "source": "primary" }],
+              "descriptions": [{ "text": null, "source": "summary" }],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "12368c5d",
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "65441966",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "afafc2e1",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "بالصور: تسليم كتائب القسام الدفعة السابعة من الرهائن الإسرائيليين إلى الصليب الأحمر ضمن صفقة التبادل بين حماس وإسرائيل",
+                                    "blocks": [
+                                      {
+                                        "id": "76b6521f",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "بالصور: تسليم كتائب القسام الدفعة السابعة من الرهائن الإسرائيليين إلى الصليب الأحمر ضمن صفقة التبادل بين حماس وإسرائيل",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "b13e69d4",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "أعلنت كتائب القسام تسليم ست رهائن إلى الصليب الأحمر ووصولهم إلى إسرائيل. وتم إطلاق سراح رهينتين في وقت سابق اليوم، ليصل إجمالي الرهائن اليوم إلى ثمانية.",
+                        "blocks": [
+                          {
+                            "id": "e982fd3f",
+                            "type": "fragment",
+                            "model": {
+                              "text": "أعلنت كتائب القسام تسليم ست رهائن إلى الصليب الأحمر ووصولهم إلى إسرائيل. وتم إطلاق سراح رهينتين في وقت سابق اليوم، ليصل إجمالي الرهائن اليوم إلى ثمانية.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "8897482e",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "ونشرت الكتائب على قناتها على تلغرام مشاهد من تسليم الرهائن للمنظمة الدولية. هذه بعضها:",
+                        "blocks": [
+                          {
+                            "id": "f4f5b852",
+                            "type": "fragment",
+                            "model": {
+                              "text": "ونشرت الكتائب على قناتها على تلغرام مشاهد من تسليم الرهائن للمنظمة الدولية. هذه بعضها:",
+                              "attributes": ["bold"]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "d9e07e1c",
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "25332280",
+                            "type": "rawImage",
+                            "model": {
+                              "height": 573,
+                              "width": 1028,
+                              "locator": "vivo/live/images/2023/11/30/10f2878e-0068-4b32-9be7-b768d7670488.jpg",
+                              "originCode": "cpsprodpb",
+                              "copyrightHolder": "كتائب القسام"
+                            }
+                          },
+                          {
+                            "id": "6115bb54",
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "36ef8f69",
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "id": "d99955cf",
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "تسليم الدفعة السابعة من الرهائن للصليب الأحمر",
+                                          "blocks": [
+                                            {
+                                              "id": "560a65e7",
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "تسليم الدفعة السابعة من الرهائن للصليب الأحمر",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "5708913a",
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "7ded69c3",
+                            "type": "rawImage",
+                            "model": {
+                              "height": 526,
+                              "width": 1010,
+                              "locator": "vivo/live/images/2023/11/30/1436190c-3993-4668-8b6b-f38f49ead5ba.jpg",
+                              "originCode": "cpsprodpb",
+                              "copyrightHolder": "كتائب القسام"
+                            }
+                          },
+                          {
+                            "id": "97934c05",
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "b534bd3a",
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "id": "b01cbc07",
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "تسليم الدفعة السابعة من الرهائن للصليب الأحمر",
+                                          "blocks": [
+                                            {
+                                              "id": "54309ba9",
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "تسليم الدفعة السابعة من الرهائن للصليب الأحمر",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "972b74b0",
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "a7e2a629",
+                            "type": "rawImage",
+                            "model": {
+                              "height": 532,
+                              "width": 1003,
+                              "locator": "vivo/live/images/2023/11/30/83e79b51-c9a7-4ca4-ab26-ae84fe8989fd.jpg",
+                              "originCode": "cpsprodpb",
+                              "copyrightHolder": "كتائب القسام"
+                            }
+                          },
+                          {
+                            "id": "0d2f99e1",
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "66b0b04e",
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "id": "88e64b3c",
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "تسليم الدفعة السابعة من الرهائن للصليب الأحمر",
+                                          "blocks": [
+                                            {
+                                              "id": "fa154243",
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "تسليم الدفعة السابعة من الرهائن للصليب الأحمر",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "e350e703",
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "95766550",
+                            "type": "rawImage",
+                            "model": {
+                              "height": 464,
+                              "width": 933,
+                              "locator": "vivo/live/images/2023/11/30/511d3550-3b79-426f-81e3-3c917024aebe.jpg",
+                              "originCode": "cpsprodpb",
+                              "copyrightHolder": "كتائب القسام"
+                            }
+                          },
+                          {
+                            "id": "916db014",
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "3dfa7432",
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "id": "cf992431",
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "تسليم الدفعة السابعة من الرهائن للصليب الأحمر",
+                                          "blocks": [
+                                            {
+                                              "id": "de72f652",
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "تسليم الدفعة السابعة من الرهائن للصليب الأحمر",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:d24ce480-08d1-4be1-8493-43dd4c19e76f",
+              "type": "POST",
+              "options": { "isBreakingNews": false },
+              "dates": {
+                "firstPublished": "2023-11-30T22:48:50.000Z",
+                "lastPublished": "2023-11-30T22:48:50.000Z",
+                "time": null,
+                "curated": "2023-11-30T22:48:51.863Z"
+              },
+              "titles": [{ "title": null, "source": "primary" }],
+              "descriptions": [{ "text": null, "source": "summary" }],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "9db96c3d",
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "b8ff21c4",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "0b07f253",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "المقاومة الإسلامية في العراق: \"نعلن استعدادنا وجهوزيتنا لتصعيد العمليات العسكرية داخل العراق وخارجه، إذا ما أصر العدو الأمريكي على استمرار آلة القتل الصهيونية سواء في غزة الصمود أو جنوب لبنان\"",
+                                    "blocks": [
+                                      {
+                                        "id": "02b281a5",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "المقاومة الإسلامية في العراق: \"نعلن استعدادنا وجهوزيتنا لتصعيد العمليات العسكرية داخل العراق وخارجه، إذا ما أصر العدو الأمريكي على استمرار آلة القتل الصهيونية سواء في غزة الصمود أو جنوب لبنان\"",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "67c5ea09",
+                      "type": "paragraph",
+                      "model": { "text": "", "blocks": [] }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:415047e3-cfd6-4263-9d71-74869ced799f",
+              "type": "POST",
+              "options": { "isBreakingNews": true },
+              "dates": {
+                "firstPublished": "2023-11-30T22:32:05.000Z",
+                "lastPublished": "2023-11-30T22:32:05.000Z",
+                "time": null,
+                "curated": "2023-11-30T22:32:05.988Z"
+              },
+              "titles": [{ "title": null, "source": "primary" }],
+              "descriptions": [{ "text": null, "source": "summary" }],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "b633d53a",
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "363264f6",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "2caeb67b",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "\"شعرت بالقشعريرة عندما رأيت ابني مرة أخرى\" - والد رهينة تايلاندي",
+                                    "blocks": [
+                                      {
+                                        "id": "9359bd0e",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "\"شعرت بالقشعريرة عندما رأيت ابني مرة أخرى\" - والد رهينة تايلاندي",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "da44d2e6",
+                      "type": "subheadline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "2daae782",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "1d4ab6b1",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "إفادة من ثانيارات دوكسون، بانكوك، تايلاند",
+                                    "blocks": [
+                                      {
+                                        "id": "6b6967e4",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "إفادة من ثانيارات دوكسون، بانكوك، تايلاند",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "049b0cb7",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "تحدث والد أحد التايلانديين\nالمفرج عنه في الأيام الأخيرة عن مشاعره تجاه الإفراج عن ابنه.",
+                        "blocks": [
+                          {
+                            "id": "583dbb15",
+                            "type": "fragment",
+                            "model": {
+                              "text": "تحدث والد أحد التايلانديين\nالمفرج عنه في الأيام الأخيرة عن مشاعره تجاه الإفراج عن ابنه.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "33f01fb1",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "وقال كونغبانا سودلاماي، والد بورنساناوان بيناكالو،\n30 عاماً، الذي أُطلق سراحه بعد ما يقرب من 50 يوما من الأسر لدى حركة حماس، إنه\nشعر بالقشعريرة عند رؤيته مرة أخرى، وقد\nأعدت له الأسرة شيئا \"أعلم أنه سيحبه\".",
+                        "blocks": [
+                          {
+                            "id": "53bf447b",
+                            "type": "fragment",
+                            "model": {
+                              "text": "وقال كونغبانا سودلاماي، والد بورنساناوان بيناكالو،\n30 عاماً، الذي أُطلق سراحه بعد ما يقرب من 50 يوما من الأسر لدى حركة حماس، إنه\nشعر بالقشعريرة عند رؤيته مرة أخرى، وقد\nأعدت له الأسرة شيئا \"أعلم أنه سيحبه\".",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "57d0e6fe",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "وقال سودلماي إنه كان قد بدأ يفقد الأمل بعد خمسة أيام\nمن هجوم حماس على إسرائيل، خاصة بعد أن أرسلت له السلطات الإسرائيلية صوراً من\nالكيبوتس الذي كان يعمل فيه ابنه بورنساناون، حيث قُتل عمال آخرون، لكن الأمل عاد\nإليه مرة أخرى عندما علم أن الحمض النووي لابنه لم يكن من بين العينات التي تم\nجمعها من القتلى.",
+                        "blocks": [
+                          {
+                            "id": "8142b85a",
+                            "type": "fragment",
+                            "model": {
+                              "text": "وقال سودلماي إنه كان قد بدأ يفقد الأمل بعد خمسة أيام\nمن هجوم حماس على إسرائيل، خاصة بعد أن أرسلت له السلطات الإسرائيلية صوراً من\nالكيبوتس الذي كان يعمل فيه ابنه بورنساناون، حيث قُتل عمال آخرون، لكن الأمل عاد\nإليه مرة أخرى عندما علم أن الحمض النووي لابنه لم يكن من بين العينات التي تم\nجمعها من القتلى.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "7286c0c1",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "وقال الأب لبي بي سي: “لا أحد من الآباء يريد أن يواجه\nأبناءه هذا الوضع مرة أخرى، لكن الأمر متروك له حقا (ما إذا كان سيعود إلى إسرائيل\nأم لا).",
+                        "blocks": [
+                          {
+                            "id": "fda0d293",
+                            "type": "fragment",
+                            "model": {
+                              "text": "وقال الأب لبي بي سي: “لا أحد من الآباء يريد أن يواجه\nأبناءه هذا الوضع مرة أخرى، لكن الأمر متروك له حقا (ما إذا كان سيعود إلى إسرائيل\nأم لا).",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "df387f4a",
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "7961b0bf",
+                            "type": "rawImage",
+                            "model": {
+                              "height": 683,
+                              "width": 1024,
+                              "locator": "vivo/live/images/2023/11/30/6e5bd567-d361-45d6-9490-a39d1754eec7.jpg",
+                              "originCode": "cpsprodpb",
+                              "copyrightHolder": "Getty Images"
+                            }
+                          },
+                          {
+                            "id": "8b62b123",
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "411ee357",
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "id": "627406ce",
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "إسرائيل نقلت الرهائن التايلانديين المفرج عنهم إلى بلادهم مرة أخرى",
+                                          "blocks": [
+                                            {
+                                              "id": "dff33fbe",
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "إسرائيل نقلت الرهائن التايلانديين المفرج عنهم إلى بلادهم مرة أخرى",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "id": "ccf12331",
+                            "type": "caption",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "82a2a15b",
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "id": "d155aab1",
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "إسرائيل نقلت الرهائن التايلانديين المفرج عنهم إلى بلادهم مرة أخرى",
+                                          "blocks": [
+                                            {
+                                              "id": "55b27f37",
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "إسرائيل نقلت الرهائن التايلانديين المفرج عنهم إلى بلادهم مرة أخرى",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:35dde3ee-b493-4f82-b7c3-c1f0cd2e4eff",
+              "type": "POST",
+              "options": { "isBreakingNews": false },
+              "dates": {
+                "firstPublished": "2023-11-30T22:20:53.000Z",
+                "lastPublished": "2023-11-30T22:20:53.000Z",
+                "time": null,
+                "curated": "2023-11-30T22:20:53.865Z"
+              },
+              "titles": [{ "title": null, "source": "primary" }],
+              "descriptions": [{ "text": null, "source": "summary" }],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "3816d44c",
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "5439fb8a",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "6d7d0811",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "المتحدث باسم الجيش الإسرائيلي: وحدة خاصة من الجيش الإسرائيلي وقوة من الشاباك تقوم الآن بمرافقة المختطفين الستة إلى إسرائيل",
+                                    "blocks": [
+                                      {
+                                        "id": "df7f4fc0",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "المتحدث باسم الجيش الإسرائيلي: وحدة خاصة من الجيش الإسرائيلي وقوة من الشاباك تقوم الآن بمرافقة المختطفين الستة إلى إسرائيل",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "0658db60",
+                      "type": "paragraph",
+                      "model": { "text": "", "blocks": [] }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:6964c94e-7302-4ee5-ab24-4d40d033f2cb",
+              "type": "POST",
+              "options": { "isBreakingNews": true },
+              "dates": {
+                "firstPublished": "2023-11-30T21:42:53.000Z",
+                "lastPublished": "2023-11-30T21:42:53.000Z",
+                "time": null,
+                "curated": "2023-11-30T21:42:54.379Z"
+              },
+              "titles": [{ "title": null, "source": "primary" }],
+              "descriptions": [{ "text": null, "source": "summary" }],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "f8533762",
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "cf6b182d",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "ef5cd0a6",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "الخارجية القطرية: حسب التزامات اليوم السابع من اتفاق التهدئة المؤقتة، اليوم سيتم الإفراج عن 30 فلسطينياً، مقابل الإفراج عن 10 رهائن في غزة، وتم احتساب المواطنتين الروسيتين اللتين تم الافراج عنهم يوم أمس ضمن هذه القائمة",
+                                    "blocks": [
+                                      {
+                                        "id": "cca01213",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "الخارجية القطرية: حسب التزامات اليوم السابع من اتفاق التهدئة المؤقتة، اليوم سيتم الإفراج عن 30 فلسطينياً، مقابل الإفراج عن 10 رهائن في غزة، وتم احتساب المواطنتين الروسيتين اللتين تم الافراج عنهم يوم أمس ضمن هذه القائمة",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "fbb5637f",
+                      "type": "paragraph",
+                      "model": { "text": "", "blocks": [] }
+                    },
+                    {
+                      "id": "2d190784",
+                      "type": "social",
+                      "model": {
+                        "source": "https://twitter.com/majedalansari/status/1730334442474872926",
+                        "blocks": [
+                          {
+                            "id": "52ee9545",
+                            "type": "renditions",
+                            "model": {
+                              "locator": "",
+                              "blocks": [
+                                {
+                                  "id": "31a62408",
+                                  "type": "aresOEmbed",
+                                  "model": {
+                                    "oembed": {
+                                      "provider_name": "twitter",
+                                      "url": "https://twitter.com/majedalansari/status/1730334442474872926",
+                                      "html": "<blockquote class=\"twitter-tweet\"><a href=https://twitter.com/majedalansari/status/1730334442474872926>View original content on Twitter</a></blockquote>"
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:306df078-f507-49f6-93ba-6765dba9a9ac",
+              "type": "POST",
+              "options": { "isBreakingNews": true },
+              "dates": {
+                "firstPublished": "2023-11-30T21:37:51.000Z",
+                "lastPublished": "2023-11-30T21:38:09.000Z",
+                "time": null,
+                "curated": "2023-11-30T21:37:52.401Z"
+              },
+              "titles": [{ "title": null, "source": "primary" }],
+              "descriptions": [{ "text": null, "source": "summary" }],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "20f9bbd8",
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "e6fbc47e",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "ab35faf3",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "الخارجية القطرية: يتضمن الفلسطينيون المفرج عنهم من السجون الاسرائيلية 23 قاصراً و 7 نساء",
+                                    "blocks": [
+                                      {
+                                        "id": "37397745",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "الخارجية القطرية: يتضمن الفلسطينيون المفرج عنهم من السجون الاسرائيلية 23 قاصراً و 7 نساء",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "1069662e",
+                      "type": "paragraph",
+                      "model": { "text": "", "blocks": [] }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:9e73d9f0-674c-4864-bafd-163b234c315a",
+              "type": "POST",
+              "options": { "isBreakingNews": true },
+              "dates": {
+                "firstPublished": "2023-11-30T21:36:24.000Z",
+                "lastPublished": "2023-11-30T21:36:24.000Z",
+                "time": null,
+                "curated": "2023-11-30T21:36:25.044Z"
+              },
+              "titles": [{ "title": null, "source": "primary" }],
+              "descriptions": [{ "text": null, "source": "summary" }],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "1741cf0c",
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "3b4da864",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "2bb39571",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "الجيش الإسرائيلي يعلن أن الصليب الأحمر تسلم 6 رهائن وهم في طريقهم إلى إسرائيل",
+                                    "blocks": [
+                                      {
+                                        "id": "9c0a45f4",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "الجيش الإسرائيلي يعلن أن الصليب الأحمر تسلم 6 رهائن وهم في طريقهم إلى إسرائيل",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "1a8e65c8",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "أعلن الجيش الإسرائيلي أن ست رهائن هم الآن مع الصليب الأحمر وهم في طريقهم إلى إسرائيل. ",
+                        "blocks": [
+                          {
+                            "id": "70c0fd6a",
+                            "type": "fragment",
+                            "model": {
+                              "text": "أعلن الجيش الإسرائيلي أن ست رهائن هم الآن مع الصليب الأحمر وهم في طريقهم إلى إسرائيل. ",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "af03a54c",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "ونشر الجيش الإسرائيلي على وسائل التواصل الاجتماعي أنه \"بحسب المعلومات التي قدمها الصليب الأحمر، تم نقل ستة رهائن إسرائيليين إليهم وهم في طريقهم إلى إسرائيل\". ",
+                        "blocks": [
+                          {
+                            "id": "3adeaa8e",
+                            "type": "fragment",
+                            "model": {
+                              "text": "ونشر الجيش الإسرائيلي على وسائل التواصل الاجتماعي أنه \"بحسب المعلومات التي قدمها الصليب الأحمر، تم نقل ستة رهائن إسرائيليين إليهم وهم في طريقهم إلى إسرائيل\". ",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "45e97141",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "تم إطلاق سراح رهينتين في وقت سابق اليوم، ليصل إجمالي الرهائن اليوم إلى ثمانية.",
+                        "blocks": [
+                          {
+                            "id": "86e65b43",
+                            "type": "fragment",
+                            "model": {
+                              "text": "تم إطلاق سراح رهينتين في وقت سابق اليوم، ليصل إجمالي الرهائن اليوم إلى ثمانية.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "8e4a6472",
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "39f1d198",
+                            "type": "rawImage",
+                            "model": {
+                              "height": 3007,
+                              "width": 5346,
+                              "locator": "vivo/live/images/2023/11/30/78761026-afbb-4dc7-9a76-996bb89998c7.jpg",
+                              "originCode": "cpsprodpb",
+                              "copyrightHolder": "Reuters"
+                            }
+                          },
+                          {
+                            "id": "014e9383",
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "83f108bd",
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "id": "1f9d6067",
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "الصليب الأحمر يستلم الرهائن الإسرائيليين لليوم",
+                                          "blocks": [
+                                            {
+                                              "id": "8272ba2c",
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "الصليب الأحمر يستلم الرهائن الإسرائيليين لليوم",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:a59be5cd-388a-4965-ad1b-5a81a553ef03",
+              "type": "POST",
+              "options": { "isBreakingNews": true },
+              "dates": {
+                "firstPublished": "2023-11-30T21:15:10.000Z",
+                "lastPublished": "2023-11-30T21:54:12.000Z",
+                "time": null,
+                "curated": "2023-11-30T21:15:11.749Z"
+              },
+              "titles": [{ "title": null, "source": "primary" }],
+              "descriptions": [{ "text": null, "source": "summary" }],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "5c9311fb",
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "ff752757",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "b6fe0a66",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "مدعي عام المحكمة الجنائية يزور إسرائيل لغاية \"غير تحقيقية\"",
+                                    "blocks": [
+                                      {
+                                        "id": "b0a2f04a",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "مدعي عام المحكمة الجنائية يزور إسرائيل لغاية \"غير تحقيقية\"",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "5311c7a2",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "أعلنت المحكمة الجنائية الدولية، أن المدعي العام كريم خان توجه\nإلى إسرائيل \"بناء على طلب ودعوة من ناجين وعائلات ضحايا هجوم حماس\nالذي وقع في السابع من تشرين الأول/أكتوبر\".",
+                        "blocks": [
+                          {
+                            "id": "176ea2d2",
+                            "type": "fragment",
+                            "model": {
+                              "text": "أعلنت المحكمة الجنائية الدولية، أن المدعي العام كريم خان توجه\nإلى إسرائيل \"بناء على طلب ودعوة من ناجين وعائلات ضحايا هجوم حماس\nالذي وقع في السابع من تشرين الأول/أكتوبر\".",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "95f0f878",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "وأوضحت المحكمة عبر\nمنصة \"إكس\"، أن \"الزيارة ليست ذات طبيعة تحقيقية.. لكنها تمثل فرصة مهمة للتعبير عن التعاطف مع جميع الضحايا وبدء حوار\".",
+                        "blocks": [
+                          {
+                            "id": "a4568186",
+                            "type": "fragment",
+                            "model": {
+                              "text": "وأوضحت المحكمة عبر\nمنصة \"إكس\"، أن \"الزيارة ليست ذات طبيعة تحقيقية.. لكنها تمثل فرصة مهمة للتعبير عن التعاطف مع جميع الضحايا وبدء حوار\".",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "af44c15f",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "ومن المقرر أن يزور خان\nأيضا رام الله بالضفة الغربية المحتلة، حيث يلتقي مسؤولين فلسطينيين كبارا، وفق\nالمحكمة.",
+                        "blocks": [
+                          {
+                            "id": "e3b97ccc",
+                            "type": "fragment",
+                            "model": {
+                              "text": "ومن المقرر أن يزور خان\nأيضا رام الله بالضفة الغربية المحتلة، حيث يلتقي مسؤولين فلسطينيين كبارا، وفق\nالمحكمة.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "36b81b5c",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "وفتحت المحكمة الجنائية الدولية، المنشأة عام 2002 لمحاكمة أسوأ الفظائع في العالم، تحقيقا في عام 2021 في جرائم حرب محتملة في الأراضي الفلسطينية، من بينها جرائم محتملة ارتكبتها القوات الإسرائيلية وحماس وفصائل فلسطينية مسلحة أخرى.",
+                        "blocks": [
+                          {
+                            "id": "7f0c082e",
+                            "type": "fragment",
+                            "model": {
+                              "text": "وفتحت المحكمة الجنائية الدولية، المنشأة عام 2002 لمحاكمة أسوأ الفظائع في العالم، تحقيقا في عام 2021 في جرائم حرب محتملة في الأراضي الفلسطينية، من بينها جرائم محتملة ارتكبتها القوات الإسرائيلية وحماس وفصائل فلسطينية مسلحة أخرى.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "9603c5f9",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "وأعلن خان أن تفويضه يشمل الجرائم التي ارتكبت خلال الحرب الحالية.",
+                        "blocks": [
+                          {
+                            "id": "12c9abbe",
+                            "type": "fragment",
+                            "model": {
+                              "text": "وأعلن خان أن تفويضه يشمل الجرائم التي ارتكبت خلال الحرب الحالية.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "69c84ab7",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "لكن فرق المحكمة لم تتمكن من دخول غزة، كما لم يتح لها إجراء تحقيقات في إسرائيل غير العضو في المحكمة.",
+                        "blocks": [
+                          {
+                            "id": "fd57bf83",
+                            "type": "fragment",
+                            "model": {
+                              "text": "لكن فرق المحكمة لم تتمكن من دخول غزة، كما لم يتح لها إجراء تحقيقات في إسرائيل غير العضو في المحكمة.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "51b34af3",
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "ee0f30dd",
+                            "type": "rawImage",
+                            "model": {
+                              "height": 999,
+                              "width": 1500,
+                              "locator": "vivo/live/images/2023/11/30/c568f22f-1b74-4df7-9a5d-1a253f2e2a43.jpg",
+                              "originCode": "cpsprodpb",
+                              "copyrightHolder": "Reuters"
+                            }
+                          },
+                          {
+                            "id": "58553cba",
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "f1879850",
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "id": "30c52e2e",
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "مدعي عام المحكمة الجنائية كريم خان",
+                                          "blocks": [
+                                            {
+                                              "id": "d5454d1f",
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "مدعي عام المحكمة الجنائية كريم خان",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "id": "1b569a7f",
+                            "type": "caption",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "ac7dc8b2",
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "id": "c60d5d0b",
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "مدعي عام المحكمة الجنائية كريم خان",
+                                          "blocks": [
+                                            {
+                                              "id": "6bbcdbb4",
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "مدعي عام المحكمة الجنائية كريم خان",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:409842e7-50e7-4399-8911-f05a89f27831",
+              "type": "POST",
+              "options": { "isBreakingNews": false },
+              "dates": {
+                "firstPublished": "2023-11-30T20:00:10.000Z",
+                "lastPublished": "2023-11-30T20:00:10.000Z",
+                "time": null,
+                "curated": "2023-11-30T20:00:12.767Z"
+              },
+              "titles": [{ "title": null, "source": "primary" }],
+              "descriptions": [{ "text": null, "source": "summary" }],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "6fc157c1",
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "c27a60d2",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "a6ed53e6",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "حماس: عرضنا على إسرائيل تسليمها جثامين الأم وطفليها \"الذين قتلوا في قصف إسرائيلي سابق\" لكنها رفضت",
+                                    "blocks": [
+                                      {
+                                        "id": "3eaa326c",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "حماس: عرضنا على إسرائيل تسليمها جثامين الأم وطفليها \"الذين قتلوا في قصف إسرائيلي سابق\" لكنها رفضت",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "8f717c0d",
+                      "type": "paragraph",
+                      "model": { "text": "", "blocks": [] }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:a49a72df-9013-4c1c-919b-390e0a0fcef0",
+              "type": "POST",
+              "options": { "isBreakingNews": false },
+              "dates": {
+                "firstPublished": "2023-11-30T19:38:16.000Z",
+                "lastPublished": "2023-11-30T19:38:16.000Z",
+                "time": null,
+                "curated": "2023-11-30T19:38:18.231Z"
+              },
+              "titles": [{ "title": null, "source": "primary" }],
+              "descriptions": [{ "text": null, "source": "summary" }],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "2d4daff2",
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "52f3600b",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "fa3daf33",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "الأردن يعلن عن ثالث عملية لإنزال المساعدات في غزة",
+                                    "blocks": [
+                                      {
+                                        "id": "f3e3c4ff",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "الأردن يعلن عن ثالث عملية لإنزال المساعدات في غزة",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "3d1e0c66",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "أعلن الجيش الأردني عن\nعملية إنزال مساعدات إغاثية وعلاجية عاجلة للمرة الثالثة، بواسطة مظلات للمستشفى\nالميداني الأردني غزة /76، وذلك عبر طائرة تابعة لسلاح الجو الملكي.",
+                        "blocks": [
+                          {
+                            "id": "63b3b70e",
+                            "type": "fragment",
+                            "model": {
+                              "text": "أعلن الجيش الأردني عن\nعملية إنزال مساعدات إغاثية وعلاجية عاجلة للمرة الثالثة، بواسطة مظلات للمستشفى\nالميداني الأردني غزة /76، وذلك عبر طائرة تابعة لسلاح الجو الملكي.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "5b31bcc6",
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "2c3a3c83",
+                            "type": "rawImage",
+                            "model": {
+                              "height": 1066,
+                              "width": 1600,
+                              "locator": "vivo/live/images/2023/11/30/a54b72d8-1661-4c1b-b321-ffd91f2618bf.jpg",
+                              "originCode": "cpsprodpb",
+                              "copyrightHolder": "القوات المسلحة الأردنية"
+                            }
+                          },
+                          {
+                            "id": "a5002cf9",
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "97a1c390",
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "id": "2f2682df",
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "طائرة تابعة لسلاح الجو الملكي الأردني تقوم بإنزال مساعدات إغاثية وعلاجية في غزة",
+                                          "blocks": [
+                                            {
+                                              "id": "4c64e640",
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "طائرة تابعة لسلاح الجو الملكي الأردني تقوم بإنزال مساعدات إغاثية وعلاجية في غزة",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "id": "ee4eaf0e",
+                            "type": "caption",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "bc6697df",
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "id": "d48488af",
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "طائرة تابعة لسلاح الجو الملكي الأردني خلال تحضيرات إنزال المساعدات الإغاثية والعلاجية في قطاع غزة",
+                                          "blocks": [
+                                            {
+                                              "id": "8b4e7134",
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "طائرة تابعة لسلاح الجو الملكي الأردني خلال تحضيرات إنزال المساعدات الإغاثية والعلاجية في قطاع غزة",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "0d42cbe0",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "وبحسب موقع القوات المسلحة الأردنية، فإن هذه الخطوة تهدف تعزيز وتطوير إمكانيات المستشفى وزيادة قدرة الكوادر الطبية في تقديم خدمات صحية وعلاجية للتخفيف عن الجرحى والمصابين ضمن الظروف الصعبة التي يمرون بها.",
+                        "blocks": [
+                          {
+                            "id": "8ad7c66e",
+                            "type": "fragment",
+                            "model": {
+                              "text": "وبحسب موقع القوات المسلحة الأردنية، فإن هذه الخطوة تهدف تعزيز وتطوير إمكانيات المستشفى وزيادة قدرة الكوادر الطبية في تقديم خدمات صحية وعلاجية للتخفيف عن الجرحى والمصابين ضمن الظروف الصعبة التي يمرون بها.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "1010a384",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "وكانت القوات المسلحة الأردنية وبالتنسيق مع الهيئة الخيرية الهاشمية قد سيرت جسراً جوياً بمعدل 14 طائرة وقافلة تحمل مساعدات إغاثية وإنسانية وطبية، لتقديم العلاج والإسعافات لأهالي القطاع.",
+                        "blocks": [
+                          {
+                            "id": "57da0a7b",
+                            "type": "fragment",
+                            "model": {
+                              "text": "وكانت القوات المسلحة الأردنية وبالتنسيق مع الهيئة الخيرية الهاشمية قد سيرت جسراً جوياً بمعدل 14 طائرة وقافلة تحمل مساعدات إغاثية وإنسانية وطبية، لتقديم العلاج والإسعافات لأهالي القطاع.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "9c733312",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "وكان الأردن قد أعلن فجر يوم الإثنين 6 نوفمبر/ تشرين الثاني عن أول عملية إنزال للمستشفى الميداني، حيث تمكن سلاح الجو في القوات المسلحة من إنزال مساعدات طبية ودوائية عاجلة جواً للمستشفى الميداني الأردني في قطاع غزة.",
+                        "blocks": [
+                          {
+                            "id": "606bbbaa",
+                            "type": "fragment",
+                            "model": {
+                              "text": "وكان الأردن قد أعلن فجر يوم الإثنين 6 نوفمبر/ تشرين الثاني عن أول عملية إنزال للمستشفى الميداني، حيث تمكن سلاح الجو في القوات المسلحة من إنزال مساعدات طبية ودوائية عاجلة جواً للمستشفى الميداني الأردني في قطاع غزة.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "76efecb9",
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "8436565b",
+                            "type": "rawImage",
+                            "model": {
+                              "height": 1066,
+                              "width": 1600,
+                              "locator": "vivo/live/images/2023/11/30/23437f77-32d4-4052-9f01-098d0f6ab8c1.jpg",
+                              "originCode": "cpsprodpb",
+                              "copyrightHolder": "القوات المسلحة الأردنية"
+                            }
+                          },
+                          {
+                            "id": "34bf2b10",
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "9760ec89",
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "id": "723e3e72",
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "الأردن ينفذ عملية إنزال مساعدات إغاثية وعلاجية في غزة",
+                                          "blocks": [
+                                            {
+                                              "id": "3823323f",
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "الأردن ينفذ عملية إنزال مساعدات إغاثية وعلاجية في غزة",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:7da12359-2a4e-41ec-be5f-b0ff9f7c697b",
+              "type": "POST",
+              "options": { "isBreakingNews": false },
+              "dates": {
+                "firstPublished": "2023-11-30T18:59:06.000Z",
+                "lastPublished": "2023-11-30T19:02:58.000Z",
+                "time": null,
+                "curated": "2023-11-30T18:59:09.165Z"
+              },
+              "titles": [{ "title": null, "source": "primary" }],
+              "descriptions": [{ "text": null, "source": "summary" }],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "73de8c2b",
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "26a05fce",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "539bd1a4",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "البيت الأبيض: نواصل الجهود مع قطر ومصر لتمديد الهدنة الإنسانية وتأمين إطلاق سراح الرهائن",
+                                    "blocks": [
+                                      {
+                                        "id": "c2e0283b",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "البيت الأبيض: نواصل الجهود مع قطر ومصر لتمديد الهدنة الإنسانية وتأمين إطلاق سراح الرهائن",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "2b067366",
+                      "type": "paragraph",
+                      "model": { "text": "", "blocks": [] }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:6d8bbc2e-5f15-42d9-9c99-4a2cf4e2df5b",
+              "type": "POST",
+              "options": { "isBreakingNews": true },
+              "dates": {
+                "firstPublished": "2023-11-30T18:41:24.000Z",
+                "lastPublished": "2023-11-30T18:41:24.000Z",
+                "time": null,
+                "curated": "2023-11-30T18:41:25.728Z"
+              },
+              "titles": [{ "title": null, "source": "primary" }],
+              "descriptions": [{ "text": null, "source": "summary" }],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "bcd0c0c7",
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "d4f920aa",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "5f8e491a",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "الجيش الأردني: تنفيذ عملية إنزال ثالثة لمساعدات إغاثية وعلاجية عاجلة للمستشفى الميداني في شمال غزة",
+                                    "blocks": [
+                                      {
+                                        "id": "2cb81169",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "الجيش الأردني: تنفيذ عملية إنزال ثالثة لمساعدات إغاثية وعلاجية عاجلة للمستشفى الميداني في شمال غزة",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "ee612569",
+                      "type": "paragraph",
+                      "model": { "text": "", "blocks": [] }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:a4ca98e3-d59b-4650-9503-e6bf3e17c588",
+              "type": "POST",
+              "options": { "isBreakingNews": true },
+              "dates": {
+                "firstPublished": "2023-11-30T18:38:39.000Z",
+                "lastPublished": "2023-11-30T18:38:39.000Z",
+                "time": null,
+                "curated": "2023-11-30T18:38:40.463Z"
+              },
+              "titles": [{ "title": null, "source": "primary" }],
+              "descriptions": [{ "text": null, "source": "summary" }],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "d6a05909",
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "92b479a4",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "2ec90e70",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "الناطق العسكري باسم الحوثيين: العمليات العسكرية ضد إسرائيل ستتوقف فور توقف الحرب على غزة",
+                                    "blocks": [
+                                      {
+                                        "id": "c1b53535",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "الناطق العسكري باسم الحوثيين: العمليات العسكرية ضد إسرائيل ستتوقف فور توقف الحرب على غزة",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "5e65bc86",
+                      "type": "paragraph",
+                      "model": { "text": "", "blocks": [] }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:a7ccf68a-28b3-4637-8485-c4a4b37e2822",
+              "type": "POST",
+              "options": { "isBreakingNews": true },
+              "dates": {
+                "firstPublished": "2023-11-30T18:34:57.000Z",
+                "lastPublished": "2023-11-30T18:34:57.000Z",
+                "time": null,
+                "curated": "2023-11-30T18:34:58.560Z"
+              },
+              "titles": [{ "title": null, "source": "primary" }],
+              "descriptions": [{ "text": null, "source": "summary" }],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "0d016222",
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "58edef25",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "7e34e04b",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "الناطق العسكري باسم الحوثيين: مستمرون في منع السفن الإسرائيلية في البحر الأحمر وسوف نتخذ المزيد من الإجراءات لضمان التنفيذ الكامل لهذا القرار.",
+                                    "blocks": [
+                                      {
+                                        "id": "f213c99d",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "الناطق العسكري باسم الحوثيين: مستمرون في منع السفن الإسرائيلية في البحر الأحمر وسوف نتخذ المزيد من الإجراءات لضمان التنفيذ الكامل لهذا القرار.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "4d56cf2c",
+                      "type": "paragraph",
+                      "model": { "text": "", "blocks": [] }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:123db7d2-f0e1-4667-b4c9-0a500fa4894b",
+              "type": "POST",
+              "options": { "isBreakingNews": true },
+              "dates": {
+                "firstPublished": "2023-11-30T18:33:00.000Z",
+                "lastPublished": "2023-11-30T18:33:00.000Z",
+                "time": null,
+                "curated": "2023-11-30T18:33:01.250Z"
+              },
+              "titles": [{ "title": null, "source": "primary" }],
+              "descriptions": [{ "text": null, "source": "summary" }],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "1127d2b4",
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "86d9b0d3",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "231d6bec",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "الناطق العسكري باسم الحوثيين: لن نتردد في توسيع العمليات العسكرية ضد إسرائيلي لتشمل أهدافاً قد لا يتوقعها في البر أو البحر.",
+                                    "blocks": [
+                                      {
+                                        "id": "3670b0da",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "الناطق العسكري باسم الحوثيين: لن نتردد في توسيع العمليات العسكرية ضد إسرائيلي لتشمل أهدافاً قد لا يتوقعها في البر أو البحر.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "d33773e7",
+                      "type": "paragraph",
+                      "model": { "text": "", "blocks": [] }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:6fa1f2f7-30aa-48f5-ab9e-fb515461464a",
+              "type": "POST",
+              "options": { "isBreakingNews": true },
+              "dates": {
+                "firstPublished": "2023-11-30T18:31:41.000Z",
+                "lastPublished": "2023-11-30T18:33:32.000Z",
+                "time": null,
+                "curated": "2023-11-30T18:31:42.689Z"
+              },
+              "titles": [{ "title": null, "source": "primary" }],
+              "descriptions": [{ "text": null, "source": "summary" }],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "ac3aa096",
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "b24a6844",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "a279708a",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "الناطق العسكري باسم الحوثيين: مستعدون لاستئناف العملية العسكرية ضد إسرائيل بمجرد استئناف الحرب على غزة",
+                                    "blocks": [
+                                      {
+                                        "id": "916d932b",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "الناطق العسكري باسم الحوثيين: مستعدون لاستئناف العملية العسكرية ضد إسرائيل بمجرد استئناف الحرب على غزة",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "3bd29497",
+                      "type": "paragraph",
+                      "model": { "text": "", "blocks": [] }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:6af971c6-510e-4b35-975d-971d69cb6949",
+              "type": "POST",
+              "options": { "isBreakingNews": true },
+              "dates": {
+                "firstPublished": "2023-11-30T18:30:23.000Z",
+                "lastPublished": "2023-11-30T18:30:23.000Z",
+                "time": null,
+                "curated": "2023-11-30T18:30:24.424Z"
+              },
+              "titles": [{ "title": null, "source": "primary" }],
+              "descriptions": [{ "text": null, "source": "summary" }],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "ba11f8fa",
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "5cb1ee7a",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "79001854",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "الترقب يسيطر على الغزيين بانتظار ما ستحمله الساعات المقبلة",
+                                    "blocks": [
+                                      {
+                                        "id": "e5db0e7a",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "الترقب يسيطر على الغزيين بانتظار ما ستحمله الساعات المقبلة",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "5149ddd2",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "حالها كحال جميع سكان\nقطاع غزة، تترقب رويدة الساعات المقبلة وماذا ستحمل معها.. تمديد للهدنة؟ أم عودة\nالحرب كما كان عليه الحال قبل سبعة أيام من الآن؟",
+                        "blocks": [
+                          {
+                            "id": "e90943bc",
+                            "type": "fragment",
+                            "model": {
+                              "text": "حالها كحال جميع سكان\nقطاع غزة، تترقب رويدة الساعات المقبلة وماذا ستحمل معها.. تمديد للهدنة؟ أم عودة\nالحرب كما كان عليه الحال قبل سبعة أيام من الآن؟",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "d8fb5131",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "تقول الصحفية رويدة\nلبي بي سي إنها وعائلتها التي تسكن في خان يونس يشعرون بالقلق من الفترة القادمة\nوما قد تحمل من تهديدات لأهالي جنوب غزة.",
+                        "blocks": [
+                          {
+                            "id": "46089e54",
+                            "type": "fragment",
+                            "model": {
+                              "text": "تقول الصحفية رويدة\nلبي بي سي إنها وعائلتها التي تسكن في خان يونس يشعرون بالقلق من الفترة القادمة\nوما قد تحمل من تهديدات لأهالي جنوب غزة.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "9ad8b820",
+                      "type": "customQuote",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "b7d2c995",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "f123e093",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "نمنا بالأمس والرعب يملؤنا بعد أن تأخر الإعلان عن تمديد الهدنة ليوم آخر، استيقظت عند الفجر وأنا أترقب، حاولت تصفح الانترنت لمعرفة الأخبار إلا أن الشبكة كانت بطيئة جداً فلم أتمكن من معرفة التطورات، أجريت بعض الاتصالات فعلمت أنها مُددت ليوم آخر",
+                                    "blocks": [
+                                      {
+                                        "id": "c18f8c4c",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "نمنا بالأمس والرعب يملؤنا بعد أن تأخر الإعلان عن تمديد الهدنة ليوم آخر، استيقظت عند الفجر وأنا أترقب، حاولت تصفح الانترنت لمعرفة الأخبار إلا أن الشبكة كانت بطيئة جداً فلم أتمكن من معرفة التطورات، أجريت بعض الاتصالات فعلمت أنها مُددت ليوم آخر",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "d8b830c8",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "وتصف رويدة الأحوال المعيشية قائلة إن العثور على الماء صعب للغاية، كما أن الخضار قليلة في السوق أما عن اللحوم فهي باهظة الثمن فسعرها يصل إلى الضعف أو أكثر.",
+                        "blocks": [
+                          {
+                            "id": "63c3584e",
+                            "type": "fragment",
+                            "model": {
+                              "text": "وتصف رويدة الأحوال المعيشية قائلة إن العثور على الماء صعب للغاية، كما أن الخضار قليلة في السوق أما عن اللحوم فهي باهظة الثمن فسعرها يصل إلى الضعف أو أكثر.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "3937be8d",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "وتضيف السيدة التي لا تزال تمارس عملها الصحافي في ظل الظروف الصعبة: \"لا أكاد أصدق أنني لا زلت أعمل، على الرغم من شعوري بحالة سيئة، ذهني مشتت وأصبحت أفقد التركيز بسرعة، وحتى بدأت بالنسيان كثيراً، للأسف سلوكنا ونفسياتنا تغيرت للأسوأ\".",
+                        "blocks": [
+                          {
+                            "id": "a03f40d8",
+                            "type": "fragment",
+                            "model": {
+                              "text": "وتضيف السيدة التي لا تزال تمارس عملها الصحافي في ظل الظروف الصعبة: \"لا أكاد أصدق أنني لا زلت أعمل، على الرغم من شعوري بحالة سيئة، ذهني مشتت وأصبحت أفقد التركيز بسرعة، وحتى بدأت بالنسيان كثيراً، للأسف سلوكنا ونفسياتنا تغيرت للأسوأ\".",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "86e1c401",
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "0f7afa66",
+                            "type": "rawImage",
+                            "model": {
+                              "height": 1316,
+                              "width": 1562,
+                              "locator": "vivo/live/images/2023/11/30/aa64551a-d92a-4fe3-b83e-b387b87a1b78.png",
+                              "originCode": "cpsprodpb",
+                              "copyrightHolder": "Reuters"
+                            }
+                          },
+                          {
+                            "id": "5a279a98",
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "888bb42d",
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "id": "50135fad",
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "مخيم النصيرات",
+                                          "blocks": [
+                                            {
+                                              "id": "852c3d8d",
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "مخيم النصيرات",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:a2b41bc5-a5a9-4cd0-9402-a49561c19774",
+              "type": "POST",
+              "options": { "isBreakingNews": false },
+              "dates": {
+                "firstPublished": "2023-11-30T17:58:25.000Z",
+                "lastPublished": "2023-11-30T18:00:13.000Z",
+                "time": null,
+                "curated": "2023-11-30T17:58:26.149Z"
+              },
+              "titles": [{ "title": null, "source": "primary" }],
+              "descriptions": [{ "text": null, "source": "summary" }],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "a1171d2b",
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "171c1164",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "0e239a8d",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "نادي الأسير الفلسطيني: 22 طفلاً فلسطينياً و8 نساء من المتوقع أن تفرج عنهم إسرائيل اليوم",
+                                    "blocks": [
+                                      {
+                                        "id": "c3fc7c64",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "نادي الأسير الفلسطيني: 22 طفلاً فلسطينياً و8 نساء من المتوقع أن تفرج عنهم إسرائيل اليوم",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "480bb1eb",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "أعلن نادي الأسير الفلسطيني، الخميس، قائمة أسماء 30 محتجزاً من المتوقع أن\nتفرج عنهم إسرائيل في صفقة تبادل ضمن الهدنة.",
+                        "blocks": [
+                          {
+                            "id": "38ba167f",
+                            "type": "fragment",
+                            "model": {
+                              "text": "أعلن نادي الأسير الفلسطيني، الخميس، قائمة أسماء 30 محتجزاً من المتوقع أن\nتفرج عنهم إسرائيل في صفقة تبادل ضمن الهدنة.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "feb1eb8d",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "وتشمل القائمة 22 طفلاً و8 نساء، هم من ضمن قائمة شكّلتها إسرائيل وتضم 300 فلسطيني، تقول إن تهمهم تتراوح \"من رشق الحجارة والتحريض ومحاولة القتل\".",
+                        "blocks": [
+                          {
+                            "id": "553dee3c",
+                            "type": "fragment",
+                            "model": {
+                              "text": "وتشمل القائمة 22 طفلاً و8 نساء، هم من ضمن قائمة شكّلتها إسرائيل وتضم 300 فلسطيني، تقول إن تهمهم تتراوح \"من رشق الحجارة والتحريض ومحاولة القتل\".",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "a63e33a1",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "وأقل من ربع المدرجين في قائمة الـ 300 شخص، قد أُدينوا، بينما الغالبية العظمى منهم محتجزون احتياطياً في انتظار المحاكمة.",
+                        "blocks": [
+                          {
+                            "id": "2102647d",
+                            "type": "fragment",
+                            "model": {
+                              "text": "وأقل من ربع المدرجين في قائمة الـ 300 شخص، قد أُدينوا، بينما الغالبية العظمى منهم محتجزون احتياطياً في انتظار المحاكمة.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "235a811f",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "وبحسب نادي الأسير فإن السلطات الإسرائيلية \"اعتقلت منذ السابع من أكتوبر/تشرين الأول الماضي، 3,365 فلسطينيا على الأقل، إذ تمت الاعتقالات من المنازل، وعبر الحواجز العسكرية، وبتسليم النفس تحت الضغط، ومن احتجزوا كرهائن\"",
+                        "blocks": [
+                          {
+                            "id": "ca927b62",
+                            "type": "fragment",
+                            "model": {
+                              "text": "وبحسب نادي الأسير فإن السلطات الإسرائيلية \"اعتقلت منذ السابع من أكتوبر/تشرين الأول الماضي، 3,365 فلسطينيا على الأقل، إذ تمت الاعتقالات من المنازل، وعبر الحواجز العسكرية، وبتسليم النفس تحت الضغط، ومن احتجزوا كرهائن\"",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "15d1ce65",
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "1fbe11c2",
+                            "type": "rawImage",
+                            "model": {
+                              "height": 3392,
+                              "width": 5088,
+                              "locator": "vivo/live/images/2023/11/30/0031bbca-9830-409e-b91e-f3770ea0d6a6.jpg",
+                              "originCode": "cpsprodpb",
+                              "copyrightHolder": "shutterstock"
+                            }
+                          },
+                          {
+                            "id": "eed22d6a",
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "fed8dfa1",
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "id": "6cd13aa9",
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "المحتجزون الفلسطينيون المفرج عنهم قبل أيام",
+                                          "blocks": [
+                                            {
+                                              "id": "99bcdc0e",
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "المحتجزون الفلسطينيون المفرج عنهم قبل أيام",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "id": "a5f304da",
+                            "type": "caption",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "fac27c32",
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "id": "fc280677",
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "المحتجزون الفلسطينيون المفرج عنهم قبل أيام",
+                                          "blocks": [
+                                            {
+                                              "id": "eecca25a",
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "المحتجزون الفلسطينيون المفرج عنهم قبل أيام",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:c94d2a5e-8650-42c8-ab07-47c9675cd87e",
+              "type": "POST",
+              "options": { "isBreakingNews": false },
+              "dates": {
+                "firstPublished": "2023-11-30T17:27:04.000Z",
+                "lastPublished": "2023-11-30T17:27:04.000Z",
+                "time": null,
+                "curated": "2023-11-30T17:27:05.827Z"
+              },
+              "titles": [{ "title": null, "source": "primary" }],
+              "descriptions": [{ "text": null, "source": "summary" }],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            }
+          ],
+          "page": { "index": 1, "total": 4 }
+        }
+      }
+    },
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:cps:curie:asset:cd134c91-b22a-453d-ac04-57f08d8945b4",
+        "contentType": "live-coverage",
+        "pageIdentifier": "arabic.live_coverage.67574192.page",
+        "pageTitle": "واشنطن تقول إنها تواصل العمل مع مصر وقطر لتمديد الهدنة في غزة، وحماس تفرج عن 8 رهائن من الدفعة السابعة",
+        "timePublished": "2023-11-29T00:00:00.000Z",
+        "timeUpdated": "2023-11-30T23:19:29.000Z"
+      }
+    }
+  }
+}

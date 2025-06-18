@@ -1,547 +1,259 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares:ws_media:brand:bbc_hindi_tv/w13xttlw",
-    "locators": { "pid": "w172xf1dvp99qwz", "brandPid": "w13xttlw" },
-    "type": "WSTV",
-    "createdBy": "bbc_hindi_tv",
+  "data": {
+    "metadata": {
+      "type": "On Demand TV",
+      "atiAnalytics": {
+        "pageIdentifier": "hindi.bbc_hindi_tv.tv_programmes.w13xttlw.page",
+        "contentType": "player-episode",
+        "pageTitle": "दुनिया - BBC News हिंदी",
+        "contentId": "urn:bbc:pips:w13xttlw"
+      }
+    },
     "language": "hi",
-    "lastUpdated": 1608630366103,
-    "firstPublished": 1605542168000,
-    "lastPublished": 1605542168000,
-    "timestamp": 1605542168000,
-    "options": {},
-    "analyticsLabels": {
-      "pageTitle": "दुनिया - BBC News हिंदी",
-      "pageIdentifier": "hindi.bbc_hindi_tv.tv_programmes.w13xttlw.page",
-      "producerId": "52",
-      "contentType": "player-episode",
-      "producer": "HINDI"
-    },
-    "tags": {},
-    "version": "v1.3.11",
-    "blockTypes": ["media"],
-    "title": "दुनिया",
-    "releaseDateTimeStamp": 1608508800000,
-    "atiAnalytics": {}
-  },
-  "content": {
-    "blocks": [
+    "brandTitle": "दुनिया",
+    "episodeTitle": "रूस ने यूक्रेन पर क्या पहली बार किया ताक़तवर इंटरकॉन्टिनेन्टल मिसाइल से हमला?",
+    "headline": "दुनिया",
+    "shortSynopsis": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया",
+    "mediumSynopsis": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया",
+    "id": "urn:bbc:ares:ws_media:brand:bbc_hindi_tv/w13xttlw",
+    "brandId": "w13xttlw",
+    "episodeId": "w172zm8g4s25k2f",
+    "masterBrand": "bbc_hindi_tv",
+    "releaseDateTimeStamp": "2024-11-21T00:00:00.000Z",
+    "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0jss0kp.jpg",
+    "imageAltText": null,
+    "promoBrandTitle": "दुनिया",
+    "durationISO8601": "PT19M52S",
+    "thumbnailImageUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p0jss0kp.jpg",
+    "episodeAvailability": "available",
+    "recentEpisodes": [
       {
-        "id": "w172xf1dvp99qwz",
-        "subType": "episode",
-        "format": "Video",
-        "title": "21/12/2020 GMT",
-        "synopses": {
-          "short": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया",
-          "medium": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया"
-        },
-        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
-        "embedding": false,
-        "advertising": false,
-        "versions": [
-          {
-            "versionId": "w1mshkxyc78sj4h",
-            "types": ["Original"],
-            "duration": 1192,
-            "durationISO8601": "PT19M52S",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": false,
-              "nonUk": false,
-              "world": true
-            },
-            "availableUntil": 1618185600000,
-            "availableFrom": 1608569390000,
-            "availabilityStatus": "available"
-          }
-        ],
-        "availability": "available",
-        "smpKind": "programme",
-        "type": "media"
-      }
-    ]
-  },
-  "promo": {
-    "headlines": { "headline": "दुनिया" },
-    "locators": { "pid": "w172xf1dvp99qwz", "brandPid": "w13xttlw" },
-    "media": {
-      "id": "w172xf1dvp99qwz",
-      "subType": "episode",
-      "format": "Video",
-      "title": "21/12/2020 GMT",
-      "synopses": {
-        "short": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया",
-        "medium": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया"
+        "id": "w172zm8g4s22n5b",
+        "brandTitle": "दुनिया",
+        "episodeTitle": "रूस ने बदली परमाणु हथियार के इस्तेमाल पर नीति, अमेरिका और यूक्रेन क्या करेंगे?",
+        "timestamp": "2024-11-20T00:00:00.000Z",
+        "duration": "PT19M52S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5vsyy.png",
+        "altText": "दुनिया"
       },
-      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
-      "embedding": false,
-      "advertising": false,
-      "versions": [
-        {
-          "versionId": "w1mshkxyc78sj4h",
-          "types": ["Original"],
-          "duration": 1192,
-          "durationISO8601": "PT19M52S",
-          "warnings": {},
-          "availableTerritories": {
-            "uk": false,
-            "nonUk": false,
-            "world": true
-          },
-          "availableUntil": 1618185600000,
-          "availableFrom": 1608569390000,
-          "availabilityStatus": "available"
-        }
-      ],
-      "availability": "available",
-      "smpKind": "programme",
-      "type": "media"
-    },
-    "indexImage": {
-      "id": "",
-      "subType": "index",
-      "href": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
-      "path": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
-      "height": 0,
-      "width": 0,
-      "altText": null,
-      "copyrightHolder": null,
-      "type": "image"
-    },
-    "releaseDateTimestamp": 1608508800000,
-    "brand": { "pid": "w13xttlw", "title": "दुनिया" },
-    "id": "urn:bbc:ares:ws_media:page:bbc_hindi_tv/w172xf1dvp99qwz",
-    "type": "ws_tv"
-  },
-  "relatedContent": {
-    "site": {
-      "subType": "site",
-      "name": "Hindi",
-      "uri": "/hindi",
-      "type": "simple"
-    },
-    "groups": [
       {
-        "type": "other-episode",
-        "promos": [
-          {
-            "headlines": { "headline": "दुनिया" },
-            "locators": { "pid": "w172xf1dhdzx5xj", "brandPid": "w13xttlw" },
-            "media": {
-              "id": "w172xf1dhdzx5xj",
-              "subType": "episode",
-              "format": "Video",
-              "title": "18/12/2020 GMT",
-              "synopses": {
-                "short": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया",
-                "medium": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mshkxxzyzcz51",
-                  "types": ["Original"],
-                  "duration": 1192,
-                  "durationISO8601": "PT19M52S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
-                  },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1608310190000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1608249600000,
-            "brand": { "pid": "w13xttlw", "title": "दुनिया" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_hindi_tv/w172xf1dhdzx5xj",
-            "type": "ws_tv"
+        "id": "w172zm8g4s1zt49",
+        "brandTitle": "दुनिया",
+        "episodeTitle": "रूस बोला- यूक्रेन ने किया अमेरिकी मिसाइलों से हमला, ज़ेलेंस्की बोले- हम झुकेंगे नहीं",
+        "timestamp": "2024-11-19T00:00:00.000Z",
+        "duration": "PT19M52S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5lpyn.jpg",
+        "altText": "दुनिया"
+      },
+      {
+        "id": "w172zm8g4s1wx76",
+        "brandTitle": "दुनिया",
+        "episodeTitle": "अमेरिका ने यूक्रेन को दी रूस में अमेरिकी मिसाइलों से हमलों की इजाज़त, क्या होगा असर ?",
+        "timestamp": "2024-11-18T00:00:00.000Z",
+        "duration": "PT19M52S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5d4fm.png",
+        "altText": "दुनिया"
+      },
+      {
+        "id": "w172zm8fshrhc7r",
+        "brandTitle": "दुनिया",
+        "episodeTitle": "लेबनान में एक और संघर्ष की कोशिश, दूसरी ओर इसराइल की भारी बमबारी",
+        "timestamp": "2024-11-15T00:00:00.000Z",
+        "duration": "PT19M52S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k4wgbv.jpg",
+        "altText": "दुनिया"
+      },
+      {
+        "id": "w172zm8fshrdgbn",
+        "brandTitle": "दुनिया",
+        "episodeTitle": "सीरिया में इसराइल के अटैक, सीरिया से क़ब्ज़ाए गोलान हाइट्स में इसराइली सेना की तैयारी से उभरी चिंता",
+        "timestamp": "2024-11-14T00:00:00.000Z",
+        "duration": "PT19M52S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k4l8wd.png",
+        "altText": "दुनिया"
+      },
+      {
+        "id": "w172zm8fshr9kfk",
+        "brandTitle": "दुनिया",
+        "episodeTitle": "डोन्ल्ड ट्रंप ने एलन मस्क और इन प्रमुख चेहरों को कैबिनेट में दी कौन सी जगह?",
+        "timestamp": "2024-11-13T00:00:00.000Z",
+        "duration": "PT19M52S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k4bn74.jpg",
+        "altText": "दुनिया"
+      },
+      {
+        "id": "w172zm8fshr6njg",
+        "brandTitle": "दुनिया",
+        "episodeTitle": "गज़ा को लेकर इसराइल पर बेअसर रही अमेरिका की चेतावनी, क्या मदद रोक देगा अमेरिका?",
+        "timestamp": "2024-11-12T00:00:00.000Z",
+        "duration": "PT19M52S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k43snj.jpg",
+        "altText": "दुनिया"
+      },
+      {
+        "id": "w172zm8fshr3rmc",
+        "brandTitle": "दुनिया",
+        "episodeTitle": "ईरान और सऊदी अरब दूरियां मिटाने को तैयार? क्यों हुई इस्लामिक देशों की इमर्जेंसी बैठक",
+        "timestamp": "2024-11-11T00:00:00.000Z",
+        "duration": "PT19M52S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k3w19c.jpg",
+        "altText": "दुनिया"
+      },
+      {
+        "id": "w172zm8ff7fq6mx",
+        "brandTitle": "दुनिया",
+        "episodeTitle": "ग़ज़ा में हुई मौतों को लेकर UN की रिपोर्ट में इसराइल पर क्या सवाल उठे",
+        "timestamp": "2024-11-08T00:00:00.000Z",
+        "duration": "PT19M52S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k39fl0.jpg",
+        "altText": "दुनिया"
+      },
+      {
+        "id": "w172zm8ff7fm9qt",
+        "brandTitle": "दुनिया",
+        "episodeTitle": "दुनिया",
+        "timestamp": "2024-11-07T00:00:00.000Z",
+        "duration": "PT19M52S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0jss0kp.jpg",
+        "altText": "दुनिया"
+      },
+      {
+        "id": "w172zm8ff7fjdtq",
+        "brandTitle": "दुनिया",
+        "episodeTitle": "दुनिया",
+        "timestamp": "2024-11-06T00:00:00.000Z",
+        "duration": "PT19M52S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0jss0kp.jpg",
+        "altText": "दुनिया"
+      },
+      {
+        "id": "w172zm8ff7ffmnr",
+        "brandTitle": "दुनिया",
+        "episodeTitle": "दुनिया",
+        "timestamp": "2024-11-05T00:00:00.000Z",
+        "duration": "PT19M52S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0jss0kp.jpg",
+        "altText": "दुनिया"
+      },
+      {
+        "id": "w172zm8ff7ffhxm",
+        "brandTitle": "दुनिया",
+        "episodeTitle": "कमला हैरिस या डोनाल्ड ट्रंप में से किसके जीतने का दुनिया पर क्या होगा असर?",
+        "timestamp": "2024-11-05T00:00:00.000Z",
+        "duration": "PT19M52S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k2j76x.jpg",
+        "altText": "दुनिया"
+      },
+      {
+        "id": "w172zm8ff7fbm0j",
+        "brandTitle": "दुनिया",
+        "episodeTitle": "लेबनान में  हिज़्बुल्लाह के टॉप कमांडर को मारने का इसराइल ने किया दावा",
+        "timestamp": "2024-11-04T00:00:00.000Z",
+        "duration": "PT19M52S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k26zbf.png",
+        "altText": "दुनिया"
+      },
+      {
+        "id": "w172zm8f1z3y5s6",
+        "brandTitle": "दुनिया",
+        "episodeTitle": "दुनिया",
+        "timestamp": "2024-11-01T00:00:00.000Z",
+        "duration": "PT19M52S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0jss0kp.jpg",
+        "altText": "दुनिया"
+      },
+      {
+        "id": "w172zm8f1z3v8w3",
+        "brandTitle": "दुनिया",
+        "episodeTitle": "दुनिया",
+        "timestamp": "2024-10-31T00:00:00.000Z",
+        "duration": "PT19M52S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0jss0kp.jpg",
+        "altText": "दुनिया"
+      },
+      {
+        "id": "w172zm8f1z3rcz0",
+        "brandTitle": "दुनिया",
+        "episodeTitle": "दुनिया",
+        "timestamp": "2024-10-30T00:00:00.000Z",
+        "duration": "PT19M52S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0jss0kp.jpg",
+        "altText": "दुनिया"
+      },
+      {
+        "id": "w172zm8f1z3nh1x",
+        "brandTitle": "दुनिया",
+        "episodeTitle": "लेबनान में इसराइल के हमलों के बीच हिज़्बुल्लाह ने किसे चुना नया नेता और वो कहां हैं?",
+        "timestamp": "2024-10-29T00:00:00.000Z",
+        "duration": "PT19M52S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k136jt.jpg",
+        "altText": "दुनिया"
+      },
+      {
+        "id": "w172zm8f1z3kl4t",
+        "brandTitle": "दुनिया",
+        "episodeTitle": "दुनिया",
+        "timestamp": "2024-10-28T00:00:00.000Z",
+        "duration": "PT19M52S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0jss0kp.jpg",
+        "altText": "दुनिया"
+      },
+      {
+        "id": "w172zm8dppt515c",
+        "brandTitle": "दुनिया",
+        "episodeTitle": "इसराइल के बढ़ते हमलों के बीच किन तकलीफ़ों में हैं ग़ज़ा के उत्तरी इलाक़े में बचे हुए लोग",
+        "timestamp": "2024-10-25T00:00:00.000Z",
+        "duration": "PT19M52S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k07n0q.jpg",
+        "altText": "दुनिया"
+      }
+    ],
+    "mediaBlocks": [
+      {
+        "type": "tv",
+        "model": {
+          "id": "w172zm8g4s25k2f",
+          "subType": "episode",
+          "format": "Video",
+          "title": "दुनिया",
+          "synopses": {
+            "short": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया",
+            "medium": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया"
           },
-          {
-            "headlines": { "headline": "दुनिया" },
-            "locators": { "pid": "w172xf1dhdzt90f", "brandPid": "w13xttlw" },
-            "media": {
-              "id": "w172xf1dhdzt90f",
-              "subType": "episode",
-              "format": "Video",
-              "title": "17/12/2020 GMT",
-              "synopses": {
-                "short": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया",
-                "medium": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया"
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0jss0kp.jpg",
+          "embedding": false,
+          "advertising": false,
+          "versions": [
+            {
+              "versionId": "w1mskypg138jtbn",
+              "types": ["Original"],
+              "duration": 1192,
+              "durationISO8601": "PT19M52S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true,
+                "world": false
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mshkxxzyz927y",
-                  "types": ["Original"],
-                  "duration": 1192,
-                  "durationISO8601": "PT19M52S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
-                  },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1608223790000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1608163200000,
-            "brand": { "pid": "w13xttlw", "title": "दुनिया" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_hindi_tv/w172xf1dhdzt90f",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "दुनिया" },
-            "locators": { "pid": "w172xf1dhdzqd3b", "brandPid": "w13xttlw" },
-            "media": {
-              "id": "w172xf1dhdzqd3b",
-              "subType": "episode",
-              "format": "Video",
-              "title": "16/12/2020 GMT",
-              "synopses": {
-                "short": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया",
-                "medium": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mshkxxzyz65bv",
-                  "types": ["Original"],
-                  "duration": 1192,
-                  "durationISO8601": "PT19M52S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
-                  },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1608137390000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1608076800000,
-            "brand": { "pid": "w13xttlw", "title": "दुनिया" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_hindi_tv/w172xf1dhdzqd3b",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "दुनिया" },
-            "locators": { "pid": "w172xf1dhdzmh67", "brandPid": "w13xttlw" },
-            "media": {
-              "id": "w172xf1dhdzmh67",
-              "subType": "episode",
-              "format": "Video",
-              "title": "15/12/2020 GMT",
-              "synopses": {
-                "short": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया",
-                "medium": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mshkxxzyz38fr",
-                  "types": ["Original"],
-                  "duration": 1192,
-                  "durationISO8601": "PT19M52S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
-                  },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1608050990000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1607990400000,
-            "brand": { "pid": "w13xttlw", "title": "दुनिया" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_hindi_tv/w172xf1dhdzmh67",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "दुनिया" },
-            "locators": { "pid": "w172xf1dhdzjl94", "brandPid": "w13xttlw" },
-            "media": {
-              "id": "w172xf1dhdzjl94",
-              "subType": "episode",
-              "format": "Video",
-              "title": "14/12/2020 GMT",
-              "synopses": {
-                "short": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया",
-                "medium": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mshkxxzyz0cjn",
-                  "types": ["Original"],
-                  "duration": 1192,
-                  "durationISO8601": "PT19M52S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
-                  },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1607964590000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1607904000000,
-            "brand": { "pid": "w13xttlw", "title": "दुनिया" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_hindi_tv/w172xf1dhdzjl94",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "दुनिया" },
-            "locators": { "pid": "w172xf1d44p419p", "brandPid": "w13xttlw" },
-            "media": {
-              "id": "w172xf1d44p419p",
-              "subType": "episode",
-              "format": "Video",
-              "title": "11/12/2020 GMT",
-              "synopses": {
-                "short": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया",
-                "medium": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mshkxxmpnltk6",
-                  "types": ["Original"],
-                  "duration": 1192,
-                  "durationISO8601": "PT19M52S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
-                  },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1607705390000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1607644800000,
-            "brand": { "pid": "w13xttlw", "title": "दुनिया" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_hindi_tv/w172xf1d44p419p",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "दुनिया" },
-            "locators": { "pid": "w172xf1d44p14dl", "brandPid": "w13xttlw" },
-            "media": {
-              "id": "w172xf1d44p14dl",
-              "subType": "episode",
-              "format": "Video",
-              "title": "10/12/2020 GMT",
-              "synopses": {
-                "short": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया",
-                "medium": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mshkxxmpnhxn3",
-                  "types": ["Original"],
-                  "duration": 1192,
-                  "durationISO8601": "PT19M52S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
-                  },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1607618990000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1607558400000,
-            "brand": { "pid": "w13xttlw", "title": "दुनिया" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_hindi_tv/w172xf1d44p14dl",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "दुनिया" },
-            "locators": { "pid": "w172xf1d44ny7hh", "brandPid": "w13xttlw" },
-            "media": {
-              "id": "w172xf1d44ny7hh",
-              "subType": "episode",
-              "format": "Video",
-              "title": "09/12/2020 GMT",
-              "synopses": {
-                "short": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया",
-                "medium": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mshkxxmpnf0r0",
-                  "types": ["Original"],
-                  "duration": 1192,
-                  "durationISO8601": "PT19M52S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
-                  },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1607532590000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1607472000000,
-            "brand": { "pid": "w13xttlw", "title": "दुनिया" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_hindi_tv/w172xf1d44ny7hh",
-            "type": "ws_tv"
-          }
-        ]
+              "availableFrom": "2024-11-21T14:59:58.000Z",
+              "availabilityStatus": "available",
+              "availableUntil": null
+            }
+          ],
+          "availability": "available",
+          "smpKind": "programme",
+          "episodeTitle": "रूस ने यूक्रेन पर क्या पहली बार किया ताक़तवर इंटरकॉन्टिनेन्टल मिसाइल से हमला?",
+          "type": "media"
+        }
+      },
+      {
+        "type": "mediaOverrides",
+        "model": {
+          "language": "hi",
+          "pageIdentifierOverride": "hindi.bbc_hindi_tv.tv.w172zm8g4s25k2f.page"
+        }
       }
     ]
-  }
+  },
+  "contentType": "application/json; charset=utf-8"
 }

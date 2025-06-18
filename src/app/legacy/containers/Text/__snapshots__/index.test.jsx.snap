@@ -237,13 +237,13 @@ exports[`TextContainer with data should render correctly 1`] = `
 }
 
 .emotion-23 {
+  margin-top: 0;
+  list-style-type: none;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  margin-top: 0;
-  list-style-type: none;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -262,20 +262,24 @@ exports[`TextContainer with data should render correctly 1`] = `
 
 .emotion-23>li {
   position: relative;
+  color: inherit;
 }
 
 .emotion-23>li::before {
   top: 0.5rem;
-  content: ' ';
+  content: "";
   position: absolute;
   border-width: 1rem;
+  inset-inline-start: -1rem;
+}
+
+.emotion-23>li::before {
   border: 0.1875rem solid #3F3F42;
   background-color: #3F3F42;
   border-radius: 50%;
-  left: -1rem;
 }
 
-.emotion-25 {
+.emotion-24 {
   margin-bottom: 1rem;
 }
 
@@ -340,12 +344,11 @@ exports[`TextContainer with data should render correctly 1`] = `
     dir="ltr"
   >
     <ul
-      class="emotion-23 emotion-24"
-      dir="ltr"
+      class="emotion-23"
       role="list"
     >
       <li
-        class="emotion-25 emotion-26"
+        class="emotion-24"
         role="listitem"
       >
         This is a list item
@@ -357,12 +360,11 @@ exports[`TextContainer with data should render correctly 1`] = `
     dir="ltr"
   >
     <ul
-      class="emotion-23 emotion-24"
-      dir="ltr"
+      class="emotion-23"
       role="list"
     >
       <li
-        class="emotion-25 emotion-26"
+        class="emotion-24"
         role="listitem"
       >
         This is a list item

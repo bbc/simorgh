@@ -1,8 +1,5 @@
 import { css, Theme } from '@emotion/react';
-import {
-  MARGIN_ABOVE_400PX,
-  MARGIN_BELOW_400PX,
-} from '../ThemeProvider/spacings';
+import { FULL } from '../ThemeProvider/spacings';
 import { GROUP_4_MIN_WIDTH_BP } from '../ThemeProvider/mediaQueries';
 
 const styles = {
@@ -20,16 +17,20 @@ const styles = {
       margin: 0,
       padding: `${spacings.DOUBLE}rem 0`,
     }),
-  siteWideLinksWrapper: ({ palette, mq, fontSizes, fontVariants }: Theme) =>
+  siteWideLinksWrapper: ({
+    palette,
+    fontSizes,
+    fontVariants,
+    mq,
+    spacings,
+  }: Theme) =>
     css({
       ...fontSizes.brevier,
       ...fontVariants.sansRegular,
       backgroundColor: palette.EBON,
-      [mq.GROUP_2_MAX_WIDTH]: {
-        padding: `0 ${MARGIN_BELOW_400PX}`,
-      },
-      [mq.GROUP_2_MIN_WIDTH]: {
-        padding: `0 ${MARGIN_ABOVE_400PX}`,
+      padding: `0 ${spacings.DOUBLE}rem`,
+      [mq.GROUP_1_MAX_WIDTH]: {
+        padding: `0 ${FULL}rem`,
       },
     }),
   ampCookieSettingButton: ({ palette, spacings, fontVariants }: Theme) =>

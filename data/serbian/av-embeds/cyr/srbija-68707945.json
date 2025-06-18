@@ -1,0 +1,2674 @@
+{
+  "data": {
+    "avEmbed": {
+      "metadata": {
+        "atiAnalytics": {
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "categoryName": "News",
+          "contentId": "urn:bbc:cps:curie:asset:78f55756-ef21-47b4-a4e1-ffe1de4c957a",
+          "contentType": "article",
+          "language": "sr-Cyrl",
+          "ldpThingIds": "1791445f-977a-4e6d-b490-51f84bb4fc52~184cb2f7-e305-4c46-ab4f-2e18f60b0293~5307a8d9-f620-40f5-92d4-f99c919a6ffa~6942cb29-9d3f-4c9c-9806-0a0578c286d6~992e096e-28e6-412d-b6a1-652f78be63c7~a1c14222-e7ab-45a2-a074-3cdc1045607c",
+          "ldpThingLabels": "Serbia~Family~Society~Education~Children~Disability",
+          "nationsProducer": null,
+          "pageIdentifier": "serbiancyr.serbia.story.68707945.page",
+          "pageTitle": "Здравље: Лични пратиоци деце са потешкоћама у развоју, „као члан породице\"",
+          "timePublished": "2024-07-25T07:01:21.000Z",
+          "timeUpdated": "2024-07-25T07:01:21.000Z",
+          "producerName": "SERBIAN",
+          "producerId": "81"
+        },
+        "id": "urn:bbc:ares::asset:serbian/cyr/srbija-68707945",
+        "locators": {
+          "assetUri": "/serbian/cyr/srbija-68707945",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:78f55756-ef21-47b4-a4e1-ffe1de4c957a",
+          "assetId": "68707945",
+          "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/srbija-68707945",
+          "canonicalUrl": "https://www.bbc.com/serbian/cyr/srbija-68707945",
+          "curie": "http://www.bbc.co.uk/asset/78f55756-ef21-47b4-a4e1-ffe1de4c957a"
+        },
+        "type": "STY",
+        "createdBy": "serbian-v6",
+        "language": "sr-Cyrl",
+        "lastUpdated": 1724927647000,
+        "firstPublished": 1721890881000,
+        "lastPublished": 1721890881000,
+        "timestamp": 1721890881000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "suitableForSyndication": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "allowAdvertising": true,
+          "hasContentWarning": false,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "ldp_tags": "Serbia~Family~Society~Education~Children~Disability",
+          "cps_asset_id": "68707945",
+          "page": "serbiancyr.serbia.story.68707945.page",
+          "audience_motivation": "Give me perspective",
+          "ldp_ids": "1791445f-977a-4e6d-b490-51f84bb4fc52~184cb2f7-e305-4c46-ab4f-2e18f60b0293~5307a8d9-f620-40f5-92d4-f99c919a6ffa~6942cb29-9d3f-4c9c-9806-0a0578c286d6~992e096e-28e6-412d-b6a1-652f78be63c7~a1c14222-e7ab-45a2-a074-3cdc1045607c",
+          "contentId": "urn:bbc:cps:curie:asset:78f55756-ef21-47b4-a4e1-ffe1de4c957a",
+          "contributors": "BBC World Service - Languages~BBC World Service~BBC News~BBC Serbian~BBC News Network",
+          "cps_asset_type": "sty"
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "language": "sr-cyrl",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Serbian",
+          "locator": "urn:bbc:cps:curie:asset:78f55756-ef21-47b4-a4e1-ffe1de4c957a",
+          "availability": "AVAILABLE",
+          "taggings": [
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/5307a8d9-f620-40f5-92d4-f99c919a6ffa#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+              "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/184cb2f7-e305-4c46-ab4f-2e18f60b0293#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+              "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+              "value": "http://www.bbc.co.uk/things/63e62ec8-dd8d-4c6d-bbe4-ae9ec33a0eed#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+              "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/6942cb29-9d3f-4c9c-9806-0a0578c286d6#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/a1c14222-e7ab-45a2-a074-3cdc1045607c#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+              "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+              "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/1791445f-977a-4e6d-b490-51f84bb4fc52#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/992e096e-28e6-412d-b6a1-652f78be63c7#id"
+            }
+          ],
+          "schemaVersion": "1.4.0",
+          "publishedState": "PUBLISHED",
+          "predicates": {
+            "contributor": [
+              {
+                "value": "http://www.bbc.co.uk/things/63e62ec8-dd8d-4c6d-bbe4-ae9ec33a0eed#id",
+                "type": "contributor"
+              }
+            ],
+            "assetType": [
+              {
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                "type": "assetType"
+              }
+            ],
+            "primaryMediaType": [
+              {
+                "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
+                "type": "primaryMediaType"
+              }
+            ],
+            "formats": [
+              {
+                "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                "thingLabel": "News report",
+                "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                "thingType": ["tagging:TagConcept", "tagging:Format"],
+                "thingSameAs": [],
+                "thingEnglishLabel": "Report",
+                "thingPreferredLabel": "Report",
+                "thingLabelLanguage": "sr-cyrl",
+                "type": "formats"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                "thingLabel": "Feature",
+                "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                "thingType": ["tagging:TagConcept", "tagging:Format"],
+                "thingSameAs": [
+                  "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                ],
+                "thingEnglishLabel": "Feature",
+                "thingPreferredLabel": "Feature",
+                "thingLabelLanguage": "sr-cyrl",
+                "type": "formats"
+              }
+            ],
+            "about": [
+              {
+                "value": "http://www.bbc.co.uk/things/1791445f-977a-4e6d-b490-51f84bb4fc52#id",
+                "thingLabel": "Србија",
+                "thingUri": "http://www.bbc.co.uk/things/1791445f-977a-4e6d-b490-51f84bb4fc52#id",
+                "thingId": "1791445f-977a-4e6d-b490-51f84bb4fc52",
+                "thingType": ["core:Thing", "core:Place", "tagging:TagConcept"],
+                "thingSameAs": ["http://sws.geonames.org/6290252/"],
+                "thingEnglishLabel": "Serbia",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/184cb2f7-e305-4c46-ab4f-2e18f60b0293#id",
+                "thingLabel": "Породица",
+                "thingUri": "http://www.bbc.co.uk/things/184cb2f7-e305-4c46-ab4f-2e18f60b0293#id",
+                "thingId": "184cb2f7-e305-4c46-ab4f-2e18f60b0293",
+                "thingType": [
+                  "core:Theme",
+                  "tagging:Genre",
+                  "tagging:TagConcept",
+                  "tagging:AmbiguousTerm",
+                  "core:Thing"
+                ],
+                "thingSameAs": [
+                  "http://www.wikidata.org/entity/Q8436",
+                  "http://dbpedia.org/resource/Family"
+                ],
+                "thingEnglishLabel": "Family",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/5307a8d9-f620-40f5-92d4-f99c919a6ffa#id",
+                "thingLabel": "Друштво",
+                "thingUri": "http://www.bbc.co.uk/things/5307a8d9-f620-40f5-92d4-f99c919a6ffa#id",
+                "thingId": "5307a8d9-f620-40f5-92d4-f99c919a6ffa",
+                "thingType": ["core:Theme", "tagging:TagConcept", "core:Thing"],
+                "thingSameAs": [
+                  "http://dbpedia.org/resource/Society",
+                  "http://www.wikidata.org/entity/Q8425"
+                ],
+                "thingEnglishLabel": "Society",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/6942cb29-9d3f-4c9c-9806-0a0578c286d6#id",
+                "thingLabel": "Образовање",
+                "thingUri": "http://www.bbc.co.uk/things/6942cb29-9d3f-4c9c-9806-0a0578c286d6#id",
+                "thingId": "6942cb29-9d3f-4c9c-9806-0a0578c286d6",
+                "thingType": ["tagging:TagConcept", "core:Thing", "core:Theme"],
+                "thingSameAs": [
+                  "http://www.wikidata.org/entity/Q8434",
+                  "http://dbpedia.org/resource/Education"
+                ],
+                "thingEnglishLabel": "Education",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/992e096e-28e6-412d-b6a1-652f78be63c7#id",
+                "thingLabel": "Деца",
+                "thingUri": "http://www.bbc.co.uk/things/992e096e-28e6-412d-b6a1-652f78be63c7#id",
+                "thingId": "992e096e-28e6-412d-b6a1-652f78be63c7",
+                "thingType": [
+                  "core:Theme",
+                  "tagging:TagConcept",
+                  "core:Thing",
+                  "tagging:AmbiguousTerm",
+                  "tagging:Genre"
+                ],
+                "thingSameAs": [
+                  "http://www.wikidata.org/entity/Q7569",
+                  "http://dbpedia.org/resource/Child"
+                ],
+                "thingEnglishLabel": "Children",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/a1c14222-e7ab-45a2-a074-3cdc1045607c#id",
+                "thingLabel": "Инвалидитет",
+                "thingUri": "http://www.bbc.co.uk/things/a1c14222-e7ab-45a2-a074-3cdc1045607c#id",
+                "thingId": "a1c14222-e7ab-45a2-a074-3cdc1045607c",
+                "thingType": [
+                  "core:Theme",
+                  "tagging:TagConcept",
+                  "tagging:Genre",
+                  "core:Thing",
+                  "tagging:AmbiguousTerm"
+                ],
+                "thingSameAs": [
+                  "http://www.wikidata.org/entity/Q12131",
+                  "http://dbpedia.org/resource/Disability"
+                ],
+                "thingEnglishLabel": "Disability",
+                "type": "about"
+              }
+            ]
+          }
+        },
+        "tags": {
+          "about": [
+            {
+              "thingLabel": "Србија",
+              "thingUri": "http://www.bbc.co.uk/things/1791445f-977a-4e6d-b490-51f84bb4fc52#id",
+              "thingId": "1791445f-977a-4e6d-b490-51f84bb4fc52",
+              "thingType": ["core:Thing", "core:Place", "tagging:TagConcept"],
+              "thingSameAs": ["http://sws.geonames.org/6290252/"],
+              "topicName": "Србија",
+              "topicId": "cvjp1d3k9dvt",
+              "curationList": [
+                {
+                  "curationId": "3758b6dd-0ae7-4dc6-ae07-2adbb2883774",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Serbia",
+              "thingLabelLanguage": "sr-cyrl",
+              "thingPreferredLabel": "Serbia"
+            },
+            {
+              "thingLabel": "Породица",
+              "thingUri": "http://www.bbc.co.uk/things/184cb2f7-e305-4c46-ab4f-2e18f60b0293#id",
+              "thingId": "184cb2f7-e305-4c46-ab4f-2e18f60b0293",
+              "thingType": [
+                "core:Theme",
+                "tagging:Genre",
+                "tagging:TagConcept",
+                "tagging:AmbiguousTerm",
+                "core:Thing"
+              ],
+              "thingSameAs": [
+                "http://www.wikidata.org/entity/Q8436",
+                "http://dbpedia.org/resource/Family"
+              ],
+              "topicName": "Породица",
+              "topicId": "c5qvd0dj81yt",
+              "curationList": [
+                {
+                  "curationId": "de06a165-0f97-4735-9cc6-9ec32451b474",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Family",
+              "thingLabelLanguage": "sr-cyrl",
+              "thingPreferredLabel": "Family"
+            },
+            {
+              "thingLabel": "Друштво",
+              "thingUri": "http://www.bbc.co.uk/things/5307a8d9-f620-40f5-92d4-f99c919a6ffa#id",
+              "thingId": "5307a8d9-f620-40f5-92d4-f99c919a6ffa",
+              "thingType": ["core:Theme", "tagging:TagConcept", "core:Thing"],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Society",
+                "http://www.wikidata.org/entity/Q8425"
+              ],
+              "topicName": "Друштво",
+              "topicId": "c8y9k0jzj28t",
+              "curationList": [
+                {
+                  "curationId": "f0290f5c-b68b-4094-8dcb-b8023f814e60",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Society",
+              "thingLabelLanguage": "sr-cyrl",
+              "thingPreferredLabel": "Society"
+            },
+            {
+              "thingLabel": "Образовање",
+              "thingUri": "http://www.bbc.co.uk/things/6942cb29-9d3f-4c9c-9806-0a0578c286d6#id",
+              "thingId": "6942cb29-9d3f-4c9c-9806-0a0578c286d6",
+              "thingType": ["tagging:TagConcept", "core:Thing", "core:Theme"],
+              "thingSameAs": [
+                "http://www.wikidata.org/entity/Q8434",
+                "http://dbpedia.org/resource/Education"
+              ],
+              "topicName": "Образовање",
+              "topicId": "cg725z5p4dwt",
+              "curationList": [
+                {
+                  "curationId": "e0fe6c81-f95c-4915-b95f-61538a1fe557",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Education",
+              "thingLabelLanguage": "sr-cyrl",
+              "thingPreferredLabel": "Education"
+            },
+            {
+              "thingLabel": "Деца",
+              "thingUri": "http://www.bbc.co.uk/things/992e096e-28e6-412d-b6a1-652f78be63c7#id",
+              "thingId": "992e096e-28e6-412d-b6a1-652f78be63c7",
+              "thingType": [
+                "core:Theme",
+                "tagging:TagConcept",
+                "core:Thing",
+                "tagging:AmbiguousTerm",
+                "tagging:Genre"
+              ],
+              "thingSameAs": [
+                "http://www.wikidata.org/entity/Q7569",
+                "http://dbpedia.org/resource/Child"
+              ],
+              "topicName": "Деца",
+              "topicId": "cvjp1d19207t",
+              "curationList": [
+                {
+                  "curationId": "6287277b-84bf-42a4-addd-23df6aac1bb4",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Children",
+              "thingLabelLanguage": "sr-cyrl",
+              "thingPreferredLabel": "Children"
+            },
+            {
+              "thingLabel": "Инвалидитет",
+              "thingUri": "http://www.bbc.co.uk/things/a1c14222-e7ab-45a2-a074-3cdc1045607c#id",
+              "thingId": "a1c14222-e7ab-45a2-a074-3cdc1045607c",
+              "thingType": [
+                "core:Theme",
+                "tagging:TagConcept",
+                "tagging:Genre",
+                "core:Thing",
+                "tagging:AmbiguousTerm"
+              ],
+              "thingSameAs": [
+                "http://www.wikidata.org/entity/Q12131",
+                "http://dbpedia.org/resource/Disability"
+              ],
+              "topicName": "Инвалидитет",
+              "topicId": "ckdxjzj723pt",
+              "curationList": [
+                {
+                  "curationId": "577ef45b-8489-45c0-bee5-65f9987a9b8d",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Disability",
+              "thingLabelLanguage": "sr-cyrl",
+              "thingPreferredLabel": "Disability"
+            }
+          ]
+        },
+        "version": "v1.4.47",
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "byline",
+          "contributor",
+          "name",
+          "role",
+          "image",
+          "caption",
+          "altText",
+          "rawImage",
+          "unorderedList",
+          "listItem",
+          "urlLink",
+          "subheadline",
+          "video",
+          "links",
+          "link",
+          "aresLink",
+          "aresMedia",
+          "aresMediaMetadata"
+        ],
+        "includeComments": false,
+        "readTime": 5,
+        "siteUri": "/serbian/cyr",
+        "topics": [
+          {
+            "topicName": "Породица",
+            "topicId": "c5qvd0dj81yt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/184cb2f7-e305-4c46-ab4f-2e18f60b0293#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "de06a165-0f97-4735-9cc6-9ec32451b474",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": [
+              "core:Theme",
+              "tagging:Genre",
+              "tagging:TagConcept",
+              "tagging:AmbiguousTerm",
+              "core:Thing"
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Serbian",
+            "topicUrl": "/serbian/cyr/topics/c5qvd0dj81yt"
+          },
+          {
+            "topicName": "Друштво",
+            "topicId": "c8y9k0jzj28t",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/5307a8d9-f620-40f5-92d4-f99c919a6ffa#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "f0290f5c-b68b-4094-8dcb-b8023f814e60",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": ["core:Theme", "tagging:TagConcept", "core:Thing"],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Serbian",
+            "topicUrl": "/serbian/cyr/topics/c8y9k0jzj28t"
+          },
+          {
+            "topicName": "Образовање",
+            "topicId": "cg725z5p4dwt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/6942cb29-9d3f-4c9c-9806-0a0578c286d6#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "e0fe6c81-f95c-4915-b95f-61538a1fe557",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": ["tagging:TagConcept", "core:Thing", "core:Theme"],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Serbian",
+            "topicUrl": "/serbian/cyr/topics/cg725z5p4dwt"
+          },
+          {
+            "topicName": "Инвалидитет",
+            "topicId": "ckdxjzj723pt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/a1c14222-e7ab-45a2-a074-3cdc1045607c#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "577ef45b-8489-45c0-bee5-65f9987a9b8d",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": [
+              "core:Theme",
+              "tagging:TagConcept",
+              "tagging:Genre",
+              "core:Thing",
+              "tagging:AmbiguousTerm"
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Serbian",
+            "topicUrl": "/serbian/cyr/topics/ckdxjzj723pt"
+          },
+          {
+            "topicName": "Деца",
+            "topicId": "cvjp1d19207t",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/992e096e-28e6-412d-b6a1-652f78be63c7#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "6287277b-84bf-42a4-addd-23df6aac1bb4",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": [
+              "core:Theme",
+              "tagging:TagConcept",
+              "core:Thing",
+              "tagging:AmbiguousTerm",
+              "tagging:Genre"
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Serbian",
+            "topicUrl": "/serbian/cyr/topics/cvjp1d19207t"
+          },
+          {
+            "topicName": "Србија",
+            "topicId": "cvjp1d3k9dvt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/1791445f-977a-4e6d-b490-51f84bb4fc52#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "3758b6dd-0ae7-4dc6-ae07-2adbb2883774",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": ["core:Thing", "core:Place", "tagging:TagConcept"],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Serbian",
+            "topicUrl": "/serbian/cyr/topics/cvjp1d3k9dvt"
+          }
+        ],
+        "allowAdvertising": true,
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false,
+        "useSensitiveOnwardJourneys": false,
+        "stats": {
+          "readTime": 5
+        },
+        "service": "serbian",
+        "variant": "cyr"
+      },
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "type": "aresMedia",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "urn:bbc:ares::clip:p0cfmdwj",
+                    "type": "aresMediaMetadata",
+                    "model": {
+                      "id": "p0cfmdwj",
+                      "subType": "clip",
+                      "format": "video",
+                      "title": "Помоћу слуха до докторских студија и спортских медаља",
+                      "synopses": {
+                        "short": "Србија и особе са инвалидитетом: Како је Стефан слухом заслужио дипломе и освојио медаље"
+                      },
+                      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0cfmfsv.jpg",
+                      "imageCopyright": "BBC",
+                      "embedding": true,
+                      "advertising": false,
+                      "versions": [
+                        {
+                          "versionId": "p0cfmdwn",
+                          "types": ["Original"],
+                          "duration": 274,
+                          "durationISO8601": "PT4M34S",
+                          "warnings": {},
+                          "availableTerritories": {
+                            "uk": true,
+                            "nonUk": true
+                          },
+                          "availableFrom": 1655477240000
+                        }
+                      ],
+                      "syndication": {
+                        "destinations": []
+                      },
+                      "smpKind": "programme"
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "rawImage",
+                          "model": {
+                            "width": 1000,
+                            "height": 560,
+                            "locator": "ichef.bbci.co.uk/images/ic/$widthxn/p0cfmfsv.jpg",
+                            "originCode": "mpv",
+                            "copyrightHolder": "BBC"
+                          }
+                        },
+                        {
+                          "type": "altText",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "text",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "type": "paragraph",
+                                      "model": {
+                                        "text": "Помоћу слуха до докторских студија и спортских медаља",
+                                        "blocks": [
+                                          {
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "Помоћу слуха до докторских студија и спортских медаља",
+                                              "attributes": []
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "captionText",
+                    "model": {
+                      "caption": "Србија и особе са инвалидитетом: Како је Стефан слухом заслужио дипломе и освојио медаље"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "promo": {
+        "locators": {
+          "assetUri": "/serbian/cyr/srbija-68707945",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:78f55756-ef21-47b4-a4e1-ffe1de4c957a",
+          "assetId": "68707945",
+          "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/srbija-68707945",
+          "canonicalUrl": "https://www.bbc.com/serbian/cyr/srbija-68707945",
+          "curie": "http://www.bbc.co.uk/asset/78f55756-ef21-47b4-a4e1-ffe1de4c957a"
+        },
+        "timestamp": 1721890881000,
+        "suitableForSyndication": true,
+        "language": "sr-Cyrl",
+        "headlines": {
+          "seoHeadline": "Здравље: Лични пратиоци деце са потешкоћама у развоју, „као члан породице\"",
+          "promoHeadline": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "„Као члан породице\": Лични пратиоци деце са сметњама у развоју",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "„Као члан породице\": Лични пратиоци деце са сметњама у развоју",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Јована са сином Јаковом",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Јована са сином Јаковом",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Деца, лични пратиоци",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Деца, лични пратиоци",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "height": 549,
+                  "width": 976,
+                  "locator": "DF45/production/_133075175_photo-2024-04-04-07-25-21.jpg",
+                  "href": "http://c.files.bbci.co.uk/DF45/production/_133075175_photo-2024-04-04-07-25-21.jpg",
+                  "originCode": "cpsprodpb",
+                  "copyrightHolder": "Јована Младеновић/Приванта архива",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        },
+        "summary": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Услуга личног пратиоца у Србији доступна је деци са потешкоћама у развоју током школовања од 2015. године, али према последњим доступним подацима, трећина градова и општина нема довољно новца за ову врсту социјалне подршке.",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "Услуга личног пратиоца у Србији доступна је деци са потешкоћама у развоју током школовања од 2015. године, али према последњим доступним подацима, трећина градова и општина нема довољно новца за ову врсту социјалне подршке.",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "language": "sr-cyrl",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Serbian",
+          "locator": "urn:bbc:cps:curie:asset:78f55756-ef21-47b4-a4e1-ffe1de4c957a",
+          "availability": "AVAILABLE",
+          "taggings": [
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/5307a8d9-f620-40f5-92d4-f99c919a6ffa#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+              "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/184cb2f7-e305-4c46-ab4f-2e18f60b0293#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+              "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+              "value": "http://www.bbc.co.uk/things/63e62ec8-dd8d-4c6d-bbe4-ae9ec33a0eed#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+              "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/6942cb29-9d3f-4c9c-9806-0a0578c286d6#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/a1c14222-e7ab-45a2-a074-3cdc1045607c#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+              "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+              "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/1791445f-977a-4e6d-b490-51f84bb4fc52#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/992e096e-28e6-412d-b6a1-652f78be63c7#id"
+            }
+          ],
+          "schemaVersion": "1.4.0",
+          "publishedState": "PUBLISHED"
+        },
+        "serviceIdentifier": "Serbian-v6",
+        "extrinsicPromo": {
+          "headlines": {
+            "shortHeadline": "„Као члан породице\": Лични пратиоци деце са сметњама у развоју"
+          },
+          "assetType": "STY",
+          "byline": {
+            "name": "Дејана Вукадиновић",
+            "title": "ББЦ новинарка ",
+            "persons": [
+              {
+                "name": "Дејана Вукадиновић",
+                "function": "ББЦ новинарка"
+              }
+            ]
+          },
+          "type": "cps"
+        },
+        "id": "urn:bbc:ares::asset:serbian/cyr/srbija-68707945",
+        "type": "caf"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Србија",
+          "uri": "/serbian/cyr/srbija",
+          "urlIdentifier": "/serbian/cyr/srbija",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBC News na srpskom",
+          "uri": "/serbian/cyr",
+          "urlIdentifier": "/serbian/cyr",
+          "type": "simple"
+        },
+        "groups": [
+          {
+            "type": "see-alsos",
+            "promos": [
+              {
+                "locators": {
+                  "assetUri": "/serbian/cyr/srbija-67145737",
+                  "cpsUrn": "urn:bbc:content:assetUri:/serbian/cyr/srbija-67145737"
+                },
+                "timestamp": 1699597640000,
+                "suitableForSyndication": true,
+                "language": "sr-Cyrl",
+                "headlines": {
+                  "seoHeadline": "Србија: Сигуран простор за децу са проблемима у понашању 'где се не осећају усамљено'",
+                  "promoHeadline": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Сигуран простор у Србији за децу са проблемима у понашању под будним оком 'анђела чувара'",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Сигуран простор у Србији за децу са проблемима у понашању под будним оком 'анђела чувара'",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                "images": {
+                  "defaultPromoImage": {
+                    "blocks": [
+                      {
+                        "type": "altText",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "text",
+                              "model": {
+                                "blocks": [
+                                  {
+                                    "type": "paragraph",
+                                    "model": {
+                                      "text": "девојчица на игралишту",
+                                      "blocks": [
+                                        {
+                                          "type": "fragment",
+                                          "model": {
+                                            "text": "девојчица на игралишту",
+                                            "attributes": []
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "rawImage",
+                        "model": {
+                          "height": 549,
+                          "width": 976,
+                          "locator": "13F20/production/_131669618_b759abb2-457f-4021-9611-013a0e531bae.jpg",
+                          "href": "http://c.files.bbci.co.uk/13F20/production/_131669618_b759abb2-457f-4021-9611-013a0e531bae.jpg",
+                          "originCode": "cpsprodpb",
+                          "copyrightHolder": "Getty Images",
+                          "suitableForSyndication": true
+                        }
+                      }
+                    ]
+                  }
+                },
+                "summary": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Сигуран простор за децу са најразличитијим проблемима у понашању: од попуштања у школи, до озбиљнијих прекршаја и лакших кривичних дела.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Сигуран простор за децу са најразличитијим проблемима у понашању: од попуштања у школи, до озбиљнијих прекршаја и лакших кривичних дела.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "extrinsicPromo": {
+                  "headlines": {
+                    "shortHeadline": "Сигуран простор у Србији за децу са проблемима у понашању под будним оком 'анђела чувара'"
+                  },
+                  "assetType": "STY",
+                  "type": "cps"
+                },
+                "id": "urn:bbc:ares::asset:serbian/cyr/srbija-67145737",
+                "type": "caf"
+              },
+              {
+                "locators": {
+                  "assetUri": "/serbian/cyr/srbija-67049250",
+                  "cpsUrn": "urn:bbc:content:assetUri:/serbian/cyr/srbija-67049250"
+                },
+                "timestamp": 1701593377000,
+                "suitableForSyndication": true,
+                "language": "sr-Cyrl",
+                "headlines": {
+                  "seoHeadline": "Инвалидитет и млади: Шта им доноси крај школовања у Србији",
+                  "promoHeadline": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Млади са инвалидитетом: Шта доноси крај школовања у Србији",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Млади са инвалидитетом: Шта доноси крај школовања у Србији",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                "images": {
+                  "defaultPromoImage": {
+                    "blocks": [
+                      {
+                        "type": "caption",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "text",
+                              "model": {
+                                "blocks": [
+                                  {
+                                    "type": "paragraph",
+                                    "model": {
+                                      "text": "Андрија има 19 година и у јуну је завршио средњу школу",
+                                      "blocks": [
+                                        {
+                                          "type": "fragment",
+                                          "model": {
+                                            "text": "Андрија има 19 година и у јуну је завршио средњу школу",
+                                            "attributes": []
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "altText",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "text",
+                              "model": {
+                                "blocks": [
+                                  {
+                                    "type": "paragraph",
+                                    "model": {
+                                      "text": "фото",
+                                      "blocks": [
+                                        {
+                                          "type": "fragment",
+                                          "model": {
+                                            "text": "фото",
+                                            "attributes": []
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "rawImage",
+                        "model": {
+                          "height": 549,
+                          "width": 976,
+                          "locator": "7705/production/_131596403_018bcf7f-9f92-4fbb-945d-515d834cc23d.jpg",
+                          "href": "http://c.files.bbci.co.uk/7705/production/_131596403_018bcf7f-9f92-4fbb-945d-515d834cc23d.jpg",
+                          "originCode": "cpsprodpb",
+                          "copyrightHolder": "BBC/Jovana Georgievski",
+                          "suitableForSyndication": true
+                        }
+                      }
+                    ]
+                  }
+                },
+                "summary": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Након завршетка школовања, млади са сметњама губе право на поједине услуге центара за социјални рад, а док чекају на посао или место у државном дневном боравку, породица неретко остаје једини ослонац.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Након завршетка школовања, млади са сметњама губе право на поједине услуге центара за социјални рад, а док чекају на посао или место у државном дневном боравку, породица неретко остаје једини ослонац.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "extrinsicPromo": {
+                  "headlines": {
+                    "shortHeadline": "Млади са инвалидитетом: Шта доноси крај школовања у Србији"
+                  },
+                  "assetType": "STY",
+                  "type": "cps"
+                },
+                "id": "urn:bbc:ares::asset:serbian/cyr/srbija-67049250",
+                "type": "caf"
+              },
+              {
+                "locators": {
+                  "assetUri": "/serbian/cyr/srbija-57511375",
+                  "cpsUrn": "urn:bbc:content:assetUri:/serbian/cyr/srbija-57511375"
+                },
+                "timestamp": 1624435736000,
+                "suitableForSyndication": true,
+                "language": "sr-Cyrl",
+                "headlines": {
+                  "seoHeadline": "Спорт и деца са инвалидитетом и сметњама у развоју: Тренинг који не јача само мишиће, већ и осмех",
+                  "promoHeadline": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Вежбе за јачање мишића и осмеха: Како деца са сметњама у развоју тренирају у Београду",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Вежбе за јачање мишића и осмеха: Како деца са сметњама у развоју тренирају у Београду",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                "images": {
+                  "defaultPromoImage": {
+                    "blocks": [
+                      {
+                        "type": "altText",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "text",
+                              "model": {
+                                "blocks": [
+                                  {
+                                    "type": "paragraph",
+                                    "model": {
+                                      "text": "драган николић",
+                                      "blocks": [
+                                        {
+                                          "type": "fragment",
+                                          "model": {
+                                            "text": "драган николић",
+                                            "attributes": []
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "rawImage",
+                        "model": {
+                          "height": 549,
+                          "width": 976,
+                          "locator": "9BC4/production/_118967893_gale.jpg",
+                          "href": "http://c.files.bbci.co.uk/9BC4/production/_118967893_gale.jpg",
+                          "originCode": "cpsprodpb",
+                          "copyrightHolder": "ФРОМ удружење",
+                          "suitableForSyndication": false
+                        }
+                      }
+                    ]
+                  }
+                },
+                "summary": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Истраживања Уницефа показала су да физичка активност код деце са инвалидитетом и сметњама у развоју смањује хиперактивност, појачава концентрацију и помаже им да развију доживљај припадности групи.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Истраживања Уницефа показала су да физичка активност код деце са инвалидитетом и сметњама у развоју смањује хиперактивност, појачава концентрацију и помаже им да развију доживљај припадности групи.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "extrinsicPromo": {
+                  "headlines": {
+                    "shortHeadline": "Вежбе за јачање мишића и осмеха: Како деца са сметњама у развоју тренирају у Београду"
+                  },
+                  "assetType": "STY",
+                  "type": "cps"
+                },
+                "id": "urn:bbc:ares::asset:serbian/cyr/srbija-57511375",
+                "type": "caf"
+              },
+              {
+                "locators": {
+                  "assetUri": "/serbian/cyr/srbija-61845982",
+                  "cpsUrn": "urn:bbc:content:assetUri:/serbian/cyr/srbija-61845982"
+                },
+                "timestamp": 1665039375000,
+                "suitableForSyndication": true,
+                "language": "sr-Cyrl",
+                "headlines": {
+                  "seoHeadline": "Србија и особе са инвалидитетом: Стефан је слеп од детињства и слухом осваја медаље и дипломе",
+                  "promoHeadline": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "За Стефана је небо граница: Слеп од детињства, слухом осваја медаље и дипломе",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "За Стефана је небо граница: Слеп од детињства, слухом осваја медаље и дипломе",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                "images": {
+                  "defaultPromoImage": {
+                    "blocks": [
+                      {
+                        "type": "altText",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "text",
+                              "model": {
+                                "blocks": [
+                                  {
+                                    "type": "paragraph",
+                                    "model": {
+                                      "text": "Помоћу слуха до докторских студија и спортских медаља",
+                                      "blocks": [
+                                        {
+                                          "type": "fragment",
+                                          "model": {
+                                            "text": "Помоћу слуха до докторских студија и спортских медаља",
+                                            "attributes": []
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "rawImage",
+                        "model": {
+                          "height": 573,
+                          "width": 1024,
+                          "locator": "D698/production/_125463945_p0cfmfsv.jpg",
+                          "href": "http://c.files.bbci.co.uk/D698/production/_125463945_p0cfmfsv.jpg",
+                          "originCode": "cpsprodpb",
+                          "copyrightHolder": "BBC",
+                          "suitableForSyndication": true
+                        }
+                      }
+                    ]
+                  }
+                },
+                "summary": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Стефан Стевановић из Ниша је слеп откако је имао две године, а сада са 27 је на путу да заврши докторске студије, има три године радног стажа, небројено медаља у голбалу и говори неколико језика.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Стефан Стевановић из Ниша је слеп откако је имао две године, а сада са 27 је на путу да заврши докторске студије, има три године радног стажа, небројено медаља у голбалу и говори неколико језика.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "extrinsicPromo": {
+                  "headlines": {
+                    "shortHeadline": "За Стефана је небо граница: Слеп од детињства, слухом осваја медаље и дипломе"
+                  },
+                  "assetType": "MAP",
+                  "media": {
+                    "blocks": [
+                      {
+                        "type": "video",
+                        "model": {
+                          "locator": "urn:bbc:pips:pid:p0cfmdwj",
+                          "blocks": [
+                            {
+                              "type": "caption",
+                              "model": {
+                                "blocks": [
+                                  {
+                                    "type": "text",
+                                    "model": {
+                                      "blocks": [
+                                        {
+                                          "type": "paragraph",
+                                          "model": {
+                                            "text": "Србија и особе са инвалидитетом: Како је Стефан слухом заслужио дипломе и освојио медаље",
+                                            "blocks": [
+                                              {
+                                                "type": "fragment",
+                                                "model": {
+                                                  "text": "Србија и особе са инвалидитетом: Како је Стефан слухом заслужио дипломе и освојио медаље",
+                                                  "attributes": []
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "aresMedia",
+                              "model": {
+                                "blocks": [
+                                  {
+                                    "blockId": "urn:bbc:ares::clip:p0cfmdwj",
+                                    "type": "aresMediaMetadata",
+                                    "model": {
+                                      "id": "p0cfmdwj",
+                                      "subType": "clip",
+                                      "format": "video",
+                                      "title": "Помоћу слуха до докторских студија и спортских медаља",
+                                      "synopses": {
+                                        "short": "Србија и особе са инвалидитетом: Како је Стефан слухом заслужио дипломе и освојио медаље"
+                                      },
+                                      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0cfmfsv.jpg",
+                                      "imageCopyright": "BBC",
+                                      "embedding": true,
+                                      "advertising": false,
+                                      "versions": [
+                                        {
+                                          "versionId": "p0cfmdwn",
+                                          "types": ["Original"],
+                                          "duration": 274,
+                                          "durationISO8601": "PT4M34S",
+                                          "warnings": {},
+                                          "availableTerritories": {
+                                            "uk": true,
+                                            "nonUk": true
+                                          },
+                                          "availableFrom": 1655477240000
+                                        }
+                                      ],
+                                      "syndication": {
+                                        "destinations": []
+                                      },
+                                      "smpKind": "programme"
+                                    }
+                                  },
+                                  {
+                                    "type": "image",
+                                    "model": {
+                                      "blocks": [
+                                        {
+                                          "type": "rawImage",
+                                          "model": {
+                                            "width": 1000,
+                                            "height": 560,
+                                            "locator": "ichef.bbci.co.uk/images/ic/$widthxn/p0cfmfsv.jpg",
+                                            "originCode": "mpv",
+                                            "copyrightHolder": "BBC"
+                                          }
+                                        },
+                                        {
+                                          "type": "altText",
+                                          "model": {
+                                            "blocks": [
+                                              {
+                                                "type": "text",
+                                                "model": {
+                                                  "blocks": [
+                                                    {
+                                                      "type": "paragraph",
+                                                      "model": {
+                                                        "text": "Помоћу слуха до докторских студија и спортских медаља",
+                                                        "blocks": [
+                                                          {
+                                                            "type": "fragment",
+                                                            "model": {
+                                                              "text": "Помоћу слуха до докторских студија и спортских медаља",
+                                                              "attributes": []
+                                                            }
+                                                          }
+                                                        ]
+                                                      }
+                                                    }
+                                                  ]
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  "mediaType": "Video",
+                  "type": "cps"
+                },
+                "id": "urn:bbc:ares::asset:serbian/cyr/srbija-61845982",
+                "type": "caf"
+              },
+              {
+                "locators": {
+                  "assetUri": "/serbian/cyr/srbija-45738060",
+                  "cpsUrn": "urn:bbc:content:assetUri:/serbian/cyr/srbija-45738060"
+                },
+                "timestamp": 1538583613000,
+                "suitableForSyndication": true,
+                "language": "sr-Cyrl",
+                "headlines": {
+                  "seoHeadline": "Аутизам: Србија каска, без званичних података и даље",
+                  "promoHeadline": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Аутизам: Србија и даље без података",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Аутизам: Србија и даље без података",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                "images": {
+                  "defaultPromoImage": {
+                    "blocks": [
+                      {
+                        "type": "caption",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "text",
+                              "model": {
+                                "blocks": [
+                                  {
+                                    "type": "paragraph",
+                                    "model": {
+                                      "text": "Удружења родитеља деце са аутизмом помињу цифру од 70.000 људи",
+                                      "blocks": [
+                                        {
+                                          "type": "fragment",
+                                          "model": {
+                                            "text": "Удружења родитеља деце са аутизмом помињу цифру од 70.000 људи",
+                                            "attributes": []
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "altText",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "text",
+                              "model": {
+                                "blocks": [
+                                  {
+                                    "type": "paragraph",
+                                    "model": {
+                                      "text": "аутизам",
+                                      "blocks": [
+                                        {
+                                          "type": "fragment",
+                                          "model": {
+                                            "text": "аутизам",
+                                            "attributes": []
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "rawImage",
+                        "model": {
+                          "height": 549,
+                          "width": 976,
+                          "locator": "69DA/production/_103689072_481684417-594x594.jpg",
+                          "href": "http://c.files.bbci.co.uk/69DA/production/_103689072_481684417-594x594.jpg",
+                          "originCode": "cpsprodpb",
+                          "copyrightHolder": "BSIP",
+                          "suitableForSyndication": false
+                        }
+                      }
+                    ]
+                  }
+                },
+                "summary": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Иако је најављено да ће национални регистар особа са аутизмом бити завршен до краја 2017. године, Србија поново дочекује Европски дан особа са аутизмом без овог важног документа.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Иако је најављено да ће национални регистар особа са аутизмом бити завршен до краја 2017. године, Србија поново дочекује Европски дан особа са аутизмом без овог важног документа.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "extrinsicPromo": {
+                  "headlines": {
+                    "shortHeadline": "Аутизам: Србија и даље без података"
+                  },
+                  "assetType": "STY",
+                  "type": "cps"
+                },
+                "id": "urn:bbc:ares::asset:serbian/cyr/srbija-45738060",
+                "type": "caf"
+              },
+              {
+                "locators": {
+                  "assetUri": "/serbian/cyr/srbija-59024377",
+                  "cpsUrn": "urn:bbc:content:assetUri:/serbian/cyr/srbija-59024377"
+                },
+                "timestamp": 1647531838000,
+                "suitableForSyndication": true,
+                "language": "sr-Cyrl",
+                "headlines": {
+                  "seoHeadline": "Деца са инвалидитетом и Србија: Влада усвојила измене закона, родитељима стиже новац после четири године",
+                  "promoHeadline": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Родитељи деце са инвалидитетом коначно добијају новац који им држава Србија дугује",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Родитељи деце са инвалидитетом коначно добијају новац који им држава Србија дугује",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                "images": {
+                  "defaultPromoImage": {
+                    "blocks": [
+                      {
+                        "type": "caption",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "text",
+                              "model": {
+                                "blocks": [
+                                  {
+                                    "type": "paragraph",
+                                    "model": {
+                                      "text": "Mоднa ревијa људи са Дауновим синдромом",
+                                      "blocks": [
+                                        {
+                                          "type": "fragment",
+                                          "model": {
+                                            "text": "Mоднa ревијa људи са Дауновим синдромом",
+                                            "attributes": []
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "altText",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "text",
+                              "model": {
+                                "blocks": [
+                                  {
+                                    "type": "paragraph",
+                                    "model": {
+                                      "text": "Марија са ћерком Теодором на Теодориној првој модној ревији",
+                                      "blocks": [
+                                        {
+                                          "type": "fragment",
+                                          "model": {
+                                            "text": "Марија са ћерком Теодором на Теодориној првој модној ревији",
+                                            "attributes": []
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "rawImage",
+                        "model": {
+                          "height": 549,
+                          "width": 976,
+                          "locator": "BAB6/production/_117089774_tetadaun.jpg",
+                          "href": "http://c.files.bbci.co.uk/BAB6/production/_117089774_tetadaun.jpg",
+                          "originCode": "cpsprodpb",
+                          "copyrightHolder": "BBC",
+                          "suitableForSyndication": true
+                        }
+                      }
+                    ]
+                  }
+                },
+                "summary": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Влада Србије усвојила је измене Закона о финансијској подршци породици са децом, којима ће оштећени родитељи добити новац након четири године чекања.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Влада Србије усвојила је измене Закона о финансијској подршци породици са децом, којима ће оштећени родитељи добити новац након четири године чекања.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "extrinsicPromo": {
+                  "headlines": {
+                    "shortHeadline": "Родитељи деце са инвалидитетом коначно добијају новац који им држава Србија дугује"
+                  },
+                  "assetType": "STY",
+                  "type": "cps"
+                },
+                "id": "urn:bbc:ares::asset:serbian/cyr/srbija-59024377",
+                "type": "caf"
+              },
+              {
+                "locators": {
+                  "assetUri": "/serbian/cyr/srbija-57669579",
+                  "cpsUrn": "urn:bbc:content:assetUri:/serbian/cyr/srbija-57669579"
+                },
+                "timestamp": 1625217732000,
+                "suitableForSyndication": true,
+                "language": "sr-Cyrl",
+                "headlines": {
+                  "seoHeadline": "Србија и деца: „Системско злостављање\" у домовима за децу и младе са сметњама у развоју - „нећу стати док не проверим сваку тврдњу\", каже министарка",
+                  "promoHeadline": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "„Системско злостављање\" у домовима за децу и младе са сметњама у развоју - шта каже држава",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "„Системско злостављање\" у домовима за децу и младе са сметњама у развоју - шта каже држава",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                "images": {
+                  "defaultPromoImage": {
+                    "blocks": [
+                      {
+                        "type": "caption",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "text",
+                              "model": {
+                                "blocks": [
+                                  {
+                                    "type": "paragraph",
+                                    "model": {
+                                      "text": "илустрација - архивска фотографија",
+                                      "blocks": [
+                                        {
+                                          "type": "fragment",
+                                          "model": {
+                                            "text": "илустрација - архивска фотографија",
+                                            "attributes": []
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "altText",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "text",
+                              "model": {
+                                "blocks": [
+                                  {
+                                    "type": "paragraph",
+                                    "model": {
+                                      "text": "дечак",
+                                      "blocks": [
+                                        {
+                                          "type": "fragment",
+                                          "model": {
+                                            "text": "дечак",
+                                            "attributes": []
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "rawImage",
+                        "model": {
+                          "height": 549,
+                          "width": 976,
+                          "locator": "16EC6/production/_119149839_tv000037695.jpg",
+                          "href": "http://c.files.bbci.co.uk/16EC6/production/_119149839_tv000037695.jpg",
+                          "originCode": "cpsprodpb",
+                          "copyrightHolder": "BBC",
+                          "suitableForSyndication": true
+                        }
+                      }
+                    ]
+                  }
+                },
+                "summary": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Системско злостављање, занемаривање и нечовечно понашање према корисницима домова за децу и младе за сметњама у развоју неки су од навода из извештаја „Заборављена деца Србије\", који је објавила Иницијатива за права особа са менталним инвалидитетом (МДРИ-С).",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Системско злостављање, занемаривање и нечовечно понашање према корисницима домова за децу и младе за сметњама у развоју неки су од навода из извештаја „Заборављена деца Србије\", који је објавила Иницијатива за права особа са менталним инвалидитетом (МДРИ-С).",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "extrinsicPromo": {
+                  "headlines": {
+                    "shortHeadline": "„Системско злостављање\" у домовима за децу и младе са сметњама у развоју - шта каже држава"
+                  },
+                  "assetType": "STY",
+                  "type": "cps"
+                },
+                "id": "urn:bbc:ares::asset:serbian/cyr/srbija-57669579",
+                "type": "caf"
+              },
+              {
+                "locators": {
+                  "assetUri": "/serbian/cyr/srbija-59596035",
+                  "cpsUrn": "urn:bbc:content:assetUri:/serbian/cyr/srbija-59596035"
+                },
+                "timestamp": 1639477144000,
+                "suitableForSyndication": true,
+                "language": "sr-Cyrl",
+                "headlines": {
+                  "seoHeadline": "Србија, ретке болести и деца: „Корак напред, три назад\" - како изгледа живот са дијагнозом ретке болести у Србији",
+                  "promoHeadline": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "„Корак напред, три уназад\": Живот са дијагнозом ретке болести у Србији",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "„Корак напред, три уназад\": Живот са дијагнозом ретке болести у Србији",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                "images": {
+                  "defaultPromoImage": {
+                    "blocks": [
+                      {
+                        "type": "altText",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "text",
+                              "model": {
+                                "blocks": [
+                                  {
+                                    "type": "paragraph",
+                                    "model": {
+                                      "text": "bbc",
+                                      "blocks": [
+                                        {
+                                          "type": "fragment",
+                                          "model": {
+                                            "text": "bbc",
+                                            "attributes": []
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "rawImage",
+                        "model": {
+                          "height": 549,
+                          "width": 976,
+                          "locator": "1A24/production/_122029660_b5e1c07f-1524-47d8-a199-cb170e7ca81e.jpg",
+                          "href": "http://c.files.bbci.co.uk/1A24/production/_122029660_b5e1c07f-1524-47d8-a199-cb170e7ca81e.jpg",
+                          "originCode": "cpsprodpb",
+                          "copyrightHolder": "BBC/Katarina Stevanović",
+                          "suitableForSyndication": true
+                        }
+                      }
+                    ]
+                  }
+                },
+                "summary": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Десетогодишња Анђела из села Добри До код Смедеревa једина је са ретким генетским синдромом ЦДКЛ5 на евиденцији Националне организације за ретке болести Србије (НОРБС).",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Десетогодишња Анђела из села Добри До код Смедеревa једина је са ретким генетским синдромом ЦДКЛ5 на евиденцији Националне организације за ретке болести Србије (НОРБС).",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "extrinsicPromo": {
+                  "headlines": {
+                    "shortHeadline": "„Корак напред, три уназад\": Живот са дијагнозом ретке болести у Србији"
+                  },
+                  "assetType": "STY",
+                  "type": "cps"
+                },
+                "id": "urn:bbc:ares::asset:serbian/cyr/srbija-59596035",
+                "type": "caf"
+              },
+              {
+                "locators": {
+                  "assetUri": "/serbian/cyr/srbija-59832260",
+                  "cpsUrn": "urn:bbc:content:assetUri:/serbian/cyr/srbija-59832260"
+                },
+                "timestamp": 1640883362000,
+                "suitableForSyndication": true,
+                "language": "sr-Cyrl",
+                "headlines": {
+                  "seoHeadline": "Србија и дискриминација: Зашто је уклоњена рампа за дечака са церебралном парализом у згради у Бору",
+                  "promoHeadline": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Мањак емпатије или системски пропуст - зашто је уклоњена рампа за колица за дечака у Бору",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Мањак емпатије или системски пропуст - зашто је уклоњена рампа за колица за дечака у Бору",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                "images": {
+                  "defaultPromoImage": {
+                    "blocks": [
+                      {
+                        "type": "caption",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "text",
+                              "model": {
+                                "blocks": [
+                                  {
+                                    "type": "paragraph",
+                                    "model": {
+                                      "text": "Остаци рампе на улазу у зграду непосредно пре уклањања",
+                                      "blocks": [
+                                        {
+                                          "type": "fragment",
+                                          "model": {
+                                            "text": "Остаци рампе на улазу у зграду непосредно пре уклањања",
+                                            "attributes": []
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "altText",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "text",
+                              "model": {
+                                "blocks": [
+                                  {
+                                    "type": "paragraph",
+                                    "model": {
+                                      "text": "Рампа",
+                                      "blocks": [
+                                        {
+                                          "type": "fragment",
+                                          "model": {
+                                            "text": "Рампа",
+                                            "attributes": []
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "rawImage",
+                        "model": {
+                          "height": 549,
+                          "width": 976,
+                          "locator": "4E56/production/_122545002_8ed37c55-c4a0-4334-bf72-824ce218cd3d.jpg",
+                          "href": "http://c.files.bbci.co.uk/4E56/production/_122545002_8ed37c55-c4a0-4334-bf72-824ce218cd3d.jpg",
+                          "originCode": "cpsprodpb",
+                          "copyrightHolder": "RTV BOR",
+                          "suitableForSyndication": false
+                        }
+                      }
+                    ]
+                  }
+                },
+                "summary": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Испред једне зграде у Бору на захтев станара уклоњена је рампа за особе са инвалидитетом, која је породици Смоловић олакшавала свакодневицу",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Испред једне зграде у Бору на захтев станара уклоњена је рампа за особе са инвалидитетом, која је породици Смоловић олакшавала свакодневицу",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "extrinsicPromo": {
+                  "headlines": {
+                    "shortHeadline": "Мањак емпатије или системски пропуст - зашто је уклоњена рампа за колица за дечака у Бору"
+                  },
+                  "assetType": "STY",
+                  "type": "cps"
+                },
+                "id": "urn:bbc:ares::asset:serbian/cyr/srbija-59832260",
+                "type": "caf"
+              },
+              {
+                "locators": {
+                  "assetUri": "/serbian/cyr/srbija-66591538",
+                  "cpsUrn": "urn:bbc:content:assetUri:/serbian/cyr/srbija-66591538"
+                },
+                "timestamp": 1697093800000,
+                "suitableForSyndication": true,
+                "language": "sr-Cyrl",
+                "headlines": {
+                  "seoHeadline": "Србија и посао: Како се запошљавају људи са инвалидитетом, а шта су им највеће препреке на послу",
+                  "promoHeadline": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Рад са инвалидитетом у Србији: Како до посла, а како када се до њега дође",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Рад са инвалидитетом у Србији: Како до посла, а како када се до њега дође",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                "images": {
+                  "defaultPromoImage": {
+                    "blocks": [
+                      {
+                        "type": "altText",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "text",
+                              "model": {
+                                "blocks": [
+                                  {
+                                    "type": "paragraph",
+                                    "model": {
+                                      "text": "Љиљана Вуковић (лево) на радном месту",
+                                      "blocks": [
+                                        {
+                                          "type": "fragment",
+                                          "model": {
+                                            "text": "Љиљана Вуковић (лево) на радном месту",
+                                            "attributes": []
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "rawImage",
+                        "model": {
+                          "height": 549,
+                          "width": 976,
+                          "locator": "AD4F/production/_130876344_img-6c4ce16ed345c7b7b0082073679fec59-v.jpg",
+                          "href": "http://c.files.bbci.co.uk/AD4F/production/_130876344_img-6c4ce16ed345c7b7b0082073679fec59-v.jpg",
+                          "originCode": "cpsprodpb",
+                          "copyrightHolder": "Novitas Consult",
+                          "suitableForSyndication": false
+                        }
+                      }
+                    ]
+                  }
+                },
+                "summary": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Неразумевање, архитектонске баријере, нижи ниво образовања и дискриминација су само неке од препрека са којима се суочавају људи са инвалидитетом у Србији.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Неразумевање, архитектонске баријере, нижи ниво образовања и дискриминација су само неке од препрека са којима се суочавају људи са инвалидитетом у Србији.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "extrinsicPromo": {
+                  "headlines": {
+                    "shortHeadline": "Рад са инвалидитетом у Србији: Како до посла, а како када се до њега дође"
+                  },
+                  "assetType": "STY",
+                  "type": "cps"
+                },
+                "id": "urn:bbc:ares::asset:serbian/cyr/srbija-66591538",
+                "type": "caf"
+              },
+              {
+                "locators": {
+                  "assetUri": "/serbian/cyr/srbija-43616671",
+                  "cpsUrn": "urn:bbc:content:assetUri:/serbian/cyr/srbija-43616671"
+                },
+                "timestamp": 1522657301000,
+                "suitableForSyndication": true,
+                "language": "sr-Cyrl",
+                "headlines": {
+                  "seoHeadline": "Непрекидна борба родитеља и деце са аутизмом",
+                  "promoHeadline": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Непрекидна борба за осмех на Рељином лицу",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Непрекидна борба за осмех на Рељином лицу",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                "images": {
+                  "defaultPromoImage": {
+                    "blocks": [
+                      {
+                        "type": "altText",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "text",
+                              "model": {
+                                "blocks": [
+                                  {
+                                    "type": "paragraph",
+                                    "model": {
+                                      "text": "Породица Јојић",
+                                      "blocks": [
+                                        {
+                                          "type": "fragment",
+                                          "model": {
+                                            "text": "Породица Јојић",
+                                            "attributes": []
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "rawImage",
+                        "model": {
+                          "height": 549,
+                          "width": 976,
+                          "locator": "9461/production/_100658973_jojici.jpg",
+                          "href": "http://c.files.bbci.co.uk/9461/production/_100658973_jojici.jpg",
+                          "originCode": "cpsprodpb",
+                          "copyrightHolder": "BBC",
+                          "suitableForSyndication": true
+                        }
+                      }
+                    ]
+                  }
+                },
+                "summary": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Због недостатка адекватне подршке за аутистичног сина, породица Јојић се преселила у Београд.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Због недостатка адекватне подршке за аутистичног сина, породица Јојић се преселила у Београд.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "extrinsicPromo": {
+                  "headlines": {
+                    "shortHeadline": "Непрекидна борба за осмех на Рељином лицу"
+                  },
+                  "assetType": "STY",
+                  "type": "cps"
+                },
+                "id": "urn:bbc:ares::asset:serbian/cyr/srbija-43616671",
+                "type": "caf"
+              },
+              {
+                "locators": {
+                  "assetUri": "/serbian/cyr/srbija-57503632",
+                  "cpsUrn": "urn:bbc:content:assetUri:/serbian/cyr/srbija-57503632"
+                },
+                "timestamp": 1624007097000,
+                "suitableForSyndication": true,
+                "language": "sr-Cyrl",
+                "headlines": {
+                  "seoHeadline": "Дан поноса људи са аутизмом: „Никада нећу сазнати како моје дете доживљава нас и свет око себе\"",
+                  "promoHeadline": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Да ли је квалитетан живот са аутизмом могућ",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Да ли је квалитетан живот са аутизмом могућ",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                "images": {
+                  "defaultPromoImage": {
+                    "blocks": [
+                      {
+                        "type": "altText",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "text",
+                              "model": {
+                                "blocks": [
+                                  {
+                                    "type": "paragraph",
+                                    "model": {
+                                      "text": "Wooden cubes that spell out autism",
+                                      "blocks": [
+                                        {
+                                          "type": "fragment",
+                                          "model": {
+                                            "text": "Wooden cubes that spell out autism",
+                                            "attributes": []
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "rawImage",
+                        "model": {
+                          "height": 549,
+                          "width": 976,
+                          "locator": "16010/production/_102582109_gettyimages-664296924.jpg",
+                          "href": "http://c.files.bbci.co.uk/16010/production/_102582109_gettyimages-664296924.jpg",
+                          "originCode": "cpsprodpb",
+                          "copyrightHolder": "Getty Images",
+                          "suitableForSyndication": true
+                        }
+                      }
+                    ]
+                  }
+                },
+                "summary": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Дијагноза аутизма код деце је страшан и болан тренутак за родитеље, али постоји нада, а и помоћ.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Дијагноза аутизма код деце је страшан и болан тренутак за родитеље, али постоји нада, а и помоћ.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "extrinsicPromo": {
+                  "headlines": {
+                    "shortHeadline": "Да ли је квалитетан живот са аутизмом могућ"
+                  },
+                  "assetType": "STY",
+                  "type": "cps"
+                },
+                "id": "urn:bbc:ares::asset:serbian/cyr/srbija-57503632",
+                "type": "caf"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

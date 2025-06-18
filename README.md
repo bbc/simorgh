@@ -2,12 +2,11 @@
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/cbca275e184057982f27/test_coverage)](https://codeclimate.com/github/bbc/simorgh/test_coverage)
 [![Known Vulnerabilities](https://snyk.io/test/github/bbc/simorgh/badge.svg)](https://snyk.io/test/github/bbc/simorgh)
-[![Maintainability](https://api.codeclimate.com/v1/badges/cbca275e184057982f27/maintainability)](https://codeclimate.com/github/bbc/simorgh/maintainability)
 [![Storybook](https://cdn.jsdelivr.net/gh/storybooks/brand@master/badge/badge-storybook.svg)](https://bbc.github.io/simorgh/)
 
 BBC World Service News websites are rendered using Simorgh, a ReactJS based application. Simorgh also renders AMP news article pages for World Service, Public Service News and BBC Sport.
 
-Simorgh provides a fast and accessible web experience used by millions of people around the world each month ([see list of websites using Simorgh](https://github.com/bbc/simorgh/blob/latest/docs/Simorgh-Release-Info.stories.mdx)). It is regularly maintained and well documented, and we welcome open source contributors.
+Simorgh provides a fast and accessible web experience used by millions of people around the world each month ([see list of websites using Simorgh](https://github.com/bbc/simorgh/blob/latest/docs/Simorgh-Release-Info.mdx)). It is regularly maintained and well documented, and we welcome open source contributors.
 
 Simorgh is primarily maintained by the BBC News Web Engineering teams. It delivers highly trusted news to readers all over the world, currently in ([41 languages](https://www.bbc.com/ws/languages)). We support a wide range of devices and care deeply about scale, performance, and accessibility. We work in agile, flexible teams, and have an exciting roadmap for future development.
 
@@ -18,12 +17,11 @@ Please familiarise yourself with our:
 - [Code of conduct](https://github.com/bbc/simorgh/blob/latest/.github/CODE_OF_CONDUCT.md)
 - [Coding Standards](https://github.com/bbc/simorgh/blob/latest/docs/Coding-Standards/README.md)
 - [Contributing guidelines](https://github.com/bbc/simorgh/blob/latest/CONTRIBUTING.md)
-- [Guide to Code Reviews](https://github.com/bbc/simorgh/blob/latest/docs/Code-Reviews.stories.mdx)
-- [Github Project Board Guide](https://github.com/bbc/simorgh/blob/latest/docs/Project-Board-Guide.stories.mdx)
-- [GPG Signing Guide](docs/GPG-Signing-Guide.stories.mdx)
+- [Guide to Code Reviews](https://github.com/bbc/simorgh/blob/latest/docs/Code-Reviews.mdx)
+- [GPG Signing Guide](https://github.com/bbc/simorgh/blob/latest/docs/GPG-Signing-Guide.mdx)
 - [Primary README](https://github.com/bbc/simorgh/blob/latest/README.md) (you are here)
-- [Recommended Tools](https://github.com/bbc/simorgh/blob/latest/docs/Recommended-Tools.stories.mdx)
-- [Troubleshooting](https://github.com/bbc/simorgh/blob/latest/docs/Troubleshooting.stories.mdx)
+- [Recommended Tools](https://github.com/bbc/simorgh/blob/latest/docs/Recommended-Tools.mdx)
+- [Troubleshooting](https://github.com/bbc/simorgh/blob/latest/docs/Troubleshooting.mdx)
 
 NB there is further documentation colocated with relevant code. The above list is an index of the top-level documentation of our repo.
 
@@ -35,7 +33,7 @@ NB there is further documentation colocated with relevant code. The above list i
 
 A request to a BBC article (https://www.bbc.co.uk/news/articles/clldg965yzjo) is passed on to the Simorgh application from a proprietary routing and caching service (called Mozart).
 
-The request matches a route in our express server using a regex match (`articleRegexPath` || `frontPageRegexPath`). If the URL matches the pre-defined regex pattern for an article or a front page we fetch some params from the route using the `getRouteProps` function. This returns the service, isAmp, route and match properties. Route is a react-router route that defines a method to fetch the initial JSON used to render the page and the react container in which to render i.e. `ArticleContainer`, this is typically called `getInitialData`
+The request matches a route in our express server using a regex match (`articleRegexPath`). If the URL matches the pre-defined regex pattern for an article or a front page we fetch some params from the route using the `getRouteProps` function. This returns the service, isAmp, route and match properties. Route is a react-router route that defines a method to fetch the initial JSON used to render the page and the react container in which to render i.e. `ArticleContainer`, this is typically called `getInitialData`
 
 Once data is returned we pull the status code and pass all of this data as props to our main document using `renderDocument`.
 
@@ -62,7 +60,7 @@ Each render is passed through a set of HOC's (Higher Order Components) to enhanc
 - withData
 - withHashChangeHandler
 
-With a selection of page types passed through withOptimizelyProvider, currently [Article](https://github.com/bbc/simorgh/blob/latest/src/app/pages/ArticlePage/index.jsx) and [Story](https://github.com/bbc/simorgh/blob/latest/src/app/pages/StoryPage/index.jsx) pages.
+With a selection of page types passed through withOptimizelyProvider, that enables usage of Optimizely in the selected page types.
 
 #### withVariant
 
@@ -78,17 +76,17 @@ The withContexts HOC is a wrapper that provides access to the different context 
 
 #### withPageWrapper
 
-The page wrapper HOC simply wraps the Article or FrontPage containers with a layout, at present we only have a single page layout. This layout includes the header, footer and context providers rendering the main body as a child between the header and the footer.
+The page wrapper HOC simply wraps the Article containers with a layout, at present we only have a single page layout. This layout includes the header, footer and context providers rendering the main body as a child between the header and the footer.
 
 #### withError
 
-The error HOC checks the error prop passed in, if error is set to null the Article or FrontPage container is simply returned.
+The error HOC checks the error prop passed in, if error is set to null the Article container is simply returned.
 
 If error is set to true the Error component is returned, giving the user a visual indication of the error e.g. a 500 error page.
 
 #### withData
 
-Assuming the other HOC's have returned the original Article or FrontPage container the data HOC will run some validation checks on the JSON data passed in via the data prop. If all of the checks are satisfied the ArticleContainer will be returned with a single `pageData` prop. This pageData props will house the JSON data to be rendered e.g. the Optimo blocks for a given article.
+Assuming the other HOC's have returned the original Article container the data HOC will run some validation checks on the JSON data passed in via the data prop. If all of the checks are satisfied the ArticleContainer will be returned with a single `pageData` prop. This pageData props will house the JSON data to be rendered e.g. the Optimo blocks for a given article.
 
 #### withHashChangeHandler
 
@@ -98,6 +96,20 @@ The withHashChangeHandler HOC is a wrapper applied to all pages that checks for 
 
 The withOptimizelyProvider HOC returns components that have been enhanced with access to an Optimizely client, that is used to run our A/B testing. This is done to limit bundle sizes, as we seperate some of our bundles by page type, that means if we're only running A/B testing on certain page types, we can prevent polluting page type bundles with the weight of the SDK library we use for Optimizely.
 
+withOptimizelyProvider should be added as the value of the `handlerBeforeContexts` object key within [applyBasicPageHandlers.js](https://github.com/bbc/simorgh/tree/latest/src/app/pages/utils/applyBasicPageHandlers.js#L8), as the `ckns_mvt` is [set within the UserContext](https://github.com/bbc/simorgh/tree/latest/src/app/contexts/UserContext/index.tsx#L33), so the `withOptimizelyProvider` HOC needs to be applied in the correct order alongside the [withContexts](https://github.com/bbc/simorgh/tree/latest/src/app/pages/utils/applyBasicPageHandlers.js#L13) HOC. This makes the `ckns_mvt` available on first time visits to pass into the `OptimizelyProvider`, along with attributes such as `service`, which is used for determining when Optimizely should enable an experiment.
+
+Example for Article page:
+
+```jsx
+import withOptimizelyProvider from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
+import ArticlePage from './ArticlePage';
+import applyBasicPageHandlers from '../utils/applyBasicPageHandlers';
+
+export default applyBasicPageHandlers(ArticlePage, {
+  handlerBeforeContexts: withOptimizelyProvider,
+});
+```
+
 ### Adding a new Page type
 
 When adding a new page type there are several parts required.
@@ -105,7 +117,7 @@ When adding a new page type there are several parts required.
 #### 1) Fixture data should be added to `/data/{{service}}/{{pageType}}/`
 
 - This should be done for each service using the page type.
-- [Fixture data example](https://github.com/bbc/simorgh/blob/5de59c6207d46b11c3af68c58a620e250aff3a1a/data/igbo/frontpage/index.json)
+- [Fixture data example](https://github.com/bbc/simorgh/blob/latest/data/igbo/articles)
 
 #### 2) Serving the fixture data on local development
 
@@ -116,7 +128,7 @@ When adding a new page type there are several parts required.
 
 #### 3) Create a new container for the page type
 
-- Similar to [this](https://github.com/bbc/simorgh/blob/latest/src/app/pages/FrontPage/index.jsx) we require a top level container that will act as the entry point for the page routing. Each page type should have its own container.
+- Similar to [this](https://github.com/bbc/simorgh/blob/latest/src/app/pages/ArticlePage/index.jsx) we require a top level container that will act as the entry point for the page routing. Each page type should have its own container.
   - The container should render a `main` element with a [`flex-grow: 1;` css declaration](https://github.com/bbc/simorgh/blob/8e19f820ec0de4abd18a4d13e62dd5d843a064c0/src/app/containers/ArticleMain/index.jsx#L39), this is to ensure it grows to fill the space between the visual header and footer, the [root div](https://github.com/bbc/simorgh/blob/8e19f820ec0de4abd18a4d13e62dd5d843a064c0/src/server/Document/component.jsx#L31) using a [flexbox 'sticky footer' implementation](https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Sticky_footers#Alternate_method).
 
 #### 4) Add new pre-processing rules if required.
@@ -222,12 +234,6 @@ No BFF_PATH set as environment variable, you will not have access to topics
 
 Internal developers who need to work on topic pages locally should contact the team for access.
 
-### Recommendations
-
-Recommendations in story pages also use internal BBC data labs API's. It requires adding the key/value pair in `envConfig/secret.env` file for them to appear locally.
-
-Internal developers who need to work on article pages locally should contact the team for access.
-
 ### Other page types
 
 You can find other pages types by looking through our routes and their associates regexes, but we suggest you start with the above then have a look at the core of the application to understand and find the other routes.
@@ -246,7 +252,7 @@ Please also note that if you would like to see the components rendered with our 
 
 ### Configuring the application to run on a local network
 
-If you want to host the application to be accessible through your local network, follow the instructions [here](https://github.com/bbc/simorgh/blob/latest/docs/A11y-Testing-Cross-Device.stories.mdx).
+If you want to host the application to be accessible through your local network, follow the instructions [here](https://github.com/bbc/simorgh/blob/latest/docs/A11y-Testing-Cross-Device.mdx).
 
 ## Production build locally
 

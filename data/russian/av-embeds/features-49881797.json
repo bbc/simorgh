@@ -1,0 +1,761 @@
+{
+  "data": {
+    "avEmbed": {
+      "metadata": {
+        "atiAnalytics": {
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            },
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "categoryName": "News",
+          "contentId": "urn:bbc:cps:curie:asset:6ea0060d-2cb6-9b45-b4d9-08876ea24283",
+          "contentType": "article",
+          "language": "ru",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "nationsProducer": null,
+          "pageIdentifier": "russian.features.story.49881797.page",
+          "pageTitle": "\"Невыносимые условия\". Как живут деревни возле новой полосы Шереметьево",
+          "timePublished": "2019-10-04T15:36:44.000Z",
+          "timeUpdated": "2019-10-04T15:36:44.000Z",
+          "producerName": "RUSSIAN",
+          "producerId": "75"
+        },
+        "id": "urn:bbc:ares::asset:russian/features-49881797",
+        "locators": {
+          "assetUri": "/russian/features-49881797",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:6ea0060d-2cb6-9b45-b4d9-08876ea24283",
+          "assetId": "49881797",
+          "cpsUrn": "urn:bbc:content:assetUri:russian/features-49881797",
+          "canonicalUrl": "https://www.bbc.com/russian/features-49881797",
+          "curie": "http://www.bbc.co.uk/asset/6ea0060d-2cb6-9b45-b4d9-08876ea24283"
+        },
+        "type": "STY",
+        "createdBy": "russian-v6",
+        "language": "ru",
+        "lastUpdated": 1711099439000,
+        "firstPublished": 1570203404000,
+        "lastPublished": 1570203404000,
+        "timestamp": 1570203404000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "suitableForSyndication": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "allowAdvertising": true,
+          "hasContentWarning": false,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "cps_asset_id": "49881797",
+          "page": "russian.features.story.49881797.page",
+          "contentId": "urn:bbc:cps:curie:asset:6ea0060d-2cb6-9b45-b4d9-08876ea24283",
+          "cps_asset_type": "sty"
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            },
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.41",
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "byline",
+          "contributor",
+          "name",
+          "role",
+          "video",
+          "caption",
+          "unorderedList",
+          "listItem",
+          "urlLink",
+          "image",
+          "altText",
+          "rawImage",
+          "subheadline",
+          "links",
+          "link",
+          "aresLink",
+          "aresMedia",
+          "aresMediaMetadata"
+        ],
+        "includeComments": false,
+        "readTime": 4,
+        "siteUri": "/russian",
+        "allowAdvertising": true,
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false,
+        "useSensitiveOnwardJourneys": false,
+        "service": "russian"
+      },
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "type": "aresMedia",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "urn:bbc:ares::clip:p07q3wwl",
+                    "type": "aresMediaMetadata",
+                    "model": {
+                      "id": "p07q3wwl",
+                      "subType": "clip",
+                      "format": "video",
+                      "title": "\"Здесь же кругом люди\": жизнь в 100 метрах от взлетной полосы",
+                      "synopses": {
+                        "short": "\"Здесь же кругом люди\": жизнь в 100 метрах от взлетной полосы",
+                        "long": "Новая взлетно-посадочная полоса столичного аэропорта \"Шереметьево\" заработала в полную силу, несмотря на то, что прилегающая вплотную деревня Дубровки до сих пор полностью не расселена. \n\nМестные жители жалуются на создаваемый самолетами шум и запах топлива. Государство планирует выкупить все участки рядом с полосой, но когда это произойдет - неизвестно.",
+                        "medium": "В аэропорту \"Шереметьево\" запустили третью взлетно-посадочную полосу."
+                      },
+                      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07q3ycc.jpg",
+                      "imageCopyright": "BBC",
+                      "embedding": true,
+                      "advertising": true,
+                      "versions": [
+                        {
+                          "versionId": "p07q3www",
+                          "types": ["Original"],
+                          "duration": 173,
+                          "durationISO8601": "PT2M53S",
+                          "warnings": {},
+                          "availableTerritories": {
+                            "uk": true,
+                            "nonUk": true
+                          },
+                          "availableFrom": 1570196356000
+                        }
+                      ],
+                      "syndication": {
+                        "destinations": []
+                      },
+                      "smpKind": "programme"
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "rawImage",
+                          "model": {
+                            "width": 976,
+                            "height": 549,
+                            "locator": "ichef.bbci.co.uk/images/ic/$widthxn/p07q3ycc.jpg",
+                            "originCode": "mpv",
+                            "copyrightHolder": "BBC"
+                          }
+                        },
+                        {
+                          "type": "altText",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "text",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "type": "paragraph",
+                                      "model": {
+                                        "text": "\"Здесь же кругом люди\": жизнь в 100 метрах от взлетной полосы",
+                                        "blocks": [
+                                          {
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "\"Здесь же кругом люди\": жизнь в 100 метрах от взлетной полосы",
+                                              "attributes": []
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "captionText",
+                    "model": {
+                      "caption": "\"Здесь же кругом люди\": жизнь в 100 метрах от взлетной полосы"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "promo": {
+        "locators": {
+          "assetUri": "/russian/features-49881797",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:6ea0060d-2cb6-9b45-b4d9-08876ea24283",
+          "assetId": "49881797",
+          "cpsUrn": "urn:bbc:content:assetUri:russian/features-49881797",
+          "canonicalUrl": "https://www.bbc.com/russian/features-49881797",
+          "curie": "http://www.bbc.co.uk/asset/6ea0060d-2cb6-9b45-b4d9-08876ea24283"
+        },
+        "timestamp": 1570203404000,
+        "suitableForSyndication": true,
+        "language": "ru",
+        "headlines": {
+          "seoHeadline": "\"Невыносимые условия\". Как живут деревни возле новой полосы Шереметьево",
+          "promoHeadline": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "\"Невыносимые условия\". Как живут деревни возле новой полосы Шереметьево",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "\"Невыносимые условия\". Как живут деревни возле новой полосы Шереметьево",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Самолет",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Самолет",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "height": 578,
+                  "width": 1027,
+                  "locator": "9704/production/_109106683_mediaitem109106682.jpg",
+                  "href": "http://c.files.bbci.co.uk/9704/production/_109106683_mediaitem109106682.jpg",
+                  "originCode": "cpsprodpb",
+                  "copyrightHolder": "Sergei Bobylev/TASS",
+                  "suitableForSyndication": false
+                }
+              }
+            ]
+          }
+        },
+        "summary": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Новая полоса Шереметьево начала принимать самолеты в штатном режиме. При этом две деревни, оставшиеся в санитарно-защитной зоне, не были расселены. Когда это произойдет, никто не знает.",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "Новая полоса Шереметьево начала принимать самолеты в штатном режиме. При этом две деревни, оставшиеся в санитарно-защитной зоне, не были расселены. Когда это произойдет, никто не знает.",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            },
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian",
+          "taggings": []
+        },
+        "serviceIdentifier": "Russian-v6",
+        "extrinsicPromo": {
+          "headlines": {
+            "shortHeadline": "\"Невыносимые условия\". Как живут деревни возле новой полосы Шереметьево"
+          },
+          "assetType": "STY",
+          "byline": {
+            "name": "Павел Аксенов",
+            "title": "Би-би-си",
+            "persons": [
+              {
+                "name": "Павел Аксенов",
+                "function": "Русская служба Би-би-си"
+              }
+            ]
+          },
+          "type": "cps"
+        },
+        "id": "urn:bbc:ares::asset:russian/features-49881797",
+        "type": "caf"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Подробности",
+          "uri": "/russian/features",
+          "urlIdentifier": "/russian/features",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "Новости на русском языке",
+          "uri": "/russian",
+          "urlIdentifier": "/russian",
+          "type": "simple"
+        },
+        "groups": [
+          {
+            "type": "see-alsos",
+            "promos": [
+              {
+                "locators": {
+                  "assetUri": "/russian/news-46070852",
+                  "cpsUrn": "urn:bbc:content:assetUri:/russian/news-46070852"
+                },
+                "timestamp": 1542293537000,
+                "suitableForSyndication": true,
+                "language": "ru",
+                "headlines": {
+                  "seoHeadline": "Шереметьево будут развивать за счет пассажиров. Летать станет дороже",
+                  "promoHeadline": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Аэропорт Шереметьево будут развивать за счет пассажиров. Летать станет дороже",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Аэропорт Шереметьево будут развивать за счет пассажиров. Летать станет дороже",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                "images": {
+                  "defaultPromoImage": {
+                    "blocks": [
+                      {
+                        "type": "altText",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "text",
+                              "model": {
+                                "blocks": [
+                                  {
+                                    "type": "paragraph",
+                                    "model": {
+                                      "text": "шарик",
+                                      "blocks": [
+                                        {
+                                          "type": "fragment",
+                                          "model": {
+                                            "text": "шарик",
+                                            "attributes": []
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "rawImage",
+                        "model": {
+                          "height": 549,
+                          "width": 976,
+                          "locator": "8AED/production/_104356553_tass_29695420.jpg",
+                          "href": "http://c.files.bbci.co.uk/8AED/production/_104356553_tass_29695420.jpg",
+                          "originCode": "cpsprodpb",
+                          "copyrightHolder": "Sergei Fadeichev/TASS",
+                          "suitableForSyndication": false
+                        }
+                      }
+                    ]
+                  }
+                },
+                "summary": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Крупнейший аэропорт Москвы для покрытия инвестиций в развитие аэродромной инфраструктуры планирует вдвое увеличить сбор за взлет-посадку для авиакомпаний. Не исключено, что заплатить за все придется пассажирам",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Крупнейший аэропорт Москвы для покрытия инвестиций в развитие аэродромной инфраструктуры планирует вдвое увеличить сбор за взлет-посадку для авиакомпаний. Не исключено, что заплатить за все придется пассажирам",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "extrinsicPromo": {
+                  "headlines": {
+                    "shortHeadline": "Аэропорт Шереметьево будут развивать за счет пассажиров. Летать станет дороже"
+                  },
+                  "assetType": "STY",
+                  "type": "cps"
+                },
+                "id": "urn:bbc:ares::asset:russian/news-46070852",
+                "type": "caf"
+              },
+              {
+                "locators": {
+                  "assetUri": "/russian/news-48509958",
+                  "cpsUrn": "urn:bbc:content:assetUri:/russian/news-48509958"
+                },
+                "timestamp": 1559739640000,
+                "suitableForSyndication": true,
+                "language": "ru",
+                "headlines": {
+                  "seoHeadline": "Аэропорт Шереметьево объяснил коллапс с багажом. Что это было?",
+                  "promoHeadline": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Аэропорт Шереметьево объяснил коллапс с багажом. Что это было?",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Аэропорт Шереметьево объяснил коллапс с багажом. Что это было?",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                "images": {
+                  "defaultPromoImage": {
+                    "blocks": [
+                      {
+                        "type": "altText",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "text",
+                              "model": {
+                                "blocks": [
+                                  {
+                                    "type": "paragraph",
+                                    "model": {
+                                      "text": "Шереметьево",
+                                      "blocks": [
+                                        {
+                                          "type": "fragment",
+                                          "model": {
+                                            "text": "Шереметьево",
+                                            "attributes": []
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "rawImage",
+                        "model": {
+                          "height": 549,
+                          "width": 976,
+                          "locator": "10C18/production/_107223686_tass_32929660.jpg",
+                          "href": "http://c.files.bbci.co.uk/10C18/production/_107223686_tass_32929660.jpg",
+                          "originCode": "cpsprodpb",
+                          "copyrightHolder": "Gavriil Grigorov/TASS",
+                          "suitableForSyndication": false
+                        }
+                      }
+                    ]
+                  }
+                },
+                "summary": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Гендиректор московского аэропорта Шереметьево Михаил Василенко впервые прокомментировал проблемы с выдачей багажа. Он уверяет, что дело не в нехватке грузчиков, а в изменении технологии. Минтранс потребовал в кратчайшие сроки наладить выдачу багажа. А что о причинах коллапса узнали СМИ?",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Гендиректор московского аэропорта Шереметьево Михаил Василенко впервые прокомментировал проблемы с выдачей багажа. Он уверяет, что дело не в нехватке грузчиков, а в изменении технологии. Минтранс потребовал в кратчайшие сроки наладить выдачу багажа. А что о причинах коллапса узнали СМИ?",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "extrinsicPromo": {
+                  "headlines": {
+                    "shortHeadline": "Аэропорт Шереметьево объяснил коллапс с багажом. Что это было?"
+                  },
+                  "assetType": "STY",
+                  "type": "cps"
+                },
+                "id": "urn:bbc:ares::asset:russian/news-48509958",
+                "type": "caf"
+              },
+              {
+                "locators": {
+                  "assetUri": "/russian/news-45372632",
+                  "cpsUrn": "urn:bbc:content:assetUri:/russian/news-45372632"
+                },
+                "timestamp": 1535736170000,
+                "suitableForSyndication": true,
+                "language": "ru",
+                "headlines": {
+                  "seoHeadline": "Почему в Шереметьево перестанут звать опаздывающих пассажиров по имени",
+                  "promoHeadline": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Почему в Шереметьево перестанут звать опаздывающих пассажиров по имени",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Почему в Шереметьево перестанут звать опаздывающих пассажиров по имени",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                "images": {
+                  "defaultPromoImage": {
+                    "blocks": [
+                      {
+                        "type": "altText",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "text",
+                              "model": {
+                                "blocks": [
+                                  {
+                                    "type": "paragraph",
+                                    "model": {
+                                      "text": "Шереметьево",
+                                      "blocks": [
+                                        {
+                                          "type": "fragment",
+                                          "model": {
+                                            "text": "Шереметьево",
+                                            "attributes": []
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "rawImage",
+                        "model": {
+                          "height": 549,
+                          "width": 976,
+                          "locator": "DB82/production/_103249165_tass_27107015_sergeibobylev_tass.jpg",
+                          "href": "http://c.files.bbci.co.uk/DB82/production/_103249165_tass_27107015_sergeibobylev_tass.jpg",
+                          "originCode": "cpsprodpb",
+                          "copyrightHolder": "Sergei Bobylev/TASS",
+                          "suitableForSyndication": false
+                        }
+                      }
+                    ]
+                  }
+                },
+                "summary": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Московский аэропорт Шереметьево прекратит объявлять по громкой связи фамилии пассажиров, которые опаздывают на рейс. В аэропорту говорят, что надо соблюдать закон о персональных данных. Эксперт ставит под сомнение это объяснение.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Московский аэропорт Шереметьево прекратит объявлять по громкой связи фамилии пассажиров, которые опаздывают на рейс. В аэропорту говорят, что надо соблюдать закон о персональных данных. Эксперт ставит под сомнение это объяснение.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "extrinsicPromo": {
+                  "headlines": {
+                    "shortHeadline": "Почему в Шереметьево перестанут звать опаздывающих пассажиров по имени"
+                  },
+                  "assetType": "STY",
+                  "type": "cps"
+                },
+                "id": "urn:bbc:ares::asset:russian/news-45372632",
+                "type": "caf"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

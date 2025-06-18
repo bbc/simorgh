@@ -4,12 +4,10 @@ import runCanonicalAnalyticsTests from './analytics.canonical';
 import runCoreAmpTests from './core.amp';
 import runCoreCanonicalTests from './core.canonical';
 import runFooterTests from './footer';
-import runAmpFooterTests from './footer.amp';
 import runHeaderTests from './header';
 import runMainHeadingTests from './mainHeading';
-import runMediaPlaceholderTests from './mediaPlaceholder';
-import runMediaPlayerEmbedTests from './mediaPlayerEmbed';
-import runMediaPlayerEmbedLegacyTests from './mediaPlayerEmbedLegacy';
+import runMediaPlayerAudioTests from './mediaPlayerAudio';
+import runMediaPlayerTests from './mediaPlayer';
 import runRadioScheduleTests from './radioSchedule';
 import runRecentEpisodesTests from './recentEpisodes';
 import runCrossPlatformSEOTests from './SEO';
@@ -28,6 +26,7 @@ import runCanonicalEmbedHtmlTests from './embedHtml.canonical';
 import runAmpEmbedHtmlTests from './embedHtml.amp';
 import runEmbedImagesTests from './embedImages';
 import runAmpIframeTests from './ampIframe.amp';
+import runLiteSiteTests from './liteSite.lite';
 
 const runCommonCrossPlatformTests = service => {
   runA11yTests();
@@ -45,12 +44,10 @@ export {
   runCoreAmpTests,
   runCoreCanonicalTests,
   runFooterTests,
-  runAmpFooterTests,
   runHeaderTests,
   runMainHeadingTests,
-  runMediaPlaceholderTests,
-  runMediaPlayerEmbedTests,
-  runMediaPlayerEmbedLegacyTests,
+  runMediaPlayerAudioTests,
+  runMediaPlayerTests,
   runMostReadTests,
   runRadioScheduleTests,
   runRecentEpisodesTests,
@@ -69,4 +66,5 @@ export {
   runAmpEmbedHtmlTests,
   runEmbedImagesTests,
   runAmpIframeTests,
+  runLiteSiteTests,
 };

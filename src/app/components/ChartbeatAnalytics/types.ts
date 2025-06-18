@@ -6,6 +6,7 @@ type ChartbeatConfig = {
   sections: string;
   uid: number;
   title: string;
+  authors?: string;
   virtualReferrer: string | null;
   idSync?: {
     // eslint-disable-next-line camelcase
@@ -14,8 +15,8 @@ type ChartbeatConfig = {
 };
 
 export type CanonicalChartbeatConfig = ChartbeatConfig & {
-  type: string;
-  useCanonical: boolean;
+  type?: string;
+  useCanonical?: boolean;
 };
 
 export interface CanonicalChartbeatProps {
@@ -31,13 +32,16 @@ export interface AmpChartbeatProps {
   chartbeatConfig: AmpChartbeatConfig;
 }
 
+export type ContentType = 'player-live' | 'player-episode';
+
 export interface ChartbeatProps {
   sectionName?: string; // required for STY and MAP pages
   categoryName?: string; // required for STY and MAP pages
   mediaPageType?: 'Radio' | 'TV' | 'Podcasts'; // required for Live & On Demand Radio, Podcasts & On Demand TV pages
   title: string;
+  authors?: string;
   taggings?: MetadataTaggings; // required for Media Article Pages
-  contentType?: 'player-live' | 'player-episode'; // required for Live & On Demand Radio, Podcasts & On Demand TV pages
+  contentType?: ContentType; // required for Live & On Demand Radio, Podcasts & On Demand TV pages
   producer?: Services | string; // required for Media Article, STY, MAP, Live & On Demand Radio, Podcasts & On Demand TV pages, if available
   chapter?: string; // required for Media Article, STY, MAP, Live & On Demand Radio, Podcasts & On Demand TV pages, if available
 }

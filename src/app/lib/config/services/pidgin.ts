@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-pidgin',
     atiAnalyticsProducerId: '70',
+    atiAnalyticsProducerName: 'PIDGIN',
+    useReverb: true,
     chartbeatDomain: 'pidgin.bbc.co.uk',
     brandName: 'BBC News Pidgin',
     product: 'BBC News',
@@ -33,9 +35,9 @@ export const service: DefaultServiceConfig = {
     defaultCaptionOffscreenText: 'Wetin we call am, ',
     imageCopyrightOffscreenText: 'Wia dis foto come from, ',
     script: latin,
-    manifestPath: '/manifest.json',
+    manifestPath: '/pidgin/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Domot',
+    homePageTitle: 'Domot',
     noBylinesPolicy:
       'https://www.bbc.com/pidgin/institutional-48528766#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/pidgin/institutional-48528766',
@@ -53,9 +55,9 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'Tori we dem pay for',
       },
-      recommendationTitle: 'Recommended articles',
       seeAll: 'See everitin',
       home: 'Home',
+      continueReading: 'Continue reading',
       currentPage: 'Page where you dey',
       skipLinkText: 'Waka go wetin de inside',
       relatedContent: 'Another thing we de for inside dis tori',
@@ -73,6 +75,10 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Posted at',
         summary: 'Summary',
         shareButtonText: 'Share dis tori',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'Summary',
       error: {
@@ -127,7 +133,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'OK',
           reject: 'Find out wetin don change',
-          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/privacy-policy/',
         },
         cookie: {
           amp: {
@@ -219,6 +225,7 @@ export const service: DefaultServiceConfig = {
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
+        closeVideo: 'Exit',
       },
       socialEmbed: {
         caption: {
@@ -254,16 +261,16 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'New things',
     },
     mostRead: {
-      header: 'De one we dem de read well well',
+      header: 'Di one wey dem dey read well well',
       lastUpdated: 'De one we dem update for:',
-      numberOfItems: 10,
+      numberOfItems: 5,
       hasMostRead: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'Di one wey oda users dey read well well',
       skipLink: {
         text: 'Skip %title% and continue reading',
         endTextVisuallyHidden: 'End of %title%',
@@ -332,6 +339,10 @@ export const service: DefaultServiceConfig = {
         {
           href: 'https://www.bbc.co.uk/pidgin/send/u50853577',
           text: 'Call BBC',
+        },
+        {
+          href: 'https://www.bbc.com/ws/languages',
+          text: 'BBC News for oda languages',
         },
         {
           id: 'COOKIE_SETTINGS',

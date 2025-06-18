@@ -1,10 +1,8 @@
 import ramdaPath from 'ramda/src/path';
 import config from '../../../support/config/services';
 import describeForEuOnly from '../../../support/helpers/describeForEuOnly';
-import visitPage from '../../../support/helpers/visitPage';
 import environment from '../../../support/helpers/getAppEnv';
 import runCanonicalTests from './testsForCanonicalOnly';
-import runAmpTests from './testsForAMPOnly';
 
 const serviceFilter = service => {
   // If smoke testing, check the special features config where smoke: true
@@ -53,15 +51,4 @@ Object.keys(config)
         }
       });
     });
-
-    paths
-      .map(path => `${path}.amp`)
-      .forEach(path => {
-        describeForEuOnly(`${path} - AMP Cookie Banner`, () => {
-          beforeEach(() => {
-            visitPage(path, pageType);
-          });
-          runAmpTests({ service, variant, pageType, path });
-        });
-      });
   });

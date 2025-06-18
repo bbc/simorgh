@@ -1,6 +1,6 @@
 import React from 'react';
+import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
 import { StoryProps } from '../../../models/types/storybook';
-import defaultServiceVariants from '../defaultServiceVariants';
 
 import afaanoromoo from '../themes/afaanoromoo';
 import afrique from '../themes/afrique';
@@ -29,6 +29,7 @@ import newsround from '../themes/newsround';
 import pashto from '../themes/pashto';
 import persian from '../themes/persian';
 import pidgin from '../themes/pidgin';
+import polska from '../themes/polska';
 import portuguese from '../themes/portuguese';
 import punjabi from '../themes/punjabi';
 import russian from '../themes/russian';
@@ -54,6 +55,7 @@ import vietnamese from '../themes/vietnamese';
 import yoruba from '../themes/yoruba';
 import zhongwenSimp from '../themes/zhongwen/simp';
 import zhongwenTrad from '../themes/zhongwen/trad';
+import ws from '../themes/ws';
 
 type ThemeProvider = {
   [index: string]: React.FC<Props> | { [index: string]: React.FC<Props> };
@@ -87,6 +89,7 @@ const themeProviders: ThemeProvider = {
   pashto,
   persian,
   pidgin,
+  polska,
   portuguese,
   punjabi,
   russian,
@@ -120,6 +123,7 @@ const themeProviders: ThemeProvider = {
     simp: zhongwenSimp,
     trad: zhongwenTrad,
   },
+  ws,
 };
 
 interface Props extends StoryProps {

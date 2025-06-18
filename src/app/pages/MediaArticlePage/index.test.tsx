@@ -2,6 +2,8 @@ import React, { PropsWithChildren } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { render, waitFor, screen } from '@testing-library/react';
 import { FetchMock } from 'jest-fetch-mock';
+import { Article } from '#app/models/types/optimo';
+import { Helmet } from 'react-helmet';
 import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
@@ -9,7 +11,7 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import newsMostReadData from '../../../../data/news/mostRead/index.json';
 import MediaArticlePage from './MediaArticlePage';
 import ThemeProvider from '../../components/ThemeProvider';
-import pidginPageData from './fixtureData';
+import { arabicLiveTvPageData, pidginPageData } from './fixtureData';
 import { Services } from '../../models/types/global';
 
 jest.mock('../../components/ThemeProvider');
@@ -18,6 +20,10 @@ jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });
+
+jest.mock('#src/app/components/ATIAnalytics', () => () => (
+  <div>ATI Analytics</div>
+));
 
 type ContextProps = {
   service: Services;
@@ -84,7 +90,7 @@ describe('MediaArticlePage', () => {
 
     const { container } = render(
       <Context service="news">
-        <MediaArticlePage pageData={pidginPageData} />
+        <MediaArticlePage pageData={pidginPageData as unknown as Article} />
       </Context>,
     );
 
@@ -93,12 +99,53 @@ describe('MediaArticlePage', () => {
     });
   });
 
+  it('should set "amphtml" link tag for asset', async () => {
+    render(
+      <Context service="pidgin">
+        <MediaArticlePage pageData={pidginPageData as unknown as Article} />
+      </Context>,
+    );
+
+    const helmetContent = Helmet.peek()?.linkTags;
+    const ampHtmlLink = helmetContent.find(link => link.rel === 'amphtml');
+
+    expect(ampHtmlLink).toEqual({
+      href: 'https://www.test.bbc.co.uk/pathname.amp',
+      rel: 'amphtml',
+    });
+  });
+
+  it('should not set "amphtml" link tag for TC2 asset', async () => {
+    const pageDataAsTC2Asset = {
+      ...pidginPageData,
+      metadata: {
+        ...pidginPageData.metadata,
+        analyticsLabels: {
+          ...pidginPageData.metadata.analyticsLabels,
+          contentId:
+            'urn:bbc:topcat:curie:asset:7b51390e-c5c3-11e3-a6ee-819a3db9bd6e',
+        },
+      },
+    };
+
+    render(
+      <Context service="pidgin">
+        <MediaArticlePage pageData={pageDataAsTC2Asset as unknown as Article} />
+      </Context>,
+    );
+
+    const helmetContent = Helmet.peek()?.linkTags;
+    const ampHtmlLink = helmetContent.find(link => link.rel === 'amphtml');
+
+    expect(ampHtmlLink).toBeUndefined();
+  });
+
   it('should NOT render mpu or advert leaderboard', async () => {
     fetchMock.mockResponse(JSON.stringify(newsMostReadData));
 
     const { container } = render(
       <Context service="news" adsToggledOn showAdsBasedOnLocation>
-        <MediaArticlePage pageData={pidginPageData} />
+        <MediaArticlePage pageData={pidginPageData as unknown as Article} />
       </Context>,
     );
 
@@ -127,7 +174,7 @@ describe('MediaArticlePage', () => {
 
     render(
       <Context service="news" adsToggledOn showAdsBasedOnLocation>
-        <MediaArticlePage pageData={pidginPageData} />
+        <MediaArticlePage pageData={pidginPageData as unknown as Article} />
       </Context>,
     );
 
@@ -137,5 +184,54 @@ describe('MediaArticlePage', () => {
 
     expect(src).toEqual(imageURL);
     expect(srcset).toEqual(expectedSrcSetURLs);
+  });
+
+  it('should render article:modified_time and article:published_time for normal media pages', async () => {
+    render(
+      <Context service="pidgin">
+        <MediaArticlePage pageData={pidginPageData as unknown as Article} />
+      </Context>,
+    );
+
+    const helmetContent = Helmet.peek()?.metaTags;
+    const modifiedTime = helmetContent.find(
+      meta => meta.name === 'article:modified_time',
+    );
+
+    const publishedTime = helmetContent.find(
+      meta => meta.name === 'article:published_time',
+    );
+
+    expect(modifiedTime).toEqual({
+      name: 'article:modified_time',
+      content: '2023-01-17T14:15:57.894Z',
+    });
+
+    expect(publishedTime).toEqual({
+      name: 'article:published_time',
+      content: '2023-01-17T14:03:06.410Z',
+    });
+  });
+
+  it('should NOT render article:modified_time and article:published_time for media pages with a live stream', async () => {
+    render(
+      <Context service="arabic">
+        <MediaArticlePage
+          pageData={arabicLiveTvPageData as unknown as Article}
+        />
+      </Context>,
+    );
+
+    const helmetContent = Helmet.peek()?.metaTags;
+    const modifiedTime = helmetContent.find(
+      meta => meta.name === 'article:modified_time',
+    );
+
+    const publishedTime = helmetContent.find(
+      meta => meta.name === 'article:published_time',
+    );
+
+    expect(modifiedTime).toBeUndefined();
+    expect(publishedTime).toBeUndefined();
   });
 });

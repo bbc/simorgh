@@ -1,13 +1,11 @@
 import { Article } from '#app/models/types/optimo';
-import pathOr from 'ramda/src/pathOr';
 
 export const advertisingAllowed = (pageType: string, article: Article) => {
   if (pageType === 'cpsAsset') {
-    return pathOr(false, ['metadata', 'options', 'allowAdvertising'], article);
+    return article?.metadata?.options?.allowAdvertising ?? false;
   }
-  return pathOr(false, ['metadata', 'allowAdvertising'], article);
+  return article?.metadata?.allowAdvertising ?? false;
 };
 
-export const isSfv = (article: Article) => {
-  return pathOr(false, ['metadata', 'consumableAsSFV'], article);
-};
+export const isSfv = (article: Article) =>
+  article?.metadata?.consumableAsSFV ?? false;

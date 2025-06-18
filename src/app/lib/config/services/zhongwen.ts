@@ -1,6 +1,7 @@
 import noAscendersOrDescenders from '../../../components/ThemeProvider/fontScripts/noAscOrDesc';
 import '#psammead/moment-timezone-include/tz/GMT';
 import 'moment/locale/zh-cn';
+import '#psammead/psammead-locales/moment/zh-tw';
 import withContext from '../../../contexts/utils/withContext';
 import { ZhongwenConfig } from '../../../models/types/serviceConfig';
 import { Direction, Services } from '../../../models/types/global';
@@ -11,6 +12,8 @@ const baseServiceConfig = {
   articleTimestampSuffix: '',
   atiAnalyticsAppName: 'news-zhongwen',
   atiAnalyticsProducerId: '38',
+  atiAnalyticsProducerName: 'CHINESE',
+  useReverb: true,
   chartbeatDomain: 'zhongwen.bbc.co.uk',
   brandName: 'BBC News 中文',
   product: 'BBC News',
@@ -18,7 +21,6 @@ const baseServiceConfig = {
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png',
   defaultImageAltText: 'BBC News 中文',
   dir: 'ltr' as Direction,
-  datetimeLocale: `zh-cn`,
   service: 'zhongwen' as Services,
   serviceName: 'News 中文',
   languageName: 'Chinese',
@@ -26,13 +28,10 @@ const baseServiceConfig = {
   twitterSite: '@bbcchinese',
   isTrustProjectParticipant: true,
   script: noAscendersOrDescenders,
-  manifestPath: '/manifest.json',
+  manifestPath: '/zhongwen/manifest.json',
   swPath: '/sw.js',
   radioSchedule: {
     hasRadioSchedule: false,
-  },
-  recommendations: {
-    hasStoryRecommendations: false,
   },
   podcastPromo: {
     title: 'Podcast',
@@ -58,11 +57,12 @@ export const service: ZhongwenConfig = {
   simp: {
     ...baseServiceConfig,
     externalLinkText: ', 外部',
-    frontPageTitle: '主页',
+    homePageTitle: '主页',
     lang: `zh-hans`,
     locale: `zh-hans`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'zh-Hans',
+    datetimeLocale: 'zh-cn',
     defaultCaptionOffscreenText: '说明文字，',
     audioCaptionOffscreenText: '音频加注文字，',
     videoCaptionOffscreenText: '视频加注文字，',
@@ -99,6 +99,10 @@ export const service: ZhongwenConfig = {
           text: '联络BBC',
         },
         {
+          href: 'https://www.bbc.com/ws/languages',
+          text: '以其他语言阅览BBC新闻',
+        },
+        {
           id: 'COOKIE_SETTINGS',
           href: '#',
           text: 'Do not share or sell my info',
@@ -108,10 +112,17 @@ export const service: ZhongwenConfig = {
       copyrightText: 'BBC. BBC对外部网站内容不负责任。',
     },
     mostRead: {
-      header: '热读',
+      header: '热门内容',
       lastUpdated: '最近更新：',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    recommendations: {
+      header: '热读',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     navigation: [
       {
@@ -120,31 +131,31 @@ export const service: ZhongwenConfig = {
       },
       {
         title: '国际',
-        url: '/zhongwen/simp/topics/ck2l9z0em07t',
+        url: '/zhongwen/topics/c83plve5vmjt/simp',
       },
       {
-        title: '两岸',
-        url: '/zhongwen/simp/topics/cxe2wdp384wt',
+        title: '中国',
+        url: '/zhongwen/topics/ckr7mn6r003t/simp',
+      },
+      {
+        title: '香港',
+        url: '/zhongwen/topics/cezw73jk755t/simp',
+      },
+      {
+        title: '台湾',
+        url: '/zhongwen/topics/cd6qem06z92t/simp',
       },
       {
         title: '英国',
-        url: '/zhongwen/simp/topics/c1nq04exqmlt',
-      },
-      {
-        title: '科技',
-        url: '/zhongwen/simp/topics/c9mjeq29pxlt',
+        url: '/zhongwen/topics/c1ez1k4emn0t/simp',
       },
       {
         title: '财经',
-        url: '/zhongwen/simp/topics/cdlxq9k9nqkt',
+        url: '/zhongwen/topics/cq8nqywy37yt/simp',
       },
       {
-        title: '视频材料',
-        url: '/zhongwen/simp/topics/ck5rznle6edt',
-      },
-      {
-        title: 'BBC英伦网',
-        url: 'http://www.bbc.co.uk/ukchina/simp',
+        title: '视频',
+        url: '/zhongwen/topics/cgvl47l38e1t/simp',
       },
     ],
     scriptLink: {
@@ -179,6 +190,12 @@ export const service: ZhongwenConfig = {
         postedAt: '张贴于',
         summary: '概要',
         shareButtonText: '分享',
+        postDateTimeFormat: 'YYYY年M月DD日',
+        postDateFormat: 'YYYY年M月D日',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: '概要',
       error: {
@@ -228,7 +245,7 @@ export const service: ZhongwenConfig = {
           },
           accept: '可以',
           reject: '了解更新内容',
-          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/privacy-policy/',
         },
         cookie: {
           amp: {
@@ -318,6 +335,7 @@ export const service: ZhongwenConfig = {
         recentEpisodes: '存档节目',
         podcastExternalLinks: 'This podcast is also available on',
         download: '下载本集节目',
+        closeVideo: '退出',
       },
       socialEmbed: {
         caption: {
@@ -357,8 +375,9 @@ export const service: ZhongwenConfig = {
     locale: `zh-hant`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'zh-Hant',
+    datetimeLocale: 'zh-tw',
     externalLinkText: ', 外部',
-    frontPageTitle: '主頁',
+    homePageTitle: '主頁',
     defaultCaptionOffscreenText: '說明文字，',
     audioCaptionOffscreenText: '音频加注文字，',
     videoCaptionOffscreenText: '音頻加註文字，',
@@ -395,6 +414,10 @@ export const service: ZhongwenConfig = {
           text: '聯絡BBC',
         },
         {
+          href: 'https://www.bbc.com/ws/languages',
+          text: '以其他語言閱覽BBC新聞',
+        },
+        {
           id: 'COOKIE_SETTINGS',
           href: '#',
           text: 'Do not share or sell my info',
@@ -404,10 +427,17 @@ export const service: ZhongwenConfig = {
       copyrightText: 'BBC. BBC對外部網站內容不負責任。',
     },
     mostRead: {
-      header: '熱讀',
+      header: '熱門內容',
       lastUpdated: '最近更新：',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    recommendations: {
+      header: '熱讀',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     navigation: [
       {
@@ -416,31 +446,31 @@ export const service: ZhongwenConfig = {
       },
       {
         title: '國際',
-        url: '/zhongwen/trad/topics/c83plve5vmjt',
+        url: '/zhongwen/topics/c83plve5vmjt/trad',
       },
       {
-        title: '兩岸',
-        url: '/zhongwen/trad/topics/c9wpm0e5zv9t',
+        title: '中國',
+        url: '/zhongwen/topics/ckr7mn6r003t/trad',
+      },
+      {
+        title: '香港',
+        url: '/zhongwen/topics/cezw73jk755t/trad',
+      },
+      {
+        title: '台灣',
+        url: '/zhongwen/topics/cd6qem06z92t/trad',
       },
       {
         title: '英國',
-        url: '/zhongwen/trad/topics/c1ez1k4emn0t',
-      },
-      {
-        title: '科技',
-        url: '/zhongwen/trad/topics/c32p4kj2yzqt',
+        url: '/zhongwen/topics/c1ez1k4emn0t/trad',
       },
       {
         title: '財經',
-        url: '/zhongwen/trad/topics/cq8nqywy37yt',
+        url: '/zhongwen/topics/cq8nqywy37yt/trad',
       },
       {
-        title: '視頻材料',
-        url: '/zhongwen/trad/topics/cgvl47l38e1t',
-      },
-      {
-        title: 'BBC英倫網',
-        url: 'http://www.bbc.co.uk/ukchina/trad',
+        title: '影片',
+        url: '/zhongwen/topics/cgvl47l38e1t/trad',
       },
     ],
     scriptLink: {
@@ -475,6 +505,12 @@ export const service: ZhongwenConfig = {
         postedAt: '張貼在',
         summary: '概要',
         shareButtonText: '分享',
+        postDateTimeFormat: 'YYYY年M月DD日',
+        postDateFormat: 'YYYY年M月D日',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: '概要',
       error: {
@@ -524,7 +560,7 @@ export const service: ZhongwenConfig = {
           },
           accept: '可以',
           reject: '了解更新內容',
-          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/privacy-policy/',
         },
         cookie: {
           amp: {
@@ -614,6 +650,7 @@ export const service: ZhongwenConfig = {
         recentEpisodes: '存档节目',
         podcastExternalLinks: 'This podcast is also available on',
         download: '下載本集節目',
+        closeVideo: '退出',
       },
       socialEmbed: {
         caption: {

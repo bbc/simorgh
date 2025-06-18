@@ -11,17 +11,19 @@ const ArticleMetadata = ({
   firstPublished,
   lastPublished,
   section = '',
-  aboutTags = [],
-  mentionsTags = [],
+  aboutTags,
+  mentionsTags,
   lang,
   description,
   imageLocator = '',
   imageAltText = '',
+  hasAmpPage = true,
 }) => {
   const { service } = useContext(ServiceContext);
   const brandedImage = imageLocator
     ? getBrandedImage(imageLocator, service)
     : null;
+
   return (
     articleId && (
       <Metadata
@@ -34,10 +36,15 @@ const ArticleMetadata = ({
         mentionsTags={mentionsTags}
         image={brandedImage}
         imageAltText={imageAltText}
+        hasAmpPage={hasAmpPage}
       >
         <meta name="article:author" content={author} />
-        <meta name="article:modified_time" content={lastPublished} />
-        <meta name="article:published_time" content={firstPublished} />
+        {lastPublished && (
+          <meta name="article:modified_time" content={lastPublished} />
+        )}
+        {firstPublished && (
+          <meta name="article:published_time" content={firstPublished} />
+        )}
         {section && <meta name="article:section" content={section} />}
       </Metadata>
     )

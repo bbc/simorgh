@@ -1,7 +1,6 @@
 /* eslint-disable no-console */
 const { exec } = require('child_process');
 const fs = require('fs');
-const fetch = require('node-fetch');
 const { dependencies, devDependencies } = require('../package.json');
 
 const allDependencies = { ...dependencies, ...devDependencies };
@@ -86,7 +85,7 @@ const collectResults = async ({ dep, modifiedDate, ourFreshness }) => {
   });
 };
 
-Object.keys(allDependencies).forEach(dep => {
+Object.keys(allDependencies).forEach((dep, index) => {
   console.log(`Checking ${dep} for last modified date`);
   exec(`npm view ${dep} time --json`, (err, stdout) => {
     if (err) {
@@ -100,10 +99,12 @@ Object.keys(allDependencies).forEach(dep => {
     );
     const dateOfOurVersion = new Date(stdoutJson[ourVersion]);
     const ourFreshness = datediff(dateOfOurVersion.getTime(), dateNow);
-    collectResults({
-      dep,
-      modifiedDate,
-      ourFreshness,
-    });
+    const mything = +setTimeout(() => {
+        collectResults({
+          dep,
+          modifiedDate,
+          ourFreshness,
+        })
+    }, index * 100);
   });
 });

@@ -14,8 +14,8 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
 } from '#psammead/gel-foundations/src/breakpoints';
 
-import { MediaMessage } from '#components/MediaPlayer';
-import { EPISODE_STATUS } from '..';
+import Message from '#app/components/MediaLoader/Message';
+import { EPISODE_STATUS } from '../episodeStatus';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 const AudioErrorWrapper = styled.div`
@@ -63,7 +63,7 @@ const ErrorMessage = ({ episodeAvailability, skin = 'video' }) => {
 
   return (
     <Wrapper>
-      <MediaMessage
+      <Message
         service={service}
         message={getErrorMessage(episodeAvailability, translations)}
       />

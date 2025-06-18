@@ -46,6 +46,7 @@ const HeadingsContainer = ({
     },
   ],
   type,
+  className,
 }) => {
   const { script, service } = useContext(ServiceContext);
   const Heading = Headings[type];
@@ -71,6 +72,7 @@ const HeadingsContainer = ({
     id: isHeading ? headingId : subHeadingId,
     as: isHeading && !isFirstBlock ? 'strong' : null,
     tabIndex: isHeading && !isFirstBlock ? null : '-1',
+    className,
   };
 
   return (

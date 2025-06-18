@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Media Loader - Metadata should render Metadata correctly when aresMedia has a metadata block 1`] = `
+{
+  "baseTag": [],
+  "bodyAttributes": {},
+  "defer": true,
+  "encode": true,
+  "htmlAttributes": {},
+  "linkTags": [],
+  "metaTags": [],
+  "noscriptTags": [],
+  "onChangeClientState": [Function],
+  "scriptTags": [
+    {
+      "innerHTML": "{"@context":"http://schema.org","@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":"PT3M11S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":"2018-10-22T14:35:32.000Z","embedURL":"https://www.test.bbc.com/ws/av-embeds/articles/c3wmq4d1y3wo/p01k6mtv/en-GB"}",
+      "type": "application/ld+json",
+    },
+  ],
+  "styleTags": [],
+  "title": undefined,
+  "titleAttributes": {},
+}
+`;
+
+exports[`Media Loader - Metadata should render meta og:url tag if the Metadata is on an "embedded" page 1`] = `
+{
+  "baseTag": [],
+  "bodyAttributes": {},
+  "defer": true,
+  "encode": true,
+  "htmlAttributes": {},
+  "linkTags": [],
+  "metaTags": [],
+  "noscriptTags": [],
+  "onChangeClientState": [Function],
+  "scriptTags": [
+    {
+      "innerHTML": "{"@context":"http://schema.org","@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":"PT3M11S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":"2018-10-22T14:35:32.000Z","embedURL":"https://www.test.bbc.com/ws/av-embeds/articles/c3wmq4d1y3wo/p01k6mtv/en-GB"}",
+      "type": "application/ld+json",
+    },
+  ],
+  "styleTags": [],
+  "title": undefined,
+  "titleAttributes": {},
+}
+`;

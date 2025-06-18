@@ -1,5 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`CPS metadata should match snapshot for News & International 1`] = `<div />`;
-
-exports[`CPS metadata with apple_itunes_app enabled for service with iTunesAppId (mundo) and hasAppleItunesAppBanner is true should match snapshot 1`] = `<div />`;

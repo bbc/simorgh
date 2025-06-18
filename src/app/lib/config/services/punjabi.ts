@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-punjabi',
     atiAnalyticsProducerId: '73',
+    atiAnalyticsProducerName: 'PUNJABI',
+    useReverb: true,
     chartbeatDomain: 'punjabi.bbc.co.uk',
     brandName: 'BBC News ਪੰਜਾਬੀ',
     product: 'BBC News',
@@ -39,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/punjabi/institutional-49282853',
     isTrustProjectParticipant: true,
     script: gurmukhi,
-    manifestPath: '/manifest.json',
+    manifestPath: '/punjabi/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'ਨਿਊਜ਼',
+    homePageTitle: 'ਨਿਊਜ਼',
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
@@ -55,6 +57,7 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'ਸਭ ਦੋਖੇ',
       home: 'ਹੋਮ ਪੇਜ',
+      continueReading: 'ਅੱਗੇ ਪੜ੍ਹੋ',
       currentPage: 'ਮੌਜੂਦਾ ਪੇਜ',
       skipLinkText: `ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ`,
       relatedContent: 'ਇਸ ਖ਼ਬਰ ਬਾਰੇ ਹੋਰ',
@@ -72,6 +75,10 @@ export const service: DefaultServiceConfig = {
         postedAt: 'ਇਸ ‘ਤੇ ਪੋਸਟ ਕੀਤਾ',
         summary: 'ਸਾਰ',
         shareButtonText: 'ਸਾਂਝਾ ਕਰੋ',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'ਸਾਰ',
       error: {
@@ -131,7 +138,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'ਓਕੇ',
           reject: 'ਜਾਣੋ ਕੀ ਬਦਲਿਆ ਹੈ',
-          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/privacy-policy/',
         },
         cookie: {
           amp: {
@@ -215,6 +222,7 @@ export const service: DefaultServiceConfig = {
         video: 'ਵੀਡੀਓ',
         listen: 'ਸੁਣੋ',
         watch: 'ਦੇਖੋ',
+        watchMoments: 'ਸ਼ਾਰਟ ਵੀਡੀਓ ਦੇਖੋ',
         listenLive: 'live ਸੁਣੋ',
         liveLabel: 'LIVE',
         nextLabel: 'NEXT',
@@ -222,6 +230,7 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
         recentEpisodes: 'ਤਾਜ਼ਾ ਐਪੀਸੋਡ',
+        closeVideo: 'ਬਾਹਰ ਜਾਓ',
       },
       socialEmbed: {
         caption: {
@@ -258,7 +267,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'ਬਿਲਕੁਲ ਨਵਾਂ',
     },
     mostRead: {
-      header: 'ਸਭ ਤੋਂ ਵੱਧ ਪੜ੍ਹਿਆ ਗਿਆ',
+      header: 'ਪਾਠਕਾਂ ਦੀ ਪਸੰਦ',
       lastUpdated: 'ਆਖ਼ਰੀ ਅਪਡੇਟ:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -267,7 +276,11 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'ਸਭ ਤੋਂ ਵੱਧ ਪੜ੍ਹਿਆ ਗਿਆ',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     navigation: [
       {
@@ -320,6 +333,10 @@ export const service: DefaultServiceConfig = {
         {
           href: 'https://www.bbc.co.uk/punjabi/send/u50853621',
           text: 'ਬੀਬੀਸੀ ਨਾਲ ਸੰਪਰਕ ਕਰੋ',
+        },
+        {
+          href: 'https://www.bbc.com/ws/languages',
+          text: 'ਬੀਬੀਸੀ ’ਤੇ ਹੋਰ ਭਾਸ਼ਾਵਾਂ ਵਿੱਚ ਖ਼ਬਰਾਂ',
         },
         {
           id: 'COOKIE_SETTINGS',

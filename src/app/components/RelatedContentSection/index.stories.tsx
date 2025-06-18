@@ -38,6 +38,7 @@ export default {
   RelatedContentComponent,
   parameters: {
     docs: { readme },
+    chromatic: { diffThreshold: 0.2 },
   },
 };
 

@@ -1,542 +1,102 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares:ws_media:page:bbc_brasil/p083x9gr",
-    "locators": { "pid": "p083x9gr", "brandPid": "p07r3r3t" },
-    "type": "WSRADIO",
-    "createdBy": "bbc_brasil",
-    "language": "pt-br",
-    "lastUpdated": 1616674866493,
-    "firstPublished": 1582557642000,
-    "lastPublished": 1582557642000,
-    "timestamp": 1582557642000,
-    "options": {},
-    "analyticsLabels": {
-      "pageTitle": "Que História! - BBC News Brasil",
-      "pageIdentifier": "portuguese.bbc_brasil.p083x9gr.page",
-      "producerId": "33",
-      "contentType": "player-episode",
-      "producer": "PORTUGUESE"
-    },
-    "tags": {},
-    "version": "v1.3.11",
-    "blockTypes": ["media"],
-    "title": "Que História!",
-    "releaseDateTimeStamp": 1584057600000,
-    "atiAnalytics": {}
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "p083x9gr",
-        "subType": "episode",
-        "format": "Audio",
-        "title": "",
-        "synopses": {
-          "short": "Quando jovem morreu de doença degenerativa, pais descobriram que ele teve vida paralela.",
-          "medium": "Pais de Mats Steen achavam que filho teve vida solitária; mas quando anunciaram sua morte, não tinham ideia da comoção que isso causaria."
-        },
-        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p083x9j5.jpg",
-        "embedding": true,
-        "advertising": false,
-        "versions": [
-          {
-            "versionId": "p083x8gs",
-            "types": ["Podcast"],
-            "duration": 982,
-            "durationISO8601": "PT16M22S",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": true,
-              "world": false
-            },
-            "availableFrom": 1584090000000,
-            "availabilityStatus": "available"
-          }
-        ],
-        "availability": "available",
-        "smpKind": "radioProgramme",
-        "episodeTitle": "'A vida secreta de meu filho que só conheci quando ele morreu'",
-        "type": "media"
+  "data": {
+    "isPodcast": true,
+    "metadata": {
+      "type": "Podcast",
+      "atiAnalytics": {
+        "pageIdentifier": "portuguese.bbc_brasil.podcasts.p083x9gr.page",
+        "contentType": "player-episode",
+        "pageTitle": "Que História! - BBC News Brasil",
+        "contentId": "urn:bbc:pips:p083x9gr"
       }
-    ]
-  },
-  "promo": {
-    "headlines": { "headline": "Que História!" },
-    "locators": { "pid": "p083x9gr", "brandPid": "p07r3r3t" },
-    "media": {
-      "id": "p083x9gr",
-      "subType": "episode",
-      "format": "Audio",
-      "title": "",
-      "synopses": {
-        "short": "Quando jovem morreu de doença degenerativa, pais descobriram que ele teve vida paralela.",
-        "medium": "Pais de Mats Steen achavam que filho teve vida solitária; mas quando anunciaram sua morte, não tinham ideia da comoção que isso causaria."
-      },
-      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p083x9j5.jpg",
-      "embedding": true,
-      "advertising": false,
-      "versions": [
-        {
-          "versionId": "p083x8gs",
-          "types": ["Podcast"],
-          "duration": 982,
-          "durationISO8601": "PT16M22S",
-          "warnings": {},
-          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
-          "availableFrom": 1584090000000,
-          "availabilityStatus": "available"
-        }
-      ],
-      "availability": "available",
-      "smpKind": "radioProgramme",
-      "episodeTitle": "'A vida secreta de meu filho que só conheci quando ele morreu'",
-      "type": "media"
     },
-    "indexImage": {
-      "id": "",
-      "subType": "index",
-      "href": "ichef.bbci.co.uk/images/ic/$recipe/p083x9j5.jpg",
-      "path": "ichef.bbci.co.uk/images/ic/$recipe/p083x9j5.jpg",
-      "height": 0,
-      "width": 0,
-      "altText": null,
-      "copyrightHolder": null,
-      "type": "image"
-    },
-    "releaseDateTimestamp": 1584057600000,
-    "brand": { "pid": "p07r3r3t", "title": "Que História!" },
+    "language": "pt-br",
+    "brandTitle": "Que História!",
+    "episodeTitle": "'A vida secreta de meu filho que só conheci quando ele morreu'",
+    "headline": "Que História!",
+    "shortSynopsis": "Quando jovem morreu de doença degenerativa, pais descobriram que ele teve vida paralela.",
     "id": "urn:bbc:ares:ws_media:page:bbc_brasil/p083x9gr",
-    "type": "ws_radio"
-  },
-  "relatedContent": {
-    "site": {
-      "subType": "site",
-      "name": "Portuguese",
-      "uri": "/portuguese",
-      "type": "simple"
-    },
-    "groups": [
+    "brandId": "p07r3r3t",
+    "summary": "Pais de Mats Steen achavam que filho teve vida solitária; mas quando anunciaram sua morte, não tinham ideia da comoção que isso causaria.",
+    "contentType": "player-episode",
+    "episodeId": "p083x9gr",
+    "masterBrand": "bbc_brasil",
+    "releaseDateTimeStamp": 1584057600000,
+    "pageTitle": "Que História! - BBC News Brasil",
+    "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0k13ck5.png",
+    "imageAltText": "",
+    "promoBrandTitle": "Que História!",
+    "durationISO8601": "PT16M22S",
+    "thumbnailImageUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p0k13ck5.png",
+    "episodeAvailability": "available",
+    "radioScheduleData": [],
+    "recentEpisodes": [
       {
-        "type": "other-episode",
-        "promos": [
-          {
-            "headlines": { "headline": "Que História!" },
-            "locators": { "pid": "p083x87j", "brandPid": "p07r3r3t" },
-            "media": {
-              "id": "p083x87j",
-              "subType": "episode",
-              "format": "Audio",
-              "title": "",
-              "synopses": {
-                "short": "Moradores de ilha entraram em frenesi por causa de carga de navio naufragado na costa.",
-                "medium": "Em 1941, cargueiro carregado de uísque bateu nas rochas de ilha escocesa; moradores fizeram jogo de gato e rato com polícia para esconder carga que tinham 'resgatado' do navio."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p083x88b.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "p083x2k6",
-                  "types": ["Podcast"],
-                  "duration": 548,
-                  "durationISO8601": "PT9M8S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1583485200000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "radioProgramme",
-              "episodeTitle": "'Uísque ao mar!': a curiosa história do 'verão da lata' escocês em plena 2ª Guerra",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p083x88b.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p083x88b.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1583452800000,
-            "brand": { "pid": "p07r3r3t", "title": "Que História!" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_brasil/p083x87j",
-            "type": "ws_radio"
+        "id": "p0jd7041",
+        "brandTitle": "Que História!",
+        "episodeTitle": "Vem aí a 3ª temporada do 'Que História!': ouça o trailer",
+        "timestamp": "2024-07-24T00:00:00.000Z",
+        "duration": "PT43S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p09dsb34.jpg",
+        "altText": "Que História!"
+      },
+      {
+        "id": "p09chbv1",
+        "brandTitle": "Que História!",
+        "episodeTitle": "Segunda temporada vem aí: ouça o trailer",
+        "timestamp": "2021-04-01T00:00:00.000Z",
+        "duration": "PT49S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p09dsb34.jpg",
+        "altText": "Que História!"
+      },
+      {
+        "id": "p07r3s60",
+        "brandTitle": "Que História!",
+        "episodeTitle": "Bem-vindo a Que História!",
+        "timestamp": "2019-10-15T00:00:00.000Z",
+        "duration": "PT39S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p09dsb34.jpg",
+        "altText": "Que História!"
+      }
+    ],
+    "externalLinkVersionId": "p083x8gs",
+    "mediaBlocks": [
+      {
+        "type": "audio",
+        "model": {
+          "id": "p083x9gr",
+          "subType": "episode",
+          "format": "Audio",
+          "title": "",
+          "synopses": {
+            "short": "Quando jovem morreu de doença degenerativa, pais descobriram que ele teve vida paralela.",
+            "medium": "Pais de Mats Steen achavam que filho teve vida solitária; mas quando anunciaram sua morte, não tinham ideia da comoção que isso causaria."
           },
-          {
-            "headlines": { "headline": "Que História!" },
-            "locators": { "pid": "p083wkq9", "brandPid": "p07r3r3t" },
-            "media": {
-              "id": "p083wkq9",
-              "subType": "episode",
-              "format": "Audio",
-              "title": "",
-              "synopses": {
-                "short": "Adolescente não sabe que a pessoa que acredita ser seu pai é ator contratado pela mãe.",
-                "medium": "Ator fundou empresa no Japão que 'aluga' amigos e familiares para atender à uma crescente demanda em país por relações postiças."
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0k13ck5.png",
+          "embedding": true,
+          "advertising": false,
+          "versions": [
+            {
+              "versionId": "p083x8gs",
+              "types": ["Podcast"],
+              "duration": 982,
+              "durationISO8601": "PT16M22S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true,
+                "world": false
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p083wkqx.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "p083wjsg",
-                  "types": ["Podcast"],
-                  "duration": 725,
-                  "durationISO8601": "PT12M5S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1582880400000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "radioProgramme",
-              "episodeTitle": "As famílias 'alugadas' no Japão",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p083wkqx.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p083wkqx.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1582848000000,
-            "brand": { "pid": "p07r3r3t", "title": "Que História!" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_brasil/p083wkq9",
-            "type": "ws_radio"
-          },
-          {
-            "headlines": { "headline": "Que História!" },
-            "locators": { "pid": "p0837nfw", "brandPid": "p07r3r3t" },
-            "media": {
-              "id": "p0837nfw",
-              "subType": "episode",
-              "format": "Audio",
-              "title": "",
-              "synopses": {
-                "short": "Sobreviventes passaram quatro dias boiando em águas infestadas por tubarões.",
-                "medium": "Em junho de 1945, torpedos japoneses afundaram cruzador americano, deixando centenas de marinheiros boiando no Oceano Pacífico, lutando contra desidratação, fome e tubarões."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0837njx.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "p0837lxk",
-                  "types": ["Podcast"],
-                  "duration": 703,
-                  "durationISO8601": "PT11M43S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1582275600000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "radioProgramme",
-              "episodeTitle": "O naufrágio de navio militar na 2ª Guerra que inspirou filme 'Tubarão'",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0837njx.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0837njx.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1582243200000,
-            "brand": { "pid": "p07r3r3t", "title": "Que História!" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_brasil/p0837nfw",
-            "type": "ws_radio"
-          },
-          {
-            "headlines": { "headline": "Que História!" },
-            "locators": { "pid": "p082wrwc", "brandPid": "p07r3r3t" },
-            "media": {
-              "id": "p082wrwc",
-              "subType": "episode",
-              "format": "Audio",
-              "title": "",
-              "synopses": {
-                "short": "Aos 17 anos, Miché Solomon conheceu menina que era 'sua cara' — e viu seu mundo ruir.",
-                "medium": "Em 1997, mulher vestida de enfermeira deixou hospital com bebê, enquanto a mãe dormia; por causa de uma selfie, tirada 17 anos depois, que criança roubada descobriu a verdade."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p082wrxj.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "p0830923",
-                  "types": ["Podcast"],
-                  "duration": 1033,
-                  "durationISO8601": "PT17M13S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1581670800000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "radioProgramme",
-              "episodeTitle": "'Graças a uma selfie, descobri que minha mãe me roubou quando era bebê'",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p082wrxj.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p082wrxj.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1581638400000,
-            "brand": { "pid": "p07r3r3t", "title": "Que História!" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_brasil/p082wrwc",
-            "type": "ws_radio"
-          },
-          {
-            "headlines": { "headline": "Que História!" },
-            "locators": { "pid": "p081mcd8", "brandPid": "p07r3r3t" },
-            "media": {
-              "id": "p081mcd8",
-              "subType": "episode",
-              "format": "Audio",
-              "title": "",
-              "synopses": {
-                "short": "Os raros relatos de brasileiros que enfrentaram as bombas e o racionamento em Londres.",
-                "medium": "Podcast conta como foi vida de pequeno grupo de jornalistas, intelectuais e diplomatas que permaneceu na Grã-Bretanha quando país declarou guerra à Alemanha em 1939."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p081mcdz.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "p082hrjj",
-                  "types": ["Podcast"],
-                  "duration": 1084,
-                  "durationISO8601": "PT18M4S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1581066000000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "radioProgramme",
-              "episodeTitle": "Os Brasileiros da Blitz",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p081mcdz.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p081mcdz.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1581033600000,
-            "brand": { "pid": "p07r3r3t", "title": "Que História!" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_brasil/p081mcd8",
-            "type": "ws_radio"
-          },
-          {
-            "headlines": { "headline": "Que História!" },
-            "locators": { "pid": "p081jh7q", "brandPid": "p07r3r3t" },
-            "media": {
-              "id": "p081jh7q",
-              "subType": "episode",
-              "format": "Audio",
-              "title": "",
-              "synopses": {
-                "short": "Músico chileno foi até a Síria para achar seus netos e trazê-los para casa.",
-                "medium": "Após receber notícia da morte da filha e do genro na Síria, Patrício Galvez partiu para zona de guerra em busca de seus sete netos."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p081jh88.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "p081tv30",
-                  "types": ["Podcast"],
-                  "duration": 815,
-                  "durationISO8601": "PT13M35S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1580461200000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "radioProgramme",
-              "episodeTitle": "A saga do avô em busca dos netos órfãos do Estado Islâmico",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p081jh88.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p081jh88.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1580428800000,
-            "brand": { "pid": "p07r3r3t", "title": "Que História!" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_brasil/p081jh7q",
-            "type": "ws_radio"
-          },
-          {
-            "headlines": { "headline": "Que História!" },
-            "locators": { "pid": "p08129g5", "brandPid": "p07r3r3t" },
-            "media": {
-              "id": "p08129g5",
-              "subType": "episode",
-              "format": "Audio",
-              "title": "",
-              "synopses": {
-                "short": "Megaexplosão de vulcão em 1883 causou destruição e mexeu com ar, luz e cores do planeta.",
-                "medium": "Explosão de vulcão foi tão barulhenta que pôde ser ouvida as 5 mil km de distância; ouça relato de uma testemunha do bombástico evento."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08129k3.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "p081259q",
-                  "types": ["Podcast"],
-                  "duration": 667,
-                  "durationISO8601": "PT11M7S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1579856400000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "radioProgramme",
-              "episodeTitle": "Krakatoa: a erupção que o mundo inteiro sentiu",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08129k3.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08129k3.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1579824000000,
-            "brand": { "pid": "p07r3r3t", "title": "Que História!" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_brasil/p08129g5",
-            "type": "ws_radio"
-          },
-          {
-            "headlines": { "headline": "Que História!" },
-            "locators": { "pid": "p080j23n", "brandPid": "p07r3r3t" },
-            "media": {
-              "id": "p080j23n",
-              "subType": "episode",
-              "format": "Audio",
-              "title": "",
-              "synopses": {
-                "short": "O calvário enfrentado por mulher nos EUA após ser descrita como adúltera em post falso.",
-                "medium": "Caso de Monika Glennon ilustra perigos da internet e os estragos que alguém com um teclado e um ressentimento podem causar."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p080j247.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "p080j1f8",
-                  "types": ["Podcast"],
-                  "duration": 832,
-                  "durationISO8601": "PT13M52S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1579251600000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "radioProgramme",
-              "episodeTitle": "'O post criado para arruinar minha vida'",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p080j247.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p080j247.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1579219200000,
-            "brand": { "pid": "p07r3r3t", "title": "Que História!" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_brasil/p080j23n",
-            "type": "ws_radio"
-          }
-        ]
+              "availableFrom": "2020-03-13T09:00:00.000Z",
+              "availabilityStatus": "available",
+              "availableUntil": null
+            }
+          ],
+          "availability": "available",
+          "smpKind": "radioProgramme",
+          "episodeTitle": "'A vida secreta de meu filho que só conheci quando ele morreu'",
+          "type": "media"
+        }
       }
     ]
   }

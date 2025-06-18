@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-hausa',
     atiAnalyticsProducerId: '51',
+    atiAnalyticsProducerName: 'HAUSA',
+    useReverb: true,
     chartbeatDomain: 'hausa.bbc.co.uk',
     brandName: 'BBC News Hausa',
     product: 'BBC News',
@@ -39,23 +41,27 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/hausa/game-da-mu-49283501',
     isTrustProjectParticipant: true,
     script: latin,
-    manifestPath: '/manifest.json',
+    manifestPath: '/hausa/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Labaran Duniya',
+    homePageTitle: 'Labaran Duniya',
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
-      title: 'Podcast',
-      brandTitle: 'Korona: Ina Mafita?',
+      title: 'Whatsapp',
+      brandTitle: 'Tasharmu ta WhatsApp',
       brandDescription:
-        'Shiri na musamman da sashen Hausa na BBC zai dinga kawo muku kan cutar Coronavirus',
+        'Yanzu za ku iya samun labaran BBC Hausa kai-tsaye a wayoyinku.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p08mlbpj.jpg',
-        alt: 'Korona: Ina Mafita?',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0ljr61s.jpg',
+        alt: 'BBC News Hausa WhatsApp latsa nan domin shiga tasharmu',
       },
       linkLabel: {
-        text: 'Kashi-kashi',
-        href: 'https://www.bbc.com/hausa/podcasts/p08mlgcb',
+        text: 'Latsa nan domin shiga',
+        href: 'https://www.whatsapp.com/channel/0029VahbuTkEwEjqW42kXB2K',
+      },
+      skipLink: {
+        text: 'Tsallake %title%',
+        endTextVisuallyHidden: 'Karshen %title%',
       },
     },
     translations: {
@@ -69,6 +75,7 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Duba su baki daya',
       home: 'Labaran Duniya',
+      continueReading: 'Ci gaba da karantawa',
       currentPage: 'Shafin da ake ciki',
       skipLinkText: 'Tsallaka zuwa abubuwan da ke ciki',
       relatedContent: 'Karin bayani',
@@ -86,6 +93,10 @@ export const service: DefaultServiceConfig = {
         postedAt: 'An wallafa a',
         summary: 'Taƙaitattu',
         shareButtonText: 'Aika',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'Taƙaitattu',
       error: {
@@ -145,7 +156,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'Madalla',
           reject: 'Duba abin da ya sauya',
-          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/privacy-policy/',
         },
         cookie: {
           amp: {
@@ -238,6 +249,7 @@ export const service: DefaultServiceConfig = {
         },
         listen: 'Saurari',
         watch: 'Kalla',
+        watchMoments: 'Kalli abubuwan da ke faruwa',
         listenLive: 'Saurara Kai Tsaye',
         listenNext: 'Saurari na gaba',
         liveLabel: 'KAI TSAYE',
@@ -248,6 +260,7 @@ export const service: DefaultServiceConfig = {
         recentEpisodes: 'Kari',
         podcastExternalLinks: 'Za a iya samun wannan Podcast din a',
         download: 'Sauke shiri',
+        closeVideo: 'Fita',
       },
       socialEmbed: {
         caption: {
@@ -347,7 +360,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'Wanda aka fi karantawa',
+      header: 'Labaran da suka fi shahara',
       lastUpdated: 'Na baya-bayan nan:',
       numberOfItems: 5,
       hasMostRead: true,
@@ -359,7 +372,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'Tsawon lokaci %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'Wanda aka fi karantawa',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
@@ -392,6 +409,10 @@ export const service: DefaultServiceConfig = {
           text: 'Tuntubi BBC',
         },
         {
+          href: 'https://www.bbc.com/ws/languages',
+          text: 'Labaran BBC a sauran harsuna',
+        },
+        {
           id: 'COOKIE_SETTINGS',
           href: '#',
           text: 'Do not share or sell my info',
@@ -417,7 +438,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Cikakkun Rahotanni',
-        url: '/hausa/52140979',
+        url: '/hausa/topics/cnl7wd77wj2t',
       },
       {
         title: 'Bidiyo',
@@ -425,7 +446,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Shirye-shirye na Musamman',
-        url: '/hausa/shirye-shirye-na-musamman-54712348',
+        url: '/hausa/topics/cnl7wd9pddlt',
       },
       {
         title: 'Shirye-shiryen rediyo',

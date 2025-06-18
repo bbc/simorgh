@@ -44,7 +44,7 @@ describe('Curation Promo', () => {
       <Fixture lazy={false} duration={123} type="video" />,
     );
 
-    const durationString = 'Duration, 2,03';
+    const durationString = ', Duration 2,03';
 
     expect(container.getByText(durationString)).toBeInTheDocument();
   });
@@ -62,7 +62,7 @@ describe('Curation Promo', () => {
         .getByAltText('Campesino indígena peruano.')
         .getAttribute('loading');
 
-      expect(loadingAttribute).toBeNull();
+      expect(loadingAttribute).toBe('eager');
     });
 
     it('should lazy load when lazy is truthy', () => {

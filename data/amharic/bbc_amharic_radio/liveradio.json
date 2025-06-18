@@ -1,67 +1,50 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares:ws_media:live:bbc_amharic_radio",
-    "locators": {
-      "pipsUrn": "urn:bbc:pips:bbc_amharic_radio"
-    },
-    "type": "WS-LIVE",
-    "createdBy": "amharic",
+  "data": {
+    "heading": "ያድምጡ",
+    "bodySummary": "ዝግጅቶቻችንን’",
     "language": "am",
-    "lastUpdated": 0,
-    "firstPublished": 0,
-    "lastPublished": 0,
-    "options": {},
-    "analyticsLabels": {
-      "pageTitle": "ያድምጡ - BBC News አማርኛ",
-      "pageIdentifier": "amharic.bbc_amharic_radio.liveradio.page",
-      "producerId": "4",
-      "contentType": "player-live",
-      "producer": "AMHARIC"
+    "id": "urn:bbc:ares:ws_media:live:bbc_amharic_radio",
+    "name": "ያድምጡ",
+    "summary": "ዝግጅቶቻችንን’",
+    "masterBrand": "bbc_amharic_radio",
+    "radioScheduleData": null,
+    "metadata": {
+      "type": "Live Radio",
+      "atiAnalytics": {
+        "contentId": "urn:bbc:ares:ws_media:live:bbc_amharic_radio",
+        "contentType": "player-live",
+        "pageIdentifier": "amharic.bbc_amharic_radio.liveradio.page",
+        "pageTitle": "ያድምጡ - BBC News አማርኛ"
+      }
     },
-    "tags": {},
-    "version": "1.1.2",
-    "blockTypes": ["heading", "version", "paragraph"]
-  },
-  "content": {
-    "blocks": [
+    "mediaBlock": [
       {
-        "text": "ያድምጡ",
-        "markupType": "plain_text",
-        "type": "heading"
-      },
-      {
-        "text": "ዝግጅቶቻችንን’",
-        "type": "paragraph"
-      },
-      {
-        "id": "liveradio",
-        "subType": "primary",
-        "format": "audio",
-        "externalId": "bbc_amharic_radio",
-        "duration": "PT0S",
-        "caption": "",
-        "embedding": false,
-        "available": true,
-        "live": true,
-        "type": "version"
+        "type": "liveRadio",
+        "model": [
+          {
+            "text": "ያድምጡ",
+            "markupType": "plain_text",
+            "type": "heading"
+          },
+          {
+            "text": "ዝግጅቶቻችንን’",
+            "type": "paragraph"
+          },
+          {
+            "id": "liveradio",
+            "subType": "primary",
+            "format": "audio",
+            "externalId": "bbc_amharic_radio",
+            "duration": "PT0S",
+            "caption": "",
+            "embedding": false,
+            "available": true,
+            "live": true,
+            "type": "version"
+          }
+        ]
       }
     ]
   },
-  "promo": {
-    "name": "ያድምጡ",
-    "summary": "ዝግጅቶቻችንን’",
-    "uri": "/amharic/bbc_amharic_radio/liveradio",
-    "contentType": "WS-LIVE",
-    "id": "urn:bbc:ares::ws_live:bbc_amharic_radio",
-    "type": "link"
-  },
-  "relatedContent": {
-    "site": {
-      "subType": "simple",
-      "name": "amharic",
-      "uri": "/amharic",
-      "type": "simple"
-    },
-    "groups": []
-  }
+  "contentType": "application/json; charset=utf-8"
 }

@@ -1,3 +1,5 @@
+import type { JSX } from 'react';
+
 export interface BrandPalette {
   BRAND_BACKGROUND: string;
   BRAND_LOGO: string;
@@ -36,7 +38,9 @@ interface Palette extends BrandPalette {
   KINGFISHER: string;
   LE_TEAL: string;
   LIVE_LIGHT: string;
+  LIVE_MEDIUM: string;
   LIVE_DARK: string;
+  LIVE_CORE: string;
   LUNAR: string;
   LUNAR_LIGHT: string;
   METAL: string;
@@ -65,31 +69,56 @@ interface Palette extends BrandPalette {
 }
 
 interface MediaQueries {
+  /** 239px and below  */
   GROUP_0_MAX_WIDTH: string;
+  /** 399px and below  */
   GROUP_1_MAX_WIDTH: string;
+  /** 240px and above  */
   GROUP_1_MIN_WIDTH: string;
+  /** between 240px and 399px  */
   GROUP_1_ONLY: string;
+  /** 599px and below  */
   GROUP_2_MAX_WIDTH: string;
+  /** 400px and above  */
   GROUP_2_MIN_WIDTH: string;
+  /** between 400px and 599px  */
   GROUP_2_ONLY: string;
+  /** between 240px and 599px  */
   GROUP_1_AND_GROUP_2: string;
+  /** 1007px and below  */
   GROUP_3_MAX_WIDTH: string;
+  /** 600px and above  */
   GROUP_3_MIN_WIDTH: string;
+  /** between 600px and 1007px  */
   GROUP_3_ONLY: string;
+  /** 1279px and below  */
   GROUP_4_MAX_WIDTH: string;
+  /** 1008px and above  */
   GROUP_4_MIN_WIDTH: string;
+  /** between 1008px and 1279px  */
   GROUP_4_ONLY: string;
+  /** 1280px and above  */
   GROUP_5_MIN_WIDTH: string;
+  /** @media screen and (forced-colors: active) */
   FORCED_COLOURS: string;
+  /** @media (pointer: fine) */
+  POINTER: string;
 }
 
 interface Spacings {
+  /** 0.25rem (4px) */
   HALF: number;
+  /** 0.5rem (8px) */
   FULL: number;
+  /** 1rem (16px) */
   DOUBLE: number;
+  /** 1.5rem (24px) */
   TRIPLE: number;
+  /** 2rem (32px) */
   QUADRUPLE: number;
+  /** 2.5rem (40px) */
   QUINTUPLE: number;
+  /** 3rem (48px) */
   SEXTUPLE: number;
 }
 
@@ -469,10 +498,15 @@ declare module '@emotion/react' {
       minion: FontSize;
     };
     fontMq: {
+      /** 319px and below */
       GROUP_A_MAX_WIDTH: string;
+      /** 599px and below */
       GROUP_B_MAX_WIDTH: string;
+      /** 320px and above */
       GROUP_B_MIN_WIDTH: string;
+      /** between 320px and 599px */
       GROUP_B_ONLY: string;
+      /** 600px and above */
       GROUP_D_MIN_WIDTH: string;
     };
     fontVariants: {

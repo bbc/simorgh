@@ -1,11 +1,16 @@
 import React, { useContext, useRef, useState } from 'react';
 import SkipLink from '#psammead/psammead-brand/src/SkipLink';
 import { RequestContext } from '#contexts/RequestContext';
-import useToggle from '#hooks/useToggle';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import ScriptLink from '#app/components/Header/ScriptLink';
+import {
+  ARTICLE_PAGE,
+  HOME_PAGE,
+  TOPIC_PAGE,
+  ERROR_PAGE,
+} from '#app/routes/utils/pageTypes';
+import LiteSiteSummary from '#app/components/LiteSiteSummary';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import ScriptLink from './ScriptLink';
 import ConsentBanner from '../ConsentBanner';
 import NavigationContainer from '../Navigation';
 import BrandContainer from '../Brand';
@@ -42,20 +47,11 @@ const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
   );
 };
 
-const HeaderContainer = ({
-  scriptSwitchId = '',
-  renderScriptSwitch = true,
-}) => {
-  const { pageType, isAmp, isApp } = useContext(RequestContext);
+const HeaderContainer = ({ propsForOJExperiment }) => {
+  const { isAmp, isApp, pageType, isLite } = useContext(RequestContext);
   const { service, script, translations, dir, scriptLink, lang, serviceLang } =
     useContext(ServiceContext);
   const { skipLinkText } = translations;
-
-  // The article page toggles the nav bar based on environment
-  const showNavOnArticles = useToggle('navOnArticles').enabled;
-
-  // All other page types show the nav bar at all times
-  const showNav = showNavOnArticles || pageType !== ARTICLE_PAGE;
 
   const isOperaMini = useOperaMiniDetection();
 
@@ -76,7 +72,19 @@ const HeaderContainer = ({
     </SkipLink>
   );
 
-  const shouldRenderScriptSwitch = scriptLink && renderScriptSwitch;
+  let shouldRenderScriptSwitch = false;
+
+  if (scriptLink) {
+    switch (true) {
+      case service === 'uzbek' &&
+        ![ARTICLE_PAGE, HOME_PAGE, TOPIC_PAGE, ERROR_PAGE].includes(pageType):
+        shouldRenderScriptSwitch = false;
+        break;
+      default:
+        shouldRenderScriptSwitch = true;
+        break;
+    }
+  }
 
   if (isApp) return null;
 
@@ -86,24 +94,17 @@ const HeaderContainer = ({
         <Header
           linkId="brandLink"
           skipLink={skipLink}
-          scriptLink={
-            shouldRenderScriptSwitch && (
-              <ScriptLink scriptSwitchId={scriptSwitchId} />
-            )
-          }
+          scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
         />
       ) : (
         <Header
           brandRef={brandRef}
           skipLink={skipLink}
-          scriptLink={
-            shouldRenderScriptSwitch && (
-              <ScriptLink scriptSwitchId={scriptSwitchId} />
-            )
-          }
+          scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
         />
       )}
-      {showNav && <NavigationContainer />}
+      {isLite && <LiteSiteSummary />}
+      <NavigationContainer propsForOJExperiment={propsForOJExperiment} />
     </header>
   );
 };

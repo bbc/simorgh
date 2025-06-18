@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { forwardRef } from 'react';
 import { jsx } from '@emotion/react';
-import isEmpty from 'ramda/src/isEmpty';
 
 import Promo from '../../../../../legacy/components/OptimoPromos';
 import { LatestMediaItemProp } from '../types';
@@ -9,15 +8,15 @@ import LatestMediaIndicator from '../LatestMediaIndicator';
 import styles from './index.styles';
 
 const LatestMediaItem = forwardRef<HTMLDivElement, LatestMediaItemProp>(
-  ({ item, ariaLabelledBy, eventTrackingData }, viewRef) => {
-    if (!item || isEmpty(item)) return null;
+  ({ item, ariaLabelledBy, eventTrackingData }, viewTracker) => {
+    if (!item || Object.keys(item).length === 0) return null;
 
     const timestamp = item.firstPublished;
 
     const src = item.imageUrl.replace('{width}', '240');
 
     return (
-      <div ref={viewRef} css={styles.promoWrapper}>
+      <div {...viewTracker} css={styles.promoWrapper}>
         <Promo
           to={item.link}
           ariaLabelledBy={ariaLabelledBy}

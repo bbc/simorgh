@@ -10,9 +10,9 @@ import { Global, jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import styles from './index.styles';
 import { RequestContext } from '../../contexts/RequestContext';
-import { FRONT_PAGE, HOME_PAGE } from '../../routes/utils/pageTypes';
+import { HOME_PAGE } from '../../routes/utils/pageTypes';
 
-type Props = {
+export type ImageProps = {
   alt: string;
   aspectRatio?: [x: number, y: number];
   attribution?: string;
@@ -20,7 +20,6 @@ type Props = {
   fallbackMediaType?: string;
   fallbackSrcSet?: string;
   height?: number;
-  isAmp?: boolean;
   lazyLoad?: boolean;
   placeholder?: boolean;
   darkPlaceholder?: boolean;
@@ -30,7 +29,7 @@ type Props = {
   sizes?: string;
   src: string;
   width?: number;
-  fetchpriority?: 'high';
+  fetchPriority?: 'high';
   hasCaption?: boolean;
 };
 
@@ -48,7 +47,6 @@ const Image = ({
   fallbackMediaType,
   fallbackSrcSet,
   height,
-  isAmp = false,
   lazyLoad = false,
   placeholder = true,
   darkPlaceholder = false,
@@ -59,10 +57,10 @@ const Image = ({
   src,
   width,
   children,
-  fetchpriority,
+  fetchPriority,
   hasCaption,
-}: PropsWithChildren<Props>) => {
-  const { pageType, isLite } = useContext(RequestContext);
+}: PropsWithChildren<ImageProps>) => {
+  const { pageType, isLite, isAmp } = useContext(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
   if (isLite) return null;
 
@@ -77,24 +75,18 @@ const Image = ({
     aspectRatioY as number,
   );
 
-  const hasFallback =
-    srcSet &&
-    fallbackSrcSet &&
-    (pageType === FRONT_PAGE || pageType === HOME_PAGE);
+  const hasFallback = srcSet && fallbackSrcSet && pageType === HOME_PAGE;
   const ImageWrapper = hasFallback ? 'picture' : Fragment;
   const ampImgLayout = hasDimensions ? 'responsive' : 'fill';
   const getImgSrcSet = () => {
     if (!hasFallback) return srcSet;
-    if (pageType !== FRONT_PAGE && pageType !== HOME_PAGE) {
+    if (pageType !== HOME_PAGE) {
       return fallbackSrcSet;
     }
     return undefined;
   };
   const getImgSizes = () => {
-    if (
-      (!hasFallback && srcSet) ||
-      (pageType !== FRONT_PAGE && pageType !== HOME_PAGE)
-    ) {
+    if ((!hasFallback && srcSet) || pageType !== HOME_PAGE) {
       return sizes;
     }
     return undefined;
@@ -109,8 +101,8 @@ const Image = ({
             rel="preload"
             as="image"
             href={src}
-            imagesrcset={srcSet}
-            imagesizes={sizes}
+            imageSrcSet={srcSet}
+            imageSizes={sizes}
           />
         </Helmet>
       )}
@@ -159,29 +151,28 @@ const Image = ({
               attribution={attribution}
               {...(srcSet && { srcSet: imgSrcSet })}
               {...(imgSizes && { sizes: imgSizes })}
-              {...(preload && { 'data-hero': true })}
+              {...(preload && { 'data-hero': 'true' })}
             />
           </>
         ) : (
           <ImageWrapper>
-            {hasFallback &&
-              (pageType === FRONT_PAGE || pageType === HOME_PAGE) && (
-                <>
-                  <source srcSet={srcSet} type={mediaType} sizes={sizes} />
-                  <source
-                    srcSet={fallbackSrcSet}
-                    type={fallbackMediaType}
-                    sizes={sizes}
-                  />
-                </>
-              )}
+            {hasFallback && pageType === HOME_PAGE && (
+              <>
+                <source srcSet={srcSet} type={mediaType} sizes={sizes} />
+                <source
+                  srcSet={fallbackSrcSet}
+                  type={fallbackMediaType}
+                  sizes={sizes}
+                />
+              </>
+            )}
             <img
               onLoad={() => setIsLoaded(true)}
               src={src}
               {...(srcSet && { srcSet: imgSrcSet })}
               {...(imgSizes && { sizes: imgSizes })}
               alt={alt}
-              loading={lazyLoad ? 'lazy' : undefined}
+              loading={lazyLoad ? 'lazy' : 'eager'}
               width={width}
               height={height}
               css={[
@@ -190,7 +181,7 @@ const Image = ({
                   ? styles.imageFixedAspectRatio
                   : styles.imageResponsiveRatio,
               ]}
-              fetchpriority={fetchpriority}
+              fetchPriority={fetchPriority}
               style={{
                 aspectRatio: hasFixedAspectRatio
                   ? `${aspectRatioX} / ${aspectRatioY}`

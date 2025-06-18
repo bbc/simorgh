@@ -4,15 +4,13 @@
  */
 
 import runCanonicalTests from '../canonicalTests';
-import runMediaPlayerCaptionTests from '../mediaPlayerCaption';
-import runMediaPlayerPlaceholderTests from '../mediaPlayerPlaceholderTestsCanonical';
 import runInlineLinkTests from '../inlineLink';
+import runMediaPlayerTests from '../../../common/mediaPlayer';
 
 describe('Canonical', () => {
   describe(pageType, () => {
     runCanonicalTests(service);
-    runMediaPlayerCaptionTests();
-    runMediaPlayerPlaceholderTests();
+    runMediaPlayerTests(pageType);
     runInlineLinkTests();
   });
 });

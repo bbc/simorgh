@@ -2,7 +2,7 @@ import { css, Theme } from '@emotion/react';
 import { grid } from '../../../../legacy/psammead/psammead-styles/src/detection';
 
 const styles = {
-  link: ({ spacings, palette, fontSizes, fontVariants }: Theme) =>
+  link: ({ palette, fontSizes, fontVariants }: Theme) =>
     css({
       ...fontSizes.pica,
       ...fontVariants.serifMedium,
@@ -10,7 +10,7 @@ const styles = {
       position: 'static',
       color: palette.EBON,
       textDecoration: 'none',
-      marginBottom: `${spacings.FULL}rem`,
+      display: 'inline-block',
 
       '&:hover, &:focus': {
         textDecoration: 'underline',

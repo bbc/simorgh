@@ -1,67 +1,50 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares:ws_media:live:bbc_urdu_radio",
-    "locators": {
-      "pipsUrn": "urn:bbc:pips:bbc_urdu_radio"
-    },
-    "type": "WS-LIVE",
-    "createdBy": "urdu",
+  "data": {
+    "heading": "بی بی سی اردو ریڈیو",
+    "bodySummary": "اردو زبان کے معتبر ترین خبررساں اداروں میں ایک، بی بی سی اردو کی جانب سے مصدقہ خبریں اور جامع تجزیے",
     "language": "ur",
-    "lastUpdated": 0,
-    "firstPublished": 0,
-    "lastPublished": 0,
-    "options": {},
-    "analyticsLabels": {
-      "pageTitle": "بی بی سی اردو ریڈیو - BBC News اردو",
-      "pageIdentifier": "urdu.bbc_urdu_radio.liveradio.page",
-      "producerId": "95",
-      "contentType": "player-live",
-      "producer": "URDU"
+    "id": "urn:bbc:ares:ws_media:live:bbc_urdu_radio",
+    "name": "بی بی سی اردو ریڈیو",
+    "summary": "اردو زبان کے معتبر ترین خبررساں اداروں میں ایک، بی بی سی اردو کی جانب سے مصدقہ خبریں اور جامع تجزیے",
+    "masterBrand": "bbc_urdu_radio",
+    "radioScheduleData": null,
+    "metadata": {
+      "type": "Live Radio",
+      "atiAnalytics": {
+        "contentId": "urn:bbc:ares:ws_media:live:bbc_urdu_radio",
+        "contentType": "player-live",
+        "pageIdentifier": "urdu.bbc_urdu_radio.liveradio.page",
+        "pageTitle": "بی بی سی اردو ریڈیو - BBC News اردو"
+      }
     },
-    "tags": {},
-    "version": "1.1.2",
-    "blockTypes": ["heading", "version", "paragraph"]
-  },
-  "content": {
-    "blocks": [
+    "mediaBlock": [
       {
-        "text": "بی بی سی اردو ریڈیو",
-        "markupType": "plain_text",
-        "type": "heading"
-      },
-      {
-        "text": "اردو زبان کے معتبر ترین خبررساں اداروں میں ایک، بی بی سی اردو کی جانب سے مصدقہ خبریں اور جامع تجزیے",
-        "type": "paragraph"
-      },
-      {
-        "id": "liveradio",
-        "subType": "primary",
-        "format": "audio",
-        "externalId": "bbc_urdu_radio",
-        "duration": "PT0S",
-        "caption": "",
-        "embedding": false,
-        "available": true,
-        "live": true,
-        "type": "version"
+        "type": "liveRadio",
+        "model": [
+          {
+            "text": "بی بی سی اردو ریڈیو",
+            "markupType": "plain_text",
+            "type": "heading"
+          },
+          {
+            "text": "اردو زبان کے معتبر ترین خبررساں اداروں میں ایک، بی بی سی اردو کی جانب سے مصدقہ خبریں اور جامع تجزیے",
+            "type": "paragraph"
+          },
+          {
+            "id": "liveradio",
+            "subType": "primary",
+            "format": "audio",
+            "externalId": "bbc_urdu_radio",
+            "duration": "PT0S",
+            "caption": "",
+            "embedding": false,
+            "available": true,
+            "live": true,
+            "type": "version"
+          }
+        ]
       }
     ]
   },
-  "promo": {
-    "name": "بی بی سی اردو ریڈیو",
-    "summary": "اردو زبان کے معتبر ترین خبررساں اداروں میں ایک، بی بی سی اردو کی جانب سے مصدقہ خبریں اور جامع تجزیے",
-    "uri": "/urdu/bbc_urdu_radio/liveradio",
-    "contentType": "WS-LIVE",
-    "id": "urn:bbc:ares::ws_live:bbc_urdu_radio",
-    "type": "link"
-  },
-  "relatedContent": {
-    "site": {
-      "subType": "simple",
-      "name": "urdu",
-      "uri": "/urdu",
-      "type": "simple"
-    },
-    "groups": []
-  }
+  "contentType": "application/json; charset=utf-8"
 }

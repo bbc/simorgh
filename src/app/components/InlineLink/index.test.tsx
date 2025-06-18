@@ -98,7 +98,7 @@ describe('InlineLink', () => {
     ${'ukrainian'}    | ${'default'} | ${'Google, зовнішнє'}
     ${'urdu'}         | ${'default'} | ${'Google، بیرو'}
     ${'uzbek'}        | ${'cyr'}     | ${'Google, ташқи'}
-    ${'uzbek'}        | ${'lat'}     | ${'Google, ташқи'}
+    ${'uzbek'}        | ${'lat'}     | ${'Google, tashqi'}
     ${'vietnamese'}   | ${'default'} | ${'Google, bên ngoài'}
     ${'yoruba'}       | ${'default'} | ${'Google, ìta'}
     ${'zhongwen'}     | ${'simp'}    | ${'Google, 外部'}

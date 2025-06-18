@@ -1,44 +1,40 @@
 import React from 'react';
-import fetchMock from 'fetch-mock';
 import arabicRadioScheduleData from '#data/arabic/bbc_arabic_radio/schedule.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import {
   render,
   act,
 } from '../../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
-import CanonicalRadioSchedule from '.';
+import RadioSchedule from '.';
 import processRadioSchedule from '../utilities/processRadioSchedule';
 
-const endpoint = 'https://localhost/arabic/bbc_arabic_radio/schedule.json';
-
-const RadioScheduleWithContext = ({ initialData, lang }) => (
+const RadioScheduleWithContext = ({ radioSchedule, lang }) => (
   <RequestContextProvider
     isAmp={false}
-    pageType={FRONT_PAGE}
+    pageType={HOME_PAGE}
     service="arabic"
     pathname="/arabic"
     timeOnServer={Date.now()}
   >
     <ServiceContextProvider service="arabic">
-      <CanonicalRadioSchedule
-        initialData={initialData}
-        endpoint={endpoint}
-        lang={lang}
-      />
+      <RadioSchedule radioSchedule={radioSchedule} lang={lang} />
     </ServiceContextProvider>
   </RequestContextProvider>
 );
 
-describe('Canonical RadioSchedule', () => {
+describe('RadioSchedule', () => {
   beforeEach(() => {
-    fetchMock.restore();
+    fetch.resetMocks();
+  });
+
+  afterEach(() => {
+    jest.resetAllMocks();
   });
 
   describe('With initial data', () => {
     it('renders correctly for a service', async () => {
-      fetchMock.mock(endpoint, arabicRadioScheduleData);
       const initialData = processRadioSchedule(
         arabicRadioScheduleData,
         'arabic',
@@ -47,11 +43,10 @@ describe('Canonical RadioSchedule', () => {
       let container;
       await act(async () => {
         container = render(
-          <RadioScheduleWithContext initialData={initialData} />,
+          <RadioScheduleWithContext radioSchedule={initialData} />,
         ).container;
       });
       expect(container).toMatchSnapshot();
-      expect(fetchMock.calls(endpoint).length).toBeFalsy();
     });
 
     it('contains four programs for a service with a radio schedule', async () => {
@@ -63,24 +58,30 @@ describe('Canonical RadioSchedule', () => {
       let container;
 
       await act(async () => {
-        container = await render(
-          <RadioScheduleWithContext initialData={initialData} />,
+        container = render(
+          <RadioScheduleWithContext radioSchedule={initialData} />,
         ).container;
       });
       expect(container.querySelectorAll('li').length).toEqual(4);
     });
 
     it('does not render when data contains less than 4 programs', async () => {
-      fetchMock.mock(endpoint, arabicRadioScheduleData.schedules.slice(0, 2));
+      const radioSchedule2Programmes = { ...arabicRadioScheduleData };
+      radioSchedule2Programmes.schedules =
+        radioSchedule2Programmes.schedules.slice(0, 2);
+
       const initialData = processRadioSchedule(
-        { schedules: arabicRadioScheduleData.schedules.slice(0, 2) },
+        radioSchedule2Programmes,
         'arabic',
         Date.now(),
       );
+
+      fetch.mockResponseOnce(JSON.stringify(radioSchedule2Programmes));
+
       let container;
 
       await act(async () => {
-        container = await render(
+        container = render(
           <RadioScheduleWithContext initialData={initialData} />,
         ).container;
       });
@@ -88,7 +89,7 @@ describe('Canonical RadioSchedule', () => {
     });
 
     it('does not render when data contains no programs', async () => {
-      fetchMock.mock(endpoint, []);
+      fetch.mockResponseOnce(JSON.stringify([]));
       const initialData = processRadioSchedule(
         { schedules: [] },
         'arabic',
@@ -97,95 +98,9 @@ describe('Canonical RadioSchedule', () => {
       let container;
 
       await act(async () => {
-        container = await render(
+        container = render(
           <RadioScheduleWithContext initialData={initialData} />,
         ).container;
-      });
-      expect(container).toBeEmptyDOMElement();
-    });
-  });
-
-  describe('Without initial data', () => {
-    it('renders correctly for a service with a radio schedule and page frequency URL', async () => {
-      fetchMock.mock(endpoint, arabicRadioScheduleData);
-      let container;
-
-      await act(async () => {
-        container = await render(<RadioScheduleWithContext />).container;
-      });
-
-      expect(container).toMatchSnapshot();
-      expect(fetchMock.calls(endpoint).length).toBeTruthy();
-    });
-
-    it('contains four programs for a service with a radio schedule', async () => {
-      fetchMock.mock(endpoint, arabicRadioScheduleData);
-      let container;
-
-      await act(async () => {
-        container = await render(<RadioScheduleWithContext />).container;
-      });
-      expect(container.querySelectorAll('li').length).toEqual(4);
-    });
-
-    it('render radio schedules container with lang code', async () => {
-      fetchMock.mock(endpoint, arabicRadioScheduleData);
-      let container;
-
-      await act(async () => {
-        container = await render(<RadioScheduleWithContext lang="fa-AF" />)
-          .container;
-      });
-      expect(container.querySelector('section')).toHaveAttribute(
-        'lang',
-        'fa-AF',
-      );
-    });
-
-    it('does not render when data contains less than 4 programs', async () => {
-      fetchMock.mock(endpoint, {
-        schedules: arabicRadioScheduleData.schedules.slice(0, 2),
-      });
-      let container;
-
-      await act(async () => {
-        container = await render(<RadioScheduleWithContext />).container;
-      });
-      expect(container).toBeEmptyDOMElement();
-    });
-
-    it('does not render when data contains no programs', async () => {
-      fetchMock.mock(endpoint, {
-        schedules: [],
-      });
-      let container;
-
-      await act(async () => {
-        container = await render(<RadioScheduleWithContext />).container;
-      });
-      expect(container).toBeEmptyDOMElement();
-    });
-
-    it('does not render when data fetched returns non-ok status code', async () => {
-      global.console.error = jest.fn();
-      fetchMock.mock(endpoint, 404);
-      let container;
-
-      await act(async () => {
-        container = await render(<RadioScheduleWithContext />).container;
-      });
-      expect(container).toBeEmptyDOMElement();
-    });
-
-    it('does not render when data fetch is rejected', async () => {
-      global.console.error = jest.fn();
-      fetchMock.mock(endpoint, {
-        throws: 'Server not found',
-      });
-      let container;
-
-      await act(async () => {
-        container = await render(<RadioScheduleWithContext />).container;
       });
       expect(container).toBeEmptyDOMElement();
     });

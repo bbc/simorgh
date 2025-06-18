@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-bengali',
     atiAnalyticsProducerId: '31',
+    atiAnalyticsProducerName: 'BENGALI',
+    useReverb: true,
     chartbeatDomain: 'bengali.bbc.co.uk',
     brandName: 'BBC News বাংলা',
     product: 'BBC News',
@@ -39,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/bengali/institutional-50409861',
     isTrustProjectParticipant: true,
     script: bengali,
-    manifestPath: '/manifest.json',
+    manifestPath: '/bengali/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle:
+    homePageTitle:
       'খবর, সর্বশেষ খবর, ব্রেকিং নিউজ | News, latest news, breaking news',
     showAdPlaceholder: true,
     showRelatedTopics: true,
@@ -56,7 +58,6 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'বিজ্ঞাপন',
       },
-      recommendationTitle: 'Recommended articles',
       seeAll: 'সবগুলো খবর দেখুন',
       home: 'মূলপাতা',
       currentPage: 'বর্তমান পেজ',
@@ -76,6 +77,10 @@ export const service: DefaultServiceConfig = {
         postedAt: 'পোস্ট করা হয়েছে',
         summary: 'সার সংক্ষেপ',
         shareButtonText: 'শেয়ার করুন',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'সার সংক্ষেপ',
       error: {
@@ -130,7 +135,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'ঠিক আছে।',
           reject: 'কী পরিবর্তন হয়েছে দেখুন।',
-          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/privacy-policy/',
         },
         cookie: {
           amp: {
@@ -224,6 +229,7 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'পরবর্তী রেডিও অনুষ্ঠান',
         duration: 'স্থিতিকাল',
         recentEpisodes: 'পুরনো অনুষ্ঠান',
+        closeVideo: 'বন্ধ করুন',
       },
       socialEmbed: {
         caption: {
@@ -260,7 +266,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'সর্বশেষ',
     },
     mostRead: {
-      header: 'সর্বাধিক পঠিত',
+      header: 'পাঠকপ্রিয় খবর',
       lastUpdated: 'সর্বশেষ আপডেট হয়েছে:',
       numberOfItems: 5,
       hasMostRead: true,
@@ -271,7 +277,7 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'স্থিতিকাল %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'সর্বাধিক পঠিত',
       skipLink: {
         text: 'Skip %title% and continue reading',
         endTextVisuallyHidden: 'End of %title%',
@@ -308,6 +314,10 @@ export const service: DefaultServiceConfig = {
           text: 'বিবিসির সাথে যোগাযোগ করুন',
         },
         {
+          href: 'https://www.bbc.com/ws/languages',
+          text: 'অন্যান্য ভাষায় বিবিসির সংবাদ',
+        },
+        {
           id: 'COOKIE_SETTINGS',
           href: '#',
           text: 'Do not share or sell my info',
@@ -322,10 +332,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'মূলপাতা',
         url: '/bengali',
-      },
-      {
-        title: 'কোটা আন্দোলন',
-        url: '/bengali/topics/cz47p4p81qdt',
       },
       {
         title: 'রাজনীতি',

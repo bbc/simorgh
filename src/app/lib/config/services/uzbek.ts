@@ -2,6 +2,7 @@ import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/l
 import cyrillic from '../../../components/ThemeProvider/fontScripts/cyrillic';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/uz';
+import '#psammead/psammead-locales/moment/uz-latn';
 import withContext from '../../../contexts/utils/withContext';
 import { UzbekConfig } from '../../../models/types/serviceConfig';
 import { Direction, Services } from '../../../models/types/global';
@@ -10,6 +11,8 @@ const baseServiceConfig = {
   articleAuthor: `https://www.facebook.com/bbcnews`,
   atiAnalyticsAppName: 'news-uzbek',
   atiAnalyticsProducerId: '96',
+  atiAnalyticsProducerName: 'UZBEK',
+  useReverb: true,
   chartbeatDomain: 'uzbek.bbc.co.uk',
   product: 'BBC News',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/uzbek.png',
@@ -19,29 +22,28 @@ const baseServiceConfig = {
   twitterCreator: '@bbcuzbek',
   twitterSite: '@bbcuzbek',
   isTrustProjectParticipant: true,
-  manifestPath: '/manifest.json',
+  manifestPath: '/uzbek/manifest.json',
   swPath: '/sw.js',
   radioSchedule: {
     hasRadioSchedule: false,
-  },
-  recommendations: {
-    hasStoryRecommendations: false,
   },
   showAdPlaceholder: true,
   showRelatedTopics: true,
   timezone: 'GMT',
 };
 
-// used by default and cyr configs
 const defaultCyrillicConfig = {
+  ...baseServiceConfig,
+
+  script: cyrillic,
   articleTimestampPrefix: 'Янгиланди',
   articleTimestampSuffix: '',
   brandName: "BBC News O'zbek",
   datetimeLocale: `uz`,
   externalLinkText: ', ташқи',
-  frontPageTitle: 'Бош саҳифа',
-  lang: `uz-Cyrl`,
-  locale: `uz-UZ`,
+  homePageTitle: 'Бош саҳифа',
+  lang: 'uz-cyrl',
+  locale: 'uz-UZ',
   // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
   isoLang: 'uz',
   noBylinesPolicy:
@@ -69,7 +71,7 @@ const defaultCyrillicConfig = {
     home: 'Бош саҳифа',
     currentPage: 'Жорий саҳифа',
     skipLinkText: 'Саҳифага ўтиш',
-    relatedContent: 'Бу мавзуда батафсилроқ',
+    relatedContent: 'Мавзуга алоқадор',
     relatedTopics: 'Алоқадор мавзулар',
     navMenuText: 'Бўлимлар',
     mediaAssetPage: {
@@ -84,6 +86,10 @@ const defaultCyrillicConfig = {
       postedAt: '...да чоп этилган',
       summary: 'Қисқача',
       shareButtonText: 'Баҳам кўринг',
+    },
+    downloads: {
+      instructions: 'You can download and view today’s news.',
+      title: 'File Download',
     },
     gist: 'Хулоса',
     error: {
@@ -139,7 +145,7 @@ const defaultCyrillicConfig = {
         },
         accept: 'Маъқул',
         reject: 'Нималар ўзгарди?',
-        rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
+        rejectUrl: 'https://www.bbc.com/usingthebbc/privacy-policy/',
       },
       cookie: {
         amp: {
@@ -237,6 +243,7 @@ const defaultCyrillicConfig = {
       nextRadioShow: 'Кейинги радио дастур',
       duration: 'Давомийлиги',
       recentEpisodes: 'Олдинги дастурлар',
+      closeVideo: 'Чиқиш',
     },
     socialEmbed: {
       caption: {
@@ -273,10 +280,17 @@ const defaultCyrillicConfig = {
     latestMediaTitle: 'Сўнгги',
   },
   mostRead: {
-    header: 'Энг кўп ўқилган',
+    header: 'Оммабоп мақолалар',
     lastUpdated: 'Сўнгги янгиланиш:',
     numberOfItems: 5,
     hasMostRead: true,
+  },
+  recommendations: {
+    header: 'Энг кўп ўқилган',
+    skipLink: {
+      text: 'Skip %title% and continue reading',
+      endTextVisuallyHidden: 'End of %title%',
+    },
   },
   footer: {
     trustProjectLink: {
@@ -305,6 +319,10 @@ const defaultCyrillicConfig = {
         text: "'Bi-bi-si bilan bog’laning'",
       },
       {
+        href: 'https://www.bbc.com/ws/languages',
+        text: 'BBC News бошқа тилларда',
+      },
+      {
         id: 'COOKIE_SETTINGS',
         href: '#',
         text: 'Do not share or sell my info',
@@ -320,27 +338,27 @@ const defaultCyrillicConfig = {
     },
     {
       title: 'Ўзбекистон',
-      url: '/uzbek/topics/c8y949r98pgt',
+      url: '/uzbek/topics/c8y949r98pgt/cyr',
     },
     {
       title: 'Минтақа',
-      url: '/uzbek/topics/cwr9j9dz4gpt',
+      url: '/uzbek/topics/cwr9j9dz4gpt/cyr',
     },
     {
       title: 'Дунё',
-      url: '/uzbek/topics/cl8l9mved19t',
+      url: '/uzbek/topics/cl8l9mved19t/cyr',
     },
     {
       title: 'Спорт',
-      url: '/uzbek/topics/cxnykykk1zkt',
+      url: '/uzbek/topics/cxnykykk1zkt/cyr',
     },
     {
       title: 'Илм-Фан',
-      url: '/uzbek/topics/cg7262681krt',
+      url: '/uzbek/topics/cg7262681krt/cyr',
     },
     {
       title: 'Технология',
-      url: '/uzbek/topics/cjgn7n7v3yjt',
+      url: '/uzbek/topics/cjgn7n7v3yjt/cyr',
     },
     {
       title: 'BBC News O‘zbek TV dasturi',
@@ -350,31 +368,349 @@ const defaultCyrillicConfig = {
 };
 
 export const service: UzbekConfig = {
-  default: {
-    ...baseServiceConfig,
-    ...defaultCyrillicConfig,
-    script: cyrillic,
-  },
+  default: defaultCyrillicConfig,
   cyr: {
-    ...baseServiceConfig,
     ...defaultCyrillicConfig,
-    script: cyrillic,
-    // scriptLink needs translation
-    // scriptLink: {
-    //   text: '',
-    //   variant: 'lat',
-    // },
+    scriptLink: {
+      text: 'O‘zb',
+      variant: 'lat',
+    },
   },
-  // TODO: Add Lat Translations and remove ...defaultCyrillicConfig
   lat: {
     ...baseServiceConfig,
-    ...defaultCyrillicConfig,
     script: latinWithDiacritics,
-    // scriptLink needs translation
-    // scriptLink: {
-    //   text: '',
-    //   variant: 'cyr',
-    // },
+    articleTimestampPrefix: 'Yangilandi',
+    articleTimestampSuffix: '',
+    brandName: "BBC News O'zbek",
+    datetimeLocale: `uz-latn`,
+    externalLinkText: ', tashqi',
+    homePageTitle: 'Bosh sahifa',
+    lang: 'uz-latn',
+    locale: 'uz-UZ',
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'uz',
+    noBylinesPolicy:
+      'https://www.bbc.com/uzbek/institutional-50220995#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/uzbek/institutional-50220995',
+    serviceLocalizedName: "O'zbek",
+    serviceName: 'Uzbek',
+    defaultImageAltText: "BBC News O'zbek",
+    defaultCaptionOffscreenText: 'Tagso‘z, ',
+    audioCaptionOffscreenText: 'Audio tagso‘zi, ',
+    videoCaptionOffscreenText: 'Video tagso‘zi, ',
+    imageCaptionOffscreenText: 'Surat tagso‘zi, ',
+    imageCopyrightOffscreenText: 'Surat manbasi, ',
+    translations: {
+      pagination: {
+        previousPage: 'Oldingisi',
+        nextPage: 'Keyingisi',
+        pageXOfY: 'sahifa {x} ...ning {y}',
+        page: 'sahifa',
+      },
+      ads: {
+        advertisementLabel: 'Reklama',
+      },
+      seeAll: 'Hammasini ko‘ring',
+      home: 'Bosh sahifa',
+      currentPage: 'Joriy sahifa',
+      skipLinkText: 'Sahifaga o‘tish',
+      relatedContent: 'Mavzuga aloqador',
+      relatedTopics: 'Aloqador mavzular',
+      navMenuText: 'Bo‘limlar',
+      mediaAssetPage: {
+        mediaPlayer: 'Media pleyer',
+        audioPlayer: 'Audio pleyer',
+        videoPlayer: 'Video pleyer',
+      },
+      liveExperiencePage: {
+        liveLabel: 'Jonli',
+        liveCoverage: 'Jonli yoritish',
+        breaking: 'Shoshilinch',
+        postedAt: '...da chop etilgan',
+        summary: 'Qisqacha',
+        shareButtonText: 'Baham ko‘rinг',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
+      gist: 'Xulosa',
+      error: {
+        404: {
+          statusCode: '404',
+          title: 'Sahifa topilmadi',
+          message:
+            'Uzr, sizni qidirayotgan sahifangizga olib borolmayapmiz. Marhamat qilib mana bu yo‘llarini ko‘ring:',
+          solutions: [
+            'url manzilini yana bir bor tekshirib ko‘ring',
+            'Brauzeringizdagi "yangilash" tugmasini bosing',
+            'Ushbu sahifani Bi-bi-sining qidiruv panelidan izlab ko‘ring',
+          ],
+          callToActionFirst: 'Bunga muqobil ',
+          callToActionLinkText: "BBC News O'zbek",
+          callToActionLast: 'bosh sahifasiga kiring',
+          callToActionLinkUrl: 'https://www.bbc.com/uzbek',
+        },
+        500: {
+          statusCode: '500',
+          title: 'Ichki serverdagi xatolik',
+          message:
+            'Uzr, hozirgi paytda sizni qidirayotgan sahifangizga olib borolmayapmiz. Marhamat qilib mana bu yo‘llarini ko‘ring:',
+          solutions: [
+            'Brauzeringizdagi "yangilash" tugmasini bosing',
+            'Yana biroz fursatdan keyin harakat qilib ko‘ring',
+          ],
+          callToActionFirst: 'Bunga muqobil ',
+          callToActionLinkText: "BBC News O'zbek",
+          callToActionLast: 'bosh sahifasiga kiring',
+          callToActionLinkUrl: 'https://www.bbc.com/uzbek',
+        },
+      },
+      consentBanner: {
+        privacy: {
+          title:
+            'Biz shaxsiy hayot maxfiyligi va Kuki(Cookies)ga oid siyosatimizni yangiladik',
+          description: {
+            uk: {
+              first:
+                'Biz shaxsiy hayot maxfiyligi va Kuki(Cookie)ga oid siyosatimizga ayrim muhim o‘zgarishlarni kiritdik. Va bu narsa siz va sizning ma’lumotingiz uchun nimani anglatishi haqida sizni boxabar etish istagidamiz.',
+              linkText: null,
+              last: null,
+              linkUrl: null,
+            },
+            international: {
+              first:
+                'Biz shaxsiy hayot maxfiyligi va Kuki(Cookie)ga oid siyosatimizga ayrim muhim o‘zgarishlarni kiritdik. Va bu narsa siz va sizning ma’lumotingiz uchun nimani anglatishi haqida sizni boxabar etish istagidamiz.',
+              linkText: null,
+              last: null,
+              linkUrl: null,
+            },
+          },
+          accept: 'Ma’qul',
+          reject: 'Nimalar o‘zgardi?',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/privacy-policy/',
+        },
+        cookie: {
+          amp: {
+            accept: 'Data to‘plash uchun ruxsat bering va davom eting',
+            reject: 'Data to‘plashni rad eting va davom eting',
+            initial: {
+              title: 'AMP uchun data yig‘ishga ruxsat berasizmi?',
+              description: {
+                first: 'Biz va bizning hamkorlarimiz ',
+                linkText: 'kukisga',
+                last: ', singari texnologiyadan foydalanamiz va ularni sizga yanada yaxshiroq onlayn mahsulot taqdim etish, kontentni va hamda sizga ko‘rsatilayotgan reklamani aynan sizga moslash maqsadida to‘playmiz. Agar rozi bo‘lsangiz, marhamat qilib buni bizga ma’lum qiling!',
+                linkUrl:
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'Tanlovlarimni boshqaring',
+            },
+            manage: {
+              title: 'AMP sahifalarida rozilik tanlovlarini o‘zgartirish',
+              description: {
+                para1:
+                  'Bu tanlovlar faqat AMP sahifalari uchun. AMP bo‘lmagan boshqa BBC sahifilariga kirsangiz, siz bu tanlovlarni qayta o‘rnatishingiz kerak bo‘ladi.',
+                para2:
+                  'Engil ochiladigan bu sahifa Google AMP texnologiyasi bilan yaratilgan',
+                heading2: 'Shart bo‘lgan data to‘plash',
+                para3:
+                  'Veb sahifamiz ishlashi uchun biz siz haqingizda cheklangan ma’lumotlarni sizning roziligingiz saqlab qolamiz.',
+                para4: {
+                  text: 'Sizning qurilmangizda veb sahifamiz yaxshi ishlashi uchun qanday muhim ma’lumotlar saqlanishi haqida ko‘proq ma’lumot',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
+                },
+                para5:
+                  'Biz sizning roziligingiz va tanlovingiz ma’lumotlarini ichki xotirada saqlaymiz',
+                heading3: 'Qo‘shimcha, majburiy bo‘lmagan data to‘plash',
+                para6:
+                  'Siz AMP sahifalarda data to‘plashga rozi va ayni damda Buyuk Britaniya tashqarisida bo‘lsangiz biz reklamalarni sizga qanchalar aloqasi bor yoki yo‘qligiga qarab tanlab, taqdim qilamiz.',
+                para7: {
+                  text: 'BBC va reklama hamkorlarimiz reklamalarni shaxsiylashtirishga doir ko‘proq ma’lumot',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'Sizga moslangan reklamalarni qabul qilishni istamasangiz, marhamat qilib pastdagi "Data to‘plashni rad qiling va davom eting" degan tanlovni bosing. Unutmang, siz baribir reklamani ko‘rasiz, ammo u siz uchun moslashtirilmagan bo‘ladi.',
+                para9:
+                  'Siz bu shartlarni "Reklama tanlovlari/mening ma’lumotlarimni sotmang" degan bo‘limda istalgan vaqtda o‘zgartirishingiz mumkin.',
+              },
+            },
+          },
+          canonical: {
+            title: 'Kukis(Cookies)ga rozi ekaningizni bildiring',
+            description: {
+              uk: {
+                first: 'Biz ',
+                linkText: 'kukidan',
+                last: ' sizga yanada yaxshiroq onlayn imkoniyat berish maqsadida foydalanamiz. Marhamat qilib ushbu barcha kukilarga roziligingizni bildiring.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: 'Biz ',
+                linkText: 'kukidan',
+                last: ' sizga yanada yaxshiroq onlayn imkoniyat berish maqsadida foydalanamiz. Marhamat qilib ushbu barcha kukilarga roziligingizni bildiring.',
+                linkUrl:
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'Ҳа, мен розиман',
+            reject: 'Yo‘q, meni o‘zgartirish sahifasiga etaklang',
+            rejectUrl:
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
+        },
+      },
+      media: {
+        noJs: 'Multimedia o‘ynash bu qurilmada dastaklanmaydi',
+        contentExpired: 'Bu kontentni ortiq tinglab/tomosha qilib bo‘lmaydi.',
+        contentNotYetAvailable:
+          'Bu kontent hali tinglash/tomosha qilishga tayyor emas.',
+        audio: 'Audio',
+        photogallery: 'Foto galereya',
+        video: 'Video',
+        bbc_uzbek_radio: {
+          title: 'BBC Uzbek Radio Dasturi',
+          subtitle: 'O’zbekiston, mintaqa va dunyo yangiliklari O’zbek tilida',
+        },
+        bbc_uzbek_tv: {
+          title: 'Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur',
+          subtitle:
+            'Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi',
+        },
+        listen: 'Tinglang',
+        watch: 'Ko‘ring',
+        listenLive: 'Jonli efirda tinglang',
+        liveLabel: 'JONLI EFIR',
+        nextLabel: 'NEXT',
+        previousRadioShow: 'Avvalgi radio dastur',
+        nextRadioShow: 'Keyingi radio dastur',
+        duration: 'Davomiyligi',
+        recentEpisodes: 'Oldingi dasturlar',
+      },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Video tagso‘zi, ',
+          text: 'Ogohlantirish:Uchinchi manba materialida reklama bo‘lishi mumkin',
+          articleText:
+            'Ogohlantirish: Bi-bi-si tashqi sahifalardagi kontent uchun mas’ul emas',
+          articleAdditionalText:
+            '%provider_name% bu kontentda reklama bo‘lishi mumkin',
+        },
+        fallback: {
+          text: 'Bu materialga kirish imkonsiz',
+          linkText: 'Ko‘proq ko‘ring %provider_name%',
+          linkTextSuffixVisuallyHidden: ', tashqi',
+          warningText: 'Bi-bi-si tashqi saytlar mazmuni uchun mas’ul emas.',
+        },
+        skipLink: {
+          text: 'O‘tkazib yuboring %provider_name% post ',
+          endTextVisuallyHidden: 'Oxiri %provider_name% post',
+        },
+        consentBanner: {
+          heading: `[social_media_site] контентига рухсат бериш`,
+          body: `Ayni maqolada [social_media_site] tomonidan taqdim qilingan kontent mavjud. Biz bu kontent yuklanmasidan avval sizning roziligingizni so‘raymiz, chunki ular kuki va boshqa texnologiyalardan foydalangan bo‘lishi mumkin. Siz   [social_media_site] [link] havolasida kukilarga doir  [/link] va shaxsiy ma’lumotlarga  oid qoidalar haqida avval o‘qib,  keyin qabul qilishga rozi bo‘lishingiz  mumkin. Ko‘rish uchun “qabul qilish va davom etish”ni tanlang.`,
+          button: 'Qabul qiling va davom eting',
+        },
+      },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
+      topStoriesTitle: 'Bosh maqola',
+      featuresAnalysisTitle: 'Muharrir tanlovi',
+      latestMediaTitle: 'So‘nggi',
+    },
+    mostRead: {
+      header: 'Ommabop maqolalar',
+      lastUpdated: 'So‘nggi yangilanish:',
+      numberOfItems: 5,
+      hasMostRead: true,
+    },
+    recommendations: {
+      header: 'Eng ko‘p o‘qilgan',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
+    },
+    footer: {
+      trustProjectLink: {
+        href: 'https://www.bbc.com/uzbek/institutional-50220995',
+        text: 'Нега сиз Би-би-сига ишонишингиз мумкин?',
+      },
+      externalLink: {
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        text: 'Ташқи линкларга бизнинг ёндашувимиз қандайлиги ҳақида маълумотга эга бўлинг',
+      },
+      links: [
+        {
+          href: 'https://www.bbc.com/uzbek/institutional-36824297',
+          text: 'Фойдаланиш шартлари',
+        },
+        {
+          href: 'https://www.bbc.com/uzbek/institutional-36824300',
+          text: 'Шахсий ҳаёт махфийлиги сиёсати',
+        },
+        {
+          href: 'https://www.bbc.com/usingthebbc/cookies/',
+          text: 'Куки(Cookies)',
+        },
+        {
+          href: 'https://www.bbc.co.uk/uzbek/send/u50853929',
+          text: "'Bi-bi-si bilan bog’laning'",
+        },
+        {
+          href: 'https://www.bbc.com/ws/languages',
+          text: 'BBC News бошқа тилларда',
+        },
+        {
+          id: 'COOKIE_SETTINGS',
+          href: '#',
+          text: 'Do not share or sell my info',
+          lang: 'en-GB',
+        },
+      ],
+      copyrightText: 'BBC. Bi-bi-si tashqi saytlar mazmuni uchun mas’ul emas.',
+    },
+    navigation: [
+      {
+        title: 'Bosh sahifa',
+        url: '/uzbek',
+      },
+      {
+        title: 'O‘zbekiston',
+        url: '/uzbek/topics/c8y949r98pgt/lat',
+      },
+      {
+        title: 'Mintaqa',
+        url: '/uzbek/topics/cwr9j9dz4gpt/lat',
+      },
+      {
+        title: 'Dunyo',
+        url: '/uzbek/topics/cl8l9mved19t/lat',
+      },
+      {
+        title: 'Sport',
+        url: '/uzbek/topics/cxnykykk1zkt/lat',
+      },
+      {
+        title: 'Ilm-Fan',
+        url: '/uzbek/topics/cg7262681krt/lat',
+      },
+      {
+        title: 'Texnologiya',
+        url: '/uzbek/topics/cjgn7n7v3yjt/lat',
+      },
+      {
+        title: 'BBC News O‘zbek TV dasturi',
+        url: '/uzbek/bbc_uzbek_tv/tv_programmes/w13xttqv?limit=4',
+      },
+    ],
+    scriptLink: {
+      text: 'Ўзб',
+      variant: 'cyr',
+    },
   },
 };
 

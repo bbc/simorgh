@@ -3,6 +3,7 @@
 import { jsx } from '@emotion/react';
 import React, { useContext, PropsWithChildren } from 'react';
 import pathOr from 'ramda/src/pathOr';
+import { OptimoBylineBlock } from '#app/models/types/optimo';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import BylineCss from './index.styles';
@@ -11,11 +12,10 @@ import Text from '../Text';
 import Image from '../Image';
 import bylineExtractor from './utilities/bylineExtractor';
 
-type Props = {
-  blocks: object[];
-};
-
-const Byline = ({ blocks, children = null }: PropsWithChildren<Props>) => {
+const Byline = ({
+  blocks,
+  children = null,
+}: PropsWithChildren<OptimoBylineBlock['model']>) => {
   const { translations, dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
 
@@ -82,7 +82,7 @@ const Byline = ({ blocks, children = null }: PropsWithChildren<Props>) => {
                 className="focusIndicatorReducedWidth"
               >
                 <Text
-                  className="byline__link-text"
+                  className="byline-link"
                   size="bodyCopy"
                   fontVariant="sansBold"
                   css={BylineCss.author}
@@ -90,9 +90,15 @@ const Byline = ({ blocks, children = null }: PropsWithChildren<Props>) => {
                   {authorName}
                 </Text>
                 {isRtl ? (
-                  <LeftChevron css={BylineCss.authorChevron} />
+                  <LeftChevron
+                    className="byline-link"
+                    css={BylineCss.authorChevron}
+                  />
                 ) : (
-                  <RightChevron css={BylineCss.authorChevron} />
+                  <RightChevron
+                    className="byline-link"
+                    css={BylineCss.authorChevron}
+                  />
                 )}
               </a>
             </React.Fragment>

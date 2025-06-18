@@ -1,539 +1,255 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p095lyj1",
-    "locators": { "pid": "p095lyj1", "brandPid": "p02pc9wf" },
-    "type": "WSRADIO",
-    "createdBy": "bbc_persian_radio",
-    "language": "fa",
-    "lastUpdated": 1613053935080,
-    "firstPublished": 1612019358000,
-    "lastPublished": 1612019358000,
-    "timestamp": 1612019358000,
-    "options": {},
-    "analyticsLabels": {
-      "pageTitle": "Pargar - BBC News فارسی",
-      "pageIdentifier": "persian.bbc_persian_radio.p095lyj1.page",
-      "producerId": "69",
-      "contentType": "player-episode",
-      "producer": "PERSIAN"
-    },
-    "tags": {},
-    "version": "v1.3.11",
-    "blockTypes": ["media"],
-    "title": "Pargar",
-    "releaseDateTimeStamp": 1611964800000,
-    "atiAnalytics": {}
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "p095lyj1",
-        "subType": "episode",
-        "format": "Audio",
-        "title": "",
-        "synopses": {
-          "short": "می‌شد در سینمای ایران صدای پای انقلاب را شنید؟",
-          "long": "می‌شد در سینمای ایران صدای پای انقلاب را شنید؟ می‌توان گفت سینمای ایران در سمت و سوی آنچه که انقلاب اسلامی خوانده شد موثر بود؟ . \nمهمان‌های برنامه: حمید نفیسی، علی امینی نجفی، گلکو پرهیزکار و تارا آغداشلو"
-        },
-        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
-        "embedding": true,
-        "advertising": false,
-        "versions": [
-          {
-            "versionId": "p095ltkh",
-            "types": ["Podcast"],
-            "duration": 3149,
-            "durationISO8601": "PT52M29S",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": true,
-              "world": false
-            },
-            "availableFrom": 1612018800000,
-            "availabilityStatus": "available"
-          }
-        ],
-        "availability": "available",
-        "smpKind": "radioProgramme",
-        "episodeTitle": "سینمای پیش از انقلاب ایران",
-        "type": "media"
+  "data": {
+    "isPodcast": true,
+    "metadata": {
+      "type": "Podcast",
+      "atiAnalytics": {
+        "pageIdentifier": "persian.bbc_persian_radio.podcasts.p095lyj1.page",
+        "contentType": "player-episode",
+        "pageTitle": "پرگار - BBC News فارسی",
+        "contentId": "urn:bbc:pips:p095lyj1"
       }
-    ]
-  },
-  "promo": {
-    "headlines": { "headline": "Pargar" },
-    "locators": { "pid": "p095lyj1", "brandPid": "p02pc9wf" },
-    "media": {
-      "id": "p095lyj1",
-      "subType": "episode",
-      "format": "Audio",
-      "title": "",
-      "synopses": {
-        "short": "می‌شد در سینمای ایران صدای پای انقلاب را شنید؟",
-        "long": "می‌شد در سینمای ایران صدای پای انقلاب را شنید؟ می‌توان گفت سینمای ایران در سمت و سوی آنچه که انقلاب اسلامی خوانده شد موثر بود؟ . \nمهمان‌های برنامه: حمید نفیسی، علی امینی نجفی، گلکو پرهیزکار و تارا آغداشلو"
-      },
-      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
-      "embedding": true,
-      "advertising": false,
-      "versions": [
-        {
-          "versionId": "p095ltkh",
-          "types": ["Podcast"],
-          "duration": 3149,
-          "durationISO8601": "PT52M29S",
-          "warnings": {},
-          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
-          "availableFrom": 1612018800000,
-          "availabilityStatus": "available"
-        }
-      ],
-      "availability": "available",
-      "smpKind": "radioProgramme",
-      "episodeTitle": "سینمای پیش از انقلاب ایران",
-      "type": "media"
     },
-    "indexImage": {
-      "id": "",
-      "subType": "index",
-      "href": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
-      "path": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
-      "height": 0,
-      "width": 0,
-      "altText": null,
-      "copyrightHolder": null,
-      "type": "image"
-    },
-    "releaseDateTimestamp": 1611964800000,
-    "brand": { "pid": "p02pc9wf", "title": "Pargar" },
+    "language": "fa",
+    "brandTitle": "پرگار",
+    "episodeTitle": "سینمای پیش از انقلاب ایران",
+    "headline": "پرگار",
+    "shortSynopsis": "می‌شد در سینمای ایران صدای پای انقلاب را شنید؟",
     "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p095lyj1",
-    "type": "ws_radio"
-  },
-  "relatedContent": {
-    "site": {
-      "subType": "site",
-      "name": "Persian",
-      "uri": "/persian",
-      "type": "simple"
-    },
-    "groups": [
+    "brandId": "p02pc9wf",
+    "summary": "می‌شد در سینمای ایران صدای پای انقلاب را شنید؟",
+    "contentType": "player-episode",
+    "episodeId": "p095lyj1",
+    "masterBrand": "bbc_persian_radio",
+    "releaseDateTimeStamp": 1611964800000,
+    "pageTitle": "پرگار - BBC News فارسی",
+    "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+    "imageAltText": "",
+    "promoBrandTitle": "پرگار",
+    "durationISO8601": "PT52M29S",
+    "thumbnailImageUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p02swnpg.jpg",
+    "episodeAvailability": "available",
+    "radioScheduleData": [],
+    "recentEpisodes": [
       {
-        "type": "other-episode",
-        "promos": [
-          {
-            "headlines": { "headline": "Pargar" },
-            "locators": { "pid": "p096hxcd", "brandPid": "p02pc9wf" },
-            "media": {
-              "id": "p096hxcd",
-              "subType": "episode",
-              "format": "Audio",
-              "title": "",
-              "synopses": {
-                "short": "آیا تفوق روحانیت در انقلاب ایران ناگزیر بود؟",
-                "long": "آیا تفوق روحانیت در انقلاب ایران ناگزیر بود؟ نیروهای سیاسی دیگر می توانستند مانع روندی شوند که روحانیت سیاسی را در راس انقلاب قرار داد؟ مهمان های برنامه: شهریار آهی، مهدی فتاپور، کیانوش بوستانی و احمد زرین آباد. این برنامه پیش از این یک بار پخش شده است"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "p096hx5s",
-                  "types": ["Podcast"],
-                  "duration": 3227,
-                  "durationISO8601": "PT53M47S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1612899840000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "radioProgramme",
-              "episodeTitle": "انقلاب و ظهور روحانیون",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1612828800000,
-            "brand": { "pid": "p02pc9wf", "title": "Pargar" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p096hxcd",
-            "type": "ws_radio"
+        "id": "p0jvpg5b",
+        "brandTitle": "پرگار",
+        "episodeTitle": "دولت اسرائیل و اپوزیسیون ایران",
+        "timestamp": "2024-10-05T00:00:00.000Z",
+        "duration": "PT55M51S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p02swnpg.jpg",
+        "altText": "پرگار"
+      },
+      {
+        "id": "p0jt8k4s",
+        "brandTitle": "پرگار",
+        "episodeTitle": "محافظه‌کاری یعنی چه؟",
+        "timestamp": "2024-09-28T00:00:00.000Z",
+        "duration": "PT57M14S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p02swnpg.jpg",
+        "altText": "پرگار"
+      },
+      {
+        "id": "p0jrz542",
+        "brandTitle": "پرگار",
+        "episodeTitle": "رفتار با حیوانات",
+        "timestamp": "2024-09-21T00:00:00.000Z",
+        "duration": "PT54M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p02swnpg.jpg",
+        "altText": "پرگار"
+      },
+      {
+        "id": "p0jqk3lg",
+        "brandTitle": "پرگار",
+        "episodeTitle": "ایران، اسرائیل، کارت هسته‌ای",
+        "timestamp": "2024-09-14T00:00:00.000Z",
+        "duration": "PT57M7S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p02swnpg.jpg",
+        "altText": "پرگار"
+      },
+      {
+        "id": "p0jp4h0d",
+        "brandTitle": "پرگار",
+        "episodeTitle": "هنر و ادبیات در عصر هوش مصنوعی",
+        "timestamp": "2024-09-07T00:00:00.000Z",
+        "duration": "PT57M52S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p02swnpg.jpg",
+        "altText": "پرگار"
+      },
+      {
+        "id": "p0jmrnsb",
+        "brandTitle": "پرگار",
+        "episodeTitle": "سیاست‌گذاری نفت و گاز، شرق یا غرب؟",
+        "timestamp": "2024-08-31T00:00:00.000Z",
+        "duration": "PT57M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p02swnpg.jpg",
+        "altText": "پرگار"
+      },
+      {
+        "id": "p0jldj5f",
+        "brandTitle": "پرگار",
+        "episodeTitle": "مشروعیت یعنی چه؟",
+        "timestamp": "2024-08-24T00:00:00.000Z",
+        "duration": "PT58M45S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p02swnpg.jpg",
+        "altText": "پرگار"
+      },
+      {
+        "id": "p0jk0lgt",
+        "brandTitle": "پرگار",
+        "episodeTitle": "روانشناسی، در بحران دائمی؟",
+        "timestamp": "2024-08-17T00:00:00.000Z",
+        "duration": "PT59M52S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p02swnpg.jpg",
+        "altText": "پرگار"
+      },
+      {
+        "id": "p0jhp6ld",
+        "brandTitle": "پرگار",
+        "episodeTitle": "سایه‌ی جنگ، تاثیر آن بر اصلاحات",
+        "timestamp": "2024-08-10T00:00:00.000Z",
+        "duration": "PT58M49S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p02swnpg.jpg",
+        "altText": "پرگار"
+      },
+      {
+        "id": "p0jg96ps",
+        "brandTitle": "پرگار",
+        "episodeTitle": "عمربن خطاب، قسمت دوم",
+        "timestamp": "2024-08-03T00:00:00.000Z",
+        "duration": "PT52M17S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p02swnpg.jpg",
+        "altText": "پرگار"
+      },
+      {
+        "id": "p0jdy02r",
+        "brandTitle": "پرگار",
+        "episodeTitle": "عمربن خطاب، قسمت اول",
+        "timestamp": "2024-07-27T00:00:00.000Z",
+        "duration": "PT53M31S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p02swnpg.jpg",
+        "altText": "پرگار"
+      },
+      {
+        "id": "p0jcm18c",
+        "brandTitle": "پرگار",
+        "episodeTitle": "جان لاک، از پدران لیبرالیسم",
+        "timestamp": "2024-07-20T00:00:00.000Z",
+        "duration": "PT56M53S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p02swnpg.jpg",
+        "altText": "پرگار"
+      },
+      {
+        "id": "p0jb6sxs",
+        "brandTitle": "پرگار",
+        "episodeTitle": "ایران به آرمان فلسطین کمک کرده؟",
+        "timestamp": "2024-07-13T00:00:00.000Z",
+        "duration": "PT57M32S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p02swnpg.jpg",
+        "altText": "پرگار"
+      },
+      {
+        "id": "p0j8sk5l",
+        "brandTitle": "پرگار",
+        "episodeTitle": "آنارشیسم",
+        "timestamp": "2024-07-06T00:00:00.000Z",
+        "duration": "PT54M33S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p02swnpg.jpg",
+        "altText": "پرگار"
+      },
+      {
+        "id": "p0j5w684",
+        "brandTitle": "پرگار",
+        "episodeTitle": "رادیکالیسم، بی‌تفاوتی، مشارکت؟",
+        "timestamp": "2024-06-22T00:00:00.000Z",
+        "duration": "PT56M42S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p02swnpg.jpg",
+        "altText": "پرگار"
+      },
+      {
+        "id": "p0j4g58r",
+        "brandTitle": "پرگار",
+        "episodeTitle": "اخلاق انتخاباتی در انتخابات غیر اخلاقی",
+        "timestamp": "2024-06-15T00:00:00.000Z",
+        "duration": "PT58M8S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p02swnpg.jpg",
+        "altText": "پرگار"
+      },
+      {
+        "id": "p0j30sk0",
+        "brandTitle": "پرگار",
+        "episodeTitle": "دهه‌ی چهل در ایران",
+        "timestamp": "2024-06-08T00:00:00.000Z",
+        "duration": "PT56M47S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p02swnpg.jpg",
+        "altText": "پرگار"
+      },
+      {
+        "id": "p0j1n6dc",
+        "brandTitle": "پرگار",
+        "episodeTitle": "اگزیستانسیالیسم، قسمت دوم",
+        "timestamp": "2024-06-01T00:00:00.000Z",
+        "duration": "PT50M29S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p02swnpg.jpg",
+        "altText": "پرگار"
+      },
+      {
+        "id": "p0j09d2y",
+        "brandTitle": "پرگار",
+        "episodeTitle": "اگزیستانسیالیسم، قسمت اول",
+        "timestamp": "2024-05-25T00:00:00.000Z",
+        "duration": "PT50M35S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p02swnpg.jpg",
+        "altText": "پرگار"
+      },
+      {
+        "id": "p0hyvsw1",
+        "brandTitle": "پرگار",
+        "episodeTitle": "نقد باورهای دینی، چگونه؟",
+        "timestamp": "2024-05-18T00:00:00.000Z",
+        "duration": "PT59M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p02swnpg.jpg",
+        "altText": "پرگار"
+      }
+    ],
+    "externalLinkVersionId": "p095ltkh",
+    "mediaBlocks": [
+      {
+        "type": "audio",
+        "model": {
+          "id": "p095lyj1",
+          "subType": "episode",
+          "format": "Audio",
+          "title": "",
+          "synopses": {
+            "short": "می‌شد در سینمای ایران صدای پای انقلاب را شنید؟",
+            "long": "می‌شد در سینمای ایران صدای پای انقلاب را شنید؟ می‌توان گفت سینمای ایران در سمت و سوی آنچه که انقلاب اسلامی خوانده شد موثر بود؟ . \nمهمان‌های برنامه: حمید نفیسی، علی امینی نجفی، گلکو پرهیزکار و تارا آغداشلو"
           },
-          {
-            "headlines": { "headline": "Pargar" },
-            "locators": { "pid": "p0967jk9", "brandPid": "p02pc9wf" },
-            "media": {
-              "id": "p0967jk9",
-              "subType": "episode",
-              "format": "Audio",
-              "title": "",
-              "synopses": { "short": "جنبش فداییان بعد از پنجاه سال" },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "p0967jgd",
-                  "types": ["Podcast"],
-                  "duration": 3138,
-                  "durationISO8601": "PT52M18S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1612618200000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "radioProgramme",
-              "episodeTitle": "جنبش فداییان بعد از پنجاه سال",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1612569600000,
-            "brand": { "pid": "p02pc9wf", "title": "Pargar" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p0967jk9",
-            "type": "ws_radio"
-          },
-          {
-            "headlines": { "headline": "Pargar" },
-            "locators": { "pid": "p094flc5", "brandPid": "p02pc9wf" },
-            "media": {
-              "id": "p094flc5",
-              "subType": "episode",
-              "format": "Audio",
-              "title": "",
-              "synopses": {
-                "short": "سیاست خارجی اردوغان، ترک‌گرا، عثمانی‌گرا، اسلام‌گرا؟",
-                "long": "در این چند دهه اسلام از آموزه‌های اخلاقی تهی شده، یک نفر در آن بالا در مورد همه چیز تصمیم می‌گیرد و سیاست خارجی تهاجمی، ما را از اهدافمان دور کرده‌ست. گمان می‌کنید این نقد در مورد کی و در توصیف چه کشوری‌ بیان شده؟"
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+          "embedding": true,
+          "advertising": false,
+          "versions": [
+            {
+              "versionId": "p095ltkh",
+              "types": ["Podcast"],
+              "duration": 3149,
+              "durationISO8601": "PT52M29S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true,
+                "world": false
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "p094fj8n",
-                  "types": ["Podcast"],
-                  "duration": 3310,
-                  "durationISO8601": "PT55M10S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1611402660000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "radioProgramme",
-              "episodeTitle": "سیاست خارجی اردوغان، ترک‌گرا، عثمانی‌گرا، اسلام‌گرا؟",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1611360000000,
-            "brand": { "pid": "p02pc9wf", "title": "Pargar" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p094flc5",
-            "type": "ws_radio"
-          },
-          {
-            "headlines": { "headline": "Pargar" },
-            "locators": { "pid": "p0946rbd", "brandPid": "p02pc9wf" },
-            "media": {
-              "id": "p0946rbd",
-              "subType": "episode",
-              "format": "Audio",
-              "title": "",
-              "synopses": {
-                "short": "توییتر در سیاست چه نقشی ایفا می‌کند؟",
-                "medium": "تتفاوت؟",
-                "long": "توییتر در سیاست چه نقشی ایفا می‌کند؟ توفان توییتری، توهم قدرت است، توفان در فنجان چای است یا چیزی بیش از آن است؟ توییتر فضایی اینترنتی مملو از صداهای گوشخراش است یا محلی برای بیان نظرات متفاوت؟"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "p0946qz7",
-                  "types": ["Podcast"],
-                  "duration": 3403,
-                  "durationISO8601": "PT56M43S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1610796780000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "radioProgramme",
-              "episodeTitle": "توییتر، سیاست و تصور قدرت",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1610755200000,
-            "brand": { "pid": "p02pc9wf", "title": "Pargar" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p0946rbd",
-            "type": "ws_radio"
-          },
-          {
-            "headlines": { "headline": "Pargar" },
-            "locators": { "pid": "p093k9q2", "brandPid": "p02pc9wf" },
-            "media": {
-              "id": "p093k9q2",
-              "subType": "episode",
-              "format": "Audio",
-              "title": "",
-              "synopses": {
-                "short": "دونالد ترامپ می‌گوید نتیجه‌ی انتخابات را از او دزدیدند.",
-                "medium": "دونالد ترامپ می‌گوید نتیجه‌ی انتخابات را از او دزدیدند. آیا این ادعا توشه‌ای برای آینده‌ی سیاسی نیست؟ ترامپ و موجی که او را به قدرت رساند چه آینده‌ای دارند؟"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "p093k8n7",
-                  "types": ["Podcast"],
-                  "duration": 3349,
-                  "durationISO8601": "PT55M49S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1610184000000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "radioProgramme",
-              "episodeTitle": "آینده‌ی ترامپ در سیاست آمریکا",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1610150400000,
-            "brand": { "pid": "p02pc9wf", "title": "Pargar" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p093k9q2",
-            "type": "ws_radio"
-          },
-          {
-            "headlines": { "headline": "Pargar" },
-            "locators": { "pid": "p092wt9n", "brandPid": "p02pc9wf" },
-            "media": {
-              "id": "p092wt9n",
-              "subType": "episode",
-              "format": "Audio",
-              "title": "",
-              "synopses": {
-                "short": "هویت چیست؟ زیست بدون آن ممکن است؟",
-                "medium": "برای آدمیانی که در جهان پرسرعت کنونی مرتب این سو و آن سو می‌شوند هویت لفظی دهن پرکن و نافهمیدنی‌ ست. هویت چیست؟ زیست بدون آن ممکن است؟"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "p092wt8m",
-                  "types": ["Podcast"],
-                  "duration": 3560,
-                  "durationISO8601": "PT59M20S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1609580340000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "radioProgramme",
-              "episodeTitle": "هویت چیست؟ آیا هویت زوال می‌یابد؟",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1609545600000,
-            "brand": { "pid": "p02pc9wf", "title": "Pargar" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p092wt9n",
-            "type": "ws_radio"
-          },
-          {
-            "headlines": { "headline": "Pargar" },
-            "locators": { "pid": "p09274qw", "brandPid": "p02pc9wf" },
-            "media": {
-              "id": "p09274qw",
-              "subType": "episode",
-              "format": "Audio",
-              "title": "",
-              "synopses": {
-                "short": "ترور فخری‌زاده و اقدامات نظامی امنیتی مشابه علیه جمهوری اسلامی، به این نظام ضربه می‌زند؟",
-                "long": "ترور فخری‌زاده و اقدامات نظامی امنیتی مشابه علیه جمهوری اسلامی، به این نظام ضربه می‌زند یا آن را تقویت می‌کند؟ چرا ماکیاولی که نظریه‌پرداز رعب در ادبیات سیاسی ست در این باره حرف زیاد دارد؟"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "p092747y",
-                  "types": ["Podcast"],
-                  "duration": 3478,
-                  "durationISO8601": "PT57M58S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1608987600000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "radioProgramme",
-              "episodeTitle": "ترور فخری‌زاده، تضعیف یا تقویت جمهوری اسلامی؟",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1608940800000,
-            "brand": { "pid": "p02pc9wf", "title": "Pargar" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p09274qw",
-            "type": "ws_radio"
-          },
-          {
-            "headlines": { "headline": "Pargar" },
-            "locators": { "pid": "p091fgdj", "brandPid": "p02pc9wf" },
-            "media": {
-              "id": "p091fgdj",
-              "subType": "episode",
-              "format": "Audio",
-              "title": "",
-              "synopses": {
-                "short": "سنت چیست؟ سنت به معنی امتناع از نوشدن است؟ ولی این درک از سنت گمراه نمی کند؟"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "p091ffby",
-                  "types": ["Podcast"],
-                  "duration": 3501,
-                  "durationISO8601": "PT58M21S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1608388200000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "radioProgramme",
-              "episodeTitle": "سنت یعنی امتناع از تغییر؟",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1608336000000,
-            "brand": { "pid": "p02pc9wf", "title": "Pargar" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p091fgdj",
-            "type": "ws_radio"
-          }
-        ]
+              "availableFrom": "2021-01-30T15:00:00.000Z",
+              "availabilityStatus": "available",
+              "availableUntil": null
+            }
+          ],
+          "availability": "available",
+          "smpKind": "radioProgramme",
+          "episodeTitle": "سینمای پیش از انقلاب ایران",
+          "type": "media"
+        }
       }
     ]
   }

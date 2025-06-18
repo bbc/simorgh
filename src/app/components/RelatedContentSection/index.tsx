@@ -5,15 +5,15 @@ import { jsx, useTheme } from '@emotion/react';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import pathOr from 'ramda/src/pathOr';
 import pathEq from 'ramda/src/pathEq';
-import path from 'ramda/src/path';
 import tail from 'ramda/src/tail';
 import slice from 'ramda/src/slice';
 import identity from 'ramda/src/identity';
 import last from 'ramda/src/last';
 import filter from 'ramda/src/filter';
 import pipe from 'ramda/src/pipe';
-
+import { OptimizelyContext } from '@optimizely/react-sdk';
 import useViewTracker from '#hooks/useViewTracker';
+import { ViewTracker } from '#app/lib/analyticsUtils/types';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
 import generatePromoId from '../../lib/utilities/generatePromoId';
@@ -42,14 +42,14 @@ type RelatedContentListProps = {
   item: object;
   index: number;
   eventTrackingData: EventTrackingBlock;
-  viewRef: React.Ref<HTMLDivElement>;
+  viewTracker: ViewTracker;
 };
 
 const renderRelatedContentList = ({
   item,
   index,
   eventTrackingData,
-  viewRef,
+  viewTracker,
 }: RelatedContentListProps) => {
   const assetUri = pathOr(
     '',
@@ -85,15 +85,21 @@ const renderRelatedContentList = ({
       <RelatedContentItem
         item={item}
         ariaLabelledBy={ariaLabelledBy}
-        ref={viewRef}
+        viewTracker={viewTracker}
         eventTrackingData={eventTrackingData}
       />
     </PromoItem>
   );
 };
 
-const RelatedContentSection = ({ content }: { content: OptimoBlock[] }) => {
+type Props = {
+  content: OptimoBlock[];
+  sendOptimizelyEvents?: boolean;
+};
+
+const RelatedContentSection = ({ content, sendOptimizelyEvents }: Props) => {
   const { translations, script, service } = useContext(ServiceContext);
+  const { optimizely } = useContext(OptimizelyContext);
 
   const {
     palette: { GREY_2 },
@@ -103,10 +109,12 @@ const RelatedContentSection = ({ content }: { content: OptimoBlock[] }) => {
   const eventTrackingData = {
     block: {
       componentName: 'related-content',
+      ...(sendOptimizelyEvents && {
+        optimizely,
+      }),
     },
   };
-  const eventTrackingDataSend = path<object>(['block'], eventTrackingData);
-  const viewRef = useViewTracker(eventTrackingDataSend);
+  const viewTracker = useViewTracker(eventTrackingData.block);
 
   if (!pathEq('relatedContent', ['type'], blocks)) return null;
 
@@ -184,7 +192,7 @@ const RelatedContentSection = ({ content }: { content: OptimoBlock[] }) => {
           <RelatedContentItem
             item={reducedStoryPromoItems[0]}
             ariaLabelledBy={ariaLabelledBy}
-            ref={viewRef}
+            viewTracker={viewTracker}
             eventTrackingData={eventTrackingData}
           />
         </div>
@@ -195,7 +203,7 @@ const RelatedContentSection = ({ content }: { content: OptimoBlock[] }) => {
               item,
               index,
               eventTrackingData,
-              viewRef,
+              viewTracker,
             }),
           )}
         </PromoList>

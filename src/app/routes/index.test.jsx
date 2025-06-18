@@ -3,40 +3,31 @@ import { renderRoutes, matchRoutes } from 'react-router-config';
 import { MemoryRouter } from 'react-router-dom';
 
 // test helpers
-import fetchMock from 'fetch-mock';
-
 import defaultToggles from '#lib/config/toggles';
 
 // components being tested
 
 // mock data
-import featureIndexPageJson from '#data/afrique/cpsAssets/48465371.json';
-import podcastPageJson from '#data/arabic/podcasts/p02pc9qc.json';
+import gahuzaPodcastPage from '#data/gahuza/bbc_gahuza_radio/p07yh8hb.json';
 import legacyMediaAssetPage from '#data/azeri/legacyAssets/multimedia/2012/09/120919_georgia_prison_video.json';
-import onDemandRadioPageJson from '#data/indonesia/bbc_indonesian_radio/w172xh267fpn19l.json';
-import photoGalleryPageJson from '#data/indonesia/cpsAssets/indonesia-41635759.json';
-import liveRadioPageJson from '#data/korean/bbc_korean_radio/liveradio.json';
+import liveRadioPageJson from '#data/afrique/bbc_afrique_radio/liveradio.json';
 import homePageJson from '#data/kyrgyz/homePage/index.json';
-import storyPageJson from '#data/mundo/cpsAssets/noticias-internacional-51266689.json';
-import storyPageRecommendationsData from '#data/mundo/recommendations/index.json';
 import onDemandTvPageJson from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json';
 import articlePageJson from '#data/persian/articles/c4vlle3q337o.json';
-import storyPageMostReadData from '#data/pidgin/mostRead/index.json';
-import frontPageJson from '#data/serbian/frontpage/lat.json';
 import sportArticlePageJson from '#data/sport/judo/articles/cj80n66ddnko.json';
 import mediaAssetPageJson from '#data/yoruba/cpsAssets/media-23256797.json';
 
-import { ERROR_PAGE, FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import { ERROR_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
+import * as fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
+import gahuzaOnDemandAudio from '#data/gahuza/bbc_gahuza_radio/p02pcb5c.json';
+// eslint-disable-next-line import/order
 import routes from '.';
 import {
   act,
   render,
   screen,
-} from '../components/react-testing-library-with-providers';
-import { suppressPropWarnings } from '../legacy/psammead/psammead-test-helpers/src';
-import * as fetchDataFromBFF from './utils/fetchDataFromBFF';
-
-fetchMock.config.fallbackToNetwork = true; // ensures non mocked requests fallback to an actual network request
+} from '#app/components/react-testing-library-with-providers';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 
 global.performance.getEntriesByName = jest.fn(() => []);
 
@@ -71,6 +62,25 @@ const renderRouter = props =>
     );
   });
 
+jest.mock('@optimizely/react-sdk', () => ({
+  ...jest.requireActual('@optimizely/react-sdk'),
+  setLogger: jest.fn(),
+  createInstance: jest.fn(),
+}));
+jest.mock('#app/legacy/containers/OptimizelyArticleCompleteTracking');
+jest.mock('#app/legacy/containers/OptimizelyPageViewTracking');
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  default: jest.fn(),
+}));
+jest.mock('#app/hooks/useOptimizelyMvtVariation', () => ({
+  __esModule: true,
+  default: jest.fn(),
+}));
+jest.mock('#src/app/components/ATIAnalytics', () => () => (
+  <div>ATI Analytics</div>
+));
+
 describe('Routes', () => {
   beforeEach(() => {
     jest.setTimeout(10000);
@@ -86,7 +96,6 @@ describe('Routes', () => {
   afterEach(() => {
     jest.clearAllMocks();
     jest.restoreAllMocks();
-    fetchMock.restore();
     fetch.resetMocks();
     window.dotcom = undefined;
   });
@@ -109,11 +118,8 @@ describe('Routes', () => {
     });
 
     it('should route to and render live radio page', async () => {
-      const pathname = '/korean/bbc_korean_radio/liveradio';
-      fetchMock.mock(
-        `http://localhost${pathname}.json?renderer_env=live`,
-        liveRadioPageJson,
-      );
+      const pathname = '/afrique/bbc_afrique_radio/liveradio';
+      fetch.mockResponseOnce(JSON.stringify(liveRadioPageJson));
 
       const { getInitialData, pageType } = getMatchingRoute(pathname);
       const { pageData } = await getInitialData({
@@ -130,7 +136,7 @@ describe('Routes', () => {
         pageType,
         service: 'korean',
       });
-      const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'BBC 코리아 라디오';
+      const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'BBC Afrique Radio';
 
       expect(
         await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
@@ -138,11 +144,10 @@ describe('Routes', () => {
     });
 
     it('should route to and render the podcast page', async () => {
-      const pathname = '/arabic/podcasts/p02pc9qc';
-      fetchMock.mock(
-        `http://localhost${pathname}.json?renderer_env=live`,
-        podcastPageJson,
-      );
+      const pathname = '/gahuza/podcasts/p07yh8hb';
+      jest
+        .spyOn(fetchDataFromBFF, 'default')
+        .mockResolvedValueOnce({ json: gahuzaPodcastPage, status: 200 });
 
       const { getInitialData, pageType } = getMatchingRoute(pathname);
       const { pageData } = await getInitialData({
@@ -156,10 +161,10 @@ describe('Routes', () => {
         pathname,
         pageData,
         pageType,
-        service: 'arabic',
+        service: 'gahuza',
       });
 
-      const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'BBC Xtra';
+      const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'Baza Muganga';
 
       expect(
         await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
@@ -167,9 +172,8 @@ describe('Routes', () => {
     });
 
     it.each`
-      pathname              | description
-      ${'/kyrgyz/tipohome'} | ${'tipohome'}
-      ${'/kyrgyz'}          | ${'home'}
+      pathname     | description
+      ${'/kyrgyz'} | ${'home'}
     `(
       'should route to and render a $description page',
       async ({ pathname }) => {
@@ -200,7 +204,7 @@ describe('Routes', () => {
           service: 'kyrgyz',
         });
         const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
-          'АКШ: жаңы президент ким экенин аныктаган штаттар кайсылар?';
+          'Кыргыз-өзбек алакаcы: сандар жана фактылар';
 
         expect(
           await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
@@ -209,11 +213,10 @@ describe('Routes', () => {
     );
 
     it('should route to and render the onDemand Radio page', async () => {
-      const pathname = '/indonesia/bbc_indonesian_radio/w172xh267fpn19l';
-      fetchMock.mock(
-        `http://localhost${pathname}.json?renderer_env=live`,
-        onDemandRadioPageJson,
-      );
+      const pathname = '/gahuza/bbc_gahuza_radio/programmes/p02pcb5c';
+      jest
+        .spyOn(fetchDataFromBFF, 'default')
+        .mockResolvedValueOnce({ json: gahuzaOnDemandAudio, status: 200 });
 
       const { getInitialData, pageType } = getMatchingRoute(pathname);
       const { pageData } = await getInitialData({
@@ -227,10 +230,11 @@ describe('Routes', () => {
         pathname,
         pageData,
         pageType,
-        service: 'indonesia',
+        service: 'gahuza',
       });
 
-      const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'Dunia Pagi Ini';
+      const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
+        'Ibitekerezo ku kiganiro cyavugaga ku matora yo muri Amerika';
 
       expect(
         await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
@@ -239,10 +243,7 @@ describe('Routes', () => {
 
     it('should route to and render the onDemand TV Brand page', async () => {
       const pathname = '/indonesia/bbc_indonesian_tv/tv_programmes/w13xttn4';
-      fetchMock.mock(
-        `http://localhost${pathname}.json?renderer_env=live`,
-        onDemandTvPageJson,
-      );
+      fetch.mockResponseOnce(JSON.stringify(onDemandTvPageJson));
 
       const { getInitialData, pageType } = getMatchingRoute(pathname);
       const { pageData } = await getInitialData({
@@ -259,45 +260,16 @@ describe('Routes', () => {
         service: 'pashto',
       });
 
-      const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'نړۍ دا وخت';
+      const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'د بي بي سي خبرونه';
 
-      expect(
-        await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-      ).toBeInTheDocument();
-    });
+      const brandTitle = screen.getByTestId('brand-title');
+      const subHeading = screen.getByTestId('sub-heading');
 
-    it('should route to and render a front page', async () => {
-      process.env.SIMORGH_APP_ENV = 'local';
-      const service = 'serbian';
-      const variant = 'lat';
-      const pathname = `/${service}/${variant}`;
+      expect(brandTitle).toBeInTheDocument();
+      expect(brandTitle).toBeInTheDocument();
 
-      fetch.mockResponse(
-        JSON.stringify({
-          ...frontPageJson,
-        }),
-      );
-
-      const { getInitialData, pageType } = getMatchingRoute(pathname);
-      const { pageData } = await getInitialData({
-        path: pathname,
-        service,
-        variant,
-      });
-
-      await renderRouter({
-        pathname,
-        pageData,
-        pageType,
-        service,
-        variant,
-      });
-
-      const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'Top Stories';
-
-      expect(
-        await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-      ).toBeInTheDocument();
+      expect(brandTitle).toHaveTextContent(EXPECTED_TEXT_RENDERED_IN_DOCUMENT);
+      expect(subHeading).toHaveTextContent(EXPECTED_TEXT_RENDERED_IN_DOCUMENT);
     });
 
     it('should route to and render a media asset page', async () => {
@@ -362,100 +334,6 @@ describe('Routes', () => {
       ).toBeInTheDocument();
     });
 
-    it('should route to and render a photo gallery page', async () => {
-      const pathname = '/indonesia/indonesia-41635759';
-
-      fetch.mockResponse(
-        JSON.stringify({
-          ...photoGalleryPageJson,
-          secondaryData: null,
-          recommendations: storyPageRecommendationsData,
-        }),
-      );
-
-      const { getInitialData, pageType } = getMatchingRoute(pathname);
-      const { pageData } = await getInitialData({
-        path: pathname,
-        pageType,
-      });
-      await renderRouter({
-        pathname,
-        pageData,
-        pageType,
-        service: 'indonesia',
-      });
-      const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
-        'Anies Baswedan, dari mantan menteri menjadi gubernur DKI Jakarta';
-
-      expect(
-        await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-      ).toBeInTheDocument();
-    });
-
-    it('should route to and render a story page', async () => {
-      suppressPropWarnings(['optimizely', 'ForwardRef', 'null']);
-
-      const pathname = '/mundo/noticias-internacional-51266689';
-      fetch.mockResponse(
-        JSON.stringify({
-          ...storyPageJson,
-          secondaryData: { mostRead: storyPageMostReadData },
-          recommendations: storyPageRecommendationsData,
-        }),
-      );
-
-      const { getInitialData, pageType } = getMatchingRoute(pathname);
-      const { pageData } = await getInitialData({
-        path: pathname,
-        service: 'mundo',
-        pageType: 'cpsAsset',
-      });
-
-      await renderRouter({
-        pathname,
-        pageData,
-        pageType,
-        service: 'mundo',
-      });
-      const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
-        'Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea';
-
-      expect(
-        await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-      ).toBeInTheDocument();
-    }, 15000);
-
-    it('should route to and render a feature index page', async () => {
-      process.env.SIMORGH_APP_ENV = 'local';
-      const pathname = '/afrique/48465371';
-
-      fetch.mockResponse(
-        JSON.stringify({
-          ...featureIndexPageJson,
-        }),
-      );
-
-      const { getInitialData, pageType } = getMatchingRoute(pathname);
-      const { pageData } = await getInitialData({
-        path: pathname,
-        pageType,
-      });
-
-      await renderRouter({
-        pathname,
-        pageData,
-        pageType,
-        service: 'afrique',
-      });
-
-      const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
-        'CAN 2019 : le Sénégal qualifié pour les huitièmes de finale';
-
-      expect(
-        await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-      ).toBeInTheDocument();
-    });
-
     it('should route to and render a 500 error page', async () => {
       const pathname = '/igbo/500';
       const { getInitialData, pageType } = getMatchingRoute(pathname);
@@ -480,7 +358,7 @@ describe('Routes', () => {
 
     it('should fallback to and render a 500 error page if there is a problem with page data', async () => {
       const pathname = '/afrique';
-      fetchMock.mock(`http://localhost${pathname}.json`, 500);
+      fetch.mockResponse(JSON.stringify({ status: 500 }));
 
       const { pageType, getInitialData } = getMatchingRoute(pathname);
       const { status, error } = await getInitialData({
@@ -489,7 +367,7 @@ describe('Routes', () => {
       });
       await renderRouter({
         pathname,
-        pageType: FRONT_PAGE,
+        pageType: HOME_PAGE,
         service: 'afrique',
         error: {
           message: error,

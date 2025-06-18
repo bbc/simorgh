@@ -1,0 +1,3450 @@
+{
+  "data": {
+    "article": {
+      "metadata": {
+        "atiAnalytics": {
+          "categoryName": null,
+          "contentId": "urn:bbc:cps:curie:asset:5ca4f187-e266-614b-8fed-a80e2880f293",
+          "contentType": "article-media-asset",
+          "language": "ar",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "nationsProducer": null,
+          "pageIdentifier": "arabic.media_asset.49522519.page",
+          "pageTitle": "مباشر: تلفزيون بي بي سي عربي",
+          "timePublished": "2019-08-30T08:36:18.000Z",
+          "timeUpdated": "2019-08-30T08:36:18.000Z",
+          "producerName": "ARABIC",
+          "producerId": "5"
+        },
+        "id": "urn:bbc:ares::asset:arabic/media-49522519",
+        "locators": {
+          "assetUri": "/arabic/media-49522519",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:5ca4f187-e266-614b-8fed-a80e2880f293",
+          "assetId": "49522519",
+          "cpsUrn": "urn:bbc:content:assetUri:arabic/media-49522519",
+          "canonicalUrl": "https://www.bbc.com/arabic/media-49522519",
+          "curie": "http://www.bbc.co.uk/asset/5ca4f187-e266-614b-8fed-a80e2880f293"
+        },
+        "type": "MAP",
+        "createdBy": "arabic-v6",
+        "language": "ar",
+        "firstPublished": 1567154178000,
+        "lastPublished": 1567154178000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": false,
+          "suitableForSyndication": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "allowAdvertising": false,
+          "hasContentWarning": false,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "cps_asset_id": "49522519",
+          "page": "arabic.media_asset.49522519.page",
+          "contentId": "urn:bbc:cps:curie:asset:5ca4f187-e266-614b-8fed-a80e2880f293",
+          "cps_asset_type": "map"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
+          "taggings": []
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "atomicVersion",
+          "caption",
+          "image",
+          "altText",
+          "rawImage",
+          "urlLink"
+        ],
+        "includeComments": false,
+        "siteUri": "/arabic",
+        "mediaType": "video",
+        "allowAdvertising": true,
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false,
+        "useSensitiveOnwardJourneys": false
+      },
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "76be5cb9",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "8e673013",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "2b42e830",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "مباشر: تلفزيون بي بي سي عربي",
+                            "blocks": [
+                              {
+                                "id": "585c2af5",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "مباشر: تلفزيون بي بي سي عربي",
+                                  "attributes": []
+                                },
+                                "position": [1, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [1, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [1, 1]
+                  }
+                ]
+              },
+              "position": [1]
+            },
+            {
+              "id": "353b055f",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1567154178000,
+                "lastPublished": 1567154178000
+              },
+              "position": [2]
+            },
+            {
+              "id": "f2b63a97",
+              "type": "video",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "d38063bc",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "500cc7f9",
+                          "type": "aresMediaMetadata",
+                          "blockId": "urn:bbc:ares::primary:108540166",
+                          "model": {
+                            "live": true,
+                            "embedding": false,
+                            "subType": "primary",
+                            "id": "108540166",
+                            "available": true,
+                            "format": "audio_video",
+                            "title": "مباشر: تلفزيون بي بي سي عربي",
+                            "imageCopyright": "BBC",
+                            "imageUrl": "http://c.files.bbci.co.uk/CF4E/production/_111607035_arabic_16_9_updated.png",
+                            "synopses": {
+                              "short": "مباشر: تلفزيون بي بي سي عربي",
+                              "medium": "مباشر: تلفزيون بي بي سي عربي",
+                              "long": "مباشر: تلفزيون بي بي سي عربي"
+                            },
+                            "versions": [
+                              {
+                                "kind": "programme",
+                                "live": true,
+                                "versionId": "bbc_arabic_tv"
+                              }
+                            ]
+                          },
+                          "position": [3, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [3, 1]
+                  }
+                ]
+              },
+              "position": [3]
+            },
+            {
+              "id": "0d6b35c6",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "9c07e1bc",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "يقدم لكم تلفزيون بي بي سي العربي الأخبار والأخبار العاجلة والتحليلات والحوارات والبرامج الوثائقية، على مدى 24 ساعة كل يوم. ويمكنكم التقاط القناة عبر الأطباق اللاقطة. بإمكانكم إرسال تعليقاتكم واقتراحاتكم عبر هذا الرابط",
+                      "blocks": [
+                        {
+                          "id": "58d54e36",
+                          "type": "fragment",
+                          "model": {
+                            "text": "يقدم لكم تلفزيون بي بي سي العربي الأخبار والأخبار العاجلة والتحليلات والحوارات والبرامج الوثائقية، على مدى 24 ساعة كل يوم. ويمكنكم التقاط القناة عبر الأطباق اللاقطة. بإمكانكم إرسال تعليقاتكم واقتراحاتكم ",
+                            "attributes": ["bold"]
+                          },
+                          "position": [4, 1, 1]
+                        },
+                        {
+                          "id": "7406148b",
+                          "type": "urlLink",
+                          "model": {
+                            "text": "عبر هذا الرابط",
+                            "locator": "https://www.bbc.co.uk/arabic/send/u50853203",
+                            "isExternal": false,
+                            "blocks": [
+                              {
+                                "id": "9224c9f9",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "عبر هذا الرابط",
+                                  "attributes": []
+                                },
+                                "position": [4, 1, 2, 1]
+                              }
+                            ]
+                          },
+                          "position": [4, 1, 2]
+                        }
+                      ]
+                    },
+                    "position": [4, 1]
+                  }
+                ]
+              },
+              "position": [4]
+            },
+            {
+              "id": "8d14eca2",
+              "type": "mpu",
+              "model": {},
+              "position": [5]
+            }
+          ]
+        }
+      },
+      "promo": {
+        "locators": {
+          "assetUri": "/arabic/media-49522519",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:5ca4f187-e266-614b-8fed-a80e2880f293",
+          "assetId": "49522519",
+          "cpsUrn": "urn:bbc:content:assetUri:arabic/media-49522519",
+          "curie": "http://www.bbc.co.uk/asset/5ca4f187-e266-614b-8fed-a80e2880f293"
+        },
+        "headlines": {
+          "seoHeadline": "مباشر: تلفزيون بي بي سي عربي",
+          "promoHeadline": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "شاهد البث المباشر لتلفزيون بي بي سي",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "شاهد البث المباشر لتلفزيون بي بي سي",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "BBC Arabic logo",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "BBC Arabic logo",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "height": 1080,
+                  "width": 1920,
+                  "locator": "15DE1/production/_111696598_arabic_16_9_updated.png",
+                  "href": "http://c.files.bbci.co.uk/15DE1/production/_111696598_arabic_16_9_updated.png",
+                  "originCode": "cpsprodpb",
+                  "copyrightHolder": "BBC",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        },
+        "summary": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "شاهد البث المباشر لتلفزيون بي بي سي",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "شاهد البث المباشر لتلفزيون بي بي سي",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "serviceIdentifier": "Arabic-v6",
+        "extrinsicPromo": {
+          "headlines": {
+            "shortHeadline": "شاهد البث المباشر لتلفزيون بي بي سي"
+          },
+          "assetType": "MAP",
+          "media": {
+            "blocks": [
+              {
+                "type": "atomicVersion",
+                "model": {
+                  "id": "108540166",
+                  "subType": "primary",
+                  "format": "video",
+                  "externalId": "bbc_arabic_tv",
+                  "duration": "PT0S",
+                  "embedding": false,
+                  "available": true,
+                  "live": true,
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "BBC Arabic logo",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "BBC Arabic logo",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "height": 576,
+                              "width": 1024,
+                              "locator": "CF4E/production/_111607035_arabic_16_9_updated.png",
+                              "href": "http://c.files.bbci.co.uk/CF4E/production/_111607035_arabic_16_9_updated.png",
+                              "originCode": "cpsprodpb",
+                              "copyrightHolder": "BBC",
+                              "suitableForSyndication": true
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "type": "cps"
+        }
+      }
+    },
+    "secondaryData": {
+      "topStories": [
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:cly623qdw1ko",
+            "canonicalUrl": "https://www.bbc.com/arabic/articles/cly623qdw1ko"
+          },
+          "timestamp": 1726798884217,
+          "suitableForSyndication": true,
+          "language": "ar",
+          "headlines": {
+            "seoHeadline": "تفجيرات لبنان: حرب أوسع أم هدنة غير مستقرة - ما هي مخاطر التصعيد بعد هجمات لبنان؟",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "حرب أوسع أم هدنة غير مستقرة - ما هي مخاطر التصعيد بعد هجمات لبنان؟",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "حرب أوسع أم هدنة غير مستقرة - ما هي مخاطر التصعيد بعد هجمات لبنان؟",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "سيارة إسعاف",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "سيارة إسعاف",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 1000,
+                    "height": 666,
+                    "locator": "9c49/live/93ee2f00-76a0-11ef-8c1a-df523ba43a9a.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "EPA",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "ماهي السيناريوهات المحتملة لما قد يحدث في لبنان في المرحلة المقبلة؟",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "ماهي السيناريوهات المحتملة لما قد يحدث في لبنان في المرحلة المقبلة؟",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "ar",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
+            "locator": "urn:bbc:optimo:asset:cly623qdw1ko",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/dc27493c-d8e8-4fe2-9fbd-150564b5b959#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/campaign",
+                "value": "http://www.bbc.co.uk/things/426b7f53-9faa-49a7-bb5b-aa15cbbfe4d5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/ed614670-3760-4fb1-954e-ef27f0fcf041#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/84b77b58-6acb-4074-8733-c237a0687641#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/b8e62d9e-6df2-45c6-905e-465e7d8cf987#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ],
+              "campaign": [
+                {
+                  "value": "http://www.bbc.co.uk/things/426b7f53-9faa-49a7-bb5b-aa15cbbfe4d5#id",
+                  "type": "campaign"
+                }
+              ],
+              "motivation": [],
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "formats": [
+                {
+                  "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                  "thingLabel": "Feature",
+                  "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                  "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                  "thingType": ["tagging:TagConcept", "tagging:Format"],
+                  "thingSameAs": [
+                    "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                  ],
+                  "thingEnglishLabel": "Feature",
+                  "thingPreferredLabel": "Feature",
+                  "thingLabelLanguage": "ar",
+                  "type": "formats"
+                }
+              ],
+              "about": [
+                {
+                  "value": "http://www.bbc.co.uk/things/84b77b58-6acb-4074-8733-c237a0687641#id",
+                  "thingLabel": "إسرائيل",
+                  "thingUri": "http://www.bbc.co.uk/things/84b77b58-6acb-4074-8733-c237a0687641#id",
+                  "thingId": "84b77b58-6acb-4074-8733-c237a0687641",
+                  "thingType": [
+                    "core:Thing",
+                    "tagging:TagConcept",
+                    "core:Place"
+                  ],
+                  "thingSameAs": [
+                    "http://sws.geonames.org/294640/",
+                    "http://dbpedia.org/resource/Israel",
+                    "http://www.wikidata.org/entity/Q801"
+                  ],
+                  "thingEnglishLabel": "Israel",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/b8e62d9e-6df2-45c6-905e-465e7d8cf987#id",
+                  "thingLabel": "لبنان",
+                  "thingUri": "http://www.bbc.co.uk/things/b8e62d9e-6df2-45c6-905e-465e7d8cf987#id",
+                  "thingId": "b8e62d9e-6df2-45c6-905e-465e7d8cf987",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Place",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q822",
+                    "http://dbpedia.org/resource/Lebanon",
+                    "http://sws.geonames.org/272103/"
+                  ],
+                  "thingEnglishLabel": "Lebanon",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/dc27493c-d8e8-4fe2-9fbd-150564b5b959#id",
+                  "thingLabel": "قضايا الشرق الأوسط",
+                  "thingUri": "http://www.bbc.co.uk/things/dc27493c-d8e8-4fe2-9fbd-150564b5b959#id",
+                  "thingId": "dc27493c-d8e8-4fe2-9fbd-150564b5b959",
+                  "thingType": [
+                    "core:Place",
+                    "tagging:TagConcept",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Middle East",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/ed614670-3760-4fb1-954e-ef27f0fcf041#id",
+                  "thingLabel": "حزب الله",
+                  "thingUri": "http://www.bbc.co.uk/things/ed614670-3760-4fb1-954e-ef27f0fcf041#id",
+                  "thingId": "ed614670-3760-4fb1-954e-ef27f0fcf041",
+                  "thingType": [
+                    "core:Organisation",
+                    "tagging:Agent",
+                    "tagging:TagConcept",
+                    "tagging:AmbiguousTerm",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [
+                    "http://dbpedia.org/resource/Hezbollah",
+                    "http://www.wikidata.org/entity/Q41053"
+                  ],
+                  "thingEnglishLabel": "Hezbollah",
+                  "type": "about"
+                }
+              ]
+            }
+          },
+          "serviceIdentifier": "Arabic",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:cly623qdw1ko",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:cvglmkgd0zxo",
+            "canonicalUrl": "https://www.bbc.com/arabic/articles/cvglmkgd0zxo"
+          },
+          "timestamp": 1726819248323,
+          "suitableForSyndication": true,
+          "language": "ar",
+          "headlines": {
+            "seoHeadline": "تفجيرات لبنان: شركة يابانية تعلق على أجهزة الاتصالات التي تحمل شعارها وانفجرت في لبنان",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "شركة يابانية تعلق على أجهزة الاتصالات التي تحمل شعارها وانفجرت في لبنان",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "شركة يابانية تعلق على أجهزة الاتصالات التي تحمل شعارها وانفجرت في لبنان",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "caption",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "رجل يحمل جهاز اتصال لاسلكي في بيروت يبدو أنه من تصنيع آيكوم ",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "رجل يحمل جهاز اتصال لاسلكي في بيروت يبدو أنه من تصنيع آيكوم ",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "رجل يحمل جهاز اتصال لاسلكي في بيروت يبدو أنه من تصنيع آيكوم ",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "رجل يحمل جهاز اتصال لاسلكي في بيروت يبدو أنه من تصنيع آيكوم ",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 878,
+                    "height": 494,
+                    "locator": "9a99/live/66e0f2a0-76ae-11ef-bc61-1d45017a238a.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "Getty Images",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "شركة آيكوم اليابانية تقول إنها توقفت منذ عقد من الزمان عن تصنيع أجهزة الاتصال اللاسلكي \"أي سي في 82\" التي انفجرت في لبنان. ",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "شركة آيكوم اليابانية تقول إنها توقفت منذ عقد من الزمان عن تصنيع أجهزة الاتصال اللاسلكي \"أي سي في 82\" التي انفجرت في لبنان. ",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "ar",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
+            "locator": "urn:bbc:optimo:asset:cvglmkgd0zxo",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/3f53c272-5b8f-4a4f-99de-a857d6726c5b#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/be793eb2-a1df-4e2a-a86e-dfd401992d2f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/b8e62d9e-6df2-45c6-905e-465e7d8cf987#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/84b77b58-6acb-4074-8733-c237a0687641#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ],
+              "motivation": [],
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "formats": [
+                {
+                  "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingLabel": "News report",
+                  "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                  "thingType": ["tagging:TagConcept", "tagging:Format"],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Report",
+                  "thingPreferredLabel": "Report",
+                  "thingLabelLanguage": "ar",
+                  "type": "formats"
+                }
+              ],
+              "about": [
+                {
+                  "value": "http://www.bbc.co.uk/things/3f53c272-5b8f-4a4f-99de-a857d6726c5b#id",
+                  "thingLabel": "اليابان",
+                  "thingUri": "http://www.bbc.co.uk/things/3f53c272-5b8f-4a4f-99de-a857d6726c5b#id",
+                  "thingId": "3f53c272-5b8f-4a4f-99de-a857d6726c5b",
+                  "thingType": [
+                    "core:Thing",
+                    "core:Place",
+                    "tagging:TagConcept"
+                  ],
+                  "thingSameAs": [
+                    "http://dbpedia.org/resource/Japan",
+                    "http://www.wikidata.org/entity/Q17",
+                    "http://sws.geonames.org/1861060/"
+                  ],
+                  "thingEnglishLabel": "Japan",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/84b77b58-6acb-4074-8733-c237a0687641#id",
+                  "thingLabel": "إسرائيل",
+                  "thingUri": "http://www.bbc.co.uk/things/84b77b58-6acb-4074-8733-c237a0687641#id",
+                  "thingId": "84b77b58-6acb-4074-8733-c237a0687641",
+                  "thingType": [
+                    "core:Thing",
+                    "tagging:TagConcept",
+                    "core:Place"
+                  ],
+                  "thingSameAs": [
+                    "http://sws.geonames.org/294640/",
+                    "http://dbpedia.org/resource/Israel",
+                    "http://www.wikidata.org/entity/Q801"
+                  ],
+                  "thingEnglishLabel": "Israel",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/b8e62d9e-6df2-45c6-905e-465e7d8cf987#id",
+                  "thingLabel": "لبنان",
+                  "thingUri": "http://www.bbc.co.uk/things/b8e62d9e-6df2-45c6-905e-465e7d8cf987#id",
+                  "thingId": "b8e62d9e-6df2-45c6-905e-465e7d8cf987",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Place",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q822",
+                    "http://dbpedia.org/resource/Lebanon",
+                    "http://sws.geonames.org/272103/"
+                  ],
+                  "thingEnglishLabel": "Lebanon",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/be793eb2-a1df-4e2a-a86e-dfd401992d2f#id",
+                  "thingLabel": "انفجارات البيجر في لبنان",
+                  "thingUri": "http://www.bbc.co.uk/things/be793eb2-a1df-4e2a-a86e-dfd401992d2f#id",
+                  "thingId": "be793eb2-a1df-4e2a-a86e-dfd401992d2f",
+                  "thingType": [
+                    "core:Event",
+                    "core:Thing",
+                    "tagging:TagConcept"
+                  ],
+                  "thingSameAs": ["http://www.wikidata.org/entity/Q130314422"],
+                  "thingEnglishLabel": "Lebanon pager explosions",
+                  "type": "about"
+                }
+              ]
+            }
+          },
+          "byline": {
+            "blocks": [
+              {
+                "type": "contributor",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "name",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "شيماء خليل",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "شيماء خليل",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "role",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "بي بي سي نيوز ",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "بي بي سي نيوز ",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "location",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "اليابان",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "اليابان",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "serviceIdentifier": "Arabic",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:cvglmkgd0zxo",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:c869w0wvew7o",
+            "canonicalUrl": "https://www.bbc.com/arabic/articles/c869w0wvew7o"
+          },
+          "timestamp": 1726800209969,
+          "suitableForSyndication": true,
+          "language": "ar",
+          "headlines": {
+            "seoHeadline": "وثائقي لبي بي سي: موظفون في هارودز يتهمون محمد الفايد بتورطه في جرائم اغتصاب",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "وثائقي لبي بي سي: موظفون في هارودز يتهمون محمد الفايد بتورطه في جرائم اغتصاب",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "وثائقي لبي بي سي: موظفون في هارودز يتهمون محمد الفايد بتورطه في جرائم اغتصاب",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "caption",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "الملياردير ورئيس متجر هارودز السابق محمد الفايد",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "الملياردير ورئيس متجر هارودز السابق محمد الفايد",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "الملياردير ورئيس متجر هارودز السابق محمد الفايد",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "الملياردير ورئيس متجر هارودز السابق محمد الفايد",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 1536,
+                    "height": 864,
+                    "locator": "ac98/live/09b8c780-7684-11ef-b282-4535eb84fe4b.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "BBC",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "وثائقي من إنتاج بي بي سي يكشف عن تعرض خمس نساء كن يعملن في متجر هارودز الفاخر للاغتصاب على يد الملياردير الراحل محمد الفايد.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "وثائقي من إنتاج بي بي سي يكشف عن تعرض خمس نساء كن يعملن في متجر هارودز الفاخر للاغتصاب على يد الملياردير الراحل محمد الفايد.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "ar",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
+            "locator": "urn:bbc:optimo:asset:c869w0wvew7o",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/46179660-2af3-49c7-a80b-b483412fbfb6#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/8abd564a-2b8e-401c-9916-34982cb67b55#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ],
+              "motivation": [],
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "formats": [
+                {
+                  "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingLabel": "News report",
+                  "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                  "thingType": ["tagging:TagConcept", "tagging:Format"],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Report",
+                  "thingPreferredLabel": "Report",
+                  "thingLabelLanguage": "ar",
+                  "type": "formats"
+                }
+              ],
+              "about": [
+                {
+                  "value": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id",
+                  "thingLabel": "المملكة المتحدة",
+                  "thingUri": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id",
+                  "thingId": "2e91364c-5c77-4660-b76e-d76202785e64",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Place",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q145",
+                    "http://sws.geonames.org/2635167/"
+                  ],
+                  "thingEnglishLabel": "United Kingdom",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/46179660-2af3-49c7-a80b-b483412fbfb6#id",
+                  "thingLabel": "العنف الجنسي",
+                  "thingUri": "http://www.bbc.co.uk/things/46179660-2af3-49c7-a80b-b483412fbfb6#id",
+                  "thingId": "46179660-2af3-49c7-a80b-b483412fbfb6",
+                  "thingType": [
+                    "core:Thing",
+                    "core:Theme",
+                    "tagging:TagConcept"
+                  ],
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q558075",
+                    "http://dbpedia.org/resource/Sexual_violence"
+                  ],
+                  "thingEnglishLabel": "Sexual violence",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/8abd564a-2b8e-401c-9916-34982cb67b55#id",
+                  "thingLabel": "حقوق المرأة",
+                  "thingUri": "http://www.bbc.co.uk/things/8abd564a-2b8e-401c-9916-34982cb67b55#id",
+                  "thingId": "8abd564a-2b8e-401c-9916-34982cb67b55",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Thing",
+                    "core:Theme"
+                  ],
+                  "thingSameAs": [
+                    "http://dbpedia.org/resource/Women%27s_rights",
+                    "http://www.wikidata.org/entity/Q223569"
+                  ],
+                  "thingEnglishLabel": "Women's rights",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id",
+                  "thingLabel": "القانون",
+                  "thingUri": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id",
+                  "thingId": "d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Theme",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": ["http://dbpedia.org/resource/Law"],
+                  "thingEnglishLabel": "Law and order",
+                  "type": "about"
+                }
+              ]
+            }
+          },
+          "byline": {
+            "blocks": [
+              {
+                "type": "contributor",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "name",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "كاسي كورنيش-تستريل وكيتون ستون وإيريكا جورنال وسارة بيل",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "كاسي كورنيش-تستريل وكيتون ستون وإيريكا جورنال وسارة بيل",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "role",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "بي بي سي نيوز",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "بي بي سي نيوز",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "serviceIdentifier": "Arabic",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:c869w0wvew7o",
+          "type": "optimo"
+        }
+      ],
+      "features": [
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:c0k43mn780ro",
+            "canonicalUrl": "https://www.bbc.com/arabic/articles/c0k43mn780ro"
+          },
+          "timestamp": 1726462051027,
+          "suitableForSyndication": true,
+          "language": "ar",
+          "headlines": {
+            "seoHeadline": "لماذا تروج نساء غربيات لفكرة الزوجة التقليدية \"الخاضعة\" للرجل على مواقع التواصل؟ ",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "لماذا تروج نساء غربيات لفكرة \"الزوجة التقليدية\"؟",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "لماذا تروج نساء غربيات لفكرة \"الزوجة التقليدية\"؟",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "caption",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "يروج محتوى \"الزوجات التقليديات\" لصورة تقليدية للأسرة ينحصر فيها دور المرأة على الأعمال المنزلية ",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "يروج محتوى \"الزوجات التقليديات\" لصورة تقليدية للأسرة ينحصر فيها دور المرأة على الأعمال المنزلية ",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "سيدة تقدم الطعام لزوجها وطفليها",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "سيدة تقدم الطعام لزوجها وطفليها",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 2164,
+                    "height": 1386,
+                    "locator": "3472/live/515806b0-5d8d-11ef-b43e-6916dcba5cbf.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "Getty Images",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "تتحدث الكثير من النساء اللاتي يصفن أنفسهن بأنهن \"زوجات تقليديات\" عن رفضهن للنسوية وعدم إيمانهن بالمساواة بين الرجل والمرأة ",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "تتحدث الكثير من النساء اللاتي يصفن أنفسهن بأنهن \"زوجات تقليديات\" عن رفضهن للنسوية وعدم إيمانهن بالمساواة بين الرجل والمرأة ",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "ar",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
+            "locator": "urn:bbc:optimo:asset:c0k43mn780ro",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                "value": "http://www.bbc.co.uk/things/c31d108c-f7bc-43bf-8b3d-83f0114844ec#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/f7f69688-712a-4e57-94df-998ac40df82f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/0239ab33-1cfc-4f5d-babb-a8159711af3e#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/8a9d5e78-6caf-44a7-8564-34e9319ecb23#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ],
+              "motivation": [],
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "formats": [
+                {
+                  "value": "http://www.bbc.co.uk/things/c31d108c-f7bc-43bf-8b3d-83f0114844ec#id",
+                  "thingLabel": "Article",
+                  "thingUri": "http://www.bbc.co.uk/things/c31d108c-f7bc-43bf-8b3d-83f0114844ec#id",
+                  "thingId": "c31d108c-f7bc-43bf-8b3d-83f0114844ec",
+                  "thingType": ["tagging:TagConcept", "tagging:Format"],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Article",
+                  "thingPreferredLabel": "Article",
+                  "thingLabelLanguage": "ar",
+                  "type": "formats"
+                }
+              ],
+              "about": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0239ab33-1cfc-4f5d-babb-a8159711af3e#id",
+                  "thingLabel": "اسلوب الحياة",
+                  "thingUri": "http://www.bbc.co.uk/things/0239ab33-1cfc-4f5d-babb-a8159711af3e#id",
+                  "thingId": "0239ab33-1cfc-4f5d-babb-a8159711af3e",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Theme",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Life",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/8a9d5e78-6caf-44a7-8564-34e9319ecb23#id",
+                  "thingLabel": "النسوية",
+                  "thingUri": "http://www.bbc.co.uk/things/8a9d5e78-6caf-44a7-8564-34e9319ecb23#id",
+                  "thingId": "8a9d5e78-6caf-44a7-8564-34e9319ecb23",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Theme",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": ["http://dbpedia.org/resource/Feminism"],
+                  "thingEnglishLabel": "Feminism",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+                  "thingLabel": "مرأة",
+                  "thingUri": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+                  "thingId": "e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
+                  "thingType": [
+                    "core:Thing",
+                    "tagging:TagConcept",
+                    "core:Theme"
+                  ],
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q467",
+                    "http://dbpedia.org/resource/Woman"
+                  ],
+                  "thingEnglishLabel": "Women",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/f7f69688-712a-4e57-94df-998ac40df82f#id",
+                  "thingLabel": "الزواج",
+                  "thingUri": "http://www.bbc.co.uk/things/f7f69688-712a-4e57-94df-998ac40df82f#id",
+                  "thingId": "f7f69688-712a-4e57-94df-998ac40df82f",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Thing",
+                    "core:Theme"
+                  ],
+                  "thingSameAs": [
+                    "http://dbpedia.org/resource/Marriage",
+                    "http://www.wikidata.org/entity/Q8445"
+                  ],
+                  "thingEnglishLabel": "Marriage",
+                  "type": "about"
+                }
+              ]
+            }
+          },
+          "byline": {
+            "blocks": [
+              {
+                "type": "contributor",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "name",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "سمية نصر",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "سمية نصر",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "role",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "بي بي سي عربي",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "بي بي سي عربي",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "serviceIdentifier": "Arabic",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:c0k43mn780ro",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:cwy7e71yjkko",
+            "canonicalUrl": "https://www.bbc.com/arabic/articles/cwy7e71yjkko"
+          },
+          "timestamp": 1726341526894,
+          "suitableForSyndication": true,
+          "language": "ar",
+          "headlines": {
+            "seoHeadline": "السعودية تلقت تحذيرات بريطانية من عواقب قمع الصحوة الإسلامية ومقاومة دعوات الإصلاح – وثائق",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "آل سعود \"أساتذة فن تسخير الحماس الإسلامي لتحقيق أغراض سياسية\"- وثائق بريطانية  ",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "آل سعود \"أساتذة فن تسخير الحماس الإسلامي لتحقيق أغراض سياسية\"- وثائق بريطانية  ",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "caption",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "صورة التقطت في أغسطس/آب عام 1945. وفيها خمسة من أبناء العاهل السعودي عبد العزيز بن سعود يستقلون طائرة في مطار بريطاني. وهم الأمير فيصل (لاحقا الملك فيصل)، والأمير محمد، والأمير فهد (لاحقا الملك فهد)، والأمير عبد الله الفيصل، والأمير نواف. وفي أقصى اليسار السفير السعودي في لندن.",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "صورة التقطت في أغسطس/آب عام 1945. وفيها خمسة من أبناء العاهل السعودي عبد العزيز بن سعود يستقلون طائرة في مطار بريطاني. وهم الأمير فيصل (لاحقا الملك فيصل)، والأمير محمد، والأمير فهد (لاحقا الملك فهد)، والأمير عبد الله الفيصل، والأمير نواف. وفي أقصى اليسار السفير السعودي في لندن.",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "\nصورة التقطت في أغسطس/آب عام 1945. وفيها خمسة من أبناء العاهل السعودي عبد العزيز بن سعود يستقلون طائرة في مطار بريطاني. وهم الأمير فيصل (لاحقا الملك فيصل)، والأمير محمد، والأمير فهد (لاحقا الملك فهد)، والأمير عبد الله الفيصل، والأمير نواف. وفي أقصى اليسار السفير السعودي في لندن.\n",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "\nصورة التقطت في أغسطس/آب عام 1945. وفيها خمسة من أبناء العاهل السعودي عبد العزيز بن سعود يستقلون طائرة في مطار بريطاني. وهم الأمير فيصل (لاحقا الملك فيصل)، والأمير محمد، والأمير فهد (لاحقا الملك فهد)، والأمير عبد الله الفيصل، والأمير نواف. وفي أقصى اليسار السفير السعودي في لندن.\n",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 1024,
+                    "height": 576,
+                    "locator": "0d2d/live/b83183c0-7269-11ef-bfd6-f78aea086fb1.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "Getty Images",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "الوثائق تكشف إصرار السعوديين، في نقاشهم مع البريطانيين، على الحكم \"بأمر الله\" وليس بالديمقراطية، بينما نصح البريطانيون بالانفتاح والحريات السياسية والإعلامية لخدمة مصالح المملكة والغرب.\n",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "الوثائق تكشف إصرار السعوديين، في نقاشهم مع البريطانيين، على الحكم \"بأمر الله\" وليس بالديمقراطية، بينما نصح البريطانيون بالانفتاح والحريات السياسية والإعلامية لخدمة مصالح المملكة والغرب.\n",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "ar",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
+            "locator": "urn:bbc:optimo:asset:cwy7e71yjkko",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/532c6b2f-f59c-4d31-afef-b6d62f53f49e#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/dc27493c-d8e8-4fe2-9fbd-150564b5b959#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/c324c29b-f735-4eec-a23c-f0e5df3c9dd1#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/25844b6e-80b0-4de9-8ea0-7a35e7d4086f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/dd4fa30e-dec8-479a-8881-b480af10392c#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/5098b057-41c4-48dd-b8a8-56673822a206#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/fbcd47f3-d67a-4b69-b15c-d4b6c270adbf#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/1b3d2a47-78c9-4fc9-aeb6-746063169674#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ],
+              "motivation": [],
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "formats": [
+                {
+                  "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingLabel": "News report",
+                  "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                  "thingType": ["tagging:TagConcept", "tagging:Format"],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Report",
+                  "thingPreferredLabel": "Report",
+                  "thingLabelLanguage": "ar",
+                  "type": "formats"
+                }
+              ],
+              "about": [
+                {
+                  "value": "http://www.bbc.co.uk/things/1b3d2a47-78c9-4fc9-aeb6-746063169674#id",
+                  "thingLabel": "الإسلام",
+                  "thingUri": "http://www.bbc.co.uk/things/1b3d2a47-78c9-4fc9-aeb6-746063169674#id",
+                  "thingId": "1b3d2a47-78c9-4fc9-aeb6-746063169674",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Theme",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": ["http://dbpedia.org/resource/Islam"],
+                  "thingEnglishLabel": "Islam",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/25844b6e-80b0-4de9-8ea0-7a35e7d4086f#id",
+                  "thingLabel": "بي بي سي",
+                  "thingUri": "http://www.bbc.co.uk/things/25844b6e-80b0-4de9-8ea0-7a35e7d4086f#id",
+                  "thingId": "25844b6e-80b0-4de9-8ea0-7a35e7d4086f",
+                  "thingType": [
+                    "tagging:AmbiguousTerm",
+                    "core:Thing",
+                    "core:Organisation",
+                    "tagging:TagConcept",
+                    "tagging:Agent"
+                  ],
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q9531",
+                    "http://dbpedia.org/resource/BBC"
+                  ],
+                  "thingEnglishLabel": "BBC",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/5098b057-41c4-48dd-b8a8-56673822a206#id",
+                  "thingLabel": "المسلمون",
+                  "thingUri": "http://www.bbc.co.uk/things/5098b057-41c4-48dd-b8a8-56673822a206#id",
+                  "thingId": "5098b057-41c4-48dd-b8a8-56673822a206",
+                  "thingType": [
+                    "core:Theme",
+                    "core:Thing",
+                    "tagging:TagConcept"
+                  ],
+                  "thingSameAs": [
+                    "http://dbpedia.org/resource/Muslim",
+                    "http://www.wikidata.org/entity/Q47740"
+                  ],
+                  "thingEnglishLabel": "Muslims",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/532c6b2f-f59c-4d31-afef-b6d62f53f49e#id",
+                  "thingLabel": "محمد بن سلمان بن عبد العزيز آل سعود",
+                  "thingUri": "http://www.bbc.co.uk/things/532c6b2f-f59c-4d31-afef-b6d62f53f49e#id",
+                  "thingId": "532c6b2f-f59c-4d31-afef-b6d62f53f49e",
+                  "thingType": [
+                    "core:Person",
+                    "core:Thing",
+                    "tagging:AmbiguousTerm",
+                    "tagging:TagConcept",
+                    "tagging:Agent"
+                  ],
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q6892571",
+                    "http://dbpedia.org/resource/Mohammad_bin_Salman_Al_Saud"
+                  ],
+                  "thingEnglishLabel": "Mohammed bin Salman",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                  "thingLabel": "سياسة",
+                  "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                  "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
+                  "thingType": [
+                    "tagging:Genre",
+                    "tagging:TagConcept",
+                    "tagging:AmbiguousTerm",
+                    "core:Theme",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q7163",
+                    "http://dbpedia.org/resource/Politics"
+                  ],
+                  "thingEnglishLabel": "Politics",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/c324c29b-f735-4eec-a23c-f0e5df3c9dd1#id",
+                  "thingLabel": "التطرف الإسلامي ",
+                  "thingUri": "http://www.bbc.co.uk/things/c324c29b-f735-4eec-a23c-f0e5df3c9dd1#id",
+                  "thingId": "c324c29b-f735-4eec-a23c-f0e5df3c9dd1",
+                  "thingType": [
+                    "core:Thing",
+                    "tagging:TagConcept",
+                    "core:Theme"
+                  ],
+                  "thingSameAs": [
+                    "http://dbpedia.org/resource/Islamic_extremism",
+                    "http://www.wikidata.org/entity/Q6082705"
+                  ],
+                  "thingEnglishLabel": "Islamist extremism",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/dc27493c-d8e8-4fe2-9fbd-150564b5b959#id",
+                  "thingLabel": "قضايا الشرق الأوسط",
+                  "thingUri": "http://www.bbc.co.uk/things/dc27493c-d8e8-4fe2-9fbd-150564b5b959#id",
+                  "thingId": "dc27493c-d8e8-4fe2-9fbd-150564b5b959",
+                  "thingType": [
+                    "core:Place",
+                    "tagging:TagConcept",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Middle East",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/dd4fa30e-dec8-479a-8881-b480af10392c#id",
+                  "thingLabel": "السعودية",
+                  "thingUri": "http://www.bbc.co.uk/things/dd4fa30e-dec8-479a-8881-b480af10392c#id",
+                  "thingId": "dd4fa30e-dec8-479a-8881-b480af10392c",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Place",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": ["http://sws.geonames.org/102358/"],
+                  "thingEnglishLabel": "Saudi Arabia",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/fbcd47f3-d67a-4b69-b15c-d4b6c270adbf#id",
+                  "thingLabel": "شؤون دينية",
+                  "thingUri": "http://www.bbc.co.uk/things/fbcd47f3-d67a-4b69-b15c-d4b6c270adbf#id",
+                  "thingId": "fbcd47f3-d67a-4b69-b15c-d4b6c270adbf",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Theme",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [
+                    "http://dbpedia.org/resource/Religion",
+                    "http://www.wikidata.org/entity/Q9174"
+                  ],
+                  "thingEnglishLabel": "Religion",
+                  "type": "about"
+                }
+              ]
+            }
+          },
+          "byline": {
+            "blocks": [
+              {
+                "type": "contributor",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "name",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "عـامــر سلطــان",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "عـامــر سلطــان",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "role",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "بي بي سي نيوز عربي- لندن",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "بي بي سي نيوز عربي- لندن",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "images",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "image",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "rawImage",
+                                  "model": {
+                                    "width": 150,
+                                    "height": 150,
+                                    "locator": "c27a/live/bef33680-6ae5-11ef-8c32-f3c2bc7494c6.png",
+                                    "originCode": "cpsprodpb"
+                                  }
+                                },
+                                {
+                                  "type": "altText",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "text",
+                                        "model": {
+                                          "blocks": [
+                                            {
+                                              "type": "paragraph",
+                                              "model": {
+                                                "text": "عـامــر سلطــان",
+                                                "blocks": [
+                                                  {
+                                                    "type": "fragment",
+                                                    "model": {
+                                                      "text": "عـامــر سلطــان",
+                                                      "attributes": []
+                                                    }
+                                                  }
+                                                ]
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "serviceIdentifier": "Arabic",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:cwy7e71yjkko",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:clyn4xm2m6jo",
+            "canonicalUrl": "https://www.bbc.com/arabic/articles/clyn4xm2m6jo"
+          },
+          "timestamp": 1726116769408,
+          "suitableForSyndication": true,
+          "language": "ar",
+          "headlines": {
+            "seoHeadline": "من هم الأطفال الأكثر رفاهية في الدول العربية؟",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "من هم الأطفال الأكثر رفاهية في الدول العربية؟",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "من هم الأطفال الأكثر رفاهية في الدول العربية؟",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "caption",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "أطفال يلعبون في أماكن ترفيهية في عيد الأضحى - مصر - 28 يونيو/حزيران 2023",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "أطفال يلعبون في أماكن ترفيهية في عيد الأضحى - مصر - 28 يونيو/حزيران 2023",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "أطفال يلعبون في أماكن ترفيهية في عيد الأضحى في مصر، تقف بجانب طفلة تركب على لعبة ترفيهية بشكل حصان، سيدة محجبة، وخلفهما مجموعة من الأطفال يلعبون بألعاب ترفيهية مختلفة. الصورة التقطت نهاراً.",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "أطفال يلعبون في أماكن ترفيهية في عيد الأضحى في مصر، تقف بجانب طفلة تركب على لعبة ترفيهية بشكل حصان، سيدة محجبة، وخلفهما مجموعة من الأطفال يلعبون بألعاب ترفيهية مختلفة. الصورة التقطت نهاراً.",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 948,
+                    "height": 533,
+                    "locator": "69e4/live/b4c59d00-707c-11ef-8268-7554d07152a9.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": " EPA-EFE/REX/Shutterstock",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "\"الرفاهية والصحة العاطفية في مرحلة الطفولة هي أفضل مؤشرات السعادة في وقت لاحق…إذ إن البلدان التي تستثمر في معاملة أطفالها باحترام وكرامة، وتمنحهم الفرصة للتعلم والنمو، تستثمر حقاً في مستقبل مزدهر\"",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "\"الرفاهية والصحة العاطفية في مرحلة الطفولة هي أفضل مؤشرات السعادة في وقت لاحق…إذ إن البلدان التي تستثمر في معاملة أطفالها باحترام وكرامة، وتمنحهم الفرصة للتعلم والنمو، تستثمر حقاً في مستقبل مزدهر\"",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "ar",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
+            "locator": "urn:bbc:optimo:asset:clyn4xm2m6jo",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/5307a8d9-f620-40f5-92d4-f99c919a6ffa#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/5c7ca471-4f83-4b44-a064-ccec0272aea0#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/11a75753-69d5-4c83-a585-9904467e5c91#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/dd4fa30e-dec8-479a-8881-b480af10392c#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/992e096e-28e6-412d-b6a1-652f78be63c7#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                "value": "http://www.bbc.co.uk/things/e1deed1e-0cab-4965-8e92-897b195f7a47#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ],
+              "motivation": [],
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "formats": [
+                {
+                  "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingLabel": "News report",
+                  "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                  "thingType": ["tagging:TagConcept", "tagging:Format"],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Report",
+                  "thingPreferredLabel": "Report",
+                  "thingLabelLanguage": "ar",
+                  "type": "formats"
+                }
+              ],
+              "about": [
+                {
+                  "value": "http://www.bbc.co.uk/things/11a75753-69d5-4c83-a585-9904467e5c91#id",
+                  "thingLabel": "الإمارات العربية المتحدة",
+                  "thingUri": "http://www.bbc.co.uk/things/11a75753-69d5-4c83-a585-9904467e5c91#id",
+                  "thingId": "11a75753-69d5-4c83-a585-9904467e5c91",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Place",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": ["http://sws.geonames.org/290557/"],
+                  "thingEnglishLabel": "United Arab Emirates",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/5307a8d9-f620-40f5-92d4-f99c919a6ffa#id",
+                  "thingLabel": "مجتمع",
+                  "thingUri": "http://www.bbc.co.uk/things/5307a8d9-f620-40f5-92d4-f99c919a6ffa#id",
+                  "thingId": "5307a8d9-f620-40f5-92d4-f99c919a6ffa",
+                  "thingType": [
+                    "core:Theme",
+                    "tagging:TagConcept",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [
+                    "http://dbpedia.org/resource/Society",
+                    "http://www.wikidata.org/entity/Q8425"
+                  ],
+                  "thingEnglishLabel": "Society",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/5c7ca471-4f83-4b44-a064-ccec0272aea0#id",
+                  "thingLabel": "الكويت",
+                  "thingUri": "http://www.bbc.co.uk/things/5c7ca471-4f83-4b44-a064-ccec0272aea0#id",
+                  "thingId": "5c7ca471-4f83-4b44-a064-ccec0272aea0",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Thing",
+                    "core:Place"
+                  ],
+                  "thingSameAs": ["http://sws.geonames.org/285570/"],
+                  "thingEnglishLabel": "Kuwait",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/992e096e-28e6-412d-b6a1-652f78be63c7#id",
+                  "thingLabel": "الأطفال",
+                  "thingUri": "http://www.bbc.co.uk/things/992e096e-28e6-412d-b6a1-652f78be63c7#id",
+                  "thingId": "992e096e-28e6-412d-b6a1-652f78be63c7",
+                  "thingType": [
+                    "core:Theme",
+                    "tagging:TagConcept",
+                    "core:Thing",
+                    "tagging:AmbiguousTerm",
+                    "tagging:Genre"
+                  ],
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q7569",
+                    "http://dbpedia.org/resource/Child"
+                  ],
+                  "thingEnglishLabel": "Children",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/dd4fa30e-dec8-479a-8881-b480af10392c#id",
+                  "thingLabel": "السعودية",
+                  "thingUri": "http://www.bbc.co.uk/things/dd4fa30e-dec8-479a-8881-b480af10392c#id",
+                  "thingId": "dd4fa30e-dec8-479a-8881-b480af10392c",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Place",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": ["http://sws.geonames.org/102358/"],
+                  "thingEnglishLabel": "Saudi Arabia",
+                  "type": "about"
+                }
+              ]
+            }
+          },
+          "byline": {
+            "blocks": [
+              {
+                "type": "contributor",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "name",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "منار حافظ",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "منار حافظ",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "role",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "بي بي سي عربي - عمّان",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "بي بي سي عربي - عمّان",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "serviceIdentifier": "Arabic",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:clyn4xm2m6jo",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:c20lvx31j2po",
+            "canonicalUrl": "https://www.bbc.com/arabic/articles/c20lvx31j2po"
+          },
+          "timestamp": 1726034258680,
+          "suitableForSyndication": true,
+          "language": "ar",
+          "headlines": {
+            "seoHeadline": "درنة: كيف أصبحت المدينة الليبية بعد عام من كارثة انهيار السدين؟",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "كيف أصبحت مدينة درنة الليبية بعد عام من كارثة انهيار السدين؟",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "كيف أصبحت مدينة درنة الليبية بعد عام من كارثة انهيار السدين؟",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "درنة",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "درنة",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 1018,
+                    "height": 572,
+                    "locator": "c763/live/62cd2f20-700b-11ef-8ed2-0935433bea25.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "Getty Images",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "بعد عام من كارثة درنة، تعجز السلطات الليبية عن إصدار إحصائيات نهائية لعدد المفقودين والقتلى، بينما أصبحت عملية إعادة إعمار المدينة محل جدل في البلاد بسبب تولي نجل القائد العسكري خليفة حفتر، مسؤولية الملف",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "بعد عام من كارثة درنة، تعجز السلطات الليبية عن إصدار إحصائيات نهائية لعدد المفقودين والقتلى، بينما أصبحت عملية إعادة إعمار المدينة محل جدل في البلاد بسبب تولي نجل القائد العسكري خليفة حفتر، مسؤولية الملف",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "ar",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
+            "locator": "urn:bbc:optimo:asset:c20lvx31j2po",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/9b16a6c2-7c16-42b7-bff7-6549579622e8#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/db8d6c6f-13c2-44d7-963c-54c06ab0da36#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/7789f256-a806-479a-b6d0-50e3d4cd9abc#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ],
+              "primaryMediaType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
+                  "type": "primaryMediaType"
+                }
+              ],
+              "motivation": [],
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "formats": [
+                {
+                  "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingLabel": "News report",
+                  "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                  "thingType": ["tagging:TagConcept", "tagging:Format"],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Report",
+                  "thingPreferredLabel": "Report",
+                  "thingLabelLanguage": "ar",
+                  "type": "formats"
+                }
+              ],
+              "editorialSensitivity": [
+                {
+                  "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                  "type": "editorialSensitivity"
+                }
+              ],
+              "about": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f#id",
+                  "thingLabel": "البيئة",
+                  "thingUri": "http://www.bbc.co.uk/things/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f#id",
+                  "thingId": "0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f",
+                  "thingType": [
+                    "tagging:AmbiguousTerm",
+                    "core:Theme",
+                    "tagging:TagConcept",
+                    "core:Thing",
+                    "tagging:Genre"
+                  ],
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q43619",
+                    "http://dbpedia.org/resource/Natural_environment"
+                  ],
+                  "thingEnglishLabel": "Environment",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/7789f256-a806-479a-b6d0-50e3d4cd9abc#id",
+                  "thingLabel": "فيضانات",
+                  "thingUri": "http://www.bbc.co.uk/things/7789f256-a806-479a-b6d0-50e3d4cd9abc#id",
+                  "thingId": "7789f256-a806-479a-b6d0-50e3d4cd9abc",
+                  "thingType": [
+                    "core:Theme",
+                    "tagging:TagConcept",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [
+                    "http://dbpedia.org/resource/Flood",
+                    "http://www.wikidata.org/entity/Q8068"
+                  ],
+                  "thingEnglishLabel": "Floods",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/9b16a6c2-7c16-42b7-bff7-6549579622e8#id",
+                  "thingLabel": "الطقس العاصف",
+                  "thingUri": "http://www.bbc.co.uk/things/9b16a6c2-7c16-42b7-bff7-6549579622e8#id",
+                  "thingId": "9b16a6c2-7c16-42b7-bff7-6549579622e8",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Thing",
+                    "core:Theme"
+                  ],
+                  "thingSameAs": [
+                    "http://dbpedia.org/resource/Extreme_weather"
+                  ],
+                  "thingEnglishLabel": "Severe weather",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/db8d6c6f-13c2-44d7-963c-54c06ab0da36#id",
+                  "thingLabel": "ليبيا",
+                  "thingUri": "http://www.bbc.co.uk/things/db8d6c6f-13c2-44d7-963c-54c06ab0da36#id",
+                  "thingId": "db8d6c6f-13c2-44d7-963c-54c06ab0da36",
+                  "thingType": [
+                    "core:Place",
+                    "tagging:TagConcept",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": ["http://sws.geonames.org/2215636/"],
+                  "thingEnglishLabel": "Libya",
+                  "type": "about"
+                }
+              ]
+            }
+          },
+          "byline": {
+            "blocks": [
+              {
+                "type": "contributor",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "name",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "علي القماطي وسميرة السعيدي",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "علي القماطي وسميرة السعيدي",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "role",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "بي بي سي عربي",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "بي بي سي عربي",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "serviceIdentifier": "Arabic",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:c20lvx31j2po",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:c4gvd1g6kpdo",
+            "canonicalUrl": "https://www.bbc.com/arabic/articles/c4gvd1g6kpdo"
+          },
+          "timestamp": 1725390088721,
+          "suitableForSyndication": true,
+          "language": "ar",
+          "headlines": {
+            "seoHeadline": "الضفة الغربية: مستوطنو البؤر الاستيطانية الإسرائيلية يستولون على أراضٍ فلسطينية",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "المستوطنون المتطرفون يستولون على أراضي الضفة الغربية بوتيرة متسارعة - تقرير لبي بي سي",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "المستوطنون المتطرفون يستولون على أراضي الضفة الغربية بوتيرة متسارعة - تقرير لبي بي سي",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "موشيه شرفيت يعيش في بؤرة استيطانية ويخضع لعدة عقوبات",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "موشيه شرفيت يعيش في بؤرة استيطانية ويخضع لعدة عقوبات",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 672,
+                    "height": 379,
+                    "locator": "e4a4/live/127459f0-6867-11ef-b970-9f202720b57a.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "BBC",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "البؤر الاستيطانية غير القانونية التي تستولي على مساحات شاسعة من الأراضي مرتبطة بالعنف ضد الفلسطينيين.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "البؤر الاستيطانية غير القانونية التي تستولي على مساحات شاسعة من الأراضي مرتبطة بالعنف ضد الفلسطينيين.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "ar",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
+            "locator": "urn:bbc:optimo:asset:c4gvd1g6kpdo",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/5d0ebc7f-ec19-4598-b12e-c6347d5aff84#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/a2ada86c-5450-4055-ad81-ef6bc0b922cc#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/be78be13-d6db-4f71-a988-143a40f80a4a#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/84b77b58-6acb-4074-8733-c237a0687641#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ],
+              "motivation": [],
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "formats": [
+                {
+                  "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingLabel": "News report",
+                  "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                  "thingType": ["tagging:TagConcept", "tagging:Format"],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Report",
+                  "thingPreferredLabel": "Report",
+                  "thingLabelLanguage": "ar",
+                  "type": "formats"
+                }
+              ],
+              "about": [
+                {
+                  "value": "http://www.bbc.co.uk/things/5d0ebc7f-ec19-4598-b12e-c6347d5aff84#id",
+                  "thingLabel": "الضفة الغربية",
+                  "thingUri": "http://www.bbc.co.uk/things/5d0ebc7f-ec19-4598-b12e-c6347d5aff84#id",
+                  "thingId": "5d0ebc7f-ec19-4598-b12e-c6347d5aff84",
+                  "thingType": [
+                    "core:Thing",
+                    "core:Place",
+                    "tagging:TagConcept"
+                  ],
+                  "thingSameAs": [
+                    "http://sws.geonames.org/285153/",
+                    "http://dbpedia.org/resource/West_Bank",
+                    "http://www.wikidata.org/entity/Q36678"
+                  ],
+                  "thingEnglishLabel": "West Bank",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/84b77b58-6acb-4074-8733-c237a0687641#id",
+                  "thingLabel": "إسرائيل",
+                  "thingUri": "http://www.bbc.co.uk/things/84b77b58-6acb-4074-8733-c237a0687641#id",
+                  "thingId": "84b77b58-6acb-4074-8733-c237a0687641",
+                  "thingType": [
+                    "core:Thing",
+                    "tagging:TagConcept",
+                    "core:Place"
+                  ],
+                  "thingSameAs": [
+                    "http://sws.geonames.org/294640/",
+                    "http://dbpedia.org/resource/Israel",
+                    "http://www.wikidata.org/entity/Q801"
+                  ],
+                  "thingEnglishLabel": "Israel",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/a2ada86c-5450-4055-ad81-ef6bc0b922cc#id",
+                  "thingLabel": "الصراع الفلسطيني الإسرائيلي",
+                  "thingUri": "http://www.bbc.co.uk/things/a2ada86c-5450-4055-ad81-ef6bc0b922cc#id",
+                  "thingId": "a2ada86c-5450-4055-ad81-ef6bc0b922cc",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Theme",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q16125891",
+                    "http://dbpedia.org/resource/Israel–Palestine_relations"
+                  ],
+                  "thingEnglishLabel": "Israel & the Palestinians",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/be78be13-d6db-4f71-a988-143a40f80a4a#id",
+                  "thingLabel": "الأراضي الفلسطينية",
+                  "thingUri": "http://www.bbc.co.uk/things/be78be13-d6db-4f71-a988-143a40f80a4a#id",
+                  "thingId": "be78be13-d6db-4f71-a988-143a40f80a4a",
+                  "thingType": [
+                    "core:Thing",
+                    "core:Place",
+                    "tagging:TagConcept"
+                  ],
+                  "thingSameAs": ["http://sws.geonames.org/6254930/"],
+                  "thingEnglishLabel": "Palestinian territories",
+                  "type": "about"
+                }
+              ]
+            }
+          },
+          "byline": {
+            "blocks": [
+              {
+                "type": "contributor",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "name",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "جيك تاكي، زياد القطان، أمير نادر، ماثيو كاسيل",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "جيك تاكي، زياد القطان، أمير نادر، ماثيو كاسيل",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "role",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "تحقيقات عين بي بي سي ",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "تحقيقات عين بي بي سي ",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "serviceIdentifier": "Arabic",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:c4gvd1g6kpdo",
+          "type": "optimo"
+        }
+      ],
+      "mostRead": {
+        "generated": "2024-09-20T08:49:25.595Z",
+        "lastRecordTimeStamp": "2024-09-20T08:47:00Z",
+        "firstRecordTimeStamp": "2024-09-20T08:32:00Z",
+        "items": [
+          {
+            "id": "urn:bbc:optimo:asset:cm2yeel8mp9o",
+            "rank": 1,
+            "title": "تفجيرات لبنان: ضباط إسرائيليون يكشفون أسرار سمعة الموساد المرعبة - في التلغراف",
+            "href": "https://www.bbc.com/arabic/articles/cm2yeel8mp9o",
+            "timestamp": "2024-09-19T09:43:53.671Z"
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cvglmkgd0zxo",
+            "rank": 2,
+            "title": "شركة يابانية تعلق على أجهزة الاتصالات التي تحمل شعارها وانفجرت في لبنان",
+            "href": "https://www.bbc.com/arabic/articles/cvglmkgd0zxo",
+            "timestamp": "2024-09-20T08:00:48.323Z"
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c5y8457yemyo",
+            "rank": 3,
+            "title": "إسرائيل تقترح \"خروجا آمنا\" للسنوار من قطاع غزة",
+            "href": "https://www.bbc.com/arabic/articles/c5y8457yemyo",
+            "timestamp": "2024-09-19T15:39:47.593Z"
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c869w0wvew7o",
+            "rank": 4,
+            "title": "وثائقي لبي بي سي: موظفون في هارودز يتهمون محمد الفايد بتورطه في جرائم اغتصاب",
+            "href": "https://www.bbc.com/arabic/articles/c869w0wvew7o",
+            "timestamp": "2024-09-20T02:43:29.969Z"
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c6p2ewn8536o",
+            "rank": 5,
+            "title": "ماذا تعني المشاركة في مسابقة للجمال في الصومال؟",
+            "href": "https://www.bbc.com/arabic/articles/c6p2ewn8536o",
+            "timestamp": "2024-07-16T20:48:11.388Z"
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cd0zgxgmkveo",
+            "rank": 6,
+            "title": "القبض على الشيخ صلاح الدين التيجاني، على خلفية اتهام إحدى السيدات له \"بالتحرش بها\"",
+            "href": "https://www.bbc.com/arabic/articles/cd0zgxgmkveo",
+            "timestamp": "2024-09-20T07:34:17.101Z"
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c1e8l62ze7yo",
+            "rank": 7,
+            "title": "انتصارات الموساد وإخفاقاته: أبرز عشر عمليات في تاريخه ",
+            "href": "https://www.bbc.com/arabic/articles/c1e8l62ze7yo",
+            "timestamp": "2024-09-19T17:16:23.324Z"
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c0jw1vx4qdyo",
+            "rank": 8,
+            "title": "لماذا يتهافت الناس على شراء أحدث إصدارات الهواتف الذكية؟",
+            "href": "https://www.bbc.com/arabic/articles/c0jw1vx4qdyo",
+            "timestamp": "2024-09-20T06:41:11.493Z"
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cly623qdw1ko",
+            "rank": 9,
+            "title": "حرب أوسع أم هدنة غير مستقرة - ما هي مخاطر التصعيد بعد هجمات لبنان؟",
+            "href": "https://www.bbc.com/arabic/articles/cly623qdw1ko",
+            "timestamp": "2024-09-20T02:21:24.217Z"
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cy5ylz2qlwno",
+            "rank": 10,
+            "title": "كيف خُدع هنود للقتال مع القوات الروسية ضد أوكرانيا؟",
+            "href": "https://www.bbc.com/arabic/articles/cy5ylz2qlwno",
+            "timestamp": "2024-09-19T07:53:47.587Z"
+          }
+        ]
+      },
+      "latestMedia": null
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

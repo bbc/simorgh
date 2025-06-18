@@ -56,22 +56,28 @@ const PostHeaderBanner = ({
 }) => {
   const {
     timezone,
-    locale,
+    datetimeLocale,
+    serviceDatetimeLocale,
     altCalendar,
     service,
     script,
     translations: {
-      liveExperiencePage: { breaking = 'Breaking' },
+      liveExperiencePage: {
+        breaking = 'Breaking',
+        postDateTimeFormat,
+        postDateFormat,
+      },
     },
   } = useContext(ServiceContext);
+  const locale = serviceDatetimeLocale || datetimeLocale;
   const isRelative = isTenHoursAgo(new Date(curated).getTime());
   return (
     <span css={[styles.postHeaderBanner, isBreakingNews && styles.fullWidth]}>
       <TimeStampContainer
         css={styles.timeStamp}
         timestamp={curated}
-        dateTimeFormat="DD MMMM YYYY"
-        format="D MMMM YYYY"
+        dateTimeFormat={postDateTimeFormat || 'DD MMMM YYYY'}
+        format={postDateFormat || 'D MMMM YYYY'}
         locale={locale}
         timezone={timezone}
         service={service}
@@ -149,6 +155,9 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
     ),
     video: (props: { blocks: MediaBlock[] }) => (
       <MediaLoader blocks={props.blocks} css={styles.bodyMedia} />
+    ),
+    audio: (props: { blocks: MediaBlock[] }) => (
+      <MediaLoader blocks={props.blocks} css={styles.audioPost} />
     ),
     social: SocialEmbedContainer,
   };

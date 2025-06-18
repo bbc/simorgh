@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-cymrufyw',
     atiAnalyticsProducerId: '100',
+    atiAnalyticsProducerName: 'WALES',
+    useReverb: true,
     chartbeatDomain: 'cymrufyw.bbc.co.uk',
     brandName: 'BBC Cymru Fyw',
     product: 'BBC News',
@@ -37,8 +39,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
     isTrustProjectParticipant: true,
     script: latinWithDiacritics,
-    manifestPath: '/articles/manifest.json',
-    frontPageTitle: 'Newyddion a mwy',
+    manifestPath:
+      'https://static.files.bbci.co.uk/core/manifest.1ccdbcfd4cc3bf889128a50903c2b22c81758637.json',
+    homePageTitle: 'Newyddion a mwy',
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
@@ -65,6 +68,10 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Cyhoeddwyd am',
         summary: 'Crynodeb',
         shareButtonText: 'Rhannu',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'Cipolwg',
       error: {
@@ -124,7 +131,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'Iawn',
           reject: 'Beth sydd wedi newid',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters/cy',
+          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/privacy-policy/cy',
         },
         cookie: {
           amp: {
@@ -309,16 +316,13 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'Mwyaf poblogaidd',
+      header: 'Popular Reads',
       lastUpdated: 'Diweddariad diwethaf:',
       numberOfItems: 5,
       hasMostRead: false,
     },
     radioSchedule: {
       hasRadioSchedule: false,
-    },
-    recommendations: {
-      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {

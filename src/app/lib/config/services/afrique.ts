@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-afrique',
     atiAnalyticsProducerId: '3',
+    atiAnalyticsProducerName: 'AFRIQUE',
+    useReverb: true,
     chartbeatDomain: 'afrique.bbc.co.uk',
     brandName: 'BBC News Afrique',
     product: 'BBC News',
@@ -40,9 +42,9 @@ export const service: DefaultServiceConfig = {
       'https://www.bbc.com/afrique/institutionelles-49283281',
     isTrustProjectParticipant: true,
     script: latinWithDiacritics,
-    manifestPath: '/manifest.json',
+    manifestPath: '/afrique/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Accueil',
+    homePageTitle: 'Accueil',
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -55,14 +57,25 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'Publicités',
       },
-      recommendationTitle: 'Recommended articles',
       seeAll: 'Tout voir',
       home: 'Accueil',
+      continueReading: 'Continuer la lecture',
       currentPage: 'Page en cours',
       skipLinkText: 'Aller au contenu',
       relatedContent: 'Lire plus',
       relatedTopics: 'Sujets associés',
       navMenuText: 'Rubriques',
+      liteSite: {
+        onboardingMessage:
+          'Vous visualisez une version texte de ce site web qui utilise moins de données. Voir la version principale du site, avec toutes les images et vidéos.',
+        toMainSite: 'Me rediriger vers le site principal',
+        informationPage: 'En savoir plus sur cette version économe en données',
+        informationPageLink:
+          'https://www.bbc.com/afrique/articles/c861e868x5eo',
+        dataSaving: 'Lire uniquement le texte pour utiliser moins de données',
+        articleDataSavingLinkText:
+          'Lire uniquement le texte pour utiliser moins de données',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Lecteur média',
         audioPlayer: 'Lecteur audio',
@@ -75,6 +88,10 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Posté à',
         summary: 'Points clés',
         shareButtonText: 'Partager',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'Points clés',
       error: {
@@ -132,7 +149,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'OK',
           reject: 'Découvrez ce qui a changé',
-          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/privacy-policy/',
         },
         cookie: {
           amp: {
@@ -231,6 +248,7 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Emission de radio suivante',
         duration: 'Durée',
         recentEpisodes: 'Editions Précédentes',
+        closeVideo: 'Sortir',
       },
       socialEmbed: {
         caption: {
@@ -266,7 +284,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'Le choix de la rédaction',
     },
     mostRead: {
-      header: 'Les plus lus',
+      header: 'Les plus populaires',
       lastUpdated: 'Dernière mise à jour:',
       numberOfItems: 5,
       hasMostRead: true,
@@ -277,7 +295,7 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'Durée %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'Les plus lus',
       skipLink: {
         text: 'Skip %title% and continue reading',
         endTextVisuallyHidden: 'End of %title%',
@@ -314,6 +332,10 @@ export const service: DefaultServiceConfig = {
           text: 'Contactez la BBC',
         },
         {
+          href: 'https://www.bbc.com/ws/languages',
+          text: 'Autres langues',
+        },
+        {
           id: 'COOKIE_SETTINGS',
           href: '#',
           text: 'Do not share or sell my info',
@@ -330,6 +352,14 @@ export const service: DefaultServiceConfig = {
         url: '/afrique',
       },
       {
+        title: 'Conflit en RDC',
+        url: '/afrique/topics/cge72ry253jt',
+      },
+      {
+        title: 'Ecoutez en direct',
+        url: '/afrique/bbc_afrique_radio/liveradio',
+      },
+      {
         title: 'Afrique',
         url: '/afrique/topics/cvqxn2k7kv7t',
       },
@@ -340,10 +370,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Santé',
         url: '/afrique/topics/c06gq9jxz3rt',
-      },
-      {
-        title: 'JO 2024',
-        url: '/afrique/topics/cgrjz0yz4n9t',
       },
       {
         title: 'Science et technologie',
@@ -360,14 +386,12 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Vidéos',
         url: '/afrique/topics/cz4vn9gyd6rt',
+        hideOnLiteSite: true,
       },
       {
         title: 'Nos émissions',
         url: '/afrique/topics/c88nzggm8gxt',
-      },
-      {
-        title: 'Ecoutez en direct',
-        url: '/afrique/bbc_afrique_radio/liveradio',
+        hideOnLiteSite: true,
       },
     ],
   },

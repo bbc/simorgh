@@ -1,0 +1,29 @@
+{
+  "alpha": true,
+  "lastUpdated": {
+    "day": 24,
+    "month": "April",
+    "year": 2025
+  },
+  "uxAccessibilityDoc": {
+    "done": false,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/WS-Portrait-video-carousel-Screenreader-UX--Cl0L8noZiU5i3NAuaH9QQtBAAg-VM5GcCjrn4UMyCb8LJ5o8",
+      "label": "Screen Reader UX"
+    }
+  },
+  "acceptanceCriteria": {
+    "done": false,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/WS-Portrait-video-carousel-Accessibility-acceptance-criteria--Cl0f2EhvN09yHjY55mFPvP~XAg-AWpaTtwg9KZ8PaddWGmX8",
+      "label": "Accessibility Acceptance Criteria"
+    }
+  },
+  "swarm": {
+    "done": true,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/A11Y-Swarm-Portrait-Video-Carousel--Cn_EkEH~EIbQan~WE2kn0UYzAg-bLd37MnqliqI6nGU9kUqd",
+      "label": "Accessibility Swarm"
+    }
+  }
+}

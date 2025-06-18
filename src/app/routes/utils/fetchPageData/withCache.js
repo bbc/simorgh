@@ -1,4 +1,4 @@
-import LRUCache from 'lru-cache';
+import { LRUCache } from 'lru-cache';
 import fetchPageData from '.';
 
 const cacheMaxItems = 400;

@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-tigrinya',
     atiAnalyticsProducerId: '91',
+    atiAnalyticsProducerName: 'TIGRINYA',
+    useReverb: true,
     chartbeatDomain: 'tigrinya.bbc.co.uk',
     brandName: 'BBC News ትግርኛ',
     product: 'BBC News',
@@ -39,11 +41,28 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/tigrinya/institutional-49283259',
     isTrustProjectParticipant: true,
     script: noAscendersOrDescenders,
-    manifestPath: '/manifest.json',
+    manifestPath: '/tigrinya/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'ዜና',
+    homePageTitle: 'ዜና',
     showAdPlaceholder: false,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'መወዓውዒ ዋትስኣፕ ቻነል',
+      brandTitle: 'ዋትስኣፕ ቻነል ቢቢሲ ትግርኛ',
+      brandDescription: 'ዜና፡ ትንታነን ታሪኻትን ብቐጥታ ኣብ ዋትስኣፕ ንምርካብ',
+      image: {
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0kxgny2.png',
+        alt: 'ቢቢሲ ትግርኛ ኣብ ዋትስኣፕ ቻነል',
+      },
+      linkLabel: {
+        text: 'ነዚ መላግቦ ብምጥዋቕ ኣባል ቻነልና ኵኑ!',
+        href: 'https://www.whatsapp.com/channel/0029VasPgatEVccGCsD4B42n',
+      },
+      skipLink: {
+        text: 'መወዓውዒ ስገሮ፣ ንባብካ ቀጽል',
+        endTextVisuallyHidden: 'መዛዘሚ መወዓውዒ ዋትስኣፕ ቻነል',
+      },
+    },
     translations: {
       pagination: {
         previousPage: 'ናይ ሕሉፍ',
@@ -72,6 +91,10 @@ export const service: DefaultServiceConfig = {
         postedAt: 'ዝተለጠፈሉ',
         summary: 'ጽማቝ ሓበሬታ',
         shareButtonText: 'ኣባፅሑ',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       error: {
         404: {
@@ -120,7 +143,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'ሕራይ',
           reject: 'እንታይ ከምዝተለወጠ ረኣዩ',
-          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/privacy-policy/',
         },
         cookie: {
           amp: {
@@ -207,6 +230,7 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'ዝቕጽል ፈነወ ራድዮ',
         duration: 'ዕምሪ ፈነወ',
         recentEpisodes: 'ዝሓለፉ ክፋላት',
+        closeVideo: 'ออก',
       },
       socialEmbed: {
         caption: {
@@ -239,7 +263,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'ናይ መወዳእታ',
     },
     mostRead: {
-      header: 'ብብዝሒ ዝተነበ',
+      header: 'ዝያዳ ዝተነበ',
       lastUpdated: 'ንመወዳእታ እዋን ዝተመሓየሸሉ:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -250,7 +274,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'ዕምሪ ፈነወ %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'ብብዝሒ ዝተነበ',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
@@ -283,6 +311,10 @@ export const service: DefaultServiceConfig = {
           text: 'ንቢቢሲ የዛርቡ',
         },
         {
+          href: 'https://www.bbc.com/ws/languages',
+          text: 'ብኻልኦት ቋንቋታት',
+        },
+        {
           id: 'COOKIE_SETTINGS',
           href: '#',
           text: 'Do not share or sell my info',
@@ -295,6 +327,26 @@ export const service: DefaultServiceConfig = {
       {
         title: 'ዜና',
         url: '/tigrinya',
+      },
+      {
+        title: 'ኤርትራ',
+        url: '/tigrinya/topics/c1gdqrg28zxt',
+      },
+      {
+        title: 'ኢትዮጵያ',
+        url: '/tigrinya/topics/cdr56vrknx6t',
+      },
+      {
+        title: 'ሱዳን',
+        url: '/tigrinya/topics/c5qvp11n2vzt',
+      },
+      {
+        title: 'ማእከላይ ምብራቕ',
+        url: '/tigrinya/topics/c5qvp1qz3q6t',
+      },
+      {
+        title: 'ሳይንስን ጥዕናን',
+        url: '/tigrinya/topics/cx2yler1d05t',
       },
       {
         title: 'ቪድዮ',

@@ -11,7 +11,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const LoadablePlugin = require('@loadable/webpack-plugin');
 const webpack = require('webpack');
 const dotenv = require('dotenv');
-const { DuplicatesPlugin } = require('inspectpack/plugin');
+const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack-plugin');
 const { getClientEnvVars } = require('./src/clientEnvVars');
 
 const FRAMEWORK_BUNDLES = ['react', 'react-dom'];
@@ -194,11 +194,21 @@ module.exports = ({
       new CopyWebpackPlugin({
         patterns: [{ from: 'public' }],
       }),
-      new DuplicatesPlugin({
+      new DuplicatePackageCheckerPlugin({
         // Emit compilation warning or error? (Default: `false`)
-        emitErrors: true,
+        emitError: true,
         // Display full duplicates information? (Default: `false`)
         verbose: true,
+        exclude({ name, path }) {
+          return (
+            name === '@babel/runtime' &&
+            [
+              './~/@emotion/react/~/@babel/runtime',
+              './~/@loadable/component/~/@babel/runtime',
+              './~/react-router-dom/~/@babel/runtime',
+            ].includes(path)
+          );
+        },
       }),
       /*
        * webpack 5 does no longer includes a polyfill for the Node.js process variable in

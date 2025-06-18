@@ -1,0 +1,847 @@
+{
+  "data": {
+    "avEmbed": {
+      "metadata": {
+        "atiAnalytics": {
+          "categoryName": null,
+          "contentId": "urn:bbc:cps:curie:asset:402fc943-0b94-3942-89fc-223be3586ab5",
+          "contentType": "article-media-asset",
+          "language": "ru",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "nationsProducer": null,
+          "pageIdentifier": "russian.media.media_asset.38886884.page",
+          "pageTitle": "Тайвань отказывается от АЭС и переходит на энергию Солнца",
+          "timePublished": "2017-02-08T17:41:41.000Z",
+          "timeUpdated": "2017-02-08T17:41:41.000Z",
+          "producerName": "RUSSIAN",
+          "producerId": "75"
+        },
+        "id": "urn:bbc:ares::asset:russian/media-38886884",
+        "locators": {
+          "assetUri": "/russian/media-38886884",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:402fc943-0b94-3942-89fc-223be3586ab5",
+          "assetId": "38886884",
+          "cpsUrn": "urn:bbc:content:assetUri:russian/media-38886884",
+          "canonicalUrl": "https://www.bbc.com/russian/media-38886884",
+          "curie": "http://www.bbc.co.uk/asset/402fc943-0b94-3942-89fc-223be3586ab5"
+        },
+        "type": "MAP",
+        "createdBy": "russian-v6",
+        "language": "ru",
+        "lastUpdated": 1709300370000,
+        "firstPublished": 1486575701000,
+        "lastPublished": 1486575701000,
+        "timestamp": 1486575701000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "allowDateStamp": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "allowAdvertising": true,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "cps_asset_id": "38886884",
+          "page": "russian.media.media_asset.38886884.page",
+          "contentId": "urn:bbc:cps:curie:asset:402fc943-0b94-3942-89fc-223be3586ab5",
+          "cps_asset_type": "map"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.41",
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "video",
+          "caption",
+          "links",
+          "link",
+          "image",
+          "altText",
+          "rawImage",
+          "urlLink",
+          "aresLink",
+          "aresMedia",
+          "aresMediaMetadata"
+        ],
+        "includeComments": false,
+        "readTime": 1,
+        "siteUri": "/russian",
+        "mediaType": "video",
+        "allowAdvertising": true,
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false,
+        "useSensitiveOnwardJourneys": false,
+        "service": "russian"
+      },
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "type": "aresMedia",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "urn:bbc:ares::clip:p04s97g5",
+                    "type": "aresMediaMetadata",
+                    "model": {
+                      "id": "p04s97g5",
+                      "subType": "clip",
+                      "format": "video",
+                      "title": "Тайвань отказывается от АЭС и переходит на энергию Солнца",
+                      "synopses": {
+                        "short": "Тайвань отказывается от АЭС и переходит на энергию Солнца",
+                        "medium": "Правительство Тайваня делает ставку на возобновляемую энергию и отказывается от АЭС.",
+                        "long": "Долгое время Тайвань полагался на атомную энергетику, однако к 2025 году страна намерена полностью закончить эксплуатацию АЭС.\n\nВместо этого власти острова сделали ставку на возобновляемую энергию, они строят ветряные турбины и устанавливают на заброшенных земельных участках солнечные батареи."
+                      },
+                      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p04s9hxz.jpg",
+                      "embedding": true,
+                      "advertising": true,
+                      "versions": [
+                        {
+                          "versionId": "p04s97g7",
+                          "types": ["Original"],
+                          "duration": 122,
+                          "durationISO8601": "PT2M2S",
+                          "warnings": {},
+                          "availableTerritories": {
+                            "uk": true,
+                            "nonUk": true
+                          },
+                          "availableFrom": 1486571480000
+                        }
+                      ],
+                      "syndication": {
+                        "destinations": []
+                      },
+                      "smpKind": "programme"
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "rawImage",
+                          "model": {
+                            "locator": "ichef.bbci.co.uk/images/ic/$widthxn/p04s9hxz.jpg",
+                            "originCode": "mpv"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "captionText",
+                    "model": {
+                      "caption": "Тайвань переходит на энергию Солнца"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "promo": {
+        "locators": {
+          "assetUri": "/russian/media-38886884",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:402fc943-0b94-3942-89fc-223be3586ab5",
+          "assetId": "38886884",
+          "cpsUrn": "urn:bbc:content:assetUri:russian/media-38886884",
+          "canonicalUrl": "https://www.bbc.com/russian/media-38886884",
+          "curie": "http://www.bbc.co.uk/asset/402fc943-0b94-3942-89fc-223be3586ab5"
+        },
+        "timestamp": 1486575701000,
+        "suitableForSyndication": false,
+        "language": "ru",
+        "headlines": {
+          "seoHeadline": "Тайвань отказывается от АЭС и переходит на энергию Солнца",
+          "promoHeadline": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Тайвань отказывается от АЭС и переходит на энергию Солнца",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Тайвань отказывается от АЭС и переходит на энергию Солнца",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Поля солнечных батарей на Тайване",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Поля солнечных батарей на Тайване",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "height": 360,
+                  "width": 640,
+                  "locator": "1183/production/_94138440_de27.jpg",
+                  "href": "http://c.files.bbci.co.uk/1183/production/_94138440_de27.jpg",
+                  "originCode": "cpsprodpb",
+                  "copyrightHolder": "BBC",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        },
+        "summary": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Правительство Тайваня делает ставку на возобновляемую энергию и отказывается от АЭС.",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "Правительство Тайваня делает ставку на возобновляемую энергию и отказывается от АЭС.",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian",
+          "taggings": []
+        },
+        "serviceIdentifier": "Russian-v6",
+        "extrinsicPromo": {
+          "headlines": {
+            "shortHeadline": "Тайвань отказывается от АЭС и переходит на энергию Солнца"
+          },
+          "assetType": "MAP",
+          "media": {
+            "blocks": [
+              {
+                "type": "video",
+                "model": {
+                  "locator": "urn:bbc:pips:pid:p04s97g5",
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Тайвань переходит на энергию Солнца",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Тайвань переходит на энергию Солнца",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "aresMedia",
+                      "model": {
+                        "blocks": [
+                          {
+                            "blockId": "urn:bbc:ares::clip:p04s97g5",
+                            "type": "aresMediaMetadata",
+                            "model": {
+                              "id": "p04s97g5",
+                              "subType": "clip",
+                              "format": "video",
+                              "title": "Тайвань отказывается от АЭС и переходит на энергию Солнца",
+                              "synopses": {
+                                "short": "Тайвань отказывается от АЭС и переходит на энергию Солнца",
+                                "medium": "Правительство Тайваня делает ставку на возобновляемую энергию и отказывается от АЭС.",
+                                "long": "Долгое время Тайвань полагался на атомную энергетику, однако к 2025 году страна намерена полностью закончить эксплуатацию АЭС.\n\nВместо этого власти острова сделали ставку на возобновляемую энергию, они строят ветряные турбины и устанавливают на заброшенных земельных участках солнечные батареи."
+                              },
+                              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p04s9hxz.jpg",
+                              "embedding": true,
+                              "advertising": true,
+                              "versions": [
+                                {
+                                  "versionId": "p04s97g7",
+                                  "types": ["Original"],
+                                  "duration": 122,
+                                  "durationISO8601": "PT2M2S",
+                                  "warnings": {},
+                                  "availableTerritories": {
+                                    "uk": true,
+                                    "nonUk": true
+                                  },
+                                  "availableFrom": 1486571480000
+                                }
+                              ],
+                              "syndication": {
+                                "destinations": []
+                              },
+                              "smpKind": "programme"
+                            }
+                          },
+                          {
+                            "type": "image",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "rawImage",
+                                  "model": {
+                                    "locator": "ichef.bbci.co.uk/images/ic/$widthxn/p04s9hxz.jpg",
+                                    "originCode": "mpv"
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "type": "cps"
+        },
+        "id": "urn:bbc:ares::asset:russian/media-38886884",
+        "type": "caf"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Media",
+          "uri": "/russian/media",
+          "urlIdentifier": "/russian/media",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "Новости на русском языке",
+          "uri": "/russian",
+          "urlIdentifier": "/russian",
+          "type": "simple"
+        },
+        "groups": [
+          {
+            "type": "see-alsos",
+            "promos": [
+              {
+                "locators": {
+                  "assetUri": "/russian/media-38437754",
+                  "cpsUrn": "urn:bbc:content:assetUri:/russian/media-38437754"
+                },
+                "timestamp": 1482946077000,
+                "suitableForSyndication": false,
+                "language": "ru",
+                "headlines": {
+                  "seoHeadline": "Энергия с запашком: спа-салон работает на фекалиях",
+                  "promoHeadline": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Энергия с запашком: спа-салон работает на фекалиях",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Энергия с запашком: спа-салон работает на фекалиях",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                "images": {
+                  "defaultPromoImage": {
+                    "blocks": [
+                      {
+                        "type": "altText",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "text",
+                              "model": {
+                                "blocks": [
+                                  {
+                                    "type": "paragraph",
+                                    "model": {
+                                      "text": "Хельер Чунг",
+                                      "blocks": [
+                                        {
+                                          "type": "fragment",
+                                          "model": {
+                                            "text": "Хельер Чунг",
+                                            "attributes": []
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "rawImage",
+                        "model": {
+                          "height": 360,
+                          "width": 640,
+                          "locator": "86BF/production/_93159443_de27.jpg",
+                          "href": "http://c.files.bbci.co.uk/86BF/production/_93159443_de27.jpg",
+                          "originCode": "cpsprodpb",
+                          "copyrightHolder": "BBC",
+                          "suitableForSyndication": true
+                        }
+                      }
+                    ]
+                  }
+                },
+                "summary": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "СПА-салон в Гонконге обеспечивается электричеством, которое вырабатывается из канализационных отходов.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "СПА-салон в Гонконге обеспечивается электричеством, которое вырабатывается из канализационных отходов.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "extrinsicPromo": {
+                  "headlines": {
+                    "shortHeadline": "Энергия с запашком: спа-салон работает на фекалиях"
+                  },
+                  "assetType": "MAP",
+                  "media": {
+                    "blocks": [
+                      {
+                        "type": "video",
+                        "model": {
+                          "locator": "urn:bbc:pips:pid:p04mqw16",
+                          "blocks": [
+                            {
+                              "type": "caption",
+                              "model": {
+                                "blocks": [
+                                  {
+                                    "type": "text",
+                                    "model": {
+                                      "blocks": [
+                                        {
+                                          "type": "paragraph",
+                                          "model": {
+                                            "text": "В Гонконге открылся СПА-салон на канализационных отходах",
+                                            "blocks": [
+                                              {
+                                                "type": "fragment",
+                                                "model": {
+                                                  "text": "В Гонконге открылся СПА-салон на канализационных отходах",
+                                                  "attributes": []
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "aresMedia",
+                              "model": {
+                                "blocks": [
+                                  {
+                                    "blockId": "urn:bbc:ares::clip:p04mqw16",
+                                    "type": "aresMediaMetadata",
+                                    "model": {
+                                      "id": "p04mqw16",
+                                      "subType": "clip",
+                                      "format": "video",
+                                      "title": "Энергия с запашком: спа-салон работает на фекалиях",
+                                      "synopses": {
+                                        "short": "Энергия с запашком: спа-салон работает на фекалиях",
+                                        "medium": "СПА-салон в Гонконге обеспечивается электричеством, которое вырабатывается из канализационных отходов.",
+                                        "long": "Руководство нового водоочистного завода в Гонконге открыло при своем предприятии СПА-салон, который работает на канализационных отходах.\n\nОтходы служат топливом для электрогенераторов, которые в свою очередь обеспечивают салон электричеством.\n\nНо не отпугивает ли посетителей такое странное соседство салона, куда люди приходят для очищения, с канализацией?"
+                                      },
+                                      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p04mr7pw.jpg",
+                                      "embedding": true,
+                                      "advertising": true,
+                                      "versions": [
+                                        {
+                                          "versionId": "p04mqw1g",
+                                          "types": ["Original"],
+                                          "duration": 100,
+                                          "durationISO8601": "PT1M40S",
+                                          "warnings": {},
+                                          "availableTerritories": {
+                                            "uk": true,
+                                            "nonUk": true
+                                          },
+                                          "availableFrom": 1482941175000
+                                        }
+                                      ],
+                                      "syndication": {
+                                        "destinations": []
+                                      },
+                                      "smpKind": "programme"
+                                    }
+                                  },
+                                  {
+                                    "type": "image",
+                                    "model": {
+                                      "blocks": [
+                                        {
+                                          "type": "rawImage",
+                                          "model": {
+                                            "locator": "ichef.bbci.co.uk/images/ic/$widthxn/p04mr7pw.jpg",
+                                            "originCode": "mpv"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  "mediaType": "Video",
+                  "type": "cps"
+                },
+                "id": "urn:bbc:ares::asset:russian/media-38437754",
+                "type": "caf"
+              },
+              {
+                "locators": {
+                  "assetUri": "/russian/media-37157648",
+                  "cpsUrn": "urn:bbc:content:assetUri:/russian/media-37157648"
+                },
+                "timestamp": 1472485808000,
+                "suitableForSyndication": false,
+                "language": "ru",
+                "headlines": {
+                  "seoHeadline": "Киргизия: поможет ли стране энергия воздуха и солнца?",
+                  "promoHeadline": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Киргизия: поможет ли стране энергия воздуха и солнца?",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Киргизия: поможет ли стране энергия воздуха и солнца?",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                "images": {
+                  "defaultPromoImage": {
+                    "blocks": [
+                      {
+                        "type": "altText",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "text",
+                              "model": {
+                                "blocks": [
+                                  {
+                                    "type": "paragraph",
+                                    "model": {
+                                      "text": "Ветродвигатель Шамтур",
+                                      "blocks": [
+                                        {
+                                          "type": "fragment",
+                                          "model": {
+                                            "text": "Ветродвигатель Шамтур",
+                                            "attributes": []
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "rawImage",
+                        "model": {
+                          "height": 576,
+                          "width": 1024,
+                          "locator": "0AD9/production/_90877720_p046755y.jpg",
+                          "href": "http://c.files.bbci.co.uk/0AD9/production/_90877720_p046755y.jpg",
+                          "originCode": "cpsprodpb",
+                          "copyrightHolder": "BBC",
+                          "suitableForSyndication": true
+                        }
+                      }
+                    ]
+                  }
+                },
+                "summary": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Би-би-си продолжает публиковать материалы проекта \"Центральная Азия: реки раздора\". Мы рассказываем об изобретателе из Бишкека Эмиле Турсунове, который предлагает свой вариант решения проблемы недостатка электроэнергии в стране.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Би-би-си продолжает публиковать материалы проекта \"Центральная Азия: реки раздора\". Мы рассказываем об изобретателе из Бишкека Эмиле Турсунове, который предлагает свой вариант решения проблемы недостатка электроэнергии в стране.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "extrinsicPromo": {
+                  "headlines": {
+                    "shortHeadline": "Киргизия: поможет ли стране энергия воздуха и солнца?"
+                  },
+                  "assetType": "MAP",
+                  "media": {
+                    "blocks": [
+                      {
+                        "type": "video",
+                        "model": {
+                          "locator": "urn:bbc:pips:pid:p0467523",
+                          "blocks": [
+                            {
+                              "type": "caption",
+                              "model": {
+                                "blocks": [
+                                  {
+                                    "type": "text",
+                                    "model": {
+                                      "blocks": [
+                                        {
+                                          "type": "paragraph",
+                                          "model": {
+                                            "text": "Ветродвигатель Шамтур",
+                                            "blocks": [
+                                              {
+                                                "type": "fragment",
+                                                "model": {
+                                                  "text": "Ветродвигатель Шамтур",
+                                                  "attributes": []
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "aresMedia",
+                              "model": {
+                                "blocks": [
+                                  {
+                                    "blockId": "urn:bbc:ares::clip:p0467523",
+                                    "type": "aresMediaMetadata",
+                                    "model": {
+                                      "id": "p0467523",
+                                      "subType": "clip",
+                                      "format": "video",
+                                      "title": "Киргизия: поможет ли стране энергия воздуха и солнца?",
+                                      "synopses": {
+                                        "short": "Киргизия: поможет ли стране энергия воздуха и солнца?",
+                                        "medium": "Мы рассказываем об изобретателе из Бишкека, который предлагает свой вариант решения проблемы недостатка электроэнергии.",
+                                        "long": "Киргизия ищет инвесторов для строительства Камбартинской ГЭС-1. Стране не хватает электроэнергии. \n\nТак называемая Камбарата-1 - один из крупнейших энергетических проектов Центральной Азии, разработанных еще в советское время. Предполагалось, что мощность станции в 1,9 гигаватт покроет все нужды республики на годы вперед. \n\nОднако построить ее до сих пор не удалось - финансировать согласилась было Россия, но из-за кризиса в экономике, связанного с санкциями, отказалась. \n\nМежду тем, только в одном Бишкеке - столице Киргизии - население растет на 3000 - 5000 человек ежегодно, а вместе с ним и количество чайников, стиральных машин и других электроприборов. \n\nСуществующие шесть гидроэлектростанций республики еле справляются с таким темпом - выработка и потребление электроэнергии балансируют на грани. Последние три года Киргизия вынуждена была докупать у соседей около 2 млрд киловатт ежегодно. \n\nИзобретатель из Бишкека Эмиль Турсунов предлагает свой вариант решения проблемы: мобильный ветрогенератор. \n\nЭмиль уверяет, что аналогов его генератору в мире не существует, сейчас изобретатель ждет регистрации международного патента. \n\nИстория Эмиля Турсунова - следующая в цикле \"Центральная Азия: реки раздора\". \n\nЖурналисты Русской службы Би-би-си  Рустам Кобилов, Оксана Вождаева и Максим Ломакин отправились в регион, чтобы рассказать о ситуации с водой и энергией, увидеть, чем живут и о чем мечтают его жители. Завершится цикл показом документального фильма, снятого во время путешествия.\n\nНа прошлой неделе мы рассказывали об истории пенсионерки из южного Казахстана Асимы Даланбай-кызы Медеуовой."
+                                      },
+                                      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p046bczw.jpg",
+                                      "embedding": false,
+                                      "advertising": true,
+                                      "versions": [
+                                        {
+                                          "versionId": "p046752c",
+                                          "types": ["Original"],
+                                          "duration": 198,
+                                          "durationISO8601": "PT3M18S",
+                                          "warnings": {},
+                                          "availableTerritories": {
+                                            "uk": false,
+                                            "nonUk": false
+                                          },
+                                          "availableFrom": 1472474708000
+                                        }
+                                      ],
+                                      "syndication": {
+                                        "destinations": []
+                                      },
+                                      "smpKind": "programme"
+                                    }
+                                  },
+                                  {
+                                    "type": "image",
+                                    "model": {
+                                      "blocks": [
+                                        {
+                                          "type": "rawImage",
+                                          "model": {
+                                            "locator": "ichef.bbci.co.uk/images/ic/$widthxn/p046bczw.jpg",
+                                            "originCode": "mpv"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  "mediaType": "Video",
+                  "type": "cps"
+                },
+                "id": "urn:bbc:ares::asset:russian/media-37157648",
+                "type": "caf"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

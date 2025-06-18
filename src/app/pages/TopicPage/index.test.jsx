@@ -43,7 +43,7 @@ const getOptionParams = ({
     ads: {
       enabled: adsToggledOn,
     },
-    radioSchedule: {
+    homePageRadioSchedule: {
       enabled: true,
     },
   },
@@ -122,12 +122,21 @@ describe('Topic Page', () => {
     expect(container.getElementsByTagName('h3').length).toEqual(0);
   });
 
-  it('should render curation subheading as h2 when curation title exists', () => {
+  it('should render the first curation subheading as h2 when curation title exists', () => {
     const { container } = render(
       <TopicPage pageData={mundoMultipleCurations} />,
       getOptionParams({ service: 'mundo', lang: 'es' }),
     );
-    expect(container.querySelector('h2').textContent).toEqual('Analysis');
+    const subheading = Array.from(container.querySelectorAll('h2')).find(
+      h2 => h2.textContent === 'Analysis',
+    );
+    expect(subheading).toBeInTheDocument();
+
+    const classList = Array.from(subheading?.classList || []);
+    const isVisuallyHidden = classList.some(className =>
+      className.includes('visuallyHiddenText'),
+    );
+    expect(isVisuallyHidden).toBe(false); // Ensure it's not visually hidden
   });
 
   it('should render promo headings as h3 when curation subheading exists', () => {
@@ -145,7 +154,6 @@ describe('Topic Page', () => {
       <TopicPage pageData={pidginMultipleItems} service="pidgin" />,
       getOptionParams(),
     );
-
     expect(container.getElementsByTagName('h3').length).toEqual(0);
     expect(container.getElementsByTagName('h2').length).toEqual(4);
   });
@@ -218,6 +226,16 @@ describe('Topic Page', () => {
         expect(adElement).not.toBeInTheDocument();
       }
     });
+  });
+
+  it('should render the main html tag with an attribute of role with the value of main', () => {
+    const { container } = render(
+      <TopicPage pageData={pidginMultipleItems} />,
+      getOptionParams(),
+    );
+    const mainTag = container.querySelector('main');
+    expect(mainTag).toBeInTheDocument();
+    expect(mainTag).toHaveAttribute('role', 'main');
   });
 
   describe('Message Banner', () => {
@@ -314,8 +332,10 @@ describe('Topic Page', () => {
       render(<TopicPage pageData={pidginMultipleItems} />, getOptionParams());
 
       const getLinkedDataOutput = () => {
-        return Helmet.peek().scriptTags.map(({ innerHTML }) =>
-          JSON.parse(innerHTML),
+        return JSON.parse(
+          Helmet.peek().scriptTags.find(
+            ({ type }) => type === 'application/ld+json',
+          ).innerHTML,
         );
       };
 

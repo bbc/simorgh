@@ -12,6 +12,7 @@ import {
   renderAppleItunesApp,
 } from './utils';
 import { IconSizes, MetadataProps, Tag } from './types';
+import defaultTranslations from '../LiteSiteSummary/defaultTranslations';
 
 const ENGLISH_SERVICES = ['news', 'sport', 'ws'];
 const FACEBOOK_APP_ID = '1609039196070050';
@@ -61,6 +62,8 @@ const MetadataContainer = ({
     canonicalNonUkLink,
     ampNonUkLink,
     pathname,
+    isUK,
+    isLite,
   } = useContext(RequestContext);
 
   const {
@@ -75,23 +78,35 @@ const MetadataContainer = ({
     twitterSite,
     iTunesAppId,
     googleSiteVerification,
+    translations,
   } = useContext(ServiceContext);
   const {
     palette: { BRAND_BACKGROUND },
   } = useTheme();
   const appleTouchIcon = getAppleTouchUrl(service);
   const isEnglishService = ENGLISH_SERVICES.includes(service);
+  const pathsForUkLink = [
+    '/sport/formula1',
+    '/sport/cricket/articles',
+    '/sport/rugby-union/articles',
+    '/sport/rugby-league/articles',
+  ];
+
+  const isUKLink = pathsForUkLink.some(path => pathname?.startsWith(path));
+
+  const showAlternateUKAmp = !isUKLink && isAmp;
+
   const alternateLinksEnglishSites = [
     {
-      href: isAmp ? ampNonUkLink : canonicalNonUkLink,
+      href: showAlternateUKAmp ? ampNonUkLink : canonicalNonUkLink,
       hrefLang: 'x-default',
     },
     {
-      href: isAmp ? ampNonUkLink : canonicalNonUkLink,
+      href: showAlternateUKAmp ? ampNonUkLink : canonicalNonUkLink,
       hrefLang: 'en',
     },
     {
-      href: isAmp ? ampUkLink : canonicalUkLink,
+      href: showAlternateUKAmp ? ampUkLink : canonicalUkLink,
       hrefLang: 'en-gb',
     },
   ];
@@ -102,12 +117,19 @@ const MetadataContainer = ({
     },
   ];
 
+  const canonicalToUse =
+    isUK && isUKLink ? canonicalUkLink : canonicalNonUkLink;
+
   const htmlAttributes = {
     dir,
     lang,
     ...(isAmp && { amp: '' }), // empty value as this makes Helmet render 'amp' as per https://www.ampproject.org/docs/fundamentals/spec#ampd
   };
 
+  const { liteSite = defaultTranslations } = translations;
+  const { dataSaving } = liteSite;
+
+  const litePageTitle = `${title} - ${dataSaving}: ${brandName}`;
   const pageTitle = `${title} - ${brandName}`;
   const socialTitle = `${socialHeadline || title} - ${brandName}`;
 
@@ -133,12 +155,13 @@ const MetadataContainer = ({
         name="viewport"
         content="width=device-width, initial-scale=1, minimum-scale=1"
       />
-      <title>{pageTitle}</title>
-      <link rel="canonical" href={canonicalNonUkLink} />
+      <title>{isLite ? litePageTitle : pageTitle}</title>
+      <link rel="canonical" href={canonicalToUse} />
       {isEnglishService && alternateLinksEnglishSites.map(renderAlternateLinks)}
       {isoLang &&
         !isEnglishService &&
         alternateLinksWsSites.map(renderAlternateLinks)}
+      {/* eslint-disable-next-line react/no-invalid-html-attribute */}
       {linkToAmpPage && <link rel="amphtml" href={ampLink} />}
       {renderAppleItunesApp({
         iTunesAppId,
@@ -187,8 +210,8 @@ const MetadataContainer = ({
           content={`https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion${pathname}`}
         />
       )}
-      {Boolean(aboutTags && aboutTags.length) && renderTags(aboutTags)}
-      {Boolean(mentionsTags && mentionsTags.length) && renderTags(mentionsTags)}
+      {Boolean(aboutTags?.length) && renderTags(aboutTags)}
+      {Boolean(mentionsTags?.length) && renderTags(mentionsTags)}
       <link rel="apple-touch-icon" href={appleTouchIcon} />
       {getIconLinks(service, iconSizes)}
       <link

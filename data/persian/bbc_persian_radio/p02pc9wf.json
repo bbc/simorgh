@@ -1,0 +1,1377 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:brand:bbc_persian_radio/p02pc9wf",
+    "locators": {
+      "pid": "p0jrz542",
+      "brandPid": "p02pc9wf"
+    },
+    "type": "WSRADIO",
+    "createdBy": "bbc_persian_radio",
+    "language": "fa",
+    "lastUpdated": 1727188926000,
+    "firstPublished": 1726914980000,
+    "lastPublished": 1726914980000,
+    "timestamp": 1726914980000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "پرگار - BBC News فارسی",
+      "pageIdentifier": "persian.bbc_persian_radio.podcasts.programmes.p02pc9wf.page",
+      "producerId": "69",
+      "contentType": "player-episode",
+      "producer": "PERSIAN"
+    },
+    "passport": {
+      "home": "",
+      "taggings": []
+    },
+    "tags": {},
+    "version": "v1.4.48",
+    "blockTypes": ["media"],
+    "title": "پرگار",
+    "releaseDateTimeStamp": 1726876800000,
+    "useSensitiveOnwardJourneys": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p0jrz542",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "",
+        "synopses": {
+          "short": "حیوان آزاری رایج در ایران ناشی از چیست؟",
+          "medium": "حیوان آزاری رایج در ایران ناشی از چیست؟ می توان حیوان را واجد حقوق اولیه ای چون حق حیات دانست و می توان حیوان دوستی را معیاری برای سلامت جوامع بشری نامید؟",
+          "long": "حیوان آزاری رایج در ایران ناشی از چیست؟ می توان حیوان را واجد حقوق اولیه ای چون حق حیات دانست و می توان حیوان دوستی را معیاری برای سلامت جوامع بشری نامید؟ مهمان‌ها: حسن یوسفی اشکوری؛ پژوهشگر مطالعات اسلامی، جلال ایجادی؛ زیست بوم شناس و عضو حزب سبزهای فرانسه و پژمان اکبرزاده؛ فعال مدنی و مدافع حقوق حیوانات."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+        "embedding": true,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "p0jrz4d5",
+            "types": ["Podcast"],
+            "duration": 3270,
+            "durationISO8601": "PT54M30S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1726920000000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "radioProgramme",
+        "episodeTitle": "رفتار با حیوانات",
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "headline": "پرگار"
+    },
+    "locators": {
+      "pid": "p0jrz542",
+      "brandPid": "p02pc9wf"
+    },
+    "media": {
+      "id": "p0jrz542",
+      "subType": "episode",
+      "format": "Audio",
+      "title": "",
+      "synopses": {
+        "short": "حیوان آزاری رایج در ایران ناشی از چیست؟",
+        "medium": "حیوان آزاری رایج در ایران ناشی از چیست؟ می توان حیوان را واجد حقوق اولیه ای چون حق حیات دانست و می توان حیوان دوستی را معیاری برای سلامت جوامع بشری نامید؟",
+        "long": "حیوان آزاری رایج در ایران ناشی از چیست؟ می توان حیوان را واجد حقوق اولیه ای چون حق حیات دانست و می توان حیوان دوستی را معیاری برای سلامت جوامع بشری نامید؟ مهمان‌ها: حسن یوسفی اشکوری؛ پژوهشگر مطالعات اسلامی، جلال ایجادی؛ زیست بوم شناس و عضو حزب سبزهای فرانسه و پژمان اکبرزاده؛ فعال مدنی و مدافع حقوق حیوانات."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+      "embedding": true,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "p0jrz4d5",
+          "types": ["Podcast"],
+          "duration": 3270,
+          "durationISO8601": "PT54M30S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true,
+            "world": false
+          },
+          "availableFrom": 1726920000000,
+          "availabilityStatus": "available"
+        }
+      ],
+      "availability": "available",
+      "smpKind": "radioProgramme",
+      "episodeTitle": "رفتار با حیوانات",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "p02swnpg",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+      "height": 1080,
+      "width": 1920,
+      "altText": "Pargar Podcast",
+      "caption": "Roundtable in which our guests try to answer the challenging questions in modern society.",
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "releaseDateTimestamp": 1726876800000,
+    "brand": {
+      "pid": "p02pc9wf",
+      "title": "پرگار"
+    },
+    "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p0jrz542",
+    "type": "ws_radio"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Persian",
+      "uri": "/persian",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": {
+              "headline": "پرگار"
+            },
+            "locators": {
+              "pid": "p0jqk3lg",
+              "brandPid": "p02pc9wf"
+            },
+            "media": {
+              "id": "p0jqk3lg",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "مهمان‌های برنامه: رزا پرتو؛ تحلیل‌گر مسائل سیاسی و حمیدرضا عزیزی؛ پژوهشگر روابط بین‌الملل",
+                "medium": "ترور فخری‌زاده و هنیه و ضربه‌های امنیتی دیگر به جمهوری اسلامی نه فقط به تاسیسات و عوامل و متحدان بلکه به غرور آن هم آسیب جدی رسانده. ........؟",
+                "long": "ترور فخری‌زاده و هنیه و ضربه‌های امنیتی دیگر به جمهوری اسلامی نه فقط به تاسیسات و عوامل و متحدان بلکه به غرور آن هم آسیب جدی رسانده. چنین وضعیتی به چه پاسخی علیه اسراییل خواهد انجامید؟ مهمان‌های برنامه: رزا پرتو؛ تحلیل‌گر مسائل سیاسی و حمیدرضا عزیزی؛ پژوهشگر روابط بین‌الملل."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "embedding": true,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0jqjznv",
+                  "types": ["Podcast"],
+                  "duration": 3427,
+                  "durationISO8601": "PT57M7S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1726315200000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "ایران، اسرائیل، کارت هسته‌ای",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p02swnpg",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Pargar Podcast",
+              "caption": "Roundtable in which our guests try to answer the challenging questions in modern society.",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1726272000000,
+            "brand": {
+              "pid": "p02pc9wf",
+              "title": "پرگار"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p0jqk3lg",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "پرگار"
+            },
+            "locators": {
+              "pid": "p0jp4h0d",
+              "brandPid": "p02pc9wf"
+            },
+            "media": {
+              "id": "p0jp4h0d",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "هنر و ادبیات در عصر هوش مصنوعی",
+                "long": "عاقبت هنر و ادبیات در دنیایی که بازیگر همه‌فن حریف در آن هوش مصنوعی باشد چه خواهد بود؟\nآیا حیطه خلاقیت هنری انسان می‌تواند از هجوم سیل‌آسای هوش مصنوعی جان به در برد؟\nمیهمان‌ها:\nعلیرضا آبیز، شاعر\nوحید وحدت، استاد دانشگاه"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "embedding": true,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0jp4fmf",
+                  "types": ["Podcast"],
+                  "duration": 3472,
+                  "durationISO8601": "PT57M52S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1725717600000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "هنر و ادبیات در عصر هوش مصنوعی",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p02swnpg",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Pargar Podcast",
+              "caption": "Roundtable in which our guests try to answer the challenging questions in modern society.",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1725667200000,
+            "brand": {
+              "pid": "p02pc9wf",
+              "title": "پرگار"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p0jp4h0d",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "پرگار"
+            },
+            "locators": {
+              "pid": "p0jmrnsb",
+              "brandPid": "p02pc9wf"
+            },
+            "media": {
+              "id": "p0jmrnsb",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "آیا نفت و گاز در آینده اهمیت خود را حفظ خواهد کرد و...",
+                "medium": "آیا نفت و گاز در آینده اهمیت خود را حفظ خواهد کرد و کشورهای صادرکننده‌ی آن خواهند توانست جایگاه ژئوپولیتیک خود را نگه دارند؟",
+                "long": "آیا نفت و گاز در آینده اهمیت خود را حفظ خواهد کرد و کشورهای صادرکننده‌ی آن خواهند توانست جایگاه ژئوپولیتیک خود را نگه دارند؟ مهمان‌های برنامه: جواد کی‌پور؛ کارشناس انرژی و علم صالح؛ استاد دانشگاه."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "embedding": true,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0jmrlx2",
+                  "types": ["Podcast"],
+                  "duration": 3420,
+                  "durationISO8601": "PT57M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1725105600000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "سیاست‌گذاری نفت و گاز، شرق یا غرب؟",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p02swnpg",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Pargar Podcast",
+              "caption": "Roundtable in which our guests try to answer the challenging questions in modern society.",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1725062400000,
+            "brand": {
+              "pid": "p02pc9wf",
+              "title": "پرگار"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p0jmrnsb",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "پرگار"
+            },
+            "locators": {
+              "pid": "p0jldj5f",
+              "brandPid": "p02pc9wf"
+            },
+            "media": {
+              "id": "p0jldj5f",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "مشروعیت مفهومی‌ست که در ادوار انتخاباتی در ایران مرتب به آن ارجاع داده می‌شود.",
+                "medium": "مشروعیت مفهومی‌ست که در ادوار انتخاباتی در ایران مرتب به آن ارجاع داده می‌شود.",
+                "long": "مشروعیت مفهومی‌ست که در ادوار انتخاباتی در ایران مرتب به آن ارجاع داده می‌شود. ولی آیا فهم واضحی از مشروعیت و حداقلی از توافق بر سر آن وجود دارد تا این حد از ارجاع به آن را موجه سازد؟ مهمان‌های برنامه: جمشید فاروقی؛ پژوهشگر فلسفه سیاسی و امیریحیی آیت اللهی؛ پژوهشگر فلسفه سیاسی."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "embedding": true,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0jldhv9",
+                  "types": ["Podcast"],
+                  "duration": 3525,
+                  "durationISO8601": "PT58M45S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1724500800000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "مشروعیت یعنی چه؟",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p02swnpg",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Pargar Podcast",
+              "caption": "Roundtable in which our guests try to answer the challenging questions in modern society.",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1724457600000,
+            "brand": {
+              "pid": "p02pc9wf",
+              "title": "پرگار"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p0jldj5f",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "پرگار"
+            },
+            "locators": {
+              "pid": "p0jk0lgt",
+              "brandPid": "p02pc9wf"
+            },
+            "media": {
+              "id": "p0jk0lgt",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "روانشناسی تا قرن نوزده یک حیطه‌ی دانش مستقل نبود .......",
+                "medium": "روانشناسی تا قرن نوزده یک حیطه‌ی دانش مستقل نبود و اغلب فیلسوف‌ها بودند که حرف‌های روانشناسانه می‌زدند.",
+                "long": "روانشناسی تا قرن نوزده یک حیطه‌ی دانش مستقل نبود و اغلب فیلسوف‌ها بودند که حرف‌های روانشناسانه می‌زدند. از آن زمان نظریه‌‌پردازان روانشناس با پی‌ریزی مرزهای روانشناسی با دانش‌های، دیگر همواره در پی دفاع از رشته و حرفه‌ی خود بوده‌اند. چرا؟ مهمان‌های برنامه: رضا کاظم‌زاده؛ روانشناس و امانوئل شکریان؛ منتقد فرهنگی."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "embedding": true,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0jk0jnp",
+                  "types": ["Podcast"],
+                  "duration": 3592,
+                  "durationISO8601": "PT59M52S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1723896000000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "روانشناسی، در بحران دائمی؟",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p02swnpg",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Pargar Podcast",
+              "caption": "Roundtable in which our guests try to answer the challenging questions in modern society.",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1723852800000,
+            "brand": {
+              "pid": "p02pc9wf",
+              "title": "پرگار"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p0jk0lgt",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "پرگار"
+            },
+            "locators": {
+              "pid": "p0jhp6ld",
+              "brandPid": "p02pc9wf"
+            },
+            "media": {
+              "id": "p0jhp6ld",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "بالا گرفتن تنش با اسراییل چه تاثیری بر سمت و سوی سیاست در ایران خواهد داشت؟ ف",
+                "medium": "بالا گرفتن تنش با اسراییل چه تاثیری بر سمت و سوی سیاست در ایران خواهد داشت؟ فضای داخل امنیتی‌تر و سیاست خارجی شرق‌گراتر می‌شود یا مسیر متفاوتی در پیش گرفته می‌شود؟",
+                "long": "بالا گرفتن تنش با اسراییل چه تاثیری بر سمت و سوی سیاست در ایران خواهد داشت؟ فضای داخل امنیتی‌تر و سیاست خارجی شرق‌گراتر می‌شود یا مسیر متفاوتی در پیش گرفته می‌شود؟ میهمان‌ها: بابک دربیکی؛ تحلیل‌گر سیاسی و امیرمصدق کاتوزیان؛ تحلیل‌گر سیاسی."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "embedding": true,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0jhp5wx",
+                  "types": ["Podcast"],
+                  "duration": 3529,
+                  "durationISO8601": "PT58M49S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1723291200000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "سایه‌ی جنگ، تاثیر آن بر اصلاحات",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p02swnpg",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Pargar Podcast",
+              "caption": "Roundtable in which our guests try to answer the challenging questions in modern society.",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1723248000000,
+            "brand": {
+              "pid": "p02pc9wf",
+              "title": "پرگار"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p0jhp6ld",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "پرگار"
+            },
+            "locators": {
+              "pid": "p0jg96ps",
+              "brandPid": "p02pc9wf"
+            },
+            "media": {
+              "id": "p0jg96ps",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "آیا عمر‌بن خطاب مبدع نهی از منکر به شکلی خشک و بنیادگرایانه بود؟",
+                "medium": "آیا عمر‌بن خطاب مبدع نهی از منکر به شکلی خشک و بنیادگرایانه بود؟ از سوی دیگر، آیا او نبود که دیوان‌سالاری و نظم ونسق امپراتوری اسلامی را بنیاد گذاشت؟",
+                "long": "آیا عمر‌بن خطاب مبدع نهی از منکر به شکلی خشک و بنیادگرایانه بود؟ از سوی دیگر، آیا او نبود که دیوان‌سالاری و نظم ونسق امپراتوری اسلامی را بنیاد گذاشت؟ میهمان‌ها: مجیب الرحمان رحیمی؛ پژوهشگر تاریخ اسلام، حسن یوسفی اشکوری؛ پژوهشگر تاریخ اسلام و داریوش محمدپور؛ استاد دانشگاه."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "embedding": true,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0jg9652",
+                  "types": ["Podcast"],
+                  "duration": 3137,
+                  "durationISO8601": "PT52M17S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1722686400000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "عمربن خطاب، قسمت دوم",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p02swnpg",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Pargar Podcast",
+              "caption": "Roundtable in which our guests try to answer the challenging questions in modern society.",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1722643200000,
+            "brand": {
+              "pid": "p02pc9wf",
+              "title": "پرگار"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p0jg96ps",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "پرگار"
+            },
+            "locators": {
+              "pid": "p0jdy02r",
+              "brandPid": "p02pc9wf"
+            },
+            "media": {
+              "id": "p0jdy02r",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "عمر‌بن‌خطاب چگونه خلیفه‌ای بود؟",
+                "medium": "ساده‌زیست بود و پسرانش را وادار کرد در معیشت به او‌ که خلیفه‌ی یک امپراتوری ثروتمند شده بود اتکا نکنند. عمر‌بن‌خطاب چگونه خلیفه‌ای بود؟",
+                "long": "ساده‌زیست بود و پسرانش را وادار کرد در معیشت به او‌ که خلیفه‌ی یک امپراتوری ثروتمند شده بود اتکا نکنند. عمر‌بن‌خطاب چگونه خلیفه‌ای بود؟ میهمان‌ها: مجیب الرحمان رحیمی؛ پژوهشگر تاریخ اسلام، حسن یوسفی اشکوری؛ پژوهشگر تاریخ اسلام و داریوش محمدپور؛ استاد دانشگاه."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "embedding": true,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0jdxzpy",
+                  "types": ["Podcast"],
+                  "duration": 3211,
+                  "durationISO8601": "PT53M31S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1722081600000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "عمربن خطاب، قسمت اول",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p02swnpg",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Pargar Podcast",
+              "caption": "Roundtable in which our guests try to answer the challenging questions in modern society.",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1722038400000,
+            "brand": {
+              "pid": "p02pc9wf",
+              "title": "پرگار"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p0jdy02r",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "پرگار"
+            },
+            "locators": {
+              "pid": "p0jcm18c",
+              "brandPid": "p02pc9wf"
+            },
+            "media": {
+              "id": "p0jcm18c",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "لیبرالیسم را اگر بخواهیم بفهمیم باید به آرای جان لاک فیلسوف سده‌ی هفده انگلیس رجوع کنیم.",
+                "medium": "لیبرالیسم را اگر بخواهیم بفهمیم باید به آرای جان لاک فیلسوف سده‌ی هفده انگلیس رجوع کنیم. جان لاک چه گفت و اهمیت او در چیست؟ مهمان‌های برنامه: ایقان شهیدی وعباس ولی.",
+                "long": "لیبرالیسم را اگر بخواهیم بفهمیم باید به آرای جان لاک فیلسوف سده‌ی هفده انگلیس رجوع کنیم. جان لاک چه گفت و اهمیت او در چیست؟ مهمان‌های برنامه: ایقان شهیدی، پژوهشگر اندیشه سیاسی و عباس ولی، استاد علوم سیاسی."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "embedding": true,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0jclvyn",
+                  "types": ["Podcast"],
+                  "duration": 3413,
+                  "durationISO8601": "PT56M53S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1721476800000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "جان لاک، از پدران لیبرالیسم",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p02swnpg",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Pargar Podcast",
+              "caption": "Roundtable in which our guests try to answer the challenging questions in modern society.",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1721433600000,
+            "brand": {
+              "pid": "p02pc9wf",
+              "title": "پرگار"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p0jcm18c",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "پرگار"
+            },
+            "locators": {
+              "pid": "p0jb6sxs",
+              "brandPid": "p02pc9wf"
+            },
+            "media": {
+              "id": "p0jb6sxs",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "جمهوری اسلامی به آرمان فلسطین کمک کرده یا به آن ضربه زده؟",
+                "medium": "جمهوری اسلامی ایران آرمان فلسطین را آرمان خود می‌داند و می‌گوید تالش برای تحقق آن از اهداف بنیادی‌اش است. ولی جمهوری اسلامی به آرمان فلسطین کمک کرده یا به آن ضربه زده؟",
+                "long": "جمهوری اسلامی ایران آرمان فلسطین را آرمان خود می‌داند و می‌گوید تالش برای تحقق آن از اهداف بنیادی‌اش است. ولی جمهوری اسلامی به آرمان فلسطین کمک کرده یا به آن ضربه زده؟ \nمهمان‌های برنامه: کاملیا انتخابی‌فرد؛ سردبیر ایندیپندنت فارسی و تحلیل‌گر مسائل خاورمیانه و قیس قریشی؛ تحلیل‌گر جهان عرب."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "embedding": true,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0jb6sn2",
+                  "types": ["Podcast"],
+                  "duration": 3452,
+                  "durationISO8601": "PT57M32S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1720875540000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "ایران به آرمان فلسطین کمک کرده؟",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p02swnpg",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Pargar Podcast",
+              "caption": "Roundtable in which our guests try to answer the challenging questions in modern society.",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1720828800000,
+            "brand": {
+              "pid": "p02pc9wf",
+              "title": "پرگار"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p0jb6sxs",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "پرگار"
+            },
+            "locators": {
+              "pid": "p0j8sk5l",
+              "brandPid": "p02pc9wf"
+            },
+            "media": {
+              "id": "p0j8sk5l",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "آنارشیسم چیست؟ حرکت آنارشیستی چه مختصاتی دارد؟",
+                "medium": "آنارشیسم چیست؟ حرکت آنارشیستی چه مختصاتی دارد؟ چرا در تاریخ سیاسی ایران به رغم شناخت کم از آنارشیسم، از آن به عنوان ناسزای سیاسی استفاده شده است؟"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "embedding": true,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0j8sjkp",
+                  "types": ["Podcast"],
+                  "duration": 3273,
+                  "durationISO8601": "PT54M33S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1720267200000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "آنارشیسم",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p02swnpg",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Pargar Podcast",
+              "caption": "Roundtable in which our guests try to answer the challenging questions in modern society.",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1720224000000,
+            "brand": {
+              "pid": "p02pc9wf",
+              "title": "پرگار"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p0j8sk5l",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "پرگار"
+            },
+            "locators": {
+              "pid": "p0j5w684",
+              "brandPid": "p02pc9wf"
+            },
+            "media": {
+              "id": "p0j5w684",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "اصلاح‌طلب‌ها در تلاشند تا مردم را به پای صندوق‌های رای بکشانند. آیا موفق می‌شوند؟",
+                "long": "در فاصله‌ای کوتاه از اعتراضات زن، زندگی، آزادی که به سرکوب شدید معترضان انجامید، اصلاح‌طلب‌ها در تلاشند تا مردم را به پای صندوق‌های رای بکشانند. آیا موفق می‌شوند؟\n\nمیهمان‌ها:\nشیوا محبوبی، فعال سیاسی\nفرهاد گوهردانی، پژوهشگر مطالعات توسعه"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "embedding": true,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0j5w5hq",
+                  "types": ["Podcast"],
+                  "duration": 3402,
+                  "durationISO8601": "PT56M42S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1719070680000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "رادیکالیسم، بی‌تفاوتی، مشارکت؟",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p02swnpg",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Pargar Podcast",
+              "caption": "Roundtable in which our guests try to answer the challenging questions in modern society.",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1719014400000,
+            "brand": {
+              "pid": "p02pc9wf",
+              "title": "پرگار"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p0j5w684",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "پرگار"
+            },
+            "locators": {
+              "pid": "p0j4g58r",
+              "brandPid": "p02pc9wf"
+            },
+            "media": {
+              "id": "p0j4g58r",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "اخلاق انتخاباتی چیست و چه تفاوتی  با اخلاق فردی دارد؟ عقل و احساس چه نقشی دارند؟",
+                "medium": "اخلاق انتخاباتی چیست و چه تفاوتی با اخلاق فردی دارد؟ عقل و احساس چه نقشی دارند؟\nمیهمان‌ها:\nحسین دباغ، مدرس فلسفه اخلاق\nپیمان عارف، تحلیلگر سیاسی"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "embedding": true,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0j4g4ns",
+                  "types": ["Podcast"],
+                  "duration": 3488,
+                  "durationISO8601": "PT58M8S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1718460000000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "اخلاق انتخاباتی در انتخابات غیر اخلاقی",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p02swnpg",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Pargar Podcast",
+              "caption": "Roundtable in which our guests try to answer the challenging questions in modern society.",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1718409600000,
+            "brand": {
+              "pid": "p02pc9wf",
+              "title": "پرگار"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p0j4g58r",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "پرگار"
+            },
+            "locators": {
+              "pid": "p0j30sk0",
+              "brandPid": "p02pc9wf"
+            },
+            "media": {
+              "id": "p0j30sk0",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "دهه‌ی چهل در ایران",
+                "medium": "دهه‌ی چهل خورشیدی در ایران سال‌های صنعتی شدن و تغییرات بنیادی در بافت اجتماعی و دهه‌ی شکوفایی هنر و ادبیات ایران بود.",
+                "long": "دهه‌ی چهل خورشیدی در ایران سال‌های صنعتی شدن و تغییرات بنیادی در بافت اجتماعی و دهه‌ی شکوفایی هنر و ادبیات ایران بود. ولی آیا روندهای این دهه نبود که به انقلاب سال پنجاه و هفت انجامید؟"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "embedding": true,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0j30r68",
+                  "types": ["Podcast"],
+                  "duration": 3407,
+                  "durationISO8601": "PT56M47S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1717848000000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "دهه‌ی چهل در ایران",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p02swnpg",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Pargar Podcast",
+              "caption": "Roundtable in which our guests try to answer the challenging questions in modern society.",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1717804800000,
+            "brand": {
+              "pid": "p02pc9wf",
+              "title": "پرگار"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p0j30sk0",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "پرگار"
+            },
+            "locators": {
+              "pid": "p0j1n6dc",
+              "brandPid": "p02pc9wf"
+            },
+            "media": {
+              "id": "p0j1n6dc",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "اگزیستانسیالیسم صاحب یک دستگاه اخلاقی منسجم هست؟",
+                "medium": "اگزیستانسیالیسم صاحب یک دستگاه اخلاقی منسجم هست؟ مرام اگزیستانسیالیستی مرامی نخبه‌گرایانه نیست؟ اگزیستانسیالیسم چگونه وارد ایران شد و چه جاذبه‌ای برای روشنفکران ایرانی داشت؟",
+                "long": "اگزیستانسیالیسم صاحب یک دستگاه اخلاقی منسجم هست؟ مرام اگزیستانسیالیستی مرامی نخبه‌گرایانه نیست؟ اگزیستانسیالیسم چگونه وارد ایران شد و چه جاذبه‌ای برای روشنفکران ایرانی داشت؟ مهمان‌ها منوچهر حقیقی‌راد و فرهاد سلمانیان."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "embedding": true,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0j1n3x6",
+                  "types": ["Podcast"],
+                  "duration": 3029,
+                  "durationISO8601": "PT50M29S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1717243200000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "اگزیستانسیالیسم، قسمت دوم",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p02swnpg",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Pargar Podcast",
+              "caption": "Roundtable in which our guests try to answer the challenging questions in modern society.",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1717200000000,
+            "brand": {
+              "pid": "p02pc9wf",
+              "title": "پرگار"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p0j1n6dc",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "پرگار"
+            },
+            "locators": {
+              "pid": "p0j09d2y",
+              "brandPid": "p02pc9wf"
+            },
+            "media": {
+              "id": "p0j09d2y",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "چه عواملی منجر به شکل‌گیری مضامین اگزیستانسیالیستی در اوایل قرن بیستم شدند؟",
+                "long": "چه عواملی منجر به شکل‌گیری مضامین اگزیستانسیالیستی در اوایل قرن بیستم شدند؟ آیا می‌توان از آرای متفکرانی چون کی‌یر کگور، هایدگر و سارتر برداشت واحدی در خصوص اگزیستانسیالیسم داشت؟ \n\nمیهمان‌ها:\nمنوچهر حقیقی‌راد، پژوهشگر فلسفه\nفرهاد سلمانیان، پژوهشگر فلسفه"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "embedding": true,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0j09cgv",
+                  "types": ["Podcast"],
+                  "duration": 3035,
+                  "durationISO8601": "PT50M35S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1716646740000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "اگزیستانسیالیسم، قسمت اول",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p02swnpg",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Pargar Podcast",
+              "caption": "Roundtable in which our guests try to answer the challenging questions in modern society.",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1716595200000,
+            "brand": {
+              "pid": "p02pc9wf",
+              "title": "پرگار"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p0j09d2y",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "پرگار"
+            },
+            "locators": {
+              "pid": "p0hyvsw1",
+              "brandPid": "p02pc9wf"
+            },
+            "media": {
+              "id": "p0hyvsw1",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "آیا موقعیت دین در ایران امروز، برای دینداران نگران‌کننده است؟",
+                "long": "آیا موقعیت دین در ایران امروز، برای دینداران نگران‌کننده است؟ مناسبت دین و دینداری با سبک زندگی امروزی در ایران چیست و آیا ایران وارد دوران پسا دینی شده است؟ چه تفاوتی میان «دین مدنی» و دینی که از آن به عنوان «دینِ توده‌ای» یاد می‌شود وجود دارد؟"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "embedding": true,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0hyvnq4",
+                  "types": ["Podcast"],
+                  "duration": 3540,
+                  "durationISO8601": "PT59M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1716042120000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "نقد باورهای دینی، چگونه؟",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p02swnpg",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Pargar Podcast",
+              "caption": "Roundtable in which our guests try to answer the challenging questions in modern society.",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1715990400000,
+            "brand": {
+              "pid": "p02pc9wf",
+              "title": "پرگار"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p0hyvsw1",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "پرگار"
+            },
+            "locators": {
+              "pid": "p0hxg3f5",
+              "brandPid": "p02pc9wf"
+            },
+            "media": {
+              "id": "p0hxg3f5",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "آیا جریان پادشاهی‌خواه توانسته مخالفان جمهوری اسلامی را با خود همسو کند؟"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "embedding": true,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0hxg360",
+                  "types": ["Podcast"],
+                  "duration": 3418,
+                  "durationISO8601": "PT56M58S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1715437680000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "آیا افراطی‌ها بر جریان پادشاهی غالب شده‌اند؟",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p02swnpg",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Pargar Podcast",
+              "caption": "Roundtable in which our guests try to answer the challenging questions in modern society.",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1715385600000,
+            "brand": {
+              "pid": "p02pc9wf",
+              "title": "پرگار"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p0hxg3f5",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "پرگار"
+            },
+            "locators": {
+              "pid": "p0hw36h2",
+              "brandPid": "p02pc9wf"
+            },
+            "media": {
+              "id": "p0hw36h2",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "نگرانی‌ها از نفوذ کلمات و عبارات انگلیسی در زبان فارسی تا چه حد بجاست؟"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "embedding": true,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0hw2yh4",
+                  "types": ["Podcast"],
+                  "duration": 3662,
+                  "durationISO8601": "PT1H1M2S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1714833900000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "ترکیب فارسی و انگلیسی، نگران کننده؟",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p02swnpg",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Pargar Podcast",
+              "caption": "Roundtable in which our guests try to answer the challenging questions in modern society.",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1714780800000,
+            "brand": {
+              "pid": "p02pc9wf",
+              "title": "پرگار"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p0hw36h2",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "پرگار"
+            },
+            "locators": {
+              "pid": "p0htl02q",
+              "brandPid": "p02pc9wf"
+            },
+            "media": {
+              "id": "p0htl02q",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "چه کسی رستگار می‌شود؟ گوش سپردن به یک پیامبر است که مایه‌ی رستگاری می‌شود یا نیک بودن؟"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "embedding": true,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0htkn1g",
+                  "types": ["Podcast"],
+                  "duration": 3164,
+                  "durationISO8601": "PT52M44S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1714219740000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "رستگاری",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p02swnpg",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Pargar Podcast",
+              "caption": "Roundtable in which our guests try to answer the challenging questions in modern society.",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1714176000000,
+            "brand": {
+              "pid": "p02pc9wf",
+              "title": "پرگار"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p0htl02q",
+            "type": "ws_radio"
+          }
+        ]
+      }
+    ]
+  }
+}

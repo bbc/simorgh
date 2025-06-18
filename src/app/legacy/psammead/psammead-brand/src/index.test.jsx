@@ -1,11 +1,8 @@
 import React, { useRef, useEffect } from 'react';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
-import ScriptLink from '#psammead/psammead-script-link/src';
 import { POSTBOX, WHITE } from '../../../../components/ThemeProvider/palette';
 import { render } from '../../../../components/react-testing-library-with-providers';
-import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import Brand from '.';
-import SkipLink from './SkipLink';
 
 const svg = {
   group: (
@@ -197,59 +194,6 @@ describe('Brand', () => {
 
       const brandLink = container.querySelector('#brandLink');
       expect(brandLink).toBe(container.querySelector('a'));
-    });
-
-    it('should render script, frontpage and skip to content links', () => {
-      const scriptLinkComponent = (
-        <ScriptLink
-          script={latin}
-          service="serbian"
-          href="https://www.bbc.com/serbian/lat"
-        >
-          Lat
-        </ScriptLink>
-      );
-
-      const skipLink = (
-        <SkipLink service="news" script={latin} href="#content">
-          Skip to content
-        </SkipLink>
-      );
-
-      const { container } = render(
-        <Brand
-          product="Default Brand Name"
-          svgHeight={24}
-          maxWidth={280}
-          minWidth={180}
-          svg={svg}
-          url="https://www.bbc.co.uk/news"
-          backgroundColour={POSTBOX}
-          logoColour={WHITE}
-          skipLink={skipLink}
-          data-brand="header"
-          scriptLink={scriptLinkComponent}
-        />,
-      );
-
-      const links = container.querySelectorAll('a');
-      expect(links).toHaveLength(3);
-
-      const frontpageLink = links[0];
-      expect(frontpageLink.getAttribute('href')).toEqual(
-        'https://www.bbc.co.uk/news',
-      );
-      expect(frontpageLink.textContent).toEqual('Default Brand Name');
-
-      const skipToContentLink = links[1];
-      expect(skipToContentLink.getAttribute('href')).toEqual('#content');
-      expect(skipToContentLink.textContent).toEqual('Skip to content');
-
-      const scriptLink = links[2];
-      expect(scriptLink.getAttribute('href')).toEqual(
-        'https://www.bbc.com/serbian/lat',
-      );
-      expect(scriptLink.textContent).toEqual('Lat');
     });
   });
 });

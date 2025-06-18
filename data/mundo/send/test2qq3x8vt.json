@@ -1,4 +1,5 @@
 {
+  "data": {
     "projectId": "ugc-ws-mundo",
     "title": "Escríbenos",
     "description": "<p><strong>En BBC Mundo nos importa tu punto de vista.</strong></p>\n<p>Tus opiniones, comentarios y sugerencias son bienvenidos.</p>\n<p>A partir de ellos, podremos ofrecerte un mejor servicio.</p>\n<p>Por favor, utiliza el formulario para enviarnos un mensaje. Procuraremos responder a la mayor brevedad.</p>\n<p>Para enviar una queja,&nbsp;<a href=\"https://www.bbc.com/mundo/send/u50853472\" target=\"_blank\">haz clic aqu&iacute;</a>.</p>",
@@ -136,4 +137,6 @@
       "promos": []
     },
     "campaignArchived": false
+  },
+  "contentType": "application/json; charset=utf-8"
 }

@@ -40,9 +40,16 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
   z-index: 1;
 }
 
+@media (min-width: 15rem) {
+  .emotion-3 {
+    height: 3.75rem;
+    padding: 0 0.5rem;
+  }
+}
+
 @media (min-width: 25rem) {
   .emotion-3 {
-    height: 3.5rem;
+    height: 3.75rem;
     padding: 0 1rem;
   }
 }
@@ -168,6 +175,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
   font-style: normal;
   font-weight: 400;
   background-color: #222222;
+  padding: 0 1rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -184,15 +192,9 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
   }
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width: 24.9375rem) {
   .emotion-12 {
     padding: 0 0.5rem;
-  }
-}
-
-@media (min-width: 25rem) {
-  .emotion-12 {
-    padding: 0 1rem;
   }
 }
 
@@ -274,13 +276,13 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
 
 @media (min-width: 15rem) and (max-width: 37.4375rem) {
   .emotion-14 {
-    grid-template-rows: repeat(5, auto);
+    grid-template-rows: repeat(4, auto);
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
   .emotion-14 {
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(3, auto);
   }
 }
 
@@ -413,9 +415,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
               Why you can trust the BBC
             </a>
           </li>
-          <li
-            role="listitem"
-          >
+          <li>
             <a
               class="focusIndicatorInvert emotion-16"
               href="https://www.bbc.com/terms"
@@ -423,9 +423,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
               Terms of Use
             </a>
           </li>
-          <li
-            role="listitem"
-          >
+          <li>
             <a
               class="focusIndicatorInvert emotion-16"
               href="https://www.bbc.co.uk/aboutthebbc/"
@@ -433,9 +431,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
               About the BBC
             </a>
           </li>
-          <li
-            role="listitem"
-          >
+          <li>
             <a
               class="focusIndicatorInvert emotion-16"
               href="https://www.bbc.com/privacy/"
@@ -443,9 +439,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
               Privacy Policy
             </a>
           </li>
-          <li
-            role="listitem"
-          >
+          <li>
             <a
               class="focusIndicatorInvert emotion-16"
               href="https://www.bbc.com/usingthebbc/cookies/"
@@ -453,9 +447,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
               Cookies
             </a>
           </li>
-          <li
-            role="listitem"
-          >
+          <li>
             <a
               class="focusIndicatorInvert emotion-16"
               href="https://www.bbc.com/accessibility/"
@@ -463,9 +455,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
               Accessibility Help
             </a>
           </li>
-          <li
-            role="listitem"
-          >
+          <li>
             <a
               class="focusIndicatorInvert emotion-16"
               href="https://www.bbc.com/contact/"
@@ -473,9 +463,6 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
               Contact the BBC
             </a>
           </li>
-          <li
-            role="listitem"
-          />
         </ul>
         <p
           class="emotion-23"

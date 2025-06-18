@@ -1,4 +1,10 @@
+import {
+  CLICK_EVENT,
+  VIEW_EVENT,
+  VIEWABILITY_CLICK_EVENT,
+} from '#app/lib/analyticsUtils/analytics.const';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import {
   getDestination,
   getAppType,
@@ -18,7 +24,11 @@ import {
   getATIMarketingString,
   getRSSMarketingString,
 } from '../../../lib/analyticsUtils';
-import { ATIEventTrackingProps, ATIPageTrackingProps } from '../types';
+import {
+  ATIEventTrackingProps,
+  ATIPageTrackingProps,
+  ReverbBeaconConfig,
+} from '../types';
 
 /*
  * For AMP pages, certain browser and device values are determined
@@ -40,14 +50,14 @@ export const buildATIPageTrackPath = ({
   statsDestination,
   timePublished,
   timeUpdated,
-  origin,
-  previousPath,
   categoryName,
   campaigns,
   nationsProducer,
+  ampExperimentName,
+  experimentVariant,
 }: ATIPageTrackingProps) => {
   const href = getHref(platform);
-  const referrer = getReferrer(platform, origin, previousPath);
+  const referrer = getReferrer(platform);
   const campaignType = getCampaignType();
 
   // on AMP, variable substitutions are used in the value and they cannot be
@@ -214,6 +224,42 @@ export const buildATIPageTrackPath = ({
       value: getATIMarketingString(href, campaignType),
       wrap: false,
     },
+    ...(experimentVariant
+      ? [
+          {
+            key: 'mv_test',
+            description: 'Top Bar OJs experiment',
+            value: 'Top Bar OJs experiment',
+            wrap: false,
+            disableEncoding: true,
+          },
+          {
+            key: 'mv_creation',
+            description: 'Top Bar OJs variant',
+            value: `${experimentVariant}`,
+            wrap: false,
+            disableEncoding: true,
+          },
+        ]
+      : []),
+    ...(ampExperimentName
+      ? [
+          {
+            key: 'mv_test',
+            description: 'AMP experiment name',
+            value: `${ampExperimentName}`,
+            wrap: false,
+            disableEncoding: true,
+          },
+          {
+            key: 'mv_creation',
+            description: 'AMP experiment variant name',
+            value: `VARIANT(${ampExperimentName})`,
+            wrap: false,
+            disableEncoding: true,
+          },
+        ]
+      : []),
     ...getRSSMarketingString(href, campaignType),
     ...(onOnionTld()
       ? [
@@ -231,7 +277,7 @@ export const buildATIPageTrackPath = ({
       // the ref param should always be the last param because ATI will interpret it as part of the referrer URL
       key: 'ref',
       description: 'referrer url',
-      value: getReferrer(platform, origin, previousPath),
+      value: getReferrer(platform),
       wrap: false,
       // disable encoding for this parameter as ati does not appear to support
       // decoding of the ref parameter
@@ -252,19 +298,18 @@ export const buildATIEventTrackUrl = ({
   advertiserID,
   url,
   detailedPlacement,
-}: ATIEventTrackingProps) => {
+  experimentVariant,
+  ampExperimentName,
+  isStatic = false,
+}: ATIEventTrackingProps & {
+  isStatic?: boolean;
+}) => {
   // on AMP, variable substitutions are used in the value and they cannot be
   // encoded: https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md
   const disableEncodingDueToAmpSubstitution = platform === 'amp';
 
   const eventPublisher = type === 'view' ? 'ati' : 'atc';
   const eventTrackingBeaconValues = [
-    {
-      key: 'idclient',
-      description: 'at user id',
-      value: getAtUserId(),
-      wrap: false,
-    },
     {
       key: 's',
       description: 'destination',
@@ -285,34 +330,6 @@ export const buildATIEventTrackUrl = ({
       wrap: false,
     },
     {
-      key: 'r',
-      description: 'screen resolution & colour depth',
-      value: getScreenInfo(platform),
-      wrap: false,
-      disableEncoding: disableEncodingDueToAmpSubstitution,
-    },
-    {
-      key: 're',
-      description: 'browser/viewport resolution',
-      value: getBrowserViewPort(platform),
-      wrap: false,
-      disableEncoding: disableEncodingDueToAmpSubstitution,
-    },
-    {
-      key: 'hl',
-      description: 'time',
-      value: getCurrentTime(platform),
-      wrap: false,
-      disableEncoding: disableEncodingDueToAmpSubstitution,
-    },
-    {
-      key: 'lng',
-      description: 'device language',
-      value: getDeviceLanguage(platform),
-      wrap: false,
-      disableEncoding: disableEncodingDueToAmpSubstitution,
-    },
-    {
       key: eventPublisher,
       description: 'event publisher',
       value: getEventInfo({
@@ -323,13 +340,239 @@ export const buildATIEventTrackUrl = ({
         advertiserID,
         url,
         detailedPlacement,
+        experimentVariant,
       }),
       wrap: false,
       disableEncoding: true,
     },
+    ...(isStatic
+      ? []
+      : [
+          {
+            key: 'idclient',
+            description: 'at user id',
+            value: getAtUserId(),
+            wrap: false,
+          },
+          {
+            key: 'hl',
+            description: 'time',
+            value: getCurrentTime(platform),
+            wrap: false,
+            disableEncoding: disableEncodingDueToAmpSubstitution,
+          },
+          {
+            key: 're',
+            description: 'browser/viewport resolution',
+            value: getBrowserViewPort(platform),
+            wrap: false,
+            disableEncoding: disableEncodingDueToAmpSubstitution,
+          },
+          {
+            key: 'r',
+            description: 'screen resolution & colour depth',
+            value: getScreenInfo(platform),
+            wrap: false,
+            disableEncoding: disableEncodingDueToAmpSubstitution,
+          },
+          {
+            key: 'lng',
+            description: 'device language',
+            value: getDeviceLanguage(platform),
+            wrap: false,
+            disableEncoding: disableEncodingDueToAmpSubstitution,
+          },
+        ]),
+    ...(experimentVariant
+      ? [
+          {
+            key: 'mv_test',
+            description: 'Top Bar OJs experiment',
+            value: 'Top Bar OJs experiment',
+            wrap: false,
+            disableEncoding: true,
+          },
+          {
+            key: 'mv_creation',
+            description: 'Top Bar OJs variant',
+            value: `${experimentVariant}`,
+            wrap: false,
+            disableEncoding: true,
+          },
+        ]
+      : []),
+    ...(ampExperimentName
+      ? [
+          {
+            key: 'mv_test',
+            description: 'AMP experiment project name',
+            value: `Google Discover`,
+            wrap: false,
+            disableEncoding: true,
+          },
+          {
+            key: 'mv_experiment_id',
+            description: 'AMP experiment name',
+            value: `${ampExperimentName}`,
+            wrap: false,
+            disableEncoding: true,
+          },
+          {
+            key: 'mv_creation',
+            description: 'AMP experiment variant name',
+            value: `VARIANT(${ampExperimentName})`,
+            wrap: false,
+            disableEncoding: true,
+          },
+        ]
+      : []),
   ];
 
   return `${getEnvConfig().SIMORGH_ATI_BASE_URL}${getAtiUrl(
     eventTrackingBeaconValues,
   )}&type=AT`;
+};
+
+export const buildReverbAnalyticsModel = ({
+  appName,
+  campaigns,
+  categoryName,
+  contentId,
+  contentType,
+  language,
+  ldpThingIds,
+  ldpThingLabels,
+  libraryVersion,
+  pageIdentifier,
+  pageTitle,
+  platform,
+  producerName,
+  nationsProducer,
+  statsDestination,
+  timePublished,
+  timeUpdated,
+  experimentVariant,
+}: ATIPageTrackingProps): ReverbBeaconConfig => {
+  const href = getHref(platform);
+  const referrer = getReferrer(platform);
+
+  const aggregatedCampaigns = (Array.isArray(campaigns) ? campaigns : [])
+    .map(({ campaignName }) => campaignName)
+    .join('~');
+
+  const eventDetails = {
+    eventName: 'pageView' as ReverbBeaconConfig['eventDetails']['eventName'],
+  };
+
+  const reverbVariables = {
+    params: {
+      env: getEnvConfig().SIMORGH_APP_ENV,
+      page: {
+        contentId,
+        contentType,
+        destination: statsDestination,
+        name: pageIdentifier,
+        producer: producerName,
+        additionalProperties: {
+          app_name: platform === 'app' ? `${appName}-app` : appName,
+          app_type: getAppType(platform),
+          content_language: language,
+          product_platform: onOnionTld() ? 'tor-bbc' : null,
+          referrer_url: referrer,
+          x5: href && (platform === 'amp' ? href : encodeURIComponent(href)),
+          x8: libraryVersion,
+          x9: sanitise(pageTitle),
+          x10: nationsProducer && nationsProducer,
+          x11: timePublished,
+          x12: timeUpdated,
+          x13: ldpThingLabels,
+          x14: ldpThingIds,
+          x16: aggregatedCampaigns,
+          x17: categoryName,
+          x18: isLocServeCookieSet(),
+          ...(experimentVariant && {
+            mv_test: OPTIMIZELY_CONFIG.flagKey,
+            mv_creation: `${experimentVariant}`,
+          }),
+        },
+      },
+      user: {
+        isSignedIn: false,
+      },
+    },
+    eventDetails,
+  };
+
+  return reverbVariables;
+};
+
+export const buildReverbEventModel = ({
+  pageIdentifier,
+  producerName,
+  statsDestination,
+  componentName,
+  campaignID,
+  type,
+  advertiserID,
+  url,
+  experimentVariant,
+  itemTracker = {},
+  groupTracker = {},
+}: ATIEventTrackingProps): ReverbBeaconConfig => {
+  const {
+    type: itemType,
+    text,
+    position,
+    duration,
+    resourceId: itemResourceId,
+  } = itemTracker;
+  const { itemCount, resourceId: groupResourceId } = groupTracker;
+
+  return {
+    params: {
+      page: {
+        destination: statsDestination,
+        name: pageIdentifier,
+        producer: producerName,
+        additionalProperties: {
+          type: 'AT',
+        },
+      },
+      user: {
+        isSignedIn: false,
+      },
+    },
+    eventDetails: {
+      eventName: type === VIEW_EVENT ? 'sectionView' : 'sectionClick',
+      eventPublisher: 'viewability',
+      item: {
+        ...(advertiserID && { attribution: advertiserID }),
+        name: componentName,
+        ...(url && { link: url }),
+        ...(itemType && { type: itemType }),
+        ...(text && { text }),
+        ...(position && { position }),
+        ...(duration && { duration }),
+        ...(itemResourceId && { resource_id: itemResourceId }),
+      },
+      group: {
+        name: campaignID,
+        ...(itemCount && { item_count: itemCount }),
+        ...(groupResourceId && { resource_id: groupResourceId }),
+      },
+      event: {
+        category: 'viewability',
+        action: type === CLICK_EVENT ? VIEWABILITY_CLICK_EVENT : VIEW_EVENT,
+      },
+      isClick: type === CLICK_EVENT,
+      ...(experimentVariant && {
+        experience: {
+          engine_type: ['experimentation'],
+          engine_id: [
+            `optimizely.${OPTIMIZELY_CONFIG.flagKey}.${experimentVariant}`,
+          ],
+        },
+      }),
+    },
+  };
 };

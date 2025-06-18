@@ -3,6 +3,17 @@ import pixelsToRem from '../../utilities/pixelsToRem';
 
 export const focusIndicatorThickness = `${pixelsToRem(3)}rem`; // 3px
 
+export const twoPixelFocusIndicatorThickness = 2;
+
+export const twoPixelFocusIndicatorStyle = (
+  innerColor: string,
+  outerColor: string,
+) => ({
+  boxShadow: `0 0 0 ${pixelsToRem(twoPixelFocusIndicatorThickness)}rem ${innerColor}`,
+  outline: `${pixelsToRem(twoPixelFocusIndicatorThickness)}rem solid ${outerColor}`,
+  outlineOffset: `${pixelsToRem(twoPixelFocusIndicatorThickness)}rem`,
+});
+
 const focusIndicator = ({ palette }: Theme) => css`
   // Adds focus indicator styling to all a, button and h3 elements by default.
   a:focus-visible,
@@ -54,10 +65,18 @@ const focusIndicator = ({ palette }: Theme) => css`
   }
 
   // Overrides focus indicator styles with inverted colours. Used on a dark background page. E.g. Episode lists.
-  a.focusIndicatorInvert:focus-visible {
+  a.focusIndicatorInvert:focus-visible,
+  button.focusIndicatorInvert:focus-visible {
     outline: ${focusIndicatorThickness} solid ${palette.WHITE};
     box-shadow: 0 0 0 ${focusIndicatorThickness} ${palette.BLACK};
     outline-offset: ${focusIndicatorThickness};
+  }
+
+  // Overrides focus indicator styles with a thinner version in inverted colours. E.g. for links on coloured backgrounds.
+  a.focusIndicatorReducedWidthInverted:focus-visible {
+    outline: ${pixelsToRem(2)}rem solid ${palette.WHITE};
+    box-shadow: 0 0 0 ${pixelsToRem(1)}rem ${palette.BLACK};
+    outline-offset: ${pixelsToRem(1)}rem;
   }
 `;
 

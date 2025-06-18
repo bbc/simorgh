@@ -1,67 +1,50 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares:ws_media:live:bbc_swahili_radio",
-    "locators": {
-      "pipsUrn": "urn:bbc:pips:bbc_swahili_radio"
-    },
-    "type": "WS-LIVE",
-    "createdBy": "swahili",
+  "data": {
+    "heading": "BBC Swahili Radio",
+    "bodySummary": "Habari za kimataifa, michezo na uchambuzi kutoka kwa idhaa ya dunia.",
     "language": "sw",
-    "lastUpdated": 0,
-    "firstPublished": 0,
-    "lastPublished": 0,
-    "options": {},
-    "analyticsLabels": {
-      "pageTitle": "BBC Swahili Radio - BBC News Swahili",
-      "pageIdentifier": "swahili.bbc_swahili_radio.liveradio.page",
-      "producerId": "86",
-      "contentType": "player-live",
-      "producer": "SWAHILI"
+    "id": "urn:bbc:ares:ws_media:live:bbc_swahili_radio",
+    "name": "BBC Swahili Radio",
+    "summary": "Habari za kimataifa, michezo na uchambuzi kutoka kwa idhaa ya dunia.",
+    "masterBrand": "bbc_swahili_radio",
+    "radioScheduleData": null,
+    "metadata": {
+      "type": "Live Radio",
+      "atiAnalytics": {
+        "contentId": "urn:bbc:ares:ws_media:live:bbc_swahili_radio",
+        "contentType": "player-live",
+        "pageIdentifier": "swahili.bbc_swahili_radio.liveradio.page",
+        "pageTitle": "BBC Swahili Radio - BBC News Swahili"
+      }
     },
-    "tags": {},
-    "version": "1.1.2",
-    "blockTypes": ["heading", "version", "paragraph"]
-  },
-  "content": {
-    "blocks": [
+    "mediaBlock": [
       {
-        "text": "BBC Swahili Radio",
-        "markupType": "plain_text",
-        "type": "heading"
-      },
-      {
-        "text": "Habari za kimataifa, michezo na uchambuzi kutoka kwa idhaa ya dunia.",
-        "type": "paragraph"
-      },
-      {
-        "id": "liveradio",
-        "subType": "primary",
-        "format": "audio",
-        "externalId": "bbc_swahili_radio",
-        "duration": "PT0S",
-        "caption": "",
-        "embedding": false,
-        "available": true,
-        "live": true,
-        "type": "version"
+        "type": "liveRadio",
+        "model": [
+          {
+            "text": "BBC Swahili Radio",
+            "markupType": "plain_text",
+            "type": "heading"
+          },
+          {
+            "text": "Habari za kimataifa, michezo na uchambuzi kutoka kwa idhaa ya dunia.",
+            "type": "paragraph"
+          },
+          {
+            "id": "liveradio",
+            "subType": "primary",
+            "format": "audio",
+            "externalId": "bbc_swahili_radio",
+            "duration": "PT0S",
+            "caption": "",
+            "embedding": false,
+            "available": true,
+            "live": true,
+            "type": "version"
+          }
+        ]
       }
     ]
   },
-  "promo": {
-    "name": "BBC Swahili Radio",
-    "summary": "Habari za kimataifa, michezo na uchambuzi kutoka kwa idhaa ya dunia.",
-    "uri": "/swahili/bbc_swahili_radio/liveradio",
-    "contentType": "WS-LIVE",
-    "id": "urn:bbc:ares::ws_live:bbc_swahili_radio",
-    "type": "link"
-  },
-  "relatedContent": {
-    "site": {
-      "subType": "simple",
-      "name": "swahili",
-      "uri": "/swahili",
-      "type": "simple"
-    },
-    "groups": []
-  }
+  "contentType": "application/json; charset=utf-8"
 }

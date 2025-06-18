@@ -1,8 +1,5 @@
 name: Auto Cancel Previous CI Runs
 on:
-  create:
-    branches:
-      - '**'
   pull_request:
     branches:
       - '**'

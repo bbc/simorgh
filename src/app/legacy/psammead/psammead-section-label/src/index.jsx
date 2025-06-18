@@ -5,10 +5,12 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import {
+  GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '#psammead/gel-foundations/src/spacings';
 import { GHOST } from '#app/components/ThemeProvider/palette';
+import { focusIndicatorThickness } from '#app/components/ThemeProvider/focusIndicator';
 import { PlainTitle, LinkTitle } from './titles';
 
 const SectionLabelWrapper = styled.div`
@@ -42,6 +44,15 @@ export const Heading = styled.h2`
   /* reset default margins */
   margin: 0;
   padding: 0;
+  scroll-margin-top: ${GEL_SPACING_DBL};
+
+  :focus-visible {
+    outline: ${({ theme: { palette } }) =>
+      `${focusIndicatorThickness} solid ${palette.BLACK}`};
+    box-shadow: ${({ theme: { palette } }) =>
+      `0 0 0 ${focusIndicatorThickness} ${palette.WHITE}`};
+    outline-offset: ${focusIndicatorThickness};
+  }
 `;
 
 const SectionLabel = ({
@@ -58,7 +69,14 @@ const SectionLabel = ({
   ...props
 }) => (
   <SectionLabelWrapper visuallyHidden={visuallyHidden} {...props}>
-    <Heading as={overrideHeadingAs}>
+    <Heading
+      as={overrideHeadingAs}
+      {...(labelId &&
+        !overrideHeadingAs && {
+          id: `section-label-heading-${labelId}`,
+          tabIndex: -1,
+        })}
+    >
       {linkText && href ? (
         <LinkTitle
           dir={dir}

@@ -13,6 +13,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-urdu',
     atiAnalyticsProducerId: '95',
+    atiAnalyticsProducerName: 'URDU',
+    useReverb: true,
     chartbeatDomain: 'urdu.bbc.co.uk',
     brandName: 'BBC News اردو',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/urdu.png',
@@ -39,24 +41,24 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/urdu/institutional-49282935',
     isTrustProjectParticipant: true,
     script: arabic,
-    manifestPath: '/manifest.json',
+    manifestPath: '/urdu/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle:
+    homePageTitle:
       'خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news',
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
-      title: 'پوڈکاسٹ',
-      brandTitle: 'ڈرامہ کوئین',
+      title: 'واٹس ایپ',
+      brandTitle: 'بی بی سی اردو اب واٹس ایپ پر',
       brandDescription:
-        '’ڈرامہ کوئین‘ پوڈکاسٹ میں سنیے وہ باتیں جنہیں کسی کے ساتھ بانٹنے نہیں دیا جاتا',
+        'بی بی سی اردو کی خبروں اور فیچرز کو اپنے فون پر حاصل کریں اور سب سے پہلے جانیں پاکستان اور دنیا بھر سے ان کہانیوں کے بارے میں جو آپ کے لیے معنی رکھتی ہیں',
       image: {
-        src: 'http://ichef.bbci.co.uk/images/ic/448xn/p0c04zy8.jpg',
-        alt: 'ڈرامہ کوئین',
+        src: 'http://ichef.bbci.co.uk/images/ic/448xn/p0k7ks07.png',
+        alt: 'بی بی سی اردو اب واٹس ایپ پر',
       },
       linkLabel: {
-        text: 'قسطیں',
-        href: 'https://www.bbc.com/urdu/podcasts/p0c04t7w',
+        text: 'سبسکرائب کرنے کے لیے کلک کریں',
+        href: 'https://whatsapp.com/channel/0029Vateujy3wtbGKtkkMD44',
       },
       skipLink: {
         text: 'مواد پر جائیں',
@@ -75,6 +77,7 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'سب دیکھیں',
       home: 'صفحۂ اول',
+      continueReading: 'پڑھتے رہیے',
       currentPage: 'موجودہ صفحہ',
       skipLinkText: 'مواد پر جائیں',
       relatedContent: 'اسی بارے میں',
@@ -92,6 +95,10 @@ export const service: DefaultServiceConfig = {
         postedAt: 'پوسٹ کیا گیا',
         summary: 'خلاصہ',
         shareButtonText: 'شیئر',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'خلاصہ',
       error: {
@@ -151,7 +158,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'اوکے',
           reject: 'جانیے کہ تبدیلیاں کیا ہیں',
-          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/privacy-policy/',
         },
         cookie: {
           amp: {
@@ -244,6 +251,7 @@ export const service: DefaultServiceConfig = {
         recentEpisodes: 'سابق پروگرام',
         podcastExternalLinks: 'یہ پوڈکاسٹ ان پلیٹفارمز پر بھی دستیاب ہے',
         download: 'قسط ڈاؤن لوڈ کریں',
+        closeVideo: 'بند کریں',
       },
       socialEmbed: {
         caption: {
@@ -346,7 +354,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'سب سے زیادہ پڑھی جانے والی',
+      header: 'مقبول خبریں',
       lastUpdated: 'آخری اپ ڈیٹ',
       numberOfItems: 10,
       hasMostRead: true,
@@ -357,7 +365,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: '%duration% دورانیہ',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'سب سے زیادہ پڑھی جانے والی',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
@@ -388,6 +400,10 @@ export const service: DefaultServiceConfig = {
         {
           href: 'https://www.bbc.co.uk/urdu/send/u50853907',
           text: 'بی بی سی سے رابطہ کریں',
+        },
+        {
+          href: 'https://www.bbc.com/ws/languages',
+          text: 'بی بی سی نیوز دیگر زبانوں میں',
         },
         {
           id: 'COOKIE_SETTINGS',

@@ -16,7 +16,7 @@ describe('setCookie Assertion Tests', () => {
     it('should return cookie with domain and expiration of 1 year', () => {
       setCookie({ name: 'test', value: '111' });
       expect(cookieSpy).toHaveBeenCalledWith('test', '111', {
-        domain: '.bbc.com',
+        domain: 'localhost',
         expires: 365,
         sameSite: 'Lax',
       });
@@ -24,7 +24,7 @@ describe('setCookie Assertion Tests', () => {
     it('should return cookie with domain and expiration of 1 week', () => {
       setCookie({ name: 'test', value: '111', expires: 7 });
       expect(cookieSpy).toHaveBeenCalledWith('test', '111', {
-        domain: '.bbc.com',
+        domain: 'localhost',
         expires: 7,
         sameSite: 'Lax',
       });
@@ -63,7 +63,7 @@ describe('setCookie Assertion Tests', () => {
       setCookie({ name: 'test', value: '111', sameSite: 'None' });
 
       expect(cookieSpy).toHaveBeenCalledWith('test', '111', {
-        domain: '.bbc.com',
+        domain: 'localhost',
         expires: 365,
         sameSite: 'None',
         secure: true,

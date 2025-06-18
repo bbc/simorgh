@@ -1,0 +1,241 @@
+{
+  "data": {
+    "isPodcast": false,
+    "metadata": {
+      "type": "On Demand Radio",
+      "atiAnalytics": {
+        "pageIdentifier": "indonesia.bbc_indonesian_radio.w172xybnvm6718v.page",
+        "contentType": "player-episode",
+        "pageTitle": "Dunia Pagi Ini - BBC News Indonesia",
+        "contentId": "urn:bbc:pips:w172xybnvm6718v"
+      }
+    },
+    "language": "id",
+    "brandTitle": "Dunia Pagi Ini",
+    "episodeTitle": "Dunia Pagi Ini",
+    "headline": "Dunia Pagi Ini",
+    "shortSynopsis": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
+    "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/w172xybnvm6718v",
+    "brandId": "w13xtt0s",
+    "summary": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
+    "contentType": "player-episode",
+    "episodeId": "w172xybnvm6718v",
+    "masterBrand": "bbc_indonesian_radio",
+    "releaseDateTimeStamp": 1623196800000,
+    "pageTitle": "Dunia Pagi Ini - BBC News Indonesia",
+    "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+    "imageAltText": null,
+    "promoBrandTitle": "Dunia Pagi Ini",
+    "durationISO8601": null,
+    "thumbnailImageUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p08b4828.png",
+    "episodeAvailability": "expired",
+    "radioScheduleData": [],
+    "recentEpisodes": [
+      {
+        "id": "w172ywztppckjfb",
+        "brandTitle": "Dunia Pagi Ini",
+        "episodeTitle": "Dunia Pagi Ini",
+        "timestamp": "2023-01-22T00:00:00.000Z",
+        "duration": "PT15M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b4828.png",
+        "altText": "Dunia Pagi Ini"
+      },
+      {
+        "id": "w172ywztppckdp6",
+        "brandTitle": "Dunia Pagi Ini",
+        "episodeTitle": "Dunia Pagi Ini",
+        "timestamp": "2023-01-22T00:00:00.000Z",
+        "duration": "PT15M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b4828.png",
+        "altText": "Dunia Pagi Ini"
+      },
+      {
+        "id": "w172ywztppc8tq1",
+        "brandTitle": "Dunia Pagi Ini",
+        "episodeTitle": "Dunia Pagi Ini",
+        "timestamp": "2023-01-19T00:00:00.000Z",
+        "duration": "PT15M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b4828.png",
+        "altText": "Dunia Pagi Ini"
+      },
+      {
+        "id": "w172ywztppc8pyx",
+        "brandTitle": "Dunia Pagi Ini",
+        "episodeTitle": "Dunia Pagi Ini",
+        "timestamp": "2023-01-19T00:00:00.000Z",
+        "duration": "PT15M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b4828.png",
+        "altText": "Dunia Pagi Ini"
+      },
+      {
+        "id": "w172ywztppc5xsy",
+        "brandTitle": "Dunia Pagi Ini",
+        "episodeTitle": "Dunia Pagi Ini",
+        "timestamp": "2023-01-18T00:00:00.000Z",
+        "duration": "PT15M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b4828.png",
+        "altText": "Dunia Pagi Ini"
+      },
+      {
+        "id": "w172ywztppc5t1t",
+        "brandTitle": "Dunia Pagi Ini",
+        "episodeTitle": "Dunia Pagi Ini",
+        "timestamp": "2023-01-18T00:00:00.000Z",
+        "duration": "PT15M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b4828.png",
+        "altText": "Dunia Pagi Ini"
+      },
+      {
+        "id": "w172ywztppc30wv",
+        "brandTitle": "Dunia Pagi Ini",
+        "episodeTitle": "Dunia Pagi Ini",
+        "timestamp": "2023-01-17T00:00:00.000Z",
+        "duration": "PT15M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b4828.png",
+        "altText": "Dunia Pagi Ini"
+      },
+      {
+        "id": "w172ywztppc2x4q",
+        "brandTitle": "Dunia Pagi Ini",
+        "episodeTitle": "Dunia Pagi Ini",
+        "timestamp": "2023-01-17T00:00:00.000Z",
+        "duration": "PT15M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b4828.png",
+        "altText": "Dunia Pagi Ini"
+      },
+      {
+        "id": "w172ywztppc03zr",
+        "brandTitle": "Dunia Pagi Ini",
+        "episodeTitle": "Dunia Pagi Ini",
+        "timestamp": "2023-01-16T00:00:00.000Z",
+        "duration": "PT15M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b4828.png",
+        "altText": "Dunia Pagi Ini"
+      },
+      {
+        "id": "w172ywztppc007m",
+        "brandTitle": "Dunia Pagi Ini",
+        "episodeTitle": "Dunia Pagi Ini",
+        "timestamp": "2023-01-16T00:00:00.000Z",
+        "duration": "PT15M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b4828.png",
+        "altText": "Dunia Pagi Ini"
+      },
+      {
+        "id": "w172ywztbf1scth",
+        "brandTitle": "Dunia Pagi Ini",
+        "episodeTitle": "Dunia Pagi Ini",
+        "timestamp": "2023-01-15T00:00:00.000Z",
+        "duration": "PT15M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b4828.png",
+        "altText": "Dunia Pagi Ini"
+      },
+      {
+        "id": "w172ywztbf1s82c",
+        "brandTitle": "Dunia Pagi Ini",
+        "episodeTitle": "Dunia Pagi Ini",
+        "timestamp": "2023-01-15T00:00:00.000Z",
+        "duration": "PT15M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b4828.png",
+        "altText": "Dunia Pagi Ini"
+      },
+      {
+        "id": "w172ywztbf1hp36",
+        "brandTitle": "Dunia Pagi Ini",
+        "episodeTitle": "Dunia Pagi Ini",
+        "timestamp": "2023-01-12T00:00:00.000Z",
+        "duration": "PT15M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b4828.png",
+        "altText": "Dunia Pagi Ini"
+      },
+      {
+        "id": "w172ywztbf1hkc2",
+        "brandTitle": "Dunia Pagi Ini",
+        "episodeTitle": "Dunia Pagi Ini",
+        "timestamp": "2023-01-12T00:00:00.000Z",
+        "duration": "PT15M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b4828.png",
+        "altText": "Dunia Pagi Ini"
+      },
+      {
+        "id": "w172ywztbf1ds63",
+        "brandTitle": "Dunia Pagi Ini",
+        "episodeTitle": "Dunia Pagi Ini",
+        "timestamp": "2023-01-11T00:00:00.000Z",
+        "duration": "PT15M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b4828.png",
+        "altText": "Dunia Pagi Ini"
+      },
+      {
+        "id": "w172ywztbf1dnfz",
+        "brandTitle": "Dunia Pagi Ini",
+        "episodeTitle": "Dunia Pagi Ini",
+        "timestamp": "2023-01-11T00:00:00.000Z",
+        "duration": "PT15M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b4828.png",
+        "altText": "Dunia Pagi Ini"
+      },
+      {
+        "id": "w172ywztbf19w90",
+        "brandTitle": "Dunia Pagi Ini",
+        "episodeTitle": "Dunia Pagi Ini",
+        "timestamp": "2023-01-10T00:00:00.000Z",
+        "duration": "PT15M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b4828.png",
+        "altText": "Dunia Pagi Ini"
+      },
+      {
+        "id": "w172ywztbf19rjw",
+        "brandTitle": "Dunia Pagi Ini",
+        "episodeTitle": "Dunia Pagi Ini",
+        "timestamp": "2023-01-10T00:00:00.000Z",
+        "duration": "PT15M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b4828.png",
+        "altText": "Dunia Pagi Ini"
+      },
+      {
+        "id": "w172ywztbf16zcx",
+        "brandTitle": "Dunia Pagi Ini",
+        "episodeTitle": "Dunia Pagi Ini",
+        "timestamp": "2023-01-09T00:00:00.000Z",
+        "duration": "PT15M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b4828.png",
+        "altText": "Dunia Pagi Ini"
+      },
+      {
+        "id": "w172ywztbf16vms",
+        "brandTitle": "Dunia Pagi Ini",
+        "episodeTitle": "Dunia Pagi Ini",
+        "timestamp": "2023-01-09T00:00:00.000Z",
+        "duration": "PT15M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b4828.png",
+        "altText": "Dunia Pagi Ini"
+      }
+    ],
+    "externalLinkVersionId": null,
+    "mediaBlocks": [
+      {
+        "type": "audio",
+        "model": {
+          "id": "w172xybnvm6718v",
+          "subType": "episode",
+          "format": "Audio",
+          "title": "09/06/2021 GMT",
+          "synopses": {
+            "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
+            "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+          "embedding": false,
+          "advertising": false,
+          "versions": [],
+          "availability": "notAvailable",
+          "smpKind": "radioProgramme",
+          "episodeTitle": "Dunia Pagi Ini",
+          "type": "media"
+        }
+      }
+    ]
+  },
+  "contentType": "application/json; charset=utf-8"
+}

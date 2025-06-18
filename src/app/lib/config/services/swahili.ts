@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-swahili',
     atiAnalyticsProducerId: '86',
+    atiAnalyticsProducerName: 'SWAHILI',
+    useReverb: true,
     chartbeatDomain: 'swahili.bbc.co.uk',
     brandName: 'BBC News Swahili',
     product: 'BBC News',
@@ -39,11 +41,29 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/swahili/taasisi-49283417',
     isTrustProjectParticipant: true,
     script: latin,
-    manifestPath: '/manifest.json',
+    manifestPath: '/swahili/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Swahili',
+    homePageTitle: 'Swahili',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'Whatsapp',
+      brandTitle: 'BBC Swahili sasa kwenye WhatsApp',
+      brandDescription:
+        'Pata habari za kina kutoka BBC News Swahili, moja kwa moja kupitia WhatsApp.',
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0ljr69d.png',
+        alt: 'BBC Swahili WhatsApp bofya kutufuatilia',
+      },
+      linkLabel: {
+        text: 'Bonyeza hapa kujiunga',
+        href: 'https://www.whatsapp.com/channel/0029Vaguu59FcowC5O1Nl01o',
+      },
+      skipLink: {
+        text: 'Hauhitaji %title%',
+        endTextVisuallyHidden: 'Mwisho wa %title%',
+      },
+    },
     translations: {
       pagination: {
         page: 'Ukurasa',
@@ -56,11 +76,24 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Tazama zote',
       home: 'Habari',
+      continueReading: 'Endelea kusoma',
       currentPage: 'Ukurasa uliopo ',
       skipLinkText: 'Ruka hadi maelezo',
       relatedContent: 'Maelezo zaidi kuhusu taarifa hii',
       relatedTopics: 'Mada zinazohusiana',
       navMenuText: 'Yaliyomo',
+      liteSite: {
+        onboardingMessage:
+          'Hii ni tovuti ya maandishi pekee ambayo inatumia data kidogo. Tazama toleo kuu la tovuti likijumuisha picha na video zote.',
+        toMainSite: 'Bofya kuelekea tovuti kuu',
+        informationPage:
+          'Pata maelezo zaidi kuhusu toleo hili la linalotumia kiasi kidogo cha data',
+        informationPageLink:
+          'https://www.bbc.com/swahili/articles/cpw79gwzkv1o',
+        dataSaving: 'Usomaji maandishi tu kupunguza gharama za data',
+        articleDataSavingLinkText:
+          'Usomaji maandishi tu kupunguza gharama za data',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Kicheza Nyenzo',
         audioPlayer: 'Kicheza Sauti',
@@ -73,6 +106,10 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Imepakiwa mnamo',
         summary: 'Muhtasari',
         shareButtonText: 'Mshirikishe mwenzako',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'Muhtasari',
       error: {
@@ -134,7 +171,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'Ndio',
           reject: 'Fahamu kilichobadilika',
-          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/privacy-policy/',
         },
         cookie: {
           amp: {
@@ -226,6 +263,7 @@ export const service: DefaultServiceConfig = {
         },
         listen: 'Sikiliza',
         watch: 'Tazama',
+        watchMoments: 'Tazama hapa',
         liveLabel: 'Moja kwa moja',
         nextLabel: 'MBELE',
         previousRadioShow: 'Kipindi kilichopita cha redio',
@@ -265,9 +303,9 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'Gumzo mitandaoni',
     },
     mostRead: {
-      header: 'Iliyosomwa zaidi',
+      header: 'Zinazovuma zaidi',
       lastUpdated: 'Imeboreshwa mwisho:',
-      numberOfItems: 5,
+      numberOfItems: 10,
       hasMostRead: true,
     },
     radioSchedule: {
@@ -276,7 +314,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'Muda %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'Iliyosomwa zaidi',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
@@ -307,6 +349,10 @@ export const service: DefaultServiceConfig = {
         {
           href: 'https://www.bbc.co.uk/swahili/send/u50853731',
           text: 'Wasiliana na BBC',
+        },
+        {
+          href: 'https://www.bbc.com/ws/languages',
+          text: 'Habari za BBC kwa lugha zingine',
         },
         {
           id: 'COOKIE_SETTINGS',
@@ -342,10 +388,12 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Video',
         url: '/swahili/topics/cz40xlzvj6kt',
+        hideOnLiteSite: true,
       },
       {
         title: 'Vipindi vya Redio',
         url: '/swahili/topics/ckrdle3133xt',
+        hideOnLiteSite: true,
       },
     ],
   },

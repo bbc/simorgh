@@ -17,6 +17,21 @@ const styles = {
         paddingRight: '0',
       },
     }),
+  // TODO: Remove this styling after the US Elections
+  electionBannerOverrides: ({ mq }: Theme) =>
+    css({
+      paddingLeft: 0,
+      paddingRight: 0,
+
+      [mq.GROUP_2_MIN_WIDTH]: {
+        paddingLeft: 0,
+        paddingRight: 0,
+      },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        paddingLeft: 0,
+        paddingRight: 0,
+      },
+    }),
 };
 
 export default styles;

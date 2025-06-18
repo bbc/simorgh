@@ -1,6 +1,6 @@
 /**
  * @service pidgin
- * @pathname /pidgin/live/c7p765ynk9qt?renderer_env=test
+ * @pathname /pidgin/live/c7p765ynk9qt
  */
 
 import runCanonicalTest from '../canonicalTests';

@@ -41,6 +41,13 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
 .emotion-5 {
   margin: 0;
   padding: 0;
+  scroll-margin-top: 1rem;
+}
+
+.emotion-5:focus-visible {
+  outline: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF;
+  outline-offset: 0.1875rem;
 }
 
 .emotion-7 {
@@ -361,6 +368,8 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
     >
       <h2
         class="emotion-5 emotion-6"
+        id="section-label-heading-recent-episodes"
+        tabindex="-1"
       >
         <span
           class="emotion-7 emotion-8"

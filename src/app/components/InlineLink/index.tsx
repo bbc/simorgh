@@ -36,7 +36,8 @@ const InlineLink: FC<Props> = ({
 }: Props) => {
   const { externalLinkText } = useContext(ServiceContext);
   const { hostname } = new Url(to);
-  const isExternalLink = !bbcDomains.some(bbcDomain => hostname === bbcDomain);
+  const isExternalLink =
+    hostname && !bbcDomains.some(bbcDomain => hostname === bbcDomain);
   const linkProps = {
     ...(isExternalLink &&
       typeof text === 'string' && {

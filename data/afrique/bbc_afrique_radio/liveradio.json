@@ -1,67 +1,87 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares:ws_media:live:bbc_afrique_radio",
-    "locators": {
-      "pipsUrn": "urn:bbc:pips:bbc_afrique_radio"
-    },
-    "type": "WS-LIVE",
-    "createdBy": "afrique",
+  "data": {
+    "heading": "BBC Afrique Radio",
+    "bodySummary": "Infos, musique et sports",
     "language": "fr",
-    "lastUpdated": 0,
-    "firstPublished": 0,
-    "lastPublished": 0,
-    "options": {},
-    "analyticsLabels": {
-      "pageTitle": "BBC Afrique Radio - BBC News Afrique",
-      "pageIdentifier": "afrique.bbc_afrique_radio.liveradio.page",
-      "producerId": "3",
-      "contentType": "player-live",
-      "producer": "AFRIQUE"
+    "id": "urn:bbc:ares:ws_media:live:bbc_afrique_radio",
+    "name": "BBC Afrique Radio",
+    "summary": "Infos, musique et sports",
+    "masterBrand": "bbc_afrique_radio",
+    "radioScheduleData": [
+      {
+        "id": "p0k01c4p",
+        "state": "next",
+        "startTime": "2024-11-29T18:00:00.000Z",
+        "link": "/afrique/bbc_afrique_radio/w17300vglvk3fwt",
+        "brandTitle": "BBC Soir",
+        "summary": "La grande édition d'information de la soirée ",
+        "duration": "PT10M"
+      },
+      {
+        "id": "p0k01c3n",
+        "state": "onDemand",
+        "startTime": "2024-11-29T12:20:00.000Z",
+        "link": "/afrique/bbc_afrique_radio/w172zzrjc8gt3ht",
+        "brandTitle": "A Vous L'antenne",
+        "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité ",
+        "duration": "PT10M"
+      },
+      {
+        "id": "p0k01c3l",
+        "state": "onDemand",
+        "startTime": "2024-11-29T12:10:00.000Z",
+        "link": "/afrique/bbc_afrique_radio/w172zzx198sl87k",
+        "brandTitle": "Au Coeur De L'actu",
+        "summary": "Un jour, un thème pour aller plus en profondeur sur les sujets qui font bouger l’Afrique",
+        "duration": "PT10M"
+      },
+      {
+        "id": "p0k01c3j",
+        "state": "onDemand",
+        "startTime": "2024-11-29T12:00:00.000Z",
+        "link": "/afrique/bbc_afrique_radio/w17300vwb6vfcmp",
+        "brandTitle": "BBC Midi",
+        "summary": "Le point de l'actualité à la mi-journée",
+        "duration": "PT10M"
+      }
+    ],
+    "metadata": {
+      "type": "Live Radio",
+      "atiAnalytics": {
+        "contentId": "urn:bbc:ares:ws_media:live:bbc_afrique_radio",
+        "contentType": "player-live",
+        "pageIdentifier": "afrique.bbc_afrique_radio.liveradio.page",
+        "pageTitle": "BBC Afrique Radio - BBC News Afrique"
+      }
     },
-    "tags": {},
-    "version": "1.1.2",
-    "blockTypes": ["heading", "version", "paragraph"]
-  },
-  "content": {
-    "blocks": [
+    "mediaBlock": [
       {
-        "text": "BBC Afrique Radio",
-        "markupType": "plain_text",
-        "type": "heading"
-      },
-      {
-        "text": "Infos, musique et sports",
-        "type": "paragraph"
-      },
-      {
-        "id": "liveradio",
-        "subType": "primary",
-        "format": "audio",
-        "externalId": "bbc_afrique_radio",
-        "duration": "PT0S",
-        "caption": "",
-        "embedding": false,
-        "available": true,
-        "live": true,
-        "type": "version"
+        "type": "liveRadio",
+        "model": [
+          {
+            "text": "BBC Afrique Radio",
+            "markupType": "plain_text",
+            "type": "heading"
+          },
+          {
+            "text": "Infos, musique et sports",
+            "type": "paragraph"
+          },
+          {
+            "id": "liveradio",
+            "subType": "primary",
+            "format": "audio",
+            "externalId": "bbc_afrique_radio",
+            "duration": "PT0S",
+            "caption": "",
+            "embedding": false,
+            "available": true,
+            "live": true,
+            "type": "version"
+          }
+        ]
       }
     ]
   },
-  "promo": {
-    "name": "BBC Afrique Radio",
-    "summary": "Infos, musique et sports",
-    "uri": "/afrique/bbc_afrique_radio/liveradio",
-    "contentType": "WS-LIVE",
-    "id": "urn:bbc:ares::ws_live:bbc_afrique_radio",
-    "type": "link"
-  },
-  "relatedContent": {
-    "site": {
-      "subType": "simple",
-      "name": "afrique",
-      "uri": "/afrique",
-      "type": "simple"
-    },
-    "groups": []
-  }
+  "contentType": "application/json; charset=utf-8"
 }

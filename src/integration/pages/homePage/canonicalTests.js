@@ -1,31 +1,21 @@
+import numberOfCurations from '#src/integration/pages/homePage/numberOfCurations';
 import {
   runCoreCanonicalTests,
   runMostReadTests,
   runCanonicalAdsTests,
+  runCanonicalAnalyticsTests,
 } from '../../common';
 import runCrossPlatformTests from './crossPlatformTests';
 
 export default ({ service, pageData, displayAds }) => {
-  runCrossPlatformTests({ service, pageData });
+  runCrossPlatformTests({ service });
   runCoreCanonicalTests();
+  runCanonicalAnalyticsTests();
   runMostReadTests();
-
+  numberOfCurations(pageData);
   if (displayAds) {
     runCanonicalAdsTests();
   }
-
-  it('should render the correct number of curations, including most read, radio schedule & VJ embed', () => {
-    const curationsWithSummaries = pageData.curations.filter(
-      ({ summaries, mostRead, radioSchedule, embed }) =>
-        (summaries && summaries?.length > 0) ||
-        mostRead ||
-        radioSchedule ||
-        embed,
-    );
-
-    const numberOfCurations = document.querySelectorAll('main h2').length;
-    expect(numberOfCurations).toEqual(curationsWithSummaries.length);
-  });
 
   describe('Radio Schedule', () => {
     const radioScheduleComponent = document.getElementById('Radio-Schedule');
@@ -43,7 +33,7 @@ export default ({ service, pageData, displayAds }) => {
 
   describe('Embed', () => {
     const embedComponent = document.querySelector('[data-testid="embed"]');
-    if (service === 'hindi') {
+    if (service === 'marathi') {
       it('should be in the document', () => {
         expect(embedComponent).toBeInTheDocument();
       });

@@ -4,14 +4,20 @@ import { render } from '../../../../components/react-testing-library-with-provid
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import RecentVideoEpisodes from '.';
 import { afrique } from './fixtures';
+import { TV_PAGE } from '../../../../routes/utils/pageTypes';
 
-const RecentVideoEpisodesWithContext = ({ episodes, isAmp = false }) => (
+const RecentVideoEpisodesWithContext = ({
+  episodes,
+  isAmp = false,
+  isLite = false,
+}) => (
   <ServiceContextProvider service="afrique">
     <RequestContextProvider
       isAmp={isAmp}
       pathname="test"
       service="afrique"
-      pageType="media"
+      pageType={TV_PAGE}
+      isLite={isLite}
     >
       <RecentVideoEpisodes masterBrand="bbc_afrique_tv" episodes={episodes} />
     </RequestContextProvider>
@@ -23,8 +29,7 @@ describe('Recent Video Episodes', () => {
     const { container } = render(
       <RecentVideoEpisodes masterBrand="bbc_afrique_tv" episodes={afrique} />,
       {
-        pageType: 'media',
-        derivedPageType: 'On Demand TV',
+        pageType: TV_PAGE,
         service: 'afrique',
       },
     );
@@ -121,6 +126,17 @@ describe('Recent Video Episodes', () => {
     expect(
       container.querySelector(`img[alt='${afrique[0].altText}']`),
     ).toBeInTheDocument();
+  });
+
+  it('should not render images on Lite', () => {
+    const { container, getByText } = render(
+      <RecentVideoEpisodesWithContext episodes={afrique} isLite />,
+    );
+
+    expect(getByText('Oui, je suis le chef')).toBeInTheDocument();
+    expect(
+      container.querySelector(`img[src='${afrique[0].image}']`),
+    ).not.toBeInTheDocument();
   });
 
   it('should render the media indicator', () => {

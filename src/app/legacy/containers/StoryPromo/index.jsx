@@ -50,9 +50,9 @@ const extractAltText = blocks => {
     if (block.model && block.model.blocks) {
       return extractAltText(block.model.blocks);
     }
-    return '';
   }
 };
+
 const getBlockByType = (blocks, blockType) => {
   let blockData;
   blocks.forEach(block => {
@@ -149,7 +149,7 @@ const StoryPromoContainer = ({
   sectionType = '',
 }) => {
   const { script, service } = useContext(ServiceContext);
-  const { isAmp, isLite, pageType } = useContext(RequestContext);
+  const { isAmp, isLite, pageType, variant } = useContext(RequestContext);
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
 
   const linkId = buildUniquePromoId({
@@ -167,7 +167,8 @@ const StoryPromoContainer = ({
     isAssetTypeCode === 'PRO' &&
     pathOr(null, ['contentType'], item) === 'Guide';
   const headline = getHeadline(item);
-  const url = getUrl(item);
+
+  const url = getUrl(item, variant);
   const isLive = getIsLive(item);
 
   const overtypedSummary = pathOr(null, ['overtypedSummary'], item);
@@ -237,7 +238,7 @@ const StoryPromoContainer = ({
       >
         <StyledLink
           href={url}
-          onClick={eventTrackingData ? handleClickTracking : null}
+          {...(eventTrackingData && handleClickTracking)}
           // Aria-labelledby a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
           aria-labelledby={linkId}
           className="focusIndicatorDisplayInlineBlock"

@@ -11,6 +11,10 @@ const canonicalIntegrationTests = {
   testEnvironmentOptions: {
     platform: 'canonical',
   },
+  modulePaths: ['../'],
+  moduleNameMapper: {
+    ...pathsToModuleNameMapper(compilerOptionsPaths),
+  },
   setupFilesAfterEnv: ['./setupTests.ts'],
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': [
@@ -29,6 +33,10 @@ const ampIntegrationTests = {
   testEnvironment: './integration/IntegrationTestEnvironment.ts',
   testEnvironmentOptions: {
     platform: 'amp',
+  },
+  modulePaths: ['../'],
+  moduleNameMapper: {
+    ...pathsToModuleNameMapper(compilerOptionsPaths),
   },
   setupFilesAfterEnv: ['./setupTests.ts'],
   transform: {
@@ -70,6 +78,7 @@ const unitTests = {
 
 const config: import('jest').Config = {
   projects: [unitTests, canonicalIntegrationTests, ampIntegrationTests],
+  workerIdleMemoryLimit: '512MB',
 };
 
 export default config;

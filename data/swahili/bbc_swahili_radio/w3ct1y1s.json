@@ -1,0 +1,97 @@
+{
+  "data": {
+    "isPodcast": false,
+    "metadata": {
+      "type": "On Demand Radio",
+      "atiAnalytics": {
+        "pageIdentifier": "swahili.bbc_swahili_radio.w3ct1y1s.page",
+        "contentType": "player-episode",
+        "pageTitle": "Wiki Hii - BBC News Swahili",
+        "contentId": "urn:bbc:pips:w3ct1y1s"
+      }
+    },
+    "language": "sw",
+    "brandTitle": "Wiki Hii",
+    "episodeTitle": "Wiki Hii",
+    "headline": "Wiki Hii",
+    "shortSynopsis": "Kipindi cha yaliyojiri wiki nzima kinachokujia kila Jumamosi saa kumi na mbili asubuhi Afrika Mashariki\n\n",
+    "id": "urn:bbc:ares:ws_media:page:bbc_swahili_radio/w3ct1y1s",
+    "brandId": "p030s7gh",
+    "summary": "Kipindi cha yaliyojiri wiki nzima kinachokujia kila Jumamosi saa kumi na mbili asubuhi Afrika Mashariki\n\n",
+    "contentType": "player-episode",
+    "episodeId": "w3ct1y1s",
+    "masterBrand": "bbc_swahili_radio",
+    "releaseDateTimeStamp": 1622851200000,
+    "pageTitle": "Wiki Hii - BBC News Swahili",
+    "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b2knp.png",
+    "imageAltText": null,
+    "promoBrandTitle": "Wiki Hii",
+    "durationISO8601": null,
+    "thumbnailImageUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p08b2knp.png",
+    "episodeAvailability": "expired",
+    "radioScheduleData": [
+      {
+        "id": "p0jygx3d",
+        "state": "next",
+        "startTime": "2024-11-21T15:29:30.000Z",
+        "link": "/swahili/bbc_swahili_radio/w172zyggr9147rv",
+        "brandTitle": "Dira Ya Dunia",
+        "summary": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki",
+        "duration": "PT1H"
+      },
+      {
+        "id": "p0jy9tkq",
+        "state": "onDemand",
+        "startTime": "2024-11-21T03:59:30.000Z",
+        "link": "/swahili/bbc_swahili_radio/w172zyg20xqr6gq",
+        "brandTitle": "Amka Na BBC",
+        "summary": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki",
+        "duration": "PT29M30S"
+      },
+      {
+        "id": "p0jy88rx",
+        "state": "onDemand",
+        "startTime": "2024-11-21T02:59:30.000Z",
+        "link": "/swahili/bbc_swahili_radio/w172zyg20xqr2ql",
+        "brandTitle": "Amka Na BBC",
+        "summary": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki",
+        "duration": "PT29M30S"
+      },
+      {
+        "id": "p0jy5gfm",
+        "state": "onDemand",
+        "startTime": "2024-11-20T15:29:30.000Z",
+        "link": "/swahili/bbc_swahili_radio/w172zyggr911bvr",
+        "brandTitle": "Dira Ya Dunia",
+        "summary": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki",
+        "duration": "PT1H"
+      }
+    ],
+    "recentEpisodes": [],
+    "externalLinkVersionId": null,
+    "mediaBlocks": [
+      {
+        "type": "audio",
+        "model": {
+          "id": "w3ct1y1s",
+          "subType": "episode",
+          "format": "Audio",
+          "title": "05/06/2021 GMT",
+          "synopses": {
+            "short": "Kipindi cha yaliyojiri wiki nzima kinachokujia kila Jumamosi saa kumi na mbili asubuhi Afrika Mashariki\n\n",
+            "medium": "Kipindi cha yaliyojiri wiki nzima kinachokujia kila Jumamosi saa kumi na mbili asubuhi Afrika Mashariki\n\n"
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b2knp.png",
+          "embedding": false,
+          "advertising": false,
+          "versions": [],
+          "availability": "notAvailable",
+          "smpKind": "radioProgramme",
+          "episodeTitle": "Wiki Hii",
+          "type": "media"
+        }
+      }
+    ]
+  },
+  "contentType": "application/json; charset=utf-8"
+}

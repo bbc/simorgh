@@ -21,13 +21,17 @@ const injectCspHeader = (req, res, next) => {
     }),
   );
 
-  const middleware = csp(
-    cspDirectives({
-      isAmp,
-      isLive: isLiveEnv(),
-      service,
-    }),
-  );
+  const { directives } = cspDirectives({
+    isAmp,
+    isLive: isLiveEnv(),
+    service,
+  });
+
+  const middleware = csp({
+    directives,
+    useDefaults: false,
+  });
+
   middleware(req, res, next);
 };
 

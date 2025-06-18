@@ -14,7 +14,6 @@ const Blocks = ({ blocks, componentsToRender }) =>
     if (!componentsToRender || !type) {
       return null;
     }
-
     const Block = componentsToRender[type];
 
     if (!Block) {

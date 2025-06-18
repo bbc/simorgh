@@ -1,4 +1,4 @@
-import { getEnvConfig } from '../getEnvConfig';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 
 const getBrandedImage = (locator, service) =>
   `${

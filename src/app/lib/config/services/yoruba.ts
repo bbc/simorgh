@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-yoruba',
     atiAnalyticsProducerId: '107',
+    atiAnalyticsProducerName: 'YORUBA',
+    useReverb: true,
     chartbeatDomain: 'yoruba.bbc.co.uk',
     brandName: 'BBC News Yorùbá',
     product: 'BBC News',
@@ -36,14 +38,27 @@ export const service: DefaultServiceConfig = {
     twitterSite: '@BBCNews', // to be updated
     showAdPlaceholder: false,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'WhatsApp',
+      brandTitle: 'Èyí ni ìkànnì Whatsapp wa',
+      brandDescription: 'Àjáàbalẹ̀ ìròyìn BBC News Yorùbá lórí WhatsApp rẹ',
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0kthb9n.jpg',
+        alt: 'BBC News Yorùbá ti wà lórí WhatsApp',
+      },
+      linkLabel: {
+        text: 'Darapọ̀ mọ́ wa nibì',
+        href: 'https://bit.ly/3Xgfl35',
+      },
+    },
     noBylinesPolicy:
       'https://www.bbc.com/yoruba/institutional-48528718#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/yoruba/institutional-48528718',
     isTrustProjectParticipant: true,
     script: latin,
-    manifestPath: '/manifest.json',
+    manifestPath: '/yoruba/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Àbáwọlé',
+    homePageTitle: 'Àbáwọlé',
     translations: {
       pagination: {
         previousPage: 'Ìṣájú',
@@ -72,6 +87,10 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Tí a fiṣọwọ́ ní',
         summary: 'Ìsọníṣókí',
         shareButtonText: 'Ṣe alábàápín',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'Ìsọníṣókí',
       error: {
@@ -127,7 +146,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'Ó dára bẹ́ẹ̀',
           reject: 'Ẹ ṣe ìwádìí ohun tó yípadà',
-          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/privacy-policy/',
         },
         cookie: {
           amp: {
@@ -217,6 +236,7 @@ export const service: DefaultServiceConfig = {
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
+        closeVideo: 'Jáde',
       },
       socialEmbed: {
         caption: {
@@ -248,7 +268,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Èyí tí ó ṣẹ̀ṣẹ̀dé',
     },
     mostRead: {
-      header: 'Èyítí A Ń Kà Jùlọ',
+      header: ' Ìròyìn tí àwọn ènìyàn fẹ́ràn jùlọ',
       lastUpdated: 'Tí a mú dójú ìwọ̀n gbẹ̀yìn ní:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -257,7 +277,11 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'Èyítí A Ń Kà Jùlọ',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
@@ -288,6 +312,10 @@ export const service: DefaultServiceConfig = {
         {
           href: 'https://www.bbc.co.uk/yoruba/send/u50853973',
           text: 'Kàn sí BBC',
+        },
+        {
+          href: 'https://www.bbc.com/ws/languages',
+          text: 'Ka ìròyìn BBC l’èdè míràn nibi',
         },
         {
           id: 'COOKIE_SETTINGS',

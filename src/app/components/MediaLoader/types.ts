@@ -1,72 +1,136 @@
 import { PageTypes, Services } from '#app/models/types/global';
+import {
+  MediaType,
+  OnDemandAudioBlock,
+  OnDemandTVBlock,
+  LiveRadioBlock,
+  MediaOverrides,
+} from '#app/models/types/media';
+import { OptimoImageBlock } from '#app/models/types/optimo';
 import { Translations } from '#app/models/types/translations';
+
+export type SMPEvent = {
+  playlist?: {
+    items: PlaylistItem[];
+  };
+};
+
+export type MediaPlayerEvents =
+  | 'playlistLoaded'
+  | 'pluginLoaded'
+  | 'fullscreenExit';
+
+export type EventMapping = Partial<
+  Record<MediaPlayerEvents, (_e: SMPEvent) => void>
+>;
+
+export type Playlist = {
+  title: string;
+  summary?: string;
+  holdingImageURL?: string;
+  items: PlaylistItem[] | LegacyPlayListItem[];
+  guidance?: string;
+  embedRights?: 'allowed';
+  liveRewind?: boolean;
+  simulcast?: boolean;
+  warning?: string;
+};
+
+export type PlaylistItem = {
+  versionID?: string;
+  kind?: string;
+  duration?: number;
+  live?: boolean;
+  serviceID?: string;
+  vpid?: string;
+};
+
+export type LegacyPlayListItem = {
+  href: string;
+  kind: string;
+};
 
 export type PlayerConfig = {
   autoplay?: boolean;
   preload?: string;
   product?: string;
-  superResponsive: boolean;
   enableToucan: boolean;
   counterName?: string;
   appType: 'amp' | 'responsive';
   appName: `news-${Services}` | 'news';
+  supportFakeFullscreen?: boolean;
+  insideIframe?: boolean;
+  embeddedOffsite?: boolean;
   externalEmbedUrl?: string;
+  superResponsive?: boolean;
   statsObject: {
-    clipPID?: string;
-    destination: string;
-    producer: string | '';
+    clipPID?: string | null;
+    episodePID?: string | null;
+    destination?: string;
+    producer?: string | '';
   };
   mediator?: { host: string };
   ui: PlayerUiConfig;
-  playlistObject?: {
-    title: string;
-    summary?: string;
-    holdingImageURL: string;
-    items: PlaylistItem[];
-    guidance?: string;
+  playlistObject?: Playlist;
+  plugins?: {
+    toLoad: { html: string; playerOnly?: boolean }[];
   };
 };
 
 export type PlayerUiConfig = {
-  skin?: string;
+  skin?: 'audio' | 'classic';
   colour?: string;
   foreColour?: string;
   baseColour?: string;
   colourOnBaseColour?: string;
   fallbackBackgroundColour?: string;
-  controls: { enabled: boolean };
-  locale: { lang: string };
-  subtitles: { enabled: boolean; defaultOn: boolean };
-  fullscreen: { enabled: boolean };
-};
-
-export type PlaylistItem = {
-  versionID: string;
-  kind: string;
-  duration: number;
-  live?: boolean;
-  embedRights?: 'allowed';
+  controls?: {
+    enabled: boolean;
+    volumeSlider?: boolean;
+    includeNextButton?: boolean;
+    includePreviousButton?: boolean;
+  };
+  locale?: { lang: string };
+  subtitles?: { enabled: boolean; defaultOn: boolean };
+  fullscreen?: { enabled: boolean; useCloseIconForExitFullscreen?: boolean };
+  swipable?: {
+    enabled: boolean;
+    direction: 'Y' | 'X';
+  };
+  poster?: {
+    availableWhenSettingUp: boolean;
+  };
 };
 
 export type ConfigBuilderProps = {
+  id: string;
   blocks: MediaBlock[];
   basePlayerConfig: PlayerConfig;
   pageType: PageTypes;
   translations?: Translations;
   adsEnabled?: boolean;
   showAdsBasedOnLocation?: boolean;
+  embedUrl?: string;
+  embedded?: boolean;
+  lang: string;
+};
+
+export type Orientations = 'landscape' | 'portrait';
+
+export type PlaceholderConfig = {
+  mediaInfo: MediaInfo;
+  placeholderSrc: string;
+  placeholderSrcset: string;
+  translatedNoJSMessage: string;
 };
 
 export type ConfigBuilderReturnProps = {
-  mediaType: string;
+  mediaType: MediaType;
   playerConfig: PlayerConfig;
-  placeholderConfig: {
-    mediaInfo: MediaInfo;
-    placeholderSrc: string;
-    placeholderSrcset: string;
-    translatedNoJSMessage: string;
-  };
+  placeholderConfig?: PlaceholderConfig;
   showAds: boolean;
+  ampIframeUrl?: string;
+  orientation?: Orientations;
 };
 
 export type MediaInfo = {
@@ -74,20 +138,22 @@ export type MediaInfo = {
   datetime?: string;
   duration?: string;
   durationSpoken?: string;
-  type?: 'audio' | 'video';
+  type?: MediaType;
   guidanceMessage?: string | null;
 };
 
 export type Player = {
   dispatchEvent(
     dispatchEvent: string,
-    parameters: { updatedAdTag: string },
+    parameters?: { updatedAdTag: string },
   ): void;
   load: () => void;
-  bind: (event: string, callback: () => void) => void;
+  play: () => void;
+  pause: () => void;
+  bind: (event: MediaPlayerEvents, callback: (e: SMPEvent) => void) => void;
   loadPlugin: (
     pluginName: { [key: string]: string },
-    parameters: {
+    parameters?: {
       name: string;
       data: {
         adTag: string;
@@ -95,6 +161,12 @@ export type Player = {
       };
     },
   ) => void;
+  queuePlaylist: (playlist: Playlist, options?: Partial<PlayerConfig>) => void;
+  setPreviousPlaylist: (
+    playlist: Playlist,
+    options?: Partial<PlayerConfig>,
+  ) => void;
+  player: { paused: () => boolean };
 };
 
 export type BumpType = {
@@ -121,24 +193,39 @@ export type CaptionBlock = {
 export type AresMediaBlock = {
   type: 'aresMedia';
   model: {
+    blocks: [AresMediaMetadataBlock | OptimoImageBlock];
+  };
+};
+
+export type AresMediaMetadataBlock = {
+  type: 'aresMediaMetadata';
+  model: {
+    firstPublished?: string;
+    live?: boolean;
     locator: string;
     originCode: string;
     text: string;
     title: string;
-    blocks: AresMediaBlock[];
+    synopses: {
+      short: string;
+    };
     imageUrl: string;
-    format: 'audio' | 'video';
+    format: MediaType;
+    id: string;
     embedding: boolean;
+    subType: string;
     versions: {
+      availableFrom?: string;
       versionId: string;
+      types: string[];
       duration: number;
       durationISO8601?: string;
-
       warnings?: { [key: string]: string };
     }[];
     webcastVersions: {
       versionId: string;
       duration: number;
+      types: string[];
       durationISO8601?: string;
       warnings?: { [key: string]: string };
     }[];
@@ -149,12 +236,13 @@ export type AresMediaBlock = {
 export type ClipMediaBlock = {
   type: 'clipMedia';
   model: {
-    type: 'audio' | 'video';
+    type: MediaType;
     images: {
       source: string;
       urlTemplate: string;
     }[];
     video: {
+      id: string;
       title: string;
       version: {
         id: string;
@@ -167,14 +255,92 @@ export type ClipMediaBlock = {
   };
 };
 
-export type MediaBlock = AresMediaBlock | ClipMediaBlock | CaptionBlock;
+export type PortraitClipMediaBlock = {
+  type: 'portraitClipMedia';
+  model: {
+    type: MediaType;
+    images: {
+      source: string;
+      urlTemplate?: string;
+    }[];
+    video: {
+      id: string;
+      title: string;
+      version: {
+        id: string;
+        duration: string;
+        kind: string;
+        guidance: string | null;
+      };
+      isEmbeddingAllowed: boolean;
+    };
+  };
+};
+
+export type LegacyMediaBlock = {
+  type: 'legacyMedia';
+  content: {
+    id: string;
+    subType: string;
+    format: MediaType;
+    image: {
+      id: string;
+      subType: string;
+      href: string;
+      path: string;
+      height: number;
+      width: number;
+      altText: string;
+      copyrightHolder: string;
+    };
+    aspectRatio: string;
+    live: boolean;
+    href: string;
+    playlist: {
+      format: string;
+      url: string;
+    }[];
+  };
+};
+
+export type MediaCollection = {
+  type: 'liveMedia';
+  model: {
+    synopses: {
+      short: string;
+    };
+    masterbrand: {
+      networkName: string;
+    };
+    version: {
+      vpid?: string;
+      serviceID?: string;
+      duration: string;
+      status: string;
+    };
+    imageUrlTemplate: string;
+    title: string;
+  };
+};
+
+export type MediaBlock =
+  | AresMediaBlock
+  | ClipMediaBlock
+  | PortraitClipMediaBlock
+  | LegacyMediaBlock
+  | LiveRadioBlock
+  | OnDemandTVBlock
+  | OnDemandAudioBlock
+  | CaptionBlock
+  | MediaOverrides
+  | MediaCollection;
 
 export type BuildConfigProps = {
+  id: string;
   blocks: MediaBlock[];
   counterName: string | null;
   statsDestination: string;
   producer: string | '';
-  id: string | null;
   isAmp: boolean;
   lang: string;
   pageType: PageTypes;
@@ -182,4 +348,5 @@ export type BuildConfigProps = {
   translations?: Translations;
   adsEnabled?: boolean;
   showAdsBasedOnLocation?: boolean;
+  embedded?: boolean;
 };

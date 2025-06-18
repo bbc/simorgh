@@ -1,68 +1,50 @@
 {
-  "content": {
-    "blocks": [
-      {
-        "markupType": "plain_text",
-        "text": "Dhaggeeffadhaa",
-        "type": "heading"
-      },
-      {
-        "text": "Sagantaawwan keenya",
-        "type": "paragraph"
-      },
-      {
-        "available": true,
-        "caption": "",
-        "duration": "PT0S",
-        "embedding": false,
-        "externalId": "bbc_oromo_radio",
-        "format": "audio",
-        "id": "liveradio",
-        "live": true,
-        "subType": "primary",
-        "type": "version"
-      }
-    ]
-  },
-  "metadata": {
-    "analyticsLabels": {
-      "contentType": "player-live",
-      "pageIdentifier": "afaanoromoo.bbc_afaanoromoo_radio.liveradio.page",
-      "pageTitle": "Dhaggeeffadhaa - BBC News Afaan Oromoo",
-      "producer": "AFAAN_OROMOO",
-      "producerId": "2"
-    },
-    "atiAnalytics": {},
-    "blockTypes": ["heading", "version", "paragraph"],
-    "createdBy": "afaanoromoo",
-    "firstPublished": 0,
-    "id": "urn:bbc:ares:ws_media:live:bbc_afaanoromoo_radio",
+  "data": {
+    "heading": "Dhaggeeffadhaa",
+    "bodySummary": "Sagantaawwan keenya",
     "language": "om",
-    "lastPublished": 0,
-    "lastUpdated": 0,
-    "locators": {
-      "pipsUrn": "urn:bbc:pips:bbc_oromo_radio"
-    },
-    "options": {},
-    "tags": {},
-    "type": "WS-LIVE",
-    "version": "1.1.2"
-  },
-  "promo": {
-    "contentType": "WS-LIVE",
     "id": "urn:bbc:ares:ws_media:live:bbc_afaanoromoo_radio",
     "name": "Dhaggeeffadhaa",
     "summary": "Sagantaawwan keenya",
-    "type": "link",
-    "uri": "/afaanoromoo/bbc_afaanoromoo_radio/liveradio"
+    "masterBrand": "bbc_oromo_radio",
+    "radioScheduleData": null,
+    "metadata": {
+      "type": "Live Radio",
+      "atiAnalytics": {
+        "contentId": "urn:bbc:ares:ws_media:live:bbc_afaanoromoo_radio",
+        "contentType": "player-live",
+        "pageIdentifier": "afaanoromoo.bbc_afaanoromoo_radio.liveradio.page",
+        "pageTitle": "Dhaggeeffadhaa - BBC News Afaan Oromoo"
+      }
+    },
+    "mediaBlock": [
+      {
+        "type": "liveRadio",
+        "model": [
+          {
+            "text": "Dhaggeeffadhaa",
+            "markupType": "plain_text",
+            "type": "heading"
+          },
+          {
+            "text": "Sagantaawwan keenya",
+            "type": "paragraph"
+          },
+          {
+            "id": "liveradio",
+            "subType": "primary",
+            "format": "audio",
+            "externalId": "bbc_oromo_radio",
+            "duration": "PT0S",
+            "caption": "",
+            "embedding": false,
+            "available": true,
+            "live": true,
+            "type": "version"
+          }
+        ]
+      }
+    ]
   },
-  "relatedContent": {
-    "groups": [],
-    "site": {
-      "name": "afaanoromoo",
-      "subType": "simple",
-      "type": "simple",
-      "uri": "/afaanoromoo"
-    }
-  }
+  "contentType": "application/json; charset=utf-8"
 }

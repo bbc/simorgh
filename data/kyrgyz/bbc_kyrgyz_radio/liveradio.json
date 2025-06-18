@@ -1,67 +1,50 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares:ws_media:live:bbc_kyrgyz_radio",
-    "locators": {
-      "pipsUrn": "urn:bbc:pips:bbc_kyrgyz_radio"
-    },
-    "type": "WS-LIVE",
-    "createdBy": "kyrgyz",
+  "data": {
+    "heading": "Би-Би-Си Кыргыз кызматынын радиосу",
+    "bodySummary": "Эл аралык жана жергиликтүү жаңылыктар, аналитика, кызыктуу материалдар кыргыз тилинде",
     "language": "ky",
-    "lastUpdated": 0,
-    "firstPublished": 0,
-    "lastPublished": 0,
-    "options": {},
-    "analyticsLabels": {
-      "pageTitle": "Би-Би-Си Кыргыз кызматынын радиосу - BBC News Кыргыз КызMATы",
-      "pageIdentifier": "kyrgyz.bbc_kyrgyz_radio.liveradio.page",
-      "producerId": "58",
-      "contentType": "player-live",
-      "producer": "KYRGYZ"
+    "id": "urn:bbc:ares:ws_media:live:bbc_kyrgyz_radio",
+    "name": "Би-Би-Си Кыргыз кызматынын радиосу",
+    "summary": "Эл аралык жана жергиликтүү жаңылыктар, аналитика, кызыктуу материалдар кыргыз тилинде",
+    "masterBrand": "bbc_kyrgyz_radio",
+    "radioScheduleData": null,
+    "metadata": {
+      "type": "Live Radio",
+      "atiAnalytics": {
+        "contentId": "urn:bbc:ares:ws_media:live:bbc_kyrgyz_radio",
+        "contentType": "player-live",
+        "pageIdentifier": "kyrgyz.bbc_kyrgyz_radio.liveradio.page",
+        "pageTitle": "Би-Би-Си Кыргыз кызматынын радиосу - BBC News Кыргыз КызMATы"
+      }
     },
-    "tags": {},
-    "version": "1.1.2",
-    "blockTypes": ["heading", "version", "paragraph"]
-  },
-  "content": {
-    "blocks": [
+    "mediaBlock": [
       {
-        "text": "Би-Би-Си Кыргыз кызматынын радиосу",
-        "markupType": "plain_text",
-        "type": "heading"
-      },
-      {
-        "text": "Эл аралык жана жергиликтүү жаңылыктар, аналитика, кызыктуу материалдар кыргыз тилинде",
-        "type": "paragraph"
-      },
-      {
-        "id": "liveradio",
-        "subType": "primary",
-        "format": "audio",
-        "externalId": "bbc_kyrgyz_radio",
-        "duration": "PT0S",
-        "caption": "",
-        "embedding": false,
-        "available": true,
-        "live": true,
-        "type": "version"
+        "type": "liveRadio",
+        "model": [
+          {
+            "text": "Би-Би-Си Кыргыз кызматынын радиосу",
+            "markupType": "plain_text",
+            "type": "heading"
+          },
+          {
+            "text": "Эл аралык жана жергиликтүү жаңылыктар, аналитика, кызыктуу материалдар кыргыз тилинде",
+            "type": "paragraph"
+          },
+          {
+            "id": "liveradio",
+            "subType": "primary",
+            "format": "audio",
+            "externalId": "bbc_kyrgyz_radio",
+            "duration": "PT0S",
+            "caption": "",
+            "embedding": false,
+            "available": true,
+            "live": true,
+            "type": "version"
+          }
+        ]
       }
     ]
   },
-  "promo": {
-    "name": "Би-Би-Си Кыргыз кызматынын радиосу",
-    "summary": "Эл аралык жана жергиликтүү жаңылыктар, аналитика, кызыктуу материалдар кыргыз тилинде",
-    "uri": "/kyrgyz/bbc_kyrgyz_radio/liveradio",
-    "contentType": "WS-LIVE",
-    "id": "urn:bbc:ares::ws_live:bbc_kyrgyz_radio",
-    "type": "link"
-  },
-  "relatedContent": {
-    "site": {
-      "subType": "simple",
-      "name": "kyrgyz",
-      "uri": "/kyrgyz",
-      "type": "simple"
-    },
-    "groups": []
-  }
+  "contentType": "application/json; charset=utf-8"
 }

@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/blocks';
+import { Meta, Markdown } from '@storybook/addon-docs/blocks';
 
 <Meta title="hooks/useClickTracker" />
 
@@ -6,30 +6,30 @@ import { Meta } from '@storybook/blocks';
 
 The `useClickTracker` hook handles:
 
-* Tracking when an element has been clicked
-* Sending the event to ATI
-* Sending the event to Optimizely (If applicable)
+- Tracking when an element has been clicked
+- Sending the event to ATI
+- Sending the event to Optimizely (If applicable)
 
 `useClickTracker` must be used in combination with [`useViewTracker`](https://github.com/bbc/simorgh/blob/latest/src/app/hooks/useViewTracker/index.jsx) so ATI can calculate the view/click ratio of an element.
 
 A click event is sent to ATI when a user performs a valid click (as per [clickTypes.js](./clickTypes.js)) on a tracked element. Specifically the following are valid clicks:
 
-* ### General
-  * Middle Click
-  * Unmodified left click
-  * Left click + shift
-  * Tap
-* ### Windows
-  * Left click + ctrl
-  * Left click + shift + ctrl
-  * Left click + shift + alt
-  * Left click + ctrl + alt
-  * Left click + shift + alt + ctrl
-* ### macOS
-  * Left click + cmd
-  * Left click + cmd + option
-  * Left click + shift + option
-  * Left click + shift + option + cmd
+- ### General
+  - Middle Click
+  - Unmodified left click
+  - Left click + shift
+  - Tap
+- ### Windows
+  - Left click + ctrl
+  - Left click + shift + ctrl
+  - Left click + shift + alt
+  - Left click + ctrl + alt
+  - Left click + shift + alt + ctrl
+- ### macOS
+  - Left click + cmd
+  - Left click + cmd + option
+  - Left click + shift + option
+  - Left click + shift + option + cmd
 
 The hook returns an event handler promise which can be given to a component's `onClick` property to track clicks on that element and any of its children. After the element has been clicked once, it will no longer send ATI requests on click.
 
@@ -37,14 +37,18 @@ A click event is also fired to Optimizely using the same mechanism, but only if 
 
 ### Props
 
+<Markdown>
+  {`
 | Argument          | Type    | Required | Example                                                                                                                                                                                                                                                                                                                                                                   |
 | ----------------- | ------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| campaignID        | string  | no       | Provide this to override the `campaignID` provided by the `EventTrackingContext` component. This is useful for specific campaigns where you want to use a custom campaign ID                                                                                                                                                                                              |
-| componentName     | string  | yes      | The name of the component or an url encoded title of a promo e.g. `most_read` or `This%20is%20a%20promo%20title`.                                                                                                                                                                                                                                                         |
-| format            | string  | no       | Can be used to track things like the position of a promo e.g. `[CHD=promo::2]`                                                                                                                                                                                                                                                                                            |
+| campaignID        | string  | no       | Provide this to override the \`campaignID\` provided by the \`EventTrackingContext\` component. This is useful for specific campaigns where you want to use a custom campaign ID                                                                                                                                                                                              |
+| componentName     | string  | yes      | The name of the component or an url encoded title of a promo e.g. \`most_read\` or \`This%20is%20a%20promo%20title\`.                                                                                                                                                                                                                                                         |
+| format            | string  | no       | Can be used to track things like the position of a promo e.g. \`[CHD=promo::2]\`                                                                                                                                                                                                                                                                                            |
 | url               | string  | no       | If the component being tracked changes the location of the user upon click then it's necessary to include the URL through this prop.                                                                                                                                                                                                                                      |
-| preventNavigation | boolean | no       | Use this if you need to perform any additional tasks after sending the click event by setting to `true` and awaiting the event handler callback. Ensure you redirect the user to their destination when you are done                                                                                                                                                      |
-| optimizely        | object  | no       | Need to provide this prop if event tracking is needed for Optimizely, the standard method is to consume the Optimizely context via React's `useContext` and imported from the Optimizely SDK `import { OptimizelyContext } from '@optimizely/react-sdk';`, the HOC `withOptimizelyProvider` needs to be located higher up in the component tree as well for this to work. |
+| preventNavigation | boolean | no       | Use this if you need to perform any additional tasks after sending the click event by setting to \`true\` and awaiting the event handler callback. Ensure you redirect the user to their destination when you are done                                                                                                                                                      |
+| optimizely        | object  | no       | Need to provide this prop if event tracking is needed for Optimizely, the standard method is to consume the Optimizely context via React's \`useContext\` and imported from the Optimizely SDK \`import { OptimizelyContext } from '@optimizely/react-sdk';\`, the HOC \`withOptimizelyProvider\` needs to be located higher up in the component tree as well for this to work. |
+`}
+</Markdown>
 
 ### Usage
 
@@ -174,5 +178,27 @@ const Promo = () => {
 const ArticlePage = () => {
 	const OptimizelyPromo = withOptimizelyProvider(Promo);
 	return OptimizelyPromo;
+};
+
+
+/*
+ * Example 5 - NEW - Log 1 click events for Lite site.
+ * The new useATIClickTrackerHandler() hook will detect whether a canonical or lite site has been requested, and will return the correct atiTracking method as such:
+ * If on a canonical site, a react onClick prop will be returned with a callback containing the necessary ATI logic.
+ * If on a lite site, an atiTracking url will be returned.
+ */
+
+const Promo = () => {
+  const atiClickTrackerHandler = useATIClickTrackerHandler({
+    componentName: 'promo',
+  });
+
+  return (
+    <div {...atiClickTrackerHandler}>
+      <button>Button 1</button>
+      <button>Button 2</button>
+      <button>Button 3</button>
+    </div>
+  )
 };
 ```

@@ -1,14 +1,12 @@
 /**
  * @service pashto
- * @pathname /pashto/bbc_pashto_radio/p0340yr4
+ * @pathname /pashto/bbc_pashto_radio/p0340v0j
  */
 
-import runCrossPlatformTests from '../crossPlatformTests';
 import runCanonicalTests from '../canonicalTests';
 
 describe('Canonical', () => {
   describe(pageType, () => {
-    runCrossPlatformTests(service);
-    runCanonicalTests();
+    runCanonicalTests({ service, pageType });
   });
 });

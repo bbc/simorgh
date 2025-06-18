@@ -8,6 +8,7 @@ import { UserContextProvider } from '../contexts/UserContext';
 import { EventTrackingContextProvider } from '../contexts/EventTrackingContext';
 import ThemeProvider from './ThemeProvider';
 import { PageTypes, Services, Toggles, Variants } from '../models/types/global';
+import { ATIData } from './ATIAnalytics/types';
 
 jest.mock('./ThemeProvider');
 
@@ -15,13 +16,9 @@ interface Props extends PropsWithChildren {
   id?: string | null;
   isAmp?: boolean;
   isApp?: boolean;
+  isLite?: boolean;
   pageData?: object;
-  atiData?: {
-    contentId?: string;
-    contentType?: string;
-    pageIdentifier?: string;
-    pageTitle?: string;
-  };
+  atiData?: ATIData;
   bbcOrigin?: string | null;
   pageType?: PageTypes;
   derivedPageType?: string | null;
@@ -39,18 +36,18 @@ interface Props extends PropsWithChildren {
 
 const AllTheProviders: FC<Props> = ({
   children,
-  pageData,
   atiData,
   id = null,
   isAmp = false,
   isApp = false,
+  isLite = false,
   bbcOrigin = 'https://www.test.bbc.com',
   pageType = 'article',
   derivedPageType,
   pathname = '/news/articles/c0g992jmmkko',
   service = 'news',
   toggles = {},
-  variant = 'default',
+  variant = undefined,
   pageLang = undefined,
   showAdsBasedOnLocation = false,
   showCookieBannerBasedOnCountry = true,
@@ -71,8 +68,10 @@ const AllTheProviders: FC<Props> = ({
           pageType={pageType}
           isAmp={isAmp}
           isApp={isApp}
+          isLite={isLite}
           isNextJs={isNextJs}
           service={service}
+          variant={variant}
           pathname={pathname}
           derivedPageType={derivedPageType}
           showAdsBasedOnLocation={showAdsBasedOnLocation}
@@ -80,7 +79,7 @@ const AllTheProviders: FC<Props> = ({
           statusCode={statusCode}
           isUK={isUK}
         >
-          <EventTrackingContextProvider data={pageData} atiData={atiData}>
+          <EventTrackingContextProvider atiData={atiData}>
             <UserContextProvider>
               <ThemeProvider service={service} variant={variant}>
                 {children}
@@ -101,6 +100,7 @@ const customRender = (
     id,
     isAmp,
     isApp,
+    isLite,
     bbcOrigin,
     pageData,
     pageType,
@@ -124,6 +124,7 @@ const customRender = (
         id={id}
         isAmp={isAmp}
         isApp={isApp}
+        isLite={isLite}
         bbcOrigin={bbcOrigin}
         pageData={pageData}
         atiData={atiData}

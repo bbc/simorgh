@@ -2,7 +2,54 @@
 
 exports[`Canonical Articles A11y I can see the skip to content link 1`] = `"مشاهده محتوا"`;
 
-exports[`Canonical Articles Analytics ATI 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" src="https://logws1363.ati-host.net?s=598343&amp;s2=69&amp;p=persian.articles.cej3lzd5e0go.page&amp;x1=[urn%3Abbc%3Aoptimo%3Aasset%3Acej3lzd5e0go]&amp;x2=[responsive]&amp;x3=[news-persian]&amp;x4=[fa]&amp;x8=[simorgh-nojs]&amp;x9=[%D8%A7%DB%8C%D9%86%2520%D8%AA%D8%B5%D9%88%DB%8C%D8%B1%2520%D8%A2%D8%B2%D9%85%D8%A7%DB%8C%D8%B4%DB%8C%2520%D8%8C%2520%DA%A9%D9%BE%DB%8C%2520%D8%B1%D8%A7%DB%8C%D8%AA%2520%D8%A8%DB%8C%2520%D8%A8%DB%8C%2520%D8%B3%DB%8C%2520%D8%8C%2520%D9%86%D9%82%D8%B4%D9%87%2520%D8%A7%DB%8C%2520%D8%A7%D8%B2%2520%D9%81%D8%B1%D8%A7%D9%86%D8%B3%D9%87%2520%D8%B1%D8%A7%2520%D9%86%D8%B4%D8%A7%D9%86%2520%D9%85%DB%8C%2520%D8%AF%D9%87%D8%AF.%2520%D8%AA%D8%B5%D9%88%DB%8C%D8%B1%2520%D8%AF%D8%B1%2520%D8%B3%D9%87%2520%D8%A8%D9%84%D9%88%DA%A9%2520%D8%A7%D9%88%D9%84%2520%D8%A7%D8%B3%D8%AA%2520%D9%88%2520%D8%A7%DB%8C%D9%86%2520%D8%B9%D9%86%D9%88%D8%A7%D9%86%2520%D8%B1%D8%A7%2520%D8%AF%D8%A7%D8%B1%D8%AF.]&amp;x11=[2019-10-04T10%3A36%3A45.464Z]&amp;x12=[2019-10-04T10%3A36%3A45.464Z]"/>"`;
+exports[`Canonical Articles Analytics ATI tracking pixel excluding src 1`] = `
+<img
+  alt=""
+  height="1px"
+  style="position:absolute"
+  width="1px"
+/>
+`;
+
+exports[`Canonical Articles Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
+
+exports[`Canonical Articles Analytics ATI tracking pixel search params 1`] = `
+[
+  {
+    "s": "598343",
+  },
+  {
+    "s2": "69",
+  },
+  {
+    "p": "persian.articles.cej3lzd5e0go.page",
+  },
+  {
+    "x1": "[urn:bbc:optimo:asset:cej3lzd5e0go]",
+  },
+  {
+    "x2": "[responsive]",
+  },
+  {
+    "x3": "[news-persian]",
+  },
+  {
+    "x4": "[fa]",
+  },
+  {
+    "x8": "[simorgh-nojs]",
+  },
+  {
+    "x9": "[این%20تصویر%20آزمایشی%20،%20کپی%20رایت%20بی%20بی%20سی%20،%20نقشه%20ای%20از%20فرانسه%20را%20نشان%20می%20دهد.%20تصویر%20در%20سه%20بلوک%20اول%20است%20و%20این%20عنوان%20را%20دارد.]",
+  },
+  {
+    "x11": "[2019-10-04T10:36:45.464Z]",
+  },
+  {
+    "x12": "[2019-10-04T10:36:45.464Z]",
+  },
+]
+`;
 
 exports[`Canonical Articles Footer Anchors should match text and url 1`] = `
 {
@@ -55,6 +102,13 @@ exports[`Canonical Articles Footer Anchors should match text and url 7`] = `
 
 exports[`Canonical Articles Footer Anchors should match text and url 8`] = `
 {
+  "text": "اخبار به زبان‌های دیگر",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 9`] = `
+{
   "text": "سیاست ما درباره لینک دادن به سایت های دیگر.",
   "url": "https://www.bbc.com/persian/institutional/2011/04/000001_links",
 }
@@ -62,7 +116,7 @@ exports[`Canonical Articles Footer Anchors should match text and url 8`] = `
 
 exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
 
-exports[`Canonical Articles Footer Paragraphs should match text 1`] = `"© 2024 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
+exports[`Canonical Articles Footer Paragraphs should match text 1`] = `"© 2025 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
 
 exports[`Canonical Articles Header I can see the branding 1`] = `"BBC News, فارسی"`;
 
@@ -75,8 +129,8 @@ exports[`Canonical Articles Header Navigation link should match text and url 1`]
 
 exports[`Canonical Articles Header Navigation link should match text and url 2`] = `
 {
-  "text": "جنگ اسرائیل-غزه",
-  "url": "/persian/topics/clm0z4jgj3xt",
+  "text": "جنگ اسرائیل-ایران",
+  "url": "/persian/topics/cwy6874zgpqt",
 }
 `;
 
@@ -97,7 +151,7 @@ exports[`Canonical Articles Header Navigation link should match text and url 4`]
 exports[`Canonical Articles Header Navigation link should match text and url 5`] = `
 {
   "text": "تلویزیون",
-  "url": "/persian/tv-and-radio-37434377",
+  "url": "/persian/topics/cw9qgeqd1zqt",
 }
 `;
 
@@ -165,6 +219,7 @@ exports[`Canonical Articles Image should match snapshot 1`] = `
 "
   class="bbc-139onq"
   height="549"
+  loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"
   src="https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg.webp"
   srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg.webp 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg.webp 624w, https://ichef.bbci.co.uk/ace/ws/800/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg.webp 800w"
@@ -175,7 +230,256 @@ exports[`Canonical Articles Image should match snapshot 1`] = `
 
 exports[`Canonical Articles Main heading should match text 1`] = `"این عنوان این مقاله آزمایشی است"`;
 
-exports[`Canonical Articles Media Player Caption should have a caption under the media player 1`] = `"توضیح ویدئو، این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد."`;
+exports[`Canonical Articles Media Loader a11y assistive technology can read the media player title 1`] = `"Play video, "Â«Ù‚Ø´Ø²Ù‡Ø° Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙØ«Ø³Ù", مدت 0,16"`;
+
+exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
+<div
+  class="bbc-145siv3"
+  data-e2e="media-loader__placeholder"
+>
+  <div
+    class="bbc-1u05bd9"
+    data-e2e="media-player__guidance"
+  >
+    <noscript
+      class="bbc-n2zqlz"
+    >
+      &lt;strong&gt;برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.&lt;/strong&gt;
+    </noscript>
+  </div>
+  <button
+    class="focusIndicatorRemove bbc-1s7djye"
+    type="button"
+  >
+    <span
+      class="bbc-m04vo2"
+    >
+      Play video, "Â«Ù‚Ø´Ø²Ù‡Ø° Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙØ«Ø³Ù", مدت 0,16
+    </span>
+    <div
+      aria-hidden="true"
+      class="bbc-7qcky8"
+    >
+      <svg
+        aria-hidden="true"
+        class="bbc-vja2s5 e1s2dgdk5"
+        focusable="false"
+        height="12"
+        viewBox="0 0 12 12"
+        width="12"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          fill="none"
+          fill-rule="evenodd"
+        >
+          <path
+            d="M.5.6h12v12H.5z"
+          />
+          <path
+            d="M2.144.96v11.28l8.712-5.64z"
+            fill="currentColor"
+          />
+        </g>
+      </svg>
+    </div>
+    <time
+      aria-hidden="true"
+      class="bbc-digyti"
+      datetime="PT16S"
+    >
+      00:16
+    </time>
+  </button>
+  <div
+    class="bbc-lgx6cw"
+    style="padding-bottom:0;overflow:hidden"
+  >
+    <img
+      alt=""
+      class="bbc-ipdj63"
+      loading="eager"
+      src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01kf9s0.jpg.webp"
+      srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01kf9s0.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01kf9s0.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01kf9s0.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01kf9s0.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01kf9s0.jpg.webp 800w"
+      style="aspect-ratio:auto"
+    />
+  </div>
+</div>
+`;
+
+exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
+<div
+  class="bbc-145siv3"
+  data-e2e="media-loader__placeholder"
+>
+  <div
+    class="bbc-1u05bd9"
+    data-e2e="media-player__guidance"
+  >
+    <noscript
+      class="bbc-n2zqlz"
+    >
+      &lt;strong&gt;برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.&lt;/strong&gt;
+    </noscript>
+  </div>
+  <button
+    class="focusIndicatorRemove bbc-1s7djye"
+    type="button"
+  >
+    <span
+      class="bbc-m04vo2"
+    >
+      Play video, "Â«Ù‚Ø´Ø²Ù‡Ø° Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙØ«Ø³Ù", مدت 0,16
+    </span>
+    <div
+      aria-hidden="true"
+      class="bbc-7qcky8"
+    >
+      <svg
+        aria-hidden="true"
+        class="bbc-vja2s5 e1s2dgdk5"
+        focusable="false"
+        height="12"
+        viewBox="0 0 12 12"
+        width="12"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          fill="none"
+          fill-rule="evenodd"
+        >
+          <path
+            d="M.5.6h12v12H.5z"
+          />
+          <path
+            d="M2.144.96v11.28l8.712-5.64z"
+            fill="currentColor"
+          />
+        </g>
+      </svg>
+    </div>
+    <time
+      aria-hidden="true"
+      class="bbc-digyti"
+      datetime="PT16S"
+    >
+      00:16
+    </time>
+  </button>
+  <div
+    class="bbc-lgx6cw"
+    style="padding-bottom:0;overflow:hidden"
+  >
+    <img
+      alt=""
+      class="bbc-ipdj63"
+      loading="eager"
+      src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01kf9s0.jpg.webp"
+      srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01kf9s0.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01kf9s0.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01kf9s0.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01kf9s0.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01kf9s0.jpg.webp 800w"
+      style="aspect-ratio:auto"
+    />
+  </div>
+</div>
+`;
+
+exports[`Canonical Articles Media Loader renders a valid container 1`] = `
+<figure
+  class="media-container bbc-1hu5uc3"
+  data-e2e="media-loader__container"
+>
+  <div
+    class="bbc-145siv3"
+    data-e2e="media-loader__placeholder"
+  >
+    <div
+      class="bbc-1u05bd9"
+      data-e2e="media-player__guidance"
+    >
+      <noscript
+        class="bbc-n2zqlz"
+      >
+        &lt;strong&gt;برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.&lt;/strong&gt;
+      </noscript>
+    </div>
+    <button
+      class="focusIndicatorRemove bbc-1s7djye"
+      type="button"
+    >
+      <span
+        class="bbc-m04vo2"
+      >
+        Play video, "Â«Ù‚Ø´Ø²Ù‡Ø° Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙØ«Ø³Ù", مدت 0,16
+      </span>
+      <div
+        aria-hidden="true"
+        class="bbc-7qcky8"
+      >
+        <svg
+          aria-hidden="true"
+          class="bbc-vja2s5 e1s2dgdk5"
+          focusable="false"
+          height="12"
+          viewBox="0 0 12 12"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            fill="none"
+            fill-rule="evenodd"
+          >
+            <path
+              d="M.5.6h12v12H.5z"
+            />
+            <path
+              d="M2.144.96v11.28l8.712-5.64z"
+              fill="currentColor"
+            />
+          </g>
+        </svg>
+      </div>
+      <time
+        aria-hidden="true"
+        class="bbc-digyti"
+        datetime="PT16S"
+      >
+        00:16
+      </time>
+    </button>
+    <div
+      class="bbc-lgx6cw"
+      style="padding-bottom:0;overflow:hidden"
+    >
+      <img
+        alt=""
+        class="bbc-ipdj63"
+        loading="eager"
+        src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01kf9s0.jpg.webp"
+        srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01kf9s0.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01kf9s0.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01kf9s0.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01kf9s0.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01kf9s0.jpg.webp 800w"
+        style="aspect-ratio:auto"
+      />
+    </div>
+  </div>
+  <figcaption
+    class="bbc-1vlmip3"
+    dir="rtl"
+  >
+    <span
+      role="text"
+    >
+      <span
+        class="bbc-m04vo2"
+      >
+        توضیح ویدئو، 
+      </span>
+      <span
+        data-testid="caption-paragraph"
+      >
+        این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.
+      </span>
+    </span>
+  </figcaption>
+</figure>
+`;
 
 exports[`Canonical Articles Most Read has item with rank 1`] = `
 {

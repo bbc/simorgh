@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-mundo',
     atiAnalyticsProducerId: '62',
+    atiAnalyticsProducerName: 'MUNDO',
+    useReverb: true,
     chartbeatDomain: 'mundo.bbc.co.uk',
     brandName: 'BBC News Mundo',
     product: 'BBC News',
@@ -39,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/mundo/institucional-51359666',
     isTrustProjectParticipant: true,
     script: latinWithDiacritics,
-    manifestPath: '/manifest.json',
+    manifestPath: '/mundo/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Noticias',
+    homePageTitle: 'Noticias',
     iTunesAppId: 515255747,
     showAdPlaceholder: true,
     showRelatedTopics: true,
@@ -55,8 +57,6 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'Publicidad',
       },
-      recommendationTitle: 'Recomendamos',
-      splitRecommendationTitle: 'Más recomendaciones',
       seeAll: 'Ver todo',
       home: 'Página de inicio',
       currentPage: 'Página actual',
@@ -76,6 +76,10 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Publicado',
         summary: 'Puntos clave',
         shareButtonText: 'Compartir',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'Sumario',
       error: {
@@ -109,6 +113,14 @@ export const service: DefaultServiceConfig = {
           callToActionLinkUrl: 'https://www.bbc.com/mundo',
         },
       },
+      byline: {
+        articleInformation: 'Información del artículo',
+        author: 'Autor',
+        listItemImage: 'Imagen del autor',
+        published: 'Fecha de publicación',
+        reportingFrom: 'Informa desde',
+        role: 'Título del autor',
+      },
       consentBanner: {
         privacy: {
           title: 'Hemos actualizado nuestra política de privacidad y cookies',
@@ -130,7 +142,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'Ok',
           reject: 'Descubre lo que ha cambiado',
-          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/privacy-policy/',
         },
         cookie: {
           amp: {
@@ -222,6 +234,7 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Próximo programa',
         duration: 'Duración',
         recentEpisodes: 'Más',
+        closeVideo: 'Salir',
       },
       socialEmbed: {
         caption: {
@@ -260,18 +273,19 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Más videos',
       ugc: {
         // No JavaScript
-        noJsHeading: undefined,
-        noJsDescription: undefined,
+        noJsHeading: 'Disculpa, página no encontrada',
+        noJsDescription:
+          'Para cargar esta página, por favor habilita JavaScript o intenta con otro navegador',
 
         // Optional
         optional: 'opcional',
 
         // File upload
-        fileUploadLiveRegionText: undefined,
-        fileUploadLiveRegionUpdateText: undefined,
-        fileUploadListHeading: 'Esto es lo que estás subiendo:',
-        fileUploadButton: 'Seleccionar un archivo',
-        fileUploadRemoveButton: undefined,
+        fileUploadLiveRegionText: 'Esto es lo que estás enviando:',
+        fileUploadLiveRegionUpdateText: 'Eliminado',
+        fileUploadListHeading: 'Esto es lo que estás enviando:',
+        fileUploadButton: 'Selecciona un archivo',
+        fileUploadRemoveButton: 'Selecciona un archivo',
 
         // Submit button
         submitButton: 'Enviar',
@@ -294,8 +308,10 @@ export const service: DefaultServiceConfig = {
         validationWordLimit: 'Máximo {{wordLimit}} palabras.',
 
         // Messaging
-        removalGuidelineText: undefined,
-        retentionPeriodDays: undefined,
+        removalGuidelineText:
+          'Si has enviado algo para un programa o en línea, no podremos eliminarlo una vez que lo usemos.',
+        retentionPeriodDays:
+          'Mantendremos tu envío durante {{days}} días y si no lo usamos, lo eliminaremos junto con la demás información que nos enviaste.',
         referenceNumber: 'Número de referencia',
         submissionInfoSignedOutMessage:
           'Quizás quieres tomar nota de estos detalles para futura referencia.',
@@ -305,30 +321,29 @@ export const service: DefaultServiceConfig = {
           'Escribe a {{emailLink}} si cambiaste de opinión. Incluye el número de referencia y simplemente déjanos saber que ya no quieres que usemos tu contribución.',
 
         // Form Screen
-        dataPolicyHeading: undefined,
+        dataPolicyHeading: 'Nuestra política de manejo de datos',
 
         // Uploading Screen
         uploadingHeading: 'Subiendo tus archivos...',
-        uploadingDescription:
-          'Por favor, espera mientras hasta que haya finalizado.',
-
+        uploadingDescription: 'Por favor, espera hasta que haya finalizado.',
         // Success Screen
         successHeading: 'Mensaje enviado',
         successDescription: 'Gracias por contactarnos.',
-        privacyPolicyLinkHref: undefined,
-        privacyPolicyLinkText: undefined,
+        privacyPolicyLinkHref:
+          'https://www.bbc.com/mundo/institucional-36400009',
+        privacyPolicyLinkText: 'Política de privacidad',
 
         // Error Screen
         errorHeading: 'Disculpa, hubo un problema al subir esto.',
         errorDescription: 'Por favor, regresa e inténtalo más tarde.',
 
         // Closed Screen
-        closedHeading: 'Esto ya está cerrado.',
+        closedHeading: 'Esta convocatoria ya está cerrada.',
         closedDescription: 'Esto cierra el {{date}}.',
       },
     },
     mostRead: {
-      header: 'Más leídas',
+      header: 'Lecturas más populares',
       lastUpdated: 'Última actualización:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -337,7 +352,7 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'Más leídas',
       skipLink: {
         text: 'Saltar %title% y continuar leyendo',
         endTextVisuallyHidden: 'Final de %title%',
@@ -374,6 +389,10 @@ export const service: DefaultServiceConfig = {
           text: 'Escribe a BBC Mundo',
         },
         {
+          href: 'https://www.bbc.com/ws/languages',
+          text: 'Otros idiomas',
+        },
+        {
           id: 'COOKIE_SETTINGS',
           href: '#',
           text: 'Do not share or sell my info',
@@ -398,8 +417,8 @@ export const service: DefaultServiceConfig = {
         url: '/mundo/topics/c2lej05epw5t',
       },
       {
-        title: 'Hay Festival',
-        url: '/mundo/topics/cr50y7p7qyqt',
+        title: 'EE.UU.',
+        url: '/mundo/topics/cdr5613yzwqt',
       },
       {
         title: 'Economía',
@@ -422,7 +441,11 @@ export const service: DefaultServiceConfig = {
         url: '/mundo/topics/cyx5krnw38vt',
       },
       {
-        title: 'Centroamérica Cuenta',
+        title: 'Hay Festival',
+        url: '/mundo/topics/cr50y7p7qyqt',
+      },
+      {
+        title: 'Centroamérica cuenta',
         url: '/mundo/topics/c404v5z1k8wt',
       },
     ],

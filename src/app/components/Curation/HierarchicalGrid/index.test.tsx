@@ -1,7 +1,7 @@
 import React from 'react';
 import { suppressPropWarnings } from '../../../legacy/psammead/psammead-test-helpers/src';
 import { render } from '../../react-testing-library-with-providers';
-import fixture from './fixtures';
+import { pidginPromos as fixture } from './fixtures';
 import mediaFixture from './mediaFixtures';
 import liveFixtures from './liveFixtures';
 import HierarchicalGrid from '.';
@@ -63,7 +63,7 @@ describe('Hierarchical Grid Curation', () => {
       <HierarchicalGrid headingLevel={headingLevel} summaries={mediaFixture} />,
     );
 
-    const durationString = 'Duration, 2,03';
+    const durationString = ', Duration 2,03';
 
     expect(container.getByText(durationString)).toBeInTheDocument();
     expect(container.getByText('Test audio clip')).toBeInTheDocument();
@@ -74,7 +74,7 @@ describe('Hierarchical Grid Curation', () => {
       <HierarchicalGrid headingLevel={headingLevel} summaries={mediaFixture} />,
     );
 
-    const durationString = 'Duration, 3,43';
+    const durationString = ', Duration 3,43';
 
     expect(container.getByText(durationString)).toBeInTheDocument();
     expect(container.getByText('Test video article')).toBeInTheDocument();
@@ -82,7 +82,7 @@ describe('Hierarchical Grid Curation', () => {
 
   it('should render the last published date', async () => {
     const { getByText } = render(
-      <HierarchicalGrid summaries={mediaFixture} />,
+      <HierarchicalGrid headingLevel={headingLevel} summaries={mediaFixture} />,
       {
         service: 'mundo',
       },
@@ -109,16 +109,22 @@ describe('Hierarchical Grid Curation', () => {
   });
 
   it('should display LiveLabel on a Live Promo', () => {
-    const container = render(<HierarchicalGrid summaries={mediaFixture} />, {
-      service: 'mundo',
-    });
+    const container = render(
+      <HierarchicalGrid headingLevel={headingLevel} summaries={mediaFixture} />,
+      {
+        service: 'mundo',
+      },
+    );
     expect(container.getByText('EN VIVO')).toBeInTheDocument();
   });
 
   it('should not display a timestamp on a Live Promo', () => {
-    const container = render(<HierarchicalGrid summaries={liveFixtures} />, {
-      service: 'mundo',
-    });
+    const container = render(
+      <HierarchicalGrid headingLevel={headingLevel} summaries={liveFixtures} />,
+      {
+        service: 'mundo',
+      },
+    );
     expect(container.queryByText('13 noviembre 2022')).not.toBeInTheDocument();
   });
 });

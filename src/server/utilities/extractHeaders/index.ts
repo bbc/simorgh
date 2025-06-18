@@ -24,7 +24,9 @@ const extractHeaders = (headers: IncomingHttpHeaders) => {
   }
 
   return {
+    bbcOrigin: headers['bbc-origin'] || null,
     isUK,
+    showAdsBasedOnLocation: headers['bbc-adverts'] === 'true' || false,
     showCookieBannerBasedOnCountry,
   };
 };

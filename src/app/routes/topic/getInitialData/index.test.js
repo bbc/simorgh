@@ -1,7 +1,7 @@
 import assocPath from 'ramda/src/assocPath';
-import * as fetchPageData from '../../utils/fetchPageData';
+import * as fetchPageData from '#app/routes/utils/fetchPageData';
+import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
 import getInitialData from '.';
-import { TOPIC_PAGE } from '../../utils/pageTypes';
 
 process.env.BFF_PATH = 'https://mock-bff-path';
 
@@ -24,12 +24,10 @@ const topicJSON = {
         ],
         activePage: 1,
         pageCount: 14,
-        variantTopicId: null,
       },
     ],
     activePage: 1,
     pageCount: 14,
-    variantTopicId: null,
     metadata: {
       type: 'Topic',
       analytics: {
@@ -49,6 +47,9 @@ const topicJSON = {
 const optHeaders = { 'ctx-service-env': 'live' };
 
 const agent = { ca: 'ca', key: 'key' };
+
+const mockGetAgent = () => Promise.resolve(agent);
+
 jest.mock('../../../../server/utilities/getAgent', () =>
   jest.fn(() => Promise.resolve(agent)),
 );
@@ -70,6 +71,7 @@ describe('get initial data for topic', () => {
     const { pageData } = await getInitialData({
       path: 'pidgin/topics/c0000000000t',
       service: 'pidgin',
+      getAgent: mockGetAgent,
     });
     const { curations } = pageData;
     expect(pageData.title).toEqual('Donald Trump');
@@ -85,7 +87,6 @@ describe('get initial data for topic', () => {
     expect(curations[0].summaries[0].link).toEqual('mock-link');
     expect(curations[0].summaries[0].imageAlt).toEqual('mock-image-alt');
     expect(curations[0].summaries[0].id).toEqual('54321');
-    expect(pageData.scriptSwitchId).toBeNull();
     expect(pageData.activePage).toEqual(1);
     expect(pageData.pageCount).toEqual(14);
   });
@@ -100,6 +101,7 @@ describe('get initial data for topic', () => {
     const { pageData } = await getInitialData({
       path: 'pidgin/topics/c0000000000t',
       service: 'pidgin',
+      getAgent: mockGetAgent,
     });
     expect(pageData.title).toEqual('Donald Trump');
     expect(pageData.imageData).toEqual(null);
@@ -115,6 +117,7 @@ describe('get initial data for topic', () => {
     const { pageData } = await getInitialData({
       path: 'pidgin/topics/c0000000000t',
       service: 'pidgin',
+      getAgent: mockGetAgent,
     });
     expect(pageData.title).toEqual('Donald Trump');
     expect(pageData.description).toEqual('');
@@ -126,6 +129,7 @@ describe('get initial data for topic', () => {
     await getInitialData({
       path: 'pidgin/topics/c0000000000t',
       service: 'pidgin',
+      getAgent: mockGetAgent,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -143,6 +147,7 @@ describe('get initial data for topic', () => {
       path: 'serbian/cyr/topics/c0000000000t',
       service: 'serbian',
       variant: 'cyr',
+      getAgent: mockGetAgent,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -159,6 +164,7 @@ describe('get initial data for topic', () => {
     await getInitialData({
       path: 'pidgin/topics/c0000000000t.amp',
       service: 'pidgin',
+      getAgent: mockGetAgent,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -175,6 +181,7 @@ describe('get initial data for topic', () => {
     await getInitialData({
       path: 'pidgin/topics/c0000000000t?foo=bar',
       service: 'pidgin',
+      getAgent: mockGetAgent,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -191,6 +198,7 @@ describe('get initial data for topic', () => {
     await getInitialData({
       path: 'pidgin/topics/c0000000000t.amp?foo=bar',
       service: 'pidgin',
+      getAgent: mockGetAgent,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -208,6 +216,7 @@ describe('get initial data for topic', () => {
     await getInitialData({
       path: 'pidgin/topics/c0000000000t',
       service: 'pidgin',
+      getAgent: mockGetAgent,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -223,6 +232,7 @@ describe('get initial data for topic', () => {
     await getInitialData({
       path: 'pidgin/topics/c0000000000t?renderer_env=test',
       service: 'pidgin',
+      getAgent: mockGetAgent,
     });
 
     const testHeader = { 'ctx-service-env': 'test' };
@@ -242,6 +252,7 @@ describe('get initial data for topic', () => {
     await getInitialData({
       path: 'pidgin/topics/c0000000000t?renderer_env=live',
       service: 'pidgin',
+      getAgent: mockGetAgent,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -259,6 +270,7 @@ describe('get initial data for topic', () => {
       path: 'pidgin/topics/c0000000000t',
       service: 'pidgin',
       page: 20,
+      getAgent: mockGetAgent,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -277,6 +289,7 @@ describe('get initial data for topic', () => {
         path: 'pidgin/topics/c0000000000t',
         service: 'pidgin',
         page: 20,
+        getAgent: mockGetAgent,
       }),
     ).resolves.toHaveProperty('pageData.metadata', {
       type: 'Topic',

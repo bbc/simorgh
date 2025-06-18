@@ -3,7 +3,7 @@ import { jsx } from '@emotion/react';
 import { InputProps } from '../types';
 import Label from './FieldLabel';
 import styles from './styles';
-import InvalidMessageBox from './InvalidMessageBox';
+import InvalidMessageBox from '../MessageBox/InvalidMessageBox';
 
 export default ({
   id,

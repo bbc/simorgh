@@ -9,8 +9,6 @@ export interface Translations {
   ads: {
     advertisementLabel: string;
   };
-  recommendationTitle?: string;
-  splitRecommendationTitle?: string;
   seeAll?: string;
   home: string;
   currentPage: string;
@@ -19,6 +17,7 @@ export interface Translations {
   topicsPath?: string;
   relatedTopics?: string;
   navMenuText: string;
+  liteSite?: LiteSiteTranslations;
   mediaAssetPage: {
     mediaPlayer: string;
     audioPlayer: string;
@@ -31,6 +30,12 @@ export interface Translations {
     postedAt: string;
     summary: string;
     shareButtonText: string;
+    postDateTimeFormat?: string;
+    postDateFormat?: string;
+  };
+  downloads?: {
+    instructions?: string;
+    title?: string;
   };
   gist?: string;
   error: {
@@ -40,6 +45,7 @@ export interface Translations {
     404: TranslationsError;
     500: TranslationsError;
   };
+  continueReading?: string;
   byline?: {
     author?: string;
     articleInformation?: string;
@@ -146,6 +152,8 @@ export interface Translations {
     bbc_yoruba_radio?: OnDemandRadioTvTranslations;
     listen: string;
     watch: string;
+    play?: string;
+    watchMoments?: string;
     listenLive?: string;
     listenNext?: string;
     liveLabel?: string;
@@ -156,7 +164,10 @@ export interface Translations {
     recentEpisodes?: string;
     podcastExternalLinks?: string;
     download?: string;
+    closeVideo?: string;
+    modalLabel?: string;
   };
+
   socialEmbed: {
     caption?: {
       textPrefixVisuallyHidden: string;
@@ -189,6 +200,10 @@ export interface Translations {
   latestMediaTitle?: string;
   infoBannerLabel?: string;
   ugc?: Partial<UgcTranslations>;
+  carousel?: {
+    previous?: string;
+    next?: string;
+  };
 }
 
 export interface TranslationsError {
@@ -233,6 +248,7 @@ export type UgcTranslations = {
   submitButton: string;
 
   // Validation
+  errorSummary: string;
   validationRequired: string;
   validationInvalidEmail: string;
   validationInvalidTelephone: string;
@@ -270,3 +286,12 @@ export type UgcTranslations = {
   closedHeading: string;
   closedDescription: string;
 };
+
+export interface LiteSiteTranslations {
+  onboardingMessage: string;
+  toMainSite: string;
+  informationPage: string;
+  informationPageLink?: string;
+  dataSaving: string;
+  articleDataSavingLinkText?: string;
+}

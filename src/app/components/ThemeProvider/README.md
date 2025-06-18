@@ -238,6 +238,7 @@ You can change the default focus indicator by using the following `classNames`:
 - `focusIndicatorReducedWidth`: Overrides the default focus indicator with a thinner version
 - `focusIndicatorOutlineBlack`: Overrides the default focus indicator with a black outline only version
 - `focusIndicatorInvert`: Overrides the default focus indicator with an inverted version.
+- `focusIndicatorReducedWidthInverted`: Overrides focus indicator styles with a thinner version in inverted colours
 
 You can use focus indicator `classNames` like this:
 

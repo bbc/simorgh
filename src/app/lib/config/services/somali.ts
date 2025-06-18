@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-somali',
     atiAnalyticsProducerId: '83',
+    atiAnalyticsProducerName: 'SOMALI',
+    useReverb: true,
     chartbeatDomain: 'somali.bbc.co.uk',
     brandName: 'BBC News Somali',
     product: 'BBC News',
@@ -39,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/somali/hayadeed-49283375',
     isTrustProjectParticipant: true,
     script: latin,
-    manifestPath: '/manifest.json',
+    manifestPath: '/somali/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Somali',
+    homePageTitle: 'Somali',
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -56,6 +58,7 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Arag dhammaan',
       home: 'War',
+      continueReading: 'Ka sii wad akhrinta',
       currentPage: 'Bogga hadda',
       skipLinkText: 'U gudub qaybta macluumaadka',
       relatedContent: 'Warar kale oo dheeraad ah oo la xiriira qodobkan',
@@ -73,6 +76,10 @@ export const service: DefaultServiceConfig = {
         postedAt: '',
         summary: 'Kooban',
         shareButtonText: 'La wadaag',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'Kooban',
       error: {
@@ -128,7 +135,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'HAYE',
           reject: 'Ogow waxa isbedelay',
-          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/privacy-policy/',
         },
         cookie: {
           amp: {
@@ -267,7 +274,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Arrimhii u danbeeyey',
     },
     mostRead: {
-      header: 'Ugu akhris badan',
+      header: 'Popular Reads',
       lastUpdated: 'Markii ugu dambeysay ee la cusbooneysiiyay:',
       numberOfItems: 5,
       hasMostRead: true,
@@ -278,7 +285,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'Muddada %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'Ugu akhris badan',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
@@ -309,6 +320,10 @@ export const service: DefaultServiceConfig = {
         {
           href: 'https://www.bbc.co.uk/somali/send/u50853709',
           text: 'La xiriir BBC',
+        },
+        {
+          href: 'https://www.bbc.com/ws/languages',
+          text: 'Wararka BBC ee luqadaha kale',
         },
         {
           id: 'COOKIE_SETTINGS',

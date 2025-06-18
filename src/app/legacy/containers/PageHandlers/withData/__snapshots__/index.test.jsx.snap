@@ -48,7 +48,7 @@ exports[`withData HOC with valid articles data should return the passed in compo
 </div>
 `;
 
-exports[`withData HOC with valid front-pages data should return the passed in component 1`] = `
+exports[`withData HOC with valid home-pages data should return the passed in component 1`] = `
 <div>
   <h1>
     Hola

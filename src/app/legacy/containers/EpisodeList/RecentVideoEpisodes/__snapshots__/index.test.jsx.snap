@@ -37,6 +37,13 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
 .emotion-3 {
   margin: 0;
   padding: 0;
+  scroll-margin-top: 1rem;
+}
+
+.emotion-3:focus-visible {
+  outline: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF;
+  outline-offset: 0.1875rem;
 }
 
 .emotion-5 {
@@ -451,6 +458,8 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
     >
       <h2
         class="emotion-3 emotion-4"
+        id="section-label-heading-recent-episodes"
+        tabindex="-1"
       >
         <span
           class="emotion-5 emotion-6"

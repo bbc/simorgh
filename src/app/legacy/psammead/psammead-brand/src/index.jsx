@@ -2,6 +2,8 @@ import React, { forwardRef } from 'react';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_0_SCREEN_WIDTH_MAX,
+  GEL_GROUP_1_SCREEN_WIDTH_MIN,
+  GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
@@ -14,8 +16,7 @@ import { focusIndicatorThickness } from '../../../../components/ThemeProvider/fo
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
 const SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX = '63rem';
-const SCRIPT_LINK_OFFSET_BELOW_240PX = 52;
-const PADDING_AROUND_SVG_BELOW_400PX = 16;
+const SIZE_OF_BRAND_LINK_WITH_VARIANT_BELOW_239PX = '2.625rem';
 
 const TRANSPARENT_BORDER = `0.0625rem solid transparent`;
 
@@ -29,7 +30,10 @@ const SvgWrapper = styled.div`
   max-width: ${SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX};
   margin: 0 auto;
 
-  @media (max-width: ${GEL_GROUP_0_SCREEN_WIDTH_MAX}) {
+  @media (max-width: ${({ isLongBrand }) =>
+      isLongBrand
+        ? GEL_GROUP_1_SCREEN_WIDTH_MAX
+        : GEL_GROUP_0_SCREEN_WIDTH_MAX}) {
     display: block;
   }
 `;
@@ -40,8 +44,13 @@ const Banner = styled.div`
   width: 100%;
   padding: 0 ${GEL_SPACING};
 
+  @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
+    height: ${60 / 16}rem;
+    padding: 0 ${GEL_SPACING};
+  }
+
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    height: ${56 / 16}rem;
+    height: ${60 / 16}rem;
     padding: 0 ${GEL_SPACING_DBL};
   }
 
@@ -49,15 +58,8 @@ const Banner = styled.div`
     height: ${64 / 16}rem;
   }
 
-  @media (max-width: ${GEL_GROUP_0_SCREEN_WIDTH_MAX}) {
-    ${({ scriptLink, svgHeight }) =>
-      scriptLink &&
-      `min-height: ${
-        (svgHeight +
-          PADDING_AROUND_SVG_BELOW_400PX +
-          SCRIPT_LINK_OFFSET_BELOW_240PX) /
-        16
-      }rem;`}
+  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
+    ${({ scriptLink }) => scriptLink && 'height: 100%'}
   }
 
   ${({ borderTop }) => borderTop && `border-top: ${TRANSPARENT_BORDER}`};
@@ -95,6 +97,10 @@ const StyledLink = styled.a`
     border-top: ${GEL_SPACING_HLF} solid ${props =>
       props.theme.palette.BRAND_LOGO};
     outline: ${GEL_SPACING_HLF} solid ${props => props.theme.palette.BRAND_LOGO};
+  }
+  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
+    ${({ scriptLink }) =>
+      scriptLink && `height: ${SIZE_OF_BRAND_LINK_WITH_VARIANT_BELOW_239PX}`}
   }
 `;
 
@@ -136,34 +142,39 @@ const LocalisedBrandName = ({
   );
 };
 
-const StyledBrand = ({ linkId, product, serviceLocalisedName = null, svg }) => (
-  <>
-    {svg && (
-      <>
-        <BrandSvg
-          id={linkId !== 'footer' ? 'brandSvgHeader' : 'brandSvgFooter'}
-          viewBox={[
-            svg.viewbox.minX || 0,
-            svg.viewbox.minY || 0,
-            svg.viewbox.width,
-            svg.viewbox.height,
-          ].join(' ')}
-          xmlns="http://www.w3.org/2000/svg"
-          focusable="false"
-          aria-hidden="true"
-          height="32"
-        >
-          {svg.group}
-        </BrandSvg>
-        <LocalisedBrandName
-          linkId={linkId}
-          product={product}
-          serviceLocalisedName={serviceLocalisedName}
-        />
-      </>
-    )}
-  </>
-);
+const StyledBrand = ({
+  linkId,
+  product,
+  serviceLocalisedName = null,
+  svg,
+  isLongBrand,
+}) => {
+  return svg ? (
+    <>
+      <BrandSvg
+        id={linkId !== 'footer' ? 'brandSvgHeader' : 'brandSvgFooter'}
+        viewBox={[
+          svg.viewbox.minX || 0,
+          svg.viewbox.minY || 0,
+          svg.viewbox.width,
+          svg.viewbox.height,
+        ].join(' ')}
+        xmlns="http://www.w3.org/2000/svg"
+        focusable="false"
+        aria-hidden="true"
+        height="32"
+        isLongBrand={isLongBrand}
+      >
+        {svg.group}
+      </BrandSvg>
+      <LocalisedBrandName
+        linkId={linkId}
+        product={product}
+        serviceLocalisedName={serviceLocalisedName}
+      />
+    </>
+  ) : null;
+};
 
 const Brand = forwardRef((props, ref) => {
   const {
@@ -174,6 +185,7 @@ const Brand = forwardRef((props, ref) => {
     borderTop = false,
     borderBottom = false,
     scriptLink = null,
+    isLongBrand = false,
     skipLink = null,
     linkId = null,
     ...rest
@@ -187,7 +199,7 @@ const Brand = forwardRef((props, ref) => {
       scriptLink={scriptLink}
       {...rest}
     >
-      <SvgWrapper ref={ref}>
+      <SvgWrapper ref={ref} isLongBrand={isLongBrand}>
         {url ? (
           <StyledLink
             href={url}
@@ -195,6 +207,7 @@ const Brand = forwardRef((props, ref) => {
             className="focusIndicatorRemove"
             // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
             aria-labelledby={`BrandLink-${linkId}`}
+            scriptLink={scriptLink}
           >
             <StyledBrand {...props} />
           </StyledLink>

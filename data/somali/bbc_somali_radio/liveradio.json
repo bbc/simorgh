@@ -1,67 +1,50 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares:ws_media:live:bbc_somali_radio",
-    "locators": {
-      "pipsUrn": "urn:bbc:pips:bbc_somali_radio"
-    },
-    "type": "WS-LIVE",
-    "createdBy": "somali",
+  "data": {
+    "heading": "Raadiyaha BBC Soomaali",
+    "bodySummary": "Wararka iyo xaaladda taagan ee dunida oo dhan, faallo, muusig, madadaallo iyo cayaaro.",
     "language": "so",
-    "lastUpdated": 0,
-    "firstPublished": 0,
-    "lastPublished": 0,
-    "options": {},
-    "analyticsLabels": {
-      "pageTitle": "Raadiyaha BBC Soomaali - BBC News Somali",
-      "pageIdentifier": "somali.bbc_somali_radio.liveradio.page",
-      "producerId": "83",
-      "contentType": "player-live",
-      "producer": "SOMALI"
+    "id": "urn:bbc:ares:ws_media:live:bbc_somali_radio",
+    "name": "Raadiyaha BBC Soomaali",
+    "summary": "Wararka iyo xaaladda taagan ee dunida oo dhan, faallo, muusig, madadaallo iyo cayaaro.",
+    "masterBrand": "bbc_somali_radio",
+    "radioScheduleData": null,
+    "metadata": {
+      "type": "Live Radio",
+      "atiAnalytics": {
+        "contentId": "urn:bbc:ares:ws_media:live:bbc_somali_radio",
+        "contentType": "player-live",
+        "pageIdentifier": "somali.bbc_somali_radio.liveradio.page",
+        "pageTitle": "Raadiyaha BBC Soomaali - BBC News Somali"
+      }
     },
-    "tags": {},
-    "version": "1.1.2",
-    "blockTypes": ["heading", "version", "paragraph"]
-  },
-  "content": {
-    "blocks": [
+    "mediaBlock": [
       {
-        "text": "Raadiyaha BBC Soomaali",
-        "markupType": "plain_text",
-        "type": "heading"
-      },
-      {
-        "text": "Wararka iyo xaaladda taagan ee dunida oo dhan, faallo, muusig, madadaallo iyo cayaaro.",
-        "type": "paragraph"
-      },
-      {
-        "id": "liveradio",
-        "subType": "primary",
-        "format": "audio",
-        "externalId": "bbc_somali_radio",
-        "duration": "PT0S",
-        "caption": "",
-        "embedding": false,
-        "available": true,
-        "live": true,
-        "type": "version"
+        "type": "liveRadio",
+        "model": [
+          {
+            "text": "Raadiyaha BBC Soomaali",
+            "markupType": "plain_text",
+            "type": "heading"
+          },
+          {
+            "text": "Wararka iyo xaaladda taagan ee dunida oo dhan, faallo, muusig, madadaallo iyo cayaaro.",
+            "type": "paragraph"
+          },
+          {
+            "id": "liveradio",
+            "subType": "primary",
+            "format": "audio",
+            "externalId": "bbc_somali_radio",
+            "duration": "PT0S",
+            "caption": "",
+            "embedding": false,
+            "available": true,
+            "live": true,
+            "type": "version"
+          }
+        ]
       }
     ]
   },
-  "promo": {
-    "name": "Raadiyaha BBC Soomaali",
-    "summary": "Wararka iyo xaaladda taagan ee dunida oo dhan, faallo, muusig, madadaallo iyo cayaaro.",
-    "uri": "/somali/bbc_somali_radio/liveradio",
-    "contentType": "WS-LIVE",
-    "id": "urn:bbc:ares::ws_live:bbc_somali_radio",
-    "type": "link"
-  },
-  "relatedContent": {
-    "site": {
-      "subType": "simple",
-      "name": "somali",
-      "uri": "/somali",
-      "type": "simple"
-    },
-    "groups": []
-  }
+  "contentType": "application/json; charset=utf-8"
 }

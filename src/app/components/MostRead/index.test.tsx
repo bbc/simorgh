@@ -4,7 +4,6 @@ import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { data as pidginMostReadData } from '../../../../data/pidgin/mostRead/index.json';
 import serbianLatMostReadData from '../../../../data/serbian/mostRead/lat.json';
 import {
-  FRONT_PAGE,
   STORY_PAGE,
   ARTICLE_PAGE,
   CORRESPONDENT_STORY_PAGE,
@@ -202,16 +201,6 @@ describe('MostRead', () => {
         pageType: CORRESPONDENT_STORY_PAGE,
       },
       {
-        description: 'should not render most read amp on front page',
-        service: 'mundo',
-        mostReadToggle: true,
-        isAmp: true,
-        variant: null,
-        renderExpectation: shouldNotRenderMostReadAmp,
-
-        pageType: FRONT_PAGE,
-      },
-      {
         description: 'should not render most read amp on home page',
         service: 'mundo',
         mostReadToggle: true,
@@ -276,7 +265,7 @@ describe('MostRead', () => {
             expect.objectContaining({
               endpoint: expect.stringContaining(endpoint),
             }),
-            {},
+            undefined,
           );
         },
       );

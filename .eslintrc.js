@@ -22,7 +22,12 @@ module.exports = {
     },
     requireConfigFile: false,
   },
-  ignorePatterns: ['**/tz/**', 'index.stories.jsx', 'index.amp.stories.jsx'],
+  ignorePatterns: [
+    '**/tz/**',
+    'index.stories.jsx',
+    'index.amp.stories.jsx',
+    '.storybook/**/*',
+  ],
   plugins: [
     'prettier',
     'json',
@@ -51,28 +56,28 @@ module.exports = {
           'custom-element',
           'custom-template',
           'fallback',
-          'fetchpriority',
-          'imagesizes',
-          'imagesrcset',
         ],
       },
     ],
     'linebreak-style': process.platform === 'win32' ? 'off' : ['error', 'unix'],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
+    'import/no-import-module-exports': [
+      'error',
+      {
+        exceptions: ['**/*/startServer.js'],
+      },
+    ],
     'import/no-extraneous-dependencies': [
       'off',
       {
-        devDependencies: [
-          '/.storybook/**',
-          '**/stories.jsx',
-          '/src/testHelpers/**',
-        ],
+        devDependencies: ['**/stories.jsx', '/src/testHelpers/**'],
       },
     ],
     'import/extensions': [1, { json: 'ignorePackages' }],
     'jsx-a11y/no-redundant-roles': 'off',
     'no-only-tests/no-only-tests': 'error',
+    'no-unsafe-optional-chaining': 'error',
   },
   settings: {
     'import/resolver': {
@@ -86,6 +91,9 @@ module.exports = {
     {
       files: ['**/*.{ts,tsx}'],
       parser: '@typescript-eslint/parser',
+      parserOptions: {
+        project: true,
+      },
       extends: ['plugin:@typescript-eslint/recommended'],
       rules: {
         'react/jsx-filename-extension': [
@@ -97,6 +105,15 @@ module.exports = {
         // adds support for type, interface and enum declarations https://typescript-eslint.io/rules/no-use-before-define/#how-to-use
         'no-use-before-define': 'off',
         '@typescript-eslint/no-use-before-define': ['error'],
+        '@typescript-eslint/no-unused-vars': [
+          'warn',
+          {
+            argsIgnorePattern: '^_',
+            varsIgnorePattern: '^_',
+            caughtErrorsIgnorePattern: '^_',
+          },
+        ],
+        '@typescript-eslint/prefer-optional-chain': ['error'],
         'react/require-default-props': 'off',
         'react/no-unused-prop-types': 'off',
       },

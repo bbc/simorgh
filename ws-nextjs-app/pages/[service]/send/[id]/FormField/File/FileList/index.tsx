@@ -17,7 +17,7 @@ import {
   DeleteSvg,
   VIDEO_SVG_DATA_URI,
 } from '../svgs';
-import InvalidMessageBox from '../../InvalidMessageBox';
+import InvalidMessageBox from '../../../MessageBox/InvalidMessageBox';
 import fallbackTranslations from '../../../fallbackTranslations';
 
 interface FileListProps {

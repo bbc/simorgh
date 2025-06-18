@@ -1,0 +1,1457 @@
+{
+    "metadata": {
+        "id": "urn:bbc:ares:ws_media:page:bbc_dari_radio/w3ct6lbh",
+        "locators": {
+            "pid": "w3ct6lbh",
+            "brandPid": "p0340v11"
+        },
+        "type": "WSRADIO",
+        "createdBy": "bbc_dari_radio",
+        "language": "fa",
+        "lastUpdated": 1727264560000,
+        "firstPublished": 1724082921000,
+        "lastPublished": 1724082921000,
+        "timestamp": 1724082921000,
+        "options": {},
+        "analyticsLabels": {
+            "pageTitle": "مجله شامگاهی - BBC News فارسی",
+            "pageIdentifier": "persian.bbc_dari_radio.w3ct6lbh.page",
+            "producerId": "69",
+            "contentType": "player-episode",
+            "producer": "PERSIAN"
+        },
+        "passport": {
+            "home": "",
+            "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.48",
+        "blockTypes": [
+            "media"
+        ],
+        "title": "مجله شامگاهی",
+        "releaseDateTimeStamp": 1727049600000,
+        "useSensitiveOnwardJourneys": false
+    },
+    "content": {
+        "blocks": [
+            {
+                "id": "w3ct6lbh",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "23/09/2024 GMT",
+                "synopses": {
+                    "short": "برنامه خبری و تحلیلی شامگاهی \n",
+                    "medium": "برنامه خبری و تحلیلی شامگاهی \n",
+                    "long": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز.\n"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                    {
+                        "versionId": "w4hr2nc8",
+                        "types": [
+                            "Original"
+                        ],
+                        "duration": 1770,
+                        "durationISO8601": "PT29M30S",
+                        "warnings": {},
+                        "availableTerritories": {
+                            "uk": true,
+                            "nonUk": true,
+                            "world": false
+                        },
+                        "availableUntil": 1729706370000,
+                        "availableFrom": 1727101800000,
+                        "availabilityStatus": "available"
+                    }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "مجله شامگاهی",
+                "type": "media"
+            }
+        ]
+    },
+    "promo": {
+        "headlines": {
+            "headline": "مجله شامگاهی"
+        },
+        "locators": {
+            "pid": "w3ct6lbh",
+            "brandPid": "p0340v11"
+        },
+        "media": {
+            "id": "w3ct6lbh",
+            "subType": "episode",
+            "format": "Audio",
+            "title": "23/09/2024 GMT",
+            "synopses": {
+                "short": "برنامه خبری و تحلیلی شامگاهی \n",
+                "medium": "برنامه خبری و تحلیلی شامگاهی \n",
+                "long": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز.\n"
+            },
+            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+            "embedding": false,
+            "advertising": false,
+            "versions": [
+                {
+                    "versionId": "w4hr2nc8",
+                    "types": [
+                        "Original"
+                    ],
+                    "duration": 1770,
+                    "durationISO8601": "PT29M30S",
+                    "warnings": {},
+                    "availableTerritories": {
+                        "uk": true,
+                        "nonUk": true,
+                        "world": false
+                    },
+                    "availableUntil": 1729706370000,
+                    "availableFrom": 1727101800000,
+                    "availabilityStatus": "available"
+                }
+            ],
+            "availability": "available",
+            "smpKind": "radioProgramme",
+            "episodeTitle": "مجله شامگاهی",
+            "type": "media"
+        },
+        "indexImage": {
+            "id": "p0gt2kwh",
+            "subType": "index",
+            "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+            "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+            "height": 1080,
+            "width": 1920,
+            "altText": "New Home New Life 3/gold In The Dust",
+            "caption": "Programming from the BBC Dari Service",
+            "copyrightHolder": null,
+            "type": "image"
+        },
+        "releaseDateTimestamp": 1727049600000,
+        "brand": {
+            "pid": "p0340v11",
+            "title": "مجله شامگاهی"
+        },
+        "id": "urn:bbc:ares:ws_media:page:bbc_dari_radio/w3ct6lbh",
+        "type": "ws_radio"
+    },
+    "relatedContent": {
+        "site": {
+            "subType": "site",
+            "name": "Persian",
+            "uri": "/persian",
+            "type": "simple"
+        },
+        "groups": [
+            {
+                "type": "other-episode",
+                "promos": [
+                    {
+                        "headlines": {
+                            "headline": "مجله شامگاهی"
+                        },
+                        "locators": {
+                            "pid": "w3ct6lh0",
+                            "brandPid": "p0340v11"
+                        },
+                        "media": {
+                            "id": "w3ct6lh0",
+                            "subType": "episode",
+                            "format": "Audio",
+                            "title": "24/09/2024 GMT",
+                            "synopses": {
+                                "short": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "medium": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "long": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز.\n"
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "embedding": false,
+                            "advertising": false,
+                            "versions": [
+                                {
+                                    "versionId": "w4hr2nhs",
+                                    "types": [
+                                        "Original"
+                                    ],
+                                    "duration": 1770,
+                                    "durationISO8601": "PT29M30S",
+                                    "warnings": {},
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true,
+                                        "world": false
+                                    },
+                                    "availableUntil": 1729792770000,
+                                    "availableFrom": 1727188200000,
+                                    "availabilityStatus": "available"
+                                }
+                            ],
+                            "availability": "available",
+                            "smpKind": "radioProgramme",
+                            "episodeTitle": "مجله شامگاهی",
+                            "type": "media"
+                        },
+                        "indexImage": {
+                            "id": "p0gt2kwh",
+                            "subType": "index",
+                            "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "height": 1080,
+                            "width": 1920,
+                            "altText": "New Home New Life 3/gold In The Dust",
+                            "caption": "Programming from the BBC Dari Service",
+                            "copyrightHolder": null,
+                            "type": "image"
+                        },
+                        "releaseDateTimestamp": 1727136000000,
+                        "brand": {
+                            "pid": "p0340v11",
+                            "title": "مجله شامگاهی"
+                        },
+                        "id": "urn:bbc:ares:ws_media:page:bbc_dari_radio/w3ct6lh0",
+                        "type": "ws_radio"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "مجله شامگاهی"
+                        },
+                        "locators": {
+                            "pid": "w3ct6ldq",
+                            "brandPid": "p0340v11"
+                        },
+                        "media": {
+                            "id": "w3ct6ldq",
+                            "subType": "episode",
+                            "format": "Audio",
+                            "title": "22/09/2024 GMT",
+                            "synopses": {
+                                "short": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "medium": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "long": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز.\n"
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "embedding": false,
+                            "advertising": false,
+                            "versions": [
+                                {
+                                    "versionId": "w4hr2nfh",
+                                    "types": [
+                                        "Original"
+                                    ],
+                                    "duration": 1770,
+                                    "durationISO8601": "PT29M30S",
+                                    "warnings": {},
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true,
+                                        "world": false
+                                    },
+                                    "availableUntil": 1729619970000,
+                                    "availableFrom": 1727015400000,
+                                    "availabilityStatus": "available"
+                                }
+                            ],
+                            "availability": "available",
+                            "smpKind": "radioProgramme",
+                            "episodeTitle": "مجله شامگاهی",
+                            "type": "media"
+                        },
+                        "indexImage": {
+                            "id": "p0gt2kwh",
+                            "subType": "index",
+                            "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "height": 1080,
+                            "width": 1920,
+                            "altText": "New Home New Life 3/gold In The Dust",
+                            "caption": "Programming from the BBC Dari Service",
+                            "copyrightHolder": null,
+                            "type": "image"
+                        },
+                        "releaseDateTimestamp": 1726963200000,
+                        "brand": {
+                            "pid": "p0340v11",
+                            "title": "مجله شامگاهی"
+                        },
+                        "id": "urn:bbc:ares:ws_media:page:bbc_dari_radio/w3ct6ldq",
+                        "type": "ws_radio"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "مجله شامگاهی"
+                        },
+                        "locators": {
+                            "pid": "w3ct6lcl",
+                            "brandPid": "p0340v11"
+                        },
+                        "media": {
+                            "id": "w3ct6lcl",
+                            "subType": "episode",
+                            "format": "Audio",
+                            "title": "21/09/2024 GMT",
+                            "synopses": {
+                                "short": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "medium": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "long": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز.\n"
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "embedding": false,
+                            "advertising": false,
+                            "versions": [
+                                {
+                                    "versionId": "w4hr2ndc",
+                                    "types": [
+                                        "Original"
+                                    ],
+                                    "duration": 1770,
+                                    "durationISO8601": "PT29M30S",
+                                    "warnings": {},
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true,
+                                        "world": false
+                                    },
+                                    "availableUntil": 1729533570000,
+                                    "availableFrom": 1726929000000,
+                                    "availabilityStatus": "available"
+                                }
+                            ],
+                            "availability": "available",
+                            "smpKind": "radioProgramme",
+                            "episodeTitle": "مجله شامگاهی",
+                            "type": "media"
+                        },
+                        "indexImage": {
+                            "id": "p0gt2kwh",
+                            "subType": "index",
+                            "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "height": 1080,
+                            "width": 1920,
+                            "altText": "New Home New Life 3/gold In The Dust",
+                            "caption": "Programming from the BBC Dari Service",
+                            "copyrightHolder": null,
+                            "type": "image"
+                        },
+                        "releaseDateTimestamp": 1726876800000,
+                        "brand": {
+                            "pid": "p0340v11",
+                            "title": "مجله شامگاهی"
+                        },
+                        "id": "urn:bbc:ares:ws_media:page:bbc_dari_radio/w3ct6lcl",
+                        "type": "ws_radio"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "مجله شامگاهی"
+                        },
+                        "locators": {
+                            "pid": "w3ct6l9b",
+                            "brandPid": "p0340v11"
+                        },
+                        "media": {
+                            "id": "w3ct6l9b",
+                            "subType": "episode",
+                            "format": "Audio",
+                            "title": "20/09/2024 GMT",
+                            "synopses": {
+                                "short": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "medium": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "long": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز.\n"
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "embedding": false,
+                            "advertising": false,
+                            "versions": [
+                                {
+                                    "versionId": "w4hr2nb3",
+                                    "types": [
+                                        "Original"
+                                    ],
+                                    "duration": 1770,
+                                    "durationISO8601": "PT29M30S",
+                                    "warnings": {},
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true,
+                                        "world": false
+                                    },
+                                    "availableUntil": 1729447170000,
+                                    "availableFrom": 1726842600000,
+                                    "availabilityStatus": "available"
+                                }
+                            ],
+                            "availability": "available",
+                            "smpKind": "radioProgramme",
+                            "episodeTitle": "مجله شامگاهی",
+                            "type": "media"
+                        },
+                        "indexImage": {
+                            "id": "p0gt2kwh",
+                            "subType": "index",
+                            "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "height": 1080,
+                            "width": 1920,
+                            "altText": "New Home New Life 3/gold In The Dust",
+                            "caption": "Programming from the BBC Dari Service",
+                            "copyrightHolder": null,
+                            "type": "image"
+                        },
+                        "releaseDateTimestamp": 1726790400000,
+                        "brand": {
+                            "pid": "p0340v11",
+                            "title": "مجله شامگاهی"
+                        },
+                        "id": "urn:bbc:ares:ws_media:page:bbc_dari_radio/w3ct6l9b",
+                        "type": "ws_radio"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "مجله شامگاهی"
+                        },
+                        "locators": {
+                            "pid": "w3ct6lfv",
+                            "brandPid": "p0340v11"
+                        },
+                        "media": {
+                            "id": "w3ct6lfv",
+                            "subType": "episode",
+                            "format": "Audio",
+                            "title": "19/09/2024 GMT",
+                            "synopses": {
+                                "short": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "medium": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "long": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز.\n"
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "embedding": false,
+                            "advertising": false,
+                            "versions": [
+                                {
+                                    "versionId": "w4hr2ngm",
+                                    "types": [
+                                        "Original"
+                                    ],
+                                    "duration": 1770,
+                                    "durationISO8601": "PT29M30S",
+                                    "warnings": {},
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true,
+                                        "world": false
+                                    },
+                                    "availableUntil": 1729360770000,
+                                    "availableFrom": 1726756200000,
+                                    "availabilityStatus": "available"
+                                }
+                            ],
+                            "availability": "available",
+                            "smpKind": "radioProgramme",
+                            "episodeTitle": "مجله شامگاهی",
+                            "type": "media"
+                        },
+                        "indexImage": {
+                            "id": "p0gt2kwh",
+                            "subType": "index",
+                            "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "height": 1080,
+                            "width": 1920,
+                            "altText": "New Home New Life 3/gold In The Dust",
+                            "caption": "Programming from the BBC Dari Service",
+                            "copyrightHolder": null,
+                            "type": "image"
+                        },
+                        "releaseDateTimestamp": 1726704000000,
+                        "brand": {
+                            "pid": "p0340v11",
+                            "title": "مجله شامگاهی"
+                        },
+                        "id": "urn:bbc:ares:ws_media:page:bbc_dari_radio/w3ct6lfv",
+                        "type": "ws_radio"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "مجله شامگاهی"
+                        },
+                        "locators": {
+                            "pid": "w3ct6lj3",
+                            "brandPid": "p0340v11"
+                        },
+                        "media": {
+                            "id": "w3ct6lj3",
+                            "subType": "episode",
+                            "format": "Audio",
+                            "title": "18/09/2024 GMT",
+                            "synopses": {
+                                "short": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "medium": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "long": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز.\n"
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "embedding": false,
+                            "advertising": false,
+                            "versions": [
+                                {
+                                    "versionId": "w4hr2njw",
+                                    "types": [
+                                        "Original"
+                                    ],
+                                    "duration": 1770,
+                                    "durationISO8601": "PT29M30S",
+                                    "warnings": {},
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true,
+                                        "world": false
+                                    },
+                                    "availableUntil": 1729274370000,
+                                    "availableFrom": 1726669800000,
+                                    "availabilityStatus": "available"
+                                }
+                            ],
+                            "availability": "available",
+                            "smpKind": "radioProgramme",
+                            "episodeTitle": "مجله شامگاهی",
+                            "type": "media"
+                        },
+                        "indexImage": {
+                            "id": "p0gt2kwh",
+                            "subType": "index",
+                            "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "height": 1080,
+                            "width": 1920,
+                            "altText": "New Home New Life 3/gold In The Dust",
+                            "caption": "Programming from the BBC Dari Service",
+                            "copyrightHolder": null,
+                            "type": "image"
+                        },
+                        "releaseDateTimestamp": 1726617600000,
+                        "brand": {
+                            "pid": "p0340v11",
+                            "title": "مجله شامگاهی"
+                        },
+                        "id": "urn:bbc:ares:ws_media:page:bbc_dari_radio/w3ct6lj3",
+                        "type": "ws_radio"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "مجله شامگاهی"
+                        },
+                        "locators": {
+                            "pid": "w3ct6lgz",
+                            "brandPid": "p0340v11"
+                        },
+                        "media": {
+                            "id": "w3ct6lgz",
+                            "subType": "episode",
+                            "format": "Audio",
+                            "title": "17/09/2024 GMT",
+                            "synopses": {
+                                "short": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "medium": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "long": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز.\n"
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "embedding": false,
+                            "advertising": false,
+                            "versions": [
+                                {
+                                    "versionId": "w4hr2nhr",
+                                    "types": [
+                                        "Original"
+                                    ],
+                                    "duration": 1770,
+                                    "durationISO8601": "PT29M30S",
+                                    "warnings": {},
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true,
+                                        "world": false
+                                    },
+                                    "availableUntil": 1729187970000,
+                                    "availableFrom": 1726583400000,
+                                    "availabilityStatus": "available"
+                                }
+                            ],
+                            "availability": "available",
+                            "smpKind": "radioProgramme",
+                            "episodeTitle": "مجله شامگاهی",
+                            "type": "media"
+                        },
+                        "indexImage": {
+                            "id": "p0gt2kwh",
+                            "subType": "index",
+                            "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "height": 1080,
+                            "width": 1920,
+                            "altText": "New Home New Life 3/gold In The Dust",
+                            "caption": "Programming from the BBC Dari Service",
+                            "copyrightHolder": null,
+                            "type": "image"
+                        },
+                        "releaseDateTimestamp": 1726531200000,
+                        "brand": {
+                            "pid": "p0340v11",
+                            "title": "مجله شامگاهی"
+                        },
+                        "id": "urn:bbc:ares:ws_media:page:bbc_dari_radio/w3ct6lgz",
+                        "type": "ws_radio"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "مجله شامگاهی"
+                        },
+                        "locators": {
+                            "pid": "w3ct6lbg",
+                            "brandPid": "p0340v11"
+                        },
+                        "media": {
+                            "id": "w3ct6lbg",
+                            "subType": "episode",
+                            "format": "Audio",
+                            "title": "16/09/2024 GMT",
+                            "synopses": {
+                                "short": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "medium": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "long": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز.\n"
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "embedding": false,
+                            "advertising": false,
+                            "versions": [
+                                {
+                                    "versionId": "w4hr2nc7",
+                                    "types": [
+                                        "Original"
+                                    ],
+                                    "duration": 1770,
+                                    "durationISO8601": "PT29M30S",
+                                    "warnings": {},
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true,
+                                        "world": false
+                                    },
+                                    "availableUntil": 1729101570000,
+                                    "availableFrom": 1726497000000,
+                                    "availabilityStatus": "available"
+                                }
+                            ],
+                            "availability": "available",
+                            "smpKind": "radioProgramme",
+                            "episodeTitle": "مجله شامگاهی",
+                            "type": "media"
+                        },
+                        "indexImage": {
+                            "id": "p0gt2kwh",
+                            "subType": "index",
+                            "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "height": 1080,
+                            "width": 1920,
+                            "altText": "New Home New Life 3/gold In The Dust",
+                            "caption": "Programming from the BBC Dari Service",
+                            "copyrightHolder": null,
+                            "type": "image"
+                        },
+                        "releaseDateTimestamp": 1726444800000,
+                        "brand": {
+                            "pid": "p0340v11",
+                            "title": "مجله شامگاهی"
+                        },
+                        "id": "urn:bbc:ares:ws_media:page:bbc_dari_radio/w3ct6lbg",
+                        "type": "ws_radio"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "مجله شامگاهی"
+                        },
+                        "locators": {
+                            "pid": "w3ct6ldp",
+                            "brandPid": "p0340v11"
+                        },
+                        "media": {
+                            "id": "w3ct6ldp",
+                            "subType": "episode",
+                            "format": "Audio",
+                            "title": "15/09/2024 GMT",
+                            "synopses": {
+                                "short": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "medium": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "long": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز.\n"
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "embedding": false,
+                            "advertising": false,
+                            "versions": [
+                                {
+                                    "versionId": "w4hr2nfg",
+                                    "types": [
+                                        "Original"
+                                    ],
+                                    "duration": 1770,
+                                    "durationISO8601": "PT29M30S",
+                                    "warnings": {},
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true,
+                                        "world": false
+                                    },
+                                    "availableUntil": 1729015170000,
+                                    "availableFrom": 1726410600000,
+                                    "availabilityStatus": "available"
+                                }
+                            ],
+                            "availability": "available",
+                            "smpKind": "radioProgramme",
+                            "episodeTitle": "مجله شامگاهی",
+                            "type": "media"
+                        },
+                        "indexImage": {
+                            "id": "p0gt2kwh",
+                            "subType": "index",
+                            "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "height": 1080,
+                            "width": 1920,
+                            "altText": "New Home New Life 3/gold In The Dust",
+                            "caption": "Programming from the BBC Dari Service",
+                            "copyrightHolder": null,
+                            "type": "image"
+                        },
+                        "releaseDateTimestamp": 1726358400000,
+                        "brand": {
+                            "pid": "p0340v11",
+                            "title": "مجله شامگاهی"
+                        },
+                        "id": "urn:bbc:ares:ws_media:page:bbc_dari_radio/w3ct6ldp",
+                        "type": "ws_radio"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "مجله شامگاهی"
+                        },
+                        "locators": {
+                            "pid": "w3ct6lck",
+                            "brandPid": "p0340v11"
+                        },
+                        "media": {
+                            "id": "w3ct6lck",
+                            "subType": "episode",
+                            "format": "Audio",
+                            "title": "14/09/2024 GMT",
+                            "synopses": {
+                                "short": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "medium": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "long": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز.\n"
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "embedding": false,
+                            "advertising": false,
+                            "versions": [
+                                {
+                                    "versionId": "w4hr2ndb",
+                                    "types": [
+                                        "Original"
+                                    ],
+                                    "duration": 1770,
+                                    "durationISO8601": "PT29M30S",
+                                    "warnings": {},
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true,
+                                        "world": false
+                                    },
+                                    "availableUntil": 1728928770000,
+                                    "availableFrom": 1726324200000,
+                                    "availabilityStatus": "available"
+                                }
+                            ],
+                            "availability": "available",
+                            "smpKind": "radioProgramme",
+                            "episodeTitle": "مجله شامگاهی",
+                            "type": "media"
+                        },
+                        "indexImage": {
+                            "id": "p0gt2kwh",
+                            "subType": "index",
+                            "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "height": 1080,
+                            "width": 1920,
+                            "altText": "New Home New Life 3/gold In The Dust",
+                            "caption": "Programming from the BBC Dari Service",
+                            "copyrightHolder": null,
+                            "type": "image"
+                        },
+                        "releaseDateTimestamp": 1726272000000,
+                        "brand": {
+                            "pid": "p0340v11",
+                            "title": "مجله شامگاهی"
+                        },
+                        "id": "urn:bbc:ares:ws_media:page:bbc_dari_radio/w3ct6lck",
+                        "type": "ws_radio"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "مجله شامگاهی"
+                        },
+                        "locators": {
+                            "pid": "w3ct6l99",
+                            "brandPid": "p0340v11"
+                        },
+                        "media": {
+                            "id": "w3ct6l99",
+                            "subType": "episode",
+                            "format": "Audio",
+                            "title": "13/09/2024 GMT",
+                            "synopses": {
+                                "short": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "medium": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "long": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز.\n"
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "embedding": false,
+                            "advertising": false,
+                            "versions": [
+                                {
+                                    "versionId": "w4hr2nb2",
+                                    "types": [
+                                        "Original"
+                                    ],
+                                    "duration": 1770,
+                                    "durationISO8601": "PT29M30S",
+                                    "warnings": {},
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true,
+                                        "world": false
+                                    },
+                                    "availableUntil": 1728842370000,
+                                    "availableFrom": 1726237800000,
+                                    "availabilityStatus": "available"
+                                }
+                            ],
+                            "availability": "available",
+                            "smpKind": "radioProgramme",
+                            "episodeTitle": "مجله شامگاهی",
+                            "type": "media"
+                        },
+                        "indexImage": {
+                            "id": "p0gt2kwh",
+                            "subType": "index",
+                            "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "height": 1080,
+                            "width": 1920,
+                            "altText": "New Home New Life 3/gold In The Dust",
+                            "caption": "Programming from the BBC Dari Service",
+                            "copyrightHolder": null,
+                            "type": "image"
+                        },
+                        "releaseDateTimestamp": 1726185600000,
+                        "brand": {
+                            "pid": "p0340v11",
+                            "title": "مجله شامگاهی"
+                        },
+                        "id": "urn:bbc:ares:ws_media:page:bbc_dari_radio/w3ct6l99",
+                        "type": "ws_radio"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "مجله شامگاهی"
+                        },
+                        "locators": {
+                            "pid": "w3ct6lft",
+                            "brandPid": "p0340v11"
+                        },
+                        "media": {
+                            "id": "w3ct6lft",
+                            "subType": "episode",
+                            "format": "Audio",
+                            "title": "12/09/2024 GMT",
+                            "synopses": {
+                                "short": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "medium": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "long": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز.\n"
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "embedding": false,
+                            "advertising": false,
+                            "versions": [
+                                {
+                                    "versionId": "w4hr2ngl",
+                                    "types": [
+                                        "Original"
+                                    ],
+                                    "duration": 1770,
+                                    "durationISO8601": "PT29M30S",
+                                    "warnings": {},
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true,
+                                        "world": false
+                                    },
+                                    "availableUntil": 1728755970000,
+                                    "availableFrom": 1726151400000,
+                                    "availabilityStatus": "available"
+                                }
+                            ],
+                            "availability": "available",
+                            "smpKind": "radioProgramme",
+                            "episodeTitle": "مجله شامگاهی",
+                            "type": "media"
+                        },
+                        "indexImage": {
+                            "id": "p0gt2kwh",
+                            "subType": "index",
+                            "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "height": 1080,
+                            "width": 1920,
+                            "altText": "New Home New Life 3/gold In The Dust",
+                            "caption": "Programming from the BBC Dari Service",
+                            "copyrightHolder": null,
+                            "type": "image"
+                        },
+                        "releaseDateTimestamp": 1726099200000,
+                        "brand": {
+                            "pid": "p0340v11",
+                            "title": "مجله شامگاهی"
+                        },
+                        "id": "urn:bbc:ares:ws_media:page:bbc_dari_radio/w3ct6lft",
+                        "type": "ws_radio"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "مجله شامگاهی"
+                        },
+                        "locators": {
+                            "pid": "w3ct6lj2",
+                            "brandPid": "p0340v11"
+                        },
+                        "media": {
+                            "id": "w3ct6lj2",
+                            "subType": "episode",
+                            "format": "Audio",
+                            "title": "11/09/2024 GMT",
+                            "synopses": {
+                                "short": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "medium": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "long": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز.\n"
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "embedding": false,
+                            "advertising": false,
+                            "versions": [
+                                {
+                                    "versionId": "w4hr2njv",
+                                    "types": [
+                                        "Original"
+                                    ],
+                                    "duration": 1770,
+                                    "durationISO8601": "PT29M30S",
+                                    "warnings": {},
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true,
+                                        "world": false
+                                    },
+                                    "availableUntil": 1728669570000,
+                                    "availableFrom": 1726065000000,
+                                    "availabilityStatus": "available"
+                                }
+                            ],
+                            "availability": "available",
+                            "smpKind": "radioProgramme",
+                            "episodeTitle": "مجله شامگاهی",
+                            "type": "media"
+                        },
+                        "indexImage": {
+                            "id": "p0gt2kwh",
+                            "subType": "index",
+                            "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "height": 1080,
+                            "width": 1920,
+                            "altText": "New Home New Life 3/gold In The Dust",
+                            "caption": "Programming from the BBC Dari Service",
+                            "copyrightHolder": null,
+                            "type": "image"
+                        },
+                        "releaseDateTimestamp": 1726012800000,
+                        "brand": {
+                            "pid": "p0340v11",
+                            "title": "مجله شامگاهی"
+                        },
+                        "id": "urn:bbc:ares:ws_media:page:bbc_dari_radio/w3ct6lj2",
+                        "type": "ws_radio"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "مجله شامگاهی"
+                        },
+                        "locators": {
+                            "pid": "w3ct6lgy",
+                            "brandPid": "p0340v11"
+                        },
+                        "media": {
+                            "id": "w3ct6lgy",
+                            "subType": "episode",
+                            "format": "Audio",
+                            "title": "10/09/2024 GMT",
+                            "synopses": {
+                                "short": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "medium": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "long": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز.\n"
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "embedding": false,
+                            "advertising": false,
+                            "versions": [
+                                {
+                                    "versionId": "w4hr2nhq",
+                                    "types": [
+                                        "Original"
+                                    ],
+                                    "duration": 1770,
+                                    "durationISO8601": "PT29M30S",
+                                    "warnings": {},
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true,
+                                        "world": false
+                                    },
+                                    "availableUntil": 1728583170000,
+                                    "availableFrom": 1725978600000,
+                                    "availabilityStatus": "available"
+                                }
+                            ],
+                            "availability": "available",
+                            "smpKind": "radioProgramme",
+                            "episodeTitle": "مجله شامگاهی",
+                            "type": "media"
+                        },
+                        "indexImage": {
+                            "id": "p0gt2kwh",
+                            "subType": "index",
+                            "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "height": 1080,
+                            "width": 1920,
+                            "altText": "New Home New Life 3/gold In The Dust",
+                            "caption": "Programming from the BBC Dari Service",
+                            "copyrightHolder": null,
+                            "type": "image"
+                        },
+                        "releaseDateTimestamp": 1725926400000,
+                        "brand": {
+                            "pid": "p0340v11",
+                            "title": "مجله شامگاهی"
+                        },
+                        "id": "urn:bbc:ares:ws_media:page:bbc_dari_radio/w3ct6lgy",
+                        "type": "ws_radio"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "مجله شامگاهی"
+                        },
+                        "locators": {
+                            "pid": "w3ct6lbf",
+                            "brandPid": "p0340v11"
+                        },
+                        "media": {
+                            "id": "w3ct6lbf",
+                            "subType": "episode",
+                            "format": "Audio",
+                            "title": "09/09/2024 GMT",
+                            "synopses": {
+                                "short": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "medium": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "long": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز.\n"
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "embedding": false,
+                            "advertising": false,
+                            "versions": [
+                                {
+                                    "versionId": "w4hr2nc6",
+                                    "types": [
+                                        "Original"
+                                    ],
+                                    "duration": 1770,
+                                    "durationISO8601": "PT29M30S",
+                                    "warnings": {},
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true,
+                                        "world": false
+                                    },
+                                    "availableUntil": 1728496770000,
+                                    "availableFrom": 1725892200000,
+                                    "availabilityStatus": "available"
+                                }
+                            ],
+                            "availability": "available",
+                            "smpKind": "radioProgramme",
+                            "episodeTitle": "مجله شامگاهی",
+                            "type": "media"
+                        },
+                        "indexImage": {
+                            "id": "p0gt2kwh",
+                            "subType": "index",
+                            "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "height": 1080,
+                            "width": 1920,
+                            "altText": "New Home New Life 3/gold In The Dust",
+                            "caption": "Programming from the BBC Dari Service",
+                            "copyrightHolder": null,
+                            "type": "image"
+                        },
+                        "releaseDateTimestamp": 1725840000000,
+                        "brand": {
+                            "pid": "p0340v11",
+                            "title": "مجله شامگاهی"
+                        },
+                        "id": "urn:bbc:ares:ws_media:page:bbc_dari_radio/w3ct6lbf",
+                        "type": "ws_radio"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "مجله شامگاهی"
+                        },
+                        "locators": {
+                            "pid": "w3ct6ldn",
+                            "brandPid": "p0340v11"
+                        },
+                        "media": {
+                            "id": "w3ct6ldn",
+                            "subType": "episode",
+                            "format": "Audio",
+                            "title": "08/09/2024 GMT",
+                            "synopses": {
+                                "short": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "medium": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "long": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز.\n"
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "embedding": false,
+                            "advertising": false,
+                            "versions": [
+                                {
+                                    "versionId": "w4hr2nff",
+                                    "types": [
+                                        "Original"
+                                    ],
+                                    "duration": 1770,
+                                    "durationISO8601": "PT29M30S",
+                                    "warnings": {},
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true,
+                                        "world": false
+                                    },
+                                    "availableUntil": 1728410370000,
+                                    "availableFrom": 1725805800000,
+                                    "availabilityStatus": "available"
+                                }
+                            ],
+                            "availability": "available",
+                            "smpKind": "radioProgramme",
+                            "episodeTitle": "مجله شامگاهی",
+                            "type": "media"
+                        },
+                        "indexImage": {
+                            "id": "p0gt2kwh",
+                            "subType": "index",
+                            "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "height": 1080,
+                            "width": 1920,
+                            "altText": "New Home New Life 3/gold In The Dust",
+                            "caption": "Programming from the BBC Dari Service",
+                            "copyrightHolder": null,
+                            "type": "image"
+                        },
+                        "releaseDateTimestamp": 1725753600000,
+                        "brand": {
+                            "pid": "p0340v11",
+                            "title": "مجله شامگاهی"
+                        },
+                        "id": "urn:bbc:ares:ws_media:page:bbc_dari_radio/w3ct6ldn",
+                        "type": "ws_radio"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "مجله شامگاهی"
+                        },
+                        "locators": {
+                            "pid": "w3ct6lcj",
+                            "brandPid": "p0340v11"
+                        },
+                        "media": {
+                            "id": "w3ct6lcj",
+                            "subType": "episode",
+                            "format": "Audio",
+                            "title": "07/09/2024 GMT",
+                            "synopses": {
+                                "short": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "medium": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "long": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز.\n"
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "embedding": false,
+                            "advertising": false,
+                            "versions": [
+                                {
+                                    "versionId": "w4hr2nd9",
+                                    "types": [
+                                        "Original"
+                                    ],
+                                    "duration": 1770,
+                                    "durationISO8601": "PT29M30S",
+                                    "warnings": {},
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true,
+                                        "world": false
+                                    },
+                                    "availableUntil": 1728323970000,
+                                    "availableFrom": 1725719400000,
+                                    "availabilityStatus": "available"
+                                }
+                            ],
+                            "availability": "available",
+                            "smpKind": "radioProgramme",
+                            "episodeTitle": "مجله شامگاهی",
+                            "type": "media"
+                        },
+                        "indexImage": {
+                            "id": "p0gt2kwh",
+                            "subType": "index",
+                            "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "height": 1080,
+                            "width": 1920,
+                            "altText": "New Home New Life 3/gold In The Dust",
+                            "caption": "Programming from the BBC Dari Service",
+                            "copyrightHolder": null,
+                            "type": "image"
+                        },
+                        "releaseDateTimestamp": 1725667200000,
+                        "brand": {
+                            "pid": "p0340v11",
+                            "title": "مجله شامگاهی"
+                        },
+                        "id": "urn:bbc:ares:ws_media:page:bbc_dari_radio/w3ct6lcj",
+                        "type": "ws_radio"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "مجله شامگاهی"
+                        },
+                        "locators": {
+                            "pid": "w3ct6l98",
+                            "brandPid": "p0340v11"
+                        },
+                        "media": {
+                            "id": "w3ct6l98",
+                            "subType": "episode",
+                            "format": "Audio",
+                            "title": "06/09/2024 GMT",
+                            "synopses": {
+                                "short": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "medium": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "long": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز.\n"
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "embedding": false,
+                            "advertising": false,
+                            "versions": [
+                                {
+                                    "versionId": "w4hr2nb1",
+                                    "types": [
+                                        "Original"
+                                    ],
+                                    "duration": 1770,
+                                    "durationISO8601": "PT29M30S",
+                                    "warnings": {},
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true,
+                                        "world": false
+                                    },
+                                    "availableUntil": 1728237570000,
+                                    "availableFrom": 1725633000000,
+                                    "availabilityStatus": "available"
+                                }
+                            ],
+                            "availability": "available",
+                            "smpKind": "radioProgramme",
+                            "episodeTitle": "مجله شامگاهی",
+                            "type": "media"
+                        },
+                        "indexImage": {
+                            "id": "p0gt2kwh",
+                            "subType": "index",
+                            "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "height": 1080,
+                            "width": 1920,
+                            "altText": "New Home New Life 3/gold In The Dust",
+                            "caption": "Programming from the BBC Dari Service",
+                            "copyrightHolder": null,
+                            "type": "image"
+                        },
+                        "releaseDateTimestamp": 1725580800000,
+                        "brand": {
+                            "pid": "p0340v11",
+                            "title": "مجله شامگاهی"
+                        },
+                        "id": "urn:bbc:ares:ws_media:page:bbc_dari_radio/w3ct6l98",
+                        "type": "ws_radio"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "مجله شامگاهی"
+                        },
+                        "locators": {
+                            "pid": "w3ct6lfs",
+                            "brandPid": "p0340v11"
+                        },
+                        "media": {
+                            "id": "w3ct6lfs",
+                            "subType": "episode",
+                            "format": "Audio",
+                            "title": "05/09/2024 GMT",
+                            "synopses": {
+                                "short": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "medium": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "long": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز.\n"
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "embedding": false,
+                            "advertising": false,
+                            "versions": [
+                                {
+                                    "versionId": "w4hr2ngk",
+                                    "types": [
+                                        "Original"
+                                    ],
+                                    "duration": 1770,
+                                    "durationISO8601": "PT29M30S",
+                                    "warnings": {},
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true,
+                                        "world": false
+                                    },
+                                    "availableUntil": 1728151170000,
+                                    "availableFrom": 1725546600000,
+                                    "availabilityStatus": "available"
+                                }
+                            ],
+                            "availability": "available",
+                            "smpKind": "radioProgramme",
+                            "episodeTitle": "مجله شامگاهی",
+                            "type": "media"
+                        },
+                        "indexImage": {
+                            "id": "p0gt2kwh",
+                            "subType": "index",
+                            "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "height": 1080,
+                            "width": 1920,
+                            "altText": "New Home New Life 3/gold In The Dust",
+                            "caption": "Programming from the BBC Dari Service",
+                            "copyrightHolder": null,
+                            "type": "image"
+                        },
+                        "releaseDateTimestamp": 1725494400000,
+                        "brand": {
+                            "pid": "p0340v11",
+                            "title": "مجله شامگاهی"
+                        },
+                        "id": "urn:bbc:ares:ws_media:page:bbc_dari_radio/w3ct6lfs",
+                        "type": "ws_radio"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "مجله شامگاهی"
+                        },
+                        "locators": {
+                            "pid": "w3ct6lj1",
+                            "brandPid": "p0340v11"
+                        },
+                        "media": {
+                            "id": "w3ct6lj1",
+                            "subType": "episode",
+                            "format": "Audio",
+                            "title": "04/09/2024 GMT",
+                            "synopses": {
+                                "short": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "medium": "برنامه خبری و تحلیلی شامگاهی \n",
+                                "long": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز.\n"
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "embedding": false,
+                            "advertising": false,
+                            "versions": [
+                                {
+                                    "versionId": "w4hr2njt",
+                                    "types": [
+                                        "Original"
+                                    ],
+                                    "duration": 1770,
+                                    "durationISO8601": "PT29M30S",
+                                    "warnings": {},
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true,
+                                        "world": false
+                                    },
+                                    "availableUntil": 1728064770000,
+                                    "availableFrom": 1725460200000,
+                                    "availabilityStatus": "available"
+                                }
+                            ],
+                            "availability": "available",
+                            "smpKind": "radioProgramme",
+                            "episodeTitle": "مجله شامگاهی",
+                            "type": "media"
+                        },
+                        "indexImage": {
+                            "id": "p0gt2kwh",
+                            "subType": "index",
+                            "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gt2kwh.png",
+                            "height": 1080,
+                            "width": 1920,
+                            "altText": "New Home New Life 3/gold In The Dust",
+                            "caption": "Programming from the BBC Dari Service",
+                            "copyrightHolder": null,
+                            "type": "image"
+                        },
+                        "releaseDateTimestamp": 1725408000000,
+                        "brand": {
+                            "pid": "p0340v11",
+                            "title": "مجله شامگاهی"
+                        },
+                        "id": "urn:bbc:ares:ws_media:page:bbc_dari_radio/w3ct6lj1",
+                        "type": "ws_radio"
+                    }
+                ]
+            }
+        ]
+    }
+}
