@@ -63,20 +63,17 @@ const triggerIntersection = ({
 
 interface Props {
   pageType: PageTypes;
-  isAmp: boolean;
   service: Services;
   mockOptimizely?: Partial<ReactSDKClient>;
 }
 
 const ContextWrap = ({
   pageType,
-  isAmp,
   children,
   service,
   mockOptimizely = optimizely,
 }: PropsWithChildren<Props>) => (
   <RequestContextProvider
-    isAmp={isAmp}
     pageType={pageType}
     service={service}
     pathname="/pathname"
@@ -115,7 +112,7 @@ describe('Optimizely Page Complete tracking', () => {
 
   it('should return a function that can be assigned to an element to observe for intersections', () => {
     const { container } = render(
-      <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
+      <ContextWrap pageType={ARTICLE_PAGE} service="news">
         <PageCompleteTracking />
       </ContextWrap>,
     );
@@ -128,7 +125,7 @@ describe('Optimizely Page Complete tracking', () => {
 
   it('should not send tracking event when element is not in view', async () => {
     const { container } = render(
-      <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
+      <ContextWrap pageType={ARTICLE_PAGE} service="news">
         <PageCompleteTracking />
       </ContextWrap>,
     );
@@ -150,7 +147,7 @@ describe('Optimizely Page Complete tracking', () => {
 
   it('should not send tracking event when element is in view, but not in experiment variation', async () => {
     const { container } = render(
-      <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
+      <ContextWrap pageType={ARTICLE_PAGE} service="news">
         <PageCompleteTracking />
       </ContextWrap>,
     );
@@ -172,7 +169,7 @@ describe('Optimizely Page Complete tracking', () => {
 
   it('should send tracking event when element is in view and in experiment variation', async () => {
     const { container } = render(
-      <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
+      <ContextWrap pageType={ARTICLE_PAGE} service="news">
         <PageCompleteTracking />
       </ContextWrap>,
     );
