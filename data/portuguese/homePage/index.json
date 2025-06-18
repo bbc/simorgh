@@ -26,6 +26,7 @@
             "lastPublished": "",
             "link": "https://news.files.bbci.com/include/vjsthasia/403-india_election_results_day/hindi/tally-include/embed",
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "imageAlt": "The description of the image",
             "id": "https%3A%2F%2Fnews.files.bbci.co.uk%2Finclude%2Fvjsthasia%2F403-india_election_results_day%2Fhindi%2Ftally-include%2Fembed"
           }
         ],
@@ -129,10 +130,7 @@
                   "duration": "PT1M10S",
                   "kind": "programme",
                   "guidance": null,
-                  "territories": [
-                    "nonuk",
-                    "uk"
-                  ],
+                  "territories": ["nonuk", "uk"],
                   "orientation": "portrait"
                 },
                 "isAdvertisingAllowed": true,
@@ -217,10 +215,7 @@
                   "duration": "PT13S",
                   "kind": "programme",
                   "guidance": null,
-                  "territories": [
-                    "uk",
-                    "nonuk"
-                  ],
+                  "territories": ["uk", "nonuk"],
                   "orientation": "portrait"
                 },
                 "isAdvertisingAllowed": false,
@@ -325,10 +320,7 @@
                   "duration": "PT20S",
                   "kind": "programme",
                   "guidance": null,
-                  "territories": [
-                    "uk",
-                    "nonuk"
-                  ],
+                  "territories": ["uk", "nonuk"],
                   "orientation": "portrait"
                 },
                 "isAdvertisingAllowed": false,
@@ -445,10 +437,7 @@
                   "duration": "PT30S",
                   "kind": "programme",
                   "guidance": null,
-                  "territories": [
-                    "nonuk",
-                    "uk"
-                  ],
+                  "territories": ["nonuk", "uk"],
                   "orientation": "portrait"
                 },
                 "isAdvertisingAllowed": false,
@@ -545,10 +534,7 @@
                   "duration": "PT1M10S",
                   "kind": "programme",
                   "guidance": null,
-                  "territories": [
-                    "nonuk",
-                    "uk"
-                  ],
+                  "territories": ["nonuk", "uk"],
                   "orientation": "portrait"
                 },
                 "isAdvertisingAllowed": true,
@@ -645,10 +631,7 @@
                   "duration": "PT20S",
                   "kind": "programme",
                   "guidance": null,
-                  "territories": [
-                    "nonuk",
-                    "uk"
-                  ],
+                  "territories": ["nonuk", "uk"],
                   "orientation": "portrait"
                 },
                 "isAdvertisingAllowed": false,
@@ -745,10 +728,7 @@
                   "duration": "PT13S",
                   "kind": "programme",
                   "guidance": null,
-                  "territories": [
-                    "nonuk",
-                    "uk"
-                  ],
+                  "territories": ["nonuk", "uk"],
                   "orientation": "portrait"
                 },
                 "isAdvertisingAllowed": false,
@@ -845,10 +825,7 @@
                   "duration": "PT13S",
                   "kind": "programme",
                   "guidance": null,
-                  "territories": [
-                    "nonuk",
-                    "uk"
-                  ],
+                  "territories": ["nonuk", "uk"],
                   "orientation": "portrait"
                 },
                 "isAdvertisingAllowed": false,
@@ -945,10 +922,7 @@
                   "duration": "PT30S",
                   "kind": "programme",
                   "guidance": null,
-                  "territories": [
-                    "nonuk",
-                    "uk"
-                  ],
+                  "territories": ["nonuk", "uk"],
                   "orientation": "portrait"
                 },
                 "isAdvertisingAllowed": false,
@@ -1045,10 +1019,7 @@
                   "duration": "PT46S",
                   "kind": "programme",
                   "guidance": null,
-                  "territories": [
-                    "nonuk",
-                    "uk"
-                  ],
+                  "territories": ["nonuk", "uk"],
                   "orientation": "portrait"
                 },
                 "isAdvertisingAllowed": true,
@@ -1157,10 +1128,7 @@
                   "duration": "PT13S",
                   "kind": "programme",
                   "guidance": null,
-                  "territories": [
-                    "nonuk",
-                    "uk"
-                  ],
+                  "territories": ["nonuk", "uk"],
                   "orientation": "portrait"
                 },
                 "isAdvertisingAllowed": false,
@@ -1257,10 +1225,7 @@
                   "duration": "PT46S",
                   "kind": "programme",
                   "guidance": null,
-                  "territories": [
-                    "nonuk",
-                    "uk"
-                  ],
+                  "territories": ["nonuk", "uk"],
                   "orientation": "portrait"
                 },
                 "isAdvertisingAllowed": true,
@@ -1357,10 +1322,7 @@
                   "duration": "PT30S",
                   "kind": "programme",
                   "guidance": null,
-                  "territories": [
-                    "nonuk",
-                    "uk"
-                  ],
+                  "territories": ["nonuk", "uk"],
                   "orientation": "portrait"
                 },
                 "isAdvertisingAllowed": false,
@@ -1457,10 +1419,7 @@
                   "duration": "PT13S",
                   "kind": "programme",
                   "guidance": null,
-                  "territories": [
-                    "nonuk",
-                    "uk"
-                  ],
+                  "territories": ["nonuk", "uk"],
                   "orientation": "portrait"
                 },
                 "isAdvertisingAllowed": false,
@@ -1557,10 +1516,7 @@
                   "duration": "PT20S",
                   "kind": "programme",
                   "guidance": null,
-                  "territories": [
-                    "nonuk",
-                    "uk"
-                  ],
+                  "territories": ["nonuk", "uk"],
                   "orientation": "portrait"
                 },
                 "isAdvertisingAllowed": false,
@@ -1657,10 +1613,7 @@
                   "duration": "PT1M10S",
                   "kind": "programme",
                   "guidance": null,
-                  "territories": [
-                    "nonuk",
-                    "uk"
-                  ],
+                  "territories": ["nonuk", "uk"],
                   "orientation": "portrait"
                 },
                 "isAdvertisingAllowed": true,
@@ -1757,10 +1710,7 @@
                   "duration": "PT30S",
                   "kind": "programme",
                   "guidance": null,
-                  "territories": [
-                    "nonuk",
-                    "uk"
-                  ],
+                  "territories": ["nonuk", "uk"],
                   "orientation": "portrait"
                 },
                 "isAdvertisingAllowed": false,
@@ -1857,10 +1807,7 @@
                   "duration": "PT13S",
                   "kind": "programme",
                   "guidance": null,
-                  "territories": [
-                    "nonuk",
-                    "uk"
-                  ],
+                  "territories": ["nonuk", "uk"],
                   "orientation": "portrait"
                 },
                 "isAdvertisingAllowed": false,
@@ -1957,10 +1904,7 @@
                   "duration": "PT20S",
                   "kind": "programme",
                   "guidance": null,
-                  "territories": [
-                    "nonuk",
-                    "uk"
-                  ],
+                  "territories": ["nonuk", "uk"],
                   "orientation": "portrait"
                 },
                 "isAdvertisingAllowed": false,
@@ -2057,10 +2001,7 @@
                   "duration": "PT1M10S",
                   "kind": "programme",
                   "guidance": null,
-                  "territories": [
-                    "nonuk",
-                    "uk"
-                  ],
+                  "territories": ["nonuk", "uk"],
                   "orientation": "portrait"
                 },
                 "isAdvertisingAllowed": true,
@@ -2101,6 +2042,7 @@
             "lastPublished": "2022-10-27T16:32:50.346Z",
             "link": "https://www.bbc.com/pidgin/articles/cvl1jnp2nrqo",
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "imageAlt": "The description of the image",
             "id": "cvl1jnp2nrqo"
           },
           {
@@ -2112,6 +2054,7 @@
             "link": "https://www.bbc.com/pidgin/live/c7p765ynk9qt",
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
             "description": "The refugee camp has been hit by hundreds of shells, where Hamas says 100,000 people are still sheltering",
+            "imageAlt": "The description of the image",
             "id": "c7p765ynk9qt"
           }
         ],
@@ -2134,6 +2077,7 @@
             "lastPublished": "",
             "link": "https://flo.uri.sh/story/2070814/embed",
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "imageAlt": "The description of the image",
             "id": "https%3A%2F%2Fflo.uri.sh%2Fstory%2F2070814%2Fembed"
           }
         ],
