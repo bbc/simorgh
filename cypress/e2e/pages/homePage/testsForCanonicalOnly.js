@@ -8,15 +8,18 @@ export default ({ service }) => {
         const $section = $img.parents('section');
         if ($section.length > 0) {
           const testId = $section.attr('data-testid');
-          if (['message-banner', 'portrait-video-carousel'].includes(testId)) {
+          if (
+            testId &&
+            ['message-banner', 'portrait-video-carousel'].includes(testId)
+          ) {
             cy.log(`No picture tag on ${testId}`);
-          }
           } else {
             cy.wrap($img).parent().should('match', 'picture');
           }
         }
       });
     });
+
     it('should have two sources one with webp and one with fallback jpg/png', () => {
       cy.get('picture').each($picture => {
         cy.wrap($picture)
