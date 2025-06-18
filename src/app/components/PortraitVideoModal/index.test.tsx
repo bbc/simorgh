@@ -41,6 +41,7 @@ describe('PortraitVideoModal', () => {
     );
 
     const closeButton = screen.getByTestId('close-modal-button');
+
     closeButton.click();
 
     expect(mockClose).toHaveBeenCalled();
