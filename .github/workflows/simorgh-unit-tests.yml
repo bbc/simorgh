@@ -18,11 +18,9 @@ jobs:
       CI: true
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
 
@@ -44,7 +42,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: build
-          key: build-${{ hashFiles('build/server.js') }}
+          key: build-${{ github.sha }}
 
       - name: Build Simorgh - Express App
         if: steps.cache_build.outputs.cache-hit != 'true'
