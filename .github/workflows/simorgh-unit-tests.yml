@@ -106,7 +106,7 @@ jobs:
 
       - name: Unit Tests - Express App
         run: |
-          export INDEX=${{ strategy.job-index }} + 1
+          export INDEX=$(${{ strategy.job-index }} + 1)
           echo $INDEX/${{ strategy.job-total }}
           yarn test:unit:ci --shard=$INDEX/${{ strategy.job-total }}
 
