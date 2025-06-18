@@ -62,7 +62,7 @@
     "test:puppeteer:local": "PUPPETEER_APP_ENV=local yarn test:puppeteer",
     "test:unit": "test -z $CI && yarn test:unit:local || yarn test:unit:ci",
     "test:unit:local": "NODE_OPTIONS=--experimental-vm-modules jest --env=jsdom --coverage --colors --testPathIgnorePatterns=\"src/integration\" \"scripts/bundleSize\" \"puppeteer\" \"ws-nextjs-app\"",
-    "test:unit:ci": "yarn test:unit:local --ci",
+    "test:unit:ci": "yarn test:unit:local --ci --shard=1/1",
     "test:unit:scripts": "jest --env=jsdom --coverage --colors --testPathPattern=\"scripts/bundleSize/\"",
     "test:unit:onetest": "test -z $CI && NODE_OPTIONS=--experimental-vm-modules jest --env=jsdom --coverage --colors --testPathPattern=\"src/app/components/\" || NODE_OPTIONS=--experimental-vm-modules jest --ci --runInBand --env=jsdom --coverage --colors --testPathPattern=\"src/app/components/\"",
     "test:unit:watch": "yarn test:unit -- --watch",
