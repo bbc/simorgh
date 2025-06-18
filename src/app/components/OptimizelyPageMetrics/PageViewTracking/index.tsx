@@ -1,12 +1,13 @@
 import { useState, useContext, useEffect } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
-import { experiments } from './experiments';
+import { experimentsForPageViewTracking as experiments } from '../experimentsForPageMetrics';
 
 const PageViewTracking = () => {
   const { optimizely } = useContext(OptimizelyContext);
   const [pageViewSent, setPageViewSent] = useState(false);
 
-  const sendPageViewEvent = experiments && !pageViewSent;
+  const sendPageViewEvent =
+    experiments && experiments.length > 0 && !pageViewSent;
 
   useEffect(() => {
     if (sendPageViewEvent) {

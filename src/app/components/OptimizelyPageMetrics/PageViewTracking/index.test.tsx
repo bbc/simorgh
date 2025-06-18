@@ -22,8 +22,8 @@ const optimizely = {
   })),
 } satisfies Partial<ReactSDKClient>;
 
-jest.mock('./experiments', () => ({
-  experiments: ['mockExperiment1', 'mockExperiment2'],
+jest.mock('../experimentsForPageMetrics', () => ({
+  experimentsForPageViewTracking: ['mockExperiment1', 'mockExperiment2'],
 }));
 
 interface Props {

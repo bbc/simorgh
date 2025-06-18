@@ -22,8 +22,8 @@ const optimizely = {
   })),
 } satisfies Partial<ReactSDKClient>;
 
-jest.mock('./experiments', () => ({
-  experiments: ['mockExperiment1', 'mockExperiment2'],
+jest.mock('../experimentsForPageMetrics', () => ({
+  experimentsForPageCompleteTracking: ['mockExperiment1', 'mockExperiment2'],
 }));
 
 const observers = new Map();

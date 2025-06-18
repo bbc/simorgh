@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect, useRef } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
-import { experiments } from './experiments';
+import { experimentsForPageCompleteTracking as experiments } from '../experimentsForPageMetrics';
 
 const PageCompleteTracking = () => {
   const ref = useRef(null);
@@ -9,7 +9,8 @@ const PageCompleteTracking = () => {
   const [pageCompleteSent, setPageCompleteSent] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
-  const sendPageCompleteEvent = experiments && !pageCompleteSent && isVisible;
+  const sendPageCompleteEvent =
+    experiments && experiments.length > 0 && !pageCompleteSent && isVisible;
 
   const initObserver = async () => {
     if (typeof window.IntersectionObserver === 'undefined') {
