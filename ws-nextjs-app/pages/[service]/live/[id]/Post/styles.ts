@@ -114,7 +114,6 @@ export default {
     }),
   audioPost: ({ mq, spacings }: Theme) =>
     css({
-      aspectRatio: '16 / 9',
       overflow: 'hidden',
       '& .media-player': {
         height: '140px',
