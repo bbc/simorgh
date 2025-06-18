@@ -127,7 +127,7 @@ const PortraitVideoModal = ({
 }: PortraitVideoModalProps) => {
   const {
     translations: {
-      media: { closeVideo = 'Close', modalLabel = 'Media modal' },
+      media: { closeVideo = 'Close', modalLabel = 'Media player' },
     },
   } = use(ServiceContext);
   const modalRef = useRef<HTMLDivElement>(null);
