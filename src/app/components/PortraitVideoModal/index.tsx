@@ -12,11 +12,14 @@ import styles from './index.styles';
 import { setImageWidth } from '../MediaLoader/configs/portraitClipMedia';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 
+const getPlayerInstance = () =>
+  window?.embeddedMedia?.api?.players()?.bbcMediaPlayer0;
+
 export const playlistLoadedCallback = (
   e: SMPEvent,
   blocks: PortraitClipMediaBlock[],
 ) => {
-  const player = window?.embeddedMedia?.api?.players()?.bbcMediaPlayer0;
+  const player = getPlayerInstance();
 
   if (!player) return;
 
@@ -67,7 +70,7 @@ export const playlistLoadedCallback = (
 };
 
 const pluginLoadedCallback = () => {
-  const player = window?.embeddedMedia?.api?.players()?.bbcMediaPlayer0;
+  const player = getPlayerInstance();
 
   player.dispatchEvent('fullScreenPlugin.launchFullscreen');
 };
@@ -124,30 +127,65 @@ const PortraitVideoModal = ({
 }: PortraitVideoModalProps) => {
   const {
     translations: {
-      media: { closeVideo = 'Close' },
+      media: { closeVideo = 'Close', modalLabel = 'Media player' },
     },
   } = use(ServiceContext);
-  const modalRef = useRef<HTMLDialogElement>(null);
+  const modalRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
 
   const blocks = getBlocks(items);
 
   useEffect(() => {
-    if (modalRef.current) {
-      modalRef.current.showModal();
-      modalRef.current.scrollTop = 0;
-      closeButtonRef.current?.focus();
+    const handleBackdropClick = (event: MouseEvent | TouchEvent) => {
+      if (event.target === event.currentTarget) {
+        onClose();
+      }
+    };
 
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        onClose();
+      }
+    };
+
+    const modal = modalRef.current;
+    const reactRootElement = document.getElementById('root');
+
+    if (modal) {
+      modal.scrollTop = 0;
+      closeButtonRef.current?.focus();
       document.body.style.overflow = 'hidden';
+      reactRootElement?.setAttribute('inert', 'true');
+
+      modal.addEventListener('mousedown', handleBackdropClick);
+      modal.addEventListener('touchstart', handleBackdropClick);
+      modal.addEventListener('keydown', handleKeyDown);
     }
 
     return () => {
       document.body.removeAttribute('style');
+      reactRootElement?.removeAttribute('inert');
+
+      modal?.removeEventListener('mousedown', handleBackdropClick);
+      modal?.removeEventListener('touchstart', handleBackdropClick);
+      modal?.removeEventListener('keydown', handleKeyDown);
+
+      const player = getPlayerInstance();
+
+      // Pause any player if the modal is closed instantly
+      if (player) player.pause();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
-    <dialog ref={modalRef} css={styles.dialog}>
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-label={modalLabel}
+      ref={modalRef}
+      css={styles.modal}
+    >
       <button
         ref={closeButtonRef}
         type="button"
@@ -168,7 +206,7 @@ const PortraitVideoModal = ({
           fullscreenExit: onClose,
         }}
       />
-    </dialog>
+    </div>
   );
 };
 
