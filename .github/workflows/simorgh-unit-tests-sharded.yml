@@ -101,13 +101,12 @@ jobs:
           name: simorgh-nextjs-build
           path: ws-nextjs-app/build
 
+      - name: Install Node Modules
+        run: yarn
+
       - name: Unit Tests - Express App
-        run: |
-          yarn
-          yarn test:unit:ci --shard=${{ strategy.job-index }}/${{ strategy.job-index }}
+        run: yarn test:unit:ci --shard=${{ strategy.job-index }}/${{ strategy.job-index }}
 
       - name: Unit Tests - Next.JS App
         working-directory: ./ws-nextjs-app
-        run: |
-          yarn   
-          yarn test
+        run: yarn test
