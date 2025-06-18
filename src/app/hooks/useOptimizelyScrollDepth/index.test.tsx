@@ -18,13 +18,13 @@ const optimizelyMock = {
   onReady: jest.fn(() => Promise.resolve()),
   setUser: jest.fn(() => Promise.resolve()),
   track: jest.fn(),
-} as unknown as ReactSDKClient;
+} satisfies Partial<ReactSDKClient>;
 
 interface Props {
   pageType?: PageTypes;
   isAmp?: boolean;
   service?: Services;
-  mockOptimizely?: ReactSDKClient;
+  mockOptimizely?: Partial<ReactSDKClient>;
 }
 
 const wrapper = ({
@@ -40,7 +40,10 @@ const wrapper = ({
     service={service}
     pathname="/pathname"
   >
-    <OptimizelyProvider optimizely={mockOptimizely} isServerSide>
+    <OptimizelyProvider
+      optimizely={mockOptimizely as ReactSDKClient}
+      isServerSide
+    >
       {children}
     </OptimizelyProvider>
   </RequestContextProvider>

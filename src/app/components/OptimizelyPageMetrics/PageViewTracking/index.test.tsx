@@ -15,13 +15,13 @@ const optimizely = {
   onReady: jest.fn(() => Promise.resolve()),
   track: jest.fn(),
   setUser: jest.fn(() => Promise.resolve()),
-} as unknown as ReactSDKClient;
+} satisfies Partial<ReactSDKClient>;
 
 interface Props {
   pageType: PageTypes;
   isAmp: boolean;
   service: Services;
-  mockOptimizely?: ReactSDKClient;
+  mockOptimizely?: Partial<ReactSDKClient>;
 }
 
 const ContextWrap = ({
@@ -37,7 +37,10 @@ const ContextWrap = ({
     service={service}
     pathname="/pathname"
   >
-    <OptimizelyProvider optimizely={mockOptimizely} isServerSide>
+    <OptimizelyProvider
+      optimizely={mockOptimizely as ReactSDKClient}
+      isServerSide
+    >
       {children}
     </OptimizelyProvider>
   </RequestContextProvider>
