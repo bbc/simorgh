@@ -13,7 +13,7 @@ jobs:
       fail-fast: false
       matrix:
         node-version: [22.x]
-        containers: [1, 2, 3]
+        containers: [1, 2]
     env:
       CI: true
 
