@@ -73,16 +73,18 @@ jobs:
             ws-nextjs-app/node_modules
           key: node-modules-${{ hashFiles('yarn.lock', 'ws-nextjs-app/yarn.lock') }}
 
+      - name: Install Node Modules
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: ./scripts/installNodeModules.sh
+
       - name: Download the Simorgh build folder
         uses: actions/download-artifact@v4
         with:
           name: simorgh-build
           path: build
-        run: ls -R build
 
-      - name: Install Node Modules
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: ./scripts/installNodeModules.sh
+      - name: List contents of build directory
+        run: ls -R build
 
       - name: Unit Tests
         run: |
