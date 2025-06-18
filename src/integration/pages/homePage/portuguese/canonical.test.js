@@ -14,6 +14,11 @@ describe('Canonical', () => {
       curation.portraitVideo && Array.isArray(curation.portraitVideo.items),
   );
 
+  const getPortraitCarousels = () =>
+    document.querySelectorAll(
+      '[data-testid="portrait-video-carousel"] ul[data-testid="pv-carousel"]',
+    );
+
   it('should have an unordered list of videos with the correct number of promos for each portrait video carousel', () => {
     const videoCarousels = document.querySelectorAll(
       '[data-testid="portrait-video-carousel"] ul',
@@ -52,9 +57,7 @@ describe('Canonical', () => {
   });
 
   it('should render each video promo item with a button containing the correct text', () => {
-    const carousels = document.querySelectorAll(
-      '[data-testid="portrait-video-carousel"] ul[data-testid="pv-carousel"]',
-    );
+    const carousels = getPortraitCarousels();
 
     carousels.forEach((carousel, carouselIndex) => {
       const promoButtons = carousel.querySelectorAll(
@@ -62,6 +65,7 @@ describe('Canonical', () => {
       );
       const videoItems =
         portraitVideoCurations[carouselIndex]?.portraitVideo?.items || [];
+
       promoButtons.forEach((button, buttonIndex) => {
         const textContents = button.querySelector(
           '[data-testid="text-contents"]',
@@ -75,25 +79,22 @@ describe('Canonical', () => {
   });
 
   it('should render each video promo item with a duration element', () => {
-    const carousels = document.querySelectorAll(
-      '[data-testid="portrait-video-carousel"] ul[data-testid="pv-carousel"]',
-    );
+    const carousels = getPortraitCarousels();
+
     carousels.forEach(carousel => {
       const promoButtons = carousel.querySelectorAll(
         '[data-testid="promo-button"]',
       );
       promoButtons.forEach(button => {
-        // Check that the button contains a duration element
         const duration = button.querySelector('time > span');
         expect(duration).toBeInTheDocument();
         expect(duration.textContent).toMatch(/\d{2}:\d{2}/);
       });
     });
   });
+
   it('should render each video promo item with an image', () => {
-    const carousels = document.querySelectorAll(
-      '[data-testid="portrait-video-carousel"] ul[data-testid="pv-carousel"]',
-    );
+    const carousels = getPortraitCarousels();
 
     carousels.forEach((carousel, carouselIndex) => {
       const promoItems = carousel.querySelectorAll('li');
