@@ -2,16 +2,16 @@ import runAdsTests from '../../../support/helpers/adsTests/testsForCanonicalOnly
 import getAppEnv from '../../../support/helpers/getAppEnv';
 
 export default ({ service }) => {
-  describe(`Images`, () => {
+  describe('Images', () => {
     it('should have a picture tag around images', () => {
       cy.get('img').each($img => {
         const $section = $img.parents('section');
         if ($section.length > 0) {
           const testId = $section.attr('data-testid');
-          if (testId && testId.includes('message-banner')) {
-            cy.log(`No picture tag on message banners ${testId}`);
-          } else if (testId && testId.includes('portrait-video-carousel')) {
-            cy.log(`No picture tag on portrait video images ${testId}`);
+          const exceptions = ['message-banner', 'portrait-video-carousel'];
+
+          if (testId && exceptions.some(id => testId.includes(id))) {
+            cy.log(`No picture tag on ${testId}`);
           } else {
             cy.wrap($img).parent().should('match', 'picture');
           }
