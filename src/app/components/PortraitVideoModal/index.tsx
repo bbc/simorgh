@@ -189,15 +189,6 @@ const PortraitVideoModal = ({
         ref={modalRef}
         css={styles.modal}
       >
-        <MediaLoader
-          css={styles.mediaWrapper}
-          blocks={[blocks?.[selectedVideoIndex]]}
-          eventMapping={{
-            playlistLoaded: e => playlistLoadedCallback(e, blocks),
-            pluginLoaded: pluginLoadedCallback,
-            fullscreenExit: onClose,
-          }}
-        />
         <button
           ref={closeButtonRef}
           type="button"
@@ -209,6 +200,15 @@ const PortraitVideoModal = ({
           {navigationIcons.cross}
           <VisuallyHiddenText>{closeVideo}</VisuallyHiddenText>
         </button>
+        <MediaLoader
+          css={styles.mediaWrapper}
+          blocks={[blocks?.[selectedVideoIndex]]}
+          eventMapping={{
+            playlistLoaded: e => playlistLoadedCallback(e, blocks),
+            pluginLoaded: pluginLoadedCallback,
+            fullscreenExit: onClose,
+          }}
+        />
       </div>
     </>
   );
