@@ -47,17 +47,21 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
-      title: 'Podcast',
-      brandTitle: 'Korona: Ina Mafita?',
+      title: 'Whatsapp',
+      brandTitle: 'Tasharmu ta WhatsApp',
       brandDescription:
-        'Shiri na musamman da sashen Hausa na BBC zai dinga kawo muku kan cutar Coronavirus',
+        'Yanzu za ku iya samun labaran BBC Hausa kai-tsaye a wayoyinku.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p08mlbpj.jpg',
-        alt: 'Korona: Ina Mafita?',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0ljr61s.jpg',
+        alt: 'BBC News Hausa WhatsApp latsa nan domin shiga tasharmu',
       },
       linkLabel: {
-        text: 'Kashi-kashi',
-        href: 'https://www.bbc.com/hausa/podcasts/p08mlgcb',
+        text: 'Latsa nan domin shiga',
+        href: 'https://www.whatsapp.com/channel/0029VahbuTkEwEjqW42kXB2K',
+      },
+      skipLink: {
+        text: 'Tsallake %title%',
+        endTextVisuallyHidden: 'Karshen %title%',
       },
     },
     translations: {
@@ -245,6 +249,7 @@ export const service: DefaultServiceConfig = {
         },
         listen: 'Saurari',
         watch: 'Kalla',
+        watchMoments: 'Kalli abubuwan da ke faruwa',
         listenLive: 'Saurara Kai Tsaye',
         listenNext: 'Saurari na gaba',
         liveLabel: 'KAI TSAYE',
