@@ -7,7 +7,7 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  install:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -42,7 +42,49 @@ jobs:
         uses: actions/cache@v4
         with:
           path: build
-          key: build-${{ github.sha }}
+          key: build-${{ github.event.pull_request.head.sha }}
+
+      - name: Build Simorgh - Express App
+        if: steps.cache_build.outputs.cache-hit != 'true'
+        run: yarn build
+
+  build:
+    runs-on: ubuntu-latest
+    needs: install
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [22.x]
+        containers: [1, 2, 3, 4]
+    env:
+      CI: true
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Cache Node Modules
+        id: cache_node
+        uses: actions/cache@v4
+        with:
+          path: |
+            node_modules
+            ws-nextjs-app/node_modules
+          key: node-modules-${{ hashFiles('yarn.lock', 'ws-nextjs-app/yarn.lock') }}
+
+      - name: Install Node Modules
+        if: steps.cache_node.outputs.cache-hit != 'true'
+        run: ./scripts/installNodeModules.sh
+
+      - name: Cache Build Directory
+        id: cache_build
+        uses: actions/cache@v4
+        with:
+          path: build
+          key: build-${{ github.event.pull_request.head.sha }}
 
       - name: Build Simorgh - Express App
         if: steps.cache_build.outputs.cache-hit != 'true'
