@@ -8,10 +8,9 @@ export default ({ service }) => {
         const $section = $img.parents('section');
         if ($section.length > 0) {
           const testId = $section.attr('data-testid');
-          if (testId && testId.includes('message-banner')) {
-            cy.log(`No picture tag on message banners ${testId}`);
-          } else if (testId && testId.includes('portrait-video-carousel')) {
-            cy.log(`No picture tag on portrait video images ${testId}`); // do we need picture tags here?
+          if (['message-banner', 'portrait-video-carousel'].includes(testId)) {
+            cy.log(`No picture tag on ${testId}`);
+          }
           } else {
             cy.wrap($img).parent().should('match', 'picture');
           }
