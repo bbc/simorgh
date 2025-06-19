@@ -510,7 +510,7 @@ describe('useClickTrackerHandler', () => {
             hookProps={{
               ...eventTrackingData,
               experimentName: 'mockExperiment',
-              optimizelyVariation: 'variation_a',
+              experimentVariation: 'variation_a',
               sendOptimizelyEvents: true,
             }}
           />
@@ -546,7 +546,7 @@ describe('useClickTrackerHandler', () => {
             hookProps={{
               ...eventTrackingData,
               experimentName: 'mockExperiment',
-              optimizelyVariation: 'variation_a',
+              experimentVariation: 'variation_a',
               sendOptimizelyEvents: true,
             }}
           />

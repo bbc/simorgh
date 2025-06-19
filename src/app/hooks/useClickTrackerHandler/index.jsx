@@ -30,7 +30,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
     preventNavigation,
     sendOptimizelyEvents,
     experimentName,
-    optimizelyVariation,
+    experimentVariation,
     groupTracker,
     itemTracker,
   } = extractATITrackingProps({ eventTrackingData, eventType: CLICK_EVENT });
@@ -70,8 +70,8 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
 
           if (
             optimizely &&
-            optimizelyVariation &&
-            optimizelyVariation !== 'off' &&
+            experimentVariation &&
+            experimentVariation !== 'off' &&
             sendOptimizelyEvents
           ) {
             const overrideAttributes = optimizely?.user.attributes;
@@ -101,10 +101,10 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
               useReverb,
               ...(groupTracker && { groupTracker }),
               ...(itemTracker && { itemTracker }),
-              ...(optimizelyVariation &&
-                optimizelyVariation !== 'off' && {
+              ...(experimentVariation &&
+                experimentVariation !== 'off' && {
                   experimentName,
-                  experimentVariant: optimizelyVariation,
+                  experimentVariant: experimentVariation,
                 }),
             });
           } finally {
@@ -136,7 +136,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
       sendOptimizelyEvents,
       optimizely,
       experimentName,
-      optimizelyVariation,
+      experimentVariation,
       detailedPlacement,
       useReverb,
       itemTracker,
