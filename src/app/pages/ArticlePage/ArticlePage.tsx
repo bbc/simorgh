@@ -4,7 +4,7 @@ import React, { useContext, useState } from 'react';
 import { jsx, useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
-import useOptimizelyMvtVariation from '#app/hooks/useOptimizelyMvtVariation';
+import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 import OptimizelyArticleCompleteTracking from '#app/legacy/containers/OptimizelyArticleCompleteTracking';
 import OptimizelyPageViewTracking from '#app/legacy/containers/OptimizelyPageViewTracking';
 import ArticleMetadata from '#containers/ArticleMetadata';
@@ -71,7 +71,7 @@ import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
 import styles from './ArticlePage.styles';
 import { ComponentToRenderProps, TimeStampProps } from './types';
-import ContinueReadingButton from './ContinueReadingButton';
+import ContinueReadingButton, {Props as ContineReadingProps} from './ContinueReadingButton';
 import ArticleHeadline from './ArticleHeadline';
 import isPortraitVideo from '../utils/isPortraitVideo';
 
@@ -157,9 +157,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
-  const experimentVariant = useOptimizelyMvtVariation(
-    OPTIMIZELY_CONFIG.ruleKey,
-  );
+  const experimentVariant = useOptimizelyVariation({flagKey:  OPTIMIZELY_CONFIG.ruleKey});
 
   const isInExperiment = experimentVariant && experimentVariant !== 'off';
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
@@ -269,6 +267,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     !isAmp &&
       !isLite &&
       !isApp &&
+      experimentVariant != null &&
       ['read-more-a', 'read-more-b', 'read-more-a-and-top-stories'].includes(
         experimentVariant,
       ),
@@ -338,7 +337,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               <ContinueReadingButton
                 showAllContent={showAllContent}
                 setShowAllContent={() => setShowAllContent(true)}
-                variation={experimentVariant}
+                variation={experimentVariant as ContineReadingProps['variation']}
                 liteCTAShows={liteCTAShows}
               />
             )}

@@ -205,7 +205,7 @@ server.get(
   ],
   async ({ url, query, headers, path: urlPath }, res) => {
     let derivedPageType = 'Unknown';
-    let mvtExperiments = [];
+    let serverSideExperiments = [];
 
     try {
       const {
@@ -259,8 +259,12 @@ server.get(
       if (status === OK) {
         derivedPageType = ramdaPath(['pageData', 'metadata', 'type'], data);
 
-        mvtExperiments = getMvtExperiments(headers, service, derivedPageType);
-        data.mvtExperiments = mvtExperiments;
+        serverSideExperiments = getMvtExperiments(
+          headers,
+          service,
+          derivedPageType,
+        );
+        data.serverSideExperiments = serverSideExperiments;
       } else {
         sendCustomMetric({
           metricName: NON_200_RESPONSE,
@@ -348,7 +352,8 @@ server.get(
         );
 
         const allVaryHeaders = ['X-Country'];
-        const mvtVaryHeaders = !isAmp && getMvtVaryHeaders(mvtExperiments);
+        const mvtVaryHeaders =
+          !isAmp && getMvtVaryHeaders(serverSideExperiments);
         if (mvtVaryHeaders) allVaryHeaders.push(mvtVaryHeaders);
 
         res.set('vary', allVaryHeaders);

@@ -26,7 +26,7 @@ export type RequestContextProps = {
   isLite: boolean;
   isNextJs: boolean;
   isUK: boolean;
-  mvtExperiments?: MvtExperiment[] | null;
+  serverSideExperiments?: MvtExperiment[] | null;
   origin: string;
   pageType: PageTypes;
   derivedPageType: string | null;
@@ -60,7 +60,7 @@ type RequestProviderProps = {
   showCookieBannerBasedOnCountry?: boolean;
   statusCode?: number | null;
   timeOnServer?: number | null;
-  mvtExperiments?: MvtExperiment[] | null;
+  serverSideExperiments?: MvtExperiment[] | null;
   variant?: Variants | null;
   isUK?: boolean | null;
 };
@@ -74,7 +74,7 @@ export const RequestContextProvider = ({
   isApp = false,
   isLite = false,
   isNextJs = false,
-  mvtExperiments = null,
+  serverSideExperiments = null,
   pageType,
   pathname,
   service,
@@ -132,7 +132,7 @@ export const RequestContextProvider = ({
       service,
       pathname,
       ...getMetaUrls(origin, pathname),
-      mvtExperiments,
+      serverSideExperiments,
     }),
     [
       derivedPageType,
@@ -143,7 +143,7 @@ export const RequestContextProvider = ({
       isApp,
       isLite,
       isNextJs,
-      mvtExperiments,
+      serverSideExperiments,
       origin,
       pageType,
       pathname,

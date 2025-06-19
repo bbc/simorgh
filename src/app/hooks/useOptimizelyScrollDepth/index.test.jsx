@@ -8,7 +8,7 @@ import {
 import { OptimizelyProvider } from '@optimizely/react-sdk';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
+import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 import useOptimizelyScrollDepth from '.';
 
 jest.mock('#hooks/useOptimizelyVariation', () => jest.fn());

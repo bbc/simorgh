@@ -73,7 +73,7 @@ jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   __esModule: true,
   default: jest.fn(),
 }));
-jest.mock('#app/hooks/useOptimizelyMvtVariation', () => ({
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   __esModule: true,
   default: jest.fn(),
 }));

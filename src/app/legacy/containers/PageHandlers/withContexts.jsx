@@ -26,7 +26,7 @@ const WithContexts = Component => {
       pageData = null,
       showAdsBasedOnLocation = false,
       showCookieBannerBasedOnCountry = true,
-      mvtExperiments = null,
+      serverSideExperiments = null,
       isNextJs = false,
       isUK = false,
     } = props;
@@ -55,7 +55,7 @@ const WithContexts = Component => {
             timeOnServer={timeOnServer}
             showAdsBasedOnLocation={showAdsBasedOnLocation}
             showCookieBannerBasedOnCountry={showCookieBannerBasedOnCountry}
-            mvtExperiments={mvtExperiments}
+            serverSideExperiments={serverSideExperiments}
             isNextJs={isNextJs}
             isUK={isUK}
           >

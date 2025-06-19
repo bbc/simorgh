@@ -72,23 +72,19 @@ const ContextWrap = ({ pageType, isAmp, children, service }) => (
 
 const { error } = console;
 
-beforeEach(() => {
-  jest.clearAllMocks();
-  jest.useFakeTimers();
-  console.error = jest.fn();
-  global.IntersectionObserver = IntersectionObserver;
-});
-
-afterEach(() => {
-  jest.runOnlyPendingTimers();
-  jest.useRealTimers();
-  console.error = error;
-  observers.clear();
-});
-
 describe('Optimizely Page Complete tracking', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+    jest.useFakeTimers();
+    console.error = jest.fn();
+    global.IntersectionObserver = IntersectionObserver;
+  });
+
+  afterEach(() => {
+    jest.runOnlyPendingTimers();
+    jest.useRealTimers();
+    console.error = error;
+    observers.clear();
   });
 
   it('should return a function that can be assigned to an element to observe for intersections', () => {

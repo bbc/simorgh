@@ -27,6 +27,7 @@ export type Toggles =
 export type MvtExperiment = {
   experimentName: string;
   variation: string;
+  enabled: boolean;
   type: 'experiment' | 'feature';
 };
 

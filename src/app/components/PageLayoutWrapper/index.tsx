@@ -7,7 +7,7 @@ import { Helmet } from 'react-helmet';
 
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
 import { PageTypes } from '#app/models/types/global';
-import useOptimizelyMvtVariation from '#app/hooks/useOptimizelyMvtVariation';
+import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 import OPTIMIZELY_CONFIG from '#app/lib/config/optimizely';
 import { TopStoryItem } from '../../pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import WebVitals from '../../legacy/containers/WebVitals';
@@ -20,6 +20,7 @@ import { RequestContext } from '../../contexts/RequestContext';
 import fontFacesLazy from '../ThemeProvider/fontFacesLazy';
 import styles from './index.styles';
 import { OptimoMostReadRecord, CPSMostReadRecord } from '../MostRead/types';
+import withOptimizelyProvider from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
 
 type ModelType = {
   blocks?: [
@@ -60,9 +61,8 @@ const PageLayoutWrapper = ({
   const reportingPageType = pageType?.replace(/ /g, '');
   let wordCount: wordCountType = 0;
   let propsForOJExperiment = {};
-  const experimentVariant = useOptimizelyMvtVariation(
-    OPTIMIZELY_CONFIG.ruleKey,
-  );
+  const experimentVariant = useOptimizelyVariation({flagKey: OPTIMIZELY_CONFIG.ruleKey});
+
   if (pageType === 'article') {
     wordCount = pageData?.content?.model?.blocks
       ?.filter(block => block.type === 'text')
@@ -81,7 +81,7 @@ const PageLayoutWrapper = ({
     const mostReadItems = pageData.mostRead?.items;
 
     let dataForOJExperiment;
-    if (
+    if (experimentVariant != null &&
       ['top-bar-top-stories', 'read-more-a-and-top-stories'].includes(
         experimentVariant,
       )
@@ -247,4 +247,4 @@ const PageLayoutWrapper = ({
   );
 };
 
-export default PageLayoutWrapper;
+export default withOptimizelyProvider(PageLayoutWrapper);
