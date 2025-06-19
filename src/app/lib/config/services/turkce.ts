@@ -330,7 +330,7 @@ export const service: DefaultServiceConfig = {
         url: '/turkce/topics/ckdxn2xk95gt',
       },
       {
-        title: 'Orta Doğu',
+        title: 'Ortadoğu',
         url: '/turkce/topics/cg726y2qxg1t',
       },
       {
