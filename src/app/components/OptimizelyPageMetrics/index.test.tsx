@@ -12,7 +12,12 @@ import { render } from '../react-testing-library-with-providers';
 import OptimizelyPageMetrics from '.';
 
 jest.mock('./experimentsForPageMetrics', () => ({
-  experimentsForPageMetrics: ['mockExperiment1', 'mockExperiment2'],
+  experimentsForPageMetrics: [
+    {
+      pageType: 'article',
+      activeExperiments: ['mockExperiment1', 'mockExperiment2'],
+    },
+  ],
 }));
 
 const optimizely = {
@@ -68,7 +73,12 @@ describe('OptimizelyPageMetrics', () => {
   it('returns null when isAmp is true', async () => {
     const { container } = render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp>
-        <OptimizelyPageMetrics trackPageView trackPageDepth trackPageComplete />
+        <OptimizelyPageMetrics
+          trackPageView
+          trackPageDepth
+          trackPageComplete
+          pageType={ARTICLE_PAGE}
+        />
       </ContextWrap>,
     );
     await waitFor(() => {
@@ -79,7 +89,7 @@ describe('OptimizelyPageMetrics', () => {
   it('renders no tracking components by default when all tracking flags are false', async () => {
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
-        <OptimizelyPageMetrics />
+        <OptimizelyPageMetrics pageType={ARTICLE_PAGE} />
       </ContextWrap>,
     );
     await waitFor(() => {
@@ -92,7 +102,7 @@ describe('OptimizelyPageMetrics', () => {
   it('renders PageCompleteTracking when trackPageComplete is true', async () => {
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
-        <OptimizelyPageMetrics trackPageComplete />
+        <OptimizelyPageMetrics trackPageComplete pageType={ARTICLE_PAGE} />
       </ContextWrap>,
     );
     await waitFor(() => {
@@ -103,7 +113,7 @@ describe('OptimizelyPageMetrics', () => {
   it('renders ScrollDepthTracking when trackPageDepth is true', async () => {
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
-        <OptimizelyPageMetrics trackPageDepth />
+        <OptimizelyPageMetrics trackPageDepth pageType={ARTICLE_PAGE} />
       </ContextWrap>,
     );
     await waitFor(() => {
@@ -114,7 +124,7 @@ describe('OptimizelyPageMetrics', () => {
   it('renders PageViewTracking when trackPageView is true', async () => {
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
-        <OptimizelyPageMetrics trackPageView />
+        <OptimizelyPageMetrics trackPageView pageType={ARTICLE_PAGE} />
       </ContextWrap>,
     );
     await waitFor(() => {
@@ -125,7 +135,12 @@ describe('OptimizelyPageMetrics', () => {
   it('renders all tracking components when all flags are true', async () => {
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
-        <OptimizelyPageMetrics trackPageComplete trackPageDepth trackPageView />
+        <OptimizelyPageMetrics
+          trackPageComplete
+          trackPageDepth
+          trackPageView
+          pageType={ARTICLE_PAGE}
+        />
       </ContextWrap>,
     );
     await waitFor(() => {
