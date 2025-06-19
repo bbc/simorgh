@@ -2,14 +2,16 @@ import runAdsTests from '../../../support/helpers/adsTests/testsForCanonicalOnly
 import getAppEnv from '../../../support/helpers/getAppEnv';
 
 export default ({ service }) => {
-  describe(`Images`, () => {
+  describe('Images', () => {
     it('should have a picture tag around images', () => {
       cy.get('img').each($img => {
         const $section = $img.parents('section');
         if ($section.length > 0) {
           const testId = $section.attr('data-testid');
-          if (testId && testId.includes('message-banner')) {
-            cy.log(`No picture tag on message banners ${testId}`);
+          const exceptions = ['message-banner', 'portrait-video-carousel'];
+
+          if (testId && exceptions.some(id => testId.includes(id))) {
+            cy.log(`No picture tag on ${testId}`);
           } else {
             cy.wrap($img).parent().should('match', 'picture');
           }
@@ -39,6 +41,87 @@ export default ({ service }) => {
       });
     });
   });
+
+  describe('Portrait Video Curations', () => {
+    beforeEach(() => {
+      cy.viewport(600, 800);
+    });
+    // open and close could be 2 separate tests, but would be largely duplicated or tests reliant on the previous ones state for the modal to be open
+    it('should open the portrait video modal when a promo is clicked and close it when the modal close button is clicked', () => {
+      cy.get('body').then($body => {
+        if ($body.find('[data-testid="portrait-video-carousel"]').length > 0) {
+          cy.get('[data-testid="portrait-video-carousel"]')
+            .first()
+            .within(() => {
+              cy.get('[data-testid="promo-button"]').first().click();
+            });
+
+          cy.get('div[role="dialog"]')
+            .should('exist')
+            .and('be.visible')
+            .within(() => {
+              cy.get('[data-e2e="media-loader__container"]')
+                .should('exist')
+                .and('be.visible');
+              cy.get('[data-e2e="media-player"]')
+                .should('exist')
+                .and('be.visible');
+
+              cy.get('button[data-testid="close-modal-button"]')
+                .should('exist')
+                .and('be.visible')
+                .click();
+            });
+
+          cy.get('div[role="dialog"]').should('not.exist');
+        } else {
+          cy.log('No portrait video carousel found on the page');
+        }
+      });
+    });
+
+    it('should close the modal when the background is clicked', () => {
+      cy.get('body').then($body => {
+        if ($body.find('[data-testid="portrait-video-carousel"]').length > 0) {
+          cy.get('[data-testid="portrait-video-carousel"]')
+            .first()
+            .within(() => {
+              cy.get('[data-testid="promo-button"]').first().click();
+            });
+
+          cy.get('div[role="dialog"]').should('exist').and('be.visible');
+
+          // cy.root() gets the root element of the current subject (in this case, the open modal dialog).
+          cy.root().click('top');
+
+          cy.get('div[role="dialog"]').should('not.exist');
+        } else {
+          cy.log('No portrait video carousel found on the page');
+        }
+      });
+    });
+
+    it('should close the modal when the Escape key is pressed', () => {
+      cy.get('body').then($body => {
+        if ($body.find('[data-testid="portrait-video-carousel"]').length > 0) {
+          cy.get('[data-testid="portrait-video-carousel"]')
+            .first()
+            .within(() => {
+              cy.get('[data-testid="promo-button"]').first().click();
+            });
+
+          cy.get('div[role="dialog"]').should('exist').and('be.visible');
+
+          cy.get('body').type('{esc}');
+
+          cy.get('div[role="dialog"]').should('not.exist');
+        } else {
+          cy.log('No portrait video carousel found on the page');
+        }
+      });
+    });
+  });
+
   if (getAppEnv() === 'local') {
     runAdsTests({ service });
   }

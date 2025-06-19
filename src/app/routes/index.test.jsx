@@ -67,8 +67,7 @@ jest.mock('@optimizely/react-sdk', () => ({
   setLogger: jest.fn(),
   createInstance: jest.fn(),
 }));
-jest.mock('#app/legacy/containers/OptimizelyArticleCompleteTracking');
-jest.mock('#app/legacy/containers/OptimizelyPageViewTracking');
+jest.mock('#app/components/OptimizelyPageMetrics');
 jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   __esModule: true,
   default: jest.fn(),

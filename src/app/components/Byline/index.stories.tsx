@@ -7,6 +7,7 @@ import {
   bylineWithLinkAndLocation,
   bylineWithNonPngPhoto,
   bylineWithPngPhoto,
+  bylineWithMultipleContributors,
 } from '../../pages/ArticlePage/fixtureData';
 import Byline from '.';
 import readme from './README.md';
@@ -32,6 +33,10 @@ export default {
 
 export const AuthorRoleByline = () => (
   <Component fixture={bylineWithNameAndRole} />
+);
+
+export const MultipleContributorsByline = () => (
+  <Component fixture={bylineWithMultipleContributors} />
 );
 
 export const LinkByline = () => <Component fixture={bylineWithLink} />;
