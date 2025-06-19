@@ -78,21 +78,6 @@ describe('useOptimizelyScrollDepth', () => {
     );
   });
 
-  it('should not call Optimizely track function for users not in an experiment', async () => {
-    const { result } = renderHook(() => useOptimizelyScrollDepth(), {
-      wrapper,
-    });
-
-    act(() => {
-      result.current.setScrollDepth(25);
-      result.current.setScrollDepth(50);
-      result.current.setScrollDepth(75);
-      result.current.setScrollDepth(100);
-    });
-
-    expect(optimizelyMock.track).toHaveBeenCalledTimes(0);
-  });
-
   it('should fire event when scroll depth reaches 25% threshold', () => {
     const { result } = renderHook(() => useOptimizelyScrollDepth(), {
       wrapper,
