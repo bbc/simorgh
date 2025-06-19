@@ -88,11 +88,9 @@ export const service: DefaultServiceConfig = {
           `شما در حال مشاهده نسخه متنی وب‌سایت بی‌بی‌سی هستید که از داده کمتری استفاده می‌کند. نسخه اصلی وب‌سایت را که شامل تمام تصاویر و ویدیوهاست، مشاهده کنید.`,
         toMainSite: 'بازگشت به وب‌سایت یا نسخه اصلی',
         informationPage: 'اطلاعات بیشتر درباره نسخه لایت که برای مصرف کمتر حجم داده‌هاست',
-        informationPageLink:
-          'https://www.bbc.com/persian/articles/cr7953ky5dpo',
+        informationPageLink: 'https://www.bbc.com/persian/articles/cr7953ky5dpo',
         dataSaving: 'مشاهده نسخه متنی (بدون عکس یا ویدیو) از این مطلب',
-        articleDataSavingLinkText:
-          'مشاهده نسخه متنی (بدون عکس یا ویدیو) از این مطلب',
+        articleDataSavingLinkText: 'مشاهده نسخه متنی (بدون عکس یا ویدیو) از این مطلب',
       },
       mediaAssetPage: {
         mediaPlayer: 'پخش صدا و تصویر',
