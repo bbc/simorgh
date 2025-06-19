@@ -5,8 +5,7 @@ import { jsx, useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
 import useOptimizelyMvtVariation from '#app/hooks/useOptimizelyMvtVariation';
-import OptimizelyArticleCompleteTracking from '#app/legacy/containers/OptimizelyArticleCompleteTracking';
-import OptimizelyPageViewTracking from '#app/legacy/containers/OptimizelyPageViewTracking';
+import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
 import Headings from '#containers/Headings';
@@ -189,7 +188,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const bylineLinkedData = bylineExtractor(bylineContribBlocks);
 
-  const hasByline = !!bylineLinkedData;
+  const hasByline = bylineLinkedData.length > 0;
 
   const articleAuthorTwitterHandle = hasByline
     ? getAuthorTwitterHandle(blocks)
@@ -264,6 +263,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const promoImage = promoImageRawBlock?.model?.locator;
 
   const showTopics = Boolean(showRelatedTopics && topics.length > 0);
+  const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
   const showContinueReadingButton = Boolean(
     !isAmp &&
@@ -279,7 +279,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
         title={headline}
-        {...(hasByline && { authors: bylineLinkedData.authorName })}
+        authors={authors}
       />
       <ComscoreAnalytics />
       <NielsenAnalytics />
@@ -342,9 +342,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                 liteCTAShows={liteCTAShows}
               />
             )}
-            {isInExperiment && <OptimizelyArticleCompleteTracking />}
+            {isInExperiment && <OptimizelyPageMetrics trackPageComplete />}
           </main>
-          {isInExperiment && <OptimizelyPageViewTracking />}
+          {isInExperiment && (
+            <OptimizelyPageMetrics trackPageView trackPageDepth />
+          )}
           {showTopics && (
             <RelatedTopics
               css={[
