@@ -1,5 +1,5 @@
 import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
-import { MvtExperiment, PageTypes, Services } from '#app/models/types/global';
+import { MvtExperiment } from '#app/models/types/global';
 import { renderHook } from '@testing-library/react';
 import * as React from 'react';
 import { act, PropsWithChildren } from 'react';
