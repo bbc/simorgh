@@ -1,4 +1,4 @@
-import getMvtExperiments from './getMvtExperiments';
-import getMvtVaryHeaders from './getMvtVaryHeaders';
+import getServerExperiments from './getMvtExperiments';
+import getExperimentVaryHeaders from './getMvtVaryHeaders';
 
-export { getMvtExperiments, getMvtVaryHeaders };
+export { getServerExperiments, getExperimentVaryHeaders };

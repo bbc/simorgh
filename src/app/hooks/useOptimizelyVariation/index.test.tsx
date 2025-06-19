@@ -58,6 +58,17 @@ describe('useOptimizelyVariation custom hook', () => {
     expect(result).toEqual(null);
   });
 
+  it('should return null if the serverSideExperiments array is empty and if clientSideHook returns null', async () => {
+    jest.spyOn(clientSideHook, 'default').mockReturnValueOnce(null);
+
+    const result = await renderUseOptimizelyVariation({
+      flagKey: 'correct_experiment_id',
+      serverSideExperiments: [],
+    });
+
+    expect(result).toEqual(null);
+  });
+
   it('should call useServerSideClient if a serverSideExperiments array is provided and should return the correct server side Variation', async () => {
     jest
       .spyOn(serverSideHook, 'default')

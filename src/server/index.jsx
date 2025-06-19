@@ -32,7 +32,10 @@ import sendCustomMetric from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
 import local from './local';
 import getAgent from './utilities/getAgent';
-import { getMvtExperiments, getMvtVaryHeaders } from './utilities/mvtHeader';
+import {
+  getServerExperiments,
+  getExperimentVaryHeaders,
+} from './utilities/mvtHeader';
 import getAssetOrigins from './utilities/getAssetOrigins';
 import extractHeaders from './utilities/extractHeaders';
 import addPlatformToRequestChainHeader from './utilities/addPlatformToRequestChainHeader';
@@ -259,7 +262,7 @@ server.get(
       if (status === OK) {
         derivedPageType = ramdaPath(['pageData', 'metadata', 'type'], data);
 
-        serverSideExperiments = getMvtExperiments(
+        serverSideExperiments = getServerExperiments(
           headers,
           service,
           derivedPageType,
@@ -352,9 +355,9 @@ server.get(
         );
 
         const allVaryHeaders = ['X-Country'];
-        const mvtVaryHeaders =
-          !isAmp && getMvtVaryHeaders(serverSideExperiments);
-        if (mvtVaryHeaders) allVaryHeaders.push(mvtVaryHeaders);
+        const experimentVaryHeaders =
+          !isAmp && getExperimentVaryHeaders(serverSideExperiments);
+        if (experimentVaryHeaders) allVaryHeaders.push(experimentVaryHeaders);
 
         res.set('vary', allVaryHeaders);
 
