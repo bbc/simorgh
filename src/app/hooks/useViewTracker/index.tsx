@@ -2,10 +2,8 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable react-hooks/rules-of-hooks */
 import { useContext, useEffect, useState, useRef, useCallback } from 'react';
-
 import { RequestContext } from '#app/contexts/RequestContext';
 import { OptimizelyContext } from '@optimizely/react-sdk';
-import useOptimizelyMvtVariation from '#app/hooks/useOptimizelyMvtVariation';
 import {
   STATIC_ATI_VIEW_TRACKING,
   VIEW_EVENT,
@@ -15,7 +13,6 @@ import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingP
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon';
 import useTrackingToggle from '../useTrackingToggle';
-import OPTIMIZELY_CONFIG from '../../lib/config/optimizely';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 const VIEWED_DURATION_MS = 1000;
@@ -35,6 +32,8 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     campaignID,
     detailedPlacement,
     sendOptimizelyEvents,
+    experimentName,
+    optimizelyVariation,
     groupTracker,
     itemTracker,
     viewThreshold,
@@ -44,9 +43,6 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
   });
 
   const { optimizely } = useContext(OptimizelyContext);
-  const optimizelyVariation = useOptimizelyMvtVariation(
-    OPTIMIZELY_CONFIG.ruleKey,
-  );
 
   const observer = useRef(null);
   const timer = useRef(null);
@@ -100,7 +96,12 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
         ].every(Boolean);
 
         if (shouldSendEvent) {
-          if (optimizely && sendOptimizelyEvents && optimizelyVariation) {
+          if (
+            optimizely &&
+            sendOptimizelyEvents &&
+            optimizelyVariation &&
+            optimizelyVariation !== 'off'
+          ) {
             const overrideAttributes = optimizely?.user.attributes;
 
             optimizely.track(
@@ -129,6 +130,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
             ...(itemTracker && { itemTracker }),
             ...(optimizelyVariation &&
               optimizelyVariation !== 'off' && {
+                experimentName,
                 experimentVariant: optimizelyVariation,
               }),
           });
@@ -165,6 +167,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     url,
     sendOptimizelyEvents,
     optimizely,
+    experimentName,
     optimizelyVariation,
     detailedPlacement,
     useReverb,
