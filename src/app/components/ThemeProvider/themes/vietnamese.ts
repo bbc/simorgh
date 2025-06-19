@@ -3,7 +3,6 @@ import latinWithDiacriticsScript from '../fontScripts/latinWithDiacritics';
 import helmetFontVariants from '../fontVariants/helmet';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/vietnamese';
-import getPWATypographyTheme from './getPWATypographyTheme';
 
 const vietnameseTheme = {
   palette: {
@@ -21,7 +20,4 @@ const vietnameseTheme = {
   brandSVG,
 };
 
-export default withThemeProvider(
-  vietnameseTheme,
-  getPWATypographyTheme(latinWithDiacriticsScript),
-);
+export default withThemeProvider(vietnameseTheme);
