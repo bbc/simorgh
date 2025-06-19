@@ -87,8 +87,7 @@ export const service: DefaultServiceConfig = {
         informationPageLink:
           'https://www.bbc.com/tigrinya/articles/cp3lwnwjp3qo',
         dataSaving: 'ብውሑድ ዳታ ጽሑፍ ጥራሕ ኣንብቡ',
-        articleDataSavingLinkText:
-          'ብውሑድ ዳታ ጽሑፍ ጥራሕ ኣንብቡ',
+        articleDataSavingLinkText: 'ብውሑድ ዳታ ጽሑፍ ጥራሕ ኣንብቡ',
       },
       mediaAssetPage: {
         mediaPlayer: 'Media player',
