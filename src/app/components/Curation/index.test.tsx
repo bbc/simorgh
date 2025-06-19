@@ -1,11 +1,13 @@
 import React from 'react';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
+import { PortraitVideoPromoProps } from '#app/models/types/portraitVideo';
 import fixture from '../../../../data/pidgin/topics/c95y35941vrt.json';
 import mundoFixture from '../../../../data/mundo/topics/c1en6xwmpkvt.json';
 import kyrgyzFixture from '../../../../data/kyrgyz/topics/cvpv9djp9qqt.json';
 import kyrgyzHomePage from '../../../../data/kyrgyz/homePage/index.json';
 import { data as kyrgyzMostRead } from '../../../../data/kyrgyz/mostRead/index.json';
 import afriqueHomePage from '../../../../data/afrique/homePage/index.json';
+import portuguseHomePage from '../../../../data/portuguese/homePage/index.json';
 import { render } from '../react-testing-library-with-providers';
 import Curation from '.';
 import {
@@ -20,7 +22,7 @@ import { RadioScheduleData } from '../../models/types/radioSchedule';
 
 jest.mock('../ThemeProvider');
 
-const { NONE, BANNER, RANKED, COLLECTION, LINKS } = VISUAL_STYLE;
+const { NONE, BANNER, RANKED, COLLECTION, LINKS, INSITU } = VISUAL_STYLE;
 const { NORMAL, HIGH, LOW, MAXIMUM, MINIMUM } = VISUAL_PROMINENCE;
 
 const messageBannerCuration = kyrgyzHomePage.data.curations.find(
@@ -53,6 +55,14 @@ const socialLinksCuration = kyrgyzFixture.data.curations.find(
     visualProminence === NORMAL &&
     summaries &&
     summaries.length > 0,
+);
+
+const portraitVideoCuration = portuguseHomePage.data.curations.find(
+  ({ visualStyle, visualProminence, portraitVideo }) =>
+    visualStyle === INSITU &&
+    visualProminence === NORMAL &&
+    portraitVideo &&
+    portraitVideo?.items.length > 0,
 );
 
 const components = {
@@ -96,12 +106,20 @@ const components = {
     visualProminence: NORMAL,
     summaries: socialLinksCuration?.summaries,
   },
+  'portrait-video-carousel': {
+    visualStyle: INSITU,
+    visualProminence: NORMAL,
+    portraitVideo: portraitVideoCuration?.portraitVideo,
+  },
 };
 
 interface TestProps {
   visualStyle: VisualStyle;
   visualProminence: VisualProminence;
   summaries?: Summary[];
+  portraitVideo?: {
+    items: PortraitVideoPromoProps[];
+  };
   mostRead?: MostReadData;
   radioSchedule?: RadioScheduleData[];
 }
@@ -120,6 +138,7 @@ describe('Curation', () => {
         visualStyle,
         visualProminence,
         summaries,
+        portraitVideo,
         mostRead,
         radioSchedule,
       }: TestProps,
@@ -132,6 +151,7 @@ describe('Curation', () => {
           summaries={summaries || []}
           mostRead={mostRead}
           radioSchedule={radioSchedule}
+          portraitVideo={portraitVideo}
         />,
         {
           toggles: {
