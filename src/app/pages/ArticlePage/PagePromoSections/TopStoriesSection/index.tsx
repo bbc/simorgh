@@ -7,7 +7,7 @@ import { EventTrackingBlock } from '#app/models/types/eventTracking';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import PromoItem from '#components/OptimoPromos/PromoItem/index.styles';
 import PromoList from '#components/OptimoPromos/PromoList';
-import { OptimizelyContext } from '@optimizely/react-sdk';
+import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import styles from './index.styles';
 import TopStoriesItem from './TopStoriesItem';
@@ -19,6 +19,7 @@ type TopStoriesListProps = {
   index: number;
   eventTrackingData: EventTrackingBlock;
   viewTracker: React.Ref<HTMLDivElement>;
+  experimentName?: string;
 };
 
 const renderTopStoriesList = ({
@@ -26,6 +27,7 @@ const renderTopStoriesList = ({
   index,
   eventTrackingData,
   viewTracker,
+  experimentName,
 }: TopStoriesListProps) => {
   const contentType = item?.contentType ?? '';
   const assetUri = item?.locators?.assetUri ?? '';
@@ -48,6 +50,7 @@ const renderTopStoriesList = ({
         ariaLabelledBy={ariaLabelledBy}
         ref={viewTracker}
         eventTrackingData={eventTrackingData}
+        experimentName={experimentName}
       />
     </PromoItem>
   );
@@ -61,18 +64,29 @@ const TopStoriesSection = ({
   sendOptimizelyEvents?: boolean;
 }) => {
   const { translations, script, service } = useContext(ServiceContext);
-  const { optimizely } = useContext(OptimizelyContext);
+
+  const experimentName = 'dummy_experiment_1';
+  const experimentVariation = useOptimizelyVariation(experimentName);
 
   const eventTrackingData = {
     block: {
       componentName: 'top-stories',
-      ...(sendOptimizelyEvents && {
-        optimizely,
-      }),
+      sendOptimizelyEvents,
+      experimentVariation,
+      experimentName,
     },
   };
   const eventTrackingDataSend = eventTrackingData?.block;
-  const viewTracker = useViewTracker(eventTrackingDataSend);
+  // To do - fix type
+  const viewTracker = useViewTracker(eventTrackingDataSend as any);
+
+  let experimentText;
+
+  if (experimentVariation != null) {
+    experimentText =
+      (experimentVariation as unknown as string) ??
+      'No Experiment Variation Found';
+  }
 
   const {
     palette: { GREY_2 },
@@ -109,7 +123,7 @@ const TopStoriesSection = ({
         script={script}
         service={service}
       >
-        {title}
+        {experimentText}, {title}
       </SectionLabel>
 
       {hasSingleContent ? (
@@ -118,6 +132,7 @@ const TopStoriesSection = ({
           ariaLabelledBy={ariaLabelledBy}
           ref={viewTracker}
           eventTrackingData={eventTrackingData}
+          experimentName={experimentName}
         />
       ) : (
         <PromoList css={styles.promoList}>
@@ -127,6 +142,7 @@ const TopStoriesSection = ({
               index,
               eventTrackingData,
               viewTracker,
+              experimentName,
             }),
           )}
         </PromoList>

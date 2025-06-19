@@ -48,6 +48,16 @@ export const MostReadLink = ({
 }: PropsWithChildren<MostReadLinkProps>) => {
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
+  const experimentVariation = eventTrackingData?.experimentVariation;
+
+  let experimentText;
+
+  if (experimentVariation != null) {
+    experimentText =
+      (experimentVariation as unknown as string) ??
+      'No Experiment Variation Found';
+  }
+
   return (
     <div css={getItemCss({ dir, size })} dir={dir}>
       <a
@@ -55,7 +65,7 @@ export const MostReadLink = ({
         href={href}
         {...clickTrackerHandler}
       >
-        {title}
+        {experimentText}, {title}
       </a>
       {children && <div css={styles.timestamp}>{children}</div>}
     </div>

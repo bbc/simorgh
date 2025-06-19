@@ -3,7 +3,8 @@ import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import { OptimizelyContext, ReactSDKClient } from '@optimizely/react-sdk';
+import { ReactSDKClient } from '@optimizely/react-sdk';
+import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Canonical from './Canonical';
 import Amp from './Amp';
@@ -87,6 +88,7 @@ const CanonicalMostRead = ({
   eventTrackingData: {
     optimizely?: ReactSDKClient | null | undefined;
     componentName: string;
+    experimentVariation?: string | undefined;
   };
 }) =>
   data ? (
@@ -111,14 +113,16 @@ const MostRead = ({
   mobileDivider = false,
   headingBackgroundColour = WHITE,
   className = '',
-  sendOptimizelyEvents = false,
+  sendOptimizelyEvents = true,
 }: MostReadProps) => {
   const { isAmp, pageType, variant } = useContext(RequestContext);
-  const { optimizely } = useContext(OptimizelyContext);
   const {
     service,
     mostRead: { hasMostRead },
   } = useContext(ServiceContext);
+
+  const experimentName = 'dummy_experiment';
+  const experimentVariation = useOptimizelyVariation(experimentName);
 
   const { enabled } = useToggle('mostRead');
 
@@ -141,7 +145,9 @@ const MostRead = ({
   const eventTrackingData = {
     ...blockLevelEventTrackingData,
     ...(sendOptimizelyEvents && {
-      optimizely,
+      sendOptimizelyEvents,
+      experimentName,
+      experimentVariation,
     }),
   };
 
@@ -162,7 +168,8 @@ const MostRead = ({
       headingBackgroundColour={headingBackgroundColour}
       columnLayout={columnLayout}
       size={size}
-      eventTrackingData={eventTrackingData}
+      // to do - fix type. Too tired right now
+      eventTrackingData={eventTrackingData as any}
     />
   );
 };

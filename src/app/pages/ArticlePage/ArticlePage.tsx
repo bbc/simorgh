@@ -373,7 +373,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           />
         </div>
         {!isApp && !isPGL && (
-          <SecondaryColumn pageData={pageData} sendOptimizelyEvents={false} />
+          <SecondaryColumn pageData={pageData} sendOptimizelyEvents />
         )}
       </div>
       {!isApp && !isPGL && (
@@ -384,7 +384,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           size="default"
           headingBackgroundColour={GREY_2}
           mobileDivider={showTopics}
-          sendOptimizelyEvents={false}
+          sendOptimizelyEvents
         />
       )}
     </div>
