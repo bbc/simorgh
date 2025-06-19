@@ -15,4 +15,26 @@ describe('PortraitVideoCarousel', () => {
 
     expect(portraitVideoItems.length).toBe(fixture.items.length);
   });
+
+  it('Should render the carousel heading with the correct title', async () => {
+    await act(async () => {
+      render(<Component {...fixture} />);
+    });
+
+    expect(screen.getByRole('heading', { level: 2 })).toHaveTextContent(
+      fixture.title,
+    );
+  });
+
+  it('Should render the PortraitCarouselNavigation component', async () => {
+    await act(async () => {
+      render(<Component {...fixture} />);
+    });
+
+    const leftButton = screen.getByTestId('pv-scroll-left');
+    const rightButton = screen.getByTestId('pv-scroll-right');
+
+    expect(leftButton).toBeInTheDocument();
+    expect(rightButton).toBeInTheDocument();
+  });
 });
