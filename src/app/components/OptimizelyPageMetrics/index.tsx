@@ -13,10 +13,10 @@ const OptimizelyPageMetrics = ({
 }) => {
   const { optimizely } = useContext(OptimizelyContext);
   const { isAmp } = useContext(RequestContext);
-  const [haveRunDecideAll, setHaveRunDecideAll] = useState(false);
+  const [isInExperiment, setisInExperiment] = useState(false);
 
   const optimizelyExperimentsEnabled =
-    experiments && experiments.length > 0 && !isAmp && !haveRunDecideAll;
+    experiments && experiments.length > 0 && !isAmp && !isInExperiment;
 
   useEffect(() => {
     if (optimizelyExperimentsEnabled) {
@@ -27,7 +27,7 @@ const OptimizelyPageMetrics = ({
         );
 
         if (isUserInAnyExperiments) {
-          setHaveRunDecideAll(true);
+          setisInExperiment(true);
         }
       });
     }
@@ -39,7 +39,7 @@ const OptimizelyPageMetrics = ({
     trackPageView,
   ]);
 
-  if (!haveRunDecideAll) {
+  if (!isInExperiment) {
     return null;
   }
   return (

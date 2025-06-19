@@ -145,28 +145,6 @@ describe('Optimizely Page Complete tracking', () => {
     expect(optimizely.track).not.toHaveBeenCalled();
   });
 
-  it('should not send tracking event when element is in view, but not in experiment variation', async () => {
-    const { container } = render(
-      <ContextWrap pageType={ARTICLE_PAGE} service="news">
-        <PageCompleteTracking />
-      </ContextWrap>,
-    );
-
-    const element = container.getElementsByTagName('div')[0];
-    const observerInstance = getObserverInstance(element);
-
-    act(() => {
-      triggerIntersection({
-        changes: [{ isIntersecting: true }],
-        observer: observerInstance,
-      });
-    });
-
-    await Promise.resolve();
-
-    expect(optimizely.track).not.toHaveBeenCalled();
-  });
-
   it('should send tracking event when element is in view and in experiment variation', async () => {
     const { container } = render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">

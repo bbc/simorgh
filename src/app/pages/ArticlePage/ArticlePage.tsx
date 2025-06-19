@@ -157,7 +157,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   } = useTheme();
 
   const experimentVariant = useOptimizelyMvtVariation(
-    // assuming this will the same as rulekey
     enabledExperimentList[0]?.name,
   );
 
@@ -342,11 +341,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                 liteCTAShows={liteCTAShows}
               />
             )}
-            {isInExperiment && <OptimizelyPageMetrics trackPageComplete />}
+            <OptimizelyPageMetrics trackPageComplete />
           </main>
-          {isInExperiment && (
-            <OptimizelyPageMetrics trackPageView trackPageDepth />
-          )}
+          <OptimizelyPageMetrics trackPageView trackPageDepth />
           {showTopics && (
             <RelatedTopics
               css={[
