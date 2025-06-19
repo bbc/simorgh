@@ -1,6 +1,5 @@
 import { useEffect, useState, useContext } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
-import { RequestContext } from '#contexts/RequestContext';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 
@@ -13,7 +12,6 @@ const getScrollDepth = () =>
   );
 
 const useOptimizelyScrollDepth = () => {
-  const { isAmp } = useContext(RequestContext);
   const { optimizely } = useContext(OptimizelyContext);
   const [scrollDepth, setScrollDepth] = useState(0);
   const [scrollTwentyFive, setScrollTwentyFive] = useState(false);
@@ -22,32 +20,29 @@ const useOptimizelyScrollDepth = () => {
   const [scrollHundred, setScrollHundred] = useState(false);
 
   const experimentVariation = useOptimizelyVariation(OPTIMIZELY_CONFIG.flagKey);
-  const hasVariationKey = experimentVariation !== null;
-
-  const sendScrollEvents = hasVariationKey && !isAmp;
 
   useEffect(() => {
-    if (!sendScrollEvents) {
+    if (!experimentVariation) {
       return () => undefined;
     }
 
     if (scrollDepth >= 25 && !scrollTwentyFive) {
-      optimizely.track('scroll25');
+      optimizely?.track('scroll25');
       setScrollTwentyFive(true);
     }
 
     if (scrollDepth >= 50 && !scrollFifty) {
-      optimizely.track('scroll50');
+      optimizely?.track('scroll50');
       setScrollFifty(true);
     }
 
     if (scrollDepth >= 75 && !scrollSeventyFive) {
-      optimizely.track('scroll75');
+      optimizely?.track('scroll75');
       setScrollSeventyFive(true);
     }
 
     if (scrollDepth >= 100 && !scrollHundred) {
-      optimizely.track('scroll100');
+      optimizely?.track('scroll100');
       setScrollHundred(true);
     }
 
@@ -55,12 +50,8 @@ const useOptimizelyScrollDepth = () => {
       passive: true,
     });
     return () =>
-      document.removeEventListener(
-        'scroll',
-        () => setScrollDepth(getScrollDepth),
-        {
-          passive: true,
-        },
+      document.removeEventListener('scroll', () =>
+        setScrollDepth(getScrollDepth),
       );
   }, [
     optimizely,
@@ -69,7 +60,7 @@ const useOptimizelyScrollDepth = () => {
     scrollHundred,
     scrollSeventyFive,
     scrollTwentyFive,
-    sendScrollEvents,
+    experimentVariation,
   ]);
 
   return {
