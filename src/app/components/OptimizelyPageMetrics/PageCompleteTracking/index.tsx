@@ -22,7 +22,7 @@ const PageCompleteTracking = () => {
     }
     // @ts-expect-error current element won't be null
     observer.current = new IntersectionObserver(([entry]) =>
-      setIsVisible(entry.isIntersecting),
+     setIsVisible(entry.isIntersecting),
     );
     // @ts-expect-error current element won't be null
     observer.current.observe(ref.current);
