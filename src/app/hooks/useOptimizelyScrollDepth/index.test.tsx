@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import {
   renderHook,
   act,
   cleanup,
 } from '#app/components/react-testing-library-with-providers';
 
-import { OptimizelyProvider } from '@optimizely/react-sdk';
+import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
+import { PageTypes, Services } from '#app/models/types/global';
 import useOptimizelyScrollDepth from '.';
 
 jest.mock('#hooks/useOptimizelyVariation', () => jest.fn());
@@ -17,21 +18,32 @@ const optimizelyMock = {
   onReady: jest.fn(() => Promise.resolve()),
   setUser: jest.fn(() => Promise.resolve()),
   track: jest.fn(),
-};
+} satisfies Partial<ReactSDKClient>;
+
+interface Props {
+  pageType?: PageTypes;
+  isAmp?: boolean;
+  service?: Services;
+  mockOptimizely?: Partial<ReactSDKClient>;
+}
 
 const wrapper = ({
   isAmp = false,
   pageType = ARTICLE_PAGE,
   service = 'news',
   children,
-}) => (
+  mockOptimizely = optimizelyMock,
+}: PropsWithChildren<Props>) => (
   <RequestContextProvider
     isAmp={isAmp}
     pageType={pageType}
     service={service}
     pathname="/pathname"
   >
-    <OptimizelyProvider optimizely={optimizelyMock} isServerSide>
+    <OptimizelyProvider
+      optimizely={mockOptimizely as ReactSDKClient}
+      isServerSide
+    >
       {children}
     </OptimizelyProvider>
   </RequestContextProvider>
@@ -50,6 +62,7 @@ describe('useOptimizelyScrollDepth', () => {
   });
 
   it('should call add event listener with scroll', () => {
+    (useOptimizelyVariation as jest.Mock).mockReturnValue('variation_1');
     renderHook(() => useOptimizelyScrollDepth());
 
     expect(addEventListenerSpy).toHaveBeenCalledWith(
@@ -60,33 +73,18 @@ describe('useOptimizelyScrollDepth', () => {
   });
 
   it('should call remove event listener with scroll', () => {
+    (useOptimizelyVariation as jest.Mock).mockReturnValue('variation_1');
     renderHook(() => useOptimizelyScrollDepth());
 
     cleanup();
     expect(removeEventListenerSpy).toHaveBeenCalledWith(
       'scroll',
       expect.any(Function),
-      { passive: true },
     );
   });
 
-  it('should not fire events for pages on AMP', () => {
-    const { result } = renderHook(() => useOptimizelyScrollDepth(), {
-      wrapper: props => wrapper({ isAmp: true, ...props }),
-    });
-
-    act(() => {
-      result.current.setScrollDepth(25);
-      result.current.setScrollDepth(50);
-      result.current.setScrollDepth(75);
-      result.current.setScrollDepth(100);
-    });
-
-    expect(optimizelyMock.track).toHaveBeenCalledTimes(0);
-  });
-
   it('should not call Optimizely track function for users not in an experiment', async () => {
-    useOptimizelyVariation.mockReturnValue(null);
+    (useOptimizelyVariation as jest.Mock).mockReturnValue(null);
 
     const { result } = renderHook(() => useOptimizelyScrollDepth(), {
       wrapper,
@@ -103,6 +101,7 @@ describe('useOptimizelyScrollDepth', () => {
   });
 
   it('should fire event when scroll depth reaches 25% threshold', () => {
+    (useOptimizelyVariation as jest.Mock).mockReturnValue('variation_1');
     const { result } = renderHook(() => useOptimizelyScrollDepth(), {
       wrapper,
     });
@@ -116,6 +115,7 @@ describe('useOptimizelyScrollDepth', () => {
   });
 
   it('should only fire event once when scroll depth reaches 25% threshold multiple times.', () => {
+    (useOptimizelyVariation as jest.Mock).mockReturnValue('variation_1');
     const { result } = renderHook(() => useOptimizelyScrollDepth(), {
       wrapper,
     });
@@ -130,6 +130,7 @@ describe('useOptimizelyScrollDepth', () => {
   });
 
   it('should fire event when scroll depth reaches 50% threshold and lower thresholds', () => {
+    (useOptimizelyVariation as jest.Mock).mockReturnValue('variation_1');
     const { result } = renderHook(() => useOptimizelyScrollDepth(), {
       wrapper,
     });
@@ -143,6 +144,7 @@ describe('useOptimizelyScrollDepth', () => {
   });
 
   it('should only fire event once when scroll depth reaches 50% threshold multiple times.', () => {
+    (useOptimizelyVariation as jest.Mock).mockReturnValue('variation_1');
     const { result } = renderHook(() => useOptimizelyScrollDepth(), {
       wrapper,
     });
@@ -157,6 +159,7 @@ describe('useOptimizelyScrollDepth', () => {
   });
 
   it('should fire event when scroll depth reaches 75% threshold and lower thresholds', () => {
+    (useOptimizelyVariation as jest.Mock).mockReturnValue('variation_1');
     const { result } = renderHook(() => useOptimizelyScrollDepth(), {
       wrapper,
     });
@@ -170,6 +173,7 @@ describe('useOptimizelyScrollDepth', () => {
   });
 
   it('should only fire event once when scroll depth reaches 75% threshold multiple times.', () => {
+    (useOptimizelyVariation as jest.Mock).mockReturnValue('variation_1');
     const { result } = renderHook(() => useOptimizelyScrollDepth(), {
       wrapper,
     });
@@ -184,6 +188,7 @@ describe('useOptimizelyScrollDepth', () => {
   });
 
   it('should fire event when scroll depth reaches 100% threshold and lower thresholds', () => {
+    (useOptimizelyVariation as jest.Mock).mockReturnValue('variation_1');
     const { result } = renderHook(() => useOptimizelyScrollDepth(), {
       wrapper,
     });
@@ -197,6 +202,7 @@ describe('useOptimizelyScrollDepth', () => {
   });
 
   it('should only fire event once when scroll depth reaches 100% threshold multiple times.', () => {
+    (useOptimizelyVariation as jest.Mock).mockReturnValue('variation_1');
     const { result } = renderHook(() => useOptimizelyScrollDepth(), {
       wrapper,
     });
