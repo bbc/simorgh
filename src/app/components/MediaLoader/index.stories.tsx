@@ -1,5 +1,4 @@
 import { RequestContextProvider } from '#app/contexts/RequestContext';
-import { PlaceholderMode } from '#app/hooks/useDeterminePlaceholderMode';
 import { PageTypes, Services } from '#app/models/types/global';
 import React from 'react';
 import MediaLoaderComponent from '.';
@@ -8,6 +7,7 @@ import {
   aresMediaPortraitBlocks,
   videoClipMediaBlocks,
   legacyMediaBlock,
+  aresMediaBlockWithTranscript,
 } from './fixture';
 import readme from './README.md';
 import { MediaBlock } from './types';
@@ -16,10 +16,9 @@ type Props = {
   pageType: PageTypes;
   service: Services;
   blocks: MediaBlock[];
-  placeholderMode?: PlaceholderMode;
 };
 
-const Component = ({ service, pageType, blocks, placeholderMode }: Props) => (
+const Component = ({ service, pageType, blocks }: Props) => (
   <RequestContextProvider
     id="testID"
     isAmp={false}
@@ -28,7 +27,7 @@ const Component = ({ service, pageType, blocks, placeholderMode }: Props) => (
     pathname=""
     service={service}
   >
-    <MediaLoaderComponent blocks={blocks} placeholderMode={placeholderMode} />
+    <MediaLoaderComponent blocks={blocks} />
   </RequestContextProvider>
 );
 
@@ -36,12 +35,8 @@ export default {
   title: 'Components/MediaLoader',
   Component,
   argTypes: {
-    placeholderMode: {
-      options: [
-        PlaceholderMode.SHOW_SUSTAINABILITY_MSG,
-        PlaceholderMode.DEFAULT,
-        PlaceholderMode.NO_JS,
-      ],
+    hasTranscript: {
+      options: [true, false],
       control: { type: 'radio' },
     },
   },
@@ -50,12 +45,11 @@ export default {
   },
 };
 
-export const MediaLoaderWithTranscript = ({ placeholderMode }: Props) => (
+export const MediaLoaderWithTranscript = () => (
   <Component
     service="pidgin"
     pageType="article"
-    blocks={aresMediaBlocks as MediaBlock[]}
-    placeholderMode={placeholderMode}
+    blocks={aresMediaBlockWithTranscript as MediaBlock[]}
   />
 );
 
