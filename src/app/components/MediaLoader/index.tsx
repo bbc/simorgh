@@ -18,8 +18,6 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import { jsx } from '@emotion/react';
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { PageTypes } from '#app/models/types/global';
-import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
 import {
   BumpType,
   EventMapping,
@@ -27,7 +25,6 @@ import {
   MediaPlayerEvents,
   PlayerConfig,
 } from './types';
-import Caption from '../Caption';
 import nodeLogger from '../../lib/logger.node';
 import { getBootstrapSrc } from '../Ad/Canonical';
 import Caption from '../Caption';
@@ -36,7 +33,6 @@ import AmpMediaLoader from './Amp';
 import styles from './index.styles';
 import Metadata from './Metadata';
 import Placeholder from './Placeholder';
-import { BumpType, MediaBlock, PlayerConfig } from './types';
 import buildConfig from './utils/buildSettings';
 import getCaptionBlock from './utils/getCaptionBlock';
 import getProducerFromServiceName from './utils/getProducerFromServiceName';
@@ -363,7 +359,6 @@ const MediaLoader = ({
             css={[
               isAudio && styles.captionAudio,
               !isAudio && [isPortrait && styles.captionPortrait],
-              isPortraitVideo && styles.captionPortrait,
               styles.withTranscriptCaption,
             ]}
           />

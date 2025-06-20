@@ -360,6 +360,10 @@ exports[`OnDemand Radio Page  should match snapshot 1`] = `
   margin: 0 0 1.5rem 0;
 }
 
+.emotion-23:has(details) {
+  background-color: #FFFFFF;
+}
+
 .emotion-24 {
   height: 165px;
 }
@@ -803,20 +807,6 @@ exports[`OnDemand Radio Page  should match snapshot 1`] = `
   height: 0.725rem;
 }
 
-.emotion-31:has(details) {
-  background-color: #FFFFFF;
-}
-
-.emotion-32 {
-  background-color: #FFFFFF;
-  height: 165px;
-}
-
-.emotion-33 {
-  background-color: #F2F2F2;
-  padding: 0 1rem;
-  content-visibility: auto;
-  contain-intrinsic-size: 59.375rem;
 .emotion-54 {
   display: -webkit-box;
   display: -webkit-flex;

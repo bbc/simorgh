@@ -248,6 +248,8 @@ export const RightArrow = ({ className }: { className?: string }) => (
     <g>
       <path d="M12.6,26.7L23.2,16L12.6,5.3H8.8v21.4H12.6z" />
     </g>
+  </svg>
+);
 
 export const TriangleDown = ({ className }: { className?: string }) => (
   <svg

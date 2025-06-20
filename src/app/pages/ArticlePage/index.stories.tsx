@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import ThemeProvider from '#app/components/ThemeProvider';
 import latin from '#app/components/ThemeProvider/fontScripts/latin';
+import React, { useMemo } from 'react';
 import { RequestContextProvider } from '#app/contexts/RequestContext';
 import {
   ServiceContext,
@@ -25,13 +26,6 @@ import articleData from '#data/news/articles/c0g992jmmkko.json';
 import articleNewsWithPodcastPromo from '#data/news/articles/crkxdvxzwxk2.json';
 import articleDataWithPortraitVideoRTL from '#data/persian/articles/c149pnldynxo.json';
 import articleDataWithPodcastPromo from '#data/russian/articles/c61q94n3rm3o.json';
-import React, { useMemo } from 'react';
-import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
-import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
-import { service as newsConfig } from '#app/lib/config/services/news';
-import latin from '#app/components/ThemeProvider/fontScripts/latin';
-import { Services } from '#app/models/types/global';
-import { StoryArgs, StoryProps } from '#app/models/types/storybook';
 import articleDataMultipleContributors from '#data/news/articles/cgrj2g29kzxo.json';
 import ArticlePageComponent from './ArticlePage';
 
