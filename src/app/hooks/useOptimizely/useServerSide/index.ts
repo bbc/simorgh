@@ -19,11 +19,9 @@ export default (experimentName: string) => {
   );
 
   if (!experiment) return null;
+  const { enabled, variation } = experiment;
 
-  const isEnabled = experiment.enabled;
-  const variation = isEnabled && experiment.variation;
-
-  if (!variation || variation === 'false') return null;
+  if (!enabled || !variation || variation === 'false') return null;
 
   if (variation) activateExperiment(optimizely, experimentName, variation);
 
