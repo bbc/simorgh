@@ -70,7 +70,7 @@ import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
 import styles from './ArticlePage.styles';
 import { ComponentToRenderProps, TimeStampProps } from './types';
-import ContinueReadingButton, {Props as ContineReadingProps} from './ContinueReadingButton';
+import ContinueReadingButton, { Props as ContineReadingProps } from './ContinueReadingButton';
 import ArticleHeadline from './ArticleHeadline';
 import isPortraitVideo from '../utils/isPortraitVideo';
 
@@ -90,18 +90,18 @@ const getTimestampComponent =
     firstPublished: string,
     lastPublished: string,
   ) =>
-  (props: ComponentToRenderProps & TimeStampProps) =>
-    hasByline ? (
-      <Byline blocks={bylineContribBlocks}>
-        <Timestamp
-          firstPublished={new Date(firstPublished).getTime()}
-          lastPublished={new Date(lastPublished).getTime()}
-          popOut={false}
-        />
-      </Byline>
-    ) : (
-      <Timestamp {...props} popOut={false} />
-    );
+    (props: ComponentToRenderProps & TimeStampProps) =>
+      hasByline ? (
+        <Byline blocks={bylineContribBlocks}>
+          <Timestamp
+            firstPublished={new Date(firstPublished).getTime()}
+            lastPublished={new Date(lastPublished).getTime()}
+            popOut={false}
+          />
+        </Byline>
+      ) : (
+        <Timestamp {...props} popOut={false} />
+      );
 
 const getMpuComponent =
   (allowAdvertising: boolean) => (props: ComponentToRenderProps) =>
@@ -156,7 +156,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
-  const experimentVariant = useOptimizelyVariation({flagKey:  OPTIMIZELY_CONFIG.ruleKey});
+  const experimentVariant = useOptimizelyVariation({ flagKey: OPTIMIZELY_CONFIG.ruleKey });
 
   const isInExperiment = experimentVariant && experimentVariant !== 'off';
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
@@ -265,12 +265,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const showContinueReadingButton = Boolean(
     !isAmp &&
-      !isLite &&
-      !isApp &&
-      experimentVariant != null &&
-      ['read-more-a', 'read-more-b', 'read-more-a-and-top-stories'].includes(
-        experimentVariant,
-      ),
+    !isLite &&
+    !isApp &&
+    experimentVariant != null &&
+    ['read-more-a', 'read-more-b', 'read-more-a-and-top-stories'].includes(
+      experimentVariant,
+    ),
   );
   return (
     <div css={styles.pageWrapper}>

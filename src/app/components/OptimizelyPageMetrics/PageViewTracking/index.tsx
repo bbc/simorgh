@@ -7,7 +7,7 @@ const PageViewTracking = () => {
   const { optimizely } = useContext(OptimizelyContext);
   const [pageViewSent, setPageViewSent] = useState(false);
 
-  const experimentVariation = useOptimizelyVariation({flagKey: OPTIMIZELY_CONFIG.flagKey});
+  const experimentVariation = useOptimizelyVariation({ flagKey: OPTIMIZELY_CONFIG.flagKey });
 
   const sendPageViewEvent = experimentVariation && !pageViewSent;
 

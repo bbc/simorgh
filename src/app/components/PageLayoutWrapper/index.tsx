@@ -61,7 +61,7 @@ const PageLayoutWrapper = ({
   const reportingPageType = pageType?.replace(/ /g, '');
   let wordCount: wordCountType = 0;
   let propsForOJExperiment = {};
-  const experimentVariant = useOptimizelyVariation({flagKey: OPTIMIZELY_CONFIG.ruleKey});
+  const experimentVariant = useOptimizelyVariation({ flagKey: OPTIMIZELY_CONFIG.ruleKey });
 
   if (pageType === 'article') {
     wordCount = pageData?.content?.model?.blocks
@@ -99,9 +99,9 @@ const PageLayoutWrapper = ({
   const serviceFonts = fontFacesLazy(service);
   const fontJs =
     isLite ||
-    isAmp ||
-    !serviceFonts.length ||
-    process.env.JEST_WORKER_ID !== undefined
+      isAmp ||
+      !serviceFonts.length ||
+      process.env.JEST_WORKER_ID !== undefined
       ? ''
       : `
   				if ("FileReader" in window && "Promise" in window && "fetch" in window) {
@@ -187,8 +187,8 @@ const PageLayoutWrapper = ({
                 }
                 let wrappedContentsShortcut = wrappedContents[wrappedYear];
                 let wrappedTopics = ${JSON.stringify(
-                  pageData?.metadata?.topics,
-                )};
+        pageData?.metadata?.topics,
+      )};
                 if (wrappedTopics) {
                     wrappedTopics.forEach(({ topicName, topicId }) => {
                         if (!topicsContents.${service}) topicsContents.${service} = {};

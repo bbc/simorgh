@@ -99,8 +99,8 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
               ...(itemTracker && { itemTracker }),
               ...(optimizelyVariation &&
                 optimizelyVariation !== 'off' && {
-                  experimentVariant: optimizelyVariation,
-                }),
+                experimentVariant: optimizelyVariation,
+              }),
             });
           } finally {
             if (nextPageUrl && !preventNavigation) {

@@ -10,7 +10,7 @@ const PageCompleteTracking = () => {
   const [pageCompleteSent, setPageCompleteSent] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
-  const experimentVariation = useOptimizelyVariation({flagKey: OPTIMIZELY_CONFIG.flagKey});
+  const experimentVariation = useOptimizelyVariation({ flagKey: OPTIMIZELY_CONFIG.flagKey });
 
   const sendPageCompleteEvent =
     experimentVariation && !pageCompleteSent && isVisible;
@@ -22,7 +22,7 @@ const PageCompleteTracking = () => {
     }
     // @ts-expect-error current element won't be null
     observer.current = new IntersectionObserver(([entry]) =>
-     setIsVisible(entry.isIntersecting),
+      setIsVisible(entry.isIntersecting),
     );
     // @ts-expect-error current element won't be null
     observer.current.observe(ref.current);
