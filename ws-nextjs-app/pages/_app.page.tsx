@@ -26,7 +26,7 @@ interface Props extends AppProps {
     isLite?: boolean;
     isNextJs: boolean;
     isAvEmbeds?: boolean;
-    mvtExperiments: MvtExperiment[] | null;
+    serverSideExperiments: MvtExperiment[] | null;
     pageData: {
       metadata: {
         type: PageTypes;
@@ -55,7 +55,7 @@ export default function App({ Component, pageProps }: Props) {
     isLite = false,
     isNextJs = true,
     isAvEmbeds = false,
-    mvtExperiments = null,
+    serverSideExperiments = null,
     pageData,
     pageLang = '',
     pageType,
@@ -98,7 +98,7 @@ export default function App({ Component, pageProps }: Props) {
           variant={variant}
           timeOnServer={timeOnServer}
           showAdsBasedOnLocation={showAdsBasedOnLocation}
-          mvtExperiments={mvtExperiments}
+          serverSideExperiments={serverSideExperiments}
           isNextJs={isNextJs}
           isUK={isUK ?? false}
         >
