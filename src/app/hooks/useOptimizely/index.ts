@@ -9,19 +9,15 @@ type Props = {
   overrideAttributes?: Record<string, string>;
 };
 
-export enum ExperimentState {
-  CLIENT_SIDE = 'client side experiment',
-  SERVER_SIDE = 'server side experiment',
-  NO_EXPERIMENT = 'no experiment',
-}
-
 export default ({ experimentName: flagKey, overrideAttributes }: Props) => {
   const { serverSideExperiments } = useContext(RequestContext);
 
   if (flagKey == null) return null;
 
   let variation = null;
-  if (serverSideExperiments && serverSideExperiments.length > 0) {
+  const isServerSide =
+    serverSideExperiments && serverSideExperiments.length > 0;
+  if (isServerSide) {
     variation = useServerSide({
       serverSideExperiments,
       flagKey,
