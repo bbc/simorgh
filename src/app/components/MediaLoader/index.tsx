@@ -2,9 +2,6 @@
 /* @jsxFrag React.Fragment */
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import useDeterminePlaceholderMode, {
-  PlaceholderMode,
-} from '#app/hooks/useDeterminePlaceholderMode';
 import useLocation from '#app/hooks/useLocation';
 import useToggle from '#app/hooks/useToggle';
 import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
@@ -206,7 +203,6 @@ type Props = {
   blocks: MediaBlock[];
   className?: string;
   embedded?: boolean;
-  placeholderMode?: PlaceholderMode;
   uniqueId?: string;
   eventMapping?: EventMapping;
 };
@@ -216,7 +212,6 @@ const MediaLoader = ({
   className,
   embedded,
   uniqueId,
-  placeholderMode,
   eventMapping,
 }: Props) => {
   const transcriptBlock = getTranscriptBlock(blocks);
@@ -224,9 +219,6 @@ const MediaLoader = ({
   const { lang, service, translations } = useContext(ServiceContext);
   const { pageIdentifier } = useContext(EventTrackingContext);
   const { enabled: adsEnabled } = useToggle('ads');
-  const determinedPlaceholderMode = useDeterminePlaceholderMode(hasTranscript);
-
-  const finalPlaceholderMode = placeholderMode ?? determinedPlaceholderMode;
 
   const {
     id,
@@ -334,7 +326,7 @@ const MediaLoader = ({
                 noJsMessage={noJsMessage}
                 mediaInfo={mediaInfo}
                 onClick={() => setShowPlaceholder(false)}
-                placeholderMode={finalPlaceholderMode}
+                hasTranscript={hasTranscript}
               />
             ) : (
               <MediaContainer
@@ -359,7 +351,7 @@ const MediaLoader = ({
             ]}
           />
         )}
-        {transcriptBlock && (
+        {hasTranscript && (
           <Transcript
             transcript={transcriptBlock}
             title={placeholderConfig?.mediaInfo?.title}

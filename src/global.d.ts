@@ -52,11 +52,6 @@ declare global {
     sendStaticBeacon: (url: string, data?: BodyInit | null) => boolean;
     processClientDeviceAndSendStaticBeacon: (url: string) => void;
   }
-
-  interface Navigator {
-    connection: { saveData: boolean };
-    getBattery: () => Promise;
-  }
 }
 
 export {};
