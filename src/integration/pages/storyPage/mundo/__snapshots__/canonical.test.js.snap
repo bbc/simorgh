@@ -11,7 +11,7 @@ exports[`Canonical Story Page Analytics ATI tracking pixel excluding src 1`] = `
 />
 `;
 
-exports[`Canonical Story Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/"`;
+exports[`Canonical Story Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
 
 exports[`Canonical Story Page Analytics ATI tracking pixel search params 1`] = `
 [
@@ -166,43 +166,50 @@ exports[`Canonical Story Page Header Navigation link should match text and url 4
 
 exports[`Canonical Story Page Header Navigation link should match text and url 5`] = `
 {
-  "text": "Hay Festival",
-  "url": "/mundo/topics/cr50y7p7qyqt",
-}
-`;
-
-exports[`Canonical Story Page Header Navigation link should match text and url 6`] = `
-{
   "text": "Economía",
   "url": "/mundo/topics/c06gq9v4xp3t",
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 7`] = `
+exports[`Canonical Story Page Header Navigation link should match text and url 6`] = `
 {
   "text": "Ciencia",
   "url": "/mundo/topics/ckdxnw959n7t",
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 8`] = `
+exports[`Canonical Story Page Header Navigation link should match text and url 7`] = `
 {
   "text": "Salud",
   "url": "/mundo/topics/cpzd498zkxgt",
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 9`] = `
+exports[`Canonical Story Page Header Navigation link should match text and url 8`] = `
 {
   "text": "Cultura",
   "url": "/mundo/topics/c2dwq9zyv4yt",
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 10`] = `
+exports[`Canonical Story Page Header Navigation link should match text and url 9`] = `
 {
   "text": "Tecnología",
   "url": "/mundo/topics/cyx5krnw38vt",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 10`] = `
+{
+  "text": "Hay Festival",
+  "url": "/mundo/topics/cr50y7p7qyqt",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 11`] = `
+{
+  "text": "Centroamérica cuenta",
+  "url": "/mundo/topics/c404v5z1k8wt",
 }
 `;
 

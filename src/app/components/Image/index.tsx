@@ -12,7 +12,7 @@ import styles from './index.styles';
 import { RequestContext } from '../../contexts/RequestContext';
 import { HOME_PAGE } from '../../routes/utils/pageTypes';
 
-type Props = {
+export type ImageProps = {
   alt: string;
   aspectRatio?: [x: number, y: number];
   attribution?: string;
@@ -20,7 +20,6 @@ type Props = {
   fallbackMediaType?: string;
   fallbackSrcSet?: string;
   height?: number;
-  isAmp?: boolean;
   lazyLoad?: boolean;
   placeholder?: boolean;
   darkPlaceholder?: boolean;
@@ -48,7 +47,6 @@ const Image = ({
   fallbackMediaType,
   fallbackSrcSet,
   height,
-  isAmp = false,
   lazyLoad = false,
   placeholder = true,
   darkPlaceholder = false,
@@ -61,8 +59,8 @@ const Image = ({
   children,
   fetchPriority,
   hasCaption,
-}: PropsWithChildren<Props>) => {
-  const { pageType, isLite } = useContext(RequestContext);
+}: PropsWithChildren<ImageProps>) => {
+  const { pageType, isLite, isAmp } = useContext(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
   if (isLite) return null;
 

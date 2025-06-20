@@ -18,6 +18,16 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import { jsx } from '@emotion/react';
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
+import { PageTypes } from '#app/models/types/global';
+import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
+import {
+  BumpType,
+  EventMapping,
+  MediaBlock,
+  MediaPlayerEvents,
+  PlayerConfig,
+} from './types';
+import Caption from '../Caption';
 import nodeLogger from '../../lib/logger.node';
 import { getBootstrapSrc } from '../Ad/Canonical';
 import Caption from '../Caption';
@@ -103,15 +113,21 @@ type MediaContainerProps = {
   showAds: boolean;
   uniqueId?: string;
   noJsMessage?: string;
+  eventMapping?: EventMapping;
 };
+
+const isAudioPlayer = (playerConfig: PlayerConfig) =>
+  playerConfig?.ui?.skin === 'audio';
 
 const MediaContainer = ({
   playerConfig,
   showAds,
   uniqueId,
   noJsMessage,
+  eventMapping,
 }: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
+  const isAudio = isAudioPlayer(playerConfig);
 
   useEffect(() => {
     try {
@@ -122,8 +138,6 @@ const MediaContainer = ({
             playerConfig,
           );
 
-          mediaPlayer.load();
-
           if (uniqueId != null) {
             const { mediaPlayers } = window;
             if (mediaPlayers == null) {
@@ -131,6 +145,16 @@ const MediaContainer = ({
             } else {
               mediaPlayers[uniqueId] = mediaPlayer;
             }
+          }
+
+          // Bind any events passed in to the player
+          if (eventMapping && Object.keys(eventMapping || {}).length > 0) {
+            Object.keys(eventMapping).forEach(bindingKey => {
+              const key = bindingKey as MediaPlayerEvents;
+              const handler = eventMapping[key];
+
+              if (handler) mediaPlayer.bind(key, handler);
+            });
           }
 
           if (showAds) {
@@ -159,22 +183,21 @@ const MediaContainer = ({
               );
             });
           }
+
+          mediaPlayer.load();
         }
       });
     } catch (error) {
       logger.error(MEDIA_PLAYER_STATUS, error);
     }
-  }, [playerConfig, showAds, uniqueId]);
+  }, [playerConfig, showAds, uniqueId, eventMapping]);
 
   return (
     <div
       ref={playerElementRef}
       data-e2e="media-player"
-      css={
-        playerConfig?.ui?.skin === 'audio'
-          ? styles.audioMediaContainer
-          : styles.standardMediaContainer
-      }
+      className="media-player"
+      css={isAudio ? styles.audioMediaContainer : styles.standardMediaContainer}
     >
       <noscript>
         <Message message={noJsMessage} />
@@ -189,6 +212,7 @@ type Props = {
   embedded?: boolean;
   placeholderMode?: PlaceholderMode;
   uniqueId?: string;
+  eventMapping?: EventMapping;
 };
 
 const MediaLoader = ({
@@ -197,6 +221,7 @@ const MediaLoader = ({
   embedded,
   uniqueId,
   placeholderMode,
+  eventMapping,
 }: Props) => {
   const transcriptBlock = getTranscriptBlock(blocks);
   const hasTranscript = !!transcriptBlock;
@@ -254,7 +279,9 @@ const MediaLoader = ({
   } = config;
 
   const captionBlock = getCaptionBlock(blocks, pageType);
-  const isPortraitVideo = orientation === 'portrait';
+  const isPortrait = orientation === 'portrait';
+  const isLandscape = orientation === 'landscape';
+  const isAudio = isAudioPlayer(playerConfig);
 
   const {
     placeholderSrc,
@@ -282,13 +309,17 @@ const MediaLoader = ({
       }
       <figure
         data-e2e="media-loader__container"
-        className={className}
+        className={`media-container${className ? ` ${className}` : ''}`}
         css={[
           styles.figure(embedded),
           styles.withTranscriptVideo,
           playerConfig?.ui?.skin === 'classic' && [
             orientation === 'portrait' && styles.portraitFigure(embedded),
             orientation === 'landscape' && styles.landscapeFigure,
+          ],
+          !isAudio && [
+            isPortrait && styles.portraitFigure(embedded),
+            isLandscape && styles.landscapeFigure,
           ],
         ]}
       >
@@ -319,16 +350,19 @@ const MediaLoader = ({
                 showAds={showAds}
                 uniqueId={uniqueId}
                 noJsMessage={noJsMessage}
+                eventMapping={eventMapping}
               />
             )}
           </>
         )}
         {captionBlock && (
           <Caption
-            className={isPortraitVideo ? 'portrait-caption' : ''}
+            className={isPortrait ? 'portrait-caption' : ''}
             block={captionBlock}
             type={mediaType}
             css={[
+              isAudio && styles.captionAudio,
+              !isAudio && [isPortrait && styles.captionPortrait],
               isPortraitVideo && styles.captionPortrait,
               styles.withTranscriptCaption,
             ]}

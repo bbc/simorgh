@@ -1,3 +1,4 @@
+import { eea, gbOrUnknown } from '#app/lib/utilities/cookieCountries';
 import {
   VIEW_EVENT,
   VIEWABILITY_CLICK_EVENT,
@@ -5,12 +6,25 @@ import {
 import {
   ATI_PAGE_VIEW,
   ATI_PAGE_VIEW_REVERB,
+  ATI_USER_ID_COOKIE,
   getATIParamsFromURL,
   interceptATIAnalyticsBeacons,
+  getExpectedAtiDestination,
 } from '../helpers';
+import environment from '../../../../support/helpers/getAppEnv';
 
-const usesReverbViewabilityModel = useReverb =>
-  useReverb && Cypress.env('APP_ENV') !== 'live';
+const usesReverbViewabilityModel = applicationType =>
+  applicationType !== 'lite';
+
+const getAppName = service => {
+  if (service === 'ws') {
+    return '[news]';
+  }
+
+  return ['archive', 'news', 'newsround', 'scotland', 'sport'].includes(service)
+    ? `[${service}]`
+    : `[news-${service}]`;
+};
 
 const assertATIPageViewEventParamsExist = ({
   params,
@@ -34,6 +48,10 @@ const assertATIPageViewEventParamsExist = ({
     expect(params).to.have.property('x5'); // url
   }
 
+  if (['responsive', 'lite'].includes(applicationType)) {
+    expect(params).to.have.property('idclient');
+  }
+
   if (contentType !== 'list-datadriven') {
     expect(params).to.have.property('x1'); // content ID
   }
@@ -46,8 +64,37 @@ const assertATIPageViewEventParamsExist = ({
   }
 };
 
+const assertLocationSpecificPianoDestinationExists = ({ service }) => {
+  cy.get(
+    'head script[src*="https://cdn.ampproject.org/v0/amp-geo-0.1.js"]',
+  ).should('exist');
+
+  cy.get('amp-geo script[type="application/json"]').should(script => {
+    const ampGeoContent = JSON.parse(script.text());
+
+    expect(ampGeoContent).to.eql({
+      AmpBind: true,
+      ISOCountryGroups: {
+        eea,
+        gbOrUnknown,
+      },
+    });
+  });
+
+  cy.get(
+    '[data-e2e="ati-amp-analytics"] script[type="application/json"]',
+  ).should(script => {
+    const ampAnalyticsContent = script.text();
+
+    expect(ampAnalyticsContent).to.contain(
+      `s=${getExpectedAtiDestination({ service, applicationEnv: environment() })}`,
+    );
+  });
+};
+
 const assertATIComponentViewEventParamsExist = ({ params, useReverb }) => {
   expect(params).to.have.property('s'); // destination
+  expect(params).to.have.property('idclient');
   expect(params).to.have.property('ati'); // view event
   expect(params).to.have.property('type');
   expect(params.type).to.equal('AT', 'params.type');
@@ -59,6 +106,7 @@ const assertATIComponentViewEventParamsExist = ({ params, useReverb }) => {
 
 const assertATIComponentClickEventParamsExist = ({ params, useReverb }) => {
   expect(params).to.have.property('s'); // destination
+  expect(params).to.have.property('idclient');
   expect(params).to.have.property('atc'); // click event
   expect(params).to.have.property('type');
   expect(params.type).to.equal('AT', 'params.type');
@@ -109,7 +157,10 @@ export const assertPageView = ({
     interceptATIAnalyticsBeacons();
     cy.visit(path, { retryOnStatusCodeFailure: true });
 
-    const atiPageViewAlias = useReverb ? ATI_PAGE_VIEW_REVERB : ATI_PAGE_VIEW;
+    const atiPageViewAlias =
+      useReverb && applicationType !== 'amp'
+        ? ATI_PAGE_VIEW_REVERB
+        : ATI_PAGE_VIEW;
 
     cy.wait(`@${atiPageViewAlias}`).then(({ request }) => {
       const params = getATIParamsFromURL(request.url);
@@ -120,13 +171,20 @@ export const assertPageView = ({
         applicationType,
       });
 
+      if (['responsive', 'lite'].includes(applicationType)) {
+        expect(params.idclient).to.equal(
+          ATI_USER_ID_COOKIE,
+          'params.idclient (atuserid cookie value)',
+        );
+      }
+
       expect(params.p).to.equal(pageIdentifier, 'params.p (page identifier)');
       expect(params.x2).to.equal(
         `[${applicationType}]`,
         'params.x2 (application type)',
       );
       expect(params.x3).to.equal(
-        `[news-${service}]`,
+        getAppName(service),
         'params.x3 (application name)',
       );
       expect(params.x7).to.equal(
@@ -134,6 +192,10 @@ export const assertPageView = ({
         'params.x7 (content type)',
       );
     });
+
+    if (applicationType === 'amp') {
+      assertLocationSpecificPianoDestinationExists({ service });
+    }
   });
 };
 
@@ -143,12 +205,22 @@ const assertClickPerViewModelViewEvent = ({
   contentType,
   useReverb,
   params,
+  applicationType,
 }) => {
   assertATIComponentViewEventParamsExist({ params, useReverb });
+
+  if (['responsive', 'lite'].includes(applicationType)) {
+    expect(params.idclient).to.equal(
+      ATI_USER_ID_COOKIE,
+      'params.idclient (atuserid cookie value)',
+    );
+  }
 
   if (!useReverb) {
     expect(params.p).to.equal(pageIdentifier, 'params.p (page identifier)');
   }
+
+  expect(params.app_type).to.equal(applicationType, 'params.app_type');
 
   expect(params.ati).to.match(
     getViewClickDetailsRegex({
@@ -165,12 +237,20 @@ const assertViewabilityModelViewEvent = ({
   pageIdentifier,
   contentType,
   params,
+  applicationType,
 }) => {
   const eventContext = JSON.parse(params.context);
 
   assertReverbViewabilityComponentEventParamsExist({
     params,
   });
+
+  if (['responsive', 'lite'].includes(applicationType)) {
+    expect(params.idclient).to.equal(
+      ATI_USER_ID_COOKIE,
+      'params.idclient (atuserid cookie value)',
+    );
+  }
 
   expect(params.events).to.match(
     getViewabilityEventDetailsRegex({
@@ -189,8 +269,9 @@ export const assertATIComponentViewEvent = ({
   pageIdentifier,
   contentType,
   useReverb,
+  applicationType,
 }) => {
-  const useViewabilty = usesReverbViewabilityModel(useReverb);
+  const useViewabilty = usesReverbViewabilityModel(applicationType);
   const requestAlias = useViewabilty
     ? `@${component}-viewability-view`
     : `@${component}-ati-view`;
@@ -214,6 +295,7 @@ export const assertATIComponentViewEvent = ({
           contentType,
           useReverb,
           params,
+          applicationType,
         });
       }
     });
@@ -233,9 +315,14 @@ const assertClickPerViewModelClickEvent = ({
     applicationType,
   });
 
-  if (applicationType === 'lite') {
-    expect(params.app_type).to.equal(applicationType, 'params.app_type');
+  if (['responsive', 'lite'].includes(applicationType)) {
+    expect(params.idclient).to.equal(
+      ATI_USER_ID_COOKIE,
+      'params.idclient (atuserid cookie value)',
+    );
   }
+
+  expect(params.app_type).to.equal(applicationType, 'params.app_type');
 
   if (useReverb) {
     expect(params.patc).to.equal(
@@ -261,12 +348,20 @@ const assertViewabilityModelClickEvent = ({
   contentType,
   pageIdentifier,
   params,
+  applicationType,
 }) => {
   const eventContext = JSON.parse(params.context);
 
   assertReverbViewabilityComponentEventParamsExist({
     params,
   });
+
+  if (['responsive', 'lite'].includes(applicationType)) {
+    expect(params.idclient).to.equal(
+      ATI_USER_ID_COOKIE,
+      'params.idclient (atuserid cookie value)',
+    );
+  }
 
   expect(params.events).to.match(
     getViewabilityEventDetailsRegex({
@@ -287,7 +382,7 @@ export const assertATIComponentClickEvent = ({
   applicationType,
   useReverb,
 }) => {
-  const useViewabilty = usesReverbViewabilityModel(useReverb);
+  const useViewabilty = usesReverbViewabilityModel(applicationType);
   const requestAlias = useViewabilty
     ? `@${component}-viewability-click`
     : `@${component}-ati-click`;

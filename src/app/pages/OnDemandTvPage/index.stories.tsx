@@ -29,7 +29,7 @@ const matchFixtures = (service: Services) => ({
   },
 });
 
-const Component = ({ service }: StoryProps) => {
+const Component = ({ service, isLite }: StoryProps) => {
   return (
     <BrowserRouter>
       <OnDemandTvPage
@@ -41,6 +41,7 @@ const Component = ({ service }: StoryProps) => {
         loading={false}
         error=""
         pageType={TV_PAGE}
+        isLite={isLite}
       />
     </BrowserRouter>
   );
@@ -68,6 +69,14 @@ export const Example = {
 export const Test = {
   render: (_: StoryArgs, { variant }: StoryProps) => (
     <Component service="pashto" variant={variant} />
+  ),
+  tags: ['!dev'],
+};
+
+// This story is for chromatic testing purposes only
+export const TestLite = {
+  render: (_: StoryArgs, { variant }: StoryProps) => (
+    <Component service="pashto" variant={variant} isLite />
   ),
   tags: ['!dev'],
 };

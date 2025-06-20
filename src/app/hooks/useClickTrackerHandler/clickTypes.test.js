@@ -22,6 +22,22 @@ describe('Click Types', () => {
     expect(isValidClick(middleClickIE)).toBe(true);
   });
 
+  it('should allow clicks with the Enter key', () => {
+    const enterKeyEvent = new KeyboardEvent('keydown', { key: 'Enter' });
+    const returnKeyEvent = new KeyboardEvent('keydown', { key: 'Return' });
+
+    expect(isValidClick(enterKeyEvent)).toBe(true);
+    expect(isValidClick(returnKeyEvent)).toBe(true);
+  });
+
+  it('should allow touch events', () => {
+    const touchStartEvent = new TouchEvent('touchstart');
+    const touchEndEvent = new TouchEvent('touchend');
+
+    expect(isValidClick(touchStartEvent)).toBe(true);
+    expect(isValidClick(touchEndEvent)).toBe(true);
+  });
+
   it.each`
     platform     | functionKey | shiftKey | altKey   | expected
     ${'Windows'} | ${false}    | ${false} | ${true}  | ${false}

@@ -6,7 +6,7 @@ import MediaLoaderComponent from '.';
 import {
   aresMediaBlocks,
   aresMediaPortraitBlocks,
-  clipMediaBlocks,
+  videoClipMediaBlocks,
   legacyMediaBlock,
 } from './fixture';
 import readme from './README.md';
@@ -87,6 +87,6 @@ export const LivePageMedia = () => (
   <Component
     service="pidgin"
     pageType="live"
-    blocks={clipMediaBlocks as MediaBlock[]}
+    blocks={videoClipMediaBlocks as MediaBlock[]}
   />
 );

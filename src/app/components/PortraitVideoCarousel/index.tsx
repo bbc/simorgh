@@ -1,76 +1,40 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
 import { jsx } from '@emotion/react';
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { PortraitVideoItem } from '#app/models/types/portraitVideoCarousel';
-import Heading from '../Heading';
-import { LeftChevron, RightChevron } from '../icons';
-import styles, { PROMO_ITEM_WIDTH } from './index.styles';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { PortraitVideoCarouselProps } from '#app/models/types/portraitVideo';
+import styles from './index.styles';
 import PortraitVideoModal from '../PortraitVideoModal';
 import { BumpLoader } from '../MediaLoader';
-
-interface PortraitVideoCarouselProps {
-  title: string;
-  items: PortraitVideoItem[];
-}
+import PortraitVideoPromo from './PortraitVideoPromo';
+import PortraitCarouselNavigation from './PortraitVideoCarouselNavigation';
+import Heading from '../Heading';
+import PortraitVideoNoJs from './PortraitVideoNoJs';
 
 const PortraitVideoCarousel = ({
   title,
   items,
+  groupTrackingId,
 }: PortraitVideoCarouselProps) => {
-  const { dir } = useContext(ServiceContext);
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(false);
+  const scrollRef = useRef<HTMLUListElement>(null);
+
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedItem, setSelectedItem] = useState<PortraitVideoItem | null>(
+  const [selectedVideoIndex, setSelectedVideoIndex] = useState<number | null>(
     null,
   );
 
-  const checkScrollButtons = () => {
-    if (!scrollRef.current) return;
-    const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
-    setCanScrollLeft(scrollLeft > 0);
-    setCanScrollRight(scrollLeft + clientWidth < scrollWidth);
-  };
-
-  const scroll = (direction: 'left' | 'right') => {
-    if (!scrollRef.current) return;
-    const scrollAmount =
-      direction === 'left' ? -PROMO_ITEM_WIDTH : PROMO_ITEM_WIDTH;
-    scrollRef.current.scrollBy({
-      left: scrollAmount,
-      behavior: 'smooth',
-    });
-    setTimeout(checkScrollButtons, 100);
-  };
-
-  const handlePromoClick = (item: PortraitVideoItem) => {
-    if (item.video) {
-      setSelectedItem(item);
+  const handlePromoClick = (index: number) => {
+    if (items[index]?.video) {
+      setSelectedVideoIndex(index);
       setIsModalOpen(true);
     }
   };
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
-    setSelectedItem(null);
+    setSelectedVideoIndex(null);
   };
-
-  useEffect(() => {
-    const scrollElement = scrollRef.current;
-    if (scrollElement) {
-      scrollElement.addEventListener('scroll', checkScrollButtons);
-    }
-    checkScrollButtons();
-    return () => {
-      if (scrollElement) {
-        scrollElement.removeEventListener('scroll', checkScrollButtons);
-      }
-    };
-  }, [items]);
 
   return (
     <>
@@ -79,70 +43,44 @@ const PortraitVideoCarousel = ({
         aria-label={title}
         role="region"
         data-testid="portrait-video-carousel"
+        css={styles.section}
       >
-        <h2 css={styles.heading}>{title}</h2>
-        <div css={styles.scrollContainer}>
-          <div ref={scrollRef} css={styles.scrollWrapper}>
-            {items.map(item => {
-              const image = item.images?.[0]?.url;
-              const alt = item.images?.[0]?.altText || '';
-              const headline = item.headlines?.promoHeadline || '';
-
-              return (
-                <button
-                  key={item.id}
-                  type="button"
-                  onClick={() => handlePromoClick(item)}
-                  css={styles.promoItemButton}
-                >
-                  {image && (
-                    <img
-                      src={image}
-                      alt={alt}
-                      css={styles.image}
-                      loading="lazy"
-                    />
-                  )}
-                  <div css={styles.gradientOverlay}>
-                    <Heading
-                      level={3}
-                      size="longPrimer"
-                      css={styles.promoHeading}
-                    >
-                      {headline}
-                    </Heading>
-                  </div>
-                </button>
-              );
-            })}
-            <div css={[styles.promoItem, styles.endBlankItem]} />
-          </div>
-          <div css={styles.buttonGroupOverlay}>
-            <div css={styles.buttonGroup}>
-              <button
-                type="button"
-                aria-label="Scroll left"
-                onClick={() => scroll(dir === 'ltr' ? 'left' : 'right')}
-                disabled={!canScrollLeft}
-                css={styles.navButton}
-              >
-                <LeftChevron />
-              </button>
-              <button
-                type="button"
-                aria-label="Scroll right"
-                onClick={() => scroll(dir === 'ltr' ? 'right' : 'left')}
-                disabled={!canScrollRight}
-                css={styles.navButton}
-              >
-                <RightChevron />
-              </button>
-            </div>
-          </div>
+        <Heading
+          level={2}
+          size="doublePica"
+          fontVariant="sansBold"
+          css={styles.heading}
+        >
+          {title}
+        </Heading>
+        <noscript>
+          <PortraitVideoNoJs />
+        </noscript>
+        <div css={styles.carouselContainer}>
+          <PortraitCarouselNavigation scrollPaneRef={scrollRef} />
+          <ul
+            ref={scrollRef}
+            css={styles.carousel}
+            data-testid="pv-carousel"
+            tabIndex={-1}
+            role="list"
+          >
+            {items.map((item, index) => (
+              <PortraitVideoPromo
+                {...item}
+                key={item.id}
+                onClick={() => handlePromoClick(index)}
+                itemPosition={index}
+                groupTracker={{
+                  itemCount: items.length,
+                  resourceId: groupTrackingId,
+                }}
+              />
+            ))}
+          </ul>
         </div>
-
         {isModalOpen &&
-          selectedItem &&
+          selectedVideoIndex !== null &&
           createPortal(
             <PortraitVideoModal
               items={items.map(item => ({
@@ -152,13 +90,11 @@ const PortraitVideoCarousel = ({
                 duration: item.video?.version?.duration || 'PT0M0S',
                 kind: item.video?.version?.kind || 'programme',
                 territories: item.video?.version?.territories || [],
-                guidance: null,
+                guidance: item.video?.version?.guidance || null,
                 isEmbeddingAllowed: item.video?.isEmbeddingAllowed ?? true,
                 images: item.images || [],
               }))}
-              initialVideoIndex={items.findIndex(
-                i => i.id === selectedItem?.id,
-              )}
+              selectedVideoIndex={selectedVideoIndex}
               onClose={handleCloseModal}
             />,
             document.body,

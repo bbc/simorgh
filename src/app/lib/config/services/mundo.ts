@@ -429,10 +429,6 @@ export const service: DefaultServiceConfig = {
         url: '/mundo/topics/cdr5613yzwqt',
       },
       {
-        title: 'Hay Festival',
-        url: '/mundo/topics/cr50y7p7qyqt',
-      },
-      {
         title: 'Economía',
         url: '/mundo/topics/c06gq9v4xp3t',
       },
@@ -451,6 +447,14 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Tecnología',
         url: '/mundo/topics/cyx5krnw38vt',
+      },
+      {
+        title: 'Hay Festival',
+        url: '/mundo/topics/cr50y7p7qyqt',
+      },
+      {
+        title: 'Centroamérica cuenta',
+        url: '/mundo/topics/c404v5z1k8wt',
       },
     ],
   },

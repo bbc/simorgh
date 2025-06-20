@@ -26,6 +26,13 @@ import articleNewsWithPodcastPromo from '#data/news/articles/crkxdvxzwxk2.json';
 import articleDataWithPortraitVideoRTL from '#data/persian/articles/c149pnldynxo.json';
 import articleDataWithPodcastPromo from '#data/russian/articles/c61q94n3rm3o.json';
 import React, { useMemo } from 'react';
+import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
+import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
+import { service as newsConfig } from '#app/lib/config/services/news';
+import latin from '#app/components/ThemeProvider/fontScripts/latin';
+import { Services } from '#app/models/types/global';
+import { StoryArgs, StoryProps } from '#app/models/types/storybook';
+import articleDataMultipleContributors from '#data/news/articles/cgrj2g29kzxo.json';
 import ArticlePageComponent from './ArticlePage';
 
 const PageWithOptimizely = withOptimizelyProvider(ArticlePageComponent);
@@ -166,6 +173,7 @@ export default {
 export const ArticlePage = (_: StoryArgs, { service }: StoryProps) => (
   <ComponentWithContext data={articleData} service={service} />
 );
+
 export const Burmese = () => (
   <ComponentWithServiceContext data={articleDataBurmese} service="burmese" />
 );
@@ -279,6 +287,15 @@ export const ArticlePageWithLiteSiteLink = {
   parameters: {
     chromatic: { disableSnapshot: true },
   },
+};
+
+export const ArticlePageWithMultipleContributors = {
+  render: () => (
+    <ComponentWithContext
+      data={articleDataMultipleContributors}
+      service="news"
+    />
+  ),
 };
 
 export const TestArticlePageWithLiteSiteLink = {

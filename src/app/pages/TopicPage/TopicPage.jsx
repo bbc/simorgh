@@ -84,6 +84,7 @@ const TopicPage = ({ pageData }) => {
               visualStyle,
               embed,
               radioSchedule,
+              portraitVideo,
             }) => {
               const nthCurationByStyleAndProminence =
                 getNthCurationByStyleAndProminence({
@@ -108,6 +109,7 @@ const TopicPage = ({ pageData }) => {
                     }
                     embed={embed}
                     radioSchedule={radioSchedule}
+                    portraitVideo={portraitVideo}
                   />
                 </React.Fragment>
               );

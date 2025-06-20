@@ -1,3 +1,4 @@
+import { Direction } from '#app/models/types/global';
 import React from 'react';
 
 export const Ellipsis = () => (
@@ -11,6 +12,7 @@ export const Ellipsis = () => (
     <path d="M1.6 18.8h5.8v-5.6H1.6v5.6zm11.5 0h5.8v-5.6h-5.8v5.6zm11.5 0h5.8v-5.6h-5.8v5.6z" />
   </svg>
 );
+
 export const LeftChevron = ({ className }: { className?: string }) => (
   <svg
     viewBox="0 0 32 32"
@@ -36,6 +38,54 @@ export const RightChevron = ({ className }: { className?: string }) => (
     <path d="M21.6 14.3L5.5 31h6.4l14.6-15L11.9 1H5.5l16.1 16.7v-3.4z" />
   </svg>
 );
+
+export enum ChevronOrientation {
+  BACKWARD = 'backward',
+  FORWARD = 'forward',
+}
+
+type ChevronProps = {
+  className?: string;
+  dir: Direction;
+  orientation: ChevronOrientation;
+};
+
+export const Chevron = ({ className, dir, orientation }: ChevronProps) => {
+  let normalisedDirection = null;
+  const paths = {
+    [ChevronOrientation.BACKWARD]: (
+      <path d="M10.4 14.3L26.5 31h-6.4L5.5 16 20.1 1h6.4L10.4 17.7v-3.4z" />
+    ),
+    [ChevronOrientation.FORWARD]: (
+      <path d="M21.6 14.3L5.5 31h6.4l14.6-15L11.9 1H5.5l16.1 16.7v-3.4z" />
+    ),
+  };
+
+  if (orientation === ChevronOrientation.BACKWARD) {
+    normalisedDirection =
+      dir === 'ltr' ? ChevronOrientation.BACKWARD : ChevronOrientation.FORWARD;
+  }
+
+  if (orientation === ChevronOrientation.FORWARD) {
+    normalisedDirection =
+      dir === 'ltr' ? ChevronOrientation.FORWARD : ChevronOrientation.BACKWARD;
+  }
+
+  if (!normalisedDirection) return null;
+
+  return (
+    <svg
+      viewBox="0 0 32 32"
+      focusable="false"
+      aria-hidden="true"
+      width="12"
+      height="12"
+      className={className}
+    >
+      {paths[normalisedDirection]}
+    </svg>
+  );
+};
 
 export const Clock = ({ className }: { className?: string }) => (
   <svg
@@ -198,5 +248,29 @@ export const RightArrow = ({ className }: { className?: string }) => (
     <g>
       <path d="M12.6,26.7L23.2,16L12.6,5.3H8.8v21.4H12.6z" />
     </g>
+
+export const TriangleDown = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    className={className}
+    focusable="false"
+    aria-hidden="true"
+  >
+    <path d="M26.7 12.6 16 23.2 5.3 12.6V8.8h21.4z" />
+  </svg>
+);
+
+export const Warning = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    width="24"
+    height="24"
+    className={className}
+    focusable="false"
+    aria-hidden="true"
+  >
+    <path d="M3.1 30.2h25.8c1.6 0 2.3-.8 2.3-1.9 0-.8-.3-1.4-1-2.9L18.6 3.8c-.8-1.5-1.5-2-2.6-2s-1.8.5-2.6 2L1.8 25.4C1 26.9.7 27.5.7 28.3c.1 1.1.8 1.9 2.4 1.9M16 26.9c-1.6 0-2.4-1-2.4-2.1 0-1.2.8-2.1 2.4-2.1s2.4 1 2.4 2.1-.8 2.1-2.4 2.1m-1.7-6.7-.8-10.6h5l-.8 10.6z" />
   </svg>
 );

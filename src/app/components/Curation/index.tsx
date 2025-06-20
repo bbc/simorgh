@@ -6,7 +6,6 @@ import {
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
 import RadioSchedule from '#app/legacy/containers/RadioSchedule';
-import isLive from '#app/lib/utilities/isLive';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
@@ -18,6 +17,8 @@ import { GHOST } from '../ThemeProvider/palette';
 import Embed from '../Embeds/OEmbed';
 import Billboard from '../Billboard';
 import PortraitVideoCarousel from '../PortraitVideoCarousel';
+import UsefulLinks from '../UsefulLinks';
+import SocialLinks from '../SocialLinks';
 import styles from './index.styles';
 
 const {
@@ -30,6 +31,8 @@ const {
   EMBED,
   BILLBOARD,
   PORTRAIT_VIDEO_CAROUSEL,
+  USEFUL_LINKS,
+  SOCIAL_LINKS,
 } = COMPONENT_NAMES;
 
 const { NONE } = VISUAL_STYLE;
@@ -60,6 +63,7 @@ export default ({
   embed,
   portraitVideo,
   renderVisuallyHiddenH2Title = false,
+  curationId,
 }: Curation) => {
   const componentName = getComponentName({
     visualStyle,
@@ -150,16 +154,32 @@ export default ({
     case EMBED:
       return embed ? <Embed oembed={embed} /> : null;
     case PORTRAIT_VIDEO_CAROUSEL:
-      if (
-        portraitVideo?.items &&
-        portraitVideo?.items?.length > 0 &&
-        !isLive()
-      ) {
+      if (portraitVideo?.items && portraitVideo?.items?.length > 0) {
         return (
-          <PortraitVideoCarousel title={title} items={portraitVideo.items} />
+          <PortraitVideoCarousel
+            title={title}
+            items={portraitVideo.items}
+            {...(curationId && { groupTrackingId: curationId })}
+          />
         );
       }
       return null;
+    case USEFUL_LINKS:
+      return (
+        <UsefulLinks
+          summaries={summaries}
+          title={title}
+          id={`useful-links-${nthCurationByStyleAndProminence}`}
+        />
+      );
+    case SOCIAL_LINKS:
+      return (
+        <SocialLinks
+          summaries={summaries}
+          title={title}
+          id={`social-links-${nthCurationByStyleAndProminence}`}
+        />
+      );
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:

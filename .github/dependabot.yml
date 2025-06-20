@@ -4,9 +4,9 @@ updates:
     directory: '/'
     schedule:
       interval: 'weekly'
+      day: 'wednesday'
+      time: '16:00'
     ignore:
-      - dependency-name: '@loadable/*'
-        update-types: ['version-update:semver-major']
       - dependency-name: 'webpack'
         update-types: ['version-update:semver-major']
       - dependency-name: 'winston'

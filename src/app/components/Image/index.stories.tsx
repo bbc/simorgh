@@ -1,8 +1,21 @@
 import React from 'react';
-
+import { RequestContextProvider } from '#contexts/RequestContext';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
-import Image from '.';
+import Image, { ImageProps } from '.';
 import md from './README.md';
+
+const ImgWithAmp = (props: ImageProps) => (
+  <RequestContextProvider
+    isAmp
+    pageType="article"
+    pathname="/afaanoromoo"
+    service="afaanoromoo"
+  >
+    <div style={{ height: '40vh' }}>
+      <Image {...props} />
+    </div>
+  </RequestContextProvider>
+);
 
 const BasicImage = () => (
   <Image
@@ -42,16 +55,14 @@ export const ResponsiveWebPWithJpegFallback = () => (
 );
 
 export const BasicAMPImage = () => (
-  <Image
-    isAmp
+  <ImgWithAmp
     alt="A penguin stands on an ice floe"
     src="https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/164AF/production/_110911319_antartica.jpg"
   />
 );
 
 export const ResponsiveAMPImage = () => (
-  <Image
-    isAmp
+  <ImgWithAmp
     alt="A penguin stands on an ice floe"
     src="https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/164AF/production/_110911319_antartica.jpg"
     srcSet="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/164AF/production/_110911319_antartica.jpg 240w, https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/164AF/production/_110911319_antartica.jpg 624w"
@@ -59,8 +70,7 @@ export const ResponsiveAMPImage = () => (
 );
 
 export const AMPWebPWithJpegFallback = () => (
-  <Image
-    isAmp
+  <ImgWithAmp
     alt="A penguin stands on an ice floe"
     src="https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/164AF/production/_110911319_antartica.jpg"
     srcSet="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/164AF/production/_110911319_antartica.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/164AF/production/_110911319_antartica.jpg.webp 624w"

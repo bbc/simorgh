@@ -5,6 +5,30 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
   background-color: #141414;
 }
 
+@media (min-width: 63rem) {
+  .emotion-0 {
+    padding-top: 2.5rem;
+  }
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-0 {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-0 {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-0 {
+    padding-top: 0.5rem;
+  }
+}
+
 .emotion-2 {
   width: 100%;
   padding-bottom: 2rem;
@@ -211,25 +235,19 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
 
 @media (min-width: 63rem) {
   .emotion-7 {
-    margin: 2.5rem 0px 0px;
-  }
-}
-
-@media (max-width: 62.9375rem) {
-  .emotion-7 {
-    margin-top: 1rem;
+    margin: 0px 0px 0px;
   }
 }
 
 @media (max-width: 37.4375rem) {
   .emotion-7 {
-    margin: 1rem -1rem 0px;
+    margin: 0px -1rem 0px;
   }
 }
 
 @media (max-width: 24.9375rem) {
   .emotion-7 {
-    margin: 0.5rem -0.5rem 0px;
+    margin: 0px -0.5rem 0px;
   }
 }
 
@@ -740,7 +758,9 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
     <div>
       chartbeat
     </div>
-    <noscript />
+    <noscript
+      id="analytics-noscript"
+    />
     <main
       class="emotion-1 emotion-2 emotion-3"
       dir="rtl"
@@ -758,7 +778,7 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
            د بي بي سي خبرونه , ۲۱ نومبر ۲۰۲۴
         </h1>
         <figure
-          class="emotion-7"
+          class="media-container emotion-7"
           data-e2e="media-loader__container"
         >
           <div
@@ -882,6 +902,30 @@ exports[`OnDemand TV Page  should show the expired content message if episode is
   background-color: #141414;
 }
 
+@media (min-width: 63rem) {
+  .emotion-0 {
+    padding-top: 2.5rem;
+  }
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-0 {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-0 {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-0 {
+    padding-top: 0.5rem;
+  }
+}
+
 .emotion-2 {
   width: 100%;
   padding-bottom: 2rem;
@@ -1424,7 +1468,9 @@ exports[`OnDemand TV Page  should show the expired content message if episode is
     <div>
       chartbeat
     </div>
-    <noscript />
+    <noscript
+      id="analytics-noscript"
+    />
     <main
       class="emotion-1 emotion-2 emotion-3"
       dir="rtl"
@@ -1506,6 +1552,30 @@ exports[`OnDemand TV Page  should show the future content message if episode is 
   background-color: #141414;
 }
 
+@media (min-width: 63rem) {
+  .emotion-0 {
+    padding-top: 2.5rem;
+  }
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-0 {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-0 {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-0 {
+    padding-top: 0.5rem;
+  }
+}
+
 .emotion-2 {
   width: 100%;
   padding-bottom: 2rem;
@@ -2048,7 +2118,9 @@ exports[`OnDemand TV Page  should show the future content message if episode is 
     <div>
       chartbeat
     </div>
-    <noscript />
+    <noscript
+      id="analytics-noscript"
+    />
     <main
       class="emotion-1 emotion-2 emotion-3"
       dir="rtl"

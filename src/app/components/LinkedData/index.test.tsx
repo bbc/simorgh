@@ -218,15 +218,17 @@ describe('LinkedData', () => {
   });
 
   describe('bylineLinkedData', () => {
-    const bylineLinkedData = {
-      authorName: 'John',
-      jobRole: 'Journalist',
-      twitterText: 'BBC News',
-      twitterLink: 'https://twitter.com/BBCNews',
-      authorImage: 'https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg',
-      location: 'London',
-      authorTopicUrl: 'https://www.bbc.co.uk/news/topics/cg2gmrxlde0t',
-    };
+    const bylineLinkedData = [
+      {
+        authorName: 'John',
+        jobRole: 'Journalist',
+        twitterText: 'BBC News',
+        twitterLink: 'https://twitter.com/BBCNews',
+        authorImage: 'https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg',
+        location: 'London',
+        authorTopicUrl: 'https://www.bbc.co.uk/news/topics/cg2gmrxlde0t',
+      },
+    ];
 
     const articleProps = assocPath(
       ['bylineLinkedData'],

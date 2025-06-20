@@ -3,13 +3,27 @@ import Footer from '#app/components/Footer';
 import { render, screen } from '../react-testing-library-with-providers';
 
 describe('Footer', () => {
-  describe('AMP', () => {
-    it('should render the cookie settings link as a button element', () => {
-      render(<Footer />, { isAmp: true });
-      expect(screen.getByText('Do not share or sell my info')).toHaveAttribute(
-        'data-testid',
-        'amp-cookie-settings-button',
-      );
+  it('should render extra links when they are present', () => {
+    render(<Footer />, { service: 'ws' });
+
+    const links = [
+      {
+        text: 'BBC Studios Commercial Opportunities',
+        href: 'https://bbcnews.bbcstudios.com',
+      },
+      {
+        text: 'Global Shortwave Frequencies',
+        href: 'https://www.bbc.com/programmes/articles/2x9tqt6mc05vB2S37j8MWMJ/global-short-wave-frequencies',
+      },
+    ];
+
+    const listElements = screen.getAllByRole('list');
+    expect(listElements).toHaveLength(2);
+
+    links.forEach(({ text, href }) => {
+      const linkElement = screen.getByText(text);
+      expect(linkElement).toBeInTheDocument();
+      expect(linkElement).toHaveAttribute('href', href);
     });
   });
 
