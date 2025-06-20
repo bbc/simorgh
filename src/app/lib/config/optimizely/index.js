@@ -1,8 +1,8 @@
 export default {
   // This is the key of the whole experiment
-  flagKey: 'dummy_experiment_1',
+  flagKey: 'newswb_ws_topbarojs_read_more',
   // This is the key for the 'rule' that is attached to the experiment
-  ruleKey: 'dummy_experiment_1',
+  ruleKey: 'newswb_ws_topbarojs_read_more',
   variationMappings: {
     on: 'on',
     off: 'off',
