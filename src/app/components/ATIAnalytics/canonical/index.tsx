@@ -3,22 +3,23 @@ import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { RequestContext } from '#app/contexts/RequestContext';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { Helmet } from 'react-helmet';
-import sendPageViewBeaconLite, {
-  addSendStaticBeaconToWindow,
-} from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
+import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
+import sendPageViewBeaconLite from '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon';
 import sendBeacon from '#app/lib/analyticsUtils/sendBeacon';
-import addInlineScript from '#app/lib/utilities/addInlineScript';
+import addInlineScript, {
+  InlineScriptProps,
+} from '#app/lib/utilities/addInlineScript';
 import { ATIAnalyticsProps } from '../types';
+import getNoScriptTrackingPixelUrl from './getNoScriptTrackingPixelUrl';
 import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
 
-const getNoJsATIPageViewUrl = (atiPageViewUrl: string) =>
-  atiPageViewUrl.includes('x8=[simorgh]')
-    ? atiPageViewUrl.replace('x8=[simorgh]', 'x8=[simorgh-nojs]')
-    : `${atiPageViewUrl}&x8=[simorgh-nojs]`;
+type ATIAnalyticsPropsExport = Pick<ATIAnalyticsProps, 'reverbParams'>;
 
-const renderNoScriptTrackingPixel = (atiPageViewUrl: string) => {
+const renderNoScriptTrackingPixel = (
+  reverbParams: ATIAnalyticsPropsExport['reverbParams'],
+) => {
   return (
-    <noscript>
+    <noscript id="analytics-noscript">
       <img
         height="1px"
         width="1px"
@@ -27,14 +28,14 @@ const renderNoScriptTrackingPixel = (atiPageViewUrl: string) => {
         // lazy and didn't want to write a fuzzy matcher for the unit AND e2e
         // tests (you can't predict the class names chosen by emotion)
         style={{ position: 'absolute' }}
-        src={getNoJsATIPageViewUrl(atiPageViewUrl)}
+        src={getNoScriptTrackingPixelUrl(reverbParams)}
       />
     </noscript>
   );
 };
 
-const addScript = (script: string) => {
-  return <Helmet>{addInlineScript({ script })}</Helmet>;
+const addScript = ({ script, parameters }: InlineScriptProps) => {
+  return <Helmet>{addInlineScript({ script, parameters })}</Helmet>;
 };
 
 const CanonicalATIAnalytics = ({
@@ -56,10 +57,17 @@ const CanonicalATIAnalytics = ({
 
   return (
     <>
-      {addScript(addSendStaticBeaconToWindow())}
-      {isLite && addScript(sendPageViewBeaconLite(atiPageViewUrlString))}
-      {!isLite && addScript(sendPageViewBeaconOperaMini(atiPageViewUrlString))}
-      {renderNoScriptTrackingPixel(atiPageViewUrl)}
+      {addScript({ script: addSendStaticBeaconToWindow() })}
+      {isLite &&
+        addScript({
+          script: sendPageViewBeaconLite,
+          parameters: atiPageViewUrlString,
+        })}
+      {!isLite &&
+        addScript({
+          script: sendPageViewBeaconOperaMini(atiPageViewUrlString),
+        })}
+      {renderNoScriptTrackingPixel(reverbParams)}
     </>
   );
 };

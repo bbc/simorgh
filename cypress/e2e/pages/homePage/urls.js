@@ -12,6 +12,18 @@ const urls = [
     live: '/arabic',
   },
   {
+    service: 'polska',
+    local: '/polska',
+    test: '/polska',
+    live: '',
+  },
+  {
+    service: 'portuguese',
+    local: '/portuguese',
+    test: '/portuguese',
+    live: '/portuguese',
+  },
+  {
     service: 'serbian',
     local: '/serbian/lat',
     test: '/serbian/lat',

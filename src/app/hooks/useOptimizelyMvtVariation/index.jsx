@@ -7,6 +7,8 @@ const useOptimizelyMvtVariation = id => {
   const { optimizely } = useContext(OptimizelyContext);
   const { mvtExperiments } = useContext(RequestContext);
 
+  if (!optimizely) return null;
+
   if (!mvtExperiments || mvtExperiments.length === 0 || id === null) {
     return null;
   }

@@ -1880,6 +1880,1027 @@ export const bylineWithAllData = [
   },
 ] as OptimoBylineContributorBlock[];
 
+export const bylineWithMultipleContributors = [
+  {
+    type: 'contributor',
+    model: {
+      topicId: '',
+      topicUrl: '/news/topics/c8qx38nq177t',
+      blocks: [
+        {
+          type: 'name',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Mayeni Jones',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Mayeni Jones',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'role',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Journalist',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Journalist',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'link',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'MayeniJones',
+                        blocks: [
+                          {
+                            type: 'urlLink',
+                            model: {
+                              text: 'MayeniJones',
+                              locator: 'https://twitter.com/MayeniJones',
+                              blocks: [
+                                {
+                                  type: 'fragment',
+                                  model: {
+                                    text: 'MayeniJones',
+                                    attributes: [],
+                                  },
+                                },
+                              ],
+                              isExternal: true,
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'location',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Lagos, Nigeria',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Lagos, Nigeria',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'images',
+          model: {
+            blocks: [
+              {
+                type: 'image',
+                model: {
+                  blocks: [
+                    {
+                      type: 'rawImage',
+                      model: {
+                        width: 640,
+                        height: 562,
+                        locator:
+                          'f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png',
+                        originCode: 'cpsprodpb',
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+  {
+    type: 'contributor',
+    model: {
+      topicId: '',
+      topicUrl: '/news/topics/c8qx38nq177t',
+      blocks: [
+        {
+          type: 'name',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Mayeni Jones',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Mayeni Jones',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'role',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Journalist',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Journalist',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'link',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'MayeniJones',
+                        blocks: [
+                          {
+                            type: 'urlLink',
+                            model: {
+                              text: 'MayeniJones',
+                              locator: 'https://twitter.com/MayeniJones',
+                              blocks: [
+                                {
+                                  type: 'fragment',
+                                  model: {
+                                    text: 'MayeniJones',
+                                    attributes: [],
+                                  },
+                                },
+                              ],
+                              isExternal: true,
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'location',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Lagos, Nigeria',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Lagos, Nigeria',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'images',
+          model: {
+            blocks: [
+              {
+                type: 'image',
+                model: {
+                  blocks: [
+                    {
+                      type: 'rawImage',
+                      model: {
+                        width: 640,
+                        height: 562,
+                        locator:
+                          'f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png',
+                        originCode: 'cpsprodpb',
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+  {
+    type: 'contributor',
+    model: {
+      topicId: '',
+      topicUrl: '/news/topics/c8qx38nq177t',
+      blocks: [
+        {
+          type: 'name',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Mayeni Jones',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Mayeni Jones',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'role',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Journalist',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Journalist',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'link',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'MayeniJones',
+                        blocks: [
+                          {
+                            type: 'urlLink',
+                            model: {
+                              text: 'MayeniJones',
+                              locator: 'https://twitter.com/MayeniJones',
+                              blocks: [
+                                {
+                                  type: 'fragment',
+                                  model: {
+                                    text: 'MayeniJones',
+                                    attributes: [],
+                                  },
+                                },
+                              ],
+                              isExternal: true,
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'location',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Lagos, Nigeria',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Lagos, Nigeria',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'images',
+          model: {
+            blocks: [
+              {
+                type: 'image',
+                model: {
+                  blocks: [
+                    {
+                      type: 'rawImage',
+                      model: {
+                        width: 640,
+                        height: 562,
+                        locator:
+                          'f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png',
+                        originCode: 'cpsprodpb',
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+  {
+    type: 'contributor',
+    model: {
+      topicId: '',
+      topicUrl: '/news/topics/c8qx38nq177t',
+      blocks: [
+        {
+          type: 'name',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Mayeni Jones',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Mayeni Jones',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'role',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Journalist',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Journalist',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'link',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'MayeniJones',
+                        blocks: [
+                          {
+                            type: 'urlLink',
+                            model: {
+                              text: 'MayeniJones',
+                              locator: 'https://twitter.com/MayeniJones',
+                              blocks: [
+                                {
+                                  type: 'fragment',
+                                  model: {
+                                    text: 'MayeniJones',
+                                    attributes: [],
+                                  },
+                                },
+                              ],
+                              isExternal: true,
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'location',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Lagos, Nigeria',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Lagos, Nigeria',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'images',
+          model: {
+            blocks: [
+              {
+                type: 'image',
+                model: {
+                  blocks: [
+                    {
+                      type: 'rawImage',
+                      model: {
+                        width: 640,
+                        height: 562,
+                        locator:
+                          'f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png',
+                        originCode: 'cpsprodpb',
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+  {
+    type: 'contributor',
+    model: {
+      topicId: '',
+      topicUrl: '/news/topics/c8qx38nq177t',
+      blocks: [
+        {
+          type: 'name',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Mayeni Jones',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Mayeni Jones',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'role',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Journalist',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Journalist',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'link',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'MayeniJones',
+                        blocks: [
+                          {
+                            type: 'urlLink',
+                            model: {
+                              text: 'MayeniJones',
+                              locator: 'https://twitter.com/MayeniJones',
+                              blocks: [
+                                {
+                                  type: 'fragment',
+                                  model: {
+                                    text: 'MayeniJones',
+                                    attributes: [],
+                                  },
+                                },
+                              ],
+                              isExternal: true,
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'location',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Lagos, Nigeria',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Lagos, Nigeria',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'images',
+          model: {
+            blocks: [
+              {
+                type: 'image',
+                model: {
+                  blocks: [
+                    {
+                      type: 'rawImage',
+                      model: {
+                        width: 640,
+                        height: 562,
+                        locator:
+                          'f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png',
+                        originCode: 'cpsprodpb',
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+] as OptimoBylineContributorBlock[];
+
+export const sampleRecommendations = [
+  {
+    locators: {
+      optimoUrn: 'urn:bbc:optimo:asset:sample_1',
+      canonicalUrl: 'https://www.bbc.com/turkce/articles/sample_1',
+    },
+    timestamp: 1673623343213,
+    language: 'tr',
+    headlines: {
+      promoHeadline: {
+        blocks: [
+          {
+            type: 'text',
+            model: {
+              blocks: [
+                {
+                  type: 'paragraph',
+                  model: {
+                    text: 'SAMPLE RECOMMENDATION 1 - HEADLINE',
+                    blocks: [
+                      {
+                        type: 'fragment',
+                        model: {
+                          text: 'SAMPLE RECOMMENDATION 1 - HEADLINE',
+                          attributes: [],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+    images: {
+      defaultPromoImage: {
+        blocks: [
+          {
+            type: 'altText',
+            model: {
+              blocks: [
+                {
+                  type: 'text',
+                  model: {
+                    blocks: [
+                      {
+                        type: 'paragraph',
+                        model: {
+                          text: 'SAMPLE RECOMMENDATION 1',
+                          blocks: [
+                            {
+                              type: 'fragment',
+                              model: {
+                                text: 'SAMPLE RECOMMENDATION 1',
+                                attributes: [],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+          {
+            type: 'rawImage',
+            model: {
+              width: 1024,
+              height: 576,
+              locator: '536b/live/62a1ce50-92c4-11ed-af5e-49f6c6402e4d.jpg',
+              originCode: 'cpsprodpb',
+              copyrightHolder: 'Getty Images',
+              suitableForSyndication: true,
+            },
+          },
+        ],
+      },
+    },
+    summary: {
+      blocks: [
+        {
+          type: 'text',
+          model: {
+            blocks: [
+              {
+                type: 'paragraph',
+                model: {
+                  text: 'SAMPLE RECOMMENDATION 1 - IMAGE TEXT',
+                  blocks: [
+                    {
+                      type: 'fragment',
+                      model: {
+                        text: 'SAMPLE RECOMMENDATION 1 - IMAGE TEXT',
+                        attributes: [],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+    id: 'urn:bbc:ares::article:sample_1',
+    type: 'optimo',
+  },
+  {
+    locators: {
+      optimoUrn: 'urn:bbc:optimo:asset:sample_2',
+      canonicalUrl: 'https://www.bbc.com/turkce/articles/sample_2',
+    },
+    timestamp: 1673623343213,
+    language: 'tr',
+    headlines: {
+      promoHeadline: {
+        blocks: [
+          {
+            type: 'text',
+            model: {
+              blocks: [
+                {
+                  type: 'paragraph',
+                  model: {
+                    text: 'SAMPLE RECOMMENDATION 2 - HEADLINE',
+                    blocks: [
+                      {
+                        type: 'fragment',
+                        model: {
+                          text: 'SAMPLE RECOMMENDATION 2 - HEADLINE',
+                          attributes: [],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+    images: {
+      defaultPromoImage: {
+        blocks: [
+          {
+            type: 'altText',
+            model: {
+              blocks: [
+                {
+                  type: 'text',
+                  model: {
+                    blocks: [
+                      {
+                        type: 'paragraph',
+                        model: {
+                          text: 'SAMPLE RECOMMENDATION 2',
+                          blocks: [
+                            {
+                              type: 'fragment',
+                              model: {
+                                text: 'SAMPLE RECOMMENDATION 2',
+                                attributes: [],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+          {
+            type: 'rawImage',
+            model: {
+              width: 1024,
+              height: 576,
+              locator: '536b/live/62a1ce50-92c4-11ed-af5e-49f6c6402e4d.jpg',
+              originCode: 'cpsprodpb',
+              copyrightHolder: 'Getty Images',
+              suitableForSyndication: true,
+            },
+          },
+        ],
+      },
+    },
+    summary: {
+      blocks: [
+        {
+          type: 'text',
+          model: {
+            blocks: [
+              {
+                type: 'paragraph',
+                model: {
+                  text: 'SAMPLE RECOMMENDATION 2 - IMAGE TEXT',
+                  blocks: [
+                    {
+                      type: 'fragment',
+                      model: {
+                        text: 'SAMPLE RECOMMENDATION 2 - IMAGE TEXT',
+                        attributes: [],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+    id: 'urn:bbc:ares::article:sample_2',
+    type: 'optimo',
+  },
+];
+
 export const passportTaggings = [
   {
     predicate: 'http://www.bbc.co.uk/ontologies/creativework/format',
