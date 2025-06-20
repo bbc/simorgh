@@ -8,7 +8,7 @@ const getScrollDepth = () =>
     (document.documentElement.scrollTop /
       (document.documentElement.scrollHeight -
         document.documentElement.clientHeight)) *
-    100,
+      100,
   );
 
 const useOptimizelyScrollDepth = () => {
@@ -19,7 +19,9 @@ const useOptimizelyScrollDepth = () => {
   const [scrollSeventyFive, setScrollSeventyFive] = useState(false);
   const [scrollHundred, setScrollHundred] = useState(false);
 
-  const experimentVariation = useOptimizely({ flagKey: OPTIMIZELY_CONFIG.flagKey });
+  const experimentVariation = useOptimizely({
+    experimentName: OPTIMIZELY_CONFIG.flagKey,
+  });
 
   useEffect(() => {
     if (!experimentVariation) {

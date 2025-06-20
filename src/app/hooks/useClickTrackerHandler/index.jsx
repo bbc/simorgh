@@ -41,7 +41,9 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
   const { service, useReverb } = useContext(ServiceContext);
 
   const { optimizely } = useContext(OptimizelyContext);
-  const experimentVariation = useOptimizely({ flagKey: OPTIMIZELY_CONFIG.ruleKey });
+  const experimentVariation = useOptimizely({
+    experimentName: OPTIMIZELY_CONFIG.ruleKey,
+  });
 
   return useCallback(
     async event => {
@@ -99,8 +101,8 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
               ...(itemTracker && { itemTracker }),
               ...(experimentVariation &&
                 experimentVariation !== 'off' && {
-                experimentVariant: experimentVariation,
-              }),
+                  experimentVariation,
+                }),
             });
           } finally {
             if (nextPageUrl && !preventNavigation) {

@@ -44,9 +44,9 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
   });
 
   const { optimizely } = useContext(OptimizelyContext);
-  const optimizelyVariation = useOptimizely(
-    { flagKey: OPTIMIZELY_CONFIG.ruleKey, }
-  );
+  const optimizelyVariation = useOptimizely({
+    experimentName: OPTIMIZELY_CONFIG.ruleKey,
+  });
 
   const observer = useRef(null);
   const timer = useRef(null);
@@ -129,8 +129,8 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
             ...(itemTracker && { itemTracker }),
             ...(optimizelyVariation &&
               optimizelyVariation !== 'off' && {
-              experimentVariant: optimizelyVariation,
-            }),
+                experimentVariant: optimizelyVariation,
+              }),
           });
           setEventSent(true);
           (observer.current as unknown as IntersectionObserver)?.disconnect();
@@ -197,6 +197,6 @@ export default (eventTrackingData?: EventTrackingData): any => {
   return isLite
     ? { [STATIC_ATI_VIEW_TRACKING]: staticATIUrl }
     : {
-      ref: viewTracker,
-    };
+        ref: viewTracker,
+      };
 };

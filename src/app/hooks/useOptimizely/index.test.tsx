@@ -38,7 +38,7 @@ describe('useOptimizely custom hook', () => {
     );
 
     const { result } = await act(async () => {
-      return renderHook(() => useOptimizely({ flagKey }), {
+      return renderHook(() => useOptimizely({ experimentName: flagKey }), {
         wrapper,
       });
     });

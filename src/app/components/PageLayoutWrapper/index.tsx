@@ -61,7 +61,7 @@ const PageLayoutWrapper = ({
   let wordCount: wordCountType = 0;
   let propsForOJExperiment = {};
   const experimentVariant = useOptimizely({
-    flagKey: OPTIMIZELY_CONFIG.ruleKey,
+    experimentName: OPTIMIZELY_CONFIG.ruleKey,
   });
 
   if (pageType === 'article') {

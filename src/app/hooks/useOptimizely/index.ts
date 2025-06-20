@@ -5,7 +5,7 @@ import useServerSide from './useServerSide';
 import useClientSide from './useClientSide';
 
 type Props = {
-  flagKey?: string;
+  experimentName?: string;
   overrideAttributes?: Record<string, string>;
 };
 
@@ -15,7 +15,7 @@ export enum ExperimentState {
   NO_EXPERIMENT = 'no experiment',
 }
 
-export default ({ flagKey, overrideAttributes }: Props) => {
+export default ({ experimentName: flagKey, overrideAttributes }: Props) => {
   const { serverSideExperiments } = useContext(RequestContext);
 
   if (flagKey == null) return null;
