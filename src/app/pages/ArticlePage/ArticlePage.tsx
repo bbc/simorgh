@@ -71,7 +71,7 @@ import SecondaryColumn from './SecondaryColumn';
 import styles from './ArticlePage.styles';
 import { ComponentToRenderProps, TimeStampProps } from './types';
 import ContinueReadingButton, {
-  Props as ContineReadingProps,
+  Props as ContinueReadingProps,
 } from './ContinueReadingButton';
 import ArticleHeadline from './ArticleHeadline';
 import isPortraitVideo from '../utils/isPortraitVideo';
@@ -272,7 +272,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     !isAmp &&
     !isLite &&
     !isApp &&
-    experimentVariant != null &&
+    experimentVariant &&
     ['read-more-a', 'read-more-b', 'read-more-a-and-top-stories'].includes(
       experimentVariant,
     ),
@@ -343,7 +343,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                 showAllContent={showAllContent}
                 setShowAllContent={() => setShowAllContent(true)}
                 variation={
-                  experimentVariant as ContineReadingProps['variation']
+                  experimentVariant as ContinueReadingProps['variation']
                 }
                 liteCTAShows={liteCTAShows}
               />
