@@ -79,7 +79,7 @@ const Byline = ({
                       className="focusIndicatorReducedWidth"
                     >
                       <Text
-                        className="byline__link-text"
+                        className="byline-link"
                         size="bodyCopy"
                         fontVariant="sansBold"
                         css={BylineCss.author}
@@ -87,9 +87,15 @@ const Byline = ({
                         {authorName}
                       </Text>
                       {isRtl ? (
-                        <LeftChevron css={BylineCss.authorChevron} />
+                        <LeftChevron
+                          className="byline-link"
+                          css={BylineCss.authorChevron}
+                        />
                       ) : (
-                        <RightChevron css={BylineCss.authorChevron} />
+                        <RightChevron
+                          className="byline-link"
+                          css={BylineCss.authorChevron}
+                        />
                       )}
                     </a>
                   </>
