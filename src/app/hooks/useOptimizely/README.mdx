@@ -12,6 +12,7 @@ The `useOptimizely` hook handles:
 * Uses the `useEffect` hook to prevent issues occuring via server side rendering
 
 `useOptimizely` must be used in cojunction with the HOC [`withOptimizelyProvider`](https://github.com/bbc/simorgh/tree/latest/src/app/containers/PageHandlers/withOptimizelyProvider) page handler. This is because `useOptimizely` makes use of features found in the `optimizely` object client that needs to be provided by `withOptimizelyProvider`.
+`ExperimentState.CLIENT_SIDE` or  `ExperimentState.SERVER_SIDE` must be specified for the hook to call the respective client side or server side optimizely hooks.
 
 ### Usage
 
@@ -22,7 +23,7 @@ import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvi
 import useOptimizely from '#hooks/useOptimizely';
 
 const ExamplePage = () => {
-  const variation = useOptimizely('foo-experiment-id');
+  const variation = useOptimizely({ experimentName: 'foo-experiment-id', runtimeType: ExperimentState.CLIENT_SIDE});
 
   if (variation === 'variation_1') {
     return <p>I am variation 1</p>;
