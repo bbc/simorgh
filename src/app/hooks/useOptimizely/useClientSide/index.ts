@@ -3,13 +3,13 @@ import { useState, useEffect } from 'react';
 import { useDecision } from '@optimizely/react-sdk';
 
 type Props = {
-  flagKey: string;
+  experimentName: string;
   overrideAttributes?: Record<string, string>;
 };
 
-export default ({ flagKey, overrideAttributes = {} }: Props) => {
+export default ({ experimentName, overrideAttributes = {} }: Props) => {
   const [decision, isClientReady, didTimeout] = useDecision(
-    flagKey,
+    experimentName,
     {
       autoUpdate: true,
     },

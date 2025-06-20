@@ -1,30 +1,27 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import { useContext } from 'react';
-import { RequestContext } from '#contexts/RequestContext';
 import useServerSide from './useServerSide';
 import useClientSide from './useClientSide';
 
 type Props = {
   experimentName?: string;
   overrideAttributes?: Record<string, string>;
+  runtimeType: ExperimentState;
 };
 
-export default ({ experimentName: flagKey, overrideAttributes }: Props) => {
-  const { serverSideExperiments } = useContext(RequestContext);
+export enum ExperimentState {
+  CLIENT_SIDE = 'client side experiment',
+  SERVER_SIDE = 'server side experiment',
+}
 
-  if (flagKey == null) return null;
+export default ({ experimentName, overrideAttributes, runtimeType }: Props) => {
+  if (experimentName == null) return null;
 
   let variation = null;
-  const isServerSide =
-    serverSideExperiments && serverSideExperiments.length > 0;
-  if (isServerSide) {
-    variation = useServerSide({
-      serverSideExperiments,
-      flagKey,
-    });
+  if (runtimeType === ExperimentState.SERVER_SIDE) {
+    variation = useServerSide(experimentName);
   } else {
     variation = useClientSide({
-      flagKey,
+      experimentName,
       overrideAttributes,
     });
   }

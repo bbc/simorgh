@@ -17,7 +17,7 @@ describe('useOptimizely - useClientSide', () => {
     ]);
 
     const { result } = renderHook(() =>
-      useClientSide({ flagKey: 'correct_experiment_id' }),
+      useClientSide({ experimentName: 'correct_experiment_id' }),
     );
 
     expect(result.current).toEqual('control');
@@ -31,7 +31,7 @@ describe('useOptimizely - useClientSide', () => {
     ]);
 
     const { result } = renderHook(() =>
-      useClientSide({ flagKey: 'correct_experiment_id' }),
+      useClientSide({ experimentName: 'correct_experiment_id' }),
     );
 
     expect(result.current).toEqual(null);
@@ -45,7 +45,7 @@ describe('useOptimizely - useClientSide', () => {
     ]);
 
     const { result } = renderHook(() =>
-      useClientSide({ flagKey: 'correct_experiment_id' }),
+      useClientSide({ experimentName: 'correct_experiment_id' }),
     );
 
     expect(result.current).toEqual(null);
@@ -58,7 +58,7 @@ describe('useOptimizely - useClientSide', () => {
       false,
     ]);
     const { result } = renderHook(() =>
-      useClientSide({ flagKey: 'wrong_experiment_id' }),
+      useClientSide({ experimentName: 'wrong_experiment_id' }),
     );
 
     expect(result.current).toEqual(null);

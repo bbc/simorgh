@@ -4,7 +4,7 @@ import React, { useContext, useState } from 'react';
 import { jsx, useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
-import useOptimizely from '#app/hooks/useOptimizely';
+import useOptimizely, { ExperimentState } from '#app/hooks/useOptimizely';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
@@ -92,18 +92,18 @@ const getTimestampComponent =
     firstPublished: string,
     lastPublished: string,
   ) =>
-  (props: ComponentToRenderProps & TimeStampProps) =>
-    hasByline ? (
-      <Byline blocks={bylineContribBlocks}>
-        <Timestamp
-          firstPublished={new Date(firstPublished).getTime()}
-          lastPublished={new Date(lastPublished).getTime()}
-          popOut={false}
-        />
-      </Byline>
-    ) : (
-      <Timestamp {...props} popOut={false} />
-    );
+    (props: ComponentToRenderProps & TimeStampProps) =>
+      hasByline ? (
+        <Byline blocks={bylineContribBlocks}>
+          <Timestamp
+            firstPublished={new Date(firstPublished).getTime()}
+            lastPublished={new Date(lastPublished).getTime()}
+            popOut={false}
+          />
+        </Byline>
+      ) : (
+        <Timestamp {...props} popOut={false} />
+      );
 
 const getMpuComponent =
   (allowAdvertising: boolean) => (props: ComponentToRenderProps) =>
@@ -160,6 +160,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const experimentVariant = useOptimizely({
     experimentName: OPTIMIZELY_CONFIG.ruleKey,
+    runtimeType: ExperimentState.SERVER_SIDE,
   });
 
   const isInExperiment = experimentVariant && experimentVariant !== 'off';
@@ -269,12 +270,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const showContinueReadingButton = Boolean(
     !isAmp &&
-      !isLite &&
-      !isApp &&
-      experimentVariant != null &&
-      ['read-more-a', 'read-more-b', 'read-more-a-and-top-stories'].includes(
-        experimentVariant,
-      ),
+    !isLite &&
+    !isApp &&
+    experimentVariant != null &&
+    ['read-more-a', 'read-more-b', 'read-more-a-and-top-stories'].includes(
+      experimentVariant,
+    ),
   );
   return (
     <div css={styles.pageWrapper}>

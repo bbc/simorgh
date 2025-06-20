@@ -12,7 +12,7 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import { Toggles } from '#app/models/types/global';
-import useOptimizely from '../useOptimizely';
+import * as useOptimizely from '../useOptimizely';
 import * as serviceContextModule from '../../contexts/ServiceContext';
 import useViewTracker from '.';
 import fixtureData from './fixtureData.json';
@@ -73,8 +73,6 @@ jest.mock('#app/lib/utilities/getUUID', () =>
   jest.fn().mockImplementation(() => '12345678-abcd-1fed-0123-a1b2c3d4e5f6'),
 );
 
-jest.mock('#app/hooks/useOptimizely', () => jest.fn());
-
 const {
   metadata: { atiAnalytics },
 } = fixtureData;
@@ -84,7 +82,7 @@ beforeEach(() => {
   jest.useFakeTimers();
   console.error = jest.fn();
 
-  (useOptimizely as jest.Mock).mockReturnValue(null);
+  jest.spyOn(useOptimizely, 'default').mockReturnValue(null);
 
   // @ts-expect-error mocking required for tests
   global.IntersectionObserver = IntersectionObserver;
@@ -261,7 +259,7 @@ describe('useViewTracker', () => {
     });
 
     it('should use componentName property if provided in eventTrackingData object', async () => {
-      (useOptimizely as jest.Mock).mockReturnValue('variation_a');
+      jest.spyOn(useOptimizely, 'default').mockReturnValue('variation_a');
 
       const { result } = renderHook(
         () =>
@@ -634,7 +632,7 @@ describe('useViewTracker', () => {
 
     describe('Optimizely', () => {
       it('should send event to Optimizely when element is 50% or more in view for more than 1 second and optimizely object exists', async () => {
-        (useOptimizely as jest.Mock).mockReturnValue('variation_a');
+        jest.spyOn(useOptimizely, 'default').mockReturnValue('variation_a');
 
         const { result } = renderHook(
           () => useViewTracker({ ...trackingData, sendOptimizelyEvents: true }),

@@ -1,15 +1,8 @@
-import React, { PropsWithChildren } from 'react';
 import {
   act,
   renderHook,
 } from '#app/components/react-testing-library-with-providers';
-import { RequestContextProvider } from '#contexts/RequestContext';
-import {
-  ServerSideExperiment,
-  PageTypes,
-  Services,
-} from '#app/models/types/global';
-import useOptimizely from '.';
+import useOptimizely, { ExperimentState } from '.';
 import * as serverSideHook from './useServerSide';
 import * as clientSideHook from './useClientSide';
 
@@ -18,88 +11,50 @@ describe('useOptimizely custom hook', () => {
     jest.restoreAllMocks();
   });
 
-  const renderUseOptimizely = async (params?: {
-    serverSideExperiments?: ServerSideExperiment[];
-    flagKey?: string;
+  const renderUseOptimizely = async ({
+    experimentName,
+    runtimeType,
+  }: {
+    experimentName?: string;
+    runtimeType: ExperimentState;
   }) => {
-    const flagKey = params?.flagKey;
-    const serverSideExperiments = params?.serverSideExperiments;
-
-    const props = {
-      serverSideExperiments,
-      isAmp: false,
-      pageType: 'STY' as PageTypes,
-      service: 'news' as Services,
-      pathname: 'bar',
-    };
-
-    const wrapper = ({ children }: PropsWithChildren) => (
-      <RequestContextProvider {...props}>{children}</RequestContextProvider>
-    );
-
     const { result } = await act(async () => {
-      return renderHook(() => useOptimizely({ experimentName: flagKey }), {
-        wrapper,
-      });
+      return renderHook(() => useOptimizely({ experimentName, runtimeType }));
     });
 
     return result.current;
   };
 
   it('should return null if flagKey is not defined', async () => {
-    const result = await renderUseOptimizely();
-    expect(result).toEqual(null);
-  });
-
-  it('should return null if optimizely is not defined', async () => {
-    jest.spyOn(serverSideHook, 'default').mockReturnValueOnce(null);
-    jest.spyOn(clientSideHook, 'default').mockReturnValueOnce(null);
-
     const result = await renderUseOptimizely({
-      flagKey: 'correct_experiment_id',
+      runtimeType: ExperimentState.CLIENT_SIDE,
     });
-
     expect(result).toEqual(null);
   });
 
-  it('should return null if the serverSideExperiments array is empty and if clientSideHook returns null', async () => {
+  it('should call serverSide hook if runtimeType is set to SERVER_SIDE and return the correct server side variation', async () => {
     jest.spyOn(clientSideHook, 'default').mockReturnValueOnce(null);
-
-    const result = await renderUseOptimizely({
-      flagKey: 'correct_experiment_id',
-      serverSideExperiments: [],
-    });
-
-    expect(result).toEqual(null);
-  });
-
-  it('should call useServerSideClient if a serverSideExperiments array is provided and should return the correct server side Variation', async () => {
     jest
       .spyOn(serverSideHook, 'default')
       .mockReturnValueOnce('someServerSideVariation');
-    jest.spyOn(clientSideHook, 'default').mockReturnValueOnce(null);
 
     const result = await renderUseOptimizely({
-      flagKey: 'correct_experiment_id',
-      serverSideExperiments: [
-        {
-          experimentName: 'foo',
-          variation: 'false',
-          enabled: true,
-        } as ServerSideExperiment,
-      ],
+      experimentName: 'correct_experiment_id',
+      runtimeType: ExperimentState.SERVER_SIDE,
     });
 
     expect(result).toEqual('someServerSideVariation');
   });
 
-  it('should call client side hook if serverSideExperiments is flasy and should return the correct client side Variation', async () => {
+  it('should call serverSide hook if runtimeType is set to SERVER_SIDE and return the correct server side variation', async () => {
     jest
       .spyOn(clientSideHook, 'default')
       .mockReturnValueOnce('someClientSideVariation');
+    jest.spyOn(serverSideHook, 'default').mockReturnValueOnce(null);
 
     const result = await renderUseOptimizely({
-      flagKey: 'correct_experiment_id',
+      experimentName: 'correct_experiment_id',
+      runtimeType: ExperimentState.CLIENT_SIDE,
     });
 
     expect(result).toEqual('someClientSideVariation');

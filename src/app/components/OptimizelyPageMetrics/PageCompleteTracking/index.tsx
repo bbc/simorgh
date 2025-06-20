@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect, useRef } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
-import useOptimizely from '#app/hooks/useOptimizely';
+import useOptimizely, { ExperimentState } from '#hooks/useOptimizely';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 
 const PageCompleteTracking = () => {
@@ -12,6 +12,7 @@ const PageCompleteTracking = () => {
 
   const experimentVariation = useOptimizely({
     experimentName: OPTIMIZELY_CONFIG.flagKey,
+    runtimeType: ExperimentState.CLIENT_SIDE,
   });
 
   const sendPageCompleteEvent =

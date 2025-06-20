@@ -5,7 +5,7 @@ import { useContext, useEffect, useState, useRef, useCallback } from 'react';
 
 import { RequestContext } from '#app/contexts/RequestContext';
 import { OptimizelyContext } from '@optimizely/react-sdk';
-import useOptimizely from '#app/hooks/useOptimizely';
+import useOptimizely, { ExperimentState } from '#app/hooks/useOptimizely';
 import {
   STATIC_ATI_VIEW_TRACKING,
   VIEW_EVENT,
@@ -46,6 +46,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
   const { optimizely } = useContext(OptimizelyContext);
   const optimizelyVariation = useOptimizely({
     experimentName: OPTIMIZELY_CONFIG.ruleKey,
+    runtimeType: ExperimentState.SERVER_SIDE,
   });
 
   const observer = useRef(null);

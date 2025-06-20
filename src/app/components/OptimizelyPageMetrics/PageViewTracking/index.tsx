@@ -1,6 +1,6 @@
 import { useState, useContext, useEffect } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
-import useOptimizely from '#hooks/useOptimizely';
+import useOptimizely, { ExperimentState } from '#hooks/useOptimizely';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 
 const PageViewTracking = () => {
@@ -9,6 +9,7 @@ const PageViewTracking = () => {
 
   const experimentVariation = useOptimizely({
     experimentName: OPTIMIZELY_CONFIG.flagKey,
+    runtimeType: ExperimentState.CLIENT_SIDE,
   });
 
   const sendPageViewEvent = experimentVariation && !pageViewSent;

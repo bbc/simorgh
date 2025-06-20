@@ -6,7 +6,7 @@ import { jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
 import { PageTypes } from '#app/models/types/global';
-import useOptimizely from '#app/hooks/useOptimizely';
+import useOptimizely, { ExperimentState } from '#app/hooks/useOptimizely';
 import OPTIMIZELY_CONFIG from '#app/lib/config/optimizely';
 import withOptimizelyProvider from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
 import { TopStoryItem } from '../../pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
@@ -62,6 +62,7 @@ const PageLayoutWrapper = ({
   let propsForOJExperiment = {};
   const experimentVariant = useOptimizely({
     experimentName: OPTIMIZELY_CONFIG.ruleKey,
+    runtimeType: ExperimentState.SERVER_SIDE,
   });
 
   if (pageType === 'article') {

@@ -1,20 +1,21 @@
-import { ServerSideExperiment } from '#app/models/types/global';
 import { OptimizelyContext } from '@optimizely/react-sdk';
 import { useContext } from 'react';
+import { RequestContext } from '#app/contexts/RequestContext';
 import activateExperiment from '../activateExperiment';
 
-type Props = {
-  serverSideExperiments: ServerSideExperiment[];
-  flagKey: string;
-};
-
-export default ({ serverSideExperiments, flagKey }: Props) => {
+export default (experimentName: string) => {
   const { optimizely } = useContext(OptimizelyContext);
+  const { serverSideExperiments } = useContext(RequestContext);
 
   if (!optimizely) return null;
 
+  if (!serverSideExperiments || serverSideExperiments.length === 0) {
+    return null;
+  }
+
   const experiment = serverSideExperiments.find(
-    ({ experimentName }) => experimentName === flagKey,
+    ({ experimentName: serverSideExperiment }) =>
+      serverSideExperiment === experimentName,
   );
 
   if (!experiment) return null;
@@ -24,7 +25,7 @@ export default ({ serverSideExperiments, flagKey }: Props) => {
 
   if (!variation || variation === 'false') return null;
 
-  if (variation) activateExperiment(optimizely, flagKey, variation);
+  if (variation) activateExperiment(optimizely, experimentName, variation);
 
   return variation;
 };

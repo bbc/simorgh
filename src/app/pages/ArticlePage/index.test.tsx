@@ -57,6 +57,7 @@ jest.mock('#app/components/OptimizelyPageMetrics');
 
 jest.mock('#app/hooks/useOptimizely', () => ({
   __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizely'),
   default: jest.fn(),
 }));
 
