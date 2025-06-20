@@ -235,9 +235,6 @@ exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] 
       10:00
     </time>
   </button>
-  <noscript>
-    &lt;div class="bbc-kvi82l"&gt;&lt;p class="bbc-8ugaiq"&gt;Na&#x27;urarku na da matsalar sauraren sauti&lt;/p&gt;&lt;/div&gt;
-  </noscript>
   <div
     class="bbc-lgx6cw"
     style="padding-bottom:0;overflow:hidden"
@@ -313,9 +310,6 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
       10:00
     </time>
   </button>
-  <noscript>
-    &lt;div class="bbc-kvi82l"&gt;&lt;p class="bbc-8ugaiq"&gt;Na&#x27;urarku na da matsalar sauraren sauti&lt;/p&gt;&lt;/div&gt;
-  </noscript>
   <div
     class="bbc-lgx6cw"
     style="padding-bottom:0;overflow:hidden"
@@ -395,9 +389,6 @@ exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`]
         10:00
       </time>
     </button>
-    <noscript>
-      &lt;div class="bbc-kvi82l"&gt;&lt;p class="bbc-8ugaiq"&gt;Na&#x27;urarku na da matsalar sauraren sauti&lt;/p&gt;&lt;/div&gt;
-    </noscript>
     <div
       class="bbc-lgx6cw"
       style="padding-bottom:0;overflow:hidden"
