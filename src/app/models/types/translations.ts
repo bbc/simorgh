@@ -22,7 +22,6 @@ export interface Translations {
     toEasySite: string;
     easySite: string;
     standardSite: string;
-    format: string;
     aIDisclaimer: string;
     learnMore: string;
     learnMoreLink: string;

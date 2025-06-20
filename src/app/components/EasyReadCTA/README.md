@@ -1,6 +1,6 @@
 ## Description
 
-This component renders an Easy Read call to action (CTA). This component sits at the top of article pages that have an AI generated "easy read" version available, and can be clicked to toggle between the standard version and the easy read equivalent.
+This component renders an Easy Read call to action (CTA).This component sits directly below the h1 at the top of article pages that have an AI generated "easy read" version available, and can be clicked to toggle between the standard version and the easy read equivalent.
 
 ## Props
 
