@@ -8,7 +8,7 @@ import { waitFor } from '@testing-library/dom';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import * as trackingToggle from '#hooks/useTrackingToggle';
 import constructATIUrl from '#app/lib/analyticsUtils/staticATITracking/constructATIUrl';
-import useOptimizelyVariation from '../useOptimizelyVariation';
+import useOptimizely from '../useOptimizely';
 import {
   AllTheProviders,
   render,
@@ -67,7 +67,7 @@ window.__reverb = {
   __reverbLoadedPromise: Promise.resolve(reverbMock),
 };
 
-jest.mock('#app/hooks/useOptimizelyVariation', () => jest.fn());
+jest.mock('#app/hooks/useOptimizely', () => jest.fn());
 
 const wrapper = ({ children }) => (
   <AllTheProviders
@@ -122,7 +122,7 @@ beforeEach(() => {
     ...rest,
   };
 
-  useOptimizelyVariation.mockReturnValue(null);
+  useOptimizely.mockReturnValue(null);
 
   jest.replaceProperty(
     serviceContextModule,
@@ -500,7 +500,7 @@ describe('useClickTrackerHandler', () => {
     });
 
     it('should use componentName property if provided in eventTrackingData object', async () => {
-      useOptimizelyVariation.mockReturnValue('variation_a');
+      useOptimizely.mockReturnValue('variation_a');
 
       const {
         metadata: { atiAnalytics },
@@ -533,7 +533,7 @@ describe('useClickTrackerHandler', () => {
     });
 
     it('should fire event to Optimizely if optimizely object exists', async () => {
-      useOptimizelyVariation.mockReturnValue('variation_a');
+      useOptimizely.mockReturnValue('variation_a');
 
       const {
         metadata: { atiAnalytics },

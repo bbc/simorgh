@@ -5,7 +5,7 @@ import {
   PageTypes,
   Services,
   Variants,
-  MvtExperiment,
+  ServerSideExperiment,
 } from '#app/models/types/global';
 import getStatsDestination from './getStatsDestination';
 import getOriginContext from './getOriginContext';
@@ -26,7 +26,7 @@ export type RequestContextProps = {
   isLite: boolean;
   isNextJs: boolean;
   isUK: boolean;
-  serverSideExperiments?: MvtExperiment[] | null;
+  serverSideExperiments?: ServerSideExperiment[] | null;
   origin: string;
   pageType: PageTypes;
   derivedPageType: string | null;
@@ -60,7 +60,7 @@ type RequestProviderProps = {
   showCookieBannerBasedOnCountry?: boolean;
   statusCode?: number | null;
   timeOnServer?: number | null;
-  serverSideExperiments?: MvtExperiment[] | null;
+  serverSideExperiments?: ServerSideExperiment[] | null;
   variant?: Variants | null;
   isUK?: boolean | null;
 };

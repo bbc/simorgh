@@ -24,7 +24,7 @@ export type Toggles =
     }
   | { _environment: string };
 
-export type MvtExperiment = {
+export type ServerSideExperiment = {
   experimentName: string;
   variation: string;
   enabled: boolean;

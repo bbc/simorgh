@@ -1,5 +1,5 @@
 import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
-import { MvtExperiment } from '#app/models/types/global';
+import { ServerSideExperiment } from '#app/models/types/global';
 import { renderHook } from '@testing-library/react';
 import * as React from 'react';
 import { act, PropsWithChildren } from 'react';
@@ -19,7 +19,7 @@ const renderUseServerSide = async ({
   serverSideExperiments,
 }: {
   flagKey: string;
-  serverSideExperiments: MvtExperiment[];
+  serverSideExperiments: ServerSideExperiment[];
 }) => {
   const wrapper = ({ children }: PropsWithChildren) => (
     <OptimizelyProvider
@@ -39,7 +39,7 @@ const renderUseServerSide = async ({
   return result.current;
 };
 
-describe('useOptimizelyVariation - useServerSide', () => {
+describe('useOptimizely - useServerSide', () => {
   beforeEach(() => {
     jest.clearAllMocks();
     jest.spyOn(React, 'useContext').mockReturnValue({ optimizely });
@@ -55,7 +55,7 @@ describe('useOptimizelyVariation - useServerSide', () => {
     ];
 
     const result = await renderUseServerSide({
-      serverSideExperiments: mockMvtExperiments as MvtExperiment[],
+      serverSideExperiments: mockMvtExperiments as ServerSideExperiment[],
       flagKey: 'bar',
     });
 
@@ -71,7 +71,7 @@ describe('useOptimizelyVariation - useServerSide', () => {
       },
     ];
     const result = await renderUseServerSide({
-      serverSideExperiments: mockMvtExperiments as MvtExperiment[],
+      serverSideExperiments: mockMvtExperiments as ServerSideExperiment[],
       flagKey: 'foo',
     });
 
@@ -87,7 +87,7 @@ describe('useOptimizelyVariation - useServerSide', () => {
       },
     ];
     const result = await renderUseServerSide({
-      serverSideExperiments: mockMvtExperiments as MvtExperiment[],
+      serverSideExperiments: mockMvtExperiments as ServerSideExperiment[],
       flagKey: 'foo',
     });
 
@@ -103,7 +103,7 @@ describe('useOptimizelyVariation - useServerSide', () => {
       },
     ];
     const result = await renderUseServerSide({
-      serverSideExperiments: mockMvtExperiments as MvtExperiment[],
+      serverSideExperiments: mockMvtExperiments as ServerSideExperiment[],
       flagKey: 'foo',
     });
     expect(result).toBeNull();
@@ -118,7 +118,7 @@ describe('useOptimizelyVariation - useServerSide', () => {
       },
     ];
     const result = await renderUseServerSide({
-      serverSideExperiments: mockMvtExperiments as unknown as MvtExperiment[],
+      serverSideExperiments: mockMvtExperiments as unknown as ServerSideExperiment[],
       flagKey: 'foo',
     });
 
@@ -134,7 +134,7 @@ describe('useOptimizelyVariation - useServerSide', () => {
       },
     ];
     await renderUseServerSide({
-      serverSideExperiments: mockMvtExperiments as MvtExperiment[],
+      serverSideExperiments: mockMvtExperiments as ServerSideExperiment[],
       flagKey: 'foo',
     });
 
@@ -150,7 +150,7 @@ describe('useOptimizelyVariation - useServerSide', () => {
       },
     ];
     await renderUseServerSide({
-      serverSideExperiments: mockMvtExperiments as MvtExperiment[],
+      serverSideExperiments: mockMvtExperiments as ServerSideExperiment[],
       flagKey: 'foo',
     });
 

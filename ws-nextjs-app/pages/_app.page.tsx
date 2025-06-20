@@ -13,7 +13,7 @@ import {
   Services,
   Toggles,
   Variants,
-  MvtExperiment,
+  ServerSideExperiment,
 } from '../../src/app/models/types/global';
 import PageWrapper from '../../src/app/components/PageLayoutWrapper';
 
@@ -26,7 +26,7 @@ interface Props extends AppProps {
     isLite?: boolean;
     isNextJs: boolean;
     isAvEmbeds?: boolean;
-    serverSideExperiments: MvtExperiment[] | null;
+    serverSideExperiments: ServerSideExperiment[] | null;
     pageData: {
       metadata: {
         type: PageTypes;

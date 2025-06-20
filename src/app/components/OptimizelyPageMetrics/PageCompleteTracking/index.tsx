@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect, useRef } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
-import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
+import useOptimizely from '#app/hooks/useOptimizely';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 
 const PageCompleteTracking = () => {
@@ -10,7 +10,9 @@ const PageCompleteTracking = () => {
   const [pageCompleteSent, setPageCompleteSent] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
-  const experimentVariation = useOptimizelyVariation({ flagKey: OPTIMIZELY_CONFIG.flagKey });
+  const experimentVariation = useOptimizely({
+    flagKey: OPTIMIZELY_CONFIG.flagKey,
+  });
 
   const sendPageCompleteEvent =
     experimentVariation && !pageCompleteSent && isVisible;

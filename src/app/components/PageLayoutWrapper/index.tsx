@@ -4,11 +4,11 @@
 import React, { PropsWithChildren, useContext } from 'react';
 import { jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
-
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
 import { PageTypes } from '#app/models/types/global';
-import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
+import useOptimizely from '#app/hooks/useOptimizely';
 import OPTIMIZELY_CONFIG from '#app/lib/config/optimizely';
+import withOptimizelyProvider from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
 import { TopStoryItem } from '../../pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import WebVitals from '../../legacy/containers/WebVitals';
 import HeaderContainer from '../../legacy/containers/Header';
@@ -20,7 +20,6 @@ import { RequestContext } from '../../contexts/RequestContext';
 import fontFacesLazy from '../ThemeProvider/fontFacesLazy';
 import styles from './index.styles';
 import { OptimoMostReadRecord, CPSMostReadRecord } from '../MostRead/types';
-import withOptimizelyProvider from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
 
 type ModelType = {
   blocks?: [
@@ -61,7 +60,9 @@ const PageLayoutWrapper = ({
   const reportingPageType = pageType?.replace(/ /g, '');
   let wordCount: wordCountType = 0;
   let propsForOJExperiment = {};
-  const experimentVariant = useOptimizelyVariation({ flagKey: OPTIMIZELY_CONFIG.ruleKey });
+  const experimentVariant = useOptimizely({
+    flagKey: OPTIMIZELY_CONFIG.ruleKey,
+  });
 
   if (pageType === 'article') {
     wordCount = pageData?.content?.model?.blocks
@@ -81,7 +82,8 @@ const PageLayoutWrapper = ({
     const mostReadItems = pageData.mostRead?.items;
 
     let dataForOJExperiment;
-    if (experimentVariant != null &&
+    if (
+      experimentVariant &&
       ['top-bar-top-stories', 'read-more-a-and-top-stories'].includes(
         experimentVariant,
       )
@@ -99,9 +101,9 @@ const PageLayoutWrapper = ({
   const serviceFonts = fontFacesLazy(service);
   const fontJs =
     isLite ||
-      isAmp ||
-      !serviceFonts.length ||
-      process.env.JEST_WORKER_ID !== undefined
+    isAmp ||
+    !serviceFonts.length ||
+    process.env.JEST_WORKER_ID !== undefined
       ? ''
       : `
   				if ("FileReader" in window && "Promise" in window && "fetch" in window) {
@@ -187,8 +189,8 @@ const PageLayoutWrapper = ({
                 }
                 let wrappedContentsShortcut = wrappedContents[wrappedYear];
                 let wrappedTopics = ${JSON.stringify(
-        pageData?.metadata?.topics,
-      )};
+                  pageData?.metadata?.topics,
+                )};
                 if (wrappedTopics) {
                     wrappedTopics.forEach(({ topicName, topicId }) => {
                         if (!topicsContents.${service}) topicsContents.${service} = {};

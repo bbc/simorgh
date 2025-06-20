@@ -1,10 +1,10 @@
-import { MvtExperiment } from '#app/models/types/global';
+import { ServerSideExperiment } from '#app/models/types/global';
 import { OptimizelyContext } from '@optimizely/react-sdk';
 import { useContext } from 'react';
 import activateExperiment from '../activateExperiment';
 
 type Props = {
-  serverSideExperiments: MvtExperiment[];
+  serverSideExperiments: ServerSideExperiment[];
   flagKey: string;
 };
 

@@ -4,7 +4,7 @@ import React, { useContext, useState } from 'react';
 import { jsx, useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
-import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
+import useOptimizely from '#app/hooks/useOptimizely';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
@@ -156,7 +156,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
-  const experimentVariant = useOptimizelyVariation({ flagKey: OPTIMIZELY_CONFIG.ruleKey });
+  const experimentVariant = useOptimizely({ flagKey: OPTIMIZELY_CONFIG.ruleKey });
 
   const isInExperiment = experimentVariant && experimentVariant !== 'off';
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;

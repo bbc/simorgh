@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import { useContext, useCallback, useState } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
-import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
+import useOptimizely from '#app/hooks/useOptimizely';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
 import constructStaticATIUrl from '#app/lib/analyticsUtils/staticATITracking/constructATIUrl';
 import {
@@ -41,7 +41,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
   const { service, useReverb } = useContext(ServiceContext);
 
   const { optimizely } = useContext(OptimizelyContext);
-  const optimizelyVariation = useOptimizelyVariation({ flagKey: OPTIMIZELY_CONFIG.ruleKey });
+  const experimentVariation = useOptimizely({ flagKey: OPTIMIZELY_CONFIG.ruleKey });
 
   return useCallback(
     async event => {
@@ -69,7 +69,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
           event.stopPropagation();
           event.preventDefault();
 
-          if (optimizely && sendOptimizelyEvents && optimizelyVariation) {
+          if (optimizely && sendOptimizelyEvents && experimentVariation) {
             const overrideAttributes = optimizely?.user.attributes;
 
             optimizely.track(
@@ -97,9 +97,9 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
               useReverb,
               ...(groupTracker && { groupTracker }),
               ...(itemTracker && { itemTracker }),
-              ...(optimizelyVariation &&
-                optimizelyVariation !== 'off' && {
-                experimentVariant: optimizelyVariation,
+              ...(experimentVariation &&
+                experimentVariation !== 'off' && {
+                experimentVariant: experimentVariation,
               }),
             });
           } finally {
@@ -130,7 +130,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
       format,
       sendOptimizelyEvents,
       optimizely,
-      optimizelyVariation,
+      experimentVariation,
       detailedPlacement,
       useReverb,
       itemTracker,

@@ -5,7 +5,7 @@ import { useContext, useEffect, useState, useRef, useCallback } from 'react';
 
 import { RequestContext } from '#app/contexts/RequestContext';
 import { OptimizelyContext } from '@optimizely/react-sdk';
-import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
+import useOptimizely from '#app/hooks/useOptimizely';
 import {
   STATIC_ATI_VIEW_TRACKING,
   VIEW_EVENT,
@@ -44,7 +44,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
   });
 
   const { optimizely } = useContext(OptimizelyContext);
-  const optimizelyVariation = useOptimizelyVariation(
+  const optimizelyVariation = useOptimizely(
     { flagKey: OPTIMIZELY_CONFIG.ruleKey, }
   );
 

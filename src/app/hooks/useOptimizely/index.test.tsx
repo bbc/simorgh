@@ -4,18 +4,22 @@ import {
   renderHook,
 } from '#app/components/react-testing-library-with-providers';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { MvtExperiment, PageTypes, Services } from '#app/models/types/global';
-import useOptimizelyVariation from '.';
+import {
+  ServerSideExperiment,
+  PageTypes,
+  Services,
+} from '#app/models/types/global';
+import useOptimizely from '.';
 import * as serverSideHook from './useServerSide';
 import * as clientSideHook from './useClientSide';
 
-describe('useOptimizelyVariation custom hook', () => {
+describe('useOptimizely custom hook', () => {
   beforeEach(() => {
     jest.restoreAllMocks();
   });
 
-  const renderUseOptimizelyVariation = async (params?: {
-    serverSideExperiments?: MvtExperiment[];
+  const renderUseOptimizely = async (params?: {
+    serverSideExperiments?: ServerSideExperiment[];
     flagKey?: string;
   }) => {
     const flagKey = params?.flagKey;
@@ -34,7 +38,7 @@ describe('useOptimizelyVariation custom hook', () => {
     );
 
     const { result } = await act(async () => {
-      return renderHook(() => useOptimizelyVariation({ flagKey }), {
+      return renderHook(() => useOptimizely({ flagKey }), {
         wrapper,
       });
     });
@@ -43,7 +47,7 @@ describe('useOptimizelyVariation custom hook', () => {
   };
 
   it('should return null if flagKey is not defined', async () => {
-    const result = await renderUseOptimizelyVariation();
+    const result = await renderUseOptimizely();
     expect(result).toEqual(null);
   });
 
@@ -51,7 +55,7 @@ describe('useOptimizelyVariation custom hook', () => {
     jest.spyOn(serverSideHook, 'default').mockReturnValueOnce(null);
     jest.spyOn(clientSideHook, 'default').mockReturnValueOnce(null);
 
-    const result = await renderUseOptimizelyVariation({
+    const result = await renderUseOptimizely({
       flagKey: 'correct_experiment_id',
     });
 
@@ -61,7 +65,7 @@ describe('useOptimizelyVariation custom hook', () => {
   it('should return null if the serverSideExperiments array is empty and if clientSideHook returns null', async () => {
     jest.spyOn(clientSideHook, 'default').mockReturnValueOnce(null);
 
-    const result = await renderUseOptimizelyVariation({
+    const result = await renderUseOptimizely({
       flagKey: 'correct_experiment_id',
       serverSideExperiments: [],
     });
@@ -75,14 +79,14 @@ describe('useOptimizelyVariation custom hook', () => {
       .mockReturnValueOnce('someServerSideVariation');
     jest.spyOn(clientSideHook, 'default').mockReturnValueOnce(null);
 
-    const result = await renderUseOptimizelyVariation({
+    const result = await renderUseOptimizely({
       flagKey: 'correct_experiment_id',
       serverSideExperiments: [
         {
           experimentName: 'foo',
           variation: 'false',
           enabled: true,
-        } as MvtExperiment,
+        } as ServerSideExperiment,
       ],
     });
 
@@ -94,7 +98,7 @@ describe('useOptimizelyVariation custom hook', () => {
       .spyOn(clientSideHook, 'default')
       .mockReturnValueOnce('someClientSideVariation');
 
-    const result = await renderUseOptimizelyVariation({
+    const result = await renderUseOptimizely({
       flagKey: 'correct_experiment_id',
     });
 
