@@ -1,36 +1,6 @@
 import { css, Theme } from '@emotion/react';
 import pixelsToRem from '../../utilities/pixelsToRem';
 
-// const multicolour = keyframes({
-//   '0%': { backgroundColor: '#00FFFF' },
-//   '25%': { backgroundColor: '#39FF14' },
-//   '50%': { backgroundColor: '#FFFF00' },
-//   '75%': { backgroundColor: '#FF1493' },
-// });
-
-// const changes = keyframes({
-//   '0%': { backgroundPosition: '0% 50%' },
-//   '100%': { backgroundPosition: '800% 50%' },
-// });
-
-// const shrinkGrowSpin = keyframes({
-//   '0%': {
-//     transform: 'scale(3) rotate(0deg)',
-//   },
-//   '25%': {
-//     transform: 'scale(0.5) rotate(90deg)',
-//   },
-//   '50%': {
-//     transform: 'scale(2) rotate(180deg)',
-//   },
-//   '75%': {
-//     transform: 'scale(0.5) rotate(270deg)',
-//   },
-//   '100%': {
-//     transform: 'scale(3) rotate(360deg)',
-//   },
-// });
-
 export default {
   icon: ({ palette }: Theme) =>
     css({
@@ -39,6 +9,13 @@ export default {
       verticalAlign: 'middle',
       width: `${pixelsToRem(14)}rem`,
       height: `${pixelsToRem(14)}rem`,
+    }),
+  ctaContainer: ({ mq }: Theme) =>
+    css({
+      marginBottom: `${pixelsToRem(20)}rem`,
+      [mq.GROUP_3_MIN_WIDTH]: {
+        marginBottom: `${pixelsToRem(28)}rem`,
+      },
     }),
   linkContainer: ({ spacings }: Theme) =>
     css({

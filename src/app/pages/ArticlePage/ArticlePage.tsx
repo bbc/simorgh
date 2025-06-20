@@ -121,9 +121,9 @@ const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
 const getPodcastPromoComponent = (podcastPromoEnabled: boolean) => () =>
   podcastPromoEnabled ? <InlinePodcastPromo /> : null;
 
-const getHeadlineComponent = (props: ComponentToRenderProps) => (
-  <ArticleHeadline {...props} />
-);
+const getHeadlineComponent =
+  (isEasyPage: boolean) => (props: ComponentToRenderProps) =>
+    ArticleHeadline(props, isEasyPage);
 
 const getVideoComponent =
   (translations: Translations) => (props: ComponentToRenderProps) => {
@@ -185,8 +185,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     block => block.type === 'byline',
   ) as OptimoBylineBlock;
 
-  // HACKATHON CHANGES
-  // SHOULD MOVE TO REQUEST CONTEXT
   let targetBlock = null;
   let removeIndex = null;
   let easyMetaBlock;
@@ -203,15 +201,14 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     !easyReadBlocks &&
     (easyMetaBlock as EasyReadMetaBlock)?.model?.easyReadAssetId ===
       undefined &&
-    (easyMetaBlock as EasyReadMetaBlock)?.model?.originalAssetId;
+    !!(easyMetaBlock as EasyReadMetaBlock)?.model?.originalAssetId;
 
   if (isEasyPage || easyReadBlocks) {
     targetBlock = easyMetaBlock as EasyReadMetaBlock;
     if (isEasyPage) {
       removeIndex = blocks.findIndex(block => block.type === 'easyReadMeta');
       blocks.splice(removeIndex, 1);
-    }
-    else{
+    } else {
       removeIndex = blocks.findIndex(block => block.type === 'easyRead');
       blocks.splice(removeIndex, 1);
     }
@@ -246,7 +243,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const componentsToRender = {
     visuallyHiddenHeadline,
-    headline: getHeadlineComponent,
+    headline: getHeadlineComponent(Boolean(isEasyPage || easyReadBlocks)),
     subheadline: Headings,
     audio: MediaLoader,
     video: getVideoComponent(translations),

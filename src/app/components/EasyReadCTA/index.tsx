@@ -62,7 +62,7 @@ type Props = {
 };
 
 const EasyReadCTA = ({ easyReadAssetId, originalAssetId }: Props) => {
- const viewTracker = useViewTracker(eventTrackingData);
+  const viewTracker = useViewTracker(eventTrackingData);
   const { pathname } = useContext(RequestContext);
   const { translations } = useContext(ServiceContext);
 
@@ -76,29 +76,13 @@ const EasyReadCTA = ({ easyReadAssetId, originalAssetId }: Props) => {
   const isEasyActive = easyReadAssetId == null;
 
   const { easyReadSite = defaultTranslations } = translations;
-  const {
-    toStandardSite,
-    toEasySite,
-    format,
-    aIDisclaimer,
-    learnMore,
-    learnMoreLink,
-  } = easyReadSite;
-
-  const id = 'Format';
+  const { toStandardSite, toEasySite, aIDisclaimer, learnMore, learnMoreLink } =
+    easyReadSite;
 
   return (
-    <GridItemMedium>
-      <section
-        role="region"
-        data-e2e="easy-read-cta"
-        aria-labelledby={id}
-        {...viewTracker}
-      >
+    <GridItemMedium css={styles.ctaContainer}>
+      <div data-e2e="easy-read-cta" {...viewTracker}>
         <FormatIcon css={styles.icon} />
-        <Text as="strong" id={id} hidden>
-          {format}
-        </Text>
         <CtaLink
           href={originalHref}
           text={toStandardSite}
@@ -109,7 +93,7 @@ const EasyReadCTA = ({ easyReadAssetId, originalAssetId }: Props) => {
           text={toEasySite}
           {...(isEasyActive && { selected: true })}
         />
-      </section>
+      </div>
       {isEasyActive && (
         <Text as="small" size="brevier" css={styles.disclaimer}>
           {aIDisclaimer} <InlineLink text={learnMore} to={learnMoreLink} />.
