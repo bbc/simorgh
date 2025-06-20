@@ -13,7 +13,7 @@ import styles from './index.styles';
 
 const ArticleHeadline = (
   props: ComponentToRenderProps,
-  isEasyPage: boolean,
+  isEasyPage?: boolean,
 ) => {
   const { pathname, isLite, isAmp, isApp } = useContext(RequestContext);
   const { translations } = useContext(ServiceContext);
