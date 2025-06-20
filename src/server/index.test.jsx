@@ -16,7 +16,7 @@ import routes from '../app/routes';
 import * as renderDocument from './Document';
 import sendCustomMetrics from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
-import { getExperimentVaryHeaders } from './utilities/mvtHeader';
+import { getExperimentVaryHeaders } from './utilities/experimentHeader';
 
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`
 dotenv.config({ path: './envConfig/local.env' });

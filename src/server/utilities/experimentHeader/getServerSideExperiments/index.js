@@ -1,6 +1,6 @@
 import enabledExperimentList from '../enabledExperimentsList';
 
-const getMvtExperiments = (headers, service, derivedPageType) => {
+export default (headers, service, derivedPageType) => {
   return Object.entries(headers).reduce((result, [header, content]) => {
     if (header.startsWith('mvt-')) {
       const noMvtPrefixHeader = header.slice(4);
@@ -34,5 +34,3 @@ const getMvtExperiments = (headers, service, derivedPageType) => {
     return result;
   }, []);
 };
-
-export default getMvtExperiments;

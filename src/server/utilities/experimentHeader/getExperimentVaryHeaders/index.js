@@ -1,4 +1,4 @@
-const getMvtVaryHeaders = mvtExperiments => {
+export default mvtExperiments => {
   return mvtExperiments
     .reduce((headerNames, experiment) => {
       const { experimentName, enabled } = experiment;
@@ -10,5 +10,3 @@ const getMvtVaryHeaders = mvtExperiments => {
     }, '')
     .slice(0, -2);
 };
-
-export default getMvtVaryHeaders;

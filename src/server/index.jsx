@@ -35,7 +35,7 @@ import getAgent from './utilities/getAgent';
 import {
   getServerExperiments,
   getExperimentVaryHeaders,
-} from './utilities/mvtHeader';
+} from './utilities/experimentHeader';
 import getAssetOrigins from './utilities/getAssetOrigins';
 import extractHeaders from './utilities/extractHeaders';
 import addPlatformToRequestChainHeader from './utilities/addPlatformToRequestChainHeader';
