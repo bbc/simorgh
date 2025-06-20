@@ -73,6 +73,7 @@ export const service: DefaultServiceConfig = {
         aIDisclaimer: `Ce facile à lire a été vérifié par un journaliste. Il a été créé avec l'IA (Intelligence Artificielle) à partir de la version standard.`,
         learnMore: 'En savoir plus sur la version facile à lire',
         learnMoreLink: 'https://www.bbc.co.uk/',
+      },
       liteSite: {
         onboardingMessage:
           'Vous visualisez une version texte de ce site web qui utilise moins de données. Voir la version principale du site, avec toutes les images et vidéos.',
@@ -83,7 +84,6 @@ export const service: DefaultServiceConfig = {
         dataSaving: 'Lire uniquement le texte pour utiliser moins de données',
         articleDataSavingLinkText:
           'Lire uniquement le texte pour utiliser moins de données',
-
       },
       mediaAssetPage: {
         mediaPlayer: 'Lecteur média',

@@ -289,6 +289,7 @@ export const StandardArticlePageWithEasyReadCta = {
   parameters: {
     chromatic: { disableSnapshot: true },
   },
+};
 
 export const ArticlePageWithMultipleContributors = {
   render: () => (

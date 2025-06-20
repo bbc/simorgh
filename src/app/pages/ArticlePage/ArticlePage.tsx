@@ -308,7 +308,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         experimentVariant,
       ),
   );
-  
+
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics atiData={atiData} />
