@@ -19,6 +19,10 @@ exports[`Message should render a 'Help reduce your power consumption' message 1`
   z-index: 1;
 }
 
+.no-js .emotion-0 {
+  display: none;
+}
+
 @media (min-width: 25rem) {
   .emotion-0 {
     left: calc(100% - 15.625rem);
