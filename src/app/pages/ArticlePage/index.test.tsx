@@ -53,8 +53,7 @@ jest.mock('../../components/ChartbeatAnalytics', () => {
 const atiAnalyticsSpy = jest.spyOn(ATIAnalytics, 'default');
 atiAnalyticsSpy.mockImplementation(() => <div>ATI Analytics</div>);
 
-jest.mock('#app/legacy/containers/OptimizelyArticleCompleteTracking');
-jest.mock('#app/legacy/containers/OptimizelyPageViewTracking');
+jest.mock('#app/components/OptimizelyPageMetrics');
 
 jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   __esModule: true,

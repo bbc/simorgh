@@ -47,12 +47,11 @@ const Component = ({
 export default {
   title: 'components/OptimoPromos/Latest Media Section',
   Component,
+  globals: {
+    backgrounds: { value: 'dark' },
+  },
   parameters: {
     metadata,
-    backgrounds: {
-      default: 'Dark',
-      values: [{ name: 'Dark', value: '#141414' }],
-    },
     design: [
       {
         name: 'Group 0',

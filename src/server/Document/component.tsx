@@ -68,7 +68,6 @@ const Document = ({
           ids={ids}
           styles={css}
           title={title}
-          data={data}
         />
       );
     default:

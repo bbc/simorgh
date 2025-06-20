@@ -15,6 +15,7 @@ export const AMP_ACCESS_JS = (
     src="https://cdn.ampproject.org/v0/amp-access-0.1.js"
   />
 );
+
 export const AMP_ANALYTICS_JS = (
   <script
     async={true}
@@ -22,25 +23,12 @@ export const AMP_ANALYTICS_JS = (
     src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
   />
 );
+
 export const AMP_BIND_JS = (
   <script
     async={true}
     custom-element="amp-bind"
     src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
-  />
-);
-export const AMP_CONSENT_JS = (
-  <script
-    async={true}
-    custom-element="amp-consent"
-    src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
-  />
-);
-export const AMP_GEO_JS = (
-  <script
-    async={true}
-    custom-element="amp-geo"
-    src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
   />
 );
 export const AMP_LIST_JS = (
@@ -50,6 +38,7 @@ export const AMP_LIST_JS = (
     src="https://cdn.ampproject.org/v0/amp-list-0.1.js"
   />
 );
+
 export const AMP_MUSTACHE_JS = (
   <script
     async={true}
@@ -57,14 +46,8 @@ export const AMP_MUSTACHE_JS = (
     src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"
   />
 );
+
 export const AMP_ADS_JS = (
-  <script
-    async={true}
-    custom-element="amp-ad"
-    src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"
-  />
-);
-export const AMP_AD = (
   <script
     async={true}
     custom-element="amp-ad"

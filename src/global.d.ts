@@ -1,5 +1,5 @@
 import { ReverbClient } from '#models/types/eventTracking';
-import { BumpType } from '#app/components/MediaLoader/types';
+import { BumpType, Player } from '#app/components/MediaLoader/types';
 
 declare global {
   interface Window {
@@ -33,7 +33,13 @@ declare global {
       bumpVersion: string[],
       callback: (Bump: BumpType) => void,
     ) => void;
-    // biome-ignore lint/correctness/noUndeclaredVariables: <explanation>
+    embeddedMedia: {
+      api: {
+        players: () => {
+          bbcMediaPlayer0: Player;
+        };
+      };
+    };
     mediaPlayers: Record<string, Player>;
     dotcom: {
       ads: {

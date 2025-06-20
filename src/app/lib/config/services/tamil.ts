@@ -245,6 +245,8 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'அடுத்த வானொலி நிகழ்ச்சி',
         duration: 'கால அளவு',
         recentEpisodes: 'முந்தைய நிகழ்ச்சிகள்',
+        podcastExternalLinks: 'இந்த பாட்காஸ்ட் இங்கே கிடைக்கும்',
+        download: 'எபிசோடை பதிவிறக்கம் செய்ய',
         closeVideo: 'மூடுக',
       },
       socialEmbed: {

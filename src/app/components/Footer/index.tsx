@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import { MouseEvent, useContext } from 'react';
-import { AmpCookieSettingsButton } from '#containers/ConsentBanner/Banner/cookie.amp';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import Link from './Link';
@@ -18,7 +17,7 @@ const openPrivacyManagerModal = (e: MouseEvent<HTMLAnchorElement>) => {
 };
 
 export default () => {
-  const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
+  const { showAdsBasedOnLocation } = useContext(RequestContext);
   const { footer } = useContext(ServiceContext);
 
   const {
@@ -40,18 +39,6 @@ export default () => {
   const elements = links
     ?.map(({ id, text, href, lang }) => {
       if (id === 'COOKIE_SETTINGS') {
-        if (isAmp) {
-          return (
-            // @ts-expect-error we do not have a className
-            <AmpCookieSettingsButton
-              lang={lang}
-              css={styles.ampCookieSettingButton}
-            >
-              {text}
-            </AmpCookieSettingsButton>
-          );
-        }
-
         if (showAdsBasedOnLocation) {
           return (
             <Link

@@ -6,7 +6,7 @@ import fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
 import overrideRendererOnTest from '#app/routes/utils/overrideRendererOnTest';
 import isTest from '#app/lib/utilities/isTest';
 import getErrorStatusCode from '#app/routes/utils/fetchPageData/utils/getErrorStatusCode';
-import { getPodcastExternalLinks } from '#app/routes/onDemandAudio/tempData/podcastExternalLinks';
+import getPodcastExternalLinks from '#app/routes/onDemandAudio/podcastExternalLinks';
 import nodeLogger from '#lib/logger.node';
 
 const logger = nodeLogger(__filename);
@@ -56,12 +56,12 @@ export default async ({
       recentEpisodesToggle;
 
     const externalLinks = isPodcast
-      ? await getPodcastExternalLinks(
+      ? await getPodcastExternalLinks({
           service,
-          brandId,
-          externalLinkVersionId,
           variant,
-        )
+          brandId,
+          versionId: externalLinkVersionId,
+        })
       : [];
     return {
       status,

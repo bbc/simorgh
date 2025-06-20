@@ -30,6 +30,7 @@ export interface PortraitVideoPromoProps {
       duration: string;
       kind: string;
       territories: string[];
+      guidance?: string | null;
     };
   };
   analytics?: {
