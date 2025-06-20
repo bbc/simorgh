@@ -309,10 +309,6 @@ const MediaLoader = ({
         css={[
           styles.figure(embedded),
           styles.withTranscriptVideo,
-          playerConfig?.ui?.skin === 'classic' && [
-            orientation === 'portrait' && styles.portraitFigure(embedded),
-            orientation === 'landscape' && styles.landscapeFigure,
-          ],
           !isAudio && [
             isPortrait && styles.portraitFigure(embedded),
             isLandscape && styles.landscapeFigure,

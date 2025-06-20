@@ -55,7 +55,6 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   width: 100%;
   margin: 0 0 1.5rem 0;
   aspect-ratio: 16/9;
-  aspect-ratio: 16/9;
 }
 
 .emotion-6:has(details) {
