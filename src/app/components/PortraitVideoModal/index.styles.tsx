@@ -42,7 +42,7 @@ const styles = {
       display: 'none',
       position: 'absolute',
       top: `${spacings.DOUBLE}rem`,
-      right: `${spacings.DOUBLE}rem`,
+      insetInlineEnd: `${spacings.DOUBLE}rem`,
       background: 'transparent',
       border: `${pixelsToRem(2)}rem solid ${palette.WHITE}`,
       cursor: 'pointer',
