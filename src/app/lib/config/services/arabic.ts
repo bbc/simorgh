@@ -51,8 +51,7 @@ export const service: DefaultServiceConfig = {
     podcastPromo: {
       title: 'يستحق الانتباه',
       brandTitle: 'قناتنا الرسمية على واتسا',
-      brandDescription:
-        'تابعوا التغطية الشاملة من بي بي سي نيوز عربي',
+      brandDescription: 'تابعوا التغطية الشاملة من بي بي سي نيوز عربي',
       image: {
         src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0lkrxsb.jpg',
         alt: 'بي بي سي نيوز عربي على تطبيقWhatsApp ',
