@@ -272,7 +272,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'Najważniejsze Wiadomości',
       latestMediaTitle: 'Najnowsze wideo',
-      featuresAnalysisTitle: 'Zobacz więcej',
+      featuresAnalysisTitle: 'Polecane przez redakcję',
       ugc: {
         noJsHeading: 'Nie można załadować tej strony.',
         noJsDescription:
