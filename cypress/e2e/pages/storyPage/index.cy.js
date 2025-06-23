@@ -19,8 +19,22 @@ const ampTests = [
   canonicalAndAmpArticleTests,
   ampArticleTests,
 ];
+
 const pageType = 'storyPage';
+
 const smokeTestSuites = [
+  {
+    path: '/hausa/labarai-54292969',
+    service: 'hausa',
+    runforEnv: 'live',
+    tests: canonicalTests,
+  },
+  {
+    path: '/hausa/labarai-23190660',
+    service: 'hausa',
+    runforEnv: ['local', 'test'],
+    tests: canonicalTests,
+  },
   {
     path: '/mundo/noticias-54274735',
     service: 'mundo',
@@ -58,21 +72,15 @@ const smokeTestSuites = [
     tests: canonicalTests,
   },
   {
-    path: '/sinhala/world-51723376',
-    service: 'sinhala',
-    runforEnv: 'live',
-    tests: canonicalTests,
-  },
-  {
-    path: '/sinhala/23225618',
-    service: 'sinhala',
-    runforEnv: 'test',
-    tests: canonicalTests,
-  },
-  {
     path: '/thai/international-53381389',
     service: 'thai',
     runforEnv: 'live',
+    tests: canonicalTests,
+  },
+  {
+    path: '/uzbek/uzbekistan-53263099',
+    service: 'uzbek',
+    runforEnv: 'local',
     tests: canonicalTests,
   },
 ];
@@ -87,18 +95,6 @@ const nonSmokeTestSuites = [
   {
     path: '/gahuza/23307435',
     service: 'gahuza',
-    runforEnv: ['local', 'test'],
-    tests: canonicalTests,
-  },
-  {
-    path: '/hausa/labarai-54292969',
-    service: 'hausa',
-    runforEnv: 'live',
-    tests: canonicalTests,
-  },
-  {
-    path: '/hausa/labarai-23190660',
-    service: 'hausa',
     runforEnv: ['local', 'test'],
     tests: canonicalTests,
   },
@@ -175,6 +171,18 @@ const nonSmokeTestSuites = [
     tests: canonicalTests,
   },
   {
+    path: '/sinhala/world-51723376',
+    service: 'sinhala',
+    runforEnv: 'live',
+    tests: canonicalTests,
+  },
+  {
+    path: '/sinhala/23225618',
+    service: 'sinhala',
+    runforEnv: 'test',
+    tests: canonicalTests,
+  },
+  {
     path: '/sport/rugby-union/56359986',
     service: 'sport',
     runforEnv: ['live', 'local'],
@@ -212,6 +220,7 @@ const nonSmokeTestSuites = [
   },
 ];
 const testSuites = Cypress.env('SMOKE') ? smokeTestSuites : nonSmokeTestSuites;
+
 const ampTestSuites = testSuites.map(testSuite => {
   return {
     ...testSuite,
@@ -219,6 +228,7 @@ const ampTestSuites = testSuites.map(testSuite => {
     tests: [...ampTests],
   };
 });
+
 runTestsForPage({
   pageType,
   testSuites: [...testSuites, ...ampTestSuites],
