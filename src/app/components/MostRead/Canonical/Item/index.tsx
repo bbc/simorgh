@@ -53,6 +53,7 @@ export const MostReadLink = ({
   let experimentText;
 
   if (experimentVariation != null) {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     experimentText =
       (experimentVariation as unknown as string) ??
       'No Experiment Variation Found';
@@ -65,7 +66,9 @@ export const MostReadLink = ({
         href={href}
         {...clickTrackerHandler}
       >
-        {experimentText}, {title}
+        {/* uncomment out to render experimentVariation */}
+        {/* {experimentText} */}
+        {title}
       </a>
       {children && <div css={styles.timestamp}>{children}</div>}
     </div>

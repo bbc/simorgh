@@ -122,7 +122,9 @@ const TopStoriesSection = ({
         script={script}
         service={service}
       >
-        {experimentText}, {title}
+        {title}
+        {/* uncomment out to render experimentVariation */}
+        {/* {experimentText} */}
       </SectionLabel>
 
       {hasSingleContent ? (
