@@ -53,11 +53,13 @@ export const MostReadLink = ({
   let experimentText;
 
   if (experimentVariation != null) {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     experimentText =
       (experimentVariation as unknown as string) ??
       'No Experiment Variation Found';
   }
+
+  // eslint-disable-next-line no-console
+  console.log(experimentText);
 
   return (
     <div css={getItemCss({ dir, size })} dir={dir}>

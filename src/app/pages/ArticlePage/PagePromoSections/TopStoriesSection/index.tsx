@@ -87,6 +87,9 @@ const TopStoriesSection = ({
       'No Experiment Variation Found';
   }
 
+  // eslint-disable-next-line no-console
+  console.log(experimentText);
+
   const {
     palette: { GREY_2 },
   } = useTheme();
