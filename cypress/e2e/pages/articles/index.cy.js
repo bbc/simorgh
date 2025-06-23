@@ -37,6 +37,12 @@ const smokeCanonicalTestSuites = [
     tests: [...canonicalTests],
   },
   {
+    path: '/mundo/articles/cle16n19nd9o',
+    runforEnv: ['test'],
+    service: 'mundo',
+    tests: [...canonicalTests],
+  },
+  {
     path: '/mundo/articles/ce7p1pw7165o',
     runforEnv: ['live'],
     service: 'mundo',

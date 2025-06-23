@@ -2,12 +2,29 @@ import { css, Theme } from '@emotion/react';
 import pixelsToRem from '../../utilities/pixelsToRem';
 
 export default {
+  bylineContainer: ({ spacings, mq }: Theme) =>
+    css({
+      display: 'grid',
+      paddingInlineStart: `${spacings.FULL}rem`,
+      [mq.GROUP_1_MIN_WIDTH]: {
+        gridTemplateColumns: 'repeat(2, auto)',
+      },
+      [mq.GROUP_2_MIN_WIDTH]: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        paddingInlineStart: `${spacings.DOUBLE}rem`,
+      },
+      [mq.GROUP_4_MIN_WIDTH]: { paddingInlineStart: 0 },
+    }),
+
   bylineSection: ({ spacings, mq }: Theme) =>
     css({
-      paddingInlineStart: `${spacings.FULL}rem`,
-      [mq.GROUP_2_MIN_WIDTH]: { paddingInlineStart: `${spacings.DOUBLE}rem` },
-      [mq.GROUP_4_MIN_WIDTH]: { paddingInlineStart: 0 },
-      div: { padding: 0 },
+      marginRight: `${spacings.FULL}rem`,
+      marginBottom: `${spacings.FULL}rem`,
+      [mq.GROUP_3_MIN_WIDTH]: {
+        marginRight: `${spacings.DOUBLE}rem`,
+        marginBottom: 0,
+      },
     }),
 
   bylineList: () => css({ listStyle: 'none', padding: 0, margin: 0 }),
@@ -95,14 +112,16 @@ export default {
       color: isDarkUi ? palette.GREY_2 : palette.SHADOW,
     }),
 
-  timestampLineBreak: ({ palette, spacings }: Theme) =>
+  timestampLineBreak: ({ palette, spacings, mq }: Theme) =>
     css({
       '::before': {
         content: '""',
         borderTop: `${pixelsToRem(2)}rem solid ${palette.GREY_5}`,
         width: `${pixelsToRem(40)}rem`,
         display: 'block',
-        margin: `${spacings.DOUBLE}rem 0`,
+        margin: `${spacings.DOUBLE}rem ${spacings.FULL}rem`,
+        [mq.GROUP_2_MIN_WIDTH]: { margin: `${spacings.DOUBLE}rem` },
+        [mq.GROUP_4_MIN_WIDTH]: { margin: `${spacings.DOUBLE}rem 0` },
       },
     }),
 
@@ -141,13 +160,6 @@ export default {
     css({
       width: `${pixelsToRem(80)}rem`,
       height: `${pixelsToRem(80)}rem`,
-    }),
-
-  authorLink: () =>
-    css({
-      paddingTop: '1.375rem',
-      paddingBottom: `${pixelsToRem(4)}rem`,
-      paddingInlineEnd: '2.75rem',
     }),
 
   twitterLink: () =>

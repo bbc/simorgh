@@ -2,14 +2,21 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
 const styles = {
-  dialog: () =>
+  bodyOverflowHidden: () =>
     css({
+      body: {
+        overflow: 'hidden',
+      },
+    }),
+  modal: () =>
+    css({
+      position: 'fixed',
+      inset: 0,
       overflow: 'hidden',
       width: '100%',
       maxWidth: '100%',
       height: '100%',
       maxHeight: '100%',
-      position: 'relative',
       backgroundColor: 'transparent',
       border: 'none',
       margin: 0,
@@ -18,10 +25,15 @@ const styles = {
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
+      zIndex: 2147483647,
 
-      '&::backdrop': {
+      '&::after': {
+        content: '""',
+        position: 'absolute',
+        inset: 0,
         backgroundColor: 'rgba(20, 20, 20, 0.9)',
         backdropFilter: 'blur(0.2rem)',
+        zIndex: 0,
       },
     }),
 
@@ -30,18 +42,18 @@ const styles = {
       display: 'none',
       position: 'absolute',
       top: `${spacings.DOUBLE}rem`,
-      right: `${spacings.DOUBLE}rem`,
+      insetInlineEnd: `${spacings.DOUBLE}rem`,
       background: 'transparent',
       border: `${pixelsToRem(2)}rem solid ${palette.WHITE}`,
       cursor: 'pointer',
       padding: 0,
-      zIndex: 2,
+      zIndex: 1,
 
       '&:hover, &:focus-visible': {
         backgroundColor: palette.POSTBOX,
       },
 
-      [mq.GROUP_2_MIN_WIDTH]: {
+      [mq.GROUP_3_MIN_WIDTH]: {
         display: 'flex',
       },
 
@@ -70,7 +82,7 @@ const styles = {
         zIndex: 1,
       },
 
-      [mq.GROUP_2_MIN_WIDTH]: {
+      [mq.GROUP_3_MIN_WIDTH]: {
         '&.media-container': {
           maxHeight: '90%',
         },
