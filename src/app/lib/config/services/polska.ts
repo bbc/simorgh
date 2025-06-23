@@ -390,16 +390,8 @@ export const service: DefaultServiceConfig = {
     timezone: 'Europe/Warsaw',
     navigation: [
       {
-        title: 'News',
+        title: 'Strona główna',
         url: '/polska',
-      },
-      {
-        title: 'Polska',
-        url: '/polska/topics/cly1xdxypzet',
-      },
-      {
-        title: 'Wojna w Ukrainie',
-        url: '/polska/topics/c8x8n9y15qnt',
       },
     ],
   },
