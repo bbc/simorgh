@@ -2,7 +2,6 @@ import React, { useState, useContext, useEffect } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
 import { RequestContext } from '#contexts/RequestContext';
 import { PageTypes } from '#app/models/types/global';
-
 import PageCompleteTracking from './PageCompleteTracking';
 import ScrollDepthTracking from './ScrollDepthTracking';
 import PageViewTracking from './PageViewTracking';
@@ -30,17 +29,17 @@ const OptimizelyPageMetrics = ({
   )?.activeExperiments;
 
   const optimizelyExperimentsEnabled =
-    experimentsForPageType &&
-    experimentsForPageType.length > 0 &&
-    !isAmp &&
-    !isInExperiment;
+    experimentsForPageType && !isAmp && !isInExperiment;
 
   useEffect(() => {
     if (optimizelyExperimentsEnabled) {
       optimizely?.onReady().then(() => {
         const decisions = optimizely.decideAll();
         const isUserInAnyExperiments = experimentsForPageType.some(
-          experimentName => !(decisions[experimentName].variationKey === 'off'),
+          experimentName => {
+            const decision = decisions[experimentName];
+            return decision && decision.variationKey !== 'off';
+          },
         );
 
         if (isUserInAnyExperiments) {

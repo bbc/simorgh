@@ -7,18 +7,10 @@ import {
 } from '@optimizely/react-sdk';
 import { RequestContextProvider } from '#app/contexts/RequestContext';
 import { PageTypes, Services } from '#app/models/types/global';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
 import { render } from '../react-testing-library-with-providers';
 import OptimizelyPageMetrics from '.';
-
-jest.mock('./experimentsForPageMetrics', () => ({
-  experimentsForPageMetrics: [
-    {
-      pageType: 'article',
-      activeExperiments: ['mockExperiment1', 'mockExperiment2'],
-    },
-  ],
-}));
+import { experimentsForPageMetrics } from './experimentsForPageMetrics';
 
 const optimizely = {
   onReady: jest.fn(() => Promise.resolve()),
@@ -27,6 +19,7 @@ const optimizely = {
   decideAll: jest.fn(() => ({
     mockExperiment1: { variationKey: 'variation_1' } as OptimizelyDecision,
     mockExperiment2: { variationKey: 'variation_1' } as OptimizelyDecision,
+    mockExperimentOff: { variationKey: 'off' } as OptimizelyDecision,
   })),
 } satisfies Partial<ReactSDKClient>;
 
@@ -39,6 +32,11 @@ jest.mock('./ScrollDepthTracking', () => () => (
 jest.mock('./PageViewTracking', () => () => (
   <div data-testid="page-view-tracking" />
 ));
+
+jest.mock('./experimentsForPageMetrics', () => ({
+  __esModule: true,
+  experimentsForPageMetrics: [],
+}));
 
 interface Props {
   pageType: PageTypes;
@@ -70,8 +68,20 @@ const ContextWrap = ({
 );
 
 describe('OptimizelyPageMetrics', () => {
-  it('returns null when isAmp is true', async () => {
-    const { container } = render(
+  beforeEach(() => {
+    experimentsForPageMetrics.splice(0, experimentsForPageMetrics.length);
+  });
+
+  it('should return null when isAmp is true', async () => {
+    experimentsForPageMetrics.push(
+      ...[
+        {
+          pageType: ARTICLE_PAGE,
+          activeExperiments: ['mockExperiment1', 'mockExperiment2'],
+        },
+      ],
+    );
+    render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp>
         <OptimizelyPageMetrics
           trackPageView
@@ -82,24 +92,54 @@ describe('OptimizelyPageMetrics', () => {
       </ContextWrap>,
     );
     await waitFor(() => {
-      expect(container.firstChild).toBeNull();
+      expect(
+        screen.queryByTestId('page-complete-tracking'),
+      ).not.toBeInTheDocument();
+      expect(
+        screen.queryByTestId('scroll-depth-tracking'),
+      ).not.toBeInTheDocument();
+      expect(
+        screen.queryByTestId('page-view-tracking'),
+      ).not.toBeInTheDocument();
     });
   });
 
-  it('renders no tracking components by default when all tracking flags are false', async () => {
+  it('should render no tracking components by default when all tracking flags are false', async () => {
+    experimentsForPageMetrics.push(
+      ...[
+        {
+          pageType: ARTICLE_PAGE,
+          activeExperiments: ['mockExperiment1', 'mockExperiment2'],
+        },
+      ],
+    );
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
         <OptimizelyPageMetrics pageType={ARTICLE_PAGE} />
       </ContextWrap>,
     );
     await waitFor(() => {
-      expect(screen.queryByTestId('page-complete-tracking')).toBeNull();
-      expect(screen.queryByTestId('scroll-depth-tracking')).toBeNull();
-      expect(screen.queryByTestId('page-view-tracking')).toBeNull();
+      expect(
+        screen.queryByTestId('page-complete-tracking'),
+      ).not.toBeInTheDocument();
+      expect(
+        screen.queryByTestId('scroll-depth-tracking'),
+      ).not.toBeInTheDocument();
+      expect(
+        screen.queryByTestId('page-view-tracking'),
+      ).not.toBeInTheDocument();
     });
   });
 
-  it('renders PageCompleteTracking when trackPageComplete is true', async () => {
+  it('should render PageCompleteTracking when trackPageComplete is true', async () => {
+    experimentsForPageMetrics.push(
+      ...[
+        {
+          pageType: ARTICLE_PAGE,
+          activeExperiments: ['mockExperiment1', 'mockExperiment2'],
+        },
+      ],
+    );
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
         <OptimizelyPageMetrics trackPageComplete pageType={ARTICLE_PAGE} />
@@ -110,7 +150,15 @@ describe('OptimizelyPageMetrics', () => {
     });
   });
 
-  it('renders ScrollDepthTracking when trackPageDepth is true', async () => {
+  it('should render ScrollDepthTracking when trackPageDepth is true', async () => {
+    experimentsForPageMetrics.push(
+      ...[
+        {
+          pageType: ARTICLE_PAGE,
+          activeExperiments: ['mockExperiment1', 'mockExperiment2'],
+        },
+      ],
+    );
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
         <OptimizelyPageMetrics trackPageDepth pageType={ARTICLE_PAGE} />
@@ -121,7 +169,15 @@ describe('OptimizelyPageMetrics', () => {
     });
   });
 
-  it('renders PageViewTracking when trackPageView is true', async () => {
+  it('should render PageViewTracking when trackPageView is true', async () => {
+    experimentsForPageMetrics.push(
+      ...[
+        {
+          pageType: ARTICLE_PAGE,
+          activeExperiments: ['mockExperiment1', 'mockExperiment2'],
+        },
+      ],
+    );
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
         <OptimizelyPageMetrics trackPageView pageType={ARTICLE_PAGE} />
@@ -132,7 +188,15 @@ describe('OptimizelyPageMetrics', () => {
     });
   });
 
-  it('renders all tracking components when all flags are true', async () => {
+  it('should render all tracking components when all flags are true', async () => {
+    experimentsForPageMetrics.push(
+      ...[
+        {
+          pageType: ARTICLE_PAGE,
+          activeExperiments: ['mockExperiment1', 'mockExperiment2'],
+        },
+      ],
+    );
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
         <OptimizelyPageMetrics
@@ -150,5 +214,90 @@ describe('OptimizelyPageMetrics', () => {
     });
   });
 
-  // test to make sure service doesn'r break if useDesicison comes back undefined.
+  it('should return null when there are no experiments running', async () => {
+    experimentsForPageMetrics.push(...[]);
+    render(
+      <ContextWrap pageType={ARTICLE_PAGE} service="news">
+        <OptimizelyPageMetrics trackPageComplete pageType={ARTICLE_PAGE} />
+      </ContextWrap>,
+    );
+    await waitFor(() => {
+      expect(
+        screen.queryByTestId('page-complete-tracking'),
+      ).not.toBeInTheDocument();
+    });
+  });
+
+  it('should return null when a user is no experiments', async () => {
+    experimentsForPageMetrics.push(
+      ...[
+        {
+          pageType: ARTICLE_PAGE,
+          activeExperiments: ['mockExperimentOff'],
+        },
+      ],
+    );
+    render(
+      <ContextWrap pageType={ARTICLE_PAGE} service="news">
+        <OptimizelyPageMetrics trackPageComplete pageType={ARTICLE_PAGE} />
+      </ContextWrap>,
+    );
+    await waitFor(() => {
+      expect(
+        screen.queryByTestId('page-complete-tracking'),
+      ).not.toBeInTheDocument();
+    });
+  });
+
+  it('should return null when pageType does not match', async () => {
+    experimentsForPageMetrics.push(
+      ...[
+        {
+          pageType: HOME_PAGE,
+          activeExperiments: ['mockExperiment1', 'mockExperiment2'],
+        },
+      ],
+    );
+    render(
+      <ContextWrap pageType={ARTICLE_PAGE} service="news">
+        <OptimizelyPageMetrics
+          trackPageComplete
+          trackPageDepth
+          trackPageView
+          pageType={ARTICLE_PAGE}
+        />
+      </ContextWrap>,
+    );
+    await waitFor(() => {
+      expect(
+        screen.queryByTestId('page-complete-tracking'),
+      ).not.toBeInTheDocument();
+    });
+  });
+
+  it('should null when experiment names do not match Optimizely', async () => {
+    experimentsForPageMetrics.push(
+      ...[
+        {
+          pageType: ARTICLE_PAGE,
+          activeExperiments: ['invalidExperiment'],
+        },
+      ],
+    );
+    render(
+      <ContextWrap pageType={ARTICLE_PAGE} service="news">
+        <OptimizelyPageMetrics
+          trackPageComplete
+          trackPageDepth
+          trackPageView
+          pageType={ARTICLE_PAGE}
+        />
+      </ContextWrap>,
+    );
+    await waitFor(() => {
+      expect(
+        screen.queryByTestId('page-complete-tracking'),
+      ).not.toBeInTheDocument();
+    });
+  });
 });
