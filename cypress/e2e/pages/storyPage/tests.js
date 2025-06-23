@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import path from 'ramda/src/path';
 import { crossPlatform as mostReadAssertions } from '../mostReadPage/mostReadAssertions';
 import getAppEnv from '../../../support/helpers/getAppEnv';
@@ -14,33 +13,26 @@ const isArticleLessThanTwoYearsOld = () => {
       return isNewArticle && getAppEnv() === 'live';
     });
 };
-
-// For testing features that may differ across services but share a common logic e.g. translated strings.
-export const testsThatFollowSmokeTestConfig = ({
-  service,
-  pageType,
-  isAmp,
-  variant = 'default',
-}) => {
-  describe(`testsThatFollowSmokeTestConfig to run for ${service} ${variant} ${pageType} `, () => {
+export default ({ service, pageType, isAmp, variant = 'default' }) => {
+  describe(`Running tests for ${service} ${pageType} `, () => {
     /**
      * Most Read Component
      */
     mostReadAssertions({ service, variant });
-  });
 
-  describe(`Recommendations on ${service} ${pageType}`, () => {
-    it('Recommendations have images', () => {
-      isArticleLessThanTwoYearsOld().then(runRecommendationTests => {
-        if (runRecommendationTests) {
-          cy.getToggles(service);
-          cy.fixture(`toggles/${service}.json`).then(toggles => {
-            const mostReadEnabled = path(['mostRead', 'enabled'], toggles);
+    describe(`Recommendations on ${service} ${pageType}`, () => {
+      it('Recommendations have images', () => {
+        isArticleLessThanTwoYearsOld().then(runRecommendationTests => {
+          if (runRecommendationTests) {
+            cy.getToggles(service);
+            cy.fixture(`toggles/${service}.json`).then(toggles => {
+              const mostReadEnabled = path(['mostRead', 'enabled'], toggles);
 
-            if (mostReadEnabled) {
-              cy.get(`[data-e2e=recommendations-heading]`).scrollIntoView();
-              cy.get('[data-e2e=recommendations-heading] > div > ul > li').each(
-                (item, index) => {
+              if (mostReadEnabled) {
+                cy.get(`[data-e2e=recommendations-heading]`).scrollIntoView();
+                cy.get(
+                  '[data-e2e=recommendations-heading] > div > ul > li',
+                ).each((item, index) => {
                   cy.wrap(item).within(() => {
                     cy.log(`List item number: ${index}`);
                     cy.log(`isAmp= ${isAmp}`);
@@ -55,29 +47,29 @@ export const testsThatFollowSmokeTestConfig = ({
                       );
                     }
                   });
-                },
-              );
-            }
-          });
-        } else {
-          cy.log(
-            'Only tests on live and for articles less than 2 years old due to lack of test data',
-          );
-        }
+                });
+              }
+            });
+          } else {
+            cy.log(
+              'Only tests on live and for articles less than 2 years old due to lack of test data',
+            );
+          }
+        });
       });
-    });
 
-    it('Recommendations have titles', () => {
-      isArticleLessThanTwoYearsOld().then(runRecommendationTests => {
-        if (runRecommendationTests) {
-          cy.getToggles(service);
-          cy.fixture(`toggles/${service}.json`).then(toggles => {
-            const mostReadEnabled = path(['mostRead', 'enabled'], toggles);
+      it('Recommendations have titles', () => {
+        isArticleLessThanTwoYearsOld().then(runRecommendationTests => {
+          if (runRecommendationTests) {
+            cy.getToggles(service);
+            cy.fixture(`toggles/${service}.json`).then(toggles => {
+              const mostReadEnabled = path(['mostRead', 'enabled'], toggles);
 
-            if (mostReadEnabled) {
-              cy.get(`[data-e2e=recommendations-heading]`).scrollIntoView();
-              cy.get('[data-e2e=recommendations-heading] > div > ul > li').each(
-                (item, index) => {
+              if (mostReadEnabled) {
+                cy.get(`[data-e2e=recommendations-heading]`).scrollIntoView();
+                cy.get(
+                  '[data-e2e=recommendations-heading] > div > ul > li',
+                ).each((item, index) => {
                   cy.wrap(item).within(() => {
                     cy.log(`List item number: ${index + 1}`);
                     cy.get(`[data-e2e=recommendations-wrapper] > div > div > a`)
@@ -86,15 +78,15 @@ export const testsThatFollowSmokeTestConfig = ({
                         expect(text.length).to.be.at.least(1);
                       });
                   });
-                },
-              );
-            }
-          });
-        } else {
-          cy.log(
-            'Only tests on live and for articles less than 2 years old due to lack of test data',
-          );
-        }
+                });
+              }
+            });
+          } else {
+            cy.log(
+              'Only tests on live and for articles less than 2 years old due to lack of test data',
+            );
+          }
+        });
       });
     });
   });
