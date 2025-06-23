@@ -10,7 +10,7 @@ export default ({ service }) => {
 
       cy.getToggles(serviceName).then(() => {
         cy.fixture(`toggles/${serviceName}.json`).then(toggles => {
-          const adsEnabled = toggles.ads.enabled;
+          const adsEnabled = toggles.ads?.enabled;
 
           if (adsEnabled) {
             cy.url().then(currentURL => {
