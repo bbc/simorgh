@@ -1,11 +1,11 @@
-import enabledExperimentList from '../enabledExperimentsList';
+import enabledServersideExperimentList from '#app/lib/config/optimizely/enabledServersideExperimentsList';
 
 const getMvtExperiments = (headers, service, derivedPageType) => {
   return Object.entries(headers).reduce((result, [header, content]) => {
     if (header.startsWith('mvt-')) {
       const noMvtPrefixHeader = header.slice(4);
 
-      const enabled = enabledExperimentList.some(
+      const enabled = enabledServersideExperimentList.some(
         ({ name, services, pageTypes }) =>
           noMvtPrefixHeader === name &&
           services.includes(service) &&

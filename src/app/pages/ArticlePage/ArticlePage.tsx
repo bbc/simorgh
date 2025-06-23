@@ -3,7 +3,7 @@
 import React, { useContext, useState } from 'react';
 import { jsx, useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
-import enabledExperimentList from '#server/utilities/mvtHeader/enabledExperimentsList';
+import enabledServersideExperimentList from '#app/lib/config/optimizely/enabledServersideExperimentsList';
 import { singleTextBlock } from '#app/models/blocks';
 import useOptimizelyMvtVariation from '#app/hooks/useOptimizelyMvtVariation';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
@@ -161,7 +161,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   } = useTheme();
 
   const experimentVariant = useOptimizelyMvtVariation(
-    enabledExperimentList[0]?.name,
+    enabledServersideExperimentList[0]?.name,
   );
 
   const isInExperiment = experimentVariant && experimentVariant !== 'off';
