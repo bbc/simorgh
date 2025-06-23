@@ -5,16 +5,14 @@ const PageViewTracking = () => {
   const { optimizely } = useContext(OptimizelyContext);
   const [pageViewSent, setPageViewSent] = useState(false);
 
-  const sendPageViewEvent = !pageViewSent;
-
   useEffect(() => {
-    if (sendPageViewEvent) {
+    if (!pageViewSent) {
       optimizely?.onReady().then(() => {
         optimizely.track('page-views');
         setPageViewSent(true);
       });
     }
-  }, [sendPageViewEvent, optimizely]);
+  }, [pageViewSent, optimizely]);
 
   return null;
 };

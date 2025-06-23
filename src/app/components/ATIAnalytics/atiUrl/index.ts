@@ -4,7 +4,7 @@ import {
   VIEWABILITY_CLICK_EVENT,
 } from '#app/lib/analyticsUtils/analytics.const';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import enabledExperimentList from '#server/utilities/mvtHeader/enabledExperimentsList';
+import enabledServersideExperimentList from '#app/lib/config/optimizely/enabledServersideExperimentsList';
 import {
   getDestination,
   getAppType,
@@ -491,7 +491,7 @@ export const buildReverbAnalyticsModel = ({
           x17: categoryName,
           x18: isLocServeCookieSet(),
           ...(experimentVariant && {
-            mv_test: enabledExperimentList[0]?.name,
+            mv_test: enabledServersideExperimentList[0]?.name,
             mv_creation: `${experimentVariant}`,
           }),
         },

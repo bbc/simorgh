@@ -9,7 +9,7 @@ import {
 } from '.';
 import splitUrl from './splitUrl';
 
-jest.mock('#server/utilities/mvtHeader/enabledExperimentsList', () => [
+jest.mock('#app/lib/config/optimizely/enabledServersideExperimentsList', () => [
   { name: 'mockFlagKey' },
 ]);
 

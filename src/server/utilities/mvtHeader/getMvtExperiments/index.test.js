@@ -1,6 +1,6 @@
 import getMvtExperiments from '.';
 
-jest.mock('../enabledExperimentsList', () => [
+jest.mock('#app/lib/config/optimizely/enabledServersideExperimentsList', () => [
   {
     name: 'simorgh_dark_mode',
     services: ['pidgin', 'mundo'],

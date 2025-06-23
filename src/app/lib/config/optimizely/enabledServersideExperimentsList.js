@@ -1,5 +1,5 @@
 /* 
-This is a maintained list of experiments that we are running.
+This is a maintained list of serverside experiments that we are running.
 Add enabled experiments objects inside this array in this format:
 {
   name: '',
@@ -7,7 +7,7 @@ Add enabled experiments objects inside this array in this format:
   pageTypes: [],
 }
 */
-const enabledExperimentList = [
+const enabledServersideExperimentList = [
   {
     name: 'newswb_ws_topbarojs_read_more',
     services: [
@@ -30,4 +30,4 @@ const enabledExperimentList = [
   },
 ];
 
-export default enabledExperimentList;
+export default enabledServersideExperimentList;
