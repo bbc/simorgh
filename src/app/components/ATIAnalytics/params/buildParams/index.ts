@@ -30,6 +30,7 @@ export const buildPageATIParams = ({
     timePublished,
     timeUpdated,
     ampExperimentName,
+    experimentName,
     experimentVariant,
   } = atiData;
 
@@ -55,6 +56,7 @@ export const buildPageATIParams = ({
     timePublished,
     timeUpdated,
     ...(ampExperimentName && { ampExperimentName }),
+    ...(experimentName && { experimentName }),
     ...(experimentVariant && { experimentVariant }),
   };
 };
