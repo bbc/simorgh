@@ -1,4 +1,3 @@
-// import runTestsForPage from '../../../support/helpers/runTestsForPage';
 import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
 import { testsThatFollowSmokeTestConfig } from './tests';
 import {
@@ -21,7 +20,68 @@ const tests = [
   // todo: AMP Only tests seem to call most-read assertions and they fail, not sure when they should be run
   // testsThatAlwaysRunForAMPOnly,
 ];
-const testSuites = [
+const smokeTestSuites = [
+  // has enabled = true and smoke = true.
+  {
+    path: '/mundo/noticias-54274735',
+    service: 'mundo',
+    runforEnv: 'live',
+    tests,
+  },
+  {
+    path: '/mundo/noticias-66171332',
+    service: 'mundo',
+    runforEnv: 'live',
+    tests,
+  },
+  {
+    path: '/mundo/23263889',
+    service: 'mundo',
+    runforEnv: ['test', 'local'],
+    tests,
+  },
+  {
+    path: '/mundo/noticias-internacional-51266689',
+    service: 'mundo',
+    runforEnv: 'local',
+    tests,
+  },
+  // has enabled = true and smoke = true.
+  {
+    path: '/russian/features-54391793',
+    service: 'russian',
+    runforEnv: ['test', 'local'],
+    tests,
+  },
+  {
+    path: '/russian/news-55041160',
+    service: 'russian',
+    runforEnv: ['test', 'local'],
+    tests,
+  },
+  // has enabled = true and smoke = true.
+  {
+    path: '/sinhala/world-51723376',
+    service: 'sinhala',
+    runforEnv: 'live',
+    tests,
+  },
+  {
+    path: '/sinhala/23225618',
+    service: 'sinhala',
+    runforEnv: 'test',
+    tests,
+  },
+  // has enabled = true and smoke = true.
+  {
+    path: '/thai/international-53381389',
+    service: 'thai',
+    runforEnv: 'live',
+    tests,
+  },
+];
+
+const nonSmokeTestSuites = [
   // gahuza has enabled = true and smoke = false.
   {
     path: '/gahuza/amakuru-52821373',
@@ -80,31 +140,6 @@ const testSuites = [
     runforEnv: 'test',
     tests,
   },
-  // has enabled = true and smoke = true.
-  {
-    path: '/mundo/noticias-54274735',
-    service: 'mundo',
-    runforEnv: 'live',
-    tests,
-  },
-  {
-    path: '/mundo/noticias-66171332',
-    service: 'mundo',
-    runforEnv: 'live',
-    tests,
-  },
-  {
-    path: '/mundo/23263889',
-    service: 'mundo',
-    runforEnv: ['test', 'local'],
-    tests,
-  },
-  {
-    path: '/mundo/noticias-internacional-51266689',
-    service: 'mundo',
-    runforEnv: 'local',
-    tests,
-  },
   // has enabled = true and smoke = false.
   {
     path: '/news/uk-56342465',
@@ -150,32 +185,6 @@ const testSuites = [
     runforEnv: 'test',
     tests,
   },
-  // has enabled = true and smoke = true.
-  {
-    path: '/russian/features-54391793',
-    service: 'russian',
-    runforEnv: ['test', 'local'],
-    tests,
-  },
-  {
-    path: '/russian/news-55041160',
-    service: 'russian',
-    runforEnv: ['test', 'local'],
-    tests,
-  },
-  // has enabled = true and smoke = true.
-  {
-    path: '/sinhala/world-51723376',
-    service: 'sinhala',
-    runforEnv: 'live',
-    tests,
-  },
-  {
-    path: '/sinhala/23225618',
-    service: 'sinhala',
-    runforEnv: 'test',
-    tests,
-  },
   // has enabled = true and smoke = false.
   {
     path: '/sport/rugby-union/56359986',
@@ -201,13 +210,6 @@ const testSuites = [
     runforEnv: 'test',
     tests,
   },
-  // has enabled = true and smoke = true.
-  {
-    path: '/thai/international-53381389',
-    service: 'thai',
-    runforEnv: 'live',
-    tests,
-  },
   // has enabled = true and smoke = false.
   {
     path: '/yoruba/afrika-58539527',
@@ -222,7 +224,7 @@ const testSuites = [
     tests,
   },
 ];
-
+const testSuites = Cypress.env('SMOKE') ? smokeTestSuites : nonSmokeTestSuites;
 runTestsForPage({
   pageType,
   testSuites: [...testSuites],
