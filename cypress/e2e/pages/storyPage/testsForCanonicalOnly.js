@@ -4,12 +4,16 @@ import runCanonicalAdsTests from '../../../support/helpers/adsTests/testsForCano
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
-export const testsThatAlwaysRunForCanonicalOnly = () => {
+export const testsThatAlwaysRunForCanonicalOnly = ({
+  service,
+  pageType,
+  variant,
+}) => {
   const skipOnLocal =
     Cypress.env('APP_ENV') !== 'local' ? describe : describe.skip;
 
   skipOnLocal(
-    `Include initialisation only on Mundo on specific page`,
+    `Include initialisation only on Mundo on specific page for ${service}`,
     {
       retries: 3,
     },

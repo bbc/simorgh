@@ -20,7 +20,7 @@ export const testsThatFollowSmokeTestConfig = ({
   service,
   pageType,
   isAmp,
-  variant,
+  variant = 'default',
 }) => {
   describe(`testsThatFollowSmokeTestConfig to run for ${service} ${variant} ${pageType} `, () => {
     /**
