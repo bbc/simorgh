@@ -149,7 +149,9 @@ const canonicalTestSuites = [
   },
 ];
 
-const ampTestSuites = canonicalTestSuites.map(testSuite => {
+const supportsAmp = ({ contentType }) => contentType === 'list-datadriven';
+
+const ampTestSuites = canonicalTestSuites.filter(supportsAmp).map(testSuite => {
   return {
     ...testSuite,
     path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
