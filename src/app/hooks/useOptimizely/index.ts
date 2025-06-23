@@ -2,16 +2,16 @@
 import useServerSide from './useServerSide';
 import useClientSide from './useClientSide';
 
+export enum ExperimentState {
+  CLIENT_SIDE = 'client side experiment',
+  SERVER_SIDE = 'server side experiment',
+}
+
 type Props = {
   experimentName: string;
   overrideAttributes?: Record<string, string>;
   experimentType: ExperimentState;
 };
-
-export enum ExperimentState {
-  CLIENT_SIDE = 'client side experiment',
-  SERVER_SIDE = 'server side experiment',
-}
 
 export default ({
   experimentName,
