@@ -370,6 +370,10 @@ export const service: DefaultServiceConfig = {
           text: 'Pliki cookie',
         },
         {
+          href: 'https://www.bbc.com/polska/send/u203797512',
+          text: 'Skontaktuj się z nami',
+        },
+        {
           href: 'https://www.bbc.com/ws/languages',
           text: 'Inne języki',
         },
@@ -384,6 +388,12 @@ export const service: DefaultServiceConfig = {
         'BBC. BBC nie ponosi odpowiedzialności za treści na stronach zewnętrznych.',
     },
     timezone: 'Europe/Warsaw',
+    navigation: [
+      {
+        title: 'Strona główna',
+        url: '/polska',
+      },
+    ],
   },
 };
 export default withContext(service);
