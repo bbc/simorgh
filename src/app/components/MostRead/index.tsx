@@ -88,7 +88,7 @@ const CanonicalMostRead = ({
   eventTrackingData: {
     optimizely?: ReactSDKClient | null | undefined;
     componentName: string;
-    experimentVariation?: string | undefined;
+    experimentVariation?: string | null | undefined;
   };
 }) =>
   data ? (
@@ -168,8 +168,7 @@ const MostRead = ({
       headingBackgroundColour={headingBackgroundColour}
       columnLayout={columnLayout}
       size={size}
-      // to do - fix type. Too tired right now
-      eventTrackingData={eventTrackingData as any}
+      eventTrackingData={eventTrackingData}
     />
   );
 };

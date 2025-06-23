@@ -77,8 +77,7 @@ const TopStoriesSection = ({
     },
   };
   const eventTrackingDataSend = eventTrackingData?.block;
-  // To do - fix type
-  const viewTracker = useViewTracker(eventTrackingDataSend as any);
+  const viewTracker = useViewTracker(eventTrackingDataSend);
 
   let experimentText;
 
