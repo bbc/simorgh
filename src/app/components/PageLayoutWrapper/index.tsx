@@ -250,4 +250,4 @@ const PageLayoutWrapper = ({
   );
 };
 
-export default withOptimizelyProvider(PageLayoutWrapper);
+export default PageLayoutWrapper;

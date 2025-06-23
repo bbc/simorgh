@@ -100,7 +100,7 @@ const mockRouteProps = ({
 };
 
 jest.mock('./utilities/customMetrics');
-jest.mock('./utilities/mvtHeader');
+jest.mock('./utilities/experimentHeader');
 
 const renderDocumentSpy = jest.spyOn(renderDocument, 'default');
 
