@@ -24,6 +24,11 @@ jest.mock('../../lib/utilities/isLocal', () =>
   jest.fn().mockImplementation(() => true),
 );
 
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  default: jest.fn(),
+}));
+
 interface MostReadProps {
   isAmp: boolean;
   service: Services;

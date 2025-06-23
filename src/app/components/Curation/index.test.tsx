@@ -22,6 +22,11 @@ import { RadioScheduleData } from '../../models/types/radioSchedule';
 
 jest.mock('../ThemeProvider');
 
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  default: jest.fn(),
+}));
+
 const { NONE, BANNER, RANKED, COLLECTION, LINKS, INSITU } = VISUAL_STYLE;
 const { NORMAL, HIGH, LOW, MAXIMUM, MINIMUM } = VISUAL_PROMINENCE;
 

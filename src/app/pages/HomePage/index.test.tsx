@@ -13,6 +13,11 @@ jest.mock('../../components/ChartbeatAnalytics', () => {
   return ChartbeatAnalytics;
 });
 
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  default: jest.fn(),
+}));
+
 const homePageData = {
   ...kyrgyzHomePageData,
   metadata: {

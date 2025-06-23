@@ -79,16 +79,16 @@ const TopStoriesSection = ({
   const eventTrackingDataSend = eventTrackingData?.block;
   const viewTracker = useViewTracker(eventTrackingDataSend);
 
-  let experimentText;
+  // uncomment out to render experimentVariation
+  // let experimentText;
 
-  if (experimentVariation != null) {
-    experimentText =
-      (experimentVariation as unknown as string) ??
-      'No Experiment Variation Found';
-  }
+  // if (experimentVariation != null) {
+  //   experimentText =
+  //     (experimentVariation as unknown as string) ??
+  //     'No Experiment Variation Found';
+  // }
 
-  // eslint-disable-next-line no-console
-  console.log(experimentText);
+  // console.log(experimentText);
 
   const {
     palette: { GREY_2 },

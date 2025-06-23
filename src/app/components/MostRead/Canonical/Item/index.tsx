@@ -48,18 +48,18 @@ export const MostReadLink = ({
 }: PropsWithChildren<MostReadLinkProps>) => {
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
-  const experimentVariation = eventTrackingData?.experimentVariation;
+  // uncomment out to render experimentVariation
+  // const experimentVariation = eventTrackingData?.experimentVariation;
 
-  let experimentText;
+  // let experimentText;
 
-  if (experimentVariation != null) {
-    experimentText =
-      (experimentVariation as unknown as string) ??
-      'No Experiment Variation Found';
-  }
+  // if (experimentVariation != null) {
+  //   experimentText =
+  //     (experimentVariation as unknown as string) ??
+  //     'No Experiment Variation Found';
+  // }
 
-  // eslint-disable-next-line no-console
-  console.log(experimentText);
+  // console.log(experimentText);
 
   return (
     <div css={getItemCss({ dir, size })} dir={dir}>

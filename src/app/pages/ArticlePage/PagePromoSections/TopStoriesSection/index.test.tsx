@@ -25,6 +25,11 @@ type Props = {
   service?: Services;
 };
 
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  default: jest.fn(),
+}));
+
 const TopStoriesSectionFixture = ({
   fixtureData,
   service = 'mundo',
