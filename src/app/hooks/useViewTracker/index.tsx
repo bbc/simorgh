@@ -46,7 +46,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
   const { optimizely } = useContext(OptimizelyContext);
   const optimizelyVariation = useOptimizely({
     experimentName: OPTIMIZELY_CONFIG.ruleKey,
-    runtimeType: ExperimentState.SERVER_SIDE,
+    experimentType: ExperimentState.SERVER_SIDE,
   });
 
   const observer = useRef(null);

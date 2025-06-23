@@ -61,7 +61,7 @@ const PageLayoutWrapper = ({
   let propsForOJExperiment = {};
   const experimentVariant = useOptimizely({
     experimentName: OPTIMIZELY_CONFIG.ruleKey,
-    runtimeType: ExperimentState.SERVER_SIDE,
+    experimentType: ExperimentState.SERVER_SIDE,
   });
 
   if (pageType === 'article') {

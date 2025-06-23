@@ -43,7 +43,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
   const { optimizely } = useContext(OptimizelyContext);
   const experimentVariation = useOptimizely({
     experimentName: OPTIMIZELY_CONFIG.ruleKey,
-    runtimeType: ExperimentState.SERVER_SIDE,
+    experimentType: ExperimentState.SERVER_SIDE,
   });
 
   return useCallback(

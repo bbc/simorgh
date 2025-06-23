@@ -2,12 +2,18 @@
 import React, { PropsWithChildren } from 'react';
 import { render, act } from '@testing-library/react';
 import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
-import * as useOptimizely from '#app/hooks/useOptimizely';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import useOptimizely from '#app/hooks/useOptimizely';
 import { PageTypes, Services } from '#app/models/types/global';
 
 import PageCompleteTracking from '.';
+
+jest.mock('#hooks/useOptimizely', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizely'),
+  default: jest.fn(),
+}));
 
 const optimizely = {
   onReady: jest.fn(() => Promise.resolve()),
@@ -97,6 +103,7 @@ beforeEach(() => {
   jest.clearAllMocks();
   jest.useFakeTimers();
   console.error = jest.fn();
+
   // @ts-expect-error mocking required for tests
   global.IntersectionObserver = IntersectionObserver;
 });
@@ -110,7 +117,6 @@ afterEach(() => {
 
 describe('Optimizely Page Complete tracking', () => {
   it('should return a function that can be assigned to an element to observe for intersections', () => {
-    jest.spyOn(useOptimizely, 'default').mockReturnValue(null);
     const { container } = render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
         <PageCompleteTracking />
@@ -124,7 +130,7 @@ describe('Optimizely Page Complete tracking', () => {
   });
 
   it('should not send tracking event when element is not in view', async () => {
-    jest.spyOn(useOptimizely, 'default').mockReturnValue('variation_1');
+    (useOptimizely as jest.Mock).mockReturnValue('variation_1');
 
     const { container } = render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
@@ -148,7 +154,7 @@ describe('Optimizely Page Complete tracking', () => {
   });
 
   it('should not send tracking event when element is in view, but not in experiment variation', async () => {
-    jest.spyOn(useOptimizely, 'default').mockReturnValue(null);
+    (useOptimizely as jest.Mock).mockReturnValue(null);
 
     const { container } = render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
@@ -172,7 +178,7 @@ describe('Optimizely Page Complete tracking', () => {
   });
 
   it('should send tracking event when element is in view and in experiment variation', async () => {
-    jest.spyOn(useOptimizely, 'default').mockReturnValue('variation_1');
+    (useOptimizely as jest.Mock).mockReturnValue('variation_1');
 
     const { container } = render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>

@@ -1,4 +1,4 @@
-import getMvtExperiments from '.';
+import getServerSideExperiments from '.';
 
 jest.mock('../enabledExperimentsList', () => [
   {
@@ -32,13 +32,25 @@ const mockHeadersMultipleMvt = {
   'mvt-simorgh_new_recs': 'new',
 };
 
-describe('getMvtExperiments', () => {
+describe('getServerSideExperiments', () => {
   it('should return an empty array when no mvt headers are in the request', () => {
-    expect(getMvtExperiments(mockHeadersNoMvt)).toEqual([]);
+    expect(
+      getServerSideExperiments({
+        headers: mockHeadersNoMvt,
+        service: 'news',
+        derivedPageType: 'article',
+      }),
+    ).toEqual([]);
   });
 
   it('should return an array of a single experiment object when a single mvt header is in the response', () => {
-    expect(getMvtExperiments(mockHeadersSingleMvt)).toEqual([
+    expect(
+      getServerSideExperiments({
+        headers: mockHeadersSingleMvt,
+        service: 'news',
+        derivedPageType: 'article',
+      }),
+    ).toEqual([
       {
         experimentName: 'simorgh_dark_mode',
         type: 'experiment',
@@ -49,7 +61,13 @@ describe('getMvtExperiments', () => {
   });
 
   it('should return an array of multiple experiment objects when multiple mvt headers are in the response', () => {
-    expect(getMvtExperiments(mockHeadersMultipleMvt)).toEqual([
+    expect(
+      getServerSideExperiments({
+        headers: mockHeadersMultipleMvt,
+        service: 'news',
+        derivedPageType: 'article',
+      }),
+    ).toEqual([
       {
         experimentName: 'simorgh_dark_mode',
         type: 'experiment',
@@ -70,43 +88,72 @@ describe('getMvtExperiments', () => {
   });
 
   it('should should create a type key when a string is present before a ; delimeter in the header content', () => {
-    expect(getMvtExperiments(mockHeadersMultipleMvt)[0]).toHaveProperty('type');
+    expect(
+      getServerSideExperiments({
+        headers: mockHeadersMultipleMvt,
+        service: 'news',
+        derivedPageType: 'article',
+      })[0],
+    ).toHaveProperty('type');
   });
 
   it('should should not create a type key when a string is present with no ; delimeter', () => {
-    expect(getMvtExperiments(mockHeadersMultipleMvt)[1]).not.toHaveProperty(
-      'type',
-    );
+    expect(
+      getServerSideExperiments({
+        headers: mockHeadersMultipleMvt,
+        service: 'news',
+        derivedPageType: 'article',
+      })[1],
+    ).not.toHaveProperty('type');
   });
 
   it('should omit the mvt prefix from the experiement name', () => {
-    expect(getMvtExperiments(mockHeadersMultipleMvt)[0]).toHaveProperty(
-      'experimentName',
-      'simorgh_dark_mode',
-    );
+    expect(
+      getServerSideExperiments({
+        headers: mockHeadersMultipleMvt,
+        service: 'news',
+        derivedPageType: 'article',
+      })[0],
+    ).toHaveProperty('experimentName', 'simorgh_dark_mode');
   });
 
   it('should return an experiment object with the enabled key set to true if the experiment is in the enabled list and matches the correct pageType and service', () => {
     expect(
-      getMvtExperiments(mockHeadersSingleMvt, 'mundo', 'STY')[0],
+      getServerSideExperiments({
+        headers: mockHeadersSingleMvt,
+        service: 'mundo',
+        derivedPageType: 'STY',
+      })[0],
     ).toHaveProperty('enabled', true);
   });
 
   it('should return an experiment object with the enabled key set to false, if experiment is in the enabled list, and matches the correct pageType but does not match service', () => {
     expect(
-      getMvtExperiments(mockHeadersSingleMvt, 'afrique', 'STY')[0],
+      getServerSideExperiments({
+        headers: mockHeadersSingleMvt,
+        service: 'afrique',
+        derivedPageType: 'STY',
+      })[0],
     ).toHaveProperty('enabled', false);
   });
 
   it('should return an experiment object with the enabled key set to false, if experiment is in the enabled list, and matches the correct service but does not match pageType', () => {
     expect(
-      getMvtExperiments(mockHeadersSingleMvt, 'mundo', 'PGL')[0],
+      getServerSideExperiments({
+        headers: mockHeadersSingleMvt,
+        service: 'mundo',
+        derivedPageType: 'PGL',
+      })[0],
     ).toHaveProperty('enabled', false);
   });
 
   it('should return an experiment object with the enabled key set to false, if the experiment is not in the enabled list', () => {
     expect(
-      getMvtExperiments(mockHeadersMultipleMvt, 'afrique', 'STY')[2],
+      getServerSideExperiments({
+        headers: mockHeadersMultipleMvt,
+        service: 'afrique',
+        derivedPageType: 'STY',
+      })[2],
     ).toHaveProperty('enabled', false);
   });
 });

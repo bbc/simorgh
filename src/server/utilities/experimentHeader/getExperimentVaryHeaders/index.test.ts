@@ -1,23 +1,29 @@
+import { ServerSideExperiment } from '#app/models/types/global';
 import getMvtVaryHeaders from '.';
 
-const getMockMvtExperiments = (enabled1, enabled2, enabled3) => [
-  {
-    experimentName: 'simorgh_dark_mode',
-    type: 'experiment',
-    variation: 'control',
-    enabled: enabled1,
-  },
-  {
-    experimentName: 'simorgh_data_saving',
-    variation: 'saving',
-    enabled: enabled2,
-  },
-  {
-    experimentName: 'foo',
-    variation: 'bar',
-    enabled: enabled3,
-  },
-];
+const getMockMvtExperiments = (
+  enabled1: boolean,
+  enabled2: boolean,
+  enabled3: boolean,
+) =>
+  [
+    {
+      experimentName: 'simorgh_dark_mode',
+      type: 'experiment',
+      variation: 'control',
+      enabled: enabled1,
+    },
+    {
+      experimentName: 'simorgh_data_saving',
+      variation: 'saving',
+      enabled: enabled2,
+    },
+    {
+      experimentName: 'foo',
+      variation: 'bar',
+      enabled: enabled3,
+    },
+  ] as ServerSideExperiment[];
 
 describe('getMvtVaryHeaders', () => {
   it('should create a string used in the vary header if a single experiment is enabled', () => {

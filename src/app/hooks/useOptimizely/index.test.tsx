@@ -13,13 +13,15 @@ describe('useOptimizely custom hook', () => {
 
   const renderUseOptimizely = async ({
     experimentName,
-    runtimeType,
+    experimentType,
   }: {
     experimentName?: string;
-    runtimeType: ExperimentState;
+    experimentType: ExperimentState;
   }) => {
     const { result } = await act(async () => {
-      return renderHook(() => useOptimizely({ experimentName, runtimeType }));
+      return renderHook(() =>
+        useOptimizely({ experimentName, experimentType }),
+      );
     });
 
     return result.current;
@@ -27,7 +29,7 @@ describe('useOptimizely custom hook', () => {
 
   it('should return null if flagKey is not defined', async () => {
     const result = await renderUseOptimizely({
-      runtimeType: ExperimentState.CLIENT_SIDE,
+      experimentType: ExperimentState.CLIENT_SIDE,
     });
     expect(result).toEqual(null);
   });
@@ -40,7 +42,7 @@ describe('useOptimizely custom hook', () => {
 
     const result = await renderUseOptimizely({
       experimentName: 'correct_experiment_id',
-      runtimeType: ExperimentState.SERVER_SIDE,
+      experimentType: ExperimentState.SERVER_SIDE,
     });
 
     expect(result).toEqual('someServerSideVariation');
@@ -54,7 +56,7 @@ describe('useOptimizely custom hook', () => {
 
     const result = await renderUseOptimizely({
       experimentName: 'correct_experiment_id',
-      runtimeType: ExperimentState.CLIENT_SIDE,
+      experimentType: ExperimentState.CLIENT_SIDE,
     });
 
     expect(result).toEqual('someClientSideVariation');

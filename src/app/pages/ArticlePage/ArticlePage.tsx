@@ -160,7 +160,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const experimentVariant = useOptimizely({
     experimentName: OPTIMIZELY_CONFIG.ruleKey,
-    runtimeType: ExperimentState.SERVER_SIDE,
+    experimentType: ExperimentState.SERVER_SIDE,
   });
 
   const isInExperiment = experimentVariant && experimentVariant !== 'off';

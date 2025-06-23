@@ -28,7 +28,7 @@ export type ServerSideExperiment = {
   experimentName: string;
   variation: string;
   enabled: boolean;
-  type: 'experiment' | 'feature';
+  type?: 'experiment' | 'feature';
 };
 
 export type SerbianService = {

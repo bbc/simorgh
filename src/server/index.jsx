@@ -262,11 +262,11 @@ server.get(
       if (status === OK) {
         derivedPageType = ramdaPath(['pageData', 'metadata', 'type'], data);
 
-        serverSideExperiments = getServerExperiments(
+        serverSideExperiments = getServerExperiments({
           headers,
           service,
           derivedPageType,
-        );
+        });
         data.serverSideExperiments = serverSideExperiments;
       } else {
         sendCustomMetric({
