@@ -58,17 +58,15 @@ describe('Optimizely Page View tracking', () => {
     });
   });
 
-  // check this test again - it should fail
-  it('should not call Optimizely track function for users not in an experiment', async () => {
-    render(
+  it('should return null', async () => {
+    const { container } = render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
         <PageViewTracking />
       </ContextWrap>,
     );
 
     await waitFor(() => {
-      expect(optimizely.track).toHaveBeenCalledTimes(0);
-      expect(optimizely.track).not.toHaveBeenCalledWith('page-views');
+      expect(container).toBeEmptyDOMElement();
     });
   });
 });

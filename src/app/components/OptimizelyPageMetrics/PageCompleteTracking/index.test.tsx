@@ -145,7 +145,7 @@ describe('Optimizely Page Complete tracking', () => {
     expect(optimizely.track).not.toHaveBeenCalled();
   });
 
-  it('should send tracking event when element is in view and in experiment variation', async () => {
+  it('should send tracking event when element is in view', async () => {
     const { container } = render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
         <PageCompleteTracking />
