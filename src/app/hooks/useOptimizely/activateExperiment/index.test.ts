@@ -22,11 +22,11 @@ describe('activateExperiment', () => {
     (onClient as jest.Mock).mockReturnValueOnce(true);
     mockOptimizely.onReady.mockResolvedValue({ success: true });
 
-    await activateExperiment(
-      mockOptimizely as unknown as ReactSDKClient,
-      mockExperimentName,
-      mockExperimentVariation,
-    );
+    await activateExperiment({
+      optimizely: mockOptimizely as unknown as ReactSDKClient,
+      experimentName: mockExperimentName,
+      variation: mockExperimentVariation,
+    });
 
     expect(mockOptimizely.onReady).toHaveBeenCalledTimes(1);
     expect(mockOptimizely.setForcedVariation).toHaveBeenCalledTimes(1);
@@ -42,11 +42,11 @@ describe('activateExperiment', () => {
     (onClient as jest.Mock).mockReturnValueOnce(false);
     mockOptimizely.onReady.mockResolvedValue({ success: true });
 
-    await activateExperiment(
-      mockOptimizely as unknown as ReactSDKClient,
-      mockExperimentName,
-      mockExperimentVariation,
-    );
+    await activateExperiment({
+      optimizely: mockOptimizely as unknown as ReactSDKClient,
+      experimentName: mockExperimentName,
+      variation: mockExperimentVariation,
+    });
 
     expect(mockOptimizely.onReady).not.toHaveBeenCalled();
     expect(mockOptimizely.setForcedVariation).not.toHaveBeenCalled();

@@ -15,7 +15,7 @@ describe('useOptimizely custom hook', () => {
     experimentName,
     experimentType,
   }: {
-    experimentName?: string;
+    experimentName: string;
     experimentType: ExperimentState;
   }) => {
     const { result } = await act(async () => {
@@ -29,6 +29,7 @@ describe('useOptimizely custom hook', () => {
 
   it('should return null if flagKey is not defined', async () => {
     const result = await renderUseOptimizely({
+      experimentName: '',
       experimentType: ExperimentState.CLIENT_SIDE,
     });
     expect(result).toEqual(null);
