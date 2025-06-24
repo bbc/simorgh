@@ -230,6 +230,9 @@ describe('buildSettings', () => {
             poster: {
               availableWhenSettingUp: true,
             },
+            pictureInPicture: {
+              enabled: false,
+            },
           },
           superResponsive: true,
           supportFakeFullscreen: true,
@@ -300,6 +303,9 @@ describe('buildSettings', () => {
             swipable: { direction: 'Y', enabled: true },
             poster: {
               availableWhenSettingUp: true,
+            },
+            pictureInPicture: {
+              enabled: false,
             },
           },
           superResponsive: true,
