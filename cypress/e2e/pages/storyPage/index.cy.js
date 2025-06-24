@@ -234,7 +234,7 @@ const ampTestSuites = canonicalTestSuites.map(testSuite => {
   };
 });
 
-const liteTestsSuits = canonicalTestSuites
+const liteTestSuites = canonicalTestSuites
   .filter(({ service }) => !['news', 'sport', 'newsround'].includes(service))
   .map(testSuite => {
     return {
@@ -258,6 +258,6 @@ describe('storyPage', () => {
 
   runTestsForPage({
     pageType,
-    testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestsSuits],
+    testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],
   });
 });
