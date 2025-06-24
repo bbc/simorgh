@@ -11,7 +11,7 @@ import {
   articleDataPidgin,
   articleDataPidginWithAds,
   articleDataPidginWithByline,
-  articleDataPidginWithPV,
+  articleDataRussianWithPVButNoWatchMomentsTranslation,
   articleDataPortugueseWithPVNotUnderHeadline,
   articleDataPortugueseWithPVUnderHeadline,
   promoSample,
@@ -909,27 +909,24 @@ describe('Article Page', () => {
 
   describe('when rendering an article page with a portrait video', () => {
     it.each`
-      pageData                                       | service         | expected     | title     | translation
-      ${articleDataPortugueseWithPVNotUnderHeadline} | ${'portuguese'} | ${'Assista'} | ${''}     | ${' a'}
-      ${articleDataPidginWithPV}                     | ${'pidgin'}     | ${undefined} | ${' not'} | ${' no'}
-    `(
-      `should$title render the title if there is$translation "WatchMoments" translation`,
-      ({ pageData, service, expected }) => {
-        render(
-          <Context service={service}>
-            <ArticlePage pageData={pageData} />
-          </Context>,
-        );
+      pageData                                                | service         | expected     | scenario
+      ${articleDataPortugueseWithPVNotUnderHeadline}          | ${'portuguese'} | ${'Assista'} | ${'should render the Watch Moments title because translation exists'}
+      ${articleDataRussianWithPVButNoWatchMomentsTranslation} | ${'russian'}    | ${undefined} | ${'should not render the Watch Moments title because no translation exists'}
+    `('$scenario', ({ pageData, service, expected }) => {
+      render(
+        <Context service={service}>
+          <ArticlePage pageData={pageData} />
+        </Context>,
+      );
 
-        const title = screen.queryByRole('strong');
-        if (expected) {
-          expect(title).toBeInTheDocument();
-          expect(title?.textContent).toEqual(expected);
-        } else {
-          expect(title).not.toBeInTheDocument();
-        }
-      },
-    );
+      const title = screen.queryByRole('strong');
+      if (expected) {
+        expect(title).toBeInTheDocument();
+        expect(title?.textContent).toEqual(expected);
+      } else {
+        expect(title).not.toBeInTheDocument();
+      }
+    });
 
     it('should not render the portrait video title when the portrait video is directly under a headline', () => {
       render(

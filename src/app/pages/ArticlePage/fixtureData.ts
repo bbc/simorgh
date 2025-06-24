@@ -1158,6 +1158,369 @@ export const articleDataPortugueseWithPVUnderHeadline = articleDataBuilder(
   plainOptimoBlock,
 ) as unknown as Article;
 
+export const articleDataRussianWithPVButNoWatchMomentsTranslation =
+  articleDataBuilder(
+    'cg6pjr88ggpo',
+    'russian',
+    'pcm',
+    'http://www.bbc.co.uk/ontologies/passport/home/russian',
+
+    [
+      {
+        id: '9dd77669',
+        type: 'headline',
+        model: {
+          blocks: [
+            {
+              id: 'b841ef4f',
+              type: 'text',
+              model: {
+                blocks: [
+                  {
+                    id: 'b89c22c7',
+                    type: 'paragraph',
+                    model: {
+                      text: 'heading',
+                      blocks: [
+                        {
+                          id: 'ac8353c5',
+                          type: 'fragment',
+                          model: {
+                            text: 'heading',
+                            attributes: [],
+                          },
+                          position: [1, 1, 1, 1],
+                        },
+                      ],
+                    },
+                    position: [1, 1, 1],
+                  },
+                ],
+              },
+              position: [1, 1],
+            },
+          ],
+        },
+        position: [1],
+      },
+      {
+        id: '64d5b551',
+        type: 'video',
+        model: {
+          locator: 'urn:bbc:pips:pid:p01wjx1y',
+          blocks: [
+            {
+              id: 'da2f639d',
+              type: 'caption',
+              model: {
+                blocks: [
+                  {
+                    id: '1fe03afd',
+                    type: 'text',
+                    model: {
+                      blocks: [
+                        {
+                          id: '977e7715',
+                          type: 'paragraph',
+                          model: {
+                            text: 'Por que é tão difícil para Ucrânia e Rússia selarem paz (9x16)',
+                            blocks: [
+                              {
+                                id: 'b7c4d4b2',
+                                type: 'fragment',
+                                model: {
+                                  text: 'Por que é tão difícil para Ucrânia e Rússia selarem paz (9x16)',
+                                  attributes: [],
+                                },
+                                position: [2, 1, 1, 1, 1],
+                              },
+                            ],
+                          },
+                          position: [2, 1, 1, 1],
+                        },
+                      ],
+                    },
+                    position: [2, 1, 1],
+                  },
+                ],
+              },
+              position: [2, 1],
+            },
+            {
+              id: '271fff58',
+              type: 'aresMedia',
+              model: {
+                blocks: [
+                  {
+                    id: 'c02a8d05',
+                    blockId: 'urn:bbc:ares::clip:p01wjx1y',
+                    type: 'aresMediaMetadata',
+                    model: {
+                      id: 'p01wjx1y',
+                      subType: 'clip',
+                      format: 'video',
+                      title:
+                        'Por que é tão difícil para Ucrânia e Rússia selarem paz (9x16)',
+                      synopses: {
+                        short:
+                          'Volodymyr Zelensky afirmou que representantes do seu país e dos EUA',
+                      },
+                      imageUrl:
+                        'ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx8z.jpg',
+                      embedding: true,
+                      advertising: true,
+                      versions: [
+                        {
+                          versionId: 'p01wjx20',
+                          types: ['Portrait'],
+                          duration: 46,
+                          durationISO8601: 'PT46S',
+                          warnings: {},
+                          availableTerritories: {
+                            uk: true,
+                            nonUk: true,
+                          },
+                          availableFrom: 1743087045000,
+                        },
+                      ],
+                      syndication: {
+                        destinations: [],
+                      },
+                      smpKind: 'programme',
+                      webcastVersions: [],
+                    },
+                    position: [2, 2, 1],
+                  },
+                  {
+                    id: 'ffd3ee60',
+                    type: 'image',
+                    model: {
+                      blocks: [
+                        {
+                          id: '688befa3',
+                          type: 'rawImage',
+                          model: {
+                            width: 546,
+                            height: 972,
+                            locator:
+                              'ichef.test.bbci.co.uk/images/ic/$widthxn/p01wjx8z.jpg',
+                            originCode: 'mpv',
+                          },
+                          position: [2, 2, 2, 1],
+                        },
+                        {
+                          id: 'b4cd48f9',
+                          type: 'altText',
+                          model: {
+                            blocks: [
+                              {
+                                id: '7a51a18d',
+                                type: 'text',
+                                model: {
+                                  blocks: [
+                                    {
+                                      id: 'c81167c0',
+                                      type: 'paragraph',
+                                      model: {
+                                        text: 'Volodymyr Zelensky afirmou que representantes do seu país e dos EUA',
+                                        blocks: [
+                                          {
+                                            id: '9836d402',
+                                            type: 'fragment',
+                                            model: {
+                                              text: 'Volodymyr Zelensky afirmou que representantes do seu país e dos EUA',
+                                              attributes: [],
+                                            },
+                                            position: [2, 2, 2, 2, 1, 1, 1],
+                                          },
+                                        ],
+                                      },
+                                      position: [2, 2, 2, 2, 1, 1],
+                                    },
+                                  ],
+                                },
+                                position: [2, 2, 2, 2, 1],
+                              },
+                            ],
+                          },
+                          position: [2, 2, 2, 2],
+                        },
+                      ],
+                    },
+                    position: [2, 2, 2],
+                  },
+                ],
+              },
+              position: [2, 2],
+            },
+          ],
+        },
+        position: [2],
+      },
+      {
+        id: '28c86981',
+        type: 'video',
+        model: {
+          locator: 'urn:bbc:pips:pid:p01wjx35',
+          blocks: [
+            {
+              id: '41b9772d',
+              type: 'caption',
+              model: {
+                blocks: [
+                  {
+                    id: '74f60bbc',
+                    type: 'text',
+                    model: {
+                      blocks: [
+                        {
+                          id: '35e7a7b2',
+                          type: 'paragraph',
+                          model: {
+                            text: 'Papa Francisco reencontra fiéis ao deixar hospital em Roma (9x16)',
+                            blocks: [
+                              {
+                                id: '62371020',
+                                type: 'fragment',
+                                model: {
+                                  text: 'Papa Francisco reencontra fiéis ao deixar hospital em Roma (9x16)',
+                                  attributes: [],
+                                },
+                                position: [4, 1, 1, 1, 1],
+                              },
+                            ],
+                          },
+                          position: [4, 1, 1, 1],
+                        },
+                      ],
+                    },
+                    position: [4, 1, 1],
+                  },
+                ],
+              },
+              position: [4, 1],
+            },
+            {
+              id: '0477ec35',
+              type: 'aresMedia',
+              model: {
+                blocks: [
+                  {
+                    id: '0a514dce',
+                    blockId: 'urn:bbc:ares::clip:p01wjx35',
+                    type: 'aresMediaMetadata',
+                    model: {
+                      id: 'p01wjx35',
+                      subType: 'clip',
+                      format: 'video',
+                      title:
+                        'Papa Francisco reencontra fiéis ao deixar hospital em Roma (9x16)',
+                      synopses: {
+                        short:
+                          'Após 37 dias de internação, o papa Francisco recebeu alta do hospital',
+                      },
+                      imageUrl:
+                        'ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx3l.jpg',
+                      embedding: true,
+                      advertising: true,
+                      versions: [
+                        {
+                          versionId: 'p01wjx37',
+                          types: ['Portrait'],
+                          duration: 13,
+                          durationISO8601: 'PT13S',
+                          warnings: {},
+                          availableTerritories: {
+                            uk: true,
+                            nonUk: true,
+                          },
+                          availableFrom: 1743087351000,
+                        },
+                      ],
+                      syndication: {
+                        destinations: [],
+                      },
+                      smpKind: 'programme',
+                      webcastVersions: [],
+                    },
+                    position: [4, 2, 1],
+                  },
+                  {
+                    id: 'eb48491b',
+                    type: 'image',
+                    model: {
+                      blocks: [
+                        {
+                          id: '0cece715',
+                          type: 'rawImage',
+                          model: {
+                            width: 546,
+                            height: 972,
+                            locator:
+                              'ichef.test.bbci.co.uk/images/ic/$widthxn/p01wjx3l.jpg',
+                            originCode: 'mpv',
+                          },
+                          position: [4, 2, 2, 1],
+                        },
+                        {
+                          id: 'c44569dd',
+                          type: 'altText',
+                          model: {
+                            blocks: [
+                              {
+                                id: '507238e7',
+                                type: 'text',
+                                model: {
+                                  blocks: [
+                                    {
+                                      id: 'a6dfd93d',
+                                      type: 'paragraph',
+                                      model: {
+                                        text: 'Após 37 dias de internação, o papa Francisco recebeu alta do hospital',
+                                        blocks: [
+                                          {
+                                            id: '96a95770',
+                                            type: 'fragment',
+                                            model: {
+                                              text: 'Após 37 dias de internação, o papa Francisco recebeu alta do hospital',
+                                              attributes: [],
+                                            },
+                                            position: [4, 2, 2, 2, 1, 1, 1],
+                                          },
+                                        ],
+                                      },
+                                      position: [4, 2, 2, 2, 1, 1],
+                                    },
+                                  ],
+                                },
+                                position: [4, 2, 2, 2, 1],
+                              },
+                            ],
+                          },
+                          position: [4, 2, 2, 2],
+                        },
+                      ],
+                    },
+                    position: [4, 2, 2],
+                  },
+                ],
+              },
+              position: [4, 2],
+            },
+          ],
+        },
+        position: [4],
+      },
+    ],
+
+    'Article Headline for SEO in Russian',
+    'Article Headline for Promo in Russian',
+    'Article summary in Russian',
+    emptyThings,
+    true,
+    plainOptimoBlock,
+  ) as unknown as Article;
+
 export const bylineWithNoAuthor = [
   {
     type: 'contributor',
