@@ -240,7 +240,7 @@ const liteTestsSuits = canonicalTestSuites
     return {
       ...testSuite,
       path: `${testSuite.path}.lite`,
-      tests: [liteTests],
+      tests: [...liteTests],
     };
   });
 
