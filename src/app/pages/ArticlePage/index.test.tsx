@@ -12,7 +12,8 @@ import {
   articleDataPidginWithAds,
   articleDataPidginWithByline,
   articleDataPidginWithPV,
-  articleDataPortugueseWithPV,
+  articleDataPortugueseWithPVNotUnderHeadline,
+  articleDataPortugueseWithPVUnderHeadline,
   promoSample,
   articlePglDataPidgin,
   articleStyDataPidgin,
@@ -908,9 +909,9 @@ describe('Article Page', () => {
 
   describe('when rendering an article page with a portrait video', () => {
     it.each`
-      pageData                       | service         | expected     | title     | translation
-      ${articleDataPortugueseWithPV} | ${'portuguese'} | ${'Assista'} | ${''}     | ${' a'}
-      ${articleDataPidginWithPV}     | ${'pidgin'}     | ${undefined} | ${' not'} | ${' no'}
+      pageData                                       | service         | expected     | title     | translation
+      ${articleDataPortugueseWithPVNotUnderHeadline} | ${'portuguese'} | ${'Assista'} | ${''}     | ${' a'}
+      ${articleDataPidginWithPV}                     | ${'pidgin'}     | ${undefined} | ${' not'} | ${' no'}
     `(
       `should$title render the title if there is$translation "WatchMoments" translation`,
       ({ pageData, service, expected }) => {
@@ -929,5 +930,16 @@ describe('Article Page', () => {
         }
       },
     );
+
+    it('should not render the portrait video title when the portrait video is directly under a headline', () => {
+      render(
+        <Context service="portuguese">
+          <ArticlePage pageData={articleDataPortugueseWithPVUnderHeadline} />
+        </Context>,
+      );
+
+      const title = screen.queryByRole('strong');
+      expect(title).not.toBeInTheDocument();
+    });
   });
 });

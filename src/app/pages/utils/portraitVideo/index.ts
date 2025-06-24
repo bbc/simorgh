@@ -11,14 +11,18 @@ const ORIENTATION_MAPPING: Record<string, Orientations> = {
   Original: 'landscape',
 };
 
-const isPortraitVideo = (mediaBlock: OptimoBlock[]) => {
+const getAresMediaMetadata = (mediaBlock: OptimoBlock[]) => {
   const { model: aresMedia }: AresMediaBlock =
     filterForBlockType(mediaBlock, 'aresMedia') ?? {};
 
-  if (!aresMedia) return false;
-
   const { model: aresMediaMetadata }: AresMediaMetadataBlock =
     filterForBlockType(aresMedia?.blocks, 'aresMediaMetadata') ?? {};
+
+  return aresMediaMetadata;
+};
+
+export const isPortraitVideo = (mediaBlock: OptimoBlock[]) => {
+  const aresMediaMetadata = getAresMediaMetadata(mediaBlock);
 
   const { webcastVersions = [] } = aresMediaMetadata ?? {};
 
@@ -36,4 +40,23 @@ const isPortraitVideo = (mediaBlock: OptimoBlock[]) => {
   return orientationType === 'Portrait';
 };
 
-export default isPortraitVideo;
+export const isPortraitVideoUnderHeadline = (
+  articlePageBlocks: OptimoBlock[],
+  mediaBlock: OptimoBlock[],
+) => {
+  const blockUnderHeadline = articlePageBlocks[1];
+  if (blockUnderHeadline.type !== 'video' || !isPortraitVideo(mediaBlock)) {
+    return false;
+  }
+
+  const targetAresMediaMetadataBlock = getAresMediaMetadata(
+    blockUnderHeadline?.model?.blocks ?? [],
+  );
+
+  const currentAresMediaMetadata = getAresMediaMetadata(mediaBlock);
+
+  if (targetAresMediaMetadataBlock.id === currentAresMediaMetadata.id) {
+    return true;
+  }
+  return false;
+};

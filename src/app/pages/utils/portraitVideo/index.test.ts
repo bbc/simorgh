@@ -1,4 +1,4 @@
-import isPortraitVideo from '.';
+import { isPortraitVideo } from '.';
 import {
   mediaBlockWithPV,
   mediaBlockWithMultipleVersionsTypes,

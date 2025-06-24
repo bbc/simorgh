@@ -65,7 +65,7 @@ import styles from './MediaArticlePage.styles';
 import { ComponentToRenderProps, TimestampProps } from './types';
 import checkIsLiveMedia from './utils/checkIsLiveMedia';
 
-import isPortraitVideo from '../utils/isPortraitVideo';
+import { isPortraitVideo } from '../utils/portraitVideo';
 
 const getAudioVideoComponent =
   (isCpsMap: boolean) => (props: ComponentToRenderProps) => {

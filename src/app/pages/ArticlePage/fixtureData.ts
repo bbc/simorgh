@@ -1,6 +1,7 @@
 import {
   Article,
   OptimoBylineContributorBlock,
+  OptimoBlock,
 } from '#app/models/types/optimo';
 import {
   blockContainingText,
@@ -8,6 +9,9 @@ import {
   singleTextBlock,
   textBlock,
 } from '#models/blocks';
+
+const plainOptimoBlock = (blocks: (object | string)[]) =>
+  blocks as OptimoBlock[];
 
 const blocksWithHeadlineAndText = (blockValues: (object | string)[]) => {
   const [headlineText, paragraphText, ...additional] = blockValues;
@@ -871,7 +875,7 @@ export const articleDataPidginWithPV = articleDataBuilder(
   true,
 ) as unknown as Article;
 
-export const articleDataPortugueseWithPV = articleDataBuilder(
+export const articleDataPortugueseWithPVNotUnderHeadline = articleDataBuilder(
   'cwl08rd38l6o',
   'Portuguese',
   'pcm',
@@ -944,6 +948,214 @@ export const articleDataPortugueseWithPV = articleDataBuilder(
   'Article summary in Portuguese',
   emptyThings,
   true,
+) as unknown as Article;
+
+export const articleDataPortugueseWithPVUnderHeadline = articleDataBuilder(
+  'cn1n9zqrkkxo',
+  'Portuguese',
+  'pcm',
+  'http://www.bbc.co.uk/ontologies/passport/home/portuguese',
+
+  [
+    {
+      id: '4bcc42a0',
+      type: 'headline',
+      model: {
+        blocks: [
+          {
+            id: '6be771a2',
+            type: 'text',
+            model: {
+              blocks: [
+                {
+                  id: 'dc16d5c8',
+                  type: 'paragraph',
+                  model: {
+                    text: 'this is an article with 2 PV\'s that have "Watch Moments" translations',
+                    blocks: [
+                      {
+                        id: 'd86d5a87',
+                        type: 'fragment',
+                        model: {
+                          text: 'this is an article with 2 PV\'s that have "Watch Moments" translations',
+                          attributes: [],
+                        },
+                        position: [1, 1, 1, 1],
+                      },
+                    ],
+                  },
+                  position: [1, 1, 1],
+                },
+              ],
+            },
+            position: [1, 1],
+          },
+        ],
+      },
+      position: [1],
+    },
+    {
+      id: '97683b9c',
+      type: 'video',
+      model: {
+        locator: 'urn:bbc:pips:pid:p01wjx1y',
+        blocks: [
+          {
+            id: '234b7583',
+            type: 'caption',
+            model: {
+              blocks: [
+                {
+                  id: 'f7ab9725',
+                  type: 'text',
+                  model: {
+                    blocks: [
+                      {
+                        id: 'ef83dd72',
+                        type: 'paragraph',
+                        model: {
+                          text: 'PV video 1',
+                          blocks: [
+                            {
+                              id: 'c4c548a0',
+                              type: 'fragment',
+                              model: {
+                                text: 'PV video 1',
+                                attributes: [],
+                              },
+                              position: [2, 1, 1, 1, 1],
+                            },
+                          ],
+                        },
+                        position: [2, 1, 1, 1],
+                      },
+                    ],
+                  },
+                  position: [2, 1, 1],
+                },
+              ],
+            },
+            position: [2, 1],
+          },
+          {
+            id: '7f377448',
+            type: 'aresMedia',
+            model: {
+              blocks: [
+                {
+                  id: '00d617cc',
+                  blockId: 'urn:bbc:ares::clip:p01wjx1y',
+                  type: 'aresMediaMetadata',
+                  model: {
+                    id: 'p01wjx1y',
+                    subType: 'clip',
+                    format: 'video',
+                    title:
+                      'Por que é tão difícil para Ucrânia e Rússia selarem paz (9x16)',
+                    synopses: {
+                      short:
+                        'Volodymyr Zelensky afirmou que representantes do seu país e dos EUA',
+                    },
+                    imageUrl:
+                      'ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx8z.jpg',
+                    embedding: true,
+                    advertising: true,
+                    versions: [
+                      {
+                        versionId: 'p01wjx20',
+                        types: ['Portrait'],
+                        duration: 46,
+                        durationISO8601: 'PT46S',
+                        warnings: {},
+                        availableTerritories: {
+                          uk: true,
+                          nonUk: true,
+                        },
+                        availableFrom: 1743087045000,
+                      },
+                    ],
+                    syndication: {
+                      destinations: [],
+                    },
+                    smpKind: 'programme',
+                    webcastVersions: [],
+                  },
+                  position: [2, 2, 1],
+                },
+                {
+                  id: '31d288c4',
+                  type: 'image',
+                  model: {
+                    blocks: [
+                      {
+                        id: '7ea80a05',
+                        type: 'rawImage',
+                        model: {
+                          width: 546,
+                          height: 972,
+                          locator:
+                            'ichef.test.bbci.co.uk/images/ic/$widthxn/p01wjx8z.jpg',
+                          originCode: 'mpv',
+                        },
+                        position: [2, 2, 2, 1],
+                      },
+                      {
+                        id: '09edd493',
+                        type: 'altText',
+                        model: {
+                          blocks: [
+                            {
+                              id: 'd6a458af',
+                              type: 'text',
+                              model: {
+                                blocks: [
+                                  {
+                                    id: '744dcce9',
+                                    type: 'paragraph',
+                                    model: {
+                                      text: 'Volodymyr Zelensky afirmou que representantes do seu país e dos EUA',
+                                      blocks: [
+                                        {
+                                          id: '61a07efa',
+                                          type: 'fragment',
+                                          model: {
+                                            text: 'Volodymyr Zelensky afirmou que representantes do seu país e dos EUA',
+                                            attributes: [],
+                                          },
+                                          position: [2, 2, 2, 2, 1, 1, 1],
+                                        },
+                                      ],
+                                    },
+                                    position: [2, 2, 2, 2, 1, 1],
+                                  },
+                                ],
+                              },
+                              position: [2, 2, 2, 2, 1],
+                            },
+                          ],
+                        },
+                        position: [2, 2, 2, 2],
+                      },
+                    ],
+                  },
+                  position: [2, 2, 2],
+                },
+              ],
+            },
+            position: [2, 2],
+          },
+        ],
+      },
+      position: [2],
+    },
+  ],
+
+  'Article Headline for SEO in Portuguese',
+  'Article Headline for Promo in Portuguese',
+  'Article summary in Portuguese',
+  emptyThings,
+  true,
+  plainOptimoBlock,
 ) as unknown as Article;
 
 export const bylineWithNoAuthor = [
