@@ -5,6 +5,7 @@ import { testsThatFollowSmokeTestConfigForAllAMPPages as testsForAllAMPPages } f
 import canonicalAndAmpArticleTests from './tests';
 import ampArticleTests from './testsForAMPOnly';
 import canonicalArticleTests from './testsForCanonicalOnly';
+import getOptimizelyKey from '../../../support/helpers/getOptimizelyKey';
 
 const canonicalTests = [
   testsForAllPages,
@@ -229,7 +230,33 @@ const ampTestSuites = testSuites.map(testSuite => {
   };
 });
 
-runTestsForPage({
-  pageType,
-  testSuites: [...testSuites, ...ampTestSuites],
+const liteTestSuites = testSuites
+  .filter(
+    ({ service }) =>
+      service !== 'news' && service !== 'sport' && service !== 'newsround',
+  )
+  .map(testSuite => {
+    return {
+      ...testSuite,
+      path: `${testSuite.path}.lite`,
+      tests: [...canonicalTests],
+    };
+  });
+
+describe('storyPage', () => {
+  beforeEach(() => {
+    cy.intercept(
+      {
+        url: `https://cdn.optimizely.com/datafiles/${getOptimizelyKey()}.json`,
+      },
+      request => {
+        request.reply({ statusCode: 404 });
+      },
+    ).as('disable-optimizely');
+  });
+
+  runTestsForPage({
+    pageType,
+    testSuites: [...testSuites, ...ampTestSuites, ...liteTestSuites],
+  });
 });
