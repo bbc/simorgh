@@ -11,6 +11,7 @@ export type EventTrackingMetadata = {
   campaignID?: string;
   advertiserID?: string;
   sendOptimizelyEvents?: boolean;
+  experimentVariation?: string | null;
 };
 
 export type EventTrackingBlock = {

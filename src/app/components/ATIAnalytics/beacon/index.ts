@@ -16,6 +16,7 @@ export const sendEventBeacon = async ({
   advertiserID,
   url,
   detailedPlacement,
+  experimentName,
   experimentVariant,
   useReverb,
   itemTracker,
@@ -34,6 +35,7 @@ export const sendEventBeacon = async ({
     advertiserID,
     url,
     detailedPlacement,
+    experimentName,
     experimentVariant,
   });
 
