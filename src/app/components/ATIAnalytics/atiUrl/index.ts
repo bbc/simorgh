@@ -340,7 +340,7 @@ export const buildATIEventTrackUrl = ({
         advertiserID,
         url,
         detailedPlacement,
-        experimentVariant,
+        experimentVariant: experimentVariant ?? '',
       }),
       wrap: false,
       disableEncoding: true,
@@ -387,7 +387,6 @@ export const buildATIEventTrackUrl = ({
       ? [
           {
             key: 'mv_test',
-            // check this
             description: 'Experiment name',
             value: `${experimentName}`,
             wrap: false,
