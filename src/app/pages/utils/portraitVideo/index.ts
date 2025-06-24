@@ -50,7 +50,7 @@ export const isPortraitVideoUnderHeadline = (
   }
 
   const targetAresMediaMetadataBlock = getAresMediaMetadata(
-    blockUnderHeadline?.model?.blocks ?? [],
+    (blockUnderHeadline?.model as { blocks?: OptimoBlock[] })?.blocks ?? [],
   );
 
   const currentAresMediaMetadata = getAresMediaMetadata(mediaBlock);
