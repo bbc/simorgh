@@ -16,7 +16,7 @@ const getAresMediaMetadata = (mediaBlock: OptimoBlock[]) => {
     filterForBlockType(mediaBlock, 'aresMedia') ?? {};
 
   const { model: aresMediaMetadata }: AresMediaMetadataBlock =
-    filterForBlockType(aresMedia?.blocks, 'aresMediaMetadata') ?? {};
+    filterForBlockType(aresMedia?.blocks ?? [], 'aresMediaMetadata') ?? {};
 
   return aresMediaMetadata;
 };
@@ -55,7 +55,7 @@ export const isPortraitVideoUnderHeadline = (
 
   const currentAresMediaMetadata = getAresMediaMetadata(mediaBlock);
 
-  if (targetAresMediaMetadataBlock.id === currentAresMediaMetadata.id) {
+  if (targetAresMediaMetadataBlock?.id === currentAresMediaMetadata?.id) {
     return true;
   }
   return false;
