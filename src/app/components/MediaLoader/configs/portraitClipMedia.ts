@@ -97,6 +97,9 @@ export default ({
           enabled: isMobile,
           useCloseIconForExitFullscreen: true,
         },
+        pictureInPicture: {
+          enabled: false,
+        },
       },
       statsObject: {
         ...basePlayerConfig.statsObject,
