@@ -6,6 +6,7 @@ import canonicalAndAmpArticleTests from './tests';
 import ampArticleTests from './testsForAMPOnly';
 import canonicalArticleTests from './testsForCanonicalOnly';
 import getOptimizelyKey from '../../../support/helpers/getOptimizelyKey';
+import liteTests from '../articles/testsForLiteOnly';
 
 const canonicalTests = [
   testsForAllPages,
@@ -23,7 +24,7 @@ const ampTests = [
 
 const pageType = 'storyPage';
 
-const smokeTestSuites = [
+const canonicalSmokeTestSuites = [
   {
     path: '/hausa/labarai-54292969',
     service: 'hausa',
@@ -86,7 +87,7 @@ const smokeTestSuites = [
   },
 ];
 
-const nonSmokeTestSuites = [
+const canonicalNonSmokeTestSuites = [
   {
     path: '/gahuza/amakuru-52821373',
     service: 'gahuza',
@@ -221,9 +222,11 @@ const nonSmokeTestSuites = [
   },
 ];
 
-const testSuites = Cypress.env('SMOKE') ? smokeTestSuites : nonSmokeTestSuites;
+const canonicalTestSuites = Cypress.env('SMOKE')
+  ? canonicalSmokeTestSuites
+  : canonicalNonSmokeTestSuites;
 
-const ampTestSuites = testSuites.map(testSuite => {
+const ampTestSuites = canonicalTestSuites.map(testSuite => {
   return {
     ...testSuite,
     path: `${testSuite.path}.amp`,
@@ -231,16 +234,13 @@ const ampTestSuites = testSuites.map(testSuite => {
   };
 });
 
-const liteTestSuites = testSuites
-  .filter(
-    ({ service }) =>
-      service !== 'news' && service !== 'sport' && service !== 'newsround',
-  )
+const liteTestsSuits = canonicalTestSuites
+  .filter(({ service }) => !['news', 'sport', 'newsround'].includes(service))
   .map(testSuite => {
     return {
       ...testSuite,
       path: `${testSuite.path}.lite`,
-      tests: [...canonicalTests],
+      tests: [liteTests],
     };
   });
 
@@ -258,6 +258,10 @@ describe('storyPage', () => {
 
   runTestsForPage({
     pageType,
-    testSuites: [...testSuites, ...ampTestSuites, ...liteTestSuites],
+    canonicalTestSuites: [
+      ...canonicalTestSuites,
+      ...ampTestSuites,
+      ...liteTestsSuits,
+    ],
   });
 });
