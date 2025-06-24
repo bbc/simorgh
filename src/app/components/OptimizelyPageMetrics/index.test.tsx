@@ -83,12 +83,7 @@ describe('OptimizelyPageMetrics', () => {
     );
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp>
-        <OptimizelyPageMetrics
-          trackPageView
-          trackPageDepth
-          trackPageComplete
-          pageType={ARTICLE_PAGE}
-        />
+        <OptimizelyPageMetrics trackPageView trackPageDepth trackPageComplete />
       </ContextWrap>,
     );
     await waitFor(() => {
@@ -115,7 +110,7 @@ describe('OptimizelyPageMetrics', () => {
     );
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
-        <OptimizelyPageMetrics pageType={ARTICLE_PAGE} />
+        <OptimizelyPageMetrics />
       </ContextWrap>,
     );
     await waitFor(() => {
@@ -142,7 +137,7 @@ describe('OptimizelyPageMetrics', () => {
     );
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
-        <OptimizelyPageMetrics trackPageComplete pageType={ARTICLE_PAGE} />
+        <OptimizelyPageMetrics trackPageComplete />
       </ContextWrap>,
     );
     await waitFor(() => {
@@ -161,7 +156,7 @@ describe('OptimizelyPageMetrics', () => {
     );
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
-        <OptimizelyPageMetrics trackPageDepth pageType={ARTICLE_PAGE} />
+        <OptimizelyPageMetrics trackPageDepth />
       </ContextWrap>,
     );
     await waitFor(() => {
@@ -180,7 +175,7 @@ describe('OptimizelyPageMetrics', () => {
     );
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
-        <OptimizelyPageMetrics trackPageView pageType={ARTICLE_PAGE} />
+        <OptimizelyPageMetrics trackPageView />
       </ContextWrap>,
     );
     await waitFor(() => {
@@ -199,12 +194,7 @@ describe('OptimizelyPageMetrics', () => {
     );
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
-        <OptimizelyPageMetrics
-          trackPageComplete
-          trackPageDepth
-          trackPageView
-          pageType={ARTICLE_PAGE}
-        />
+        <OptimizelyPageMetrics trackPageComplete trackPageDepth trackPageView />
       </ContextWrap>,
     );
     await waitFor(() => {
@@ -218,7 +208,7 @@ describe('OptimizelyPageMetrics', () => {
     experimentsForPageMetrics.push(...[]);
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
-        <OptimizelyPageMetrics trackPageComplete pageType={ARTICLE_PAGE} />
+        <OptimizelyPageMetrics trackPageComplete />
       </ContextWrap>,
     );
     await waitFor(() => {
@@ -239,7 +229,7 @@ describe('OptimizelyPageMetrics', () => {
     );
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
-        <OptimizelyPageMetrics trackPageComplete pageType={ARTICLE_PAGE} />
+        <OptimizelyPageMetrics trackPageComplete />
       </ContextWrap>,
     );
     await waitFor(() => {
@@ -260,12 +250,7 @@ describe('OptimizelyPageMetrics', () => {
     );
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
-        <OptimizelyPageMetrics
-          trackPageComplete
-          trackPageDepth
-          trackPageView
-          pageType={ARTICLE_PAGE}
-        />
+        <OptimizelyPageMetrics trackPageComplete trackPageDepth trackPageView />
       </ContextWrap>,
     );
     await waitFor(() => {
@@ -286,18 +271,81 @@ describe('OptimizelyPageMetrics', () => {
     );
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
-        <OptimizelyPageMetrics
-          trackPageComplete
-          trackPageDepth
-          trackPageView
-          pageType={ARTICLE_PAGE}
-        />
+        <OptimizelyPageMetrics trackPageComplete trackPageDepth trackPageView />
       </ContextWrap>,
     );
     await waitFor(() => {
       expect(
         screen.queryByTestId('page-complete-tracking'),
       ).not.toBeInTheDocument();
+    });
+  });
+
+  describe('Multiple experiments on different page types', () => {
+    it('should render correctly when a user is in an experiment on the current page type', async () => {
+      experimentsForPageMetrics.push(
+        ...[
+          {
+            pageType: ARTICLE_PAGE,
+            activeExperiments: ['mockExperiment1'],
+          },
+          {
+            pageType: HOME_PAGE,
+            activeExperiments: ['mockExperimentOff'],
+          },
+        ],
+      );
+      render(
+        <ContextWrap pageType={ARTICLE_PAGE} service="news">
+          <OptimizelyPageMetrics
+            trackPageComplete
+            trackPageDepth
+            trackPageView
+          />
+        </ContextWrap>,
+      );
+      await waitFor(() => {
+        expect(
+          screen.getByTestId('page-complete-tracking'),
+        ).toBeInTheDocument();
+        expect(screen.getByTestId('scroll-depth-tracking')).toBeInTheDocument();
+        expect(screen.getByTestId('page-view-tracking')).toBeInTheDocument();
+      });
+    });
+
+    it('should return null when a user is not in an experiment on the current page type', async () => {
+      experimentsForPageMetrics.push(
+        ...[
+          {
+            pageType: ARTICLE_PAGE,
+            activeExperiments: ['mockExperimentOff'],
+          },
+          {
+            pageType: HOME_PAGE,
+            activeExperiments: ['mockExperiment2'],
+          },
+        ],
+      );
+      render(
+        <ContextWrap pageType={ARTICLE_PAGE} service="news">
+          <OptimizelyPageMetrics
+            trackPageComplete
+            trackPageDepth
+            trackPageView
+          />
+        </ContextWrap>,
+      );
+      await waitFor(() => {
+        expect(
+          screen.queryByTestId('page-complete-tracking'),
+        ).not.toBeInTheDocument();
+        expect(
+          screen.queryByTestId('scroll-depth-tracking'),
+        ).not.toBeInTheDocument();
+        expect(
+          screen.queryByTestId('page-view-tracking'),
+        ).not.toBeInTheDocument();
+      });
     });
   });
 });
