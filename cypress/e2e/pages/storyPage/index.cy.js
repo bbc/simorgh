@@ -240,7 +240,7 @@ const liteTestsSuits = canonicalTestSuites
     return {
       ...testSuite,
       path: `${testSuite.path}.lite`,
-      tests: [...liteTests],
+      tests: [liteTests],
     };
   });
 
@@ -258,10 +258,6 @@ describe('storyPage', () => {
 
   runTestsForPage({
     pageType,
-    canonicalTestSuites: [
-      ...canonicalTestSuites,
-      ...ampTestSuites,
-      ...liteTestsSuits,
-    ],
+    testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestsSuits],
   });
 });
