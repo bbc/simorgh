@@ -5,7 +5,9 @@ import { useContext, useEffect, useState, useRef, useCallback } from 'react';
 
 import { RequestContext } from '#app/contexts/RequestContext';
 import { OptimizelyContext } from '@optimizely/react-sdk';
-import useOptimizelyVariation, { ExperimentState } from '#app/hooks/useOptimizelyVariation';
+import useOptimizelyVariation, {
+  ExperimentState,
+} from '#app/hooks/useOptimizelyVariation';
 import {
   STATIC_ATI_VIEW_TRACKING,
   VIEW_EVENT,

@@ -1,7 +1,9 @@
 /* eslint-disable no-console */
 import { useContext, useCallback, useState } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
-import useOptimizelyVariation, { ExperimentState } from '#app/hooks/useOptimizelyVariation';
+import useOptimizelyVariation, {
+  ExperimentState,
+} from '#app/hooks/useOptimizelyVariation';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
 import constructStaticATIUrl from '#app/lib/analyticsUtils/staticATITracking/constructATIUrl';
 import {

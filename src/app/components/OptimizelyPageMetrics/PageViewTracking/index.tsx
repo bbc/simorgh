@@ -1,6 +1,8 @@
 import { useState, useContext, useEffect } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
-import useOptimizelyVariation, { ExperimentState } from '#app/hooks/useOptimizelyVariation';
+import useOptimizelyVariation, {
+  ExperimentState,
+} from '#app/hooks/useOptimizelyVariation';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 
 const PageViewTracking = () => {

@@ -1,6 +1,8 @@
 import { useEffect, useState, useContext } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
-import useOptimizelyVariation, { ExperimentState } from '#app/hooks/useOptimizelyVariation';
+import useOptimizelyVariation, {
+  ExperimentState,
+} from '#app/hooks/useOptimizelyVariation';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 
 const getScrollDepth = () =>
