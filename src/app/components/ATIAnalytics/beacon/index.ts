@@ -50,6 +50,7 @@ export const sendEventBeacon = async ({
         type,
         advertiserID,
         url,
+        experimentName,
         experimentVariant,
         itemTracker,
         groupTracker,

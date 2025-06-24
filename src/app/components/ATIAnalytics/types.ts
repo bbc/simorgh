@@ -162,7 +162,7 @@ export interface ATIEventTrackingProps {
   detailedPlacement?: string;
   useReverb?: boolean;
   experimentName?: string;
-  experimentVariant?: string;
+  experimentVariant?: string | null;
   ampExperimentName?: string;
   preventNavigation?: string;
   itemTracker?: ItemTracker;
