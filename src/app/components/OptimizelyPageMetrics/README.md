@@ -1,19 +1,19 @@
-## Description
+## Optimizely Page Metrics
 
-OptimizelyPageMetrics is a React component that conditionally tracks Optimizely Page metrics such as page views, scroll depth, and page completion.
+`OptimizelyPageMetrics` is a React component that conditionally tracks metrics such as page views, scroll depth, and page completion.
 
 This component ensures that tracking is only enabled for users who are part of specific Optimizely experiments, and only on supported page types.
 
 It does this by:
 
-- Accesses the Optimizely client.
-- Uses RequestContext to determine the current page type (that OptimizelyPageMetrics was rendered on).
-- Finds experiments enabled on current page type in experimentsForPageMetrics array.
+- Accesses the `Optimizely` client.
+- Uses `RequestContext` to determine the current page type (that the `OptimizelyPageMetrics` component is rendered on).
+- Finds experiments enabled on current page type in [`experimentsForPageMetrics`](./experimentsForPageMetrics.ts).
 - If there are enabled experiments and once Optimizely is ready:
   - Gets all Optimizely experiment decisions
-  - For each enabled experiment, go through Optimizely descisions and check if a user is in any variation.
-  - If a user is in a variation, then we know to send Optimizely page metrics and we render the components. (Note, it doesn't matter which experiment or variation the user is in, since Optimizely is aware of this based on UserID)
-  - If a user is not in a variation, then we return null.
+  - For each enabled experiment, loop through Optimizely decisions and check if a user is in any variation.
+  - If a user is in a variation, then send Optimizely page metrics and render the page metric components. (Note, it doesn't matter which experiment or variation the user is in, since Optimizely is aware of this based on UserID)
+  - If a user is not in a variation, then we return null. Optimizely will not track any metrics.
 
 ## Props
 
@@ -25,7 +25,7 @@ It does this by:
 
 ## experimentsForPageMetrics Array
 
-This is configured so that all Page Metrics are collected for any experiment listed.
+[`experimentsForPageMetrics`](./experimentsForPageMetrics.ts) is configured so that all Page Metrics are collected for any experiment listed.
 
 For example, say we have 4 experiments running that all want to collect Page Metrics:
 
@@ -37,6 +37,7 @@ For example, say we have 4 experiments running that all want to collect Page Met
 The experimentsForPageMetrics array would look something like:
 
 ```ts
+import { ARTICLE_PAGE, HOME_PAGE, LIVE_PAGE } from '#app/routes/utils/pageTypes';
 [
     {
         pageType: ARTICLE_PAGE
@@ -63,14 +64,17 @@ You can use once on a page
 }
 ```
 
-Or multiple times to envoke different page metrics at different points of the page
+Or multiple times to invoke different page metrics in different sections of the page
 
 ```tsx
 {
-<main>
-    // Main Content
+  <main>
+    {/* Track page completes but only within the main section of the page */}
     <OptimizelyPageMetrics trackPageComplete />
-</main>
-<OptimizelyPageMetrics trackPageView trackPageDepth />
+  </main>;
+  {
+    /* Track page views & scroll depth outside the main section of the page */
+  }
+  <OptimizelyPageMetrics trackPageView trackPageDepth />;
 }
 ```
