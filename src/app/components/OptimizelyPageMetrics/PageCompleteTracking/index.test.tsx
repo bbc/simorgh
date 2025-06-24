@@ -4,14 +4,14 @@ import { render, act } from '@testing-library/react';
 import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import useOptimizely from '#app/hooks/useOptimizely';
+import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 import { PageTypes, Services } from '#app/models/types/global';
 
 import PageCompleteTracking from '.';
 
-jest.mock('#hooks/useOptimizely', () => ({
+jest.mock('#hooks/useOptimizelyVariation', () => ({
   __esModule: true,
-  ...jest.requireActual('#app/hooks/useOptimizely'),
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
   default: jest.fn(),
 }));
 
@@ -130,7 +130,7 @@ describe('Optimizely Page Complete tracking', () => {
   });
 
   it('should not send tracking event when element is not in view', async () => {
-    (useOptimizely as jest.Mock).mockReturnValue('variation_1');
+    (useOptimizelyVariation as jest.Mock).mockReturnValue('variation_1');
 
     const { container } = render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
@@ -154,7 +154,7 @@ describe('Optimizely Page Complete tracking', () => {
   });
 
   it('should not send tracking event when element is in view, but not in experiment variation', async () => {
-    (useOptimizely as jest.Mock).mockReturnValue(null);
+    (useOptimizelyVariation as jest.Mock).mockReturnValue(null);
 
     const { container } = render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
@@ -178,7 +178,7 @@ describe('Optimizely Page Complete tracking', () => {
   });
 
   it('should send tracking event when element is in view and in experiment variation', async () => {
-    (useOptimizely as jest.Mock).mockReturnValue('variation_1');
+    (useOptimizelyVariation as jest.Mock).mockReturnValue('variation_1');
 
     const { container } = render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>

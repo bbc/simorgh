@@ -6,7 +6,7 @@ import useOptimizely, { ExperimentState } from '.';
 import * as serverSideHook from './useServerSide';
 import * as clientSideHook from './useClientSide';
 
-describe('useOptimizely custom hook', () => {
+describe('useOptimizelyVariation custom hook', () => {
   beforeEach(() => {
     jest.restoreAllMocks();
   });

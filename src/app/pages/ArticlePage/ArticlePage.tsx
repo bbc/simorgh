@@ -4,7 +4,7 @@ import React, { useContext, useState } from 'react';
 import { jsx, useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
-import useOptimizely, { ExperimentState } from '#app/hooks/useOptimizely';
+import useOptimizelyVariation, { ExperimentState } from '#app/hooks/useOptimizelyVariation';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
@@ -158,7 +158,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
-  const experimentVariant = useOptimizely({
+  const experimentVariant = useOptimizelyVariation({
     experimentName: OPTIMIZELY_CONFIG.ruleKey,
     experimentType: ExperimentState.SERVER_SIDE,
   });

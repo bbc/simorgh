@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import { useContext, useCallback, useState } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
-import useOptimizely, { ExperimentState } from '#app/hooks/useOptimizely';
+import useOptimizelyVariation, { ExperimentState } from '#app/hooks/useOptimizelyVariation';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
 import constructStaticATIUrl from '#app/lib/analyticsUtils/staticATITracking/constructATIUrl';
 import {
@@ -41,7 +41,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
   const { service, useReverb } = useContext(ServiceContext);
 
   const { optimizely } = useContext(OptimizelyContext);
-  const experimentVariation = useOptimizely({
+  const experimentVariation = useOptimizelyVariation({
     experimentName: OPTIMIZELY_CONFIG.ruleKey,
     experimentType: ExperimentState.SERVER_SIDE,
   });

@@ -55,9 +55,9 @@ atiAnalyticsSpy.mockImplementation(() => <div>ATI Analytics</div>);
 
 jest.mock('#app/components/OptimizelyPageMetrics');
 
-jest.mock('#app/hooks/useOptimizely', () => ({
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   __esModule: true,
-  ...jest.requireActual('#app/hooks/useOptimizely'),
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
   default: jest.fn(),
 }));
 

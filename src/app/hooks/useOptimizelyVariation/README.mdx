@@ -1,17 +1,17 @@
 import { Meta } from '@storybook/addon-docs/blocks';
 
-<Meta title="hooks/useOptimizely" />
+<Meta title="hooks/useOptimizelyVariation" />
 
-# useOptimizely hook
+# useOptimizelyVariation hook
 
-The `useOptimizely` hook handles:
+The `useOptimizelyVariation` hook handles:
 
 * Decides what variation to show a user via Optimizely
 * Automatically updates the variation value if the underlying datafile from Optimizely changes
 * Has functionality to override the Optimizely user's attributes
 * Uses the `useEffect` hook to prevent issues occuring via server side rendering
 
-`useOptimizely` must be used in cojunction with the HOC [`withOptimizelyProvider`](https://github.com/bbc/simorgh/tree/latest/src/app/containers/PageHandlers/withOptimizelyProvider) page handler. This is because `useOptimizely` makes use of features found in the `optimizely` object client that needs to be provided by `withOptimizelyProvider`.
+`useOptimizelyVariation` must be used in cojunction with the HOC [`withOptimizelyProvider`](https://github.com/bbc/simorgh/tree/latest/src/app/containers/PageHandlers/withOptimizelyProvider) page handler. This is because `useOptimizely` makes use of features found in the `optimizely` object client that needs to be provided by `withOptimizelyProvider`.
 `ExperimentState.CLIENT_SIDE` or  `ExperimentState.SERVER_SIDE` must be specified for the hook to call the respective client side or server side optimizely hooks.
 
 ### Usage
@@ -20,10 +20,10 @@ Here's an example of its usage:
 
 ```jsx
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
-import useOptimizely from '#hooks/useOptimizely';
+import useOptimizely from '#hooks/useOptimizelyVariation';
 
 const ExamplePage = () => {
-  const variation = useOptimizely({ experimentName: 'foo-experiment-id', runtimeType: ExperimentState.CLIENT_SIDE});
+  const variation = useOptimizelyVariation({ experimentName: 'foo-experiment-id', runtimeType: ExperimentState.CLIENT_SIDE});
 
   if (variation === 'variation_1') {
     return <p>I am variation 1</p>;

@@ -1,6 +1,6 @@
 import { useEffect, useState, useContext } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
-import useOptimizely, { ExperimentState } from '#app/hooks/useOptimizely';
+import useOptimizelyVariation, { ExperimentState } from '#app/hooks/useOptimizelyVariation';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 
 const getScrollDepth = () =>
@@ -19,7 +19,7 @@ const useOptimizelyScrollDepth = () => {
   const [scrollSeventyFive, setScrollSeventyFive] = useState(false);
   const [scrollHundred, setScrollHundred] = useState(false);
 
-  const experimentVariation = useOptimizely({
+  const experimentVariation = useOptimizelyVariation({
     experimentName: OPTIMIZELY_CONFIG.flagKey,
     experimentType: ExperimentState.CLIENT_SIDE,
   });
