@@ -495,7 +495,7 @@ export const buildReverbAnalyticsModel = ({
           ...(experimentVariant &&
             experimentName && {
               mv_test: experimentName,
-              mv_creation: `${experimentVariant}`,
+              mv_creation: experimentVariant,
             }),
         },
       },
