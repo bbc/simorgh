@@ -4,7 +4,9 @@ import React, { useContext, useState } from 'react';
 import { jsx, useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
-import useOptimizelyVariation, { ExperimentState } from '#app/hooks/useOptimizelyVariation';
+import useOptimizelyVariation, {
+  ExperimentState,
+} from '#app/hooks/useOptimizelyVariation';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
@@ -95,18 +97,18 @@ const getTimestampComponent =
     firstPublished: string,
     lastPublished: string,
   ) =>
-    (props: ComponentToRenderProps & TimeStampProps) =>
-      hasByline ? (
-        <Byline blocks={bylineContribBlocks}>
-          <Timestamp
-            firstPublished={new Date(firstPublished).getTime()}
-            lastPublished={new Date(lastPublished).getTime()}
-            popOut={false}
-          />
-        </Byline>
-      ) : (
-        <Timestamp {...props} popOut={false} />
-      );
+  (props: ComponentToRenderProps & TimeStampProps) =>
+    hasByline ? (
+      <Byline blocks={bylineContribBlocks}>
+        <Timestamp
+          firstPublished={new Date(firstPublished).getTime()}
+          lastPublished={new Date(lastPublished).getTime()}
+          popOut={false}
+        />
+      </Byline>
+    ) : (
+      <Timestamp {...props} popOut={false} />
+    );
 
 const getMpuComponent =
   (allowAdvertising: boolean) => (props: ComponentToRenderProps) =>
@@ -161,7 +163,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
-  const experimentName = 'newswb_ws_topbarojs_read_more'
+  const experimentName = 'newswb_ws_topbarojs_read_more';
   const experimentVariant = useOptimizelyVariation({
     experimentName,
     experimentType: ExperimentState.SERVER_SIDE,
@@ -275,12 +277,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const showContinueReadingButton = Boolean(
     !isAmp &&
-    !isLite &&
-    !isApp &&
-    experimentVariant &&
-    ['read-more-a', 'read-more-b', 'read-more-a-and-top-stories'].includes(
-      experimentVariant,
-    ),
+      !isLite &&
+      !isApp &&
+      experimentVariant &&
+      ['read-more-a', 'read-more-b', 'read-more-a-and-top-stories'].includes(
+        experimentVariant,
+      ),
   );
   return (
     <div css={styles.pageWrapper}>
