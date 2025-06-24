@@ -3,6 +3,8 @@
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
+import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import {
   Curation,
@@ -53,6 +55,10 @@ const HomePage = ({ pageData }: HomePageProps) => {
   } = pageData;
   const itemList = getItemList({ curations, name: brandName });
 
+  const experimentName = 'dummy_experiment_2';
+  const experimentVariant = useOptimizelyVariation(experimentName);
+  console.log('experimentVariant in Homepage', experimentVariant);
+
   return (
     <>
       <ChartbeatAnalytics title={title} />
@@ -80,6 +86,10 @@ const HomePage = ({ pageData }: HomePageProps) => {
         </VisuallyHiddenText>
         <div css={styles.inner}>
           <div css={styles.margins}>
+            {/* uncomment out to render experiment */}
+            {/* <h1>
+              {experimentName}, {experimentVariant}
+            </h1> */}
             {curations.map(
               (
                 {
@@ -135,6 +145,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
           </div>
         </div>
       </main>
+      <OptimizelyPageMetrics trackPageComplete trackPageView trackPageDepth />
     </>
   );
 };
