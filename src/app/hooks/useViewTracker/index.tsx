@@ -33,7 +33,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     detailedPlacement,
     sendOptimizelyEvents,
     experimentName,
-    experimentVariation,
+    experimentVariant,
     groupTracker,
     itemTracker,
     viewThreshold,
@@ -99,8 +99,8 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
           if (
             optimizely &&
             sendOptimizelyEvents &&
-            experimentVariation &&
-            experimentVariation !== 'off'
+            experimentVariant &&
+            experimentVariant !== 'off'
           ) {
             const overrideAttributes = optimizely?.user.attributes;
 
@@ -128,10 +128,10 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
             useReverb,
             ...(groupTracker && { groupTracker }),
             ...(itemTracker && { itemTracker }),
-            ...(experimentVariation &&
-              experimentVariation !== 'off' && {
+            ...(experimentVariant &&
+              experimentVariant !== 'off' && {
                 experimentName,
-                experimentVariant: experimentVariation,
+                experimentVariant,
               }),
           });
           setEventSent(true);
@@ -168,7 +168,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     sendOptimizelyEvents,
     optimizely,
     experimentName,
-    experimentVariation,
+    experimentVariant,
     detailedPlacement,
     useReverb,
     itemTracker,
