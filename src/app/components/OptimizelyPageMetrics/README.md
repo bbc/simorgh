@@ -4,7 +4,7 @@
 
 This component ensures that tracking is only enabled for users who are part of specific Optimizely experiments, and only on supported page types.
 
-It does this by:
+The `OptimizelyPageMetric` component:
 
 - Accesses the `Optimizely` client.
 - Uses `RequestContext` to determine the current page type (that the `OptimizelyPageMetrics` component is rendered on).
@@ -34,7 +34,7 @@ For example, say we have 4 experiments running that all want to collect Page Met
 - Experiment3: Article and Live pages
 - Experiment4: Article pages
 
-The experimentsForPageMetrics array would look something like:
+The `experimentsForPageMetrics` array would look something like:
 
 ```ts
 import { ARTICLE_PAGE, HOME_PAGE, LIVE_PAGE } from '#app/routes/utils/pageTypes';
