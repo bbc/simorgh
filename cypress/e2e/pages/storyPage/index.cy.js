@@ -219,6 +219,7 @@ const nonSmokeTestSuites = [
     tests: canonicalTests,
   },
 ];
+
 const testSuites = Cypress.env('SMOKE') ? smokeTestSuites : nonSmokeTestSuites;
 
 const ampTestSuites = testSuites.map(testSuite => {
