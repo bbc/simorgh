@@ -195,7 +195,6 @@ export const mainTranslations = {
     },
     listen: 'Слушать',
     watch: 'Смотреть',
-    watchMoments: 'Смотреть',
     listenLive: 'Слушать LIVE',
     listenNext: 'Вперед',
     liveLabel: 'LIVE',
