@@ -49,17 +49,15 @@ export const MostReadLink = ({
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
   // uncomment out to render experimentVariation
-  // const experimentVariation = eventTrackingData?.experimentVariation;
+  // const experimentVariant = eventTrackingData?.experimentVariant;
 
   // let experimentText;
 
-  // if (experimentVariation != null) {
+  // if (experimentVariant != null) {
   //   experimentText =
-  //     (experimentVariation as unknown as string) ??
+  //     (experimentVariant as unknown as string) ??
   //     'No Experiment Variation Found';
   // }
-
-  // console.log(experimentText);
 
   return (
     <div css={getItemCss({ dir, size })} dir={dir}>

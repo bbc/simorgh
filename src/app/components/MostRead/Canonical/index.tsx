@@ -16,7 +16,7 @@ interface MostReadProps {
   data: MostReadData;
   eventTrackingData?: {
     componentName: string;
-    experimentVariation?: string | null | undefined;
+    experimentVariant?: string | null | undefined;
   };
 }
 

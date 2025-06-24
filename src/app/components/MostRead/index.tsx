@@ -88,7 +88,8 @@ const CanonicalMostRead = ({
   eventTrackingData: {
     optimizely?: ReactSDKClient | null | undefined;
     componentName: string;
-    experimentVariation?: string | null | undefined;
+    experimentName?: string;
+    experimentVariant?: string | null | undefined;
   };
 }) =>
   data ? (
@@ -123,7 +124,7 @@ const MostRead = ({
   } = useContext(ServiceContext);
 
   const experimentName = 'dummy_experiment';
-  const experimentVariation = useOptimizelyVariation(experimentName);
+  const experimentVariant = useOptimizelyVariation(experimentName);
 
   const { enabled } = useToggle('mostRead');
 
@@ -148,7 +149,7 @@ const MostRead = ({
     ...(sendOptimizelyEvents && {
       sendOptimizelyEvents,
       experimentName,
-      experimentVariation,
+      experimentVariant,
     }),
   };
 

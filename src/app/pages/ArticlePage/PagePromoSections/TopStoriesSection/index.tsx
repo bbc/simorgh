@@ -66,13 +66,13 @@ const TopStoriesSection = ({
   const { translations, script, service } = useContext(ServiceContext);
 
   const experimentName = 'dummy_experiment_1';
-  const experimentVariation = useOptimizelyVariation(experimentName);
+  const experimentVariant = useOptimizelyVariation(experimentName);
 
   const eventTrackingData = {
     block: {
       componentName: 'top-stories',
       sendOptimizelyEvents,
-      experimentVariation,
+      experimentVariant,
       experimentName,
     },
   };
@@ -82,13 +82,11 @@ const TopStoriesSection = ({
   // uncomment out to render experimentVariation
   // let experimentText;
 
-  // if (experimentVariation != null) {
+  // if (experimentVariant != null) {
   //   experimentText =
-  //     (experimentVariation as unknown as string) ??
+  //     (experimentVariant as unknown as string) ??
   //     'No Experiment Variation Found';
   // }
-
-  // console.log(experimentText);
 
   const {
     palette: { GREY_2 },
