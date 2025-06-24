@@ -5,7 +5,7 @@ import { PageTypes } from '#app/models/types/global';
 import PageCompleteTracking from './PageCompleteTracking';
 import ScrollDepthTracking from './ScrollDepthTracking';
 import PageViewTracking from './PageViewTracking';
-import { experimentsForPageMetrics as experiments } from './experimentsForPageMetrics';
+import experimentsForPageMetrics from './experimentsForPageMetrics';
 
 type Props = {
   trackPageView?: boolean;
@@ -24,7 +24,7 @@ const OptimizelyPageMetrics = ({
   const { isAmp } = useContext(RequestContext);
   const [isInExperiment, setisInExperiment] = useState(false);
 
-  const experimentsForPageType = experiments.find(
+  const experimentsForPageType = experimentsForPageMetrics.find(
     entry => entry.pageType === pageType,
   )?.activeExperiments;
 

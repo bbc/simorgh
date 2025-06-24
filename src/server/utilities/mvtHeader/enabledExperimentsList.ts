@@ -7,7 +7,7 @@ Add enabled experiments objects inside this array in this format:
   pageTypes: [],
 }
 */
-const enabledServersideExperimentList = [
+const enabledExperimentList = [
   {
     name: 'newswb_ws_topbarojs_read_more',
     services: [
@@ -30,4 +30,4 @@ const enabledServersideExperimentList = [
   },
 ];
 
-export default enabledServersideExperimentList;
+export default enabledExperimentList;

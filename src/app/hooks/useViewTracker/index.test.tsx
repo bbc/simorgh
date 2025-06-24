@@ -261,7 +261,7 @@ describe('useViewTracker', () => {
           useViewTracker({
             ...trackingData,
             experimentName: 'dummy_experiment',
-            experimentVariation: 'variation_a',
+            experimentVariant: 'variation_a',
             sendOptimizelyEvents: true,
           }),
         {
@@ -635,7 +635,7 @@ describe('useViewTracker', () => {
               ...trackingData,
               sendOptimizelyEvents: true,
               experimentName: 'dummy_experiment',
-              experimentVariation: 'variation_a',
+              experimentVariant: 'variation_a',
             }),
           {
             wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),

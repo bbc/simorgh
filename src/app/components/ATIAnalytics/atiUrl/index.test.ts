@@ -9,10 +9,6 @@ import {
 } from '.';
 import splitUrl from './splitUrl';
 
-jest.mock('#app/lib/config/optimizely/enabledServersideExperimentsList', () => [
-  { name: 'mockFlagKey' },
-]);
-
 // @ts-expect-error required for testing purposes
 const mockAndSet = ({ name, source }, response) => {
   source[name] = jest.fn(); // eslint-disable-line no-param-reassign
@@ -268,6 +264,7 @@ describe('buildATIEventTrackUrl', () => {
       format: 'format',
       url: 'url',
       detailedPlacement: 'detailedPlacement',
+      experimentName: 'dummy_experiment',
       experimentVariant: 'variant_1',
     });
 
@@ -281,7 +278,7 @@ describe('buildATIEventTrackUrl', () => {
       're=getBrowserViewPort',
       'r=getScreenInfo',
       'lng=getDeviceLanguage',
-      'mv_test=Top Bar OJs experiment',
+      'mv_test=dummy_experiment',
       'mv_creation=variant_1',
       'type=AT',
     ]);
@@ -411,6 +408,7 @@ describe('Reverb', () => {
     it('should add experiment fields if experimentVariant is present', () => {
       const reverbAnalyticsModel = buildReverbAnalyticsModel({
         ...input,
+        experimentName: 'dummy_experiment',
         experimentVariant: 'variant_1',
       });
 
@@ -438,7 +436,7 @@ describe('Reverb', () => {
           x17: 'categoryName',
           x18: 'isLocServeCookieSet',
           mv_creation: 'variant_1',
-          mv_test: 'mockFlagKey',
+          mv_test: 'dummy_experiment',
         },
       };
 
@@ -627,7 +625,7 @@ describe('Reverb', () => {
       it('should add experiment fields if experimentVariant is present', () => {
         const reverbPageSectionViewEventModel = buildReverbEventModel({
           ...input,
-          experimentName: 'mockFlagKey',
+          experimentName: 'dummy_experiment',
           experimentVariant: 'variant_1',
         });
 
@@ -649,7 +647,7 @@ describe('Reverb', () => {
           isClick: false,
           experience: {
             engine_type: ['experimentation'],
-            engine_id: ['optimizely.mockFlagKey.variant_1'],
+            engine_id: ['optimizely.dummy_experiment.variant_1'],
           },
         });
       });

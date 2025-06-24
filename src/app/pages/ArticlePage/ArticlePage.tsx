@@ -3,7 +3,6 @@
 import React, { useContext, useState } from 'react';
 import { jsx, useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
-import enabledServersideExperimentList from '#app/lib/config/optimizely/enabledServersideExperimentsList';
 import { singleTextBlock } from '#app/models/blocks';
 import useOptimizelyMvtVariation from '#app/hooks/useOptimizelyMvtVariation';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
@@ -160,11 +159,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
-  const experimentVariant = useOptimizelyMvtVariation(
-    enabledServersideExperimentList[0]?.name,
-  );
+  const experimentName = 'newswb_ws_topbarojs_read_more';
+  const experimentVariant = useOptimizelyMvtVariation(experimentName);
 
-  const isInExperiment = experimentVariant && experimentVariant !== 'off';
+  const isInServerSideExperiment =
+    experimentVariant && experimentVariant !== 'off';
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
 
@@ -211,7 +210,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const atiData = {
     ...atiAnalytics,
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
-    ...(isInExperiment && { experimentVariant }),
+    ...(isInServerSideExperiment && { experimentName, experimentVariant }),
   };
 
   const componentsToRender = {

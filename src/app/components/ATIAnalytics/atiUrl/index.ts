@@ -4,7 +4,6 @@ import {
   VIEWABILITY_CLICK_EVENT,
 } from '#app/lib/analyticsUtils/analytics.const';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import enabledServersideExperimentList from '#app/lib/config/optimizely/enabledServersideExperimentsList';
 import {
   getDestination,
   getAppType,
@@ -298,6 +297,7 @@ export const buildATIEventTrackUrl = ({
   advertiserID,
   url,
   detailedPlacement,
+  experimentName,
   experimentVariant,
   ampExperimentName,
   isStatic = false,
@@ -383,18 +383,19 @@ export const buildATIEventTrackUrl = ({
             disableEncoding: disableEncodingDueToAmpSubstitution,
           },
         ]),
-    ...(experimentVariant
+    ...(experimentVariant && experimentName
       ? [
           {
             key: 'mv_test',
-            description: 'Top Bar OJs experiment',
-            value: 'Top Bar OJs experiment',
+            // check this
+            description: 'Experiment name',
+            value: `${experimentName}`,
             wrap: false,
             disableEncoding: true,
           },
           {
             key: 'mv_creation',
-            description: 'Top Bar OJs variant',
+            description: 'Experiment variant',
             value: `${experimentVariant}`,
             wrap: false,
             disableEncoding: true,
@@ -451,6 +452,7 @@ export const buildReverbAnalyticsModel = ({
   statsDestination,
   timePublished,
   timeUpdated,
+  experimentName,
   experimentVariant,
 }: ATIPageTrackingProps): ReverbBeaconConfig => {
   const href = getHref(platform);
@@ -490,10 +492,11 @@ export const buildReverbAnalyticsModel = ({
           x16: aggregatedCampaigns,
           x17: categoryName,
           x18: isLocServeCookieSet(),
-          ...(experimentVariant && {
-            mv_test: enabledServersideExperimentList[0]?.name,
-            mv_creation: `${experimentVariant}`,
-          }),
+          ...(experimentVariant &&
+            experimentName && {
+              mv_test: experimentName,
+              mv_creation: `${experimentVariant}`,
+            }),
         },
       },
       user: {

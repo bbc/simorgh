@@ -10,7 +10,7 @@ import { PageTypes, Services } from '#app/models/types/global';
 import { ARTICLE_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
 import { render } from '../react-testing-library-with-providers';
 import OptimizelyPageMetrics from '.';
-import { experimentsForPageMetrics } from './experimentsForPageMetrics';
+import experimentsForPageMetrics from './experimentsForPageMetrics';
 
 const optimizely = {
   onReady: jest.fn(() => Promise.resolve()),
@@ -35,7 +35,7 @@ jest.mock('./PageViewTracking', () => () => (
 
 jest.mock('./experimentsForPageMetrics', () => ({
   __esModule: true,
-  experimentsForPageMetrics: [],
+  default: [],
 }));
 
 interface Props {

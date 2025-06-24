@@ -1,5 +1,3 @@
-/* eslint-disable import/prefer-default-export */
-
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { PageTypes } from '#app/models/types/global';
 
@@ -13,7 +11,7 @@ type ExperimentsForPageTypeMetrics = [
   },
 ];
 
-export const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
+const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
   {
     pageType: ARTICLE_PAGE,
     activeExperiments: [
@@ -23,3 +21,5 @@ export const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
     ],
   },
 ];
+
+export default experimentsForPageMetrics;
