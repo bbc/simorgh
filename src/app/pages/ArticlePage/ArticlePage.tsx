@@ -18,11 +18,7 @@ import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import SocialEmbedContainer from '#containers/SocialEmbed';
 import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
-import {
-  PHOTO_GALLERY_PAGE,
-  STORY_PAGE,
-  ARTICLE_PAGE,
-} from '#app/routes/utils/pageTypes';
+import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 import {
   getArticleId,
@@ -345,13 +341,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                 liteCTAShows={liteCTAShows}
               />
             )}
-            <OptimizelyPageMetrics trackPageComplete pageType={ARTICLE_PAGE} />
+            <OptimizelyPageMetrics trackPageComplete />
           </main>
-          <OptimizelyPageMetrics
-            trackPageView
-            trackPageDepth
-            pageType={ARTICLE_PAGE}
-          />
+          <OptimizelyPageMetrics trackPageView trackPageDepth />
           {showTopics && (
             <RelatedTopics
               css={[
