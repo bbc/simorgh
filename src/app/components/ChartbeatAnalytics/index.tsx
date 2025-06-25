@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import useToggle from '../../hooks/useToggle';
 import { RequestContext } from '../../contexts/RequestContext';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -18,8 +18,8 @@ const ChartbeatAnalytics = ({
   producer,
   chapter,
 }: ChartbeatProps) => {
-  const { service, brandName, chartbeatDomain } = useContext(ServiceContext);
-  const { env, isAmp, platform, pageType } = useContext(RequestContext);
+  const { service, brandName, chartbeatDomain } = use(ServiceContext);
+  const { env, isAmp, platform, pageType } = use(RequestContext);
 
   const { enabled } = useToggle('chartbeatAnalytics');
 

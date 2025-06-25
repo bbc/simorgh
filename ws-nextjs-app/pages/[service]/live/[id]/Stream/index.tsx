@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { useContext, useEffect, useState } from 'react';
+import { use, useEffect, useState } from 'react';
 import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import Paragraph from '#app/components/Paragraph';
@@ -19,7 +19,7 @@ const Stream = ({
     translations: {
       liveExperiencePage: { liveCoverage = 'Live Coverage' },
     },
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
   const [hasShareApi, setHasShareApi] = useState(false);
   const [hashValue, setHashValue] = useState('');

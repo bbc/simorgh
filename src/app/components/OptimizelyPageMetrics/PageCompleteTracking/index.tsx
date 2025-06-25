@@ -1,10 +1,10 @@
-import React, { useState, useContext, useEffect, useRef } from 'react';
+import React, { useState, use, useEffect, useRef } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
 
 const PageCompleteTracking = () => {
   const ref = useRef(null);
   const observer = useRef(null);
-  const { optimizely } = useContext(OptimizelyContext);
+  const { optimizely } = use(OptimizelyContext);
   const [pageCompleteSent, setPageCompleteSent] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 

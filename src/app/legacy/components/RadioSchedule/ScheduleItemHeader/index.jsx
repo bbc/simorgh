@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
@@ -58,7 +58,7 @@ const ScheduleItemHeader = ({
     durationLabel,
   } = props;
   const { script, locale, service, timezone, dir, translations } =
-    useContext(ServiceContext);
+    use(ServiceContext);
   const nextLabel = pathOr('NEXT', ['media', 'nextLabel'], translations);
   const isLive = state === 'live';
   const isNext = state === 'next';

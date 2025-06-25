@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { useContext, useCallback, useState } from 'react';
+import { use, useCallback, useState } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
 import constructStaticATIUrl from '#app/lib/analyticsUtils/staticATITracking/constructATIUrl';
@@ -38,9 +38,9 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
   const { trackingIsEnabled } = useTrackingToggle(componentName);
   const [clicked, setClicked] = useState(false);
 
-  const { service, useReverb } = useContext(ServiceContext);
+  const { service, useReverb } = use(ServiceContext);
 
-  const { optimizely } = useContext(OptimizelyContext);
+  const { optimizely } = use(OptimizelyContext);
 
   return useCallback(
     async event => {
@@ -146,7 +146,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
 };
 
 export default (eventTrackingData = {}) => {
-  const { isAmp } = useContext(RequestContext);
+  const { isAmp } = use(RequestContext);
   const isHydrated = useHydrationDetection();
 
   const clickTracker = useClickTrackerHandler(eventTrackingData);
