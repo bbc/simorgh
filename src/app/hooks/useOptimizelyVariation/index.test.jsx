@@ -76,7 +76,7 @@ describe('useOptimizelyVariation server side', () => {
       useOptimizelyVariation('correct_experiment_id', {}, isClientSide),
     );
 
-    expect(result.current).toEqual(true);
+    expect(result.current).toEqual(null);
     expect(useDecisionSpy).toBeCalledTimes(0);
   });
 });

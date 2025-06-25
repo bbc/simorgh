@@ -234,7 +234,7 @@ export const livePageCaptionBlock = {
   },
 };
 
-export const livePageClipMediaBlock = {
+export const livePageVideoClipMediaBlock = {
   id: '1ce4d114',
   type: 'clipMedia',
   model: {
@@ -332,6 +332,110 @@ export const livePageClipMediaBlock = {
     },
     section: null,
     isSharingAllowed: true,
+  },
+};
+
+export const livePageAudioClipMediaBlock = {
+  id: '60207517',
+  type: 'clipMedia',
+  model: {
+    id: 'urn:bbc:pips:pid:p01vqk5l',
+    urns: {
+      pipsPid: 'urn:bbc:pips:pid:p01vqk5l',
+    },
+    images: [
+      {
+        url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01vkjg8.png',
+        urlTemplate:
+          'https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01vkjg8.png',
+        altText: 'BBC flat logo 2023 default image',
+        type: 'socialImage',
+        source: 'pipsImage',
+        height: 1080,
+        width: 1920,
+        orientation: 'landscape',
+      },
+      {
+        url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01vkjg8.png',
+        urlTemplate:
+          'https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01vkjg8.png',
+        altText: 'BBC flat logo 2023 default image',
+        type: 'promoImage',
+        source: 'pipsImage',
+        height: 1080,
+        width: 1920,
+        orientation: 'landscape',
+      },
+    ],
+    assetPath: 'p01vqk5l',
+    type: 'audio',
+    headlines: {
+      primaryHeadline: 'a',
+      seoHeadline: 'a',
+      promoHeadline: 'a',
+      socialHeadline: 'a',
+    },
+    analytics: {
+      page: {
+        name: 'programmes.av.p01vqk5l.page',
+        contentId: 'urn:bbc:pips:pid:p01vqk5l',
+        producer: 'PROGRAMMES',
+      },
+    },
+    description: 'a',
+    summary: {
+      type: 'text',
+      model: {
+        blocks: [
+          {
+            type: 'paragraph',
+            model: {
+              text: 'a',
+              blocks: [
+                {
+                  type: 'fragment',
+                  model: {
+                    text: 'a',
+                    attributes: [],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+    lastPublished: '2023-10-10T11:48:18Z',
+    firstPublished: null,
+    video: {
+      id: 'p01vqk5l',
+      title: 'a',
+      holdingImage: {
+        id: 'https://ichef.test.bbci.co.uk/images/ic/$recipe/p01vkjg8.png',
+        altText: 'BBC flat logo 2023 default image',
+        width: 1920,
+        height: 1080,
+        orientation: 'landscape',
+      },
+      version: {
+        id: 'p01vqk5n',
+        duration: 'PT27S',
+        kind: 'audio',
+        guidance: null,
+        territories: ['nonuk', 'uk'],
+        orientation: 'landscape',
+      },
+      isAdvertisingAllowed: false,
+      isEmbeddingAllowed: true,
+      isUnavailable: false,
+    },
+    attributions: null,
+    link: {
+      path: '/programmes/p01vqk5l',
+    },
+    section: null,
+    isSharingAllowed: true,
+    reactions: null,
   },
 };
 
@@ -536,7 +640,14 @@ export const aresMediaLiveStreamBlocks = [
 ];
 
 export const aresMediaBlocks = [aresMediaBlock, aresMediaCaptionBlock];
-export const clipMediaBlocks = [livePageClipMediaBlock, livePageCaptionBlock];
+export const videoClipMediaBlocks = [
+  livePageVideoClipMediaBlock,
+  livePageCaptionBlock,
+];
+export const audioClipMediaBlocks = [
+  livePageAudioClipMediaBlock,
+  livePageCaptionBlock,
+];
 export const aresMediaPortraitBlocks = [
   aresMediaPortraitBlock,
   aresMediaCaptionBlock,

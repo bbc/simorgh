@@ -132,8 +132,8 @@ exports[`Canonical Media Asset Page Header Navigation link should match text and
 
 exports[`Canonical Media Asset Page Header Navigation link should match text and url 2`] = `
 {
-  "text": "بحران خاورمیانه",
-  "url": "/persian/topics/cj31ldvmg1et",
+  "text": "جنگ اسرائیل-ایران",
+  "url": "/persian/topics/cwy6874zgpqt",
 }
 `;
 

@@ -17,7 +17,8 @@ import isLive from '#app/lib/utilities/isLive';
 import buildSettings from './buildSettings';
 import {
   aresMediaBlocks,
-  clipMediaBlocks,
+  videoClipMediaBlocks,
+  audioClipMediaBlocks,
   homePagePortraitClipMediaBlocks,
   buildAresMediaPlayerBlock,
   aresMediaBlock,
@@ -52,10 +53,10 @@ describe('buildSettings', () => {
   });
 
   describe('Clip Media', () => {
-    it('Should process a ClipMedia block into a valid playlist item for a "Live" page.', () => {
+    it('Should process a video ClipMedia block into a valid playlist item for a "Live" page.', () => {
       const result = buildSettings({
         ...baseSettings,
-        blocks: clipMediaBlocks as MediaBlock[],
+        blocks: videoClipMediaBlocks as MediaBlock[],
         pageType: 'live',
       });
 
@@ -121,10 +122,66 @@ describe('buildSettings', () => {
       } satisfies ConfigBuilderReturnProps);
     });
 
+    it('Should process an audio ClipMedia block into a valid playlist item for a "Live" page.', () => {
+      const result = buildSettings({
+        ...baseSettings,
+        blocks: audioClipMediaBlocks as MediaBlock[],
+        pageType: 'live',
+      });
+
+      expect(result).toStrictEqual({
+        mediaType: 'audio',
+        playerConfig: {
+          autoplay: false,
+          product: 'news',
+          statsObject: {
+            clipPID: 'p01vqk5l',
+            destination: 'WS_NEWS_LANGUAGES',
+            producer: 'SERBIAN',
+          },
+          enableToucan: true,
+          externalEmbedUrl:
+            'https://www.bbc.com/serbian/lat/av-embeds/srbija-68707945/vpid/p01vqk5n',
+          appName: 'news-serbian',
+          appType: 'responsive',
+          counterName: 'live_coverage.testID.page',
+          superResponsive: false,
+          playlistObject: {
+            title: 'a',
+            summary:
+              'BBC launch trailer for We Know Our Place women\'s sport campaign"',
+            holdingImageURL:
+              'https://ichef.test.bbci.co.uk/images/ic/512xn/p01vkjg8.png.webp',
+            items: [
+              {
+                duration: 27,
+                kind: 'audio',
+                versionID: 'p01vqk5n',
+              },
+            ],
+            embedRights: 'allowed',
+          },
+          ui: {
+            skin: 'audio',
+            baseColour: '#222222',
+            colour: '#b80000',
+            colourOnBaseColour: '#ffffff',
+            controls: { enabled: true, volumeSlider: true },
+            fallbackBackgroundColour: '#ffffff',
+            foreColour: '#222222',
+            locale: { lang: 'sr-latn' },
+            subtitles: { enabled: true, defaultOn: true },
+            fullscreen: { enabled: true },
+          },
+        },
+        showAds: false,
+      } satisfies ConfigBuilderReturnProps);
+    });
+
     it('Should add an advert item for a "Live" page when showAds is set to true.', () => {
       const result = buildSettings({
         ...baseSettings,
-        blocks: clipMediaBlocks as MediaBlock[],
+        blocks: videoClipMediaBlocks as MediaBlock[],
         pageType: 'live',
         adsEnabled: true,
         showAdsBasedOnLocation: true,
@@ -172,6 +229,9 @@ describe('buildSettings', () => {
             swipable: { direction: 'Y', enabled: true },
             poster: {
               availableWhenSettingUp: true,
+            },
+            pictureInPicture: {
+              enabled: false,
             },
           },
           superResponsive: true,
@@ -243,6 +303,9 @@ describe('buildSettings', () => {
             swipable: { direction: 'Y', enabled: true },
             poster: {
               availableWhenSettingUp: true,
+            },
+            pictureInPicture: {
+              enabled: false,
             },
           },
           superResponsive: true,
@@ -959,7 +1022,7 @@ describe('buildSettings', () => {
 
       const result = buildSettings({
         ...baseSettings,
-        blocks: clipMediaBlocks as MediaBlock[],
+        blocks: videoClipMediaBlocks as MediaBlock[],
         pageType: 'live',
       });
 
@@ -997,7 +1060,7 @@ describe('buildSettings', () => {
 
             const result = buildSettings({
               ...baseSettings,
-              blocks: clipMediaBlocks as MediaBlock[],
+              blocks: videoClipMediaBlocks as MediaBlock[],
               pageType: 'live',
             });
 
@@ -1037,7 +1100,7 @@ describe('buildSettings', () => {
 
             const result = buildSettings({
               ...baseSettings,
-              blocks: clipMediaBlocks as MediaBlock[],
+              blocks: videoClipMediaBlocks as MediaBlock[],
               pageType: 'live',
             });
 
