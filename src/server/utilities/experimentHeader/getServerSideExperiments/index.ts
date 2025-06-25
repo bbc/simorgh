@@ -11,7 +11,7 @@ type Props = {
   pageType: PageTypes;
 };
 
-export default ({ headers, service, derivedPageType }: Props) => {
+export default ({ headers, service, pageType }: Props) => {
   return Object.entries(headers).reduce<ServerSideExperiment[]>(
     (result, [header, content]) => {
       if (header.startsWith('mvt-')) {
@@ -19,9 +19,9 @@ export default ({ headers, service, derivedPageType }: Props) => {
 
         const enabled = enabledExperimentList.some(
           ({ name, services, pageTypes }) =>
-            noMvtPrefixHeader === name &&
+            experimentName === name &&
             services.includes(service) &&
-            pageTypes.includes(derivedPageType),
+            pageTypes.includes(pageType),
         );
 
         const hasType = content.includes(';');
@@ -29,7 +29,7 @@ export default ({ headers, service, derivedPageType }: Props) => {
         if (hasType) {
           const [type, variation] = content.split(';');
           result.push({
-            experimentName: noMvtPrefixHeader,
+            experimentName,
             variation,
             type: type as ServerSideExperiment['type'],
             enabled,
@@ -37,7 +37,7 @@ export default ({ headers, service, derivedPageType }: Props) => {
         } else {
           const variation = content;
           result.push({
-            experimentName: noMvtPrefixHeader,
+            experimentName,
             variation,
             enabled,
           });

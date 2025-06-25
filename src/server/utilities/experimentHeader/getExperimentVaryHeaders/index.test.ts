@@ -1,5 +1,5 @@
 import { ServerSideExperiment } from '#app/models/types/global';
-import getMvtVaryHeaders from '.';
+import getVaryExperimentHeaders from '.';
 
 const getMockServerSideExperiments = (
   enabled1: boolean,
@@ -25,26 +25,30 @@ const getMockServerSideExperiments = (
     },
   ] as ServerSideExperiment[];
 
-describe('getMvtVaryHeaders', () => {
+describe('getVaryExperimentHeaders', () => {
   it('should create a string used in the vary header if a single experiment is enabled', () => {
     expect(
-      getMvtVaryHeaders(getMockServerSideExperiments(true, false, false)),
+      getVaryExperimentHeaders(
+        getMockServerSideExperiments(true, false, false),
+      ),
     ).toEqual('mvt-simorgh_dark_mode');
   });
 
   it('should create a string seperated with , delimeter used in the vary header if multiple experiments are enabled', () => {
     expect(
-      getMvtVaryHeaders(getMockServerSideExperiments(true, true, false)),
+      getVaryExperimentHeaders(getMockServerSideExperiments(true, true, false)),
     ).toEqual('mvt-simorgh_dark_mode, mvt-simorgh_data_saving');
   });
 
   it('should return an empty string if experiments are not enabled', () => {
     expect(
-      getMvtVaryHeaders(getMockServerSideExperiments(false, false, false)),
+      getVaryExperimentHeaders(
+        getMockServerSideExperiments(false, false, false),
+      ),
     ).toEqual('');
   });
 
   it('should return an empty string if experiments is an empty array', () => {
-    expect(getMvtVaryHeaders([])).toEqual('');
+    expect(getVaryExperimentHeaders([])).toEqual('');
   });
 });
