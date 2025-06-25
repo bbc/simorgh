@@ -498,10 +498,6 @@ describe('useClickTrackerHandler', () => {
     });
 
     it('should use componentName property if provided in eventTrackingData object', async () => {
-      jest
-        .spyOn(useOptimizelyVariation, 'default')
-        .mockReturnValue('variation_a');
-
       const {
         metadata: { atiAnalytics },
       } = pidginData;
@@ -509,7 +505,12 @@ describe('useClickTrackerHandler', () => {
       const { getByTestId } = render(
         <OptimizelyProvider optimizely={defaultOptimizely} isServerSide>
           <TestComponent
-            hookProps={{ ...eventTrackingData, sendOptimizelyEvents: true }}
+            hookProps={{
+              ...eventTrackingData,
+              experimentName: 'mockExperiment',
+              experimentVariant: 'variation_a',
+              sendOptimizelyEvents: true,
+            }}
           />
         </OptimizelyProvider>,
         {
@@ -533,10 +534,6 @@ describe('useClickTrackerHandler', () => {
     });
 
     it('should fire event to Optimizely if optimizely object exists', async () => {
-      jest
-        .spyOn(useOptimizelyVariation, 'default')
-        .mockReturnValue('variation_a');
-
       const {
         metadata: { atiAnalytics },
       } = pidginData;
@@ -544,7 +541,12 @@ describe('useClickTrackerHandler', () => {
       const { getByTestId } = render(
         <OptimizelyProvider optimizely={defaultOptimizely} isServerSide>
           <TestComponent
-            hookProps={{ ...eventTrackingData, sendOptimizelyEvents: true }}
+            hookProps={{
+              ...eventTrackingData,
+              experimentName: 'mockExperiment',
+              experimentVariant: 'variation_a',
+              sendOptimizelyEvents: true,
+            }}
           />
         </OptimizelyProvider>,
         {

@@ -21,7 +21,6 @@ import SocialEmbedContainer from '#containers/SocialEmbed';
 import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
-import OPTIMIZELY_CONFIG from '#app/lib/config/optimizely';
 
 import {
   getArticleId,
@@ -94,18 +93,18 @@ const getTimestampComponent =
     firstPublished: string,
     lastPublished: string,
   ) =>
-  (props: ComponentToRenderProps & TimeStampProps) =>
-    hasByline ? (
-      <Byline blocks={bylineContribBlocks}>
-        <Timestamp
-          firstPublished={new Date(firstPublished).getTime()}
-          lastPublished={new Date(lastPublished).getTime()}
-          popOut={false}
-        />
-      </Byline>
-    ) : (
-      <Timestamp {...props} popOut={false} />
-    );
+    (props: ComponentToRenderProps & TimeStampProps) =>
+      hasByline ? (
+        <Byline blocks={bylineContribBlocks}>
+          <Timestamp
+            firstPublished={new Date(firstPublished).getTime()}
+            lastPublished={new Date(lastPublished).getTime()}
+            popOut={false}
+          />
+        </Byline>
+      ) : (
+        <Timestamp {...props} popOut={false} />
+      );
 
 const getMpuComponent =
   (allowAdvertising: boolean) => (props: ComponentToRenderProps) =>
@@ -160,12 +159,14 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
+  const experimentName = 'newswb_ws_topbarojs_read_more';
   const experimentVariant = useOptimizelyVariation({
-    experimentName: OPTIMIZELY_CONFIG.ruleKey,
+    experimentName,
     experimentType: ExperimentState.SERVER_SIDE,
   });
 
-  const isInExperiment = experimentVariant && experimentVariant !== 'off';
+  const isInServerSideExperiment =
+    experimentVariant && experimentVariant !== 'off';
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
 
@@ -212,7 +213,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const atiData = {
     ...atiAnalytics,
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
-    ...(isInExperiment && { experimentVariant }),
+    ...(isInServerSideExperiment && { experimentName, experimentVariant }),
   };
 
   const componentsToRender = {
@@ -272,12 +273,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const showContinueReadingButton = Boolean(
     !isAmp &&
-      !isLite &&
-      !isApp &&
-      experimentVariant &&
-      ['read-more-a', 'read-more-b', 'read-more-a-and-top-stories'].includes(
-        experimentVariant,
-      ),
+    !isLite &&
+    !isApp &&
+    experimentVariant &&
+    ['read-more-a', 'read-more-b', 'read-more-a-and-top-stories'].includes(
+      experimentVariant,
+    ),
   );
   return (
     <div css={styles.pageWrapper}>
@@ -350,11 +351,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                 liteCTAShows={liteCTAShows}
               />
             )}
-            {isInExperiment && <OptimizelyPageMetrics trackPageComplete />}
+            <OptimizelyPageMetrics trackPageComplete />
           </main>
-          {isInExperiment && (
-            <OptimizelyPageMetrics trackPageView trackPageDepth />
-          )}
+          <OptimizelyPageMetrics trackPageView trackPageDepth />
           {showTopics && (
             <RelatedTopics
               css={[
