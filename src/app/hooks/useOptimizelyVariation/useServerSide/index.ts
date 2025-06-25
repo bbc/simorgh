@@ -26,8 +26,8 @@ export default (experimentName: string) => {
   if (variation)
     activateExperiment({
       optimizely,
-      experimentVariant: experimentName,
-      variation,
+      experimentName,
+      experimentVariation: variation,
     });
 
   return variation;

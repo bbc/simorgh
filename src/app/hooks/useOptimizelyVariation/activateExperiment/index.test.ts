@@ -24,8 +24,8 @@ describe('activateExperiment', () => {
 
     await activateExperiment({
       optimizely: mockOptimizely as unknown as ReactSDKClient,
-      experimentVariant: mockExperimentName,
-      variation: mockExperimentVariation,
+      experimentName: mockExperimentName,
+      experimentVariation: mockExperimentVariation,
     });
 
     expect(mockOptimizely.onReady).toHaveBeenCalledTimes(1);
@@ -44,8 +44,8 @@ describe('activateExperiment', () => {
 
     await activateExperiment({
       optimizely: mockOptimizely as unknown as ReactSDKClient,
-      experimentVariant: mockExperimentName,
-      variation: mockExperimentVariation,
+      experimentName: mockExperimentName,
+      experimentVariation: mockExperimentVariation,
     });
 
     expect(mockOptimizely.onReady).not.toHaveBeenCalled();
