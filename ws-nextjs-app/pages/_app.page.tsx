@@ -43,6 +43,7 @@ interface Props extends AppProps {
     toggles: Toggles;
     variant?: Variants;
     isUK?: boolean;
+    country?: string | null;
   };
 }
 
@@ -67,6 +68,7 @@ export default function App({ Component, pageProps }: Props) {
     toggles,
     variant,
     isUK,
+    country,
   } = pageProps;
 
   const { metadata: { atiAnalytics = undefined } = {} } = pageData ?? {};
@@ -98,6 +100,7 @@ export default function App({ Component, pageProps }: Props) {
           variant={variant}
           timeOnServer={timeOnServer}
           showAdsBasedOnLocation={showAdsBasedOnLocation}
+          country={country}
           mvtExperiments={mvtExperiments}
           isNextJs={isNextJs}
           isUK={isUK ?? false}

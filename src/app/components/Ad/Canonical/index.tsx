@@ -35,7 +35,7 @@ export const getBootstrapSrc = (queryString: string, useLegacy = false) => {
   return useLegacy ? adsLegacyTestScript : adsTestScript;
 };
 
-const CanonicalAd = ({ slotType, className }: AdProps) => {
+const CanonicalAd = ({ slotType, className, nonce }: AdProps) => {
   const location = useLocation();
   const queryString = location.search;
   const { translations, dir } = use(ServiceContext);
@@ -75,8 +75,18 @@ const CanonicalAd = ({ slotType, className }: AdProps) => {
     <>
       <Helmet>
         {/* Add Ad scripts to document head */}
-        <script type="module" src={getBootstrapSrc(queryString)} async />
-        <script noModule src={getBootstrapSrc(queryString, true)} async />
+        <script
+          type="module"
+          src={getBootstrapSrc(queryString)}
+          async
+          nonce={nonce}
+        />
+        <script
+          noModule
+          src={getBootstrapSrc(queryString, true)}
+          async
+          nonce={nonce}
+        />
       </Helmet>
 
       <section
