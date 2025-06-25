@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { useContext } from 'react';
+import { use } from 'react';
 import { jsx } from '@emotion/react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Image from '#app/components/Image';
@@ -21,7 +21,7 @@ const MaskedImage = ({
   altText?: string;
   showPlaceholder?: boolean;
 }) => {
-  const { dir } = useContext(ServiceContext);
+  const { dir } = use(ServiceContext);
   const isRtl = dir === 'rtl';
 
   const url = imageUrlTemplate.split('{width}')[1];

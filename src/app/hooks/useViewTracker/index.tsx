@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable react-hooks/rules-of-hooks */
-import { useContext, useEffect, useState, useRef, useCallback } from 'react';
+import { use, useEffect, useState, useRef, useCallback } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { OptimizelyContext } from '@optimizely/react-sdk';
 import {
@@ -42,7 +42,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     eventType: VIEW_EVENT,
   });
 
-  const { optimizely } = useContext(OptimizelyContext);
+  const { optimizely } = use(OptimizelyContext);
 
   const observer = useRef(null);
   const timer = useRef(null);
@@ -50,7 +50,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
   const [eventSent, setEventSent] = useState(false);
   const { trackingIsEnabled } = useTrackingToggle(componentName);
 
-  const { service, useReverb } = useContext(ServiceContext);
+  const { service, useReverb } = use(ServiceContext);
 
   const initObserver = async (threshold = MIN_VIEWED_PERCENT) => {
     if (typeof window.IntersectionObserver === 'undefined') {
@@ -188,7 +188,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
 };
 
 export default (eventTrackingData?: EventTrackingData): any => {
-  const { isLite } = useContext(RequestContext);
+  const { isLite } = use(RequestContext);
 
   const viewTracker = getComponentViewTracker(eventTrackingData);
 
