@@ -38,7 +38,7 @@ describe('getServerSideExperiments', () => {
       getServerSideExperiments({
         headers: mockHeadersNoMvt,
         service: 'news',
-        derivedPageType: 'article',
+        pageType: 'article',
       }),
     ).toEqual([]);
   });
@@ -48,7 +48,7 @@ describe('getServerSideExperiments', () => {
       getServerSideExperiments({
         headers: mockHeadersSingleMvt,
         service: 'news',
-        derivedPageType: 'article',
+        pageType: 'article',
       }),
     ).toEqual([
       {
@@ -65,7 +65,7 @@ describe('getServerSideExperiments', () => {
       getServerSideExperiments({
         headers: mockHeadersMultipleMvt,
         service: 'news',
-        derivedPageType: 'article',
+        pageType: 'article',
       }),
     ).toEqual([
       {
@@ -92,7 +92,7 @@ describe('getServerSideExperiments', () => {
       getServerSideExperiments({
         headers: mockHeadersMultipleMvt,
         service: 'news',
-        derivedPageType: 'article',
+        pageType: 'article',
       })[0],
     ).toHaveProperty('type');
   });
@@ -102,7 +102,7 @@ describe('getServerSideExperiments', () => {
       getServerSideExperiments({
         headers: mockHeadersMultipleMvt,
         service: 'news',
-        derivedPageType: 'article',
+        pageType: 'article',
       })[1],
     ).not.toHaveProperty('type');
   });
@@ -112,7 +112,7 @@ describe('getServerSideExperiments', () => {
       getServerSideExperiments({
         headers: mockHeadersMultipleMvt,
         service: 'news',
-        derivedPageType: 'article',
+        pageType: 'article',
       })[0],
     ).toHaveProperty('experimentName', 'simorgh_dark_mode');
   });
@@ -122,7 +122,7 @@ describe('getServerSideExperiments', () => {
       getServerSideExperiments({
         headers: mockHeadersSingleMvt,
         service: 'mundo',
-        derivedPageType: 'STY',
+        pageType: 'STY',
       })[0],
     ).toHaveProperty('enabled', true);
   });
@@ -132,7 +132,7 @@ describe('getServerSideExperiments', () => {
       getServerSideExperiments({
         headers: mockHeadersSingleMvt,
         service: 'afrique',
-        derivedPageType: 'STY',
+        pageType: 'STY',
       })[0],
     ).toHaveProperty('enabled', false);
   });
@@ -142,7 +142,7 @@ describe('getServerSideExperiments', () => {
       getServerSideExperiments({
         headers: mockHeadersSingleMvt,
         service: 'mundo',
-        derivedPageType: 'PGL',
+        pageType: 'PGL',
       })[0],
     ).toHaveProperty('enabled', false);
   });
@@ -152,7 +152,7 @@ describe('getServerSideExperiments', () => {
       getServerSideExperiments({
         headers: mockHeadersMultipleMvt,
         service: 'afrique',
-        derivedPageType: 'STY',
+        pageType: 'STY',
       })[2],
     ).toHaveProperty('enabled', false);
   });
