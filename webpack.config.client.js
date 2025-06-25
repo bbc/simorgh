@@ -205,6 +205,7 @@ module.exports = ({
             [
               './~/@emotion/react/~/@babel/runtime',
               './~/@loadable/component/~/@babel/runtime',
+              './~/react-router-dom/~/@babel/runtime',
             ].includes(path)
           );
         },

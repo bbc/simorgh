@@ -1,5 +1,5 @@
 import { ReverbClient } from '#models/types/eventTracking';
-import { BumpType } from '#app/components/MediaLoader/types';
+import { BumpType, Player } from '#app/components/MediaLoader/types';
 
 declare global {
   interface Window {
@@ -36,10 +36,7 @@ declare global {
     embeddedMedia: {
       api: {
         players: () => {
-          bbcMediaPlayer0: {
-            queuePlaylist: (object) => void;
-            setPreviousPlaylist: (object) => void;
-          };
+          bbcMediaPlayer0: Player;
         };
       };
     };

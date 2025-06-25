@@ -10,6 +10,7 @@ import { BumpLoader } from '../MediaLoader';
 import PortraitVideoPromo from './PortraitVideoPromo';
 import PortraitCarouselNavigation from './PortraitVideoCarouselNavigation';
 import Heading from '../Heading';
+import PortraitVideoNoJs from './PortraitVideoNoJs';
 
 const PortraitVideoCarousel = ({
   title,
@@ -52,6 +53,9 @@ const PortraitVideoCarousel = ({
         >
           {title}
         </Heading>
+        <noscript>
+          <PortraitVideoNoJs />
+        </noscript>
         <div css={styles.carouselContainer}>
           <PortraitCarouselNavigation scrollPaneRef={scrollRef} />
           <ul
@@ -59,6 +63,7 @@ const PortraitVideoCarousel = ({
             css={styles.carousel}
             data-testid="pv-carousel"
             tabIndex={-1}
+            role="list"
           >
             {items.map((item, index) => (
               <PortraitVideoPromo

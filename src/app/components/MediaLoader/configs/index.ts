@@ -1,5 +1,5 @@
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
-import clipMedia from './clipMedia';
+import livePostClipMedia from './livePostClipMedia';
 import portraitClipMedia from './portraitClipMedia';
 import aresMedia from './aresMedia';
 import tv from './tv';
@@ -30,7 +30,7 @@ const blockTypeMapping: Record<
   (_arg0: ConfigBuilderProps) => ConfigBuilderReturnProps
 > = {
   aresMedia,
-  clipMedia,
+  clipMedia: livePostClipMedia,
   portraitClipMedia,
   tv,
   liveRadio,
