@@ -155,12 +155,6 @@ const canonicalNonSmokeTestSuites = [
     tests: canonicalTests,
   },
   {
-    path: '/sport/formula1/23355387',
-    service: 'sport',
-    runforEnv: 'test',
-    tests: canonicalTests,
-  },
-  {
     path: '/yoruba/afrika-58539527',
     service: 'yoruba',
     runforEnv: 'live',
@@ -214,6 +208,12 @@ const ampOnlyNonSmokeTestSuites = [
     path: '/sport/tennis/23372108',
     service: 'sport',
     runforEnv: 'test',
+  },
+  {
+    path: '/sport/formula1/23355387',
+    service: 'sport',
+    runforEnv: 'test',
+    tests: canonicalTests,
   },
 ];
 
