@@ -93,18 +93,18 @@ const getTimestampComponent =
     firstPublished: string,
     lastPublished: string,
   ) =>
-    (props: ComponentToRenderProps & TimeStampProps) =>
-      hasByline ? (
-        <Byline blocks={bylineContribBlocks}>
-          <Timestamp
-            firstPublished={new Date(firstPublished).getTime()}
-            lastPublished={new Date(lastPublished).getTime()}
-            popOut={false}
-          />
-        </Byline>
-      ) : (
-        <Timestamp {...props} popOut={false} />
-      );
+  (props: ComponentToRenderProps & TimeStampProps) =>
+    hasByline ? (
+      <Byline blocks={bylineContribBlocks}>
+        <Timestamp
+          firstPublished={new Date(firstPublished).getTime()}
+          lastPublished={new Date(lastPublished).getTime()}
+          popOut={false}
+        />
+      </Byline>
+    ) : (
+      <Timestamp {...props} popOut={false} />
+    );
 
 const getMpuComponent =
   (allowAdvertising: boolean) => (props: ComponentToRenderProps) =>
@@ -273,12 +273,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const showContinueReadingButton = Boolean(
     !isAmp &&
-    !isLite &&
-    !isApp &&
-    experimentVariant &&
-    ['read-more-a', 'read-more-b', 'read-more-a-and-top-stories'].includes(
-      experimentVariant,
-    ),
+      !isLite &&
+      !isApp &&
+      experimentVariant &&
+      ['read-more-a', 'read-more-b', 'read-more-a-and-top-stories'].includes(
+        experimentVariant,
+      ),
   );
   return (
     <div css={styles.pageWrapper}>
