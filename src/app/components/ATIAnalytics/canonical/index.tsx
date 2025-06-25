@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { use, useEffect, useState } from 'react';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { RequestContext } from '#app/contexts/RequestContext';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
@@ -42,7 +42,7 @@ const CanonicalATIAnalytics = ({
   pageviewParams,
   reverbParams,
 }: ATIAnalyticsProps) => {
-  const { isLite } = useContext(RequestContext);
+  const { isLite } = use(RequestContext);
 
   const atiPageViewUrlString =
     getEnvConfig().SIMORGH_ATI_BASE_URL + pageviewParams;

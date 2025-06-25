@@ -3,6 +3,7 @@ import latinScript from '../fontScripts/latin';
 import helmetFontVariants from '../fontVariants/helmet';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/gahuza';
+import getPWATypographyTheme from './getPWATypographyTheme';
 
 const gahuzaTheme = {
   palette: {
@@ -20,4 +21,4 @@ const gahuzaTheme = {
   brandSVG,
 };
 
-export default withThemeProvider(gahuzaTheme);
+export default withThemeProvider(gahuzaTheme, getPWATypographyTheme());

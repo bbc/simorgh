@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import {
   render,
   screen,
@@ -31,7 +31,7 @@ afterEach(() => {
 });
 
 const TestComponent = () => {
-  const trackingData = useContext(EventTrackingContext);
+  const trackingData = use(EventTrackingContext);
 
   return <div data-testid="test-component">{JSON.stringify(trackingData)}</div>;
 };

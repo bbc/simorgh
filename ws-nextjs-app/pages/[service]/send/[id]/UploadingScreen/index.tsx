@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from 'react';
+import React, { use, useEffect, useRef } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import GenericMessage from '../GenericMessage';
 import fallbackTranslations from '../fallbackTranslations';
@@ -15,7 +15,7 @@ export default function UploadingScreen({ title }: Props) {
         uploadingDescription = fallbackTranslations.uploadingDescription,
       } = {},
     },
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
   useEffect(() => {
     document.title = `${uploadingHeading}: ${title}`;

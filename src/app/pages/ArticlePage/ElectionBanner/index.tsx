@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import { jsx } from '@emotion/react';
-import { useContext } from 'react';
+import { use } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
 import AmpIframe from '#app/components/AmpIframe';
 import useToggle from '#app/hooks/useToggle';
@@ -30,8 +30,8 @@ const handleUrlServiceTransform = (url: string, service: Services) => {
 };
 
 export default function ElectionBanner({ aboutTags, taggings }: Props) {
-  const { service } = useContext(ServiceContext);
-  const { isAmp, isLite } = useContext(RequestContext);
+  const { service } = use(ServiceContext);
+  const { isAmp, isLite } = use(RequestContext);
   const { enabled: electionBannerEnabled }: { enabled: boolean | null } =
     useToggle('electionBanner');
 

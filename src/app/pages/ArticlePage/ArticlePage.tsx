@@ -1,6 +1,6 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
-import React, { useContext, useState } from 'react';
+import React, { use, useState } from 'react';
 import { jsx, useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
@@ -147,7 +147,7 @@ const getVideoComponent =
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
-  const { isApp, isAmp, isLite } = useContext(RequestContext);
+  const { isApp, isAmp, isLite } = use(RequestContext);
 
   const {
     articleAuthor,
@@ -155,7 +155,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     showRelatedTopics,
     brandName,
     translations,
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
 
