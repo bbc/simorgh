@@ -1,5 +1,8 @@
 import React, { useState, useContext, useEffect } from 'react';
-import { OptimizelyContext } from '@optimizely/react-sdk';
+import {
+  OptimizelyContext,
+  OptimizelyDecideOption,
+} from '@optimizely/react-sdk';
 import { RequestContext } from '#contexts/RequestContext';
 import PageCompleteTracking from './PageCompleteTracking';
 import ScrollDepthTracking from './ScrollDepthTracking';
@@ -31,7 +34,9 @@ const OptimizelyPageMetrics = ({
   useEffect(() => {
     if (optimizelyExperimentsEnabled) {
       optimizely?.onReady().then(() => {
-        const decisions = optimizely.decideAll();
+        const decisions = optimizely.decideAll([
+          OptimizelyDecideOption.DISABLE_DECISION_EVENT,
+        ]);
         const isUserInAnyExperiments = experimentsForPageType.some(
           experimentName => {
             const decision = decisions[experimentName];
