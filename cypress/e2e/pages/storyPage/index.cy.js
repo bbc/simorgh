@@ -197,12 +197,12 @@ const ampOnlyNonSmokeTestSuites = [
   {
     path: '/sport/rugby-union/56359986',
     service: 'sport',
-    runforEnv: ['live', 'local'],
+    runforEnv: 'live',
   },
   {
     path: '/sport/golf/56318994',
     service: 'sport',
-    runforEnv: ['live', 'local'],
+    runforEnv: 'live',
   },
   {
     path: '/sport/tennis/23372108',
