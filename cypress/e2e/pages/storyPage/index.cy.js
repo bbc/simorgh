@@ -131,36 +131,6 @@ const canonicalNonSmokeTestSuites = [
     tests: canonicalTests,
   },
   {
-    path: '/news/uk-56342465.amp',
-    service: 'news',
-    runforEnv: 'live',
-    tests: canonicalTests,
-  },
-  {
-    path: '/news/technology-56294493.amp',
-    service: 'news',
-    runforEnv: 'live',
-    tests: canonicalTests,
-  },
-  {
-    path: '/news/23393110.amp',
-    service: 'news',
-    runforEnv: 'test',
-    tests: canonicalTests,
-  },
-  {
-    path: '/newsround/56331357.amp',
-    service: 'newsround',
-    runforEnv: 'live',
-    tests: canonicalTests,
-  },
-  {
-    path: '/newsround/23212028.amp',
-    service: 'newsround',
-    runforEnv: 'test',
-    tests: canonicalTests,
-  },
-  {
     path: '/pashto/world-52873295',
     service: 'pashto',
     runforEnv: 'live',
@@ -185,25 +155,7 @@ const canonicalNonSmokeTestSuites = [
     tests: canonicalTests,
   },
   {
-    path: '/sport/rugby-union/56359986.amp',
-    service: 'sport',
-    runforEnv: ['live', 'local'],
-    tests: canonicalTests,
-  },
-  {
-    path: '/sport/golf/56318994.amp',
-    service: 'sport',
-    runforEnv: ['live', 'local'],
-    tests: canonicalTests,
-  },
-  {
-    path: '/sport/formula1/23355387.amp',
-    service: 'sport',
-    runforEnv: 'test',
-    tests: canonicalTests,
-  },
-  {
-    path: '/sport/tennis/23372108.amp',
+    path: '/sport/formula1/23355387',
     service: 'sport',
     runforEnv: 'test',
     tests: canonicalTests,
@@ -222,11 +174,57 @@ const canonicalNonSmokeTestSuites = [
   },
 ];
 
+const ampOnlyNonSmokeTestSuites = [
+  {
+    path: '/news/uk-56342465',
+    service: 'news',
+    runforEnv: 'live',
+  },
+  {
+    path: '/news/technology-56294493',
+    service: 'news',
+    runforEnv: 'live',
+  },
+  {
+    path: '/news/23393110',
+    service: 'news',
+    runforEnv: 'test',
+  },
+  {
+    path: '/newsround/56331357',
+    service: 'newsround',
+    runforEnv: 'live',
+  },
+  {
+    path: '/newsround/23212028',
+    service: 'newsround',
+    runforEnv: 'test',
+  },
+  {
+    path: '/sport/rugby-union/56359986',
+    service: 'sport',
+    runforEnv: ['live', 'local'],
+  },
+  {
+    path: '/sport/golf/56318994',
+    service: 'sport',
+    runforEnv: ['live', 'local'],
+  },
+  {
+    path: '/sport/tennis/23372108',
+    service: 'sport',
+    runforEnv: 'test',
+  },
+];
+
 const canonicalTestSuites = Cypress.env('SMOKE')
   ? canonicalSmokeTestSuites
   : canonicalNonSmokeTestSuites;
 
-const ampTestSuites = canonicalTestSuites.map(testSuite => {
+const ampTestSuites = [
+  ...canonicalTestSuites,
+  ...ampOnlyNonSmokeTestSuites,
+].map(testSuite => {
   return {
     ...testSuite,
     path: `${testSuite.path}.amp`,
