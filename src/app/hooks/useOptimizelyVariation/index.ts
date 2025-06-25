@@ -8,7 +8,7 @@ const isClientSide = false;
 // WE CAN SAFELY DO SO SINCE isClientSide IS A CONSTANT AND THEREFORE GUARANTEES THAT
 // EACH HOOK WILL BE CALLED IN THE EXACT SAME ORDER UPON INITAL RENDER.
 const useOptimizelyVariation = (
-  flagKey,
+  flagKey: string,
   overrideAttributes = {},
   useClientSide = isClientSide,
 ) => {
@@ -21,7 +21,7 @@ const useOptimizelyVariation = (
       { overrideAttributes },
     );
 
-    const [variation, setVariation] = useState(null);
+    const [variation, setVariation] = useState<string | null>(null);
 
     useEffect(() => {
       if (isClientReady && !didTimeout) {
@@ -32,7 +32,7 @@ const useOptimizelyVariation = (
     return variation;
   }
 
-  return true;
+  return null;
 };
 
 export default useOptimizelyVariation;

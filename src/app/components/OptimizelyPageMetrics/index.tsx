@@ -1,16 +1,61 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
+import { OptimizelyContext } from '@optimizely/react-sdk';
 import { RequestContext } from '#contexts/RequestContext';
 import PageCompleteTracking from './PageCompleteTracking';
 import ScrollDepthTracking from './ScrollDepthTracking';
 import PageViewTracking from './PageViewTracking';
+import experimentsForPageMetrics from './experimentsForPageMetrics';
+
+type Props = {
+  trackPageView?: boolean;
+  trackPageDepth?: boolean;
+  trackPageComplete?: boolean;
+};
 
 const OptimizelyPageMetrics = ({
   trackPageView = false,
   trackPageDepth = false,
   trackPageComplete = false,
-}) => {
-  const { isAmp } = useContext(RequestContext);
-  if (isAmp) return null;
+}: Props) => {
+  const { optimizely } = useContext(OptimizelyContext);
+  const { isAmp, pageType } = useContext(RequestContext);
+  const [isInExperiment, setisInExperiment] = useState(false);
+
+  const experimentsForPageType = experimentsForPageMetrics.find(
+    entry => entry.pageType === pageType,
+  )?.activeExperiments;
+
+  const optimizelyExperimentsEnabled =
+    experimentsForPageType && !isAmp && !isInExperiment;
+
+  useEffect(() => {
+    if (optimizelyExperimentsEnabled) {
+      optimizely?.onReady().then(() => {
+        const decisions = optimizely.decideAll();
+        const isUserInAnyExperiments = experimentsForPageType.some(
+          experimentName => {
+            const decision = decisions[experimentName];
+            return decision && decision.variationKey !== 'off';
+          },
+        );
+
+        if (isUserInAnyExperiments) {
+          setisInExperiment(true);
+        }
+      });
+    }
+  }, [
+    optimizelyExperimentsEnabled,
+    optimizely,
+    trackPageComplete,
+    trackPageDepth,
+    trackPageView,
+    experimentsForPageType,
+  ]);
+
+  if (!isInExperiment) {
+    return null;
+  }
   return (
     <>
       {trackPageComplete && <PageCompleteTracking />}
