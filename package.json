@@ -144,7 +144,7 @@
     "@babel/preset-react": "7.27.1",
     "@babel/preset-typescript": "7.27.1",
     "@babel/runtime": "7.27.6",
-    "@biomejs/biome": "2.0.2",
+    "@biomejs/biome": "2.0.5",
     "@cypress/webpack-preprocessor": "6.0.4",
     "@emotion/babel-plugin": "11.13.5",
     "@emotion/babel-preset-css-prop": "11.12.0",
