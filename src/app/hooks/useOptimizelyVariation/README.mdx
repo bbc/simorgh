@@ -20,7 +20,7 @@ Here's an example of its usage:
 
 ```jsx
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
-import useOptimizely from '#hooks/useOptimizelyVariation';
+import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 
 const ExamplePage = () => {
   const variation = useOptimizelyVariation({ experimentName: 'foo-experiment-id', runtimeType: ExperimentState.CLIENT_SIDE});
