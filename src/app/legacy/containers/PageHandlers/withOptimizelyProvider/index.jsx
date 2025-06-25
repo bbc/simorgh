@@ -11,6 +11,7 @@ import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import Cookie from 'js-cookie';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { RequestContext } from '../../../../contexts/RequestContext';
 import isCypress from './isCypress';
 
 const isInCypress = isCypress();
@@ -29,6 +30,7 @@ const optimizely = createInstance({
 const withOptimizelyProvider = Component => {
   return props => {
     const { service } = useContext(ServiceContext);
+    const { pageType } = useContext(RequestContext);
     const isStoryBook = process.env.STORYBOOK;
     const disableOptimizely = isStoryBook || isInCypress;
 
@@ -63,6 +65,7 @@ const withOptimizelyProvider = Component => {
           id: getUserId(),
           attributes: {
             service,
+            pageType,
             mobile,
           },
         }}
