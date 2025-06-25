@@ -33,6 +33,11 @@ import { buildUniquePromoId } from './utilities';
 
 jest.mock('../../../components/ThemeProvider');
 
+jest.mock('#app/hooks/useIsPWA', () => ({
+  __esModule: true,
+  default: () => false,
+}));
+
 const onlyOneRelatedItem = {
   ...indexAlsosItem,
   relatedItems: [indexAlsosItem.relatedItems[0]],
