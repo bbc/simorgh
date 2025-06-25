@@ -71,7 +71,7 @@ describe('useOptimizelyVariation - useServerSide', () => {
   });
 
   it('should return null if given experiment is not in array', () => {
-    const mockMvtExperiments = [
+    const mockServerSideExperiments = [
       {
         experimentName: 'foo',
         variation: 'control',
@@ -79,14 +79,15 @@ describe('useOptimizelyVariation - useServerSide', () => {
       },
     ];
     const result = renderUseServerSide({
-      serverSideExperiments: mockMvtExperiments as ServerSideExperiment[],
+      serverSideExperiments:
+        mockServerSideExperiments as ServerSideExperiment[],
       experimentName: 'bar',
     });
     expect(result).toEqual(null);
   });
 
   it('should return a variation when the experiment is enabled', () => {
-    const mockMvtExperiments = [
+    const mockServerSideExperiments = [
       {
         experimentName: 'foo',
         variation: 'control',
@@ -95,14 +96,15 @@ describe('useOptimizelyVariation - useServerSide', () => {
     ];
 
     const result = renderUseServerSide({
-      serverSideExperiments: mockMvtExperiments as ServerSideExperiment[],
+      serverSideExperiments:
+        mockServerSideExperiments as ServerSideExperiment[],
       experimentName: 'foo',
     });
     expect(result).toEqual('control');
   });
 
   it('should return null when the experiment is not enabled', () => {
-    const mockMvtExperiments = [
+    const mockServerSideExperiments = [
       {
         experimentName: 'foo',
         variation: 'control',
@@ -111,14 +113,15 @@ describe('useOptimizelyVariation - useServerSide', () => {
     ];
 
     const result = renderUseServerSide({
-      serverSideExperiments: mockMvtExperiments as ServerSideExperiment[],
+      serverSideExperiments:
+        mockServerSideExperiments as ServerSideExperiment[],
       experimentName: 'foo',
     });
     expect(result).toBeFalsy();
   });
 
   it('should return null when the experiment variation is string "false"', () => {
-    const mockMvtExperiments = [
+    const mockServerSideExperiments = [
       {
         experimentName: 'foo',
         variation: 'false',
@@ -127,14 +130,15 @@ describe('useOptimizelyVariation - useServerSide', () => {
     ];
 
     const result = renderUseServerSide({
-      serverSideExperiments: mockMvtExperiments as ServerSideExperiment[],
+      serverSideExperiments:
+        mockServerSideExperiments as ServerSideExperiment[],
       experimentName: 'foo',
     });
     expect(result).toBeNull();
   });
 
   it('should return null when the experiment variation is boolean "false"', () => {
-    const mockMvtExperiments = [
+    const mockServerSideExperiments = [
       {
         experimentName: 'foo',
         variation: false,
@@ -144,14 +148,14 @@ describe('useOptimizelyVariation - useServerSide', () => {
 
     const result = renderUseServerSide({
       serverSideExperiments:
-        mockMvtExperiments as unknown as ServerSideExperiment[],
+        mockServerSideExperiments as unknown as ServerSideExperiment[],
       experimentName: 'foo',
     });
     expect(result).toBeNull();
   });
 
   it('should call activate experiment if experiment is enabled', () => {
-    const mockMvtExperiments = [
+    const mockServerSideExperiments = [
       {
         experimentName: 'foo',
         variation: 'control',
@@ -160,14 +164,15 @@ describe('useOptimizelyVariation - useServerSide', () => {
     ];
 
     renderUseServerSide({
-      serverSideExperiments: mockMvtExperiments as ServerSideExperiment[],
+      serverSideExperiments:
+        mockServerSideExperiments as ServerSideExperiment[],
       experimentName: 'foo',
     });
     expect(spyActivateExperiment).toHaveBeenCalled();
   });
 
   it('should not call activate experiment if experiment is disabled', () => {
-    const mockMvtExperiments = [
+    const mockServerSideExperiments = [
       {
         experimentName: 'foo',
         variation: 'control',
@@ -176,7 +181,8 @@ describe('useOptimizelyVariation - useServerSide', () => {
     ];
 
     renderUseServerSide({
-      serverSideExperiments: mockMvtExperiments as ServerSideExperiment[],
+      serverSideExperiments:
+        mockServerSideExperiments as ServerSideExperiment[],
       experimentName: 'foo',
     });
     expect(spyActivateExperiment).not.toHaveBeenCalled();
