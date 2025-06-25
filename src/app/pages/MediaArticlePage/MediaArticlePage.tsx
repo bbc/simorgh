@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import { useContext } from 'react';
+import { use } from 'react';
 import { jsx, useTheme, Theme } from '@emotion/react';
 import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
@@ -144,7 +144,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
     isTrustProjectParticipant,
     showRelatedTopics,
     brandName,
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
 
   const {

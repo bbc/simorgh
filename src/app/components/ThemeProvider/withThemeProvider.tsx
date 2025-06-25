@@ -1,4 +1,4 @@
-import React, { useContext, useMemo, PropsWithChildren } from 'react';
+import React, { use, useMemo } from 'react';
 import { Global, ThemeProvider as EmotionThemeProvider } from '@emotion/react';
 import useIsPWA from '#app/hooks/useIsPWA';
 import focusIndicator from './focusIndicator';
@@ -37,12 +37,16 @@ const useMergeTheme = (
   }, [isPWA, baseTheme, pwaTheme]);
 };
 
+type Props = {
+  children: React.ReactNode;
+};
+
 const withThemeProvider = (
   baseTheme: ServiceTheme,
   pwaTheme?: Partial<ServiceTheme>,
 ) => {
-  const ThemeProvider = ({ children }: PropsWithChildren) => {
-    const { isAmp, isLite, pageType } = useContext(RequestContext);
+  const ThemeProvider: React.FC<Props> = ({ children }) => {
+    const { isAmp, isLite, pageType } = use(RequestContext);
 
     const brandTheme = useMergeTheme(baseTheme, pwaTheme);
 

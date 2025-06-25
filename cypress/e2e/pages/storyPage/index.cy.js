@@ -64,13 +64,13 @@ const canonicalSmokeTestSuites = [
   {
     path: '/russian/features-54391793',
     service: 'russian',
-    runforEnv: ['test', 'local'],
+    runforEnv: ['live', 'local'],
     tests: canonicalTests,
   },
   {
     path: '/russian/news-55041160',
     service: 'russian',
-    runforEnv: ['test', 'local'],
+    runforEnv: ['live', 'local'],
     tests: canonicalTests,
   },
   {
@@ -131,36 +131,6 @@ const canonicalNonSmokeTestSuites = [
     tests: canonicalTests,
   },
   {
-    path: '/news/uk-56342465',
-    service: 'news',
-    runforEnv: 'live',
-    tests: canonicalTests,
-  },
-  {
-    path: '/news/technology-56294493',
-    service: 'news',
-    runforEnv: 'live',
-    tests: canonicalTests,
-  },
-  {
-    path: '/news/23393110',
-    service: 'news',
-    runforEnv: 'test',
-    tests: canonicalTests,
-  },
-  {
-    path: '/newsround/56331357',
-    service: 'newsround',
-    runforEnv: 'live',
-    tests: canonicalTests,
-  },
-  {
-    path: '/newsround/23212028',
-    service: 'newsround',
-    runforEnv: 'test',
-    tests: canonicalTests,
-  },
-  {
     path: '/pashto/world-52873295',
     service: 'pashto',
     runforEnv: 'live',
@@ -185,30 +155,6 @@ const canonicalNonSmokeTestSuites = [
     tests: canonicalTests,
   },
   {
-    path: '/sport/rugby-union/56359986',
-    service: 'sport',
-    runforEnv: ['live', 'local'],
-    tests: canonicalTests,
-  },
-  {
-    path: '/sport/golf/56318994',
-    service: 'sport',
-    runforEnv: ['live', 'local'],
-    tests: canonicalTests,
-  },
-  {
-    path: '/sport/formula1/23355387',
-    service: 'sport',
-    runforEnv: 'test',
-    tests: canonicalTests,
-  },
-  {
-    path: '/sport/tennis/23372108',
-    service: 'sport',
-    runforEnv: 'test',
-    tests: canonicalTests,
-  },
-  {
     path: '/yoruba/afrika-58539527',
     service: 'yoruba',
     runforEnv: 'live',
@@ -222,11 +168,63 @@ const canonicalNonSmokeTestSuites = [
   },
 ];
 
+const ampOnlyNonSmokeTestSuites = [
+  {
+    path: '/news/uk-56342465',
+    service: 'news',
+    runforEnv: 'live',
+  },
+  {
+    path: '/news/technology-56294493',
+    service: 'news',
+    runforEnv: 'live',
+  },
+  {
+    path: '/news/23393110',
+    service: 'news',
+    runforEnv: 'test',
+  },
+  {
+    path: '/newsround/56331357',
+    service: 'newsround',
+    runforEnv: 'live',
+  },
+  {
+    path: '/newsround/23212028',
+    service: 'newsround',
+    runforEnv: 'test',
+  },
+  {
+    path: '/sport/rugby-union/56359986',
+    service: 'sport',
+    runforEnv: 'live',
+  },
+  {
+    path: '/sport/golf/56318994',
+    service: 'sport',
+    runforEnv: 'live',
+  },
+  {
+    path: '/sport/tennis/23372108',
+    service: 'sport',
+    runforEnv: 'test',
+  },
+  {
+    path: '/sport/formula1/23355387',
+    service: 'sport',
+    runforEnv: 'test',
+    tests: canonicalTests,
+  },
+];
+
 const canonicalTestSuites = Cypress.env('SMOKE')
   ? canonicalSmokeTestSuites
   : canonicalNonSmokeTestSuites;
 
-const ampTestSuites = canonicalTestSuites.map(testSuite => {
+const ampTestSuites = [
+  ...canonicalTestSuites,
+  ...ampOnlyNonSmokeTestSuites,
+].map(testSuite => {
   return {
     ...testSuite,
     path: `${testSuite.path}.amp`,

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { render } from '@testing-library/react';
 import Cookie from 'js-cookie';
 import * as onClient from '#app/lib/utilities/onClient';
@@ -11,7 +11,7 @@ jest.mock('react', () => {
   const original = jest.requireActual('react');
   return {
     ...original,
-    useContext: jest.fn().mockImplementation(original.useContext),
+    use: jest.fn().mockImplementation(original.use),
   };
 });
 
@@ -21,7 +21,7 @@ jest.mock('./cookies', () => ({
 }));
 
 const DummyComponent = () => {
-  useContext(UserContext);
+  use(UserContext);
   return null;
 };
 
@@ -47,8 +47,8 @@ describe('UserContext', () => {
 
     expect(personalisationEnabled).toHaveBeenCalledWith('111');
 
-    expect(React.useContext).toHaveBeenCalledTimes(1);
-    expect(React.useContext).toHaveReturnedWith({
+    expect(React.use).toHaveBeenCalledTimes(1);
+    expect(React.use).toHaveReturnedWith({
       cookiePolicy: '111',
       personalisationEnabled: true,
       updateCookiePolicy: expect.any(Function),
