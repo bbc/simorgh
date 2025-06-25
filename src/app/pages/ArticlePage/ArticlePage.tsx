@@ -5,7 +5,7 @@ import { jsx, useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
 import useOptimizelyVariation, {
-  ExperimentState,
+  ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ArticleMetadata from '#containers/ArticleMetadata';
@@ -162,7 +162,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const experimentName = 'newswb_ws_topbarojs_read_more';
   const experimentVariant = useOptimizelyVariation({
     experimentName,
-    experimentType: ExperimentState.SERVER_SIDE,
+    experimentType: ExperimentType.SERVER_SIDE,
   });
 
   const isInServerSideExperiment =

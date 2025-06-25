@@ -24,7 +24,7 @@ describe('activateExperiment', () => {
 
     await activateExperiment({
       optimizely: mockOptimizely as unknown as ReactSDKClient,
-      experimentName: mockExperimentName,
+      experimentVariant: mockExperimentName,
       variation: mockExperimentVariation,
     });
 
@@ -44,7 +44,7 @@ describe('activateExperiment', () => {
 
     await activateExperiment({
       optimizely: mockOptimizely as unknown as ReactSDKClient,
-      experimentName: mockExperimentName,
+      experimentVariant: mockExperimentName,
       variation: mockExperimentVariation,
     });
 

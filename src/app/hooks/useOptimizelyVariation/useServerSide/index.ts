@@ -23,7 +23,12 @@ export default (experimentName: string) => {
 
   if (!enabled || !variation || variation === 'false') return null;
 
-  if (variation) activateExperiment({ optimizely, experimentName, variation });
+  if (variation)
+    activateExperiment({
+      optimizely,
+      experimentVariant: experimentName,
+      variation,
+    });
 
   return variation;
 };

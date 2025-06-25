@@ -18,7 +18,7 @@ const optimizely = {
   setUser: jest.fn(() => Promise.resolve()),
 };
 
-describe('useOptimizely - useServerSide', () => {
+describe('useOptimizelyVariation - useServerSide', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });

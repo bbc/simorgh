@@ -2,7 +2,7 @@
 import useServerSide from './useServerSide';
 import useClientSide from './useClientSide';
 
-export enum ExperimentState {
+export enum ExperimentType {
   CLIENT_SIDE = 'client side experiment',
   SERVER_SIDE = 'server side experiment',
 }
@@ -10,7 +10,7 @@ export enum ExperimentState {
 type Props = {
   experimentName: string;
   overrideAttributes?: Record<string, string>;
-  experimentType: ExperimentState;
+  experimentType: ExperimentType;
 };
 
 export default ({
@@ -21,7 +21,7 @@ export default ({
   if (!experimentName) return null;
 
   let variation = null;
-  if (experimentType === ExperimentState.SERVER_SIDE) {
+  if (experimentType === ExperimentType.SERVER_SIDE) {
     variation = useServerSide(experimentName);
   } else {
     variation = useClientSide({

@@ -23,7 +23,7 @@ import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvi
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 
 const ExamplePage = () => {
-  const variation = useOptimizelyVariation({ experimentName: 'foo-experiment-id', runtimeType: ExperimentState.CLIENT_SIDE});
+  const variation = useOptimizelyVariation({ experimentName: 'foo-experiment-id', experimentType: ExperimentState.CLIENT_SIDE});
 
   if (variation === 'variation_1') {
     return <p>I am variation 1</p>;

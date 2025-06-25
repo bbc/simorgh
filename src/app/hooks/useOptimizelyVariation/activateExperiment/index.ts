@@ -3,20 +3,20 @@ import { ReactSDKClient } from '@optimizely/react-sdk';
 
 type Props = {
   optimizely: ReactSDKClient;
-  experimentName: string;
+  experimentVariant: string;
   variation: string;
 };
 
 const activateExperiment = async ({
   optimizely,
-  experimentName,
+  experimentVariant,
   variation,
 }: Props) => {
   if (onClient() && optimizely) {
     const success = await optimizely?.onReady();
     if (success) {
-      optimizely.setForcedVariation(experimentName, variation);
-      optimizely.activate(experimentName);
+      optimizely.setForcedVariation(experimentVariant, variation);
+      optimizely.activate(experimentVariant);
     }
   }
 };

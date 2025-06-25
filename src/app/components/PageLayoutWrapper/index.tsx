@@ -7,7 +7,7 @@ import { Helmet } from 'react-helmet';
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
 import { PageTypes } from '#app/models/types/global';
 import useOptimizelyVariation, {
-  ExperimentState,
+  ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
 import { TopStoryItem } from '../../pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import WebVitals from '../../legacy/containers/WebVitals';
@@ -63,7 +63,7 @@ const PageLayoutWrapper = ({
   const experimentName = 'newswb_ws_topbarojs_read_more';
   const experimentVariant = useOptimizelyVariation({
     experimentName,
-    experimentType: ExperimentState.SERVER_SIDE,
+    experimentType: ExperimentType.SERVER_SIDE,
   });
 
   if (pageType === 'article') {

@@ -2,7 +2,7 @@ import optimizelyReactSdk, { OptimizelyDecision } from '@optimizely/react-sdk';
 import { renderHook } from '#app/components/react-testing-library-with-providers';
 import useClientSide from '.';
 
-describe('useOptimizely - useClientSide', () => {
+describe('useOptimizelyVariation - useClientSide', () => {
   const useDecisionSpy = jest.spyOn(optimizelyReactSdk, 'useDecision');
 
   afterEach(() => {
