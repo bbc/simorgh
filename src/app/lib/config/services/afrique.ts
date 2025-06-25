@@ -65,6 +65,15 @@ export const service: DefaultServiceConfig = {
       relatedContent: 'Lire plus',
       relatedTopics: 'Sujets associés',
       navMenuText: 'Rubriques',
+      easyReadSite: {
+        toStandardSite: 'Lecture standard ',
+        toEasySite: 'Facile à lire',
+        easySite: 'Facile à lire',
+        standardSite: 'Standard',
+        aIDisclaimer: `Ce facile à lire a été vérifié par un journaliste. Il a été créé avec l'IA (Intelligence Artificielle) à partir de la version standard.`,
+        learnMore: 'En savoir plus sur la version facile à lire',
+        learnMoreLink: 'https://www.bbc.co.uk/',
+      },
       liteSite: {
         onboardingMessage:
           'Vous visualisez une version texte de ce site web qui utilise moins de données. Voir la version principale du site, avec toutes les images et vidéos.',

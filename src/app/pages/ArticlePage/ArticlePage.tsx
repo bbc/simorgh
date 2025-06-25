@@ -37,6 +37,8 @@ import NielsenAnalytics from '#containers/NielsenAnalytics';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
 import {
   Article,
+  EasyBlockModel,
+  EasyReadMetaBlock,
   OptimoBylineBlock,
   OptimoBylineContributorBlock,
 } from '#app/models/types/optimo';
@@ -44,6 +46,7 @@ import { Translations } from '#app/models/types/translations';
 import { Recommendation } from '#app/models/types/onwardJourney';
 
 import ScrollablePromo from '#components/ScrollablePromo';
+import EasyReadCTA from '#app/components/EasyReadCTA';
 import Recommendations from '#app/components/Recommendations';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
@@ -117,9 +120,9 @@ const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
 const getPodcastPromoComponent = (podcastPromoEnabled: boolean) => () =>
   podcastPromoEnabled ? <InlinePodcastPromo /> : null;
 
-const getHeadlineComponent = (props: ComponentToRenderProps) => (
-  <ArticleHeadline {...props} />
-);
+const getHeadlineComponent =
+  (isEasyPage: boolean) => (props: ComponentToRenderProps) =>
+    ArticleHeadline(props, isEasyPage);
 
 const getVideoComponent =
   (translations: Translations) => (props: ComponentToRenderProps) => {
@@ -183,6 +186,36 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     block => block.type === 'byline',
   ) as OptimoBylineBlock;
 
+  let targetBlock = null;
+  let removeIndex = null;
+  let easyMetaBlock;
+  const easyReadBlocks = blocks.find(block => block.type === 'easyRead');
+
+  if (easyReadBlocks) {
+    const easyBlocks = (easyReadBlocks.model as EasyBlockModel).blocks;
+    easyMetaBlock = easyBlocks.find(block => block.type === 'easyReadMeta');
+  } else {
+    easyMetaBlock = blocks.find(block => block.type === 'easyReadMeta');
+  }
+
+  const isEasyPage =
+    !easyReadBlocks &&
+    (easyMetaBlock as EasyReadMetaBlock)?.model?.easyReadAssetId ===
+      undefined &&
+    !!(easyMetaBlock as EasyReadMetaBlock)?.model?.originalAssetId;
+
+  if (isEasyPage || easyReadBlocks) {
+    targetBlock = easyMetaBlock as EasyReadMetaBlock;
+    if (isEasyPage) {
+      removeIndex = blocks.findIndex(block => block.type === 'easyReadMeta');
+      blocks.splice(removeIndex, 1);
+    } else {
+      removeIndex = blocks.findIndex(block => block.type === 'easyRead');
+      blocks.splice(removeIndex, 1);
+    }
+    blocks.splice(1, 0, targetBlock);
+  }
+
   const bylineContribBlocks = bylineBlock?.model?.blocks || [];
 
   const bylineLinkedData = bylineExtractor(bylineContribBlocks);
@@ -211,7 +244,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const componentsToRender = {
     visuallyHiddenHeadline,
-    headline: getHeadlineComponent,
+    headline: getHeadlineComponent(Boolean(isEasyPage || easyReadBlocks)),
     subheadline: Headings,
     audio: MediaLoader,
     video: getVideoComponent(translations),
@@ -232,6 +265,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     group: gist,
     links: ScrollablePromo,
     mpu: getMpuComponent(allowAdvertising),
+    easyReadMeta: EasyReadCTA,
     wsoj: getWsojComponent,
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
@@ -262,6 +296,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const promoImage = promoImageRawBlock?.model?.locator;
 
   const showTopics = Boolean(showRelatedTopics && topics.length > 0);
+
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
   const showContinueReadingButton = Boolean(
@@ -272,6 +307,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         experimentVariant,
       ),
   );
+
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics atiData={atiData} />
@@ -284,7 +320,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       <NielsenAnalytics />
       <ArticleMetadata
         articleId={getArticleId(pageData)}
-        title={headline}
+        title={
+          isEasyPage
+            ? `${translations.easyReadSite?.easySite} | ${headline}`
+            : headline
+        }
         author={articleAuthor}
         twitterHandle={articleAuthorTwitterHandle}
         firstPublished={firstPublished}
@@ -318,6 +358,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
       )}
       <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
+
       <div css={styles.grid}>
         <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
           <main

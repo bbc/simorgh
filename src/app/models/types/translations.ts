@@ -17,6 +17,15 @@ export interface Translations {
   topicsPath?: string;
   relatedTopics?: string;
   navMenuText: string;
+  easyReadSite?: {
+    toStandardSite: string;
+    toEasySite: string;
+    easySite: string;
+    standardSite: string;
+    aIDisclaimer: string;
+    learnMore: string;
+    learnMoreLink: string;
+  };
   liteSite?: LiteSiteTranslations;
   mediaAssetPage: {
     mediaPlayer: string;

@@ -41,6 +41,20 @@ export type OptimoAltTextBlock = {
   };
 };
 
+export type EasyBlockModel = {
+  hasBeenReviewed: boolean;
+  suitableForAbridgement: boolean;
+  blocks: OptimoBlock[];
+};
+
+export type EasyReadMetaBlock = {
+  type: 'easyReadMeta';
+  model: {
+    easyReadAssetId?: string;
+    originalAssetId: string;
+  };
+};
+
 export type OptimoBylineContributorMetadataBlock = {
   type: 'name' | 'role' | 'link' | 'location' | 'images';
   model: {
@@ -65,6 +79,8 @@ export type OptimoBylineBlock = {
 };
 
 export type ArticleMetadata = {
+  easyVersionLink?: string;
+  fullVersionLink?: string;
   adCampaignKeyword: string;
   allowAdvertising: boolean;
   analyticsLabels?: {

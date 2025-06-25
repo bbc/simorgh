@@ -11,7 +11,10 @@ import Headings from '#containers/Headings';
 import { ComponentToRenderProps } from '../types';
 import styles from './index.styles';
 
-const ArticleHeadline = (props: ComponentToRenderProps) => {
+const ArticleHeadline = (
+  props: ComponentToRenderProps,
+  isEasyPage?: boolean,
+) => {
   const { pathname, isLite, isAmp, isApp } = useContext(RequestContext);
   const { translations } = useContext(ServiceContext);
   const eventTrackingData = {
@@ -34,13 +37,15 @@ const ArticleHeadline = (props: ComponentToRenderProps) => {
       <Headings
         className="article-heading"
         {...props}
-        {...(showArticleLiteSiteLink && {
+        {...((showArticleLiteSiteLink || isEasyPage) && {
           css: styles.reducePadding,
         })}
       />
       {showArticleLiteSiteLink && (
         <div
-          css={styles.liteSiteLinkContainer}
+          {...(!isEasyPage && {
+            css: styles.liteSiteLinkContainer,
+          })}
           {...viewTracker}
           data-e2e="article-lite-site-link"
         >
