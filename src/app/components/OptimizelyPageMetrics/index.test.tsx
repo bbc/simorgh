@@ -281,6 +281,27 @@ describe('OptimizelyPageMetrics', () => {
     });
   });
 
+  it('should call decideAll with argument to disable decision impression activation event', async () => {
+    experimentsForPageMetrics.push(
+      ...[
+        {
+          pageType: ARTICLE_PAGE,
+          activeExperiments: ['mockExperiment1', 'mockExperiment2'],
+        },
+      ],
+    );
+    render(
+      <ContextWrap pageType={ARTICLE_PAGE} service="news">
+        <OptimizelyPageMetrics trackPageComplete trackPageDepth trackPageView />
+      </ContextWrap>,
+    );
+    await waitFor(() => {
+      expect(optimizely.decideAll).toHaveBeenCalledWith([
+        'DISABLE_DECISION_EVENT',
+      ]);
+    });
+  });
+
   describe('Multiple experiments on different page types', () => {
     it('should render correctly when a user is in an experiment on the current page type', async () => {
       experimentsForPageMetrics.push(
