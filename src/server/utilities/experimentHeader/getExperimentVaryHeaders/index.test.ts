@@ -1,7 +1,7 @@
 import { ServerSideExperiment } from '#app/models/types/global';
 import getMvtVaryHeaders from '.';
 
-const getMockMvtExperiments = (
+const getMockServerSideExperiments = (
   enabled1: boolean,
   enabled2: boolean,
   enabled3: boolean,
