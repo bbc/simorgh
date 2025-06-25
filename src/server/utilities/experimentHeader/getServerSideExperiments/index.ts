@@ -8,14 +8,14 @@ import enabledExperimentList from '../enabledExperimentsList';
 type Props = {
   headers: Record<string, string>;
   service: Services;
-  derivedPageType: PageTypes;
+  pageType: PageTypes;
 };
 
 export default ({ headers, service, derivedPageType }: Props) => {
   return Object.entries(headers).reduce<ServerSideExperiment[]>(
     (result, [header, content]) => {
       if (header.startsWith('mvt-')) {
-        const noMvtPrefixHeader = header.slice(4);
+        const experimentName = header.slice(4);
 
         const enabled = enabledExperimentList.some(
           ({ name, services, pageTypes }) =>
