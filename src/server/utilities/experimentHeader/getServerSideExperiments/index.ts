@@ -8,7 +8,7 @@ import enabledExperimentList from '../enabledExperimentsList';
 type Props = {
   headers: Record<string, string>;
   service: Services;
-  derivedPageType: PageTypes;
+  pageType: PageTypes;
 };
 
 export default ({ headers, service, derivedPageType }: Props) => {
