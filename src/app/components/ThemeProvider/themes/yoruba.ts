@@ -3,6 +3,7 @@ import latinScript from '../fontScripts/latin';
 import helmetFontVariants from '../fontVariants/helmet';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/yoruba';
+import getPWATypographyTheme from './getPWATypographyTheme';
 
 const yorubaTheme = {
   palette: {
@@ -20,4 +21,4 @@ const yorubaTheme = {
   brandSVG,
 };
 
-export default withThemeProvider(yorubaTheme);
+export default withThemeProvider(yorubaTheme, getPWATypographyTheme());
