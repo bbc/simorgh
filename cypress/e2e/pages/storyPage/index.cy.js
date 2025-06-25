@@ -64,13 +64,13 @@ const canonicalSmokeTestSuites = [
   {
     path: '/russian/features-54391793',
     service: 'russian',
-    runforEnv: ['test', 'local'],
+    runforEnv: ['live', 'local'],
     tests: canonicalTests,
   },
   {
     path: '/russian/news-55041160',
     service: 'russian',
-    runforEnv: ['test', 'local'],
+    runforEnv: ['live', 'local'],
     tests: canonicalTests,
   },
   {
