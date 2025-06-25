@@ -1,7 +1,7 @@
 /** @jsx jsx */
 /** @jsxFrag */
 import { jsx } from '@emotion/react';
-import React, { memo, useContext, useState } from 'react';
+import React, { memo, use, useState } from 'react';
 import Text from '#app/components/Text';
 import { MediaCollection } from '#app/components/MediaLoader/types';
 import MediaLoader from '#app/components/MediaLoader';
@@ -40,8 +40,8 @@ const LiveHeaderMedia = ({
   mediaCollection,
   clickCallback = () => null,
 }: LiveHeaderMediaProps) => {
-  const { translations } = useContext(ServiceContext);
-  const { isLite } = useContext(RequestContext);
+  const { translations } = use(ServiceContext);
+  const { isLite } = use(RequestContext);
   const [showMedia, setShowMedia] = useState(false);
 
   const eventTrackingData: EventTrackingMetadata = {
