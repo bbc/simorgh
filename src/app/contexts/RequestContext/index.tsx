@@ -39,6 +39,7 @@ export type RequestContextProps = {
   statusCode: number | null;
   timeOnServer: number | null;
   variant: Variants | null;
+  country?: string | null;
 };
 
 export const RequestContext = React.createContext<RequestContextProps>(
@@ -63,6 +64,7 @@ type RequestProviderProps = {
   mvtExperiments?: MvtExperiment[] | null;
   variant?: Variants | null;
   isUK?: boolean | null;
+  country?: string | null;
 };
 
 export const RequestContextProvider = ({
@@ -80,6 +82,7 @@ export const RequestContextProvider = ({
   service,
   showAdsBasedOnLocation = false,
   showCookieBannerBasedOnCountry = true,
+  country,
   statusCode = null,
   timeOnServer = null,
   variant = null,
@@ -133,6 +136,7 @@ export const RequestContextProvider = ({
       pathname,
       ...getMetaUrls(origin, pathname),
       mvtExperiments,
+      country,
     }),
     [
       derivedPageType,
@@ -155,6 +159,7 @@ export const RequestContextProvider = ({
       statusCode,
       timeOnServer,
       variant,
+      country,
     ],
   );
 
