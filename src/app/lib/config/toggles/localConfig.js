@@ -5,7 +5,7 @@ export default {
   },
   adsNonce: {
     enabled: true,
-    value: '(afrique|arabic|mundo)',
+    value: 'es,mx',
   },
   articleLiteSiteLink: { enabled: true },
   electionBanner: {
