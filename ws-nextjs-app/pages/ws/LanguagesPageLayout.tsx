@@ -238,6 +238,11 @@ export default function LanguagesPageLayout() {
                           Naidheachdan
                         </a>
                       </li>
+                      <li id="polish" className="unit">
+                        <a href="https://www.bbc.com/polska">
+                          BBC News po polsku
+                        </a>
+                      </li>
                       <li id="russian" className="unit">
                         <a href="https://www.bbc.com/russian">
                           Новости на русском языке
@@ -417,6 +422,9 @@ export default function LanguagesPageLayout() {
                       </li>
                       <li id="gaelic" className="unit">
                         <a href="https://www.bbc.co.uk/naidheachdan">Gaelic</a>
+                      </li>
+                      <li id="polish" className="unit">
+                        <a href="https://www.bbc.com/polska">Polish</a>
                       </li>
                       <li id="russian" className="unit">
                         <a href="https://www.bbc.com/russian">Russian</a>

@@ -2,7 +2,7 @@
 /** @jsx jsx */
 /** @jsxFrag */
 import { jsx } from '@emotion/react';
-import React, { useContext, PropsWithChildren } from 'react';
+import React, { use, PropsWithChildren } from 'react';
 import { OptimoBylineBlock } from '#app/models/types/optimo';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import VisuallyHiddenText from '../VisuallyHiddenText';
@@ -16,7 +16,7 @@ const Byline = ({
   blocks,
   children = null,
 }: PropsWithChildren<OptimoBylineBlock['model']>) => {
-  const { translations, dir } = useContext(ServiceContext);
+  const { translations, dir } = use(ServiceContext);
   const isRtl = dir === 'rtl';
 
   const bylineValues = bylineExtractor(blocks);
@@ -79,7 +79,7 @@ const Byline = ({
                       className="focusIndicatorReducedWidth"
                     >
                       <Text
-                        className="byline__link-text"
+                        className="byline-link"
                         size="bodyCopy"
                         fontVariant="sansBold"
                         css={BylineCss.author}
@@ -87,9 +87,15 @@ const Byline = ({
                         {authorName}
                       </Text>
                       {isRtl ? (
-                        <LeftChevron css={BylineCss.authorChevron} />
+                        <LeftChevron
+                          className="byline-link"
+                          css={BylineCss.authorChevron}
+                        />
                       ) : (
-                        <RightChevron css={BylineCss.authorChevron} />
+                        <RightChevron
+                          className="byline-link"
+                          css={BylineCss.authorChevron}
+                        />
                       )}
                     </a>
                   </>

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { NavigationUl, NavigationLi } from '#psammead/psammead-navigation/src';
 import {
   DropdownUl,
@@ -49,12 +49,12 @@ const renderListItems = (
   }, []);
 
 const NavigationContainer = ({ propsForOJExperiment }) => {
-  const { isAmp, isLite } = useContext(RequestContext);
+  const { isAmp, isLite } = use(RequestContext);
   const { blocks, experimentVariant } = propsForOJExperiment || {};
   const { script, translations, navigation, service, dir } =
-    useContext(ServiceContext);
+    use(ServiceContext);
 
-  const { canonicalLink, origin } = useContext(RequestContext);
+  const { canonicalLink, origin } = use(RequestContext);
   const { currentPage, navMenuText } = translations;
 
   const scrollableNavEventTrackingData = {
