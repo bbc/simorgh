@@ -90,17 +90,6 @@ export default ({ service }) => {
   });
 };
 ```
-adsNonce toggle uses "enabled" to check service as a boolean and "value" as countries list, usage:
-
-```js
-const { enabled: isAdsNonceEnabled, value: countries } =
-    useToggle('adsNonce');
-
-  const countriesForNonce = countries?.split(',') || [];
-  const nonceEnabledForCountry =
-    countriesForNonce?.length === 0 || countriesForNonce.includes(country);
-  const isNonceAllowed = isAdsNonceEnabled && nonceEnabledForCountry;
-  ```
 
 **NB** In the example above, the `it` callback function is using the standard function syntax. Using arrow functions to access aliases via `this` won’t work because of the lexical binding of this - https://docs.cypress.io/api/commands/as.html#Fixture. If you'd rather have consistency and use an arrow function then you can still do so but you have to use `cy.get('@toggles')` and introduce async code handling with `.then` and with that comes more callback nesting. Here is the same test written with an arrow function.
 
