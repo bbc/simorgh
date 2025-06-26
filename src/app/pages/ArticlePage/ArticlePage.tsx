@@ -39,6 +39,7 @@ import NielsenAnalytics from '#containers/NielsenAnalytics';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
 import {
   Article,
+  OptimoBlock,
   OptimoBylineBlock,
   OptimoBylineContributorBlock,
 } from '#app/models/types/optimo';
@@ -75,7 +76,10 @@ import ContinueReadingButton, {
   Props as ContinueReadingProps,
 } from './ContinueReadingButton';
 import ArticleHeadline from './ArticleHeadline';
-import isPortraitVideo from '../utils/isPortraitVideo';
+import {
+  isPortraitVideo,
+  isPortraitVideoUnderHeadline,
+} from '../utils/portraitVideo';
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -126,16 +130,20 @@ const getHeadlineComponent = (props: ComponentToRenderProps) => (
 );
 
 const getVideoComponent =
-  (translations: Translations) => (props: ComponentToRenderProps) => {
+  (translations: Translations, pageBlocks: OptimoBlock[]) =>
+  (props: ComponentToRenderProps) => {
     const { blocks } = props;
 
-    const title = translations.media.watchMoments || 'Watch Moments';
+    const title = translations.media.watchMoments;
+
+    const showTitle =
+      isPortraitVideo(blocks) &&
+      title &&
+      !isPortraitVideoUnderHeadline(pageBlocks, blocks);
 
     return (
       <>
-        {isPortraitVideo(blocks) && (
-          <strong css={styles.portraitVideoTitle}>{title}</strong>
-        )}
+        {showTitle && <strong css={styles.portraitVideoTitle}>{title}</strong>}
         <MediaLoader blocks={blocks as MediaBlock[]} />
       </>
     );
@@ -221,7 +229,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     headline: getHeadlineComponent,
     subheadline: Headings,
     audio: MediaLoader,
-    video: getVideoComponent(translations),
+    video: getVideoComponent(translations, blocks),
     text,
     image: getImageComponent(preloadLeadImageToggle),
     timestamp: getTimestampComponent(
