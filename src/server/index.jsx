@@ -253,9 +253,7 @@ server.get(
       data.showCookieBannerBasedOnCountry = showCookieBannerBasedOnCountry;
       data.isUK = isUK;
       data.isLite = isLite;
-      data.country =
-        requestHeaders['x-country'].toString().toLowerCase() ||
-        requestHeaders['x-bbc-edge-country'].toString().toLowerCase();
+      data.country = headers['x-country'] || headers['x-bbc-edge-country'];
 
       let { status } = data;
       // Set derivedPageType based on returned page data
