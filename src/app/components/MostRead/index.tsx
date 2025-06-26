@@ -118,7 +118,6 @@ const MostRead = ({
   sendOptimizelyEvents = true,
 }: MostReadProps) => {
   const { isAmp, pageType, variant } = use(RequestContext);
-  const { optimizely } = use(OptimizelyContext);
   const {
     service,
     mostRead: { hasMostRead },

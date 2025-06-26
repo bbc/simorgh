@@ -63,11 +63,10 @@ const TopStoriesSection = ({
   content: TopStoryItem[];
   sendOptimizelyEvents?: boolean;
 }) => {
-  const { translations, script, service } = useContext(ServiceContext);
+  const { translations, script, service } = use(ServiceContext);
 
   const experimentName = 'dummy_experiment_1';
   const experimentVariant = useOptimizelyVariation(experimentName);
-  const { optimizely } = use(OptimizelyContext);
 
   const eventTrackingData = {
     block: {
