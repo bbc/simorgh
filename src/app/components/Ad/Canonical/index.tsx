@@ -79,13 +79,13 @@ const CanonicalAd = ({ slotType, className, nonce }: AdProps) => {
           type="module"
           src={getBootstrapSrc(queryString)}
           async
-          nonce={nonce}
+          {...(nonce ? { nonce } : {})}
         />
         <script
           noModule
           src={getBootstrapSrc(queryString, true)}
           async
-          nonce={nonce}
+          {...(nonce ? { nonce } : {})}
         />
       </Helmet>
 
