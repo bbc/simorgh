@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from 'react';
+import React, { use, useEffect, useRef } from 'react';
 import styled from '@emotion/styled';
 import { ConsentBanner } from '#psammead/psammead-consent-banner/src';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
@@ -35,7 +35,7 @@ const CanonicalConsentBannerContainer = ({
   onReject = () => {},
   onAccept,
 }) => {
-  const { dir, translations, script, service } = useContext(ServiceContext);
+  const { dir, translations, script, service } = use(ServiceContext);
 
   const consentBannerConfig =
     type === 'cookie'

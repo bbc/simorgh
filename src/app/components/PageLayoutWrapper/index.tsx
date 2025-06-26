@@ -1,13 +1,14 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
 
-import React, { PropsWithChildren, useContext } from 'react';
+import React, { PropsWithChildren, use } from 'react';
 import { jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
 import { PageTypes } from '#app/models/types/global';
 import useOptimizelyMvtVariation from '#app/hooks/useOptimizelyMvtVariation';
+import useIsPWA from '#app/hooks/useIsPWA';
 import { TopStoryItem } from '../../pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import WebVitals from '../../legacy/containers/WebVitals';
 import HeaderContainer from '../../legacy/containers/Header';
@@ -51,8 +52,9 @@ const PageLayoutWrapper = ({
   pageData,
   status,
 }: PropsWithChildren<Props>) => {
-  const { service } = useContext(ServiceContext);
-  const { isLite, isAmp } = useContext(RequestContext);
+  const { service } = use(ServiceContext);
+  const { isLite, isAmp } = use(RequestContext);
+  const isPWA = useIsPWA();
 
   const isErrorPage = ![200].includes(status) || !status;
   const pageType = pageData?.metadata?.type;
@@ -94,7 +96,9 @@ const PageLayoutWrapper = ({
       experimentVariant,
     };
   }
-  const serviceFonts = fontFacesLazy(service);
+
+  const serviceFonts = fontFacesLazy(service, isPWA);
+
   const fontJs =
     isLite ||
     isAmp ||

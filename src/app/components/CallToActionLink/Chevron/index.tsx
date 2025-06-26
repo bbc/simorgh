@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { useContext } from 'react';
+import { use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { LeftChevron, RightChevron } from '../../icons';
 import CallToActionLinkContext from '../CallToActionLinkContext';
@@ -25,8 +25,8 @@ const getChevronCss = (size = 'pica') => {
 };
 
 const Chevron = ({ className }: ChevronProps) => {
-  const { size } = useContext(CallToActionLinkContext);
-  const { dir } = useContext(ServiceContext);
+  const { size } = use(CallToActionLinkContext);
+  const { dir } = use(ServiceContext);
   const isRtl = dir === 'rtl';
   return isRtl ? (
     <LeftChevron className={className} css={getChevronCss(size)} />

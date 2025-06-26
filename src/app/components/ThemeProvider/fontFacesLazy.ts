@@ -1,3 +1,5 @@
+import { Services } from '#app/models/types/global';
+
 const REITH_FONTS_DIR = 'https://static.files.bbci.co.uk/fonts/reith/r2.512/';
 
 const NOTO_SERIF_SINHALA_FONTS_DIR =
@@ -222,7 +224,34 @@ const REITH_QALAM_BOLD = {
   fontDisplay: 'optional',
 };
 
-export default (service: string) => {
+const REITH_FOR_PWA_SERVICES: Services[] = [
+  'afaanoromoo',
+  'afrique',
+  'azeri',
+  'gahuza',
+  'hausa',
+  'igbo',
+  'indonesia',
+  'kyrgyz',
+  'pidgin',
+  'serbian',
+  'somali',
+  'swahili',
+  'ukrainian',
+  'uzbek',
+  'yoruba',
+];
+
+export default (service: Services, isPWA: boolean) => {
+  if (isPWA && REITH_FOR_PWA_SERVICES.includes(service)) {
+    return [
+      REITH_SANS_BOLD,
+      REITH_SANS_REGULAR,
+      REITH_SERIF_MEDIUM,
+      REITH_SERIF_LIGHT,
+    ];
+  }
+
   switch (service) {
     case 'news':
     case 'newsround':

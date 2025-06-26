@@ -1,6 +1,6 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
@@ -45,7 +45,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
     homePageTitle,
     lang,
     brandName,
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
   const { topStoriesTitle, home } = translations;
   const {
     title,

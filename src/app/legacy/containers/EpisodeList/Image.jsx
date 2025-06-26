@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import omit from 'ramda/src/omit';
 import styled from '@emotion/styled';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
@@ -91,7 +91,7 @@ const StyledImage = styled.img`
 const EpisodeImage = props => {
   const { duration = '', alt = '', dir } = props;
 
-  const { isLite } = useContext(RequestContext);
+  const { isLite } = use(RequestContext);
 
   // This component only uses a subset of its props
   // the remaining props are passed down to the underlying <img> element

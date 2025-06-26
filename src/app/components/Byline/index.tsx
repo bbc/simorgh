@@ -2,7 +2,7 @@
 /** @jsx jsx */
 /** @jsxFrag */
 import { jsx } from '@emotion/react';
-import React, { useContext, PropsWithChildren } from 'react';
+import React, { use, PropsWithChildren } from 'react';
 import { OptimoBylineBlock } from '#app/models/types/optimo';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import VisuallyHiddenText from '../VisuallyHiddenText';
@@ -16,7 +16,7 @@ const Byline = ({
   blocks,
   children = null,
 }: PropsWithChildren<OptimoBylineBlock['model']>) => {
-  const { translations, dir } = useContext(ServiceContext);
+  const { translations, dir } = use(ServiceContext);
   const isRtl = dir === 'rtl';
 
   const bylineValues = bylineExtractor(blocks);

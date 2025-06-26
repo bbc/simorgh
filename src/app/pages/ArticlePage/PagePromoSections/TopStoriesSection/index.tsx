@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import { jsx, useTheme } from '@emotion/react';
-import { useContext } from 'react';
+import { use } from 'react';
 import useViewTracker from '#hooks/useViewTracker';
 import { EventTrackingBlock } from '#app/models/types/eventTracking';
 import SectionLabel from '#psammead/psammead-section-label/src';
@@ -67,6 +67,7 @@ const TopStoriesSection = ({
 
   const experimentName = 'dummy_experiment_1';
   const experimentVariant = useOptimizelyVariation(experimentName);
+  const { optimizely } = use(OptimizelyContext);
 
   const eventTrackingData = {
     block: {

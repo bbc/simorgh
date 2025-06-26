@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import pathOr from 'ramda/src/pathOr';
 import Blocks from '#app/legacy/containers/Blocks';
@@ -17,7 +17,7 @@ const DecoratedInlineLink = ({
   blocks,
   onClick,
 }: Props) => {
-  const { externalLinkText } = useContext(ServiceContext);
+  const { externalLinkText } = use(ServiceContext);
 
   const linkText = pathOr(null, [0, 'model', 'text'], blocks);
 
