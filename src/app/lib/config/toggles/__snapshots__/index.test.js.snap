@@ -63,7 +63,7 @@ exports[`Toggles Config when application environment is local should contain cor
   },
   "adsNonce": {
     "enabled": true,
-    "value": "(afrique|arabic|mundo)",
+    "value": "es,mx",
   },
   "articleLiteSiteLink": {
     "enabled": true,
@@ -131,7 +131,7 @@ exports[`Toggles Config when application environment is test should contain corr
   },
   "adsNonce": {
     "enabled": true,
-    "value": "(afrique|arabic|mundo)",
+    "value": "es,mx",
   },
   "articleLiteSiteLink": {
     "enabled": true,
