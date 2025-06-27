@@ -30,7 +30,7 @@ describe('addProcessClientDeviceAndSendStaticBeaconToWindow script', () => {
     window.sendStaticBeacon = jest.fn();
     Object.defineProperty(window, 'location', {
       writable: true,
-      value: { ...window.location, search: '' }
+      value: { ...window.location, search: '' },
     });
   });
 
