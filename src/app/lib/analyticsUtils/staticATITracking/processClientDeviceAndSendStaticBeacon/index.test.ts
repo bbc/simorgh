@@ -126,7 +126,7 @@ describe('addProcessClientDeviceAndSendStaticBeaconToWindow script', () => {
     });
     Object.defineProperty(window, 'location', {
       writable: true,
-      value: { pathname: 'gahuza/popular/read.lite' },
+      value: { pathname: 'gahuza/popular/read.lite', search: '' },
     });
 
     window.screen = {
