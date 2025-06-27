@@ -73,9 +73,9 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
           .substring(1)
           .split('&')
           .map(param => param.split('='))
-          .reduce((values, [ key, value ]) => {
-            values[ key ] = value
-            return values
+          .reduce((values, kv) => {
+            values[kv[0]] = kv[1];
+            return values;
           }, {});
         Object.keys(kvpairs).forEach(keyName => {
           if (keyName.indexOf('at_') === 0) {
