@@ -82,7 +82,7 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
             return values;
           }, {});
 
-        Object.keys(kvpairs).forEach((keyName) => {
+        Object.keys(kvpairs).forEach(keyName => {
           if (keyName.indexOf('at_') === 0) {
             params[keyName.replace('at_', 'src_')] = kvpairs[keyName];
           } else if (keyName.indexOf('utm_') === 0) {
