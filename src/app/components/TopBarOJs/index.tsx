@@ -147,7 +147,7 @@ const LabelComponentOJTopBar = styled(({ ariaLabel, ...props }) => (
   width: 100vw;
 `;
 
-const ScrollablePromo = ({
+const TopBarOJs = ({
   blocks,
   blockGroupIndex = null,
   experimentVariant = null,
@@ -262,4 +262,4 @@ const ScrollablePromo = ({
   );
 };
 
-export default ScrollablePromo;
+export default TopBarOJs;
