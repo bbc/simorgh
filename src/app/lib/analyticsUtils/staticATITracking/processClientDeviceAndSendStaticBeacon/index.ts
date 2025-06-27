@@ -77,10 +77,11 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
             return [decodeURIComponent(key), decodeURIComponent(value)];
           })
           .reduce<Record<string, string>>((values, [key, value]) => {
+            // eslint-disable-next-line no-param-reassign
             values[key] = value;
             return values;
           }, {});
-      
+
         Object.keys(kvpairs).forEach((keyName) => {
           if (keyName.indexOf('at_') === 0) {
             params[keyName.replace('at_', 'src_')] = kvpairs[keyName];
