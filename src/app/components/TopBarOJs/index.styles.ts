@@ -1,6 +1,16 @@
 import { css, Theme } from '@emotion/react';
 
 export default {
+  promoWrapper: ({ mq, spacings }: Theme) =>
+    css({
+      marginInlineStart: `${spacings.FULL}rem`,
+      [mq.GROUP_2_MIN_WIDTH]: {
+        marginInlineStart: `${spacings.DOUBLE}rem`,
+      },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        marginInlineStart: 0,
+      },
+    }),
   promoContainer: ({ palette, spacings }: Theme) =>
     css({
       background: palette.GREY_2,
