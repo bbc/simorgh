@@ -27,8 +27,8 @@ export const Headline = styled.h1`
 const SUBHEADING_PADDING = '0.5rem';
 
 export const SubHeading = styled.h2`
-  ${({ theme: { fontVariants } }) => fontVariants.sansBold}
   ${({ theme: { fontSizes } }) => fontSizes.trafalgar}
+  ${({ theme: { fontVariants } }) => fontVariants.sansBold}
 
   color: ${({ theme }) =>
     theme.isDarkUi ? theme.palette.GREY_2 : theme.palette.GREY_10};

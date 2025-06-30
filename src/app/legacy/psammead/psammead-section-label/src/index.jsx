@@ -55,7 +55,6 @@ export const Heading = styled.h2`
   }
 `;
 
-// TODO
 const SectionLabel = ({
   children: title,
   dir = 'ltr',

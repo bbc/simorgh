@@ -8,6 +8,7 @@ export const getSansRegular = service => {
   return fonts[service].sansRegular;
 };
 
+/** @deprecated */
 export const getSansRegularItalic = service => {
   if (!fonts[service]) {
     return null;
@@ -25,6 +26,7 @@ export const getSansBold = service => {
   return sansBold || sansRegular;
 };
 
+/** @deprecated */
 export const getSansBoldItalic = service => {
   if (!fonts[service]) {
     return null;
@@ -33,6 +35,7 @@ export const getSansBoldItalic = service => {
   return sansBoldItalic || getSansBold(service);
 };
 
+/** @deprecated */
 export const getSansLight = service => {
   if (!fonts[service]) {
     return null;
@@ -41,6 +44,7 @@ export const getSansLight = service => {
   return sansLight || getSansRegular(service);
 };
 
+/** @deprecated */
 export const getSerifRegular = service => {
   if (!fonts[service]) {
     return null;
@@ -55,12 +59,11 @@ export const getSerifMedium = service => {
     return null;
   }
 
-  console.log({ service });
-
   const { serifMedium } = fonts[service];
   return serifMedium || getSansBold(service);
 };
 
+/** @deprecated */
 export const getSerifMediumItalic = service => {
   if (!fonts[service]) {
     return null;
@@ -69,16 +72,17 @@ export const getSerifMediumItalic = service => {
   return serifMediumItalic || getSansBoldItalic(service);
 };
 
+/** @deprecated */
 export const getSerifBold = service => {
   if (!fonts[service]) {
     return null;
   }
 
-  console.log({ service });
   const { serifBold } = fonts[service];
   return serifBold || getSansBold(service);
 };
 
+/** @deprecated */
 export const getSerifLight = service => {
   if (!fonts[service]) {
     return null;

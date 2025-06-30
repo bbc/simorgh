@@ -2,7 +2,6 @@ import React, { use } from 'react';
 import styled from '@emotion/styled';
 import path from 'ramda/src/path';
 import { getPica } from '#psammead/gel-foundations/src/typography';
-import { getSerifBold } from '#psammead/psammead-styles/src/font-styles';
 import { Link } from '#psammead/psammead-story-promo/src';
 import {
   GEL_SPACING,
@@ -24,7 +23,7 @@ import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 const StyledLink = styled(Link)`
   ${({ script }) => script && getPica(script)}
-  ${({ service }) => service && getSerifBold(service)}
+  ${({ theme: { fontVariants } }) => fontVariants.serifBold}
   width: 100%;
   text-decoration: none;
 

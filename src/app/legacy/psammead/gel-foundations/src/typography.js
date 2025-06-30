@@ -1,6 +1,7 @@
 import { MEDIA_QUERY_TYPOGRAPHY } from './breakpoints';
 import getTypeSizes from './getTypeSizes';
 
+// TODO
 const fontFamilyBase = ', Helvetica, Arial, sans-serif';
 
 export const GEL_FF_REITH_SERIF = `ReithSerif${fontFamilyBase}`;
