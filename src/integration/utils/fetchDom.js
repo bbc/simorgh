@@ -33,7 +33,7 @@ const faultTolerantDomFetch = ({ url, runScripts, headers }) =>
 
         if (!response.ok) {
           const error = new Error(
-            `Error: Received HTTP ${response.status} for ${url}`,
+            `Error: Received HTTP ${response.status} ${response.statusText} for ${url}`,
           );
           reject(error);
           return;
