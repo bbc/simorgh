@@ -68,6 +68,29 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
       if (user.val) params.idclient = user.val;
       if (document.referrer) params.ref = document.referrer;
 
+      if (isLiteSite && window.location.search.length) {
+        const kvpairs: Record<string, string> = window.location.search
+          .substring(1)
+          .split('&')
+          .map((param): [string, string] => {
+            const [key, value = ''] = param.split('=');
+            return [decodeURIComponent(key), decodeURIComponent(value)];
+          })
+          .reduce<Record<string, string>>((values, [key, value]) => {
+            // eslint-disable-next-line no-param-reassign
+            values[key] = value;
+            return values;
+          }, {});
+
+        Object.keys(kvpairs).forEach(keyName => {
+          if (keyName.indexOf('at_') === 0) {
+            params[keyName.replace('at_', 'src_')] = kvpairs[keyName];
+          } else if (keyName.indexOf('utm_') === 0) {
+            params[keyName] = kvpairs[keyName];
+          }
+        });
+      }
+
       const paramValues = Object.keys(params)
         .map(key => `${key}=${params[key]}`)
         .join('&');
