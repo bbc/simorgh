@@ -71,8 +71,7 @@ export const service: DefaultServiceConfig = {
           'අවම ඩේටා ප්‍රමාණයක් භාවිතා කරන මෙම වෙබ් පිටු පිළිබඳ වැඩිදුර කියවන්න',
         informationPageLink:
           'https://www.bbc.com/sinhala/articles/c4gdp0d3mzpo',
-        dataSaving:
-          'අවම ඩේටා ප්‍රමාණයක් භාවිත කිරීමට පෙළ පමණක් කියවන්න',
+        dataSaving: 'අවම ඩේටා ප්‍රමාණයක් භාවිත කිරීමට පෙළ පමණක් කියවන්න',
         articleDataSavingLinkText:
           'අවම ඩේටා ප්‍රමාණයක් භාවිත කිරීමට පෙළ පමණක් කියවන්න',
       },

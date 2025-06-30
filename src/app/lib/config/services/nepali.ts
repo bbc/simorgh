@@ -67,9 +67,9 @@ export const service: DefaultServiceConfig = {
         onboardingMessage:
           'तपाईँ अहिले हाम्रो वेबसाइटको थोरै डेटा प्रयोग हुने ‘टेक्स्ट-ओन्ली’ साइटमा हुनुहुन्छ। सबै तस्बिर र भिडिओसहित मूल वेबसाइटमा जान यहाँ क्लिक गर्नुहोस्।',
         toMainSite: 'मूल वेबसाइट तथा पूरा संस्करणमा जानुहोस्।',
-        informationPage: 'हाम्रो वेबसाइटको थोरै डेटा प्रयोग हुने संस्करणबारे थप जान्नुहोस्।',
-        informationPageLink:
-          'https://www.bbc.com/nepali/articles/c3w44py8q72o',
+        informationPage: 
+          'हाम्रो वेबसाइटको थोरै डेटा प्रयोग हुने संस्करणबारे थप जान्नुहोस्।',
+        informationPageLink: 'https://www.bbc.com/nepali/articles/c3w44py8q72o',
         dataSaving: 'थोरै डेटा खपत गर्ने गरी पढ्न मिल्ने संस्करण हेर्नुहोस्।',
         articleDataSavingLinkText:
           'थोरै डेटा खपत गर्ने गरी पढ्न मिल्ने संस्करण हेर्नुहोस्।',

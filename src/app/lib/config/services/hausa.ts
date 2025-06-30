@@ -86,11 +86,9 @@ export const service: DefaultServiceConfig = {
           'Kana amfani da shafin BBC mai bayyana rubutu kawai (babu hoto) domin rage cin data. Idan ana so a ga hotuna da bidiyo sai a koma babban shafinmu.',
         toMainSite: 'Koma shafi mai hoto',
         informationPage: 'Samu ƙarin bayani kan shafin tattalin data',
-        informationPageLink:
-          'https://www.bbc.com/hausa/articles/c3355en3g6jo',
+        informationPageLink: 'https://www.bbc.com/hausa/articles/c3355en3g6jo',
         dataSaving: 'Karanta rubutu kawai domin rage cin data',
-        articleDataSavingLinkText:
-          'Karanta rubutu kawai domin rage cin data',
+        articleDataSavingLinkText: 'Karanta rubutu kawai domin rage cin data',
       },
       mediaAssetPage: {
         mediaPlayer: 'Media player',
