@@ -34,6 +34,7 @@ Feature toggles can be found in `src/app/lib/config/toggles`
 | `preroll`               | Display Preroll Advertisements on Media Asset (MAP) Pages                           |                                                                          |                                                       |
 | `scriptLink`            | Display Script Switching link for services with variants                            |                                                                          |                                                       |
 | `variantCookie`         | Set variant cookie for services with variants                                       |                                                                          |                                                       |
+| `adsNonce`         | Uses "enabled" to check service as a boolean and "value" as countries list               | value is a coma separated countries                                      | enabled: true, value: 'es,mx'                   |
 
 ## Default Toggle (Fallback) Values
 

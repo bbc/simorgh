@@ -2,20 +2,20 @@ import React from 'react';
 import type { AppProps } from 'next/app';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import ThemeProvider from '#app/components/ThemeProvider';
-import { ToggleContextProvider } from '../../src/app/contexts/ToggleContext';
-import { ServiceContextProvider } from '../../src/app/contexts/ServiceContext';
-import { RequestContextProvider } from '../../src/app/contexts/RequestContext';
-import { EventTrackingContextProvider } from '../../src/app/contexts/EventTrackingContext';
-import { UserContextProvider } from '../../src/app/contexts/UserContext';
-import ErrorPage from '../../src/app/pages/ErrorPage/ErrorPage';
+import { ToggleContextProvider } from 'simorgh/src/app/contexts/ToggleContext/ToggleContext';
+import { ServiceContextProvider } from 'simorgh/src/app/contexts/ServiceContext/ServiceContext';
+import { RequestContextProvider } from 'simorgh/src/app/contexts/RequestContext/RequestContext';
+import { EventTrackingContextProvider } from 'simorgh/src/app/contexts/EventTrackingContext/EventTrackingContext';
+import { UserContextProvider } from 'simorgh/src/app/contexts/UserContext/UserContext';
+import ErrorPage from 'simorgh/src/app/pages/ErrorPage/ErrorPage';
 import {
   PageTypes,
   Services,
   Toggles,
   Variants,
   ServerSideExperiment,
-} from '../../src/app/models/types/global';
-import PageWrapper from '../../src/app/components/PageLayoutWrapper';
+} from 'simorgh/src/app/models/types/global';
+import PageWrapper from 'simorgh/src/app/components/PageLayoutWrapper/PageLayoutWrapper';
 
 interface Props extends AppProps {
   pageProps: {
@@ -43,6 +43,7 @@ interface Props extends AppProps {
     toggles: Toggles;
     variant?: Variants;
     isUK?: boolean;
+    country?: string | null;
   };
 }
 
@@ -67,6 +68,7 @@ export default function App({ Component, pageProps }: Props) {
     toggles,
     variant,
     isUK,
+    country,
   } = pageProps;
 
   const { metadata: { atiAnalytics = undefined } = {} } = pageData ?? {};
@@ -99,6 +101,7 @@ export default function App({ Component, pageProps }: Props) {
           timeOnServer={timeOnServer}
           showAdsBasedOnLocation={showAdsBasedOnLocation}
           serverSideExperiments={serverSideExperiments}
+          country={country}
           isNextJs={isNextJs}
           isUK={isUK ?? false}
         >
