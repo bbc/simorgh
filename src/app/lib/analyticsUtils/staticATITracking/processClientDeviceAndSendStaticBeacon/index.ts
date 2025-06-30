@@ -76,11 +76,11 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
             const pieces = param.split('=');
             return [
               decodeURIComponent(pieces[0]),
-              decodeURIComponent(pieces[1])
+              decodeURIComponent(pieces[1]),
             ];
           })
           .reduce<Record<string, string>>((values, kv) => {
-            // eslint-disable-next-line no-param-reassign prefer-destructuring
+            // eslint-disable-next-line no-param-reassign eslint-disable-next-line prefer-destructuring
             values[kv[0]] = kv[1];
             return values;
           }, {});
