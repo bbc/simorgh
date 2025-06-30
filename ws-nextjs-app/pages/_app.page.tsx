@@ -100,7 +100,8 @@ export default function App({ Component, pageProps }: Props) {
           variant={variant}
           timeOnServer={timeOnServer}
           showAdsBasedOnLocation={showAdsBasedOnLocation}
-          serverSideExperiments={serverSideExperiments}    country={country}
+          serverSideExperiments={serverSideExperiments}
+          country={country}
           isNextJs={isNextJs}
           isUK={isUK ?? false}
         >
