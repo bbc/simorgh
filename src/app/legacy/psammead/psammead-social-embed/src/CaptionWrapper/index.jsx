@@ -1,6 +1,5 @@
 import React, { use } from 'react';
 import styled from '@emotion/styled';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { GEL_BREVIER } from '#psammead/gel-foundations/src/typography';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import { RequestContext } from '#contexts/RequestContext';
@@ -14,7 +13,7 @@ const Container = styled.div`
 `;
 
 const WarningText = styled.small`
-  ${({ service }) => getSansRegular(service)}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
   ${GEL_BREVIER}
   display: block;
 

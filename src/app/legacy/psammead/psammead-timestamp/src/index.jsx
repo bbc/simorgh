@@ -5,7 +5,6 @@ import {
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
 import { getBrevier } from '#psammead/gel-foundations/src/typography';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 
 const PADDING = `
   padding-bottom: ${GEL_SPACING_HLF};
@@ -20,7 +19,7 @@ const StyledTimestamp = styled.time`
   color: ${({ theme }) =>
     theme.isDarkUi ? theme.palette.GREY_3 : theme.palette.GREY_6};
   display: block;
-  ${({ service }) => getSansRegular(service)}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
   ${props => props.padding && PADDING}
 `;
 

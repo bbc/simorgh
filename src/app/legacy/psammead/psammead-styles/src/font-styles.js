@@ -1,5 +1,6 @@
 import * as fonts from './font-families';
 
+/** @deprecated */
 export const getSansRegular = service => {
   if (!fonts[service]) {
     return null;
@@ -15,6 +16,7 @@ export const getSansRegularItalic = service => {
   return sansRegularItalic || sansRegular;
 };
 
+/** @deprecated */
 export const getSansBold = service => {
   if (!fonts[service]) {
     return null;
@@ -47,10 +49,14 @@ export const getSerifRegular = service => {
   return serifRegular || getSansRegular(service);
 };
 
+/** @deprecated */
 export const getSerifMedium = service => {
   if (!fonts[service]) {
     return null;
   }
+
+  console.log({ service });
+
   const { serifMedium } = fonts[service];
   return serifMedium || getSansBold(service);
 };
@@ -67,6 +73,8 @@ export const getSerifBold = service => {
   if (!fonts[service]) {
     return null;
   }
+
+  console.log({ service });
   const { serifBold } = fonts[service];
   return serifBold || getSansBold(service);
 };

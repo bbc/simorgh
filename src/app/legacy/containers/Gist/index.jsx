@@ -10,10 +10,6 @@ import {
   GEL_SPACING_HLF_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
 import {
-  getSansRegular,
-  getSansBold,
-} from '#psammead/psammead-styles/src/font-styles';
-import {
   getDoublePica,
   getGreatPrimer,
 } from '#psammead/gel-foundations/src/typography';
@@ -40,7 +36,7 @@ const GistWrapper = styled.div`
 `;
 
 const GistIntroduction = styled.strong`
-  ${({ service }) => getSansBold(service)}
+  ${({ theme: { fontVariants } }) => fontVariants.sansBold}
   ${({ script }) => getDoublePica(script)}
   display: inline-block;
   padding-bottom: ${GEL_SPACING_TRPL};
@@ -66,7 +62,7 @@ const GistList = styled(UnorderedList)`
   }
 
   li {
-    ${({ service }) => getSansRegular(service)}
+    ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
     ${({ script }) => getGreatPrimer(script)}
     ${({ direction }) => `padding-${direction}: ${GEL_SPACING_HLF_TRPL};`}
     margin-bottom: ${GEL_SPACING_DBL};

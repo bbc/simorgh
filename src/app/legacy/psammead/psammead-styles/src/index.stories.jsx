@@ -87,11 +87,11 @@ const detectionExamples = ['display: grid', grid];
 
 const RegularParagraph = styled.p`
   ${({ script }) => script && getBodyCopy(script)};
-  ${({ service }) => getSansRegular(service)}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
 `;
 const BoldParagraph = styled.p`
   ${({ script }) => script && getBodyCopy(script)};
-  ${({ service }) => getSansBold(service)}
+  ${({ theme: { fontVariants } }) => fontVariants.sansBold}
 `;
 const ItalicParagraph = styled.p`
   ${({ script }) => script && getBodyCopy(script)};

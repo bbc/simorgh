@@ -21,7 +21,6 @@ import {
   getLongPrimer,
   getGreatPrimer,
 } from '#psammead/gel-foundations/src/typography';
-import { getSerifMedium } from '#psammead/psammead-styles/src/font-styles';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 
@@ -134,7 +133,7 @@ const StyledEpisodeTextWrapper = styled(PromoComponent.Card.EpisodesText)`
 
 const StyledCardLink = styled(PromoComponent.Card.Link)`
   ${({ script }) => getGreatPrimer(script)}
-  ${({ service }) => getSerifMedium(service)}
+  ${({ theme: { fontVariants } }) => fontVariants.serifMedium}
   display: block;
   margin-top: ${GEL_SPACING_HLF_TRPL};
   color: ${props => props.theme.palette.GREY_10};

@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/react';
 import styled from '@emotion/styled';
 import detokenise from '#psammead/psammead-detokeniser/src';
-import { getSansBold } from '#psammead/psammead-styles/src/font-styles';
+
 import { GEL_BREVIER } from '#psammead/gel-foundations/src/typography';
 import { visuallyHiddenStyle } from '../../../lib/styles.const';
 
@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 `;
 
 const SkipLink = styled.a`
-  ${({ service }) => getSansBold(service)}
+  ${({ theme: { fontVariants } }) => fontVariants.sansBold}
   ${GEL_BREVIER}
   background-color: ${props => props.theme.palette.WHITE};
   border: ${BORDER_WIDTH} solid ${props => props.theme.palette.EBON};

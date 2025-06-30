@@ -9,10 +9,6 @@ import {
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
 import {
-  getSansRegular,
-  getSerifMedium,
-} from '#psammead/psammead-styles/src/font-styles';
-import {
   getPica,
   getGreatPrimer,
   getLongPrimer,
@@ -44,11 +40,11 @@ const TVBulletinWrapper = styled.div`
   }
 `;
 
-const headingStyles = ({ service, theme }) => `
+const headingStyles = ({ theme }) => `
   color: ${theme.palette.EBON};
   margin: 0; /* Reset */
   padding: ${GEL_SPACING};
-  ${service && getSerifMedium(service)}
+  ${theme.fontVariants.getSerifMedium}
 `;
 
 const radioHeading = ({ script, dir }) => `
@@ -109,7 +105,7 @@ const BulletinSummary = styled.p`
   margin: 0; /* Reset */
   padding: 0 ${GEL_SPACING} ${GEL_SPACING_DBL};
   ${({ script }) => script && getLongPrimer(script)}
-  ${({ service }) => service && getSansRegular(service)} 
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular} 
   ${({ bulletinType }) => bulletinSummaryStyles[bulletinType]}
 `;
 
@@ -160,7 +156,7 @@ const PlayCTA = styled.div`
   align-items: center;
   justify-content: center;
   ${({ script }) => script && getPica(script)};
-  ${({ service }) => service && getSansRegular(service)};
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
   ${({ bulletinType }) => playCtaStyles[bulletinType]}
 `;
 

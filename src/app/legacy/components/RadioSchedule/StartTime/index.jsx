@@ -2,7 +2,6 @@ import React, { use } from 'react';
 import styled from '@emotion/styled';
 import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
 import { getMinion } from '#psammead/gel-foundations/src/typography';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { coreIcons } from '#psammead/psammead-assets/src/svgs';
 import TimestampContainer from '#psammead/psammead-timestamp-container/src';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
@@ -42,7 +41,7 @@ const StyledTimestamp = styled.span`
   > time {
     color: ${props => props.theme.palette.RHINO};
     ${({ script }) => script && getMinion(script)}
-    ${({ service }) => service && getSansRegular(service)}
+    ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
   }
 
   &::after {

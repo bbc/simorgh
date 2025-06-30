@@ -1,10 +1,6 @@
 import React, { memo } from 'react';
 import styled from '@emotion/styled';
 import {
-  getSansRegular,
-  getSansBold,
-} from '#psammead/psammead-styles/src/font-styles';
-import {
   GEL_SPACING_DBL,
   GEL_SPACING,
 } from '#psammead/gel-foundations/src/spacings';
@@ -18,7 +14,7 @@ import { detokenise, dictionaryFactory } from '../utilities';
 const BORDER_WEIGHT = '0.0625rem';
 
 const Wrapper = styled.div`
-  ${({ service }) => getSansRegular(service)}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
   ${GEL_BODY_COPY}
   border: ${BORDER_WEIGHT} solid ${props => props.theme.palette.PEBBLE};
   border-radius: ${GEL_SPACING};
@@ -36,7 +32,7 @@ const Wrapper = styled.div`
   }
 
   a {
-    ${({ service }) => getSansBold(service)}
+    ${({ theme: { fontVariants } }) => fontVariants.sansBold}
     color: ${props => props.theme.palette.EBON};
     text-decoration: none;
 

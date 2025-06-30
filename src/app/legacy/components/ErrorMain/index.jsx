@@ -2,7 +2,6 @@ import React from 'react';
 import styled from '@emotion/styled';
 import InlineLink from '#psammead/psammead-inline-link/src';
 import Paragraph from '#psammead/psammead-paragraph/src';
-import { getSerifMedium } from '#psammead/psammead-styles/src/font-styles';
 import {
   getCanon,
   getParagon,
@@ -22,7 +21,7 @@ const StatusCode = styled.span`
 
 const Heading = styled.h1`
   ${({ script }) => script && getCanon(script)}
-  ${({ service }) => getSerifMedium(service)}
+  ${({ theme: { fontVariants } }) => fontVariants.serifMedium}
   color: ${props => props.theme.palette.SHADOW};
   margin-top: 0;
 `;

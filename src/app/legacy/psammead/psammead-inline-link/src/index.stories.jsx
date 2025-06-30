@@ -8,8 +8,6 @@ import {
   getLongPrimer,
 } from '#psammead/gel-foundations/src/typography';
 import {
-  getSansRegular,
-  getSansBold,
   getSansRegularItalic,
   getSansBoldItalic,
 } from '#psammead/psammead-styles/src/font-styles';
@@ -19,11 +17,11 @@ import { POSTBOX } from '../../../../components/ThemeProvider/palette';
 
 const RegularParagraph = styled.p`
   ${({ script }) => getBodyCopy(script)};
-  ${({ service }) => getSansRegular(service)}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
 `;
 const BoldParagraph = styled.p`
   ${({ script }) => getBodyCopy(script)};
-  ${({ service }) => getSansBold(service)}
+  ${({ theme: { fontVariants } }) => fontVariants.sansBold}
 `;
 const ItalicParagraph = styled.p`
   ${({ script }) => getBodyCopy(script)};

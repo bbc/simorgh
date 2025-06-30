@@ -5,10 +5,6 @@ import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/
 import detokenise from '#psammead/psammead-detokeniser/src';
 import LiveLabel from '#app/components/LiveLabel';
 import { Link } from '#psammead/psammead-story-promo/src';
-import {
-  getSansBold,
-  getSansRegular,
-} from '#psammead/psammead-styles/src/font-styles';
 import { getPica } from '#psammead/gel-foundations/src/typography';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
@@ -21,7 +17,7 @@ const TitleWrapper = styled.span`
   padding: ${GEL_SPACING} 0 0 0;
   display: inline-block;
   width: 100%;
-  ${({ service }) => service && getSansRegular(service)}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
   ${({ script }) => script && getPica(script)}
 `;
 const StyledLink = styled(Link)`
@@ -33,7 +29,7 @@ const StyledLink = styled(Link)`
   }
 `;
 const NextLabel = styled.span`
-  ${({ service }) => service && getSansBold(service)}
+  ${({ theme: { fontVariants } }) => fontVariants.sansBold}
   ${({ script }) => script && getPica(script)}
   color: ${props => props.theme.palette.POSTBOX};
   display: inline-block;

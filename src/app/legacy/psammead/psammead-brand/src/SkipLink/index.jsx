@@ -5,7 +5,6 @@ import {
 } from '#psammead/gel-foundations/src/breakpoints';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import { getPica } from '#psammead/gel-foundations/src/typography';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 
 const SKIP_LINK_COLOR = '#333';
 const SKIP_LINK_BORDER = '0.1875rem'; // 3px
@@ -24,7 +23,7 @@ const SkipLink = styled.a`
   color: ${SKIP_LINK_COLOR};
   text-decoration: none;
   ${({ script }) => script && getPica(script)};
-  ${({ service }) => service && getSansRegular(service)};
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
 
   &:focus {
     clip-path: none;

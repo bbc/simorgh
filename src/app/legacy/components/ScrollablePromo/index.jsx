@@ -9,7 +9,6 @@ import {
   getDoublePica,
   getBrevier,
 } from '#psammead/gel-foundations/src/typography';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import styled from '@emotion/styled';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
@@ -79,7 +78,7 @@ const ScrollablePromoContainer = styled.div`
 const LabelComponent = styled.strong`
   display: block;
   ${({ script }) => script && getDoublePica(script)};
-  ${({ service }) => getSansRegular(service)}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
   margin-bottom: ${GEL_SPACING_DBL};
   color: ${({ theme }) =>
     theme.isDarkUi ? theme.palette.GREY_2 : theme.palette.SHADOW};
@@ -102,7 +101,7 @@ const LabelComponentOJTopBar = styled(({ ariaLabel, ...props }) => (
   <strong aria-label={ariaLabel} {...props} />
 ))`
   ${({ script }) => script && getBrevier(script)};
-  ${({ service }) => getSansRegular(service)}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
   display: inline-block;
   margin-bottom: ${GEL_SPACING_DBL};
   color: ${({ theme }) =>

@@ -1,6 +1,5 @@
 import React, { use } from 'react';
 import styled from '@emotion/styled';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
@@ -14,7 +13,7 @@ import { getGreatPrimer } from '#psammead/gel-foundations/src/typography';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const Paragraph = styled.p`
-  ${({ service }) => getSansRegular(service)}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
   ${({ script }) => getGreatPrimer(script)}
   color: ${props => props.theme.palette.GREY_10};
   padding-top: ${GEL_SPACING_DBL};

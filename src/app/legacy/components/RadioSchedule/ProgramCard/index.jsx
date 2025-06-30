@@ -6,10 +6,6 @@ import {
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
 import {
-  getSansRegular,
-  getSerifMedium,
-} from '#psammead/psammead-styles/src/font-styles';
-import {
   getBrevier,
   getMinion,
   getPica,
@@ -34,14 +30,14 @@ const TextWrapper = styled.div`
 `;
 
 const StyledH3 = styled.h3`
-  ${({ service }) => service && getSerifMedium(service)}
-  ${({ script }) => script && getPica(script)}
+  ${({ theme: { fontVariants } }) => fontVariants.serifMedium};
+  ${({ script }) => script && getPica(script)};
   color: ${({ headerTextColor }) => headerTextColor};
   margin: 0; /* Reset */
 `;
 
 const SummaryWrapper = styled.p`
-  ${({ service }) => service && getSansRegular(service)}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
   ${({ script }) => script && getBrevier(script)}
   color: ${props => props.theme.palette.METAL};
   padding-top: ${GEL_SPACING};
@@ -50,7 +46,7 @@ const SummaryWrapper = styled.p`
 `;
 
 const ButtonWrapper = styled.div`
-  ${({ service }) => service && getSansRegular(service)}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
   ${({ script }) => script && getMinion(script)}
   padding: ${GEL_SPACING};
   background-color: ${({ backgroundColor }) => backgroundColor};

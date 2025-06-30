@@ -12,7 +12,6 @@ import {
   GEL_GROUP_B_MIN_WIDTH,
 } from '#psammead/gel-foundations/src/breakpoints';
 import { getPica } from '#psammead/gel-foundations/src/typography';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import VisuallyHiddenText from '../../../../../components/VisuallyHiddenText';
 
 export const NAV_BAR_TOP_BOTTOM_SPACING = 0.75; // 12px
@@ -95,7 +94,7 @@ const StyledDropdownLi = styled.li`
 
 const StyledDropdownLink = styled.a`
   ${({ script }) => script && getPica(script)};
-  ${({ service }) => service && getSansRegular(service)}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
   color: ${props => props.theme.palette.GREY_10};
   text-decoration: none;
   padding: ${GEL_SPACING_HLF_TRPL} 0;

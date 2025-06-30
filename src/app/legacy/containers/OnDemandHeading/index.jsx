@@ -11,7 +11,6 @@ import {
   getDoublePica,
   getParagon,
 } from '#psammead/gel-foundations/src/typography';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import VisuallyHiddenText from '../../../components/VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
@@ -33,7 +32,7 @@ const Subheading = styled.span`
   display: inline-block;
   margin: 0;
   ${({ script }) => script && getDoublePica(script)}
-  ${({ service }) => getSansRegular(service)}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
   @media (max-width: 22.5rem) and (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
     font-size: 1.125rem;
     line-height: 1.375rem;

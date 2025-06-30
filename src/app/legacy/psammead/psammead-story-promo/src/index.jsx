@@ -21,10 +21,6 @@ import {
   getPica,
   getDoublePica,
 } from '#psammead/gel-foundations/src/typography';
-import {
-  getSansRegular,
-  getSerifMedium,
-} from '#psammead/psammead-styles/src/font-styles';
 import { grid } from '#psammead/psammead-styles/src/detection';
 import ImageGridItem from './ImageStyles';
 import TextGridItem from './TextStyles';
@@ -121,7 +117,7 @@ export const Headline = styled.h3`
   color: ${props => props.theme.palette.EBON};
   margin: 0; /* Reset */
   padding-bottom: ${GEL_SPACING};
-  ${({ service }) => getSerifMedium(service)}
+  ${({ theme: { fontVariants } }) => fontVariants.serifMedium}
   ${({ script, promoType }) => script && headlineTypography(script)[promoType]}
   ${({ promoHasImage }) =>
     !promoHasImage &&
@@ -160,7 +156,7 @@ const summaryStyles = {
 
 export const Summary = styled.p`
   ${({ script }) => script && getLongPrimer(script)};
-  ${({ service }) => getSansRegular(service)}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
   color: ${props => props.theme.palette.SHADOW};
   margin: 0; /* Reset */
   padding-bottom: ${GEL_SPACING};

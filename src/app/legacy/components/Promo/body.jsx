@@ -1,10 +1,9 @@
 import styled from '@emotion/styled';
 
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { getBodyCopy } from '#psammead/gel-foundations/src/typography';
 
 const P = styled.p`
-  ${({ service }) => getSansRegular(service)}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
   ${({ script }) => getBodyCopy(script)}
   color: ${props => props.theme.palette.EBON}
 `;
