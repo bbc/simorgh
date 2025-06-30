@@ -80,7 +80,7 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
             ];
           })
           .reduce<Record<string, string>>((values, kv) => {
-            // eslint-disable-next-line no-param-reassign eslint-disable-next-line prefer-destructuring
+            // eslint-disable-next-line no-param-reassign, prefer-destructuring
             values[kv[0]] = kv[1];
             return values;
           }, {});
