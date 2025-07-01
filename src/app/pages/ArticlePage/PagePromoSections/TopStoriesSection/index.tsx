@@ -7,7 +7,9 @@ import { EventTrackingBlock } from '#app/models/types/eventTracking';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import PromoItem from '#components/OptimoPromos/PromoItem/index.styles';
 import PromoList from '#components/OptimoPromos/PromoList';
-import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
+import useOptimizelyVariation, {
+  ExperimentType,
+} from '#app/hooks/useOptimizelyVariation';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import styles from './index.styles';
 import TopStoriesItem from './TopStoriesItem';
@@ -66,7 +68,10 @@ const TopStoriesSection = ({
   const { translations, script, service } = use(ServiceContext);
 
   const experimentName = 'dummy_experiment_1';
-  const experimentVariant = useOptimizelyVariation(experimentName);
+  const experimentVariant = useOptimizelyVariation({
+    experimentName,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
 
   const eventTrackingData = {
     block: {

@@ -4,7 +4,9 @@ import useToggle from '#hooks/useToggle';
 import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { ReactSDKClient } from '@optimizely/react-sdk';
-import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
+import useOptimizelyVariation, {
+  ExperimentType,
+} from '#app/hooks/useOptimizelyVariation';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Canonical from './Canonical';
 import Amp from './Amp';
@@ -124,7 +126,10 @@ const MostRead = ({
   } = use(ServiceContext);
 
   const experimentName = 'dummy_experiment';
-  const experimentVariant = useOptimizelyVariation(experimentName);
+  const experimentVariant = useOptimizelyVariation({
+    experimentName,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
 
   const { enabled } = useToggle('mostRead');
 

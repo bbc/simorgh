@@ -4,7 +4,9 @@ import React, { use } from 'react';
 import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
-import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
+import useOptimizelyVariation, {
+  ExperimentType,
+} from '#app/hooks/useOptimizelyVariation';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import {
   Curation,
@@ -56,7 +58,10 @@ const HomePage = ({ pageData }: HomePageProps) => {
   const itemList = getItemList({ curations, name: brandName });
 
   const experimentName = 'dummy_experiment_2';
-  const experimentVariant = useOptimizelyVariation(experimentName);
+  const experimentVariant = useOptimizelyVariation({
+    experimentName,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
   console.log('experimentVariant in Homepage', experimentVariant);
 
   return (
