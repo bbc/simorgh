@@ -16,7 +16,7 @@ const AdContainer = ({ slotType, className, adcampaign }: AdProps) => {
   const countriesForNonce =
     countries
       ?.split(',')
-      ?.map(s => s.trim())
+      ?.map((s: string) => s.trim())
       .filter(Boolean) || [];
   const nonceEnabledForCountry =
     countriesForNonce?.length === 0 || countriesForNonce.includes(country);
