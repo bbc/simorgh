@@ -1,5 +1,7 @@
-const getMvtVaryHeaders = mvtExperiments => {
-  return mvtExperiments
+import { ServerSideExperiment } from '#app/models/types/global';
+
+export default (serverSideExperiments: ServerSideExperiment[]) => {
+  return serverSideExperiments
     .reduce((headerNames, experiment) => {
       const { experimentName, enabled } = experiment;
 
@@ -10,5 +12,3 @@ const getMvtVaryHeaders = mvtExperiments => {
     }, '')
     .slice(0, -2);
 };
-
-export default getMvtVaryHeaders;

@@ -16,7 +16,7 @@ import routes from '../app/routes';
 import * as renderDocument from './Document';
 import sendCustomMetrics from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
-import { getMvtVaryHeaders } from './utilities/mvtHeader';
+import { getExperimentVaryHeaders } from './utilities/experimentHeader';
 
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`
 dotenv.config({ path: './envConfig/local.env' });
@@ -100,7 +100,7 @@ const mockRouteProps = ({
 };
 
 jest.mock('./utilities/customMetrics');
-jest.mock('./utilities/mvtHeader');
+jest.mock('./utilities/experimentHeader');
 
 const renderDocumentSpy = jest.spyOn(renderDocument, 'default');
 
@@ -1537,7 +1537,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
     mockRouteProps({
       dataResponse: successDataResponse,
     });
-    getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
+    getExperimentVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
 
     const { header } = await makeRequest('/mundo/c0000000001o');
 
@@ -1550,7 +1550,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
     mockRouteProps({
       dataResponse: successDataResponse,
     });
-    getMvtVaryHeaders.mockReturnValue('');
+    getExperimentVaryHeaders.mockReturnValue('');
 
     const { header } = await makeRequest('/mundo/articles/c0000000001o');
 
@@ -1562,7 +1562,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
       dataResponse: successDataResponse,
       isAmp: true,
     });
-    getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
+    getExperimentVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
 
     const { header } = await makeRequest('/mundo/articles/c0000000001o');
 
@@ -1591,7 +1591,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
       dataResponse: successDataResponse,
       isAmp: true,
     });
-    getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
+    getExperimentVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
 
     await makeRequest('/mundo/articles/c0000000001o', {
       'x-bbc-edge-isuk': 'no',
@@ -1609,7 +1609,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
       dataResponse: successDataResponse,
       isAmp: true,
     });
-    getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
+    getExperimentVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
 
     await makeRequest('/mundo/articles/c0000000001o', {
       'x-country': 'gb',
@@ -1627,7 +1627,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
       dataResponse: successDataResponse,
       isAmp: true,
     });
-    getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
+    getExperimentVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
 
     await makeRequest('/mundo/articles/c0000000001o', {});
 
