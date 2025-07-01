@@ -32,12 +32,12 @@ export default {
         border: `solid ${pixelsToRem(3)}rem transparent`,
       },
     }),
-  backgroundContainer: ({ palette }: Theme) =>
+  backgroundContainer: () =>
     css({
       zIndex: 2,
       position: 'absolute',
       top: '0',
-      backgroundImage: `linear-gradient(to bottom, rgba(184, 0, 0, 0.85) 50%, rgba(184, 0, 0, 0.0)), url('https://static.files.bbci.co.uk/core/website/assets/static/container-background-masks/billboard-ambient.d267649a68.jpg')`,
+      backgroundImage: `linear-gradient(to bottom, rgba(118, 0, 0, 0.85) 50%, rgba(118, 0, 0, 0.0)), url('https://static.files.bbci.co.uk/core/website/assets/static/container-background-masks/billboard-ambient.d267649a68.jpg')`,
 
       backgroundSize: 'cover',
       backgroundPosition: 'center',
