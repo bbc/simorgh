@@ -30,6 +30,7 @@ const Text = forwardRef(function Text<T extends ElementType = 'span'>(
   ref: ForwardedRef<HTMLElement>,
 ) {
   const Component: React.ElementType = as || 'span';
+  console.log(children, 'text', size, 'size', fontVariant, 'fontVariant');
   return (
     <Component
       {...(ref && { ref })}

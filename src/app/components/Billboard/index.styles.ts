@@ -116,4 +116,18 @@ export default {
       color: palette.GREY_2,
       margin: 0,
     }),
+  curationGridSection: ({ mq, spacings }: Theme) =>
+    css({
+      width: '100%',
+      // maxWidth: '1008px',
+      margin: '0 auto',
+      padding: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem ${spacings.DOUBLE}rem ${spacings.DOUBLE}rem`,
+      boxSizing: 'border-box',
+      display: 'flex',
+      flexDirection: 'column',
+      [mq.GROUP_2_MAX_WIDTH]: {
+        paddingLeft: `${spacings.FULL}rem`,
+        paddingRight: `${spacings.FULL}rem`,
+      },
+    }),
 };

@@ -1,7 +1,7 @@
 {
   "data": {
-    "title": "Domot - BBC News Pidgin",
-    "description": "We dey give una latest tori on top politics, environment, business, sports, entertainment, health, fashion and all di oda things wey dey happen for West and Central Africa come add di rest of di world join. For better informate plus explanation of all di ogbonge tori wey pipo never hear about for inside West and Central Africa, BBC Pidgin dey serve am with video, audio, maps and oda graphics join.",
+    "title": "BBC News Pidgin",
+    "description": "BBC News Pidgin description demo",
     "pageType": "home",
     "curations": [
       {
@@ -9,515 +9,262 @@
           {
             "type": "article",
             "isLive": false,
-            "title": "Niger Delta leader Edwin Clark don die",
-            "firstPublished": "2025-02-18T08:54:51.034Z",
-            "lastPublished": "2025-02-18T10:17:42.661Z",
-            "link": "https://www.bbc.com/pidgin/articles/cvg533vvrxwo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/9205/live/97f85a20-edd4-11ef-a319-fb4e7360c4ec.jpg.webp",
-            "description": "One representative of di family, Prof. C. C. Clark announce di death of di former Federal Commissioner for Information and South-South leader on Tuesday, 18 February.",
-            "imageAlt": "Edwin Clark for one interview wit BBC Pidgin for 2021",
-            "id": "cvg533vvrxwo"
-          },
-          {
-            "type": "article",
-            "isLive": false,
-            "title": "Passengers tok wetin dia eye see di moment Delta Air Lines plane crash  and turn upside down for Toronto",
-            "firstPublished": "2025-02-18T07:08:54.537Z",
-            "lastPublished": "2025-02-18T07:27:48.871Z",
-            "link": "https://www.bbc.com/pidgin/articles/ce3n337yqv5o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/1644/live/96cd2060-edaf-11ef-8667-6717837b54d7.jpg.webp",
-            "description": "Witnesses speak about di moment di plane wey dem bin dey fly in overturn for Toronto.",
-            "imageAlt": "Emergency responder stand next to di aircraft for di runway afta e crash for Toronto Pearson International Airport",
-            "id": "ce3n337yqv5o"
-          },
-          {
-            "type": "article",
-            "isLive": false,
-            "title": "Nigeria goment give details about first batch of deportees from US wey dem dey expect ",
-            "firstPublished": "2025-02-17T12:33:32.216Z",
-            "lastPublished": "2025-02-18T11:10:01.090Z",
-            "link": "https://www.bbc.com/pidgin/articles/ce858gepkdno",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/2a73/live/bad2cc30-ed23-11ef-b057-d7115843701e.png.webp",
-            "description": "About  201 Nigerians currently dey detained for US immigration centres, and about 85 of dem don dey cleared for deportation according to Nigeria Minister of State for Foreign Affairs Bianca Odumegwu Ojukwu, ",
-            "imageAlt": "File picture of immigrants standing on a queue ",
-            "id": "ce858gepkdno"
-          },
-          {
-            "type": "article",
-            "isLive": false,
-            "title": "Davido para as three die for Osun local government crisis",
-            "firstPublished": "2025-02-17T11:57:01.288Z",
-            "lastPublished": "2025-02-17T17:46:27.198Z",
-            "link": "https://www.bbc.com/pidgin/articles/cn4m4lnv37zo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7112/live/630a1530-ed4b-11ef-a319-fb4e7360c4ec.png.webp",
-            "description": "Osun state Govnor Ademola Adeleke accuse a former govnor of di state Gboyega Oyetola say e dey plan to cause kasala for di state on Monday.",
-            "imageAlt": "Ademola Adeleke, Gboyega Oyetola and Davido",
-            "id": "cn4m4lnv37zo"
-          },
-          {
-            "type": "article",
-            "isLive": false,
-            "title": "European leaders meet for Paris for emergency summit on Ukraine",
-            "firstPublished": "2025-02-17T09:22:14.020Z",
-            "lastPublished": "2025-02-17T18:51:46.482Z",
-            "link": "https://www.bbc.com/pidgin/articles/ce8584245jeo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a35c/live/767a4940-ed10-11ef-a319-fb4e7360c4ec.jpg.webp",
-            "description": "French President Emmanuel Macron dey host European leaders for Paris for urgent talks on Ukraine future.",
-            "imageAlt": "Macron and Zelensky",
-            "id": "ce8584245jeo"
-          },
-          {
-            "type": "article",
-            "isLive": false,
-            "title": "Wetin dey happun for Lagos State House of Assembly",
-            "firstPublished": "2025-02-17T12:53:49.864Z",
-            "lastPublished": "2025-02-17T14:26:32.519Z",
-            "link": "https://www.bbc.com/pidgin/articles/cj919ye7929o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/0b22/live/28479280-ed3a-11ef-bd1b-d536627785f2.png.webp",
-            "description": "Video online show as Lagos state assembly, speaker Mojisola Meranda enta into the building wit some security officials wey dey protect di building ",
-            "imageAlt": "Mojisola Meranda Mudashiru Obasa",
-            "id": "cj919ye7929o"
-          },
-          {
-            "type": "article",
-            "isLive": false,
-            "title": "World 'first openly gay imam' shot dead for South Africa",
-            "firstPublished": "2025-02-16T14:29:21.473Z",
-            "lastPublished": "2025-02-16T14:29:21.473Z",
-            "link": "https://www.bbc.com/pidgin/articles/cg5yr5z54nlo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/51b8/live/fd584210-ec60-11ef-91f9-bd1471acd4eb.jpg.webp",
-            "description": "Im establish The Inner Circle, one organisation wey dey provide support and safe space for gay Muslims, bifor im establish di inclusive Masjidul Ghurbaah mosque.",
-            "imageAlt": "A close-up of Imam Muhsin Hendricks wearing a white shirt and a green scarf draped over one shoulder. The shot was taken in 2016.",
-            "id": "cg5yr5z54nlo"
-          },
-          {
-            "type": "article",
-            "isLive": false,
-            "title": "Accusations and counter-accusations between Binance executive and Nigeria goment - wetin we know",
-            "firstPublished": "2025-02-15T09:37:36.213Z",
-            "lastPublished": "2025-02-15T09:37:36.213Z",
-            "link": "https://www.bbc.com/pidgin/articles/cjde7xxyky2o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/4e44/live/6fff9710-eb7f-11ef-a319-fb4e7360c4ec.jpg.webp",
-            "description": "Gambaryan bin spend months for Nigeria detention facility sake of alleged money laundering.",
-            "imageAlt": "Gambaryan and Idris",
-            "id": "cjde7xxyky2o"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:41c2dccc-4711-4e01-85d4-72d531765fa8",
-        "curationType": "tipo-curation",
-        "position": 0,
-        "title": "Top Tori",
-        "visualProminence": "HIGH",
-        "visualStyle": "COLLECTION"
-      },
-      {
-        "summaries": [
-          {
-            "type": "article",
-            "isLive": false,
-            "title": "Why police declare controversial singer Portable wanted",
-            "firstPublished": "2025-02-17T23:04:31.720Z",
-            "lastPublished": "2025-02-18T07:10:57.029Z",
-            "link": "https://www.bbc.com/pidgin/articles/cwy1yeywpy8o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/445f/live/00c31ba0-ed83-11ef-bd1b-d536627785f2.png.webp",
-            "description": "Portable by imsef don come out in recent times ontop social media dey appeal to Nigerians make dem help am beg Ogun state goment.",
-            "imageAlt": "Habeeb Okikiola",
-            "id": "cwy1yeywpy8o"
-          },
-          {
-            "type": "article",
-            "isLive": false,
-            "title": "Ned Nwoko deny 'pregnancy, 7th wife marriage' report to Nollywood actress",
-            "firstPublished": "2025-02-17T15:08:38.667Z",
-            "lastPublished": "2025-02-17T15:08:38.667Z",
-            "link": "https://www.bbc.com/pidgin/articles/c360685jjl5o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/b51b/live/90c7ae70-ed40-11ef-bd1b-d536627785f2.png.webp",
-            "description": "Tori bin dey fly say di lawmaker wan marry actress Chika Ike as im seventh wife but im don deny di rumour.",
-            "imageAlt": "Ned Nwoko wit Regina Daniels and Chika Ike",
-            "id": "c360685jjl5o"
-          },
-          {
-            "type": "article",
-            "isLive": false,
-            "title": "Pope dey face serious health situation - Vatican tok",
-            "firstPublished": "2025-02-17T14:48:11.257Z",
-            "lastPublished": "2025-02-17T14:48:11.257Z",
-            "link": "https://www.bbc.com/pidgin/articles/cp8q8zmnj3eo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/0466/live/33e4e430-ed2b-11ef-b008-3d63fe428927.jpg.webp",
-            "description": "Di Pope go remain for hospital for as long as necessary, di Vatican tok.",
-            "imageAlt": "Pope Francis",
-            "id": "cp8q8zmnj3eo"
-          },
-          {
-            "type": "article",
-            "isLive": false,
-            "title": "What next for Chidimma Adetshina mama as South Africa authorities detain am?",
-            "firstPublished": "2025-02-16T06:52:49.119Z",
-            "lastPublished": "2025-02-16T06:52:49.119Z",
-            "link": "https://www.bbc.com/pidgin/articles/c78x2gz003xo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/e9c8/live/4bbc8260-ec32-11ef-9c4f-93bb1d43cf85.jpg.webp",
-            "description": "Home Affairs say dem withdraw Anabela Rungo South African documentation for September 2024 afta dem discover say she allegedly obtain am fraudulently.",
-            "imageAlt": "Foto of Chidimma Adetshina",
-            "id": "c78x2gz003xo"
-          },
-          {
-            "type": "article",
-            "isLive": false,
-            "title": "'I do 36 blood transfusions during pregnancy' - how pregnant woman survive blood disorder",
-            "firstPublished": "2025-02-15T12:36:33.732Z",
-            "lastPublished": "2025-02-15T12:36:33.732Z",
-            "link": "https://www.bbc.com/pidgin/articles/cdd91220g0jo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/8495/live/99ae9950-e547-11ef-b52b-2f7aceb40199.jpg.webp",
-            "description": "Worldwide e get around 270 million pipo wey get thalassaemia, a blood disorder disease wey make one woman do 36 blood transfusions during her pregnancy.",
-            "imageAlt": "Kinjal dey smile sitting cross-legged on a metal hospital bed wit a tube attached to her arm for a blood transfusion. Her baby daughter stand up for her lap",
-            "id": "cdd91220g0jo"
-          },
-          {
-            "type": "article",
-            "isLive": false,
-            "title": "Watch how whale swallow one man briefly for southern Chile before e spit am out",
-            "firstPublished": "2025-02-14T18:05:19.609Z",
-            "lastPublished": "2025-02-14T18:05:19.609Z",
-            "link": "https://www.bbc.com/pidgin/articles/c5ydnwv0ne7o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/542d/live/467716e0-ead8-11ef-b987-ff602c3d605d.jpg.webp",
-            "description": "One Venezuelan kayaker get experience of im life wen one humpback whale swallow am briefly as e bin dey paddle for di Strait of Magellan for southern Chile.",
-            "imageAlt": "Adrián Simancas, 23-year-old Venezuelan, wear colourful, poncho wey get stripes.",
-            "id": "c5ydnwv0ne7o"
-          },
-          {
-            "type": "article",
-            "isLive": false,
-            "title": "Unizik expel student wey fight lecturer for viral video",
-            "firstPublished": "2025-02-14T14:51:32.964Z",
-            "lastPublished": "2025-02-14T15:01:16.053Z",
-            "link": "https://www.bbc.com/pidgin/articles/cly40elexj7o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/f379/live/ff5ce040-eae2-11ef-a319-fb4e7360c4ec.jpg.webp",
-            "description": "Authorities of di Nnamdi Azikiwe University don expel one female student after dem say she assault one lecturer for di school.",
-            "imageAlt": "Collage foto of UNIZIK",
-            "id": "cly40elexj7o"
-          },
-          {
-            "type": "article",
-            "isLive": false,
-            "title": "E dey get harder to find a partner?",
-            "firstPublished": "2025-02-14T10:07:31.584Z",
-            "lastPublished": "2025-02-14T10:07:31.584Z",
-            "link": "https://www.bbc.com/pidgin/articles/c1lv39v3ezeo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/3970/live/b4784c10-eaa9-11ef-906b-b96e0873bd44.jpg.webp",
-            "description": "Dis year Valentine's Day don come again, so why pipo for so many places dey struggle to form a lasting relationship?\n\n",
-            "imageAlt": "A man and a woman locking heads",
-            "id": "c1lv39v3ezeo"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:81d92884-1db4-4dfa-b1ec-d52c0ce41a24",
-        "curationType": "tipo-curation",
-        "position": 1,
-        "title": "Special Tori",
-        "visualProminence": "HIGH",
-        "visualStyle": "COLLECTION"
-      },
-      {
-        "summaries": [
-          {
-            "type": "link",
-            "isLive": false,
-            "title": "Click here to join di channel",
+            "title": "Tipo Live Page TEST about Photography",
             "firstPublished": "",
             "lastPublished": "",
-            "link": "https://whatsapp.com/channel/0029VawW7AjFy726zWLIFq2j",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/9e7b/live/32956420-2264-11ef-80aa-699d54c46324.png.webp",
-            "description": "No dull yoursef, be di first to get latest tori, analysis, exclusive interviews and ogbonge coverage of Nigerian and International news from BBC News Pidgin, straight to your Whatsapp.",
-            "imageAlt": "Logo de WhatsApp",
-            "id": "https%3A%2F%2Fwww.whatsapp.com%2Fchannel%2F0029VaUm1Ss3WHTbgIXrjw3D"
+            "link": "https://www.bbc.com/news/live/cp4vqze8qznxt",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/69db/test/b8ead0b0-b9e5-11ee-9627-8141b3381959.jpg.webp",
+            "description": "Tipo Live Page TEST about Photography description",
+            "imageAlt": "Alternative description",
+            "id": "cp4vqze8qznxt"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Humza Yousaf resigns",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/pidgin/live/cemy52djeq5t",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/1b6d/test/f9bbf9d0-0624-11ef-a801-47fbecfec49f.jpg.webp",
+            "description": "Yousaf says he “underestimated” the level of hurt after ending a power-sharing deal with the Scottish Greens last week.",
+            "imageAlt": "Humza Yousaf speaking at a press conference",
+            "id": "cemy52djeq5t"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Template article 4",
+            "firstPublished": "2023-08-15T14:12:01.110Z",
+            "lastPublished": "2023-08-15T14:12:01.110Z",
+            "link": "https://www.bbc.com/mundo/articles/c0ny73k281vo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/4414/test/146c2c30-3b75-11ee-93b4-83c41441672b.jpg.webp",
+            "description": "Probo lorem partem pro ex, unum prima expetenda eos ne. Melius viderer quaestio nec te.",
+            "imageAlt": "Bird",
+            "id": "c0ny73k281vo"
+          },
+          {
+            "type": "video",
+            "duration": "PT54S",
+            "isLive": false,
+            "title": "Video Test",
+            "firstPublished": "2022-10-27T16:32:50.346Z",
+            "lastPublished": "2022-10-27T16:32:50.346Z",
+            "link": "https://www.bbc.com/pidgin/articles/cvl1jnp2nrqo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "cvl1jnp2nrqo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Lagos Goment enforces okada ban",
+            "firstPublished": "2023-08-17T14:13:14.817Z",
+            "lastPublished": "2023-08-17T14:13:14.817Z",
+            "link": "https://www.bbc.com/pidgin/articles/cem8zq07ddxo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/8e2a/test/081683b0-3d08-11ee-acfe-efb7db480188.jpg.webp",
+            "description": "The fuel levy reduction is expected to last for two months. This will cushion the blow for South Africans facing a significant rise in the cost of living due to high fuel prices. \n\n",
+            "imageAlt": "NUT",
+            "id": "cem8zq07ddxo"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:9c9782fd-6837-429a-b4ee-400d9aee56e1",
+        "curationId": "urn:bbc:tipo:list:7675d5bd-b710-48b3-88c2-c6189980cf02",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "Humza Yousaf resigns as Scotland’s first minister",
+        "visualProminence": "MAXIMUM",
+        "visualStyle": "BANNER"
+      },
+      {
+        "curationId": "urn:bbc:tipo:list:b9b4842d-b1a7-4ada-a14d-52b76c43862f",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "US Election Banner 2024",
+        "visualProminence": "NORMAL",
+        "visualStyle": "BANNER",
+        "link": "https://news.test.files.bbci.co.uk/include/vjafwest/1365-2024-us-presidential-election-banner/develop/english/app",
+        "embed": {
+          "html": "<script>\n    window.vjConfigObject = window.vjConfigObject || {};\n    window.vjConfigObject['vjafwest-1365-2024-us-presidential-election-banner-app'] = {\"js\":true,\"output\":{\"wrapper\":\"embed\"},\"name\":\"vjafwest-1365-2024-us-presidential-election-banner\",\"version\":\"1.0.1\",\"urlToOutputDir\":\"https://news.test.files.bbci.co.uk/include/vjafwest/1365-2024-us-presidential-election-banner/develop\",\"assetsPath\":\"https://news.test.files.bbci.co.uk/include/vjafwest/1365-2024-us-presidential-election-banner/develop/assets/app-project-assets\",\"includeName\":\"app\",\"language\":\"english\",\"languageCode\":\"en\",\"brandingVersion\":\"3.1\",\"brandingExtension\":\"svg\",\"loremText\":[\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a purus eu nisl porta aliquam. Morbi pharetra aliquet dolor a cursus. In auctor dolor a felis feugiat ultrices. Phasellus sagittis aliquet mattis. Etiam turpis neque, auctor a pulvinar a, vestibulum consequat ante. Morbi ut dui eget sapien vulputate viverra. Curabitur luctus malesuada nunc.\",\"Nullam gravida erat ut porttitor sollicitudin. Aliquam feugiat odio rutrum arcu tincidunt vehicula. Donec nec dolor rhoncus, consectetur metus eget, consectetur enim. Duis euismod, arcu non efficitur porta, nibh eros viverra risus, ac gravida lorem ex in dui. Morbi pulvinar varius erat, quis facilisis ligula mollis vel. Nulla efficitur augue quam, ac aliquet mi ornare vitae. In ornare nisl eget tortor aliquam consectetur id nec lorem. Pellentesque massa dolor, placerat ac risus a, aliquam rhoncus nulla.\",\"Ut et suscipit enim. Nam aliquam porttitor sapien elementum mollis. In quis turpis ante. Morbi et ex aliquam, ornare neque sit amet, porttitor est. Quisque eleifend consequat turpis. Curabitur ultrices luctus quam, et dapibus quam bibendum non. Praesent facilisis augue magna, eu volutpat nibh gravida et. Cras pulvinar, ligula vel consectetur molestie, lorem eros euismod arcu, sed condimentum leo metus efficitur ante. Duis eu diam semper, hendrerit est porta, tincidunt odio. Maecenas sagittis justo lacus, ac varius est dictum sit amet. Nam vitae turpis dignissim, tincidunt felis sit amet, dignissim sapien. Integer et iaculis ex. Sed rhoncus elit vitae massa facilisis venenatis.\",\"Curabitur lorem ligula, aliquet id lorem ut, molestie consequat sem. Donec sit amet lacus sagittis, gravida nunc a, volutpat elit. Nullam elementum, leo sed gravida euismod, enim leo venenatis dolor, eget consequat nisi nisl vel tortor. Ut hendrerit non justo nec porttitor. Aenean et dolor laoreet augue vulputate commodo ac ut turpis. Morbi luctus lacinia felis at pellentesque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam tristique faucibus mauris, sed volutpat ante consequat nec. Proin fermentum vehicula tortor, sed bibendum lectus volutpat ac. Cras dignissim elit id aliquam consectetur.\"],\"metaCSP\":\"default-src 'none';script-src *.files.bbci.co.uk *.local.bbc.co.uk:* localhost 'self' 'report-sample' 'unsafe-inline' assets.wearehearken.eu cdn.syndication.twimg.com connect.facebook.net c.files.bbci.co.uk emp.bbci.co.uk ems.wearehearken.eu modules.wearehearken.eu mybbc-analytics.files.bbci.co.uk nav.files.bbci.co.uk news.files.bbci.co.uk platform.twitter.com public.flourish.studio static.bbc.co.uk static.bbci.co.uk static.chartbeat.com static2.chartbeat.com www.bbc.co.uk www.instagram.com www.ons.gov.uk gn-web-assets.api.bbc.com www.google-analytics.com bitesize.files.bbci.co.uk www.tiktok.com lf16-tiktok-web.ttwstatic.com static.files.bbci.co.uk;img-src *.files.bbci.co.uk *.local.bbc.co.uk:* localhost 'self' https: data:;font-src *.files.bbci.co.uk *.local.bbc.co.uk:* localhost c.files.bbci.co.uk gel.files.bbci.co.uk static.files.bbci.co.uk static.bbci.co.uk news.files.bbci.co.uk ws-downloads.files.bbci.co.uk bitesize.files.bbci.co.uk;style-src *.files.bbci.co.uk *.local.bbc.co.uk:* localhost cdn.riddle.com flo.uri.sh news.files.bbci.co.uk platform.twitter.com static.bbc.co.uk static.bbci.co.uk static.files.bbci.co.uk ton.twimg.com www.riddle.com 'unsafe-inline' lf16-tiktok-web.ttwstatic.com;frame-src *.files.bbci.co.uk *.local.bbc.co.uk:* localhost 'self' bbc001.carto.com bbc003.carto.com bbc-maps.carto.com cdn.riddle.com chartbeat.com emp.bbc.co.uk emp.bbc.com flo.uri.sh graphics.reuters.com www.reuters.com m.facebook.com news.files.bbci.co.uk personaltaxcalculator2.deloittecloud.co.uk platform.twitter.com public.flourish.studio static2.chartbeat.com syndication.twitter.com web.facebook.com www.bbc.co.uk www.facebook.com www.instagram.com www.tiktok.com www.ons.gov.uk www.riddle.com www.youtube.com www.youtube-nocookie.com toybox.tools.bbc.co.uk uk-script.dotmetrics.net ssp-app-uk.votenow.tv ssp-app-uktest.votenow.tv;object-src 'none';manifest-src *.files.bbci.co.uk *.local.bbc.co.uk:* localhost static.files.bbci.co.uk bitesize.files.bbci.co.uk;media-src *.files.bbci.co.uk *.local.bbc.co.uk:* localhost 'self' blob: https:;connect-src *.files.bbci.co.uk *.local.bbc.co.uk:* ws://localhost:* localhost 'self' https:;child-src *.files.bbci.co.uk *.local.bbc.co.uk:* localhost blob:;\",\"textDirection\":\"ltr\",\"serviceName\":\"news\",\"serviceNameNative\":\"News\",\"AtiSiteIdTest\":598286,\"AtiSiteIdLive\":598285,\"AtiSiteStringTest\":\"news_ps_test\",\"AtiSiteStringLive\":\"news_ps\",\"AtiSiteStringExtraUkTest\":\"gnl_news_test\",\"AtiSiteStringExtraUkLive\":\"gnl_news\",\"AtiProducerString\":\"news\",\"AtiProducerId\":64,\"AllowsAtiDeviceTracking\":false,\"vocab\":{\"IGNORE\":\"Make sure that your translations are concise and double-checked.\",\"language\":\"english\",\"full_results_url\":\"https://www.bbc.co.uk/news/election/2024/us/results\",\"\":\"\",\"live_updates_url\":\"https://www.bbc.co.uk/news/live/czxrnw5qrprt\",\"heading\":\"US Election 2024\",\"heading_alt\":\"US Election 2024 logo\",\"candidates_1:name\":\"Kamala Harris\",\"candidates_1:party\":\"Democrat\",\"candidates_2:name\":\"Donald Trump\",\"candidates_2:party\":\"Republican\",\"votes:label\":\"{%number} votes\",\"full_results\":\"See the full results\",\"live_updates\":\"LIVE updates\",\"states_declared\":\"{%number} out of 50 states declared\",\"votes_to_win\":\"270 to win\",\"result_no\":\"Results\"},\"bannerData\":{\"allCountsZero\":true,\"status\":{\"type\":\"COUNTING-UNDERWAY\",\"date\":\"2024-11-05\",\"message\":\"Counting under way. After 0 of 538 seats declared.\",\"text\":\"51 results to go\"},\"countSummaries\":[{\"party\":{\"name\":\"Democratic\",\"code\":\"DEM\",\"partyColour\":\"#4A8DFF\"},\"dataFormatted\":{\"count\":{\"value\":\"0\",\"text\":\"0\"},\"share\":{\"value\":\"0.0\",\"text\":\"0.0%\"},\"votes\":{\"value\":\"0\",\"text\":\"0 votes\"},\"popularVoteShare\":{\"value\":\"0.0\",\"text\":\"0.0%\"}},\"candidate\":{\"id\":\"\",\"firstName\":\"\",\"lastName\":\"\",\"fullName\":\"\"},\"candidateDetails\":{\"id\":\"64984\",\"firstName\":\"Kamala\",\"lastName\":\"Harris\",\"image\":{\"url\":\"https://static.files.bbci.co.uk/elections/images/us2024/candidates/kamala-harris-desktop.png\",\"altText\":\"Kamala Harris, Democratic Candidate\"},\"altImage\":{\"url\":\"https://static.files.bbci.co.uk/elections/images/us2024/candidates/kamala-harris-mobile.png\",\"altText\":\"Kamala Harris, Democratic Candidate\"}}},{\"party\":{\"name\":\"Republican\",\"code\":\"REP\",\"partyColour\":\"#FF2D23\"},\"dataFormatted\":{\"count\":{\"value\":\"0\",\"text\":\"0\"},\"share\":{\"value\":\"0.0\",\"text\":\"0.0%\"},\"votes\":{\"value\":\"0\",\"text\":\"0 votes\"},\"popularVoteShare\":{\"value\":\"0.0\",\"text\":\"0.0%\"}},\"candidate\":{\"id\":\"\",\"firstName\":\"\",\"lastName\":\"\",\"fullName\":\"\"},\"candidateDetails\":{\"id\":\"8639\",\"firstName\":\"Donald\",\"lastName\":\"Trump\",\"image\":{\"url\":\"https://static.files.bbci.co.uk/elections/images/us2024/candidates/donald-trump-desktop.png\",\"altText\":\"Donald Trump, Republican Candidate\"},\"altImage\":{\"url\":\"https://static.files.bbci.co.uk/elections/images/us2024/candidates/donald-trump-mobile.png\",\"altText\":\"Donald Trump, Republican Candidate\"}}}]},\"outputs\":[{\"wrapper\":\"embed\"},{\"wrapper\":\"amp\"},{\"wrapper\":\"news-app\"},{\"wrapper\":\"syndication\",\"photoCaption\":\"\",\"photoURL\":\"\",\"hyperlinkCallToAction\":\"Click here to see the BBC interactive\"}],\"usesAppJs\":true,\"autoFixLintingErrors\":false,\"polyfill\":false,\"dynamicImports\":true,\"dynamicPolyfills\":[\"core-js/modules/es.promise\",\"core-js/modules/es.array.iterator\",\"core-js/modules/es.array.filter\",\"core-js/modules/es.array.from\",\"core-js/modules/es.array.map\",\"core-js/modules/es.array.reduce\",\"core-js/modules/es.object.assign\",\"core-js/modules/es.object.entries\",\"core-js/modules/es.object.from-entries\",\"core-js/modules/es.object.keys\",\"core-js/modules/es.object.values\"],\"reactProject\":false,\"preactProject\":false,\"failFast\":false,\"includePath\":{\"responsive\":true,\"newsapps\":true,\"app-image\":\"https://news.files.bbci.co.uk/include/vjassets/img/app-launcher.png\",\"app-clickable\":true,\"amp-clickable\":true,\"amp-image-height\":360,\"amp-image-width\":640,\"amp-image\":\"https://news.files.bbci.co.uk/include/vjassets/img/app-launcher.png\",\"app-image-alt-text\":\"Click or tap here to see interactive content\"},\"languages\":[\"english\",\"afaanoromoo\",\"afrique\",\"amharic\",\"arabic\",\"azeri\",\"bengali\",\"burmese\",\"zhongwen\",\"gahuza\",\"gujarati\",\"hausa\",\"hindi\",\"igbo\",\"indonesia\",\"japanese\",\"korean\",\"kyrgyz\",\"marathi\",\"mundo\",\"nepali\",\"pashto\",\"persian\",\"pidgin\",\"portuguese\",\"punjabi\",\"russian\",\"serbian\",\"sinhala\",\"somali\",\"swahili\",\"tamil\",\"telugu\",\"thai\",\"tigrinya\",\"turkish\",\"ukrainian\",\"urdu\",\"uzbek\",\"vietnamese\",\"yoruba\"],\"destinationSection\":{\"english\":\"uk\"},\"uncompressedAppBudget\":\"(1024 * 1000) * 0.5\",\"meta\":{\"title\":{\"english\":\"\"},\"images\":[{\"thumbnail\":\"\"}],\"hasBeenDeployed\":false,\"publication_date\":null,\"publication_date_iso\":null,\"last_modified\":null,\"last_modified_iso\":null,\"data_last_modified\":null,\"data_last_modified_iso\":null,\"keywords\":[\"vj\",\"visual-journalism\",\"visualjournalism\",\"visual journalism\"],\"locations\":{\"regions\":[]}},\"handlebarsPartials\":[\"picture\"],\"defaultPort\":1031,\"usedPort\":1031,\"generateForMozart\":true,\"hasGithubRepo\":false,\"bespokeOrbitCacheTTL\":false,\"shouldAllowDeviceTracking\":false,\"shadowDom\":true,\"generator\":\"basic-project\",\"projectNamespace\":\"vjafwest-1365-2024-us-presidential-election-banner\",\"generatorVersion\":\"11.1.1\",\"projectName\":\"vjafwest-1365-2024-us-presidential-election-banner\",\"outputDir\":\"include/vjafwest/1365-2024-us-presidential-election-banner\",\"optimiseImagesOnEveryBuild\":true,\"includes\":{\"app\":{\"uuid\":\"c566879b-f762-4dce-a244-7cb3a3684521\"}},\"pathToWrapperAssets\":\"https://news.test.files.bbci.co.uk/include/vjafwest/1365-2024-us-presidential-election-banner/develop/assets/embed\",\"pathToInclude\":\"https://news.test.files.bbci.co.uk/include/vjafwest/1365-2024-us-presidential-election-banner/develop/english/app/embed\",\"pathToWrapperAssetsToInclude\":\"https://news.test.files.bbci.co.uk/include/vjafwest/1365-2024-us-presidential-election-banner/develop/english/app/embed\"};\n</script>\n<link rel=\"stylesheet\" href=\"https://news.test.files.bbci.co.uk/include/vjafwest/1365-2024-us-presidential-election-banner/develop/assets/embed/css/inline.css??v=1.0.1.202411051405\">\n<div id=\"responsive-embed-vjafwest-1365-2024-us-presidential-election-banner-app\" class=\"bbc-news-vj-wrapper--embed bbc-news-vj-direction--ltr bbc-news-vj-language--english\">\n    <div id=\"responsive-embed-vjafwest-1365-2024-us-presidential-election-banner-app-core-content\">\n        \n        \n        \n        <div class=\"us-election-banner-wrapper\">\n            <aside class=\"us-election-banner-2024\" role=\"complementary\" aria-labelledby=\"election-banner-heading\">\n                <h2 id=\"election-banner-heading\" class=\"banner-heading\">\n                    <img class=\"banner-img\" src=\"https://news.test.files.bbci.co.uk/include/vjafwest/1365-2024-us-presidential-election-banner/develop/assets/app-project-assets/img/logo-en.svg\"\n                        alt=\"US Election 2024\" style=\"max-height: 56px\" />\n                </h2>\n        \n                <img class=\"candidate-img candidate-img-dem\" src=\"https://news.test.files.bbci.co.uk/include/vjafwest/1365-2024-us-presidential-election-banner/develop/assets/app-project-assets/img/harris-100.png?ticker=1\"\n                    alt=\"Kamala Harris, Democrat\" width=\"212\" height=\"337\" />\n        \n                <div class=\"banner-body\">\n                    <div class=\"candidates\">\n                        <div class=\"candidate candidate-left\">\n                            <p id=\"title-harris\" class=\"candidate-name\" role=\"heading\">\n                                <span class=\"candidate-full-name\">Kamala Harris</span>\n                                <span class=\"candidate-party-name candidate-1\">Democrat</span>\n                            </p>\n                        </div>\n        \n                        <div class=\"candidate candidate-right\">\n                            <p id=\"title-trump\" class=\"candidate-name\" role=\"heading\">\n                                <span class=\"candidate-full-name\">Donald Trump</span>\n                                <span class=\"candidate-party-name candidate-2\">Republican</span>\n                            </p>\n                        </div>\n                    </div>\n        \n                    <div class=\"vote-bar-container\" role=\"presentation\" aria-label=\"Vote Progress\">\n                        <p class=\"votes-to-win\">270 to win</p>\n                        <div class=\"votes-bar\">\n                            <span class=\"votes-dem\" style=\"width: 0.0%\">\n                                <span class=\"vote-dem-progress\">\n                                    <span class=\"label-inner dem-label dem-label-inner\"\n                                        aria-labelledby=\"title-harris\">0</span>\n                                </span>\n                            </span>\n        \n                            <span class=\" votes-middle\" aria-hidden=\"true\"></span>\n        \n                            <span class=\"votes-rep\" style=\"width: 0.0%\">\n                                <span class=\"vote-rep-progress\">\n                                    <span class=\"label-inner rep-label rep-label-inner\" aria-labelledby=\"title-trump\">\n                                        0</span>\n                                </span>\n                            </span>\n                        </div>\n                    </div>\n        \n                    <div class=\"votes-bar-details\">\n                        <div class=\"details-left\">\n                            <span class=\"details-text-left\" role=\"heading\"\n                                aria-label=\"Kamala Harris, 0 votes, 0%\">\n                                0  votes\n                            </span>\n                            <span class=\"details-text-left-perc\">\n                                (0%)\n                            </span>\n                        </div>\n                        <div class=\"details-right\">\n                            <span class=\"details-text-right\" role=\"heading\"\n                                aria-label=\"Donald Trump, 0 votes, 0%\">\n                                0  votes\n                            </span>\n                            <span class=\"details-text-right-perc\">\n                                (0%)\n                            </span>\n                        </div>\n                    </div>\n        \n                    <div class=\"links-details\">\n                        <div class=\"live-results\"><div class=\"last-updated-container__wrapper\">\n            <div class=\"last-updated-container__time\">\n                <div class=\"last-updated-container__live-container\">\n                    <svg class=\"last-updated-container__pulse-icon\" fill=\"currentColor\" focusable=\"false\" aria-hidden=\"true\"\n                        viewBox=\"0 0 32 32\" width=\"16\" height=\"16\">\n                        <path\n                            d=\"M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z\">\n                        </path>\n                        <circle cx=\"16\" cy=\"16\" r=\"8.5\" class=\"pulse-circle\"></circle>\n                    </svg>\n                    <p><a href=\"https://www.bbc.com/news\" aria-label=\"LIVE updates\" target=\"_parent\">LIVE updates <svg width=\"10\" height=\"10\" viewBox=\"0 0 10 10\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <path d=\"M6.75 4.46875L1.71875 9.6875H3.71875L8.28125 5L3.71875 0.3125H1.71875L6.75 5.53125V4.46875Z\"\n                fill=\"white\" />\n        </svg></a></p>\n                </div>\n            </div>\n        </div>\n        </div>\n                        <div class=\"view-complete-results\">\n                            <p>\n                                <a href=\"https://www.bbc.co.uk/news/election/2024/us/results\" aria-label=\"See the full results\"\n                                    target=\"_parent\">See the full results\n                                    <svg width=\"10\" height=\"10\" viewBox=\"0 0 10 10\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <path d=\"M6.75 4.46875L1.71875 9.6875H3.71875L8.28125 5L3.71875 0.3125H1.71875L6.75 5.53125V4.46875Z\"\n                fill=\"white\" />\n        </svg></a>\n                            </p>\n                        </div>\n                    </div>\n                </div>\n        \n                <img class=\"candidate-img candidate-img-rep\" src=\"https://news.test.files.bbci.co.uk/include/vjafwest/1365-2024-us-presidential-election-banner/develop/assets/app-project-assets/img/trump-100.png?ticker=1\"\n                    alt=\"Donald Trump, Republican\" width=\"212\" height=\"337\"\n                />\n            </aside>\n        </div>\n    </div>\n</div>\n<style id=\"responsive-embed-vjafwest-1365-2024-us-presidential-election-banner-app-inline-css\">\n    @keyframes blink{0%{opacity:0}50%{opacity:0.5}100%{opacity:0.95}}.last-updated-container{display:flex;padding-bottom:1rem}.last-updated-container__wrapper{display:flex;flex-wrap:wrap;align-items:start;max-width:640px;margin:auto;justify-content:space-between;margin:0;padding-bottom:0}.last-updated-container__time{font-size:0.875rem;color:#2f2f2f;display:inline-flex;justify-content:center;align-items:center}.last-updated-container__live{color:#00ccc7;font-weight:700;font-style:normal;margin-right:0.35rem;text-transform:uppercase;font-size:0.9375rem;line-height:1.375rem}@media (min-width: 20rem) and (max-width: 37.4375rem){.last-updated-container__live{font-size:1rem;line-height:1.75rem}}@media (max-width: 37.5rem){.last-updated-container__live{line-height:1.875rem;font-size:1.125rem}}.last-updated-container__pulse-icon{color:#00ccc7;display:inline-block;vertical-align:-0.125rem;margin-inline-end:0.25rem;position:relative;width:0.9375rem;height:0.9375rem}@media (min-width: 25rem){.last-updated-container__pulse-icon{width:1rem;height:1rem}}.last-updated-container__live-container{display:flex;align-items:center;margin:0}.last-updated-container__cta{font-size:0.875rem;color:#2f2f2f;line-height:1.188rem;align-self:center}@media (max-width: 600px){.last-updated-container{flex-direction:column;align-items:flex-start}.last-updated-container__cta{align-self:flex-start}}@media (min-width: 600px){.last-updated-container{justify-content:space-between;flex-wrap:nowrap}.last-updated-container__cta{padding-top:0}}@media (prefers-reduced-motion: no-preference){.last-updated-container .pulse-circle{animation:1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s 3 normal none running blink}}body{background-color:transparent !important;margin:0 !important}div.us-election-banner-wrapper{background-image:linear-gradient(#2d015a, #010101);background-size:100% 150%;container-type:normal;width:100%}aside.us-election-banner-2024{clear:both;color:white;overflow:hidden;position:relative;max-width:63rem;margin:auto;width:100%}@media (min-width: 1008px){aside.us-election-banner-2024{min-height:22rem}}aside.us-election-banner-2024 .banner-heading{margin:0;padding:0;padding-top:4px;position:relative;max-width:unset;height:56px}@media (max-width: 399px){aside.us-election-banner-2024 .banner-heading{margin-left:-2px}}@media (min-width: 400px){aside.us-election-banner-2024 .banner-heading{padding-left:0.25rem}}@media (min-width: 600px){aside.us-election-banner-2024 .banner-heading{padding-left:0.25rem;padding-bottom:0}}aside.us-election-banner-2024 .banner-img{display:inline-block;position:relative;height:56px}aside.us-election-banner-2024 .banner-body{width:100%;margin:auto;padding:0.5rem;position:relative;z-index:5}@media (min-width: 400px){aside.us-election-banner-2024 .banner-body{padding:1rem}}@media (min-width: 600px){aside.us-election-banner-2024 .banner-body{padding-top:0;margin-top:-1rem}}@media (min-width: 1008px){aside.us-election-banner-2024 .banner-body{max-width:35.5rem}}aside.us-election-banner-2024 .candidate{font-size:1.15rem;font-weight:bold;margin-top:0;margin-bottom:-1rem;max-width:50%}aside.us-election-banner-2024 .candidate .candidate-name{font-size:1.15rem;display:flex;flex-flow:column;margin-top:0}@media (min-width: 600px){aside.us-election-banner-2024 .candidate .candidate-name{font-size:2rem;margin-top:1.75rem}}aside.us-election-banner-2024 .candidate .candidate-name .candidate-full-name{line-height:1.25rem}@media (min-width: 600px){aside.us-election-banner-2024 .candidate .candidate-name .candidate-full-name{line-height:2.25rem;word-break:break-word}}aside.us-election-banner-2024 .candidate-img{display:none}@media (min-width: 1008px){aside.us-election-banner-2024 .candidate-img{display:block}}@container us-election-banner-wrapper (width > $tablet){aside.us-election-banner-2024 .candidate-img{display:block}}aside.us-election-banner-2024 .candidate-img-dem{position:absolute;left:0;top:60px;width:13.25rem;height:auto}aside.us-election-banner-2024 .candidate-img-rep{position:absolute;right:0;top:55px;width:13.25rem;height:auto}aside.us-election-banner-2024 .candidate-party-name{font-size:1rem;line-height:1.275rem;margin:0}@media (min-width: 600px){aside.us-election-banner-2024 .candidate-party-name{font-size:1.125rem}}aside.us-election-banner-2024 .candidate-2{text-align:right}aside.us-election-banner-2024 .candidate-left{float:left}aside.us-election-banner-2024 .candidate-left .candidate-party-name{color:#4a8dff}aside.us-election-banner-2024 .candidate-right{float:right}aside.us-election-banner-2024 .candidate-right .candidate-full-name{text-align:right}aside.us-election-banner-2024 .candidate-right .candidate-party-name{color:#ff2d23}aside.us-election-banner-2024 .vote-bar-container{clear:both}aside.us-election-banner-2024 .vote-bar-container .votes-bar{background-color:#3a3c3e;color:white;font-size:2rem;height:3.25rem;margin-top:0.25rem;overflow:hidden;padding:0}@media (max-width: 599px){aside.us-election-banner-2024 .vote-bar-container .votes-bar{height:3rem}}aside.us-election-banner-2024 .vote-bar-container .votes-dem,aside.us-election-banner-2024 .vote-bar-container .votes-rep{height:3.25rem;line-height:3.25rem}@media (max-width: 600px){aside.us-election-banner-2024 .vote-bar-container .votes-dem,aside.us-election-banner-2024 .vote-bar-container .votes-rep{height:3rem}}aside.us-election-banner-2024 .vote-bar-container .votes-dem{float:left}aside.us-election-banner-2024 .vote-bar-container .vote-dem-progress{background-color:#4a8dff;display:inline-block;padding:0;width:100%}aside.us-election-banner-2024 .vote-bar-container .dem-label{float:left;font-weight:bold;padding-left:1rem}aside.us-election-banner-2024 .vote-bar-container .dem-label-inner{display:inline-block;padding-right:0.75rem}aside.us-election-banner-2024 .vote-bar-container .dem-label-outer{display:none;margin-right:-4.5rem}aside.us-election-banner-2024 .vote-bar-container .vote-rep-progress{background-color:#ff2d23;display:inline-block;padding:0;width:100%}aside.us-election-banner-2024 .vote-bar-container .rep-label{float:right;font-weight:bold;padding-right:1rem}aside.us-election-banner-2024 .vote-bar-container .rep-label-inner{display:inline-block;padding-left:0.75rem;font-weight:bold}aside.us-election-banner-2024 .vote-bar-container .rep-label-outer{display:none;margin-left:-4.25rem;font-weight:bold}aside.us-election-banner-2024 .vote-bar-container .votes-to-win{clear:both;font-weight:bold;margin:auto;text-align:center;width:100%;line-height:1rem;height:1rem;position:relative}aside.us-election-banner-2024 .vote-bar-container .votes-to-win::after{content:'';border-left:2px solid white;position:absolute;top:1.25rem;display:inline-block;height:3.25rem;left:calc(50% - 1px)}@media (max-width: 600px){aside.us-election-banner-2024 .vote-bar-container .votes-to-win::after{height:3rem}}aside.us-election-banner-2024 .vote-bar-container .votes-rep{float:right}aside.us-election-banner-2024 .votes-bar-details{clear:both;color:#b0b2b4;min-height:1.2rem;margin:0.875rem 0 1rem}@media (min-width: 400px){aside.us-election-banner-2024 .votes-bar-details{min-height:0.875rem}}aside.us-election-banner-2024 .votes-bar-details .details-left,aside.us-election-banner-2024 .votes-bar-details .details-right{display:flex;flex-wrap:wrap;font-size:0.875rem;line-height:1rem;max-width:50%}aside.us-election-banner-2024 .votes-bar-details .details-left{float:left;justify-content:start}aside.us-election-banner-2024 .votes-bar-details .details-left .details-text-left{margin-right:4px}aside.us-election-banner-2024 .votes-bar-details .details-right{float:right;text-align:right;justify-content:end}aside.us-election-banner-2024 .votes-bar-details .details-right .details-text-right{margin-right:4px}aside.us-election-banner-2024 .total-declared{color:white;clear:both;margin-top:3.25rem}@media (max-width: 600px){aside.us-election-banner-2024 .total-declared{height:3rem}}aside.us-election-banner-2024 .links-details{display:flex;justify-content:space-between;width:100%;flex-wrap:wrap;align-items:center;position:relative;z-index:10}@media (min-width: 600px){aside.us-election-banner-2024 .links-details{padding:1rem 0}}aside.us-election-banner-2024 .links-details p{padding:0;margin:0;display:inline}@media (max-width: 599px){aside.us-election-banner-2024 .links-details{font-size:1.15rem;flex-direction:column;align-items:start}aside.us-election-banner-2024 .links-details .live-results{margin:1.25rem 0}aside.us-election-banner-2024 .links-details .view-complete-results{margin-top:0.25rem;margin-bottom:0.5rem}}@media (min-width: 600px){aside.us-election-banner-2024 .links-details .live-results{display:inline-block;float:left;max-width:49%}}aside.us-election-banner-2024 .links-details .live-results:empty{display:none}@media (min-width: 600px){aside.us-election-banner-2024 .links-details .view-complete-results{display:inline-block;float:right;text-align:right;max-width:49%}}aside.us-election-banner-2024 .links-details * a{border-bottom:0;line-height:1rem;font-size:1rem;font-weight:bold;text-decoration:none}aside.us-election-banner-2024 .links-details .live-results a{color:#00ccc7}aside.us-election-banner-2024 .links-details .live-results a:hover{color:#00f5f1;text-decoration:underline}aside.us-election-banner-2024 .links-details .live-results a:focus{text-decoration:underline}aside.us-election-banner-2024 .links-details .view-complete-results a{color:white}aside.us-election-banner-2024 .links-details .view-complete-results a:hover{color:#ff453a;text-decoration:underline}aside.us-election-banner-2024 .links-details .view-complete-results a:focus{text-decoration:underline}div.bbc-news-vj-direction--ltr #responsive-embed-vjafwest-1365-2024-us-presidential-election-banner-app-core-content div.us-election-banner-wrapper{font-family:sans-serif}#responsive-embed-vjafwest-1365-2024-us-presidential-election-banner-app-core-content .banner-body{max-width:calc(100% - 1rem)}@media (min-width: 400px){#responsive-embed-vjafwest-1365-2024-us-presidential-election-banner-app-core-content .banner-body{max-width:calc(100% - 2rem)}}@media (min-width: 1008px){#responsive-embed-vjafwest-1365-2024-us-presidential-election-banner-app-core-content .banner-body{max-width:33.5rem}}div.bbc-news-vj-direction--rtl div.us-election-banner-wrapper{text-align:right;direction:rtl}div.bbc-news-vj-direction--rtl .banner-heading{padding-left:0;padding-right:0.5rem}div.bbc-news-vj-direction--rtl .candidate-left{text-align:left}div.bbc-news-vj-direction--rtl .banner-body div.votes-bar-details div.details-left{justify-content:end}div.bbc-news-vj-direction--rtl .banner-body div.votes-bar-details div.details-right{justify-content:start}div.bbc-news-vj-direction--rtl .banner-body div.votes-bar-details div.details-right .details-text-right,div.bbc-news-vj-direction--rtl .banner-body div.votes-bar-details div.details-left .details-text-left{margin-right:0;margin-left:4px}div.bbc-news-vj-direction--rtl .live-results:empty,div.bbc-news-vj-direction--rtl .view-complete-results:empty{display:none}div.bbc-news-vj-direction--rtl .live-results svg,div.bbc-news-vj-direction--rtl .view-complete-results svg{transform:rotate(180deg)}div.bbc-news-vj-language--burmese div.candidate span.candidate-party-name{line-height:1.75rem;margin-bottom:-0.5rem}div.bbc-news-vj-language--burmese div.votes-bar span.label-inner{font-size:2.25rem;padding-top:2px}div.bbc-news-vj-language--gujarati div.votes-bar span.label-inner{font-size:1.75rem;padding-top:2px}div.bbc-news-vj-language--korean div.votes-bar span.label-inner{padding-top:3px}@media (min-width: 600px){div.bbc-news-vj-language--tamil div.candidate p.candidate-name{font-size:1.75rem;margin-top:2rem;text-wrap-mode:nowrap}}div.bbc-news-vj-language--tamil div.votes-bar span.label-inner{padding-top:3px}@media (min-width: 400px){div.bbc-news-vj-language--zhongwen div.banner-body{margin-top:0.25rem}}@media (min-width: 600px){div.bbc-news-vj-language--zhongwen div.banner-body{margin-top:-0.5rem}}div.bbc-news-vj-language--zhongwen div.candidate-right span.candidate-full-name{margin-right:-1rem}div.bbc-news-vj-language--zhongwen span.candidate-full-name{font-size:1rem;line-height:1rem !important;word-break:keep-all !important}@media (min-width: 600px){div.bbc-news-vj-language--zhongwen span.candidate-full-name{font-size:1.75rem;line-height:1.75rem !important;text-wrap-mode:nowrap}}div.bbc-news-vj-language--japanese div.banner-body{margin-top:0}@media (min-width: 600px){div.bbc-news-vj-language--japanese div.banner-body{margin-top:-0.4rem}}div.bbc-news-vj-language--japanese span.candidate-full-name{font-size:1.25rem;line-height:1.25rem !important;letter-spacing:-1.5px;word-break:keep-all !important}@media (min-width: 600px){div.bbc-news-vj-language--japanese span.candidate-full-name{font-size:1.65rem;line-height:1.65rem !important}}div.bbc-news-vj-language--afaanoromoo .candidate-full-name{font-size:1.19rem}@media (min-width: 600px){div.bbc-news-vj-language--afaanoromoo .candidate-full-name{font-size:1.6rem}}@-moz-keyframes gel-spin{0%{-moz-transform:rotate(0deg)}100%{-moz-transform:rotate(360deg)}}@-webkit-keyframes gel-spin{0%{-webkit-transform:rotate(0deg)}100%{-webkit-transform:rotate(360deg)}}@-ms-keyframes gel-spin{0%{-ms-transform:rotate(0deg)}100%{-ms-transform:rotate(360deg)}}@keyframes gel-spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}.bbc-news-visual-journalism-loading-spinner{display:none;margin:0 auto;width:0;height:0;max-width:32px;fill:#323232;-webkit-animation-name:gel-spin;-webkit-animation-duration:1s;-webkit-animation-iteration-count:infinite;-webkit-animation-timing-function:linear;-moz-animation-name:gel-spin;-moz-animation-duration:1s;-moz-animation-iteration-count:infinite;-moz-animation-timing-function:linear;animation-name:gel-spin;animation-duration:1s;animation-iteration-count:infinite;animation-timing-function:linear}\n@font-face{font-display:swap;font-family:\"ReithSans\";src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_Rg.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_Rg.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSans\";font-style:italic;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_It.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_It.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSans\";font-weight:bold;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_Bd.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_Bd.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSans\";font-style:italic;font-weight:bold;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_BdIt.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_BdIt.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSans\";font-weight:300;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_Lt.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_Lt.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSans\";font-style:italic;font-weight:300;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_LtIt.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_LtIt.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSans\";font-weight:500;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_Md.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_Md.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSans\";font-style:italic;font-weight:500;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_MdIt.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_MdIt.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSans\";font-weight:800;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_ExBd.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_ExBd.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSans\";font-style:italic;font-weight:800;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_ExBdIt.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_ExBdIt.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSerif\";src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_Rg.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_Rg.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSerif\";font-style:italic;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_It.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_It.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSerif\";font-weight:bold;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_Bd.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_Bd.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSerif\";font-style:italic;font-weight:bold;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_BdIt.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_BdIt.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSerif\";font-weight:300;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_Lt.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_Lt.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSerif\";font-style:italic;font-weight:300;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_LtIt.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_LtIt.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSerif\";font-weight:500;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_Md.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_Md.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSerif\";font-style:italic;font-weight:500;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_MdIt.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_MdIt.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSerif\";font-weight:800;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_ExBd.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_ExBd.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSerif\";font-style:italic;font-weight:800;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_ExBdIt.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_ExBdIt.woff\") format(\"woff\")}\n\n</style>\n\n<script>\n    (function(){\n\nfunction cutsTheMustard() {\n    return (\n        document.implementation.hasFeature(\n            'http://www.w3.org/TR/SVG11/feature#BasicStructure',\n            '1.1',\n        )\n        && 'querySelector' in document\n        && 'localStorage' in window\n        && 'addEventListener' in window\n        && 'MutationObserver' in window // not supported in IE9 & IE10\n        && !document.documentMode // undefined in all browsers except IE\n    );\n}\n\n                    if (cutsTheMustard()) {\n                                    function initEmbed() {\n                require(['https://news.test.files.bbci.co.uk/include/vjafwest/1365-2024-us-presidential-election-banner/develop/assets/embed/js/embed-init.js??v=1.0.1.202411051405'], function (initFullFatApplication) {\n                    initFullFatApplication(vjConfigObject['vjafwest-1365-2024-us-presidential-election-banner-app']);\n                });\n            }\n\n            if (typeof require === 'undefined') {\n                var headTag = document.getElementsByTagName('head')[0],\n                    requireTag = document.createElement('script');\n                requireTag.type = 'text/javascript';\n                requireTag.src = 'https://news.files.bbci.co.uk/include/vjassets/js/vendor/require-2.1.20b.min.js';\n                requireTag.onload = initEmbed;\n                headTag.appendChild(requireTag);\n            } else {\n                initEmbed();\n            }\n\n                    }\n                    else if (window.require) {\n                        require(['istats-1'], function (istats) {\n                            istats.log('browser does not cut the mustard', 'newsspec-nonuser');\n                        });\n                    }    })();\n</script>\n"
+        }
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "ATMs across the country",
+            "firstPublished": "2019-09-10T09:58:47.000Z",
+            "lastPublished": "2019-09-10T10:01:20.000Z",
+            "link": "https://www.bbc.com/pidgin/23248287",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/7DD4/test/_63721223_image1.jpg.webp",
+            "description": "Here we have an article about a particular topic",
+            "imageAlt": "-",
+            "id": "cda3bf00-2939-1a46-b6c1-f4376b944663"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Joseph Shabalala: Ladysmith Black Mambazo founder don die for di age of 78",
+            "firstPublished": "2020-02-17T11:57:10.000Z",
+            "lastPublished": "2020-02-17T11:57:10.000Z",
+            "link": "https://www.bbc.com/pidgin/23267825",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/BD1D/test/_63731484__110849831_075aed13-3e2a-416e-ba96-7dc77f6150b3.jpg.webp",
+            "description": "Joseph Shabalala: Ladysmith Black Mambazo founder don die for di age of 78",
+            "imageAlt": "Joseph shabalala",
+            "id": "877b3c91-b210-a84c-bf03-ab64f54bff8a"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:87d69ac2-34a2-4013-a7b0-99b013ff7810",
         "curationType": "tipo-curation",
         "position": 2,
-        "title": "BBC News Pidgin now dey on Whatsapp",
-        "visualProminence": "NORMAL",
+        "title": "Top Stories",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Government enforces fuel ban",
+            "firstPublished": "2023-08-17T14:13:14.817Z",
+            "lastPublished": "2023-08-17T14:13:14.817Z",
+            "link": "https://www.bbc.com/pidgin/articles/cem8zq07ddxo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/8e2a/test/081683b0-3d08-11ee-acfe-efb7db480188.jpg.webp",
+            "description": "The fuel levy reduction is expected to last for two months. This will cushion the blow for South Africans facing a significant rise in the cost of living due to high fuel prices. \n\n",
+            "imageAlt": "NUT",
+            "id": "cem8zq07ddxo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:874d7c07-78e9-4f1a-8c45-d60b899e1ce9",
+        "curationType": "tipo-curation",
+        "position": 3,
+        "title": "Non Live English Billboard",
+        "visualProminence": "MAXIMUM",
         "visualStyle": "BANNER"
       },
       {
         "summaries": [
           {
-            "type": "video",
-            "duration": "PT2M17S",
+            "type": "article",
             "isLive": false,
-            "title": "How woman wey get male and female sex organs life change after she share her tori ",
-            "firstPublished": "2025-02-17T09:47:54.608Z",
-            "lastPublished": "2025-02-17T09:47:54.608Z",
-            "link": "https://www.bbc.com/pidgin/articles/cn8y837v15lo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/2b31/live/b4187d00-ed13-11ef-bd1b-d536627785f2.jpg.webp",
-            "description": "For June 2024, BBC Pidgin tell di tori of a 32-year-old woman wey bin dey suffer from sexual differentiation disorder. Now, she share how tins don change after she bin share her tori.",
-            "imageAlt": "Halima Sani",
-            "id": "cn8y837v15lo"
+            "title": "Live Promo with Media Type None",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/c7p765ynk9qt",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "description": "The refugee camp has been hit by hundreds of shells, where Hamas says 100,000 people are still sheltering",
+            "id": "c7p765ynk9qt"
           },
           {
-            "type": "video",
-            "duration": "PT4M2S",
+            "type": "article",
             "isLive": false,
-            "title": "'I no fit poo-poo from di normal place again after my colostomy surgery sake of cancer' ",
-            "firstPublished": "2025-02-10T19:34:40.728Z",
-            "lastPublished": "2025-02-10T19:34:40.728Z",
-            "link": "https://www.bbc.com/pidgin/articles/cn7gnkvpz5go",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/4264/live/39fa1f60-e7cd-11ef-a697-15c17ea31ce4.jpg.webp",
-            "description": "Dem diagnose Tobiloba wit rectal cancer, adenocarcinoma for March 2022.",
-            "imageAlt": "Tobiloba Oluwasina",
-            "id": "cn7gnkvpz5go"
+            "title": "Live Pidgin Disco 1 Media Type Text",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cgl2vz8d587t",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "cgl2vz8d587t"
           },
           {
-            "type": "video",
-            "duration": "PT2M55S",
+            "type": "audio",
             "isLive": false,
-            "title": "'My eye don see sometin becos I get one breast' - Woman wey dey live wit Poland syndrome",
-            "firstPublished": "2025-01-27T05:52:26.970Z",
-            "lastPublished": "2025-01-27T05:54:56.048Z",
-            "link": "https://www.bbc.com/pidgin/articles/cgq03pw2d5do",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/4ec4/live/d5c6e960-d962-11ef-968b-2da667d2a722.jpg.webp",
-            "description": "Poland Syndrome na rare deformity of pikin for womb, absence of muscles, breast and nipple for di upper part of di body.",
-            "imageAlt": "Foto of Titilope Akintola for her house",
-            "id": "cgq03pw2d5do"
+            "title": "Live Pidgin Disco 2 Media Type Audio",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cy0mg3kvxnlt",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "cy0mg3kvxnlt"
           },
           {
             "type": "video",
-            "duration": "PT2M48S",
             "isLive": false,
-            "title": "Meet 'Madam Rice' di Nigerian local rice miller wey her tori dey ginger pipo",
-            "firstPublished": "2025-01-22T11:17:56.732Z",
-            "lastPublished": "2025-01-22T11:17:56.732Z",
-            "link": "https://www.bbc.com/pidgin/articles/cz9eyn9z35ko",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/e234/live/d249ee50-d8b7-11ef-87df-d575b9a434a4.jpg.webp",
-            "description": "'Madam Rice' tori and journey of being a local rice miller dey ginger her and don make her popular for social media.\n",
-            "imageAlt": "Madam Rice",
-            "id": "cz9eyn9z35ko"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 11,
-        "link": "https://www.bbc.com/pidgin/topics/c3l19z3k1ert",
-        "curationId": "urn:bbc:vivo:curation:a08ec947-e61c-4371-9923-8a027ab97fe7",
-        "curationType": "vivo-stream",
-        "position": 3,
-        "title": "Ginger Me",
-        "visualProminence": "LOW",
-        "visualStyle": "FEED"
-      },
-      {
-        "summaries": [
-          {
-            "type": "article",
-            "isLive": false,
-            "title": "Tins to know as Ghana begin cholera vaccination afta 50 pipo die across di kontri",
-            "firstPublished": "2025-02-14T09:39:46.538Z",
-            "lastPublished": "2025-02-14T09:39:46.538Z",
-            "link": "https://www.bbc.com/pidgin/articles/c2d368wlylwo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/28bb/live/aba86be0-eab0-11ef-80bb-c173c17a1e53.jpg.webp",
-            "description": "Data from di health service and ministry of health don show say di greater Accra, Eastern, Central, Ashanti and Western regions na di regions wey don record cases.",
-            "imageAlt": "vaccination",
-            "id": "c2d368wlylwo"
-          },
-          {
-            "type": "article",
-            "isLive": false,
-            "title": "Why prosecutor declare former Ghana finance minister Ken Ofori-Atta wanted",
-            "firstPublished": "2025-02-12T12:26:08.777Z",
-            "lastPublished": "2025-02-12T12:26:08.777Z",
-            "link": "https://www.bbc.com/pidgin/articles/cn0yjk705xlo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/21aa/live/445eb5c0-e939-11ef-941d-09f9daf0f081.jpg.webp",
-            "description": "Kissi Agyebeng say di former minister allegedly dey involved for many ogbonge deals under di former president Nana Akufo-Addo goment.",
-            "imageAlt": "Ghana's ex-finance minister",
-            "id": "cn0yjk705xlo"
-          },
-          {
-            "type": "article",
-            "isLive": false,
-            "title": "Shell ignore warnings of di 'wayo' about di clean-up - whistleblower tell BBC",
-            "firstPublished": "2025-02-12T10:03:09.664Z",
-            "lastPublished": "2025-02-12T10:03:09.664Z",
-            "link": "https://www.bbc.com/pidgin/articles/c5yvld4zpe7o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/32b3/live/5205fbf0-e8a0-11ef-a819-277e390a7a08.jpg.webp",
-            "description": "Di oil giant dey face allegations say dem ignore warnings about di clean-up scheme wey dey based on corruption.",
-            "imageAlt": "Pool of black oil in di palm of one man hand for Ogoni, Nigeria",
-            "id": "c5yvld4zpe7o"
-          },
-          {
-            "type": "article",
-            "isLive": false,
-            "title": "Nigeria beat Ghana for corruption as island nation maintain status as least corrupt African kontri - CPI report",
-            "firstPublished": "2025-02-11T13:33:25.088Z",
-            "lastPublished": "2025-02-11T13:33:25.088Z",
-            "link": "https://www.bbc.com/pidgin/articles/cgj2qv16l24o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/0252/live/7f89a2d0-e87c-11ef-a819-277e390a7a08.jpg.webp",
-            "description": "Dis latest report show say Ghana score 42 out 100 points and rank 80 out of 180. Wetin e mean be say Nigeria corrupt pass Ghana.",
-            "imageAlt": "John Mahama and Bola Tinubu",
-            "id": "cgj2qv16l24o"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 39,
-        "link": "https://www.bbc.com/pidgin/topics/c404v061z85t",
-        "curationId": "urn:bbc:vivo:curation:588d9c07-a818-4dd3-904a-bc425394a8ff",
-        "curationType": "vivo-stream",
-        "position": 4,
-        "title": "Tori from Africa",
-        "visualProminence": "LOW",
-        "visualStyle": "FEED"
-      },
-      {
-        "summaries": [
-          {
-            "type": "article",
-            "isLive": false,
-            "title": "Who be Kim Sae-ron, di South Korean actress wey die at 24",
-            "firstPublished": "2025-02-17T08:41:10.721Z",
-            "lastPublished": "2025-02-17T09:37:06.514Z",
-            "link": "https://www.bbc.com/pidgin/articles/c8j8jpvey0ko",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/6fd4/live/05338e70-ec6d-11ef-a319-fb4e7360c4ec.jpg.webp",
-            "description": "Kim start her career as a child actor and she bin dey seen as one of di kontri most promising actresses.",
-            "imageAlt": "Kim Sae-ron, one young woman wit long dark brown hair and brown eyes, stand for front of one purple wall on a red carpet. ",
-            "id": "c8j8jpvey0ko"
-          },
-          {
-            "type": "article",
-            "isLive": false,
-            "title": "Why Diddy dey sue TV network NBC for $100m ",
-            "firstPublished": "2025-02-13T15:20:03.082Z",
-            "lastPublished": "2025-02-13T15:48:26.225Z",
-            "link": "https://www.bbc.com/pidgin/articles/c805z588440o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/cd4a/live/e044a050-e964-11ef-bd1b-d536627785f2.jpg.webp",
-            "description": "Rapper Sean \"Diddy\" Combs don file a $100m (£80.5m) lawsuit against pipo wey make one recent documentary about am, as im kotinu to face allegations of sexual assault.",
-            "imageAlt": "Sean \"Diddy\" Combs speak during di Congressional Black Caucus Foundation Annual Legislative Conference National Town Hall on September 21, 2023 for Washington, DC",
-            "id": "c805z588440o"
-          },
-          {
-            "type": "article",
-            "isLive": false,
-            "title": "Who be Natasha Osawaru wey Tuface dey tok about?",
-            "firstPublished": "2025-02-12T06:41:44.416Z",
-            "lastPublished": "2025-02-12T06:41:44.416Z",
-            "link": "https://www.bbc.com/pidgin/articles/cwypz825437o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/6095/live/dbe9a810-e90b-11ef-bd1b-d536627785f2.png.webp",
-            "description": "All dis dey happun weeks afta Tuface announce im separation from Anie Macaulay Idibia, im wife of ova 10 years.",
-            "imageAlt": "Natasha Osawaru",
-            "id": "cwypz825437o"
-          },
-          {
-            "type": "article",
-            "isLive": false,
-            "title": "Wizkid, Mohbad, Qing Madi and odas artistes wey make 2025 Headies nomination list",
-            "firstPublished": "2025-02-12T17:11:51.937Z",
-            "lastPublished": "2025-02-12T17:11:51.937Z",
-            "link": "https://www.bbc.com/pidgin/articles/cy8pz16l100o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/205f/live/3ce0edb0-e964-11ef-a5ae-231c1271acdf.jpg.webp",
-            "description": "Headies release di full list of nominees for di 17th award ceremony on 12 February for dia Twitter handle.\nLate Mohbad wey pipo sabi as Ilerioluwa Aloba bag three nominations dis year, almost two years afta im die in September 2023.\n",
-            "imageAlt": "Mohbad, Qing Madi, Wizkid and Tiwa Savage",
-            "id": "cy8pz16l100o"
+            "title": "Live Pidgin Disco 3 Media Type Video",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cly58zvmwygt",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "cly58zvmwygt"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "link": "https://www.bbc.com/pidgin/topics/cqywjyzk2vyt",
-        "curationId": "urn:bbc:tipo:list:82f0640b-d503-498e-a9bb-2b70365e36df",
+        "curationId": "urn:bbc:tipo:list:30934ac9-baec-44b4-bd80-738622667d8d",
         "curationType": "tipo-curation",
-        "position": 5,
-        "title": "Entertainment corner",
-        "visualProminence": "LOW",
-        "additionalText": {
-          "plainText": "All di latest enertainment tori from around di world"
-        },
-        "visualStyle": "COLLECTION"
+        "position": 4,
+        "title": "Normal Curation with Live Promos",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE"
       },
       {
         "summaries": [
           {
             "type": "article",
             "isLive": false,
-            "title": "Real Madrid vs Manchester City, and oda fixtures for di Champions League knockout play-off second leg",
-            "firstPublished": "2025-02-11T09:57:42.029Z",
-            "lastPublished": "2025-02-13T10:52:48.687Z",
-            "link": "https://www.bbc.com/pidgin/articles/cq8k9lqxyd8o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/faf5/live/6452c2b0-e9e6-11ef-a319-fb4e7360c4ec.jpg.webp",
-            "description": "Di two-leg Champions League knockout phase play-offs start dis week, Manchester City and Real Madrid dey among di 16 teams wey don dey hope to reach di last 16.",
-            "imageAlt": "Harry Kane of Bayern Munich celebrate as im score im team second goal during di Uefa Champions League 2024/25 League Knockout Play-off First Leg match between Celtic FC and FC Bayern München for Celtic Park on February 12, 2025 in Glasgow, Scotland",
-            "id": "cq8k9lqxyd8o"
+            "title": "Live Pidgin Disco 4 Media Type None",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cemy52djeq5t",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "cemy52djeq5t"
           },
           {
             "type": "article",
             "isLive": false,
-            "title": "Kendrick Lamar, Donald Trump, and celebs wey show for Super Bowl ",
-            "firstPublished": "2025-02-10T10:00:48.820Z",
-            "lastPublished": "2025-02-10T10:00:48.820Z",
-            "link": "https://www.bbc.com/pidgin/articles/cew5rdyv8xno",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/afed/live/c4059be0-e795-11ef-bd1b-d536627785f2.jpg.webp",
-            "description": "Oda stars wey show for New Orleans include Jay-Z, Blue Ivy, Samuel L Jackson and Bradley Cooper.",
-            "imageAlt": "Kendrick Lamar perform for Super Bowl",
-            "id": "cew5rdyv8xno"
+            "title": "Live Pidgin Disco 5 Media Type Text",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/c65nm48pr8et",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "c65nm48pr8et"
           },
           {
-            "type": "article",
+            "type": "audio",
             "isLive": false,
-            "title": "Chiefs or Eagles? Expert Super Bowl 59 predictions",
-            "firstPublished": "2025-02-09T11:09:40.757Z",
-            "lastPublished": "2025-02-09T11:09:40.757Z",
-            "link": "https://www.bbc.com/pidgin/articles/cpwxe9qq1geo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/6f19/live/fc271af0-e653-11ef-a819-277e390a7a08.jpg.webp",
-            "description": "We get Super Bowl 59 predictions from our BBC Sport team along wit TV analysts, current NFL players and even Hollywood stars.",
-            "imageAlt": "Di Super Bowl trophy and Chiefs and Eagles helmets",
-            "id": "cpwxe9qq1geo"
+            "title": "Live Pidgin Disco 6 Media Type Audio",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cpvg17j60m7t",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "cpvg17j60m7t"
           },
           {
-            "type": "article",
+            "type": "video",
             "isLive": false,
-            "title": "Authorties launch investigation into death of 'Pooley' afta dem stab am during match violence",
-            "firstPublished": "2025-02-03T18:41:37.185Z",
-            "lastPublished": "2025-02-03T18:41:37.185Z",
-            "link": "https://www.bbc.com/pidgin/articles/c2d31n7ek7ko",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/749d/live/33b3e9d0-e24e-11ef-92f7-95f549ee11cf.jpg.webp",
-            "description": "Di Ghana football association don postpone next round of league matches afta one fan die during stabbing incident for game between Nsoatreman and Kotoko",
-            "imageAlt": "The fan who died ",
-            "id": "c2d31n7ek7ko"
+            "title": "Live Pidgin Disco 7 Media Type Video",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cg2pr8l7j3nt",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "cg2pr8l7j3nt"
           }
         ],
         "activePage": 1,
-        "pageCount": 40,
-        "link": "https://www.bbc.com/pidgin/topics/cjgn7gv77vrt",
-        "curationId": "urn:bbc:vivo:curation:c61facc2-a4fa-4890-a0d9-a1718cccf88d",
-        "curationType": "vivo-stream",
-        "position": 6,
-        "title": "Sport",
-        "visualProminence": "LOW",
-        "visualStyle": "FEED"
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:b016ab49-c95c-4129-9a06-c28fac463064",
+        "curationType": "tipo-curation",
+        "position": 5,
+        "title": "Hierarchical Curation with Live Promos",
+        "visualProminence": "HIGH",
+        "visualStyle": "NONE"
       },
       {
         "summaries": [
           {
             "type": "link",
             "isLive": false,
-            "title": "WhatsApp",
+            "title": "X",
             "firstPublished": "",
             "lastPublished": "",
-            "link": "https://bit.ly/3VN51yR",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7a76/live/81f7b470-eac7-11ee-9410-0f893255c2a0.png.webp",
-            "imageAlt": "WhatsApp",
-            "id": "https%3A%2F%2Fwhatsapp.com%2Fchannel%2F0029VaUm1Ss3WHTbgIXrjw3D"
-          },
-          {
-            "type": "link",
-            "isLive": false,
-            "title": "Instagram",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://www.instagram.com/bbcnewspidgin/",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/14e1/live/e52afd10-929b-11ee-8df3-1d2983d8814f.png.webp",
-            "imageAlt": "Instagram logo",
-            "id": "https%3A%2F%2Fwww.instagram.com%2Fbbcafrique%2F"
+            "link": "https://x.com/bbcnewspidgin",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/2183/test/4e3ed810-2f3c-11f0-ac60-8553ded2cfd2.png.webp",
+            "description": "bbc news pidgin",
+            "imageAlt": "X",
+            "id": "https%3A%2F%2Fx.com%2Fbbcnewspidgin"
           },
           {
             "type": "link",
@@ -526,113 +273,289 @@
             "firstPublished": "",
             "lastPublished": "",
             "link": "https://www.facebook.com/bbcnewspidgin",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d3ce/live/baa6e4f0-929b-11ee-91bf-230bfab3fcba.png.webp",
-            "imageAlt": "Facebook logo",
-            "id": "https%3A%2F%2Fwww.facebook.com%2Fbbcnewsafrique"
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/da70/test/3231c0b0-2f3c-11f0-ac60-8553ded2cfd2.png.webp",
+            "description": "BBC News Pidgin",
+            "imageAlt": "Facebook",
+            "id": "https%3A%2F%2Fwww.facebook.com%2Fbbcnewspidgin"
           },
           {
             "type": "link",
             "isLive": false,
-            "title": "X",
+            "title": "Youtube - BBC News",
             "firstPublished": "",
             "lastPublished": "",
-            "link": "https://x.com/bbcnewspidgin",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c238/live/f608c4a0-929b-11ee-91bf-230bfab3fcba.png.webp",
-            "imageAlt": "X logo",
-            "id": "https%3A%2F%2Ftwitter.com%2Fbbcafrique"
+            "link": "https://www.youtube.com/@BBCnews",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/069c/test/4b9469d0-2f42-11f0-ac60-8553ded2cfd2.png.webp",
+            "imageAlt": "Youtube",
+            "id": "https%3A%2F%2Fwww.youtube.com%2F%40BBCnews"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Youtube - BBC Africa",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.youtube.com/@BBCAfrica",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/7a7b/test/1efbc990-2f42-11f0-ac60-8553ded2cfd2.png.webp",
+            "imageAlt": "Youtube",
+            "id": "https%3A%2F%2Fwww.youtube.com%2F%40BBCAfrica"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "TikTok",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.tiktok.com/@bbcnews",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/4e3d/test/9fe7f770-2f3f-11f0-ac60-8553ded2cfd2.png.webp",
+            "description": "BBC News",
+            "imageAlt": "Tiktok",
+            "id": "https%3A%2F%2Fwww.tiktok.com%2F%40bbcnews"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Instagram",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.instagram.com/bbcnewspidgin/",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/dd51/test/ae954740-2f3b-11f0-ac60-8553ded2cfd2.png.webp",
+            "description": "BBC News Pidgin",
+            "imageAlt": "Instagram",
+            "id": "https%3A%2F%2Fwww.instagram.com%2Fbbcnewspidgin%2F"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Linkedin",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://linkedin.com/company/bbc-news",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "https%3A%2F%2Flinkedin.com%2Fcompany%2Fbbc-news"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:262fa008-cb7d-476e-9376-7f1f10d744d5",
+        "curationId": "urn:bbc:tipo:list:0b433aee-4417-410b-9dd3-6c6ad6f12735",
         "curationType": "tipo-curation",
-        "position": 7,
-        "title": "BBC Pidgin Social networks",
+        "position": 6,
+        "title": "Social Links Pidgin",
         "visualProminence": "NORMAL",
-        "visualStyle": "COLLECTION"
+        "visualStyle": "LINKS"
       },
       {
         "curationId": "urn:bbc:onward-journeys:most:read?=site=News",
         "curationType": "most-popular",
-        "position": 8,
-        "title": "Di one wey oda users dey read well well",
+        "position": 7,
+        "title": "Most Read",
         "visualProminence": "NORMAL",
         "visualStyle": "RANKED",
         "link": "https://www.bbc.com/pidgin/popular/read",
         "mostRead": {
-          "generated": "2025-02-18T10:50:13.121Z",
-          "lastRecordTimeStamp": "2025-02-18T10:48:00Z",
-          "firstRecordTimeStamp": "2025-02-18T08:48:00Z",
+          "generated": "2025-06-25T22:04:56.941Z",
+          "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+          "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
           "items": [
             {
-              "id": "urn:bbc:optimo:asset:ce858gepkdno",
+              "id": "8fd89a41-e39d-754b-aaa1-062f4d6595a0",
               "rank": 1,
-              "title": "Nigeria give time first batch of  deportees from Trump US go land and oda details about di process",
-              "href": "https://www.bbc.com/pidgin/articles/ce858gepkdno",
-              "timestamp": "2025-02-17T12:33:32.216Z"
+              "title": "Fin - the secret Facebook group of Nigerian women 4",
+              "href": "/pidgin/tori-23135359",
+              "timestamp": "2017-06-21T13:47:09.000Z",
+              "indexImage": {
+                "id": "63501678",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/1563A/test/_63501678__90671229_dc5e4e46-8dd8-4eaa-a03d-bf22372127b8.jpg",
+                "path": "/cpsdevpb/1563A/test/_63501678__90671229_dc5e4e46-8dd8-4eaa-a03d-bf22372127b8.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "kəsib",
+                "caption": "kəsib",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              }
             },
             {
-              "id": "urn:bbc:optimo:asset:cwy1yeywpy8o",
+              "id": "bcd1e840-1734-8e4c-a191-94a759296fa2",
               "rank": 2,
-              "title": "Why police declare controversial singer Portable wanted",
-              "href": "https://www.bbc.com/pidgin/articles/cwy1yeywpy8o",
-              "timestamp": "2025-02-18T07:10:57.029Z"
+              "title": "Live Update: Voting Day for Kenya",
+              "href": "/pidgin/tori-23146452",
+              "timestamp": "2017-08-08T18:32:36.000Z",
+              "indexImage": {
+                "id": "63585611",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/2D8A/test/_63585611__97140717_gettyimages-163077224.jpg",
+                "path": "/cpsdevpb/2D8A/test/_63585611__97140717_gettyimages-163077224.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "Kenya people enter polling booth to start to vote",
+                "caption": "People don already dey for polling station by 6am",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              }
             },
             {
-              "id": "urn:bbc:optimo:asset:c360685jjl5o",
+              "id": "b582d74a-439a-1741-befd-c7af2c57b9b2",
               "rank": 3,
-              "title": "Ned Nwoko deny 'pregnancy, 7th wife marriage' report to Nollywood actress",
-              "href": "https://www.bbc.com/pidgin/articles/c360685jjl5o",
-              "timestamp": "2025-02-17T15:08:38.667Z"
+              "title": "South Africa no Get Money for Army",
+              "href": "/pidgin/tori-23139944",
+              "timestamp": "2017-08-08T19:17:33.000Z",
+              "indexImage": {
+                "id": "63577276",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/106CD/test/_63577276_tv000046325.jpg",
+                "path": "/cpsdevpb/106CD/test/_63577276_tv000046325.jpg",
+                "height": 432,
+                "width": 768,
+                "altText": "BBC",
+                "caption": "South Africa Army no go fit join fit protect the country",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              }
             },
             {
-              "id": "urn:bbc:optimo:asset:cvg533vvrxwo",
+              "id": "a0d223d4-4142-a74e-941d-5821ca4a0330",
               "rank": 4,
-              "title": "Niger Delta leader Edwin Clark don die",
-              "href": "https://www.bbc.com/pidgin/articles/cvg533vvrxwo",
-              "timestamp": "2025-02-18T10:17:42.661Z"
+              "title": "Kenya: Raila Odinga Don Reject Result",
+              "href": "/pidgin/tori-23146754",
+              "timestamp": "2017-08-09T12:08:56.000Z",
+              "indexImage": {
+                "id": "63586197",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/13540/test/_63586197_newodinga.jpg",
+                "path": "/cpsdevpb/13540/test/_63586197_newodinga.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "election, kenya, odinga, IEBC",
+                "caption": "Odinga say na only results wey follow di 34A channel im go accept",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              }
             },
             {
-              "id": "urn:bbc:optimo:asset:ce3n337yqv5o",
+              "id": "9f2e9c73-d22b-b14c-a557-bfdca715dd51",
               "rank": 5,
-              "title": "Passengers tok wetin dia eye see di moment Delta Air Lines plane crash  and turn upside down for Toronto",
-              "href": "https://www.bbc.com/pidgin/articles/ce3n337yqv5o",
-              "timestamp": "2025-02-18T07:27:48.871Z"
+              "title": "Kaduna: Government Order More Police",
+              "href": "/pidgin/23141241",
+              "timestamp": "2017-08-08T20:08:29.000Z",
+              "indexImage": {
+                "id": "63579338",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/145C5/test/_63579338_police.jpg",
+                "path": "/cpsdevpb/145C5/test/_63579338_police.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "More Nigerian Police join for Kaduna",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              }
             },
             {
-              "id": "urn:bbc:optimo:asset:cp8q8zmnj3eo",
+              "id": "81faf17c-88dd-4047-801f-f218bc24d504",
               "rank": 6,
-              "title": "Pope dey face serious health situation - Vatican tok",
-              "href": "https://www.bbc.com/pidgin/articles/cp8q8zmnj3eo",
-              "timestamp": "2025-02-17T14:48:11.257Z"
+              "title": "Holi festival photos",
+              "href": "/pidgin/23203390",
+              "timestamp": "2018-06-07T13:30:44.000Z",
+              "indexImage": {
+                "id": "63681004",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/9C52/test/_63681004_79fb2793-4686-4a9f-a81f-c062a848f329.jpg",
+                "path": "/cpsdevpb/9C52/test/_63681004_79fb2793-4686-4a9f-a81f-c062a848f329.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Holi children",
+                "caption": "Bangladeshi Hindu youths pose for photographs as they celebrate Holi (the festival of colours) in Mumbai",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "allowSyndication": true,
+                "type": "image"
+              }
             },
             {
-              "id": "urn:bbc:optimo:asset:cwy12xn4xpgo",
+              "id": "5dd7b90a-91aa-3149-81b0-fc33c5ece5fe",
               "rank": 7,
-              "title": "State creation: Full list of 31 new states wey House of Reps propose",
-              "href": "https://www.bbc.com/pidgin/articles/cwy12xn4xpgo",
-              "timestamp": "2025-02-06T14:40:55.861Z"
+              "title": "Fin - the secret Facebook group of Nigerian women 18",
+              "href": "/pidgin/sport-23135581",
+              "timestamp": "2017-06-22T08:20:52.000Z",
+              "indexImage": {
+                "id": "63501678",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/1563A/test/_63501678__90671229_dc5e4e46-8dd8-4eaa-a03d-bf22372127b8.jpg",
+                "path": "/cpsdevpb/1563A/test/_63501678__90671229_dc5e4e46-8dd8-4eaa-a03d-bf22372127b8.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "kəsib",
+                "caption": "kəsib",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              }
             },
             {
-              "id": "urn:bbc:optimo:asset:cn4m4lnv37zo",
+              "id": "4b211768-f9da-6b49-8677-5a5236153afe",
               "rank": 8,
-              "title": "Davido para as three die for Osun local government crisis",
-              "href": "https://www.bbc.com/pidgin/articles/cn4m4lnv37zo",
-              "timestamp": "2025-02-17T17:46:27.198Z"
+              "title": "Water Solutions for traffic gridlock in Lagos",
+              "href": "/igbo/23170719",
+              "timestamp": "2017-12-08T08:39:21.000Z",
+              "indexImage": {
+                "id": "63604748",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/14B04/test/_63604748_043410645-1.jpg",
+                "path": "/cpsdevpb/14B04/test/_63604748_043410645-1.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Commuters boarding speed boat in Lagos, Nigeria",
+                "caption": "Commuters prepare to board speed boat at Bayeku jetty, Ikorodu district of Lagos, Nigeria's commercial capital",
+                "copyrightHolder": "PIUS UTOMI EKPEI",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              }
             },
             {
-              "id": "urn:bbc:optimo:asset:c627p02e7jjo",
+              "id": "fbef465c-35ef-1c42-9286-39c895315d74",
               "rank": 9,
-              "title": "How police arrest man wey allegedly kill im 23-year-old girlfriend for Kwara",
-              "href": "https://www.bbc.com/pidgin/articles/c627p02e7jjo",
-              "timestamp": "2025-02-15T16:20:53.542Z"
+              "title": "Fin - the secret Facebook group of Nigerian women 17",
+              "href": "/pidgin/sport-23135580",
+              "timestamp": "2017-06-22T08:20:46.000Z",
+              "indexImage": {
+                "id": "63501678",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/1563A/test/_63501678__90671229_dc5e4e46-8dd8-4eaa-a03d-bf22372127b8.jpg",
+                "path": "/cpsdevpb/1563A/test/_63501678__90671229_dc5e4e46-8dd8-4eaa-a03d-bf22372127b8.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "kəsib",
+                "caption": "kəsib",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              }
             },
             {
-              "id": "510267e1-5f04-4f57-854f-f9a0cc7f3610",
+              "id": "bb173109-f21a-ee4f-a783-64b04cca43f7",
               "rank": 10,
-              "title": "Lagos state DSVA, police and odas dey investigate alleged sexual violence involving minors for Chrisland",
-              "href": "/pidgin/tori-61138014",
-              "timestamp": "2022-04-19T07:40:58.000Z"
+              "title": "Fin - the secret Facebook group of Nigerian women 3",
+              "href": "/pidgin/tori-23135358",
+              "timestamp": "2017-06-21T13:47:03.000Z",
+              "indexImage": {
+                "id": "63501678",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/1563A/test/_63501678__90671229_dc5e4e46-8dd8-4eaa-a03d-bf22372127b8.jpg",
+                "path": "/cpsdevpb/1563A/test/_63501678__90671229_dc5e4e46-8dd8-4eaa-a03d-bf22372127b8.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "kəsib",
+                "caption": "kəsib",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              }
             }
           ]
         }
@@ -640,10 +563,10 @@
     ],
     "metadata": {
       "atiAnalytics": {
-        "contentId": "urn:bbc:tipo:topic:ck3yk9nz25qt",
+        "contentId": "urn:bbc:tipo:topic:c93v2kkz841t",
         "contentType": "index-home",
         "pageIdentifier": "pidgin.page",
-        "pageTitle": "Domot - BBC News Pidgin"
+        "pageTitle": "BBC News Pidgin"
       }
     }
   },

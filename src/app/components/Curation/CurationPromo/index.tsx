@@ -25,6 +25,7 @@ const CurationPromo = ({
   duration: mediaDuration,
   headingLevel = 2,
   isLive,
+  isBillboardContext = false,
 }: Summary) => {
   const { isAmp, isLite } = use(RequestContext);
   const { translations } = use(ServiceContext);
@@ -46,7 +47,7 @@ const CurationPromo = ({
     (type === 'audio' && `${audioTranslation}, `) ||
     (type === 'video' && `${videoTranslation}, `) ||
     (type === 'photogallery' && `${photoGalleryTranslation}, `);
-
+  console.log(isBillboardContext, 'xxx', title);
   return (
     <Promo css={styles.promo} className="">
       {imageUrl && (
@@ -64,9 +65,16 @@ const CurationPromo = ({
           )}
         </Promo.Image>
       )}
-      <Promo.Heading as={`h${headingLevel}`}>
+      <Promo.Heading
+        as={`h${headingLevel}`}
+        css={isBillboardContext ? styles.billboardPromoText : undefined}
+      >
         {isMedia ? (
-          <Promo.A href={link} aria-labelledby={id}>
+          <Promo.A
+            href={link}
+            aria-labelledby={id}
+            css={isBillboardContext ? styles.billboardPromoText : undefined}
+          >
             <span id={id} role="text">
               <VisuallyHiddenText data-testid="visually-hidden-text">
                 {typeTranslated}
@@ -78,7 +86,10 @@ const CurationPromo = ({
             </span>
           </Promo.A>
         ) : (
-          <Promo.A href={link}>
+          <Promo.A
+            href={link}
+            css={isBillboardContext ? styles.billboardPromoText : undefined}
+          >
             {isLive ? <LiveLabel>{title}</LiveLabel> : title}
           </Promo.A>
         )}

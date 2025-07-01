@@ -62,6 +62,12 @@ describe('Home Page', () => {
     const { container } = render(<HomePage pageData={pidginHomePageData} />, {
       service: 'pidgin',
     });
+    const h2s = Array.from(container.querySelectorAll('h2'));
+    // eslint-disable-next-line no-console
+    console.log(
+      'H2s:',
+      h2s.map(h2 => h2.textContent),
+    );
     expect(container.querySelectorAll('h2').length).toBe(8);
     expect(container.querySelectorAll('h3').length).toBe(36);
   });
@@ -220,13 +226,22 @@ describe('Home Page', () => {
       });
 
       const nonLazyLoadImages: string[] = [];
+      // All images in message banners
       document
-        .querySelectorAll(
-          `[data-testid^="billboard"] img, [data-testid^="message-banner"] img`,
-        )
-        .forEach(image =>
-          nonLazyLoadImages.push(image.getAttribute(`src`) || ''),
-        );
+        .querySelectorAll('[data-testid^="message-banner"] img')
+        .forEach(image => {
+          nonLazyLoadImages.push(image.getAttribute('src') || '');
+        });
+
+      // First image in each billboard, DO WE WANT THE CURATION PROMO IMAGES TO BE EAGER LOADED?
+      document
+        .querySelectorAll('[data-testid^="billboard"]')
+        .forEach(section => {
+          const firstBillboardImg = section.querySelector('img');
+          if (firstBillboardImg) {
+            nonLazyLoadImages.push(firstBillboardImg.getAttribute('src') || '');
+          }
+        });
 
       const imageList = document.querySelectorAll('img');
 
@@ -234,8 +249,12 @@ describe('Home Page', () => {
         const src = image.getAttribute('src') || '';
 
         if (index === 0 || nonLazyLoadImages.includes(src)) {
+          console.log(
+            `Image at index ${index} with src ${src} is not lazy loaded`,
+          );
           expect(image.getAttribute('loading')).toBe('eager');
         } else {
+          console.log(`Image at index ${index} with src ${src} is lazy loaded`);
           expect(image.getAttribute('loading')).toBe('lazy');
         }
       });

@@ -21,4 +21,11 @@ export default {
     css({
       position: 'relative',
     }),
+  billboardPromoText: ({ palette }: Theme) =>
+    css({
+      color: '#fff',
+      '&:visited': {
+        color: `${palette.GREY_5}`,
+      },
+    }),
 };

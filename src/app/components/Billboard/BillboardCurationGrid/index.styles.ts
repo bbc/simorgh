@@ -1,0 +1,103 @@
+import { css, Theme } from '@emotion/react';
+
+const styles = {
+  list: ({ isLite, mq }: Theme) =>
+    css({
+      listStyleType: 'none',
+      padding: 0,
+      margin: 0,
+      display: 'grid',
+      gap: '1rem',
+
+      [mq.GROUP_2_MAX_WIDTH]: {
+        gridTemplateColumns: '1fr',
+        '& > li:nth-of-type(n + 5)': {
+          display: 'none',
+        },
+      },
+      [mq.GROUP_3_ONLY]: {
+        gridTemplateColumns: 'repeat(3, 1fr)',
+        '& > li:nth-of-type(n + 4)': {
+          display: 'none',
+        },
+      },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        gridTemplateColumns: 'repeat(4, 1fr)',
+        '& > li:nth-of-type(n + 5)': {
+          display: 'none',
+        },
+      },
+
+      ...(isLite && {
+        li: {
+          '.promo-text': {
+            width: '100%',
+            paddingInlineStart: 0,
+          },
+        },
+      }),
+    }),
+
+  item: ({ spacings, mq, palette }: Theme) =>
+    css({
+      verticalAlign: 'top',
+      display: 'block', // changed from inline-block to block for grid compatibility
+      width: '100%',
+      marginBottom: `${spacings.DOUBLE}rem`,
+
+      '.promo-image': {
+        [mq.GROUP_2_MAX_WIDTH]: {
+          width: '33%',
+          display: 'inline-block',
+          verticalAlign: 'top',
+        },
+        'div div:nth-child(2)': {
+          [mq.GROUP_1_MAX_WIDTH]: {
+            position: 'relative',
+          },
+          div: {
+            padding: `${spacings.FULL}rem`,
+            [mq.GROUP_4_MIN_WIDTH]: {
+              padding: '0.75rem',
+            },
+            svg: {
+              margin: 0,
+              [mq.GROUP_4_MIN_WIDTH]: {
+                width: `${spacings.TRIPLE}rem`,
+                height: `${spacings.TRIPLE}rem`,
+              },
+            },
+            time: {
+              marginLeft: `${spacings.FULL}rem`,
+              padding: '0',
+            },
+          },
+        },
+      },
+
+      '.promo-text': {
+        [mq.GROUP_2_MAX_WIDTH]: {
+          width: '67%',
+          display: 'inline-block',
+          verticalAlign: 'top',
+          paddingInlineStart: `${spacings.FULL}rem`,
+        },
+      },
+
+      [mq.GROUP_2_MAX_WIDTH]: {
+        borderTop: `1px ${palette.GREY_3} solid`,
+        paddingTop: `${spacings.FULL}rem`,
+      },
+
+      // Updated for grid layout
+      [mq.GROUP_3_ONLY]: {
+        marginBottom: `${spacings.TRIPLE}rem`,
+      },
+
+      [mq.GROUP_4_MIN_WIDTH]: {
+        marginBottom: '2.125rem',
+      },
+    }),
+};
+
+export default styles;

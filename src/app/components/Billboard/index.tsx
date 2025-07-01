@@ -4,12 +4,15 @@ import { jsx } from '@emotion/react';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
+import { Summary } from '#app/models/types/curationData';
 import Heading from '../Heading';
 import MaskedImage from '../MaskedImage';
 import styles from './index.styles';
 import Text from '../Text';
 import LivePulse from '../LivePulse';
 import LiveText from '../LiveText';
+import CurationGrid from '../Curation/CurationGrid';
+import BillboardCurationGrid from './BillboardCurationGrid';
 
 interface BillboardProps {
   heading: string;
@@ -20,6 +23,7 @@ interface BillboardProps {
   id?: string;
   eventTrackingData?: EventTrackingMetadata;
   showLiveLabel?: boolean;
+  summaries?: Summary[];
 }
 
 export default ({
@@ -31,6 +35,7 @@ export default ({
   id = 'billboard',
   eventTrackingData,
   showLiveLabel,
+  summaries = [],
 }: BillboardProps) => {
   const viewTracker = useViewTracker(eventTrackingData);
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
@@ -72,6 +77,19 @@ export default ({
               </Text>
             )}
           </div>
+          {summaries.length > 1 && (
+            <div css={styles.curationGridSection}>
+              <Heading
+                level={2}
+                size="greatPrimer"
+                css={{ color: '#FFFFFF', marginBottom: '16px' }} // might be a better way to set the colour
+              >
+                More like this
+              </Heading>
+
+              <BillboardCurationGrid summaries={summaries.slice(1)} />
+            </div>
+          )}
         </div>
       </div>
     </section>

@@ -6,6 +6,7 @@ import {
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
 import RadioSchedule from '#app/legacy/containers/RadioSchedule';
+import isLive from '#app/lib/utilities/isLive';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
@@ -112,6 +113,7 @@ export default ({
               }}
               showLiveLabel={summaryIsLive}
               altText={imageAlt}
+              summaries={summaries}
             />
           </div>
         );
@@ -154,7 +156,11 @@ export default ({
     case EMBED:
       return embed ? <Embed oembed={embed} /> : null;
     case PORTRAIT_VIDEO_CAROUSEL:
-      if (portraitVideo?.items && portraitVideo?.items?.length > 0) {
+      if (
+        portraitVideo?.items &&
+        portraitVideo?.items?.length > 0 &&
+        !isLive()
+      ) {
         return (
           <PortraitVideoCarousel
             title={title}
