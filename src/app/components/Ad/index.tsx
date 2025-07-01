@@ -13,7 +13,11 @@ const AdContainer = ({ slotType, className, adcampaign }: AdProps) => {
   const { enabled: isAdsNonceEnabled, value: countries } =
     useToggle('adsNonce');
 
-  const countriesForNonce = countries?.split(',')?.filter(Boolean) || [];
+  const countriesForNonce =
+    countries
+      ?.split(',')
+      ?.map(s => s.trim())
+      .filter(Boolean) || [];
   const nonceEnabledForCountry =
     countriesForNonce?.length === 0 || countriesForNonce.includes(country);
   const isNonceAllowed = isAdsNonceEnabled && nonceEnabledForCountry;
