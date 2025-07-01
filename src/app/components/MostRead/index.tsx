@@ -116,7 +116,6 @@ const MostRead = ({
   mobileDivider = false,
   headingBackgroundColour = WHITE,
   className = '',
-  // For testing only, may want to do a pageType check
   sendOptimizelyEvents = true,
 }: MostReadProps) => {
   const { isAmp, pageType, variant } = use(RequestContext);
