@@ -1,27 +1,8 @@
 import React, { use } from 'react';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_SPACING_QUAD,
-} from '#psammead/gel-foundations/src/spacings';
-
-import {
-  getDoublePica,
-  getBrevier,
-} from '#psammead/gel-foundations/src/typography';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
-import styled from '@emotion/styled';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import isEmpty from 'ramda/src/isEmpty';
 import tail from 'ramda/src/tail';
-import {
-  GEL_GROUP_0_SCREEN_WIDTH_MIN,
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MAX,
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
 import { GridItemMediumNoMargin } from '#components/Grid';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
@@ -29,7 +10,6 @@ import idSanitiser from '#lib/utilities/idSanitiser';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Promo from './Promo';
 import PromoList from './PromoList';
-import { TopBarOJsProps } from './PromoList/types';
 
 // interface TopBarOJsProps {
 //     blocks: ,
