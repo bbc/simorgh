@@ -4,7 +4,9 @@ import React, { use, useState } from 'react';
 import { jsx, useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
-import useOptimizelyMvtVariation from '#app/hooks/useOptimizelyMvtVariation';
+import useOptimizelyVariation, {
+  ExperimentType,
+} from '#app/hooks/useOptimizelyVariation';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
@@ -70,7 +72,9 @@ import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
 import styles from './ArticlePage.styles';
 import { ComponentToRenderProps, TimeStampProps } from './types';
-import ContinueReadingButton from './ContinueReadingButton';
+import ContinueReadingButton, {
+  Props as ContinueReadingProps,
+} from './ContinueReadingButton';
 import ArticleHeadline from './ArticleHeadline';
 import {
   isPortraitVideo,
@@ -164,7 +168,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   } = useTheme();
 
   const experimentName = 'newswb_ws_topbarojs_read_more';
-  const experimentVariant = useOptimizelyMvtVariation(experimentName);
+  const experimentVariant = useOptimizelyVariation({
+    experimentName,
+    experimentType: ExperimentType.SERVER_SIDE,
+  });
 
   const isInServerSideExperiment =
     experimentVariant && experimentVariant !== 'off';
@@ -276,6 +283,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     !isAmp &&
       !isLite &&
       !isApp &&
+      experimentVariant &&
       ['read-more-a', 'read-more-b', 'read-more-a-and-top-stories'].includes(
         experimentVariant,
       ),
@@ -345,7 +353,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               <ContinueReadingButton
                 showAllContent={showAllContent}
                 setShowAllContent={() => setShowAllContent(true)}
-                variation={experimentVariant}
+                variation={
+                  experimentVariant as ContinueReadingProps['variation']
+                }
                 liteCTAShows={liteCTAShows}
               />
             )}
