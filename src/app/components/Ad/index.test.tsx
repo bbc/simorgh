@@ -16,6 +16,7 @@ const context = {
   service: 'mundo',
   script: latinDiacritics,
   dir: 'ltr',
+  country: 'ES',
   translations: {
     ads: {
       advertisementLabel: 'Publicidad',
