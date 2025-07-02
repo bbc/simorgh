@@ -7,6 +7,7 @@ import { singleTextBlock } from '#app/models/blocks';
 import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
+import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
@@ -167,10 +168,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
-  const experimentName = 'newswb_ws_topbarojs_read_more';
+  const experimentName = 'newswb_ws_read_more_b';
   const experimentVariant = useOptimizelyVariation({
     experimentName,
-    experimentType: ExperimentType.SERVER_SIDE,
+    experimentType: ExperimentType.CLIENT_SIDE,
   });
 
   const isInServerSideExperiment =
@@ -400,4 +401,4 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   );
 };
 
-export default ArticlePage;
+export default withOptimizelyProvider(ArticlePage);
