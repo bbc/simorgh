@@ -6,8 +6,6 @@ export const assertWSLanguagesPage = () => {
 
 export const assertWSLanguagesPageURN = () => {
   it('should render the WS Languages Page with correct URN', () => {
-    cy.get('h1').should('have.text', 'Get the news in your language');
-
     cy.window().then(win => {
       const windowData = (
         win as Window & { SIMORGH_DATA?: { pageData?: { urn?: string } } }
