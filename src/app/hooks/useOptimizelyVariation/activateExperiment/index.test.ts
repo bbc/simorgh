@@ -1,4 +1,5 @@
 import onClient from '#lib/utilities/onClient';
+import { ReactSDKClient } from '@optimizely/react-sdk';
 import activateExperiment from '.';
 
 jest.mock('#lib/utilities/onClient');
@@ -18,14 +19,14 @@ describe('activateExperiment', () => {
   const mockExperimentVariation = 'bar';
 
   it('should set a forced variation and activate experiment when on client', async () => {
-    onClient.mockReturnValueOnce(true);
+    (onClient as jest.Mock).mockReturnValueOnce(true);
     mockOptimizely.onReady.mockResolvedValue({ success: true });
 
-    await activateExperiment(
-      mockOptimizely,
-      mockExperimentName,
-      mockExperimentVariation,
-    );
+    await activateExperiment({
+      optimizely: mockOptimizely as unknown as ReactSDKClient,
+      experimentName: mockExperimentName,
+      experimentVariation: mockExperimentVariation,
+    });
 
     expect(mockOptimizely.onReady).toHaveBeenCalledTimes(1);
     expect(mockOptimizely.setForcedVariation).toHaveBeenCalledTimes(1);
@@ -38,14 +39,14 @@ describe('activateExperiment', () => {
   });
 
   it('should not set a forced variation or experiment when on server', async () => {
-    onClient.mockReturnValueOnce(false);
+    (onClient as jest.Mock).mockReturnValueOnce(false);
     mockOptimizely.onReady.mockResolvedValue({ success: true });
 
-    await activateExperiment(
-      mockOptimizely,
-      mockExperimentName,
-      mockExperimentVariation,
-    );
+    await activateExperiment({
+      optimizely: mockOptimizely as unknown as ReactSDKClient,
+      experimentName: mockExperimentName,
+      experimentVariation: mockExperimentVariation,
+    });
 
     expect(mockOptimizely.onReady).not.toHaveBeenCalled();
     expect(mockOptimizely.setForcedVariation).not.toHaveBeenCalled();

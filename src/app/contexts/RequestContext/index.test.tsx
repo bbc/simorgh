@@ -53,7 +53,7 @@ const input = {
   pathname: '/current-path',
   variant: 'simp',
   showAdsBasedOnLocation: true,
-  mvtExperiments: [{ experimentName: 'foo', variation: 'bar' }],
+  serverSideExperiments: [{ experimentName: 'foo', variation: 'bar' }],
   isUK: true,
 };
 
@@ -83,7 +83,7 @@ const expectedOutput = {
   showCookieBannerBasedOnCountry: true,
   service: 'service',
   pathname: '/current-path',
-  mvtExperiments: input.mvtExperiments,
+  serverSideExperiments: input.serverSideExperiments,
 };
 
 describe('RequestContext', () => {
