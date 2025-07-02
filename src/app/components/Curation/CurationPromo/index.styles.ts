@@ -23,7 +23,7 @@ export default {
     }),
   billboardPromoText: ({ palette }: Theme) =>
     css({
-      color: '#fff',
+      color: `${palette.WHITE}`,
       '&:visited': {
         color: `${palette.GREY_5}`,
       },

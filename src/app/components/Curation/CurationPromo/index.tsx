@@ -94,7 +94,10 @@ const CurationPromo = ({
         )}
       </Promo.Heading>
       {!isLive ? (
-        <Promo.Timestamp className="promo-timestamp">
+        <Promo.Timestamp
+          className="promo-timestamp"
+          css={isBillboardContext ? styles.billboardPromoText : undefined}
+        >
           {lastPublished}
         </Promo.Timestamp>
       ) : null}
