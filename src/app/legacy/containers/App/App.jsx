@@ -47,7 +47,7 @@ export const App = ({ initialData, bbcOrigin }) => {
     showAdsBasedOnLocation,
     showCookieBannerBasedOnCountry,
     toggles,
-    mvtExperiments,
+    serverSideExperiments,
     isUK,
     country,
   } = initialData;
@@ -67,7 +67,7 @@ export const App = ({ initialData, bbcOrigin }) => {
     bbcOrigin,
     showAdsBasedOnLocation,
     showCookieBannerBasedOnCountry,
-    mvtExperiments,
+    serverSideExperiments,
     isUK,
   });
 };
