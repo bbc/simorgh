@@ -1,5 +1,6 @@
 import * as fonts from './font-families';
 
+// TODO - double check the usage
 /** @deprecated */
 export const getSansRegular = service => {
   if (!fonts[service]) {

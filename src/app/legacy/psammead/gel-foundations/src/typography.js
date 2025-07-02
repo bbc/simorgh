@@ -1,37 +1,52 @@
 import { MEDIA_QUERY_TYPOGRAPHY } from './breakpoints';
 import getTypeSizes from './getTypeSizes';
 
-// TODO
 const fontFamilyBase = ', Helvetica, Arial, sans-serif';
 
+// TODO: Font family variant
 export const GEL_FF_REITH_SERIF = `ReithSerif${fontFamilyBase}`;
 export const GEL_FF_REITH_SANS = `ReithSans${fontFamilyBase}`;
 export const GEL_FF_REITH_SANS_COND = `ReithSansCondensed${fontFamilyBase}`;
 
+//  TODO: Double-check usage
+
+/** @deprecated */
 export const getAtlas = script => getTypeSizes('atlas', script);
 
+/** @deprecated */
 export const getElephant = script => getTypeSizes('elephant', script);
 
+/** @deprecated */
 export const getImperial = script => getTypeSizes('imperial', script);
 
+/** @deprecated */
 export const getRoyal = script => getTypeSizes('royal', script);
 
+/** @deprecated */
 export const getFoolscap = script => getTypeSizes('foolscap', script);
 
+/** @deprecated */
 export const getCanon = script => getTypeSizes('canon', script);
 
+/** @deprecated */
 export const getTrafalgar = script => getTypeSizes('trafalgar', script);
 
+/** @deprecated */
 export const getParagon = script => getTypeSizes('paragon', script);
 
+/** @deprecated */
 export const getDoublePica = script => getTypeSizes('doublePica', script);
 
+/** @deprecated */
 export const getGreatPrimer = script => getTypeSizes('greatPrimer', script);
 
+/** @deprecated */
 export const getBodyCopy = script => getTypeSizes('bodyCopy', script);
 
+/** @deprecated */
 export const getPica = script => getTypeSizes('pica', script);
 
+/** @deprecated */
 export const getLongPrimer = script => getTypeSizes('longPrimer', script);
 
 export const getBrevier = script => getTypeSizes('brevier', script);

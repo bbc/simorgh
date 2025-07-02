@@ -1,6 +1,5 @@
 import React, { use } from 'react';
 import styled from '@emotion/styled';
-import { getLongPrimer } from '#psammead/gel-foundations/src/typography';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
 
@@ -13,7 +12,7 @@ const smallScreenMargin = `
 `;
 
 const Wrapper = styled.time`
-  ${({ script }) => script && getLongPrimer(script)}
+  ${({ theme: { fontSizes } }) => fontSizes.longPrimer}
   ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
   color: ${({ theme }) =>
     theme.isDarkUi ? theme.palette.PEBBLE : theme.palette.METAL};

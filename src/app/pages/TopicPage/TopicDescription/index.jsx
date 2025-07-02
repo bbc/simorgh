@@ -9,12 +9,11 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
-import { getGreatPrimer } from '#psammead/gel-foundations/src/typography';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const Paragraph = styled.p`
   ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
-  ${({ script }) => getGreatPrimer(script)}
+  ${({ theme: { fontSizes } }) => fontSizes.greatPrimer}
   color: ${props => props.theme.palette.GREY_10};
   padding-top: ${GEL_SPACING_DBL};
   margin: 0;

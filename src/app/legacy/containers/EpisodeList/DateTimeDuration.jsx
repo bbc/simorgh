@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { getBrevier } from '#psammead/gel-foundations/src/typography';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 
 import { withEpisodeContext } from './helpers';
@@ -20,7 +19,7 @@ ${
 `;
 
 const DateTimeDuration = styled.span`
-  ${({ script }) => getBrevier(script)}
+  ${({ theme: { fontSizes } }) => fontSizes.brevier}
   ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
   color: ${({ theme }) =>
     theme.isDarkUi ? theme.palette.PEBBLE : theme.palette.METAL};

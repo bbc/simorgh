@@ -5,11 +5,7 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
-import {
-  getBrevier,
-  getMinion,
-  getPica,
-} from '#psammead/gel-foundations/src/typography';
+import { getMinion } from '#psammead/gel-foundations/src/typography';
 import { formatDuration } from '#psammead/psammead-timestamp-container/src/utilities';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import ScheduleItemHeader from '../ScheduleItemHeader';
@@ -31,14 +27,14 @@ const TextWrapper = styled.div`
 
 const StyledH3 = styled.h3`
   ${({ theme: { fontVariants } }) => fontVariants.serifMedium};
-  ${({ script }) => script && getPica(script)};
+  ${({ theme: { fontSizes } }) => fontSizes.pica};
   color: ${({ headerTextColor }) => headerTextColor};
   margin: 0; /* Reset */
 `;
 
 const SummaryWrapper = styled.p`
   ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
-  ${({ script }) => script && getBrevier(script)}
+  ${({ theme: { fontSizes } }) => fontSizes.brevier}
   color: ${props => props.theme.palette.METAL};
   padding-top: ${GEL_SPACING};
   padding-bottom: ${GEL_SPACING_DBL};

@@ -11,7 +11,6 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
-import { getGreatPrimer } from '#psammead/gel-foundations/src/typography';
 
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
@@ -44,7 +43,7 @@ const Wrapper = styled.aside`
 `;
 
 const ThirdPartyLinksTitle = styled.h2`
-  ${({ script }) => getGreatPrimer(script)}
+  ${({ theme: { fontSizes } }) => fontSizes.greatPrimer}
   ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
   color: ${props => props.theme.palette.SHADOW};
   margin: 0;

@@ -1,12 +1,11 @@
 import React, { use } from 'react';
 import styled from '@emotion/styled';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
-import { getCanon } from '#psammead/gel-foundations/src/typography';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const H1 = styled.h1`
   ${({ theme: { fontVariants } }) => fontVariants.sansBold}
-  ${({ script }) => getCanon(script)}
+  ${({ theme: { fontSizes } }) => fontSizes.canon}
   color: ${props => props.theme.palette.GREY_10};
   margin: 0;
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {

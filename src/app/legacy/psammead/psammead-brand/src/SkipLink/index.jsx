@@ -4,7 +4,6 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
 } from '#psammead/gel-foundations/src/breakpoints';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
-import { getPica } from '#psammead/gel-foundations/src/typography';
 
 const SKIP_LINK_COLOR = '#333';
 const SKIP_LINK_BORDER = '0.1875rem'; // 3px
@@ -22,7 +21,7 @@ const SkipLink = styled.a`
   border: ${SKIP_LINK_BORDER} solid #000;
   color: ${SKIP_LINK_COLOR};
   text-decoration: none;
-  ${({ script }) => script && getPica(script)};
+  ${({ theme: { fontSizes } }) => fontSizes.pica};
   ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
 
   &:focus {

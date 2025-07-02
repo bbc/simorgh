@@ -2,16 +2,12 @@ import React from 'react';
 import styled from '@emotion/styled';
 import InlineLink from '#psammead/psammead-inline-link/src';
 import Paragraph from '#psammead/psammead-paragraph/src';
-import {
-  getCanon,
-  getParagon,
-  GEL_FF_REITH_SANS,
-} from '#psammead/gel-foundations/src/typography';
+import { GEL_FF_REITH_SANS } from '#psammead/gel-foundations/src/typography';
 import idSanitiser from '#lib/utilities/idSanitiser';
 import Grid, { GelPageGrid } from '#components/Grid';
 
 const StatusCode = styled.span`
-  ${props => (props.script ? getParagon(props.script) : '')}
+  ${({ theme: { fontSizes } }) => fontSizes.paragon}
   color: ${props => props.theme.palette.POSTBOX};
   display: block;
   font-family: ${GEL_FF_REITH_SANS};
@@ -20,7 +16,7 @@ const StatusCode = styled.span`
 `;
 
 const Heading = styled.h1`
-  ${({ script }) => script && getCanon(script)}
+  ${({ theme: { fontSizes } }) => fontSizes.canon}
   ${({ theme: { fontVariants } }) => fontVariants.serifMedium}
   color: ${props => props.theme.palette.SHADOW};
   margin-top: 0;

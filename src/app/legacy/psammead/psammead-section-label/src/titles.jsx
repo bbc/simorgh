@@ -9,7 +9,6 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
-import { getLongPrimer } from '#psammead/gel-foundations/src/typography';
 import { GHOST } from '#app/components/ThemeProvider/palette';
 
 const minClickableHeightPx = 44;
@@ -77,7 +76,7 @@ const Title = styled.span`
 `;
 
 const IndexLinkCta = styled.span`
-  ${({ script }) => script && getLongPrimer(script)};
+  ${({ theme: { fontSizes } }) => fontSizes.longPrimer};
   ${({ theme: { fontVariants } }) => fontVariants.sansBold};
   ${titleMargins};
   color: ${props => props.theme.palette.EBON};

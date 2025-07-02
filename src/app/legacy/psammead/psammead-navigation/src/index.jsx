@@ -11,7 +11,6 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
-import { getPica } from '#psammead/gel-foundations/src/typography';
 import { NAV_BAR_TOP_BOTTOM_SPACING } from './DropdownNavigation';
 import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
@@ -52,7 +51,7 @@ const ListItemBorder = `
 `;
 
 const StyledLink = styled.a`
-  ${({ script }) => script && getPica(script)};
+  ${({ theme: { fontSizes } }) => fontSizes.pica};
   ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
   color: ${props => props.theme.palette.GREY_10};
   cursor: pointer;

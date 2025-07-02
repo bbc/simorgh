@@ -5,10 +5,6 @@ import {
   GEL_SPACING_QUAD,
 } from '#psammead/gel-foundations/src/spacings';
 
-import {
-  getDoublePica,
-  getBrevier,
-} from '#psammead/gel-foundations/src/typography';
 import styled from '@emotion/styled';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
@@ -77,7 +73,7 @@ const ScrollablePromoContainer = styled.div`
 
 const LabelComponent = styled.strong`
   display: block;
-  ${({ script }) => script && getDoublePica(script)};
+  ${({ theme: { fontSizes } }) => fontSizes.doublePica};
   ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
   margin-bottom: ${GEL_SPACING_DBL};
   color: ${({ theme }) =>
@@ -100,7 +96,7 @@ const LabelComponent = styled.strong`
 const LabelComponentOJTopBar = styled(({ ariaLabel, ...props }) => (
   <strong aria-label={ariaLabel} {...props} />
 ))`
-  ${({ script }) => script && getBrevier(script)};
+  ${({ theme: { fontSizes } }) => fontSizes.brevier};
   ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
   display: inline-block;
   margin-bottom: ${GEL_SPACING_DBL};

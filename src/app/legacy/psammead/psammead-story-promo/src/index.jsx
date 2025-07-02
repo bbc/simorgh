@@ -15,12 +15,6 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
-import {
-  getParagon,
-  getLongPrimer,
-  getPica,
-  getDoublePica,
-} from '#psammead/gel-foundations/src/typography';
 import { grid } from '#psammead/psammead-styles/src/detection';
 import ImageGridItem from './ImageStyles';
 import TextGridItem from './TextStyles';
@@ -101,27 +95,23 @@ const ImageOverlayWrapper = styled.div`
   ${({ promoType }) => mediaIndicatorStyles[promoType]}
 `;
 
-const headlineTopStoryTypography = script => getParagon(script);
-
-const headlineRegularTypography = script => getPica(script);
-
-const headlineLeadingStoryTypography = script => getDoublePica(script);
-
-const headlineTypography = script => ({
-  top: headlineTopStoryTypography(script),
-  regular: headlineRegularTypography(script),
-  leading: headlineLeadingStoryTypography(script),
+// TODO: verify
+const headlineTypography = fontSizes => ({
+  top: fontSizes.paragon,
+  regular: fontSizes.pica,
+  leading: fontSizes.doublePica,
 });
 
 export const Headline = styled.h3`
   color: ${props => props.theme.palette.EBON};
   margin: 0; /* Reset */
   padding-bottom: ${GEL_SPACING};
-  ${({ theme: { fontVariants } }) => fontVariants.serifMedium}
-  ${({ script, promoType }) => script && headlineTypography(script)[promoType]}
+  ${({ theme: { fontVariants } }) => fontVariants.serifMedium};
+  ${({ promoType, theme: { fontSizes } }) =>
+    headlineTypography(fontSizes)[promoType]};
   ${({ promoHasImage }) =>
     !promoHasImage &&
-    `display: inline-block;`} /* Needed for aligning Media Indicator with Headline */
+    `display: inline-block;`}/* Needed for aligning Media Indicator with Headline */
 `;
 
 Headline.defaultProps = {
@@ -155,7 +145,7 @@ const summaryStyles = {
 };
 
 export const Summary = styled.p`
-  ${({ script }) => script && getLongPrimer(script)};
+  ${({ theme: { fontSizes } }) => fontSizes.longPrimer};
   ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
   color: ${props => props.theme.palette.SHADOW};
   margin: 0; /* Reset */

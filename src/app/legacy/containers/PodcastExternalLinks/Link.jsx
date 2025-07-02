@@ -1,8 +1,7 @@
 import styled from '@emotion/styled';
-import { getLongPrimer } from '#psammead/gel-foundations/src/typography';
 
 const Link = styled.a`
-  ${({ script }) => script && getLongPrimer(script)}
+  ${({ theme: { fontSizes } }) => fontSizes.longPrimer}
   ${({ theme: { fontVariants } }) => fontVariants.sansBold}
   ${({ dir }) =>
     dir === 'rtl' ? 'padding-left: 1rem;' : 'padding-right: 1rem;'}

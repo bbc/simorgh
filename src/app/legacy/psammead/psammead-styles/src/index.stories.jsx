@@ -1,3 +1,4 @@
+/** @deprecated - TBC */
 import React from 'react';
 import styled from '@emotion/styled';
 import { storiesOf } from '@storybook/react-webpack5';
@@ -7,17 +8,9 @@ import {
 } from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_FF_REITH_SANS,
-  getBodyCopy,
 } from '#psammead/gel-foundations/src/typography';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import { select, withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src/withServicesKnob';
-import {
-  getSansRegular,
-  getSansBold,
-  getSansRegularItalic,
-  getSansBoldItalic,
-} from '#psammead/psammead-styles/src/font-styles';
 import notes from '../README.md';
 import * as colours from './colours';
 import { grid } from './detection';
@@ -40,13 +33,13 @@ const ColourBox = styled.div`
   padding: ${GEL_SPACING_DBL} ${GEL_SPACING};
   border-radius: 0.3125rem;
   display: inline-block;
-  ${getBodyCopy(latin)};
+  ${({ theme: { fontSizes } }) => fontSizes.bodyCopy}
 `;
 
 const ColourValue = styled.div`
   padding-left: ${GEL_SPACING};
   display: inline-block;
-  ${getBodyCopy(latin)};
+  ${({ theme: { fontSizes } }) => fontSizes.bodyCopy}
 `;
 
 const Detects = styled.li`
@@ -86,20 +79,20 @@ const getFontStyles = fontName => {
 const detectionExamples = ['display: grid', grid];
 
 const RegularParagraph = styled.p`
-  ${({ script }) => script && getBodyCopy(script)};
+  ${({ theme: { fontSizes } }) => fontSizes.bodyCopy}
   ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
 `;
 const BoldParagraph = styled.p`
-  ${({ script }) => script && getBodyCopy(script)};
+  ${({ theme: { fontSizes } }) => fontSizes.bodyCopy}
   ${({ theme: { fontVariants } }) => fontVariants.sansBold}
 `;
 const ItalicParagraph = styled.p`
-  ${({ script }) => script && getBodyCopy(script)};
-  ${({ service }) => getSansRegularItalic(service)}
+  ${({ theme: { fontSizes } }) => fontSizes.bodyCopy}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegularItalic}
 `;
 const BoldItalicParagraph = styled.p`
-  ${({ script }) => script && getBodyCopy(script)};
-  ${({ service }) => getSansBoldItalic(service)}
+  ${({ theme: { fontSizes } }) => fontSizes.bodyCopy}
+  ${({ theme: { fontVariants } }) => fontVariants.sansBoldItalic}
 `;
 
 storiesOf('Utilities/Psammead Styles', module)

@@ -31,7 +31,7 @@ const TopicsList = styled.ul`
 
 const SingleTopicTagItem = styled.div`
   ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
-  ${({ script }) => script && getBrevier(script)}
+  ${({ theme: { fontSizes } }) => fontSizes.brevier}
 
   word-break: break-word;
   margin-top: ${GEL_SPACING};

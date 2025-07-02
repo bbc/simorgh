@@ -1,7 +1,6 @@
 import React, { use } from 'react';
 import styled from '@emotion/styled';
 import path from 'ramda/src/path';
-import { getPica } from '#psammead/gel-foundations/src/typography';
 import { Link } from '#psammead/psammead-story-promo/src';
 import {
   GEL_SPACING,
@@ -22,7 +21,7 @@ import LiveLabel from '../../../../components/LiveLabel';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 const StyledLink = styled(Link)`
-  ${({ script }) => script && getPica(script)}
+  ${({ theme: { fontSizes } }) => fontSizes.pica}
   ${({ theme: { fontVariants } }) => fontVariants.serifBold}
   width: 100%;
   text-decoration: none;

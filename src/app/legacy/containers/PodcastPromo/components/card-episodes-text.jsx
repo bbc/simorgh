@@ -1,12 +1,11 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
-import { getPica } from '#psammead/gel-foundations/src/typography';
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
 
 const EpisodesText = styled.p`
   display: inline;
-  ${({ script }) => getPica(script)}
+  ${({ theme: { fontSizes } }) => fontSizes.pica}
   ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
   color: ${props => props.theme.palette.METAL};
   > svg {
