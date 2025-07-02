@@ -1,4 +1,5 @@
 import { css, Theme } from '@emotion/react';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import pixelsToRem from '../../utilities/pixelsToRem';
 
 export default {
@@ -32,19 +33,27 @@ export default {
         border: `solid ${pixelsToRem(3)}rem transparent`,
       },
     }),
-  backgroundContainer: () =>
+  backgroundContainer: () => {
+    const {
+      SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
+      SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
+    } = getEnvConfig();
+    const staticAssestsPath = `${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
+    const billboardImage = '/images/billboard_image.jpg';
+    const imageUrl = `${staticAssestsPath}${billboardImage}`;
+
     css({
       zIndex: 2,
       position: 'absolute',
       top: '0',
-      backgroundImage: `linear-gradient(to bottom, rgba(118, 0, 0, 0.85) 50%, rgba(118, 0, 0, 0.0)), url('https://static.files.bbci.co.uk/core/website/assets/static/container-background-masks/billboard-ambient.d267649a68.jpg')`,
-
+      backgroundImage: `linear-gradient(to bottom, rgba(118, 0, 0, 0.85) 50%, rgba(118, 0, 0, 0.0)), url(${imageUrl})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       bottom: '0',
       width: '100%',
       overflow: 'hidden',
-    }),
+    });
+  },
   contentContainer: ({ mq, gridWidths, spacings }: Theme) =>
     css({
       zIndex: 3,
