@@ -119,9 +119,8 @@ export default {
   curationGridSection: ({ mq, spacings }: Theme) =>
     css({
       width: '100%',
-      // maxWidth: '1008px',
       margin: '0 auto',
-      padding: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem ${spacings.DOUBLE}rem ${spacings.DOUBLE}rem`,
+      padding: `${spacings.HALF}rem ${spacings.DOUBLE}rem ${spacings.DOUBLE}rem ${spacings.DOUBLE}rem`,
       boxSizing: 'border-box',
       display: 'flex',
       flexDirection: 'column',
