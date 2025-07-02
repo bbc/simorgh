@@ -34,7 +34,7 @@ const OptimizelyPageMetrics = ({
   useEffect(() => {
     if (optimizelyExperimentsEnabled) {
       optimizely?.onReady().then(() => {
-        const decisions = optimizely.decideAll([
+        const decisions = optimizely.decideForKeys(experimentsForPageType, [
           OptimizelyDecideOption.DISABLE_DECISION_EVENT,
         ]);
         const isUserInAnyExperiments = experimentsForPageType.some(

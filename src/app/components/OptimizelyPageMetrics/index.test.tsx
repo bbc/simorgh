@@ -16,7 +16,7 @@ const optimizely = {
   onReady: jest.fn(() => Promise.resolve()),
   track: jest.fn(),
   setUser: jest.fn(() => Promise.resolve()),
-  decideAll: jest.fn(() => ({
+  decideForKeys: jest.fn(() => ({
     mockExperiment1: { variationKey: 'variation_1' } as OptimizelyDecision,
     mockExperiment2: { variationKey: 'variation_1' } as OptimizelyDecision,
     mockExperimentOff: { variationKey: 'off' } as OptimizelyDecision,
@@ -296,9 +296,10 @@ describe('OptimizelyPageMetrics', () => {
       </ContextWrap>,
     );
     await waitFor(() => {
-      expect(optimizely.decideAll).toHaveBeenCalledWith([
-        'DISABLE_DECISION_EVENT',
-      ]);
+      expect(optimizely.decideForKeys).toHaveBeenCalledWith(
+        ['mockExperiment1', 'mockExperiment2'],
+        ['DISABLE_DECISION_EVENT'],
+      );
     });
   });
 
