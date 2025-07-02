@@ -39,14 +39,17 @@ export default {
       SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
     } = getEnvConfig();
     const staticAssestsPath = `${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
-    const billboardImage = '/images/billboard_image.jpg';
+    const billboardImage = 'images/billboard_image.jpg';
     const imageUrl = `${staticAssestsPath}${billboardImage}`;
-
-    css({
+    return css({
       zIndex: 2,
       position: 'absolute',
       top: '0',
-      backgroundImage: `linear-gradient(to bottom, rgba(118, 0, 0, 0.85) 50%, rgba(118, 0, 0, 0.0)), url(${imageUrl})`,
+      backgroundImage: `linear-gradient(
+  to bottom,
+  rgba(118, 0, 0, 0.85) 60%,
+  rgba(0, 0, 0, 0.85) 100%
+), url(${imageUrl})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       bottom: '0',
