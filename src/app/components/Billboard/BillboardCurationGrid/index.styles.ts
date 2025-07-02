@@ -11,21 +11,12 @@ const styles = {
 
       [mq.GROUP_2_MAX_WIDTH]: {
         gridTemplateColumns: '1fr',
-        '& > li:nth-of-type(n + 5)': {
-          display: 'none',
-        },
       },
       [mq.GROUP_3_ONLY]: {
         gridTemplateColumns: 'repeat(3, 1fr)',
-        '& > li:nth-of-type(n + 4)': {
-          display: 'none',
-        },
       },
       [mq.GROUP_4_MIN_WIDTH]: {
         gridTemplateColumns: 'repeat(4, 1fr)',
-        '& > li:nth-of-type(n + 5)': {
-          display: 'none',
-        },
       },
 
       ...(isLite && {

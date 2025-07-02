@@ -47,7 +47,6 @@ const CurationPromo = ({
     (type === 'audio' && `${audioTranslation}, `) ||
     (type === 'video' && `${videoTranslation}, `) ||
     (type === 'photogallery' && `${photoGalleryTranslation}, `);
-  console.log(isBillboardContext, 'xxx', title);
   return (
     <Promo css={styles.promo} className="">
       {imageUrl && (

@@ -1,42 +1,59 @@
 /** @jsx jsx */
 import { jsx, useTheme } from '@emotion/react';
-import { useMemo, useEffect, useState } from 'react';
+import { useMemo, useEffect, useState, useCallback } from 'react';
 import styles from './index.styles';
 import CurationPromo from '../../Curation/CurationPromo';
 import { CurationGridProps } from '../../Curation/types';
+import useMediaQuery from '../../../hooks/useMediaQuery';
+
+const group3OnlyQuery = '(min-width:600px) and (max-width:1007px)';
 
 const BillboardCurationGrid = ({
   summaries,
   isFirstCuration,
 }: CurationGridProps) => {
-  const hasMultiplePromos = summaries.length > 1;
-  const firstPromo = summaries[0];
-  if (summaries.length === 0) {
+  const [isGroup3Only, setIsGroup3Only] = useState(false);
+
+  const handleMediaQuery = useCallback(
+    mediaQueryList => setIsGroup3Only(mediaQueryList.matches),
+    [],
+  );
+
+  useMediaQuery(group3OnlyQuery, handleMediaQuery);
+
+  const maxPromos = isGroup3Only ? 3 : 4;
+  const visibleSummaries = summaries.slice(0, maxPromos);
+
+  if (visibleSummaries.length === 0) {
     return null;
   }
+
+  const hasMultiplePromos = visibleSummaries.length > 1;
+  const firstPromo = visibleSummaries[0];
+
   return (
-    <div data-testid="curation-grid-normal">
+    <div data-testid="billboard-curation-grid">
       {hasMultiplePromos ? (
         <ul css={styles.list} role="list" data-testid="topic-promos">
-          {summaries.map((promo, index) => {
-            const isFirstPromo = index === 0;
-            const lazyLoadImages = !(isFirstPromo && isFirstCuration);
-
-            return (
-              <li css={styles.item} key={promo.id}>
-                <CurationPromo
-                  {...promo}
-                  lazy={lazyLoadImages}
-                  headingLevel={3}
-                  isBillboardContext
-                />
-              </li>
-            );
-          })}
+          {visibleSummaries.map((promo, index) => (
+            <li css={styles.item} key={promo.id}>
+              <CurationPromo
+                {...promo}
+                lazy={!(index === 0 && isFirstCuration)}
+                headingLevel={3}
+                isBillboardContext
+              />
+            </li>
+          ))}
         </ul>
       ) : (
         <div css={styles.item}>
-          <CurationPromo {...firstPromo} lazy={!isFirstCuration} />
+          <CurationPromo
+            {...firstPromo}
+            lazy={!isFirstCuration}
+            headingLevel={3}
+            isBillboardContext
+          />
         </div>
       )}
     </div>

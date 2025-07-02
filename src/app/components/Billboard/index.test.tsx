@@ -5,7 +5,7 @@ import {
   screen,
 } from '../react-testing-library-with-providers';
 import Billboard from '.';
-import { kyrgyzBillboard } from './fixtures';
+import { kyrgyzBillboard, pidginLiveBillboard } from './fixtures';
 import * as viewTracking from '../../hooks/useViewTracker';
 import * as clickTracking from '../../hooks/useClickTrackerHandler';
 
@@ -104,6 +104,71 @@ describe('Billboard', () => {
     );
     const maskedImage = getByAltText(imageAlt);
     expect(maskedImage).toBeInTheDocument();
+  });
+
+  it('should render BillboardCurationGrid with CurationPromos when summaries are provided', () => {
+    render(
+      <Billboard
+        heading={pidginLiveBillboard.summaries[0].title}
+        description={pidginLiveBillboard.summaries[0].description ?? ''}
+        link={pidginLiveBillboard.summaries[0].link}
+        image={pidginLiveBillboard.summaries[0].imageUrl}
+        altText={pidginLiveBillboard.summaries[0].imageAlt}
+        summaries={pidginLiveBillboard.summaries}
+      />,
+    );
+
+    const gridContainer = screen.getByTestId('billboard-curation-grid');
+    expect(gridContainer).toBeInTheDocument();
+
+    const gridList = screen.getByRole('list');
+    expect(gridList).toBeInTheDocument();
+
+    // does not check the number of promos as this changes based on breakpoint.
+    // I could change breakpoint here but I do it in the BillboardCurationGrid tests.
+    const promoHeadings = screen.getAllByRole('heading', { level: 3 });
+    expect(promoHeadings.length).toBeGreaterThan(0);
+  });
+
+  it('should render an h2 heading with the text "More like this"', () => {
+    render(
+      <Billboard
+        heading={title}
+        description={description}
+        link={link}
+        image={imageUrl}
+        altText={imageAlt}
+        summaries={pidginLiveBillboard.summaries}
+      />,
+    );
+
+    const moreLikeThisHeading = screen.getByRole('heading', {
+      level: 2,
+      name: 'More like this',
+    });
+    expect(moreLikeThisHeading).toBeInTheDocument();
+  });
+
+  it('does not render the curation grid section if there is only one summary', () => {
+    render(
+      <Billboard
+        heading={title}
+        description={description}
+        link={link}
+        image={imageUrl}
+        altText={imageAlt}
+        summaries={[pidginLiveBillboard.summaries[0]]}
+      />,
+    );
+    const moreLikeThisHeading = screen.queryByRole('heading', {
+      level: 2,
+      name: 'More like this',
+    });
+    expect(moreLikeThisHeading).not.toBeInTheDocument();
+
+    expect(
+      screen.queryByTestId('billboard-curation-grid'),
+    ).not.toBeInTheDocument();
   });
 
   describe('Event Tracking', () => {
