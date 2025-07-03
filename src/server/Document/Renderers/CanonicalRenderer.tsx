@@ -37,7 +37,7 @@ const showScripts = (scripts: React.ReactElement | React.ReactElement[]) => {
 			scriptText += `${scriptKey}.setAttribute('type','${scriptProps.type}');`;
 			scriptText += `${scriptKey}.setAttribute('defer','${scriptProps.defer}');`;
 			scriptText += `${scriptKey}.setAttribute('async','${scriptProps.async}');`;
-			scriptText += `${scriptKey}.setAttribute('data-chunk','${scriptProps['data-chunk']}');`;
+			scriptText += `${scriptKey}.setAttribute('data-chunk','${(scriptProps as any)['data-chunk'] ?? ''}');`;
 			scriptText += `scriptcontainer.appendChild(${scriptKey});`;
 		}
 	});
