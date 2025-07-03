@@ -16,9 +16,10 @@ interface Props extends BaseRendererProps {
   modernScripts: React.ReactElement;
 }
 
-const showScripts = (scripts) => {
+const showScripts = (scripts: React.ReactElement | React.ReactElement[]) => {
+	const scriptsArray = Array.isArray(scripts) ? scripts : [scripts];
 	let scriptText = "const scriptcontainer = document.createElement('div');";
-	scripts.forEach(script => {
+	scriptsArray.forEach((script: React.ReactElement) => {
 		const scriptKey = script.key.replace(/[^a-zA-Z0-9]/g, '');
 		if (script.props.dangerouslySetInnerHTML) {
 			scriptText += `const ${scriptKey} = document.createElement('script');`;
