@@ -490,12 +490,43 @@ describe('Ad Container', () => {
       });
 
       it('should not add nonce when user is outside allowed countries', () => {
-        // TODO
+        const toggleState = {
+          ...adsToggle,
+          adsNonce: {
+            enabled: true,
+            value: 'ES, US',
+          },
+        };
+
+        renderAdContainer(toggleState, 'FR');
+
+        const adScripts = getAdScripts();
+
+        adScripts.forEach(script => {
+          expect(script.src).toBeTruthy();
+          expect(script).not.toHaveProperty('nonce');
+        });
       });
     });
 
     describe('when adsNonce toggle is enabled for all countries', () => {
-      // TODO
+      it('should add nonce for all countries', () => {
+        const toggleState = {
+          ...adsToggle,
+          adsNonce: {
+            enabled: true,
+            value: '',
+          },
+        };
+
+        renderAdContainer(toggleState, 'ES');
+
+        const adScripts = getAdScripts();
+
+        adScripts.forEach(script => {
+          expect(script.nonce).toBeTruthy();
+        });
+      });
     });
 
     describe('when adsNonce toggle is disabled', () => {
