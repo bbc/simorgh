@@ -2,9 +2,13 @@ import React from 'react';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 
 const ReverbTemplate = () => {
-  const staticAssetsPath = 
-    getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN + 
-    getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
+  const envConfig = getEnvConfig();
+  // Guard in case getEnvConfig() returns undefined
+  const staticAssetsPath =
+    (envConfig?.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN ?? '') +
+    (envConfig?.SIMORGH_PUBLIC_STATIC_ASSETS_PATH ?? '');
+  // Removed unused testScriptPath
+
   return (
     <>
       <script
@@ -20,13 +24,8 @@ const ReverbTemplate = () => {
               window.__reverb.__rejectReverbLoaded();
             }, 5000);
             const reverbScript = document.createElement('script');
-			reverbScript.setAttribute('src','${getEnvConfig().SIMORGH_REVERB_SOURCE}');
-			document.head.appendChild(reverbScript);
-			if ((navigator && navigator.connection) && ['2g', 'slow-2g', '3g'].includes(navigator.connection.effectiveType)) {
-				const testScript = document.createElement('script');
-				testScript.setAttribute('src','${staticAssetsPath}static/js/test/test.js');
-				document.head.appendChild(testScript);
-			}
+            reverbScript.setAttribute('src','${envConfig?.SIMORGH_REVERB_SOURCE ?? ''}');
+            document.head.appendChild(reverbScript);
             `,
         }}
       />
