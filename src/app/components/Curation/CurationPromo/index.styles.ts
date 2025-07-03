@@ -28,4 +28,14 @@ export default {
         color: `${palette.GREY_5}`,
       },
     }),
+  body: ({ spacings, palette, fontSizes }: Theme) =>
+    css({
+      marginTop: 0,
+      marginBottom: `${spacings.DOUBLE}rem`,
+      color: `${palette.WHITE}`,
+      '&:visited': {
+        color: `${palette.GREY_5}`,
+      },
+      ...fontSizes.longPrimer,
+    }),
 };

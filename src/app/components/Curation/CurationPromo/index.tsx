@@ -11,11 +11,13 @@ import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
 import LiveLabel from '../../LiveLabel';
+
 import styles from './index.styles';
 
 const CurationPromo = ({
   id,
   title,
+  description,
   lastPublished,
   imageUrl,
   imageAlt,
@@ -93,6 +95,13 @@ const CurationPromo = ({
           </Promo.A>
         )}
       </Promo.Heading>
+
+      {isBillboardContext && description && (
+        <Promo.Body className="promo-paragraph" css={styles.body}>
+          {description}
+        </Promo.Body>
+      )}
+
       {!isLive ? (
         <Promo.Timestamp
           className="promo-timestamp"

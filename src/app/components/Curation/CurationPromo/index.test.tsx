@@ -12,6 +12,7 @@ interface FixtureProps {
   duration?: number;
   link?: string;
   isLive?: boolean;
+  isBillboardContext?: boolean;
 }
 
 const Fixture = ({
@@ -20,6 +21,7 @@ const Fixture = ({
   duration,
   link = 'https://www.bbc.com/mundo/noticias-america-latina-60742314',
   isLive,
+  isBillboardContext = false,
 }: FixtureProps) => (
   <CurationPromo
     lazy={lazy}
@@ -33,6 +35,7 @@ const Fixture = ({
     type={type}
     duration={duration}
     isLive={isLive}
+    isBillboardContext={isBillboardContext}
   />
 );
 
@@ -128,5 +131,15 @@ describe('Curation Promo', () => {
       );
       expect(container.queryByText('17 abril 2023')).not.toBeInTheDocument();
     });
+  });
+
+  it('should render description when isBillboardContext is true', () => {
+    render(<Fixture isBillboardContext />, { service: 'mundo' });
+    expect(screen.getByText('This is a description')).toBeInTheDocument();
+  });
+
+  it('should not render description when isBillboardContext is false', () => {
+    render(<Fixture />, { service: 'mundo' });
+    expect(screen.queryByText('This is a description')).not.toBeInTheDocument();
   });
 });
