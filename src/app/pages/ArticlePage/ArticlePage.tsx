@@ -7,7 +7,6 @@ import { singleTextBlock } from '#app/models/blocks';
 import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
-import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
