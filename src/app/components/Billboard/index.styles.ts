@@ -39,7 +39,7 @@ export default {
       SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
     } = getEnvConfig();
     const staticAssestsPath = `${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
-    const billboardImage = 'images/billboard_image.jpg';
+    const billboardImage = 'images/billboard_image.jpg.webp';
     const imageUrl = `${staticAssestsPath}${billboardImage}`;
     return css({
       zIndex: 2,
