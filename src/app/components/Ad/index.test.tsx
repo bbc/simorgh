@@ -417,7 +417,7 @@ describe('Ad Container', () => {
     });
   });
 
-  describe('when adsNonce toggle is enabled', () => {
+  describe('when adsNonce toggle is enabled and country is allowed', () => {
     const toggleState = {
       ads: {
         enabled: true,
