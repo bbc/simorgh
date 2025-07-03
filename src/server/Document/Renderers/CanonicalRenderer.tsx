@@ -14,28 +14,30 @@ interface Props extends BaseRendererProps {
   links: React.ReactElement;
   legacyScripts: React.ReactElement;
   modernScripts: React.ReactElement;
+  service?: string;
 }
 
 const showScripts = (scripts: React.ReactElement | React.ReactElement[]) => {
 	const scriptsArray = Array.isArray(scripts) ? scripts : [scripts];
 	let scriptText = "const scriptcontainer = document.createElement('div');";
 	scriptsArray.forEach((script: React.ReactElement) => {
-		const scriptKey = script.key.replace(/[^a-zA-Z0-9]/g, '');
-		if (script.props.dangerouslySetInnerHTML) {
+		const scriptKey = (script.key ?? 'script').toString().replace(/[^a-zA-Z0-9]/g, '');
+		const scriptProps = script.props as React.ScriptHTMLAttributes<HTMLScriptElement>;
+		if (scriptProps.dangerouslySetInnerHTML) {
 			scriptText += `const ${scriptKey} = document.createElement('script');`;
-			scriptText += `${scriptKey}.setAttribute('id','${script.props.id}');`;
-			scriptText += `${scriptKey}.setAttribute('type','${script.props.type}');`;
-			scriptText += `${scriptKey}.innerHTML = ${JSON.stringify(script.props.dangerouslySetInnerHTML['__html'])};`;
+			scriptText += `${scriptKey}.setAttribute('id','${scriptProps.id}');`;
+			scriptText += `${scriptKey}.setAttribute('type','${scriptProps.type}');`;
+			scriptText += `${scriptKey}.innerHTML = ${JSON.stringify(scriptProps.dangerouslySetInnerHTML['__html'])};`;
 			scriptText += `scriptcontainer.appendChild(${scriptKey});`;
 		}
 		else {
 			scriptText += `const ${scriptKey} = document.createElement('script');`;
-			scriptText += `${scriptKey}.setAttribute('src','${script.props.src}');`;
-			scriptText += `${scriptKey}.setAttribute('crossOrigin','${script.props.crossOrigin}');`;
-			scriptText += `${scriptKey}.setAttribute('type','${script.props.type}');`;
-			scriptText += `${scriptKey}.setAttribute('defer','${script.props.defer}');`;
-			scriptText += `${scriptKey}.setAttribute('async','${script.props.async}');`;
-			scriptText += `${scriptKey}.setAttribute('data-chunk','${script.props['data-chunk']}');`;
+			scriptText += `${scriptKey}.setAttribute('src','${scriptProps.src}');`;
+			scriptText += `${scriptKey}.setAttribute('crossOrigin','${scriptProps.crossOrigin}');`;
+			scriptText += `${scriptKey}.setAttribute('type','${scriptProps.type}');`;
+			scriptText += `${scriptKey}.setAttribute('defer','${scriptProps.defer}');`;
+			scriptText += `${scriptKey}.setAttribute('async','${scriptProps.async}');`;
+			scriptText += `${scriptKey}.setAttribute('data-chunk','${scriptProps['data-chunk']}');`;
 			scriptText += `scriptcontainer.appendChild(${scriptKey});`;
 		}
 	});
