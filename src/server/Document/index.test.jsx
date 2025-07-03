@@ -1,115 +1,135 @@
+/* eslint-disable react/no-danger */
 import React from 'react';
-import * as server from 'react-dom/server';
-import { ChunkExtractor } from '@loadable/server';
-import renderDocument from '.';
-import { ServerApp } from '../../app/legacy/containers/App';
-import DocumentComponent from './component';
+import IfAboveIE9 from '#app/legacy/components/IfAboveIE9Comment';
+import NO_JS_CLASSNAME from '#app/lib/noJs.const';
+import { getProcessEnvAppVariables } from '#app/lib/utilities/getEnvConfig';
+import serialiseForScript from '#app/lib/utilities/serialiseForScript';
+import { BaseRendererProps } from './types';
+import ReverbTemplate from './ReverbTemplate';
+import ComponentTracking from './ComponentTracking';
 
-jest.mock('@loadable/server', () => ({
-  ChunkExtractor: jest.fn().mockImplementation(() => ({
-    collectChunks: arg => arg,
-    getScriptElements: () => '__mock_script_elements__',
-    getLinkElements: () => '__mock_link_elements__',
-  })),
-  ChunkExtractorManager: jest.fn(),
-}));
+interface Props extends BaseRendererProps {
+  data: Record<string, unknown>;
+  isApp: boolean;
+  links: React.ReactElement;
+  legacyScripts: React.ReactElement;
+  modernScripts: React.ReactElement;
+  service?: string;
+}
 
-jest.mock('./component', () => jest.fn());
+const showScripts = (scripts: React.ReactElement | React.ReactElement[]) => {
+  const scriptsArray = Array.isArray(scripts) ? scripts : [scripts];
+  let scriptText = "const scriptcontainer = document.createElement('div');";
+  scriptsArray.forEach((script: React.ReactElement) => {
+    const scriptKey = (script.key ?? 'script')
+      .toString()
+      .replace(/[^a-zA-Z0-9]/g, '');
+    type ScriptWithDataChunk = React.ScriptHTMLAttributes<HTMLScriptElement> & {
+      'data-chunk'?: string;
+    };
 
-jest.mock('../../app/legacy/containers/App', () => ({
-  ServerApp: jest.fn(),
-}));
-
-jest.mock('react-helmet', () => ({
-  Helmet: {
-    renderStatic: jest.fn(),
-  },
-}));
-
-jest.mock('react-dom/server', () => ({
-  renderToString: jest.fn().mockImplementation(() => 'no'),
-  renderToStaticMarkup: jest
-    .fn()
-    .mockImplementation(() => '<html lang="en-GB"></html>'),
-}));
-
-jest.spyOn(server, 'renderToString');
-jest.spyOn(server, 'renderToStaticMarkup');
-
-ServerApp.mockImplementation(() => <div />);
-DocumentComponent.mockImplementation(() => <html lang="en-GB" />);
-
-describe('Render Document', () => {
-  beforeEach(() => {
-    process.env.SIMORGH_APP_ENV = 'foobar';
+    const scriptProps = script.props as ScriptWithDataChunk;
+    if (scriptProps.dangerouslySetInnerHTML) {
+      scriptText += `const ${scriptKey} = document.createElement('script');`;
+      scriptText += `${scriptKey}.setAttribute('id','${scriptProps.id}');`;
+      scriptText += `${scriptKey}.setAttribute('type','${scriptProps.type}');`;
+      /* eslint-disable no-underscore-dangle */
+      scriptText += `${scriptKey}.innerHTML = ${JSON.stringify(scriptProps.dangerouslySetInnerHTML?.__html)};`;
+      scriptText += `scriptcontainer.appendChild(${scriptKey});`;
+    } else {
+      scriptText += `const ${scriptKey} = document.createElement('script');`;
+      scriptText += `${scriptKey}.setAttribute('src','${scriptProps.src}');`;
+      scriptText += `${scriptKey}.setAttribute('crossOrigin','${scriptProps.crossOrigin}');`;
+      scriptText += `${scriptKey}.setAttribute('type','${scriptProps.type}');`;
+      scriptText += `${scriptKey}.setAttribute('defer','${scriptProps.defer}');`;
+      scriptText += `${scriptKey}.setAttribute('async','${scriptProps.async}');`;
+      scriptText += `${scriptKey}.setAttribute('data-chunk','${(scriptProps as any)['data-chunk'] ?? ''}');`;
+      scriptText += `scriptcontainer.appendChild(${scriptKey});`;
+    }
   });
+  scriptText += `
+        if (!((navigator && navigator.connection) && ['2g', 'slow-2g', '3g'].includes(navigator.connection.effectiveType))){ 
+          document.body.appendChild(scriptcontainer);
+        }
+        else {
+          const noscriptTag = window.document.getElementsByTagName('noscript')[0];
+          const trackingDiv = document.createElement('DIV');
+          trackingDiv.innerHTML = noscriptTag.innerHTML;
+          window.document.body.appendChild(trackingDiv);
+        }`;
+  return (
+    <script
+      // This script should be the first script tag in the body, otherwise Opera Mini has trouble parsing the `window.SIMORGH_DATA` object
+      dangerouslySetInnerHTML={{
+        __html: scriptText,
+      }}
+    />
+  );
+};
 
-  afterAll(() => {
-    delete process.env.SIMORGH_APP_ENV;
-  });
+export default function CanonicalRenderer({
+  data,
+  helmetMetaTags,
+  helmetLinkTags,
+  helmetScriptTags,
+  htmlAttrs,
+  html,
+  isApp,
+  ids,
+  links,
+  legacyScripts,
+  modernScripts,
+  styles,
+  title,
+  service,
+}: Props) {
+  const serialisedData = serialiseForScript(data);
+  const appEnvVariables = serialiseForScript(getProcessEnvAppVariables());
 
-  it('should render correctly', done => {
-    renderDocument({
-      bbcOrigin: 'https://www.test.bbc.co.uk',
-      data: { test: 'data' },
-      isAmp: false,
-      isApp: false,
-      isLite: false,
-      routes: ['someRoute'],
-      service: 'news',
-      url: '/',
-    }).then(document => {
-      expect(document.html).toEqual(
-        '<!doctype html><html lang="en-GB"></html>',
-      );
-      expect(document.redirectUrl).toBe(null);
-
-      expect(server.renderToStaticMarkup.mock.calls[0][0].props).toStrictEqual({
-        app: {
-          css: '',
-          html: 'no',
-          ids: [],
-        },
-        data: { test: 'data' },
-        helmet: undefined,
-        isAmp: false,
-        isApp: false,
-        isLite: false,
-        legacyScripts: '__mock_script_elements__',
-        modernScripts: '__mock_script_elements__',
-        service: 'news',
-        links: '__mock_link_elements__',
-      });
-
-      expect(
-        server.renderToString.mock.calls[0][0].props.children.props.children
-          .props,
-      ).toStrictEqual({
-        bbcOrigin: 'https://www.test.bbc.co.uk',
-        context: {},
-        data: { test: 'data' },
-        isAmp: false,
-        isApp: false,
-        isLite: false,
-        location: '/',
-        routes: ['someRoute'],
-        service: 'news',
-      });
-
-      const [[legacyChunkExtractor], [modernChunkExtractor]] =
-        ChunkExtractor.mock.calls;
-
-      expect(legacyChunkExtractor).toEqual({
-        namespace: 'legacy',
-        statsFile: `${__dirname}/public/legacy-loadable-stats-foobar.json`,
-      });
-
-      expect(modernChunkExtractor).toEqual({
-        namespace: 'modern',
-        statsFile: `${__dirname}/public/modern-loadable-stats-foobar.json`,
-      });
-
-      done();
-    });
-  });
-});
+  return (
+    <html lang="en-GB" className={NO_JS_CLASSNAME} {...htmlAttrs}>
+      <head>
+        <ReverbTemplate />
+        {isApp && <meta name="robots" content="noindex" />}
+        {title}
+        {helmetMetaTags}
+        {helmetLinkTags}
+        {helmetScriptTags}
+        <style
+          data-emotion-css={ids?.join(' ')}
+          dangerouslySetInnerHTML={{ __html: styles }}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            // Read env variables from the server and expose them to the client
+            __html: `window.SIMORGH_ENV_VARS=${appEnvVariables}`,
+          }}
+        />
+        <ComponentTracking
+          trackComponentViews={false}
+          enableStaticClickTrackingOnOperaMiniOnly
+        />
+      </head>
+      <body>
+        <div id="root" dangerouslySetInnerHTML={{ __html: html || '' }} />
+        <script
+          // This script should be the first script tag in the body, otherwise Opera Mini has trouble parsing the `window.SIMORGH_DATA` object
+          dangerouslySetInnerHTML={{
+            __html: `window.SIMORGH_DATA=${serialisedData}`,
+          }}
+        />
+        {links}
+        <IfAboveIE9>
+          {service === 'urdu' ? showScripts(modernScripts) : modernScripts}
+          {legacyScripts}
+        </IfAboveIE9>
+        <script
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `document.documentElement.classList.remove("no-js");`,
+          }}
+        />
+      </body>
+    </html>
+  );
+}
