@@ -21,7 +21,11 @@ const showScripts = (scripts) => {
 	scripts.forEach(script => {
 		const scriptKey = script.key.replace(/[^a-zA-Z0-9]/g, '');
 		if (script.props.dangerouslySetInnerHTML) {
-			scriptText += `const ${scriptKey} = ${JSON.stringify(script.props.dangerouslySetInnerHTML['__html'])};`;
+			scriptText += `const ${scriptKey} = document.createElement('script');`;
+			scriptText += `${scriptKey}.setAttribute('id','${script.props.id}');`;
+			scriptText += `${scriptKey}.setAttribute('type','${script.props.type}');`;
+			scriptText += `${scriptKey}.innerHTML = ${JSON.stringify(script.props.dangerouslySetInnerHTML['__html'])};`;
+			scriptText += `scriptcontainer.appendChild(${scriptKey});`;
 		}
 		else {
 			scriptText += `const ${scriptKey} = document.createElement('script');`;
