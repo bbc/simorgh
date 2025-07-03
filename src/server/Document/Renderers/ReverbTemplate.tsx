@@ -5,7 +5,6 @@ const ReverbTemplate = () => {
   const envConfig = getEnvConfig();
 
   return (
-    <>
       <script
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{
@@ -24,7 +23,6 @@ const ReverbTemplate = () => {
             `,
         }}
       />
-    </>
   );
 };
 
