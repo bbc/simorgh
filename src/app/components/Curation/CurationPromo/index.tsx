@@ -89,23 +89,21 @@ const CurationPromo = ({
         ) : (
           <Promo.A
             href={link}
-            css={isBillboardContext ? styles.billboardPromoText : undefined}
+            css={
+              isBillboardContext ? styles.billboardPromoHeadingText : undefined
+            }
           >
             {isLive ? <LiveLabel>{title}</LiveLabel> : title}
           </Promo.A>
         )}
       </Promo.Heading>
 
-      {isBillboardContext && description && (
-        <Promo.Body className="promo-paragraph" css={styles.body}>
-          {description}
-        </Promo.Body>
-      )}
-
       {!isLive ? (
         <Promo.Timestamp
           className="promo-timestamp"
-          css={isBillboardContext ? styles.billboardPromoText : undefined}
+          css={
+            isBillboardContext ? styles.billboardPromoTimestampText : undefined
+          }
         >
           {lastPublished}
         </Promo.Timestamp>

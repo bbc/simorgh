@@ -21,21 +21,21 @@ export default {
     css({
       position: 'relative',
     }),
-  billboardPromoText: ({ palette }: Theme) =>
+  billboardPromoHeadingText: ({ palette }: Theme) =>
     css({
       color: `${palette.WHITE}`,
       '&:visited': {
         color: `${palette.GREY_5}`,
       },
     }),
-  body: ({ spacings, palette, fontSizes }: Theme) =>
+  billboardPromoTimestampText: ({ mq, palette, spacings }: Theme) =>
     css({
-      marginTop: 0,
-      marginBottom: `${spacings.DOUBLE}rem`,
       color: `${palette.WHITE}`,
       '&:visited': {
         color: `${palette.GREY_5}`,
       },
-      ...fontSizes.longPrimer,
+      [mq.GROUP_2_MAX_WIDTH]: {
+        marginBottom: `${spacings.DOUBLE}rem`,
+      },
     }),
 };

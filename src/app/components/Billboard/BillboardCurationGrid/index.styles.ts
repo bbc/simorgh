@@ -32,9 +32,8 @@ const styles = {
   item: ({ spacings, mq, palette }: Theme) =>
     css({
       verticalAlign: 'top',
-      display: 'block', // changed from inline-block to block for grid compatibility
+      display: 'block',
       width: '100%',
-      marginBottom: `${spacings.DOUBLE}rem`,
 
       '.promo-image': {
         [mq.GROUP_2_MAX_WIDTH]: {
@@ -80,13 +79,12 @@ const styles = {
         paddingTop: `${spacings.FULL}rem`,
       },
 
-      // Updated for grid layout
       [mq.GROUP_3_ONLY]: {
-        marginBottom: `${spacings.TRIPLE}rem`,
+        marginBottom: `${spacings.DOUBLE}rem`,
       },
 
       [mq.GROUP_4_MIN_WIDTH]: {
-        marginBottom: '2.125rem',
+        marginBottom: `${spacings.DOUBLE}rem`,
       },
     }),
 };
