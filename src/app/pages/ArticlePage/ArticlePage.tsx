@@ -401,4 +401,4 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   );
 };
 
-export default withOptimizelyProvider(ArticlePage);
+export default ArticlePage;
