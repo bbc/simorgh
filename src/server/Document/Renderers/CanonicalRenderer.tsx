@@ -18,34 +18,35 @@ interface Props extends BaseRendererProps {
 }
 
 const showScripts = (scripts: React.ReactElement | React.ReactElement[]) => {
-    const scriptsArray = Array.isArray(scripts) ? scripts : [scripts];
-    let scriptText = "const scriptcontainer = document.createElement('div');";
-    scriptsArray.forEach((script: React.ReactElement) => {
-        const scriptKey = (script.key ?? 'script').toString().replace(/[^a-zA-Z0-9]/g, '');
-        type ScriptWithDataChunk = React.ScriptHTMLAttributes<HTMLScriptElement> & {
-          'data-chunk'?: string;
-        };
+  const scriptsArray = Array.isArray(scripts) ? scripts : [scripts];
+  let scriptText = "const scriptcontainer = document.createElement('div');";
+  scriptsArray.forEach((script: React.ReactElement) => {
+    const scriptKey = (script.key ?? 'script')
+      .toString()
+      .replace(/[^a-zA-Z0-9]/g, '');
+    type ScriptWithDataChunk = React.ScriptHTMLAttributes<HTMLScriptElement> & {
+      'data-chunk'?: string;
+    };
 
-        const scriptProps = script.props as ScriptWithDataChunk;
-        if (scriptProps.dangerouslySetInnerHTML) {
-            scriptText += `const ${scriptKey} = document.createElement('script');`;
-            scriptText += `${scriptKey}.setAttribute('id','${scriptProps.id}');`;
-            scriptText += `${scriptKey}.setAttribute('type','${scriptProps.type}');`;
-            scriptText += `${scriptKey}.innerHTML = ${JSON.stringify(scriptProps.dangerouslySetInnerHTML?.['__html'])};`;
-            scriptText += `scriptcontainer.appendChild(${scriptKey});`;
-        }
-        else {
-            scriptText += `const ${scriptKey} = document.createElement('script');`;
-            scriptText += `${scriptKey}.setAttribute('src','${scriptProps.src}');`;
-            scriptText += `${scriptKey}.setAttribute('crossOrigin','${scriptProps.crossOrigin}');`;
-            scriptText += `${scriptKey}.setAttribute('type','${scriptProps.type}');`;
-            scriptText += `${scriptKey}.setAttribute('defer','${scriptProps.defer}');`;
-            scriptText += `${scriptKey}.setAttribute('async','${scriptProps.async}');`;
-            scriptText += `${scriptKey}.setAttribute('data-chunk','${(scriptProps as any)['data-chunk'] ?? ''}');`;
-            scriptText += `scriptcontainer.appendChild(${scriptKey});`;
-        }
-    });
-    scriptText += `
+    const scriptProps = script.props as ScriptWithDataChunk;
+    if (scriptProps.dangerouslySetInnerHTML) {
+      scriptText += `const ${scriptKey} = document.createElement('script');`;
+      scriptText += `${scriptKey}.setAttribute('id','${scriptProps.id}');`;
+      scriptText += `${scriptKey}.setAttribute('type','${scriptProps.type}');`;
+      scriptText += `${scriptKey}.innerHTML = ${JSON.stringify(scriptProps.dangerouslySetInnerHTML?.['__html'])};`;
+      scriptText += `scriptcontainer.appendChild(${scriptKey});`;
+    } else {
+      scriptText += `const ${scriptKey} = document.createElement('script');`;
+      scriptText += `${scriptKey}.setAttribute('src','${scriptProps.src}');`;
+      scriptText += `${scriptKey}.setAttribute('crossOrigin','${scriptProps.crossOrigin}');`;
+      scriptText += `${scriptKey}.setAttribute('type','${scriptProps.type}');`;
+      scriptText += `${scriptKey}.setAttribute('defer','${scriptProps.defer}');`;
+      scriptText += `${scriptKey}.setAttribute('async','${scriptProps.async}');`;
+      scriptText += `${scriptKey}.setAttribute('data-chunk','${(scriptProps as any)['data-chunk'] ?? ''}');`;
+      scriptText += `scriptcontainer.appendChild(${scriptKey});`;
+    }
+  });
+  scriptText += `
         if (!((navigator && navigator.connection) && ['2g', 'slow-2g', '3g'].includes(navigator.connection.effectiveType))){ 
             document.body.appendChild(scriptcontainer);
         }
@@ -55,12 +56,14 @@ const showScripts = (scripts: React.ReactElement | React.ReactElement[]) => {
             trackingDiv.innerHTML = noscriptTag.innerHTML;
             window.document.body.appendChild(trackingDiv);
         }`;
-    return <script
-          // This script should be the first script tag in the body, otherwise Opera Mini has trouble parsing the `window.SIMORGH_DATA` object
-          dangerouslySetInnerHTML={{
-            __html: scriptText,
-          }}
-        />;
+  return (
+    <script
+      // This script should be the first script tag in the body, otherwise Opera Mini has trouble parsing the `window.SIMORGH_DATA` object
+      dangerouslySetInnerHTML={{
+        __html: scriptText,
+      }}
+    />
+  );
 };
 
 export default function CanonicalRenderer({
