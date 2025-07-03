@@ -6,7 +6,7 @@
 const version = 'v0.3.0';
 const cacheName = 'simorghCache_v1';
 
-const service = self.location.pathname.split('/')[1];
+const service = self.location.pathname.split('/')[1].toLowerCase();
 const hasOfflinePageFunctionality = false;
 const OFFLINE_PAGE = `/${service}/offline`;
 
@@ -19,9 +19,9 @@ self.addEventListener('install', event => {
 
 const CACHEABLE_FILES = [
   // Reverb
-  /^https:\/\/static(?:\.test)?\.files\.bbci\.co\.uk\/ws\/(?:simorgh-assets|simorgh1-preview-assets|simorgh2-preview-assets)\/public\/static\/js\/reverb\/reverb-3.10.1.js$/,
+  /static\/js\/reverb\/reverb-3.10.1.js$/,
   // Smart Tag
-  'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/smarttag-5.29.4.min.js',
+  /smarttag-5.29.4.min.js$/,
   // Fonts
   /\.woff2$/,
   // Frosted Promo (test and live environments only)
@@ -73,6 +73,11 @@ const fetchEventHandler = async event => {
         return response;
       })(),
     );
+  } else if (service === 'urdu' && (navigator && navigator.connection) && ['2g', 'slow-2g', '3g'].includes(navigator.connection.effectiveType)) {
+  	if (/.js$/.test(event.request.url) && event.request.url !== 'http://static.chartbeat.com/js/chartbeat.js' && !/(test.js)/.test(event.request.url)) {
+  		event.respondWith(Response.error()); 
+  	}
+  	return null;
   } else if (hasOfflinePageFunctionality && event.request.mode === 'navigate') {
     event.respondWith(async () => {
       try {
