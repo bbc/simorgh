@@ -13,7 +13,7 @@ const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
   {
     pageType: ARTICLE_PAGE,
     activeExperiments: ['newswb_ws_read_more_b'],
-  }
+  },
 ];
 
 export default experimentsForPageMetrics;
