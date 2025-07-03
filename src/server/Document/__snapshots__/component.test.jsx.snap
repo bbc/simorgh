@@ -117,6 +117,7 @@ exports[`Document Component should render APP version correctly 1`] = `
             const reverbScript = document.createElement('script');
             reverbScript.setAttribute('src','http://localhost:7080/static/js/reverb/reverb-3.10.1.js');
             document.head.appendChild(reverbScript);
+            
     </script>
     <style
       data-emotion-css="7prgni-StyledLink"
@@ -286,10 +287,6 @@ exports[`Document Component should render correctly 1`] = `
       data-react-helmet="true"
       name="viewport"
     />
-    <script
-      async=""
-      src="http://localhost:7080/static/js/reverb/reverb-3.10.1.js"
-    />
     <link
       href="modern.main.js"
       rel="modulepreload"
@@ -322,6 +319,10 @@ exports[`Document Component should render correctly 1`] = `
             window.__reverb.__reverbTimeout = setTimeout(() =&gt; {
               window.__reverb.__rejectReverbLoaded();
             }, 5000);
+            const reverbScript = document.createElement('script');
+            reverbScript.setAttribute('src','http://localhost:7080/static/js/reverb/reverb-3.10.1.js');
+            document.head.appendChild(reverbScript);
+            
     </script>
     <style
       data-emotion-css="7prgni-StyledLink"
