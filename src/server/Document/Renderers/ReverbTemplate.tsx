@@ -3,11 +3,6 @@ import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 
 const ReverbTemplate = () => {
   const envConfig = getEnvConfig();
-  // Guard in case getEnvConfig() returns undefined
-  const staticAssetsPath =
-    (envConfig?.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN ?? '') +
-    (envConfig?.SIMORGH_PUBLIC_STATIC_ASSETS_PATH ?? '');
-  // Removed unused testScriptPath
 
   return (
     <>
