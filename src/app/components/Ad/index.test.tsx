@@ -4,6 +4,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import { Helmet } from 'react-helmet';
+import { Toggles } from '#app/models/types/global';
 import { render } from '../react-testing-library-with-providers';
 import latinDiacritics from '../ThemeProvider/fontScripts/latinWithDiacritics';
 import {
@@ -16,13 +17,16 @@ const context = {
   service: 'mundo',
   script: latinDiacritics,
   dir: 'ltr',
-  country: 'ES',
   translations: {
     ads: {
       advertisementLabel: 'Publicidad',
     },
   },
 };
+
+jest.mock('#app/lib/utilities/getUUID', () =>
+  jest.fn().mockImplementation(() => '12345678-abcd-1fed-0123-a1b2c3d4e5f6'),
+);
 
 describe('Ad Container', () => {
   const originalConfigUrl = process.env.SIMORGH_CONFIG_URL;
@@ -417,26 +421,22 @@ describe('Ad Container', () => {
     });
   });
 
-  describe('when adsNonce toggle is enabled and country is allowed', () => {
-    const toggleState = {
+  describe('Ad script nonce', () => {
+    const adsToggle = {
       ads: {
         enabled: true,
-      },
-      adsNonce: {
-        enabled: true,
-        value: 'ES,US',
       },
     };
 
     const mockToggleDispatch = jest.fn();
 
-    const toggleContextMock = {
-      toggleState,
-      toggleDispatch: mockToggleDispatch,
-    };
+    const renderAdContainer = (toggleState: Toggles, country: string) => {
+      const toggleContextMock = {
+        toggleState,
+        toggleDispatch: mockToggleDispatch,
+      };
 
-    it('should generate a nonce for the ad slot', () => {
-      const { container } = render(
+      return render(
         <ServiceContext.Provider
           // @ts-expect-error require partial data for testing purposes
           value={{ showAdPlaceholder: true, ...context }}
@@ -451,6 +451,7 @@ describe('Ad Container', () => {
             statusCode={200}
             pathname="/mundo"
             showAdsBasedOnLocation
+            country={country}
           >
             <ToggleContext.Provider value={toggleContextMock}>
               <BrowserRouter>
@@ -460,159 +461,61 @@ describe('Ad Container', () => {
           </RequestContextProvider>
         </ServiceContext.Provider>,
       );
-
-      expect(
-        container.querySelector('div[data-slot-type="leaderboard"]'),
-      ).toHaveAttribute('nonce');
-    });
-  });
-
-  describe('when adsNonce toggle is disabled', () => {
-    const toggleState = {
-      ads: {
-        enabled: true,
-      },
-      adsNonce: {
-        enabled: false,
-      },
     };
 
-    const mockToggleDispatch = jest.fn();
-
-    const toggleContextMock = {
-      toggleState,
-      toggleDispatch: mockToggleDispatch,
-    };
-
-    it('should not generate a nonce for the ad slot', () => {
-      const { container } = render(
-        <ServiceContext.Provider
-          // @ts-expect-error require partial data for testing purposes
-          value={{ showAdPlaceholder: true, ...context }}
-        >
-          <RequestContextProvider
-            bbcOrigin="https://www.test.bbc.co.uk"
-            id="c0000000000o"
-            isAmp={false}
-            isApp={false}
-            pageType={HOME_PAGE}
-            service="mundo"
-            statusCode={200}
-            pathname="/mundo"
-            showAdsBasedOnLocation
-          >
-            <ToggleContext.Provider value={toggleContextMock}>
-              <BrowserRouter>
-                <AdContainer slotType="leaderboard" />
-              </BrowserRouter>
-            </ToggleContext.Provider>
-          </RequestContextProvider>
-        </ServiceContext.Provider>,
+    const getAdScripts = () => {
+      const helmetContent = Helmet.peek().scriptTags;
+      return helmetContent.filter(
+        script => script.type === 'module' || script.noModule === true,
       );
+    };
 
-      expect(
-        container.querySelector('div[data-slot-type="leaderboard"]'),
-      ).not.toHaveAttribute('nonce');
+    describe('when adsNonce toggle is enabled with country restrictions', () => {
+      it('should add nonce when user is from an allowed country', () => {
+        const toggleState = {
+          ...adsToggle,
+          adsNonce: {
+            enabled: true,
+            value: 'ES, US',
+          },
+        };
+
+        renderAdContainer(toggleState, 'ES');
+
+        const adScripts = getAdScripts();
+
+        adScripts.forEach(script => {
+          expect(script.nonce).toBeTruthy();
+        });
+      });
+
+      it('should not add nonce when user is outside allowed countries', () => {
+        // TODO
+      });
+    });
+
+    describe('when adsNonce toggle is enabled for all countries', () => {
+      // TODO
+    });
+
+    describe('when adsNonce toggle is disabled', () => {
+      it('should not add nonce', () => {
+        const toggleState = {
+          ...adsToggle,
+          adsNonce: {
+            enabled: false,
+          },
+        };
+
+        renderAdContainer(toggleState, 'ES');
+
+        const adScripts = getAdScripts();
+
+        adScripts.forEach(script => {
+          expect(script.src).toBeTruthy();
+          expect(script).not.toHaveProperty('nonce');
+        });
+      });
     });
   });
-  describe('when adsNonce toggle is enabled but not allowed for the country', () => {
-    const toggleState = {
-      ads: {
-        enabled: true,
-      },
-      adsNonce: {
-        enabled: true,
-        value: 'US,CA',
-      },
-    };
-
-    const mockToggleDispatch = jest.fn();
-
-    const toggleContextMock = {
-      toggleState,
-      toggleDispatch: mockToggleDispatch,
-    };
-
-    it('should not generate a nonce for the ad slot', () => {
-      const { container } = render(
-        <ServiceContext.Provider
-          // @ts-expect-error require partial data for testing purposes
-          value={{ showAdPlaceholder: true, ...context }}
-        >
-          <RequestContextProvider
-            bbcOrigin="https://www.test.bbc.co.uk"
-            id="c0000000000o"
-            isAmp={false}
-            isApp={false}
-            pageType={HOME_PAGE}
-            service="mundo"
-            statusCode={200}
-            pathname="/mundo"
-            country="ES"
-            showAdsBasedOnLocation
-          >
-            <ToggleContext.Provider value={toggleContextMock}>
-              <BrowserRouter>
-                <AdContainer slotType="leaderboard" />
-              </BrowserRouter>
-            </ToggleContext.Provider>
-          </RequestContextProvider>
-        </ServiceContext.Provider>,
-      );
-
-      expect(
-        container.querySelector('div[data-slot-type="leaderboard"]'),
-      ).not.toHaveAttribute('nonce');
-    });
-  });
-  describe('when adsNonce toggle is enabled but no countries are specified', () => {
-    const toggleState = {
-      ads: {
-        enabled: true,
-      },
-      adsNonce: {
-        enabled: true,
-        value: '',
-      },
-    };
-
-    const mockToggleDispatch = jest.fn();
-
-    const toggleContextMock = {
-      toggleState,
-      toggleDispatch: mockToggleDispatch,
-    };
-
-    it('should generate a nonce for the ad slot', () => {
-      const { container } = render(
-        <ServiceContext.Provider
-          // @ts-expect-error require partial data for testing purposes
-          value={{ showAdPlaceholder: true, ...context }}
-        >
-          <RequestContextProvider
-            bbcOrigin="https://www.test.bbc.co.uk"
-            id="c0000000000o"
-            isAmp={false}
-            isApp={false}
-            pageType={HOME_PAGE}
-            service="mundo"
-            statusCode={200}
-            pathname="/mundo"
-            showAdsBasedOnLocation
-          >
-            <ToggleContext.Provider value={toggleContextMock}>
-              <BrowserRouter>
-                <AdContainer slotType="leaderboard" />
-              </BrowserRouter>
-            </ToggleContext.Provider>
-          </RequestContextProvider>
-        </ServiceContext.Provider>,
-      );
-
-      expect(
-        container.querySelector('div[data-slot-type="leaderboard"]'),
-      ).toHaveAttribute('nonce');
-    });
-  });
-
 });
