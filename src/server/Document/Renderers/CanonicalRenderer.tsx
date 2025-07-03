@@ -33,7 +33,7 @@ const showScripts = (scripts: React.ReactElement | React.ReactElement[]) => {
       scriptText += `const ${scriptKey} = document.createElement('script');`;
       scriptText += `${scriptKey}.setAttribute('id','${scriptProps.id}');`;
       scriptText += `${scriptKey}.setAttribute('type','${scriptProps.type}');`;
-      scriptText += `${scriptKey}.innerHTML = ${JSON.stringify(scriptProps.dangerouslySetInnerHTML?.['__html'])};`;
+      scriptText += `${scriptKey}.innerHTML = ${JSON.stringify(scriptProps.dangerouslySetInnerHTML?.__html)};`;
       scriptText += `scriptcontainer.appendChild(${scriptKey});`;
     } else {
       scriptText += `const ${scriptKey} = document.createElement('script');`;
