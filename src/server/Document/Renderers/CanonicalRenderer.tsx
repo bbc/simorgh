@@ -16,6 +16,42 @@ interface Props extends BaseRendererProps {
   modernScripts: React.ReactElement;
 }
 
+const showScripts = (scripts) => {
+	let scriptText = "const scriptcontainer = document.createElement('div');";
+	scripts.forEach(script => {
+		const scriptKey = script.key.replace(/[^a-zA-Z0-9]/g, '');
+		if (script.props.dangerouslySetInnerHTML) {
+			scriptText += `const ${scriptKey} = ${JSON.stringify(script.props.dangerouslySetInnerHTML['__html'])};`;
+		}
+		else {
+			scriptText += `const ${scriptKey} = document.createElement('script');`;
+			scriptText += `${scriptKey}.setAttribute('src','${script.props.src}');`;
+			scriptText += `${scriptKey}.setAttribute('crossOrigin','${script.props.crossOrigin}');`;
+			scriptText += `${scriptKey}.setAttribute('type','${script.props.type}');`;
+			scriptText += `${scriptKey}.setAttribute('defer','${script.props.defer}');`;
+			scriptText += `${scriptKey}.setAttribute('async','${script.props.async}');`;
+			scriptText += `${scriptKey}.setAttribute('data-chunk','${script.props['data-chunk']}');`;
+			scriptText += `scriptcontainer.appendChild(${scriptKey});`;
+		}
+	});
+	scriptText += `
+		if (!((navigator && navigator.connection) && ['2g', 'slow-2g', '3g'].includes(navigator.connection.effectiveType))){ 
+			document.body.appendChild(scriptcontainer);
+		}
+		else {
+			const noscriptTag = window.document.getElementsByTagName('noscript')[0];
+			const trackingDiv = document.createElement('DIV');
+			trackingDiv.innerHTML = noscriptTag.innerHTML;
+			window.document.body.appendChild(trackingDiv);
+		}`;
+	return <script
+          // This script should be the first script tag in the body, otherwise Opera Mini has trouble parsing the `window.SIMORGH_DATA` object
+          dangerouslySetInnerHTML={{
+            __html: scriptText,
+          }}
+        />;
+};
+
 export default function CanonicalRenderer({
   data,
   helmetMetaTags,
@@ -30,7 +66,9 @@ export default function CanonicalRenderer({
   modernScripts,
   styles,
   title,
+  service,
 }: Props) {
+  console.log('service', service)
   const serialisedData = serialiseForScript(data);
   const appEnvVariables = serialiseForScript(getProcessEnvAppVariables());
 
@@ -68,7 +106,7 @@ export default function CanonicalRenderer({
         />
         {links}
         <IfAboveIE9>
-          {modernScripts}
+          {service === 'urdu' ? showScripts(modernScripts) : modernScripts}
           {legacyScripts}
         </IfAboveIE9>
         <script
