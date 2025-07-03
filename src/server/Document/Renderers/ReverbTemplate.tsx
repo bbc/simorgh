@@ -5,7 +5,6 @@ const ReverbTemplate = () => {
   const staticAssetsPath = 
     getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN + 
     getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
-  const testScriptPath = 'static/js/test/test.js';
   return (
     <>
       <script
