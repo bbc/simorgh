@@ -33,6 +33,7 @@ const showScripts = (scripts: React.ReactElement | React.ReactElement[]) => {
       scriptText += `const ${scriptKey} = document.createElement('script');`;
       scriptText += `${scriptKey}.setAttribute('id','${scriptProps.id}');`;
       scriptText += `${scriptKey}.setAttribute('type','${scriptProps.type}');`;
+      /* eslint-disable no-underscore-dangle */
       scriptText += `${scriptKey}.innerHTML = ${JSON.stringify(scriptProps.dangerouslySetInnerHTML?.__html)};`;
       scriptText += `scriptcontainer.appendChild(${scriptKey});`;
     } else {
@@ -48,13 +49,13 @@ const showScripts = (scripts: React.ReactElement | React.ReactElement[]) => {
   });
   scriptText += `
         if (!((navigator && navigator.connection) && ['2g', 'slow-2g', '3g'].includes(navigator.connection.effectiveType))){ 
-            document.body.appendChild(scriptcontainer);
+          document.body.appendChild(scriptcontainer);
         }
         else {
-            const noscriptTag = window.document.getElementsByTagName('noscript')[0];
-            const trackingDiv = document.createElement('DIV');
-            trackingDiv.innerHTML = noscriptTag.innerHTML;
-            window.document.body.appendChild(trackingDiv);
+          const noscriptTag = window.document.getElementsByTagName('noscript')[0];
+          const trackingDiv = document.createElement('DIV');
+          trackingDiv.innerHTML = noscriptTag.innerHTML;
+          window.document.body.appendChild(trackingDiv);
         }`;
   return (
     <script
