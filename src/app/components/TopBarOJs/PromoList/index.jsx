@@ -2,16 +2,6 @@
 /* @jsxFrag React.Fragment */
 import { jsx } from '@emotion/react';
 import { use } from 'react';
-import styled from '@emotion/styled';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-} from '#psammead/gel-foundations/src/spacings';
-import {
-  GEL_GROUP_0_SCREEN_WIDTH_MIN,
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Promo from '../Promo';
