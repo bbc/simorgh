@@ -7,6 +7,7 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import LiveLabel from '../../LiveLabel';
 import { ServiceContext } from '../../../contexts/ServiceContext';
+import styles from './index.styles';
 
 const Promo = ({ block, experimentVariant, clickTracker }) => {
   const { script, service, serviceDatetimeLocale } = use(ServiceContext);
@@ -78,16 +79,10 @@ const Promo = ({ block, experimentVariant, clickTracker }) => {
 
   return (
     <WrapperPromoBox experimentVariant={experimentVariant}>
-      <StyledLink
-        href={href}
-        service={service}
-        script={script}
-        {...clickTracker}
-        experimentVariant={experimentVariant}
-      >
+      <li css={styles.link} href={href} {...clickTracker}>
         {isLive && <LiveLabel />}
         {title}
-      </StyledLink>
+      </li>
       {timestamp && !experimentVariant && (
         <TimeStamp
           serviceDatetimeLocale={serviceDatetimeLocale}
