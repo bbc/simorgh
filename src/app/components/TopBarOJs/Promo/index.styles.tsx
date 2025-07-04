@@ -47,10 +47,4 @@ export default {
       },
     });
   },
-  timestamp: ({ isDarkUi, palette, spacings }: Theme) => {
-    css({
-      marginTop: `${spacings.FULL}rem`,
-      color: isDarkUi ? palette.GREY_6 : undefined,
-    });
-  },
 };
