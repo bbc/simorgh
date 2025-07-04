@@ -10,12 +10,10 @@ import { ServiceContext } from '../../../contexts/ServiceContext';
 import styles from './index.styles';
 
 const Promo = ({ block, experimentVariant, clickTracker }) => {
-  const { script, service, serviceDatetimeLocale } = use(ServiceContext);
+  const { serviceDatetimeLocale } = use(ServiceContext);
   let title;
   let href;
   let textBlock;
-  let aresLinkBlock;
-  let timestamp;
   let isLive;
 
   switch (experimentVariant) {
@@ -52,14 +50,6 @@ const Promo = ({ block, experimentVariant, clickTracker }) => {
     }
     default:
       textBlock = filterForBlockType(block?.model?.blocks || {}, 'text');
-      aresLinkBlock = filterForBlockType(
-        block?.model?.blocks || {},
-        'aresLink',
-      );
-      timestamp = path(
-        ['model', 'blocks', '0', 'model', 'timestamp'],
-        aresLinkBlock,
-      );
       href =
         path(
           ['model', 'blocks', '0', 'model', 'blocks', '0', 'model', 'locator'],
@@ -75,23 +65,13 @@ const Promo = ({ block, experimentVariant, clickTracker }) => {
 
   const isOperaMini = useOperaMiniDetection();
 
-  const WrapperPromoBox = isOperaMini ? OperaPromoBox : PromoBox;
-
   return (
-    <WrapperPromoBox experimentVariant={experimentVariant}>
+    <div css={[isOperaMini ? styles.operaPromoBox : styles.promoBox]}>
       <li css={styles.link} href={href} {...clickTracker}>
         {isLive && <LiveLabel />}
         {title}
       </li>
-      {timestamp && !experimentVariant && (
-        <TimeStamp
-          serviceDatetimeLocale={serviceDatetimeLocale}
-          data-testid="timestamp"
-        >
-          {timestamp}
-        </TimeStamp>
-      )}
-    </WrapperPromoBox>
+    </div>
   );
 };
 
