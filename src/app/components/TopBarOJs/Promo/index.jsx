@@ -1,4 +1,7 @@
-import React, { use } from 'react';
+/** @jsx jsx */
+/* @jsxFrag React.Fragment */
+import { jsx } from '@emotion/react';
+import { use } from 'react';
 import path from 'ramda/src/path';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
@@ -46,10 +49,6 @@ const Promo = ({ block, experimentVariant, clickTracker }) => {
       isLive = block.isLive;
       break;
     }
-    case 'top-bar-most-read':
-      title = block.title;
-      href = block.href;
-      break;
     default:
       textBlock = filterForBlockType(block?.model?.blocks || {}, 'text');
       aresLinkBlock = filterForBlockType(
