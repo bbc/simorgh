@@ -11,8 +11,14 @@ const group3OnlyQuery = '(min-width:600px) and (max-width:1007px)';
 const BillboardCurationGrid = ({ summaries }: CurationGridProps) => {
   const [isGroup3Only, setIsGroup3Only] = useState(false);
 
-  const handleMediaQuery = useCallback(
-    mediaQueryList => setIsGroup3Only(mediaQueryList.matches),
+  interface MediaQueryMatch {
+    matches: boolean;
+  }
+
+  type HandleMediaQuery = (mediaQuery: MediaQueryMatch) => void;
+
+  const handleMediaQuery: HandleMediaQuery = useCallback(
+    mediaQuery => setIsGroup3Only(mediaQuery.matches),
     [],
   );
 
@@ -32,7 +38,7 @@ const BillboardCurationGrid = ({ summaries }: CurationGridProps) => {
     <div data-testid="billboard-curation-grid">
       {hasMultiplePromos ? (
         <ul css={styles.list} role="list" data-testid="topic-promos">
-          {visibleSummaries.map((promo, index) => (
+          {visibleSummaries.map(promo => (
             <li css={styles.item} key={promo.id}>
               <CurationPromo
                 {...promo}

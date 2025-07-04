@@ -63,8 +63,6 @@ describe('Home Page', () => {
     const { container } = render(<HomePage pageData={pidginHomePageData} />, {
       service: 'pidgin',
     });
-    const h2s = Array.from(container.querySelectorAll('h2'));
-
     expect(container.querySelectorAll('h2').length).toBe(10);
     // unit tests appear to show 3 from the billboard curation grid unless you set the breakpoint specifically to be wider
     expect(container.querySelectorAll('h3').length).toBe(39);
