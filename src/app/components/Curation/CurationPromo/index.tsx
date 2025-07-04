@@ -17,7 +17,6 @@ import styles from './index.styles';
 const CurationPromo = ({
   id,
   title,
-  description,
   lastPublished,
   imageUrl,
   imageAlt,
@@ -68,13 +67,15 @@ const CurationPromo = ({
       )}
       <Promo.Heading
         as={`h${headingLevel}`}
-        css={isBillboardContext ? styles.billboardPromoText : undefined}
+        css={isBillboardContext ? styles.billboardPromoHeadingText : undefined}
       >
         {isMedia ? (
           <Promo.A
             href={link}
             aria-labelledby={id}
-            css={isBillboardContext ? styles.billboardPromoText : undefined}
+            css={
+              isBillboardContext ? styles.billboardPromoHeadingText : undefined
+            }
           >
             <span id={id} role="text">
               <VisuallyHiddenText data-testid="visually-hidden-text">

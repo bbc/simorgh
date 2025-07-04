@@ -39,7 +39,7 @@ const BillboardCurationGrid = ({
             <li css={styles.item} key={promo.id}>
               <CurationPromo
                 {...promo}
-                lazy={!(index === 0 && isFirstCuration)}
+                lazy
                 headingLevel={3}
                 isBillboardContext
               />
@@ -50,7 +50,7 @@ const BillboardCurationGrid = ({
         <div css={styles.item}>
           <CurationPromo
             {...firstPromo}
-            lazy={!isFirstCuration}
+            lazy
             headingLevel={3}
             isBillboardContext
           />

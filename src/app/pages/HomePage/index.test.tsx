@@ -59,6 +59,7 @@ describe('Home Page', () => {
   });
 
   it('should have h2s for curation heading levels and h3 for summary heading levels', () => {
+    // @ts-expect-error suppress pageData prop type conflicts
     const { container } = render(<HomePage pageData={pidginHomePageData} />, {
       service: 'pidgin',
     });
@@ -219,68 +220,118 @@ describe('Home Page', () => {
   });
 
   describe('Lazy Loading', () => {
-    it('Only the first image, message banner, and billboard on the homepage are not lazy loaded, but all others are', () => {
+    it('All images in message banners are eagerly loaded', () => {
       // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
       render(<HomePage pageData={homePageData} />, {
         service: 'kyrgyz',
       });
 
-      const nonLazyLoadImages: string[] = [];
-      // All images in message banners
-      document
-        .querySelectorAll('[data-testid^="message-banner"] img')
-        .forEach(image => {
-          nonLazyLoadImages.push(image.getAttribute('src') || '');
-        });
+      const messageBannerImages = document.querySelectorAll(
+        '[data-testid^="message-banner"] img',
+      );
 
-      // First image in each billboard, DO WE WANT THE CURATION PROMO IMAGES TO BE EAGER LOADED?
-      document
-        .querySelectorAll('[data-testid^="billboard"]')
-        .forEach(section => {
-          const firstBillboardImg = section.querySelector('img');
-          if (firstBillboardImg) {
-            nonLazyLoadImages.push(firstBillboardImg.getAttribute('src') || '');
-          }
-        });
-
-      const imageList = document.querySelectorAll('img');
-
-      imageList.forEach((image, index) => {
-        const src = image.getAttribute('src') || '';
-
-        if (index === 0 || nonLazyLoadImages.includes(src)) {
-          console.log(
-            `Image at index ${index} with src ${src} is not lazy loaded`,
-          );
-          expect(image.getAttribute('loading')).toBe('eager');
-        } else {
-          console.log(`Image at index ${index} with src ${src} is lazy loaded`);
-          expect(image.getAttribute('loading')).toBe('lazy');
-        }
+      messageBannerImages.forEach(image => {
+        expect(image.getAttribute('loading')).toBe('eager');
       });
     });
 
-    it('Only the first image on a homepage and all Billboard images have Fetch Priority set to high', () => {
+    it('Only the first image in each billboard is eagerly loaded', () => {
+      // @ts-expect-error suppress pageData prop type conflicts
+      render(<HomePage pageData={pidginHomePageData} />, {
+        service: 'kyrgyz',
+      });
+
+      const billboardSections = document.querySelectorAll(
+        '[data-testid^="billboard"]',
+      );
+      billboardSections.forEach(section => {
+        const images = section.querySelectorAll('img');
+        images.forEach((image, index) => {
+          if (index === 0) {
+            // eslint-disable-next-line no-console
+            console.log(
+              `Billboard image ${index}:`,
+              image.src,
+              image.getAttribute('loading'),
+            );
+            // The first image in each billboard should be eagerly loaded
+            expect(image.getAttribute('loading')).toBe('eager');
+          } else {
+            expect(image.getAttribute('loading')).toBe('lazy');
+          }
+        });
+      });
+    });
+
+    it('Only the main billboard image is eagerly loaded, all billboard grid images are lazy loaded', () => {
+      // @ts-expect-error suppress pageData prop type conflicts
+      render(<HomePage pageData={pidginHomePageData} />, {
+        service: 'kyrgyz',
+      });
+
+      // Find all billboards by incrementing the test id number
+      let billboardIndex = 1;
+      // eslint-disable-next-line no-constant-condition
+      while (true) {
+        const billboardSection = document.querySelector(
+          `[data-testid="billboard-${billboardIndex}"]`,
+        );
+        if (!billboardSection) break;
+
+        // Get all images inside this billboard section
+        const allImages = Array.from(billboardSection.querySelectorAll('img'));
+
+        // Get all images inside the billboard-curation-grid
+        const grid = billboardSection.querySelector(
+          '[data-testid="billboard-curation-grid"]',
+        );
+        const gridImages = grid ? Array.from(grid.querySelectorAll('img')) : [];
+
+        // The main billboard image is the first image in the section that is not in the grid
+        const mainBillboardImage = allImages.find(
+          img => !gridImages.includes(img),
+        );
+
+        expect(mainBillboardImage).toBeTruthy();
+        if (mainBillboardImage) {
+          expect(mainBillboardImage.getAttribute('loading')).toBe('eager');
+        }
+
+        gridImages.forEach(image => {
+          expect(image.getAttribute('loading')).toBe('lazy');
+        });
+
+        billboardIndex += 1;
+      }
+    });
+
+    it('For images not in billboards or message banners, only the first image on the page is eagerly loaded', () => {
       // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
       render(<HomePage pageData={homePageData} />, {
         service: 'kyrgyz',
       });
 
-      const highFetchPriorityImages: string[] = [];
-      document
-        .querySelectorAll(`[data-testid^="billboard"] img`)
-        .forEach(image =>
-          highFetchPriorityImages.push(image.getAttribute(`src`) || ''),
-        );
+      const allImages = Array.from(document.querySelectorAll('img'));
+      const billboardImages = Array.from(
+        document.querySelectorAll('[data-testid^="billboard"] img'),
+      );
+      const messageBannerImages = Array.from(
+        document.querySelectorAll('[data-testid^="message-banner"] img'),
+      );
+      const billboardAndBannerImages = new Set([
+        ...billboardImages,
+        ...messageBannerImages,
+      ]);
 
-      const imageList = document.querySelectorAll('img');
+      const nonBillboardBannerImages = allImages.filter(
+        img => !billboardAndBannerImages.has(img),
+      );
 
-      imageList.forEach((image, index) => {
-        const src = image.getAttribute('src') || '';
-        if (index === 0 || highFetchPriorityImages.includes(src)) {
-          expect(image.getAttribute('fetchpriority')).toBe('high');
+      nonBillboardBannerImages.forEach((image, index) => {
+        if (index === 0) {
+          expect(image.getAttribute('loading')).toBe('eager');
         } else {
-          expect(image.getAttribute('fetchpriority')).toBeNull();
+          expect(image.getAttribute('loading')).toBe('lazy');
         }
       });
     });
