@@ -1,24 +1,7 @@
 import React, { use } from 'react';
-import styled from '@emotion/styled';
 import path from 'ramda/src/path';
-import { getPica } from '#psammead/gel-foundations/src/typography';
-import { getSerifBold } from '#psammead/psammead-styles/src/font-styles';
-import { Link } from '#psammead/psammead-story-promo/src';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
-} from '#psammead/gel-foundations/src/spacings';
-import {
-  GEL_GROUP_0_SCREEN_WIDTH_MIN,
-  GEL_GROUP_1_SCREEN_WIDTH_MIN,
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
-import PromoTimestamp from '#components/Promo/timestamp';
 import LiveLabel from '../../LiveLabel';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
