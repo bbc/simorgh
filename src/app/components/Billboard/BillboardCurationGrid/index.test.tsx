@@ -45,6 +45,7 @@ describe('BillboardCurationGrid breakpoint responsive CurationPromo count', () =
   });
 
   it('renders a single promo in a div when only one summary is provided', () => {
+    setMatchMedia(true, '(min-width:1008px)');
     render(<BillboardCurationGrid summaries={[summaries[0]]} />);
     const promoHeading = screen.getByRole('heading', { level: 3 });
     expect(promoHeading).toBeInTheDocument();
