@@ -8,6 +8,7 @@ import Billboard from '.';
 import { kyrgyzBillboard, pidginLiveBillboard } from './fixtures';
 import * as viewTracking from '../../hooks/useViewTracker';
 import * as clickTracking from '../../hooks/useClickTrackerHandler';
+import { service as pidginService } from '../../lib/config/services/pidgin';
 
 describe('Billboard', () => {
   const summary = kyrgyzBillboard.summaries[0];
@@ -130,7 +131,7 @@ describe('Billboard', () => {
     expect(promoHeadings.length).toBeGreaterThan(0);
   });
 
-  it('should render an h2 heading with the text "More like this"', () => {
+  it('should render an h2 heading with the text for "More on this" translated', () => {
     render(
       <Billboard
         heading={title}
@@ -140,13 +141,44 @@ describe('Billboard', () => {
         altText={imageAlt}
         summaries={pidginLiveBillboard.summaries}
       />,
+      { service: 'pidgin' },
+    );
+    const moreOnThisText = pidginService.default.translations.moreOnThis;
+
+    const curationGridSection = screen
+      .getByRole('region')
+      .querySelector('[class*="curationGridSection"]');
+    const moreLikeThisHeading = curationGridSection?.querySelector('h2');
+    expect(moreLikeThisHeading).toBeInTheDocument();
+    expect(moreLikeThisHeading?.textContent).toBe(moreOnThisText);
+  });
+
+  it('should not render the "More on this" h2 heading when the "moreOnThis" translation is empty', () => {
+    const originalMoreOnThis = pidginService.default.translations.moreOnThis;
+
+    // Remove the translation for this test only
+    pidginService.default.translations.moreOnThis = '';
+
+    render(
+      <Billboard
+        heading={title}
+        description={description}
+        link={link}
+        image={imageUrl}
+        altText={imageAlt}
+        summaries={pidginLiveBillboard.summaries}
+      />,
+      { service: 'pidgin' }, // service context now has no "moreOnThis" translation
     );
 
-    const moreLikeThisHeading = screen.getByRole('heading', {
-      level: 2,
-      name: 'More like this',
-    });
-    expect(moreLikeThisHeading).toBeInTheDocument();
+    const curationGridSection = screen
+      .getByRole('region')
+      .querySelector('[class*="curationGridSection"]');
+    const heading = curationGridSection?.querySelector('h2');
+    expect(heading).toBeNull();
+
+    // Restore the original translation after the test in case future tests rely on it
+    pidginService.default.translations.moreOnThis = originalMoreOnThis;
   });
 
   it('does not render the curation grid section if there is only one summary', () => {
@@ -160,9 +192,11 @@ describe('Billboard', () => {
         summaries={[pidginLiveBillboard.summaries[0]]}
       />,
     );
+
+    const moreOnThisText = pidginService.default.translations.moreOnThis;
     const moreLikeThisHeading = screen.queryByRole('heading', {
       level: 2,
-      name: 'More like this',
+      name: moreOnThisText,
     });
     expect(moreLikeThisHeading).not.toBeInTheDocument();
 

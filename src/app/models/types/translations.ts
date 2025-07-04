@@ -16,6 +16,7 @@ export interface Translations {
   relatedContent: string;
   topicsPath?: string;
   relatedTopics?: string;
+  moreOnThis?: string;
   navMenuText: string;
   liteSite?: LiteSiteTranslations;
   mediaAssetPage: {

@@ -81,6 +81,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'Ruka hadi maelezo',
       relatedContent: 'Maelezo zaidi kuhusu taarifa hii',
       relatedTopics: 'Mada zinazohusiana',
+      moreOnThis: '',
       navMenuText: 'Yaliyomo',
       liteSite: {
         onboardingMessage:

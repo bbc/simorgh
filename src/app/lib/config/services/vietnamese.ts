@@ -63,6 +63,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'Bỏ qua để xem nội dung',
       relatedContent: 'Tin liên quan',
       relatedTopics: 'Chủ đề liên quan',
+      moreOnThis: '',
       navMenuText: 'Mục',
       mediaAssetPage: {
         mediaPlayer: 'Media player',

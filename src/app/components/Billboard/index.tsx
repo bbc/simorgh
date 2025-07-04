@@ -1,6 +1,7 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
 import { jsx } from '@emotion/react';
+import { use } from 'react';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
@@ -11,7 +12,7 @@ import styles from './index.styles';
 import Text from '../Text';
 import LivePulse from '../LivePulse';
 import LiveText from '../LiveText';
-import CurationGrid from '../Curation/CurationGrid';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import BillboardCurationGrid from './BillboardCurationGrid';
 
 interface BillboardProps {
@@ -39,7 +40,9 @@ export default ({
 }: BillboardProps) => {
   const viewTracker = useViewTracker(eventTrackingData);
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+  const { translations } = use(ServiceContext);
 
+  const showMoreOnThisTitle = translations.moreOnThis;
   return (
     <section role="region" aria-labelledby={id} data-testid={id}>
       <div css={styles.headerContainer} {...viewTracker}>
@@ -79,13 +82,15 @@ export default ({
           </div>
           {summaries.length > 1 && (
             <div css={styles.curationGridSection}>
-              <Heading
-                level={2}
-                size="greatPrimer"
-                css={{ color: '#FFFFFF', marginBottom: '16px' }} // might be a better way to set the colour
-              >
-                More like this
-              </Heading>
+              {showMoreOnThisTitle && (
+                <Heading
+                  level={2}
+                  size="greatPrimer"
+                  css={{ color: '#FFFFFF', marginBottom: '16px' }}
+                >
+                  {showMoreOnThisTitle}
+                </Heading>
+              )}
 
               <BillboardCurationGrid summaries={summaries.slice(1)} />
             </div>

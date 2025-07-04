@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { jsx, useTheme } from '@emotion/react';
-import { useMemo, useEffect, useState, useCallback } from 'react';
+import { jsx } from '@emotion/react';
+import { useState, useCallback } from 'react';
 import styles from './index.styles';
 import CurationPromo from '../../Curation/CurationPromo';
 import { CurationGridProps } from '../../Curation/types';
@@ -8,10 +8,7 @@ import useMediaQuery from '../../../hooks/useMediaQuery';
 
 const group3OnlyQuery = '(min-width:600px) and (max-width:1007px)';
 
-const BillboardCurationGrid = ({
-  summaries,
-  isFirstCuration,
-}: CurationGridProps) => {
+const BillboardCurationGrid = ({ summaries }: CurationGridProps) => {
   const [isGroup3Only, setIsGroup3Only] = useState(false);
 
   const handleMediaQuery = useCallback(
