@@ -86,10 +86,47 @@ const styles = {
 
       [mq.GROUP_3_ONLY]: {
         marginBottom: `${spacings.DOUBLE}rem`,
+
+        // Still need 3 columns when there is only 1 promo and so no list
+        ':only-child': {
+          display: 'grid',
+          gridTemplateColumns: 'repeat(3, 1fr)',
+
+          // Place the promo in the first column
+          '& > *': {
+            gridColumn: '1 / span 1',
+          },
+        },
       },
 
       [mq.GROUP_4_MIN_WIDTH]: {
         marginBottom: `${spacings.DOUBLE}rem`,
+
+        // Still need 4 columns when there is only 1 promo and so no list
+        ':only-child': {
+          display: 'grid',
+          gridTemplateColumns: 'repeat(4, 1fr)',
+
+          // Place the promo in the first column
+          '& > *': {
+            gridColumn: '1 / span 1',
+          },
+        },
+      },
+
+      [mq.GROUP_4_MIN_WIDTH]: {
+        marginBottom: `${spacings.DOUBLE}rem`,
+
+        // Still need 4 columns when there is only 1 promo and so no list
+        ':only-child': {
+          display: 'grid',
+          gridTemplateColumns: 'repeat(4, 1fr)',
+
+          // Place the promo in the first column
+          '& > *': {
+            gridColumn: '1 / span 1',
+          },
+        },
       },
     }),
 };
