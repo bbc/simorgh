@@ -3,7 +3,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
-const version = 'v0.3.0';
+const version = 'v0.3.1';
 const cacheName = 'simorghCache_v1';
 
 const service = self.location.pathname.split('/')[1];
@@ -32,17 +32,21 @@ const CACHEABLE_FILES = [
   /\/images\/icons\/icon-.*?\.png\??v?=?\d*$/,
 ];
 
-const WEBP_IMAGE =
-  /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|images|ace\/(standard|ws))\/.+.webp$/;
+const WEBP_IMAGE_URLS = [
+  /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|images|ace\/(standard|ws))\/.+.webp$/,
+  /^http:\/\/localhost:7080\/images\/billboard_image\.jpg\.webp$/,
+];
+
+const isRequestForWebpImage = url => {
+  return WEBP_IMAGE_URLS.some(webpImageUrl => webpImageUrl.test(url));
+};
 
 const fetchEventHandler = async event => {
   const isRequestForCacheableFile = CACHEABLE_FILES.some(cacheableFile =>
     new RegExp(cacheableFile).test(event.request.url),
   );
 
-  const isRequestForWebpImage = WEBP_IMAGE.test(event.request.url);
-
-  if (isRequestForWebpImage) {
+  if (isRequestForWebpImage(event.request.url)) {
     const req = event.request.clone();
 
     // Inspect the accept header for WebP support
