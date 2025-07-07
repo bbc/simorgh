@@ -95,7 +95,6 @@ export default ({ service, pageType, variant = 'default', path }) => {
 
       it('Clicking the first item should navigate to the correct page (goes to live item)', () => {
         // Goes down into the first item's href
-        // cy.origin('https://www.bbc.com');
         cy.get('[data-testid="topic-promos"]')
           .first()
           .children()
