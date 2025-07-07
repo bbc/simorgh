@@ -24,10 +24,11 @@ const buildMetadataFormat = (
 
 /**
  * Considerations:
- * 1. Reusing existing type (i.e. click/view) or introducing a new one
- * 2. What should be use for componentName? The hook/component that called the event?
- * 3. Best way to pass arbitrary eventName (so it's easily accessible on Piano)?
+ * 1. Should we reuse an existing event type (e.g click/view) or introduce a new one?
+ * 2. What should we use for componentName? Should it reflect the hook/component that triggered the event or be optional?
+ * 3. What is the best way to pass an arbitrary `eventName` so that it's easily accessible in Piano?
  */
+
 const useNonInteractiveTracker = (
   defaultEventTrackingData: NonInteractiveEventData,
 ) => {
