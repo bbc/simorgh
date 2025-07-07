@@ -13,6 +13,7 @@ export const XTOR_CAMPAIGN_IDENTIFIER = 'xtor';
 
 export const VIEW_EVENT = 'view';
 export const CLICK_EVENT = 'click';
+export const NON_INTERACTIVE_EVENT = 'non-interactive';
 export const VIEWABILITY_CLICK_EVENT = 'select';
 
 export const STATIC_ATI_VIEW_TRACKING = 'data-static-ati-view';
