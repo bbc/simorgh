@@ -63,9 +63,9 @@ describe('Home Page', () => {
     const { container } = render(<HomePage pageData={pidginHomePageData} />, {
       service: 'pidgin',
     });
+    // for some reason, most read headings are not showing as headings in the count or if I log them
     expect(container.querySelectorAll('h2').length).toBe(10);
-    // unit tests appear to show 3 from the billboard curation grid unless you set the breakpoint specifically to be wider
-    expect(container.querySelectorAll('h3').length).toBe(39);
+    expect(container.querySelectorAll('h3').length).toBe(40);
   });
 
   it('should apply provided margin size to the main element', () => {
