@@ -24,21 +24,20 @@ const BillboardCurationGrid = ({ summaries }: CurationGridProps) => {
 
   useMediaQuery(group3OnlyQuery, handleMediaQuery);
 
-  const maxPromos = isGroup3Only ? 3 : 4;
-  const visibleSummaries = summaries.slice(0, maxPromos);
+  const calculatedSummaries = summaries.slice(0, 4);
 
-  if (visibleSummaries.length === 0) {
+  if (calculatedSummaries.length === 0) {
     return null;
   }
 
-  const hasMultiplePromos = visibleSummaries.length > 1;
-  const firstPromo = visibleSummaries[0];
+  const hasMultiplePromos = calculatedSummaries.length > 1;
+  const firstPromo = calculatedSummaries[0];
 
   return (
     <div data-testid="billboard-curation-grid">
       {hasMultiplePromos ? (
         <ul css={styles.list} role="list" data-testid="topic-promos">
-          {visibleSummaries.map(promo => (
+          {calculatedSummaries.map(promo => (
             <li css={styles.item} key={promo.id}>
               <CurationPromo
                 {...promo}

@@ -81,6 +81,9 @@ const styles = {
 
       [mq.GROUP_3_ONLY]: {
         marginBottom: `${spacings.DOUBLE}rem`,
+        ':nth-of-type(4)': {
+          display: 'none',
+        },
       },
 
       [mq.GROUP_4_MIN_WIDTH]: {
