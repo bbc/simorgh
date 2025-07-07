@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import appToggles from '../../../support/helpers/useAppToggles';
 import envConfig from '../../../support/config/envs';
 

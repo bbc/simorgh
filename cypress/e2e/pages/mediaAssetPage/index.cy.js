@@ -2,25 +2,17 @@ import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
 import { testsThatAlwaysRunForAllPages as testsForAllPages } from '../testsForAllPages';
 import { testsThatFollowSmokeTestConfigForAllCanonicalPages as testsForAllCanonicalPages } from '../testsForAllCanonicalPages';
 import { testsThatFollowSmokeTestConfigForAllAMPPages as testsForAllAMPPages } from '../testsForAllAMPPages';
-// import canonicalAndAmpArticleTests from './tests';
 import ampArticleTests from './testsForAMPOnly';
 import canonicalArticleTests from './testsForCanonicalOnly';
-// import getOptimizelyKey from '../../../support/helpers/getOptimizelyKey';
-// import liteTests from '../articles/testsForLiteOnly';
+import liteTests from '../articles/testsForLiteOnly';
 
 const canonicalTests = [
   testsForAllPages,
   testsForAllCanonicalPages,
-  //  canonicalAndAmpArticleTests,
   canonicalArticleTests,
 ];
 
-const ampTests = [
-  testsForAllPages,
-  testsForAllAMPPages,
-  // canonicalAndAmpArticleTests,
-  ampArticleTests,
-];
+const ampTests = [testsForAllPages, testsForAllAMPPages, ampArticleTests];
 
 const canonicalSmokeTestSuites = [
   {
@@ -29,12 +21,6 @@ const canonicalSmokeTestSuites = [
     runforEnv: ['live'],
     tests: canonicalTests,
   },
-  // {
-  //   path: '/hausa/multimedia/2012/07/120712_click', // TC2 MAP with video clip
-  //   service: 'hausa',
-  //   runforEnv: ['live'],
-  //   tests: canonicalTests,
-  // },
   {
     path: '/hausa/23269030', // CPS MAP with video clip
     service: 'hausa',
@@ -262,8 +248,8 @@ const canonicalNonSmokeTestSuites = [
   },
 ];
 
-// non Amp Non Smoke Test Suites
-const nonAmpOnlyNonSmokeTestSuites = Cypress.env('SMOKE')
+// TC2 MAPs  do not support AMP pages
+const tc2CanonicalTestSuites = Cypress.env('SMOKE')
   ? []
   : [
       {
@@ -320,34 +306,40 @@ const canonicalTestSuites = Cypress.env('SMOKE')
   ? canonicalSmokeTestSuites
   : canonicalNonSmokeTestSuites;
 
+const getPathWithSuffix = ({ path, suffix = '' }) => {
+  const { pathname, search } = new URL(`https://www.bbc.com${path}`);
+
+  return `${pathname}${suffix}${search}`;
+};
+
 const ampTestSuites = canonicalTestSuites.map(testSuite => {
   return {
     ...testSuite,
-    path: `${testSuite.path}.amp`,
+    path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
     tests: [...ampTests],
   };
 });
 
-// const liteTestSuites = Cypress.env('SMOKE')
-//   ? canonicalTestSuites
-//       .filter(
-//         ({ service }) => !['news', 'sport', 'newsround'].includes(service),
-//       )
-//       .map(testSuite => {
-//         return {
-//           ...testSuite,
-//           path: `${testSuite.path}.lite`,
-//           tests: [liteTests],
-//         };
-//       })
-//   : [];
+const liteTestSuites = Cypress.env('SMOKE')
+  ? canonicalTestSuites
+      .filter(
+        ({ service }) => !['news', 'sport', 'newsround'].includes(service),
+      )
+      .map(testSuite => {
+        return {
+          ...testSuite,
+          path: `${testSuite.path}.lite`,
+          tests: [liteTests],
+        };
+      })
+  : [];
 
 runTestsForPage({
   pageType: 'mediaAssetPage',
   testSuites: [
     ...canonicalTestSuites,
-    ...nonAmpOnlyNonSmokeTestSuites,
+    ...tc2CanonicalTestSuites,
     ...ampTestSuites,
-    // ...liteTestSuites,
+    ...liteTestSuites,
   ],
 });

@@ -1,8 +1,6 @@
-/* eslint-disable import/prefer-default-export */
-
 // For testing features that may differ across services but share a common logic e.g. translated strings.
-export default ({ service, pageType }) => {
-  describe(`testsThatFollowSmokeTestConfigForAMPOnly for ${service} ${pageType}`, () => {
+export default ({ service, pageType, path }) => {
+  describe(`testsThatFollowSmokeTestConfigForAMPOnly for ${service} ${pageType} ${path}`, () => {
     describe('Media Player', () => {
       it('should render an iframe with a valid URL', () => {
         if (!`${Cypress.env('currentPath')}`.includes('/russian/av/')) {
