@@ -120,7 +120,7 @@ export default function CanonicalRenderer({
         />
         {links}
         <IfAboveIE9>
-          {['urdu', 'hausa'].includes(service) ? showScripts(modernScripts) : modernScripts}
+          {['urdu', 'hausa'].includes(service ?? '') ? showScripts(modernScripts) : modernScripts}
           {legacyScripts}
         </IfAboveIE9>
         <script
