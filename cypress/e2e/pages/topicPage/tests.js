@@ -33,7 +33,24 @@ export default ({ service, pageType, variant = 'default', path }) => {
       beforeEach(() => {
         // make sure we always start from the path being tested to make the tests deterministic and not reliant on order
         // as otherwise some tests can change the path and affect subsequent tests (i.e. when you change page script)
-        cy.visit(path);
+
+        if (getAppEnv() !== 'local') {
+          cy.origin('https://www.bbc.com', () => {
+            // eslint-disable-next-line consistent-return
+            cy.on('uncaught:exception', ({ message }) => {
+              if (
+                [
+                  'ResizeObserver loop completed with undelivered notifications.',
+                ].includes(message)
+              ) {
+                return false;
+              }
+            });
+          });
+          cy.visit(path);
+        } else {
+          cy.visit(path);
+        }
       });
       it('should render a H1, which contains/displays topic title', () => {
         cy.get('h1').should('contain', topicTitle);
@@ -79,6 +96,7 @@ export default ({ service, pageType, variant = 'default', path }) => {
 
       it('Clicking the first item should navigate to the correct page (goes to live item)', () => {
         // Goes down into the first item's href
+        // cy.origin('https://www.bbc.com');
         cy.get('[data-testid="topic-promos"]')
           .first()
           .children()
