@@ -4,7 +4,10 @@ import { Helmet } from 'react-helmet';
 import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
 import { data as afriqueHomePageDataFixture } from '#data/afrique/homePage/index.json';
 import { data as pidginHomePageDataFixture } from '#data/pidgin/homePage/index.json';
-import { render } from '../../components/react-testing-library-with-providers';
+import {
+  render,
+  screen,
+} from '../../components/react-testing-library-with-providers';
 import HomePage from './HomePage';
 import { suppressPropWarnings } from '../../legacy/psammead/psammead-test-helpers/src';
 
@@ -236,19 +239,10 @@ describe('Home Page', () => {
         service: 'kyrgyz',
       });
 
-      // Find all billboards by incrementing the test id number
-      let billboardIndex = 1;
-      // eslint-disable-next-line no-constant-condition
-      while (true) {
-        const billboardSection = document.querySelector(
-          `[data-testid="billboard-${billboardIndex}"]`,
-        );
-        if (!billboardSection) break;
+      const billboardSections = screen.queryAllByTestId(/billboard-\d+/);
 
-        // Get all images inside this billboard section
+      billboardSections.forEach(billboardSection => {
         const allImages = Array.from(billboardSection.querySelectorAll('img'));
-
-        // Get all images inside the billboard-curation-grid
         const grid = billboardSection.querySelector(
           '[data-testid="billboard-curation-grid"]',
         );
@@ -267,9 +261,7 @@ describe('Home Page', () => {
         gridImages.forEach(image => {
           expect(image.getAttribute('loading')).toBe('lazy');
         });
-
-        billboardIndex += 1;
-      }
+      });
     });
 
     it('For images not in billboards or message banners, only the first image on the page is eagerly loaded', () => {
