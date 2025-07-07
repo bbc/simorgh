@@ -9,6 +9,7 @@ import sendBeacon from '#app/lib/analyticsUtils/sendBeacon';
 import addInlineScript, {
   InlineScriptProps,
 } from '#app/lib/utilities/addInlineScript';
+import usePWAInstallTracker from '#app/hooks/usePWAInstallTracker';
 import { ATIAnalyticsProps } from '../types';
 import getNoScriptTrackingPixelUrl from './getNoScriptTrackingPixelUrl';
 import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
@@ -43,6 +44,8 @@ const CanonicalATIAnalytics = ({
   reverbParams,
 }: ATIAnalyticsProps) => {
   const { isLite } = use(RequestContext);
+
+  usePWAInstallTracker();
 
   const atiPageViewUrlString =
     getEnvConfig().SIMORGH_ATI_BASE_URL + pageviewParams;

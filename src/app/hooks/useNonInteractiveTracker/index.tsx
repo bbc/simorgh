@@ -22,8 +22,14 @@ const buildMetadataFormat = (
   return entries.map(([key, value]) => `${key}=${String(value)}`).join('~');
 };
 
+/**
+ * Considerations:
+ * 1. Reusing existing type (i.e. click/view) or introducing a new one
+ * 2. What should be use for componentName? The hook/component that called the event?
+ * 3. Best way to pass arbitrary eventName (so it's easily accessible on Piano)?
+ */
 const useNonInteractiveTracker = (
-  eventTrackingData?: NonInteractiveEventData,
+  defaultEventTrackingData: NonInteractiveEventData,
 ) => {
   const {
     pageIdentifier,
@@ -34,7 +40,7 @@ const useNonInteractiveTracker = (
     campaignID,
     producerName,
   } = extractATITrackingProps({
-    eventTrackingData,
+    eventTrackingData: defaultEventTrackingData,
     eventType: NON_INTERACTIVE_EVENT,
   });
 
@@ -42,15 +48,27 @@ const useNonInteractiveTracker = (
   const { service, useReverb } = use(ServiceContext);
 
   const trackEvent = useCallback(
-    async (eventData: NonInteractiveEventData) => {
+    async (eventData?: Partial<NonInteractiveEventData>) => {
       if (!trackingIsEnabled) return;
+
+      // Override the default details if needed
+      const mergedData = {
+        ...defaultEventTrackingData,
+        ...eventData,
+        customData: {
+          ...defaultEventTrackingData?.customData,
+          ...eventData?.customData,
+        },
+      };
 
       const {
         eventName,
         isUserInitiated = false,
         customData = {},
         componentName = baseComponentName,
-      } = eventData;
+      } = mergedData;
+
+      if (!eventName) return;
 
       const shouldSendEvent = [
         campaignID,
@@ -98,6 +116,7 @@ const useNonInteractiveTracker = (
       service,
       statsDestination,
       useReverb,
+      defaultEventTrackingData,
     ],
   );
 
