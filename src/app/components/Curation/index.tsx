@@ -156,11 +156,7 @@ export default ({
     case EMBED:
       return embed ? <Embed oembed={embed} /> : null;
     case PORTRAIT_VIDEO_CAROUSEL:
-      if (
-        portraitVideo?.items &&
-        portraitVideo?.items?.length > 0 &&
-        !isLive()
-      ) {
+      if (portraitVideo?.items && portraitVideo?.items?.length > 0) {
         return (
           <PortraitVideoCarousel
             title={title}
