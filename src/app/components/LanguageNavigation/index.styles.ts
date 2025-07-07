@@ -18,10 +18,10 @@ const styles = {
     css({
       display: 'flex',
       alignItems: 'center',
-      padding: '0.75rem 0.5rem',
+      padding: 0,
       position: 'relative',
       borderBottom: isActive ? '4px solid #b80000' : '4px solid transparent',
-      '&:hover, &:focus': {
+      '&:hover, &:focus-within': {
         borderBottom: '4px solid #b80000',
         outline: 'none',
         cursor: 'pointer',
@@ -47,12 +47,28 @@ const styles = {
     fontSize: '16px',
     lineHeight: '22px',
     letterSpacing: '0%',
+    padding: '0.75rem 0.5rem',
+    width: '100%',
+    display: 'block',
   }),
 
   navSummary: css({
+    display: 'flex',
+    alignItems: 'center',
+    width: '100%',
+    padding: '0.75rem 0.5rem',
+    cursor: 'pointer',
     listStyle: 'none',
     border: 'none',
     background: 'none',
+    fontFamily: 'BBC Reith Sans',
+    fontWeight: 400,
+    fontSize: '16px',
+    lineHeight: '22px',
+    letterSpacing: '0%',
+    '&::marker': {
+      display: 'none',
+    },
   }),
 
   dropDown: css({
