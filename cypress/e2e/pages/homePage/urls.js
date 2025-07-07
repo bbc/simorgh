@@ -12,6 +12,12 @@ const urls = [
     live: '/arabic',
   },
   {
+    service: 'pidgin',
+    local: '/pidgin',
+    test: '/pidgin',
+    live: '',
+  },
+  {
     service: 'polska',
     local: '/polska',
     test: '/polska',

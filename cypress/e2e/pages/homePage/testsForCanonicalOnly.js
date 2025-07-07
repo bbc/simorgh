@@ -121,6 +121,90 @@ export default ({ service }) => {
       });
     });
   });
+  describe('Billboard', () => {
+    it('should display the correct number of items in the curation grid if there is at least 2 summaries', () => {
+      cy.viewport(1008, 900);
+      cy.getPageDataFromWindow().then(data => {
+        const billboardCurations =
+          data?.pageData?.curations?.filter(
+            curation =>
+              curation.visualProminence === 'MAXIMUM' &&
+              curation.visualStyle === 'BANNER',
+          ) || [];
+
+        if (billboardCurations.length === 0) {
+          cy.log('No billboard curations found in page data');
+          return;
+        }
+
+        cy.get('body').then($body => {
+          billboardCurations.forEach((curation, index) => {
+            const summaries = curation?.summaries || [];
+            const expectedNumberOfAdditionalItems = Math.min(
+              Math.max(summaries.length - 1, 0),
+              4,
+            );
+            if (summaries.length > 1) {
+              const testId = `billboard-${index + 1}`;
+              const curationGrid = $body.find(
+                `[data-testid="${testId}"] [data-testid="billboard-curation-grid"]`,
+              );
+              if (curationGrid.length > 0) {
+                cy.wrap(curationGrid).within(() => {
+                  if (summaries.length > 2) {
+                    cy.get('li:visible').should(
+                      'have.length',
+                      expectedNumberOfAdditionalItems,
+                    );
+                  } else if (summaries.length === 2) {
+                    cy.get('div.promo-image')
+                      .should('have.length', 1)
+                      .and('be.visible');
+                    cy.get('div.promo-text')
+                      .should('have.length', 1)
+                      .and('be.visible');
+                  }
+                });
+              } else {
+                cy.log(`No curation grid found for billboard ${index + 1}`);
+              }
+            } else {
+              cy.log(
+                `No billboard with more than 1 summary found billboard ${index} with title: ${summaries[0]?.title}`,
+              );
+            }
+          });
+        });
+      });
+    });
+    it('should not render a curation grid if there is only one summary in the curation', () => {
+      cy.getPageDataFromWindow().then(data => {
+        const billboardCurations =
+          data?.pageData?.curations?.filter(
+            curation =>
+              curation.visualProminence === 'MAXIMUM' &&
+              curation.visualStyle === 'BANNER',
+          ) || [];
+
+        if (billboardCurations.length === 0) {
+          cy.log('No billboard curations found in page data');
+          return;
+        }
+
+        billboardCurations.forEach((curation, index) => {
+          const summaries = curation?.summaries || [];
+          if (summaries.length === 1) {
+            const testId = `billboard-${index + 1}`;
+            cy.get(`[data-testid="${testId}"]`).within(() => {
+              cy.get('[data-testid="billboard-curation-grid"]').should(
+                'not.exist',
+              );
+            });
+          }
+        });
+      });
+    });
+  });
 
   if (getAppEnv() === 'local') {
     runAdsTests({ service });
