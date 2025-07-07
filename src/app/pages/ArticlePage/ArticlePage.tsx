@@ -167,10 +167,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
-  const experimentName = 'newswb_ws_topbarojs_read_more';
+  const experimentName = 'newswb_ws_read_more_b';
   const experimentVariant = useOptimizelyVariation({
     experimentName,
-    experimentType: ExperimentType.SERVER_SIDE,
+    experimentType: ExperimentType.CLIENT_SIDE,
   });
 
   const isInServerSideExperiment =
