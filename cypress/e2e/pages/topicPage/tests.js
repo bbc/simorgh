@@ -93,7 +93,7 @@ export default ({ service, pageType, variant = 'default', path }) => {
           });
       });
 
-      it.only('Clicking the first item should navigate to the correct page (goes to live item)', () => {
+      it('Clicking the first item should navigate to the correct page (goes to live item)', () => {
         // Goes down into the first item's href
         cy.get('[data-testid="topic-promos"]')
           .first()
