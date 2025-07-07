@@ -13,10 +13,14 @@ const usePWAInstallTracker = () => {
   const hasTracked = useRef(false);
 
   useEffect(() => {
-    function handleAppInstalled() {
-      console.log('handleAppInstalled called');
+    function handleAppInstalled(e: Event) {
       if (!hasTracked.current) {
-        trackEvent();
+        trackEvent({
+          customData: {
+            randomId: crypto.randomUUID(),
+            eventType: e.type,
+          },
+        });
         hasTracked.current = true;
       }
     }

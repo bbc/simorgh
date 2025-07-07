@@ -508,6 +508,7 @@ export const buildReverbAnalyticsModel = ({
   return reverbVariables;
 };
 
+// TODO: should it accept format?
 export const buildReverbEventModel = ({
   pageIdentifier,
   producerName,

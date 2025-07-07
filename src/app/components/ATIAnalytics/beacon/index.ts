@@ -57,6 +57,9 @@ export const sendEventBeacon = async ({
       })
     : null;
 
+  // TODO: Temp
+  console.log({ atiClickTrackingUrl, reverbParams });
+
   await sendBeacon(atiClickTrackingUrl, reverbParams);
 };
 

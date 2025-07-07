@@ -27,6 +27,7 @@ const buildMetadataFormat = (
  * 1. Should we reuse an existing event type (e.g click/view) or introduce a new one?
  * 2. What should we use for componentName? Should it reflect the hook/component that triggered the event or be optional?
  * 3. What is the best way to pass an arbitrary `eventName` so that it's easily accessible in Piano?
+ * 4. Which reverb param builder to reuse?
  */
 
 const useNonInteractiveTracker = (
