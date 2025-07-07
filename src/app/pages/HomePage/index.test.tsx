@@ -67,8 +67,8 @@ describe('Home Page', () => {
       service: 'pidgin',
     });
     // for some reason, most read headings are not showing as headings in the count or if I log them
-    expect(container.querySelectorAll('h2').length).toBe(10);
-    expect(container.querySelectorAll('h3').length).toBe(40);
+    expect(container.querySelectorAll('h2').length).toBe(15);
+    expect(container.querySelectorAll('h3').length).toBe(45);
   });
 
   it('should apply provided margin size to the main element', () => {
