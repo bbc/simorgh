@@ -33,15 +33,14 @@ export default ({ service, pageType, variant = 'default', path }) => {
       beforeEach(() => {
         // make sure we always start from the path being tested to make the tests deterministic and not reliant on order
         // as otherwise some tests can change the path and affect subsequent tests (i.e. when you change page script)
-
         if (getAppEnv() === 'test') {
           cy.origin('https://www.bbc.com', () => {
             // eslint-disable-next-line consistent-return
             cy.on('uncaught:exception', ({ message }) => {
               if (
-                [
+                message.includes(
                   'ResizeObserver loop completed with undelivered notifications.',
-                ].includes(message)
+                )
               ) {
                 return false;
               }
