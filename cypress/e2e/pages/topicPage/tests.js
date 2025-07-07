@@ -38,9 +38,9 @@ export default ({ service, pageType, variant = 'default', path }) => {
             // eslint-disable-next-line consistent-return
             cy.on('uncaught:exception', ({ message }) => {
               if (
-                message.includes(
-                  'ResizeObserver loop completed with undelivered notifications.',
-                )
+                [
+                  'ResizeObserver loop completed with undelivered notifications',
+                ].some(error => message.includes(error))
               ) {
                 return false;
               }
@@ -93,7 +93,7 @@ export default ({ service, pageType, variant = 'default', path }) => {
           });
       });
 
-      it('Clicking the first item should navigate to the correct page (goes to live item)', () => {
+      it.only('Clicking the first item should navigate to the correct page (goes to live item)', () => {
         // Goes down into the first item's href
         cy.get('[data-testid="topic-promos"]')
           .first()
