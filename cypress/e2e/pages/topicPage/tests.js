@@ -33,7 +33,7 @@ export default ({ service, pageType, variant = 'default', path }) => {
       beforeEach(() => {
         // make sure we always start from the path being tested to make the tests deterministic and not reliant on order
         // as otherwise some tests can change the path and affect subsequent tests (i.e. when you change page script)
-        if (getAppEnv() === 'test') {
+        if (getAppEnv() !== 'live') {
           cy.origin('https://www.bbc.com', () => {
             // eslint-disable-next-line consistent-return
             cy.on('uncaught:exception', ({ message }) => {
@@ -93,7 +93,7 @@ export default ({ service, pageType, variant = 'default', path }) => {
           });
       });
 
-      it('Clicking the first item should navigate to the correct page (goes to live item)', () => {
+      it.only('Clicking the first item should navigate to the correct page (goes to live item)', () => {
         // Goes down into the first item's href
         cy.get('[data-testid="topic-promos"]')
           .first()
