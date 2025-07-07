@@ -178,7 +178,7 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:41c2dccc-4711-4e01-85d4-72d531765fa8",
         "curationType": "tipo-curation",
-        "position": 0,
+        "position": 1,
         "title": "Top Tori",
         "visualProminence": "HIGH",
         "visualStyle": "COLLECTION"
@@ -334,7 +334,7 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:81d92884-1db4-4dfa-b1ec-d52c0ce41a24",
         "curationType": "tipo-curation",
-        "position": 1,
+        "position": 3,
         "title": "Special Tori",
         "visualProminence": "HIGH",
         "visualStyle": "COLLECTION"
@@ -382,7 +382,7 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:9c9782fd-6837-429a-b4ee-400d9aee56e1",
         "curationType": "tipo-curation",
-        "position": 2,
+        "position": 5,
         "title": "BBC News Pidgin now dey on Whatsapp",
         "visualProminence": "NORMAL",
         "visualStyle": "BANNER"
@@ -447,7 +447,7 @@
         "link": "https://www.bbc.com/pidgin/topics/c3l19z3k1ert",
         "curationId": "urn:bbc:vivo:curation:a08ec947-e61c-4371-9923-8a027ab97fe7",
         "curationType": "vivo-stream",
-        "position": 3,
+        "position": 6,
         "title": "Ginger Me",
         "visualProminence": "LOW",
         "visualStyle": "FEED"
@@ -504,9 +504,9 @@
         ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:95a506ac-1793-4e5a-94f1-888be4f4b3f1",
+        "curationId": "urn:bbc:tipo:list:95a506ac-1793-4e5a-94f1-888be4f4befege",
         "curationType": "tipo-curation",
-        "position": 2,
+        "position": 7,
         "title": "Billboard 4 summaries test",
         "visualProminence": "MAXIMUM",
         "visualStyle": "BANNER"
@@ -567,7 +567,7 @@
         "link": "https://www.bbc.com/pidgin/topics/c404v061z85t",
         "curationId": "urn:bbc:vivo:curation:588d9c07-a818-4dd3-904a-bc425394a8ff",
         "curationType": "vivo-stream",
-        "position": 4,
+        "position": 8,
         "title": "Tori from Africa",
         "visualProminence": "LOW",
         "visualStyle": "FEED"
@@ -628,7 +628,7 @@
         "link": "https://www.bbc.com/pidgin/topics/cqywjyzk2vyt",
         "curationId": "urn:bbc:tipo:list:82f0640b-d503-498e-a9bb-2b70365e36df",
         "curationType": "tipo-curation",
-        "position": 5,
+        "position": 9,
         "title": "Entertainment corner",
         "visualProminence": "LOW",
         "additionalText": {
@@ -692,7 +692,7 @@
         "link": "https://www.bbc.com/pidgin/topics/cjgn7gv77vrt",
         "curationId": "urn:bbc:vivo:curation:c61facc2-a4fa-4890-a0d9-a1718cccf88d",
         "curationType": "vivo-stream",
-        "position": 6,
+        "position": 10,
         "title": "Sport",
         "visualProminence": "LOW",
         "visualStyle": "FEED"
@@ -756,7 +756,7 @@
       {
         "curationId": "urn:bbc:onward-journeys:most:read?=site=News",
         "curationType": "most-popular",
-        "position": 8,
+        "position": 11,
         "title": "Di one wey oda users dey read well well",
         "visualProminence": "NORMAL",
         "visualStyle": "RANKED",

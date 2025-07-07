@@ -121,7 +121,7 @@ export default ({ service }) => {
       });
     });
   });
-  describe('Billboard', () => {
+  describe.only('Billboard', () => {
     it('should display the correct number of items in the curation grid if there is at least 2 summaries', () => {
       cy.viewport(1008, 900);
       cy.getPageDataFromWindow().then(data => {
@@ -137,43 +137,48 @@ export default ({ service }) => {
           return;
         }
 
-        cy.get('body').then($body => {
-          billboardCurations.forEach((curation, index) => {
-            const summaries = curation?.summaries || [];
-            const expectedNumberOfAdditionalItems = Math.min(
-              Math.max(summaries.length - 1, 0),
-              4,
-            );
-            if (summaries.length > 1) {
-              const testId = `billboard-${index + 1}`;
-              const curationGrid = $body.find(
-                `[data-testid="${testId}"] [data-testid="billboard-curation-grid"]`,
-              );
-              if (curationGrid.length > 0) {
-                cy.wrap(curationGrid).within(() => {
-                  if (summaries.length > 2) {
-                    cy.get('li:visible').should(
-                      'have.length',
-                      expectedNumberOfAdditionalItems,
-                    );
-                  } else if (summaries.length === 2) {
-                    cy.get('div.promo-image')
-                      .should('have.length', 1)
-                      .and('be.visible');
-                    cy.get('div.promo-text')
-                      .should('have.length', 1)
-                      .and('be.visible');
-                  }
+        billboardCurations.forEach((curation, index) => {
+          const summaries = curation?.summaries || [];
+          const expectedNumberOfAdditionalItems = Math.min(
+            Math.max(summaries.length - 1, 0),
+            4,
+          );
+          if (summaries.length > 1) {
+            const testId = `billboard-${index + 1}`;
+            const gridSelector = `[data-testid="${testId}"] [data-testid="billboard-curation-grid"]`;
+
+            if (summaries.length > 2) {
+              cy.get(gridSelector).then($grid => {
+                cy.log(`Billboard index: ${index + 1}`);
+                cy.log(`Grid selector: ${gridSelector}`);
+                cy.log(`Number of grids found: ${$grid.length}`);
+                cy.log(`Grid HTML: ${$grid.html()}`);
+
+                cy.get(`${gridSelector} li`).then($lis => {
+                  cy.log(`Number of li in grid: ${$lis.length}`);
+                  $lis.each((i, el) => {
+                    cy.log(`li[${i}] visible: ${Cypress.$(el).is(':visible')}`);
+                    cy.log(`li[${i}] HTML: ${el.outerHTML}`);
+                  });
                 });
-              } else {
-                cy.log(`No curation grid found for billboard ${index + 1}`);
-              }
-            } else {
-              cy.log(
-                `No billboard with more than 1 summary found billboard ${index} with title: ${summaries[0]?.title}`,
+              });
+              cy.get(`${gridSelector} li:visible`).should(
+                'have.length',
+                expectedNumberOfAdditionalItems,
               );
+            } else if (summaries.length === 2) {
+              cy.get(`${gridSelector} div.promo-image`)
+                .should('have.length', 1)
+                .and('be.visible');
+              cy.get(`${gridSelector} div.promo-text`)
+                .should('have.length', 1)
+                .and('be.visible');
             }
-          });
+          } else {
+            cy.log(
+              `No billboard with more than 1 summary found billboard ${index + 1} with title: ${summaries[0]?.title}`,
+            );
+          }
         });
       });
     });
