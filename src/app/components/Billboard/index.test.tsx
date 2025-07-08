@@ -122,11 +122,22 @@ describe('Billboard', () => {
     const gridContainer = screen.getByTestId('billboard-curation-grid');
     expect(gridContainer).toBeInTheDocument();
 
-    const gridList = screen.getByRole('list');
+    const gridList = screen.getByTestId('billboard-promos');
     expect(gridList).toBeInTheDocument();
+    expect(gridList.nodeName).toBe('UL');
 
     const promoHeadings = screen.getAllByRole('heading', { level: 3 });
     expect(promoHeadings).toHaveLength(4);
+
+    // The main masked image plus the 4 promo images
+    const promoImages = screen.getAllByRole('img');
+    expect(promoImages).toHaveLength(5);
+
+    // one promo does not have a timestamp
+    const promoTimestamps = screen
+      .getAllByRole('time')
+      .filter(element => element.classList.contains('promo-timestamp'));
+    expect(promoTimestamps).toHaveLength(3);
   });
 
   it('should render an h2 heading with the text for "More on this" translated', () => {
