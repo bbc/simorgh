@@ -25,9 +25,6 @@ jobs:
       - name: Debug comment count
         run: echo "Comment count is ${{ steps.get_comments.outputs.comment_count }}"
 
-      - name: Dump GitHub context (for debugging)
-        run: echo '${{ toJSON(github) }}'
-
       - name: Send slack message if comment threshold is exceeded
         if: fromJson(steps.get_comments.outputs.comment_count) > 12
         uses: slackapi/slack-github-action@v2.1.0
