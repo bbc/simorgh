@@ -71,7 +71,8 @@ import {
   assertTopStoriesComponentClick,
   assertTopStoriesComponentView,
 } from './assertions/topStories';
-import { getPathWithSuffix, setUserIDCookie } from './helpers';
+import setUserIDCookie from './helpers/index';
+import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
 
 const canonicalTestSuites = [
   {

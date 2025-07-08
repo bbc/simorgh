@@ -5,6 +5,7 @@ import { testsThatFollowSmokeTestConfigForAllAMPPages as testsForAllAMPPages } f
 import ampArticleTests from './testsForAMPOnly';
 import canonicalArticleTests from './testsForCanonicalOnly';
 import liteTests from '../articles/testsForLiteOnly';
+import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
 
 const canonicalTests = [
   testsForAllPages,
@@ -305,12 +306,6 @@ const tc2CanonicalTestSuites = Cypress.env('SMOKE')
 const canonicalTestSuites = Cypress.env('SMOKE')
   ? canonicalSmokeTestSuites
   : canonicalNonSmokeTestSuites;
-
-const getPathWithSuffix = ({ path, suffix = '' }) => {
-  const { pathname, search } = new URL(`https://www.bbc.com${path}`);
-
-  return `${pathname}${suffix}${search}`;
-};
 
 const ampTestSuites = canonicalTestSuites.map(testSuite => {
   return {
