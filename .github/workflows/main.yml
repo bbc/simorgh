@@ -1,0 +1,39 @@
+name: Notify on PR with >12 Comments
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  notify-on-comments:
+    runs-on: ubuntu-latest
+    if: github.event.issue.pull_request && github.event.issue.state == 'open'
+    steps:
+      - name: Get PR comments count
+        id: get_comments
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const prNumber = context.payload.issue.number;
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNumber,
+            });
+            echo "commentLength=${{length}}" >> $GITHUB_OUTPUT
+            echo "pullRequestNumber=${{prNumber}}" >> $GITHUB_OUTPUT
+            return comments.length;
+
+      - name: Send slack message if comment threshold is exceeded
+        if: steps.get_comments.outputs.commentLength > 12
+        uses: slackapi/slack-github-action@v2.1.0
+        with:
+          webhook: ${{ secrets.SLACK_PR_COMMENTS_WEBHOOK_URL }}
+          webhook-type: incoming-webhook
+          payload: |
+            text: "PR with more than 12 comments!"
+            channel: ${{ inputs.channel_id }}
+            attachments:
+              text: "The following PR has hit >12 comments (<https://github.com/bbc/simorgh/pull/${{ steps.get_comments.outputs.pullRequestNumber }}|Open>)"
+
+              
