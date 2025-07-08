@@ -20,8 +20,6 @@ jobs:
               repo: context.repo.repo,
               issue_number: prNumber,
             });
-            echo "commentLength=${{comments.length}}" >> $GITHUB_OUTPUT
-            echo "pullRequestNumber=${{prNumber}}" >> $GITHUB_OUTPUT
             return comments.length;
 
       - name: Send slack message if comment threshold is exceeded
@@ -31,9 +29,5 @@ jobs:
           webhook: ${{ secrets.SLACK_PR_COMMENTS_WEBHOOK_URL }}
           webhook-type: incoming-webhook
           payload: |
-            text: "PR with more than 12 comments!"
-            channel: ${{ inputs.channel_id }}
-            attachments:
-              text: "The following PR has hit >12 comments (<https://github.com/bbc/simorgh/pull/${{ steps.get_comments.outputs.pullRequestNumber }}|Open>)"
-
+            "text": "Pull Request #${{ github.event.issue.number }} (\"${{ github.event.issue.title }}\") now has over 12 comments.\n<${{ github.event.issue.html_url }}|View Pull Request>\nCurrent comment count: ${{ steps.get_comments.outputs.result }}"
               
