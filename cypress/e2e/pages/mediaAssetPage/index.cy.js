@@ -30,12 +30,6 @@ const canonicalSmokeTestSuites = [
     tests: canonicalTests,
   },
   {
-    path: '/hausa/multimedia/2016/07/160714_tc2_audiomap?renderer_env=test', // TC2 MAP with audio clip
-    service: 'hausa',
-    runforEnv: ['test'],
-    tests: canonicalTests,
-  },
-  {
     path: '/persian/media-49522521', // CPS MAP with live stream
     service: 'persian',
     runforEnv: ['live'],
@@ -65,12 +59,6 @@ const canonicalSmokeTestSuites = [
     runforEnv: ['local'],
     tests: canonicalTests,
   },
-  {
-    path: '/zhongwen/simp/multimedia/2016/06/160608_vid_gaokao_voxpop',
-    service: 'zhongwen',
-    runforEnv: ['live'],
-    tests: canonicalTests,
-  },
 ];
 
 const canonicalNonSmokeTestSuites = [
@@ -82,12 +70,6 @@ const canonicalNonSmokeTestSuites = [
   },
   {
     path: '/afrique/region-23278969', // CPS MAP
-    service: 'afrique',
-    runforEnv: ['test'],
-    tests: canonicalTests,
-  },
-  {
-    path: '/afrique/nos_emissions/2016/06/160622_tc2_testmap1?renderer_env=test', // TC2 MAP
     service: 'afrique',
     runforEnv: ['test'],
     tests: canonicalTests,
@@ -117,12 +99,6 @@ const canonicalNonSmokeTestSuites = [
     tests: canonicalTests,
   },
   {
-    path: '/arabic/worldnews/2015/11/151120_t_arabic_av?renderer_env=test', // TC2 video
-    service: 'arabic',
-    runforEnv: ['test'],
-    tests: canonicalTests,
-  },
-  {
     path: '/hindi/media-53139567',
     service: 'hindi',
     runforEnv: ['live'],
@@ -135,12 +111,6 @@ const canonicalNonSmokeTestSuites = [
     tests: canonicalTests,
   },
   {
-    path: '/hindi/sport/2016/08/160822_tc2_testmap1?renderer_env=test', // TC2 video
-    service: 'hindi',
-    runforEnv: ['test'],
-    tests: canonicalTests,
-  },
-  {
     path: '/russian/av/media-45527896', // CPS video with redirect
     service: 'russian',
     runforEnv: ['live'],
@@ -148,12 +118,6 @@ const canonicalNonSmokeTestSuites = [
   },
   {
     path: '/russian/av/media-23320267', // CPS video with redirect
-    service: 'russian',
-    runforEnv: ['test'],
-    tests: canonicalTests,
-  },
-  {
-    path: '/russian/news/2016/05/160510_tc2_testmap3?renderer_env=test', // TC2 video
     service: 'russian',
     runforEnv: ['test'],
     tests: canonicalTests,
@@ -189,12 +153,6 @@ const canonicalNonSmokeTestSuites = [
     tests: canonicalTests,
   },
   {
-    path: '/swahili/michezo/2016/07/160713_tc2_testmap2?renderer_env=test', // TC2 MAP with audio clip
-    service: 'swahili',
-    runforEnv: ['test'],
-    tests: canonicalTests,
-  },
-  {
     path: '/tigrinya/news-23263262', // CPS MAP with video clip
     service: 'tigrinya',
     runforEnv: ['test'],
@@ -219,12 +177,6 @@ const canonicalNonSmokeTestSuites = [
     tests: canonicalTests,
   },
   {
-    path: '/zhongwen/simp/multimedia/2016/11/161107_tc2_testmap1?renderer_env=test', // TC2 Video
-    service: 'zhongwen',
-    runforEnv: ['test'],
-    tests: canonicalTests,
-  },
-  {
     path: '/zhongwen/trad/world-53107744', // CPS video
     service: 'zhongwen',
     runforEnv: ['live'],
@@ -236,22 +188,29 @@ const canonicalNonSmokeTestSuites = [
     runforEnv: ['test'],
     tests: canonicalTests,
   },
-  {
-    path: '/zhongwen/trad/multimedia/2016/11/161107_tc2_testmap1?renderer_env=test', // TC2 Video
-    service: 'zhongwen',
-    runforEnv: ['test'],
-    tests: canonicalTests,
-  },
 ];
 
 // TC2 MAPs  do not support AMP pages
 const tc2CanonicalTestSuites = Cypress.env('SMOKE')
-  ? []
+  ? [
+      {
+        path: '/hausa/multimedia/2016/07/160714_tc2_audiomap?renderer_env=test', // TC2 MAP with audio clip
+        service: 'hausa',
+        runforEnv: ['test'],
+        tests: canonicalTests,
+      },
+    ]
   : [
       {
         path: '/afrique/institutionelles/2015/07/150714_hissene_habre_explainer', // TC2 MAP
         service: 'afrique',
         runforEnv: ['live'],
+        tests: canonicalTests,
+      },
+      {
+        path: '/afrique/nos_emissions/2016/06/160622_tc2_testmap1?renderer_env=test', // TC2 MAP
+        service: 'afrique',
+        runforEnv: ['test'],
         tests: canonicalTests,
       },
       {
@@ -261,9 +220,21 @@ const tc2CanonicalTestSuites = Cypress.env('SMOKE')
         tests: canonicalTests,
       },
       {
+        path: '/arabic/worldnews/2015/11/151120_t_arabic_av?renderer_env=test', // TC2 video
+        service: 'arabic',
+        runforEnv: ['test'],
+        tests: canonicalTests,
+      },
+      {
         path: '/hindi/multimedia/2015/09/150921_what_is_innovation_ms', // TC2 video
         service: 'hindi',
         runforEnv: ['live'],
+        tests: canonicalTests,
+      },
+      {
+        path: '/hindi/sport/2016/08/160822_tc2_testmap1?renderer_env=test', // TC2 video
+        service: 'hindi',
+        runforEnv: ['test'],
         tests: canonicalTests,
       },
       {
@@ -273,9 +244,21 @@ const tc2CanonicalTestSuites = Cypress.env('SMOKE')
         tests: canonicalTests,
       },
       {
+        path: '/russian/news/2016/05/160510_tc2_testmap3?renderer_env=test', // TC2 video
+        service: 'russian',
+        runforEnv: ['test'],
+        tests: canonicalTests,
+      },
+      {
         path: '/swahili/medianuai/2016/05/160517_apatae_fatacky', // TC2 MAP with video clip
         service: 'swahili',
         runforEnv: ['live'],
+        tests: canonicalTests,
+      },
+      {
+        path: '/swahili/michezo/2016/07/160713_tc2_testmap2?renderer_env=test', // TC2 MAP with audio clip
+        service: 'swahili',
+        runforEnv: ['test'],
         tests: canonicalTests,
       },
       {
@@ -288,6 +271,12 @@ const tc2CanonicalTestSuites = Cypress.env('SMOKE')
         path: '/zhongwen/simp/multimedia/2016/06/160608_vid_gaokao_voxpop', // TC2 video
         service: 'zhongwen',
         runforEnv: ['live'],
+        tests: canonicalTests,
+      },
+      {
+        path: '/zhongwen/simp/multimedia/2016/11/161107_tc2_testmap1?renderer_env=test', // TC2 Video
+        service: 'zhongwen',
+        runforEnv: ['test'],
         tests: canonicalTests,
       },
       {
