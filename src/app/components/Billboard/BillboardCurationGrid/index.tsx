@@ -17,7 +17,7 @@ const BillboardCurationGrid = ({ summaries }: CurationGridProps) => {
   return (
     <div data-testid="billboard-curation-grid">
       {hasMultiplePromos ? (
-        <ul css={styles.list} role="list" data-testid="topic-promos">
+        <ul css={styles.list} role="list" data-testid="billboard-promos">
           {top4SummariesForGrid.map(promo => (
             <li css={styles.item} key={promo.id}>
               <CurationPromo {...promo} lazy headingLevel={3} />
