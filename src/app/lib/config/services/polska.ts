@@ -326,7 +326,7 @@ export const service: DefaultServiceConfig = {
     mostRead: {
       header: 'Najczęściej czytane',
       lastUpdated: 'Ostatnio zaktualizowane:',
-      numberOfItems: 5,
+      numberOfItems: 10,
       hasMostRead: true,
     },
     radioSchedule: {
@@ -392,6 +392,14 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Strona główna',
         url: '/polska',
+      },
+      {
+        title: 'Świat',
+        url: '/polska/topics/cvg9w8yplg1t',
+      },
+      {
+        title: 'Wideo',
+        url: '/polska/topics/c4gk270dy10t',
       },
     ],
   },

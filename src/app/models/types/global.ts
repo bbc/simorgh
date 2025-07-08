@@ -24,10 +24,11 @@ export type Toggles =
     }
   | { _environment: string };
 
-export type MvtExperiment = {
+export type ServerSideExperiment = {
   experimentName: string;
   variation: string;
-  type: 'experiment' | 'feature';
+  enabled: boolean;
+  type?: 'experiment' | 'feature';
 };
 
 export type SerbianService = {
