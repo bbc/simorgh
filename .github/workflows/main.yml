@@ -15,26 +15,21 @@ jobs:
         with:
           script: |
             const prNumber = context.payload.issue.number;
+            console.log('prNumber', prNumber);
             const { data: comments } = await github.rest.issues.listComments({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: prNumber,
             });
-            core.setOutput('comment_count', comments.length);
-
-      - name: Debug comment count
-        run: echo "Comment count is ${{ steps.get_comments.outputs.comment_count }}"
-
-      - name: Dump GitHub context (for debugging)
-        run: echo '${{ toJSON(github) }}'
+            console.log('comments', comments.length);
+            return comments.length;
+          result-encoding: string
 
       - name: Send slack message if comment threshold is exceeded
-        if: fromJson(steps.get_comments.outputs.comment_count) > 12
+        if: steps.get_comments.outputs.result > 12
         uses: slackapi/slack-github-action@v2.1.0
         with:
           webhook: ${{ secrets.SLACK_PR_COMMENTS_WEBHOOK_URL }}
           webhook-type: incoming-webhook
           payload: |
-            {
-              "text": "Pull Request #${{ github.event.issue.number }} (\"${{ github.event.issue.title }}\") now has over 12 comments.\n<${{ github.event.issue.html_url }}|View Pull Request>\nCurrent comment count: ${{ steps.get_comments.outputs.comment_count }}"
-            }
+            "text": "Pull Request #${{ github.event.issue.number }} (\"${{ github.event.issue.title }}\") now has over 12 comments.\n<${{ github.event.issue.html_url }}|View Pull Request>\nCurrent comment count: ${{ steps.get_comments.outputs.result }}"
