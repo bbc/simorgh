@@ -4,5 +4,4 @@ export interface CurationGridProps {
   summaries: Summary[];
   headingLevel?: number;
   isFirstCuration?: boolean;
-  isBillboardContext?: boolean;
 }

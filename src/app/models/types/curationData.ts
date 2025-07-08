@@ -22,7 +22,6 @@ export interface Summary extends BaseSummary {
   mediaType?: 'audio' | 'video' | 'photogallery';
   lazy?: boolean;
   headingLevel?: number;
-  isBillboardContext?: boolean;
 }
 
 export const VISUAL_STYLE = {
