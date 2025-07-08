@@ -1,5 +1,5 @@
 import { css, Theme } from '@emotion/react';
-import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+// import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import pixelsToRem from '../../utilities/pixelsToRem';
 
 export default {
