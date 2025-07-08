@@ -9,7 +9,7 @@ import useViewTracker from '#app/hooks/useViewTracker';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
 
-type Props = {
+export type Props = {
   showAllContent: boolean;
   setShowAllContent: () => void;
   variation:

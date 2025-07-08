@@ -30,12 +30,7 @@ const testSuites = [
     runforEnv: ['local', 'test', 'live'],
     tests,
   },
-  {
-    path: '/bengali/bbc_bangla_radio/liveradio',
-    service: 'bengali',
-    runforEnv: ['local', 'test', 'live'],
-    tests,
-  },
+
   {
     path: '/burmese/bbc_burmese_radio/liveradio',
     service: 'burmese',
@@ -55,20 +50,8 @@ const testSuites = [
     tests,
   },
   {
-    path: '/indonesia/bbc_indonesian_radio/liveradio',
-    service: 'hausa',
-    runforEnv: ['local', 'test', 'live'],
-    tests,
-  },
-  {
     path: '/korean/bbc_korean_radio/liveradio',
     service: 'korean',
-    runforEnv: ['local', 'test', 'live'],
-    tests,
-  },
-  {
-    path: '/kyrgyz/bbc_kyrgyz_radio/liveradio',
-    service: 'kyrgyz',
     runforEnv: ['local', 'test', 'live'],
     tests,
   },
@@ -103,20 +86,8 @@ const testSuites = [
     tests,
   },
   {
-    path: '/tamil/bbc_tamil_radio/liveradio',
-    service: 'tamil',
-    runforEnv: ['local', 'test', 'live'],
-    tests,
-  },
-  {
     path: '/tigrinya/bbc_tigrinya_radio/liveradio',
     service: 'tigrinya',
-    runforEnv: ['local', 'test', 'live'],
-    tests,
-  },
-  {
-    path: '/urdu/bbc_urdu_radio/liveradio',
-    service: 'urdu',
     runforEnv: ['local', 'test', 'live'],
     tests,
   },

@@ -10,7 +10,7 @@ const useToggle = toggleName => {
       ...{ enabled, value },
     };
   }
-  return { enabled: null }; // if toggle does not exist then return { enabled: null }
+  return { enabled: null, value: null }; // if toggle does not exist then return { enabled: null }
 };
 
 export default useToggle;

@@ -6,6 +6,9 @@ exports[`Toggles Config when application environment is live should contain corr
   "ads": {
     "enabled": false,
   },
+  "adsNonce": {
+    "enabled": false,
+  },
   "articleLiteSiteLink": {
     "enabled": true,
   },
@@ -57,6 +60,10 @@ exports[`Toggles Config when application environment is local should contain cor
   "_environment": "local",
   "ads": {
     "enabled": false,
+  },
+  "adsNonce": {
+    "enabled": true,
+    "value": "es,mx",
   },
   "articleLiteSiteLink": {
     "enabled": true,
@@ -121,6 +128,10 @@ exports[`Toggles Config when application environment is test should contain corr
   "_environment": "test",
   "ads": {
     "enabled": false,
+  },
+  "adsNonce": {
+    "enabled": true,
+    "value": "es,mx",
   },
   "articleLiteSiteLink": {
     "enabled": true,
