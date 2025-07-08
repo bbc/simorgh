@@ -1,4 +1,4 @@
-tname: Notify on PR with >12 Comments
+name: Notify on PR with >12 Comments
 
 on:
   issue_comment:
