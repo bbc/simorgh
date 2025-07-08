@@ -3,6 +3,10 @@ export default {
   ads: {
     enabled: false,
   },
+  adsNonce: {
+    enabled: true,
+    value: 'es,mx',
+  },
   articleLiteSiteLink: { enabled: true },
   chartbeatAnalytics: {
     enabled: true,
