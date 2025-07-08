@@ -121,7 +121,7 @@ export default ({ service }) => {
       });
     });
   });
-  describe.only('Billboard', () => {
+  describe('Billboard', () => {
     it('should display the correct number of items in the curation grid if there is at least 2 summaries', () => {
       cy.viewport(1008, 900);
       cy.getPageDataFromWindow().then(data => {
