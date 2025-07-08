@@ -6,6 +6,7 @@ import ampArticleTests from './testsForAMPOnly';
 import canonicalArticleTests from './testsForCanonicalOnly';
 import liteTests from '../articles/testsForLiteOnly';
 import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
+import MEDIA_ASSET_PAGE from '../../../../src/app/routes/utils/pageTypes';
 
 const canonicalTests = [
   testsForAllPages,
@@ -330,7 +331,7 @@ const liteTestSuites = Cypress.env('SMOKE')
   : [];
 
 runTestsForPage({
-  pageType: 'mediaAssetPage',
+  pageType: MEDIA_ASSET_PAGE,
   testSuites: [
     ...canonicalTestSuites,
     ...tc2CanonicalTestSuites,
