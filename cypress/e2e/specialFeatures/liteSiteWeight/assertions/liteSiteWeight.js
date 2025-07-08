@@ -6,7 +6,7 @@ const MAX_PAGE_WEIGHT_KB = 50;
 
 const PAGE_TYPE_PAGE_WEIGHT_MAPPING = {
   live: 70,
-  hindi: 53,
+  Home: 53,
 };
 
 const getMaxPageWeight = pageType =>
