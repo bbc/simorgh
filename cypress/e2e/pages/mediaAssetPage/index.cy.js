@@ -6,7 +6,7 @@ import ampArticleTests from './testsForAMPOnly';
 import canonicalArticleTests from './testsForCanonicalOnly';
 import liteTests from '../articles/testsForLiteOnly';
 import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
-import MEDIA_ASSET_PAGE from '../../../../src/app/routes/utils/pageTypes';
+import { MEDIA_ASSET_PAGE } from '../../../../src/app/routes/utils/pageTypes';
 
 const canonicalTests = [
   testsForAllPages,
