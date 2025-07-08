@@ -4,19 +4,19 @@ import { jsx } from '@emotion/react';
 import Text from '#app/components/Text';
 import { TriangleDown } from '#app/components/icons';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
-import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 
 export type Props = {
   showAllContent: boolean;
   setShowAllContent: () => void;
   variation:
-  | 'read-more-a'
-  | 'read-more-b'
-  | 'read-more-a-and-top-stories'
-  | null;
+    | 'read-more-a'
+    | 'read-more-b'
+    | 'read-more-a-and-top-stories'
+    | null;
   liteCTAShows?: boolean;
 };
 
