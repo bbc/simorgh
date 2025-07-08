@@ -20,7 +20,7 @@ jobs:
               repo: context.repo.repo,
               issue_number: prNumber,
             });
-            echo "commentLength=${{length}}" >> $GITHUB_OUTPUT
+            echo "commentLength=${{comments.length}}" >> $GITHUB_OUTPUT
             echo "pullRequestNumber=${{prNumber}}" >> $GITHUB_OUTPUT
             return comments.length;
 
