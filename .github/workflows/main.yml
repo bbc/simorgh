@@ -15,15 +15,18 @@ jobs:
         with:
           script: |
             const prNumber = context.payload.issue.number;
+            console.log('prNumber', prNumber);
             const { data: comments } = await github.rest.issues.listComments({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: prNumber,
             });
+            console.log('comments', comments.length);
             return comments.length;
+          result-encoding: string
 
       - name: Send slack message if comment threshold is exceeded
-        if: steps.get_comments.outputs.commentLength > 12
+        if: steps.get_comments.outputs.result > 12
         uses: slackapi/slack-github-action@v2.1.0
         with:
           webhook: ${{ secrets.SLACK_PR_COMMENTS_WEBHOOK_URL }}
