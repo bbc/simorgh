@@ -34,13 +34,15 @@ export default {
       },
     }),
   backgroundContainer: () => {
-    const {
-      SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
-      SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
-    } = getEnvConfig();
-    const staticAssestsPath = `${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
-    const billboardImage = 'images/billboard_image.jpg.webp';
-    const imageUrl = `${staticAssestsPath}${billboardImage}`;
+    // const {
+    //   SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
+    //   SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
+    // } = getEnvConfig();
+    // const staticAssestsPath = `${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
+    // const billboardImage = 'images/billboard_image.jpg.webp';
+    // const imageUrl = `${staticAssestsPath}${billboardImage}`;
+    const imageUrl =
+      'https://static.test.files.bbci.co.uk/ws/simorgh1-preview-assets/public/images/billboard_image.jpg.webp';
     return css({
       zIndex: 2,
       position: 'absolute',
