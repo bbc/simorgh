@@ -131,6 +131,7 @@ const testRenderedData =
         isApp={isApp}
         legacyScripts="__mock_script_elements__"
         modernScripts="__mock_script_elements__"
+        service={service}
         links="__mock_link_elements__"
       />,
     );
@@ -1448,6 +1449,7 @@ describe('Server', () => {
             isAmp={isAmp}
             legacyScripts="__mock_script_elements__"
             modernScripts="__mock_script_elements__"
+            service={service}
             links="__mock_link_elements__"
           />,
         );
