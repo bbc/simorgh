@@ -38,6 +38,7 @@ const KNOWN_ERRORS = [
   // This link then navigates the test to the BBC News Pidgin WhatsApp channel
   // https://www.whatsapp.com/channel/0029VawW7AjFy726zWLIFq2j
   'requireLazy is not defined',
+  'ResizeObserver loop completed with undelivered notifications',
 ];
 
 // eslint-disable-next-line consistent-return
