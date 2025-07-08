@@ -20,23 +20,13 @@ const BillboardCurationGrid = ({ summaries }: CurationGridProps) => {
         <ul css={styles.list} role="list" data-testid="topic-promos">
           {top4SummariesForGrid.map(promo => (
             <li css={styles.item} key={promo.id}>
-              <CurationPromo
-                {...promo}
-                lazy
-                headingLevel={3}
-                isBillboardContext
-              />
+              <CurationPromo {...promo} lazy headingLevel={3} />
             </li>
           ))}
         </ul>
       ) : (
         <div css={styles.item}>
-          <CurationPromo
-            {...firstPromo}
-            lazy
-            headingLevel={3}
-            isBillboardContext
-          />
+          <CurationPromo {...firstPromo} lazy headingLevel={3} />
         </div>
       )}
     </div>

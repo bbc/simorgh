@@ -26,7 +26,6 @@ const CurationPromo = ({
   duration: mediaDuration,
   headingLevel = 2,
   isLive,
-  isBillboardContext = false,
 }: Summary) => {
   const { isAmp, isLite } = use(RequestContext);
   const { translations } = use(ServiceContext);
@@ -65,18 +64,9 @@ const CurationPromo = ({
           )}
         </Promo.Image>
       )}
-      <Promo.Heading
-        as={`h${headingLevel}`}
-        css={isBillboardContext ? styles.billboardPromoHeadingText : undefined}
-      >
+      <Promo.Heading as={`h${headingLevel}`}>
         {isMedia ? (
-          <Promo.A
-            href={link}
-            aria-labelledby={id}
-            css={
-              isBillboardContext ? styles.billboardPromoHeadingText : undefined
-            }
-          >
+          <Promo.A href={link} aria-labelledby={id}>
             <span id={id} role="text">
               <VisuallyHiddenText data-testid="visually-hidden-text">
                 {typeTranslated}
@@ -88,24 +78,14 @@ const CurationPromo = ({
             </span>
           </Promo.A>
         ) : (
-          <Promo.A
-            href={link}
-            css={
-              isBillboardContext ? styles.billboardPromoHeadingText : undefined
-            }
-          >
+          <Promo.A href={link}>
             {isLive ? <LiveLabel>{title}</LiveLabel> : title}
           </Promo.A>
         )}
       </Promo.Heading>
 
       {!isLive ? (
-        <Promo.Timestamp
-          className="promo-timestamp"
-          css={
-            isBillboardContext ? styles.billboardPromoTimestampText : undefined
-          }
-        >
+        <Promo.Timestamp className="promo-timestamp">
           {lastPublished}
         </Promo.Timestamp>
       ) : null}

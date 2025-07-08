@@ -77,6 +77,22 @@ const styles = {
           verticalAlign: 'top',
           paddingInlineStart: `${spacings.FULL}rem`,
         },
+        '& > h3 > a': {
+          color: `${palette.WHITE}`,
+          '&:visited': {
+            color: `${palette.GREY_5}`,
+          },
+        },
+
+        '& > time.promo-timestamp': {
+          color: `${palette.WHITE}`,
+          '&:visited': {
+            color: `${palette.GREY_5}`,
+          },
+          [mq.GROUP_2_MAX_WIDTH]: {
+            marginBottom: `${spacings.DOUBLE}rem`,
+          },
+        },
       },
 
       [mq.GROUP_2_MAX_WIDTH]: {

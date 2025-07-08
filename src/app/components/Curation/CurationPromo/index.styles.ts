@@ -21,21 +21,4 @@ export default {
     css({
       position: 'relative',
     }),
-  billboardPromoHeadingText: ({ palette }: Theme) =>
-    css({
-      color: `${palette.WHITE}`,
-      '&:visited': {
-        color: `${palette.GREY_5}`,
-      },
-    }),
-  billboardPromoTimestampText: ({ mq, palette, spacings }: Theme) =>
-    css({
-      color: `${palette.WHITE}`,
-      '&:visited': {
-        color: `${palette.GREY_5}`,
-      },
-      [mq.GROUP_2_MAX_WIDTH]: {
-        marginBottom: `${spacings.DOUBLE}rem`,
-      },
-    }),
 };
