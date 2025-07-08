@@ -65,6 +65,12 @@ const canonicalSmokeTestSuites = [
     runforEnv: ['local'],
     tests: canonicalTests,
   },
+  {
+    path: '/zhongwen/simp/multimedia/2016/06/160608_vid_gaokao_voxpop',
+    service: 'zhongwen',
+    runforEnv: ['live'],
+    tests: canonicalTests,
+  },
 ];
 
 const canonicalNonSmokeTestSuites = [
