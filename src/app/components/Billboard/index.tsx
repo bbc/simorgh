@@ -86,7 +86,7 @@ export default ({
                 <Heading
                   level={2}
                   size="greatPrimer"
-                  css={{ color: '#FFFFFF', marginBottom: '16px' }}
+                  css={[styles.billboardMoreOnThisHeading]}
                 >
                   {showMoreOnThisTitle}
                 </Heading>

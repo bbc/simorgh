@@ -65,6 +65,13 @@ export default {
         paddingBottom: `${spacings.FULL}rem`,
       },
     }),
+
+  billboardMoreOnThisHeading: ({ palette, spacings }: Theme) =>
+    css({
+      color: palette.WHITE,
+      marginBottom: `${spacings.DOUBLE}rem`,
+    }),
+
   liveLabelPulse: ({ mq, palette, spacings }: Theme) =>
     css({
       width: `${spacings.HALF + spacings.DOUBLE}rem`,
