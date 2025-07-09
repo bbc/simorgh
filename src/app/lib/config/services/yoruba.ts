@@ -74,6 +74,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'Fò kọjá sí nnkan tí ó wà nínú rẹ̀',
       relatedContent: 'Àwọn afíkun lórí ìròyìn yìí',
       relatedTopics: 'Àwọn Àkórí Tójọra',
+      moreOnThis: '',
       navMenuText: 'Àwọn abala',
       mediaAssetPage: {
         mediaPlayer: 'Media player',

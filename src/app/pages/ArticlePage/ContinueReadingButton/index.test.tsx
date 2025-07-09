@@ -132,6 +132,8 @@ describe('ContinueReadingButton', () => {
   describe('Event Tracking', () => {
     const eventTrackingData = {
       componentName: 'read-more-button',
+      experimentName: 'newswb_ws_read_more_b',
+      experimentVariant: 'read-more-b',
       sendOptimizelyEvents: true,
     };
 
