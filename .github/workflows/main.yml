@@ -33,4 +33,3 @@ jobs:
           webhook-type: incoming-webhook
           payload: |
             "text": "Pull Request #${{ github.event.issue.number }} (\"${{ github.event.issue.title }}\") now has over 12 comments.\n<${{ github.event.issue.html_url }}|View Pull Request>\nCurrent comment count: ${{ steps.get_comments.outputs.result }}"
-              
