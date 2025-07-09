@@ -3,10 +3,52 @@ import { NextApiRequest } from 'next';
 import { ImageResponse } from 'next/og';
 import getBrandedImage from '#lib/utilities/getBrandedImage';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
+import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 
 export const config = { runtime: 'edge' };
 
 const responseNotFound = () => new Response('Not found', { status: 404 });
+
+const BackgroundImage = ({ image }: { image: string }) => (
+  <img
+    src={image}
+    alt="background"
+    style={{
+      position: 'absolute',
+      width: '100%',
+      height: '100%',
+      objectFit: 'cover',
+    }}
+  />
+);
+
+const BadgeWrapper = ({ children }: { children: React.ReactNode }) => (
+  <div
+    style={{
+      display: 'flex',
+      flexDirection: 'row',
+      fontWeight: 'bold',
+      fontSize: '24px',
+      color: 'white',
+    }}
+  >
+    {children}
+  </div>
+);
+
+const TrendingStoryIcon = () => (
+  <BadgeWrapper>
+    <span style={{ marginRight: 10 }}>⬆️</span>
+    <span>Trending story</span>
+  </BadgeWrapper>
+);
+
+const ReadTime = ({ readTime }: { readTime: number }) => (
+  <BadgeWrapper>
+    <span style={{ marginRight: 10 }}>⏰</span>
+    <span>{`${readTime} min read`}</span>
+  </BadgeWrapper>
+);
 
 export default async function handler(req: NextApiRequest) {
   try {
@@ -18,16 +60,17 @@ export default async function handler(req: NextApiRequest) {
     const id = searchParams.get('id');
     const service = searchParams.get('service');
 
-    if (!id || !service) responseNotFound();
+    if (!id || !service) return responseNotFound();
 
     const articleResponse = await fetch(
       `https://web-cdn.api.bbci.co.uk/fd/simorgh-bff?pageType=article&id=${id}&service=${service}`,
     );
+
     const articleResponseJson = await articleResponse.json();
 
     const articleData = articleResponseJson?.data?.article;
 
-    if (!articleData) responseNotFound();
+    if (!articleData) return responseNotFound();
 
     const readTime = articleData?.metadata?.stats?.readTime;
 
@@ -42,6 +85,13 @@ export default async function handler(req: NextApiRequest) {
       ? getBrandedImage(promoImage, service)
       : `https://news.files.bbci.co.uk/ws/img/logos/og/${service}.png`;
 
+    const isInTopStories = Boolean(
+      articleResponseJson?.data?.secondaryData?.topStories.some(
+        (topStory: TopStoryItem) =>
+          topStory?.locators?.canonicalUrl.includes(id),
+      ),
+    );
+
     return new ImageResponse(
       (
         <div
@@ -52,53 +102,42 @@ export default async function handler(req: NextApiRequest) {
             position: 'relative',
           }}
         >
-          <img
-            src={image}
-            alt="background"
-            style={{
-              position: 'absolute',
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-            }}
-          />
+          {image && <BackgroundImage image={image} />}
           <div
             style={{
-              position: 'absolute',
-              top: '25px',
-              right: '25px',
-              backgroundColor: 'rgba(0,0,0,0.6)',
-              padding: '10px 20px',
-              borderRadius: '10px',
-              fontWeight: 'bold',
-              fontSize: '24px',
-              color: 'white',
-            }}
-          >
-            🔥 Trending story
-          </div>
-          <div
-            style={{
+              display: 'flex',
+              flexDirection: 'column',
               position: 'absolute',
               bottom: '25px',
               right: '25px',
               backgroundColor: 'rgba(0,0,0,0.6)',
               padding: '10px 20px',
               borderRadius: '10px',
-              fontWeight: 'bold',
-              fontSize: '24px',
-              color: 'white',
             }}
           >
-            {`Read time: ${readTime} minutes`}
+            {[
+              isInTopStories && <TrendingStoryIcon key="trending" />,
+              readTime && <ReadTime readTime={readTime} key="readTime" />,
+            ]
+              .filter(Boolean)
+              .map((child, index, arr) => (
+                <div
+                  // eslint-disable-next-line react/no-array-index-key
+                  key={index}
+                  style={{
+                    display: 'flex',
+                    marginBottom: index < arr.length - 1 ? '10px' : '0px',
+                  }}
+                >
+                  {child}
+                </div>
+              ))}
           </div>
         </div>
       ),
     );
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: any) {
-    return new Response(error.message, {
-      status: 500,
-    });
+    return new Response(error.message, { status: 500 });
   }
 }
