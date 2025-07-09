@@ -116,8 +116,8 @@ export default async function handler(req: NextApiRequest) {
             }}
           >
             {[
-              isInTopStories && <TrendingStoryIcon key="trending" />,
-              readTime && <ReadTime readTime={readTime} key="readTime" />,
+              isInTopStories && <TrendingStoryIcon />,
+              readTime && <ReadTime readTime={readTime} />,
             ]
               .filter(Boolean)
               .map((child, index, arr) => (
