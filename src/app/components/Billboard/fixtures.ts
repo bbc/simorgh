@@ -61,4 +61,99 @@ const kyrgyzBillboard = {
   visualStyle: 'BANNER',
 };
 
-export { kyrgyzLiveBillboard, kyrgyzBillboard };
+const pidginLiveBillboard = {
+  summaries: [
+    {
+      type: 'article',
+      isLive: true,
+      title: 'Tipo Live Page TEST about Photography',
+      firstPublished: '',
+      lastPublished: '',
+      link: 'https://www.bbc.com/news/live/cp4vqze8qznxt',
+      imageUrl:
+        'https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/69db/test/b8ead0b0-b9e5-11ee-9627-8141b3381959.jpg.webp',
+      description: 'Tipo Live Page TEST about Photography description',
+      imageAlt: 'Alternative description',
+      id: 'cp4vqze8qznxt',
+    },
+    {
+      type: 'article',
+      isLive: false,
+      title: 'Humza Yousaf resigns',
+      firstPublished: '',
+      lastPublished: '',
+      link: 'https://www.bbc.com/pidgin/live/cemy52djeq5t',
+      imageUrl:
+        'https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/1b6d/test/f9bbf9d0-0624-11ef-a801-47fbecfec49f.jpg.webp',
+      description:
+        'Yousaf says he “underestimated” the level of hurt after ending a power-sharing deal with the Scottish Greens last week.',
+      imageAlt: 'Humza Yousaf speaking at a press conference',
+      id: 'cemy52djeq5t',
+    },
+    {
+      type: 'article',
+      isLive: false,
+      title: 'Template article 4',
+      firstPublished: '2023-08-15T14:12:01.110Z',
+      lastPublished: '2023-08-15T14:12:01.110Z',
+      link: 'https://www.bbc.com/mundo/articles/c0ny73k281vo',
+      imageUrl:
+        'https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/4414/test/146c2c30-3b75-11ee-93b4-83c41441672b.jpg.webp',
+      description:
+        'Probo lorem partem pro ex, unum prima expetenda eos ne. Melius viderer quaestio nec te.',
+      imageAlt: 'Bird',
+      id: 'c0ny73k281vo',
+    },
+    {
+      type: 'video',
+      duration: 'PT54S',
+      isLive: false,
+      title: 'Video Test',
+      firstPublished: '2022-10-27T16:32:50.346Z',
+      lastPublished: '2022-10-27T16:32:50.346Z',
+      link: 'https://www.bbc.com/pidgin/articles/cvl1jnp2nrqo',
+      imageUrl:
+        'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp',
+      imageAlt: 'test image alt for video test',
+      id: 'cvl1jnp2nrqo',
+    },
+    {
+      type: 'article',
+      isLive: false,
+      title: 'Lagos Goment enforces okada ban',
+      firstPublished: '2023-08-17T14:13:14.817Z',
+      lastPublished: '2023-08-17T14:13:14.817Z',
+      link: 'https://www.bbc.com/pidgin/articles/cem8zq07ddxo',
+      imageUrl:
+        'https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/8e2a/test/081683b0-3d08-11ee-acfe-efb7db480188.jpg.webp',
+      description:
+        'The fuel levy reduction is expected to last for two months. This will cushion the blow for South Africans facing a significant rise in the cost of living due to high fuel prices. \n\n',
+      imageAlt: 'NUT',
+      id: 'cem8zq07ddxo',
+    },
+    {
+      type: 'article',
+      isLive: false,
+      title: 'should not be displayed',
+      firstPublished: '2023-08-17T14:13:14.817Z',
+      lastPublished: '2023-08-17T14:13:14.817Z',
+      link: 'https://www.bbc.com/pidgin/articles/blablablabla',
+      imageUrl:
+        'https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/8e2a/test/081683b0-3d08-11ee-acfe-efb7db480188.jpg.webp',
+      description:
+        'The fuel levy reduction is expected to last for two months. This will cushion the blow for South Africans facing a significant rise in the cost of living due to high fuel prices. \n\n',
+      imageAlt: 'NUT2',
+      id: 'blablablabla',
+    },
+  ],
+  activePage: 1,
+  pageCount: 1,
+  curationId: 'urn:bbc:tipo:list:7675d5bd-b710-48b3-88c2-c6189980cf02',
+  curationType: 'tipo-curation',
+  position: 0,
+  title: 'Humza Yousaf resigns as Scotland’s first minister',
+  visualProminence: 'MAXIMUM',
+  visualStyle: 'BANNER',
+};
+
+export { kyrgyzLiveBillboard, kyrgyzBillboard, pidginLiveBillboard };

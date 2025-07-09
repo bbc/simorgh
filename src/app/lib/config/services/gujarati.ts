@@ -80,6 +80,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'કન્ટેન્ટ પર જાવ',
       relatedContent: 'સંબંધિત સમાચાર',
       relatedTopics: 'સંબંધિત મુદ્દા',
+      moreOnThis: '',
       navMenuText: 'વિભાગો',
       mediaAssetPage: {
         mediaPlayer: 'મીડિયા પ્લેયર',
