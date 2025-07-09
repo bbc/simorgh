@@ -177,6 +177,7 @@ export const service: ZhongwenConfig = {
       skipLinkText: '跳过此内容',
       relatedContent: '更多相关内容',
       relatedTopics: '相关主题内容',
+      moreOnThis: '',
       navMenuText: '分类',
       mediaAssetPage: {
         mediaPlayer: '多媒体播放器',

@@ -80,6 +80,13 @@ export default {
         paddingBottom: `${spacings.FULL}rem`,
       },
     }),
+
+  billboardMoreOnThisHeading: ({ palette, spacings }: Theme) =>
+    css({
+      color: palette.WHITE,
+      marginBottom: `${spacings.DOUBLE}rem`,
+    }),
+
   liveLabelPulse: ({ mq, palette, spacings }: Theme) =>
     css({
       width: `${spacings.HALF + spacings.DOUBLE}rem`,
@@ -130,5 +137,17 @@ export default {
     css({
       color: palette.GREY_2,
       margin: 0,
+    }),
+  curationGridSection: ({ mq, spacings }: Theme) =>
+    css({
+      width: '100%',
+      padding: `${spacings.FULL}rem ${spacings.DOUBLE}rem 0 ${spacings.DOUBLE}rem`,
+      boxSizing: 'border-box',
+      display: 'flex',
+      flexDirection: 'column',
+      [mq.GROUP_1_MAX_WIDTH]: {
+        paddingLeft: `${spacings.FULL}rem`,
+        paddingRight: `${spacings.FULL}rem`,
+      },
     }),
 };
