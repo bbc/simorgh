@@ -105,10 +105,11 @@ const styles = {
   }),
 
   dropDownItem: css({
-    padding: '0.75rem 0.5rem',
+    position: 'relative',
+    padding: 0,
     borderBottom: '1px solid #bdbdbd',
     width: '100%',
-    '&:hover, &:focus, &.active': {
+    '&:hover, &:focus-within, &.active': {
       borderLeft: '4px solid #b80000',
       outline: 'none',
       backgroundColor: '#e6e8ea',
@@ -116,6 +117,10 @@ const styles = {
   }),
 
   dropDownLink: css({
+    display: 'block',
+    width: '100%',
+    height: '100%',
+    padding: '0.75rem 0.5rem',
     textDecoration: 'none',
     color: '#202224',
     fontFamily: 'BBC Reith Sans',
