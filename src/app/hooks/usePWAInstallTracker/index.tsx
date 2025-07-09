@@ -1,11 +1,11 @@
 import { useEffect, useRef } from 'react';
-import useNonInteractiveTracker from '../useNonInteractiveTracker';
+import useCustomEventTracker from '../useCustomEventTracker';
 
 /**
- * Hook to automatically track PWA installation events.
+ * A hook to track PWA installation events using Reverb Analytics
  */
 const usePWAInstallTracker = () => {
-  const { trackEvent } = useNonInteractiveTracker({
+  const { trackEvent } = useCustomEventTracker({
     componentName: 'usePWAInstallTracker',
     eventName: 'PWAInstall',
   });

@@ -117,6 +117,8 @@ export type ReverbUserVars = {
   isSignedIn: boolean;
 };
 
+export type ReverbEventActionType = 'select' | 'view' | 'custom';
+
 export type ReverbEventDetails = {
   anchorElement?: HTMLElement;
   experience?: {
@@ -125,7 +127,7 @@ export type ReverbEventDetails = {
   };
   event?: {
     category: string;
-    action: 'select' | 'view';
+    action: ReverbEventActionType;
   };
   eventName: 'pageView' | 'sectionView' | 'sectionClick';
   eventPublisher?: string;

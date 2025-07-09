@@ -1,14 +1,14 @@
 import { use, useCallback } from 'react';
-import { NON_INTERACTIVE_EVENT } from '#app/lib/analyticsUtils/analytics.const';
+import { CUSTOM_EVENT } from '#app/lib/analyticsUtils/analytics.const';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon';
 import useTrackingToggle from '../useTrackingToggle';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
-export interface NonInteractiveEventData extends EventTrackingData {
+// TODO: Might not extend the EventTrackingData;
+export interface CustomEventData extends EventTrackingData {
   eventName: string;
-  isUserInitiated?: boolean;
   customData?: Record<string, unknown>;
 }
 
@@ -24,15 +24,12 @@ const buildMetadataFormat = (
 
 /**
  * Considerations:
- * 1. Should we reuse an existing event type (e.g click/view) or introduce a new one?
- * 2. What should we use for componentName? Should it reflect the hook/component that triggered the event or be optional?
- * 3. What is the best way to pass an arbitrary `eventName` so that it's easily accessible in Piano?
- * 4. Which reverb param builder to reuse?
+ * 1. Which property to be used to pass custom/arbitrary data to the Reverb
+ * - TBC
  */
 
-const useNonInteractiveTracker = (
-  defaultEventTrackingData: NonInteractiveEventData,
-) => {
+const useCustomEventTracker = (defaultEventTrackingData: CustomEventData) => {
+  // TODO: Review if all data is needed;
   const {
     pageIdentifier,
     producerId,
@@ -43,14 +40,14 @@ const useNonInteractiveTracker = (
     producerName,
   } = extractATITrackingProps({
     eventTrackingData: defaultEventTrackingData,
-    eventType: NON_INTERACTIVE_EVENT,
+    eventType: CUSTOM_EVENT,
   });
 
   const { trackingIsEnabled } = useTrackingToggle();
   const { service, useReverb } = use(ServiceContext);
 
   const trackEvent = useCallback(
-    async (eventData?: Partial<NonInteractiveEventData>) => {
+    async (eventData?: Partial<CustomEventData>) => {
       if (!trackingIsEnabled) return;
 
       // Override the default details if needed
@@ -65,7 +62,6 @@ const useNonInteractiveTracker = (
 
       const {
         eventName,
-        isUserInitiated = false,
         customData = {},
         componentName = baseComponentName,
       } = mergedData;
@@ -84,12 +80,14 @@ const useNonInteractiveTracker = (
       ].every(Boolean);
 
       if (shouldSendEvent) {
+        // TODO: Temp - TBC
         const trackingComponentName = `${componentName}::${eventName}`;
+        // TODO: TBC - depends what meta data we pass
         const metadataFormat = buildMetadataFormat(customData);
 
         try {
           await sendEventBeacon({
-            type: isUserInitiated ? 'click' : 'view',
+            type: CUSTOM_EVENT,
             campaignID,
             componentName: trackingComponentName,
             pageIdentifier,
@@ -99,11 +97,10 @@ const useNonInteractiveTracker = (
             service,
             statsDestination,
             useReverb,
-            format: metadataFormat,
           });
         } catch (error) {
           // eslint-disable-next-line no-console
-          console.warn('Non-interactive event tracking failed:', error);
+          console.warn('Custom event tracking failed:', error);
         }
       }
     },
@@ -127,4 +124,4 @@ const useNonInteractiveTracker = (
   };
 };
 
-export default useNonInteractiveTracker;
+export default useCustomEventTracker;

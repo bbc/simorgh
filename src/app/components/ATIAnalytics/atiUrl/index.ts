@@ -2,6 +2,7 @@ import {
   CLICK_EVENT,
   VIEW_EVENT,
   VIEWABILITY_CLICK_EVENT,
+  CUSTOM_EVENT,
 } from '#app/lib/analyticsUtils/analytics.const';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import {
@@ -27,6 +28,7 @@ import {
   ATIEventTrackingProps,
   ATIPageTrackingProps,
   ReverbBeaconConfig,
+  ReverbEventActionType,
 } from '../types';
 
 /*
@@ -433,6 +435,7 @@ export const buildATIEventTrackUrl = ({
   )}&type=AT`;
 };
 
+// TODO: Analytics model vs event models
 export const buildReverbAnalyticsModel = ({
   appName,
   campaigns,
@@ -508,7 +511,6 @@ export const buildReverbAnalyticsModel = ({
   return reverbVariables;
 };
 
-// TODO: should it accept format?
 export const buildReverbEventModel = ({
   pageIdentifier,
   producerName,
@@ -531,6 +533,19 @@ export const buildReverbEventModel = ({
     resourceId: itemResourceId,
   } = itemTracker;
   const { itemCount, resourceId: groupResourceId } = groupTracker;
+
+  // TODO: Accept metadata (for custom event)
+
+  // TODO: Update the type
+  let actionType: ReverbEventActionType;
+
+  if (type === CUSTOM_EVENT) {
+    actionType = CUSTOM_EVENT;
+  } else if (type === CLICK_EVENT) {
+    actionType = VIEWABILITY_CLICK_EVENT;
+  } else {
+    actionType = VIEW_EVENT;
+  }
 
   return {
     params: {
@@ -566,7 +581,7 @@ export const buildReverbEventModel = ({
       },
       event: {
         category: 'viewability',
-        action: type === CLICK_EVENT ? VIEWABILITY_CLICK_EVENT : VIEW_EVENT,
+        action: actionType,
       },
       isClick: type === CLICK_EVENT,
       ...(experimentVariant && {
@@ -578,3 +593,5 @@ export const buildReverbEventModel = ({
     },
   };
 };
+
+// TODO: Build custom Event model?

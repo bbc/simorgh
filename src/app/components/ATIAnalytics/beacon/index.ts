@@ -2,6 +2,9 @@ import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
 import { buildATIEventTrackUrl, buildReverbEventModel } from '../atiUrl';
 import { ATIEventTrackingProps } from '../types';
 
+/**
+ * jf useReverb, is atiClickTrackingUrl ignored?
+ */
 export const sendEventBeacon = async ({
   campaignID,
   componentName,
@@ -58,7 +61,7 @@ export const sendEventBeacon = async ({
     : null;
 
   // TODO: Temp
-  console.log({ atiClickTrackingUrl, reverbParams });
+  console.log(`sendEventBeacon`, { atiClickTrackingUrl, reverbParams });
 
   await sendBeacon(atiClickTrackingUrl, reverbParams);
 };
