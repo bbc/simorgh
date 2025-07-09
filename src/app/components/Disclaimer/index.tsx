@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { useContext, PropsWithChildren } from 'react';
+import { use, PropsWithChildren } from 'react';
 import isEmpty from 'ramda/src/isEmpty';
 import { GridItemLarge } from '../../legacy/components/Grid';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -24,8 +24,8 @@ interface Disclaimer {
 const DisclaimerComponent = ({
   increasePaddingOnDesktop,
 }: PropsWithChildren<Props>) => {
-  const { disclaimer, translations } = useContext(ServiceContext);
-  const { pageType } = useContext(RequestContext);
+  const { disclaimer, translations } = use(ServiceContext);
+  const { pageType } = use(RequestContext);
   const { enabled } = useToggle('disclaimer');
 
   const shouldShow = enabled && disclaimer && !isEmpty(disclaimer);

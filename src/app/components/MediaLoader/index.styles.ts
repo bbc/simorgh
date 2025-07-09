@@ -3,8 +3,8 @@ import { css, Theme } from '@emotion/react';
 
 const commonMarginSpacing = ({ mq, spacings }: Theme) =>
   css({
-    marginInline: `${spacings.FULL}rem`,
-    [mq.GROUP_2_MIN_WIDTH]: {
+    marginInline: 0,
+    [mq.GROUP_3_MIN_WIDTH]: {
       [mq.GROUP_3_MAX_WIDTH]: {
         marginInline: `${spacings.DOUBLE}rem`,
       },
@@ -35,18 +35,17 @@ export default {
         display: 'flex',
         flexDirection: 'column',
         ...(!isEmbedded && {
-          maxWidth: `${pixelsToRem(185)}rem`,
-          [mq.GROUP_1_ONLY]: {
-            maxWidth: `${pixelsToRem(256)}rem`,
-          },
-          [mq.GROUP_2_ONLY]: {
-            maxWidth: `${pixelsToRem(274)}rem`,
+          [mq.GROUP_2_MAX_WIDTH]: {
+            maxWidth: '100%',
           },
           [mq.GROUP_3_ONLY]: {
-            maxWidth: `${pixelsToRem(200)}rem`,
+            maxWidth: `${pixelsToRem(382)}rem`,
           },
           [mq.GROUP_4_MIN_WIDTH]: {
-            maxWidth: `${pixelsToRem(190)}rem`,
+            maxWidth: `${pixelsToRem(315)}rem`,
+          },
+          [mq.GROUP_5_MIN_WIDTH]: {
+            maxWidth: `${pixelsToRem(382)}rem`,
           },
         }),
       }),
@@ -87,10 +86,10 @@ export default {
     commonMarginSpacing,
   ],
 
-  captionPortrait: ({ mq }: Theme) =>
+  captionPortrait: ({ mq, spacings }: Theme) =>
     css({
-      marginInline: '0',
-      [mq.GROUP_2_ONLY]: {
+      marginInline: `${spacings.FULL}rem`,
+      [mq.GROUP_3_MIN_WIDTH]: {
         marginInline: '0',
       },
     }),

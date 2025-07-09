@@ -1,4 +1,4 @@
-import React, { useContext, useMemo } from 'react';
+import React, { use, useMemo } from 'react';
 
 import Timestamp from '#components/Promo/timestamp';
 import LiveLabel from '#app/components/LiveLabel';
@@ -20,7 +20,7 @@ const Promo = ({
   eventTrackingData,
   className = '',
 }) => {
-  const { service } = useContext(ServiceContext);
+  const { service } = use(ServiceContext);
 
   const promoContextValue = useMemo(
     () => ({

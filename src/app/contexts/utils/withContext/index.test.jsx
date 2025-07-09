@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { cleanup, render, waitFor } from '@testing-library/react';
 import withContext from '.';
 
@@ -11,7 +11,7 @@ describe('withContext', () => {
 
   it('creates context provider with data and context', async () => {
     const Component = () => {
-      const { text } = useContext(NewContext);
+      const { text } = use(NewContext);
 
       return <span>{text}</span>;
     };
@@ -35,7 +35,7 @@ describe('withContext', () => {
 
   it('doesnt use data key if not provided', async () => {
     const Component = () => {
-      const { text } = useContext(NewContext);
+      const { text } = use(NewContext);
 
       return <span>{text}</span>;
     };

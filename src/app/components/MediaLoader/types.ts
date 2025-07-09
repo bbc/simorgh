@@ -100,6 +100,9 @@ export type PlayerUiConfig = {
   poster?: {
     availableWhenSettingUp: boolean;
   };
+  pictureInPicture?: {
+    enabled: boolean;
+  };
 };
 
 export type ConfigBuilderProps = {

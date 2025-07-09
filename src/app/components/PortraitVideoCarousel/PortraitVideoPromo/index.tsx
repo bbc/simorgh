@@ -7,7 +7,7 @@ import { Play } from '#app/components/icons';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import moment from 'moment';
 import formatDuration from '#app/lib/utilities/formatDuration';
-import { useContext, FocusEvent } from 'react';
+import { use, FocusEvent } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
@@ -34,7 +34,7 @@ export default (item: PortraitVideoPromoProps) => {
     defaultImage,
     defaultImageAltText,
     translations: { media = DEFAULT_TRANSLATION },
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
   const imageUrl = images?.[0]?.url ?? defaultImage;
   const imageUrlTemplate = images?.[0]?.urlTemplate;

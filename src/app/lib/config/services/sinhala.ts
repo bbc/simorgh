@@ -62,7 +62,20 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'අන්තර්ගතයට පිවිසෙන්න',
       relatedContent: 'මේ පුවතට සම්බන්ධ තවත් විස්තර',
       relatedTopics: 'සබැඳි විෂයයන්',
+      moreOnThis: '',
       navMenuText: 'අංශ',
+      liteSite: {
+        onboardingMessage:
+          'ඔබ මේ දකින්නේ අවම ඩේටා ප්‍රමාණයක් භාවිත කරන මෙම වෙබ් අඩවියේ පෙළ පමණක් කියවිය හැකි අනුවාදයකි. රූප සහ වීඩියෝ අන්තර්ගත අපගේ මුලික වෙබ් අඩවිය මෙතැනින් නරඹන්න.',
+        toMainSite: 'ප්‍රධාන වෙබ් අඩවියට ගෙන යන්න',
+        informationPage:
+          'අවම ඩේටා ප්‍රමාණයක් භාවිතා කරන මෙම වෙබ් පිටු පිළිබඳ වැඩිදුර කියවන්න',
+        informationPageLink:
+          'https://www.bbc.com/sinhala/articles/c4gdp0d3mzpo',
+        dataSaving: 'අවම ඩේටා ප්‍රමාණයක් භාවිත කිරීමට පෙළ පමණක් කියවන්න',
+        articleDataSavingLinkText:
+          'අවම ඩේටා ප්‍රමාණයක් භාවිත කිරීමට පෙළ පමණක් කියවන්න',
+      },
       mediaAssetPage: {
         mediaPlayer: 'මීඩියා ධාවකය',
         audioPlayer: 'හඬ වාදකය',
