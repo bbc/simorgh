@@ -165,6 +165,7 @@ export const service: SerbianConfig = {
       skipLinkText: 'Pređite na sadržaj',
       relatedContent: 'Povezano',
       relatedTopics: 'Povezane teme',
+      moreOnThis: '',
       navMenuText: 'Odeljci',
       mediaAssetPage: {
         mediaPlayer: 'Media plejer',

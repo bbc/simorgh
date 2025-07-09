@@ -68,6 +68,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'Przejdź do treści',
       relatedContent: 'Powiązane treści',
       relatedTopics: 'Powiązane tematy',
+      moreOnThis: '',
       navMenuText: 'Sekcje',
       liteSite: {
         onboardingMessage:
@@ -326,7 +327,7 @@ export const service: DefaultServiceConfig = {
     mostRead: {
       header: 'Najczęściej czytane',
       lastUpdated: 'Ostatnio zaktualizowane:',
-      numberOfItems: 5,
+      numberOfItems: 10,
       hasMostRead: true,
     },
     radioSchedule: {
