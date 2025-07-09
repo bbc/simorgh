@@ -78,6 +78,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'ናብቲ ትሕዝቶ ቀጽሉ',
       relatedContent: 'ተዛማዲ ትሕዝቶ',
       relatedTopics: 'ተዛማዲ ዛዕባታት',
+      moreOnThis: '',
       navMenuText: 'ክፍልታት',
       liteSite: {
         onboardingMessage:

@@ -62,6 +62,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'Mətnə keçid',
       relatedContent: 'Bu barədə daha geniş',
       relatedTopics: 'Əlaqəli mövzular',
+      moreOnThis: '',
       navMenuText: 'Bölümlər',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
