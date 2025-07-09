@@ -524,6 +524,7 @@ export const buildReverbEventModel = ({
   experimentVariant,
   itemTracker = {},
   groupTracker = {},
+  eventGroupingName,
 }: ATIEventTrackingProps): ReverbBeaconConfig => {
   const {
     type: itemType,
@@ -534,9 +535,6 @@ export const buildReverbEventModel = ({
   } = itemTracker;
   const { itemCount, resourceId: groupResourceId } = groupTracker;
 
-  // TODO: Accept metadata (for custom event)
-
-  // TODO: Update the type
   let actionType: ReverbEventActionType;
 
   if (type === CUSTOM_EVENT) {
@@ -562,6 +560,7 @@ export const buildReverbEventModel = ({
       },
     },
     eventDetails: {
+      // TODO: Can it be extended (i.e. using custom event name - PWAInstalled; effectiveType) or better to use eventGroupingName
       eventName: type === VIEW_EVENT ? 'sectionView' : 'sectionClick',
       eventPublisher: 'viewability',
       item: {
@@ -582,6 +581,7 @@ export const buildReverbEventModel = ({
       event: {
         category: 'viewability',
         action: actionType,
+        ...(eventGroupingName && { eventGrouping: eventGroupingName }),
       },
       isClick: type === CLICK_EVENT,
       ...(experimentVariant && {
@@ -593,5 +593,3 @@ export const buildReverbEventModel = ({
     },
   };
 };
-
-// TODO: Build custom Event model?

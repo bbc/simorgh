@@ -80,16 +80,14 @@ const useCustomEventTracker = (defaultEventTrackingData: CustomEventData) => {
       ].every(Boolean);
 
       if (shouldSendEvent) {
-        // TODO: Temp - TBC
-        const trackingComponentName = `${componentName}::${eventName}`;
-        // TODO: TBC - depends what meta data we pass
-        const metadataFormat = buildMetadataFormat(customData);
+        const stringifiedMetadata = buildMetadataFormat(customData);
 
         try {
           await sendEventBeacon({
             type: CUSTOM_EVENT,
+            eventGroupingName: eventName,
+            componentName: stringifiedMetadata,
             campaignID,
-            componentName: trackingComponentName,
             pageIdentifier,
             platform,
             producerId,
