@@ -80,6 +80,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'Tsallaka zuwa abubuwan da ke ciki',
       relatedContent: 'Karin bayani',
       relatedTopics: 'Labarai masu alaka',
+      moreOnThis: '',
       navMenuText: 'Sassa',
       liteSite: {
         onboardingMessage:

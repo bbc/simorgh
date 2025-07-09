@@ -82,6 +82,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'مشاهده محتوا',
       relatedContent: 'مطالب مرتبط',
       relatedTopics: 'موضوعات مرتبط',
+      moreOnThis: '',
       navMenuText: 'صفحه ها',
       liteSite: {
         onboardingMessage: `شما در حال مشاهده نسخه متنی وب‌سایت بی‌بی‌سی هستید که از داده کمتری استفاده می‌کند. نسخه اصلی وب‌سایت را که شامل تمام تصاویر و ویدیوهاست، مشاهده کنید.`,

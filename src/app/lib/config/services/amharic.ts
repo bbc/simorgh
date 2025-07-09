@@ -75,6 +75,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'ወደ ዋናው ይዘት ይለፉ',
       relatedContent: 'በዚህ ዘገባ ላይ ተጨማሪ መረጃ',
       relatedTopics: 'ተያያዥ ርዕሶች',
+      moreOnThis: '',
       navMenuText: 'ክፍሎች',
       liteSite: {
         onboardingMessage:

@@ -11,6 +11,7 @@ import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
 import LiveLabel from '../../LiveLabel';
+
 import styles from './index.styles';
 
 const CurationPromo = ({
@@ -46,7 +47,6 @@ const CurationPromo = ({
     (type === 'audio' && `${audioTranslation}, `) ||
     (type === 'video' && `${videoTranslation}, `) ||
     (type === 'photogallery' && `${photoGalleryTranslation}, `);
-
   return (
     <Promo css={styles.promo} className="">
       {imageUrl && (
@@ -83,6 +83,7 @@ const CurationPromo = ({
           </Promo.A>
         )}
       </Promo.Heading>
+
       {!isLive ? (
         <Promo.Timestamp className="promo-timestamp">
           {lastPublished}

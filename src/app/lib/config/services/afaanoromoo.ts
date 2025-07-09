@@ -77,6 +77,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'Qabiyyeetti darbi',
       relatedContent: 'Odeessa kana irratti dabalata',
       relatedTopics: 'Mata dureewwan walitti dhiyaatan',
+      moreOnThis: '',
       navMenuText: 'Kutaawwan',
       liteSite: {
         onboardingMessage:
