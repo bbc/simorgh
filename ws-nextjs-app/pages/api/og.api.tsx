@@ -6,6 +6,7 @@ import filterForBlockType from '#app/lib/utilities/blockHandlers';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import {
   BLACK,
+  GREY_6,
   LIVE_CORE,
   SPORT_YELLOW,
   WHITE,
@@ -183,8 +184,7 @@ const socialCardLayout = async ({
             bottom: 0,
             width: '100%',
             height: '100%',
-            background:
-              'linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.2) 50%)',
+            background: `linear-gradient(to top, ${BLACK}, transparent)`,
           }}
         />
         {/* Brand Logo */}
@@ -203,6 +203,7 @@ const socialCardLayout = async ({
             </g>
           </svg>
         </div>
+        {/* Bottom container */}
         <div
           style={{
             position: 'absolute',
@@ -215,6 +216,7 @@ const socialCardLayout = async ({
             padding: '20px 15px',
           }}
         >
+          {/* Headline */}
           <div style={{ display: 'flex', marginBottom: 20 }}>{headline}</div>
           {/* Badges */}
           <div style={{ display: 'flex', flexDirection: 'row' }}>
@@ -234,6 +236,7 @@ const socialCardLayout = async ({
                     padding: 15,
                     borderRadius: 30,
                     marginRight: index < arr.length - 1 ? '20px' : '0px',
+                    border: `1px solid ${GREY_6}`,
                   }}
                 >
                   {child}
@@ -296,7 +299,7 @@ export default async function handler(req: NextApiRequest) {
     const unbrandedImage = buildIChefURL({
       originCode: promoImage?.originCode,
       locator: promoImage?.locator,
-      resolution: 600,
+      resolution: 800,
     });
 
     const brandedImage = promoImage
