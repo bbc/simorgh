@@ -4,7 +4,11 @@ import { ImageResponse } from 'next/og';
 import getBrandedImage from '#lib/utilities/getBrandedImage';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
-import { WHITE } from '#app/components/ThemeProvider/palette';
+import {
+  LIVE_CORE,
+  SPORT_YELLOW,
+  WHITE,
+} from '#app/components/ThemeProvider/palette';
 
 export const config = { runtime: 'edge' };
 
@@ -48,12 +52,12 @@ const TrendingStoryIcon = () => (
         height="26"
       >
         <path
-          style={{ fill: WHITE }}
+          style={{ fill: LIVE_CORE }}
           d="M17.9 7v2.6h8.7l-.3-.7-9.1 9.1h1.3l-5.8-5.9-11.1 11L3.7 25l9.8-9.7h-1.4l5.8 5.8 10.3-10.3-.7-.3v8.7h2.6V7z"
         />
       </svg>
     </span>
-    <span>Trending story</span>
+    <span>Trending</span>
   </BadgeWrapper>
 );
 
@@ -67,7 +71,7 @@ const ReadTime = ({ readTime }: { readTime: number }) => (
         height="26"
       >
         <path
-          style={{ fill: WHITE }}
+          style={{ fill: SPORT_YELLOW }}
           d="m20.5 23.1.9-1.2-4.5-3.6-.6-6.7h-1.5l-.6 8.3zm-5-17.5c-1 0-1.5-.7-1.5-1.5s.6-1.5 1.7-1.5 1.7.7 1.7 1.5-.6 1.5-1.5 1.5zm-2.1 1h4.4c1.1-.7 1.5-1.6 1.5-2.7 0-1.6-1.3-3.4-3.7-3.4s-3.7 1.8-3.7 3.4q0 1.65 1.5 2.7m12.5 6.2 3.3-3.3L25.7 6l-3.3 3.3zM2.7 18.6c0 7.3 5.4 12.9 12.9 12.9 7.6 0 12.9-5.4 12.9-12.9s-5.3-13-12.9-13c-7.5 0-12.9 5.6-12.9 13m23.1 0c0 6-4.2 10.3-10.2 10.3S5.4 24.6 5.4 18.6 9.7 8.3 15.6 8.3s10.2 4.2 10.2 10.3"
         />
       </svg>
@@ -138,8 +142,8 @@ export default async function handler(req: NextApiRequest) {
               bottom: 25,
               right: 25,
               backgroundColor: 'rgba(0,0,0,0.8)',
-              padding: '10px 20px',
-              borderRadius: 5,
+              padding: 15,
+              borderRadius: 2,
             }}
           >
             {[
