@@ -61,15 +61,20 @@ const LanguageNavigation = () => {
                 </button>
               </div>
 
-              {languageSections
-                .find(s => s.title === openSection)
-                ?.links?.map(link => (
-                  <div key={link.href} className={css(styles.dropDownItem)}>
-                    <a href={link.href} className={css(styles.dropDownLink)}>
-                      {link.label}
-                    </a>
-                  </div>
-                ))}
+              <div className={css(styles.dropDownItemsGrid(theme))}>
+                {languageSections
+                  .find(s => s.title === openSection)
+                  ?.links?.map(link => (
+                    <div
+                      key={link.href}
+                      className={css(styles.dropDownItem(theme))}
+                    >
+                      <a href={link.href} className={css(styles.dropDownLink)}>
+                        {link.label}
+                      </a>
+                    </div>
+                  ))}
+              </div>
             </div>
           )}
         </>

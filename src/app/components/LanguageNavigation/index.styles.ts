@@ -104,21 +104,36 @@ const styles = {
     color: '#000000',
   }),
 
-  dropDownItem: css({
-    position: 'relative',
-    padding: 0,
-    borderBottom: '1px solid #bdbdbd',
-    width: '100%',
-    '&:hover, &:focus-within, &.active': {
-      borderLeft: '4px solid #b80000',
-      outline: 'none',
-      backgroundColor: '#e6e8ea',
-    },
-  }),
+  dropDownItemsGrid: ({ mq }: Theme) =>
+    css({
+      display: 'block',
+      gap: '0.5rem',
+      [mq.GROUP_4_MIN_WIDTH]: {
+        columnCount: 4,
+        columnGap: '1rem',
+      },
+    }),
+
+  dropDownItem: ({ mq }: Theme) =>
+    css({
+      breakInside: 'avoid',
+      padding: 0,
+      borderBottom: '1px solid #bdbdbd',
+      width: '100%',
+      '&:hover, &:focus-within, &.active': {
+        borderLeft: '4px solid #b80000',
+        outline: 'none',
+        backgroundColor: '#e6e8ea',
+      },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        display: 'inline-block',
+        borderBottom: 'none',
+      },
+    }),
 
   dropDownLink: css({
-    display: 'block',
-    width: '100%',
+    display: 'inline-block',
+    width: 'auto',
     height: '100%',
     padding: '0.75rem 0.5rem',
     textDecoration: 'none',
