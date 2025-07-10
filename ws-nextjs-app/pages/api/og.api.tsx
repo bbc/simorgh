@@ -329,9 +329,9 @@ export default async function handler(req: NextApiRequest) {
 
     const articleResponseJson = await articleResponse.json();
 
-    if (!articleResponseJson) return responseNotFound();
-
     const articleData = articleResponseJson?.data?.article;
+
+    if (!articleData) return responseNotFound();
 
     const readTime = articleData?.metadata?.stats?.readTime;
 
