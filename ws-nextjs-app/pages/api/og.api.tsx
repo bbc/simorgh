@@ -53,11 +53,11 @@ const Badge = ({ icon, text }: { icon: React.ReactNode; text: string }) => (
 type LayoutProps = {
   image: string;
   headline?: string;
-  fontData?: ArrayBuffer[];
+  fonts?: { name: string; data: ArrayBuffer }[];
   badges?: React.ReactNode[];
 };
 
-const horizontalLayout = ({ image, fontData, badges }: LayoutProps) =>
+const horizontalLayout = ({ image, fonts, badges }: LayoutProps) =>
   new ImageResponse(
     (
       <div
@@ -103,26 +103,14 @@ const horizontalLayout = ({ image, fontData, badges }: LayoutProps) =>
     {
       width: 1024,
       height: 576,
-      ...(fontData &&
-        fontData.length > 0 && {
-          fonts: [
-            {
-              name: 'Reith Sans Bold',
-              data: fontData[0],
-            },
-            {
-              name: 'Reith Serif Bold',
-              data: fontData[1],
-            },
-          ],
-        }),
+      fonts,
     },
   );
 
 const socialCardLayout = async ({
   image,
   headline,
-  fontData,
+  fonts,
   badges,
 }: LayoutProps) => {
   return new ImageResponse(
@@ -214,19 +202,7 @@ const socialCardLayout = async ({
     {
       width: 800,
       height: 800,
-      ...(fontData &&
-        fontData.length > 0 && {
-          fonts: [
-            {
-              name: 'Reith Sans Bold',
-              data: fontData[0],
-            },
-            {
-              name: 'Reith Serif Bold',
-              data: fontData[1],
-            },
-          ],
-        }),
+      fonts,
     },
   );
 };
@@ -303,7 +279,10 @@ export default async function handler(req: NextApiRequest) {
       ),
     );
 
-    const fontData = [sansBoldBuffer, serifBoldBuffer];
+    const fonts = [
+      { name: 'Reith Sans Bold', data: sansBoldBuffer },
+      { name: 'Reith Serif Bold', data: serifBoldBuffer },
+    ];
 
     // const svgLogo = await import(
     //   `#app/components/ThemeProvider/chameleonLogos/${service}`
@@ -360,13 +339,13 @@ export default async function handler(req: NextApiRequest) {
           image: unbrandedImage,
           headline,
           badges,
-          fontData,
+          fonts,
         });
       default:
         return horizontalLayout({
           image: brandedImage,
           badges,
-          fontData,
+          fonts,
         });
     }
 
