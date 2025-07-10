@@ -3,7 +3,6 @@ import { NextApiRequest } from 'next';
 import { ImageResponse } from 'next/og';
 import getBrandedImage from '#lib/utilities/getBrandedImage';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
-import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import {
   BLACK,
   GREY_6,
@@ -136,6 +135,7 @@ const horizontalLayout = ({
                   padding: 15,
                   borderRadius: 30,
                   marginRight: index < arr.length - 1 ? '20px' : '0px',
+                  border: `1px solid ${GREY_6}`,
                 }}
               >
                 {child}
@@ -308,7 +308,7 @@ export default async function handler(req: NextApiRequest) {
 
     const isInTopStories = Boolean(
       articleResponseJson?.data?.secondaryData?.topStories.some(
-        (topStory: TopStoryItem) =>
+        (topStory: { locators: { canonicalUrl: string | string[] } }) =>
           topStory?.locators?.canonicalUrl.includes(id),
       ),
     );
