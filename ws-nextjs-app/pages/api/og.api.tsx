@@ -15,7 +15,8 @@ import { REITH_FONTS_DIR } from '#app/components/ThemeProvider/fontFaces';
 
 export const config = { runtime: 'edge' };
 
-const REITH_FONT_URL = `${REITH_FONTS_DIR}/BBCReithSans_W_Bd.woff`;
+const REITH_SANS_BOLD_FONT_URL = `${REITH_FONTS_DIR}/BBCReithSans_W_Bd.woff`;
+const REITH_SERIF_BOLD_FONT_URL = `${REITH_FONTS_DIR}/BBCReithSerif_W_Bd.woff`;
 
 const responseNotFound = () => new Response('Not found', { status: 404 });
 
@@ -90,7 +91,7 @@ type LayoutProps = {
   headline?: string;
   isInTopStories: boolean;
   readTime: number;
-  fontData?: ArrayBuffer;
+  fontData?: ArrayBuffer[];
 };
 
 const horizontalLayout = ({
@@ -147,14 +148,19 @@ const horizontalLayout = ({
     {
       width: 1024,
       height: 576,
-      ...(fontData && {
-        fonts: [
-          {
-            name: 'Reith Sans Bold',
-            data: fontData,
-          },
-        ],
-      }),
+      ...(fontData &&
+        fontData.length > 0 && {
+          fonts: [
+            {
+              name: 'Reith Sans Bold',
+              data: fontData[0],
+            },
+            {
+              name: 'Reith Serif Bold',
+              data: fontData[1],
+            },
+          ],
+        }),
     },
   );
 
@@ -188,7 +194,7 @@ const socialCardLayout = async ({
           }}
         />
         {/* Brand Logo */}
-        <div style={{ display: 'flex', padding: '20px 15px' }}>
+        <div style={{ display: 'flex', padding: 30 }}>
           <svg
             viewBox="140 140 1395 145"
             xmlns="http://www.w3.org/2000/svg"
@@ -212,12 +218,20 @@ const socialCardLayout = async ({
             display: 'flex',
             flexDirection: 'column',
             color: WHITE,
-            fontSize: 26,
-            padding: '20px 15px',
+            fontSize: 32,
+            padding: 30,
           }}
         >
           {/* Headline */}
-          <div style={{ display: 'flex', marginBottom: 20 }}>{headline}</div>
+          <div
+            style={{
+              display: 'flex',
+              marginBottom: 20,
+              fontFamily: 'Reith Serif Bold',
+            }}
+          >
+            {headline}
+          </div>
           {/* Badges */}
           <div style={{ display: 'flex', flexDirection: 'row' }}>
             {[
@@ -247,16 +261,21 @@ const socialCardLayout = async ({
       </div>
     ),
     {
-      width: 600,
+      width: 800,
       height: 800,
-      ...(fontData && {
-        fonts: [
-          {
-            name: 'Reith Sans Bold',
-            data: fontData,
-          },
-        ],
-      }),
+      ...(fontData &&
+        fontData.length > 0 && {
+          fonts: [
+            {
+              name: 'Reith Sans Bold',
+              data: fontData[0],
+            },
+            {
+              name: 'Reith Serif Bold',
+              data: fontData[1],
+            },
+          ],
+        }),
     },
   );
 };
@@ -317,7 +336,12 @@ export default async function handler(req: NextApiRequest) {
     //   `#app/components/ThemeProvider/chameleonLogos/${service}`
     // ).then(module => module.default);
 
-    const fontData = await fetch(REITH_FONT_URL).then(res => res.arrayBuffer());
+    const [sansBoldBuffer, serifBoldBuffer] = await Promise.all([
+      fetch(REITH_SANS_BOLD_FONT_URL).then(res => res.arrayBuffer()),
+      fetch(REITH_SERIF_BOLD_FONT_URL).then(res => res.arrayBuffer()),
+    ]);
+
+    const fontData = [sansBoldBuffer, serifBoldBuffer];
 
     switch (true) {
       case IS_SOCIAL_CARD:
