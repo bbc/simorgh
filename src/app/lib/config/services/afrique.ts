@@ -50,8 +50,7 @@ export const service: DefaultServiceConfig = {
     podcastPromo: {
       title: 'Promotion WhatsApp',
       brandTitle: 'BBC Afrique est sur WhatsApp',
-      brandDescription:
-        'Des informations vérifiées à portée de main',
+      brandDescription: 'Des informations vérifiées à portée de main',
       image: {
         src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0lp89nq.jpg',
         alt: `BBC News Afrique Whatsapp : L'information sur votre téléphone`,
