@@ -10,11 +10,11 @@ import {
   WHITE,
 } from '#app/components/ThemeProvider/palette';
 import buildIChefURL from '#app/lib/utilities/ichefURL';
+import { REITH_FONTS_DIR } from '#app/components/ThemeProvider/fontFaces';
 
 export const config = { runtime: 'edge' };
 
-const REITH_FONT_URL =
-  'https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSans_W_Bd.woff';
+const REITH_FONT_URL = `${REITH_FONTS_DIR}/BBCReithSans_W_Bd.woff`;
 
 const responseNotFound = () => new Response('Not found', { status: 404 });
 
