@@ -12,6 +12,7 @@ import {
 } from '#app/components/ThemeProvider/palette';
 import buildIChefURL from '#app/lib/utilities/ichefURL';
 import { REITH_FONTS_DIR } from '#app/components/ThemeProvider/fontFaces';
+import { Services, Variants } from '#app/models/types/global';
 
 export const config = { runtime: 'edge' };
 
@@ -280,6 +281,23 @@ const socialCardLayout = async ({
   );
 };
 
+const getImages = (
+  promoImage: { originCode: string; locator: string },
+  service: Services,
+) => {
+  const unbrandedImage = buildIChefURL({
+    originCode: promoImage?.originCode,
+    locator: promoImage?.locator,
+    resolution: 800,
+  });
+
+  const brandedImage = promoImage
+    ? getBrandedImage(promoImage?.locator, service)
+    : `https://news.files.bbci.co.uk/ws/img/logos/og/${service}.png`;
+
+  return { unbrandedImage, brandedImage };
+};
+
 export default async function handler(req: NextApiRequest) {
   try {
     const { searchParams } = new URL(
@@ -288,14 +306,22 @@ export default async function handler(req: NextApiRequest) {
     );
 
     const id = searchParams.get('id');
-    const service = searchParams.get('service');
+    const service = searchParams.get('service') as Services;
+    const variant = searchParams.get('variant') as Variants;
     const IS_SOCIAL_CARD = searchParams.get('socialCard') === 'true';
 
     if (!id || !service) return responseNotFound();
 
-    const articleResponse = await fetch(
-      `https://web-cdn.api.bbci.co.uk/fd/simorgh-bff?pageType=article&id=${id}&service=${service}`,
-    );
+    const [articleResponse, sansBoldBuffer, serifBoldBuffer] =
+      await Promise.all([
+        // Fetch article
+        fetch(
+          `https://web-cdn.api.bbci.co.uk/fd/simorgh-bff?pageType=article&id=${id}&service=${service}${variant ? `&variant=${variant}` : ''}`,
+        ),
+        // Fetch fonts
+        fetch(REITH_SANS_BOLD_FONT_URL).then(res => res.arrayBuffer()),
+        fetch(REITH_SERIF_BOLD_FONT_URL).then(res => res.arrayBuffer()),
+      ]);
 
     const articleResponseJson = await articleResponse.json();
 
@@ -314,15 +340,7 @@ export default async function handler(req: NextApiRequest) {
 
     const promoImage = promoImageRawBlock?.model;
 
-    const unbrandedImage = buildIChefURL({
-      originCode: promoImage?.originCode,
-      locator: promoImage?.locator,
-      resolution: 800,
-    });
-
-    const brandedImage = promoImage
-      ? getBrandedImage(promoImage?.locator, service)
-      : `https://news.files.bbci.co.uk/ws/img/logos/og/${service}.png`;
+    const { unbrandedImage, brandedImage } = getImages(promoImage, service);
 
     const isInTopStories = Boolean(
       articleResponseJson?.data?.secondaryData?.topStories.some(
@@ -334,11 +352,6 @@ export default async function handler(req: NextApiRequest) {
     // const svgLogo = await import(
     //   `#app/components/ThemeProvider/chameleonLogos/${service}`
     // ).then(module => module.default);
-
-    const [sansBoldBuffer, serifBoldBuffer] = await Promise.all([
-      fetch(REITH_SANS_BOLD_FONT_URL).then(res => res.arrayBuffer()),
-      fetch(REITH_SERIF_BOLD_FONT_URL).then(res => res.arrayBuffer()),
-    ]);
 
     const fontData = [sansBoldBuffer, serifBoldBuffer];
 
