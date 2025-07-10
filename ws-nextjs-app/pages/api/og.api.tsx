@@ -359,6 +359,12 @@ export default async function handler(req: NextApiRequest) {
 
     const fontData = [sansBoldBuffer, serifBoldBuffer];
 
+    // const serviceConfig = await import(
+    //   `#app/lib/config/services/${service}`
+    // ).then(mod => mod.service);
+
+    // const translations = serviceConfig[variant || 'default']?.translations;
+
     switch (true) {
       case IS_SOCIAL_CARD:
         return socialCardLayout({
