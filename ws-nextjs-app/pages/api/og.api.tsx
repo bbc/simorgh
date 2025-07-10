@@ -279,6 +279,13 @@ export default async function handler(req: NextApiRequest) {
       ),
     );
 
+    const isInMostRead = Boolean(
+      articleResponseJson?.data?.secondaryData?.mostRead?.items.some(
+        (mostReadItem: { id: string | string[] }) =>
+          mostReadItem?.id.includes(id),
+      ),
+    );
+
     const fonts = [
       { name: 'Reith Sans Bold', data: sansBoldBuffer },
       { name: 'Reith Serif Bold', data: serifBoldBuffer },
@@ -295,7 +302,7 @@ export default async function handler(req: NextApiRequest) {
     // const translations = serviceConfig[variant || 'default'];
 
     const badges = [
-      isInTopStories && (
+      isInMostRead && (
         <Badge
           icon={
             <svg
@@ -310,7 +317,7 @@ export default async function handler(req: NextApiRequest) {
               />
             </svg>
           }
-          text="Trending"
+          text="Popular"
         />
       ),
       readTime && (
