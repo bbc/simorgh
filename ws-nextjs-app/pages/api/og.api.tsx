@@ -49,7 +49,7 @@ const BadgeWrapper = ({ children }: { children: React.ReactNode }) => (
   </div>
 );
 
-const TrendingStory = () => (
+const TrendingStory = ({ text }: { text: string }) => (
   <BadgeWrapper>
     <span style={{ marginRight: 10 }}>
       <svg
@@ -64,11 +64,11 @@ const TrendingStory = () => (
         />
       </svg>
     </span>
-    <span>Trending</span>
+    <span>{text}</span>
   </BadgeWrapper>
 );
 
-const ReadTime = ({ readTime }: { readTime: number }) => (
+const ReadTime = ({ text }: { text: string }) => (
   <BadgeWrapper>
     <span style={{ marginRight: 10 }}>
       <svg
@@ -83,24 +83,18 @@ const ReadTime = ({ readTime }: { readTime: number }) => (
         />
       </svg>
     </span>
-    <span>{`${readTime} min read`}</span>
+    <span>{text}</span>
   </BadgeWrapper>
 );
 
 type LayoutProps = {
   image: string;
   headline?: string;
-  isInTopStories: boolean;
-  readTime: number;
   fontData?: ArrayBuffer[];
+  badges?: React.ReactNode[];
 };
 
-const horizontalLayout = ({
-  image,
-  isInTopStories,
-  readTime,
-  fontData,
-}: LayoutProps) =>
+const horizontalLayout = ({ image, fontData, badges }: LayoutProps) =>
   new ImageResponse(
     (
       <div
@@ -112,21 +106,17 @@ const horizontalLayout = ({
         }}
       >
         {image && <BackgroundImage image={image} />}
-        <div
-          style={{
-            position: 'absolute',
-            bottom: 30,
-            right: 25,
-            display: 'flex',
-            flexDirection: 'row',
-          }}
-        >
-          {[
-            isInTopStories && <TrendingStory />,
-            readTime && <ReadTime readTime={readTime} />,
-          ]
-            .filter(Boolean)
-            .map((child, index, arr) => (
+        {badges && badges.length > 0 && (
+          <div
+            style={{
+              position: 'absolute',
+              bottom: 30,
+              right: 25,
+              display: 'flex',
+              flexDirection: 'row',
+            }}
+          >
+            {badges.filter(Boolean).map((child, index, arr) => (
               <div
                 // eslint-disable-next-line react/no-array-index-key
                 key={index}
@@ -143,7 +133,8 @@ const horizontalLayout = ({
                 {child}
               </div>
             ))}
-        </div>
+          </div>
+        )}
       </div>
     ),
     {
@@ -168,9 +159,8 @@ const horizontalLayout = ({
 const socialCardLayout = async ({
   image,
   headline,
-  isInTopStories,
-  readTime,
   fontData,
+  badges,
 }: LayoutProps) => {
   return new ImageResponse(
     (
@@ -234,13 +224,9 @@ const socialCardLayout = async ({
             {headline}
           </div>
           {/* Badges */}
-          <div style={{ display: 'flex', flexDirection: 'row' }}>
-            {[
-              isInTopStories && <TrendingStory />,
-              readTime && <ReadTime readTime={readTime} />,
-            ]
-              .filter(Boolean)
-              .map((child, index, arr) => (
+          {badges && badges.length > 0 && (
+            <div style={{ display: 'flex', flexDirection: 'row' }}>
+              {badges.filter(Boolean).map((child, index, arr) => (
                 <div
                   // eslint-disable-next-line react/no-array-index-key
                   key={index}
@@ -257,7 +243,8 @@ const socialCardLayout = async ({
                   {child}
                 </div>
               ))}
-          </div>
+            </div>
+          )}
         </div>
       </div>
     ),
@@ -353,32 +340,35 @@ export default async function handler(req: NextApiRequest) {
       ),
     );
 
+    const fontData = [sansBoldBuffer, serifBoldBuffer];
+
     // const svgLogo = await import(
     //   `#app/components/ThemeProvider/chameleonLogos/${service}`
     // ).then(module => module.default);
-
-    const fontData = [sansBoldBuffer, serifBoldBuffer];
 
     // const serviceConfig = await import(
     //   `#app/lib/config/services/${service}`
     // ).then(mod => mod.service);
 
-    // const translations = serviceConfig[variant || 'default']?.translations;
+    // const translations = serviceConfig[variant || 'default'];
+
+    const badges = [
+      isInTopStories && <TrendingStory text="Trending" />,
+      readTime && <ReadTime text={`${readTime} min read`} />,
+    ].filter(Boolean);
 
     switch (true) {
       case IS_SOCIAL_CARD:
         return socialCardLayout({
           image: unbrandedImage,
           headline,
-          isInTopStories,
-          readTime,
+          badges,
           fontData,
         });
       default:
         return horizontalLayout({
           image: brandedImage,
-          isInTopStories,
-          readTime,
+          badges,
           fontData,
         });
     }
