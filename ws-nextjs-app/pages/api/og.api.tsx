@@ -281,19 +281,23 @@ const socialCardLayout = async ({
   );
 };
 
-const getImages = (
-  promoImage: { originCode: string; locator: string },
-  service: Services,
-) => {
-  const unbrandedImage = buildIChefURL({
-    originCode: promoImage?.originCode,
-    locator: promoImage?.locator,
-    resolution: 800,
-  });
+const getImages = ({
+  service,
+  promoImage,
+}: {
+  service: Services;
+  promoImage: { originCode: string; locator: string };
+}) => {
+  const unbrandedImage =
+    buildIChefURL({
+      originCode: promoImage?.originCode,
+      locator: promoImage?.locator,
+      resolution: 800,
+    }) || `https://news.files.bbci.co.uk/ws/img/logos/og/${service}.png`;
 
-  const brandedImage = promoImage
-    ? getBrandedImage(promoImage?.locator, service)
-    : `https://news.files.bbci.co.uk/ws/img/logos/og/${service}.png`;
+  const brandedImage =
+    getBrandedImage(promoImage?.locator, service) ||
+    `https://news.files.bbci.co.uk/ws/img/logos/og/${service}.png`;
 
   return { unbrandedImage, brandedImage };
 };
@@ -325,9 +329,9 @@ export default async function handler(req: NextApiRequest) {
 
     const articleResponseJson = await articleResponse.json();
 
-    const articleData = articleResponseJson?.data?.article;
+    if (!articleResponseJson) return responseNotFound();
 
-    if (!articleData) return responseNotFound();
+    const articleData = articleResponseJson?.data?.article;
 
     const readTime = articleData?.metadata?.stats?.readTime;
 
@@ -340,7 +344,7 @@ export default async function handler(req: NextApiRequest) {
 
     const promoImage = promoImageRawBlock?.model;
 
-    const { unbrandedImage, brandedImage } = getImages(promoImage, service);
+    const { unbrandedImage, brandedImage } = getImages({ promoImage, service });
 
     const isInTopStories = Boolean(
       articleResponseJson?.data?.secondaryData?.topStories.some(
