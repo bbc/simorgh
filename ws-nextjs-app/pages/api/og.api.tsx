@@ -293,7 +293,6 @@ export default async function handler(req: NextApiRequest) {
 
     if (!id || !service) return responseNotFound();
 
-    // TODO: Don't do this in production, this is just for testing
     const articleResponse = await fetch(
       `https://web-cdn.api.bbci.co.uk/fd/simorgh-bff?pageType=article&id=${id}&service=${service}`,
     );
