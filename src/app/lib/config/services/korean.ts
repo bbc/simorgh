@@ -61,6 +61,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: '내용 보기',
       relatedContent: '관련 기사 더 보기',
       relatedTopics: '관련 토픽',
+      moreOnThis: '',
       navMenuText: '섹션',
       mediaAssetPage: {
         mediaPlayer: '미디어 플레이어',

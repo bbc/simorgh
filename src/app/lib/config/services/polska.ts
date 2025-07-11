@@ -68,6 +68,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'Przejdź do treści',
       relatedContent: 'Powiązane treści',
       relatedTopics: 'Powiązane tematy',
+      moreOnThis: '',
       navMenuText: 'Sekcje',
       liteSite: {
         onboardingMessage:

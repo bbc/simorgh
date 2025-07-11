@@ -62,6 +62,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'सामग्रीमा जानुहोस्',
       relatedContent: 'सम्बन्धित सामग्री',
       relatedTopics: 'सम्बन्धित सामग्री',
+      moreOnThis: '',
       navMenuText: 'सूची',
       liteSite: {
         onboardingMessage:
