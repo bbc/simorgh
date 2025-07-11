@@ -34,8 +34,7 @@ const CACHEABLE_FILES = [
 
 const WEBP_IMAGE_URLS = [
   /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|images|ace\/(standard|ws))\/.+.webp$/,
-  /^https:\/\/static(\.test)?\.files\.bbci\.co\.uk\/ws\/simorgh-assets\/public\/images\/.+\.webp$/,
-  /^http:\/\/localhost:7080\/images\/billboard_image\.jpg\.webp$/,
+  /^https:\/\/static(\.test)?\.files\.bbci\.co\.uk\/ws\/(?:simorgh-assets|simorgh1-preview-assets|simorgh2-preview-assets)\/public\/images\/.+\.webp$/,
 ];
 
 const isRequestForWebpImage = url => {
