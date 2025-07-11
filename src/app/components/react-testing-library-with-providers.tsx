@@ -1,16 +1,21 @@
 import React, { FC, PropsWithChildren, ReactElement } from 'react';
 import { render, RenderOptions } from '@testing-library/react';
+import ThemeProvider from './ThemeProvider';
 
 import { ServiceContextProvider } from '../contexts/ServiceContext';
 import { RequestContextProvider } from '../contexts/RequestContext';
 import { ToggleContextProvider } from '../contexts/ToggleContext';
 import { UserContextProvider } from '../contexts/UserContext';
 import { EventTrackingContextProvider } from '../contexts/EventTrackingContext';
-import ThemeProvider from './ThemeProvider';
 import { PageTypes, Services, Toggles, Variants } from '../models/types/global';
 import { ATIData } from './ATIAnalytics/types';
 
-jest.mock('#testHelpers/mocks/ThemeProvider');
+jest.mock('./ThemeProvider', () => ({
+  __esModule: true,
+  default: ({ children }: { children: React.ReactNode }) => (
+    <div data-testid="theme-provider">{children}</div>
+  ),
+}));
 
 jest.mock('#app/hooks/useIsPWA', () => ({
   __esModule: true,

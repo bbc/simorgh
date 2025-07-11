@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '../../../react-testing-library-with-providers';
+import { render } from '@testing-library/react';
 import AdSlot, { getDataSlot, getAssetType } from '.';
 
 describe('getAssetType', () => {
@@ -16,8 +16,8 @@ describe('Amp AdSlot', () => {
     it('should correctly render a leaderboard AdSlot', () => {
       const { container } = render(
         <AdSlot service="mundo" slotType="leaderboard" pageType="STY" />,
-        { service: 'mundo' },
       );
+
       expect(container).toMatchSnapshot();
     });
   });

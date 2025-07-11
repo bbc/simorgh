@@ -1,7 +1,6 @@
 import fetch from 'jest-fetch-mock';
 import path from 'path';
 import { TextEncoder, TextDecoder } from 'util';
-import { ReadableStream } from 'node:stream/web';
 import { MessageChannel, MessagePort } from 'node:worker_threads';
 
 global.TextEncoder = TextEncoder;
@@ -10,7 +9,14 @@ global.fetch = fetch;
 global.AbortSignal = {
   timeout: jest.fn(),
 };
-global.ReadableStream = ReadableStream;
+
+// Only polyfill ReadableStream if it doesn't exist
+if (!global.ReadableStream) {
+  global.ReadableStream = function ReadableStream() {
+    // Minimal polyfill for tests
+  };
+}
+
 global.MessageChannel = MessageChannel;
 global.MessagePort = MessagePort;
 
@@ -41,21 +47,19 @@ window.matchMedia = jest.fn().mockImplementation(query => {
   };
 });
 
-global.IntersectionObserver = class IntersectionObserver {
-  constructor(callback, options) {
-    this.callback = callback;
-    this.options = options;
-    this.entries = [];
-    this.observe = jest
-      .fn()
-      .mockImplementation(entry => this.entries.push(entry));
-    this.unobserve = jest.fn();
-    this.disconnect = jest.fn();
+global.IntersectionObserver = function IntersectionObserver(callback, options) {
+  this.callback = callback;
+  this.options = options;
+  this.entries = [];
+  this.observe = jest
+    .fn()
+    .mockImplementation(entry => this.entries.push(entry));
+  this.unobserve = jest.fn();
+  this.disconnect = jest.fn();
 
-    document.addEventListener('triggerMockObserver', () => {
-      this.callback(this.entries);
-    });
-  }
+  document.addEventListener('triggerMockObserver', () => {
+    this.callback(this.entries);
+  });
 };
 
 // Mock RequireJS globally and let individual tests mock it as needed

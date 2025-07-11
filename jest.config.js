@@ -10,11 +10,13 @@ const unitTests = {
     '^#pages$': '<rootDir>/src/testHelpers/mocks/pages.js',
   },
   testEnvironment: 'jsdom',
-  snapshotSerializers: ['@emotion/jest/serializer'],
   transform: {
     '^.+\\.[tj]sx?$': 'babel-jest',
   },
   displayName: 'Unit Tests',
+  fakeTimers: {
+    enableGlobally: true,
+  },
   collectCoverageFrom: [
     '**/(src|scripts)/**/*.{js,jsx,ts,tsx}',
     '!**/src/testHelpers/**',

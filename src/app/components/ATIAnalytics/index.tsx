@@ -8,15 +8,35 @@ import { ATIProps } from './types';
 import { buildATIUrl, buildReverbParams } from './params';
 
 const ATIAnalytics = ({ atiData = {} }: ATIProps) => {
+  // Always call hooks at the top level
+  const requestContextFromHook = useContext(RequestContext);
+  const serviceContextFromHook = useContext(ServiceContext);
+
   // Use React 19's use() hook in production, but fallback to useContext in test environment
-  const isTestEnvironment = typeof jest !== 'undefined' && process.env.NODE_ENV !== 'production';
-  const requestContext = isTestEnvironment ? useContext(RequestContext) : use(RequestContext);
-  const serviceContext = isTestEnvironment ? useContext(ServiceContext) : use(ServiceContext);
-  
+  const isTestEnvironment =
+    typeof jest !== 'undefined' && process.env.NODE_ENV !== 'production';
+
+  let requestContext;
+  let serviceContext;
+
+  if (isTestEnvironment) {
+    requestContext = requestContextFromHook;
+    serviceContext = serviceContextFromHook;
+  } else {
+    try {
+      requestContext = use(RequestContext);
+      serviceContext = use(ServiceContext);
+    } catch {
+      // Fallback to useContext if use() fails
+      requestContext = requestContextFromHook;
+      serviceContext = serviceContextFromHook;
+    }
+  }
+
   if (!requestContext || !serviceContext) {
     return null;
   }
-  
+
   const { isAmp } = requestContext;
   const { useReverb } = serviceContext;
 
