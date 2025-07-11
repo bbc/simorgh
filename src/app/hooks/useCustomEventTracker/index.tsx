@@ -34,9 +34,7 @@ const useCustomEventTracker = ({ eventName }: CustomEventData) => {
 
   const trackEvent = useCallback(
     async (stringifiedData?: string) => {
-      if (!trackingIsEnabled) return;
-
-      if (!eventName) return;
+      if (!trackingIsEnabled || !eventName) return;
 
       const shouldSendEvent = [
         campaignID,
