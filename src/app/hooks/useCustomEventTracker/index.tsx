@@ -11,7 +11,8 @@ export interface CustomEventData {
 
 /**
  * A specialized React hook for tracking custom (non-click, non-view) events.
- * Reverb is used to send the beacon, and the event will appear in Piano under the "Item name" field.
+ * Reverb is used to send the beacon, and the event will appear in Piano under the "Event - Group" field.
+ * If a payload (`stringifiedData`) is provided to the `trackEvent` function, it will appear in Piano under the "Item name" field.
  *
  * @param {CustomEventData} eventName - A string representing the name of the custom event.
  * @returns {Object} An object containing the `trackEvent` function, which can be called to trigger the event.
@@ -51,7 +52,8 @@ const useCustomEventTracker = ({ eventName }: CustomEventData) => {
         try {
           await sendEventBeacon({
             type: VIEW_EVENT,
-            componentName: stringifiedData ?? eventName,
+            eventGroupingName: eventName,
+            componentName: stringifiedData,
             campaignID,
             pageIdentifier,
             platform,

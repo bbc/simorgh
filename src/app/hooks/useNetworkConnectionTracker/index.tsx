@@ -17,12 +17,8 @@ const useNetworkConnectionTracker = () => {
 
       if (connection?.effectiveType) {
         const { effectiveType } = connection;
-        const eventName = `effectiveType::${effectiveType}`;
-
-        // TODO: Temp
-        console.log(`useNetworkConnectionTracker`, { eventName });
-
-        trackEvent(eventName);
+        console.log(`useNetworkConnectionTracker`, { effectiveType });
+        trackEvent(effectiveType);
       }
     }
   }, [trackEvent]);
