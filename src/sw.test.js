@@ -39,6 +39,7 @@ describe('Service Worker', () => {
   describe('webp', () => {
     const TEST_IMAGE_URL = 'https://ichef.test.bbci.co.uk';
     const BASE_IMAGE_URL = 'https://ichef.bbci.co.uk';
+    const BILLBOARD_IMAGE_BASE_URL = 'https://static.files.bbci.co.uk';
 
     describe('image extension (.webp) is stripped and the fallback image is requested when webp not supported', () => {
       it.each`
@@ -67,6 +68,7 @@ describe('Service Worker', () => {
         ${`${BASE_IMAGE_URL}/images/ic/256x256/p08b22y1.png.webp`}                                         | ${`${BASE_IMAGE_URL}/images/ic/256x256/p08b22y1.png`}
         ${`${BASE_IMAGE_URL}/news/assets/images/2015/01/08/150108141819_puppies.jpg.webp`}                 | ${`${BASE_IMAGE_URL}/news/assets/images/2015/01/08/150108141819_puppies.jpg`}
         ${`${BASE_IMAGE_URL}/news/assets/images/2015/01/08/150108141819_puppies.png.webp`}                 | ${`${BASE_IMAGE_URL}/news/assets/images/2015/01/08/150108141819_puppies.png`}
+        ${`${BILLBOARD_IMAGE_BASE_URL}/ws/simorgh-assets/public/images/billboard_image.jpg.webp`}          | ${`${BILLBOARD_IMAGE_BASE_URL}/ws/simorgh-assets/public/images/billboard_image.jpg`}
       `(
         `for $image the expected fallback is $expectedUrl`,
         async ({ image, expectedUrl }) => {
@@ -90,43 +92,45 @@ describe('Service Worker', () => {
 
     describe('image is not requested in sw', () => {
       it.each`
-        image                                                 | headers               | reason
-        ${`${TEST_IMAGE_URL}/sport/puppies.jpg.webp`}         | ${{ accept: 'webp' }} | ${'image url must include news, ace/standard or ace/ws'}
-        ${`${TEST_IMAGE_URL}/ace/stndard/puppies.jpg.webp`}   | ${{ accept: 'webp' }} | ${'image url must include news, ace/standard or ace/ws'}
-        ${`${TEST_IMAGE_URL}/ace/sw/puppies.jpg.webp`}        | ${{ accept: 'webp' }} | ${'image url must include news, ace/standard or ace/ws'}
-        ${`${TEST_IMAGE_URL}/news/puppies.jpeg.webp`}         | ${{ accept: 'webp' }} | ${'image extension must be jpg or png'}
-        ${`${TEST_IMAGE_URL}/ace/standard/puppies.jpeg.webp`} | ${{ accept: 'webp' }} | ${'image extension must be jpg or png'}
-        ${`${TEST_IMAGE_URL}/ace/ws/puppies.jpeg.webp`}       | ${{ accept: 'webp' }} | ${'image extension must be jpg or png'}
-        ${`${TEST_IMAGE_URL}/news/puppies.jpg`}               | ${{}}                 | ${'image url must end with webp'}
-        ${`${TEST_IMAGE_URL}/news/puppies.png`}               | ${{}}                 | ${'image url must end with webp'}
-        ${`${TEST_IMAGE_URL}/ace/standard/puppies.jpg`}       | ${{}}                 | ${'image url must end with webp'}
-        ${`${TEST_IMAGE_URL}/ace/standard/puppies.png`}       | ${{}}                 | ${'image url must end with webp'}
-        ${`${TEST_IMAGE_URL}/ace/ws/puppies.jpg`}             | ${{}}                 | ${'image url must end with webp'}
-        ${`${TEST_IMAGE_URL}/ace/ws/puppies.png`}             | ${{}}                 | ${'image url must end with webp'}
-        ${`${TEST_IMAGE_URL}/news/puppies.jpg.webp`}          | ${{ accept: 'webp' }} | ${'webp supported in request headers'}
-        ${`${TEST_IMAGE_URL}/news/puppies.png.webp`}          | ${{ accept: 'webp' }} | ${'webp supported in request headers'}
-        ${`${TEST_IMAGE_URL}/ace/standard/puppies.jpg.webp`}  | ${{ accept: 'webp' }} | ${'webp supported in request headers'}
-        ${`${TEST_IMAGE_URL}/ace/standard/puppies.png.webp`}  | ${{ accept: 'webp' }} | ${'webp supported in request headers'}
-        ${`${TEST_IMAGE_URL}/ace/ws/puppies.jpg.webp`}        | ${{ accept: 'webp' }} | ${'webp supported in request headers'}
-        ${`${TEST_IMAGE_URL}/ace/ws/puppies.png.webp`}        | ${{ accept: 'webp' }} | ${'webp supported in request headers'}
-        ${`${BASE_IMAGE_URL}/sport/puppies.jpg.webp`}         | ${{ accept: 'webp' }} | ${'image url must include news, ace/standard or ace/ws'}
-        ${`${BASE_IMAGE_URL}/ace/stndard/puppies.jpg.webp`}   | ${{ accept: 'webp' }} | ${'image url must include news, ace/standard or ace/ws'}
-        ${`${BASE_IMAGE_URL}/ace/sw/puppies.jpg.webp`}        | ${{ accept: 'webp' }} | ${'image url must include news, ace/standard or ace/ws'}
-        ${`${BASE_IMAGE_URL}/news/puppies.jpeg.webp`}         | ${{ accept: 'webp' }} | ${'image extension must be jpg or png'}
-        ${`${BASE_IMAGE_URL}/ace/standard/puppies.jpeg.webp`} | ${{ accept: 'webp' }} | ${'image extension must be jpg or png'}
-        ${`${BASE_IMAGE_URL}/ace/ws/puppies.jpeg.webp`}       | ${{ accept: 'webp' }} | ${'image extension must be jpg or png'}
-        ${`${BASE_IMAGE_URL}/news/puppies.jpg`}               | ${{}}                 | ${'image url must end with webp'}
-        ${`${BASE_IMAGE_URL}/news/puppies.png`}               | ${{}}                 | ${'image url must end with webp'}
-        ${`${BASE_IMAGE_URL}/ace/standard/puppies.jpg`}       | ${{}}                 | ${'image url must end with webp'}
-        ${`${BASE_IMAGE_URL}/ace/standard/puppies.png`}       | ${{}}                 | ${'image url must end with webp'}
-        ${`${BASE_IMAGE_URL}/ace/ws/puppies.jpg`}             | ${{}}                 | ${'image url must end with webp'}
-        ${`${BASE_IMAGE_URL}/ace/ws/puppies.png`}             | ${{}}                 | ${'image url must end with webp'}
-        ${`${BASE_IMAGE_URL}/news/puppies.jpg.webp`}          | ${{ accept: 'webp' }} | ${'webp supported in request headers'}
-        ${`${BASE_IMAGE_URL}/news/puppies.png.webp`}          | ${{ accept: 'webp' }} | ${'webp supported in request headers'}
-        ${`${BASE_IMAGE_URL}/ace/standard/puppies.jpg.webp`}  | ${{ accept: 'webp' }} | ${'webp supported in request headers'}
-        ${`${BASE_IMAGE_URL}/ace/standard/puppies.png.webp`}  | ${{ accept: 'webp' }} | ${'webp supported in request headers'}
-        ${`${BASE_IMAGE_URL}/ace/ws/puppies.jpg.webp`}        | ${{ accept: 'webp' }} | ${'webp supported in request headers'}
-        ${`${BASE_IMAGE_URL}/ace/ws/puppies.png.webp`}        | ${{ accept: 'webp' }} | ${'webp supported in request headers'}
+        image                                                                                     | headers               | reason
+        ${`${TEST_IMAGE_URL}/sport/puppies.jpg.webp`}                                             | ${{ accept: 'webp' }} | ${'image url must include news, ace/standard or ace/ws'}
+        ${`${TEST_IMAGE_URL}/ace/stndard/puppies.jpg.webp`}                                       | ${{ accept: 'webp' }} | ${'image url must include news, ace/standard or ace/ws'}
+        ${`${TEST_IMAGE_URL}/ace/sw/puppies.jpg.webp`}                                            | ${{ accept: 'webp' }} | ${'image url must include news, ace/standard or ace/ws'}
+        ${`${TEST_IMAGE_URL}/news/puppies.jpeg.webp`}                                             | ${{ accept: 'webp' }} | ${'image extension must be jpg or png'}
+        ${`${TEST_IMAGE_URL}/ace/standard/puppies.jpeg.webp`}                                     | ${{ accept: 'webp' }} | ${'image extension must be jpg or png'}
+        ${`${TEST_IMAGE_URL}/ace/ws/puppies.jpeg.webp`}                                           | ${{ accept: 'webp' }} | ${'image extension must be jpg or png'}
+        ${`${TEST_IMAGE_URL}/news/puppies.jpg`}                                                   | ${{}}                 | ${'image url must end with webp'}
+        ${`${TEST_IMAGE_URL}/news/puppies.png`}                                                   | ${{}}                 | ${'image url must end with webp'}
+        ${`${TEST_IMAGE_URL}/ace/standard/puppies.jpg`}                                           | ${{}}                 | ${'image url must end with webp'}
+        ${`${TEST_IMAGE_URL}/ace/standard/puppies.png`}                                           | ${{}}                 | ${'image url must end with webp'}
+        ${`${TEST_IMAGE_URL}/ace/ws/puppies.jpg`}                                                 | ${{}}                 | ${'image url must end with webp'}
+        ${`${TEST_IMAGE_URL}/ace/ws/puppies.png`}                                                 | ${{}}                 | ${'image url must end with webp'}
+        ${`${TEST_IMAGE_URL}/news/puppies.jpg.webp`}                                              | ${{ accept: 'webp' }} | ${'webp supported in request headers'}
+        ${`${TEST_IMAGE_URL}/news/puppies.png.webp`}                                              | ${{ accept: 'webp' }} | ${'webp supported in request headers'}
+        ${`${TEST_IMAGE_URL}/ace/standard/puppies.jpg.webp`}                                      | ${{ accept: 'webp' }} | ${'webp supported in request headers'}
+        ${`${TEST_IMAGE_URL}/ace/standard/puppies.png.webp`}                                      | ${{ accept: 'webp' }} | ${'webp supported in request headers'}
+        ${`${TEST_IMAGE_URL}/ace/ws/puppies.jpg.webp`}                                            | ${{ accept: 'webp' }} | ${'webp supported in request headers'}
+        ${`${TEST_IMAGE_URL}/ace/ws/puppies.png.webp`}                                            | ${{ accept: 'webp' }} | ${'webp supported in request headers'}
+        ${`${BASE_IMAGE_URL}/sport/puppies.jpg.webp`}                                             | ${{ accept: 'webp' }} | ${'image url must include news, ace/standard or ace/ws'}
+        ${`${BASE_IMAGE_URL}/ace/stndard/puppies.jpg.webp`}                                       | ${{ accept: 'webp' }} | ${'image url must include news, ace/standard or ace/ws'}
+        ${`${BASE_IMAGE_URL}/ace/sw/puppies.jpg.webp`}                                            | ${{ accept: 'webp' }} | ${'image url must include news, ace/standard or ace/ws'}
+        ${`${BASE_IMAGE_URL}/news/puppies.jpeg.webp`}                                             | ${{ accept: 'webp' }} | ${'image extension must be jpg or png'}
+        ${`${BASE_IMAGE_URL}/ace/standard/puppies.jpeg.webp`}                                     | ${{ accept: 'webp' }} | ${'image extension must be jpg or png'}
+        ${`${BASE_IMAGE_URL}/ace/ws/puppies.jpeg.webp`}                                           | ${{ accept: 'webp' }} | ${'image extension must be jpg or png'}
+        ${`${BASE_IMAGE_URL}/news/puppies.jpg`}                                                   | ${{}}                 | ${'image url must end with webp'}
+        ${`${BASE_IMAGE_URL}/news/puppies.png`}                                                   | ${{}}                 | ${'image url must end with webp'}
+        ${`${BASE_IMAGE_URL}/ace/standard/puppies.jpg`}                                           | ${{}}                 | ${'image url must end with webp'}
+        ${`${BASE_IMAGE_URL}/ace/standard/puppies.png`}                                           | ${{}}                 | ${'image url must end with webp'}
+        ${`${BASE_IMAGE_URL}/ace/ws/puppies.jpg`}                                                 | ${{}}                 | ${'image url must end with webp'}
+        ${`${BASE_IMAGE_URL}/ace/ws/puppies.png`}                                                 | ${{}}                 | ${'image url must end with webp'}
+        ${`${BASE_IMAGE_URL}/news/puppies.jpg.webp`}                                              | ${{ accept: 'webp' }} | ${'webp supported in request headers'}
+        ${`${BASE_IMAGE_URL}/news/puppies.png.webp`}                                              | ${{ accept: 'webp' }} | ${'webp supported in request headers'}
+        ${`${BASE_IMAGE_URL}/ace/standard/puppies.jpg.webp`}                                      | ${{ accept: 'webp' }} | ${'webp supported in request headers'}
+        ${`${BASE_IMAGE_URL}/ace/standard/puppies.png.webp`}                                      | ${{ accept: 'webp' }} | ${'webp supported in request headers'}
+        ${`${BASE_IMAGE_URL}/ace/ws/puppies.jpg.webp`}                                            | ${{ accept: 'webp' }} | ${'webp supported in request headers'}
+        ${`${BASE_IMAGE_URL}/ace/ws/puppies.png.webp`}                                            | ${{ accept: 'webp' }} | ${'webp supported in request headers'}
+        ${`${BILLBOARD_IMAGE_BASE_URL}/ws/simorgh-assets/public/images/billboard_image.jpg.webp`} | ${{ accept: 'webp' }} | ${'webp supported in request headers'}
+        ${`${BILLBOARD_IMAGE_BASE_URL}/ws/simorgh-assets/public/images/billboard_image.jpg`}      | ${{}}                 | ${'image url must end with webp'}
       `(`for $image because $reason`, async ({ image, headers }) => {
         ({ fetchEventHandler } = await import('./service-worker-test'));
 
