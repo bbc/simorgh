@@ -1,28 +1,36 @@
 import { css, Theme } from '@emotion/react';
+import pixelsToRem from '#app/utilities/pixelsToRem';
 
 const styles = {
-  wrapper: ({ fontMq }: Theme) =>
+  wrapper: ({ fontMq, spacings, palette, fontSizes }: Theme) =>
     css({
       display: 'flex',
+      color: palette.GREY_8,
       flexWrap: 'wrap',
       padding: 0,
       fontFamily: 'ReithSahs, Arial, Helvetica, sans-serif',
-      fontSize: '1rem',
-      borderBottom: '1px solid #bdbdbd',
+      ...fontSizes.pica,
+      borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_3}`,
       [fontMq.GROUP_D_MIN_WIDTH]: {
-        padding: '0.5rem',
+        padding: `${spacings.FULL}rem`,
       },
     }),
 
-  navItem: ({ isActive, isLast }: { isActive?: boolean; isLast?: boolean }) =>
+  navItem: ({
+    isActive,
+    isLast,
+    palette,
+  }: { isActive?: boolean; isLast?: boolean } & Theme) =>
     css({
       display: 'flex',
       alignItems: 'center',
       padding: 0,
       position: 'relative',
-      borderBottom: isActive ? '4px solid #b80000' : '4px solid transparent',
+      borderBottom: isActive
+        ? `${pixelsToRem(4)}rem solid #b80000`
+        : `${pixelsToRem(4)}rem solid transparent`,
       '&:hover, &:focus-within': {
-        borderBottom: '4px solid #b80000',
+        borderBottom: `${pixelsToRem(4)}rem solid #b80000`,
         outline: 'none',
         cursor: 'pointer',
       },
@@ -33,48 +41,51 @@ const styles = {
         right: 0,
         top: '50%',
         transform: 'translateY(-50%)',
-        width: '1px',
-        height: '1.25rem',
-        backgroundColor: '#222',
+        width: `${pixelsToRem(1)}rem`,
+        height: `${pixelsToRem(20)}rem`,
+        backgroundColor: palette.GREY_10,
       },
     }),
 
-  navLink: css({
-    textDecoration: 'none',
-    color: '#202224',
-    fontFamily: 'BBC Reith Sans',
-    fontWeight: 400,
-    fontSize: '16px',
-    lineHeight: '22px',
-    letterSpacing: '0%',
-    padding: '0.75rem 0.5rem',
-    width: '100%',
-    display: 'block',
-  }),
+  navLink: ({ spacings, palette, fontSizes }: Theme) =>
+    css({
+      textDecoration: 'none',
+      color: palette.GREY_8,
+      fontFamily: 'BBC Reith Sans',
+      fontWeight: 400,
+      ...fontSizes.pica,
+      lineHeight: `${pixelsToRem(22)}rem`,
+      letterSpacing: '0%',
+      padding: `${pixelsToRem(12)}rem ${spacings.FULL}rem`,
+      width: '100%',
+      display: 'block',
+    }),
 
-  navSummary: css({
-    display: 'flex',
-    alignItems: 'center',
-    width: '100%',
-    padding: '0.75rem 0.5rem',
-    cursor: 'pointer',
-    listStyle: 'none',
-    border: 'none',
-    background: 'none',
-    fontFamily: 'BBC Reith Sans',
-    fontWeight: 400,
-    fontSize: '16px',
-    lineHeight: '22px',
-    letterSpacing: '0%',
-    '&::marker': {
-      display: 'none',
-    },
-  }),
+  navSummary: ({ spacings, fontSizes }: Theme) =>
+    css({
+      display: 'flex',
+      alignItems: 'center',
+      width: '100%',
+      padding: `${pixelsToRem(12)}rem ${spacings.FULL}rem`,
+      cursor: 'pointer',
+      listStyle: 'none',
+      border: 'none',
+      background: 'none',
+      fontFamily: 'BBC Reith Sans',
+      fontWeight: 400,
+      ...fontSizes.pica,
+      lineHeight: `${pixelsToRem(22)}rem`,
+      letterSpacing: '0%',
+      '&::marker': {
+        display: 'none',
+      },
+    }),
 
-  dropDown: css({
-    width: '100%',
-    padding: '0.5rem 0',
-  }),
+  dropDown: ({ spacings }: Theme) =>
+    css({
+      width: '100%',
+      padding: `${spacings.FULL}rem 0`,
+    }),
 
   dropDownHeader: css({
     display: 'flex',
@@ -83,47 +94,49 @@ const styles = {
   }),
 
   dropDownTitle: css({
-    fontSize: '1.25rem',
+    fontSize: `${pixelsToRem(20)}rem`,
     fontFamily: 'BBC Reith Sans',
     fontWeight: 700,
-    lineHeight: '1.375rem',
+    lineHeight: `${pixelsToRem(22)}rem`,
     letterSpacing: '0%',
-    padding: '0.75rem',
+    padding: `${pixelsToRem(12)}rem`,
   }),
 
-  closeButton: css({
-    border: 'none',
-    background: 'none',
-    padding: 0,
-    cursor: 'pointer',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '1.375rem',
-    height: '1.375rem',
-    color: '#000000',
-  }),
+  closeButton: ({ palette }: Theme) =>
+    css({
+      border: 'none',
+      background: 'none',
+      padding: 0,
+      cursor: 'pointer',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      width: `${pixelsToRem(22)}rem`,
+      height: `${pixelsToRem(22)}rem`,
+      color: palette.BLACK,
+    }),
 
-  dropDownItemsGrid: ({ mq }: Theme) =>
+  dropDownItemsGrid: ({ mq, spacings }: Theme) =>
     css({
       display: 'block',
-      gap: '0.5rem',
+      gap: `${spacings.FULL}rem`,
       [mq.GROUP_4_MIN_WIDTH]: {
         columnCount: 4,
-        columnGap: '1rem',
+        columnGap: `${spacings.FULL}rem`,
       },
     }),
 
-  dropDownItem: ({ mq }: Theme) =>
+  dropDownItem: ({ mq, palette }: Theme) =>
     css({
       breakInside: 'avoid',
       padding: 0,
-      borderBottom: '1px solid #bdbdbd',
+      borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_3}`,
       width: '100%',
       '&:hover, &:focus-within, &.active': {
-        borderLeft: '4px solid #b80000',
+        borderLeft: `${pixelsToRem(4)}rem solid #b80000`,
+
         outline: 'none',
-        backgroundColor: '#e6e8ea',
+        backgroundColor: palette.GREY_3,
       },
       [mq.GROUP_4_MIN_WIDTH]: {
         display: 'inline-block',
@@ -131,18 +144,19 @@ const styles = {
       },
     }),
 
-  dropDownLink: css({
-    display: 'inline-block',
-    width: 'auto',
-    height: '100%',
-    padding: '0.75rem 0.5rem',
-    textDecoration: 'none',
-    color: '#202224',
-    fontFamily: 'BBC Reith Sans',
-    fontWeight: 400,
-    lineHeight: '1.375rem',
-    letterSpacing: '0%',
-  }),
+  dropDownLink: ({ spacings, palette }: Theme) =>
+    css({
+      display: 'inline-block',
+      width: 'auto',
+      height: '100%',
+      padding: `${pixelsToRem(12)}rem ${spacings.FULL}rem`,
+      textDecoration: 'none',
+      color: palette.GREY_8,
+      fontFamily: 'BBC Reith Sans',
+      fontWeight: 400,
+      lineHeight: `${pixelsToRem(22)}`,
+      letterSpacing: '0%',
+    }),
 };
 
 export default styles;
