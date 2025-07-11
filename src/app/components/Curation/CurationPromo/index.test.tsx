@@ -4,7 +4,7 @@ import { render, screen } from '../../react-testing-library-with-providers';
 
 import CurationPromo from '.';
 
-jest.mock('../../ThemeProvider');
+jest.mock('#testHelpers/mocks/ThemeProvider');
 
 interface FixtureProps {
   lazy?: boolean;

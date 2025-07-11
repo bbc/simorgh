@@ -20,7 +20,7 @@ import {
 import { MostReadData } from '../MostRead/types';
 import { RadioScheduleData } from '../../models/types/radioSchedule';
 
-jest.mock('../ThemeProvider');
+jest.mock('#testHelpers/mocks/ThemeProvider');
 
 const { NONE, BANNER, RANKED, COLLECTION, LINKS, INSITU } = VISUAL_STYLE;
 const { NORMAL, HIGH, LOW, MAXIMUM, MINIMUM } = VISUAL_PROMINENCE;

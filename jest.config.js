@@ -8,7 +8,6 @@ const unitTests = {
     ...jestDirAlias,
     '^#contexts/ServiceContext$': '<rootDir>/src/testHelpers/mocks/ServiceContext.tsx',
     '^#pages$': '<rootDir>/src/testHelpers/mocks/pages.js',
-    '^.*ThemeProvider$': '<rootDir>/src/testHelpers/mocks/ThemeProvider.tsx',
   },
   testEnvironment: 'jsdom',
   snapshotSerializers: ['@emotion/jest/serializer'],

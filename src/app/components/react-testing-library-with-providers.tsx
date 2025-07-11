@@ -10,7 +10,7 @@ import ThemeProvider from './ThemeProvider';
 import { PageTypes, Services, Toggles, Variants } from '../models/types/global';
 import { ATIData } from './ATIAnalytics/types';
 
-jest.mock('./ThemeProvider');
+jest.mock('#testHelpers/mocks/ThemeProvider');
 
 jest.mock('#app/hooks/useIsPWA', () => ({
   __esModule: true,

@@ -31,7 +31,7 @@ import {
 import StoryPromoContainer from '.';
 import { buildUniquePromoId } from './utilities';
 
-jest.mock('../../../components/ThemeProvider');
+jest.mock('#testHelpers/mocks/ThemeProvider');
 
 jest.mock('#app/hooks/useIsPWA', () => ({
   __esModule: true,

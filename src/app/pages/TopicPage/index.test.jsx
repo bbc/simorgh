@@ -22,7 +22,7 @@ import {
   pidginSingleCurationEmptyStringSubheading,
 } from './fixtures';
 
-jest.mock('../../components/ThemeProvider');
+jest.mock('#testHelpers/mocks/ThemeProvider');
 jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>Chartbeat Analytics</div>;
   return ChartbeatAnalytics;

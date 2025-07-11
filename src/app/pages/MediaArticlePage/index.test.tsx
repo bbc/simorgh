@@ -14,7 +14,7 @@ import ThemeProvider from '../../components/ThemeProvider';
 import { arabicLiveTvPageData, pidginPageData } from './fixtureData';
 import { Services } from '../../models/types/global';
 
-jest.mock('../../components/ThemeProvider');
+jest.mock('#testHelpers/mocks/ThemeProvider');
 
 jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;

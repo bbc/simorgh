@@ -7,7 +7,7 @@ import RelatedContentItem from '.';
 import { RelatedContentData, RelatedContentItemWithCaption } from '../fixture';
 import { Services } from '../../../models/types/global';
 
-jest.mock('../../ThemeProvider');
+jest.mock('#testHelpers/mocks/ThemeProvider');
 
 type Props = {
   fixtureData: object;

@@ -44,7 +44,7 @@ import ArticlePage from './ArticlePage';
 import ThemeProvider from '../../components/ThemeProvider';
 import * as ATIAnalytics from '../../components/ATIAnalytics';
 
-jest.mock('../../components/ThemeProvider');
+jest.mock('#testHelpers/mocks/ThemeProvider');
 
 jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;

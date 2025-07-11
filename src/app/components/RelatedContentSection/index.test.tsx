@@ -16,7 +16,7 @@ import {
 import { Services } from '../../models/types/global';
 import { OptimoBlock } from '../../models/types/optimo';
 
-jest.mock('../ThemeProvider');
+jest.mock('#testHelpers/mocks/ThemeProvider');
 
 jest.mock('#app/hooks/useIsPWA', () => ({
   __esModule: true,
