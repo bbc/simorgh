@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import Canonical from './index.canonical';
 
 const ConsentBanner = ({ onDismissFocusRef = null }) => {
-  const { isAmp, isLite } = useContext(RequestContext);
+  const { isAmp, isLite } = use(RequestContext);
   if (isLite || isAmp) return null;
 
   return <Canonical onDismissFocusRef={onDismissFocusRef} />;

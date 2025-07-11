@@ -75,6 +75,7 @@ const baseServiceConfig = {
     home: 'Головна',
     currentPage: 'Поточна сторінка',
     skipLinkText: 'Перейти до змісту',
+    moreOnThis: '',
     navMenuText: 'Розділи',
     mediaAssetPage: {
       mediaPlayer: 'Медіаплеєр',

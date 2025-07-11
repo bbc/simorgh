@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { PropsWithChildren, useContext } from 'react';
+import { PropsWithChildren, use } from 'react';
 import {
   GROUP_2_MIN_WIDTH_BP,
   GROUP_2_MAX_WIDTH_BP,
@@ -157,8 +157,8 @@ const Pagination = ({
   nextPage = 'Next Page',
   page = 'Page',
 }: PaginationProps) => {
-  const { dir } = useContext(ServiceContext);
-  const { pageType } = useContext(RequestContext);
+  const { dir } = use(ServiceContext);
+  const { pageType } = use(RequestContext);
   const blocks = buildBlocks(activePage, pageCount);
   const isLive = pageType === LIVE_PAGE;
   if (!blocks) return null;

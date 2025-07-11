@@ -1,11 +1,6 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
-import React, {
-  Fragment,
-  PropsWithChildren,
-  useState,
-  useContext,
-} from 'react';
+import React, { Fragment, PropsWithChildren, useState, use } from 'react';
 import { Global, jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import styles from './index.styles';
@@ -60,7 +55,7 @@ const Image = ({
   fetchPriority,
   hasCaption,
 }: PropsWithChildren<ImageProps>) => {
-  const { pageType, isLite, isAmp } = useContext(RequestContext);
+  const { pageType, isLite, isAmp } = use(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
   if (isLite) return null;
 

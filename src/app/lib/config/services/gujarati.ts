@@ -80,6 +80,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'કન્ટેન્ટ પર જાવ',
       relatedContent: 'સંબંધિત સમાચાર',
       relatedTopics: 'સંબંધિત મુદ્દા',
+      moreOnThis: '',
       navMenuText: 'વિભાગો',
       mediaAssetPage: {
         mediaPlayer: 'મીડિયા પ્લેયર',
@@ -253,6 +254,8 @@ export const service: DefaultServiceConfig = {
         previousRadioShow: 'આ પહેલાંનો રેડિયો શો',
         nextRadioShow: 'આગામી રેડિયો શો',
         duration: 'અવધિ',
+        podcastExternalLinks: 'આ પૉડકાસ્ટ આ પ્લેટફૉર્મ્સ પર પણ ઉપલબ્ધ છે',
+        download: 'ડાઉનલોડકરો',
         recentEpisodes: 'તાજેતરનાં એપિસોડ્સ',
         closeVideo: 'બહાર નીકળો',
       },

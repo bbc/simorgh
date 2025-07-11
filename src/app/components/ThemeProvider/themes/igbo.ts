@@ -3,6 +3,7 @@ import latinScript from '../fontScripts/latin';
 import helmetFontVariants from '../fontVariants/helmet';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/igbo';
+import getPWATypographyTheme from './getPWATypographyTheme';
 
 const igboTheme = {
   palette: {
@@ -20,4 +21,4 @@ const igboTheme = {
   brandSVG,
 };
 
-export default withThemeProvider(igboTheme);
+export default withThemeProvider(igboTheme, getPWATypographyTheme());

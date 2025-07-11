@@ -1,10 +1,12 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
-import React, { useContext, useState } from 'react';
+import React, { use, useState } from 'react';
 import { jsx, useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
-import useOptimizelyMvtVariation from '#app/hooks/useOptimizelyMvtVariation';
+import useOptimizelyVariation, {
+  ExperimentType,
+} from '#app/hooks/useOptimizelyVariation';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
@@ -19,7 +21,6 @@ import SocialEmbedContainer from '#containers/SocialEmbed';
 import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
-import OPTIMIZELY_CONFIG from '#app/lib/config/optimizely';
 
 import {
   getArticleId,
@@ -38,6 +39,7 @@ import NielsenAnalytics from '#containers/NielsenAnalytics';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
 import {
   Article,
+  OptimoBlock,
   OptimoBylineBlock,
   OptimoBylineContributorBlock,
 } from '#app/models/types/optimo';
@@ -70,9 +72,14 @@ import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
 import styles from './ArticlePage.styles';
 import { ComponentToRenderProps, TimeStampProps } from './types';
-import ContinueReadingButton from './ContinueReadingButton';
+import ContinueReadingButton, {
+  Props as ContinueReadingProps,
+} from './ContinueReadingButton';
 import ArticleHeadline from './ArticleHeadline';
-import isPortraitVideo from '../utils/isPortraitVideo';
+import {
+  isPortraitVideo,
+  isPortraitVideoUnderHeadline,
+} from '../utils/portraitVideo';
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -123,16 +130,20 @@ const getHeadlineComponent = (props: ComponentToRenderProps) => (
 );
 
 const getVideoComponent =
-  (translations: Translations) => (props: ComponentToRenderProps) => {
+  (translations: Translations, pageBlocks: OptimoBlock[]) =>
+  (props: ComponentToRenderProps) => {
     const { blocks } = props;
 
-    const title = translations.media.watchMoments || 'Watch Moments';
+    const title = translations.media.watchMoments;
+
+    const showTitle =
+      isPortraitVideo(blocks) &&
+      title &&
+      !isPortraitVideoUnderHeadline(pageBlocks, blocks);
 
     return (
       <>
-        {isPortraitVideo(blocks) && (
-          <strong css={styles.portraitVideoTitle}>{title}</strong>
-        )}
+        {showTitle && <strong css={styles.portraitVideoTitle}>{title}</strong>}
         <MediaLoader blocks={blocks as MediaBlock[]} />
       </>
     );
@@ -140,7 +151,7 @@ const getVideoComponent =
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
-  const { isApp, isAmp, isLite } = useContext(RequestContext);
+  const { isApp, isAmp, isLite } = use(RequestContext);
 
   const {
     articleAuthor,
@@ -148,7 +159,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     showRelatedTopics,
     brandName,
     translations,
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
 
@@ -156,11 +167,14 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
-  const experimentVariant = useOptimizelyMvtVariation(
-    OPTIMIZELY_CONFIG.ruleKey,
-  );
+  const experimentName = 'newswb_ws_read_more_b';
+  const experimentVariant = useOptimizelyVariation({
+    experimentName,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
 
-  const isInExperiment = experimentVariant && experimentVariant !== 'off';
+  const isInServerSideExperiment =
+    experimentVariant && experimentVariant !== 'off';
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
 
@@ -207,7 +221,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const atiData = {
     ...atiAnalytics,
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
-    ...(isInExperiment && { experimentVariant }),
+    ...(isInServerSideExperiment && { experimentName, experimentVariant }),
   };
 
   const componentsToRender = {
@@ -215,7 +229,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     headline: getHeadlineComponent,
     subheadline: Headings,
     audio: MediaLoader,
-    video: getVideoComponent(translations),
+    video: getVideoComponent(translations, blocks),
     text,
     image: getImageComponent(preloadLeadImageToggle),
     timestamp: getTimestampComponent(
@@ -269,6 +283,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     !isAmp &&
       !isLite &&
       !isApp &&
+      experimentVariant &&
       ['read-more-a', 'read-more-b', 'read-more-a-and-top-stories'].includes(
         experimentVariant,
       ),
@@ -338,15 +353,15 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               <ContinueReadingButton
                 showAllContent={showAllContent}
                 setShowAllContent={() => setShowAllContent(true)}
-                variation={experimentVariant}
+                variation={
+                  experimentVariant as ContinueReadingProps['variation']
+                }
                 liteCTAShows={liteCTAShows}
               />
             )}
-            {isInExperiment && <OptimizelyPageMetrics trackPageComplete />}
+            <OptimizelyPageMetrics trackPageComplete />
           </main>
-          {isInExperiment && (
-            <OptimizelyPageMetrics trackPageView trackPageDepth />
-          )}
+          <OptimizelyPageMetrics trackPageView trackPageDepth />
           {showTopics && (
             <RelatedTopics
               css={[

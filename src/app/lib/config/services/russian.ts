@@ -119,6 +119,7 @@ export const mainTranslations = {
   skipLinkText: 'Перейти к содержанию',
   relatedContent: 'Читайте также',
   relatedTopics: 'Темы',
+  moreOnThis: '',
   mediaAssetPage: {
     mediaPlayer: 'Медиа плеер',
     audioPlayer: 'Аудио плеер',
@@ -195,7 +196,6 @@ export const mainTranslations = {
     },
     listen: 'Слушать',
     watch: 'Смотреть',
-    watchMoments: 'Смотреть',
     listenLive: 'Слушать LIVE',
     listenNext: 'Вперед',
     liveLabel: 'LIVE',

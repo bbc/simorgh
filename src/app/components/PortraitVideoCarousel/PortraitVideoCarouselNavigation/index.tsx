@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { useCallback, useContext, useEffect, useState } from 'react';
+import { useCallback, use, useEffect, useState } from 'react';
 import { jsx } from '@emotion/react';
 import {
   ScrollDirection,
@@ -19,7 +19,7 @@ export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
   const {
     dir,
     translations: { carousel = DEFAULT_TRANSLATION },
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
 

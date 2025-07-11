@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import styled from '@emotion/styled';
 import { getSansBold } from '#psammead/psammead-styles/src/font-styles';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
@@ -16,7 +16,7 @@ const H1 = styled.h1`
 `;
 
 const TopicTitle = ({ children }) => {
-  const { script, service } = useContext(ServiceContext);
+  const { script, service } = use(ServiceContext);
   return (
     <H1 service={service} script={script} id="content" tabIndex="-1">
       {children}

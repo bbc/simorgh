@@ -3,6 +3,7 @@ import latinScript from '../fontScripts/latin';
 import helmetFontVariants from '../fontVariants/helmet';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/afaanoromoo';
+import getPWATypographyTheme from './getPWATypographyTheme';
 
 const afaanoromooTheme = {
   palette: {
@@ -20,4 +21,4 @@ const afaanoromooTheme = {
   brandSVG,
 };
 
-export default withThemeProvider(afaanoromooTheme);
+export default withThemeProvider(afaanoromooTheme, getPWATypographyTheme());
