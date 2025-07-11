@@ -1,7 +1,8 @@
 import { ClassNames, useTheme } from '@emotion/react';
 import React, { useState } from 'react';
 import styles from './index.styles';
-import languageSections, { CloseIconSvg } from './constants';
+import languageSections from './constants';
+import { Close } from '../icons';
 
 const LanguageNavigation = () => {
   const [openSection, setOpenSection] = useState<string | null>(null);
@@ -19,9 +20,12 @@ const LanguageNavigation = () => {
                 return (
                   <div
                     key={section.title}
-                    className={css(styles.navItem({ isLast }))}
+                    className={css(styles.navItem({ ...theme, isLast }))}
                   >
-                    <a href={section.href} className={css(styles.navLink)}>
+                    <a
+                      href={section.href}
+                      className={css(styles.navLink(theme))}
+                    >
                       {section.title}
                     </a>
                   </div>
@@ -34,13 +38,15 @@ const LanguageNavigation = () => {
                 <details
                   key={section.title}
                   open={isActive}
-                  className={css(styles.navItem({ isLast, isActive }))}
+                  className={css(
+                    styles.navItem({ ...theme, isLast, isActive }),
+                  )}
                   onToggle={e => {
                     const isOpen = (e.target as HTMLDetailsElement).open;
                     setOpenSection(isOpen ? section.title : null);
                   }}
                 >
-                  <summary className={css(styles.navSummary)}>
+                  <summary className={css(styles.navSummary(theme))}>
                     {section.title}
                   </summary>
                 </details>
@@ -49,15 +55,15 @@ const LanguageNavigation = () => {
           </nav>
 
           {openSection && (
-            <div className={css(styles.dropDown)}>
+            <div className={css(styles.dropDown(theme))}>
               <div className={css(styles.dropDownHeader)}>
                 <span className={css(styles.dropDownTitle)}>{openSection}</span>
                 <button
                   type="button"
-                  className={css(styles.closeButton)}
+                  className={css(styles.closeButton(theme))}
                   onClick={() => setOpenSection(null)}
                 >
-                  <CloseIconSvg />
+                  <Close />
                 </button>
               </div>
 
@@ -69,7 +75,10 @@ const LanguageNavigation = () => {
                       key={link.href}
                       className={css(styles.dropDownItem(theme))}
                     >
-                      <a href={link.href} className={css(styles.dropDownLink)}>
+                      <a
+                        href={link.href}
+                        className={css(styles.dropDownLink(theme))}
+                      >
                         {link.label}
                       </a>
                     </div>
