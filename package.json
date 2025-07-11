@@ -93,7 +93,9 @@
   },
   "homepage": "https://github.com/bbc/simorgh#readme",
   "resolutions": {
-    "react-is": "19"
+    "react-is": "19",
+    "scheduler": "0.26.0",
+    "zustand": "4.5.7"
   },
   "dependencies": {
     "@bbc/reverb-url-helper": "https://mybbc-analytics.files.bbci.co.uk/reverb-url-helper/bbc-reverb-url-helper-1.0.3.tgz",
