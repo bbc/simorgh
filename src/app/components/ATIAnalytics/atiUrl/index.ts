@@ -2,7 +2,6 @@ import {
   CLICK_EVENT,
   VIEW_EVENT,
   VIEWABILITY_CLICK_EVENT,
-  CUSTOM_EVENT,
 } from '#app/lib/analyticsUtils/analytics.const';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import {
@@ -28,7 +27,6 @@ import {
   ATIEventTrackingProps,
   ATIPageTrackingProps,
   ReverbBeaconConfig,
-  ReverbEventActionType,
 } from '../types';
 
 /*
@@ -435,7 +433,6 @@ export const buildATIEventTrackUrl = ({
   )}&type=AT`;
 };
 
-// TODO: Analytics model vs event models
 export const buildReverbAnalyticsModel = ({
   appName,
   campaigns,
@@ -524,7 +521,6 @@ export const buildReverbEventModel = ({
   experimentVariant,
   itemTracker = {},
   groupTracker = {},
-  eventGroupingName,
 }: ATIEventTrackingProps): ReverbBeaconConfig => {
   const {
     type: itemType,
@@ -534,16 +530,6 @@ export const buildReverbEventModel = ({
     resourceId: itemResourceId,
   } = itemTracker;
   const { itemCount, resourceId: groupResourceId } = groupTracker;
-
-  let actionType: ReverbEventActionType;
-
-  if (type === CUSTOM_EVENT) {
-    actionType = CUSTOM_EVENT;
-  } else if (type === CLICK_EVENT) {
-    actionType = VIEWABILITY_CLICK_EVENT;
-  } else {
-    actionType = VIEW_EVENT;
-  }
 
   return {
     params: {
@@ -560,7 +546,6 @@ export const buildReverbEventModel = ({
       },
     },
     eventDetails: {
-      // TODO: Can it be extended (i.e. using custom event name - PWAInstalled; effectiveType) or better to use eventGroupingName
       eventName: type === VIEW_EVENT ? 'sectionView' : 'sectionClick',
       eventPublisher: 'viewability',
       item: {
@@ -580,8 +565,7 @@ export const buildReverbEventModel = ({
       },
       event: {
         category: 'viewability',
-        action: actionType,
-        ...(eventGroupingName && { eventGrouping: eventGroupingName }),
+        action: type === CLICK_EVENT ? VIEWABILITY_CLICK_EVENT : VIEW_EVENT,
       },
       isClick: type === CLICK_EVENT,
       ...(experimentVariant && {

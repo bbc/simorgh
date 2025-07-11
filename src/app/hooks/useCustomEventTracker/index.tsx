@@ -1,76 +1,46 @@
 import { use, useCallback } from 'react';
-import { CUSTOM_EVENT } from '#app/lib/analyticsUtils/analytics.const';
+import { VIEW_EVENT } from '#app/lib/analyticsUtils/analytics.const';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
-import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon';
 import useTrackingToggle from '../useTrackingToggle';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
-// TODO: Might not extend the EventTrackingData;
-export interface CustomEventData extends EventTrackingData {
+export interface CustomEventData {
   eventName: string;
-  customData?: Record<string, unknown>;
 }
 
-// TODO: Consider moving this utility for reusability?
-const buildMetadataFormat = (
-  customData: Record<string, unknown>,
-): string | undefined => {
-  const entries = Object.entries(customData);
-  if (entries.length === 0) return undefined;
-
-  return entries.map(([key, value]) => `${key}=${String(value)}`).join('~');
-};
-
 /**
- * Considerations:
- * 1. Which property to be used to pass custom/arbitrary data to the Reverb
- * - TBC
+ * A specialized React hook for tracking custom (non-click, non-view) events.
+ * Reverb is used to send the beacon, and the event will appear in Piano under the "Item name" field.
+ *
+ * @param {CustomEventData} eventName - A string representing the name of the custom event.
+ * @returns {Object} An object containing the `trackEvent` function, which can be called to trigger the event.
  */
 
-const useCustomEventTracker = (defaultEventTrackingData: CustomEventData) => {
-  // TODO: Review if all data is needed;
+const useCustomEventTracker = ({ eventName }: CustomEventData) => {
   const {
     pageIdentifier,
     producerId,
     platform,
     statsDestination,
-    componentName: baseComponentName,
     campaignID,
     producerName,
   } = extractATITrackingProps({
-    eventTrackingData: defaultEventTrackingData,
-    eventType: CUSTOM_EVENT,
+    eventType: VIEW_EVENT,
   });
 
   const { trackingIsEnabled } = useTrackingToggle();
   const { service, useReverb } = use(ServiceContext);
 
   const trackEvent = useCallback(
-    async (eventData?: Partial<CustomEventData>) => {
+    async (stringifiedData?: string) => {
       if (!trackingIsEnabled) return;
-
-      // Override the default details if needed
-      const mergedData = {
-        ...defaultEventTrackingData,
-        ...eventData,
-        customData: {
-          ...defaultEventTrackingData?.customData,
-          ...eventData?.customData,
-        },
-      };
-
-      const {
-        eventName,
-        customData = {},
-        componentName = baseComponentName,
-      } = mergedData;
 
       if (!eventName) return;
 
       const shouldSendEvent = [
         campaignID,
-        componentName,
+        eventName,
         pageIdentifier,
         platform,
         producerId,
@@ -80,13 +50,10 @@ const useCustomEventTracker = (defaultEventTrackingData: CustomEventData) => {
       ].every(Boolean);
 
       if (shouldSendEvent) {
-        const stringifiedMetadata = buildMetadataFormat(customData);
-
         try {
           await sendEventBeacon({
-            type: CUSTOM_EVENT,
-            eventGroupingName: eventName,
-            componentName: stringifiedMetadata,
+            type: VIEW_EVENT,
+            componentName: stringifiedData ?? eventName,
             campaignID,
             pageIdentifier,
             platform,
@@ -104,7 +71,7 @@ const useCustomEventTracker = (defaultEventTrackingData: CustomEventData) => {
     },
     [
       trackingIsEnabled,
-      baseComponentName,
+      eventName,
       campaignID,
       pageIdentifier,
       platform,
@@ -113,7 +80,6 @@ const useCustomEventTracker = (defaultEventTrackingData: CustomEventData) => {
       service,
       statsDestination,
       useReverb,
-      defaultEventTrackingData,
     ],
   );
 

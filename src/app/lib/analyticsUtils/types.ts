@@ -5,13 +5,9 @@ import {
   CLICK_EVENT,
   STATIC_ATI_VIEW_TRACKING,
   VIEW_EVENT,
-  CUSTOM_EVENT,
 } from './analytics.const';
 
-export type ATIEventType =
-  | typeof VIEW_EVENT
-  | typeof CLICK_EVENT
-  | typeof CUSTOM_EVENT;
+export type ATIEventType = typeof VIEW_EVENT | typeof CLICK_EVENT;
 
 export type EventTrackingData = EventTrackingMetadata & ATIEventTrackingProps;
 

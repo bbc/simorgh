@@ -2,14 +2,11 @@ import { useEffect } from 'react';
 import useCustomEventTracker from '../useCustomEventTracker';
 
 /**
- * NOTE: POC hook
+ * NOTE: POC hook - used for testing only. To be removed before merging
  * A hook to track network connection details (effectiveType) using Reverb Analytics
- * Fires once (on mount)
- * TODO: Potentially introduce sessionStorage session to track once per session?
  */
 const useNetworkConnectionTracker = () => {
   const { trackEvent } = useCustomEventTracker({
-    componentName: 'useNetworkConnectionTracker',
     eventName: 'effectiveType',
   });
 
@@ -19,17 +16,13 @@ const useNetworkConnectionTracker = () => {
       const { connection } = navigator as any;
 
       if (connection?.effectiveType) {
-        const customData = {
-          effectiveType: connection.effectiveType || null,
-          downlink: connection.downlink || null,
-        };
+        const { effectiveType } = connection;
+        const eventName = `effectiveType::${effectiveType}`;
 
         // TODO: Temp
-        console.log(`useNetworkConnectionTracker`, { customData });
+        console.log(`useNetworkConnectionTracker`, { eventName });
 
-        trackEvent({
-          customData,
-        });
+        trackEvent(eventName);
       }
     }
   }, [trackEvent]);

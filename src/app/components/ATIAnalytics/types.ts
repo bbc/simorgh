@@ -117,8 +117,6 @@ export type ReverbUserVars = {
   isSignedIn: boolean;
 };
 
-export type ReverbEventActionType = 'select' | 'view' | 'custom';
-
 export type ReverbEventDetails = {
   anchorElement?: HTMLElement;
   experience?: {
@@ -127,9 +125,7 @@ export type ReverbEventDetails = {
   };
   event?: {
     category: string;
-    action: ReverbEventActionType;
-    // TBC;
-    eventGrouping?: string;
+    action: 'select' | 'view';
   };
   eventName: 'pageView' | 'sectionView' | 'sectionClick';
   eventPublisher?: string;
@@ -172,8 +168,6 @@ export interface ATIEventTrackingProps {
   itemTracker?: ItemTracker;
   groupTracker?: GroupTracker;
   viewThreshold?: number;
-  // TBC
-  eventGroupingName?: string;
 }
 
 export interface ItemTracker {
