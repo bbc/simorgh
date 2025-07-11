@@ -4,7 +4,12 @@ const unitTests = {
   preset: 'ts-jest',
   setupFiles: ['./src/testHelpers/jest-setup.js'],
   setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
-  moduleNameMapper: jestDirAlias,
+  moduleNameMapper: {
+    ...jestDirAlias,
+    '^#contexts/ServiceContext$': '<rootDir>/src/testHelpers/mocks/ServiceContext.tsx',
+    '^#pages$': '<rootDir>/src/testHelpers/mocks/pages.js',
+    '^.*ThemeProvider$': '<rootDir>/src/testHelpers/mocks/ThemeProvider.tsx',
+  },
   testEnvironment: 'jsdom',
   snapshotSerializers: ['@emotion/jest/serializer'],
   transform: {
@@ -97,6 +102,8 @@ module.exports = {
       },
     ],
   ],
-  timers: 'modern',
+  fakeTimers: {
+    enableGlobally: true,
+  },
   workerIdleMemoryLimit: '512MB',
 };

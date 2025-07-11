@@ -1,7 +1,4 @@
 import React, { PropsWithChildren } from 'react';
-import getLangOverride from '../../../lib/utilities/langHandler';
-import { getVariant } from '../../../lib/utilities/variantHandler';
-import services from '../../../../server/utilities/serviceConfigs';
 import { Services, Variants } from '../../../models/types/global';
 
 interface Props {
@@ -17,16 +14,19 @@ interface Props {
  */
 export const ServiceContext = React.createContext({});
 
+const mockServiceData = {
+  lang: 'en',
+  dir: 'ltr',
+  product: 'BBC News',
+  serviceName: 'Mock Service',
+  brandName: 'BBC',
+};
+
 export const ServiceContextProvider = ({
   children,
-  pageLang = null,
-  service,
-  variant = 'default',
 }: PropsWithChildren<Props>) => {
-  const dataKey: Variants =
-    getLangOverride({ service, pageLang }) || getVariant({ service, variant });
   return (
-    <ServiceContext.Provider value={services[service][dataKey]}>
+    <ServiceContext.Provider value={mockServiceData}>
       {children}
     </ServiceContext.Provider>
   );
