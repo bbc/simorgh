@@ -1,5 +1,7 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
+//3d 
+import LanguagesNearYou from '#app/components/3d/3dComponents/LanguagesNearYou'
 import React, { use, useState } from 'react';
 import { jsx, useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
@@ -345,6 +347,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             ]}
             role="main"
           >
+            <LanguagesNearYou />
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
