@@ -1,5 +1,9 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
+// 3d imports
+import LanguagesNearYou from '#app/components/3d/3dComponents/LanguagesNearYou';
+import Example3dScene1 from '#app/components/3d/3dComponents/Example3dScene1';
+import Example3dScene2 from '#app/components/3d/3dComponents/Example3dScene2';
 import React, { use, useState } from 'react';
 import { jsx, useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
@@ -345,6 +349,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             ]}
             role="main"
           >
+            <LanguagesNearYou />
+            <p>^ idea in progress (service switcther for India) </p>
+            <Example3dScene2 />
+            <p>^ click me (world service minecraft block)</p>
+            <Example3dScene1 />
+            <p>^ explore space (click + drag with mouse) </p>
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
