@@ -1,5 +1,3 @@
-import React from 'react';
-
 const languageSections = [
   {
     id: 'home',
@@ -251,19 +249,3 @@ const languageSections = [
 ];
 
 export default languageSections;
-
-export const CloseIconSvg = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="12 12 20 20"
-    aria-hidden="true"
-    width="22"
-    height="22"
-  >
-    <path
-      d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
-      fill="currentColor"
-      fillRule="evenodd"
-    />
-  </svg>
-);
