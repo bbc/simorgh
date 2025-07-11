@@ -58,7 +58,7 @@ const languageSections = [
     ],
   },
   {
-    id: 'asia central',
+    id: 'asia-central',
     title: 'Asia Central',
     links: [
       {
@@ -74,7 +74,7 @@ const languageSections = [
     ],
   },
   {
-    id: 'asia pacific',
+    id: 'asia-pacific',
     title: 'Asia Pacific',
     links: [
       {
@@ -107,7 +107,7 @@ const languageSections = [
     ],
   },
   {
-    id: 'asia south',
+    id: 'asia-south',
     title: 'Asia South',
     links: [
       {
@@ -215,7 +215,7 @@ const languageSections = [
     ],
   },
   {
-    id: 'latin america',
+    id: 'latin-america',
     title: 'Latin America',
     links: [
       {
@@ -231,7 +231,7 @@ const languageSections = [
     ],
   },
   {
-    id: 'middle east',
+    id: 'middle-east',
     title: 'Middle East',
     links: [
       {

@@ -1,5 +1,6 @@
 import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
+import { REITH_SANS } from '#app/components/ThemeProvider/fontFamilies';
 
 const styles = {
   wrapper: ({ fontMq, spacings, palette, fontSizes }: Theme) =>
@@ -8,7 +9,7 @@ const styles = {
       color: palette.GREY_8,
       flexWrap: 'wrap',
       padding: 0,
-      fontFamily: 'ReithSans, Arial, Helvetica, sans-serif',
+      fontFamily: REITH_SANS,
       ...fontSizes.pica,
       borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_3}`,
       [fontMq.GROUP_D_MIN_WIDTH]: {
@@ -27,10 +28,10 @@ const styles = {
       padding: 0,
       position: 'relative',
       borderBottom: isActive
-        ? `${pixelsToRem(4)}rem solid #b80000`
+        ? `${pixelsToRem(4)}rem solid ${palette.POSTBOX}`
         : `${pixelsToRem(4)}rem solid transparent`,
       '&:hover, &:focus-within': {
-        borderBottom: `${pixelsToRem(4)}rem solid #b80000`,
+        borderBottom: `${pixelsToRem(4)}rem solid ${palette.POSTBOX}`,
         outline: 'none',
         cursor: 'pointer',
       },
@@ -51,7 +52,7 @@ const styles = {
     css({
       textDecoration: 'none',
       color: palette.GREY_8,
-      fontFamily: 'BBC Reith Sans',
+      fontFamily: REITH_SANS,
       fontWeight: 400,
       ...fontSizes.pica,
       lineHeight: `${pixelsToRem(22)}rem`,
@@ -71,7 +72,7 @@ const styles = {
       listStyle: 'none',
       border: 'none',
       background: 'none',
-      fontFamily: 'BBC Reith Sans',
+      fontFamily: REITH_SANS,
       fontWeight: 400,
       ...fontSizes.pica,
       lineHeight: `${pixelsToRem(22)}rem`,
@@ -95,7 +96,7 @@ const styles = {
 
   dropDownTitle: css({
     fontSize: `${pixelsToRem(20)}rem`,
-    fontFamily: 'BBC Reith Sans',
+    fontFamily: REITH_SANS,
     fontWeight: 700,
     lineHeight: `${pixelsToRem(22)}rem`,
     letterSpacing: '0%',
@@ -131,12 +132,12 @@ const styles = {
       breakInside: 'avoid',
       padding: 0,
       borderLeft: isActive
-        ? `${pixelsToRem(4)}rem solid #b80000`
+        ? `${pixelsToRem(4)}rem solid ${palette.POSTBOX}`
         : `${pixelsToRem(4)}rem solid transparent`,
       borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_3}`,
       width: '100%',
       '&:hover, &:focus-within': {
-        borderLeft: `${pixelsToRem(4)}rem solid #b80000`,
+        borderLeft: `${pixelsToRem(4)}rem solid ${palette.POSTBOX}`,
         outline: 'none',
         backgroundColor: palette.GREY_3,
       },
@@ -154,7 +155,7 @@ const styles = {
       padding: `${pixelsToRem(12)}rem ${spacings.FULL}rem`,
       textDecoration: 'none',
       color: palette.GREY_8,
-      fontFamily: 'BBC Reith Sans',
+      fontFamily: REITH_SANS,
       fontWeight: 400,
       lineHeight: `${pixelsToRem(22)}`,
       letterSpacing: '0%',
