@@ -18310,7 +18310,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"use-sync-external-store@npm:^1.2.2, use-sync-external-store@npm:^1.4.0":
+"use-sync-external-store@npm:^1.4.0":
   version: 1.5.0
   resolution: "use-sync-external-store@npm:1.5.0"
   peerDependencies:
@@ -19336,15 +19336,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zustand@npm:4.5.7":
-  version: 4.5.7
-  resolution: "zustand@npm:4.5.7"
-  dependencies:
-    use-sync-external-store: "npm:^1.2.2"
+"zustand@npm:5.0.6":
+  version: 5.0.6
+  resolution: "zustand@npm:5.0.6"
   peerDependencies:
-    "@types/react": ">=16.8"
+    "@types/react": ">=18.0.0"
     immer: ">=9.0.6"
-    react: ">=16.8"
+    react: ">=18.0.0"
+    use-sync-external-store: ">=1.2.0"
   peerDependenciesMeta:
     "@types/react":
       optional: true
@@ -19352,6 +19351,8 @@ __metadata:
       optional: true
     react:
       optional: true
-  checksum: 10/21c47ea1c9bb0363b714a7e371a91b9afaeabc5c9c2f522803a0fb412605b1e037c4f975a7377529de8f2857e60d1f4586e7ade18444168ecc492e38779e605d
+    use-sync-external-store:
+      optional: true
+  checksum: 10/9f727b05c36101ce659e65af452e23e66c2c51c9001d94085e43d02400344b2840544cc876b13c26cafc5d780f1a5c83f46b91f6f7684634af2be23f740c27cc
   languageName: node
   linkType: hard
