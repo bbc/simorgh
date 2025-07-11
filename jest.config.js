@@ -101,8 +101,5 @@ module.exports = {
       },
     ],
   ],
-  fakeTimers: {
-    enableGlobally: true,
-  },
   workerIdleMemoryLimit: '512MB',
 };
