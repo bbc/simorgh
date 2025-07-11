@@ -62,6 +62,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'కంటెంట్‌కు వెళ్లండి',
       relatedContent: 'సంబంధిత కథనాలు',
       relatedTopics: 'సంబంధిత అంశాలు',
+      moreOnThis: '',
       navMenuText: 'విభాగాలు',
       mediaAssetPage: {
         mediaPlayer: 'మీడియా ప్లేయర్',

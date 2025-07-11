@@ -47,8 +47,9 @@ export const App = ({ initialData, bbcOrigin }) => {
     showAdsBasedOnLocation,
     showCookieBannerBasedOnCountry,
     toggles,
-    mvtExperiments,
+    serverSideExperiments,
     isUK,
+    country,
   } = initialData;
 
   const routeProps = getRouteProps(pathname);
@@ -62,10 +63,11 @@ export const App = ({ initialData, bbcOrigin }) => {
 
   return renderRoutes(routes, {
     ...state,
+    country,
     bbcOrigin,
     showAdsBasedOnLocation,
     showCookieBannerBasedOnCountry,
-    mvtExperiments,
+    serverSideExperiments,
     isUK,
   });
 };

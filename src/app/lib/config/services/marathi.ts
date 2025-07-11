@@ -77,6 +77,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'थेट मजकुरावर जा',
       relatedContent: 'संबंधित मजकूर',
       relatedTopics: 'संबंधित विषय',
+      moreOnThis: '',
       navMenuText: 'विभाग',
       mediaAssetPage: {
         mediaPlayer: 'मीडिया प्लेयर',

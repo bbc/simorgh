@@ -62,6 +62,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'Wụga n’ọdịnaya',
       relatedContent: "Ihe ndị ọzọ n'akụkọ a",
       relatedTopics: 'Isiokwu ndị emetụtara',
+      moreOnThis: '',
       navMenuText: 'Ngalaba',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
