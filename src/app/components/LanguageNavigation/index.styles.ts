@@ -8,7 +8,7 @@ const styles = {
       color: palette.GREY_8,
       flexWrap: 'wrap',
       padding: 0,
-      fontFamily: 'ReithSahs, Arial, Helvetica, sans-serif',
+      fontFamily: 'ReithSans, Arial, Helvetica, sans-serif',
       ...fontSizes.pica,
       borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_3}`,
       [fontMq.GROUP_D_MIN_WIDTH]: {
@@ -126,15 +126,17 @@ const styles = {
       },
     }),
 
-  dropDownItem: ({ mq, palette }: Theme) =>
+  dropDownItem: ({ mq, palette, isActive }: { isActive?: boolean } & Theme) =>
     css({
       breakInside: 'avoid',
       padding: 0,
+      borderLeft: isActive
+        ? `${pixelsToRem(4)}rem solid #b80000`
+        : `${pixelsToRem(4)}rem solid transparent`,
       borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_3}`,
       width: '100%',
-      '&:hover, &:focus-within, &.active': {
+      '&:hover, &:focus-within': {
         borderLeft: `${pixelsToRem(4)}rem solid #b80000`,
-
         outline: 'none',
         backgroundColor: palette.GREY_3,
       },

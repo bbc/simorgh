@@ -1,12 +1,29 @@
 import { ClassNames, useTheme } from '@emotion/react';
 import React, { useState } from 'react';
 import styles from './index.styles';
-import languageSections from './constants';
 import { Close } from '../icons';
 
-const LanguageNavigation = () => {
+type LanguageLink = {
+  id: string;
+  label: string;
+  href: string;
+};
+
+type LanguageSection = {
+  id: string;
+  title: string;
+  href?: string;
+  links?: LanguageLink[];
+};
+
+type LanguageNavigationProps = {
+  languageSections: LanguageSection[];
+};
+
+const LanguageNavigation = ({ languageSections }: LanguageNavigationProps) => {
   const [openSection, setOpenSection] = useState<string | null>(null);
   const theme = useTheme();
+  const activeSection = languageSections.find(s => s.id === openSection);
 
   return (
     <ClassNames>
@@ -19,7 +36,7 @@ const LanguageNavigation = () => {
               if (section.href) {
                 return (
                   <div
-                    key={section.title}
+                    key={section.id}
                     className={css(styles.navItem({ ...theme, isLast }))}
                   >
                     <a
@@ -32,18 +49,18 @@ const LanguageNavigation = () => {
                 );
               }
 
-              const isActive = openSection === section.title;
+              const isActive = openSection === section.id;
 
               return (
                 <details
-                  key={section.title}
+                  key={section.id}
                   open={isActive}
                   className={css(
                     styles.navItem({ ...theme, isLast, isActive }),
                   )}
                   onToggle={e => {
                     const isOpen = (e.target as HTMLDetailsElement).open;
-                    setOpenSection(isOpen ? section.title : null);
+                    setOpenSection(isOpen ? section.id : null);
                   }}
                 >
                   <summary className={css(styles.navSummary(theme))}>
@@ -54,10 +71,12 @@ const LanguageNavigation = () => {
             })}
           </nav>
 
-          {openSection && (
+          {activeSection && (
             <div className={css(styles.dropDown(theme))}>
               <div className={css(styles.dropDownHeader)}>
-                <span className={css(styles.dropDownTitle)}>{openSection}</span>
+                <span className={css(styles.dropDownTitle)}>
+                  {activeSection.title}
+                </span>
                 <button
                   type="button"
                   className={css(styles.closeButton(theme))}
@@ -68,21 +87,24 @@ const LanguageNavigation = () => {
               </div>
 
               <div className={css(styles.dropDownItemsGrid(theme))}>
-                {languageSections
-                  .find(s => s.title === openSection)
-                  ?.links?.map(link => (
-                    <div
-                      key={link.href}
-                      className={css(styles.dropDownItem(theme))}
+                {activeSection.links?.map(link => (
+                  <div
+                    key={link.id}
+                    className={css(
+                      styles.dropDownItem({
+                        ...theme,
+                        isActive: false,
+                      }),
+                    )}
+                  >
+                    <a
+                      href={link.href}
+                      className={css(styles.dropDownLink(theme))}
                     >
-                      <a
-                        href={link.href}
-                        className={css(styles.dropDownLink(theme))}
-                      >
-                        {link.label}
-                      </a>
-                    </div>
-                  ))}
+                      {link.label}
+                    </a>
+                  </div>
+                ))}
               </div>
             </div>
           )}
