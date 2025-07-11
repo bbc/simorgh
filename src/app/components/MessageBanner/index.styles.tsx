@@ -1,7 +1,35 @@
-import { css, Theme } from '@emotion/react';
+import { css, keyframes, Theme } from '@emotion/react';
 
 const IMAGE_WIDTH = 184;
 const IMAGE_WIDTH_GROUP_3_MIN_WIDTH = 224;
+
+const greenPulse = keyframes({
+  '0%': {
+    boxShadow: '0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 600px #00ff00',
+  },
+  '50%': {
+    boxShadow:
+      '0 0 5px rgb(208, 255, 0), 0 0 10px rgb(255, 255, 0), 0 0 600px rgb(234, 255, 0)',
+  },
+  '100%': {
+    boxShadow: '0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 600px #00ff00',
+  },
+});
+
+const redPulse = keyframes({
+  '0%': {
+    boxShadow:
+      '0 0 5px rgb(255, 0, 0), 0 0 10px rgb(255, 0, 72), 0 0 60px rgb(255, 51, 0)',
+  },
+  '50%': {
+    boxShadow:
+      '0 0 5px rgb(255, 102, 0), 0 0 10px rgb(255, 174, 0), 0 0 30px rgb(255, 0, 0)',
+  },
+  '100%': {
+    boxShadow:
+      '0 0 5px rgb(255, 0, 0), 0 0 10px rgb(255, 0, 72), 0 0 60px rgb(255, 51, 0)',
+  },
+});
 
 const styles = {
   IMAGE_WIDTH,
@@ -14,6 +42,7 @@ const styles = {
   card: ({ mq }: Theme) =>
     css({
       height: 'auto',
+      position: 'relative',
       background:
         'radial-gradient(circle at 20% 90%, #A20219, #180109 60%, #500115 90%)',
       paddingLeft: '1rem',
@@ -54,11 +83,17 @@ const styles = {
         insetInlineEnd: 0,
         position: 'absolute',
       },
-
+      pointerEvents: 'none',
       img: { objectPosition: 'top' },
     }),
   callToActionLink: ({ mq, palette }: Theme) =>
     css({
+      '&:after': {
+        content: '""',
+        position: 'absolute',
+        inset: 0,
+        animation: `${redPulse} 10s ease-in-out infinite`,
+      },
       padding: '1rem',
       backgroundColor: palette.WHITE,
       margin: '0 1rem 1rem 1rem',
@@ -67,6 +102,10 @@ const styles = {
       '&:hover, &:focus': {
         backgroundColor: '#F6F6F6',
         color: palette.BLACK,
+        boxShadow: '0 0 10px 2px rgb(0, 255, 136)',
+        '&:after': {
+          animation: `${greenPulse} 10s ease-in-out infinite`,
+        },
       },
       [mq.GROUP_3_MIN_WIDTH]: {
         width: 'auto',
@@ -88,7 +127,6 @@ const styles = {
         flexDirection: 'row-reverse',
         justifyContent: 'start',
         alignItems: 'flex-end',
-        position: 'relative',
       },
     }),
 };

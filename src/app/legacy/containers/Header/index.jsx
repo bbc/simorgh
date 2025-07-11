@@ -1,4 +1,5 @@
 import React, { use, useRef, useState } from 'react';
+import { css } from '@emotion/react';
 import SkipLink from '#psammead/psammead-brand/src/SkipLink';
 import { RequestContext } from '#contexts/RequestContext';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
@@ -10,6 +11,7 @@ import {
   ERROR_PAGE,
 } from '#app/routes/utils/pageTypes';
 import LiteSiteSummary from '#app/components/LiteSiteSummary';
+import WideBanner from '#app/components/LiteStatusBanner';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ConsentBanner from '../ConsentBanner';
 import NavigationContainer from '../Navigation';
@@ -89,23 +91,32 @@ const HeaderContainer = ({ propsForOJExperiment }) => {
   if (isApp) return null;
 
   return (
-    <header role="banner" lang={serviceLang}>
-      {isAmp ? (
-        <Header
-          linkId="brandLink"
-          skipLink={skipLink}
-          scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
-        />
-      ) : (
-        <Header
-          brandRef={brandRef}
-          skipLink={skipLink}
-          scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
-        />
-      )}
-      {isLite && <LiteSiteSummary />}
-      <NavigationContainer propsForOJExperiment={propsForOJExperiment} />
-    </header>
+    <>
+      <header role="banner" lang={serviceLang} css={{ zIndex: 2 }}>
+        {isAmp ? (
+          <Header
+            linkId="brandLink"
+            skipLink={skipLink}
+            scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
+          />
+        ) : (
+          <Header
+            brandRef={brandRef}
+            skipLink={skipLink}
+            scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
+          />
+        )}
+        {/* {isLite && <LiteSiteSummary />} */}
+        <NavigationContainer propsForOJExperiment={propsForOJExperiment} />
+      </header>
+      <WideBanner
+        heading="Feeling slow?"
+        description="Built for 2G, BBC Turbo harnesses the power of lite technology to deliver the essentials you need – hyper fast, at data-friendly rates."
+        link="http://localhost:7080/gahuza.lite"
+        linkText="Turbo"
+        image="https://ichef.bbci.co.uk/ace/standard/raw/cpsprodpb/e329/live/0a700dd0-7cb3-11ee-a503-4588075e3427.png"
+      />
+    </>
   );
 };
 

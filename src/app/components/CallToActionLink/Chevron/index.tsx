@@ -10,7 +10,7 @@ type ChevronProps = {
   className?: string;
 };
 
-const getChevronCss = (size = 'pica') => {
+export const getChevronCss = (size = 'pica') => {
   const chevronCss = [];
 
   if (size === 'brevier') {

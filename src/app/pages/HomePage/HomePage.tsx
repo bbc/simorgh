@@ -3,6 +3,7 @@
 import React, { use } from 'react';
 import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import MessageBanner from '#app/components/MessageBanner';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import {
   Curation,
