@@ -12,6 +12,7 @@ interface Props {
   srcSet?: string;
   mediaInfo?: MediaInfo;
   noJsMessage?: string;
+  isPortraitOrientation?: boolean;
 }
 
 const MediaPlayerPlaceholder = ({
@@ -20,6 +21,7 @@ const MediaPlayerPlaceholder = ({
   srcSet,
   mediaInfo,
   noJsMessage = '',
+  isPortraitOrientation,
 }: Props) => {
   const {
     title,
@@ -54,8 +56,12 @@ const MediaPlayerPlaceholder = ({
         guidanceMessage={guidanceMessage}
         className="focusIndicatorRemove"
       />
-
-      <Image alt="" src={src} srcSet={srcSet} />
+      <Image
+        alt=""
+        src={src}
+        srcSet={srcSet}
+        isPortraitOrientation={isPortraitOrientation}
+      />
     </div>
   );
 };
