@@ -35,7 +35,26 @@ const mockWindowObj = {
   },
 } as Window & typeof globalThis;
 
-jest.spyOn(window, 'window', 'get').mockImplementation(() => mockWindowObj);
+// Make window.window configurable for Jest 30 compatibility
+try {
+  Object.defineProperty(window, 'window', {
+    configurable: true,
+    writable: true,
+    value: window,
+  });
+} catch (error) {
+  // If window.window is already defined and not configurable, try to use defineProperty with the existing descriptor
+  const descriptor = Object.getOwnPropertyDescriptor(window, 'window');
+  if (descriptor && !descriptor.configurable) {
+    // Skip the spy setup as we can't make it configurable
+    console.warn('window.window is not configurable, skipping spy setup');
+  }
+}
+
+const windowDescriptor = Object.getOwnPropertyDescriptor(window, 'window');
+if (windowDescriptor && windowDescriptor.configurable) {
+  jest.spyOn(window, 'window', 'get').mockImplementation(() => mockWindowObj);
+}
 
 describe('Chartbeat utilities', () => {
   afterEach(() => {

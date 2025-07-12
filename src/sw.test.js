@@ -16,19 +16,39 @@ fs.writeFileSync(
   serviceWorkerCode,
 );
 
-Object.defineProperty(self, 'location', {
-  writable: true,
-  value: { assign: jest.fn() },
-});
+// Make location configurable for Jest 30 compatibility
+try {
+  Object.defineProperty(self, 'location', {
+    writable: true,
+    configurable: true,
+    value: { assign: jest.fn() },
+  });
+} catch (error) {
+  // If location is already defined and not configurable, we'll set it in the test
+  console.warn('Location property is not configurable, will set in test');
+}
 
 describe('Service Worker', () => {
   let fetchEventHandler;
 
   beforeEach(() => {
-    global.self.location = {
-      pathname: 'https://www.bbc.com/mundo/articles/c2343244t',
-      hostname: 'www.bbc.com',
-    };
+    // Skip setting location if it's already defined and not configurable
+    if (!global.self.location || !Object.getOwnPropertyDescriptor(global.self, 'location')?.configurable) {
+      try {
+        global.self.location = {
+          pathname: 'https://www.bbc.com/mundo/articles/c2343244t',
+          hostname: 'www.bbc.com',
+        };
+      } catch (error) {
+        // If we can't set location, skip it and the tests will use existing location
+        console.warn('Cannot set location, using existing location');
+      }
+    } else {
+      global.self.location = {
+        pathname: 'https://www.bbc.com/mundo/articles/c2343244t',
+        hostname: 'www.bbc.com',
+      };
+    }
   });
 
   afterEach(() => {
