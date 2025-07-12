@@ -33,22 +33,6 @@ const ATIAnalytics = ({ atiData = {} }: ATIProps) => {
     }
   }
 
-  // Debug logging in test environment
-  if (isTestEnvironment) {
-    // eslint-disable-next-line no-console
-    console.log('ATI Analytics Debug:', {
-      requestContext: !!requestContext,
-      serviceContext: !!serviceContext,
-      hasRequiredServiceProps: !!(
-        serviceContext?.atiAnalyticsAppName &&
-        serviceContext?.atiAnalyticsProducerId
-      ),
-      hasRequiredRequestProps: !!(
-        requestContext?.statsDestination && requestContext?.platform
-      ),
-    });
-  }
-
   if (!requestContext || !serviceContext) {
     return null;
   }
@@ -61,15 +45,6 @@ const ATIAnalytics = ({ atiData = {} }: ATIProps) => {
     serviceContext,
     atiData,
   }) as string;
-
-  // Debug logging for URL params
-  if (isTestEnvironment) {
-    // eslint-disable-next-line no-console
-    console.log('ATI Analytics URL params:', {
-      urlPageViewParams,
-      length: urlPageViewParams?.length,
-    });
-  }
 
   const reverbParams = useReverb
     ? buildReverbParams({

@@ -14,7 +14,7 @@ const unitTests = {
     '^.+\\.[tj]sx?$': 'babel-jest',
   },
   transformIgnorePatterns: [
-    'node_modules/(?!(strip-ansi|ansi-regex|chalk|cliui|string-width|strip-ansi|wrap-ansi|ansi-styles|color-name|color-convert|escape-string-regexp|is-fullwidth-code-point)/)',
+    'node_modules/(?!(strip-ansi|ansi-regex|chalk|cliui|string-width|strip-ansi|wrap-ansi|ansi-styles|color-name|color-convert|escape-string-regexp|is-fullwidth-code-point|@emotion/react|@emotion/styled|@emotion/css|@emotion/serialize|@emotion/utils|@emotion/memoize|@emotion/hash|@emotion/unitless|@emotion/cache|@emotion/sheet|@emotion/weak-memoize|@emotion/use-insertion-effect-with-fallbacks)/)',
   ],
   displayName: 'Unit Tests',
   fakeTimers: {

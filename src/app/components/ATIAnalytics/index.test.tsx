@@ -67,6 +67,7 @@ describe('ATI Analytics Container', () => {
         isUK: true,
       });
 
+      expect(mockCanonical).toHaveBeenCalled();
       const { pageviewParams } = mockCanonical.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
