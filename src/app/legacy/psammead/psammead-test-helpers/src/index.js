@@ -31,7 +31,12 @@ export const setWindowValue = (key, value) => {
     }
   }
 
-  delete window[key];
+  // Try to delete the property first
+  try {
+    delete window[key];
+  } catch (error) {
+    // If we can't delete it, just try to redefine it
+  }
 
   let newValue = value;
 
@@ -42,11 +47,20 @@ export const setWindowValue = (key, value) => {
     };
   }
 
-  Object.defineProperty(window, key, {
-    value: newValue,
-    writable: true,
-    configurable: true,
-  });
+  try {
+    Object.defineProperty(window, key, {
+      value: newValue,
+      writable: true,
+      configurable: true,
+    });
+  } catch (error) {
+    // If we can't redefine it, just set it directly
+    try {
+      window[key] = newValue;
+    } catch (setError) {
+      // If that fails too, just skip
+    }
+  }
 };
 
 export const resetWindowValue = (key, value) => {
@@ -63,11 +77,20 @@ export const resetWindowValue = (key, value) => {
     }
   }
 
-  Object.defineProperty(window, key, {
-    value,
-    writable: true,
-    configurable: true,
-  });
+  try {
+    Object.defineProperty(window, key, {
+      value,
+      writable: true,
+      configurable: true,
+    });
+  } catch (error) {
+    // If we can't redefine it, just set it directly
+    try {
+      window[key] = value;
+    } catch (setError) {
+      // If that fails too, just skip
+    }
+  }
 };
 
 export const suppressPropWarnings = warnings => {

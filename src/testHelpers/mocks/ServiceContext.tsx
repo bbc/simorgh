@@ -20,6 +20,11 @@ const mockServiceData = {
   product: 'BBC News',
   serviceName: 'Mock Service',
   brandName: 'BBC',
+  useReverb: false,
+  service: 'news',
+  atiAnalyticsAppName: 'news',
+  atiAnalyticsProducerId: '64',
+  atiAnalyticsProducerName: 'BBC News',
 };
 
 export const ServiceContextProvider = ({
