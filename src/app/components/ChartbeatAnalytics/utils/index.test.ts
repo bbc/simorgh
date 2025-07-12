@@ -47,12 +47,13 @@ try {
   const descriptor = Object.getOwnPropertyDescriptor(window, 'window');
   if (descriptor && !descriptor.configurable) {
     // Skip the spy setup as we can't make it configurable
+    // eslint-disable-next-line no-console
     console.warn('window.window is not configurable, skipping spy setup');
   }
 }
 
 const windowDescriptor = Object.getOwnPropertyDescriptor(window, 'window');
-if (windowDescriptor && windowDescriptor.configurable) {
+if (windowDescriptor?.configurable) {
   jest.spyOn(window, 'window', 'get').mockImplementation(() => mockWindowObj);
 }
 

@@ -25,6 +25,7 @@ try {
   });
 } catch (error) {
   // If location is already defined and not configurable, we'll set it in the test
+  // eslint-disable-next-line no-console
   console.warn('Location property is not configurable, will set in test');
 }
 
@@ -33,7 +34,10 @@ describe('Service Worker', () => {
 
   beforeEach(() => {
     // Skip setting location if it's already defined and not configurable
-    if (!global.self.location || !Object.getOwnPropertyDescriptor(global.self, 'location')?.configurable) {
+    if (
+      !global.self.location ||
+      !Object.getOwnPropertyDescriptor(global.self, 'location')?.configurable
+    ) {
       try {
         global.self.location = {
           pathname: 'https://www.bbc.com/mundo/articles/c2343244t',
@@ -41,6 +45,7 @@ describe('Service Worker', () => {
         };
       } catch (error) {
         // If we can't set location, skip it and the tests will use existing location
+        // eslint-disable-next-line no-console
         console.warn('Cannot set location, using existing location');
       }
     } else {
