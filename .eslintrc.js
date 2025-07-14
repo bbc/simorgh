@@ -5,13 +5,13 @@ module.exports = {
     'airbnb',
     'plugin:prettier/recommended',
     'plugin:jsx-a11y/recommended',
-    'plugin:cypress/recommended',
   ],
   env: {
     es6: true,
     browser: true,
     jest: true,
     node: true,
+    'cypress/globals': true,
   },
   parser: '@babel/eslint-parser',
   parserOptions: {
@@ -78,6 +78,10 @@ module.exports = {
     'jsx-a11y/no-redundant-roles': 'off',
     'no-only-tests/no-only-tests': 'error',
     'no-unsafe-optional-chaining': 'error',
+    'cypress/no-assigning-return-values': 'error',
+    'cypress/no-unnecessary-waiting': 'error',
+    'cypress/no-async-tests': 'error',
+    'cypress/unsafe-to-chain-command': 'error',
   },
   settings: {
     'import/resolver': {
