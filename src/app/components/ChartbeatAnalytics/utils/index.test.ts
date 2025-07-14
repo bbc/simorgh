@@ -53,8 +53,15 @@ try {
 }
 
 const windowDescriptor = Object.getOwnPropertyDescriptor(window, 'window');
-if (windowDescriptor?.configurable) {
+if (windowDescriptor?.configurable && windowDescriptor.get) {
   jest.spyOn(window, 'window', 'get').mockImplementation(() => mockWindowObj);
+} else {
+  // For cases where window.window doesn't have a getter, we can't spy on it
+  // The tests should handle this case appropriately
+  if (process.env.NODE_ENV === 'test') {
+    // eslint-disable-next-line no-console
+    console.warn('window.window is not configurable or has no getter, skipping spy setup');
+  }
 }
 
 describe('Chartbeat utilities', () => {

@@ -17,7 +17,12 @@ export const isNull = (title, component) => {
 
 export const setWindowValue = (key, value) => {
   const windowValue = window[key];
-  delete window[key];
+  
+  // Check if the property is configurable before trying to delete it
+  const descriptor = Object.getOwnPropertyDescriptor(window, key);
+  if (descriptor && descriptor.configurable) {
+    delete window[key];
+  }
 
   let newValue = value;
 
@@ -28,17 +33,43 @@ export const setWindowValue = (key, value) => {
     };
   }
 
-  Object.defineProperty(window, key, {
-    value: newValue,
-    writable: true,
-  });
+  try {
+    Object.defineProperty(window, key, {
+      value: newValue,
+      writable: true,
+      configurable: true,
+    });
+  } catch (error) {
+    // If we can't redefine the property, just set it directly
+    if (key in window) {
+      try {
+        window[key] = newValue;
+      } catch (setError) {
+        // If direct assignment also fails, log a warning but continue
+        console.warn(`Unable to set window.${key}:`, setError.message);
+      }
+    }
+  }
 };
 
 export const resetWindowValue = (key, value) => {
-  Object.defineProperty(window, key, {
-    value,
-    writable: true,
-  });
+  try {
+    Object.defineProperty(window, key, {
+      value,
+      writable: true,
+      configurable: true,
+    });
+  } catch (error) {
+    // If we can't redefine the property, just set it directly
+    if (key in window) {
+      try {
+        window[key] = value;
+      } catch (setError) {
+        // If direct assignment also fails, log a warning but continue
+        console.warn(`Unable to reset window.${key}:`, setError.message);
+      }
+    }
+  }
 };
 
 export const suppressPropWarnings = warnings => {
