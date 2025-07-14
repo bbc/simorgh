@@ -5,13 +5,13 @@ import { sendEventBeacon } from '../../components/ATIAnalytics/beacon';
 import useTrackingToggle from '../useTrackingToggle';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
-export interface CustomEventData {
+interface CustomEventData {
   eventName: string;
 }
 
 /**
  * A specialized React hook for tracking custom (non-click, non-view) events.
- * Reverb is used to send the beacon, and the event will appear in Piano under the "Event - Group" field.
+ * Reverb is used to send the beacon. The event will appear in Piano under the "Event - Group" field.
  * If a payload (`stringifiedData`) is provided to the `trackEvent` function, it will appear in Piano under the "Item name" field.
  *
  * @param {CustomEventData} eventName - A string representing the name of the custom event.
