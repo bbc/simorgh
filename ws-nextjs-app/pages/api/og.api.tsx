@@ -272,12 +272,12 @@ export default async function handler(req: NextApiRequest) {
 
     const { unbrandedImage, brandedImage } = getImages({ promoImage, service });
 
-    const isInTopStories = Boolean(
-      articleResponseJson?.data?.secondaryData?.topStories.some(
-        (topStory: { locators: { canonicalUrl: string | string[] } }) =>
-          topStory?.locators?.canonicalUrl.includes(id),
-      ),
-    );
+    // const isInTopStories = Boolean(
+    //   articleResponseJson?.data?.secondaryData?.topStories.some(
+    //     (topStory: { locators: { canonicalUrl: string | string[] } }) =>
+    //       topStory?.locators?.canonicalUrl.includes(id),
+    //   ),
+    // );
 
     const isInMostRead = Boolean(
       articleResponseJson?.data?.secondaryData?.mostRead?.items.some(
