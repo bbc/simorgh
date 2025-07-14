@@ -1,5 +1,3 @@
-/* eslint-disable no-console */
-
 import React, { createContext, ReactNode } from 'react';
 import {
   renderHook,
