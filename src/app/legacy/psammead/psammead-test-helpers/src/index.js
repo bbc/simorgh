@@ -17,26 +17,7 @@ export const isNull = (title, component) => {
 
 export const setWindowValue = (key, value) => {
   const windowValue = window[key];
-
-  // Check if the property is configurable before attempting to redefine it
-  const descriptor = Object.getOwnPropertyDescriptor(window, key);
-  if (descriptor && !descriptor.configurable) {
-    // If the property is not configurable, try to set it directly
-    try {
-      window[key] = value;
-      return;
-    } catch (error) {
-      // If we can't set it, just skip - the test will use the existing value
-      return;
-    }
-  }
-
-  // Try to delete the property first
-  try {
-    delete window[key];
-  } catch (error) {
-    // If we can't delete it, just try to redefine it
-  }
+  delete window[key];
 
   let newValue = value;
 
@@ -47,50 +28,17 @@ export const setWindowValue = (key, value) => {
     };
   }
 
-  try {
-    Object.defineProperty(window, key, {
-      value: newValue,
-      writable: true,
-      configurable: true,
-    });
-  } catch (error) {
-    // If we can't redefine it, just set it directly
-    try {
-      window[key] = newValue;
-    } catch (setError) {
-      // If that fails too, just skip
-    }
-  }
+  Object.defineProperty(window, key, {
+    value: newValue,
+    writable: true,
+  });
 };
 
 export const resetWindowValue = (key, value) => {
-  // Check if the property is configurable before attempting to redefine it
-  const descriptor = Object.getOwnPropertyDescriptor(window, key);
-  if (descriptor && !descriptor.configurable) {
-    // If the property is not configurable, try to set it directly
-    try {
-      window[key] = value;
-      return;
-    } catch (error) {
-      // If we can't set it, just skip - the test will use the existing value
-      return;
-    }
-  }
-
-  try {
-    Object.defineProperty(window, key, {
-      value,
-      writable: true,
-      configurable: true,
-    });
-  } catch (error) {
-    // If we can't redefine it, just set it directly
-    try {
-      window[key] = value;
-    } catch (setError) {
-      // If that fails too, just skip
-    }
-  }
+  Object.defineProperty(window, key, {
+    value,
+    writable: true,
+  });
 };
 
 export const suppressPropWarnings = warnings => {

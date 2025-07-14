@@ -3905,27 +3905,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jest/environment-jsdom-abstract@npm:30.0.0":
-  version: 30.0.0
-  resolution: "@jest/environment-jsdom-abstract@npm:30.0.0"
-  dependencies:
-    "@jest/environment": "npm:30.0.0"
-    "@jest/fake-timers": "npm:30.0.0"
-    "@jest/types": "npm:30.0.0"
-    "@types/jsdom": "npm:^21.1.7"
-    "@types/node": "npm:*"
-    jest-mock: "npm:30.0.0"
-    jest-util: "npm:30.0.0"
-  peerDependencies:
-    canvas: ^3.0.0
-    jsdom: "*"
-  peerDependenciesMeta:
-    canvas:
-      optional: true
-  checksum: 10/a1ae23d8995bca0717eef8c69bedcfa70d1914bc980585546b0ab2a5f691b20aec979a903d701c38c5450a7cda36ef795749d82425674961637bc94307df9634
-  languageName: node
-  linkType: hard
-
 "@jest/environment@npm:30.0.0":
   version: 30.0.0
   resolution: "@jest/environment@npm:30.0.0"
@@ -5476,7 +5455,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jsdom@npm:21.1.7, @types/jsdom@npm:^21.1.7":
+"@types/jsdom@npm:21.1.7":
   version: 21.1.7
   resolution: "@types/jsdom@npm:21.1.7"
   dependencies:
@@ -12801,25 +12780,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-environment-jsdom@npm:30.0.0":
-  version: 30.0.0
-  resolution: "jest-environment-jsdom@npm:30.0.0"
-  dependencies:
-    "@jest/environment": "npm:30.0.0"
-    "@jest/environment-jsdom-abstract": "npm:30.0.0"
-    "@types/jsdom": "npm:^21.1.7"
-    "@types/node": "npm:*"
-    jsdom: "npm:^26.1.0"
-  peerDependencies:
-    canvas: ^3.0.0
-  peerDependenciesMeta:
-    canvas:
-      optional: true
-  checksum: 10/5cb1d4be4f3d998a22e052fa7627caae186024af969f63ac1ff0b7b4ee7efe3005eabfdce4caf42ad08f6842c31c8b9f93c1826eae515db7b4f4ccd0576baac3
-  languageName: node
-  linkType: hard
-
-"jest-environment-jsdom@npm:^29.7.0":
+"jest-environment-jsdom@npm:29.7.0, jest-environment-jsdom@npm:^29.7.0":
   version: 29.7.0
   resolution: "jest-environment-jsdom@npm:29.7.0"
   dependencies:
@@ -13592,7 +13553,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jsdom@npm:26.1.0, jsdom@npm:^26.1.0":
+"jsdom@npm:26.1.0":
   version: 26.1.0
   resolution: "jsdom@npm:26.1.0"
   dependencies:
@@ -17264,7 +17225,7 @@ __metadata:
     intersection-observer: "npm:0.12.2"
     jalaali-js: "npm:1.2.8"
     jest: "npm:30.0.0"
-    jest-environment-jsdom: "npm:30.0.0"
+    jest-environment-jsdom: "npm:29.7.0"
     jest-fetch-mock: "npm:3.0.3"
     jest-junit: "npm:16.0.0"
     jest-serializer-html: "npm:7.1.0"
