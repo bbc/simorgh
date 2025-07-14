@@ -1,5 +1,13 @@
 import colours from 'colors';
 import '@testing-library/jest-dom';
+import { Helmet } from 'react-helmet';
+
+// Clear any existing helmet state before each test
+beforeEach(() => {
+  if (Helmet.canUseDOM) {
+    Helmet.rewind();
+  }
+});
 
 // Errors
 const FAILED_PROP = 'Failed prop';
