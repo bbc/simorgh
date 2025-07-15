@@ -27,7 +27,7 @@ import {
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
 } from '#app/lib/logger.const';
 import { Services, Variants } from '#models/types/global';
-import extractHeaders from 'simorgh/src/server/utilities/extractHeaders/extractHeaders';
+import extractHeaders from '../../../src/server/utilities/extractHeaders';
 import styles from './wrappedStyles';
 
 interface PageDataParams extends ParsedUrlQuery {
