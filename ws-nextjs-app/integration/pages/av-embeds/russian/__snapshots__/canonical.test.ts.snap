@@ -62,7 +62,7 @@ exports[`Canonical Av-embeds Media Loader renders a figure caption 1`] = `
     </time>
   </button>
   <div
-    class="css-lgx6cw"
+    class="css-1jf2q50"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
@@ -137,7 +137,7 @@ exports[`Canonical Av-embeds Media Loader renders a placeholder 1`] = `
     </time>
   </button>
   <div
-    class="css-lgx6cw"
+    class="css-1jf2q50"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
@@ -216,7 +216,7 @@ exports[`Canonical Av-embeds Media Loader renders a valid container 1`] = `
       </time>
     </button>
     <div
-      class="css-lgx6cw"
+      class="css-1jf2q50"
       style="padding-bottom:0;overflow:hidden"
     >
       <img
