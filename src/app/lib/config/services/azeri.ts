@@ -49,7 +49,8 @@ export const service: DefaultServiceConfig = {
     podcastPromo: {
       title: 'WhatsApp reklamı',
       brandTitle: 'WhatsApp kanalımızı izləyin',
-      brandDescription: 'BBC News Azərbaycancanın xəbərlərini indi telefonunuzda ala bilərsiniz.',
+      brandDescription:
+        'BBC News Azərbaycancanın xəbərlərini indi telefonunuzda ala bilərsiniz.',
       image: {
         src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0lq79gb.png',
         alt: 'BBC News Azarbaycancanin Whatsapp kanalina qosulun',

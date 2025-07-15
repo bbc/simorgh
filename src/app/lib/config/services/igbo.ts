@@ -49,8 +49,7 @@ export const service: DefaultServiceConfig = {
     podcastPromo: {
       title: 'Ọkwa azụmahịa WhatsApp',
       brandTitle: 'Anyị nọ na WhatsApp',
-      brandDescription:
-        `Ugbua, i nwereike inweta akụkọ BBC Igbo niile n'ekwenti gị.`,
+      brandDescription: `Ugbua, i nwereike inweta akụkọ BBC Igbo niile n'ekwenti gị.`,
       image: {
         src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0lq7863.png',
         alt: `WhatsApp BBC News Igbo nọ n'obaozi`,
