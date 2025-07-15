@@ -55,7 +55,7 @@ describe('[service]/articles/[id].page getServerSideProps', () => {
     expect(result).toEqual({
       props: {
         error: null,
-        id: 'articles/c1ep2gnx45qo',
+        id: 'c1ep2gnx45qo',
         isApp: false,
         isLite: false,
         isAmp: false,

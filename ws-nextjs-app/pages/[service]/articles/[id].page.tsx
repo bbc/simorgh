@@ -49,8 +49,9 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   const variant = deriveVariant(variantFromUrl);
 
-  // Articles path format: /[service]/articles/[id]
-  const articlePath = `articles/${id}`;
+  // Articles path format: /[service]/articles/[id] 
+  // For API calls, we just need the ID itself
+  const articlePath = id;
 
   const { data, toggles } = await getPageData({
     id: articlePath,

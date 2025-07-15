@@ -36,11 +36,15 @@ export const getServerSideProps: GetServerSideProps = async context => {
   );
 
   const {
-    id,
+    mediaId,
     service,
     variant: variantFromUrl,
     renderer_env: rendererEnv,
-  } = context.query as PageDataParams;
+  } = context.query as PageDataParams & { mediaId: string };
+  
+  // For media asset pages, the mediaId should be the full media ID (e.g., "media-23269006")
+  // but we need to check if it starts with "media-" to avoid double-prefixing
+  const finalMediaId = mediaId.startsWith('media-') ? mediaId : `media-${mediaId}`;
 
   const { headers: reqHeaders } = context.req;
 
@@ -49,11 +53,8 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   const variant = deriveVariant(variantFromUrl);
 
-  // Convert media-[id] to media-[id] format for data fetching
-  const mediaId = `media-${id}`;
-
   const { data, toggles } = await getPageData({
-    id: mediaId,
+    id: finalMediaId,
     service,
     variant,
     rendererEnv,
@@ -86,7 +87,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
   return {
     props: {
       error: data?.error || null,
-      id: mediaId,
+      id: finalMediaId,
       isApp,
       isLite,
       isAmp: false,

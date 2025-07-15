@@ -1,5 +1,5 @@
 import { GetServerSidePropsContext } from 'next';
-import { getServerSideProps } from './media-[id].page';
+import { getServerSideProps } from './[mediaId].page';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 
 // Mock the dependencies
@@ -33,7 +33,7 @@ jest.mock('../../utilities/pageRequests/getPageData', () =>
   })
 );
 
-describe('[service]/media-[id].page getServerSideProps', () => {
+describe('[service]/[mediaId].page getServerSideProps', () => {
   const mockContext = {
     resolvedUrl: '/bengali/media-23269006',
     req: {
@@ -44,7 +44,7 @@ describe('[service]/media-[id].page getServerSideProps', () => {
       statusCode: 200,
     },
     query: {
-      id: '23269006',
+      mediaId: 'media-23269006',
       service: 'bengali',
     },
   } as unknown as GetServerSidePropsContext;
