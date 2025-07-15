@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
-import {
+import React, {
   FC,
   PropsWithChildren,
   HTMLAttributes,
@@ -8,7 +6,6 @@ import {
   forwardRef,
 } from 'react';
 import { SHADOW } from '../ThemeProvider/palette';
-import styles from './index.styles';
 
 interface ListItemProps {
   className?: string;
@@ -28,8 +25,7 @@ export const BulletedListItem = ({
   return (
     <li
       role="listitem"
-      className={className}
-      css={styles.bulletListItem}
+      className={`mb-4 relative text-grey-2 dark:text-grey-2 ${className || ''}`}
       key={key}
     >
       {children}
@@ -48,22 +44,23 @@ export const BulletedList: FC<ListProps> = forwardRef(
     ref: ForwardedRef<HTMLUListElement>,
   ) => {
     const showBulletPoints = bulletPointShape !== 'hidden';
+    const roundBullets = bulletPointShape === 'round';
+    
+    // Create bullet styles using CSS custom properties
+    const bulletStyles = showBulletPoints ? {
+      '--bullet-color': bulletPointColour,
+      '--bullet-dark-color': '#6C757D', // GREY_4
+    } : {};
+    
+    const bulletClasses = showBulletPoints
+      ? `[&>li]:before:content-[''] [&>li]:before:absolute [&>li]:before:w-3 [&>li]:before:h-3 [&>li]:before:border-[3px] [&>li]:before:top-2 [&>li]:before:-left-4 [&>li]:before:bg-[var(--bullet-color)] [&>li]:before:border-[var(--bullet-color)] [&>li]:dark:before:bg-[var(--bullet-dark-color)] [&>li]:dark:before:border-[var(--bullet-dark-color)] ${roundBullets ? '[&>li]:before:rounded-full' : ''}`
+      : '';
+    
     return (
       <ul
-        className={className}
+        className={`mt-0 list-none text-gel-body-copy font-sans-regular ${bulletClasses} ${className || ''}`}
         role="list"
-        css={theme => [
-          styles.bulletedList,
-          showBulletPoints && {
-            '& > li::before': {
-              border: `0.1875rem solid ${theme.isDarkUi ? theme.palette.GREY_4 : bulletPointColour}`,
-              backgroundColor: theme.isDarkUi
-                ? theme.palette.GREY_4
-                : bulletPointColour,
-              borderRadius: bulletPointShape === 'round' ? '50%' : '0',
-            },
-          },
-        ]}
+        style={bulletStyles}
         {...(ref && { ref })}
       >
         {children}
