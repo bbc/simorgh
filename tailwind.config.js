@@ -70,9 +70,13 @@ module.exports = {
         // BBC GEL Grid breakpoints
         'group-0-max': { 'max': '14.9375rem' }, // max-width: 239px
         'group-1': { 'min': '15rem', 'max': '24.9375rem' }, // 240px - 399px
+        'group-1-max': { 'max': '24.9375rem' }, // max-width: 399px
         'group-2': { 'min': '25rem', 'max': '37.4375rem' }, // 400px - 599px
+        'group-2-max': { 'max': '37.4375rem' }, // max-width: 599px
         'group-3': { 'min': '37.5rem', 'max': '62.9375rem' }, // 600px - 1007px
+        'group-3-max': { 'max': '62.9375rem' }, // max-width: 1007px
         'group-4': { 'min': '63rem', 'max': '79.9375rem' }, // 1008px - 1279px
+        'group-4-max': { 'max': '79.9375rem' }, // max-width: 1279px
         'group-5': { 'min': '80rem' }, // 1280px+
       },
       spacing: {
@@ -84,6 +88,13 @@ module.exports = {
         'quadruple': '2rem', // 32px
         'quintuple': '2.5rem', // 40px
         'sextuple': '3rem', // 48px
+      },
+      maxWidth: {
+        'screen-group-4': '63rem', // 1008px
+        'screen-group-5': '80rem', // 1280px
+      },
+      minHeight: {
+        '165': '165px',
       },
       fontSize: {
         // BBC GEL Typography scale - these will be replaced with responsive utilities
@@ -118,6 +129,9 @@ module.exports = {
       boxShadow: {
         'focus': '0 0 0 3px #FFFFFF',
         'focus-invert': '0 0 0 3px #000000',
+      },
+      aspectRatio: {
+        'video': '16 / 9',
       },
     },
   },

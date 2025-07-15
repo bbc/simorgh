@@ -48,8 +48,8 @@ const TopicPage = ({ pageData }) => {
   return (
     <>
       <AdContainer slotType="leaderboard" />
-      <main css={styles.main} role="main">
-        <div css={styles.inner}>
+      <main className={styles.main} role="main">
+        <div className={styles.inner}>
           <ATIAnalytics atiData={atiAnalytics} />
           <ChartbeatAnalytics title={title} />
           <MetadataContainer
@@ -66,8 +66,8 @@ const TopicPage = ({ pageData }) => {
             headline={title}
             entities={[itemList]}
           />
-          <div css={styles.title}>
-            <div css={styles.inline}>
+          <div className={styles.title}>
+            <div className={styles.inline}>
               {imageData && <TopicImage image={imageData.url} />}
               <TopicTitle>{title}</TopicTitle>
             </div>

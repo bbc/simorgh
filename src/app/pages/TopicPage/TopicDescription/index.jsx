@@ -1,39 +1,13 @@
 import React, { use } from 'react';
-import styled from '@emotion/styled';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
-import {
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
-} from '#psammead/gel-foundations/src/spacings';
-import { getGreatPrimer } from '#psammead/gel-foundations/src/typography';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-
-const Paragraph = styled.p`
-  ${({ service }) => getSansRegular(service)}
-  ${({ script }) => getGreatPrimer(script)}
-  color: ${props => props.theme.palette.GREY_10};
-  padding-top: ${GEL_SPACING_DBL};
-  margin: 0;
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    padding-top: ${GEL_SPACING_TRPL};
-  }
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    width: calc(50% - ${GEL_SPACING});
-  }
-`;
 
 const TopicDescription = ({ children }) => {
   const { service, script } = use(ServiceContext);
 
   return (
-    <Paragraph service={service} script={script}>
+    <p className="text-great-primer font-sans font-normal text-grey-10 pt-double m-0 group-3:pt-triple group-4:w-1/2 group-4:pr-full">
       {children}
-    </Paragraph>
+    </p>
   );
 };
 

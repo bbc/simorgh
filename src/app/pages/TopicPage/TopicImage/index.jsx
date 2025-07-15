@@ -1,51 +1,19 @@
 import React from 'react';
-import styled from '@emotion/styled';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_SPACING_SEXT,
-} from '#psammead/gel-foundations/src/spacings';
-import {
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
-
-const Image = styled.img`
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-`;
-
-const BadgeWrapper = styled.div`
-  padding-bottom: ${GEL_SPACING};
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    padding-bottom: 0;
-  }
-`;
-
-const ImageWrapper = styled.div`
-  width: ${GEL_SPACING_SEXT};
-  height: ${GEL_SPACING_SEXT};
-  display: flex;
-  justify-content: center;
-  margin-inline-end: ${GEL_SPACING_DBL};
-
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    width: 4rem;
-    height: 4rem;
-  }
-`;
 
 const TopicImage = ({ image }) => {
   const imageUrl = image.replace('/480/', '/128/');
 
   return (
-    <BadgeWrapper>
-      <ImageWrapper>
-        <Image src={imageUrl} alt="" data-testid="topic-badge" />
-      </ImageWrapper>
-    </BadgeWrapper>
+    <div className="pb-full group-4:pb-0">
+      <div className="w-sextuple h-sextuple group-2:w-16 group-2:h-16 flex justify-center mr-double">
+        <img 
+          src={imageUrl} 
+          alt="" 
+          className="max-w-full max-h-full object-cover rounded-full" 
+          data-testid="topic-badge" 
+        />
+      </div>
+    </div>
   );
 };
 
