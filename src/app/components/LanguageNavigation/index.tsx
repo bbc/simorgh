@@ -86,9 +86,9 @@ const LanguageNavigation = ({ languageSections }: LanguageNavigationProps) => {
                 </button>
               </div>
 
-              <div className={css(styles.dropDownItemsGrid(theme))}>
+              <ul className={css(styles.dropDownItemsGrid(theme))}>
                 {activeSection.links?.map(link => (
-                  <div
+                  <li
                     key={link.id}
                     className={css(
                       styles.dropDownItem({
@@ -103,9 +103,9 @@ const LanguageNavigation = ({ languageSections }: LanguageNavigationProps) => {
                     >
                       {link.label}
                     </a>
-                  </div>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           )}
         </>
