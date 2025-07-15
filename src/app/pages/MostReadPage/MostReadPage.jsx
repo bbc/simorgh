@@ -1,16 +1,4 @@
 import React, { use } from 'react';
-import styled from '@emotion/styled';
-import {
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MAX,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MAX,
-  GEL_GROUP_5_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
-import {
-  GEL_SPACING_TRPL,
-  GEL_SPACING_QUAD,
-} from '#psammead/gel-foundations/src/spacings';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
 import IndexHeading from '#containers/IndexHeading';
@@ -22,24 +10,10 @@ import MetadataContainer from '../../components/Metadata';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import LinkedData from '../../components/LinkedData';
 
-const MarginWrapper = styled.div`
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    margin-top: ${GEL_SPACING_TRPL};
-  }
-
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
-    margin-top: ${GEL_SPACING_QUAD};
-  }
-
-  @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
-    margin-top: ${GEL_SPACING_QUAD};
-  }
-`;
-
 const MostReadWrapper = ({ children, header }) => (
   <>
     <IndexHeading id="content">{header}</IndexHeading>
-    <MarginWrapper>
+    <div className="group-3:mt-6 group-4:mt-8 group-5:mt-8">
       <GelPageGrid
         columns={{
           group0: 6,
@@ -73,7 +47,7 @@ const MostReadWrapper = ({ children, header }) => (
           {children}
         </Grid>
       </GelPageGrid>
-    </MarginWrapper>
+    </div>
   </>
 );
 

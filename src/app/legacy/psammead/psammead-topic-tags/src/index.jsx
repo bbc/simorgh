@@ -1,64 +1,10 @@
 import React, { forwardRef } from 'react';
-import styled from '@emotion/styled';
 import { LUNAR } from '#app/components/ThemeProvider/palette';
-import {
-  GEL_SPACING_HLF,
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-} from '#psammead/gel-foundations/src/spacings';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { getBrevier } from '#psammead/gel-foundations/src/typography';
 
 const MIN_TAG_HEIGHT = '2.75rem'; // 44px
 
-const CONTAINER_STYLES = `
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: -${GEL_SPACING};
-  margin-bottom: 0;
-  margin-left: -${GEL_SPACING_HLF};
-  margin-right: -${GEL_SPACING_HLF};
-  padding: 0;
-`;
-
-const SingleTopicTagContainer = styled.div`
-  ${CONTAINER_STYLES}
-`;
-
-const TopicsList = styled.ul`
-  ${CONTAINER_STYLES}
-  list-style-type: none;
-`;
-
-const SingleTopicTagItem = styled.div`
-  ${({ service }) => getSansRegular(service)}
-  ${({ script }) => script && getBrevier(script)}
-
-  word-break: break-word;
-  margin-top: ${GEL_SPACING};
-  margin-left: ${GEL_SPACING_HLF};
-  margin-right: ${GEL_SPACING_HLF};
-  a {
-    display: inline-flex;
-    min-height: ${MIN_TAG_HEIGHT};
-    padding: ${GEL_SPACING} ${GEL_SPACING_DBL};
-    align-items: center;
-    background-color: ${({ backgroundColour, theme }) =>
-      theme.isDarkUi ? theme.palette.GREY_7 : backgroundColour};
-    text-decoration: none;
-    color: ${({ theme }) =>
-      theme.isDarkUi ? theme.palette.GREY_2 : theme.palette.EBON};
-
-    &:hover,
-    &:focus {
-      text-decoration: underline;
-    }
-    &:visited {
-      color: ${({ theme }) =>
-        theme.isDarkUi ? theme.palette.GREY_2 : theme.palette.METAL};
-    }
-  }
-`;
+const containerClasses = 'flex flex-wrap -mt-4 mb-0 -mx-2 p-0';
 
 export const TopicTag = forwardRef(
   ({ name, link, ...staticComponentTrackers }, ref) => (
@@ -75,34 +21,32 @@ export const TopicTags = ({
   tagBackgroundColour = LUNAR,
 }) => {
   const hasMultipleChildren = children.length > 1;
+  
+  const itemClasses = `font-sans-regular text-gel-brevier break-words mt-4 mx-2
+    inline-flex min-h-[${MIN_TAG_HEIGHT}] px-4 py-2 items-center
+    bg-grey-7 dark:bg-grey-7 text-ebon dark:text-grey-2 no-underline
+    hover:underline focus:underline visited:text-metal dark:visited:text-grey-2`;
 
   return hasMultipleChildren ? (
-    <TopicsList role="list" service={service} script={script}>
+    <ul role="list" className={containerClasses}>
       {children.map((child, index) => {
         if (child.type !== TopicTag) return null;
         return (
-          <SingleTopicTagItem
-            as="li"
-            backgroundColour={tagBackgroundColour}
+          <li
             // eslint-disable-next-line react/no-array-index-key
             key={index}
-            service={service}
-            script={script}
+            className={itemClasses}
           >
             {child}
-          </SingleTopicTagItem>
+          </li>
         );
       })}
-    </TopicsList>
+    </ul>
   ) : (
-    <SingleTopicTagContainer service={service} script={script}>
-      <SingleTopicTagItem
-        service={service}
-        script={script}
-        backgroundColour={tagBackgroundColour}
-      >
+    <div className={containerClasses}>
+      <div className={itemClasses}>
         {children.type === TopicTag && children}
-      </SingleTopicTagItem>
-    </SingleTopicTagContainer>
+      </div>
+    </div>
   );
 };

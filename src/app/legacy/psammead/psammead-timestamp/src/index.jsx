@@ -1,28 +1,5 @@
 import React from 'react';
-import styled from '@emotion/styled';
-import {
-  GEL_SPACING_HLF,
-  GEL_SPACING_DBL,
-} from '#psammead/gel-foundations/src/spacings';
 import { getBrevier } from '#psammead/gel-foundations/src/typography';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
-
-const PADDING = `
-  padding-bottom: ${GEL_SPACING_HLF};
-  &:last-child {
-    padding-bottom: ${GEL_SPACING_DBL};
-  }
-`;
-
-const StyledTimestamp = styled.time`
-  ${({ script, typographyFunc }) =>
-    script && typographyFunc && typographyFunc(script)}
-  color: ${({ theme }) =>
-    theme.isDarkUi ? theme.palette.GREY_3 : theme.palette.GREY_6};
-  display: block;
-  ${({ service }) => getSansRegular(service)}
-  ${props => props.padding && PADDING}
-`;
 
 const Timestamp = ({
   children,
@@ -32,18 +9,19 @@ const Timestamp = ({
   padding = true,
   service,
   className = '',
-}) => (
-  <StyledTimestamp
-    dateTime={datetime}
-    typographyFunc={typographyFunc}
-    script={script}
-    padding={padding}
-    service={service}
-    suppressHydrationWarning
-    {...(className ? { className } : undefined)}
-  >
-    {children}
-  </StyledTimestamp>
-);
+}) => {
+  const baseClasses = 'text-gel-brevier text-grey-6 dark:text-grey-3 block font-sans-regular';
+  const paddingClasses = padding ? 'pb-2 last:pb-4' : '';
+  
+  return (
+    <time
+      dateTime={datetime}
+      suppressHydrationWarning
+      className={`${baseClasses} ${paddingClasses} ${className}`.trim()}
+    >
+      {children}
+    </time>
+  );
+};
 
 export default Timestamp;

@@ -1,7 +1,6 @@
 import React, { use } from 'react';
 import { Helmet } from 'react-helmet';
 import ErrorMain from '#components/ErrorMain';
-import { useTheme } from '@emotion/react';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 /*
@@ -38,9 +37,8 @@ const ErrorPage = ({ errorCode }) => {
     use(ServiceContext);
   const messaging = translations.error[errorCode] || translations.error[500];
 
-  const {
-    palette: { BRAND_BACKGROUND },
-  } = useTheme();
+  // Use a default theme color since we removed emotion theme
+  const themeColor = '#B80000'; // BBC brand red as fallback
 
   return (
     <>
@@ -49,7 +47,7 @@ const ErrorPage = ({ errorCode }) => {
         dir={dir}
         lang={lang}
         messaging={messaging}
-        themeColor={BRAND_BACKGROUND}
+        themeColor={themeColor}
       />
       <ErrorMain {...messaging} dir={dir} script={script} service={service} />
     </>
