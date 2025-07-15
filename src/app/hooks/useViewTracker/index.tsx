@@ -11,6 +11,7 @@ import {
 import constructStaticATIUrl from '#app/lib/analyticsUtils/staticATITracking/constructATIUrl';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import constructReverbUrl from '#app/lib/analyticsUtils/staticATITracking/constructReverbUrl';
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon';
 import useTrackingToggle from '../useTrackingToggle';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -197,8 +198,13 @@ export default (eventTrackingData?: EventTrackingData): any => {
     eventType: VIEW_EVENT,
   });
 
+  const reverbStaticUrl = constructReverbUrl({
+    eventTrackingData,
+    eventType: VIEW_EVENT,
+  });
+
   return isLite
-    ? { [STATIC_ATI_VIEW_TRACKING]: staticATIUrl }
+    ? { [STATIC_ATI_VIEW_TRACKING]: reverbStaticUrl }
     : {
         ref: viewTracker,
       };

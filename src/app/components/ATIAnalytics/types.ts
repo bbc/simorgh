@@ -168,6 +168,7 @@ export interface ATIEventTrackingProps {
   itemTracker?: ItemTracker;
   groupTracker?: GroupTracker;
   viewThreshold?: number;
+  staticUrl?: string;
 }
 
 export interface ItemTracker {

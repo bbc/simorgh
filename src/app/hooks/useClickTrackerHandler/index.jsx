@@ -9,6 +9,7 @@ import {
 } from '#app/lib/analyticsUtils/analytics.const';
 import { RequestContext } from '#app/contexts/RequestContext';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
+import constructReverbUrl from '#app/lib/analyticsUtils/staticATITracking/constructReverbUrl';
 import useTrackingToggle from '../useTrackingToggle';
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon/index';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -64,7 +65,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
         ].every(Boolean);
         if (shouldSendEvent) {
           const nextPageUrl = event?.currentTarget?.href;
-
+          console.log('HERE', url, nextPageUrl);
           event.stopPropagation();
           event.preventDefault();
 
@@ -155,12 +156,16 @@ export default (eventTrackingData = {}) => {
     eventType: CLICK_EVENT,
     isStatic: !isHydrated,
   });
+  const reverbStaticUrl = `${constructReverbUrl({
+    eventTrackingData,
+    eventType: CLICK_EVENT,
+  })}&hello=true`;
 
   const enableStaticTracking = !isHydrated && !isAmp;
 
   return {
     ...(enableStaticTracking && {
-      [STATIC_ATI_CLICK_TRACKING]: staticAtiUrl,
+      [STATIC_ATI_CLICK_TRACKING]: reverbStaticUrl,
     }),
 
     ...(isHydrated && { onClick: clickTracker }),
