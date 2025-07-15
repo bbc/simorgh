@@ -62,41 +62,41 @@ exports[`Canonical Live Media Loader a11y assistive technology can read the medi
 
 exports[`Canonical Live Media Loader renders a figure caption 1`] = `
 <div
-  class="css-nd396e-placeholder"
+  class="css-145siv3"
   data-e2e="media-loader__placeholder"
 >
   <div
-    class="css-18pv7dl-guidanceWrapper-guidanceWrapperWithMessage-Guidance-guidance"
+    class="css-czokpf"
     data-e2e="media-player__guidance"
   >
     <strong
       aria-hidden="true"
-      class="guidance-message css-1e8929r-guidanceMessage"
+      class="guidance-message css-e3010g"
     >
       Contains strong language and some upsetting scenes.
     </strong>
     <noscript
-      class="css-s7j4nn-guidanceMessage-noscript-Guidance"
+      class="css-lllaou"
     >
       &lt;strong&gt;Dem no support media player for your device&lt;/strong&gt;
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove css-1na62l0-button-playButton"
+    class="focusIndicatorRemove css-4vlf9b"
     type="button"
   >
     <span
-      class="css-1jmdtoy-visuallyHiddenText"
+      class="css-m04vo2"
     >
       Contains strong language and some upsetting scenes. Play video, "Lionel Messi Skills", Duration 0,34
     </span>
     <div
       aria-hidden="true"
-      class="css-jot8zx-iconWrapper-iconWrapperWithDate-PlayButton"
+      class="css-d0ra4q"
     >
       <svg
         aria-hidden="true"
-        class="css-1srvvib-MediaIcon-VideoMediaIcon e1s2dgdk5"
+        class="css-vja2s5 e1s2dgdk5"
         focusable="false"
         height="12"
         viewBox="0 0 12 12"
@@ -119,19 +119,19 @@ exports[`Canonical Live Media Loader renders a figure caption 1`] = `
     </div>
     <time
       aria-hidden="true"
-      class="css-1r684s1-timeDuration"
+      class="css-digyti"
       datetime="PT34S"
     >
       00:34
     </time>
   </button>
   <div
-    class="css-s21kta-wrapper-wrapperResponsiveRatio-placeholder"
+    class="css-lgx6cw"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
       alt=""
-      class="css-1uir1rm-image-imageResponsiveRatio-Image"
+      class="css-1uq6tv3"
       loading="eager"
       src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01vzbd6.jpg.webp"
       srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01vzbd6.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01vzbd6.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01vzbd6.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01vzbd6.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01vzbd6.jpg.webp 800w"
@@ -143,41 +143,41 @@ exports[`Canonical Live Media Loader renders a figure caption 1`] = `
 
 exports[`Canonical Live Media Loader renders a placeholder 1`] = `
 <div
-  class="css-nd396e-placeholder"
+  class="css-145siv3"
   data-e2e="media-loader__placeholder"
 >
   <div
-    class="css-18pv7dl-guidanceWrapper-guidanceWrapperWithMessage-Guidance-guidance"
+    class="css-czokpf"
     data-e2e="media-player__guidance"
   >
     <strong
       aria-hidden="true"
-      class="guidance-message css-1e8929r-guidanceMessage"
+      class="guidance-message css-e3010g"
     >
       Contains strong language and some upsetting scenes.
     </strong>
     <noscript
-      class="css-s7j4nn-guidanceMessage-noscript-Guidance"
+      class="css-lllaou"
     >
       &lt;strong&gt;Dem no support media player for your device&lt;/strong&gt;
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove css-1na62l0-button-playButton"
+    class="focusIndicatorRemove css-4vlf9b"
     type="button"
   >
     <span
-      class="css-1jmdtoy-visuallyHiddenText"
+      class="css-m04vo2"
     >
       Contains strong language and some upsetting scenes. Play video, "Lionel Messi Skills", Duration 0,34
     </span>
     <div
       aria-hidden="true"
-      class="css-jot8zx-iconWrapper-iconWrapperWithDate-PlayButton"
+      class="css-d0ra4q"
     >
       <svg
         aria-hidden="true"
-        class="css-1srvvib-MediaIcon-VideoMediaIcon e1s2dgdk5"
+        class="css-vja2s5 e1s2dgdk5"
         focusable="false"
         height="12"
         viewBox="0 0 12 12"
@@ -200,19 +200,19 @@ exports[`Canonical Live Media Loader renders a placeholder 1`] = `
     </div>
     <time
       aria-hidden="true"
-      class="css-1r684s1-timeDuration"
+      class="css-digyti"
       datetime="PT34S"
     >
       00:34
     </time>
   </button>
   <div
-    class="css-s21kta-wrapper-wrapperResponsiveRatio-placeholder"
+    class="css-lgx6cw"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
       alt=""
-      class="css-1uir1rm-image-imageResponsiveRatio-Image"
+      class="css-1uq6tv3"
       loading="eager"
       src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01vzbd6.jpg.webp"
       srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01vzbd6.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01vzbd6.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01vzbd6.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01vzbd6.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01vzbd6.jpg.webp 800w"
@@ -224,45 +224,45 @@ exports[`Canonical Live Media Loader renders a placeholder 1`] = `
 
 exports[`Canonical Live Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container css-yf9ky9-figure-landscapeFigure-MediaLoader-bodyMedia"
+  class="media-container css-1c2jhne"
   data-e2e="media-loader__container"
 >
   <div
-    class="css-nd396e-placeholder"
+    class="css-145siv3"
     data-e2e="media-loader__placeholder"
   >
     <div
-      class="css-18pv7dl-guidanceWrapper-guidanceWrapperWithMessage-Guidance-guidance"
+      class="css-czokpf"
       data-e2e="media-player__guidance"
     >
       <strong
         aria-hidden="true"
-        class="guidance-message css-1e8929r-guidanceMessage"
+        class="guidance-message css-e3010g"
       >
         Contains strong language and some upsetting scenes.
       </strong>
       <noscript
-        class="css-s7j4nn-guidanceMessage-noscript-Guidance"
+        class="css-lllaou"
       >
         &lt;strong&gt;Dem no support media player for your device&lt;/strong&gt;
       </noscript>
     </div>
     <button
-      class="focusIndicatorRemove css-1na62l0-button-playButton"
+      class="focusIndicatorRemove css-4vlf9b"
       type="button"
     >
       <span
-        class="css-1jmdtoy-visuallyHiddenText"
+        class="css-m04vo2"
       >
         Contains strong language and some upsetting scenes. Play video, "Lionel Messi Skills", Duration 0,34
       </span>
       <div
         aria-hidden="true"
-        class="css-jot8zx-iconWrapper-iconWrapperWithDate-PlayButton"
+        class="css-d0ra4q"
       >
         <svg
           aria-hidden="true"
-          class="css-1srvvib-MediaIcon-VideoMediaIcon e1s2dgdk5"
+          class="css-vja2s5 e1s2dgdk5"
           focusable="false"
           height="12"
           viewBox="0 0 12 12"
@@ -285,19 +285,19 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
       </div>
       <time
         aria-hidden="true"
-        class="css-1r684s1-timeDuration"
+        class="css-digyti"
         datetime="PT34S"
       >
         00:34
       </time>
     </button>
     <div
-      class="css-s21kta-wrapper-wrapperResponsiveRatio-placeholder"
+      class="css-lgx6cw"
       style="padding-bottom:0;overflow:hidden"
     >
       <img
         alt=""
-        class="css-1uir1rm-image-imageResponsiveRatio-Image"
+        class="css-1uq6tv3"
         loading="eager"
         src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01vzbd6.jpg.webp"
         srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01vzbd6.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01vzbd6.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01vzbd6.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01vzbd6.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01vzbd6.jpg.webp 800w"
@@ -306,14 +306,14 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
     </div>
   </div>
   <figcaption
-    class="css-1ihafgb-captionStyles-MediaLoader"
+    class="css-1dw163z"
     dir="ltr"
   >
     <span
       role="text"
     >
       <span
-        class="css-1jmdtoy-visuallyHiddenText"
+        class="css-m04vo2"
       >
         Wetin we call dis Video, 
       </span>
