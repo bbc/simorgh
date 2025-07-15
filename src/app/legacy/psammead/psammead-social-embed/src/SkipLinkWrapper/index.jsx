@@ -1,57 +1,5 @@
 import React from 'react';
-import styled from '@emotion/styled';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
-import { GEL_BREVIER } from '#psammead/gel-foundations/src/typography';
-
 import { detokenise, dictionaryFactory } from '../utilities';
-
-import { visuallyHiddenStyle } from '../../../../../lib/styles.const';
-
-const BORDER_WEIGHT = '0.125rem';
-const GEL_SPACING_THREE_QRTS = `0.75rem`;
-
-const Wrapper = styled.div`
-  position: relative;
-
-  .no-js & {
-    display: none;
-  }
-`;
-
-const SkipLink = styled.a`
-  ${({ service }) => getSansRegular(service)}
-  ${GEL_BREVIER}
-  background-color: ${props => props.theme.palette.WHITE};
-  border: ${BORDER_WEIGHT} solid ${props => props.theme.palette.EBON};
-  display: block;
-  left: 0;
-  line-height: 1;
-  padding: ${GEL_SPACING_THREE_QRTS};
-  position: absolute;
-  text-decoration: none;
-  top: 0;
-  z-index: 10;
-
-  span {
-    color: ${props => props.theme.palette.EBON};
-  }
-
-  &:hover,
-  &:focus {
-    span {
-      color: ${props => props.theme.palette.POSTBOX};
-      border-bottom: 2px solid ${props => props.theme.palette.POSTBOX};
-    }
-  }
-
-  &:not(:focus):not(:active) {
-    ${visuallyHiddenStyle}
-  }
-`;
-
-const EndText = styled.p`
-  ${visuallyHiddenStyle}
-`;
 
 const SkipLinkWrapper = ({
   provider,
@@ -64,20 +12,25 @@ const SkipLinkWrapper = ({
 }) => {
   const dictionary = dictionaryFactory({ provider });
   return (
-    <Wrapper>
-      <SkipLink
-        service={service}
+    <div className="relative no-js:hidden">
+      <a
         href={`#${detokenise(endTextId, dictionary)}`}
-        className="focusIndicatorRemove"
+        className="focusIndicatorRemove font-sans text-brevier bg-white border-2 border-ebon block left-0 leading-4 p-3 absolute no-underline top-0 z-10 focus:not-sr-only sr-only"
         {...(describedById && { 'aria-describedby': describedById })}
       >
-        <span>{detokenise(text, dictionary)}</span>
-      </SkipLink>
+        <span className="text-ebon hover:text-postbox focus:text-postbox hover:border-b-2 hover:border-postbox focus:border-b-2 focus:border-postbox">
+          {detokenise(text, dictionary)}
+        </span>
+      </a>
       {children}
-      <EndText tabIndex="-1" id={detokenise(endTextId, dictionary)}>
+      <p 
+        tabIndex="-1" 
+        id={detokenise(endTextId, dictionary)}
+        className="sr-only"
+      >
         {detokenise(endTextVisuallyHidden, dictionary)}
-      </EndText>
-    </Wrapper>
+      </p>
+    </div>
   );
 };
 

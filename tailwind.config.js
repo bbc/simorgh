@@ -133,7 +133,40 @@ module.exports = {
       aspectRatio: {
         'video': '16 / 9',
       },
+      clipPath: {
+        'inset-full': 'inset(100%)',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function({ addUtilities }) {
+      addUtilities({
+        '.sr-only': {
+          position: 'absolute',
+          width: '1px',
+          height: '1px',
+          padding: '0',
+          margin: '-1px',
+          overflow: 'hidden',
+          clip: 'rect(0, 0, 0, 0)',
+          'clip-path': 'inset(100%)',
+          border: '0',
+        },
+        '.not-sr-only': {
+          position: 'static',
+          width: 'auto',
+          height: 'auto',
+          padding: '0',
+          margin: '0',
+          overflow: 'visible',
+          clip: 'auto',
+          'clip-path': 'none',
+          border: 'initial',
+        },
+        '.clip-path-inset-full': {
+          'clip-path': 'inset(100%)',
+        },
+      });
+    },
+  ],
 }
