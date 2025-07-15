@@ -56,7 +56,7 @@ export const service: DefaultServiceConfig = {
         alt: 'WhatsApp BBC News සිංහල',
       },
       linkLabel: {
-        text: 'සම්බන්ධ වීමට link එක click කරන්නr',
+        text: 'සම්බන්ධ වීමට link එක click කරන්න',
         href: 'https://www.whatsapp.com/channel/0029VbAdrSX5PO0xbywORN25',
       },
     },
@@ -335,6 +335,10 @@ export const service: DefaultServiceConfig = {
         {
           href: 'https://www.bbc.co.uk/sinhala/send/u50853687',
           text: 'බීබීසී ය අමතන්න',
+        },
+        {
+          href: 'https://www.bbc.com/sinhala.lite',
+          text: 'ලිපිවල පෙළ පමණක් අඩංගු වෙබ් අඩවිය',
         },
         {
           href: 'https://www.bbc.com/ws/languages',
