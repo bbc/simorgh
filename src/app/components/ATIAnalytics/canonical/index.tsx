@@ -11,6 +11,7 @@ import addInlineScript, {
 } from '#app/lib/utilities/addInlineScript';
 import usePWAInstallTracker from '#app/hooks/usePWAInstallTracker';
 import useNetworkConnectionTracker from '#app/hooks/useNetworkConnectionTracker';
+import { reverbUrlHelper } from '@bbc/reverb-url-helper';
 import { ATIAnalyticsProps } from '../types';
 import getNoScriptTrackingPixelUrl from './getNoScriptTrackingPixelUrl';
 import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
@@ -60,13 +61,15 @@ const CanonicalATIAnalytics = ({
     if (!isOperaProxy()) sendBeacon(atiPageViewUrl, reverbBeaconConfig);
   }, [atiPageViewUrl, reverbBeaconConfig]);
 
+  const liteSiteReverbURL = reverbUrlHelper.getLitePageViewUrl(reverbParams);
+
   return (
     <>
       {addScript({ script: addSendStaticBeaconToWindow() })}
       {isLite &&
         addScript({
           script: sendPageViewBeaconLite,
-          parameters: atiPageViewUrlString,
+          parameters: [atiPageViewUrlString, liteSiteReverbURL],
         })}
       {!isLite &&
         addScript({
