@@ -6,13 +6,17 @@ import PromoContext from '../PromoContext';
 
 const Link = ({ className = '', children }) => {
   const { to, eventTrackingData, ariaLabelledBy } = use(PromoContext);
-  const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
+  const href = makeRelativeUrlPath(to);
+  const handleClickTracking = useCombinedClickTrackerHandler({
+    eventTrackingData,
+    staticUrl: href,
+  });
 
   return (
     <StyledLink
       data-testid="promo-link"
       className={`${className} focusIndicatorDisplayInlineBlock`}
-      href={makeRelativeUrlPath(to)}
+      href={href}
       aria-labelledby={ariaLabelledBy}
       {...(eventTrackingData && handleClickTracking)}
     >

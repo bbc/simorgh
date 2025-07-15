@@ -89,7 +89,10 @@ const PodcastExternalLink = ({ linkUrl, children, aria }) => {
     campaignID: 'player-episode-podcast',
   };
 
-  const clickTrackerRef = useClickTrackerHandler(eventTrackingData);
+  const clickTrackerRef = useClickTrackerHandler({
+    ...eventTrackingData,
+    staticUrl: linkUrl,
+  });
 
   return (
     <Link

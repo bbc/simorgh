@@ -61,7 +61,10 @@ describe('Call To Action Link', () => {
       </CallToActionLink>,
     );
 
-    expect(clickTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
+    expect(clickTrackerSpy).toHaveBeenCalledWith({
+      ...eventTrackingData,
+      staticUrl: 'https://www.bbc.com/ws/languages',
+    });
   });
 
   it(`Should permit custom attributes through html attributes`, () => {

@@ -233,6 +233,7 @@ describe('Event Tracking', () => {
 
     expect(clickTrackerSpy).toHaveBeenCalledWith({
       componentName: 'promo-podcast',
+      staticUrl: 'https://whatsapp.com/channel/0029VaZ437k4Y9li4jkzIU0G',
     });
   });
 });

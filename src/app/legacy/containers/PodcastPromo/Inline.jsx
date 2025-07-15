@@ -189,7 +189,10 @@ const Promo = () => {
   } = getPromo(podcastPromo);
 
   const viewTrackerRef = useViewTracker(eventTrackingData);
-  const clickTrackerRef = useClickTrackerHandler(eventTrackingData);
+  const clickTrackerRef = useClickTrackerHandler({
+    ...eventTrackingData,
+    staticUrl: url,
+  });
 
   if (isLite) return null;
   if (!showPromo) return null;

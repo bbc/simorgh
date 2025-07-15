@@ -71,9 +71,11 @@ describe('RadioSchedule', () => {
 
       expect(clickTrackerSpy).toHaveBeenNthCalledWith(1, {
         componentName: 'radio-schedule-live',
+        staticUrl: '/hausa/articles/c2nr6xqmnewo',
       });
       expect(clickTrackerSpy).toHaveBeenNthCalledWith(2, {
         componentName: 'radio-schedule-onDemand',
+        staticUrl: '/hausa/articles/c2nr6xqmnewo',
       });
     });
   });

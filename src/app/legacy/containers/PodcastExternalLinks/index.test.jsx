@@ -119,6 +119,7 @@ describe('Event Tracking', () => {
     expect(clickTrackerSpy).toHaveBeenCalledWith({
       componentName: 'third-party',
       campaignID: 'player-episode-podcast',
+      staticUrl: 'https://bbc.com',
     });
   });
 });

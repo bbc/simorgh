@@ -31,7 +31,10 @@ const CallToActionLink = ({
   size = 'pica',
   ...htmlAttributes
 }: PropsWithChildren<CallToActionLinkProps>) => {
-  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+  const clickTrackerHandler = useClickTrackerHandler({
+    ...eventTrackingData,
+    staticUrl: url,
+  });
 
   const callToActionLinkContextValue = useMemo(
     () => ({

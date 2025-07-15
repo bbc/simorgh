@@ -10,6 +10,7 @@ import { CLICK_EVENT, VIEW_EVENT } from '../../analytics.const';
 const eventTrackingData = {
   componentName: 'features',
   url: '/gahuza/articles/c8xpj9vnd5wo',
+  staticUrl: '/gahuza/articles/c8xpj9vnd5wo',
 };
 
 const wrapper = ({ children }: { children: React.ReactNode }) => (

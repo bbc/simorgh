@@ -24,6 +24,7 @@ const LiteSiteSummary = () => {
   const id = 'LiteSiteSummary';
   const clickTrackerHandler = useClickTrackerHandler({
     componentName: 'lite-site-summary',
+    staticUrl: canonicalLink,
   });
 
   return (

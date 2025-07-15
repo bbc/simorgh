@@ -40,7 +40,10 @@ export default ({
   summaries = [],
 }: BillboardProps) => {
   const viewTracker = useViewTracker(eventTrackingData);
-  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+  const clickTrackerHandler = useClickTrackerHandler({
+    ...eventTrackingData,
+    ...(eventTrackingData && { staticUrl: link }),
+  });
   const { translations } = use(ServiceContext);
   const showMoreOnThisTitle = translations.moreOnThis;
   return (

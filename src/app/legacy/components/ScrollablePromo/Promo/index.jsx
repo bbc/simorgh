@@ -101,7 +101,7 @@ const TimeStamp = styled(PromoTimestamp)`
   color: ${({ theme }) => theme.isDarkUi && theme.palette.GREY_6};
 `;
 
-const Promo = ({ block, experimentVariant, clickTracker }) => {
+const Promo = ({ block, experimentVariant, clickTrackerWithUrl }) => {
   const { script, service, serviceDatetimeLocale } = use(ServiceContext);
   let title;
   let href;
@@ -179,7 +179,7 @@ const Promo = ({ block, experimentVariant, clickTracker }) => {
         href={href}
         service={service}
         script={script}
-        {...clickTracker}
+        {...clickTrackerWithUrl(href)}
         experimentVariant={experimentVariant}
       >
         {isLive && <LiveLabel />}

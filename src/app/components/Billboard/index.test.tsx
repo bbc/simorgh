@@ -266,7 +266,7 @@ describe('Billboard', () => {
           />,
         );
 
-        expect(clickTrackerSpy).toHaveBeenCalledWith(undefined);
+        expect(clickTrackerSpy).toHaveBeenCalledWith({});
 
         const [anchorTag] = container.getElementsByTagName('a');
         fireEvent.click(anchorTag);
@@ -285,7 +285,10 @@ describe('Billboard', () => {
           />,
         );
 
-        expect(clickTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
+        expect(clickTrackerSpy).toHaveBeenCalledWith({
+          ...eventTrackingData,
+          staticUrl: 'https://www.bbc.com/kyrgyz/world-23090100',
+        });
       });
 
       it('should handle a click event when link clicked', () => {

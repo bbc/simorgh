@@ -21,6 +21,7 @@ export default ({
     itemTracker,
     groupTracker,
     viewThreshold,
+    staticUrl,
   } = eventTrackingData || {};
 
   const {
@@ -44,7 +45,7 @@ export default ({
     format,
     type: eventType,
     advertiserID,
-    url,
+    url: url ?? staticUrl,
     detailedPlacement,
     producerName,
     preventNavigation,

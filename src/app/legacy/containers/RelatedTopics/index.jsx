@@ -39,7 +39,8 @@ const RelatedTopics = ({
 }) => {
   const { service, script, translations, dir } = use(ServiceContext);
   const { variant } = use(RequestContext);
-  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+  const useClickTrackerHandlerWithUrl = staticUrl =>
+    useClickTrackerHandler({ ...eventTrackingData, staticUrl });
   const viewTracker = useViewTracker(eventTrackingData);
 
   const heading = pathOr('Related Topics', ['relatedTopics'], translations);
@@ -87,7 +88,11 @@ const RelatedTopics = ({
             <TopicTag
               name={topics[0].topicName}
               link={getTopicPageUrl(topics[0].topicId)}
-              {...clickTrackerHandler}
+              // Topic tags stay fixed throughout the component's lifetime
+              // eslint-disable-next-line react-hooks/rules-of-hooks
+              {...useClickTrackerHandlerWithUrl(
+                getTopicPageUrl(topics[0].topicId),
+              )}
               {...viewTracker}
               key={topics[0].topicId}
             />
@@ -96,7 +101,9 @@ const RelatedTopics = ({
               <TopicTag
                 name={topicName}
                 link={getTopicPageUrl(topicId)}
-                {...clickTrackerHandler}
+                // Topic tags stay fixed throughout the component's lifetime
+                // eslint-disable-next-line react-hooks/rules-of-hooks
+                {...useClickTrackerHandlerWithUrl(getTopicPageUrl(topicId))}
                 {...viewTracker}
                 key={topicId}
               />

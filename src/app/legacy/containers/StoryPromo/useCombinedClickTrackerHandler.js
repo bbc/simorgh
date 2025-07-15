@@ -3,7 +3,7 @@ import path from 'ramda/src/path';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import { STATIC_ATI_CLICK_TRACKING } from '#app/lib/analyticsUtils/analytics.const';
 
-const useCombinedClickTrackerHandler = eventTrackingData => {
+const useCombinedClickTrackerHandler = ({ eventTrackingData, staticUrl }) => {
   const blockData = path(['block'], eventTrackingData);
   const optimizely = path(['block', 'optimizely'], eventTrackingData);
 
@@ -14,6 +14,7 @@ const useCombinedClickTrackerHandler = eventTrackingData => {
     ...(blockData && {
       ...blockData,
       preventNavigation: true,
+      staticUrl,
     }),
   });
 

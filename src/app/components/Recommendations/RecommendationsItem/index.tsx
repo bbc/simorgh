@@ -18,8 +18,11 @@ const RecommendationsItem = ({
   recommendation: Recommendation | null;
 }) => {
   const { isLite } = use(RequestContext);
-
-  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+  const staticUrl = recommendation?.href;
+  const clickTrackerHandler = useClickTrackerHandler({
+    ...eventTrackingData,
+    staticUrl,
+  });
 
   if (!recommendation) return null;
 

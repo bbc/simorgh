@@ -186,7 +186,10 @@ describe('Related Topics', () => {
         </WithContexts>,
       );
 
-      expect(clickTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
+      expect(clickTrackerSpy).toHaveBeenCalledWith({
+        ...eventTrackingData,
+        staticUrl: 'https://www.bbc.com/mundo/topics/id',
+      });
     });
 
     it('should call the view tracker with the correct params', () => {

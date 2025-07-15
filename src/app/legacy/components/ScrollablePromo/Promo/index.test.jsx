@@ -14,7 +14,7 @@ const ScrollablePromo = ({ block, experimentVariant }) => (
   <ServiceContextProvider service="pidgin">
     <Promo
       block={block}
-      onClick={() => {}}
+      clickTrackerWithUrl={() => {}}
       experimentVariant={experimentVariant}
     />
   </ServiceContextProvider>

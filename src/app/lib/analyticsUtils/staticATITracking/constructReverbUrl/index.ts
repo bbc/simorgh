@@ -20,7 +20,7 @@ export default ({
     eventType,
   });
 
-  const reverbParams = buildReverbEventModel({ ...atiTrackingParams });
+  const reverbParams = buildReverbEventModel(atiTrackingParams);
   const additionalParams = {
     atiAnalyticsAppName,
     serviceLanguage: lang,
@@ -28,7 +28,7 @@ export default ({
   };
   const env = getEnvConfig().SIMORGH_APP_ENV;
 
-  return reverbUrlHelper.getLitePageViewClickTrackingUrl({
+  return reverbUrlHelper.getLiteComponentViewClickTrackingUrl({
     ...reverbParams,
     additionalParams,
     env,

@@ -93,7 +93,7 @@ describe('ScrollablePromo', () => {
           <ScrollablePromo blocks={edOjB.model.blocks} blockGroupIndex={2} />,
         );
 
-        expect(viewTrackerSpy).toHaveBeenCalledTimes(4);
+        expect(viewTrackerSpy).toHaveBeenCalledTimes(2);
         expect(viewTrackerSpy).toHaveBeenCalledWith({
           componentName: 'edoj1',
           format: 'CHD=edoj',
@@ -125,7 +125,7 @@ describe('ScrollablePromo', () => {
           <ScrollablePromo blocks={edOjB.model.blocks} blockGroupIndex={2} />,
         );
 
-        expect(clickTrackerSpy).toHaveBeenCalledTimes(4);
+        expect(clickTrackerSpy).toHaveBeenCalledTimes(6);
         expect(clickTrackerSpy).toHaveBeenCalledWith({
           componentName: 'edoj1',
           format: 'CHD=edoj',

@@ -6,6 +6,7 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import { OptimizelyContext } from '@optimizely/react-sdk';
 import {
   STATIC_ATI_VIEW_TRACKING,
+  STATIC_REVERB_VIEW_TRACKING,
   VIEW_EVENT,
 } from '#app/lib/analyticsUtils/analytics.const';
 import constructStaticATIUrl from '#app/lib/analyticsUtils/staticATITracking/constructATIUrl';
@@ -204,7 +205,10 @@ export default (eventTrackingData?: EventTrackingData): any => {
   });
 
   return isLite
-    ? { [STATIC_ATI_VIEW_TRACKING]: reverbStaticUrl }
+    ? {
+        [STATIC_ATI_VIEW_TRACKING]: staticATIUrl,
+        [STATIC_REVERB_VIEW_TRACKING]: reverbStaticUrl,
+      }
     : {
         ref: viewTracker,
       };

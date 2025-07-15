@@ -19,7 +19,7 @@ const renderListItems = (
   service,
   dir,
   activeIndex,
-  clickTracker,
+  clickTrackerWithUrl,
   viewTracker,
   isLite,
 ) =>
@@ -38,7 +38,7 @@ const renderListItems = (
         currentPageText={currentPage}
         service={service}
         dir={dir}
-        clickTracker={clickTracker}
+        clickTracker={clickTrackerWithUrl(url)}
         viewTracker={viewTracker}
       >
         {title}
@@ -65,13 +65,14 @@ const NavigationContainer = ({ propsForOJExperiment }) => {
     componentName: `dropdown-navigation`,
   };
 
-  const scrollableNavClickTrackerHandler = useClickTrackerHandler(
-    scrollableNavEventTrackingData,
-  );
+  const useScrollableNavClickTrackerHandlerWithUrl = staticUrl =>
+    useClickTrackerHandler({ scrollableNavEventTrackingData, staticUrl });
 
-  const dropdownNavClickTrackerHandler = useClickTrackerHandler(
-    dropdownNavEventTrackingData,
-  );
+  const useDropdownNavClickTrackerHandlerWithUrl = staticUrl =>
+    useClickTrackerHandler({
+      dropdownNavEventTrackingData,
+      staticUrl,
+    });
 
   const scrollableNavViewTracker = useViewTracker(
     scrollableNavEventTrackingData,
@@ -97,7 +98,7 @@ const NavigationContainer = ({ propsForOJExperiment }) => {
         service,
         dir,
         activeIndex,
-        scrollableNavClickTrackerHandler,
+        useScrollableNavClickTrackerHandlerWithUrl,
         scrollableNavViewTracker,
         isLite,
       )}
@@ -114,7 +115,7 @@ const NavigationContainer = ({ propsForOJExperiment }) => {
         service,
         dir,
         activeIndex,
-        dropdownNavClickTrackerHandler,
+        useDropdownNavClickTrackerHandlerWithUrl,
         dropdownNavViewTracker,
       )}
     </DropdownUl>

@@ -65,7 +65,10 @@ const ScheduleItemHeader = ({
   const eventTrackingData = {
     componentName: `radio-schedule-${state}`,
   };
-  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+  const clickTrackerHandler = useClickTrackerHandler({
+    ...eventTrackingData,
+    staticUrl: link,
+  });
   const listenLive = pathOr(
     'Listen Live',
     ['media', 'listenLive'],
