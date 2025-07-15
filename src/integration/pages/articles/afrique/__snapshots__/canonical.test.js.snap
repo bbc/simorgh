@@ -66,7 +66,7 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
     </time>
   </button>
   <div
-    class="bbc-lgx6cw"
+    class="bbc-1jf2q50"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
@@ -141,7 +141,7 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
     </time>
   </button>
   <div
-    class="bbc-lgx6cw"
+    class="bbc-1jf2q50"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
@@ -220,7 +220,7 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
       </time>
     </button>
     <div
-      class="bbc-lgx6cw"
+      class="bbc-1jf2q50"
       style="padding-bottom:0;overflow:hidden"
     >
       <img

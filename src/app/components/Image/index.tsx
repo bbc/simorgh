@@ -26,6 +26,7 @@ export type ImageProps = {
   width?: number;
   fetchPriority?: 'high';
   hasCaption?: boolean;
+  isPortraitOrientation?: boolean;
 };
 
 const roundNumber = (num: number) => Math.round(num * 100) / 100;
@@ -54,6 +55,7 @@ const Image = ({
   children,
   fetchPriority,
   hasCaption,
+  isPortraitOrientation,
 }: PropsWithChildren<ImageProps>) => {
   const { pageType, isLite, isAmp } = use(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -108,6 +110,7 @@ const Image = ({
           hasFixedAspectRatio
             ? styles.wrapperFixedAspectRatio
             : styles.wrapperResponsiveRatio,
+          isPortraitOrientation && styles.portraitOrientation,
           showPlaceholder && [
             styles.placeholder,
             {
