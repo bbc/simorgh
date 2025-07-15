@@ -1,6 +1,12 @@
 export const assertWSLanguagesPage = () => {
-  it('should render the Languages Page', () => {
+  it('should render the WS Languages Page', () => {
     cy.get('h1').should('have.text', 'Get the news in your language');
+  });
+};
+
+export const assertWSLanguagesPageLocal = () => {
+  it('should render the Languages Page with fixture content', () => {
+    cy.contains('World Service test page').should('exist');
   });
 };
 

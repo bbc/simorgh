@@ -72,8 +72,8 @@ export const getServerSideProps: GetServerSideProps = async context => {
     props: {
       ...baseProps,
       pageType: HOME_PAGE,
-      service: 'pidgin',
-      pathname: '/pidgin',
+      service: 'ws',
+      pathname: '/ws/languages',
       status: data?.status,
       pageData: {
         ...data?.pageData,

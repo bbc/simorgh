@@ -1,0 +1,853 @@
+{
+  "data": {
+    "title": "Domot - BBC News Pidgin",
+    "description": "We dey give una latest tori on top politics, environment, business, sports, entertainment, health, fashion and all di oda things wey dey happen for West and Central Africa come add di rest of di world join. For better informate plus explanation of all di ogbonge tori wey pipo never hear about for inside West and Central Africa, BBC Pidgin dey serve am with video, audio, maps and oda graphics join.",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": true,
+            "title": "World Service test page",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/news/live/cp4vqze8qznxt",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/69db/test/b8ead0b0-b9e5-11ee-9627-8141b3381959.jpg.webp",
+            "description": "Tipo Live Page TEST about Photography description",
+            "imageAlt": "Alternative description",
+            "id": "cp4vqze8qznxt"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Humza Yousaf resigns",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/pidgin/live/cemy52djeq5t",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/1b6d/test/f9bbf9d0-0624-11ef-a801-47fbecfec49f.jpg.webp",
+            "description": "Yousaf says he “underestimated” the level of hurt after ending a power-sharing deal with the Scottish Greens last week.",
+            "imageAlt": "Humza Yousaf speaking at a press conference",
+            "id": "cemy52djeq5t"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Template article 4",
+            "firstPublished": "2023-08-15T14:12:01.110Z",
+            "lastPublished": "2023-08-15T14:12:01.110Z",
+            "link": "https://www.bbc.com/mundo/articles/c0ny73k281vo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/4414/test/146c2c30-3b75-11ee-93b4-83c41441672b.jpg.webp",
+            "description": "Probo lorem partem pro ex, unum prima expetenda eos ne. Melius viderer quaestio nec te.",
+            "imageAlt": "Bird",
+            "id": "c0ny73k281vo"
+          },
+          {
+            "type": "video",
+            "duration": "PT54S",
+            "isLive": false,
+            "title": "Video Test",
+            "firstPublished": "2022-10-27T16:32:50.346Z",
+            "lastPublished": "2022-10-27T16:32:50.346Z",
+            "link": "https://www.bbc.com/pidgin/articles/cvl1jnp2nrqo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "cvl1jnp2nrqo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Lagos Goment enforces okada ban",
+            "firstPublished": "2023-08-17T14:13:14.817Z",
+            "lastPublished": "2023-08-17T14:13:14.817Z",
+            "link": "https://www.bbc.com/pidgin/articles/cem8zq07ddxo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/8e2a/test/081683b0-3d08-11ee-acfe-efb7db480188.jpg.webp",
+            "description": "The fuel levy reduction is expected to last for two months. This will cushion the blow for South Africans facing a significant rise in the cost of living due to high fuel prices. \n\n",
+            "imageAlt": "NUT",
+            "id": "cem8zq07ddxo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:7675d5bd-b710-48b3-88c2-c6189980cf02",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "Humza Yousaf resigns as Scotland’s first minister",
+        "visualProminence": "MAXIMUM",
+        "visualStyle": "BANNER"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Niger Delta leader Edwin Clark don die",
+            "firstPublished": "2025-02-18T08:54:51.034Z",
+            "lastPublished": "2025-02-18T10:17:42.661Z",
+            "link": "https://www.bbc.com/pidgin/articles/cvg533vvrxwo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/9205/live/97f85a20-edd4-11ef-a319-fb4e7360c4ec.jpg.webp",
+            "description": "One representative of di family, Prof. C. C. Clark announce di death of di former Federal Commissioner for Information and South-South leader on Tuesday, 18 February.",
+            "imageAlt": "Edwin Clark for one interview wit BBC Pidgin for 2021",
+            "id": "cvg533vvrxwo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Passengers tok wetin dia eye see di moment Delta Air Lines plane crash  and turn upside down for Toronto",
+            "firstPublished": "2025-02-18T07:08:54.537Z",
+            "lastPublished": "2025-02-18T07:27:48.871Z",
+            "link": "https://www.bbc.com/pidgin/articles/ce3n337yqv5o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/1644/live/96cd2060-edaf-11ef-8667-6717837b54d7.jpg.webp",
+            "description": "Witnesses speak about di moment di plane wey dem bin dey fly in overturn for Toronto.",
+            "imageAlt": "Emergency responder stand next to di aircraft for di runway afta e crash for Toronto Pearson International Airport",
+            "id": "ce3n337yqv5o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Nigeria goment give details about first batch of deportees from US wey dem dey expect ",
+            "firstPublished": "2025-02-17T12:33:32.216Z",
+            "lastPublished": "2025-02-18T11:10:01.090Z",
+            "link": "https://www.bbc.com/pidgin/articles/ce858gepkdno",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/2a73/live/bad2cc30-ed23-11ef-b057-d7115843701e.png.webp",
+            "description": "About  201 Nigerians currently dey detained for US immigration centres, and about 85 of dem don dey cleared for deportation according to Nigeria Minister of State for Foreign Affairs Bianca Odumegwu Ojukwu, ",
+            "imageAlt": "File picture of immigrants standing on a queue ",
+            "id": "ce858gepkdno"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Davido para as three die for Osun local government crisis",
+            "firstPublished": "2025-02-17T11:57:01.288Z",
+            "lastPublished": "2025-02-17T17:46:27.198Z",
+            "link": "https://www.bbc.com/pidgin/articles/cn4m4lnv37zo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7112/live/630a1530-ed4b-11ef-a319-fb4e7360c4ec.png.webp",
+            "description": "Osun state Govnor Ademola Adeleke accuse a former govnor of di state Gboyega Oyetola say e dey plan to cause kasala for di state on Monday.",
+            "imageAlt": "Ademola Adeleke, Gboyega Oyetola and Davido",
+            "id": "cn4m4lnv37zo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "European leaders meet for Paris for emergency summit on Ukraine",
+            "firstPublished": "2025-02-17T09:22:14.020Z",
+            "lastPublished": "2025-02-17T18:51:46.482Z",
+            "link": "https://www.bbc.com/pidgin/articles/ce8584245jeo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a35c/live/767a4940-ed10-11ef-a319-fb4e7360c4ec.jpg.webp",
+            "description": "French President Emmanuel Macron dey host European leaders for Paris for urgent talks on Ukraine future.",
+            "imageAlt": "Macron and Zelensky",
+            "id": "ce8584245jeo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Wetin dey happun for Lagos State House of Assembly",
+            "firstPublished": "2025-02-17T12:53:49.864Z",
+            "lastPublished": "2025-02-17T14:26:32.519Z",
+            "link": "https://www.bbc.com/pidgin/articles/cj919ye7929o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/0b22/live/28479280-ed3a-11ef-bd1b-d536627785f2.png.webp",
+            "description": "Video online show as Lagos state assembly, speaker Mojisola Meranda enta into the building wit some security officials wey dey protect di building ",
+            "imageAlt": "Mojisola Meranda Mudashiru Obasa",
+            "id": "cj919ye7929o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "World 'first openly gay imam' shot dead for South Africa",
+            "firstPublished": "2025-02-16T14:29:21.473Z",
+            "lastPublished": "2025-02-16T14:29:21.473Z",
+            "link": "https://www.bbc.com/pidgin/articles/cg5yr5z54nlo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/51b8/live/fd584210-ec60-11ef-91f9-bd1471acd4eb.jpg.webp",
+            "description": "Im establish The Inner Circle, one organisation wey dey provide support and safe space for gay Muslims, bifor im establish di inclusive Masjidul Ghurbaah mosque.",
+            "imageAlt": "A close-up of Imam Muhsin Hendricks wearing a white shirt and a green scarf draped over one shoulder. The shot was taken in 2016.",
+            "id": "cg5yr5z54nlo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Accusations and counter-accusations between Binance executive and Nigeria goment - wetin we know",
+            "firstPublished": "2025-02-15T09:37:36.213Z",
+            "lastPublished": "2025-02-15T09:37:36.213Z",
+            "link": "https://www.bbc.com/pidgin/articles/cjde7xxyky2o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/4e44/live/6fff9710-eb7f-11ef-a319-fb4e7360c4ec.jpg.webp",
+            "description": "Gambaryan bin spend months for Nigeria detention facility sake of alleged money laundering.",
+            "imageAlt": "Gambaryan and Idris",
+            "id": "cjde7xxyky2o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:41c2dccc-4711-4e01-85d4-72d531765fa8",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "Top Tori",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "video",
+            "duration": "PT14S",
+            "isLive": false,
+            "title": "Billboard with 3 summaries",
+            "firstPublished": "2018-05-21T14:16:43.000Z",
+            "lastPublished": "2018-05-21T14:16:43.000Z",
+            "link": "https://www.bbc.com/mundo/noticias-internacional-23201396",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/1A29/test/_63679660_p01hj5nn.jpg.webp",
+            "description": "Description v3",
+            "imageAlt": "Rio Olympics banner",
+            "id": "4e2253b8-463b-5641-af77-07f92f84c701"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "test for pidgin content?",
+            "firstPublished": "2021-11-23T12:22:27.913Z",
+            "lastPublished": "2021-12-07T10:38:31.565Z",
+            "link": "https://www.bbc.com/pidgin/articles/crrrkxz2k0ko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/37e1/test/80c445c0-5431-11ec-b75b-9f9fe566903d.jpg.webp",
+            "description": "maybe it makes a difference to have pidgin stuff in here",
+            "imageAlt": "Image to ignore",
+            "id": "crrrkxz2k0ko"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "This is the headline of this test article",
+            "firstPublished": "2019-07-12T13:00:04.940Z",
+            "lastPublished": "2022-10-13T15:10:19.230Z",
+            "link": "https://www.bbc.com/pidgin/articles/cwl08rd38l6o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/2d93/test/494cb5d0-dee2-11e9-b23c-f1ac9644bb55.jpg.webp",
+            "imageAlt": "Map of France showing Paris and Cognac",
+            "id": "cwl08rd38l6o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:95a506ac-1793-4e5a-94f1-888be4f4b3f1",
+        "curationType": "tipo-curation",
+        "position": 2,
+        "title": "Billboard 3 summaries test",
+        "visualProminence": "MAXIMUM",
+        "visualStyle": "BANNER"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Why police declare controversial singer Portable wanted",
+            "firstPublished": "2025-02-17T23:04:31.720Z",
+            "lastPublished": "2025-02-18T07:10:57.029Z",
+            "link": "https://www.bbc.com/pidgin/articles/cwy1yeywpy8o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/445f/live/00c31ba0-ed83-11ef-bd1b-d536627785f2.png.webp",
+            "description": "Portable by imsef don come out in recent times ontop social media dey appeal to Nigerians make dem help am beg Ogun state goment.",
+            "imageAlt": "Habeeb Okikiola",
+            "id": "cwy1yeywpy8o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Ned Nwoko deny 'pregnancy, 7th wife marriage' report to Nollywood actress",
+            "firstPublished": "2025-02-17T15:08:38.667Z",
+            "lastPublished": "2025-02-17T15:08:38.667Z",
+            "link": "https://www.bbc.com/pidgin/articles/c360685jjl5o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/b51b/live/90c7ae70-ed40-11ef-bd1b-d536627785f2.png.webp",
+            "description": "Tori bin dey fly say di lawmaker wan marry actress Chika Ike as im seventh wife but im don deny di rumour.",
+            "imageAlt": "Ned Nwoko wit Regina Daniels and Chika Ike",
+            "id": "c360685jjl5o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Pope dey face serious health situation - Vatican tok",
+            "firstPublished": "2025-02-17T14:48:11.257Z",
+            "lastPublished": "2025-02-17T14:48:11.257Z",
+            "link": "https://www.bbc.com/pidgin/articles/cp8q8zmnj3eo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/0466/live/33e4e430-ed2b-11ef-b008-3d63fe428927.jpg.webp",
+            "description": "Di Pope go remain for hospital for as long as necessary, di Vatican tok.",
+            "imageAlt": "Pope Francis",
+            "id": "cp8q8zmnj3eo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "What next for Chidimma Adetshina mama as South Africa authorities detain am?",
+            "firstPublished": "2025-02-16T06:52:49.119Z",
+            "lastPublished": "2025-02-16T06:52:49.119Z",
+            "link": "https://www.bbc.com/pidgin/articles/c78x2gz003xo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/e9c8/live/4bbc8260-ec32-11ef-9c4f-93bb1d43cf85.jpg.webp",
+            "description": "Home Affairs say dem withdraw Anabela Rungo South African documentation for September 2024 afta dem discover say she allegedly obtain am fraudulently.",
+            "imageAlt": "Foto of Chidimma Adetshina",
+            "id": "c78x2gz003xo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "'I do 36 blood transfusions during pregnancy' - how pregnant woman survive blood disorder",
+            "firstPublished": "2025-02-15T12:36:33.732Z",
+            "lastPublished": "2025-02-15T12:36:33.732Z",
+            "link": "https://www.bbc.com/pidgin/articles/cdd91220g0jo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/8495/live/99ae9950-e547-11ef-b52b-2f7aceb40199.jpg.webp",
+            "description": "Worldwide e get around 270 million pipo wey get thalassaemia, a blood disorder disease wey make one woman do 36 blood transfusions during her pregnancy.",
+            "imageAlt": "Kinjal dey smile sitting cross-legged on a metal hospital bed wit a tube attached to her arm for a blood transfusion. Her baby daughter stand up for her lap",
+            "id": "cdd91220g0jo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Watch how whale swallow one man briefly for southern Chile before e spit am out",
+            "firstPublished": "2025-02-14T18:05:19.609Z",
+            "lastPublished": "2025-02-14T18:05:19.609Z",
+            "link": "https://www.bbc.com/pidgin/articles/c5ydnwv0ne7o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/542d/live/467716e0-ead8-11ef-b987-ff602c3d605d.jpg.webp",
+            "description": "One Venezuelan kayaker get experience of im life wen one humpback whale swallow am briefly as e bin dey paddle for di Strait of Magellan for southern Chile.",
+            "imageAlt": "Adrián Simancas, 23-year-old Venezuelan, wear colourful, poncho wey get stripes.",
+            "id": "c5ydnwv0ne7o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Unizik expel student wey fight lecturer for viral video",
+            "firstPublished": "2025-02-14T14:51:32.964Z",
+            "lastPublished": "2025-02-14T15:01:16.053Z",
+            "link": "https://www.bbc.com/pidgin/articles/cly40elexj7o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/f379/live/ff5ce040-eae2-11ef-a319-fb4e7360c4ec.jpg.webp",
+            "description": "Authorities of di Nnamdi Azikiwe University don expel one female student after dem say she assault one lecturer for di school.",
+            "imageAlt": "Collage foto of UNIZIK",
+            "id": "cly40elexj7o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "E dey get harder to find a partner?",
+            "firstPublished": "2025-02-14T10:07:31.584Z",
+            "lastPublished": "2025-02-14T10:07:31.584Z",
+            "link": "https://www.bbc.com/pidgin/articles/c1lv39v3ezeo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/3970/live/b4784c10-eaa9-11ef-906b-b96e0873bd44.jpg.webp",
+            "description": "Dis year Valentine's Day don come again, so why pipo for so many places dey struggle to form a lasting relationship?\n\n",
+            "imageAlt": "A man and a woman locking heads",
+            "id": "c1lv39v3ezeo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:81d92884-1db4-4dfa-b1ec-d52c0ce41a24",
+        "curationType": "tipo-curation",
+        "position": 3,
+        "title": "Special Tori",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Government enforces fuel ban (1 summary)",
+            "firstPublished": "2023-08-17T14:13:14.817Z",
+            "lastPublished": "2023-08-17T14:13:14.817Z",
+            "link": "https://www.bbc.com/pidgin/articles/cem8zq07ddxo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/8e2a/test/081683b0-3d08-11ee-acfe-efb7db480188.jpg.webp",
+            "description": "The fuel levy reduction is expected to last for two months. This will cushion the blow for South Africans facing a significant rise in the cost of living due to high fuel prices. \n\n",
+            "imageAlt": "NUT",
+            "id": "cem8zq07ddxo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:874d7c07-78e9-4f1a-8c45-d60b899e1ce9",
+        "curationType": "tipo-curation",
+        "position": 4,
+        "title": "Non Live English Billboard",
+        "visualProminence": "MAXIMUM",
+        "visualStyle": "BANNER"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Click here to join di channel",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://whatsapp.com/channel/0029VawW7AjFy726zWLIFq2j",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/9e7b/live/32956420-2264-11ef-80aa-699d54c46324.png.webp",
+            "description": "No dull yoursef, be di first to get latest tori, analysis, exclusive interviews and ogbonge coverage of Nigerian and International news from BBC News Pidgin, straight to your Whatsapp.",
+            "imageAlt": "Logo de WhatsApp",
+            "id": "https%3A%2F%2Fwww.whatsapp.com%2Fchannel%2F0029VaUm1Ss3WHTbgIXrjw3D"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:9c9782fd-6837-429a-b4ee-400d9aee56e1",
+        "curationType": "tipo-curation",
+        "position": 5,
+        "title": "BBC News Pidgin now dey on Whatsapp",
+        "visualProminence": "NORMAL",
+        "visualStyle": "BANNER"
+      },
+      {
+        "summaries": [
+          {
+            "type": "video",
+            "duration": "PT2M17S",
+            "isLive": false,
+            "title": "How woman wey get male and female sex organs life change after she share her tori ",
+            "firstPublished": "2025-02-17T09:47:54.608Z",
+            "lastPublished": "2025-02-17T09:47:54.608Z",
+            "link": "https://www.bbc.com/pidgin/articles/cn8y837v15lo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/2b31/live/b4187d00-ed13-11ef-bd1b-d536627785f2.jpg.webp",
+            "description": "For June 2024, BBC Pidgin tell di tori of a 32-year-old woman wey bin dey suffer from sexual differentiation disorder. Now, she share how tins don change after she bin share her tori.",
+            "imageAlt": "Halima Sani",
+            "id": "cn8y837v15lo"
+          },
+          {
+            "type": "video",
+            "duration": "PT4M2S",
+            "isLive": false,
+            "title": "'I no fit poo-poo from di normal place again after my colostomy surgery sake of cancer' ",
+            "firstPublished": "2025-02-10T19:34:40.728Z",
+            "lastPublished": "2025-02-10T19:34:40.728Z",
+            "link": "https://www.bbc.com/pidgin/articles/cn7gnkvpz5go",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/4264/live/39fa1f60-e7cd-11ef-a697-15c17ea31ce4.jpg.webp",
+            "description": "Dem diagnose Tobiloba wit rectal cancer, adenocarcinoma for March 2022.",
+            "imageAlt": "Tobiloba Oluwasina",
+            "id": "cn7gnkvpz5go"
+          },
+          {
+            "type": "video",
+            "duration": "PT2M55S",
+            "isLive": false,
+            "title": "'My eye don see sometin becos I get one breast' - Woman wey dey live wit Poland syndrome",
+            "firstPublished": "2025-01-27T05:52:26.970Z",
+            "lastPublished": "2025-01-27T05:54:56.048Z",
+            "link": "https://www.bbc.com/pidgin/articles/cgq03pw2d5do",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/4ec4/live/d5c6e960-d962-11ef-968b-2da667d2a722.jpg.webp",
+            "description": "Poland Syndrome na rare deformity of pikin for womb, absence of muscles, breast and nipple for di upper part of di body.",
+            "imageAlt": "Foto of Titilope Akintola for her house",
+            "id": "cgq03pw2d5do"
+          },
+          {
+            "type": "video",
+            "duration": "PT2M48S",
+            "isLive": false,
+            "title": "Meet 'Madam Rice' di Nigerian local rice miller wey her tori dey ginger pipo",
+            "firstPublished": "2025-01-22T11:17:56.732Z",
+            "lastPublished": "2025-01-22T11:17:56.732Z",
+            "link": "https://www.bbc.com/pidgin/articles/cz9eyn9z35ko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/e234/live/d249ee50-d8b7-11ef-87df-d575b9a434a4.jpg.webp",
+            "description": "'Madam Rice' tori and journey of being a local rice miller dey ginger her and don make her popular for social media.\n",
+            "imageAlt": "Madam Rice",
+            "id": "cz9eyn9z35ko"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 11,
+        "link": "https://www.bbc.com/pidgin/topics/c3l19z3k1ert",
+        "curationId": "urn:bbc:vivo:curation:a08ec947-e61c-4371-9923-8a027ab97fe7",
+        "curationType": "vivo-stream",
+        "position": 6,
+        "title": "Ginger Me",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "video",
+            "duration": "PT14S",
+            "isLive": false,
+            "title": "Billboard with 4 summaries",
+            "firstPublished": "2018-05-21T14:16:43.000Z",
+            "lastPublished": "2018-05-21T14:16:43.000Z",
+            "link": "https://www.bbc.com/mundo/noticias-internacional-23201396",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/1A29/test/_63679660_p01hj5nn.jpg.webp",
+            "description": "Description v3",
+            "imageAlt": "Rio Olympics banner",
+            "id": "4e2253b8-463b-5641-af77-0erferf701"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "summary 2",
+            "firstPublished": "2021-11-23T12:22:27.913Z",
+            "lastPublished": "2021-12-07T10:38:31.565Z",
+            "link": "https://www.bbc.com/pidgin/articles/crrrkxz2k0ko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/37e1/test/80c445c0-5431-11ec-b75b-9f9fe566903d.jpg.webp",
+            "description": "maybe it makes a difference to have pidgin stuff in here",
+            "imageAlt": "Image to ignore",
+            "id": "crrrkxrefero"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "summary 3",
+            "firstPublished": "2019-07-12T13:00:04.940Z",
+            "lastPublished": "2022-10-13T15:10:19.230Z",
+            "link": "https://www.bbc.com/pidgin/articles/cwl08rd38l6o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/2d93/test/494cb5d0-dee2-11e9-b23c-f1ac9644bb55.jpg.webp",
+            "imageAlt": "Map of France showing Paris and Cognac",
+            "id": "cwl0erfl6o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "summary 4",
+            "firstPublished": "2019-07-12T13:00:04.940Z",
+            "lastPublished": "2022-10-13T15:10:19.230Z",
+            "link": "https://www.bbc.com/pidgin/articles/cwl08rd38l6o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/2d93/test/494cb5d0-dee2-11e9-b23c-f1ac9644bb55.jpg.webp",
+            "imageAlt": "Map of France showing Paris and Cognac",
+            "id": "cwwewef38l6o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:95a506ac-1793-4e5a-94f1-888be4f4befege",
+        "curationType": "tipo-curation",
+        "position": 7,
+        "title": "Billboard 4 summaries test",
+        "visualProminence": "MAXIMUM",
+        "visualStyle": "BANNER"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Tins to know as Ghana begin cholera vaccination afta 50 pipo die across di kontri",
+            "firstPublished": "2025-02-14T09:39:46.538Z",
+            "lastPublished": "2025-02-14T09:39:46.538Z",
+            "link": "https://www.bbc.com/pidgin/articles/c2d368wlylwo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/28bb/live/aba86be0-eab0-11ef-80bb-c173c17a1e53.jpg.webp",
+            "description": "Data from di health service and ministry of health don show say di greater Accra, Eastern, Central, Ashanti and Western regions na di regions wey don record cases.",
+            "imageAlt": "vaccination",
+            "id": "c2d368wlylwo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Why prosecutor declare former Ghana finance minister Ken Ofori-Atta wanted",
+            "firstPublished": "2025-02-12T12:26:08.777Z",
+            "lastPublished": "2025-02-12T12:26:08.777Z",
+            "link": "https://www.bbc.com/pidgin/articles/cn0yjk705xlo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/21aa/live/445eb5c0-e939-11ef-941d-09f9daf0f081.jpg.webp",
+            "description": "Kissi Agyebeng say di former minister allegedly dey involved for many ogbonge deals under di former president Nana Akufo-Addo goment.",
+            "imageAlt": "Ghana's ex-finance minister",
+            "id": "cn0yjk705xlo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Shell ignore warnings of di 'wayo' about di clean-up - whistleblower tell BBC",
+            "firstPublished": "2025-02-12T10:03:09.664Z",
+            "lastPublished": "2025-02-12T10:03:09.664Z",
+            "link": "https://www.bbc.com/pidgin/articles/c5yvld4zpe7o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/32b3/live/5205fbf0-e8a0-11ef-a819-277e390a7a08.jpg.webp",
+            "description": "Di oil giant dey face allegations say dem ignore warnings about di clean-up scheme wey dey based on corruption.",
+            "imageAlt": "Pool of black oil in di palm of one man hand for Ogoni, Nigeria",
+            "id": "c5yvld4zpe7o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Nigeria beat Ghana for corruption as island nation maintain status as least corrupt African kontri - CPI report",
+            "firstPublished": "2025-02-11T13:33:25.088Z",
+            "lastPublished": "2025-02-11T13:33:25.088Z",
+            "link": "https://www.bbc.com/pidgin/articles/cgj2qv16l24o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/0252/live/7f89a2d0-e87c-11ef-a819-277e390a7a08.jpg.webp",
+            "description": "Dis latest report show say Ghana score 42 out 100 points and rank 80 out of 180. Wetin e mean be say Nigeria corrupt pass Ghana.",
+            "imageAlt": "John Mahama and Bola Tinubu",
+            "id": "cgj2qv16l24o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 39,
+        "link": "https://www.bbc.com/pidgin/topics/c404v061z85t",
+        "curationId": "urn:bbc:vivo:curation:588d9c07-a818-4dd3-904a-bc425394a8ff",
+        "curationType": "vivo-stream",
+        "position": 8,
+        "title": "Tori from Africa",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Who be Kim Sae-ron, di South Korean actress wey die at 24",
+            "firstPublished": "2025-02-17T08:41:10.721Z",
+            "lastPublished": "2025-02-17T09:37:06.514Z",
+            "link": "https://www.bbc.com/pidgin/articles/c8j8jpvey0ko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/6fd4/live/05338e70-ec6d-11ef-a319-fb4e7360c4ec.jpg.webp",
+            "description": "Kim start her career as a child actor and she bin dey seen as one of di kontri most promising actresses.",
+            "imageAlt": "Kim Sae-ron, one young woman wit long dark brown hair and brown eyes, stand for front of one purple wall on a red carpet. ",
+            "id": "c8j8jpvey0ko"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Why Diddy dey sue TV network NBC for $100m ",
+            "firstPublished": "2025-02-13T15:20:03.082Z",
+            "lastPublished": "2025-02-13T15:48:26.225Z",
+            "link": "https://www.bbc.com/pidgin/articles/c805z588440o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/cd4a/live/e044a050-e964-11ef-bd1b-d536627785f2.jpg.webp",
+            "description": "Rapper Sean \"Diddy\" Combs don file a $100m (£80.5m) lawsuit against pipo wey make one recent documentary about am, as im kotinu to face allegations of sexual assault.",
+            "imageAlt": "Sean \"Diddy\" Combs speak during di Congressional Black Caucus Foundation Annual Legislative Conference National Town Hall on September 21, 2023 for Washington, DC",
+            "id": "c805z588440o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Who be Natasha Osawaru wey Tuface dey tok about?",
+            "firstPublished": "2025-02-12T06:41:44.416Z",
+            "lastPublished": "2025-02-12T06:41:44.416Z",
+            "link": "https://www.bbc.com/pidgin/articles/cwypz825437o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/6095/live/dbe9a810-e90b-11ef-bd1b-d536627785f2.png.webp",
+            "description": "All dis dey happun weeks afta Tuface announce im separation from Anie Macaulay Idibia, im wife of ova 10 years.",
+            "imageAlt": "Natasha Osawaru",
+            "id": "cwypz825437o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Wizkid, Mohbad, Qing Madi and odas artistes wey make 2025 Headies nomination list",
+            "firstPublished": "2025-02-12T17:11:51.937Z",
+            "lastPublished": "2025-02-12T17:11:51.937Z",
+            "link": "https://www.bbc.com/pidgin/articles/cy8pz16l100o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/205f/live/3ce0edb0-e964-11ef-a5ae-231c1271acdf.jpg.webp",
+            "description": "Headies release di full list of nominees for di 17th award ceremony on 12 February for dia Twitter handle.\nLate Mohbad wey pipo sabi as Ilerioluwa Aloba bag three nominations dis year, almost two years afta im die in September 2023.\n",
+            "imageAlt": "Mohbad, Qing Madi, Wizkid and Tiwa Savage",
+            "id": "cy8pz16l100o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/pidgin/topics/cqywjyzk2vyt",
+        "curationId": "urn:bbc:tipo:list:82f0640b-d503-498e-a9bb-2b70365e36df",
+        "curationType": "tipo-curation",
+        "position": 9,
+        "title": "Entertainment corner",
+        "visualProminence": "LOW",
+        "additionalText": {
+          "plainText": "All di latest enertainment tori from around di world"
+        },
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Real Madrid vs Manchester City, and oda fixtures for di Champions League knockout play-off second leg",
+            "firstPublished": "2025-02-11T09:57:42.029Z",
+            "lastPublished": "2025-02-13T10:52:48.687Z",
+            "link": "https://www.bbc.com/pidgin/articles/cq8k9lqxyd8o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/faf5/live/6452c2b0-e9e6-11ef-a319-fb4e7360c4ec.jpg.webp",
+            "description": "Di two-leg Champions League knockout phase play-offs start dis week, Manchester City and Real Madrid dey among di 16 teams wey don dey hope to reach di last 16.",
+            "imageAlt": "Harry Kane of Bayern Munich celebrate as im score im team second goal during di Uefa Champions League 2024/25 League Knockout Play-off First Leg match between Celtic FC and FC Bayern München for Celtic Park on February 12, 2025 in Glasgow, Scotland",
+            "id": "cq8k9lqxyd8o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Kendrick Lamar, Donald Trump, and celebs wey show for Super Bowl ",
+            "firstPublished": "2025-02-10T10:00:48.820Z",
+            "lastPublished": "2025-02-10T10:00:48.820Z",
+            "link": "https://www.bbc.com/pidgin/articles/cew5rdyv8xno",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/afed/live/c4059be0-e795-11ef-bd1b-d536627785f2.jpg.webp",
+            "description": "Oda stars wey show for New Orleans include Jay-Z, Blue Ivy, Samuel L Jackson and Bradley Cooper.",
+            "imageAlt": "Kendrick Lamar perform for Super Bowl",
+            "id": "cew5rdyv8xno"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Chiefs or Eagles? Expert Super Bowl 59 predictions",
+            "firstPublished": "2025-02-09T11:09:40.757Z",
+            "lastPublished": "2025-02-09T11:09:40.757Z",
+            "link": "https://www.bbc.com/pidgin/articles/cpwxe9qq1geo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/6f19/live/fc271af0-e653-11ef-a819-277e390a7a08.jpg.webp",
+            "description": "We get Super Bowl 59 predictions from our BBC Sport team along wit TV analysts, current NFL players and even Hollywood stars.",
+            "imageAlt": "Di Super Bowl trophy and Chiefs and Eagles helmets",
+            "id": "cpwxe9qq1geo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Authorties launch investigation into death of 'Pooley' afta dem stab am during match violence",
+            "firstPublished": "2025-02-03T18:41:37.185Z",
+            "lastPublished": "2025-02-03T18:41:37.185Z",
+            "link": "https://www.bbc.com/pidgin/articles/c2d31n7ek7ko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/749d/live/33b3e9d0-e24e-11ef-92f7-95f549ee11cf.jpg.webp",
+            "description": "Di Ghana football association don postpone next round of league matches afta one fan die during stabbing incident for game between Nsoatreman and Kotoko",
+            "imageAlt": "The fan who died ",
+            "id": "c2d31n7ek7ko"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 40,
+        "link": "https://www.bbc.com/pidgin/topics/cjgn7gv77vrt",
+        "curationId": "urn:bbc:vivo:curation:c61facc2-a4fa-4890-a0d9-a1718cccf88d",
+        "curationType": "vivo-stream",
+        "position": 10,
+        "title": "Sport",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "WhatsApp",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://bit.ly/3VN51yR",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7a76/live/81f7b470-eac7-11ee-9410-0f893255c2a0.png.webp",
+            "imageAlt": "WhatsApp",
+            "id": "https%3A%2F%2Fwhatsapp.com%2Fchannel%2F0029VaUm1Ss3WHTbgIXrjw3D"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Instagram",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.instagram.com/bbcnewspidgin/",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/14e1/live/e52afd10-929b-11ee-8df3-1d2983d8814f.png.webp",
+            "imageAlt": "Instagram logo",
+            "id": "https%3A%2F%2Fwww.instagram.com%2Fbbcafrique%2F"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Facebook",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.facebook.com/bbcnewspidgin",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d3ce/live/baa6e4f0-929b-11ee-91bf-230bfab3fcba.png.webp",
+            "imageAlt": "Facebook logo",
+            "id": "https%3A%2F%2Fwww.facebook.com%2Fbbcnewsafrique"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "X",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://x.com/bbcnewspidgin",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c238/live/f608c4a0-929b-11ee-91bf-230bfab3fcba.png.webp",
+            "imageAlt": "X logo",
+            "id": "https%3A%2F%2Ftwitter.com%2Fbbcafrique"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:262fa008-cb7d-476e-9376-7f1f10d744d5",
+        "curationType": "tipo-curation",
+        "position": 7,
+        "title": "BBC Pidgin Social networks",
+        "visualProminence": "NORMAL",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "curationId": "urn:bbc:onward-journeys:most:read?=site=News",
+        "curationType": "most-popular",
+        "position": 11,
+        "title": "Di one wey oda users dey read well well",
+        "visualProminence": "NORMAL",
+        "visualStyle": "RANKED",
+        "link": "https://www.bbc.com/pidgin/popular/read",
+        "mostRead": {
+          "generated": "2025-02-18T10:50:13.121Z",
+          "lastRecordTimeStamp": "2025-02-18T10:48:00Z",
+          "firstRecordTimeStamp": "2025-02-18T08:48:00Z",
+          "items": [
+            {
+              "id": "urn:bbc:optimo:asset:ce858gepkdno",
+              "rank": 1,
+              "title": "Nigeria give time first batch of  deportees from Trump US go land and oda details about di process",
+              "href": "https://www.bbc.com/pidgin/articles/ce858gepkdno",
+              "timestamp": "2025-02-17T12:33:32.216Z"
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cwy1yeywpy8o",
+              "rank": 2,
+              "title": "Why police declare controversial singer Portable wanted",
+              "href": "https://www.bbc.com/pidgin/articles/cwy1yeywpy8o",
+              "timestamp": "2025-02-18T07:10:57.029Z"
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c360685jjl5o",
+              "rank": 3,
+              "title": "Ned Nwoko deny 'pregnancy, 7th wife marriage' report to Nollywood actress",
+              "href": "https://www.bbc.com/pidgin/articles/c360685jjl5o",
+              "timestamp": "2025-02-17T15:08:38.667Z"
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cvg533vvrxwo",
+              "rank": 4,
+              "title": "Niger Delta leader Edwin Clark don die",
+              "href": "https://www.bbc.com/pidgin/articles/cvg533vvrxwo",
+              "timestamp": "2025-02-18T10:17:42.661Z"
+            },
+            {
+              "id": "urn:bbc:optimo:asset:ce3n337yqv5o",
+              "rank": 5,
+              "title": "Passengers tok wetin dia eye see di moment Delta Air Lines plane crash  and turn upside down for Toronto",
+              "href": "https://www.bbc.com/pidgin/articles/ce3n337yqv5o",
+              "timestamp": "2025-02-18T07:27:48.871Z"
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cp8q8zmnj3eo",
+              "rank": 6,
+              "title": "Pope dey face serious health situation - Vatican tok",
+              "href": "https://www.bbc.com/pidgin/articles/cp8q8zmnj3eo",
+              "timestamp": "2025-02-17T14:48:11.257Z"
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cwy12xn4xpgo",
+              "rank": 7,
+              "title": "State creation: Full list of 31 new states wey House of Reps propose",
+              "href": "https://www.bbc.com/pidgin/articles/cwy12xn4xpgo",
+              "timestamp": "2025-02-06T14:40:55.861Z"
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cn4m4lnv37zo",
+              "rank": 8,
+              "title": "Davido para as three die for Osun local government crisis",
+              "href": "https://www.bbc.com/pidgin/articles/cn4m4lnv37zo",
+              "timestamp": "2025-02-17T17:46:27.198Z"
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c627p02e7jjo",
+              "rank": 9,
+              "title": "How police arrest man wey allegedly kill im 23-year-old girlfriend for Kwara",
+              "href": "https://www.bbc.com/pidgin/articles/c627p02e7jjo",
+              "timestamp": "2025-02-15T16:20:53.542Z"
+            },
+            {
+              "id": "510267e1-5f04-4f57-854f-f9a0cc7f3610",
+              "rank": 10,
+              "title": "Lagos state DSVA, police and odas dey investigate alleged sexual violence involving minors for Chrisland",
+              "href": "/pidgin/tori-61138014",
+              "timestamp": "2022-04-19T07:40:58.000Z"
+            }
+          ]
+        }
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:ck3yk9nz25qt",
+        "contentType": "index-home",
+        "pageIdentifier": "pidgin.page",
+        "pageTitle": "Domot - BBC News Pidgin"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}
