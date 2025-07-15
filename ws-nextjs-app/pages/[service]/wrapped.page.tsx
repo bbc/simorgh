@@ -1,9 +1,7 @@
-/** @jsx jsx */
 // @ts-nocheck
 
 import { GetServerSideProps } from 'next';
 import { useEffect, use } from 'react';
-import { jsx } from '@emotion/react';
 import { ParsedUrlQuery } from 'querystring';
 import omit from 'ramda/src/omit';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -26,7 +24,6 @@ import {
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
 } from '#app/lib/logger.const';
 import { Services, Variants } from '#models/types/global';
-import styles from './wrappedStyles';
 
 import extractHeaders from '../../../src/server/utilities/extractHeaders';
 
@@ -240,19 +237,19 @@ const pageLayout = () => {
   return (
     <>
       <main>
-        <div css={styles.outerGrid}>
-          <div css={styles.wideSection}>
-            <h1 css={styles.h1}>
+        <div className="max-w-screen-group-4 mx-auto px-4">
+          <div className="w-full">
+            <h1 className="text-2xl font-bold mb-4">
               <Calculator /> 2024
             </h1>
             <div>
-              <h2 css={styles.h2}>
+              <h2 className="text-xl font-semibold mb-2">
                 <Clock /> <span id="timespent" />
               </h2>
-              <h2 css={styles.h2}>
+              <h2 className="text-xl font-semibold mb-2">
                 <Book />
               </h2>
-              <ul css={styles.ul}>
+              <ul className="list-disc pl-5 mb-4">
                 <li>
                   <Words /> <span id="words" />{' '}
                 </li>
@@ -260,11 +257,11 @@ const pageLayout = () => {
                   <Articles /> <span id="article" />{' '}
                 </li>
               </ul>
-              <h2 css={styles.h2}>
+              <h2 className="text-xl font-semibold mb-2">
                 <Favourites />
               </h2>
               <ol id="topiclist" />
-              <h2 css={styles.h2}>
+              <h2 className="text-xl font-semibold mb-2">
                 <Calendar />
               </h2>
               <canvas

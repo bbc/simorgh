@@ -10,9 +10,6 @@ import Script from 'next/script';
 
 import React, { HTMLAttributes, ReactElement } from 'react';
 import { Helmet, HelmetData } from 'react-helmet';
-import { CacheProvider } from '@emotion/react';
-import createEmotionServer from '@emotion/server/create-instance';
-import createCache from '@emotion/cache';
 
 import isAppPath from '#app/routes/utils/isAppPath';
 import isLitePath from '#app/routes/utils/isLitePath';
@@ -77,10 +74,8 @@ const handleServerLogging = (ctx: DocumentContext) => {
 
 type DocProps = {
   clientSideEnvVariables: EnvConfig;
-  css: string;
   helmet: HelmetData;
   htmlAttrs: HTMLAttributes<HTMLHtmlElement>;
-  ids: string[];
   isApp: boolean;
   isLite: boolean;
   title: ReactElement;
@@ -92,26 +87,11 @@ export default class AppDocument extends Document<DocProps> {
     const isApp = isAppPath(url);
     const isLite = isLitePath(url);
 
-    const cache = createCache({ key: 'css' });
-    const { extractCritical } = createEmotionServer(cache);
-
-    const originalRenderPage = ctx.renderPage;
-    ctx.renderPage = () =>
-      originalRenderPage({
-        enhanceApp: App => props => (
-          <CacheProvider value={cache}>
-            <App {...props} />
-          </CacheProvider>
-        ),
-      });
-
     const initialProps = await Document.getInitialProps(ctx);
 
     if (isLite) {
       initialProps.html = litePageTransforms(initialProps.html);
     }
-
-    const { css, ids } = extractCritical(initialProps.html);
 
     // Read env variables from the server and expose them to the client
     const clientSideEnvVariables = getProcessEnvAppVariables();
@@ -121,17 +101,14 @@ export default class AppDocument extends Document<DocProps> {
     return {
       ...initialProps,
       clientSideEnvVariables,
-      css,
       helmet: Helmet.renderStatic(),
-      ids,
       isApp,
       isLite,
     };
   }
 
   render() {
-    const { clientSideEnvVariables, css, helmet, ids, isApp, isLite } =
-      this.props;
+    const { clientSideEnvVariables, helmet, isApp, isLite } = this.props;
 
     const htmlAttrs = helmet.htmlAttributes.toComponent();
     const title = helmet.title.toComponent();
@@ -148,7 +125,7 @@ export default class AppDocument extends Document<DocProps> {
             helmetMetaTags={helmetMetaTags}
             helmetScriptTags={helmetScriptTags}
             htmlAttrs={htmlAttrs}
-            styles={css}
+            styles=""
             title={title}
           />
         );
@@ -171,10 +148,6 @@ export default class AppDocument extends Document<DocProps> {
               {helmetMetaTags}
               {helmetLinkTags}
               {helmetScriptTags}
-              <style
-                data-emotion={ids.join(' ')}
-                dangerouslySetInnerHTML={{ __html: css }}
-              />
             </Head>
             <body>
               <Main />
