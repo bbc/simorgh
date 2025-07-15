@@ -121,6 +121,9 @@ const styles = {
     css({
       display: 'block',
       gap: `${spacings.FULL}rem`,
+      listStyle: 'none',
+      padding: 0,
+      margin: 0,
       [mq.GROUP_4_MIN_WIDTH]: {
         columnCount: 4,
         columnGap: `${spacings.FULL}rem`,
@@ -144,6 +147,7 @@ const styles = {
       [mq.GROUP_4_MIN_WIDTH]: {
         display: 'inline-block',
         borderBottom: 'none',
+        borderRight: `${pixelsToRem(1)}rem solid ${palette.GREY_3}`,
       },
     }),
 
