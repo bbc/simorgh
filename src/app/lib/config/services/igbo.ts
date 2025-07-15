@@ -46,6 +46,24 @@ export const service: DefaultServiceConfig = {
     twitterSite: '@BBCNews', // to be updated
     showAdPlaceholder: false,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'Ọkwa azụmahịa WhatsApp',
+      brandTitle: 'Anyị nọ na WhatsApp',
+      brandDescription:
+        `Ugbua, i nwereike inweta akụkọ BBC Igbo niile n'ekwenti gị.`,
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0lq7863.png',
+        alt: `WhatsApp BBC News Igbo nọ n'obaozi`,
+      },
+      linkLabel: {
+        text: 'Pịa aka ebe a ka i soro anyị',
+        href: 'https://www.whatsapp.com/channel/0029Vb7AO14Ae5Vgu4VMmJ0R',
+      },
+      skipLink: {
+        text: `Gafere %title% ma gaa n'ihu na-agụ`,
+        endTextVisuallyHidden: 'Ebe %title% kwụsịrị',
+      },
+    },
     translations: {
       pagination: {
         previousPage: 'Ikpeazụ',
