@@ -109,6 +109,15 @@ const getBaseConfig = BUNDLE_TYPE => ({
           },
         ],
       },
+      // Handle CSS files
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'postcss-loader',
+        ],
+      },
       IS_PROD
         ? {
             test: /\.(js|jsx|mjs)$/,

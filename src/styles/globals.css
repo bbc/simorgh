@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* BBC GEL Focus indicators */
+  a:focus-visible,
+  button:focus-visible,
+  button[type='submit']:focus-visible,
+  button[type='button']:focus-visible,
+  h3:focus-visible {
+    @apply outline-3 outline-black shadow-focus outline-offset-3;
+  }
+
+  /* Remove focus indicators */
+  a.focusIndicatorRemove:focus-visible,
+  button.focusIndicatorRemove:focus-visible {
+    @apply outline-none shadow-none outline-offset-0;
+  }
+
+  /* Display modifications for focus indicators */
+  a.focusIndicatorDisplayBlock:focus-visible {
+    @apply block;
+  }
+
+  a.focusIndicatorDisplayInlineBlock:focus-visible {
+    @apply inline-block w-full;
+  }
+
+  a.focusIndicatorDisplayTableCell:focus-visible {
+    @apply table-cell;
+  }
+
+  /* Reduced width focus indicators */
+  a.focusIndicatorReducedWidth:focus-visible {
+    @apply outline-2 outline-black shadow-focus outline-offset-1;
+  }
+
+  /* Black outline only */
+  a.focusIndicatorOutlineBlack:focus-visible {
+    @apply outline-3 outline-black shadow-none outline-offset-0;
+  }
+
+  /* Inverted focus indicators */
+  a.focusIndicatorInvert:focus-visible,
+  button.focusIndicatorInvert:focus-visible {
+    @apply outline-3 outline-white shadow-focus-invert outline-offset-3;
+  }
+
+  /* Reduced width inverted focus indicators */
+  a.focusIndicatorReducedWidthInverted:focus-visible {
+    @apply outline-2 outline-white shadow-focus-invert outline-offset-1;
+  }
+}
+
+@layer components {
+  /* BBC GEL Typography utilities */
+  .text-responsive-trafalgar {
+    @apply text-trafalgar;
+  }
+
+  .text-responsive-canon {
+    @apply text-canon;
+  }
+
+  /* Add more responsive typography utilities as needed */
+}

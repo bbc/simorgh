@@ -28,8 +28,6 @@
     "@babel/core": "7.28.0",
     "@babel/plugin-proposal-export-default-from": "7.27.1",
     "@babel/preset-react": "7.27.1",
-    "@emotion/babel-plugin": "11.13.5",
-    "@emotion/jest": "^11.11.0",
     "@jest/environment": "^29.7.0",
     "@jest/types": "^29.6.3",
     "@next/swc-darwin-arm64": "15.3.2",

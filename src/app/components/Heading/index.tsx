@@ -1,7 +1,4 @@
-/** @jsx jsx */
-
 import React, { FC, HTMLAttributes, ForwardedRef, forwardRef } from 'react';
-import { jsx } from '@emotion/react';
 
 import { GelFontSize, FontVariant } from '../../models/types/theming';
 import Text from '../Text';
@@ -43,23 +40,16 @@ const Heading: FC<Props> = forwardRef(
     ref: ForwardedRef<HTMLElement>,
   ) => {
     const element: Element = `h${level}`;
+    
+    // Combine margin-0 with any additional className
+    const combinedClassName = ['m-0', className].filter(Boolean).join(' ');
+    
     return (
       <Text
         as={element}
         fontVariant={fontVariant}
-        className={className}
+        className={combinedClassName}
         size={size || sizes[element]}
-        css={{
-          /*
-           * margin: 0 is used to cancel the default spacing
-           * above and below the component.
-           * This is because we don't rely on one default spacing
-           * for all heading elements.
-           * Each use of this component will have to explicitly set
-           * the spacings with the `css` prop.
-           */
-          margin: 0,
-        }}
         {...(ref && { ref })}
         {...htmlAttributes}
       >

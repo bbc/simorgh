@@ -56,7 +56,6 @@ module.exports = api => {
     ],
     '@babel/preset-react', // transform JSX to JS
     '@babel/preset-typescript',
-    '@emotion/babel-preset-css-prop',
   ];
 
   return {

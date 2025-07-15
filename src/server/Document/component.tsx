@@ -1,6 +1,5 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
-import { EmotionCritical } from '@emotion/server/create-instance';
 
 import { HelmetData } from 'react-helmet';
 import LiteRenderer from './Renderers/LiteRenderer';
@@ -8,8 +7,14 @@ import CanonicalRenderer from './Renderers/CanonicalRenderer';
 import AmpRenderer from './Renderers/AmpRenderer';
 import litePageTransforms from './Renderers/litePageTransforms';
 
+type AppData = {
+  html: string;
+  css: string;
+  ids: string[];
+};
+
 type Props = {
-  app: EmotionCritical;
+  app: AppData;
   data: Record<string, unknown>;
   helmet: HelmetData;
   isAmp: boolean;

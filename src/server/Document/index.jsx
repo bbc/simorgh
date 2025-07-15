@@ -2,9 +2,6 @@ import path from 'path';
 import React from 'react';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import { ChunkExtractor, ChunkExtractorManager } from '@loadable/server';
-import { CacheProvider } from '@emotion/react';
-import createEmotionServer from '@emotion/server/create-instance';
-import createCache from '@emotion/cache';
 import { Helmet } from 'react-helmet';
 import { ServerApp } from '#containers/App';
 import DocumentComponent from './component';
@@ -24,8 +21,6 @@ const renderDocument = async ({
   url,
 }) => {
   const isDev = process.env.NODE_ENV === 'development';
-  const cache = createCache({ key: 'bbc' });
-  const { extractCritical } = createEmotionServer(cache);
   const modernStatsFile = path.resolve(
     `${__dirname}/public/modern-loadable-stats-${process.env.SIMORGH_APP_ENV}.json`,
   );
@@ -57,24 +52,20 @@ const renderDocument = async ({
 
   const context = {};
 
-  const app = extractCritical(
-    renderToString(
-      <ChunkExtractorManager extractor={commonLoadableState}>
-        <CacheProvider value={cache}>
-          <ServerApp
-            location={url}
-            routes={routes}
-            data={data}
-            bbcOrigin={bbcOrigin}
-            context={context}
-            service={service}
-            isAmp={isAmp}
-            isApp={isApp}
-            isLite={isLite}
-          />
-        </CacheProvider>
-      </ChunkExtractorManager>,
-    ),
+  const appHtml = renderToString(
+    <ChunkExtractorManager extractor={commonLoadableState}>
+      <ServerApp
+        location={url}
+        routes={routes}
+        data={data}
+        bbcOrigin={bbcOrigin}
+        context={context}
+        service={service}
+        isAmp={isAmp}
+        isApp={isApp}
+        isLite={isLite}
+      />
+    </ChunkExtractorManager>,
   );
 
   if (context.url) {
@@ -96,6 +87,12 @@ const renderDocument = async ({
     !isDev && legacyExtractor.getScriptElements(getScriptAttributes('legacy'));
 
   const links = modernExtractor.getLinkElements(getLinkAttributes); // TODO investigate a way to conditionally preload modern/legacy scripts
+
+  const app = {
+    html: appHtml,
+    css: '', // No longer needed with Tailwind
+    ids: [], // No longer needed with Tailwind
+  };
 
   const doc = renderToStaticMarkup(
     <DocumentComponent

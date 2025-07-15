@@ -16,6 +16,7 @@ import {
   ServerSideExperiment,
 } from '../../src/app/models/types/global';
 import PageWrapper from '../../src/app/components/PageLayoutWrapper';
+import '../styles/globals.css';
 
 interface Props extends AppProps {
   pageProps: {

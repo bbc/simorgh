@@ -1,12 +1,11 @@
 /* eslint-disable react/jsx-filename-extension  */
 import React from 'react';
-import createCache from '@emotion/cache';
-import { CacheProvider } from '@emotion/react';
 import { loadableReady } from '@loadable/component';
 import { hydrateRoot } from 'react-dom/client';
 import { template, templateStyles } from '#lib/joinUsTemplate';
 import loggerNode from '#lib/logger.node';
 import { ClientApp } from './app/legacy/containers/App';
+import './styles/globals.css';
 
 const logger = loggerNode();
 const data = window.SIMORGH_DATA || {};
@@ -24,13 +23,9 @@ const WINDOW_LOCATION_PATH = window.location.pathname;
 if (SIMORGH_DATA_PATH === WINDOW_LOCATION_PATH) {
   loadableReady(
     () => {
-      const cache = createCache({ key: 'bbc' });
-
       hydrateRoot(
         root,
-        <CacheProvider value={cache}>
-          <ClientApp data={data} />
-        </CacheProvider>,
+        <ClientApp data={data} />
       );
     },
     {
