@@ -1,10 +1,5 @@
 import React, { Fragment } from 'react';
-import styled from '@emotion/styled';
 import path from 'ramda/src/path';
-
-const Clearer = styled.div`
-  clear: both;
-`;
 
 const Blocks = ({ blocks, componentsToRender }) =>
   blocks.map((block, index) => {
@@ -21,7 +16,7 @@ const Blocks = ({ blocks, componentsToRender }) =>
     }
 
     const Wrapper = path(['simorghMetadata', 'clear'], block)
-      ? Clearer
+      ? ({ children }) => <div className="clear-both">{children}</div>
       : Fragment;
 
     const { type: typeOfPreviousBlock } = blocks[index - 1] || {};

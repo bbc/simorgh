@@ -1,19 +1,10 @@
 import React, { use } from 'react';
-import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import {
   StoryPromoLi,
   StoryPromoUl,
 } from '#psammead/psammead-story-promo-list/src';
 import useViewTracker from '#hooks/useViewTracker';
-import {
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MAX,
-} from '#psammead/gel-foundations/src/breakpoints';
-import {
-  GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
-} from '#psammead/gel-foundations/src/spacings';
 import { OptimizelyContext } from '@optimizely/react-sdk';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import CpsOnwardJourney from '../CpsOnwardJourney';
@@ -24,42 +15,6 @@ const eventTrackingData = {
     componentName: 'features',
   },
 };
-
-const StoryPromoUlFeatures = styled(StoryPromoUl)`
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: ${GEL_SPACING_DBL};
-    row-gap: ${GEL_SPACING_TRPL};
-  }
-`;
-
-const StoryPromoLiFeatures = styled(StoryPromoLi)`
-  line-height: 0;
-  height: 100%;
-
-  &:first-child {
-    padding: 0 0 0.5rem 0;
-  }
-
-  &:last-child {
-    padding: 0.5rem 0 0 0;
-  }
-
-  &:not(:first-child):not(:last-child) {
-    padding: 0.5rem 0 0.5rem 0;
-  }
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    padding: 0;
-
-    &:first-child,
-    &:last-child,
-    &:not(:first-child):not(:last-child) {
-      padding: 0;
-    }
-  }
-`;
 
 const PromoListComponent = ({
   promoItems,
@@ -82,13 +37,14 @@ const PromoListComponent = ({
   const viewTracker = useViewTracker(eventTrackingDataWithOptimizely.block);
 
   return (
-    <StoryPromoUlFeatures>
+    <StoryPromoUl className="group-3:grid group-3:grid-cols-2 group-3:gap-x-double group-3:gap-y-triple">
       {promoItems.map((item, promoIndex) => {
         return (
-          <StoryPromoLiFeatures
+          <StoryPromoLi
             key={item.id || item.uri}
             {...viewTracker}
             border={false}
+            className="leading-none h-full first:pb-2 last:pt-2 not-first-not-last:py-2 group-3:p-0"
           >
             <FrostedGlassPromo
               item={item}
@@ -100,10 +56,10 @@ const PromoListComponent = ({
               eventTrackingData={eventTrackingDataWithOptimizely}
               sectionType="features-and-analysis"
             />
-          </StoryPromoLiFeatures>
+          </StoryPromoLi>
         );
       })}
-    </StoryPromoUlFeatures>
+    </StoryPromoUl>
   );
 };
 

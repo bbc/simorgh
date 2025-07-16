@@ -1,16 +1,10 @@
 import React from 'react';
-import styled from '@emotion/styled';
-
-const Wrapper = styled.div`
-  display: inline-block;
-  width: ${props => props.size};
-  height: ${props => props.size};
-`;
 
 const MediaIndicator = ({ size }) => (
-  <Wrapper
+  <div
     aria-hidden="true"
-    size={size}
+    className="inline-block"
+    style={{ width: size, height: size }}
     dangerouslySetInnerHTML={{
       __html: `
       <svg class="rounded-play-button" focusable="false" width=${size} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">

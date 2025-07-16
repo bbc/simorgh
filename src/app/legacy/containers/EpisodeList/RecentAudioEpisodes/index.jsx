@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { use } from 'react';
-import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import {
   formatDuration,
@@ -8,42 +7,12 @@ import {
 } from '#psammead/psammead-timestamp-container/src/utilities';
 import Timestamp from '#psammead/psammead-timestamp-container/src';
 import SectionLabel from '#psammead/psammead-section-label/src';
-import {
-  GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
-  GEL_SPACING_QUAD,
-} from '#psammead/gel-foundations/src/spacings';
-import {
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
 import { RequestContext } from '#contexts/RequestContext';
 import EpisodeList from '#containers/EpisodeList';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
-
-const Spacer = styled.aside`
-  position: relative;
-  margin-bottom: ${GEL_SPACING_QUAD};
-`;
-const StyledSectionLabel = styled(SectionLabel)`
-  margin-bottom: 0;
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    margin-bottom: ${GEL_SPACING_DBL};
-  }
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    margin-bottom: ${GEL_SPACING_TRPL};
-  }
-`;
-const StyledTimestamp = styled(Timestamp)`
-  display: inline;
-`;
-
-const InlineDiv = styled.div`
-  display: inline;
-`;
 
 const RecentAudioEpisodes = ({
   masterBrand,
@@ -100,16 +69,17 @@ const RecentAudioEpisodes = ({
   const liProps = { 'data-e2e': 'recent-episodes-list-item' };
 
   return (
-    <Spacer role="complementary" aria-labelledby="recent-episodes">
-      <StyledSectionLabel
+    <aside role="complementary" aria-labelledby="recent-episodes" className="relative mb-quad">
+      <SectionLabel
         script={script}
         service={service}
         dir={dir}
         bar={false}
         labelId="recent-episodes"
+        className="mb-0 group-2:mb-double group-3:mb-triple"
       >
         {recentEpisodesTranslation}
-      </StyledSectionLabel>
+      </SectionLabel>
       <EpisodeList
         script={script}
         service={service}
@@ -154,27 +124,34 @@ const RecentAudioEpisodes = ({
                 </span>
               </EpisodeList.DateTimeDuration>
               {episode.episodeTitle && (
-                <InlineDiv>
+                <div className="inline">
                   <EpisodeList.DateTimeDuration
                     hasBorder
                     dir={dir}
-                    as={StyledTimestamp}
-                    timestamp={episode.timestamp}
-                    format="LL"
-                    dateTimeFormat="YYYY-MM-DD"
-                    padding={false}
-                    script={script}
-                    locale={datetimeLocale}
-                    service={service}
-                    timezone={timezone}
+                    as={({ children, ...props }) => (
+                      <Timestamp
+                        {...props}
+                        className="inline"
+                        timestamp={episode.timestamp}
+                        format="LL"
+                        dateTimeFormat="YYYY-MM-DD"
+                        padding={false}
+                        script={script}
+                        locale={datetimeLocale}
+                        service={service}
+                        timezone={timezone}
+                      >
+                        {children}
+                      </Timestamp>
+                    )}
                   />
-                </InlineDiv>
+                </div>
               )}
             </EpisodeList.Link>
           </EpisodeList.Episode>
         ))}
       </EpisodeList>
-    </Spacer>
+    </aside>
   );
 };
 

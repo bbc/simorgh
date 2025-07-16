@@ -1,81 +1,9 @@
 import React, { use } from 'react';
 import SectionLabel from '#psammead/psammead-section-label/src';
-import styled from '@emotion/styled';
-import {
-  GEL_GROUP_1_SCREEN_WIDTH_MAX,
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MAX,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
-} from '#psammead/gel-foundations/src/spacings';
-
 import { GridWrapper, GridItemLarge } from '#components/Grid';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import SkipLinkWrapper from '../../components/SkipLinkWrapper';
 import { GHOST } from '../../../components/ThemeProvider/palette';
-
-const Wrapper = styled.div`
-  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-    padding: 0 ${GEL_SPACING};
-  }
-
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    padding: 0 ${GEL_SPACING_DBL};
-  }
-`;
-
-const gridMarginSmall = `
-  margin-bottom: ${GEL_SPACING_DBL};
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    margin-bottom: ${GEL_SPACING_TRPL};
-  }
-`;
-
-const LegacyGridItemLarge = styled(GridItemLarge)`
-  ${gridMarginSmall}
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    padding-bottom: 1.5rem;
-    margin-bottom: 2rem;
-  }
-  @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    padding-bottom: 2rem;
-    margin-bottom: 1rem;
-  }
-`;
-
-const StyledSectionLabel = styled(SectionLabel)`
-  margin-top: 0;
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    margin-top: 0;
-  }
-  ${({ columnType }) =>
-    columnType === 'main' &&
-    `
-    margin: 0;
-    @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-      padding: ${GEL_SPACING_DBL} 0;
-    }
-  `}
-`;
-
-// Apply the correct top & bottom padding around the single story promo
-const SingleContentWrapper = styled.div`
-  ${({ columnType }) =>
-    columnType === 'secondary' &&
-    `
-    @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-      padding-top: ${GEL_SPACING_DBL};
-    }
-    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-      padding-bottom: ${GEL_SPACING_TRPL};
-    }
-  `}
-`;
 
 const OptionallyRenderedSkipWrapper = ({
   skipLink = null,
@@ -99,18 +27,44 @@ const CpsOnwardJourneyWrapper = ({
   dir,
 }) =>
   parentColumns ? (
-    <Wrapper
+    <div
       data-e2e={labelId}
       {...a11yAttributes}
-      {...(className ? { className } : undefined)}
+      className={`group-1:px-full group-2:px-double group-3:px-double ${className}`}
     >
       {children}
-    </Wrapper>
+    </div>
   ) : (
     <GridWrapper data-e2e={labelId} {...a11yAttributes}>
-      <LegacyGridItemLarge dir={dir}>{children}</LegacyGridItemLarge>
+      <GridItemLarge
+        dir={dir}
+        className="mb-double group-3:mb-triple group-3:pb-6 group-3:mb-8 max-group-3:pb-8 max-group-3:mb-4"
+      >
+        {children}
+      </GridItemLarge>
     </GridWrapper>
   );
+
+const StyledSectionLabel = ({ columnType, ...props }) => (
+  <SectionLabel
+    {...props}
+    className={`mt-0 group-3:mt-0 ${
+      columnType === 'main' ? 'm-0 group-3:py-double' : ''
+    }`}
+  />
+);
+
+const SingleContentWrapper = ({ columnType, children }) => (
+  <div
+    className={
+      columnType === 'secondary'
+        ? 'group-3:pt-double group-4:pb-triple'
+        : ''
+    }
+  >
+    {children}
+  </div>
+);
 
 const CpsOnwardJourney = ({
   className = '',

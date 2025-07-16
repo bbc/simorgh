@@ -1,7 +1,4 @@
 import React, { useMemo } from 'react';
-import styled from '@emotion/styled';
-import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
-
 import { EpisodeContext } from './helpers';
 import Episode from './Episode';
 import Link from './Link';
@@ -10,26 +7,6 @@ import Description from './Description';
 import DateTimeDuration from './DateTimeDuration';
 import Image from './Image';
 import MediaIndicator from './MediaIndicator';
-
-const StyledEpisodeList = styled.ul`
-  list-style: none;
-  padding: 0;
-  margin: 0;
-`;
-
-const StyledEpisodeListItem = styled.li`
-  padding: ${GEL_SPACING_DBL} 0;
-  line-height: 0;
-  &:first-child {
-    padding-top: 0;
-  }
-  &:last-child {
-    padding-bottom: 0;
-  }
-  &:not(:last-child) {
-    border-bottom: 1px ${props => props.theme.palette.CLOUD_LIGHT} solid;
-  }
-`;
 
 const EpisodeList = ({
   children = [],
@@ -50,13 +27,17 @@ const EpisodeList = ({
   return (
     <EpisodeContext.Provider value={episodeListContextValue}>
       {hasMultipleChildren ? (
-        <StyledEpisodeList role="list" {...ulProps}>
+        <ul role="list" className="list-none p-0 m-0" {...ulProps}>
           {children.map(child => (
-            <StyledEpisodeListItem key={child.key} {...liProps}>
+            <li
+              key={child.key}
+              className="py-double leading-none first:pt-0 last:pb-0 not-last:border-b not-last:border-cloud-light"
+              {...liProps}
+            >
               {child}
-            </StyledEpisodeListItem>
+            </li>
           ))}
-        </StyledEpisodeList>
+        </ul>
       ) : (
         children
       )}

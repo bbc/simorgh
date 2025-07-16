@@ -1,22 +1,8 @@
 import React, { use, useEffect, useRef } from 'react';
-import styled from '@emotion/styled';
 import { ConsentBanner } from '#psammead/psammead-consent-banner/src';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import BannerText from './Text';
 import getDataAttribute from './getDataAttribute';
-
-// Styles to pin the consent banner to the bottom of the view port
-// The z-index ensures the banner is always at the front, the value
-// being the max value for an integer, this avoiding issues where includes
-// use high z-indexes, showing in front of the consent banner:
-// https://github.com/bbc/simorgh/issues/8720
-const ConsentBannerWrapper = styled.div`
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 2147483647;
-`;
 
 const AcceptButton = ({ message, onClick, dataAttribute }) => (
   <button onClick={onClick} type="button" {...dataAttribute}>
@@ -61,7 +47,7 @@ const CanonicalConsentBannerContainer = ({
   }, []);
 
   return (
-    <ConsentBannerWrapper>
+    <div className="fixed bottom-0 left-0 w-full z-[2147483647]">
       <ConsentBanner
         dir={dir}
         title={consentBannerConfig.title}
@@ -85,7 +71,7 @@ const CanonicalConsentBannerContainer = ({
         service={service}
         headingRef={headingRef}
       />
-    </ConsentBannerWrapper>
+    </div>
   );
 };
 

@@ -1,21 +1,9 @@
 import React, { use } from 'react';
-import styled from '@emotion/styled';
 import Brand from '#psammead/psammead-brand/src';
 import { useTheme } from '@emotion/react';
 import { servicesWithVariants } from '#lib/utilities/variantHandler';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
-
-const StyledBrand = styled(Brand)`
-  position: relative;
-  z-index: 1;
-  svg {
-    fill: currentColor;
-    @media screen and (forced-colors: active) {
-      fill: linkText;
-    }
-  }
-`;
 
 export const getBrandPath = (service, variant) => {
   if (service === 'ws') return '/ws/languages';
@@ -52,7 +40,7 @@ const BrandContainer = ({
   const brandPath = getBrandPath(service, variant);
 
   return (
-    <StyledBrand
+    <Brand
       product={product}
       serviceLocalisedName={serviceLocalizedName}
       svgHeight={svgMaxHeight}
@@ -64,6 +52,7 @@ const BrandContainer = ({
       scriptLink={scriptLink}
       isLongBrand={longBrands.includes(service)}
       ref={brandRef}
+      className="relative z-[1] [&_svg]:fill-current [&_svg]:forced-colors:fill-[linkText]"
       {...props}
     />
   );
