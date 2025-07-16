@@ -53,6 +53,7 @@ declare global {
     processClientDeviceAndSendStaticBeacon: (
       atiUrl: string,
       reverbUrl?: string,
+      forwardingURL?: string,
     ) => void;
   }
 }

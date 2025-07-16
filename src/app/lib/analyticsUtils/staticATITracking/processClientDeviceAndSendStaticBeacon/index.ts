@@ -1,6 +1,10 @@
 /* istanbul ignore next */
 export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
-  window.processClientDeviceAndSendStaticBeacon = (atiURL, reverbURL) => {
+  window.processClientDeviceAndSendStaticBeacon = (
+    atiURL,
+    reverbURL,
+    forwardingURL = '',
+  ) => {
     const {
       screen: { width, height, colorDepth, pixelDepth },
       innerWidth,
@@ -11,6 +15,7 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
     const hours = now.getHours();
     const mins = now.getMinutes();
     const secs = now.getSeconds();
+    const epochTimestamp = now.getTime().toString();
 
     // COOKIE SETTINGS
     const cookieName = 'atuserid';
@@ -74,7 +79,9 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
         .replace('{timestamp}', params.hl)
         .replace('{language}', params.lng)
         .replaceAll('{referrer}', params.ref)
-        .replace('{idclient}', params.idclient);
+        .replace('{idclient}', params.idclient)
+        .replace('{epochTimestamp}', epochTimestamp)
+        .replace('~forwardingLink~', forwardingURL);
 
       window.sendStaticBeacon(processedReverbUrl);
     } else if (atiURL) {

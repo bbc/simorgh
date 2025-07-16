@@ -6,9 +6,11 @@ import constructStaticATIUrl from '#app/lib/analyticsUtils/staticATITracking/con
 import {
   CLICK_EVENT,
   STATIC_ATI_CLICK_TRACKING,
+  STATIC_REVERB_CLICK_TRACKING,
 } from '#app/lib/analyticsUtils/analytics.const';
 import { RequestContext } from '#app/contexts/RequestContext';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
+import constructReverbUrl from '#app/lib/analyticsUtils/staticATITracking/constructReverbUrl';
 import useTrackingToggle from '../useTrackingToggle';
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon/index';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -157,12 +159,18 @@ export default (eventTrackingData = {}) => {
   });
 
   const enableStaticTracking = !isHydrated && !isAmp;
+  const reverbStaticUrl = constructReverbUrl({
+    eventTrackingData,
+    eventType: CLICK_EVENT,
+  });
 
   return {
     ...(enableStaticTracking && {
       [STATIC_ATI_CLICK_TRACKING]: staticAtiUrl,
     }),
-
+    ...(enableStaticTracking && {
+      [STATIC_REVERB_CLICK_TRACKING]: reverbStaticUrl,
+    }),
     ...(isHydrated && { onClick: clickTracker }),
   };
 };

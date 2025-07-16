@@ -87,7 +87,11 @@ describe('Click tracking script', () => {
 
     expect(
       window.processClientDeviceAndSendStaticBeacon as jest.Mock,
-    ).toHaveBeenCalledWith('https://logws1363.ati-host.net/?');
+    ).toHaveBeenCalledWith(
+      'https://logws1363.ati-host.net/?',
+      null,
+      'http://localhost/gahuza',
+    );
   });
 
   it('Should NOT call processClientDeviceAndSendStaticBeacon() more than once for the same url', () => {
