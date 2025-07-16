@@ -1,6 +1,6 @@
 import React from 'react';
 import { ImageResponse } from 'next/og';
-import { BLACK, GREY_6, WHITE } from '#app/components/ThemeProvider/palette';
+import { BLACK, WHITE } from '#app/components/ThemeProvider/palette';
 import { LayoutProps } from './types';
 import BackgroundImage from './BackgroundImage';
 
@@ -77,24 +77,14 @@ const socialCardLayout = async ({
           </div>
           {/* Badges */}
           {badges && badges.length > 0 && (
-            <div style={{ display: 'flex', flexDirection: 'row' }}>
-              {badges.filter(Boolean).map((child, index, arr) => (
-                <div
-                  // eslint-disable-next-line react/no-array-index-key
-                  key={index}
-                  style={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    backgroundColor: BLACK,
-                    padding: 15,
-                    borderRadius: 30,
-                    marginRight: index < arr.length - 1 ? '20px' : '0px',
-                    border: `1px solid ${GREY_6}`,
-                  }}
-                >
-                  {child}
-                </div>
-              ))}
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                gap: 15,
+              }}
+            >
+              {badges.filter(Boolean).map(child => child)}
             </div>
           )}
         </div>
