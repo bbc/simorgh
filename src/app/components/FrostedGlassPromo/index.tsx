@@ -1,6 +1,4 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import React, { PropsWithChildren, use } from 'react';
 import pick from 'ramda/src/pick';
 import Lazyload from 'react-lazyload';
@@ -13,7 +11,6 @@ import { RequestContext } from '../../contexts/RequestContext';
 import FrostedGlassPanel from './FrostedGlassPanel';
 import withData from './withData';
 
-import styles from './styles';
 import { EventTrackingBlock } from '../../models/types/eventTracking';
 import { PromoProps } from './types';
 
@@ -61,18 +58,19 @@ const FrostedGlassPromo = ({
 
   const promoText = (
     <React.Fragment>
-      <h3 css={styles.header}>
+      <h3 className="m-0">
         <a
-          css={theme => [
-            styles.anchor,
-            {
-              color: isAmp ? theme.palette.BLACK : theme.palette.WHITE,
-
-              '&:visited': {
-                color: isAmp ? theme.palette.METAL : theme.palette.GREY_3,
-              },
-            },
-          ]}
+          className={`
+            font-gel-serif-regular
+            text-[0.9375rem] group-2:text-[1rem]
+            font-normal
+            leading-[1.33] group-2:leading-[1.25]
+            inline-block
+            no-underline
+            my-[0.875rem] mx-4 group-2:mx-8
+            focus:underline
+            ${isAmp ? 'text-gel-black visited:text-gel-metal' : 'text-white visited:text-gel-grey-3'}
+          `}
           href={relativeUrl}
           {...(eventTrackingData && clickTracker)}
         >
@@ -87,9 +85,28 @@ const FrostedGlassPromo = ({
   // Anchors cannot be self-closing under the HTML spec
   /* eslint-disable react/self-closing-comp */
   return (
-    <div css={styles.componentWrapper} data-testid={`frosted-promo-${index}`}>
+    <div 
+      className="
+        relative
+        w-full
+        flex
+        flex-col
+        h-full
+        no-underline
+        hover:[&_a]:underline
+        visited:[&_a]:text-gel-grey-3
+      " 
+      data-testid={`frosted-promo-${index}`}
+    >
       <a
-        css={styles.clickableArea}
+        className="
+          absolute
+          top-0
+          bottom-0
+          left-0
+          right-0
+          z-[5]
+        "
         href={relativeUrl}
         {...(eventTrackingData && clickTracker)}
         aria-hidden="true"
@@ -115,20 +132,17 @@ const FrostedGlassPromo = ({
         )}
       />
       <Lazyload
-        css={{ height: '100%' }}
+        className="h-full"
         offset={PANEL_OFFSET}
         once
         placeholder={
           // Placeholder always gets rendered on AMP
           <div
-            css={theme => [
-              styles.lazyloadPlaceholder,
-              {
-                backgroundColor: isAmp
-                  ? theme.palette.WHITE
-                  : theme.palette.GREY_8,
-              },
-            ]}
+            className={`
+              min-h-[100px]
+              pb-8
+              ${isAmp ? 'bg-white' : 'bg-gel-grey-8'}
+            `}
             data-testid="frosted-glass-lazyload-placeholder"
           >
             {promoText}

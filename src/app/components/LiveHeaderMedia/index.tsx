@@ -1,6 +1,3 @@
-/** @jsx jsx */
-/** @jsxFrag */
-import { jsx } from '@emotion/react';
 import React, { memo, use, useState } from 'react';
 import Text from '#app/components/Text';
 import { MediaCollection } from '#app/components/MediaLoader/types';
@@ -13,7 +10,6 @@ import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import { regexPunctuationSymbols } from '#app/lib/utilities/idSanitiser';
 import { service as newsConfig } from '#lib/config/services/news';
-import styles from './index.styles';
 import WARNING_LEVELS from '../MediaLoader/configs/warningLevels';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { Close, Play } from '../icons';
@@ -120,11 +116,11 @@ const LiveHeaderMedia = ({
       size="pica"
       fontVariant="sansBold"
       as="span"
-      css={[
-        styles.mediaDescription,
-        showMedia ? styles.closeMediaDescription : styles.openMediaDescription,
-      ]}
-      className="hoverStylesText"
+      className={`
+        text-white
+        ${showMedia ? 'pl-6' : 'p-6'}
+        hoverStylesText
+      `}
     >
       {showMedia && <VisuallyHiddenText>{closeVideo}, </VisuallyHiddenText>}
       <Text size="pica" fontVariant="sansBold" as="span">
@@ -135,20 +131,34 @@ const LiveHeaderMedia = ({
 
   return (
     <>
-      <noscript css={styles.nojs}>
+      <noscript className="
+        text-gel-pica 
+        font-gel-sans-regular 
+        text-white
+        [&_div]:mt-8
+        [&_strong]:block
+        [&_strong]:mt-8
+        [&_strong]:font-normal
+        no-js:hidden
+      ">
         <p>{description}</p>
         <strong>{noJs}</strong>
       </noscript>
-      <div css={styles.componentContainer} {...viewTracker}>
+      <div className="w-full no-js:hidden" {...viewTracker}>
         <button
           type="button"
           onClick={e => handleClick(e)}
           data-testid="watch-now-close-button"
-          className="focusIndicatorInvert"
-          css={[
-            showMedia ? styles.closeButton : styles.openButton,
-            styles.mediaButton,
-          ]}
+          className={`
+            focusIndicatorInvert
+            w-full
+            relative
+            p-0
+            ${showMedia ? 
+              'border-0 bg-transparent text-left' : 
+              'cursor-pointer bg-transparent border-0 text-left'
+            }
+          `}
         >
           <div>
             {description}
@@ -157,7 +167,7 @@ const LiveHeaderMedia = ({
                 as="span"
                 size="brevier"
                 fontVariant="sansRegular"
-                css={styles.guidanceMessage}
+                className="text-white pl-6"
                 data-testid="warning-message"
               >
                 <VisuallyHiddenText>
@@ -168,9 +178,23 @@ const LiveHeaderMedia = ({
             )}
           </div>
           {!showMedia && (
-            <div className="hoverStylesCTA" css={styles.watchLiveCTA}>
+            <div className="hoverStylesCTA bg-gel-postbox p-6 flex items-center justify-center">
               <Text
-                css={styles.watchLiveCTAText}
+                className="
+                  text-white
+                  flex
+                  items-center
+                  justify-center
+                  [&_svg]:h-8
+                  [&_svg]:w-8
+                  [&_svg]:align-middle
+                  [&_svg]:fill-current
+                  [&_svg]:text-white
+                  [&_svg]:me-4
+                  forced-colors:[&_svg]:text-buttonText
+                  hover:underline
+                  focus-visible:underline
+                "
                 size="greatPrimer"
                 fontVariant="sansBold"
               >
@@ -181,12 +205,22 @@ const LiveHeaderMedia = ({
             </div>
           )}
           {showMedia && (
-            <div css={styles.closeContainer}>
+            <div className="
+              absolute
+              top-6
+              right-6
+              w-8
+              h-8
+              [&_svg]:fill-white
+              [&_svg]:w-8
+              [&_svg]:h-8
+              forced-colors:[&_svg]:fill-buttonText
+            ">
               <Close />
             </div>
           )}
         </button>
-        <div css={showMedia ? styles.mediaLoader : styles.hideComponent}>
+        <div className={showMedia ? 'block' : 'hidden'}>
           <MemoizedMediaPlayer blocks={mediaCollection} uniqueId={vpid} />
         </div>
       </div>

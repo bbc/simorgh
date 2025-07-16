@@ -1,9 +1,6 @@
-/** @jsx jsx */
-import { PropsWithChildren, use } from 'react';
-import { jsx } from '@emotion/react';
+import React, { PropsWithChildren, use } from 'react';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import styles from './index.styles';
 import { TextProps } from '../LiveLabel/types';
 
 const Text = ({
@@ -51,7 +48,12 @@ const Text = ({
       className={className}
     >
       <span
-        css={styles.liveLabelText}
+        className="
+          text-gel-live-dark 
+          inline-block 
+          font-gel-sans-bold 
+          me-4
+        "
         dir={dir}
         {...(ariaHidden && { 'aria-hidden': 'true' })}
       >

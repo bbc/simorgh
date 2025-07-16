@@ -1,13 +1,11 @@
-/** @jsxRuntime classic */
-/** @jsx  jsx  */
 import { PropsWithChildren } from 'react';
-import { jsx } from '@emotion/react';
-import styles from './index.style';
 
 const bold = ({ children }: PropsWithChildren) => <b>{children}</b>;
 
 const italic = ({ children }: PropsWithChildren) => (
-  <i css={styles.italicStyle}>{children}</i>
+  <i className="font-gel-sans-regular-italic font-inherit font-weight-inherit">
+    {children}
+  </i>
 );
 
 const attributeComponents = {

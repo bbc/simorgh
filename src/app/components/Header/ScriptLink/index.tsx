@@ -1,10 +1,7 @@
-/** @jsx jsx */
-import { use } from 'react';
-import { jsx } from '@emotion/react';
+import React, { use } from 'react';
 import useToggle from '#hooks/useToggle';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import styles from './index.styles';
 
 const ScriptLink = () => {
   const { scriptLink } = use(ServiceContext);
@@ -30,12 +27,33 @@ const ScriptLink = () => {
 
   return (
     <a
-      css={styles.link}
+      className="
+        focusIndicatorRemove
+        text-white
+        text-gel-brevier
+        font-gel-sans-regular
+        bg-gel-postbox
+        no-underline
+        block
+        py-2
+        px-4
+        group-2:p-2
+        group-2:mx-2
+        group-2:rounded-[0.125rem]
+        group-2:text-center
+        group-2:inline-block
+        group-2:transition-transform
+        group-2:duration-300
+        group-2:hover:scale-110
+        group-2:focus:scale-110
+        group-2:motion-reduce:hover:scale-100
+        group-2:motion-reduce:focus:scale-100
+        group-2:motion-reduce:transition-none
+      "
       href={pathToVariant}
       data-variant={alternateVariant}
-      className="focusIndicatorRemove"
     >
-      <span css={styles.container}>{text}</span>
+      <span>{text}</span>
     </a>
   );
 };

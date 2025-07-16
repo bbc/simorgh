@@ -1,12 +1,9 @@
-/** @jsx jsx */
-import { use } from 'react';
-import { jsx } from '@emotion/react';
+import React, { use } from 'react';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import Paragraph from '../Paragraph';
 import Text from '../Text';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
-import styles from './index.styles';
 import defaultTranslations from './defaultTranslations';
 import CallToActionLink from '../CallToActionLink';
 
@@ -31,13 +28,33 @@ const LiteSiteSummary = () => {
       role="region"
       data-e2e="lite-summary"
       aria-labelledby={id}
-      css={styles.outerContainer}
+      className="
+        mx-4 
+        group-2:mx-8 
+        bg-white 
+        border-b 
+        border-solid 
+        border-gel-grey-3
+      "
     >
       <Text as="strong" id={id} hidden>
         {dataSaving}
       </Text>
-      <div css={styles.container}>
-        <Paragraph size="brevier" css={styles.message}>
+      <div className="
+        py-8 
+        group-1:pt-12 
+        group-1:pb-4 
+        max-w-[63.4rem] 
+        relative 
+        group-4:mx-auto
+      ">
+        <Paragraph 
+          size="brevier" 
+          className="
+            mb-2 
+            group-1:mb-4
+          "
+        >
           {onboardingMessage}
         </Paragraph>
         <Paragraph data-e2e="to-main-site">
@@ -45,10 +62,10 @@ const LiteSiteSummary = () => {
             url={canonicalLink}
             data-ignore-lite
             {...clickTrackerHandler}
-            css={
+            className={
               informationPageLink
-                ? styles.topLinkSpacing
-                : styles.singleLinkSpacing
+                ? 'py-6' // topLinkSpacing
+                : 'py-6 mb-6 group-1:mb-2' // singleLinkSpacing
             }
             alignWithMargin
             size="brevier"
@@ -61,7 +78,12 @@ const LiteSiteSummary = () => {
           <Paragraph data-e2e="information-page">
             <CallToActionLink
               url={informationPageLink}
-              css={styles.bottomLinkSpacing}
+              className="
+                py-2 
+                pb-8 
+                group-1:py-4 
+                group-1:pb-8
+              "
               alignWithMargin
               size="brevier"
               fontVariant="sansRegular"

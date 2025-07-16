@@ -1,11 +1,8 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
 import React, { Fragment, PropsWithChildren, useState, use } from 'react';
-import { Global, jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
-import styles from './index.styles';
 import { RequestContext } from '../../contexts/RequestContext';
 import { HOME_PAGE } from '../../routes/utils/pageTypes';
+import BASE64_PLACEHOLDER_IMAGE from './base64Placeholder';
 
 export type ImageProps = {
   alt: string;
@@ -90,6 +87,20 @@ const Image = ({
   };
   const imgSrcSet = getImgSrcSet();
   const imgSizes = getImgSizes();
+  
+  const placeholderBackgroundStyle = {
+    backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
+    backgroundPosition: 'center center',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: '60px 17px',
+    '@media (min-width: 37.5rem)': {
+      backgroundSize: '77px 22px',
+    },
+    '@media (min-width: 63rem)': {
+      backgroundSize: '93px 27px',
+    },
+  };
+  
   return (
     <>
       {preload && (
@@ -104,39 +115,29 @@ const Image = ({
         </Helmet>
       )}
       <div
-        className={className}
-        css={theme => [
-          styles.wrapper,
-          hasFixedAspectRatio
-            ? styles.wrapperFixedAspectRatio
-            : styles.wrapperResponsiveRatio,
-          isPortraitOrientation && styles.portraitOrientation,
-          showPlaceholder && [
-            styles.placeholder,
-            {
-              backgroundColor: darkPlaceholder
-                ? theme.palette.SHADOW
-                : theme.palette.LUNAR,
-            },
-          ],
-        ]}
+        className={`
+          relative
+          ${hasFixedAspectRatio ? 'h-0' : 'h-full'}
+          ${isPortraitOrientation ? 'absolute' : ''}
+          ${className || ''}
+        `}
         style={{
           paddingBottom: hasFixedAspectRatio ? legacyBrowserAspectRatio : 0,
           ...(!hasCaption && { overflow: 'hidden' }),
+          ...(showPlaceholder && {
+            backgroundColor: darkPlaceholder ? '#0A0A0A' : '#F5F5F5',
+            ...placeholderBackgroundStyle,
+          }),
         }}
       >
         {isAmp ? (
           <>
             {!hasDimensions && (
-              // ensures amp-img will render when width and height is not provided
-              // https://amp.dev/documentation/examples/style-layout/how_to_support_images_with_unknown_dimensions/
-              <Global
-                styles={{
-                  '.bbc-image img': {
-                    objectFit: 'cover',
-                  },
-                }}
-              />
+              <style>{`
+                .bbc-image img {
+                  object-fit: cover;
+                }
+              `}</style>
             )}
             <amp-img
               class="bbc-image"
@@ -173,18 +174,17 @@ const Image = ({
               loading={lazyLoad ? 'lazy' : 'eager'}
               width={width}
               height={height}
-              css={[
-                styles.image,
-                hasFixedAspectRatio
-                  ? styles.imageFixedAspectRatio
-                  : styles.imageResponsiveRatio,
-              ]}
+              className={`
+                w-full
+                object-cover
+                ${hasFixedAspectRatio ? 'h-auto' : 'h-full'}
+              `}
               fetchPriority={fetchPriority}
               style={{
                 aspectRatio: hasFixedAspectRatio
                   ? `${aspectRatioX} / ${aspectRatioY}`
                   : 'auto',
-              }} // aspectRatio used in combination with the objectFit:cover will center the image horizontally and vertically if aspectRatio prop is different from image's intrinsic aspect ratio
+              }}
             />
           </ImageWrapper>
         )}

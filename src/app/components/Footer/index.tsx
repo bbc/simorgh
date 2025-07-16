@@ -1,11 +1,8 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
-import { MouseEvent, use } from 'react';
+import React, { MouseEvent, use } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import Link from './Link';
 import List from './List';
-import styles from './index.styles';
 
 const openPrivacyManagerModal = (e: MouseEvent<HTMLAnchorElement>) => {
   e.preventDefault();
@@ -58,22 +55,41 @@ export default () => {
     .filter(Boolean);
 
   return (
-    <div css={styles.siteWideLinksWrapper}>
+    <div className="
+      text-gel-brevier 
+      font-gel-sans-regular 
+      bg-gel-ebon 
+      px-8 
+      group-1:px-4
+    ">
       <div
-        css={
-          trustProjectLink
-            ? styles.constrainedWrapperWithTrustProjectLink
-            : styles.constrainedWrapperWithoutTrustProjectLink
-        }
+        className={`
+          max-w-group-4 
+          mx-auto 
+          ${trustProjectLink ? 'pt-4' : ''}
+        `}
       >
         <List elements={elements} trustProjectLink={trustProjectLink} />
         {extraLinkElements.length > 0 && (
           <List elements={extraLinkElements} extraLinks />
         )}
         {collectiveNewsroomText && (
-          <p css={styles.paragraphWithBorderBottom}>{collectiveNewsroomText}</p>
+          <p className="
+            border-b 
+            border-gel-shadow 
+            text-white 
+            m-0 
+            py-8
+          ">
+            {collectiveNewsroomText}
+          </p>
         )}
-        <p css={styles.paragraph}>
+        <p className="
+          text-white 
+          m-0 
+          py-8
+          [&_a]:p-0
+        ">
           <span lang="en-GB">{`\u00A9`} </span>
           {`${new Date().getFullYear()} ${copyrightText}`}{' '}
           {externalLink && (

@@ -1,12 +1,11 @@
-/** @jsx jsx */
-import { jsx, useTheme } from '@emotion/react';
-import { PropsWithChildren } from 'react';
+import React, { PropsWithChildren } from 'react';
 
 import useImageColour from '../../hooks/useImageColour';
 
-import styles from './styles';
-
 const BLUR_RADIUS = 15;
+const scaleAmount = 1 + BLUR_RADIUS / 100;
+const scaleX = `scaleX(${scaleAmount})`;
+const scaleY = `scaleY(${-1 * scaleAmount})`;
 
 type FrostedGlassPanelProps = {
   image: string;
@@ -20,12 +19,8 @@ const FrostedGlassPanel = ({
   minimumContrast = 8,
   paletteSize = 10,
 }: PropsWithChildren<FrostedGlassPanelProps>) => {
-  const {
-    palette: { GREY_8 },
-  } = useTheme();
-
   const { isLoading, colour } = useImageColour(image, {
-    fallbackColour: GREY_8,
+    fallbackColour: '#525252', // gel-grey-8
     minimumContrast,
     contrastColour: '#ffffff',
     paletteSize,
@@ -35,22 +30,55 @@ const FrostedGlassPanel = ({
     backgroundImage: `url('${image}')`,
   };
 
+  const backgroundColour = colour?.rgb?.join(',');
+
   return (
-    <div css={styles.panelWrapper}>
+    <div className="
+      relative
+      overflow-hidden
+      flex
+      flex-col
+      h-full
+    ">
       <div
-        css={[
-          styles.panelChildren,
-          { background: `rgb(${colour?.rgb?.join(',')})` },
-          !isLoading && {
-            [`@supports (filter: blur(${BLUR_RADIUS}px))`]: {
-              background: `rgba(${colour?.rgb?.join(',')}, 0.62)`,
-            },
-          },
-        ]}
+        className="
+          relative
+          z-[3]
+          pb-8
+          transition-[background]
+          duration-500
+          ease-in-out
+          h-full
+        "
+        style={{
+          background: isLoading 
+            ? `rgb(${backgroundColour})` 
+            : `rgba(${backgroundColour}, 0.62)`,
+        }}
       >
         {children}
       </div>
-      <div css={styles.panelBackground} style={backgroundImageStyle} />
+      <div
+        className="
+          hidden
+          supports-[filter:blur(15px)]:block
+          z-[1]
+          absolute
+          bottom-0
+          top-[-15px]
+          left-0
+          right-0
+          bg-gel-grey-8
+          bg-no-repeat
+          bg-cover
+          bg-bottom
+        "
+        style={{
+          ...backgroundImageStyle,
+          transform: `${scaleX} ${scaleY}`,
+          filter: `blur(${BLUR_RADIUS}px)`,
+        }}
+      />
     </div>
   );
 };

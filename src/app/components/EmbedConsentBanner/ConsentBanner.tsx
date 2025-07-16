@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
-import { use, MouseEvent } from 'react';
+import React, { use, MouseEvent } from 'react';
 import pathOr from 'ramda/src/pathOr';
 
 import { RequestContext } from '#app/contexts/RequestContext';
@@ -11,7 +9,6 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import { Translations } from '../../models/types/translations';
 import useViewTracker from '../../hooks/useViewTracker';
 
-import consentBannerCss from './ConsentBanner.styles';
 import { ConsentBannerProviders, getEventTrackingData } from '.';
 
 type BannerUrls = {
@@ -189,10 +186,13 @@ const ConsentBanner = ({
     <div
       data-testid="consentBanner"
       id={`consentBanner${id ? `-${id}` : ''}`}
-      css={[
-        consentBannerCss.parent,
-        isLive && consentBannerCss.tranparentBorder,
-      ]}
+      className={`
+        bg-white dark:bg-gel-grey-3 
+        p-4 
+        flex flex-col justify-center items-start 
+        border border-solid border-gel-grey-5 dark:border-gel-grey-2
+        ${isLive ? 'border-transparent' : ''}
+      `}
       {...viewTracker}
     >
       <Text
@@ -203,7 +203,16 @@ const ConsentBanner = ({
       >
         {consentTranslations.heading}
       </Text>
-      <Paragraph data-testid="banner-body" css={consentBannerCss.textBody}>
+      <Paragraph 
+        data-testid="banner-body" 
+        className="
+          my-8 
+          [&_a]:text-current [&_a]:no-underline [&_a]:border-b [&_a]:border-solid [&_a]:border-gel-grey-10
+          [&_a:visited]:text-gel-grey-6 [&_a:visited]:border-gel-grey-6
+          [&_a:hover]:text-gel-postbox [&_a:hover]:border-b-2 [&_a:hover]:border-gel-postbox
+          [&_a:focus]:text-gel-postbox [&_a:focus]:border-b-2 [&_a:focus]:border-gel-postbox
+        "
+      >
         {consentTranslations.body}
       </Paragraph>
       <Text
@@ -211,7 +220,20 @@ const ConsentBanner = ({
         type="button"
         data-testid="banner-button"
         fontVariant="sansBold"
-        css={consentBannerCss.button}
+        className="
+          bg-white dark:bg-gel-grey-3 
+          border border-solid border-gel-philippine-grey dark:border-gel-grey-10
+          rounded-none 
+          p-4 
+          cursor-pointer 
+          text-gel-black
+          hover:bg-gel-postbox hover:text-white hover:border-gel-postbox hover:underline
+          focus:bg-gel-postbox focus:text-white focus:border-gel-postbox focus:underline
+          focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-0 focus-visible:outline-gel-black
+          forced-colors:bg-canvas forced-colors:text-canvasText forced-colors:border-canvasText
+          forced-colors:hover:bg-canvas forced-colors:hover:text-canvasText forced-colors:hover:border-canvasText
+          forced-colors:focus:bg-canvas forced-colors:focus:text-canvasText forced-colors:focus:border-canvasText
+        "
         {...clickHandler}
       >
         {consentTranslations.button}

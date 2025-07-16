@@ -1,9 +1,6 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
-import { PropsWithChildren, use } from 'react';
+import React, { PropsWithChildren, use } from 'react';
 import useToggle from '#app/hooks/useToggle';
 import { RequestContext } from '../../../contexts/RequestContext';
-import styles from './index.styles';
 
 type Props = {
   embeddableContent: string;
@@ -28,10 +25,10 @@ const EmbedHtml = ({ embeddableContent }: PropsWithChildren<Props>) => {
 
   return (
     <div
-      css={[
-        styles.embedDiv,
-        isUSElectionBanner && styles.electionBannerOverrides,
-      ]}
+      className={`
+        w-full
+        ${isUSElectionBanner ? 'max-w-[63rem] mx-auto' : ''}
+      `}
       suppressHydrationWarning
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{ __html: embeddableContent }}

@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
-import { use } from 'react';
+import React, { use } from 'react';
 import buildIChefURL from '../../lib/utilities/ichefURL';
 import urlWithPageAnchor from '../../lib/utilities/pageAnchor';
 import { createSrcsets } from '../../lib/utilities/srcSet';
@@ -8,7 +6,6 @@ import filterForBlockType from '../../lib/utilities/blockHandlers';
 import Copyright from '../Copyright';
 import Caption from '../Caption';
 import Image from '../Image';
-import styles from './index.styles';
 import { RequestContext } from '../../contexts/RequestContext';
 
 const DEFAULT_IMAGE_RES = 640;
@@ -89,7 +86,7 @@ const ImageWithCaption = ({
   const lazyLoad = shouldLazyLoad(position);
 
   return (
-    <figure className={className} css={styles.figure}>
+    <figure className={`m-0 pb-12 w-full ${className || ''}`}>
       <Image
         alt={alt}
         attribution={copyright}

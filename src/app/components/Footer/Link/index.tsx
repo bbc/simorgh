@@ -1,8 +1,5 @@
-/** @jsx jsx */
-import { css, jsx } from '@emotion/react';
-import { useState, useEffect, MouseEvent } from 'react';
+import React, { useState, useEffect, MouseEvent } from 'react';
 import { FooterLink } from '#app/models/types/serviceConfig';
-import styles from './index.styles';
 
 interface LinkProps extends FooterLink {
   inline?: boolean;
@@ -26,17 +23,25 @@ export default ({
     }
   }, [onlyShowIfJSenabled]);
 
-  let display = inline ? 'inline' : 'block';
+  let displayClass = inline ? 'inline' : 'block';
   if (!isVisible) {
-    display = 'none';
+    displayClass = 'hidden';
   }
 
   return (
     <a
-      css={[styles.link, css({ display: `${display}` })]}
+      className={`
+        font-gel-sans-bold
+        text-white
+        py-3
+        no-underline
+        hover:underline
+        focus:underline
+        focusIndicatorInvert
+        ${displayClass}
+      `}
       lang={lang}
       href={href}
-      className="focusIndicatorInvert"
       onClick={onClick}
     >
       {text}
