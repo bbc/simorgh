@@ -179,27 +179,26 @@ const PortraitVideoModal = ({
 
   return (
     <>
-      <Global styles={styles.bodyOverflowHidden} />
+      <Global styles={{ body: { overflow: 'hidden' } }} />
       <div
         role="dialog"
         aria-modal="true"
         aria-label={modalLabel}
         ref={modalRef}
-        css={styles.modal}
+        className="fixed inset-0 overflow-hidden w-full max-w-full h-full max-h-full bg-transparent border-none m-0 p-0 flex flex-col items-center justify-center z-[2147483647] after:content-[''] after:absolute after:inset-0 after:bg-black/90 after:backdrop-blur-sm after:z-0"
       >
         <button
           ref={closeButtonRef}
           type="button"
           data-testid="close-modal-button"
-          css={styles.closeButton}
-          className="focusIndicatorInvert"
+          className="hidden absolute top-8 right-8 bg-transparent border-2 border-white cursor-pointer p-0 z-10 hover:bg-postbox focus-visible:bg-postbox group-3:flex focusIndicatorInvert forced-colors:border-canvas-text"
           onClick={onClose}
         >
           {navigationIcons.cross}
           <VisuallyHiddenText>{closeVideo}</VisuallyHiddenText>
         </button>
         <MediaLoader
-          css={styles.mediaWrapper}
+          className="media-container w-auto h-full max-w-full max-h-full m-0 mx-0 z-10 group-3:max-h-[90%]"
           blocks={[blocks?.[selectedVideoIndex]]}
           eventMapping={{
             playlistLoaded: e => playlistLoadedCallback(e, blocks),

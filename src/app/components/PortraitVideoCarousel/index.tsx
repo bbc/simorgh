@@ -4,6 +4,7 @@ import { jsx } from '@emotion/react';
 import React, { useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { PortraitVideoCarouselProps } from '#app/models/types/portraitVideo';
+import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 import styles from './index.styles';
 import PortraitVideoModal from '../PortraitVideoModal';
 import { BumpLoader } from '../MediaLoader';
@@ -43,24 +44,24 @@ const PortraitVideoCarousel = ({
         aria-label={title}
         role="region"
         data-testid="portrait-video-carousel"
-        css={styles.section}
+        className="my-8 group-1:my-12 group-3:my-8"
       >
         <Heading
           level={2}
           size="doublePica"
           fontVariant="sansBold"
-          css={styles.heading}
+          className="inline-block text-grey-10 m-0 group-3:mt-8 group-3:mb-0"
         >
           {title}
         </Heading>
         <noscript>
           <PortraitVideoNoJs />
         </noscript>
-        <div css={styles.carouselContainer}>
+        <div className={`relative flex items-center ${NO_JS_CLASSNAME}:hidden`}>
           <PortraitCarouselNavigation scrollPaneRef={scrollRef} />
           <ul
             ref={scrollRef}
-            css={styles.carousel}
+            className="flex flex-1 overflow-x-auto scroll-smooth touch-pan-x snap-x snap-mandatory gap-4 group-3:gap-8 group-3:py-4 webkit-scrollbar-none scrollbar-none after:content-[''] after:hidden after:grow-0 after:shrink-0 after:group-3:block after:group-3:basis-12 after:group-4:basis-16 after:group-5:basis-20"
             data-testid="pv-carousel"
             tabIndex={-1}
             role="list"

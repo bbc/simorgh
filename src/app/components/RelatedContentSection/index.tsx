@@ -1,5 +1,3 @@
-/** @jsx jsx */
-
 import { use } from 'react';
 import { jsx, useTheme } from '@emotion/react';
 import SectionLabel from '#psammead/psammead-section-label/src';
@@ -15,7 +13,6 @@ import { OptimizelyContext } from '@optimizely/react-sdk';
 import useViewTracker from '#hooks/useViewTracker';
 import { ViewTracker } from '#app/lib/analyticsUtils/types';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import styles from './index.styles';
 import generatePromoId from '../../lib/utilities/generatePromoId';
 import RelatedContentItem from './RelatedContentItem';
 import PromoList from '../../legacy/components/OptimoPromos/PromoList';
@@ -48,6 +45,219 @@ type RelatedContentListProps = {
 const renderRelatedContentList = ({
   item,
   index,
+  eventTrackingData,
+  viewTracker,
+}: RelatedContentListProps) => {
+  const {
+    model: { blocks },
+  } = item as any;
+
+  const relatedContentPromos = slice(1, Infinity, blocks);
+
+  const promoItems = relatedContentPromos.map((promo: any, promoIndex: number) => {
+    const eventTrackingDataWithPositions = {
+      ...eventTrackingData,
+      campaignID: `related-content-${index}`,
+      componentName: 'related-content',
+      itemCount: relatedContentPromos.length,
+      position: promoIndex + 1,
+    };
+
+    const id = generatePromoId(promo, promoIndex);
+
+    const singleItemFullWidth = relatedContentPromos.length === 1;
+
+    const viewTrackerData = {
+      ...viewTracker,
+      promoId: id,
+      positionInList: promoIndex + 1,
+    };
+
+    return (
+      <li
+        key={id}
+        className={`flex m-0 w-full h-auto p-[calc(1rem-3px)] ${
+          singleItemFullWidth
+            ? 'group-3:w-3/4'
+            : 'group-2:w-1/2 group-3:w-1/3'
+        }`}
+        data-testid="related-content-item"
+      >
+        <RelatedContentItem
+          item={promo}
+          dir={pathOr('ltr', ['dir'], item)}
+          eventTrackingData={eventTrackingDataWithPositions}
+          viewTracker={viewTrackerData}
+        />
+      </li>
+    );
+  });
+
+  return (
+    <ul
+      className="flex flex-wrap m-[calc(-1rem+3px)]"
+      role="list"
+      data-testid="related-content-list"
+    >
+      {promoItems}
+    </ul>
+  );
+};
+
+const RelatedContentSection = ({
+  content,
+  sectionLabelTitle,
+  sectionLabelLangCode,
+  sectionLabelOverrideHeadingAs,
+  sectionLabelBar,
+  sectionLabelBackground,
+  eventTrackingData,
+  promoType,
+  promoSectionOverride,
+  ...props
+}: any) => {
+  const {
+    script,
+    service,
+    lang,
+    dir,
+    translations = {},
+    optimizely,
+  } = use(ServiceContext);
+
+  const { enabled } = use(OptimizelyContext);
+
+  const viewTracker = useViewTracker(eventTrackingData);
+
+  const { palette } = useTheme();
+
+  if (!content || !content.length) return null;
+
+  const hasSingleContent = content.length === 1;
+
+  const contentWithoutCustomBlocks = content.map((item: any) => {
+    const hasCustomBlocks = item.model.blocks.some((block: any) =>
+      BLOCKS_TO_IGNORE.includes(block.type),
+    );
+
+    if (hasCustomBlocks) {
+      const filteredBlocks = removeCustomBlocks(item.model.blocks);
+      return {
+        ...item,
+        model: {
+          ...item.model,
+          blocks: filteredBlocks ? [filteredBlocks] : [],
+        },
+      };
+    }
+
+    return item;
+  });
+
+  const isFirstItemHeadlineFirst = isHeadlineFirst(contentWithoutCustomBlocks[0]);
+
+  const contentToRender = isFirstItemHeadlineFirst
+    ? contentWithoutCustomBlocks
+    : tail(contentWithoutCustomBlocks);
+
+  const relatedContentPromos = contentToRender.map((item: any, index: number) => {
+    const eventTrackingDataWithPositions = {
+      ...eventTrackingData,
+      campaignID: `related-content-${index}`,
+      componentName: 'related-content',
+    };
+
+    const id = generatePromoId(item, index);
+
+    const singleItemFullWidth = contentToRender.length === 1;
+
+    const viewTrackerData = {
+      ...viewTracker,
+      promoId: id,
+      positionInList: index + 1,
+    };
+
+    return (
+      <div
+        key={id}
+        className={`${
+          singleItemFullWidth
+            ? 'w-full group-3:w-3/4'
+            : 'w-full -mx-4 group-2:w-1/2 group-3:w-1/3'
+        }`}
+        data-testid="related-content-item"
+      >
+        <RelatedContentItem
+          item={item}
+          dir={pathOr('ltr', ['dir'], item)}
+          eventTrackingData={eventTrackingDataWithPositions}
+          viewTracker={viewTrackerData}
+        />
+      </div>
+    );
+  });
+
+  const hasMultipleContent = contentToRender.length > 1;
+
+  const relatedContentGrid = (
+    <div className="flex flex-wrap m-[calc(-1rem+3px)]">
+      {relatedContentPromos}
+    </div>
+  );
+
+  const relatedContentList = contentToRender.map((item: any, index: number) => (
+    <div key={`related-content-${index}`}>
+      {renderRelatedContentList({
+        item,
+        index,
+        eventTrackingData,
+        viewTracker,
+      })}
+    </div>
+  ));
+
+  const shouldUsePromoList = pathEq(['model', 'blocks', 0, 'type'], 'wsoj', contentToRender[0]);
+
+  return (
+    <section
+      role="region"
+      aria-labelledby="related-content-heading"
+      data-e2e="related-content-section"
+      className="px-4 group-2:px-8 group-4:px-0"
+      {...props}
+    >
+      <SectionLabel
+        script={script}
+        service={service}
+        dir={dir}
+        labelId="related-content-heading"
+        columnType="main"
+        mobileDivider={false}
+        overrideHeadingAs={sectionLabelOverrideHeadingAs}
+        bar={sectionLabelBar}
+        backgroundColor={sectionLabelBackground}
+      >
+        {sectionLabelTitle}
+      </SectionLabel>
+
+      {shouldUsePromoList ? (
+        <PromoList
+          promos={contentToRender}
+          dir={dir}
+          promoType={promoType}
+          eventTrackingData={eventTrackingData}
+          viewTracker={viewTracker}
+        />
+      ) : hasMultipleContent ? (
+        relatedContentGrid
+      ) : (
+        relatedContentList
+      )}
+    </section>
+  );
+};
+
+export default RelatedContentSection;
   eventTrackingData,
   viewTracker,
 }: RelatedContentListProps) => {

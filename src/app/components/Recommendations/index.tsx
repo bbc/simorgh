@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import { use } from 'react';
-import { jsx, useTheme } from '@emotion/react';
 
 import useToggle from '#hooks/useToggle';
 import SectionLabel from '#psammead/psammead-section-label/src';
@@ -9,8 +7,8 @@ import SkipLinkWrapper from '#components/SkipLinkWrapper';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { Recommendation } from '#app/models/types/onwardJourney';
+import { GREY_2 } from '#app/components/ThemeProvider/palette';
 import RecommendationsItem from './RecommendationsItem';
-import styles from './index.styles';
 
 const eventTrackingData = {
   componentName: 'midarticle-mostread',
@@ -21,10 +19,6 @@ const Recommendations = ({ data }: { data: Recommendation[] }) => {
     use(ServiceContext);
 
   const viewTracker = useViewTracker(eventTrackingData);
-
-  const {
-    palette: { GREY_2 },
-  } = useTheme();
 
   const { enabled } = useToggle('midArticleOnwardJourney');
 
@@ -63,14 +57,14 @@ const Recommendations = ({ data }: { data: Recommendation[] }) => {
 
   return (
     <section
-      css={styles.recommendationsWrapper}
+      className="bg-grey-2 my-12 px-4 py-8 group-2:m-0 group-2:mb-12 group-2:px-8 group-2:pb-8 group-2:pt-0 group-4:px-0 group-4:py-8"
       data-e2e={labelId}
       {...a11yAttributes}
     >
       <SkipLinkWrapper service={service} {...skipLinkProps}>
         {title ? (
           <SectionLabel
-            css={styles.labelComponent}
+            className="m-0 p-0 group-3:mb-8"
             script={script}
             service={service}
             dir={dir}
@@ -87,7 +81,7 @@ const Recommendations = ({ data }: { data: Recommendation[] }) => {
         {isSinglePromo ? (
           <RecommendationsItem recommendation={data?.[0]} />
         ) : (
-          <ul css={styles.recommendationsList} role="list" {...viewTracker}>
+          <ul className="list-none m-0 p-0" role="list" {...viewTracker}>
             {data?.map(recommendation => (
               <li key={recommendation.id} role="listitem">
                 <RecommendationsItem recommendation={recommendation} />
