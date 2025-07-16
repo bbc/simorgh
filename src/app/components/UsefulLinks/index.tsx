@@ -1,9 +1,5 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import { jsx } from '@emotion/react';
 import { Summary } from '#app/models/types/curationData';
 import Heading from '../Heading';
-import styles from './index.styles';
 
 interface UsefulLinksProps {
   id?: string;
@@ -27,24 +23,36 @@ const UsefulLinks = ({
       role="region"
       aria-labelledby={id}
       data-testid={id}
-      css={styles.container}
+      className="mt-16 mb-12"
     >
-      <Heading level={2} id={id} css={styles.heading}>
+      <Heading level={2} id={id} className="text-double-pica font-sans-bold mb-3">
         {title}
       </Heading>
       {hasMultipleSummaries ? (
-        <ul css={styles.unorderedList} role="list">
+        <ul 
+          className="p-0 m-0 grid list-none gap-12 group-2:grid-cols-2" 
+          role="list"
+        >
           {summaries.map(summary => (
-            <li css={styles.item} key={summary.title}>
-              <a href={summary.link} css={styles.link}>
+            <li 
+              className="relative flex min-w-0 items-center gap-4"
+              key={summary.title}
+            >
+              <a 
+                href={summary.link} 
+                className="text-grey-10 no-underline text-pica font-sans-bold py-3 w-full visited:text-grey-6 hover:underline focus:underline"
+              >
                 {summary.title}
               </a>
             </li>
           ))}
         </ul>
       ) : (
-        <div css={styles.item}>
-          <a href={summaries[0].link} css={styles.link}>
+        <div className="relative flex min-w-0 items-center gap-4">
+          <a 
+            href={summaries[0].link} 
+            className="text-grey-10 no-underline text-pica font-sans-bold py-3 w-full visited:text-grey-6 hover:underline focus:underline"
+          >
             {summaries[0].title}
           </a>
         </div>

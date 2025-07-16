@@ -1,7 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import { ComponentPropsWithoutRef } from 'react';
-import styles from './index.styles';
 
 interface VisuallyHiddenTextProps<T extends React.ElementType> {
   id?: string;
@@ -22,7 +19,7 @@ const VisuallyHiddenText = <T extends React.ElementType>({
   const Component: React.ElementType = as || 'span';
   return (
     <Component
-      css={styles.visuallyHiddenText}
+      className="sr-only"
       id={id}
       tabIndex={tabIndex}
       {...htmlAttributes}

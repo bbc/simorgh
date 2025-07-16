@@ -28,7 +28,6 @@ import buildConfig from './utils/buildSettings';
 import Placeholder from './Placeholder';
 import getProducerFromServiceName from './utils/getProducerFromServiceName';
 import getCaptionBlock from './utils/getCaptionBlock';
-import styles from './index.styles';
 import { getBootstrapSrc } from '../Ad/Canonical';
 import Metadata from './Metadata';
 import AmpMediaLoader from './Amp';
@@ -187,8 +186,7 @@ const MediaContainer = ({
     <div
       ref={playerElementRef}
       data-e2e="media-player"
-      className="media-player"
-      css={isAudio ? styles.audioMediaContainer : styles.standardMediaContainer}
+      className={`media-player ${isAudio ? 'h-[165px]' : 'bg-black h-full'}`}
     >
       <noscript>
         <Message message={noJsMessage} />
@@ -278,6 +276,28 @@ const MediaLoader = ({
 
   const hasPlaceholder = Boolean(showPlaceholder && placeholderSrc);
 
+  const figureClasses = [
+    'media-container',
+    'relative',
+    'w-full',
+    embedded ? 'm-0' : 'mb-12',
+    !isAudio && isPortrait && 'aspect-[9/16] flex flex-col',
+    !isAudio && isLandscape && 'aspect-[16/9]',
+    !isAudio && isPortrait && !embedded && 'group-2:max-w-full group-3:max-w-[382px] group-4:max-w-[315px] group-5:max-w-[382px]',
+    !isAudio && isPortrait && !embedded && 'group-3:mx-8 group-4:mx-0',
+    className,
+  ]
+    .filter(Boolean)
+    .join(' ');
+
+  const captionClasses = [
+    isAudio && 'my-8 mx-4 group-2:my-8 group-2:mx-8 group-3:mt-12 group-3:mx-8 group-4:mt-12 group-4:mx-0',
+    !isAudio && isPortrait && 'mx-4 group-3:mx-0',
+    isPortrait && 'portrait-caption',
+  ]
+    .filter(Boolean)
+    .join(' ');
+
   return (
     <>
       {
@@ -288,14 +308,7 @@ const MediaLoader = ({
       }
       <figure
         data-e2e="media-loader__container"
-        className={`media-container${className ? ` ${className}` : ''}`}
-        css={[
-          styles.figure(embedded),
-          !isAudio && [
-            isPortrait && styles.portraitFigure(embedded),
-            isLandscape && styles.landscapeFigure,
-          ],
-        ]}
+        className={figureClasses}
       >
         {isAmp ? (
           <AmpMediaLoader
@@ -331,13 +344,9 @@ const MediaLoader = ({
         )}
         {captionBlock && (
           <Caption
-            className={isPortrait ? 'portrait-caption' : ''}
+            className={captionClasses}
             block={captionBlock}
             type={mediaType}
-            css={[
-              isAudio && styles.captionAudio,
-              !isAudio && [isPortrait && styles.captionPortrait],
-            ]}
           />
         )}
       </figure>

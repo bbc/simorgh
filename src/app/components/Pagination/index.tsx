@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
-import { PropsWithChildren, use } from 'react';
+import React, { PropsWithChildren, use } from 'react';
 import {
   GROUP_2_MIN_WIDTH_BP,
   GROUP_2_MAX_WIDTH_BP,
@@ -15,7 +13,6 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import buildBlocks, { VISIBILITY } from './buildBlocks';
 import { Ellipsis, LeftChevron, RightChevron } from '../icons';
 import VisuallyHiddenText from '../VisuallyHiddenText';
-import styles from './index.styles';
 
 interface LinkComponentProps {
   pageNumber: number;
@@ -44,22 +41,16 @@ interface PaginationProps {
   page: string;
 }
 
-const visibilityToMediaQuery = (visibility: string) =>
-  ({
-    [VISIBILITY.MOBILE_ONLY]: `display: none; @media (min-width: ${GROUP_2_MIN_WIDTH_BP}rem) and (max-width: ${GROUP_2_MAX_WIDTH_BP}rem) {
-      display: inline-block;
-    }`,
-    [VISIBILITY.TABLET_DOWN]: `display: none; @media (max-width: ${GROUP_3_MAX_WIDTH_BP}rem) {
-      display: inline-block;
-    }`,
-    [VISIBILITY.TABLET_UP]: `display: none; @media (min-width: ${GROUP_3_MIN_WIDTH_BP}rem) {
-      display: inline-block;
-    }`,
-    [VISIBILITY.DESKTOP_ONLY]: `display: none; @media (min-width: ${GROUP_4_MIN_WIDTH_BP}rem) {
-      display: inline-block;
-    }`,
-    [VISIBILITY.ALL]: `display: inline-block;`,
-  })[visibility] || 'display: none;';
+const visibilityToClasses = (visibility: string) => {
+  const visibilityMap = {
+    [VISIBILITY.MOBILE_ONLY]: 'hidden group-2:inline-block group-3:hidden',
+    [VISIBILITY.TABLET_DOWN]: 'hidden group-3:inline-block group-4:hidden',
+    [VISIBILITY.TABLET_UP]: 'hidden group-3:inline-block',
+    [VISIBILITY.DESKTOP_ONLY]: 'hidden group-4:inline-block',
+    [VISIBILITY.ALL]: 'inline-block',
+  };
+  return visibilityMap[visibility] || 'hidden';
+};
 
 const LinkComponent = ({
   children,
@@ -68,9 +59,12 @@ const LinkComponent = ({
   ...rest
 }: PropsWithChildren<LinkComponentProps>) => (
   <a
-    css={isActive ? styles.activeA : styles.inactiveA}
+    className={`block h-full w-full no-underline ${
+      isActive
+        ? 'text-grey-10 px-2.5 py-1 border-b-4 border-postbox hover:p-0 hover:border hover:border-postbox hover:border-b-4 focus:p-0 focus:border focus:border-postbox focus:border-b-4'
+        : 'text-grey-10 p-1 hover:p-0 hover:border hover:border-postbox focus:p-0 focus:border focus:border-postbox'
+    } focusIndicatorOutlineBlack`}
     href={`?page=${pageNumber}`}
-    className="focusIndicatorOutlineBlack"
     {...(isActive && { 'aria-current': 'page' })}
     {...rest}
   >
@@ -83,7 +77,7 @@ const PreviousArrow = ({
   children,
   dir,
 }: PropsWithChildren<ArrowProps>) => (
-  <span css={() => [styles.block, visibilityToMediaQuery(VISIBILITY.ALL)]}>
+  <span className={`font-sans-bold w-11 h-11 leading-11 text-center mx-0.5 ${visibilityToClasses(VISIBILITY.ALL)}`}>
     <LinkComponent
       pageNumber={activePage - 1}
       aria-labelledby="pagination-previous-page"
@@ -101,7 +95,7 @@ const NextArrow = ({
   children,
   dir,
 }: PropsWithChildren<ArrowProps>) => (
-  <span css={() => [styles.block, visibilityToMediaQuery(VISIBILITY.ALL)]}>
+  <span className={`font-sans-bold w-11 h-11 leading-11 text-center mx-0.5 ${visibilityToClasses(VISIBILITY.ALL)}`}>
     <LinkComponent
       pageNumber={activePage + 1}
       aria-labelledby="pagination-next-page"
@@ -124,7 +118,7 @@ const renderBlock = ({
   if (type === 'NUMBER') {
     return (
       <li
-        css={() => [styles.block, visibilityToMediaQuery(visibility)]}
+        className={`font-sans-bold w-11 h-11 leading-11 text-center mx-0.5 ${visibilityToClasses(visibility)}`}
         key={key}
       >
         <LinkComponent
@@ -139,7 +133,7 @@ const renderBlock = ({
 
   return (
     <li
-      css={() => [styles.elipsisBlock, visibilityToMediaQuery(visibility)]}
+      className={`font-sans-bold w-11 h-11 leading-11 text-center mx-0.5 text-grey-5 ${visibilityToClasses(visibility)}`}
       role="separator"
       data-testid="topic-pagination-ellipsis"
       key={key}
@@ -175,7 +169,9 @@ const Pagination = ({
 
   return (
     <nav
-      css={[styles.nav, isLive && styles.liveNavMargin]}
+      className={`block mx-auto text-center ${
+        isLive ? 'mb-8' : 'mb-10'
+      }`}
       role="navigation"
       aria-label={page}
       data-testid="topic-pagination"
@@ -186,14 +182,17 @@ const Pagination = ({
         </PreviousArrow>
       )}
       <div
-        css={styles.textSummary}
+        className="font-sans-regular text-grey-6 inline-block mx-5.5 group-2:hidden"
         data-testid="topic-pagination-summary"
         // eslint-disable-next-line jsx-a11y/aria-role
         role="text"
       >
         {tokens}
       </div>
-      <ul css={styles.unorderedList} role="list">
+      <ul
+        className="inline-block list-none p-0 m-0 relative top-0.5 text-center group-1:hidden"
+        role="list"
+      >
         {blocks.map(block => renderBlock({ ...block, activePage }))}
       </ul>
       {showNextArrow && (

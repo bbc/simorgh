@@ -19,7 +19,6 @@ import ServiceWorker from '../ServiceWorker';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
 import fontFacesLazy from '../ThemeProvider/fontFacesLazy';
-import styles from './index.styles';
 import { OptimoMostReadRecord, CPSMostReadRecord } from '../MostRead/types';
 
 type ModelType = {
@@ -246,9 +245,9 @@ const PageLayoutWrapper = ({
       <ManifestContainer />
       {!isErrorPage && <WebVitals pageType={pageType} />}
       <GlobalStyles />
-      <div id="main-wrapper" css={styles.wrapper}>
+      <div id="main-wrapper" className="min-h-screen flex flex-col justify-between bg-ghost">
         <HeaderContainer propsForOJExperiment={propsForOJExperiment} />
-        <div css={styles.content}>{children}</div>
+        <div className="flex-grow relative">{children}</div>
         <FooterContainer />
       </div>
     </>
