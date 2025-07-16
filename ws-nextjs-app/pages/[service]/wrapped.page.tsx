@@ -1,9 +1,7 @@
-/** @jsx jsx */
 // @ts-nocheck
 
 import { GetServerSideProps } from 'next';
 import { useEffect, use } from 'react';
-import { jsx } from '@emotion/react';
 import { ParsedUrlQuery } from 'querystring';
 import omit from 'ramda/src/omit';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -240,19 +238,19 @@ const pageLayout = () => {
   return (
     <>
       <main>
-        <div css={styles.outerGrid}>
-          <div css={styles.wideSection}>
-            <h1 css={styles.h1}>
+        <div className={styles.outerGrid}>
+          <div className={styles.wideSection}>
+            <h1 className={styles.h1}>
               <Calculator /> 2024
             </h1>
             <div>
-              <h2 css={styles.h2}>
+              <h2 className={styles.h2}>
                 <Clock /> <span id="timespent" />
               </h2>
-              <h2 css={styles.h2}>
+              <h2 className={styles.h2}>
                 <Book />
               </h2>
-              <ul css={styles.ul}>
+              <ul className={styles.ul}>
                 <li>
                   <Words /> <span id="words" />{' '}
                 </li>
@@ -260,11 +258,11 @@ const pageLayout = () => {
                   <Articles /> <span id="article" />{' '}
                 </li>
               </ul>
-              <h2 css={styles.h2}>
+              <h2 className={styles.h2}>
                 <Favourites />
               </h2>
               <ol id="topiclist" />
-              <h2 css={styles.h2}>
+              <h2 className={styles.h2}>
                 <Calendar />
               </h2>
               <canvas

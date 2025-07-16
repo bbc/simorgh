@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import {
   Curation,
   VISUAL_STYLE,
@@ -19,7 +17,7 @@ import Billboard from '../Billboard';
 import PortraitVideoCarousel from '../PortraitVideoCarousel';
 import UsefulLinks from '../UsefulLinks';
 import SocialLinks from '../SocialLinks';
-import styles from './index.styles';
+import styles from './index.module.css';
 
 const {
   SIMPLE_CURATION_GRID,
@@ -99,7 +97,7 @@ export default ({
       const billboardId = `billboard-${nthCurationByStyleAndProminence}`;
       if (firstSummary) {
         return (
-          <div css={styles.billboardContainer}>
+          <div className={styles.billboardContainer}>
             <Billboard
               heading={firstSummary.title}
               description={description as string}

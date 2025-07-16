@@ -1,6 +1,4 @@
 import pixelsToRem from '#app/utilities/pixelsToRem';
-import { css, Theme } from '@emotion/react';
-
 const styles = {
   liveLabelPulse: ({ mq, spacings }: Theme) =>
     css({

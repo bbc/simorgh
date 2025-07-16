@@ -1,8 +1,4 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-
 import React, { PropsWithChildren, use } from 'react';
-import { jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
 import { PageTypes } from '#app/models/types/global';
@@ -19,7 +15,7 @@ import ServiceWorker from '../ServiceWorker';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
 import fontFacesLazy from '../ThemeProvider/fontFacesLazy';
-import styles from './index.styles';
+import styles from './index.module.css';
 import { OptimoMostReadRecord, CPSMostReadRecord } from '../MostRead/types';
 
 type ModelType = {
@@ -246,9 +242,9 @@ const PageLayoutWrapper = ({
       <ManifestContainer />
       {!isErrorPage && <WebVitals pageType={pageType} />}
       <GlobalStyles />
-      <div id="main-wrapper" css={styles.wrapper}>
+      <div id="main-wrapper" className={styles.wrapper}>
         <HeaderContainer propsForOJExperiment={propsForOJExperiment} />
-        <div css={styles.content}>{children}</div>
+        <div className={styles.content}>{children}</div>
         <FooterContainer />
       </div>
     </>

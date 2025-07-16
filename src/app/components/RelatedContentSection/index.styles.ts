@@ -1,5 +1,3 @@
-import { css, Theme } from '@emotion/react';
-
 export default {
   singleItemWrapper: ({ spacings, mq }: Theme) =>
     css({

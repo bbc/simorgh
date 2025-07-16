@@ -1,6 +1,4 @@
 /* eslint-disable camelcase */
-/** @jsx jsx */
-import { css, jsx, Theme } from '@emotion/react';
 import mundoLiveFixture from '#data/mundo/live/c7dkx155e626t.json';
 import LiveHeaderMedia from '.';
 import { MediaCollection } from '../MediaLoader/types';

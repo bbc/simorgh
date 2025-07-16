@@ -1,5 +1,3 @@
-import { Theme, css } from '@emotion/react';
-
 export default {
   submit: ({ palette, fontSizes, fontVariants, spacings }: Theme) =>
     css({

@@ -1,7 +1,4 @@
-/** @jsx jsx */
 import { render, act } from '@testing-library/react';
-import { jsx, css, Theme } from '@emotion/react';
-
 import ThemeProvider from '.';
 
 describe('ThemeProvider', () => {

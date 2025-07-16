@@ -1,5 +1,3 @@
-import { css, Theme } from '@emotion/react';
-
 const styles = {
   figure: (theme: Theme) =>
     css({

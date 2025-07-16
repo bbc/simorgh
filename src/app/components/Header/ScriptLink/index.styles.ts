@@ -1,5 +1,3 @@
-import { css, Theme } from '@emotion/react';
-
 const styles = {
   link: ({ fontSizes, fontVariants, palette, spacings, mq }: Theme) =>
     css({

@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import React, { use } from 'react';
-import { jsx } from '@emotion/react';
 import Metadata from '#app/components/Metadata';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './styles';
@@ -51,16 +49,16 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
         openGraphType="website"
         hasAmpPage={false}
       />
-      <div css={styles.background} />
-      <div css={styles.grid}>
-        <div css={styles.primaryColumn}>
-          <main role="main" css={styles.mainContent}>
+      <div className={styles.background} />
+      <div className={styles.grid}>
+        <div className={styles.primaryColumn}>
+          <main role="main" className={styles.mainContent}>
             <noscript>
               <GenericMessage heading={noJsHeading}>
                 {noJsDescription}
               </GenericMessage>
             </noscript>
-            <div css={styles.screenContainer}>
+            <div className={styles.screenContainer}>
               {campaignStatus === 'open' ? (
                 <FormContextProvider
                   initialScreen={initialScreen}

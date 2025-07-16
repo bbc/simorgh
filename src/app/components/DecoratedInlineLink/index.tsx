@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import React, { use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import pathOr from 'ramda/src/pathOr';
@@ -23,7 +21,7 @@ const DecoratedInlineLink = ({
 
   return (
     <a
-      css={styles.InlineLink}
+      className={styles.InlineLink}
       href={makeRelativeUrlPath(locator)}
       className="focusIndicatorReducedWidth"
       {...(isExternal

@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx, useTheme } from '@emotion/react';
 import { PropsWithChildren } from 'react';
 
 import useImageColour from '../../hooks/useImageColour';
@@ -36,7 +34,7 @@ const FrostedGlassPanel = ({
   };
 
   return (
-    <div css={styles.panelWrapper}>
+    <div className={styles.panelWrapper}>
       <div
         css={[
           styles.panelChildren,
@@ -50,7 +48,7 @@ const FrostedGlassPanel = ({
       >
         {children}
       </div>
-      <div css={styles.panelBackground} style={backgroundImageStyle} />
+      <div className={styles.panelBackground} style={backgroundImageStyle} />
     </div>
   );
 };

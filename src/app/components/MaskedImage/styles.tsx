@@ -1,5 +1,3 @@
-import { css, Theme } from '@emotion/react';
-
 const maskColours = {
   black: '0,0,0',
   white: '255,255,255',

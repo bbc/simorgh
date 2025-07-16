@@ -1,8 +1,6 @@
-/** @jsx jsx */
 import React, { PropsWithChildren } from 'react';
-import { jsx } from '@emotion/react';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
-import styles from './index.styles';
+import styles from './index.module.css';
 import {
   mostReadListGridProps,
   mostReadItemGridProps,
@@ -51,13 +49,13 @@ export const MostReadLink = ({
   return (
     <div css={getItemCss({ dir, size })} dir={dir}>
       <a
-        css={[styles.link, size === 'default' && styles.defaultLink]}
+        className={[styles.link].filter(Boolean).join(' ')}
         href={href}
         {...clickTrackerHandler}
       >
         {title}
       </a>
-      {children && <div css={styles.timestamp}>{children}</div>}
+      {children && <div className={styles.timestamp}>{children}</div>}
     </div>
   );
 };
@@ -69,7 +67,7 @@ export const MostReadItemWrapper = React.forwardRef(
   ) => (
     // @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags
     <Grid
-      css={styles.grid}
+      className={styles.grid}
       {...mostReadItemGridProps(columnLayout)}
       parentColumns={getParentColumns(columnLayout)} // parentColumns is required here because on IE, this component would be rendered before it's parent therefore not receiving the parent's grid columns values so we have to explicitly pass it as a prop here so it works on IE
       dir={dir}
@@ -77,7 +75,7 @@ export const MostReadItemWrapper = React.forwardRef(
       ref={ref}
       role="listitem"
     >
-      <div css={styles.item}>{children}</div>
+      <div className={styles.item}>{children}</div>
     </Grid>
   ),
 );

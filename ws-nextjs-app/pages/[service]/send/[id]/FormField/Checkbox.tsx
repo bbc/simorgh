@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import { InputProps } from '../types';
 import Label from './FieldLabel';
 import styles from './styles';
@@ -27,7 +25,7 @@ export default ({
 
   return (
     <>
-      <div css={[styles.checkboxContainer]}>
+      <div className={[styles.checkboxContainer].filter(Boolean).join(' ')}>
         <input
           css={[
             styles.checkbox,
@@ -51,7 +49,7 @@ export default ({
           required={required}
           forId={id}
           id={labelId}
-          css={[styles.checkboxLabel]}
+          className={[styles.checkboxLabel].filter(Boolean).join(' ')}
           useErrorTheme={useErrorTheme}
           labelText={label}
         />

@@ -1,0 +1,25 @@
+/* Footer Link CSS Module */
+.link {
+  font-family: ReithSans, Arial, sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 0.75rem 0 0.75rem;
+  text-decoration: none;
+}
+
+.link:hover,
+.link:focus {
+  text-decoration: underline;
+}
+
+.linkInline {
+  display: inline;
+}
+
+.linkBlock {
+  display: block;
+}
+
+.linkHidden {
+  display: none;
+}

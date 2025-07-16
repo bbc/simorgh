@@ -1,5 +1,3 @@
-import { css, Theme } from '@emotion/react';
-
 export default {
   link: ({ palette, fontVariants }: Theme) =>
     css({

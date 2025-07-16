@@ -1,5 +1,3 @@
-import { Theme } from '@emotion/react';
-
 import {
   ARCHIVE_BLUE,
   BLACK,

@@ -1,5 +1,3 @@
-import { css, Theme } from '@emotion/react';
-
 const NOJS_BACKGROUND_COLOUR = 'rgba(34, 34, 34, 0.75)';
 
 export default {

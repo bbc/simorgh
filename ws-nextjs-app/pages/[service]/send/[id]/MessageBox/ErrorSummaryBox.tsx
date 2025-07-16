@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import { ForwardedRef, forwardRef } from 'react';
 import { WHITE } from '#app/components/ThemeProvider/palette';
 import { BulletedList, BulletedListItem } from '#app/components/BulletedList';
@@ -26,7 +24,7 @@ const ErrorLink = ({ id, labelText }: ListItemsProps) => {
     <a
       href={linkHref}
       className="focusIndicatorReducedWidthInverted"
-      css={[styles.plainLabel, styles.linkHoverAndFocus]}
+      className={[styles.plainLabel, styles.linkHoverAndFocus].filter(Boolean).join(' ')}
     >
       {labelText}
     </a>
@@ -34,7 +32,7 @@ const ErrorLink = ({ id, labelText }: ListItemsProps) => {
 };
 
 const ErrorLabel = ({ labelText }: ListItemsProps) => {
-  return <Text css={styles.plainLabel}>{labelText}</Text>;
+  return <Text className={styles.plainLabel}>{labelText}</Text>;
 };
 
 const ErrorSummaryBox = forwardRef(
@@ -54,7 +52,7 @@ const ErrorSummaryBox = forwardRef(
       if (isSingleError) return <Component id={id} labelText={labelText} />;
 
       return (
-        <BulletedListItem css={styles.listItem} key={`listItemFor-${id}`}>
+        <BulletedListItem className={styles.listItem} key={`listItemFor-${id}`}>
           <Component id={id} labelText={labelText} />
         </BulletedListItem>
       );
@@ -69,12 +67,12 @@ const ErrorSummaryBox = forwardRef(
         isErrorSummary
       >
         {isSingleError ? (
-          <Text css={styles.singleItem}>{errorListItems}</Text>
+          <Text className={styles.singleItem}>{errorListItems}</Text>
         ) : (
           <BulletedList
             bulletPointColour={WHITE}
             bulletPointShape="hidden"
-            css={styles.list}
+            className={styles.list}
           >
             {errorListItems}
           </BulletedList>

@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/aria-role */
 /** @jsxRuntime classic */
 /** @jsx  jsx  */
-import { jsx } from '@emotion/react';
 import { use } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '#app/contexts/ServiceContext';
@@ -62,7 +61,7 @@ const renderCaption = (
 ) => (
   <Text
     className={className}
-    css={styles.captionStyles}
+    className={styles.captionStyles}
     size="longPrimer"
     fontVariant="sansRegular"
     as="figcaption"

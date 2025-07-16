@@ -1,11 +1,9 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import Paragraph from '#app/components/Paragraph';
 import Text from '#app/components/Text';
 import { use, useEffect, useRef } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import styles from './index.styles';
+import styles from './index.module.css';
 import TickSvg from './svgs';
 import { useFormContext } from '../FormContext';
 import fallbackTranslations from '../fallbackTranslations';
@@ -59,17 +57,17 @@ const SuccessScreen = ({
   const emailGuidelineClauses = emailToHtml?.split('{{emailLink}}');
 
   return (
-    <div css={styles.outerContainer}>
-      <div css={styles.messageContainer}>
-        <TickSvg css={styles.tickIcon} />
-        <div css={styles.messageTextContainer}>
+    <div className={styles.outerContainer}>
+      <div className={styles.messageContainer}>
+        <TickSvg className={styles.tickIcon} />
+        <div className={styles.messageTextContainer}>
           <div>
             <Heading
               level={1}
               id="content"
               tabIndex={-1}
               size="trafalgar"
-              css={styles.heading}
+              className={styles.heading}
               {...(ref && { ref })}
             >
               {successHeading}
@@ -78,7 +76,7 @@ const SuccessScreen = ({
           </div>
         </div>
       </div>
-      <div css={styles.descriptionContainer}>
+      <div className={styles.descriptionContainer}>
         <Paragraph>{submissionInfoSignedOutMessage}</Paragraph>
         <div>
           <Text as="strong" fontVariant="sansBold">

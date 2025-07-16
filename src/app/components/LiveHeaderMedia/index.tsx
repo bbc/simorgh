@@ -1,6 +1,4 @@
-/** @jsx jsx */
 /** @jsxFrag */
-import { jsx } from '@emotion/react';
 import React, { memo, use, useState } from 'react';
 import Text from '#app/components/Text';
 import { MediaCollection } from '#app/components/MediaLoader/types';
@@ -13,7 +11,7 @@ import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import { regexPunctuationSymbols } from '#app/lib/utilities/idSanitiser';
 import { service as newsConfig } from '#lib/config/services/news';
-import styles from './index.styles';
+import styles from './index.module.css';
 import WARNING_LEVELS from '../MediaLoader/configs/warningLevels';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { Close, Play } from '../icons';
@@ -135,11 +133,11 @@ const LiveHeaderMedia = ({
 
   return (
     <>
-      <noscript css={styles.nojs}>
+      <noscript className={styles.nojs}>
         <p>{description}</p>
         <strong>{noJs}</strong>
       </noscript>
-      <div css={styles.componentContainer} {...viewTracker}>
+      <div className={styles.componentContainer} {...viewTracker}>
         <button
           type="button"
           onClick={e => handleClick(e)}
@@ -157,7 +155,7 @@ const LiveHeaderMedia = ({
                 as="span"
                 size="brevier"
                 fontVariant="sansRegular"
-                css={styles.guidanceMessage}
+                className={styles.guidanceMessage}
                 data-testid="warning-message"
               >
                 <VisuallyHiddenText>
@@ -168,9 +166,9 @@ const LiveHeaderMedia = ({
             )}
           </div>
           {!showMedia && (
-            <div className="hoverStylesCTA" css={styles.watchLiveCTA}>
+            <div className="hoverStylesCTA" className={styles.watchLiveCTA}>
               <Text
-                css={styles.watchLiveCTAText}
+                className={styles.watchLiveCTAText}
                 size="greatPrimer"
                 fontVariant="sansBold"
               >
@@ -181,7 +179,7 @@ const LiveHeaderMedia = ({
             </div>
           )}
           {showMedia && (
-            <div css={styles.closeContainer}>
+            <div className={styles.closeContainer}>
               <Close />
             </div>
           )}

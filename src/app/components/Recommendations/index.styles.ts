@@ -1,5 +1,3 @@
-import { css, Theme } from '@emotion/react';
-
 export default {
   recommendationsWrapper: ({ palette, spacings, mq }: Theme) =>
     css({

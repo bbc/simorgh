@@ -1,9 +1,7 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import { PropsWithChildren, use } from 'react';
 import useToggle from '#app/hooks/useToggle';
 import { RequestContext } from '../../../contexts/RequestContext';
-import styles from './index.styles';
+import styles from './index.module.css';
 
 type Props = {
   embeddableContent: string;

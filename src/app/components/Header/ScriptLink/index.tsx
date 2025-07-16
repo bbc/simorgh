@@ -1,10 +1,8 @@
-/** @jsx jsx */
 import { use } from 'react';
-import { jsx } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import styles from './index.styles';
+import styles from './index.module.css';
 
 const ScriptLink = () => {
   const { scriptLink } = use(ServiceContext);
@@ -30,12 +28,12 @@ const ScriptLink = () => {
 
   return (
     <a
-      css={styles.link}
+      className={styles.link}
       href={pathToVariant}
       data-variant={alternateVariant}
       className="focusIndicatorRemove"
     >
-      <span css={styles.container}>{text}</span>
+      <span className={styles.container}>{text}</span>
     </a>
   );
 };

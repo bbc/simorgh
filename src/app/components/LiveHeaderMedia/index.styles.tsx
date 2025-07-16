@@ -1,7 +1,5 @@
 import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 import pixelsToRem from '#app/utilities/pixelsToRem';
-import { css, Theme } from '@emotion/react';
-
 export default {
   componentContainer: () =>
     css({

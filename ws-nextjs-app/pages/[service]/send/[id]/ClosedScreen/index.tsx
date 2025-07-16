@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import { use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
@@ -32,7 +30,7 @@ export default function ClosedScreen({ title, closingTime }: Props) {
         <>
           {`${dateDescription?.[0]}`}
           <TimeStampContainer
-            css={styles.timestamp}
+            className={styles.timestamp}
             timestamp={closingTime}
             dateTimeFormat="DD MMMM YYYY"
             format="D MMMM YYYY"

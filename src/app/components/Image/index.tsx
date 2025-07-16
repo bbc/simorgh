@@ -1,9 +1,6 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
 import React, { Fragment, PropsWithChildren, useState, use } from 'react';
-import { Global, jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
-import styles from './index.styles';
+import styles from './index.module.css';
 import { RequestContext } from '../../contexts/RequestContext';
 import { HOME_PAGE } from '../../routes/utils/pageTypes';
 

@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx, useTheme } from '@emotion/react';
 import { PortraitVideoPromoProps } from '#app/models/types/portraitVideo';
 import Image from '#app/components/Image';
 import Text from '#app/components/Text';
@@ -12,7 +10,7 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import getSrcSets from '#app/utilities/getSrcSets';
-import styles from './index.styles';
+import styles from './index.module.css';
 
 const DEFAULT_TRANSLATION = {
   video: 'video',
@@ -103,7 +101,7 @@ export default (item: PortraitVideoPromoProps) => {
   };
 
   return (
-    <li css={styles.container}>
+    <li className={styles.container}>
       <Image
         alt={alt}
         src={imageUrl}
@@ -114,19 +112,19 @@ export default (item: PortraitVideoPromoProps) => {
       />
       <button
         type="button"
-        css={styles.button}
+        className={styles.button}
         onFocus={onFocusListener}
         onClick={e => handleClick(e)}
         {...viewTracker}
         data-testid="promo-button"
       >
-        <div css={styles.gradientOverlay}>
-          <div css={styles.textWrapper}>
+        <div className={styles.gradientOverlay}>
+          <div className={styles.textWrapper}>
             {mediaISO8601Duration && (
-              <div css={styles.durationContainer} aria-hidden="true">
-                <Play css={styles.playIcon} />
+              <div className={styles.durationContainer} aria-hidden="true">
+                <Play className={styles.playIcon} />
                 <time dateTime={mediaISO8601Duration}>
-                  <Text size="brevier" css={styles.duration}>
+                  <Text size="brevier" className={styles.duration}>
                     {durationString}
                   </Text>
                 </time>
@@ -135,7 +133,7 @@ export default (item: PortraitVideoPromoProps) => {
             <Text
               size="pica"
               fontVariant="sansBold"
-              css={styles.title}
+              className={styles.title}
               data-testid="text-contents"
             >
               <VisuallyHiddenText>

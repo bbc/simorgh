@@ -1,10 +1,8 @@
-/** @jsx jsx */
 import { PropsWithChildren } from 'react';
-import { jsx } from '@emotion/react';
 import { LiveLabelProps } from '#app/components/LiveLabel/types';
 import LivePulse from '#app/components/LivePulse';
 import LiveText from '#app/components/LiveText';
-import styles from './index.styles';
+import styles from './index.module.css';
 
 interface LiveLabelPromoProps extends LiveLabelProps {
   isHeaderImage: boolean;
@@ -24,7 +22,7 @@ const LiveLabelHeader = ({
         className={className}
         width="24"
         height="24"
-        css={styles.liveLabelPulse}
+        className={styles.liveLabelPulse}
       />
       <LiveText
         lang={lang}

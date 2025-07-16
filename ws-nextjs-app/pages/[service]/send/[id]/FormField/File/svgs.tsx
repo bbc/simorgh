@@ -1,10 +1,8 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import styles from './styles';
 
 export const UploadSvg = () => (
   <svg
-    css={styles.fileUploadIcon}
+    className={styles.fileUploadIcon}
     focusable="false"
     aria-hidden="true"
     viewBox="0 0 14 14"

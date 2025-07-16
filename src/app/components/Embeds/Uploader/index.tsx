@@ -1,11 +1,9 @@
-/** @jsx jsx */
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import { jsx } from '@emotion/react';
 import CallToActionLink from '#app/components/CallToActionLink';
 import Paragraph from '../../Paragraph';
 import Text from '../../Text';
-import styles from './index.styles';
+import styles from './index.module.css';
 import idSanitiser from '../../../lib/utilities/idSanitiser';
 
 interface UploaderProps {
@@ -86,18 +84,18 @@ const Uploader = ({ blocks }: UploaderProps) => {
   const id = idSanitiser(title);
 
   return (
-    <section role="region" aria-labelledby={id} css={styles.container}>
-      <div css={styles.card}>
+    <section role="region" aria-labelledby={id} className={styles.container}>
+      <div className={styles.card}>
         <Text as="strong" fontVariant="sansBold" size="paragon" id={id}>
           {title}
         </Text>
-        <Paragraph css={styles.text}>{text}</Paragraph>
-        <div css={styles.linkContainer}>
-          <CallToActionLink url={linkAddress} css={styles.callToActionLink}>
+        <Paragraph className={styles.text}>{text}</Paragraph>
+        <div className={styles.linkContainer}>
+          <CallToActionLink url={linkAddress} className={styles.callToActionLink}>
             <CallToActionLink.ButtonLikeWrapper>
               <CallToActionLink.Text shouldUnderlineOnHoverFocus>
                 {linkText}
-                <CallToActionLink.Chevron css={styles.chevronSpacing} />
+                <CallToActionLink.Chevron className={styles.chevronSpacing} />
               </CallToActionLink.Text>
             </CallToActionLink.ButtonLikeWrapper>
           </CallToActionLink>

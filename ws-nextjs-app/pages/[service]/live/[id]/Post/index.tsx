@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import React, { use } from 'react';
-import { jsx } from '@emotion/react';
 import pathOr from 'ramda/src/pathOr';
 import { OptimoBlock } from '#models/types/optimo';
 import Heading from '#app/components/Heading';
@@ -34,7 +32,7 @@ const PostBreakingNewsLabel = ({
   return isBreakingNews ? (
     <>
       <Text
-        css={styles.breakingNewsLabel}
+        className={styles.breakingNewsLabel}
         size="brevier"
         fontVariant="sansBold"
         data-testid="breaking-news-label"
@@ -72,9 +70,9 @@ const PostHeaderBanner = ({
   const locale = serviceDatetimeLocale || datetimeLocale;
   const isRelative = isTenHoursAgo(new Date(curated).getTime());
   return (
-    <span css={[styles.postHeaderBanner, isBreakingNews && styles.fullWidth]}>
+    <span className={[styles.postHeaderBanner].filter(Boolean).join(' ')}>
       <TimeStampContainer
-        css={styles.timeStamp}
+        className={styles.timeStamp}
         timestamp={curated}
         dateTimeFormat={postDateTimeFormat || 'DD MMMM YYYY'}
         format={postDateFormat || 'D MMMM YYYY'}
@@ -123,7 +121,7 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
       <Paragraph
         blocks={props.blocks}
         className="postStyles"
-        css={styles.bodyText}
+        className={styles.bodyText}
       />
     ),
     unorderedList: (props: ComponentToRenderProps) => (
@@ -132,7 +130,7 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
         blockGroupType={props.blockGroupType}
         blockGroupIndex={props.blockGroupIndex}
         className="postStyles"
-        css={styles.bodyText}
+        className={styles.bodyText}
       />
     ),
     orderedList: (props: ComponentToRenderProps) => (
@@ -141,7 +139,7 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
         blockGroupType={props.blockGroupType}
         blockGroupIndex={props.blockGroupIndex}
         className="postStyles"
-        css={styles.bodyText}
+        className={styles.bodyText}
       />
     ),
     image: (props: { blocks: OptimoBlock[] }) => (
@@ -149,15 +147,15 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
         {...props}
         sizes="(min-width: 1008px) 760px, 100vw"
         className="mediaStyles"
-        css={styles.bodyMedia}
+        className={styles.bodyMedia}
         position={[9]}
       />
     ),
     video: (props: { blocks: MediaBlock[] }) => (
-      <MediaLoader blocks={props.blocks} css={styles.bodyMedia} />
+      <MediaLoader blocks={props.blocks} className={styles.bodyMedia} />
     ),
     audio: (props: { blocks: MediaBlock[] }) => (
-      <MediaLoader blocks={props.blocks} css={styles.audioPost} />
+      <MediaLoader blocks={props.blocks} className={styles.audioPost} />
     ),
     social: SocialEmbedContainer,
   };
@@ -194,8 +192,8 @@ const Post = ({
   const timestamp = post?.dates?.curated ?? '';
 
   return (
-    <article css={styles.postContainer}>
-      <Heading id={urn} tabIndex={-1} level={3} css={styles.heading}>
+    <article className={styles.postContainer}>
+      <Heading id={urn} tabIndex={-1} level={3} className={styles.heading}>
         {/* eslint-disable-next-line jsx-a11y/aria-role */}
         <span role="text">
           <PostHeaderBanner
@@ -208,7 +206,7 @@ const Post = ({
           ))}
         </span>
       </Heading>
-      <div css={styles.postContent}>
+      <div className={styles.postContent}>
         <PostContent contentBlocks={contentBlocks} />
       </div>
       {hasShareApi && (

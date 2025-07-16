@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import { PropsWithChildren, use } from 'react';
 import {
   GROUP_2_MIN_WIDTH_BP,
@@ -15,7 +13,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import buildBlocks, { VISIBILITY } from './buildBlocks';
 import { Ellipsis, LeftChevron, RightChevron } from '../icons';
 import VisuallyHiddenText from '../VisuallyHiddenText';
-import styles from './index.styles';
+import styles from './index.module.css';
 
 interface LinkComponentProps {
   pageNumber: number;
@@ -175,7 +173,7 @@ const Pagination = ({
 
   return (
     <nav
-      css={[styles.nav, isLive && styles.liveNavMargin]}
+      className={[styles.nav].filter(Boolean).join(' ')}
       role="navigation"
       aria-label={page}
       data-testid="topic-pagination"
@@ -186,14 +184,14 @@ const Pagination = ({
         </PreviousArrow>
       )}
       <div
-        css={styles.textSummary}
+        className={styles.textSummary}
         data-testid="topic-pagination-summary"
         // eslint-disable-next-line jsx-a11y/aria-role
         role="text"
       >
         {tokens}
       </div>
-      <ul css={styles.unorderedList} role="list">
+      <ul className={styles.unorderedList} role="list">
         {blocks.map(block => renderBlock({ ...block, activePage }))}
       </ul>
       {showNextArrow && (

@@ -1,4 +1,3 @@
-import { css, Theme } from '@emotion/react';
 import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 import { calculateVariedNavContainerWidths } from './utils/styleUtils';
 

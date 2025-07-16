@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import { ChangeEvent, use, useEffect, useRef } from 'react';
-import { jsx } from '@emotion/react';
 import { useLiveRegionContext } from '#app/components/LiveRegion/LiveRegionContext';
 import Text from '#app/components/Text';
 import { ServiceContext } from '#app/contexts/ServiceContext';
@@ -125,7 +123,7 @@ export default ({
       />
       <button
         aria-describedby={labelId}
-        css={[styles.fileUploadButton, styles.focusIndicatorInput]}
+        className={[styles.fileUploadButton, styles.focusIndicatorInput].filter(Boolean).join(' ')}
         type="button"
         onClick={() => handleUploadClick()}
       >
@@ -158,7 +156,7 @@ export default ({
           ...(required && { 'aria-required': required }),
           ...(!isValid && { 'aria-describedby': errorBoxId }),
         })}
-        css={styles.fileInput}
+        className={styles.fileInput}
       />
 
       {hasFiles && (

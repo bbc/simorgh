@@ -1,9 +1,6 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import { jsx } from '@emotion/react';
 import { Summary } from '#app/models/types/curationData';
 import Heading from '../Heading';
-import styles from './index.styles';
+import styles from './index.module.css';
 
 interface UsefulLinksProps {
   id?: string;
@@ -27,24 +24,24 @@ const UsefulLinks = ({
       role="region"
       aria-labelledby={id}
       data-testid={id}
-      css={styles.container}
+      className={styles.container}
     >
-      <Heading level={2} id={id} css={styles.heading}>
+      <Heading level={2} id={id} className={styles.heading}>
         {title}
       </Heading>
       {hasMultipleSummaries ? (
-        <ul css={styles.unorderedList} role="list">
+        <ul className={styles.unorderedList} role="list">
           {summaries.map(summary => (
-            <li css={styles.item} key={summary.title}>
-              <a href={summary.link} css={styles.link}>
+            <li className={styles.item} key={summary.title}>
+              <a href={summary.link} className={styles.link}>
                 {summary.title}
               </a>
             </li>
           ))}
         </ul>
       ) : (
-        <div css={styles.item}>
-          <a href={summaries[0].link} css={styles.link}>
+        <div className={styles.item}>
+          <a href={summaries[0].link} className={styles.link}>
             {summaries[0].title}
           </a>
         </div>

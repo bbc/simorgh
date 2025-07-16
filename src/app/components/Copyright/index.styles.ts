@@ -1,5 +1,3 @@
-import { css, Theme } from '@emotion/react';
-
 const styles = {
   copyright: (theme: Theme) =>
     css({

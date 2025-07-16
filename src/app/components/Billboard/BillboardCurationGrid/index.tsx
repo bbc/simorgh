@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
-import styles from './index.styles';
+import styles from './index.module.css';
 import CurationPromo from '../../Curation/CurationPromo';
 import { CurationGridProps } from '../../Curation/types';
 
@@ -17,15 +15,15 @@ const BillboardCurationGrid = ({ summaries }: CurationGridProps) => {
   return (
     <div data-testid="billboard-curation-grid">
       {hasMultiplePromos ? (
-        <ul css={styles.list} role="list" data-testid="billboard-promos">
+        <ul className={styles.list} role="list" data-testid="billboard-promos">
           {top4SummariesForGrid.map(promo => (
-            <li css={styles.item} key={promo.id}>
+            <li className={styles.item} key={promo.id}>
               <CurationPromo {...promo} lazy headingLevel={3} />
             </li>
           ))}
         </ul>
       ) : (
-        <div css={styles.item}>
+        <div className={styles.item}>
           <CurationPromo {...firstPromo} lazy headingLevel={3} />
         </div>
       )}

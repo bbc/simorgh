@@ -1,7 +1,4 @@
-/** @jsx jsx */
 import { use } from 'react';
-import { jsx, useTheme } from '@emotion/react';
-
 import useToggle from '#hooks/useToggle';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import SkipLinkWrapper from '#components/SkipLinkWrapper';
@@ -10,7 +7,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { Recommendation } from '#app/models/types/onwardJourney';
 import RecommendationsItem from './RecommendationsItem';
-import styles from './index.styles';
+import styles from './index.module.css';
 
 const eventTrackingData = {
   componentName: 'midarticle-mostread',
@@ -63,14 +60,14 @@ const Recommendations = ({ data }: { data: Recommendation[] }) => {
 
   return (
     <section
-      css={styles.recommendationsWrapper}
+      className={styles.recommendationsWrapper}
       data-e2e={labelId}
       {...a11yAttributes}
     >
       <SkipLinkWrapper service={service} {...skipLinkProps}>
         {title ? (
           <SectionLabel
-            css={styles.labelComponent}
+            className={styles.labelComponent}
             script={script}
             service={service}
             dir={dir}
@@ -87,7 +84,7 @@ const Recommendations = ({ data }: { data: Recommendation[] }) => {
         {isSinglePromo ? (
           <RecommendationsItem recommendation={data?.[0]} />
         ) : (
-          <ul css={styles.recommendationsList} role="list" {...viewTracker}>
+          <ul className={styles.recommendationsList} role="list" {...viewTracker}>
             {data?.map(recommendation => (
               <li key={recommendation.id} role="listitem">
                 <RecommendationsItem recommendation={recommendation} />

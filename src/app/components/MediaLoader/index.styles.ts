@@ -1,6 +1,4 @@
 import pixelsToRem from '#app/utilities/pixelsToRem';
-import { css, Theme } from '@emotion/react';
-
 const commonMarginSpacing = ({ mq, spacings }: Theme) =>
   css({
     marginInline: 0,

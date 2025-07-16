@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import React, { forwardRef, ReactNode } from 'react';
-import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import Paragraph from '#app/components/Paragraph';
 import styles from './styles';
@@ -18,7 +16,7 @@ const GenericMessage = forwardRef<HTMLElement, Props>(
           level={1}
           id="content"
           tabIndex={-1}
-          css={styles.heading}
+          className={styles.heading}
           size="trafalgar"
           {...(ref && { ref })}
         >

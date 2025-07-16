@@ -1,12 +1,10 @@
-/** @jsx jsx */
 import { use } from 'react';
-import { jsx } from '@emotion/react';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import Paragraph from '../Paragraph';
 import Text from '../Text';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
-import styles from './index.styles';
+import styles from './index.module.css';
 import defaultTranslations from './defaultTranslations';
 import CallToActionLink from '../CallToActionLink';
 
@@ -31,13 +29,13 @@ const LiteSiteSummary = () => {
       role="region"
       data-e2e="lite-summary"
       aria-labelledby={id}
-      css={styles.outerContainer}
+      className={styles.outerContainer}
     >
       <Text as="strong" id={id} hidden>
         {dataSaving}
       </Text>
-      <div css={styles.container}>
-        <Paragraph size="brevier" css={styles.message}>
+      <div className={styles.container}>
+        <Paragraph size="brevier" className={styles.message}>
           {onboardingMessage}
         </Paragraph>
         <Paragraph data-e2e="to-main-site">
@@ -61,7 +59,7 @@ const LiteSiteSummary = () => {
           <Paragraph data-e2e="information-page">
             <CallToActionLink
               url={informationPageLink}
-              css={styles.bottomLinkSpacing}
+              className={styles.bottomLinkSpacing}
               alignWithMargin
               size="brevier"
               fontVariant="sansRegular"

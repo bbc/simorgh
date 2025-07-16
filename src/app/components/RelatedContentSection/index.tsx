@@ -1,7 +1,4 @@
-/** @jsx jsx */
-
 import { use } from 'react';
-import { jsx, useTheme } from '@emotion/react';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import pathOr from 'ramda/src/pathOr';
 import pathEq from 'ramda/src/pathEq';
@@ -15,7 +12,7 @@ import { OptimizelyContext } from '@optimizely/react-sdk';
 import useViewTracker from '#hooks/useViewTracker';
 import { ViewTracker } from '#app/lib/analyticsUtils/types';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import styles from './index.styles';
+import styles from './index.module.css';
 import generatePromoId from '../../lib/utilities/generatePromoId';
 import RelatedContentItem from './RelatedContentItem';
 import PromoList from '../../legacy/components/OptimoPromos/PromoList';
@@ -168,7 +165,7 @@ const RelatedContentSection = ({ content, sendOptimizelyEvents }: Props) => {
 
   return (
     <section
-      css={styles.relatedContentSection}
+      className={styles.relatedContentSection}
       aria-labelledby={LABEL_ID}
       role="region"
       data-e2e={LABEL_ID}
@@ -197,7 +194,7 @@ const RelatedContentSection = ({ content, sendOptimizelyEvents }: Props) => {
           />
         </div>
       ) : (
-        <PromoList css={styles.relatedContentGrid}>
+        <PromoList className={styles.relatedContentGrid}>
           {reducedStoryPromoItems.map((item, index) =>
             renderRelatedContentList({
               item,

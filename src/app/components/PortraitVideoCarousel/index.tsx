@@ -1,10 +1,7 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import { jsx } from '@emotion/react';
 import React, { useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { PortraitVideoCarouselProps } from '#app/models/types/portraitVideo';
-import styles from './index.styles';
+import styles from './index.module.css';
 import PortraitVideoModal from '../PortraitVideoModal';
 import { BumpLoader } from '../MediaLoader';
 import PortraitVideoPromo from './PortraitVideoPromo';
@@ -43,24 +40,24 @@ const PortraitVideoCarousel = ({
         aria-label={title}
         role="region"
         data-testid="portrait-video-carousel"
-        css={styles.section}
+        className={styles.section}
       >
         <Heading
           level={2}
           size="doublePica"
           fontVariant="sansBold"
-          css={styles.heading}
+          className={styles.heading}
         >
           {title}
         </Heading>
         <noscript>
           <PortraitVideoNoJs />
         </noscript>
-        <div css={styles.carouselContainer}>
+        <div className={styles.carouselContainer}>
           <PortraitCarouselNavigation scrollPaneRef={scrollRef} />
           <ul
             ref={scrollRef}
-            css={styles.carousel}
+            className={styles.carousel}
             data-testid="pv-carousel"
             tabIndex={-1}
             role="list"

@@ -1,5 +1,3 @@
-import { Theme } from '@emotion/react';
-
 export const PROMO_ITEM_WIDTH_MIN = 147;
 export const NAVIGATION_BUTTON_RATIO = 0.5;
 export const PROMO_PEEK_RATIO = 0.33;

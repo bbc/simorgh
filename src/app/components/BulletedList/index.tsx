@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import {
   FC,
   PropsWithChildren,
@@ -8,7 +6,7 @@ import {
   forwardRef,
 } from 'react';
 import { SHADOW } from '../ThemeProvider/palette';
-import styles from './index.styles';
+import styles from './index.module.css';
 
 interface ListItemProps {
   className?: string;
@@ -25,11 +23,15 @@ export const BulletedListItem = ({
   className,
   key,
 }: PropsWithChildren<ListItemProps>) => {
+  const itemClassName = [
+    styles.bulletListItem,
+    className,
+  ].filter(Boolean).join(' ');
+
   return (
     <li
       role="listitem"
-      className={className}
-      css={styles.bulletListItem}
+      className={itemClassName}
       key={key}
     >
       {children}
@@ -48,22 +50,29 @@ export const BulletedList: FC<ListProps> = forwardRef(
     ref: ForwardedRef<HTMLUListElement>,
   ) => {
     const showBulletPoints = bulletPointShape !== 'hidden';
+    
+    const getListClassName = () => {
+      const classes = [styles.bulletedList];
+      if (showBulletPoints) {
+        classes.push(
+          bulletPointShape === 'round' 
+            ? styles.bulletedListRound 
+            : styles.bulletedListSquare
+        );
+      }
+      if (className) classes.push(className);
+      return classes.join(' ');
+    };
+
+    const listStyle = {
+      '--bullet-color': bulletPointColour,
+    } as React.CSSProperties;
+
     return (
       <ul
-        className={className}
+        className={getListClassName()}
         role="list"
-        css={theme => [
-          styles.bulletedList,
-          showBulletPoints && {
-            '& > li::before': {
-              border: `0.1875rem solid ${theme.isDarkUi ? theme.palette.GREY_4 : bulletPointColour}`,
-              backgroundColor: theme.isDarkUi
-                ? theme.palette.GREY_4
-                : bulletPointColour,
-              borderRadius: bulletPointShape === 'round' ? '50%' : '0',
-            },
-          },
-        ]}
+        style={listStyle}
         {...(ref && { ref })}
       >
         {children}

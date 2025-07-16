@@ -1,7 +1,5 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import Image from '../../Image';
-import styles from './index.styles';
+import styles from './index.module.css';
 import PlayButton from './PlayButton';
 import Guidance from './Guidance';
 import { MediaInfo } from '../types';
@@ -36,16 +34,16 @@ const MediaPlayerPlaceholder = ({
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
     <div
       onClick={onClick}
-      css={styles.placeholder}
+      className={styles.placeholder}
       data-e2e="media-loader__placeholder"
     >
       <Guidance
-        css={styles.guidance}
+        className={styles.guidance}
         guidanceMessage={guidanceMessage}
         noJsMessage={noJsMessage}
       />
       <PlayButton
-        css={styles.playButton}
+        className={styles.playButton}
         // eslint-disable-next-line @typescript-eslint/no-empty-function
         onClick={() => {}}
         title={title}

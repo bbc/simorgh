@@ -1,6 +1,3 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import { Global, jsx } from '@emotion/react';
 import React, { use, useEffect, useRef } from 'react';
 import MediaLoader from '#app/components/MediaLoader';
 import {
@@ -9,7 +6,7 @@ import {
 } from '#app/components/MediaLoader/types';
 import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import styles from './index.styles';
+import styles from './index.module.css';
 import { setImageWidth } from '../MediaLoader/configs/portraitClipMedia';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 
@@ -185,13 +182,13 @@ const PortraitVideoModal = ({
         aria-modal="true"
         aria-label={modalLabel}
         ref={modalRef}
-        css={styles.modal}
+        className={styles.modal}
       >
         <button
           ref={closeButtonRef}
           type="button"
           data-testid="close-modal-button"
-          css={styles.closeButton}
+          className={styles.closeButton}
           className="focusIndicatorInvert"
           onClick={onClose}
         >
@@ -199,7 +196,7 @@ const PortraitVideoModal = ({
           <VisuallyHiddenText>{closeVideo}</VisuallyHiddenText>
         </button>
         <MediaLoader
-          css={styles.mediaWrapper}
+          className={styles.mediaWrapper}
           blocks={[blocks?.[selectedVideoIndex]]}
           eventMapping={{
             playlistLoaded: e => playlistLoadedCallback(e, blocks),

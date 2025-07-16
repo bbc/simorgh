@@ -1,7 +1,4 @@
-/** @jsx jsx */
-
-import { jsx } from '@emotion/react';
-import styles from './index.styles';
+import styles from './index.module.css';
 
 type Props = {
   message?: string;
@@ -21,11 +18,11 @@ const Message = ({
         src={placeholderSrc}
         srcSet={placeholderSrcset}
         aria-hidden="true"
-        css={styles.messageImage}
+        className={styles.messageImage}
       />
     )}
-    <div css={styles.messageWrapper}>
-      <strong css={styles.message}>{message}</strong>
+    <div className={styles.messageWrapper}>
+      <strong className={styles.message}>{message}</strong>
     </div>
   </div>
 );

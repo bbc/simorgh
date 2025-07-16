@@ -1,7 +1,5 @@
 /* eslint-disable jsx-a11y/aria-role */
-/** @jsx jsx */
 import { use } from 'react';
-import { css, jsx, Theme } from '@emotion/react';
 import moment from 'moment';
 import path from 'ramda/src/path';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
@@ -48,7 +46,7 @@ const HiearchicalGrid = ({
   const promoItems = summaries.slice(0, 12);
   return (
     <div data-testid="hierarchical-grid">
-      <ul role="list" css={styles.list} data-testid="topic-promos">
+      <ul role="list" className={styles.list} data-testid="topic-promos">
         {promoItems.map((promo, i) => {
           const duration = moment.duration(promo.duration, 'seconds');
           const separator = ',';
@@ -138,7 +136,7 @@ const HiearchicalGrid = ({
                     </Promo.A>
                   )}
                 </Promo.Heading>
-                <Promo.Body className="promo-paragraph" css={styles.body}>
+                <Promo.Body className="promo-paragraph" className={styles.body}>
                   {promo.description}
                 </Promo.Body>
                 {!isLive ? (

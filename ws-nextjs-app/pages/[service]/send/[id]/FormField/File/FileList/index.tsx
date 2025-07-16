@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import { SetStateAction, use, useEffect, useState } from 'react';
-import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { useLiveRegionContext } from '#app/components/LiveRegion/LiveRegionContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
@@ -110,9 +108,9 @@ export default ({
     const showErrorBox = fileData.messageCode && hasAttemptedSubmit;
 
     return (
-      <li css={styles.fileListItem} key={key}>
-        <div css={styles.fileDetails}>
-          <div css={styles.fileThumbnailContainer}>
+      <li className={styles.fileListItem} key={key}>
+        <div className={styles.fileDetails}>
+          <div className={styles.fileThumbnailContainer}>
             <img
               data-testid="thumbnail"
               css={
@@ -134,7 +132,7 @@ export default ({
             {file.name}
           </span>
           <button
-            css={styles.focusIndicatorInput}
+            className={styles.focusIndicatorInput}
             type="button"
             aria-describedby={ariaDescribedById}
             onClick={() =>
@@ -159,7 +157,7 @@ export default ({
   });
 
   return (
-    <ul role="list" css={styles.fileList}>
+    <ul role="list" className={styles.fileList}>
       {listItems}
     </ul>
   );

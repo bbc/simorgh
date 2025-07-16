@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import { use, PropsWithChildren } from 'react';
 import isEmpty from 'ramda/src/isEmpty';
 import { GridItemLarge } from '../../legacy/components/Grid';
@@ -9,7 +7,7 @@ import useToggle from '../../hooks/useToggle';
 import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
 import Text from '../Text';
 import InlineLink from '../InlineLink';
-import styles from './index.styles';
+import styles from './index.module.css';
 
 type Props = {
   increasePaddingOnDesktop?: boolean;
@@ -61,7 +59,7 @@ const DisclaimerComponent = ({
               return linkUrl ? (
                 <InlineLink
                   className="focusIndicatorReducedWidth"
-                  css={styles.inlineLink}
+                  className={styles.inlineLink}
                   key={linkText}
                   text={linkText}
                   to={linkUrl}

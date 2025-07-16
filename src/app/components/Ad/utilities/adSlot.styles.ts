@@ -1,5 +1,3 @@
-import { css, Theme } from '@emotion/react';
-
 /** Ad Slot Widths (for custom breakpoints)
  *
  * These have an extra 16px (1rem) variant added in order to account for the padding on both the left and

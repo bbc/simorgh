@@ -1,7 +1,4 @@
-/** @jsx jsx */
-
 import React, { use } from 'react';
-import { jsx } from '@emotion/react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Pagination from '#app/components/Pagination';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
@@ -155,13 +152,13 @@ const LivePage = ({ pageData }: ComponentProps) => {
           imageWidth={imageWidth}
           mediaCollections={mediaCollections}
         />
-        <div css={styles.outerGrid}>
-          <div css={styles.firstSection}>
+        <div className={styles.outerGrid}>
+          <div className={styles.firstSection}>
             {keyPoints && (
               <KeyPoints keyPointsContent={keyPoints.model.blocks} />
             )}
           </div>
-          <div css={styles.secondSection}>
+          <div className={styles.secondSection}>
             <Stream
               streamContent={liveTextStream.content}
               contributors={liveTextStream.contributors}

@@ -1,4 +1,3 @@
-import { css, Theme } from '@emotion/react';
 import {
   singleDigitDefault,
   singleDigitMedium,

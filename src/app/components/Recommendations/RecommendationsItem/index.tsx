@@ -1,12 +1,10 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import { use } from 'react';
 
 import { RequestContext } from '#contexts/RequestContext';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { Recommendation } from '#app/models/types/onwardJourney';
 import RecommendationsImage from '../RecommendationsPromoImage';
-import styles from './index.styles';
+import styles from './index.module.css';
 
 const eventTrackingData = {
   componentName: 'midarticle-mostread',
@@ -26,15 +24,15 @@ const RecommendationsItem = ({
   const { title, image, href } = recommendation;
 
   return (
-    <div css={styles.promoWrapper} data-e2e="recommendations-wrapper">
+    <div className={styles.promoWrapper} data-e2e="recommendations-wrapper">
       {!isLite && (
-        <div css={styles.imageWrapper}>
+        <div className={styles.imageWrapper}>
           <RecommendationsImage image={image} lazyLoad />
         </div>
       )}
-      <div css={styles.textWrapper}>
-        <div css={styles.headline}>
-          <a css={styles.link} href={href} {...clickTrackerHandler}>
+      <div className={styles.textWrapper}>
+        <div className={styles.headline}>
+          <a className={styles.link} href={href} {...clickTrackerHandler}>
             {title}
           </a>
         </div>

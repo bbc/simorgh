@@ -1,7 +1,4 @@
-/** @jsx jsx */
-
 import { use } from 'react';
-import { jsx, useTheme } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import LegacyText from '#app/legacy/containers/Text';
 import LegacyParagraph from '#app/legacy/containers/Paragraph';
@@ -53,10 +50,10 @@ const KeyPoints = ({
 
   return (
     <section role="region" aria-label={summary} data-e2e="key-points">
-      <Heading level={2} css={styles.headingStyles}>
+      <Heading level={2} className={styles.headingStyles}>
         {summary}
       </Heading>
-      <div css={styles.bodyStyles}>
+      <div className={styles.bodyStyles}>
         {hasSingleKeyPoint ? (
           <Blocks
             blocks={listItems[0].model.blocks}

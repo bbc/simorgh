@@ -1,0 +1,50 @@
+/* BulletedList CSS Module */
+.bulletListItem {
+  margin-bottom: 1rem; /* spacings.DOUBLE */
+}
+
+.bulletedList {
+  margin-top: 0;
+  list-style-type: none;
+  font-size: 1rem; /* bodyCopy size */
+  font-family: ReithSans, Arial, sans-serif;
+  font-weight: 400;
+  color: var(--text-color, inherit);
+}
+
+.bulletedList > li {
+  position: relative;
+  color: var(--text-color-secondary, inherit);
+}
+
+.bulletedList > li::before {
+  top: 0.5rem;
+  content: "";
+  position: absolute;
+  border-width: 1rem;
+  inset-inline-start: -1rem;
+}
+
+/* Round bullet points */
+.bulletedListRound > li::before {
+  border: 0.1875rem solid var(--bullet-color, #999);
+  background-color: var(--bullet-color, #999);
+  border-radius: 50%;
+}
+
+/* Square bullet points */
+.bulletedListSquare > li::before {
+  border: 0.1875rem solid var(--bullet-color, #999);
+  background-color: var(--bullet-color, #999);
+  border-radius: 0;
+}
+
+/* Dark theme */
+.bulletedListDark > li::before {
+  border-color: var(--bullet-color-dark, #ccc);
+  background-color: var(--bullet-color-dark, #ccc);
+}
+
+.bulletedListDark > li {
+  color: var(--text-color-dark, #ccc);
+}

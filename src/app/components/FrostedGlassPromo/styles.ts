@@ -1,5 +1,3 @@
-import { css, Theme } from '@emotion/react';
-
 const BLUR_RADIUS = 15;
 const scaleAmount = 1 + BLUR_RADIUS / 100;
 const scaleX = `scaleX(${scaleAmount})`;

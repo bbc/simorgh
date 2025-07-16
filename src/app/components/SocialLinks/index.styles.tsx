@@ -1,4 +1,3 @@
-import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import BASE64_PLACEHOLDER_IMAGE from '#app/components/Image/base64Placeholder';
 

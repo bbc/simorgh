@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import { use, useEffect, useState } from 'react';
-import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import Paragraph from '#app/components/Paragraph';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -58,7 +56,7 @@ const Stream = ({
         {liveCoverage}
       </Heading>
       {contributors && (
-        <Paragraph data-testid="live-contributors" css={styles.subHeading}>
+        <Paragraph data-testid="live-contributors" className={styles.subHeading}>
           {contributors}
         </Paragraph>
       )}
@@ -66,9 +64,9 @@ const Stream = ({
       {hasSinglePost ? (
         <Post post={streamResults[0]} hasShareApi={hasShareApi} />
       ) : (
-        <ol role="list" css={styles.orderedList}>
+        <ol role="list" className={styles.orderedList}>
           {streamResults.map(post => (
-            <li key={post.urn} css={styles.listItem}>
+            <li key={post.urn} className={styles.listItem}>
               <Post post={post} hasShareApi={hasShareApi} />
             </li>
           ))}

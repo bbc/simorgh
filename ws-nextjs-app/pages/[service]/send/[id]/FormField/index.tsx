@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import { ReactElement } from 'react';
 import { HtmlType, InputProps } from '../types';
 import styles from './styles';
@@ -40,7 +38,7 @@ const FormField = ({ id, htmlType, label }: FormComponentProps) => {
 
   // As part of GEL guidelines, we should show the invalid message only after the initial submit.
   return (
-    <div css={styles.formField}>
+    <div className={styles.formField}>
       <Component
         label={label}
         id={id}

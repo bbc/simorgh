@@ -1,4 +1,3 @@
-import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { calculateVariedNavContainerWidths } from '../utils/styleUtils';
 

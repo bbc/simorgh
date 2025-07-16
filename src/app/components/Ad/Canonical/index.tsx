@@ -1,6 +1,3 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import { jsx } from '@emotion/react';
 import React, { useEffect, use } from 'react';
 import { Helmet } from 'react-helmet';
 import pathOr from 'ramda/src/pathOr';
@@ -10,7 +7,7 @@ import useOperaMiniDetection from '../../../hooks/useOperaMiniDetection';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import adStyles from '../utilities/adSlot.styles';
-import styles from './index.styles';
+import styles from './index.module.css';
 import { AdProps, SLOT_TYPES } from '../types';
 
 const { LEADERBOARD } = SLOT_TYPES;

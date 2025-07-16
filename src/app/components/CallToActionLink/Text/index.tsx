@@ -1,10 +1,7 @@
-/** @jsx jsx */
-
 import { PropsWithChildren, use } from 'react';
-import { jsx } from '@emotion/react';
 import Text from '#app/components/Text';
 import CallToActionLinkContext from '../CallToActionLinkContext';
-import styles from './index.styles';
+import styles from './index.module.css';
 
 type TextProps = {
   as?: string;

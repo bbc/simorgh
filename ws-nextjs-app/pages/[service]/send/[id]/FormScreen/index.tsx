@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import React, { useEffect, useRef, use } from 'react';
-import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import { LiveRegionContextProvider } from '#app/components/LiveRegion/LiveRegionContext';
 import LiveRegion from '#app/components/LiveRegion';
@@ -76,7 +74,7 @@ export default function FormScreen({
         level={1}
         id="content"
         tabIndex={-1}
-        css={styles.heading}
+        className={styles.heading}
         size="trafalgar"
       >
         {title}
@@ -85,7 +83,7 @@ export default function FormScreen({
         <div
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: description }}
-          css={styles.description}
+          className={styles.description}
         />
       )}
       {sectionTitle && (
@@ -101,12 +99,12 @@ export default function FormScreen({
           {formFields}
 
           {privacyNotice && (
-            <div css={styles.privacyContainer}>
-              <strong css={styles.privacyHeading}>{dataPolicyHeading}</strong>
+            <div className={styles.privacyContainer}>
+              <strong className={styles.privacyHeading}>{dataPolicyHeading}</strong>
               <div
                 // eslint-disable-next-line react/no-danger
                 dangerouslySetInnerHTML={{ __html: privacyNotice }}
-                css={styles.privacyNotice}
+                className={styles.privacyNotice}
               />
             </div>
           )}

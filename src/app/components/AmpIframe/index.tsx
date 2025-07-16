@@ -1,10 +1,7 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import { jsx } from '@emotion/react';
 import React, { PropsWithChildren } from 'react';
 import { Helmet } from 'react-helmet';
 import { GridItemMedium } from '#components/Grid';
-import styles from './index.styles';
+import styles from './index.module.css';
 
 type Props = {
   className?: string;
@@ -70,8 +67,8 @@ const AmpIframe = ({
           title={title}
         >
           {/* @ts-expect-error Property 'overflow' does not exist on type 'DivProps & { css?: Interpolation<Theme>; }'. */}
-          <div overflow="" css={styles.overflow}>
-            <button type="button" css={styles.button}>
+          <div overflow="" className={styles.overflow}>
+            <button type="button" className={styles.button}>
               Show more
             </button>
           </div>

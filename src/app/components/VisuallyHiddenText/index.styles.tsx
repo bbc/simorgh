@@ -1,5 +1,3 @@
-import { css } from '@emotion/react';
-
 const styles = {
   visuallyHiddenText: () =>
     css({

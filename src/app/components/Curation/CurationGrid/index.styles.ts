@@ -1,5 +1,3 @@
-import { css, Theme } from '@emotion/react';
-
 const styles = {
   list: ({ isLite }: Theme) =>
     css({

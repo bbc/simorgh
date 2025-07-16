@@ -1,4 +1,3 @@
-import { css, Theme } from '@emotion/react';
 import { grid } from '#psammead/psammead-styles/src/detection';
 import { FooterLink } from '#app/models/types/serviceConfig';
 import {

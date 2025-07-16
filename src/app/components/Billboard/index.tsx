@@ -1,6 +1,3 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import { jsx } from '@emotion/react';
 import { use } from 'react';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
@@ -9,7 +6,7 @@ import { Summary } from '#app/models/types/curationData';
 import isLive from '#app/lib/utilities/isLive';
 import Heading from '../Heading';
 import MaskedImage from '../MaskedImage';
-import styles from './index.styles';
+import styles from './index.module.css';
 import Text from '../Text';
 import LivePulse from '../LivePulse';
 import LiveText from '../LiveText';
@@ -45,9 +42,9 @@ export default ({
   const showMoreOnThisTitle = translations.moreOnThis;
   return (
     <section role="region" aria-labelledby={id} data-testid={id}>
-      <div css={styles.headerContainer} {...viewTracker}>
-        <div css={styles.backgroundContainer} />
-        <div css={styles.contentContainer}>
+      <div className={styles.headerContainer} {...viewTracker}>
+        <div className={styles.backgroundContainer} />
+        <div className={styles.contentContainer}>
           <MaskedImage
             imageUrl={image.replace('{width}', '240')}
             imageUrlTemplate={image}
@@ -55,17 +52,17 @@ export default ({
             imageWidth={660}
             showPlaceholder={false}
           />
-          <div css={styles.textContainer}>
-            <Heading level={2} size="paragon" css={styles.heading} id={id}>
-              <a href={link} css={styles.link} {...clickTrackerHandler}>
+          <div className={styles.textContainer}>
+            <Heading level={2} size="paragon" className={styles.heading} id={id}>
+              <a href={link} className={styles.link} {...clickTrackerHandler}>
                 {showLiveLabel ? (
                   <div data-testid="billboard-live-label">
                     <LivePulse
                       width="24"
                       height="24"
-                      css={styles.liveLabelPulse}
+                      className={styles.liveLabelPulse}
                     />
-                    <LiveText css={styles.liveLabelText}>
+                    <LiveText className={styles.liveLabelText}>
                       <div>{heading}</div>
                     </LiveText>
                   </div>
@@ -75,18 +72,18 @@ export default ({
               </a>
             </Heading>
             {description && (
-              <Text as="p" css={styles.description}>
+              <Text as="p" className={styles.description}>
                 {description}
               </Text>
             )}
           </div>
           {!isLive() && summaries.length > 1 && (
-            <div css={styles.curationGridSection}>
+            <div className={styles.curationGridSection}>
               {showMoreOnThisTitle && (
                 <Heading
                   level={2}
                   size="greatPrimer"
-                  css={[styles.billboardMoreOnThisHeading]}
+                  className={[styles.billboardMoreOnThisHeading].filter(Boolean).join(' ')}
                 >
                   {showMoreOnThisTitle}
                 </Heading>

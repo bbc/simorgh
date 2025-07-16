@@ -1,10 +1,8 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import { use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { LeftChevron, RightChevron } from '../../icons';
 import CallToActionLinkContext from '../CallToActionLinkContext';
-import styles from './index.styles';
+import styles from './index.module.css';
 
 type ChevronProps = {
   className?: string;

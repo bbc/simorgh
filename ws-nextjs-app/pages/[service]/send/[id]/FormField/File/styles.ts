@@ -1,5 +1,4 @@
 import pixelsToRem from '#app/utilities/pixelsToRem';
-import { Theme, css } from '@emotion/react';
 import formFieldStyles from '../styles';
 
 export default {

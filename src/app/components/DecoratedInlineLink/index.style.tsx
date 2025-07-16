@@ -1,5 +1,3 @@
-import { Theme, css } from '@emotion/react';
-
 export default {
   InlineLink: ({ palette, isDarkUi }: Theme) =>
     css({

@@ -1,7 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
-
-import styles from './index.styles';
+import styles from './index.module.css';
 
 type Props = {
   guidanceMessage?: string | null;
@@ -24,14 +21,14 @@ const Guidance = ({
   >
     {guidanceMessage && (
       <strong
-        css={styles.guidanceMessage}
+        className={styles.guidanceMessage}
         className="guidance-message"
         aria-hidden="true"
       >
         {guidanceMessage}
       </strong>
     )}
-    <noscript css={[styles.guidanceMessage, styles.noscript]}>
+    <noscript className={[styles.guidanceMessage, styles.noscript].filter(Boolean).join(' ')}>
       <strong>{noJsMessage}</strong>
     </noscript>
   </div>

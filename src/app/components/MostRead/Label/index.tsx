@@ -1,7 +1,5 @@
-/** @jsx jsx */
 import { use } from 'react';
-import { jsx } from '@emotion/react';
-import styles from './index.styles';
+import styles from './index.module.css';
 import SectionLabel from '../../../legacy/psammead/psammead-section-label/src';
 import { GREY_2 } from '../../ThemeProvider/palette';
 import { ServiceContext } from '../../../contexts/ServiceContext';
@@ -31,7 +29,7 @@ const MostReadSectionLabel = ({
   } = use(ServiceContext);
   return (
     <SectionLabel
-      css={styles.sectionLabel}
+      className={styles.sectionLabel}
       script={script}
       labelId="Most-Read"
       service={service}

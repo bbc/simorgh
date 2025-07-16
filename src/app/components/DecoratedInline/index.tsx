@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import Blocks from '#app/legacy/containers/Blocks';
 import { OptimoBlock } from '#app/models/types/optimo';
 import fragment from '../Fragment';
@@ -11,7 +9,7 @@ const componentsToRender = { fragment, urlLink: InlineLink };
 
 const InlineContainer = ({ blocks, language }: Props) => {
   return (
-    <Text css={styles.inline} lang={language}>
+    <Text className={styles.inline} lang={language}>
       <Blocks blocks={blocks} componentsToRender={componentsToRender} />
     </Text>
   );

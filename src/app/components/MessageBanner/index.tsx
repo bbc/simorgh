@@ -1,11 +1,9 @@
-/** @jsx jsx */
-import { jsx, useTheme } from '@emotion/react';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import Paragraph from '../Paragraph';
 import Heading from '../Heading';
 import Image from '../Image';
-import styles from './index.styles';
+import styles from './index.module.css';
 import CallToActionLink from '../CallToActionLink';
 
 interface MessageBannerProps {
@@ -43,26 +41,26 @@ const MessageBanner = ({
 
   return (
     <section
-      css={styles.container}
+      className={styles.container}
       role="region"
       aria-labelledby={id}
       data-testid={id}
     >
-      <div {...viewTracker} css={styles.card}>
-        <div css={styles.textWrap}>
-          <Heading level={2} size="paragon" css={styles.heading} id={id}>
+      <div {...viewTracker} className={styles.card}>
+        <div className={styles.textWrap}>
+          <Heading level={2} size="paragon" className={styles.heading} id={id}>
             {heading}
           </Heading>
-          <Paragraph size="longPrimer" css={styles.paragraph}>
+          <Paragraph size="longPrimer" className={styles.paragraph}>
             {description}
           </Paragraph>
         </div>
-        <div css={styles.flex}>
+        <div className={styles.flex}>
           <CallToActionLink
             url={link}
             className="focusIndicatorInvert"
             eventTrackingData={eventTrackingData}
-            css={styles.callToActionLink}
+            className={styles.callToActionLink}
           >
             <CallToActionLink.ButtonLikeWrapper>
               <CallToActionLink.Text shouldUnderlineOnHoverFocus>
@@ -72,7 +70,7 @@ const MessageBanner = ({
             </CallToActionLink.ButtonLikeWrapper>
           </CallToActionLink>
           {image && (
-            <div css={styles.image}>
+            <div className={styles.image}>
               <Image
                 alt=""
                 src={imgSrcLarge as string}

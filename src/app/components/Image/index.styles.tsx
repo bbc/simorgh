@@ -1,5 +1,3 @@
-import { css, Theme } from '@emotion/react';
-
 import BASE64_PLACEHOLDER_IMAGE from './base64Placeholder';
 
 const styles = {

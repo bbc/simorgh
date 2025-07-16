@@ -1,7 +1,4 @@
-/** @jsx jsx */
-
 import React, { use } from 'react';
-import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import ATIAnalytics from '#app/components/ATIAnalytics';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
@@ -42,14 +39,14 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
         openGraphType="website"
         hasAmpPage={false}
       />
-      <div css={styles.grid}>
-        <div css={styles.primaryColumn}>
-          <main css={styles.mainContent}>
+      <div className={styles.grid}>
+        <div className={styles.primaryColumn}>
+          <main className={styles.mainContent}>
             <p>{instructions}</p>
             <Heading level={1}>{title}</Heading>
-            <ol css={styles.orderedList}>
+            <ol className={styles.orderedList}>
               {pageData.downloadData?.map(item => (
-                <li css={styles.listItem} key={item.fileCreated}>
+                <li className={styles.listItem} key={item.fileCreated}>
                   <TimeStampContainer
                     timestamp={item.fileCreated}
                     dateTimeFormat="DD MMMM YYYY"
@@ -63,7 +60,7 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
                     isRelative={false}
                   />
                   <CallToActionLink
-                    css={styles.cta}
+                    className={styles.cta}
                     url={item.files[0].fileLink}
                     download
                     eventTrackingData={{

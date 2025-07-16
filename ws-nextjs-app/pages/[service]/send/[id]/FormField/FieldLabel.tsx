@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import Text from '#app/components/Text';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { use } from 'react';
@@ -33,7 +31,7 @@ export default ({
       as="label"
       className={className}
       htmlFor={forId}
-      css={[styles.fieldLabel, useErrorTheme && styles.fieldLabelError]}
+      className={[styles.fieldLabel].filter(Boolean).join(' ')}
       dangerouslySetInnerHTML={{
         __html: required ? labelText : `${labelText} (${optional})`,
       }}

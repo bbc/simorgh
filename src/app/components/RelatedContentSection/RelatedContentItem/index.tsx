@@ -1,6 +1,3 @@
-/** @jsx jsx */
-
-import { jsx } from '@emotion/react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { createSrcsets } from '#lib/utilities/srcSet';
@@ -8,7 +5,7 @@ import buildIChefURL from '#app/lib/utilities/ichefURL';
 import Promo from '#components/OptimoPromos';
 import isEmpty from 'ramda/src/isEmpty';
 import { ViewTracker } from '#app/lib/analyticsUtils/types';
-import styles from './index.styles';
+import styles from './index.module.css';
 import { EventTrackingBlock } from '../../../models/types/eventTracking';
 
 type RelatedContentItemProps = {
@@ -161,7 +158,7 @@ const RelatedContentItem = ({
 
   return (
     <div
-      css={[styles.wrapper, headlineFirst && styles.promoFullWidth]}
+      className={[styles.wrapper].filter(Boolean).join(' ')}
       {...viewTracker}
     >
       <Promo
@@ -188,7 +185,7 @@ const RelatedContentItem = ({
               <Promo.Content headline={headline} />
             </Promo.Link>
           </Promo.Title>
-          <Promo.Timestamp css={styles.promoTimestamp}>
+          <Promo.Timestamp className={styles.promoTimestamp}>
             {timestamp}
           </Promo.Timestamp>
         </Promo.ContentWrapper>

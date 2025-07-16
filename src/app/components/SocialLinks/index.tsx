@@ -1,7 +1,4 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
 import React, { use, useId } from 'react';
-import { jsx } from '@emotion/react';
 import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
 import { Summary } from '#app/models/types/curationData';
 import { RequestContext } from '#app/contexts/RequestContext';
@@ -10,7 +7,7 @@ import getLocator from '#lib/utilities/imageSrcHelpers/locator';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import Heading from '../Heading';
 import Image from '../Image';
-import styles from './index.styles';
+import styles from './index.module.css';
 
 interface SocialLinksProps {
   id?: string;
@@ -32,7 +29,7 @@ const SocialLinkImage = ({ imageUrl }: { imageUrl: string }) => {
   if (!imagePath) {
     return (
       <div
-        css={[styles.image, styles.placeholder]}
+        className={[styles.image, styles.placeholder].filter(Boolean).join(' ')}
         aria-hidden="true"
         data-testid="social-link-image-placeholder"
       />
@@ -49,7 +46,7 @@ const SocialLinkImage = ({ imageUrl }: { imageUrl: string }) => {
 
   return (
     <Image
-      css={[styles.image]}
+      className={[styles.image].filter(Boolean).join(' ')}
       width={DEFAULT_IMAGE_SIZE}
       src={imageUrl.replace('{width}', String(DEFAULT_IMAGE_SIZE))}
       srcSet={primarySrcset}
@@ -71,7 +68,7 @@ const SocialLink = ({ summary }: { summary: Summary }) => {
       <SocialLinkImage imageUrl={summary.imageUrl} />
       <a
         href={summary.link}
-        css={styles.link}
+        className={styles.link}
         {...(hasDescription && { 'aria-labelledby': linkLabelId })}
       >
         {hasDescription ? (
@@ -104,23 +101,23 @@ const SocialLinks = ({
       role="region"
       aria-labelledby={id}
       data-testid={id}
-      css={styles.container}
+      className={styles.container}
     >
-      <Heading level={2} id={id} css={styles.heading}>
+      <Heading level={2} id={id} className={styles.heading}>
         {title}
       </Heading>
       {hasMultipleItems ? (
-        <ul css={styles.unorderedList} role="list">
+        <ul className={styles.unorderedList} role="list">
           {summaries.map(summary => {
             return (
-              <li css={styles.item} key={summary.title}>
+              <li className={styles.item} key={summary.title}>
                 <SocialLink summary={summary} />
               </li>
             );
           })}
         </ul>
       ) : (
-        <div css={styles.item}>
+        <div className={styles.item}>
           <SocialLink summary={summaries[0]} />
         </div>
       )}

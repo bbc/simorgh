@@ -1,6 +1,4 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import React, { PropsWithChildren, use } from 'react';
 import pick from 'ramda/src/pick';
 import Lazyload from 'react-lazyload';
@@ -61,7 +59,7 @@ const FrostedGlassPromo = ({
 
   const promoText = (
     <React.Fragment>
-      <h3 css={styles.header}>
+      <h3 className={styles.header}>
         <a
           css={theme => [
             styles.anchor,
@@ -87,9 +85,9 @@ const FrostedGlassPromo = ({
   // Anchors cannot be self-closing under the HTML spec
   /* eslint-disable react/self-closing-comp */
   return (
-    <div css={styles.componentWrapper} data-testid={`frosted-promo-${index}`}>
+    <div className={styles.componentWrapper} data-testid={`frosted-promo-${index}`}>
       <a
-        css={styles.clickableArea}
+        className={styles.clickableArea}
         href={relativeUrl}
         {...(eventTrackingData && clickTracker)}
         aria-hidden="true"

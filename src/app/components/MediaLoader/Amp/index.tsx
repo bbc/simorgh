@@ -1,9 +1,6 @@
-/** @jsx jsx */
-
-import { jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import Message from '../Message';
-import styles from './index.styles';
+import styles from './index.module.css';
 
 const AmpHead = () => (
   <Helmet>
@@ -31,7 +28,7 @@ const AmpMediaLoader = ({
   noJsMessage,
 }: Props) => {
   return (
-    <div css={styles.ampIframeWrapper}>
+    <div className={styles.ampIframeWrapper}>
       <AmpHead />
       <amp-iframe
         sandbox="allow-scripts allow-same-origin"
@@ -47,7 +44,7 @@ const AmpMediaLoader = ({
           data-e2e="image-placeholder"
           // @ts-expect-error - placeholder is an AMP specific attribute
           placeholder=""
-          css={styles.ampIframePlaceholder}
+          className={styles.ampIframePlaceholder}
         />
         <noscript>
           <Message

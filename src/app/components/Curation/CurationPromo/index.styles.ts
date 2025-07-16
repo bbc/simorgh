@@ -1,5 +1,3 @@
-import { css, Theme } from '@emotion/react';
-
 export default {
   promo: ({ isLite }: Theme) =>
     css({

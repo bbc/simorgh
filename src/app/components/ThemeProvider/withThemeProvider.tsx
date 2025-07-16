@@ -1,5 +1,4 @@
 import React, { use, useMemo } from 'react';
-import { Global, ThemeProvider as EmotionThemeProvider } from '@emotion/react';
 import useIsPWA from '#app/hooks/useIsPWA';
 import focusIndicator from './focusIndicator';
 import { RequestContext } from '../../contexts/RequestContext';

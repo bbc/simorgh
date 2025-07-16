@@ -1,6 +1,4 @@
 /* eslint-disable jsx-a11y/aria-role */
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import { use } from 'react';
 import moment from 'moment';
 import path from 'ramda/src/path';
@@ -12,7 +10,7 @@ import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
 import LiveLabel from '../../LiveLabel';
 
-import styles from './index.styles';
+import styles from './index.module.css';
 
 const CurationPromo = ({
   id,
@@ -48,7 +46,7 @@ const CurationPromo = ({
     (type === 'video' && `${videoTranslation}, `) ||
     (type === 'photogallery' && `${photoGalleryTranslation}, `);
   return (
-    <Promo css={styles.promo} className="">
+    <Promo className={styles.promo} className="">
       {imageUrl && (
         <Promo.Image
           src={imageUrl}
@@ -58,7 +56,7 @@ const CurationPromo = ({
           {...(isLite && { css: styles.image })}
         >
           {isMedia && (
-            <Promo.MediaIcon css={styles.icon} type={type}>
+            <Promo.MediaIcon className={styles.icon} type={type}>
               {showDuration ? mediaDuration : ''}
             </Promo.MediaIcon>
           )}

@@ -1,6 +1,3 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import { jsx } from '@emotion/react';
 import React, { use } from 'react';
 import { Helmet } from 'react-helmet';
 import pathOr from 'ramda/src/pathOr';
@@ -14,7 +11,7 @@ import { ServiceContext } from '../../../contexts/ServiceContext';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import AdSlot from './AdSlot';
 import { Direction, PageTypes, Services } from '../../../models/types/global';
-import styles from './index.styles';
+import styles from './index.module.css';
 import adStyles from '../utilities/adSlot.styles';
 import { AdProps, SLOT_TYPES, SlotType } from '../types';
 
@@ -59,7 +56,7 @@ const AdContent = ({
   return (
     <>
       <a
-        css={[styles.link, { textAlign: dir === 'ltr' ? 'right' : 'left' }]}
+        className={[styles.link].filter(Boolean).join(' ')}
         dir={dir}
         href={LABEL_LINK}
         tabIndex={-1}
@@ -81,12 +78,12 @@ const AdWithoutPlaceholder = ({
 }: AdContentProps) => {
   return (
     <div
-      css={styles.display}
+      className={styles.display}
       amp-access="toggles.ads.enabled"
       amp-access-hide="true"
     >
       <section
-        css={styles.section}
+        className={styles.section}
         aria-label={ariaLabel}
         role="region"
         data-e2e="advertisement"
@@ -99,7 +96,7 @@ const AdWithoutPlaceholder = ({
               : adStyles.ampLeaderboard
           }
         >
-          <div css={styles.wrapper}>
+          <div className={styles.wrapper}>
             <AdContent
               dir={dir}
               label={label}
@@ -124,7 +121,7 @@ const AdWithPlaceholder = ({
 }: AdContentProps) => {
   return (
     <section
-      css={styles.section}
+      className={styles.section}
       aria-label={ariaLabel}
       role="region"
       data-e2e="advertisement"
@@ -137,9 +134,9 @@ const AdWithPlaceholder = ({
             : adStyles.ampLeaderboard
         }
       >
-        <div css={styles.wrapper}>
+        <div className={styles.wrapper}>
           <div
-            css={styles.display}
+            className={styles.display}
             amp-access="toggles.ads.enabled"
             amp-access-hide="true"
           >

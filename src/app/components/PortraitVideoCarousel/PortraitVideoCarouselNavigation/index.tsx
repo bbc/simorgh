@@ -1,13 +1,11 @@
-/** @jsx jsx */
 import { useCallback, use, useEffect, useState } from 'react';
-import { jsx } from '@emotion/react';
 import {
   ScrollDirection,
   PortraitVideoCarouselNavigationProps,
 } from '#app/models/types/portraitVideo';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { Chevron, ChevronOrientation } from '#app/components/icons';
-import styles from './index.styles';
+import styles from './index.module.css';
 import { PROMO_ITEM_WIDTH_MIN } from '../utils/styleUtils';
 
 const DEFAULT_TRANSLATION = {
@@ -59,14 +57,14 @@ export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
   }, [checkScrollButtons, scrollPaneRef]);
 
   return (
-    <div css={styles.buttonGroupOverlay} aria-hidden="true">
-      <div css={styles.buttonGroup}>
+    <div className={styles.buttonGroupOverlay} aria-hidden="true">
+      <div className={styles.buttonGroup}>
         <button
           type="button"
           aria-label={isScrollableLeft}
           onClick={() => scroll(dir === 'ltr' ? 'left' : 'right')}
           disabled={!canScrollLeft}
-          css={styles.navButton}
+          className={styles.navButton}
           tabIndex={-1}
           data-testid="pv-scroll-left"
         >
@@ -77,7 +75,7 @@ export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
           aria-label={isScrollableRight}
           onClick={() => scroll(dir === 'ltr' ? 'right' : 'left')}
           disabled={!canScrollRight}
-          css={styles.navButton}
+          className={styles.navButton}
           tabIndex={-1}
           data-testid="pv-scroll-right"
         >

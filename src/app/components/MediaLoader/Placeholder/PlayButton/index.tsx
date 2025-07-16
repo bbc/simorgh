@@ -1,8 +1,5 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
-
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
-import styles from './index.styles';
+import styles from './index.module.css';
 import VisuallyHiddenText from '../../../VisuallyHiddenText';
 
 type Props = {
@@ -37,7 +34,7 @@ const PlayButton = ({
   return (
     <button
       type="button"
-      css={styles.button}
+      className={styles.button}
       onClick={onClick}
       {...(className ? { className } : undefined)}
     >
@@ -53,7 +50,7 @@ const PlayButton = ({
       </div>
       {datetime && duration && durationSpoken && (
         <time
-          css={styles.timeDuration}
+          className={styles.timeDuration}
           dateTime={datetime}
           aria-hidden="true"
           suppressHydrationWarning

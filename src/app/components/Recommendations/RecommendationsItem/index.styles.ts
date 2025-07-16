@@ -1,5 +1,3 @@
-import { css, Theme } from '@emotion/react';
-
 export default {
   promoWrapper: ({ palette, spacings }: Theme) =>
     css({

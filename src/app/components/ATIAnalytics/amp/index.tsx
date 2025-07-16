@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import getAmpAnalyticsJson from './ampAnalyticsJson';
 import { ATIAnalyticsProps, AMPAnalyticsData } from '../types';

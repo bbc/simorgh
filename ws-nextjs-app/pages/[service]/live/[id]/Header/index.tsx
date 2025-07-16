@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
 import LiveHeaderMedia from '#app/components/LiveHeaderMedia';
@@ -44,11 +42,11 @@ const Header = ({
   );
 
   return (
-    <div css={styles.headerContainer}>
-      <div css={styles.backgroundContainer}>
-        <div css={styles.backgroundColor} />
+    <div className={styles.headerContainer}>
+      <div className={styles.backgroundContainer}>
+        <div className={styles.backgroundColor} />
       </div>
-      <div css={styles.contentContainer}>
+      <div className={styles.contentContainer}>
         <div css={[isMediaOpen && styles.hideMaskedImage]}>
           {isHeaderImage ? (
             <MaskedImage
@@ -70,7 +68,7 @@ const Header = ({
             level={1}
             id="content"
             tabIndex={-1}
-            css={styles.heading}
+            className={styles.heading}
           >
             {showLiveLabel ? (
               <LiveLabelHeader isHeaderImage={isWithImageLayout}>
@@ -95,7 +93,7 @@ const Header = ({
           )}
         </div>
         {mediaCollections && (
-          <div css={[styles.liveMedia, isMediaOpen && styles.liveMediaOpen]}>
+          <div className={[styles.liveMedia].filter(Boolean).join(' ')}>
             <LiveHeaderMedia
               mediaCollection={mediaCollections}
               clickCallback={watchVideoClickHandler}

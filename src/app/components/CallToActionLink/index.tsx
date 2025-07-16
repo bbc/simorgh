@@ -1,13 +1,11 @@
-/** @jsx jsx */
 import { PropsWithChildren, useMemo } from 'react';
-import { jsx } from '@emotion/react';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import { FontVariant, GelFontSize } from '../../models/types/theming';
 import Chevron from './Chevron';
 import ButtonLikeWrapper from './ButtonLikeWrapper';
 import Text from './Text';
-import styles from './index.styles';
+import styles from './index.module.css';
 import CallToActionLinkContext from './CallToActionLinkContext';
 
 type CallToActionLinkProps = {
@@ -50,7 +48,7 @@ const CallToActionLink = ({
       className={className}
       download={download}
       {...htmlAttributes}
-      css={[styles.link, alignWithMargin && styles.alignWithMargin]}
+      className={[styles.link].filter(Boolean).join(' ')}
     >
       <CallToActionLinkContext.Provider value={callToActionLinkContextValue}>
         {children}

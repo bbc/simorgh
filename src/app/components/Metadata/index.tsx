@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx, useTheme } from '@emotion/react';
 import { use } from 'react';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';

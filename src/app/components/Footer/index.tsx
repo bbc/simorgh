@@ -1,11 +1,9 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import { MouseEvent, use } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import Link from './Link';
 import List from './List';
-import styles from './index.styles';
+import styles from './index.module.css';
 
 const openPrivacyManagerModal = (e: MouseEvent<HTMLAnchorElement>) => {
   e.preventDefault();
@@ -58,7 +56,7 @@ export default () => {
     .filter(Boolean);
 
   return (
-    <div css={styles.siteWideLinksWrapper}>
+    <div className={styles.siteWideLinksWrapper}>
       <div
         css={
           trustProjectLink
@@ -71,9 +69,9 @@ export default () => {
           <List elements={extraLinkElements} extraLinks />
         )}
         {collectiveNewsroomText && (
-          <p css={styles.paragraphWithBorderBottom}>{collectiveNewsroomText}</p>
+          <p className={styles.paragraphWithBorderBottom}>{collectiveNewsroomText}</p>
         )}
-        <p css={styles.paragraph}>
+        <p className={styles.paragraph}>
           <span lang="en-GB">{`\u00A9`} </span>
           {`${new Date().getFullYear()} ${copyrightText}`}{' '}
           {externalLink && (
