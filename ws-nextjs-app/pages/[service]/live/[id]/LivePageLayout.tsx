@@ -1,7 +1,4 @@
-/** @jsx jsx */
-
 import React, { use } from 'react';
-import { jsx } from '@emotion/react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Pagination from '#app/components/Pagination';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
@@ -15,8 +12,6 @@ import { MediaCollection } from '#app/components/MediaLoader/types';
 import Stream from './Stream';
 import Header from './Header';
 import KeyPoints from './KeyPoints';
-
-import styles from './styles';
 import { StreamResponse } from './Post/types';
 import { KeyPointsResponse } from './KeyPoints/types';
 
@@ -155,13 +150,13 @@ const LivePage = ({ pageData }: ComponentProps) => {
           imageWidth={imageWidth}
           mediaCollections={mediaCollections}
         />
-        <div css={styles.outerGrid}>
-          <div css={styles.firstSection}>
+        <div className="max-w-[63rem] mx-auto grid grid-cols-12 p-4 group-2:p-8 group-4:px-8 group-4:py-4 group-4:pb-16 group-4:gap-x-8">
+          <div className="col-span-12 group-4:col-span-4 group-5:col-span-3">
             {keyPoints && (
               <KeyPoints keyPointsContent={keyPoints.model.blocks} />
             )}
           </div>
-          <div css={styles.secondSection}>
+          <div className="col-span-12 group-4:col-span-8 group-5:col-span-6">
             <Stream
               streamContent={liveTextStream.content}
               contributors={liveTextStream.contributors}

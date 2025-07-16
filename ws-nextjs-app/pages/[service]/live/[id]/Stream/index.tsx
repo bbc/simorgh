@@ -1,12 +1,9 @@
-/** @jsx jsx */
-import { use, useEffect, useState } from 'react';
-import { jsx } from '@emotion/react';
+import React, { use, useEffect, useState } from 'react';
 import Heading from '#app/components/Heading';
 import Paragraph from '#app/components/Paragraph';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { StreamResponse } from '../Post/types';
 import Post from '../Post';
-import styles from './styles';
 
 const Stream = ({
   streamContent,
@@ -49,16 +46,15 @@ const Stream = ({
   return (
     <div>
       <Heading
-        css={[
-          styles.heading,
-          !contributors && styles.headingNoContributorsPadding,
-        ]}
+        className={`py-8 group-3:text-doublePica group-3:pt-12 group-4:pt-8 ${
+          !contributors ? 'group-3:pb-12' : ''
+        }`}
         level={2}
       >
         {liveCoverage}
       </Heading>
       {contributors && (
-        <Paragraph data-testid="live-contributors" css={styles.subHeading}>
+        <Paragraph data-testid="live-contributors" className="pb-8 group-3:pb-12">
           {contributors}
         </Paragraph>
       )}
@@ -66,9 +62,9 @@ const Stream = ({
       {hasSinglePost ? (
         <Post post={streamResults[0]} hasShareApi={hasShareApi} />
       ) : (
-        <ol role="list" css={styles.orderedList}>
+        <ol role="list" className="m-0 p-0">
           {streamResults.map(post => (
-            <li key={post.urn} css={styles.listItem}>
+            <li key={post.urn} className="list-none">
               <Post post={post} hasShareApi={hasShareApi} />
             </li>
           ))}

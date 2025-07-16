@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import React, { use } from 'react';
-import { jsx } from '@emotion/react';
 import pathOr from 'ramda/src/pathOr';
 import { OptimoBlock } from '#models/types/optimo';
 import Heading from '#app/components/Heading';
@@ -16,7 +14,6 @@ import isTenHoursAgo from '#app/lib/utilities/isTenHoursAgo';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
 import SocialEmbedContainer from '#app/legacy/containers/SocialEmbed';
 import { MediaBlock } from '#app/components/MediaLoader/types';
-import styles from './styles';
 import {
   Post as PostType,
   PostHeadingBlock,
@@ -34,7 +31,7 @@ const PostBreakingNewsLabel = ({
   return isBreakingNews ? (
     <>
       <Text
-        css={styles.breakingNewsLabel}
+        className="text-white bg-brand-background p-2 px-3 inline-block text-brevier font-sans"
         size="brevier"
         fontVariant="sansBold"
         data-testid="breaking-news-label"
@@ -72,9 +69,9 @@ const PostHeaderBanner = ({
   const locale = serviceDatetimeLocale || datetimeLocale;
   const isRelative = isTenHoursAgo(new Date(curated).getTime());
   return (
-    <span css={[styles.postHeaderBanner, isBreakingNews && styles.fullWidth]}>
+    <span className={`border-t-2 border-brand-background inline-block w-full ${isBreakingNews ? 'bg-brand-background' : ''}`}>
       <TimeStampContainer
-        css={styles.timeStamp}
+        className="text-white bg-brand-background p-2 px-3 inline-block text-brevier font-sans"
         timestamp={curated}
         dateTimeFormat={postDateTimeFormat || 'DD MMMM YYYY'}
         format={postDateFormat || 'D MMMM YYYY'}
@@ -105,11 +102,9 @@ const PostHeadings = ({ headerBlock }: { headerBlock: PostHeadingBlock }) => {
       <Text
         fontVariant={isHeadline ? 'sansBold' : 'sansRegular'}
         size={isHeadline ? 'greatPrimer' : 'brevier'}
-        className="headingStyling"
-        css={[
-          styles.postHeadings,
-          isHeadline ? styles.postHeadline : styles.postSubHeadline,
-        ]}
+        className={`text-black inline-block w-full m-0 ${
+          isHeadline ? 'pt-12 px-8' : 'pt-2 px-8 group-3:text-longPrimer'
+        }`}
       >
         {headingText}
       </Text>
@@ -122,8 +117,7 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
     paragraph: (props: ComponentToRenderProps) => (
       <Paragraph
         blocks={props.blocks}
-        className="postStyles"
-        css={styles.bodyText}
+        className="text-black m-0 pb-8"
       />
     ),
     unorderedList: (props: ComponentToRenderProps) => (
@@ -131,8 +125,7 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
         blocks={props.blocks}
         blockGroupType={props.blockGroupType}
         blockGroupIndex={props.blockGroupIndex}
-        className="postStyles"
-        css={styles.bodyText}
+        className="text-black m-0 pb-8"
       />
     ),
     orderedList: (props: ComponentToRenderProps) => (
@@ -140,24 +133,22 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
         blocks={props.blocks}
         blockGroupType={props.blockGroupType}
         blockGroupIndex={props.blockGroupIndex}
-        className="postStyles"
-        css={styles.bodyText}
+        className="text-black m-0 pb-8"
       />
     ),
     image: (props: { blocks: OptimoBlock[] }) => (
       <ImageWithCaption
         {...props}
         sizes="(min-width: 1008px) 760px, 100vw"
-        className="mediaStyles"
-        css={styles.bodyMedia}
+        className="mb-20 group-2:px-8 group-4:px-0"
         position={[9]}
       />
     ),
     video: (props: { blocks: MediaBlock[] }) => (
-      <MediaLoader blocks={props.blocks} css={styles.bodyMedia} />
+      <MediaLoader blocks={props.blocks} className="mb-20 group-2:px-8 group-4:px-0" />
     ),
     audio: (props: { blocks: MediaBlock[] }) => (
-      <MediaLoader blocks={props.blocks} css={styles.audioPost} />
+      <MediaLoader blocks={props.blocks} className="overflow-hidden" />
     ),
     social: SocialEmbedContainer,
   };
@@ -194,8 +185,8 @@ const Post = ({
   const timestamp = post?.dates?.curated ?? '';
 
   return (
-    <article css={styles.postContainer}>
-      <Heading id={urn} tabIndex={-1} level={3} css={styles.heading}>
+    <article className="bg-grey-2 mb-8 group-2:mb-12 group-4:mb-8">
+      <Heading id={urn} tabIndex={-1} level={3} className="group-1:leading-none">
         {/* eslint-disable-next-line jsx-a11y/aria-role */}
         <span role="text">
           <PostHeaderBanner
@@ -208,7 +199,7 @@ const Post = ({
           ))}
         </span>
       </Heading>
-      <div css={styles.postContent}>
+      <div className="p-8 pt-8 pb-4 group-2:p-0 group-2:pt-8 group-2:pb-4 group-4:px-8 group-4:pt-8 group-4:pb-4">
         <PostContent contentBlocks={contentBlocks} />
       </div>
       {hasShareApi && (
