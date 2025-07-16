@@ -22,7 +22,7 @@ const horizontalLayout = ({ image, fonts, badges }: LayoutProps) =>
               bottom: 30,
               right: 25,
               display: 'flex',
-              flexDirection: 'row',
+              flexDirection: 'column',
               gap: 15,
             }}
           >

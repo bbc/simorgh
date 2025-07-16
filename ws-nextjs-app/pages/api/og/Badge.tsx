@@ -15,7 +15,6 @@ const Badge = ({ icon, text, backgroundColor = GREY_8 }: BadgeProps) => (
       backgroundColor,
       padding: 15,
       borderRadius: 30,
-      // marginRight: index < arr.length - 1 ? '20px' : '0px',
     }}
   >
     <div
