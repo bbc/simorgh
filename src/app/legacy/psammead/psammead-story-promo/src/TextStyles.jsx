@@ -1,14 +1,4 @@
-import styled from '@emotion/styled';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-} from '#psammead/gel-foundations/src/spacings';
-import {
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MAX,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-  GEL_GROUP_5_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
+import React from 'react';
 import { grid } from '#psammead/psammead-styles/src/detection';
 
 const twoOfSixColumnsMaxWidthScaleable = `33.33%`;
@@ -22,102 +12,54 @@ const fullWidthColumnsMaxScaleable = `100%`;
 
 const halfWidthColumnsMaxScaleable = `50%`;
 
-const TextGridColumnsTopStory = `
-  grid-column: 1 / span 6;
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    grid-column: 4 / span 3;
-  }
-
-  @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
-    grid-column: 7 / span 6;
-  }
-`;
-
-const TextGridColumns = displayImage => `
-  grid-column: 3 / span 4;
-
-  ${displayImage ? '' : `grid-column: 1 / span 6;`}
-
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    padding-top: ${displayImage ? GEL_SPACING : '0'};
-  }
-`;
-
-const TextGridColumnsLeadingStory = `
-  padding: 0;
-  width: 100%;
-  grid-template-columns: repeat(6, 1fr);
-  grid-column-end: span 6;
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-end: span 3;
-  }
-
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-end: span 2;
-  }
-`;
-
-const TextGridFallbackTopStory = `
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    width: ${halfWidthColumnsMaxScaleable};
-    padding: 0 ${GEL_SPACING_DBL};
-  }
-
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    width: ${halfWidthColumnsMaxScaleable};
-  }
-`;
-
-const TextGridFallback = displayImage => `
-  width: ${fourOfSixColumnsMaxWidthScaleable};
-  padding: 0 ${GEL_SPACING};
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    padding: 0 ${GEL_SPACING_DBL};
-  }
-
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    display: block;
-    width: 100%;
-    padding: ${GEL_SPACING} 0;
-  }
-
-  ${
-    displayImage
-      ? ''
-      : `width: ${fullWidthColumnsMaxScaleable}; >div{ vertical-align: middle; }`
-  }
-`;
-
-const TextGridFallBackLeadingStory = dir => `
-  width: ${fullWidthColumnsMaxScaleable};
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    ${
-      dir === 'rtl'
-        ? `padding-left: ${GEL_SPACING};`
-        : `padding-right: ${GEL_SPACING};`
-    }
-    width: ${halfWidthColumnsMaxScaleable};
-  }
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    width: ${twoOfSixColumnsMaxWidthScaleable};
-  }
-`;
-
-const textGridFallbackStyles = {
-  top: () => TextGridFallbackTopStory,
-  regular: ({ displayImage }) => TextGridFallback(displayImage),
-  leading: ({ dir }) => TextGridFallBackLeadingStory(dir),
+const textGridStyles = {
+  top: 'col-span-6 group-3:col-span-3 group-3:col-start-4 group-5:col-span-6 group-5:col-start-7',
+  regular: (displayImage) => displayImage ? 'col-span-4 col-start-3 group-4:pt-double' : 'col-span-6',
+  leading: 'p-0 w-full grid-cols-6 col-span-6 group-3:grid-cols-3 group-3:col-span-3 group-4:grid-cols-2 group-4:col-span-2',
 };
 
-const textGridStyles = {
-  top: () => TextGridColumnsTopStory,
-  regular: ({ displayImage }) => TextGridColumns(displayImage),
-  leading: () => TextGridColumnsLeadingStory,
+const textGridFallbackStyles = {
+  top: (dir) => `
+    @media (min-width: 37.5rem) {
+      width: ${halfWidthColumnsMaxScaleable};
+      padding: 0 2rem;
+    }
+    
+    @media (min-width: 63rem) {
+      width: ${halfWidthColumnsMaxScaleable};
+    }
+  `,
+  regular: ({ displayImage, dir }) => `
+    width: ${fourOfSixColumnsMaxWidthScaleable};
+    padding: 0 1rem;
+    
+    @media (min-width: 37.5rem) {
+      padding: 0 2rem;
+    }
+    
+    @media (min-width: 63rem) {
+      display: block;
+      width: 100%;
+      padding: 1rem 0;
+    }
+    
+    ${!displayImage ? `
+      width: ${fullWidthColumnsMaxScaleable};
+      >div { vertical-align: middle; }
+    ` : ''}
+  `,
+  leading: ({ dir }) => `
+    width: ${fullWidthColumnsMaxScaleable};
+    
+    @media (min-width: 37.5rem) {
+      ${dir === 'rtl' ? 'padding-left: 1rem;' : 'padding-right: 1rem;'}
+      width: ${halfWidthColumnsMaxScaleable};
+    }
+    
+    @media (min-width: 63rem) {
+      width: ${twoOfSixColumnsMaxWidthScaleable};
+    }
+  `,
 };
 
 // This applies 8px padding only to the timestamp.
@@ -125,35 +67,53 @@ const textGridStyles = {
 // from being applied.
 const leadingPromoTimestampPadding = `
   >time {
-    @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-      padding-bottom: ${GEL_SPACING};
+    @media (max-width: 48rem) {
+      padding-bottom: 1rem;
     }
   }
 `;
 
-const TextGridItem = styled.div`
-  display: inline-block;
-  vertical-align: top;
-
-  ${({ promoType, displayImage, dir }) =>
-    textGridFallbackStyles[promoType]({ displayImage, dir })}
-
-  @supports (${grid}) {
-    display: block;
-    width: initial;
-    padding: initial;
-    ${({ promoType, displayImage }) =>
-      textGridStyles[promoType]({ displayImage })}
-  }
-
-  ${({ promoType }) =>
-    promoType === 'leading' ? leadingPromoTimestampPadding : ''}
-
-  ${({ displayImage }) =>
-    displayImage
-      ? ''
-      : `>div{ display:inline-block; vertical-align:initial; }
-       & svg{ margin: 0; }`}
-`;
+const TextGridItem = ({ promoType, displayImage, dir, children, ...props }) => {
+  const gridClasses = typeof textGridStyles[promoType] === 'function' 
+    ? textGridStyles[promoType](displayImage) 
+    : textGridStyles[promoType];
+  
+  const fallbackStyles = textGridFallbackStyles[promoType] 
+    ? textGridFallbackStyles[promoType]({ displayImage, dir })
+    : textGridFallbackStyles.regular({ displayImage, dir });
+  
+  const leadingTimestampStyles = promoType === 'leading' ? leadingPromoTimestampPadding : '';
+  
+  const displayImageStyles = !displayImage ? `
+    >div { 
+      display: inline-block; 
+      vertical-align: initial; 
+    }
+    & svg { 
+      margin: 0; 
+    }
+  ` : '';
+  
+  return (
+    <div
+      className={`inline-block align-top ${gridClasses}`}
+      style={{
+        ...(!CSS.supports(grid) && {
+          ...fallbackStyles
+        }),
+        ...(CSS.supports(grid) && {
+          display: 'block',
+          width: 'initial',
+          padding: 'initial'
+        }),
+        ...leadingTimestampStyles,
+        ...displayImageStyles
+      }}
+      {...props}
+    >
+      {children}
+    </div>
+  );
+};
 
 export default TextGridItem;

@@ -1,52 +1,46 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React from 'react';
-import styled from '@emotion/styled';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-} from '#psammead/gel-foundations/src/spacings';
 import { getBrevier } from '#psammead/gel-foundations/src/typography';
 import { getSerifMedium } from '#psammead/psammead-styles/src/font-styles';
 import VisuallyHiddenText from '../../../../../components/VisuallyHiddenText';
 
-const StyledIndexAlsos = styled.div`
-  position: relative;
-  z-index: 2;
-  padding: ${GEL_SPACING_DBL} 0 0;
-`;
+const StyledIndexAlsos = ({ children, ...props }) => (
+  <div className="relative z-10 pt-double" {...props}>
+    {children}
+  </div>
+);
 
-const StyledIndexAlso = styled.div`
-  border-top: 1px solid ${props => props.theme.palette.LUNAR};
-  padding: ${GEL_SPACING} 0;
-`;
+const StyledIndexAlso = ({ children, ...props }) => (
+  <div className="border-t border-lunar py-double" {...props}>
+    {children}
+  </div>
+);
 
-const StyledIndexAlsosUl = styled.ul`
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-`;
+const StyledIndexAlsosUl = ({ children, ...props }) => (
+  <ul className="list-none p-0 m-0" role="list" {...props}>
+    {children}
+  </ul>
+);
 
 // `display: inline-block` has been used to resolve Focus Indicator bug in Firefox high contrast mode.
-const StyledIndexAlsosLink = styled.a`
-  ${({ script }) => script && getBrevier(script)};
-  ${({ service }) => getSerifMedium(service)}
-  color: ${props => props.theme.palette.EBON};
-  text-decoration: none;
-  display: inline-block;
-
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-  }
-
-  &:visited {
-    color: ${props => props.theme.palette.METAL};
-  }
-
-  & svg {
-    margin: 0;
-  } /* Reset Media Indicator SVG margin */
-`;
+const StyledIndexAlsosLink = ({ script, service, children, className = '', ...props }) => {
+  // Get dynamic styles for script and service
+  const scriptStyles = script ? getBrevier(script) : {};
+  const serviceStyles = service ? getSerifMedium(service) : {};
+  
+  return (
+    <a
+      className={`text-ebon no-underline inline-block hover:underline focus:underline visited:text-metal [&_svg]:m-0 ${className}`}
+      style={{
+        ...scriptStyles,
+        ...serviceStyles
+      }}
+      {...props}
+    >
+      {children}
+    </a>
+  );
+};
 
 const IndexAlsosLink = ({
   children,
@@ -96,7 +90,7 @@ export const IndexAlsos = props => {
 };
 
 export const IndexAlsosUl = ({ children }) => (
-  <StyledIndexAlsosUl role="list">{children}</StyledIndexAlsosUl>
+  <StyledIndexAlsosUl>{children}</StyledIndexAlsosUl>
 );
 
 export const IndexAlsosLi = ({ ...props }) => (

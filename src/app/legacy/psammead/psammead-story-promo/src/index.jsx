@@ -1,20 +1,4 @@
 import React from 'react';
-import styled from '@emotion/styled';
-import {
-  GEL_SPACING_HLF,
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_SPACING_QUAD,
-} from '#psammead/gel-foundations/src/spacings';
-import {
-  GEL_GROUP_1_SCREEN_WIDTH_MAX,
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_2_SCREEN_WIDTH_MAX,
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MAX,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-  GEL_GROUP_5_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
 import {
   getParagon,
   getLongPrimer,
@@ -29,146 +13,103 @@ import { grid } from '#psammead/psammead-styles/src/detection';
 import ImageGridItem from './ImageStyles';
 import TextGridItem from './TextStyles';
 
-const wrapperTopStoryStyles = `
-  @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
-    grid-template-columns: repeat(12, 1fr);
-  }
-`;
-
-const wrapperRegularStyles = `
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    display: block;
-  }
-`;
-
 const wrapperStyles = {
-  top: wrapperTopStoryStyles,
-  regular: wrapperRegularStyles,
+  top: 'group-5:grid-cols-12',
+  regular: 'group-4:block',
   leading: '',
 };
 
-const StoryPromoWrapper = styled.div`
-  position: relative; /* This is needed to contain the faux-block-link to the Story Promo */
-  @supports (${grid}) {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-column-gap: ${GEL_SPACING};
-
-    @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-      grid-column-gap: ${GEL_SPACING_DBL};
-    }
-
-    ${({ promoType }) => wrapperStyles[promoType]}
-  }
-`;
-
-const ImageContentsWrapper = styled.div`
-  position: relative;
-`;
-
-const mediaIndicatorStylesTopLeading = `
-  position: absolute;
-  bottom: 0;
-  > * {
-    height: ${GEL_SPACING_QUAD};
-    padding: ${GEL_SPACING} ${GEL_SPACING_HLF};
-  }
-`;
-
-const mediaIndicatorStylesRegular = `
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    position: absolute;
-    bottom: 0;
-  }
-  > * {
-    @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-      height: 1.25rem;
-      padding: ${GEL_SPACING_HLF} ${GEL_SPACING_HLF} 0;
-    }
-
-    height: ${GEL_SPACING_QUAD};
-    padding: ${GEL_SPACING} ${GEL_SPACING_HLF};
-  }
-`;
-
-/*
- These styles are to ensure we have the correct positioning
- & spacing of the Media Indicator over the Image in the Story Promo 
- */
-const mediaIndicatorStyles = {
-  top: mediaIndicatorStylesTopLeading,
-  regular: mediaIndicatorStylesRegular,
-  leading: mediaIndicatorStylesTopLeading,
+const StoryPromoWrapper = ({ promoType, children, ...props }) => {
+  const wrapperClasses = `relative grid grid-cols-6 gap-double group-3:gap-double ${wrapperStyles[promoType] || ''}`;
+  
+  return (
+    <div className={wrapperClasses} {...props}>
+      {children}
+    </div>
+  );
 };
 
-const ImageOverlayWrapper = styled.div`
-  ${({ promoType }) => mediaIndicatorStyles[promoType]}
-`;
+const ImageContentsWrapper = ({ children }) => (
+  <div className="relative">
+    {children}
+  </div>
+);
 
-const headlineTopStoryTypography = script => getParagon(script);
+const mediaIndicatorStyles = {
+  top: 'absolute bottom-0 [&>*]:h-quad [&>*]:py-double [&>*]:px-half',
+  regular: 'group-2:absolute group-2:bottom-0 [&>*]:max-group-1:h-5 [&>*]:max-group-1:py-half [&>*]:max-group-1:px-half [&>*]:max-group-1:pt-half [&>*]:h-quad [&>*]:py-double [&>*]:px-half',
+  leading: 'absolute bottom-0 [&>*]:h-quad [&>*]:py-double [&>*]:px-half',
+};
 
-const headlineRegularTypography = script => getPica(script);
-
-const headlineLeadingStoryTypography = script => getDoublePica(script);
+const ImageOverlayWrapper = ({ promoType, children, ...props }) => {
+  const overlayClasses = mediaIndicatorStyles[promoType] || mediaIndicatorStyles.regular;
+  
+  return (
+    <div className={overlayClasses} {...props}>
+      {children}
+    </div>
+  );
+};
 
 const headlineTypography = script => ({
-  top: headlineTopStoryTypography(script),
-  regular: headlineRegularTypography(script),
-  leading: headlineLeadingStoryTypography(script),
+  top: script ? getParagon(script) : {},
+  regular: script ? getPica(script) : {},
+  leading: script ? getDoublePica(script) : {},
 });
 
-export const Headline = styled.h3`
-  color: ${props => props.theme.palette.EBON};
-  margin: 0; /* Reset */
-  padding-bottom: ${GEL_SPACING};
-  ${({ service }) => getSerifMedium(service)}
-  ${({ script, promoType }) => script && headlineTypography(script)[promoType]}
-  ${({ promoHasImage }) =>
-    !promoHasImage &&
-    `display: inline-block;`} /* Needed for aligning Media Indicator with Headline */
-`;
+export const Headline = ({ script, service, promoType = 'regular', promoHasImage = true, children, className = '', ...props }) => {
+  // Get dynamic styles for script and service
+  const scriptStyles = script ? headlineTypography(script)[promoType] : {};
+  const serviceStyles = service ? getSerifMedium(service) : {};
+  
+  const displayClasses = !promoHasImage ? 'inline-block' : '';
+  
+  return (
+    <h3
+      className={`text-ebon m-0 pb-double ${displayClasses} ${className}`}
+      style={{
+        ...scriptStyles,
+        ...serviceStyles
+      }}
+      {...props}
+    >
+      {children}
+    </h3>
+  );
+};
 
 Headline.defaultProps = {
   promoHasImage: true,
   promoType: 'regular',
 };
 
-const summaryTopStoryStyles = `
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    display: none;
-    visibility: hidden;
-  }
-`;
-
-const summaryRegularStyles = `
-  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    display: none;
-    visibility: hidden;
-  }
-
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    display: none;
-    visibility: hidden;
-  }
-`;
-
 const summaryStyles = {
-  top: summaryTopStoryStyles,
-  regular: summaryRegularStyles,
-  leading: summaryRegularStyles,
+  top: 'group-3:max-group-3:hidden group-3:max-group-3:invisible',
+  regular: 'max-group-2:hidden max-group-2:invisible group-4:hidden group-4:invisible',
+  leading: 'max-group-2:hidden max-group-2:invisible group-4:hidden group-4:invisible',
 };
 
-export const Summary = styled.p`
-  ${({ script }) => script && getLongPrimer(script)};
-  ${({ service }) => getSansRegular(service)}
-  color: ${props => props.theme.palette.SHADOW};
-  margin: 0; /* Reset */
-  padding-bottom: ${GEL_SPACING};
-
-  ${({ promoHasImage }) => !promoHasImage && `padding-top: ${GEL_SPACING};`}
-
-  ${({ promoType }) => summaryStyles[promoType]}
-`;
+export const Summary = ({ script, service, promoType = 'regular', promoHasImage = true, children, className = '', ...props }) => {
+  // Get dynamic styles for script and service
+  const scriptStyles = script ? getLongPrimer(script) : {};
+  const serviceStyles = service ? getSansRegular(service) : {};
+  
+  const hiddenClasses = summaryStyles[promoType] || summaryStyles.regular;
+  const paddingClasses = !promoHasImage ? 'pt-double' : '';
+  
+  return (
+    <p
+      className={`text-shadow m-0 pb-double ${paddingClasses} ${hiddenClasses} ${className}`}
+      style={{
+        ...scriptStyles,
+        ...serviceStyles
+      }}
+      {...props}
+    >
+      {children}
+    </p>
+  );
+};
 
 Summary.defaultProps = {
   promoHasImage: true,
@@ -176,34 +117,14 @@ Summary.defaultProps = {
 };
 
 // `display: inline-block` has been used to resolve Focus Indicator bug in Firefox high contrast mode.
-export const Link = styled.a`
-  position: static;
-  color: ${props => props.theme.palette.EBON};
-  text-decoration: none;
-  overflow-wrap: break-word;
-  display: inline-block;
-
-  &:before {
-    bottom: 0;
-    content: '';
-    left: 0;
-    overflow: hidden;
-    position: absolute;
-    right: 0;
-    top: 0;
-    white-space: nowrap;
-    z-index: 1;
-  }
-
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-  }
-
-  &:visited {
-    color: ${props => props.theme.palette.METAL};
-  }
-`;
+export const Link = ({ children, className = '', ...props }) => (
+  <a
+    className={`static text-ebon no-underline break-words inline-block before:content-[''] before:bottom-0 before:left-0 before:overflow-hidden before:absolute before:right-0 before:top-0 before:whitespace-nowrap before:z-10 hover:underline focus:underline visited:text-metal ${className}`}
+    {...props}
+  >
+    {children}
+  </a>
+);
 
 const StoryPromo = ({
   image,

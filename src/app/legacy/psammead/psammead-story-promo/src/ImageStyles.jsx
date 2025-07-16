@@ -1,10 +1,4 @@
-import styled from '@emotion/styled';
-import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
-import {
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MAX,
-} from '#psammead/gel-foundations/src/breakpoints';
+import React from 'react';
 import { grid } from '#psammead/psammead-styles/src/detection';
 
 const twoOfSixColumnsMaxWidthScaleable = `33.33%`;
@@ -18,100 +12,68 @@ const fullWidthColumnsMaxScaleable = `100%`;
 
 const halfWidthColumnsMaxScaleable = `50%`;
 
-const gridFallbackImageWidth = `
-  width: calc(${halfWidthColumnsMaxScaleable} - ${GEL_SPACING});
-`;
-
-const ImageGridColumnsTopStory = `
-  grid-column: 1 / span 6;
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
-    grid-column: 1 / span 3;
-  }
-`;
-
-const ImageGridColumns = `
-  grid-column: 1 / span 2;
-`;
-
-const ImageGridColumnsLeadingStory = `
-  padding: 0;
-  grid-template-columns: repeat(6, 1fr);
-  grid-column-end: span 6;
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-end: span 3;
-  }
-
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-end: span 4;
-  }
-`;
-
-const ImageGridFallbackTopStory = `
-  margin-bottom: ${GEL_SPACING};
-  width: ${fullWidthColumnsMaxScaleable};
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    ${gridFallbackImageWidth};
-    margin-bottom: 0;
-  }
-
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    ${gridFallbackImageWidth};
-  }
-`;
-
-const ImageGridFallback = `
-  width: ${twoOfSixColumnsMaxWidthScaleable};
-
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    display: block;
-    width: 100%;
-  }
-`;
-
-const ImageGridFallbackLeadingStory = dir => `
-  width: ${fullWidthColumnsMaxScaleable};
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    ${
-      dir === 'rtl'
-        ? `padding-left: ${GEL_SPACING};`
-        : `padding-right: ${GEL_SPACING};`
-    }
-    width: ${halfWidthColumnsMaxScaleable};
-  }
-
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    width: ${fourOfSixColumnsMaxWidthScaleable};
-  }
-`;
-
 const imageGridStyles = {
-  top: ImageGridColumnsTopStory,
-  regular: ImageGridColumns,
-  leading: ImageGridColumnsLeadingStory,
+  top: 'col-span-6 group-3:col-span-3 group-3:max-group-4:col-span-3',
+  regular: 'col-span-2',
+  leading: 'p-0 grid-cols-6 col-span-6 group-3:grid-cols-3 group-3:col-span-3 group-4:grid-cols-4 group-4:col-span-4',
 };
 
 const imageGridFallbackStyles = {
-  top: () => ImageGridFallbackTopStory,
-  regular: () => ImageGridFallback,
-  leading: dir => ImageGridFallbackLeadingStory(dir),
+  top: (dir) => `
+    margin-bottom: 1rem;
+    width: ${fullWidthColumnsMaxScaleable};
+    
+    @media (min-width: 37.5rem) {
+      width: calc(${halfWidthColumnsMaxScaleable} - 1rem);
+      margin-bottom: 0;
+    }
+    
+    @media (min-width: 63rem) {
+      width: calc(${halfWidthColumnsMaxScaleable} - 1rem);
+    }
+  `,
+  regular: (dir) => `
+    width: ${twoOfSixColumnsMaxWidthScaleable};
+    
+    @media (min-width: 63rem) {
+      display: block;
+      width: 100%;
+    }
+  `,
+  leading: (dir) => `
+    width: ${fullWidthColumnsMaxScaleable};
+    
+    @media (min-width: 37.5rem) {
+      ${dir === 'rtl' ? 'padding-left: 1rem;' : 'padding-right: 1rem;'}
+      width: ${halfWidthColumnsMaxScaleable};
+    }
+    
+    @media (min-width: 63rem) {
+      width: ${fourOfSixColumnsMaxWidthScaleable};
+    }
+  `,
 };
 
-const ImageGridItem = styled.div`
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  ${({ promoType, dir }) => imageGridFallbackStyles[promoType](dir)}
-
-  @supports (${grid}) {
-    width: initial;
-    ${({ promoType }) => imageGridStyles[promoType]}
-  }
-`;
+const ImageGridItem = ({ promoType, dir, children, ...props }) => {
+  const gridClasses = imageGridStyles[promoType] || imageGridStyles.regular;
+  const fallbackStyles = imageGridFallbackStyles[promoType] ? imageGridFallbackStyles[promoType](dir) : imageGridFallbackStyles.regular(dir);
+  
+  return (
+    <div
+      className={`inline-block align-top relative ${gridClasses}`}
+      style={{
+        ...(!CSS.supports(grid) && {
+          ...fallbackStyles
+        }),
+        ...(CSS.supports(grid) && {
+          width: 'initial'
+        })
+      }}
+      {...props}
+    >
+      {children}
+    </div>
+  );
+};
 
 export default ImageGridItem;
