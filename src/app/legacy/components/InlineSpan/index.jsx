@@ -1,9 +1,9 @@
-import styled from '@emotion/styled';
-import { GEL_SPACING_TRPL } from '#psammead/gel-foundations/src/spacings';
+import React from 'react';
 
-const InlineSpan = styled.span`
-  padding-bottom: ${GEL_SPACING_TRPL};
-  margin: 0; /* Reset */
-`;
+const InlineSpan = ({ children, ...props }) => (
+  <span className="pb-triple m-0" {...props}>
+    {children}
+  </span>
+);
 
 export default InlineSpan;

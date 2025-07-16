@@ -258,26 +258,6 @@ const RelatedContentSection = ({
 };
 
 export default RelatedContentSection;
-  eventTrackingData,
-  viewTracker,
-}: RelatedContentListProps) => {
-  const assetUri = pathOr(
-    '',
-    [
-      'model',
-      'blocks',
-      1,
-      'model',
-      'blocks',
-      0,
-      'model',
-      'blocks',
-      0,
-      'model',
-      'locator',
-    ],
-    item,
-  );
 
   const ariaLabelledBy = generatePromoId({
     sectionType: 'promo-rel-content',
@@ -300,7 +280,6 @@ export default RelatedContentSection;
       />
     </PromoItem>
   );
-};
 
 type Props = {
   content: OptimoBlock[];

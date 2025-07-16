@@ -1,151 +1,15 @@
 import React, { use } from 'react';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_SPACING_QUAD,
-} from '#psammead/gel-foundations/src/spacings';
-
-import {
-  getDoublePica,
-  getBrevier,
-} from '#psammead/gel-foundations/src/typography';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
-import styled from '@emotion/styled';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import isEmpty from 'ramda/src/isEmpty';
 import tail from 'ramda/src/tail';
-import {
-  GEL_GROUP_0_SCREEN_WIDTH_MIN,
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MAX,
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
 import { GridItemMediumNoMargin } from '#components/Grid';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import idSanitiser from '#lib/utilities/idSanitiser';
-import { GREY_2 } from '#app/components/ThemeProvider/palette';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Promo from './Promo';
 import PromoList from './PromoList';
-
-const PromoWrapper = styled.div`
-  ${({ dir }) => `margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING};`}
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    ${({ dir }) =>
-      `margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING_DBL};`}
-  }
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    ${({ dir }) => `margin-${dir === 'ltr' ? 'left' : 'right'}: 0;`}
-  }
-`;
-
-const ScrollablePromoContainer = styled.div`
-  background: ${GREY_2};
-  padding: ${GEL_SPACING};
-  display: flex;
-  overflow-x: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-  ${({ experimentVariant }) =>
-    experimentVariant &&
-    experimentVariant !== 'off' &&
-    `
-    padding: 0 ${GEL_SPACING} ${GEL_SPACING_DBL};
-    margin: 0rem;
-
-    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-      padding: 0 ${GEL_SPACING_DBL} ${GEL_SPACING_DBL};
-      margin: 0 -0.2rem;
-    }
-    
-    @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-      margin: 0 -0.8rem;
-    }
-    
-    @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-      display: none;
-    }
-
-    width: 100vw;
-  `}
-`;
-
-const LabelComponent = styled.strong`
-  display: block;
-  ${({ script }) => script && getDoublePica(script)};
-  ${({ service }) => getSansRegular(service)}
-  margin-bottom: ${GEL_SPACING_DBL};
-  color: ${({ theme }) =>
-    theme.isDarkUi ? theme.palette.GREY_2 : theme.palette.SHADOW};
-
-  ${({ dir }) =>
-    `
-    @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}){
-      margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING};
-    }
-    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}){
-      margin-${dir === 'ltr' ? `left` : `right`}: ${GEL_SPACING_DBL};  
-    }
-    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}){
-        margin-${dir === 'ltr' ? `left` : `right`}: 0;
-    }
-`}
-`;
-
-const LabelComponentOJTopBar = styled(({ ariaLabel, ...props }) => (
-  <strong aria-label={ariaLabel} {...props} />
-))`
-  ${({ script }) => script && getBrevier(script)};
-  ${({ service }) => getSansRegular(service)}
-  display: inline-block;
-  margin-bottom: ${GEL_SPACING_DBL};
-  color: ${({ theme }) =>
-    theme.isDarkUi ? theme.palette.GREY_2 : theme.palette.SHADOW};
-
-  ${({ dir }) =>
-    `
-    @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}){
-      margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING};
-    }
-    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}){
-      margin-${dir === 'ltr' ? `left` : `right`}: ${GEL_SPACING_DBL};  
-    }
-    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}){
-      margin-${dir === 'ltr' ? `left` : `right`}: 0;
-    }
-  `}
-
-  padding: 0 ${GEL_SPACING};
-
-  @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}) {
-    margin: 0rem;
-  }
-
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    padding: 0 ${GEL_SPACING_DBL};
-    margin: 0 -0.2rem;
-  }
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    margin: 0 -0.8rem;
-  }
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    display: none;
-  }
-
-  display: flex;
-  align-items: center;
-  height: ${GEL_SPACING_QUAD};
-  background: ${GREY_2};
-  width: 100vw;
-`;
 
 const ScrollablePromo = ({
   blocks,
@@ -211,18 +75,35 @@ const ScrollablePromo = ({
         }),
   };
 
+  // Common classes for directional margins
+  const getDirectionalMargin = (size) => {
+    return dir === 'ltr' ? `ml-${size}` : `mr-${size}`;
+  };
+
   return experimentVariant ? (
     <>
-      <LabelComponentOJTopBar
+      <strong
         id={ariaLabel}
         data-testid="oj-top-bar"
-        script={script}
-        service={service}
-        dir={dir}
+        className={`
+          text-brevier font-sans-regular inline-block mb-double
+          text-shadow dark:text-grey-2
+          ${getDirectionalMargin('single')} group-2:${getDirectionalMargin('double')} group-4:${getDirectionalMargin('0')}
+          px-single group-2:px-double group-2:mx-[-0.2rem] group-3:mx-[-0.8rem] group-3-max:hidden
+          flex items-center h-quadruple bg-grey-2 w-screen
+        `}
       >
         {title}
-      </LabelComponentOJTopBar>
-      <ScrollablePromoContainer experimentVariant={experimentVariant}>
+      </strong>
+      <div className={`
+        bg-grey-2 p-single flex overflow-x-auto
+        scrollbar-none [-ms-overflow-style:none] [scrollbar-width:none]
+        [&::-webkit-scrollbar]:hidden
+        ${experimentVariant && experimentVariant !== 'off' ? `
+          p-0 pb-double mx-0 group-2:px-double group-2:pb-double group-2:mx-[-0.2rem]
+          group-3:mx-[-0.8rem] group-3-max:hidden w-screen
+        ` : ''}
+      `}>
         <GridItemMediumNoMargin>
           <PromoList
             blocks={blocks}
@@ -232,25 +113,27 @@ const ScrollablePromo = ({
             a11yAttributes={a11yAttributes}
           />
         </GridItemMediumNoMargin>
-      </ScrollablePromoContainer>
+      </div>
     </>
   ) : (
     <GridItemMediumNoMargin {...a11yAttributes} data-e2e="scrollable-promos">
       {title && (
-        <LabelComponent
+        <strong
           id={ariaLabel}
           data-testid="eoj-recommendations-heading"
-          script={script}
-          service={service}
-          dir={dir}
+          className={`
+            block text-double-pica font-sans-regular mb-double
+            text-shadow dark:text-grey-2
+            ${getDirectionalMargin('single')} group-2:${getDirectionalMargin('double')} group-4:${getDirectionalMargin('0')}
+          `}
         >
           {title}
-        </LabelComponent>
+        </strong>
       )}
       {isSingleItem ? (
-        <PromoWrapper dir={dir} {...viewTracker}>
+        <div className={`${getDirectionalMargin('single')} group-2:${getDirectionalMargin('double')} group-4:${getDirectionalMargin('0')}`} {...viewTracker}>
           <Promo block={blocksWithoutTitle[0]} clickTracker={clickTracker} />
-        </PromoWrapper>
+        </div>
       ) : (
         <PromoList
           blocks={blocksWithoutTitle}

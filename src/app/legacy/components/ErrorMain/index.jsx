@@ -1,39 +1,8 @@
 import React from 'react';
-import styled from '@emotion/styled';
 import InlineLink from '#psammead/psammead-inline-link/src';
 import Paragraph from '#psammead/psammead-paragraph/src';
-import { getSerifMedium } from '#psammead/psammead-styles/src/font-styles';
-import {
-  getCanon,
-  getParagon,
-  GEL_FF_REITH_SANS,
-} from '#psammead/gel-foundations/src/typography';
 import idSanitiser from '#lib/utilities/idSanitiser';
 import Grid, { GelPageGrid } from '#components/Grid';
-
-const StatusCode = styled.span`
-  ${props => (props.script ? getParagon(props.script) : '')}
-  color: ${props => props.theme.palette.POSTBOX};
-  display: block;
-  font-family: ${GEL_FF_REITH_SANS};
-  font-weight: 600;
-  padding: 2.5rem 0 0.5rem 0;
-`;
-
-const Heading = styled.h1`
-  ${({ script }) => script && getCanon(script)}
-  ${({ service }) => getSerifMedium(service)}
-  color: ${props => props.theme.palette.SHADOW};
-  margin-top: 0;
-`;
-
-const StyledGelPageGrid = styled(GelPageGrid)`
-  padding-bottom: 4rem;
-`;
-
-const CustomParagraph = styled(Paragraph)`
-  padding-top: 0.2rem;
-`;
 
 const ErrorMain = ({
   statusCode,
@@ -47,72 +16,54 @@ const ErrorMain = ({
   script,
   service,
 }) => (
-  <StyledGelPageGrid
-    as="main"
-    role="main"
-    columns={{
-      group0: 6,
-      group1: 6,
-      group2: 6,
-      group3: 6,
-      group4: 8,
-      group5: 20,
-    }}
-    enableGelGutters
-  >
-    <Grid
-      item
-      startOffset={{
-        group0: 1,
-        group1: 1,
-        group2: 1,
-        group3: 1,
-        group4: 2,
-        group5: 5,
-      }}
-      columns={{
-        group0: 6,
-        group1: 6,
-        group2: 6,
-        group3: 6,
-        group4: 6,
-        group5: 12,
-      }}
-      margins={{ group0: true, group1: true, group2: true, group3: true }}
+  <div className="w-full pb-16 group-4:mx-auto group-4:max-w-[1008px] group-5:mx-auto group-5:max-w-[1280px]">
+    <main
+      role="main"
+      className="grid grid-cols-6 gap-4 group-4:grid-cols-8 group-5:grid-cols-20 px-4 group-4:px-8"
     >
-      <StatusCode script={script} data-e2e="status-code">
-        {statusCode}
-      </StatusCode>
-      <Heading id="content" script={script} service={service} tabIndex="-1">
-        {title}
-      </Heading>
-      <CustomParagraph script={script} service={service}>
-        {message}
-      </CustomParagraph>
-      <ul>
-        {solutions.map(text => (
-          <CustomParagraph
-            script={script}
-            service={service}
-            as="li"
-            key={idSanitiser(text)}
-          >
-            {text}
-          </CustomParagraph>
-        ))}
-      </ul>
-      <CustomParagraph script={script} service={service}>
-        {callToActionFirst}
-        <InlineLink
-          href={callToActionLinkUrl}
-          className="focusIndicatorReducedWidth"
+      <div className="col-span-6 col-start-1 group-4:col-span-6 group-4:col-start-2 group-5:col-span-12 group-5:col-start-5 px-4 group-1:px-4 group-2:px-4 group-3:px-4">
+        <span
+          className="text-paragon text-postbox block font-reith-sans font-semibold pt-10 pb-2"
+          data-e2e="status-code"
         >
-          {callToActionLinkText}
-        </InlineLink>
-        {callToActionLast}
-      </CustomParagraph>
-    </Grid>
-  </StyledGelPageGrid>
+          {statusCode}
+        </span>
+        <h1
+          id="content"
+          className="text-canon text-shadow mt-0 font-serif-medium"
+          tabIndex="-1"
+        >
+          {title}
+        </h1>
+        <div className="pt-1">
+          <Paragraph script={script} service={service}>
+            {message}
+          </Paragraph>
+        </div>
+        <ul>
+          {solutions.map(text => (
+            <li key={idSanitiser(text)} className="pt-1">
+              <Paragraph script={script} service={service}>
+                {text}
+              </Paragraph>
+            </li>
+          ))}
+        </ul>
+        <div className="pt-1">
+          <Paragraph script={script} service={service}>
+            {callToActionFirst}
+            <InlineLink
+              href={callToActionLinkUrl}
+              className="focusIndicatorReducedWidth"
+            >
+              {callToActionLinkText}
+            </InlineLink>
+            {callToActionLast}
+          </Paragraph>
+        </div>
+      </div>
+    </main>
+  </div>
 );
 
 export default ErrorMain;

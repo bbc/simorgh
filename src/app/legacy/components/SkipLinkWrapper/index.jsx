@@ -1,41 +1,5 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
-import styled from '@emotion/styled';
+import React from 'react';
 import detokenise from '#psammead/psammead-detokeniser/src';
-import { getSansBold } from '#psammead/psammead-styles/src/font-styles';
-import { GEL_BREVIER } from '#psammead/gel-foundations/src/typography';
-import { visuallyHiddenStyle } from '../../../lib/styles.const';
-
-const BORDER_WIDTH = '0.125rem';
-const GEL_SPACING_PLUS_HALF = `0.75rem`;
-
-const Wrapper = styled.div`
-  position: relative;
-`;
-
-const SkipLink = styled.a`
-  ${({ service }) => getSansBold(service)}
-  ${GEL_BREVIER}
-  background-color: ${props => props.theme.palette.WHITE};
-  border: ${BORDER_WIDTH} solid ${props => props.theme.palette.EBON};
-  color: ${props => props.theme.palette.EBON};
-  display: block;
-  left: 0;
-  line-height: 1;
-  padding: ${GEL_SPACING_PLUS_HALF};
-  position: absolute;
-  text-decoration: none;
-  top: 0;
-  z-index: 10;
-
-  &:not(:focus):not(:active) {
-    ${visuallyHiddenStyle}
-  }
-`;
-
-const EndText = styled.p`
-  ${visuallyHiddenStyle}
-`;
 
 const SkipLinkWrapper = ({
   service,
@@ -46,15 +10,26 @@ const SkipLinkWrapper = ({
   terms,
 }) => {
   return (
-    <Wrapper>
-      <SkipLink service={service} href={`#${endTextId}`}>
+    <div className="relative">
+      <a
+        className={`
+          font-sans-bold text-brevier
+          bg-white border-2 border-ebon text-ebon
+          block left-0 leading-none p-3 absolute top-0 z-10
+          no-underline
+          focus:sr-only-off focus:not-sr-only
+          active:sr-only-off active:not-sr-only
+          sr-only
+        `}
+        href={`#${endTextId}`}
+      >
         {detokenise(text, terms)}
-      </SkipLink>
+      </a>
       {children}
-      <EndText tabIndex="-1" id={endTextId}>
+      <p className="sr-only" tabIndex="-1" id={endTextId}>
         {detokenise(endTextVisuallyHidden, terms)}
-      </EndText>
-    </Wrapper>
+      </p>
+    </div>
   );
 };
 

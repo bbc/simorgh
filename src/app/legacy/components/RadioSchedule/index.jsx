@@ -1,39 +1,9 @@
 import React, { use } from 'react';
-import styled from '@emotion/styled';
-import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-} from '#psammead/gel-foundations/src/spacings';
-import { grid } from '#psammead/psammead-styles/src/detection';
 import Grid from '#psammead/psammead-grid/src';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ProgramCard from './ProgramCard';
 import StartTime from './StartTime';
-
-const StartTimeWrapper = styled.div`
-  padding-bottom: ${GEL_SPACING};
-`;
-
-// Reset default of <ul> style
-const StyledGrid = styled(Grid)`
-  padding: 0;
-  margin: 0;
-  @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    padding: 0;
-  }
-`;
-
-// Using flex-box on browsers that do not support grid will break grid fallback defined in psammead-grid
-const StyledFlexGrid = styled(Grid)`
-  @supports (${grid}) {
-    display: flex;
-    flex-direction: column;
-  }
-  position: relative;
-  padding-bottom: ${GEL_SPACING_DBL};
-`;
 
 const schedulesGridProps = {
   enableGelGutters: true,
@@ -74,35 +44,29 @@ const RadioSchedule = ({ schedule, ...props }) => {
   const viewTracker = useViewTracker(eventTrackingData);
 
   return (
-    <StyledGrid
-      forwardedAs="ul"
-      dir={dir}
-      {...schedulesGridProps}
+    <ul 
+      className="p-0 m-0 group-3-max:p-0 grid grid-cols-4 gap-4 group-2:grid-cols-6 group-3:grid-cols-6 group-4:grid-cols-8 group-5:grid-cols-8"
       role="list"
       {...viewTracker}
     >
       {schedule.map(({ id, ...program }) => (
-        <StyledFlexGrid
-          dir={dir}
-          parentColumns={schedulesGridProps.columns}
-          parentEnableGelGutters
-          {...programGridProps}
+        <li
           key={id}
-          as="li"
+          className="relative pb-double col-span-4 group-2:col-span-6 group-3:col-span-3 group-4:col-span-2 group-5:col-span-2 flex flex-col"
           data-e2e={program.state}
           role="listitem"
         >
-          <StartTimeWrapper>
+          <div className="pb-single">
             <StartTime timestamp={program.startTime} />
-          </StartTimeWrapper>
+          </div>
           <ProgramCard
             {...props}
             program={program}
             id={id} // This ID is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
           />
-        </StyledFlexGrid>
+        </li>
       ))}
-    </StyledGrid>
+    </ul>
   );
 };
 

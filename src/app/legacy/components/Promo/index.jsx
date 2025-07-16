@@ -1,5 +1,4 @@
 import React, { use, useMemo } from 'react';
-import styled from '@emotion/styled';
 import partition from 'ramda/src/partition';
 
 import { ServiceContext } from '../../../contexts/ServiceContext';
@@ -19,10 +18,6 @@ const withPromoContext = Component => props => (
   </PromoContext.Consumer>
 );
 
-const Wrapper = styled.div`
-  position: relative;
-`;
-
 const Promo = ({ children, className }) => {
   const { script, service } = use(ServiceContext);
 
@@ -39,12 +34,12 @@ const Promo = ({ children, className }) => {
     [script, service],
   );
   return (
-    <Wrapper className={className}>
+    <div className={`relative ${className || ''}`}>
       <PromoContext.Provider value={promoValue}>
         {leftChildren && <div className="promo-image">{leftChildren}</div>}
         {rightChildren && <div className="promo-text">{rightChildren}</div>}
       </PromoContext.Provider>
-    </Wrapper>
+    </div>
   );
 };
 
