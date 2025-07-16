@@ -4,6 +4,7 @@ import filterForBlockType from '#app/lib/utilities/blockHandlers';
 import { LIVE_CORE, SPORT_YELLOW } from '#app/components/ThemeProvider/palette';
 import { REITH_FONTS_DIR } from '#app/components/ThemeProvider/fontFaces';
 import { Services, Variants } from '#app/models/types/global';
+import { FetchError } from '#app/models/types/fetch';
 import Badge from './Badge';
 import { getImages, responseNotFound } from './utils';
 import horizontalLayout from './HorizontalLayout';
@@ -58,13 +59,6 @@ export default async function handler(req: NextApiRequest) {
 
     const { unbrandedImage, brandedImage } = getImages({ promoImage, service });
 
-    // const isInTopStories = Boolean(
-    //   articleResponseJson?.data?.secondaryData?.topStories.some(
-    //     (topStory: { locators: { canonicalUrl: string | string[] } }) =>
-    //       topStory?.locators?.canonicalUrl.includes(id),
-    //   ),
-    // );
-
     const isInMostRead = Boolean(
       articleResponseJson?.data?.secondaryData?.mostRead?.items.some(
         (mostReadItem: { id: string | string[] }) =>
@@ -76,10 +70,6 @@ export default async function handler(req: NextApiRequest) {
       { name: 'Reith Sans Bold', data: sansBoldBuffer },
       { name: 'Reith Serif Bold', data: serifBoldBuffer },
     ];
-
-    // const svgLogo = await import(
-    //   `#app/components/ThemeProvider/chameleonLogos/${service}`
-    // ).then(module => module.default);
 
     const serviceConfig = await import(
       `#app/lib/config/services/${service}`
@@ -145,9 +135,9 @@ export default async function handler(req: NextApiRequest) {
           fonts,
         });
     }
+  } catch (error: unknown) {
+    const { message } = error as FetchError;
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  } catch (error: any) {
-    return new Response(error.message, { status: 500 });
+    return new Response(message, { status: 500 });
   }
 }

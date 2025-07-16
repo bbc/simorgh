@@ -4,8 +4,17 @@ import { BLACK, GREY_6, WHITE } from '#app/components/ThemeProvider/palette';
 import { LayoutProps } from './types';
 import BackgroundImage from './BackgroundImage';
 
-const socialCardLayout = ({ image, headline, fonts, badges }: LayoutProps) =>
-  new ImageResponse(
+const socialCardLayout = async ({
+  image,
+  headline,
+  fonts,
+  badges,
+}: LayoutProps) => {
+  // const svgLogo = await import(
+  //   `#app/components/ThemeProvider/chameleonLogos/${service}`
+  // ).then(module => module.default);
+
+  return new ImageResponse(
     (
       <div
         style={{
@@ -97,5 +106,6 @@ const socialCardLayout = ({ image, headline, fonts, badges }: LayoutProps) =>
       fonts,
     },
   );
+};
 
 export default socialCardLayout;
