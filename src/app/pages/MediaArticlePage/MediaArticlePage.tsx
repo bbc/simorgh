@@ -1,7 +1,4 @@
-/** @jsx jsx */
-
 import { use } from 'react';
-import { jsx, useTheme, Theme } from '@emotion/react';
 import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
@@ -75,11 +72,9 @@ const getAudioVideoComponent =
 
     return (
       <div
-        css={({ spacings }: Theme) => [
-          `padding-top: ${spacings.TRIPLE}rem`,
-          isCpsMap && styles.cafMediaPlayer,
-          isPortrait && styles.portraitVideoPlayer,
-        ]}
+        className={`pt-triple ${isCpsMap ? styles.cafMediaPlayer : ''} ${
+          isPortrait ? styles.portraitVideoPlayer : ''
+        }`}
       >
         <MediaLoader blocks={blocks as MediaBlock[]} className={className} />
       </div>
@@ -95,10 +90,7 @@ const getLegacyMediaComponent =
 
     return (
       <div
-        css={({ spacings }: Theme) => [
-          `padding-top: ${spacings.TRIPLE}rem`,
-          isCpsMap && styles.cafMediaPlayer,
-        ]}
+        className={`pt-triple ${isCpsMap ? styles.cafMediaPlayer : ''}`}
       >
         <MediaLoader blocks={[props, mediaOverrides] as MediaBlock[]} />
       </div>
@@ -146,10 +138,6 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
     brandName,
   } = use(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
-
-  const {
-    palette: { GREY_2, WHITE },
-  } = useTheme();
 
   const headline = getHeadline(pageData) ?? '';
   const description = getSummary(pageData) || getHeadline(pageData);
@@ -239,7 +227,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
   };
 
   return (
-    <div css={styles.pageWrapper}>
+    <div className={styles.pageWrapper(false)}>
       <ATIAnalytics atiData={atiData} />
       <ChartbeatAnalytics
         categoryName={pageData?.metadata?.passport?.category?.categoryName}
@@ -280,17 +268,17 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
         aboutTags={aboutTags}
         imageLocator={promoImage}
       />
-      <div css={styles.grid}>
-        <div css={isCpsMap ? styles.fullWidthContainer : styles.primaryColumn}>
-          <main css={styles.mainContent} role="main">
+      <div className={styles.grid}>
+        <div className={isCpsMap ? styles.fullWidthContainer : styles.primaryColumn}>
+          <main className={styles.mainContent} role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
           {showTopics && (
             <RelatedTopics
-              css={styles.relatedTopics}
+              className={styles.relatedTopics}
               topics={topics}
-              backgroundColour={GREY_2}
-              tagBackgroundColour={WHITE}
+              backgroundColour="#F6F6F6"
+              tagBackgroundColour="#FFFFFF"
             />
           )}
           <RelatedContentSection content={blocks} />

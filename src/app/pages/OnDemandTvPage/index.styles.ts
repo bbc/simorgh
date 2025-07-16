@@ -1,39 +1,5 @@
-import { css, Theme } from '@emotion/react';
-
 export default {
-  wrapper: ({ palette, mq, spacings }: Theme) =>
-    css({
-      backgroundColor: palette.GREY_10,
-      [mq.GROUP_4_MIN_WIDTH]: {
-        paddingTop: `${spacings.QUINTUPLE}rem`,
-      },
-      [mq.GROUP_3_MAX_WIDTH]: {
-        paddingTop: `${spacings.DOUBLE}rem`,
-      },
-      [mq.GROUP_2_MAX_WIDTH]: {
-        paddingTop: `${spacings.DOUBLE}rem`,
-      },
-      [mq.GROUP_1_MAX_WIDTH]: {
-        paddingTop: `${spacings.FULL}rem`,
-      },
-    }),
-  pageGrid: ({ spacings, mq }: Theme) =>
-    css({
-      paddingBottom: `${spacings.QUADRUPLE}rem`,
-      [mq.GROUP_4_MIN_WIDTH]: {
-        width: '100%',
-      },
-    }),
-  mediaPlayer: ({ mq, spacings }: Theme) =>
-    css({
-      [mq.GROUP_4_MIN_WIDTH]: {
-        margin: `0px 0px 0px`,
-      },
-      [mq.GROUP_2_MAX_WIDTH]: {
-        margin: `0px -${spacings.DOUBLE}rem 0px`,
-      },
-      [mq.GROUP_1_MAX_WIDTH]: {
-        margin: `0px -${spacings.FULL}rem 0px`,
-      },
-    }),
+  wrapper: 'bg-grey-10 gel-4:pt-quintuple gel-3-max:pt-double gel-2-max:pt-double gel-1-max:pt-full',
+  pageGrid: 'pb-quadruple gel-4:w-full',
+  mediaPlayer: 'gel-4:m-0 gel-2-max:-mx-double gel-1-max:-mx-full',
 };

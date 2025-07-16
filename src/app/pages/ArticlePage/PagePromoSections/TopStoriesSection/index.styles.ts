@@ -1,42 +1,8 @@
-import { css, Theme } from '@emotion/react';
 import { BORDER_SPACING_DBL } from '../constants';
 
 export default {
-  sectionLabel: ({ mq }: Theme) =>
-    css({
-      marginTop: 0,
-
-      [mq.GROUP_3_MIN_WIDTH]: {
-        marginTop: 0,
-      },
-    }),
-  topStoriesSection: ({ spacings, mq }: Theme) =>
-    css({
-      [mq.GROUP_1_MAX_WIDTH]: {
-        padding: `0 ${spacings.FULL}rem`,
-      },
-
-      [mq.GROUP_2_MIN_WIDTH]: {
-        [mq.GROUP_3_MAX_WIDTH]: {
-          padding: `0 ${spacings.DOUBLE}rem`,
-        },
-      },
-    }),
-  promoList: ({ spacings, mq }: Theme) =>
-    css({
-      [mq.GROUP_3_ONLY]: {
-        display: 'flex',
-        flexWrap: 'wrap',
-        gap: `calc(${spacings.DOUBLE}rem - ${BORDER_SPACING_DBL})`,
-      },
-    }),
-  promoItem: ({ mq }: Theme) =>
-    css({
-      [mq.GROUP_3_ONLY]: {
-        height: 'inherit',
-        flexGrow: 1,
-        flexBasis: 0,
-        margin: 0,
-      },
-    }),
+  sectionLabel: 'mt-0 gel-3:mt-0',
+  topStoriesSection: 'gel-1-max:px-full gel-2:gel-3-max:px-double',
+  promoList: `gel-3-only:flex gel-3-only:flex-wrap gel-3-only:gap-[calc(2rem-${BORDER_SPACING_DBL})]`,
+  promoItem: 'gel-3-only:h-auto gel-3-only:flex-grow gel-3-only:flex-[1_1_0] gel-3-only:m-0',
 };

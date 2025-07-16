@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import moment from 'moment';
 
 import Promo from '../../../../../legacy/components/OptimoPromos';
@@ -13,14 +11,14 @@ const LatestMediaIndicator = ({ duration }: LatestMediaIndicatorProp) => {
   const isoDuration = momentDuration.toISOString();
 
   return (
-    <div css={styles.placeholderInfo}>
-      <Promo.MediaIndicator css={styles.promoMediaIndicator} />
+    <div className={styles.placeholderInfo(false)}>
+      <Promo.MediaIndicator className={styles.promoMediaIndicator(false)} />
       {duration ? (
         <time
           dateTime={isoDuration}
           suppressHydrationWarning
           aria-hidden
-          css={styles.time}
+          className={styles.time(false)}
         >
           {durationString}
         </time>

@@ -1,6 +1,3 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import { jsx } from '@emotion/react';
 import React, { use } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import useViewTracker from '#app/hooks/useViewTracker';
@@ -32,22 +29,19 @@ const ArticleHeadline = (props: ComponentToRenderProps) => {
   return (
     <>
       <Headings
-        className="article-heading"
+        className={`article-heading ${showArticleLiteSiteLink ? styles.reducePadding : ''}`}
         {...props}
-        {...(showArticleLiteSiteLink && {
-          css: styles.reducePadding,
-        })}
       />
       {showArticleLiteSiteLink && (
         <div
-          css={styles.liteSiteLinkContainer}
+          className={styles.liteSiteLinkContainer}
           {...viewTracker}
           data-e2e="article-lite-site-link"
         >
           <CallToActionLink
             url={`${pathname}.lite`}
             eventTrackingData={eventTrackingData}
-            css={styles.liteSiteLink}
+            className={styles.liteSiteLink}
             alignWithMargin
             size="brevier"
           >

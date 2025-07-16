@@ -1,179 +1,19 @@
-import NO_JS_CLASSNAME from '#app/lib/noJs.const';
-import { css, Theme } from '@emotion/react';
-import pixelsToRem from '../../utilities/pixelsToRem';
-
-const commonMarginSpacing = ({ mq, spacings }: Theme) =>
-  css({
-    marginInline: `${spacings.FULL}rem`,
-    [mq.GROUP_2_MIN_WIDTH]: {
-      [mq.GROUP_3_MAX_WIDTH]: {
-        marginInline: `${spacings.DOUBLE}rem`,
-      },
-    },
-    [mq.GROUP_4_MIN_WIDTH]: {
-      marginInline: 0,
-    },
-  });
+const commonMarginSpacing = 'mx-full gel-2:gel-3-max:mx-double gel-4:mx-0';
 
 export default {
-  pageWrapper: ({ palette }: Theme) =>
-    css({
-      backgroundColor: palette.GREY_2,
-    }),
-  grid: ({ mq, gridWidths }: Theme) =>
-    css({
-      maxWidth: `${pixelsToRem(gridWidths[1008])}rem`,
-      margin: '0 auto',
-      display: 'grid',
-      gridTemplateColumns: 'repeat(12, 1fr)',
-
-      [mq.GROUP_4_MIN_WIDTH]: {
-        padding: '0 1rem',
-        columnGap: '1rem',
-      },
-    }),
-  primaryColumn: ({ mq }: Theme) =>
-    css({
-      gridColumn: '1 / span 12',
-      paddingBottom: '2rem',
-
-      [mq.GROUP_4_MIN_WIDTH]: {
-        gridColumn: '1 / span 8',
-      },
-    }),
-  secondaryColumn: ({ mq }: Theme) =>
-    css({
-      gridColumn: '1 / span 12',
-
-      [mq.GROUP_4_MIN_WIDTH]: {
-        gridColumn: '9 / span 4',
-        marginTop: '2rem',
-      },
-    }),
-  pglColumn: () =>
-    css({
-      gridColumn: '1 / span 12',
-      paddingBottom: '2rem',
-    }),
-  mainContent: ({ palette, spacings }: Theme) =>
-    css({
-      paddingBottom: `${spacings.TRIPLE}rem`,
-
-      '.continueReadingFocusedElement': {
-        outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
-        boxShadow: `0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE}`,
-        outlineOffset: `${pixelsToRem(3)}rem`,
-      },
-    }),
-  contentHidden:
-    (liteCTAShows: boolean) =>
-    ({ mq }: Theme) =>
-      css({
-        // Hide all elements after the 7th/8th child, except for the 'read more' button
-        // This is a bit rudimentary, as its not guaranteed that the content up to and after the 7th child
-        // will be paragraphs
-        [liteCTAShows
-          ? '> *:nth-child(n + 9):not(button)'
-          : '> *:nth-child(n + 8):not(button)']: {
-          display: 'none',
-
-          [`.${NO_JS_CLASSNAME} &`]: {
-            display: 'block',
-          },
-          // Show content when at desktop size
-          [mq.GROUP_4_MIN_WIDTH]: {
-            display: 'block',
-          },
-        },
-      }),
-  hideRelatedTopics: () =>
-    css({
-      display: 'none',
-    }),
-  adContainer: ({ spacings }: Theme) =>
-    css({
-      marginBottom: `${spacings.TRIPLE}rem`,
-    }),
-  mostReadSection: ({ spacings, mq, gridWidths }: Theme) =>
-    css({
-      [mq.GROUP_1_MAX_WIDTH]: {
-        margin: `0 ${spacings.FULL}rem`,
-        paddingBottom: `${spacings.TRIPLE}rem`,
-      },
-      [mq.GROUP_2_MIN_WIDTH]: {
-        [mq.GROUP_3_MAX_WIDTH]: {
-          margin: `0 ${spacings.DOUBLE}rem`,
-          paddingBottom: `${spacings.QUADRUPLE}rem`,
-        },
-      },
-      [mq.GROUP_4_ONLY]: {
-        margin: `0 ${spacings.DOUBLE}rem`,
-        paddingBottom: `${spacings.QUINTUPLE}rem`,
-      },
-      [mq.GROUP_5_MIN_WIDTH]: {
-        margin: '0 auto',
-        padding: `0 ${spacings.DOUBLE}rem ${spacings.TRIPLE}rem`,
-        maxWidth: `${pixelsToRem(gridWidths[1280])}rem`,
-      },
-    }),
-  relatedTopics: ({ spacings, mq }: Theme) =>
-    css({
-      margin: `${spacings.DOUBLE}rem`,
-      paddingBottom: `${spacings.FULL}rem`,
-
-      [mq.GROUP_4_MIN_WIDTH]: {
-        margin: `${spacings.QUADRUPLE}rem 0`,
-        paddingBottom: `${spacings.QUADRUPLE}rem`,
-      },
-    }),
-  featuresSection: ({ spacings, mq }: Theme) =>
-    css({
-      marginBottom: `${spacings.TRIPLE}rem`,
-
-      [mq.GROUP_4_MIN_WIDTH]: {
-        marginBottom: `${spacings.FULL}rem`,
-        padding: `${spacings.DOUBLE}rem`,
-      },
-    }),
-  topStoriesSection: ({ spacings, mq }: Theme) =>
-    css({
-      marginBottom: `${spacings.TRIPLE}rem`,
-
-      [mq.GROUP_4_MIN_WIDTH]: {
-        marginBottom: `${spacings.FULL}rem`,
-        padding: `${spacings.DOUBLE}rem`,
-      },
-    }),
-  portraitVideoTitle: ({
-    mq,
-    fontSizes,
-    fontVariants,
-    spacings,
-    palette,
-  }: Theme) => [
-    css({
-      display: 'block',
-      ...fontSizes.doublePica,
-      ...fontVariants.sansBold,
-      paddingBottom: `${spacings.DOUBLE}rem`,
-      color: palette.BLACK,
-      [mq.GROUP_2_ONLY]: {
-        paddingBottom: `${spacings.TRIPLE}rem`,
-      },
-      [mq.GROUP_3_MIN_WIDTH]: {
-        paddingBottom: `${spacings.DOUBLE}rem`,
-      },
-
-      marginInline: `${spacings.FULL}rem`,
-      [mq.GROUP_2_MIN_WIDTH]: {
-        [mq.GROUP_3_MAX_WIDTH]: {
-          marginInline: `${spacings.DOUBLE}rem`,
-        },
-      },
-      [mq.GROUP_4_MIN_WIDTH]: {
-        marginInline: 0,
-      },
-    }),
-    commonMarginSpacing,
-  ],
+  pageWrapper: 'bg-grey-2',
+  grid: 'max-w-gel-1008 mx-auto grid grid-cols-12 gel-4:p-4 gel-4:gap-4',
+  primaryColumn: 'col-span-12 pb-8 gel-4:col-span-8',
+  secondaryColumn: 'col-span-12 gel-4:col-span-4 gel-4:col-start-9 gel-4:mt-8',
+  pglColumn: 'col-span-12 pb-8',
+  mainContent: 'pb-triple [&_.continueReadingFocusedElement]:outline-[0.1875rem] [&_.continueReadingFocusedElement]:outline-black [&_.continueReadingFocusedElement]:shadow-[0_0_0_0.1875rem_white] [&_.continueReadingFocusedElement]:outline-offset-[0.1875rem]',
+  contentHidden: (liteCTAShows: boolean) => 
+    `${liteCTAShows ? '[&>*:nth-child(n+9):not(button)]:hidden' : '[&>*:nth-child(n+8):not(button)]:hidden'} [&>*:nth-child(n+9):not(button)]:no-js:block [&>*:nth-child(n+8):not(button)]:no-js:block [&>*:nth-child(n+9):not(button)]:gel-4:block [&>*:nth-child(n+8):not(button)]:gel-4:block`,
+  hideRelatedTopics: 'hidden',
+  adContainer: 'mb-triple',
+  mostReadSection: 'gel-1-max:mx-full gel-1-max:pb-triple gel-2:gel-3-max:mx-double gel-2:gel-3-max:pb-quadruple gel-4-only:mx-double gel-4-only:pb-quintuple gel-5:mx-auto gel-5:p-double gel-5:pt-0 gel-5:pb-triple gel-5:max-w-gel-1280',
+  relatedTopics: 'mx-double pb-full gel-4:mx-0 gel-4:my-quadruple gel-4:pb-quadruple',
+  featuresSection: 'mb-triple gel-4:mb-full gel-4:p-double',
+  topStoriesSection: 'mb-triple gel-4:mb-full gel-4:p-double',
+  portraitVideoTitle: `block text-double-pica font-sans-bold pb-double text-black gel-2-only:pb-triple gel-3:pb-double ${commonMarginSpacing}`,
 };
