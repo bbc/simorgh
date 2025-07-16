@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { use } from 'react';
 import { useTheme } from '@emotion/react';
-import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import Timestamp from '#psammead/psammead-timestamp-container/src';
 import {
@@ -9,33 +8,10 @@ import {
   formatUnixTimestamp,
 } from '#psammead/psammead-timestamp-container/src/utilities';
 import SectionLabel from '#psammead/psammead-section-label/src';
-import {
-  GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
-} from '#psammead/gel-foundations/src/spacings';
-import {
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
 import { RequestContext } from '#contexts/RequestContext';
 import EpisodeList from '#containers/EpisodeList';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
-
-const StyledSectionLabel = styled(SectionLabel)`
-  color: ${props => props.theme.palette.WHITE};
-  margin-bottom: 0;
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    margin-bottom: ${GEL_SPACING_DBL};
-  }
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    margin-bottom: ${GEL_SPACING_TRPL};
-  }
-`;
-
-const InlineDiv = styled.div`
-  display: inline;
-`;
 
 const getAmpImageComponent =
   ({ image, altText }) =>
@@ -87,15 +63,16 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
 
   return (
     <aside role="complementary" aria-labelledby="recent-episodes">
-      <StyledSectionLabel
+      <SectionLabel
         script={script}
         service={service}
         dir={dir}
         backgroundColor={MIDNIGHT_BLACK}
         labelId="recent-episodes"
+        className="text-white mb-0 group-2:mb-double group-3:mb-triple"
       >
         {recentEpisodesTranslation}
-      </StyledSectionLabel>
+      </SectionLabel>
       <EpisodeList
         script={script}
         service={service}
@@ -136,7 +113,7 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
               </VisuallyHiddenText>
             </EpisodeList.Link>
             {episode.episodeTitle && (
-              <InlineDiv>
+              <div className="inline">
                 <EpisodeList.DateTimeDuration
                   as={Timestamp}
                   timestamp={episode.timestamp}
@@ -148,7 +125,7 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
                   service={service}
                   timezone={timezone}
                 />
-              </InlineDiv>
+              </div>
             )}
           </EpisodeList.Episode>
         ))}

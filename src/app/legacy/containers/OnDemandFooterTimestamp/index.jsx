@@ -1,27 +1,6 @@
 import React, { use } from 'react';
-import styled from '@emotion/styled';
-import { getLongPrimer } from '#psammead/gel-foundations/src/typography';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
-import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
-
 import { ServiceContext } from '../../../contexts/ServiceContext';
-
-const smallScreenMargin = `
-  @media(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    margin-top: 0;
-  }
-`;
-
-const Wrapper = styled.time`
-  ${({ script }) => script && getLongPrimer(script)}
-  ${({ service }) => getSansRegular(service)}
-  color: ${({ theme }) =>
-    theme.isDarkUi ? theme.palette.PEBBLE : theme.palette.METAL};
-  display: inline-block;
-
-  ${({ theme }) => !theme.isDarkUi && smallScreenMargin}
-`;
 
 const OnDemandFooterTimestamp = ({ releaseDateTimeStamp }) => {
   const { script, service, timezone, datetimeLocale } = use(ServiceContext);
@@ -41,14 +20,13 @@ const OnDemandFooterTimestamp = ({ releaseDateTimeStamp }) => {
   });
 
   return (
-    <Wrapper
-      script={script}
-      service={service}
+    <time
+      className="text-longPrimer dark:text-pebble text-metal inline-block light:max-group-3:mt-0"
       dateTime={dateTime}
       suppressHydrationWarning
     >
       {formattedTimestamp}
-    </Wrapper>
+    </time>
   );
 };
 

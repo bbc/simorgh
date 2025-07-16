@@ -1,6 +1,5 @@
 import React, { use, useState } from 'react';
 import { useTheme } from '@emotion/react';
-import styled from '@emotion/styled';
 import LazyLoad from 'react-lazyload';
 import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
 import Image, { AmpImg } from '#psammead/psammead-image/src';
@@ -9,9 +8,9 @@ import { RequestContext } from '#contexts/RequestContext';
 
 const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
 
-const StyledImage = styled(Image)`
-  height: auto;
-`;
+const StyledImage = ({ className, ...props }) => (
+  <Image {...props} className={`h-auto ${className || ''}`} />
+);
 
 const renderImage = (imageToRender, lazyLoad, fallback) =>
   lazyLoad ? (

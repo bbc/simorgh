@@ -1,16 +1,5 @@
 import React, { use } from 'react';
-import styled from '@emotion/styled';
 import path from 'ramda/src/path';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_SPACING_QUAD,
-  GEL_SPACING_QUIN,
-} from '#psammead/gel-foundations/src/spacings';
-import {
-  GEL_GROUP_3_SCREEN_WIDTH_MAX,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
 import { Headline } from '#psammead/psammead-headings/src';
 import { GridItemLarge } from '#components/Grid';
 import { ServiceContext } from '../../../contexts/ServiceContext';
@@ -19,16 +8,6 @@ import Blocks from '../Blocks';
 
 // missing CSS 'display: block;' in psammead branch `explicitly-set-h1-styles-display-and-font-weight`
 const FauxHeadline = props => <Headline as="strong" {...props} />;
-
-const StyledFauxHeadline = styled(FauxHeadline)`
-  @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    padding: ${GEL_SPACING} 0 ${GEL_SPACING_QUAD};
-  }
-
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    padding: ${GEL_SPACING_DBL} 0 ${GEL_SPACING_QUIN};
-  }
-`;
 
 const FauxHeadlineContainer = ({
   blocks = [
@@ -61,9 +40,9 @@ const FauxHeadlineContainer = ({
 
   return (
     <GridItemLarge>
-      <StyledFauxHeadline script={script} service={service}>
+      <FauxHeadline script={script} service={service} className="max-group-3:py-full max-group-3:pb-quad group-4:py-double group-4:pb-quin">
         {renderText()}
-      </StyledFauxHeadline>
+      </FauxHeadline>
     </GridItemLarge>
   );
 };

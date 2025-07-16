@@ -1,6 +1,5 @@
 import React, { use } from 'react';
 import pathOr from 'ramda/src/pathOr';
-import styled from '@emotion/styled';
 import { Headline, SubHeading } from '#psammead/psammead-headings/src';
 import idSanitiser from '#lib/utilities/idSanitiser';
 import { GridItemMedium, GridItemLarge } from '#components/Grid';
@@ -9,12 +8,12 @@ import Fragment from '../Fragment';
 import InlineContainer from '../InlineContainer';
 import Blocks from '../Blocks';
 
-const StyledHeadline = styled(Headline)`
-  :focus {
-    outline: none;
-  }
-  overflow-wrap: anywhere;
-`;
+const StyledHeadline = ({ className, ...props }) => (
+  <Headline
+    {...props}
+    className={`focus:outline-none [overflow-wrap:anywhere] ${className || ''}`}
+  />
+);
 
 const Headings = {
   headline: StyledHeadline,

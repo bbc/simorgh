@@ -1,13 +1,7 @@
 import React from 'react';
-import { getSansRegularItalic } from '#psammead/psammead-styles/src/font-styles';
-import styled from '@emotion/styled';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
-const italic = styled.i`
-  ${({ service }) => getSansRegularItalic(service)}
-  font-family: inherit;
-  font-weight: inherit;
-`;
+const italic = ({ children }) => <i className="italic">{children}</i>;
 
 const bold = ({ children }) => <b>{children}</b>;
 
