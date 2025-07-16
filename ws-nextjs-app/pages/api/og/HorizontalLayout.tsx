@@ -1,5 +1,5 @@
-import { ImageResponse } from 'next/og';
 import React from 'react';
+import { ImageResponse } from 'next/og';
 import { BLACK, GREY_6 } from '#app/components/ThemeProvider/palette';
 import { LayoutProps } from './types';
 import BackgroundImage from './BackgroundImage';
