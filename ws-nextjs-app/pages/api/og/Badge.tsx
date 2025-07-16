@@ -1,5 +1,5 @@
 import React from 'react';
-import { BLACK, WHITE } from '#app/components/ThemeProvider/palette';
+import { GREY_8, WHITE } from '#app/components/ThemeProvider/palette';
 
 type BadgeProps = {
   icon: React.ReactNode;
@@ -7,7 +7,7 @@ type BadgeProps = {
   text: string;
 };
 
-const Badge = ({ icon, text, backgroundColor = BLACK }: BadgeProps) => (
+const Badge = ({ icon, text, backgroundColor = GREY_8 }: BadgeProps) => (
   <div
     style={{
       display: 'flex',
