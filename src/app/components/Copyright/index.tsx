@@ -1,11 +1,8 @@
 /* eslint-disable jsx-a11y/aria-role */
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
-import { PropsWithChildren, use } from 'react';
+import React, { PropsWithChildren, use } from 'react';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import Text from '../Text';
-import styles from './index.styles';
 
 const CopyrightContainer = ({ children }: PropsWithChildren) => {
   const { imageCopyrightOffscreenText, lang } = use(ServiceContext);
@@ -16,12 +13,14 @@ const CopyrightContainer = ({ children }: PropsWithChildren) => {
       role="text"
       fontVariant="sansRegular"
       size="minion"
-      css={styles.copyright}
+      className="absolute bottom-0 left-0 m-0 overflow-hidden bg-black/75 px-full py-half text-white uppercase font-sans"
     >
-      {imageCopyrightOffscreenText ? (
-        <VisuallyHiddenText>{imageCopyrightOffscreenText}</VisuallyHiddenText>
-      ) : null}
-      {lang === 'en-GB' ? children : <span lang="en-GB">{children}</span>}
+      <span className="text-minion">
+        {imageCopyrightOffscreenText ? (
+          <VisuallyHiddenText>{imageCopyrightOffscreenText}</VisuallyHiddenText>
+        ) : null}
+        {lang === 'en-GB' ? children : <span lang="en-GB">{children}</span>}
+      </span>
     </Text>
   );
 };

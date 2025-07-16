@@ -1,37 +1,31 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
-import { use } from 'react';
+import React, { use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { LeftChevron, RightChevron } from '../../icons';
 import CallToActionLinkContext from '../CallToActionLinkContext';
-import styles from './index.styles';
 
 type ChevronProps = {
   className?: string;
 };
 
-const getChevronCss = (size = 'pica') => {
-  const chevronCss = [];
-
+const getChevronClasses = (size = 'pica') => {
+  const baseClasses = 'align-middle fill-current';
   if (size === 'brevier') {
-    chevronCss.push(styles.brevierSize);
-  } else {
-    chevronCss.push(styles.picaSize);
+    return `${baseClasses} ml-full w-[0.875rem] h-[0.875rem]`;
   }
-
-  chevronCss.push(styles.chevron);
-
-  return chevronCss;
+  return `${baseClasses} ml-full w-double h-double`;
 };
 
 const Chevron = ({ className }: ChevronProps) => {
   const { size } = use(CallToActionLinkContext);
   const { dir } = use(ServiceContext);
   const isRtl = dir === 'rtl';
+  
+  const chevronClasses = getChevronClasses(size);
+  
   return isRtl ? (
-    <LeftChevron className={className} css={getChevronCss(size)} />
+    <LeftChevron className={`${className} ${chevronClasses}`} />
   ) : (
-    <RightChevron className={className} css={getChevronCss(size)} />
+    <RightChevron className={`${className} ${chevronClasses}`} />
   );
 };
 

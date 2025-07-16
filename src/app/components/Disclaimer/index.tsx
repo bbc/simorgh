@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
-import { use, PropsWithChildren } from 'react';
+import React, { use, PropsWithChildren } from 'react';
 import isEmpty from 'ramda/src/isEmpty';
 import { GridItemLarge } from '../../legacy/components/Grid';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -9,7 +7,6 @@ import useToggle from '../../hooks/useToggle';
 import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
 import Text from '../Text';
 import InlineLink from '../InlineLink';
-import styles from './index.styles';
 
 type Props = {
   increasePaddingOnDesktop?: boolean;
@@ -35,21 +32,18 @@ const DisclaimerComponent = ({
   const infoBannerLabelTranslation =
     translations?.infoBannerLabel || 'Information';
 
+  const bannerClasses = `p-0 ${increasePaddingOnDesktop ? 'group-4:px-quintuple' : ''}`;
+  const innerClasses = `bg-grey-3 block text-grey-10 mb-triple p-double border-[0.1875rem] border-transparent leading-[1.4] group-3-max:leading-[1.4] group-4:mb-quadruple ${pageType === ARTICLE_PAGE ? 'mt-full group-4:mt-double' : ''}`;
+
   return (
     <GridItemLarge>
       <section
-        css={[
-          styles.infoBanner,
-          increasePaddingOnDesktop && styles.increasePaddingOnDesktop,
-        ]}
+        className={bannerClasses}
         role="region"
         aria-label={infoBannerLabelTranslation}
       >
         <Text
-          css={[
-            styles.inner,
-            pageType === ARTICLE_PAGE && styles.increaseTopMargin,
-          ]}
+          className={innerClasses}
           size="longPrimer"
           fontVariant="sansRegular"
           as="strong"
@@ -60,8 +54,7 @@ const DisclaimerComponent = ({
               const linkUrl: string = (para as Disclaimer).url;
               return linkUrl ? (
                 <InlineLink
-                  className="focusIndicatorReducedWidth"
-                  css={styles.inlineLink}
+                  className="text-grey-10 border-b border-grey-10 visited:text-grey-6 visited:border-grey-6 hover:border-b-2 hover:border-postbox hover:text-postbox focus:border-b-2 focus:border-postbox focus:text-postbox focusIndicatorReducedWidth"
                   key={linkText}
                   text={linkText}
                   to={linkUrl}

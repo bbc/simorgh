@@ -1,12 +1,9 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import React, { use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import pathOr from 'ramda/src/pathOr';
 import Blocks from '#app/legacy/containers/Blocks';
 import makeRelativeUrlPath from '#app/lib/utilities/makeRelativeUrlPath';
 import { OptimoBlock } from '#app/models/types/optimo';
-import styles from './index.style';
 import fragment from '../Fragment';
 
 const componentsToRender = { fragment };
@@ -23,9 +20,8 @@ const DecoratedInlineLink = ({
 
   return (
     <a
-      css={styles.InlineLink}
+      className="text-ebon dark:text-grey-2 border-b border-postbox no-underline visited:text-metal visited:border-metal hover:border-b-2 hover:border-postbox hover:text-postbox focus:border-b-2 focus:border-postbox focus:text-postbox focusIndicatorReducedWidth"
       href={makeRelativeUrlPath(locator)}
-      className="focusIndicatorReducedWidth"
       {...(isExternal
         ? { 'aria-label': `${linkText}${externalLinkText}` }
         : {})}

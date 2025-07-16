@@ -1,13 +1,10 @@
-/** @jsx jsx */
-import { PropsWithChildren, useMemo } from 'react';
-import { jsx } from '@emotion/react';
+import React, { PropsWithChildren, useMemo } from 'react';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import { FontVariant, GelFontSize } from '../../models/types/theming';
 import Chevron from './Chevron';
 import ButtonLikeWrapper from './ButtonLikeWrapper';
 import Text from './Text';
-import styles from './index.styles';
 import CallToActionLinkContext from './CallToActionLinkContext';
 
 type CallToActionLinkProps = {
@@ -43,14 +40,15 @@ const CallToActionLink = ({
 
   if (!url) return null;
 
+  const linkClasses = `text-grey-10 no-underline visited:text-metal hover:text-postbox hover:no-underline focus:text-postbox focus:no-underline ${alignWithMargin ? 'inline-block' : ''} ${className || ''}`;
+
   return (
     <a
       href={url}
       {...(eventTrackingData && clickTrackerHandler)}
-      className={className}
+      className={linkClasses}
       download={download}
       {...htmlAttributes}
-      css={[styles.link, alignWithMargin && styles.alignWithMargin]}
     >
       <CallToActionLinkContext.Provider value={callToActionLinkContextValue}>
         {children}

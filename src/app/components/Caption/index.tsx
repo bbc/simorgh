@@ -1,15 +1,11 @@
 /* eslint-disable jsx-a11y/aria-role */
-/** @jsxRuntime classic */
-/** @jsx  jsx  */
-import { jsx } from '@emotion/react';
-import { use } from 'react';
+import React, { use } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import Blocks from '#app/legacy/containers/Blocks';
 import { OptimoBlock } from '#app/models/types/optimo';
 import DecoratedInline from '../DecoratedInline';
 import VisuallyHiddenText from '../VisuallyHiddenText';
-import styles from './index.style';
 import Fragment from '../Fragment';
 import Text from '../Text';
 import DecoratedInlineLink from '../DecoratedInlineLink';
@@ -61,8 +57,7 @@ const renderCaption = (
   className?: string,
 ) => (
   <Text
-    className={className}
-    css={styles.captionStyles}
+    className={`${className || ''} text-grey-6 dark:text-grey-3 mt-full w-[calc(100%-0.5rem)] border-l-[0.0625rem] border-metal dark:border-grey-3 px-full mx-full group-2:w-[calc(100%-1.5rem)] group-2:mx-6 group-2:px-full group-4:w-full group-4:mt-full group-4:mx-0 group-4:px-full [&>span>p]:pb-triple [&>span>p]:m-0 [&>span>p:last-child]:pb-0`}
     size="longPrimer"
     fontVariant="sansRegular"
     as="figcaption"

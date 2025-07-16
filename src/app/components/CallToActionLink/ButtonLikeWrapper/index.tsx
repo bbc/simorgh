@@ -1,7 +1,4 @@
-/** @jsx jsx */
-import { PropsWithChildren } from 'react';
-import { jsx } from '@emotion/react';
-import styles from './index.styles';
+import React, { PropsWithChildren } from 'react';
 
 type ButtonLikeWrapperProps = {
   className?: string;
@@ -12,7 +9,7 @@ const ButtonLikeWrapper = ({
   className,
 }: PropsWithChildren<ButtonLikeWrapperProps>) => {
   return (
-    <div css={styles.flexWrapper} className={className}>
+    <div className={`flex flex-row justify-center ${className || ''}`}>
       {children}
     </div>
   );
