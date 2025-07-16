@@ -109,6 +109,20 @@ const getBaseConfig = BUNDLE_TYPE => ({
           },
         ],
       },
+      {
+        test: /\.module\.css$/,
+        use: [
+          IS_PROD ? 'style-loader' : 'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                localIdentName: IS_PROD ? '[hash:base64]' : '[name]__[local]___[hash:base64:5]',
+              },
+            },
+          },
+        ],
+      },
       IS_PROD
         ? {
             test: /\.(js|jsx|mjs)$/,

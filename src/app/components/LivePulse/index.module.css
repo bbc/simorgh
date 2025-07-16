@@ -1,0 +1,34 @@
+/* LivePulse CSS Module */
+@keyframes pulseAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.pulseContainer {
+  color: var(--live-color, #cc0000); /* Default to live red */
+  display: inline-block;
+  vertical-align: -0.125rem;
+  position: relative;
+  margin-inline-end: 0.5rem;
+}
+
+.pulseContainerDark {
+  color: var(--live-light-color, #ff5722); /* Light color for dark UI */
+}
+
+.pulseInnerCircle {
+  animation: pulseAnimation 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s 3;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulseInnerCircle {
+    animation: none;
+  }
+}

@@ -1,0 +1,8 @@
+/* LiveText CSS Module */
+.liveLabelText {
+  color: var(--live-dark-color, #cc0000); /* Default to live red */
+  display: inline-block;
+  font-weight: bold;
+  font-family: ReithSans, Arial, sans-serif;
+  margin-inline-end: 1rem;
+}

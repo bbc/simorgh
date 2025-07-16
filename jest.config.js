@@ -4,7 +4,10 @@ const unitTests = {
   preset: 'ts-jest',
   setupFiles: ['./src/testHelpers/jest-setup.js'],
   setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
-  moduleNameMapper: jestDirAlias,
+  moduleNameMapper: {
+    ...jestDirAlias,
+    '\\.module\\.css$': 'identity-obj-proxy',
+  },
   testEnvironment: 'jsdom',
   snapshotSerializers: ['@emotion/jest/serializer'],
   transform: {

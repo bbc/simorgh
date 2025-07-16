@@ -13,4 +13,5 @@ export interface PulseProps {
   className?: string;
   width: string;
   height: string;
+  css?: string;
 }

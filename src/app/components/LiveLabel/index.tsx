@@ -1,9 +1,6 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
 import React, { PropsWithChildren } from 'react';
-import { jsx } from '@emotion/react';
 import { LiveLabelProps } from './types';
-import styles from './index.styles';
+import styles from './index.module.css';
 import Text from '../LiveText';
 import Pulse from '../LivePulse';
 
@@ -14,14 +11,14 @@ const LiveLabel = ({
   offScreenText,
   className,
 }: PropsWithChildren<LiveLabelProps>) => {
-  const pulse = [
+  const pulseClassName = [
     styles.liveLabelPulse,
     className === 'first-promo' && styles.firstPromo,
-  ];
+  ].filter(Boolean).join(' ');
 
   return (
     <>
-      <Pulse className={className} width="16" height="16" css={pulse} />
+      <Pulse className={className} width="16" height="16" css={pulseClassName} />
       <Text lang={lang} id={id} offScreenText={offScreenText}>
         {children}
       </Text>
