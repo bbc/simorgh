@@ -1,7 +1,5 @@
 /* eslint-disable jsx-a11y/aria-role */
-/** @jsxRuntime classic */
-/** @jsx  jsx  */
-import { use } from 'react';
+import React, { use } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import Blocks from '#app/legacy/containers/Blocks';
@@ -60,8 +58,7 @@ const renderCaption = (
   className?: string,
 ) => (
   <Text
-    className={className}
-    className={styles.captionStyles}
+    className={[className, styles.captionStyles].filter(Boolean).join(' ')}
     size="longPrimer"
     fontVariant="sansRegular"
     as="figcaption"

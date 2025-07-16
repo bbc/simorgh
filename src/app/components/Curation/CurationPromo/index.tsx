@@ -46,7 +46,7 @@ const CurationPromo = ({
     (type === 'video' && `${videoTranslation}, `) ||
     (type === 'photogallery' && `${photoGalleryTranslation}, `);
   return (
-    <Promo className={styles.promo} className="">
+    <Promo className={styles.promo}>
       {imageUrl && (
         <Promo.Image
           src={imageUrl}

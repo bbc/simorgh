@@ -26,10 +26,12 @@ const Chevron = ({ className }: ChevronProps) => {
   const { size } = use(CallToActionLinkContext);
   const { dir } = use(ServiceContext);
   const isRtl = dir === 'rtl';
+  const chevronClasses = [className, ...getChevronCss(size)].filter(Boolean).join(' ');
+  
   return isRtl ? (
-    <LeftChevron className={className} css={getChevronCss(size)} />
+    <LeftChevron className={chevronClasses} />
   ) : (
-    <RightChevron className={className} css={getChevronCss(size)} />
+    <RightChevron className={chevronClasses} />
   );
 };
 

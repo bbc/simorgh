@@ -101,25 +101,23 @@ const Image = ({
         </Helmet>
       )}
       <div
-        className={className}
-        className={ [
+        className={[
+          className,
           styles.wrapper,
           hasFixedAspectRatio
             ? styles.wrapperFixedAspectRatio
             : styles.wrapperResponsiveRatio,
           isPortraitOrientation && styles.portraitOrientation,
-          showPlaceholder && [
-            styles.placeholder,
-            {
-              backgroundColor: darkPlaceholder
-                ? theme.palette.SHADOW
-                : theme.palette.LUNAR,
-            },
-          ],
-        ]}
+          showPlaceholder && styles.placeholder,
+        ].filter(Boolean).join(' ')}
         style={{
           paddingBottom: hasFixedAspectRatio ? legacyBrowserAspectRatio : 0,
           ...(!hasCaption && { overflow: 'hidden' }),
+          ...(showPlaceholder && {
+            backgroundColor: darkPlaceholder
+              ? theme.palette.SHADOW
+              : theme.palette.LUNAR,
+          }),
         }}
       >
         {isAmp ? (

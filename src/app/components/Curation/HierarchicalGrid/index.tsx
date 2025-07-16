@@ -136,7 +136,7 @@ const HiearchicalGrid = ({
                     </Promo.A>
                   )}
                 </Promo.Heading>
-                <Promo.Body className="promo-paragraph" className={styles.body}>
+                <Promo.Body className={["promo-paragraph", styles.body].filter(Boolean).join(' ')}>
                   {promo.description}
                 </Promo.Body>
                 {!isLive ? (

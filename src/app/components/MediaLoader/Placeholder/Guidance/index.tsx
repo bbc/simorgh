@@ -21,8 +21,7 @@ const Guidance = ({
   >
     {guidanceMessage && (
       <strong
-        className={styles.guidanceMessage}
-        className="guidance-message"
+        className={[styles.guidanceMessage, "guidance-message"].filter(Boolean).join(' ')}
         aria-hidden="true"
       >
         {guidanceMessage}

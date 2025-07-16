@@ -87,7 +87,7 @@ const ImageWithCaption = ({
   const lazyLoad = shouldLazyLoad(position);
 
   return (
-    <figure className={className} className={styles.figure}>
+    <figure className={[className, styles.figure].filter(Boolean).join(' ')}>
       <Image
         alt={alt}
         attribution={copyright}

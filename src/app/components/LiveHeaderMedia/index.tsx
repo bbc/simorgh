@@ -166,7 +166,7 @@ const LiveHeaderMedia = ({
             )}
           </div>
           {!showMedia && (
-            <div className="hoverStylesCTA" className={styles.watchLiveCTA}>
+            <div className={["hoverStylesCTA", styles.watchLiveCTA].filter(Boolean).join(' ')}>
               <Text
                 className={styles.watchLiveCTAText}
                 size="greatPrimer"

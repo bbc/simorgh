@@ -45,10 +45,9 @@ const CallToActionLink = ({
     <a
       href={url}
       {...(eventTrackingData && clickTrackerHandler)}
-      className={className}
       download={download}
       {...htmlAttributes}
-      className={[styles.link].filter(Boolean).join(' ')}
+      className={[styles.link, className].filter(Boolean).join(' ')}
     >
       <CallToActionLinkContext.Provider value={callToActionLinkContextValue}>
         {children}
