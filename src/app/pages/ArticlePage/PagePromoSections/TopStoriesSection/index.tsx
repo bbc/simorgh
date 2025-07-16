@@ -1,6 +1,3 @@
-/** @jsx jsx */
-
-import { jsx, useTheme } from '@emotion/react';
 import { use } from 'react';
 import useViewTracker from '#hooks/useViewTracker';
 import { EventTrackingBlock } from '#app/models/types/eventTracking';
@@ -42,7 +39,7 @@ const renderTopStoriesList = ({
   });
 
   return (
-    <PromoItem css={styles.promoItem} key={ariaLabelledBy}>
+    <PromoItem className={styles.promoItem} key={ariaLabelledBy}>
       <TopStoriesItem
         item={item}
         ariaLabelledBy={ariaLabelledBy}
@@ -74,10 +71,6 @@ const TopStoriesSection = ({
   const eventTrackingDataSend = eventTrackingData?.block;
   const viewTracker = useViewTracker(eventTrackingDataSend);
 
-  const {
-    palette: { GREY_2 },
-  } = useTheme();
-
   if (!content || content?.length === 0) return null;
 
   const title = translations?.topStoriesTitle ?? 'Top Stories';
@@ -96,16 +89,16 @@ const TopStoriesSection = ({
 
   return (
     <section
-      css={styles.topStoriesSection}
+      className={styles.topStoriesSection}
       aria-labelledby={LABEL_ID}
       role="region"
       data-e2e={LABEL_ID}
     >
       <SectionLabel
-        css={styles.sectionLabel}
+        className={styles.sectionLabel}
         labelId={LABEL_ID}
         columnType="secondary"
-        backgroundColor={GREY_2}
+        backgroundColor="#F6F6F6"
         script={script}
         service={service}
       >
@@ -120,7 +113,7 @@ const TopStoriesSection = ({
           eventTrackingData={eventTrackingData}
         />
       ) : (
-        <PromoList css={styles.promoList}>
+        <PromoList className={styles.promoList}>
           {content.map((item, index) =>
             renderTopStoriesList({
               item,

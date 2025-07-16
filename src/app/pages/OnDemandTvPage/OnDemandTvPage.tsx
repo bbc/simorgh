@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import React, { use } from 'react';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
@@ -103,7 +101,7 @@ const OnDemandTvPage = ({
     : headline;
 
   return (
-    <div css={styles.wrapper}>
+    <div className={styles.wrapper}>
       <ChartbeatAnalytics
         mediaPageType="TV"
         title={headline}
@@ -142,7 +140,7 @@ const OnDemandTvPage = ({
         role="main"
         columns={getGroups(6, 6, 6, 6, 8, 20)}
         enableGelGutters
-        css={styles.pageGrid}
+        className={styles.pageGrid}
       >
         {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
         <Grid
@@ -158,7 +156,7 @@ const OnDemandTvPage = ({
           {mediaIsAvailable ? (
             <MediaLoader
               blocks={pageData?.mediaBlocks}
-              css={styles.mediaPlayer}
+              className={styles.mediaPlayer}
             />
           ) : (
             //  @ts-expect-error allow rendering of MediaError component when media is not available
@@ -195,7 +193,7 @@ const OnDemandTvPage = ({
         <GelPageGrid
           columns={getGroups(6, 6, 6, 6, 8, 20)}
           enableGelGutters
-          css={styles.pageGrid}
+          className={styles.pageGrid}
         >
           {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
           <Grid

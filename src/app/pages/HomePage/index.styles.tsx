@@ -1,36 +1,7 @@
-import { css, Theme } from '@emotion/react';
-
 const styles = {
-  main: ({ spacings, mq }: Theme) =>
-    css({
-      margin: `0 ${spacings.FULL}rem`,
-      [mq.GROUP_2_MIN_WIDTH]: {
-        margin: `0 ${spacings.DOUBLE}rem`,
-      },
-    }),
-  inner: css({
-    maxWidth: '63rem',
-    margin: '0 auto',
-  }),
-  margins: ({ spacings, mq }: Theme) =>
-    css({
-      margin: `${spacings.TRIPLE}rem 0`,
-      [mq.GROUP_0_MAX_WIDTH]: {
-        margin: `${spacings.TRIPLE}rem 0`,
-      },
-      [mq.GROUP_1_ONLY]: {
-        margin: `${spacings.QUADRUPLE}rem 0`,
-      },
-      [mq.GROUP_2_ONLY]: {
-        margin: `${spacings.QUADRUPLE}rem 0`,
-      },
-      [mq.GROUP_3_ONLY]: {
-        margin: `${spacings.SEXTUPLE}rem 0`,
-      },
-      [mq.GROUP_4_MIN_WIDTH]: {
-        margin: `${spacings.QUINTUPLE}rem 0`,
-      },
-    }),
+  main: 'mx-full gel-2:mx-double',
+  inner: 'max-w-[63rem] mx-auto',
+  margins: 'my-triple gel-0-max:my-triple gel-1-only:my-quadruple gel-2-only:my-quadruple gel-3-only:my-sextuple gel-4:my-quintuple',
 };
 
 export default styles;

@@ -1,7 +1,4 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
 import React, { use, useState } from 'react';
-import { jsx, useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
 import useOptimizelyVariation, {
@@ -143,7 +140,7 @@ const getVideoComponent =
 
     return (
       <>
-        {showTitle && <strong css={styles.portraitVideoTitle}>{title}</strong>}
+        {showTitle && <strong className={styles.portraitVideoTitle}>{title}</strong>}
         <MediaLoader blocks={blocks as MediaBlock[]} />
       </>
     );
@@ -162,10 +159,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   } = use(ServiceContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
-
-  const {
-    palette: { GREY_2, WHITE },
-  } = useTheme();
 
   const experimentName = 'newswb_ws_read_more_b';
   const experimentVariant = useOptimizelyVariation({
@@ -289,7 +282,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       ),
   );
   return (
-    <div css={styles.pageWrapper}>
+    <div className={styles.pageWrapper}>
       <ATIAnalytics atiData={atiData} />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
@@ -334,15 +327,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
       )}
       <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
-      <div css={styles.grid}>
-        <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
+      <div className={styles.grid}>
+        <div className={!isPGL ? styles.primaryColumn : styles.pglColumn}>
           <main
-            css={[
-              styles.mainContent,
-              ...(showContinueReadingButton
-                ? [!showAllContent && styles.contentHidden(liteCTAShows)]
-                : []),
-            ]}
+            className={`${styles.mainContent} ${showContinueReadingButton && !showAllContent ? styles.contentHidden(liteCTAShows) : ''}`}
             role="main"
           >
             <Blocks
@@ -364,16 +352,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           <OptimizelyPageMetrics trackPageView trackPageDepth />
           {showTopics && (
             <RelatedTopics
-              css={[
-                styles.relatedTopics,
-                ...(showContinueReadingButton
-                  ? [!showAllContent && styles.hideRelatedTopics]
-                  : []),
-              ]}
+              className={`${styles.relatedTopics} ${showContinueReadingButton && !showAllContent ? styles.hideRelatedTopics : ''}`}
               topics={topics}
               mobileDivider={false}
-              backgroundColour={GREY_2}
-              tagBackgroundColour={WHITE}
+              backgroundColour="#F6F6F6"
+              tagBackgroundColour="#FFFFFF"
             />
           )}
           <RelatedContentSection
@@ -387,11 +370,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       </div>
       {!isApp && !isPGL && (
         <MostRead
-          css={styles.mostReadSection}
+          className={styles.mostReadSection}
           data={mostReadInitialData}
           columnLayout="multiColumn"
           size="default"
-          headingBackgroundColour={GREY_2}
+          headingBackgroundColour="#F6F6F6"
           mobileDivider={showTopics}
           sendOptimizelyEvents={false}
         />

@@ -1,7 +1,4 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
 import React, { use } from 'react';
-import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import {
@@ -70,7 +67,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
         entities={[itemList]}
       />
       <Ad slotType="leaderboard" />
-      <main role="main" css={styles.main}>
+      <main role="main" className={styles.main}>
         <ATIAnalytics atiData={atiAnalytics} />
         <VisuallyHiddenText id="content" tabIndex={-1} as="h1">
           {/* eslint-disable-next-line jsx-a11y/aria-role */}
@@ -78,8 +75,8 @@ const HomePage = ({ pageData }: HomePageProps) => {
             <span lang="en-GB">{product}</span>, {serviceLocalizedName} - {home}
           </span>
         </VisuallyHiddenText>
-        <div css={styles.inner}>
-          <div css={styles.margins}>
+        <div className={styles.inner}>
+          <div className={styles.margins}>
             {curations.map(
               (
                 {

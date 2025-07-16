@@ -1,7 +1,3 @@
-/** @jsx jsx */
-
-import { jsx, useTheme } from '@emotion/react';
-
 import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
 import { Article } from '#app/models/types/optimo';
 import TopStoriesSection from './PagePromoSections/TopStoriesSection';
@@ -18,17 +14,13 @@ const SecondaryColumn = ({
   const topStoriesContent = pageData?.secondaryColumn?.topStories;
   const featuresContent = pageData?.secondaryColumn?.features;
 
-  const {
-    palette: { GREY_2 },
-  } = useTheme();
-
   if (!topStoriesContent && !featuresContent) return null;
 
   return (
-    <div css={styles.secondaryColumn}>
+    <div className={styles.secondaryColumn}>
       {topStoriesContent && (
         <div
-          css={styles.topStoriesSection}
+          className={styles.topStoriesSection}
           data-testid="top-stories"
           data-experiment-position="secondaryColumn"
         >
@@ -39,12 +31,12 @@ const SecondaryColumn = ({
         </div>
       )}
       {featuresContent && (
-        <div css={styles.featuresSection} data-testid="features">
+        <div className={styles.featuresSection} data-testid="features">
           <FeaturesAnalysis
             content={featuresContent}
             sendOptimizelyEvents={sendOptimizelyEvents}
             parentColumns={{}}
-            sectionLabelBackground={GREY_2}
+            sectionLabelBackground="#F6F6F6"
           />
         </div>
       )}
