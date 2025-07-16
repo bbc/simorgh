@@ -1,39 +1,37 @@
 import React from 'react';
-import styled from '@emotion/styled';
 import {
   BBC_BLOCKS,
   BBC_BLOCKS_DARK_MODE,
 } from '#psammead/psammead-assets/src/svgs';
-import {
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
 
 export { default as ImagePlaceholderAmp } from './index.amp';
 
 const bgImageDark = `url(data:image/svg+xml;base64,${BBC_BLOCKS_DARK_MODE})`;
 const bgImageRegular = `url(data:image/svg+xml;base64,${BBC_BLOCKS})`;
 
-const StyledImagePlaceholder = styled.div`
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  background-color: ${({ darkPlaceholder = false }) =>
-    props =>
-      darkPlaceholder ? props.theme.palette.SHADOW : props.theme.palette.LUNAR};
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 60px 17px;
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    background-size: 77px 22px;
-  }
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    background-size: 93px 27px;
-  }
-  width: 100%;
-  background-image: ${({ darkPlaceholder = false }) =>
-    darkPlaceholder ? bgImageDark : bgImageRegular};
-`;
+const StyledImagePlaceholder = ({ darkPlaceholder = false, children, ...props }) => {
+  const bgClasses = darkPlaceholder ? 'bg-shadow' : 'bg-lunar';
+  const bgImage = darkPlaceholder ? bgImageDark : bgImageRegular;
+  
+  return (
+    <div
+      className={`relative h-0 overflow-hidden ${bgClasses} bg-center bg-no-repeat w-full`}
+      style={{
+        backgroundImage: bgImage,
+        backgroundSize: '60px 17px',
+        '@media (min-width: 37.5rem)': {
+          backgroundSize: '77px 22px',
+        },
+        '@media (min-width: 63rem)': {
+          backgroundSize: '93px 27px',
+        }
+      }}
+      {...props}
+    >
+      {children}
+    </div>
+  );
+};
 
 const ImagePlaceholder = props => {
   const { forwardStyle = null, ratio } = props;

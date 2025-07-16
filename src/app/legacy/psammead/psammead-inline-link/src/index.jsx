@@ -1,21 +1,14 @@
-import styled from '@emotion/styled';
+import React from 'react';
 
-const InlineLink = styled.a`
-  color: ${({ theme }) =>
-    theme.isDarkUi ? theme.palette.GREY_2 : theme.palette.EBON};
-  border-bottom: 1px solid ${props => props.theme.palette.POSTBOX};
-  text-decoration: none;
-
-  &:visited {
-    color: ${props => props.theme.palette.METAL};
-    border-bottom: 1px solid ${props => props.theme.palette.METAL};
-  }
-
-  &:focus,
-  &:hover {
-    border-bottom: 2px solid ${props => props.theme.palette.POSTBOX};
-    color: ${props => props.theme.palette.POSTBOX};
-  }
-`;
+const InlineLink = ({ children, className = '', ...props }) => {
+  return (
+    <a
+      className={`text-ebon-light dark:text-gray-100 border-b border-postbox no-underline visited:text-metal visited:border-metal hover:border-b-2 hover:border-postbox hover:text-postbox focus:border-b-2 focus:border-postbox focus:text-postbox ${className}`}
+      {...props}
+    >
+      {children}
+    </a>
+  );
+};
 
 export default InlineLink;

@@ -1,33 +1,36 @@
 import React from 'react';
-import styled from '@emotion/styled';
-import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import { getMinion } from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
 
-const StyledMediaIndicator = styled.div`
-  color: ${props => props.theme.palette.EBON};
-  background-color: ${props => props.theme.palette.WHITE};
-  ${({ service }) => getSansRegular(service)}
-  ${({ script }) => script && getMinion(script)};
+const StyledMediaIndicator = ({ service, script, dir, isInline, children, ...props }) => {
+  // Get dynamic styles for script and service
+  const scriptStyles = script ? getMinion(script) : {};
+  const serviceStyles = service ? getSansRegular(service) : {};
+  
+  const inlineClasses = isInline 
+    ? `inline-block align-middle ${dir === 'rtl' ? 'pl-double' : 'pr-double'}`
+    : 'block';
+  
+  return (
+    <div
+      className={`text-ebon bg-white ${inlineClasses}`}
+      style={{
+        ...scriptStyles,
+        ...serviceStyles
+      }}
+      {...props}
+    >
+      {children}
+    </div>
+  );
+};
 
-  ${({ isInline, dir }) =>
-    isInline
-      ? `
-          display: inline-block;
-          vertical-align: middle;
-          padding-${dir === 'rtl' ? 'left' : 'right'}: ${GEL_SPACING};
-        `
-      : `
-          display: block;
-        `}
-`;
-
-const FlexWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  height: 100%;
-`;
+const FlexWrapper = ({ children }) => (
+  <div className="flex items-center h-full">
+    {children}
+  </div>
+);
 
 const MediaIndicator = ({
   type = 'video',

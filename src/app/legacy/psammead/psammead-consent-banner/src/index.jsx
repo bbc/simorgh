@@ -1,70 +1,40 @@
 import React, { forwardRef } from 'react';
-
-import styled from '@emotion/styled';
 import {
   getDoublePica,
   getLongPrimer,
   getBodyCopy,
 } from '#psammead/gel-foundations/src/typography';
-import {
-  GEL_GROUP_1_SCREEN_WIDTH_MAX,
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_2_SCREEN_WIDTH_MAX,
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
-  GEL_SPACING_QUAD,
-} from '#psammead/gel-foundations/src/spacings';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
-import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 
 // Transparent border is to show the top of the wrapper and button border in high-contrast mode
 const transparentBorderHeight = '0.0625rem';
 
-const hoverFocusStyles = ({ theme }) => `
-  &:focus,
-  &:hover {
-    color: ${theme.palette.EBON};
-    background-color: ${theme.palette.CONSENT_ACTION};
-  }
-`;
+const Wrapper = ({ service, children, ...props }) => {
+  // Get dynamic styles for service
+  const serviceStyles = service ? getSansRegular(service) : {};
+  
+  return (
+    <div
+      className="bg-consent-background border-t border-transparent"
+      style={{
+        ...serviceStyles,
+        borderTopWidth: transparentBorderHeight
+      }}
+      {...props}
+    >
+      {children}
+    </div>
+  );
+};
 
-const Wrapper = styled.div`
-  ${({ service }) => getSansRegular(service)}
-  background-color: ${props => props.theme.palette.CONSENT_BACKGROUND};
-  border-top: solid ${transparentBorderHeight} transparent;
-`;
-
-const CenterWrapper = styled.div`
-  max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX};
-  margin: 0 auto;
-
-  a {
-    color: ${props => props.theme.palette.CONSENT_ACTION};
-    text-decoration: none;
-    border-bottom: solid 0.0625rem ${props => props.theme.palette.PEBBLE};
-
-    ${hoverFocusStyles}
-  }
-
-  a:hover,
-  a:focus {
-    border-bottom: solid 0.125rem transparent;
-  }
-  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-    padding: 2.75rem ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING_DBL};
-  }
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    padding: 2.75rem ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING_DBL};
-  }
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    padding: calc(${GEL_SPACING_QUAD} - ${transparentBorderHeight})
-      ${GEL_SPACING_DBL} ${GEL_SPACING_QUAD} ${GEL_SPACING_DBL};
-  }
-`;
+const CenterWrapper = ({ children, ...props }) => (
+  <div
+    className="max-w-screen-lg mx-auto px-double py-44 pt-44 pb-double group-2:px-double group-2:py-44 group-2:pt-44 group-2:pb-double group-3:px-double group-3:py-quad group-3:pt-quad group-3:pb-quad"
+    {...props}
+  >
+    {children}
+  </div>
+);
 
 const FocusableH2 = forwardRef(({ className, children, dir }, ref) => {
   // tabIndex="-1" enables the h2 to be focussed
@@ -75,145 +45,78 @@ const FocusableH2 = forwardRef(({ className, children, dir }, ref) => {
   );
 });
 
-const Title = styled(FocusableH2)`
-  ${({ script }) => script && getDoublePica(script)};
-  color: ${props => props.theme.palette.WHITE};
-  font-weight: 700;
-  padding-top: 1rem;
-  margin: 0;
-
-  &:focus {
-    outline: none;
-  }
-`;
+const Title = ({ script, children, className = '', ...props }) => {
+  // Get dynamic styles for script
+  const scriptStyles = script ? getDoublePica(script) : {};
+  
+  return (
+    <FocusableH2 
+      className={`text-white font-bold pt-4 m-0 focus:outline-none ${className}`}
+      style={{
+        ...scriptStyles
+      }}
+      {...props}
+    >
+      {children}
+    </FocusableH2>
+  );
+};
 
 /*
  * The '& li + li' below allows for styling every `li` element except the first.
  */
-const Options = styled.ul`
-  ${({ script }) => script && getLongPrimer(script)};
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: ${props => props.theme.palette.CONSENT_ACTION};
-  font-weight: 600;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
+const Options = ({ script, children, ...props }) => {
+  // Get dynamic styles for script
+  const scriptStyles = script ? getLongPrimer(script) : {};
+  
+  return (
+    <ul
+      className="flex flex-col items-center text-consent-action font-semibold p-0 m-0 list-none group-3:flex-row group-3:justify-between"
+      style={{
+        ...scriptStyles
+      }}
+      {...props}
+    >
+      {children}
+    </ul>
+  );
+};
 
-  & li + li {
-    margin-top: ${GEL_SPACING};
-    padding-top: ${GEL_SPACING_DBL};
-    padding-bottom: ${GEL_SPACING_DBL};
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    flex-direction: row;
-    justify-content: space-between;
-
-    & li + li {
-      margin-top: 0;
-    }
-  }
-`;
-
-export const ConsentBannerText = styled.p`
-  ${({ script }) => script && getBodyCopy(script)};
-  margin-top: ${GEL_SPACING_DBL};
-  margin-bottom: ${GEL_SPACING_TRPL};
-  color: ${props => props.theme.palette.CONSENT_CONTENT};
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    margin-top: ${GEL_SPACING_TRPL};
-  }
-`;
-
-/* Custom hover and focus indicator styling applied to pseudo-element. Global focus indicator styling has been removed. */
-const a11yOutlinePosition = `
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-`;
+export const ConsentBannerText = ({ script, children, ...props }) => {
+  // Get dynamic styles for script
+  const scriptStyles = script ? getBodyCopy(script) : {};
+  
+  return (
+    <p
+      className="mt-double mb-triple text-consent-content group-3:mt-triple"
+      style={{
+        ...scriptStyles
+      }}
+      {...props}
+    >
+      {children}
+    </p>
+  );
+};
 
 // Style `button` and `a` as children due to inability to set `on`
 // prop on styled component as required for the amp useage
-const ListItem = styled.li`
-  text-align: center;
-  width: 100%;
-  word-break: break-word;
-  & button {
-    ${({ script }) => script && getLongPrimer(script)};
-    width: 100%;
-    min-height: 2.75rem;
-    color: ${props => props.theme.palette.EBON};
-    font-weight: bold;
-    background-color: ${props => props.theme.palette.GHOST};
-    border: solid ${transparentBorderHeight} transparent;
-    margin: 0;
-    cursor: pointer;
-
-    &:hover,
-    &:focus {
-      text-decoration: underline;
-    }
-
-    /* Applies focus indicator black outline.
-       Overrides dotted Mozilla focus ring applied by Normalize global styles. */
-    &:focus-visible {
-      outline: ${focusIndicatorThickness} solid
-        ${props => props.theme.palette.BLACK};
-    }
-
-    ${hoverFocusStyles}
-  }
-
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    width: 17.3125rem;
-  }
-
-  &.hide {
-    width: 2.75rem;
-    height: 2.75rem;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0;
-    padding: 0;
-    & button {
-      width: 2.75rem;
-      height: 2.75rem;
-      cursor: pointer;
-      background: none;
-      border: none;
-      &:focus::after,
-      &:hover::after {
-        ${a11yOutlinePosition}
-        border: ${focusIndicatorThickness} solid
-          ${props => props.theme.palette.WHITE};
-      }
-      &:focus-visible::after {
-        ${a11yOutlinePosition}
-        border: ${focusIndicatorThickness} solid
-          ${props => props.theme.palette.BLACK};
-        box-shadow: 0 0 0 ${focusIndicatorThickness}
-          ${props => props.theme.palette.WHITE} inset;
-      }
-    }
-    & svg {
-      color: white;
-      fill: currentColor;
-      position: absolute;
-      top: 0;
-      right: 0;
-    }
-  }
-`;
+const ListItem = ({ script, children, className = '', ...props }) => {
+  // Get dynamic styles for script
+  const scriptStyles = script ? getLongPrimer(script) : {};
+  
+  return (
+    <li
+      className={`text-center w-full break-words ${className}`}
+      style={{
+        ...scriptStyles
+      }}
+      {...props}
+    >
+      {children}
+    </li>
+  );
+};
 
 export const ConsentBanner = ({
   dir = 'ltr',
@@ -235,14 +138,26 @@ export const ConsentBanner = ({
       </Title>
       {text}
       <Options dir={dir} script={script} role="list">
-        <ListItem dir={dir} script={script}>
+        <ListItem 
+          dir={dir} 
+          script={script}
+          className="li-not-first:mt-double li-not-first:pt-double li-not-first:pb-double li-not-first:flex li-not-first:items-center li-not-first:justify-center group-3:li-not-first:mt-0"
+        >
           {accept}
         </ListItem>
-        <ListItem dir={dir} script={script}>
+        <ListItem 
+          dir={dir} 
+          script={script}
+          className="li-not-first:mt-double li-not-first:pt-double li-not-first:pb-double li-not-first:flex li-not-first:items-center li-not-first:justify-center group-3:li-not-first:mt-0"
+        >
           <span>{reject}</span>
         </ListItem>
         {hide && (
-          <ListItem className="hide" dir={dir} script={script}>
+          <ListItem 
+            className="hide w-11 h-11 absolute top-0 right-0 m-0 p-0" 
+            dir={dir} 
+            script={script}
+          >
             <div>{hide}</div>
           </ListItem>
         )}

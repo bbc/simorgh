@@ -1,15 +1,24 @@
-import styled from '@emotion/styled';
-import { GEL_SPACING_TRPL } from '#psammead/gel-foundations/src/spacings';
+import React from 'react';
 import { getBodyCopy } from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 
-const Paragraph = styled.p`
-  ${({ script }) => script && getBodyCopy(script)};
-  ${({ service }) => getSansRegular(service)}
-  color: ${({ theme }) =>
-    theme.isDarkUi ? theme.palette.GREY_2 : theme.palette.GREY_10};
-  padding-bottom: ${GEL_SPACING_TRPL};
-  margin: 0; /* Reset */
-`;
+const Paragraph = ({ script, service, children, className = '', ...props }) => {
+  // Get dynamic styles for script and service
+  const scriptStyles = script ? getBodyCopy(script) : {};
+  const serviceStyles = service ? getSansRegular(service) : {};
+  
+  return (
+    <p
+      className={`pb-triple m-0 text-gray-900 dark:text-gray-100 ${className}`}
+      style={{
+        ...scriptStyles,
+        ...serviceStyles
+      }}
+      {...props}
+    >
+      {children}
+    </p>
+  );
+};
 
 export default Paragraph;

@@ -1,14 +1,5 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React from 'react';
-import styled from '@emotion/styled';
-import {
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  MEDIA_QUERY_TYPOGRAPHY,
-} from '#psammead/gel-foundations/src/breakpoints';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-} from '#psammead/gel-foundations/src/spacings';
 import {
   getLongPrimer,
   getDoublePica,
@@ -27,71 +18,74 @@ const paddingReverseDir = ({ dir }) =>
 // This makes it work right. I don't fully understand how, but am
 // eternally grateful to the Flexbugs project.
 // https://github.com/philipwalton/flexbugs#flexbug-3
-const FlexColumn = styled.span`
-  display: flex;
-  flex-direction: column;
-`;
+const FlexColumn = ({ children }) => (
+  <span className="flex flex-col">
+    {children}
+  </span>
+);
 
-const SectionLabelLink = styled.a`
-  color: ${props => props.theme.palette.EBON};
-  text-decoration: none;
+const SectionLabelLink = ({ children, className = '', ...props }) => (
+  <a
+    className={`text-ebon no-underline hover:underline focus:underline focusIndicatorDisplayBlock ${className}`}
+    {...props}
+  >
+    {children}
+  </a>
+);
 
-  &:focus,
-  &:hover {
-    text-decoration: underline;
-  }
-`;
+const FlexRow = ({ children, ...props }) => (
+  <span 
+    className="flex flex-row flex-nowrap justify-between items-baseline group-3:items-stretch"
+    style={{ minHeight: `${minClickableHeightRem}rem` }}
+    {...props}
+  >
+    {children}
+  </span>
+);
 
-const FlexRow = styled.span`
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  min-height: ${minClickableHeightRem}rem;
+const Title = ({ script, service, backgroundColor = GHOST, dir, children, ...props }) => {
+  // Get dynamic styles for script and service
+  const scriptStyles = script ? getDoublePica(script) : {};
+  const serviceStyles = service ? getSansBold(service) : {};
+  
+  const bgClass = backgroundColor === GHOST ? 'bg-ghost' : 'bg-white';
+  const paddingClass = dir === 'rtl' ? 'pl-double group-3:pl-double' : 'pr-double group-3:pr-double';
+  
+  return (
+    <span
+      className={`${bgClass} dark:bg-gray-900 dark:text-gray-100 my-double group-3:my-0 ${paddingClass} flex items-center`}
+      style={{
+        ...scriptStyles,
+        ...serviceStyles
+      }}
+      {...props}
+    >
+      {children}
+    </span>
+  );
+};
 
-  align-items: baseline;
-  ${MEDIA_QUERY_TYPOGRAPHY.LAPTOP_AND_LARGER} {
-    align-items: stretch;
-  }
-`;
-
-const titleMargins = `
-  margin: ${GEL_SPACING_DBL} 0;
-
-  ${MEDIA_QUERY_TYPOGRAPHY.LAPTOP_AND_LARGER} {
-    margin: 0;
-  }
-`;
-
-const Title = styled.span`
-  ${({ script }) => script && getDoublePica(script)};
-  ${({ service }) => getSansBold(service)}
-  background-color: ${({ backgroundColor, theme }) =>
-    theme.isDarkUi ? theme.palette.GREY_10 : backgroundColor};
-  color: ${({ theme }) => theme.isDarkUi && theme.palette.GREY_2};
-  ${titleMargins};
-  ${paddingDir}: ${GEL_SPACING};
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    ${paddingDir}: ${GEL_SPACING_DBL};
-  }
-
-  display: flex;
-  align-items: center;
-`;
-
-const IndexLinkCta = styled.span`
-  ${({ script }) => script && getLongPrimer(script)};
-  ${({ service }) => getSansBold(service)};
-  ${titleMargins};
-  color: ${props => props.theme.palette.EBON};
-  background-color: ${props => props.backgroundColor};
-  white-space: nowrap;
-  ${paddingReverseDir}: ${GEL_SPACING_DBL};
-
-  /* needed to ensure always vertically centered even when FlexRow changes alignment */
-  display: flex;
-  align-items: center;
-`;
+const IndexLinkCta = ({ script, service, backgroundColor, dir, children, ...props }) => {
+  // Get dynamic styles for script and service
+  const scriptStyles = script ? getLongPrimer(script) : {};
+  const serviceStyles = service ? getSansBold(service) : {};
+  
+  const bgClass = backgroundColor === GHOST ? 'bg-ghost' : 'bg-white';
+  const paddingClass = dir === 'rtl' ? 'pr-double' : 'pl-double';
+  
+  return (
+    <span
+      className={`my-double group-3:my-0 text-ebon ${bgClass} whitespace-nowrap ${paddingClass} flex items-center`}
+      style={{
+        ...scriptStyles,
+        ...serviceStyles
+      }}
+      {...props}
+    >
+      {children}
+    </span>
+  );
+};
 
 export const PlainTitle = ({
   children: title,

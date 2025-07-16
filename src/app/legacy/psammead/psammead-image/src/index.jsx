@@ -1,37 +1,30 @@
 import React, { use } from 'react';
-import styled from '@emotion/styled';
-import { keyframes, css } from '@emotion/react';
 import { RequestContext } from '../../../../contexts/RequestContext';
 import { HOME_PAGE } from '../../../../routes/utils/pageTypes';
 
 export { default as AmpImg } from './index.amp';
 
-const fadeInKeyframes = keyframes`
-  from {
-    opacity: 0;
-  }
+const StyledPicture = ({ fade, onLoad, children, ...props }) => {
+  const fadeClasses = fade ? 'animate-fade-in transition-opacity duration-200' : '';
+  return (
+    <picture
+      className={`block w-full visible ${fadeClasses}`}
+      onLoad={onLoad}
+      {...props}
+    >
+      {children}
+    </picture>
+  );
+};
 
-  to {
-    opacity: 1;
-  }
-`;
-
-const fadeIn = css`
-  animation: ${fadeInKeyframes} 0.2s linear;
-  transition: visibility 0.2s linear;
-`;
-
-const StyledPicture = styled.picture`
-  display: block;
-  width: 100%;
-  visibility: visible;
-  ${props => props.fade && fadeIn};
-`;
-
-const StyledImg = styled.img`
-  display: block;
-  width: 100%;
-`;
+const StyledImg = ({ className = '', ...props }) => {
+  return (
+    <img
+      className={`block w-full ${className}`}
+      {...props}
+    />
+  );
+};
 
 export const Img = props => {
   const {

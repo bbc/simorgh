@@ -1,59 +1,27 @@
 import React from 'react';
-import styled from '@emotion/styled';
-import {
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
-import {
-  GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
-  GEL_SPACING_QUAD,
-} from '#psammead/gel-foundations/src/spacings';
 import { GHOST } from '#app/components/ThemeProvider/palette';
-import { focusIndicatorThickness } from '#app/components/ThemeProvider/focusIndicator';
 import { PlainTitle, LinkTitle } from './titles';
 
-const SectionLabelWrapper = styled.div`
-  position: relative;
-  z-index: 0;
-  color: ${props => props.theme.palette.GREY_10};
+const SectionLabelWrapper = ({ visuallyHidden, children, ...props }) => {
+  const hiddenClasses = visuallyHidden 
+    ? 'sr-only' 
+    : 'relative z-0 text-gray-900 mt-quad group-3:mt-triple group-4:mb-triple';
+  
+  return (
+    <div className={hiddenClasses} {...props}>
+      {children}
+    </div>
+  );
+};
 
-  margin-top: ${GEL_SPACING_QUAD};
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    margin-top: ${GEL_SPACING_TRPL};
-  }
-
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    margin-bottom: ${GEL_SPACING_TRPL};
-  }
-
-  ${({ visuallyHidden }) =>
-    visuallyHidden &&
-    `
-      clip-path: inset(100%);
-      clip: rect(1px, 1px, 1px, 1px);
-      height: 1px;
-      overflow: hidden;
-      position: absolute;
-      width: 1px;
-    `}
-`;
-
-export const Heading = styled.h2`
-  /* reset default margins */
-  margin: 0;
-  padding: 0;
-  scroll-margin-top: ${GEL_SPACING_DBL};
-
-  :focus-visible {
-    outline: ${({ theme: { palette } }) =>
-      `${focusIndicatorThickness} solid ${palette.BLACK}`};
-    box-shadow: ${({ theme: { palette } }) =>
-      `0 0 0 ${focusIndicatorThickness} ${palette.WHITE}`};
-    outline-offset: ${focusIndicatorThickness};
-  }
-`;
+export const Heading = ({ children, ...props }) => (
+  <h2 
+    className="m-0 p-0 scroll-mt-double focus-visible:outline-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:shadow-focus-ring"
+    {...props}
+  >
+    {children}
+  </h2>
+);
 
 const SectionLabel = ({
   children: title,
