@@ -9,9 +9,9 @@ const SecondaryColumn = ({ pageData }: { pageData: Article }) => {
   if (!latestMediaContent) return null;
 
   return (
-    <div css={styles.secondaryColumn}>
+    <div className={styles.secondaryColumn}>
       {latestMediaContent && (
-        <div data-testid="latest-media" css={styles.responsiveComponentWrapper}>
+        <div data-testid="latest-media" className={styles.responsiveComponentWrapper}>
           <LatestMediaSection content={latestMediaContent} />
         </div>
       )}

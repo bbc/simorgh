@@ -1,9 +1,24 @@
 /* CSS Module converted from emotion styles */
 /* This file needs manual conversion from the original .styles.ts file */
-/* Common patterns:
-   - Theme colors -> CSS custom properties
-   - Media queries -> standard CSS media queries
-   - Nested selectors -> flatten with BEM or similar
-*/
 
-/* TODO: Convert from emotion styles to CSS modules */
+.section {
+  /* Default section styles */
+  display: block;
+  width: 100%;
+}
+
+.leaderboard {
+  /* Leaderboard ad styles */
+  height: 90px;
+  width: 728px;
+  margin: 0 auto;
+}
+
+.mpu {
+  /* MPU ad styles */
+  height: 250px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+/* TODO: Add specific styles from the original adStyles */

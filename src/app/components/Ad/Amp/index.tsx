@@ -12,7 +12,6 @@ import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import AdSlot from './AdSlot';
 import { Direction, PageTypes, Services } from '../../../models/types/global';
 import styles from './index.module.css';
-import adStyles from '../utilities/adSlot.styles';
 import { AdProps, SLOT_TYPES, SlotType } from '../types';
 
 const AMP_ACCESS_DATA = (endpoint: string) => ({
@@ -90,10 +89,11 @@ const AdWithoutPlaceholder = ({
         aria-hidden="true"
       >
         <div
-          css={
+          className={styles.adContainer}
+          style={
             slotType === SLOT_TYPES.MPU
-              ? adStyles.ampMpu
-              : adStyles.ampLeaderboard
+              ? { /* MPU styles - need to convert from adStyles.ampMpu */ }
+              : { /* Leaderboard styles - need to convert from adStyles.ampLeaderboard */ }
           }
         >
           <div className={styles.wrapper}>
@@ -128,10 +128,11 @@ const AdWithPlaceholder = ({
       aria-hidden="true"
     >
       <div
-        css={
+        className={styles.adContainer}
+        style={
           slotType === SLOT_TYPES.MPU
-            ? adStyles.ampMpu
-            : adStyles.ampLeaderboard
+            ? { /* MPU styles */ }
+            : { /* Leaderboard styles */ }
         }
       >
         <div className={styles.wrapper}>

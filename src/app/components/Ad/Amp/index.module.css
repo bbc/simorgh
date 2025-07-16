@@ -1,9 +1,10 @@
 /* CSS Module converted from emotion styles */
 /* This file needs manual conversion from the original .styles.ts file */
-/* Common patterns:
-   - Theme colors -> CSS custom properties
-   - Media queries -> standard CSS media queries
-   - Nested selectors -> flatten with BEM or similar
-*/
 
-/* TODO: Convert from emotion styles to CSS modules */
+.adContainer {
+  /* Default ad container styles */
+  display: block;
+  width: 100%;
+}
+
+/* TODO: Add specific styles for MPU and Leaderboard from the original adStyles */

@@ -143,7 +143,7 @@ const getVideoComponent =
 
     return (
       <>
-        {showTitle && <strong css={styles.portraitVideoTitle}>{title}</strong>}
+        {showTitle && <strong className={styles.portraitVideoTitle}>{title}</strong>}
         <MediaLoader blocks={blocks as MediaBlock[]} />
       </>
     );
@@ -289,7 +289,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       ),
   );
   return (
-    <div css={styles.pageWrapper}>
+    <div className={styles.pageWrapper}>
       <ATIAnalytics atiData={atiData} />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
@@ -334,7 +334,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
       )}
       <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
-      <div css={styles.grid}>
+      <div className={styles.grid}>
         <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
           <main
             css={[
@@ -387,7 +387,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       </div>
       {!isApp && !isPGL && (
         <MostRead
-          css={styles.mostReadSection}
+          className={styles.mostReadSection}
           data={mostReadInitialData}
           columnLayout="multiColumn"
           size="default"

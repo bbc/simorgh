@@ -25,10 +25,10 @@ const SecondaryColumn = ({
   if (!topStoriesContent && !featuresContent) return null;
 
   return (
-    <div css={styles.secondaryColumn}>
+    <div className={styles.secondaryColumn}>
       {topStoriesContent && (
         <div
-          css={styles.topStoriesSection}
+          className={styles.topStoriesSection}
           data-testid="top-stories"
           data-experiment-position="secondaryColumn"
         >
@@ -39,7 +39,7 @@ const SecondaryColumn = ({
         </div>
       )}
       {featuresContent && (
-        <div css={styles.featuresSection} data-testid="features">
+        <div className={styles.featuresSection} data-testid="features">
           <FeaturesAnalysis
             content={featuresContent}
             sendOptimizelyEvents={sendOptimizelyEvents}

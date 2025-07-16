@@ -61,7 +61,7 @@ const FrostedGlassPromo = ({
     <React.Fragment>
       <h3 className={styles.header}>
         <a
-          css={theme => [
+          className={ [
             styles.anchor,
             {
               color: isAmp ? theme.palette.BLACK : theme.palette.WHITE,
@@ -119,7 +119,7 @@ const FrostedGlassPromo = ({
         placeholder={
           // Placeholder always gets rendered on AMP
           <div
-            css={theme => [
+            className={ [
               styles.lazyloadPlaceholder,
               {
                 backgroundColor: isAmp

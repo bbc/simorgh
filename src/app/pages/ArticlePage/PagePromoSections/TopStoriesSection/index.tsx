@@ -42,7 +42,7 @@ const renderTopStoriesList = ({
   });
 
   return (
-    <PromoItem css={styles.promoItem} key={ariaLabelledBy}>
+    <PromoItem className={styles.promoItem} key={ariaLabelledBy}>
       <TopStoriesItem
         item={item}
         ariaLabelledBy={ariaLabelledBy}
@@ -96,13 +96,13 @@ const TopStoriesSection = ({
 
   return (
     <section
-      css={styles.topStoriesSection}
+      className={styles.topStoriesSection}
       aria-labelledby={LABEL_ID}
       role="region"
       data-e2e={LABEL_ID}
     >
       <SectionLabel
-        css={styles.sectionLabel}
+        className={styles.sectionLabel}
         labelId={LABEL_ID}
         columnType="secondary"
         backgroundColor={GREY_2}
@@ -120,7 +120,7 @@ const TopStoriesSection = ({
           eventTrackingData={eventTrackingData}
         />
       ) : (
-        <PromoList css={styles.promoList}>
+        <PromoList className={styles.promoList}>
           {content.map((item, index) =>
             renderTopStoriesList({
               item,

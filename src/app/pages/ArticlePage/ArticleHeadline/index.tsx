@@ -40,14 +40,14 @@ const ArticleHeadline = (props: ComponentToRenderProps) => {
       />
       {showArticleLiteSiteLink && (
         <div
-          css={styles.liteSiteLinkContainer}
+          className={styles.liteSiteLinkContainer}
           {...viewTracker}
           data-e2e="article-lite-site-link"
         >
           <CallToActionLink
             url={`${pathname}.lite`}
             eventTrackingData={eventTrackingData}
-            css={styles.liteSiteLink}
+            className={styles.liteSiteLink}
             alignWithMargin
             size="brevier"
           >

@@ -28,7 +28,7 @@ const renderLatestMediaList = (
   });
 
   return (
-    <PromoItem key={index} css={styles.latestMediaPromoBorderAndWidth}>
+    <PromoItem key={index} className={styles.latestMediaPromoBorderAndWidth}>
       <LatestMediaItem
         item={item}
         ariaLabelledBy={ariaLabelledBy}
@@ -69,7 +69,7 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
 
   return (
     <section
-      css={styles.latestMediaSection}
+      className={styles.latestMediaSection}
       aria-labelledby={LABEL_ID}
       role="region"
     >
@@ -84,12 +84,12 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
         backgroundColor="transparent"
         overrideHeadingAs=""
         visuallyHidden={false}
-        css={styles.sectionTitle}
+        className={styles.sectionTitle}
       >
         {translations.latestMediaTitle ?? 'Latest'}
       </SectionLabel>
       {hasSingleItem ? (
-        <div css={styles.latestMediaPromoBorderAndWidth}>
+        <div className={styles.latestMediaPromoBorderAndWidth}>
           <LatestMediaItem
             item={singleItem}
             ariaLabelledBy={ariaLabelledBy}
@@ -98,7 +98,7 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
           />
         </div>
       ) : (
-        <PromoList css={styles.latestMediaGridWrapper}>
+        <PromoList className={styles.latestMediaGridWrapper}>
           {content.map((item, index) =>
             renderLatestMediaList(item, index, eventTrackingData, viewTracker),
           )}

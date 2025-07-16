@@ -102,7 +102,7 @@ const TopStoriesItem = forwardRef(
     const titleHasContent = titleTag === 'h3';
 
     return (
-      <div css={styles.topStoriesWrapper} {...viewTracker}>
+      <div className={styles.topStoriesWrapper} {...viewTracker}>
         <Promo
           to={assetUri || uri || canonicalUrl}
           ariaLabelledBy={ariaLabelledBy}
@@ -135,7 +135,7 @@ const TopStoriesItem = forwardRef(
               </Promo.Link>
             </Promo.Title>
             {timestamp && (
-              <Promo.Timestamp css={styles.timestamp}>
+              <Promo.Timestamp className={styles.timestamp}>
                 {timestamp}
               </Promo.Timestamp>
             )}

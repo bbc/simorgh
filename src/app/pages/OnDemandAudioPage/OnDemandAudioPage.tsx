@@ -126,11 +126,11 @@ const OnDemandAudioPage = ({
         {...metadataImageProps}
         hasAmpPage={false}
       />
-      <div css={styles.grid}>
-        <div css={styles.contentWrapper}>
+      <div className={styles.grid}>
+        <div className={styles.contentWrapper}>
           <main role="main">
-            <div css={styles.flexWrapper}>
-              <div css={styles.text}>
+            <div className={styles.flexWrapper}>
+              <div className={styles.text}>
                 <StyledRadioHeadingContainer
                   idAttr={idAttr}
                   brandTitle={brandTitle}
@@ -147,7 +147,7 @@ const OnDemandAudioPage = ({
               <EpisodeImage
                 imageUrl={imageUrl}
                 alt={imageAltText}
-                css={styles.image}
+                className={styles.image}
                 className="imageStyles"
               />
             </div>
@@ -181,7 +181,7 @@ const OnDemandAudioPage = ({
           </main>
 
           {isPodcast && (
-            <div css={styles.aside}>
+            <div className={styles.aside}>
               <PodcastExternalLinks
                 links={externalLinks}
                 brandTitle={brandTitle}
@@ -189,7 +189,7 @@ const OnDemandAudioPage = ({
             </div>
           )}
           {hasRecentEpisodes && (
-            <div css={styles.aside}>
+            <div className={styles.aside}>
               <RecentAudioEpisodes
                 masterBrand={masterBrand}
                 episodes={recentEpisodes}

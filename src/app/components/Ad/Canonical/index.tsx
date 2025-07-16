@@ -6,7 +6,6 @@ import isLive from '../../../lib/utilities/isLive';
 import useOperaMiniDetection from '../../../hooks/useOperaMiniDetection';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
-import adStyles from '../utilities/adSlot.styles';
 import styles from './index.module.css';
 import { AdProps, SLOT_TYPES } from '../types';
 
@@ -87,15 +86,15 @@ const CanonicalAd = ({ slotType, className, nonce }: AdProps) => {
       </Helmet>
 
       <section
-        css={[
+        className={[
           styles.section,
-          slotType === LEADERBOARD ? adStyles.leaderboard : adStyles.mpu,
-        ]}
+          slotType === LEADERBOARD ? styles.leaderboard : styles.mpu,
+          className,
+        ].filter(Boolean).join(' ')}
         aria-label={ariaLabel}
         aria-hidden="true"
         role="region"
         data-e2e="advertisement"
-        className={className}
       >
         <div id={`dotcom-${slotType}`} className="dotcom-ad" />
       </section>

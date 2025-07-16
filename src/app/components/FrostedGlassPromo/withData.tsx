@@ -78,7 +78,7 @@ const TimestampFooterWithAmp = (props: PromoProps) => {
 
   return (
     <PromoTimestamp
-      css={theme => [
+      className={ [
         styles.timestamp,
         {
           color: isAmp ? theme.palette.BLACK : theme.palette.GREY_3,

@@ -72,7 +72,7 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
 
   if (isAmp) {
     return (
-      <div data-testid="election-banner" css={styles.electionBannerWrapperAmp}>
+      <div data-testid="election-banner" className={styles.electionBannerWrapperAmp}>
         <AmpIframe
           ampMetadata={{
             imageWidth: 1,
@@ -88,12 +88,12 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
   }
 
   return (
-    <div data-testid="election-banner" css={styles.electionBannerWrapper}>
+    <div data-testid="election-banner" className={styles.electionBannerWrapper}>
       <iframe
         title={validAboutTag.thingLabel}
         src={`${SIMORGH_INCLUDES_BASE_URL}/${iframeSrcWithService}`}
         scrolling="no"
-        css={styles.electionBannerIframe}
+        className={styles.electionBannerIframe}
         height={heights.desktop}
         width="100%"
       />

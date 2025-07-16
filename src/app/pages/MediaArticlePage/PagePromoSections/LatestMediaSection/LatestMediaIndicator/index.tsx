@@ -13,14 +13,14 @@ const LatestMediaIndicator = ({ duration }: LatestMediaIndicatorProp) => {
   const isoDuration = momentDuration.toISOString();
 
   return (
-    <div css={styles.placeholderInfo}>
-      <Promo.MediaIndicator css={styles.promoMediaIndicator} />
+    <div className={styles.placeholderInfo}>
+      <Promo.MediaIndicator className={styles.promoMediaIndicator} />
       {duration ? (
         <time
           dateTime={isoDuration}
           suppressHydrationWarning
           aria-hidden
-          css={styles.time}
+          className={styles.time}
         >
           {durationString}
         </time>

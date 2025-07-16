@@ -9,7 +9,7 @@ const unitTests = {
     '\\.module\\.css$': 'identity-obj-proxy',
   },
   testEnvironment: 'jsdom',
-  snapshotSerializers: ['@emotion/jest/serializer'],
+  // Removed emotion serializer: snapshotSerializers: ['@emotion/jest/serializer'],
   transform: {
     '^.+\\.[tj]sx?$': 'babel-jest',
   },

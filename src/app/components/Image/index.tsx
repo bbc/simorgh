@@ -102,7 +102,7 @@ const Image = ({
       )}
       <div
         className={className}
-        css={theme => [
+        className={ [
           styles.wrapper,
           hasFixedAspectRatio
             ? styles.wrapperFixedAspectRatio

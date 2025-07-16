@@ -239,7 +239,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
   };
 
   return (
-    <div css={styles.pageWrapper}>
+    <div className={styles.pageWrapper}>
       <ATIAnalytics atiData={atiData} />
       <ChartbeatAnalytics
         categoryName={pageData?.metadata?.passport?.category?.categoryName}
@@ -280,14 +280,14 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
         aboutTags={aboutTags}
         imageLocator={promoImage}
       />
-      <div css={styles.grid}>
+      <div className={styles.grid}>
         <div css={isCpsMap ? styles.fullWidthContainer : styles.primaryColumn}>
-          <main css={styles.mainContent} role="main">
+          <main className={styles.mainContent} role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
           {showTopics && (
             <RelatedTopics
-              css={styles.relatedTopics}
+              className={styles.relatedTopics}
               topics={topics}
               backgroundColour={GREY_2}
               tagBackgroundColour={WHITE}

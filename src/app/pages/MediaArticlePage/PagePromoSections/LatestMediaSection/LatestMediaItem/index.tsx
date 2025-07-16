@@ -16,16 +16,16 @@ const LatestMediaItem = forwardRef<HTMLDivElement, LatestMediaItemProp>(
     const src = item.imageUrl.replace('{width}', '240');
 
     return (
-      <div {...viewTracker} css={styles.promoWrapper}>
+      <div {...viewTracker} className={styles.promoWrapper}>
         <Promo
           to={item.link}
           ariaLabelledBy={ariaLabelledBy}
           mediaType={item.type}
           eventTrackingData={eventTrackingData}
           className="removeBackground"
-          css={styles.promoStyle}
+          className={styles.promoStyle}
         >
-          <div css={styles.imageWrapper}>
+          <div className={styles.imageWrapper}>
             <Promo.Image
               src={src}
               altText={item.imageAlt ?? 'Media image placeholder'}
@@ -34,10 +34,10 @@ const LatestMediaItem = forwardRef<HTMLDivElement, LatestMediaItemProp>(
             />
             <LatestMediaIndicator duration={item.duration} />
           </div>
-          <div css={styles.textWrapper}>
-            <Promo.Title as="h3" css={styles.promoTitle}>
+          <div className={styles.textWrapper}>
+            <Promo.Title as="h3" className={styles.promoTitle}>
               <Promo.Link
-                css={styles.promoLink}
+                className={styles.promoLink}
                 className="focusIndicatorInvert"
               >
                 <Promo.Content
@@ -48,7 +48,7 @@ const LatestMediaItem = forwardRef<HTMLDivElement, LatestMediaItemProp>(
                 />
               </Promo.Link>
             </Promo.Title>
-            <Promo.Timestamp css={styles.timeStamp}>
+            <Promo.Timestamp className={styles.timeStamp}>
               {timestamp}
             </Promo.Timestamp>
           </div>

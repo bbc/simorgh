@@ -10,7 +10,7 @@ const ButtonLikeWrapper = ({
   className,
 }: PropsWithChildren<ButtonLikeWrapperProps>) => {
   return (
-    <div className={styles.flexWrapper} className={className}>
+    <div className={[styles.flexWrapper, className].filter(Boolean).join(' ')}>
       {children}
     </div>
   );
