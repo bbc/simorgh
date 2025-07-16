@@ -1,8 +1,5 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
-import { use } from 'react';
+import React, { use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import styles from './styles';
 import fallbackTranslations from '../fallbackTranslations';
 
 const Submit = () => {
@@ -13,7 +10,7 @@ const Submit = () => {
   } = use(ServiceContext);
 
   return (
-    <button css={styles.submit} type="submit">
+    <button className="font-sansBold text-bodyCopy mt-8 bg-service-neutral-core text-white w-full border-none outline-1 outline-transparent py-6 px-0 cursor-pointer hover:underline hover:bg-service-neutral-dark focus:underline focus:bg-service-neutral-dark" type="submit">
       {submitButton}
     </button>
   );

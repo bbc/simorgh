@@ -1,10 +1,7 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+import React, { use } from 'react';
 import Text from '#app/components/Text';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import { use } from 'react';
 import { InputProps } from '../types';
-import styles from './styles';
 import fallbackTranslations from '../fallbackTranslations';
 
 type Props = {
@@ -31,9 +28,8 @@ export default ({
   return (
     <Text
       as="label"
-      className={className}
+      className={`${className} block font-sansBold text-bodyCopy mb-2 ${useErrorTheme ? 'text-error-core' : ''}`}
       htmlFor={forId}
-      css={[styles.fieldLabel, useErrorTheme && styles.fieldLabelError]}
       dangerouslySetInnerHTML={{
         __html: required ? labelText : `${labelText} (${optional})`,
       }}

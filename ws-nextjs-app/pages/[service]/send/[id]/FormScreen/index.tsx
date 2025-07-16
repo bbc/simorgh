@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import React, { useEffect, useRef, use } from 'react';
-import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import { LiveRegionContextProvider } from '#app/components/LiveRegion/LiveRegionContext';
 import LiveRegion from '#app/components/LiveRegion';
@@ -8,7 +6,6 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import { useFormContext } from '../FormContext';
 import { Field } from '../types';
 import FormField from '../FormField';
-import styles from './styles';
 import Submit from '../SubmitButton';
 import fallbackTranslations from '../fallbackTranslations';
 import ErrorSummaryBox from '../MessageBox/ErrorSummaryBox';
@@ -76,7 +73,7 @@ export default function FormScreen({
         level={1}
         id="content"
         tabIndex={-1}
-        css={styles.heading}
+        className="focus:outline-none"
         size="trafalgar"
       >
         {title}
@@ -85,7 +82,7 @@ export default function FormScreen({
         <div
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: description }}
-          css={styles.description}
+          className="border-b border-grey-5 mb-8 font-sansRegular text-bodyCopy group-2:pb-4 group-2:mb-12 [&_p]:text-black [&_a]:text-blue-600 [&_a]:underline [&_a]:font-sansBold [&_a:hover]:text-blue-800 [&_a:focus]:text-blue-800"
         />
       )}
       {sectionTitle && (
@@ -101,12 +98,12 @@ export default function FormScreen({
           {formFields}
 
           {privacyNotice && (
-            <div css={styles.privacyContainer}>
-              <strong css={styles.privacyHeading}>{dataPolicyHeading}</strong>
+            <div className="mt-8">
+              <strong className="text-black font-sansBold text-longPrimer">{dataPolicyHeading}</strong>
               <div
                 // eslint-disable-next-line react/no-danger
                 dangerouslySetInnerHTML={{ __html: privacyNotice }}
-                css={styles.privacyNotice}
+                className="font-sansRegular text-longPrimer [&_p]:text-black [&_a]:text-blue-600 [&_a]:underline [&_a:hover]:text-blue-800 [&_a:focus]:text-blue-800"
               />
             </div>
           )}

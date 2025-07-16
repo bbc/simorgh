@@ -1,13 +1,10 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
-import { ForwardedRef, forwardRef } from 'react';
+import React, { ForwardedRef, forwardRef } from 'react';
 import { WHITE } from '#app/components/ThemeProvider/palette';
 import { BulletedList, BulletedListItem } from '#app/components/BulletedList';
 import Text from '#app/components/Text';
 import useAndroidDetection from '#app/hooks/useAdroidDetection';
 import { useFormContext } from '../FormContext';
 import InvalidMessageBox from './InvalidMessageBox';
-import styles from './styles';
 import { InvalidMessageCodes } from '../types';
 
 export type ErrorSummaryProps = {
@@ -25,8 +22,7 @@ const ErrorLink = ({ id, labelText }: ListItemsProps) => {
   return (
     <a
       href={linkHref}
-      className="focusIndicatorReducedWidthInverted"
-      css={[styles.plainLabel, styles.linkHoverAndFocus]}
+      className="focusIndicatorReducedWidthInverted text-minion text-white inline-block py-1.5 px-0 hover:text-error-core hover:bg-white focus:text-error-core focus:bg-white focus-visible:bg-white"
     >
       {labelText}
     </a>
@@ -34,7 +30,7 @@ const ErrorLink = ({ id, labelText }: ListItemsProps) => {
 };
 
 const ErrorLabel = ({ labelText }: ListItemsProps) => {
-  return <Text css={styles.plainLabel}>{labelText}</Text>;
+  return <Text className="text-minion text-white inline-block py-1.5 px-0">{labelText}</Text>;
 };
 
 const ErrorSummaryBox = forwardRef(
@@ -54,7 +50,7 @@ const ErrorSummaryBox = forwardRef(
       if (isSingleError) return <Component id={id} labelText={labelText} />;
 
       return (
-        <BulletedListItem css={styles.listItem} key={`listItemFor-${id}`}>
+        <BulletedListItem className="mb-0" key={`listItemFor-${id}`}>
           <Component id={id} labelText={labelText} />
         </BulletedListItem>
       );
@@ -69,12 +65,12 @@ const ErrorSummaryBox = forwardRef(
         isErrorSummary
       >
         {isSingleError ? (
-          <Text css={styles.singleItem}>{errorListItems}</Text>
+          <Text className="inline-block mt-2">{errorListItems}</Text>
         ) : (
           <BulletedList
             bulletPointColour={WHITE}
             bulletPointShape="hidden"
-            css={styles.list}
+            className="mb-0 ps-0 mt-2"
           >
             {errorListItems}
           </BulletedList>
