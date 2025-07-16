@@ -1,18 +1,20 @@
-/** @jsx jsx */
-import { Global, jsx } from '@emotion/react';
+import React from 'react';
 import MediaLoader from '#app/components/MediaLoader';
 import { AvEmbedsPageProps } from './types';
-import styles from './styles';
 import AvEmbedsMetadata from './AvEmbedsMetadata';
 
 const AvEmbedsPageLayout = ({ pageData }: AvEmbedsPageProps) => (
   <>
-    <Global styles={styles.global} />
+    <style jsx global>{`
+      body {
+        margin: 0;
+      }
+    `}</style>
     <AvEmbedsMetadata pageData={pageData} />
     <div data-testid="avembeds-mediaplayer">
       <MediaLoader
         blocks={pageData?.mediaBlock}
-        css={styles.mediaPlayer}
+        className="pb-0"
         embedded
       />
     </div>

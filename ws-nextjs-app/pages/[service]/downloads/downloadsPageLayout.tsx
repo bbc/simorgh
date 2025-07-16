@@ -1,7 +1,4 @@
-/** @jsx jsx */
-
 import React, { use } from 'react';
-import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import ATIAnalytics from '#app/components/ATIAnalytics';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
@@ -9,7 +6,6 @@ import Metadata from '#app/components/Metadata';
 import CallToActionLink from '#app/components/CallToActionLink';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
-import styles from './styles';
 import { PageProps } from './types';
 
 const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
@@ -42,14 +38,14 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
         openGraphType="website"
         hasAmpPage={false}
       />
-      <div css={styles.grid}>
-        <div css={styles.primaryColumn}>
-          <main css={styles.mainContent}>
+      <div className="max-w-[63rem] mx-auto grid grid-cols-12 p-4 group-4:gap-x-4">
+        <div className="col-span-12 pb-8 group-4:col-span-12">
+          <main className="pb-12">
             <p>{instructions}</p>
             <Heading level={1}>{title}</Heading>
-            <ol css={styles.orderedList}>
+            <ol className="grid grid-cols-1 group-4:grid-cols-2 list-none p-0">
               {pageData.downloadData?.map(item => (
-                <li css={styles.listItem} key={item.fileCreated}>
+                <li className="border-b border-black pb-[0.9375rem] mb-2 mr-0 pr-[0.3125rem] [&_time]:text-greatPrimer [&_time]:mb-2 [&_svg]:mr-2 [&_a]:text-rhino [&_a:focus]:text-rhino" key={item.fileCreated}>
                   <TimeStampContainer
                     timestamp={item.fileCreated}
                     dateTimeFormat="DD MMMM YYYY"
@@ -63,7 +59,7 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
                     isRelative={false}
                   />
                   <CallToActionLink
-                    css={styles.cta}
+                    className="[&_div]:block"
                     url={item.files[0].fileLink}
                     download
                     eventTrackingData={{
