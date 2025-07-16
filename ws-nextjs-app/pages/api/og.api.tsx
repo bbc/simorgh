@@ -295,11 +295,15 @@ export default async function handler(req: NextApiRequest) {
     //   `#app/components/ThemeProvider/chameleonLogos/${service}`
     // ).then(module => module.default);
 
-    // const serviceConfig = await import(
-    //   `#app/lib/config/services/${service}`
-    // ).then(mod => mod.service);
+    const serviceConfig = await import(
+      `#app/lib/config/services/${service}`
+    ).then(mod => mod.service);
 
-    // const translations = serviceConfig[variant || 'default'];
+    const translations = serviceConfig[variant || 'default']?.translations;
+
+    const popularText = translations?.popularBadge || 'Popular';
+
+    const readTimeText = translations?.readTimeBadge || '{{time}} min read';
 
     const badges = [
       isInMostRead && (
@@ -317,7 +321,7 @@ export default async function handler(req: NextApiRequest) {
               />
             </svg>
           }
-          text="Popular"
+          text={popularText}
         />
       ),
       readTime && (
@@ -335,7 +339,7 @@ export default async function handler(req: NextApiRequest) {
               />
             </svg>
           }
-          text={`${readTime} min read`}
+          text={readTimeText.replace('{{time}}', readTime.toString())}
         />
       ),
     ].filter(Boolean);
