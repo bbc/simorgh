@@ -10,7 +10,6 @@ import addInlineScript, {
   InlineScriptProps,
 } from '#app/lib/utilities/addInlineScript';
 import usePWAInstallTracker from '#app/hooks/usePWAInstallTracker';
-import useNetworkConnectionTracker from '#app/hooks/useNetworkConnectionTracker';
 import { reverbUrlHelper } from '@bbc/reverb-url-helper';
 import { ATIAnalyticsProps } from '../types';
 import getNoScriptTrackingPixelUrl from './getNoScriptTrackingPixelUrl';
@@ -48,7 +47,6 @@ const CanonicalATIAnalytics = ({
   const { isLite } = use(RequestContext);
 
   usePWAInstallTracker();
-  useNetworkConnectionTracker();
 
   const atiPageViewUrlString =
     getEnvConfig().SIMORGH_ATI_BASE_URL + pageviewParams;
