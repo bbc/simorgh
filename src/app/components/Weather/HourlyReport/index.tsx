@@ -12,7 +12,7 @@ interface HourlyReportProps {
 
 const HourlyReport: FC<HourlyReportProps> = ({ report }) => {
   const iconEntry = weatherIconMap[report.weatherType];
-  const iconSrc = iconEntry ? iconEntry.dark.src : undefined;
+  const iconSrc = iconEntry ? iconEntry.dark?.src : undefined;
   const formatTime = (timeslot: string): string => {
     const hour = parseInt(timeslot, 10);
     return `${hour.toString().padStart(2, '0')}:00`;

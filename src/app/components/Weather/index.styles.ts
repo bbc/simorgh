@@ -62,7 +62,7 @@ const styles = {
       padding: spacings.DOUBLE,
     }),
 
-  daySummary: ({ fontSizes, fontVariants, palette, spacings }: Theme) =>
+  daySummary: ({ palette, spacings }: Theme) =>
     css({
       display: 'flex',
       flexWrap: 'wrap',
@@ -134,7 +134,7 @@ const styles = {
   temperature: ({ fontVariants, palette }: Theme) =>
     css({
       ...fontVariants.sansBold,
-      color: palette.BRAND_PRIMARY,
+      color: palette.GREY_10,
       fontSize: '1.1rem',
     }),
 
@@ -183,18 +183,18 @@ const styles = {
       borderRadius: '4px',
       ...fontVariants.sansRegular,
     }),
-  headerGroup: ({ spacings }) => ({
+  headerGroup: ({ spacings }: Theme) => ({
     display: 'flex',
     alignItems: 'center',
     gap: spacings.FULL,
   }),
-  headerDate: ({ fontVariants }) => ({
+  headerDate: ({ fontVariants }: Theme) => ({
     ...fontVariants.sansBold,
     fontSize: '1rem',
   }),
-  headerTemp: ({ fontVariants, palette }) => ({
+  headerTemp: ({ fontVariants, palette }: Theme) => ({
     ...fontVariants.sansBold,
-    color: palette.BRAND_PRIMARY,
+    color: palette.GREY_10,
     fontSize: '1rem',
     margin: '0 10px 0 0',
   }),

@@ -35,7 +35,7 @@ const DayForecast: FC<DayForecastProps> = ({
 
   // Icon from summary
   const iconEntry = summary ? weatherIconMap[summary.weatherType] : undefined;
-  const iconSrc = iconEntry ? iconEntry.light.src : undefined;
+  const iconSrc = iconEntry ? iconEntry.light?.src : undefined;
 
   const handleKeyDown = (event: React.KeyboardEvent) => {
     if (event.key === 'Enter' || event.key === ' ') {
