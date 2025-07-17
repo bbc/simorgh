@@ -1,4 +1,3 @@
-import React from 'react';
 
 import Billboard from '.';
 import { StoryArgs } from '../../models/types/storybook';

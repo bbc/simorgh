@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { PortraitVideoCarouselProps } from '#app/models/types/portraitVideo';
 import styles from './index.module.css';

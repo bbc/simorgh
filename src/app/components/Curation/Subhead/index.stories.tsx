@@ -1,4 +1,3 @@
-import React from 'react';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 
 import services from '../../../../server/utilities/serviceConfigs';

@@ -1,5 +1,4 @@
 import { FetchMock } from 'jest-fetch-mock';
-import React from 'react';
 import pashtoPageData from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import getInitialData from '#app/routes/onDemandTV/getInitialData';

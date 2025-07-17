@@ -1,4 +1,3 @@
-import React from 'react';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import { render, screen } from '../react-testing-library-with-providers';
 import CallToActionLink from '.';

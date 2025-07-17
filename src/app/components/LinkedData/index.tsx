@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import serialiseForScript from '#lib/utilities/serialiseForScript';

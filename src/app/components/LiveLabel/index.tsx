@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 import { LiveLabelProps } from './types';
 import styles from './index.module.css';
 import Text from '../LiveText';

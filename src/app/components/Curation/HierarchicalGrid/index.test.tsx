@@ -1,4 +1,3 @@
-import React from 'react';
 import { suppressPropWarnings } from '../../../legacy/psammead/psammead-test-helpers/src';
 import { render } from '../../react-testing-library-with-providers';
 import { pidginPromos as fixture } from './fixtures';

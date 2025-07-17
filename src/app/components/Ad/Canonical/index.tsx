@@ -1,4 +1,4 @@
-import React, { useEffect, use } from 'react';
+import { useEffect, use } from 'react';
 import { Helmet } from 'react-helmet';
 import pathOr from 'ramda/src/pathOr';
 import useLocation from '#hooks/useLocation';

@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import React from 'react';
 import { render } from '#app/components/react-testing-library-with-providers';
 import PlayButton from './index';
 

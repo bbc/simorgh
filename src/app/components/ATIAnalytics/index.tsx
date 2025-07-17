@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import CanonicalATIAnalytics from './canonical';

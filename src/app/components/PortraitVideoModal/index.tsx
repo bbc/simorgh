@@ -1,4 +1,4 @@
-import React, { use, useEffect, useRef } from 'react';
+import { use, useEffect, useRef } from 'react';
 import MediaLoader from '#app/components/MediaLoader';
 import {
   PortraitClipMediaBlock,

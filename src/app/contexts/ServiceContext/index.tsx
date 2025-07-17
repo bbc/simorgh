@@ -1,4 +1,4 @@
-import React, { createContext, PropsWithChildren } from 'react';
+import { createContext, PropsWithChildren } from 'react';
 import services from '../../lib/config/services/loadableConfig';
 import { getVariant } from '../../lib/utilities/variantHandler';
 import getLangOverride from '../../lib/utilities/langHandler';

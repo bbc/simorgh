@@ -1,4 +1,3 @@
-import React from 'react';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { PortraitVideoPromoProps } from '#app/models/types/portraitVideo';
 import fixture from '../../../../data/pidgin/topics/c95y35941vrt.json';

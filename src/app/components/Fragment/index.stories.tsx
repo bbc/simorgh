@@ -1,4 +1,3 @@
-import React from 'react';
 import FragementComponent from '.';
 
 const Component = ({ text, attr }: { text: string; attr?: string[] }) => (

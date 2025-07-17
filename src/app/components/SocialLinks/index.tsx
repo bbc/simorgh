@@ -1,4 +1,4 @@
-import React, { use, useId } from 'react';
+import { use, useId } from 'react';
 import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
 import { Summary } from '#app/models/types/curationData';
 import { RequestContext } from '#app/contexts/RequestContext';

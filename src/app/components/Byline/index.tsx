@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/aria-role */
 /** @jsxFrag */
-import React, { use, PropsWithChildren } from 'react';
+import { use, PropsWithChildren } from 'react';
 import { OptimoBylineBlock } from '#app/models/types/optimo';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import VisuallyHiddenText from '../VisuallyHiddenText';
-import BylineCss from './index.styles';
+import styles from './index.module.css';
 import { RightChevron, LeftChevron } from '../icons';
 import Text from '../Text';
 import Image from '../Image';

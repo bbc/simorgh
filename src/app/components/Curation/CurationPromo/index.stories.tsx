@@ -1,4 +1,3 @@
-import React from 'react';
 import fixture from '#data/pidgin/topics/c95y35941vrt.json';
 import { MEDIA_TYPES } from '#components/Promo';
 import Promo from '.';

@@ -1,4 +1,3 @@
-import React from 'react';
 
 import { FontVariant, GelFontSize } from '#app/models/types/theming';
 import Paragraph from '.';

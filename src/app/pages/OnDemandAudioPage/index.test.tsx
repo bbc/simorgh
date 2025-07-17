@@ -1,4 +1,3 @@
-import React from 'react';
 import gahuzaOnDemandAudioEpisode from '#data/gahuza/bbc_gahuza_radio/p0k1qjp9.json';
 import gahuzaPodcastPage from '#data/gahuza/bbc_gahuza_radio/p07yh8hb.json';
 import pashtoOnDemandAudio from '#data/pashto/bbc_pashto_radio/w3ct26m6.json';

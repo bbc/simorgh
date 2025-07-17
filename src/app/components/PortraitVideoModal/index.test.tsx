@@ -1,4 +1,3 @@
-import React from 'react';
 import Component, { playlistLoadedCallback, getBlocks } from '.';
 import {
   screen,
