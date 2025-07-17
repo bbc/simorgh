@@ -69,3 +69,22 @@ export interface WeatherComponentProps {
   datetimeLocale?: string;
   locale?: string;
 }
+
+export type WeatherIconMap = {
+  [key: number]: {
+    dark: {
+      src: string;
+      height: number;
+      width: number;
+      blurWidth: number;
+      blurHeight: number;
+    };
+    light: {
+      src: string;
+      height: number;
+      width: number;
+      blurWidth: number;
+      blurHeight: number;
+    };
+  };
+};

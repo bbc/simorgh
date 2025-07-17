@@ -68,12 +68,7 @@ import Icon31Light from './31-light.svg';
 import Icon32 from './32.svg';
 import Icon32Light from './32-light.svg';
 
-type WeatherIconMap = {
-  [key: number]: {
-    dark: string; // if using asset imports, else React.ComponentType
-    light: string;
-  };
-};
+import type { WeatherIconMap } from './types';
 
 export const weatherIconMap: WeatherIconMap = {
   0: { dark: Icon0, light: Icon0Light },
