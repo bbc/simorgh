@@ -2,6 +2,7 @@
   "name": "BBC News हिंदी",
   "short_name": "BBC हिंदी",
   "scope": "/hindi",
+  "prefer_related_applications": false,
   "background_color": "#b80000",
   "display": "standalone",
   "theme_color": "#b80000",
@@ -53,7 +54,6 @@
     }
   ],
   "splash_pages": null,
-  "prefer_related_applications": true,
   "related_applications": [
     {
       "platform": "play",

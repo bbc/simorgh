@@ -1,7 +1,8 @@
 {
   "name": "Naidheachdan a' BhBC",
   "short_name": "Naidheachdan a' BhBC",
-  "Scope": "/naidheachdan/",
+  "scope": "/naidheachdan/",
+  "prefer_related_applications": false,
   "background_color": "#b80000",
   "display": "standalone",
   "theme_color": "#b80000",
@@ -53,6 +54,5 @@
     }
   ],
   "splash_pages": null,
-  "start_url": "/naidheachdan",
-  "scope": "/naidheachdan"
+  "start_url": "/naidheachdan"
 }

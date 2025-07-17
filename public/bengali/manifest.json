@@ -2,6 +2,7 @@
   "name": "BBC News বাংলা",
   "short_name": "BBC বাংলা",
   "scope": "/bengali",
+  "prefer_related_applications": false,
   "background_color": "#b80000",
   "display": "standalone",
   "theme_color": "#b80000",

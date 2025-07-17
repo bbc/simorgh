@@ -2,6 +2,7 @@
   "name": "BBC News O'zbek",
   "short_name": "BBC O'zbek",
   "scope": "/uzbek",
+  "prefer_related_applications": false,
   "background_color": "#b80000",
   "display": "standalone",
   "theme_color": "#b80000",

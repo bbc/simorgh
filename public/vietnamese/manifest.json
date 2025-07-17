@@ -2,6 +2,7 @@
   "name": "BBC News Tiếng Việt",
   "short_name": "BBC Tiếng Việt",
   "scope": "/vietnamese",
+  "prefer_related_applications": false,
   "background_color": "#b80000",
   "display": "standalone",
   "theme_color": "#b80000",

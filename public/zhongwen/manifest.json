@@ -2,6 +2,7 @@
   "name": "BBC News 中文",
   "short_name": "BBC 中文",
   "scope": "/zhongwen",
+  "prefer_related_applications": false,
   "background_color": "#b80000",
   "display": "standalone",
   "theme_color": "#b80000",

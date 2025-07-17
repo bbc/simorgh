@@ -2,6 +2,7 @@
   "name": "BBC News اردو",
   "short_name": "BBC اردو",
   "scope": "/urdu",
+  "prefer_related_applications": false,
   "background_color": "#b80000",
   "display": "standalone",
   "theme_color": "#b80000",

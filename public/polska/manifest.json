@@ -1,7 +1,8 @@
 {
   "name": "BBC News Polska",
   "short_name": "BBC Polska",
-  "Scope": "/polska",
+  "scope": "/polska",
+  "prefer_related_applications": false,
   "background_color": "#b80000",
   "display": "standalone",
   "theme_color": "#b80000",
@@ -68,6 +69,5 @@
       ]
     }
   ],
-  "scope": "/polska",
   "id": "/polska"
 }

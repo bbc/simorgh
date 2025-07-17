@@ -2,6 +2,7 @@
   "name": "BBC News తెలుగు",
   "short_name": "BBC తెలుగు",
   "scope": "/telugu",
+  "prefer_related_applications": false,
   "background_color": "#b80000",
   "display": "standalone",
   "theme_color": "#b80000",
