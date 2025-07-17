@@ -28,7 +28,7 @@ const Badge = ({ icon, text, backgroundColor = GREY_8 }: BadgeProps) => (
       }}
     >
       <span style={{ marginRight: 10 }}>{icon}</span>
-      <span>{text}</span>
+      <span style={{ textTransform: 'uppercase' }}>{text}</span>
     </div>
   </div>
 );

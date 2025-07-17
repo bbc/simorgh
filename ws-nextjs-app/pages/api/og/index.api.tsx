@@ -87,6 +87,8 @@ export default async function handler(req: NextApiRequest) {
 
     const { translations } = serviceConfig[variant || 'default'];
 
+    const breakingText = translations?.breakingBadge || 'Breaking';
+
     const popularText = translations?.popularBadge || 'Popular';
 
     const readTimeText = translations?.readTimeBadge || '{{time}} min read';
@@ -104,7 +106,7 @@ export default async function handler(req: NextApiRequest) {
               />
             </svg>
           }
-          text="Breaking"
+          text={breakingText}
           backgroundColor={POSTBOX}
         />
       ),
@@ -114,12 +116,13 @@ export default async function handler(req: NextApiRequest) {
             <svg viewBox="0 0 32 32" width="24" height="24">
               <path
                 d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
-                style={{ fill: LIVE_CORE }}
+                style={{ fill: WHITE }}
               />
-              <circle cx="16" cy="16" r="8.5" style={{ fill: LIVE_CORE }} />
+              <circle cx="16" cy="16" r="8.5" style={{ fill: WHITE }} />
             </svg>
           }
           text={liveText}
+          backgroundColor={LIVE_CORE}
         />
       ),
       IS_POPULAR && (
