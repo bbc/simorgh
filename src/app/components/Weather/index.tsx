@@ -17,7 +17,6 @@ const Weather: FC<WeatherComponentProps> = ({
   locationId: initialLocationId = '2653822',
   className,
   datetimeLocale,
-  locale,
 }) => {
   const [locationId, setLocationId] = useState<string>(initialLocationId);
   const [locationName, setLocationName] = useState<string>('');
