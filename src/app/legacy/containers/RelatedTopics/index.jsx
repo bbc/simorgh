@@ -2,12 +2,6 @@ import React, { use } from 'react';
 import { TopicTag, TopicTags } from '#psammead/psammead-topic-tags/src';
 import pathOr from 'ramda/src/pathOr';
 import SectionLabel from '#psammead/psammead-section-label/src';
-import styled from '@emotion/styled';
-import { GEL_SPACING_QUIN } from '#psammead/gel-foundations/src/spacings';
-import {
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MAX,
-} from '#psammead/gel-foundations/src/breakpoints';
 import { RequestContext } from '#app/contexts/RequestContext';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import useViewTracker from '#hooks/useViewTracker';
@@ -16,18 +10,6 @@ import { ServiceContext } from '../../../contexts/ServiceContext';
 const eventTrackingData = {
   componentName: 'topics',
 };
-
-const StyledTopicsWrapper = styled.aside`
-  padding-bottom: ${GEL_SPACING_QUIN};
-`;
-
-const StyledSectionLabel = styled(SectionLabel)`
-  margin-top: 0;
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    margin-bottom: 1rem;
-  }
-`;
 
 const RelatedTopics = ({
   topics,
@@ -61,13 +43,14 @@ const RelatedTopics = ({
 
   return (
     shouldDisplayTopics && (
-      <StyledTopicsWrapper
+      <aside
+        className={`pb-quin ${className || ''}`}
         data-testid="related-topics"
         aria-labelledby="related-topics"
         role="complementary"
-        {...(className ? { className } : undefined)}
       >
-        <StyledSectionLabel
+        <SectionLabel
+          className="mt-0 group-3:mb-full"
           bar={bar}
           script={script}
           service={service}
@@ -77,7 +60,7 @@ const RelatedTopics = ({
           {...(backgroundColour && { backgroundColor: backgroundColour })}
         >
           {heading}
-        </StyledSectionLabel>
+        </SectionLabel>
         <TopicTags
           service={service}
           script={script}
@@ -103,7 +86,7 @@ const RelatedTopics = ({
             ))
           )}
         </TopicTags>
-      </StyledTopicsWrapper>
+      </aside>
     )
   );
 };

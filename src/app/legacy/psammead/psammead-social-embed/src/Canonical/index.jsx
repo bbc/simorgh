@@ -1,6 +1,5 @@
 /* eslint-disable no-console */
 import React, { memo, use, useEffect } from 'react';
-import styled from '@emotion/styled';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import useScript from './useScript';
@@ -8,16 +7,6 @@ import useScript from './useScript';
 const LANDSCAPE_RATIO = '56.25%';
 const PRE_RENDER_MARGIN = '10rem';
 const PRE_RENDER_PADDING = '5rem';
-
-/**
- * Apply provider-specific styles.
- */
-const OEmbed = styled.div`
-  ${({ styles }) => styles}
-  display: flex;
-  justify-content: center;
-  ${({ isLive }) => (isLive ? 'flex-wrap: wrap;' : '')}
-`;
 
 const getOnRenderError = providerName =>
   `onRender callback function not implemented for ${providerName}`;
@@ -170,9 +159,8 @@ const CanonicalEmbed = ({ provider, oEmbed, onRender = null }) => {
   }, [hasLoadedLibrary]);
 
   return (
-    <OEmbed
-      styles={styles}
-      isLive={isLive}
+    <div
+      className={`flex justify-center ${isLive ? 'flex-wrap' : ''}`}
       dangerouslySetInnerHTML={{ __html: oEmbed.html }}
     />
   );

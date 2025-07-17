@@ -1,6 +1,3 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import { jsx } from '@emotion/react';
 import React, { use } from 'react';
 import { Helmet } from 'react-helmet';
 import pathOr from 'ramda/src/pathOr';
@@ -14,7 +11,6 @@ import { ServiceContext } from '../../../contexts/ServiceContext';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import AdSlot from './AdSlot';
 import { Direction, PageTypes, Services } from '../../../models/types/global';
-import styles from './index.styles';
 import adStyles from '../utilities/adSlot.styles';
 import { AdProps, SLOT_TYPES, SlotType } from '../types';
 
@@ -59,7 +55,7 @@ const AdContent = ({
   return (
     <>
       <a
-        css={[styles.link, { textAlign: dir === 'ltr' ? 'right' : 'left' }]}
+        className={`block p-full uppercase text-minion font-sans-regular text-rhino no-underline ${dir === 'ltr' ? 'text-right' : 'text-left'} hover:underline`}
         dir={dir}
         href={LABEL_LINK}
         tabIndex={-1}
@@ -81,25 +77,25 @@ const AdWithoutPlaceholder = ({
 }: AdContentProps) => {
   return (
     <div
-      css={styles.display}
+      className="amp-geo-pending:hidden amp-geo-pending:invisible amp-geo-group-gbOrUnknown:hidden amp-geo-group-gbOrUnknown:invisible"
       amp-access="toggles.ads.enabled"
       amp-access-hide="true"
     >
       <section
-        css={styles.section}
+        className="bg-grey-3"
         aria-label={ariaLabel}
         role="region"
         data-e2e="advertisement"
         aria-hidden="true"
       >
         <div
-          css={
+          className={
             slotType === SLOT_TYPES.MPU
               ? adStyles.ampMpu
               : adStyles.ampLeaderboard
           }
         >
-          <div css={styles.wrapper}>
+          <div className="mx-auto text-center">
             <AdContent
               dir={dir}
               label={label}
@@ -124,22 +120,22 @@ const AdWithPlaceholder = ({
 }: AdContentProps) => {
   return (
     <section
-      css={styles.section}
+      className="bg-grey-3"
       aria-label={ariaLabel}
       role="region"
       data-e2e="advertisement"
       aria-hidden="true"
     >
       <div
-        css={
+        className={
           slotType === SLOT_TYPES.MPU
             ? adStyles.ampMpu
             : adStyles.ampLeaderboard
         }
       >
-        <div css={styles.wrapper}>
+        <div className="mx-auto text-center">
           <div
-            css={styles.display}
+            className="amp-geo-pending:hidden amp-geo-pending:invisible amp-geo-group-gbOrUnknown:hidden amp-geo-group-gbOrUnknown:invisible"
             amp-access="toggles.ads.enabled"
             amp-access-hide="true"
           >

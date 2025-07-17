@@ -1,120 +1,67 @@
 import React, { cloneElement, useRef } from 'react';
-import styled from '@emotion/styled';
 import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
-import {
-  GEL_SPACING_HLF,
-  GEL_SPACING,
-  GEL_SPACING_HLF_TRPL,
-} from '#psammead/gel-foundations/src/spacings';
 import { Helmet } from 'react-helmet';
-import {
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_B_MIN_WIDTH,
-} from '#psammead/gel-foundations/src/breakpoints';
-import { getPica } from '#psammead/gel-foundations/src/typography';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import VisuallyHiddenText from '../../../../../components/VisuallyHiddenText';
 
 export const NAV_BAR_TOP_BOTTOM_SPACING = 0.75; // 12px
 
-const getStyles = (dir, theme) => {
-  const direction = dir === 'ltr' ? 'left' : 'right';
-  return `border-${direction}: ${GEL_SPACING_HLF} solid ${theme.palette.POSTBOX};
-          padding-${direction}: ${GEL_SPACING};`;
-};
+const AmpHead = () => (
+  <Helmet>
+    <script
+      async
+      custom-element="amp-bind"
+      src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    />
+  </Helmet>
+);
 
-const StyledDropdown = styled.div`
-  background-color: ${props => props.theme.palette.WHITE};
-  clear: both;
-  overflow: hidden;
+const expandedHandler =
+  'AMP.setState({ menuState: { expanded: !menuState.expanded }})';
 
-  height: 0;
-  transition: all 0.2s ease-out;
-  transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
-
-  ${({ height, isOpen }) =>
-    isOpen
-      ? `visibility: visible; height: ${height}px;`
-      : `visibility: hidden;`}
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    display: none;
-    visibility: hidden;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    transition: none;
-  }
-`;
+const initialState = { expanded: false };
 
 export const CanonicalDropdown = ({ isOpen, children }) => {
   const heightRef = useRef(null);
+  const height = heightRef.current ? heightRef.current.scrollHeight : 0;
 
   return (
-    <StyledDropdown
+    <div
+      className={`
+        bg-white clear-both overflow-hidden transition-all duration-200 ease-out
+        ${isOpen ? 'visible' : 'invisible h-0'}
+        group-3:hidden group-3:invisible
+        motion-reduce:transition-none
+      `}
+      style={{
+        height: isOpen ? `${height}px` : '0px',
+        transitionTimingFunction: 'cubic-bezier(0, 0, 0.58, 1)',
+      }}
       data-e2e="dropdown-nav"
       ref={heightRef}
-      height={heightRef.current ? heightRef.current.scrollHeight : 0}
-      isOpen={isOpen}
     >
       {children}
-    </StyledDropdown>
+    </div>
   );
 };
 
-export const AmpDropdown = styled.div`
-  background-color: ${props => props.theme.palette.WHITE};
-  clear: both;
+export const AmpDropdown = ({ children, ...props }) => (
+  <div
+    className="bg-white clear-both group-3:hidden group-3:invisible"
+    {...props}
+  >
+    {children}
+  </div>
+);
 
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    display: none;
-    visibility: hidden;
-  }
-`;
-
-export const DropdownUl = styled.ul`
-  list-style-type: none;
-  margin: 0;
-  padding: 0 ${GEL_SPACING};
-  border-bottom: 0.0625rem solid ${props => props.theme.palette.GREY_3};
-`;
-
-DropdownUl.defaultProps = {
-  role: 'list',
-};
-
-const StyledDropdownLi = styled.li`
-  padding: 0.75rem 0;
-  border-bottom: 0.0625rem solid ${props => props.theme.palette.GREY_3};
-
-  &:last-child {
-    padding-bottom: ${GEL_SPACING_HLF};
-    border: 0;
-  }
-`;
-
-const StyledDropdownLink = styled.a`
-  ${({ script }) => script && getPica(script)};
-  ${({ service }) => service && getSansRegular(service)}
-  color: ${props => props.theme.palette.GREY_10};
-  text-decoration: none;
-  padding: ${GEL_SPACING_HLF_TRPL} 0;
-  display: inline-block;
-
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-    text-decoration-color: ${props => props.theme.palette.POSTBOX};
-  }
-`;
-
-const StyledCurrentLink = styled.span`
-  ${({ dir, theme }) => getStyles(dir, theme)}
-`;
-
-StyledCurrentLink.defaultProps = {
-  role: 'text',
-};
+export const DropdownUl = ({ children, ...props }) => (
+  <ul
+    className="list-none m-0 px-full border-b border-grey-3"
+    role="list"
+    {...props}
+  >
+    {children}
+  </ul>
+);
 
 export const DropdownLi = ({
   children,
@@ -132,84 +79,35 @@ export const DropdownLi = ({
     .toLowerCase()}`;
   return (
     // aria-labelledby is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
-    <StyledDropdownLi role="listitem" {...viewTracker}>
-      <StyledDropdownLink
-        script={script}
-        service={service}
+    <li
+      className="py-3 border-b border-grey-3 last:pb-half last:border-0"
+      role="listitem"
+      {...viewTracker}
+    >
+      <a
+        className="text-pica font-sans-regular text-grey-10 no-underline py-half-trpl inline-block hover:underline hover:decoration-postbox focus:underline focus:decoration-postbox"
         href={url}
         aria-labelledby={ariaId}
         {...clickTracker}
       >
         {active && currentPageText ? (
           // ID is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
-          <StyledCurrentLink dir={dir} id={ariaId}>
+          <span 
+            className={`${dir === 'ltr' ? 'border-l-half border-postbox pl-full' : 'border-r-half border-postbox pr-full'}`}
+            id={ariaId}
+            role="text"
+          >
             <VisuallyHiddenText>{`${currentPageText}, `}</VisuallyHiddenText>
             {children}
-          </StyledCurrentLink>
+          </span>
         ) : (
           // ID is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
           <span id={ariaId}>{children}</span>
         )}
-      </StyledDropdownLink>
-    </StyledDropdownLi>
+      </a>
+    </li>
   );
 };
-
-const iconBorderPosition = `
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-`;
-
-// The sideLength of the button should be
-//  line height + top padding + bottom padding
-const calculateButtonSide = lineHeight =>
-  lineHeight / 16 + NAV_BAR_TOP_BOTTOM_SPACING * 2;
-
-const getButtonDimensions = lineHeight =>
-  `height: ${calculateButtonSide(lineHeight)}rem;
-  width: ${calculateButtonSide(lineHeight)}rem;`;
-
-const Button = ({ script, ...props }) => <button type="button" {...props} />;
-
-const MenuButton = styled(Button)`
-  position: relative;
-  padding: 0;
-  margin: 0;
-  background-color: transparent;
-  border: 0;
-
-  ${({ dir }) => (dir === 'ltr' ? `float: left;` : `float: right;`)}
-  ${({ script }) =>
-    script && getButtonDimensions(script.pica.groupA.lineHeight)}
-
-  &:hover,
-  &:focus {
-    cursor: pointer;
-    box-shadow: inset 0 0 0 ${GEL_SPACING_HLF}
-      ${props => props.theme.palette.WHITE};
-    ::after {
-      ${iconBorderPosition};
-      border: ${GEL_SPACING_HLF} solid ${props => props.theme.palette.BLACK};
-    }
-  }
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    display: none;
-    visibility: hidden;
-  }
-  @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
-    ${({ script }) =>
-      script && getButtonDimensions(script.pica.groupB.lineHeight)}
-  }
-
-  & svg {
-    vertical-align: middle;
-  }
-`;
 
 export const CanonicalMenuButton = ({
   announcedText,
@@ -218,32 +116,27 @@ export const CanonicalMenuButton = ({
   dir = 'ltr',
   script,
 }) => (
-  <MenuButton
+  <button
+    className={`
+      relative p-0 m-0 bg-transparent border-0 cursor-pointer
+      ${dir === 'ltr' ? 'float-left' : 'float-right'}
+      h-12 w-12 focusIndicatorRemove
+      group-3:hidden group-3:invisible
+      hover:shadow-[inset_0_0_0_0.5rem_white]
+      focus:shadow-[inset_0_0_0_0.5rem_white]
+      hover:after:content-[''] hover:after:absolute hover:after:inset-0 hover:after:border-half hover:after:border-black
+      focus:after:content-[''] focus:after:absolute focus:after:inset-0 focus:after:border-half focus:after:border-black
+    `}
     onClick={onClick}
     aria-expanded={isOpen ? 'true' : 'false'}
-    dir={dir}
-    script={script}
-    className="focusIndicatorRemove"
+    type="button"
   >
-    {isOpen ? navigationIcons.cross : navigationIcons.hamburger}
+    <span className="align-middle">
+      {isOpen ? navigationIcons.cross : navigationIcons.hamburger}
+    </span>
     <VisuallyHiddenText>{announcedText}</VisuallyHiddenText>
-  </MenuButton>
+  </button>
 );
-
-const AmpHead = () => (
-  <Helmet>
-    <script
-      async
-      custom-element="amp-bind"
-      src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
-    />
-  </Helmet>
-);
-
-const expandedHandler =
-  'AMP.setState({ menuState: { expanded: !menuState.expanded }})';
-
-const initialState = { expanded: false };
 
 export const AmpMenuButton = ({
   announcedText,
@@ -260,22 +153,32 @@ export const AmpMenuButton = ({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(initialState) }}
       />
     </amp-state>
-    <MenuButton
+    <button
+      className={`
+        relative p-0 m-0 bg-transparent border-0 cursor-pointer
+        ${dir === 'ltr' ? 'float-left' : 'float-right'}
+        h-12 w-12 focusIndicatorRemove
+        group-3:hidden group-3:invisible
+        hover:shadow-[inset_0_0_0_0.5rem_white]
+        focus:shadow-[inset_0_0_0_0.5rem_white]
+        hover:after:content-[''] hover:after:absolute hover:after:inset-0 hover:after:border-half hover:after:border-black
+        focus:after:content-[''] focus:after:absolute focus:after:inset-0 focus:after:border-half focus:after:border-black
+      `}
       aria-expanded="false"
       data-amp-bind-aria-expanded='menuState.expanded ? "true" : "false"'
       on={`tap:${expandedHandler},${onToggle}`}
-      dir={dir}
-      script={script}
-      className="focusIndicatorRemove"
+      type="button"
     >
-      {cloneElement(navigationIcons.hamburger, {
-        'data-amp-bind-hidden': 'menuState.expanded',
-      })}
-      {cloneElement(navigationIcons.cross, {
-        hidden: true,
-        'data-amp-bind-hidden': '!menuState.expanded',
-      })}
+      <span className="align-middle">
+        {cloneElement(navigationIcons.hamburger, {
+          'data-amp-bind-hidden': 'menuState.expanded',
+        })}
+        {cloneElement(navigationIcons.cross, {
+          hidden: true,
+          'data-amp-bind-hidden': '!menuState.expanded',
+        })}
+      </span>
       <VisuallyHiddenText>{announcedText}</VisuallyHiddenText>
-    </MenuButton>
+    </button>
   </>
 );

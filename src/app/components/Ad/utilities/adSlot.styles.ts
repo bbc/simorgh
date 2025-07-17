@@ -1,5 +1,3 @@
-import { css, Theme } from '@emotion/react';
-
 /** Ad Slot Widths (for custom breakpoints)
  *
  * These have an extra 16px (1rem) variant added in order to account for the padding on both the left and
@@ -9,13 +7,9 @@ import { css, Theme } from '@emotion/react';
  * Further details can be found here: https://github.com/bbc/simorgh/pull/7480#discussion_r471376726
  */
 const MPU_WIDTH_MIN = '18.75rem'; // 300px
-
 const MPU_WIDTH_MIN_PADDING = '19.75rem'; // 316px
-
 const LEADERBOARD_WIDTH_MIN = '20rem'; // 320px
-
 const LEADERBOARD_WIDTH_MIN_PADDING = '21rem'; // 336px
-
 const LARGE_LEADERBOARD_WIDTH_MIN = '58.75rem'; // 940px
 
 /** Ad Slot Heights
@@ -53,82 +47,10 @@ const LEADERBOARD_HEIGHTS = {
  */
 
 const styles = {
-  leaderboard: ({ mq, spacings }: Theme) =>
-    css({
-      display: 'none',
-      visibility: 'hidden',
-      [`@media (min-width: ${LEADERBOARD_WIDTH_MIN})`]: {
-        minHeight: LEADERBOARD_HEIGHTS.GROUP_1,
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        visibility: 'visible',
-      },
-      [`@media (min-width: ${LEADERBOARD_WIDTH_MIN_PADDING})`]: {
-        padding: `${spacings.DOUBLE}rem 0`,
-      },
-      [mq.GROUP_2_MIN_WIDTH]: {
-        minHeight: LEADERBOARD_HEIGHTS.GROUP_2,
-      },
-      [mq.GROUP_3_MIN_WIDTH]: {
-        minHeight: LEADERBOARD_HEIGHTS.GROUP_3,
-        padding: `${spacings.QUADRUPLE}rem 0`,
-      },
-      [`@media (min-width: ${LARGE_LEADERBOARD_WIDTH_MIN})`]: {
-        minHeight: LEADERBOARD_HEIGHTS.LARGE,
-        padding: `${spacings.TRIPLE}rem 0`,
-      },
-    }),
-  ampLeaderboard: ({ mq, spacings }: Theme) =>
-    css({
-      display: 'none',
-      visibility: 'hidden',
-      [`@media (min-width: ${LEADERBOARD_WIDTH_MIN})`]: {
-        minHeight: LEADERBOARD_HEIGHTS.GROUP_1,
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        visibility: 'visible',
-        padding: `${spacings.DOUBLE}rem 0`,
-      },
-      [mq.GROUP_4_MIN_WIDTH]: {
-        minHeight: LEADERBOARD_HEIGHTS.LARGE,
-        padding: `${spacings.TRIPLE}rem 0`,
-      },
-    }),
-  mpu: ({ mq, spacings }: Theme) =>
-    css({
-      display: 'none',
-      visibility: 'hidden',
-      padding: 0,
-      [`@media (min-width: ${MPU_WIDTH_MIN})`]: {
-        minHeight: MPU_HEIGHTS.GROUP_1,
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        visibility: 'visible',
-      },
-      [`@media (min-width: ${MPU_WIDTH_MIN_PADDING})`]: {
-        padding: `${spacings.DOUBLE}rem 0 ${spacings.FULL}rem 0`,
-      },
-      [mq.GROUP_3_MIN_WIDTH]: {
-        minHeight: MPU_HEIGHTS.GROUP_3,
-      },
-    }),
-  ampMpu: ({ spacings }: Theme) =>
-    css({
-      display: 'none',
-      visibility: 'hidden',
-      padding: 0,
-      [`@media (min-width: ${MPU_WIDTH_MIN})`]: {
-        minHeight: MPU_HEIGHTS.GROUP_3,
-        padding: `${spacings.DOUBLE}rem 0 ${spacings.FULL}rem 0`,
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        visibility: 'visible',
-      },
-    }),
+  leaderboard: 'hidden invisible min-[20rem]:min-h-[5.0625rem] min-[20rem]:flex min-[20rem]:flex-col min-[20rem]:justify-center min-[20rem]:visible min-[21rem]:py-double group-2:min-h-[5.75rem] group-3:min-h-[7.625rem] group-3:py-quadruple min-[58.75rem]:min-h-[18.625rem] min-[58.75rem]:py-triple',
+  ampLeaderboard: 'hidden invisible min-[20rem]:min-h-[5.0625rem] min-[20rem]:flex min-[20rem]:flex-col min-[20rem]:justify-center min-[20rem]:visible min-[20rem]:py-double group-4:min-h-[18.625rem] group-4:py-triple',
+  mpu: 'hidden invisible p-0 min-[18.75rem]:min-h-[5.0625rem] min-[18.75rem]:flex min-[18.75rem]:flex-col min-[18.75rem]:justify-center min-[18.75rem]:visible min-[19.75rem]:pt-double min-[19.75rem]:pb-full group-3:min-h-[17.625rem]',
+  ampMpu: 'hidden invisible p-0 min-[18.75rem]:min-h-[17.625rem] min-[18.75rem]:pt-double min-[18.75rem]:pb-full min-[18.75rem]:flex min-[18.75rem]:flex-col min-[18.75rem]:justify-center min-[18.75rem]:visible',
 };
 
 export default styles;

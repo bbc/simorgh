@@ -1,5 +1,4 @@
-import styled from '@emotion/styled';
-import { GEL_SPACING_TRPL } from '#psammead/gel-foundations/src/spacings';
+import React from 'react';
 
 /**
  * MAX_WIDTH        Ensures all embeds assume the same width. (Tweets max-out
@@ -15,23 +14,26 @@ const getWrapperHeightStyles = oEmbed => {
   const MIN_HEIGHT = '14rem';
 
   if (oEmbed?.height && oEmbed?.height !== '100%') {
-    return `min-height: ${oEmbed.height / 16}rem`;
+    return `min-h-[${oEmbed.height / 16}rem]`;
   }
 
   if (oEmbed) {
-    return `min-height: ${MIN_HEIGHT};`;
+    return `min-h-[${MIN_HEIGHT}]`;
   }
   return '';
 };
 
-const Wrapper = styled.div`
-  margin-bottom: ${GEL_SPACING_TRPL};
-  max-width: ${MAX_WIDTH};
-  ${({ oEmbed }) => getWrapperHeightStyles(oEmbed)}
-
-  .no-js & {
-    min-height: 0;
-  }
-`;
+const Wrapper = ({ oEmbed, children, ...props }) => {
+  const heightClass = getWrapperHeightStyles(oEmbed);
+  
+  return (
+    <div
+      className={`mb-triple max-w-[${MAX_WIDTH}] ${heightClass} no-js:min-h-0`}
+      {...props}
+    >
+      {children}
+    </div>
+  );
+};
 
 export default Wrapper;
