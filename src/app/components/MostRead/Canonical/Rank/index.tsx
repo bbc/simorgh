@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+import React from 'react';
 import {
   Burmese,
   Bengali,
@@ -9,11 +8,6 @@ import {
 } from '../../../../legacy/psammead/psammead-locales/src/numerals';
 import { Services } from '../../../../models/types/global';
 import { ColumnLayout, MostReadRankProps, Size } from '../../types';
-import styles, {
-  getOneColumnCss,
-  getTwoColumnCss,
-  getMultiColumnCss,
-} from './index.styles';
 
 export const serviceNumerals = (service: Services) => {
   const servicesNonWesternNumerals = {
@@ -35,28 +29,32 @@ interface ColumnCssProps {
   columnLayout: ColumnLayout;
 }
 
-const getColumnCss = ({
+const getColumnClasses = ({
   columnLayout,
   numberOfItems,
   service,
   size,
   listIndex,
-}: ColumnCssProps) =>
-  ({
-    oneColumn: getOneColumnCss({ numberOfItems, service, size }),
-    twoColumn: getTwoColumnCss({
-      listIndex,
-      numberOfItems,
-      service,
-      size,
-    }),
-    multiColumn: getMultiColumnCss({
-      listIndex,
-      numberOfItems,
-      service,
-      size,
-    }),
-  })[columnLayout];
+}: ColumnCssProps) => {
+  // Base classes for most read rank
+  let classes = '';
+  
+  // Add responsive minimum width classes based on column layout
+  if (columnLayout === 'oneColumn') {
+    classes += 'min-w-[2.5rem] group-0:min-w-[2.75rem] group-1:min-w-[2.75rem] group-2:min-w-[3rem] group-3:min-w-[3rem] ';
+  } else if (columnLayout === 'twoColumn') {
+    classes += 'min-w-[2.5rem] group-0:min-w-[2.75rem] group-1:min-w-[2.75rem] group-2:min-w-[3rem] group-3:min-w-[3.25rem] ';
+  } else {
+    classes += 'min-w-[2.5rem] group-0:min-w-[2.75rem] group-1:min-w-[2.75rem] group-2:min-w-[3rem] group-3:min-w-[3.25rem] group-5:min-w-[3.5rem] ';
+  }
+  
+  // Handle double digit adjustments
+  if (numberOfItems > 9) {
+    classes += 'group-0:min-w-[3.25rem] group-1:min-w-[3.25rem] group-2:min-w-[3.5rem] group-3:min-w-[3.5rem] ';
+  }
+  
+  return classes;
+};
 
 const MostReadRank = ({
   service,
@@ -69,7 +67,7 @@ const MostReadRank = ({
 }: MostReadRankProps) => {
   const numerals = serviceNumerals(service);
   const rank = isAmp ? listIndex : numerals[listIndex];
-  const columnCss = getColumnCss({
+  const columnClasses = getColumnClasses({
     columnLayout,
     numberOfItems,
     service,
@@ -78,13 +76,9 @@ const MostReadRank = ({
   });
 
   return (
-    <div css={columnCss} dir={dir}>
+    <div className={columnClasses} dir={dir}>
       <span
-        css={[
-          styles.span,
-          size === 'small' ? styles.smallFont : styles.defaultFont,
-          service === 'japanese' && styles.japaneseLetterSpacing,
-        ]}
+        className={`font-serif-light relative text-postbox m-0 p-0 ${size === 'small' ? 'text-trafalgar' : 'text-foolscap'} ${service === 'japanese' ? 'tracking-[-0.5rem]' : ''}`}
       >
         {rank}
       </span>

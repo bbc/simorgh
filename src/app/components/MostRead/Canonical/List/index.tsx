@@ -1,9 +1,7 @@
-/** @jsx jsx */
 import { PropsWithChildren, use } from 'react';
-import { jsx } from '@emotion/react';
+import React from 'react';
 import Grid from '../../../../legacy/psammead/psammead-grid/src';
 import { mostReadListGridProps } from '../../utilities/gridProps';
-import * as styles from './index.styles';
 import { MostReadBaseProps } from '../../types';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 
@@ -17,15 +15,24 @@ const MostReadList = ({
   const columnLayout =
     service === 'burmese' ? 'oneColumn' : initialColumnLayout;
 
+  const getColumnClasses = () => {
+    let classes = 'list-none m-0 p-0 grid-flow-col ';
+    classes += `grid-rows-[repeat(${numberOfItems},auto)] `;
+    
+    if (columnLayout === 'multiColumn') {
+      classes += `group-3:grid-rows-[repeat(${Math.ceil(numberOfItems / 2)},auto)] `;
+      classes += 'group-5:grid-flow-row ';
+    } else if (columnLayout === 'twoColumn') {
+      classes += `group-3:grid-rows-[repeat(${Math.ceil(numberOfItems / 2)},auto)] `;
+    }
+    
+    return classes;
+  };
+
   return (
     // @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags
     <Grid
-      css={[
-        styles[columnLayout],
-        styles.gridTemplateRows(numberOfItems),
-        columnLayout !== 'oneColumn' &&
-          styles.multiColumnGridTemplateRows(numberOfItems),
-      ]}
+      className={getColumnClasses()}
       {...mostReadListGridProps(columnLayout)}
       dir={dir}
       numberOfItems={numberOfItems}
