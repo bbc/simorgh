@@ -13,8 +13,6 @@ import {
   saveLocationToStorage,
 } from './useLocationStorage';
 
-const WEATHER_API_KEY = 'your-api-key-here'; // Put your real API key here
-
 const Weather: FC<WeatherComponentProps> = ({
   locationId: initialLocationId = '2653822',
   className,
@@ -162,7 +160,6 @@ const Weather: FC<WeatherComponentProps> = ({
               forecast={forecast}
               expanded={!!expandedDays[date]}
               datetimeLocale={datetimeLocale}
-              locale={locale}
               onToggle={() => handleToggleDay(date)}
             />
           );

@@ -18,16 +18,6 @@ const HourlyReport: FC<HourlyReportProps> = ({ report }) => {
     return `${hour.toString().padStart(2, '0')}:00`;
   };
 
-  // Dynamically import SVGs by weatherType
-  // This assumes Webpack or Next.js static import
-  // If you use require.context or similar, adapt accordingly
-  let Icon = null;
-  try {
-    Icon = require(`./icons/${report.weatherType}.svg`).default;
-  } catch {
-    Icon = null;
-  }
-
   return (
     <div css={styles.hourlyReport}>
       <Text css={styles.timeSlot}>{formatTime(report.timeslot)}</Text>

@@ -3,7 +3,7 @@ import {
   render,
   screen,
   fireEvent,
-} from '../react-testing-library-with-providers';
+} from '#app/components/react-testing-library-with-providers';
 import DayForecast from './index';
 import { DayForecast as DayForecastType } from '../types';
 

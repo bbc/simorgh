@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '../react-testing-library-with-providers';
+import { render, screen } from '#app/components/react-testing-library-with-providers';
 import HourlyReport from './index';
 import { WeatherReport } from '../types';
 

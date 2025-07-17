@@ -11,7 +11,6 @@ interface DayForecastProps {
   forecast: DayForecastType;
   expanded?: boolean;
   datetimeLocale?: string;
-  locale?: string;
   onToggle?: () => void;
 }
 
@@ -20,7 +19,6 @@ const DayForecast: FC<DayForecastProps> = ({
   expanded,
   onToggle,
   datetimeLocale,
-  locale,
 }) => {
   const summary = forecast.summary?.report;
   const reports = forecast.detailed?.reports || [];

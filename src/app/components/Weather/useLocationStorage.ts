@@ -1,7 +1,3 @@
-// [copilot] A small custom hook to persist/retrieve user's geolocation weather info in localStorage
-
-import { useEffect } from 'react';
-
 const LS_KEY = 'bbc-weather-user-location';
 
 export interface StoredLocation {
