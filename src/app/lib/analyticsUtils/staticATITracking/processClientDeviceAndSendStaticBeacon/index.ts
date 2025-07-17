@@ -81,7 +81,7 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
         .replaceAll('{referrer}', params.ref)
         .replace('{idclient}', params.idclient)
         .replace('{epochTimestamp}', epochTimestamp)
-        .replace('~forwardingLink~', forwardingURL);
+        .replace('{forwardingLink}', forwardingURL);
 
       window.sendStaticBeacon(processedReverbUrl);
     } else if (atiURL) {
