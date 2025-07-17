@@ -125,6 +125,7 @@ import {
 import gridWidths from './gridWidths';
 
 import { BrandPalette, Typography, BrandSVG } from '../../models/types/theming';
+import { Theme } from '@emotion/react';
 
 export default ({
   typography,

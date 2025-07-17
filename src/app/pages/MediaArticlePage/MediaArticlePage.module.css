@@ -1,48 +1,208 @@
 /* MediaArticlePage CSS Module */
 .pageWrapper {
-  /* PageWrapper styling - needs conversion from emotion */
+  /* Background color will be set via CSS custom properties */
+}
+
+.pageWrapperDark {
+  background-color: var(--color-grey-10);
+}
+
+.pageWrapperLight {
+  background-color: var(--color-grey-2);
 }
 
 .grid {
-  /* Grid styling - needs conversion from emotion */
+  max-width: 63rem; /* 1008px */
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+@media (min-width: 1008px) {
+  .grid {
+    padding: 0 1rem;
+    column-gap: 1rem;
+  }
 }
 
 .primaryColumn {
-  /* Primary column styling - needs conversion from emotion */
+  grid-column: 1 / span 12;
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 1008px) {
+  .primaryColumn {
+    grid-column: 1 / span 8;
+  }
 }
 
 .secondaryColumn {
-  /* Secondary column styling - needs conversion from emotion */
+  grid-column: 1 / span 12;
+}
+
+@media (min-width: 1008px) {
+  .secondaryColumn {
+    grid-column: 9 / span 4;
+    margin-top: 2rem;
+  }
 }
 
 .fullWidthContainer {
-  /* Full width container styling - needs conversion from emotion */
+  grid-column: 1 / span 12;
+  padding-bottom: 2rem;
 }
 
 .mainContent {
-  /* Main content styling - needs conversion from emotion */
+  padding-bottom: 1.5rem; /* TRIPLE spacing */
 }
 
 .cafMediaPlayer {
-  /* CAF media player styling - needs conversion from emotion */
+  /* Default styles */
+}
+
+@media (min-width: 600px) and (max-width: 1007px) {
+  .cafMediaPlayer {
+    padding: 1.5rem 1rem 0; /* TRIPLE and DOUBLE spacing */
+  }
 }
 
 .portraitVideoPlayer {
-  /* Portrait video player styling - needs conversion from emotion */
+  padding-top: 0;
+  padding-bottom: 1.5rem; /* TRIPLE spacing */
+  max-width: 100%;
+  margin-inline: 0;
+  margin: 0;
+}
+
+@media (min-width: 600px) and (max-width: 1007px) {
+  .portraitVideoPlayer {
+    padding-top: 1rem; /* DOUBLE spacing */
+    margin-inline: 1rem; /* DOUBLE spacing */
+    max-width: 20.3125rem; /* 325px */
+  }
+}
+
+@media (min-width: 600px) {
+  .portraitVideoPlayer {
+    padding-bottom: 1.5rem; /* TRIPLE spacing */
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1007px) {
+  .portraitVideoPlayer {
+    padding-top: 1rem; /* DOUBLE spacing */
+    margin-inline: 1rem; /* DOUBLE spacing */
+  }
+}
+
+@media (min-width: 1008px) {
+  .portraitVideoPlayer {
+    padding-top: 1.5rem; /* TRIPLE spacing */
+  }
+}
+
+.portraitVideoPlayer :global(.portrait-media-loader) {
+  max-width: 100%;
+  margin-inline: 0;
+  margin: 0;
+}
+
+@media (min-width: 600px) and (max-width: 1007px) {
+  .portraitVideoPlayer :global(.portrait-media-loader) {
+    max-width: 20.3125rem; /* 325px */
+  }
+}
+
+@media (min-width: 1008px) and (max-width: 1279px) {
+  .portraitVideoPlayer :global(.portrait-media-loader) {
+    max-width: 19.6875rem; /* 315px */
+  }
+}
+
+@media (min-width: 1280px) {
+  .portraitVideoPlayer :global(.portrait-media-loader) {
+    max-width: 24.8125rem; /* 397px */
+  }
+}
+
+.portraitVideoPlayer :global(.portrait-caption) {
+  margin-inline: 0.5rem; /* FULL spacing */
+}
+
+@media (min-width: 400px) {
+  .portraitVideoPlayer :global(.portrait-caption) {
+    margin-inline: 1rem; /* DOUBLE spacing */
+  }
+}
+
+@media (min-width: 600px) {
+  .portraitVideoPlayer :global(.portrait-caption) {
+    margin-inline: 0;
+  }
 }
 
 .mostReadSection {
-  /* Most read section styling - needs conversion from emotion */
+  /* Default styles */
+}
+
+@media (max-width: 399px) {
+  .mostReadSection {
+    margin: 0 0.5rem; /* FULL spacing */
+    padding-bottom: 1.5rem; /* TRIPLE spacing */
+  }
+}
+
+@media (min-width: 400px) and (max-width: 1007px) {
+  .mostReadSection {
+    margin: 0 1rem; /* DOUBLE spacing */
+    padding-bottom: 2rem; /* QUADRUPLE spacing */
+  }
+}
+
+@media (min-width: 1008px) and (max-width: 1279px) {
+  .mostReadSection {
+    margin: 0 1rem; /* DOUBLE spacing */
+    padding-bottom: 2.5rem; /* QUINTUPLE spacing */
+  }
+}
+
+@media (min-width: 1280px) {
+  .mostReadSection {
+    margin: 0 auto;
+    padding: 0 1rem 1.5rem; /* DOUBLE and TRIPLE spacing */
+    max-width: 80rem; /* 1280px */
+  }
 }
 
 .relatedTopics {
-  /* Related topics styling - needs conversion from emotion */
+  margin: 1rem; /* DOUBLE spacing */
+  padding-bottom: 0.5rem; /* FULL spacing */
+}
+
+@media (min-width: 1008px) {
+  .relatedTopics {
+    margin: 2rem 0; /* QUADRUPLE spacing */
+    padding-bottom: 2rem; /* QUADRUPLE spacing */
+  }
 }
 
 .topStoriesAndFeaturesSection {
-  /* Top stories and features section styling - needs conversion from emotion */
+  margin-bottom: 1.5rem; /* TRIPLE spacing */
+}
+
+@media (min-width: 1008px) {
+  .topStoriesAndFeaturesSection {
+    margin-bottom: 0.5rem; /* FULL spacing */
+    padding: 1rem; /* DOUBLE spacing */
+  }
 }
 
 .responsiveComponentWrapper {
-  /* Responsive component wrapper styling - needs conversion from emotion */
+  margin-bottom: 1.5rem; /* TRIPLE spacing */
+}
+
+@media (min-width: 1008px) {
+  .responsiveComponentWrapper {
+    margin-bottom: 0.5rem; /* FULL spacing */
+  }
 }

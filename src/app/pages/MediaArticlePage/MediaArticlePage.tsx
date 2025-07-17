@@ -1,7 +1,5 @@
-/** @jsx jsx */
-
 import { use } from 'react';
-import { jsx, useTheme, Theme } from '@emotion/react';
+import { useTheme } from '@emotion/react';
 import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
@@ -61,7 +59,7 @@ import RelatedContentSection from '../../components/RelatedContentSection';
 
 import SecondaryColumn from './SecondaryColumn';
 
-import styles from './MediaArticlePage.styles';
+import styles from './MediaArticlePage.module.css';
 import { ComponentToRenderProps, TimestampProps } from './types';
 import checkIsLiveMedia from './utils/checkIsLiveMedia';
 
@@ -73,14 +71,14 @@ const getAudioVideoComponent =
     const isPortrait = isPortraitVideo(blocks);
     const className = isPortrait ? 'portrait-media-loader' : '';
 
+    const containerClass = isPortrait
+      ? styles.portraitVideoPlayer
+      : isCpsMap
+        ? styles.cafMediaPlayer
+        : '';
+
     return (
-      <div
-        css={({ spacings }: Theme) => [
-          `padding-top: ${spacings.TRIPLE}rem`,
-          isCpsMap && styles.cafMediaPlayer,
-          isPortrait && styles.portraitVideoPlayer,
-        ]}
-      >
+      <div className={containerClass} style={{ paddingTop: '1.5rem' }}>
         <MediaLoader blocks={blocks as MediaBlock[]} className={className} />
       </div>
     );
@@ -93,11 +91,18 @@ const getLegacyMediaComponent =
       type: 'mediaOverrides',
     };
 
+    const containerClass = isCpsMap ? styles.cafMediaPlayer : '';
+
     return (
-      <div
-        css={({ spacings }: Theme) => [
-          `padding-top: ${spacings.TRIPLE}rem`,
-          isCpsMap && styles.cafMediaPlayer,
+      <div className={containerClass} style={{ paddingTop: '1.5rem' }}>
+        <MediaLoader
+          blocks={props.blocks as MediaBlock[]}
+          className=""
+          mediaOverrides={mediaOverrides}
+        />
+      </div>
+    );
+  };
         ]}
       >
         <MediaLoader blocks={[props, mediaOverrides] as MediaBlock[]} />
@@ -149,7 +154,12 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const {
     palette: { GREY_2, WHITE },
+    isDarkUi,
   } = useTheme();
+
+  const pageWrapperClass = isDarkUi
+    ? `${styles.pageWrapper} ${styles.pageWrapperDark}`
+    : `${styles.pageWrapper} ${styles.pageWrapperLight}`;
 
   const headline = getHeadline(pageData) ?? '';
   const description = getSummary(pageData) || getHeadline(pageData);
@@ -239,7 +249,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
   };
 
   return (
-    <div className={styles.pageWrapper}>
+    <div className={pageWrapperClass}>
       <ATIAnalytics atiData={atiData} />
       <ChartbeatAnalytics
         categoryName={pageData?.metadata?.passport?.category?.categoryName}
@@ -281,7 +291,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
         imageLocator={promoImage}
       />
       <div className={styles.grid}>
-        <div css={isCpsMap ? styles.fullWidthContainer : styles.primaryColumn}>
+        <div className={isCpsMap ? styles.fullWidthContainer : styles.primaryColumn}>
           <main className={styles.mainContent} role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
