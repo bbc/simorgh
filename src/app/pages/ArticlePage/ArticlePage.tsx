@@ -1,7 +1,6 @@
-/** @jsx jsx */
 /* @jsxFrag React.Fragment */
 import { use, useState } from 'react';
-import { jsx, useTheme } from '@emotion/react';
+import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
 import useOptimizelyVariation, {
@@ -70,7 +69,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import RelatedContentSection from '../../components/RelatedContentSection';
 import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
-import styles from './ArticlePage.styles';
+import styles from './ArticlePage.module.css';
 import { ComponentToRenderProps, TimeStampProps } from './types';
 import ContinueReadingButton, {
   Props as ContinueReadingProps,
