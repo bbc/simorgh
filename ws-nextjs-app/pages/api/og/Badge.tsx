@@ -21,13 +21,14 @@ const Badge = ({ icon, text, backgroundColor = GREY_8 }: BadgeProps) => (
       style={{
         display: 'flex',
         flexDirection: 'row',
+        gap: 10,
         alignItems: 'center',
         fontWeight: 'bold',
         fontSize: 24,
         color: WHITE,
       }}
     >
-      {icon && <span style={{ marginRight: 10 }}>{icon}</span>}
+      {icon && icon}
       <span style={{ textTransform: 'uppercase' }}>{text}</span>
     </div>
   </div>
