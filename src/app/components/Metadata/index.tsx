@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx, useTheme } from '@emotion/react';
+import React from 'react';
 import { use } from 'react';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
@@ -80,9 +79,10 @@ const MetadataContainer = ({
     googleSiteVerification,
     translations,
   } = use(ServiceContext);
-  const {
-    palette: { BRAND_BACKGROUND },
-  } = useTheme();
+  
+  // Get brand background color from theme context or use default
+  const brandBackgroundColor = '#B80000'; // Default BBC red
+  
   const appleTouchIcon = getAppleTouchUrl(service);
   const isEnglishService = ENGLISH_SERVICES.includes(service);
   const pathsForUkLink = [
@@ -144,7 +144,7 @@ const MetadataContainer = ({
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta charSet="utf-8" />
       <meta name="robots" content="noodp, noydir, max-image-preview:large" />
-      <meta name="theme-color" content={BRAND_BACKGROUND} />
+      <meta name="theme-color" content={brandBackgroundColor} />
       {googleSiteVerification && (
         <meta
           name="google-site-verification"
@@ -178,7 +178,7 @@ const MetadataContainer = ({
         content="mydfaj4vz8t5psneihy4nm6ff52fac"
       />
       <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="msapplication-TileColor" content={BRAND_BACKGROUND} />
+      <meta name="msapplication-TileColor" content={brandBackgroundColor} />
       <meta
         name="msapplication-TileImage"
         content={getIconAssetUrl(service, '144x144')}

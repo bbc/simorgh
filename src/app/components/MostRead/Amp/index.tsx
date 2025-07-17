@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+import React from 'react';
 import { use } from 'react';
 import { Helmet } from 'react-helmet';
 import {
@@ -14,7 +13,6 @@ import MostReadRank from '../Canonical/Rank';
 import generateCSPHash from '../utilities/generateCSPHash';
 import { Direction } from '../../../models/types/global';
 import { Size } from '../types';
-import styles from './index.styles';
 import getRemoteDataScript from './getRemoteDataScript';
 
 interface AmpMostReadProps {
@@ -76,7 +74,7 @@ const AmpMostRead = ({ endpoint, size = 'default' }: AmpMostReadProps) => {
         height="50"
       >
         <p
-          css={styles.paragraph}
+          className="text-shadow m-0 font-sans-regular text-bodyCopy"
           // @ts-expect-error - fallback is an AMP specific attribute
           fallback=""
         >
