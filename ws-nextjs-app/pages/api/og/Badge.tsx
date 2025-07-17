@@ -2,7 +2,7 @@ import React from 'react';
 import { GREY_8, WHITE } from '#app/components/ThemeProvider/palette';
 
 type BadgeProps = {
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
   backgroundColor?: string;
   text: string;
 };
@@ -27,7 +27,7 @@ const Badge = ({ icon, text, backgroundColor = GREY_8 }: BadgeProps) => (
         color: WHITE,
       }}
     >
-      <span style={{ marginRight: 10 }}>{icon}</span>
+      {icon && <span style={{ marginRight: 10 }}>{icon}</span>}
       <span style={{ textTransform: 'uppercase' }}>{text}</span>
     </div>
   </div>
