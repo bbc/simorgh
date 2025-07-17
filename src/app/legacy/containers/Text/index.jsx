@@ -36,12 +36,13 @@ const TextContainer = ({
       const range = selection.getRangeAt(0);
       const rect = range.getBoundingClientRect();
       setIconPosition({
-        top: rect.top - 40, // 40px above selection
-        left: rect.left + rect.width, // to the right of selection
+        top: rect.top - 50,
+        left: Math.max(rect.left + rect.width - 120, 50),
       });
-      const encodedText = encodeURIComponent(selectedText);
+      const startText = selectedText.split(' ').slice(0, 5).join(' ');
+      const encodedStart = encodeURIComponent(startText);
       const baseUrl = window.location.href.split('#')[0];
-      const fragment = `#:~:text=${encodedText}`;
+      const fragment = `#:~:text=${encodedStart}`;
       const fullUrl = `${baseUrl}${fragment}`;
       setShareLink(fullUrl);
     }
