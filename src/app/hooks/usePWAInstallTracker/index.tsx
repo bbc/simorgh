@@ -7,15 +7,15 @@ import useCustomEventTracker from '../useCustomEventTracker';
 const usePWAInstallTracker = () => {
   const { trackEvent } = useCustomEventTracker({ eventName: 'pwa-installed' });
 
-  const hasTracked = useRef(false);
+  const trackRef = useRef(false);
 
   useEffect(() => {
-    function handleAppInstalled() {
-      if (!hasTracked.current) {
+    const handleAppInstalled = () => {
+      if (!trackRef.current) {
         trackEvent();
-        hasTracked.current = true;
+        trackRef.current = true;
       }
-    }
+    };
 
     window.addEventListener('appinstalled', handleAppInstalled);
 
