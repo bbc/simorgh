@@ -76,6 +76,7 @@ import {
   isPortraitVideo,
   isPortraitVideoUnderHeadline,
 } from '../utils/portraitVideo';
+import useByteTracker from '#app/hooks/useByteTracker';
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -148,6 +149,9 @@ const getVideoComponent =
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const { isApp, isAmp, isLite } = use(RequestContext);
+  const bytes = useByteTracker();
+
+  console.log(bytes);
 
   const {
     articleAuthor,
