@@ -1,7 +1,7 @@
 import { FooterLink } from '#app/models/types/serviceConfig';
 import { ReactElement } from 'react';
 import Link from '../Link';
-import styles, { gridTemplateRows } from './index.styles';
+import styles from './index.module.css';
 
 export default ({
   elements = [],
@@ -15,20 +15,16 @@ export default ({
   return (
     <ul
       role="list"
-      css={[
+      className={[
         styles.list,
         trustProjectLink
           ? [
               styles.listPaddingWithTrustProjectLink,
               styles.listItemWithBottomBorder,
-            ]
+            ].join(' ')
           : styles.listPaddingWithoutTrustProjectLink,
-        gridTemplateRows({
-          itemCount: elements.length,
-          trustProjectLink,
-        }),
         extraLinks && styles.listExtraLinks,
-      ]}
+      ].filter(Boolean).join(' ')}
     >
       {trustProjectLink && (
         <li className={styles.listItem}>

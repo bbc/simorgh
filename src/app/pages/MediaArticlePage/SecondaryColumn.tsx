@@ -1,8 +1,6 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import { Article } from '#app/models/types/optimo';
 import LatestMediaSection from './PagePromoSections/LatestMediaSection';
-import styles from './MediaArticlePage.styles';
+import styles from './MediaArticlePage.module.css';
 
 const SecondaryColumn = ({ pageData }: { pageData: Article }) => {
   const latestMediaContent = pageData?.secondaryColumn?.latestMedia;
