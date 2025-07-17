@@ -39,10 +39,17 @@ const TextContainer = ({
         top: rect.top - 50,
         left: Math.max(rect.left + rect.width - 120, 50),
       });
-      const startText = selectedText.split(' ').slice(0, 5).join(' ');
+      const textArray = selectedText.split(' ');
+      const startText = textArray.slice(0, 2).join(' ');
+      const endText = textArray.slice(-2).join(' ');
       const encodedStart = encodeURIComponent(startText);
+      const encodedEnd = encodeURIComponent(endText);
       const baseUrl = window.location.href.split('#')[0];
-      const fragment = `#:~:text=${encodedStart}`;
+      const outputText =
+        textArray.length > 4
+          ? `${encodedStart},${encodedEnd}`
+          : `${encodedStart}`;
+      const fragment = `#:~:text=${outputText}`;
       const fullUrl = `${baseUrl}${fragment}`;
       setShareLink(fullUrl);
     }
