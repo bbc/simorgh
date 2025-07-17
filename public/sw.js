@@ -5,18 +5,35 @@
 /* eslint-disable no-restricted-globals */
 const version = 'v0.3.0';
 const cacheName = 'simorghCache_v1';
-
+ 
 const service = self.location.pathname.split('/')[1];
-const hasOfflinePageFunctionality = false;
+const hasOfflinePageFunctionality = true;
 const OFFLINE_PAGE = `/${service}/offline`;
-
+ 
 self.addEventListener('install', event => {
-  event.waitUntil(async () => {
-    const cache = await caches.open(cacheName);
-    if (hasOfflinePageFunctionality) await cache.add(OFFLINE_PAGE);
-  });
+  console.log(`Service worker installing with version ${version}`);
+  event.waitUntil(
+    (async () => {
+      const cache = await caches.open(cacheName);
+      if (hasOfflinePageFunctionality) {
+        const offlinePageUrl = new URL(OFFLINE_PAGE, self.location.origin).href;
+        console.log(`Attempting to cache offline page at: ${offlinePageUrl}`);
+        try {
+          const response = await fetch(offlinePageUrl);
+          if (!response || !response.ok) {
+            throw new Error(`Failed to fetch offline page: ${response.status} ${response.statusText}`);
+          }
+          await cache.put(offlinePageUrl, response);
+          console.log(`Offline page ${offlinePageUrl} cached successfully with status: ${response.status}`);
+        } catch (error) {
+          console.error(`Failed to cache offline page: ${error.message}`);
+        }
+      }
+    })()
+  );
+  self.skipWaiting();
 });
-
+ 
 const CACHEABLE_FILES = [
   // Reverb
   /^https:\/\/static(?:\.test)?\.files\.bbci\.co\.uk\/ws\/(?:simorgh-assets|simorgh1-preview-assets|simorgh2-preview-assets)\/public\/static\/js\/reverb\/reverb-3.10.1.js$/,
@@ -31,28 +48,28 @@ const CACHEABLE_FILES = [
   // PWA Icons
   /\/images\/icons\/icon-.*?\.png\??v?=?\d*$/,
 ];
-
+ 
 const WEBP_IMAGE =
   /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|images|ace\/(standard|ws))\/.+.webp$/;
-
+ 
 const fetchEventHandler = async event => {
   const isRequestForCacheableFile = CACHEABLE_FILES.some(cacheableFile =>
     new RegExp(cacheableFile).test(event.request.url),
   );
-
+ 
   const isRequestForWebpImage = WEBP_IMAGE.test(event.request.url);
-
+ 
   if (isRequestForWebpImage) {
     const req = event.request.clone();
-
+ 
     // Inspect the accept header for WebP support
-
+ 
     const supportsWebp =
       req.headers.has('accept') && req.headers.get('accept').includes('webp');
-
+ 
     // if supports webp is false in request header then don't use it
     // if accept header doesn't indicate support for webp remove .webp extension
-
+ 
     if (!supportsWebp) {
       const imageUrlWithoutWebp = req.url.replace('.webp', '');
       event.respondWith(
@@ -74,22 +91,57 @@ const fetchEventHandler = async event => {
       })(),
     );
   } else if (hasOfflinePageFunctionality && event.request.mode === 'navigate') {
-    event.respondWith(async () => {
-      try {
-        const preloadResponse = await event.preloadResponse;
-        if (preloadResponse) {
-          return preloadResponse;
+    event.respondWith(
+      (async () => {
+        try {
+          console.log(`Attempting navigation to: ${event.request.url}`);
+          const preloadResponse = await event.preloadResponse;
+          if (preloadResponse) {
+            console.log('Using preloaded response');
+            return preloadResponse;
+          }
+          const networkResponse = await fetch(event.request);
+          console.log(`Network response status: ${networkResponse.status}`);
+          return networkResponse;
+        } catch (error) {
+          console.log(`Network request failed: ${error.message}, serving offline page`);
+          const cache = await caches.open(cacheName);
+          const offlinePageUrl = new URL(OFFLINE_PAGE, self.location.origin).href;
+          console.log(`Looking for offline page in cache: ${offlinePageUrl}`);
+          
+          const cachedResponse = await cache.match(offlinePageUrl);
+          if (cachedResponse) {
+            console.log(`Found cached offline page with status: ${cachedResponse.status}`);
+            return cachedResponse;
+          } else {
+            console.log('Offline page not found in cache, attempting to fetch it now');
+            try {
+              const freshOfflineResponse = await fetch(offlinePageUrl);
+              if (freshOfflineResponse && freshOfflineResponse.ok) {
+                console.log(`Successfully fetched offline page with status: ${freshOfflineResponse.status}`);
+                const clonedResponse = freshOfflineResponse.clone();
+                cache.put(offlinePageUrl, freshOfflineResponse);
+                return clonedResponse;
+              } else {
+                console.error(`Failed to fetch offline page, status: ${freshOfflineResponse ? freshOfflineResponse.status : 'unknown'}`);
+                return new Response('You are offline and the offline page could not be retrieved.', {
+                  status: 503,
+                  headers: { 'Content-Type': 'text/plain' }
+                });
+              }
+            } catch (offlineError) {
+              console.error(`Error fetching offline page: ${offlineError.message}`);
+              return new Response('You are offline and the offline page could not be retrieved.', {
+                status: 503,
+                headers: { 'Content-Type': 'text/plain' }
+              });
+            }
+          }
         }
-        const networkResponse = await fetch(event.request);
-        return networkResponse;
-      } catch (error) {
-        const cache = await caches.open(cacheName);
-        const cachedResponse = await cache.match(OFFLINE_PAGE);
-        return cachedResponse;
-      }
-    });
+      })()
+    );
   }
   return;
 };
-
+ 
 onfetch = fetchEventHandler;

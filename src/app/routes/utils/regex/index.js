@@ -17,12 +17,15 @@ import {
   getMostReadDataRegex,
   getSecondaryColumnDataRegex,
   getAfricaEyeTVPageRegex,
+  getOfflinePageRegex,
 } from './utils';
 
 const allServices = Object.keys(services);
 
 export const articlePath = getArticleRegex(allServices);
 export const articleDataPath = `${articlePath}.json`;
+
+export const offlinePagePath = getOfflinePageRegex(allServices);
 
 export const homePageSwPath = getSwRegex(allServices);
 export const homePageManifestPath = getManifestRegex(allServices);

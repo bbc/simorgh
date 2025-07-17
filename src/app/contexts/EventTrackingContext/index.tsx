@@ -21,6 +21,7 @@ import {
   LIVE_RADIO_PAGE,
   TV_PAGE,
   AUDIO_PAGE,
+  OFFLINE_PAGE,
 } from '../../routes/utils/pageTypes';
 import { PageTypes, Platforms } from '../../models/types/global';
 import { buildATIEventTrackingParams } from '../../components/ATIAnalytics/params';
@@ -49,6 +50,7 @@ type CampaignPageTypes = Exclude<PageTypes, 'error'>;
 
 const getCampaignID = (pageType: CampaignPageTypes) => {
   const campaignID = {
+    [OFFLINE_PAGE]: 'offline',
     [ARTICLE_PAGE]: 'article',
     [MEDIA_ARTICLE_PAGE]: 'article-sfv',
     [MOST_READ_PAGE]: 'list-datadriven-read',
