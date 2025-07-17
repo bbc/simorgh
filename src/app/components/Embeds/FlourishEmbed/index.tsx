@@ -1,8 +1,5 @@
-/** @jsx jsx */
 import React from 'react';
-import { jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
-import styles from './index.styles';
 import { OEmbedData } from '../types';
 
 const FlourishEmbed = (props: OEmbedData) => {
@@ -19,7 +16,7 @@ const FlourishEmbed = (props: OEmbedData) => {
         <script>{sizeAdjustScript}</script>
       </Helmet>
       <iframe
-        css={styles.iframe}
+        className="max-w-full px-full mb-triple group-2:px-double group-4:px-0"
         src={iFrameSrc}
         id={iFrameId}
         frameBorder="0"

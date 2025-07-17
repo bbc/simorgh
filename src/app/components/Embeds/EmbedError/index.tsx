@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
-import styles from './index.styles';
+import React from 'react';
 import InlineLink from '../../InlineLink';
 import Text from '../../Text';
 
@@ -14,13 +12,20 @@ type Props = {
 
 const EmbedError = ({ message, link }: Props) => {
   return (
-    <div css={styles.embedDiv} data-e2e="embed-error">
+    <div 
+      className="bg-white max-w-full mx-full mb-triple p-double group-2:mx-double group-4:mx-0 forced-colours:border-3 forced-colours:border-transparent"
+      data-e2e="embed-error"
+    >
       <Text as="strong" fontVariant="sansRegular" size="longPrimer">
         {message}
       </Text>
-      <div css={styles.errorLinkWrapper}>
+      <div className="pt-full">
         {link?.text && link.href && (
-          <InlineLink to={link.href} text={link.text} css={styles.inlineLink} />
+          <InlineLink 
+            to={link.href} 
+            text={link.text} 
+            className="text-black border-b border-black font-sans-regular text-bodyCopy"
+          />
         )}
       </div>
     </div>

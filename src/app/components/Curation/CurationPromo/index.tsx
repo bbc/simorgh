@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/aria-role */
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+import React from 'react';
 import { use } from 'react';
 import moment from 'moment';
 import path from 'ramda/src/path';
@@ -11,8 +10,6 @@ import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
 import LiveLabel from '../../LiveLabel';
-
-import styles from './index.styles';
 
 const CurationPromo = ({
   id,
@@ -48,17 +45,20 @@ const CurationPromo = ({
     (type === 'video' && `${videoTranslation}, `) ||
     (type === 'photogallery' && `${photoGalleryTranslation}, `);
   return (
-    <Promo css={styles.promo} className="">
+    <Promo className={isLite ? '[&_.promo-image]:hidden' : ''}>
       {imageUrl && (
         <Promo.Image
           src={imageUrl}
           alt={imageAlt}
           lazyLoad={lazy}
           isAmp={isAmp}
-          {...(isLite && { css: styles.image })}
+          className={isLite ? 'relative' : ''}
         >
           {isMedia && (
-            <Promo.MediaIcon css={styles.icon} type={type}>
+            <Promo.MediaIcon 
+              type={type}
+              className={isLite ? 'group-2:mt-full' : ''}
+            >
               {showDuration ? mediaDuration : ''}
             </Promo.MediaIcon>
           )}

@@ -1,9 +1,7 @@
 /* eslint-disable react/destructuring-assignment */
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+import React from 'react';
 import AmpIframe from '../../AmpIframe';
 import { ampParams } from '../types';
-import styles from './index.styles';
 
 type Props = {
   parameters: ampParams;
@@ -17,7 +15,7 @@ const AmpIframeEmbed = ({ parameters, url }: Props) => {
   } = parameters;
 
   return (
-    <div css={styles.embedDiv}>
+    <div className="max-w-full pb-triple">
       <AmpIframe ampMetadata={{ imageWidth, imageHeight, image, src: url }} />
     </div>
   );
