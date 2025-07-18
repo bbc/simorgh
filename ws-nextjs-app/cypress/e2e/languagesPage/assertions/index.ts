@@ -6,7 +6,7 @@ export const assertWSLanguagesPage = () => {
 
 export const assertWSLanguagesPageLocal = () => {
   it('should render the Languages Page with fixture content', () => {
-    cy.contains('World Service test page').should('exist');
+    cy.contains('BBC World Service - global front page').should('exist');
   });
 };
 
