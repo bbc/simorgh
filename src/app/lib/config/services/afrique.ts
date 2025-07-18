@@ -350,6 +350,10 @@ export const service: DefaultServiceConfig = {
           text: 'Contactez la BBC',
         },
         {
+          href: 'https://www.bbc.com/afrique.lite',
+          text: 'Lire en version allégée',
+        },
+        {
           href: 'https://www.bbc.com/ws/languages',
           text: 'Autres langues',
         },
