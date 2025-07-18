@@ -50,7 +50,7 @@ export const service: DefaultServiceConfig = {
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     podcastPromo: {
       title: 'يستحق الانتباه',
-      brandTitle: 'قناتنا الرسمية على واتسا',
+      brandTitle: 'قناتنا الرسمية على واتساب',
       brandDescription: 'تابعوا التغطية الشاملة من بي بي سي نيوز عربي',
       image: {
         src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0lkrxsb.jpg',
