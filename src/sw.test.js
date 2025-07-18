@@ -198,7 +198,7 @@ describe('Service Worker', () => {
 
     const cacheableAssets = [
       // Fonts
-      'https://ws-downloads.files.bbci.co.uk/fonts/ReithQalam/v1.210/bold.woff2',
+      'https://static.files.bbci.co.uk/fonts/ReithQalam/v1.310/bold.woff2',
       'https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSans_W_Bd.woff2',
       // Moment-lib - local, test & live
       'http://localhost:7080/static/js/modern.../moment-lib.abcd1234.js',

@@ -17,7 +17,7 @@ import { RequestContextProvider } from '../src/app/contexts/RequestContext';
 const REITH_SERIF_REGULAR = {
   '@font-face': {
     fontFamily: 'ReithSerif',
-    src: `url("fonts/Reith/BBCReithSerif_W_Rg.woff2") format("woff2"), url("fonts/Reith/BBCReithSerif_W_Rg.woff") format("woff")`,
+    src: "url('https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSerif_W_Rg.woff2') format('woff2')",
     fontDisplay: 'block',
   },
 };
@@ -25,7 +25,7 @@ const REITH_SERIF_REGULAR = {
 const REITH_SERIF_BOLD = {
   '@font-face': {
     fontFamily: 'ReithSerif',
-    src: `url("fonts/Reith/BBCReithSerif_W_Bd.woff2") format("woff2"), url("fonts/Reith/BBCReithSerif_W_Bd.woff") format("woff")`,
+    src: "url('https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSerif_W_Bd.woff') format('woff2')",
     fontWeight: 700,
     fontDisplay: 'block',
   },
@@ -34,7 +34,7 @@ const REITH_SERIF_BOLD = {
 const REITH_SERIF_LIGHT = {
   '@font-face': {
     fontFamily: 'ReithSerif',
-    src: `url("fonts/Reith/subsets/BBCReithSerif_WNumbers_Lt.woff2") format("woff2"), url("fonts/Reith/subsets/BBCReithSerif_WNumbers_Lt.woff") format("woff")`,
+    src: "url('https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSerif_WNumbers_Lt.woff') format('woff2')",
     fontWeight: 300,
     fontDisplay: 'block',
   },
@@ -43,7 +43,7 @@ const REITH_SERIF_LIGHT = {
 const REITH_SERIF_MEDIUM = {
   '@font-face': {
     fontFamily: 'ReithSerif',
-    src: `url("fonts/Reith/BBCReithSerif_W_Md.woff2") format("woff2"), url("fonts/Reith/BBCReithSerif_W_Md.woff") format("woff")`,
+    src: "url('https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSerif_W_Md.woff') format('woff2')",
     fontWeight: 500,
     fontDisplay: 'block',
   },
@@ -52,7 +52,7 @@ const REITH_SERIF_MEDIUM = {
 const REITH_SERIF_EXTRA_BOLD = {
   '@font-face': {
     fontFamily: 'ReithSerif',
-    src: `url("fonts/Reith/BBCReithSerif_W_ExBd.woff2") format("woff2"), url("fonts/Reith/BBCReithSerif_W_ExBd.woff") format("woff")`,
+    src: "url('https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSerif_W_ExBd.woff') format('woff2')",
     fontWeight: 800,
     fontDisplay: 'block',
   },
@@ -61,7 +61,7 @@ const REITH_SERIF_EXTRA_BOLD = {
 const REITH_SANS_REGULAR = {
   '@font-face': {
     fontFamily: 'ReithSans',
-    src: `url("fonts/Reith/BBCReithSans_W_Rg.woff2") format("woff2"), url("fonts/Reith/BBCReithSans_W_Rg.woff") format("woff")`,
+    src: 'url("https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSans_W_Rg.woff2") format("woff2")',
     fontDisplay: 'block',
   },
 };
@@ -69,7 +69,7 @@ const REITH_SANS_REGULAR = {
 const REITH_SANS_BOLD = {
   '@font-face': {
     fontFamily: 'ReithSans',
-    src: `url("fonts/Reith/BBCReithSans_W_Bd.woff2") format("woff2"), url("fonts/Reith/BBCReithSans_W_Bd.woff") format("woff")`,
+    src: 'url("https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSans_W_Bd.woff2") format("woff2")',
     fontWeight: 700,
     fontDisplay: 'block',
   },
@@ -78,7 +78,7 @@ const REITH_SANS_BOLD = {
 const REITH_SANS_LIGHT = {
   '@font-face': {
     fontFamily: 'ReithSans',
-    src: `url("fonts/Reith/BBCReithSans_W_Lt.woff2") format("woff2"), url("fonts/Reith/BBCReithSans_W_Lt.woff") format("woff")`,
+    src: 'url("https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSans_W_Lt.woff2") format("woff2")',
     fontWeight: 300,
     fontDisplay: 'block',
   },
@@ -87,7 +87,7 @@ const REITH_SANS_LIGHT = {
 const REITH_SANS_LIGHT_ITALIC = {
   '@font-face': {
     fontFamily: 'ReithSans',
-    src: `url("fonts/Reith/BBCReithSans_W_LtIt.woff2") format("woff2"), url("fonts/Reith/BBCReithSans_W_LtIt.woff") format("woff")`,
+    src: 'url("https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSans_W_LtIt.woff2") format("woff2")',
     fontWeight: 300,
     fontStyle: 'italic',
     fontDisplay: 'block',
@@ -97,7 +97,7 @@ const REITH_SANS_LIGHT_ITALIC = {
 const REITH_SANS_MEDIUM = {
   '@font-face': {
     fontFamily: 'ReithSans',
-    src: `url("fonts/Reith/BBCReithSans_W_Md.woff2") format("woff2"), url("fonts/Reith/BBCReithSans_W_Md.woff") format("woff")`,
+    src: 'url("https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSans_W_Md.woff2") format("woff2")',
     fontWeight: 500,
     fontDisplay: 'block',
   },
@@ -106,7 +106,7 @@ const REITH_SANS_MEDIUM = {
 const REITH_SANS_EXTRA_BOLD = {
   '@font-face': {
     fontFamily: 'ReithSans',
-    src: `url("fonts/Reith/BBCReithSans_W_ExBd.woff2") format("woff2"), url("fonts/Reith/BBCReithSans_W_ExBd.woff") format("woff")`,
+    src: 'url("https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSans_W_ExBd.woff2") format("woff2")',
     fontWeight: 800,
     fontDisplay: 'block',
   },
@@ -115,7 +115,7 @@ const REITH_SANS_EXTRA_BOLD = {
 const REITH_SANS_EXTRA_BOLD_ITALIC = {
   '@font-face': {
     fontFamily: 'ReithSans',
-    src: `url("fonts/Reith/BBCReithSans_W_ExBdIt.woff2") format("woff2"), url("fonts/Reith/BBCReithSans_W_ExBdIt.woff") format("woff")`,
+    src: 'url("https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSans_W_ExBdit.woff2") format("woff2")',
     fontWeight: 800,
     fontStyle: 'italic',
     fontDisplay: 'block',
@@ -125,7 +125,7 @@ const REITH_SANS_EXTRA_BOLD_ITALIC = {
 const REITH_SANS_CONDENSED_REGULAR = {
   '@font-face': {
     fontFamily: 'ReithSansCondensed',
-    src: `url("fonts/Reith/BBCReithSansCd_W_Rg.woff2") format("woff2"), url("fonts/Reith/BBCReithSansCd_W_Rg.woff") format("woff")`,
+    src: 'url("https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSansCd_W_Rg.woff2") format("woff2")',
     fontDisplay: 'block',
   },
 };
@@ -134,7 +134,7 @@ const REITH_SANS_CONDENSED_BOLD = {
   '@font-face': {
     fontFamily: 'ReithSansCondensed',
     fontWeight: 700,
-    src: `url("fonts/Reith/BBCReithSansCd_W_Bd.woff2") format("woff2"), url("fonts/Reith/BBCReithSansCd_W_Bd.woff") format("woff")`,
+    src: 'url("https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSansCd_W_Bd.woff2") format("woff2")',
     fontDisplay: 'block',
   },
 };
@@ -284,7 +284,7 @@ const REITH_QALAM_REGULAR = {
     fontFamily: 'BBC Reith Qalam',
     fontWeight: 400,
     fontStyle: 'normal',
-    src: `url('fonts/ReithQalam/normal.woff2') format('woff2'), url('fonts/ReithQalam/normal.woff') format('woff')`,
+    src: 'url("https://static.files.bbci.co.uk/fonts/ReithQalam/v1.310/BBCReithQalam_Regular.woff2") format("woff2")',
     fontDisplay: 'block',
   },
 };
@@ -294,7 +294,7 @@ const REITH_QALAM_BOLD = {
     fontFamily: 'BBC Reith Qalam',
     fontWeight: 700,
     fontStyle: 'normal',
-    src: `url('fonts/ReithQalam/bold.woff2') format('woff2'), url('fonts/ReithQalam/bold.woff') format('woff')`,
+    src: 'url("https://static.files.bbci.co.uk/fonts/ReithQalam/v1.310/BBCReithQalam_Bold.woff2") format("woff2")',
     fontDisplay: 'block',
   },
 };
@@ -695,7 +695,7 @@ const preview: Preview = {
           service={context.globals.service.service}
           variant={context.globals.service.variant}
         >
-          <RequestContextProvider isLite={context.globals.isLite}>
+          <RequestContextProvider isLite={context.globals.isLite} pageType={undefined} pathname={''} service={undefined}>
             <EventTrackingContextProvider
               // @ts-expect-error - mock data for Storybook
               pageData={pageDataFixture}
