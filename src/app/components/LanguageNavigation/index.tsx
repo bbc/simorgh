@@ -29,47 +29,34 @@ const LanguageNavigation = ({ languageSections }: LanguageNavigationProps) => {
     <ClassNames>
       {({ css }) => (
         <>
-          <nav className={css(styles.wrapper(theme))}>
+          <ul className={css(styles.langNavUnorderedList())}>
             {languageSections.map((section, index) => {
               const isLast = index === languageSections.length - 1;
-
-              if (section.href) {
-                return (
-                  <div
-                    key={section.id}
-                    className={css(styles.navItem({ ...theme, isLast }))}
-                  >
-                    <a
-                      href={section.href}
-                      className={css(styles.navLink(theme))}
-                    >
-                      {section.title}
-                    </a>
-                  </div>
-                );
-              }
 
               const isActive = openSection === section.id;
 
               return (
-                <details
+                <li
                   key={section.id}
-                  open={isActive}
                   className={css(
-                    styles.navItem({ ...theme, isLast, isActive }),
+                    styles.langNavItem({ ...theme, isLast, isActive }),
                   )}
-                  onToggle={e => {
-                    const isOpen = (e.target as HTMLDetailsElement).open;
-                    setOpenSection(isOpen ? section.id : null);
-                  }}
                 >
-                  <summary className={css(styles.navSummary(theme))}>
+                  <a
+                    href="#link"
+                    onClick={e => {
+                      e.preventDefault();
+                      const isOpen = isActive ? null : section.id;
+                      setOpenSection(isOpen);
+                    }}
+                    className={`focusIndicatorRemove ${isActive ? css(styles.langNavLinkActive(theme)) : ''} ${css(styles.langNavLink(theme))}`}
+                  >
                     {section.title}
-                  </summary>
-                </details>
+                  </a>
+                </li>
               );
             })}
-          </nav>
+          </ul>
 
           {activeSection && (
             <div className={css(styles.dropDown(theme))}>

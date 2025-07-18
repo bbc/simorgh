@@ -3,6 +3,16 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 import { REITH_SANS } from '#app/components/ThemeProvider/fontFamilies';
 
 const styles = {
+  langNavUnorderedList: () =>
+    css({
+      listStyleType: 'none',
+      padding: 0,
+      margin: 0,
+      position: 'relative',
+      overflow: 'hidden',
+      width: '100%',
+      paddingBottom: `${pixelsToRem(1)}rem`,
+    }),
   wrapper: ({ fontMq, spacings, palette, fontSizes }: Theme) =>
     css({
       display: 'flex',
@@ -11,74 +21,89 @@ const styles = {
       padding: 0,
       fontFamily: REITH_SANS,
       ...fontSizes.pica,
-      borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_3}`,
       [fontMq.GROUP_D_MIN_WIDTH]: {
         padding: `${spacings.FULL}rem`,
       },
     }),
 
-  navItem: ({
-    isActive,
-    isLast,
+  langNavItem: ({
     palette,
   }: { isActive?: boolean; isLast?: boolean } & Theme) =>
     css({
-      display: 'flex',
-      alignItems: 'center',
+      display: 'inline-block',
       padding: 0,
       position: 'relative',
-      borderBottom: isActive
-        ? `${pixelsToRem(4)}rem solid ${palette.POSTBOX}`
-        : `${pixelsToRem(4)}rem solid transparent`,
-      '&:hover, &:focus-within': {
-        borderBottom: `${pixelsToRem(4)}rem solid ${palette.POSTBOX}`,
-        outline: 'none',
-        cursor: 'pointer',
+      zIndex: 0,
+      '&::before': {
+        content: '""',
+        position: 'absolute',
+        bottom: `${pixelsToRem(-1)}rem`,
+        width: '180rem',
+        borderBottom: '0.0625rem solid #E6E8EA',
+        zIndex: `${pixelsToRem(-1)}rem`,
       },
       '&::after': {
         content: '""',
-        display: isLast ? 'none' : 'block',
+        display: 'block',
         position: 'absolute',
-        right: 0,
+        right: `${pixelsToRem(-2)}rem`,
         top: '50%',
         transform: 'translateY(-50%)',
         width: `${pixelsToRem(1)}rem`,
         height: `${pixelsToRem(20)}rem`,
         backgroundColor: palette.GREY_10,
       },
+      '&:last-child::after': {
+        width: 1,
+        backgroundColor: 'rgba(0, 0, 0, 0)',
+      },
     }),
 
-  navLink: ({ spacings, palette, fontSizes }: Theme) =>
+  langNavLinkActive: ({ palette }: Theme) =>
     css({
-      textDecoration: 'none',
-      color: palette.GREY_8,
-      fontFamily: REITH_SANS,
-      fontWeight: 400,
-      ...fontSizes.pica,
-      lineHeight: `${pixelsToRem(22)}rem`,
-      letterSpacing: '0%',
-      padding: `${pixelsToRem(12)}rem ${spacings.FULL}rem`,
-      width: '100%',
-      display: 'block',
+      '&::after': {
+        content: '""',
+        position: 'absolute',
+        left: 0,
+        right: `${pixelsToRem(-1)}rem`,
+        bottom: 0,
+        borderBottom: `${pixelsToRem(4)}rem solid ${palette.POSTBOX}`,
+      },
     }),
-
-  navSummary: ({ spacings, fontSizes }: Theme) =>
+  langNavLink: ({ spacings, fontSizes, palette }: Theme) =>
     css({
-      display: 'flex',
-      alignItems: 'center',
+      display: 'inline-block',
       width: '100%',
       padding: `${pixelsToRem(12)}rem ${spacings.FULL}rem`,
       cursor: 'pointer',
-      listStyle: 'none',
-      border: 'none',
-      background: 'none',
       fontFamily: REITH_SANS,
       fontWeight: 400,
       ...fontSizes.pica,
       lineHeight: `${pixelsToRem(22)}rem`,
+      left: `${pixelsToRem(1)}rem`,
+      position: 'relative',
       letterSpacing: '0%',
-      '&::marker': {
-        display: 'none',
+      fontStyle: 'normal',
+      outline: 'none',
+      textDecoration: 'none',
+      color: palette.GREY_8,
+      '&:hover::after': {
+        content: '""',
+        position: 'absolute',
+        left: 0,
+        right: `${pixelsToRem(-1)}rem`,
+        bottom: 0,
+        borderBottom: `${pixelsToRem(4)}rem solid ${palette.POSTBOX}`,
+      },
+      '&:focus-visible::after': {
+        content: '""',
+        position: 'absolute',
+        left: `${pixelsToRem(1)}rem`,
+        right: 0,
+        bottom: 0,
+        borderBottom: `${pixelsToRem(4)}rem solid ${palette.POSTBOX}`,
+        top: 0,
+        border: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
       },
     }),
 
@@ -139,7 +164,7 @@ const styles = {
         : `${pixelsToRem(4)}rem solid transparent`,
       borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_3}`,
       width: '100%',
-      '&:hover, &:focus-within': {
+      '&:hover': {
         borderLeft: `${pixelsToRem(4)}rem solid ${palette.POSTBOX}`,
         outline: 'none',
         backgroundColor: palette.GREY_3,
