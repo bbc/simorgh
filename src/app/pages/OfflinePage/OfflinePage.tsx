@@ -1,15 +1,45 @@
-import { RequestContext } from '#app/contexts/RequestContext';
-import React, { useContext } from 'react';
+import React, { use } from 'react';
+import path from 'ramda/src/path';
+import Helmet from 'react-helmet';
+import { ServiceContext } from '#contexts/ServiceContext';
+import ErrorMain from '#components/ErrorMain';
 
 const OfflinePage = () => {
-  const { service } = useContext(RequestContext);
+  // Get service information from context or props
+  const {
+    service: contextService,
+    brandName,
+    dir,
+    script,
+    translations,
+  } = use(ServiceContext);
+  const message =
+    "Seems like you don't have an internet connection at the moment. Please check your connection and reload the page.";
+
+  const service = contextService;
+
+  const title = path(['offline', 'title'], translations) || 'You are offline.';
 
   return (
-    <div>
-      <h1>Offline Page</h1>
-      {service}
-      <p>This page is displayed when the user is offline.</p>
-    </div>
+    <>
+      <Helmet htmlAttributes={{ dir, lang: service }}>
+        <title>{`${title} - ${brandName}`}</title>
+      </Helmet>
+      <ErrorMain
+        statusCode={null}
+        title={title}
+        message={message}
+        solutions={path(['offline', 'solutions'], translations) || []}
+        callToActionLinkText={
+          path(['offline', 'callToActionLinkText'], translations) || ''
+        }
+        callToActionLinkUrl={
+          path(['offline', 'callToActionLinkUrl'], translations) || ''
+        }
+        script={script}
+        service={service}
+      />
+    </>
   );
 };
 
