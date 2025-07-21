@@ -17,6 +17,7 @@ import {
   promoSample,
   articlePglDataPidgin,
   articleStyDataPidgin,
+  articleDataPidginWithReadTime,
 } from '#pages/ArticlePage/fixtureData';
 import { data as newsMostReadData } from '#data/news/mostRead/index.json';
 import { data as persianMostReadData } from '#data/persian/mostRead/index.json';
@@ -937,6 +938,17 @@ describe('Article Page', () => {
 
       const title = screen.queryByRole('strong');
       expect(title).not.toBeInTheDocument();
+    });
+
+    it('should render read time component when readTime is supplied with in metadata', () => {
+      render(
+        <Context service="pidgin">
+          <ArticlePage pageData={articleDataPidginWithReadTime} />
+        </Context>,
+      );
+
+      const readTime = screen.getByText('read time: 4 minutes');
+      expect(readTime).toBeInTheDocument();
     });
   });
 });

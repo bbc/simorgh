@@ -80,6 +80,7 @@ import {
   isPortraitVideo,
   isPortraitVideoUnderHeadline,
 } from '../utils/portraitVideo';
+import ReadTime from '#app/components/ReadTime';
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -288,6 +289,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         experimentVariant,
       ),
   );
+
+  const readTime = pageData?.metadata?.stats?.readTime || undefined;
+
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics atiData={atiData} />
@@ -345,6 +349,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             ]}
             role="main"
           >
+            <ReadTime readTimeValue={readTime} css={styles.readTime} /> 
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
