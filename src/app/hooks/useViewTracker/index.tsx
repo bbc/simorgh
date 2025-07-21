@@ -194,11 +194,6 @@ export default (eventTrackingData?: EventTrackingData): any => {
 
   const viewTracker = getComponentViewTracker(eventTrackingData);
 
-  const staticATIUrl = constructStaticATIUrl({
-    eventTrackingData,
-    eventType: VIEW_EVENT,
-  });
-
   const reverbStaticUrl = constructReverbUrl({
     eventTrackingData,
     eventType: VIEW_EVENT,
@@ -206,7 +201,6 @@ export default (eventTrackingData?: EventTrackingData): any => {
 
   return isLite
     ? {
-        [STATIC_ATI_VIEW_TRACKING]: staticATIUrl,
         [STATIC_REVERB_VIEW_TRACKING]: reverbStaticUrl,
       }
     : {

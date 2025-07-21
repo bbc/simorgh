@@ -1,7 +1,6 @@
 /* istanbul ignore next */
 export default () => {
   const clickTrackingFiredUrls: string[] = [];
-  const STATIC_ATI_CLICK_TRACKING = 'data-static-ati-click';
   const STATIC_REVERB_CLICK_TRACKING = 'data-static-reverb-click';
   document.addEventListener('click', (event: MouseEvent) => {
     let targetElement;
@@ -20,27 +19,19 @@ export default () => {
       event.stopPropagation();
       event.preventDefault();
 
-      const atiURL = targetElement.getAttribute(
-        STATIC_ATI_CLICK_TRACKING,
-      ) as string;
-      const reverbURL = targetElement.getAttribute(
+      const reverbUrl = targetElement.getAttribute(
         STATIC_REVERB_CLICK_TRACKING,
       ) as string;
-      const primaryTrackingUrl = reverbURL ?? atiURL;
 
       const anchorElement = targetElement as HTMLAnchorElement;
       const nextPageUrl = anchorElement?.href;
 
-      if (
-        primaryTrackingUrl &&
-        !clickTrackingFiredUrls.includes(primaryTrackingUrl)
-      ) {
-        window.processClientDeviceAndSendStaticBeacon(
-          atiURL,
-          reverbURL,
-          nextPageUrl,
-        );
-        clickTrackingFiredUrls.push(primaryTrackingUrl);
+      if (reverbUrl && !clickTrackingFiredUrls.includes(reverbUrl)) {
+        window.processClientDeviceAndSendStaticBeacon({
+          reverbUrl,
+          forwardingUrl: nextPageUrl,
+        });
+        clickTrackingFiredUrls.push(reverbUrl);
       }
 
       window.location.assign(nextPageUrl);

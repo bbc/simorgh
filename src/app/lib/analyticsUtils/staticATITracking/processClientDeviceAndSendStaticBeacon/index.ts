@@ -1,10 +1,10 @@
 /* istanbul ignore next */
 export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
-  window.processClientDeviceAndSendStaticBeacon = (
-    atiURL,
-    reverbURL,
-    forwardingURL = '',
-  ) => {
+  window.processClientDeviceAndSendStaticBeacon = ({
+    atiUrl,
+    reverbUrl,
+    forwardingUrl = '',
+  }) => {
     const {
       screen: { width, height, colorDepth, pixelDepth },
       innerWidth,
@@ -72,8 +72,36 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
 
     params.ref = document.referrer || '';
 
-    if (reverbURL) {
-      const processedReverbUrl = reverbURL
+    if (isLiteSite && window.location.search.length) {
+      const kvpairs: Record<string, string> = window.location.search
+        .substring(1)
+        .split('&')
+        .map((param): [string, string] => {
+          const pieces = param.split('=');
+          return [decodeURIComponent(pieces[0]), decodeURIComponent(pieces[1])];
+        })
+        .reduce<Record<string, string>>((values, kv) => {
+          // eslint-disable-next-line no-param-reassign, prefer-destructuring
+          values[kv[0]] = kv[1];
+          return values;
+        }, {});
+
+      Object.keys(kvpairs).forEach(keyName => {
+        if (keyName.indexOf('at_') === 0) {
+          params[keyName.replace('at_', 'src_')] = kvpairs[keyName];
+        } else if (keyName.indexOf('utm_') === 0) {
+          params[keyName] = kvpairs[keyName];
+        }
+      });
+    }
+
+    if (reverbUrl) {
+      const marketingString = Object.keys(params)
+        .filter(key => key.startsWith('src_') || key.startsWith('utm_'))
+        .map(key => `${key}=${params[key]}`)
+        .join('&');
+
+      const processedReverbUrl = reverbUrl
         .replace('{screenResolutionColourDepth}', params.r)
         .replace('{browserViewportResolution}', params.re)
         .replace('{timestamp}', params.hl)
@@ -81,46 +109,22 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
         .replaceAll('{referrer}', params.ref)
         .replace('{idclient}', params.idclient)
         .replace('{epochTimestamp}', epochTimestamp)
-        .replace('{forwardingLink}', forwardingURL);
+        .replace('{forwardingLink}', forwardingUrl);
 
-      window.sendStaticBeacon(processedReverbUrl);
-    } else if (atiURL) {
-      if (isLiteSite && window.location.search.length) {
-        const kvpairs: Record<string, string> = window.location.search
-          .substring(1)
-          .split('&')
-          .map((param): [string, string] => {
-            const pieces = param.split('=');
-            return [
-              decodeURIComponent(pieces[0]),
-              decodeURIComponent(pieces[1]),
-            ];
-          })
-          .reduce<Record<string, string>>((values, kv) => {
-            // eslint-disable-next-line no-param-reassign, prefer-destructuring
-            values[kv[0]] = kv[1];
-            return values;
-          }, {});
-
-        Object.keys(kvpairs).forEach(keyName => {
-          if (keyName.indexOf('at_') === 0) {
-            params[keyName.replace('at_', 'src_')] = kvpairs[keyName];
-          } else if (keyName.indexOf('utm_') === 0) {
-            params[keyName] = kvpairs[keyName];
-          }
-        });
-      }
-
+      window.sendStaticBeacon(
+        `${processedReverbUrl}${marketingString ? `&${marketingString}` : ''}`,
+      );
+    } else if (atiUrl) {
       const paramValues = Object.keys(params)
         .map(key => `${key}=${params[key]}`)
         .join('&');
-      window.sendStaticBeacon(`${atiURL}&${paramValues}`);
+      window.sendStaticBeacon(`${atiUrl}&${paramValues}`);
     }
   };
 };
 
-export default (atiURL: string, reverbURL?: string) => {
+export default (reverbUrl: string) => {
   window.addEventListener('load', () => {
-    window.processClientDeviceAndSendStaticBeacon(atiURL, reverbURL);
+    window.processClientDeviceAndSendStaticBeacon({ reverbUrl });
   });
 };

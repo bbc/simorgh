@@ -152,11 +152,6 @@ export default (eventTrackingData = {}) => {
   const isHydrated = useHydrationDetection();
 
   const clickTracker = useClickTrackerHandler(eventTrackingData);
-  const staticAtiUrl = constructStaticATIUrl({
-    eventTrackingData,
-    eventType: CLICK_EVENT,
-    isStatic: !isHydrated,
-  });
 
   const enableStaticTracking = !isHydrated && !isAmp;
   const reverbStaticUrl = constructReverbUrl({
@@ -165,9 +160,6 @@ export default (eventTrackingData = {}) => {
   });
 
   return {
-    ...(enableStaticTracking && {
-      [STATIC_ATI_CLICK_TRACKING]: staticAtiUrl,
-    }),
     ...(enableStaticTracking && {
       [STATIC_REVERB_CLICK_TRACKING]: reverbStaticUrl,
     }),
