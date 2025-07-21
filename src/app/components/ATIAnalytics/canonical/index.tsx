@@ -12,7 +12,7 @@ import addInlineScript, {
 import { reverbUrlHelper } from '@bbc/reverb-url-helper';
 import { ATIAnalyticsProps } from '../types';
 import getNoScriptTrackingPixelUrl from './getNoScriptTrackingPixelUrl';
-// import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
+import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
 
 type ATIAnalyticsPropsExport = Pick<ATIAnalyticsProps, 'reverbParams'>;
 
@@ -66,10 +66,10 @@ const CanonicalATIAnalytics = ({
           script: sendPageViewBeaconLite,
           parameters: [atiPageViewUrlString, liteSiteReverbURL],
         })}
-      {/* {!isLite &&
+      {!isLite &&
         addScript({
-          script: sendPageViewBeaconOperaMini(atiPageViewUrlString),
-        })} */}
+          script: sendPageViewBeaconOperaMini(),
+        })}
       {renderNoScriptTrackingPixel(reverbParams)}
     </>
   );
