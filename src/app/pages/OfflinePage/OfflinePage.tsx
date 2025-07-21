@@ -5,7 +5,6 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import ErrorMain from '#components/ErrorMain';
 
 const OfflinePage = () => {
-  // Get service information from context or props
   const {
     service: contextService,
     brandName,
