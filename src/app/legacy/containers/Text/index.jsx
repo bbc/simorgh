@@ -80,6 +80,17 @@ const TextContainer = ({
       });
   };
 
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setShareLink('');
+      setCopied(false);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   if (!blocks) return null;
 
   return (
