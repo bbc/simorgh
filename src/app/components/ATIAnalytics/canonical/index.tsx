@@ -68,7 +68,7 @@ const CanonicalATIAnalytics = ({
         })}
       {!isLite &&
         addScript({
-          script: sendPageViewBeaconOperaMini(),
+          script: sendPageViewBeaconOperaMini(atiPageViewUrlString),
         })}
       {renderNoScriptTrackingPixel(reverbParams)}
     </>
