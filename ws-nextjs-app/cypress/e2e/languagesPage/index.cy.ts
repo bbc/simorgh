@@ -11,7 +11,7 @@ const testSuites = [
     path: '/ws/languages',
     service: 'ws',
     runforEnv: ['local'],
-    tests: [assertWSLanguagesPageLocal],
+    tests: [assertWSLanguagesPageLocal, assertWSLanguagesPageURN],
   },
   {
     path: '/ws/languages',
