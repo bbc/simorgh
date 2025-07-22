@@ -118,7 +118,7 @@ const TextContainer = ({
 
     const range = selection.getRangeAt(0);
 
-    // 👇 Snap selection to full words
+    // Snap selection to full words
     snapRangeToWordBoundaries(range);
 
     // Update user selection
@@ -172,12 +172,12 @@ const TextContainer = ({
           setCopied(true);
           setTimeout(() => setCopied(false), 2000);
         } catch (err) {
-          // Optionally show a notification for failure
+          // Show an error message to the user?
         }
         document.body.removeChild(textArea);
       });
   };
-
+  // Reset share link and copied state on scroll
   React.useEffect(() => {
     const handleScroll = () => {
       setShareLink('');
