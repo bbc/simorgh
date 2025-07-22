@@ -91,6 +91,8 @@ const LanguageNavigation = ({ languageSections }: LanguageNavigationProps) => {
                 </span>
                 <button
                   type="button"
+                  role="button"
+                  aria-label="Close"
                   className={css(styles.closeButton(theme))}
                   onClick={() => setOpenSection(null)}
                 >
