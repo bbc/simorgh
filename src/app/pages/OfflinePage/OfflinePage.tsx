@@ -22,7 +22,7 @@ const OfflinePage = () => {
   return (
     <>
       <Helmet htmlAttributes={{ dir, lang: service }}>
-        <title>{`${title} - ${brandName}`}</title>
+        <title>{`${title}`}</title>
       </Helmet>
       <ErrorMain
         statusCode={null}
