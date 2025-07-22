@@ -521,6 +521,7 @@ export const buildReverbEventModel = ({
   experimentVariant,
   itemTracker = {},
   groupTracker = {},
+  eventGroupingName,
 }: ATIEventTrackingProps): ReverbBeaconConfig => {
   const {
     type: itemType,
@@ -566,6 +567,7 @@ export const buildReverbEventModel = ({
       event: {
         category: 'viewability',
         action: type === CLICK_EVENT ? VIEWABILITY_CLICK_EVENT : VIEW_EVENT,
+        ...(eventGroupingName && { grouping: eventGroupingName }),
       },
       isClick: type === CLICK_EVENT,
       ...(experimentVariant && {

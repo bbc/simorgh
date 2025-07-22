@@ -21,6 +21,7 @@ export const sendEventBeacon = async ({
   useReverb,
   itemTracker,
   groupTracker,
+  eventGroupingName,
 }: ATIEventTrackingProps) => {
   const atiClickTrackingUrl = buildATIEventTrackUrl({
     campaignID,
@@ -54,6 +55,7 @@ export const sendEventBeacon = async ({
         experimentVariant,
         itemTracker,
         groupTracker,
+        eventGroupingName,
       })
     : null;
 
