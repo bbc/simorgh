@@ -57,6 +57,7 @@ const CanonicalATIAnalytics = ({
   }, [atiPageViewUrl, reverbBeaconConfig]);
 
   const liteSiteReverbURL = reverbUrlHelper.getLitePageViewUrl(reverbParams);
+  const trackingPixelURL = getNoScriptTrackingPixelUrl(reverbParams);
 
   return (
     <>
@@ -68,7 +69,7 @@ const CanonicalATIAnalytics = ({
         })}
       {!isLite &&
         addScript({
-          script: sendPageViewBeaconOperaMini(atiPageViewUrlString),
+          script: sendPageViewBeaconOperaMini(trackingPixelURL),
         })}
       {renderNoScriptTrackingPixel(reverbParams)}
     </>
