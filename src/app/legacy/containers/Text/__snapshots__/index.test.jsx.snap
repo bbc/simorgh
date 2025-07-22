@@ -284,92 +284,94 @@ exports[`TextContainer with data should render correctly 1`] = `
 }
 
 <div>
-  <div
-    class="emotion-0 emotion-1"
-    dir="ltr"
-  >
-    <p
-      class="emotion-2 emotion-3"
+  <div>
+    <div
+      class="emotion-0 emotion-1"
       dir="ltr"
     >
-      This is a 1st paragraph block.
-    </p>
-  </div>
-  <div
-    class="emotion-0 emotion-1"
-    dir="ltr"
-  >
-    <p
-      class="emotion-2 emotion-3"
-      dir="ltr"
-    >
-      This is a 2nd paragraph block.
-    </p>
-  </div>
-  <div
-    class="emotion-0 emotion-1"
-    dir="ltr"
-  >
-    <p
-      class="emotion-2 emotion-3"
-      dir="ltr"
-    >
-      This is a 3rd paragraph block.
-    </p>
-  </div>
-  <div
-    class="emotion-0 emotion-1"
-    dir="ltr"
-  >
-    <p
-      class="emotion-2 emotion-3"
-      dir="ltr"
-    >
-      This is a 4th paragraph block..
-    </p>
-  </div>
-  <div
-    class="emotion-0 emotion-1"
-    dir="ltr"
-  >
-    <p
-      class="emotion-2 emotion-3"
-      dir="ltr"
-    >
-      This is a 5th paragraph block.
-    </p>
-  </div>
-  <div
-    class="emotion-20 emotion-21 emotion-1"
-    dir="ltr"
-  >
-    <ul
-      class="emotion-23"
-      role="list"
-    >
-      <li
-        class="emotion-24"
-        role="listitem"
+      <p
+        class="emotion-2 emotion-3"
+        dir="ltr"
       >
-        This is a list item
-      </li>
-    </ul>
-  </div>
-  <div
-    class="emotion-20 emotion-21 emotion-1"
-    dir="ltr"
-  >
-    <ul
-      class="emotion-23"
-      role="list"
+        This is a 1st paragraph block.
+      </p>
+    </div>
+    <div
+      class="emotion-0 emotion-1"
+      dir="ltr"
     >
-      <li
-        class="emotion-24"
-        role="listitem"
+      <p
+        class="emotion-2 emotion-3"
+        dir="ltr"
       >
-        This is a list item
-      </li>
-    </ul>
+        This is a 2nd paragraph block.
+      </p>
+    </div>
+    <div
+      class="emotion-0 emotion-1"
+      dir="ltr"
+    >
+      <p
+        class="emotion-2 emotion-3"
+        dir="ltr"
+      >
+        This is a 3rd paragraph block.
+      </p>
+    </div>
+    <div
+      class="emotion-0 emotion-1"
+      dir="ltr"
+    >
+      <p
+        class="emotion-2 emotion-3"
+        dir="ltr"
+      >
+        This is a 4th paragraph block..
+      </p>
+    </div>
+    <div
+      class="emotion-0 emotion-1"
+      dir="ltr"
+    >
+      <p
+        class="emotion-2 emotion-3"
+        dir="ltr"
+      >
+        This is a 5th paragraph block.
+      </p>
+    </div>
+    <div
+      class="emotion-20 emotion-21 emotion-1"
+      dir="ltr"
+    >
+      <ul
+        class="emotion-23"
+        role="list"
+      >
+        <li
+          class="emotion-24"
+          role="listitem"
+        >
+          This is a list item
+        </li>
+      </ul>
+    </div>
+    <div
+      class="emotion-20 emotion-21 emotion-1"
+      dir="ltr"
+    >
+      <ul
+        class="emotion-23"
+        role="list"
+      >
+        <li
+          class="emotion-24"
+          role="listitem"
+        >
+          This is a list item
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 `;

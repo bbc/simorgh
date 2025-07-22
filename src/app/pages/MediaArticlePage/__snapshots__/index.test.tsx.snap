@@ -929,16 +929,18 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
               Headline
             </h2>
           </div>
-          <div
-            class="emotion-25 emotion-21"
-            dir="ltr"
-          >
-            <p
-              class="emotion-35 emotion-36"
+          <div>
+            <div
+              class="emotion-25 emotion-21"
               dir="ltr"
             >
-              Page Text
-            </p>
+              <p
+                class="emotion-35 emotion-36"
+                dir="ltr"
+              >
+                Page Text
+              </p>
+            </div>
           </div>
           <figure
             class="emotion-37"
