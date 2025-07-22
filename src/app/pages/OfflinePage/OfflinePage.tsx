@@ -7,7 +7,6 @@ import ErrorMain from '#components/ErrorMain';
 const OfflinePage = () => {
   const {
     service: contextService,
-    brandName,
     dir,
     script,
     translations,
