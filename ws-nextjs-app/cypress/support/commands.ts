@@ -8,7 +8,7 @@ import {
 declare global {
   namespace Cypress {
     interface Chainable {
-      getPageData: ({
+      getPageDataFromWindow: ({
         service,
         pageType,
         variant,
@@ -24,7 +24,7 @@ declare global {
   }
 }
 
-const getPageData = ({
+const getPageDataFromWindow = ({
   service,
   pageType,
   variant,
@@ -45,14 +45,17 @@ const getPageData = ({
     path = '/ws/languages';
   }
 
-  return cy
-    .request({
-      url: `${baseUrl}${path}`,
-      failOnStatusCode: false,
-    })
-    .then(response => {
-      return response.body;
-    });
+  cy.visit(`${baseUrl}${path}`);
+
+  return cy.window().then(win => {
+    // eslint-disable-next-line no-underscore-dangle, @typescript-eslint/no-explicit-any
+    const nextData = (win as any).__NEXT_DATA__?.props?.pageProps?.pageData;
+    if (!nextData) {
+      throw new Error('__NEXT_DATA__ not found on window');
+    }
+
+    return nextData;
+  });
 };
 
-Cypress.Commands.add('getPageData', getPageData);
+Cypress.Commands.add('getPageDataFromWindow', getPageDataFromWindow);
