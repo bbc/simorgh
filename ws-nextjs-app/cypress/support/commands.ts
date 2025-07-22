@@ -33,26 +33,7 @@ declare global {
   }
 }
 
-const getPageDataFromWindow = ({
-  service,
-  pageType,
-  variant,
-  id,
-}: {
-  service: Services;
-  pageType: PageTypes;
-  variant?: Variants;
-  id?: string;
-}) => {
-  const baseUrl =
-    Cypress.env('APP_ENV') === 'local'
-      ? 'http://localhost:7081'
-      : Cypress.config().baseUrl;
-  let path = `/${service}/${pageType}/${id}${variant ? `/${variant}` : ''}`;
-  if (service === 'ws') {
-    path = '/ws/languages';
-  }
-  cy.visit(`${baseUrl}${path}`);
+const getPageDataFromWindow = () => {
   return cy.window().then(win => {
     return (
       // eslint-disable-next-line no-underscore-dangle
