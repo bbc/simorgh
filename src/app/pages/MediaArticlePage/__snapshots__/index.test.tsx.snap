@@ -929,9 +929,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
               Headline
             </h2>
           </div>
-          <div
-            aria-hidden="true"
-          >
+          <div>
             <div
               class="emotion-25 emotion-21"
               dir="ltr"

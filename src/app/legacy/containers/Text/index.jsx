@@ -143,8 +143,8 @@ const TextContainer = ({
   if (!blocks) return null;
 
   return (
-    // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
-    <div onMouseUp={handleMouseUp} aria-hidden="true">
+    // eslint-disable-next-line jsx-a11y/no-static-element-interactions, jsx-a11y/click-events-have-key-events
+    <div onMouseUp={handleMouseUp}>
       <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       {shareLink && !copied && (
         <button

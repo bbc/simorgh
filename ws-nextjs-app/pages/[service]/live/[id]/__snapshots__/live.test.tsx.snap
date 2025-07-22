@@ -1230,9 +1230,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
           <div
             class="emotion-12"
           >
-            <div
-              aria-hidden="true"
-            >
+            <div>
               <div
                 class="emotion-13 emotion-14 emotion-15"
                 dir="ltr"

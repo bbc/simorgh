@@ -860,9 +860,7 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
               Article Headline in Pidgin
             </h1>
           </div>
-          <div
-            aria-hidden="true"
-          >
+          <div>
             <div
               class="emotion-8 emotion-5"
               dir="ltr"
@@ -2265,9 +2263,7 @@ exports[`Article Page should render a news article correctly 1`] = `
               Article Headline
             </h1>
           </div>
-          <div
-            aria-hidden="true"
-          >
+          <div>
             <div
               class="emotion-8 emotion-5"
               dir="ltr"
@@ -3127,9 +3123,7 @@ exports[`Article Page should render a news article with headline in the middle c
           >
             SEO Headline
           </h1>
-          <div
-            aria-hidden="true"
-          >
+          <div>
             <div
               class="emotion-5 emotion-6"
               dir="ltr"
@@ -3152,9 +3146,7 @@ exports[`Article Page should render a news article with headline in the middle c
               Article Headline
             </strong>
           </div>
-          <div
-            aria-hidden="true"
-          >
+          <div>
             <div
               class="emotion-5 emotion-6"
               dir="ltr"
@@ -3384,9 +3376,7 @@ exports[`Article Page should render a news article without headline correctly 1`
           >
             Article Headline
           </h1>
-          <div
-            aria-hidden="true"
-          >
+          <div>
             <div
               class="emotion-5 emotion-6"
               dir="ltr"
@@ -4486,9 +4476,7 @@ exports[`Article Page should render a rtl article (persian) with most read corre
               سرصفحه مقاله
             </h1>
           </div>
-          <div
-            aria-hidden="true"
-          >
+          <div>
             <div
               class="emotion-8 emotion-5"
               dir="rtl"

@@ -377,9 +377,7 @@ exports[`Gist should render the gist with multiple list items 1`] = `
       >
         At a glance
       </strong>
-      <div
-        aria-hidden="true"
-      >
+      <div>
         <div
           class="emotion-6 emotion-7 emotion-8 emotion-1"
           dir="ltr"
@@ -815,9 +813,7 @@ exports[`Gist should render the gist with one list item 1`] = `
       >
         At a glance
       </strong>
-      <div
-        aria-hidden="true"
-      >
+      <div>
         <div
           class="emotion-6 emotion-7 emotion-8 emotion-1"
           dir="ltr"
