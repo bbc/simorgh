@@ -34,10 +34,9 @@ describe('LanguageNavigation', () => {
   test('clicking a section toggles dropdown', () => {
     render(<LanguageNavigation languageSections={languageSections} />);
 
-    const sectionLink = screen.getByText('Section 1');
-    fireEvent.click(sectionLink);
+    const sectionTitle = screen.getByText('Section 1');
 
-    expect(screen.getByText('Section 1')).toBeInTheDocument();
+    fireEvent.click(sectionTitle);
 
     languageSections[0].links?.forEach(link => {
       expect(screen.getByText(link.label)).toBeInTheDocument();
@@ -47,29 +46,36 @@ describe('LanguageNavigation', () => {
   test('clicking the same section again closes the dropdown', () => {
     render(<LanguageNavigation languageSections={languageSections} />);
 
-    const sectionLink = screen.getByText('Section 1');
-    fireEvent.click(sectionLink);
-    fireEvent.click(sectionLink);
+    const sectionTitle = screen.getByText('Section 1');
+
+    fireEvent.click(sectionTitle);
+
+    fireEvent.click(sectionTitle);
 
     expect(screen.queryByText('Link 1')).not.toBeInTheDocument();
+    expect(screen.queryByText('Link 2')).not.toBeInTheDocument();
   });
 
   test('clicking close button closes the dropdown', () => {
     render(<LanguageNavigation languageSections={languageSections} />);
 
-    const sectionLink = screen.getByText('Section 1');
-    fireEvent.click(sectionLink);
+    const sectionTitle = screen.getByText('Section 1');
 
-    const closeButton = screen.getByRole('button');
+    fireEvent.click(sectionTitle);
+
+    const closeButton = screen.getByRole('button', { name: 'Close' });
     fireEvent.click(closeButton);
 
     expect(screen.queryByText('Link 1')).not.toBeInTheDocument();
+    expect(screen.queryByText('Link 2')).not.toBeInTheDocument();
   });
 
   test('renders links correctly when section is active', () => {
     render(<LanguageNavigation languageSections={languageSections} />);
-    const sectionLink = screen.getByText('Section 2');
-    fireEvent.click(sectionLink);
+
+    const sectionTitle = screen.getByText('Section 2');
+
+    fireEvent.click(sectionTitle);
 
     languageSections[1].links?.forEach(link => {
       expect(screen.getByText(link.label)).toBeInTheDocument();
