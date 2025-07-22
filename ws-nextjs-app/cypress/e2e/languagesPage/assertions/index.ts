@@ -16,6 +16,7 @@ export const assertWSLanguagesPageURN = () => {
       service: 'ws',
       pageType: 'home',
     }).then(pageData => {
+      cy.log('pageData', pageData);
       const urn = pageData?.metadata?.atiAnalytics?.contentId;
       expect(urn).to.equal('urn:bbc:tipo:topic:c6jdzrejj3p3t');
     });

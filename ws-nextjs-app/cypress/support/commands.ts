@@ -35,9 +35,9 @@ declare global {
 
 const getPageDataFromWindow = () => {
   return cy.window().then(win => {
-    const nextData = (win as CustomWindow).__NEXT_DATA__?.props?.pageProps
-      ?.pageData;
-    return nextData ?? null;
+    return (
+      (win as CustomWindow).__NEXT_DATA__?.props?.pageProps?.pageData || {}
+    );
   });
 };
 
