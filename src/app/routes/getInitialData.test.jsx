@@ -34,65 +34,106 @@ describe('getInitialData', () => {
         pageType === 'liveRadio'
           ? '/korean/bbc_korean_radio/liveradio'
           : MOCK_PATH;
-      it(`${pageType} - should handle Ares 404`, async () => {
-        fetch.mockResponseOnce(JSON.stringify({}), { status: 404 });
+      if (pageType !== 'offline') {
+        it(`${pageType} - should handle Ares 404`, async () => {
+          fetch.mockResponseOnce(JSON.stringify({}), { status: 404 });
 
-        const actual = await getInitialData({
-          path,
-          pageType,
-          toggles,
-        });
-        const expected = {
-          error: 'data_response_404',
-          status: 404,
-        };
+          const actual = await getInitialData({
+            path,
+            pageType,
+            toggles,
+          });
+          const expected = {
+            error: 'data_response_404',
+            status: 404,
+          };
 
-        expect(actual).toEqual(expected);
-      });
-
-      it(`${pageType} - should handle Ares 202`, async () => {
-        fetch.mockResponseOnce(JSON.stringify({}), { status: 202 });
-
-        const actual = await getInitialData({
-          path,
-          pageType,
-          toggles,
+          expect(actual).toEqual(expected);
         });
 
-        expect(actual.status).toEqual(502);
-        expect(actual.error).toMatch(
-          'Unexpected upstream response (HTTP status code 202) when requesting',
-        );
-      });
+        it(`${pageType} - should handle Ares 202`, async () => {
+          fetch.mockResponseOnce(JSON.stringify({}), { status: 202 });
 
-      it(`${pageType} - should handle Ares 500`, async () => {
-        fetch.mockResponseOnce(JSON.stringify({}), { status: 500 });
+          const actual = await getInitialData({
+            path,
+            pageType,
+            toggles,
+          });
 
-        const actual = await getInitialData({
-          path,
-          pageType,
-          toggles,
+          expect(actual.status).toEqual(502);
+          expect(actual.error).toMatch(
+            'Unexpected upstream response (HTTP status code 202) when requesting',
+          );
         });
 
-        expect(actual.status).toEqual(502);
-        expect(actual.error).toMatch(
-          'Unexpected upstream response (HTTP status code 500) when requesting',
-        );
-      });
+        it(`${pageType} - should handle Ares 500`, async () => {
+          fetch.mockResponseOnce(JSON.stringify({}), { status: 500 });
 
-      it(`${pageType} - should handle Ares returning unexpected data`, async () => {
-        fetch.mockResponseOnce('dataIsNotAsExpected');
+          const actual = await getInitialData({
+            path,
+            pageType,
+            toggles,
+          });
 
-        const actual = await getInitialData({
-          path,
-          pageType,
-          toggles,
+          expect(actual.status).toEqual(502);
+          expect(actual.error).toMatch(
+            'Unexpected upstream response (HTTP status code 500) when requesting',
+          );
         });
 
-        expect(actual.status).toEqual(502);
-        expect(actual.error).toEqual(
-          'invalid json response body at  reason: Unexpected token \'d\', "dataIsNotAsExpected" is not valid JSON',
-        );
-      });
+        it(`${pageType} - should handle Ares returning unexpected data`, async () => {
+          fetch.mockResponseOnce('dataIsNotAsExpected');
+
+          const actual = await getInitialData({
+            path,
+            pageType,
+            toggles,
+          });
+
+          expect(actual.status).toEqual(502);
+          expect(actual.error).toEqual(
+            'invalid json response body at  reason: Unexpected token \'d\', "dataIsNotAsExpected" is not valid JSON',
+          );
+        });
+      } else {
+        it(`${pageType} - should handle Ares 200`, async () => {
+          fetch.mockResponseOnce(JSON.stringify({}), { status: 404 });
+
+          const actual = await getInitialData({
+            path,
+            pageType,
+            toggles,
+          });
+          const expected = {
+            pageData: {
+              metadata: {
+                serviceConfig: {},
+                type: 'offline',
+              },
+            },
+            status: 200,
+          };
+
+          expect(actual).toEqual(expected);
+        });
+
+        it(`${pageType} - should handle Ares returning unexpected data`, async () => {
+          fetch.mockResponseOnce('dataIsNotAsExpected');
+
+          const actual = await getInitialData({
+            path,
+            pageType,
+            toggles,
+          });
+
+          expect(actual.status).toEqual(200);
+          expect(actual.pageData).toEqual({
+            metadata: {
+              serviceConfig: {},
+              type: 'offline',
+            },
+          });
+        });
+      }
     });
 });
