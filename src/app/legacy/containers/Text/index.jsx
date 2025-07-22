@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { POSTBOX } from '../../../components/ThemeProvider/palette';
 import paragraph from '../Paragraph';
 import unorderedList from '../BulletedList';
 import Blocks from '../Blocks';
@@ -6,7 +7,7 @@ import Blocks from '../Blocks';
 const shareButtonStyle = {
   position: 'fixed',
   cursor: 'pointer',
-  background: '#b80000', // BBC Postbox red
+  background: POSTBOX,
   border: 'none',
   borderRadius: '50%',
   padding: '8px',
@@ -15,6 +16,34 @@ const shareButtonStyle = {
   alignItems: 'center',
   justifyContent: 'center',
   boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
+};
+
+// 👇 Arrow function style
+const snapRangeToWordBoundaries = range => {
+  const isTextNode = node =>
+    node &&
+    node.nodeType === Node.TEXT_NODE &&
+    typeof node.textContent === 'string';
+
+  if (!isTextNode(range.startContainer) || !isTextNode(range.endContainer)) {
+    return;
+  }
+
+  const startText = range.startContainer.textContent;
+  const endText = range.endContainer.textContent;
+
+  let start = range.startOffset;
+  while (start > 0 && /\w/.test(startText[start - 1])) {
+    start -= 1;
+  }
+
+  let end = range.endOffset;
+  while (end < endText.length && /\w/.test(endText[end])) {
+    end += 1;
+  }
+
+  range.setStart(range.startContainer, start);
+  range.setEnd(range.endContainer, end);
 };
 
 const TextContainer = ({
@@ -31,28 +60,48 @@ const TextContainer = ({
 
   const handleMouseUp = () => {
     const selection = window.getSelection();
-    const selectedText = selection?.toString().trim();
-    if (selectedText && selection.rangeCount > 0) {
-      const range = selection.getRangeAt(0);
-      const rect = range.getBoundingClientRect();
-      setIconPosition({
-        top: rect.top - 50,
-        left: Math.max(rect.left + rect.width - 120, 50),
-      });
-      const textArray = selectedText.split(' ');
-      const startText = textArray.slice(0, 2).join(' ');
-      const endText = textArray.slice(-2).join(' ');
-      const encodedStart = encodeURIComponent(startText);
-      const encodedEnd = encodeURIComponent(endText);
-      const baseUrl = window.location.href.split('#')[0];
-      const outputText =
-        textArray.length > 4
-          ? `${encodedStart},${encodedEnd}`
-          : `${encodedStart}`;
-      const fragment = `#:~:text=${outputText}`;
-      const fullUrl = `${baseUrl}${fragment}`;
-      setShareLink(fullUrl);
+    const rawText = selection?.toString().trim();
+
+    if (!rawText || selection.rangeCount === 0) {
+      setShareLink('');
+      return;
     }
+
+    const range = selection.getRangeAt(0);
+
+    // 👇 Snap selection to full words
+    snapRangeToWordBoundaries(range);
+
+    // Update user selection
+    selection.removeAllRanges();
+    selection.addRange(range);
+
+    const selectedText = selection.toString().trim();
+
+    if (!selectedText || selectedText.length < 1) {
+      setShareLink('');
+      return;
+    }
+
+    const rect = range.getBoundingClientRect();
+    setIconPosition({
+      top: rect.top - 50,
+      left: Math.max(rect.left + rect.width - 120, 50),
+    });
+
+    const textArray = selectedText.split(' ');
+    const startText = textArray.slice(0, 2).join(' ');
+    const endText = textArray.slice(-2).join(' ');
+    const encodedStart = encodeURIComponent(startText);
+    const encodedEnd = encodeURIComponent(endText);
+    const baseUrl = window.location.href.split('#')[0];
+    const outputText =
+      textArray.length > 4
+        ? `${encodedStart},${encodedEnd}`
+        : `${encodedStart}`;
+    const fragment = `#:~:text=${outputText}`;
+    const fullUrl = `${baseUrl}${fragment}`;
+    setShareLink(fullUrl);
   };
 
   const copyToClipboard = () => {
