@@ -3,7 +3,7 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 import { REITH_SANS } from '#app/components/ThemeProvider/fontFamilies';
 
 const styles = {
-  langNavUnorderedList: () =>
+  langNavUnorderedList: ({ palette }: Theme) =>
     css({
       listStyleType: 'none',
       padding: 0,
@@ -12,6 +12,9 @@ const styles = {
       overflow: 'hidden',
       width: '100%',
       paddingBottom: `${pixelsToRem(1)}rem`,
+      '&:focus': {
+        outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
+      },
     }),
   wrapper: ({ fontMq, spacings, palette, fontSizes }: Theme) =>
     css({
@@ -39,7 +42,7 @@ const styles = {
         position: 'absolute',
         bottom: `${pixelsToRem(-1)}rem`,
         width: '180rem',
-        borderBottom: '0.0625rem solid #E6E8EA',
+        borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_3}`,
         zIndex: `${pixelsToRem(-1)}rem`,
       },
       '&::after': {
@@ -54,8 +57,7 @@ const styles = {
         backgroundColor: palette.GREY_10,
       },
       '&:last-child::after': {
-        width: 1,
-        backgroundColor: 'rgba(0, 0, 0, 0)',
+        background: 'none',
       },
     }),
 
@@ -111,6 +113,10 @@ const styles = {
     css({
       width: '100%',
       padding: `${spacings.FULL}rem 0`,
+      display: 'block',
+      '&:target': {
+        display: 'block',
+      },
     }),
 
   dropDownHeader: css({
@@ -151,7 +157,8 @@ const styles = {
       margin: 0,
       [mq.GROUP_4_MIN_WIDTH]: {
         columnCount: 4,
-        columnGap: `${spacings.FULL}rem`,
+        columnGap: `${spacings.DOUBLE}rem`,
+        columnRule: '0.0625rem solid #E6E8EA',
       },
     }),
 
@@ -172,14 +179,13 @@ const styles = {
       [mq.GROUP_4_MIN_WIDTH]: {
         display: 'inline-block',
         borderBottom: 'none',
-        borderRight: `${pixelsToRem(1)}rem solid ${palette.GREY_3}`,
       },
     }),
 
   dropDownLink: ({ spacings, palette }: Theme) =>
     css({
       display: 'inline-block',
-      width: 'auto',
+      width: '100%',
       height: '100%',
       padding: `${pixelsToRem(12)}rem ${spacings.FULL}rem`,
       textDecoration: 'none',

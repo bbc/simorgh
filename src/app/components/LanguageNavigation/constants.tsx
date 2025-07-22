@@ -17,7 +17,7 @@ const languageSections = [
       {
         id: 'afrique',
         href: 'https://www.bbc.com/afrique',
-        label: 'L&#39;actualité en Français',
+        label: "L'actualité en français",
       },
       {
         id: 'hausa',
