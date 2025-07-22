@@ -18,8 +18,8 @@ const shareButtonStyle = {
   boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
 };
 
-// 👇 Arrow function style
 const snapRangeToWordBoundaries = range => {
+  // Check if the start and end containers of the range are text nodes
   const isTextNode = node =>
     node &&
     node.nodeType === Node.TEXT_NODE &&
@@ -32,13 +32,62 @@ const snapRangeToWordBoundaries = range => {
   const startText = range.startContainer.textContent;
   const endText = range.endContainer.textContent;
 
+  // Use Intl.Segmenter if available
+  // Intl.Segmenter is not available in all browsers (e.g. older versions of Chrome, Firefox, Safari, or some mobile browsers).
+  // It is a relatively new API for locale-aware text segmentation.
+  if (typeof Intl !== 'undefined' && typeof Intl.Segmenter === 'function') {
+    try {
+      const segmenter = new Intl.Segmenter('auto', { granularity: 'word' });
+
+      // Handle start
+      // Segment the start text to find word boundaries
+      // This is more reliable than using RegExp for word boundaries, especially for languages with complex scripts.
+      // It also handles edge cases like punctuation and special characters.
+      // This may not work in all browsers, so we have a fallback below.
+      const startSegments = Array.from(segmenter.segment(startText));
+      let startIndex = range.startOffset;
+      const startSegment = startSegments.find(
+        segment =>
+          segment.index <= range.startOffset &&
+          range.startOffset < segment.index + segment.segment.length &&
+          segment.isWordLike,
+      );
+      if (startSegment) {
+        startIndex = startSegment.index;
+      }
+
+      // Handle end
+      const endSegments = Array.from(segmenter.segment(endText));
+      let endIndex = range.endOffset;
+      const endSegment = endSegments.find(
+        segment =>
+          segment.index < range.endOffset &&
+          range.endOffset <= segment.index + segment.segment.length &&
+          segment.isWordLike,
+      );
+      if (endSegment) {
+        endIndex = endSegment.index + endSegment.segment.length;
+      }
+
+      range.setStart(range.startContainer, startIndex);
+      range.setEnd(range.endContainer, endIndex);
+      return;
+    } catch (err) {
+      // Fallback to RegExp below
+    }
+  }
+
+  // Fallback: use Unicode-aware RegExp
+  // /\p{L}/u is a Unicode property escape that matches any character that is a letter in any language. L is short for the 'Letter' Unicode category
+  const isLetter = char => /\p{L}/u.test(char);
+
   let start = range.startOffset;
-  while (start > 0 && /\w/.test(startText[start - 1])) {
+  while (start > 0 && isLetter(startText[start - 1])) {
     start -= 1;
   }
 
   let end = range.endOffset;
-  while (end < endText.length && /\w/.test(endText[end])) {
+  while (end < endText.length && isLetter(endText[end])) {
     end += 1;
   }
 
