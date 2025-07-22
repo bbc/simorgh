@@ -143,7 +143,8 @@ const TextContainer = ({
   if (!blocks) return null;
 
   return (
-    <div onMouseUp={handleMouseUp}>
+    // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
+    <div onMouseUp={handleMouseUp} role="group">
       <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       {shareLink && !copied && (
         <button
@@ -182,6 +183,7 @@ const TextContainer = ({
             fontWeight: 'bold',
             boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
           }}
+          aria-label="link copied to clipboard"
         >
           Link copied
         </div>
