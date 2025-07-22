@@ -114,6 +114,12 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
 
 export default (atiURL: string, reverbURL?: string) => {
   window.addEventListener('load', () => {
-    window.processClientDeviceAndSendStaticBeacon(atiURL, reverbURL);
+    if (
+      window.location.pathname?.includes('.lite') ||
+      // @ts-expect-error yeah yeah
+      Object.prototype.toString.call(window.operamini) === '[object OperaMini]'
+    ) {
+      window.processClientDeviceAndSendStaticBeacon(atiURL, reverbURL);
+    }
   });
 };

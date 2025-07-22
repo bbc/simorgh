@@ -1,6 +1,6 @@
-import React, { use, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import { RequestContext } from '#app/contexts/RequestContext';
+// import { RequestContext } from '#app/contexts/RequestContext';
 // import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { Helmet } from 'react-helmet';
 import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
@@ -12,7 +12,7 @@ import addInlineScript, {
 import { reverbUrlHelper } from '@bbc/reverb-url-helper';
 import { ATIAnalyticsProps } from '../types';
 import getNoScriptTrackingPixelUrl from './getNoScriptTrackingPixelUrl';
-import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
+// import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
 
 type ATIAnalyticsPropsExport = Pick<ATIAnalyticsProps, 'reverbParams'>;
 
@@ -43,7 +43,7 @@ const CanonicalATIAnalytics = ({
   pageviewParams,
   reverbParams,
 }: ATIAnalyticsProps) => {
-  const { isLite } = use(RequestContext);
+  // const { isLite } = use(RequestContext);
 
   const atiPageViewUrlString =
     getEnvConfig().SIMORGH_ATI_BASE_URL + pageviewParams;
@@ -57,20 +57,15 @@ const CanonicalATIAnalytics = ({
   }, [atiPageViewUrl, reverbBeaconConfig]);
 
   const liteSiteReverbURL = reverbUrlHelper.getLitePageViewUrl(reverbParams);
-  const trackingPixelURL = getNoScriptTrackingPixelUrl(reverbParams);
+  // const trackingPixelURL = getNoScriptTrackingPixelUrl(reverbParams);
 
   return (
     <>
       {addScript({ script: addSendStaticBeaconToWindow() })}
-      {isLite &&
-        addScript({
-          script: sendPageViewBeaconLite,
-          parameters: [atiPageViewUrlString, liteSiteReverbURL],
-        })}
-      {!isLite &&
-        addScript({
-          script: sendPageViewBeaconOperaMini(trackingPixelURL),
-        })}
+      {addScript({
+        script: sendPageViewBeaconLite,
+        parameters: [atiPageViewUrlString, liteSiteReverbURL],
+      })}
       {renderNoScriptTrackingPixel(reverbParams)}
     </>
   );
