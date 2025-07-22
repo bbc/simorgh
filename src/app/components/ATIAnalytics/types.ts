@@ -126,6 +126,7 @@ export type ReverbEventDetails = {
   event?: {
     category: string;
     action: 'select' | 'view';
+    grouping?: string;
   };
   eventName: 'pageView' | 'sectionView' | 'sectionClick';
   eventPublisher?: string;
@@ -168,6 +169,7 @@ export interface ATIEventTrackingProps {
   itemTracker?: ItemTracker;
   groupTracker?: GroupTracker;
   viewThreshold?: number;
+  eventGroupingName?: string;
 }
 
 export interface ItemTracker {
