@@ -1,5 +1,5 @@
 import { ClassNames, useTheme } from '@emotion/react';
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from './index.styles';
 import { Close } from '../icons';
 
@@ -25,11 +25,23 @@ const LanguageNavigation = ({ languageSections }: LanguageNavigationProps) => {
   const theme = useTheme();
   const activeSection = languageSections.find(s => s.id === openSection);
 
+  const showSubListItems = useRef(false);
+  useEffect(() => {
+    if (window.document) {
+      showSubListItems.current = true;
+    }
+  }, []);
+
   return (
     <ClassNames>
       {({ css }) => (
         <>
-          <ul className={css(styles.langNavUnorderedList())}>
+          <ul
+            role="list"
+            // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+            tabIndex={0}
+            className={css(styles.langNavUnorderedList(theme))}
+          >
             {languageSections.map((section, index) => {
               const isLast = index === languageSections.length - 1;
 
@@ -41,9 +53,10 @@ const LanguageNavigation = ({ languageSections }: LanguageNavigationProps) => {
                   className={css(
                     styles.langNavItem({ ...theme, isLast, isActive }),
                   )}
+                  role="listitem"
                 >
                   <a
-                    href="#link"
+                    href={section.href || `#${section.id}`}
                     onClick={e => {
                       e.preventDefault();
                       const isOpen = isActive ? null : section.id;
@@ -53,6 +66,18 @@ const LanguageNavigation = ({ languageSections }: LanguageNavigationProps) => {
                   >
                     {section.title}
                   </a>
+                  {!showSubListItems.current &&
+                    section.links?.map(item => (
+                      <ul
+                        role="list"
+                        style={{ display: 'none', visibility: 'hidden' }}
+                        key={item.id}
+                      >
+                        <li>
+                          <a href={item.href}>{item.label}</a>
+                        </li>
+                      </ul>
+                    ))}
                 </li>
               );
             })}
