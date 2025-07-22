@@ -284,7 +284,7 @@ const REITH_QALAM_REGULAR = {
     fontFamily: 'BBC Reith Qalam',
     fontWeight: 400,
     fontStyle: 'normal',
-    src: 'url("https://static.files.bbci.co.uk/fonts/ReithQalam/v1.310/BBCReithQalam_Regular.woff2") format("woff2"), url("https://static.files.bbci.co.uk/fonts/ReithQalam/v1.310/BBCReithQalam_Regular.woff") format("woff")',
+    src: 'url("https://static.files.bbci.co.uk/fonts/reith-qalam/1.310/BBCReithQalam_W_Rg.woff2") format("woff2"), url("https://static.files.bbci.co.uk/fonts/reith-qalam/v1.310/BBCReithQalam_W_Rg.woff") format("woff")',
     fontDisplay: 'block',
   },
 };
@@ -294,7 +294,7 @@ const REITH_QALAM_BOLD = {
     fontFamily: 'BBC Reith Qalam',
     fontWeight: 700,
     fontStyle: 'normal',
-    src: 'url("https://static.files.bbci.co.uk/fonts/ReithQalam/v1.310/BBCReithQalam_Bold.woff2") format("woff2"), url("https://static.files.bbci.co.uk/fonts/ReithQalam/v1.310/BBCReithQalam_Bold.woff") format("woff")',
+    src: 'url("https://static.files.bbci.co.uk/fonts/reith-qalam/v1.310/BBCReithQalam_W_Bd.woff2") format("woff2"), url("https://static.files.bbci.co.uk/fonts/reith-qalam/v1.310/BBCReithQalam_W_Bd.woff") format("woff")',
     fontDisplay: 'block',
   },
 };

@@ -24,7 +24,7 @@ const NOTO_SERIF_BENGALI_FONTS_DIR =
   'https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifBengali/v1.00/';
 
 const REITH_QALAM_FONTS_DIR =
-  'https://static.files.bbci.co.uk/fonts/reith-qalam/v1.310/';
+  'https://static.files.bbci.co.uk/fonts/reith-qalam/1.310/';
 
 const REITH_SERIF_LIGHT = {
   name: 'BBCReithSerif_WNumbers_Lt',
