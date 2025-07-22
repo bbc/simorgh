@@ -29,6 +29,5 @@ const testSuites = [
 
 runTestsForPage({
   testSuites,
-  testIsolation: true,
   pageType: STATIC_PAGE,
 });
