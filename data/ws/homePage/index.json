@@ -99,7 +99,7 @@
       "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:c6jdzrejj3p3t",
         "contentType": "index-home",
-        "pageIdentifier": "ws.languages.page",
+        "pageIdentifier": "ws.page",
         "pageTitle": "BBC World Service - global front page"
       }
     },
