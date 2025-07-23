@@ -150,10 +150,10 @@ export default {
           90deg, ${extraWideMask})`, // 90deg for RTL
       },
     }),
-  vignette: () =>
+  vignette: (isRtl: boolean) => () =>
     css({
       maskImage: `
-          linear-gradient(to left, black 0%, black 70%, transparent 100%),
+          linear-gradient(to ${isRtl ? 'right' : 'left'}, black 0%, black 50%, transparent 100%),
           linear-gradient(to bottom, black 0%, black 80%, transparent 100%)`,
       maskComposite: 'intersect',
       zIndex: -1,

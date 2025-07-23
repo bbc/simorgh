@@ -24,7 +24,7 @@ const getGradientStyles = ({
   isRtl: boolean;
   showVignette: boolean;
 }) => {
-  if (showVignette) return styles.vignette;
+  if (showVignette) return styles.vignette(isRtl);
 
   if (isRtl) return styles.linearGradientRtl;
 
