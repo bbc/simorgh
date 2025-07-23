@@ -73,6 +73,7 @@ const defaultCyrillicConfig = {
     skipLinkText: 'Саҳифага ўтиш',
     relatedContent: 'Мавзуга алоқадор',
     relatedTopics: 'Алоқадор мавзулар',
+    moreOnThis: '',
     navMenuText: 'Бўлимлар',
     mediaAssetPage: {
       mediaPlayer: 'Медиа плейер',

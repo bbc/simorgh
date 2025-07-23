@@ -253,6 +253,30 @@ export default {
       linkText: 'Jio Saavn',
       linkUrl:
         'https://www.jiosaavn.com/shows/the-lens-%e0%a4%ae%e0%a5%81%e0%a4%95%e0%a5%87%e0%a4%b6-%e0%a4%b6%e0%a4%b0%e0%a5%8d%e0%a4%ae%e0%a4%be-%e0%a4%95%e0%a5%87-%e0%a4%b8%e0%a4%be%e0%a4%a5/1/ESz7PpxJiiA_',
+      linkType: 'jiosaavn',
+    },
+  ],
+  p0lcbcc5: [
+    {
+      linkText: 'Spotify',
+      linkUrl: 'https://open.spotify.com/show/2MyEacTAtdj7Bzl8zch1xY',
+      linkType: 'spotify',
+    },
+    {
+      linkText: 'Apple',
+      linkUrl:
+        'https://podcasts.apple.com/us/podcast/एक-गहरी-पड़ताल/id1815489726',
+      linkType: 'apple',
+    },
+    {
+      linkText: 'Jio Saavn',
+      linkUrl:
+        'https://www.saavn.com/s/show/investigation-%e0%a4%8f%e0%a4%95-%e0%a4%97%e0%a4%b9%e0%a4%b0%e0%a5%80-%e0%a4%aa%e0%a4%a1%e0%a4%bc%e0%a4%a4%e0%a4%be%e0%a4%b2/1/4VgkitWQ,I0_',
+      linkType: 'jiosaavn',
+    },
+    {
+      linkText: 'Gaana',
+      linkUrl: 'https://gaana.com/podcast/investigation-season-1',
       linkType: 'gaana',
     },
   ],

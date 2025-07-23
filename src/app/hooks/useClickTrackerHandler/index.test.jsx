@@ -8,7 +8,7 @@ import { waitFor } from '@testing-library/dom';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import * as trackingToggle from '#hooks/useTrackingToggle';
 import constructATIUrl from '#app/lib/analyticsUtils/staticATITracking/constructATIUrl';
-import useOptimizelyMvtVariation from '../useOptimizelyMvtVariation';
+import * as useOptimizelyVariation from '../useOptimizelyVariation';
 import {
   AllTheProviders,
   render,
@@ -67,8 +67,6 @@ window.__reverb = {
   __reverbLoadedPromise: Promise.resolve(reverbMock),
 };
 
-jest.mock('#app/hooks/useOptimizelyMvtVariation', () => jest.fn());
-
 const wrapper = ({ children }) => (
   <AllTheProviders
     bbcOrigin="https://www.test.bbc.com"
@@ -122,7 +120,7 @@ beforeEach(() => {
     ...rest,
   };
 
-  useOptimizelyMvtVariation.mockReturnValue(null);
+  jest.spyOn(useOptimizelyVariation, 'default').mockReturnValue(null);
 
   jest.replaceProperty(
     serviceContextModule,
