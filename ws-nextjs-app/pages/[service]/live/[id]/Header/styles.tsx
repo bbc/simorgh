@@ -1,5 +1,5 @@
 import { css, Theme } from '@emotion/react';
-import pixelsToRem from 'simorgh/src/app/utilities/pixelsToRem/pixelsToRem';
+import pixelsToRem from '../../../../../../src/app/utilities/pixelsToRem';
 
 export default {
   headerContainer: ({ mq }: Theme) =>
