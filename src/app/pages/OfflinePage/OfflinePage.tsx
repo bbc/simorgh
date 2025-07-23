@@ -5,16 +5,9 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import ErrorMain from '#components/ErrorMain';
 
 const OfflinePage = () => {
-  const {
-    service: contextService,
-    dir,
-    script,
-    translations,
-  } = use(ServiceContext);
+  const { service, dir, script, translations } = use(ServiceContext);
   const message =
     "Seems like you don't have an internet connection at the moment. Please check your connection and reload the page.";
-
-  const service = contextService;
 
   const title = path(['offline', 'title'], translations) || 'You are offline.';
 
