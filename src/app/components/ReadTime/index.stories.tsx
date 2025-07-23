@@ -1,13 +1,10 @@
-import React from "react";
-import ReadTime from "."; 
+import React from 'react';
+import ReadTime from '.';
 import readme from './README.md';
 
-
-
-const Component = () => {  return (
-    <ReadTime readTimeValue={1} />
-  );
-}  
+const Component = ({ readTimeValue }: { readTimeValue: number }) => (
+  <ReadTime readTimeValue={readTimeValue} />
+);
 
 export default {
   title: 'Components/ReadTime',
@@ -17,4 +14,5 @@ export default {
   },
 };
 
-export const Example = () => <Component />;
+export const ExampleReadTimeOver1Minute = () => <ReadTime readTimeValue={7} />;
+export const Example1MinuteReadTime = () => <ReadTime readTimeValue={1} />;
