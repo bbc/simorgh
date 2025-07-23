@@ -947,7 +947,7 @@ describe('Article Page', () => {
         </Context>,
       );
 
-      const readTime = screen.getByText('read time: 4 minutes');
+      const readTime = screen.getByText('Estimated Read Time: 4 minutes');
       expect(readTime).toBeInTheDocument();
     });
   });
