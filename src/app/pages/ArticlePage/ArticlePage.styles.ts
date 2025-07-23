@@ -177,6 +177,6 @@ export default {
     commonMarginSpacing,
   ],
   readTime: () => css({
-    display: 'none',
+    padding: 0,
   }),
 };
