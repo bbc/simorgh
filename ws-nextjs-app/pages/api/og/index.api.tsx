@@ -108,6 +108,7 @@ export default async function handler(req: NextApiRequest) {
           }
           text={breakingText}
           backgroundColor={POSTBOX}
+          uppercase
         />
       ),
       IS_LIVE && (
@@ -123,6 +124,7 @@ export default async function handler(req: NextApiRequest) {
           }
           text={liveText}
           backgroundColor={LIVE_CORE}
+          uppercase
         />
       ),
       IS_POPULAR && (

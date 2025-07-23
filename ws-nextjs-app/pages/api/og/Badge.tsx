@@ -2,12 +2,18 @@ import React from 'react';
 import { GREY_8, WHITE } from '#app/components/ThemeProvider/palette';
 
 type BadgeProps = {
-  icon?: React.ReactNode;
   backgroundColor?: string;
+  icon?: React.ReactNode;
   text: string;
+  uppercase?: boolean;
 };
 
-const Badge = ({ icon, text, backgroundColor = GREY_8 }: BadgeProps) => (
+const Badge = ({
+  icon,
+  text,
+  backgroundColor = GREY_8,
+  uppercase,
+}: BadgeProps) => (
   <div
     style={{
       display: 'flex',
@@ -29,7 +35,9 @@ const Badge = ({ icon, text, backgroundColor = GREY_8 }: BadgeProps) => (
       }}
     >
       {icon && icon}
-      <span style={{ textTransform: 'uppercase' }}>{text}</span>
+      <span style={uppercase ? { textTransform: 'uppercase' } : {}}>
+        {text}
+      </span>
     </div>
   </div>
 );
