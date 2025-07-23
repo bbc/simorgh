@@ -1,0 +1,9 @@
+:root {
+  --grid-width-240: 240px;
+  --grid-width-360: 360px;
+  --grid-width-400: 400px;
+  --grid-width-600: 600px;
+  --grid-width-900: 900px;
+  --grid-width-1008: 1008px;
+  --grid-width-1280: 1280px;
+}

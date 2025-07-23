@@ -92,6 +92,33 @@ module.exports = ({
         ? `http://localhost:${webpackDevServerPort}/`
         : prodPublicPath,
     },
+    module: {
+      rules: [
+        // CSS Modules: .module.css files
+        {
+          test: /\.module\.css$/,
+          use: [
+            'style-loader',
+            {
+              loader: 'css-loader',
+              options: {
+                modules: {
+                  localIdentName: '[name]__[local]___[hash:base64:5]',
+                },
+                importLoaders: 1,
+                sourceMap: !IS_PROD,
+              },
+            },
+          ],
+        },
+        // Global CSS: regular .css files
+        {
+          test: /\.css$/,
+          exclude: /\.module\.css$/,
+          use: ['style-loader', 'css-loader'],
+        },
+      ],
+    },
     optimization: {
       moduleIds: 'deterministic',
       minimizer: [

@@ -1,0 +1,120 @@
+@font-face {
+  font-family: 'ReithSans';
+  src: url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSans_W_Bd.woff2') format('woff2');
+  font-weight: 700;
+  font-display: optional;
+}
+@font-face {
+  font-family: 'ReithSans';
+  src: url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSans_W_Rg.woff2') format('woff2');
+  font-weight: 400;
+  font-display: optional;
+}
+@font-face {
+  font-family: 'ReithSerif';
+  src: url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSerif_W_Md.woff2') format('woff2');
+  font-weight: 500;
+  font-display: optional;
+}
+@font-face {
+  font-family: 'ReithSerif';
+  src: url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSerif_WNumbers_Lt.woff2') format('woff2');
+  font-weight: 300;
+  font-display: optional;
+}
+@font-face {
+  font-family: 'BBC Reith Qalam';
+  src: url('https://ws-downloads.files.bbci.co.uk/fonts/ReithQalam/v1.310/normal.woff2') format('woff2');
+  font-weight: 400;
+  font-display: optional;
+}
+@font-face {
+  font-family: 'BBC Reith Qalam';
+  src: url('https://ws-downloads.files.bbci.co.uk/fonts/ReithQalam/v1.310/bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: optional;
+}
+@font-face {
+  font-family: 'Noto Serif Sinhala';
+  src: url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifSinhala/v1.00/normal.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Noto Serif Sinhala';
+  src: url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifSinhala/v1.00/bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Noto Serif Bengali';
+  src: url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifBengali/v1.00/normal.woff2') format('woff2');
+  font-weight: 400;
+  font-display: optional;
+}
+@font-face {
+  font-family: 'Noto Serif Bengali';
+  src: url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifBengali/v1.00/bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: optional;
+}
+@font-face {
+  font-family: 'Noto Sans Tamil';
+  src: url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTamil/v1.00/normal.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Noto Sans Tamil';
+  src: url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTamil/v1.00/bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Noto Sans Telugu';
+  src: url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTelugu/v1.00/normal.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Noto Sans Telugu';
+  src: url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTelugu/v1.00/bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Noto Sans Gujarati';
+  src: url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansGujarati/v1.00/normal.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Noto Sans Gujarati';
+  src: url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansGujarati/v1.00/bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Noto Sans Ethiopic';
+  src: url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansEthiopic/v1.901/normal.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Noto Sans Ethiopic';
+  src: url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansEthiopic/v1.901/bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Padauk';
+  src: url('https://ws-downloads.files.bbci.co.uk/fonts/Padauk/v2.8/normal.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Padauk';
+  src: url('https://ws-downloads.files.bbci.co.uk/fonts/Padauk/v2.8/bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}

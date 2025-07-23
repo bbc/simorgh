@@ -1,0 +1,6 @@
+:root {
+  --font-group-a-max-width: 19.9375rem; /* 319px */
+  --font-group-b-min-width: 20rem;      /* 320px */
+  --font-group-b-max-width: 37.4375rem; /* 599px */
+  --font-group-d-min-width: 37.5rem;    /* 600px */
+}

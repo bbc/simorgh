@@ -1,0 +1,121 @@
+:root {
+  /* Atlas */
+  --font-size-atlas-group-a: 4rem;
+  --line-height-atlas-group-a: 4.5rem;
+  --font-size-atlas-group-b: 3.5rem;
+  --line-height-atlas-group-b: 4rem;
+  --font-size-atlas-group-d: 3rem;
+  --line-height-atlas-group-d: 3.5rem;
+
+  /* Elephant */
+  --font-size-elephant-group-a: 3.5rem;
+  --line-height-elephant-group-a: 4rem;
+  --font-size-elephant-group-b: 3rem;
+  --line-height-elephant-group-b: 3.5rem;
+  --font-size-elephant-group-d: 2.5rem;
+  --line-height-elephant-group-d: 3rem;
+
+  /* Imperial */
+  --font-size-imperial-group-a: 3rem;
+  --line-height-imperial-group-a: 3.5rem;
+  --font-size-imperial-group-b: 2.5rem;
+  --line-height-imperial-group-b: 3rem;
+  --font-size-imperial-group-d: 2rem;
+  --line-height-imperial-group-d: 2.5rem;
+
+  /* Royal */
+  --font-size-royal-group-a: 2.5rem;
+  --line-height-royal-group-a: 3rem;
+  --font-size-royal-group-b: 2rem;
+  --line-height-royal-group-b: 2.5rem;
+  --font-size-royal-group-d: 1.75rem;
+  --line-height-royal-group-d: 2rem;
+
+  /* Foolscap */
+  --font-size-foolscap-group-a: 2rem;
+  --line-height-foolscap-group-a: 2.5rem;
+  --font-size-foolscap-group-b: 1.75rem;
+  --line-height-foolscap-group-b: 2rem;
+  --font-size-foolscap-group-d: 1.5rem;
+  --line-height-foolscap-group-d: 1.75rem;
+
+  /* Canon */
+  --font-size-canon-group-a: 1.75rem;
+  --line-height-canon-group-a: 2rem;
+  --font-size-canon-group-b: 1.5rem;
+  --line-height-canon-group-b: 1.75rem;
+  --font-size-canon-group-d: 1.25rem;
+  --line-height-canon-group-d: 1.5rem;
+
+  /* Trafalgar */
+  --font-size-trafalgar-group-a: 1.5rem;
+  --line-height-trafalgar-group-a: 1.75rem;
+  --font-size-trafalgar-group-b: 1.25rem;
+  --line-height-trafalgar-group-b: 1.5rem;
+  --font-size-trafalgar-group-d: 1.125rem;
+  --line-height-trafalgar-group-d: 1.25rem;
+
+  /* Paragon */
+  --font-size-paragon-group-a: 1.25rem;
+  --line-height-paragon-group-a: 1.5rem;
+  --font-size-paragon-group-b: 1.125rem;
+  --line-height-paragon-group-b: 1.25rem;
+  --font-size-paragon-group-d: 1rem;
+  --line-height-paragon-group-d: 1.125rem;
+
+  /* Double Pica */
+  --font-size-double-pica-group-a: 1.125rem;
+  --line-height-double-pica-group-a: 1.25rem;
+  --font-size-double-pica-group-b: 1rem;
+  --line-height-double-pica-group-b: 1.125rem;
+  --font-size-double-pica-group-d: 0.9375rem;
+  --line-height-double-pica-group-d: 1rem;
+
+  /* Great Primer */
+  --font-size-great-primer-group-a: 1rem;
+  --line-height-great-primer-group-a: 1.125rem;
+  --font-size-great-primer-group-b: 0.9375rem;
+  --line-height-great-primer-group-b: 1rem;
+  --font-size-great-primer-group-d: 0.875rem;
+  --line-height-great-primer-group-d: 0.9375rem;
+
+  /* Body Copy */
+  --font-size-body-copy-group-a: 0.9375rem;
+  --line-height-body-copy-group-a: 1rem;
+  --font-size-body-copy-group-b: 0.875rem;
+  --line-height-body-copy-group-b: 0.9375rem;
+  --font-size-body-copy-group-d: 0.8125rem;
+  --line-height-body-copy-group-d: 0.875rem;
+
+  /* Pica */
+  --font-size-pica-group-a: 0.875rem;
+  --line-height-pica-group-a: 0.9375rem;
+  --font-size-pica-group-b: 0.8125rem;
+  --line-height-pica-group-b: 0.875rem;
+  --font-size-pica-group-d: 0.75rem;
+  --line-height-pica-group-d: 0.8125rem;
+
+  /* Long Primer */
+  --font-size-long-primer-group-a: 0.8125rem;
+  --line-height-long-primer-group-a: 0.875rem;
+  --font-size-long-primer-group-b: 0.75rem;
+  --line-height-long-primer-group-b: 0.8125rem;
+  --font-size-long-primer-group-d: 0.6875rem;
+  --line-height-long-primer-group-d: 0.75rem;
+
+  /* Brevier */
+  --font-size-brevier-group-a: 0.75rem;
+  --line-height-brevier-group-a: 0.8125rem;
+  --font-size-brevier-group-b: 0.6875rem;
+  --line-height-brevier-group-b: 0.75rem;
+  --font-size-brevier-group-d: 0.625rem;
+  --line-height-brevier-group-d: 0.6875rem;
+
+  /* Minion */
+  --font-size-minion-group-a: 0.6875rem;
+  --line-height-minion-group-a: 0.75rem;
+  --font-size-minion-group-b: 0.625rem;
+  --line-height-minion-group-b: 0.6875rem;
+  --font-size-minion-group-d: 0.5625rem;
+  --line-height-minion-group-d: 0.625rem;
+}

@@ -1,0 +1,14 @@
+/* CSS Modules equivalent of spacings.ts as CSS custom properties [copilot] */
+:root {
+  --spacing-full: 0.5rem;
+  --spacing-half: 0.25rem;
+  --spacing-double: 1rem;
+  --spacing-triple: 1.5rem;
+  --spacing-quadruple: 2rem;
+  --spacing-quintuple: 2.5rem;
+  --spacing-sextuple: 3rem;
+  --margin-below-400px: 0.5rem;
+  --gutter-below-600px: 0.5rem;
+  --margin-above-400px: 1rem;
+  --gutter-above-600px: 1rem;
+}
