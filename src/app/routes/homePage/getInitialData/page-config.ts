@@ -194,7 +194,7 @@ export const HOME_PAGE_CONFIG: {
     live: 'c5q5105m81dt',
   },
   ws: {
-    test: '',
+    test: 'c6jdzrejj3p3t',
     live: '',
   },
   yoruba: {

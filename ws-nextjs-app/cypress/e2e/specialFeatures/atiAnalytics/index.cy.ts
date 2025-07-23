@@ -42,25 +42,37 @@ const canonicalTestSuites = [
       assertScrollableNavigationComponentClick,
     ],
   },
+  {
+    path: '/ws/languages',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'ws',
+    pageIdentifier: 'ws.languages.page',
+    applicationType: 'responsive',
+    contentType: 'index-home',
+    useReverb: true,
+    tests: [assertPageView],
+  },
 ];
 
-const liteTestSuites = canonicalTestSuites.map(testSuite => {
-  const liteSiteTests = testSuite.tests.filter(
-    test =>
-      // Exclude component click tests, as component click support is not supported on all components yet
-      !test.name.toLowerCase().includes('click'),
-  );
+const liteTestSuites = canonicalTestSuites
+  .filter(({ path }) => path !== '/ws/languages')
+  .map(testSuite => {
+    const liteSiteTests = testSuite.tests.filter(
+      test =>
+        // Exclude component click tests, as component click support is not supported on all components yet
+        !test.name.toLowerCase().includes('click'),
+    );
 
-  liteSiteTests.push(assertLiteSiteSummaryComponentToMainSiteClick);
+    liteSiteTests.push(assertLiteSiteSummaryComponentToMainSiteClick);
 
-  return {
-    ...testSuite,
-    path: `${testSuite.path}.lite`,
-    applicationType: 'lite',
-    useReverb: false,
-    tests: [...liteSiteTests],
-  };
-});
+    return {
+      ...testSuite,
+      path: `${testSuite.path}.lite`,
+      applicationType: 'lite',
+      useReverb: false,
+      tests: [...liteSiteTests],
+    };
+  });
 
 runTestsForPage({
   testSuites: [...canonicalTestSuites, ...liteTestSuites],
