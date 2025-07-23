@@ -14,5 +14,5 @@ export default {
   },
 };
 
-export const ExampleReadTimeOver1Minute = () => <ReadTime readTime={7} />;
-export const Example1MinuteReadTime = () => <ReadTime readTime={1} />;
+export const Example = () => <ReadTime readTime={7} />;
+export const OneMinuteReadTime = () => <ReadTime readTime={1} />;

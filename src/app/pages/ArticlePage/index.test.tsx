@@ -940,7 +940,7 @@ describe('Article Page', () => {
       expect(title).not.toBeInTheDocument();
     });
 
-    it('should render read time component when readTime is supplied with in metadata', () => {
+    it('should render read time component when readTime is supplied in metadata', () => {
       render(
         <Context service="pidgin">
           <ArticlePage pageData={articleDataPidginWithReadTime} />

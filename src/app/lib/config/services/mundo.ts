@@ -48,6 +48,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      readTime: 'Tiempo estimado de lectura',
       pagination: {
         page: 'Página',
         previousPage: 'Anterior',
@@ -219,7 +220,6 @@ export const service: DefaultServiceConfig = {
         },
       },
       media: {
-        readTime: 'Tiempo estimado de lectura',
         noJs: 'Para ver este contenido, favor activar JavaScript, o intentar con otro navegador',
         contentExpired: 'Este contenido ya no está disponible.',
         contentNotYetAvailable: 'Este programa todavía no está disponible.',
