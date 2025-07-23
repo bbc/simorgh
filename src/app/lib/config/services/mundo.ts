@@ -58,7 +58,7 @@ export const service: DefaultServiceConfig = {
       },
       linkLabel: {
         text: 'Suscríbete aquí',
-        href: 'https://www.bbc.com/portuguese/podcasts/p07r3r3t',
+        href: 'https://whatsapp.com/channel/0029VaUm1Ss3WHTbgIXrjw3D',
       },
       skipLink: {
         text: 'Saltar %title% y continuar leyendo',
