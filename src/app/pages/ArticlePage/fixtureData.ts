@@ -46,11 +46,11 @@ const articleDataBuilder = (
   promoHeadline: string,
   summary: string,
   things: object,
+  readTime: number,
   allowAdvertising = false,
   articleBlocksPopulator = blocksWithHeadlineAndText,
   atiAnalytics = {},
   type = 'article',
-  readTime?: number,
 ) => ({
   metadata: {
     id: `urn:bbc:ares::article:${id}`,
@@ -78,7 +78,7 @@ const articleDataBuilder = (
     allowAdvertising,
     stats: {
       readTime: readTime || undefined,
-    }
+    },
   },
   content: {
     model: {
@@ -250,6 +250,7 @@ export const articleDataNews = articleDataBuilder(
   'Article Headline for Promo',
   'Article summary.',
   presetThings,
+  NaN,
   false,
   blocksWithHeadlineAndText,
   {
@@ -652,6 +653,7 @@ export const articleDataNewsWithEmbeds = articleDataBuilder(
   'Article Headline for Promo',
   'Article summary.',
   presetThings,
+  NaN,
   false,
   blocksWithHeadlineAndText,
   {
@@ -680,6 +682,7 @@ export const articleDataPersian = articleDataBuilder(
   'سرصفحه مقاله برای ارتقاء',
   'خلاصه مقاله',
   emptyThings,
+  NaN,
   false,
   blocksWithHeadlineAndText,
   {
@@ -707,6 +710,7 @@ export const articleDataPidgin = articleDataBuilder(
   'Article Headline for Promo in Pidgin',
   'Article summary in Pidgin',
   emptyThings,
+  NaN,
   false,
   blocksWithHeadlineAndText,
   {
@@ -733,6 +737,7 @@ export const articleDataPidginWithAds = articleDataBuilder(
   'Article Headline for Promo in Pidgin',
   'Article summary in Pidgin',
   emptyThings,
+  NaN,
   true,
 ) as unknown as Article;
 
@@ -746,6 +751,7 @@ export const articleDataPidginWithByline = articleDataBuilder(
   'Article Headline for Promo in Pidgin',
   'Article summary in Pidgin',
   emptyThings,
+  NaN,
   undefined,
   blocksWithHeadlineTextAndByline,
 ) as unknown as Article;
@@ -760,6 +766,7 @@ export const articlePglDataPidgin = articleDataBuilder(
   'Article PGL Headline for Promo in Pidgin',
   'Article PGL summary in Pidgin',
   emptyThings,
+  NaN,
   false,
   blocksWithHeadlineAndText,
   {
@@ -787,6 +794,7 @@ export const articleStyDataPidgin = articleDataBuilder(
   'Article PGL Headline for Promo in Pidgin',
   'Article PGL summary in Pidgin',
   emptyThings,
+  NaN,
   false,
   blocksWithHeadlineAndText,
   {
@@ -876,6 +884,7 @@ export const articleDataPidginWithPV = articleDataBuilder(
   'Article Headline for Promo in Pidgin',
   'Article summary in Pidgin',
   emptyThings,
+  NaN,
   true,
 ) as unknown as Article;
 
@@ -951,6 +960,7 @@ export const articleDataPortugueseWithPVNotUnderHeadline = articleDataBuilder(
   'Article Headline for Promo in Portuguese',
   'Article summary in Portuguese',
   emptyThings,
+  NaN,
   true,
 ) as unknown as Article;
 
@@ -1158,6 +1168,7 @@ export const articleDataPortugueseWithPVUnderHeadline = articleDataBuilder(
   'Article Headline for Promo in Portuguese',
   'Article summary in Portuguese',
   emptyThings,
+  NaN,
   true,
   plainOptimoBlock,
 ) as unknown as Article;
@@ -1521,6 +1532,7 @@ export const articleDataRussianWithPVButNoWatchMomentsTranslation =
     'Article Headline for Promo in Russian',
     'Article summary in Russian',
     emptyThings,
+    NaN,
     true,
     plainOptimoBlock,
   ) as unknown as Article;
@@ -1535,6 +1547,7 @@ export const articleDataPidginWithReadTime = articleDataBuilder(
   'Article Headline for Promo in Pidgin',
   'Article summary in Pidgin',
   emptyThings,
+  4,
   false,
   blocksWithHeadlineAndText,
   {
@@ -1550,7 +1563,6 @@ export const articleDataPidginWithReadTime = articleDataBuilder(
     timeUpdated: '2018-01-01T14:00:00.000Z',
   },
   'article',
-  4,
 ) as unknown as Article;
 
 export const bylineWithNoAuthor = [
