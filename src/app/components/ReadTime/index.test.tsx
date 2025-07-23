@@ -9,7 +9,7 @@ describe('ReadTime', () => {
     expect(getByText('Estimated Read Time: 4 minutes')).toBeInTheDocument();
   });
   it('should not render when readTime is undefined', () => {
-    const readTimeValue = undefined;
+    const readTimeValue = NaN;
     const { container } = render(<ReadTime readTime={readTimeValue} />);
     expect(container).toBeEmptyDOMElement();
   });
