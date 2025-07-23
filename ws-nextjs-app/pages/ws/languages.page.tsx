@@ -4,17 +4,12 @@ import { GetServerSideProps } from 'next';
 import { STATIC_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
 import PageDataParams from '#app/models/types/pageDataParams';
 import isLive from '#app/lib/utilities/isLive';
-import isLocal from '#app/lib/utilities/isLocal';
 import { Services, PageTypes } from '#app/models/types/global';
 import getPageData from '../../utilities/pageRequests/getPageData';
 import { LanguagesPageProps } from './types';
 
 const HomePage = dynamic(() => import('#pages/HomePage/HomePage'));
 const LanguagesPageLayout = dynamic(() => import('./LanguagesPageLayout'));
-
-function getLanguagesPageIdentifier() {
-  return isLocal() ? 'ws.languages.page' : 'ws.page';
-}
 
 export const getServerSideProps: GetServerSideProps = async context => {
   context.res.setHeader(
@@ -86,7 +81,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
           ...data?.pageData?.metadata,
           atiAnalytics: {
             ...data?.pageData?.metadata?.atiAnalytics,
-            pageIdentifier: getLanguagesPageIdentifier(),
+            pageIdentifier: 'ws.languages.page',
           },
         },
       },
