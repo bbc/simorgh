@@ -1,9 +1,4 @@
 /* eslint-disable @typescript-eslint/no-namespace */
-import {
-  Services,
-  Variants,
-  PageTypes,
-} from '../../../src/app/models/types/global';
 import { LanguagesPageProps } from '../../pages/ws/types';
 
 interface CustomWindow extends Window {
@@ -17,18 +12,7 @@ interface CustomWindow extends Window {
 declare global {
   namespace Cypress {
     interface Chainable {
-      getPageDataFromWindow: ({
-        service,
-        pageType,
-        variant,
-        id,
-      }: {
-        service: Services;
-        pageType: PageTypes;
-        variant?: Variants;
-        id?: string;
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      }) => Chainable<any>;
+      getPageDataFromWindow: () => Chainable<Record<string, unknown>>;
     }
   }
 }
