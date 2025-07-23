@@ -21,8 +21,14 @@ jobs:
               repo: context.repo.repo,
               issue_number: prNumber,
             });
-            console.log('comments', comments.length);
-            return comments.length;
+            const { data: review_comments } = await github.rest.pulls.listReviewComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNumber,
+            });
+            const totalComments = review_comments.length + comments.length;
+            console.log('totalComments', totalComments);
+            return totalComments;
           result-encoding: string
 
       - name: Send slack message if comment threshold is exceeded
