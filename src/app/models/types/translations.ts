@@ -111,6 +111,7 @@ export interface Translations {
     };
   };
   media: {
+    readTime?: string;
     noJs?: string;
     contentExpired?: string;
     contentNotYetAvailable?: string;

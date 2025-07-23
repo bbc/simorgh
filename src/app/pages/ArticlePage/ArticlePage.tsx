@@ -48,6 +48,7 @@ import { Recommendation } from '#app/models/types/onwardJourney';
 
 import ScrollablePromo from '#components/ScrollablePromo';
 import Recommendations from '#app/components/Recommendations';
+import ReadTime from '#app/components/ReadTime';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -80,7 +81,6 @@ import {
   isPortraitVideo,
   isPortraitVideoUnderHeadline,
 } from '../utils/portraitVideo';
-import ReadTime from '#app/components/ReadTime';
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -290,7 +290,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       ),
   );
 
-  const readTime = pageData?.metadata?.stats?.readTime || undefined;
+  const readTime = pageData?.metadata?.stats?.readTime;
 
   return (
     <div css={styles.pageWrapper}>
@@ -349,7 +349,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             ]}
             role="main"
           >
-            <ReadTime readTimeValue={readTime} css={styles.readTime} /> 
+            <ReadTime readTime={readTime} css={styles.readTime} />
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}

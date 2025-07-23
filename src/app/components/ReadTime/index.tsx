@@ -1,22 +1,30 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/react';
+import { jsx } from '@emotion/react';
+import { use } from 'react';
+import isLive from '#app/lib/utilities/isLive';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
 
 type ReadTimeProps = {
-  readTimeValue: number | undefined;
+  readTime: number;
   className?: string;
 };
 
-const ReadTime =({ readTimeValue, className }: ReadTimeProps) => {
-    if (readTimeValue === undefined) return false;
+const ReadTime = ({ readTime, className }: ReadTimeProps) => {
+  if (!readTime || isLive()) return null;
+
+  const { translations } = use(ServiceContext);
+  const readTimeTranslation =
+    translations.media.readTime || 'Estimated Read Time';
+  const minutesLabel = readTime === 1 ? 'minute' : 'minutes';
 
   return (
-    <div className={className} css={styles.prototype}>
+    <div className={className} css={styles.readTime}>
       <p>
-        read time: { (readTimeValue + " minutes") || "no read time supplied"}
+        {readTimeTranslation}: {readTime} {minutesLabel}
       </p>
     </div>
   );
-}
+};
 
 export default ReadTime;

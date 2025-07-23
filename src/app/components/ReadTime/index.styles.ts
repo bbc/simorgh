@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 
 export default {
-  prototype: () =>
+  readTime: () =>
     css({
       padding: 0,
     }),

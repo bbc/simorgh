@@ -1,17 +1,16 @@
 import React from 'react';
-import ReadTime from '.';
 import { render } from '#app/components/react-testing-library-with-providers';
-import { statsWithReadTime } from './fixtures';
+import ReadTime from '.';
 
 describe('ReadTime', () => {
-  it('should render when readTimeValue is supplied', () => {
-    const readTimeValue = statsWithReadTime.readTime;
-    const { getByText } = render(<ReadTime readTimeValue={readTimeValue} />);
-    expect(getByText('read time: 4 minutes')).toBeInTheDocument();
+  it('should render when readTime is supplied', () => {
+    const readTimeValue = 4;
+    const { getByText } = render(<ReadTime readTime={readTimeValue} />);
+    expect(getByText('Estimated Read Time: 4 minutes')).toBeInTheDocument();
   });
-  it('should not render when readTimeValue is undefined', () => {
+  it('should not render when readTime is undefined', () => {
     const readTimeValue = undefined;
-    const { container } = render(<ReadTime readTimeValue={readTimeValue} />);
+    const { container } = render(<ReadTime readTime={readTimeValue} />);
     expect(container).toBeEmptyDOMElement();
   });
 });
