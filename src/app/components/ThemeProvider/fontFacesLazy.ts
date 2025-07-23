@@ -210,7 +210,7 @@ const REITH_QALAM_REGULAR = {
   fontWeight: 400,
   version: 'v1.310',
   fontStyle: 'normal',
-  src: `${REITH_QALAM_FONTS_DIR}BBCReithQalam_W_Rg.woff2, ${REITH_QALAM_FONTS_DIR}BBCReithQalam_W_Rg.woff`,
+  src: `${REITH_QALAM_FONTS_DIR}BBCReithQalam_W_Rg.woff2`,
   fontDisplay: 'optional',
 };
 
@@ -220,7 +220,7 @@ const REITH_QALAM_BOLD = {
   fontWeight: 700,
   version: 'v1.310',
   fontStyle: 'normal',
-  src: `${REITH_QALAM_FONTS_DIR}BBCReithQalam_W_Bd.woff2, ${REITH_QALAM_FONTS_DIR}BBCReithQalam_W_Bd.woff`,
+  src: `${REITH_QALAM_FONTS_DIR}BBCReithQalam_W_Bd.woff2`,
   fontDisplay: 'optional',
 };
 
