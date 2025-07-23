@@ -43,6 +43,7 @@ export default ({
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
   const { translations } = use(ServiceContext);
   const showMoreOnThisTitle = translations.moreOnThis;
+
   return (
     <section role="region" aria-labelledby={id} data-testid={id}>
       <div css={styles.headerContainer} {...viewTracker}>
@@ -54,6 +55,7 @@ export default ({
             altText={altText}
             imageWidth={660}
             showPlaceholder={false}
+            showVignette
           />
           <div css={styles.textContainer}>
             <Heading level={2} size="paragon" css={styles.heading} id={id}>

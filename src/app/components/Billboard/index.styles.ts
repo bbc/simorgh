@@ -32,15 +32,26 @@ export default {
         border: `solid ${pixelsToRem(3)}rem transparent`,
       },
     }),
-  backgroundContainer: ({ palette }: Theme) =>
+  backgroundContainer: ({ mq }: Theme) =>
     css({
       zIndex: 2,
       position: 'absolute',
       top: '0',
-      backgroundColor: palette.BLACK,
+      background:
+        'linear-gradient(to left bottom,rgba(80, 0, 0, 1) 10%, rgba(40, 0, 0, 1) 50%)',
       bottom: '0',
       width: '100%',
       overflow: 'hidden',
+
+      [mq.GROUP_3_MIN_WIDTH]: {
+        background:
+          'linear-gradient(to left,rgba(80, 0, 0, 1) 10%, rgba(40, 0, 0, 1) 50%)',
+      },
+
+      [mq.GROUP_4_MIN_WIDTH]: {
+        background:
+          'linear-gradient(to bottom,rgba(130, 0, 0, 1) 10%, rgba(40, 0, 0, 1) 70%)',
+      },
     }),
   contentContainer: ({ mq, gridWidths, spacings }: Theme) =>
     css({
@@ -110,7 +121,7 @@ export default {
       },
       [mq.GROUP_4_MIN_WIDTH]: {
         padding: `${spacings.DOUBLE}rem`,
-        minHeight: `${pixelsToRem(440)}rem`, // calculation includes padding
+        minHeight: `${pixelsToRem(400)}rem`, // calculation includes padding
         height: '100%',
         display: 'flex',
         flexDirection: 'column',

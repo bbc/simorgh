@@ -121,7 +121,7 @@ export default {
       180deg, ${mobileImageMask})`,
       aspectRatio: '16 /9',
       [mq.GROUP_4_MIN_WIDTH]: {
-        height: '100%',
+        height: 'auto',
         maxWidth: '60%',
         objectFit: 'cover',
         position: 'absolute',
@@ -149,5 +149,13 @@ export default {
         maskImage: `linear-gradient(
           90deg, ${extraWideMask})`, // 90deg for RTL
       },
+    }),
+  vignette: () =>
+    css({
+      maskImage: `
+          linear-gradient(to left, black 0%, black 70%, transparent 100%),
+          linear-gradient(to bottom, black 0%, black 80%, transparent 100%)`,
+      maskComposite: 'intersect',
+      zIndex: -1,
     }),
 };
