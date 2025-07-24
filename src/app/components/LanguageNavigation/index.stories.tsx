@@ -1,12 +1,14 @@
 import React from 'react';
-import LanguageNavigation from './index';
-import languageSections from './constants';
+import CollapsibleNavigation from './index';
+import CollapsibleNavigationSections from './constants';
 
 export default {
-  title: 'Components/LanguageNavigation',
-  component: LanguageNavigation,
+  title: 'Components/CollapsibleNavigation',
+  component: CollapsibleNavigation,
 };
 
 export const Default = () => (
-  <LanguageNavigation languageSections={languageSections} />
+  <CollapsibleNavigation
+    CollapsibleNavigationSections={CollapsibleNavigationSections}
+  />
 );

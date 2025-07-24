@@ -1,36 +1,36 @@
 import { ClassNames, useTheme } from '@emotion/react';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
+import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import styles from './index.styles';
 import { Close } from '../icons';
 
-type LanguageLink = {
+type CollapsibleNavigationSubLink = {
   id: string;
   label: string;
   href: string;
 };
 
-type LanguageSection = {
+type CollapsibleNavigationSection = {
   id: string;
   title: string;
   href?: string;
-  links?: LanguageLink[];
+  links?: CollapsibleNavigationSubLink[];
 };
 
-type LanguageNavigationProps = {
-  languageSections: LanguageSection[];
+type CollapsibleNavigationProps = {
+  CollapsibleNavigationSections: CollapsibleNavigationSection[];
 };
 
-const LanguageNavigation = ({ languageSections }: LanguageNavigationProps) => {
+const CollapsibleNavigation = ({
+  CollapsibleNavigationSections,
+}: CollapsibleNavigationProps) => {
   const [openSection, setOpenSection] = useState<string | null>(null);
+  const isHydrated = useHydrationDetection();
   const theme = useTheme();
-  const activeSection = languageSections.find(s => s.id === openSection);
-
-  const showSubListItems = useRef(false);
-  useEffect(() => {
-    if (window.document) {
-      showSubListItems.current = true;
-    }
-  }, []);
+  const activeSection = CollapsibleNavigationSections.find(
+    s => s.id === openSection,
+  );
+  const items = CollapsibleNavigationSections.length;
 
   return (
     <ClassNames>
@@ -38,82 +38,84 @@ const LanguageNavigation = ({ languageSections }: LanguageNavigationProps) => {
         <>
           <ul
             role="list"
-            // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
-            tabIndex={0}
-            className={css(styles.langNavUnorderedList(theme))}
+            id="dropDownNavigation"
+            aria-label={`List ${items} items`}
+            title={`List ${items} items`}
+            className={css(styles.collapsibleNavSections(theme))}
           >
-            {languageSections.map((section, index) => {
-              const isLast = index === languageSections.length - 1;
-
+            {CollapsibleNavigationSections.map(section => {
               const isActive = openSection === section.id;
 
               return (
                 <li
                   key={section.id}
-                  className={css(
-                    styles.langNavItem({ ...theme, isLast, isActive }),
-                  )}
+                  className={css(styles.collapsibleNavItem(theme))}
                   role="listitem"
                 >
                   <a
+                    id={section.id}
                     href={section.href || `#${section.id}`}
                     onClick={e => {
                       e.preventDefault();
-                      const isOpen = isActive ? null : section.id;
-                      setOpenSection(isOpen);
+                      setOpenSection(isActive ? null : section.id);
+                      setTimeout(() => {
+                        document.getElementById(`close-${section.id}`)?.focus();
+                      }, 0);
                     }}
-                    className={`focusIndicatorRemove ${isActive ? css(styles.langNavLinkActive(theme)) : ''} ${css(styles.langNavLink(theme))}`}
+                    className={`focusIndicatorRemove ${isActive ? css(styles.collapsibleNavLinkActive(theme)) : ''} ${css(styles.collapsibleNavLink(theme))}`}
                   >
                     {section.title}
                   </a>
-                  {!showSubListItems.current &&
-                    section.links?.map(item => (
-                      <ul
-                        role="list"
-                        style={{ display: 'none', visibility: 'hidden' }}
-                        key={item.id}
-                      >
-                        <li>
+                  {!isHydrated && section.links && (
+                    <ul
+                      role="list"
+                      style={{ display: 'none', visibility: 'hidden' }}
+                      key={`${section.id}-sublist`}
+                    >
+                      {section.links.map(item => (
+                        <li key={item.id}>
                           <a href={item.href}>{item.label}</a>
                         </li>
-                      </ul>
-                    ))}
+                      ))}
+                    </ul>
+                  )}
                 </li>
               );
             })}
           </ul>
 
           {activeSection && (
-            <div className={css(styles.dropDown(theme))}>
-              <div className={css(styles.dropDownHeader)}>
-                <span className={css(styles.dropDownTitle)}>
+            <div className={css(styles.collapsibleSubNav(theme))}>
+              <div className={css(styles.collapsibleSubNavHeader)}>
+                <span className={css(styles.collapsibleSubNavTitle(theme))}>
                   {activeSection.title}
                 </span>
                 <button
+                  id={`close-${activeSection.id}`}
                   type="button"
                   role="button"
                   aria-label="Close"
-                  className={css(styles.closeButton(theme))}
-                  onClick={() => setOpenSection(null)}
+                  title="Close"
+                  name="Close"
+                  className={css(styles.collapsibleSubNavCloseButton(theme))}
+                  onClick={() => {
+                    document.getElementById(activeSection.id)?.focus();
+                    setOpenSection(null);
+                  }}
                 >
                   <Close />
                 </button>
               </div>
 
-              <ul className={css(styles.dropDownItemsGrid(theme))}>
+              <ul className={css(styles.collapsibleSubNavGrid(theme))}>
                 {activeSection.links?.map(link => (
                   <li
                     key={link.id}
-                    className={css(
-                      styles.dropDownItem({
-                        ...theme,
-                        isActive: false,
-                      }),
-                    )}
+                    className={css(styles.collapsibleSubNavItem(theme))}
                   >
                     <a
                       href={link.href}
-                      className={css(styles.dropDownLink(theme))}
+                      className={css(styles.collapsibleSubNavLink(theme))}
                     >
                       {link.label}
                     </a>
@@ -122,10 +124,64 @@ const LanguageNavigation = ({ languageSections }: LanguageNavigationProps) => {
               </ul>
             </div>
           )}
+
+          {!isHydrated && (
+            <>
+              {CollapsibleNavigationSections.map((section, index) => {
+                const sectionItems = section.links?.length;
+                return (
+                  <div
+                    id={section.id}
+                    key={section.id}
+                    className={`${css(styles.collapsibleSubNavNoJs(theme))}`}
+                    aria-label={`List ${sectionItems} items`}
+                    title={`List ${sectionItems} items`}
+                  >
+                    <div className={css(styles.collapsibleSubNavHeader)}>
+                      <span
+                        className={css(styles.collapsibleSubNavTitle(theme))}
+                      >
+                        {section.title}
+                      </span>
+                      <a
+                        href="#dropDownNavigation"
+                        type="button"
+                        role="button"
+                        aria-label={`close Region${index} languages navigation`}
+                        title={`close Region${index} languages navigation`}
+                        className={css(
+                          styles.collapsibleSubNavCloseButton(theme),
+                        )}
+                        onClick={() => setOpenSection(null)}
+                      >
+                        <Close />
+                      </a>
+                    </div>
+
+                    <ul className={css(styles.collapsibleSubNavGrid(theme))}>
+                      {section.links?.map(link => (
+                        <li
+                          key={link.id}
+                          className={css(styles.collapsibleSubNavItem(theme))}
+                        >
+                          <a
+                            href={link.href}
+                            className={css(styles.collapsibleSubNavLink(theme))}
+                          >
+                            {link.label}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              })}
+            </>
+          )}
         </>
       )}
     </ClassNames>
   );
 };
 
-export default LanguageNavigation;
+export default CollapsibleNavigation;

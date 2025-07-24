@@ -1,9 +1,8 @@
 import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
-import { REITH_SANS } from '#app/components/ThemeProvider/fontFamilies';
 
 const styles = {
-  langNavUnorderedList: ({ palette }: Theme) =>
+  collapsibleNavSections: ({ palette }: Theme) =>
     css({
       listStyleType: 'none',
       padding: 0,
@@ -16,22 +15,8 @@ const styles = {
         outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
       },
     }),
-  wrapper: ({ fontMq, spacings, palette, fontSizes }: Theme) =>
-    css({
-      display: 'flex',
-      color: palette.GREY_8,
-      flexWrap: 'wrap',
-      padding: 0,
-      fontFamily: REITH_SANS,
-      ...fontSizes.pica,
-      [fontMq.GROUP_D_MIN_WIDTH]: {
-        padding: `${spacings.FULL}rem`,
-      },
-    }),
 
-  langNavItem: ({
-    palette,
-  }: { isActive?: boolean; isLast?: boolean } & Theme) =>
+  collapsibleNavItem: ({ palette }: Theme) =>
     css({
       display: 'inline-block',
       padding: 0,
@@ -61,7 +46,7 @@ const styles = {
       },
     }),
 
-  langNavLinkActive: ({ palette }: Theme) =>
+  collapsibleNavLinkActive: ({ palette }: Theme) =>
     css({
       '&::after': {
         content: '""',
@@ -72,15 +57,15 @@ const styles = {
         borderBottom: `${pixelsToRem(4)}rem solid ${palette.POSTBOX}`,
       },
     }),
-  langNavLink: ({ spacings, fontSizes, palette }: Theme) =>
+  collapsibleNavLink: ({ spacings, fontSizes, fontVariants, palette }: Theme) =>
     css({
       display: 'inline-block',
       width: '100%',
       padding: `${pixelsToRem(12)}rem ${spacings.FULL}rem`,
       cursor: 'pointer',
-      fontFamily: REITH_SANS,
-      fontWeight: 400,
       ...fontSizes.pica,
+      ...fontVariants.sansRegular,
+      fontWeight: 400,
       lineHeight: `${pixelsToRem(22)}rem`,
       left: `${pixelsToRem(1)}rem`,
       position: 'relative',
@@ -109,32 +94,40 @@ const styles = {
       },
     }),
 
-  dropDown: ({ spacings }: Theme) =>
+  collapsibleSubNav: ({ spacings }: Theme) =>
     css({
       width: '100%',
       padding: `${spacings.FULL}rem 0`,
       display: 'block',
+    }),
+
+  collapsibleSubNavNoJs: ({ spacings }: Theme) =>
+    css({
+      width: '100%',
+      padding: `${spacings.FULL}rem 0`,
+      display: 'none',
       '&:target': {
         display: 'block',
       },
     }),
 
-  dropDownHeader: css({
+  collapsibleSubNavHeader: css({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
   }),
 
-  dropDownTitle: css({
-    fontSize: `${pixelsToRem(20)}rem`,
-    fontFamily: REITH_SANS,
-    fontWeight: 700,
-    lineHeight: `${pixelsToRem(22)}rem`,
-    letterSpacing: '0%',
-    padding: `${pixelsToRem(12)}rem`,
-  }),
+  collapsibleSubNavTitle: ({ fontVariants }: Theme) =>
+    css({
+      fontSize: `${pixelsToRem(20)}rem`,
+      ...fontVariants.sansBold,
+      fontWeight: 700,
+      lineHeight: `${pixelsToRem(22)}rem`,
+      letterSpacing: '0%',
+      padding: `${pixelsToRem(12)}rem`,
+    }),
 
-  closeButton: ({ palette }: Theme) =>
+  collapsibleSubNavCloseButton: ({ palette }: Theme) =>
     css({
       border: 'none',
       background: 'none',
@@ -148,7 +141,7 @@ const styles = {
       color: palette.BLACK,
     }),
 
-  dropDownItemsGrid: ({ mq, spacings }: Theme) =>
+  collapsibleSubNavGrid: ({ mq, spacings }: Theme) =>
     css({
       display: 'block',
       gap: `${spacings.FULL}rem`,
@@ -162,13 +155,11 @@ const styles = {
       },
     }),
 
-  dropDownItem: ({ mq, palette, isActive }: { isActive?: boolean } & Theme) =>
+  collapsibleSubNavItem: ({ mq, palette }: Theme) =>
     css({
       breakInside: 'avoid',
       padding: 0,
-      borderLeft: isActive
-        ? `${pixelsToRem(4)}rem solid ${palette.POSTBOX}`
-        : `${pixelsToRem(4)}rem solid transparent`,
+      borderLeft: `${pixelsToRem(4)}rem solid transparent`,
       borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_3}`,
       width: '100%',
       '&:hover': {
@@ -182,7 +173,7 @@ const styles = {
       },
     }),
 
-  dropDownLink: ({ spacings, palette }: Theme) =>
+  collapsibleSubNavLink: ({ spacings, palette, fontVariants }: Theme) =>
     css({
       display: 'inline-block',
       width: '100%',
@@ -190,7 +181,7 @@ const styles = {
       padding: `${pixelsToRem(12)}rem ${spacings.FULL}rem`,
       textDecoration: 'none',
       color: palette.GREY_8,
-      fontFamily: REITH_SANS,
+      ...fontVariants.sansRegular,
       fontWeight: 400,
       lineHeight: `${pixelsToRem(22)}`,
       letterSpacing: '0%',

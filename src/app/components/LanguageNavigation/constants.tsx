@@ -1,4 +1,4 @@
-const languageSections = [
+const CollapsibleNavigationSections = [
   {
     id: 'home',
     title: 'Home',
@@ -248,4 +248,4 @@ const languageSections = [
   },
 ];
 
-export default languageSections;
+export default CollapsibleNavigationSections;
