@@ -141,7 +141,7 @@ const styles = {
       color: palette.BLACK,
     }),
 
-  collapsibleSubNavGrid: ({ mq, spacings }: Theme) =>
+  collapsibleSubNavGrid: ({ mq, spacings, palette }: Theme) =>
     css({
       display: 'block',
       gap: `${spacings.FULL}rem`,
@@ -151,7 +151,7 @@ const styles = {
       [mq.GROUP_4_MIN_WIDTH]: {
         columnCount: 4,
         columnGap: `${spacings.DOUBLE}rem`,
-        columnRule: '0.0625rem solid #E6E8EA',
+        columnRule: `${pixelsToRem(1)}rem solid ${palette.GREY_3}`,
       },
     }),
 
