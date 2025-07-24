@@ -30,6 +30,15 @@ const faultTolerantDomFetch = ({ url, runScripts, headers }) =>
 
       try {
         const response = await fetch(url, headers && { headers });
+
+        if (!response.ok) {
+          const error = new Error(
+            `Error: Received HTTP ${response.status} ${response.statusText} for ${url}`,
+          );
+          reject(error);
+          return;
+        }
+
         const html = await response.text();
         const dom = new JSDOM(html, {
           url,

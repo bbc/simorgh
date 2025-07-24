@@ -4,10 +4,11 @@
 import React, { PropsWithChildren, use } from 'react';
 import { jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
-
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
 import { PageTypes } from '#app/models/types/global';
-import useOptimizelyMvtVariation from '#app/hooks/useOptimizelyMvtVariation';
+import useOptimizelyVariation, {
+  ExperimentType,
+} from '#app/hooks/useOptimizelyVariation';
 import useIsPWA from '#app/hooks/useIsPWA';
 import { TopStoryItem } from '../../pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import WebVitals from '../../legacy/containers/WebVitals';
@@ -62,7 +63,11 @@ const PageLayoutWrapper = ({
   let wordCount: wordCountType = 0;
   let propsForOJExperiment = {};
   const experimentName = 'newswb_ws_topbarojs_read_more';
-  const experimentVariant = useOptimizelyMvtVariation(experimentName);
+  const experimentVariant = useOptimizelyVariation({
+    experimentName,
+    experimentType: ExperimentType.SERVER_SIDE,
+  });
+
   if (pageType === 'article') {
     wordCount = pageData?.content?.model?.blocks
       ?.filter(block => block.type === 'text')
@@ -82,6 +87,7 @@ const PageLayoutWrapper = ({
 
     let dataForOJExperiment;
     if (
+      experimentVariant &&
       ['top-bar-top-stories', 'read-more-a-and-top-stories'].includes(
         experimentVariant,
       )

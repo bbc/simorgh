@@ -106,10 +106,6 @@ afterEach(() => {
 });
 
 describe('Optimizely Page Complete tracking', () => {
-  beforeEach(() => {
-    jest.clearAllMocks();
-  });
-
   it('should return a function that can be assigned to an element to observe for intersections', () => {
     const { container } = render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">

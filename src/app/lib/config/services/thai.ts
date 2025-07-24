@@ -61,6 +61,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'ข้ามไปยังเนื้อหา',
       relatedContent: 'อ่านเรื่องที่เกี่ยวข้อง',
       relatedTopics: 'ข่าวที่เกี่ยวข้อง',
+      moreOnThis: '',
       navMenuText: 'หมวดข่าว',
       mediaAssetPage: {
         mediaPlayer: 'มีเดีย เพลเยอร์',

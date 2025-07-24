@@ -18,6 +18,13 @@ describe('addProcessClientDeviceAndSendStaticBeaconToWindow script', () => {
         mockCookie = cookieValue;
       },
     });
+
+    Object.defineProperty(navigator, 'language', {
+      get() {
+        return 'en-GB';
+      },
+    });
+
     addProcessClientDeviceAndSendStaticBeaconToWindow();
   });
 
@@ -117,6 +124,72 @@ describe('addProcessClientDeviceAndSendStaticBeaconToWindow script', () => {
     expect(callParam).toContain('idclient=oldCookieId');
   });
 
+  it.each([
+    {
+      atiUrl: 'https://logws1363.ati-host.net/?',
+      reverbUrl: undefined,
+      expectedParsedParams: {
+        idclient: 'userCookieId',
+        hl: `${testHour}x${testMinute}x${testSecond}`,
+        lng: 'en-GB',
+        r: '0x0x24x24',
+        re: '4060x1080',
+        app_type: 'lite',
+        ref: 'https://www.bbc.com',
+      },
+    },
+    {
+      atiUrl: 'https://logws1363.ati-host.net/?',
+      reverbUrl:
+        'https://a1.api.bbc.co.uk/hit.xiti?idclient={idclient}&s=598343&s2=69&p=persian.articles.c4vlle3q337o.page&r={screenResolutionColourDepth}&re={browserViewportResolution}&hl={timestamp}&lng={language}&x1=[urn%3Abbc%3Aoptimo%3Aasset%3Ac4vlle3q337o]&x2=[lite]&x3=[news-persian]&x4=[fa]&x5=[http%25253A%25252F%25252Flocalhost%25253A7080%25252Fpersian%25252Farticles%25252Fc4vlle3q337o]&x6=[{referrer}]&x7=[article]&x8=[simorgh]&x9=[%D9%BE%D9%87%D9%BE%D8%A7%D8%AF%DB%8C%2520%DA%A9%D9%87%2520%D8%A8%D8%B1%D8%A7%DB%8C%D8%AA%D8%A7%D9%86%2520%D9%82%D9%87%D9%88%D9%87%2520%D9%85%DB%8C%E2%80%8C%D8%A2%D9%88%D8%B1%D8%AF]&x11=[2019-05-28T13%3A42%3A44.996Z]&x12=[2019-07-23T15%3A47%3A11.893Z]&app_type=lite&ref={referrer}',
+      expectedParsedParams: {
+        idclient: 'userCookieId',
+        hl: `${testHour}x${testMinute}x${testSecond}`,
+        lng: 'en-GB',
+        r: '0x0x24x24',
+        re: '4060x1080',
+        app_type: 'lite',
+        x6: '[https://www.bbc.com]',
+        ref: 'https://www.bbc.com',
+      },
+    },
+  ])(
+    'Calls sendStaticBeacon() with the correct url when ati url is $atiUrl and reverb url is $reverbUrl',
+    ({ atiUrl, reverbUrl, expectedParsedParams }) => {
+      document.cookie =
+        'atuserid={"val":"userCookieId"}; path=/; max-age=397; Secure;';
+
+      Object.defineProperty(document, 'referrer', {
+        value: 'https://www.bbc.com',
+      });
+      Object.defineProperty(window, 'location', {
+        writable: true,
+        value: { pathname: 'gahuza/popular/read.lite', search: '' },
+      });
+
+      window.screen = {
+        width: 100,
+        height: 400,
+        colorDepth: 24,
+        pixelDepth: 24,
+        availWidth: 400,
+        availHeight: 100,
+        orientation: 'landscape' as unknown as ScreenOrientation,
+      };
+      window.innerWidth = 4060;
+      window.innerHeight = 1080;
+
+      window.processClientDeviceAndSendStaticBeacon(atiUrl, reverbUrl);
+
+      const callParam = (window.sendStaticBeacon as jest.Mock).mock.calls[0][0];
+
+      const { searchParams } = new URL(callParam);
+      const parsedATIParams = Object.fromEntries(searchParams);
+
+      expect(parsedATIParams).toMatchObject(expectedParsedParams);
+    },
+  );
+
   it('Adds marketing parameters to the beacon URL on lite page', () => {
     window.location.search =
       '?at_campaign=tactical&at_medium=display_ad&at_campaign_type=paid&at_content=ls&at_marketing_tactic=tactical&at_product=persian&at_genre=politics&at_ptr_name=bbc&at_objective=acquisition&at_audience_motivation=gmp&at_demographic=A9&at_format=image&at_creation=tactical_psiphon_a9&at_bbc_team=8ms&utm_source=mktg&utm_campaign=tacticalps';
@@ -191,11 +264,6 @@ describe('addProcessClientDeviceAndSendStaticBeaconToWindow script', () => {
     };
     window.innerWidth = 4060;
     window.innerHeight = 1080;
-    Object.defineProperty(navigator, 'language', {
-      get() {
-        return 'en-GB';
-      },
-    });
 
     window.processClientDeviceAndSendStaticBeacon(
       'https://logws1363.ati-host.net/?',

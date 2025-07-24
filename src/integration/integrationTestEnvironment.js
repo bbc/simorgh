@@ -33,26 +33,22 @@ class IntegrationTestEnvironment extends JsdomEnvironment {
   async setup() {
     await super.setup();
 
-    try {
-      const dom = await fetchDom({
-        url: this.url,
-        runScripts: this.runScripts,
-        headers: {
-          ...(this.displayAds && { 'BBC-Adverts': 'true' }),
-          ...{ 'x-bbc-edge-isuk': this.isInUK },
-        },
-      });
+    const dom = await fetchDom({
+      url: this.url,
+      runScripts: this.runScripts,
+      headers: {
+        ...(this.displayAds && { 'BBC-Adverts': 'true' }),
+        ...{ 'x-bbc-edge-isuk': this.isInUK },
+      },
+    });
 
-      Object.defineProperties(this.global, {
-        pageType: { value: this.pageType },
-        service: { value: this.service },
-        window: { value: dom.window },
-        document: { value: dom.window.document },
-        fetch: { value: fetch },
-      });
-    } catch (e) {
-      console.error(e);
-    }
+    Object.defineProperties(this.global, {
+      pageType: { value: this.pageType },
+      service: { value: this.service },
+      window: { value: dom.window },
+      document: { value: dom.window.document },
+      fetch: { value: fetch },
+    });
   }
 
   async teardown() {
