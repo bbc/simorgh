@@ -250,7 +250,6 @@ export const articleDataNews = articleDataBuilder(
   'Article Headline for Promo',
   'Article summary.',
   presetThings,
-
   false,
   blocksWithHeadlineAndText,
   {
@@ -653,7 +652,6 @@ export const articleDataNewsWithEmbeds = articleDataBuilder(
   'Article Headline for Promo',
   'Article summary.',
   presetThings,
-
   false,
   blocksWithHeadlineAndText,
   {
@@ -682,7 +680,6 @@ export const articleDataPersian = articleDataBuilder(
   'سرصفحه مقاله برای ارتقاء',
   'خلاصه مقاله',
   emptyThings,
-
   false,
   blocksWithHeadlineAndText,
   {
@@ -710,7 +707,6 @@ export const articleDataPidgin = articleDataBuilder(
   'Article Headline for Promo in Pidgin',
   'Article summary in Pidgin',
   emptyThings,
-
   false,
   blocksWithHeadlineAndText,
   {
@@ -737,7 +733,6 @@ export const articleDataPidginWithAds = articleDataBuilder(
   'Article Headline for Promo in Pidgin',
   'Article summary in Pidgin',
   emptyThings,
-
   true,
 ) as unknown as Article;
 
@@ -751,7 +746,6 @@ export const articleDataPidginWithByline = articleDataBuilder(
   'Article Headline for Promo in Pidgin',
   'Article summary in Pidgin',
   emptyThings,
-
   undefined,
   blocksWithHeadlineTextAndByline,
 ) as unknown as Article;
@@ -766,7 +760,6 @@ export const articlePglDataPidgin = articleDataBuilder(
   'Article PGL Headline for Promo in Pidgin',
   'Article PGL summary in Pidgin',
   emptyThings,
-
   false,
   blocksWithHeadlineAndText,
   {
@@ -794,7 +787,6 @@ export const articleStyDataPidgin = articleDataBuilder(
   'Article PGL Headline for Promo in Pidgin',
   'Article PGL summary in Pidgin',
   emptyThings,
-
   false,
   blocksWithHeadlineAndText,
   {
@@ -884,7 +876,6 @@ export const articleDataPidginWithPV = articleDataBuilder(
   'Article Headline for Promo in Pidgin',
   'Article summary in Pidgin',
   emptyThings,
-
   true,
 ) as unknown as Article;
 
@@ -960,7 +951,6 @@ export const articleDataPortugueseWithPVNotUnderHeadline = articleDataBuilder(
   'Article Headline for Promo in Portuguese',
   'Article summary in Portuguese',
   emptyThings,
-
   true,
 ) as unknown as Article;
 
@@ -1168,7 +1158,6 @@ export const articleDataPortugueseWithPVUnderHeadline = articleDataBuilder(
   'Article Headline for Promo in Portuguese',
   'Article summary in Portuguese',
   emptyThings,
-
   true,
   plainOptimoBlock,
 ) as unknown as Article;
@@ -1532,7 +1521,6 @@ export const articleDataRussianWithPVButNoWatchMomentsTranslation =
     'Article Headline for Promo in Russian',
     'Article summary in Russian',
     emptyThings,
-
     true,
     plainOptimoBlock,
   ) as unknown as Article;
