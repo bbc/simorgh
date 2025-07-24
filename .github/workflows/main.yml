@@ -9,7 +9,6 @@ on:
 jobs:
   notify-on-comments:
     runs-on: ubuntu-latest
-    if: github.event.issue.pull_request && github.event.issue.state == 'open'
     steps:
       - name: Get PR comments count
         id: get_comments
@@ -28,6 +27,9 @@ jobs:
               repo: context.repo.repo,
               pull_number: prNumber,
             });
+            console.log('review_comments.length', review_comments.length);
+            console.log('context.payload', context.payload);
+            
             const totalComments = review_comments.length + comments.length;
             console.log('totalComments', totalComments);
             return totalComments;
