@@ -57,6 +57,7 @@ export default {
     css({
       zIndex: 3,
       paddingBottom: `${spacings.QUADRUPLE}`,
+      overflow: 'hidden',
 
       [mq.GROUP_4_MIN_WIDTH]: {
         maxWidth: `${pixelsToRem(gridWidths[1280])}rem`,

@@ -161,7 +161,6 @@ export default {
           linear-gradient(to bottom, black 0%, black 80%, transparent 100%)`,
           maskComposite: 'intersect',
           zIndex: -1,
-          overflow: 'hidden',
         },
       }),
 };
