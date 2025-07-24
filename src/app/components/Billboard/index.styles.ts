@@ -37,7 +37,6 @@ export default {
       zIndex: 2,
       position: 'absolute',
       top: '0',
-
       bottom: '0',
       width: '100%',
       overflow: 'hidden',
