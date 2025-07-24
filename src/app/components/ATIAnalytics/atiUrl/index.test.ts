@@ -542,6 +542,19 @@ describe('Reverb', () => {
       });
     });
 
+    it('should return the correct Reverb event details grouping data', () => {
+      const result = buildReverbEventModel({
+        ...input,
+        eventGroupingName: 'customEventGroupingName',
+      });
+
+      expect(result.eventDetails.event).toEqual({
+        action: 'view',
+        category: 'viewability',
+        grouping: 'customEventGroupingName',
+      });
+    });
+
     describe('Viewability Model', () => {
       it('should return the correct event details for the Reverb page section view event model', () => {
         const reverbPageSectionViewEventModel = buildReverbEventModel(input);
