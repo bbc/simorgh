@@ -46,7 +46,6 @@ export default {
         margin: '0 auto',
         position: 'relative',
         width: '100%',
-        overflow: 'hidden',
       },
     }),
   liveMedia: ({ mq, spacings }: Theme) =>
