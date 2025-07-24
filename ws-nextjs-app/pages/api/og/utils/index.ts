@@ -17,7 +17,8 @@ const getImages = ({
 }) => {
   const defaultImage = `https://news.files.bbci.co.uk/ws/img/logos/og/${service}.png`;
 
-  if (!promoImage?.suitableForSyndication) return defaultImage;
+  if (!promoImage?.suitableForSyndication)
+    return { unbrandedImage: defaultImage, brandedImage: defaultImage };
 
   const unbrandedImage =
     buildIChefURL({
