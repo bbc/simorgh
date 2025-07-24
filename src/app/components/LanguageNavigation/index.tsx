@@ -1,4 +1,6 @@
-import { ClassNames, useTheme } from '@emotion/react';
+/** @jsx jsx */
+/* @jsxFrag React.Fragment */
+import { jsx } from '@emotion/react';
 import React, { useState } from 'react';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import styles from './index.styles';
@@ -18,169 +20,152 @@ type CollapsibleNavigationSection = {
 };
 
 type CollapsibleNavigationProps = {
-  CollapsibleNavigationSections: CollapsibleNavigationSection[];
+  collapsibleNavigationSections: CollapsibleNavigationSection[];
 };
 
 const CollapsibleNavigation = ({
-  CollapsibleNavigationSections,
+  collapsibleNavigationSections,
 }: CollapsibleNavigationProps) => {
   const [openSection, setOpenSection] = useState<string | null>(null);
   const isHydrated = useHydrationDetection();
-  const theme = useTheme();
-  const activeSection = CollapsibleNavigationSections.find(
+  const activeSection = collapsibleNavigationSections.find(
     s => s.id === openSection,
   );
-  const items = CollapsibleNavigationSections.length;
+  const items = collapsibleNavigationSections.length;
 
   return (
-    <ClassNames>
-      {({ css }) => (
-        <>
-          <ul
-            role="list"
-            id="dropDownNavigation"
-            aria-label={`List ${items} items`}
-            title={`List ${items} items`}
-            className={css(styles.collapsibleNavSections(theme))}
-          >
-            {CollapsibleNavigationSections.map(section => {
-              const isActive = openSection === section.id;
+    <>
+      <ul
+        role="list"
+        id="dropDownNavigation"
+        aria-label={`List ${items} items`}
+        title={`List ${items} items`}
+        css={styles.collapsibleNavList}
+      >
+        {collapsibleNavigationSections.map(section => {
+          const isActive = openSection === section.id;
 
-              return (
-                <li
-                  key={section.id}
-                  className={css(styles.collapsibleNavItem(theme))}
-                  role="listitem"
+          return (
+            <li
+              key={section.id}
+              css={styles.collapsibleNavItem}
+              role="listitem"
+            >
+              <a
+                id={section.id}
+                href={section.href || `#${section.id}`}
+                onClick={e => {
+                  e.preventDefault();
+                  setOpenSection(isActive ? null : section.id);
+                  setTimeout(() => {
+                    document.getElementById(`close-${section.id}`)?.focus();
+                  }, 0);
+                }}
+                className="focusIndicatorRemove"
+                css={[
+                  isActive ? styles.collapsibleNavLinkActive : '',
+                  styles.collapsibleNavLink,
+                ]}
+              >
+                {section.title}
+              </a>
+              {!isHydrated && section.links && (
+                <ul
+                  role="list"
+                  style={{ display: 'none', visibility: 'hidden' }}
+                  key={`${section.id}-sublist`}
                 >
-                  <a
-                    id={section.id}
-                    href={section.href || `#${section.id}`}
-                    onClick={e => {
-                      e.preventDefault();
-                      setOpenSection(isActive ? null : section.id);
-                      setTimeout(() => {
-                        document.getElementById(`close-${section.id}`)?.focus();
-                      }, 0);
-                    }}
-                    className={`focusIndicatorRemove ${isActive ? css(styles.collapsibleNavLinkActive(theme)) : ''} ${css(styles.collapsibleNavLink(theme))}`}
-                  >
-                    {section.title}
-                  </a>
-                  {!isHydrated && section.links && (
-                    <ul
-                      role="list"
-                      style={{ display: 'none', visibility: 'hidden' }}
-                      key={`${section.id}-sublist`}
-                    >
-                      {section.links.map(item => (
-                        <li key={item.id}>
-                          <a href={item.href}>{item.label}</a>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </li>
-              );
-            })}
+                  {section.links.map(item => (
+                    <li key={item.id}>
+                      <a href={item.href}>{item.label}</a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          );
+        })}
+      </ul>
+
+      {activeSection && (
+        <div css={styles.collapsibleSubNav}>
+          <div css={styles.collapsibleSubNavHeader}>
+            <span css={styles.collapsibleSubNavTitle}>
+              {activeSection.title}
+            </span>
+            <button
+              id={`close-${activeSection.id}`}
+              type="button"
+              role="button"
+              aria-label="Close"
+              title="Close"
+              name="Close"
+              css={styles.collapsibleSubNavCloseButton}
+              onClick={() => {
+                document.getElementById(activeSection.id)?.focus();
+                setOpenSection(null);
+              }}
+            >
+              <Close />
+            </button>
+          </div>
+
+          <ul css={styles.collapsibleSubNavGrid}>
+            {activeSection.links?.map(link => (
+              <li key={link.id} css={styles.collapsibleSubNavItem}>
+                <a href={link.href} css={styles.collapsibleSubNavLink}>
+                  {link.label}
+                </a>
+              </li>
+            ))}
           </ul>
+        </div>
+      )}
 
-          {activeSection && (
-            <div className={css(styles.collapsibleSubNav(theme))}>
-              <div className={css(styles.collapsibleSubNavHeader)}>
-                <span className={css(styles.collapsibleSubNavTitle(theme))}>
-                  {activeSection.title}
-                </span>
-                <button
-                  id={`close-${activeSection.id}`}
-                  type="button"
-                  role="button"
-                  aria-label="Close"
-                  title="Close"
-                  name="Close"
-                  className={css(styles.collapsibleSubNavCloseButton(theme))}
-                  onClick={() => {
-                    document.getElementById(activeSection.id)?.focus();
-                    setOpenSection(null);
-                  }}
-                >
-                  <Close />
-                </button>
-              </div>
-
-              <ul className={css(styles.collapsibleSubNavGrid(theme))}>
-                {activeSection.links?.map(link => (
-                  <li
-                    key={link.id}
-                    className={css(styles.collapsibleSubNavItem(theme))}
+      {!isHydrated && (
+        <>
+          {collapsibleNavigationSections.map((section, index) => {
+            const sectionItems = section.links?.length;
+            return (
+              <div
+                id={section.id}
+                key={section.id}
+                css={styles.collapsibleSubNavNoJs}
+                aria-label={`List ${sectionItems} items`}
+                title={`List ${sectionItems} items`}
+              >
+                <div css={styles.collapsibleSubNavHeader}>
+                  <span css={styles.collapsibleSubNavTitle}>
+                    {section.title}
+                  </span>
+                  <a
+                    href="#dropDownNavigation"
+                    type="button"
+                    role="button"
+                    aria-label={`close Region${index} languages navigation`}
+                    title={`close Region${index} languages navigation`}
+                    css={styles.collapsibleSubNavCloseButton}
+                    onClick={() => setOpenSection(null)}
                   >
-                    <a
-                      href={link.href}
-                      className={css(styles.collapsibleSubNavLink(theme))}
-                    >
-                      {link.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
+                    <Close />
+                  </a>
+                </div>
 
-          {!isHydrated && (
-            <>
-              {CollapsibleNavigationSections.map((section, index) => {
-                const sectionItems = section.links?.length;
-                return (
-                  <div
-                    id={section.id}
-                    key={section.id}
-                    className={`${css(styles.collapsibleSubNavNoJs(theme))}`}
-                    aria-label={`List ${sectionItems} items`}
-                    title={`List ${sectionItems} items`}
-                  >
-                    <div className={css(styles.collapsibleSubNavHeader)}>
-                      <span
-                        className={css(styles.collapsibleSubNavTitle(theme))}
-                      >
-                        {section.title}
-                      </span>
-                      <a
-                        href="#dropDownNavigation"
-                        type="button"
-                        role="button"
-                        aria-label={`close Region${index} languages navigation`}
-                        title={`close Region${index} languages navigation`}
-                        className={css(
-                          styles.collapsibleSubNavCloseButton(theme),
-                        )}
-                        onClick={() => setOpenSection(null)}
-                      >
-                        <Close />
+                <ul css={styles.collapsibleSubNavGrid}>
+                  {section.links?.map(link => (
+                    <li key={link.id} css={styles.collapsibleSubNavItem}>
+                      <a href={link.href} css={styles.collapsibleSubNavLink}>
+                        {link.label}
                       </a>
-                    </div>
-
-                    <ul className={css(styles.collapsibleSubNavGrid(theme))}>
-                      {section.links?.map(link => (
-                        <li
-                          key={link.id}
-                          className={css(styles.collapsibleSubNavItem(theme))}
-                        >
-                          <a
-                            href={link.href}
-                            className={css(styles.collapsibleSubNavLink(theme))}
-                          >
-                            {link.label}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                );
-              })}
-            </>
-          )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
         </>
       )}
-    </ClassNames>
+    </>
   );
 };
 

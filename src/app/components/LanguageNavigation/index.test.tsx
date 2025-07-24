@@ -6,7 +6,7 @@ import {
 } from '../react-testing-library-with-providers';
 import CollapsibleNavigation from './index';
 
-const CollapsibleNavigationSections = [
+const collapsibleNavigationSections = [
   {
     id: 'section1',
     title: 'Section 1',
@@ -26,11 +26,11 @@ describe('LanguageNavigation', () => {
   test('renders section titles', () => {
     render(
       <CollapsibleNavigation
-        CollapsibleNavigationSections={CollapsibleNavigationSections}
+        collapsibleNavigationSections={collapsibleNavigationSections}
       />,
     );
 
-    CollapsibleNavigationSections.forEach(section => {
+    collapsibleNavigationSections.forEach(section => {
       expect(screen.getByText(section.title)).toBeInTheDocument();
     });
   });
@@ -38,7 +38,7 @@ describe('LanguageNavigation', () => {
   test('clicking a section toggles dropdown', () => {
     render(
       <CollapsibleNavigation
-        CollapsibleNavigationSections={CollapsibleNavigationSections}
+        collapsibleNavigationSections={collapsibleNavigationSections}
       />,
     );
 
@@ -46,7 +46,7 @@ describe('LanguageNavigation', () => {
 
     fireEvent.click(sectionTitle);
 
-    CollapsibleNavigationSections[0].links?.forEach(link => {
+    collapsibleNavigationSections[0].links?.forEach(link => {
       expect(screen.getByText(link.label)).toBeInTheDocument();
     });
   });
@@ -54,7 +54,7 @@ describe('LanguageNavigation', () => {
   test('clicking the same section again closes the dropdown', () => {
     render(
       <CollapsibleNavigation
-        CollapsibleNavigationSections={CollapsibleNavigationSections}
+        collapsibleNavigationSections={collapsibleNavigationSections}
       />,
     );
 
@@ -71,7 +71,7 @@ describe('LanguageNavigation', () => {
   test('clicking close button closes the dropdown', () => {
     render(
       <CollapsibleNavigation
-        CollapsibleNavigationSections={CollapsibleNavigationSections}
+        collapsibleNavigationSections={collapsibleNavigationSections}
       />,
     );
 
@@ -89,7 +89,7 @@ describe('LanguageNavigation', () => {
   test('renders links correctly when section is active', () => {
     render(
       <CollapsibleNavigation
-        CollapsibleNavigationSections={CollapsibleNavigationSections}
+        collapsibleNavigationSections={collapsibleNavigationSections}
       />,
     );
 
@@ -97,7 +97,7 @@ describe('LanguageNavigation', () => {
 
     fireEvent.click(sectionTitle);
 
-    CollapsibleNavigationSections[1].links?.forEach(link => {
+    collapsibleNavigationSections[1].links?.forEach(link => {
       expect(screen.getByText(link.label)).toBeInTheDocument();
     });
   });

@@ -2,7 +2,7 @@ import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 
 const styles = {
-  collapsibleNavSections: ({ palette }: Theme) =>
+  collapsibleNavList: ({ palette }: Theme) =>
     css({
       listStyleType: 'none',
       padding: 0,
