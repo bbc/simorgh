@@ -92,6 +92,30 @@ module.exports = ({
         ? `http://localhost:${webpackDevServerPort}/`
         : prodPublicPath,
     },
+    module: {
+      rules: [
+        {
+          test: /\.module\.scss$/,
+          use: [
+            'style-loader',
+            {
+              loader: 'css-loader',
+              options: {
+                modules: {
+                  localIdentName: '[name]__[local]___[hash:base64:5]',
+                },
+                importLoaders: 1,
+              },
+            },
+            'sass-loader',
+          ],
+        },
+        {
+          test: /(?<!\.module)\.scss$/,
+          use: ['style-loader', 'css-loader', 'sass-loader'],
+        },
+      ],
+    },
     optimization: {
       moduleIds: 'deterministic',
       minimizer: [

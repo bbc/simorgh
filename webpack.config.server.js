@@ -40,6 +40,30 @@ module.exports = ({ resolvePath, START_DEV_SERVER }) => {
         maxChunks: 1,
       }),
     ],
+    module: {
+      rules: [
+        {
+          test: /\.module\.scss$/,
+          use: [
+            'style-loader',
+            {
+              loader: 'css-loader',
+              options: {
+                modules: {
+                  localIdentName: '[name]__[local]___[hash:base64:5]',
+                },
+                importLoaders: 1,
+              },
+            },
+            'sass-loader',
+          ],
+        },
+        {
+          test: /(?<!\.module)\.scss$/,
+          use: ['style-loader', 'css-loader', 'sass-loader'],
+        },
+      ],
+    },
   };
 
   if (START_DEV_SERVER) {

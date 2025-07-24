@@ -226,6 +226,8 @@
     "prettier": "3.5.3",
     "puppeteer": "24.10.2",
     "retry": "0.13.1",
+    "sass": "1.89.2",
+    "sass-loader": "16.0.5",
     "start-server-nestjs-webpack-plugin": "2.2.5",
     "storybook": "9.0.12",
     "stream-browserify": "3.0.0",
