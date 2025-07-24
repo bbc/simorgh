@@ -1,10 +1,12 @@
 import React from 'react';
 
+import { Summary } from '#app/models/types/curationData';
 import Billboard from '.';
 import { StoryArgs } from '../../models/types/storybook';
 import metadata from './metadata.json';
 import readme from './README.md';
 import { kyrgyzBillboard, pidginLiveBillboard } from './fixtures';
+import persianData from '../../../../data/persian/homePage/index.json';
 import ThemeProvider from '../ThemeProvider';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
@@ -30,7 +32,7 @@ const Component = ({
   link?: string;
   image?: string;
   altText?: string;
-  summaries?: any[];
+  summaries?: Summary[];
 }) => {
   return (
     <Billboard
@@ -133,5 +135,25 @@ export const PidginLiveWithFiveSummaries = () => {
         />
       </ServiceContextProvider>
     </ThemeProvider>
+  );
+};
+
+export const PersianBillboard = () => {
+  const summary = persianData.data.curations[2].summaries[0];
+  return (
+    <div dir="rtl">
+      <ThemeProvider service="persian" variant="default">
+        <ServiceContextProvider service="persian" variant="default">
+          <Component
+            text={summary.title}
+            longText={summary.description || ''}
+            link={summary.link}
+            image={summary.imageUrl}
+            altText={summary.imageAlt}
+            summaries={persianData.data.curations[2].summaries}
+          />
+        </ServiceContextProvider>
+      </ThemeProvider>
+    </div>
   );
 };
