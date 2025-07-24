@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Summary } from '#app/models/types/curationData';
 import Billboard from '.';
 import { StoryArgs } from '../../models/types/storybook';
 import metadata from './metadata.json';
@@ -30,7 +31,7 @@ const Component = ({
   link?: string;
   image?: string;
   altText?: string;
-  summaries?: any[];
+  summaries?: Summary[];
 }) => {
   return (
     <Billboard
