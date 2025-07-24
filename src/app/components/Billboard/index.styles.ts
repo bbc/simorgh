@@ -126,7 +126,7 @@ export default {
       },
       [mq.GROUP_4_MIN_WIDTH]: {
         padding: `${spacings.DOUBLE}rem`,
-        minHeight: `${pixelsToRem(420)}rem`, // calculation includes padding
+        minHeight: `${pixelsToRem(440)}rem`, // calculation includes padding
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
