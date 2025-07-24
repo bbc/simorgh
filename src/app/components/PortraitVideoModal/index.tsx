@@ -207,6 +207,40 @@ const PortraitVideoModal = ({
             fullscreenExit: onClose,
           }}
         />
+        <button
+          type="button"
+          tabIndex={0}
+          data-testid="close-modal-visually-hidden"
+          css={{
+            position: 'absolute',
+            top: '2rem',
+            left: '2rem',
+            zIndex: 2,
+            padding: 0,
+            background: 'transparent',
+            border: 0,
+            width: 1,
+            height: 1,
+            margin: -1,
+            overflow: 'hidden',
+            clip: 'rect(0 0 0 0)',
+            whiteSpace: 'nowrap',
+            ':focus': {
+              outline: '2px solid #ff0000',
+              boxShadow: '0 0 0 4px #fff',
+              width: 'max-content',
+              height: 'auto',
+              overflow: 'visible',
+              clip: 'auto',
+              margin: 0,
+            },
+          }}
+          className="focusIndicatorInvert"
+          onClick={onClose}
+          aria-label="End of content. Close Modal"
+        >
+          <VisuallyHiddenText>End of content. Close Modal</VisuallyHiddenText>
+        </button>
       </div>
     </>
   );
