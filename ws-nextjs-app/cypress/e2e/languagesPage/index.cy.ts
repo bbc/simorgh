@@ -1,29 +1,24 @@
 import { STATIC_PAGE } from '#app/routes/utils/pageTypes';
-import { assertPidginHomepage, assertWSLanguagesPage } from './assertions';
+import {
+  assertWSLanguagesPage,
+  assertWSLanguagesPageURN,
+  assertWSLanguagesPageLocal,
+} from './assertions';
 import runTestsForPage from '../../support/helpers/runTestsForPage';
 
-const homePageTestSuites = [
+const testSuites = [
   {
     path: '/ws/languages',
-    service: 'pidgin',
-    runforEnv: ['test'],
-    tests: [assertPidginHomepage],
+    service: 'ws',
+    runforEnv: ['local'],
+    tests: [assertWSLanguagesPageLocal, assertWSLanguagesPageURN],
   },
   {
-    path: '/ws/languages?renderer_env=test',
-    service: 'pidgin',
+    path: '/ws/languages',
+    service: 'ws',
     runforEnv: ['test'],
-    tests: [assertPidginHomepage],
+    tests: [assertWSLanguagesPageURN],
   },
-  {
-    path: '/ws/languages?renderer_env=live',
-    service: 'pidgin',
-    runforEnv: ['test'],
-    tests: [assertPidginHomepage],
-  },
-];
-
-const staticPageTestSuites = [
   {
     path: '/ws/languages',
     service: 'ws',
@@ -33,7 +28,6 @@ const staticPageTestSuites = [
 ];
 
 runTestsForPage({
-  testSuites: [...homePageTestSuites, ...staticPageTestSuites],
-  testIsolation: true,
+  testSuites,
   pageType: STATIC_PAGE,
 });
