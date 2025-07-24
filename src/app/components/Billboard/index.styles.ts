@@ -44,16 +44,16 @@ export default {
   backgroundRedGradient: ({ mq }: Theme) =>
     css({
       background:
-        'linear-gradient(to left bottom,rgba(80, 0, 0, 1) 10%, rgba(40, 0, 0, 1) 50%)',
+        'linear-gradient(to left bottom, rgba(80, 0, 0, 1) 10%, rgba(40, 0, 0, 1) 50%)',
 
       [mq.GROUP_3_MIN_WIDTH]: {
         background:
-          'linear-gradient(to left,rgba(80, 0, 0, 1) 10%, rgba(40, 0, 0, 1) 50%)',
+          'linear-gradient(to left, rgba(80, 0, 0, 1) 10%, rgba(40, 0, 0, 1) 50%)',
       },
 
       [mq.GROUP_4_MIN_WIDTH]: {
         background:
-          'linear-gradient(to bottom,rgba(130, 0, 0, 1) 10%, rgba(40, 0, 0, 1) 70%)',
+          'linear-gradient(to bottom, rgba(130, 0, 0, 1) 10%, rgba(40, 0, 0, 1) 70%)',
       },
     }),
   contentContainer: ({ mq, gridWidths, spacings }: Theme) =>
