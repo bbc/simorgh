@@ -24,7 +24,7 @@ jobs:
             const { data: review_comments } = await github.rest.pulls.listReviewComments({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              issue_number: prNumber,
+              pull_number: prNumber,
             });
             const totalComments = review_comments.length + comments.length;
             console.log('totalComments', totalComments);
