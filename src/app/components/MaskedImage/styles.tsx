@@ -121,7 +121,7 @@ export default {
       180deg, ${mobileImageMask})`,
       aspectRatio: '16 /9',
       [mq.GROUP_4_MIN_WIDTH]: {
-        height: 'auto',
+        height: '100%',
         maxWidth: '60%',
         objectFit: 'cover',
         position: 'absolute',
@@ -155,11 +155,13 @@ export default {
     ({ mq }: Theme) =>
       css({
         [mq.GROUP_4_MIN_WIDTH]: {
+          height: 'auto',
           maskImage: `
           linear-gradient(to ${isRtl ? 'right' : 'left'}, black 0%, black 50%, transparent 100%),
           linear-gradient(to bottom, black 0%, black 80%, transparent 100%)`,
           maskComposite: 'intersect',
           zIndex: -1,
+          overflow: 'hidden',
         },
       }),
 };
