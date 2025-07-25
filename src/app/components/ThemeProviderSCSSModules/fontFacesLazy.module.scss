@@ -1,0 +1,230 @@
+// fontFacesLazy.module.scss
+// SCSS variables for font-face blocks, to be included as needed in other SCSS files.
+// This avoids including all @font-face rules by default, matching the lazy loading intent of the TS original.
+// Usage: @include the desired font-face variable in your SCSS where needed.
+
+// Instead of string variables, use mixins for each font-face block
+@mixin reith-serif-light-face {
+  @font-face {
+    font-family: 'ReithSerif';
+    src: url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSerif_WNumbers_Lt.woff2') format('woff2');
+    font-weight: 300;
+    font-display: optional;
+  }
+}
+@mixin reith-serif-medium-face {
+  @font-face {
+    font-family: 'ReithSerif';
+    src: url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSerif_W_Md.woff2') format('woff2');
+    font-weight: 500;
+    font-display: optional;
+  }
+}
+@mixin reith-sans-regular-face {
+  @font-face {
+    font-family: 'ReithSans';
+    src: url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSans_W_Rg.woff2') format('woff2');
+    font-weight: 400;
+    font-display: optional;
+  }
+}
+@mixin reith-sans-bold-face {
+  @font-face {
+    font-family: 'ReithSans';
+    src: url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSans_W_Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-display: optional;
+  }
+}
+@mixin reith-qalam-regular-face {
+  @font-face {
+    font-family: 'BBC Reith Qalam';
+    src: url('https://static.files.bbci.co.uk/fonts/reith-qalam/1.310/BBCReithQalam_W_Rg.woff2') format('woff2');
+    font-weight: 400;
+    font-display: optional;
+  }
+}
+@mixin reith-qalam-bold-face {
+  @font-face {
+    font-family: 'BBC Reith Qalam';
+    src: url('https://static.files.bbci.co.uk/fonts/reith-qalam/1.310/BBCReithQalam_W_Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-display: optional;
+  }
+}
+@mixin noto-serif-sinhala-regular-face {
+  @font-face {
+    font-family: 'Noto Serif Sinhala';
+    src: url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifSinhala/v1.00/normal.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+@mixin noto-serif-sinhala-bold-face {
+  @font-face {
+    font-family: 'Noto Serif Sinhala';
+    src: url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifSinhala/v1.00/bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+@mixin noto-serif-bengali-regular-face {
+  @font-face {
+    font-family: 'Noto Serif Bengali';
+    src: url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifBengali/v1.00/normal.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: optional;
+  }
+}
+@mixin noto-serif-bengali-bold-face {
+  @font-face {
+    font-family: 'Noto Serif Bengali';
+    src: url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifBengali/v1.00/bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: optional;
+  }
+}
+@mixin noto-sans-tamil-regular-face {
+  @font-face {
+    font-family: 'Noto Sans Tamil';
+    src: url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTamil/v1.00/normal.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+@mixin noto-sans-tamil-bold-face {
+  @font-face {
+    font-family: 'Noto Sans Tamil';
+    src: url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTamil/v1.00/bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+@mixin noto-sans-telugu-regular-face {
+  @font-face {
+    font-family: 'Noto Sans Telugu';
+    src: url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTelugu/v1.00/normal.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+@mixin noto-sans-telugu-bold-face {
+  @font-face {
+    font-family: 'Noto Sans Telugu';
+    src: url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTelugu/v1.00/bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+@mixin noto-sans-gujarati-regular-face {
+  @font-face {
+    font-family: 'Noto Sans Gujarati';
+    src: url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansGujarati/v1.00/normal.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+@mixin noto-sans-gujarati-bold-face {
+  @font-face {
+    font-family: 'Noto Sans Gujarati';
+    src: url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansGujarati/v1.00/bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+@mixin noto-sans-ethiopic-regular-face {
+  @font-face {
+    font-family: 'Noto Sans Ethiopic';
+    src: url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansEthiopic/v1.901/normal.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+@mixin noto-sans-ethiopic-bold-face {
+  @font-face {
+    font-family: 'Noto Sans Ethiopic';
+    src: url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansEthiopic/v1.901/bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+@mixin padauk-regular-face {
+  @font-face {
+    font-family: 'Padauk';
+    src: url('https://ws-downloads.files.bbci.co.uk/fonts/Padauk/v2.8/normal.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+@mixin padauk-bold-face {
+  @font-face {
+    font-family: 'Padauk';
+    src: url('https://ws-downloads.files.bbci.co.uk/fonts/Padauk/v2.8/bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
+// SCSS mixin to emit @font-face rules for a given service, matching the algorithmic approach in fontFacesLazy.ts
+// Usage: @include font-faces-for-service(news); or @include font-faces-for-service(tamil);
+@mixin font-faces-for-service($service, $is-pwa: false) {
+  $reith-pwa-services: afaanoromoo, afrique, azeri, gahuza, hausa, igbo, indonesia, kyrgyz, pidgin, serbian, somali, swahili, ukrainian, uzbek, yoruba;
+  @if $is-pwa and index($reith-pwa-services, $service) {
+    @include reith-sans-bold-face;
+    @include reith-sans-regular-face;
+    @include reith-serif-medium-face;
+    @include reith-serif-light-face;
+  }
+  @else if ($service == news or $service == newsround or $service == mundo or $service == polska or $service == portuguese or $service == russian or $service == sport or $service == turkce or $service == ws) {
+    @include reith-sans-bold-face;
+    @include reith-sans-regular-face;
+    @include reith-serif-medium-face;
+    @include reith-serif-light-face;
+  }
+  @else if ($service == arabic or $service == pashto or $service == persian or $service == urdu) {
+    @include reith-qalam-regular-face;
+    @include reith-qalam-bold-face;
+  }
+  @else if ($service == sinhala) {
+    @include noto-serif-sinhala-regular-face;
+    @include noto-serif-sinhala-bold-face;
+  }
+  @else if ($service == bengali) {
+    @include noto-serif-bengali-regular-face;
+    @include noto-serif-bengali-bold-face;
+  }
+  @else if ($service == tamil) {
+    @include noto-sans-tamil-regular-face;
+    @include noto-sans-tamil-bold-face;
+  }
+  @else if ($service == telugu) {
+    @include noto-sans-telugu-regular-face;
+    @include noto-sans-telugu-bold-face;
+  }
+  @else if ($service == gujarati) {
+    @include noto-sans-gujarati-regular-face;
+    @include noto-sans-gujarati-bold-face;
+  }
+  @else if ($service == amharic or $service == tigrinya) {
+    @include noto-sans-ethiopic-regular-face;
+    @include noto-sans-ethiopic-bold-face;
+  }
+  @else if ($service == burmese) {
+    @include padauk-regular-face;
+    @include padauk-bold-face;
+  }
+}

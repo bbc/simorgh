@@ -1,0 +1,223 @@
+// fontFaces.module.scss
+// SCSS mixins for @font-face rules, matching the fontFaces.ts constants
+// Usage: @include reith-serif-regular-face; etc.
+
+@mixin reith-serif-regular-face {
+  @font-face {
+    font-family: 'ReithSerif';
+    src: url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSerif_W_Rg.woff2') format('woff2'), url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSerif_W_Rg.woff') format('woff');
+    font-display: optional;
+  }
+}
+@mixin reith-serif-bold-face {
+  @font-face {
+    font-family: 'ReithSerif';
+    src: url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSerif_W_Bd.woff2') format('woff2'), url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSerif_W_Bd.woff') format('woff');
+    font-weight: 700;
+    font-display: optional;
+  }
+}
+@mixin reith-serif-light-face {
+  @font-face {
+    font-family: 'ReithSerif';
+    src: url('https://static.files.bbci.co.uk/fonts/reith/r2.512/subsets/BBCReithSerif_WNumbers_Lt.woff2') format('woff2'), url('https://static.files.bbci.co.uk/fonts/reith/r2.512/subsets/BBCReithSerif_WNumbers_Lt.woff') format('woff');
+    font-weight: 300;
+    font-display: optional;
+  }
+}
+@mixin reith-serif-medium-face {
+  @font-face {
+    font-family: 'ReithSerif';
+    src: url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSerif_W_Md.woff2') format('woff2'), url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSerif_W_Md.woff') format('woff');
+    font-weight: 500;
+    font-display: optional;
+  }
+}
+@mixin reith-serif-extra-bold-face {
+  @font-face {
+    font-family: 'ReithSerif';
+    src: url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSerif_W_ExBd.woff2') format('woff2'), url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSerif_W_ExBd.woff') format('woff');
+    font-weight: 800;
+    font-display: optional;
+  }
+}
+@mixin reith-sans-regular-face {
+  @font-face {
+    font-family: 'ReithSans';
+    src: url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSans_W_Rg.woff2') format('woff2'), url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSans_W_Rg.woff') format('woff');
+    font-display: optional;
+  }
+}
+@mixin reith-sans-bold-face {
+  @font-face {
+    font-family: 'ReithSans';
+    src: url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSans_W_Bd.woff2') format('woff2'), url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSans_W_Bd.woff') format('woff');
+    font-weight: 700;
+    font-display: optional;
+  }
+}
+@mixin reith-sans-light-face {
+  @font-face {
+    font-family: 'ReithSans';
+    src: url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSans_W_Lt.woff2') format('woff2'), url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSans_W_Lt.woff') format('woff');
+    font-weight: 300;
+    font-display: optional;
+  }
+}
+@mixin reith-sans-light-italic-face {
+  @font-face {
+    font-family: 'ReithSans';
+    src: url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSans_W_LtIt.woff2') format('woff2'), url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSans_W_LtIt.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: optional;
+  }
+}
+@mixin reith-sans-medium-face {
+  @font-face {
+    font-family: 'ReithSans';
+    src: url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSans_W_Md.woff2') format('woff2'), url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSans_W_Md.woff') format('woff');
+    font-weight: 500;
+    font-display: optional;
+  }
+}
+@mixin reith-sans-extra-bold-face {
+  @font-face {
+    font-family: 'ReithSans';
+    src: url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSans_W_ExBd.woff2') format('woff2'), url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSans_W_ExBd.woff') format('woff');
+    font-weight: 800;
+    font-display: optional;
+  }
+}
+@mixin reith-sans-extra-bold-italic-face {
+  @font-face {
+    font-family: 'ReithSans';
+    src: url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSans_W_ExBdIt.woff2') format('woff2'), url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSans_W_ExBdIt.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+    font-display: optional;
+  }
+}
+@mixin reith-sans-condensed-regular-face {
+  @font-face {
+    font-family: 'ReithSansCondensed';
+    src: url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSansCd_W_Rg.woff2') format('woff2'), url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSansCd_W_Rg.woff') format('woff');
+    font-display: optional;
+  }
+}
+@mixin reith-sans-condensed-bold-face {
+  @font-face {
+    font-family: 'ReithSansCondensed';
+    src: url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSansCd_W_Bd.woff2') format('woff2'), url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSansCd_W_Bd.woff') format('woff');
+    font-weight: 700;
+    font-display: optional;
+  }
+}
+@mixin noto-serif-sinhala-regular-face {
+  @font-face {
+    font-family: 'Noto Serif Sinhala';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifSinhala/v1.00/normal.woff2') format('woff2'), url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifSinhala/v1.00/normal.woff') format('woff'), url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifSinhala/v1.00/normal.eot') format('eot'), url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifSinhala/v1.00/normal.ttf') format('ttf');
+    font-display: swap;
+  }
+}
+@mixin noto-serif-sinhala-bold-face {
+  @font-face {
+    font-family: 'Noto Serif Sinhala';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifSinhala/v1.00/bold.woff2') format('woff2'), url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifSinhala/v1.00/bold.woff') format('woff'), url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifSinhala/v1.00/bold.eot') format('eot'), url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifSinhala/v1.00/bold.ttf') format('ttf');
+    font-display: swap;
+  }
+}
+@mixin noto-sans-tamil-regular-face {
+  @font-face {
+    font-family: 'Noto Sans Tamil';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTamil/v1.00/normal.woff2') format('woff2'), url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTamil/v1.00/normal.woff') format('woff'), url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTamil/v1.00/normal.eot') format('eot'), url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTamil/v1.00/normal.ttf') format('ttf');
+    font-display: swap;
+  }
+}
+@mixin noto-sans-tamil-bold-face {
+  @font-face {
+    font-family: 'Noto Sans Tamil';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTamil/v1.00/bold.woff2') format('woff2'), url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTamil/v1.00/bold.woff') format('woff'), url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTamil/v1.00/normal.eot') format('eot'), url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTamil/v1.00/bold.ttf') format('ttf');
+    font-display: swap;
+  }
+}
+@mixin noto-sans-telugu-regular-face {
+  @font-face {
+    font-family: 'Noto Sans Telugu';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTelugu/v1.00/normal.woff') format('woff'), url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTelugu/v1.00/normal.eot') format('eot'), url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTelugu/v1.00/normal.ttf') format('ttf');
+    font-display: swap;
+  }
+}
+@mixin noto-sans-telugu-bold-face {
+  @font-face {
+    font-family: 'Noto Sans Telugu';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTelugu/v1.00/bold.woff') format('woff'), url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTelugu/v1.00/bold.eot') format('eot'), url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTelugu/v1.00/bold.ttf') format('ttf');
+    font-display: swap;
+  }
+}
+@mixin noto-sans-gujarati-regular-face {
+  @font-face {
+    font-family: 'Noto Sans Gujarati';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansGujarati/v1.00/normal.woff') format('woff'), url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansGujarati/v1.00/normal.eot') format('eot'), url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansGujarati/v1.00/normal.ttf') format('ttf');
+    font-display: swap;
+  }
+}
+@mixin noto-sans-gujarati-bold-face {
+  @font-face {
+    font-family: 'Noto Sans Gujarati';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansGujarati/v1.00/bold.woff') format('woff'), url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansGujarati/v1.00/bold.eot') format('eot'), url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansGujarati/v1.00/bold.ttf') format('ttf');
+    font-display: swap;
+  }
+}
+@mixin noto-sans-ethiopic-regular-face {
+  @font-face {
+    font-family: 'Noto Sans Ethiopic';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansEthiopic/v1.901/normal.woff') format('woff'), url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansEthiopic/v1.901/normal.eot') format('eot'), url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansEthiopic/v1.901/normal.ttf') format('ttf');
+    font-display: swap;
+  }
+}
+@mixin noto-sans-ethiopic-bold-face {
+  @font-face {
+    font-family: 'Noto Sans Ethiopic';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansEthiopic/v1.901/bold.woff') format('woff'), url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansEthiopic/v1.901/bold.eot') format('eot'), url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansEthiopic/v1.901/bold.ttf') format('ttf');
+    font-display: swap;
+  }
+}
+@mixin padauk-regular-face {
+  @font-face {
+    font-family: 'Padauk';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://ws-downloads.files.bbci.co.uk/fonts/Padauk/v2.8/normal.woff') format('woff'), url('https://ws-downloads.files.bbci.co.uk/fonts/Padauk/v2.8/normal.eot') format('eot'), url('https://ws-downloads.files.bbci.co.uk/fonts/Padauk/v2.8/normal.ttf') format('ttf');
+    font-display: swap;
+  }
+}
+@mixin padauk-bold-face {
+  @font-face {
+    font-family: 'Padauk';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://ws-downloads.files.bbci.co.uk/fonts/Padauk/v2.8/bold.woff') format('woff'), url('https://ws-downloads.files.bbci.co.uk/fonts/Padauk/v2.8/bold.eot') format('eot'), url('https://ws-downloads.files.bbci.co.uk/fonts/Padauk/v2.8/bold.ttf') format('ttf');
+    font-display: swap;
+  }
+}
