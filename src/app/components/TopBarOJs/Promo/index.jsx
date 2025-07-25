@@ -91,71 +91,35 @@ const TimeStamp = styled(PromoTimestamp)`
 
 const Promo = ({ block, experimentVariant, clickTracker }) => {
   const { script, service, serviceDatetimeLocale } = use(ServiceContext);
-  let title;
-  let href;
-  let textBlock;
-  let aresLinkBlock;
+
   let timestamp;
-  let isLive;
 
-  switch (experimentVariant) {
-    case 'top-bar-top-stories':
-    case 'read-more-a-and-top-stories': {
-      const overtypedHeadline = block?.headlines?.overtyped ?? '';
-      const mainHeadline = block?.headlines?.headline ?? '';
-      const headlineBlockText =
-        block?.headlines?.promoHeadline?.blocks?.[0]?.model?.blocks?.[0]?.model
-          ?.text ?? '';
-      const name = block?.name ?? '';
+  const overtypedHeadline = block?.headlines?.overtyped ?? '';
+  const mainHeadline = block?.headlines?.headline ?? '';
+  const headlineBlockText =
+    block?.headlines?.promoHeadline?.blocks?.[0]?.model?.blocks?.[0]?.model
+      ?.text ?? '';
+  const name = block?.name ?? '';
 
-      title =
-        overtypedHeadline ||
-        mainHeadline ||
-        headlineBlockText ||
-        name ||
-        block.headline ||
-        '';
+  const title =
+    overtypedHeadline ||
+    mainHeadline ||
+    headlineBlockText ||
+    name ||
+    block.headline ||
+    '';
 
-      const canonicalUrl = block?.locators?.canonicalUrl ?? '';
-      const assetUri = block?.locators?.assetUri ?? '';
-      const uri = block?.uri ?? '';
+  const canonicalUrl = block?.locators?.canonicalUrl ?? '';
+  const assetUri = block?.locators?.assetUri ?? '';
+  const uri = block?.uri ?? '';
 
-      href =
-        canonicalUrl ||
-        assetUri ||
-        uri ||
-        (block.destinationUrl
-          ? `https://www.bbc.com${block.destinationUrl}`
-          : '');
-      isLive = block.isLive;
-      break;
-    }
-    case 'top-bar-most-read':
-      title = block.title;
-      href = block.href;
-      break;
-    default:
-      textBlock = filterForBlockType(block?.model?.blocks || {}, 'text');
-      aresLinkBlock = filterForBlockType(
-        block?.model?.blocks || {},
-        'aresLink',
-      );
-      timestamp = path(
-        ['model', 'blocks', '0', 'model', 'timestamp'],
-        aresLinkBlock,
-      );
-      href =
-        path(
-          ['model', 'blocks', '0', 'model', 'blocks', '0', 'model', 'locator'],
-          textBlock,
-        ) || '';
-      title =
-        path(
-          ['model', 'blocks', '0', 'model', 'blocks', '0', 'model', 'text'],
-          textBlock,
-        ) || '';
-      break;
-  }
+  const href =
+    canonicalUrl ||
+    assetUri ||
+    uri ||
+    (block.destinationUrl ? `https://www.bbc.com${block.destinationUrl}` : '');
+
+  const { isLive } = block;
 
   const isOperaMini = useOperaMiniDetection();
 
