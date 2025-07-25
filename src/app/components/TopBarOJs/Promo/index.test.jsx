@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '../../../../components/react-testing-library-with-providers';
+import { render } from '../../react-testing-library-with-providers';
 import {
   PromoSingleBlock,
   oneLinkWithTimestamp,
@@ -8,7 +8,7 @@ import {
   topStoriesBlocksWithLiveItem,
 } from '../helpers/fixtureData';
 import Promo from '.';
-import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 
 const ScrollablePromo = ({ block, experimentVariant }) => (
   <ServiceContextProvider service="pidgin">
