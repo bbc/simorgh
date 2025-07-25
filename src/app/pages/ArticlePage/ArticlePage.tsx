@@ -80,6 +80,7 @@ import {
   isPortraitVideo,
   isPortraitVideoUnderHeadline,
 } from '../utils/portraitVideo';
+import TopBarOJs from '#app/components/TopBarOJs';
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -334,6 +335,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
       )}
       <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
+      <TopBarOJs blocks={blocks} />
       <div css={styles.grid}>
         <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
           <main
