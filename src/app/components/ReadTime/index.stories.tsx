@@ -1,6 +1,7 @@
 import React from 'react';
 import ReadTime from '.';
 import readme from './README.md';
+import metadata from './metadata.json';
 
 const Component = ({ readTime }: { readTime: number }) => (
   <ReadTime readTime={readTime} />
@@ -11,6 +12,7 @@ export default {
   Component,
   parameters: {
     docs: { readme },
+    metadata,
   },
 };
 
