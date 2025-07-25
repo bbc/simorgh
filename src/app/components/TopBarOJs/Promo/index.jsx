@@ -1,6 +1,5 @@
 import React, { use } from 'react';
 import styled from '@emotion/styled';
-import path from 'ramda/src/path';
 import { getPica } from '#psammead/gel-foundations/src/typography';
 import { getSerifBold } from '#psammead/psammead-styles/src/font-styles';
 import { Link } from '#psammead/psammead-story-promo/src';
@@ -15,9 +14,7 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
-import filterForBlockType from '#lib/utilities/blockHandlers';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
-import PromoTimestamp from '#components/Promo/timestamp';
 import LiveLabel from '../../LiveLabel';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
@@ -84,15 +81,8 @@ const OperaPromoBox = styled.div`
   }
 `;
 
-const TimeStamp = styled(PromoTimestamp)`
-  margin-top: ${GEL_SPACING};
-  color: ${({ theme }) => theme.isDarkUi && theme.palette.GREY_6};
-`;
-
-const Promo = ({ block, experimentVariant, clickTracker }) => {
-  const { script, service, serviceDatetimeLocale } = use(ServiceContext);
-
-  let timestamp;
+const Promo = ({ block, clickTracker }) => {
+  const { script, service } = use(ServiceContext);
 
   const overtypedHeadline = block?.headlines?.overtyped ?? '';
   const mainHeadline = block?.headlines?.headline ?? '';
@@ -126,25 +116,16 @@ const Promo = ({ block, experimentVariant, clickTracker }) => {
   const WrapperPromoBox = isOperaMini ? OperaPromoBox : PromoBox;
 
   return (
-    <WrapperPromoBox experimentVariant={experimentVariant}>
+    <WrapperPromoBox>
       <StyledLink
         href={href}
         service={service}
         script={script}
         {...clickTracker}
-        experimentVariant={experimentVariant}
       >
         {isLive && <LiveLabel />}
         {title}
       </StyledLink>
-      {timestamp && !experimentVariant && (
-        <TimeStamp
-          serviceDatetimeLocale={serviceDatetimeLocale}
-          data-testid="timestamp"
-        >
-          {timestamp}
-        </TimeStamp>
-      )}
     </WrapperPromoBox>
   );
 };
