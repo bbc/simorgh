@@ -50,7 +50,7 @@ const articleDataBuilder = (
   articleBlocksPopulator = blocksWithHeadlineAndText,
   atiAnalytics = {},
   type = 'article',
-  readTime = 0,
+  readTime = 1,
 ) => ({
   metadata: {
     id: `urn:bbc:ares::article:${id}`,
@@ -77,7 +77,7 @@ const articleDataBuilder = (
     tags: things,
     allowAdvertising,
     stats: {
-      readTime: readTime || undefined,
+      readTime,
     },
   },
   content: {
@@ -1524,34 +1524,6 @@ export const articleDataRussianWithPVButNoWatchMomentsTranslation =
     true,
     plainOptimoBlock,
   ) as unknown as Article;
-
-export const articleDataPidginWithReadTime = articleDataBuilder(
-  'cwyevjvgjwgo',
-  'Pidgin',
-  'pcm',
-  'http://www.bbc.co.uk/ontologies/passport/home/Pidgin',
-  ['Article Headline in Pidgin', 'A paragraph in Pidgin.'],
-  'Article Headline for SEO in Pidgin',
-  'Article Headline for Promo in Pidgin',
-  'Article summary in Pidgin',
-  emptyThings,
-  false,
-  blocksWithHeadlineAndText,
-  {
-    categoryName: null,
-    contentId: 'urn:bbc:optimo:c0000000001o',
-    language: 'en-gb',
-    ldpThingIds: null,
-    ldpThingLabels: null,
-    nationsProducer: null,
-    pageIdentifier: null,
-    pageTitle: 'Article Headline for SEO in Pidgin',
-    timePublished: '2018-01-01T12:01:00.000Z',
-    timeUpdated: '2018-01-01T14:00:00.000Z',
-  },
-  'article',
-  4,
-) as unknown as Article;
 
 export const bylineWithNoAuthor = [
   {

@@ -17,7 +17,6 @@ import {
   promoSample,
   articlePglDataPidgin,
   articleStyDataPidgin,
-  articleDataPidginWithReadTime,
 } from '#pages/ArticlePage/fixtureData';
 import { data as newsMostReadData } from '#data/news/mostRead/index.json';
 import { data as persianMostReadData } from '#data/persian/mostRead/index.json';
@@ -943,11 +942,11 @@ describe('Article Page', () => {
     it('should render read time component when readTime is supplied in metadata', () => {
       render(
         <Context service="pidgin">
-          <ArticlePage pageData={articleDataPidginWithReadTime} />
+          <ArticlePage pageData={articleDataPidgin} />
         </Context>,
       );
 
-      const readTime = screen.getByText('Estimated Read Time: 4 minutes');
+      const readTime = screen.getByText('Estimated Read Time: 1 minute');
       expect(readTime).toBeInTheDocument();
     });
   });
