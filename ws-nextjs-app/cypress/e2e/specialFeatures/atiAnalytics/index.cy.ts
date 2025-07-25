@@ -44,12 +44,20 @@ const canonicalTestSuites = [
   },
   {
     path: '/ws/languages',
-    runforEnv: ['local', 'test', 'live'],
+    runforEnv: ['local', 'test'],
     service: 'ws',
     pageIdentifier: 'ws.languages.page',
     applicationType: 'responsive',
     contentType: 'index-home',
-    useReverb: true,
+    tests: [assertPageView],
+  },
+  {
+    path: '/ws/languages',
+    runforEnv: ['live'],
+    service: 'ws',
+    pageIdentifier: 'ws.languages.page',
+    applicationType: 'responsive',
+    contentType: 'static',
     tests: [assertPageView],
   },
 ];
