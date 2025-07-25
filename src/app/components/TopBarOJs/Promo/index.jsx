@@ -7,7 +7,6 @@ import { Link } from '#psammead/psammead-story-promo/src';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_0_SCREEN_WIDTH_MIN,
@@ -31,13 +30,6 @@ const StyledLink = styled(Link)`
   overflow-x: hidden;
   overflow-y: hidden;
 
-  ${({ experimentVariant }) =>
-    !experimentVariant &&
-    ` -webkit-line-clamp: 4;
-      -webkit-box-orient: vertical;
-      display: -webkit-box;
-    `}
-
   &:hover,
   &:focus {
     text-decoration: underline;
@@ -52,11 +44,13 @@ const StyledLink = styled(Link)`
 
 const PromoBox = styled.div`
   position: relative;
+  display: block;
+  margin-bottom: 0;
   background-color: ${({ theme }) =>
     theme.isDarkUi ? theme.palette.GREY_3 : theme.palette.WHITE};
-  padding: ${GEL_SPACING_DBL};
-  margin-bottom: ${GEL_SPACING_TRPL};
+  padding: ${GEL_SPACING};
   height: auto;
+
   @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}) {
     width: 14.8125rem;
   }
@@ -66,22 +60,16 @@ const PromoBox = styled.div`
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     width: 12.6875rem;
   }
-  ${({ experimentVariant }) =>
-    experimentVariant &&
-    `
-      display: block;
-      margin-bottom: 0;
-      @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}) {
-        width: 11.5rem;
-      }
-      @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
-        width: 17rem;
-      }
-      @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-        width: 15.5rem;
-      }
-      padding: ${GEL_SPACING};
-    `}
+
+  @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}) {
+    width: 11.5rem;
+  }
+  @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
+    width: 17rem;
+  }
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    width: 15.5rem;
+  }
 `;
 
 const OperaPromoBox = styled.div`
