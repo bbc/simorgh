@@ -52,7 +52,7 @@ const assertATIPageViewEventParamsExist = ({
     expect(params).to.have.property('idclient');
   }
 
-  if (contentType !== 'list-datadriven') {
+  if (!['list-datadriven', 'static'].includes(contentType)) {
     expect(params).to.have.property('x1'); // content ID
   }
 
