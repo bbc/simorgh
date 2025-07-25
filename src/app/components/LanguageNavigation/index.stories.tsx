@@ -4,6 +4,8 @@ import ThemeProvider from '#app/components/ThemeProvider';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import CollapsibleNavigation from './index';
 import collapsibleNavigationSections from './constants';
+import metadata from './metadata.json';
+import readme from './README.md';
 
 type CollapsibleNavigationSubLink = {
   id: string;
@@ -39,7 +41,10 @@ const Component = ({
 export default {
   Component,
   title: 'Components/CollapsibleNavigation',
-  parameters: {},
+  parameters: {
+    metadata,
+    docs: { readme },
+  },
 };
 
 export const Example = () => (

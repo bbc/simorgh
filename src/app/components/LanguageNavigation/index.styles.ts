@@ -94,13 +94,6 @@ const styles = {
       },
     }),
 
-  collapsibleSubNav: ({ spacings }: Theme) =>
-    css({
-      width: '100%',
-      padding: `${spacings.FULL}rem 0`,
-      display: 'block',
-    }),
-
   collapsibleSubNavNoJs: ({ spacings }: Theme) =>
     css({
       width: '100%',
@@ -109,6 +102,12 @@ const styles = {
       '&:target': {
         display: 'block',
       },
+    }),
+  collapsibleSubNav: ({ spacings }: Theme) =>
+    css({
+      width: '100%',
+      padding: `${spacings.FULL}rem 0`,
+      display: 'block',
     }),
 
   collapsibleSubNavHeader: css({
@@ -132,6 +131,7 @@ const styles = {
       border: 'none',
       background: 'none',
       padding: 0,
+      marginRight: `${pixelsToRem(12)}rem`,
       cursor: 'pointer',
       display: 'flex',
       alignItems: 'center',
@@ -139,6 +139,16 @@ const styles = {
       width: `${pixelsToRem(22)}rem`,
       height: `${pixelsToRem(22)}rem`,
       color: palette.BLACK,
+      '&:hover': {
+        backgroundColor: palette.POSTBOX,
+        fill: palette.WHITE,
+      },
+    }),
+
+  collapsibleSubNavCloseButtonIcon: () =>
+    css({
+      width: `${pixelsToRem(14)}rem`,
+      height: `${pixelsToRem(14)}rem`,
     }),
 
   collapsibleSubNavGrid: ({ mq, spacings, palette }: Theme) =>
@@ -159,14 +169,9 @@ const styles = {
     css({
       breakInside: 'avoid',
       padding: 0,
-      borderLeft: `${pixelsToRem(4)}rem solid transparent`,
       borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_3}`,
       width: '100%',
-      '&:hover': {
-        borderLeft: `${pixelsToRem(4)}rem solid ${palette.POSTBOX}`,
-        outline: 'none',
-        backgroundColor: palette.GREY_3,
-      },
+      position: 'relative',
       [mq.GROUP_4_MIN_WIDTH]: {
         display: 'inline-block',
         borderBottom: 'none',
@@ -178,13 +183,36 @@ const styles = {
       display: 'inline-block',
       width: '100%',
       height: '100%',
-      padding: `${pixelsToRem(12)}rem ${spacings.FULL}rem`,
+      padding: `${pixelsToRem(11)}rem ${spacings.FULL}rem`,
       textDecoration: 'none',
       color: palette.GREY_8,
       ...fontVariants.sansRegular,
       fontWeight: 400,
-      lineHeight: `${pixelsToRem(22)}`,
+      lineHeight: `${pixelsToRem(22)}rem`,
       letterSpacing: '0%',
+      '&:hover::after': {
+        content: '""',
+      },
+      '&::after': {
+        content: 'none',
+        position: 'absolute',
+        left: 0,
+        bottom: 0,
+        width: `${pixelsToRem(4)}rem`,
+        height: '100%',
+        backgroundColor: palette.POSTBOX,
+      },
+      '&:focus-visible': {
+        boxShadow: `inset 0 0 0 ${pixelsToRem(4)}rem ${palette.WHITE}`,
+        outline: `${pixelsToRem(2)}rem solid ${palette.BLACK}`,
+        outlineOffset: `${pixelsToRem(-2)}rem`,
+      },
+      '&:focus-visible::after': {
+        content: 'none',
+      },
+      '&:focus, &:hover': {
+        backgroundColor: palette.GREY_3,
+      },
     }),
 };
 
