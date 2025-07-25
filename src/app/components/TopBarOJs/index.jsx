@@ -52,28 +52,23 @@ const ScrollablePromoContainer = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
-  ${({ experimentVariant }) =>
-    experimentVariant &&
-    experimentVariant !== 'off' &&
-    `
-    padding: 0 ${GEL_SPACING} ${GEL_SPACING_DBL};
-    margin: 0rem;
+  padding: 0 ${GEL_SPACING} ${GEL_SPACING_DBL};
+  margin: 0rem;
 
-    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-      padding: 0 ${GEL_SPACING_DBL} ${GEL_SPACING_DBL};
-      margin: 0 -0.2rem;
-    }
-    
-    @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-      margin: 0 -0.8rem;
-    }
-    
-    @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-      display: none;
-    }
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    padding: 0 ${GEL_SPACING_DBL} ${GEL_SPACING_DBL};
+    margin: 0 -0.2rem;
+  }
 
-    width: 100vw;
-  `}
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    margin: 0 -0.8rem;
+  }
+
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    display: none;
+  }
+
+  width: 100vw;
 `;
 
 const LabelComponent = styled.strong`
@@ -147,21 +142,13 @@ const LabelComponentOJTopBar = styled(({ ariaLabel, ...props }) => (
   width: 100vw;
 `;
 
-const TopBarOJs = ({
-  blocks,
-  blockGroupIndex = null,
-  experimentVariant = null,
-}) => {
-  const { script, service, dir, translations, mostRead } = use(ServiceContext);
+const TopBarOJs = ({ blocks }) => {
+  const { script, service, dir, translations } = use(ServiceContext);
 
   const eventTrackingData = {
-    componentName: `edoj${blockGroupIndex}`,
-    format: 'CHD=edoj',
-    ...(experimentVariant && {
-      componentName: 'top-bar-oj',
-      sendOptimizelyEvents: true,
-      viewThreshold: 0,
-    }),
+    componentName: 'top-bar-oj',
+    sendOptimizelyEvents: true,
+    viewThreshold: 0,
   };
 
   const viewTracker = useViewTracker(eventTrackingData);
@@ -171,47 +158,21 @@ const TopBarOJs = ({
     return null;
   }
 
-  let title;
-  if (
-    ['top-bar-top-stories', 'read-more-a-and-top-stories'].includes(
-      experimentVariant,
-    )
-  ) {
-    title = translations.topStoriesTitle || 'Top Stories';
-  } else if (experimentVariant === 'top-bar-most-read') {
-    title = mostRead.header || 'Most Read';
-  } else {
-    title =
-      blocks[0].type === 'title' &&
-      path(
-        ['0', 'model', 'blocks', '0', 'model', 'blocks', '0', 'model', 'text'],
-        blocks,
-      );
-  }
-
-  const blocksWithoutTitle = blocks[0].type === 'title' ? tail(blocks) : blocks;
-
-  const isSingleItem = blocksWithoutTitle.length === 1;
+  const title = translations.topStoriesTitle || 'Top Stories';
 
   const ariaLabel = title && idSanitiser(title);
 
-  const a11yAttributes = {
-    ...(!experimentVariant && {
-      as: 'section',
-      role: 'region',
-    }),
-    ...(ariaLabel
-      ? { 'aria-labelledby': ariaLabel }
-      : {
-          'aria-label': pathOr(
-            'Related Content',
-            ['relatedContent'],
-            translations,
-          ),
-        }),
-  };
+  const a11yAttributes = ariaLabel
+    ? { 'aria-labelledby': ariaLabel }
+    : {
+        'aria-label': pathOr(
+          'Related Content',
+          ['relatedContent'],
+          translations,
+        ),
+      };
 
-  return experimentVariant ? (
+  return (
     <>
       <LabelComponentOJTopBar
         id={ariaLabel}
@@ -222,11 +183,10 @@ const TopBarOJs = ({
       >
         {title}
       </LabelComponentOJTopBar>
-      <ScrollablePromoContainer experimentVariant={experimentVariant}>
+      <ScrollablePromoContainer>
         <GridItemMediumNoMargin>
           <PromoList
             blocks={blocks}
-            experimentVariant={experimentVariant}
             viewTracker={viewTracker}
             clickTracker={clickTracker}
             a11yAttributes={a11yAttributes}
@@ -234,31 +194,6 @@ const TopBarOJs = ({
         </GridItemMediumNoMargin>
       </ScrollablePromoContainer>
     </>
-  ) : (
-    <GridItemMediumNoMargin {...a11yAttributes} data-e2e="scrollable-promos">
-      {title && (
-        <LabelComponent
-          id={ariaLabel}
-          data-testid="eoj-recommendations-heading"
-          script={script}
-          service={service}
-          dir={dir}
-        >
-          {title}
-        </LabelComponent>
-      )}
-      {isSingleItem ? (
-        <PromoWrapper dir={dir} {...viewTracker}>
-          <Promo block={blocksWithoutTitle[0]} clickTracker={clickTracker} />
-        </PromoWrapper>
-      ) : (
-        <PromoList
-          blocks={blocksWithoutTitle}
-          viewTracker={viewTracker}
-          clickTracker={clickTracker}
-        />
-      )}
-    </GridItemMediumNoMargin>
   );
 };
 
