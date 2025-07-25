@@ -1,121 +1,39 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import ScrollablePromo from '.';
 import {
-  threeLinks,
-  oneLinkOnly,
-  oneLinkWithNoTitle,
-  oneLinkWithTimestamp,
-  moreThanThreeLinks,
-  twoLinksWithNoImages,
-  truncatedTextInSingleLink,
-  arabicText,
   topStoriesBlocks,
   topStoriesBlocksWithLiveItem,
-  mostReadBlocks,
-  mostReadBlocksRTL,
 } from './helpers/fixtureData';
+import TopBarOJs from '.';
+import { service } from '#app/lib/config/services/afaanoromoo';
 
 const BackGround = styled.div`
   background-color: #f6f6f6;
   padding: 2rem;
 `;
 
-const ScrollablePromoComponent = ({
-  data,
-  service,
-  experimentVariant = null,
-}) => (
+const TopBarOJsComponent = args => {
   <ServiceContextProvider service={service}>
-    <ScrollablePromo blocks={data} experimentVariant={experimentVariant} />
-  </ServiceContextProvider>
-);
-
-export default {
-  title: 'Components/Scrollable Promo',
-  ScrollablePromoComponent,
+    <TopBarOJs {...args} />
+  </ServiceContextProvider>;
 };
 
-export const ThreeLinks = (_, { service }) => (
-  <BackGround>
-    <ScrollablePromoComponent data={threeLinks} service={service} />
-  </BackGround>
-);
+export default {
+  title: 'Components/TopBarOJs',
+  component: TopBarOJsComponent,
+};
 
-export const OnlyOneLink = (_, { service }) => (
-  <BackGround>
-    <ScrollablePromoComponent data={oneLinkOnly} service={service} />
-  </BackGround>
-);
+export const OJTopBarTopStories = args => <TopBarOJs {...args} />;
 
-export const OneLinkWithNoTitle = (_, { service }) => (
-  <BackGround>
-    <ScrollablePromoComponent data={oneLinkWithNoTitle} service={service} />
-  </BackGround>
-);
+OJTopBarTopStories.args = {
+  blocks: topStoriesBlocks,
+  service: 'news',
+};
 
-export const MoreThanThreeLinks = (_, { service }) => (
-  <BackGround>
-    <ScrollablePromoComponent data={moreThanThreeLinks} service={service} />
-  </BackGround>
-);
+export const OJTopBarTopStoriesWithLiveLabel = args => <TopBarOJs {...args} />;
 
-export const NoImagesInData = (_, { service }) => (
-  <BackGround>
-    <ScrollablePromoComponent data={twoLinksWithNoImages} service={service} />
-  </BackGround>
-);
-
-export const TruncatedTextInSingleLink = (_, { service }) => (
-  <BackGround>
-    <ScrollablePromoComponent
-      data={truncatedTextInSingleLink}
-      service={service}
-    />
-  </BackGround>
-);
-
-export const ArabicText = () => (
-  <BackGround>
-    <ScrollablePromoComponent data={arabicText} service="arabic" />
-  </BackGround>
-);
-
-export const WithTimestamp = (_, { service }) => (
-  <BackGround>
-    <ScrollablePromoComponent data={oneLinkWithTimestamp} service={service} />
-  </BackGround>
-);
-
-export const OJTopBarTopStories = (_, { service }) => (
-  <ScrollablePromoComponent
-    data={topStoriesBlocks}
-    service={service}
-    experimentVariant="top-bar-top-stories"
-  />
-);
-
-export const OJTopBarTopStoriesWithLiveLabel = (_, { service }) => (
-  <ScrollablePromoComponent
-    data={topStoriesBlocksWithLiveItem}
-    service={service}
-    experimentVariant="top-bar-top-stories"
-  />
-);
-
-export const OJTopBarMostRead = (_, { service }) => (
-  <ScrollablePromoComponent
-    data={mostReadBlocks}
-    service={service}
-    experimentVariant="top-bar-most-read"
-  />
-);
-
-export const OJTopBarMostReadRTL = () => (
-  <ScrollablePromoComponent
-    data={mostReadBlocksRTL}
-    service="arabic"
-    experimentVariant="top-bar-most-read"
-  />
-);
+OJTopBarTopStoriesWithLiveLabel.args = {
+  blocks: topStoriesBlocksWithLiveItem,
+  service: 'news',
+};
