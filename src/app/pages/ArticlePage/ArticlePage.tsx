@@ -48,6 +48,7 @@ import { Recommendation } from '#app/models/types/onwardJourney';
 
 import ScrollablePromo from '#components/ScrollablePromo';
 import Recommendations from '#app/components/Recommendations';
+import TopBarOJs from '../../components/TopBarOJs';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -80,7 +81,6 @@ import {
   isPortraitVideo,
   isPortraitVideoUnderHeadline,
 } from '../utils/portraitVideo';
-import TopBarOJs from '#app/components/TopBarOJs';
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -280,6 +280,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const showTopics = Boolean(showRelatedTopics && topics.length > 0);
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
+  const topBarTopStories = pageData.secondaryColumn?.topStories;
+
   const showContinueReadingButton = Boolean(
     !isAmp &&
       !isLite &&
@@ -335,7 +337,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
       )}
       <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
-      <TopBarOJs blocks={blocks} />
+      <TopBarOJs blocks={topBarTopStories} />
       <div css={styles.grid}>
         <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
           <main
