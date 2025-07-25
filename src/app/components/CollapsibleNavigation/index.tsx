@@ -105,6 +105,7 @@ const CollapsibleNavigation = ({
             <button
               id={`close-${activeSection.id}`}
               type="button"
+              role="button"
               aria-label={`Close ${activeSection.title} navigation`}
               title={`Close ${activeSection.title} navigation`}
               name={`Close ${activeSection.title} navigation`}

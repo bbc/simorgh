@@ -6,7 +6,7 @@ import {
 } from '../react-testing-library-with-providers';
 import CollapsibleNavigation from './index';
 
-const collapsibleNavigationSections = [
+const sections = [
   {
     id: 'section1',
     title: 'Section 1',
@@ -24,39 +24,27 @@ const collapsibleNavigationSections = [
 
 describe('LanguageNavigation', () => {
   test('renders section titles', () => {
-    render(
-      <CollapsibleNavigation
-        collapsibleNavigationSections={collapsibleNavigationSections}
-      />,
-    );
+    render(<CollapsibleNavigation collapsibleNavigationSections={sections} />);
 
-    collapsibleNavigationSections.forEach(section => {
+    sections.forEach(section => {
       expect(screen.getByText(section.title)).toBeInTheDocument();
     });
   });
 
   test('clicking a section toggles dropdown', () => {
-    render(
-      <CollapsibleNavigation
-        collapsibleNavigationSections={collapsibleNavigationSections}
-      />,
-    );
+    render(<CollapsibleNavigation collapsibleNavigationSections={sections} />);
 
     const sectionTitle = screen.getByText('Section 1');
 
     fireEvent.click(sectionTitle);
 
-    collapsibleNavigationSections[0].links?.forEach(link => {
+    sections[0].links?.forEach(link => {
       expect(screen.getByText(link.label)).toBeInTheDocument();
     });
   });
 
   test('clicking the same section again closes the dropdown', () => {
-    render(
-      <CollapsibleNavigation
-        collapsibleNavigationSections={collapsibleNavigationSections}
-      />,
-    );
+    render(<CollapsibleNavigation collapsibleNavigationSections={sections} />);
 
     const sectionTitle = screen.getByText('Section 1');
 
@@ -69,11 +57,7 @@ describe('LanguageNavigation', () => {
   });
 
   test('clicking close button closes the dropdown', () => {
-    render(
-      <CollapsibleNavigation
-        collapsibleNavigationSections={collapsibleNavigationSections}
-      />,
-    );
+    render(<CollapsibleNavigation collapsibleNavigationSections={sections} />);
 
     const sectionTitle = screen.getByText('Section 1');
 
@@ -87,17 +71,13 @@ describe('LanguageNavigation', () => {
   });
 
   test('renders links correctly when section is active', () => {
-    render(
-      <CollapsibleNavigation
-        collapsibleNavigationSections={collapsibleNavigationSections}
-      />,
-    );
+    render(<CollapsibleNavigation collapsibleNavigationSections={sections} />);
 
     const sectionTitle = screen.getByText('Section 2');
 
     fireEvent.click(sectionTitle);
 
-    collapsibleNavigationSections[1].links?.forEach(link => {
+    sections[1].links?.forEach(link => {
       expect(screen.getByText(link.label)).toBeInTheDocument();
     });
   });
