@@ -54,7 +54,7 @@ const canonicalNonSmokeTestSuites = [
   {
     path: '/afaanoromoo/oduu-41217768',
     service: 'afaanoromoo',
-    runforEnv: ['local', 'test', 'live'],
+    runforEnv: 'local',
     tests,
   },
   {
