@@ -1205,23 +1205,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      photoGalleryPage: {
-        environments: {
-          live: {
-            paths: ['/pidgin/50913502'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/pidgin/sport-23252855'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/pidgin/sport-23252855'],
-            enabled: true,
-          },
-        },
-        smoke: true,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -1261,23 +1244,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/portuguese/articles/cxvxrj8tvppo'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
-      photoGalleryPage: {
-        environments: {
-          live: {
-            paths: ['/portuguese/geral-40302633'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/portuguese/revista-23038840'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/portuguese/geral-40302633'],
             enabled: true,
           },
         },
@@ -1326,23 +1292,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      photoGalleryPage: {
-        environments: {
-          live: {
-            paths: ['/punjabi/india-42928885'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/punjabi/23185977'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/punjabi/india-42928885'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -1382,23 +1331,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/russian/articles/c123456abcdo'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
-      photoGalleryPage: {
-        environments: {
-          live: {
-            paths: ['/russian/features-45782775'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/russian/23181067'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/russian/features-45782775'],
             enabled: true,
           },
         },
@@ -1495,23 +1427,6 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      photoGalleryPage: {
-        environments: {
-          live: {
-            paths: ['/serbian/cyr/srbija-46748932'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/serbian/cyr/23229409'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/serbian/cyr/srbija-46748932'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -1555,23 +1470,6 @@ module.exports = () => ({
           },
         },
         smoke: true,
-      },
-      photoGalleryPage: {
-        environments: {
-          live: {
-            paths: ['/serbian/lat/srbija-46748932'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/serbian/lat/23229409'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/serbian/lat/srbija-46748932'],
-            enabled: true,
-          },
-        },
-        smoke: false,
       },
     },
     specialFeatures: {
@@ -1617,23 +1515,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      photoGalleryPage: {
-        environments: {
-          live: {
-            paths: ['/sinhala/world-37657374'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/sinhala/sport-23033481'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/sinhala/world-37657374'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -1672,23 +1553,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/somali/articles/c123456abcdo'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
-      photoGalleryPage: {
-        environments: {
-          live: {
-            paths: ['/somali/war-45947544'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/somali/23064216'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/somali/war-45947544'],
             enabled: true,
           },
         },
@@ -1767,23 +1631,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      photoGalleryPage: {
-        environments: {
-          live: {
-            paths: ['/swahili/habari-48185450'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/swahili/23124175'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/swahili/habari-48185450'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -1823,23 +1670,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/tamil/articles/c123456abcdo'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
-      photoGalleryPage: {
-        environments: {
-          live: {
-            paths: ['/tamil/global-47758688'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/tamil/india-23099589'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/tamil/global-47758688'],
             enabled: true,
           },
         },
@@ -1889,23 +1719,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      photoGalleryPage: {
-        environments: {
-          live: {
-            paths: ['/telugu/india-42321552'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/telugu/other-news-23128500'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/telugu/india-42321552'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -1949,23 +1762,6 @@ module.exports = () => ({
           },
         },
         smoke: false,
-      },
-      photoGalleryPage: {
-        environments: {
-          live: {
-            paths: ['/thai/thailand-49950038'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/thai/international-23252840'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/thai/thailand-49950038'],
-            enabled: true,
-          },
-        },
-        smoke: true,
       },
     },
     specialFeatures: {
@@ -2028,23 +1824,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      photoGalleryPage: {
-        environments: {
-          live: {
-            paths: ['/tigrinya/news-49944566'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/tigrinya/news-23143804'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/tigrinya/news-49944566'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -2084,23 +1863,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/turkce/articles/c123456abcdo'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
-      photoGalleryPage: {
-        environments: {
-          live: {
-            paths: ['/turkce/haberler-dunya-50924340'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/turkce/23059103'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/turkce/haberler-dunya-50924340'],
             enabled: true,
           },
         },
@@ -2150,23 +1912,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      photoGalleryPage: {
-        environments: {
-          live: {
-            paths: ['/ukchina/simp/cool-britannia-38434549'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/ukchina/simp/23099907'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/ukchina/simp/cool-britannia-38434549'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -2206,23 +1951,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/ukchina/articles/cabcdefghijo/trad'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
-      photoGalleryPage: {
-        environments: {
-          live: {
-            paths: ['/ukchina/trad/cool-britannia-38434549'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/ukchina/trad/23099907'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/ukchina/trad/cool-britannia-38434549'],
             enabled: false,
           },
         },
@@ -2302,23 +2030,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      photoGalleryPage: {
-        environments: {
-          live: {
-            paths: ['/ukrainian/features-41278900'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/ukrainian/23111903'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/ukrainian/features-41278900'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -2363,23 +2074,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      photoGalleryPage: {
-        environments: {
-          live: {
-            paths: ['/urdu/pakistan-48242478'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/urdu/23214883'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/urdu/pakistan-48242478'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -2419,23 +2113,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/uzbek/articles/c123456abcdo'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
-      photoGalleryPage: {
-        environments: {
-          live: {
-            paths: ['/uzbek/central-asia-46716844'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/uzbek/sport-23098743'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/uzbek/central-asia-46716844'],
             enabled: true,
           },
         },
@@ -2513,23 +2190,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      photoGalleryPage: {
-        environments: {
-          live: {
-            paths: ['/vietnamese/world-48605529'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/vietnamese/23082328'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/vietnamese/world-48605529'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -2569,23 +2229,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/yoruba/articles/cxvxrj8tvppo'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
-      photoGalleryPage: {
-        environments: {
-          live: {
-            paths: ['/yoruba/media-50970014'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/yoruba/ere-idaraya-23252844'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/yoruba/media-50970014'],
             enabled: true,
           },
         },
@@ -2635,23 +2278,6 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      photoGalleryPage: {
-        environments: {
-          live: {
-            paths: ['/zhongwen/simp/chinese-news-49065935'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/zhongwen/simp/23161412'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/zhongwen/simp/chinese-news-49065935'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -2691,23 +2317,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/zhongwen/articles/cabcdefghijo/trad'],
-            enabled: true,
-          },
-        },
-        smoke: true,
-      },
-      photoGalleryPage: {
-        environments: {
-          live: {
-            paths: ['/zhongwen/trad/chinese-news-49065935'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/zhongwen/trad/23161412'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/zhongwen/trad/chinese-news-49065935'],
             enabled: true,
           },
         },
