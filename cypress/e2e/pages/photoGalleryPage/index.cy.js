@@ -1,174 +1,212 @@
-import runTestsForPage from '#cypress/support/helpers/runTestsForPage';
+import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
+import { testsThatAlwaysRunForAllPages as testsForAllPages } from '../testsForAllPages';
+import { testsThatFollowSmokeTestConfigForAllCanonicalPages as testsForAllCanonicalPages } from '../testsForAllCanonicalPages';
+// import { testsThatFollowSmokeTestConfigForAllAMPPages as testsForAllAMPPages } from '../testsForAllAMPPages';
 import { PHOTO_GALLERY_PAGE } from '../../../../src/app/routes/utils/pageTypes';
-import canonicalArticleTests from './testsForCanonicalOnly';
 
-const tests = [canonicalArticleTests];
+const canonicalTests = [testsForAllPages, testsForAllCanonicalPages];
 
-const smokeTestSuites = [
+const canonicalSmokeTestSuites = [
   {
     path: '/afaanoromoo/oduu-41217768',
     service: 'afaanoromoo',
-    runforEnv: 'local',
-    tests,
+    runforEnv: ['local', 'test', 'live'],
+    canonicalTests,
   },
 ];
 
-const nonSmokeTestSuites = [
+const canonicalNonSmokeTestSuites = [
   {
     path: '/afaanoromoo/oduu-41217768',
     service: 'afaanoromoo',
-    runforEnv: 'local',
-    tests,
+    runforEnv: ['local', 'test', 'live'],
+    canonicalTests,
   },
   {
     path: '/afrique/region-39269126',
     service: 'afrique',
     runforEnv: 'local',
-    tests,
+    canonicalTests,
   },
   {
     path: '/amharic/42743191',
     service: 'amharic',
     runforEnv: 'local',
-    tests,
+    canonicalTests,
   },
   {
     path: '/arabic/art-and-culture-38260491',
     service: 'arabic',
     runforEnv: 'local',
-    tests,
+    canonicalTests,
   },
   {
     path: '/azeri/azerbaijan-44208474',
     service: 'azeri',
     runforEnv: 'local',
-    tests,
+    canonicalTests,
   },
   {
     path: '/bengali/news-38827173',
     service: 'bengali',
     runforEnv: 'local',
-    tests,
+    canonicalTests,
   },
   {
     path: '/burmese/media-47680015',
     service: 'burmese',
     runforEnv: 'local',
-    tests,
+    canonicalTests,
   },
   {
     path: '/gahuza/amakuru-43894701',
     service: 'gahuza',
     runforEnv: 'local',
-    tests,
+    canonicalTests,
   },
   {
     path: '/gujarati/international-41345658',
     service: 'gujarati',
     runforEnv: 'local',
-    tests,
+    canonicalTests,
   },
   {
     path: '/hindi/india-50198153',
     service: 'hindi',
     runforEnv: 'local',
-    tests,
+    canonicalTests,
   },
   {
     path: '/igbo/afirika-49666505',
     service: 'igbo',
     runforEnv: 'local',
-    tests,
+    canonicalTests,
   },
   {
     path: '/indonesia/indonesia-41635759',
     service: 'indonesia',
     runforEnv: 'local',
-    tests,
+    canonicalTests,
   },
   {
     path: '/indonesia/indonesia-41635759',
     service: 'indonesia',
     runforEnv: 'local',
-    tests,
+    canonicalTests,
   },
   {
     path: '/japanese/features-and-analysis-42786589',
     service: 'japanese',
     runforEnv: 'local',
-    tests,
+    canonicalTests,
   },
   {
     path: '/korean/features-41397333',
     service: 'korean',
     runforEnv: 'local',
-    tests,
+    canonicalTests,
   },
   {
     path: '/kyrgyz/world-40847556',
     service: 'kyrgyz',
     runforEnv: 'local',
-    tests,
+    canonicalTests,
   },
   {
     path: '/kyrgyz/world-40847556',
     service: 'kyrgyz',
     runforEnv: 'local',
-    tests,
+    canonicalTests,
   },
   {
     path: '/marathi/india-42894522',
     service: 'marathi',
     runforEnv: 'local',
-    tests,
+    canonicalTests,
   },
   {
     path: '/mundo/deportes-36935058',
     service: 'mundo',
     runforEnv: ['local', 'live'],
-    tests,
+    canonicalTests,
   },
   {
     path: '/mundo/noticias-23147451',
     service: 'mundo',
     runforEnv: 'test',
-    tests,
+    canonicalTests,
   },
   {
     path: '/mundo/noticias-23147451',
     service: 'mundo',
     runforEnv: 'test',
-    tests,
+    canonicalTests,
   },
   {
     path: '/nepali/news-50627370',
     service: 'nepali',
     runforEnv: 'local',
-    tests,
+    canonicalTests,
   },
   {
     path: '/pashto/arts-and-literature-50230813',
     service: 'pashto',
     runforEnv: 'local',
-    tests,
+    canonicalTests,
   },
   {
     path: '/persian/magazine-49281981',
     service: 'persian',
     runforEnv: ['local', 'live'],
-    tests,
+    canonicalTests,
   },
   {
     path: '/persian/23104784',
     service: 'persian',
     runforEnv: 'test',
-    tests,
+    canonicalTests,
   },
 ];
 
-const testSuites = Cypress.env('SMOKE') ? smokeTestSuites : nonSmokeTestSuites;
+const canonicalTestSuites = Cypress.env('SMOKE')
+  ? canonicalSmokeTestSuites
+  : canonicalNonSmokeTestSuites;
+
+// const ampTestSuites = [
+//   ...canonicalTestSuites,
+//   ...ampOnlyNonSmokeTestSuites,
+// ].map(testSuite => {
+//   return {
+//     ...testSuite,
+//     path: `${testSuite.path}.amp`,
+//     tests: [...ampTests],
+//   };
+// });
+
+// const liteTestSuites = canonicalTestSuites
+//   .filter(({ service }) => !['news', 'sport', 'newsround'].includes(service))
+//   .map(testSuite => {
+//     return {
+//       ...testSuite,
+//       path: `${testSuite.path}.lite`,
+//       tests: [liteTests],
+//     };
+//   });
+
+// describe('storyPage', () => {
+//   beforeEach(() => {
+//     cy.intercept(
+//       {
+//         url: `https://cdn.optimizely.com/datafiles/${getOptimizelyKey()}.json`,
+//       },
+//       request => {
+//         request.reply({ statusCode: 404 });
+//       },
+//     ).as('disable-optimizely');
+//   });
 
 runTestsForPage({
   pageType: PHOTO_GALLERY_PAGE,
-  testSuites,
+  testSuites: [...canonicalTestSuites],
 });
+// });
