@@ -43,11 +43,11 @@ class IntegrationTestEnvironment extends JsdomEnvironment {
     });
 
     Object.defineProperties(this.global, {
-      pageType: { value: this.pageType },
-      service: { value: this.service },
-      window: { value: dom.window },
-      document: { value: dom.window.document },
-      fetch: { value: fetch },
+      pageType: { value: this.pageType, configurable: true },
+      service: { value: this.service, configurable: true },
+      window: { value: dom.window, configurable: true },
+      document: { value: dom.window.document, configurable: true },
+      fetch: { value: fetch, configurable: true },
     });
   }
 
