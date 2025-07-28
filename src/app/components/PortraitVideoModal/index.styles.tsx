@@ -97,15 +97,11 @@ const styles = {
         top: `${theme.spacings.DOUBLE}rem`,
         left: dir === 'ltr' ? `${theme.spacings.DOUBLE}rem` : undefined,
         right: dir === 'rtl' ? `${theme.spacings.DOUBLE}rem` : undefined,
-        clipPath: 'inset(100%)',
-        clip: 'rect(1px, 1px, 1px, 1px)',
         height: '1px',
         width: '1px',
         overflow: 'hidden',
 
         ':focus': {
-          clipPath: 'none',
-          clip: 'auto',
           height: 'auto',
           width: 'auto',
           top: `${theme.spacings.DOUBLE}rem`,
@@ -124,10 +120,7 @@ const styles = {
         ':focus-visible': {
           border: `${pixelsToRem(4)}rem solid ${theme.palette.WHITE}`,
           boxShadow: `0 0 0 ${pixelsToRem(2)}rem ${theme.palette.BLACK}`,
-          backgroundColor: theme.palette.WHITE,
-          color: theme.palette.BLACK,
           outline: 'none',
-          padding: '12px 8px',
         },
 
         [theme.mq.GROUP_3_MIN_WIDTH]: {
