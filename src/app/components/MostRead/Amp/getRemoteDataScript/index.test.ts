@@ -25,7 +25,7 @@ describe('getRemoteDataScript', () => {
     const translations = WesternArabic;
     expect(translations).toBeDefined();
 
-    expect(() => eval(transformData())).toThrowError(
+    expect(() => eval(transformData())).toThrow(
       'Empty records from mostread endpoint',
     );
   });
