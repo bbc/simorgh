@@ -222,7 +222,6 @@ const PortraitVideoModal = ({
         <button
           ref={endOfContentButtonRef}
           type="button"
-          tabIndex={-1}
           data-testid="close-modal-visually-hidden"
           css={styles.visuallyHiddenCloseButton(dir)}
           onClick={onClose}
