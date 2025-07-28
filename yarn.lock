@@ -6287,16 +6287,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@whatwg-node/fetch@npm:^0.10.5":
-  version: 0.10.5
-  resolution: "@whatwg-node/fetch@npm:0.10.5"
-  dependencies:
-    "@whatwg-node/node-fetch": "npm:^0.7.11"
-    urlpattern-polyfill: "npm:^10.0.0"
-  checksum: 10/6b2df2590f56ef4c1dc8c7709facd18579124f20f283dd842178a31a8e37ced9b88e0411403fa661ccdaaa8cc5302df19e278e9ca9368b841ab5a82fa6226d03
-  languageName: node
-  linkType: hard
-
 "@whatwg-node/fetch@npm:^0.10.8":
   version: 0.10.9
   resolution: "@whatwg-node/fetch@npm:0.10.9"
@@ -6304,18 +6294,6 @@ __metadata:
     "@whatwg-node/node-fetch": "npm:^0.7.22"
     urlpattern-polyfill: "npm:^10.0.0"
   checksum: 10/f7db52a23111283da8fe1baf2349eec3dd68d500caaff7ea6461dfdbb80a4ae5f411296a2df4bb339955b00b994264211989b0c6258f5ea02b3a30068c28d2f7
-  languageName: node
-  linkType: hard
-
-"@whatwg-node/node-fetch@npm:^0.7.11":
-  version: 0.7.12
-  resolution: "@whatwg-node/node-fetch@npm:0.7.12"
-  dependencies:
-    "@whatwg-node/disposablestack": "npm:^0.0.6"
-    "@whatwg-node/promise-helpers": "npm:^1.0.0"
-    busboy: "npm:^1.6.0"
-    tslib: "npm:^2.6.3"
-  checksum: 10/7747b6d037361c68b877cb7dfd5b4b03d4859af3c0752695221a500ff73846a65ba4812ec8661ba0251ab6bcdbd246700a19f3725b753367aca6a4b381f42e8a
   languageName: node
   linkType: hard
 
@@ -6340,7 +6318,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@whatwg-node/promise-helpers@npm:^1.2.1, @whatwg-node/promise-helpers@npm:^1.2.3":
+"@whatwg-node/promise-helpers@npm:^1.2.1":
   version: 1.3.0
   resolution: "@whatwg-node/promise-helpers@npm:1.3.0"
   dependencies:
@@ -6359,19 +6337,6 @@ __metadata:
     "@whatwg-node/promise-helpers": "npm:^1.3.2"
     tslib: "npm:^2.6.3"
   checksum: 10/db5e475c67d185ee21dac3626661d95638c6e1e770c5433c7a0cfb09bb3d80cf7c2d3cdb659a87049b40f9eb7812eefa2883302893632727a9134b2c9569deb4
-  languageName: node
-  linkType: hard
-
-"@whatwg-node/server@npm:^0.10.3":
-  version: 0.10.3
-  resolution: "@whatwg-node/server@npm:0.10.3"
-  dependencies:
-    "@envelop/instrumentation": "npm:^1.0.0"
-    "@whatwg-node/disposablestack": "npm:^0.0.6"
-    "@whatwg-node/fetch": "npm:^0.10.5"
-    "@whatwg-node/promise-helpers": "npm:^1.2.3"
-    tslib: "npm:^2.6.3"
-  checksum: 10/4a3f76ed8b83d546edee8c0d962b508283d06f449dab3e00a451d5cf4103a992ffb1c8800f03cf0c370606755ae337bcf33193c0631cd80fc9ccfc041c9501f3
   languageName: node
   linkType: hard
 
@@ -7478,7 +7443,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"busboy@npm:1.6.0, busboy@npm:^1.6.0":
+"busboy@npm:1.6.0":
   version: 1.6.0
   resolution: "busboy@npm:1.6.0"
   dependencies:
@@ -8277,13 +8242,6 @@ __metadata:
   version: 2.6.12
   resolution: "core-js@npm:2.6.12"
   checksum: 10/7c624eb00a59c74c769d5d80f751f3bf1fc6201205b6562f27286ad5e00bbca1483f2f7eb0c2854b86f526ef5c7dc958b45f2ff536f8a31b8e9cb1a13a96efca
-  languageName: node
-  linkType: hard
-
-"core-js@npm:^3.41.0":
-  version: 3.41.0
-  resolution: "core-js@npm:3.41.0"
-  checksum: 10/a06ebae2264dd24c8e4b331a68412f7d0730557c41901f80fa910a9398dbef4670482d9ef5a41fef7efd41307c612d3d4051df7640ac4c01ff6feda45f8b92be
   languageName: node
   linkType: hard
 
@@ -14249,19 +14207,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-test-api-route-handler@npm:4.0.16":
-  version: 4.0.16
-  resolution: "next-test-api-route-handler@npm:4.0.16"
-  dependencies:
-    "@whatwg-node/server": "npm:^0.10.3"
-    cookie: "npm:^1.0.2"
-    core-js: "npm:^3.41.0"
-  peerDependencies:
-    next: ">=9"
-  checksum: 10/90b597b5e6f64ac295c1240dac1917a24295ff7c8b6d4d38656543752433e395652617915c41949a8a7f359353544bfbd00d74805369f8661fa449b9b29e7be5
-  languageName: node
-  linkType: hard
-
 "next-test-api-route-handler@npm:5.0.0":
   version: 5.0.0
   resolution: "next-test-api-route-handler@npm:5.0.0"
@@ -16777,7 +16722,7 @@ __metadata:
     jest: "npm:30.0.5"
     jest-environment-jsdom: "npm:^29.7.0"
     next: "npm:15.3.3"
-    next-test-api-route-handler: "npm:4.0.16"
+    next-test-api-route-handler: "npm:5.0.0"
     npm-run-all2: "npm:8.0.4"
     ts-node: "npm:^10.9.2"
   languageName: unknown
@@ -16900,7 +16845,6 @@ __metadata:
     moment: "npm:2.30.1"
     moment-timezone: "npm:0.6.0"
     morgan: "npm:1.10.1"
-    next-test-api-route-handler: "npm:5.0.0"
     npm-run-all2: "npm:8.0.4"
     polyfill-crypto.getrandomvalues: "npm:1.0.0"
     prettier: "npm:3.6.2"
