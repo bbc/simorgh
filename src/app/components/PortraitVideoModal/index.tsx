@@ -226,9 +226,9 @@ const PortraitVideoModal = ({
           data-testid="close-modal-visually-hidden"
           css={styles.visuallyHiddenCloseButton(dir)}
           onClick={onClose}
-          aria-label="End of content. Close Modal"
+          aria-label="End of content. Close modal"
         >
-          End of content. Close Modal
+          End of content. Close modal
         </button>
       </div>
     </>

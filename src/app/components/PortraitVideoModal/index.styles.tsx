@@ -102,13 +102,6 @@ const styles = {
         height: '1px',
         width: '1px',
         overflow: 'hidden',
-        padding: `${theme.spacings.DOUBLE}rem`,
-        backgroundColor: theme.palette.WHITE,
-        border: `${pixelsToRem(2)}rem solid ${theme.palette.WHITE}`,
-        color: theme.palette.WHITE,
-        textDecoration: 'none',
-        ...theme.fontSizes.doublePica,
-        ...theme.fontVariants.sansBold,
 
         ':focus': {
           clipPath: 'none',
@@ -123,16 +116,18 @@ const styles = {
           border: `${pixelsToRem(2)}rem solid ${theme.palette.WHITE}`,
           textDecoration: 'none',
           zIndex: 2,
-          ...theme.fontSizes.doublePica,
-          ...theme.fontVariants.sansBold,
+          padding: '12px 8px',
+          ...theme.fontSizes.pica,
+          ...theme.fontVariants.sansRegular,
         },
 
         ':focus-visible': {
-          border: `${pixelsToRem(4)}rem solid ${theme.palette.BLACK}`,
-          boxShadow: `0 0 0 ${pixelsToRem(2)}rem ${theme.palette.WHITE}`,
+          border: `${pixelsToRem(4)}rem solid ${theme.palette.WHITE}`,
+          boxShadow: `0 0 0 ${pixelsToRem(2)}rem ${theme.palette.BLACK}`,
           backgroundColor: theme.palette.WHITE,
           color: theme.palette.BLACK,
           outline: 'none',
+          padding: '12px 8px',
         },
 
         [theme.mq.GROUP_3_MIN_WIDTH]: {
