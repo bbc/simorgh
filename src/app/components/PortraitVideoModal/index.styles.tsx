@@ -1,15 +1,5 @@
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
-import {
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_2_SCREEN_WIDTH_MAX,
-} from '#psammead/gel-foundations/src/breakpoints';
-import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
-
-// as copied from the skip link styles
-const END_OF_CONTENT_CLOSE_MODAL_BUTTON_COLOR = '#333';
-const END_OF_CONTENT_CLOSE_MODAL_BUTTON_BORDER = '0.1875rem'; // 3px
-const TOP_BOTTOM_SPACING = '0.75rem'; // 12px
 
 const styles = {
   bodyOverflowHidden: () =>
@@ -104,15 +94,18 @@ const styles = {
     (theme: Theme) =>
       css({
         position: 'absolute',
+        top: `${theme.spacings.DOUBLE}rem`,
+        left: dir === 'ltr' ? `${theme.spacings.DOUBLE}rem` : undefined,
+        right: dir === 'rtl' ? `${theme.spacings.DOUBLE}rem` : undefined,
         clipPath: 'inset(100%)',
         clip: 'rect(1px, 1px, 1px, 1px)',
         height: '1px',
         width: '1px',
         overflow: 'hidden',
-        padding: `${TOP_BOTTOM_SPACING} ${GEL_SPACING}`,
+        padding: `${theme.spacings.DOUBLE}rem`,
         backgroundColor: theme.palette.WHITE,
-        border: `${END_OF_CONTENT_CLOSE_MODAL_BUTTON_BORDER} solid #000`,
-        color: END_OF_CONTENT_CLOSE_MODAL_BUTTON_COLOR,
+        border: `${pixelsToRem(2)}rem solid ${theme.palette.WHITE}`,
+        color: theme.palette.WHITE,
         textDecoration: 'none',
         ...theme.fontSizes.doublePica,
         ...theme.fontVariants.sansBold,
@@ -122,23 +115,28 @@ const styles = {
           clip: 'auto',
           height: 'auto',
           width: 'auto',
-          top: 0,
-          left: dir === 'ltr' ? 0 : undefined,
-          right: dir === 'rtl' ? 0 : undefined,
+          top: `${theme.spacings.DOUBLE}rem`,
+          left: dir === 'ltr' ? `${theme.spacings.DOUBLE}rem` : undefined,
+          right: dir === 'rtl' ? `${theme.spacings.DOUBLE}rem` : undefined,
           backgroundColor: theme.palette.WHITE,
-          color: END_OF_CONTENT_CLOSE_MODAL_BUTTON_COLOR,
-          border: `${END_OF_CONTENT_CLOSE_MODAL_BUTTON_BORDER} solid #000`,
+          color: theme.palette.BLACK,
+          border: `${pixelsToRem(2)}rem solid ${theme.palette.WHITE}`,
           textDecoration: 'none',
           zIndex: 2,
           ...theme.fontSizes.doublePica,
           ...theme.fontVariants.sansBold,
-          [`@media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN})`]: {
-            top: GEL_SPACING,
-          },
         },
 
-        [`@media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX})`]: {
-          padding: GEL_SPACING,
+        ':focus-visible': {
+          border: `${pixelsToRem(4)}rem solid ${theme.palette.BLACK}`,
+          boxShadow: `0 0 0 ${pixelsToRem(2)}rem ${theme.palette.WHITE}`,
+          backgroundColor: theme.palette.WHITE,
+          color: theme.palette.BLACK,
+          outline: 'none',
+        },
+
+        [theme.mq.GROUP_3_MIN_WIDTH]: {
+          display: 'flex',
         },
       }),
 };

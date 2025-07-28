@@ -148,6 +148,7 @@ const PortraitVideoModal = ({
       if (event.key === 'Escape') {
         onClose();
       }
+      // - Tab/Shift+Tab loops focus between the close button and the end-of-content button
       if (event.key === 'Tab') {
         if (
           document.activeElement === closeButtonRef.current &&
@@ -170,6 +171,7 @@ const PortraitVideoModal = ({
 
     if (modal) {
       closeButtonRef.current?.focus();
+      // Prevent tabbing to elements outside the modal
       reactRootElement?.setAttribute('inert', 'true');
       modal.addEventListener('mousedown', handleBackdropClick);
       modal.addEventListener('touchstart', handleBackdropClick);
