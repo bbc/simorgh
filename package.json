@@ -222,7 +222,6 @@
     "minimist": "1.2.8",
     "mkdirp": "3.0.1",
     "mocha-junit-reporter": "2.2.1",
-    "next-test-api-route-handler": "5.0.0",
     "npm-run-all2": "8.0.4",
     "prettier": "3.6.2",
     "puppeteer": "24.15.0",
