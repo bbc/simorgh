@@ -30,7 +30,7 @@
     "@babel/preset-react": "7.27.1",
     "@emotion/babel-plugin": "11.13.5",
     "@emotion/jest": "^11.11.0",
-    "@jest/environment": "^29.7.0",
+    "@jest/environment": "30.0.5",
     "@jest/types": "30.0.5",
     "@next/swc-darwin-arm64": "15.3.2",
     "@next/swc-darwin-x64": "15.3.2",
