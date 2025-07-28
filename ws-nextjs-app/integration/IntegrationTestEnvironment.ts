@@ -9,7 +9,7 @@ import getPageTypeFromTestPath from '../../src/integration/utils/getPageTypeFrom
 import camelCaseToText from '../../src/integration/utils/camelCaseToText';
 import fetchDom from '../../src/integration/utils/fetchDom';
 
-class CustomTestEnvirnoment extends TestEnvironment {
+class CustomTestEnvironment extends TestEnvironment {
   pageType: string;
 
   service: string | string[];
@@ -74,4 +74,4 @@ class CustomTestEnvirnoment extends TestEnvironment {
   }
 }
 
-export default CustomTestEnvirnoment;
+export default CustomTestEnvironment;
