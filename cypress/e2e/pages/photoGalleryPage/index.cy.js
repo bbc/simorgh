@@ -3,7 +3,6 @@ import { testsThatAlwaysRunForAllPages as testsForAllPages } from '../testsForAl
 import { testsThatFollowSmokeTestConfigForAllCanonicalPages as testsForAllCanonicalPages } from '../testsForAllCanonicalPages';
 import { testsThatFollowSmokeTestConfigForAllAMPPages as testsForAllAMPPages } from '../testsForAllAMPPages';
 import { PHOTO_GALLERY_PAGE } from '../../../../src/app/routes/utils/pageTypes';
-import getOptimizelyKey from '../../../support/helpers/getOptimizelyKey';
 
 const tests = [
   testsForAllPages,
