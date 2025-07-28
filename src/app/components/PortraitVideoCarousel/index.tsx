@@ -1,9 +1,10 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
 import { jsx } from '@emotion/react';
-import React, { useRef, useState } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { PortraitVideoCarouselProps } from '#app/models/types/portraitVideo';
+import { RequestContext } from '#app/contexts/RequestContext';
 import styles from './index.styles';
 import PortraitVideoModal from '../PortraitVideoModal';
 import { BumpLoader } from '../MediaLoader';
@@ -23,6 +24,10 @@ const PortraitVideoCarousel = ({
   const [selectedVideoIndex, setSelectedVideoIndex] = useState<number | null>(
     null,
   );
+
+  const { isLite } = useContext(RequestContext);
+
+  if (isLite) return null;
 
   const handlePromoClick = (index: number) => {
     if (items[index]?.video) {
