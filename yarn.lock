@@ -4889,21 +4889,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/jest-dom@npm:6.6.3, @testing-library/jest-dom@npm:^6.6.3":
-  version: 6.6.3
-  resolution: "@testing-library/jest-dom@npm:6.6.3"
-  dependencies:
-    "@adobe/css-tools": "npm:^4.4.0"
-    aria-query: "npm:^5.0.0"
-    chalk: "npm:^3.0.0"
-    css.escape: "npm:^1.5.1"
-    dom-accessibility-api: "npm:^0.6.3"
-    lodash: "npm:^4.17.21"
-    redent: "npm:^3.0.0"
-  checksum: 10/1f3427e45870eab9dcc59d6504b780d4a595062fe1687762ae6e67d06a70bf439b40ab64cf58cbace6293a99e3764d4647fdc8300a633b721764f5ce39dade18
-  languageName: node
-  linkType: hard
-
 "@testing-library/jest-dom@npm:6.6.4":
   version: 6.6.4
   resolution: "@testing-library/jest-dom@npm:6.6.4"
@@ -4916,6 +4901,21 @@ __metadata:
     picocolors: "npm:^1.1.1"
     redent: "npm:^3.0.0"
   checksum: 10/5e67112c789f884fb75b279c2cddfdd0995a012a7847a03c474e4134f0d213934ee70c97433bca26b45e3a5ffa56faafe6499c8e57841179c4f2bd80eef429cd
+  languageName: node
+  linkType: hard
+
+"@testing-library/jest-dom@npm:^6.6.3":
+  version: 6.6.3
+  resolution: "@testing-library/jest-dom@npm:6.6.3"
+  dependencies:
+    "@adobe/css-tools": "npm:^4.4.0"
+    aria-query: "npm:^5.0.0"
+    chalk: "npm:^3.0.0"
+    css.escape: "npm:^1.5.1"
+    dom-accessibility-api: "npm:^0.6.3"
+    lodash: "npm:^4.17.21"
+    redent: "npm:^3.0.0"
+  checksum: 10/1f3427e45870eab9dcc59d6504b780d4a595062fe1687762ae6e67d06a70bf439b40ab64cf58cbace6293a99e3764d4647fdc8300a633b721764f5ce39dade18
   languageName: node
   linkType: hard
 
@@ -8363,19 +8363,6 @@ __metadata:
   peerDependencies:
     mocha: ">=3.1.2"
   checksum: 10/f0af22ef415cd065964b6ccd72cdafe8753da3fbeb94dbbb347f2935cd3ee919c6040f8228252c29328e1c8479bdf042af200e32e2af9ed9e7cb1a7a7c89ef53
-  languageName: node
-  linkType: hard
-
-"cypress-terminal-report@npm:7.2.0":
-  version: 7.2.0
-  resolution: "cypress-terminal-report@npm:7.2.0"
-  dependencies:
-    chalk: "npm:^4.0.0"
-    compare-versions: "npm:^6.1.1"
-    superstruct: "npm:0.14.2"
-  peerDependencies:
-    cypress: ">=10.0.0"
-  checksum: 10/04fa691f10d4ecf79d0260560f2e4cc25433e654a898806ffd4c52375499c0e7f841f57a54b2a07ae011df4efc7493d24034ac64b4c1b0290f4c93651989b0ca
   languageName: node
   linkType: hard
 
@@ -16628,12 +16615,12 @@ __metadata:
     "@next/swc-linux-x64-gnu": "npm:15.3.2"
     "@next/swc-win32-arm64-msvc": "npm:15.3.2"
     "@next/swc-win32-x64-msvc": "npm:15.3.2"
-    "@testing-library/jest-dom": "npm:6.6.3"
+    "@testing-library/jest-dom": "npm:6.6.4"
     "@testing-library/react": "npm:16.3.0"
     babel-plugin-transform-rename-import: "npm:2.3.0"
     cypress: "npm:14.4.0"
     cypress-axe: "npm:^1.6.0"
-    cypress-terminal-report: "npm:7.2.0"
+    cypress-terminal-report: "npm:7.2.1"
     jest: "npm:^29.7.0"
     jest-environment-jsdom: "npm:^29.7.0"
     next: "npm:15.3.3"
