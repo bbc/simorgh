@@ -46,6 +46,24 @@ export const service: DefaultServiceConfig = {
     homePageTitle: 'Xəbərlər, Qaynar Xəbərlər, Analiz, Video',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'WhatsApp reklamı',
+      brandTitle: 'WhatsApp kanalımızı izləyin',
+      brandDescription:
+        'BBC News Azərbaycancanın xəbərlərini indi telefonunuzda ala bilərsiniz.',
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0lq79gb.png',
+        alt: 'BBC News Azarbaycancanin Whatsapp kanalina qosulun',
+      },
+      linkLabel: {
+        text: 'Buradan izləyin',
+        href: 'https://www.whatsapp.com/channel/0029Vb6Ewy00lwgwO4iuS32p',
+      },
+      skipLink: {
+        text: '%title%-ı bağlayın  və oxumağa davam edin',
+        endTextVisuallyHidden: '%title%-ın sonu',
+      },
+    },
     translations: {
       pagination: {
         page: 'səhifə',

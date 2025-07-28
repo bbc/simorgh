@@ -46,6 +46,20 @@ export const service: DefaultServiceConfig = {
     homePageTitle: 'ප්‍රධාන පුවත්',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'Whatsapp',
+      brandTitle: 'අපගේ BBC News සිංහල නිල WhatsApp Channel එක follow කරන්න',
+      brandDescription:
+        'උණුසුම් පුවත්, විශ්ලේෂණ සහ විශේෂ විශේෂාංග ඔබේ දුරකතනය වෙත ඍජුව ම ලබා ගන්න.',
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0lp7qwf.png',
+        alt: 'WhatsApp BBC News සිංහල',
+      },
+      linkLabel: {
+        text: 'සම්බන්ධ වීමට link එක click කරන්න',
+        href: 'https://www.whatsapp.com/channel/0029VbAdrSX5PO0xbywORN25',
+      },
+    },
     translations: {
       pagination: {
         page: 'පිටුව',
@@ -321,6 +335,10 @@ export const service: DefaultServiceConfig = {
         {
           href: 'https://www.bbc.co.uk/sinhala/send/u50853687',
           text: 'බීබීසී ය අමතන්න',
+        },
+        {
+          href: 'https://www.bbc.com/sinhala.lite',
+          text: 'ලිපිවල පෙළ පමණක් අඩංගු වෙබ් අඩවිය',
         },
         {
           href: 'https://www.bbc.com/ws/languages',
