@@ -120,34 +120,6 @@ export interface PortraitVideoModalProps {
   onClose: () => void;
   selectedVideoIndex: number;
 }
-
-const visuallyHiddenButtonStyles = {
-  position: 'absolute',
-  top: '2rem',
-  left: '2rem',
-  zIndex: 2,
-  padding: 0,
-  background: 'transparent',
-  border: 0,
-  width: '1px',
-  height: '1px',
-  margin: '-1px',
-  overflow: 'hidden',
-  clip: 'rect(0 0 0 0)',
-  whiteSpace: 'nowrap',
-  ':focus': {
-    outline: '2px solid #ff0000',
-    boxShadow: '0 0 0 4px #fff',
-    width: 'max-content',
-    height: 'auto',
-    overflow: 'visible',
-    clip: 'auto',
-    margin: 0,
-    background: '#fff',
-    color: '#000',
-  },
-};
-
 const PortraitVideoModal = ({
   items,
   onClose,
@@ -157,8 +129,8 @@ const PortraitVideoModal = ({
     translations: {
       media: { closeVideo = 'Close', modalLabel = 'Media player' },
     },
+    dir = 'ltr',
   } = use(ServiceContext);
-
   const modalRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const endOfContentButtonRef = useRef<HTMLButtonElement>(null);
@@ -175,10 +147,8 @@ const PortraitVideoModal = ({
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         onClose();
-        return;
       }
       if (event.key === 'Tab') {
-        // Only handle the close button and endOfContentButtonRef
         if (
           document.activeElement === closeButtonRef.current &&
           event.shiftKey
@@ -252,12 +222,11 @@ const PortraitVideoModal = ({
           type="button"
           tabIndex={-1}
           data-testid="close-modal-visually-hidden"
-          css={visuallyHiddenButtonStyles}
-          className="focusIndicatorInvert"
+          css={styles.visuallyHiddenCloseButton(dir)}
           onClick={onClose}
           aria-label="End of content. Close Modal"
         >
-          <VisuallyHiddenText>End of content. Close Modal</VisuallyHiddenText>
+          End of content. Close Modal
         </button>
       </div>
     </>
