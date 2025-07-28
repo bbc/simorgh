@@ -166,37 +166,50 @@ const PortraitVideoModal = ({
   const blocks = getBlocks(items);
 
   useEffect(() => {
-    const modal = modalRef.current;
-    const reactRootElement = document.getElementById('root');
-    if (modal) {
-      closeButtonRef.current?.focus();
-      reactRootElement?.setAttribute('inert', 'true');
-    }
+    const handleBackdropClick = (event: MouseEvent | TouchEvent) => {
+      if (event.target === event.currentTarget) {
+        onClose();
+      }
+    };
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         onClose();
         return;
       }
-      if (event.key !== 'Tab') return;
-
-      // Only handle the close button and endOfContentButtonRef
-      if (document.activeElement === closeButtonRef.current && event.shiftKey) {
-        event.preventDefault();
-        endOfContentButtonRef.current?.focus();
-      } else if (
-        document.activeElement === endOfContentButtonRef.current &&
-        !event.shiftKey
-      ) {
-        event.preventDefault();
-        closeButtonRef.current?.focus();
+      if (event.key === 'Tab') {
+        // Only handle the close button and endOfContentButtonRef
+        if (
+          document.activeElement === closeButtonRef.current &&
+          event.shiftKey
+        ) {
+          event.preventDefault();
+          endOfContentButtonRef.current?.focus();
+        } else if (
+          document.activeElement === endOfContentButtonRef.current &&
+          !event.shiftKey
+        ) {
+          event.preventDefault();
+          closeButtonRef.current?.focus();
+        }
       }
     };
 
-    modal?.addEventListener('keydown', handleKeyDown);
+    const modal = modalRef.current;
+    const reactRootElement = document.getElementById('root');
+
+    if (modal) {
+      closeButtonRef.current?.focus();
+      reactRootElement?.setAttribute('inert', 'true');
+      modal.addEventListener('mousedown', handleBackdropClick);
+      modal.addEventListener('touchstart', handleBackdropClick);
+      modal.addEventListener('keydown', handleKeyDown);
+    }
 
     return () => {
       reactRootElement?.removeAttribute('inert');
+      modal?.removeEventListener('mousedown', handleBackdropClick);
+      modal?.removeEventListener('touchstart', handleBackdropClick);
       modal?.removeEventListener('keydown', handleKeyDown);
 
       const player = getPlayerInstance();
