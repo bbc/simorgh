@@ -25,7 +25,7 @@ const PortraitVideoCarousel = ({
     null,
   );
 
-  const { isLite } = useContext(RequestContext);
+  const { isLite } = use(RequestContext);
 
   if (isLite) return null;
 
