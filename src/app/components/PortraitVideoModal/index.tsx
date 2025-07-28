@@ -173,35 +173,6 @@ const PortraitVideoModal = ({
       reactRootElement?.setAttribute('inert', 'true');
     }
 
-    const getFocusableElements = () => {
-      if (!modal) return [];
-      // Select all focusable elements inside the modal, including those inside shadow DOMs
-      const selectors = [
-        'button',
-        '[href]',
-        'input',
-        'select',
-        'textarea',
-        '[tabindex]:not([tabindex="-1"])',
-      ];
-      const elements = Array.from(
-        modal.querySelectorAll<HTMLElement>(selectors.join(',')),
-      ).filter(el => !el.hasAttribute('disabled') && el.offsetParent !== null);
-      // If the media player uses shadow DOM, add its focusable elements too
-      const toucanPlayer = modal.querySelector('smp-toucan-player');
-      if (toucanPlayer && toucanPlayer.shadowRoot) {
-        const shadowEls = Array.from(
-          toucanPlayer.shadowRoot.querySelectorAll<HTMLElement>(
-            selectors.join(','),
-          ),
-        ).filter(
-          el => !el.hasAttribute('disabled') && el.offsetParent !== null,
-        );
-        elements.push(...shadowEls);
-      }
-      return elements;
-    };
-
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         onClose();
@@ -209,18 +180,16 @@ const PortraitVideoModal = ({
       }
       if (event.key !== 'Tab') return;
 
-      const focusableEls = getFocusableElements();
-      if (focusableEls.length === 0) return;
-
-      const firstEl = focusableEls[0];
-      const lastEl = focusableEls[focusableEls.length - 1];
-
-      if (!event.shiftKey && document.activeElement === lastEl) {
+      // Only handle the close button and endOfContentButtonRef
+      if (document.activeElement === closeButtonRef.current && event.shiftKey) {
         event.preventDefault();
-        firstEl.focus();
-      } else if (event.shiftKey && document.activeElement === firstEl) {
+        endOfContentButtonRef.current?.focus();
+      } else if (
+        document.activeElement === endOfContentButtonRef.current &&
+        !event.shiftKey
+      ) {
         event.preventDefault();
-        lastEl.focus();
+        closeButtonRef.current?.focus();
       }
     };
 
@@ -268,8 +237,7 @@ const PortraitVideoModal = ({
         <button
           ref={endOfContentButtonRef}
           type="button"
-          // tabIndex is now 0 so it's in the tab order
-          tabIndex={0}
+          tabIndex={-1}
           data-testid="close-modal-visually-hidden"
           css={visuallyHiddenButtonStyles}
           className="focusIndicatorInvert"
