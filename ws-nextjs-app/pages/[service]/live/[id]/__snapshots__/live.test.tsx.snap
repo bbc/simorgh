@@ -1230,39 +1230,41 @@ exports[`Live Page creates snapshot of the live page 1`] = `
           <div
             class="emotion-12"
           >
-            <div
-              class="emotion-13 emotion-14 emotion-15"
-              dir="ltr"
-            >
-              <ul
-                class="emotion-16"
-                role="list"
+            <div>
+              <div
+                class="emotion-13 emotion-14 emotion-15"
+                dir="ltr"
               >
-                <li
-                  class="emotion-17"
-                  role="listitem"
+                <ul
+                  class="emotion-16"
+                  role="list"
                 >
-                  I am the summary box
-                </li>
-                <li
-                  class="emotion-17"
-                  role="listitem"
-                >
-                  I need to include bulletpoints
-                </li>
-                <li
-                  class="emotion-17"
-                  role="listitem"
-                >
-                  I want to 
-                  <a
-                    class="focusIndicatorReducedWidth emotion-20 emotion-21"
-                    href="/pidgin"
+                  <li
+                    class="emotion-17"
+                    role="listitem"
                   >
-                    link to somebody
-                  </a>
-                </li>
-              </ul>
+                    I am the summary box
+                  </li>
+                  <li
+                    class="emotion-17"
+                    role="listitem"
+                  >
+                    I need to include bulletpoints
+                  </li>
+                  <li
+                    class="emotion-17"
+                    role="listitem"
+                  >
+                    I want to 
+                    <a
+                      class="focusIndicatorReducedWidth emotion-20 emotion-21"
+                      href="/pidgin"
+                    >
+                      link to somebody
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>

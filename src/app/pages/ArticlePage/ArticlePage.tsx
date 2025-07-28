@@ -81,6 +81,48 @@ import {
   isPortraitVideoUnderHeadline,
 } from '../utils/portraitVideo';
 
+// const TextWithShare = ({ blocks }: { blocks: OptimoBlock[] }) => {
+//   const [shareLink, setShareLink] = useState('');
+
+//   const handleMouseUp = () => {
+//     const selection = window.getSelection();
+//     const selectedText = selection?.toString().trim();
+
+//     if (selectedText) {
+//       const encodedText = encodeURIComponent(selectedText);
+//       const baseUrl = window.location.href.split('#')[0];
+//       const fragment = `#:~:text=${encodedText}`;
+//       const fullUrl = `${baseUrl}${fragment}`;
+//       setShareLink(fullUrl);
+//     }
+//   };
+
+//   const copyToClipboard = () => {
+//     navigator.clipboard.writeText(shareLink).then(() => {
+//       alert('Link copied to clipboard!');
+//     });
+//   };
+
+//   return (
+//     <div onMouseUp={handleMouseUp}>
+//       {blocks.map((block, index) => (
+//         <p key={index}>{block.model.text}</p>
+//       ))}
+//       {shareLink && (
+//         <div style={{ marginTop: '1em' }}>
+//           <input
+//             type="text"
+//             value={shareLink}
+//             readOnly
+//             style={{ width: '100%' }}
+//           />
+//           <button onClick={copyToClipboard}>Copy Link</button>
+//         </div>
+//       )}
+//     </div>
+//   );
+// };
+
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
     <ImageWithCaption
@@ -288,6 +330,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         experimentVariant,
       ),
   );
+
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics atiData={atiData} />

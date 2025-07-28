@@ -860,16 +860,18 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
               Article Headline in Pidgin
             </h1>
           </div>
-          <div
-            class="emotion-8 emotion-5"
-            dir="ltr"
-          >
-            <p
-              class="emotion-10 emotion-11"
+          <div>
+            <div
+              class="emotion-8 emotion-5"
               dir="ltr"
             >
-              A paragraph in Pidgin.
-            </p>
+              <p
+                class="emotion-10 emotion-11"
+                dir="ltr"
+              >
+                A paragraph in Pidgin.
+              </p>
+            </div>
           </div>
         </main>
       </div>
@@ -2261,16 +2263,18 @@ exports[`Article Page should render a news article correctly 1`] = `
               Article Headline
             </h1>
           </div>
-          <div
-            class="emotion-8 emotion-5"
-            dir="ltr"
-          >
-            <p
-              class="emotion-10 emotion-11"
+          <div>
+            <div
+              class="emotion-8 emotion-5"
               dir="ltr"
             >
-              A paragraph.
-            </p>
+              <p
+                class="emotion-10 emotion-11"
+                dir="ltr"
+              >
+                A paragraph.
+              </p>
+            </div>
           </div>
           <div
             class="emotion-12"
@@ -3119,16 +3123,18 @@ exports[`Article Page should render a news article with headline in the middle c
           >
             SEO Headline
           </h1>
-          <div
-            class="emotion-5 emotion-6"
-            dir="ltr"
-          >
-            <p
-              class="emotion-7 emotion-8"
+          <div>
+            <div
+              class="emotion-5 emotion-6"
               dir="ltr"
             >
-              Paragraph above headline
-            </p>
+              <p
+                class="emotion-7 emotion-8"
+                dir="ltr"
+              >
+                Paragraph above headline
+              </p>
+            </div>
           </div>
           <div
             class="emotion-9 emotion-6"
@@ -3140,16 +3146,18 @@ exports[`Article Page should render a news article with headline in the middle c
               Article Headline
             </strong>
           </div>
-          <div
-            class="emotion-5 emotion-6"
-            dir="ltr"
-          >
-            <p
-              class="emotion-7 emotion-8"
+          <div>
+            <div
+              class="emotion-5 emotion-6"
               dir="ltr"
             >
-              Paragraph below headline
-            </p>
+              <p
+                class="emotion-7 emotion-8"
+                dir="ltr"
+              >
+                Paragraph below headline
+              </p>
+            </div>
           </div>
         </main>
       </div>
@@ -3368,16 +3376,18 @@ exports[`Article Page should render a news article without headline correctly 1`
           >
             Article Headline
           </h1>
-          <div
-            class="emotion-5 emotion-6"
-            dir="ltr"
-          >
-            <p
-              class="emotion-7 emotion-8"
+          <div>
+            <div
+              class="emotion-5 emotion-6"
               dir="ltr"
             >
-              Paragraph 1
-            </p>
+              <p
+                class="emotion-7 emotion-8"
+                dir="ltr"
+              >
+                Paragraph 1
+              </p>
+            </div>
           </div>
         </main>
       </div>
@@ -4466,16 +4476,18 @@ exports[`Article Page should render a rtl article (persian) with most read corre
               سرصفحه مقاله
             </h1>
           </div>
-          <div
-            class="emotion-8 emotion-5"
-            dir="rtl"
-          >
-            <p
-              class="emotion-10 emotion-11"
+          <div>
+            <div
+              class="emotion-8 emotion-5"
               dir="rtl"
             >
-              یک پاراگراف.
-            </p>
+              <p
+                class="emotion-10 emotion-11"
+                dir="rtl"
+              >
+                یک پاراگراف.
+              </p>
+            </div>
           </div>
         </main>
       </div>

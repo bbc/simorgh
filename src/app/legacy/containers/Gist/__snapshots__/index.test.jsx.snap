@@ -377,83 +377,85 @@ exports[`Gist should render the gist with multiple list items 1`] = `
       >
         At a glance
       </strong>
-      <div
-        class="emotion-6 emotion-7 emotion-8 emotion-1"
-        dir="ltr"
-      >
-        <ul
-          class="emotion-10"
-          role="list"
+      <div>
+        <div
+          class="emotion-6 emotion-7 emotion-8 emotion-1"
+          dir="ltr"
         >
-          <li
-            class="emotion-11"
-            role="listitem"
+          <ul
+            class="emotion-10"
+            role="list"
           >
-            Here is a summary of the article
-          </li>
-          <li
-            class="emotion-11"
-            role="listitem"
-          >
-            This component supports 
-            <b>
-              bold,
-            </b>
-             
-            <i
-              class="emotion-13 emotion-14"
+            <li
+              class="emotion-11"
+              role="listitem"
             >
-              italic,
-            </i>
-             
-            <i
-              class="emotion-13 emotion-14"
+              Here is a summary of the article
+            </li>
+            <li
+              class="emotion-11"
+              role="listitem"
             >
+              This component supports 
               <b>
-                bold-italic, 
+                bold,
               </b>
-            </i>
-            <a
-              aria-label="links,, external"
-              class="focusIndicatorReducedWidth emotion-17 emotion-18"
-              href="https://www.google.com"
-            >
-              links,
-            </a>
-             
-            <a
-              aria-label="and bold-italic-links,, external"
-              class="focusIndicatorReducedWidth emotion-17 emotion-18"
-              href="https://www.google.com"
-            >
+               
+              <i
+                class="emotion-13 emotion-14"
+              >
+                italic,
+              </i>
+               
               <i
                 class="emotion-13 emotion-14"
               >
                 <b>
-                  and bold-italic-links,
+                  bold-italic, 
                 </b>
               </i>
-            </a>
-          </li>
-          <li
-            class="emotion-11"
-            role="listitem"
-          >
-            It can be as long as editorial desires
-          </li>
-          <li
-            class="emotion-11"
-            role="listitem"
-          >
-            It does not support nested lists
-          </li>
-          <li
-            class="emotion-11"
-            role="listitem"
-          >
-            If a sentence is added that is really, really, really long, the text will wrap onto the next line, which is hopefully the behaviour of this sentence right now!
-          </li>
-        </ul>
+              <a
+                aria-label="links,, external"
+                class="focusIndicatorReducedWidth emotion-17 emotion-18"
+                href="https://www.google.com"
+              >
+                links,
+              </a>
+               
+              <a
+                aria-label="and bold-italic-links,, external"
+                class="focusIndicatorReducedWidth emotion-17 emotion-18"
+                href="https://www.google.com"
+              >
+                <i
+                  class="emotion-13 emotion-14"
+                >
+                  <b>
+                    and bold-italic-links,
+                  </b>
+                </i>
+              </a>
+            </li>
+            <li
+              class="emotion-11"
+              role="listitem"
+            >
+              It can be as long as editorial desires
+            </li>
+            <li
+              class="emotion-11"
+              role="listitem"
+            >
+              It does not support nested lists
+            </li>
+            <li
+              class="emotion-11"
+              role="listitem"
+            >
+              If a sentence is added that is really, really, really long, the text will wrap onto the next line, which is hopefully the behaviour of this sentence right now!
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -811,21 +813,23 @@ exports[`Gist should render the gist with one list item 1`] = `
       >
         At a glance
       </strong>
-      <div
-        class="emotion-6 emotion-7 emotion-8 emotion-1"
-        dir="ltr"
-      >
-        <ul
-          class="emotion-10"
-          role="list"
+      <div>
+        <div
+          class="emotion-6 emotion-7 emotion-8 emotion-1"
+          dir="ltr"
         >
-          <li
-            class="emotion-11"
-            role="listitem"
+          <ul
+            class="emotion-10"
+            role="list"
           >
-            Level 1
-          </li>
-        </ul>
+            <li
+              class="emotion-11"
+              role="listitem"
+            >
+              Level 1
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
