@@ -212,7 +212,7 @@
     "eslint-plugin-react-hooks": "5.2.0",
     "glob": "11.0.2",
     "husky": "9.1.7",
-    "jest": "30.0.3",
+    "jest": "30.0.5",
     "jest-environment-jsdom": "29.7.0",
     "jest-fetch-mock": "3.0.3",
     "jest-junit": "16.0.0",
