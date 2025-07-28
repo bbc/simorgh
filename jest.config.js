@@ -5,6 +5,7 @@ const unitTests = {
   setupFiles: ['./src/testHelpers/jest-setup.js'],
   setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
   moduleNameMapper: jestDirAlias,
+  modulePathIgnorePatterns: ['<rootDir>/build', '<rootDir>/**/build'],
   testEnvironment: 'jsdom',
   snapshotSerializers: ['@emotion/jest/serializer'],
   transform: {
