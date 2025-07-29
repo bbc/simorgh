@@ -27,7 +27,7 @@ describe('Canonical', () => {
 
     expect(videoCarousels.length).toEqual(portraitVideoCurations.length);
 
-    for (const [index, curation] of videoCarousels.entries()) {
+    for (const [index, curation] of portraitVideoCurations.entries()) {
       const videoList = videoCarousels[index];
       const numberOfItems = curation.portraitVideo.items.length;
 
