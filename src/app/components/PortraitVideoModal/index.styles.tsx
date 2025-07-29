@@ -89,44 +89,40 @@ const styles = {
       },
     }),
 
-  visuallyHiddenCloseButton:
-    (dir: 'ltr' | 'rtl' = 'ltr') =>
-    (theme: Theme) =>
-      css({
-        position: 'absolute',
+  visuallyHiddenCloseButton: () => (theme: Theme) =>
+    css({
+      position: 'absolute',
+      top: `${theme.spacings.DOUBLE}rem`,
+      insetInlineStart: `${theme.spacings.DOUBLE}rem`,
+      height: '1px',
+      width: '1px',
+      overflow: 'hidden',
+
+      ':focus': {
+        height: 'auto',
+        width: 'auto',
         top: `${theme.spacings.DOUBLE}rem`,
-        left: dir === 'ltr' ? `${theme.spacings.DOUBLE}rem` : undefined,
-        right: dir === 'rtl' ? `${theme.spacings.DOUBLE}rem` : undefined,
-        height: '1px',
-        width: '1px',
-        overflow: 'hidden',
+        insetInlineStart: `${theme.spacings.DOUBLE}rem`,
+        backgroundColor: theme.palette.WHITE,
+        color: theme.palette.BLACK,
+        border: `${pixelsToRem(2)}rem solid ${theme.palette.WHITE}`,
+        textDecoration: 'none',
+        zIndex: 2,
+        padding: '12px 8px',
+        ...theme.fontSizes.pica,
+        ...theme.fontVariants.sansRegular,
+      },
 
-        ':focus': {
-          height: 'auto',
-          width: 'auto',
-          top: `${theme.spacings.DOUBLE}rem`,
-          left: dir === 'ltr' ? `${theme.spacings.DOUBLE}rem` : undefined,
-          right: dir === 'rtl' ? `${theme.spacings.DOUBLE}rem` : undefined,
-          backgroundColor: theme.palette.WHITE,
-          color: theme.palette.BLACK,
-          border: `${pixelsToRem(2)}rem solid ${theme.palette.WHITE}`,
-          textDecoration: 'none',
-          zIndex: 2,
-          padding: '12px 8px',
-          ...theme.fontSizes.pica,
-          ...theme.fontVariants.sansRegular,
-        },
+      ':focus-visible': {
+        border: `${pixelsToRem(4)}rem solid ${theme.palette.WHITE}`,
+        boxShadow: `0 0 0 ${pixelsToRem(2)}rem ${theme.palette.BLACK}`,
+        outline: 'none',
+      },
 
-        ':focus-visible': {
-          border: `${pixelsToRem(4)}rem solid ${theme.palette.WHITE}`,
-          boxShadow: `0 0 0 ${pixelsToRem(2)}rem ${theme.palette.BLACK}`,
-          outline: 'none',
-        },
-
-        [theme.mq.GROUP_3_MIN_WIDTH]: {
-          display: 'flex',
-        },
-      }),
+      [theme.mq.GROUP_3_MIN_WIDTH]: {
+        display: 'flex',
+      },
+    }),
 };
 
 export default styles;

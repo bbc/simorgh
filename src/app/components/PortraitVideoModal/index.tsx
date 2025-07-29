@@ -129,7 +129,6 @@ const PortraitVideoModal = ({
     translations: {
       media: { closeVideo = 'Close', modalLabel = 'Media player' },
     },
-    dir = 'ltr',
   } = use(ServiceContext);
   const modalRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
@@ -223,7 +222,7 @@ const PortraitVideoModal = ({
           ref={endOfContentButtonRef}
           type="button"
           data-testid="close-modal-visually-hidden"
-          css={styles.visuallyHiddenCloseButton(dir)}
+          css={styles.visuallyHiddenCloseButton}
           onClick={onClose}
           aria-label="End of content. Close modal"
         >
