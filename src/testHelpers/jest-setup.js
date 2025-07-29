@@ -7,9 +7,9 @@ import { MessageChannel, MessagePort } from 'node:worker_threads';
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 global.fetch = fetch;
-// global.AbortSignal = {
-//   timeout: jest.fn(),
-// };
+global.AbortSignal = {
+  timeout: jest.fn(),
+};
 global.ReadableStream = ReadableStream;
 global.MessageChannel = MessageChannel;
 global.MessagePort = MessagePort;
@@ -22,8 +22,6 @@ Object.defineProperty(global, 'crypto', {
 });
 
 global.crypto.randomUUID = jest.fn();
-
-window;
 
 /*
  * Mock to avoid async behaviour in tests
