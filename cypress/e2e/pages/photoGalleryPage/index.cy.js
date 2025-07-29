@@ -93,7 +93,7 @@ const ampTestSuites = canonicalTestSuites.map(testSuite => {
   return {
     ...testSuite,
     path: `${testSuite.path}.amp`,
-    tests: [testsForAllAMPPages, testsForAllPages],
+    tests: [testsForAllPages, testsForAllAMPPages],
   };
 });
 
