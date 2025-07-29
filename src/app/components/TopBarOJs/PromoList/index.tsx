@@ -13,7 +13,6 @@ import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import useViewTracker from '#hooks/useViewTracker';
-import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import Promo from '../Promo';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
@@ -91,14 +90,13 @@ interface PromoListProps {
 const PromoList = ({
   blocks,
   eventTrackingData,
-  // a11yAttributes, // unsure at the moment what this becomes in newer components
+  // a11yAttributes, // will pass these later
 }: PromoListProps) => {
   const { dir } = use(ServiceContext);
   const isOperaMini = useOperaMiniDetection();
   const listBlocks = blocks.slice(0, 3);
 
   const viewTracker = useViewTracker(eventTrackingData);
-  const clickTracker = useClickTrackerHandler(eventTrackingData);
 
   const ScrollPromo = isOperaMini ? OperaScrollPromo : StandardScrollPromo;
   const List = isOperaMini ? OperaStyledList : StyledList;
@@ -118,7 +116,7 @@ const PromoList = ({
             key={index}
             dir={dir}
           >
-            <Promo block={block} clickTracker={clickTracker} />
+            <Promo block={block} eventTrackingData={eventTrackingData} />
           </List>
         );
       })}
