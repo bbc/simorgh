@@ -42,7 +42,7 @@ export const playlistLoadedCallback = (
     player.setPreviousPlaylist(
       {
         title: previous?.video?.title ?? '',
-        holdingImageURL: previous?.holdingImageURL ?? '',
+        holdingImageURL: previous?.video?.holdingImageURL ?? '',
         items: [{ versionID: previous?.video?.version?.id }],
       },
       { statsObject: { clipPID: previous?.video?.id } },
@@ -53,7 +53,7 @@ export const playlistLoadedCallback = (
     player.queuePlaylist(
       {
         title: next?.video?.title ?? '',
-        holdingImageURL: next?.holdingImageURL ?? '',
+        holdingImageURL: next?.video?.holdingImageURL ?? '',
         items: [{ versionID: next?.video?.version?.id }],
       },
       { statsObject: { clipPID: next?.video?.id } },
@@ -81,6 +81,7 @@ export const getBlocks = (
       video: {
         id: item.id,
         title: item.title,
+        holdingImageURL: item.images?.[0]?.urlTemplate ?? '',
         version: {
           id: item.versionId,
           duration: item.duration,
@@ -90,7 +91,6 @@ export const getBlocks = (
         },
         isEmbeddingAllowed: item.isEmbeddingAllowed,
       },
-      holdingImageURL: item.images?.[0]?.urlTemplate ?? '',
     },
   }));
 

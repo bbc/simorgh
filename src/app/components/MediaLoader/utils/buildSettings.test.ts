@@ -245,7 +245,7 @@ describe('buildSettings', () => {
           playlistObject: {
             title: 'Portrait Video 1',
             holdingImageURL:
-              'https://ichef.bbci.co.uk/images/ic/512xn/p0abc001.jpg',
+              'https://ichef.bbci.co.uk/images/ic/{width}xn/p0abc001.jpg',
             items: [
               {
                 duration: 60,
@@ -319,7 +319,7 @@ describe('buildSettings', () => {
           playlistObject: {
             title: 'Portrait Video 1',
             holdingImageURL:
-              'https://ichef.bbci.co.uk/images/ic/512xn/p0abc001.jpg',
+              'https://ichef.bbci.co.uk/images/ic/{width}xn/p0abc001.jpg',
             items: [
               {
                 duration: 60,

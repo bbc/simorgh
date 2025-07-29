@@ -17,8 +17,8 @@ export default ({
   const { model }: PortraitClipMediaBlock =
     filterForBlockType(blocks, 'portraitClipMedia') ?? {};
 
-  const { video, holdingImageURL } = model;
-  const { id, title, version } = video;
+  const { video } = model;
+  const { id, title, version, holdingImageURL } = video;
 
   const items: PlaylistItem[] = [
     {
@@ -39,11 +39,7 @@ export default ({
     const matchMedia = window.matchMedia(
       `(max-width: ${GROUP_3_MIN_WIDTH_BP}rem)`,
     );
-    if (matchMedia.matches) {
-      isMobile = true;
-    } else {
-      isMobile = false;
-    }
+    isMobile = matchMedia.matches;
   }
 
   return {

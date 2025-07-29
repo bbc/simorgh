@@ -269,15 +269,16 @@ export type PortraitClipMediaBlock = {
     video: {
       id: string;
       title: string;
+      holdingImageURL?: string;
       version: {
         id: string;
         duration: string;
         kind: string;
         guidance: string | null;
+        territories?: string[];
       };
       isEmbeddingAllowed: boolean;
     };
-    holdingImageURL?: string;
   };
 };
 

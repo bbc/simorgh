@@ -148,7 +148,7 @@ describe('PortraitVideoModal', () => {
       expect(mockPlayer.queuePlaylist).toHaveBeenCalledWith(
         {
           title: nextVideo.model.video.title,
-          holdingImageURL: nextVideo.model.holdingImageURL,
+          holdingImageURL: nextVideo.model.video.holdingImageURL,
           items: [{ versionID: nextVideo.model.video.version.id }],
         },
         { statsObject: { clipPID: nextVideo.model.video.id } },
@@ -169,7 +169,7 @@ describe('PortraitVideoModal', () => {
       expect(mockPlayer.setPreviousPlaylist).toHaveBeenCalledWith(
         {
           title: prevVideo.model.video.title,
-          holdingImageURL: prevVideo.model.holdingImageURL,
+          holdingImageURL: prevVideo.model.video.holdingImageURL,
           items: [{ versionID: prevVideo.model.video.version.id }],
         },
         { statsObject: { clipPID: prevVideo.model.video.id } },
@@ -178,7 +178,7 @@ describe('PortraitVideoModal', () => {
       expect(mockPlayer.queuePlaylist).toHaveBeenCalledWith(
         {
           title: nextVideo.model.video.title,
-          holdingImageURL: nextVideo.model.holdingImageURL,
+          holdingImageURL: nextVideo.model.video.holdingImageURL,
           items: [{ versionID: nextVideo.model.video.version.id }],
         },
         { statsObject: { clipPID: nextVideo.model.video.id } },
@@ -199,7 +199,7 @@ describe('PortraitVideoModal', () => {
       expect(mockPlayer.setPreviousPlaylist).toHaveBeenCalledWith(
         {
           title: prevVideo.model.video.title,
-          holdingImageURL: prevVideo.model.holdingImageURL,
+          holdingImageURL: prevVideo.model.video.holdingImageURL,
           items: [{ versionID: prevVideo.model.video.version.id }],
         },
         { statsObject: { clipPID: prevVideo.model.video.id } },

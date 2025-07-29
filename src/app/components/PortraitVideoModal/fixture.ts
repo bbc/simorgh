@@ -4,6 +4,8 @@ const items = [
   {
     id: 'urn:bbc:pips:pid:p01wjx7v',
     title: '4 erros de quem estuda para concursos públicos',
+    holdingImageURL:
+      'https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8v.jpg',
     versionId: 'p01wjx7v',
     images: [
       {
@@ -18,6 +20,8 @@ const items = [
   {
     id: 'urn:bbc:pips:pid:p01wjx5y',
     title: 'Europa se armando para guerra?',
+    holdingImageURL:
+      'https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8v.jpg',
     versionId: 'p01wjx5y',
     images: [
       {
@@ -31,6 +35,8 @@ const items = [
   {
     id: 'urn:bbc:pips:pid:p01wjx4r',
     title: 'China: a Nova Rota da Seda',
+    holdingImageURL:
+      'https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8v.jpg',
     versionId: 'p01wjx4r',
     images: [
       {
