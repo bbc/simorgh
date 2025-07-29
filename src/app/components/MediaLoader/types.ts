@@ -277,6 +277,7 @@ export type PortraitClipMediaBlock = {
       };
       isEmbeddingAllowed: boolean;
     };
+    holdingImageURL?: string;
   };
 };
 

@@ -10,7 +10,6 @@ import {
 import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
-import { setImageWidth } from '../MediaLoader/configs/portraitClipMedia';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 
 const getPlayerInstance = () =>
@@ -40,14 +39,10 @@ export const playlistLoadedCallback = (
   const next = blocks?.[currentIndex + 1]?.model;
 
   if (previous) {
-    const [fallbackImage, portraitImage] = previous?.images || [];
-
     player.setPreviousPlaylist(
       {
         title: previous?.video?.title ?? '',
-        holdingImageURL: setImageWidth(
-          (portraitImage || fallbackImage)?.urlTemplate,
-        ),
+        holdingImageURL: previous?.holdingImageURL ?? '',
         items: [{ versionID: previous?.video?.version?.id }],
       },
       { statsObject: { clipPID: previous?.video?.id } },
@@ -55,14 +50,10 @@ export const playlistLoadedCallback = (
   }
 
   if (next) {
-    const [fallbackImage, portraitImage] = next?.images || [];
-
     player.queuePlaylist(
       {
         title: next?.video?.title ?? '',
-        holdingImageURL: setImageWidth(
-          (portraitImage || fallbackImage)?.urlTemplate,
-        ),
+        holdingImageURL: next?.holdingImageURL ?? '',
         items: [{ versionID: next?.video?.version?.id }],
       },
       { statsObject: { clipPID: next?.video?.id } },
@@ -99,6 +90,7 @@ export const getBlocks = (
         },
         isEmbeddingAllowed: item.isEmbeddingAllowed,
       },
+      holdingImageURL: item.images?.[0]?.urlTemplate ?? '',
     },
   }));
 

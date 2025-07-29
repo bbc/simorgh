@@ -7,7 +7,6 @@ import {
 } from '../react-testing-library-with-providers';
 import items from './fixture';
 import { Player, SMPEvent } from '../MediaLoader/types';
-import { setImageWidth } from '../MediaLoader/configs/portraitClipMedia';
 
 const mockClose = jest.fn();
 
@@ -149,7 +148,7 @@ describe('PortraitVideoModal', () => {
       expect(mockPlayer.queuePlaylist).toHaveBeenCalledWith(
         {
           title: nextVideo.model.video.title,
-          holdingImageURL: setImageWidth(nextVideo.model.images[0].urlTemplate),
+          holdingImageURL: nextVideo.model.holdingImageURL,
           items: [{ versionID: nextVideo.model.video.version.id }],
         },
         { statsObject: { clipPID: nextVideo.model.video.id } },
@@ -170,7 +169,7 @@ describe('PortraitVideoModal', () => {
       expect(mockPlayer.setPreviousPlaylist).toHaveBeenCalledWith(
         {
           title: prevVideo.model.video.title,
-          holdingImageURL: setImageWidth(prevVideo.model.images[0].urlTemplate),
+          holdingImageURL: prevVideo.model.holdingImageURL,
           items: [{ versionID: prevVideo.model.video.version.id }],
         },
         { statsObject: { clipPID: prevVideo.model.video.id } },
@@ -179,7 +178,7 @@ describe('PortraitVideoModal', () => {
       expect(mockPlayer.queuePlaylist).toHaveBeenCalledWith(
         {
           title: nextVideo.model.video.title,
-          holdingImageURL: setImageWidth(nextVideo.model.images[0].urlTemplate),
+          holdingImageURL: nextVideo.model.holdingImageURL,
           items: [{ versionID: nextVideo.model.video.version.id }],
         },
         { statsObject: { clipPID: nextVideo.model.video.id } },
@@ -200,7 +199,7 @@ describe('PortraitVideoModal', () => {
       expect(mockPlayer.setPreviousPlaylist).toHaveBeenCalledWith(
         {
           title: prevVideo.model.video.title,
-          holdingImageURL: setImageWidth(prevVideo.model.images[0].urlTemplate),
+          holdingImageURL: prevVideo.model.holdingImageURL,
           items: [{ versionID: prevVideo.model.video.version.id }],
         },
         { statsObject: { clipPID: prevVideo.model.video.id } },
