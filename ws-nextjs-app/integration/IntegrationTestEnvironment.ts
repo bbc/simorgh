@@ -1,10 +1,8 @@
 /* eslint-disable import/no-relative-packages */
 /* eslint-disable no-console */
-const TestEnvironment = require('@happy-dom/jest-environment').default;
-import type {
-  JestEnvironmentConfig,
-  EnvironmentContext,
-} from '@jest/environment';
+import type { EnvironmentContext } from '@jest/environment';
+import TestEnvironment from '@happy-dom/jest-environment';
+import { Config } from '@jest/types';
 import getPageTypeFromTestPath from '../../src/integration/utils/getPageTypeFromTestPath';
 import camelCaseToText from '../../src/integration/utils/camelCaseToText';
 import fetchDom from '../../src/integration/utils/fetchDom';
@@ -20,9 +18,9 @@ class CustomTestEnvironment extends TestEnvironment {
 
   url: string;
 
-  constructor(config: JestEnvironmentConfig, context: EnvironmentContext) {
+  constructor(config: Config.ProjectConfig, context: EnvironmentContext) {
     super(config, context);
-    const { platform } = config.projectConfig.testEnvironmentOptions;
+    const { platform } = config.testEnvironmentOptions;
     const {
       pathname,
       service,
@@ -47,7 +45,6 @@ class CustomTestEnvironment extends TestEnvironment {
     try {
       const { window, document } = await fetchDom({
         url: this.url,
-        runScripts: this.runScripts,
         headers: {
           ...(this.displayAds && { 'BBC-Adverts': 'true' }),
         },

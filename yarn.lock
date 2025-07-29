@@ -16693,6 +16693,7 @@ __metadata:
     "@esbuild/win32-arm64": "npm:0.25.5"
     "@esbuild/win32-x64": "npm:0.25.5"
     "@happy-dom/jest-environment": "npm:18.0.1"
+    "@jest/environment": "npm:30.0.5"
     "@loadable/babel-plugin": "npm:5.16.1"
     "@loadable/component": "npm:5.16.7"
     "@loadable/server": "npm:5.16.7"
