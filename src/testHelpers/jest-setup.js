@@ -23,6 +23,8 @@ Object.defineProperty(global, 'crypto', {
 
 global.crypto.randomUUID = jest.fn();
 
+window;
+
 /*
  * Mock to avoid async behaviour in tests
  */
