@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax */
 export default () => {
   if (process.env.DEV_MODE) return;
 
@@ -12,9 +13,9 @@ export default () => {
       script.getAttribute('src').startsWith('http://localhost:7080'),
     );
 
-    bbcOriginScripts.forEach(bbcOriginScript => {
+    for (const bbcOriginScript of bbcOriginScripts) {
       expect(bbcOriginScript.getAttribute('src')).toMatch(bundleScriptMatcher);
-    });
+    }
   });
 
   it('Service bundle is loaded', () => {

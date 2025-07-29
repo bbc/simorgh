@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax */
 const getMetaTagContent = selector =>
   document.querySelector(selector).getAttribute('content');
 
@@ -169,7 +170,7 @@ export default () => {
         'head > script[type="application/ld+json"]',
       );
 
-      schemaScripts.forEach(script => {
+      for (const script of schemaScripts) {
         const scriptContent = JSON.parse(script.textContent);
 
         it('should be in the document', () => {
@@ -183,15 +184,15 @@ export default () => {
         it(`should match text`, () => {
           expect(scriptContent).toMatchSnapshot();
         });
-      });
+      }
     });
 
     describe('Apple Touch Icon', () => {
-      const touchIconScript = document.querySelectorAll(
+      const touchIconScripts = document.querySelectorAll(
         'head > link[rel="apple-touch-icon"]',
       );
 
-      touchIconScript.forEach(script => {
+      for (const script of touchIconScripts) {
         const url = script.getAttribute('href');
         const sizes = script.getAttribute('sizes');
 
@@ -205,7 +206,7 @@ export default () => {
             sizes,
           }).toMatchSnapshot();
         });
-      });
+      }
     });
   });
 };

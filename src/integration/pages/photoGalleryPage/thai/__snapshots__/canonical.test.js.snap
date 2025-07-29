@@ -53,9 +53,123 @@ exports[`Canonical Photo Gallery Page Analytics ATI tracking pixel search params
 ]
 `;
 
+exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, ไทย",
+  "url": "/thai",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 2`] = `
+{
+  "text": "ทำไมคุณจึงไว้วางใจ บีบีซี ได้",
+  "url": "https://www.bbc.com/thai/institutional-49281839",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 3`] = `
+{
+  "text": "เงื่อนไขการใช้งานของ บีบีซี",
+  "url": "https://www.bbc.com/thai/institutional-38403477",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 4`] = `
+{
+  "text": "เกี่ยวกับบีบีซี",
+  "url": "https://www.bbc.com/thai/institutional-38403476",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 5`] = `
+{
+  "text": "นโยบายความเป็นส่วนตัว",
+  "url": "https://www.bbc.com/thai/institutional-38497681",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 6`] = `
+{
+  "text": "คุกกีส์",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 7`] = `
+{
+  "text": "ติดต่อบีบีซี",
+  "url": "https://www.bbc.co.uk/thai/send/u50853797",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 8`] = `
+{
+  "text": "บีบีซีนิวส์ภาษาอื่น ๆ",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 9`] = `
+{
+  "text": "อ่านเกี่ยวกับแนวทางของเราในการติดต่อกับลิงก์ภายนอก",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+}
+`;
+
 exports[`Canonical Photo Gallery Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/thai"`;
 
+exports[`Canonical Photo Gallery Page Footer Paragraphs should match text 1`] = `"© 2025 บีบีซี. บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาของเว็บไซต์ภายนอก. นโยบายของเราเรื่องการเชื่อมต่อไปยังลิงก์ภายนอก. อ่านเกี่ยวกับแนวทางของเราในการติดต่อกับลิงก์ภายนอก"`;
+
 exports[`Canonical Photo Gallery Page Header I can see the branding 1`] = `"BBC News, ไทย"`;
+
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 1`] = `
+{
+  "text": "หน้าแรก",
+  "url": "/thai",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 2`] = `
+{
+  "text": "ประเทศไทย",
+  "url": "/thai/topics/cjgn73g98rqt",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 3`] = `
+{
+  "text": "ต่างประเทศ",
+  "url": "/thai/topics/c5v124k8lj7t",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 4`] = `
+{
+  "text": "วิทยาศาสตร์",
+  "url": "/thai/topics/c5qvp1q33p0t",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 5`] = `
+{
+  "text": "สุขภาพ",
+  "url": "/thai/topics/cyx5kz25zxdt",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 6`] = `
+{
+  "text": "วิดีโอ",
+  "url": "/thai/topics/c5ljd3jng4nt",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 7`] = `
+{
+  "text": "ยอดนิยม",
+  "url": "/thai/popular/read",
+}
+`;
 
 exports[`Canonical Photo Gallery Page Image Caption should match text 1`] = `"คำบรรยายภาพ, ประติมานุสรณ์ ม. ธรรมศาสตร์ เป็นพื้นที่ความทรงจำในเหตุการณ์ 6 ตุลา 2519"`;
 
@@ -75,6 +189,76 @@ exports[`Canonical Photo Gallery Page Image should match snapshot 1`] = `
 
 exports[`Canonical Photo Gallery Page Main heading should match text 1`] = `"6 ตุลา : ธรรมศาสตร์จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519"`;
 
+exports[`Canonical Photo Gallery Page SEO Apple Touch Icon should match attributes 1`] = `
+{
+  "sizes": null,
+  "url": "http://localhost:7080/thai/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Photo Gallery Page SEO Apple Touch Icon should match attributes 2`] = `
+{
+  "sizes": "72x72",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/thai/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`Canonical Photo Gallery Page SEO Apple Touch Icon should match attributes 3`] = `
+{
+  "sizes": "96x96",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/thai/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`Canonical Photo Gallery Page SEO Apple Touch Icon should match attributes 4`] = `
+{
+  "sizes": "128x128",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/thai/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`Canonical Photo Gallery Page SEO Apple Touch Icon should match attributes 5`] = `
+{
+  "sizes": "144x144",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/thai/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`Canonical Photo Gallery Page SEO Apple Touch Icon should match attributes 6`] = `
+{
+  "sizes": "152x152",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/thai/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`Canonical Photo Gallery Page SEO Apple Touch Icon should match attributes 7`] = `
+{
+  "sizes": "180x180",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/thai/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`Canonical Photo Gallery Page SEO Apple Touch Icon should match attributes 8`] = `
+{
+  "sizes": "192x192",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/thai/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Photo Gallery Page SEO Apple Touch Icon should match attributes 9`] = `
+{
+  "sizes": "384x384",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/thai/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`Canonical Photo Gallery Page SEO Apple Touch Icon should match attributes 10`] = `
+{
+  "sizes": "512x512",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/thai/images/icons/icon-512x512.png",
+}
+`;
+
 exports[`Canonical Photo Gallery Page SEO Canonical link 1`] = `"http://localhost:7080/thai/thailand-49950038"`;
 
 exports[`Canonical Photo Gallery Page SEO Dir attribute 1`] = `"ltr"`;
@@ -84,6 +268,61 @@ exports[`Canonical Photo Gallery Page SEO FB app ID 1`] = `"1609039196070050"`;
 exports[`Canonical Photo Gallery Page SEO Heading level 1 1`] = `"6 ตุลา : ธรรมศาสตร์จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519"`;
 
 exports[`Canonical Photo Gallery Page SEO Lang attribute 1`] = `"th"`;
+
+exports[`Canonical Photo Gallery Page SEO Linked data should match text 1`] = `
+{
+  "@context": "http://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "author": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/thai.png",
+          "width": 1024,
+        },
+        "name": "BBC News ไทย",
+        "noBylinesPolicy": "https://www.bbc.com/thai/institutional-49281839#authorexpertise",
+      },
+      "dateModified": "2019-10-06T05:14:53.000Z",
+      "datePublished": "2019-10-06T05:14:53.000Z",
+      "description": "มหาวิทยาลัยธรรมศาสตร์ ซึ่งมีสภาพไม่ต่างจาก “ลานประหาร” ในวันล้อมปราบนักศึกษาและประชาชน ได้จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519 มีพิธีทำบุญตักบาตรพระสงฆ์จำนวน 19 รูป พิธีวางพวงมาลาและดอกไม้ ณ ประติมานุสรณ์ และกล่าวไว้อาลัยแด่ผู้เสียชีวิตในเหตุการณ์ พร้อมอ่านรายชื่อของทุกคนด้วย",
+      "headline": "6 ตุลา : ธรรมศาสตร์จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519",
+      "image": {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://ichef.bbci.co.uk/news/1024/branded_thai/17431/production/_109118259_01.jpg",
+        "width": 1024,
+      },
+      "inLanguage": {
+        "@type": "Language",
+        "alternateName": "th",
+        "name": "Thai",
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:7080/thai/thailand-49950038",
+        "@type": "WebPage",
+        "name": "6 ตุลา : ธรรมศาสตร์จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519",
+      },
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/thai.png",
+          "width": 1024,
+        },
+        "name": "BBC News ไทย",
+        "publishingPrinciples": "https://www.bbc.com/thai/institutional-49281839",
+      },
+      "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_thai/17431/production/_109118259_01.jpg",
+      "url": "http://localhost:7080/thai/thailand-49950038",
+    },
+  ],
+}
+`;
 
 exports[`Canonical Photo Gallery Page SEO OG description 1`] = `"มหาวิทยาลัยธรรมศาสตร์ ซึ่งมีสภาพไม่ต่างจาก “ลานประหาร” ในวันล้อมปราบนักศึกษาและประชาชน ได้จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519 มีพิธีทำบุญตักบาตรพระสงฆ์จำนวน 19 รูป พิธีวางพวงมาลาและดอกไม้ ณ ประติมานุสรณ์ และกล่าวไว้อาลัยแด่ผู้เสียชีวิตในเหตุการณ์ พร้อมอ่านรายชื่อของทุกคนด้วย"`;
 

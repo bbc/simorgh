@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax */
 export default () => {
   describe('Sections', () => {
     const sections = document.querySelectorAll(
@@ -5,7 +6,7 @@ export default () => {
     );
 
     if (sections) {
-      sections.forEach(section => {
+      for (const section of sections) {
         it('should be in the document', () => {
           expect(section).toBeInTheDocument();
         });
@@ -19,7 +20,7 @@ export default () => {
         it('should match headline text', () => {
           expect(headlineEl.textContent).toMatchSnapshot();
         });
-      });
+      }
     }
   });
 };

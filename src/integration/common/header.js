@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax */
 export default service => {
   describe('Header', () => {
     it('I can see the branding', () => {
@@ -23,7 +24,7 @@ export default service => {
           .querySelector('header nav [role="list"]')
           .querySelectorAll('a');
 
-        navigationLinks.forEach(navigationLink => {
+        for (const navigationLink of navigationLinks) {
           const linkText = navigationLink.textContent;
           const linkUrl = navigationLink.getAttribute('href');
 
@@ -41,7 +42,7 @@ export default service => {
               url: linkUrl,
             }).toMatchSnapshot();
           });
-        });
+        }
       });
     }
 

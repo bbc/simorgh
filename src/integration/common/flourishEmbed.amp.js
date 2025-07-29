@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax */
 export default () => {
   describe('Flourish Embed', () => {
     describe('Error messages', () => {
@@ -10,7 +11,7 @@ export default () => {
         expect(embedErrorMessages.length).toEqual(5);
       });
 
-      embedErrorMessages.forEach(errorEmbed => {
+      for (const errorEmbed of embedErrorMessages) {
         describe('Link', () => {
           const linkEl = errorEmbed.querySelector('a');
           const text = linkEl.textContent;
@@ -28,7 +29,7 @@ export default () => {
             expect({ text, url }).toMatchSnapshot();
           });
         });
-      });
+      }
     });
   });
 };

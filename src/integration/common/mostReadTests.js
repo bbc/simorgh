@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax */
 export default () => {
   describe('Most Read', () => {
     const mostRead = document.querySelector(`[data-e2e="most-read"]`);
@@ -11,12 +12,12 @@ export default () => {
       it('has item with rank', () => {
         const mostReadLinks = mostRead.querySelectorAll('a');
 
-        mostReadLinks.forEach(link => {
+        for (const link of mostReadLinks) {
           const url = link.getAttribute('href');
           const text = link.textContent;
 
           expect({ url, text }).toMatchSnapshot();
-        });
+        }
       });
     }
   });

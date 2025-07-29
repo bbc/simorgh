@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax */
 import { runCommonCrossPlatformTests, runTimestampTests } from '../../common';
 
 export default service => {
@@ -10,7 +11,7 @@ export default service => {
     );
 
     if (relatedContentLinks) {
-      relatedContentLinks.forEach(relatedContentLink => {
+      for (const relatedContentLink of relatedContentLinks) {
         const relatedContentText = relatedContentLink.textContent;
         const relatedContentUrl = relatedContentLink.getAttribute('href');
 
@@ -28,7 +29,7 @@ export default service => {
             url: relatedContentUrl,
           }).toMatchSnapshot();
         });
-      });
+      }
     }
   });
 
@@ -38,7 +39,7 @@ export default service => {
     );
 
     if (latestMediaLinks) {
-      latestMediaLinks.forEach(latestMediaLink => {
+      for (const latestMediaLink of latestMediaLinks) {
         const latestMediaText = latestMediaLink.textContent;
         const latestMediaUrl = latestMediaLink.getAttribute('href');
 
@@ -56,7 +57,7 @@ export default service => {
             url: latestMediaUrl,
           }).toMatchSnapshot();
         });
-      });
+      }
     }
   });
 };

@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax */
 /**
  * @isInUK yes
  */
@@ -10,11 +11,11 @@ export default () => {
       'https://cdn.ampproject.org/v0/amp-geo-0.1.js',
     ];
 
-    ampScripts.forEach(ampScript => {
+    for (const ampScript of ampScripts) {
       expect(
         document.querySelector(`head script[src="${ampScript}"]`),
       ).toBeInTheDocument();
-    });
+    }
   });
 
   it('AMP Geo config', () => {
