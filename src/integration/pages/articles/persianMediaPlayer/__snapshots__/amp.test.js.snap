@@ -4,6 +4,69 @@ exports[`AMP Articles A11y I can see the skip to content link 1`] = `"مشاهد
 
 exports[`AMP Articles AMP Geo config 1`] = `"{"AmpBind":true,"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"],"gbOrUnknown":["gb","gg","im","je","uk","unknown"]}}"`;
 
+exports[`AMP Articles Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, فارسی",
+  "url": "/persian",
+}
+`;
+
+exports[`AMP Articles Footer Anchors should match text and url 2`] = `
+{
+  "text": "چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟",
+  "url": "https://www.bbc.com/persian/institutional-49283091",
+}
+`;
+
+exports[`AMP Articles Footer Anchors should match text and url 3`] = `
+{
+  "text": "شرایط استفاده",
+  "url": "https://www.bbc.com/persian/institutional-37474133",
+}
+`;
+
+exports[`AMP Articles Footer Anchors should match text and url 4`] = `
+{
+  "text": "درباره بی بی سی",
+  "url": "https://www.bbc.com/persian/institutional-37474136",
+}
+`;
+
+exports[`AMP Articles Footer Anchors should match text and url 5`] = `
+{
+  "text": "سیاست حفظ حریم خصوصی",
+  "url": "https://www.bbc.com/persian/institutional-37540067",
+}
+`;
+
+exports[`AMP Articles Footer Anchors should match text and url 6`] = `
+{
+  "text": "کوکی ها",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`AMP Articles Footer Anchors should match text and url 7`] = `
+{
+  "text": "تماس با بی بی سی",
+  "url": "https://www.bbc.co.uk/persian/send/u50853555",
+}
+`;
+
+exports[`AMP Articles Footer Anchors should match text and url 8`] = `
+{
+  "text": "اخبار به زبان‌های دیگر",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`AMP Articles Footer Anchors should match text and url 9`] = `
+{
+  "text": "سیاست ما درباره لینک دادن به سایت های دیگر.",
+  "url": "https://www.bbc.com/persian/institutional/2011/04/000001_links",
+}
+`;
+
 exports[`AMP Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
 
 exports[`AMP Articles Header I can see the branding 1`] = `"BBC News, فارسی"`;

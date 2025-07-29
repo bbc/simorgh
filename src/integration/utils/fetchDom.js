@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax */
 /* eslint-disable import/no-import-module-exports */
 /* eslint-disable no-console */
 
@@ -44,6 +45,14 @@ const faultTolerantDomFetch = ({ url, headers }) =>
           html,
           'text/html',
         );
+
+        // const footers = document.querySelectorAll('footer a');
+
+        // // console.log({ forEach: footers.forEach });
+
+        // for (const footer of footers) {
+        //   console.log(footer);
+        // }
 
         resolve({ window, document });
       } catch (error) {

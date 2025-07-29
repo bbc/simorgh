@@ -2,6 +2,69 @@
 
 exports[`Canonical Articles A11y I can see the skip to content link 1`] = `"Skip to content"`;
 
+exports[`Canonical Articles Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News",
+  "url": "/news",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 2`] = `
+{
+  "text": "Why you can trust the BBC",
+  "url": "https://www.bbc.com/news/help-41670342",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 3`] = `
+{
+  "text": "Terms of Use",
+  "url": "https://www.bbc.com/terms",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 4`] = `
+{
+  "text": "About the BBC",
+  "url": "https://www.bbc.co.uk/aboutthebbc/",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 5`] = `
+{
+  "text": "Privacy Policy",
+  "url": "https://www.bbc.com/privacy/",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 6`] = `
+{
+  "text": "Cookies",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 7`] = `
+{
+  "text": "Accessibility Help",
+  "url": "https://www.bbc.com/accessibility/",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 8`] = `
+{
+  "text": "Contact the BBC",
+  "url": "https://www.bbc.com/contact/",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 9`] = `
+{
+  "text": "Read about our approach to external linking.",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+}
+`;
+
 exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/news"`;
 
 exports[`Canonical Articles Header I can see the branding 1`] = `"BBC News"`;

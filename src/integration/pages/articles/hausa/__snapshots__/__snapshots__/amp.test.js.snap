@@ -4,6 +4,69 @@ exports[`AMP Articles A11y I can see the skip to content link 1`] = `"Tsallaka z
 
 exports[`AMP Articles AMP Geo config 1`] = `"{"AmpBind":true,"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"],"gbOrUnknown":["gb","gg","im","je","uk","unknown"]}}"`;
 
+exports[`AMP Articles Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, Hausa",
+  "url": "/hausa",
+}
+`;
+
+exports[`AMP Articles Footer Anchors should match text and url 2`] = `
+{
+  "text": "Me ya sa za ku iya aminta da BBC",
+  "url": "https://www.bbc.com/hausa/game-da-mu-49283501",
+}
+`;
+
+exports[`AMP Articles Footer Anchors should match text and url 3`] = `
+{
+  "text": "Sharuddan yin amfani",
+  "url": "https://www.bbc.com/hausa/game-da-mu-37377086",
+}
+`;
+
+exports[`AMP Articles Footer Anchors should match text and url 4`] = `
+{
+  "text": "A game da BBC",
+  "url": "https://www.bbc.com/hausa/game-da-mu-37377088",
+}
+`;
+
+exports[`AMP Articles Footer Anchors should match text and url 5`] = `
+{
+  "text": "Ka'idojin tsare sirri",
+  "url": "https://www.bbc.com/hausa/game-da-mu-37377090",
+}
+`;
+
+exports[`AMP Articles Footer Anchors should match text and url 6`] = `
+{
+  "text": "Ka'idoji",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`AMP Articles Footer Anchors should match text and url 7`] = `
+{
+  "text": "Tuntubi BBC",
+  "url": "https://www.bbc.co.uk/hausa/send/u50853335",
+}
+`;
+
+exports[`AMP Articles Footer Anchors should match text and url 8`] = `
+{
+  "text": "Labaran BBC a sauran harsuna",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`AMP Articles Footer Anchors should match text and url 9`] = `
+{
+  "text": "Karanta hanyoyin da muke bi dangane da adireshin waje.",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+}
+`;
+
 exports[`AMP Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/hausa"`;
 
 exports[`AMP Articles Header I can see the branding 1`] = `"BBC News, Hausa"`;

@@ -47,6 +47,69 @@ exports[`Canonical Articles Analytics ATI tracking pixel search params 1`] = `
 ]
 `;
 
+exports[`Canonical Articles Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, فارسی",
+  "url": "/persian",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 2`] = `
+{
+  "text": "چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟",
+  "url": "https://www.bbc.com/persian/institutional-49283091",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 3`] = `
+{
+  "text": "شرایط استفاده",
+  "url": "https://www.bbc.com/persian/institutional-37474133",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 4`] = `
+{
+  "text": "درباره بی بی سی",
+  "url": "https://www.bbc.com/persian/institutional-37474136",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 5`] = `
+{
+  "text": "سیاست حفظ حریم خصوصی",
+  "url": "https://www.bbc.com/persian/institutional-37540067",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 6`] = `
+{
+  "text": "کوکی ها",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 7`] = `
+{
+  "text": "تماس با بی بی سی",
+  "url": "https://www.bbc.co.uk/persian/send/u50853555",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 8`] = `
+{
+  "text": "اخبار به زبان‌های دیگر",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 9`] = `
+{
+  "text": "سیاست ما درباره لینک دادن به سایت های دیگر.",
+  "url": "https://www.bbc.com/persian/institutional/2011/04/000001_links",
+}
+`;
+
 exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
 
 exports[`Canonical Articles Header I can see the branding 1`] = `"BBC News, فارسی"`;

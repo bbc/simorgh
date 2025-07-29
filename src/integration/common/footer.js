@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax */
 export default () => {
   describe('Footer', () => {
     it('I can see the BBC branding', () => {
@@ -19,7 +20,7 @@ export default () => {
     describe('Anchors', () => {
       const footerAnchors = document.querySelectorAll('footer a');
 
-      footerAnchors.forEach(footerAnchor => {
+      for (const footerAnchor of footerAnchors) {
         const anchorText = footerAnchor.textContent;
         const anchorUrl = footerAnchor.getAttribute('href');
 
@@ -37,13 +38,13 @@ export default () => {
             url: anchorUrl,
           }).toMatchSnapshot();
         });
-      });
+      }
     });
 
     describe('Paragraphs', () => {
       const footerParagraphs = document.querySelectorAll('footer div p');
 
-      footerParagraphs.forEach(footerParagraph => {
+      for (const footerParagraph of footerParagraphs) {
         it('should be in the document', () => {
           expect(footerParagraph).toBeInTheDocument();
         });
@@ -55,7 +56,7 @@ export default () => {
         it('should match text', () => {
           expect(footerParagraph.textContent).toMatchSnapshot();
         });
-      });
+      }
     });
   });
 };

@@ -56,6 +56,69 @@ exports[`Canonical Articles Analytics ATI tracking pixel search params 1`] = `
 ]
 `;
 
+exports[`Canonical Articles Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, Gahuza",
+  "url": "/gahuza",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 2`] = `
+{
+  "text": "Igituma ushobora kwizera BBC News",
+  "url": "https://www.bbc.com/gahuza/institutional-49283343",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 3`] = `
+{
+  "text": "Ingingo zo gukoresha urubuga",
+  "url": "https://www.bbc.com/gahuza/institutional-35754053",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 4`] = `
+{
+  "text": "Ibijanye na BBC",
+  "url": "https://www.bbc.com/gahuza/institutional-35754055",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 5`] = `
+{
+  "text": "Ibigenga n'ubuzima bwite",
+  "url": "https://www.bbc.com/gahuza/institutional-35754059",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 6`] = `
+{
+  "text": "Cookies",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 7`] = `
+{
+  "text": "Vugana na BBC",
+  "url": "https://www.bbc.co.uk/gahuza/send/u50853291",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 8`] = `
+{
+  "text": "Bona amakuru mu zindi ndimi",
+  "url": "https://www.bbc.com/ws/languages?xtor=CS1-13-[wsgahuza~N~A39~MBC]-[Owned]&utm_source=mktg",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 9`] = `
+{
+  "text": "Soma ibijanye n'aho duhagaze ku mihora ijana ahandi",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+}
+`;
+
 exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/gahuza"`;
 
 exports[`Canonical Articles Header I can see the branding 1`] = `"BBC News, Gahuza"`;
