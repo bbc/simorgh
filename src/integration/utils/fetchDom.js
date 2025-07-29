@@ -1,11 +1,11 @@
 /* eslint-disable import/no-import-module-exports */
 /* eslint-disable no-console */
 
-// https://github.com/node-fetch/node-fetch/issues/1624#issuecomment-1407717012
 const { Window } = require('happy-dom');
 const retry = require('retry');
 const dns = require('node:dns');
 
+// https://github.com/node-fetch/node-fetch/issues/1624#issuecomment-1407717012
 dns.setDefaultResultOrder('ipv4first');
 
 const faultTolerantDomFetch = ({ url, headers }) =>
