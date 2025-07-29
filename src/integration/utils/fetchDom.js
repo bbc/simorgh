@@ -6,6 +6,7 @@ const dns = require('node:dns');
 dns.setDefaultResultOrder('ipv4first');
 
 const { JSDOM } = require('jsdom');
+import { Window } from 'happy-dom';
 const retry = require('retry');
 
 const CustomResourceLoader = require('./customResourceLoader');
@@ -40,17 +41,14 @@ const faultTolerantDomFetch = ({ url, runScripts, headers }) =>
         }
 
         const html = await response.text();
-        const dom = new JSDOM(html, {
-          url,
-          ...(runScripts
-            ? {
-                runScripts: 'dangerously',
-                resources: new CustomResourceLoader(),
-              }
-            : {}),
-        });
 
-        resolve(dom);
+        const window = new Window({ url });
+        const document = new window.DOMParser().parseFromString(
+          html,
+          'text/html',
+        );
+
+        resolve({ window, document });
       } catch (error) {
         const isSocketHangUpError = error
           .toString()

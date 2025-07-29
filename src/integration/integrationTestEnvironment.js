@@ -1,11 +1,11 @@
 /* eslint-disable no-console */
 
-const JsdomEnvironment = require('jest-environment-jsdom').TestEnvironment;
+const TestEnvironment = require('@happy-dom/jest-environment').default;
 const fetchDom = require('./utils/fetchDom');
 const getPageTypeFromTestPath = require('./utils/getPageTypeFromTestPath');
 const camelCaseToText = require('./utils/camelCaseToText');
 
-class IntegrationTestEnvironment extends JsdomEnvironment {
+class IntegrationTestEnvironment extends TestEnvironment {
   constructor(config, context) {
     super(config, context);
     const { platform } = config.projectConfig.testEnvironmentOptions;
@@ -33,7 +33,7 @@ class IntegrationTestEnvironment extends JsdomEnvironment {
   async setup() {
     await super.setup();
 
-    const dom = await fetchDom({
+    const { window, document } = await fetchDom({
       url: this.url,
       runScripts: this.runScripts,
       headers: {
@@ -45,8 +45,8 @@ class IntegrationTestEnvironment extends JsdomEnvironment {
     Object.defineProperties(this.global, {
       pageType: { value: this.pageType, configurable: true },
       service: { value: this.service, configurable: true },
-      window: { value: dom.window, configurable: true },
-      document: { value: dom.window.document, configurable: true },
+      window: { value: window, configurable: true },
+      document: { value: document, configurable: true },
       fetch: { value: fetch, configurable: true },
     });
   }

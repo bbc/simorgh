@@ -1,6 +1,6 @@
 /* eslint-disable import/no-relative-packages */
 /* eslint-disable no-console */
-import { TestEnvironment } from 'jest-environment-jsdom';
+const TestEnvironment = require('@happy-dom/jest-environment').default;
 import type {
   JestEnvironmentConfig,
   EnvironmentContext,
@@ -45,7 +45,7 @@ class CustomTestEnvironment extends TestEnvironment {
     await super.setup();
 
     try {
-      const dom = await fetchDom({
+      const { window, document } = await fetchDom({
         url: this.url,
         runScripts: this.runScripts,
         headers: {
@@ -56,8 +56,8 @@ class CustomTestEnvironment extends TestEnvironment {
       Object.defineProperties(this.global, {
         pageType: { value: this.pageType },
         service: { value: this.service },
-        window: { value: dom.window },
-        document: { value: dom.window.document },
+        window: { value: window },
+        document: { value: document },
         fetch: { value: fetch },
       });
     } catch (e) {
