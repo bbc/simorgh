@@ -27,6 +27,14 @@ module.exports = {
       },
     ];
   },
+  async rewrites() {
+    return [
+      {
+        source: '/ws/og',
+        destination: '/api/og',
+      },
+    ];
+  },
   reactStrictMode: true,
   distDir: 'build',
   output: 'standalone',
