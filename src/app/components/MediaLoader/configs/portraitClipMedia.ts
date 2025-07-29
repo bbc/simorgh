@@ -39,7 +39,11 @@ export default ({
     const matchMedia = window.matchMedia(
       `(max-width: ${GROUP_3_MIN_WIDTH_BP}rem)`,
     );
-    isMobile = matchMedia.matches;
+    if (matchMedia.matches) {
+      isMobile = true;
+    } else {
+      isMobile = false;
+    }
   }
 
   return {
