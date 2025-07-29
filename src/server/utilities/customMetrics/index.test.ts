@@ -42,10 +42,10 @@ describe('Cloudwatch Custom Metrics', () => {
       process.env.SIMORGH_APP_ENV = environment;
       sendCustomMetric(metricParams);
 
-      expect(metricsLogger.setNamespace).not.toBeCalled();
-      expect(metricsLogger.putMetric).not.toBeCalled();
-      expect(metricsLogger.putDimensions).not.toBeCalled();
-      expect(metricsLogger.setProperty).not.toBeCalled();
+      expect(metricsLogger.setNamespace).not.toHaveBeenCalled();
+      expect(metricsLogger.putMetric).not.toHaveBeenCalled();
+      expect(metricsLogger.putDimensions).not.toHaveBeenCalled();
+      expect(metricsLogger.setProperty).not.toHaveBeenCalled();
     });
   });
 
@@ -53,10 +53,10 @@ describe('Cloudwatch Custom Metrics', () => {
     process.env.SIMORGH_APP_ENV = 'test';
     sendCustomMetric(metricParams);
 
-    expect(metricsLogger.setNamespace).toBeCalled();
-    expect(metricsLogger.putMetric).toBeCalled();
-    expect(metricsLogger.putDimensions).toBeCalled();
-    expect(metricsLogger.setProperty).toBeCalled();
+    expect(metricsLogger.setNamespace).toHaveBeenCalled();
+    expect(metricsLogger.putMetric).toHaveBeenCalled();
+    expect(metricsLogger.putDimensions).toHaveBeenCalled();
+    expect(metricsLogger.setProperty).toHaveBeenCalled();
   });
 
   describe('sendCustomMetric', () => {
@@ -67,19 +67,23 @@ describe('Cloudwatch Custom Metrics', () => {
     it('should set metric namespace', () => {
       sendCustomMetric(metricParams);
 
-      expect(metricsLogger.setNamespace).toBeCalledWith('Simorgh/Server');
+      expect(metricsLogger.setNamespace).toHaveBeenCalledWith('Simorgh/Server');
     });
 
     it('should set metric with name and count', () => {
       sendCustomMetric(metricParams);
 
-      expect(metricsLogger.putMetric).toBeCalledWith('Metric Name', 1, 'Count');
+      expect(metricsLogger.putMetric).toHaveBeenCalledWith(
+        'Metric Name',
+        1,
+        'Count',
+      );
     });
 
     it('should set dimensions', () => {
       sendCustomMetric(metricParams);
 
-      expect(metricsLogger.putDimensions).toBeCalledWith({
+      expect(metricsLogger.putDimensions).toHaveBeenCalledWith({
         PageType: 'article',
         StatusCode: '500',
       });
@@ -88,7 +92,10 @@ describe('Cloudwatch Custom Metrics', () => {
     it('should set URL property', () => {
       sendCustomMetric(metricParams);
 
-      expect(metricsLogger.setProperty).toBeCalledWith('URL', '/request/url');
+      expect(metricsLogger.setProperty).toHaveBeenCalledWith(
+        'URL',
+        '/request/url',
+      );
     });
   });
 });

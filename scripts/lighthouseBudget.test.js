@@ -114,15 +114,15 @@ describe('compareToBudget', () => {
     false,
   );
   test('The function prints the result to console.table', () => {
-    expect(global.console.table).toBeCalled();
+    expect(global.console.table).toHaveBeenCalled();
   });
 });
 
 test('readReport reads a file and parses it to Json', () => {
   readReport();
 
-  expect(fs.readFileSync).toBeCalled();
-  expect(global.JSON.parse).toBeCalled();
+  expect(fs.readFileSync).toHaveBeenCalled();
+  expect(global.JSON.parse).toHaveBeenCalled();
 });
 
 test('exitResult', () => {
@@ -132,5 +132,5 @@ test('exitResult', () => {
 
   exitResult(false);
 
-  expect(mockExit).toBeCalled();
+  expect(mockExit).toHaveBeenCalled();
 });
