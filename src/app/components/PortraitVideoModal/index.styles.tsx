@@ -1,5 +1,6 @@
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
+import { visuallyHiddenStyle } from '#app/lib/styles.const';
 
 const styles = {
   bodyOverflowHidden: () =>
@@ -94,29 +95,17 @@ const styles = {
       position: 'absolute',
       top: `${theme.spacings.DOUBLE}rem`,
       insetInlineStart: `${theme.spacings.DOUBLE}rem`,
-      height: '1px',
-      width: '1px',
-      overflow: 'hidden',
+      backgroundColor: theme.palette.WHITE,
+      color: theme.palette.BLACK,
+      border: `${pixelsToRem(2)}rem solid ${theme.palette.WHITE}`,
+      textDecoration: 'none',
+      zIndex: 2,
+      padding: '12px 8px',
+      ...theme.fontSizes.pica,
+      ...theme.fontVariants.sansRegular,
 
-      ':focus': {
-        height: 'auto',
-        width: 'auto',
-        top: `${theme.spacings.DOUBLE}rem`,
-        insetInlineStart: `${theme.spacings.DOUBLE}rem`,
-        backgroundColor: theme.palette.WHITE,
-        color: theme.palette.BLACK,
-        border: `${pixelsToRem(2)}rem solid ${theme.palette.WHITE}`,
-        textDecoration: 'none',
-        zIndex: 2,
-        padding: '12px 8px',
-        ...theme.fontSizes.pica,
-        ...theme.fontVariants.sansRegular,
-      },
-
-      ':focus-visible': {
-        border: `${pixelsToRem(4)}rem solid ${theme.palette.WHITE}`,
-        boxShadow: `0 0 0 ${pixelsToRem(2)}rem ${theme.palette.BLACK}`,
-        outline: 'none',
+      '&:not(:focus):not(:active)': {
+        visuallyHiddenStyle,
       },
 
       [theme.mq.GROUP_3_MIN_WIDTH]: {
