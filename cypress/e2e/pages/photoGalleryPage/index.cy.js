@@ -97,15 +97,12 @@ const ampTestSuites = canonicalTestSuites.map(testSuite => {
 });
 
 const liteTestSuites = canonicalTestSuites
-  .filter(
-    ({ service }) =>
-      !['news', 'sport', 'newsround', 'persian'].includes(service),
-  )
+  .filter(({ service }) => !['news', 'sport', 'newsround'].includes(service))
   .map(testSuite => {
     return {
       ...testSuite,
       path: `${testSuite.path}.lite`,
-      tests,
+      tests: [testsForAllPages],
     };
   });
 
