@@ -81,6 +81,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'Langsung ke konten',
       relatedContent: 'Berita terkait',
       relatedTopics: 'Topik terkait',
+      moreOnThis: '',
       navMenuText: 'Kategori',
       mediaAssetPage: {
         mediaPlayer: 'Pemutar Media',

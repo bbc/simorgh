@@ -64,6 +64,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'مطلب ته ورشئ',
       relatedContent: 'ورته مطالب',
       relatedTopics: 'اړونده مطالب',
+      moreOnThis: '',
       navMenuText: 'برخې',
       liteSite: {
         onboardingMessage:

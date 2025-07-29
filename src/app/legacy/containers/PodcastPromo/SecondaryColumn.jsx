@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import styled from '@emotion/styled';
 import {
   GEL_SPACING,
@@ -25,7 +25,7 @@ const ResponsivePodcastPromoWrapper = styled.div`
 `;
 
 const Promo = () => {
-  const { podcastPromo, script, service, dir } = useContext(ServiceContext);
+  const { podcastPromo, script, service, dir } = use(ServiceContext);
 
   const {
     podcastPromoTitle,

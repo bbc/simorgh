@@ -44,9 +44,9 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   const { data } = await getPageData({
     id,
-    service: 'pidgin',
+    service: 'ws',
     rendererEnv,
-    resolvedUrl: '/pidgin',
+    resolvedUrl: '/ws/languages',
     pageType: HOME_PAGE,
   });
 
@@ -57,7 +57,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
         error: data?.error,
         status: data?.status,
         pageType: HOME_PAGE,
-        service: 'pidgin',
+        service: 'ws',
         pageData: {
           metadata: {
             type: HOME_PAGE,
@@ -72,11 +72,18 @@ export const getServerSideProps: GetServerSideProps = async context => {
     props: {
       ...baseProps,
       pageType: HOME_PAGE,
-      service: 'pidgin',
-      pathname: '/pidgin',
+      service: 'ws',
+      pathname: '/ws/languages',
       status: data?.status,
       pageData: {
         ...data?.pageData,
+        metadata: {
+          ...data?.pageData?.metadata,
+          atiAnalytics: {
+            ...data?.pageData?.metadata?.atiAnalytics,
+            pageIdentifier: 'ws.languages.page',
+          },
+        },
       },
     },
   };

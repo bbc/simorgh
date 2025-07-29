@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import ATIAnalytics from '#app/components/ATIAnalytics';
@@ -25,7 +25,7 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
         title = 'File Download',
       } = {},
     },
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
   const capitalisedService = service[0].toUpperCase() + service.slice(1);
   const description = `${capitalisedService} Downloads`;

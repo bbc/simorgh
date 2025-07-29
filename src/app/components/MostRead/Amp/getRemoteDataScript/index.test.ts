@@ -26,8 +26,7 @@ describe('getRemoteDataScript', () => {
     const translations = WesternArabic;
     expect(translations).toBeDefined();
 
-    // biome-ignore lint/security/noGlobalEval: <explanation>
-    expect(() => eval(transformData())).toThrowError(
+    expect(() => eval(transformData())).toThrow(
       'Empty records from mostread endpoint',
     );
   });

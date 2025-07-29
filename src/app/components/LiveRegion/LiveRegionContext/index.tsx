@@ -1,7 +1,7 @@
 import React, {
   PropsWithChildren,
   createContext,
-  useContext,
+  use,
   useMemo,
   useState,
 } from 'react';
@@ -37,5 +37,5 @@ export const LiveRegionContextProvider = ({ children }: PropsWithChildren) => {
 };
 
 export function useLiveRegionContext() {
-  return useContext(LiveRegionContext);
+  return use(LiveRegionContext);
 }

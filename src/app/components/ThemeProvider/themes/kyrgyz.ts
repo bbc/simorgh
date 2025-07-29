@@ -3,6 +3,7 @@ import cyrillicScript from '../fontScripts/cyrillic';
 import helmetFontVariants from '../fontVariants/helmet';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/kyrgyz';
+import getPWATypographyTheme from './getPWATypographyTheme';
 
 const kyrgyzTheme = {
   palette: {
@@ -20,4 +21,7 @@ const kyrgyzTheme = {
   brandSVG,
 };
 
-export default withThemeProvider(kyrgyzTheme);
+export default withThemeProvider(
+  kyrgyzTheme,
+  getPWATypographyTheme(cyrillicScript),
+);

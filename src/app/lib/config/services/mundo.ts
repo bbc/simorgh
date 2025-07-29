@@ -47,7 +47,26 @@ export const service: DefaultServiceConfig = {
     iTunesAppId: 515255747,
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'WhatsApp',
+      brandTitle: 'Únete a nuestro WhatsApp',
+      brandDescription:
+        'Recibe el mejor contenido de BBC News Mundo en tu celular',
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0lrtll8.png',
+        alt: 'Redes sociales - Únete a nuestro WhatsApp',
+      },
+      linkLabel: {
+        text: 'Suscríbete aquí',
+        href: 'https://whatsapp.com/channel/0029VaUm1Ss3WHTbgIXrjw3D',
+      },
+      skipLink: {
+        text: 'Saltar %title% y continuar leyendo',
+        endTextVisuallyHidden: 'Fin de %title%',
+      },
+    },
     translations: {
+      readTime: 'Tiempo estimado de lectura',
       pagination: {
         page: 'Página',
         previousPage: 'Anterior',
@@ -63,6 +82,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'Ir al contenido',
       relatedContent: 'Contenido relacionado',
       relatedTopics: 'Temas relacionados',
+      moreOnThis: '',
       navMenuText: 'Secciones',
       mediaAssetPage: {
         mediaPlayer: 'Reproductor multimedia',

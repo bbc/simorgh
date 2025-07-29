@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import moment from 'moment-timezone';
 import pathOr from 'ramda/src/pathOr';
 import formatDuration from '#lib/utilities/formatDuration';
@@ -10,7 +10,7 @@ import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 const LinkContents = ({ item, isInline = false, id }) => {
   const {
     translations: { media: mediaTranslations },
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
   const isMedia = isMap(item);
   const isPhotoGallery = isPgl(item);

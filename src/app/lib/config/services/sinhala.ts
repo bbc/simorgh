@@ -46,6 +46,20 @@ export const service: DefaultServiceConfig = {
     homePageTitle: 'ප්‍රධාන පුවත්',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'Whatsapp',
+      brandTitle: 'අපගේ BBC News සිංහල නිල WhatsApp Channel එක follow කරන්න',
+      brandDescription:
+        'උණුසුම් පුවත්, විශ්ලේෂණ සහ විශේෂ විශේෂාංග ඔබේ දුරකතනය වෙත ඍජුව ම ලබා ගන්න.',
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0lp7qwf.png',
+        alt: 'WhatsApp BBC News සිංහල',
+      },
+      linkLabel: {
+        text: 'සම්බන්ධ වීමට link එක click කරන්න',
+        href: 'https://www.whatsapp.com/channel/0029VbAdrSX5PO0xbywORN25',
+      },
+    },
     translations: {
       pagination: {
         page: 'පිටුව',
@@ -62,7 +76,20 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'අන්තර්ගතයට පිවිසෙන්න',
       relatedContent: 'මේ පුවතට සම්බන්ධ තවත් විස්තර',
       relatedTopics: 'සබැඳි විෂයයන්',
+      moreOnThis: '',
       navMenuText: 'අංශ',
+      liteSite: {
+        onboardingMessage:
+          'ඔබ මේ දකින්නේ අවම ඩේටා ප්‍රමාණයක් භාවිත කරන මෙම වෙබ් අඩවියේ පෙළ පමණක් කියවිය හැකි අනුවාදයකි. රූප සහ වීඩියෝ අන්තර්ගත අපගේ මුලික වෙබ් අඩවිය මෙතැනින් නරඹන්න.',
+        toMainSite: 'ප්‍රධාන වෙබ් අඩවියට ගෙන යන්න',
+        informationPage:
+          'අවම ඩේටා ප්‍රමාණයක් භාවිතා කරන මෙම වෙබ් පිටු පිළිබඳ වැඩිදුර කියවන්න',
+        informationPageLink:
+          'https://www.bbc.com/sinhala/articles/c4gdp0d3mzpo',
+        dataSaving: 'අවම ඩේටා ප්‍රමාණයක් භාවිත කිරීමට පෙළ පමණක් කියවන්න',
+        articleDataSavingLinkText:
+          'අවම ඩේටා ප්‍රමාණයක් භාවිත කිරීමට පෙළ පමණක් කියවන්න',
+      },
       mediaAssetPage: {
         mediaPlayer: 'මීඩියා ධාවකය',
         audioPlayer: 'හඬ වාදකය',
@@ -308,6 +335,10 @@ export const service: DefaultServiceConfig = {
         {
           href: 'https://www.bbc.co.uk/sinhala/send/u50853687',
           text: 'බීබීසී ය අමතන්න',
+        },
+        {
+          href: 'https://www.bbc.com/sinhala.lite',
+          text: 'ලිපිවල පෙළ පමණක් අඩංගු වෙබ් අඩවිය',
         },
         {
           href: 'https://www.bbc.com/ws/languages',

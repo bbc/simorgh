@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { MouseEvent, useContext } from 'react';
+import { MouseEvent, use } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import Link from './Link';
@@ -17,8 +17,8 @@ const openPrivacyManagerModal = (e: MouseEvent<HTMLAnchorElement>) => {
 };
 
 export default () => {
-  const { showAdsBasedOnLocation } = useContext(RequestContext);
-  const { footer } = useContext(ServiceContext);
+  const { showAdsBasedOnLocation } = use(RequestContext);
+  const { footer } = use(ServiceContext);
 
   const {
     externalLink,

@@ -4,7 +4,6 @@ import {
   VIEWABILITY_CLICK_EVENT,
 } from '#app/lib/analyticsUtils/analytics.const';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import {
   getDestination,
   getAppType,
@@ -298,6 +297,7 @@ export const buildATIEventTrackUrl = ({
   advertiserID,
   url,
   detailedPlacement,
+  experimentName,
   experimentVariant,
   ampExperimentName,
   isStatic = false,
@@ -340,7 +340,7 @@ export const buildATIEventTrackUrl = ({
         advertiserID,
         url,
         detailedPlacement,
-        experimentVariant,
+        experimentVariant: experimentVariant ?? '',
       }),
       wrap: false,
       disableEncoding: true,
@@ -383,18 +383,18 @@ export const buildATIEventTrackUrl = ({
             disableEncoding: disableEncodingDueToAmpSubstitution,
           },
         ]),
-    ...(experimentVariant
+    ...(experimentVariant && experimentName
       ? [
           {
             key: 'mv_test',
-            description: 'Top Bar OJs experiment',
-            value: 'Top Bar OJs experiment',
+            description: 'Experiment name',
+            value: `${experimentName}`,
             wrap: false,
             disableEncoding: true,
           },
           {
             key: 'mv_creation',
-            description: 'Top Bar OJs variant',
+            description: 'Experiment variant',
             value: `${experimentVariant}`,
             wrap: false,
             disableEncoding: true,
@@ -451,6 +451,7 @@ export const buildReverbAnalyticsModel = ({
   statsDestination,
   timePublished,
   timeUpdated,
+  experimentName,
   experimentVariant,
 }: ATIPageTrackingProps): ReverbBeaconConfig => {
   const href = getHref(platform);
@@ -490,10 +491,11 @@ export const buildReverbAnalyticsModel = ({
           x16: aggregatedCampaigns,
           x17: categoryName,
           x18: isLocServeCookieSet(),
-          ...(experimentVariant && {
-            mv_test: OPTIMIZELY_CONFIG.flagKey,
-            mv_creation: `${experimentVariant}`,
-          }),
+          ...(experimentVariant &&
+            experimentName && {
+              mv_test: experimentName,
+              mv_creation: experimentVariant,
+            }),
         },
       },
       user: {
@@ -515,9 +517,11 @@ export const buildReverbEventModel = ({
   type,
   advertiserID,
   url,
+  experimentName,
   experimentVariant,
   itemTracker = {},
   groupTracker = {},
+  eventGroupingName,
 }: ATIEventTrackingProps): ReverbBeaconConfig => {
   const {
     type: itemType,
@@ -563,14 +567,13 @@ export const buildReverbEventModel = ({
       event: {
         category: 'viewability',
         action: type === CLICK_EVENT ? VIEWABILITY_CLICK_EVENT : VIEW_EVENT,
+        ...(eventGroupingName && { grouping: eventGroupingName }),
       },
       isClick: type === CLICK_EVENT,
       ...(experimentVariant && {
         experience: {
           engine_type: ['experimentation'],
-          engine_id: [
-            `optimizely.${OPTIMIZELY_CONFIG.flagKey}.${experimentVariant}`,
-          ],
+          engine_id: [`optimizely.${experimentName}.${experimentVariant}`],
         },
       }),
     },

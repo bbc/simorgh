@@ -1,3 +1,5 @@
+import { Services } from '#app/models/types/global';
+
 const REITH_FONTS_DIR = 'https://static.files.bbci.co.uk/fonts/reith/r2.512/';
 
 const NOTO_SERIF_SINHALA_FONTS_DIR =
@@ -22,7 +24,7 @@ const NOTO_SERIF_BENGALI_FONTS_DIR =
   'https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifBengali/v1.00/';
 
 const REITH_QALAM_FONTS_DIR =
-  'https://ws-downloads.files.bbci.co.uk/fonts/ReithQalam/v1.310/';
+  'https://static.files.bbci.co.uk/fonts/reith-qalam/1.310/';
 
 const REITH_SERIF_LIGHT = {
   name: 'BBCReithSerif_WNumbers_Lt',
@@ -208,7 +210,7 @@ const REITH_QALAM_REGULAR = {
   fontWeight: 400,
   version: 'v1.310',
   fontStyle: 'normal',
-  src: `${REITH_QALAM_FONTS_DIR}normal.woff2`,
+  src: `${REITH_QALAM_FONTS_DIR}BBCReithQalam_W_Rg.woff2`,
   fontDisplay: 'optional',
 };
 
@@ -218,11 +220,38 @@ const REITH_QALAM_BOLD = {
   fontWeight: 700,
   version: 'v1.310',
   fontStyle: 'normal',
-  src: `${REITH_QALAM_FONTS_DIR}bold.woff2`,
+  src: `${REITH_QALAM_FONTS_DIR}BBCReithQalam_W_Bd.woff2`,
   fontDisplay: 'optional',
 };
 
-export default (service: string) => {
+const REITH_FOR_PWA_SERVICES: Services[] = [
+  'afaanoromoo',
+  'afrique',
+  'azeri',
+  'gahuza',
+  'hausa',
+  'igbo',
+  'indonesia',
+  'kyrgyz',
+  'pidgin',
+  'serbian',
+  'somali',
+  'swahili',
+  'ukrainian',
+  'uzbek',
+  'yoruba',
+];
+
+export default (service: Services, isPWA: boolean) => {
+  if (isPWA && REITH_FOR_PWA_SERVICES.includes(service)) {
+    return [
+      REITH_SANS_BOLD,
+      REITH_SANS_REGULAR,
+      REITH_SERIF_MEDIUM,
+      REITH_SERIF_LIGHT,
+    ];
+  }
+
   switch (service) {
     case 'news':
     case 'newsround':

@@ -47,16 +47,16 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     podcastPromo: {
-      title: 'ቢቢሲ አማርኛ በዋትስአፕ',
-      brandTitle: 'የቢቢሲ አማርኛ ዋትስአፕ ቻናል',
-      brandDescription: 'ዜና፣ ትንታኔ እና ታሪኮችን በቀጥታ በዋትስአፕ ለማግኘት',
+      title: 'ቢቢሲ አማርኛ YouTube',
+      brandTitle: 'የቢቢሲ አማርኛ ዩቲዩብ ቻናል',
+      brandDescription: 'ዜና፣ ትንታኔ እና ታሪኮችን በምሥል እና በድምጽ ለማግኘት',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe//p0krq6vq.png',
-        alt: 'የቢቢሲ አማርኛ ዋትስአፕ ቻናል',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0lp7mqk.png',
+        alt: 'BBC News Amharic የቢቢሲ አማርኛ ዩቲዩብ ቻናላችንን ይቀላቀሉ!',
       },
       linkLabel: {
-        text: 'ይህን በመጫን የቻናላችን አባል ይሁኑ!',
-        href: 'https://bit.ly/4gsoTyI',
+        text: 'ይህንን በመጫን ሰብስክራይብ ያድርጉ',
+        href: 'https://www.youtube.com/@BBCNewsAmharic',
       },
     },
     translations: {
@@ -75,6 +75,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'ወደ ዋናው ይዘት ይለፉ',
       relatedContent: 'በዚህ ዘገባ ላይ ተጨማሪ መረጃ',
       relatedTopics: 'ተያያዥ ርዕሶች',
+      moreOnThis: '',
       navMenuText: 'ክፍሎች',
       liteSite: {
         onboardingMessage:

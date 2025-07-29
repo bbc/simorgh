@@ -16,6 +16,7 @@ export interface Translations {
   relatedContent: string;
   topicsPath?: string;
   relatedTopics?: string;
+  moreOnThis?: string;
   navMenuText: string;
   liteSite?: LiteSiteTranslations;
   mediaAssetPage: {
@@ -46,6 +47,7 @@ export interface Translations {
     500: TranslationsError;
   };
   continueReading?: string;
+  readTime?: string;
   byline?: {
     author?: string;
     articleInformation?: string;

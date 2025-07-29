@@ -32,6 +32,7 @@ export interface ATIData {
   timePublished?: string | null;
   timeUpdated?: string | null;
   ampExperimentName?: string;
+  experimentName?: string | null;
   experimentVariant?: string | null;
 }
 
@@ -125,6 +126,7 @@ export type ReverbEventDetails = {
   event?: {
     category: string;
     action: 'select' | 'view';
+    grouping?: string;
   };
   eventName: 'pageView' | 'sectionView' | 'sectionClick';
   eventPublisher?: string;
@@ -160,12 +162,14 @@ export interface ATIEventTrackingProps {
   url?: string;
   detailedPlacement?: string;
   useReverb?: boolean;
-  experimentVariant?: string;
+  experimentName?: string;
+  experimentVariant?: string | null;
   ampExperimentName?: string;
   preventNavigation?: string;
   itemTracker?: ItemTracker;
   groupTracker?: GroupTracker;
   viewThreshold?: number;
+  eventGroupingName?: string;
 }
 
 export interface ItemTracker {
@@ -201,6 +205,7 @@ export interface ATIPageTrackingProps {
   campaigns?: { campaignId?: string; campaignName?: string }[] | null;
   nationsProducer?: string | null;
   ampExperimentName?: string;
+  experimentName?: string | null;
   experimentVariant?: string | null;
 }
 

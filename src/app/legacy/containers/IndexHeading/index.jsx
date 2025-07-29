@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import styled from '@emotion/styled';
 import IndexHeading from '#psammead/psammead-heading-index/src';
 import {
@@ -32,7 +32,7 @@ const StyledIndexHeading = styled(IndexHeading)`
 `;
 
 const IndexHeadingContainer = ({ children = null, ...props }) => {
-  const { script, service, dir } = useContext(ServiceContext);
+  const { script, service, dir } = use(ServiceContext);
 
   return (
     <StyledIndexHeading script={script} service={service} dir={dir} {...props}>

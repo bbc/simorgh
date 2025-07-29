@@ -3,6 +3,7 @@ import latinScript from '../fontScripts/latin';
 import helmetFontVariants from '../fontVariants/helmet';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/indonesian';
+import getPWATypographyTheme from './getPWATypographyTheme';
 
 const indonesiaTheme = {
   palette: {
@@ -20,4 +21,4 @@ const indonesiaTheme = {
   brandSVG,
 };
 
-export default withThemeProvider(indonesiaTheme);
+export default withThemeProvider(indonesiaTheme, getPWATypographyTheme());
