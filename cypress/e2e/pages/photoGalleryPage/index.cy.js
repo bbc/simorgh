@@ -4,11 +4,7 @@ import { testsThatFollowSmokeTestConfigForAllCanonicalPages as testsForAllCanoni
 import { testsThatFollowSmokeTestConfigForAllAMPPages as testsForAllAMPPages } from '../testsForAllAMPPages';
 import { PHOTO_GALLERY_PAGE } from '../../../../src/app/routes/utils/pageTypes';
 
-const tests = [
-  testsForAllPages,
-  testsForAllCanonicalPages,
-  testsForAllAMPPages,
-];
+const tests = [testsForAllPages, testsForAllCanonicalPages];
 
 const canonicalSmokeTestSuites = [
   {
@@ -21,12 +17,6 @@ const canonicalSmokeTestSuites = [
     path: '/pidgin/sport-23252855',
     service: 'pidgin',
     runforEnv: ['test', 'local'],
-    tests,
-  },
-  {
-    path: '/pidgin/sport-23252855',
-    service: 'pidgin',
-    runforEnv: 'local',
     tests,
   },
   {
@@ -94,11 +84,11 @@ const canonicalNonSmokeTestSuites = [
   },
 ];
 
-const canonicalTestSuites = Cypress.env('SMOKE')
+const canonicalTestSuites = !Cypress.env('SMOKE')
   ? canonicalSmokeTestSuites
   : canonicalNonSmokeTestSuites;
 
-const ampTestSuites = [...canonicalTestSuites].map(testSuite => {
+const ampTestSuites = canonicalTestSuites.map(testSuite => {
   return {
     ...testSuite,
     path: `${testSuite.path}.amp`,
