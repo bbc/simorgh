@@ -3,6 +3,7 @@ import { testsThatAlwaysRunForAllPages as testsForAllPages } from '../testsForAl
 import { testsThatFollowSmokeTestConfigForAllCanonicalPages as testsForAllCanonicalPages } from '../testsForAllCanonicalPages';
 import { testsThatFollowSmokeTestConfigForAllAMPPages as testsForAllAMPPages } from '../testsForAllAMPPages';
 import { PHOTO_GALLERY_PAGE } from '../../../../src/app/routes/utils/pageTypes';
+import liteArticleTests from '../articles/testsForLiteOnly';
 
 const tests = [testsForAllPages, testsForAllCanonicalPages];
 
@@ -92,7 +93,7 @@ const ampTestSuites = canonicalTestSuites.map(testSuite => {
   return {
     ...testSuite,
     path: `${testSuite.path}.amp`,
-    tests: [testsForAllAMPPages],
+    tests: [testsForAllAMPPages, testsForAllPages],
   };
 });
 
@@ -102,7 +103,7 @@ const liteTestSuites = canonicalTestSuites
     return {
       ...testSuite,
       path: `${testSuite.path}.lite`,
-      tests: [testsForAllPages],
+      tests: [testsForAllPages, liteArticleTests],
     };
   });
 
