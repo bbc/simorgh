@@ -1,4 +1,6 @@
-import React, { use } from 'react';
+/** @jsx jsx */
+/* @jsxFrag React.Fragment */
+import { jsx } from '@emotion/react';
 import styled from '@emotion/styled';
 import { getPica } from '#psammead/gel-foundations/src/typography';
 import { getSerifBold } from '#psammead/psammead-styles/src/font-styles';
@@ -19,7 +21,7 @@ import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStorie
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import LiveLabel from '../../LiveLabel';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import styles from './index.styles';
 
 const StyledLink = styled(Link)`
   ${({ script }) => script && getPica(script)}
@@ -90,7 +92,6 @@ interface PromoProps {
 }
 
 const Promo = ({ block, eventTrackingData }: PromoProps) => {
-  const { script, service } = use(ServiceContext);
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
   const overtypedHeadline = block?.headlines?.overtyped ?? '';
@@ -122,20 +123,15 @@ const Promo = ({ block, eventTrackingData }: PromoProps) => {
 
   const isOperaMini = useOperaMiniDetection();
 
-  const WrapperPromoBox = isOperaMini ? OperaPromoBox : PromoBox;
+  const promoBoxStyles = isOperaMini ? styles.operaPromoBox : styles.promoBox;
 
   return (
-    <WrapperPromoBox>
-      <StyledLink
-        href={href}
-        service={service}
-        script={script}
-        {...clickTrackerHandler}
-      >
+    <div css={promoBoxStyles}>
+      <a css={styles.link} href={href} {...clickTrackerHandler}>
         {isLive && <LiveLabel />}
         {title}
-      </StyledLink>
-    </WrapperPromoBox>
+      </a>
+    </div>
   );
 };
 
