@@ -100,7 +100,7 @@ describe('Canonical', () => {
     const carousels = getPortraitCarousels();
 
     for (const [carouselIndex, carousel] of carousels.entries()) {
-      const promoItems = carousel.querySelectorAll('li');
+      const promoItems = Array.from(carousel.querySelectorAll('li'));
       const videoItems =
         portraitVideoCurations[carouselIndex]?.portraitVideo?.items || [];
 
