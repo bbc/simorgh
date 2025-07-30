@@ -3997,20 +3997,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jest/fake-timers@npm:^29.4.0, @jest/fake-timers@npm:^29.7.0":
-  version: 29.7.0
-  resolution: "@jest/fake-timers@npm:29.7.0"
-  dependencies:
-    "@jest/types": "npm:^29.6.3"
-    "@sinonjs/fake-timers": "npm:^10.0.2"
-    "@types/node": "npm:*"
-    jest-message-util: "npm:^29.7.0"
-    jest-mock: "npm:^29.7.0"
-    jest-util: "npm:^29.7.0"
-  checksum: 10/9b394e04ffc46f91725ecfdff34c4e043eb7a16e1d78964094c9db3fde0b1c8803e45943a980e8c740d0a3d45661906de1416ca5891a538b0660481a3a828c27
-  languageName: node
-  linkType: hard
-
 "@jest/get-type@npm:30.0.1":
   version: 30.0.1
   resolution: "@jest/get-type@npm:30.0.1"
@@ -4173,21 +4159,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jest/types@npm:30.0.1":
-  version: 30.0.1
-  resolution: "@jest/types@npm:30.0.1"
-  dependencies:
-    "@jest/pattern": "npm:30.0.1"
-    "@jest/schemas": "npm:30.0.1"
-    "@types/istanbul-lib-coverage": "npm:^2.0.6"
-    "@types/istanbul-reports": "npm:^3.0.4"
-    "@types/node": "npm:*"
-    "@types/yargs": "npm:^17.0.33"
-    chalk: "npm:^4.1.2"
-  checksum: 10/43f4ffedfec4d88869d74c259a027e45798444c09e4c52f59a1e7124c43d54e908d7b93d81da5260075d421d6f42087b12cb6c83da580b088c987f9d18b5d879
-  languageName: node
-  linkType: hard
-
 "@jest/types@npm:30.0.5":
   version: 30.0.5
   resolution: "@jest/types@npm:30.0.5"
@@ -4200,33 +4171,6 @@ __metadata:
     "@types/yargs": "npm:^17.0.33"
     chalk: "npm:^4.1.2"
   checksum: 10/6bf18f4e899ff9cf6bd88b1e3348aeb944db4d5ad7e9c683bb0188daeb2d11d10a1463a4dc494e92145eafcbc2656fe31adb6f1fd0bf5928cf73ddc8b2f215bf
-  languageName: node
-  linkType: hard
-
-"@jest/types@npm:^26.6.2":
-  version: 26.6.2
-  resolution: "@jest/types@npm:26.6.2"
-  dependencies:
-    "@types/istanbul-lib-coverage": "npm:^2.0.0"
-    "@types/istanbul-reports": "npm:^3.0.0"
-    "@types/node": "npm:*"
-    "@types/yargs": "npm:^15.0.0"
-    chalk: "npm:^4.0.0"
-  checksum: 10/02d42749c8c6dc7e3184d0ff0293dd91c97233c2e6dc3708d61ef33d3162d4f07ad38d2d8a39abd94cf2fced69b92a87565c7099137c4529809242ca327254af
-  languageName: node
-  linkType: hard
-
-"@jest/types@npm:^29.4.0, @jest/types@npm:^29.6.3":
-  version: 29.6.3
-  resolution: "@jest/types@npm:29.6.3"
-  dependencies:
-    "@jest/schemas": "npm:^29.6.3"
-    "@types/istanbul-lib-coverage": "npm:^2.0.0"
-    "@types/istanbul-reports": "npm:^3.0.0"
-    "@types/node": "npm:*"
-    "@types/yargs": "npm:^17.0.8"
-    chalk: "npm:^4.0.0"
-  checksum: 10/f74bf512fd09bbe2433a2ad460b04668b7075235eea9a0c77d6a42222c10a79b9747dc2b2a623f140ed40d6865a2ed8f538f3cbb75169120ea863f29a7ed76cd
   languageName: node
   linkType: hard
 
@@ -4704,21 +4648,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sinonjs/commons@npm:^3.0.0, @sinonjs/commons@npm:^3.0.1":
+"@sinonjs/commons@npm:^3.0.1":
   version: 3.0.1
   resolution: "@sinonjs/commons@npm:3.0.1"
   dependencies:
     type-detect: "npm:4.0.8"
   checksum: 10/a0af217ba7044426c78df52c23cedede6daf377586f3ac58857c565769358ab1f44ebf95ba04bbe38814fba6e316ca6f02870a009328294fc2c555d0f85a7117
-  languageName: node
-  linkType: hard
-
-"@sinonjs/fake-timers@npm:^10.0.2":
-  version: 10.3.0
-  resolution: "@sinonjs/fake-timers@npm:10.3.0"
-  dependencies:
-    "@sinonjs/commons": "npm:^3.0.0"
-  checksum: 10/78155c7bd866a85df85e22028e046b8d46cf3e840f72260954f5e3ed5bd97d66c595524305a6841ffb3f681a08f6e5cef572a2cce5442a8a232dc29fb409b83e
   languageName: node
   linkType: hard
 
@@ -5317,7 +5252,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/istanbul-lib-coverage@npm:*, @types/istanbul-lib-coverage@npm:^2.0.0, @types/istanbul-lib-coverage@npm:^2.0.1, @types/istanbul-lib-coverage@npm:^2.0.6":
+"@types/istanbul-lib-coverage@npm:*, @types/istanbul-lib-coverage@npm:^2.0.1, @types/istanbul-lib-coverage@npm:^2.0.6":
   version: 2.0.6
   resolution: "@types/istanbul-lib-coverage@npm:2.0.6"
   checksum: 10/3feac423fd3e5449485afac999dcfcb3d44a37c830af898b689fadc65d26526460bedb889db278e0d4d815a670331796494d073a10ee6e3a6526301fe7415778
@@ -5333,7 +5268,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/istanbul-reports@npm:^3.0.0, @types/istanbul-reports@npm:^3.0.4":
+"@types/istanbul-reports@npm:^3.0.4":
   version: 3.0.4
   resolution: "@types/istanbul-reports@npm:3.0.4"
   dependencies:
@@ -5683,30 +5618,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/yargs@npm:^15.0.0":
-  version: 15.0.19
-  resolution: "@types/yargs@npm:15.0.19"
-  dependencies:
-    "@types/yargs-parser": "npm:*"
-  checksum: 10/c3abcd3472c32c02702f365dc1702a0728562deb8a8c61f3ce2161958d756cc033f7d78567565b4eba62f5869e9b5eac93d4c1dcb2c97af17aafda8f9f892b4b
-  languageName: node
-  linkType: hard
-
 "@types/yargs@npm:^17.0.33":
   version: 17.0.33
   resolution: "@types/yargs@npm:17.0.33"
   dependencies:
     "@types/yargs-parser": "npm:*"
   checksum: 10/16f6681bf4d99fb671bf56029141ed01db2862e3db9df7fc92d8bea494359ac96a1b4b1c35a836d1e95e665fb18ad753ab2015fc0db663454e8fd4e5d5e2ef91
-  languageName: node
-  linkType: hard
-
-"@types/yargs@npm:^17.0.8":
-  version: 17.0.32
-  resolution: "@types/yargs@npm:17.0.32"
-  dependencies:
-    "@types/yargs-parser": "npm:*"
-  checksum: 10/1e2b2673847011ce43607df690d392f137d95a2d6ea85aa319403eadda2ef4277365efd4982354d8843f2611ef3846c88599660aaeb537fa9ccddae83c2a89de
   languageName: node
   linkType: hard
 

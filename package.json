@@ -93,6 +93,8 @@
   },
   "homepage": "https://github.com/bbc/simorgh#readme",
   "resolutions": {
+    "@jest/fake-timers": "30.0.5",
+    "@jest/types": "30.0.5",
     "form-data": "4.0.4",
     "on-headers": "1.1.0",
     "react-is": "19"

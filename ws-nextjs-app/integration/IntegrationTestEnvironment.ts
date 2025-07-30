@@ -1,8 +1,10 @@
 /* eslint-disable import/no-relative-packages */
 /* eslint-disable no-console */
-import type { EnvironmentContext } from '@jest/environment';
+import type {
+  EnvironmentContext,
+  JestEnvironmentConfig,
+} from '@jest/environment';
 import TestEnvironment from '@happy-dom/jest-environment';
-import { Config } from '@jest/types';
 import getPageTypeFromTestPath from '../../src/integration/utils/getPageTypeFromTestPath';
 import camelCaseToText from '../../src/integration/utils/camelCaseToText';
 import fetchHtml from '../../src/integration/utils/fetchHtml';
@@ -16,9 +18,9 @@ class CustomTestEnvironment extends TestEnvironment {
 
   url: string;
 
-  constructor(config: Config.ProjectConfig, context: EnvironmentContext) {
+  constructor(config: JestEnvironmentConfig, context: EnvironmentContext) {
     super(config, context);
-    const { platform } = config.testEnvironmentOptions;
+    const { platform } = config.projectConfig.testEnvironmentOptions;
     const { pathname, service, displayAds = 'false' } = context.docblockPragmas;
 
     const pageType = getPageTypeFromTestPath(context.testPath);
