@@ -1,86 +1,12 @@
-import React, { use } from 'react';
-import styled from '@emotion/styled';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-} from '#psammead/gel-foundations/src/spacings';
-import {
-  GEL_GROUP_0_SCREEN_WIDTH_MIN,
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
+/** @jsx jsx */
+/* @jsxFrag React.Fragment */
+import { jsx } from '@emotion/react';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import useViewTracker from '#hooks/useViewTracker';
 import Promo from '../Promo';
-import { ServiceContext } from '../../../contexts/ServiceContext';
-
-const StandardScrollPromo = styled.ul`
-  list-style: none;
-  ${({ dir }) => `padding-${dir === 'ltr' ? 'left' : 'right'}: 0;`}
-  margin: 0;
-  display: flex;
-  overflow-x: scroll;
-  /* Avoid using smooth scrolling as it causes accessibility issues */
-  scroll-behavior: auto;
-  -webkit-overflow-scrolling: touch;
-
-  /* Hide scrollbar */
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-`;
-
-const OperaScrollPromo = styled.ul`
-  list-style: none;
-  ${({ dir }) => `padding-${dir === 'ltr' ? 'left' : 'right'}: 0;`}
-  margin: 0;
-`;
-
-const StyledList = styled.li`
-  display: flex;
-  flex-shrink: 0;
-
-  ${({ dir }) =>
-    `
-      @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}){
-        margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING};
-        &:first-child {
-          margin-${dir === 'ltr' ? 'left' : 'right'}: 0;
-        }
-        &:last-child {
-          margin-${dir === 'ltr' ? 'right' : 'left'}: ${GEL_SPACING};
-        }
-      }
-      @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}){
-        margin-${dir === 'ltr' ? `left` : `right`}: ${GEL_SPACING_DBL};  
-
-        &:first-child {
-          margin-${dir === 'ltr' ? 'left' : 'right'}: 0};
-        }
-      }
-      @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}){
-          margin-${dir === 'ltr' ? `left` : `right`}: ${GEL_SPACING_DBL};
-          &:first-child {
-            margin-${dir === 'ltr' ? 'left' : 'right'}: 0;
-          }
-      }
-  `}
-`;
-
-const OperaStyledList = styled.li`
-  ${({ dir }) => `@media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}){
-      margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING};
-    }
-    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}){
-      margin-${dir === 'ltr' ? `left` : `right`}: ${GEL_SPACING_DBL};   
-    }
-    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}){
-      margin-${dir === 'ltr' ? `left` : `right`}: 0;}`}
-`;
+import styles from './index.styles';
 
 interface PromoListProps {
   blocks: TopStoryItem[];
@@ -92,35 +18,36 @@ const PromoList = ({
   eventTrackingData,
   // a11yAttributes, // will pass these later
 }: PromoListProps) => {
-  const { dir } = use(ServiceContext);
   const isOperaMini = useOperaMiniDetection();
   const listBlocks = blocks.slice(0, 3);
 
   const viewTracker = useViewTracker(eventTrackingData);
 
-  const ScrollPromo = isOperaMini ? OperaScrollPromo : StandardScrollPromo;
-  const List = isOperaMini ? OperaStyledList : StyledList;
+  const scrollablePromoStyles = isOperaMini
+    ? styles.operaScrollPromo
+    : styles.standardScrollPromo;
+
+  const listStyles = isOperaMini ? styles.operaStyledList : styles.list;
 
   return (
-    <ScrollPromo
-      dir={dir}
+    <div
+      css={scrollablePromoStyles}
       role="list"
-      isOperaMini={isOperaMini}
       {...viewTracker}
       // {...a11yAttributes}
     >
       {listBlocks.map((block, index) => {
         return (
-          <List
+          <li
+            css={listStyles}
             // eslint-disable-next-line react/no-array-index-key
             key={index}
-            dir={dir}
           >
             <Promo block={block} eventTrackingData={eventTrackingData} />
-          </List>
+          </li>
         );
       })}
-    </ScrollPromo>
+    </div>
   );
 };
 
