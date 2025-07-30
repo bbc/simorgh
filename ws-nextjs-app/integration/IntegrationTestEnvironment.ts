@@ -5,7 +5,7 @@ import TestEnvironment from '@happy-dom/jest-environment';
 import { Config } from '@jest/types';
 import getPageTypeFromTestPath from '../../src/integration/utils/getPageTypeFromTestPath';
 import camelCaseToText from '../../src/integration/utils/camelCaseToText';
-import fetchDom from '../../src/integration/utils/fetchDom';
+import fetchHtml from '../../src/integration/utils/fetchHtml';
 
 class CustomTestEnvironment extends TestEnvironment {
   pageType: string;
@@ -43,7 +43,7 @@ class CustomTestEnvironment extends TestEnvironment {
     await super.setup();
 
     try {
-      const { window, document } = await fetchDom({
+      const { window, document } = await fetchHtml({
         url: this.url,
         headers: {
           ...(this.displayAds && { 'BBC-Adverts': 'true' }),

@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 
 const TestEnvironment = require('@happy-dom/jest-environment').default;
-const fetchDom = require('./utils/fetchDom');
+const fetchHtml = require('./utils/fetchHtml');
 const getPageTypeFromTestPath = require('./utils/getPageTypeFromTestPath');
 const camelCaseToText = require('./utils/camelCaseToText');
 
@@ -33,7 +33,7 @@ class IntegrationTestEnvironment extends TestEnvironment {
   async setup() {
     await super.setup();
 
-    const { window, document } = await fetchDom({
+    const { window, document } = await fetchHtml({
       url: this.url,
       runScripts: this.runScripts,
       headers: {
