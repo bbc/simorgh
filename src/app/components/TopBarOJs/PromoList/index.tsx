@@ -11,12 +11,13 @@ import styles from './index.styles';
 interface PromoListProps {
   blocks: TopStoryItem[];
   eventTrackingData: EventTrackingMetadata;
+  id?: string;
 }
 
 const PromoList = ({
   blocks,
   eventTrackingData,
-  // a11yAttributes, // will pass these later
+  id = 'top-bar-oj-promo-list',
 }: PromoListProps) => {
   const isOperaMini = useOperaMiniDetection();
   const listBlocks = blocks.slice(0, 3);
@@ -30,11 +31,12 @@ const PromoList = ({
   const listStyles = isOperaMini ? styles.operaStyledList : styles.list;
 
   return (
-    <div
+    <section
       css={scrollablePromoStyles}
       role="list"
       {...viewTracker}
-      // {...a11yAttributes}
+      aria-labelledby={id}
+      data-testid={id}
     >
       {listBlocks.map((block, index) => {
         return (
@@ -47,7 +49,7 @@ const PromoList = ({
           </li>
         );
       })}
-    </div>
+    </section>
   );
 };
 
