@@ -212,7 +212,6 @@ describe('Image - Canonical', () => {
          alt="Test image alt text"
          loading="eager"
          src="/test-image-500.jpg"
-         style="aspect-ratio: 16 / 9;"
        />
      </div>
     `);
@@ -237,7 +236,6 @@ describe('Image - Canonical', () => {
          loading="eager"
          src="/test-image-500.jpg.webp"
          srcset="/test-image-200.jpg.webp 200w, /test-image-500.jpg.webp 500w"
-         style="aspect-ratio: 16 / 9;"
        />
      </div>
     `);
