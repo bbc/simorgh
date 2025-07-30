@@ -1,9 +1,9 @@
-/* eslint-disable no-restricted-syntax */
 /**
  * @service portuguese
  * @pathname /portuguese
  */
 
+/* eslint-disable no-restricted-syntax */
 import numberOfCurationsTest from '#src/integration/pages/homePage/numberOfCurations';
 import { data as pageData } from '../../../../../data/portuguese/homePage/index.json';
 
@@ -16,8 +16,10 @@ describe('Canonical', () => {
   );
 
   const getPortraitCarousels = () =>
-    document.querySelectorAll(
-      '[data-testid="portrait-video-carousel"] ul[data-testid="pv-carousel"]',
+    Array.from(
+      document.querySelectorAll(
+        '[data-testid="portrait-video-carousel"] ul[data-testid="pv-carousel"]',
+      ),
     );
 
   it('should have an unordered list of videos with the correct number of promos for each portrait video carousel', () => {
@@ -61,8 +63,8 @@ describe('Canonical', () => {
     const carousels = getPortraitCarousels();
 
     for (const [carouselIndex, carousel] of carousels.entries()) {
-      const promoButtons = carousel.querySelectorAll(
-        '[data-testid="promo-button"]',
+      const promoButtons = Array.from(
+        carousel.querySelectorAll('[data-testid="promo-button"]'),
       );
       const videoItems =
         portraitVideoCurations[carouselIndex]?.portraitVideo?.items || [];
