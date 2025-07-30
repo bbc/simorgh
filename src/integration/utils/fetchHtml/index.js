@@ -1,5 +1,3 @@
-/* eslint-disable no-restricted-syntax */
-/* eslint-disable import/no-import-module-exports */
 /* eslint-disable no-console */
 const { Window } = require('happy-dom');
 const retry = require('retry');
