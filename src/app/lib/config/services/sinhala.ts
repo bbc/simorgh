@@ -260,6 +260,7 @@ export const service: DefaultServiceConfig = {
         duration: 'ධාවන කාලය',
         recentEpisodes: 'පෙර වැඩසටහන්',
         closeVideo: 'ඉවත්වෙන්න',
+        endOfContentClose: 'මෙම අන්තර්ගතයේ අවසන්. ඉවත්වෙන්න',
       },
       socialEmbed: {
         caption: {

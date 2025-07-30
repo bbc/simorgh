@@ -253,6 +253,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'هذا البودكاست متاح عبر',
         download: 'تحميل الحلقة',
         closeVideo: 'خروج',
+        endOfContentClose: 'نهاية هذا المحتوى. خروج',
       },
       socialEmbed: {
         caption: {

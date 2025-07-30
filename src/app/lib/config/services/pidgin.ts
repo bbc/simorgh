@@ -227,6 +227,7 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
         closeVideo: 'Exit',
+        endOfContentClose: 'End of this content. Exit',
       },
       socialEmbed: {
         caption: {
