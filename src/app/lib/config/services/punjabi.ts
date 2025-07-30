@@ -232,7 +232,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Duration',
         recentEpisodes: 'ਤਾਜ਼ਾ ਐਪੀਸੋਡ',
         closeVideo: 'ਬਾਹਰ ਜਾਓ',
-        endOfContentCloseModal: '',
+        endOfContentClose: 'ਇਸ ਸਮੱਗਰੀ ਦਾ ਅੰਤ। ਬਾਹਰ ਜਾਓ',
       },
       socialEmbed: {
         caption: {
