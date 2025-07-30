@@ -170,7 +170,6 @@ export interface ATIEventTrackingProps {
   groupTracker?: GroupTracker;
   viewThreshold?: number;
   eventGroupingName?: string;
-  articleReadTime?: string;
 }
 
 export interface ItemTracker {

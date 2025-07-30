@@ -21,7 +21,6 @@ export default ({
     itemTracker,
     groupTracker,
     viewThreshold,
-    articleReadTime,
   } = eventTrackingData || {};
 
   const {
@@ -55,6 +54,5 @@ export default ({
     itemTracker,
     groupTracker,
     viewThreshold,
-    articleReadTime,
   };
 };

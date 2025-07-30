@@ -37,7 +37,6 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     groupTracker,
     itemTracker,
     viewThreshold,
-    articleReadTime,
   } = extractATITrackingProps({
     eventTrackingData,
     eventType: VIEW_EVENT,
@@ -134,7 +133,6 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
                 experimentName,
                 experimentVariant,
               }),
-            ...(articleReadTime && { articleReadTime }),
           });
           setEventSent(true);
           (observer.current as unknown as IntersectionObserver)?.disconnect();
@@ -175,7 +173,6 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     useReverb,
     itemTracker,
     groupTracker,
-    articleReadTime,
   ]);
 
   const viewTracker = useCallback(
