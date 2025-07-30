@@ -3,6 +3,8 @@ import React, { use } from 'react';
 import { jsx } from '@emotion/react';
 import Metadata from '#app/components/Metadata';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import Heading from '#app/components/Heading';
+import Paragraph from '#app/components/Paragraph';
 import styles from './styles';
 import { PageProps } from './types';
 import { FormContext, FormContextProvider } from './FormContext';
@@ -56,8 +58,11 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
         <div css={styles.primaryColumn}>
           <main role="main" css={styles.mainContent}>
             <noscript>
-              <GenericMessage heading={noJsHeading}>
-                {noJsDescription}
+              <GenericMessage heading={title}>
+                <Heading level={2} size="doublePica">
+                  {noJsHeading}
+                </Heading>
+                <Paragraph>{noJsDescription}</Paragraph>
               </GenericMessage>
             </noscript>
             <div css={styles.screenContainer}>
