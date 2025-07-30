@@ -93,6 +93,7 @@
   },
   "homepage": "https://github.com/bbc/simorgh#readme",
   "resolutions": {
+    "form-data": "4.0.4",
     "react-is": "19"
   },
   "dependencies": {
