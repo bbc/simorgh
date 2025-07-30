@@ -12,7 +12,6 @@ class IntegrationTestEnvironment extends TestEnvironment {
     const {
       pathname,
       service,
-      runScripts = 'true',
       displayAds = 'false',
       isInUK = 'no',
     } = context.docblockPragmas;
@@ -24,7 +23,6 @@ class IntegrationTestEnvironment extends TestEnvironment {
 
     this.pageType = camelCaseToText(pageType);
     this.service = service;
-    this.runScripts = runScripts === 'true';
     this.displayAds = displayAds === 'true';
     this.isInUK = isInUK;
     this.url = `http://localhost:7080${pathname}${platformForPath}`;
@@ -35,7 +33,6 @@ class IntegrationTestEnvironment extends TestEnvironment {
 
     const { window, document } = await fetchHtml({
       url: this.url,
-      runScripts: this.runScripts,
       headers: {
         ...(this.displayAds && { 'BBC-Adverts': 'true' }),
         ...{ 'x-bbc-edge-isuk': this.isInUK },
