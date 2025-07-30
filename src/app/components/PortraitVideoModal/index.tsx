@@ -127,7 +127,11 @@ const PortraitVideoModal = ({
 }: PortraitVideoModalProps) => {
   const {
     translations: {
-      media: { closeVideo = 'Close', modalLabel = 'Media player' },
+      media: {
+        closeVideo = 'Close',
+        modalLabel = 'Media player',
+        endOfContentClose = 'End of content. Close',
+      },
     },
   } = use(ServiceContext);
   const modalRef = useRef<HTMLDivElement>(null);
@@ -225,9 +229,9 @@ const PortraitVideoModal = ({
           css={styles.visuallyHiddenCloseButton}
           onClick={onClose}
           className="focusIndicatorInvert"
-          aria-label="End of content. Close modal"
+          aria-label="End of content. Close"
         >
-          End of content. Close modal
+          {endOfContentClose}
         </button>
       </div>
     </>
