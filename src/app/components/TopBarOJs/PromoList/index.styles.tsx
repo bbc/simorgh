@@ -1,7 +1,7 @@
 import { css, Theme } from '@emotion/react';
 
 export default {
-  standardScrollPromo: () => {
+  standardScrollPromo: () =>
     css({
       listStyle: 'none',
       paddingInlineStart: '0',
@@ -16,16 +16,14 @@ export default {
       '&::-webkit-scrollbar': {
         display: 'none',
       },
-    });
-  },
-  operaScrollPromo: () => {
+    }),
+  operaScrollPromo: () =>
     css({
       listStyle: 'none',
       paddingInlineStart: '0',
       margin: '0',
-    });
-  },
-  list: ({ mq, spacings }: Theme) => {
+    }),
+  list: ({ mq, spacings }: Theme) =>
     css({
       display: 'flex',
       flexShrink: 0,
@@ -50,9 +48,8 @@ export default {
           marginInlineStart: 0,
         },
       },
-    });
-  },
-  operaStyledList: ({ mq, spacings }: Theme) => {
+    }),
+  operaStyledList: ({ mq, spacings }: Theme) =>
     css({
       [mq.GROUP_0_MAX_WIDTH]: {
         margin: `${spacings.FULL}rem`,
@@ -65,6 +62,5 @@ export default {
       [mq.GROUP_4_MIN_WIDTH]: {
         marginInlineStart: 0,
       },
-    });
-  },
+    }),
 };
