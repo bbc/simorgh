@@ -56,16 +56,34 @@ const startApp = () => {
 const runExpressTests = () =>
   spawn(
     'jest',
-    [filesToTest, '--runInBand', '--colors', '--verbose', ...getJestArgs()],
+    [
+      filesToTest,
+      '--runInBand',
+      '--colors',
+      '--verbose',
+      '--detectOpenHandles',
+      '--forceExit',
+      ...getJestArgs(),
+    ],
     {
       stdio: 'inherit',
     },
   );
 
 const runNextJSTests = () =>
-  spawn('yarn', ['test:integration', '--verbose', ...getJestArgs()], {
-    stdio: 'inherit',
-  });
+  spawn(
+    'yarn',
+    [
+      'test:integration',
+      '--verbose',
+      '--detectOpenHandles',
+      '--forceExit',
+      ...getJestArgs(),
+    ],
+    {
+      stdio: 'inherit',
+    },
+  );
 
 const runTests = () =>
   new Promise((resolve, reject) => {
