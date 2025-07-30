@@ -17,7 +17,7 @@ export default {
         color: palette.GREY_6,
       },
     }),
-  promoBox: ({ isDarkUi, mq, palette, spacings }: Theme) => {
+  promoBox: ({ isDarkUi, mq, palette, spacings }: Theme) =>
     css({
       position: 'relative',
       backgroundColor: isDarkUi ? palette.GREY_3 : palette.WHITE,
@@ -33,9 +33,8 @@ export default {
       [mq.GROUP_3_MIN_WIDTH]: {
         width: `15.5rem`,
       },
-    });
-  },
-  operaPromoBox: ({ isDarkUi, mq, palette, spacings }: Theme) => {
+    }),
+  operaPromoBox: ({ isDarkUi, mq, palette, spacings }: Theme) =>
     css({
       position: 'relative',
       backgroundColor: isDarkUi ? palette.GREY_3 : palette.WHITE,
@@ -45,6 +44,5 @@ export default {
       [mq.GROUP_2_MIN_WIDTH]: {
         width: `calc(50% - ${spacings.DOUBLE}rem)`,
       },
-    });
-  },
+    }),
 };

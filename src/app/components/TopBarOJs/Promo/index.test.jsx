@@ -8,6 +8,7 @@ import {
 } from '../helpers/fixtureData';
 import Promo from '.';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import TopBarOJs from '..';
 
 const ScrollablePromo = ({ block, experimentVariant }) => (
   <ServiceContextProvider service="pidgin">
@@ -87,22 +88,17 @@ describe('ScrollablePromo', () => {
       expect(queryByRole('link')).toBeInTheDocument();
     });
 
-    it('should not display a timestamp when experimentVariant is top-bar-top-stories or top-bar-most-read', () => {
+    it('should not display a timestamp on TopBar component', () => {
       const { queryByTestId } = render(
-        <ScrollablePromo
-          block={topStoriesBlocks[0]}
-          experimentVariant="top-bar-most-read"
-        />,
+        <TopBarOJs block={topStoriesBlocks[0]} />,
       );
       expect(queryByTestId('timestamp')).not.toBeInTheDocument();
     });
 
     it('should display a LiveLabel when returning Top Stories', () => {
+      console.log(topStoriesBlocksWithLiveItem[1]);
       const { container } = render(
-        <ScrollablePromo
-          block={topStoriesBlocksWithLiveItem[1]}
-          experimentVariant="top-bar-top-stories"
-        />,
+        <TopBarOJs block={topStoriesBlocksWithLiveItem[1]} />,
       );
       expect(
         container.querySelector('[class*="liveLabelPulse"]'),
