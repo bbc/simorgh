@@ -4,7 +4,6 @@ import {
   PromoSingleBlock,
   oneLinkWithTimestamp,
   topStoriesBlocks,
-  mostReadBlocks,
   topStoriesBlocksWithLiveItem,
 } from '../helpers/fixtureData';
 import Promo from '.';
@@ -78,32 +77,11 @@ describe('ScrollablePromo', () => {
       expect(container).toHaveTextContent(expectedHeadline);
     });
 
-    it('should display Most Read content when experimentVariant is top-bar-most-read', () => {
-      const { container } = render(
-        <ScrollablePromo
-          block={mostReadBlocks[0]}
-          experimentVariant="top-bar-most-read"
-        />,
-      );
-      const expectedHeadline = mostReadBlocks[0].title;
-      expect(container).toHaveTextContent(expectedHeadline);
-    });
-
     it('should render a link on Top Stories article headline when experimentVariant is top-bar-top-stories', () => {
       const { queryByRole } = render(
         <ScrollablePromo
           block={topStoriesBlocks[2]}
           experimentVariant="top-bar-top-stories"
-        />,
-      );
-      expect(queryByRole('link')).toBeInTheDocument();
-    });
-
-    it('should render a link on Most Read article headline when experimentVariant is top-bar-most-read', () => {
-      const { queryByRole } = render(
-        <ScrollablePromo
-          block={mostReadBlocks[0]}
-          experimentVariant="top-bar-most-read"
         />,
       );
       expect(queryByRole('link')).toBeInTheDocument();
