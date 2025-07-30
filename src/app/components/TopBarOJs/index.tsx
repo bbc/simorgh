@@ -2,117 +2,27 @@
 /* @jsxFrag React.Fragment */
 import { jsx } from '@emotion/react';
 import React, { use } from 'react';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_SPACING_QUAD,
-} from '#psammead/gel-foundations/src/spacings';
-
-import { getBrevier } from '#psammead/gel-foundations/src/typography';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
-import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import isEmpty from 'ramda/src/isEmpty';
-import {
-  GEL_GROUP_0_SCREEN_WIDTH_MIN,
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MAX,
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
 import { GridItemMediumNoMargin } from '#components/Grid';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import idSanitiser from '#lib/utilities/idSanitiser';
-import { GREY_2 } from '#app/components/ThemeProvider/palette';
 import { TopStoriesOnwardJourney } from '#app/models/types/onwardJourney';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import PromoList from './PromoList';
-
-const ScrollablePromoContainer = styled.div`
-  background: ${GREY_2};
-  padding: ${GEL_SPACING};
-  display: flex;
-  overflow-x: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-  padding: 0 ${GEL_SPACING} ${GEL_SPACING_DBL};
-  margin: 0rem;
-
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    padding: 0 ${GEL_SPACING_DBL} ${GEL_SPACING_DBL};
-    margin: 0 -0.2rem;
-  }
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    margin: 0 -0.8rem;
-  }
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    display: none;
-  }
-
-  width: 100vw;
-`;
-
-const LabelComponentOJTopBar = styled(({ ariaLabel, ...props }) => (
-  <strong aria-label={ariaLabel} {...props} />
-))`
-  ${({ script }) => script && getBrevier(script)};
-  ${({ service }) => getSansRegular(service)}
-  display: inline-block;
-  margin-bottom: ${GEL_SPACING_DBL};
-  color: ${({ theme }) =>
-    theme.isDarkUi ? theme.palette.GREY_2 : theme.palette.SHADOW};
-
-  ${({ dir }) =>
-    `
-    @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}){
-      margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING};
-    }
-    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}){
-      margin-${dir === 'ltr' ? `left` : `right`}: ${GEL_SPACING_DBL};  
-    }
-    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}){
-      margin-${dir === 'ltr' ? `left` : `right`}: 0;
-    }
-  `}
-
-  padding: 0 ${GEL_SPACING};
-
-  @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}) {
-    margin: 0rem;
-  }
-
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    padding: 0 ${GEL_SPACING_DBL};
-    margin: 0 -0.2rem;
-  }
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    margin: 0 -0.8rem;
-  }
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    display: none;
-  }
-
-  display: flex;
-  align-items: center;
-  height: ${GEL_SPACING_QUAD};
-  background: ${GREY_2};
-  width: 100vw;
-`;
+import styles from './index.styles';
 
 interface TopBarOJsProps {
   blocks: TopStoriesOnwardJourney[];
+  id?: string;
 }
 
-const TopBarOJs = ({ blocks }: TopBarOJsProps) => {
-  const { script, service, dir, translations } = use(ServiceContext);
+const TopBarOJs = ({
+  blocks,
+  id = 'top-bar-onward-journeys',
+}: TopBarOJsProps) => {
+  const { translations } = use(ServiceContext);
 
   const eventTrackingData = {
     componentName: 'top-bar-oj',
@@ -143,16 +53,11 @@ const TopBarOJs = ({ blocks }: TopBarOJsProps) => {
 
   return (
     <>
-      <LabelComponentOJTopBar
-        id={ariaLabel}
-        data-testid="oj-top-bar"
-        script={script}
-        service={service}
-        dir={dir}
-      >
+      <section role="region" aria-labelledby={id} data-testid={id} />
+      <div css={styles.labelComponent} id={ariaLabel} data-testid="oj-top-bar">
         {title}
-      </LabelComponentOJTopBar>
-      <ScrollablePromoContainer>
+      </div>
+      <div css={styles.promoContainer}>
         <GridItemMediumNoMargin>
           <PromoList
             blocks={blocks}
@@ -161,7 +66,7 @@ const TopBarOJs = ({ blocks }: TopBarOJsProps) => {
             a11yAttributes={a11yAttributes}
           />
         </GridItemMediumNoMargin>
-      </ScrollablePromoContainer>
+      </div>
     </>
   );
 };
