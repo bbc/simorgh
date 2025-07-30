@@ -159,11 +159,11 @@ const nonSmokeTestSuites = [
   },
 ];
 
-const canonicalTestSuites = Cypress.env('SMOKE')
-  ? smokeTestSuites
-  : nonSmokeTestSuites;
+const testSuites = Cypress.env('SMOKE') ? smokeTestSuites : nonSmokeTestSuites;
 
-runTestsForPage({
-  pageType: 'all',
-  testSuites: [...canonicalTestSuites],
-});
+if (!Cypress.env('SKIP_EU')) {
+  runTestsForPage({
+    pageType: 'all',
+    testSuites,
+  });
+}
