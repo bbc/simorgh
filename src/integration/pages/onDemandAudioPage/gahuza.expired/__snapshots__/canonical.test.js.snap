@@ -336,7 +336,7 @@ exports[`Canonical On Demand Audio Page SEO Linked data should match text 1`] = 
 }
 `;
 
-exports[`Canonical On Demand Audio Page SEO OG description 1`] = `"Amakuru yo hirya no hino yibanda cyane cyane ku karere k&#x27;ibiyaga bigari muri Afrika, n&#x27;amakuru mpuzamakungu."`;
+exports[`Canonical On Demand Audio Page SEO OG description 1`] = `"Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."`;
 
 exports[`Canonical On Demand Audio Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/images/ic/400x400/p0gwty85.png"`;
 
@@ -360,7 +360,7 @@ exports[`Canonical On Demand Audio Page SEO Twitter card 1`] = `"summary_large_i
 
 exports[`Canonical On Demand Audio Page SEO Twitter creator 1`] = `"@bbcgahuza"`;
 
-exports[`Canonical On Demand Audio Page SEO Twitter description 1`] = `"Amakuru yo hirya no hino yibanda cyane cyane ku karere k&#x27;ibiyaga bigari muri Afrika, n&#x27;amakuru mpuzamakungu."`;
+exports[`Canonical On Demand Audio Page SEO Twitter description 1`] = `"Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."`;
 
 exports[`Canonical On Demand Audio Page SEO Twitter image alt 1`] = `"BBC News Gahuza"`;
 

@@ -36,7 +36,19 @@ exports[`Canonical Media Asset Page Analytics ATI tracking pixel search params 1
     "x8": "[simorgh-nojs]",
   },
   {
-    "x9": "[DO%20NOT%20EDIT%20THIS%20IS%20AN%20AUTOMATED%20TEST%20dolor%20sit%20amet,%20consectetur%20Lorem%20",
+    "x9": "[DO%20NOT%20EDIT%20THIS%20IS%20AN%20AUTOMATED%20TEST%20dolor%20sit%20amet,%20consectetur%20Lorem%20'ipsum'%20dolor%20sit%20amet,%20consectetur%20Lorem%20ipsum%20dolor%20sit<em>amet</em>,%20consectetur%20-%20BBC%20News%20Pidgin]",
+  },
+  {
+    "x11": "[2019-09-13T15:31:44.000Z]",
+  },
+  {
+    "x12": "[2020-06-10T14:24:07.000Z]",
+  },
+  {
+    "x16": "[Inspire me~Give me perspective~Keep me on trend]",
+  },
+  {
+    "x17": "[Opinion]",
   },
 ]
 `;
@@ -168,9 +180,9 @@ exports[`Canonical Media Asset Page Header Navigation link should match text and
 
 exports[`Canonical Media Asset Page I can see a bulleted list item 1`] = `"<Media Asset Page>"`;
 
-exports[`Canonical Media Asset Page I can see a bulleted list item with link: <Media Asset Page> 1`] = `"/afrique/23248423"`;
+exports[`Canonical Media Asset Page I can see a bulleted list item with link 1`] = `"/afrique/23248423"`;
 
-exports[`Canonical Media Asset Page Main heading should match text 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur"`;
+exports[`Canonical Media Asset Page Main heading should match text 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sitamet, consectetur"`;
 
 exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 1`] = `
 {
@@ -248,7 +260,7 @@ exports[`Canonical Media Asset Page SEO Dir attribute 1`] = `"ltr"`;
 
 exports[`Canonical Media Asset Page SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`Canonical Media Asset Page SEO Heading level 1 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur"`;
+exports[`Canonical Media Asset Page SEO Heading level 1 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sitamet, consectetur"`;
 
 exports[`Canonical Media Asset Page SEO Lang attribute 1`] = `"pcm"`;
 
@@ -329,13 +341,13 @@ exports[`Canonical Media Asset Page SEO OG locale 1`] = `"pcm"`;
 
 exports[`Canonical Media Asset Page SEO OG site name 1`] = `"BBC News Pidgin"`;
 
-exports[`Canonical Media Asset Page SEO OG title 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem &#x27;ipsum&#x27; dolor sit amet, consectetur Lorem ipsum dolor sit&lt;em&gt;amet&lt;/em&gt;, consectetur - BBC News Pidgin"`;
+exports[`Canonical Media Asset Page SEO OG title 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur - BBC News Pidgin"`;
 
 exports[`Canonical Media Asset Page SEO OG type 1`] = `"article"`;
 
 exports[`Canonical Media Asset Page SEO OG url 1`] = `"http://localhost:7080/pidgin/23248703"`;
 
-exports[`Canonical Media Asset Page SEO Page title 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur - BBC News Pidgin"`;
+exports[`Canonical Media Asset Page SEO Page title 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sitamet, consectetur - BBC News Pidgin"`;
 
 exports[`Canonical Media Asset Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
@@ -351,7 +363,7 @@ exports[`Canonical Media Asset Page SEO Twitter image src 1`] = `"https://ichef.
 
 exports[`Canonical Media Asset Page SEO Twitter site 1`] = `"@BBCNews"`;
 
-exports[`Canonical Media Asset Page SEO Twitter title 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem &#x27;ipsum&#x27; dolor sit amet, consectetur Lorem ipsum dolor sit&lt;em&gt;amet&lt;/em&gt;, consectetur - BBC News Pidgin"`;
+exports[`Canonical Media Asset Page SEO Twitter title 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur - BBC News Pidgin"`;
 
 exports[`Canonical Media Asset Page Timestamp should match text and date 1`] = `
 {

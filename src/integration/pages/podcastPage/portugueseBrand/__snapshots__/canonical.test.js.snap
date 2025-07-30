@@ -487,7 +487,7 @@ exports[`Canonical Podcast Page SEO OG locale 1`] = `"pt-BR"`;
 
 exports[`Canonical Podcast Page SEO OG site name 1`] = `"BBC News Brasil"`;
 
-exports[`Canonical Podcast Page SEO OG title 1`] = `"A mulher que teve três pais: &#x27;Meu mundo caiu quando soube verdade sobre pai biológico&#x27; - Que História! - News Brasil - BBC News Brasil"`;
+exports[`Canonical Podcast Page SEO OG title 1`] = `"A mulher que teve três pais: 'Meu mundo caiu quando soube verdade sobre pai biológico' - Que História! - News Brasil - BBC News Brasil"`;
 
 exports[`Canonical Podcast Page SEO OG type 1`] = `"website"`;
 
@@ -509,6 +509,6 @@ exports[`Canonical Podcast Page SEO Twitter image src 1`] = `"https://ichef.bbci
 
 exports[`Canonical Podcast Page SEO Twitter site 1`] = `"@bbcbrasil"`;
 
-exports[`Canonical Podcast Page SEO Twitter title 1`] = `"A mulher que teve três pais: &#x27;Meu mundo caiu quando soube verdade sobre pai biológico&#x27; - Que História! - News Brasil - BBC News Brasil"`;
+exports[`Canonical Podcast Page SEO Twitter title 1`] = `"A mulher que teve três pais: 'Meu mundo caiu quando soube verdade sobre pai biológico' - Que História! - News Brasil - BBC News Brasil"`;
 
 exports[`Canonical Podcast Page a11y Assistive technology reads the brand and episode title as the headline 1`] = `"Que História!, A mulher que teve três pais: 'Meu mundo caiu quando soube verdade sobre pai biológico'"`;

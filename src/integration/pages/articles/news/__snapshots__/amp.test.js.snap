@@ -155,7 +155,7 @@ exports[`AMP Articles Image Caption should match text 1`] = `"Image caption, For
 exports[`AMP Articles Image should match snapshot 1`] = `
 <amp-img
   alt="Pauline Clayton"
-  attribution="St Joseph&#x27;s Hospice"
+  attribution="St Joseph's Hospice"
   class="bbc-image"
   data-hero="true"
   fallback=""

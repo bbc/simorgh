@@ -42,7 +42,10 @@ const faultTolerantDomFetch = ({ url, headers }) =>
 
         const window = new Window({ url });
         const document = new window.DOMParser().parseFromString(
-          html,
+          html
+            .replaceAll('&#x27;', "'")
+            .replaceAll('&lt;', '<')
+            .replaceAll('&gt;', '>'),
           'text/html',
         );
 

@@ -13,7 +13,9 @@ exports[`Canonical Articles Embed HTML should match snapshot 1`] = `
       How silly is Abby?
     </h2>
     <p>
-      &lt;p&gt;Babby&lt;/p&gt;
+      <p>
+        Babby
+      </p>
     </p>
     <ul>
       <li>

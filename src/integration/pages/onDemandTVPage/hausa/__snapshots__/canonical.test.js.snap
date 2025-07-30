@@ -561,7 +561,7 @@ exports[`Canonical On Demand T V Page SEO Linked data should match text 1`] = `
 }
 `;
 
-exports[`Canonical On Demand T V Page SEO OG description 1`] = `"Sashen Hausa na BBC ya fara gabatar da shirin talabijin a ranakun Litinin zuwa Juma&#x27;a na kowane mako."`;
+exports[`Canonical On Demand T V Page SEO OG description 1`] = `"Sashen Hausa na BBC ya fara gabatar da shirin talabijin a ranakun Litinin zuwa Juma'a na kowane mako."`;
 
 exports[`Canonical On Demand T V Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png"`;
 
@@ -585,7 +585,7 @@ exports[`Canonical On Demand T V Page SEO Twitter card 1`] = `"summary_large_ima
 
 exports[`Canonical On Demand T V Page SEO Twitter creator 1`] = `"@bbchausa"`;
 
-exports[`Canonical On Demand T V Page SEO Twitter description 1`] = `"Sashen Hausa na BBC ya fara gabatar da shirin talabijin a ranakun Litinin zuwa Juma&#x27;a na kowane mako."`;
+exports[`Canonical On Demand T V Page SEO Twitter description 1`] = `"Sashen Hausa na BBC ya fara gabatar da shirin talabijin a ranakun Litinin zuwa Juma'a na kowane mako."`;
 
 exports[`Canonical On Demand T V Page SEO Twitter image alt 1`] = `"BBC News Hausa"`;
 
