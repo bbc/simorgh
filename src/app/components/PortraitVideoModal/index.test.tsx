@@ -119,7 +119,7 @@ describe('PortraitVideoModal', () => {
     expect(mockPlayer.pause).toHaveBeenCalled();
   });
 
-  describe('"End of content. Close modal" button', () => {
+  describe('"End of content. Close" button', () => {
     it('renders the visually hidden close button', () => {
       render(
         <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,
@@ -128,12 +128,10 @@ describe('PortraitVideoModal', () => {
         'close-modal-visually-hidden',
       );
       expect(hiddenCloseButton).toBeInTheDocument();
-      expect(hiddenCloseButton).toHaveTextContent(
-        'End of content. Close modal',
-      );
+      expect(hiddenCloseButton).toHaveTextContent('End of content. Close');
       expect(hiddenCloseButton).toHaveAttribute(
         'aria-label',
-        'End of content. Close modal',
+        'End of content. Close',
       );
     });
     it('calls onClose when visually hidden close button is clicked', () => {
@@ -154,12 +152,10 @@ describe('PortraitVideoModal', () => {
         'close-modal-visually-hidden',
       );
       expect(hiddenCloseButton).toBeInTheDocument();
-      expect(hiddenCloseButton).toHaveTextContent(
-        'End of content. Close modal',
-      );
+      expect(hiddenCloseButton).toHaveTextContent('End of content. Close');
       expect(hiddenCloseButton).toHaveAttribute(
         'aria-label',
-        'End of content. Close modal',
+        'End of content. Close',
       );
     });
 
