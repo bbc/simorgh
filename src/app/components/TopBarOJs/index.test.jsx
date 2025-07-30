@@ -1,18 +1,17 @@
 import React from 'react';
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
-import { render } from '../../../components/react-testing-library-with-providers';
+import { render } from '../react-testing-library-with-providers';
 import {
   threeLinks,
   oneLinkOnly,
   oneLinkWithNoTitle,
   moreThanThreeLinks,
   topStoriesBlocks,
-  mostReadBlocks,
 } from './helpers/fixtureData';
 import ScrollablePromo from '.';
 import { edOjA, edOjB } from './fixtures';
-import { MEDIA_ARTICLE_PAGE } from '../../../routes/utils/pageTypes';
+import { MEDIA_ARTICLE_PAGE } from '../../routes/utils/pageTypes';
 
 describe('ScrollablePromo', () => {
   describe('Mid Page ScrollablePromo', () => {
@@ -188,17 +187,6 @@ describe('ScrollablePromo', () => {
       expect(queryByText('Popular Reads')).toBeNull();
     });
 
-    it('it should display Most Read label when experimentVariant is top-bar-most-read', () => {
-      const { getByText, queryByText } = render(
-        <ScrollablePromo
-          blocks={mostReadBlocks}
-          experimentVariant="top-bar-most-read"
-        />,
-      );
-      expect(getByText('Popular Reads')).toBeVisible();
-      expect(queryByText('Top Stories')).toBeNull();
-    });
-
     it('it should display 3 promo items with Top Stories when experimentVariant is top-bar-top-stories', () => {
       const { getAllByRole } = render(
         <ScrollablePromo
@@ -207,16 +195,6 @@ describe('ScrollablePromo', () => {
         />,
       );
       expect(getAllByRole('listitem')).toHaveLength(3);
-    });
-
-    it('it should display 5 promo items with Most Read when experimentVariant is top-bar-most-read', () => {
-      const { getAllByRole } = render(
-        <ScrollablePromo
-          blocks={mostReadBlocks}
-          experimentVariant="top-bar-most-read"
-        />,
-      );
-      expect(getAllByRole('listitem')).toHaveLength(5);
     });
 
     it('it should display Top Stories content when experimentVariant is top-bar-top-stories', () => {
@@ -229,19 +207,6 @@ describe('ScrollablePromo', () => {
       const expectedFirstHeadline =
         topStoriesBlocks[0].headlines.promoHeadline.blocks[0].model.blocks[0]
           .model.text;
-      expect(getAllByRole('listitem')[0]).toHaveTextContent(
-        expectedFirstHeadline,
-      );
-    });
-
-    it('it should display Most Read content when experimentVariant is top-bar-most-read', () => {
-      const { getAllByRole } = render(
-        <ScrollablePromo
-          blocks={mostReadBlocks}
-          experimentVariant="top-bar-most-read"
-        />,
-      );
-      const expectedFirstHeadline = mostReadBlocks[0].title;
       expect(getAllByRole('listitem')[0]).toHaveTextContent(
         expectedFirstHeadline,
       );
