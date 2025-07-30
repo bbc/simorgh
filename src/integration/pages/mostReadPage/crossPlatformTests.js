@@ -1,4 +1,3 @@
-/* eslint-disable no-restricted-syntax */
 import { runCommonCrossPlatformTests, runMostReadTests } from '../../common';
 
 export default service => {
@@ -16,10 +15,10 @@ export default service => {
   it('I can see the list items', () => {
     const listItemElements = document.querySelectorAll('main ol li');
 
-    for (const itemEl of listItemElements) {
+    listItemElements.forEach(itemEl => {
       expect(itemEl).toBeInTheDocument();
       expect(itemEl.textContent).toBeTruthy();
       expect(itemEl.textContent).toMatchSnapshot();
-    }
+    });
   });
 };

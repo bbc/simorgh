@@ -29,7 +29,7 @@ describe('Canonical', () => {
 
     expect(videoCarousels.length).toEqual(portraitVideoCurations.length);
 
-    for (const [index, curation] of portraitVideoCurations.entries()) {
+    portraitVideoCurations.forEach((curation, index) => {
       const videoList = videoCarousels[index];
       const numberOfItems = curation.portraitVideo.items.length;
 
@@ -37,14 +37,14 @@ describe('Canonical', () => {
       expect(videoList.tagName).toBe('UL');
       expect(videoList.children.length).toBeGreaterThan(6);
       expect(videoList.children.length).toEqual(numberOfItems);
-    }
+    });
   });
 
   it('should have left and right scroll buttons', () => {
     const carousels = document.querySelectorAll(
       '[data-testid="portrait-video-carousel"]',
     );
-    for (const carousel of carousels) {
+    carousels.forEach(carousel => {
       const scrollLeftButton = carousel.querySelector(
         '[data-testid="pv-scroll-left"]',
       );
@@ -56,20 +56,20 @@ describe('Canonical', () => {
       // cannot test the scroll functionality in a JSDOM environment with no rendering or actual scrolling
       // also cannot test whether these appear or disappear due to screen width, as although they are in the document,
       // these tests always sees them as not visible, as well as always disabled
-    }
+    });
   });
 
   it('should render each video promo item with a button containing the correct text', () => {
     const carousels = getPortraitCarousels();
 
-    for (const [carouselIndex, carousel] of carousels.entries()) {
-      const promoButtons = Array.from(
-        carousel.querySelectorAll('[data-testid="promo-button"]'),
+    carousels.forEach((carousel, carouselIndex) => {
+      const promoButtons = carousel.querySelectorAll(
+        '[data-testid="promo-button"]',
       );
       const videoItems =
         portraitVideoCurations[carouselIndex]?.portraitVideo?.items || [];
 
-      for (const [buttonIndex, button] of promoButtons.entries()) {
+      promoButtons.forEach((button, buttonIndex) => {
         const textContents = button.querySelector(
           '[data-testid="text-contents"]',
         );
@@ -77,41 +77,41 @@ describe('Canonical', () => {
         const expectedTitle = videoItems[buttonIndex]?.headlines?.promoHeadline;
 
         expect(textContents?.textContent).toContain(expectedTitle);
-      }
-    }
+      });
+    });
   });
 
   it('should render each video promo item with a duration element', () => {
     const carousels = getPortraitCarousels();
 
-    for (const carousel of carousels) {
+    carousels.forEach(carousel => {
       const promoButtons = carousel.querySelectorAll(
         '[data-testid="promo-button"]',
       );
-      for (const button of promoButtons) {
+      promoButtons.forEach(button => {
         const duration = button.querySelector('time > span');
         expect(duration).toBeInTheDocument();
         expect(duration.textContent).toMatch(/\d{2}:\d{2}/);
-      }
-    }
+      });
+    });
   });
 
   it('should render each video promo item with an image', () => {
     const carousels = getPortraitCarousels();
 
-    for (const [carouselIndex, carousel] of carousels.entries()) {
-      const promoItems = Array.from(carousel.querySelectorAll('li'));
+    carousels.forEach((carousel, carouselIndex) => {
+      const promoItems = carousel.querySelectorAll('li');
       const videoItems =
         portraitVideoCurations[carouselIndex]?.portraitVideo?.items || [];
 
-      for (const [itemIndex, item] of promoItems.entries()) {
+      promoItems.forEach((item, itemIndex) => {
         const image = item.querySelector('img');
         expect(image).toBeInTheDocument();
 
         const [expectedImage] = videoItems[itemIndex]?.images || [];
         const { altText } = expectedImage || {};
         expect(image?.getAttribute('alt')).toBe(altText);
-      }
-    }
+      });
+    });
   });
 });

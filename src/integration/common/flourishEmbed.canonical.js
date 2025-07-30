@@ -1,4 +1,3 @@
-/* eslint-disable no-restricted-syntax */
 export default () => {
   describe('Flourish Embed', () => {
     describe('Visualisations', () => {
@@ -11,11 +10,11 @@ export default () => {
         expect(multipleFlourishVisualisations.length).toEqual(4);
       });
 
-      for (const flourishVisulisation of multipleFlourishVisualisations) {
+      multipleFlourishVisualisations.forEach(flourishVisulisation => {
         it('should match snapshot', () => {
           expect(flourishVisulisation).toMatchSnapshot();
         });
-      }
+      });
     });
     describe('Story', () => {
       const singleFlourishStory = document.querySelector(

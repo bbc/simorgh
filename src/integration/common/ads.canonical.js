@@ -1,16 +1,15 @@
-/* eslint-disable no-restricted-syntax */
 export default () => {
   describe('Ads', () => {
     const ads = document.querySelectorAll('[id^=dotcom]');
 
-    for (const ad of ads) {
+    ads.forEach(ad => {
       it('should be displayed', () => {
         expect(ad).toBeInTheDocument();
       });
       it('should have the following properties', () => {
         expect(ad).toMatchSnapshot();
       });
-    }
+    });
 
     it('dotcom scripts should be loaded', () => {
       const adScript = document.querySelector(

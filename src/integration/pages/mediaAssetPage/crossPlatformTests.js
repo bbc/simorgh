@@ -1,4 +1,3 @@
-/* eslint-disable no-restricted-syntax */
 import { runCommonCrossPlatformTests, runTimestampTests } from '../../common';
 
 export default service => {
@@ -34,7 +33,7 @@ export default service => {
     );
 
     if (relatedContentLinks) {
-      for (const relatedContentLink of relatedContentLinks) {
+      relatedContentLinks.forEach(relatedContentLink => {
         const relatedContentText = relatedContentLink.textContent;
         const relatedContentUrl = relatedContentLink.getAttribute('href');
 
@@ -52,7 +51,7 @@ export default service => {
             url: relatedContentUrl,
           }).toMatchSnapshot();
         });
-      }
+      });
     }
   });
 };

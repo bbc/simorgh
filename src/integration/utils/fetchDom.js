@@ -49,6 +49,14 @@ const faultTolerantDomFetch = ({ url, headers }) =>
           'text/html',
         );
 
+        // const footers = document.querySelectorAll('footer a');
+
+        // // console.log({ forEach: footers.forEach });
+
+        // for (const footer of footers) {
+        //   console.log(footer);
+        // }
+
         resolve({ window, document });
       } catch (error) {
         const isSocketHangUpError = error

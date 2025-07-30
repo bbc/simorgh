@@ -1,4 +1,3 @@
-/* eslint-disable no-restricted-syntax */
 export default () => {
   describe('Recent Episodes', () => {
     const recentEpisodesList = document.querySelector(
@@ -14,7 +13,7 @@ export default () => {
     });
 
     describe('List items', () => {
-      for (const listItemEl of recentEpisodesListItems) {
+      recentEpisodesListItems.forEach(listItemEl => {
         const text = listItemEl.textContent.trim();
         const url = listItemEl.querySelector('a').getAttribute('href');
 
@@ -24,7 +23,7 @@ export default () => {
             url,
           }).toMatchSnapshot();
         });
-      }
+      });
     });
   });
 };

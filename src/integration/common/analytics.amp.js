@@ -1,9 +1,8 @@
-/* eslint-disable no-restricted-syntax */
 export default () => {
   describe('Analytics', () => {
     const analyticsElements = document.querySelectorAll('amp-analytics');
 
-    for (const analyticsEl of analyticsElements) {
+    analyticsElements.forEach(analyticsEl => {
       const type = analyticsEl.getAttribute('type') || 'ATI';
 
       it(`${type}`, () => {
@@ -34,6 +33,6 @@ export default () => {
 
         expect(textContent).toMatchSnapshot();
       });
-    }
+    });
   });
 };

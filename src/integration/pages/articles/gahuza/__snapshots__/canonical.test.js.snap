@@ -121,65 +121,7 @@ exports[`Canonical Articles Footer Anchors should match text and url 9`] = `
 
 exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/gahuza"`;
 
-exports[`Canonical Articles Footer Paragraphs should match text 1`] = `"© 2025 BBC. BBC ntibazwa ibivuye ku zindi mbuga. Soma ibijanye n'aho duhagaze ku mihora ijana ahandi"`;
-
 exports[`Canonical Articles Header I can see the branding 1`] = `"BBC News, Gahuza"`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 1`] = `
-{
-  "text": "Urupapuro rw'itangiriro",
-  "url": "/gahuza",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 2`] = `
-{
-  "text": "Ibitero bya M23 muri Congo",
-  "url": "/gahuza/topics/cx2qn9pqx4yt",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 3`] = `
-{
-  "text": "Ibiyaga binini",
-  "url": "/gahuza/topics/c06gq67y3w5t",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 4`] = `
-{
-  "text": "Afrika",
-  "url": "/gahuza/topics/crvnv566zx9t",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 5`] = `
-{
-  "text": "Mpuzamahanga",
-  "url": "/gahuza/topics/c9dvd93jjkkt",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 6`] = `
-{
-  "text": "Ubuzima",
-  "url": "/gahuza/topics/cnq68qp4kxjt",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 7`] = `
-{
-  "text": "Imikino",
-  "url": "/gahuza/topics/c5qvpq0jzy7t",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 8`] = `
-{
-  "text": "Amajwi n’amashusho",
-  "url": "/gahuza/topics/crldzm936jmt",
-}
-`;
 
 exports[`Canonical Articles Image Caption should match text 1`] = `"Insiguro y'isanamu, Alexei Navalny na Yulia Navalnaya bari i Moscow mu 2013 muri metingi yo kwiyamamaza kw'abakuru b'imijyi"`;
 
@@ -199,111 +141,6 @@ exports[`Canonical Articles Image should match snapshot 1`] = `
 
 exports[`Canonical Articles Main heading should match text 1`] = `"‘Nziyamamariza kuba perezida w’Uburusiya Putin navaho’ - Umupfakazi wa Navalny"`;
 
-exports[`Canonical Articles Most Read has item with rank 1`] = `
-{
-  "text": "M23 'yinjiye muri Teritwari ya Walikale'",
-  "url": "https://www.bbc.com/gahuza/articles/cn03d60pp08o",
-}
-`;
-
-exports[`Canonical Articles Most Read has item with rank 2`] = `
-{
-  "text": "‘Nziyamamariza kuba perezida w’Uburusiya Putin navaho’ - Umupfakazi wa Navalny",
-  "url": "https://www.bbc.com/gahuza/articles/c5y51yxeg53o",
-}
-`;
-
-exports[`Canonical Articles Most Read has item with rank 3`] = `
-{
-  "text": "Amerika iri gukora iperereza ku itangazwa rya gahunda y'ibanga ya Israel yo gutera Iran ",
-  "url": "https://www.bbc.com/gahuza/articles/c4gln7xlrdxo",
-}
-`;
-
-exports[`Canonical Articles Most Read has item with rank 4`] = `
-{
-  "text": "Misiri yatangajwe ko nta malaria ikiyirangwamo nyuma y'umuhate umaze imyaka 100 ",
-  "url": "https://www.bbc.com/gahuza/articles/cn4ze4382jzo",
-}
-`;
-
-exports[`Canonical Articles Most Read has item with rank 5`] = `
-{
-  "text": "Hamas: Ni ibiki byabaye ku bayobozi bakuru bayo?",
-  "url": "https://www.bbc.com/gahuza/articles/cgxqxnxylgzo",
-}
-`;
-
-exports[`Canonical Articles SEO Apple Touch Icon should match attributes 1`] = `
-{
-  "sizes": null,
-  "url": "http://localhost:7080/gahuza/images/icons/icon-192x192.png",
-}
-`;
-
-exports[`Canonical Articles SEO Apple Touch Icon should match attributes 2`] = `
-{
-  "sizes": "72x72",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-72x72.png",
-}
-`;
-
-exports[`Canonical Articles SEO Apple Touch Icon should match attributes 3`] = `
-{
-  "sizes": "96x96",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-96x96.png",
-}
-`;
-
-exports[`Canonical Articles SEO Apple Touch Icon should match attributes 4`] = `
-{
-  "sizes": "128x128",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-128x128.png",
-}
-`;
-
-exports[`Canonical Articles SEO Apple Touch Icon should match attributes 5`] = `
-{
-  "sizes": "144x144",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-144x144.png",
-}
-`;
-
-exports[`Canonical Articles SEO Apple Touch Icon should match attributes 6`] = `
-{
-  "sizes": "152x152",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-152x152.png",
-}
-`;
-
-exports[`Canonical Articles SEO Apple Touch Icon should match attributes 7`] = `
-{
-  "sizes": "180x180",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-180x180.png",
-}
-`;
-
-exports[`Canonical Articles SEO Apple Touch Icon should match attributes 8`] = `
-{
-  "sizes": "192x192",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-192x192.png",
-}
-`;
-
-exports[`Canonical Articles SEO Apple Touch Icon should match attributes 9`] = `
-{
-  "sizes": "384x384",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-384x384.png",
-}
-`;
-
-exports[`Canonical Articles SEO Apple Touch Icon should match attributes 10`] = `
-{
-  "sizes": "512x512",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-512x512.png",
-}
-`;
-
 exports[`Canonical Articles SEO Canonical link 1`] = `"http://localhost:7080/gahuza/articles/c5y51yxeg53o"`;
 
 exports[`Canonical Articles SEO Dir attribute 1`] = `"ltr"`;
@@ -314,6 +151,7 @@ exports[`Canonical Articles SEO Heading level 1 1`] = `"‘Nziyamamariza kuba pe
 
 exports[`Canonical Articles SEO Lang attribute 1`] = `"rw"`;
 
+<<<<<<< HEAD
 exports[`Canonical Articles SEO Linked data should match text 1`] = `
 {
   "@context": "http://schema.org",
@@ -376,6 +214,9 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
 `;
 
 exports[`Canonical Articles SEO OG description 1`] = `"Yulia Navalnaya yavuze ibi mu kumurika igitabo umugabo we Alexei Navalny yandikaga ari muri gereza mbere y'uko apfa. "`;
+=======
+exports[`Canonical Articles SEO OG description 1`] = `"Yulia Navalnaya yavuze ibi mu kumurika igitabo umugabo we Alexei Navalny yandikaga ari muri gereza mbere y&#x27;uko apfa. "`;
+>>>>>>> parent of b0d3458a85 (Use for of instead of forEach & update snapshots)
 
 exports[`Canonical Articles SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_gahuza/8654/live/6fd0abe0-8f8a-11ef-8e6d-e3e64e16c628.jpg"`;
 
