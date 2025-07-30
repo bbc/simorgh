@@ -224,6 +224,7 @@ const PortraitVideoModal = ({
           data-testid="close-modal-visually-hidden"
           css={styles.visuallyHiddenCloseButton}
           onClick={onClose}
+          className="focusIndicatorInvert"
           aria-label="End of content. Close modal"
         >
           End of content. Close modal

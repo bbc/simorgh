@@ -100,9 +100,9 @@ const styles = {
       border: `${pixelsToRem(2)}rem solid ${theme.palette.WHITE}`,
       textDecoration: 'none',
       zIndex: 2,
-      padding: '12px 8px',
+      padding: `${theme.spacings.DOUBLE}rem`,
       ...theme.fontSizes.pica,
-      ...theme.fontVariants.sansRegular,
+      ...theme.fontVariants.sansBold,
 
       '&:not(:focus):not(:active)': {
         visuallyHiddenStyle,
