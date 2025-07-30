@@ -3922,27 +3922,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jest/environment-jsdom-abstract@npm:30.0.5":
-  version: 30.0.5
-  resolution: "@jest/environment-jsdom-abstract@npm:30.0.5"
-  dependencies:
-    "@jest/environment": "npm:30.0.5"
-    "@jest/fake-timers": "npm:30.0.5"
-    "@jest/types": "npm:30.0.5"
-    "@types/jsdom": "npm:^21.1.7"
-    "@types/node": "npm:*"
-    jest-mock: "npm:30.0.5"
-    jest-util: "npm:30.0.5"
-  peerDependencies:
-    canvas: ^3.0.0
-    jsdom: "*"
-  peerDependenciesMeta:
-    canvas:
-      optional: true
-  checksum: 10/c7adeeeb013192b189035284e31ee37bd3d5e343945b0cbf068788261def44b138c4bd89c45370e659e663da484ec339a3f45f6e834792c801a94e1d4af55339
-  languageName: node
-  linkType: hard
-
 "@jest/environment@npm:30.0.5":
   version: 30.0.5
   resolution: "@jest/environment@npm:30.0.5"
@@ -5390,7 +5369,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jsdom@npm:21.1.7, @types/jsdom@npm:^21.1.7":
+"@types/jsdom@npm:21.1.7":
   version: 21.1.7
   resolution: "@types/jsdom@npm:21.1.7"
   dependencies:
@@ -12634,24 +12613,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-environment-jsdom@npm:30.0.5":
-  version: 30.0.5
-  resolution: "jest-environment-jsdom@npm:30.0.5"
-  dependencies:
-    "@jest/environment": "npm:30.0.5"
-    "@jest/environment-jsdom-abstract": "npm:30.0.5"
-    "@types/jsdom": "npm:^21.1.7"
-    "@types/node": "npm:*"
-    jsdom: "npm:^26.1.0"
-  peerDependencies:
-    canvas: ^3.0.0
-  peerDependenciesMeta:
-    canvas:
-      optional: true
-  checksum: 10/672b67d02bc237700c846eee0bae8ed67f0f6ce0d2713829f25c896c84c366cd01941642d503dc963c0061fc10b63743376df9cdec4444a757763843ec6dd38e
-  languageName: node
-  linkType: hard
-
 "jest-environment-node@npm:30.0.5":
   version: 30.0.5
   resolution: "jest-environment-node@npm:30.0.5"
@@ -13229,7 +13190,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jsdom@npm:26.1.0, jsdom@npm:^26.1.0":
+"jsdom@npm:26.1.0":
   version: 26.1.0
   resolution: "jsdom@npm:26.1.0"
   dependencies:
@@ -16841,7 +16802,7 @@ __metadata:
     cypress-axe: "npm:^1.6.0"
     cypress-terminal-report: "npm:7.2.1"
     jest: "npm:30.0.5"
-    jest-environment-jsdom: "npm:30.0.5"
+    jest-environment-jsdom: "npm:29.7.0"
     next: "npm:15.4.4"
     next-test-api-route-handler: "npm:5.0.0"
     npm-run-all2: "npm:8.0.4"

@@ -45,7 +45,7 @@
     "cypress-axe": "^1.6.0",
     "cypress-terminal-report": "7.2.1",
     "jest": "30.0.5",
-    "jest-environment-jsdom": "30.0.5",
+    "jest-environment-jsdom": "29.7.0",
     "next-test-api-route-handler": "5.0.0",
     "npm-run-all2": "8.0.4",
     "ts-node": "^10.9.2"
