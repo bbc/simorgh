@@ -5713,12 +5713,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/yargs@npm:^17.0.33, @types/yargs@npm:^17.0.8":
+"@types/yargs@npm:^17.0.33":
   version: 17.0.33
   resolution: "@types/yargs@npm:17.0.33"
   dependencies:
     "@types/yargs-parser": "npm:*"
   checksum: 10/16f6681bf4d99fb671bf56029141ed01db2862e3db9df7fc92d8bea494359ac96a1b4b1c35a836d1e95e665fb18ad753ab2015fc0db663454e8fd4e5d5e2ef91
+  languageName: node
+  linkType: hard
+
+"@types/yargs@npm:^17.0.8":
+  version: 17.0.32
+  resolution: "@types/yargs@npm:17.0.32"
+  dependencies:
+    "@types/yargs-parser": "npm:*"
+  checksum: 10/1e2b2673847011ce43607df690d392f137d95a2d6ea85aa319403eadda2ef4277365efd4982354d8843f2611ef3846c88599660aaeb537fa9ccddae83c2a89de
   languageName: node
   linkType: hard
 
@@ -6491,7 +6500,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"acorn@npm:^8.0.4, acorn@npm:^8.1.0, acorn@npm:^8.11.0, acorn@npm:^8.14.0, acorn@npm:^8.15.0, acorn@npm:^8.4.1, acorn@npm:^8.8.1":
+"acorn@npm:^8.0.4, acorn@npm:^8.1.0, acorn@npm:^8.14.0, acorn@npm:^8.4.1, acorn@npm:^8.8.1":
+  version: 8.14.0
+  resolution: "acorn@npm:8.14.0"
+  bin:
+    acorn: bin/acorn
+  checksum: 10/6df29c35556782ca9e632db461a7f97947772c6c1d5438a81f0c873a3da3a792487e83e404d1c6c25f70513e91aa18745f6eafb1fcc3a43ecd1920b21dd173d2
+  languageName: node
+  linkType: hard
+
+"acorn@npm:^8.11.0, acorn@npm:^8.15.0":
   version: 8.15.0
   resolution: "acorn@npm:8.15.0"
   bin:
@@ -8768,10 +8786,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"decimal.js@npm:^10.4.2, decimal.js@npm:^10.5.0":
+"decimal.js@npm:^10.4.2":
   version: 10.6.0
   resolution: "decimal.js@npm:10.6.0"
   checksum: 10/c0d45842d47c311d11b38ce7ccc911121953d4df3ebb1465d92b31970eb4f6738a065426a06094af59bee4b0d64e42e7c8984abd57b6767c64ea90cf90bb4a69
+  languageName: node
+  linkType: hard
+
+"decimal.js@npm:^10.5.0":
+  version: 10.5.0
+  resolution: "decimal.js@npm:10.5.0"
+  checksum: 10/714d49cf2f2207b268221795ede330e51452b7c451a0c02a770837d2d4faed47d603a729c2aa1d952eb6c4102d999e91c9b952c1aa016db3c5cba9fc8bf4cda2
   languageName: node
   linkType: hard
 
@@ -10742,7 +10767,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"form-data@npm:^4.0.0, form-data@npm:^4.0.4, form-data@npm:~4.0.4":
+"form-data@npm:4.0.4":
   version: 4.0.4
   resolution: "form-data@npm:4.0.4"
   dependencies:
@@ -10752,19 +10777,6 @@ __metadata:
     hasown: "npm:^2.0.2"
     mime-types: "npm:^2.1.12"
   checksum: 10/a4b62e21932f48702bc468cc26fb276d186e6b07b557e3dd7cc455872bdbb82db7db066844a64ad3cf40eaf3a753c830538183570462d3649fdfd705601cbcfb
-  languageName: node
-  linkType: hard
-
-"form-data@npm:~4.0.0":
-  version: 4.0.3
-  resolution: "form-data@npm:4.0.3"
-  dependencies:
-    asynckit: "npm:^0.4.0"
-    combined-stream: "npm:^1.0.8"
-    es-set-tostringtag: "npm:^2.1.0"
-    hasown: "npm:^2.0.2"
-    mime-types: "npm:^2.1.12"
-  checksum: 10/22f6e55e6f32a5797a500ed7ca5aa9d690c4de6e1b3308f25f0d83a27d08d91a265ab59a190db2305b15144f8f07df08e8117bad6a93fc93de1baa838bfcc0b5
   languageName: node
   linkType: hard
 
@@ -14721,14 +14733,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"on-headers@npm:~1.0.2":
-  version: 1.0.2
-  resolution: "on-headers@npm:1.0.2"
-  checksum: 10/870766c16345855e2012e9422ba1ab110c7e44ad5891a67790f84610bd70a72b67fdd71baf497295f1d1bf38dd4c92248f825d48729c53c0eae5262fb69fa171
-  languageName: node
-  linkType: hard
-
-"on-headers@npm:~1.1.0":
+"on-headers@npm:1.1.0":
   version: 1.1.0
   resolution: "on-headers@npm:1.1.0"
   checksum: 10/98aa64629f986fb8cc4517dd8bede73c980e31208cba97f4442c330959f60ced3dc6214b83420491f5111fc7c4f4343abe2ea62c85f505cf041d67850f238776
