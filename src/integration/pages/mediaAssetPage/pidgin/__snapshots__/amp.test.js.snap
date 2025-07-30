@@ -73,7 +73,7 @@ exports[`AMP Media Asset Page Footer Paragraphs should match text 1`] = `"© 202
 
 exports[`AMP Media Asset Page Header I can see the branding 1`] = `"BBC News, Pidgin"`;
 
-exports[`AMP Media Asset Page I can see a bulleted list item 1`] = `"<Media Asset Page>"`;
+exports[`AMP Media Asset Page I can see a bulleted list item 1`] = `"this is the link text"`;
 
 exports[`AMP Media Asset Page I can see a bulleted list item with link 1`] = `"/afrique/23248423"`;
 
