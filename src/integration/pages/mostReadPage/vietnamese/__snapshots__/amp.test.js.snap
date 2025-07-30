@@ -4,7 +4,72 @@ exports[`AMP Most Read Page A11y I can see the skip to content link 1`] = `"Bỏ
 
 exports[`AMP Most Read Page AMP Geo config 1`] = `"{"AmpBind":true,"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"],"gbOrUnknown":["gb","gg","im","je","uk","unknown"]}}"`;
 
+exports[`AMP Most Read Page Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, Tiếng Việt",
+  "url": "/vietnamese",
+}
+`;
+
+exports[`AMP Most Read Page Footer Anchors should match text and url 2`] = `
+{
+  "text": "Tại sao bạn có thể tin tưởng BBC News",
+  "url": "https://www.bbc.com/vietnamese/institutional-49283563",
+}
+`;
+
+exports[`AMP Most Read Page Footer Anchors should match text and url 3`] = `
+{
+  "text": "Điều khoản sử dụng",
+  "url": "https://www.bbc.com/vietnamese/institutional-37622991",
+}
+`;
+
+exports[`AMP Most Read Page Footer Anchors should match text and url 4`] = `
+{
+  "text": "Về BBC",
+  "url": "https://www.bbc.com/vietnamese/institutional-37623840",
+}
+`;
+
+exports[`AMP Most Read Page Footer Anchors should match text and url 5`] = `
+{
+  "text": "Chính sách riêng tư",
+  "url": "https://www.bbc.com/vietnamese/institutional-37623841",
+}
+`;
+
+exports[`AMP Most Read Page Footer Anchors should match text and url 6`] = `
+{
+  "text": "Cookie",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`AMP Most Read Page Footer Anchors should match text and url 7`] = `
+{
+  "text": "Liên hệ BBC",
+  "url": "https://www.bbc.co.uk/vietnamese/send/u50853951",
+}
+`;
+
+exports[`AMP Most Read Page Footer Anchors should match text and url 8`] = `
+{
+  "text": "BBC News các ngôn ngữ khác",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`AMP Most Read Page Footer Anchors should match text and url 9`] = `
+{
+  "text": "Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/feeds-and-links",
+}
+`;
+
 exports[`AMP Most Read Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/vietnamese"`;
+
+exports[`AMP Most Read Page Footer Paragraphs should match text 1`] = `"© 2025 BBC. BBC không chịu trách nhiệm nội dung các trang ngoài. Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài"`;
 
 exports[`AMP Most Read Page Header I can see the branding 1`] = `"BBC News, Tiếng Việt"`;
 

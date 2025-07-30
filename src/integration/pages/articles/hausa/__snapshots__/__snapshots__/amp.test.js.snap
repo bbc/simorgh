@@ -69,6 +69,8 @@ exports[`AMP Articles Footer Anchors should match text and url 9`] = `
 
 exports[`AMP Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/hausa"`;
 
+exports[`AMP Articles Footer Paragraphs should match text 1`] = `"© 2025 BBC. BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba.  Karanta hanyoyin da muke bi dangane da adireshin waje."`;
+
 exports[`AMP Articles Header I can see the branding 1`] = `"BBC News, Hausa"`;
 
 exports[`AMP Articles Image Caption should match text 1`] = `"Bayanan hoto, Wannan hoton gwaji, mallakin BBC, ya nuna taswirar Faransa. Hoton yana cikin katangar ukun farko kuma yana da wannan taken."`;

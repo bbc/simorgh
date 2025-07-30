@@ -41,7 +41,72 @@ exports[`Canonical Home Page Analytics ATI tracking pixel search params 1`] = `
 ]
 `;
 
+exports[`Canonical Home Page Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, на српском",
+  "url": "/serbian/cyr",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 2`] = `
+{
+  "text": "Зашто ББЦ заслужује ваше поверење",
+  "url": "https://www.bbc.com/serbian/cyr/institutional-50173730",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 3`] = `
+{
+  "text": "Правила коришћења",
+  "url": "https://www.bbc.com/terms",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 4`] = `
+{
+  "text": "О ББЦ-ју",
+  "url": "https://www.bbc.co.uk/aboutthebbc/",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 5`] = `
+{
+  "text": "Правила приватности",
+  "url": "https://www.bbc.com/privacy/",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 6`] = `
+{
+  "text": "Колачићи",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 7`] = `
+{
+  "text": "Контактирајте ББЦ",
+  "url": "https://www.bbc.co.uk/serbian/send/u50853665",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 8`] = `
+{
+  "text": "BBC News на другим језицима",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 9`] = `
+{
+  "text": "Прочитајте наша правила о линковању других сајтова.",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+}
+`;
+
 exports[`Canonical Home Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/serbian/cyr"`;
+
+exports[`Canonical Home Page Footer Paragraphs should match text 1`] = `"© 2025 BBC. ББЦ није одговоран за садржај других сајтова. Прочитајте наша правила о линковању других сајтова."`;
 
 exports[`Canonical Home Page Header I can see the branding 1`] = `"BBC News, на српском"`;
 

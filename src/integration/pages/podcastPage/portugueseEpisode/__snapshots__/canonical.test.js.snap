@@ -41,7 +41,72 @@ exports[`Canonical Podcast Page Analytics ATI tracking pixel search params 1`] =
 ]
 `;
 
+exports[`Canonical Podcast Page Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, Brasil",
+  "url": "/portuguese",
+}
+`;
+
+exports[`Canonical Podcast Page Footer Anchors should match text and url 2`] = `
+{
+  "text": "Por que você pode confiar na BBC",
+  "url": "https://www.bbc.com/portuguese/institutional-50054434",
+}
+`;
+
+exports[`Canonical Podcast Page Footer Anchors should match text and url 3`] = `
+{
+  "text": "Termos de Uso",
+  "url": "https://www.bbc.com/portuguese/institutional-36202448",
+}
+`;
+
+exports[`Canonical Podcast Page Footer Anchors should match text and url 4`] = `
+{
+  "text": "Sobre a BBC",
+  "url": "https://www.bbc.com/portuguese/institutional-36202452",
+}
+`;
+
+exports[`Canonical Podcast Page Footer Anchors should match text and url 5`] = `
+{
+  "text": "Política de privacidade",
+  "url": "https://www.bbc.com/portuguese/institutional-36202454",
+}
+`;
+
+exports[`Canonical Podcast Page Footer Anchors should match text and url 6`] = `
+{
+  "text": "Cookies",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical Podcast Page Footer Anchors should match text and url 7`] = `
+{
+  "text": "Contate a BBC",
+  "url": "https://www.bbc.co.uk/portuguese/send/u50853599",
+}
+`;
+
+exports[`Canonical Podcast Page Footer Anchors should match text and url 8`] = `
+{
+  "text": "BBC News em outras línguas",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`Canonical Podcast Page Footer Anchors should match text and url 9`] = `
+{
+  "text": "Leia sobre nossa política em relação a links externos.",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+}
+`;
+
 exports[`Canonical Podcast Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/portuguese"`;
+
+exports[`Canonical Podcast Page Footer Paragraphs should match text 1`] = `"© 2025 BBC. A BBC não se responsabiliza pelo conteúdo de sites externos. Leia sobre nossa política em relação a links externos."`;
 
 exports[`Canonical Podcast Page Header I can see the branding 1`] = `"BBC News, Brasil"`;
 

@@ -47,7 +47,79 @@ exports[`Canonical Story Page Analytics ATI tracking pixel search params 1`] = `
 ]
 `;
 
+exports[`Canonical Story Page Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, Hausa",
+  "url": "/hausa",
+}
+`;
+
+exports[`Canonical Story Page Footer Anchors should match text and url 2`] = `
+{
+  "text": "Me ya sa za ku iya aminta da BBC",
+  "url": "https://www.bbc.com/hausa/game-da-mu-49283501",
+}
+`;
+
+exports[`Canonical Story Page Footer Anchors should match text and url 3`] = `
+{
+  "text": "Sharuddan yin amfani",
+  "url": "https://www.bbc.com/hausa/game-da-mu-37377086",
+}
+`;
+
+exports[`Canonical Story Page Footer Anchors should match text and url 4`] = `
+{
+  "text": "A game da BBC",
+  "url": "https://www.bbc.com/hausa/game-da-mu-37377088",
+}
+`;
+
+exports[`Canonical Story Page Footer Anchors should match text and url 5`] = `
+{
+  "text": "Ka'idojin tsare sirri",
+  "url": "https://www.bbc.com/hausa/game-da-mu-37377090",
+}
+`;
+
+exports[`Canonical Story Page Footer Anchors should match text and url 6`] = `
+{
+  "text": "Ka'idoji",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical Story Page Footer Anchors should match text and url 7`] = `
+{
+  "text": "Tuntubi BBC",
+  "url": "https://www.bbc.co.uk/hausa/send/u50853335",
+}
+`;
+
+exports[`Canonical Story Page Footer Anchors should match text and url 8`] = `
+{
+  "text": "Labaran BBC a sauran harsuna",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`Canonical Story Page Footer Anchors should match text and url 9`] = `
+{
+  "text": "Do not share or sell my info",
+  "url": "#",
+}
+`;
+
+exports[`Canonical Story Page Footer Anchors should match text and url 10`] = `
+{
+  "text": "Karanta hanyoyin da muke bi dangane da adireshin waje.",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+}
+`;
+
 exports[`Canonical Story Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/hausa"`;
+
+exports[`Canonical Story Page Footer Paragraphs should match text 1`] = `"© 2025 BBC. BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba.  Karanta hanyoyin da muke bi dangane da adireshin waje."`;
 
 exports[`Canonical Story Page Header I can see the branding 1`] = `"BBC News, Hausa"`;
 

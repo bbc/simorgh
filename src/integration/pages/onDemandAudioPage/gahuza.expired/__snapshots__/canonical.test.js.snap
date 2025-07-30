@@ -53,7 +53,72 @@ exports[`Canonical On Demand Audio Page Expired Episode I can see the hero image
 
 exports[`Canonical On Demand Audio Page Expired Episode a11y Assistive technology reads the brand and episode title as the headline 1`] = `"Amakuru ya Gahuzamiryango, Amakuru ya Gahuzamiryango"`;
 
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, Gahuza",
+  "url": "/gahuza",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 2`] = `
+{
+  "text": "Igituma ushobora kwizera BBC News",
+  "url": "https://www.bbc.com/gahuza/institutional-49283343",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 3`] = `
+{
+  "text": "Ingingo zo gukoresha urubuga",
+  "url": "https://www.bbc.com/gahuza/institutional-35754053",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 4`] = `
+{
+  "text": "Ibijanye na BBC",
+  "url": "https://www.bbc.com/gahuza/institutional-35754055",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 5`] = `
+{
+  "text": "Ibigenga n'ubuzima bwite",
+  "url": "https://www.bbc.com/gahuza/institutional-35754059",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 6`] = `
+{
+  "text": "Cookies",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 7`] = `
+{
+  "text": "Vugana na BBC",
+  "url": "https://www.bbc.co.uk/gahuza/send/u50853291",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 8`] = `
+{
+  "text": "Bona amakuru mu zindi ndimi",
+  "url": "https://www.bbc.com/ws/languages?xtor=CS1-13-[wsgahuza~N~A39~MBC]-[Owned]&utm_source=mktg",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 9`] = `
+{
+  "text": "Soma ibijanye n'aho duhagaze ku mihora ijana ahandi",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+}
+`;
+
 exports[`Canonical On Demand Audio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/gahuza"`;
+
+exports[`Canonical On Demand Audio Page Footer Paragraphs should match text 1`] = `"© 2025 BBC. BBC ntibazwa ibivuye ku zindi mbuga. Soma ibijanye n'aho duhagaze ku mihora ijana ahandi"`;
 
 exports[`Canonical On Demand Audio Page Header I can see the branding 1`] = `"BBC News, Gahuza"`;
 
@@ -77,51 +142,7 @@ exports[`Canonical On Demand Audio Page SEO Heading level 1 1`] = `"Amakuru ya G
 
 exports[`Canonical On Demand Audio Page SEO Lang attribute 1`] = `"rw"`;
 
-<<<<<<< HEAD
-exports[`Canonical On Demand Audio Page SEO Linked data should match text 1`] = `
-{
-  "@context": "http://schema.org",
-  "@graph": [
-    {
-      "@type": "WebPage",
-      "image": {
-        "@type": "ImageObject",
-        "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png",
-        "width": 1024,
-      },
-      "inLanguage": {
-        "@type": "Language",
-        "alternateName": "rw",
-        "name": "Kinyarwanda",
-      },
-      "mainEntityOfPage": {
-        "@id": "http://localhost:7080/gahuza/bbc_gahuza_radio/w172x7rkcj6v0vz",
-        "@type": "WebPage",
-        "name": "Amakuru ya Gahuzamiryango - Amakuru ya Gahuzamiryango - Gahuza",
-      },
-      "publisher": {
-        "@type": "NewsMediaOrganization",
-        "logo": {
-          "@type": "ImageObject",
-          "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png",
-          "width": 1024,
-        },
-        "name": "BBC News Gahuza",
-        "publishingPrinciples": "https://www.bbc.com/gahuza/institutional-49283343",
-      },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png",
-      "url": "http://localhost:7080/gahuza/bbc_gahuza_radio/w172x7rkcj6v0vz",
-    },
-  ],
-}
-`;
-
 exports[`Canonical On Demand Audio Page SEO OG description 1`] = `"Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."`;
-=======
-exports[`Canonical On Demand Audio Page SEO OG description 1`] = `"Amakuru yo hirya no hino yibanda cyane cyane ku karere k&#x27;ibiyaga bigari muri Afrika, n&#x27;amakuru mpuzamakungu."`;
->>>>>>> parent of b0d3458a85 (Use for of instead of forEach & update snapshots)
 
 exports[`Canonical On Demand Audio Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/images/ic/400x400/p0gwty85.png"`;
 

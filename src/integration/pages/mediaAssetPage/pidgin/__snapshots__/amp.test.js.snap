@@ -4,7 +4,72 @@ exports[`AMP Media Asset Page A11y I can see the skip to content link 1`] = `"Wa
 
 exports[`AMP Media Asset Page AMP Geo config 1`] = `"{"AmpBind":true,"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"],"gbOrUnknown":["gb","gg","im","je","uk","unknown"]}}"`;
 
+exports[`AMP Media Asset Page Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, Pidgin",
+  "url": "/pidgin",
+}
+`;
+
+exports[`AMP Media Asset Page Footer Anchors should match text and url 2`] = `
+{
+  "text": "Why you fit trust BBC News",
+  "url": "https://www.bbc.com/pidgin/institutional-48528766",
+}
+`;
+
+exports[`AMP Media Asset Page Footer Anchors should match text and url 3`] = `
+{
+  "text": "How dem dey take use am",
+  "url": "https://www.bbc.com/usingthebbc/terms/",
+}
+`;
+
+exports[`AMP Media Asset Page Footer Anchors should match text and url 4`] = `
+{
+  "text": "As e concern BBC",
+  "url": "https://www.bbc.com/aboutthebbc",
+}
+`;
+
+exports[`AMP Media Asset Page Footer Anchors should match text and url 5`] = `
+{
+  "text": "Privacy Policy",
+  "url": "https://www.bbc.com/usingthebbc/privacy/",
+}
+`;
+
+exports[`AMP Media Asset Page Footer Anchors should match text and url 6`] = `
+{
+  "text": "Cookies",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`AMP Media Asset Page Footer Anchors should match text and url 7`] = `
+{
+  "text": "Call BBC",
+  "url": "https://www.bbc.co.uk/pidgin/send/u50853577",
+}
+`;
+
+exports[`AMP Media Asset Page Footer Anchors should match text and url 8`] = `
+{
+  "text": "BBC News for oda languages",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`AMP Media Asset Page Footer Anchors should match text and url 9`] = `
+{
+  "text": "De way wey we de take go external link.",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/feeds-and-links",
+}
+`;
+
 exports[`AMP Media Asset Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
+
+exports[`AMP Media Asset Page Footer Paragraphs should match text 1`] = `"© 2025 BBC. De external site no concern BBC. De way wey we de take go external link."`;
 
 exports[`AMP Media Asset Page Header I can see the branding 1`] = `"BBC News, Pidgin"`;
 

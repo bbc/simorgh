@@ -41,7 +41,72 @@ exports[`Canonical Home Page Analytics ATI tracking pixel search params 1`] = `
 ]
 `;
 
+exports[`Canonical Home Page Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, Кыргыз КызMATы",
+  "url": "/kyrgyz",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 2`] = `
+{
+  "text": "Эмнеге BBC News ишенсе болот?",
+  "url": "https://www.bbc.com/kyrgyz/institutional-49677275",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 3`] = `
+{
+  "text": "Колдонуу эрежелери",
+  "url": "https://www.bbc.com/kyrgyz/institutional-38157280",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 4`] = `
+{
+  "text": "Би-Би-Си жөнүндө",
+  "url": "https://www.bbc.com/kyrgyz/institutional-38157281",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 5`] = `
+{
+  "text": "Купуялык",
+  "url": "https://www.bbc.com/kyrgyz/institutional-38157282",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 6`] = `
+{
+  "text": "Cookies",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 7`] = `
+{
+  "text": "Би-Би-Си менен байланышыңыз",
+  "url": "https://www.bbc.co.uk/kyrgyz/send/u50853445",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 8`] = `
+{
+  "text": "Башка тилдерде",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 9`] = `
+{
+  "text": "Башка интернет сайттардын мазмуну боюнча биздин позиция.",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/feeds-and-links",
+}
+`;
+
 exports[`Canonical Home Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/kyrgyz"`;
+
+exports[`Canonical Home Page Footer Paragraphs should match text 1`] = `"© 2025 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
 
 exports[`Canonical Home Page Header I can see the branding 1`] = `"BBC News, Кыргыз КызMATы"`;
 

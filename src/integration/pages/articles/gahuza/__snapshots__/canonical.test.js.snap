@@ -121,6 +121,8 @@ exports[`Canonical Articles Footer Anchors should match text and url 9`] = `
 
 exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/gahuza"`;
 
+exports[`Canonical Articles Footer Paragraphs should match text 1`] = `"© 2025 BBC. BBC ntibazwa ibivuye ku zindi mbuga. Soma ibijanye n'aho duhagaze ku mihora ijana ahandi"`;
+
 exports[`Canonical Articles Header I can see the branding 1`] = `"BBC News, Gahuza"`;
 
 exports[`Canonical Articles Image Caption should match text 1`] = `"Insiguro y'isanamu, Alexei Navalny na Yulia Navalnaya bari i Moscow mu 2013 muri metingi yo kwiyamamaza kw'abakuru b'imijyi"`;
@@ -151,72 +153,7 @@ exports[`Canonical Articles SEO Heading level 1 1`] = `"‘Nziyamamariza kuba pe
 
 exports[`Canonical Articles SEO Lang attribute 1`] = `"rw"`;
 
-<<<<<<< HEAD
-exports[`Canonical Articles SEO Linked data should match text 1`] = `
-{
-  "@context": "http://schema.org",
-  "@graph": [
-    {
-      "@type": "ReportageNewsArticle",
-      "about": [
-        {
-          "@type": "Place",
-          "name": "Uburusiya",
-        },
-        {
-          "@type": "Thing",
-          "name": "Politike",
-          "sameAs": [
-            "http://dbpedia.org/resource/Politics",
-          ],
-        },
-      ],
-      "author": {
-        "@type": "Person",
-        "name": "Katie Razzall",
-      },
-      "dateModified": "2024-10-21T09:23:49.476Z",
-      "datePublished": "2024-10-21T09:23:49.476Z",
-      "description": "Yulia Navalnaya yavuze ibi mu kumurika igitabo umugabo we Alexei Navalny yandikaga ari muri gereza mbere y'uko apfa. ",
-      "headline": "Russia: Yulia Navalnaya yabwiye BBC ko afite intego yo kuziyamamariza kuba Perezida",
-      "image": {
-        "@type": "ImageObject",
-        "height": 576,
-        "url": "https://ichef.bbci.co.uk/news/1024/branded_gahuza/8654/live/6fd0abe0-8f8a-11ef-8e6d-e3e64e16c628.jpg",
-        "width": 1024,
-      },
-      "inLanguage": {
-        "@type": "Language",
-        "alternateName": "rw",
-        "name": "Kinyarwanda",
-      },
-      "mainEntityOfPage": {
-        "@id": "http://localhost:7080/gahuza/articles/c5y51yxeg53o",
-        "@type": "WebPage",
-        "name": "Russia: Yulia Navalnaya yabwiye BBC ko afite intego yo kuziyamamariza kuba Perezida",
-      },
-      "publisher": {
-        "@type": "NewsMediaOrganization",
-        "logo": {
-          "@type": "ImageObject",
-          "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png",
-          "width": 1024,
-        },
-        "name": "BBC News Gahuza",
-        "publishingPrinciples": "https://www.bbc.com/gahuza/institutional-49283343",
-      },
-      "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_gahuza/8654/live/6fd0abe0-8f8a-11ef-8e6d-e3e64e16c628.jpg",
-      "url": "http://localhost:7080/gahuza/articles/c5y51yxeg53o",
-    },
-  ],
-}
-`;
-
 exports[`Canonical Articles SEO OG description 1`] = `"Yulia Navalnaya yavuze ibi mu kumurika igitabo umugabo we Alexei Navalny yandikaga ari muri gereza mbere y'uko apfa. "`;
-=======
-exports[`Canonical Articles SEO OG description 1`] = `"Yulia Navalnaya yavuze ibi mu kumurika igitabo umugabo we Alexei Navalny yandikaga ari muri gereza mbere y&#x27;uko apfa. "`;
->>>>>>> parent of b0d3458a85 (Use for of instead of forEach & update snapshots)
 
 exports[`Canonical Articles SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_gahuza/8654/live/6fd0abe0-8f8a-11ef-8e6d-e3e64e16c628.jpg"`;
 

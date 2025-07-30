@@ -41,7 +41,74 @@ exports[`Canonical Home Page Analytics ATI tracking pixel search params 1`] = `
 ]
 `;
 
+exports[`Canonical Home Page Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, हिंदी",
+  "url": "/hindi",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 2`] = `
+{
+  "text": "आप बीबीसी पर क्यों भरोसा कर सकते हैं",
+  "url": "https://www.bbc.com/hindi/institutional-50223932",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 3`] = `
+{
+  "text": "इस्तेमाल की शर्तें",
+  "url": "https://www.bbc.com/hindi/institutional-37342293",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 4`] = `
+{
+  "text": "बीबीसी के बारे में",
+  "url": "https://www.bbc.com/hindi/institutional-37343168",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 5`] = `
+{
+  "text": "निजता की नीति",
+  "url": "https://www.bbc.com/hindi/institutional-37342614",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 6`] = `
+{
+  "text": "कुकीज़",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 7`] = `
+{
+  "text": "बीबीसी से संपर्क",
+  "url": "https://www.bbc.co.uk/hindi/send/u50853357",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 8`] = `
+{
+  "text": "अन्य भाषाएँ",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 9`] = `
+{
+  "text": "बाहरी साइटों का लिंक देने की हमारी नीति के बारे में पढ़ें.",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+}
+`;
+
 exports[`Canonical Home Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/hindi"`;
+
+exports[`Canonical Home Page Footer Paragraphs should match text 1`] = `"बीबीसी के लिए कलेक्टिव न्यूज़रूम की ओर से प्रकाशित"`;
+
+exports[`Canonical Home Page Footer Paragraphs should match text 2`] = `"© 2025 BBC. बाहरी साइटों की सामग्री के लिए बीबीसी ज़िम्मेदार नहीं है. बाहरी साइटों का लिंक देने की हमारी नीति के बारे में पढ़ें."`;
 
 exports[`Canonical Home Page Header I can see the branding 1`] = `"BBC News, हिंदी"`;
 

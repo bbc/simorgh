@@ -4,7 +4,72 @@ exports[`AMP Photo Gallery Page A11y I can see the skip to content link 1`] = `"
 
 exports[`AMP Photo Gallery Page AMP Geo config 1`] = `"{"AmpBind":true,"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"],"gbOrUnknown":["gb","gg","im","je","uk","unknown"]}}"`;
 
+exports[`AMP Photo Gallery Page Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, ไทย",
+  "url": "/thai",
+}
+`;
+
+exports[`AMP Photo Gallery Page Footer Anchors should match text and url 2`] = `
+{
+  "text": "ทำไมคุณจึงไว้วางใจ บีบีซี ได้",
+  "url": "https://www.bbc.com/thai/institutional-49281839",
+}
+`;
+
+exports[`AMP Photo Gallery Page Footer Anchors should match text and url 3`] = `
+{
+  "text": "เงื่อนไขการใช้งานของ บีบีซี",
+  "url": "https://www.bbc.com/thai/institutional-38403477",
+}
+`;
+
+exports[`AMP Photo Gallery Page Footer Anchors should match text and url 4`] = `
+{
+  "text": "เกี่ยวกับบีบีซี",
+  "url": "https://www.bbc.com/thai/institutional-38403476",
+}
+`;
+
+exports[`AMP Photo Gallery Page Footer Anchors should match text and url 5`] = `
+{
+  "text": "นโยบายความเป็นส่วนตัว",
+  "url": "https://www.bbc.com/thai/institutional-38497681",
+}
+`;
+
+exports[`AMP Photo Gallery Page Footer Anchors should match text and url 6`] = `
+{
+  "text": "คุกกีส์",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`AMP Photo Gallery Page Footer Anchors should match text and url 7`] = `
+{
+  "text": "ติดต่อบีบีซี",
+  "url": "https://www.bbc.co.uk/thai/send/u50853797",
+}
+`;
+
+exports[`AMP Photo Gallery Page Footer Anchors should match text and url 8`] = `
+{
+  "text": "บีบีซีนิวส์ภาษาอื่น ๆ",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`AMP Photo Gallery Page Footer Anchors should match text and url 9`] = `
+{
+  "text": "อ่านเกี่ยวกับแนวทางของเราในการติดต่อกับลิงก์ภายนอก",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+}
+`;
+
 exports[`AMP Photo Gallery Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/thai"`;
+
+exports[`AMP Photo Gallery Page Footer Paragraphs should match text 1`] = `"© 2025 บีบีซี. บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาของเว็บไซต์ภายนอก. นโยบายของเราเรื่องการเชื่อมต่อไปยังลิงก์ภายนอก. อ่านเกี่ยวกับแนวทางของเราในการติดต่อกับลิงก์ภายนอก"`;
 
 exports[`AMP Photo Gallery Page Header I can see the branding 1`] = `"BBC News, ไทย"`;
 

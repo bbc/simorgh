@@ -51,7 +51,72 @@ exports[`Canonical Pashto On Demand TV Page Expired Episode I can see the episod
 
 exports[`Canonical Pashto On Demand TV Page Expired Episode a11y Assistive technology reads the brand and episode title as the headline 1`] = `" د بي بي سي خبرونه , ۸ جون ۲۰۲۱"`;
 
+exports[`Canonical Pashto On Demand TV Page Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, پښتو",
+  "url": "/pashto",
+}
+`;
+
+exports[`Canonical Pashto On Demand TV Page Footer Anchors should match text and url 2`] = `
+{
+  "text": "ولې تاسې پر بي بي سي خبرونو باور کولی شئ",
+  "url": "https://www.bbc.com/pashto/institutional-49283007",
+}
+`;
+
+exports[`Canonical Pashto On Demand TV Page Footer Anchors should match text and url 3`] = `
+{
+  "text": "د کارولو شرايط",
+  "url": "https://www.bbc.com/pashto/institutional-37620701",
+}
+`;
+
+exports[`Canonical Pashto On Demand TV Page Footer Anchors should match text and url 4`] = `
+{
+  "text": "د بي بي سي‌ په اړه",
+  "url": "https://www.bbc.com/pashto/institutional-37622761",
+}
+`;
+
+exports[`Canonical Pashto On Demand TV Page Footer Anchors should match text and url 5`] = `
+{
+  "text": "د محرميت تگلاره",
+  "url": "https://www.bbc.com/pashto/institutional-37622762",
+}
+`;
+
+exports[`Canonical Pashto On Demand TV Page Footer Anchors should match text and url 6`] = `
+{
+  "text": "Cookies",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical Pashto On Demand TV Page Footer Anchors should match text and url 7`] = `
+{
+  "text": "زموږ سره اړیکي",
+  "url": "https://www.bbc.co.uk/pashto/send/u50853533",
+}
+`;
+
+exports[`Canonical Pashto On Demand TV Page Footer Anchors should match text and url 8`] = `
+{
+  "text": "نورې ژبې",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`Canonical Pashto On Demand TV Page Footer Anchors should match text and url 9`] = `
+{
+  "text": "د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره.",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+}
+`;
+
 exports[`Canonical Pashto On Demand TV Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pashto"`;
+
+exports[`Canonical Pashto On Demand TV Page Footer Paragraphs should match text 1`] = `"© 2025 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
 
 exports[`Canonical Pashto On Demand TV Page Header I can see the branding 1`] = `"BBC News, پښتو"`;
 

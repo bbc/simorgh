@@ -53,7 +53,72 @@ exports[`Canonical Photo Gallery Page Analytics ATI tracking pixel search params
 ]
 `;
 
+exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, ไทย",
+  "url": "/thai",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 2`] = `
+{
+  "text": "ทำไมคุณจึงไว้วางใจ บีบีซี ได้",
+  "url": "https://www.bbc.com/thai/institutional-49281839",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 3`] = `
+{
+  "text": "เงื่อนไขการใช้งานของ บีบีซี",
+  "url": "https://www.bbc.com/thai/institutional-38403477",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 4`] = `
+{
+  "text": "เกี่ยวกับบีบีซี",
+  "url": "https://www.bbc.com/thai/institutional-38403476",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 5`] = `
+{
+  "text": "นโยบายความเป็นส่วนตัว",
+  "url": "https://www.bbc.com/thai/institutional-38497681",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 6`] = `
+{
+  "text": "คุกกีส์",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 7`] = `
+{
+  "text": "ติดต่อบีบีซี",
+  "url": "https://www.bbc.co.uk/thai/send/u50853797",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 8`] = `
+{
+  "text": "บีบีซีนิวส์ภาษาอื่น ๆ",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 9`] = `
+{
+  "text": "อ่านเกี่ยวกับแนวทางของเราในการติดต่อกับลิงก์ภายนอก",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+}
+`;
+
 exports[`Canonical Photo Gallery Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/thai"`;
+
+exports[`Canonical Photo Gallery Page Footer Paragraphs should match text 1`] = `"© 2025 บีบีซี. บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาของเว็บไซต์ภายนอก. นโยบายของเราเรื่องการเชื่อมต่อไปยังลิงก์ภายนอก. อ่านเกี่ยวกับแนวทางของเราในการติดต่อกับลิงก์ภายนอก"`;
 
 exports[`Canonical Photo Gallery Page Header I can see the branding 1`] = `"BBC News, ไทย"`;
 

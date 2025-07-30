@@ -53,7 +53,72 @@ exports[`Canonical On Demand Audio Page Expired Episode I can see the hero image
 
 exports[`Canonical On Demand Audio Page Expired Episode a11y Assistive technology reads the brand and episode title as the headline 1`] = `"Dunia Pagi Ini, Dunia Pagi Ini"`;
 
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, Indonesia",
+  "url": "/indonesia",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 2`] = `
+{
+  "text": "Alasan Anda dapat mempercayai BBC News",
+  "url": "https://www.bbc.com/indonesia/institutional-49283175",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 3`] = `
+{
+  "text": "Peraturan Penggunaan",
+  "url": "https://www.bbc.com/indonesia/institutional-37818421",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 4`] = `
+{
+  "text": "Mengenai BBC",
+  "url": "https://www.bbc.com/indonesia/institutional-37818424",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 5`] = `
+{
+  "text": "Kebijakan tentang Privasi",
+  "url": "https://www.bbc.com/indonesia/institutional-37818425",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 6`] = `
+{
+  "text": "Cookies",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 7`] = `
+{
+  "text": "Hubungi BBC",
+  "url": "https://www.bbc.co.uk/indonesia/send/u50853401",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 8`] = `
+{
+  "text": "BC News dalam bahasa-bahasa lain",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 9`] = `
+{
+  "text": "Baca tentang peraturan baru terkait link eksternal.",
+  "url": "https://www.bbc.com/indonesia/institutional/2011/02/000001_links",
+}
+`;
+
 exports[`Canonical On Demand Audio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/indonesia"`;
+
+exports[`Canonical On Demand Audio Page Footer Paragraphs should match text 1`] = `"© 2025 BBC. BBC tidak bertanggung jawab atas konten dari situs eksternal. Baca tentang peraturan baru terkait link eksternal."`;
 
 exports[`Canonical On Demand Audio Page Header I can see the branding 1`] = `"BBC News, Indonesia"`;
 
