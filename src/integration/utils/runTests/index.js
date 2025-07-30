@@ -60,7 +60,6 @@ const runExpressTests = () =>
       filesToTest,
       '--runInBand',
       '--colors',
-      '--verbose',
       '--detectOpenHandles',
       '--forceExit',
       ...getJestArgs(),
@@ -75,7 +74,6 @@ const runNextJSTests = () =>
     'yarn',
     [
       'test:integration',
-      '--verbose',
       '--detectOpenHandles',
       '--forceExit',
       ...getJestArgs(),
