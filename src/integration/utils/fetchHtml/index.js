@@ -1,7 +1,6 @@
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable import/no-import-module-exports */
 /* eslint-disable no-console */
-
 const { Window } = require('happy-dom');
 const retry = require('retry');
 const dns = require('node:dns');
@@ -9,7 +8,7 @@ const dns = require('node:dns');
 // https://github.com/node-fetch/node-fetch/issues/1624#issuecomment-1407717012
 dns.setDefaultResultOrder('ipv4first');
 
-const faultTolerantDomFetch = ({ url, headers }) =>
+const faultTolerantFetch = ({ url, headers }) =>
   new Promise((resolve, reject) => {
     const oneSecond = 1000;
     const operation = retry.operation({
@@ -22,7 +21,7 @@ const faultTolerantDomFetch = ({ url, headers }) =>
     operation.attempt(async currentAttempt => {
       if (currentAttempt > 1) {
         console.warn(
-          `Error getting DOM from ${url}`,
+          `Error getting HTML from ${url}`,
           `Retry attempts: ${currentAttempt - 1}`,
         );
       }
@@ -49,14 +48,6 @@ const faultTolerantDomFetch = ({ url, headers }) =>
           'text/html',
         );
 
-        // const footers = document.querySelectorAll('footer a');
-
-        // // console.log({ forEach: footers.forEach });
-
-        // for (const footer of footers) {
-        //   console.log(footer);
-        // }
-
         resolve({ window, document });
       } catch (error) {
         const isSocketHangUpError = error
@@ -74,4 +65,4 @@ const faultTolerantDomFetch = ({ url, headers }) =>
     });
   });
 
-module.exports = faultTolerantDomFetch;
+module.exports = faultTolerantFetch;
