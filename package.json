@@ -155,6 +155,7 @@
     "@esbuild/linux-x64": "0.25.5",
     "@esbuild/win32-arm64": "0.25.5",
     "@esbuild/win32-x64": "0.25.5",
+    "@happy-dom/jest-environment": "18.0.1",
     "@jest/environment": "30.0.5",
     "@loadable/babel-plugin": "5.16.1",
     "@loadable/webpack-plugin": "5.15.2",
