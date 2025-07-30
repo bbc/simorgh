@@ -23,69 +23,6 @@ import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import LiveLabel from '../../LiveLabel';
 import styles from './index.styles';
 
-const StyledLink = styled(Link)`
-  ${({ script }) => script && getPica(script)}
-  ${({ service }) => service && getSerifBold(service)}
-  width: 100%;
-  text-decoration: none;
-
-  overflow-x: hidden;
-  overflow-y: hidden;
-
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-  }
-
-  color: ${({ theme }) =>
-    theme.isDarkUi ? theme.palette.GREY_10 : theme.palette.GREY_8};
-  &:visited {
-    color: ${props => props.theme.palette.GREY_6};
-  }
-`;
-
-const PromoBox = styled.div`
-  position: relative;
-  display: block;
-  margin-bottom: 0;
-  background-color: ${({ theme }) =>
-    theme.isDarkUi ? theme.palette.GREY_3 : theme.palette.WHITE};
-  padding: ${GEL_SPACING};
-  height: auto;
-
-  @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}) {
-    width: 14.8125rem;
-  }
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    width: 11.125rem;
-  }
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    width: 12.6875rem;
-  }
-
-  @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}) {
-    width: 11.5rem;
-  }
-  @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
-    width: 17rem;
-  }
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    width: 15.5rem;
-  }
-`;
-
-const OperaPromoBox = styled.div`
-  position: relative;
-  background-color: ${({ theme }) =>
-    theme.isDarkUi ? theme.palette.GREY_3 : theme.palette.WHITE};
-  padding: ${GEL_SPACING_DBL};
-  margin-bottom: ${GEL_SPACING_DBL};
-  width: calc(100% - ${GEL_SPACING});
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    width: calc(100% - ${GEL_SPACING_DBL});
-  }
-`;
-
 interface PromoProps {
   block: TopStoryItem;
   eventTrackingData: EventTrackingMetadata;
