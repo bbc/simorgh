@@ -8,27 +8,24 @@ import { GridItemMediumNoMargin } from '#components/Grid';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import idSanitiser from '#lib/utilities/idSanitiser';
-import { TopStoriesOnwardJourney } from '#app/models/types/onwardJourney';
+import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
+import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import PromoList from './PromoList';
 import styles from './index.styles';
 
 interface TopBarOJsProps {
-  blocks: TopStoriesOnwardJourney[];
+  blocks: TopStoryItem[];
   id?: string;
+  eventTrackingData?: EventTrackingMetadata;
 }
 
 const TopBarOJs = ({
   blocks,
   id = 'top-bar-onward-journeys',
+  eventTrackingData,
 }: TopBarOJsProps) => {
   const { translations } = use(ServiceContext);
-
-  const eventTrackingData = {
-    componentName: 'top-bar-oj',
-    sendOptimizelyEvents: true,
-    viewThreshold: 0,
-  };
 
   const viewTracker = useViewTracker(eventTrackingData);
   const clickTracker = useClickTrackerHandler(eventTrackingData);
