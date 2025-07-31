@@ -8,13 +8,7 @@ import { MetadataFormats, MetadataTaggings, MetadataTopics } from './metadata';
 
 export type OptimoBlock = {
   type: string;
-  model: {
-    blocks?: {
-      model?: {
-        text?: string;
-      };
-    }[];
-  };
+  model: object;
   id?: string;
   position?: number[];
   blockGroupType?: string;
