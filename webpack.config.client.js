@@ -12,6 +12,7 @@ const LoadablePlugin = require('@loadable/webpack-plugin');
 const webpack = require('webpack');
 const dotenv = require('dotenv');
 const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { getClientEnvVars } = require('./src/clientEnvVars');
 
 const FRAMEWORK_BUNDLES = ['react', 'react-dom'];
@@ -97,7 +98,7 @@ module.exports = ({
         {
           test: /\.module\.scss$/,
           use: [
-            'style-loader',
+            IS_PROD ? MiniCssExtractPlugin.loader : 'style-loader',
             {
               loader: 'css-loader',
               options: {
@@ -112,7 +113,7 @@ module.exports = ({
         },
         {
           test: /(?<!\.module)\.scss$/,
-          use: ['style-loader', 'css-loader', 'sass-loader'],
+          use: [IS_PROD ? MiniCssExtractPlugin.loader : 'style-loader', 'css-loader', 'sass-loader'],
         },
       ],
     },
