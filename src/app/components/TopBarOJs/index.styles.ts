@@ -1,7 +1,7 @@
 import { css, Theme } from '@emotion/react';
 
 export default {
-  promoContainer: ({ palette, spacings }: Theme) =>
+  promoContainer: ({ palette, mq, spacings }: Theme) =>
     css({
       background: palette.GREY_2,
       padding: `${spacings.FULL}rem`,
@@ -10,6 +10,9 @@ export default {
       '-ms-overflow-style': 'none',
       scrollbarWidth: 'none',
       '&::-webkit-scrollbar': {
+        display: 'none',
+      },
+      [mq.GROUP_4_MIN_WIDTH]: {
         display: 'none',
       },
     }),
@@ -45,12 +48,8 @@ export default {
       [mq.GROUP_3_MIN_WIDTH]: {
         margin: '0 -0.8rem',
       },
-      // TO-FIX: this is causing the title to not be visible at all
-      //   [mq.GROUP_3_MAX_WIDTH]: {
-      //     display: 'none',
-      //   },
       [mq.GROUP_4_MIN_WIDTH]: {
-        marginInlineStart: 0,
+        display: 'none',
       },
     }),
 };
