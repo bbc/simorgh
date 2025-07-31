@@ -55,14 +55,12 @@ const TopBarOJs = ({
         {title}
       </div>
       <div css={styles.promoContainer}>
-        <GridItemMediumNoMargin>
-          <PromoList
-            blocks={blocks}
-            viewTracker={viewTracker}
-            clickTracker={clickTracker}
-            a11yAttributes={a11yAttributes}
-          />
-        </GridItemMediumNoMargin>
+        <PromoList
+          blocks={blocks}
+          viewTracker={viewTracker}
+          clickTracker={clickTracker}
+          a11yAttributes={a11yAttributes}
+        />
       </div>
     </>
   );
