@@ -15,7 +15,7 @@ import PortraitVideoNoJs from './PortraitVideoNoJs';
 
 const PortraitVideoCarousel = ({
   title,
-  items,
+  blocks,
   groupTrackingId,
 }: PortraitVideoCarouselProps) => {
   const scrollRef = useRef<HTMLUListElement>(null);
@@ -30,7 +30,7 @@ const PortraitVideoCarousel = ({
   if (isLite) return null;
 
   const handlePromoClick = (index: number) => {
-    if (items[index]?.video) {
+    if (blocks[index]?.video) {
       setSelectedVideoIndex(index);
       setIsModalOpen(true);
     }
@@ -70,14 +70,14 @@ const PortraitVideoCarousel = ({
             tabIndex={-1}
             role="list"
           >
-            {items.map((item, index) => (
+            {blocks.map((item, index) => (
               <PortraitVideoPromo
                 {...item}
                 key={item.id}
                 onClick={() => handlePromoClick(index)}
                 itemPosition={index}
                 groupTracker={{
-                  itemCount: items.length,
+                  itemCount: blocks.length,
                   resourceId: groupTrackingId,
                 }}
               />
@@ -88,16 +88,29 @@ const PortraitVideoCarousel = ({
           selectedVideoIndex !== null &&
           createPortal(
             <PortraitVideoModal
-              items={items.map(item => ({
-                id: item.video?.id || '',
-                title: item.headlines?.promoHeadline || '',
-                versionId: item.video?.version?.id || '',
-                duration: item.video?.version?.duration || 'PT0M0S',
-                kind: item.video?.version?.kind || 'programme',
-                territories: item.video?.version?.territories || [],
-                guidance: item.video?.version?.guidance || null,
-                isEmbeddingAllowed: item.video?.isEmbeddingAllowed ?? true,
-                images: item.images || [],
+              blocks={blocks.map(item => ({
+                type: 'portraitClipMedia',
+                model: {
+                  type: 'video',
+                  images:
+                    item.images?.map(({ urlTemplate, url }) => ({
+                      source: url,
+                      urlTemplate,
+                    })) ?? [],
+                  video: {
+                    id: item.video?.id || '',
+                    title: item.headlines?.promoHeadline || '',
+                    holdingImageURL: item.images?.[0]?.url ?? '',
+                    version: {
+                      id: item.video?.version?.id || '',
+                      duration: item.video?.version?.duration || 'PT0M0S',
+                      kind: item.video?.version?.kind || 'programme',
+                      territories: item.video?.version?.territories || [],
+                      guidance: item.video?.version?.guidance ?? null,
+                    },
+                    isEmbeddingAllowed: item.video?.isEmbeddingAllowed ?? true,
+                  },
+                },
               }))}
               selectedVideoIndex={selectedVideoIndex}
               onClose={handleCloseModal}

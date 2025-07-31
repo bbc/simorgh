@@ -51,7 +51,7 @@ export interface PortraitVideoCarouselNavigationProps {
 export interface PortraitVideoCarouselProps {
   title: string;
   groupTrackingId?: string;
-  items: PortraitVideoPromoProps[];
+  blocks: PortraitVideoPromoProps[];
 }
 
 export type ScrollDirection = 'left' | 'right' | 'up' | 'down';
