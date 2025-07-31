@@ -15717,7 +15717,7 @@ __metadata:
     ts-jest: "npm:29.4.0"
     ts-loader: "npm:9.5.2"
     typescript: "npm:5.8.3"
-    undici: "npm:7.12.0"
+    undici: "npm:7.13.0"
     url-parse: "npm:1.5.10"
     wait-on: "npm:8.0.4"
     webpack: "npm:5.101.0"
@@ -17107,10 +17107,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici@npm:7.12.0":
-  version: 7.12.0
-  resolution: "undici@npm:7.12.0"
-  checksum: 10/f33746d2a40e26553039ab22cd6fecd4fb1f0c39b0a98caee731e307d1e7c26a53c57437ca4e4863f892f6a5dd5c048f6e5c952891c444e6b8153f5739c1795e
+"undici@npm:7.13.0":
+  version: 7.13.0
+  resolution: "undici@npm:7.13.0"
+  checksum: 10/a51ba5c95046159e7def34d67a48605ff913e357e2aab6d51f2201f8ed09f9237f90d5bbe1beb6b3cc890940b500dc0c208527cf597de27d4a964a8c5f721f65
   languageName: node
   linkType: hard
 
