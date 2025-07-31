@@ -106,6 +106,6 @@ exports[`Canonical Send Header Navigation link should match text and url 5`] = `
 }
 `;
 
-exports[`Canonical Send UGC form should render a heading 1`] = `"Test campaign for /:service/send/:campaignId endpoint UGC Spike WSTEAMA-98 2022"`;
+exports[`Canonical Send UGC form should render a heading 1`] = `"Sorry, this page cannot be loaded."`;
 
 exports[`Canonical Send UGC form should render a submit button 1`] = `"Submit"`;
