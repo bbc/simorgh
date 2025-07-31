@@ -112,7 +112,154 @@ exports[`Canonical Home Page Footer Paragraphs should match text 2`] = `"© 2025
 
 exports[`Canonical Home Page Header I can see the branding 1`] = `"BBC News, हिंदी"`;
 
+exports[`Canonical Home Page Header Navigation link should match text and url 1`] = `
+{
+  "text": "मौजूदा पन्ना, होम पेज",
+  "url": "/hindi",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 2`] = `
+{
+  "text": "भारत",
+  "url": "/hindi/topics/ckdxnkz7607t",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 3`] = `
+{
+  "text": "विदेश",
+  "url": "/hindi/topics/c9wpm0en87xt",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 4`] = `
+{
+  "text": "हेल्थ",
+  "url": "/hindi/topics/cr50ykdx5wqt",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 5`] = `
+{
+  "text": "मनोरंजन",
+  "url": "/hindi/topics/c06gq3n0pp7t",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 6`] = `
+{
+  "text": "फ़ाइनेंस",
+  "url": "/hindi/topics/c5qvpx5dq4qt",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 7`] = `
+{
+  "text": "खेल",
+  "url": "/hindi/topics/cwr9j8g1kj9t",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 8`] = `
+{
+  "text": "विज्ञान-टेक्नॉलॉजी",
+  "url": "/hindi/topics/c2lej0594knt",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 9`] = `
+{
+  "text": "सोशल",
+  "url": "/hindi/topics/c2e4q0z9qznt",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 10`] = `
+{
+  "text": "वीडियो",
+  "url": "/hindi/topics/cw9kv0kpxydt",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 11`] = `
+{
+  "text": "पॉडकास्ट",
+  "url": "/hindi/topics/cv22x3pmrvmt",
+}
+`;
+
 exports[`Canonical Home Page Main heading should match text 1`] = `"BBC News, हिंदी - होम पेज"`;
+
+exports[`Canonical Home Page Most Read has item with rank 1`] = `
+{
+  "text": "पाकिस्तान भारत के मिसाइल हमलों को क्यों नहीं रोक पाया?",
+  "url": "https://www.bbc.com/hindi/articles/cx2jgwp0je1o",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 2`] = `
+{
+  "text": "लाहौर का एयर डिफ़ेंस सिस्टम तबाह करने का भारत का दावा, पाकिस्तान ने 25 भारतीय ड्रोन गिराने का दावा किया",
+  "url": "https://www.bbc.com/hindi/articles/c365nejek65o",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 3`] = `
+{
+  "text": "भारत-पाकिस्तान के बीच बढ़े तनाव की दुनिया भर में चर्चा, क्या कह रहा है अंतरराष्ट्रीय मीडिया?",
+  "url": "https://www.bbc.com/hindi/articles/cz703jn7y2wo",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 4`] = `
+{
+  "text": "चीन क्यों नहीं चाहेगा कि भारत और पाकिस्तान के बीच युद्ध हो?",
+  "url": "https://www.bbc.com/hindi/articles/cddedl5vdq4o",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 5`] = `
+{
+  "text": "भारत का हवाई हमला: अमेरिका, इसराइल,  चीन, रूस और तुर्की  क्या बोले?",
+  "url": "https://www.bbc.com/hindi/articles/c3r8rzpz881o",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 6`] = `
+{
+  "text": "भारत ने बहावलपुर को निशाना क्यों बनाया?",
+  "url": "https://www.bbc.com/hindi/articles/cgjljw6xq4jo",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 7`] = `
+{
+  "text": "कौन है द रेज़िस्टेंस फ़्रंट ग्रुप जिसका नाम पहलगाम हमले में आ रहा है?",
+  "url": "https://www.bbc.com/hindi/articles/c5yq871757po",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 8`] = `
+{
+  "text": "पाकिस्तान क्या भारतीय हवाई हमले का जवाब देगा? चार बड़े सवाल",
+  "url": "https://www.bbc.com/hindi/articles/cly2ypjrkp2o",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 9`] = `
+{
+  "text": "भारत का मिसाइल और एयर डिफ़ेंस सिस्टम पाकिस्तान की तुलना में कैसा है?",
+  "url": "https://www.bbc.com/hindi/articles/c9343dq12z4o",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 10`] = `
+{
+  "text": "भारत के 'ऑपरेशन सिंदूर' पर मीडिया को जानकारी देने वाली दो महिला अधिकारी कौन हैं?",
+  "url": "https://www.bbc.com/hindi/articles/c77n7zz1zg2o",
+}
+`;
 
 exports[`Canonical Home Page Page content First item in the first curation is the correct headline 1`] = `"कौन है द रेज़िस्टेंस फ़्रंट ग्रुप जिसका नाम पहलगाम हमले में आ रहा है?"`;
 

@@ -116,6 +116,97 @@ exports[`Canonical Articles Footer Paragraphs should match text 1`] = `"© 2025 
 
 exports[`Canonical Articles Header I can see the branding 1`] = `"BBC News, فارسی"`;
 
+exports[`Canonical Articles Header Navigation link should match text and url 1`] = `
+{
+  "text": "صفحه اول",
+  "url": "/persian",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 2`] = `
+{
+  "text": "جنگ اسرائیل-ایران",
+  "url": "/persian/topics/cwy6874zgpqt",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 3`] = `
+{
+  "text": "پخش زنده",
+  "url": "/persian/media-49522521",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 4`] = `
+{
+  "text": "ویدیو",
+  "url": "/persian/topics/c6z7mnr559gt",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 5`] = `
+{
+  "text": "تلویزیون",
+  "url": "/persian/topics/cw9qgeqd1zqt",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 6`] = `
+{
+  "text": "ايران",
+  "url": "/persian/topics/ckdxnwvwwjnt",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 7`] = `
+{
+  "text": "افغانستان",
+  "url": "/persian/afghanistan",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 8`] = `
+{
+  "text": "جهان",
+  "url": "/persian/topics/c1d8ye58xl8t",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 9`] = `
+{
+  "text": "هنر",
+  "url": "/persian/topics/c9wpm0epm45t",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 10`] = `
+{
+  "text": "ورزش",
+  "url": "/persian/topics/cnq6879k7yjt",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 11`] = `
+{
+  "text": "اقتصاد",
+  "url": "/persian/topics/cl8l9mvlllqt",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 12`] = `
+{
+  "text": "دانش",
+  "url": "/persian/topics/ckdxnwr4r1yt",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 13`] = `
+{
+  "text": "فراتر از خبر",
+  "url": "/persian/topics/cxr3ex12k6et",
+}
+`;
+
 exports[`Canonical Articles Image Caption should match text 1`] = `"توضیح تصویر، نوشیدنی‌ها داغ در بسته‌های سربسته توزیع می‌شوند "`;
 
 exports[`Canonical Articles Image Copyright Non BBC should match snapshot 1`] = `
@@ -141,6 +232,76 @@ exports[`Canonical Articles Image should match snapshot 1`] = `
 `;
 
 exports[`Canonical Articles Main heading should match text 1`] = `"پهپادی که برایتان قهوه می‌آورد"`;
+
+exports[`Canonical Articles Most Read has item with rank 1`] = `
+{
+  "text": "ایران در آستانه بحران بنزین؛ تابستانی دشوار برای دولت رئیسی در پیش است",
+  "url": "https://www.bbc.com/persian/articles/c4n9j7rx27lo",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 2`] = `
+{
+  "text": "پرونده حمید نوری؛ وکلای مدافع: نوری فریب خورد",
+  "url": "https://www.bbc.com/persian/articles/cm58lxneyrvo",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 3`] = `
+{
+  "text": "اما رادوکانو: گاهی آرزو می‌کنم که ای کاش قهرمان اوپن آمریکا نمی‌شدم",
+  "url": "https://www.bbc.com/persian/articles/cx7e0eexdeeo",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 4`] = `
+{
+  "text": "ملی‌پوش سابق هلند برای چاقو زدن به فامیلش به ۱۸ ماه حبس محکوم شد",
+  "url": "https://www.bbc.com/persian/articles/cqe0045zrpdo",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 5`] = `
+{
+  "text": "وزیر خارجه آمریکا در پکن؛ شی: پیشرفت‌هایی در روابط حاصل شده است، بلینکن: رقابت نباید بدل به دشمنی شود",
+  "url": "https://www.bbc.com/persian/articles/cjmyylvr1nvo",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 6`] = `
+{
+  "text": "سگم سرطان پستان مرا تشخیص داد",
+  "url": "https://www.bbc.com/persian/articles/cyxgqq1796qo",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 7`] = `
+{
+  "text": "لوح ۲۸۰۰ ساله از ایتالیا به عراق بازگردانده شد",
+  "url": "https://www.bbc.com/persian/articles/cydg800g89yo",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 8`] = `
+{
+  "text": "نمایندگان کشورها و نهادها در اجلاس سازمان ملل خواستار پایان یافتن سیاست‌های تبعیض‌آمیز طالبان علیه زنان شدند",
+  "url": "https://www.bbc.com/persian/articles/cgr664ezld5o",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 9`] = `
+{
+  "text": "چرا موبایل داغ می‌کند و چطور آن را خنک نگه داریم؟",
+  "url": "https://www.bbc.com/persian/articles/c9wj7ejl17po",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 10`] = `
+{
+  "text": "هشتگ «داستان_ما_یکیست» در چهلمین سالگرد اعدام ۱۰ زن بهائی در شیراز",
+  "url": "https://www.bbc.com/persian/articles/c6plvgyz614o",
+}
+`;
 
 exports[`Canonical Articles Paragraph should match paragraph text 1`] = `"شاید خیلی طول نکشد که زمانی برسد که وقتی خسته هستید و مثلا هوس فنجان قهوه‌ای را کردید، پهپادی را ببینید که با قهوه سراغتان می‌آید."`;
 

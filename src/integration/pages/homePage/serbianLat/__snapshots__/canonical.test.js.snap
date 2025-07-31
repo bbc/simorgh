@@ -110,7 +110,126 @@ exports[`Canonical Home Page Footer Paragraphs should match text 1`] = `"© 2025
 
 exports[`Canonical Home Page Header I can see the branding 1`] = `"BBC News, na srpskom"`;
 
+exports[`Canonical Home Page Header Navigation link should match text and url 1`] = `
+{
+  "text": "Otvorena stranica, Početna strana",
+  "url": "/serbian/lat",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 2`] = `
+{
+  "text": "Studentske blokade",
+  "url": "/serbian/topics/cly9dd4w09wt/lat",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 3`] = `
+{
+  "text": "Srbija",
+  "url": "/serbian/topics/cr50vdy9q6wt/lat",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 4`] = `
+{
+  "text": "Balkan",
+  "url": "/serbian/topics/c06g87137jgt/lat",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 5`] = `
+{
+  "text": "Svet",
+  "url": "/serbian/topics/c2lej05e1eqt/lat",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 6`] = `
+{
+  "text": "Video",
+  "url": "/serbian/topics/c44vyp5g049t/lat",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 7`] = `
+{
+  "text": "Najpopularnije",
+  "url": "/serbian/lat/popular/read",
+}
+`;
+
 exports[`Canonical Home Page Main heading should match text 1`] = `"BBC News, na srpskom - Glavna stranica"`;
+
+exports[`Canonical Home Page Most Read has item with rank 1`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 26",
+  "url": "/serbian/lat/media-23169623",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 2`] = `
+{
+  "text": "test, please ignore",
+  "url": "/serbian/lat/23200492",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 3`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 6",
+  "url": "/serbian/lat/media-23169493",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 4`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 29",
+  "url": "/serbian/lat/media-23169626",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 5`] = `
+{
+  "text": "Otvorene ZOI 2014",
+  "url": "/serbian/lat/23181035",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 6`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 27",
+  "url": "/serbian/lat/media-23169624",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 7`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 8",
+  "url": "/serbian/lat/media-23169495",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 8`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 7",
+  "url": "/serbian/lat/media-23169494",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 9`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 11",
+  "url": "/serbian/lat/media-23169608",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 10`] = `
+{
+  "text": "Beba panda odmara nakon prvog javnog nastupa",
+  "url": "/serbian/lat/23180965",
+}
+`;
 
 exports[`Canonical Home Page Page content First item in the first curation is the correct headline 1`] = `"Međunarodni dan menopauze: Promena kroz koju prolazi svaka žena overtyped2"`;
 

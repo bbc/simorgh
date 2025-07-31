@@ -122,6 +122,76 @@ exports[`Canonical On Demand Audio Page Footer Paragraphs should match text 1`] 
 
 exports[`Canonical On Demand Audio Page Header I can see the branding 1`] = `"BBC News, پښتو"`;
 
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 1`] = `
+{
+  "text": "کور پاڼه",
+  "url": "/pashto",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 2`] = `
+{
+  "text": "افغانستان",
+  "url": "/pashto/topics/cr50y57xj52t",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 3`] = `
+{
+  "text": "پښتونخوا",
+  "url": "/pashto/topics/cz74k7wy49jt",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 4`] = `
+{
+  "text": "نړۍ",
+  "url": "/pashto/topics/cxe2wdp2dv3t",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 5`] = `
+{
+  "text": "ښځې",
+  "url": "/pashto/topics/cr50y5rq23gt",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 6`] = `
+{
+  "text": "لوبې",
+  "url": "/pashto/topics/cr50y59q860t",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 7`] = `
+{
+  "text": "اقتصاد او سوداګري",
+  "url": "/pashto/topics/cy087kqvl1yt",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 8`] = `
+{
+  "text": "ساینس او ټکنالوژي",
+  "url": "/pashto/topics/ckgrvled11kt",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 9`] = `
+{
+  "text": "هنر او ادب",
+  "url": "/pashto/topics/c8xqkd91knnt",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 10`] = `
+{
+  "text": "راډیویي خپرونې",
+  "url": "/pashto/topics/c9xz1ekw79nt",
+}
+`;
+
 exports[`Canonical On Demand Audio Page I can see the brand title 1`] = `"وروستي خبرونه"`;
 
 exports[`Canonical On Demand Audio Page I can see the episode summary 1`] = `"د نړۍ وروستي خبرونه"`;

@@ -129,6 +129,83 @@ exports[`Canonical Story Page Footer Paragraphs should match text 1`] = `"© 202
 
 exports[`Canonical Story Page Header I can see the branding 1`] = `"BBC News, Mundo"`;
 
+exports[`Canonical Story Page Header Navigation link should match text and url 1`] = `
+{
+  "text": "Noticias",
+  "url": "/mundo",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 2`] = `
+{
+  "text": "América Latina",
+  "url": "/mundo/topics/c7zp57yyz25t",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 3`] = `
+{
+  "text": "Internacional",
+  "url": "/mundo/topics/c2lej05epw5t",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 4`] = `
+{
+  "text": "EE.UU.",
+  "url": "/mundo/topics/cdr5613yzwqt",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 5`] = `
+{
+  "text": "Economía",
+  "url": "/mundo/topics/c06gq9v4xp3t",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 6`] = `
+{
+  "text": "Ciencia",
+  "url": "/mundo/topics/ckdxnw959n7t",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 7`] = `
+{
+  "text": "Salud",
+  "url": "/mundo/topics/cpzd498zkxgt",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 8`] = `
+{
+  "text": "Cultura",
+  "url": "/mundo/topics/c2dwq9zyv4yt",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 9`] = `
+{
+  "text": "Tecnología",
+  "url": "/mundo/topics/cyx5krnw38vt",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 10`] = `
+{
+  "text": "Hay Festival",
+  "url": "/mundo/topics/cr50y7p7qyqt",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 11`] = `
+{
+  "text": "Centroamérica cuenta",
+  "url": "/mundo/topics/c404v5z1k8wt",
+}
+`;
+
 exports[`Canonical Story Page Image Caption should match text 1`] = `"Pie de foto, Llegó el día de la salida de Reino Unido de la UE."`;
 
 exports[`Canonical Story Page Image should match snapshot 1`] = `
@@ -148,6 +225,76 @@ exports[`Canonical Story Page Image should match snapshot 1`] = `
 exports[`Canonical Story Page Lead image I can see an image with a caption 1`] = `"Pie de foto, Llegó el día de la salida de Reino Unido de la UE."`;
 
 exports[`Canonical Story Page Main heading should match text 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea"`;
+
+exports[`Canonical Story Page Most Read has item with rank 1`] = `
+{
+  "text": "3 posibles escenarios en Venezuela tras el triunfo de Maduro rechazado por la oposición",
+  "url": "https://www.bbc.com/mundo/articles/c3gekqplyn4o",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 2`] = `
+{
+  "text": "El Consejo Nacional Electoral anuncia el triunfo de Nicolás Maduro en las elecciones presidenciales de Venezuela y la oposición rechaza los resultados",
+  "url": "https://www.bbc.com/mundo/articles/cn38n9knl3no",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 3`] = `
+{
+  "text": ""Difíciles de creer": los cuestionamientos internacionales a los resultados que dieron ganador a Maduro en Venezuela",
+  "url": "https://www.bbc.com/mundo/articles/cz47dxzyzd1o",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 4`] = `
+{
+  "text": "Cómo funciona el proceso electoral en Venezuela y por qué han puesto en duda el resultado de los comicios",
+  "url": "https://www.bbc.com/mundo/articles/c2x0vlnzm17o",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 5`] = `
+{
+  "text": ""Hay un nuevo presidente electo y es Edmundo González": la oposición de Venezuela rechaza la victoria de Maduro anunciada por el CNE",
+  "url": "https://www.bbc.com/mundo/articles/cv2gwyg11z1o",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 6`] = `
+{
+  "text": "La elaborada operación encubierta con la que engañaron al capo de las drogas "El Mayo" Zambada para llevarlo a EE.UU.",
+  "url": "https://www.bbc.com/mundo/articles/c4ngy135jw5o",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 7`] = `
+{
+  "text": "¿Es la comida fermentada buena para la salud de tus intestinos? Y otras 8 preguntas sobre estos alimentos",
+  "url": "https://www.bbc.com/mundo/articles/c3g0r9vgl9lo",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 8`] = `
+{
+  "text": ""Si alguien como El Mayo soltara toda la información, sería algo potencialmente desestabilizador para las relaciones de México y EE.UU."",
+  "url": "https://www.bbc.com/mundo/articles/cg3jxdg727xo",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 9`] = `
+{
+  "text": "La física cuyo descubrimiento ayudó a predecir partículas como el bosón de Higgs y ahora recibe su doctorado (a los 98 años)",
+  "url": "https://www.bbc.com/mundo/articles/c4ngv9gr7qlo",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 10`] = `
+{
+  "text": "Nicolás Maduro: "Hay que respetar al árbitro y que nadie pretenda manchar esta jornada bella"",
+  "url": "https://www.bbc.com/mundo/articles/cy945e5nen4o",
+}
+`;
 
 exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 1`] = `
 {

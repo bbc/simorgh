@@ -164,6 +164,48 @@ exports[`AMP Story Page Footer Paragraphs should match text 1`] = `"© 2025 BBC.
 
 exports[`AMP Story Page Header I can see the branding 1`] = `"BBC News, Кыргыз КызMATы"`;
 
+exports[`AMP Story Page Header Navigation link should match text and url 1`] = `
+{
+  "text": "Башталгыч бет",
+  "url": "/kyrgyz",
+}
+`;
+
+exports[`AMP Story Page Header Navigation link should match text and url 2`] = `
+{
+  "text": "Кыргызстан",
+  "url": "/kyrgyz/topics/cz74kjpyk07t",
+}
+`;
+
+exports[`AMP Story Page Header Navigation link should match text and url 3`] = `
+{
+  "text": "Дүйнө",
+  "url": "/kyrgyz/topics/ck2l9z012nkt",
+}
+`;
+
+exports[`AMP Story Page Header Navigation link should match text and url 4`] = `
+{
+  "text": "САПАР",
+  "url": "/kyrgyz/topics/c6z8lg83w7mt",
+}
+`;
+
+exports[`AMP Story Page Header Navigation link should match text and url 5`] = `
+{
+  "text": "Журнал",
+  "url": "/kyrgyz/topics/czp8pjrkgp0t",
+}
+`;
+
+exports[`AMP Story Page Header Navigation link should match text and url 6`] = `
+{
+  "text": "Подкасттар",
+  "url": "/kyrgyz/podcasts/p0c80v81",
+}
+`;
+
 exports[`AMP Story Page Image Caption should match text 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
 
 exports[`AMP Story Page Image should match snapshot 1`] = `

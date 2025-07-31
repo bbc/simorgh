@@ -110,7 +110,84 @@ exports[`Canonical Home Page Footer Paragraphs should match text 1`] = `"© 2025
 
 exports[`Canonical Home Page Header I can see the branding 1`] = `"BBC News, Кыргыз КызMATы"`;
 
+exports[`Canonical Home Page Header Navigation link should match text and url 1`] = `
+{
+  "text": "Ачылып турган баракча, Башталгыч бет",
+  "url": "/kyrgyz",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 2`] = `
+{
+  "text": "Кыргызстан",
+  "url": "/kyrgyz/topics/cz74kjpyk07t",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 3`] = `
+{
+  "text": "Дүйнө",
+  "url": "/kyrgyz/topics/ck2l9z012nkt",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 4`] = `
+{
+  "text": "САПАР",
+  "url": "/kyrgyz/topics/c6z8lg83w7mt",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 5`] = `
+{
+  "text": "Журнал",
+  "url": "/kyrgyz/topics/czp8pjrkgp0t",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 6`] = `
+{
+  "text": "Подкасттар",
+  "url": "/kyrgyz/podcasts/p0c80v81",
+}
+`;
+
 exports[`Canonical Home Page Main heading should match text 1`] = `"BBC News, Кыргыз КызMATы - Башталгыч бет"`;
+
+exports[`Canonical Home Page Most Read has item with rank 1`] = `
+{
+  "text": "АКШ: жаңы президент ким экенин аныктаган штаттар кайсылар?",
+  "url": "/kyrgyz/world-23090100",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 2`] = `
+{
+  "text": "Kyrgyzstanda soz erkindigi buzuluuda",
+  "url": "/kyrgyz/world-23089413",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 3`] = `
+{
+  "text": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 36",
+  "url": "/kyrgyz/kyrgyzstan-23087515",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 4`] = `
+{
+  "text": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 34",
+  "url": "/kyrgyz/kyrgyzstan-23087513",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 5`] = `
+{
+  "text": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 35",
+  "url": "/kyrgyz/kyrgyzstan-23087514",
+}
+`;
 
 exports[`Canonical Home Page Page content First item in the first curation is the correct headline 1`] = `"Test promo overtype URL"`;
 

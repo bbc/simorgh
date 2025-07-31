@@ -30,8 +30,8 @@ export default service => {
   }
 
   describe(`Related Content`, () => {
-    const relatedContentLinks = document.querySelectorAll(
-      '[data-e2e="related-content-heading"] a',
+    const relatedContentLinks = Array.from(
+      document.querySelectorAll('[data-e2e="related-content-heading"] a'),
     );
 
     if (relatedContentLinks) {

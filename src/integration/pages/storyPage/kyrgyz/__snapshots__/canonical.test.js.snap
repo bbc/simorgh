@@ -116,6 +116,48 @@ exports[`Canonical Story Page Footer Paragraphs should match text 1`] = `"© 202
 
 exports[`Canonical Story Page Header I can see the branding 1`] = `"BBC News, Кыргыз КызMATы"`;
 
+exports[`Canonical Story Page Header Navigation link should match text and url 1`] = `
+{
+  "text": "Башталгыч бет",
+  "url": "/kyrgyz",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 2`] = `
+{
+  "text": "Кыргызстан",
+  "url": "/kyrgyz/topics/cz74kjpyk07t",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 3`] = `
+{
+  "text": "Дүйнө",
+  "url": "/kyrgyz/topics/ck2l9z012nkt",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 4`] = `
+{
+  "text": "САПАР",
+  "url": "/kyrgyz/topics/c6z8lg83w7mt",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 5`] = `
+{
+  "text": "Журнал",
+  "url": "/kyrgyz/topics/czp8pjrkgp0t",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 6`] = `
+{
+  "text": "Подкасттар",
+  "url": "/kyrgyz/podcasts/p0c80v81",
+}
+`;
+
 exports[`Canonical Story Page Image Caption should match text 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
 
 exports[`Canonical Story Page Image should match snapshot 1`] = `
@@ -135,6 +177,41 @@ exports[`Canonical Story Page Image should match snapshot 1`] = `
 exports[`Canonical Story Page Lead image I can see an image with a caption 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
 
 exports[`Canonical Story Page Main heading should match text 1`] = `"Test STY for social embeds"`;
+
+exports[`Canonical Story Page Most Read has item with rank 1`] = `
+{
+  "text": "АКШ: жаңы президент ким экенин аныктаган штаттар кайсылар?",
+  "url": "/kyrgyz/world-23090100",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 2`] = `
+{
+  "text": "Kyrgyzstanda soz erkindigi buzuluuda",
+  "url": "/kyrgyz/world-23089413",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 3`] = `
+{
+  "text": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 36",
+  "url": "/kyrgyz/kyrgyzstan-23087515",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 4`] = `
+{
+  "text": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 34",
+  "url": "/kyrgyz/kyrgyzstan-23087513",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 5`] = `
+{
+  "text": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 35",
+  "url": "/kyrgyz/kyrgyzstan-23087514",
+}
+`;
 
 exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 1`] = `
 {

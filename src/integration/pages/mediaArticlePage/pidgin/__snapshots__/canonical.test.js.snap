@@ -125,7 +125,112 @@ exports[`Canonical Media Article Page Footer Paragraphs should match text 1`] = 
 
 exports[`Canonical Media Article Page Header I can see the branding 1`] = `"BBC News, Pidgin"`;
 
+exports[`Canonical Media Article Page Header Navigation link should match text and url 1`] = `
+{
+  "text": "Home",
+  "url": "/pidgin",
+}
+`;
+
+exports[`Canonical Media Article Page Header Navigation link should match text and url 2`] = `
+{
+  "text": "Nigeria",
+  "url": "/pidgin/topics/c2dwqd1zr92t",
+}
+`;
+
+exports[`Canonical Media Article Page Header Navigation link should match text and url 3`] = `
+{
+  "text": "Africa",
+  "url": "/pidgin/topics/c404v061z85t",
+}
+`;
+
+exports[`Canonical Media Article Page Header Navigation link should match text and url 4`] = `
+{
+  "text": "World",
+  "url": "/pidgin/topics/c0823e52dd0t",
+}
+`;
+
+exports[`Canonical Media Article Page Header Navigation link should match text and url 5`] = `
+{
+  "text": "Video",
+  "url": "/pidgin/topics/c3l19z3k1ert",
+}
+`;
+
+exports[`Canonical Media Article Page Header Navigation link should match text and url 6`] = `
+{
+  "text": "Sport",
+  "url": "/pidgin/topics/cjgn7gv77vrt",
+}
+`;
+
+exports[`Canonical Media Article Page Header Navigation link should match text and url 7`] = `
+{
+  "text": "Entertainment",
+  "url": "/pidgin/topics/cqywjyzk2vyt",
+}
+`;
+
+exports[`Canonical Media Article Page Header Navigation link should match text and url 8`] = `
+{
+  "text": "Most popular",
+  "url": "/pidgin/popular/read",
+}
+`;
+
+exports[`Canonical Media Article Page Latest Media should match text and url 1`] = `
+{
+  "text": "Video, How to vote for Nigeria general election, Duration 1,46",
+  "url": "/pidgin/tori-64758904",
+}
+`;
+
+exports[`Canonical Media Article Page Latest Media should match text and url 2`] = `
+{
+  "text": "Video, Wetin e take to win election for Nigeria, Duration 3,59",
+  "url": "/pidgin/64626014",
+}
+`;
+
+exports[`Canonical Media Article Page Latest Media should match text and url 3`] = `
+{
+  "text": "Video, Tins you go do during election wey go land you for INEC hot soup, Duration 1,33",
+  "url": "/pidgin/tori-64534844",
+}
+`;
+
+exports[`Canonical Media Article Page Latest Media should match text and url 4`] = `
+{
+  "text": "Video, 'We dey good to go for dis election' - INEC Boss, Duration 6,17",
+  "url": "/pidgin/articles/cw0x29n2pvqo",
+}
+`;
+
 exports[`Canonical Media Article Page Main heading should match text 1`] = `"'We dey good to go for dis election' - INEC Boss"`;
+
+exports[`Canonical Media Article Page Related Content should match text and url 1`] = `
+{
+  "text": "Key tins wey INEC chairman Mahmood Yakubu tok for Chattam house about 2023 elections",
+  "url": "/pidgin/articles/cgrznj8yg5do",
+}
+`;
+
+exports[`Canonical Media Article Page Related Content should match text and url 2`] = `
+{
+  "text": "PDP fire back afta APC call for di prosecution of Atiku for corruption",
+  "url": "/pidgin/articles/c1w09yl32yeo",
+}
+`;
+
+exports[`Canonical Media Article Page Related Content should match text and url 3`] = `
+{
+  "text": "Security go be one of my biggest priority - Kwankwaso ",
+  "url": "/pidgin/articles/cl519qjj0lvo",
+}
+`;
 
 exports[`Canonical Media Article Page SEO Apple Touch Icon should match attributes 1`] = `
 {

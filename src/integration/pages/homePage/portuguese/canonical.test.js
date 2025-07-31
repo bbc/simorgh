@@ -23,8 +23,8 @@ describe('Canonical', () => {
     );
 
   it('should have an unordered list of videos with the correct number of promos for each portrait video carousel', () => {
-    const videoCarousels = document.querySelectorAll(
-      '[data-testid="portrait-video-carousel"] ul',
+    const videoCarousels = Array.from(
+      document.querySelectorAll('[data-testid="portrait-video-carousel"] ul'),
     );
 
     expect(videoCarousels.length).toEqual(portraitVideoCurations.length);
@@ -41,8 +41,8 @@ describe('Canonical', () => {
   });
 
   it('should have left and right scroll buttons', () => {
-    const carousels = document.querySelectorAll(
-      '[data-testid="portrait-video-carousel"]',
+    const carousels = Array.from(
+      document.querySelectorAll('[data-testid="portrait-video-carousel"]'),
     );
     carousels.forEach(carousel => {
       const scrollLeftButton = carousel.querySelector(
@@ -63,8 +63,8 @@ describe('Canonical', () => {
     const carousels = getPortraitCarousels();
 
     carousels.forEach((carousel, carouselIndex) => {
-      const promoButtons = carousel.querySelectorAll(
-        '[data-testid="promo-button"]',
+      const promoButtons = Array.from(
+        carousel.querySelectorAll('[data-testid="promo-button"]'),
       );
       const videoItems =
         portraitVideoCurations[carouselIndex]?.portraitVideo?.items || [];
@@ -85,8 +85,8 @@ describe('Canonical', () => {
     const carousels = getPortraitCarousels();
 
     carousels.forEach(carousel => {
-      const promoButtons = carousel.querySelectorAll(
-        '[data-testid="promo-button"]',
+      const promoButtons = Array.from(
+        carousel.querySelectorAll('[data-testid="promo-button"]'),
       );
       promoButtons.forEach(button => {
         const duration = button.querySelector('time > span');
@@ -100,7 +100,7 @@ describe('Canonical', () => {
     const carousels = getPortraitCarousels();
 
     carousels.forEach((carousel, carouselIndex) => {
-      const promoItems = carousel.querySelectorAll('li');
+      const promoItems = Array.from(carousel.querySelectorAll('li'));
       const videoItems =
         portraitVideoCurations[carouselIndex]?.portraitVideo?.items || [];
 

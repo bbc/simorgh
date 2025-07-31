@@ -110,6 +110,48 @@ exports[`Canonical Kyrgyz Live Radio Page Footer Paragraphs should match text 1`
 
 exports[`Canonical Kyrgyz Live Radio Page Header I can see the branding 1`] = `"BBC News, Кыргыз КызMATы"`;
 
+exports[`Canonical Kyrgyz Live Radio Page Header Navigation link should match text and url 1`] = `
+{
+  "text": "Башталгыч бет",
+  "url": "/kyrgyz",
+}
+`;
+
+exports[`Canonical Kyrgyz Live Radio Page Header Navigation link should match text and url 2`] = `
+{
+  "text": "Кыргызстан",
+  "url": "/kyrgyz/topics/cz74kjpyk07t",
+}
+`;
+
+exports[`Canonical Kyrgyz Live Radio Page Header Navigation link should match text and url 3`] = `
+{
+  "text": "Дүйнө",
+  "url": "/kyrgyz/topics/ck2l9z012nkt",
+}
+`;
+
+exports[`Canonical Kyrgyz Live Radio Page Header Navigation link should match text and url 4`] = `
+{
+  "text": "САПАР",
+  "url": "/kyrgyz/topics/c6z8lg83w7mt",
+}
+`;
+
+exports[`Canonical Kyrgyz Live Radio Page Header Navigation link should match text and url 5`] = `
+{
+  "text": "Журнал",
+  "url": "/kyrgyz/topics/czp8pjrkgp0t",
+}
+`;
+
+exports[`Canonical Kyrgyz Live Radio Page Header Navigation link should match text and url 6`] = `
+{
+  "text": "Подкасттар",
+  "url": "/kyrgyz/podcasts/p0c80v81",
+}
+`;
+
 exports[`Canonical Kyrgyz Live Radio Page Main heading should match text 1`] = `"Би-Би-Си Кыргыз кызматынын радиосу"`;
 
 exports[`Canonical Kyrgyz Live Radio Page Media Loader renders a valid container 1`] = `

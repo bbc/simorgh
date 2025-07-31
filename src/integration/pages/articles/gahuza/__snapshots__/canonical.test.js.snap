@@ -125,6 +125,62 @@ exports[`Canonical Articles Footer Paragraphs should match text 1`] = `"© 2025 
 
 exports[`Canonical Articles Header I can see the branding 1`] = `"BBC News, Gahuza"`;
 
+exports[`Canonical Articles Header Navigation link should match text and url 1`] = `
+{
+  "text": "Urupapuro rw'itangiriro",
+  "url": "/gahuza",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 2`] = `
+{
+  "text": "Ibitero bya M23 muri Congo",
+  "url": "/gahuza/topics/cx2qn9pqx4yt",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 3`] = `
+{
+  "text": "Ibiyaga binini",
+  "url": "/gahuza/topics/c06gq67y3w5t",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 4`] = `
+{
+  "text": "Afrika",
+  "url": "/gahuza/topics/crvnv566zx9t",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 5`] = `
+{
+  "text": "Mpuzamahanga",
+  "url": "/gahuza/topics/c9dvd93jjkkt",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 6`] = `
+{
+  "text": "Ubuzima",
+  "url": "/gahuza/topics/cnq68qp4kxjt",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 7`] = `
+{
+  "text": "Imikino",
+  "url": "/gahuza/topics/c5qvpq0jzy7t",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 8`] = `
+{
+  "text": "Amajwi n’amashusho",
+  "url": "/gahuza/topics/crldzm936jmt",
+}
+`;
+
 exports[`Canonical Articles Image Caption should match text 1`] = `"Insiguro y'isanamu, Alexei Navalny na Yulia Navalnaya bari i Moscow mu 2013 muri metingi yo kwiyamamaza kw'abakuru b'imijyi"`;
 
 exports[`Canonical Articles Image should match snapshot 1`] = `
@@ -142,6 +198,41 @@ exports[`Canonical Articles Image should match snapshot 1`] = `
 `;
 
 exports[`Canonical Articles Main heading should match text 1`] = `"‘Nziyamamariza kuba perezida w’Uburusiya Putin navaho’ - Umupfakazi wa Navalny"`;
+
+exports[`Canonical Articles Most Read has item with rank 1`] = `
+{
+  "text": "M23 'yinjiye muri Teritwari ya Walikale'",
+  "url": "https://www.bbc.com/gahuza/articles/cn03d60pp08o",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 2`] = `
+{
+  "text": "‘Nziyamamariza kuba perezida w’Uburusiya Putin navaho’ - Umupfakazi wa Navalny",
+  "url": "https://www.bbc.com/gahuza/articles/c5y51yxeg53o",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 3`] = `
+{
+  "text": "Amerika iri gukora iperereza ku itangazwa rya gahunda y'ibanga ya Israel yo gutera Iran ",
+  "url": "https://www.bbc.com/gahuza/articles/c4gln7xlrdxo",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 4`] = `
+{
+  "text": "Misiri yatangajwe ko nta malaria ikiyirangwamo nyuma y'umuhate umaze imyaka 100 ",
+  "url": "https://www.bbc.com/gahuza/articles/cn4ze4382jzo",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 5`] = `
+{
+  "text": "Hamas: Ni ibiki byabaye ku bayobozi bakuru bayo?",
+  "url": "https://www.bbc.com/gahuza/articles/cgxqxnxylgzo",
+}
+`;
 
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 1`] = `
 {
