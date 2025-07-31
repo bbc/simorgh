@@ -40,11 +40,11 @@ class IntegrationTestEnvironment extends TestEnvironment {
     });
 
     Object.defineProperties(this.global, {
-      pageType: { value: this.pageType, configurable: true },
-      service: { value: this.service, configurable: true },
-      window: { value: window, configurable: true },
-      document: { value: document, configurable: true },
-      fetch: { value: fetch, configurable: true },
+      pageType: { value: this.pageType },
+      service: { value: this.service },
+      window: { value: window },
+      document: { value: document },
+      fetch: { value: fetch },
     });
   }
 
