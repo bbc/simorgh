@@ -121,7 +121,11 @@ describe('PortraitVideoModal', () => {
   describe('"End of content. Close" button', () => {
     it('renders the visually hidden close button', () => {
       render(
-        <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,
+        <Component
+          selectedVideoIndex={0}
+          blocks={blocks}
+          onClose={mockClose}
+        />,
       );
       const hiddenCloseButton = screen.getByTestId(
         'close-modal-visually-hidden',
@@ -135,7 +139,11 @@ describe('PortraitVideoModal', () => {
     });
     it('calls onClose when visually hidden close button is clicked', () => {
       render(
-        <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,
+        <Component
+          selectedVideoIndex={0}
+          blocks={blocks}
+          onClose={mockClose}
+        />,
       );
       const hiddenCloseButton = screen.getByTestId(
         'close-modal-visually-hidden',
@@ -145,7 +153,11 @@ describe('PortraitVideoModal', () => {
     });
     it('renders the visually hidden close button as the last focusable element', () => {
       render(
-        <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,
+        <Component
+          selectedVideoIndex={0}
+          blocks={blocks}
+          onClose={mockClose}
+        />,
       );
       const hiddenCloseButton = screen.getByTestId(
         'close-modal-visually-hidden',
@@ -160,7 +172,11 @@ describe('PortraitVideoModal', () => {
 
     it('loops focus from the last button to the close button when tabbing forward', () => {
       render(
-        <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,
+        <Component
+          selectedVideoIndex={0}
+          blocks={blocks}
+          onClose={mockClose}
+        />,
       );
       const closeButton = screen.getByTestId('close-modal-button');
       const hiddenCloseButton = screen.getByTestId(
@@ -175,7 +191,11 @@ describe('PortraitVideoModal', () => {
 
     it('focuses the hidden close button when tabbing backwards from the close button', () => {
       render(
-        <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,
+        <Component
+          selectedVideoIndex={0}
+          blocks={blocks}
+          onClose={mockClose}
+        />,
       );
       const closeButton = screen.getByTestId('close-modal-button');
       const hiddenCloseButton = screen.getByTestId(
