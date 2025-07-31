@@ -48,8 +48,7 @@ const TopBarOJs = ({
       };
 
   return (
-    <>
-      <section role="region" aria-labelledby={id} data-testid={id} />
+    <section role="region" aria-labelledby={id} data-testid={id}>
       <div css={styles.labelComponent} id={ariaLabel} data-testid="oj-top-bar">
         {title}
       </div>
@@ -61,7 +60,7 @@ const TopBarOJs = ({
           a11yAttributes={a11yAttributes}
         />
       </div>
-    </>
+    </section>
   );
 };
 
