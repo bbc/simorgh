@@ -232,7 +232,7 @@ describe('PortraitVideoModal', () => {
 
       playlistLoadedCallback(mockSMPEvent, blocks);
 
-      const [_current, nextVideo] = blocks;
+      const [_currentVideo, nextVideo] = blocks;
 
       expect(mockPlayer.setPreviousPlaylist).not.toHaveBeenCalled();
 
