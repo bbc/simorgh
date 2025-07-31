@@ -283,6 +283,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'این پادکست در این زمان قابل دسترس است',
         download: 'دانلود برنامه',
         closeVideo: 'خروج',
+        endOfContentClose: 'پایان این محتوا. خروج',
       },
       socialEmbed: {
         caption: {

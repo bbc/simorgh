@@ -248,6 +248,7 @@ export const service: DefaultServiceConfig = {
         duration: 'ርዝመት',
         recentEpisodes: 'ያለፉ ዝግጅቶች’',
         closeVideo: 'ይውጡ',
+        endOfContentClose: 'ይውጡ ወደ መጨረሻ',
       },
       socialEmbed: {
         caption: {

@@ -245,6 +245,7 @@ const defaultCyrillicConfig = {
       duration: 'Давомийлиги',
       recentEpisodes: 'Олдинги дастурлар',
       closeVideo: 'Чиқиш',
+      endOfContentClose: 'Бу контентнинг охири. Чиқиш',
     },
     socialEmbed: {
       caption: {

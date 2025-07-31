@@ -120,7 +120,6 @@ export interface PortraitVideoModalProps {
   onClose: () => void;
   selectedVideoIndex: number;
 }
-
 const PortraitVideoModal = ({
   items,
   onClose,
@@ -128,11 +127,16 @@ const PortraitVideoModal = ({
 }: PortraitVideoModalProps) => {
   const {
     translations: {
-      media: { closeVideo = 'Close', modalLabel = 'Media player' },
+      media: {
+        closeVideo = 'Close',
+        modalLabel = 'Media player',
+        endOfContentClose = 'End of content. Close',
+      },
     },
   } = use(ServiceContext);
   const modalRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const endOfContentButtonRef = useRef<HTMLButtonElement>(null);
 
   const blocks = getBlocks(items);
 
@@ -147,6 +151,22 @@ const PortraitVideoModal = ({
       if (event.key === 'Escape') {
         onClose();
       }
+      // - Tab/Shift+Tab loops focus between the close button and the end-of-content button
+      if (event.key === 'Tab') {
+        if (
+          document.activeElement === closeButtonRef.current &&
+          event.shiftKey
+        ) {
+          event.preventDefault();
+          endOfContentButtonRef.current?.focus();
+        } else if (
+          document.activeElement === endOfContentButtonRef.current &&
+          !event.shiftKey
+        ) {
+          event.preventDefault();
+          closeButtonRef.current?.focus();
+        }
+      }
     };
 
     const modal = modalRef.current;
@@ -154,9 +174,8 @@ const PortraitVideoModal = ({
 
     if (modal) {
       closeButtonRef.current?.focus();
-
+      // Prevent tabbing to elements outside the modal
       reactRootElement?.setAttribute('inert', 'true');
-
       modal.addEventListener('mousedown', handleBackdropClick);
       modal.addEventListener('touchstart', handleBackdropClick);
       modal.addEventListener('keydown', handleKeyDown);
@@ -164,18 +183,14 @@ const PortraitVideoModal = ({
 
     return () => {
       reactRootElement?.removeAttribute('inert');
-
       modal?.removeEventListener('mousedown', handleBackdropClick);
       modal?.removeEventListener('touchstart', handleBackdropClick);
       modal?.removeEventListener('keydown', handleKeyDown);
 
       const player = getPlayerInstance();
-
-      // Pause any player if the modal is closed instantly
       if (player) player.pause();
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [onClose]);
 
   return (
     <>
@@ -207,6 +222,17 @@ const PortraitVideoModal = ({
             fullscreenExit: onClose,
           }}
         />
+        <button
+          ref={endOfContentButtonRef}
+          type="button"
+          data-testid="close-modal-visually-hidden"
+          css={styles.visuallyHiddenCloseButton}
+          onClick={onClose}
+          className="focusIndicatorInvert"
+          aria-label="End of content. Close"
+        >
+          {endOfContentClose}
+        </button>
       </div>
     </>
   );
