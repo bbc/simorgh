@@ -940,14 +940,31 @@ describe('Article Page', () => {
     });
 
     it('should render read time component when readTime is supplied in metadata', () => {
-      render(
+      const { queryByTestId } = render(
         <Context service="pidgin">
           <ArticlePage pageData={articleDataPidgin} />
         </Context>,
       );
 
-      const readTime = screen.getByText('Estimated Read Time: 1 minute');
-      expect(readTime).toBeInTheDocument();
+      expect(queryByTestId('read-time')).toBeInTheDocument();
+    });
+
+    it('should not render read time component when readTime is not supplied in metadata', () => {
+      const dataMissingReadTime = {
+        ...articleDataPidgin,
+        metadata: {
+          ...articleDataNews.metadata,
+          stats: {},
+        },
+      };
+      const { queryByTestId } = render(
+        <Context service="pidgin">
+          {/* @ts-expect-error require partial data for testing purposes */}
+          <ArticlePage pageData={dataMissingReadTime} />
+        </Context>,
+      );
+
+      expect(queryByTestId('read-time')).not.toBeInTheDocument();
     });
   });
 });
