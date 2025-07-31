@@ -3,7 +3,6 @@
  * @pathname /portuguese
  */
 
-/* eslint-disable no-restricted-syntax */
 import numberOfCurationsTest from '#src/integration/pages/homePage/numberOfCurations';
 import { data as pageData } from '../../../../../data/portuguese/homePage/index.json';
 

@@ -1,4 +1,3 @@
-/* eslint-disable no-restricted-syntax */
 export default () => {
   describe('Footer', () => {
     it('I can see the BBC branding', () => {
