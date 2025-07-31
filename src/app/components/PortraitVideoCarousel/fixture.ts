@@ -1,7 +1,7 @@
 const portraitVideoFixture = {
   title: 'Portrait Video Carousel',
   curationId: 'urn:bbc:tipo:list:65faa8a9-78d7-46ea-a159-9bc06c6146f5',
-  items: [
+  blocks: [
     {
       id: 'urn:bbc:pips:pid:p01wjx7v',
       title: '4 erros de quem estuda para concursos públicos',
