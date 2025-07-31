@@ -4,18 +4,6 @@ import runCanonicalTests from './testsForCanonicalOnly';
 const canonicalTests = [runCanonicalTests];
 
 const smokeTestSuites = [
-  // {
-  //   path: '/news/articles/cj7xrxz0e8zo', // Article
-  //   service: 'news',
-  //   runforEnv: 'live',
-  //   tests: canonicalTests,
-  // },
-  // {
-  //   path: '/news/articles/cn7k01xp8kxo', // Article
-  //   service: 'news',
-  //   runforEnv: ['local', 'test'],
-  //   tests: canonicalTests,
-  // },
   {
     path: '/thai/articles/czx7w3zyme1o', // Article
     service: 'thai',
