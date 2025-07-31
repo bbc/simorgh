@@ -240,6 +240,7 @@ export const service: DefaultServiceConfig = {
         duration: 'వ్యవధి',
         recentEpisodes: 'ఇటీవలి ఎపిసోడ్లు',
         closeVideo: 'నిష్క్రమించు',
+        endOfContentClose: 'ఇక్కడితో కంటెంట్ ముగిసింది. మూసివేయండి',
       },
       socialEmbed: {
         caption: {

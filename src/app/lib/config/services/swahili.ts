@@ -271,6 +271,8 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Kipindi kijacho cha redio',
         duration: 'Muda',
         recentEpisodes: 'Vipindi vilivyopita',
+        closeVideo: 'Funga',
+        endOfContentClose: 'Mwisho wa maudhui. Funga',
       },
       socialEmbed: {
         caption: {

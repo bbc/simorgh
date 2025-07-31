@@ -267,6 +267,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Durée',
         recentEpisodes: 'Editions Précédentes',
         closeVideo: 'Sortir',
+        endOfContentClose: 'Fin de ce contenu. Sortir',
       },
       socialEmbed: {
         caption: {

@@ -229,6 +229,7 @@ export const service: DefaultServiceConfig = {
         duration: '방송 길이',
         recentEpisodes: '이전',
         closeVideo: '나가기',
+        endOfContentClose: '이 콘텐츠의 끝입니다. 나가기',
       },
       socialEmbed: {
         caption: {
