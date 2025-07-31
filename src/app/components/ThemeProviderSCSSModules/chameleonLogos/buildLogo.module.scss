@@ -1,0 +1,30 @@
+@mixin build-logo(
+  $width,
+  $height,
+  $viewbox-min-x: null,
+  $viewbox-min-y: null,
+  $viewbox-width: null,
+  $viewbox-height: null
+) {
+  $margin: 140;
+  $width: if($width != null, $width, 0);
+  $height: if($height != null, $height, 0);
+  $cropped-width: $width - 2 * $margin;
+  $cropped-height: $height - 2 * $margin;
+  $ratio: if($cropped-height != 0, $cropped-width / $cropped-height, 1);
+
+  :root {
+    --brand-logo-ratio: #{$ratio};
+    --brand-logo-viewbox-min-x: #{if($viewbox-min-x != null, $viewbox-min-x, $margin)};
+    --brand-logo-viewbox-min-y: #{if($viewbox-min-y != null, $viewbox-min-y, $margin)};
+    --brand-logo-viewbox-width: #{if($viewbox-width != null, $viewbox-width, $cropped-width)};
+    --brand-logo-viewbox-height: #{if($viewbox-height != null, $viewbox-height, $cropped-height)};
+  }
+}
+
+.brandLogoGroup {
+  fill-rule: evenodd;
+  stroke: #000;
+  stroke-width: 0.335;
+  /* Optionally, set stroke via custom property or theme */
+}
