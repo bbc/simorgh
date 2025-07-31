@@ -253,6 +253,7 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
         closeVideo: 'Wepu',
+        endOfContentClose: 'Ngwugwu nke ọdịnaya a. Pụọ',
       },
       socialEmbed: {
         caption: {

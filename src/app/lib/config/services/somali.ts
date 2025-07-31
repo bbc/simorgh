@@ -238,6 +238,8 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Barnaamijka Xiga ee Raadiyaha',
         duration: 'Muddada',
         recentEpisodes: 'Barnaamijyadii Hore',
+        closeVideo: 'Xir',
+        endOfContentClose: 'Kani waa dhammaadka nuxurka. Xir',
       },
       socialEmbed: {
         caption: {

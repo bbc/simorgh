@@ -1,5 +1,6 @@
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
+import { visuallyHiddenStyle } from '#app/lib/styles.const';
 
 const styles = {
   bodyOverflowHidden: () =>
@@ -86,6 +87,29 @@ const styles = {
         '&.media-container': {
           maxHeight: '90%',
         },
+      },
+    }),
+
+  visuallyHiddenCloseButton: () => (theme: Theme) =>
+    css({
+      position: 'absolute',
+      top: `${theme.spacings.DOUBLE}rem`,
+      insetInlineStart: `${theme.spacings.DOUBLE}rem`,
+      backgroundColor: theme.palette.WHITE,
+      color: theme.palette.BLACK,
+      border: `${pixelsToRem(2)}rem solid ${theme.palette.WHITE}`,
+      textDecoration: 'none',
+      zIndex: 2,
+      padding: `${theme.spacings.DOUBLE}rem`,
+      ...theme.fontSizes.pica,
+      ...theme.fontVariants.sansBold,
+
+      '&:not(:focus):not(:active)': {
+        visuallyHiddenStyle,
+      },
+
+      [theme.mq.GROUP_3_MIN_WIDTH]: {
+        display: 'flex',
       },
     }),
 };

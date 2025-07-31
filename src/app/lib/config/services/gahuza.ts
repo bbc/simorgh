@@ -260,6 +260,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'Iyi podcast iraboneka kandi kuri',
         download: 'Pakurura ikiganiro',
         closeVideo: 'Sohoka',
+        endOfContentClose: 'Iyi nkuru irangiye. Sohoka',
       },
       socialEmbed: {
         caption: {

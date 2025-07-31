@@ -118,6 +118,77 @@ describe('PortraitVideoModal', () => {
     expect(mockPlayer.pause).toHaveBeenCalled();
   });
 
+  describe('"End of content. Close" button', () => {
+    it('renders the visually hidden close button', () => {
+      render(
+        <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,
+      );
+      const hiddenCloseButton = screen.getByTestId(
+        'close-modal-visually-hidden',
+      );
+      expect(hiddenCloseButton).toBeInTheDocument();
+      expect(hiddenCloseButton).toHaveTextContent('End of content. Close');
+      expect(hiddenCloseButton).toHaveAttribute(
+        'aria-label',
+        'End of content. Close',
+      );
+    });
+    it('calls onClose when visually hidden close button is clicked', () => {
+      render(
+        <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,
+      );
+      const hiddenCloseButton = screen.getByTestId(
+        'close-modal-visually-hidden',
+      );
+      fireEvent.click(hiddenCloseButton);
+      expect(mockClose).toHaveBeenCalled();
+    });
+    it('renders the visually hidden close button as the last focusable element', () => {
+      render(
+        <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,
+      );
+      const hiddenCloseButton = screen.getByTestId(
+        'close-modal-visually-hidden',
+      );
+      expect(hiddenCloseButton).toBeInTheDocument();
+      expect(hiddenCloseButton).toHaveTextContent('End of content. Close');
+      expect(hiddenCloseButton).toHaveAttribute(
+        'aria-label',
+        'End of content. Close',
+      );
+    });
+
+    it('loops focus from the last button to the close button when tabbing forward', () => {
+      render(
+        <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,
+      );
+      const closeButton = screen.getByTestId('close-modal-button');
+      const hiddenCloseButton = screen.getByTestId(
+        'close-modal-visually-hidden',
+      );
+      hiddenCloseButton.focus();
+      fireEvent.keyDown(document.activeElement || document.body, {
+        key: 'Tab',
+      });
+      expect(closeButton).toHaveFocus();
+    });
+
+    it('focuses the hidden close button when tabbing backwards from the close button', () => {
+      render(
+        <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,
+      );
+      const closeButton = screen.getByTestId('close-modal-button');
+      const hiddenCloseButton = screen.getByTestId(
+        'close-modal-visually-hidden',
+      );
+      closeButton.focus();
+      fireEvent.keyDown(document.activeElement || document.body, {
+        key: 'Tab',
+        shiftKey: true,
+      });
+      expect(hiddenCloseButton).toHaveFocus();
+    });
+  });
   describe('playlistLoadedCallback', () => {
     beforeEach(() => {
       jest.clearAllMocks();
