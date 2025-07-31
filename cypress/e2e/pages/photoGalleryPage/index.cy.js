@@ -3,12 +3,9 @@ import { testsThatAlwaysRunForAllPages as testsForAllPages } from '../testsForAl
 import { testsThatFollowSmokeTestConfigForAllCanonicalPages as testsForAllCanonicalPages } from '../testsForAllCanonicalPages';
 import { testsThatFollowSmokeTestConfigForAllAMPPages as testsForAllAMPPages } from '../testsForAllAMPPages';
 import { PHOTO_GALLERY_PAGE } from '../../../../src/app/routes/utils/pageTypes';
+import liteArticleTests from '../articles/testsForLiteOnly';
 
-const tests = [
-  testsForAllPages,
-  testsForAllCanonicalPages,
-  testsForAllAMPPages,
-];
+const tests = [testsForAllPages, testsForAllCanonicalPages];
 
 const canonicalSmokeTestSuites = [
   {
@@ -21,12 +18,6 @@ const canonicalSmokeTestSuites = [
     path: '/pidgin/sport-23252855',
     service: 'pidgin',
     runforEnv: ['test', 'local'],
-    tests,
-  },
-  {
-    path: '/pidgin/sport-23252855',
-    service: 'pidgin',
-    runforEnv: 'local',
     tests,
   },
   {
@@ -98,11 +89,11 @@ const canonicalTestSuites = Cypress.env('SMOKE')
   ? canonicalSmokeTestSuites
   : canonicalNonSmokeTestSuites;
 
-const ampTestSuites = [...canonicalTestSuites].map(testSuite => {
+const ampTestSuites = canonicalTestSuites.map(testSuite => {
   return {
     ...testSuite,
     path: `${testSuite.path}.amp`,
-    tests: [testsForAllAMPPages],
+    tests: [testsForAllPages, testsForAllAMPPages],
   };
 });
 
@@ -112,7 +103,7 @@ const liteTestSuites = canonicalTestSuites
     return {
       ...testSuite,
       path: `${testSuite.path}.lite`,
-      tests,
+      tests: [testsForAllPages, liteArticleTests],
     };
   });
 
