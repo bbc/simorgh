@@ -84,6 +84,76 @@ exports[`AMP Articles Image should match snapshot 1`] = `
 
 exports[`AMP Articles Main heading should match text 1`] = `"This is the headline of this test article"`;
 
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 1`] = `
+{
+  "sizes": null,
+  "url": "http://localhost:7080/scotland/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 2`] = `
+{
+  "sizes": "72x72",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 3`] = `
+{
+  "sizes": "96x96",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 4`] = `
+{
+  "sizes": "128x128",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 5`] = `
+{
+  "sizes": "144x144",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 6`] = `
+{
+  "sizes": "152x152",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 7`] = `
+{
+  "sizes": "180x180",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 8`] = `
+{
+  "sizes": "192x192",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 9`] = `
+{
+  "sizes": "384x384",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 10`] = `
+{
+  "sizes": "512x512",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/icons/icon-512x512.png",
+}
+`;
+
 exports[`AMP Articles SEO Canonical link 1`] = `"http://localhost:7080/scotland/articles/czwj5l0n210o"`;
 
 exports[`AMP Articles SEO Dir attribute 1`] = `"ltr"`;
@@ -93,6 +163,72 @@ exports[`AMP Articles SEO FB app ID 1`] = `"1609039196070050"`;
 exports[`AMP Articles SEO Heading level 1 1`] = `"This is the headline of this test article"`;
 
 exports[`AMP Articles SEO Lang attribute 1`] = `"en-gb"`;
+
+exports[`AMP Articles SEO Linked data should match text 1`] = `
+{
+  "@context": "http://schema.org",
+  "@graph": [
+    {
+      "@type": "NewsArticle",
+      "author": {
+        "@type": "Organization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png",
+          "width": 1024,
+        },
+        "name": "BBC",
+      },
+      "dateModified": "2019-09-13T12:36:29.124Z",
+      "datePublished": "2019-09-13T12:36:29.124Z",
+      "description": "This is the SEO headline of this test article",
+      "headline": "This is the SEO headline of this test article",
+      "image": {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png",
+        "width": 1024,
+      },
+      "inLanguage": {
+        "@type": "Language",
+        "alternateName": "en-GB",
+        "name": "English",
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:7080/scotland/articles/czwj5l0n210o",
+        "@type": "WebPage",
+        "name": "This is the SEO headline of this test article",
+      },
+      "publisher": {
+        "@type": "Organization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png",
+          "width": 1024,
+        },
+        "name": "BBC",
+      },
+      "thumbnailUrl": "https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png",
+      "url": "http://localhost:7080/scotland/articles/czwj5l0n210o",
+    },
+  ],
+}
+`;
+
+exports[`AMP Articles SEO Linked data should match text 2`] = `
+{
+  "@context": "http://schema.org",
+  "@type": "VideoObject",
+  "description": "They may be tiny, but us humans could learn a thing or two from ants.",
+  "duration": "PT3M11S",
+  "embedURL": "https://www.test.bbc.com/ws/av-embeds/articles/czwj5l0n210o/p01k6msp/en-GB",
+  "name": "Five things ants can teach us about management",
+  "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg",
+  "uploadDate": "2018-10-22T14:35:32.000Z",
+}
+`;
 
 exports[`AMP Articles SEO OG description 1`] = `"This is the SEO headline of this test article"`;
 

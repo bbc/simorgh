@@ -115,6 +115,76 @@ exports[`Canonical Media Asset Page Header I can see the branding 1`] = `"BBC Ne
 
 exports[`Canonical Media Asset Page Main heading should match text 1`] = `"شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها"`;
 
+exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 1`] = `
+{
+  "sizes": null,
+  "url": "http://localhost:7080/arabic/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 2`] = `
+{
+  "sizes": "72x72",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 3`] = `
+{
+  "sizes": "96x96",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 4`] = `
+{
+  "sizes": "128x128",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 5`] = `
+{
+  "sizes": "144x144",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 6`] = `
+{
+  "sizes": "152x152",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 7`] = `
+{
+  "sizes": "180x180",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 8`] = `
+{
+  "sizes": "192x192",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 9`] = `
+{
+  "sizes": "384x384",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 10`] = `
+{
+  "sizes": "512x512",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/icons/icon-512x512.png",
+}
+`;
+
 exports[`Canonical Media Asset Page SEO Canonical link 1`] = `"http://localhost:7080/arabic/worldnews/2015/11/151120_t_arabic_av"`;
 
 exports[`Canonical Media Asset Page SEO Dir attribute 1`] = `"rtl"`;
@@ -124,6 +194,60 @@ exports[`Canonical Media Asset Page SEO FB app ID 1`] = `"1609039196070050"`;
 exports[`Canonical Media Asset Page SEO Heading level 1 1`] = `"شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها"`;
 
 exports[`Canonical Media Asset Page SEO Lang attribute 1`] = `"ar"`;
+
+exports[`Canonical Media Asset Page SEO Linked data should match text 1`] = `
+{
+  "@context": "http://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "author": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png",
+          "width": 1024,
+        },
+        "name": "BBC News عربي",
+        "noBylinesPolicy": "https://www.bbc.com/arabic/institutional-49283069#authorexpertise",
+      },
+      "dateModified": "2015-11-20T10:09:33.000Z",
+      "datePublished": "2015-11-20T10:09:33.000Z",
+      "headline": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
+      "image": {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://ichef.bbci.co.uk/news/1024/branded_arabic/worldservice/test/assets/images/2014/09/22/140922130059_144x81.jpg",
+        "width": 1024,
+      },
+      "inLanguage": {
+        "@type": "Language",
+        "alternateName": "ar",
+        "name": "Arabic",
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:7080/arabic/worldnews/2015/11/151120_t_arabic_av",
+        "@type": "WebPage",
+        "name": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
+      },
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png",
+          "width": 1024,
+        },
+        "name": "BBC News عربي",
+        "publishingPrinciples": "https://www.bbc.com/arabic/institutional-49283069",
+      },
+      "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_arabic/worldservice/test/assets/images/2014/09/22/140922130059_144x81.jpg",
+      "url": "http://localhost:7080/arabic/worldnews/2015/11/151120_t_arabic_av",
+    },
+  ],
+}
+`;
 
 exports[`Canonical Media Asset Page SEO OG description 1`] = `"شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها"`;
 

@@ -18,9 +18,9 @@ export default () => {
     });
 
     describe('Anchors', () => {
-      const footerAnchors = document.querySelectorAll('footer a');
+      const footerAnchors = Array.from(document.querySelectorAll('footer a'));
 
-      for (const footerAnchor of footerAnchors) {
+      footerAnchors.forEach(footerAnchor => {
         const anchorText = footerAnchor.textContent;
         const anchorUrl = footerAnchor.getAttribute('href');
 
@@ -38,13 +38,15 @@ export default () => {
             url: anchorUrl,
           }).toMatchSnapshot();
         });
-      }
+      });
     });
 
     describe('Paragraphs', () => {
-      const footerParagraphs = document.querySelectorAll('footer div p');
+      const footerParagraphs = Array.from(
+        document.querySelectorAll('footer div p'),
+      );
 
-      for (const footerParagraph of footerParagraphs) {
+      footerParagraphs.forEach(footerParagraph => {
         it('should be in the document', () => {
           expect(footerParagraph).toBeInTheDocument();
         });
@@ -56,7 +58,7 @@ export default () => {
         it('should match text', () => {
           expect(footerParagraph.textContent).toMatchSnapshot();
         });
-      }
+      });
     });
   });
 };

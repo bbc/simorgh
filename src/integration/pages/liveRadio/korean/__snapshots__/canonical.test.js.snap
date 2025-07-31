@@ -138,6 +138,76 @@ exports[`Canonical Korean Live Radio Page Media Loader renders a valid container
 </figure>
 `;
 
+exports[`Canonical Korean Live Radio Page SEO Apple Touch Icon should match attributes 1`] = `
+{
+  "sizes": null,
+  "url": "http://localhost:7080/korean/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Korean Live Radio Page SEO Apple Touch Icon should match attributes 2`] = `
+{
+  "sizes": "72x72",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`Canonical Korean Live Radio Page SEO Apple Touch Icon should match attributes 3`] = `
+{
+  "sizes": "96x96",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`Canonical Korean Live Radio Page SEO Apple Touch Icon should match attributes 4`] = `
+{
+  "sizes": "128x128",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`Canonical Korean Live Radio Page SEO Apple Touch Icon should match attributes 5`] = `
+{
+  "sizes": "144x144",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`Canonical Korean Live Radio Page SEO Apple Touch Icon should match attributes 6`] = `
+{
+  "sizes": "152x152",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`Canonical Korean Live Radio Page SEO Apple Touch Icon should match attributes 7`] = `
+{
+  "sizes": "180x180",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`Canonical Korean Live Radio Page SEO Apple Touch Icon should match attributes 8`] = `
+{
+  "sizes": "192x192",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Korean Live Radio Page SEO Apple Touch Icon should match attributes 9`] = `
+{
+  "sizes": "384x384",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`Canonical Korean Live Radio Page SEO Apple Touch Icon should match attributes 10`] = `
+{
+  "sizes": "512x512",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/icons/icon-512x512.png",
+}
+`;
+
 exports[`Canonical Korean Live Radio Page SEO Canonical link 1`] = `"http://localhost:7080/korean/bbc_korean_radio/liveradio"`;
 
 exports[`Canonical Korean Live Radio Page SEO Dir attribute 1`] = `"ltr"`;
@@ -147,6 +217,34 @@ exports[`Canonical Korean Live Radio Page SEO FB app ID 1`] = `"1609039196070050
 exports[`Canonical Korean Live Radio Page SEO Heading level 1 1`] = `"BBC 코리아 라디오"`;
 
 exports[`Canonical Korean Live Radio Page SEO Lang attribute 1`] = `"ko"`;
+
+exports[`Canonical Korean Live Radio Page SEO Linked data should match text 1`] = `
+{
+  "@context": "http://schema.org",
+  "@graph": [
+    {
+      "@type": "RadioChannel",
+      "image": {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/korean.png",
+        "width": 1024,
+      },
+      "inLanguage": {
+        "@type": "Language",
+        "alternateName": "ko",
+        "name": "Korean",
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:7080/korean/bbc_korean_radio/liveradio",
+        "@type": "WebPage",
+        "name": "BBC 코리아 라디오",
+      },
+      "url": "http://localhost:7080/korean/bbc_korean_radio/liveradio",
+    },
+  ],
+}
+`;
 
 exports[`Canonical Korean Live Radio Page SEO OG description 1`] = `"세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다"`;
 

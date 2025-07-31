@@ -4,6 +4,103 @@ exports[`AMP Media Asset Page A11y I can see the skip to content link 1`] = `"Wa
 
 exports[`AMP Media Asset Page AMP Geo config 1`] = `"{"AmpBind":true,"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"],"gbOrUnknown":["gb","gg","im","je","uk","unknown"]}}"`;
 
+exports[`AMP Media Asset Page Analytics ATI 1`] = `
+{
+  "requests": {
+    "base": "https://logws1363.ati-host.net/hit.xiti?",
+    "pageview": [
+      {
+        "s": "598343",
+      },
+      {
+        "s2": "70",
+      },
+      {
+        "p": "pidgin.media_asset.23248703.page",
+      },
+      {
+        "r": "\${screenWidth}x\${screenHeight}x\${screenColorDepth}",
+      },
+      {
+        "re": "\${availableScreenWidth}x\${availableScreenHeight}",
+      },
+      {
+        "hl": "\${timestamp}",
+      },
+      {
+        "lng": "\${browserLanguage}",
+      },
+      {
+        "x1": "[urn:bbc:cps:curie:asset:5679389a-3ea6-0b40-9de4-f4d33d6bcd9f]",
+      },
+      {
+        "x2": "[amp]",
+      },
+      {
+        "x3": "[news-pidgin]",
+      },
+      {
+        "x4": "[pcm]",
+      },
+      {
+        "x5": "[\${sourceUrl}]",
+      },
+      {
+        "x6": "[\${documentReferrer}]",
+      },
+      {
+        "x7": "[article-media-asset]",
+      },
+      {
+        "x8": "[simorgh]",
+      },
+      {
+        "x9": "[DO%20NOT%20EDIT%20THIS%20IS%20AN%20AUTOMATED%20TEST%20dolor%20sit%20amet,%20consectetur%20Lorem%20'ipsum'%20dolor%20sit%20amet,%20consectetur%20Lorem%20ipsum%20dolor%20sit<em>amet</em>,%20consectetur%20-%20BBC%20News%20Pidgin]",
+      },
+      {
+        "x11": "[2019-09-13T15:31:44.000Z]",
+      },
+      {
+        "x12": "[2020-06-10T14:24:07.000Z]",
+      },
+      {
+        "x16": "[Inspire me~Give me perspective~Keep me on trend]",
+      },
+      {
+        "x17": "[Opinion]",
+      },
+      {
+        "ref": "\${documentReferrer}",
+      },
+    ],
+  },
+  "transport": {
+    "beacon": false,
+    "image": true,
+    "xhrpost": false,
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview",
+    },
+  },
+}
+`;
+
+exports[`AMP Media Asset Page Analytics chartbeat 1`] = `
+{
+  "vars": {
+    "contentType": "article-media-asset",
+    "domain": "test.bbc.co.uk",
+    "sections": "Pidgin, Pidgin - MAP, Pidgin - Opinion-category",
+    "title": "DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur",
+    "uid": 50924,
+    "virtualReferrer": "\${documentReferrer}",
+  },
+}
+`;
+
 exports[`AMP Media Asset Page Footer Anchors should match text and url 1`] = `
 {
   "text": "BBC News, Pidgin",
@@ -79,6 +176,76 @@ exports[`AMP Media Asset Page I can see a bulleted list item with link 1`] = `"/
 
 exports[`AMP Media Asset Page Main heading should match text 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sitamet, consectetur"`;
 
+exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 1`] = `
+{
+  "sizes": null,
+  "url": "http://localhost:7080/pidgin/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 2`] = `
+{
+  "sizes": "72x72",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 3`] = `
+{
+  "sizes": "96x96",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 4`] = `
+{
+  "sizes": "128x128",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 5`] = `
+{
+  "sizes": "144x144",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 6`] = `
+{
+  "sizes": "152x152",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 7`] = `
+{
+  "sizes": "180x180",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 8`] = `
+{
+  "sizes": "192x192",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 9`] = `
+{
+  "sizes": "384x384",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 10`] = `
+{
+  "sizes": "512x512",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-512x512.png",
+}
+`;
+
 exports[`AMP Media Asset Page SEO Canonical link 1`] = `"http://localhost:7080/pidgin/23248703"`;
 
 exports[`AMP Media Asset Page SEO Dir attribute 1`] = `"ltr"`;
@@ -88,6 +255,73 @@ exports[`AMP Media Asset Page SEO FB app ID 1`] = `"1609039196070050"`;
 exports[`AMP Media Asset Page SEO Heading level 1 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sitamet, consectetur"`;
 
 exports[`AMP Media Asset Page SEO Lang attribute 1`] = `"pcm"`;
+
+exports[`AMP Media Asset Page SEO Linked data should match text 1`] = `
+{
+  "@context": "http://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "author": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
+          "width": 1024,
+        },
+        "name": "BBC News Pidgin",
+        "noBylinesPolicy": "https://www.bbc.com/pidgin/institutional-48528766#authorexpertise",
+      },
+      "dateModified": "2020-06-10T14:24:07.000Z",
+      "datePublished": "2019-09-13T15:31:44.000Z",
+      "headline": "DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur",
+      "image": {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://ichef.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg",
+        "width": 1024,
+      },
+      "inLanguage": {
+        "@type": "Language",
+        "alternateName": "pcm",
+        "name": "Nigerian Pidgin",
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:7080/pidgin/23248703",
+        "@type": "WebPage",
+        "name": "DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur",
+      },
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
+          "width": 1024,
+        },
+        "name": "BBC News Pidgin",
+        "publishingPrinciples": "https://www.bbc.com/pidgin/institutional-48528766",
+      },
+      "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg",
+      "url": "http://localhost:7080/pidgin/23248703",
+    },
+  ],
+}
+`;
+
+exports[`AMP Media Asset Page SEO Linked data should match text 2`] = `
+{
+  "@context": "http://schema.org",
+  "@type": "VideoObject",
+  "description": "トランプ氏、香港人権法案に署名　中国は反発",
+  "duration": "PT5S",
+  "embedURL": "https://www.test.bbc.com/pidgin/av-embeds/23248703/vpid/p01kx42v",
+  "name": "トランプ氏、香港人権法案に署名　中国は反発",
+  "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p012zl0f.jpg",
+  "uploadDate": "2018-12-20T11:06:51.000Z",
+}
+`;
 
 exports[`AMP Media Asset Page SEO OG description 1`] = `"Lorem ipsum dolor sit amet, consectetur this is a change"`;
 
