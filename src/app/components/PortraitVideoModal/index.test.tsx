@@ -1,11 +1,11 @@
 import React from 'react';
-import Component, { playlistLoadedCallback, getBlocks } from '.';
+import Component, { playlistLoadedCallback } from '.';
 import {
   screen,
   render,
   fireEvent,
 } from '../react-testing-library-with-providers';
-import items from './fixture';
+import blocks from './fixture';
 import { Player, SMPEvent } from '../MediaLoader/types';
 
 const mockClose = jest.fn();
@@ -19,7 +19,7 @@ const mockPlayer = {
 describe('PortraitVideoModal', () => {
   it('should render the modal when active', () => {
     render(
-      <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,
+      <Component selectedVideoIndex={0} blocks={blocks} onClose={mockClose} />,
     );
 
     const modal = screen.getByRole('dialog');
@@ -30,7 +30,7 @@ describe('PortraitVideoModal', () => {
   it('should set the root React element to "inert" when the modal is open', () => {
     render(
       <div id="root">
-        <Component selectedVideoIndex={0} items={items} onClose={mockClose} />
+        <Component selectedVideoIndex={0} blocks={blocks} onClose={mockClose} />
       </div>,
     );
 
@@ -41,7 +41,7 @@ describe('PortraitVideoModal', () => {
 
   it('should close the modal when the close button is clicked', () => {
     render(
-      <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,
+      <Component selectedVideoIndex={0} blocks={blocks} onClose={mockClose} />,
     );
 
     const closeButton = screen.getByTestId('close-modal-button');
@@ -53,7 +53,7 @@ describe('PortraitVideoModal', () => {
 
   it('should close the modal when the escape key is pressed', () => {
     render(
-      <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,
+      <Component selectedVideoIndex={0} blocks={blocks} onClose={mockClose} />,
     );
 
     const dialog = screen.getByRole('dialog');
@@ -64,7 +64,7 @@ describe('PortraitVideoModal', () => {
 
   it('should not close the modal when clicking outside the modal with a mouse', () => {
     render(
-      <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,
+      <Component selectedVideoIndex={0} blocks={blocks} onClose={mockClose} />,
     );
 
     const dialog = screen.getByRole('dialog');
@@ -75,7 +75,7 @@ describe('PortraitVideoModal', () => {
 
   it('should not close the modal when clicking outside the modal with touch', () => {
     render(
-      <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,
+      <Component selectedVideoIndex={0} blocks={blocks} onClose={mockClose} />,
     );
 
     const dialog = screen.getByRole('dialog');
@@ -95,7 +95,7 @@ describe('PortraitVideoModal', () => {
     });
 
     const { unmount } = render(
-      <Component selectedVideoIndex={0} items={items} onClose={mockClose} />,
+      <Component selectedVideoIndex={0} blocks={blocks} onClose={mockClose} />,
     );
 
     const dialog = screen.getByRole('dialog');
@@ -133,15 +133,15 @@ describe('PortraitVideoModal', () => {
     });
 
     it('should call the playlistLoadedCallback and call queuePlaylist for the next video', () => {
-      const blocks = getBlocks(items);
-
       const mockSMPEvent: SMPEvent = {
-        playlist: { items: [{ versionID: items[0].versionId }] },
+        playlist: {
+          items: [{ versionID: blocks[0].model.video.version.id }],
+        },
       };
 
       playlistLoadedCallback(mockSMPEvent, blocks);
 
-      const [_currentVideo, nextVideo] = blocks;
+      const [_current, nextVideo] = blocks;
 
       expect(mockPlayer.setPreviousPlaylist).not.toHaveBeenCalled();
 
@@ -156,10 +156,10 @@ describe('PortraitVideoModal', () => {
     });
 
     it('should call the playlistLoadedCallback and call setPreviousPlaylist for the previous video and queuePlaylist for the next video', () => {
-      const blocks = getBlocks(items);
-
       const mockSMPEvent: SMPEvent = {
-        playlist: { items: [{ versionID: items[1].versionId }] },
+        playlist: {
+          items: [{ versionID: blocks[1].model.video.version.id }],
+        },
       };
 
       playlistLoadedCallback(mockSMPEvent, blocks);
@@ -186,10 +186,12 @@ describe('PortraitVideoModal', () => {
     });
 
     it('should call playlistLoadedCallback and setPreviousPlaylist if there are no next videos', () => {
-      const blocks = getBlocks(items);
-
       const mockSMPEvent: SMPEvent = {
-        playlist: { items: [{ versionID: items[items.length - 1].versionId }] },
+        playlist: {
+          items: [
+            { versionID: blocks[blocks.length - 1].model.video.version.id },
+          ],
+        },
       };
 
       playlistLoadedCallback(mockSMPEvent, blocks);

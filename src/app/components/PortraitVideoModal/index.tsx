@@ -24,9 +24,7 @@ export const playlistLoadedCallback = (
   if (!player) return;
 
   const { playlist } = e || {};
-
   const [currentItem] = playlist?.items || [];
-
   const currentId = currentItem?.vpid || currentItem?.versionID;
 
   const currentIndex = blocks?.findIndex(
@@ -63,58 +61,17 @@ export const playlistLoadedCallback = (
 
 const pluginLoadedCallback = () => {
   const player = getPlayerInstance();
-
   player.dispatchEvent('fullScreenPlugin.launchFullscreen');
 };
 
-export const getBlocks = (
-  items: PortraitVideoModalProps['items'],
-): PortraitClipMediaBlock[] =>
-  items.map(item => ({
-    type: 'portraitClipMedia',
-    model: {
-      type: 'video',
-      images: item.images.map(img => ({
-        source: img.url,
-        urlTemplate: img.urlTemplate,
-      })),
-      video: {
-        id: item.id,
-        title: item.title,
-        holdingImageURL: item.images?.[0]?.urlTemplate ?? '',
-        version: {
-          id: item.versionId,
-          duration: item.duration,
-          kind: item.kind,
-          guidance: item.guidance,
-          territories: item.territories,
-        },
-        isEmbeddingAllowed: item.isEmbeddingAllowed,
-      },
-    },
-  }));
-
 export interface PortraitVideoModalProps {
-  items: {
-    id: string;
-    title: string;
-    versionId: string;
-    duration: string;
-    kind: string;
-    guidance: string | null;
-    territories: string[];
-    isEmbeddingAllowed: boolean;
-    images: {
-      url: string;
-      urlTemplate?: string;
-    }[];
-  }[];
+  blocks: PortraitClipMediaBlock[];
   onClose: () => void;
   selectedVideoIndex: number;
 }
 
 const PortraitVideoModal = ({
-  items,
+  blocks,
   onClose,
   selectedVideoIndex,
 }: PortraitVideoModalProps) => {
@@ -123,10 +80,9 @@ const PortraitVideoModal = ({
       media: { closeVideo = 'Close', modalLabel = 'Media player' },
     },
   } = use(ServiceContext);
+
   const modalRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
-
-  const blocks = getBlocks(items);
 
   useEffect(() => {
     const handleBackdropClick = (event: MouseEvent | TouchEvent) => {
@@ -146,7 +102,6 @@ const PortraitVideoModal = ({
 
     if (modal) {
       closeButtonRef.current?.focus();
-
       reactRootElement?.setAttribute('inert', 'true');
 
       modal.addEventListener('mousedown', handleBackdropClick);
@@ -156,13 +111,11 @@ const PortraitVideoModal = ({
 
     return () => {
       reactRootElement?.removeAttribute('inert');
-
       modal?.removeEventListener('mousedown', handleBackdropClick);
       modal?.removeEventListener('touchstart', handleBackdropClick);
       modal?.removeEventListener('keydown', handleKeyDown);
 
       const player = getPlayerInstance();
-
       // Pause any player if the modal is closed instantly
       if (player) player.pause();
     };
