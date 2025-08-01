@@ -7,9 +7,10 @@ import './palette.module.scss';
 import '../../../fontScripts/latinWithDiacritics.module.scss';
 import '../../../chameleonLogos/mundoLogo.module.scss';
 import brandSVG from '../../chameleonLogos/mundo';
+import withThemeProvider from '#app/components/ThemeProviderSCSSModules/withThemeProvider';
 
 const mundoTheme = {
   brandSVG,
 };
 
-export default mundoTheme;
+export default withThemeProvider(mundoTheme);
