@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Article Page should render a ltr article (pidgin) with most read correctly 1`] = `
 .emotion-0 {
@@ -855,6 +855,7 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
         >
           <div
             class="emotion-4"
+            data-testid="read-time"
           >
             <p>
               Estimated Read Time
@@ -862,6 +863,9 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
               1
                
               minute
+            </p>
+            <p>
+              Experiment Variant: 
             </p>
           </div>
           <div
@@ -2272,6 +2276,7 @@ exports[`Article Page should render a news article correctly 1`] = `
         >
           <div
             class="emotion-4"
+            data-testid="read-time"
           >
             <p>
               Estimated Read Time
@@ -2279,6 +2284,9 @@ exports[`Article Page should render a news article correctly 1`] = `
               1
                
               minute
+            </p>
+            <p>
+              Experiment Variant: 
             </p>
           </div>
           <div
@@ -3151,6 +3159,7 @@ exports[`Article Page should render a news article with headline in the middle c
         >
           <div
             class="emotion-4"
+            data-testid="read-time"
           >
             <p>
               Estimated Read Time
@@ -3158,6 +3167,9 @@ exports[`Article Page should render a news article with headline in the middle c
               1
                
               minute
+            </p>
+            <p>
+              Experiment Variant: 
             </p>
           </div>
           <h1
@@ -3416,6 +3428,7 @@ exports[`Article Page should render a news article without headline correctly 1`
         >
           <div
             class="emotion-4"
+            data-testid="read-time"
           >
             <p>
               Estimated Read Time
@@ -3423,6 +3436,9 @@ exports[`Article Page should render a news article without headline correctly 1`
               1
                
               minute
+            </p>
+            <p>
+              Experiment Variant: 
             </p>
           </div>
           <h1
@@ -4525,6 +4541,7 @@ exports[`Article Page should render a rtl article (persian) with most read corre
         >
           <div
             class="emotion-4"
+            data-testid="read-time"
           >
             <p>
               Estimated Read Time
@@ -4532,6 +4549,9 @@ exports[`Article Page should render a rtl article (persian) with most read corre
               1
                
               minute
+            </p>
+            <p>
+              Experiment Variant: 
             </p>
           </div>
           <div
