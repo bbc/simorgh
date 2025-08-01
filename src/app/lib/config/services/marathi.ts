@@ -248,6 +248,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'हे पॉडकास्ट तुम्ही इथे ऐकू शकता',
         download: 'एपिसोड डाऊनलोड करा',
         closeVideo: 'बंद करा',
+        endOfContentClose: 'या सामग्रीचा अंत. बंद करा',
       },
       socialEmbed: {
         caption: {

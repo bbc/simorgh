@@ -167,6 +167,7 @@ export interface Translations {
     podcastExternalLinks?: string;
     download?: string;
     closeVideo?: string;
+    endOfContentClose?: string;
     modalLabel?: string;
   };
 

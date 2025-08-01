@@ -249,6 +249,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Duration',
         recentEpisodes: 'Daha ətraflı',
         closeVideo: 'Bağla',
+        endOfContentClose: 'Bu məzmunun sonu. Bağla',
       },
       socialEmbed: {
         caption: {

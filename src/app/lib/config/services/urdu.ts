@@ -264,6 +264,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'یہ پوڈکاسٹ ان پلیٹفارمز پر بھی دستیاب ہے',
         download: 'قسط ڈاؤن لوڈ کریں',
         closeVideo: 'بند کریں',
+        endOfContentClose: 'یہاں مواد ختم ہوتا ہے۔ بند کریں',
       },
       socialEmbed: {
         caption: {
