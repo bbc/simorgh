@@ -1383,8 +1383,6 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
 </div>
 `;
 
-exports[`AmpSocialEmbed should render null when no social embed ID is provided 1`] = `<div />`;
-
 exports[`CanonicalSocialEmbed Instagram should render correctly for Instagram 1`] = `
 .emotion-0 {
   position: relative;
