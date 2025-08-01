@@ -238,6 +238,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'Бул подкастты башка платформалардан дагы угуңуз',
         download: 'Подкастты жүктөп алыңыз',
         closeVideo: 'Чыгуу',
+        endOfContentClose: 'Бул контенттин аягы. Чыгуу',
       },
       socialEmbed: {
         caption: {

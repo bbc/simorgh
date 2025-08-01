@@ -230,6 +230,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Thời lượng',
         recentEpisodes: 'Xem thêm',
         closeVideo: 'Thoát',
+        endOfContentClose: 'Kết thúc nội dung. Thoát',
       },
       socialEmbed: {
         caption: {

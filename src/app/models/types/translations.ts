@@ -47,6 +47,7 @@ export interface Translations {
     500: TranslationsError;
   };
   continueReading?: string;
+  readTime?: string;
   byline?: {
     author?: string;
     articleInformation?: string;
@@ -166,6 +167,7 @@ export interface Translations {
     podcastExternalLinks?: string;
     download?: string;
     closeVideo?: string;
+    endOfContentClose?: string;
     modalLabel?: string;
   };
 
