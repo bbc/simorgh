@@ -1,0 +1,29 @@
+{
+  "alpha": false,
+  "lastUpdated": {
+    "day": 1,
+    "month": "August",
+    "year": 2025
+  },
+  "uxAccessibilityDoc": {
+    "done": true,
+    "reference": {
+      "url": "",
+      "label": "Screen Reader UX"
+    }
+  },
+  "acceptanceCriteria": {
+    "done": true,
+    "reference": {
+      "url": "",
+      "label": "Accessibility Acceptance Criteria"
+    }
+  },
+  "swarm": {
+    "done": true,
+    "reference": {
+      "url": "",
+      "label": "Accessibility Swarm Notes"
+    }
+  }
+}
