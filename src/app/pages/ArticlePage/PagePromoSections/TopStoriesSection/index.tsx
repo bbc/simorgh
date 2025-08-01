@@ -3,7 +3,6 @@
 import { jsx, useTheme } from '@emotion/react';
 import { use } from 'react';
 import useViewTracker from '#hooks/useViewTracker';
-import { EventTrackingBlock } from '#app/models/types/eventTracking';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import PromoItem from '#components/OptimoPromos/PromoItem/index.styles';
 import PromoList from '#components/OptimoPromos/PromoList';
@@ -13,45 +12,6 @@ import styles from './index.styles';
 import TopStoriesItem from './TopStoriesItem';
 import generatePromoId from '../../../../lib/utilities/generatePromoId';
 import { TopStoryItem } from './types';
-
-type TopStoriesListProps = {
-  item: TopStoryItem;
-  index: number;
-  eventTrackingData: EventTrackingBlock;
-  viewTracker: React.Ref<HTMLDivElement>;
-};
-
-const renderTopStoriesList = ({
-  item,
-  index,
-  eventTrackingData,
-  viewTracker,
-}: TopStoriesListProps) => {
-  const contentType = item?.contentType ?? '';
-  const assetUri = item?.locators?.assetUri ?? '';
-  const canonicalUrl = item?.locators?.canonicalUrl ?? '';
-  const uri = item?.uri ?? '';
-
-  const ariaLabelledBy = generatePromoId({
-    sectionType: 'top-stories',
-    assetUri,
-    canonicalUrl,
-    uri,
-    contentType,
-    index,
-  });
-
-  return (
-    <PromoItem css={styles.promoItem} key={ariaLabelledBy}>
-      <TopStoriesItem
-        item={item}
-        ariaLabelledBy={ariaLabelledBy}
-        ref={viewTracker}
-        eventTrackingData={eventTrackingData}
-      />
-    </PromoItem>
-  );
-};
 
 const TopStoriesSection = ({
   content = [],
@@ -121,14 +81,23 @@ const TopStoriesSection = ({
         />
       ) : (
         <PromoList css={styles.promoList}>
-          {content.map((item, index) =>
-            renderTopStoriesList({
-              item,
-              index,
-              eventTrackingData,
-              viewTracker,
-            }),
-          )}
+          {content.map((item, index) => (
+            <PromoItem css={styles.promoItem} key={ariaLabelledBy}>
+              <TopStoriesItem
+                item={item}
+                ariaLabelledBy={generatePromoId({
+                  sectionType: 'top-stories',
+                  assetUri: item?.locators?.assetUri ?? '',
+                  canonicalUrl: item?.locators?.canonicalUrl ?? '',
+                  uri: item?.uri ?? '',
+                  contentType: item?.contentType ?? '',
+                  index,
+                })}
+                ref={viewTracker}
+                eventTrackingData={eventTrackingData}
+              />
+            </PromoItem>
+          ))}
         </PromoList>
       )}
     </section>
