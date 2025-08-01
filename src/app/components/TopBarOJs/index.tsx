@@ -23,7 +23,6 @@ const TopBarOJs = ({ blocks, id }: TopBarOJsProps) => {
   const { translations } = use(ServiceContext);
 
   const viewTracker = useViewTracker(eventTrackingData);
-  // const clickTracker = useClickTrackerHandler(eventTrackingData);
   const clickTracker = {
     ...eventTrackingData,
     ...useClickTrackerHandler(eventTrackingData),
