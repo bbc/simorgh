@@ -5,7 +5,8 @@ import '../../../fontFaces/reith-serif-light.module.scss';
 import '../../../fontVariants/reith.module.scss';
 import './palette.module.scss';
 import '../../../fontScripts/latinWithDiacritics.module.scss';
-import brandSVG from '../../../ThemeProvider/chameleonLogos/mundo';
+import '../../../chameleonLogos/mundoLogo.module.scss';
+import brandSVG from '../../chameleonLogos/mundo';
 
 const mundoTheme = {
   brandSVG,

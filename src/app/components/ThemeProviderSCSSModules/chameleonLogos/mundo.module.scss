@@ -1,0 +1,5 @@
+@use './buildLogo.module.scss' as logo;
+
+.mundoLogoTheme {
+  @include logo.build-logo(1738, 425);
+}
