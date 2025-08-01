@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Ref, use } from 'react';
+import { use } from 'react';
 import { jsx } from '@emotion/react';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
@@ -10,34 +10,6 @@ import generatePromoId from '../../../../lib/utilities/generatePromoId';
 import LatestMediaItem from './LatestMediaItem';
 import styles from './index.styles';
 import { LatestMedia } from './types';
-import { EventTrackingBlock } from '../../../../models/types/eventTracking';
-
-const renderLatestMediaList = (
-  item: LatestMedia,
-  index: number,
-  eventTrackingData: EventTrackingBlock,
-  viewTracker: Ref<HTMLDivElement>,
-) => {
-  const ariaLabelledBy = generatePromoId({
-    sectionType: 'latest-media',
-    assetUri: null,
-    canonicalUrl: item.link,
-    uri: null,
-    contentType: item.type,
-    index,
-  });
-
-  return (
-    <PromoItem key={index} css={styles.latestMediaPromoBorderAndWidth}>
-      <LatestMediaItem
-        item={item}
-        ariaLabelledBy={ariaLabelledBy}
-        ref={viewTracker}
-        eventTrackingData={eventTrackingData}
-      />
-    </PromoItem>
-  );
-};
 
 const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
   const { service, dir, translations, script } = use(ServiceContext);
@@ -99,9 +71,26 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
         </div>
       ) : (
         <PromoList css={styles.latestMediaGridWrapper}>
-          {content.map((item, index) =>
-            renderLatestMediaList(item, index, eventTrackingData, viewTracker),
-          )}
+          {content.map((item, index) => (
+            <PromoItem
+              key={item.id}
+              css={styles.latestMediaPromoBorderAndWidth}
+            >
+              <LatestMediaItem
+                item={item}
+                ariaLabelledBy={generatePromoId({
+                  sectionType: 'latest-media',
+                  assetUri: null,
+                  canonicalUrl: item.link,
+                  uri: null,
+                  contentType: item.type,
+                  index,
+                })}
+                ref={viewTracker}
+                eventTrackingData={eventTrackingData}
+              />
+            </PromoItem>
+          ))}
         </PromoList>
       )}
     </section>
