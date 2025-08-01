@@ -244,6 +244,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'यो पडकास्ट सुन्नकालागि यहाँ उपलब्ध छ',
         download: 'एपिसोड डाउनलोड',
         closeVideo: 'बाहिरिनुहोस्',
+        endOfContentClose: 'यस सामग्रीको अन्त्य। बाहिरिनुहोस्',
       },
       socialEmbed: {
         caption: {
