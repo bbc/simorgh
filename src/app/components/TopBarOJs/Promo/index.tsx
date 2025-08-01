@@ -3,14 +3,15 @@
 import { jsx } from '@emotion/react';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
-import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import LiveLabel from '../../LiveLabel';
 import styles from './index.styles';
 
 interface PromoProps {
   block: TopStoryItem;
-  eventTrackingData: EventTrackingMetadata;
+  eventTrackingData?: {
+    componentName: string;
+  };
 }
 
 const Promo = ({ block, eventTrackingData }: PromoProps) => {
@@ -49,7 +50,12 @@ const Promo = ({ block, eventTrackingData }: PromoProps) => {
 
   return (
     <div css={promoBoxStyles}>
-      <a css={styles.link} href={href} {...clickTrackerHandler}>
+      <a
+        css={styles.link}
+        aria-label={title}
+        href={href}
+        {...clickTrackerHandler}
+      >
         {isLive && <LiveLabel />}
         {title}
       </a>

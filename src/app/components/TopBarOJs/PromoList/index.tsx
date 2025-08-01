@@ -3,15 +3,16 @@
 import { jsx } from '@emotion/react';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
-import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import useViewTracker from '#hooks/useViewTracker';
 import Promo from '../Promo';
 import styles from './index.styles';
 
 interface PromoListProps {
   blocks: TopStoryItem[];
-  eventTrackingData: EventTrackingMetadata;
   id?: string;
+  eventTrackingData?: {
+    componentName: string;
+  };
 }
 
 const PromoList = ({
