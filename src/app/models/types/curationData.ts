@@ -62,7 +62,7 @@ export interface BaseCuration {
   radioSchedule?: RadioScheduleData[];
   embed?: OEmbedData;
   portraitVideo?: {
-    items: PortraitVideoPromoProps[];
+    blocks: PortraitVideoPromoProps[];
   };
 }
 

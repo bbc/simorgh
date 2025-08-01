@@ -69,6 +69,7 @@ export interface PortraitVideoModalProps {
   onClose: () => void;
   selectedVideoIndex: number;
 }
+
 const PortraitVideoModal = ({
   blocks,
   onClose,

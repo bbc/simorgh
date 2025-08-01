@@ -1,47 +1,14 @@
 import { GroupTracker } from '#app/components/ATIAnalytics/types';
+import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
 import { RefObject } from 'react';
 
 export interface PortraitVideoPromoProps {
   id: string;
-  headlines?: {
-    primaryHeadline?: string;
-    seoHeadline?: string;
-    promoHeadline?: string;
-    socialHeadline?: string;
-  };
-  link?: {
-    path: string;
-  };
-  images?: {
-    url: string;
-    urlTemplate?: string;
-    altText?: string;
-    type?: string;
-    source?: string;
-    height?: number;
-    width?: number;
-    orientation?: ScreenOrientation;
-  }[];
-  video?: {
-    id: string;
-    isEmbeddingAllowed?: boolean;
-    version: {
-      id?: string;
-      duration: string;
-      kind: string;
-      territories: string[];
-      guidance?: string | null;
-    };
-  };
-  analytics?: {
-    page?: {
-      contentId?: string;
-    };
-  };
+  block: PortraitClipMediaBlock;
   onClick?: () => void;
   key?: string;
   groupTracker?: GroupTracker;
-  itemPosition?: number;
+  blockPosition?: number;
 }
 
 export interface PortraitVideoCarouselNavigationProps {

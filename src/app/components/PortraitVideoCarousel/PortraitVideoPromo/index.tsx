@@ -19,28 +19,24 @@ const DEFAULT_TRANSLATION = {
   play: 'Play',
   duration: 'Duration',
 };
-export default (item: PortraitVideoPromoProps) => {
+export default (block: PortraitVideoPromoProps) => {
   const { mq } = useTheme();
-  const {
-    id,
-    images,
-    headlines,
-    video,
-    onClick,
-    itemPosition = 0,
-    groupTracker,
-  } = item;
+  const { id, onClick, blockPosition = 0, groupTracker } = block;
   const {
     defaultImage,
     defaultImageAltText,
     translations: { media = DEFAULT_TRANSLATION },
   } = use(ServiceContext);
 
-  const imageUrl = images?.[0]?.url ?? defaultImage;
+  const { model } = block.block; // this looks weird..
+  const { images, video } = model;
+
+  const imageUrl = images?.[0]?.source ?? defaultImage;
   const imageUrlTemplate = images?.[0]?.urlTemplate;
-  const alt = images?.[0]?.altText || defaultImageAltText;
-  const headline = headlines?.promoHeadline || '';
-  const mediaISO8601Duration = video?.version.duration;
+  const alt = defaultImageAltText; // altText doesn't exist on model.images yet in the bff
+  const headline = video?.title || '';
+  const mediaISO8601Duration = video?.version?.duration;
+
   const {
     video: mediaType,
     play: actionType,
@@ -77,15 +73,15 @@ export default (item: PortraitVideoPromoProps) => {
     imageWidthLarge: 256,
   });
 
-  const adjustedItemPosition = itemPosition + 1;
+  const adjustedBlockPosition = blockPosition + 1;
   const eventTrackingData = {
-    componentName: `portrait-video-promo-${adjustedItemPosition}`,
+    componentName: `portrait-video-promo-${adjustedBlockPosition}`,
     groupTracker,
     viewThreshold: 1,
     itemTracker: {
       type: 'portrait-video-promo',
       text: headline,
-      position: adjustedItemPosition,
+      position: adjustedBlockPosition,
       ...(momentDuration && { duration: momentDuration.asSeconds() }),
       resourceId: id,
     },

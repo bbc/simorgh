@@ -30,96 +30,74 @@ const PortraitVideoCarousel = ({
   if (isLite) return null;
 
   const handlePromoClick = (index: number) => {
-    if (blocks[index]?.video) {
-      setSelectedVideoIndex(index);
-      setIsModalOpen(true);
+    if (blocks[index]?.block?.model?.video) {
+      {
+        setSelectedVideoIndex(index);
+        setIsModalOpen(true);
+      }
     }
-  };
 
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-    setSelectedVideoIndex(null);
-  };
+    const handleCloseModal = () => {
+      setIsModalOpen(false);
+      setSelectedVideoIndex(null);
+    };
 
-  return (
-    <>
-      <BumpLoader />
-      <section
-        aria-label={title}
-        role="region"
-        data-testid="portrait-video-carousel"
-        css={styles.section}
-      >
-        <Heading
-          level={2}
-          size="doublePica"
-          fontVariant="sansBold"
-          css={styles.heading}
+    return (
+      <>
+        <BumpLoader />
+        <section
+          aria-label={title}
+          role="region"
+          data-testid="portrait-video-carousel"
+          css={styles.section}
         >
-          {title}
-        </Heading>
-        <noscript>
-          <PortraitVideoNoJs />
-        </noscript>
-        <div css={styles.carouselContainer}>
-          <PortraitCarouselNavigation scrollPaneRef={scrollRef} />
-          <ul
-            ref={scrollRef}
-            css={styles.carousel}
-            data-testid="pv-carousel"
-            tabIndex={-1}
-            role="list"
+          <Heading
+            level={2}
+            size="doublePica"
+            fontVariant="sansBold"
+            css={styles.heading}
           >
-            {blocks.map((item, index) => (
-              <PortraitVideoPromo
-                {...item}
-                key={item.id}
-                onClick={() => handlePromoClick(index)}
-                itemPosition={index}
-                groupTracker={{
-                  itemCount: blocks.length,
-                  resourceId: groupTrackingId,
-                }}
-              />
-            ))}
-          </ul>
-        </div>
-        {isModalOpen &&
-          selectedVideoIndex !== null &&
-          createPortal(
-            <PortraitVideoModal
-              blocks={blocks.map(item => ({
-                type: 'portraitClipMedia',
-                model: {
-                  type: 'video',
-                  images:
-                    item.images?.map(({ urlTemplate, url }) => ({
-                      source: url,
-                      urlTemplate,
-                    })) ?? [],
-                  video: {
-                    id: item.video?.id || '',
-                    title: item.headlines?.promoHeadline || '',
-                    holdingImageURL: item.images?.[0]?.url ?? '',
-                    version: {
-                      id: item.video?.version?.id || '',
-                      duration: item.video?.version?.duration || 'PT0M0S',
-                      kind: item.video?.version?.kind || 'programme',
-                      territories: item.video?.version?.territories || [],
-                      guidance: item.video?.version?.guidance ?? null,
-                    },
-                    isEmbeddingAllowed: item.video?.isEmbeddingAllowed ?? true,
-                  },
-                },
-              }))}
-              selectedVideoIndex={selectedVideoIndex}
-              onClose={handleCloseModal}
-            />,
-            document.body,
-          )}
-      </section>
-    </>
-  );
+            {title}
+          </Heading>
+          <noscript>
+            <PortraitVideoNoJs />
+          </noscript>
+          <div css={styles.carouselContainer}>
+            <PortraitCarouselNavigation scrollPaneRef={scrollRef} />
+            <ul
+              ref={scrollRef}
+              css={styles.carousel}
+              data-testid="pv-carousel"
+              tabIndex={-1}
+              role="list"
+            >
+              {blocks.map((item, index) => (
+                <PortraitVideoPromo
+                  {...item}
+                  key={item.id}
+                  onClick={() => handlePromoClick(index)}
+                  blockPosition={index}
+                  groupTracker={{
+                    itemCount: blocks.length,
+                    resourceId: groupTrackingId,
+                  }}
+                />
+              ))}
+            </ul>
+          </div>
+          {isModalOpen &&
+            selectedVideoIndex !== null &&
+            createPortal(
+              <PortraitVideoModal
+                blocks={blocks.map(block => block.block)} // this still mapping but trying to retain the modal props to be as close to bff structure as poss
+                selectedVideoIndex={selectedVideoIndex}
+                onClose={handleCloseModal}
+              />,
+              document.body,
+            )}
+        </section>
+      </>
+    );
+  };
 };
-
 export default PortraitVideoCarousel;
