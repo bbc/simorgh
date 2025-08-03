@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx, useTheme } from '@emotion/react';
-import { PortraitVideoPromoProps } from '#app/models/types/portraitVideo';
 import Image from '#app/components/Image';
 import Text from '#app/components/Text';
 import { Play } from '#app/components/icons';
@@ -13,23 +12,37 @@ import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import getSrcSets from '#app/utilities/getSrcSets';
 import styles from './index.styles';
+import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
+import { GroupTracker } from '#app/components/ATIAnalytics/types';
 
 const DEFAULT_TRANSLATION = {
   video: 'video',
   play: 'Play',
   duration: 'Duration',
 };
-export default (block: PortraitVideoPromoProps) => {
+
+type PortraitVideoPromoProps = {
+  block: PortraitClipMediaBlock;
+  onClick?: () => void;
+  key?: string;
+  groupTracker?: GroupTracker;
+  blockPosition?: number;
+};
+
+export default ({
+  block,
+  onClick,
+  blockPosition = 0,
+  groupTracker,
+}: PortraitVideoPromoProps) => {
   const { mq } = useTheme();
-  const { id, onClick, blockPosition = 0, groupTracker } = block;
   const {
     defaultImage,
     defaultImageAltText,
     translations: { media = DEFAULT_TRANSLATION },
   } = use(ServiceContext);
 
-  const { model } = block.block; // this looks weird..
-  const { images, video } = model;
+  const { images, video } = block.model;
 
   const imageUrl = images?.[0]?.source ?? defaultImage;
   const imageUrlTemplate = images?.[0]?.urlTemplate;
@@ -42,6 +55,7 @@ export default (block: PortraitVideoPromoProps) => {
     play: actionType,
     duration: durationTranslation,
   } = media;
+
   let momentDuration = null;
   let durationString = '';
   let durationSpokenString = '';
@@ -83,7 +97,7 @@ export default (block: PortraitVideoPromoProps) => {
       text: headline,
       position: adjustedBlockPosition,
       ...(momentDuration && { duration: momentDuration.asSeconds() }),
-      resourceId: id,
+      resourceId: video?.id,
     },
   };
 

@@ -7,6 +7,7 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import * as useViewTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import PortraitVideoPromo from '.';
+import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
 
 describe('PortraitVideoPromo', () => {
   beforeAll(() => {
@@ -14,24 +15,21 @@ describe('PortraitVideoPromo', () => {
   });
 
   it('Should contain a visually hidden text with required screen reader details for the component', () => {
-    const sampleHeadlines = {
-      promoHeadline: 'Sample Heading',
-    };
     const sampleVideoData = {
-      id: 'p01wjx7v',
-      version: {
-        duration: 'PT13S',
-        kind: 'programme',
-        territories: ['uk', 'nonuk'],
+      model: {
+        video: {
+          title: 'Sample Heading',
+          version: {
+            duration: 'PT13S',
+            kind: 'programme',
+            territories: ['uk', 'nonuk'],
+          },
+        },
       },
-    };
+    } as PortraitClipMediaBlock;
 
     const { container } = render(
-      <PortraitVideoPromo
-        id="testId"
-        headlines={sampleHeadlines}
-        video={sampleVideoData}
-      />,
+      <PortraitVideoPromo block={sampleVideoData} />,
       { service: 'portuguese' },
     );
 
@@ -48,11 +46,22 @@ describe('PortraitVideoPromo', () => {
   });
 
   it('Should not show a visually hidden duration if no duration is given', () => {
-    const sampleHeadlines = { promoHeadline: 'Sample Heading' };
+    const sampleVideoData = {
+      model: {
+        video: {
+          version: {
+            kind: 'programme',
+            territories: ['uk', 'nonuk'],
+          },
+        },
+      },
+    } as PortraitClipMediaBlock;
 
     const { container } = render(
-      <PortraitVideoPromo id="testId" headlines={sampleHeadlines} />,
-      { service: 'portuguese' },
+      <PortraitVideoPromo block={sampleVideoData} />,
+      {
+        service: 'portuguese',
+      },
     );
 
     const textContents = container
@@ -63,17 +72,28 @@ describe('PortraitVideoPromo', () => {
   });
 
   it('Should contain the correct image from the BFF response', () => {
-    const sampleImages = [
-      {
-        url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8v.jpg',
-        urlTemplate:
-          'https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8v.jpg',
-        altText: 'Corrida armamentista na Europa',
+    const sampleVideoData = {
+      model: {
+        images: [
+          {
+            source:
+              'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8v.jpg',
+            urlTemplate:
+              'https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8v.jpg',
+          },
+        ],
+        video: {
+          version: {
+            duration: 'PT13S',
+            kind: 'programme',
+            territories: ['uk', 'nonuk'],
+          },
+        },
       },
-    ];
+    } as PortraitClipMediaBlock;
 
     const { container } = render(
-      <PortraitVideoPromo id="testId" images={sampleImages} />,
+      <PortraitVideoPromo block={sampleVideoData} />,
     );
 
     const image = container.querySelector(
@@ -84,7 +104,21 @@ describe('PortraitVideoPromo', () => {
   });
 
   it('Should contain a default image if not image src is provided in the BFF response', () => {
-    const { container } = render(<PortraitVideoPromo id="testId" />);
+    const sampleVideoData = {
+      model: {
+        video: {
+          version: {
+            duration: 'PT13S',
+            kind: 'programme',
+            territories: ['uk', 'nonuk'],
+          },
+        },
+      },
+    } as PortraitClipMediaBlock;
+
+    const { container } = render(
+      <PortraitVideoPromo block={sampleVideoData} />,
+    );
 
     const image = container.querySelector(
       'img[src="https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png"]',
@@ -94,7 +128,19 @@ describe('PortraitVideoPromo', () => {
   });
 
   it('Should initialise the useViewTracker hook with the correct data', async () => {
-    const sampleHeadlines = { promoHeadline: 'Sample Heading' };
+    const sampleVideoData = {
+      model: {
+        video: {
+          id: 'testId',
+          title: 'Sample Heading',
+          version: {
+            kind: 'programme',
+            territories: ['uk', 'nonuk'],
+          },
+        },
+      },
+    } as PortraitClipMediaBlock;
+
     const groupTracker = {
       itemCount: 15,
       resourceId: 'test-group-resource-id',
@@ -104,10 +150,9 @@ describe('PortraitVideoPromo', () => {
     await act(async () => {
       render(
         <PortraitVideoPromo
-          id="testId"
+          block={sampleVideoData}
+          blockPosition={2}
           groupTracker={groupTracker}
-          itemPosition={2}
-          headlines={sampleHeadlines}
         />,
       );
     });
@@ -129,12 +174,20 @@ describe('PortraitVideoPromo', () => {
   });
 
   it('Should scroll to the center when tabbed', async () => {
-    const sampleHeadlines = {
-      promoHeadline: 'Sample Heading',
-    };
+    const sampleVideoData = {
+      model: {
+        video: {
+          version: {
+            duration: 'PT13S',
+            kind: 'programme',
+            territories: ['uk', 'nonuk'],
+          },
+        },
+      },
+    } as PortraitClipMediaBlock;
 
     await act(async () => {
-      render(<PortraitVideoPromo id="testId" headlines={sampleHeadlines} />, {
+      render(<PortraitVideoPromo block={sampleVideoData} />, {
         service: 'portuguese',
       });
     });

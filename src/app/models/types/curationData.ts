@@ -1,7 +1,7 @@
 import { OEmbedData } from '#app/components/Embeds/types';
+import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
 import { RadioScheduleData } from '#app/models/types/radioSchedule';
 import { MostReadData } from '../../components/MostRead/types';
-import { PortraitVideoPromoProps } from './portraitVideo';
 
 // This maps to the Summary type definition from the BFF
 interface BaseSummary {
@@ -62,7 +62,7 @@ export interface BaseCuration {
   radioSchedule?: RadioScheduleData[];
   embed?: OEmbedData;
   portraitVideo?: {
-    blocks: PortraitVideoPromoProps[];
+    blocks: PortraitClipMediaBlock[];
   };
 }
 
