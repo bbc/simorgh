@@ -238,6 +238,7 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
         closeVideo: 'Jáde',
+        endOfContentClose: 'Kò sí àkóónú mọ́. Jáde',
       },
       socialEmbed: {
         caption: {

@@ -251,6 +251,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'O podcast está disponível em',
         download: 'Baixar episódio',
         closeVideo: 'Sair',
+        endOfContentClose: 'Fim deste conteúdo. Sair',
       },
       carousel: {
         previous: 'Scroll to previous item',

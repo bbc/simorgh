@@ -938,5 +938,16 @@ describe('Article Page', () => {
       const title = screen.queryByRole('strong');
       expect(title).not.toBeInTheDocument();
     });
+
+    it('should render read time component when readTime is supplied in metadata', () => {
+      render(
+        <Context service="pidgin">
+          <ArticlePage pageData={articleDataPidgin} />
+        </Context>,
+      );
+
+      const readTime = screen.getByText('Estimated Read Time: 1 minute');
+      expect(readTime).toBeInTheDocument();
+    });
   });
 });
