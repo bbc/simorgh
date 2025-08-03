@@ -1,209 +1,178 @@
 import React from 'react';
-import * as viewTracking from '#hooks/useViewTracker';
-import * as clickTracking from '#hooks/useClickTrackerHandler';
+// import * as viewTracking from '#hooks/useViewTracker';
+// import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { render } from '../react-testing-library-with-providers';
-import {
-  threeLinks,
-  oneLinkOnly,
-  oneLinkWithNoTitle,
-  moreThanThreeLinks,
-  topStoriesBlocks,
-} from './helpers/fixtureData';
-import ScrollablePromo from '.';
-import { edOjA, edOjB } from './fixtures';
-import { MEDIA_ARTICLE_PAGE } from '../../routes/utils/pageTypes';
+import { topStoriesBlocks } from './helpers/fixtureData';
+import TopBarOJs from '.';
 
-describe('ScrollablePromo', () => {
-  describe('Mid Page ScrollablePromo', () => {
-    it('should return null if no data is passed', () => {
-      const { container } = render(<ScrollablePromo blocks={[]} />);
-      expect(container).toBeEmptyDOMElement();
-    });
+describe('TopBarOJs', () => {
+  // Need to check if any of these tests are relevant to the new TopBar component
+  // describe('Mid Page ScrollablePromo', () => {
+  //   it('should return null if no data is passed', () => {
+  //     const { container } = render(<TopBarOJs blocks={[]} />);
+  //     expect(container).toBeEmptyDOMElement();
+  //   });
 
-    it('should render max 3 promo items', () => {
-      const { getAllByRole } = render(
-        <ScrollablePromo blocks={moreThanThreeLinks} />,
-      );
-      expect(getAllByRole('listitem').length).toEqual(3);
-    });
+  //   it('should render max 3 promo items', () => {
+  //     const { getAllByRole } = render(
+  //       <ScrollablePromo blocks={moreThanThreeLinks} />,
+  //     );
+  //     expect(getAllByRole('listitem').length).toEqual(3);
+  //   });
 
-    it('should render single promo item', () => {
-      const { container } = render(<ScrollablePromo blocks={oneLinkOnly} />);
-      expect(container.childElementCount).toEqual(1);
-    });
+  //   it('should render single promo item', () => {
+  //     const { container } = render(<ScrollablePromo blocks={oneLinkOnly} />);
+  //     expect(container.childElementCount).toEqual(1);
+  //   });
 
-    it('should render single promo item with a title', () => {
-      const { container, getByTestId } = render(
-        <ScrollablePromo blocks={oneLinkOnly} />,
-      );
-      expect(container.childElementCount).toEqual(1);
-      expect(getByTestId('eoj-recommendations-heading')).toBeInTheDocument();
-    });
+  //   it('should render single promo item with a title', () => {
+  //     const { container, getByTestId } = render(
+  //       <ScrollablePromo blocks={oneLinkOnly} />,
+  //     );
+  //     expect(container.childElementCount).toEqual(1);
+  //     expect(getByTestId('eoj-recommendations-heading')).toBeInTheDocument();
+  //   });
 
-    it('should render single promo item without a title', () => {
-      const { container, queryByTestId } = render(
-        <ScrollablePromo blocks={oneLinkWithNoTitle} />,
-      );
-      expect(container.childElementCount).toEqual(1);
-      expect(
-        queryByTestId('eoj-recommendations-heading'),
-      ).not.toBeInTheDocument();
-    });
+  //   it('should render single promo item without a title', () => {
+  //     const { container, queryByTestId } = render(
+  //       <ScrollablePromo blocks={oneLinkWithNoTitle} />,
+  //     );
+  //     expect(container.childElementCount).toEqual(1);
+  //     expect(
+  //       queryByTestId('eoj-recommendations-heading'),
+  //     ).not.toBeInTheDocument();
+  //   });
 
-    it('should not render a list when there is only one promo', () => {
-      const { queryByRole } = render(<ScrollablePromo blocks={oneLinkOnly} />);
+  //   it('should not render a list when there is only one promo', () => {
+  //     const { queryByRole } = render(<ScrollablePromo blocks={oneLinkOnly} />);
 
-      expect(queryByRole('list')).not.toBeInTheDocument();
-      expect(queryByRole('listitem')).not.toBeInTheDocument();
-    });
+  //     expect(queryByRole('list')).not.toBeInTheDocument();
+  //     expect(queryByRole('listitem')).not.toBeInTheDocument();
+  //   });
 
-    it('should render unordered list if more than 1 item', () => {
-      const { queryByRole, getAllByRole } = render(
-        <ScrollablePromo blocks={threeLinks} />,
-      );
-      expect(queryByRole('list')).toBeInTheDocument();
-      expect(getAllByRole('listitem').length).toEqual(3);
-    });
+  //   it('should render unordered list if more than 1 item', () => {
+  //     const { queryByRole, getAllByRole } = render(
+  //       <ScrollablePromo blocks={threeLinks} />,
+  //     );
+  //     expect(queryByRole('list')).toBeInTheDocument();
+  //     expect(getAllByRole('listitem').length).toEqual(3);
+  //   });
 
-    describe('event tracking in editorial onward journeys', () => {
-      afterEach(() => {
-        jest.clearAllMocks();
-      });
+  //   describe('event tracking in editorial onward journeys', () => {
+  //     afterEach(() => {
+  //       jest.clearAllMocks();
+  //     });
 
-      it('should call the view tracking hook with the correct params with one editorial onward journey', () => {
-        const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+  //     it('should call the view tracking hook with the correct params with one editorial onward journey', () => {
+  //       const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
 
-        render(
-          <ScrollablePromo blocks={edOjA.model.blocks} blockGroupIndex={1} />,
-        );
+  //       render(
+  //         <ScrollablePromo blocks={edOjA.model.blocks} blockGroupIndex={1} />,
+  //       );
 
-        expect(viewTrackerSpy).toHaveBeenCalledWith({
-          componentName: 'edoj1',
-          format: 'CHD=edoj',
-        });
-      });
+  //       expect(viewTrackerSpy).toHaveBeenCalledWith({
+  //         componentName: 'edoj1',
+  //         format: 'CHD=edoj',
+  //       });
+  //     });
 
-      it('should call the view tracking hook with the correct params with multiple editorial onward journeys', () => {
-        const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
-        render(
-          <ScrollablePromo blocks={edOjA.model.blocks} blockGroupIndex={1} />,
-        );
-        render(
-          <ScrollablePromo blocks={edOjB.model.blocks} blockGroupIndex={2} />,
-        );
+  //     it('should call the view tracking hook with the correct params with multiple editorial onward journeys', () => {
+  //       const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+  //       render(
+  //         <ScrollablePromo blocks={edOjA.model.blocks} blockGroupIndex={1} />,
+  //       );
+  //       render(
+  //         <ScrollablePromo blocks={edOjB.model.blocks} blockGroupIndex={2} />,
+  //       );
 
-        expect(viewTrackerSpy).toHaveBeenCalledTimes(4);
-        expect(viewTrackerSpy).toHaveBeenCalledWith({
-          componentName: 'edoj1',
-          format: 'CHD=edoj',
-        });
-        expect(viewTrackerSpy).toHaveBeenCalledWith({
-          componentName: 'edoj2',
-          format: 'CHD=edoj',
-        });
-      });
+  //       expect(viewTrackerSpy).toHaveBeenCalledTimes(4);
+  //       expect(viewTrackerSpy).toHaveBeenCalledWith({
+  //         componentName: 'edoj1',
+  //         format: 'CHD=edoj',
+  //       });
+  //       expect(viewTrackerSpy).toHaveBeenCalledWith({
+  //         componentName: 'edoj2',
+  //         format: 'CHD=edoj',
+  //       });
+  //     });
 
-      it('should call the click tracking hook with one editorial onward journey', () => {
-        const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
-        render(
-          <ScrollablePromo blocks={edOjA.model.blocks} blockGroupIndex={1} />,
-        );
+  //     it('should call the click tracking hook with one editorial onward journey', () => {
+  //       const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
+  //       render(
+  //         <ScrollablePromo blocks={edOjA.model.blocks} blockGroupIndex={1} />,
+  //       );
 
-        expect(clickTrackerSpy).toHaveBeenCalledWith({
-          componentName: 'edoj1',
-          format: 'CHD=edoj',
-        });
-      });
+  //       expect(clickTrackerSpy).toHaveBeenCalledWith({
+  //         componentName: 'edoj1',
+  //         format: 'CHD=edoj',
+  //       });
+  //     });
 
-      it('should call the click tracking hook with multiple editorial onward journeys', () => {
-        const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
-        render(
-          <ScrollablePromo blocks={edOjA.model.blocks} blockGroupIndex={1} />,
-        );
-        render(
-          <ScrollablePromo blocks={edOjB.model.blocks} blockGroupIndex={2} />,
-        );
+  //     it('should call the click tracking hook with multiple editorial onward journeys', () => {
+  //       const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
+  //       render(
+  //         <ScrollablePromo blocks={edOjA.model.blocks} blockGroupIndex={1} />,
+  //       );
+  //       render(
+  //         <ScrollablePromo blocks={edOjB.model.blocks} blockGroupIndex={2} />,
+  //       );
 
-        expect(clickTrackerSpy).toHaveBeenCalledTimes(4);
-        expect(clickTrackerSpy).toHaveBeenCalledWith({
-          componentName: 'edoj1',
-          format: 'CHD=edoj',
-        });
-        expect(clickTrackerSpy).toHaveBeenCalledWith({
-          componentName: 'edoj2',
-          format: 'CHD=edoj',
-        });
-      });
-    });
+  //       expect(clickTrackerSpy).toHaveBeenCalledTimes(4);
+  //       expect(clickTrackerSpy).toHaveBeenCalledWith({
+  //         componentName: 'edoj1',
+  //         format: 'CHD=edoj',
+  //       });
+  //       expect(clickTrackerSpy).toHaveBeenCalledWith({
+  //         componentName: 'edoj2',
+  //         format: 'CHD=edoj',
+  //       });
+  //     });
+  //   });
 
-    it('it should match a11y snapshot for single card', () => {
-      const { container } = render(<ScrollablePromo blocks={oneLinkOnly} />);
-      expect(container).toMatchSnapshot();
-    });
+  //   it('it should match a11y snapshot for single card', () => {
+  //     const { container } = render(<ScrollablePromo blocks={oneLinkOnly} />);
+  //     expect(container).toMatchSnapshot();
+  //   });
 
-    it('it should match a11y snapshot for list', () => {
-      const { container } = render(<ScrollablePromo blocks={threeLinks} />);
-      expect(container).toMatchSnapshot();
-    });
+  //   it('it should match a11y snapshot for list', () => {
+  //     const { container } = render(<ScrollablePromo blocks={threeLinks} />);
+  //     expect(container).toMatchSnapshot();
+  //   });
 
-    it('it should match a11y snapshot for list with no title', () => {
-      const { container } = render(
-        <ScrollablePromo blocks={oneLinkWithNoTitle} />,
-      );
-      expect(container).toMatchSnapshot();
-    });
+  //   it('it should match a11y snapshot for list with no title', () => {
+  //     const { container } = render(
+  //       <ScrollablePromo blocks={oneLinkWithNoTitle} />,
+  //     );
+  //     expect(container).toMatchSnapshot();
+  //   });
 
-    it('it should match snapshot when in dark ui mode', () => {
-      const { container } = render(
-        <ScrollablePromo blocks={oneLinkWithNoTitle} />,
-        {
-          pageType: MEDIA_ARTICLE_PAGE,
-        },
-      );
-      expect(container).toMatchSnapshot();
-    });
-  });
+  //   it('it should match snapshot when in dark ui mode', () => {
+  //     const { container } = render(
+  //       <ScrollablePromo blocks={oneLinkWithNoTitle} />,
+  //       {
+  //         pageType: MEDIA_ARTICLE_PAGE,
+  //       },
+  //     );
+  //     expect(container).toMatchSnapshot();
+  //   });
+  // });
 
-  describe('OJ Top Bar ScrollablePromo', () => {
-    it('it should display Top Stories label when experimentVariant is top-bar-top-stories', () => {
+  describe('OJ Top Bar Component', () => {
+    it('it should display Top Stories label', () => {
       const { getByText, queryByText } = render(
-        <ScrollablePromo
-          blocks={topStoriesBlocks}
-          experimentVariant="top-bar-top-stories"
-        />,
+        <TopBarOJs blocks={topStoriesBlocks} />,
       );
       expect(getByText('Top Stories')).toBeVisible();
       expect(queryByText('Popular Reads')).toBeNull();
     });
 
-    it('it should display Top Stories label when experimentVariant is read-more-a-and-top-stories', () => {
-      const { getByText, queryByText } = render(
-        <ScrollablePromo
-          blocks={topStoriesBlocks}
-          experimentVariant="read-more-a-and-top-stories"
-        />,
-      );
-      expect(getByText('Top Stories')).toBeVisible();
-      expect(queryByText('Popular Reads')).toBeNull();
-    });
-
-    it('it should display 3 promo items with Top Stories when experimentVariant is top-bar-top-stories', () => {
-      const { getAllByRole } = render(
-        <ScrollablePromo
-          blocks={topStoriesBlocks}
-          experimentVariant="top-bar-top-stories"
-        />,
-      );
+    it('it should display 3 promo items with Top Stories', () => {
+      const { getAllByRole } = render(<TopBarOJs blocks={topStoriesBlocks} />);
       expect(getAllByRole('listitem')).toHaveLength(3);
     });
 
-    it('it should display Top Stories content when experimentVariant is top-bar-top-stories', () => {
-      const { getAllByRole } = render(
-        <ScrollablePromo
-          blocks={topStoriesBlocks}
-          experimentVariant="top-bar-top-stories"
-        />,
-      );
+    it('it should display Top Stories content', () => {
+      const { getAllByRole } = render(<TopBarOJs blocks={topStoriesBlocks} />);
       const expectedFirstHeadline =
         topStoriesBlocks[0].headlines.promoHeadline.blocks[0].model.blocks[0]
           .model.text;
