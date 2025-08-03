@@ -52,39 +52,16 @@ describe('ScrollablePromo', () => {
   });
 
   describe('OJ Top Bar Promo', () => {
-    it('should display Top Stories content when experimentVariant is top-bar-top-stories', () => {
-      const { container } = render(
-        <ScrollablePromo
-          block={topStoriesBlocks[0]}
-          experimentVariant="top-bar-top-stories"
-        />,
-      );
+    it('should display Top Stories content', () => {
+      const { container } = render(<TopBarOJs block={topStoriesBlocks[0]} />);
       const expectedHeadline =
         topStoriesBlocks[0].headlines.promoHeadline.blocks[0].model.blocks[0]
           .model.text;
       expect(container).toHaveTextContent(expectedHeadline);
     });
 
-    it('should display Top Stories content when experimentVariant is read-more-a-and-top-stories', () => {
-      const { container } = render(
-        <ScrollablePromo
-          block={topStoriesBlocks[0]}
-          experimentVariant="read-more-a-and-top-stories"
-        />,
-      );
-      const expectedHeadline =
-        topStoriesBlocks[0].headlines.promoHeadline.blocks[0].model.blocks[0]
-          .model.text;
-      expect(container).toHaveTextContent(expectedHeadline);
-    });
-
-    it('should render a link on Top Stories article headline when experimentVariant is top-bar-top-stories', () => {
-      const { queryByRole } = render(
-        <ScrollablePromo
-          block={topStoriesBlocks[2]}
-          experimentVariant="top-bar-top-stories"
-        />,
-      );
+    it('should render a link on Top Stories article headline', () => {
+      const { queryByRole } = render(<TopBarOJs block={topStoriesBlocks[2]} />);
       expect(queryByRole('link')).toBeInTheDocument();
     });
 
@@ -96,7 +73,6 @@ describe('ScrollablePromo', () => {
     });
 
     it('should display a LiveLabel when returning Top Stories', () => {
-      console.log(topStoriesBlocksWithLiveItem[1]);
       const { container } = render(
         <TopBarOJs block={topStoriesBlocksWithLiveItem[1]} />,
       );
