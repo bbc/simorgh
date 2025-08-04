@@ -11,9 +11,9 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import getSrcSets from '#app/utilities/getSrcSets';
-import styles from './index.styles';
 import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
 import { GroupTracker } from '#app/components/ATIAnalytics/types';
+import styles from './index.styles';
 
 const DEFAULT_TRANSLATION = {
   video: 'video',

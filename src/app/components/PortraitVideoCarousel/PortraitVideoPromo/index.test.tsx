@@ -6,8 +6,8 @@ import {
   fireEvent,
 } from '#app/components/react-testing-library-with-providers';
 import * as useViewTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import PortraitVideoPromo from '.';
 import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
+import PortraitVideoPromo from '.';
 
 describe('PortraitVideoPromo', () => {
   beforeAll(() => {

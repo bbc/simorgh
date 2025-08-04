@@ -265,6 +265,7 @@ export type PortraitClipMediaBlock = {
     images: {
       source: string;
       urlTemplate?: string;
+      altText?: string;
     }[];
     video: {
       id: string;
