@@ -54,26 +54,28 @@
                 "type": "video",
                 "images": [
                   {
-                    "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0lt2vtl.jpg",
-                    "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0lt2vtl.jpg"
+                    "source": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8s.jpg",
+                    "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8s.jpg",
+                    "altText": "Pelo menos 53 presos escaparam da prisão de Katacane, na Indonésia"
                   },
                   {
-                    "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0lt2vtl.jpg",
-                    "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0lt2vtl.jpg"
+                    "source": "https://ichef.bbci.co.uk/ace/standard/1024/cpsdevpb/42c1/test/7900c530-0e0e-11f0-a9e9-f552fbd9336f.jpg",
+                    "urlTemplate": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/42c1/test/7900c530-0e0e-11f0-a9e9-f552fbd9336f.jpg",
+                    "altText": "test"
                   }
                 ],
                 "video": {
-                  "id": "urn:bbc:pips:pid:p0lt2v74",
-                  "title": "Tsunami chega ao Havaí após terremoto fortíssimo atingir a Rússia",
-                  "holdingImageURL": "https://ichef.bbci.co.uk/images/ic/512xn/p0lt2vtl.jpg",
+                  "id": "urn:bbc:optimo:asset:cdrqd0m5nlmo",
+                  "title": "Optimo article with portrait video embed (1)",
+                  "holdingImageURL": "https://ichef.bbci.co.uk/ace/standard/512/cpsdevpb/42c1/test/7900c530-0e0e-11f0-a9e9-f552fbd9336f.jpg",
                   "version": {
-                    "id": "p0lt2v7b",
-                    "duration": "PT36S",
+                    "id": "p01wjx6g",
+                    "duration": "PT13S",
                     "kind": "programme",
                     "guidance": null,
                     "territories": [
-                      "nonuk",
-                      "uk"
+                      "uk",
+                      "nonuk"
                     ]
                   },
                   "isEmbeddingAllowed": false
@@ -86,26 +88,164 @@
                 "type": "video",
                 "images": [
                   {
-                    "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0lt2tj0.jpg",
-                    "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0lt2tj0.jpg"
+                    "source": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx5j.jpg",
+                    "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx5j.jpg",
+                    "altText": "A Nova Rota da Seda, ou Cinturão e Rota, é considerada a maior estratégia"
                   },
                   {
-                    "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0lt2tj0.jpg",
-                    "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0lt2tj0.jpg"
+                    "source": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx5j.jpg",
+                    "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx5j.jpg",
+                    "altText": "A Nova Rota da Seda, ou Cinturão e Rota, é considerada a maior estratégia"
                   }
                 ],
                 "video": {
-                  "id": "urn:bbc:pips:pid:p0lt2smb",
-                  "title": "O momento em que forte terremoto atinge a Rússia",
-                  "holdingImageURL": "https://ichef.bbci.co.uk/images/ic/512xn/p0lt2tj0.jpg",
+                  "id": "urn:bbc:pips:pid:p01wjx4r",
+                  "title": "China: o que é a Nova Rota da Seda, crucial na estratégia geopolítica de Pequim (9x16)",
+                  "holdingImageURL": "https://ichef.test.bbci.co.uk/images/ic/512xn/p01wjx5j.jpg",
                   "version": {
-                    "id": "p0lt2smg",
-                    "duration": "PT1M19S",
+                    "id": "p01wjx4t",
+                    "duration": "PT1M10S",
                     "kind": "programme",
                     "guidance": null,
                     "territories": [
                       "nonuk",
                       "uk"
+                    ]
+                  },
+                  "isEmbeddingAllowed": true
+                }
+              }
+            },
+            {
+              "type": "portraitClipMedia",
+              "model": {
+                "type": "video",
+                "images": [
+                  {
+                    "source": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx3n.jpg",
+                    "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx3n.jpg",
+                    "altText": "O indiano Lalit Patidar, de 18 anos, foi reconhecido pelo Guinness World Records"
+                  },
+                  {
+                    "source": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx3n.jpg",
+                    "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx3n.jpg",
+                    "altText": "O indiano Lalit Patidar, de 18 anos, foi reconhecido pelo Guinness World Records"
+                  }
+                ],
+                "video": {
+                  "id": "urn:bbc:pips:pid:p01wjx29",
+                  "title": "O indiano reconhecido como 'pessoa mais peluda do mundo' (9x16)",
+                  "holdingImageURL": "https://ichef.test.bbci.co.uk/images/ic/512xn/p01wjx3n.jpg",
+                  "version": {
+                    "id": "p01wjx2c",
+                    "duration": "PT30S",
+                    "kind": "programme",
+                    "guidance": null,
+                    "territories": [
+                      "nonuk",
+                      "uk"
+                    ]
+                  },
+                  "isEmbeddingAllowed": true
+                }
+              }
+            },
+            {
+              "type": "portraitClipMedia",
+              "model": {
+                "type": "video",
+                "images": [
+                  {
+                    "source": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx3l.jpg",
+                    "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx3l.jpg",
+                    "altText": "Após 37 dias de internação, o papa Francisco recebeu alta do hospital"
+                  },
+                  {
+                    "source": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx3l.jpg",
+                    "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx3l.jpg",
+                    "altText": "Após 37 dias de internação, o papa Francisco recebeu alta do hospital"
+                  }
+                ],
+                "video": {
+                  "id": "urn:bbc:pips:pid:p01wjx35",
+                  "title": "Papa Francisco reencontra fiéis ao deixar hospital em Roma (9x16)",
+                  "holdingImageURL": "https://ichef.test.bbci.co.uk/images/ic/512xn/p01wjx3l.jpg",
+                  "version": {
+                    "id": "p01wjx37",
+                    "duration": "PT13S",
+                    "kind": "programme",
+                    "guidance": null,
+                    "territories": [
+                      "nonuk",
+                      "uk"
+                    ]
+                  },
+                  "isEmbeddingAllowed": true
+                }
+              }
+            },
+            {
+              "type": "portraitClipMedia",
+              "model": {
+                "type": "video",
+                "images": [
+                  {
+                    "source": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8v.jpg",
+                    "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8v.jpg",
+                    "altText": "A Europa está em uma espécie de \"corrida armamentista\" diante da crise da aliança"
+                  },
+                  {
+                    "source": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8v.jpg",
+                    "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8v.jpg",
+                    "altText": "A Europa está em uma espécie de \"corrida armamentista\" diante da crise da aliança"
+                  }
+                ],
+                "video": {
+                  "id": "urn:bbc:pips:pid:p01wjx5y",
+                  "title": "Europa se armando para guerra? Continente eleva gastos militares de olho em EUA e Rússia (9x16)",
+                  "holdingImageURL": "https://ichef.test.bbci.co.uk/images/ic/512xn/p01wjx8v.jpg",
+                  "version": {
+                    "id": "p01wjx60",
+                    "duration": "PT30S",
+                    "kind": "programme",
+                    "guidance": null,
+                    "territories": [
+                      "nonuk",
+                      "uk"
+                    ]
+                  },
+                  "isEmbeddingAllowed": true
+                }
+              }
+            },
+            {
+              "type": "portraitClipMedia",
+              "model": {
+                "type": "video",
+                "images": [
+                  {
+                    "source": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx7z.jpg",
+                    "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx7z.jpg",
+                    "altText": "Hoje nove países possuem armas nucleares"
+                  },
+                  {
+                    "source": "https://ichef.bbci.co.uk/ace/standard/1024/cpsdevpb/3106/test/8568bc10-0e0e-11f0-a9e9-f552fbd9336f.jpg",
+                    "urlTemplate": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/3106/test/8568bc10-0e0e-11f0-a9e9-f552fbd9336f.jpg",
+                    "altText": "Test"
+                  }
+                ],
+                "video": {
+                  "id": "urn:bbc:optimo:asset:cgp62emnrk5o",
+                  "title": "Article with portrait video embed (2)",
+                  "holdingImageURL": "https://ichef.bbci.co.uk/ace/standard/512/cpsdevpb/3106/test/8568bc10-0e0e-11f0-a9e9-f552fbd9336f.jpg",
+                  "version": {
+                    "id": "p01wjx71",
+                    "duration": "PT20S",
+                    "kind": "programme",
+                    "guidance": null,
+                    "territories": [
+                      "uk",
+                      "nonuk"
                     ]
                   },
                   "isEmbeddingAllowed": false
@@ -118,21 +258,23 @@
                 "type": "video",
                 "images": [
                   {
-                    "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0lqgm5b.jpg",
-                    "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0lqgm5b.jpg"
+                    "source": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8g.jpg",
+                    "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8g.jpg",
+                    "altText": "A sensação de não saber por onde começar, a falta de uma rotina"
                   },
                   {
-                    "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0lqgm5b.jpg",
-                    "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0lqgm5b.jpg"
+                    "source": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8g.jpg",
+                    "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8g.jpg",
+                    "altText": "A sensação de não saber por onde começar, a falta de uma rotina"
                   }
                 ],
                 "video": {
-                  "id": "urn:bbc:pips:pid:p0lqglnd",
-                  "title": "Imigração no Canadá virou 'tormento' para brasileiros?",
-                  "holdingImageURL": "https://ichef.bbci.co.uk/images/ic/512xn/p0lqgm5b.jpg",
+                  "id": "urn:bbc:pips:pid:p01wjx7v",
+                  "title": "4 erros de quem estuda para concursos públicos (9x16)",
+                  "holdingImageURL": "https://ichef.test.bbci.co.uk/images/ic/512xn/p01wjx8g.jpg",
                   "version": {
-                    "id": "p0lqglnv",
-                    "duration": "PT2M59S",
+                    "id": "p01wjx7x",
+                    "duration": "PT1M10S",
                     "kind": "programme",
                     "guidance": null,
                     "territories": [
@@ -140,7 +282,7 @@
                       "uk"
                     ]
                   },
-                  "isEmbeddingAllowed": false
+                  "isEmbeddingAllowed": true
                 }
               }
             },
@@ -150,21 +292,23 @@
                 "type": "video",
                 "images": [
                   {
-                    "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0lq9wtk.jpg",
-                    "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0lq9wtk.jpg"
+                    "source": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx51.jpg",
+                    "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx51.jpg",
+                    "altText": "text"
                   },
                   {
-                    "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0lq9wtk.jpg",
-                    "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0lq9wtk.jpg"
+                    "source": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx51.jpg",
+                    "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx51.jpg",
+                    "altText": "text"
                   }
                 ],
                 "video": {
-                  "id": "urn:bbc:pips:pid:p0lq9ffk",
-                  "title": "A cidade de 3.500 anos que conectava Pacífico com Andes e Amazônia",
-                  "holdingImageURL": "https://ichef.bbci.co.uk/images/ic/512xn/p0lq9wtk.jpg",
+                  "id": "urn:bbc:pips:pid:p01wjx3q",
+                  "title": "O estudante que pode ser um dos maiores estupradores do Reino Unido (9x16)",
+                  "holdingImageURL": "https://ichef.test.bbci.co.uk/images/ic/512xn/p01wjx51.jpg",
                   "version": {
-                    "id": "p0lq9ffp",
-                    "duration": "PT1M58S",
+                    "id": "p01wjx3s",
+                    "duration": "PT20S",
                     "kind": "programme",
                     "guidance": null,
                     "territories": [
@@ -172,7 +316,7 @@
                       "uk"
                     ]
                   },
-                  "isEmbeddingAllowed": false
+                  "isEmbeddingAllowed": true
                 }
               }
             },
@@ -182,21 +326,23 @@
                 "type": "video",
                 "images": [
                   {
-                    "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0lq9vtj.jpg",
-                    "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0lq9vtj.jpg"
+                    "source": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx48.jpg",
+                    "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx48.jpg",
+                    "altText": "De tempos em tempos, algum mecanismo do corpo humano é 'redescoberto' pela internet"
                   },
                   {
-                    "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0lq9vtj.jpg",
-                    "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0lq9vtj.jpg"
+                    "source": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx48.jpg",
+                    "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx48.jpg",
+                    "altText": "De tempos em tempos, algum mecanismo do corpo humano é 'redescoberto' pela internet"
                   }
                 ],
                 "video": {
-                  "id": "urn:bbc:pips:pid:p0lq9th7",
-                  "title": "'Nossa irmã morreu de câncer por causa de teorias da conspiração da nossa mãe'",
-                  "holdingImageURL": "https://ichef.bbci.co.uk/images/ic/512xn/p0lq9vtj.jpg",
+                  "id": "urn:bbc:pips:pid:p01wjx3g",
+                  "title": "A onda de evitar picos de glicose para emagrecer — e por que ela faz sentido (9x16)",
+                  "holdingImageURL": "https://ichef.test.bbci.co.uk/images/ic/512xn/p01wjx48.jpg",
                   "version": {
-                    "id": "p0lq9thm",
-                    "duration": "PT1M33S",
+                    "id": "p01wjx3j",
+                    "duration": "PT13S",
                     "kind": "programme",
                     "guidance": null,
                     "territories": [
@@ -204,103 +350,7 @@
                       "uk"
                     ]
                   },
-                  "isEmbeddingAllowed": false
-                }
-              }
-            },
-            {
-              "type": "portraitClipMedia",
-              "model": {
-                "type": "video",
-                "images": [
-                  {
-                    "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0lqk5vx.png",
-                    "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0lqk5vx.png"
-                  },
-                  {
-                    "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0lqk5vx.png",
-                    "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0lqk5vx.png"
-                  }
-                ],
-                "video": {
-                  "id": "urn:bbc:pips:pid:p0lqk478",
-                  "title": "Prédio na Síria é alvo de ataque israelense durante transmissão ao vivo",
-                  "holdingImageURL": "https://ichef.bbci.co.uk/images/ic/512xn/p0lqk5vx.png",
-                  "version": {
-                    "id": "p0lqk47g",
-                    "duration": "PT1M16S",
-                    "kind": "programme",
-                    "guidance": null,
-                    "territories": [
-                      "nonuk",
-                      "uk"
-                    ]
-                  },
-                  "isEmbeddingAllowed": false
-                }
-              }
-            },
-            {
-              "type": "portraitClipMedia",
-              "model": {
-                "type": "video",
-                "images": [
-                  {
-                    "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0lqb89k.jpg",
-                    "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0lqb89k.jpg"
-                  },
-                  {
-                    "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0lqb89k.jpg",
-                    "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0lqb89k.jpg"
-                  }
-                ],
-                "video": {
-                  "id": "urn:bbc:pips:pid:p0lqb81m",
-                  "title": "Show de Lady Gaga no Rio teve mais de 2 milhões de pessoas?",
-                  "holdingImageURL": "https://ichef.bbci.co.uk/images/ic/512xn/p0lqb89k.jpg",
-                  "version": {
-                    "id": "p0lqb81r",
-                    "duration": "PT2M27S",
-                    "kind": "programme",
-                    "guidance": null,
-                    "territories": [
-                      "nonuk",
-                      "uk"
-                    ]
-                  },
-                  "isEmbeddingAllowed": false
-                }
-              }
-            },
-            {
-              "type": "portraitClipMedia",
-              "model": {
-                "type": "video",
-                "images": [
-                  {
-                    "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0lq9wtw.jpg",
-                    "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0lq9wtw.jpg"
-                  },
-                  {
-                    "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0lq9wtw.jpg",
-                    "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0lq9wtw.jpg"
-                  }
-                ],
-                "video": {
-                  "id": "urn:bbc:pips:pid:p0lq9rrk",
-                  "title": "Chances de atingir a Terra? Asteroides em que cientistas estão de olho",
-                  "holdingImageURL": "https://ichef.bbci.co.uk/images/ic/512xn/p0lq9wtw.jpg",
-                  "version": {
-                    "id": "p0lq9rs4",
-                    "duration": "PT1M28S",
-                    "kind": "programme",
-                    "guidance": null,
-                    "territories": [
-                      "nonuk",
-                      "uk"
-                    ]
-                  },
-                  "isEmbeddingAllowed": false
+                  "isEmbeddingAllowed": true
                 }
               }
             }
