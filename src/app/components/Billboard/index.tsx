@@ -82,7 +82,7 @@ export default ({
               </Text>
             )}
           </div>
-          {!isLive() && summaries.length > 1 && (
+          {summaries.length > 1 && (
             <div css={styles.curationGridSection}>
               {showMoreOnThisTitle && (
                 <Heading
