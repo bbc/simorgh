@@ -46,7 +46,7 @@ export default ({
 
   const imageUrl = images?.[0]?.source ?? defaultImage;
   const imageUrlTemplate = images?.[0]?.urlTemplate;
-  const alt = defaultImageAltText; // altText doesn't exist on model.images yet in the bff
+  const alt = images?.[0]?.altText || defaultImageAltText;
   const headline = video?.title || '';
   const mediaISO8601Duration = video?.version?.duration;
 
@@ -93,10 +93,10 @@ export default ({
     groupTracker,
     viewThreshold: 1,
     itemTracker: {
+      ...(momentDuration && { duration: momentDuration.asSeconds() }),
       type: 'portrait-video-promo',
       text: headline,
       position: adjustedBlockPosition,
-      ...(momentDuration && { duration: momentDuration.asSeconds() }),
       resourceId: video?.id,
     },
   };
@@ -106,9 +106,7 @@ export default ({
     useClickTrackerHandler(eventTrackingData);
 
   const handleClick = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
-    if (clickTrackerHandler) {
-      clickTrackerHandler(e);
-    }
+    if (clickTrackerHandler) clickTrackerHandler(e);
     if (onClick) onClick();
   };
 
