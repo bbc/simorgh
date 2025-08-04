@@ -62,6 +62,13 @@ describe('Home Page', () => {
   });
 
   it('should have h2s for curation heading levels and h3 for summary heading levels', () => {
+    // Set the translation so the h2 is rendered
+    // this code can be removed once we have pidgin moreOnThis translation
+    const pidginServiceConfig = require('#app/lib/config/services/pidgin')
+      .service.default.translations;
+    const originalMoreOnThis = pidginServiceConfig.moreOnThis;
+    pidginServiceConfig.moreOnThis = 'More on this';
+
     // @ts-expect-error suppress pageData prop type conflicts
     const { container } = render(<HomePage pageData={pidginHomePageData} />, {
       service: 'pidgin',
@@ -69,6 +76,9 @@ describe('Home Page', () => {
     // for some reason, most read headings are not showing as headings in the count or if I log them
     expect(container.querySelectorAll('h2').length).toBe(15);
     expect(container.querySelectorAll('h3').length).toBe(45);
+
+    // Restore the original value - remove when pidgin moreOnThis translation is available
+    pidginServiceConfig.moreOnThis = originalMoreOnThis;
   });
 
   it('should apply provided margin size to the main element', () => {
