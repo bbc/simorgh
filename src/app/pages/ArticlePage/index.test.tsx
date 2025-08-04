@@ -940,9 +940,19 @@ describe('Article Page', () => {
     });
 
     it('should render read time component when readTime is supplied in metadata', () => {
+      const dataWithReadTime = {
+        ...articleDataPidgin,
+        metadata: {
+          ...articleDataPidgin.metadata,
+          stats: {
+            readTime: 5,
+            wordCount: 500,
+          },
+        },
+      };
       const { queryByTestId } = render(
         <Context service="pidgin">
-          <ArticlePage pageData={articleDataPidgin} />
+          <ArticlePage pageData={dataWithReadTime} />
         </Context>,
       );
 
