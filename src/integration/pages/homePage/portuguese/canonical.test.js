@@ -11,7 +11,7 @@ describe('Canonical', () => {
 
   const portraitVideoCurations = pageData.curations.filter(
     curation =>
-      curation.portraitVideo && Array.isArray(curation.portraitVideo.items),
+      curation.portraitVideo && Array.isArray(curation.portraitVideo.blocks),
   );
 
   const getPortraitCarousels = () =>
@@ -28,7 +28,7 @@ describe('Canonical', () => {
 
     portraitVideoCurations.forEach((curation, index) => {
       const videoList = videoCarousels[index];
-      const numberOfItems = curation.portraitVideo.items.length;
+      const numberOfItems = curation.portraitVideo.blocks.length;
 
       expect(videoList).toBeInTheDocument();
       expect(videoList.tagName).toBe('UL');
