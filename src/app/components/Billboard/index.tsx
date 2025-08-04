@@ -6,7 +6,6 @@ import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import { Summary } from '#app/models/types/curationData';
-import isLive from '#app/lib/utilities/isLive';
 import Heading from '../Heading';
 import MaskedImage from '../MaskedImage';
 import styles from './index.styles';
