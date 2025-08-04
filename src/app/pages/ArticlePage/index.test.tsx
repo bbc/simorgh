@@ -953,13 +953,12 @@ describe('Article Page', () => {
       const dataMissingReadTime = {
         ...articleDataPidgin,
         metadata: {
-          ...articleDataNews.metadata,
+          ...articleDataPidgin.metadata,
           stats: {},
         },
       };
       const { queryByTestId } = render(
         <Context service="pidgin">
-          {/* @ts-expect-error require partial data for testing purposes */}
           <ArticlePage pageData={dataMissingReadTime} />
         </Context>,
       );
