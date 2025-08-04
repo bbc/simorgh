@@ -10,6 +10,7 @@ import {
 } from '../../components/react-testing-library-with-providers';
 import HomePage from './HomePage';
 import { suppressPropWarnings } from '../../legacy/psammead/psammead-test-helpers/src';
+import { service as pidginServiceConfig } from '#app/lib/config/services/pidgin';
 
 jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>Chartbeat Analytics</div>;
@@ -63,11 +64,9 @@ describe('Home Page', () => {
 
   it('should have h2s for curation heading levels and h3 for summary heading levels', () => {
     // Set the translation so the h2 is rendered
-    // this code can be removed once we have pidgin moreOnThis translation
-    const pidginServiceConfig = require('#app/lib/config/services/pidgin')
-      .service.default.translations;
-    const originalMoreOnThis = pidginServiceConfig.moreOnThis;
-    pidginServiceConfig.moreOnThis = 'More on this';
+    const originalMoreOnThis =
+      pidginServiceConfig.default.translations.moreOnThis;
+    pidginServiceConfig.default.translations.moreOnThis = 'More on this';
 
     // @ts-expect-error suppress pageData prop type conflicts
     const { container } = render(<HomePage pageData={pidginHomePageData} />, {
@@ -78,7 +77,7 @@ describe('Home Page', () => {
     expect(container.querySelectorAll('h3').length).toBe(45);
 
     // Restore the original value - remove when pidgin moreOnThis translation is available
-    pidginServiceConfig.moreOnThis = originalMoreOnThis;
+    pidginServiceConfig.default.translations.moreOnThis = originalMoreOnThis;
   });
 
   it('should apply provided margin size to the main element', () => {
