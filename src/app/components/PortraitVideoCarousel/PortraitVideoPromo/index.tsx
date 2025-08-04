@@ -23,17 +23,16 @@ const DEFAULT_TRANSLATION = {
 
 type PortraitVideoPromoProps = {
   block: PortraitClipMediaBlock;
-  onClick?: () => void;
-  key?: string;
+  blockPosition: number;
   groupTracker?: GroupTracker;
-  blockPosition?: number;
+  onClick?: () => void;
 };
 
 export default ({
   block,
-  onClick,
   blockPosition = 0,
   groupTracker,
+  onClick,
 }: PortraitVideoPromoProps) => {
   const { mq } = useTheme();
   const {
