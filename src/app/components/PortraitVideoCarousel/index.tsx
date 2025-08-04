@@ -3,7 +3,6 @@
 import { jsx } from '@emotion/react';
 import React, { use, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { PortraitVideoCarouselProps } from '#app/models/types/portraitVideo';
 import { RequestContext } from '#app/contexts/RequestContext';
 import styles from './index.styles';
 import PortraitVideoModal from '../PortraitVideoModal';
@@ -12,6 +11,13 @@ import PortraitVideoPromo from './PortraitVideoPromo';
 import PortraitCarouselNavigation from './PortraitVideoCarouselNavigation';
 import Heading from '../Heading';
 import PortraitVideoNoJs from './PortraitVideoNoJs';
+import { PortraitClipMediaBlock } from '../MediaLoader/types';
+
+type PortraitVideoCarouselProps = {
+  title: string;
+  groupTrackingId?: string;
+  blocks: PortraitClipMediaBlock[];
+};
 
 const PortraitVideoCarousel = ({
   title,

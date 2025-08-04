@@ -23,7 +23,7 @@ const DEFAULT_TRANSLATION = {
 
 type PortraitVideoPromoProps = {
   block: PortraitClipMediaBlock;
-  blockPosition: number;
+  blockPosition?: number;
   groupTracker?: GroupTracker;
   onClick?: () => void;
 };
