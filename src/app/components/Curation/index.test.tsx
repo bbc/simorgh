@@ -59,11 +59,7 @@ const socialLinksCuration = kyrgyzFixture.data.curations.find(
 
 const portraitVideoCuration = portuguseHomePage.data.curations.find(
   ({ visualStyle, visualProminence, portraitVideo }) =>
-    visualStyle === INSITU &&
-    visualProminence === NORMAL &&
-    portraitVideo &&
-    portraitVideo?.blocks &&
-    portraitVideo?.blocks.length > 0,
+    visualStyle === INSITU && visualProminence === NORMAL && portraitVideo,
 );
 
 const components = {
