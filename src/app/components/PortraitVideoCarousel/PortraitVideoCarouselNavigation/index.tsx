@@ -11,7 +11,7 @@ const DEFAULT_TRANSLATION = {
   next: 'Scroll to next item',
 };
 
-type ScrollDirection = 'left' | 'right' | 'up' | 'down';
+type ScrollDirection = 'left' | 'right';
 
 type PortraitVideoCarouselNavigationProps = {
   scrollPaneRef: RefObject<HTMLUListElement | null>;
