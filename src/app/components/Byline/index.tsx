@@ -187,8 +187,8 @@ const Byline = ({
         </VisuallyHiddenText>
         <ul css={BylineCss.bylineList}>
           <li css={BylineCss.bylineContainer}>{contributors}</li>
-          {children && <li css={BylineCss.timestampLineBreak}>{children}</li>}
         </ul>
+        {children && <span css={BylineCss.timestampLineBreak}>{children}</span>}
       </section>
     )
   );
