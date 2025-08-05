@@ -35,17 +35,12 @@ const TopBarOJs = ({ blocks, id = 'top-bar-oj' }: TopBarOJsProps) => {
   const title = translations.topStoriesTitle || 'Top Stories';
 
   return (
-    <section
-      role="region"
-      aria-labelledby={id}
-      data-testid={id}
-      {...viewTracker}
-    >
+    <div aria-labelledby={id} data-testid={id} {...viewTracker}>
       <strong css={styles.labelComponent}>{title}</strong>
       <div css={styles.promoContainer}>
         <PromoList blocks={blocks} eventTrackingData={clickTracker} />
       </div>
-    </section>
+    </div>
   );
 };
 
