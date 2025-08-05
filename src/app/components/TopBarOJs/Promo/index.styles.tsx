@@ -5,6 +5,7 @@ export default {
     css({
       ...fontSizes.pica,
       ...fontVariants.serifBold,
+      display: 'inline-block',
       width: '100%',
       textDecoration: 'none',
       overflowX: 'hidden',
