@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '../../react-testing-library-with-providers';
+import { render, screen } from '../../react-testing-library-with-providers';
 import {
   PromoSingleBlock,
   oneLinkWithTimestamp,
@@ -53,7 +53,10 @@ describe('ScrollablePromo', () => {
 
   describe('OJ Top Bar Promo', () => {
     it('should display Top Stories content', () => {
-      const { container } = render(<TopBarOJs block={topStoriesBlocks[0]} />);
+      const { container } = render(
+        <TopBarOJs blocks={[topStoriesBlocks[0]]} />,
+      );
+      screen.debug();
       const expectedHeadline =
         topStoriesBlocks[0].headlines.promoHeadline.blocks[0].model.blocks[0]
           .model.text;
@@ -61,20 +64,22 @@ describe('ScrollablePromo', () => {
     });
 
     it('should render a link on Top Stories article headline', () => {
-      const { queryByRole } = render(<TopBarOJs block={topStoriesBlocks[2]} />);
+      const { queryByRole } = render(
+        <TopBarOJs blocks={[topStoriesBlocks[2]]} />,
+      );
       expect(queryByRole('link')).toBeInTheDocument();
     });
 
     it('should not display a timestamp on TopBar component', () => {
       const { queryByTestId } = render(
-        <TopBarOJs block={topStoriesBlocks[0]} />,
+        <TopBarOJs blocks={[topStoriesBlocks[0]]} />,
       );
       expect(queryByTestId('timestamp')).not.toBeInTheDocument();
     });
 
     it('should display a LiveLabel when returning Top Stories', () => {
       const { container } = render(
-        <TopBarOJs block={topStoriesBlocksWithLiveItem[1]} />,
+        <TopBarOJs blocks={[topStoriesBlocksWithLiveItem[1]]} />,
       );
       expect(
         container.querySelector('[class*="liveLabelPulse"]'),
