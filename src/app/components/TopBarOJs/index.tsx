@@ -41,7 +41,7 @@ const TopBarOJs = ({ blocks, id }: TopBarOJsProps) => {
       data-testid={id}
       {...viewTracker}
     >
-      <div css={styles.labelComponent}>{title}</div>
+      <strong css={styles.labelComponent}>{title}</strong>
       <div css={styles.promoContainer}>
         <PromoList blocks={blocks} eventTrackingData={clickTracker} />
       </div>
