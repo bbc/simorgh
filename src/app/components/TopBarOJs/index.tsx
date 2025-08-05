@@ -19,7 +19,7 @@ const eventTrackingData = {
   componentName: 'top-bar-oj',
 };
 
-const TopBarOJs = ({ blocks, id }: TopBarOJsProps) => {
+const TopBarOJs = ({ blocks, id = 'top-bar-oj' }: TopBarOJsProps) => {
   const { translations } = use(ServiceContext);
 
   const viewTracker = useViewTracker(eventTrackingData);
