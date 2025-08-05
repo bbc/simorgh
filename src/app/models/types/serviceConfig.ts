@@ -112,6 +112,15 @@ export type ServiceConfig = {
     };
   };
   googleSiteVerification?: string;
+  electionBanner?: {
+    heights?: {
+      desktop: number,
+      tablet: number,
+      mobile: number,
+    };
+    iframeSrc: string;
+    iframeDevSrc: string;
+  }
 };
 
 export type PodcastPromo = {
