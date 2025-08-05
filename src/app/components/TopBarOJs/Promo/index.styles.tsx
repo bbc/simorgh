@@ -21,9 +21,10 @@ export default {
     css({
       position: 'relative',
       backgroundColor: isDarkUi ? palette.GREY_3 : palette.WHITE,
-      padding: `${spacings.DOUBLE}rem`,
+      padding: `${spacings.FULL}rem`,
       marginBottom: 0,
       height: 'auto',
+      display: 'block',
       [mq.GROUP_0_MAX_WIDTH]: {
         width: `11.5rem`,
       },
