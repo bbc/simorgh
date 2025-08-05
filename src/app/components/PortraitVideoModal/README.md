@@ -1,6 +1,6 @@
 ## Description
 
-`PortraitVideoModal` renders a portrait-oriented video player inside a modal dialog, featuring a close button and full keyboard accessibility. The modal is rendered using `React.createPortal` to ensure it overlays all page content and uses the native `<dialog>` element for backdrop support and focus management.
+`PortraitVideoModal` renders a portrait-oriented video player inside a modal dialog, featuring a close button and full keyboard accessibility. The modal is rendered using `React.createPortal` to ensure it overlays all page content and uses a `<div role="dialog" />` for backdrop support and focus management.
 
 It receives an array of `PortraitClipMediaBlock` objects passed directly from the BFF response and uses the `selectedVideoIndex` prop to determine which video to load initially. Playback and playlist navigation are handled by SMP, using swipable vertical navigation via `MediaLoader`.
 
