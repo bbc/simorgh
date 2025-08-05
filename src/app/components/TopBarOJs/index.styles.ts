@@ -4,13 +4,22 @@ export default {
   promoContainer: ({ palette, mq, spacings }: Theme) =>
     css({
       background: palette.GREY_2,
-      padding: `${spacings.FULL}rem`,
+      padding: `0 ${spacings.FULL}rem ${spacings.DOUBLE}rem`,
+      margin: 0,
       display: 'flex',
       overflowX: 'auto',
+      width: '100vw',
       '-ms-overflow-style': 'none',
       scrollbarWidth: 'none',
       '&::-webkit-scrollbar': {
         display: 'none',
+      },
+      [mq.GROUP_2_MIN_WIDTH]: {
+        padding: `0 ${spacings.DOUBLE}rem ${spacings.DOUBLE}rem`,
+        margin: '0 -0.2rem',
+      },
+      [mq.GROUP_3_MIN_WIDTH]: {
+        margin: '0 -0.8rem',
       },
       [mq.GROUP_4_MIN_WIDTH]: {
         display: 'none',
@@ -33,20 +42,23 @@ export default {
       width: '100vw',
       height: `${spacings.QUADRUPLE}rem`,
       color: isDarkUi ? palette.GREY_2 : palette.SHADOW,
-      marginBottom: `${spacings.DOUBLE}rem`,
       padding: `0 ${spacings.FULL}rem`,
 
       [mq.GROUP_0_MAX_WIDTH]: {
-        margin: 0,
         marginInlineStart: `${spacings.FULL}rem`,
+        margin: 0,
       },
       [mq.GROUP_2_MIN_WIDTH]: {
-        padding: `${spacings.DOUBLE}rem`,
-        margin: '0 -0.2rem',
         marginInlineStart: `${spacings.DOUBLE}rem`,
+        padding: `0 ${spacings.DOUBLE}rem`,
+        margin: '0 -0.2rem',
       },
       [mq.GROUP_3_MIN_WIDTH]: {
-        margin: '0 -0.8rem',
+        '&&': {
+          marginInlineStart: '0',
+          padding: '0 16px',
+          margin: '0 -0.8rem',
+        },
       },
       [mq.GROUP_4_MIN_WIDTH]: {
         display: 'none',
