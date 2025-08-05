@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '../../react-testing-library-with-providers';
+import { render } from '../../react-testing-library-with-providers';
 import {
   PromoSingleBlock,
   oneLinkWithTimestamp,
@@ -56,7 +56,6 @@ describe('ScrollablePromo', () => {
       const { container } = render(
         <TopBarOJs blocks={[topStoriesBlocks[0]]} />,
       );
-      screen.debug();
       const expectedHeadline =
         topStoriesBlocks[0].headlines.promoHeadline.blocks[0].model.blocks[0]
           .model.text;
