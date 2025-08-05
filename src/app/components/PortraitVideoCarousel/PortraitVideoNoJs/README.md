@@ -19,11 +19,9 @@ It ensures accessibility and usability for users browsing with scripts turned of
 
 ```html
 <noscript>
-  <div class="portraitVideoNoJs-container">
-    <svg class="portraitVideoNoJs-icon" ... />
-    <p class="portraitVideoNoJs-message">
-      To view this content you need to enable JavaScript...
-    </p>
+  <div>
+    <svg ... />
+    <p>To view this content you need to enable JavaScript...</p>
   </div>
 </noscript>
 ```
