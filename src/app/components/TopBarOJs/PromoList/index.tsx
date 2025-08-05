@@ -32,7 +32,7 @@ const PromoList = ({
   const listStyles = isOperaMini ? styles.operaStyledList : styles.list;
 
   return (
-    <section
+    <ul
       css={scrollablePromoStyles}
       role="list"
       {...viewTracker}
@@ -50,7 +50,7 @@ const PromoList = ({
           </li>
         );
       })}
-    </section>
+    </ul>
   );
 };
 
