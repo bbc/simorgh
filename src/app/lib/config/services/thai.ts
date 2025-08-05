@@ -222,6 +222,7 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'รายการวิทยุถัดไป',
         duration: 'ความยาว',
         closeVideo: 'ออก',
+        endOfContentClose: 'เนื้อหานี้สิ้นสุดแล้ว ออก',
       },
       socialEmbed: {
         caption: {

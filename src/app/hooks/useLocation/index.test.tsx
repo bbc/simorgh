@@ -53,6 +53,6 @@ describe('useLocation', () => {
     fireEvent(window, new window.PopStateEvent('popstate'));
     fireEvent(window, new window.PopStateEvent('popstate'));
 
-    expect(spy).toBeCalledTimes(4);
+    expect(spy).toHaveBeenCalledTimes(4);
   });
 });

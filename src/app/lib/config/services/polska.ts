@@ -239,6 +239,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'Ten podcast dostępny jest też na',
         download: 'Pobierz',
         closeVideo: 'Zamknij',
+        endOfContentClose: 'Koniec tej treści. Zamknij',
       },
       socialEmbed: {
         caption: {

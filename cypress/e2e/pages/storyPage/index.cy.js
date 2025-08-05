@@ -194,27 +194,6 @@ const ampOnlyNonSmokeTestSuites = [
     service: 'newsround',
     runforEnv: 'test',
   },
-  {
-    path: '/sport/rugby-union/56359986',
-    service: 'sport',
-    runforEnv: 'live',
-  },
-  {
-    path: '/sport/golf/56318994',
-    service: 'sport',
-    runforEnv: 'live',
-  },
-  {
-    path: '/sport/tennis/23372108',
-    service: 'sport',
-    runforEnv: 'test',
-  },
-  {
-    path: '/sport/formula1/23355387',
-    service: 'sport',
-    runforEnv: 'test',
-    tests: canonicalTests,
-  },
 ];
 
 const canonicalTestSuites = Cypress.env('SMOKE')
@@ -233,7 +212,7 @@ const ampTestSuites = [
 });
 
 const liteTestSuites = canonicalTestSuites
-  .filter(({ service }) => !['news', 'sport', 'newsround'].includes(service))
+  .filter(({ service }) => !['news', 'newsround'].includes(service))
   .map(testSuite => {
     return {
       ...testSuite,

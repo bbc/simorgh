@@ -261,6 +261,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Turtii',
         recentEpisodes: 'Sagantaawwan darban',
         closeVideo: 'Bahi',
+        endOfContentClose: 'Xumura qabiyyee kanaa. Bahi',
       },
       socialEmbed: {
         caption: {

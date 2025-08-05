@@ -247,6 +247,7 @@ const baseServiceConfig = {
       podcastExternalLinks: 'Цей подкаст доступний у',
       download: 'Завантажити епізод',
       closeVideo: 'Вийти',
+      endOfContentClose: 'Кінець контенту. Вийти',
     },
     socialEmbed: {
       caption: {
