@@ -11,7 +11,7 @@ describe('Canonical', () => {
 
   const portraitVideoCurations = pageData.curations.filter(
     curation =>
-      curation.portraitVideo && Array.isArray(curation.portraitVideo.items),
+      curation.portraitVideo && Array.isArray(curation.portraitVideo.blocks),
   );
 
   const getPortraitCarousels = () =>
@@ -30,7 +30,7 @@ describe('Canonical', () => {
 
     portraitVideoCurations.forEach((curation, index) => {
       const videoList = videoCarousels[index];
-      const numberOfItems = curation.portraitVideo.items.length;
+      const numberOfItems = curation.portraitVideo.blocks.length;
 
       expect(videoList).toBeInTheDocument();
       expect(videoList.tagName).toBe('UL');
@@ -66,14 +66,14 @@ describe('Canonical', () => {
         carousel.querySelectorAll('[data-testid="promo-button"]'),
       );
       const videoItems =
-        portraitVideoCurations[carouselIndex]?.portraitVideo?.items || [];
+        portraitVideoCurations[carouselIndex]?.portraitVideo?.blocks || [];
 
       promoButtons.forEach((button, buttonIndex) => {
         const textContents = button.querySelector(
           '[data-testid="text-contents"]',
         );
         expect(textContents).toBeInTheDocument();
-        const expectedTitle = videoItems[buttonIndex]?.headlines?.promoHeadline;
+        const expectedTitle = videoItems[buttonIndex]?.model?.video?.title;
 
         expect(textContents?.textContent).toContain(expectedTitle);
       });
@@ -101,13 +101,13 @@ describe('Canonical', () => {
     carousels.forEach((carousel, carouselIndex) => {
       const promoItems = Array.from(carousel.querySelectorAll('li'));
       const videoItems =
-        portraitVideoCurations[carouselIndex]?.portraitVideo?.items || [];
+        portraitVideoCurations[carouselIndex]?.portraitVideo?.blocks || [];
 
       promoItems.forEach((item, itemIndex) => {
         const image = item.querySelector('img');
         expect(image).toBeInTheDocument();
 
-        const [expectedImage] = videoItems[itemIndex]?.images || [];
+        const [expectedImage] = videoItems[itemIndex]?.model?.images || [];
         const { altText } = expectedImage || {};
         expect(image?.getAttribute('alt')).toBe(altText);
       });
