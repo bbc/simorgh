@@ -48,8 +48,8 @@ import { Recommendation } from '#app/models/types/onwardJourney';
 
 import ScrollablePromo from '#components/ScrollablePromo';
 import Recommendations from '#app/components/Recommendations';
-import TopBarOJs from '../../components/TopBarOJs';
 import ReadTime from '#app/components/ReadTime';
+import TopBarOJs from '../../components/TopBarOJs';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
