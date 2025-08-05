@@ -281,7 +281,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const showTopics = Boolean(showRelatedTopics && topics.length > 0);
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
-  const topBarTopStories = pageData.secondaryColumn?.topStories;
+  const topBarTopStories = pageData.secondaryColumn?.topStories ?? [];
 
   const showContinueReadingButton = Boolean(
     !isAmp &&
