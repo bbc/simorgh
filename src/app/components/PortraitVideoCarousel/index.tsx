@@ -3,7 +3,6 @@
 import { jsx } from '@emotion/react';
 import React, { use, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { PortraitVideoCarouselProps } from '#app/models/types/portraitVideo';
 import { RequestContext } from '#app/contexts/RequestContext';
 import styles from './index.styles';
 import PortraitVideoModal from '../PortraitVideoModal';
@@ -12,14 +11,20 @@ import PortraitVideoPromo from './PortraitVideoPromo';
 import PortraitCarouselNavigation from './PortraitVideoCarouselNavigation';
 import Heading from '../Heading';
 import PortraitVideoNoJs from './PortraitVideoNoJs';
+import { PortraitClipMediaBlock } from '../MediaLoader/types';
+
+type PortraitVideoCarouselProps = {
+  title: string;
+  groupTrackingId?: string;
+  blocks: PortraitClipMediaBlock[];
+};
 
 const PortraitVideoCarousel = ({
   title,
-  items,
+  blocks,
   groupTrackingId,
 }: PortraitVideoCarouselProps) => {
   const scrollRef = useRef<HTMLUListElement>(null);
-
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedVideoIndex, setSelectedVideoIndex] = useState<number | null>(
     null,
@@ -30,7 +35,7 @@ const PortraitVideoCarousel = ({
   if (isLite) return null;
 
   const handlePromoClick = (index: number) => {
-    if (items[index]?.video) {
+    if (blocks?.[index]?.model?.video) {
       setSelectedVideoIndex(index);
       setIsModalOpen(true);
     }
@@ -70,14 +75,14 @@ const PortraitVideoCarousel = ({
             tabIndex={-1}
             role="list"
           >
-            {items.map((item, index) => (
+            {blocks.map((block, index) => (
               <PortraitVideoPromo
-                {...item}
-                key={item.id}
+                key={block?.model?.video?.id}
+                block={block}
                 onClick={() => handlePromoClick(index)}
-                itemPosition={index}
+                blockPosition={index}
                 groupTracker={{
-                  itemCount: items.length,
+                  itemCount: blocks.length,
                   resourceId: groupTrackingId,
                 }}
               />
@@ -88,17 +93,7 @@ const PortraitVideoCarousel = ({
           selectedVideoIndex !== null &&
           createPortal(
             <PortraitVideoModal
-              items={items.map(item => ({
-                id: item.video?.id || '',
-                title: item.headlines?.promoHeadline || '',
-                versionId: item.video?.version?.id || '',
-                duration: item.video?.version?.duration || 'PT0M0S',
-                kind: item.video?.version?.kind || 'programme',
-                territories: item.video?.version?.territories || [],
-                guidance: item.video?.version?.guidance || null,
-                isEmbeddingAllowed: item.video?.isEmbeddingAllowed ?? true,
-                images: item.images || [],
-              }))}
+              blocks={blocks}
               selectedVideoIndex={selectedVideoIndex}
               onClose={handleCloseModal}
             />,
