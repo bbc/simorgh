@@ -1,7 +1,7 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
 import { jsx } from '@emotion/react';
-import { use } from 'react';
+import { use, useId } from 'react';
 import isEmpty from 'ramda/src/isEmpty';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
@@ -19,11 +19,11 @@ const eventTrackingData = {
   componentName: 'top-bar-oj',
 };
 
-const TopBarOJs = ({
-  blocks,
-  id = 'top-bar-onward-journeys',
-}: TopBarOJsProps) => {
+const TopBarOJs = ({ blocks, id }: TopBarOJsProps) => {
   const { translations } = use(ServiceContext);
+
+  const uniqueId = useId();
+  const sectionId = id || `top-bar-onward-journeys-${uniqueId}`;
 
   const viewTracker = useViewTracker(eventTrackingData);
   const clickTracker = {
@@ -40,8 +40,8 @@ const TopBarOJs = ({
   return (
     <section
       role="region"
-      aria-labelledby={id}
-      data-testid={id}
+      aria-labelledby={sectionId}
+      data-testid={sectionId}
       {...viewTracker}
     >
       <strong css={styles.labelComponent} id={id}>
