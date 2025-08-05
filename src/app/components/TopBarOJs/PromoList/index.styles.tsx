@@ -1,3 +1,4 @@
+import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
 export default {
@@ -35,6 +36,9 @@ export default {
     css({
       display: 'flex',
       flexShrink: 0,
+      [mq.FORCED_COLOURS]: {
+        border: `solid ${pixelsToRem(3)}rem transparent`,
+      },
 
       [mq.GROUP_0_MAX_WIDTH]: {
         'li:first-of-type': {

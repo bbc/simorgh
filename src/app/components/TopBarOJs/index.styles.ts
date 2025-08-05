@@ -1,3 +1,4 @@
+import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
 export default {
@@ -24,6 +25,10 @@ export default {
       [mq.GROUP_4_MIN_WIDTH]: {
         display: 'none',
       },
+      [mq.FORCED_COLOURS]: {
+        border: `solid ${pixelsToRem(3)}rem transparent`,
+        borderTop: 'transparent',
+      },
     }),
   labelComponent: ({
     isDarkUi,
@@ -43,6 +48,10 @@ export default {
       height: `${spacings.QUADRUPLE}rem`,
       color: isDarkUi ? palette.GREY_2 : palette.SHADOW,
       padding: `0 ${spacings.FULL}rem`,
+      [mq.FORCED_COLOURS]: {
+        border: `solid ${pixelsToRem(3)}rem transparent`,
+        borderBottom: 'transparent',
+      },
 
       [mq.GROUP_0_MAX_WIDTH]: {
         marginInlineStart: `${spacings.FULL}rem`,
