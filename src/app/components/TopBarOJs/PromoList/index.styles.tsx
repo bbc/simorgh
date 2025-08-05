@@ -29,16 +29,21 @@ export default {
       flexShrink: 0,
 
       [mq.GROUP_0_MAX_WIDTH]: {
-        margin: 0,
-      },
-
-      [mq.GROUP_2_MIN_WIDTH]: {
-        marginInlineStart: `${spacings.DOUBLE}rem`,
+        marginInlineStart: `${spacings.FULL}rem`,
         'li:first-of-type': {
           marginInlineStart: 0,
         },
         'li:last-of-type': {
           marginInlineEnd: `${spacings.FULL}rem`,
+        },
+      },
+
+      [mq.GROUP_2_MIN_WIDTH]: {
+        'li:first-of-type': {
+          marginInlineStart: `${spacings.DOUBLE}rem`,
+        },
+        'li:last-of-type': {
+          marginInlineEnd: 0,
         },
       },
 
@@ -52,7 +57,7 @@ export default {
   operaStyledList: ({ mq, spacings }: Theme) =>
     css({
       [mq.GROUP_0_MAX_WIDTH]: {
-        margin: `${spacings.FULL}rem`,
+        marginInlineStart: `${spacings.FULL}rem`,
       },
 
       [mq.GROUP_2_MIN_WIDTH]: {
