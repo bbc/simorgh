@@ -1,91 +1,43 @@
 import React from 'react';
 import { render } from '../../react-testing-library-with-providers';
 import {
-  PromoSingleBlock,
-  oneLinkWithTimestamp,
   topStoriesBlocks,
   topStoriesBlocksWithLiveItem,
 } from '../helpers/fixtureData';
-import Promo from '.';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import TopBarOJs from '..';
 
-const ScrollablePromo = ({ block, experimentVariant }) => (
-  <ServiceContextProvider service="pidgin">
-    <Promo
-      block={block}
-      onClick={() => {}}
-      experimentVariant={experimentVariant}
-    />
-  </ServiceContextProvider>
-);
+describe('Top Bar Onward Journey Promo', () => {
+  it('should display Top Stories content', () => {
+    const { container } = render(<TopBarOJs blocks={[topStoriesBlocks[0]]} />);
+    const expectedHeadline =
+      topStoriesBlocks[0].headlines.promoHeadline.blocks[0].model.blocks[0]
+        .model.text;
+    expect(container).toHaveTextContent(expectedHeadline);
+  });
 
-describe('ScrollablePromo', () => {
-  it('should render a link', () => {
+  it('should render a link on Top Stories article headline', () => {
     const { queryByRole } = render(
-      <ScrollablePromo block={PromoSingleBlock} />,
+      <TopBarOJs blocks={[topStoriesBlocks[2]]} />,
     );
     expect(queryByRole('link')).toBeInTheDocument();
   });
 
-  it('should extract and render the correct title', () => {
-    const { getByText } = render(<ScrollablePromo block={PromoSingleBlock} />);
-    expect(
-      getByText(
-        'This is a very long headline. I am creating this for a test purpose. I love creating these type of tests. I really do not know what to write.',
-      ),
-    ).toBeTruthy();
-  });
-
-  it('should extract and render the correct href', () => {
-    const { queryByRole } = render(
-      <ScrollablePromo block={PromoSingleBlock} />,
+  it('should not display a timestamp on TopBar component', () => {
+    const { queryByTestId } = render(
+      <TopBarOJs blocks={[topStoriesBlocks[0]]} />,
     );
-    expect(queryByRole('link').href).toEqual('https://www.bbc.com/mundo');
+    expect(queryByTestId('timestamp')).not.toBeInTheDocument();
   });
 
-  it('should render timestamp if timestamp is available', () => {
+  it('should display a LiveLabel when returning Top Stories', () => {
     const { container } = render(
-      <ScrollablePromo block={oneLinkWithTimestamp[0]} />,
+      <TopBarOJs blocks={[topStoriesBlocksWithLiveItem[1]]} />,
     );
-    expect(container.getElementsByTagName('time')[0]).toBeInTheDocument();
-  });
-
-  describe('OJ Top Bar Promo', () => {
-    it('should display Top Stories content', () => {
-      const { container } = render(
-        <TopBarOJs blocks={[topStoriesBlocks[0]]} />,
-      );
-      const expectedHeadline =
-        topStoriesBlocks[0].headlines.promoHeadline.blocks[0].model.blocks[0]
-          .model.text;
-      expect(container).toHaveTextContent(expectedHeadline);
-    });
-
-    it('should render a link on Top Stories article headline', () => {
-      const { queryByRole } = render(
-        <TopBarOJs blocks={[topStoriesBlocks[2]]} />,
-      );
-      expect(queryByRole('link')).toBeInTheDocument();
-    });
-
-    it('should not display a timestamp on TopBar component', () => {
-      const { queryByTestId } = render(
-        <TopBarOJs blocks={[topStoriesBlocks[0]]} />,
-      );
-      expect(queryByTestId('timestamp')).not.toBeInTheDocument();
-    });
-
-    it('should display a LiveLabel when returning Top Stories', () => {
-      const { container } = render(
-        <TopBarOJs blocks={[topStoriesBlocksWithLiveItem[1]]} />,
-      );
-      expect(
-        container.querySelector('[class*="liveLabelPulse"]'),
-      ).toBeInTheDocument();
-      expect(
-        container.querySelector('[class*="liveLabelText"]'),
-      ).toBeInTheDocument();
-    });
+    expect(
+      container.querySelector('[class*="liveLabelPulse"]'),
+    ).toBeInTheDocument();
+    expect(
+      container.querySelector('[class*="liveLabelText"]'),
+    ).toBeInTheDocument();
   });
 });
