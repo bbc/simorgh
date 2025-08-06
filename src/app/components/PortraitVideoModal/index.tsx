@@ -1,7 +1,7 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
 import { Global, jsx } from '@emotion/react';
-import React, { use, useEffect, useRef } from 'react';
+import React, { use, useEffect, useRef, useState, useCallback } from 'react';
 import MediaLoader from '#app/components/MediaLoader';
 import {
   PortraitClipMediaBlock,
@@ -70,10 +70,40 @@ export interface PortraitVideoModalProps {
   selectedVideoIndex: number;
 }
 
+const buttonColumnStyles = {
+  display: 'flex',
+  flexDirection: 'column' as const,
+  alignItems: 'center',
+  justifyContent: 'center',
+  gap: '1rem',
+  position: 'absolute' as const,
+  right: '2rem',
+  top: '50%',
+  transform: 'translateY(-50%)',
+  zIndex: 2,
+};
+
+const navButtonStyles = (disabled: boolean) => ({
+  backgroundColor: disabled ? '#ccc' : '#222',
+  color: disabled ? '#888' : '#fff',
+  border: 'none',
+  borderRadius: '50%',
+  width: '3rem',
+  height: '3rem',
+  fontSize: '1.5rem',
+  cursor: disabled ? 'not-allowed' : 'pointer',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  transition: 'background 0.2s',
+  outline: 'none',
+  opacity: disabled ? 0.5 : 1,
+});
+
 const PortraitVideoModal = ({
   blocks,
   onClose,
-  selectedVideoIndex,
+  selectedVideoIndex: initialSelectedVideoIndex,
 }: PortraitVideoModalProps) => {
   const {
     translations: {
@@ -88,6 +118,21 @@ const PortraitVideoModal = ({
   const modalRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const endOfContentButtonRef = useRef<HTMLButtonElement>(null);
+
+  const [selectedVideoIndex, setSelectedVideoIndex] = useState(
+    initialSelectedVideoIndex,
+  );
+
+  const hasPrevious = selectedVideoIndex > 0;
+  const hasNext = selectedVideoIndex < blocks.length - 1;
+
+  const handlePrevious = useCallback(() => {
+    if (hasPrevious) setSelectedVideoIndex(i => i - 1);
+  }, [hasPrevious]);
+
+  const handleNext = useCallback(() => {
+    if (hasNext) setSelectedVideoIndex(i => i + 1);
+  }, [hasNext]);
 
   useEffect(() => {
     const handleBackdropClick = (event: MouseEvent | TouchEvent) => {
@@ -152,6 +197,31 @@ const PortraitVideoModal = ({
         ref={modalRef}
         css={styles.modal}
       >
+        {/* Navigation Buttons */}
+        <div css={buttonColumnStyles}>
+          <button
+            type="button"
+            onClick={handlePrevious}
+            disabled={!hasPrevious}
+            css={navButtonStyles(!hasPrevious)}
+            aria-label="Previous video"
+            data-testid="previous-video-button"
+            className="focusIndicatorInvert"
+          >
+            ↑
+          </button>
+          <button
+            type="button"
+            onClick={handleNext}
+            disabled={!hasNext}
+            css={navButtonStyles(!hasNext)}
+            aria-label="Next video"
+            data-testid="next-video-button"
+            className="focusIndicatorInvert"
+          >
+            ↓
+          </button>
+        </div>
         <button
           ref={closeButtonRef}
           type="button"
