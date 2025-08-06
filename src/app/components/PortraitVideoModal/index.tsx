@@ -83,22 +83,31 @@ const buttonColumnStyles = {
   zIndex: 2,
 };
 
-const navButtonStyles = (disabled: boolean) => ({
-  backgroundColor: disabled ? '#ccc' : '#222',
-  color: disabled ? '#888' : '#fff',
-  border: 'none',
-  borderRadius: '50%',
-  width: '3rem',
-  height: '3rem',
-  fontSize: '1.5rem',
-  cursor: disabled ? 'not-allowed' : 'pointer',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  transition: 'background 0.2s',
-  outline: 'none',
-  opacity: disabled ? 0.5 : 1,
-});
+const UpArrowIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    width="24"
+    height="24"
+    aria-hidden="true"
+    focusable="false"
+  >
+    <path d="M31.1 2.5H1v2.8h30.1zM14.3 13.3 31 29.5v-6.7L16 8.1.9 22.8v6.7l16.8-16.2z" />
+  </svg>
+);
+
+const DownArrowIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    width="24"
+    height="24"
+    aria-hidden="true"
+    focusable="false"
+  >
+    <path d="M.9 29.5H31v-2.8H.9zm16.8-10.8L1 2.5v6.7l15 14.7L31.1 9.2V2.5L14.3 18.7z" />
+  </svg>
+);
 
 const PortraitVideoModal = ({
   blocks,
@@ -203,23 +212,23 @@ const PortraitVideoModal = ({
             type="button"
             onClick={handlePrevious}
             disabled={!hasPrevious}
-            css={navButtonStyles(!hasPrevious)}
+            css={styles.navButton(!hasPrevious)}
             aria-label="Previous video"
             data-testid="previous-video-button"
             className="focusIndicatorInvert"
           >
-            ↑
+            <UpArrowIcon />
           </button>
           <button
             type="button"
             onClick={handleNext}
             disabled={!hasNext}
-            css={navButtonStyles(!hasNext)}
+            css={styles.navButton(!hasNext)}
             aria-label="Next video"
             data-testid="next-video-button"
             className="focusIndicatorInvert"
           >
-            ↓
+            <DownArrowIcon />
           </button>
         </div>
         <button

@@ -112,6 +112,41 @@ const styles = {
         display: 'flex',
       },
     }),
+
+  navButtonColumn: () =>
+    css({
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      gap: '1rem',
+      marginLeft: '16px',
+    }),
+
+  navButton:
+    (disabled: boolean) =>
+    ({ palette, spacings }: Theme) =>
+      css({
+        backgroundColor: disabled ? palette.BLACK : palette.WHITE,
+        border: 'none',
+        width: '100%',
+        maxWidth: `${pixelsToRem(44)}rem`,
+        aspectRatio: '1/1',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        cursor: disabled ? 'not-allowed' : 'pointer',
+        color: disabled ? palette.GREY_2 : palette.BLACK, // icon color
+        borderRadius: '50%',
+        transition: 'background 0.2s',
+        outline: 'none',
+        opacity: disabled ? 0.2 : 1,
+        '& svg': {
+          width: `${spacings.DOUBLE}rem`,
+          height: `${spacings.DOUBLE}rem`,
+          fill: 'currentcolor',
+        },
+      }),
 };
 
 export default styles;
