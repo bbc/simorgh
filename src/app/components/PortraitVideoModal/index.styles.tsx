@@ -139,7 +139,7 @@ const styles = {
         backgroundColor: disabled ? palette.BLACK : palette.WHITE,
         color: disabled ? palette.GREY_2 : palette.BLACK, // icon is black when enabled
         fontSize: '16px',
-        cursor: disabled ? 'not-allowed' : 'pointer',
+        cursor: disabled ? 'auto' : 'pointer',
         transition: 'background 0.2s, box-shadow 0.2s',
         opacity: disabled ? 0.2 : 1,
         outline: 'none',
