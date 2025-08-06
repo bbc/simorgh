@@ -79,13 +79,13 @@ const styles = {
         maxWidth: '100%',
         maxHeight: '100%',
         margin: 0,
-        marginLeft: '60px',
         zIndex: 1,
       },
 
       [mq.GROUP_3_MIN_WIDTH]: {
         '&.media-container': {
           maxHeight: '90%',
+          marginLeft: '60px',
         },
       },
     }),
@@ -113,15 +113,22 @@ const styles = {
       },
     }),
 
-  navButtonColumn: () =>
-    css({
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      gap: '1rem',
-      marginLeft: '16px',
-    }),
+  navButtonColumn:
+    () =>
+    ({ mq }: Theme) =>
+      css({
+        order: 2,
+        paddingLeft: '16px',
+        display: 'none',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: '1rem',
+        zIndex: 2,
+        [mq.GROUP_3_MIN_WIDTH]: {
+          display: 'flex',
+        },
+      }),
 
   navButton:
     (disabled: boolean) =>

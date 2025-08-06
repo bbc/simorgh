@@ -199,18 +199,7 @@ const PortraitVideoModal = ({
         ]}
       >
         {/* Navigation Buttons */}
-        <div
-          css={{
-            order: 2,
-            paddingLeft: '16px',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: '1rem',
-            zIndex: 2,
-          }}
-        >
+        <div css={styles.navButtonColumn()}>
           <button
             type="button"
             onClick={handlePrevious}
