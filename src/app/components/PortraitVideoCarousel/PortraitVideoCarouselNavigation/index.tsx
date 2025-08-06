@@ -1,10 +1,6 @@
 /** @jsx jsx */
-import { useCallback, use, useEffect, useState } from 'react';
+import { useCallback, use, useEffect, useState, RefObject } from 'react';
 import { jsx } from '@emotion/react';
-import {
-  ScrollDirection,
-  PortraitVideoCarouselNavigationProps,
-} from '#app/models/types/portraitVideo';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { Chevron, ChevronOrientation } from '#app/components/icons';
 import styles from './index.styles';
@@ -13,6 +9,12 @@ import { PROMO_ITEM_WIDTH_MIN } from '../utils/styleUtils';
 const DEFAULT_TRANSLATION = {
   previous: 'Scroll to previous item',
   next: 'Scroll to next item',
+};
+
+type ScrollDirection = 'left' | 'right';
+
+type PortraitVideoCarouselNavigationProps = {
+  scrollPaneRef: RefObject<HTMLUListElement | null>;
 };
 
 export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
