@@ -79,7 +79,7 @@ const styles = {
         maxWidth: '100%',
         maxHeight: '100%',
         margin: 0,
-        marginInline: 0,
+        marginLeft: '60px',
         zIndex: 1,
       },
 

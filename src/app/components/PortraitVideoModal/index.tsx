@@ -70,19 +70,6 @@ export interface PortraitVideoModalProps {
   selectedVideoIndex: number;
 }
 
-const buttonColumnStyles = {
-  display: 'flex',
-  flexDirection: 'column' as const,
-  alignItems: 'center',
-  justifyContent: 'center',
-  gap: '1rem',
-  position: 'absolute' as const,
-  right: '2rem',
-  top: '50%',
-  transform: 'translateY(-50%)',
-  zIndex: 2,
-};
-
 const UpArrowIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -204,10 +191,26 @@ const PortraitVideoModal = ({
         aria-modal="true"
         aria-label={modalLabel}
         ref={modalRef}
-        css={styles.modal}
+        css={[
+          styles.modal,
+          {
+            flexDirection: 'row', // Make modal children row-aligned
+          },
+        ]}
       >
         {/* Navigation Buttons */}
-        <div css={buttonColumnStyles}>
+        <div
+          css={{
+            order: 2,
+            paddingLeft: '16px',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '1rem',
+            zIndex: 2,
+          }}
+        >
           <button
             type="button"
             onClick={handlePrevious}
