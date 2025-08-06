@@ -127,24 +127,31 @@ const styles = {
     (disabled: boolean) =>
     ({ palette, spacings }: Theme) =>
       css({
-        backgroundColor: disabled ? palette.BLACK : palette.WHITE,
-        border: 'none',
-        width: '100%',
-        maxWidth: `${pixelsToRem(44)}rem`,
-        aspectRatio: '1/1',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        minWidth: `${pixelsToRem(44)}rem`,
+        minHeight: `${pixelsToRem(44)}rem`,
+        width: `${pixelsToRem(44)}rem`,
+        height: `${pixelsToRem(44)}rem`,
+        padding: 0,
+        border: `${pixelsToRem(2)}rem solid transparent`,
+        backgroundColor: disabled ? palette.BLACK : palette.WHITE,
+        color: disabled ? palette.GREY_2 : palette.BLACK, // icon is black when enabled
+        fontSize: '16px',
         cursor: disabled ? 'not-allowed' : 'pointer',
-        color: disabled ? palette.GREY_2 : palette.BLACK, // icon color
-        borderRadius: '50%',
-        transition: 'background 0.2s',
-        outline: 'none',
+        transition: 'background 0.2s, box-shadow 0.2s',
         opacity: disabled ? 0.2 : 1,
+        outline: 'none',
         '& svg': {
           width: `${spacings.DOUBLE}rem`,
           height: `${spacings.DOUBLE}rem`,
           fill: 'currentcolor',
+        },
+        '&:hover, &:focus': {
+          backgroundColor: disabled ? palette.BLACK : palette.WHITE,
+          boxShadow: disabled ? 'none' : '0 0 0 2px #1e90ff66',
+          outline: 'none',
         },
       }),
 };
