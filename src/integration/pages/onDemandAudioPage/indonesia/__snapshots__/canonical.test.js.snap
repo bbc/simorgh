@@ -1,15 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Canonical On Demand Audio Page A11y I can see the skip to content link 1`] = `"Langsung ke konten"`;
 
-exports[`Canonical On Demand Audio Page Analytics ATI tracking pixel excluding src 1`] = `
-<img
-  alt=""
-  height="1px"
-  style="position:absolute"
-  width="1px"
-/>
-`;
+exports[`Canonical On Demand Audio Page Analytics ATI tracking pixel excluding src 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" >"`;
 
 exports[`Canonical On Demand Audio Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
 
@@ -179,7 +172,17 @@ exports[`Canonical On Demand Audio Page Media Loader renders a valid container 1
     data-e2e="media-player"
   >
     <noscript>
-      &lt;div&gt;&lt;div class="bbc-1mgo2mg"&gt;&lt;strong class="bbc-pow7hy"&gt;Untuk memutar video ini, aktifkan JavaScript atau coba di mesin pencari lain&lt;/strong&gt;&lt;/div&gt;&lt;/div&gt;
+      <div>
+        <div
+          class="bbc-1mgo2mg"
+        >
+          <strong
+            class="bbc-pow7hy"
+          >
+            Untuk memutar video ini, aktifkan JavaScript atau coba di mesin pencari lain
+          </strong>
+        </div>
+      </div>
     </noscript>
   </div>
 </figure>

@@ -4,8 +4,8 @@ export default () => {
       '[data-e2e="recent-episodes-list"]',
     );
 
-    const recentEpisodesListItems = document.querySelectorAll(
-      '[data-e2e="recent-episodes-list-item"]',
+    const recentEpisodesListItems = Array.from(
+      document.querySelectorAll('[data-e2e="recent-episodes-list-item"]'),
     );
 
     it('should be in the document', () => {
