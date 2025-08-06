@@ -143,8 +143,8 @@ const styles = {
         height: `${pixelsToRem(44)}rem`,
         padding: 0,
         border: `${pixelsToRem(2)}rem solid transparent`,
-        backgroundColor: disabled ? palette.BLACK : palette.WHITE,
-        color: disabled ? palette.GREY_2 : palette.BLACK, // icon is black when enabled
+        backgroundColor: palette.WHITE,
+        color: palette.BLACK, // what colour should it be when disabled?
         fontSize: '16px',
         cursor: disabled ? 'auto' : 'pointer',
         transition: 'background 0.2s, box-shadow 0.2s',
@@ -155,11 +155,9 @@ const styles = {
           height: `${spacings.DOUBLE}rem`,
           fill: 'currentcolor',
         },
-        '&:hover, &:focus': {
-          backgroundColor: disabled ? palette.BLACK : palette.WHITE,
-          boxShadow: disabled ? 'none' : '0 0 0 2px #1e90ff66',
-          outline: 'none',
-        },
+        // '&:hover, &:focus': {
+        // a11y focus indicator?
+        // },
       }),
 };
 
