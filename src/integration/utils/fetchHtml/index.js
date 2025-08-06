@@ -1,16 +1,12 @@
 /* eslint-disable no-console */
-
-// https://github.com/node-fetch/node-fetch/issues/1624#issuecomment-1407717012
+const { Window } = require('happy-dom');
+const retry = require('retry');
 const dns = require('node:dns');
 
+// https://github.com/node-fetch/node-fetch/issues/1624#issuecomment-1407717012
 dns.setDefaultResultOrder('ipv4first');
 
-const { JSDOM } = require('jsdom');
-const retry = require('retry');
-
-const CustomResourceLoader = require('./customResourceLoader');
-
-const faultTolerantDomFetch = ({ url, runScripts, headers }) =>
+const faultTolerantFetch = ({ url, headers }) =>
   new Promise((resolve, reject) => {
     const oneSecond = 1000;
     const operation = retry.operation({
@@ -23,7 +19,7 @@ const faultTolerantDomFetch = ({ url, runScripts, headers }) =>
     operation.attempt(async currentAttempt => {
       if (currentAttempt > 1) {
         console.warn(
-          `Error getting DOM from ${url}`,
+          `Error getting HTML from ${url}`,
           `Retry attempts: ${currentAttempt - 1}`,
         );
       }
@@ -40,17 +36,17 @@ const faultTolerantDomFetch = ({ url, runScripts, headers }) =>
         }
 
         const html = await response.text();
-        const dom = new JSDOM(html, {
-          url,
-          ...(runScripts
-            ? {
-                runScripts: 'dangerously',
-                resources: new CustomResourceLoader(),
-              }
-            : {}),
-        });
 
-        resolve(dom);
+        const window = new Window({ url });
+        const document = new window.DOMParser().parseFromString(
+          html
+            .replaceAll('&#x27;', "'")
+            .replaceAll('&lt;', '<')
+            .replaceAll('&gt;', '>'),
+          'text/html',
+        );
+
+        resolve({ window, document });
       } catch (error) {
         const isSocketHangUpError = error
           .toString()
@@ -67,4 +63,4 @@ const faultTolerantDomFetch = ({ url, runScripts, headers }) =>
     });
   });
 
-module.exports = faultTolerantDomFetch;
+module.exports = faultTolerantFetch;
