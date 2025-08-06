@@ -17,30 +17,27 @@ type Props = {
 };
 
 type ToggleType = {
-  enabled: boolean | null,
-  value: string | null
-}
+  enabled: boolean | null;
+  value: string | null;
+};
 
 const DEFAULT_HEIGHTS = {
   desktop: 350,
   tablet: 320,
   mobile: 315,
-}
+};
 
 const SENSITIVE_ARTICLE_ID = 'f2b5dd0e-dda0-454c-893d-792d46ff48c3';
 
 export default function ElectionBanner({ aboutTags, taggings }: Props) {
-  const { service, electionBanner } = use(ServiceContext);
+  const { electionBanner } = use(ServiceContext);
   const { isAmp, isLite } = use(RequestContext);
-  const { enabled: electionBannerEnabled, value: electionThingId }: ToggleType = useToggle('electionBanner');
+  const { enabled: electionBannerEnabled, value: electionThingId }: ToggleType =
+    useToggle('electionBanner');
 
   if (isLite || !electionBanner) return null;
 
-  const {
-    heights = DEFAULT_HEIGHTS,
-    iframeSrc,
-    iframeDevSrc
-  } = electionBanner;
+  const { heights = DEFAULT_HEIGHTS, iframeSrc, iframeDevSrc } = electionBanner;
 
   const isEditoriallySensitive = taggings?.some(({ value }) =>
     value.includes(SENSITIVE_ARTICLE_ID),
@@ -65,7 +62,10 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
 
   if (isAmp) {
     return (
-      <div data-testid="election-banner" css={styles.electionBannerWrapperAmp(heights)}>
+      <div
+        data-testid="election-banner"
+        css={styles.electionBannerWrapperAmp(heights)}
+      >
         <AmpIframe
           ampMetadata={{
             imageWidth: 1,
@@ -84,7 +84,7 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
     <div data-testid="election-banner" css={styles.electionBannerWrapper}>
       <iframe
         title={validAboutTag.thingLabel}
-        src={`${SIMORGH_INCLUDES_BASE_URL}/${iframeSrcWithService}`}
+        src={`${SIMORGH_INCLUDES_BASE_URL}/${iframeSrcToUse}`}
         scrolling="no"
         css={styles.electionBannerIframe(heights)}
         height={heights.desktop}
