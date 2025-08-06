@@ -18,7 +18,7 @@ type ReadTimeProps = {
 const ReadTime = ({ readTime, className }: ReadTimeProps) => {
   if (isLive()) return null;
 
-  // TODO - update this to real experimentName and add it to OptimizelyPageMetrics/experimentsForPageMetrics
+  // TODO - update this to real experiment name and add it to OptimizelyPageMetrics/experimentsForPageMetrics
   const experimentName = 'dummy_experiment_mvt';
   // Can remove disable-next-line when we remove isLive check
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -33,7 +33,7 @@ const ReadTime = ({ readTime, className }: ReadTimeProps) => {
   const eventTrackingData: EventTrackingData = {
     componentName: 'read-time-on-article',
     sendOptimizelyEvents: true,
-    experimentName: 'dummy_experiment_mvt', // TODO - update this to real experimentName
+    experimentName: 'dummy_experiment_mvt', // TODO - update this to real experiment name
     experimentVariant,
     itemTracker: {
       label: `Read time: ${readTime} ${minutesLabel}`,
