@@ -78,7 +78,9 @@ exports[`Canonical Live Media Loader renders a figure caption 1`] = `
     <noscript
       class="css-lllaou"
     >
-      &lt;strong&gt;Dem no support media player for your device&lt;/strong&gt;
+      <strong>
+        Dem no support media player for your device
+      </strong>
     </noscript>
   </div>
   <button
@@ -159,7 +161,9 @@ exports[`Canonical Live Media Loader renders a placeholder 1`] = `
     <noscript
       class="css-lllaou"
     >
-      &lt;strong&gt;Dem no support media player for your device&lt;/strong&gt;
+      <strong>
+        Dem no support media player for your device
+      </strong>
     </noscript>
   </div>
   <button
@@ -244,7 +248,9 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
       <noscript
         class="css-lllaou"
       >
-        &lt;strong&gt;Dem no support media player for your device&lt;/strong&gt;
+        <strong>
+          Dem no support media player for your device
+        </strong>
       </noscript>
     </div>
     <button
