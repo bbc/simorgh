@@ -100,9 +100,9 @@ export type ArticleMetadata = {
   };
   topics: MetadataTopics;
   type: PageTypes;
-  stats: {
-    readTime: number;
-    wordCount: number;
+  stats?: {
+    readTime?: number;
+    wordCount?: number;
   };
 };
 
