@@ -20,7 +20,7 @@ export default {
         margin: '0 -0.2rem',
       },
       [mq.GROUP_3_MIN_WIDTH]: {
-        margin: '0 -0.8rem',
+        padding: `0 ${spacings.DOUBLE}rem ${spacings.DOUBLE}rem`,
       },
       [mq.GROUP_4_MIN_WIDTH]: {
         display: 'none',
@@ -62,13 +62,13 @@ export default {
         padding: `0 ${spacings.DOUBLE}rem`,
         margin: '0 -0.2rem',
       },
-      [mq.GROUP_3_MIN_WIDTH]: {
-        '&&': {
-          marginInlineStart: '0',
-          padding: '0 16px',
-          margin: '0 -0.8rem',
-        },
-      },
+      //   [mq.GROUP_3_MIN_WIDTH]: {
+      //     // '&&': {
+      //     //   marginInlineStart: '0',
+      //     //   padding: '0 16px',
+      //     margin: '0 -0.8rem',
+      //     // },
+      //   },
       [mq.GROUP_4_MIN_WIDTH]: {
         display: 'none',
       },
