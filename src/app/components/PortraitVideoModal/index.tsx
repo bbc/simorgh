@@ -203,6 +203,17 @@ const PortraitVideoModal = ({
           },
         ]}
       >
+                <button
+          ref={closeButtonRef}
+          type="button"
+          data-testid="close-modal-button"
+          css={styles.closeButton}
+          className="focusIndicatorInvert"
+          onClick={onClose}
+        >
+          {navigationIcons.cross}
+          <VisuallyHiddenText>{closeVideo}</VisuallyHiddenText>
+        </button>
         {/* Navigation Buttons */}
         <div css={styles.navButtonColumn()}>
           <button
@@ -228,17 +239,6 @@ const PortraitVideoModal = ({
             <DownArrowIcon />
           </button>
         </div>
-        <button
-          ref={closeButtonRef}
-          type="button"
-          data-testid="close-modal-button"
-          css={styles.closeButton}
-          className="focusIndicatorInvert"
-          onClick={onClose}
-        >
-          {navigationIcons.cross}
-          <VisuallyHiddenText>{closeVideo}</VisuallyHiddenText>
-        </button>
         <MediaLoader
           css={styles.mediaWrapper}
           blocks={[blocks?.[selectedVideoIndex]]}
