@@ -152,12 +152,10 @@ const PortraitVideoModal = ({
             event.preventDefault();
             lastElement.focus();
           }
-        } else {
-          if (document.activeElement === lastElement) {
+        } else if(document.activeElement === lastElement) {
             event.preventDefault();
             firstElement.focus();
           }
-        }
       }
     };
 
