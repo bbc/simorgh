@@ -142,18 +142,19 @@ const styles = {
         width: `${spacings.SEXTUPLE}rem`,
         height: `${spacings.SEXTUPLE}rem`,
         padding: 0,
-        border:'none',
+        border: 'none',
         backgroundColor: palette.WHITE,
         color: palette.BLACK, // what colour should it be when disabled?
         fontSize: '16px',
         cursor: disabled ? 'auto' : 'pointer',
-        transition: 'background 0.2s, box-shadow 0.2s, transform 0.35s cubic-bezier(0.4, 0, 0.2, 1)',
+        transition:
+          'background 0.2s, box-shadow 0.2s, transform 0.35s cubic-bezier(0.4, 0, 0.2, 1)',
         opacity: disabled ? 0.2 : 1,
         outline: 'none',
         boxShadow:
-        !disabled && isSelected
-          ? `0 0 0 2px ${palette.BLACK}, 0 0 0 4px ${palette.WHITE}`
-          : 'none',
+          !disabled && isSelected
+            ? `0 0 0 2px ${palette.BLACK}, 0 0 0 4px ${palette.WHITE}`
+            : 'none',
         '& svg': {
           width: `${spacings.DOUBLE}rem`,
           height: `${spacings.DOUBLE}rem`,
@@ -162,20 +163,20 @@ const styles = {
         // '&:hover, &:focus': {
         // a11y focus indicator?
         // },
-      '&:focus-visible': {
-        borderColor: palette.POSTBOX,
-        boxShadow: `0 0 0 2px ${palette.POSTBOX},0 0 0 4px ${palette.WHITE}`,
-      },
-      '&:hover': {
-        transform: disabled ? 'none' : 'scale(1.08)',
-      },
-      '&:active': {
-        backgroundColor: palette.WHITE,
-        borderColor: palette.BLACK,
-        boxShadow: !disabled
-          ? `0 0 0 2px ${palette.BLACK}, 0 0 0 4px ${palette.WHITE}`
-          : 'none',
-      },
+        '&:focus-visible': {
+          borderColor: palette.POSTBOX,
+          boxShadow: `0 0 0 2px ${palette.POSTBOX},0 0 0 4px ${palette.WHITE}`,
+        },
+        '&:hover': {
+          transform: disabled ? 'none' : 'scale(1.08)',
+        },
+        '&:active': {
+          backgroundColor: palette.WHITE,
+          borderColor: palette.BLACK,
+          boxShadow: !disabled
+            ? `0 0 0 2px ${palette.BLACK}, 0 0 0 4px ${palette.WHITE}`
+            : 'none',
+        },
       }),
 };
 

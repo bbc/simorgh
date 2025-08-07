@@ -11,7 +11,7 @@ import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
 import VisuallyHiddenText from '../VisuallyHiddenText';
-import { DownArrowIcon,UpArrowIcon } from '../icons';
+import { DownArrowIcon, UpArrowIcon } from '../icons';
 
 const getPlayerInstance = () =>
   window?.embeddedMedia?.api?.players()?.bbcMediaPlayer0;
@@ -29,7 +29,7 @@ const getFocusableElements = (container: HTMLElement | null) => {
     element =>
       !element.hasAttribute('disabled') && !element.getAttribute('aria-hidden'),
   );
-}
+};
 
 export const playlistLoadedCallback = (
   e: SMPEvent,
@@ -86,7 +86,6 @@ export interface PortraitVideoModalProps {
   selectedVideoIndex: number;
 }
 
-
 const PortraitVideoModal = ({
   blocks,
   onClose,
@@ -113,22 +112,22 @@ const PortraitVideoModal = ({
   const hasPrevious = selectedVideoIndex > 0;
   const hasNext = selectedVideoIndex < blocks.length - 1;
 
-  const [selectedNavButton, setSelectedNavButton] = useState<'previous' | 'next' | null>(null);
-
+  const [selectedNavButton, setSelectedNavButton] = useState<
+    'previous' | 'next' | null
+  >(null);
 
   const handlePrevious = useCallback(() => {
-    if (hasPrevious){ 
+    if (hasPrevious) {
       setSelectedVideoIndex(i => i - 1);
       setSelectedNavButton('previous');
     }
   }, [hasPrevious]);
 
   const handleNext = useCallback(() => {
-    if (hasNext){
+    if (hasNext) {
       setSelectedVideoIndex(i => i + 1);
       setSelectedNavButton('next');
-
-    } 
+    }
   }, [hasNext]);
 
   useEffect(() => {
@@ -144,19 +143,19 @@ const PortraitVideoModal = ({
       }
       // - Tab/Shift+Tab loops focus between the close button and the end-of-content button
       if (event.key === 'Tab') {
-        const focusableElements = getFocusableElements(modalRef.current)
-        if(focusableElements.length === 0) return;
-        const firstElement = focusableElements[0]
-        const lastElement = focusableElements[focusableElements.length - 1]
-        if(event.shiftKey){
-          if(document.activeElement === firstElement){
+        const focusableElements = getFocusableElements(modalRef.current);
+        if (focusableElements.length === 0) return;
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+        if (event.shiftKey) {
+          if (document.activeElement === firstElement) {
             event.preventDefault();
-            lastElement.focus()
+            lastElement.focus();
           }
-        }else {
-          if(document.activeElement === lastElement){
+        } else {
+          if (document.activeElement === lastElement) {
             event.preventDefault();
-            firstElement.focus()
+            firstElement.focus();
           }
         }
       }
@@ -167,8 +166,8 @@ const PortraitVideoModal = ({
 
     if (modal) {
       closeButtonRef.current?.focus();
-      const focusableElements =getFocusableElements(modal)
-      focusableElements[0]?.focus()
+      const focusableElements = getFocusableElements(modal);
+      focusableElements[0]?.focus();
       // Prevent tabbing to elements outside the modal
       reactRootElement?.setAttribute('inert', 'true');
       modal.addEventListener('mousedown', handleBackdropClick);
@@ -203,7 +202,7 @@ const PortraitVideoModal = ({
           },
         ]}
       >
-                <button
+        <button
           ref={closeButtonRef}
           type="button"
           data-testid="close-modal-button"
@@ -220,7 +219,10 @@ const PortraitVideoModal = ({
             type="button"
             onClick={handlePrevious}
             disabled={!hasPrevious}
-            css={styles.navButton(!hasPrevious,selectedNavButton === 'previous')}
+            css={styles.navButton(
+              !hasPrevious,
+              selectedNavButton === 'previous',
+            )}
             aria-label="Previous video"
             data-testid="previous-video-button"
             className="focusIndicatorInvert"
