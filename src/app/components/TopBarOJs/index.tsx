@@ -19,11 +19,11 @@ const eventTrackingData = {
   componentName: 'top-bar-oj',
 };
 
-const TopBarOJs = ({ blocks, id }: TopBarOJsProps) => {
+const TopBarOJs = ({
+  blocks,
+  id = 'top-bar-onward-journeys',
+}: TopBarOJsProps) => {
   const { translations } = use(ServiceContext);
-
-  const uniqueId = useId();
-  const sectionId = id || `top-bar-onward-journeys-${uniqueId}`;
 
   const viewTracker = useViewTracker(eventTrackingData);
   const clickTracker = {
@@ -38,19 +38,14 @@ const TopBarOJs = ({ blocks, id }: TopBarOJsProps) => {
   const title = translations.topStoriesTitle || 'Top Stories';
 
   return (
-    <section
-      role="region"
-      aria-labelledby={sectionId}
-      data-testid={sectionId}
-      {...viewTracker}
-    >
+    <div role="region" aria-labelledby={id} data-testid={id} {...viewTracker}>
       <strong css={styles.labelComponent} id={id}>
         {title}
       </strong>
       <div css={styles.promoContainer}>
         <PromoList blocks={blocks} eventTrackingData={clickTracker} />
       </div>
-    </section>
+    </div>
   );
 };
 
