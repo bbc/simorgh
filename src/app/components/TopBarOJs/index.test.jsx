@@ -6,49 +6,7 @@ import { topStoriesBlocks } from './helpers/fixtureData';
 import TopBarOJs from '.';
 
 describe('TopBarOJs', () => {
-  // Need to check if any of these tests are relevant to the new TopBar component
   // describe('Mid Page ScrollablePromo', () => {
-  //   it('should return null if no data is passed', () => {
-  //     const { container } = render(<TopBarOJs blocks={[]} />);
-  //     expect(container).toBeEmptyDOMElement();
-  //   });
-
-  //   it('should render max 3 promo items', () => {
-  //     const { getAllByRole } = render(
-  //       <ScrollablePromo blocks={moreThanThreeLinks} />,
-  //     );
-  //     expect(getAllByRole('listitem').length).toEqual(3);
-  //   });
-
-  //   it('should render single promo item', () => {
-  //     const { container } = render(<ScrollablePromo blocks={oneLinkOnly} />);
-  //     expect(container.childElementCount).toEqual(1);
-  //   });
-
-  //   it('should render single promo item with a title', () => {
-  //     const { container, getByTestId } = render(
-  //       <ScrollablePromo blocks={oneLinkOnly} />,
-  //     );
-  //     expect(container.childElementCount).toEqual(1);
-  //     expect(getByTestId('eoj-recommendations-heading')).toBeInTheDocument();
-  //   });
-
-  //   it('should render single promo item without a title', () => {
-  //     const { container, queryByTestId } = render(
-  //       <ScrollablePromo blocks={oneLinkWithNoTitle} />,
-  //     );
-  //     expect(container.childElementCount).toEqual(1);
-  //     expect(
-  //       queryByTestId('eoj-recommendations-heading'),
-  //     ).not.toBeInTheDocument();
-  //   });
-
-  //   it('should not render a list when there is only one promo', () => {
-  //     const { queryByRole } = render(<ScrollablePromo blocks={oneLinkOnly} />);
-
-  //     expect(queryByRole('list')).not.toBeInTheDocument();
-  //     expect(queryByRole('listitem')).not.toBeInTheDocument();
-  //   });
 
   //   it('should render unordered list if more than 1 item', () => {
   //     const { queryByRole, getAllByRole } = render(
@@ -63,12 +21,12 @@ describe('TopBarOJs', () => {
   //       jest.clearAllMocks();
   //     });
 
-  //     it('should call the view tracking hook with the correct params with one editorial onward journey', () => {
-  //       const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+  // it('should call the view tracking hook with the correct params with one editorial onward journey', () => {
+  //   const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
 
-  //       render(
-  //         <ScrollablePromo blocks={edOjA.model.blocks} blockGroupIndex={1} />,
-  //       );
+  //   render(
+  //     <ScrollablePromo blocks={edOjA.model.blocks} blockGroupIndex={1} />,
+  //   );
 
   //       expect(viewTrackerSpy).toHaveBeenCalledWith({
   //         componentName: 'edoj1',
@@ -128,57 +86,32 @@ describe('TopBarOJs', () => {
   //       });
   //     });
   //   });
-
-  //   it('it should match a11y snapshot for single card', () => {
-  //     const { container } = render(<ScrollablePromo blocks={oneLinkOnly} />);
-  //     expect(container).toMatchSnapshot();
-  //   });
-
-  //   it('it should match a11y snapshot for list', () => {
-  //     const { container } = render(<ScrollablePromo blocks={threeLinks} />);
-  //     expect(container).toMatchSnapshot();
-  //   });
-
-  //   it('it should match a11y snapshot for list with no title', () => {
-  //     const { container } = render(
-  //       <ScrollablePromo blocks={oneLinkWithNoTitle} />,
-  //     );
-  //     expect(container).toMatchSnapshot();
-  //   });
-
-  //   it('it should match snapshot when in dark ui mode', () => {
-  //     const { container } = render(
-  //       <ScrollablePromo blocks={oneLinkWithNoTitle} />,
-  //       {
-  //         pageType: MEDIA_ARTICLE_PAGE,
-  //       },
-  //     );
-  //     expect(container).toMatchSnapshot();
-  //   });
   // });
+  it('it should display Top Stories label', () => {
+    const { getByText, queryByText } = render(
+      <TopBarOJs blocks={topStoriesBlocks} />,
+    );
+    expect(getByText('Top Stories')).toBeVisible();
+    expect(queryByText('Popular Reads')).toBeNull();
+  });
 
-  describe('OJ Top Bar Component', () => {
-    it('it should display Top Stories label', () => {
-      const { getByText, queryByText } = render(
-        <TopBarOJs blocks={topStoriesBlocks} />,
-      );
-      expect(getByText('Top Stories')).toBeVisible();
-      expect(queryByText('Popular Reads')).toBeNull();
-    });
+  it('it should display 3 promo items with Top Stories', () => {
+    const { getAllByRole } = render(<TopBarOJs blocks={topStoriesBlocks} />);
+    expect(getAllByRole('listitem')).toHaveLength(3);
+  });
 
-    it('it should display 3 promo items with Top Stories', () => {
-      const { getAllByRole } = render(<TopBarOJs blocks={topStoriesBlocks} />);
-      expect(getAllByRole('listitem')).toHaveLength(3);
-    });
+  it('it should display Top Stories content', () => {
+    const { getAllByRole } = render(<TopBarOJs blocks={topStoriesBlocks} />);
+    const expectedFirstHeadline =
+      topStoriesBlocks[0].headlines.promoHeadline.blocks[0].model.blocks[0]
+        .model.text;
+    expect(getAllByRole('listitem')[0]).toHaveTextContent(
+      expectedFirstHeadline,
+    );
+  });
 
-    it('it should display Top Stories content', () => {
-      const { getAllByRole } = render(<TopBarOJs blocks={topStoriesBlocks} />);
-      const expectedFirstHeadline =
-        topStoriesBlocks[0].headlines.promoHeadline.blocks[0].model.blocks[0]
-          .model.text;
-      expect(getAllByRole('listitem')[0]).toHaveTextContent(
-        expectedFirstHeadline,
-      );
-    });
+  it('should return null if no data is passed', () => {
+    const { container } = render(<TopBarOJs blocks={[]} />);
+    expect(container).toBeEmptyDOMElement();
   });
 });
