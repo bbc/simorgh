@@ -150,7 +150,10 @@ const styles = {
         transition: 'background 0.2s, box-shadow 0.2s, transform 0.35s cubic-bezier(0.4, 0, 0.2, 1)',
         opacity: disabled ? 0.2 : 1,
         outline: 'none',
-        boxShadow: isSelected ? `0 0 0 2px ${palette.BLACK}, 0 0 0 4px ${palette.WHITE}` : 'none',
+        boxShadow:
+        !disabled && isSelected
+          ? `0 0 0 2px ${palette.BLACK}, 0 0 0 4px ${palette.WHITE}`
+          : 'none',
         '& svg': {
           width: `${spacings.DOUBLE}rem`,
           height: `${spacings.DOUBLE}rem`,
@@ -169,7 +172,9 @@ const styles = {
       '&:active': {
         backgroundColor: palette.WHITE,
         borderColor: palette.BLACK,
-        boxShadow: `0 0 0 2px ${palette.BLACK}, 0 0 0 4px ${palette.WHITE}`,
+        boxShadow: !disabled
+          ? `0 0 0 2px ${palette.BLACK}, 0 0 0 4px ${palette.WHITE}`
+          : 'none',
       },
       }),
 };
