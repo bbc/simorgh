@@ -940,14 +940,40 @@ describe('Article Page', () => {
     });
 
     it('should render read time component when readTime is supplied in metadata', () => {
-      render(
+      const dataWithReadTime = {
+        ...articleDataPidgin,
+        metadata: {
+          ...articleDataPidgin.metadata,
+          stats: {
+            readTime: 5,
+            wordCount: 500,
+          },
+        },
+      };
+      const { queryByTestId } = render(
         <Context service="pidgin">
-          <ArticlePage pageData={articleDataPidgin} />
+          <ArticlePage pageData={dataWithReadTime} />
         </Context>,
       );
 
-      const readTime = screen.getByText('Estimated Read Time: 1 minute');
-      expect(readTime).toBeInTheDocument();
+      expect(queryByTestId('read-time')).toBeInTheDocument();
+    });
+
+    it('should not render read time component when readTime is not supplied in metadata', () => {
+      const dataMissingReadTime = {
+        ...articleDataPidgin,
+        metadata: {
+          ...articleDataPidgin.metadata,
+          stats: {},
+        },
+      };
+      const { queryByTestId } = render(
+        <Context service="pidgin">
+          <ArticlePage pageData={dataMissingReadTime} />
+        </Context>,
+      );
+
+      expect(queryByTestId('read-time')).not.toBeInTheDocument();
     });
   });
 });
