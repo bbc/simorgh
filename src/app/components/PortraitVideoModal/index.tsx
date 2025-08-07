@@ -15,6 +15,21 @@ import VisuallyHiddenText from '../VisuallyHiddenText';
 const getPlayerInstance = () =>
   window?.embeddedMedia?.api?.players()?.bbcMediaPlayer0;
 
+const getFocusableElements = (container: HTMLElement | null) => {
+  if (!container) {
+    return [];
+  }
+
+  return [
+    ...container.querySelectorAll<HTMLElement>(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+    ),
+  ].filter(
+    element =>
+      !element.hasAttribute('disabled') && !element.getAttribute('aria-hidden'),
+  );
+}
+
 export const playlistLoadedCallback = (
   e: SMPEvent,
   blocks: PortraitClipMediaBlock[],
@@ -153,18 +168,20 @@ const PortraitVideoModal = ({
       }
       // - Tab/Shift+Tab loops focus between the close button and the end-of-content button
       if (event.key === 'Tab') {
-        if (
-          document.activeElement === closeButtonRef.current &&
-          event.shiftKey
-        ) {
-          event.preventDefault();
-          endOfContentButtonRef.current?.focus();
-        } else if (
-          document.activeElement === endOfContentButtonRef.current &&
-          !event.shiftKey
-        ) {
-          event.preventDefault();
-          closeButtonRef.current?.focus();
+        const focusableElements = getFocusableElements(modalRef.current)
+        if(focusableElements.length === 0) return;
+        const firstElement = focusableElements[0]
+        const lastElement = focusableElements[focusableElements.length - 1]
+        if(event.shiftKey){
+          if(document.activeElement === firstElement){
+            event.preventDefault();
+            lastElement.focus()
+          }
+        }else {
+          if(document.activeElement === lastElement){
+            event.preventDefault();
+            firstElement.focus()
+          }
         }
       }
     };
@@ -174,6 +191,8 @@ const PortraitVideoModal = ({
 
     if (modal) {
       closeButtonRef.current?.focus();
+      const focusableElements =getFocusableElements(modal)
+      focusableElements[0]?.focus()
       // Prevent tabbing to elements outside the modal
       reactRootElement?.setAttribute('inert', 'true');
       modal.addEventListener('mousedown', handleBackdropClick);
