@@ -38,7 +38,7 @@ const TopBarOJs = ({
   const title = translations.topStoriesTitle || 'Top Stories';
 
   return (
-    <div role="region" aria-labelledby={id} data-testid={id} {...viewTracker}>
+    <div role="region" aria-label={id} data-testid={id} {...viewTracker}>
       <strong css={styles.labelComponent} id={id}>
         {title}
       </strong>
