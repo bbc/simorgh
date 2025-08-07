@@ -123,7 +123,7 @@ const styles = {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        gap: '1rem',
+        gap: '8px',
         zIndex: 2,
         [mq.GROUP_3_MIN_WIDTH]: {
           display: 'flex',
