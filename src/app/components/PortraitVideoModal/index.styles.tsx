@@ -164,7 +164,7 @@ const styles = {
         // },
       '&:focus-visible': {
         borderColor: palette.POSTBOX,
-        boxShadow: `0 0 0 3px ${palette.POSTBOX},0 0 0 6px ${palette.WHITE}`,
+        boxShadow: `0 0 0 2px ${palette.POSTBOX},0 0 0 4px ${palette.WHITE}`,
       },
       '&:hover': {
         transform: disabled ? 'none' : 'scale(1.08)',
