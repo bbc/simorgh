@@ -11,6 +11,7 @@ import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
 import VisuallyHiddenText from '../VisuallyHiddenText';
+import { DownArrowIcon,UpArrowIcon } from '../icons';
 
 const getPlayerInstance = () =>
   window?.embeddedMedia?.api?.players()?.bbcMediaPlayer0;
@@ -85,31 +86,6 @@ export interface PortraitVideoModalProps {
   selectedVideoIndex: number;
 }
 
-const UpArrowIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 32 32"
-    width="24"
-    height="24"
-    aria-hidden="true"
-    focusable="false"
-  >
-    <path d="M31.1 2.5H1v2.8h30.1zM14.3 13.3 31 29.5v-6.7L16 8.1.9 22.8v6.7l16.8-16.2z" />
-  </svg>
-);
-
-const DownArrowIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 32 32"
-    width="24"
-    height="24"
-    aria-hidden="true"
-    focusable="false"
-  >
-    <path d="M.9 29.5H31v-2.8H.9zm16.8-10.8L1 2.5v6.7l15 14.7L31.1 9.2V2.5L14.3 18.7z" />
-  </svg>
-);
 
 const PortraitVideoModal = ({
   blocks,
