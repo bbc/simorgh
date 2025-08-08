@@ -207,44 +207,6 @@ describe('Navigation Container', () => {
     expect(queryAllByText(mockNavigation[0].title)[0]).toBeVisible();
   });
 
-  it.each`
-    description                                                                 | blocks              | experimentVariant                | shouldRender
-    ${'render Scrollable Promo Top Stories'}                                    | ${topStoriesBlocks} | ${'top-bar-top-stories'}         | ${true}
-    ${'render Scrollable Promo Top Stories variant also with read more button'} | ${topStoriesBlocks} | ${'read-more-a-and-top-stories'} | ${true}
-    ${'render Scrollable Promo Most Read'}                                      | ${mostReadBlocks}   | ${'top-bar-most-read'}           | ${true}
-    ${'not render Scrollable Promo'}                                            | ${mostReadBlocks}   | ${'off'}                         | ${false}
-    ${'not render Scrollable Promo'}                                            | ${mostReadBlocks}   | ${null}                          | ${false}
-  `(
-    'should $description when experiment variant is $experimentVariant',
-    ({ blocks, experimentVariant, shouldRender }) => {
-      const propsForOJExperiment = {
-        blocks,
-        experimentVariant,
-      };
-      const { container } = render(
-        <Navigation propsForOJExperiment={propsForOJExperiment} />,
-        {
-          bbcOrigin: 'https://www.test.bbc.co.uk',
-          id: 'c0000000000o',
-          isAmp: false,
-          pageType: ARTICLE_PAGE,
-          service: 'news',
-          statusCode: 200,
-          pathname: '/news',
-        },
-      );
-      if (shouldRender) {
-        expect(
-          container.querySelector('[class*="ScrollablePromoContainer"]'),
-        ).toBeInTheDocument();
-      } else {
-        expect(
-          container.querySelector('[class*="ScrollablePromoContainer"]'),
-        ).not.toBeInTheDocument();
-      }
-    },
-  );
-
   describe('View and click tracking', () => {
     const scrollEventTrackingData = {
       componentName: 'scrollable-navigation',
