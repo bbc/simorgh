@@ -394,5 +394,18 @@ describe('PortraitVideoModal', () => {
       );
       expect(screen.getByTestId('next-video-button')).toBeDisabled();
     });
+    it('enables both buttons when not at first or last video', () => {
+      const middleIndex = Math.floor(blocks.length / 2);
+      render(
+        <Component
+          selectedVideoIndex={middleIndex}
+          blocks={blocks}
+          onClose={mockClose}
+        />,
+      );
+
+      expect(screen.getByTestId('next-video-button')).toBeEnabled();
+      expect(screen.getByTestId('previous-video-button')).toBeEnabled();
+    });
   });
 });
