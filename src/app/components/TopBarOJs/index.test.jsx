@@ -1,4 +1,5 @@
 import React from 'react';
+import { fireEvent } from '../react-testing-library-with-providers';
 import isLive from '#lib/utilities/isLive';
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
@@ -59,5 +60,60 @@ describe('TopBarOJs', () => {
     expect(screen.queryByTestId('top-bar-onward-journeys')).toBeInTheDocument();
     expect(container).not.toBeEmptyDOMElement();
     expect(isLive()).toBe(false);
+  });
+
+  describe('Event Tracking', () => {
+    const eventTrackingData = { componentName: 'top-bar-oj' };
+
+    describe('View tracking', () => {
+      const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+
+      it('should not enable view tracking if event tracking data is not provided', () => {
+        render(
+          <TopBarOJs blocks={topStoriesBlocks} eventTrackingData={undefined} />,
+        );
+
+        expect(viewTrackerSpy).toHaveBeenCalledWith(undefined);
+      });
+
+      it('should register view tracker if event tracking data provided', () => {
+        render(<TopBarOJs blocks={topStoriesBlocks} />);
+
+        expect(viewTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
+      });
+    });
+
+    describe('Click tracking', () => {
+      const clickTrackerSpy = jest
+        .spyOn(clickTracking, 'default')
+        .mockImplementation();
+
+      it('should not be enabled if event tracking data not provided', () => {
+        const { container } = render(<TopBarOJs blocks={topStoriesBlocks} />);
+
+        expect(clickTrackerSpy).toHaveBeenCalledWith(undefined);
+
+        const [anchorTag] = container.getElementsByTagName('a');
+        fireEvent.click(anchorTag);
+        expect(anchorTag.onclick).toBeFalsy();
+      });
+
+      it('should register click tracker if event tracking data provided', () => {
+        render(<TopBarOJs blocks={topStoriesBlocks} />);
+
+        expect(clickTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
+      });
+
+      it('should handle a click event when link clicked', () => {
+        clickTrackerSpy.mockRestore();
+
+        const { container } = render(<TopBarOJs blocks={topStoriesBlocks} />);
+
+        const [anchorTag] = container.getElementsByTagName('a');
+        fireEvent.click(anchorTag);
+
+        expect(anchorTag.onclick).toBeTruthy();
+      });
+    });
   });
 });
