@@ -9,7 +9,6 @@ import {
 import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
 import useMediaQuery from '#hooks/useMediaQuery';
 import { RequestContext } from '#app/contexts/RequestContext';
-import ScrollablePromo from '#components/ScrollablePromo';
 import TopBarOJs from '#app/components/TopBarOJs';
 import isLive from '#app/lib/utilities/isLive';
 
