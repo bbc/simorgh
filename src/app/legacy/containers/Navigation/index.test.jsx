@@ -11,10 +11,6 @@ import { service as newsConfig } from '../../../lib/config/services/news';
 import Navigation from './index';
 import * as viewTracking from '../../../hooks/useViewTracker';
 import * as clickTracking from '../../../hooks/useClickTrackerHandler';
-import {
-  mostReadBlocks,
-  topStoriesBlocks,
-} from '../../components/ScrollablePromo/helpers/fixtureData';
 
 describe('Navigation Container', () => {
   it('should correctly render amp navigation', () => {
