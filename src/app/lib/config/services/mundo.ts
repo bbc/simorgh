@@ -48,6 +48,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     electionBanner: {
+      electionThingId: '647d5613-e0e2-4ef5-b0ce-b491de38bdbd',
       iframeSrc:
         'include/vjafwest/1365-2024-us-presidential-election-banner/mundo/app',
       iframeDevSrc:

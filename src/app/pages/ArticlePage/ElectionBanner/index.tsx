@@ -32,12 +32,17 @@ const SENSITIVE_ARTICLE_ID = 'f2b5dd0e-dda0-454c-893d-792d46ff48c3';
 export default function ElectionBanner({ aboutTags, taggings }: Props) {
   const { electionBanner } = use(ServiceContext);
   const { isAmp, isLite } = use(RequestContext);
-  const { enabled: electionBannerEnabled, value: electionThingId }: ToggleType =
+  const { enabled: electionBannerEnabled }: ToggleType =
     useToggle('electionBanner');
 
   if (isLite || !electionBanner) return null;
 
-  const { heights = DEFAULT_HEIGHTS, iframeSrc, iframeDevSrc } = electionBanner;
+  const {
+    heights = DEFAULT_HEIGHTS,
+    iframeSrc,
+    iframeDevSrc,
+    electionThingId,
+  } = electionBanner;
 
   const isEditoriallySensitive = taggings?.some(({ value }) =>
     value.includes(SENSITIVE_ARTICLE_ID),

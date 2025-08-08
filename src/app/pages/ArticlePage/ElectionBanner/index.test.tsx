@@ -4,7 +4,7 @@ import { Tag } from '#app/components/Metadata/types';
 import { MetadataTaggings } from '#app/models/types/metadata';
 import ElectionBanner from '.';
 
-const MOCK_ELECTION_THING_ID = 'someElection';
+const MOCK_ELECTION_THING_ID = '647d5613-e0e2-4ef5-b0ce-b491de38bdbd';
 const MOCK_IFRAME_LIVE_SRC =
   'include/vjafwest/1365-2024-us-presidential-election-banner/mundo/app';
 const MOCK_IFRAME_DEV_SRC =
@@ -80,7 +80,7 @@ describe('ElectionBanner', () => {
           <ElectionBanner aboutTags={mockAboutTags} taggings={mockTaggings} />,
           {
             toggles: {
-              electionBanner: { enabled: true, value: MOCK_ELECTION_THING_ID },
+              electionBanner: { enabled: true },
             },
             isAmp,
             service: 'mundo',
@@ -107,7 +107,7 @@ describe('ElectionBanner', () => {
         <ElectionBanner aboutTags={mockAboutTags} taggings={mockTaggings} />,
         {
           toggles: {
-            electionBanner: { enabled: true, value: MOCK_ELECTION_THING_ID },
+            electionBanner: { enabled: true },
           },
           isAmp,
           service: 'mundo',

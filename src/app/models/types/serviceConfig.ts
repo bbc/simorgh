@@ -118,6 +118,7 @@ export type ServiceConfig = {
       tablet: number;
       mobile: number;
     };
+    electionThingId: string;
     iframeSrc: string;
     iframeDevSrc: string;
   };
