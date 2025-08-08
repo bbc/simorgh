@@ -131,7 +131,6 @@ const NavigationContainer = ({ propsForTopBarOJComponent }) => {
       script={script}
       service={service}
       blocks={blocks}
-      experimentVariant={experimentVariant}
     />
   );
 };

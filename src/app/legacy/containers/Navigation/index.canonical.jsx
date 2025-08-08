@@ -44,7 +44,6 @@ const CanonicalNavigationContainer = ({
   scrollableListItems,
   dropdownListItems,
   blocks,
-  experimentVariant,
 }) => {
   const { isLite } = use(RequestContext);
   const [isOpen, setIsOpen] = useState(false);

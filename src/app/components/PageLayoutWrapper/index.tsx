@@ -76,10 +76,8 @@ const PageLayoutWrapper = ({
 
     const topStories = pageData.secondaryColumn?.topStories;
 
-    const dataForTopBarOJComponent = topStories;
-
     propsForTopBarOJComponent = {
-      blocks: dataForTopBarOJComponent || [],
+      blocks: topStories || [],
     };
   }
 
