@@ -374,5 +374,25 @@ describe('PortraitVideoModal', () => {
         expect.objectContaining({ blocks: [blocks[2]] }),
       );
     });
+    it('disables the previous button on the first video', () => {
+      render(
+        <Component
+          selectedVideoIndex={0}
+          blocks={blocks}
+          onClose={mockClose}
+        />,
+      );
+      expect(screen.getByTestId('previous-video-button')).toBeDisabled();
+    });
+    it('disables the next button on the last video', () => {
+      render(
+        <Component
+          selectedVideoIndex={blocks.length - 1}
+          blocks={blocks}
+          onClose={mockClose}
+        />,
+      );
+      expect(screen.getByTestId('next-video-button')).toBeDisabled();
+    });
   });
 });
