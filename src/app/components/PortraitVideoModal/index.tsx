@@ -164,8 +164,6 @@ const PortraitVideoModal = ({
 
     if (modal) {
       closeButtonRef.current?.focus();
-      const focusableElements = getFocusableElements(modal);
-      focusableElements[0]?.focus();
       // Prevent tabbing to elements outside the modal
       reactRootElement?.setAttribute('inert', 'true');
       modal.addEventListener('mousedown', handleBackdropClick);
