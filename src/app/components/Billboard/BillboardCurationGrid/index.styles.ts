@@ -83,9 +83,6 @@ const styles = {
             color: `${palette.WHITE}`,
           },
         },
-        // '.promo-text > h3 > a:visited': {
-        //   color: `${palette.WHITE}`,
-        // },
 
         '& > time.promo-timestamp': {
           color: `${palette.WHITE}`,
