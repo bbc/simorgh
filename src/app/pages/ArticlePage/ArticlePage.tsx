@@ -281,8 +281,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const showTopics = Boolean(showRelatedTopics && topics.length > 0);
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
-  const topBarTopStories = pageData.secondaryColumn?.topStories ?? [];
-
   const showContinueReadingButton = Boolean(
     !isAmp &&
       !isLite &&
@@ -341,7 +339,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
       )}
       <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
-      <TopBarOJs blocks={topBarTopStories} />
       <div css={styles.grid}>
         <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
           <main

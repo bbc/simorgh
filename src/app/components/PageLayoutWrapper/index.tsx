@@ -61,7 +61,7 @@ const PageLayoutWrapper = ({
   const pageType = pageData?.metadata?.type;
   const reportingPageType = pageType?.replace(/ /g, '');
   let wordCount: wordCountType = 0;
-  let propsForOJExperiment = {};
+  let propsForTopBarOJComponent = {};
   const experimentName = 'newswb_ws_topbarojs_read_more';
   const experimentVariant = useOptimizelyVariation({
     experimentName,
@@ -83,23 +83,11 @@ const PageLayoutWrapper = ({
       }, 0);
 
     const topStories = pageData.secondaryColumn?.topStories;
-    const mostReadItems = pageData.mostRead?.items;
 
-    let dataForOJExperiment;
-    if (
-      experimentVariant &&
-      ['top-bar-top-stories', 'read-more-a-and-top-stories'].includes(
-        experimentVariant,
-      )
-    ) {
-      dataForOJExperiment = topStories;
-    } else if (experimentVariant === 'top-bar-most-read' && mostReadItems) {
-      dataForOJExperiment = mostReadItems;
-    }
+    const dataForTopBarOJComponent = topStories;
 
-    propsForOJExperiment = {
-      blocks: dataForOJExperiment || [],
-      experimentVariant,
+    propsForTopBarOJComponent = {
+      blocks: dataForTopBarOJComponent || [],
     };
   }
 
@@ -247,7 +235,9 @@ const PageLayoutWrapper = ({
       {!isErrorPage && <WebVitals pageType={pageType} />}
       <GlobalStyles />
       <div id="main-wrapper" css={styles.wrapper}>
-        <HeaderContainer propsForOJExperiment={propsForOJExperiment} />
+        <HeaderContainer
+          propsForTopBarOJComponent={propsForTopBarOJComponent}
+        />
         <div css={styles.content}>{children}</div>
         <FooterContainer />
       </div>
