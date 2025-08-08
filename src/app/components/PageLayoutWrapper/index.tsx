@@ -6,9 +6,6 @@ import { jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
 import { PageTypes } from '#app/models/types/global';
-import useOptimizelyVariation, {
-  ExperimentType,
-} from '#app/hooks/useOptimizelyVariation';
 import useIsPWA from '#app/hooks/useIsPWA';
 import { TopStoryItem } from '../../pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import WebVitals from '../../legacy/containers/WebVitals';
