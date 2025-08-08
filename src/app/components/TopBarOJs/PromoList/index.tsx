@@ -34,7 +34,6 @@ const PromoList = ({
   return (
     <ul
       css={scrollablePromoStyles}
-      role="list"
       {...viewTracker}
       aria-labelledby={id}
       data-testid={id}
