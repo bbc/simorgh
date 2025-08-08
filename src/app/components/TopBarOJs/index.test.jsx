@@ -1,92 +1,14 @@
 import React from 'react';
-// import * as viewTracking from '#hooks/useViewTracker';
-// import * as clickTracking from '#hooks/useClickTrackerHandler';
-import { render } from '../react-testing-library-with-providers';
+import isLive from '#lib/utilities/isLive';
+import * as viewTracking from '#hooks/useViewTracker';
+import * as clickTracking from '#hooks/useClickTrackerHandler';
+import { render, screen } from '../react-testing-library-with-providers';
 import { topStoriesBlocks } from './helpers/fixtureData';
 import TopBarOJs from '.';
 
+jest.mock('#lib/utilities/isLive', () => jest.fn());
+
 describe('TopBarOJs', () => {
-  // describe('Mid Page ScrollablePromo', () => {
-
-  //   it('should render unordered list if more than 1 item', () => {
-  //     const { queryByRole, getAllByRole } = render(
-  //       <ScrollablePromo blocks={threeLinks} />,
-  //     );
-  //     expect(queryByRole('list')).toBeInTheDocument();
-  //     expect(getAllByRole('listitem').length).toEqual(3);
-  //   });
-
-  //   describe('event tracking in editorial onward journeys', () => {
-  //     afterEach(() => {
-  //       jest.clearAllMocks();
-  //     });
-
-  // it('should call the view tracking hook with the correct params with one editorial onward journey', () => {
-  //   const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
-
-  //   render(
-  //     <ScrollablePromo blocks={edOjA.model.blocks} blockGroupIndex={1} />,
-  //   );
-
-  //       expect(viewTrackerSpy).toHaveBeenCalledWith({
-  //         componentName: 'edoj1',
-  //         format: 'CHD=edoj',
-  //       });
-  //     });
-
-  //     it('should call the view tracking hook with the correct params with multiple editorial onward journeys', () => {
-  //       const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
-  //       render(
-  //         <ScrollablePromo blocks={edOjA.model.blocks} blockGroupIndex={1} />,
-  //       );
-  //       render(
-  //         <ScrollablePromo blocks={edOjB.model.blocks} blockGroupIndex={2} />,
-  //       );
-
-  //       expect(viewTrackerSpy).toHaveBeenCalledTimes(4);
-  //       expect(viewTrackerSpy).toHaveBeenCalledWith({
-  //         componentName: 'edoj1',
-  //         format: 'CHD=edoj',
-  //       });
-  //       expect(viewTrackerSpy).toHaveBeenCalledWith({
-  //         componentName: 'edoj2',
-  //         format: 'CHD=edoj',
-  //       });
-  //     });
-
-  //     it('should call the click tracking hook with one editorial onward journey', () => {
-  //       const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
-  //       render(
-  //         <ScrollablePromo blocks={edOjA.model.blocks} blockGroupIndex={1} />,
-  //       );
-
-  //       expect(clickTrackerSpy).toHaveBeenCalledWith({
-  //         componentName: 'edoj1',
-  //         format: 'CHD=edoj',
-  //       });
-  //     });
-
-  //     it('should call the click tracking hook with multiple editorial onward journeys', () => {
-  //       const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
-  //       render(
-  //         <ScrollablePromo blocks={edOjA.model.blocks} blockGroupIndex={1} />,
-  //       );
-  //       render(
-  //         <ScrollablePromo blocks={edOjB.model.blocks} blockGroupIndex={2} />,
-  //       );
-
-  //       expect(clickTrackerSpy).toHaveBeenCalledTimes(4);
-  //       expect(clickTrackerSpy).toHaveBeenCalledWith({
-  //         componentName: 'edoj1',
-  //         format: 'CHD=edoj',
-  //       });
-  //       expect(clickTrackerSpy).toHaveBeenCalledWith({
-  //         componentName: 'edoj2',
-  //         format: 'CHD=edoj',
-  //       });
-  //     });
-  //   });
-  // });
   it('it should display Top Stories label', () => {
     const { getByText, queryByText } = render(
       <TopBarOJs blocks={topStoriesBlocks} />,
@@ -113,5 +35,29 @@ describe('TopBarOJs', () => {
   it('should return null if no data is passed', () => {
     const { container } = render(<TopBarOJs blocks={[]} />);
     expect(container).toBeEmptyDOMElement();
+  });
+
+  it('should not render TopBarOJs component when isLive is true', () => {
+    isLive.mockReturnValue(true);
+    const { container } = render(
+      <>{!isLive() && <TopBarOJs blocks={topStoriesBlocks} />}</>,
+    );
+
+    expect(
+      screen.queryByTestId('top-bar-onward-journeys'),
+    ).not.toBeInTheDocument();
+    expect(container).toBeEmptyDOMElement();
+    expect(isLive()).toBe(true);
+  });
+
+  it('should render TopBarOJs component when isLive is false', () => {
+    isLive.mockReturnValue(false);
+    const { container } = render(
+      <>{!isLive() && <TopBarOJs blocks={topStoriesBlocks} />}</>,
+    );
+
+    expect(screen.queryByTestId('top-bar-onward-journeys')).toBeInTheDocument();
+    expect(container).not.toBeEmptyDOMElement();
+    expect(isLive()).toBe(false);
   });
 });
