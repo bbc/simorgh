@@ -62,11 +62,6 @@ const PageLayoutWrapper = ({
   const reportingPageType = pageType?.replace(/ /g, '');
   let wordCount: wordCountType = 0;
   let propsForTopBarOJComponent = {};
-  const experimentName = 'newswb_ws_topbarojs_read_more';
-  const experimentVariant = useOptimizelyVariation({
-    experimentName,
-    experimentType: ExperimentType.SERVER_SIDE,
-  });
 
   if (pageType === 'article') {
     wordCount = pageData?.content?.model?.blocks
