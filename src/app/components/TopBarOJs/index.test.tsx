@@ -1,9 +1,12 @@
 import React from 'react';
-import { fireEvent } from '../react-testing-library-with-providers';
 import isLive from '#lib/utilities/isLive';
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
-import { render, screen } from '../react-testing-library-with-providers';
+import {
+  render,
+  screen,
+  fireEvent,
+} from '../react-testing-library-with-providers';
 import { topStoriesBlocks } from './helpers/fixtureData';
 import TopBarOJs from '.';
 
@@ -46,7 +49,7 @@ describe('TopBarOJs', () => {
     mockedIsLive.mockReturnValue(true);
     const { container } = render(
       // @ts-expect-error require partial data for testing purposes
-      <>{!isLive() && <TopBarOJs blocks={topStoriesBlocks} />}</>,
+      !isLive() && <TopBarOJs blocks={topStoriesBlocks} />,
     );
 
     expect(
@@ -61,7 +64,7 @@ describe('TopBarOJs', () => {
     mockedIsLive.mockReturnValue(false);
     const { container } = render(
       // @ts-expect-error require partial data for testing purposes
-      <>{!isLive() && <TopBarOJs blocks={topStoriesBlocks} />}</>,
+      !isLive() && <TopBarOJs blocks={topStoriesBlocks} />,
     );
 
     expect(screen.queryByTestId('top-bar-onward-journeys')).toBeInTheDocument();
