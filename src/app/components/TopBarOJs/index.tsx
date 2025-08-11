@@ -5,6 +5,7 @@ import { use } from 'react';
 import isEmpty from 'ramda/src/isEmpty';
 import useViewTracker from '#hooks/useViewTracker';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
+import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import PromoList from './PromoList';
 import styles from './index.styles';
@@ -14,7 +15,7 @@ interface TopBarOJsProps {
   id?: string;
 }
 
-const eventTrackingData = {
+const eventTrackingData: EventTrackingMetadata = {
   componentName: 'top-bar-oj',
 };
 

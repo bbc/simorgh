@@ -3,7 +3,6 @@
 import { jsx } from '@emotion/react';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
-import useViewTracker from '#hooks/useViewTracker';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import Promo from '../Promo';
 import styles from './index.styles';
@@ -22,8 +21,6 @@ const PromoList = ({
   const isOperaMini = useOperaMiniDetection();
   const listBlocks = blocks.slice(0, 3);
 
-  const viewTracker = useViewTracker(eventTrackingData);
-
   const scrollablePromoStyles = isOperaMini
     ? styles.operaScrollPromo
     : styles.standardScrollPromo;
@@ -31,12 +28,7 @@ const PromoList = ({
   const listStyles = isOperaMini ? styles.operaStyledList : styles.list;
 
   return (
-    <ul
-      css={scrollablePromoStyles}
-      aria-labelledby={id}
-      data-testid={id}
-      {...viewTracker}
-    >
+    <ul css={scrollablePromoStyles} aria-labelledby={id} data-testid={id}>
       {listBlocks.map((block, index) => {
         return (
           <li
