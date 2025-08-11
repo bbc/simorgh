@@ -153,18 +153,17 @@ const getPodcastPromoComponent = (podcastPromoEnabled: boolean) => () =>
 const getHeadlineComponent =
   (readTimeData: ReadTimeData) => (props: ComponentToRenderProps) => {
     const { readTime, readTimeLocation, readTimeVariant } = readTimeData;
-    
+
     return (
       <>
         <ArticleHeadline {...props} />
-        {readTime &&
-          readTimeLocation === 'headline' && (
-            <ReadTime
-              readTime={readTime}
-              readTimeVariant={readTimeVariant}
-              css={styles.readTime}
-            />
-          )}
+        {readTime && readTimeLocation === 'headline' && (
+          <ReadTime
+            readTime={readTime}
+            readTimeVariant={readTimeVariant}
+            css={styles.readTime}
+          />
+        )}
       </>
     );
   };
@@ -225,7 +224,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const readTimeLocation = (() => {
     if (readTimeExperimentVariant === null) return 'off';
-  
+
     if (readTimeExperimentVariant.includes('headline')) {
       return 'headline';
     } else if (readTimeExperimentVariant.includes('timestamp')) {
