@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [22.x]
+        node-version: [22.14.0]
     env:
       CI: true
       LOG_LEVEL: 'error'
