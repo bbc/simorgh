@@ -144,7 +144,7 @@ const styles = {
         padding: 0,
         border: 'none',
         backgroundColor: palette.WHITE,
-        color: palette.BLACK, // what colour should it be when disabled?
+        color: palette.BLACK,
         fontSize: '16px',
         cursor: disabled ? 'auto' : 'pointer',
         transition:
@@ -160,9 +160,6 @@ const styles = {
           height: `${spacings.DOUBLE}rem`,
           fill: 'currentcolor',
         },
-        // '&:hover, &:focus': {
-        // a11y focus indicator?
-        // },
         '&:focus-visible': {
           borderColor: palette.POSTBOX,
           boxShadow: `0 0 0 2px ${palette.POSTBOX},0 0 0 4px ${palette.WHITE}`,
