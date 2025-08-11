@@ -82,6 +82,13 @@ import {
   isPortraitVideoUnderHeadline,
 } from '../utils/portraitVideo';
 
+// EXPERIMENT: Read Time
+interface ReadTimeData {
+  readTime: number | undefined;
+  readTimeLocation: string;
+  readTimeVariant: string;
+}
+
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
     <ImageWithCaption
@@ -91,25 +98,41 @@ const getImageComponent =
     />
   );
 
+// EXPERIMENT: Read Time
 const getTimestampComponent =
   (
     hasByline: boolean,
     bylineContribBlocks: OptimoBylineContributorBlock[],
     firstPublished: string,
     lastPublished: string,
+    readTimeData: ReadTimeData,
   ) =>
-  (props: ComponentToRenderProps & TimeStampProps) =>
-    hasByline ? (
+  (props: ComponentToRenderProps & TimeStampProps) => {
+    const { readTime, readTimeLocation, readTimeVariant } = readTimeData;
+
+    return hasByline ? (
       <Byline blocks={bylineContribBlocks}>
         <Timestamp
           firstPublished={new Date(firstPublished).getTime()}
           lastPublished={new Date(lastPublished).getTime()}
           popOut={false}
+          readTime={readTime}
+          readTimeLocation={readTimeLocation}
+          readTimeVariant={readTimeVariant}
         />
       </Byline>
     ) : (
-      <Timestamp {...props} popOut={false} />
+      <>
+        <Timestamp
+          {...props}
+          popOut={false}
+          readTime={readTime}
+          readTimeLocation={readTimeLocation}
+          readTimeVariant={readTimeVariant}
+        />
+      </>
     );
+  };
 
 const getMpuComponent =
   (allowAdvertising: boolean) => (props: ComponentToRenderProps) =>
@@ -126,9 +149,25 @@ const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
 const getPodcastPromoComponent = (podcastPromoEnabled: boolean) => () =>
   podcastPromoEnabled ? <InlinePodcastPromo /> : null;
 
-const getHeadlineComponent = (props: ComponentToRenderProps) => (
-  <ArticleHeadline {...props} />
-);
+// EXPERIMENT: Read Time
+const getHeadlineComponent =
+  (readTimeData: ReadTimeData) => (props: ComponentToRenderProps) => {
+    const { readTime, readTimeLocation, readTimeVariant } = readTimeData;
+    
+    return (
+      <>
+        <ArticleHeadline {...props} />
+        {readTime &&
+          readTimeLocation === 'headline' && (
+            <ReadTime
+              readTime={readTime}
+              readTimeVariant={readTimeVariant}
+              css={styles.readTime}
+            />
+          )}
+      </>
+    );
+  };
 
 const getVideoComponent =
   (translations: Translations, pageBlocks: OptimoBlock[]) =>
@@ -176,6 +215,25 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const isInServerSideExperiment =
     experimentVariant && experimentVariant !== 'off';
+
+  // EXPERIMENT: Read Time
+  const readTimeExperimentName = 'newswb_ws_article_read_time';
+  const readTimeExperimentVariant = useOptimizelyVariation({
+    experimentName: readTimeExperimentName,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
+
+  const readTimeLocation = (() => {
+    if (readTimeExperimentVariant === null) return 'off';
+  
+    if (readTimeExperimentVariant.includes('headline')) {
+      return 'headline';
+    } else if (readTimeExperimentVariant.includes('timestamp')) {
+      return 'timestamp';
+    }
+    return 'off';
+  })();
+
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
 
@@ -186,6 +244,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
   const { enabled: liteCTAShows } = useToggle('liteSiteCTA');
+
+  // EXPERIMENT: Read Time
+  const readTime = pageData?.metadata?.stats?.readTime;
 
   const headline = getHeadline(pageData) ?? '';
   const description = getSummary(pageData) || getHeadline(pageData);
@@ -225,19 +286,29 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     ...(isInServerSideExperiment && { experimentName, experimentVariant }),
   };
 
+  // EXPERIMENT: Read Time
+  const readTimeData = {
+    readTime,
+    readTimeLocation,
+    readTimeVariant: readTimeExperimentVariant || 'off',
+  };
+
   const componentsToRender = {
     visuallyHiddenHeadline,
-    headline: getHeadlineComponent,
+    // EXPERIMENT: Read Time
+    headline: getHeadlineComponent(readTimeData),
     subheadline: Headings,
     audio: MediaLoader,
     video: getVideoComponent(translations, blocks),
     text,
     image: getImageComponent(preloadLeadImageToggle),
+    // EXPERIMENT: Read Time
     timestamp: getTimestampComponent(
       hasByline,
       bylineContribBlocks,
       firstPublished,
       lastPublished,
+      readTimeData,
     ),
     social: SocialEmbedContainer,
     embed: UnsupportedEmbed,
@@ -284,13 +355,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     !isAmp &&
       !isLite &&
       !isApp &&
-      experimentVariant &&
+      experimentName &&
       ['read-more-a', 'read-more-b', 'read-more-a-and-top-stories'].includes(
-        experimentVariant,
+        experimentName,
       ),
   );
-
-  const readTime = pageData?.metadata?.stats?.readTime;
 
   return (
     <div css={styles.pageWrapper}>
@@ -349,7 +418,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             ]}
             role="main"
           >
-            {readTime && <ReadTime readTime={readTime} css={styles.readTime} />}
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}

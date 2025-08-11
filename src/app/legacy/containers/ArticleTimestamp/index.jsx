@@ -1,5 +1,6 @@
 import React, { use } from 'react';
 import Timestamp from '#psammead/psammead-timestamp-container/src';
+import ReadTime from '#app/components/ReadTime';
 import { GridItemMedium, PopOutGridItemMedium } from '#components/Grid';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { formatDateNumeric } from './timeFormats';
@@ -20,6 +21,10 @@ const ArticleTimestamp = ({
   popOut = true,
   minutesTolerance = 0,
   className = '',
+  // EXPERIMENT: Read Time
+  readTime,
+  readTimeLocation,
+  readTimeVariant,
 }) => {
   const {
     articleTimestampPrefix,
@@ -78,6 +83,8 @@ const ArticleTimestamp = ({
           <LastUpdatedTimestamp {...timestampProps} {...lastPublishedProps} />
         </div>
       )}
+      {/* EXPERIMENT: Read Time */}
+      {readTime && readTimeLocation === 'timestamp' && <ReadTime readTime={readTime} readTimeVariant={readTimeVariant} />}
     </GridWrapper>
   );
 };

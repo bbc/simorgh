@@ -3,9 +3,6 @@ import { jsx } from '@emotion/react';
 import { use } from 'react';
 import isLive from '#app/lib/utilities/isLive';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import useOptimizelyVariation, {
-  ExperimentType,
-} from '#app/hooks/useOptimizelyVariation';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '#app/hooks/useViewTracker';
 import styles from './index.styles';
@@ -13,19 +10,11 @@ import styles from './index.styles';
 type ReadTimeProps = {
   readTime: number;
   className?: string;
+  readTimeVariant: string;
 };
 
-const ReadTime = ({ readTime, className }: ReadTimeProps) => {
-  if (isLive()) return null;
-
-  // TODO - update this to real experiment name and add it to OptimizelyPageMetrics/experimentsForPageMetrics
-  const experimentName = 'dummy_experiment_mvt';
-  // Can remove disable-next-line when we remove isLive check
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const experimentVariant = useOptimizelyVariation({
-    experimentName,
-    experimentType: ExperimentType.CLIENT_SIDE,
-  });
+const ReadTime = ({ readTime, readTimeVariant, className }: ReadTimeProps) => {
+  if (isLive() || readTimeVariant === 'off') return null;
 
   const readTimeInMiliseconds = readTime * 60000;
   const minutesLabel = readTime === 1 ? 'minute' : 'minutes';
@@ -33,8 +22,8 @@ const ReadTime = ({ readTime, className }: ReadTimeProps) => {
   const eventTrackingData: EventTrackingData = {
     componentName: 'read-time-on-article',
     sendOptimizelyEvents: true,
-    experimentName: 'dummy_experiment_mvt', // TODO - update this to real experiment name
-    experimentVariant,
+    experimentName: 'newswb_ws_article_read_time',
+    experimentVariant: readTimeVariant,
     itemTracker: {
       label: `Read time: ${readTime} ${minutesLabel}`,
       duration: readTimeInMiliseconds,
@@ -59,7 +48,7 @@ const ReadTime = ({ readTime, className }: ReadTimeProps) => {
       <p>
         {readTimeTranslation}: {readTime} {minutesLabel}
       </p>
-      <p>Experiment Variant: {experimentVariant}</p>
+      <p>Experiment Variant: {readTimeVariant}</p>
     </div>
   );
 };
