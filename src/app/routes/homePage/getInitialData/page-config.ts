@@ -46,7 +46,7 @@ export const HOME_PAGE_CONFIG: {
     live: '',
   },
   dari: {
-    test: '',
+    test: 'c7m3ln2m4jq3t',
     live: '',
   },
   gahuza: {
