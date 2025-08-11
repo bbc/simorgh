@@ -353,9 +353,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     !isAmp &&
       !isLite &&
       !isApp &&
-      experimentName &&
+      experimentVariant &&
       ['read-more-a', 'read-more-b', 'read-more-a-and-top-stories'].includes(
-        experimentName,
+        experimentVariant,
       ),
   );
 
