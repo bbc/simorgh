@@ -122,15 +122,13 @@ const getTimestampComponent =
         />
       </Byline>
     ) : (
-      <>
-        <Timestamp
-          {...props}
-          popOut={false}
-          readTime={readTime}
-          readTimeLocation={readTimeLocation}
-          readTimeVariant={readTimeVariant}
-        />
-      </>
+      <Timestamp
+        {...props}
+        popOut={false}
+        readTime={readTime}
+        readTimeLocation={readTimeLocation}
+        readTimeVariant={readTimeVariant}
+      />
     );
   };
 
@@ -227,7 +225,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
     if (readTimeExperimentVariant.includes('headline')) {
       return 'headline';
-    } else if (readTimeExperimentVariant.includes('timestamp')) {
+    }
+    if (readTimeExperimentVariant.includes('timestamp')) {
       return 'timestamp';
     }
     return 'off';
