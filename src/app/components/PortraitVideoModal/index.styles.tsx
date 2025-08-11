@@ -115,15 +115,15 @@ const styles = {
 
   navButtonColumn:
     () =>
-    ({ mq }: Theme) =>
+    ({ mq, spacings }: Theme) =>
       css({
         order: 2,
-        paddingLeft: '16px',
+        paddingLeft: `${spacings.DOUBLE}rem`,
         display: 'none',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        gap: '8px',
+        gap: `${spacings.FULL}rem`,
         zIndex: 2,
         [mq.GROUP_3_MIN_WIDTH]: {
           display: 'flex',
