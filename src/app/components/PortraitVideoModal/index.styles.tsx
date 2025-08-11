@@ -85,7 +85,7 @@ const styles = {
       [mq.GROUP_3_MIN_WIDTH]: {
         '&.media-container': {
           maxHeight: '90%',
-          marginLeft: '60px',
+          marginInlineStart: `${pixelsToRem(60)}`,
         },
       },
     }),
