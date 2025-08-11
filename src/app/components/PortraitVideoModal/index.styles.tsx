@@ -146,6 +146,7 @@ const styles = {
         backgroundColor: palette.WHITE,
         color: palette.BLACK,
         fontSize: '16px',
+        cursor:'auto',
         transition:
           'background 0.2s, box-shadow 0.2s, transform 0.35s cubic-bezier(0.4, 0, 0.2, 1)',
         opacity: disabled ? 0.2 : 1,
