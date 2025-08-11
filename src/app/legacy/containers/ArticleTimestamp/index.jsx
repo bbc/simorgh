@@ -84,7 +84,9 @@ const ArticleTimestamp = ({
         </div>
       )}
       {/* EXPERIMENT: Read Time */}
-      {readTime && readTimeLocation === 'timestamp' && <ReadTime readTime={readTime} readTimeVariant={readTimeVariant} />}
+      {readTime && readTimeLocation === 'timestamp' && (
+        <ReadTime readTime={readTime} readTimeVariant={readTimeVariant} />
+      )}
     </GridWrapper>
   );
 };
