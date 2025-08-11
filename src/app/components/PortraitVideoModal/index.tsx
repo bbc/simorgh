@@ -16,21 +16,6 @@ import { DownArrowIcon, UpArrowIcon } from '../icons';
 const getPlayerInstance = () =>
   window?.embeddedMedia?.api?.players()?.bbcMediaPlayer0;
 
-const getFocusableElements = (container: HTMLElement | null) => {
-  if (!container) {
-    return [];
-  }
-
-  return [
-    ...container.querySelectorAll<HTMLElement>(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
-    ),
-  ].filter(
-    element =>
-      !element.hasAttribute('disabled') && !element.getAttribute('aria-hidden'),
-  );
-};
-
 export const playlistLoadedCallback = (
   e: SMPEvent,
   blocks: PortraitClipMediaBlock[],
@@ -143,18 +128,18 @@ const PortraitVideoModal = ({
       }
       // - Tab/Shift+Tab loops focus between the close button and the end-of-content button
       if (event.key === 'Tab') {
-        const focusableElements = getFocusableElements(modalRef.current);
-        if (focusableElements.length === 0) return;
-        const firstElement = focusableElements[0];
-        const lastElement = focusableElements[focusableElements.length - 1];
-        if (event.shiftKey) {
-          if (document.activeElement === firstElement) {
-            event.preventDefault();
-            lastElement.focus();
-          }
-        } else if (document.activeElement === lastElement) {
+        if (
+          document.activeElement === closeButtonRef.current &&
+          event.shiftKey
+        ) {
           event.preventDefault();
-          firstElement.focus();
+          endOfContentButtonRef.current?.focus();
+        } else if (
+          document.activeElement === endOfContentButtonRef.current &&
+          !event.shiftKey
+        ) {
+          event.preventDefault();
+          closeButtonRef.current?.focus();
         }
       }
     };

@@ -146,7 +146,6 @@ const styles = {
         backgroundColor: palette.WHITE,
         color: palette.BLACK,
         fontSize: '16px',
-        cursor: disabled ? 'auto' : 'pointer',
         transition:
           'background 0.2s, box-shadow 0.2s, transform 0.35s cubic-bezier(0.4, 0, 0.2, 1)',
         opacity: disabled ? 0.2 : 1,
@@ -173,6 +172,10 @@ const styles = {
           boxShadow: !disabled
             ? `0 0 0 2px ${palette.BLACK}, 0 0 0 4px ${palette.WHITE}`
             : 'none',
+        },
+        ':disabled': {
+          cursor: 'auto',
+          opacity: 0.2,
         },
       }),
 };
