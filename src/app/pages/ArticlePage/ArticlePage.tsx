@@ -221,7 +221,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   });
 
   const readTimeLocation = (() => {
-    if (readTimeExperimentVariant === null) return 'off';
+    if (!readTimeExperimentVariant) return 'off';
 
     if (readTimeExperimentVariant.includes('headline')) {
       return 'headline';
