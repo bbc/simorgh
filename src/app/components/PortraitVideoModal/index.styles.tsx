@@ -159,19 +159,9 @@ const styles = {
           height: `${spacings.DOUBLE}rem`,
           fill: 'currentcolor',
         },
-        '&:focus-visible': {
-          borderColor: palette.POSTBOX,
-          boxShadow: `0 0 0 2px ${palette.POSTBOX},0 0 0 4px ${palette.WHITE}`,
-        },
+
         '&:hover': {
-          transform: disabled ? 'none' : 'scale(1.08)',
-        },
-        '&:active': {
-          backgroundColor: palette.WHITE,
-          borderColor: palette.BLACK,
-          boxShadow: !disabled
-            ? `0 0 0 2px ${palette.BLACK}, 0 0 0 4px ${palette.WHITE}`
-            : 'none',
+          pointerEvents: 'none',
         },
         ':disabled': {
           cursor: 'auto',
