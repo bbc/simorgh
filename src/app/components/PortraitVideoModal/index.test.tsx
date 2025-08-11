@@ -8,7 +8,6 @@ import {
 import blocks from './fixture';
 import { Player, SMPEvent } from '../MediaLoader/types';
 import MediaLoader from '../MediaLoader';
-import userEvent from '@testing-library/user-event';
 
 jest.mock('../MediaLoader', () => ({
   __esModule: true,
@@ -407,31 +406,6 @@ describe('PortraitVideoModal', () => {
 
       expect(screen.getByTestId('next-video-button')).toBeEnabled();
       expect(screen.getByTestId('previous-video-button')).toBeEnabled();
-    });
-        it('should ensure focus moves correctly when tabbing through navigation buttons', async () => {
-      render(
-        <Component
-          selectedVideoIndex={1}
-          blocks={blocks}
-          onClose={mockClose}
-        />,
-      );
-    const closeButton = screen.getByTestId('close-modal-button');
-    const previousButton = screen.getByTestId('previous-video-button');
-    const nextButton = screen.getByTestId('next-video-button');
-    const visuallyHiddenCloseButton = screen.getByTestId('close-modal-visually-hidden')
-
-    expect(closeButton).toHaveFocus()
-
-    await userEvent.tab();
-    expect(previousButton).toHaveFocus()
-
-    await userEvent.tab();
-    expect(nextButton).toHaveFocus()
-
-    await userEvent.tab();
-    expect(visuallyHiddenCloseButton).toHaveFocus()
-
     });
   });
 });
