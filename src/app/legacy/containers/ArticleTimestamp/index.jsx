@@ -22,9 +22,9 @@ const ArticleTimestamp = ({
   minutesTolerance = 0,
   className = '',
   // EXPERIMENT: Read Time
-  readTime,
-  readTimeLocation,
-  readTimeVariant,
+  readTime = undefined,
+  readTimeLocation = 'off',
+  readTimeVariant = 'off',
 }) => {
   const {
     articleTimestampPrefix,
