@@ -22,7 +22,7 @@ const ArticleTimestamp = ({
   minutesTolerance = 0,
   className = '',
   // EXPERIMENT: Read Time
-  readTime = undefined,
+  readTime = 0,
   readTimeLocation = 'off',
   readTimeVariant = 'off',
 }) => {
