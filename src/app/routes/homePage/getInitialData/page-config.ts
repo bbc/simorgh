@@ -45,6 +45,10 @@ export const HOME_PAGE_CONFIG: {
     test: '',
     live: '',
   },
+  dari: {
+    test: '',
+    live: '',
+  },
   gahuza: {
     test: 'c897lqqzkgkt',
     live: 'cz4vn9gy9pyt',
