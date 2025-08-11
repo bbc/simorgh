@@ -245,6 +245,21 @@ exports[`Psammead Styles - Font Families should match cymrufyw 1`] = `
 }
 `;
 
+exports[`Psammead Styles - Font Families should match dari 1`] = `
+{
+  "sansBold": "
+    font-family: "BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  ",
+  "sansRegular": "
+    font-family: "BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  ",
+}
+`;
+
 exports[`Psammead Styles - Font Families should match gahuza 1`] = `
 {
   "sansBold": "
