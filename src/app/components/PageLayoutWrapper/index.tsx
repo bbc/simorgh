@@ -58,7 +58,6 @@ const PageLayoutWrapper = ({
   const pageType = pageData?.metadata?.type;
   const reportingPageType = pageType?.replace(/ /g, '');
   let wordCount: wordCountType = 0;
-  let propsForTopBarOJComponent = {};
 
   if (pageType === 'article') {
     wordCount = pageData?.content?.model?.blocks
@@ -73,12 +72,6 @@ const PageLayoutWrapper = ({
         if (!innerBlocks) return reducer;
         return reducer + innerBlocks.split(' ').length;
       }, 0);
-
-    const topStories = pageData.secondaryColumn?.topStories;
-
-    propsForTopBarOJComponent = {
-      blocks: topStories || [],
-    };
   }
 
   const serviceFonts = fontFacesLazy(service, isPWA);
@@ -226,7 +219,9 @@ const PageLayoutWrapper = ({
       <GlobalStyles />
       <div id="main-wrapper" css={styles.wrapper}>
         <HeaderContainer
-          propsForTopBarOJComponent={propsForTopBarOJComponent}
+          propsForTopBarOJComponent={{
+            blocks: pageData?.secondaryColumn?.topStories || [],
+          }}
         />
         <div css={styles.content}>{children}</div>
         <FooterContainer />

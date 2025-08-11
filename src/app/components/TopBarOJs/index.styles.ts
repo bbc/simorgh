@@ -2,6 +2,12 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
 export default {
+  topBarOJWrapper: ({ spacings, mq }: Theme) =>
+    css({
+      [mq.GROUP_3_MIN_WIDTH]: {
+        marginInlineStart: `-${spacings.FULL}rem`,
+      },
+    }),
   promoContainer: ({ palette, mq, spacings }: Theme) =>
     css({
       background: palette.GREY_2,

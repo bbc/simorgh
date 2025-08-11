@@ -4,15 +4,14 @@ import { jsx } from '@emotion/react';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import useViewTracker from '#hooks/useViewTracker';
+import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import Promo from '../Promo';
 import styles from './index.styles';
 
 interface PromoListProps {
   blocks: TopStoryItem[];
   id?: string;
-  eventTrackingData?: {
-    componentName: string;
-  };
+  eventTrackingData?: EventTrackingMetadata;
 }
 
 const PromoList = ({
@@ -34,9 +33,9 @@ const PromoList = ({
   return (
     <ul
       css={scrollablePromoStyles}
-      {...viewTracker}
       aria-labelledby={id}
       data-testid={id}
+      {...viewTracker}
     >
       {listBlocks.map((block, index) => {
         return (

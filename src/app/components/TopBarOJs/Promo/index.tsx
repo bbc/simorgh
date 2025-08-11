@@ -4,14 +4,13 @@ import { jsx } from '@emotion/react';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import LiveLabel from '../../LiveLabel';
 import styles from './index.styles';
 
 interface PromoProps {
   block: TopStoryItem;
-  eventTrackingData?: {
-    componentName: string;
-  };
+  eventTrackingData?: EventTrackingMetadata;
 }
 
 const Promo = ({ block, eventTrackingData }: PromoProps) => {
