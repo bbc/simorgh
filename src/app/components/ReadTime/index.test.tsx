@@ -19,7 +19,7 @@ describe('ReadTime', () => {
 
       const expected = {
         componentName: 'read-time-on-article',
-        experimentName: 'dummy_experiment_mvt',
+        experimentName: 'newswb_ws_article_read_time',
         experimentVariant: null,
         itemTracker: {
           duration: 240000,
