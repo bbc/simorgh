@@ -10,7 +10,7 @@ import styles from './index.styles';
 type ReadTimeProps = {
   readTime: number;
   className?: string;
-  readTimeVariant: string;
+  readTimeVariant?: string;
 };
 
 const ReadTime = ({ readTime, readTimeVariant, className }: ReadTimeProps) => {
