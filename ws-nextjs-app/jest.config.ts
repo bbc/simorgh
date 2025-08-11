@@ -1,7 +1,7 @@
 /* eslint-disable import/no-relative-packages */
 import { pathsToModuleNameMapper } from 'ts-jest';
 import type { Config } from '@jest/types';
-import { compilerOptions } from '../tsconfig.json';
+import { compilerOptions } from '../tsconfig.json' with { type: 'json' };
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const { react, ...compilerOptionsPaths } = compilerOptions.paths;
