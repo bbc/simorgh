@@ -176,12 +176,7 @@ const PortraitVideoModal = ({
         aria-modal="true"
         aria-label={modalLabel}
         ref={modalRef}
-        css={[
-          styles.modal,
-          {
-            flexDirection: 'row', // Make modal children row-aligned
-          },
-        ]}
+        css={styles.modal}
       >
         <button
           ref={closeButtonRef}
