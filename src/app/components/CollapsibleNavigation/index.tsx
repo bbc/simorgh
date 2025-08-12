@@ -54,6 +54,7 @@ const CollapsibleNavigation = ({
                 id={`nav-${section.id}`}
                 href={section.href || `#${section.id}`}
                 onClick={e => {
+                  if (section.href) return;
                   e.preventDefault();
                   setOpenSection(isActive ? null : section.id);
                   document.getElementById(`close-${section.id}`)?.focus();
