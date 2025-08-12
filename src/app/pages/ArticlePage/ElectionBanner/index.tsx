@@ -41,15 +41,15 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
     heights = DEFAULT_HEIGHTS,
     iframeSrc,
     iframeDevSrc,
-    electionThingId,
+    electionThingIds,
   } = electionBanner;
 
   const isEditoriallySensitive = taggings?.some(({ value }) =>
     value.includes(SENSITIVE_ARTICLE_ID),
   );
 
-  const validAboutTag = aboutTags?.find(
-    ({ thingId }) => thingId === electionThingId,
+  const validAboutTag = aboutTags?.find(({ thingId }) =>
+    electionThingIds.includes(thingId),
   );
 
   const showBanner =

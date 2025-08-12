@@ -118,7 +118,7 @@ export type ServiceConfig = {
       tablet: number;
       mobile: number;
     };
-    electionThingId: string;
+    electionThingIds: string[];
     iframeSrc: string;
     iframeDevSrc: string;
   };
