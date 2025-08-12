@@ -1,5 +1,5 @@
+/* eslint-disable import/prefer-default-export */
 import React from 'react';
-import { NextApiRequest } from 'next';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
 import {
   LIVE_CORE,
@@ -10,21 +10,20 @@ import {
 import { REITH_FONTS_DIR } from '#app/components/ThemeProvider/fontFaces';
 import { Services, Variants } from '#app/models/types/global';
 import { FetchError } from '#app/models/types/fetch';
+import getPageData from '#nextjs/utilities/pageRequests/getPageData';
 import Badge from './Badge';
 import { getImages, responseNotFound } from './utils';
 import horizontalLayout from './HorizontalLayout';
 import socialCardLayout from './SocialCardLayout';
 
-export const config = { runtime: 'edge' };
-
 const REITH_SANS_BOLD_FONT_URL = `${REITH_FONTS_DIR}/BBCReithSans_W_Bd.woff`;
 const REITH_SERIF_BOLD_FONT_URL = `${REITH_FONTS_DIR}/BBCReithSerif_W_Bd.woff`;
 
-export default async function handler(req: NextApiRequest) {
+export async function GET(req: Request) {
   try {
     const { searchParams } = new URL(
       req.url ?? '',
-      `https://${req.headers.host}`,
+      `https://${req.headers.get('host')}`,
     );
 
     const id = searchParams.get('id');
@@ -39,20 +38,22 @@ export default async function handler(req: NextApiRequest) {
 
     if (!id || !service) return responseNotFound();
 
-    const [articleResponse, sansBoldBuffer, serifBoldBuffer] =
-      await Promise.all([
-        // Fetch article
-        fetch(
-          `https://web-cdn.api.bbci.co.uk/fd/simorgh-bff?pageType=article&id=${id}&service=${service}${variant ? `&variant=${variant}` : ''}`,
-        ),
-        // Fetch fonts
-        fetch(REITH_SANS_BOLD_FONT_URL).then(res => res.arrayBuffer()),
-        fetch(REITH_SERIF_BOLD_FONT_URL).then(res => res.arrayBuffer()),
-      ]);
+    const [{ data }, sansBoldBuffer, serifBoldBuffer] = await Promise.all([
+      // Fetch article
+      getPageData({
+        id,
+        service,
+        variant,
+        resolvedUrl: req.url,
+        rendererEnv: 'live',
+        pageType: 'article',
+      }),
+      // Fetch fonts
+      fetch(REITH_SANS_BOLD_FONT_URL).then(res => res.arrayBuffer()),
+      fetch(REITH_SERIF_BOLD_FONT_URL).then(res => res.arrayBuffer()),
+    ]);
 
-    const articleResponseJson = await articleResponse.json();
-
-    const articleData = articleResponseJson?.data?.article;
+    const articleData = data?.pageData?.article;
 
     if (!articleData) return responseNotFound();
 
