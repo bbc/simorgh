@@ -97,21 +97,15 @@ const PortraitVideoModal = ({
   const hasPrevious = selectedVideoIndex > 0;
   const hasNext = selectedVideoIndex < blocks.length - 1;
 
-  const [selectedNavButton, setSelectedNavButton] = useState<
-    'previous' | 'next' | null
-  >(null);
-
   const handlePrevious = useCallback(() => {
     if (hasPrevious) {
       setSelectedVideoIndex(i => i - 1);
-      setSelectedNavButton('previous');
     }
   }, [hasPrevious]);
 
   const handleNext = useCallback(() => {
     if (hasNext) {
       setSelectedVideoIndex(i => i + 1);
-      setSelectedNavButton('next');
     }
   }, [hasNext]);
 
@@ -195,10 +189,7 @@ const PortraitVideoModal = ({
             type="button"
             onClick={handlePrevious}
             disabled={!hasPrevious}
-            css={styles.navButton(
-              !hasPrevious,
-              selectedNavButton === 'previous',
-            )}
+            css={styles.navButton}
             aria-label="Previous video"
             data-testid="previous-video-button"
             className="focusIndicatorInvert"
@@ -209,7 +200,7 @@ const PortraitVideoModal = ({
             type="button"
             onClick={handleNext}
             disabled={!hasNext}
-            css={styles.navButton(!hasNext, selectedNavButton === 'next')}
+            css={styles.navButton}
             aria-label="Next video"
             data-testid="next-video-button"
             className="focusIndicatorInvert"

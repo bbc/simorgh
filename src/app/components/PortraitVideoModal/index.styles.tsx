@@ -113,59 +113,53 @@ const styles = {
       },
     }),
 
-  navButtonColumn:({ mq, spacings }: Theme) =>
-      css({
-        order: 2,
-        paddingLeft: `${spacings.DOUBLE}rem`,
-        display: 'none',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        gap: `${spacings.FULL}rem`,
-        zIndex: 2,
-        [mq.GROUP_3_MIN_WIDTH]: {
-          display: 'flex',
-        },
-      }),
-
-  navButton:
-    (disabled: boolean, isSelected = false) =>
-    ({ palette, spacings }: Theme) =>
-      css({
+  navButtonColumn: ({ mq, spacings }: Theme) =>
+    css({
+      order: 2,
+      paddingLeft: `${spacings.DOUBLE}rem`,
+      display: 'none',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      gap: `${spacings.FULL}rem`,
+      zIndex: 2,
+      [mq.GROUP_3_MIN_WIDTH]: {
         display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        minWidth: `${spacings.SEXTUPLE}rem`,
-        minHeight: `${spacings.SEXTUPLE}rem`,
-        width: `${spacings.SEXTUPLE}rem`,
-        height: `${spacings.SEXTUPLE}rem`,
-        padding: 0,
-        border: 'none',
-        backgroundColor: palette.WHITE,
-        color: palette.BLACK,
-        fontSize: '16px',
-        transition:
-          'background 0.2s, box-shadow 0.2s, transform 0.35s cubic-bezier(0.4, 0, 0.2, 1)',
-        opacity: 1,
-        outline: 'none',
-        boxShadow:
-          !disabled && isSelected
-            ? `0 0 0 2px ${palette.BLACK}, 0 0 0 4px ${palette.WHITE}`
-            : 'none',
-        '& svg': {
-          width: `${spacings.DOUBLE}rem`,
-          height: `${spacings.DOUBLE}rem`,
-          fill: 'currentcolor',
-        },
+      },
+    }),
 
-        '&:hover': {
-          pointerEvents: 'none',
-        },
-        ':disabled': {
-          cursor: 'auto',
-          opacity: 0.2,
-        },
-      }),
+  navButton: ({ palette, spacings }: Theme) =>
+    css({
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      minWidth: `${spacings.SEXTUPLE}rem`,
+      minHeight: `${spacings.SEXTUPLE}rem`,
+      width: `${spacings.SEXTUPLE}rem`,
+      height: `${spacings.SEXTUPLE}rem`,
+      padding: 0,
+      border: 'none',
+      backgroundColor: palette.WHITE,
+      color: palette.BLACK,
+      fontSize: '16px',
+      transition:
+        'background 0.2s, box-shadow 0.2s, transform 0.35s cubic-bezier(0.4, 0, 0.2, 1)',
+      opacity: 1,
+      outline: 'none',
+      '& svg': {
+        width: `${spacings.DOUBLE}rem`,
+        height: `${spacings.DOUBLE}rem`,
+        fill: 'currentcolor',
+      },
+
+      '&:hover': {
+        pointerEvents: 'none',
+      },
+      ':disabled': {
+        cursor: 'auto',
+        opacity: 0.2,
+      },
+    }),
 };
 
 export default styles;
