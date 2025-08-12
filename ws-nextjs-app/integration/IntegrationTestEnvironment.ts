@@ -1,20 +1,18 @@
 /* eslint-disable import/no-relative-packages */
 /* eslint-disable no-console */
-import { TestEnvironment } from 'jest-environment-jsdom';
 import type {
-  JestEnvironmentConfig,
   EnvironmentContext,
+  JestEnvironmentConfig,
 } from '@jest/environment';
+import TestEnvironment from '@happy-dom/jest-environment';
 import getPageTypeFromTestPath from '../../src/integration/utils/getPageTypeFromTestPath';
 import camelCaseToText from '../../src/integration/utils/camelCaseToText';
-import fetchDom from '../../src/integration/utils/fetchDom';
+import fetchHtml from '../../src/integration/utils/fetchHtml';
 
-class CustomTestEnvirnoment extends TestEnvironment {
+class CustomTestEnvironment extends TestEnvironment {
   pageType: string;
 
   service: string | string[];
-
-  runScripts: boolean;
 
   displayAds: boolean;
 
@@ -23,18 +21,12 @@ class CustomTestEnvirnoment extends TestEnvironment {
   constructor(config: JestEnvironmentConfig, context: EnvironmentContext) {
     super(config, context);
     const { platform } = config.projectConfig.testEnvironmentOptions;
-    const {
-      pathname,
-      service,
-      runScripts = 'true',
-      displayAds = 'false',
-    } = context.docblockPragmas;
+    const { pathname, service, displayAds = 'false' } = context.docblockPragmas;
 
     const pageType = getPageTypeFromTestPath(context.testPath);
 
     this.pageType = camelCaseToText(pageType);
     this.service = service;
-    this.runScripts = runScripts === 'true';
     this.displayAds = displayAds === 'true';
     this.url = `http://localhost:7081${pathname}${
       platform === 'amp' ? '.amp' : ''
@@ -45,9 +37,8 @@ class CustomTestEnvirnoment extends TestEnvironment {
     await super.setup();
 
     try {
-      const dom = await fetchDom({
+      const { window, document } = await fetchHtml({
         url: this.url,
-        runScripts: this.runScripts,
         headers: {
           ...(this.displayAds && { 'BBC-Adverts': 'true' }),
         },
@@ -56,8 +47,8 @@ class CustomTestEnvirnoment extends TestEnvironment {
       Object.defineProperties(this.global, {
         pageType: { value: this.pageType },
         service: { value: this.service },
-        window: { value: dom.window },
-        document: { value: dom.window.document },
+        window: { value: window },
+        document: { value: document },
         fetch: { value: fetch },
       });
     } catch (e) {
@@ -74,4 +65,4 @@ class CustomTestEnvirnoment extends TestEnvironment {
   }
 }
 
-export default CustomTestEnvirnoment;
+export default CustomTestEnvironment;

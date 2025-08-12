@@ -97,6 +97,8 @@ module.exports = {
       },
     ],
   ],
-  timers: 'modern',
+  fakeTimers: {
+    enableGlobally: true,
+  },
   workerIdleMemoryLimit: '512MB',
 };

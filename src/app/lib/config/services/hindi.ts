@@ -266,6 +266,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'ये पॉडकास्ट इन प्लेटफ़ॉर्म्स पर भी उपलब्ध है -',
         download: 'एपिसोड डाउनलोड करें',
         closeVideo: 'बाहर निकलें',
+        endOfContentClose: 'इस सामग्री का अंत. बाहर निकलें',
       },
       socialEmbed: {
         caption: {
