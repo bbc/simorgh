@@ -116,14 +116,14 @@ const styles = {
     alignItems: 'center',
   }),
 
-  collapsibleSubNavTitle: ({ fontVariants }: Theme) =>
+  collapsibleSubNavTitle: ({ fontVariants, spacings }: Theme) =>
     css({
       fontSize: `${pixelsToRem(20)}rem`,
       ...fontVariants.sansBold,
       fontWeight: 700,
       lineHeight: `${pixelsToRem(22)}rem`,
       letterSpacing: '0%',
-      padding: `${pixelsToRem(12)}rem`,
+      padding: `${spacings.FULL}rem`,
     }),
 
   collapsibleSubNavCloseButton: ({ palette }: Theme) =>
@@ -147,8 +147,8 @@ const styles = {
 
   collapsibleSubNavCloseButtonIcon: () =>
     css({
-      width: `${pixelsToRem(14)}rem`,
-      height: `${pixelsToRem(14)}rem`,
+      width: `${pixelsToRem(22)}rem`,
+      height: `${pixelsToRem(22)}rem`,
     }),
 
   collapsibleSubNavGrid: ({ mq, spacings, palette }: Theme) =>
@@ -183,7 +183,7 @@ const styles = {
       display: 'inline-block',
       width: '100%',
       height: '100%',
-      padding: `${pixelsToRem(11)}rem ${spacings.FULL}rem`,
+      padding: `${pixelsToRem(12)}rem ${spacings.FULL}rem`,
       textDecoration: 'none',
       color: palette.GREY_8,
       ...fontVariants.sansRegular,
@@ -210,7 +210,7 @@ const styles = {
       '&:focus-visible::after': {
         content: 'none',
       },
-      '&:focus, &:hover': {
+      '&:hover': {
         backgroundColor: palette.GREY_3,
       },
     }),
