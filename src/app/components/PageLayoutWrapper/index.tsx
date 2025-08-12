@@ -6,9 +6,6 @@ import { jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
 import { PageTypes } from '#app/models/types/global';
-import useOptimizelyVariation, {
-  ExperimentType,
-} from '#app/hooks/useOptimizelyVariation';
 import useIsPWA from '#app/hooks/useIsPWA';
 import { TopStoryItem } from '../../pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import WebVitals from '../../legacy/containers/WebVitals';
@@ -61,12 +58,6 @@ const PageLayoutWrapper = ({
   const pageType = pageData?.metadata?.type;
   const reportingPageType = pageType?.replace(/ /g, '');
   let wordCount: wordCountType = 0;
-  let propsForOJExperiment = {};
-  const experimentName = 'newswb_ws_topbarojs_read_more';
-  const experimentVariant = useOptimizelyVariation({
-    experimentName,
-    experimentType: ExperimentType.SERVER_SIDE,
-  });
 
   if (pageType === 'article') {
     wordCount = pageData?.content?.model?.blocks
@@ -81,26 +72,6 @@ const PageLayoutWrapper = ({
         if (!innerBlocks) return reducer;
         return reducer + innerBlocks.split(' ').length;
       }, 0);
-
-    const topStories = pageData.secondaryColumn?.topStories;
-    const mostReadItems = pageData.mostRead?.items;
-
-    let dataForOJExperiment;
-    if (
-      experimentVariant &&
-      ['top-bar-top-stories', 'read-more-a-and-top-stories'].includes(
-        experimentVariant,
-      )
-    ) {
-      dataForOJExperiment = topStories;
-    } else if (experimentVariant === 'top-bar-most-read' && mostReadItems) {
-      dataForOJExperiment = mostReadItems;
-    }
-
-    propsForOJExperiment = {
-      blocks: dataForOJExperiment || [],
-      experimentVariant,
-    };
   }
 
   const serviceFonts = fontFacesLazy(service, isPWA);
@@ -247,7 +218,11 @@ const PageLayoutWrapper = ({
       {!isErrorPage && <WebVitals pageType={pageType} />}
       <GlobalStyles />
       <div id="main-wrapper" css={styles.wrapper}>
-        <HeaderContainer propsForOJExperiment={propsForOJExperiment} />
+        <HeaderContainer
+          propsForTopBarOJComponent={{
+            blocks: pageData?.secondaryColumn?.topStories || [],
+          }}
+        />
         <div css={styles.content}>{children}</div>
         <FooterContainer />
       </div>
