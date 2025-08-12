@@ -80,14 +80,14 @@ const styles = {
         '& > h3 > a': {
           color: `${palette.WHITE}`,
           '&:visited': {
-            color: `${palette.GREY_5}`,
+            color: `${palette.WHITE}`,
           },
         },
 
         '& > time.promo-timestamp': {
           color: `${palette.WHITE}`,
           '&:visited': {
-            color: `${palette.GREY_5}`,
+            color: `${palette.WHITE}`,
           },
           [mq.GROUP_2_MAX_WIDTH]: {
             marginBottom: `${spacings.DOUBLE}rem`,

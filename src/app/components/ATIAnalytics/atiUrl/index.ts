@@ -521,12 +521,14 @@ export const buildReverbEventModel = ({
   experimentVariant,
   itemTracker = {},
   groupTracker = {},
+  eventGroupingName,
 }: ATIEventTrackingProps): ReverbBeaconConfig => {
   const {
     type: itemType,
     text,
     position,
     duration,
+    label,
     resourceId: itemResourceId,
   } = itemTracker;
   const { itemCount, resourceId: groupResourceId } = groupTracker;
@@ -556,6 +558,7 @@ export const buildReverbEventModel = ({
         ...(text && { text }),
         ...(position && { position }),
         ...(duration && { duration }),
+        ...(label && { label }),
         ...(itemResourceId && { resource_id: itemResourceId }),
       },
       group: {
@@ -566,6 +569,7 @@ export const buildReverbEventModel = ({
       event: {
         category: 'viewability',
         action: type === CLICK_EVENT ? VIEWABILITY_CLICK_EVENT : VIEW_EVENT,
+        ...(eventGroupingName && { grouping: eventGroupingName }),
       },
       isClick: type === CLICK_EVENT,
       ...(experimentVariant && {

@@ -258,6 +258,7 @@ export const service: DefaultServiceConfig = {
         download: 'ડાઉનલોડકરો',
         recentEpisodes: 'તાજેતરનાં એપિસોડ્સ',
         closeVideo: 'બહાર નીકળો',
+        endOfContentClose: 'આ કન્ટેન્ટનો અંત. બહાર નીકળો',
       },
       socialEmbed: {
         caption: {

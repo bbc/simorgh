@@ -230,6 +230,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Duration',
         recentEpisodes: 'Diğerleri',
         closeVideo: 'Çıkış',
+        endOfContentClose: 'Bu içerik sona erdi. Çıkış',
       },
       socialEmbed: {
         caption: {

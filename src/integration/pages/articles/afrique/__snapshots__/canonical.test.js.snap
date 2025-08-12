@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Canonical Articles Gist list item should match text 1`] = `"Lorem ipsum dolor sit amet, consectetur adipiscing elit."`;
 
@@ -18,7 +18,9 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
     <noscript
       class="bbc-n2zqlz"
     >
-      &lt;strong&gt;Pour regarder ce contenu, veuillez activer JavaScript ou essayer un autre navigateur.&lt;/strong&gt;
+      <strong>
+        Pour regarder ce contenu, veuillez activer JavaScript ou essayer un autre navigateur.
+      </strong>
     </noscript>
   </div>
   <button
@@ -66,7 +68,7 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
     </time>
   </button>
   <div
-    class="bbc-lgx6cw"
+    class="bbc-1jf2q50"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
@@ -93,7 +95,9 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
     <noscript
       class="bbc-n2zqlz"
     >
-      &lt;strong&gt;Pour regarder ce contenu, veuillez activer JavaScript ou essayer un autre navigateur.&lt;/strong&gt;
+      <strong>
+        Pour regarder ce contenu, veuillez activer JavaScript ou essayer un autre navigateur.
+      </strong>
     </noscript>
   </div>
   <button
@@ -141,7 +145,7 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
     </time>
   </button>
   <div
-    class="bbc-lgx6cw"
+    class="bbc-1jf2q50"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
@@ -172,7 +176,9 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
       <noscript
         class="bbc-n2zqlz"
       >
-        &lt;strong&gt;Pour regarder ce contenu, veuillez activer JavaScript ou essayer un autre navigateur.&lt;/strong&gt;
+        <strong>
+          Pour regarder ce contenu, veuillez activer JavaScript ou essayer un autre navigateur.
+        </strong>
       </noscript>
     </div>
     <button
@@ -220,7 +226,7 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
       </time>
     </button>
     <div
-      class="bbc-lgx6cw"
+      class="bbc-1jf2q50"
       style="padding-bottom:0;overflow:hidden"
     >
       <img

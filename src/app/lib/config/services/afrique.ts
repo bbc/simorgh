@@ -47,6 +47,23 @@ export const service: DefaultServiceConfig = {
     homePageTitle: 'Accueil',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'Promotion WhatsApp',
+      brandTitle: 'BBC Afrique est sur WhatsApp',
+      brandDescription: 'Des informations vérifiées à portée de main',
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0lp89nq.jpg',
+        alt: `BBC News Afrique Whatsapp : L'information sur votre téléphone`,
+      },
+      linkLabel: {
+        text: 'Cliquez ici et abonnez-vous !',
+        href: 'https://www.whatsapp.com/channel/0029Vb5lcPBIHphLRjicWN1K',
+      },
+      skipLink: {
+        text: 'Ignorer %title% et continuer la lecture',
+        endTextVisuallyHidden: 'Fin de %title%',
+      },
+    },
     translations: {
       pagination: {
         page: 'Page',
@@ -250,6 +267,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Durée',
         recentEpisodes: 'Editions Précédentes',
         closeVideo: 'Sortir',
+        endOfContentClose: 'Fin de ce contenu. Sortir',
       },
       socialEmbed: {
         caption: {
@@ -331,6 +349,10 @@ export const service: DefaultServiceConfig = {
         {
           href: 'https://www.bbc.co.uk/afrique/send/u50853159',
           text: 'Contactez la BBC',
+        },
+        {
+          href: 'https://www.bbc.com/afrique.lite',
+          text: 'Lire en version allégée',
         },
         {
           href: 'https://www.bbc.com/ws/languages',

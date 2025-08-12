@@ -47,6 +47,24 @@ export const service: DefaultServiceConfig = {
       'খবর, সর্বশেষ খবর, ব্রেকিং নিউজ | News, latest news, breaking news',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'বিবিসি বাংলার হোয়াটসঅ্যাপ চ্যানেল',
+      brandTitle: 'আপনার হোয়াটসঅ্যাপে বিবিসি বাংলা।',
+      brandDescription:
+        'বিবিসি বাংলার সর্বশেষ খবর ও বিশ্লেষণ এখন সরাসরি আপনার ফোনে।',
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0lqx69m.png',
+        alt: 'বিবিসি বাংলার হোয়াটসঅ্যাপ চ্যানেল',
+      },
+      linkLabel: {
+        text: 'ফলো করুন, নোটিফিকেশন অন রাখুন',
+        href: 'https://www.whatsapp.com/channel/0029Vb68i5LKQuJMXWvqcx0X',
+      },
+      skipLink: {
+        text: 'স্কিপ করুন %title% পড়ুন',
+        endTextVisuallyHidden: 'বিবিসি বাংলার সাথে থাকার জন্য ধন্যবাদ %title%',
+      },
+    },
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     translations: {
       pagination: {
@@ -231,6 +249,7 @@ export const service: DefaultServiceConfig = {
         duration: 'স্থিতিকাল',
         recentEpisodes: 'পুরনো অনুষ্ঠান',
         closeVideo: 'বন্ধ করুন',
+        endOfContentClose: 'এই কনটেন্টের শেষ। বন্ধ করুন',
       },
       socialEmbed: {
         caption: {
