@@ -15,7 +15,7 @@ describe('ReadTime', () => {
     const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
 
     it('should register view tracker', () => {
-      render(<ReadTime readTime={4} />);
+      render(<ReadTime readTime={4} readTimeVariant="foo" />);
 
       const expected = {
         componentName: 'read-time-on-article',
