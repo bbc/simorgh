@@ -141,11 +141,12 @@ const styles = {
       border: 'none',
       backgroundColor: palette.WHITE,
       color: palette.BLACK,
-      fontSize: '16px',
+      fontSize: `${spacings.DOUBLE}rem`,
       transition:
         'background 0.2s, box-shadow 0.2s, transform 0.35s cubic-bezier(0.4, 0, 0.2, 1)',
       opacity: 1,
       outline: 'none',
+      cursor: 'pointer',
       '& svg': {
         width: `${spacings.DOUBLE}rem`,
         height: `${spacings.DOUBLE}rem`,
@@ -153,11 +154,12 @@ const styles = {
       },
 
       '&:hover': {
-        pointerEvents: 'none',
+        transform: 'scale(1.08)',
       },
       ':disabled': {
         cursor: 'auto',
         opacity: 0.2,
+        pointerEvents: 'none',
       },
     }),
 };
