@@ -242,6 +242,7 @@ export const service: DefaultServiceConfig = {
         duration: 'ዕምሪ ፈነወ',
         recentEpisodes: 'ዝሓለፉ ክፋላት',
         closeVideo: 'ออก',
+        endOfContentClose: 'እዚ ትሕዝቶ ተወዲኡ። ዝጽዉዑ',
       },
       socialEmbed: {
         caption: {

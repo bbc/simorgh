@@ -1,8 +1,10 @@
 export default () => {
   describe('Flourish Embed', () => {
     describe('Visualisations', () => {
-      const multipleFlourishVisualisations = document.querySelectorAll(
-        "iframe[src*='https://flo.uri.sh/visualisation']",
+      const multipleFlourishVisualisations = Array.from(
+        document.querySelectorAll(
+          "iframe[src*='https://flo.uri.sh/visualisation']",
+        ),
       );
 
       it('should all be in the document', () => {

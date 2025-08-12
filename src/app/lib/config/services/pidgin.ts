@@ -62,7 +62,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'Waka go wetin de inside',
       relatedContent: 'Another thing we de for inside dis tori',
       relatedTopics: 'Topics Wey Dem Resemble',
-      moreOnThis: 'More about dis tori',
+      moreOnThis: '',
       navMenuText: 'Plenti seshon',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
@@ -227,6 +227,7 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
         closeVideo: 'Exit',
+        endOfContentClose: 'End of this content. Exit',
       },
       socialEmbed: {
         caption: {
