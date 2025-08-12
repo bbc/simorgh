@@ -14,7 +14,7 @@ type ReadTimeProps = {
 };
 
 const ReadTime = ({ readTime, readTimeVariant, className }: ReadTimeProps) => {
-  if (isLive() || readTimeVariant === 'off') return null;
+  if (isLive() || readTimeVariant === 'off' || !readTimeVariant) return null;
 
   const readTimeInMiliseconds = readTime * 60000;
   const minutesLabel = readTime === 1 ? 'minute' : 'minutes';
