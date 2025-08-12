@@ -116,7 +116,7 @@ const styles = {
   navButtonColumn: ({ mq, spacings }: Theme) =>
     css({
       order: 2,
-      paddingLeft: `${spacings.DOUBLE}rem`,
+      paddingInlineStart: `${spacings.DOUBLE}rem`,
       display: 'none',
       flexDirection: 'column',
       alignItems: 'center',
