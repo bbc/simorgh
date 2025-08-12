@@ -153,7 +153,7 @@ const styles = {
         fill: 'currentcolor',
       },
 
-      '&:hover, &:focus-visible' : {
+      '&:hover, &:focus-visible': {
         transform: 'scale(1.08)',
       },
       ':disabled': {
