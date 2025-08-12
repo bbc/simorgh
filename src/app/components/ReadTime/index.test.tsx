@@ -8,7 +8,9 @@ describe('ReadTime', () => {
     jest.clearAllMocks();
   });
   it('should render when readTime is supplied', () => {
-    const { getByText } = render(<ReadTime readTime={4} />);
+    const { getByText } = render(
+      <ReadTime readTime={4} readTimeVariant="foo" />,
+    );
     expect(getByText('Estimated Read Time: 4 minutes')).toBeInTheDocument();
   });
   describe('view tracking', () => {
@@ -20,7 +22,7 @@ describe('ReadTime', () => {
       const expected = {
         componentName: 'read-time-on-article',
         experimentName: 'newswb_ws_article_read_time',
-        experimentVariant: undefined,
+        experimentVariant: 'foo',
         itemTracker: {
           duration: 240000,
           label: 'Read time: 4 minutes',
