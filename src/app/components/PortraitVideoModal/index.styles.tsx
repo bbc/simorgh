@@ -85,7 +85,7 @@ const styles = {
       [mq.GROUP_3_MIN_WIDTH]: {
         '&.media-container': {
           maxHeight: '90%',
-          marginInlineStart: `${pixelsToRem(60)}`,
+          marginInlineStart: `${pixelsToRem(60)}rem`,
         },
       },
     }),
@@ -113,9 +113,7 @@ const styles = {
       },
     }),
 
-  navButtonColumn:
-    () =>
-    ({ mq, spacings }: Theme) =>
+  navButtonColumn:({ mq, spacings }: Theme) =>
       css({
         order: 2,
         paddingLeft: `${spacings.DOUBLE}rem`,
@@ -148,7 +146,7 @@ const styles = {
         fontSize: '16px',
         transition:
           'background 0.2s, box-shadow 0.2s, transform 0.35s cubic-bezier(0.4, 0, 0.2, 1)',
-        opacity: disabled ? 0.2 : 1,
+        opacity: 1,
         outline: 'none',
         boxShadow:
           !disabled && isSelected

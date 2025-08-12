@@ -195,7 +195,7 @@ const PortraitVideoModal = ({
           <VisuallyHiddenText>{closeVideo}</VisuallyHiddenText>
         </button>
         {/* Navigation Buttons */}
-        <div css={styles.navButtonColumn()}>
+        <div css={styles.navButtonColumn}>
           <button
             type="button"
             onClick={handlePrevious}
