@@ -23,7 +23,7 @@ const styles = {
       margin: 0,
       padding: 0,
       display: 'flex',
-      flexDirection: 'column',
+      flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'center',
       zIndex: 2147483647,
