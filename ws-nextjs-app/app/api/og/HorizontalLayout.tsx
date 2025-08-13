@@ -1,7 +1,9 @@
 import React from 'react';
 import { ImageResponse } from 'next/og';
+
 import { LayoutProps } from './types';
 import BackgroundImage from './BackgroundImage';
+import { PIDGIN } from './temp_ServiceLogos';
 
 const horizontalLayout = ({ image, fonts, badges }: LayoutProps) =>
   new ImageResponse(
@@ -15,6 +17,28 @@ const horizontalLayout = ({ image, fonts, badges }: LayoutProps) =>
         }}
       >
         {image && <BackgroundImage image={image} />}
+        {/* gradient */}
+        <div
+          style={{
+            display: 'flex',
+            position: 'absolute',
+            bottom: 0,
+            width: '100%',
+            height: '50%',
+            background:
+              'linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent)',
+          }}
+        />
+        <div
+          style={{
+            display: 'flex',
+            position: 'absolute',
+            bottom: 15,
+            padding: 30,
+          }}
+        >
+          <PIDGIN />
+        </div>
         {badges && badges.length > 0 && (
           <div
             style={{

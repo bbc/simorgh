@@ -30,9 +30,7 @@ export async function GET(req: Request) {
     const service = searchParams.get('service') as Services;
     const variant = searchParams.get('variant') as Variants;
 
-    const IS_TRENDING = searchParams.get('trending') === 'true';
     const IS_SOCIAL_CARD = searchParams.get('socialCard') === 'true';
-    const IS_POPULAR = searchParams.get('popular') === 'true';
     const HAS_READ_TIME = searchParams.get('readTime') === 'true';
     const IS_LIVE = searchParams.get('live') === 'true';
 
@@ -68,14 +66,21 @@ export async function GET(req: Request) {
 
     const promoImage = promoImageRawBlock?.model;
 
-    const { unbrandedImage, brandedImage } = getImages({ promoImage, service });
+    const { unbrandedImage } = getImages({ promoImage, service });
 
-    // const isInMostRead = Boolean(
-    //   articleResponseJson?.data?.secondaryData?.mostRead?.items.some(
-    //     (mostReadItem: { id: string | string[] }) =>
-    //       mostReadItem?.id.includes(id),
-    //   ),
-    // );
+    const isInTopStories = Boolean(
+      data?.pageData?.secondaryData?.topStories.some(
+        (topStoryItem: { id: string | string[] }) =>
+          topStoryItem?.id.includes(id),
+      ),
+    );
+
+    const isInMostRead = Boolean(
+      data?.pageData?.secondaryData?.mostRead?.items.some(
+        (mostReadItem: { id: string | string[] }) =>
+          mostReadItem?.id.includes(id),
+      ),
+    );
 
     const fonts = [
       { name: 'Reith Sans Bold', data: sansBoldBuffer },
@@ -97,7 +102,7 @@ export async function GET(req: Request) {
     const liveText = translations?.liveExperiencePage?.live || 'Live';
 
     const badges = [
-      IS_TRENDING && (
+      isInTopStories && (
         <Badge
           icon={
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32">
@@ -127,7 +132,7 @@ export async function GET(req: Request) {
           uppercase
         />
       ),
-      IS_POPULAR && (
+      isInMostRead && (
         <Badge
           icon={
             <svg
@@ -163,7 +168,9 @@ export async function GET(req: Request) {
           text={readTimeText.replace('{{time}}', readTime.toString())}
         />
       ),
-    ].filter(Boolean);
+    ]
+      .filter(Boolean)
+      .slice(0, 1); // Limit to one badge for now
 
     switch (true) {
       case IS_SOCIAL_CARD:
@@ -176,7 +183,7 @@ export async function GET(req: Request) {
 
       default:
         return horizontalLayout({
-          image: brandedImage,
+          image: unbrandedImage,
           badges,
           fonts,
         });
