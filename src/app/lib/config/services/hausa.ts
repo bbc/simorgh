@@ -271,6 +271,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'Za a iya samun wannan Podcast din a',
         download: 'Sauke shiri',
         closeVideo: 'Fita',
+        endOfContentClose: 'Karshen wannan abun ciki. Fita',
       },
       socialEmbed: {
         caption: {

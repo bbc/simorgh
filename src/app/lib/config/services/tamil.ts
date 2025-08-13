@@ -249,6 +249,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'இந்த பாட்காஸ்ட் இங்கே கிடைக்கும்',
         download: 'எபிசோடை பதிவிறக்கம் செய்ய',
         closeVideo: 'மூடுக',
+        endOfContentClose: 'இந்த உள்ளடக்கத்தின் முடிவு. மூடுக',
       },
       socialEmbed: {
         caption: {

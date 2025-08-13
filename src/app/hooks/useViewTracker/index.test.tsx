@@ -752,6 +752,7 @@ describe('useViewTracker', () => {
                 position: 1,
                 duration: 73000,
                 resourceId: 'test-item-id',
+                label: 'test-item-label',
               },
               groupTracker: {
                 itemCount: 15,
@@ -766,6 +767,7 @@ describe('useViewTracker', () => {
               resource_id: 'test-item-id',
               text: 'Rollercoaster facts... while riding a rollercoaster',
               type: 'portrait-video-promo',
+              label: 'test-item-label',
             },
             expectedGroupEvent: {
               item_count: 15,

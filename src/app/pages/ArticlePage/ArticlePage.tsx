@@ -349,7 +349,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             ]}
             role="main"
           >
-            <ReadTime readTime={readTime} css={styles.readTime} />
+            {readTime && <ReadTime readTime={readTime} css={styles.readTime} />}
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}

@@ -10,7 +10,6 @@ import {
 import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
-import { setImageWidth } from '../MediaLoader/configs/portraitClipMedia';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 
 const getPlayerInstance = () =>
@@ -25,9 +24,7 @@ export const playlistLoadedCallback = (
   if (!player) return;
 
   const { playlist } = e || {};
-
   const [currentItem] = playlist?.items || [];
-
   const currentId = currentItem?.vpid || currentItem?.versionID;
 
   const currentIndex = blocks?.findIndex(
@@ -40,14 +37,10 @@ export const playlistLoadedCallback = (
   const next = blocks?.[currentIndex + 1]?.model;
 
   if (previous) {
-    const [fallbackImage, portraitImage] = previous?.images || [];
-
     player.setPreviousPlaylist(
       {
         title: previous?.video?.title ?? '',
-        holdingImageURL: setImageWidth(
-          (portraitImage || fallbackImage)?.urlTemplate,
-        ),
+        holdingImageURL: previous?.video?.holdingImageURL ?? '',
         items: [{ versionID: previous?.video?.version?.id }],
       },
       { statsObject: { clipPID: previous?.video?.id } },
@@ -55,14 +48,10 @@ export const playlistLoadedCallback = (
   }
 
   if (next) {
-    const [fallbackImage, portraitImage] = next?.images || [];
-
     player.queuePlaylist(
       {
         title: next?.video?.title ?? '',
-        holdingImageURL: setImageWidth(
-          (portraitImage || fallbackImage)?.urlTemplate,
-        ),
+        holdingImageURL: next?.video?.holdingImageURL ?? '',
         items: [{ versionID: next?.video?.version?.id }],
       },
       { statsObject: { clipPID: next?.video?.id } },
@@ -72,69 +61,33 @@ export const playlistLoadedCallback = (
 
 const pluginLoadedCallback = () => {
   const player = getPlayerInstance();
-
   player.dispatchEvent('fullScreenPlugin.launchFullscreen');
 };
 
-export const getBlocks = (
-  items: PortraitVideoModalProps['items'],
-): PortraitClipMediaBlock[] =>
-  items.map(item => ({
-    type: 'portraitClipMedia',
-    model: {
-      type: 'video',
-      images: item.images.map(img => ({
-        source: img.url,
-        urlTemplate: img.urlTemplate,
-      })),
-      video: {
-        id: item.id,
-        title: item.title,
-        version: {
-          id: item.versionId,
-          duration: item.duration,
-          kind: item.kind,
-          guidance: item.guidance,
-          territories: item.territories,
-        },
-        isEmbeddingAllowed: item.isEmbeddingAllowed,
-      },
-    },
-  }));
-
 export interface PortraitVideoModalProps {
-  items: {
-    id: string;
-    title: string;
-    versionId: string;
-    duration: string;
-    kind: string;
-    guidance: string | null;
-    territories: string[];
-    isEmbeddingAllowed: boolean;
-    images: {
-      url: string;
-      urlTemplate?: string;
-    }[];
-  }[];
+  blocks: PortraitClipMediaBlock[];
   onClose: () => void;
   selectedVideoIndex: number;
 }
 
 const PortraitVideoModal = ({
-  items,
+  blocks,
   onClose,
   selectedVideoIndex,
 }: PortraitVideoModalProps) => {
   const {
     translations: {
-      media: { closeVideo = 'Close', modalLabel = 'Media player' },
+      media: {
+        closeVideo = 'Close',
+        modalLabel = 'Media player',
+        endOfContentClose = 'End of content. Close',
+      },
     },
   } = use(ServiceContext);
+
   const modalRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
-
-  const blocks = getBlocks(items);
+  const endOfContentButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const handleBackdropClick = (event: MouseEvent | TouchEvent) => {
@@ -147,6 +100,22 @@ const PortraitVideoModal = ({
       if (event.key === 'Escape') {
         onClose();
       }
+      // - Tab/Shift+Tab loops focus between the close button and the end-of-content button
+      if (event.key === 'Tab') {
+        if (
+          document.activeElement === closeButtonRef.current &&
+          event.shiftKey
+        ) {
+          event.preventDefault();
+          endOfContentButtonRef.current?.focus();
+        } else if (
+          document.activeElement === endOfContentButtonRef.current &&
+          !event.shiftKey
+        ) {
+          event.preventDefault();
+          closeButtonRef.current?.focus();
+        }
+      }
     };
 
     const modal = modalRef.current;
@@ -154,9 +123,8 @@ const PortraitVideoModal = ({
 
     if (modal) {
       closeButtonRef.current?.focus();
-
+      // Prevent tabbing to elements outside the modal
       reactRootElement?.setAttribute('inert', 'true');
-
       modal.addEventListener('mousedown', handleBackdropClick);
       modal.addEventListener('touchstart', handleBackdropClick);
       modal.addEventListener('keydown', handleKeyDown);
@@ -164,18 +132,15 @@ const PortraitVideoModal = ({
 
     return () => {
       reactRootElement?.removeAttribute('inert');
-
       modal?.removeEventListener('mousedown', handleBackdropClick);
       modal?.removeEventListener('touchstart', handleBackdropClick);
       modal?.removeEventListener('keydown', handleKeyDown);
 
       const player = getPlayerInstance();
-
       // Pause any player if the modal is closed instantly
       if (player) player.pause();
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [onClose]);
 
   return (
     <>
@@ -207,6 +172,17 @@ const PortraitVideoModal = ({
             fullscreenExit: onClose,
           }}
         />
+        <button
+          ref={endOfContentButtonRef}
+          type="button"
+          data-testid="close-modal-visually-hidden"
+          css={styles.visuallyHiddenCloseButton}
+          onClick={onClose}
+          className="focusIndicatorInvert"
+          aria-label="End of content. Close"
+        >
+          {endOfContentClose}
+        </button>
       </div>
     </>
   );

@@ -141,6 +141,10 @@ describe('Billboard', () => {
   });
 
   it('should render an h2 heading with the text for "More on this" translated', () => {
+    // can remove this setting of the translation when pidgin moreOnThis translation is available
+    const originalMoreOnThis = pidginService.default.translations.moreOnThis;
+    pidginService.default.translations.moreOnThis = 'More on this';
+
     render(
       <Billboard
         heading={title}
@@ -160,6 +164,9 @@ describe('Billboard', () => {
     const moreLikeThisHeading = curationGridSection?.querySelector('h2');
     expect(moreLikeThisHeading).toBeInTheDocument();
     expect(moreLikeThisHeading?.textContent).toBe(moreOnThisText);
+
+    // Restore the original translation after the test - can remove when pidgin moreOnThis translation is available
+    pidginService.default.translations.moreOnThis = originalMoreOnThis;
   });
 
   it('should not render the "More on this" h2 heading when the "moreOnThis" translation is empty', () => {

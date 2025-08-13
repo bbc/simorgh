@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
 import { data as afriqueHomePageDataFixture } from '#data/afrique/homePage/index.json';
 import { data as pidginHomePageDataFixture } from '#data/pidgin/homePage/index.json';
+import { service as pidginServiceConfig } from '#app/lib/config/services/pidgin';
 import {
   render,
   screen,
@@ -62,6 +63,11 @@ describe('Home Page', () => {
   });
 
   it('should have h2s for curation heading levels and h3 for summary heading levels', () => {
+    // Set the translation so the h2 is rendered
+    const originalMoreOnThis =
+      pidginServiceConfig.default.translations.moreOnThis;
+    pidginServiceConfig.default.translations.moreOnThis = 'More on this';
+
     // @ts-expect-error suppress pageData prop type conflicts
     const { container } = render(<HomePage pageData={pidginHomePageData} />, {
       service: 'pidgin',
@@ -69,6 +75,9 @@ describe('Home Page', () => {
     // for some reason, most read headings are not showing as headings in the count or if I log them
     expect(container.querySelectorAll('h2').length).toBe(15);
     expect(container.querySelectorAll('h3').length).toBe(45);
+
+    // Restore the original value - remove when pidgin moreOnThis translation is available
+    pidginServiceConfig.default.translations.moreOnThis = originalMoreOnThis;
   });
 
   it('should apply provided margin size to the main element', () => {
