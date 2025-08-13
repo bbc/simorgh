@@ -10,6 +10,7 @@ const loadableConfig = {
   bengali: loadable(() => import('./bengali')),
   burmese: loadable(() => import('./burmese')),
   cymrufyw: loadable(() => import('./cymrufyw')),
+  dari: loadable(() => import('./dari')),
   gahuza: loadable(() => import('./gahuza')),
   gujarati: loadable(() => import('./gujarati')),
   hausa: loadable(() => import('./hausa')),
