@@ -30,7 +30,7 @@ const sections = [
 
 describe('LanguageNavigation', () => {
   test('renders section titles', () => {
-    render(<CollapsibleNavigation collapsibleNavigationSections={sections} />);
+    render(<CollapsibleNavigation navigationSections={sections} />);
 
     sections.forEach(section => {
       expect(screen.getByText(section.title)).toBeInTheDocument();
@@ -38,7 +38,7 @@ describe('LanguageNavigation', () => {
   });
 
   test('clicking a section toggles dropdown', () => {
-    render(<CollapsibleNavigation collapsibleNavigationSections={sections} />);
+    render(<CollapsibleNavigation navigationSections={sections} />);
 
     const sectionTitle = screen.getByText('Section 1');
 
@@ -50,7 +50,7 @@ describe('LanguageNavigation', () => {
   });
 
   test('clicking the same section again closes the dropdown', () => {
-    render(<CollapsibleNavigation collapsibleNavigationSections={sections} />);
+    render(<CollapsibleNavigation navigationSections={sections} />);
 
     const sectionTitle = screen.getByText('Section 1');
 
@@ -66,7 +66,7 @@ describe('LanguageNavigation', () => {
   });
 
   test('clicking close button closes the dropdown', () => {
-    render(<CollapsibleNavigation collapsibleNavigationSections={sections} />);
+    render(<CollapsibleNavigation navigationSections={sections} />);
 
     const sectionTitle = screen.getByText('Section 1');
 
@@ -85,7 +85,7 @@ describe('LanguageNavigation', () => {
   });
 
   test('renders links correctly when section is active', () => {
-    render(<CollapsibleNavigation collapsibleNavigationSections={sections} />);
+    render(<CollapsibleNavigation navigationSections={sections} />);
 
     const sectionTitle = screen.getByText('Section 2');
 
@@ -97,7 +97,7 @@ describe('LanguageNavigation', () => {
   });
 
   test('renders section as a link when href is present', () => {
-    render(<CollapsibleNavigation collapsibleNavigationSections={sections} />);
+    render(<CollapsibleNavigation navigationSections={sections} />);
 
     const sectionLink = screen.getByRole('link', { name: 'Homepage' });
 
