@@ -355,7 +355,7 @@ export const service: DefaultServiceConfig = {
         // Messaging
         removalGuidelineText:
           'اگر محتوایی را برای استفاده در وبسایت یا برنامه ای ارسال کرده اید، در صورتی که ما از ان محتوا استفاده کرده باشیم دیگرامکان حذف آن موجود نیست.',
-        retentionPeriodDays: undefined,
+        retentionPeriodDays: 'اطلاعات ارسالی شما تا {{days}} روز نگهداری خواهد شد و در صورتی که مورد استفاده قرار نگیرد، همراه با سایر اطلاعات ارسالی، حذف خواهد شد.',
         referenceNumber: 'شماره',
         submissionInfoSignedOutMessage:
           'شاید بخواهید این جزئیات را برای خود یادداشت کنید.',
@@ -363,9 +363,12 @@ export const service: DefaultServiceConfig = {
           'نگران نباشید، ما از اطلاعات شما محافظت می کنیم - برای اطلاعات بیشتر {{privacyInfoLink}} را بخوانید.',
         emailToHtml:
           'اگر نظر خود را تغییر داده اید، به ما ایمیل {{emailLink}} بزنید. شماره را ذکر کنید و به ما بگویید که ما از آن استفاده نکنیم.',
+        
+
+
 
         // Form Screen
-        dataPolicyHeading: undefined,
+        dataPolicyHeading: 'سیاست حفظ حریم خصوصی',
 
         // Uploading Screen
         uploadingHeading: 'در حال آپلود فایل ها...',
