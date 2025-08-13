@@ -9,8 +9,13 @@ import {
 } from '#app/components/MediaLoader/types';
 import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import useViewTracker from '../../../app/hooks/useViewTracker';
 import styles from './index.styles';
 import VisuallyHiddenText from '../VisuallyHiddenText';
+
+const eventTrackingData = {
+  componentName: 'potrait-video-modal',
+};
 
 const getPlayerInstance = () =>
   window?.embeddedMedia?.api?.players()?.bbcMediaPlayer0;
@@ -85,7 +90,8 @@ const PortraitVideoModal = ({
     },
   } = use(ServiceContext);
 
-  const modalRef = useRef<HTMLDivElement>(null);
+  const viewTracker = useViewTracker(eventTrackingData);
+
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const endOfContentButtonRef = useRef<HTMLButtonElement>(null);
 
@@ -118,7 +124,7 @@ const PortraitVideoModal = ({
       }
     };
 
-    const modal = modalRef.current;
+    const modal = document.getElementById('potrait-video-modal-container');
     const reactRootElement = document.getElementById('root');
 
     if (modal) {
@@ -149,8 +155,9 @@ const PortraitVideoModal = ({
         role="dialog"
         aria-modal="true"
         aria-label={modalLabel}
-        ref={modalRef}
         css={styles.modal}
+        id="potrait-video-modal-container"
+        {...viewTracker}
       >
         <button
           ref={closeButtonRef}
