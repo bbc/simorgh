@@ -41,6 +41,7 @@ const CollapsibleNavigation = ({
         css={styles.navList}
       >
         {navigationSections.map(section => {
+          // TODO: instead of openSection use document.location.hash to detect active section?
           const isActive = openSection === section.id;
           const shouldShowSubNav = isHydrated ? isActive : true;
 
