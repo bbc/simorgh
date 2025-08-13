@@ -68,16 +68,6 @@ const testSuites = [
   },
 ];
 
-const getTestSuites = () => {
-  const serviceToRun = Cypress.env('ONLY_SERVICE');
-
-  if (serviceToRun) {
-    return testSuites.filter(({ service }) => service === serviceToRun);
-  }
-
-  return testSuites;
-};
-
 describe('Home Page', () => {
   beforeEach(() => {
     cy.intercept(
@@ -92,6 +82,6 @@ describe('Home Page', () => {
 
   runTestsForPage({
     pageType: HOME_PAGE,
-    testSuites: getTestSuites(),
+    testSuites,
   });
 });
