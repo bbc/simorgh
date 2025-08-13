@@ -7,18 +7,15 @@ import {
 } from '../react-testing-library-with-providers';
 import blocks from './fixture';
 import { Player, SMPEvent } from '../MediaLoader/types';
-import MediaLoader from '../MediaLoader';
 
-jest.mock('../MediaLoader', () => ({
-  __esModule: true,
-  default: jest.fn(() => <div data-testid="media-loader" />),
-}));
 const mockClose = jest.fn();
 
 const mockPlayer = {
   queuePlaylist: jest.fn(),
   setPreviousPlaylist: jest.fn(),
   pause: jest.fn(),
+  next: jest.fn(),
+  previous: jest.fn(),
 } satisfies Partial<Player>;
 
 describe('PortraitVideoModal', () => {
@@ -306,44 +303,22 @@ describe('PortraitVideoModal', () => {
       expect(mockPlayer.queuePlaylist).not.toHaveBeenCalled();
     });
   });
+
   describe('Navigation arrow buttons', () => {
     beforeEach(() => {
-      (MediaLoader as jest.Mock).mockClear();
+      jest.clearAllMocks();
+
+      Object.defineProperty(window, 'embeddedMedia', {
+        writable: true,
+        value: {
+          api: {
+            players: () => ({ bbcMediaPlayer0: mockPlayer }),
+          },
+        },
+      });
     });
 
-    it('calls the MediaLoader with the correct video block when navigating with next and previous buttons', () => {
-      render(
-        <Component
-          selectedVideoIndex={1}
-          blocks={blocks}
-          onClose={mockClose}
-        />,
-      );
-      // 'lastCall' is to get the props from the most recent call to the mocked MediaLoader to verify which block is currently rendered
-      // .at(-1) gets the last call in the calls array, [0] gets the first argument (the props object).
-
-      // Initial render: should be called with blocks[1]
-      let lastCall = (MediaLoader as jest.Mock).mock.calls.at(-1)?.[0];
-      expect(lastCall).toEqual(
-        expect.objectContaining({ blocks: [blocks[1]] }),
-      );
-
-      // Click next: should be called with blocks[2]
-      fireEvent.click(screen.getByTestId('next-video-button'));
-      lastCall = (MediaLoader as jest.Mock).mock.calls.at(-1)?.[0];
-      expect(lastCall).toEqual(
-        expect.objectContaining({ blocks: [blocks[2]] }),
-      );
-
-      // Click previous: should be called with blocks[1]
-      fireEvent.click(screen.getByTestId('previous-video-button'));
-      lastCall = (MediaLoader as jest.Mock).mock.calls.at(-1)?.[0];
-      expect(lastCall).toEqual(
-        expect.objectContaining({ blocks: [blocks[1]] }),
-      );
-    });
-
-    it('does not go below 0 or above the last index', () => {
+    it('disables the previous button on the first video', async () => {
       render(
         <Component
           selectedVideoIndex={0}
@@ -352,38 +327,17 @@ describe('PortraitVideoModal', () => {
         />,
       );
 
-      // Try to go below 0
-      fireEvent.click(screen.getByTestId('previous-video-button'));
-      let lastCall = (MediaLoader as jest.Mock).mock.calls.at(-1)?.[0];
-      expect(lastCall).toEqual(
-        expect.objectContaining({ blocks: [blocks[0]] }),
-      );
+      const mockSMPEvent: SMPEvent = {
+        playlist: {
+          items: [{ versionID: blocks[0].model.video.version.id }],
+        },
+      };
 
-      // Go to last index
-      fireEvent.click(screen.getByTestId('next-video-button'));
-      fireEvent.click(screen.getByTestId('next-video-button'));
-      lastCall = (MediaLoader as jest.Mock).mock.calls.at(-1)?.[0];
-      expect(lastCall).toEqual(
-        expect.objectContaining({ blocks: [blocks[2]] }),
-      );
+      playlistLoadedCallback(mockSMPEvent, blocks);
 
-      // Try to go above last index
-      fireEvent.click(screen.getByTestId('next-video-button'));
-      lastCall = (MediaLoader as jest.Mock).mock.calls.at(-1)?.[0];
-      expect(lastCall).toEqual(
-        expect.objectContaining({ blocks: [blocks[2]] }),
-      );
-    });
-    it('disables the previous button on the first video', () => {
-      render(
-        <Component
-          selectedVideoIndex={0}
-          blocks={blocks}
-          onClose={mockClose}
-        />,
-      );
       expect(screen.getByTestId('previous-video-button')).toBeDisabled();
     });
+
     it('disables the next button on the last video', () => {
       render(
         <Component
@@ -392,10 +346,23 @@ describe('PortraitVideoModal', () => {
           onClose={mockClose}
         />,
       );
+
+      const mockSMPEvent: SMPEvent = {
+        playlist: {
+          items: [
+            { versionID: blocks[blocks.length - 1].model.video.version.id },
+          ],
+        },
+      };
+
+      playlistLoadedCallback(mockSMPEvent, blocks);
+
       expect(screen.getByTestId('next-video-button')).toBeDisabled();
     });
+
     it('enables both buttons when not at first or last video', () => {
       const middleIndex = Math.floor(blocks.length / 2);
+
       render(
         <Component
           selectedVideoIndex={middleIndex}
@@ -404,8 +371,48 @@ describe('PortraitVideoModal', () => {
         />,
       );
 
-      expect(screen.getByTestId('next-video-button')).toBeEnabled();
+      const mockSMPEvent: SMPEvent = {
+        playlist: {
+          items: [{ versionID: blocks[middleIndex].model.video.version.id }],
+        },
+      };
+
+      playlistLoadedCallback(mockSMPEvent, blocks);
+
       expect(screen.getByTestId('previous-video-button')).toBeEnabled();
+      expect(screen.getByTestId('next-video-button')).toBeEnabled();
+    });
+
+    it('calls "previous" API method when previous button is clicked', () => {
+      render(
+        <Component
+          selectedVideoIndex={1}
+          blocks={blocks}
+          onClose={mockClose}
+        />,
+      );
+
+      const previousButton = screen.getByTestId('previous-video-button');
+
+      previousButton.click();
+
+      expect(mockPlayer.previous).toHaveBeenCalled();
+    });
+
+    it('calls "next" API method when next button is clicked', () => {
+      render(
+        <Component
+          selectedVideoIndex={0}
+          blocks={blocks}
+          onClose={mockClose}
+        />,
+      );
+
+      const nextButton = screen.getByTestId('next-video-button');
+
+      nextButton.click();
+
+      expect(mockPlayer.next).toHaveBeenCalled();
     });
   });
 });
