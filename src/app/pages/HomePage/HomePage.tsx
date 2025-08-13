@@ -53,7 +53,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
   } = pageData;
   const itemList = getItemList({ curations, name: brandName });
 
-  console.log({ pageData });
   return (
     <>
       <ChartbeatAnalytics title={title} />

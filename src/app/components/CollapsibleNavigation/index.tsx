@@ -24,7 +24,6 @@ const CollapsibleNavigation = ({
   ) => {
     if (section.href) return;
     e.preventDefault();
-
     const isActive = openSection === section.id;
     setOpenSection(isActive ? null : section.id);
   };
