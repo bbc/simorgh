@@ -35,7 +35,6 @@ const CollapsibleNavigation = ({
   return (
     <nav>
       <ul
-        data-test={`is-hydrated-${isHydrated}`}
         role="list"
         id="collapsibleNav"
         aria-label={`List ${itemCount} items`}
@@ -46,8 +45,7 @@ const CollapsibleNavigation = ({
           const shouldShowSubNav = isHydrated ? isActive : true;
 
           return (
-            <React.Fragment key={section.id}>
-              {/* Main navigation items */}
+            <>
               <li css={[styles.navItem]} role="listitem">
                 <a
                   id={`nav-${section.id}`}
@@ -112,7 +110,7 @@ const CollapsibleNavigation = ({
                   </div>
                 </div>
               )}
-            </React.Fragment>
+            </>
           );
         })}
       </ul>
