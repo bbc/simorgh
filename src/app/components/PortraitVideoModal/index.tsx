@@ -1,7 +1,7 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
 import { Global, jsx } from '@emotion/react';
-import React, { use, useEffect, useRef, useState, useCallback } from 'react';
+import React, { use, useEffect, useRef } from 'react';
 import MediaLoader from '#app/components/MediaLoader';
 import {
   PortraitClipMediaBlock,
@@ -34,6 +34,21 @@ export const playlistLoadedCallback = (
       item.model.video.version.id === currentId,
   );
 
+  const prevVideoButton = document.getElementById('previous-video-button');
+  const nextVideoButton = document.getElementById('next-video-button');
+
+  // Handle disabling buttons based on current index
+  if (currentIndex === 0) {
+    prevVideoButton?.setAttribute('disabled', 'true');
+    nextVideoButton?.removeAttribute('disabled');
+  } else if (currentIndex === blocks.length - 1) {
+    prevVideoButton?.removeAttribute('disabled');
+    nextVideoButton?.setAttribute('disabled', 'true');
+  } else {
+    prevVideoButton?.removeAttribute('disabled');
+    nextVideoButton?.removeAttribute('disabled');
+  }
+
   const previous = blocks?.[currentIndex - 1]?.model;
   const next = blocks?.[currentIndex + 1]?.model;
 
@@ -65,6 +80,12 @@ const pluginLoadedCallback = () => {
   player.dispatchEvent('fullScreenPlugin.launchFullscreen');
 };
 
+const handlePrevNextVideo = (direction: 'previous' | 'next') => {
+  const player = getPlayerInstance();
+
+  player?.[direction]?.();
+};
+
 export interface PortraitVideoModalProps {
   blocks: PortraitClipMediaBlock[];
   onClose: () => void;
@@ -74,7 +95,7 @@ export interface PortraitVideoModalProps {
 const PortraitVideoModal = ({
   blocks,
   onClose,
-  selectedVideoIndex: initialSelectedVideoIndex,
+  selectedVideoIndex,
 }: PortraitVideoModalProps) => {
   const {
     translations: {
@@ -89,25 +110,6 @@ const PortraitVideoModal = ({
   const modalRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const endOfContentButtonRef = useRef<HTMLButtonElement>(null);
-
-  const [selectedVideoIndex, setSelectedVideoIndex] = useState(
-    initialSelectedVideoIndex,
-  );
-
-  const hasPrevious = selectedVideoIndex > 0;
-  const hasNext = selectedVideoIndex < blocks.length - 1;
-
-  const handlePrevious = useCallback(() => {
-    if (hasPrevious) {
-      setSelectedVideoIndex(i => i - 1);
-    }
-  }, [hasPrevious]);
-
-  const handleNext = useCallback(() => {
-    if (hasNext) {
-      setSelectedVideoIndex(i => i + 1);
-    }
-  }, [hasNext]);
 
   useEffect(() => {
     const handleBackdropClick = (event: MouseEvent | TouchEvent) => {
@@ -186,9 +188,9 @@ const PortraitVideoModal = ({
         {/* Navigation Buttons */}
         <div css={styles.navButtonColumn}>
           <button
+            id="previous-video-button"
             type="button"
-            onClick={handlePrevious}
-            disabled={!hasPrevious}
+            onClick={() => handlePrevNextVideo('previous')}
             css={styles.navButton}
             aria-label="Previous video"
             data-testid="previous-video-button"
@@ -197,9 +199,9 @@ const PortraitVideoModal = ({
             <UpArrowIcon />
           </button>
           <button
+            id="next-video-button"
             type="button"
-            onClick={handleNext}
-            disabled={!hasNext}
+            onClick={() => handlePrevNextVideo('next')}
             css={styles.navButton}
             aria-label="Next video"
             data-testid="next-video-button"
