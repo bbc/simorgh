@@ -363,9 +363,6 @@ export const service: DefaultServiceConfig = {
           'نگران نباشید، ما از اطلاعات شما محافظت می کنیم - برای اطلاعات بیشتر {{privacyInfoLink}} را بخوانید.',
         emailToHtml:
           'اگر نظر خود را تغییر داده اید، به ما ایمیل {{emailLink}} بزنید. شماره را ذکر کنید و به ما بگویید که ما از آن استفاده نکنیم.',
-        
-
-
 
         // Form Screen
         dataPolicyHeading: 'سیاست حفظ حریم خصوصی',
