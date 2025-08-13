@@ -23,7 +23,7 @@ module.exports = {
   },
   ignorePatterns: [
     '**/tz/**',
-    'index.stories.jsx',
+    'index.stories.(j|t)sx',
     'index.amp.stories.jsx',
     '.storybook/**/*',
   ],
