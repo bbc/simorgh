@@ -20,6 +20,12 @@ const sections = [
     title: 'Section 2',
     links: [{ id: 'link3', label: 'Link 3', href: '#link3' }],
   },
+  {
+    id: 'section3',
+    title: 'Homepage',
+    href: '/home',
+    links: [{ id: 'link1', label: 'Link 1', href: '#link1' }],
+  },
 ];
 
 describe('LanguageNavigation', () => {
@@ -50,6 +56,9 @@ describe('LanguageNavigation', () => {
 
     fireEvent.click(sectionTitle);
 
+    expect(screen.getByText('Link 1')).toBeInTheDocument();
+    expect(screen.getByText('Link 2')).toBeInTheDocument();
+
     fireEvent.click(sectionTitle);
 
     expect(screen.queryByText('Link 1')).not.toBeInTheDocument();
@@ -62,6 +71,9 @@ describe('LanguageNavigation', () => {
     const sectionTitle = screen.getByText('Section 1');
 
     fireEvent.click(sectionTitle);
+
+    expect(screen.getByText('Link 1')).toBeInTheDocument();
+    expect(screen.getByText('Link 2')).toBeInTheDocument();
 
     const closeButton = screen.getByRole('button', {
       name: 'Close Section 1 menu',
@@ -82,5 +94,17 @@ describe('LanguageNavigation', () => {
     sections[1].links?.forEach(link => {
       expect(screen.getByText(link.label)).toBeInTheDocument();
     });
+  });
+
+  test('renders section as a link when href is present', () => {
+    render(<CollapsibleNavigation collapsibleNavigationSections={sections} />);
+
+    const sectionLink = screen.getByRole('link', { name: 'Homepage' });
+
+    expect(sectionLink).toHaveAttribute('href', '/home');
+
+    fireEvent.click(sectionLink);
+
+    expect(screen.queryByText('Link 1')).not.toBeInTheDocument();
   });
 });

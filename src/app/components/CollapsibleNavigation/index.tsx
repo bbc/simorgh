@@ -57,7 +57,6 @@ const CollapsibleNavigation = ({
                   if (section.href) return;
                   e.preventDefault();
                   setOpenSection(isActive ? null : section.id);
-                  document.getElementById(`close-${section.id}`)?.focus();
                   setTimeout(() => {
                     document.getElementById(`close-${section.id}`)?.focus();
                   }, 0);
@@ -108,7 +107,6 @@ const CollapsibleNavigation = ({
               type="button"
               role="button"
               aria-label={`Close ${activeSection.title} menu`}
-              title={`Close ${activeSection.title} menu`}
               name={`Close ${activeSection.title} menu`}
               css={styles.collapsibleSubNavCloseButton}
               onClick={() => {
@@ -116,10 +114,7 @@ const CollapsibleNavigation = ({
                 setOpenSection(null);
               }}
             >
-              <Close
-                aria-hidden="false"
-                css={styles.collapsibleSubNavCloseButtonIcon}
-              />
+              <Close css={styles.collapsibleSubNavCloseButtonIcon} />
             </button>
           </div>
 
@@ -148,14 +143,12 @@ const CollapsibleNavigation = ({
               key={section.id}
               css={styles.collapsibleSubNavNoJs}
               aria-label={`List ${sectionItemsCount} items`}
-              title={`List ${sectionItemsCount} items`}
             >
               <div css={styles.collapsibleSubNavHeader}>
                 <span css={styles.collapsibleSubNavTitle}>{section.title}</span>
                 <a
                   type="button"
                   aria-label={`Close ${section.title} menu`}
-                  title={`Close ${section.title} menu`}
                   css={styles.collapsibleSubNavCloseButton}
                   onClick={() => setOpenSection(null)}
                   href={`#nav-${section.id}`}
