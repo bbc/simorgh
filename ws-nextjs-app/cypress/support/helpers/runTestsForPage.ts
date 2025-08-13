@@ -11,8 +11,6 @@ export default ({
     testSuitesToRun = testSuites.filter(
       ({ service }) => service === serviceToRun,
     );
-  } else {
-    testSuitesToRun = testSuites;
   }
 
   testSuitesToRun.forEach(testData => {
