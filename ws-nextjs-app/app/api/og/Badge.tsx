@@ -20,7 +20,7 @@ const Badge = ({
       flexDirection: 'row',
       backgroundColor,
       padding: 15,
-      borderRadius: 30,
+      borderRadius: 40,
     }}
   >
     <div

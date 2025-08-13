@@ -30,7 +30,7 @@ export async function GET(req: Request) {
     const service = searchParams.get('service') as Services;
     const variant = searchParams.get('variant') as Variants;
 
-    const IS_BREAKING = searchParams.get('breaking') === 'true';
+    const IS_TRENDING = searchParams.get('trending') === 'true';
     const IS_SOCIAL_CARD = searchParams.get('socialCard') === 'true';
     const IS_POPULAR = searchParams.get('popular') === 'true';
     const HAS_READ_TIME = searchParams.get('readTime') === 'true';
@@ -88,7 +88,7 @@ export async function GET(req: Request) {
 
     const { translations } = serviceConfig[variant || 'default'];
 
-    const breakingText = translations?.breakingBadge || 'Breaking';
+    const trendingText = translations?.trendingBadge || 'Trending';
 
     const popularText = translations?.popularBadge || 'Popular';
 
@@ -97,19 +97,18 @@ export async function GET(req: Request) {
     const liveText = translations?.liveExperiencePage?.live || 'Live';
 
     const badges = [
-      IS_BREAKING && (
+      IS_TRENDING && (
         <Badge
           icon={
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32">
               <path
                 d="m6.3 20.9-1.5 1.5c-1.5-1.5-2.7-3.3-3.5-5.2q-1.2-2.85-1.2-6c0-3.15.4-4 1.2-6s2-3.6 3.5-5.2l1.5 1.5C5 2.8 4 4.4 3.3 6.1s-1 3.4-1 5.2.3 3.5 1 5.2 1.7 3.1 3 4.4m3-3-1.5 1.6c-1.1-1.1-2-2.4-2.5-3.9-.6-1.4-.8-2.9-.8-4.4s.3-2.9.8-4.4C5.8 5.4 6.7 4.1 7.8 3l1.5 1.5c-.9.9-1.6 2-2 3.1-.5 1.2-.7 2.4-.7 3.6s.2 2.4.7 3.6c.4 1.1 1.1 2.2 2 3.1m1.6-6.7c0 1.4.5 2.7 1.5 3.7l-1.5 1.5c-.7-.7-1.2-1.5-1.6-2.4s-.5-1.8-.5-2.7.2-1.8.5-2.7c.4-.9.9-1.7 1.6-2.4l1.5 1.5c-1 .9-1.5 2.1-1.5 3.5m8.1 0q0 1.05-.6 1.8c-.4.5-.9.9-1.5 1.1L21 32H11l4-17.9c-.6-.2-1.1-.6-1.5-1.1q-.6-.75-.6-1.8c0-.9.3-1.6.9-2.2s1.3-.9 2.2-.9 1.6.3 2.2.9c.5.6.8 1.3.8 2.2m2.1 5.1-1.5-1.5c1-1 1.5-2.3 1.5-3.7q0-2.1-1.5-3.6L21.1 6c.7.7 1.3 1.5 1.6 2.4.4.9.5 1.8.5 2.7s-.2 1.8-.5 2.7c-.3 1-.8 1.8-1.6 2.5m3.1 3.1-1.5-1.6c.9-.9 1.6-1.9 2-3.1.5-1.2.7-2.4.7-3.6s-.2-2.4-.7-3.6-1.1-2.2-2-3.1L24.2 3c1.1 1.1 2 2.4 2.5 3.8.6 1.4.8 2.9.8 4.4s-.3 2.9-.8 4.4c-.5 1.4-1.4 2.7-2.5 3.8m3 3-1.5-1.5c1.3-1.3 2.4-2.8 3-4.5s1-3.4 1-5.2c0-1.7-.3-3.5-1-5.2s-1.7-3.2-3-4.6L27.2 0c1.5 1.5 2.7 3.3 3.5 5.2q1.2 2.85 1.2 6c0 3.15-.4 4-1.2 6-.8 1.9-2 3.7-3.5 5.2"
                 style={{ fill: WHITE }}
               />
             </svg>
           }
-          text={breakingText}
+          text={trendingText}
           backgroundColor={POSTBOX}
-          uppercase
         />
       ),
       IS_LIVE && (
@@ -134,11 +133,11 @@ export async function GET(req: Request) {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 32 32"
-              width="26"
-              height="26"
+              width="40"
+              height="40"
             >
               <path
-                style={{ fill: LIVE_CORE }}
+                style={{ fill: WHITE }}
                 d="M17.9 7v2.6h8.7l-.3-.7-9.1 9.1h1.3l-5.8-5.9-11.1 11L3.7 25l9.8-9.7h-1.4l5.8 5.8 10.3-10.3-.7-.3v8.7h2.6V7z"
               />
             </svg>
