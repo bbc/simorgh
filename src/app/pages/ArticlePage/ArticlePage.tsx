@@ -151,15 +151,20 @@ const getPodcastPromoComponent = (podcastPromoEnabled: boolean) => () =>
 const getHeadlineComponent =
   (readTimeData: ReadTimeData) => (props: ComponentToRenderProps) => {
     const { readTime, readTimeLocation, readTimeVariant } = readTimeData;
-
+    const showReadTimeBelowHeadline =
+      readTime && readTimeLocation === 'headline';
     return (
       <>
-        <ArticleHeadline {...props} />
-        {readTime && readTimeLocation === 'headline' && (
+        <ArticleHeadline
+          {...props}
+          {...(showReadTimeBelowHeadline && { applyReadTimeSpacing: true })}
+        />
+        {showReadTimeBelowHeadline && (
           <ReadTime
             readTime={readTime}
             readTimeVariant={readTimeVariant}
             css={styles.readTime}
+            readTimeLocation={readTimeLocation}
           />
         )}
       </>

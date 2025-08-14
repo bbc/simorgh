@@ -74,18 +74,33 @@ const ArticleTimestamp = ({
     lastPublished,
   });
 
+  const showReadTimeBelowTimestamp =
+    readTime !== 0 && readTimeLocation === 'timestamp';
+
   return (
     <GridWrapper {...(className ? { className } : undefined)}>
-      <FirstPublishedTimestamp {...timestampProps} {...firstPublishedProps} />
+      <FirstPublishedTimestamp
+        {...timestampProps}
+        {...firstPublishedProps}
+        {...(showReadTimeBelowTimestamp && { padding: false })}
+      />
       {displayLastUpdatedTimestamp && (
         // Div has been used for No CSS formatting see #5554
         <div>
-          <LastUpdatedTimestamp {...timestampProps} {...lastPublishedProps} />
+          <LastUpdatedTimestamp
+            {...timestampProps}
+            {...lastPublishedProps}
+            {...(showReadTimeBelowTimestamp && { padding: false })}
+          />
         </div>
       )}
       {/* EXPERIMENT: Read Time */}
-      {readTime !== 0 && readTimeLocation === 'timestamp' && (
-        <ReadTime readTime={readTime} readTimeVariant={readTimeVariant} />
+      {showReadTimeBelowTimestamp && (
+        <ReadTime
+          readTime={readTime}
+          readTimeVariant={readTimeVariant}
+          readTimeLocation={readTimeLocation}
+        />
       )}
     </GridWrapper>
   );
