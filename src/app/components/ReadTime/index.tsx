@@ -15,12 +15,7 @@ type ReadTimeProps = {
   readTimeLocation?: string;
 };
 
-const ReadTime = ({
-  readTime,
-  readTimeVariant,
-  readTimeLocation,
-  className,
-}: ReadTimeProps) => {
+const ReadTime = ({ readTime, readTimeVariant, className }: ReadTimeProps) => {
   if (!readTime) return null;
   if (isLive() || readTimeVariant === 'off' || !readTimeVariant) return null;
 
