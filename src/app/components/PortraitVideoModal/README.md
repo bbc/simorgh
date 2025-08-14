@@ -69,7 +69,13 @@ const mockBlock: PortraitClipMediaBlock = {
 
 The close button is always keyboard and mouse accessible on desktop, however it is visually hidden on mobile to utilise screen space. It remains available to screen readers and keyboard users.
 
+# Navigation Button Logic
 
+Whether the navigation button is enabled or disabled state is dependant on the current position of the video withinin the playlist. The "previous" button is disbabled on the first video and the "next" button is disabled when on the last video. This logic is handled after the playlist loads, using the `playlistLoadedCallback` event.
+
+# Known UI Issue
+
+Upon initial load, if selectig the first video in which case the "previous" button should be disabled, the "previous" button may appear to be enabled for a split second. This is due to the button's enabled state being set only after the playlist loads. Setting the button to disabled initially can create inconsistencies with synchronization between the DOM and React's virtual DOM. Although it seems like the button is enabled we still can not click it, so this minor bug is accepted.
 
 
 
