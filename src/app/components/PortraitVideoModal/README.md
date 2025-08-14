@@ -54,7 +54,7 @@ const mockBlock: PortraitClipMediaBlock = {
 ```
 ## Accessibility
 
-- `PortraitVideoModal` provides full keyboard accessibility, it adapts it's naviagtion controls based on the type of device.
+- `PortraitVideoModal` provides full keyboard accessibility, it adapts its navigation controls based on the type of device.
 
 ## Keyboard Navigation 
 - All interactive elements contained within the modal such as (previous button, next button, close button) are fully keyboard accessible. The focus is looped within the modal when open, which allows users to cycle through by pressing tab to go forwards and shift + tab to go backwards. The modal can also be closed by pressing the escape key. 
@@ -63,7 +63,7 @@ const mockBlock: PortraitClipMediaBlock = {
 
 - On desktop, "previous" and "next" navigation buttons are visible and allow users to move through the video playlist using a mouse click or keyboard. 
 
-- On mobile, "previous" and "next" buttons are hidden, instead a user can swipe vertically to naivagate between the video playlist.
+- On mobile, "previous" and "next" buttons are hidden, instead a user can swipe vertically to navigate between the video playlist.
 
 ## Close Button
 
@@ -71,11 +71,11 @@ The close button is always keyboard and mouse accessible on desktop, however it 
 
 # Navigation Button Logic
 
-Whether the navigation button is enabled or disabled state is dependant on the current position of the video withinin the playlist. The "previous" button is disbabled on the first video and the "next" button is disabled when on the last video. This logic is handled after the playlist loads, using the `playlistLoadedCallback` event.
+Whether the navigation button is enabled or disabled state is dependent on the current position of the video within the playlist. The "previous" button is disabled on the first video and the "next" button is disabled when on the last video. This logic is handled after the playlist loads, using the `playlistLoadedCallback` event.
 
 # Known UI Issue
 
-Upon initial load, if selectig the first video in which case the "previous" button should be disabled, the "previous" button may appear to be enabled for a split second. This is due to the button's enabled state being set only after the playlist loads. Setting the button to disabled initially can create inconsistencies with synchronization between the DOM and React's virtual DOM. Although it seems like the button is enabled we still can not click it, so this minor bug is accepted.
+Upon initial load, if selecting the first video in which case the "previous" button should be disabled, the "previous" button may appear to be enabled for a split second. This is due to the button's enabled state being set only after the playlist loads. Setting the button to disabled initially can create inconsistencies with synchronization between the DOM and React's virtual DOM. Although it seems like the button is enabled we still cannot click it, so this minor bug is accepted.
 
 # Vanilla JS/TS for DOM
 
