@@ -9,7 +9,7 @@ import Text from '#app/components/Text';
 import styles from './index.styles';
 
 type ReadTimeProps = {
-  readTime: number;
+  readTime?: number;
   className?: string;
   readTimeVariant?: string;
   readTimeLocation?: string;
@@ -21,6 +21,7 @@ const ReadTime = ({
   readTimeLocation,
   className,
 }: ReadTimeProps) => {
+  if (!readTime) return null;
   if (isLive() || readTimeVariant === 'off' || !readTimeVariant) return null;
 
   const { translations } = use(ServiceContext);
@@ -59,14 +60,11 @@ const ReadTime = ({
   return (
     <div
       className={className}
-      css={[
-        readTimeLocation === 'headline' && styles.readTimeBelowHeadline,
-        readTimeLocation === 'timestamp' && styles.readTimeBelowTimestamp,
-      ]}
+      css={styles.readTimeContainer}
       {...viewRef}
       data-testid="read-time"
     >
-      <Text size={fontSize} fontVariant={fontVariant} css={styles.readTime}>
+      <Text size={fontSize} fontVariant={fontVariant} css={styles.readTimeText}>
         {readTimeCopyType === 'minutes' ? minutesCopy : quickLongCopy}
       </Text>
     </div>

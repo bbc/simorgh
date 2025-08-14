@@ -21,10 +21,7 @@ const ArticleTimestamp = ({
   popOut = true,
   minutesTolerance = 0,
   className = '',
-  // EXPERIMENT: Read Time
-  readTime = 0,
-  readTimeLocation = 'off',
-  readTimeVariant = 'off',
+  showReadTimeBelowTimestamp = false,
 }) => {
   const {
     articleTimestampPrefix,
@@ -74,9 +71,6 @@ const ArticleTimestamp = ({
     lastPublished,
   });
 
-  const showReadTimeBelowTimestamp =
-    readTime !== 0 && readTimeLocation === 'timestamp';
-
   return (
     <GridWrapper {...(className ? { className } : undefined)}>
       <FirstPublishedTimestamp
@@ -93,14 +87,6 @@ const ArticleTimestamp = ({
             {...(showReadTimeBelowTimestamp && { padding: false })}
           />
         </div>
-      )}
-      {/* EXPERIMENT: Read Time */}
-      {showReadTimeBelowTimestamp && (
-        <ReadTime
-          readTime={readTime}
-          readTimeVariant={readTimeVariant}
-          readTimeLocation={readTimeLocation}
-        />
       )}
     </GridWrapper>
   );

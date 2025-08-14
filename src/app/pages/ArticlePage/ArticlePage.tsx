@@ -109,6 +109,9 @@ const getTimestampComponent =
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
     const { readTime, readTimeLocation, readTimeVariant } = readTimeData;
+    // EXPERIMENT: Read Time
+    const showReadTimeBelowTimestamp =
+      readTime !== 0 && readTimeLocation === 'timestamp';
 
     return hasByline ? (
       <Byline blocks={bylineContribBlocks}>
@@ -116,19 +119,32 @@ const getTimestampComponent =
           firstPublished={new Date(firstPublished).getTime()}
           lastPublished={new Date(lastPublished).getTime()}
           popOut={false}
-          readTime={readTime}
-          readTimeLocation={readTimeLocation}
-          readTimeVariant={readTimeVariant}
+          showReadTimeBelowTimestamp={showReadTimeBelowTimestamp}
         />
+        {showReadTimeBelowTimestamp && (
+          <ReadTime
+            readTime={readTime}
+            readTimeVariant={readTimeVariant}
+            readTimeLocation={readTimeLocation}
+          />
+        )}
       </Byline>
     ) : (
-      <Timestamp
-        {...props}
-        popOut={false}
-        readTime={readTime}
-        readTimeLocation={readTimeLocation}
-        readTimeVariant={readTimeVariant}
-      />
+      <>
+        <Timestamp
+          {...props}
+          popOut={false}
+          showReadTimeBelowTimestamp={showReadTimeBelowTimestamp}
+        />
+        {/* EXPERIMENT: Read Time */}
+        {showReadTimeBelowTimestamp && (
+          <ReadTime
+            readTime={readTime}
+            readTimeVariant={readTimeVariant}
+            readTimeLocation={readTimeLocation}
+          />
+        )}
+      </>
     );
   };
 
