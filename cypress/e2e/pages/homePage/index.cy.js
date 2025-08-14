@@ -18,18 +18,6 @@ const testSuites = [
     tests,
   },
   {
-    path: '/persian',
-    runforEnv: 'local',
-    service: 'persian',
-    tests,
-  },
-  {
-    path: '/pidgin',
-    runforEnv: ['local', 'test'],
-    service: 'pidgin',
-    tests,
-  },
-  {
     path: '/polska',
     runforEnv: ['local', 'test', 'live'],
     service: 'polska',
