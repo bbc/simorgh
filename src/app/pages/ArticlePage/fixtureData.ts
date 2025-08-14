@@ -50,7 +50,6 @@ const articleDataBuilder = (
   articleBlocksPopulator = blocksWithHeadlineAndText,
   atiAnalytics = {},
   type = 'article',
-  readTime = 1,
 ) => ({
   metadata: {
     id: `urn:bbc:ares::article:${id}`,
@@ -76,9 +75,6 @@ const articleDataBuilder = (
     },
     tags: things,
     allowAdvertising,
-    stats: {
-      readTime,
-    },
   },
   content: {
     model: {

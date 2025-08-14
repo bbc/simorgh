@@ -1,13 +1,13 @@
 import React from 'react';
 import PortraitVideoModal from '.';
-import items from './fixture';
+import blocks from './fixture';
 import readme from './README.md';
 import metadata from './metadata.json';
 
 const Component = () => {
   return (
     <PortraitVideoModal
-      items={items}
+      blocks={blocks}
       selectedVideoIndex={0}
       onClose={() => null}
     />
