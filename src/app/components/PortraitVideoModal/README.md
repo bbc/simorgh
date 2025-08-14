@@ -54,10 +54,10 @@ const mockBlock: PortraitClipMediaBlock = {
 ```
 ## Accessibility
 
-- `PortraitVideoModal` provides full keyboard accessibility, it adapts it's naviagtion controls based on the type of device
+- `PortraitVideoModal` provides full keyboard accessibility, it adapts it's naviagtion controls based on the type of device.
 
 ## Keyboard Navigation 
-- All interactice elements contained within the modal such as (previous button, next button, close button) are fully keyboard accessible. The focus is looped within the modal when open, which allows users to cycle through by pressing tab to go forwards and shift + tab to go backwards. The modal can also be closed by pressing the escape key. 
+- All interactive elements contained within the modal such as (previous button, next button, close button) are fully keyboard accessible. The focus is looped within the modal when open, which allows users to cycle through by pressing tab to go forwards and shift + tab to go backwards. The modal can also be closed by pressing the escape key. 
 
 ## Device Specific Navigation
 
