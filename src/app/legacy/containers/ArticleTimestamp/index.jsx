@@ -1,6 +1,5 @@
 import React, { use } from 'react';
 import Timestamp from '#psammead/psammead-timestamp-container/src';
-import ReadTime from '#app/components/ReadTime';
 import { GridItemMedium, PopOutGridItemMedium } from '#components/Grid';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { formatDateNumeric } from './timeFormats';
