@@ -57,6 +57,8 @@ const CanonicalNavigationContainer = ({
   // TODO: TEMP - used for development (to test NO-JS versions of lang navigation)
   const renderLanguageNavigation = service === 'ws';
 
+  console.log({ renderLanguageNavigation, service });
+
   return (
     <Navigation script={script} service={service} dir={dir} isOpen={isOpen}>
       {renderLanguageNavigation ? (
