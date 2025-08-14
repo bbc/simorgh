@@ -2,8 +2,11 @@ import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 
 const styles = {
-  collapsibleNavList: ({ palette }: Theme) =>
+  navList: ({ palette }: Theme) =>
     css({
+      display: 'flex',
+      flexDirection: 'row',
+      flexWrap: 'wrap',
       listStyleType: 'none',
       padding: 0,
       margin: 0,
@@ -16,12 +19,17 @@ const styles = {
       },
     }),
 
-  collapsibleNavItem: ({ palette }: Theme) =>
+  navItem: ({ palette }: Theme) =>
     css({
       display: 'inline-block',
       padding: 0,
       position: 'relative',
       zIndex: 0,
+
+      // TODO
+      width: 'auto',
+      flexShrink: 0,
+
       '&::before': {
         content: '""',
         position: 'absolute',
@@ -41,12 +49,12 @@ const styles = {
         height: `${pixelsToRem(20)}rem`,
         backgroundColor: palette.GREY_10,
       },
-      '&:last-child::after': {
+      '&:last-of-type::after': {
         background: 'none',
       },
     }),
 
-  collapsibleNavLinkActive: ({ palette }: Theme) =>
+  navLinkActive: ({ palette }: Theme) =>
     css({
       '&::after': {
         content: '""',
@@ -57,7 +65,7 @@ const styles = {
         borderBottom: `${pixelsToRem(4)}rem solid ${palette.POSTBOX}`,
       },
     }),
-  collapsibleNavLink: ({ spacings, fontSizes, fontVariants, palette }: Theme) =>
+  navLink: ({ spacings, fontSizes, fontVariants, palette }: Theme) =>
     css({
       display: 'inline-block',
       width: '100%',
@@ -92,37 +100,36 @@ const styles = {
       },
     }),
 
-  collapsibleSubNavNoJs: ({ spacings }: Theme) =>
+  subNav: ({ spacings }: Theme) =>
     css({
+      order: 1,
       width: '100%',
-      padding: `${spacings.FULL}rem 0`,
-      display: 'none',
-      '&:target': {
-        display: 'block',
-      },
-    }),
-  collapsibleSubNav: ({ spacings }: Theme) =>
-    css({
-      width: '100%',
+      flexBasis: '100%',
       padding: `${spacings.FULL}rem 0`,
       display: 'block',
     }),
+  subNavNoJs: css({
+    display: 'none',
+    '&:target': {
+      display: 'block',
+    },
+  }),
 
-  collapsibleSubNavHeader: css({
+  subNavHeader: css({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
   }),
 
-  collapsibleSubNavTitle: ({ fontVariants, spacings }: Theme) =>
+  subNavTitle: ({ fontVariants, spacings }: Theme) =>
     css({
       fontSize: `${pixelsToRem(20)}rem`,
       ...fontVariants.sansBold,
-      letterSpacing: '0%',
+      letterSpacing: '0',
       padding: `${spacings.FULL}rem`,
     }),
 
-  collapsibleSubNavCloseButton: ({ palette }: Theme) =>
+  subNavCloseButton: ({ palette }: Theme) =>
     css({
       border: 'none',
       background: 'none',
@@ -141,13 +148,13 @@ const styles = {
       },
     }),
 
-  collapsibleSubNavCloseButtonIcon: () =>
+  subNavCloseButtonIcon: () =>
     css({
       width: `${pixelsToRem(22)}rem`,
       height: `${pixelsToRem(22)}rem`,
     }),
 
-  collapsibleSubNavGrid: ({ mq, spacings, palette }: Theme) =>
+  subNavGrid: ({ mq, spacings, palette }: Theme) =>
     css({
       display: 'block',
       gap: `${spacings.FULL}rem`,
@@ -161,7 +168,7 @@ const styles = {
       },
     }),
 
-  collapsibleSubNavItem: ({ mq, palette }: Theme) =>
+  subNavItem: ({ mq, palette }: Theme) =>
     css({
       breakInside: 'avoid',
       padding: 0,
@@ -172,9 +179,12 @@ const styles = {
         display: 'inline-block',
         borderBottom: 'none',
       },
+      ':last-of-type': {
+        borderBottom: 'none',
+      },
     }),
 
-  collapsibleSubNavLink: ({ spacings, palette, fontVariants }: Theme) =>
+  subNavLink: ({ spacings, palette, fontVariants }: Theme) =>
     css({
       display: 'inline-block',
       width: '100%',
@@ -183,7 +193,7 @@ const styles = {
       textDecoration: 'none',
       color: palette.GREY_8,
       ...fontVariants.sansRegular,
-      letterSpacing: '0%',
+      letterSpacing: '0',
       '&:hover::after': {
         content: '""',
       },

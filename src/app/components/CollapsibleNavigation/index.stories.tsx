@@ -30,7 +30,7 @@ const Component = ({
       <ThemeProvider service="mundo">
         <ServiceContextProvider service="mundo">
           <CollapsibleNavigation
-            collapsibleNavigationSections={collapsibleNavigationSectionList}
+            navigationSections={collapsibleNavigationSectionList}
           />
         </ServiceContextProvider>
       </ThemeProvider>

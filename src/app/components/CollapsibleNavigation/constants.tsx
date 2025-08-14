@@ -1,4 +1,6 @@
-const CollapsibleNavigationSections = [
+import { CollapsibleNavigationSection } from './types';
+
+const CollapsibleNavigationSections: CollapsibleNavigationSection[] = [
   {
     id: 'home',
     title: 'Home',
