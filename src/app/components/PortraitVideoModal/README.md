@@ -77,7 +77,9 @@ Whether the navigation button is enabled or disabled state is dependant on the c
 
 Upon initial load, if selectig the first video in which case the "previous" button should be disabled, the "previous" button may appear to be enabled for a split second. This is due to the button's enabled state being set only after the playlist loads. Setting the button to disabled initially can create inconsistencies with synchronization between the DOM and React's virtual DOM. Although it seems like the button is enabled we still can not click it, so this minor bug is accepted.
 
+# Vanilla JS/TS for DOM
 
+While React hooks like 'useRef' are more idiomatic, we used `document.getElementById` for simplicity as without it, can sometimes lead to unnecessary complexity such as prop-drilling and using `.current`. So we went with the approach of giving the button an id and selecting it directly keeping the code simple and less abstract.
 
 
 
