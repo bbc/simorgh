@@ -256,6 +256,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'Podcast ini juga tersedia di',
         download: 'Unduh episode',
         closeVideo: 'Keluar',
+        endOfContentClose: 'Akhir dari konten ini. Keluar',
       },
       socialEmbed: {
         caption: {

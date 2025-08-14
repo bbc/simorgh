@@ -4,7 +4,7 @@ import { screen, render } from '../react-testing-library-with-providers';
 import fixture from './fixture';
 
 describe('PortraitVideoCarousel', () => {
-  it('Should contain the expected number of portrait video items', async () => {
+  it('Should contain the expected number of portrait video blocks', async () => {
     await act(async () => {
       render(<Component {...fixture} />);
     });
@@ -13,7 +13,7 @@ describe('PortraitVideoCarousel', () => {
       .getByTestId('pv-carousel')
       .getElementsByTagName('li');
 
-    expect(portraitVideoItems.length).toBe(fixture.items.length);
+    expect(portraitVideoItems.length).toBe(fixture.blocks.length);
   });
 
   it('Should render the carousel heading with the correct title', async () => {
@@ -36,5 +36,13 @@ describe('PortraitVideoCarousel', () => {
 
     expect(leftButton).toBeInTheDocument();
     expect(rightButton).toBeInTheDocument();
+  });
+
+  it('Should not render anything when isLite is true', async () => {
+    await act(async () => {
+      render(<Component {...fixture} />, { isLite: true });
+    });
+
+    expect(screen.queryByTestId('portrait-video-carousel')).toBeNull();
   });
 });

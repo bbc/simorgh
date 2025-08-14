@@ -6,7 +6,6 @@ import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import { Summary } from '#app/models/types/curationData';
-import isLive from '#app/lib/utilities/isLive';
 import Heading from '../Heading';
 import MaskedImage from '../MaskedImage';
 import styles from './index.styles';
@@ -43,10 +42,11 @@ export default ({
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
   const { translations } = use(ServiceContext);
   const showMoreOnThisTitle = translations.moreOnThis;
+
   return (
     <section role="region" aria-labelledby={id} data-testid={id}>
       <div css={styles.headerContainer} {...viewTracker}>
-        <div css={styles.backgroundContainer} />
+        <div css={[styles.backgroundContainer, styles.backgroundRedGradient]} />
         <div css={styles.contentContainer}>
           <MaskedImage
             imageUrl={image.replace('{width}', '240')}
@@ -54,6 +54,7 @@ export default ({
             altText={altText}
             imageWidth={660}
             showPlaceholder={false}
+            showVignette
           />
           <div css={styles.textContainer}>
             <Heading level={2} size="paragon" css={styles.heading} id={id}>
@@ -80,7 +81,7 @@ export default ({
               </Text>
             )}
           </div>
-          {!isLive() && summaries.length > 1 && (
+          {summaries.length > 1 && (
             <div css={styles.curationGridSection}>
               {showMoreOnThisTitle && (
                 <Heading

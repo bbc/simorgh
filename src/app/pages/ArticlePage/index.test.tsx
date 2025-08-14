@@ -938,5 +938,42 @@ describe('Article Page', () => {
       const title = screen.queryByRole('strong');
       expect(title).not.toBeInTheDocument();
     });
+
+    it('should render read time component when readTime is supplied in metadata', () => {
+      const dataWithReadTime = {
+        ...articleDataPidgin,
+        metadata: {
+          ...articleDataPidgin.metadata,
+          stats: {
+            readTime: 5,
+            wordCount: 500,
+          },
+        },
+      };
+      const { queryByTestId } = render(
+        <Context service="pidgin">
+          <ArticlePage pageData={dataWithReadTime} />
+        </Context>,
+      );
+
+      expect(queryByTestId('read-time')).toBeInTheDocument();
+    });
+
+    it('should not render read time component when readTime is not supplied in metadata', () => {
+      const dataMissingReadTime = {
+        ...articleDataPidgin,
+        metadata: {
+          ...articleDataPidgin.metadata,
+          stats: {},
+        },
+      };
+      const { queryByTestId } = render(
+        <Context service="pidgin">
+          <ArticlePage pageData={dataMissingReadTime} />
+        </Context>,
+      );
+
+      expect(queryByTestId('read-time')).not.toBeInTheDocument();
+    });
   });
 });

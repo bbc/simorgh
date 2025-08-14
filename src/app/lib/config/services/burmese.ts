@@ -271,6 +271,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'ဒီပေါ့ဒ်ကတ်စ်ကို နောက်ထပ်ရနိုင်သည့်နေရာ',
         download: 'ဒေါင်းလုပ်လုပ် ရယူရန်',
         closeVideo: 'ပိတ်မယ်',
+        endOfContentClose: 'ဤအကြောင်းအရာ၏ အဆုံးဖြစ်သည်။ ပိတ်မယ်',
       },
       socialEmbed: {
         caption: {
