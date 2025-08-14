@@ -34,9 +34,10 @@ const CollapsibleNavigation = ({
   };
 
   return (
-    <nav>
+    <nav role="navigation">
       <ul
         role="list"
+        // TODO: Do we need this? This causes to double pronounce it when we open sub navigation
         aria-label={`List ${itemCount} items`}
         css={styles.navList}
       >
@@ -55,6 +56,8 @@ const CollapsibleNavigation = ({
                   css={[styles.navLink, isActive && styles.navLinkActive]}
                   aria-current={isActive ? 'true' : undefined}
                   aria-expanded={hasLink ? undefined : isActive}
+                  // TODO: Double check re. screen reader - Announce the section, not the upper scope label;
+                  aria-controls={hasLink ? undefined : `subav-${section.id}`}
                   role={hasLink ? 'link' : 'button'}
                 >
                   {section.title}
@@ -62,15 +65,20 @@ const CollapsibleNavigation = ({
               </li>
 
               {section.links && shouldShowSubNav && (
-                <div
-                  key={`${section.id}-sublist`}
-                  id={!isHydrated ? section.id : undefined}
+                <li
+                  // TODO: make sure it's pronounced
+                  aria-label={section.title}
+                  id={`subav-${section.id}`}
                   css={[styles.subNav, !isHydrated && styles.subNavNoJs]}
                   role="region"
-                  aria-label={section.title}
                 >
                   <div css={styles.subNavHeader}>
-                    <span css={styles.subNavTitle}>{section.title}</span>
+                    <span
+                      css={styles.subNavTitle}
+                      id={`subNavTitle-${section.id}`}
+                    >
+                      {section.title}
+                    </span>
                     <a
                       aria-label={`Close ${section.title} menu`}
                       css={styles.subNavCloseButton}
@@ -84,7 +92,7 @@ const CollapsibleNavigation = ({
 
                   <ul css={styles.subNavGrid} role="list">
                     {section.links.map(link => (
-                      <li key={link.id} css={styles.subNavItem}>
+                      <li key={link.id} css={styles.subNavItem} role="listitem">
                         <a
                           href={link.href}
                           css={styles.subNavLink}
@@ -95,7 +103,7 @@ const CollapsibleNavigation = ({
                       </li>
                     ))}
                   </ul>
-                </div>
+                </li>
               )}
             </React.Fragment>
           );
