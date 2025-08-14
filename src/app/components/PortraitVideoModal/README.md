@@ -52,3 +52,26 @@ const mockBlock: PortraitClipMediaBlock = {
   onClose={() => console.log('Modal closed')}
 />;
 ```
+## Accessibility
+
+- `PortraitVideoModal` provides full keyboard accessibility, it adapts it's naviagtion controls based on the type of device
+
+## Keyboard Navigation 
+- All interactice elements contained within the modal such as (previous button, next button, close button) are fully keyboard accessible. The focus is looped within the modal when open, which allows users to cycle through by pressing tab to go forwards and shift + tab to go backwards. The modal can also be closed by pressing the escape key. 
+
+## Device Specific Navigation
+
+- On desktop, "previous" and "next" navigation buttons are visible and allow users to move through the video playlist using a mouse click or keyboard. 
+
+- On mobile, "previous" and "next" buttons are hidden, instead a user can swipe vertically to naivagate between the video playlist.
+
+## Close Button
+
+The close button is always keyboard and mouse accessible on desktop, however it is visually hidden on mobile to utilise screen space. It remains available to screen readers and keyboard users.
+
+
+
+
+
+
+
