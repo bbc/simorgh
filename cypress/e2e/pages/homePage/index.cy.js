@@ -67,9 +67,7 @@ const testSuites = [
   },
 ];
 
-describe('Home Page', () => {
-  runTestsForPage({
-    pageType: HOME_PAGE,
-    testSuites,
-  });
+runTestsForPage({
+  pageType: HOME_PAGE,
+  testSuites,
 });

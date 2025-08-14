@@ -247,9 +247,7 @@ const liteTestSuites = canonicalTestSuites
     };
   });
 
-describe('Article Page', () => {
-  runTestsForPage({
-    pageType: 'articles',
-    testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],
-  });
+runTestsForPage({
+  pageType: 'articles',
+  testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],
 });

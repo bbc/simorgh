@@ -220,9 +220,7 @@ const liteTestSuites = canonicalTestSuites
     };
   });
 
-describe('storyPage', () => {
-  runTestsForPage({
-    pageType,
-    testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],
-  });
+runTestsForPage({
+  pageType,
+  testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],
 });
