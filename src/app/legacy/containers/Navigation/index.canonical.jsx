@@ -11,8 +11,6 @@ import useMediaQuery from '#hooks/useMediaQuery';
 import { RequestContext } from '#app/contexts/RequestContext';
 import TopBarOJs from '#app/components/TopBarOJs';
 import isLive from '#app/lib/utilities/isLive';
-import CollapsibleNavigation from '#app/components/CollapsibleNavigation';
-import collapsibleNavigationSections from '#app/components/CollapsibleNavigation/constants';
 
 const ScrollableWrapper = styled.div`
   position: relative;
@@ -37,7 +35,6 @@ const Divider = styled.div`
     display: none;
   }
 `;
-
 const CanonicalNavigationContainer = ({
   script,
   service,
@@ -54,39 +51,25 @@ const CanonicalNavigationContainer = ({
       setIsOpen(false);
     }
   });
-
-  // TODO: TEMP - used for development (to test NO-JS versions of lang navigation)
-  const renderLanguageNavigation = service === 'ws';
-
   return (
     <Navigation script={script} service={service} dir={dir} isOpen={isOpen}>
-      {renderLanguageNavigation ? (
-        <CollapsibleNavigation
-          navigationSections={collapsibleNavigationSections}
-        />
-      ) : (
-        <>
-          <ScrollableWrapper>
-            {!isLite && (
-              <CanonicalMenuButton
-                announcedText={menuAnnouncedText}
-                isOpen={isOpen}
-                onClick={() => setIsOpen(!isOpen)}
-                dir={dir}
-                script={script}
-              />
-            )}
-            {!isOpen && (
-              <ScrollableNavigation dir={dir}>
-                {scrollableListItems}
-              </ScrollableNavigation>
-            )}
-          </ScrollableWrapper>
-          <CanonicalDropdown isOpen={isOpen}>
-            {dropdownListItems}
-          </CanonicalDropdown>
-        </>
-      )}
+      <ScrollableWrapper>
+        {!isLite && (
+          <CanonicalMenuButton
+            announcedText={menuAnnouncedText}
+            isOpen={isOpen}
+            onClick={() => setIsOpen(!isOpen)}
+            dir={dir}
+            script={script}
+          />
+        )}
+        {!isOpen && (
+          <ScrollableNavigation dir={dir}>
+            {scrollableListItems}
+          </ScrollableNavigation>
+        )}
+      </ScrollableWrapper>
+      <CanonicalDropdown isOpen={isOpen}>{dropdownListItems}</CanonicalDropdown>
       <Divider />
       {!isLive() && <TopBarOJs blocks={blocks} />}
     </Navigation>
