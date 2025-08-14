@@ -121,7 +121,7 @@ const styles = {
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      gap: `${spacings.FULL}rem`,
+      gap: `${pixelsToRem(14)}rem`,
       zIndex: 2,
       [mq.GROUP_3_MIN_WIDTH]: {
         display: 'flex',
@@ -133,8 +133,6 @@ const styles = {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      minWidth: `${spacings.SEXTUPLE}rem`,
-      minHeight: `${spacings.SEXTUPLE}rem`,
       width: `${spacings.SEXTUPLE}rem`,
       height: `${spacings.SEXTUPLE}rem`,
       padding: 0,
@@ -147,6 +145,7 @@ const styles = {
       opacity: 1,
       outline: 'none',
       cursor: 'pointer',
+
       '& svg': {
         width: `${spacings.DOUBLE}rem`,
         height: `${spacings.DOUBLE}rem`,
@@ -156,6 +155,11 @@ const styles = {
       '&:hover, &:focus-visible': {
         transform: 'scale(1.08)',
       },
+
+      '&:focus:enabled:not(:focus-visible)': {
+        boxShadow: `0 0 0 ${pixelsToRem(3)}rem ${palette.BLACK}, 0 0 0 ${pixelsToRem(6)}rem ${palette.WHITE}`,
+      },
+
       ':disabled': {
         cursor: 'auto',
         opacity: 0.2,
