@@ -28,7 +28,8 @@ const CollapsibleNavigation = ({
     setOpenSection(isActive ? null : section.id);
   };
 
-  const handleCloseClick = () => {
+  const handleClose = (e: React.MouseEvent) => {
+    e.preventDefault();
     setOpenSection(null);
   };
 
@@ -36,17 +37,15 @@ const CollapsibleNavigation = ({
     <nav>
       <ul
         role="list"
-        id="collapsibleNav"
         aria-label={`List ${itemCount} items`}
         css={styles.navList}
       >
         {navigationSections.map(section => {
-          // TODO: instead of openSection use document.location.hash to detect active section?
-          const isActive = openSection === section.id;
+          const isActive = Boolean(openSection === section.id);
           const shouldShowSubNav = isHydrated ? isActive : true;
-
+          const hasLink = section.href;
           return (
-            <>
+            <React.Fragment key={section.id}>
               <li css={[styles.navItem]} role="listitem">
                 <a
                   id={`nav-${section.id}`}
@@ -55,63 +54,50 @@ const CollapsibleNavigation = ({
                   className="focusIndicatorRemove"
                   css={[styles.navLink, isActive && styles.navLinkActive]}
                   aria-current={isActive ? 'true' : undefined}
-                  aria-expanded={isActive ? 'true' : 'false'}
-                  role="link"
+                  aria-expanded={hasLink ? undefined : isActive}
+                  role={hasLink ? 'link' : 'button'}
                 >
                   {section.title}
                 </a>
               </li>
 
-              {/* Sub-navigation items - takes full width and appears below */}
               {section.links && shouldShowSubNav && (
-                <div key={`${section.id}-sublist`} css={styles.subNavWrapper}>
-                  <div
-                    id={!isHydrated ? section.id : undefined}
-                    css={isHydrated ? styles.subNav : styles.subNavNoJs}
-                    role="region"
-                    aria-label={section.title}
-                  >
-                    <div css={styles.subNavHeader}>
-                      <span css={styles.subNavTitle}>{section.title}</span>
-                      {/* TODO: could it be a single button using href? */}
-                      {isHydrated ? (
-                        <button
-                          id={`close-${section.id}`}
-                          type="button"
-                          aria-label={`Close ${section.title} menu`}
-                          css={styles.subNavCloseButton}
-                          onClick={() => handleCloseClick()}
-                        >
-                          <Close css={styles.subNavCloseButtonIcon} />
-                        </button>
-                      ) : (
-                        <a
-                          aria-label={`Close ${section.title} menu`}
-                          css={styles.subNavCloseButton}
-                          href={`#nav-${section.id}`}
-                        >
-                          <Close />
-                        </a>
-                      )}
-                    </div>
-
-                    <ul css={styles.subNavGrid} role="list">
-                      {section.links.map(link => (
-                        <li key={link.id} css={styles.subNavItem}>
-                          <a
-                            href={link.href}
-                            css={styles.subNavLink}
-                            aria-label={link.label}
-                          >
-                            {link.label}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
+                <div
+                  key={`${section.id}-sublist`}
+                  id={!isHydrated ? section.id : undefined}
+                  css={[styles.subNav, !isHydrated && styles.subNavNoJs]}
+                  role="region"
+                  aria-label={section.title}
+                >
+                  <div css={styles.subNavHeader}>
+                    <span css={styles.subNavTitle}>{section.title}</span>
+                    <a
+                      aria-label={`Close ${section.title} menu`}
+                      css={styles.subNavCloseButton}
+                      href={`#nav-${section.id}`}
+                      onClick={handleClose}
+                      role={isHydrated ? 'button' : 'link'}
+                    >
+                      <Close css={styles.subNavCloseButtonIcon} />
+                    </a>
                   </div>
+
+                  <ul css={styles.subNavGrid} role="list">
+                    {section.links.map(link => (
+                      <li key={link.id} css={styles.subNavItem}>
+                        <a
+                          href={link.href}
+                          css={styles.subNavLink}
+                          aria-label={link.label}
+                        >
+                          {link.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               )}
-            </>
+            </React.Fragment>
           );
         })}
       </ul>

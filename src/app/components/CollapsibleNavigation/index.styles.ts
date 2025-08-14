@@ -49,7 +49,7 @@ const styles = {
         height: `${pixelsToRem(20)}rem`,
         backgroundColor: palette.GREY_10,
       },
-      '&:last-child::after': {
+      '&:last-of-type::after': {
         background: 'none',
       },
     }),
@@ -100,28 +100,21 @@ const styles = {
       },
     }),
 
-  // TODO: Review
-  subNavNoJs: ({ spacings }: Theme) =>
-    css({
-      width: '100%',
-      padding: `${spacings.FULL}rem 0`,
-      display: 'none',
-      '&:target': {
-        display: 'block',
-      },
-    }),
   subNav: ({ spacings }: Theme) =>
     css({
+      order: 1,
       width: '100%',
+      flexBasis: '100%',
       padding: `${spacings.FULL}rem 0`,
       display: 'block',
     }),
+  subNavNoJs: css({
+    display: 'none',
+    '&:target': {
+      display: 'block',
+    },
+  }),
 
-  subNavWrapper: {
-    order: 1,
-    width: '100%',
-    flexBasis: '100%',
-  },
   subNavHeader: css({
     display: 'flex',
     justifyContent: 'space-between',
@@ -132,7 +125,7 @@ const styles = {
     css({
       fontSize: `${pixelsToRem(20)}rem`,
       ...fontVariants.sansBold,
-      letterSpacing: '0%',
+      letterSpacing: '0',
       padding: `${spacings.FULL}rem`,
     }),
 
@@ -186,6 +179,9 @@ const styles = {
         display: 'inline-block',
         borderBottom: 'none',
       },
+      ':last-of-type': {
+        borderBottom: 'none',
+      },
     }),
 
   subNavLink: ({ spacings, palette, fontVariants }: Theme) =>
@@ -197,7 +193,7 @@ const styles = {
       textDecoration: 'none',
       color: palette.GREY_8,
       ...fontVariants.sansRegular,
-      letterSpacing: '0%',
+      letterSpacing: '0',
       '&:hover::after': {
         content: '""',
       },
