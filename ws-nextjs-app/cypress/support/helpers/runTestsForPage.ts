@@ -1,3 +1,5 @@
+import getOptimizelyKey from '#cypress/support/helpers/getOptimizelyKey';
+
 export default ({
   pageType,
   testSuites,
@@ -23,6 +25,17 @@ export default ({
         before(() => {
           beforeAll.forEach(runBeforeAll => runBeforeAll());
           cy.visit(path);
+        });
+
+        beforeEach(() => {
+          cy.intercept(
+            {
+              url: `https://cdn.optimizely.com/datafiles/${getOptimizelyKey()}.json`,
+            },
+            request => {
+              request.reply({ statusCode: 404 });
+            },
+          ).as('disable-optimizely');
         });
 
         tests.forEach(test => {

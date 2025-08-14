@@ -1,6 +1,5 @@
 import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
-import getOptimizelyKey from '../../../support/helpers/getOptimizelyKey';
 import canonicalTests from './testsForCanonicalOnly';
 
 const tests = [canonicalTests];
@@ -69,17 +68,6 @@ const testSuites = [
 ];
 
 describe('Home Page', () => {
-  beforeEach(() => {
-    cy.intercept(
-      {
-        url: `https://cdn.optimizely.com/datafiles/${getOptimizelyKey()}.json`,
-      },
-      request => {
-        request.reply({ statusCode: 404 });
-      },
-    ).as('disable-optimizely');
-  });
-
   runTestsForPage({
     pageType: HOME_PAGE,
     testSuites,

@@ -5,7 +5,6 @@ import { testsThatFollowSmokeTestConfigForAllAMPPages as testsForAllAMPPages } f
 import canonicalAndAmpArticleTests from './tests';
 import ampArticleTests from './testsForAMPOnly';
 import canonicalArticleTests from './testsForCanonicalOnly';
-import getOptimizelyKey from '../../../support/helpers/getOptimizelyKey';
 import liteTests from '../articles/testsForLiteOnly';
 
 const canonicalTests = [
@@ -222,17 +221,6 @@ const liteTestSuites = canonicalTestSuites
   });
 
 describe('storyPage', () => {
-  beforeEach(() => {
-    cy.intercept(
-      {
-        url: `https://cdn.optimizely.com/datafiles/${getOptimizelyKey()}.json`,
-      },
-      request => {
-        request.reply({ statusCode: 404 });
-      },
-    ).as('disable-optimizely');
-  });
-
   runTestsForPage({
     pageType,
     testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],

@@ -7,7 +7,6 @@ import canonicalAndAmpArticleTests from './tests';
 import ampArticleTests from './testsForAMPOnly';
 import canonicalArticleTests from './testsForCanonicalOnly';
 import liteArticleTests from './testsForLiteOnly';
-import getOptimizelyKey from '../../../support/helpers/getOptimizelyKey';
 
 const canonicalTests = [
   testsForAllPages,
@@ -249,17 +248,6 @@ const liteTestSuites = canonicalTestSuites
   });
 
 describe('Article Page', () => {
-  beforeEach(() => {
-    cy.intercept(
-      {
-        url: `https://cdn.optimizely.com/datafiles/${getOptimizelyKey()}.json`,
-      },
-      request => {
-        request.reply({ statusCode: 404 });
-      },
-    ).as('disable-optimizely');
-  });
-
   runTestsForPage({
     pageType: 'articles',
     testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],
