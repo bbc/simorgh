@@ -66,7 +66,11 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
-      readTime: 'Tiempo estimado de lectura',
+      readTime: {
+        readTimePrefix: 'Tiempo estimado de lectura',
+        quick: 'Quick Read',
+        long: 'Long Read',
+      },
       pagination: {
         page: 'Página',
         previousPage: 'Anterior',

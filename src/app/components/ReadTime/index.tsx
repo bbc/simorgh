@@ -15,12 +15,22 @@ type ReadTimeProps = {
   readTimeLocation?: string;
 };
 
+const DEFAULT_TRANSLATIONS = {
+  readTimePrefix: 'Estimated Read Time',
+  quick: 'Quick Read',
+  long: 'Long Read',
+};
+
 const ReadTime = ({ readTime, readTimeVariant, className }: ReadTimeProps) => {
   if (!readTime) return null;
   if (isLive() || readTimeVariant === 'off' || !readTimeVariant) return null;
 
   const { translations } = use(ServiceContext);
-  const readTimeTranslation = translations.readTime || 'Estimated Read Time';
+  const readTimePrefix =
+    translations.readTime?.readTimePrefix ??
+    DEFAULT_TRANSLATIONS.readTimePrefix;
+  const quickCopy = translations.readTime?.quick ?? DEFAULT_TRANSLATIONS.quick;
+  const longCopy = translations.readTime?.long ?? DEFAULT_TRANSLATIONS.long;
 
   // EXPERIMENT: Read Time
   const fontSize = readTimeVariant.includes('bold') ? 'pica' : 'brevier';
@@ -33,8 +43,8 @@ const ReadTime = ({ readTime, readTimeVariant, className }: ReadTimeProps) => {
 
   const readTimeInMiliseconds = readTime * 60000;
   const minutesLabel = readTime === 1 ? 'minute' : 'minutes';
-  const quickLongCopy = readTime < 5 ? 'Quick' : 'Long';
-  const minutesCopy = `${readTimeTranslation}: ${readTime} ${minutesLabel}`;
+  const quickLongCopy = readTime < 5 ? quickCopy : longCopy;
+  const minutesCopy = `${readTimePrefix}: ${readTime} ${minutesLabel}`;
 
   const eventTrackingData: EventTrackingData = {
     componentName: 'read-time-on-article',
