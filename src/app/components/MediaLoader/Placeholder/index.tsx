@@ -17,6 +17,7 @@ interface Props {
   mediaInfo?: MediaInfo;
   noJsMessage?: string;
   placeholderMode?: PlaceholderMode;
+  isPortraitOrientation?: boolean;
 }
 
 const MediaPlayerPlaceholder = ({
@@ -26,6 +27,7 @@ const MediaPlayerPlaceholder = ({
   mediaInfo,
   noJsMessage = '',
   placeholderMode = PlaceholderMode.DEFAULT,
+  isPortraitOrientation,
 }: Props) => {
   const {
     title,
@@ -86,7 +88,12 @@ const MediaPlayerPlaceholder = ({
         <SustainabilityMessage title={title} />
       ) : null}
       <SustainabilityMessageNoJs noJsMessage={noJsMessage} />
-      <Image alt="" src={src} srcSet={srcSet} />
+      <Image 
+        alt="" 
+        src={src} 
+        srcSet={srcSet}
+        isPortraitOrientation={isPortraitOrientation}/>
+      />
     </div>
   );
 };

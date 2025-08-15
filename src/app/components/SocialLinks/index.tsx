@@ -1,6 +1,6 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
-import React, { useContext, useId } from 'react';
+import React, { use, useId } from 'react';
 import { jsx } from '@emotion/react';
 import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
 import { Summary } from '#app/models/types/curationData';
@@ -19,7 +19,7 @@ interface SocialLinksProps {
 }
 
 const SocialLinkImage = ({ imageUrl }: { imageUrl: string }) => {
-  const { isLite } = useContext(RequestContext);
+  const { isLite } = use(RequestContext);
   const DEFAULT_IMAGE_SIZE = styles.IMAGE_SIZE_GROUP_1;
   const DEFAULT_IMAGE_SIZE_2X = DEFAULT_IMAGE_SIZE * 2;
 

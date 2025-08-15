@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -152,8 +152,7 @@ const ScrollablePromo = ({
   blockGroupIndex = null,
   experimentVariant = null,
 }) => {
-  const { script, service, dir, translations, mostRead } =
-    useContext(ServiceContext);
+  const { script, service, dir, translations, mostRead } = use(ServiceContext);
 
   const eventTrackingData = {
     componentName: `edoj${blockGroupIndex}`,

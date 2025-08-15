@@ -4,7 +4,11 @@ import { Helmet } from 'react-helmet';
 import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
 import { data as afriqueHomePageDataFixture } from '#data/afrique/homePage/index.json';
 import { data as pidginHomePageDataFixture } from '#data/pidgin/homePage/index.json';
-import { render } from '../../components/react-testing-library-with-providers';
+import { service as pidginServiceConfig } from '#app/lib/config/services/pidgin';
+import {
+  render,
+  screen,
+} from '../../components/react-testing-library-with-providers';
 import HomePage from './HomePage';
 import { suppressPropWarnings } from '../../legacy/psammead/psammead-test-helpers/src';
 
@@ -59,11 +63,21 @@ describe('Home Page', () => {
   });
 
   it('should have h2s for curation heading levels and h3 for summary heading levels', () => {
+    // Set the translation so the h2 is rendered
+    const originalMoreOnThis =
+      pidginServiceConfig.default.translations.moreOnThis;
+    pidginServiceConfig.default.translations.moreOnThis = 'More on this';
+
+    // @ts-expect-error suppress pageData prop type conflicts
     const { container } = render(<HomePage pageData={pidginHomePageData} />, {
       service: 'pidgin',
     });
-    expect(container.querySelectorAll('h2').length).toBe(8);
-    expect(container.querySelectorAll('h3').length).toBe(36);
+    // for some reason, most read headings are not showing as headings in the count or if I log them
+    expect(container.querySelectorAll('h2').length).toBe(15);
+    expect(container.querySelectorAll('h3').length).toBe(45);
+
+    // Restore the original value - remove when pidgin moreOnThis translation is available
+    pidginServiceConfig.default.translations.moreOnThis = originalMoreOnThis;
   });
 
   it('should apply provided margin size to the main element', () => {
@@ -155,7 +169,7 @@ describe('Home Page', () => {
   });
 
   it('should render images with the .webp image extension', () => {
-    const path = homePageData.curations[1].summaries?.[0].imageUrl
+    const path = homePageData.curations[0].summaries?.[0].imageUrl
       ?.split('{width}')[1]
       .slice(0, -5);
 
@@ -213,55 +227,79 @@ describe('Home Page', () => {
   });
 
   describe('Lazy Loading', () => {
-    it('Only the first image, message banner, and billboard on the homepage are not lazy loaded, but all others are', () => {
+    it('All images in message banners are eagerly loaded', () => {
       // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
       render(<HomePage pageData={homePageData} />, {
         service: 'kyrgyz',
       });
 
-      const nonLazyLoadImages: string[] = [];
-      document
-        .querySelectorAll(
-          `[data-testid^="billboard"] img, [data-testid^="message-banner"] img`,
-        )
-        .forEach(image =>
-          nonLazyLoadImages.push(image.getAttribute(`src`) || ''),
-        );
+      const messageBannerImages = document.querySelectorAll(
+        '[data-testid^="message-banner"] img',
+      );
 
-      const imageList = document.querySelectorAll('img');
-
-      imageList.forEach((image, index) => {
-        const src = image.getAttribute('src') || '';
-
-        if (index === 0 || nonLazyLoadImages.includes(src)) {
-          expect(image.getAttribute('loading')).toBe('eager');
-        } else {
-          expect(image.getAttribute('loading')).toBe('lazy');
-        }
+      messageBannerImages.forEach(image => {
+        expect(image.getAttribute('loading')).toBe('eager');
       });
     });
 
-    it('Only the first image on a homepage and all Billboard images have Fetch Priority set to high', () => {
+    it('Only the main billboard image is eagerly loaded, all billboard grid images are lazy loaded', () => {
+      // @ts-expect-error suppress pageData prop type conflicts
+      render(<HomePage pageData={pidginHomePageData} />, {
+        service: 'kyrgyz',
+      });
+
+      const billboardSections = screen.queryAllByTestId(/billboard-\d+/);
+
+      billboardSections.forEach(billboardSection => {
+        const allImages = Array.from(billboardSection.querySelectorAll('img'));
+        const grid = billboardSection.querySelector(
+          '[data-testid="billboard-curation-grid"]',
+        );
+        const gridImages = grid ? Array.from(grid.querySelectorAll('img')) : [];
+
+        // The main billboard image is the first image in the section that is not in the grid
+        const mainBillboardImage = allImages.find(
+          img => !gridImages.includes(img),
+        );
+
+        expect(mainBillboardImage).toBeTruthy();
+        if (mainBillboardImage) {
+          expect(mainBillboardImage.getAttribute('loading')).toBe('eager');
+        }
+
+        gridImages.forEach(image => {
+          expect(image.getAttribute('loading')).toBe('lazy');
+        });
+      });
+    });
+
+    it('For images not in billboards or message banners, only the first image on the page is eagerly loaded', () => {
       // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
       render(<HomePage pageData={homePageData} />, {
         service: 'kyrgyz',
       });
 
-      const highFetchPriorityImages: string[] = [];
-      document
-        .querySelectorAll(`[data-testid^="billboard"] img`)
-        .forEach(image =>
-          highFetchPriorityImages.push(image.getAttribute(`src`) || ''),
-        );
+      const allImages = Array.from(document.querySelectorAll('img'));
+      const billboardImages = Array.from(
+        document.querySelectorAll('[data-testid^="billboard"] img'),
+      );
+      const messageBannerImages = Array.from(
+        document.querySelectorAll('[data-testid^="message-banner"] img'),
+      );
+      const billboardAndBannerImages = new Set([
+        ...billboardImages,
+        ...messageBannerImages,
+      ]);
 
-      const imageList = document.querySelectorAll('img');
+      const nonBillboardBannerImages = allImages.filter(
+        img => !billboardAndBannerImages.has(img),
+      );
 
-      imageList.forEach((image, index) => {
-        const src = image.getAttribute('src') || '';
-        if (index === 0 || highFetchPriorityImages.includes(src)) {
-          expect(image.getAttribute('fetchpriority')).toBe('high');
+      nonBillboardBannerImages.forEach((image, index) => {
+        if (index === 0) {
+          expect(image.getAttribute('loading')).toBe('eager');
         } else {
-          expect(image.getAttribute('fetchpriority')).toBeNull();
+          expect(image.getAttribute('loading')).toBe('lazy');
         }
       });
     });

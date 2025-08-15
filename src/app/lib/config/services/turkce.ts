@@ -61,6 +61,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'İçeriğe götür',
       relatedContent: 'İlgili haberler',
       relatedTopics: 'İlgili Konular',
+      moreOnThis: '',
       navMenuText: 'Kategoriler',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
@@ -229,6 +230,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Duration',
         recentEpisodes: 'Diğerleri',
         closeVideo: 'Çıkış',
+        endOfContentClose: 'Bu içerik sona erdi. Çıkış',
       },
       socialEmbed: {
         caption: {

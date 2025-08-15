@@ -70,10 +70,7 @@ jest.mock('@optimizely/react-sdk', () => ({
 jest.mock('#app/components/OptimizelyPageMetrics');
 jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   __esModule: true,
-  default: jest.fn(),
-}));
-jest.mock('#app/hooks/useOptimizelyMvtVariation', () => ({
-  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
   default: jest.fn(),
 }));
 jest.mock('#src/app/components/ATIAnalytics', () => () => (

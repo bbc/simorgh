@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
@@ -86,8 +86,8 @@ const OnDemandTvPage = ({
     metadata: { atiAnalytics },
   } = pageData;
 
-  const { timezone, datetimeLocale, brandName } = useContext(ServiceContext);
-  const { isLite } = useContext(RequestContext);
+  const { timezone, datetimeLocale, brandName } = use(ServiceContext);
+  const { isLite } = use(RequestContext);
 
   const formattedTimestamp = formatUnixTimestamp({
     timestamp: releaseDateTimeStamp,

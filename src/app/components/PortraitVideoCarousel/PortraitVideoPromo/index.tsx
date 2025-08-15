@@ -1,17 +1,18 @@
 /** @jsx jsx */
 import { jsx, useTheme } from '@emotion/react';
-import { PortraitVideoPromoProps } from '#app/models/types/portraitVideo';
 import Image from '#app/components/Image';
 import Text from '#app/components/Text';
 import { Play } from '#app/components/icons';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import moment from 'moment';
 import formatDuration from '#app/lib/utilities/formatDuration';
-import { useContext, FocusEvent } from 'react';
+import { use, FocusEvent } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import getSrcSets from '#app/utilities/getSrcSets';
+import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
+import { GroupTracker } from '#app/components/ATIAnalytics/types';
 import styles from './index.styles';
 
 const DEFAULT_TRANSLATION = {
@@ -19,33 +20,41 @@ const DEFAULT_TRANSLATION = {
   play: 'Play',
   duration: 'Duration',
 };
-export default (item: PortraitVideoPromoProps) => {
+
+type PortraitVideoPromoProps = {
+  block: PortraitClipMediaBlock;
+  blockPosition?: number;
+  groupTracker?: GroupTracker;
+  onClick?: () => void;
+};
+
+export default ({
+  block,
+  blockPosition = 0,
+  groupTracker,
+  onClick,
+}: PortraitVideoPromoProps) => {
   const { mq } = useTheme();
-  const {
-    id,
-    images,
-    headlines,
-    video,
-    onClick,
-    itemPosition = 0,
-    groupTracker,
-  } = item;
   const {
     defaultImage,
     defaultImageAltText,
     translations: { media = DEFAULT_TRANSLATION },
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
-  const imageUrl = images?.[0]?.url ?? defaultImage;
+  const { images, video } = block.model;
+
+  const imageUrl = images?.[0]?.source ?? defaultImage;
   const imageUrlTemplate = images?.[0]?.urlTemplate;
   const alt = images?.[0]?.altText || defaultImageAltText;
-  const headline = headlines?.promoHeadline || '';
-  const mediaISO8601Duration = video?.version.duration;
+  const headline = video?.title || '';
+  const mediaISO8601Duration = video?.version?.duration;
+
   const {
     video: mediaType,
     play: actionType,
     duration: durationTranslation,
   } = media;
+
   let momentDuration = null;
   let durationString = '';
   let durationSpokenString = '';
@@ -77,17 +86,17 @@ export default (item: PortraitVideoPromoProps) => {
     imageWidthLarge: 256,
   });
 
-  const adjustedItemPosition = itemPosition + 1;
+  const adjustedBlockPosition = blockPosition + 1;
   const eventTrackingData = {
-    componentName: `portrait-video-promo-${adjustedItemPosition}`,
+    componentName: `portrait-video-promo-${adjustedBlockPosition}`,
     groupTracker,
     viewThreshold: 1,
     itemTracker: {
+      ...(momentDuration && { duration: momentDuration.asSeconds() }),
       type: 'portrait-video-promo',
       text: headline,
-      position: adjustedItemPosition,
-      ...(momentDuration && { duration: momentDuration.asSeconds() }),
-      resourceId: id,
+      position: adjustedBlockPosition,
+      resourceId: video?.id,
     },
   };
 
@@ -96,9 +105,7 @@ export default (item: PortraitVideoPromoProps) => {
     useClickTrackerHandler(eventTrackingData);
 
   const handleClick = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
-    if (clickTrackerHandler) {
-      clickTrackerHandler(e);
-    }
+    if (clickTrackerHandler) clickTrackerHandler(e);
     if (onClick) onClick();
   };
 

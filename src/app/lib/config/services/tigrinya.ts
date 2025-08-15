@@ -78,6 +78,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'ናብቲ ትሕዝቶ ቀጽሉ',
       relatedContent: 'ተዛማዲ ትሕዝቶ',
       relatedTopics: 'ተዛማዲ ዛዕባታት',
+      moreOnThis: '',
       navMenuText: 'ክፍልታት',
       liteSite: {
         onboardingMessage:
@@ -241,6 +242,7 @@ export const service: DefaultServiceConfig = {
         duration: 'ዕምሪ ፈነወ',
         recentEpisodes: 'ዝሓለፉ ክፋላት',
         closeVideo: 'ออก',
+        endOfContentClose: 'እዚ ትሕዝቶ ተወዲኡ። ዝጽዉዑ',
       },
       socialEmbed: {
         caption: {

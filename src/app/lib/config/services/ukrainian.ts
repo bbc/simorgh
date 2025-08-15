@@ -75,6 +75,7 @@ const baseServiceConfig = {
     home: 'Головна',
     currentPage: 'Поточна сторінка',
     skipLinkText: 'Перейти до змісту',
+    moreOnThis: '',
     navMenuText: 'Розділи',
     mediaAssetPage: {
       mediaPlayer: 'Медіаплеєр',
@@ -246,6 +247,7 @@ const baseServiceConfig = {
       podcastExternalLinks: 'Цей подкаст доступний у',
       download: 'Завантажити епізод',
       closeVideo: 'Вийти',
+      endOfContentClose: 'Кінець контенту. Вийти',
     },
     socialEmbed: {
       caption: {

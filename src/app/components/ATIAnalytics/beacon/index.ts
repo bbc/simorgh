@@ -16,10 +16,12 @@ export const sendEventBeacon = async ({
   advertiserID,
   url,
   detailedPlacement,
+  experimentName,
   experimentVariant,
   useReverb,
   itemTracker,
   groupTracker,
+  eventGroupingName,
 }: ATIEventTrackingProps) => {
   const atiClickTrackingUrl = buildATIEventTrackUrl({
     campaignID,
@@ -34,6 +36,7 @@ export const sendEventBeacon = async ({
     advertiserID,
     url,
     detailedPlacement,
+    experimentName,
     experimentVariant,
   });
 
@@ -48,9 +51,11 @@ export const sendEventBeacon = async ({
         type,
         advertiserID,
         url,
+        experimentName,
         experimentVariant,
         itemTracker,
         groupTracker,
+        eventGroupingName,
       })
     : null;
 

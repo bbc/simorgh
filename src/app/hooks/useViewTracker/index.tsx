@@ -1,11 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable react-hooks/rules-of-hooks */
-import { useContext, useEffect, useState, useRef, useCallback } from 'react';
-
+import { use, useEffect, useState, useRef, useCallback } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { OptimizelyContext } from '@optimizely/react-sdk';
-import useOptimizelyMvtVariation from '#app/hooks/useOptimizelyMvtVariation';
 import {
   STATIC_ATI_VIEW_TRACKING,
   VIEW_EVENT,
@@ -15,7 +13,6 @@ import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingP
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon';
 import useTrackingToggle from '../useTrackingToggle';
-import OPTIMIZELY_CONFIG from '../../lib/config/optimizely';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 const VIEWED_DURATION_MS = 1000;
@@ -35,6 +32,8 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     campaignID,
     detailedPlacement,
     sendOptimizelyEvents,
+    experimentName,
+    experimentVariant,
     groupTracker,
     itemTracker,
     viewThreshold,
@@ -43,10 +42,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     eventType: VIEW_EVENT,
   });
 
-  const { optimizely } = useContext(OptimizelyContext);
-  const optimizelyVariation = useOptimizelyMvtVariation(
-    OPTIMIZELY_CONFIG.ruleKey,
-  );
+  const { optimizely } = use(OptimizelyContext);
 
   const observer = useRef(null);
   const timer = useRef(null);
@@ -54,7 +50,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
   const [eventSent, setEventSent] = useState(false);
   const { trackingIsEnabled } = useTrackingToggle(componentName);
 
-  const { service, useReverb } = useContext(ServiceContext);
+  const { service, useReverb } = use(ServiceContext);
 
   const initObserver = async (threshold = MIN_VIEWED_PERCENT) => {
     if (typeof window.IntersectionObserver === 'undefined') {
@@ -100,7 +96,12 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
         ].every(Boolean);
 
         if (shouldSendEvent) {
-          if (optimizely && sendOptimizelyEvents && optimizelyVariation) {
+          if (
+            optimizely &&
+            sendOptimizelyEvents &&
+            experimentVariant &&
+            experimentVariant !== 'off'
+          ) {
             const overrideAttributes = optimizely?.user.attributes;
 
             optimizely.track(
@@ -127,9 +128,10 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
             useReverb,
             ...(groupTracker && { groupTracker }),
             ...(itemTracker && { itemTracker }),
-            ...(optimizelyVariation &&
-              optimizelyVariation !== 'off' && {
-                experimentVariant: optimizelyVariation,
+            ...(experimentVariant &&
+              experimentVariant !== 'off' && {
+                experimentName,
+                experimentVariant,
               }),
           });
           setEventSent(true);
@@ -165,7 +167,8 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     url,
     sendOptimizelyEvents,
     optimizely,
-    optimizelyVariation,
+    experimentName,
+    experimentVariant,
     detailedPlacement,
     useReverb,
     itemTracker,
@@ -185,7 +188,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
 };
 
 export default (eventTrackingData?: EventTrackingData): any => {
-  const { isLite } = useContext(RequestContext);
+  const { isLite } = use(RequestContext);
 
   const viewTracker = getComponentViewTracker(eventTrackingData);
 

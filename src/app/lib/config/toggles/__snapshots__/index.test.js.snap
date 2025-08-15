@@ -1,9 +1,12 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Toggles Config when application environment is live should contain correct default values 1`] = `
 {
   "_environment": "live",
   "ads": {
+    "enabled": false,
+  },
+  "adsNonce": {
     "enabled": false,
   },
   "articleLiteSiteLink": {
@@ -14,10 +17,10 @@ exports[`Toggles Config when application environment is live should contain corr
   },
   "enableFetchingToggles": {
     "enabled": true,
-    "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|yoruba|zhongwen)",
+    "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|dari|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|ws|vietnamese|yoruba|zhongwen)",
   },
   "eventTracking": {
-    "enabled": false,
+    "enabled": true,
   },
   "include": {
     "enabled": true,
@@ -58,6 +61,10 @@ exports[`Toggles Config when application environment is local should contain cor
   "ads": {
     "enabled": false,
   },
+  "adsNonce": {
+    "enabled": true,
+    "value": "es,mx",
+  },
   "articleLiteSiteLink": {
     "enabled": true,
   },
@@ -72,7 +79,7 @@ exports[`Toggles Config when application environment is local should contain cor
   },
   "enableFetchingToggles": {
     "enabled": true,
-    "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|yoruba|zhongwen)",
+    "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|dari|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|ws|vietnamese|yoruba|zhongwen)",
   },
   "eventTracking": {
     "enabled": true,
@@ -122,6 +129,10 @@ exports[`Toggles Config when application environment is test should contain corr
   "ads": {
     "enabled": false,
   },
+  "adsNonce": {
+    "enabled": true,
+    "value": "es,mx",
+  },
   "articleLiteSiteLink": {
     "enabled": true,
   },
@@ -130,7 +141,7 @@ exports[`Toggles Config when application environment is test should contain corr
   },
   "enableFetchingToggles": {
     "enabled": true,
-    "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|yoruba|zhongwen)",
+    "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|dari|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|ws|vietnamese|yoruba|zhongwen)",
   },
   "eventTracking": {
     "enabled": true,

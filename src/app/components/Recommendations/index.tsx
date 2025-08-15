@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { useContext } from 'react';
+import { use } from 'react';
 import { jsx, useTheme } from '@emotion/react';
 
 import useToggle from '#hooks/useToggle';
@@ -18,7 +18,7 @@ const eventTrackingData = {
 
 const Recommendations = ({ data }: { data: Recommendation[] }) => {
   const { recommendations, mostRead, script, service, dir } =
-    useContext(ServiceContext);
+    use(ServiceContext);
 
   const viewTracker = useViewTracker(eventTrackingData);
 

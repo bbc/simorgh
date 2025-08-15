@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { use, useEffect, useState } from 'react';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { RequestContext } from '#app/contexts/RequestContext';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
@@ -9,6 +9,8 @@ import sendBeacon from '#app/lib/analyticsUtils/sendBeacon';
 import addInlineScript, {
   InlineScriptProps,
 } from '#app/lib/utilities/addInlineScript';
+import usePWAInstallTracker from '#app/hooks/usePWAInstallTracker';
+import { reverbUrlHelper } from '@bbc/reverb-url-helper';
 import { ATIAnalyticsProps } from '../types';
 import getNoScriptTrackingPixelUrl from './getNoScriptTrackingPixelUrl';
 import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
@@ -42,7 +44,9 @@ const CanonicalATIAnalytics = ({
   pageviewParams,
   reverbParams,
 }: ATIAnalyticsProps) => {
-  const { isLite } = useContext(RequestContext);
+  const { isLite } = use(RequestContext);
+
+  usePWAInstallTracker();
 
   const atiPageViewUrlString =
     getEnvConfig().SIMORGH_ATI_BASE_URL + pageviewParams;
@@ -55,13 +59,15 @@ const CanonicalATIAnalytics = ({
     if (!isOperaProxy()) sendBeacon(atiPageViewUrl, reverbBeaconConfig);
   }, [atiPageViewUrl, reverbBeaconConfig]);
 
+  const liteSiteReverbURL = reverbUrlHelper.getLitePageViewUrl(reverbParams);
+
   return (
     <>
       {addScript({ script: addSendStaticBeaconToWindow() })}
       {isLite &&
         addScript({
           script: sendPageViewBeaconLite,
-          parameters: atiPageViewUrlString,
+          parameters: [atiPageViewUrlString, liteSiteReverbURL],
         })}
       {!isLite &&
         addScript({

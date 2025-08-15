@@ -1,7 +1,12 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
-import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
+import { jsx } from '@emotion/react';
+import React, { use, useEffect, useRef, useState } from 'react';
+import { Helmet } from 'react-helmet';
+import { RequestContext } from '#contexts/RequestContext';
+import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
 import useDeterminePlaceholderMode, {
   PlaceholderMode,
 } from '#app/hooks/useDeterminePlaceholderMode';
@@ -221,8 +226,8 @@ const MediaLoader = ({
 }: Props) => {
   const transcriptBlock = getTranscriptBlock(blocks);
   const hasTranscript = !!transcriptBlock;
-  const { lang, service, translations } = useContext(ServiceContext);
-  const { pageIdentifier } = useContext(EventTrackingContext);
+  const { lang, service, translations } = use(ServiceContext);
+  const { pageIdentifier } = use(EventTrackingContext);
   const { enabled: adsEnabled } = useToggle('ads');
   const determinedPlaceholderMode = useDeterminePlaceholderMode(hasTranscript);
 
@@ -235,7 +240,7 @@ const MediaLoader = ({
     isAmp,
     isLite,
     showAdsBasedOnLocation,
-  } = useContext(RequestContext);
+  } = use(RequestContext);
 
   const [showPlaceholder, setShowPlaceholder] = useState(
     !PAGETYPES_IGNORE_PLACEHOLDER.includes(pageType),
@@ -335,6 +340,7 @@ const MediaLoader = ({
                 mediaInfo={mediaInfo}
                 onClick={() => setShowPlaceholder(false)}
                 placeholderMode={finalPlaceholderMode}
+                isPortraitOrientation={!!isPortrait}
               />
             ) : (
               <MediaContainer
