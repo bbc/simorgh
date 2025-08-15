@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { useContext, useId } from 'react';
+import { use, useId } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import Text from '#app/components/Text';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
@@ -20,7 +20,7 @@ const Message = ({ title = '' }: Props) => {
     translations: {
       media: { sustainabilitySignpost, loadVideo },
     },
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
   const idRef = useId();
 
   const message = sustainabilitySignpost ?? DEFAULT_MESSAGE;
