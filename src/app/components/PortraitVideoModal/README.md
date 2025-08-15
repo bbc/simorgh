@@ -63,7 +63,7 @@ const mockBlock: PortraitClipMediaBlock = {
 
 - On desktop, "previous" and "next" navigation buttons are visible and allow users to move through the video playlist using a mouse click or keyboard. 
 
-- On mobile, "previous" and "next" buttons are hidden, instead a user can swipe vertically to navigate between the video playlist.
+- On mobile, "previous" and "next" buttons are available, but at 600px and above they are disabled and replaced with our own custom controls. A user can swipe vertically to navigate between the video playlist if buttons are not desired.
 
 ## Close Button
 
