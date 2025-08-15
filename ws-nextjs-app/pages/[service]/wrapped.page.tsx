@@ -2,7 +2,7 @@
 // @ts-nocheck
 
 import { GetServerSideProps } from 'next';
-import { useEffect, useContext } from 'react';
+import { useEffect, use } from 'react';
 import { jsx } from '@emotion/react';
 import { ParsedUrlQuery } from 'querystring';
 import omit from 'ramda/src/omit';
@@ -101,7 +101,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
 };
 
 const pageLayout = () => {
-  const { datetimeLocale, locale } = useContext(ServiceContext);
+  const { datetimeLocale, locale } = use(ServiceContext);
   const isLocalhost = isLocal();
 
   useEffect(() => {

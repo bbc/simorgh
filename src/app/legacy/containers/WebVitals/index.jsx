@@ -1,5 +1,5 @@
 // Hooks
-import { useContext } from 'react';
+import { use } from 'react';
 import useWebVitals from '@bbc/web-vitals';
 import useToggle from '#hooks/useToggle';
 
@@ -9,7 +9,7 @@ import { UserContext } from '#contexts/UserContext';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 
 const WebVitals = ({ pageType }) => {
-  const { personalisationEnabled } = useContext(UserContext);
+  const { personalisationEnabled } = use(UserContext);
 
   const { enabled, value: toggleSampleRate } = useToggle('webVitalsMonitoring');
   // Checks if readers have opted into performance tracking and if the feature toggle is enabled

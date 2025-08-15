@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/aria-role */
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { useContext } from 'react';
+import { use } from 'react';
 import moment from 'moment';
 import path from 'ramda/src/path';
 import formatDuration from '#app/lib/utilities/formatDuration';
@@ -11,6 +11,7 @@ import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
 import LiveLabel from '../../LiveLabel';
+
 import styles from './index.styles';
 
 const CurationPromo = ({
@@ -26,8 +27,8 @@ const CurationPromo = ({
   headingLevel = 2,
   isLive,
 }: Summary) => {
-  const { isAmp, isLite } = useContext(RequestContext);
-  const { translations } = useContext(ServiceContext);
+  const { isAmp, isLite } = use(RequestContext);
+  const { translations } = use(ServiceContext);
 
   const audioTranslation = path(['media', 'audio'], translations);
   const videoTranslation = path(['media', 'video'], translations);
@@ -46,7 +47,6 @@ const CurationPromo = ({
     (type === 'audio' && `${audioTranslation}, `) ||
     (type === 'video' && `${videoTranslation}, `) ||
     (type === 'photogallery' && `${photoGalleryTranslation}, `);
-
   return (
     <Promo css={styles.promo} className="">
       {imageUrl && (
@@ -83,6 +83,7 @@ const CurationPromo = ({
           </Promo.A>
         )}
       </Promo.Heading>
+
       {!isLive ? (
         <Promo.Timestamp className="promo-timestamp">
           {lastPublished}

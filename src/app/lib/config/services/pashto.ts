@@ -64,6 +64,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'مطلب ته ورشئ',
       relatedContent: 'ورته مطالب',
       relatedTopics: 'اړونده مطالب',
+      moreOnThis: '',
       navMenuText: 'برخې',
       liteSite: {
         onboardingMessage:
@@ -254,6 +255,7 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'راتلونکې راډیویي خپرونه',
         duration: 'موده',
         closeVideo: 'وتل',
+        endOfContentClose: 'د دې منځپانګې پای. وتل',
       },
       socialEmbed: {
         caption: {

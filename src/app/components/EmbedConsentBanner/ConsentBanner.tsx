@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { useContext, MouseEvent } from 'react';
+import { use, MouseEvent } from 'react';
 import pathOr from 'ramda/src/pathOr';
 
 import { RequestContext } from '#app/contexts/RequestContext';
@@ -173,8 +173,8 @@ const ConsentBanner = ({
   clickHandler,
   id,
 }: ConsentBannerContentProps) => {
-  const { externalLinkText, translations } = useContext(ServiceContext);
-  const { pageType } = useContext(RequestContext);
+  const { externalLinkText, translations } = use(ServiceContext);
+  const { pageType } = use(RequestContext);
   const isLive = pageType === LIVE_PAGE;
 
   const consentTranslations = getTranslations(

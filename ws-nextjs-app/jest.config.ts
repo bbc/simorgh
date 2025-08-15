@@ -1,3 +1,4 @@
+/* eslint-disable import/no-relative-packages */
 import { pathsToModuleNameMapper } from 'ts-jest';
 import type { Config } from '@jest/types';
 import { compilerOptions } from '../tsconfig.json';

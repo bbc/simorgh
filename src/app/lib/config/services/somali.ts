@@ -63,6 +63,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'U gudub qaybta macluumaadka',
       relatedContent: 'Warar kale oo dheeraad ah oo la xiriira qodobkan',
       relatedTopics: 'Mowduucyada la xiriira',
+      moreOnThis: '',
       navMenuText: 'Qaybaha',
       mediaAssetPage: {
         mediaPlayer: 'Ciyaaridda warbixinnada',
@@ -237,6 +238,8 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Barnaamijka Xiga ee Raadiyaha',
         duration: 'Muddada',
         recentEpisodes: 'Barnaamijyadii Hore',
+        closeVideo: 'Xir',
+        endOfContentClose: 'Kani waa dhammaadka nuxurka. Xir',
       },
       socialEmbed: {
         caption: {

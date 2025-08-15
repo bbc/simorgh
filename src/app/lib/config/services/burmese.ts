@@ -76,6 +76,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'အကြောင်းအရာများဆီ ကျော်သွားရန်',
       relatedContent: 'ဒီသတင်းနဲ့ ပတ်သက်သမျှ',
       relatedTopics: 'ဆက်စပ်အကြောင်းအရာများ',
+      moreOnThis: '',
       navMenuText: 'ကဏ္ဍများ',
       liteSite: {
         onboardingMessage: `ဒေတာကုန်ကျမှုလျှော့ချနိုင်ရန်အတွက် ယခုဝက်ဘ်ဆိုက်မှ စာမျက်နှာများကို ရုပ်ပုံမပါ စာသားဖြင့်သာတင်ဆက်ပေးထားပါသည်။ ရုပ်ပုံ ဗီဒီယိုများနှင့် ကြည့်လိုလျှင် မူလစာမျက်နှာတွင်ကြည့်နိုင်ပါသည်။`,
@@ -270,6 +271,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'ဒီပေါ့ဒ်ကတ်စ်ကို နောက်ထပ်ရနိုင်သည့်နေရာ',
         download: 'ဒေါင်းလုပ်လုပ် ရယူရန်',
         closeVideo: 'ပိတ်မယ်',
+        endOfContentClose: 'ဤအကြောင်းအရာ၏ အဆုံးဖြစ်သည်။ ပိတ်မယ်',
       },
       socialEmbed: {
         caption: {

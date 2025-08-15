@@ -230,6 +230,9 @@ describe('buildSettings', () => {
             poster: {
               availableWhenSettingUp: true,
             },
+            pictureInPicture: {
+              enabled: false,
+            },
           },
           superResponsive: true,
           supportFakeFullscreen: true,
@@ -291,8 +294,8 @@ describe('buildSettings', () => {
             skin: 'classic',
             controls: {
               enabled: true,
-              includeNextButton: true,
-              includePreviousButton: true,
+              includeNextButton: false,
+              includePreviousButton: false,
             },
             locale: { lang: 'sr-latn' },
             subtitles: { defaultOn: true, enabled: true },
@@ -300,6 +303,9 @@ describe('buildSettings', () => {
             swipable: { direction: 'Y', enabled: true },
             poster: {
               availableWhenSettingUp: true,
+            },
+            pictureInPicture: {
+              enabled: false,
             },
           },
           superResponsive: true,

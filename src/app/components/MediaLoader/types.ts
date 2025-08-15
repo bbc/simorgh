@@ -101,6 +101,9 @@ export type PlayerUiConfig = {
   poster?: {
     availableWhenSettingUp: boolean;
   };
+  pictureInPicture?: {
+    enabled: boolean;
+  };
 };
 
 export type ConfigBuilderProps = {
@@ -151,6 +154,8 @@ export type Player = {
   load: () => void;
   play: () => void;
   pause: () => void;
+  previous: () => void;
+  next: () => void;
   bind: (event: MediaPlayerEvents, callback: (e: SMPEvent) => void) => void;
   loadPlugin: (
     pluginName: { [key: string]: string },
@@ -167,7 +172,6 @@ export type Player = {
     playlist: Playlist,
     options?: Partial<PlayerConfig>,
   ) => void;
-  player: { paused: () => boolean };
 };
 
 export type BumpType = {
@@ -263,15 +267,18 @@ export type PortraitClipMediaBlock = {
     images: {
       source: string;
       urlTemplate?: string;
+      altText?: string;
     }[];
     video: {
       id: string;
       title: string;
+      holdingImageURL?: string;
       version: {
         id: string;
         duration: string;
         kind: string;
         guidance: string | null;
+        territories?: string[];
       };
       isEmbeddingAllowed: boolean;
     };

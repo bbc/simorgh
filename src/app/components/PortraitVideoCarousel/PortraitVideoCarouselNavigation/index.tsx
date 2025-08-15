@@ -1,10 +1,6 @@
 /** @jsx jsx */
-import { useCallback, useContext, useEffect, useState } from 'react';
+import { useCallback, use, useEffect, useState, RefObject } from 'react';
 import { jsx } from '@emotion/react';
-import {
-  ScrollDirection,
-  PortraitVideoCarouselNavigationProps,
-} from '#app/models/types/portraitVideo';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { Chevron, ChevronOrientation } from '#app/components/icons';
 import styles from './index.styles';
@@ -15,11 +11,17 @@ const DEFAULT_TRANSLATION = {
   next: 'Scroll to next item',
 };
 
+type ScrollDirection = 'left' | 'right';
+
+type PortraitVideoCarouselNavigationProps = {
+  scrollPaneRef: RefObject<HTMLUListElement | null>;
+};
+
 export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
   const {
     dir,
     translations: { carousel = DEFAULT_TRANSLATION },
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
 

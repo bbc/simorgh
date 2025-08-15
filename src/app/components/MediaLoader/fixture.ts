@@ -449,6 +449,8 @@ export const homePagePortraitClipMediaBlocks = [
         id: 'p0abc001',
         title: 'Portrait Video 1',
         isEmbeddingAllowed: true,
+        holdingImageURL:
+          'https://ichef.bbci.co.uk/images/ic/512xn/p0abc001.jpg',
         version: {
           id: 'p0abc002',
           duration: 'PT1M',
@@ -459,8 +461,7 @@ export const homePagePortraitClipMediaBlocks = [
       images: [
         {},
         {
-          urlTemplate:
-            'https://ichef.bbci.co.uk/images/ic/{width}xn/p0abc001.jpg',
+          urlTemplate: 'https://ichef.bbci.co.uk/images/ic/512xn/p0abc001.jpg',
           source: 'www.test.bbc.com/aportraitmediathing',
         },
       ],
@@ -473,6 +474,8 @@ export const homePagePortraitClipMediaBlocks = [
         id: 'p0abc003',
         title: 'Portrait Video 2',
         isEmbeddingAllowed: true,
+        holdingImageURL:
+          'https://ichef.bbci.co.uk/images/ic/512xn/p0abc002.jpg',
         version: {
           id: 'p0abc004',
           duration: 'PT2M',
@@ -483,8 +486,7 @@ export const homePagePortraitClipMediaBlocks = [
       images: [
         {},
         {
-          urlTemplate:
-            'https://ichef.bbci.co.uk/images/ic/{width}xn/p0abc002.jpg',
+          urlTemplate: 'https://ichef.bbci.co.uk/images/ic/512xn/p0abc002.jpg',
           source: 'www.test.bbc.com/aportraitmediathing',
         },
       ],

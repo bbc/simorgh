@@ -3,6 +3,10 @@ export default {
   ads: {
     enabled: false,
   },
+  adsNonce: {
+    enabled: true,
+    value: 'es,mx',
+  },
   articleLiteSiteLink: { enabled: true },
   chartbeatAnalytics: {
     enabled: true,
@@ -10,7 +14,7 @@ export default {
   enableFetchingToggles: {
     enabled: true,
     value:
-      '(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|yoruba|zhongwen)',
+      '(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|dari|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|ws|vietnamese|yoruba|zhongwen)',
   },
   eventTracking: {
     enabled: true,

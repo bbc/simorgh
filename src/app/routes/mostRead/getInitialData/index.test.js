@@ -71,7 +71,7 @@ describe('MostReadPage - BFF Fetching', () => {
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=mostRead&service=pidgin&pageType=mostRead&serviceEnv=test',
+      path: 'https://mock-bff-path/?id=pidgin&service=pidgin&pageType=mostRead&serviceEnv=test',
       agent,
       optHeaders: {
         'ctx-service-env': 'test',
@@ -99,7 +99,7 @@ describe('MostReadPage - BFF Fetching', () => {
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=mostRead&service=pidgin&pageType=mostRead&serviceEnv=live',
+      path: 'https://mock-bff-path/?id=pidgin&service=pidgin&pageType=mostRead&serviceEnv=live',
       agent,
       optHeaders: {
         'ctx-service-env': 'live',
@@ -127,7 +127,7 @@ describe('MostReadPage - BFF Fetching', () => {
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=mostRead&service=pidgin&pageType=mostRead&serviceEnv=test',
+      path: 'https://mock-bff-path/?id=pidgin&service=pidgin&pageType=mostRead&serviceEnv=test',
       agent,
       optHeaders: {
         'ctx-service-env': 'test',
@@ -155,7 +155,7 @@ describe('MostReadPage - BFF Fetching', () => {
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=mostRead&service=pidgin&pageType=mostRead&serviceEnv=live',
+      path: 'https://mock-bff-path/?id=pidgin&service=pidgin&pageType=mostRead&serviceEnv=live',
       agent,
       optHeaders: {
         'ctx-service-env': 'live',

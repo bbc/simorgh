@@ -61,6 +61,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'ข้ามไปยังเนื้อหา',
       relatedContent: 'อ่านเรื่องที่เกี่ยวข้อง',
       relatedTopics: 'ข่าวที่เกี่ยวข้อง',
+      moreOnThis: '',
       navMenuText: 'หมวดข่าว',
       mediaAssetPage: {
         mediaPlayer: 'มีเดีย เพลเยอร์',
@@ -221,6 +222,7 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'รายการวิทยุถัดไป',
         duration: 'ความยาว',
         closeVideo: 'ออก',
+        endOfContentClose: 'เนื้อหานี้สิ้นสุดแล้ว ออก',
       },
       socialEmbed: {
         caption: {

@@ -177,6 +177,7 @@ export const service: ZhongwenConfig = {
       skipLinkText: '跳过此内容',
       relatedContent: '更多相关内容',
       relatedTopics: '相关主题内容',
+      moreOnThis: '',
       navMenuText: '分类',
       mediaAssetPage: {
         mediaPlayer: '多媒体播放器',
@@ -336,6 +337,7 @@ export const service: ZhongwenConfig = {
         podcastExternalLinks: 'This podcast is also available on',
         download: '下载本集节目',
         closeVideo: '退出',
+        endOfContentClose: '内容结尾。退出',
       },
       socialEmbed: {
         caption: {
@@ -651,6 +653,7 @@ export const service: ZhongwenConfig = {
         podcastExternalLinks: 'This podcast is also available on',
         download: '下載本集節目',
         closeVideo: '退出',
+        endOfContentClose: '內容結尾。退出',
       },
       socialEmbed: {
         caption: {

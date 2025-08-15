@@ -1,7 +1,5 @@
-import { useEffect, useState, useContext } from 'react';
+import { useEffect, useState, use } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
-import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
-import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 
 const getScrollDepth = () =>
   Math.floor(
@@ -12,20 +10,14 @@ const getScrollDepth = () =>
   );
 
 const useOptimizelyScrollDepth = () => {
-  const { optimizely } = useContext(OptimizelyContext);
+  const { optimizely } = use(OptimizelyContext);
   const [scrollDepth, setScrollDepth] = useState(0);
   const [scrollTwentyFive, setScrollTwentyFive] = useState(false);
   const [scrollFifty, setScrollFifty] = useState(false);
   const [scrollSeventyFive, setScrollSeventyFive] = useState(false);
   const [scrollHundred, setScrollHundred] = useState(false);
 
-  const experimentVariation = useOptimizelyVariation(OPTIMIZELY_CONFIG.flagKey);
-
   useEffect(() => {
-    if (!experimentVariation) {
-      return () => undefined;
-    }
-
     if (scrollDepth >= 25 && !scrollTwentyFive) {
       optimizely?.track('scroll25');
       setScrollTwentyFive(true);
@@ -60,7 +52,6 @@ const useOptimizelyScrollDepth = () => {
     scrollHundred,
     scrollSeventyFive,
     scrollTwentyFive,
-    experimentVariation,
   ]);
 
   return {

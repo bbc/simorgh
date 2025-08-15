@@ -2,15 +2,11 @@
 import React, { PropsWithChildren } from 'react';
 import { render, act } from '@testing-library/react';
 import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
-
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 import { PageTypes, Services } from '#app/models/types/global';
 
 import PageCompleteTracking from '.';
-
-jest.mock('#hooks/useOptimizelyVariation', () => jest.fn(() => null));
 
 const optimizely = {
   onReady: jest.fn(() => Promise.resolve()),
@@ -67,20 +63,17 @@ const triggerIntersection = ({
 
 interface Props {
   pageType: PageTypes;
-  isAmp: boolean;
   service: Services;
   mockOptimizely?: Partial<ReactSDKClient>;
 }
 
 const ContextWrap = ({
   pageType,
-  isAmp,
   children,
   service,
   mockOptimizely = optimizely,
 }: PropsWithChildren<Props>) => (
   <RequestContextProvider
-    isAmp={isAmp}
     pageType={pageType}
     service={service}
     pathname="/pathname"
@@ -113,13 +106,9 @@ afterEach(() => {
 });
 
 describe('Optimizely Page Complete tracking', () => {
-  beforeEach(() => {
-    jest.clearAllMocks();
-  });
-
   it('should return a function that can be assigned to an element to observe for intersections', () => {
     const { container } = render(
-      <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
+      <ContextWrap pageType={ARTICLE_PAGE} service="news">
         <PageCompleteTracking />
       </ContextWrap>,
     );
@@ -131,10 +120,8 @@ describe('Optimizely Page Complete tracking', () => {
   });
 
   it('should not send tracking event when element is not in view', async () => {
-    (useOptimizelyVariation as jest.Mock).mockReturnValue('variation_1');
-
     const { container } = render(
-      <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
+      <ContextWrap pageType={ARTICLE_PAGE} service="news">
         <PageCompleteTracking />
       </ContextWrap>,
     );
@@ -154,35 +141,9 @@ describe('Optimizely Page Complete tracking', () => {
     expect(optimizely.track).not.toHaveBeenCalled();
   });
 
-  it('should not send tracking event when element is in view, but not in experiment variation', async () => {
-    (useOptimizelyVariation as jest.Mock).mockReturnValue(null);
-
+  it('should send tracking event when element is in view', async () => {
     const { container } = render(
-      <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
-        <PageCompleteTracking />
-      </ContextWrap>,
-    );
-
-    const element = container.getElementsByTagName('div')[0];
-    const observerInstance = getObserverInstance(element);
-
-    act(() => {
-      triggerIntersection({
-        changes: [{ isIntersecting: true }],
-        observer: observerInstance,
-      });
-    });
-
-    await Promise.resolve();
-
-    expect(optimizely.track).not.toHaveBeenCalled();
-  });
-
-  it('should send tracking event when element is in view and in experiment variation', async () => {
-    (useOptimizelyVariation as jest.Mock).mockReturnValue('variation_1');
-
-    const { container } = render(
-      <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
+      <ContextWrap pageType={ARTICLE_PAGE} service="news">
         <PageCompleteTracking />
       </ContextWrap>,
     );

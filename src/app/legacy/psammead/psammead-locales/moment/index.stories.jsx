@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import styled from '@emotion/styled';
 import moment from 'moment';
 import {
@@ -217,7 +217,7 @@ export default {
 };
 
 export const Example = (_, { service, variant }) => {
-  const { dir, datetimeLocale } = useContext(ServiceContext);
+  const { dir, datetimeLocale } = use(ServiceContext);
 
   return (
     <Component

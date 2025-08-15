@@ -13,7 +13,9 @@ export default service => {
   });
 
   it('I can see the list items', () => {
-    const listItemElements = document.querySelectorAll('main ol li');
+    const listItemElements = Array.from(
+      document.querySelectorAll('main ol li'),
+    );
 
     listItemElements.forEach(itemEl => {
       expect(itemEl).toBeInTheDocument();

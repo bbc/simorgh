@@ -82,6 +82,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'सामग्री को स्किप करें',
       relatedContent: 'संबंधित समाचार',
       relatedTopics: 'मिलते-जुलते मुद्दे',
+      moreOnThis: '',
       navMenuText: 'सेक्शन',
       mediaAssetPage: {
         mediaPlayer: 'मीडिया प्लेयर',
@@ -265,6 +266,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'ये पॉडकास्ट इन प्लेटफ़ॉर्म्स पर भी उपलब्ध है -',
         download: 'एपिसोड डाउनलोड करें',
         closeVideo: 'बाहर निकलें',
+        endOfContentClose: 'इस सामग्री का अंत. बाहर निकलें',
       },
       socialEmbed: {
         caption: {

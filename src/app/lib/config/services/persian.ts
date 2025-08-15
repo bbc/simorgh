@@ -82,6 +82,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'مشاهده محتوا',
       relatedContent: 'مطالب مرتبط',
       relatedTopics: 'موضوعات مرتبط',
+      moreOnThis: '',
       navMenuText: 'صفحه ها',
       liteSite: {
         onboardingMessage: `شما در حال مشاهده نسخه متنی وب‌سایت بی‌بی‌سی هستید که از داده کمتری استفاده می‌کند. نسخه اصلی وب‌سایت را که شامل تمام تصاویر و ویدیوهاست، مشاهده کنید.`,
@@ -282,6 +283,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'این پادکست در این زمان قابل دسترس است',
         download: 'دانلود برنامه',
         closeVideo: 'خروج',
+        endOfContentClose: 'پایان این محتوا. خروج',
       },
       socialEmbed: {
         caption: {
@@ -353,7 +355,8 @@ export const service: DefaultServiceConfig = {
         // Messaging
         removalGuidelineText:
           'اگر محتوایی را برای استفاده در وبسایت یا برنامه ای ارسال کرده اید، در صورتی که ما از ان محتوا استفاده کرده باشیم دیگرامکان حذف آن موجود نیست.',
-        retentionPeriodDays: undefined,
+        retentionPeriodDays:
+          'اطلاعات ارسالی شما تا {{days}} روز نگهداری خواهد شد و در صورتی که مورد استفاده قرار نگیرد، همراه با سایر اطلاعات ارسالی، حذف خواهد شد.',
         referenceNumber: 'شماره',
         submissionInfoSignedOutMessage:
           'شاید بخواهید این جزئیات را برای خود یادداشت کنید.',
@@ -363,7 +366,7 @@ export const service: DefaultServiceConfig = {
           'اگر نظر خود را تغییر داده اید، به ما ایمیل {{emailLink}} بزنید. شماره را ذکر کنید و به ما بگویید که ما از آن استفاده نکنیم.',
 
         // Form Screen
-        dataPolicyHeading: undefined,
+        dataPolicyHeading: 'سیاست حفظ حریم خصوصی',
 
         // Uploading Screen
         uploadingHeading: 'در حال آپلود فایل ها...',

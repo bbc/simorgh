@@ -3,6 +3,7 @@ import latinWithDiacriticsScript from '../fontScripts/latinWithDiacritics';
 import helmetFontVariants from '../fontVariants/helmet';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/azeri';
+import getPWATypographyTheme from './getPWATypographyTheme';
 
 const azeriTheme = {
   palette: {
@@ -20,4 +21,7 @@ const azeriTheme = {
   brandSVG,
 };
 
-export default withThemeProvider(azeriTheme);
+export default withThemeProvider(
+  azeriTheme,
+  getPWATypographyTheme(latinWithDiacriticsScript),
+);

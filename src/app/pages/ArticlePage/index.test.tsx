@@ -11,8 +11,9 @@ import {
   articleDataPidgin,
   articleDataPidginWithAds,
   articleDataPidginWithByline,
-  articleDataPidginWithPV,
-  articleDataPortugueseWithPV,
+  articleDataRussianWithPVButNoWatchMomentsTranslation,
+  articleDataPortugueseWithPVNotUnderHeadline,
+  articleDataPortugueseWithPVUnderHeadline,
   promoSample,
   articlePglDataPidgin,
   articleStyDataPidgin,
@@ -57,6 +58,7 @@ jest.mock('#app/components/OptimizelyPageMetrics');
 
 jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
   default: jest.fn(),
 }));
 
@@ -907,21 +909,71 @@ describe('Article Page', () => {
 
   describe('when rendering an article page with a portrait video', () => {
     it.each`
-      pageData                       | service         | expected
-      ${articleDataPidginWithPV}     | ${'pidgin'}     | ${'Watch Moments'}
-      ${articleDataPortugueseWithPV} | ${'portuguese'} | ${'Assista'}
-    `(
-      `should render the $expected title with the MediaLoader component`,
-      ({ pageData, service, expected }) => {
-        render(
-          <Context service={service}>
-            <ArticlePage pageData={pageData} />
-          </Context>,
-        );
+      pageData                                                | service         | expected     | scenario
+      ${articleDataPortugueseWithPVNotUnderHeadline}          | ${'portuguese'} | ${'Assista'} | ${'should render the Watch Moments title because translation exists'}
+      ${articleDataRussianWithPVButNoWatchMomentsTranslation} | ${'russian'}    | ${undefined} | ${'should not render the Watch Moments title because no translation exists'}
+    `('$scenario', ({ pageData, service, expected }) => {
+      render(
+        <Context service={service}>
+          <ArticlePage pageData={pageData} />
+        </Context>,
+      );
 
-        const title = screen.queryByRole('strong');
+      const title = screen.queryByRole('strong');
+      if (expected) {
+        expect(title).toBeInTheDocument();
         expect(title?.textContent).toEqual(expected);
-      },
-    );
+      } else {
+        expect(title).not.toBeInTheDocument();
+      }
+    });
+
+    it('should not render the portrait video title when the portrait video is directly under a headline', () => {
+      render(
+        <Context service="portuguese">
+          <ArticlePage pageData={articleDataPortugueseWithPVUnderHeadline} />
+        </Context>,
+      );
+
+      const title = screen.queryByRole('strong');
+      expect(title).not.toBeInTheDocument();
+    });
+
+    it('should render read time component when readTime is supplied in metadata', () => {
+      const dataWithReadTime = {
+        ...articleDataPidgin,
+        metadata: {
+          ...articleDataPidgin.metadata,
+          stats: {
+            readTime: 5,
+            wordCount: 500,
+          },
+        },
+      };
+      const { queryByTestId } = render(
+        <Context service="pidgin">
+          <ArticlePage pageData={dataWithReadTime} />
+        </Context>,
+      );
+
+      expect(queryByTestId('read-time')).toBeInTheDocument();
+    });
+
+    it('should not render read time component when readTime is not supplied in metadata', () => {
+      const dataMissingReadTime = {
+        ...articleDataPidgin,
+        metadata: {
+          ...articleDataPidgin.metadata,
+          stats: {},
+        },
+      };
+      const { queryByTestId } = render(
+        <Context service="pidgin">
+          <ArticlePage pageData={dataMissingReadTime} />
+        </Context>,
+      );
+
+      expect(queryByTestId('read-time')).not.toBeInTheDocument();
+    });
   });
 });

@@ -68,6 +68,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'Przejdź do treści',
       relatedContent: 'Powiązane treści',
       relatedTopics: 'Powiązane tematy',
+      moreOnThis: '',
       navMenuText: 'Sekcje',
       liteSite: {
         onboardingMessage:
@@ -238,6 +239,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'Ten podcast dostępny jest też na',
         download: 'Pobierz',
         closeVideo: 'Zamknij',
+        endOfContentClose: 'Koniec tej treści. Zamknij',
       },
       socialEmbed: {
         caption: {
@@ -272,7 +274,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'Najważniejsze Wiadomości',
       latestMediaTitle: 'Najnowsze wideo',
-      featuresAnalysisTitle: 'Zobacz więcej',
+      featuresAnalysisTitle: 'Polecane przez redakcję',
       ugc: {
         noJsHeading: 'Nie można załadować tej strony.',
         noJsDescription:
@@ -326,7 +328,7 @@ export const service: DefaultServiceConfig = {
     mostRead: {
       header: 'Najczęściej czytane',
       lastUpdated: 'Ostatnio zaktualizowane:',
-      numberOfItems: 5,
+      numberOfItems: 10,
       hasMostRead: true,
     },
     radioSchedule: {
@@ -370,6 +372,10 @@ export const service: DefaultServiceConfig = {
           text: 'Pliki cookie',
         },
         {
+          href: 'https://www.bbc.com/polska/send/u203797512',
+          text: 'Skontaktuj się z nami',
+        },
+        {
           href: 'https://www.bbc.com/ws/languages',
           text: 'Inne języki',
         },
@@ -384,6 +390,28 @@ export const service: DefaultServiceConfig = {
         'BBC. BBC nie ponosi odpowiedzialności za treści na stronach zewnętrznych.',
     },
     timezone: 'Europe/Warsaw',
+    navigation: [
+      {
+        title: 'Strona główna',
+        url: '/polska',
+      },
+      {
+        title: 'Polska',
+        url: '/polska/topics/cly1xdxypzet',
+      },
+      {
+        title: 'Świat',
+        url: '/polska/topics/cvg9w8yplg1t',
+      },
+      {
+        title: 'Zdrowie',
+        url: '/polska/topics/c15nxyq4pqnt',
+      },
+      {
+        title: 'Wideo',
+        url: '/polska/topics/c4gk270dy10t',
+      },
+    ],
   },
 };
 export default withContext(service);

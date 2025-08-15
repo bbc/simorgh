@@ -61,6 +61,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: '내용 보기',
       relatedContent: '관련 기사 더 보기',
       relatedTopics: '관련 토픽',
+      moreOnThis: '',
       navMenuText: '섹션',
       mediaAssetPage: {
         mediaPlayer: '미디어 플레이어',
@@ -228,6 +229,7 @@ export const service: DefaultServiceConfig = {
         duration: '방송 길이',
         recentEpisodes: '이전',
         closeVideo: '나가기',
+        endOfContentClose: '이 콘텐츠의 끝입니다. 나가기',
       },
       socialEmbed: {
         caption: {
@@ -329,10 +331,6 @@ export const service: DefaultServiceConfig = {
       {
         title: '뉴스',
         url: '/korean',
-      },
-      {
-        title: '2025 대선',
-        url: '/korean/topics/crldxe422e0t',
       },
       {
         title: '비디오',

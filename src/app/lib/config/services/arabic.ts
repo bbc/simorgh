@@ -50,16 +50,15 @@ export const service: DefaultServiceConfig = {
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     podcastPromo: {
       title: 'يستحق الانتباه',
-      brandTitle: `قناة "مجلة +"`,
-      brandDescription:
-        'يمكنك مطالعة مجموعة متنوعة من المقالات الشيقة والملهمة والتقارير المفيدة.',
+      brandTitle: 'قناتنا الرسمية على واتساب',
+      brandDescription: 'تابعوا التغطية الشاملة من بي بي سي نيوز عربي',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0lcr91j.png',
-        alt: 'اشترك في قناة "مجلة +" على تطبيق WhatsApp',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0lkrxsb.jpg',
+        alt: 'بي بي سي نيوز عربي على تطبيقWhatsApp ',
       },
       linkLabel: {
         text: 'اضغط هنا',
-        href: 'https://www.whatsapp.com/channel/0029Vb1TlQt2Jl8JhwFNNv2m',
+        href: 'https://www.whatsapp.com/channel/0029Val8KlE5a24BsTvuVd2e',
       },
       skipLink: {
         text: 'تخطى %title% وواصل القراءة',
@@ -83,6 +82,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'إذهب الى المحتوى',
       relatedContent: 'المزيد حول هذه القصة',
       relatedTopics: 'كلمات مفتاحية',
+      moreOnThis: '',
       navMenuText: 'أقسام',
       mediaAssetPage: {
         mediaPlayer: 'مشغل وسائط',
@@ -253,6 +253,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'هذا البودكاست متاح عبر',
         download: 'تحميل الحلقة',
         closeVideo: 'خروج',
+        endOfContentClose: 'نهاية هذا المحتوى. خروج',
       },
       socialEmbed: {
         caption: {
