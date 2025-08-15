@@ -8,18 +8,13 @@ import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useLocation from '#app/hooks/useLocation';
 import useToggle from '#app/hooks/useToggle';
-import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
 import { PageTypes } from '#app/models/types/global';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
 import {
   MEDIA_ARTICLE_PAGE,
   MEDIA_ASSET_PAGE,
 } from '#app/routes/utils/pageTypes';
-import { RequestContext } from '#contexts/RequestContext';
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import { jsx } from '@emotion/react';
-import React, { useContext, useEffect, useRef, useState } from 'react';
-import { Helmet } from 'react-helmet';
 import {
   BumpType,
   EventMapping,
