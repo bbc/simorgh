@@ -12,6 +12,7 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import useViewTracker from '../../../app/hooks/useViewTracker';
 import styles from './index.styles';
 import VisuallyHiddenText from '../VisuallyHiddenText';
+import { DownArrowIcon, UpArrowIcon } from '../icons';
 
 const eventTrackingData = {
   componentName: 'potrait-video-modal',
@@ -37,6 +38,21 @@ export const playlistLoadedCallback = (
       item.model.video.id === currentId ||
       item.model.video.version.id === currentId,
   );
+
+  const prevVideoButton = document.getElementById('previous-video-button');
+  const nextVideoButton = document.getElementById('next-video-button');
+
+  // Handle disabling buttons based on current index
+  if (currentIndex === 0) {
+    prevVideoButton?.setAttribute('disabled', 'true');
+    nextVideoButton?.removeAttribute('disabled');
+  } else if (currentIndex === blocks.length - 1) {
+    prevVideoButton?.removeAttribute('disabled');
+    nextVideoButton?.setAttribute('disabled', 'true');
+  } else {
+    prevVideoButton?.removeAttribute('disabled');
+    nextVideoButton?.removeAttribute('disabled');
+  }
 
   const previous = blocks?.[currentIndex - 1]?.model;
   const next = blocks?.[currentIndex + 1]?.model;
@@ -67,6 +83,12 @@ export const playlistLoadedCallback = (
 const pluginLoadedCallback = () => {
   const player = getPlayerInstance();
   player.dispatchEvent('fullScreenPlugin.launchFullscreen');
+};
+
+const handlePrevNextVideo = (direction: 'previous' | 'next') => {
+  const player = getPlayerInstance();
+
+  player?.[direction]?.();
 };
 
 export interface PortraitVideoModalProps {
@@ -170,6 +192,31 @@ const PortraitVideoModal = ({
           {navigationIcons.cross}
           <VisuallyHiddenText>{closeVideo}</VisuallyHiddenText>
         </button>
+        {/* Navigation Buttons */}
+        <div css={styles.navButtonColumn}>
+          <button
+            id="previous-video-button"
+            type="button"
+            onClick={() => handlePrevNextVideo('previous')}
+            css={styles.navButton}
+            aria-label="Previous video"
+            data-testid="previous-video-button"
+            className="focusIndicatorInvert"
+          >
+            <UpArrowIcon />
+          </button>
+          <button
+            id="next-video-button"
+            type="button"
+            onClick={() => handlePrevNextVideo('next')}
+            css={styles.navButton}
+            aria-label="Next video"
+            data-testid="next-video-button"
+            className="focusIndicatorInvert"
+          >
+            <DownArrowIcon />
+          </button>
+        </div>
         <MediaLoader
           css={styles.mediaWrapper}
           blocks={[blocks?.[selectedVideoIndex]]}

@@ -14,6 +14,8 @@ const mockPlayer = {
   queuePlaylist: jest.fn(),
   setPreviousPlaylist: jest.fn(),
   pause: jest.fn(),
+  next: jest.fn(),
+  previous: jest.fn(),
 } satisfies Partial<Player>;
 
 describe('PortraitVideoModal', () => {
@@ -299,6 +301,118 @@ describe('PortraitVideoModal', () => {
       );
 
       expect(mockPlayer.queuePlaylist).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('Navigation arrow buttons', () => {
+    beforeEach(() => {
+      jest.clearAllMocks();
+
+      Object.defineProperty(window, 'embeddedMedia', {
+        writable: true,
+        value: {
+          api: {
+            players: () => ({ bbcMediaPlayer0: mockPlayer }),
+          },
+        },
+      });
+    });
+
+    it('disables the previous button on the first video', async () => {
+      render(
+        <Component
+          selectedVideoIndex={0}
+          blocks={blocks}
+          onClose={mockClose}
+        />,
+      );
+
+      const mockSMPEvent: SMPEvent = {
+        playlist: {
+          items: [{ versionID: blocks[0].model.video.version.id }],
+        },
+      };
+
+      playlistLoadedCallback(mockSMPEvent, blocks);
+
+      expect(screen.getByTestId('previous-video-button')).toBeDisabled();
+    });
+
+    it('disables the next button on the last video', () => {
+      render(
+        <Component
+          selectedVideoIndex={blocks.length - 1}
+          blocks={blocks}
+          onClose={mockClose}
+        />,
+      );
+
+      const mockSMPEvent: SMPEvent = {
+        playlist: {
+          items: [
+            { versionID: blocks[blocks.length - 1].model.video.version.id },
+          ],
+        },
+      };
+
+      playlistLoadedCallback(mockSMPEvent, blocks);
+
+      expect(screen.getByTestId('next-video-button')).toBeDisabled();
+    });
+
+    it('enables both buttons when not at first or last video', () => {
+      const middleIndex = Math.floor(blocks.length / 2);
+
+      render(
+        <Component
+          selectedVideoIndex={middleIndex}
+          blocks={blocks}
+          onClose={mockClose}
+        />,
+      );
+
+      const mockSMPEvent: SMPEvent = {
+        playlist: {
+          items: [{ versionID: blocks[middleIndex].model.video.version.id }],
+        },
+      };
+
+      playlistLoadedCallback(mockSMPEvent, blocks);
+
+      expect(screen.getByTestId('previous-video-button')).toBeEnabled();
+      expect(screen.getByTestId('next-video-button')).toBeEnabled();
+    });
+
+    it('calls "previous" API method when previous button is clicked', () => {
+      render(
+        <Component
+          selectedVideoIndex={1}
+          blocks={blocks}
+          onClose={mockClose}
+        />,
+      );
+
+      const previousButton = screen.getByTestId('previous-video-button');
+
+      previousButton.click();
+
+      expect(mockPlayer.previous).toHaveBeenCalled();
+    });
+
+    it('calls "next" API method when next button is clicked', () => {
+      render(
+        <Component
+          selectedVideoIndex={0}
+          blocks={blocks}
+          onClose={mockClose}
+        />,
+      );
+
+      const nextButton = screen.getByTestId('next-video-button');
+
+      nextButton.click();
+
+      expect(mockPlayer.next).toHaveBeenCalled();
     });
   });
 });
