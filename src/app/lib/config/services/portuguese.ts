@@ -50,16 +50,17 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
-      title: 'Que História!',
-      brandTitle: '8 novos episódios',
-      brandDescription: 'Disponíveis nos tocadores de podcast',
+      title: 'Whatsapp!',
+      brandTitle: 'No WhatsApp',
+      brandDescription: 
+        'Agora você pode receber as notícias da BBC News Brasil no seu celular.',
       image: {
-        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0lrfjhf.png',
-        alt: 'Que História! - 8 novos episódios',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0lq77dv.png',
+        alt: 'BBC Brasil no WhatsAp',
       },
       linkLabel: {
-        text: 'Ouça aqui',
-        href: 'https://www.bbc.com/portuguese/podcasts/p07r3r3t',
+        text: 'Clique para se inscrever',
+        href: 'https://www.whatsapp.com/channel/0029VaVHa4S6rsQrlMVx8c0b',
       },
       skipLink: {
         text: 'Pule %title% e continue lendo',
