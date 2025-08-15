@@ -67,6 +67,17 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
       00:30
     </time>
   </button>
+  <noscript>
+    <div
+      class="bbc-kvi82l"
+    >
+      <p
+        class="bbc-8ugaiq"
+      >
+        Pour regarder ce contenu, veuillez activer JavaScript ou essayer un autre navigateur.
+      </p>
+    </div>
+  </noscript>
   <div
     class="bbc-1jf2q50"
     style="padding-bottom:0;overflow:hidden"
@@ -144,6 +155,17 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
       00:30
     </time>
   </button>
+  <noscript>
+    <div
+      class="bbc-kvi82l"
+    >
+      <p
+        class="bbc-8ugaiq"
+      >
+        Pour regarder ce contenu, veuillez activer JavaScript ou essayer un autre navigateur.
+      </p>
+    </div>
+  </noscript>
   <div
     class="bbc-1jf2q50"
     style="padding-bottom:0;overflow:hidden"
@@ -225,6 +247,17 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
         00:30
       </time>
     </button>
+    <noscript>
+      <div
+        class="bbc-kvi82l"
+      >
+        <p
+          class="bbc-8ugaiq"
+        >
+          Pour regarder ce contenu, veuillez activer JavaScript ou essayer un autre navigateur.
+        </p>
+      </div>
+    </noscript>
     <div
       class="bbc-1jf2q50"
       style="padding-bottom:0;overflow:hidden"
