@@ -71,6 +71,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import RelatedContentSection from '../../components/RelatedContentSection';
 import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
+import PersonalisedContent from './PersonalisedContent';
 import styles from './ArticlePage.styles';
 import { ComponentToRenderProps, TimeStampProps } from './types';
 import ContinueReadingButton, {
@@ -152,7 +153,7 @@ const getVideoComponent =
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
-  const { isApp, isAmp, isLite } = use(RequestContext);
+  const { country, isApp, isAmp, isLite } = use(RequestContext);
 
   const {
     articleAuthor,
@@ -160,6 +161,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     showRelatedTopics,
     brandName,
     translations,
+    service,
   } = use(ServiceContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
@@ -380,6 +382,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               backgroundColour={GREY_2}
               tagBackgroundColour={WHITE}
             />
+          )}
+          {service === 'mundo' && (
+			  <PersonalisedContent
+				country={country}
+				service={service}
+				sendOptimizelyEvents={true}
+			  />
           )}
           <RelatedContentSection
             content={blocks}
