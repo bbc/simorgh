@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/aria-role */
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { jsx } from '@emotion/react';
-import { useContext } from 'react';
+import { use } from 'react';
 import Text from '../Text';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { RightArrow as ArrowSvg } from '../icons';
@@ -33,7 +33,7 @@ const Transcript = ({
   transcript: TranscriptBlock;
   title?: string;
 }) => {
-  const { translations } = useContext(ServiceContext);
+  const { translations } = use(ServiceContext);
   const transcriptItems = transcript?.model?.blocks;
   if (!transcriptItems) {
     return null;
