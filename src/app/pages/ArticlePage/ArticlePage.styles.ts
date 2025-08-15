@@ -176,8 +176,9 @@ export default {
     }),
     commonMarginSpacing,
   ],
-  readTime: () =>
+  // EXPERIMENT: Read Time
+  readTimePlaceholder: () =>
     css({
-      padding: 0,
+      marginBottom: `${pixelsToRem(18)}rem`,
     }),
 };

@@ -99,6 +99,9 @@ const getImageComponent =
   );
 
 // EXPERIMENT: Read Time
+const Placeholder = () => <div css={styles.readTimePlaceholder} />;
+
+// EXPERIMENT: Read Time
 const getTimestampComponent =
   (
     hasByline: boolean,
@@ -114,21 +117,20 @@ const getTimestampComponent =
       readTime !== 0 && readTimeLocation === 'timestamp';
 
     return hasByline ? (
-      <Byline blocks={bylineContribBlocks}>
-        <Timestamp
-          firstPublished={new Date(firstPublished).getTime()}
-          lastPublished={new Date(lastPublished).getTime()}
-          popOut={false}
-          showReadTimeBelowTimestamp={showReadTimeBelowTimestamp}
-        />
-        {showReadTimeBelowTimestamp && (
-          <ReadTime
-            readTime={readTime}
-            readTimeVariant={readTimeVariant}
-            readTimeLocation={readTimeLocation}
+      <>
+        <Byline blocks={bylineContribBlocks}>
+          <Timestamp
+            firstPublished={new Date(firstPublished).getTime()}
+            lastPublished={new Date(lastPublished).getTime()}
+            popOut={false}
+            showReadTimeBelowTimestamp={showReadTimeBelowTimestamp}
           />
-        )}
-      </Byline>
+          {showReadTimeBelowTimestamp && (
+            <ReadTime readTime={readTime} readTimeVariant={readTimeVariant} />
+          )}
+        </Byline>
+        {!showReadTimeBelowTimestamp && <Placeholder />}
+      </>
     ) : (
       <>
         <Timestamp
@@ -137,12 +139,10 @@ const getTimestampComponent =
           showReadTimeBelowTimestamp={showReadTimeBelowTimestamp}
         />
         {/* EXPERIMENT: Read Time */}
-        {showReadTimeBelowTimestamp && (
-          <ReadTime
-            readTime={readTime}
-            readTimeVariant={readTimeVariant}
-            readTimeLocation={readTimeLocation}
-          />
+        {showReadTimeBelowTimestamp ? (
+          <ReadTime readTime={readTime} readTimeVariant={readTimeVariant} />
+        ) : (
+          <Placeholder />
         )}
       </>
     );
@@ -175,13 +175,10 @@ const getHeadlineComponent =
           {...props}
           {...(showReadTimeBelowHeadline && { applyReadTimeSpacing: true })}
         />
-        {showReadTimeBelowHeadline && (
-          <ReadTime
-            readTime={readTime}
-            readTimeVariant={readTimeVariant}
-            css={styles.readTime}
-            readTimeLocation={readTimeLocation}
-          />
+        {showReadTimeBelowHeadline ? (
+          <ReadTime readTime={readTime} readTimeVariant={readTimeVariant} />
+        ) : (
+          <Placeholder />
         )}
       </>
     );

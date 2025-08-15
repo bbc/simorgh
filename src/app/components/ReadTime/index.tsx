@@ -12,7 +12,6 @@ type ReadTimeProps = {
   readTime?: number;
   className?: string;
   readTimeVariant?: string;
-  readTimeLocation?: string;
 };
 
 const DEFAULT_TRANSLATIONS = {
@@ -22,8 +21,8 @@ const DEFAULT_TRANSLATIONS = {
 };
 
 const ReadTime = ({ readTime, readTimeVariant, className }: ReadTimeProps) => {
-  if (!readTime) return null;
-  if (isLive() || readTimeVariant === 'off' || !readTimeVariant) return null;
+  if (!readTime || isLive() || readTimeVariant === 'off' || !readTimeVariant)
+    return null;
 
   const { translations } = use(ServiceContext);
   const readTimePrefix =
