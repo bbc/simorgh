@@ -384,11 +384,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             />
           )}
           {service === 'mundo' && (
-			  <PersonalisedContent
-				country={country}
-				service={service}
-				sendOptimizelyEvents={true}
-			  />
+            <PersonalisedContent
+              country={country ?? ''}
+              service={service}
+              sendOptimizelyEvents
+            />
           )}
           <RelatedContentSection
             content={blocks}
