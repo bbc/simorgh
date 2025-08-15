@@ -88,11 +88,11 @@ const MediaPlayerPlaceholder = ({
         <SustainabilityMessage title={title} />
       ) : null}
       <SustainabilityMessageNoJs noJsMessage={noJsMessage} />
-      <Image 
-        alt="" 
-        src={src} 
+      <Image
+        alt=""
+        src={src}
         srcSet={srcSet}
-        isPortraitOrientation={isPortraitOrientation}/>
+        isPortraitOrientation={isPortraitOrientation}
       />
     </div>
   );
