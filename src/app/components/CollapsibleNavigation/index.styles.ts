@@ -25,8 +25,6 @@ const styles = {
       padding: 0,
       position: 'relative',
       zIndex: 0,
-
-      // TODO
       width: 'auto',
       flexShrink: 0,
 

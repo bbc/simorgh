@@ -80,6 +80,7 @@ describe('LanguageNavigation', () => {
     });
     fireEvent.click(closeButton);
 
+    expect(closeButton).not.toBeInTheDocument();
     expect(screen.queryByText('Link 1')).not.toBeInTheDocument();
     expect(screen.queryByText('Link 2')).not.toBeInTheDocument();
   });
