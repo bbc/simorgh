@@ -52,7 +52,7 @@ export const service: DefaultServiceConfig = {
     podcastPromo: {
       title: 'Whatsapp!',
       brandTitle: 'No WhatsApp',
-      brandDescription: 
+      brandDescription:
         'Agora você pode receber as notícias da BBC News Brasil no seu celular.',
       image: {
         src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0lq77dv.png',
