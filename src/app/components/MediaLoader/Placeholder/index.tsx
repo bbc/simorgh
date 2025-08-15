@@ -16,7 +16,7 @@ interface Props {
   src?: string;
   srcSet?: string;
   mediaInfo?: MediaInfo;
-  noJsMessage?: string;K
+  noJsMessage?: string;
   hasTranscript?: boolean;
   isPortraitOrientation?: boolean;
 }
@@ -83,9 +83,9 @@ const MediaPlayerPlaceholder = ({
           />
         </>
       )}
-      <Image 
-        alt="" 
-        src={src} 
+      <Image
+        alt=""
+        src={src}
         srcSet={srcSet}
         isPortraitOrientation={isPortraitOrientation}
       />
