@@ -87,7 +87,10 @@ const MediaPlayerPlaceholder = ({
       {placeholderMode === PlaceholderMode.SHOW_SUSTAINABILITY_MSG ? (
         <SustainabilityMessage title={title} />
       ) : null}
-      <SustainabilityMessageNoJs noJsMessage={noJsMessage} />
+      {/* TODO - Check against requirements */}
+      {placeholderMode === PlaceholderMode.SHOW_SUSTAINABILITY_MSG ? (
+        <SustainabilityMessageNoJs noJsMessage={noJsMessage} />
+      ) : null}
       <Image
         alt=""
         src={src}
