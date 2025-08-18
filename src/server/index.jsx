@@ -288,7 +288,10 @@ server.get(
         data.pageData.secondaryColumn.PersonalisedContent = {
           title: countrySpecificdata.json.data.title,
           description: countrySpecificdata.json.data.description,
-          articles: countrySpecificdata.json.data.curations[0].summaries,
+          articles: countrySpecificdata.json.data.curations[0].summaries.slice(
+            0,
+            4,
+          ),
         };
       }
 

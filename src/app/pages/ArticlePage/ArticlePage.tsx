@@ -383,12 +383,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               tagBackgroundColour={WHITE}
             />
           )}
-          {service === 'mundo' && (
-			  <PersonalisedContent
-				pageData={pageData}
-				service={service}
-				sendOptimizelyEvents={true}
-			  />
+          {pageData.secondaryColumn?.PersonalisedContent && (
+            <PersonalisedContent pageData={pageData} sendOptimizelyEvents />
           )}
           <RelatedContentSection
             content={blocks}

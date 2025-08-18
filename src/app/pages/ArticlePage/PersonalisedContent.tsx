@@ -1,34 +1,65 @@
 /** @jsx jsx */
 import { jsx, useTheme } from '@emotion/react';
 
-import Curation from '#components/Curation';
-import { Curation } from '#app/models/types/curationData';
 import { Article } from '#app/models/types/optimo';
+import CurationGrid from '#app/components/Curation/CurationGrid';
+import Subheading from '#app/components/Curation/Subhead';
+import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import { Summary } from '#app/models/types/curationData';
 
 import styles from './ArticlePage.styles';
 
 const PersonalisedContent = ({
-  service,
   pageData,
   sendOptimizelyEvents,
 }: {
-  service: string;
   pageData: Article;
   sendOptimizelyEvents: boolean;
 }) => {
-  const personalisedContentData = pageData.secondaryColumn.PersonalisedContent;
-  console.log('personalisedContentData', personalisedContentData);
-  
+  type PersonalisedContentType = {
+    title?: string;
+    articles?: Summary[];
+    curationLength?: number;
+    id?: string;
+    link?: string;
+    renderVisuallyHiddenH2Title?: boolean;
+    curationSubheading?: string;
+    isFirstCuration?: boolean;
+  };
+
+  const personalisedContentData: PersonalisedContentType | undefined =
+    pageData.secondaryColumn.PersonalisedContent;
 
   const {
     palette: { GREY_2 },
   } = useTheme();
 
+  const {
+    title,
+    articles = [],
+    id = 'personalised-content',
+    link = '',
+    curationSubheading = '',
+    isFirstCuration = false,
+  } = personalisedContentData || {};
+
+  if (!personalisedContentData) {
+    return null;
+  }
 
   return (
-    <div css={styles.secondaryColumn}>
-        <h2>{personalisedContentData.title}</h2>
-    </div>
+    <section aria-labelledby={id} role="region">
+      {title && (
+        <Subheading id={id} link={link}>
+          {title}
+        </Subheading>
+      )}
+      <CurationGrid
+        summaries={articles}
+        headingLevel={3}
+        isFirstCuration={isFirstCuration}
+      />
+    </section>
   );
 };
 
