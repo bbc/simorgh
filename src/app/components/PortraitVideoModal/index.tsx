@@ -9,7 +9,7 @@ import {
 } from '#app/components/MediaLoader/types';
 import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import useViewTracker from '../../../app/hooks/useViewTracker';
+import useViewTracker from '../../hooks/useViewTracker';
 import styles from './index.styles';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { DownArrowIcon, UpArrowIcon } from '../icons';
