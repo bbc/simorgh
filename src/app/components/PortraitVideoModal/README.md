@@ -69,6 +69,10 @@ const mockBlock: PortraitClipMediaBlock = {
 
 The close button is always keyboard and mouse accessible on desktop, however it is visually hidden on mobile to utilise screen space. It remains available to screen readers and keyboard users.
 
+On mobile devices that are under 600px, the visibile close button is provided by the in-player SMP controls, not our custom modal ones for desktop. This ensures there is always a way to close the video, even when our custom close button is visually hidden.
+
+On desktop, 600px and above, the in player close button is disabled and users can interact with our custom close button instead.
+
 # Navigation Button Logic
 
 Whether the navigation button is enabled or disabled state is dependent on the current position of the video within the playlist. The "previous" button is disabled on the first video and the "next" button is disabled when on the last video. This logic is handled after the playlist loads, using the `playlistLoadedCallback` event.
