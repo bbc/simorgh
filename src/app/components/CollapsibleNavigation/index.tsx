@@ -57,8 +57,8 @@ const CollapsibleNavigation = ({
           const shouldShowSubNav = isHydrated ? isActive : true;
           const isLink = section.href;
 
-          const navigationLinkId = `navigation-link-${section.id}`;
-          const subNavigationTitleId = `subnavigation-title-${section.id}`;
+          const navigationLinkId = `nav-${section.id}`;
+          const subNavigationTitleId = `subnav-title-${section.id}`;
           const subNavigationId = section.id;
 
           return (
