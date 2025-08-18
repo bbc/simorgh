@@ -99,9 +99,13 @@ const getImageComponent =
   );
 
 // EXPERIMENT: Read Time
-const Placeholder = ({ className }: { className?: string }) => (
-  <div className={className} />
-);
+const Placeholder = ({ className }: { className?: string }) => {
+  const { service } = use(ServiceContext);
+  const servicesInExperiment = ['turkce', 'mundo'];
+  return servicesInExperiment.includes(service) ? (
+    <div className={className} />
+  ) : null;
+};
 
 // EXPERIMENT: Read Time
 const getTimestampComponent =
