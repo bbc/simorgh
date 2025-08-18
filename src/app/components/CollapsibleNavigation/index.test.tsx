@@ -76,7 +76,7 @@ describe('LanguageNavigation', () => {
     expect(screen.getByText('Link 2')).toBeInTheDocument();
 
     const closeButton = screen.getByRole('button', {
-      name: 'Close Section 1 menu',
+      name: 'Close Section 1 submenu',
     });
     fireEvent.click(closeButton);
 

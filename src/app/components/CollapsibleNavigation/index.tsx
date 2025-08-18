@@ -6,6 +6,7 @@ import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import styles from './index.styles';
 import { Close } from '../icons';
 import { CollapsibleNavigationSection } from './types';
+import Heading from '../Heading';
 
 type CollapsibleNavigationProps = {
   navigationSections: CollapsibleNavigationSection[];
@@ -16,7 +17,7 @@ const CollapsibleNavigation = ({
 }: CollapsibleNavigationProps) => {
   const [openSection, setOpenSection] = useState<string | null>(null);
   const isHydrated = useHydrationDetection();
-  const activeNavigationRef = useRef<HTMLAnchorElement | null>(null);
+  const activeNavItemRef = useRef<HTMLAnchorElement | null>(null);
 
   const handleNavClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
@@ -31,10 +32,9 @@ const CollapsibleNavigation = ({
 
     if (isActive) {
       setOpenSection(null);
-      activeNavigationRef.current = null;
+      activeNavItemRef.current = null;
     } else {
-      activeNavigationRef.current = e.currentTarget;
-
+      activeNavItemRef.current = e.currentTarget;
       setOpenSection(section.id);
     }
   };
@@ -43,9 +43,9 @@ const CollapsibleNavigation = ({
     e.preventDefault();
     setOpenSection(null);
 
-    if (activeNavigationRef.current) {
-      activeNavigationRef.current.focus();
-      activeNavigationRef.current = null;
+    if (activeNavItemRef.current) {
+      activeNavItemRef.current.focus();
+      activeNavItemRef.current = null;
     }
   };
 
@@ -57,13 +57,13 @@ const CollapsibleNavigation = ({
           const shouldShowSubNav = isHydrated ? isActive : true;
           const isLink = section.href;
 
-          const navigationLinkId = `navigation-link-${section.id}`;
-          const subNavigationTitleId = `subnavigation-title-${section.id}`;
+          const navigationLinkId = `nav-${section.id}`;
+          const subNavigationTitleId = `subnav-title-${section.id}`;
           const subNavigationId = section.id;
 
           return (
             <React.Fragment key={section.id}>
-              <li css={[styles.navItem]} role="listitem">
+              <li css={styles.navItem} role="listitem">
                 <a
                   id={navigationLinkId}
                   href={section.href || `#${section.id}`}
@@ -87,11 +87,15 @@ const CollapsibleNavigation = ({
                   aria-labelledby={subNavigationTitleId}
                 >
                   <div css={styles.subNavHeader}>
-                    <span id={subNavigationTitleId} css={styles.subNavTitle}>
+                    <Heading
+                      level={3}
+                      id={subNavigationTitleId}
+                      css={styles.subNavTitle}
+                    >
                       {section.title}
-                    </span>
+                    </Heading>
                     <a
-                      aria-label={`Close ${section.title} menu`}
+                      aria-label={`Close ${section.title} submenu`}
                       css={styles.subNavCloseButton}
                       href={`#${navigationLinkId}`}
                       onClick={handleClose}
