@@ -99,7 +99,9 @@ const getImageComponent =
   );
 
 // EXPERIMENT: Read Time
-const Placeholder = () => <div css={styles.readTimePlaceholder} />;
+const Placeholder = ({ className }: { className?: string }) => (
+  <div className={className} />
+);
 
 // EXPERIMENT: Read Time
 const getTimestampComponent =
@@ -129,7 +131,9 @@ const getTimestampComponent =
             <ReadTime readTime={readTime} readTimeVariant={readTimeVariant} />
           )}
         </Byline>
-        {!showReadTimeBelowTimestamp && <Placeholder />}
+        {!showReadTimeBelowTimestamp && (
+          <Placeholder css={styles.readTimePlaceholderBelowTimestamp} />
+        )}
       </>
     ) : (
       <>
@@ -142,7 +146,7 @@ const getTimestampComponent =
         {showReadTimeBelowTimestamp ? (
           <ReadTime readTime={readTime} readTimeVariant={readTimeVariant} />
         ) : (
-          <Placeholder />
+          <Placeholder css={styles.readTimePlaceholderBelowTimestamp} />
         )}
       </>
     );
@@ -178,7 +182,7 @@ const getHeadlineComponent =
         {showReadTimeBelowHeadline ? (
           <ReadTime readTime={readTime} readTimeVariant={readTimeVariant} />
         ) : (
-          <Placeholder />
+          <Placeholder css={styles.readTimePlaceholderBelowHeadline} />
         )}
       </>
     );

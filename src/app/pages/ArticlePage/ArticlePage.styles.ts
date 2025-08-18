@@ -177,8 +177,12 @@ export default {
     commonMarginSpacing,
   ],
   // EXPERIMENT: Read Time
-  readTimePlaceholder: () =>
+  readTimePlaceholderBelowTimestamp: () =>
     css({
       marginBottom: `${pixelsToRem(18.5)}rem`,
+    }),
+  readTimePlaceholderBelowHeadline: () =>
+    css({
+      marginBottom: `${pixelsToRem(7)}rem`,
     }),
 };
