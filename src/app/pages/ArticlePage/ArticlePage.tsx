@@ -153,7 +153,7 @@ const getVideoComponent =
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
-  const { country, isApp, isAmp, isLite } = use(RequestContext);
+  const { isApp, isAmp, isLite } = use(RequestContext);
 
   const {
     articleAuthor,
@@ -384,11 +384,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             />
           )}
           {service === 'mundo' && (
-            <PersonalisedContent
-              country={country ?? ''}
-              service={service}
-              sendOptimizelyEvents
-            />
+			  <PersonalisedContent
+				pageData={pageData}
+				service={service}
+				sendOptimizelyEvents={true}
+			  />
           )}
           <RelatedContentSection
             content={blocks}

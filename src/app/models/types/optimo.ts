@@ -132,6 +132,7 @@ export type ArticlePromo = {
 export type SecondaryColumn = {
   topStories: TopStoryItem[];
   features: object[];
+  PersonalisedContent?: object[];
   latestMedia?: LatestMedia[];
 };
 

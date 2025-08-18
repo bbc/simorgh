@@ -45,7 +45,6 @@ export default async ({
     disableRadioSchedule,
     page,
   });
-  console.log('constructPageFetchUrl', pathname);
 
   const useCerts = certsRequired(pathname);
 
