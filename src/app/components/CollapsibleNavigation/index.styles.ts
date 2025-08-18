@@ -119,11 +119,8 @@ const styles = {
     alignItems: 'center',
   }),
 
-  subNavTitle: ({ fontVariants, spacings }: Theme) =>
+  subNavTitle: ({ spacings }: Theme) =>
     css({
-      fontSize: `${pixelsToRem(20)}rem`,
-      ...fontVariants.sansBold,
-      letterSpacing: '0',
       padding: `${spacings.FULL}rem`,
     }),
 
