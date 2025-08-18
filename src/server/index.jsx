@@ -260,20 +260,23 @@ server.get(
       data.country = (headers['x-country'] || headers['x-bbc-edge-country'])
         ?.toString()
         .toLowerCase();
-      
+
       if (service === 'mundo' && !isAmp) {
-      const countrySpecificTopics = {
-            "mx": "c340qyp6yggt",
-            "co": "c404v5gz1rkt",
-            "cl": "c340qyppkk8t",
-            "ar": "c7zp57yy6dzt",
-            "pe": "c404v5gdw2zt",
-            "es": "c6vzy3wd189t",
-            "ve": "cpzd49v9rd1t",
-            "ec": "cg72618r047t",
+        const countrySpecificTopics = {
+          mx: 'c340qyp6yggt',
+          co: 'c404v5gz1rkt',
+          cl: 'c340qyppkk8t',
+          ar: 'c7zp57yy6dzt',
+          pe: 'c404v5gdw2zt',
+          es: 'c6vzy3wd189t',
+          ve: 'cpzd49v9rd1t',
+          ec: 'cg72618r047t',
         };
         const avaiableCountries = Object.keys(countrySpecificTopics);
-        const topicIdToFetch = data.country && avaiableCountries.includes(data.country) ? countrySpecificTopics[data.country] : 'c7zp57yyz25t';
+        const topicIdToFetch =
+          data.country && avaiableCountries.includes(data.country)
+            ? countrySpecificTopics[data.country]
+            : 'c7zp57yyz25t';
         const countrySpecificdata = await fetchDataFromBFF({
           pathname: `/${service}/topics/${topicIdToFetch}?renderer_env=live`,
           pageType: 'topic',
@@ -283,10 +286,10 @@ server.get(
           getAgent,
         });
         data.pageData.secondaryColumn.PersonalisedContent = {
-            title: countrySpecificdata.json.data.title,
-            description: countrySpecificdata.json.data.description,
-            articles: countrySpecificdata.json.data.curations[0].summaries,
-          }
+          title: countrySpecificdata.json.data.title,
+          description: countrySpecificdata.json.data.description,
+          articles: countrySpecificdata.json.data.curations[0].summaries,
+        };
       }
 
       let { status } = data;
