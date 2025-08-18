@@ -116,7 +116,8 @@ const getTimestampComponent =
     const { readTime, readTimeLocation, readTimeVariant } = readTimeData;
     // EXPERIMENT: Read Time
     const showReadTimeBelowTimestamp =
-      readTime !== 0 && readTimeLocation === 'timestamp';
+      readTime !== 0 &&
+      (readTimeLocation === 'timestamp' || readTimeLocation === 'a11y');
 
     return hasByline ? (
       <>
@@ -172,7 +173,8 @@ const getHeadlineComponent =
   (readTimeData: ReadTimeData) => (props: ComponentToRenderProps) => {
     const { readTime, readTimeLocation, readTimeVariant } = readTimeData;
     const showReadTimeBelowHeadline =
-      readTime && readTimeLocation === 'headline';
+      readTime &&
+      (readTimeLocation === 'headline' || readTimeLocation === 'a11y');
     return (
       <>
         <ArticleHeadline
@@ -250,6 +252,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     }
     if (readTimeExperimentVariant.includes('timestamp')) {
       return 'timestamp';
+    }
+    if (readTimeExperimentVariant.includes('a11y_swarm')) {
+      return 'a11y';
     }
     return 'off';
   })();
