@@ -120,6 +120,7 @@ const getTimestampComponent =
     const { readTime, readTimeLocation, readTimeVariant } = readTimeData;
     // EXPERIMENT: Read Time
     const showReadTimeBelowTimestamp =
+      !!readTime &&
       readTime !== 0 &&
       (readTimeLocation === 'timestamp' || readTimeLocation === 'a11y');
 
