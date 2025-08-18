@@ -19,6 +19,8 @@ import socialCardLayout from './SocialCardLayout';
 const REITH_SANS_BOLD_FONT_URL = `${REITH_FONTS_DIR}/BBCReithSans_W_Bd.woff`;
 const REITH_SERIF_BOLD_FONT_URL = `${REITH_FONTS_DIR}/BBCReithSerif_W_Bd.woff`;
 
+const RTL_SERVICES: Services[] = ['arabic', 'persian', 'pashto', 'urdu'];
+
 export async function GET(req: Request) {
   try {
     const { searchParams } = new URL(
@@ -66,7 +68,19 @@ export async function GET(req: Request) {
 
     const promoImage = promoImageRawBlock?.model;
 
-    const { unbrandedImage } = getImages({ promoImage, service });
+    const { unbrandedImage, brandedImage } = getImages({ promoImage, service });
+
+    // For RTL services, we just return the branded image without any badges
+    if (RTL_SERVICES.includes(service)) {
+      const response = await fetch(brandedImage);
+      const arrayBuffer = await response.arrayBuffer();
+
+      return new Response(arrayBuffer, {
+        headers: {
+          'Content-Type': 'image/jpeg',
+        },
+      });
+    }
 
     const isInTopStories = Boolean(
       data?.pageData?.secondaryData?.topStories.some(
