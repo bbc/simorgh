@@ -1,7 +1,7 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
 import { jsx } from '@emotion/react';
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import styles from './index.styles';
 import { Close } from '../icons';
@@ -16,20 +16,37 @@ const CollapsibleNavigation = ({
 }: CollapsibleNavigationProps) => {
   const [openSection, setOpenSection] = useState<string | null>(null);
   const isHydrated = useHydrationDetection();
+  const activeNavigationRef = useRef<HTMLAnchorElement | null>(null);
 
   const handleNavClick = (
-    e: React.MouseEvent,
+    e: React.MouseEvent<HTMLAnchorElement>,
     section: CollapsibleNavigationSection,
   ) => {
-    if (section.href) return;
+    if (section.href) {
+      return;
+    }
+
     e.preventDefault();
     const isActive = openSection === section.id;
-    setOpenSection(isActive ? null : section.id);
+
+    if (isActive) {
+      setOpenSection(null);
+      activeNavigationRef.current = null;
+    } else {
+      activeNavigationRef.current = e.currentTarget;
+
+      setOpenSection(section.id);
+    }
   };
 
   const handleClose = (e: React.MouseEvent) => {
     e.preventDefault();
     setOpenSection(null);
+
+    if (activeNavigationRef.current) {
+      activeNavigationRef.current.focus();
+      activeNavigationRef.current = null;
+    }
   };
 
   return (
@@ -38,10 +55,11 @@ const CollapsibleNavigation = ({
         {navigationSections.map(section => {
           const isActive = Boolean(openSection === section.id);
           const shouldShowSubNav = isHydrated ? isActive : true;
-          const hasLink = section.href;
+          const isLink = section.href;
 
           const navigationLinkId = `navigation-link-${section.id}`;
           const subNavigationTitleId = `subnavigation-title-${section.id}`;
+          const subNavigationId = section.id;
 
           return (
             <React.Fragment key={section.id}>
@@ -53,8 +71,9 @@ const CollapsibleNavigation = ({
                   className="focusIndicatorRemove"
                   css={[styles.navLink, isActive && styles.navLinkActive]}
                   aria-current={isActive ? 'true' : undefined}
-                  aria-expanded={hasLink ? undefined : isActive}
-                  role={hasLink ? 'link' : 'button'}
+                  aria-expanded={isLink ? undefined : isActive}
+                  aria-controls={isLink ? undefined : subNavigationId}
+                  role={isLink ? 'link' : 'button'}
                 >
                   {section.title}
                 </a>
@@ -62,6 +81,7 @@ const CollapsibleNavigation = ({
 
               {section.links && shouldShowSubNav && (
                 <li
+                  id={subNavigationId}
                   css={[styles.subNav, !isHydrated && styles.subNavNoJs]}
                   role="region"
                   aria-labelledby={subNavigationTitleId}
