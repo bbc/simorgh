@@ -161,7 +161,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     showRelatedTopics,
     brandName,
     translations,
-    service,
   } = use(ServiceContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');

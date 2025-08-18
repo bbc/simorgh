@@ -4,10 +4,7 @@ import { jsx, useTheme } from '@emotion/react';
 import { Article } from '#app/models/types/optimo';
 import CurationGrid from '#app/components/Curation/CurationGrid';
 import Subheading from '#app/components/Curation/Subhead';
-import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { Summary } from '#app/models/types/curationData';
-
-import styles from './ArticlePage.styles';
 
 const PersonalisedContent = ({
   pageData,
@@ -27,19 +24,21 @@ const PersonalisedContent = ({
     isFirstCuration?: boolean;
   };
 
-  const personalisedContentData: PersonalisedContentType | undefined =
-    pageData.secondaryColumn.PersonalisedContent;
-
-  const {
-    palette: { GREY_2 },
-  } = useTheme();
+  // const {
+  //   palette: { GREY_2 },
+  // } = useTheme();
+  console.log(
+    typeof pageData.secondaryColumn?.PersonalisedContent,
+    pageData.secondaryColumn?.PersonalisedContent,
+  );
+  const personalisedContentData = pageData.secondaryColumn
+    ?.PersonalisedContent as PersonalisedContentType | undefined;
 
   const {
     title,
     articles = [],
     id = 'personalised-content',
     link = '',
-    curationSubheading = '',
     isFirstCuration = false,
   } = personalisedContentData || {};
 
