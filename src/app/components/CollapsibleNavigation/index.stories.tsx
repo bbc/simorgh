@@ -3,27 +3,15 @@ import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import ThemeProvider from '#app/components/ThemeProvider';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import CollapsibleNavigation from './index';
+import type { CollapsibleNavigationSection } from './types';
 import collapsibleNavigationSections from './constants';
 import metadata from './metadata.json';
 import readme from './README.md';
 
-type CollapsibleNavigationSubLink = {
-  id: string;
-  label: string;
-  href: string;
-};
-
-type CollapsibleNavigationSections = {
-  id: string;
-  title: string;
-  href?: string;
-  links?: CollapsibleNavigationSubLink[];
-};
-
 const Component = ({
   collapsibleNavigationSectionList,
 }: {
-  collapsibleNavigationSectionList: CollapsibleNavigationSections[];
+  collapsibleNavigationSectionList: CollapsibleNavigationSection[];
 }) => {
   return (
     <ToggleContextProvider>
