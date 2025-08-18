@@ -285,14 +285,14 @@ server.get(
           isAmp,
           getAgent,
         });
-        data.pageData.secondaryColumn.PersonalisedContent = {
-          title: countrySpecificdata.json.data.title,
-          description: countrySpecificdata.json.data.description,
-          articles: countrySpecificdata.json.data.curations[0].summaries.slice(
-            0,
-            4,
-          ),
-        };
+        const articles = countrySpecificdata.json.data.curations[0].summaries;
+        if (Array.isArray(articles) && articles.length > 0) {
+          data.pageData.secondaryColumn.PersonalisedContent = {
+            title: countrySpecificdata.json.data.title,
+            description: countrySpecificdata.json.data.description,
+            articles: articles.slice(0, 4),
+          };
+        }
       }
 
       let { status } = data;
