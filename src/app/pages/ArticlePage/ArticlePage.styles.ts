@@ -179,6 +179,6 @@ export default {
   // EXPERIMENT: Read Time
   readTimePlaceholder: () =>
     css({
-      marginBottom: `${pixelsToRem(18)}rem`,
+      marginBottom: `${pixelsToRem(18.5)}rem`,
     }),
 };
