@@ -181,8 +181,11 @@ export default {
     css({
       marginBottom: `${pixelsToRem(18.5)}rem`,
     }),
-  readTimePlaceholderBelowHeadline: () =>
+  readTimePlaceholderBelowHeadline: ({ mq }: Theme) =>
     css({
-      marginBottom: `${pixelsToRem(7)}rem`,
+      marginBottom: `${pixelsToRem(6)}rem`,
+      [mq.GROUP_2_MAX_WIDTH]: {
+        marginBottom: `${pixelsToRem(27)}rem`,
+      },
     }),
 };
