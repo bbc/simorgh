@@ -74,10 +74,10 @@ const CollapsibleNavigation = ({
                   onClick={e => handleNavClick(e, section)}
                   className="focusIndicatorRemove"
                   css={[styles.navLink, isActive && styles.navLinkActive]}
-                  aria-current={isActive ? 'true' : undefined}
-                  aria-expanded={isLink ? undefined : isActive}
-                  aria-controls={isLink ? undefined : subNavigationId}
                   role={isLink ? 'link' : 'button'}
+                  {...(isActive && { 'aria-current': 'true' })}
+                  {...(!isLink && { 'aria-expanded': isActive })}
+                  {...(!isLink && { 'aria-controls': subNavigationId })}
                 >
                   {section.title}
                 </a>

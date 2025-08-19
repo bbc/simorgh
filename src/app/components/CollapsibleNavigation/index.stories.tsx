@@ -9,16 +9,16 @@ import metadata from './metadata.json';
 import readme from './README.md';
 
 const Component = ({
-  collapsibleNavigationSectionList,
+  navigationSections,
 }: {
-  collapsibleNavigationSectionList: CollapsibleNavigationSection[];
+  navigationSections: CollapsibleNavigationSection[];
 }) => {
   return (
     <ToggleContextProvider>
-      <ThemeProvider service="mundo">
-        <ServiceContextProvider service="mundo">
+      <ThemeProvider service="ws">
+        <ServiceContextProvider service="ws">
           <CollapsibleNavigation
-            navigationSections={collapsibleNavigationSectionList}
+            navigationSections={navigationSections}
           />
         </ServiceContextProvider>
       </ThemeProvider>
@@ -36,5 +36,5 @@ export default {
 };
 
 export const Example = () => (
-  <Component collapsibleNavigationSectionList={collapsibleNavigationSections} />
+  <Component navigationSections={collapsibleNavigationSections} />
 );
