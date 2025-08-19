@@ -64,6 +64,8 @@ export interface BaseCuration {
   portraitVideo?: {
     blocks: PortraitClipMediaBlock[];
   };
+  contentType?: string;
+  pageTitle?: string;
 }
 
 export interface Curation extends BaseCuration {

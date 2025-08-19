@@ -8,6 +8,7 @@ import {
 } from '#app/models/types/curationData';
 import RadioSchedule from '#app/legacy/containers/RadioSchedule';
 import { ServiceContext } from '#contexts/ServiceContext';
+import type { ViewabilityEventTrackingData } from '#app/models/types/eventTracking';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
@@ -66,8 +67,10 @@ export default ({
   portraitVideo,
   renderVisuallyHiddenH2Title = false,
   curationId,
+  contentType,
+  pageTitle,
 }: Curation) => {
-  const { service, homePageTitle } = use(ServiceContext);
+  const { service } = use(ServiceContext);
 
   const componentName = getComponentName({
     visualStyle,
@@ -97,13 +100,19 @@ export default ({
 
   const messageBannerId = `message-banner-${nthCurationByStyleAndProminence}`;
 
-  const capitalizedService = service.charAt(0).toUpperCase() + service.slice(1);
-  const baseEventTrackingData = {
+  const viewabilityEventTrackingData: ViewabilityEventTrackingData = {
     app_type: 'responsive',
     app_name: `news-${service}`,
     event_category: 'viewability',
-    page: 'home.page',
-    page_title: `${homePageTitle} - BBC News ${capitalizedService}`,
+    page: contentType ?? 'viewabilityEventTrackingData',
+    page_title: pageTitle ?? '',
+    group_name: curationSubheading,
+    group_type: `${componentName}`,
+    group_position: `${position + 1}`,
+    group_resource_id: curationId,
+    ...(Array.isArray(summaries) && summaries.length > 0
+      ? { group_item_count: summaries.length }
+      : {}),
   };
 
   switch (componentName) {
@@ -198,41 +207,32 @@ export default ({
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:
-      if (summaries.length > 0) {
-        return curationLength > 1 ? (
-          <section aria-labelledby={id} role="region">
-            {curationSubheading &&
-              (renderVisuallyHiddenH2Title ? (
-                <VisuallyHiddenText id={id} as="h2">
-                  {curationSubheading}
-                </VisuallyHiddenText>
-              ) : (
-                <Subheading id={id} link={link}>
-                  {curationSubheading}
-                </Subheading>
-              ))}
-            <GridComponent
-              summaries={summaries}
-              headingLevel={3}
-              isFirstCuration={isFirstCuration}
-              eventTrackingData={{
-                ...baseEventTrackingData,
-                group_name: curationSubheading,
-                group_type: 'hierarchical-curation-grid',
-                group_position: `${position + 1}`,
-                group_item_count: summaries.length,
-                group_resource_id: curationId,
-              }}
-            />
-          </section>
-        ) : (
+      return curationLength > 1 ? (
+        <section aria-labelledby={id} role="region">
+          {curationSubheading &&
+            (renderVisuallyHiddenH2Title ? (
+              <VisuallyHiddenText id={id} as="h2">
+                {curationSubheading}
+              </VisuallyHiddenText>
+            ) : (
+              <Subheading id={id} link={link}>
+                {curationSubheading}
+              </Subheading>
+            ))}
           <GridComponent
             summaries={summaries}
-            headingLevel={2} // if there is only one curation, all promos should be h2, and no subheading
+            headingLevel={3}
             isFirstCuration={isFirstCuration}
+            eventTrackingData={viewabilityEventTrackingData}
           />
-        );
-      }
-      return null;
+        </section>
+      ) : (
+        <GridComponent
+          summaries={summaries}
+          headingLevel={2} // if there is only one curation, all promos should be h2, and no subheading
+          isFirstCuration={isFirstCuration}
+          eventTrackingData={viewabilityEventTrackingData}
+        />
+      );
   }
 };

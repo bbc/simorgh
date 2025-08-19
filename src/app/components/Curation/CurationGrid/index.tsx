@@ -8,6 +8,7 @@ const CurationGrid = ({
   summaries,
   isFirstCuration,
   headingLevel,
+  eventTrackingData,
 }: CurationGridProps) => {
   const hasMultiplePromos = summaries.length > 1;
   const firstPromo = summaries[0];
