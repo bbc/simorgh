@@ -183,7 +183,7 @@ export default {
     }),
   readTimePlaceholderBelowHeadline: ({ mq }: Theme) =>
     css({
-      marginBottom: `${pixelsToRem(6)}rem`,
+      marginBottom: `${pixelsToRem(6.5)}rem`,
       [mq.GROUP_2_MAX_WIDTH]: {
         marginBottom: `${pixelsToRem(27)}rem`,
       },
