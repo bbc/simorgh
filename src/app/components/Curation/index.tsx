@@ -97,12 +97,13 @@ export default ({
 
   const messageBannerId = `message-banner-${nthCurationByStyleAndProminence}`;
 
+  const capitalizedService = service.charAt(0).toUpperCase() + service.slice(1);
   const baseEventTrackingData = {
     app_type: 'responsive',
     app_name: `news-${service}`,
     event_category: 'viewability',
     page: 'home.page',
-    page_title: `${homePageTitle} - BBC News Mundo`, // find out about this field
+    page_title: `${homePageTitle} - BBC News ${capitalizedService}`,
   };
 
   switch (componentName) {
