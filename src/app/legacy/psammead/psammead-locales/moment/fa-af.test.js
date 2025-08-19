@@ -80,10 +80,15 @@ test('format', () => {
     ['lll', '۱۴ فوریه ۲۰۱۰ ۱۵:۲۵'],
     ['llll', 'یک\u200cشنبه، ۱۴ فوریه ۲۰۱۰ ۱۵:۲۵'],
   ];
-  const b = moment(new Date(2010, 1, 14, 15, 25, 50, 125));
+  const date = new Date(2010, 1, 14, 15, 25, 50, 125);
+  const b = moment(date);
   let i;
   for (i = 0; i < a.length; i += 1) {
-    assert.equal(b.format(a[i][0]), a[i][1], `${a[i][0]} ---> ${a[i][1]}`);
+    assert.equal(
+      b.format(a[i][0]),
+      a[i][1],
+      `${date.toISOString()} with format: ${a[i][0]} ---> ${a[i][1]}`
+    );
   }
 });
 
