@@ -185,7 +185,7 @@ export default {
     css({
       marginBottom: `${pixelsToRem(6.5)}rem`,
       [mq.GROUP_2_MAX_WIDTH]: {
-        marginBottom: `${pixelsToRem(27)}rem`,
+        marginBottom: `${pixelsToRem(26.5)}rem`,
       },
     }),
 };
