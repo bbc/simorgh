@@ -37,6 +37,7 @@ const Divider = styled.div`
     display: none;
   }
 `;
+
 const CanonicalNavigationContainer = ({
   script,
   service,
@@ -54,16 +55,15 @@ const CanonicalNavigationContainer = ({
     }
   });
 
-  // TODO: TEMP - used for development (to test NO-JS versions of lang navigation)
-  const renderLanguageNavigation = service === 'ws';
-
-  console.log({ renderLanguageNavigation, service });
+  // TODO: Feature toggle will be introduced https://bbc.atlassian.net/browse/WS-1073
+  const renderLanguageNavigation = !isLive() && service === 'ws';
 
   return (
     <Navigation script={script} service={service} dir={dir} isOpen={isOpen}>
       {renderLanguageNavigation ? (
         <CollapsibleNavigation
           navigationSections={collapsibleNavigationSections}
+          as={React.Fragment}
         />
       ) : (
         <>
