@@ -70,7 +70,7 @@ export default ({
   contentType,
   pageTitle,
 }: Curation) => {
-  const { service } = use(ServiceContext);
+  const { service, homePageTitle } = use(ServiceContext);
 
   const componentName = getComponentName({
     visualStyle,
@@ -105,7 +105,7 @@ export default ({
     app_name: `news-${service}`,
     event_category: 'viewability',
     page: contentType ?? 'viewabilityEventTrackingData',
-    page_title: pageTitle ?? '',
+    page_title: `${homePageTitle} - ${pageTitle}`,
     group_name: curationSubheading,
     group_type: `${componentName}`,
     group_position: `${position + 1}`,

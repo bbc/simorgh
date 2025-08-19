@@ -5,12 +5,19 @@ import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
 import { data as afriqueHomePageDataFixture } from '#data/afrique/homePage/index.json';
 import { data as pidginHomePageDataFixture } from '#data/pidgin/homePage/index.json';
 import { service as pidginServiceConfig } from '#app/lib/config/services/pidgin';
+import useViewTracker from '../../hooks/useViewTracker';
 import {
   render,
   screen,
 } from '../../components/react-testing-library-with-providers';
 import HomePage from './HomePage';
 import { suppressPropWarnings } from '../../legacy/psammead/psammead-test-helpers/src';
+
+// Mock useViewTracker hook globally
+jest.mock('../../hooks/useViewTracker', () => ({
+  __esModule: true,
+  default: jest.fn(),
+}));
 
 jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>Chartbeat Analytics</div>;
@@ -400,5 +407,35 @@ describe('Home Page', () => {
       linkTag => linkTag.rel === 'amphtml',
     );
     expect(amphtml).toBeUndefined();
+  });
+
+  describe('Viewability Analytics', () => {
+    beforeEach(() => {
+      (useViewTracker as jest.Mock).mockClear();
+    });
+
+    it('Hierarchical curation - calls useViewTracker with correct viewability event tracking data for the first curation', () => {
+      render(<HomePage pageData={afriqueHomePageData} />, {
+        service: 'afrique',
+      });
+
+      const firstCuration = afriqueHomePageData.curations[0];
+      const expectedTrackingData = {
+        app_name: 'news-afrique',
+        app_type: 'responsive',
+        event_category: 'viewability',
+        group_item_count: 4, // if the fixture data changes this will fail, but typescript does not like summaries.length
+        group_name: firstCuration.title,
+        group_position: '1',
+        group_resource_id: firstCuration.curationId,
+        group_type: 'hierarchical-curation-grid',
+        page: 'index-home',
+        page_title: 'Accueil - BBC News Afrique',
+      };
+
+      expect(useViewTracker).toHaveBeenCalledWith(
+        expect.objectContaining(expectedTrackingData),
+      );
+    });
   });
 });
