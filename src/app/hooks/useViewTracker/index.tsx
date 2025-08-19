@@ -37,6 +37,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     groupTracker,
     itemTracker,
     viewThreshold,
+    alwaysInView,
   } = extractATITrackingProps({
     eventTrackingData,
     eventType: VIEW_EVENT,
@@ -75,7 +76,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
   };
 
   useEffect(() => {
-    if (isInView && !timer.current) {
+    if (alwaysInView || (isInView && !timer.current)) {
       // @ts-expect-error timer ref won't be null
       timer.current = setTimeout(() => {
         const hasRequiredProps = [
@@ -173,15 +174,17 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     useReverb,
     itemTracker,
     groupTracker,
+    alwaysInView,
   ]);
 
   const viewTracker = useCallback(
     async (element: HTMLElement) => {
+      if (alwaysInView) return;
       if (!element || !trackingIsEnabled || eventSent) return;
       if (!observer.current) await initObserver(viewThreshold);
       (observer.current as unknown as IntersectionObserver)?.observe(element);
     },
-    [trackingIsEnabled, eventSent, viewThreshold],
+    [trackingIsEnabled, eventSent, viewThreshold, alwaysInView],
   );
 
   return viewTracker;

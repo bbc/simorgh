@@ -16,6 +16,7 @@ import { DownArrowIcon, UpArrowIcon } from '../icons';
 
 const eventTrackingData = {
   componentName: 'potrait-video-modal',
+  alwaysInView: true,
 };
 
 const getPlayerInstance = () =>
