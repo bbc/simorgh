@@ -1,11 +1,13 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
+import { use } from 'react';
 import {
   Curation,
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
 import RadioSchedule from '#app/legacy/containers/RadioSchedule';
+import { ServiceContext } from '#contexts/ServiceContext';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
@@ -65,12 +67,15 @@ export default ({
   renderVisuallyHiddenH2Title = false,
   curationId,
 }: Curation) => {
+  const { service, homePageTitle } = use(ServiceContext);
+
   const componentName = getComponentName({
     visualStyle,
     visualProminence,
     radioSchedule,
     embed,
   });
+
   const GridComponent = getGridComponent(componentName);
 
   const isFirstCuration = position === 0;
@@ -91,6 +96,14 @@ export default ({
   } = firstSummary || {};
 
   const messageBannerId = `message-banner-${nthCurationByStyleAndProminence}`;
+
+  const baseEventTrackingData = {
+    app_type: 'responsive',
+    app_name: `news-${service}`,
+    event_category: 'viewability',
+    page: 'home.page',
+    page_title: `${homePageTitle} - BBC News Mundo`, // find out about this field
+  };
 
   switch (componentName) {
     case NOT_SUPPORTED:
@@ -201,6 +214,14 @@ export default ({
               summaries={summaries}
               headingLevel={3}
               isFirstCuration={isFirstCuration}
+              eventTrackingData={{
+                ...baseEventTrackingData,
+                group_name: curationSubheading,
+                group_type: 'hierarchical-curation-grid',
+                group_position: `${position + 1}`,
+                group_item_count: summaries.length,
+                group_resource_id: curationId,
+              }}
             />
           </section>
         ) : (

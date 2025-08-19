@@ -35,10 +35,12 @@ const HiearchicalGrid = ({
   summaries,
   headingLevel,
   isFirstCuration,
+  eventTrackingData,
 }: CurationGridProps) => {
   const { isAmp } = use(RequestContext);
   const { translations } = use(ServiceContext);
 
+  console.log('CurationGrid eventTrackingData:', eventTrackingData);
   const audioTranslation = path(['media', 'audio'], translations);
   const videoTranslation = path(['media', 'video'], translations);
   const photoGalleryTranslation = path(['media', 'photogallery'], translations);
@@ -51,6 +53,7 @@ const HiearchicalGrid = ({
       <ul role="list" css={styles.list} data-testid="topic-promos">
         {promoItems.map((promo, i) => {
           const duration = moment.duration(promo.duration, 'seconds');
+          const durationMs = duration.asMilliseconds();
           const separator = ',';
           const formattedDuration = formatDuration({ duration, separator });
           const durationString = `, ${durationTranslation} ${formattedDuration}`;
@@ -75,6 +78,21 @@ const HiearchicalGrid = ({
             (promo.type === 'photogallery' && `${photoGalleryTranslation}, `);
 
           const { isLive } = promo;
+
+          // Build event tracking data for this promo
+          const promoEventTrackingData = {
+            item_type: 'hierarchical-curation-grid_promo',
+            item_text: promo.title,
+            item_position: i + 1,
+            item_resource_id: promo.id,
+            ...(promo.type && { item_media_type: promo.type }),
+            ...(promo.duration && { item_duration_ms: durationMs }),
+            ...eventTrackingData,
+          };
+          console.log(
+            'HierarchicalGrid promo eventTrackingData:',
+            promoEventTrackingData,
+          );
 
           return (
             <li
