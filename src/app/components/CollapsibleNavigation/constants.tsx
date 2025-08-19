@@ -4,7 +4,8 @@ const CollapsibleNavigationSections: CollapsibleNavigationSection[] = [
   {
     id: 'home',
     title: 'Home',
-    href: 'https://www.bbc.com',
+    // TO DO: add the right link
+    href: '',
   },
   {
     id: 'africa',
@@ -85,7 +86,7 @@ const CollapsibleNavigationSections: CollapsibleNavigationSection[] = [
         label: 'မြန်မာသတင်းများ',
       },
       {
-        id: 'simp',
+        id: 'zhongwen',
         href: 'https://www.bbc.com/zhongwen/simp',
         label: '中文新闻',
       },
