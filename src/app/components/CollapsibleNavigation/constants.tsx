@@ -4,8 +4,7 @@ const CollapsibleNavigationSections: CollapsibleNavigationSection[] = [
   {
     id: 'home',
     title: 'Home',
-    // TO DO: add the right link
-    href: '',
+    href: '/ws/languages',
   },
   {
     id: 'africa',
