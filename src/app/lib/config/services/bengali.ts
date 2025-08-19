@@ -91,8 +91,7 @@ export const service: DefaultServiceConfig = {
         informationPageLink:
           'https://www.bbc.com/bengali/articles/c4g0e7v63ywo',
         dataSaving: 'কম ডেটা ব্যবহার করতে শুধু টেক্সট পড়ুনs',
-        articleDataSavingLinkText:
-          'কম ডেটা ব্যবহার করতে শুধু টেক্সট পড়ুন',
+        articleDataSavingLinkText: 'কম ডেটা ব্যবহার করতে শুধু টেক্সট পড়ুন',
       },
       navMenuText: 'সেকশন',
       mediaAssetPage: {
