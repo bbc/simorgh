@@ -21,6 +21,62 @@ Array.from({ length: 12 }, (_, index) => index).forEach((month) => {
     moment('20200101').locale(locale).add(month, 'months').format('MMMM')
   );
 });
+timeFunctions.push({ heading: 'Months (Abbreviated)' });
+
+Array.from({ length: 12 }, (_, index) => index).forEach((month) => {
+  timeFunctions.push((locale) =>
+    moment('20200101').locale(locale).add(month, 'months').format('MMM')
+  );
+});
+
+// Add Days of Week
+timeFunctions.push({ heading: 'Days of the Week' });
+
+Array.from({ length: 7 }, (_, index) => index).forEach((day) => {
+  timeFunctions.push((locale) =>
+    moment('20200106').locale(locale).add(day, 'days').format('dddd')
+  );
+});
+
+timeFunctions.push({ heading: ' Days of the Week (Abbreviated)' });
+
+Array.from({ length: 7 }, (_, index) => index).forEach((day) => {
+  timeFunctions.push((locale) =>
+    moment('20200106').locale(locale).add(day, 'days').format('ddd')
+  );
+});
+
+// Add Years from 2010 to 2025
+timeFunctions.push({
+  heading: 'Years (±5 from current year)',
+});
+
+const currentYear = new Date().getFullYear();
+Array.from({ length: 11 }, (_, i) => currentYear - 5 + i).forEach((year) => {
+  timeFunctions.push((locale) =>
+    moment(`${year}0101`).locale(locale).format('YYYY')
+  );
+});
+
+// Add Numerals
+timeFunctions.push({
+  heading: 'Numerals',
+});
+
+Array.from({ length: 31 }, (_, index) => index).forEach((day) => {
+  timeFunctions.push((locale) =>
+    moment('20200101').locale(locale).add(day, 'days').format('D')
+  );
+});
+
+timeFunctions.push({
+  heading: 'Ordinal Numerals',
+});
+Array.from({ length: 31 }, (_, index) => index).forEach((day) => {
+  timeFunctions.push((locale) =>
+    moment('20200101').locale(locale).add(day, 'days').format('Do')
+  );
+});
 
 timeFunctions.push({ heading: 'Common Timestamp Formats' });
 
@@ -109,51 +165,6 @@ timeFunctions.push(
     (locale) => moment(fixedTimestamp).locale(locale).format('llll'),
   ]
 );
-
-timeFunctions.push({ heading: 'Months (Abbreviated)' });
-
-Array.from({ length: 12 }, (_, index) => index).forEach((month) => {
-  timeFunctions.push((locale) =>
-    moment('20200101').locale(locale).add(month, 'months').format('MMM')
-  );
-});
-
-// Add Days of Week
-timeFunctions.push({ heading: 'Days of the Week' });
-
-Array.from({ length: 7 }, (_, index) => index).forEach((day) => {
-  timeFunctions.push((locale) =>
-    moment('20200106').locale(locale).add(day, 'days').format('dddd')
-  );
-});
-
-timeFunctions.push({ heading: ' Days of the Week (Abbreviated)' });
-
-Array.from({ length: 7 }, (_, index) => index).forEach((day) => {
-  timeFunctions.push((locale) =>
-    moment('20200106').locale(locale).add(day, 'days').format('ddd')
-  );
-});
-
-// Add Numerals
-timeFunctions.push({
-  heading: 'Numerals',
-});
-
-Array.from({ length: 31 }, (_, index) => index).forEach((day) => {
-  timeFunctions.push((locale) =>
-    moment('20200101').locale(locale).add(day, 'days').format('D')
-  );
-});
-
-timeFunctions.push({
-  heading: 'Ordinal Numerals',
-});
-Array.from({ length: 31 }, (_, index) => index).forEach((day) => {
-  timeFunctions.push((locale) =>
-    moment('20200101').locale(locale).add(day, 'days').format('Do')
-  );
-});
 
 const Table = styled.table`
   margin: ${GEL_SPACING_DBL};
