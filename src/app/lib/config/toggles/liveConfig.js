@@ -7,14 +7,14 @@ export default {
     enabled: false,
   },
   articleLiteSiteLink: { enabled: true },
-  electionBanner: {
-    enabled: false,
-  },
   chartbeatAnalytics: {
     enabled: true,
   },
   comscoreAnalytics: {
     enabled: true,
+  },
+  electionBanner: {
+    enabled: false,
   },
   enableFetchingToggles: {
     enabled: true,

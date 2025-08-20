@@ -8,13 +8,13 @@ export default {
     value: 'es,mx',
   },
   articleLiteSiteLink: { enabled: true },
-  electionBanner: {
-    enabled: true,
-  },
   chartbeatAnalytics: {
     enabled: true,
   },
   comscoreAnalytics: {
+    enabled: true,
+  },
+  electionBanner: {
     enabled: true,
   },
   enableFetchingToggles: {
