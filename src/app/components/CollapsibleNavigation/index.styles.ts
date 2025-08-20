@@ -119,8 +119,9 @@ const styles = {
     alignItems: 'center',
   }),
 
-  subNavTitle: ({ spacings }: Theme) =>
+  subNavTitle: ({ spacings, fontSizes }: Theme) =>
     css({
+      ...fontSizes.doublePica,
       padding: `${spacings.FULL}rem`,
     }),
 

@@ -90,7 +90,7 @@ const CollapsibleNavigation = ({
                 >
                   <div css={styles.subNavHeader}>
                     <Heading
-                      level={3}
+                      level={2}
                       id={subNavigationTitleId}
                       css={styles.subNavTitle}
                     >
