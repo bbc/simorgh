@@ -8,6 +8,7 @@ import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
+import isLive from '#app/lib/utilities/isLive';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
 import Headings from '#containers/Headings';
@@ -82,6 +83,13 @@ import {
   isPortraitVideoUnderHeadline,
 } from '../utils/portraitVideo';
 
+// EXPERIMENT: Read Time
+interface ReadTimeData {
+  readTimeValue: number | undefined;
+  readTimeLocation: string;
+  readTimeVariant: string;
+}
+
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
     <ImageWithCaption
@@ -91,25 +99,72 @@ const getImageComponent =
     />
   );
 
+// EXPERIMENT: Read Time
+const Placeholder = ({ className }: { className?: string }) => {
+  if (isLive()) return null;
+  const { service } = use(ServiceContext);
+  const servicesInExperiment = ['turkce', 'mundo'];
+  return servicesInExperiment.includes(service) ? (
+    <div className={className} />
+  ) : null;
+};
+
+// EXPERIMENT: Read Time
 const getTimestampComponent =
   (
     hasByline: boolean,
     bylineContribBlocks: OptimoBylineContributorBlock[],
     firstPublished: string,
     lastPublished: string,
+    readTimeData: ReadTimeData,
   ) =>
-  (props: ComponentToRenderProps & TimeStampProps) =>
-    hasByline ? (
-      <Byline blocks={bylineContribBlocks}>
-        <Timestamp
-          firstPublished={new Date(firstPublished).getTime()}
-          lastPublished={new Date(lastPublished).getTime()}
-          popOut={false}
-        />
-      </Byline>
+  (props: ComponentToRenderProps & TimeStampProps) => {
+    const { readTimeValue, readTimeLocation, readTimeVariant } = readTimeData;
+    // EXPERIMENT: Read Time
+    const showReadTimeBelowTimestamp =
+      !!readTimeValue &&
+      readTimeValue !== 0 &&
+      readTimeLocation === 'timestamp';
+
+    return hasByline ? (
+      <>
+        <Byline blocks={bylineContribBlocks}>
+          <Timestamp
+            firstPublished={new Date(firstPublished).getTime()}
+            lastPublished={new Date(lastPublished).getTime()}
+            popOut={false}
+            showReadTimeBelowTimestamp={showReadTimeBelowTimestamp}
+          />
+          {showReadTimeBelowTimestamp && (
+            <ReadTime
+              readTimeValue={readTimeValue}
+              readTimeVariant={readTimeVariant}
+            />
+          )}
+        </Byline>
+        {!showReadTimeBelowTimestamp && (
+          <Placeholder css={styles.readTimePlaceholderBelowTimestamp} />
+        )}
+      </>
     ) : (
-      <Timestamp {...props} popOut={false} />
+      <>
+        <Timestamp
+          {...props}
+          popOut={false}
+          showReadTimeBelowTimestamp={showReadTimeBelowTimestamp}
+        />
+        {/* EXPERIMENT: Read Time */}
+        {showReadTimeBelowTimestamp ? (
+          <ReadTime
+            readTimeValue={readTimeValue}
+            readTimeVariant={readTimeVariant}
+          />
+        ) : (
+          <Placeholder css={styles.readTimePlaceholderBelowTimestamp} />
+        )}
+      </>
     );
+  };
 
 const getMpuComponent =
   (allowAdvertising: boolean) => (props: ComponentToRenderProps) =>
@@ -126,9 +181,29 @@ const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
 const getPodcastPromoComponent = (podcastPromoEnabled: boolean) => () =>
   podcastPromoEnabled ? <InlinePodcastPromo /> : null;
 
-const getHeadlineComponent = (props: ComponentToRenderProps) => (
-  <ArticleHeadline {...props} />
-);
+// EXPERIMENT: Read Time
+const getHeadlineComponent =
+  (readTimeData: ReadTimeData) => (props: ComponentToRenderProps) => {
+    const { readTimeValue, readTimeLocation, readTimeVariant } = readTimeData;
+    const showReadTimeBelowHeadline =
+      readTimeValue && readTimeLocation === 'headline';
+    return (
+      <>
+        <ArticleHeadline
+          {...props}
+          {...(showReadTimeBelowHeadline && { applyReadTimeSpacing: true })}
+        />
+        {showReadTimeBelowHeadline ? (
+          <ReadTime
+            readTimeValue={readTimeValue}
+            readTimeVariant={readTimeVariant}
+          />
+        ) : (
+          <Placeholder css={styles.readTimePlaceholderBelowHeadline} />
+        )}
+      </>
+    );
+  };
 
 const getVideoComponent =
   (translations: Translations, pageBlocks: OptimoBlock[]) =>
@@ -176,6 +251,29 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const isInServerSideExperiment =
     experimentVariant && experimentVariant !== 'off';
+
+  // EXPERIMENT: Read Time
+  const readTimeExperimentName = 'newswb_ws_article_read_time';
+  const readTimeExperimentVariant = useOptimizelyVariation({
+    experimentName: readTimeExperimentName,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
+
+  const readTimeLocation = (() => {
+    if (!readTimeExperimentVariant) return 'off';
+
+    if (readTimeExperimentVariant.includes('headline')) {
+      return 'headline';
+    }
+    if (readTimeExperimentVariant.includes('timestamp')) {
+      return 'timestamp';
+    }
+    if (readTimeExperimentVariant.includes('control')) {
+      return 'off';
+    }
+    return 'off';
+  })();
+
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
 
@@ -186,6 +284,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
   const { enabled: liteCTAShows } = useToggle('liteSiteCTA');
+
+  // EXPERIMENT: Read Time
+  const readTimeValue = pageData?.metadata?.stats?.readTime;
 
   const headline = getHeadline(pageData) ?? '';
   const description = getSummary(pageData) || getHeadline(pageData);
@@ -225,19 +326,29 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     ...(isInServerSideExperiment && { experimentName, experimentVariant }),
   };
 
+  // EXPERIMENT: Read Time
+  const readTimeData = {
+    readTimeValue,
+    readTimeLocation,
+    readTimeVariant: readTimeExperimentVariant || 'off',
+  };
+
   const componentsToRender = {
     visuallyHiddenHeadline,
-    headline: getHeadlineComponent,
+    // EXPERIMENT: Read Time
+    headline: getHeadlineComponent(readTimeData),
     subheadline: Headings,
     audio: MediaLoader,
     video: getVideoComponent(translations, blocks),
     text,
     image: getImageComponent(preloadLeadImageToggle),
+    // EXPERIMENT: Read Time
     timestamp: getTimestampComponent(
       hasByline,
       bylineContribBlocks,
       firstPublished,
       lastPublished,
+      readTimeData,
     ),
     social: SocialEmbedContainer,
     embed: UnsupportedEmbed,
@@ -289,8 +400,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         experimentVariant,
       ),
   );
-
-  const readTime = pageData?.metadata?.stats?.readTime;
 
   return (
     <div css={styles.pageWrapper}>
@@ -349,7 +458,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             ]}
             role="main"
           >
-            {readTime && <ReadTime readTime={readTime} css={styles.readTime} />}
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
@@ -364,9 +472,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                 liteCTAShows={liteCTAShows}
               />
             )}
-            <OptimizelyPageMetrics trackPageComplete />
+            {readTimeValue && <OptimizelyPageMetrics trackPageComplete />}
           </main>
-          <OptimizelyPageMetrics trackPageView trackPageDepth />
+          {readTimeValue && (
+            <OptimizelyPageMetrics trackPageView trackPageDepth />
+          )}
           {showTopics && (
             <RelatedTopics
               css={[
