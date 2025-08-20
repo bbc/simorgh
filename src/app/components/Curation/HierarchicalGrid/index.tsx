@@ -5,7 +5,6 @@ import { css, jsx, Theme } from '@emotion/react';
 import moment from 'moment';
 import path from 'ramda/src/path';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
-import Text from '../../Text';
 import formatDuration from '../../../lib/utilities/formatDuration';
 import Promo from '../../../legacy/components/Promo';
 import { DESKTOP, TABLET, MOBILE, SMALL } from './dataStructures';
@@ -44,8 +43,6 @@ const HiearchicalGrid = ({
   const videoTranslation = path(['media', 'video'], translations);
   const photoGalleryTranslation = path(['media', 'photogallery'], translations);
   const durationTranslation = path(['media', 'duration'], translations);
-  const readTimeTranslation =
-    path(['readTime'], translations) || 'Estimated Read Time';
   if (!summaries || summaries.length < 3) return null;
   const promoItems = summaries.slice(0, 12);
   return (
@@ -140,11 +137,7 @@ const HiearchicalGrid = ({
                     </Promo.A>
                   )}
                 </Promo.Heading>
-                {!isLive && promo.readTime && (
-                  <Text size="brevier" fontVariant="sansRegular">
-                    {readTimeTranslation}: {promo.readTime}
-                  </Text>
-                )}
+                {!isLive && promo.readTime && <p>readtime: {promo.readTime}</p>}
                 <Promo.Body className="promo-paragraph" css={styles.body}>
                   {promo.description}
                 </Promo.Body>
