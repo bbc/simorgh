@@ -11,8 +11,11 @@ import useMediaQuery from '#hooks/useMediaQuery';
 import { RequestContext } from '#app/contexts/RequestContext';
 import TopBarOJs from '#app/components/TopBarOJs';
 import isLive from '#app/lib/utilities/isLive';
-import CollapsibleNavigation from '#app/components/CollapsibleNavigation';
-import collapsibleNavigationSections from '#app/components/CollapsibleNavigation/constants';
+import loadable from '@loadable/component';
+
+const LanguageNavigation = loadable(
+  () => import('#app/components/CollapsibleNavigation/LanguageNavigation'),
+);
 
 const ScrollableWrapper = styled.div`
   position: relative;
@@ -61,10 +64,7 @@ const CanonicalNavigationContainer = ({
   return (
     <Navigation script={script} service={service} dir={dir} isOpen={isOpen}>
       {renderLanguageNavigation ? (
-        <CollapsibleNavigation
-          navigationSections={collapsibleNavigationSections}
-          as={React.Fragment}
-        />
+        <LanguageNavigation />
       ) : (
         <>
           <ScrollableWrapper>
