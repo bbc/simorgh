@@ -7,7 +7,13 @@ export default {
     enabled: false,
   },
   articleLiteSiteLink: { enabled: true },
+  electionBanner: {
+    enabled: false,
+  },
   chartbeatAnalytics: {
+    enabled: true,
+  },
+  comscoreAnalytics: {
     enabled: true,
   },
   enableFetchingToggles: {
@@ -36,7 +42,13 @@ export default {
   prerollAds: {
     enabled: true,
   },
-  radioSchedule: {
+  homePageRadioSchedule: {
+    enabled: true,
+  },
+  liveRadioSchedule: {
+    enabled: true,
+  },
+  onDemandRadioSchedule: {
     enabled: true,
   },
   scriptLink: {

@@ -8,7 +8,13 @@ export default {
     value: 'es,mx',
   },
   articleLiteSiteLink: { enabled: true },
+  electionBanner: {
+    enabled: true,
+  },
   chartbeatAnalytics: {
+    enabled: true,
+  },
+  comscoreAnalytics: {
     enabled: true,
   },
   enableFetchingToggles: {
@@ -37,7 +43,13 @@ export default {
   prerollAds: {
     enabled: true,
   },
-  radioSchedule: {
+  homePageRadioSchedule: {
+    enabled: true,
+  },
+  liveRadioSchedule: {
+    enabled: true,
+  },
+  onDemandRadioSchedule: {
     enabled: true,
   },
   scriptLink: {
