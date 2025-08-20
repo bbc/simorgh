@@ -28,6 +28,7 @@ export const themes = {
   cymrufyw: loadable(
     () => import(/* webpackChunkName: "themes-cymrufyw" */ './cymrufyw'),
   ),
+  dari: loadable(() => import(/* webpackChunkName: "themes-dari" */ './dari')),
   gahuza: loadable(
     () => import(/* webpackChunkName: "themes-gahuza" */ './gahuza'),
   ),

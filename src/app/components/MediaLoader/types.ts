@@ -153,6 +153,8 @@ export type Player = {
   load: () => void;
   play: () => void;
   pause: () => void;
+  previous: () => void;
+  next: () => void;
   bind: (event: MediaPlayerEvents, callback: (e: SMPEvent) => void) => void;
   loadPlugin: (
     pluginName: { [key: string]: string },
@@ -169,7 +171,6 @@ export type Player = {
     playlist: Playlist,
     options?: Partial<PlayerConfig>,
   ) => void;
-  player: { paused: () => boolean };
 };
 
 export type BumpType = {

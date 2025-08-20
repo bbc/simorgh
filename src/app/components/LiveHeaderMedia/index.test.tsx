@@ -59,7 +59,6 @@ describe('liveMediaStream', () => {
   it('Plays the media loader when the watch button is clicked.', () => {
     window.mediaPlayers = {
       p0gh4n67: {
-        player: { paused: jest.fn().mockReturnValueOnce(true) },
         play: jest.fn(),
         pause: jest.fn(),
       },
@@ -150,7 +149,6 @@ describe('liveMediaStream', () => {
 
     window.mediaPlayers = {
       p0gh4n67: {
-        player: { paused: jest.fn().mockReturnValueOnce(true) },
         play: jest.fn(),
         pause: jest.fn(),
       },
@@ -265,7 +263,6 @@ describe('liveMediaStream', () => {
 
       window.mediaPlayers = {
         p0gh4n67: {
-          player: { paused: jest.fn().mockReturnValueOnce(true) },
           play: jest.fn(),
           pause: jest.fn(),
         },

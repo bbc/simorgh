@@ -293,7 +293,7 @@ const canonicalTestSuites = [
   },
   {
     path: '/persian/afghanistan',
-    runforEnv: ['local', 'test', 'live'],
+    runforEnv: ['local', 'live'],
     service: 'persian',
     pageIdentifier: 'persian.topics.crezq2dg9zwt.page',
     applicationType: 'responsive',
