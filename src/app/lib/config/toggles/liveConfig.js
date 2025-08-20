@@ -43,13 +43,13 @@ export default {
     enabled: true,
   },
   homePageRadioSchedule: {
-    enabled: true,
+    enabled: false,
   },
   liveRadioSchedule: {
-    enabled: true,
+    enabled: false,
   },
   onDemandRadioSchedule: {
-    enabled: true,
+    enabled: false,
   },
   scriptLink: {
     enabled: true,
