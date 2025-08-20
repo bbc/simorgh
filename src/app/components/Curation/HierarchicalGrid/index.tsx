@@ -13,6 +13,7 @@ import { ServiceContext } from '../../../contexts/ServiceContext';
 import { CurationGridProps } from '../types';
 import { RequestContext } from '../../../contexts/RequestContext';
 import LiveLabel from '../../LiveLabel';
+import ReadTime from '../../ReadTime';
 
 const getStyles = (promoCount: number, i: number, mq: Theme['mq']) => {
   return css({
@@ -138,6 +139,9 @@ const HiearchicalGrid = ({
                     </Promo.A>
                   )}
                 </Promo.Heading>
+                {!isLive && promo.readTime && (
+                  <ReadTime readTime={promo.readTime} />
+                )}
                 <Promo.Body className="promo-paragraph" css={styles.body}>
                   {promo.description}
                 </Promo.Body>
