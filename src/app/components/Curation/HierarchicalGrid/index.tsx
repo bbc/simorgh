@@ -5,6 +5,7 @@ import { css, jsx, Theme } from '@emotion/react';
 import moment from 'moment';
 import path from 'ramda/src/path';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
+import Text from '../../Text';
 import formatDuration from '../../../lib/utilities/formatDuration';
 import Promo from '../../../legacy/components/Promo';
 import { DESKTOP, TABLET, MOBILE, SMALL } from './dataStructures';
@@ -13,7 +14,6 @@ import { ServiceContext } from '../../../contexts/ServiceContext';
 import { CurationGridProps } from '../types';
 import { RequestContext } from '../../../contexts/RequestContext';
 import LiveLabel from '../../LiveLabel';
-import ReadTime from '../../ReadTime';
 
 const getStyles = (promoCount: number, i: number, mq: Theme['mq']) => {
   return css({
@@ -44,8 +44,9 @@ const HiearchicalGrid = ({
   const videoTranslation = path(['media', 'video'], translations);
   const photoGalleryTranslation = path(['media', 'photogallery'], translations);
   const durationTranslation = path(['media', 'duration'], translations);
+  const readTimeTranslation =
+    path(['readTime'], translations) || 'Estimated Read Time';
   if (!summaries || summaries.length < 3) return null;
-
   const promoItems = summaries.slice(0, 12);
   return (
     <div data-testid="hierarchical-grid">
@@ -140,7 +141,9 @@ const HiearchicalGrid = ({
                   )}
                 </Promo.Heading>
                 {!isLive && promo.readTime && (
-                  <ReadTime readTime={promo.readTime} />
+                  <Text size="brevier" fontVariant="sansRegular">
+                    {readTimeTranslation}: {promo.readTime}
+                  </Text>
                 )}
                 <Promo.Body className="promo-paragraph" css={styles.body}>
                   {promo.description}
