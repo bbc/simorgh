@@ -1,5 +1,7 @@
+/* eslint-disable import/no-duplicates */
 import moment from 'moment';
 import './fa-af';
+import { months } from './fa-af';
 
 moment.locale('fa-af');
 
@@ -11,9 +13,7 @@ const assert = {
 };
 
 test('parse', () => {
-  const tests = 'حمل_ثور_جوزا_سرطان_اسد_سنبله_میزان_عقرب_قوس_جدی_دلو_حوت'.split(
-    '_'
-  );
+  const tests = months;
   let i;
   function equalTest(input, mmm, j) {
     assert.equal(

@@ -1,21 +1,23 @@
 const moment = require('moment');
 
-const months = 'حمل_ثور_جوزا_سرطان_اسد_سنبله_میزان_عقرب_قوس_جدی_دلو_حوت'.split(
-  '_'
-);
+// eslint-disable-next-line import/prefer-default-export
+export const months = [
+  'حمل',
+  'ثور',
+  'جوزا',
+  'سرطان',
+  'اسد',
+  'سنبله',
+  'میزان',
+  'عقرب',
+  'قوس',
+  'جدی',
+  'دلو',
+  'حوت',
+];
 
-moment.updateLocale('fa', {
+moment.defineLocale('fa-af', {
+  parentLocale: 'fa',
   months,
   monthsShort: months,
-  relativeTime: {
-    past: '%s وړاندې', // %s 'ago'
-    m: '۱ دقیقه', // '1 minute'
-    mm: '%d دقیقې', // %d 'minutes'
-    h: '۱ ساعت', // '1 hour'
-    hh: '%d ساعتونه', // %d 'hours'
-  },
-  longDateFormat: {
-    LL: 'D MMMM YYYY',
-    LLL: 'D MMMM YYYY HH:mm',
-  },
 });
