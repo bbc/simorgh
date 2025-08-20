@@ -474,7 +474,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             )}
             {readTimeValue && <OptimizelyPageMetrics trackPageComplete />}
           </main>
-          {readTimeValue && <OptimizelyPageMetrics trackPageView trackPageDepth />}
+          {readTimeValue && (
+            <OptimizelyPageMetrics trackPageView trackPageDepth />
+          )}
           {showTopics && (
             <RelatedTopics
               css={[
