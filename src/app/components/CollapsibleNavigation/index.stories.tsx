@@ -17,9 +17,7 @@ const Component = ({
     <ToggleContextProvider>
       <ThemeProvider service="ws">
         <ServiceContextProvider service="ws">
-          <CollapsibleNavigation
-            navigationSections={navigationSections}
-          />
+          <CollapsibleNavigation navigationSections={navigationSections} />
         </ServiceContextProvider>
       </ThemeProvider>
     </ToggleContextProvider>
@@ -28,7 +26,7 @@ const Component = ({
 
 export default {
   Component,
-  title: 'Components/CollapsibleNavigation',
+  title: 'Components/Collapsible Navigation',
   parameters: {
     metadata,
     docs: { readme },
