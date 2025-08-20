@@ -76,8 +76,10 @@ const CollapsibleNavigation = ({
                   css={[styles.navLink, isActive && styles.navLinkActive]}
                   role={isLink ? 'link' : 'button'}
                   {...(isActive && { 'aria-current': 'true' })}
-                  {...(!isLink && { 'aria-expanded': isActive })}
-                  {...(!isLink && { 'aria-controls': subNavigationId })}
+                  {...(!isLink && {
+                    'aria-expanded': isActive,
+                    'aria-controls': subNavigationId,
+                  })}
                 >
                   {section.title}
                 </a>
@@ -111,7 +113,7 @@ const CollapsibleNavigation = ({
 
                   <ul css={styles.subNavGrid} role="list">
                     {section.links.map(link => {
-                      const linkLabelId = `subnavigation-link-label-${link.id}`;
+                      const linkLabelId = `subnav-${link.id}`;
 
                       return (
                         <li
