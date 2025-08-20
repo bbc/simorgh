@@ -472,8 +472,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                 liteCTAShows={liteCTAShows}
               />
             )}
+            {/* EXPERIMENT: Read Time */}
             {readTimeValue && <OptimizelyPageMetrics trackPageComplete />}
           </main>
+          {/* EXPERIMENT: Read Time */}
           {readTimeValue && (
             <OptimizelyPageMetrics trackPageView trackPageDepth />
           )}
