@@ -8,6 +8,7 @@ import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
+import isLive from '#app/lib/utilities/isLive';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
 import Headings from '#containers/Headings';
@@ -84,7 +85,7 @@ import {
 
 // EXPERIMENT: Read Time
 interface ReadTimeData {
-  readTime: number | undefined;
+  readTimeValue: number | undefined;
   readTimeLocation: string;
   readTimeVariant: string;
 }
@@ -99,6 +100,16 @@ const getImageComponent =
   );
 
 // EXPERIMENT: Read Time
+const Placeholder = ({ className }: { className?: string }) => {
+  if (isLive()) return null;
+  const { service } = use(ServiceContext);
+  const servicesInExperiment = ['turkce', 'mundo'];
+  return servicesInExperiment.includes(service) ? (
+    <div className={className} />
+  ) : null;
+};
+
+// EXPERIMENT: Read Time
 const getTimestampComponent =
   (
     hasByline: boolean,
@@ -108,27 +119,50 @@ const getTimestampComponent =
     readTimeData: ReadTimeData,
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
-    const { readTime, readTimeLocation, readTimeVariant } = readTimeData;
+    const { readTimeValue, readTimeLocation, readTimeVariant } = readTimeData;
+    // EXPERIMENT: Read Time
+    const showReadTimeBelowTimestamp =
+      !!readTimeValue &&
+      readTimeValue !== 0 &&
+      readTimeLocation === 'timestamp';
 
     return hasByline ? (
-      <Byline blocks={bylineContribBlocks}>
-        <Timestamp
-          firstPublished={new Date(firstPublished).getTime()}
-          lastPublished={new Date(lastPublished).getTime()}
-          popOut={false}
-          readTime={readTime}
-          readTimeLocation={readTimeLocation}
-          readTimeVariant={readTimeVariant}
-        />
-      </Byline>
+      <>
+        <Byline blocks={bylineContribBlocks}>
+          <Timestamp
+            firstPublished={new Date(firstPublished).getTime()}
+            lastPublished={new Date(lastPublished).getTime()}
+            popOut={false}
+            showReadTimeBelowTimestamp={showReadTimeBelowTimestamp}
+          />
+          {showReadTimeBelowTimestamp && (
+            <ReadTime
+              readTimeValue={readTimeValue}
+              readTimeVariant={readTimeVariant}
+            />
+          )}
+        </Byline>
+        {!showReadTimeBelowTimestamp && (
+          <Placeholder css={styles.readTimePlaceholderBelowTimestamp} />
+        )}
+      </>
     ) : (
-      <Timestamp
-        {...props}
-        popOut={false}
-        readTime={readTime}
-        readTimeLocation={readTimeLocation}
-        readTimeVariant={readTimeVariant}
-      />
+      <>
+        <Timestamp
+          {...props}
+          popOut={false}
+          showReadTimeBelowTimestamp={showReadTimeBelowTimestamp}
+        />
+        {/* EXPERIMENT: Read Time */}
+        {showReadTimeBelowTimestamp ? (
+          <ReadTime
+            readTimeValue={readTimeValue}
+            readTimeVariant={readTimeVariant}
+          />
+        ) : (
+          <Placeholder css={styles.readTimePlaceholderBelowTimestamp} />
+        )}
+      </>
     );
   };
 
@@ -150,17 +184,22 @@ const getPodcastPromoComponent = (podcastPromoEnabled: boolean) => () =>
 // EXPERIMENT: Read Time
 const getHeadlineComponent =
   (readTimeData: ReadTimeData) => (props: ComponentToRenderProps) => {
-    const { readTime, readTimeLocation, readTimeVariant } = readTimeData;
-
+    const { readTimeValue, readTimeLocation, readTimeVariant } = readTimeData;
+    const showReadTimeBelowHeadline =
+      readTimeValue && readTimeLocation === 'headline';
     return (
       <>
-        <ArticleHeadline {...props} />
-        {readTime && readTimeLocation === 'headline' && (
+        <ArticleHeadline
+          {...props}
+          {...(showReadTimeBelowHeadline && { applyReadTimeSpacing: true })}
+        />
+        {showReadTimeBelowHeadline ? (
           <ReadTime
-            readTime={readTime}
+            readTimeValue={readTimeValue}
             readTimeVariant={readTimeVariant}
-            css={styles.readTime}
           />
+        ) : (
+          <Placeholder css={styles.readTimePlaceholderBelowHeadline} />
         )}
       </>
     );
@@ -244,7 +283,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const { enabled: liteCTAShows } = useToggle('liteSiteCTA');
 
   // EXPERIMENT: Read Time
-  const readTime = pageData?.metadata?.stats?.readTime;
+  const readTimeValue = pageData?.metadata?.stats?.readTime;
 
   const headline = getHeadline(pageData) ?? '';
   const description = getSummary(pageData) || getHeadline(pageData);
@@ -286,7 +325,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   // EXPERIMENT: Read Time
   const readTimeData = {
-    readTime,
+    readTimeValue,
     readTimeLocation,
     readTimeVariant: readTimeExperimentVariant || 'off',
   };

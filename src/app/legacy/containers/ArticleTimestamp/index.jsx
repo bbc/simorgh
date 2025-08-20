@@ -1,6 +1,5 @@
 import React, { use } from 'react';
 import Timestamp from '#psammead/psammead-timestamp-container/src';
-import ReadTime from '#app/components/ReadTime';
 import { GridItemMedium, PopOutGridItemMedium } from '#components/Grid';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { formatDateNumeric } from './timeFormats';
@@ -21,10 +20,7 @@ const ArticleTimestamp = ({
   popOut = true,
   minutesTolerance = 0,
   className = '',
-  // EXPERIMENT: Read Time
-  readTime = 0,
-  readTimeLocation = 'off',
-  readTimeVariant = 'off',
+  showReadTimeBelowTimestamp = false,
 }) => {
   const {
     articleTimestampPrefix,
@@ -76,16 +72,20 @@ const ArticleTimestamp = ({
 
   return (
     <GridWrapper {...(className ? { className } : undefined)}>
-      <FirstPublishedTimestamp {...timestampProps} {...firstPublishedProps} />
+      <FirstPublishedTimestamp
+        {...timestampProps}
+        {...firstPublishedProps}
+        {...(showReadTimeBelowTimestamp && { padding: false })}
+      />
       {displayLastUpdatedTimestamp && (
         // Div has been used for No CSS formatting see #5554
         <div>
-          <LastUpdatedTimestamp {...timestampProps} {...lastPublishedProps} />
+          <LastUpdatedTimestamp
+            {...timestampProps}
+            {...lastPublishedProps}
+            {...(showReadTimeBelowTimestamp && { padding: false })}
+          />
         </div>
-      )}
-      {/* EXPERIMENT: Read Time */}
-      {readTime !== 0 && readTimeLocation === 'timestamp' && (
-        <ReadTime readTime={readTime} readTimeVariant={readTimeVariant} />
       )}
     </GridWrapper>
   );
