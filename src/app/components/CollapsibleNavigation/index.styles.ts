@@ -78,7 +78,7 @@ const styles = {
       outline: 'none',
       textDecoration: 'none',
       color: palette.GREY_8,
-      '&:hover::after': {
+      '&:hover::after, &:focus::after': {
         content: '""',
         position: 'absolute',
         left: 0,
@@ -137,7 +137,7 @@ const styles = {
       width: `${pixelsToRem(22)}rem`,
       height: `${pixelsToRem(22)}rem`,
       color: palette.BLACK,
-      '&:hover': {
+      '&:hover, &:focus': {
         backgroundColor: palette.POSTBOX,
         fill: palette.WHITE,
       },
@@ -189,7 +189,10 @@ const styles = {
       color: palette.GREY_8,
       ...fontVariants.sansRegular,
       letterSpacing: '0',
-      '&:hover::after': {
+      '&:hover, &:focus': {
+        backgroundColor: palette.GREY_3,
+      },
+      '&:hover::after ,&:focus::after': {
         content: '""',
       },
       '&::after': {
@@ -201,16 +204,14 @@ const styles = {
         height: '100%',
         backgroundColor: palette.POSTBOX,
       },
+      '&:focus-visible::after': {
+        content: 'none',
+      },
       '&:focus-visible': {
         boxShadow: `inset 0 0 0 ${pixelsToRem(4)}rem ${palette.WHITE}`,
         outline: `${pixelsToRem(2)}rem solid ${palette.BLACK}`,
         outlineOffset: `${pixelsToRem(-2)}rem`,
-      },
-      '&:focus-visible::after': {
-        content: 'none',
-      },
-      '&:hover': {
-        backgroundColor: palette.GREY_3,
+        backgroundColor: palette.WHITE,
       },
     }),
 };
