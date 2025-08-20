@@ -288,7 +288,7 @@ describe('Navigation Container', () => {
           pageType: HOME_PAGE,
           service: 'ws',
           statusCode: 200,
-          pathname: '/ws',
+          pathname: '/ws/languages',
         }),
       );
 
