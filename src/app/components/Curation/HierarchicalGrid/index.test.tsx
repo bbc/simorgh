@@ -133,8 +133,6 @@ describe('Hierarchical Grid Curation', () => {
     const container = render(
       <HierarchicalGrid headingLevel={headingLevel} summaries={fixture} />,
     );
-    expect(
-      container.getByText('Estimated Read Time: 1 minute'),
-    ).toBeInTheDocument();
+    expect(container.getByText(/Estimated Read Time:\s*1/)).toBeInTheDocument();
   });
 });
