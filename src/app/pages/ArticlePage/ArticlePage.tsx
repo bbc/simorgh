@@ -85,7 +85,7 @@ import {
 
 // EXPERIMENT: Read Time
 interface ReadTimeData {
-  readTime: number | undefined;
+  readTimeValue: number | undefined;
   readTimeLocation: string;
   readTimeVariant: string;
 }
@@ -119,12 +119,12 @@ const getTimestampComponent =
     readTimeData: ReadTimeData,
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
-    const { readTime, readTimeLocation, readTimeVariant } = readTimeData;
+    const { readTimeValue, readTimeLocation, readTimeVariant } = readTimeData;
     // EXPERIMENT: Read Time
     const showReadTimeBelowTimestamp =
-      !!readTime &&
-      readTime !== 0 &&
-      (readTimeLocation === 'timestamp' || readTimeLocation === 'a11y');
+      !!readTimeValue &&
+      readTimeValue !== 0 &&
+      readTimeLocation === 'timestamp';
 
     return hasByline ? (
       <>
@@ -136,7 +136,10 @@ const getTimestampComponent =
             showReadTimeBelowTimestamp={showReadTimeBelowTimestamp}
           />
           {showReadTimeBelowTimestamp && (
-            <ReadTime readTime={readTime} readTimeVariant={readTimeVariant} />
+            <ReadTime
+              readTimeValue={readTimeValue}
+              readTimeVariant={readTimeVariant}
+            />
           )}
         </Byline>
         {!showReadTimeBelowTimestamp && (
@@ -152,7 +155,10 @@ const getTimestampComponent =
         />
         {/* EXPERIMENT: Read Time */}
         {showReadTimeBelowTimestamp ? (
-          <ReadTime readTime={readTime} readTimeVariant={readTimeVariant} />
+          <ReadTime
+            readTimeValue={readTimeValue}
+            readTimeVariant={readTimeVariant}
+          />
         ) : (
           <Placeholder css={styles.readTimePlaceholderBelowTimestamp} />
         )}
@@ -178,10 +184,9 @@ const getPodcastPromoComponent = (podcastPromoEnabled: boolean) => () =>
 // EXPERIMENT: Read Time
 const getHeadlineComponent =
   (readTimeData: ReadTimeData) => (props: ComponentToRenderProps) => {
-    const { readTime, readTimeLocation, readTimeVariant } = readTimeData;
+    const { readTimeValue, readTimeLocation, readTimeVariant } = readTimeData;
     const showReadTimeBelowHeadline =
-      readTime &&
-      (readTimeLocation === 'headline' || readTimeLocation === 'a11y');
+      readTimeValue && readTimeLocation === 'headline';
     return (
       <>
         <ArticleHeadline
@@ -189,7 +194,10 @@ const getHeadlineComponent =
           {...(showReadTimeBelowHeadline && { applyReadTimeSpacing: true })}
         />
         {showReadTimeBelowHeadline ? (
-          <ReadTime readTime={readTime} readTimeVariant={readTimeVariant} />
+          <ReadTime
+            readTimeValue={readTimeValue}
+            readTimeVariant={readTimeVariant}
+          />
         ) : (
           <Placeholder css={styles.readTimePlaceholderBelowHeadline} />
         )}
@@ -260,9 +268,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     if (readTimeExperimentVariant.includes('timestamp')) {
       return 'timestamp';
     }
-    if (readTimeExperimentVariant.includes('a11y_swarm')) {
-      return 'a11y';
-    }
     return 'off';
   })();
 
@@ -278,7 +283,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const { enabled: liteCTAShows } = useToggle('liteSiteCTA');
 
   // EXPERIMENT: Read Time
-  const readTime = pageData?.metadata?.stats?.readTime;
+  const readTimeValue = pageData?.metadata?.stats?.readTime;
 
   const headline = getHeadline(pageData) ?? '';
   const description = getSummary(pageData) || getHeadline(pageData);
@@ -320,7 +325,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   // EXPERIMENT: Read Time
   const readTimeData = {
-    readTime,
+    readTimeValue,
     readTimeLocation,
     readTimeVariant: readTimeExperimentVariant || 'off',
   };

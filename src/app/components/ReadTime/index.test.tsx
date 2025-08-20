@@ -9,7 +9,7 @@ describe('ReadTime', () => {
   });
   it('should render when readTime is supplied', () => {
     const { getByText } = render(
-      <ReadTime readTime={4} readTimeVariant="minutes" />,
+      <ReadTime readTimeValue={4} readTimeVariant="minutes" />,
     );
     expect(getByText('Estimated Read Time: 4 minutes')).toBeInTheDocument();
   });
@@ -17,7 +17,7 @@ describe('ReadTime', () => {
     const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
 
     it('should register view tracker', () => {
-      render(<ReadTime readTime={4} readTimeVariant="minutes" />);
+      render(<ReadTime readTimeValue={4} readTimeVariant="minutes" />);
 
       const expected = {
         componentName: 'read-time-on-article',

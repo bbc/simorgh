@@ -51,6 +51,8 @@ export interface Translations {
     readTimePrefix: string;
     quick: string;
     long: string;
+    minute: string;
+    minutes: string;
   }>;
   byline?: {
     author?: string;
