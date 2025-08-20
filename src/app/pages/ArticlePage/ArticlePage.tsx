@@ -260,6 +260,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     if (readTimeExperimentVariant.includes('timestamp')) {
       return 'timestamp';
     }
+    if (readTimeExperimentVariant.includes('control')) {
+      return 'off';
+    }
     if (readTimeExperimentVariant.includes('a11y_swarm')) {
       return 'a11y';
     }
@@ -464,9 +467,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                 liteCTAShows={liteCTAShows}
               />
             )}
-            <OptimizelyPageMetrics trackPageComplete />
+            {readTime && <OptimizelyPageMetrics trackPageComplete />}
           </main>
-          <OptimizelyPageMetrics trackPageView trackPageDepth />
+          {readTime && <OptimizelyPageMetrics trackPageView trackPageDepth />}
           {showTopics && (
             <RelatedTopics
               css={[
