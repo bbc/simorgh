@@ -4,7 +4,7 @@ import ThemeProvider from '#app/components/ThemeProvider';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import CollapsibleNavigation from './index';
 import type { CollapsibleNavigationSection } from './types';
-import collapsibleNavigationSections from './constants';
+import collapsibleNavigationSections from '../LanguageNavigation/constants';
 import metadata from './metadata.json';
 import readme from './README.md';
 

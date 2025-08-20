@@ -11,11 +11,6 @@ import useMediaQuery from '#hooks/useMediaQuery';
 import { RequestContext } from '#app/contexts/RequestContext';
 import TopBarOJs from '#app/components/TopBarOJs';
 import isLive from '#app/lib/utilities/isLive';
-import loadable from '@loadable/component';
-
-const LanguageNavigation = loadable(
-  () => import('#app/components/CollapsibleNavigation/LanguageNavigation'),
-);
 
 const ScrollableWrapper = styled.div`
   position: relative;
@@ -40,7 +35,6 @@ const Divider = styled.div`
     display: none;
   }
 `;
-
 const CanonicalNavigationContainer = ({
   script,
   service,
@@ -57,37 +51,25 @@ const CanonicalNavigationContainer = ({
       setIsOpen(false);
     }
   });
-
-  // TODO: Feature toggle will be introduced https://bbc.atlassian.net/browse/WS-1073
-  const renderLanguageNavigation = !isLive() && service === 'ws';
-
   return (
     <Navigation script={script} service={service} dir={dir} isOpen={isOpen}>
-      {renderLanguageNavigation ? (
-        <LanguageNavigation />
-      ) : (
-        <>
-          <ScrollableWrapper>
-            {!isLite && (
-              <CanonicalMenuButton
-                announcedText={menuAnnouncedText}
-                isOpen={isOpen}
-                onClick={() => setIsOpen(!isOpen)}
-                dir={dir}
-                script={script}
-              />
-            )}
-            {!isOpen && (
-              <ScrollableNavigation dir={dir}>
-                {scrollableListItems}
-              </ScrollableNavigation>
-            )}
-          </ScrollableWrapper>
-          <CanonicalDropdown isOpen={isOpen}>
-            {dropdownListItems}
-          </CanonicalDropdown>
-        </>
-      )}
+      <ScrollableWrapper>
+        {!isLite && (
+          <CanonicalMenuButton
+            announcedText={menuAnnouncedText}
+            isOpen={isOpen}
+            onClick={() => setIsOpen(!isOpen)}
+            dir={dir}
+            script={script}
+          />
+        )}
+        {!isOpen && (
+          <ScrollableNavigation dir={dir}>
+            {scrollableListItems}
+          </ScrollableNavigation>
+        )}
+      </ScrollableWrapper>
+      <CanonicalDropdown isOpen={isOpen}>{dropdownListItems}</CanonicalDropdown>
       <Divider />
       {!isLive() && <TopBarOJs blocks={blocks} />}
     </Navigation>

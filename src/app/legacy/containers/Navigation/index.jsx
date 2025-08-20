@@ -7,6 +7,8 @@ import {
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { RequestContext } from '#contexts/RequestContext';
+import isLive from '#app/lib/utilities/isLive';
+import LanguageNavigationLazy from '#app/components/LanguageNavigation/lazy';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Canonical from './index.canonical';
 import Amp from './index.amp';
@@ -78,6 +80,14 @@ const NavigationContainer = ({ propsForTopBarOJComponent }) => {
   );
 
   const dropdownNavViewTracker = useViewTracker(dropdownNavEventTrackingData);
+
+  const renderLanguageNavigation = !isLive() && service === 'ws';
+
+  if (renderLanguageNavigation) {
+    return (
+      <LanguageNavigationLazy script={script} service={service} dir={dir} />
+    );
+  }
 
   if (!navigation || navigation.length === 0) {
     return null;

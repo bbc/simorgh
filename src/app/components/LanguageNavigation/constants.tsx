@@ -1,6 +1,6 @@
-import { CollapsibleNavigationSection } from './types';
+import { CollapsibleNavigationSection } from '../CollapsibleNavigation/types';
 
-const CollapsibleNavigationSections: CollapsibleNavigationSection[] = [
+const LanguageNavigationSections: CollapsibleNavigationSection[] = [
   {
     id: 'home',
     title: 'Home',
@@ -250,4 +250,4 @@ const CollapsibleNavigationSections: CollapsibleNavigationSection[] = [
   },
 ];
 
-export default CollapsibleNavigationSections;
+export default LanguageNavigationSections;
