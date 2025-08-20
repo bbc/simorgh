@@ -29,13 +29,13 @@ exports[`Toggles Config when application environment is live should contain corr
     "enabled": true,
   },
   "homePageRadioSchedule": {
-    "enabled": true,
+    "enabled": false,
   },
   "include": {
     "enabled": true,
   },
   "liveRadioSchedule": {
-    "enabled": true,
+    "enabled": false,
   },
   "midArticleOnwardJourney": {
     "enabled": true,
@@ -47,7 +47,7 @@ exports[`Toggles Config when application environment is live should contain corr
     "enabled": true,
   },
   "onDemandRadioSchedule": {
-    "enabled": true,
+    "enabled": false,
   },
   "preloadLeadImage": {
     "enabled": true,
