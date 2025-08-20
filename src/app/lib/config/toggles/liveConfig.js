@@ -24,8 +24,14 @@ export default {
   eventTracking: {
     enabled: true,
   },
+  homePageRadioSchedule: {
+    enabled: false,
+  },
   include: {
     enabled: true,
+  },
+  liveRadioSchedule: {
+    enabled: false,
   },
   midArticleOnwardJourney: {
     enabled: true,
@@ -36,20 +42,14 @@ export default {
   nielsenAnalytics: {
     enabled: true,
   },
+  onDemandRadioSchedule: {
+    enabled: false,
+  },
   preloadLeadImage: {
     enabled: true,
   },
   prerollAds: {
     enabled: true,
-  },
-  homePageRadioSchedule: {
-    enabled: false,
-  },
-  liveRadioSchedule: {
-    enabled: false,
-  },
-  onDemandRadioSchedule: {
-    enabled: false,
   },
   scriptLink: {
     enabled: true,
