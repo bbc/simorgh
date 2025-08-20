@@ -9,7 +9,7 @@ import Text from '#app/components/Text';
 import styles from './index.styles';
 
 type ReadTimeProps = {
-  readTime?: number;
+  readTimeValue: number;
   className?: string;
   readTimeVariant?: string;
 };
@@ -18,11 +18,17 @@ const DEFAULT_TRANSLATIONS = {
   readTimePrefix: 'Estimated Read Time',
   quick: 'Quick Read',
   long: 'Long Read',
+  minute: 'minute',
+  minutes: 'minutes',
 };
 
-const ReadTime = ({ readTime, readTimeVariant, className }: ReadTimeProps) => {
-  if (!readTime || isLive() || readTimeVariant === 'off' || !readTimeVariant)
-    return null;
+const ReadTime = ({
+  readTimeValue,
+  readTimeVariant,
+  className,
+}: ReadTimeProps) => {
+  const showReadTime = readTimeVariant && readTimeVariant !== 'off';
+  if (isLive() || !showReadTime) return null;
 
   const { translations } = use(ServiceContext);
   const readTimePrefix =
@@ -30,6 +36,10 @@ const ReadTime = ({ readTime, readTimeVariant, className }: ReadTimeProps) => {
     DEFAULT_TRANSLATIONS.readTimePrefix;
   const quickCopy = translations.readTime?.quick ?? DEFAULT_TRANSLATIONS.quick;
   const longCopy = translations.readTime?.long ?? DEFAULT_TRANSLATIONS.long;
+  const singleMinuteSuffix =
+    translations.readTime?.minute ?? DEFAULT_TRANSLATIONS.minute;
+  const minutesSuffix =
+    translations.readTime?.minutes ?? DEFAULT_TRANSLATIONS.minutes;
 
   // EXPERIMENT: Read Time
   const fontSize = readTimeVariant.includes('bold') ? 'pica' : 'brevier';
@@ -40,10 +50,10 @@ const ReadTime = ({ readTime, readTimeVariant, className }: ReadTimeProps) => {
     ? 'minutes'
     : 'quickLong';
 
-  const readTimeInMiliseconds = readTime * 60000;
-  const minutesLabel = readTime === 1 ? 'minute' : 'minutes';
-  const quickLongCopy = readTime < 5 ? quickCopy : longCopy;
-  const minutesCopy = `${readTimePrefix}: ${readTime} ${minutesLabel}`;
+  const readTimeInMiliseconds = readTimeValue * 60000;
+  const minutesLabel = readTimeValue === 1 ? singleMinuteSuffix : minutesSuffix;
+  const quickLongCopy = readTimeValue < 5 ? quickCopy : longCopy;
+  const minutesCopy = `${readTimePrefix}: ${readTimeValue} ${minutesLabel}`;
 
   const eventTrackingData: EventTrackingData = {
     componentName: 'read-time-on-article',
@@ -51,7 +61,7 @@ const ReadTime = ({ readTime, readTimeVariant, className }: ReadTimeProps) => {
     experimentName: 'newswb_ws_article_read_time',
     experimentVariant: readTimeVariant,
     itemTracker: {
-      label: `Read time: ${readTime} ${minutesLabel}`,
+      label: `Read time: ${readTimeValue} ${minutesLabel}`,
       duration: readTimeInMiliseconds,
       type: `read-time`,
     },

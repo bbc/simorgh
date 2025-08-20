@@ -4,7 +4,7 @@ import readme from './README.md';
 import metadata from './metadata.json';
 
 const Component = ({ readTime }: { readTime: number }) => (
-  <ReadTime readTime={readTime} />
+  <ReadTime readTimeValue={readTime} />
 );
 
 export default {
@@ -16,7 +16,9 @@ export default {
   },
 };
 
-export const Example = () => <ReadTime readTime={7} readTimeVariant="foo" />;
+export const Example = () => (
+  <ReadTime readTimeValue={7} readTimeVariant="foo" />
+);
 export const OneMinuteReadTime = () => (
-  <ReadTime readTime={1} readTimeVariant="foo" />
+  <ReadTime readTimeValue={1} readTimeVariant="foo" />
 );
