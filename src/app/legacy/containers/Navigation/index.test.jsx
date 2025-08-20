@@ -292,13 +292,13 @@ describe('Navigation Container', () => {
         }),
       );
 
-      expect(getByTestId('collapsible-navigation')).toBeInTheDocument();
+      expect(getByTestId('collapsible-nav')).toBeInTheDocument();
     });
 
     it('should render standard navigation for WS service in live environment', async () => {
       process.env.SIMORGH_APP_ENV = 'live';
 
-      const { container } = await act(async () =>
+      const { container, queryByText } = await act(async () =>
         render(<Navigation />, {
           bbcOrigin: 'https://www.test.bbc.co.uk',
           id: 'c0000000000o',
@@ -313,6 +313,7 @@ describe('Navigation Container', () => {
       expect(
         container.querySelector('div[data-e2e="scrollable-nav"]'),
       ).toBeInTheDocument();
+      expect(queryByText('collapsible-nav')).not.toBeInTheDocument();
     });
   });
 });

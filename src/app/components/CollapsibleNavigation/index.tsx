@@ -55,7 +55,7 @@ const CollapsibleNavigation = ({
 
   return (
     <Component>
-      <ul role="list" css={styles.navList} data-testid="collapsible-navigation">
+      <ul role="list" css={styles.navList} data-testid="collapsible-nav">
         {navigationSections.map(section => {
           const isActive = Boolean(openSection === section.id);
           const shouldShowSubNav = isHydrated ? isActive : true;
