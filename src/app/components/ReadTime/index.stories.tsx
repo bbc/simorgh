@@ -16,7 +16,9 @@ export default {
   },
 };
 
-export const Example = () => <ReadTime readTimeValue={7} readTimeVariant="foo" />;
+export const Example = () => (
+  <ReadTime readTimeValue={7} readTimeVariant="foo" />
+);
 export const OneMinuteReadTime = () => (
   <ReadTime readTimeValue={1} readTimeVariant="foo" />
 );
