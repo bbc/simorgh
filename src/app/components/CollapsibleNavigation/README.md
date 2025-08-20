@@ -35,7 +35,7 @@ It works for site navigation, grouped menus, or any structured list of links.
 
 ### Example Configuration
 
-[Configuration for Languages & Regions Navigation Menu](https://github.com/bbc/simorgh/blob/latest/src/app/components/CollapsibleNavigation/constants.tsx)
+[Configuration for Languages & Regions Navigation Menu](https://github.com/bbc/simorgh/blob/latest/src/app/components/LanguageNavigation/constants.tsx)
 
 ---
 
