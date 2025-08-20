@@ -11,23 +11,18 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 
 import notes from '../README.md';
 
-const emptyRow = () => {};
-
 const timeFunctions = [];
 
 // Add Months of the Year to the list of functions
-timeFunctions.push(() => ' Months ');
-timeFunctions.push(emptyRow);
+timeFunctions.push({ heading: 'Months' });
 
 Array.from({ length: 12 }, (_, index) => index).forEach((month) => {
   timeFunctions.push((locale) =>
     moment('20200101').locale(locale).add(month, 'months').format('MMMM')
   );
 });
-timeFunctions.push(emptyRow);
 
-timeFunctions.push(() => ' Common Timestamp Formats ');
-timeFunctions.push(emptyRow);
+timeFunctions.push({ heading: 'Common Timestamp Formats' });
 
 // Fixed timestamp for 27 August 2019, 14:54 BST (Tuesday)
 const fixedTimestamp = 1566914061212;
@@ -54,9 +49,9 @@ timeFunctions.push(
       moment(fixedTimestamp).subtract({ d: 26 }).locale(locale).format('LLL'),
     (locale) => moment(fixedTimestamp).locale(locale).format('LL'),
     (locale) => moment(fixedTimestamp).locale(locale).format('LLL'),
-    emptyRow,
-    () => ' Other Timestamp Formats ',
-    emptyRow,
+    {
+      heading: 'Other Timestamp Formats',
+    },
     (locale) =>
       moment(fixedTimestamp).locale(locale).format('MMMM Do YYYY, h:mm:ss a'),
     (locale) =>
@@ -115,48 +110,50 @@ timeFunctions.push(
   ]
 );
 
-timeFunctions.push(emptyRow);
-timeFunctions.push(() => ' Months (Abbreviated) ');
-timeFunctions.push(emptyRow);
+timeFunctions.push({ heading: 'Months (Abbreviated)' });
 
 Array.from({ length: 12 }, (_, index) => index).forEach((month) => {
   timeFunctions.push((locale) =>
     moment('20200101').locale(locale).add(month, 'months').format('MMM')
   );
 });
-timeFunctions.push(emptyRow);
 
 // Add Days of Week
-timeFunctions.push(() => ' Days of the Week ');
-timeFunctions.push(emptyRow);
+timeFunctions.push({ heading: 'Days of the Week' });
 
 Array.from({ length: 7 }, (_, index) => index).forEach((day) => {
   timeFunctions.push((locale) =>
     moment('20200106').locale(locale).add(day, 'days').format('dddd')
   );
 });
-timeFunctions.push(emptyRow);
 
-timeFunctions.push(() => ' Days of the Week (Abbreviated)');
-timeFunctions.push(emptyRow);
+timeFunctions.push({ heading: ' Days of the Week (Abbreviated)' });
 
 Array.from({ length: 7 }, (_, index) => index).forEach((day) => {
   timeFunctions.push((locale) =>
     moment('20200106').locale(locale).add(day, 'days').format('ddd')
   );
 });
-timeFunctions.push(emptyRow);
 
 // Add Numerals
-timeFunctions.push(() => ' Numerals ');
-timeFunctions.push(emptyRow);
+timeFunctions.push({
+  heading: 'Numerals',
+});
 
+Array.from({ length: 31 }, (_, index) => index).forEach((day) => {
+  timeFunctions.push((locale) =>
+    moment('20200101').locale(locale).add(day, 'days').format('D')
+  );
+});
+
+timeFunctions.push({
+  heading: 'Ordinal Numerals',
+});
 Array.from({ length: 31 }, (_, index) => index).forEach((day) => {
   timeFunctions.push((locale) =>
     moment('20200101').locale(locale).add(day, 'days').format('Do')
   );
 });
-timeFunctions.push(emptyRow);
 
 const Table = styled.table`
   margin: ${GEL_SPACING_DBL};
@@ -189,12 +186,25 @@ const Component = ({ service, variant, dir, locale }) => {
               {service} {variant !== 'default' && variant} ({locale})
             </th>
           </tr>
-          {timeFunctions.map((timeFunction, index) => (
-            <tr key={index}>
-              <td dir={dir}>{timeFunction('en-gb')}</td>
-              <td dir={dir}>{timeFunction(locale)}</td>
-            </tr>
-          ))}
+          {timeFunctions.map((timeFunction, index) => {
+            if (typeof timeFunction === 'function') {
+              return (
+                <tr key={index}>
+                  <td dir={dir}>{timeFunction('en-gb')}</td>
+                  <td dir={dir}>{timeFunction(locale)}</td>
+                </tr>
+              );
+            } else {
+              return (
+                <tr key={index}>
+                  <b>
+                    <br />
+                    <u>{timeFunction.heading}</u>
+                  </b>
+                </tr>
+              );
+            }
+          })}
         </tbody>
       </Table>
       <Paragraph>
