@@ -31,14 +31,14 @@ export const timestampsFixtures = {
   },
 };
 
-export const format = (datetimeLocale, timezone, timeStamp) => {
-  return timestampsFixtures[timeStamp].isRelative
+export const format = ({ datetimeLocale, timezone, fixture }) => {
+  return timestampsFixtures[fixture].isRelative
     ? moment
-        .tz(timestampsFixtures[timeStamp].time, timezone)
+        .tz(timestampsFixtures[fixture].time, timezone)
         .locale(datetimeLocale)
         .fromNow()
     : moment
-        .tz(timestampsFixtures[timeStamp].time, timezone)
+        .tz(timestampsFixtures[fixture].time, timezone)
         .locale(datetimeLocale)
-        .format(timestampsFixtures[timeStamp].dateTimeFormat(datetimeLocale));
+        .format(timestampsFixtures[fixture].dateTimeFormat(datetimeLocale));
 };
