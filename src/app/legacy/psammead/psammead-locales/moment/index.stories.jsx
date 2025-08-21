@@ -13,28 +13,11 @@ import notes from '../README.md';
 
 const timeFunctions = [];
 
-// Add Months of the Year to the list of functions
-timeFunctions.push({ heading: 'Months' });
-
-Array.from({ length: 12 }, (_, index) => index).forEach((month) => {
-  timeFunctions.push((locale) =>
-    moment('20200101').locale(locale).add(month, 'months').format('MMMM')
-  );
-});
-timeFunctions.push({ heading: 'Months (Abbreviated)' });
-
-Array.from({ length: 12 }, (_, index) => index).forEach((month) => {
-  timeFunctions.push((locale) =>
-    moment('20200101').locale(locale).add(month, 'months').format('MMM')
-  );
-});
-
-// Add Days of Week
 timeFunctions.push({ heading: 'Days of the Week' });
 
 Array.from({ length: 7 }, (_, index) => index).forEach((day) => {
   timeFunctions.push((locale) =>
-    moment('20200106').locale(locale).add(day, 'days').format('dddd')
+    moment('20240101').locale(locale).add(day, 'days').format('dddd')
   );
 });
 
@@ -42,11 +25,25 @@ timeFunctions.push({ heading: ' Days of the Week (Abbreviated)' });
 
 Array.from({ length: 7 }, (_, index) => index).forEach((day) => {
   timeFunctions.push((locale) =>
-    moment('20200106').locale(locale).add(day, 'days').format('ddd')
+    moment('20240101').locale(locale).add(day, 'days').format('ddd')
   );
 });
 
-// Add Years from 2010 to 2025
+timeFunctions.push({ heading: 'Months' });
+
+Array.from({ length: 12 }, (_, index) => index).forEach((month) => {
+  timeFunctions.push((locale) =>
+    moment('20240101').locale(locale).add(month, 'months').format('MMMM')
+  );
+});
+timeFunctions.push({ heading: 'Months (Abbreviated)' });
+
+Array.from({ length: 12 }, (_, index) => index).forEach((month) => {
+  timeFunctions.push((locale) =>
+    moment('20240101').locale(locale).add(month, 'months').format('MMM')
+  );
+});
+
 timeFunctions.push({
   heading: 'Years (±5 from current year)',
 });
@@ -58,14 +55,13 @@ Array.from({ length: 11 }, (_, i) => currentYear - 5 + i).forEach((year) => {
   );
 });
 
-// Add Numerals
 timeFunctions.push({
   heading: 'Numerals',
 });
 
 Array.from({ length: 31 }, (_, index) => index).forEach((day) => {
   timeFunctions.push((locale) =>
-    moment('20200101').locale(locale).add(day, 'days').format('D')
+    moment('20240101').locale(locale).add(day, 'days').format('D')
   );
 });
 
@@ -74,7 +70,7 @@ timeFunctions.push({
 });
 Array.from({ length: 31 }, (_, index) => index).forEach((day) => {
   timeFunctions.push((locale) =>
-    moment('20200101').locale(locale).add(day, 'days').format('Do')
+    moment('20240101').locale(locale).add(day, 'days').format('Do')
   );
 });
 
