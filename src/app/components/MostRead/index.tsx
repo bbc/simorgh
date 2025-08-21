@@ -84,9 +84,8 @@ const CanonicalMostRead = ({
   headingBackgroundColour: string;
   columnLayout?: ColumnLayout;
   size: Size;
-  eventTrackingData: {
+  eventTrackingData: ViewabilityEventTrackingData & {
     optimizely?: ReactSDKClient | null | undefined;
-    componentName: string;
   };
 }) =>
   data ? (
