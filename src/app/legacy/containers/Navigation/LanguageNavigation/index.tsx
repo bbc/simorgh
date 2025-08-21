@@ -6,7 +6,7 @@ import { ServiceContext } from '../../../..//contexts/ServiceContext';
 const LanguageNavigation = () => {
   const { script, service, dir, collapsibleNavigation } = use(ServiceContext);
 
-  if (!collapsibleNavigation.length) {
+  if (!collapsibleNavigation?.length) {
     return null;
   }
 
