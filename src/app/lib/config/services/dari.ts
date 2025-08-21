@@ -447,7 +447,7 @@ export const service: DefaultServiceConfig = {
       ],
       copyrightText: 'بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست.',
     },
-    timezone: 'GMT',
+    timezone: 'Asia/Kabul',
     navigation: [
       {
         title: 'صفحه اول',
