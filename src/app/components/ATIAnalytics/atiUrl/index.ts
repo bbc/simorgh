@@ -535,6 +535,7 @@ export const buildReverbEventModel = ({
     itemCount,
     resourceId: groupResourceId,
     position: groupPosition,
+    link,
   } = groupTracker;
   console.log(itemTracker, groupTracker);
   return {
@@ -568,6 +569,7 @@ export const buildReverbEventModel = ({
       group: {
         name: campaignID,
         type: componentName,
+        link,
         ...(itemCount && { item_count: itemCount }),
         ...(groupResourceId && { resource_id: groupResourceId }),
         ...(groupPosition && { position: groupPosition }),

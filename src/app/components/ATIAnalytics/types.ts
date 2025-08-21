@@ -194,6 +194,7 @@ export interface GroupTracker {
   position?: string | number;
   resourceId?: string;
   itemCount?: number;
+  link?: string;
 }
 
 export interface ATIPageTrackingProps {
