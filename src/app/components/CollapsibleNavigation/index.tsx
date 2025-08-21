@@ -1,7 +1,7 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
 import { jsx } from '@emotion/react';
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, ElementType } from 'react';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import styles from './index.styles';
 import { Close } from '../icons';
@@ -10,10 +10,12 @@ import Heading from '../Heading';
 
 type CollapsibleNavigationProps = {
   navigationSections: CollapsibleNavigationSection[];
+  as?: ElementType;
 };
 
 const CollapsibleNavigation = ({
   navigationSections,
+  as = 'nav',
 }: CollapsibleNavigationProps) => {
   const [openSection, setOpenSection] = useState<string | null>(null);
   const isHydrated = useHydrationDetection();
@@ -49,9 +51,11 @@ const CollapsibleNavigation = ({
     }
   };
 
+  const Component: React.ElementType = as;
+
   return (
-    <nav role="navigation">
-      <ul role="list" css={styles.navList}>
+    <Component>
+      <ul role="list" css={styles.navList} data-testid="collapsible-nav">
         {navigationSections.map(section => {
           const isActive = Boolean(openSection === section.id);
           const shouldShowSubNav = isHydrated ? isActive : true;
@@ -134,7 +138,7 @@ const CollapsibleNavigation = ({
           );
         })}
       </ul>
-    </nav>
+    </Component>
   );
 };
 
