@@ -26,6 +26,7 @@ const CurationPromo = ({
   duration: mediaDuration,
   headingLevel = 2,
   isLive,
+  readTime,
 }: Summary) => {
   const { isAmp, isLite } = use(RequestContext);
   const { translations } = use(ServiceContext);
@@ -89,6 +90,7 @@ const CurationPromo = ({
           {lastPublished}
         </Promo.Timestamp>
       ) : null}
+      {!isLive && readTime && <p>readtime: {readTime}</p>}
     </Promo>
   );
 };

@@ -33,6 +33,7 @@ const Fixture = ({
     type={type}
     duration={duration}
     isLive={isLive}
+    readTime={1}
   />
 );
 
@@ -127,6 +128,11 @@ describe('Curation Promo', () => {
         { service: 'mundo' },
       );
       expect(container.queryByText('17 abril 2023')).not.toBeInTheDocument();
+    });
+
+    it('should display read time when readTime is provided in summary data', () => {
+      const container = render(<Fixture />);
+      expect(container.getAllByText('readtime: 1').length).toBeGreaterThan(0);
     });
   });
 });
