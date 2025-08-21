@@ -9,6 +9,8 @@ import {
 import RadioSchedule from '#app/legacy/containers/RadioSchedule';
 import { ServiceContext } from '#contexts/ServiceContext';
 import type { ViewabilityEventTrackingData } from '#app/models/types/eventTracking';
+import useViewTracker from '#app/hooks/useViewTracker';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
@@ -101,19 +103,31 @@ export default ({
   const messageBannerId = `message-banner-${nthCurationByStyleAndProminence}`;
 
   const viewabilityEventTrackingData: ViewabilityEventTrackingData = {
-    app_type: 'responsive',
-    app_name: `news-${service}`,
-    event_category: 'viewability',
-    page: contentType ?? 'viewabilityEventTrackingData',
-    page_title: `${homePageTitle} - ${pageTitle}`,
-    group_name: curationSubheading,
-    group_type: `${componentName}`,
-    group_position: `${position + 1}`,
-    group_resource_id: curationId,
-    ...(Array.isArray(summaries) && summaries.length > 0
-      ? { group_item_count: summaries.length }
-      : {}),
+    groupTracker: {
+      name: curationSubheading,
+      type: `${componentName}`,
+      position: `${position + 1}`,
+      ...(curationId && { resourceId: curationId }),
+      ...(Array.isArray(summaries) && summaries.length > 0
+        ? { itemCount: summaries.length }
+        : {}),
+    },
+    page: contentType ?? '',
+    pageTitle: `${homePageTitle} - ${pageTitle}`,
+    appName: `news-${service}`,
+    componentName,
+    eventCategory: 'viewability',
+    appType: 'responsive',
   };
+  // need to add object groupTracker
+  // and itemTracker object (inside the component)
+  // https://github.com/bbc/simorgh/blob/cef761132850fa4373795ae0d422494d722c2df3/src/app/components/ATIAnalytics/atiUrl/index.ts#L511
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const viewTracker = useViewTracker(viewabilityEventTrackingData as any);
+  // click tracker for curation subheading (if link is present)
+  const curationSubheadingClickTracker = link
+    ? useClickTrackerHandler(viewabilityEventTrackingData)
+    : undefined;
 
   switch (componentName) {
     case NOT_SUPPORTED:
@@ -207,32 +221,43 @@ export default ({
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:
-      return curationLength > 1 ? (
-        <section aria-labelledby={id} role="region">
-          {curationSubheading &&
-            (renderVisuallyHiddenH2Title ? (
-              <VisuallyHiddenText id={id} as="h2">
-                {curationSubheading}
-              </VisuallyHiddenText>
-            ) : (
-              <Subheading id={id} link={link}>
-                {curationSubheading}
-              </Subheading>
-            ))}
+      if (curationLength > 1) {
+        return (
+          <section aria-labelledby={id} role="region">
+            <div {...viewTracker}>
+              {curationSubheading &&
+                (renderVisuallyHiddenH2Title ? (
+                  <VisuallyHiddenText id={id} as="h2">
+                    {curationSubheading}
+                  </VisuallyHiddenText>
+                ) : (
+                  <Subheading
+                    id={id}
+                    link={link}
+                    {...(link ? curationSubheadingClickTracker : {})}
+                  >
+                    {curationSubheading}
+                  </Subheading>
+                ))}
+              <GridComponent
+                summaries={summaries}
+                headingLevel={3}
+                isFirstCuration={isFirstCuration}
+                eventTrackingData={viewabilityEventTrackingData}
+              />
+            </div>
+          </section>
+        );
+      }
+      return (
+        <div {...viewTracker}>
           <GridComponent
             summaries={summaries}
-            headingLevel={3}
+            headingLevel={2} // if there is only one curation, all promos should be h2, and no subheading
             isFirstCuration={isFirstCuration}
             eventTrackingData={viewabilityEventTrackingData}
           />
-        </section>
-      ) : (
-        <GridComponent
-          summaries={summaries}
-          headingLevel={2} // if there is only one curation, all promos should be h2, and no subheading
-          isFirstCuration={isFirstCuration}
-          eventTrackingData={viewabilityEventTrackingData}
-        />
+        </div>
       );
   }
 };
