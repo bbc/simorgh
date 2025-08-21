@@ -6,13 +6,13 @@ import moment from 'moment';
 import path from 'ramda/src/path';
 import useClickTrackerHandler from '../../../hooks/useClickTrackerHandler';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
-import useViewTracker from '../../../hooks/useViewTracker';
 import formatDuration from '../../../lib/utilities/formatDuration';
 import Promo from '../../../legacy/components/Promo';
 import { DESKTOP, TABLET, MOBILE, SMALL } from './dataStructures';
 import { styles } from './index.styles';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { CurationGridProps } from '../types';
+import { Summary } from '../../../models/types/curationData';
 import { RequestContext } from '../../../contexts/RequestContext';
 import LiveLabel from '../../LiveLabel';
 
@@ -42,38 +42,33 @@ const HiearchicalGrid = ({
   const { isAmp } = use(RequestContext);
   const { translations } = use(ServiceContext);
 
-  console.log('CurationGrid group level eventTrackingData:', eventTrackingData);
   const audioTranslation = path(['media', 'audio'], translations);
   const videoTranslation = path(['media', 'video'], translations);
   const photoGalleryTranslation = path(['media', 'photogallery'], translations);
   const durationTranslation = path(['media', 'duration'], translations);
 
-  // The grid analytics intentionally use a looser shape than EventTrackingData, so we cast to any to suppress type errors.
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const viewTracker = useViewTracker(eventTrackingData as any);
   if (!summaries || summaries.length < 3) return null;
 
   const promoItems = summaries.slice(0, 12);
-  // Helper to build promo event tracking data
-  const buildPromoEventTrackingData = (promo, i) => ({
-    item_type: 'hierarchical-curation-grid_promo',
-    item_text: promo.title,
-    item_position: i + 1,
-    item_resource_id: promo.id,
-    ...(promo.type && { item_media_type: promo.type }),
-    ...(promo.duration && {
-      item_duration_ms: moment
-        .duration(promo.duration, 'seconds')
-        .asMilliseconds(),
-    }),
-    ...eventTrackingData,
+
+  const buildPromoEventTrackingData = (promo: Summary, i: number) => ({
+    itemTracker: {
+      type: 'hierarchical-curation-grid-promo',
+      text: promo.title,
+      position: i + 1,
+      resourceId: promo.id,
+      ...(promo.type && { mediaType: promo.type }),
+      ...(promo.duration && {
+        duration: moment.duration(promo.duration, 'seconds').asMilliseconds(),
+      }),
+    },
+    ...eventTrackingData, // This should already include groupTracker and other event-level data
   });
 
-  // Factory to create click tracker handler for a given promo
   const getClickTrackerHandler = useClickTrackerHandler;
 
   return (
-    <div data-testid="hierarchical-grid" {...viewTracker}>
+    <div data-testid="hierarchical-grid">
       <ul role="list" css={styles.list} data-testid="topic-promos">
         {promoItems.map((promo, i) => {
           const duration = moment.duration(promo.duration, 'seconds');

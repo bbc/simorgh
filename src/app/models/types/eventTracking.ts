@@ -1,15 +1,18 @@
 /* eslint-disable camelcase */
 export type ViewabilityEventTrackingData = {
-  app_type: string;
-  app_name: string;
-  event_category: string;
+  groupTracker: {
+    name: string;
+    type: string;
+    position: string;
+    resourceId?: string;
+    itemCount?: number;
+  };
   page: string;
-  page_title: string;
-  group_name: string;
-  group_type: string;
-  group_position: string;
-  group_resource_id: string | undefined;
-  group_item_count?: number;
+  pageTitle: string;
+  appName: string;
+  componentName: string;
+  eventCategory: string;
+  appType: string;
 };
 export type ReverbClient = {
   isReady: () => boolean;
