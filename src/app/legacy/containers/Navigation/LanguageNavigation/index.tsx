@@ -1,7 +1,7 @@
 import React, { use } from 'react';
 import CollapsibleNavigation from '../../../../components/CollapsibleNavigation';
 import Navigation from '../../../psammead/psammead-navigation/src';
-import { ServiceContext } from '../../../..//contexts/ServiceContext';
+import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 const LanguageNavigation = () => {
   const { script, service, dir, collapsibleNavigation } = use(ServiceContext);
