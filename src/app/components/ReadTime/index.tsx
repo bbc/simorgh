@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import { use } from 'react';
-import isLive from '#app/lib/utilities/isLive';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '#app/hooks/useViewTracker';
@@ -28,7 +27,7 @@ const ReadTime = ({
   className,
 }: ReadTimeProps) => {
   const showReadTime = readTimeVariant && readTimeVariant !== 'off';
-  if (isLive() || !showReadTime) return null;
+  if (!showReadTime) return null;
 
   const { translations } = use(ServiceContext);
   const readTimePrefix =
