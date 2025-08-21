@@ -1,3 +1,4 @@
+import { CollapsibleNavigationSection } from '#app/components/CollapsibleNavigation';
 import {
   Services,
   ServicesWithNoVariants,
@@ -96,6 +97,7 @@ export type ServiceConfig = {
   recommendations?: Recommendations;
   footer: Footer;
   fonts?: ((baseUrlOverride: string) => string)[];
+  collapsibleNavigation?: CollapsibleNavigationSection;
   navigation?: {
     title: string;
     url: string;

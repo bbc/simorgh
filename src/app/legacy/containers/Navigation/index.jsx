@@ -8,7 +8,7 @@ import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { RequestContext } from '#contexts/RequestContext';
 import isLive from '#app/lib/utilities/isLive';
-import LanguageNavigation from '#app/components/LanguageNavigation/lazy';
+import LanguageNavigation from './LanguageNavigation/lazy';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Canonical from './index.canonical';
 import Amp from './index.amp';
