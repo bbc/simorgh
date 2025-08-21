@@ -180,6 +180,7 @@ export default ({
           data={mostRead}
           columnLayout="twoColumn"
           headingBackgroundColour={GHOST}
+          eventTrackingData={viewabilityEventTrackingData}
         />
       );
     case RADIO_SCHEDULE:

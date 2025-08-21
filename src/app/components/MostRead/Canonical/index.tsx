@@ -1,6 +1,7 @@
 import React, { use } from 'react';
 import { shouldRenderLastUpdated } from '#lib/utilities/filterPopularStaleData/isDataStale';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import { ViewabilityEventTrackingData } from '#app/models/types/eventTracking';
 import useViewTracker from '../../../hooks/useViewTracker';
 import { MostReadLink, MostReadItemWrapper } from './Item';
 import MostReadList from './List';
@@ -14,9 +15,7 @@ interface MostReadProps {
   columnLayout?: ColumnLayout;
   size: Size;
   data: MostReadData;
-  eventTrackingData?: {
-    componentName: string;
-  };
+  eventTrackingData?: ViewabilityEventTrackingData;
 }
 
 const MostRead = ({

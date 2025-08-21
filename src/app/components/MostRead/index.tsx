@@ -4,6 +4,7 @@ import useToggle from '#hooks/useToggle';
 import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { OptimizelyContext, ReactSDKClient } from '@optimizely/react-sdk';
+import { ViewabilityEventTrackingData } from '#app/models/types/eventTracking';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Canonical from './Canonical';
 import Amp from './Amp';
@@ -19,9 +20,7 @@ import {
 } from '../../routes/utils/pageTypes';
 import { PageTypes } from '../../models/types/global';
 
-const blockLevelEventTrackingData = {
-  componentName: 'most-read',
-};
+const defaultComponentName = 'most-read';
 
 const mostReadAmpPageTypes: PageTypes[] = [
   STORY_PAGE,
@@ -37,6 +36,7 @@ interface MostReadProps {
   headingBackgroundColour?: string;
   className?: string;
   sendOptimizelyEvents?: boolean;
+  eventTrackingData?: ViewabilityEventTrackingData;
 }
 
 // We render amp on ONLY STY, CSP and ARTICLE pages using amp-list.
@@ -112,6 +112,7 @@ const MostRead = ({
   headingBackgroundColour = WHITE,
   className = '',
   sendOptimizelyEvents = false,
+  eventTrackingData,
 }: MostReadProps) => {
   const { isAmp, pageType, variant } = use(RequestContext);
   const { optimizely } = use(OptimizelyContext);
@@ -138,11 +139,23 @@ const MostRead = ({
     isBff,
   });
 
-  const eventTrackingData = {
-    ...blockLevelEventTrackingData,
-    ...(sendOptimizelyEvents && {
-      optimizely,
-    }),
+  const mergedEventTrackingData: ViewabilityEventTrackingData & {
+    optimizely?: ReactSDKClient | null | undefined;
+  } = {
+    componentName: eventTrackingData?.componentName || defaultComponentName,
+    appName: eventTrackingData?.appName || '',
+    appType: eventTrackingData?.appType || 'responsive',
+    eventCategory: eventTrackingData?.eventCategory || 'viewability',
+    page: eventTrackingData?.page || '',
+    pageTitle: eventTrackingData?.pageTitle || '',
+    groupTracker: {
+      name: eventTrackingData?.groupTracker?.name || '',
+      type: eventTrackingData?.groupTracker?.type || 'most-read',
+      position: eventTrackingData?.groupTracker?.position || '0',
+      resourceId: eventTrackingData?.groupTracker?.resourceId,
+      itemCount: eventTrackingData?.groupTracker?.itemCount,
+    },
+    ...(sendOptimizelyEvents ? { optimizely } : {}),
   };
 
   return isAmp ? (
@@ -162,7 +175,7 @@ const MostRead = ({
       headingBackgroundColour={headingBackgroundColour}
       columnLayout={columnLayout}
       size={size}
-      eventTrackingData={eventTrackingData}
+      eventTrackingData={mergedEventTrackingData}
     />
   );
 };

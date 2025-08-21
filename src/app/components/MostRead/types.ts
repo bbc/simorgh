@@ -1,4 +1,5 @@
 import { OptimoBlock } from '#app/models/types/optimo';
+import { ViewabilityEventTrackingData } from '#app/models/types/eventTracking';
 import { Services, Direction } from '../../models/types/global';
 
 export type Size = 'default' | 'small';
@@ -9,6 +10,7 @@ export interface MostReadBaseProps {
   dir?: Direction;
   columnLayout?: ColumnLayout;
   numberOfItems: number;
+  eventTrackingData?: ViewabilityEventTrackingData;
 }
 
 export interface MostReadItemProps {
@@ -29,9 +31,7 @@ export interface MostReadLinkProps {
   title: string;
   href: string;
   size: Size;
-  eventTrackingData?: {
-    componentName: string;
-  };
+  eventTrackingData?: ViewabilityEventTrackingData;
 }
 
 type ArticleSource = 'cps' | 'optimo';
