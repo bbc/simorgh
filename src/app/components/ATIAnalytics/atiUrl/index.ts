@@ -531,8 +531,12 @@ export const buildReverbEventModel = ({
     label,
     resourceId: itemResourceId,
   } = itemTracker;
-  const { itemCount, resourceId: groupResourceId } = groupTracker;
-
+  const {
+    itemCount,
+    resourceId: groupResourceId,
+    position: groupPosition,
+  } = groupTracker;
+  console.log(itemTracker, groupTracker);
   return {
     params: {
       page: {
@@ -551,8 +555,8 @@ export const buildReverbEventModel = ({
       eventName: type === VIEW_EVENT ? 'sectionView' : 'sectionClick',
       eventPublisher: 'viewability',
       item: {
-        ...(advertiserID && { attribution: advertiserID }),
         name: componentName,
+        ...(advertiserID && { attribution: advertiserID }),
         ...(url && { link: url }),
         ...(itemType && { type: itemType }),
         ...(text && { text }),
@@ -563,8 +567,10 @@ export const buildReverbEventModel = ({
       },
       group: {
         name: campaignID,
+        type: componentName,
         ...(itemCount && { item_count: itemCount }),
         ...(groupResourceId && { resource_id: groupResourceId }),
+        ...(groupPosition && { position: groupPosition }),
       },
       event: {
         category: 'viewability',
