@@ -34,5 +34,5 @@ export default {
 };
 
 export const Example = () => (
-  <Component navigationSections={wsConfig.default.collapsibleNavigation} />
+  <Component navigationSections={wsConfig.default.collapsibleNavigation as CollapsibleNavigationSection[]} />
 );
