@@ -47,6 +47,13 @@ export const service: DefaultServiceConfig = {
     iTunesAppId: 515255747,
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    electionBanner: {
+      electionThingIds: ['647d5613-e0e2-4ef5-b0ce-b491de38bdbd'],
+      iframeSrc:
+        'include/vjafwest/1365-2024-us-presidential-election-banner/mundo/app',
+      iframeDevSrc:
+        'include/vjafwest/1365-2024-us-presidential-election-banner/develop/mundo/app',
+    },
     podcastPromo: {
       title: 'WhatsApp',
       brandTitle: 'Únete a nuestro WhatsApp',

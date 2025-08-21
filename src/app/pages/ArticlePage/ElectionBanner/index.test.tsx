@@ -2,13 +2,17 @@ import React from 'react';
 import { render } from '#app/components/react-testing-library-with-providers';
 import { Tag } from '#app/components/Metadata/types';
 import { MetadataTaggings } from '#app/models/types/metadata';
-import BANNER_CONFIG from './config';
 import ElectionBanner from '.';
 
+const MOCK_ELECTION_THING_ID = '647d5613-e0e2-4ef5-b0ce-b491de38bdbd';
+const MOCK_IFRAME_LIVE_SRC =
+  'include/vjafwest/1365-2024-us-presidential-election-banner/mundo/app';
+const MOCK_IFRAME_DEV_SRC =
+  'include/vjafwest/1365-2024-us-presidential-election-banner/develop/mundo/app';
 const mockAboutTags = [
   { thingId: 'thing1' },
   { thingId: 'thing2' },
-  { thingId: BANNER_CONFIG.usElectionThingId },
+  { thingId: MOCK_ELECTION_THING_ID },
 ] as Tag[];
 
 const mockTaggings: MetadataTaggings = [
@@ -53,11 +57,13 @@ describe('ElectionBanner', () => {
     it.each(['live', 'test'])(
       'should use the correct URL for the iframe when SIMORGH_APP_ENV is "%s"',
       appEnv => {
+        let expectedIframeSrc = '';
         if (appEnv === 'live') {
           process.env.SIMORGH_INCLUDES_BASE_URL =
             'https://www.bbc.com/ws/includes';
           process.env.SIMORGH_INCLUDES_BASE_AMP_URL =
             'https://news.files.bbci.co.uk';
+          expectedIframeSrc = MOCK_IFRAME_LIVE_SRC;
         }
 
         if (appEnv === 'test') {
@@ -65,6 +71,7 @@ describe('ElectionBanner', () => {
             'https://www.test.bbc.com/ws/includes';
           process.env.SIMORGH_INCLUDES_BASE_AMP_URL =
             'https://news.test.files.bbci.co.uk';
+          expectedIframeSrc = MOCK_IFRAME_DEV_SRC;
         }
 
         process.env.SIMORGH_APP_ENV = appEnv;
@@ -72,8 +79,11 @@ describe('ElectionBanner', () => {
         const { getByTestId } = render(
           <ElectionBanner aboutTags={mockAboutTags} taggings={mockTaggings} />,
           {
-            toggles: { electionBanner: { enabled: true } },
+            toggles: {
+              electionBanner: { enabled: true },
+            },
             isAmp,
+            service: 'mundo',
           },
         );
 
@@ -82,16 +92,12 @@ describe('ElectionBanner', () => {
         const iframe = wrappingEl.querySelector('iframe, amp-iframe');
         const iframeSrc = iframe?.getAttribute('src');
 
-        const configSrc = BANNER_CONFIG[
-          appEnv === 'live' ? 'iframeSrc' : 'iframeDevSrc'
-        ].replace('{service}', 'english');
-
         const domain = isAmp
           ? process.env.SIMORGH_INCLUDES_BASE_AMP_URL
           : process.env.SIMORGH_INCLUDES_BASE_URL;
 
         expect(iframeSrc).toEqual(
-          `${domain}/${configSrc}${isAmp ? '/amp' : ''}`,
+          `${domain}/${expectedIframeSrc}${isAmp ? '/amp' : ''}`,
         );
       },
     );
@@ -100,50 +106,15 @@ describe('ElectionBanner', () => {
       const { getByTestId } = render(
         <ElectionBanner aboutTags={mockAboutTags} taggings={mockTaggings} />,
         {
-          toggles: { electionBanner: { enabled: true } },
+          toggles: {
+            electionBanner: { enabled: true },
+          },
           isAmp,
+          service: 'mundo',
         },
       );
 
       expect(getByTestId(ELEMENT_ID)).toBeInTheDocument();
-    });
-
-    it('should render the correct VJ URL for Turkce service', () => {
-      const { getByTestId } = render(
-        <ElectionBanner aboutTags={mockAboutTags} taggings={mockTaggings} />,
-        {
-          toggles: { electionBanner: { enabled: true } },
-          isAmp,
-          service: 'turkce',
-        },
-      );
-
-      const wrappingEl = getByTestId(ELEMENT_ID);
-
-      const iframe = wrappingEl.querySelector('iframe, amp-iframe');
-      const iframeSrc = iframe?.getAttribute('src');
-
-      expect(iframeSrc).not.toContain('/turkce/');
-      expect(iframeSrc).toContain('turkish');
-    });
-
-    it('should render the correct VJ URL for News service', () => {
-      const { getByTestId } = render(
-        <ElectionBanner aboutTags={mockAboutTags} taggings={mockTaggings} />,
-        {
-          toggles: { electionBanner: { enabled: true } },
-          isAmp,
-          service: 'news',
-        },
-      );
-
-      const wrappingEl = getByTestId(ELEMENT_ID);
-
-      const iframe = wrappingEl.querySelector('iframe, amp-iframe');
-      const iframeSrc = iframe?.getAttribute('src');
-
-      expect(iframeSrc).not.toContain('/news/');
-      expect(iframeSrc).toContain('english');
     });
 
     it('should not render ElectionBanner when taggings contain the editorialSensitivityId', () => {
