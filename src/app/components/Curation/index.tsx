@@ -100,7 +100,7 @@ export default ({
     groupTracker: {
       name: curationSubheading,
       type: `${componentName}`,
-      position: `${position + 1}-hello`,
+      position: `${position + 1}`,
       ...(curationId && { resourceId: curationId }),
       ...(Array.isArray(summaries) && summaries.length > 0
         ? { itemCount: summaries.length }

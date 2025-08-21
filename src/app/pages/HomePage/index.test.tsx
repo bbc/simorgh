@@ -421,18 +421,17 @@ describe('Home Page', () => {
 
       const firstCuration = afriqueHomePageData.curations[0];
       const expectedTrackingData = {
-        app_name: 'news-afrique',
-        app_type: 'responsive',
-        event_category: 'viewability',
-        group_item_count: 4, // if the fixture data changes this will fail, but typescript does not like summaries.length
-        group_name: firstCuration.title,
-        group_position: '1',
-        group_resource_id: firstCuration.curationId,
-        group_type: 'hierarchical-curation-grid',
-        page: 'index-home',
-        page_title: 'Accueil - BBC News Afrique',
+        componentName: 'hierarchical-curation-grid',
+        groupTracker: {
+          itemCount: 4, // if the fixture data changes this will fail
+          name: firstCuration.title,
+          position: '1',
+          resourceId: firstCuration.curationId,
+          type: 'hierarchical-curation-grid',
+        },
       };
 
+      // Check the groupTracker structure
       expect(useViewTracker).toHaveBeenCalledWith(
         expect.objectContaining(expectedTrackingData),
       );
