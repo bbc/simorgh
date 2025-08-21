@@ -8,7 +8,6 @@ import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
-import isLive from '#app/lib/utilities/isLive';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
 import Headings from '#containers/Headings';
@@ -101,7 +100,6 @@ const getImageComponent =
 
 // EXPERIMENT: Read Time
 const Placeholder = ({ className }: { className?: string }) => {
-  if (isLive()) return null;
   const { service } = use(ServiceContext);
   const servicesInExperiment = ['turkce', 'mundo'];
   return servicesInExperiment.includes(service) ? (
@@ -472,8 +470,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                 liteCTAShows={liteCTAShows}
               />
             )}
+            {/* EXPERIMENT: Read Time */}
             {readTimeValue && <OptimizelyPageMetrics trackPageComplete />}
           </main>
+          {/* EXPERIMENT: Read Time */}
           {readTimeValue && (
             <OptimizelyPageMetrics trackPageView trackPageDepth />
           )}
