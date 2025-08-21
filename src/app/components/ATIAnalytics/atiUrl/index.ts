@@ -569,7 +569,7 @@ export const buildReverbEventModel = ({
       group: {
         name: campaignID,
         type: componentName,
-        link,
+        ...(link && { link }),
         ...(itemCount && { item_count: itemCount }),
         ...(groupResourceId && { resource_id: groupResourceId }),
         ...(groupPosition && { position: groupPosition }),
