@@ -20,12 +20,12 @@ export const timestampsFixtures = {
     isRelative: true,
   },
   'exact date': {
-    time: 1539188425274,
+    time: 1539188425274, // 10 October 2019
     isRelative: false,
     dateTimeFormat: formatDate,
   },
   'exact date and time with timezone': {
-    time: 1562936158365,
+    time: 1562936158365, // 12 July 2019, 13:55 GMT
     isRelative: false,
     dateTimeFormat: formatDateAndTime,
   },
