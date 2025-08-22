@@ -66,9 +66,14 @@ const ReadTime = ({
     },
   };
 
-  // Can remove disable-next-line when we remove isLive check
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const viewRef = useViewTracker(eventTrackingData);
+
+  // EXPERIMENT: Read Time
+  const renderControlVariant = readTimeVariant === 'control';
+
+  if (renderControlVariant)
+    return <div {...viewRef} css={styles.readTimePlaceholderControl} />;
 
   return (
     <div

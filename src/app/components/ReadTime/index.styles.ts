@@ -1,4 +1,5 @@
 import { css, Theme } from '@emotion/react';
+import pixelsToRem from '../../utilities/pixelsToRem';
 
 export default {
   readTimeText: ({ palette }: Theme) =>
@@ -14,5 +15,9 @@ export default {
       [mq.GROUP_4_MIN_WIDTH]: {
         margin: `0 0 ${spacings.DOUBLE}rem`,
       },
+    }),
+  readTimePlaceholderControl: () =>
+    css({
+      margin: `0 0 ${pixelsToRem(34.5)}rem`,
     }),
 };

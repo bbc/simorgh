@@ -183,8 +183,10 @@ const getPodcastPromoComponent = (podcastPromoEnabled: boolean) => () =>
 const getHeadlineComponent =
   (readTimeData: ReadTimeData) => (props: ComponentToRenderProps) => {
     const { readTimeValue, readTimeLocation, readTimeVariant } = readTimeData;
+    // Ensures we send view event for control variant
     const showReadTimeBelowHeadline =
-      readTimeValue && readTimeLocation === 'headline';
+      (readTimeValue && readTimeLocation === 'headline') ||
+      (readTimeValue && readTimeLocation === 'control');
     return (
       <>
         <ArticleHeadline
@@ -267,7 +269,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       return 'timestamp';
     }
     if (readTimeExperimentVariant.includes('control')) {
-      return 'off';
+      return 'control';
     }
     return 'off';
   })();
