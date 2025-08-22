@@ -63,6 +63,9 @@ export default ({
   };
 
   const visualStyleAndProminence = `${visualStyle}_${visualProminence}`;
-
+  console.log(
+    'get component name',
+    componentsByVisualStyleAndProminence[visualStyleAndProminence] || null,
+  );
   return componentsByVisualStyleAndProminence[visualStyleAndProminence] || null;
 };
