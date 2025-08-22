@@ -90,7 +90,7 @@ const CurationPromo = ({
           {lastPublished}
         </Promo.Timestamp>
       ) : null}
-      {!isLive && readTime && <p>readtime: {readTime}</p>}
+      {!isLive && readTime && <Promo.ReadTime>{readTime}</Promo.ReadTime>}
     </Promo>
   );
 };
