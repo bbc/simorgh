@@ -13,7 +13,7 @@ export const service: DefaultServiceConfig = {
     articleTimestampPrefix: 'به روز شده در',
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-dari',
-    atiAnalyticsProducerId: '69',
+    atiAnalyticsProducerId: '142',
     atiAnalyticsProducerName: 'DARI',
     useReverb: true,
     chartbeatDomain: 'dari.bbc.co.uk',
