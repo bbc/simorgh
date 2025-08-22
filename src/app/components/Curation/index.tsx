@@ -1,16 +1,14 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { use } from 'react';
 import {
   Curation,
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
 import RadioSchedule from '#app/legacy/containers/RadioSchedule';
-import { ServiceContext } from '#contexts/ServiceContext';
-import type { ViewabilityEventTrackingData } from '#app/models/types/eventTracking';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
@@ -69,11 +67,7 @@ export default ({
   portraitVideo,
   renderVisuallyHiddenH2Title = false,
   curationId,
-  contentType,
-  pageTitle,
 }: Curation) => {
-  const { service, homePageTitle } = use(ServiceContext);
-
   const componentName = getComponentName({
     visualStyle,
     visualProminence,
@@ -102,26 +96,19 @@ export default ({
 
   const messageBannerId = `message-banner-${nthCurationByStyleAndProminence}`;
 
-  const viewabilityEventTrackingData: ViewabilityEventTrackingData = {
+  const viewabilityEventTrackingData: EventTrackingData = {
     groupTracker: {
       name: curationSubheading,
       type: `${componentName}`,
+      link,
       position: `${position + 1}`,
       ...(curationId && { resourceId: curationId }),
       ...(Array.isArray(summaries) && summaries.length > 0
         ? { itemCount: summaries.length }
         : {}),
     },
-    page: contentType ?? '',
-    pageTitle: `${homePageTitle} - ${pageTitle}`,
-    appName: `news-${service}`,
     componentName,
-    eventCategory: 'viewability',
-    appType: 'responsive',
   };
-  // need to add object groupTracker
-  // and itemTracker object (inside the component)
-  // https://github.com/bbc/simorgh/blob/cef761132850fa4373795ae0d422494d722c2df3/src/app/components/ATIAnalytics/atiUrl/index.ts#L511
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const viewTracker = useViewTracker(viewabilityEventTrackingData as any);
   // click tracker for curation subheading (if link is present)

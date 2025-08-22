@@ -1,19 +1,4 @@
-/* eslint-disable camelcase */
-export type ViewabilityEventTrackingData = {
-  groupTracker: {
-    name: string;
-    type: string;
-    position: string;
-    resourceId?: string;
-    itemCount?: number;
-  };
-  page: string;
-  pageTitle: string;
-  appName: string;
-  componentName: string;
-  eventCategory: string;
-  appType: string;
-};
+// Types consolidated into ATIAnalytics/types.ts. Use EventTrackingData everywhere.
 export type ReverbClient = {
   isReady: () => boolean;
   initialise: () => Promise<void>;

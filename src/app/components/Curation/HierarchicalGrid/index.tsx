@@ -62,7 +62,7 @@ const HiearchicalGrid = ({
         duration: moment.duration(promo.duration, 'seconds').asMilliseconds(),
       }),
     },
-    ...eventTrackingData, // This should already include groupTracker and other event-level data
+    ...eventTrackingData,
   });
 
   const getClickTrackerHandler = useClickTrackerHandler;

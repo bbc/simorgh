@@ -7,9 +7,11 @@ import path from 'ramda/src/path';
 import formatDuration from '#app/lib/utilities/formatDuration';
 import Promo from '#components/Promo';
 import { Summary } from '#app/models/types/curationData';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
+
 import LiveLabel from '../../LiveLabel';
 
 import styles from './index.styles';
@@ -26,6 +28,7 @@ const CurationPromo = ({
   duration: mediaDuration,
   headingLevel = 2,
   isLive,
+  eventTrackingData,
 }: Summary) => {
   const { isAmp, isLite } = use(RequestContext);
   const { translations } = use(ServiceContext);
@@ -47,6 +50,8 @@ const CurationPromo = ({
     (type === 'audio' && `${audioTranslation}, `) ||
     (type === 'video' && `${videoTranslation}, `) ||
     (type === 'photogallery' && `${photoGalleryTranslation}, `);
+
+  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
   return (
     <Promo css={styles.promo} className="">
       {imageUrl && (
@@ -66,7 +71,7 @@ const CurationPromo = ({
       )}
       <Promo.Heading as={`h${headingLevel}`}>
         {isMedia ? (
-          <Promo.A href={link} aria-labelledby={id}>
+          <Promo.A href={link} aria-labelledby={id} {...clickTrackerHandler}>
             <span id={id} role="text">
               <VisuallyHiddenText data-testid="visually-hidden-text">
                 {typeTranslated}
@@ -78,7 +83,7 @@ const CurationPromo = ({
             </span>
           </Promo.A>
         ) : (
-          <Promo.A href={link}>
+          <Promo.A href={link} {...clickTrackerHandler}>
             {isLive ? <LiveLabel>{title}</LiveLabel> : title}
           </Promo.A>
         )}

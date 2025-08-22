@@ -1,3 +1,4 @@
+import { fireEvent } from '@testing-library/react';
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
@@ -6,6 +7,7 @@ import { data as afriqueHomePageDataFixture } from '#data/afrique/homePage/index
 import { data as pidginHomePageDataFixture } from '#data/pidgin/homePage/index.json';
 import { service as pidginServiceConfig } from '#app/lib/config/services/pidgin';
 import useViewTracker from '../../hooks/useViewTracker';
+import useClickTrackerHandler from '../../hooks/useClickTrackerHandler';
 import {
   render,
   screen,
@@ -13,8 +15,18 @@ import {
 import HomePage from './HomePage';
 import { suppressPropWarnings } from '../../legacy/psammead/psammead-test-helpers/src';
 
+jest.mock('../../hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  default: jest.fn(),
+}));
+
 // Mock useViewTracker hook globally
 jest.mock('../../hooks/useViewTracker', () => ({
+  __esModule: true,
+  default: jest.fn(),
+}));
+
+jest.mock('../../hooks/useClickTrackerHandler', () => ({
   __esModule: true,
   default: jest.fn(),
 }));
@@ -412,6 +424,7 @@ describe('Home Page', () => {
   describe('Viewability Analytics', () => {
     beforeEach(() => {
       (useViewTracker as jest.Mock).mockClear();
+      (useClickTrackerHandler as jest.Mock).mockClear?.();
     });
 
     it('Hierarchical curation - calls useViewTracker with correct viewability event tracking data for the first curation', () => {
@@ -421,20 +434,86 @@ describe('Home Page', () => {
 
       const firstCuration = afriqueHomePageData.curations[0];
       const expectedTrackingData = {
-        app_name: 'news-afrique',
-        app_type: 'responsive',
-        event_category: 'viewability',
-        group_item_count: 4, // if the fixture data changes this will fail, but typescript does not like summaries.length
-        group_name: firstCuration.title,
-        group_position: '1',
-        group_resource_id: firstCuration.curationId,
-        group_type: 'hierarchical-curation-grid',
-        page: 'index-home',
-        page_title: 'Accueil - BBC News Afrique',
+        componentName: 'hierarchical-curation-grid',
+        groupTracker: {
+          itemCount: 4, // if the fixture data changes this will fail
+          name: firstCuration.title,
+          position: '1',
+          resourceId: firstCuration.curationId,
+          type: 'hierarchical-curation-grid',
+        },
       };
 
       expect(useViewTracker).toHaveBeenCalledWith(
         expect.objectContaining(expectedTrackingData),
+      );
+    });
+
+    describe('Hierarchical curation - click tracking', () => {
+      it.each([
+        {
+          description: 'promo link',
+          getElement: () =>
+            document.querySelector(
+              '[data-testid="hierarchical-grid"] ul[role="list"] a',
+            ) as HTMLAnchorElement,
+          getExpectedData: (data: typeof afriqueHomePageData) => {
+            const promo = data.curations[0]?.summaries?.[0];
+            return expect.objectContaining({
+              componentName: 'hierarchical-curation-grid',
+              groupTracker: expect.any(Object),
+              itemTracker: expect.objectContaining({
+                type: 'hierarchical-curation-grid-promo',
+                text: promo?.title,
+                position: 1,
+                resourceId: promo?.id,
+              }),
+            });
+          },
+          click: true,
+        },
+        {
+          description: 'curation subheading link',
+          getElement: () => {
+            const section = document.querySelector(
+              'section[aria-labelledby="high-collection-2"]',
+            );
+            const subheading = section?.querySelector('h2#high-collection-2');
+            return subheading?.querySelector('a') as HTMLAnchorElement;
+          },
+          getExpectedData: (data: typeof afriqueHomePageData) => {
+            const curation = data.curations[3];
+            return expect.objectContaining({
+              groupTracker: expect.objectContaining({
+                name: curation.title,
+                type: 'hierarchical-curation-grid',
+                link: curation.link,
+                position: '4',
+                resourceId: curation.curationId,
+              }),
+              componentName: 'hierarchical-curation-grid',
+            });
+          },
+          click: true,
+        },
+      ])(
+        'calls click tracking handler with correct data for $description',
+        ({ getElement, getExpectedData, click }) => {
+          render(<HomePage pageData={afriqueHomePageData} />, {
+            service: 'afrique',
+          });
+
+          const element = getElement();
+          expect(element).toBeInTheDocument();
+
+          if (click) {
+            fireEvent.click(element);
+          }
+
+          expect(useClickTrackerHandler as jest.Mock).toHaveBeenCalledWith(
+            getExpectedData(afriqueHomePageData),
+          );
+        },
       );
     });
   });

@@ -21,7 +21,6 @@ const Subhead = ({
   ...curationSubheadingClickTracker
 }: PropsWithChildren<Props>) => {
   const { dir } = use(ServiceContext);
-
   const Wrapper = link
     ? ({ children: innerChildren }: PropsWithChildren<Props>) => (
         <a
