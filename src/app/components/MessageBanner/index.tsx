@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, useTheme } from '@emotion/react';
 import useViewTracker from '#app/hooks/useViewTracker';
-import { EventTrackingMetadata } from '#app/models/types/eventTracking';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import Paragraph from '../Paragraph';
 import Heading from '../Heading';
 import Image from '../Image';
@@ -15,7 +15,7 @@ interface MessageBannerProps {
   linkText: string;
   image?: string;
   id?: string;
-  eventTrackingData?: EventTrackingMetadata;
+  eventTrackingData?: EventTrackingData;
 }
 const MessageBanner = ({
   heading,

@@ -96,24 +96,16 @@ export default ({
   const messageBannerId = `message-banner-${nthCurationByStyleAndProminence}`;
 
   const viewabilityEventTrackingData: EventTrackingData = {
+    componentName,
     groupTracker: {
       name: curationSubheading,
       type: `${componentName}`,
-      link,
       position: `${position + 1}`,
+      ...(link && { link }),
       ...(curationId && { resourceId: curationId }),
-      ...(Array.isArray(summaries) && summaries.length > 0
-        ? { itemCount: summaries.length }
-        : {}),
+      ...(summaries?.length > 0 && { itemCount: summaries.length }),
     },
-    componentName,
   };
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const viewTracker = useViewTracker(viewabilityEventTrackingData as any);
-  // click tracker for curation subheading (if link is present)
-  const curationSubheadingClickTracker = link
-    ? useClickTrackerHandler(viewabilityEventTrackingData)
-    : undefined;
 
   switch (componentName) {
     case NOT_SUPPORTED:
@@ -144,6 +136,17 @@ export default ({
     }
     case MESSAGE_BANNER:
       if (firstSummary) {
+        // Remove itemCount from groupTracker as it's not needed for MessageBanner
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const { itemCount, ...groupTrackerRest } =
+          viewabilityEventTrackingData.groupTracker || {};
+
+        const eventTrackingData = {
+          ...viewabilityEventTrackingData,
+          groupTracker: groupTrackerRest,
+          componentName,
+        };
+
         return (
           <MessageBanner
             heading={title}
@@ -152,10 +155,7 @@ export default ({
             linkText={linkText}
             image={imageUrl}
             id={messageBannerId}
-            eventTrackingData={{
-              componentName: messageBannerId,
-              detailedPlacement: `${position + 1}`,
-            }}
+            eventTrackingData={eventTrackingData}
           />
         );
       }
@@ -208,6 +208,12 @@ export default ({
     case HIERARCHICAL_CURATION_GRID:
     default:
       if (summaries.length > 0) {
+        const viewTracker = useViewTracker(viewabilityEventTrackingData);
+
+        const curationSubheadingClickTracker = useClickTrackerHandler(
+          viewabilityEventTrackingData,
+        );
+
         return curationLength > 1 ? (
           <section aria-labelledby={id} role="region">
             <div {...viewTracker}>
