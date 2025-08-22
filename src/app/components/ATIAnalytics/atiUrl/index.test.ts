@@ -539,6 +539,7 @@ describe('Reverb', () => {
         item_count: 11,
         name: '1234',
         resource_id: 'blockLevelResourceId',
+        type: 'top-stories',
       });
     });
 
