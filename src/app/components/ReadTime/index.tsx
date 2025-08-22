@@ -69,9 +69,9 @@ const ReadTime = ({
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const viewRef = useViewTracker(eventTrackingData);
 
-  const renderControlVariant = readTimeVariant === 'control';
+  const isControlVariant = readTimeVariant === 'control';
 
-  if (renderControlVariant)
+  if (isControlVariant)
     return <div {...viewRef} css={styles.readTimePlaceholderControl} />;
 
   return (

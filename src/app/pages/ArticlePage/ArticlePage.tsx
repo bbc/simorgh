@@ -185,8 +185,8 @@ const getHeadlineComponent =
     const { readTimeValue, readTimeLocation, readTimeVariant } = readTimeData;
     // Ensures we send view event for control variant
     const showReadTimeBelowHeadline =
-      (readTimeValue && readTimeLocation === 'headline') ||
-      (readTimeValue && readTimeLocation === 'control');
+      !!readTimeValue && ['headline', 'control'].includes(readTimeLocation);
+
     return (
       <>
         <ArticleHeadline
