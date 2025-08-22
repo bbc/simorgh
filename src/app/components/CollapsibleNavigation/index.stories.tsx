@@ -4,9 +4,9 @@ import ThemeProvider from '#app/components/ThemeProvider';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import CollapsibleNavigation from './index';
 import type { CollapsibleNavigationSection } from './types';
-import collapsibleNavigationSections from './constants';
 import metadata from './metadata.json';
 import readme from './README.md';
+import { service as wsConfig } from '#app/lib/config/services/ws';
 
 const Component = ({
   navigationSections,
@@ -34,5 +34,5 @@ export default {
 };
 
 export const Example = () => (
-  <Component navigationSections={collapsibleNavigationSections} />
+  <Component navigationSections={wsConfig.default.collapsibleNavigation as CollapsibleNavigationSection[]} />
 );
