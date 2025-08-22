@@ -11,6 +11,12 @@ export default {
   chartbeatAnalytics: {
     enabled: true,
   },
+  comscoreAnalytics: {
+    enabled: true,
+  },
+  electionBanner: {
+    enabled: true,
+  },
   enableFetchingToggles: {
     enabled: true,
     value:
@@ -19,7 +25,13 @@ export default {
   eventTracking: {
     enabled: true,
   },
+  homePageRadioSchedule: {
+    enabled: true,
+  },
   include: {
+    enabled: true,
+  },
+  liveRadioSchedule: {
     enabled: true,
   },
   midArticleOnwardJourney: {
@@ -31,13 +43,13 @@ export default {
   nielsenAnalytics: {
     enabled: true,
   },
+  onDemandRadioSchedule: {
+    enabled: true,
+  },
   preloadLeadImage: {
     enabled: true,
   },
   prerollAds: {
-    enabled: true,
-  },
-  radioSchedule: {
     enabled: true,
   },
   scriptLink: {
