@@ -69,7 +69,6 @@ const ReadTime = ({
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const viewRef = useViewTracker(eventTrackingData);
 
-  // EXPERIMENT: Read Time
   const renderControlVariant = readTimeVariant === 'control';
 
   if (renderControlVariant)
