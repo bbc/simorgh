@@ -74,7 +74,6 @@ export default ({
     radioSchedule,
     embed,
   });
-
   const GridComponent = getGridComponent(componentName);
 
   const isFirstCuration = position === 0;
@@ -215,8 +214,8 @@ export default ({
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:
-      if (curationLength > 1) {
-        return (
+      if (summaries.length > 0) {
+        return curationLength > 1 ? (
           <section aria-labelledby={id} role="region">
             <div {...viewTracker}>
               {curationSubheading &&
@@ -241,17 +240,17 @@ export default ({
               />
             </div>
           </section>
+        ) : (
+          <div {...viewTracker}>
+            <GridComponent
+              summaries={summaries}
+              headingLevel={2} // if there is only one curation, all promos should be h2, and no subheading
+              isFirstCuration={isFirstCuration}
+              eventTrackingData={viewabilityEventTrackingData}
+            />
+          </div>
         );
       }
-      return (
-        <div {...viewTracker}>
-          <GridComponent
-            summaries={summaries}
-            headingLevel={2} // if there is only one curation, all promos should be h2, and no subheading
-            isFirstCuration={isFirstCuration}
-            eventTrackingData={viewabilityEventTrackingData}
-          />
-        </div>
-      );
+      return null;
   }
 };
