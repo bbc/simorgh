@@ -64,5 +64,8 @@ export default ({
 
   const visualStyleAndProminence = `${visualStyle}_${visualProminence}`;
 
-  return componentsByVisualStyleAndProminence[visualStyleAndProminence] || null;
+  return (
+    componentsByVisualStyleAndProminence[visualStyleAndProminence] ||
+    SIMPLE_CURATION_GRID
+  );
 };

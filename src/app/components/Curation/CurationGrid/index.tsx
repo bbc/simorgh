@@ -15,7 +15,6 @@ const CurationGrid = ({
   const firstPromo = summaries[0];
 
   const viewTracker = useViewTracker(eventTrackingData);
-  console.log('curation grid eventTrackingData', eventTrackingData);
   if (summaries.length === 0) {
     return null;
   }
