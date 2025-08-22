@@ -70,7 +70,6 @@ const MostRead = ({
               dir={direction}
               key={id}
               columnLayout={columnLayout}
-              ref={viewTracker}
             >
               <MostReadRank
                 service={service}
@@ -86,7 +85,19 @@ const MostRead = ({
                 title={title}
                 href={href}
                 size={size}
-                eventTrackingData={eventTrackingData}
+                eventTrackingData={
+                  eventTrackingData
+                    ? {
+                        ...eventTrackingData,
+                        itemTracker: {
+                          type: 'most-read-promo',
+                          text: title,
+                          position: i + 1,
+                          resourceId: id || href,
+                        },
+                      }
+                    : undefined
+                }
               >
                 {shouldRenderLastUpdated(timestamp) && timestamp && (
                   <LastUpdated
