@@ -1,11 +1,11 @@
 import React from 'react';
 
-const PromoReadTime = ({ children }) => {
-  if (!children) {
+const PromoReadTime = ({ children, isLive, className = '' }) => {
+  if (!children || isLive) {
     return null;
   }
 
-  return <p>readtime: {children}</p>;
+  return <p className={className}>readtime: {children}</p>;
 };
 
 export default PromoReadTime;

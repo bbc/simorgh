@@ -137,9 +137,9 @@ const HiearchicalGrid = ({
                     </Promo.A>
                   )}
                 </Promo.Heading>
-                {!isLive && promo.readTime && (
-                  <Promo.ReadTime>{promo.readTime}</Promo.ReadTime>
-                )}
+                <Promo.ReadTime isLive={isLive}>
+                  {promo.readTime}
+                </Promo.ReadTime>
                 <Promo.Body className="promo-paragraph" css={styles.body}>
                   {promo.description}
                 </Promo.Body>
