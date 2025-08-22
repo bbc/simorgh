@@ -26,7 +26,17 @@ const MessageBanner = ({
   id = 'message-banner-1',
   eventTrackingData,
 }: MessageBannerProps) => {
-  const viewTracker = useViewTracker(eventTrackingData);
+  // Remove itemCount from groupTracker as it's not needed for MessageBanner
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { itemCount, ...groupTrackerRest } =
+    eventTrackingData?.groupTracker || {};
+
+  const eventTrackingDataWithoutItemCount = eventTrackingData && {
+    ...eventTrackingData,
+    groupTracker: groupTrackerRest,
+  };
+
+  const viewTracker = useViewTracker(eventTrackingDataWithoutItemCount);
 
   const { mq } = useTheme();
 

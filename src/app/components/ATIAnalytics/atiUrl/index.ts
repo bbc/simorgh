@@ -531,13 +531,14 @@ export const buildReverbEventModel = ({
     label,
     resourceId: itemResourceId,
   } = itemTracker;
+
   const {
     itemCount,
     resourceId: groupResourceId,
     position: groupPosition,
     link,
   } = groupTracker;
-  console.log(itemTracker, groupTracker);
+
   return {
     params: {
       page: {

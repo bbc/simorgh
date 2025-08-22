@@ -93,7 +93,7 @@ export default ({
     title: linkText,
   } = firstSummary || {};
 
-  const viewabilityEventTrackingData: EventTrackingData = {
+  const eventTrackingData: EventTrackingData = {
     componentName,
     groupTracker: {
       name: curationSubheading,
@@ -134,17 +134,6 @@ export default ({
     }
     case MESSAGE_BANNER:
       if (firstSummary) {
-        // Remove itemCount from groupTracker as it's not needed for MessageBanner
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        const { itemCount, ...groupTrackerRest } =
-          viewabilityEventTrackingData.groupTracker || {};
-
-        const eventTrackingData = {
-          ...viewabilityEventTrackingData,
-          groupTracker: groupTrackerRest,
-          componentName,
-        };
-
         return (
           <MessageBanner
             heading={title}
@@ -206,11 +195,10 @@ export default ({
     case HIERARCHICAL_CURATION_GRID:
     default:
       if (summaries.length > 0) {
-        const viewTracker = useViewTracker(viewabilityEventTrackingData);
+        const viewTracker = useViewTracker(eventTrackingData);
 
-        const curationSubheadingClickTracker = useClickTrackerHandler(
-          viewabilityEventTrackingData,
-        );
+        const curationSubheadingClickTracker =
+          useClickTrackerHandler(eventTrackingData);
 
         return curationLength > 1 ? (
           <section aria-labelledby={id} role="region">
@@ -233,7 +221,7 @@ export default ({
                 summaries={summaries}
                 headingLevel={3}
                 isFirstCuration={isFirstCuration}
-                eventTrackingData={viewabilityEventTrackingData}
+                eventTrackingData={eventTrackingData}
               />
             </div>
           </section>
@@ -243,7 +231,7 @@ export default ({
               summaries={summaries}
               headingLevel={2} // if there is only one curation, all promos should be h2, and no subheading
               isFirstCuration={isFirstCuration}
-              eventTrackingData={viewabilityEventTrackingData}
+              eventTrackingData={eventTrackingData}
             />
           </div>
         );
