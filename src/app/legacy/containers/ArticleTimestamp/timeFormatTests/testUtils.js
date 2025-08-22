@@ -1,4 +1,4 @@
-import * as moment from 'moment-timezone';
+import moment from 'moment-timezone';
 import { timestampGenerator } from '../testHelpers';
 import { formatDate, formatDateAndTime } from '../timeFormats';
 
@@ -20,25 +20,34 @@ export const timestampsFixtures = {
     isRelative: true,
   },
   'exact date': {
-    time: 1539188425274, // 10 October 2019
+    // 2018-10-10T16:20:25.274Z
+    time: 1539188425274,
     isRelative: false,
     dateTimeFormat: formatDate,
   },
   'exact date and time with timezone': {
-    time: 1562936158365, // 12 July 2019, 13:55 GMT
+    // 2019-07-12T12:55:58.365Z
+    time: 1562936158365,
     isRelative: false,
     dateTimeFormat: formatDateAndTime,
   },
 };
 
-export const format = ({ datetimeLocale, timezone, fixture }) => {
-  return timestampsFixtures[fixture].isRelative
-    ? moment
-        .tz(timestampsFixtures[fixture].time, timezone)
-        .locale(datetimeLocale)
-        .fromNow()
-    : moment
-        .tz(timestampsFixtures[fixture].time, timezone)
-        .locale(datetimeLocale)
-        .format(timestampsFixtures[fixture].dateTimeFormat(datetimeLocale));
+export const format = ({ datetimeLocale, timezone, fixture, altCalendar }) => {
+  const { time, isRelative, dateTimeFormat } = timestampsFixtures[fixture];
+  const dateWithTimezone = moment.tz(time, timezone).locale(datetimeLocale);
+
+  if (isRelative) {
+    return dateWithTimezone.fromNow();
+  }
+
+  const formatted = dateWithTimezone.format(dateTimeFormat(datetimeLocale));
+
+  if (altCalendar) {
+    const altCalendarFormatted = altCalendar.formatDate(dateWithTimezone);
+
+    return `${altCalendarFormatted} - ${formatted}`;
+  }
+
+  return formatted;
 };
