@@ -8,10 +8,59 @@ import {
 } from '#psammead/gel-foundations/src/spacings';
 import { GEL_FF_REITH_SANS } from '#psammead/gel-foundations/src/typography';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import {
+  formatDate,
+  formatDateAndTime,
+} from '../../../containers/ArticleTimestamp/timeFormats';
 
 import notes from '../README.md';
 
 const timeFunctions = [];
+
+const formatDateAltCalendar = ({ date, altCalendar, format }) => {
+  return `${altCalendar.formatDate(date)} - ${date.format(format)}`;
+};
+
+const fixedTimestamp = '2019-08-27T13:54:21.212Z';
+const fixedDate = moment(fixedTimestamp);
+
+timeFunctions.push({ heading: 'Common Timestamp Formats' });
+
+timeFunctions.push(
+  ...[
+    {
+      subheading: `Exact Date - ${new Intl.DateTimeFormat('en-gb', {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+      }).format(fixedDate)}`,
+    },
+    (locale, altCalendar) => {
+      const format = formatDate(locale);
+      const date = fixedDate.locale(locale);
+      return altCalendar
+        ? formatDateAltCalendar({ date, altCalendar, format })
+        : date.format(format);
+    },
+    timeFunctions.push({ heading: '' }),
+    {
+      subheading: `Exact Date and Time with Timezone - ${new Intl.DateTimeFormat(
+        'en-GB',
+        {
+          dateStyle: 'long',
+          timeStyle: 'long',
+        }
+      ).format(fixedDate)}`,
+    },
+    (locale, altCalendar, timezone = 'GMT') => {
+      const format = formatDateAndTime(locale);
+      const date = moment(new Date(fixedTimestamp), timezone).locale(locale);
+      return altCalendar
+        ? formatDateAltCalendar({ date, altCalendar, format })
+        : date.format(format);
+    },
+  ]
+);
 
 timeFunctions.push({ heading: 'Days of the Week' });
 
@@ -44,15 +93,30 @@ Array.from({ length: 12 }, (_, index) => index).forEach((month) => {
   );
 });
 
+const currentYear = new Date().getFullYear();
+const years = Array.from({ length: 11 }, (_, i) => currentYear - 5 + i);
+
 timeFunctions.push({
-  heading: 'Years (±5 from current year)',
+  heading: `Years (±5 from ${currentYear})`,
 });
 
-const currentYear = new Date().getFullYear();
-Array.from({ length: 11 }, (_, i) => currentYear - 5 + i).forEach((year) => {
+years.forEach((year) => {
   timeFunctions.push((locale) =>
     moment(`${year}0101`).locale(locale).format('YYYY')
   );
+});
+
+timeFunctions.push({
+  heading: `Alternative Calendar Years (±5 from ${currentYear})`,
+});
+years.forEach((year) => {
+  timeFunctions.push((locale, altCalendar) => {
+    const lastYear = moment(`${year}0101`).locale(locale);
+    const thisYear = moment(`${year}0601`).locale(locale);
+    return altCalendar
+      ? `${altCalendar.formatDate(lastYear).split(' ')[2]} - ${altCalendar.formatDate(thisYear).split(' ')[2]}`
+      : thisYear.format('YYYY');
+  });
 });
 
 timeFunctions.push({
@@ -74,94 +138,6 @@ Array.from({ length: 31 }, (_, index) => index).forEach((day) => {
   );
 });
 
-timeFunctions.push({ heading: 'Common Timestamp Formats' });
-
-// Fixed timestamp for 27 August 2019, 14:54 BST (Tuesday)
-const fixedTimestamp = 1566914061212;
-
-timeFunctions.push(
-  ...[
-    (locale) => moment(fixedTimestamp).locale(locale).format('Do MMM YYYY'),
-    (locale) => moment().locale(locale).subtract({ m: 1 }).fromNow(),
-    (locale) => moment().locale(locale).subtract({ m: 5 }).fromNow(),
-    (locale) =>
-      moment(fixedTimestamp)
-        .locale(locale)
-        .startOf('hour')
-        .from(fixedTimestamp),
-    (locale) =>
-      moment(fixedTimestamp)
-        .locale(locale)
-        .startOf('day')
-        .add(6, 'hours')
-        .from(fixedTimestamp),
-    (locale) =>
-      moment(fixedTimestamp).subtract({ d: 26 }).locale(locale).format('LL'),
-    (locale) =>
-      moment(fixedTimestamp).subtract({ d: 26 }).locale(locale).format('LLL'),
-    (locale) => moment(fixedTimestamp).locale(locale).format('LL'),
-    (locale) => moment(fixedTimestamp).locale(locale).format('LLL'),
-    {
-      heading: 'Other Timestamp Formats',
-    },
-    (locale) =>
-      moment(fixedTimestamp).locale(locale).format('MMMM Do YYYY, h:mm:ss a'),
-    (locale) =>
-      moment(fixedTimestamp).locale(locale).format('YYYY [escaped text] YYYY'),
-    (locale) => moment(fixedTimestamp).locale(locale).format(),
-    (locale) =>
-      moment('20111031', 'YYYYMMDD').locale(locale).from(fixedTimestamp),
-    (locale) =>
-      moment('20120620', 'YYYYMMDD').locale(locale).from(fixedTimestamp),
-    (locale) =>
-      moment(fixedTimestamp).locale(locale).endOf('day').from(fixedTimestamp),
-    (locale) =>
-      moment(fixedTimestamp)
-        .locale(locale)
-        .subtract(10, 'days')
-        .calendar(fixedTimestamp),
-    (locale) =>
-      moment(fixedTimestamp)
-        .locale(locale)
-        .subtract(6, 'days')
-        .calendar(fixedTimestamp),
-    (locale) =>
-      moment(fixedTimestamp)
-        .locale(locale)
-        .subtract(3, 'days')
-        .calendar(fixedTimestamp),
-    (locale) =>
-      moment(fixedTimestamp)
-        .locale(locale)
-        .subtract(1, 'days')
-        .calendar(fixedTimestamp),
-    (locale) => moment(fixedTimestamp).locale(locale).calendar(fixedTimestamp),
-    (locale) =>
-      moment(fixedTimestamp)
-        .locale(locale)
-        .add(1, 'days')
-        .calendar(fixedTimestamp),
-    (locale) =>
-      moment(fixedTimestamp)
-        .locale(locale)
-        .add(3, 'days')
-        .calendar(fixedTimestamp),
-    (locale) =>
-      moment(fixedTimestamp)
-        .locale(locale)
-        .add(10, 'days')
-        .calendar(fixedTimestamp),
-    (locale) => moment(fixedTimestamp).locale(locale).format('LT'),
-    (locale) => moment(fixedTimestamp).locale(locale).format('LTS'),
-    (locale) => moment(fixedTimestamp).locale(locale).format('L'),
-    (locale) => moment(fixedTimestamp).locale(locale).format('l'),
-    (locale) => moment(fixedTimestamp).locale(locale).format('ll'),
-    (locale) => moment(fixedTimestamp).locale(locale).format('lll'),
-    (locale) => moment(fixedTimestamp).locale(locale).format('LLLL'),
-    (locale) => moment(fixedTimestamp).locale(locale).format('llll'),
-  ]
-);
-
 const Table = styled.table`
   margin: ${GEL_SPACING_DBL};
   border: 1px solid ${(props) => props.theme.palette.PEBBLE};
@@ -182,7 +158,14 @@ const Paragraph = styled.p`
 const issueHref = (localeName) =>
   `https://github.com/bbc/simorgh/issues/new?labels=bug&title=Moment+translation+correction+for+${localeName}`;
 
-const Component = ({ service, variant, dir, locale }) => {
+const Component = ({
+  service,
+  variant,
+  dir,
+  locale,
+  altCalendar,
+  timezone,
+}) => {
   return (
     <>
       <Table>
@@ -198,15 +181,19 @@ const Component = ({ service, variant, dir, locale }) => {
               return (
                 <tr key={index}>
                   <td dir={dir}>{timeFunction('en-gb')}</td>
-                  <td dir={dir}>{timeFunction(locale)}</td>
+                  <td dir={dir}>
+                    {timeFunction(locale, altCalendar, timezone)}
+                  </td>
                 </tr>
               );
             } else {
+              const { heading, subheading } = timeFunction;
               return (
                 <tr key={index}>
+                  <b>{subheading}</b>
                   <b>
                     <br />
-                    <u>{timeFunction.heading}</u>
+                    <u>{heading}</u>
                   </b>
                 </tr>
               );
@@ -234,7 +221,7 @@ export default {
 };
 
 export const Example = (_, { service, variant }) => {
-  const { dir, datetimeLocale } = use(ServiceContext);
+  const { dir, datetimeLocale, altCalendar, timezone } = use(ServiceContext);
 
   return (
     <Component
@@ -242,6 +229,8 @@ export const Example = (_, { service, variant }) => {
       variant={variant}
       dir={dir}
       locale={datetimeLocale}
+      altCalendar={altCalendar}
+      timezone={timezone}
     />
   );
 };
