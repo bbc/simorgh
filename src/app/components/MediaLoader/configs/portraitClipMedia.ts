@@ -78,8 +78,8 @@ export default ({
         },
         controls: {
           enabled: true,
-          includeNextButton: true,
-          includePreviousButton: true,
+          includeNextButton: isMobile,
+          includePreviousButton: isMobile,
         },
         fullscreen: {
           enabled: isMobile,
