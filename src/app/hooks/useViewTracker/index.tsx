@@ -54,6 +54,11 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
   const { service, useReverb } = use(ServiceContext);
 
   const initObserver = async (threshold = MIN_VIEWED_PERCENT) => {
+    // console.log('$$$$$$$$$$$$$$$$$$$');
+    // console.log('initObserver INVOKED for');
+    // console.log('COMPONENT NAME', componentName);
+    // console.log('$$$$$$$$$$$$$$$$$$$');
+  
     if (typeof window.IntersectionObserver === 'undefined') {
       // Polyfill IntersectionObserver, e.g. for IE11
       await import('intersection-observer');
@@ -65,6 +70,12 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
       );
 
       setIsInView(someElementsAreInView);
+
+      // console.log('###################');
+      // console.log('setIsInView - DONE');
+      // console.log('someElementsAreInView', someElementsAreInView);
+      // console.log('COMPONENT NAME', componentName);
+      // console.log('###################');
     };
 
     const options = {
@@ -76,6 +87,35 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
   };
 
   useEffect(() => {
+    console.log('&&&&&&&&&&&&&&&&&&');
+    console.log('useEffect INVOKED for COMPONENT NAME', componentName);
+    console.log('isInView', isInView);
+    console.log('^^^^^^^^^^^^^^^^^^^^');
+    console.log('campaignID', campaignID);
+    console.log('componentName', componentName);
+    console.log('format', format);
+    console.log('isInView', isInView);
+    console.log('pageIdentifier', pageIdentifier);
+    console.log('platform', platform);
+    console.log('producerId', producerId);
+    console.log('producerName', producerName);
+    console.log('service', service);
+    console.log('statsDestination', statsDestination);
+    console.log('trackingIsEnabled', trackingIsEnabled);
+    console.log('eventSent', eventSent);
+    console.log('advertiserID', advertiserID);
+    console.log('url', url);
+    console.log('sendOptimizelyEvents', sendOptimizelyEvents);
+    console.log('optimizely', optimizely);
+    console.log('experimentName', experimentName);
+    console.log('experimentVariant', experimentVariant);
+    console.log('detailedPlacement', detailedPlacement);
+    console.log('useReverb', useReverb);
+    console.log('itemTracker', itemTracker);
+    console.log('groupTracker', groupTracker);
+    console.log('alwaysInView', alwaysInView);
+    console.log('&&&&&&&&&&&&&&&&&&');
+
     if (alwaysInView || (isInView && !timer.current)) {
       // @ts-expect-error timer ref won't be null
       timer.current = setTimeout(() => {
@@ -135,7 +175,9 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
                 experimentVariant,
               }),
           });
-          setEventSent(true);
+
+          if (!alwaysInView) setEventSent(true);
+
           (observer.current as unknown as IntersectionObserver)?.disconnect();
           observer.current = null;
           timer.current = null;
