@@ -2,6 +2,7 @@ import React, { use } from 'react';
 import { shouldRenderLastUpdated } from '#lib/utilities/filterPopularStaleData/isDataStale';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import useViewTracker from '../../../hooks/useViewTracker';
 import { MostReadLink, MostReadItemWrapper } from './Item';
 import MostReadList from './List';
 import MostReadRank from './Rank';
@@ -38,6 +39,8 @@ const MostRead = ({
     timezone,
     mostRead: { lastUpdated, numberOfItems = 5 },
   } = use(ServiceContext);
+
+  const viewTracker = useViewTracker(eventTrackingData);
 
   const locale = serviceDatetimeLocale || datetimeLocale;
 
@@ -85,6 +88,7 @@ const MostRead = ({
               dir={direction}
               key={id}
               columnLayout={columnLayout}
+              ref={viewTracker}
             >
               <MostReadRank
                 service={service}
