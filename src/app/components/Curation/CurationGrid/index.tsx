@@ -3,7 +3,6 @@ import { jsx } from '@emotion/react';
 import styles from './index.styles';
 import CurationPromo from '../CurationPromo';
 import { CurationGridProps } from '../types';
-import isLive from '../../../lib/utilities/isLive';
 
 const CurationGrid = ({
   summaries,
@@ -31,7 +30,6 @@ const CurationGrid = ({
                   lazy={lazyLoadImages}
                   headingLevel={headingLevel}
                 />
-                {!isLive && promo.readTime && <p>readtime: {promo.readTime}</p>}
               </li>
             );
           })}

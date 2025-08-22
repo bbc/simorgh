@@ -11,6 +11,7 @@ import Body from './body';
 import Footer from './footer';
 import A from './a';
 import Timestamp from './timestamp';
+import ReadTime from './readtime';
 
 const PromoContext = React.createContext({});
 const withPromoContext = Component => props => (
@@ -55,6 +56,7 @@ Promo.Body = withPromoContext(Body);
 Promo.Footer = withPromoContext(Footer);
 Promo.A = withPromoContext(A);
 Promo.Timestamp = withPromoContext(Timestamp);
+Promo.ReadTime = withPromoContext(ReadTime);
 
 export const MEDIA_TYPES = TYPES;
 export default Promo;
