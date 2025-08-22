@@ -16,6 +16,7 @@ jobs:
         with:
           script: |
             let prNumber;
+            let totalComments = 0;
             
             if (context.eventName === 'pull_request') {
               prNumber = context.payload.pull_request.number;
@@ -45,7 +46,7 @@ jobs:
             });
             console.log('review_comments.length', review_comments.length);
             
-            const totalComments = review_comments.length + comments.length;
+            totalComments = review_comments.length + comments.length;
             console.log('totalComments', totalComments);
             core.setOutput("totalComments", totalComments);
             core.setOutput("prNumber", prNumber);
