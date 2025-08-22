@@ -93,8 +93,6 @@ export default ({
     title: linkText,
   } = firstSummary || {};
 
-  const messageBannerId = `message-banner-${nthCurationByStyleAndProminence}`;
-
   const viewabilityEventTrackingData: EventTrackingData = {
     componentName,
     groupTracker: {
@@ -154,7 +152,7 @@ export default ({
             link={summaryLink}
             linkText={linkText}
             image={imageUrl}
-            id={messageBannerId}
+            id={`message-banner-${nthCurationByStyleAndProminence}`}
             eventTrackingData={eventTrackingData}
           />
         );
