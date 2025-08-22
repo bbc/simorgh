@@ -2,7 +2,6 @@ import React, { use } from 'react';
 import { shouldRenderLastUpdated } from '#lib/utilities/filterPopularStaleData/isDataStale';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
-import useViewTracker from '../../../hooks/useViewTracker';
 import { MostReadLink, MostReadItemWrapper } from './Item';
 import MostReadList from './List';
 import MostReadRank from './Rank';
@@ -17,6 +16,12 @@ interface MostReadProps {
   data: MostReadData;
   eventTrackingData?: EventTrackingData;
 }
+
+type MostReadPromo = {
+  id?: string;
+  title: string;
+  href: string;
+};
 
 const MostRead = ({
   columnLayout = 'multiColumn',
@@ -33,7 +38,6 @@ const MostRead = ({
     timezone,
     mostRead: { lastUpdated, numberOfItems = 5 },
   } = use(ServiceContext);
-  const viewTracker = useViewTracker(eventTrackingData);
 
   const locale = serviceDatetimeLocale || datetimeLocale;
 
@@ -42,19 +46,30 @@ const MostRead = ({
   const direction = dir as Direction;
   const fontScript = script as TypographyScript;
 
-  // const buildPromoEventTrackingData = (promo: Summary, i: number) => ({
-  //   itemTracker: {
-  //     type: 'most-read-promo',
-  //     text: promo.title,
-  //     position: i + 1,
-  //     resourceId: promo.id,
-  //     ...(promo.type && { mediaType: promo.type }),
-  //     ...(promo.duration && {
-  //       duration: moment.duration(promo.duration, 'seconds').asMilliseconds(),
-  //     }),
-  //   },
-  //   ...eventTrackingData,
-  // });
+  const buildPromoEventTrackingData = (
+    promo: MostReadPromo,
+    i: number,
+    baseData?: EventTrackingData,
+  ): EventTrackingData => ({
+    ...baseData,
+    componentName: baseData?.componentName ?? 'most-read',
+    ...(baseData?.groupTracker && {
+      groupTracker: {
+        ...baseData.groupTracker,
+        itemCount: items.length,
+      },
+    }),
+    itemTracker: {
+      ...baseData?.itemTracker,
+      type: 'most-read-promo',
+      text: promo.title,
+      position: i + 1,
+      resourceId: promo.id || promo.href,
+      ...(baseData?.groupTracker?.position && {
+        groupPosition: baseData.groupTracker.position,
+      }),
+    },
+  });
 
   return (
     <MostReadList
@@ -87,15 +102,11 @@ const MostRead = ({
                 size={size}
                 eventTrackingData={
                   eventTrackingData
-                    ? {
-                        ...eventTrackingData,
-                        itemTracker: {
-                          type: 'most-read-promo',
-                          text: title,
-                          position: i + 1,
-                          resourceId: id || href,
-                        },
-                      }
+                    ? buildPromoEventTrackingData(
+                        { id, title, href },
+                        i,
+                        eventTrackingData,
+                      )
                     : undefined
                 }
               >
