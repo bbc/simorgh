@@ -1,6 +1,7 @@
 import React, { use } from 'react';
 import { shouldRenderLastUpdated } from '#lib/utilities/filterPopularStaleData/isDataStale';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '../../../hooks/useViewTracker';
 import { MostReadLink, MostReadItemWrapper } from './Item';
 import MostReadList from './List';
@@ -14,9 +15,7 @@ interface MostReadProps {
   columnLayout?: ColumnLayout;
   size: Size;
   data: MostReadData;
-  eventTrackingData?: {
-    componentName: string;
-  };
+  eventTrackingData?: EventTrackingData;
 }
 
 const MostRead = ({
@@ -42,6 +41,20 @@ const MostRead = ({
 
   const direction = dir as Direction;
   const fontScript = script as TypographyScript;
+
+  // const buildPromoEventTrackingData = (promo: Summary, i: number) => ({
+  //   itemTracker: {
+  //     type: 'most-read-promo',
+  //     text: promo.title,
+  //     position: i + 1,
+  //     resourceId: promo.id,
+  //     ...(promo.type && { mediaType: promo.type }),
+  //     ...(promo.duration && {
+  //       duration: moment.duration(promo.duration, 'seconds').asMilliseconds(),
+  //     }),
+  //   },
+  //   ...eventTrackingData,
+  // });
 
   return (
     <MostReadList

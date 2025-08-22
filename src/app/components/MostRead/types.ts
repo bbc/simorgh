@@ -1,3 +1,4 @@
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { OptimoBlock } from '#app/models/types/optimo';
 import { Services, Direction } from '../../models/types/global';
 
@@ -29,9 +30,7 @@ export interface MostReadLinkProps {
   title: string;
   href: string;
   size: Size;
-  eventTrackingData?: {
-    componentName: string;
-  };
+  eventTrackingData?: EventTrackingData;
 }
 
 type ArticleSource = 'cps' | 'optimo';

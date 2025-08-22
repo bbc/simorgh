@@ -4,6 +4,7 @@ import useToggle from '#hooks/useToggle';
 import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { OptimizelyContext, ReactSDKClient } from '@optimizely/react-sdk';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Canonical from './Canonical';
 import Amp from './Amp';
@@ -19,10 +20,6 @@ import {
 } from '../../routes/utils/pageTypes';
 import { PageTypes } from '../../models/types/global';
 
-const blockLevelEventTrackingData = {
-  componentName: 'most-read',
-};
-
 const mostReadAmpPageTypes: PageTypes[] = [
   STORY_PAGE,
   CORRESPONDENT_STORY_PAGE,
@@ -37,6 +34,7 @@ interface MostReadProps {
   headingBackgroundColour?: string;
   className?: string;
   sendOptimizelyEvents?: boolean;
+  eventTrackingData?: EventTrackingData;
 }
 
 // We render amp on ONLY STY, CSP and ARTICLE pages using amp-list.
@@ -112,6 +110,7 @@ const MostRead = ({
   headingBackgroundColour = WHITE,
   className = '',
   sendOptimizelyEvents = false,
+  eventTrackingData,
 }: MostReadProps) => {
   const { isAmp, pageType, variant } = use(RequestContext);
   const { optimizely } = use(OptimizelyContext);
@@ -138,11 +137,17 @@ const MostRead = ({
     isBff,
   });
 
-  const eventTrackingData = {
-    ...blockLevelEventTrackingData,
-    ...(sendOptimizelyEvents && {
-      optimizely,
+  const mergedEventTrackingData: EventTrackingData & {
+    optimizely?: ReactSDKClient | null | undefined;
+  } = {
+    componentName: eventTrackingData?.componentName ?? 'most-read',
+    ...(eventTrackingData?.groupTracker && {
+      groupTracker: eventTrackingData.groupTracker,
     }),
+    ...(eventTrackingData?.itemTracker && {
+      itemTracker: eventTrackingData.itemTracker,
+    }),
+    ...(sendOptimizelyEvents ? { optimizely } : {}),
   };
 
   return isAmp ? (
@@ -162,7 +167,7 @@ const MostRead = ({
       headingBackgroundColour={headingBackgroundColour}
       columnLayout={columnLayout}
       size={size}
-      eventTrackingData={eventTrackingData}
+      eventTrackingData={mergedEventTrackingData}
     />
   );
 };

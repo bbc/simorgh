@@ -96,6 +96,14 @@ export default ({
 
   const messageBannerId = `message-banner-${nthCurationByStyleAndProminence}`;
 
+  const computedItemCount =
+    // eslint-disable-next-line no-nested-ternary
+    componentName === MOST_READ
+      ? mostRead?.items?.length
+      : Array.isArray(summaries)
+        ? summaries.length
+        : undefined;
+
   const viewabilityEventTrackingData: EventTrackingData = {
     groupTracker: {
       name: curationSubheading,
@@ -103,9 +111,7 @@ export default ({
       link,
       position: `${position + 1}`,
       ...(curationId && { resourceId: curationId }),
-      ...(Array.isArray(summaries) && summaries.length > 0
-        ? { itemCount: summaries.length }
-        : {}),
+      ...(computedItemCount ? { itemCount: computedItemCount } : {}),
     },
     componentName,
   };
@@ -167,6 +173,7 @@ export default ({
           data={mostRead}
           columnLayout="twoColumn"
           headingBackgroundColour={GHOST}
+          eventTrackingData={viewabilityEventTrackingData}
         />
       );
     case RADIO_SCHEDULE:
