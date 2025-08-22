@@ -3,33 +3,33 @@ const numerals = require('../src/numerals/index');
 
 // eslint-disable-next-line import/prefer-default-export
 export const months = [
-  'وری',
-  'غویی',
-  'غبرګولی',
-  'چنګاښ',
-  'زمری',
-  'وږی',
-  'تله',
-  'لړم',
-  'لیندۍ',
-  'مرغومی',
-  'سلواغه',
-  'کب',
+  'وری', // January
+  'غویی', // February
+  'غبرګولی', // March
+  'چنګاښ', // April
+  'زمری', // May
+  'وږی', // June
+  'تله', // July
+  'لړم', // August
+  'لیندۍ', // September
+  'مرغومی', // October
+  'سلواغه', // November
+  'کب', // December
 ];
 
 const gregorianMonths = [
-  'جنوري',
-  'فبروري',
-  'مارچ',
-  'اپریل',
-  'می',
-  'جون',
-  'جولای',
-  'اګست',
-  'سپتمبر',
-  'اکتوبر',
-  'نومبر',
-  'ډیسمبر',
+  'جنوري', // January
+  'فبروري', // February
+  'مارچ', // March
+  'اپریل', // April
+  'می', // May
+  'جون', // June
+  'جولای', // July
+  'اګست', // August
+  'سپتمبر', // September
+  'اکتوبر', // October
+  'نومبر', // November
+  'ډیسمبر', // December
 ];
 
 moment.defineLocale('ps', {
