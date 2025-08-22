@@ -570,6 +570,7 @@ describe('Reverb', () => {
           },
           group: {
             name: '1234',
+            type: 'top-stories',
           },
           event: {
             category: 'viewability',
@@ -595,6 +596,7 @@ describe('Reverb', () => {
           },
           group: {
             name: '1234',
+            type: 'top-stories',
           },
           event: {
             category: 'viewability',
@@ -627,6 +629,7 @@ describe('Reverb', () => {
           },
           group: {
             name: '1234',
+            type: 'top-stories',
           },
           event: {
             category: 'viewability',
@@ -653,6 +656,7 @@ describe('Reverb', () => {
           },
           group: {
             name: '1234',
+            type: 'top-stories',
           },
           event: {
             category: 'viewability',
