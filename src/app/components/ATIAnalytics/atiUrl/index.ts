@@ -537,7 +537,7 @@ export const buildReverbEventModel = ({
     position: groupPosition,
     link,
   } = groupTracker;
-  console.log(itemTracker, groupTracker);
+
   return {
     params: {
       page: {
