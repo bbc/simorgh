@@ -56,7 +56,7 @@ export const buildPageATIParams = ({
     statsDestination,
     timePublished,
     timeUpdated,
-    readTimeMilliseconds,
+    ...(readTimeMilliseconds && { readTimeMilliseconds }),
     ...(ampExperimentName && { ampExperimentName }),
     ...(experimentName && { experimentName }),
     ...(experimentVariant && { experimentVariant }),
