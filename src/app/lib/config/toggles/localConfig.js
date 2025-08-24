@@ -8,13 +8,13 @@ export default {
     value: 'es,mx',
   },
   articleLiteSiteLink: { enabled: true },
-  electionBanner: {
-    enabled: true,
-  },
   chartbeatAnalytics: {
     enabled: true,
   },
   comscoreAnalytics: {
+    enabled: true,
+  },
+  electionBanner: {
     enabled: true,
   },
   enableFetchingToggles: {
@@ -25,7 +25,13 @@ export default {
   eventTracking: {
     enabled: true,
   },
+  homePageRadioSchedule: {
+    enabled: true,
+  },
   include: {
+    enabled: true,
+  },
+  liveRadioSchedule: {
     enabled: true,
   },
   midArticleOnwardJourney: {
@@ -37,19 +43,13 @@ export default {
   nielsenAnalytics: {
     enabled: true,
   },
+  onDemandRadioSchedule: {
+    enabled: true,
+  },
   preloadLeadImage: {
     enabled: true,
   },
   prerollAds: {
-    enabled: true,
-  },
-  homePageRadioSchedule: {
-    enabled: true,
-  },
-  liveRadioSchedule: {
-    enabled: true,
-  },
-  onDemandRadioSchedule: {
     enabled: true,
   },
   scriptLink: {
