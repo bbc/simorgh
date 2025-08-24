@@ -1,10 +1,10 @@
 import React from 'react';
+import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { data as arabicMostReadData } from '../../../../../data/arabic/mostRead/index.json';
 import { data as pidginMostReadData } from '../../../../../data/pidgin/mostRead/index.json';
 import { data as kyrgyzMostReadData } from '../../../../../data/kyrgyz/mostRead/index.json';
 import { data as ukrainianMostReadData } from '../../../../../data/ukrainian/mostRead/index.json';
 import { ToggleContextProvider } from '../../../contexts/ToggleContext';
-import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import * as viewTracking from '../../../hooks/useViewTracker';
 import * as clickTracking from '../../../hooks/useClickTrackerHandler';
 import { render } from '../../react-testing-library-with-providers';
