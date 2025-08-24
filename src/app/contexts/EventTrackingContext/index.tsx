@@ -21,6 +21,7 @@ import {
   LIVE_RADIO_PAGE,
   TV_PAGE,
   AUDIO_PAGE,
+  MY_BBC
 } from '../../routes/utils/pageTypes';
 import { PageTypes, Platforms } from '../../models/types/global';
 import { buildATIEventTrackingParams } from '../../components/ATIAnalytics/params';
@@ -67,6 +68,7 @@ const getCampaignID = (pageType: CampaignPageTypes) => {
     [LIVE_RADIO_PAGE]: 'player-live',
     [AUDIO_PAGE]: 'player-episode',
     [TV_PAGE]: 'player-episode',
+    [MY_BBC]: 'myBbc',
   }[pageType];
 
   if (!campaignID) {
