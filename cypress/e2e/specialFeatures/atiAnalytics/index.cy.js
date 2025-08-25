@@ -206,7 +206,7 @@ const canonicalTestSuites = [
     runforEnv: ['local', 'live'],
     service: 'hausa',
     pageIdentifier: 'hausa.bbc_hausa_radio.liveradio.page',
-    siteId: 40,
+    siteId: 51,
     applicationType: 'responsive',
     contentType: 'player-live',
     useReverb: true,
