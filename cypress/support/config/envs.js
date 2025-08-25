@@ -23,7 +23,7 @@ const config = {
     avEmbedBaseUrlAmp: 'https://web-cdn.test.api.bbci.co.uk',
     standaloneErrorPages: false,
     alwaysCheckForFallback: true,
-    togglesUrl: 'https://config.test.api.bbci.co.uk/',
+    togglesUrl: 'https://config.int.api.bbci.co.uk/',
   },
   local: {
     baseUrl: 'http://localhost.bbc.com:7080',
@@ -36,7 +36,7 @@ const config = {
     avEmbedBaseUrlAmp: 'https://web-cdn.test.api.bbci.co.uk',
     standaloneErrorPages: true,
     alwaysCheckForFallback: false,
-    togglesUrl: 'https://config.test.api.bbci.co.uk/',
+    togglesUrl: 'https://config.int.api.bbci.co.uk/',
   },
 };
 
