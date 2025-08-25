@@ -7,7 +7,7 @@ import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {
-    lang: 'fa',
+    lang: 'fa-af',
     product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'به روز شده در',
@@ -19,7 +19,7 @@ export const service: DefaultServiceConfig = {
     chartbeatDomain: 'dari.bbc.co.uk',
     brandName: 'BBC News فارسی',
     serviceLocalizedName: 'فارسی',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
+    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/dari.png',
     defaultImageAltText: 'BBC News فارسی',
     dir: 'rtl',
     externalLinkText: '، خارجی',
@@ -36,8 +36,8 @@ export const service: DefaultServiceConfig = {
     serviceName: 'Dari',
     languageName: 'Dari',
     altCalendar: jalaali,
-    twitterCreator: '@BBCNews',
-    twitterSite: '@BBCNews',
+    twitterCreator: '@bbcafghanistan',
+    twitterSite: '@bbcafghanistan',
     noBylinesPolicy:
       'https://www.bbc.com/persian/institutional-49283091#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/persian/institutional-49283091',
@@ -256,20 +256,10 @@ export const service: DefaultServiceConfig = {
         photogallery: 'عکس',
         video: 'ویدیو',
         recentEpisodes: 'برنامه قبلی',
-        bbc_persian_radio: {
-          title: 'رادیو فارسی بی‌بی‌سی',
-          subtitle:
-            'مجله خبری بخش فارسی رادیو بی‌بی‌سی را هر روز از ساعت ۶ تا ۸ صبح به وقت تهران (۲:۳۰ تا ۴:۳۰ به وقت گرینیچ) بشنوید. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است.',
-        },
         bbc_dari_radio: {
           title: 'بی بی سی افغانستان (برنامه های دری)',
           subtitle:
             'بی بی سی برای افغانستان تازه ترین و دقیق ترین خبرهای افغانستان ، منطقه و جهان را با تحلیل های همه جانبه ارایه می کند. برنامه های مختلف سیاسی، اجتماعی، فرهنگی و آموزشی از ساعت پنج صبح تا دوازده شب به زبان های دری و پشتو از بی بی سی برای افغانستان.',
-        },
-        bbc_persian_tv: {
-          title: '۶٠ دقیقه',
-          subtitle:
-            'برنامه خبری-تحلیلی یک ساعته که تصویری روشن و ساده از رویدادهای پیچیده جهان ارائه می‌کند.',
         },
         listen: 'بشنوید',
         watch: 'ببینید',
