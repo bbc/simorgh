@@ -402,8 +402,8 @@ export const assertATIComponentClickEvent = ({
   useReverb,
   siteId,
 }) => {
-  const useViewabilty = usesReverbViewabilityModel(applicationType);
-  const requestAlias = useViewabilty
+  const useViewability = usesReverbViewabilityModel(applicationType);
+  const requestAlias = useViewability
     ? `@${component}-viewability-click`
     : `@${component}-ati-click`;
 
@@ -412,7 +412,7 @@ export const assertATIComponentClickEvent = ({
     .then(url => {
       const params = getATIParamsFromURL(url);
 
-      if (useViewabilty) {
+      if (useViewability) {
         assertViewabilityModelClickEvent({
           component,
           contentType,
