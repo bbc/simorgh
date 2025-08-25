@@ -8,56 +8,131 @@ import {
 } from '#psammead/gel-foundations/src/spacings';
 import { GEL_FF_REITH_SANS } from '#psammead/gel-foundations/src/typography';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import {
-  formatDate,
-  formatDateAndTime,
-} from '../../../containers/ArticleTimestamp/timeFormats';
+import services from '../../../../../../src/server/utilities/serviceConfigs';
+import PromoTimestamp from '../../../components/Promo/timestamp';
+import ArticleTimestamp from '../../../containers/ArticleTimestamp';
+import MostReadTimestamp from '../../../../components/MostRead/Canonical/LastUpdated';
 
 import notes from '../README.md';
+import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
+import WithTimeMachine from '../../../../../testHelpers/withTimeMachine';
+
+const ws = services.ws.default;
 
 const timeFunctions = [];
 
 const formatDateAltCalendar = ({ date, altCalendar, format }) => {
-  return `${altCalendar.formatDate(date)} - ${date.format(format)}`;
+  if (altCalendar) {
+    return `${altCalendar.formatDate(date)} - ${date.format(format)}`;
+  }
+  return date.format(format);
 };
+
+const WithService = ({ service, variant, children }) => (
+  <ServiceContextProvider service={service} variant={variant}>
+    {children}
+  </ServiceContextProvider>
+);
 
 const fixedTimestamp = '2019-08-27T13:54:21.212Z';
 const fixedDate = moment(fixedTimestamp);
+const exactDate = new Intl.DateTimeFormat('en-gb', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+}).format(fixedDate);
 
-timeFunctions.push({ heading: 'Common Timestamp Formats' });
+timeFunctions.push({ heading: `Common Timestamp Formats for ${exactDate}` });
 
 timeFunctions.push(
   ...[
+    { heading: '' },
     {
-      subheading: `Exact Date - ${new Intl.DateTimeFormat('en-gb', {
-        day: 'numeric',
-        month: 'long',
-        year: 'numeric',
-      }).format(fixedDate)}`,
+      subheading: `Promo Timestamp (D MMMM YYYY)`,
     },
-    (locale, altCalendar) => {
-      const format = formatDate(locale);
-      const date = fixedDate.locale(locale);
-      return altCalendar
-        ? formatDateAltCalendar({ date, altCalendar, format })
-        : date.format(format);
+    ({ service, variant }) => {
+      return (
+        <WithService service={service} variant={variant}>
+          <PromoTimestamp>{fixedTimestamp}</PromoTimestamp>
+        </WithService>
+      );
     },
-    timeFunctions.push({ heading: '' }),
+    { heading: '' },
     {
-      subheading: `Exact Date and Time with Timezone - ${new Intl.DateTimeFormat(
-        'en-GB',
-        {
-          dateStyle: 'long',
-          timeStyle: 'long',
-        }
-      ).format(fixedDate)}`,
+      subheading: `Article first and last published on the same day (D MMMM YYYY)`,
     },
-    (locale, altCalendar, timezone = 'GMT') => {
-      const format = formatDateAndTime(locale);
-      const date = moment(new Date(fixedTimestamp), timezone).locale(locale);
-      return altCalendar
-        ? formatDateAltCalendar({ date, altCalendar, format })
-        : date.format(format);
+    ({ service, variant }) => {
+      const date = new Date(fixedTimestamp);
+
+      return (
+        <WithService service={service} variant={variant}>
+          <ArticleTimestamp firstPublished={date} lastPublished={date} />
+        </WithService>
+      );
+    },
+    {
+      subheading: `Article first and last published on different days (D MMMM YYYY)`,
+    },
+    ({ service, variant }) => {
+      const date = new Date(fixedTimestamp);
+
+      return (
+        <WithService service={service} variant={variant}>
+          <ArticleTimestamp
+            firstPublished={new Date(date).setDate(date.getDate() - 1)}
+            lastPublished={date}
+            minutesTolerance={1}
+          />
+        </WithService>
+      );
+    },
+    { heading: '' },
+    {
+      subheading: `Article first and last published at different times on the same day, more than 10 hours ago`,
+    },
+    ({ service, variant }) => {
+      const date = new Date(fixedTimestamp);
+      const firstPublished = new Date(date);
+      firstPublished.setHours(firstPublished.getHours() - 2);
+
+      const lastPublished = new Date(date);
+      lastPublished.setHours(lastPublished.getHours() - 1);
+
+      return (
+        <WithTimeMachine
+          dateString={lastPublished.toDateString()}
+          timestamp={lastPublished.getTime()}
+        >
+          <WithService service={service} variant={variant}>
+            <ArticleTimestamp
+              firstPublished={firstPublished}
+              lastPublished={lastPublished}
+              minutesTolerance={1}
+            />
+          </WithService>
+        </WithTimeMachine>
+      );
+    },
+    { heading: '' },
+    {
+      subheading: `Most Read, article more than 60 days old (D MMMM YYYY)`,
+    },
+    ({ service, variant }) => {
+      const { articleTimestampPrefix, script, locale, timezone } =
+        use(ServiceContext);
+
+      return (
+        <WithService service={service} variant={variant}>
+          <MostReadTimestamp
+            prefix={articleTimestampPrefix}
+            script={script}
+            service={service}
+            timestamp={fixedTimestamp}
+            locale={locale}
+            timezone={timezone}
+          />
+        </WithService>
+      );
     },
   ]
 );
@@ -65,7 +140,7 @@ timeFunctions.push(
 timeFunctions.push({ heading: 'Days of the Week' });
 
 Array.from({ length: 7 }, (_, index) => index).forEach((day) => {
-  timeFunctions.push((locale) =>
+  timeFunctions.push(({ locale }) =>
     moment('20240101').locale(locale).add(day, 'days').format('dddd')
   );
 });
@@ -73,7 +148,7 @@ Array.from({ length: 7 }, (_, index) => index).forEach((day) => {
 timeFunctions.push({ heading: ' Days of the Week (Abbreviated)' });
 
 Array.from({ length: 7 }, (_, index) => index).forEach((day) => {
-  timeFunctions.push((locale) =>
+  timeFunctions.push(({ locale }) =>
     moment('20240101').locale(locale).add(day, 'days').format('ddd')
   );
 });
@@ -81,14 +156,14 @@ Array.from({ length: 7 }, (_, index) => index).forEach((day) => {
 timeFunctions.push({ heading: 'Months' });
 
 Array.from({ length: 12 }, (_, index) => index).forEach((month) => {
-  timeFunctions.push((locale) =>
+  timeFunctions.push(({ locale }) =>
     moment('20240101').locale(locale).add(month, 'months').format('MMMM')
   );
 });
 timeFunctions.push({ heading: 'Months (Abbreviated)' });
 
 Array.from({ length: 12 }, (_, index) => index).forEach((month) => {
-  timeFunctions.push((locale) =>
+  timeFunctions.push(({ locale }) =>
     moment('20240101').locale(locale).add(month, 'months').format('MMM')
   );
 });
@@ -101,21 +176,16 @@ timeFunctions.push({
 });
 
 years.forEach((year) => {
-  timeFunctions.push((locale) =>
-    moment(`${year}0101`).locale(locale).format('YYYY')
-  );
-});
+  timeFunctions.push(({ locale, altCalendar }) => {
+    const formattedYear = moment(`${year}0101`).locale(locale).format('YYYY');
 
-timeFunctions.push({
-  heading: `Alternative Calendar Years (±5 from ${currentYear})`,
-});
-years.forEach((year) => {
-  timeFunctions.push((locale, altCalendar) => {
     const lastYear = moment(`${year}0101`).locale(locale);
     const thisYear = moment(`${year}0601`).locale(locale);
     return altCalendar
-      ? `${altCalendar.formatDate(lastYear).split(' ')[2]} - ${altCalendar.formatDate(thisYear).split(' ')[2]}`
+      ? `${formattedYear} - ${altCalendar.formatDate(lastYear).split(' ')[2]} - ${altCalendar.formatDate(thisYear).split(' ')[2]}`
       : thisYear.format('YYYY');
+
+    return formattedYear;
   });
 });
 
@@ -124,7 +194,7 @@ timeFunctions.push({
 });
 
 Array.from({ length: 31 }, (_, index) => index).forEach((day) => {
-  timeFunctions.push((locale) =>
+  timeFunctions.push(({ locale }) =>
     moment('20240101').locale(locale).add(day, 'days').format('D')
   );
 });
@@ -133,7 +203,7 @@ timeFunctions.push({
   heading: 'Ordinal Numerals',
 });
 Array.from({ length: 31 }, (_, index) => index).forEach((day) => {
-  timeFunctions.push((locale) =>
+  timeFunctions.push(({ locale }) =>
     moment('20240101').locale(locale).add(day, 'days').format('Do')
   );
 });
@@ -158,14 +228,7 @@ const Paragraph = styled.p`
 const issueHref = (localeName) =>
   `https://github.com/bbc/simorgh/issues/new?labels=bug&title=Moment+translation+correction+for+${localeName}`;
 
-const Component = ({
-  service,
-  variant,
-  dir,
-  locale,
-  altCalendar,
-  timezone,
-}) => {
+const Component = ({ service, variant, dir, locale }) => {
   return (
     <>
       <Table>
@@ -180,24 +243,46 @@ const Component = ({
             if (typeof timeFunction === 'function') {
               return (
                 <tr key={index}>
-                  <td dir={dir}>{timeFunction('en-gb')}</td>
                   <td dir={dir}>
-                    {timeFunction(locale, altCalendar, timezone)}
+                    {timeFunction({
+                      service: 'ws',
+                      variant: 'default',
+                      locale: 'en-gb',
+                      altCalendar: ws.altCalendar,
+                      timezone: ws.timezone,
+                      articleTimestampPrefix: ws.articleTimestampPrefix,
+                      articleTimestampSuffix: ws.articleTimestampSuffix,
+                    })}
+                  </td>
+                  <td dir={dir}>
+                    {timeFunction({
+                      service,
+                      variant,
+                      locale,
+                    })}
                   </td>
                 </tr>
               );
-            } else {
-              const { heading, subheading } = timeFunction;
-              return (
-                <tr key={index}>
-                  <b>{subheading}</b>
-                  <b>
-                    <br />
-                    <u>{heading}</u>
-                  </b>
-                </tr>
-              );
             }
+
+            const { heading, subheading } = timeFunction;
+
+            // if (heading || subheading) {
+            return (
+              <tr key={index}>
+                <td colSpan={2}>
+                  {heading && (
+                    <span style={{ fontStyle: 'italic', fontWeight: 'bolder' }}>
+                      {heading}
+                    </span>
+                  )}
+                  {subheading && (
+                    <span style={{ fontWeight: 'bold' }}>{subheading}</span>
+                  )}
+                </td>
+              </tr>
+            );
+            // }
           })}
         </tbody>
       </Table>
@@ -221,7 +306,14 @@ export default {
 };
 
 export const Example = (_, { service, variant }) => {
-  const { dir, datetimeLocale, altCalendar, timezone } = use(ServiceContext);
+  const {
+    dir,
+    datetimeLocale,
+    altCalendar,
+    timezone,
+    articleTimestampPrefix,
+    articleTimestampSuffix,
+  } = use(ServiceContext);
 
   return (
     <Component
@@ -231,6 +323,22 @@ export const Example = (_, { service, variant }) => {
       locale={datetimeLocale}
       altCalendar={altCalendar}
       timezone={timezone}
+      articleTimestampPrefix={articleTimestampPrefix}
+      articleTimestampSuffix={articleTimestampSuffix}
     />
   );
 };
+
+// export const TestArabic = {
+//   render: () => (
+//     <Component
+//       service={arabic.service}
+//       variant={arabic.variant}
+//       dir={arabic.dir}
+//       locale={arabic.datetimeLocale}
+//       altCalendar={arabic.altCalendar}
+//       timezone={arabic.timezone}
+//     />
+//   ),
+//   // tags: ['!dev'],
+// };
