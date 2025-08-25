@@ -181,7 +181,7 @@ export const assertPageView = ({
       }
 
       expect(params.p).to.equal(pageIdentifier, 'params.p (page identifier)');
-      expect(params.s2).to.equal(
+      expect(parseInt(params.s2, 10)).to.equal(
         siteId,
         'params.s2 (Level 2 site / Producer ID)',
       );
@@ -227,7 +227,10 @@ const assertClickPerViewModelViewEvent = ({
     expect(params.p).to.equal(pageIdentifier, 'params.p (page identifier)');
   }
 
-  expect(params.s2).to.equal(siteId, 'params.s2 (Level 2 site / Producer ID)');
+  expect(parseInt(params.s2, 10)).to.equal(
+    siteId,
+    'params.s2 (Level 2 site / Producer ID)',
+  );
 
   expect(params.app_type).to.equal(applicationType, 'params.app_type');
 
@@ -272,7 +275,7 @@ const assertViewabilityModelViewEvent = ({
   );
 
   expect(eventContext[0].data.page.$).to.equal(pageIdentifier);
-  expect(eventContext[0].data.site.level2_id).to.equal(siteId);
+  expect(parseInt(eventContext[0].data.site.level2_id, 10)).to.equal(siteId);
 };
 
 export const assertATIComponentViewEvent = ({
@@ -388,7 +391,7 @@ const assertViewabilityModelClickEvent = ({
   );
 
   expect(eventContext[0].data.page.$).to.equal(pageIdentifier);
-  expect(eventContext[0].data.site.level2_id).to.equal(siteId);
+  expect(parseInt(eventContext[0].data.site.level2_id, 10)).to.equal(siteId);
 };
 
 export const assertATIComponentClickEvent = ({
