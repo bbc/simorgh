@@ -143,7 +143,7 @@ test('format week', () => {
       '_'
     );
   let i;
-  for (i = 0; i < expected.length; i++) {
+  for (i = 0; i < expected.length; i += 1) {
     assert.equal(
       moment([2011, 0, 2 + i]).format('dddd ddd dd'),
       expected[i],
@@ -154,8 +154,6 @@ test('format week', () => {
 
 test('from', () => {
   const start = moment([2007, 1, 28]);
-  let s;
-  let ss;
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ s: 44 }), true),
     'چند ثانیه',
@@ -297,8 +295,8 @@ test('from', () => {
     '5 years = 5 years'
   );
 
-  s = moment.relativeTimeThreshold('s');
-  ss = moment.relativeTimeThreshold('ss');
+  const s = moment.relativeTimeThreshold('s');
+  const ss = moment.relativeTimeThreshold('ss');
 
   moment.relativeTimeThreshold('s', 60);
   moment.relativeTimeThreshold('ss', 0);
@@ -371,7 +369,7 @@ test('calendar day', () => {
 test('calendar next week', () => {
   let i;
   let m;
-  for (i = 2; i < 7; i++) {
+  for (i = 2; i < 7; i += 1) {
     m = moment().add({ d: i });
     assert.equal(
       m.calendar(),
@@ -396,7 +394,7 @@ test('calendar next week', () => {
 test('calendar last week', () => {
   let i;
   let m;
-  for (i = 2; i < 7; i++) {
+  for (i = 2; i < 7; i += 1) {
     m = moment().subtract({ d: i });
     assert.equal(
       m.calendar(),
