@@ -32,6 +32,7 @@ const assertATIPageViewEventParamsExist = ({
   applicationType,
 }) => {
   expect(params).to.have.property('s'); // destination
+  expect(params).to.have.property('s2'); // Level 2 Site / Producer ID
   expect(params).to.have.property('p'); // page identifier
   expect(params).to.have.property('x2'); // application type
   expect(params).to.have.property('x3'); // application name
@@ -152,8 +153,9 @@ export const assertPageView = ({
   contentType,
   service,
   path,
+  siteId,
 }) => {
-  it(`should send a page view event with service = ${service}, page identifier = ${pageIdentifier}, application type = ${applicationType} and content type = ${contentType}`, () => {
+  it(`should send a page view event with service = ${service}, page identifier = ${pageIdentifier}, site ID = ${siteId}, application type = ${applicationType} and content type = ${contentType}`, () => {
     interceptATIAnalyticsBeacons();
     cy.visit(path, { retryOnStatusCodeFailure: true });
 
@@ -179,6 +181,10 @@ export const assertPageView = ({
       }
 
       expect(params.p).to.equal(pageIdentifier, 'params.p (page identifier)');
+      expect(params.s2).to.equal(
+        siteId,
+        'params.s2 (Level 2 site / Producer ID)',
+      );
       expect(params.x2).to.equal(
         `[${applicationType}]`,
         'params.x2 (application type)',
@@ -206,6 +212,7 @@ const assertClickPerViewModelViewEvent = ({
   useReverb,
   params,
   applicationType,
+  siteId,
 }) => {
   assertATIComponentViewEventParamsExist({ params, useReverb });
 
@@ -219,6 +226,8 @@ const assertClickPerViewModelViewEvent = ({
   if (!useReverb) {
     expect(params.p).to.equal(pageIdentifier, 'params.p (page identifier)');
   }
+
+  expect(params.s2).to.equal(siteId, 'params.s2 (Level 2 site / Producer ID)');
 
   expect(params.app_type).to.equal(applicationType, 'params.app_type');
 
@@ -238,6 +247,7 @@ const assertViewabilityModelViewEvent = ({
   contentType,
   params,
   applicationType,
+  siteId,
 }) => {
   const eventContext = JSON.parse(params.context);
 
@@ -262,6 +272,7 @@ const assertViewabilityModelViewEvent = ({
   );
 
   expect(eventContext[0].data.page.$).to.equal(pageIdentifier);
+  expect(eventContext[0].data.site.level2_id).to.equal(siteId);
 };
 
 export const assertATIComponentViewEvent = ({
@@ -270,6 +281,7 @@ export const assertATIComponentViewEvent = ({
   contentType,
   useReverb,
   applicationType,
+  siteId,
 }) => {
   const useViewabilty = usesReverbViewabilityModel(applicationType);
   const requestAlias = useViewabilty
@@ -287,6 +299,7 @@ export const assertATIComponentViewEvent = ({
           pageIdentifier,
           contentType,
           params,
+          siteId,
         });
       } else {
         assertClickPerViewModelViewEvent({
@@ -296,6 +309,7 @@ export const assertATIComponentViewEvent = ({
           useReverb,
           params,
           applicationType,
+          siteId,
         });
       }
     });
@@ -349,6 +363,7 @@ const assertViewabilityModelClickEvent = ({
   pageIdentifier,
   params,
   applicationType,
+  siteId,
 }) => {
   const eventContext = JSON.parse(params.context);
 
@@ -373,6 +388,7 @@ const assertViewabilityModelClickEvent = ({
   );
 
   expect(eventContext[0].data.page.$).to.equal(pageIdentifier);
+  expect(eventContext[0].data.site.level2_id).to.equal(siteId);
 };
 
 export const assertATIComponentClickEvent = ({
@@ -381,6 +397,7 @@ export const assertATIComponentClickEvent = ({
   pageIdentifier,
   applicationType,
   useReverb,
+  siteId,
 }) => {
   const useViewabilty = usesReverbViewabilityModel(applicationType);
   const requestAlias = useViewabilty
@@ -398,6 +415,7 @@ export const assertATIComponentClickEvent = ({
           contentType,
           pageIdentifier,
           params,
+          siteId,
         });
       } else {
         assertClickPerViewModelClickEvent({
@@ -407,6 +425,7 @@ export const assertATIComponentClickEvent = ({
           applicationType,
           useReverb,
           params,
+          siteId,
         });
       }
     });
