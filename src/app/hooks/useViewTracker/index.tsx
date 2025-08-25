@@ -18,6 +18,49 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 const VIEWED_DURATION_MS = 1000;
 const MIN_VIEWED_PERCENT = 0.5;
 
+type RequiredEventProps = Pick<
+  EventTrackingData,
+  | 'campaignID'
+  | 'componentName'
+  | 'pageIdentifier'
+  | 'platform'
+  | 'producerId'
+  | 'producerName'
+  | 'service'
+  | 'statsDestination'
+> & { eventSent: boolean };
+
+const shouldDispatchEventBeacon = ({
+  campaignID,
+  componentName,
+  pageIdentifier,
+  platform,
+  producerId,
+  producerName,
+  service,
+  statsDestination,
+  eventSent,
+}: RequiredEventProps) => {
+  const { trackingIsEnabled } = useTrackingToggle(componentName);
+
+  const hasRequiredProps = [
+    campaignID,
+    componentName,
+    pageIdentifier,
+    platform,
+    producerId,
+    producerName,
+    service,
+    statsDestination,
+  ].every(Boolean);
+
+  return [
+    hasRequiredProps,
+    trackingIsEnabled,
+    !eventSent,
+  ].every(Boolean);
+};
+
 const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
   const {
     componentName,
@@ -53,6 +96,18 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
 
   const { service, useReverb } = use(ServiceContext);
 
+  const shouldSendEvent = shouldDispatchEventBeacon({
+    campaignID,
+    componentName,
+    pageIdentifier,
+    platform,
+    producerId,
+    producerName,
+    service,
+    statsDestination,
+    eventSent,
+  });
+
   const initObserver = async (threshold = MIN_VIEWED_PERCENT) => {
     if (typeof window.IntersectionObserver === 'undefined') {
       // Polyfill IntersectionObserver, e.g. for IE11
@@ -77,23 +132,6 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
 
   useEffect(() => {
     if (alwaysInView) {
-      const hasRequiredProps = [
-        campaignID,
-        componentName,
-        pageIdentifier,
-        platform,
-        producerId,
-        producerName,
-        service,
-        statsDestination,
-      ].every(Boolean);
-
-      const shouldSendEvent = [
-        hasRequiredProps,
-        trackingIsEnabled,
-        !eventSent,
-      ].every(Boolean);
-
       if (shouldSendEvent) {
         if (
           optimizely &&
@@ -137,23 +175,6 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     } else if (isInView && !timer.current) {
       // @ts-expect-error timer ref won't be null
       timer.current = setTimeout(() => {
-        const hasRequiredProps = [
-          campaignID,
-          componentName,
-          pageIdentifier,
-          platform,
-          producerId,
-          producerName,
-          service,
-          statsDestination,
-        ].every(Boolean);
-
-        const shouldSendEvent = [
-          hasRequiredProps,
-          trackingIsEnabled,
-          !eventSent,
-        ].every(Boolean);
-
         if (shouldSendEvent) {
           if (
             optimizely &&
