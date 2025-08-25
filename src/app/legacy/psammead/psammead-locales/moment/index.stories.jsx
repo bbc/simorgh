@@ -8,135 +8,155 @@ import {
 } from '#psammead/gel-foundations/src/spacings';
 import { GEL_FF_REITH_SANS } from '#psammead/gel-foundations/src/typography';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import {
-  formatDate,
-  formatDateAndTime,
-} from '../../../containers/ArticleTimestamp/timeFormats';
 
 import notes from '../README.md';
 
+const emptyRow = () => {};
+
 const timeFunctions = [];
 
-const formatDateAltCalendar = ({ date, altCalendar, format }) => {
-  return `${altCalendar.formatDate(date)} - ${date.format(format)}`;
-};
+// Add Months of the Year to the list of functions
+timeFunctions.push(() => ' Months ');
+timeFunctions.push(emptyRow);
 
-const fixedTimestamp = '2019-08-27T13:54:21.212Z';
-const fixedDate = moment(fixedTimestamp);
+Array.from({ length: 12 }, (_, index) => index).forEach((month) => {
+  timeFunctions.push((locale) =>
+    moment('20200101').locale(locale).add(month, 'months').format('MMMM')
+  );
+});
+timeFunctions.push(emptyRow);
 
-timeFunctions.push({ heading: 'Common Timestamp Formats' });
+timeFunctions.push(() => ' Common Timestamp Formats ');
+timeFunctions.push(emptyRow);
+
+// Fixed timestamp for 27 August 2019, 14:54 BST (Tuesday)
+const fixedTimestamp = 1566914061212;
 
 timeFunctions.push(
   ...[
-    {
-      subheading: `Exact Date - ${new Intl.DateTimeFormat('en-gb', {
-        day: 'numeric',
-        month: 'long',
-        year: 'numeric',
-      }).format(fixedDate)}`,
-    },
-    (locale, altCalendar) => {
-      const format = formatDate(locale);
-      const date = fixedDate.locale(locale);
-      return altCalendar
-        ? formatDateAltCalendar({ date, altCalendar, format })
-        : date.format(format);
-    },
-    timeFunctions.push({ heading: '' }),
-    {
-      subheading: `Exact Date and Time with Timezone - ${new Intl.DateTimeFormat(
-        'en-GB',
-        {
-          dateStyle: 'long',
-          timeStyle: 'long',
-        }
-      ).format(fixedDate)}`,
-    },
-    (locale, altCalendar, timezone = 'GMT') => {
-      const format = formatDateAndTime(locale);
-      const date = moment(new Date(fixedTimestamp), timezone).locale(locale);
-      return altCalendar
-        ? formatDateAltCalendar({ date, altCalendar, format })
-        : date.format(format);
-    },
+    (locale) => moment(fixedTimestamp).locale(locale).format('Do MMM YYYY'),
+    (locale) => moment().locale(locale).subtract({ m: 1 }).fromNow(),
+    (locale) => moment().locale(locale).subtract({ m: 5 }).fromNow(),
+    (locale) =>
+      moment(fixedTimestamp)
+        .locale(locale)
+        .startOf('hour')
+        .from(fixedTimestamp),
+    (locale) =>
+      moment(fixedTimestamp)
+        .locale(locale)
+        .startOf('day')
+        .add(6, 'hours')
+        .from(fixedTimestamp),
+    (locale) =>
+      moment(fixedTimestamp).subtract({ d: 26 }).locale(locale).format('LL'),
+    (locale) =>
+      moment(fixedTimestamp).subtract({ d: 26 }).locale(locale).format('LLL'),
+    (locale) => moment(fixedTimestamp).locale(locale).format('LL'),
+    (locale) => moment(fixedTimestamp).locale(locale).format('LLL'),
+    emptyRow,
+    () => ' Other Timestamp Formats ',
+    emptyRow,
+    (locale) =>
+      moment(fixedTimestamp).locale(locale).format('MMMM Do YYYY, h:mm:ss a'),
+    (locale) =>
+      moment(fixedTimestamp).locale(locale).format('YYYY [escaped text] YYYY'),
+    (locale) => moment(fixedTimestamp).locale(locale).format(),
+    (locale) =>
+      moment('20111031', 'YYYYMMDD').locale(locale).from(fixedTimestamp),
+    (locale) =>
+      moment('20120620', 'YYYYMMDD').locale(locale).from(fixedTimestamp),
+    (locale) =>
+      moment(fixedTimestamp).locale(locale).endOf('day').from(fixedTimestamp),
+    (locale) =>
+      moment(fixedTimestamp)
+        .locale(locale)
+        .subtract(10, 'days')
+        .calendar(fixedTimestamp),
+    (locale) =>
+      moment(fixedTimestamp)
+        .locale(locale)
+        .subtract(6, 'days')
+        .calendar(fixedTimestamp),
+    (locale) =>
+      moment(fixedTimestamp)
+        .locale(locale)
+        .subtract(3, 'days')
+        .calendar(fixedTimestamp),
+    (locale) =>
+      moment(fixedTimestamp)
+        .locale(locale)
+        .subtract(1, 'days')
+        .calendar(fixedTimestamp),
+    (locale) => moment(fixedTimestamp).locale(locale).calendar(fixedTimestamp),
+    (locale) =>
+      moment(fixedTimestamp)
+        .locale(locale)
+        .add(1, 'days')
+        .calendar(fixedTimestamp),
+    (locale) =>
+      moment(fixedTimestamp)
+        .locale(locale)
+        .add(3, 'days')
+        .calendar(fixedTimestamp),
+    (locale) =>
+      moment(fixedTimestamp)
+        .locale(locale)
+        .add(10, 'days')
+        .calendar(fixedTimestamp),
+    (locale) => moment(fixedTimestamp).locale(locale).format('LT'),
+    (locale) => moment(fixedTimestamp).locale(locale).format('LTS'),
+    (locale) => moment(fixedTimestamp).locale(locale).format('L'),
+    (locale) => moment(fixedTimestamp).locale(locale).format('l'),
+    (locale) => moment(fixedTimestamp).locale(locale).format('ll'),
+    (locale) => moment(fixedTimestamp).locale(locale).format('lll'),
+    (locale) => moment(fixedTimestamp).locale(locale).format('LLLL'),
+    (locale) => moment(fixedTimestamp).locale(locale).format('llll'),
   ]
 );
 
-timeFunctions.push({ heading: 'Days of the Week' });
-
-Array.from({ length: 7 }, (_, index) => index).forEach((day) => {
-  timeFunctions.push((locale) =>
-    moment('20240101').locale(locale).add(day, 'days').format('dddd')
-  );
-});
-
-timeFunctions.push({ heading: ' Days of the Week (Abbreviated)' });
-
-Array.from({ length: 7 }, (_, index) => index).forEach((day) => {
-  timeFunctions.push((locale) =>
-    moment('20240101').locale(locale).add(day, 'days').format('ddd')
-  );
-});
-
-timeFunctions.push({ heading: 'Months' });
+timeFunctions.push(emptyRow);
+timeFunctions.push(() => ' Months (Abbreviated) ');
+timeFunctions.push(emptyRow);
 
 Array.from({ length: 12 }, (_, index) => index).forEach((month) => {
   timeFunctions.push((locale) =>
-    moment('20240101').locale(locale).add(month, 'months').format('MMMM')
+    moment('20200101').locale(locale).add(month, 'months').format('MMM')
   );
 });
-timeFunctions.push({ heading: 'Months (Abbreviated)' });
+timeFunctions.push(emptyRow);
 
-Array.from({ length: 12 }, (_, index) => index).forEach((month) => {
+// Add Days of Week
+timeFunctions.push(() => ' Days of the Week ');
+timeFunctions.push(emptyRow);
+
+Array.from({ length: 7 }, (_, index) => index).forEach((day) => {
   timeFunctions.push((locale) =>
-    moment('20240101').locale(locale).add(month, 'months').format('MMM')
+    moment('20200106').locale(locale).add(day, 'days').format('dddd')
   );
 });
+timeFunctions.push(emptyRow);
 
-const currentYear = new Date().getFullYear();
-const years = Array.from({ length: 11 }, (_, i) => currentYear - 5 + i);
+timeFunctions.push(() => ' Days of the Week (Abbreviated)');
+timeFunctions.push(emptyRow);
 
-timeFunctions.push({
-  heading: `Years (±5 from ${currentYear})`,
-});
-
-years.forEach((year) => {
+Array.from({ length: 7 }, (_, index) => index).forEach((day) => {
   timeFunctions.push((locale) =>
-    moment(`${year}0101`).locale(locale).format('YYYY')
+    moment('20200106').locale(locale).add(day, 'days').format('ddd')
   );
 });
+timeFunctions.push(emptyRow);
 
-timeFunctions.push({
-  heading: `Alternative Calendar Years (±5 from ${currentYear})`,
-});
-years.forEach((year) => {
-  timeFunctions.push((locale, altCalendar) => {
-    const lastYear = moment(`${year}0101`).locale(locale);
-    const thisYear = moment(`${year}0601`).locale(locale);
-    return altCalendar
-      ? `${altCalendar.formatDate(lastYear).split(' ')[2]} - ${altCalendar.formatDate(thisYear).split(' ')[2]}`
-      : thisYear.format('YYYY');
-  });
-});
-
-timeFunctions.push({
-  heading: 'Numerals',
-});
+// Add Numerals
+timeFunctions.push(() => ' Numerals ');
+timeFunctions.push(emptyRow);
 
 Array.from({ length: 31 }, (_, index) => index).forEach((day) => {
   timeFunctions.push((locale) =>
-    moment('20240101').locale(locale).add(day, 'days').format('D')
+    moment('20200101').locale(locale).add(day, 'days').format('Do')
   );
 });
-
-timeFunctions.push({
-  heading: 'Ordinal Numerals',
-});
-Array.from({ length: 31 }, (_, index) => index).forEach((day) => {
-  timeFunctions.push((locale) =>
-    moment('20240101').locale(locale).add(day, 'days').format('Do')
-  );
-});
+timeFunctions.push(emptyRow);
 
 const Table = styled.table`
   margin: ${GEL_SPACING_DBL};
@@ -158,14 +178,7 @@ const Paragraph = styled.p`
 const issueHref = (localeName) =>
   `https://github.com/bbc/simorgh/issues/new?labels=bug&title=Moment+translation+correction+for+${localeName}`;
 
-const Component = ({
-  service,
-  variant,
-  dir,
-  locale,
-  altCalendar,
-  timezone,
-}) => {
+const Component = ({ service, variant, dir, locale }) => {
   return (
     <>
       <Table>
@@ -176,29 +189,12 @@ const Component = ({
               {service} {variant !== 'default' && variant} ({locale})
             </th>
           </tr>
-          {timeFunctions.map((timeFunction, index) => {
-            if (typeof timeFunction === 'function') {
-              return (
-                <tr key={index}>
-                  <td dir={dir}>{timeFunction('en-gb')}</td>
-                  <td dir={dir}>
-                    {timeFunction(locale, altCalendar, timezone)}
-                  </td>
-                </tr>
-              );
-            } else {
-              const { heading, subheading } = timeFunction;
-              return (
-                <tr key={index}>
-                  <b>{subheading}</b>
-                  <b>
-                    <br />
-                    <u>{heading}</u>
-                  </b>
-                </tr>
-              );
-            }
-          })}
+          {timeFunctions.map((timeFunction, index) => (
+            <tr key={index}>
+              <td dir={dir}>{timeFunction('en-gb')}</td>
+              <td dir={dir}>{timeFunction(locale)}</td>
+            </tr>
+          ))}
         </tbody>
       </Table>
       <Paragraph>
@@ -221,7 +217,7 @@ export default {
 };
 
 export const Example = (_, { service, variant }) => {
-  const { dir, datetimeLocale, altCalendar, timezone } = use(ServiceContext);
+  const { dir, datetimeLocale } = use(ServiceContext);
 
   return (
     <Component
@@ -229,8 +225,6 @@ export const Example = (_, { service, variant }) => {
       variant={variant}
       dir={dir}
       locale={datetimeLocale}
-      altCalendar={altCalendar}
-      timezone={timezone}
     />
   );
 };
