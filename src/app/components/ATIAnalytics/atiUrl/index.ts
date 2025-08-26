@@ -532,7 +532,7 @@ export const buildReverbEventModel = ({
     mediaType,
     resourceId: itemResourceId,
   } = itemTracker;
-
+  
   const {
     name,
     itemCount,
@@ -540,6 +540,7 @@ export const buildReverbEventModel = ({
     position: groupPosition,
     link,
   } = groupTracker;
+  
   return {
     params: {
       page: {
