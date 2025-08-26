@@ -10,13 +10,14 @@ describe('Timestamp Formats', () => {
       const variants = Object.keys(services[service]);
       variants.forEach(variant => {
         describe(`${variant}`, () => {
-          const { datetimeLocale, timezone } = services[service][variant];
+          const { datetimeLocale, timezone, altCalendar } =
+            services[service][variant];
 
           Object.keys(timestampsFixtures).forEach(fixture => {
             it(`should match expected value for ${fixture}`, () => {
-              expect(format(datetimeLocale, timezone, fixture)).toEqual(
-                expectedFormats[service][variant][fixture],
-              );
+              expect(
+                format({ datetimeLocale, timezone, fixture, altCalendar }),
+              ).toEqual(expectedFormats[service][variant][fixture]);
             });
           });
         });
