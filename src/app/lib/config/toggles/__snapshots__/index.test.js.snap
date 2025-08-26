@@ -50,13 +50,25 @@ exports[`Toggles Config when application environment is live should contain corr
     "enabled": false,
   },
   "podcastPromo": {
-    "enabled": true,
+    "enabled": false,
   },
   "preloadLeadImage": {
     "enabled": true,
   },
   "prerollAds": {
     "enabled": true,
+  },
+  "recentAudioEpisodes": {
+    "enabled": true,
+    "value": 4,
+  },
+  "recentPodcastEpisodes": {
+    "enabled": true,
+    "value": 8,
+  },
+  "recentVideoEpisodes": {
+    "enabled": true,
+    "value": 4,
   },
   "scriptLink": {
     "enabled": true,
@@ -129,6 +141,18 @@ exports[`Toggles Config when application environment is local should contain cor
   "prerollAds": {
     "enabled": true,
   },
+  "recentAudioEpisodes": {
+    "enabled": true,
+    "value": 4,
+  },
+  "recentPodcastEpisodes": {
+    "enabled": true,
+    "value": 8,
+  },
+  "recentVideoEpisodes": {
+    "enabled": true,
+    "value": 4,
+  },
   "scriptLink": {
     "enabled": true,
   },
@@ -199,6 +223,18 @@ exports[`Toggles Config when application environment is test should contain corr
   },
   "prerollAds": {
     "enabled": true,
+  },
+  "recentAudioEpisodes": {
+    "enabled": true,
+    "value": 4,
+  },
+  "recentPodcastEpisodes": {
+    "enabled": true,
+    "value": 8,
+  },
+  "recentVideoEpisodes": {
+    "enabled": true,
+    "value": 4,
   },
   "scriptLink": {
     "enabled": true,
