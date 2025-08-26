@@ -8,7 +8,6 @@ import styles from './index.styles';
 type HighImpactPromoProps = Summary;
 
 const HighImpactPromo = ({
-  id,
   title,
   imageUrl,
   imageAlt,
