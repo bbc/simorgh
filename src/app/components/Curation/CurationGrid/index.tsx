@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import useViewTracker from '#app/hooks/useViewTracker';
 import moment from 'moment';
 import styles from './index.styles';
 import CurationPromo from '../CurationPromo';
@@ -12,11 +11,11 @@ const CurationGrid = ({
   isFirstCuration,
   headingLevel,
   eventTrackingData,
+  viewTracker,
 }: CurationGridProps) => {
   const hasMultiplePromos = summaries.length > 1;
   const firstPromo = summaries[0];
 
-  const viewTracker = useViewTracker(eventTrackingData);
   if (summaries.length === 0) {
     return null;
   }
