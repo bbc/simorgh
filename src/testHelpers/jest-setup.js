@@ -69,4 +69,4 @@ process.env.SIMORGH_ASSETS_MANIFEST_PATH = path.resolve(
 );
 process.env.SIMORGH_OPTIMIZELY_SDK_KEY = 'LptPKDnHyAFu9V12s5xCz';
 process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
-process.env.SIMORGH_CONFIG_URL = 'https://config.int.api.bbci.co.uk/';
+process.env.SIMORGH_CONFIG_URL = 'https://config.test.api.bbci.co.uk/';
