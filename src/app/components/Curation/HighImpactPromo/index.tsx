@@ -26,7 +26,6 @@ const HighImpactPromo = ({
             loading={lazy ? 'lazy' : 'eager'}
             css={styles.image}
           />
-          <div css={styles.gradient} />
         </div>
       )}
       <div css={styles.content}>

@@ -23,14 +23,30 @@ export default {
       },
     }),
 
-  imageContainer: ({ mq }: Theme) =>
+  imageContainer: ({ mq, palette }: Theme) =>
     css({
       position: 'relative',
-      flex: '0 0 33.33%',
+      flex: '0 0 33.333%',
 
+      [mq.GROUP_1_MAX_WIDTH]: {
+        flex: '0 0 33.333%',
+      },
+
+      // Gradient only in vertical layout
       [mq.GROUP_2_MIN_WIDTH]: {
         flex: 'none',
         width: '100%',
+
+        '&::after': {
+          content: '""',
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
+          right: 0,
+          height: '50%',
+          background: `linear-gradient(to top, ${palette.GREY_8} 0%, transparent 100%)`,
+          pointerEvents: 'none',
+        },
       },
     }),
 
@@ -39,24 +55,6 @@ export default {
       width: '100%',
       height: 'auto',
       display: 'block',
-    }),
-
-  gradient: ({ palette, mq }: Theme) =>
-    css({
-      position: 'absolute',
-      bottom: 0,
-      left: 0,
-      right: 0,
-      height: '50%',
-      background: `linear-gradient(to top, ${palette.GREY_8} 0%, transparent 100%)`,
-      pointerEvents: 'none',
-
-      // Only show gradient in vertical layout
-      display: 'none',
-
-      [mq.GROUP_2_MIN_WIDTH]: {
-        display: 'block',
-      },
     }),
 
   content: ({ mq, spacings }: Theme) =>
@@ -86,28 +84,13 @@ export default {
       '&:hover': {
         textDecoration: 'underline',
         textDecorationThickness: '2px',
-        color: palette.GREY_2,
       },
 
       '&:visited': {
-        color: palette.GREY_2,
+        color: palette.GREY_5,
       },
 
       '&:visited:hover': {
-        color: palette.GREY_5,
-        textDecoration: 'underline',
-        textDecorationThickness: '2px',
-      },
-
-      '&:focus': {
-        outline: '3px solid white',
-        outlineOffset: '0px',
-        boxShadow: '0 0 0 6px black',
-        color: palette.GREY_2,
-        textDecoration: 'none',
-      },
-
-      '&:focus:visited': {
         color: palette.GREY_5,
       },
     }),
