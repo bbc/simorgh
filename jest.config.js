@@ -3,7 +3,10 @@ const { jestDirAlias } = require('./dirAlias');
 const unitTests = {
   preset: 'ts-jest',
   setupFiles: ['./src/testHelpers/jest-setup.js'],
-  setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
+  setupFilesAfterEnv: [
+    './src/testHelpers/setupTests.js',
+    'jest-expect-message',
+  ],
   moduleNameMapper: jestDirAlias,
   testEnvironment: 'jsdom',
   snapshotSerializers: ['@emotion/jest/serializer'],
