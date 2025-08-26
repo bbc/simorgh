@@ -1,6 +1,6 @@
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
-import '#psammead/psammead-locales/moment/fa-af';
-import '#psammead/moment-timezone-include/tz/Asia/Kabul';
+import 'moment/locale/fa';
+import '#psammead/moment-timezone-include/tz/GMT';
 import jalaali from '../../../legacy/psammead/psammead-calendars/src';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
@@ -28,10 +28,10 @@ export const service: DefaultServiceConfig = {
     audioCaptionOffscreenText: 'توضیح صدا، ',
     defaultCaptionOffscreenText: 'توضیح، ',
     imageCopyrightOffscreenText: 'منبع تصویر، ',
-    locale: 'fa-af',
+    locale: 'fa',
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
-    isoLang: 'fa-af',
-    datetimeLocale: 'fa-af',
+    isoLang: 'fa',
+    datetimeLocale: 'fa',
     service: 'dari',
     serviceName: 'Dari',
     languageName: 'Dari',
@@ -447,7 +447,7 @@ export const service: DefaultServiceConfig = {
       ],
       copyrightText: 'بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست.',
     },
-    timezone: 'Asia/Kabul',
+    timezone: 'GMT',
     navigation: [
       {
         title: 'صفحه اول',

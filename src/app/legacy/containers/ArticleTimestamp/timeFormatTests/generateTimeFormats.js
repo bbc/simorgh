@@ -11,16 +11,10 @@ const generateTimeFormats = () => {
     const variants = Object.keys(services[service]);
     timeFormats[service] = {};
     variants.forEach(variant => {
-      const { datetimeLocale, timezone, altCalendar } =
-        services[service][variant];
+      const { datetimeLocale, timezone } = services[service][variant];
       timeFormats[service][variant] = {};
       Object.keys(timestampsFixtures).forEach(fixture => {
-        const timeStamp = format({
-          datetimeLocale,
-          timezone,
-          fixture,
-          altCalendar,
-        });
+        const timeStamp = format(datetimeLocale, timezone, fixture);
 
         timeFormats[service][variant][fixture] = timeStamp;
       });

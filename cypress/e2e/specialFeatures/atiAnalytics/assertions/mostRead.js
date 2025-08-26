@@ -11,7 +11,6 @@ export const assertMostReadComponentView = ({
   path,
   service,
   applicationType,
-  siteId,
 }) => {
   it(`should send a view event for the Most Read component`, function test() {
     runIfToggleEnabled({
@@ -31,7 +30,6 @@ export const assertMostReadComponentView = ({
       contentType,
       useReverb,
       applicationType,
-      siteId,
     });
   });
 };
@@ -43,7 +41,6 @@ export const assertMostReadComponentClick = ({
   path,
   service,
   applicationType,
-  siteId,
 }) => {
   it('should send a click event for the Most Read component', function test() {
     runIfToggleEnabled({
@@ -66,7 +63,6 @@ export const assertMostReadComponentClick = ({
       contentType,
       useReverb,
       applicationType,
-      siteId,
     });
   });
 };

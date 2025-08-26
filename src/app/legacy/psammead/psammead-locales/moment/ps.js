@@ -1,40 +1,15 @@
 const moment = require('moment');
 const numerals = require('../src/numerals/index');
 
-// eslint-disable-next-line import/prefer-default-export
-export const months = [
-  'وری', // January
-  'غویی', // February
-  'غبرګولی', // March
-  'چنګاښ', // April
-  'زمری', // May
-  'وږی', // June
-  'تله', // July
-  'لړم', // August
-  'لیندۍ', // September
-  'مرغومی', // October
-  'سلواغه', // November
-  'کب', // December
-];
-
-const gregorianMonths = [
-  'جنوري', // January
-  'فبروري', // February
-  'مارچ', // March
-  'اپریل', // April
-  'می', // May
-  'جون', // June
-  'جولای', // July
-  'اګست', // August
-  'سپتمبر', // September
-  'اکتوبر', // October
-  'نومبر', // November
-  'ډیسمبر', // December
-];
+// eslint-disable-next-line prettier/prettier
+const pashtoGregorianMonths =
+  'جنوري_فبروري_مارچ_اپریل_می_جون_جولای_اګست_سپتمبر_اکتوبر_نومبر_ډیسمبر'.split(
+    '_'
+  );
 
 moment.defineLocale('ps', {
-  months: gregorianMonths,
-  monthsShort: gregorianMonths,
+  months: pashtoGregorianMonths,
+  monthsShort: pashtoGregorianMonths,
   relativeTime: {
     past: '%s وړاندې', // %s 'ago'
     m: '۱ دقیقه', // '1 minute'

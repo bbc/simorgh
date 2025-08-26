@@ -10,7 +10,6 @@ export const assertScrollableNavigationComponentView = ({
   useReverb,
   path,
   applicationType,
-  siteId,
 }) => {
   it('should send a view event for the Scrollable Navigation component', () => {
     interceptATIAnalyticsBeacons();
@@ -26,7 +25,6 @@ export const assertScrollableNavigationComponentView = ({
       contentType: componentTrackingContentType || contentType,
       useReverb,
       applicationType,
-      siteId,
     });
   });
 };
@@ -38,7 +36,6 @@ export const assertScrollableNavigationComponentClick = ({
   useReverb,
   path,
   applicationType,
-  siteId,
 }) => {
   it('should send a click event for the Scrollable Navigation component', () => {
     interceptATIAnalyticsBeacons();
@@ -57,7 +54,6 @@ export const assertScrollableNavigationComponentClick = ({
       contentType: componentTrackingContentType || contentType,
       useReverb,
       applicationType,
-      siteId,
     });
   });
 };
@@ -70,7 +66,6 @@ export const assertDropdownNavigationComponentView = ({
   useReverb,
   path,
   applicationType,
-  siteId,
 }) => {
   it('should send a view event for the Dropdown Navigation component', () => {
     interceptATIAnalyticsBeacons();
@@ -85,7 +80,6 @@ export const assertDropdownNavigationComponentView = ({
       contentType: componentTrackingContentType || contentType,
       useReverb,
       applicationType,
-      siteId,
     });
   });
 };
@@ -97,7 +91,6 @@ export const assertDropdownNavigationComponentClick = ({
   useReverb,
   path,
   applicationType,
-  siteId,
 }) => {
   it('should send a click event for the Dropdown Navigation component', () => {
     interceptATIAnalyticsBeacons();
@@ -115,7 +108,6 @@ export const assertDropdownNavigationComponentClick = ({
       contentType: componentTrackingContentType || contentType,
       useReverb,
       applicationType,
-      siteId,
     });
   });
 };

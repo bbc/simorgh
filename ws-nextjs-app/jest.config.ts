@@ -58,7 +58,7 @@ const unitTests = {
   moduleNameMapper: {
     ...pathsToModuleNameMapper(compilerOptionsPaths),
   },
-  setupFilesAfterEnv: ['./setupTests.ts', 'jest-expect-message'],
+  setupFilesAfterEnv: ['./setupTests.ts'],
   snapshotSerializers: ['@emotion/jest/serializer'],
   testEnvironment: 'jest-environment-jsdom',
   transform: {

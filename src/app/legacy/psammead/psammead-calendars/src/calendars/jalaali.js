@@ -3,8 +3,6 @@ import {
   EasternArabic,
   makeNumeralTranslator,
 } from '#psammead/psammead-locales/src/numerals';
-import { months as dariMonths } from '#app/legacy/psammead/psammead-locales/moment/fa-af';
-import { months as pashtoMonths } from '#app/legacy/psammead/psammead-locales/moment/ps';
 
 const jalaaliMonths = {
   fa: [
@@ -21,8 +19,20 @@ const jalaaliMonths = {
     'بهمن',
     'اسفند',
   ],
-  'fa-af': dariMonths,
-  ps: pashtoMonths,
+  ps: [
+    'وری',
+    'غویی',
+    'غبرګولی',
+    'چنګاښ',
+    'زمری',
+    'وږی',
+    'تله',
+    'لړم',
+    'لیندۍ',
+    'مرغومی',
+    'سلواغه',
+    'کب',
+  ],
 };
 
 const translateEasternNumerals = makeNumeralTranslator(EasternArabic);
