@@ -3,15 +3,18 @@ import styled from '@emotion/styled';
 import fixture from '#data/pidgin/topics/c95y35941vrt.json';
 import { MEDIA_TYPES } from '#components/Promo';
 import Promo from '.';
+import { Summary } from '#app/models/types/curationData';
 
 const Wrapper = styled.div`
   max-width: 30rem;
 `;
 
+const summaryFixtureData = fixture.data.curations[0].summaries[0] as Summary;
+
 const Component = () => {
   return (
     <Wrapper>
-      <Promo {...fixture.data.curations[0].summaries[0]} />
+      <Promo {...summaryFixtureData} />
     </Wrapper>
   );
 };
@@ -19,13 +22,9 @@ const Component = () => {
 const WithMediaIndicator = () => {
   return (
     <Wrapper>
+      <Promo {...summaryFixtureData} type={MEDIA_TYPES.VIDEO} duration={123} />
       <Promo
-        {...fixture.data.curations[0].summaries[0]}
-        type={MEDIA_TYPES.VIDEO}
-        duration={123}
-      />
-      <Promo
-        {...fixture.data.curations[0].summaries[0]}
+        {...summaryFixtureData}
         type={MEDIA_TYPES.PHOTO_GALLERY}
         duration={123}
       />
