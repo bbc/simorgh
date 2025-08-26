@@ -2229,20 +2229,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cypress/webpack-preprocessor@npm:6.0.4":
-  version: 6.0.4
-  resolution: "@cypress/webpack-preprocessor@npm:6.0.4"
+"@cypress/webpack-preprocessor@npm:7.0.1":
+  version: 7.0.1
+  resolution: "@cypress/webpack-preprocessor@npm:7.0.1"
   dependencies:
     bluebird: "npm:3.7.1"
     debug: "npm:^4.3.4"
     lodash: "npm:^4.17.20"
     semver: "npm:^7.3.2"
   peerDependencies:
-    "@babel/core": ^7.25.2
-    "@babel/preset-env": ^7.25.3
-    babel-loader: ^8.3 || ^9 || ^10
-    webpack: ^4 || ^5
-  checksum: 10/65acd85be422b755a1503342bdf46c149daef74dd9fd57a6aa9023313fa23bff357c9677e21500f41dc24dcf306595317c1f984879801fc41bdaaa95f4d7f26f
+    "@babel/core": ^7.28.0
+    "@babel/preset-env": ^7.26.0
+    babel-loader: ^9 || ^10
+    webpack: ^5
+  checksum: 10/e8aceec7c105765adf5889ba10a276ee8fedde61feadf21bb931ac89f544b74cb9377bfe571834d736cc0fe65e6422edcdd67fbc9ff02937c75ab213505ae1fe
   languageName: node
   linkType: hard
 
@@ -15774,7 +15774,7 @@ __metadata:
     "@babel/runtime": "npm:7.28.3"
     "@bbc/reverb-url-helper": "https://mybbc-analytics.files.bbci.co.uk/reverb-url-helper/bbc-reverb-url-helper-1.1.0.tgz"
     "@bbc/web-vitals": "npm:2.5.3"
-    "@cypress/webpack-preprocessor": "npm:6.0.4"
+    "@cypress/webpack-preprocessor": "npm:7.0.1"
     "@emotion/babel-plugin": "npm:11.13.5"
     "@emotion/babel-preset-css-prop": "npm:11.12.0"
     "@emotion/cache": "npm:11.14.0"
