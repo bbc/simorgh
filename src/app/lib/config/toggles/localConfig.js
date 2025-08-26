@@ -52,6 +52,9 @@ export default {
   prerollAds: {
     enabled: true,
   },
+  podcastPromo: {
+    enabled: true,
+  },
   scriptLink: {
     enabled: true,
   },
