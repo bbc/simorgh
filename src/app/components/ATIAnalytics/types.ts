@@ -178,6 +178,7 @@ export interface ItemTracker {
   position?: number;
   duration?: number;
   resourceId?: string;
+  label?: string;
 }
 
 export interface GroupTracker {

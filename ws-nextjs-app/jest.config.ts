@@ -1,3 +1,4 @@
+/* eslint-disable import/no-relative-packages */
 import { pathsToModuleNameMapper } from 'ts-jest';
 import type { Config } from '@jest/types';
 import { compilerOptions } from '../tsconfig.json';
@@ -57,7 +58,7 @@ const unitTests = {
   moduleNameMapper: {
     ...pathsToModuleNameMapper(compilerOptionsPaths),
   },
-  setupFilesAfterEnv: ['./setupTests.ts'],
+  setupFilesAfterEnv: ['./setupTests.ts', 'jest-expect-message'],
   snapshotSerializers: ['@emotion/jest/serializer'],
   testEnvironment: 'jest-environment-jsdom',
   transform: {

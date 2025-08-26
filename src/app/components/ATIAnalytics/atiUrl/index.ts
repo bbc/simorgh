@@ -528,6 +528,7 @@ export const buildReverbEventModel = ({
     text,
     position,
     duration,
+    label,
     resourceId: itemResourceId,
   } = itemTracker;
   const { itemCount, resourceId: groupResourceId } = groupTracker;
@@ -557,6 +558,7 @@ export const buildReverbEventModel = ({
         ...(text && { text }),
         ...(position && { position }),
         ...(duration && { duration }),
+        ...(label && { label }),
         ...(itemResourceId && { resource_id: itemResourceId }),
       },
       group: {

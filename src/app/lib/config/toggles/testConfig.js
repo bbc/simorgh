@@ -11,15 +11,27 @@ export default {
   chartbeatAnalytics: {
     enabled: true,
   },
+  comscoreAnalytics: {
+    enabled: true,
+  },
+  electionBanner: {
+    enabled: true,
+  },
   enableFetchingToggles: {
     enabled: true,
     value:
-      '(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|ws|vietnamese|yoruba|zhongwen)',
+      '(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|dari|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|ws|vietnamese|yoruba|zhongwen)',
   },
   eventTracking: {
     enabled: true,
   },
+  homePageRadioSchedule: {
+    enabled: true,
+  },
   include: {
+    enabled: true,
+  },
+  liveRadioSchedule: {
     enabled: true,
   },
   midArticleOnwardJourney: {
@@ -31,13 +43,13 @@ export default {
   nielsenAnalytics: {
     enabled: true,
   },
+  onDemandRadioSchedule: {
+    enabled: true,
+  },
   preloadLeadImage: {
     enabled: true,
   },
   prerollAds: {
-    enabled: true,
-  },
-  radioSchedule: {
     enabled: true,
   },
   scriptLink: {
