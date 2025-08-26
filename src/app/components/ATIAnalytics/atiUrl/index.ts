@@ -225,7 +225,7 @@ export const buildATIPageTrackPath = ({
       wrap: false,
     },
     {
-      key: 'read_time_milliseconds',
+      key: 'item_duration',
       description: 'read time of article in milliseconds',
       value: readTimeMilliseconds,
       wrap: false,
@@ -499,7 +499,7 @@ export const buildReverbAnalyticsModel = ({
           x16: aggregatedCampaigns,
           x17: categoryName,
           x18: isLocServeCookieSet(),
-          read_time_milliseconds: readTimeMilliseconds,
+          item_duration: readTimeMilliseconds,
           ...(experimentVariant &&
             experimentName && {
               mv_test: experimentName,

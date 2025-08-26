@@ -231,7 +231,7 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
         x13: '[Refugees%20and%20asylum%20seekers~Myanmar~Military]',
         x14: '[0cd55773-e753-44ad-ad07-1366bf1aa6bc~a26174f5-fa3c-4cf8-95a2-29d877175eab~ce5c43ee-8982-4f88-9472-9aa79aeb09cc]',
         x17: '[Refugees%20and%20asylum%20seekers~Myanmar~Military]',
-        read_time_milliseconds: '2000',
+        item_duration: '2000',
       };
 
       expect(parsedATIURLParams).toEqual(expectedATIURLParams);
