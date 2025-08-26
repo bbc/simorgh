@@ -47,6 +47,13 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      readTime: {
+        readTimePrefix: 'Okuma süresi',
+        quick: 'Kısa haber',
+        long: 'Uzun haber',
+        minute: 'dk',
+        minutes: 'dk',
+      },
       pagination: {
         previousPage: 'Önceki',
         nextPage: 'Sonraki',
