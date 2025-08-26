@@ -529,6 +529,7 @@ export const buildReverbEventModel = ({
     position,
     duration,
     label,
+    mediaType,
     resourceId: itemResourceId,
   } = itemTracker;
   const {
@@ -538,7 +539,6 @@ export const buildReverbEventModel = ({
     position: groupPosition,
     link,
   } = groupTracker;
-  console.log(itemTracker, groupTracker);
   return {
     params: {
       page: {
@@ -564,6 +564,7 @@ export const buildReverbEventModel = ({
         ...(text && { text }),
         ...(position && { position }),
         ...(duration && { duration }),
+        ...(mediaType && { media_type: mediaType }),
         ...(label && { label }),
         ...(itemResourceId && { resource_id: itemResourceId }),
       },

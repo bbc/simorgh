@@ -52,6 +52,7 @@ const CurationPromo = ({
     (type === 'photogallery' && `${photoGalleryTranslation}, `);
 
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+
   return (
     <Promo css={styles.promo} className="">
       {imageUrl && (
