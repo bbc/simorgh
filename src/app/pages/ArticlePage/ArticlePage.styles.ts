@@ -176,8 +176,16 @@ export default {
     }),
     commonMarginSpacing,
   ],
-  readTime: () =>
+  // EXPERIMENT: Read Time
+  readTimePlaceholderBelowTimestamp: () =>
     css({
-      padding: 0,
+      marginBottom: `${pixelsToRem(18.5)}rem`,
+    }),
+  readTimePlaceholderBelowHeadline: ({ mq }: Theme) =>
+    css({
+      marginBottom: `${pixelsToRem(6.5)}rem`,
+      [mq.GROUP_2_MAX_WIDTH]: {
+        marginBottom: `${pixelsToRem(26.5)}rem`,
+      },
     }),
 };

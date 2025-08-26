@@ -93,6 +93,7 @@ describe('beacon', () => {
               },
               group: {
                 name: 'campaign1',
+                type: 'component',
               },
               event: {
                 category: 'viewability',
@@ -135,6 +136,7 @@ describe('beacon', () => {
               },
               group: {
                 name: 'campaign1',
+                type: 'component',
               },
               event: {
                 category: 'viewability',

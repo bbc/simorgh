@@ -107,8 +107,8 @@ export default ({
     groupTracker: {
       name: curationSubheading,
       type: `${componentName}`,
-      link,
       position: `${position + 1}`,
+      ...(link ? { link } : {}),
       ...(curationId && { resourceId: curationId }),
       ...(computedItemCount ? { itemCount: computedItemCount } : {}),
     },
