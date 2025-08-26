@@ -105,26 +105,6 @@ export default ({
     },
   };
 
-  const viewabilityEventTrackingData: EventTrackingData = {
-    groupTracker: {
-      name: curationSubheading,
-      type: `${componentName}`,
-      position: `${position + 1}`,
-      ...(link ? { link } : {}),
-      ...(curationId && { resourceId: curationId }),
-      ...(Array.isArray(summaries) && summaries.length > 0
-        ? { itemCount: summaries.length }
-        : {}),
-    },
-    componentName,
-  };
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const viewTracker = useViewTracker(viewabilityEventTrackingData as any);
-  // click tracker for curation subheading (if link is present)
-  const curationSubheadingClickTracker = link
-    ? useClickTrackerHandler(viewabilityEventTrackingData)
-    : undefined;
-
   switch (componentName) {
     case NOT_SUPPORTED:
       return null;
@@ -242,6 +222,7 @@ export default ({
                 headingLevel={3}
                 isFirstCuration={isFirstCuration}
                 eventTrackingData={eventTrackingData}
+                viewTracker={viewTracker}
               />
             </div>
           </section>
