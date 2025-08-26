@@ -1,23 +1,39 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import useViewTracker from '#app/hooks/useViewTracker';
+import moment from 'moment';
 import styles from './index.styles';
 import CurationPromo from '../CurationPromo';
 import { CurationGridProps } from '../types';
+import { Summary } from '../../../models/types/curationData';
 
 const CurationGrid = ({
   summaries,
   isFirstCuration,
   headingLevel,
   eventTrackingData,
+  viewTracker,
 }: CurationGridProps) => {
   const hasMultiplePromos = summaries.length > 1;
   const firstPromo = summaries[0];
 
-  const viewTracker = useViewTracker(eventTrackingData);
   if (summaries.length === 0) {
     return null;
   }
+
+  const buildPromoEventTrackingData = (promo: Summary, i: number) => ({
+    itemTracker: {
+      type: 'simple-curation-grid-promo',
+      text: promo.title,
+      position: i + 1,
+      resourceId: promo.id,
+      ...(promo.type && { mediaType: promo.type }),
+      ...(promo.duration && {
+        duration: moment.duration(promo.duration, 'seconds').asMilliseconds(),
+      }),
+    },
+    ...eventTrackingData,
+  });
+
   return (
     <div data-testid="curation-grid-normal" {...viewTracker}>
       {hasMultiplePromos ? (
@@ -32,7 +48,7 @@ const CurationGrid = ({
                   {...promo}
                   lazy={lazyLoadImages}
                   headingLevel={headingLevel}
-                  eventTrackingData={eventTrackingData}
+                  eventTrackingData={buildPromoEventTrackingData(promo, index)}
                 />
               </li>
             );
@@ -44,7 +60,7 @@ const CurationGrid = ({
             {...firstPromo}
             lazy={!isFirstCuration}
             headingLevel={headingLevel}
-            eventTrackingData={eventTrackingData}
+            eventTrackingData={buildPromoEventTrackingData(firstPromo, 0)}
           />
         </div>
       )}

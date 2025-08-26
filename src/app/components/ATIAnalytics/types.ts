@@ -149,7 +149,7 @@ export interface ATIAnalyticsProps {
 
 export interface ATIEventTrackingProps {
   campaignID?: string;
-  componentName?: string;
+  componentName: string;
   format?: string;
   pageIdentifier?: string;
   platform?: Platforms;
