@@ -103,6 +103,7 @@ const RadioSchedule = ({ schedule, ...props }) => {
           </StartTimeWrapper>
           <ProgramCard
             {...props}
+            eventTrackingData={eventTrackingDataExtended}
             position={index}
             program={program}
             id={id} // This ID is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
