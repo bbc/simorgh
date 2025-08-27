@@ -67,7 +67,11 @@ const programGridProps = {
 const RadioSchedule = ({ schedule, ...props }) => {
   const { dir } = use(ServiceContext);
 
-  const { eventTrackingData } = props;
+  const {
+    eventTrackingData = {
+      componentName: 'radio-schedule',
+    },
+  } = props;
 
   const eventTrackingDataExtended = {
     ...eventTrackingData,

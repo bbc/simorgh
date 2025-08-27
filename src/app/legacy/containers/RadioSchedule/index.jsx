@@ -10,9 +10,7 @@ const RadioSchedule = ({
   lang = null,
   className = '',
   toggleName,
-  eventTrackingData = {
-    componentName: 'radio-schedule',
-  },
+  eventTrackingData,
 }) => {
   const { enabled } = useToggle(toggleName);
   const { isAmp } = use(RequestContext);
