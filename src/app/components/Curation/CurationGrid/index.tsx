@@ -11,7 +11,6 @@ const CurationGrid = ({
   isFirstCuration,
   headingLevel,
   eventTrackingData,
-  viewTracker,
 }: CurationGridProps) => {
   const hasMultiplePromos = summaries.length > 1;
   const firstPromo = summaries[0];
@@ -35,7 +34,7 @@ const CurationGrid = ({
   });
 
   return (
-    <div data-testid="curation-grid-normal" {...viewTracker}>
+    <div data-testid="curation-grid-normal">
       {hasMultiplePromos ? (
         <ul css={styles.list} role="list" data-testid="topic-promos">
           {summaries.map((promo, index) => {

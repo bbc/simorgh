@@ -93,7 +93,14 @@ export default ({
                 </Heading>
               )}
 
-              <BillboardCurationGrid summaries={summaries.slice(1)} />
+              <BillboardCurationGrid
+                summaries={summaries.slice(1)}
+                eventTrackingData={
+                  eventTrackingData ?? {
+                    componentName: 'billboard',
+                  }
+                }
+              />
             </div>
           )}
         </div>
