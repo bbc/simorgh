@@ -71,7 +71,7 @@ const MessageBanner = ({
           <CallToActionLink
             url={link}
             className="focusIndicatorInvert"
-            eventTrackingData={eventTrackingData}
+            eventTrackingData={eventTrackingDataWithoutItemCount}
             css={styles.callToActionLink}
           >
             <CallToActionLink.ButtonLikeWrapper>
