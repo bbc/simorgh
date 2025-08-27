@@ -449,6 +449,43 @@ describe('Home Page', () => {
       );
     });
 
+    it('Simple curation - calls useViewTracker with correct event tracking data for the 7th curation', () => {
+      // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
+      render(<HomePage pageData={pidginHomePageDataFixture} />, {
+        service: 'pidgin',
+      });
+
+      const seventhCuration = pidginHomePageDataFixture.curations[6];
+      const expectedTrackingData = {
+        groupTracker: {
+          name: seventhCuration.title,
+          type: 'simple-curation-grid',
+          position: String(seventhCuration.position + 1),
+          link: seventhCuration.link,
+          resourceId: seventhCuration.curationId,
+          itemCount: seventhCuration.summaries?.length,
+        },
+        componentName: 'simple-curation-grid',
+      };
+
+      const { calls } = (useViewTracker as jest.Mock).mock;
+      const actual = calls.find(
+        ([arg]) =>
+          arg.componentName === expectedTrackingData.componentName &&
+          arg.groupTracker?.name === expectedTrackingData.groupTracker.name,
+      );
+      console.log('Actual:', actual?.[0]);
+      console.log('Expected:', expectedTrackingData);
+      expect(
+        calls.some(
+          ([arg]) =>
+            arg.componentName === expectedTrackingData.componentName &&
+            JSON.stringify(arg.groupTracker) ===
+              JSON.stringify(expectedTrackingData.groupTracker),
+        ),
+      ).toBe(true);
+    });
+
     describe('Hierarchical curation - click tracking', () => {
       it.each([
         {

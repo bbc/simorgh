@@ -237,6 +237,7 @@ export default ({
                 headingLevel={3}
                 isFirstCuration={isFirstCuration}
                 eventTrackingData={viewabilityEventTrackingData}
+                viewTracker={viewTracker}
               />
             </div>
           </section>
@@ -247,6 +248,7 @@ export default ({
               headingLevel={2} // if there is only one curation, all promos should be h2, and no subheading
               isFirstCuration={isFirstCuration}
               eventTrackingData={viewabilityEventTrackingData}
+              viewTracker={viewTracker}
             />
           </div>
         );
