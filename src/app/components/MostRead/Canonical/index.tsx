@@ -18,17 +18,11 @@ interface MostReadProps {
   eventTrackingData?: EventTrackingData;
 }
 
-type MostReadPromo = {
-  id?: string;
-  title: string;
-  href: string;
-};
-
 const MostRead = ({
   columnLayout = 'multiColumn',
   size,
   data,
-  eventTrackingData,
+  ...props
 }: MostReadProps) => {
   const {
     service,
@@ -40,39 +34,28 @@ const MostRead = ({
     mostRead: { lastUpdated, numberOfItems = 5 },
   } = use(ServiceContext);
 
+  const items = data.items?.slice(0, numberOfItems) || [];
+
+  const {
+    eventTrackingData = {
+      componentName: 'most-read',
+    },
+  } = props;
+
+  const eventTrackingDataExtended = {
+    ...eventTrackingData,
+    groupTracker: {
+      ...eventTrackingData.groupTracker,
+      itemCount: items.length,
+    },
+  };
+
   const viewTracker = useViewTracker(eventTrackingData);
 
   const locale = serviceDatetimeLocale || datetimeLocale;
 
-  const items = data.items?.slice(0, numberOfItems) || [];
-
   const direction = dir as Direction;
   const fontScript = script as TypographyScript;
-
-  const buildPromoEventTrackingData = (
-    promo: MostReadPromo,
-    i: number,
-    baseData?: EventTrackingData,
-  ): EventTrackingData => ({
-    ...baseData,
-    componentName: baseData?.componentName ?? 'most-read',
-    ...(baseData?.groupTracker && {
-      groupTracker: {
-        ...baseData.groupTracker,
-        itemCount: items.length,
-      },
-    }),
-    itemTracker: {
-      ...baseData?.itemTracker,
-      type: 'most-read-promo',
-      text: promo.title,
-      position: i + 1,
-      resourceId: promo.id || promo.href,
-      ...(baseData?.groupTracker?.position && {
-        groupPosition: baseData.groupTracker.position,
-      }),
-    },
-  });
 
   return (
     <MostReadList
@@ -104,15 +87,9 @@ const MostRead = ({
                 title={title}
                 href={href}
                 size={size}
-                eventTrackingData={
-                  eventTrackingData
-                    ? buildPromoEventTrackingData(
-                        { id, title, href },
-                        i,
-                        eventTrackingData,
-                      )
-                    : undefined
-                }
+                id={id}
+                position={i + 1}
+                eventTrackingData={eventTrackingDataExtended}
               >
                 {shouldRenderLastUpdated(timestamp) && timestamp && (
                   <LastUpdated
