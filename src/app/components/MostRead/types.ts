@@ -31,7 +31,7 @@ export interface MostReadLinkProps {
   href: string;
   size: Size;
   id: string;
-  position: number;
+  position: number | string;
   eventTrackingData?: EventTrackingData;
 }
 
