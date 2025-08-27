@@ -350,6 +350,10 @@ const preview: Preview = {
             title: 'cymrufyw',
           },
           {
+            value: { service: 'dari', variant: 'default' },
+            title: 'dari',
+          },
+          {
             value: { service: 'gahuza', variant: 'default' },
             title: 'gahuza',
           },

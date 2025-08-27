@@ -9,6 +9,7 @@ export const assertRelatedContentComponentView = ({
   useReverb,
   path,
   applicationType,
+  siteId,
 }) => {
   it('should send a view event for the Related Content component', () => {
     interceptATIAnalyticsBeacons();
@@ -24,6 +25,7 @@ export const assertRelatedContentComponentView = ({
       contentType,
       useReverb,
       applicationType,
+      siteId,
     });
   });
 };
@@ -34,6 +36,7 @@ export const assertRelatedContentComponentClick = ({
   useReverb,
   path,
   applicationType,
+  siteId,
 }) => {
   it('should send a click event for the Related Content component', () => {
     interceptATIAnalyticsBeacons();
@@ -52,6 +55,7 @@ export const assertRelatedContentComponentClick = ({
       contentType,
       useReverb,
       applicationType,
+      siteId,
     });
   });
 };
