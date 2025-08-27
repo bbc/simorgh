@@ -532,6 +532,7 @@ export const buildReverbEventModel = ({
     mediaType,
     resourceId: itemResourceId,
   } = itemTracker;
+
   const {
     name,
     itemCount,
