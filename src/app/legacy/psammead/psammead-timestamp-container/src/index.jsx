@@ -20,6 +20,8 @@ const TimestampContainer = ({
   service,
   altCalendar,
   className = '',
+  // For experiment
+  displayBlock = true,
 }) => {
   let altDateTime;
   if (!isValidDateTime(new Date(timestamp))) {
@@ -56,6 +58,8 @@ const TimestampContainer = ({
       script={script}
       service={service}
       className={className}
+      // For experiment
+      displayBlock={displayBlock}
     >
       {timestampText}
     </Timestamp>

@@ -8,33 +8,73 @@
         "summaries": [
           {
             "type": "article",
-            "title": "Los narcosubmarinos caseros que transportan cocaína de Sudamérica a Europa",
-            "firstPublished": "2023-04-26T11:18:26.000Z",
-            "link": "https://www.bbc.com/mundo/noticias-internacional-65349969",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8D92/production/_129424263_capture4.png",
-            "description": "La BBC tuvo acceso a la embaración secreta que llevó a tres hombres y US$150 millones en drogas desde la selva amazónica hasta España.",
-            "imageAlt": "El submarino casero ahora se encuentra en un estacionamiento en el centro de España.",
-            "id": "5e25e965-3681-46d6-ae11-098c8ebe15a8"
+            "isLive": false,
+            "title": "Cómo Taiwán se prepara para una potencial invasión de China con actores, sangre falsa y simulacros de ataques con misiles",
+            "firstPublished": "2025-08-27T03:01:50.840Z",
+            "lastPublished": "2025-08-27T03:01:50.840Z",
+            "link": "https://www.bbc.com/mundo/articles/cgr97x7v5n2o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/3e1f/live/daba53a0-8289-11f0-b582-ddd92628512a.png.webp",
+            "description": "Los líderes de la isla están reforzando su defensa, pero la mayoría de los taiwaneses creen que es poco probable que China invada pronto.",
+            "imageAlt": "Los equipos de rescate y los voluntarios aseguran una instalación de telecomunicaciones mientras participan en el ejercicio de resiliencia urbana tras el simulacro de ataque aéreo.",
+            "id": "cgr97x7v5n2o",
+            "readTime": 12,
+            "visualProminence": "NORMAL"
           },
           {
             "type": "article",
-            "title": "\"Cayó un misil enorme a unos 5 minutos de mi casa. Fue lo más fuerte que he oído en mi vida\": el testimonio de una mexicana que fue evacuada de Sudán",
-            "firstPublished": "2023-04-26T11:49:53.000Z",
-            "link": "https://www.bbc.com/mundo/noticias-internacional-65390907",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/B32F/production/_129517854_thumbnail_sudaplate.png",
-            "description": "La mexicana Elizabeth Campero vivió el estallido de la violencia en Sudán desde su hogar en Jartum. Aquí, le cuenta a BBC Mundo cómo fue esa aterradora experiencia y los detalles de la evacuación que la sacó a ella y su familia del país africano.",
-            "imageAlt": "Elizabeth Campero",
-            "id": "9a59e329-4f01-49ff-8296-51edc7d0e47a"
+            "isLive": false,
+            "title": "\"Hazme sentir orgullosa\": el mensaje a su hijo de una reportera del grupo de periodistas muertos en un doble ataque de Israel al hospital Nasser en Gaza",
+            "firstPublished": "2025-08-26T17:52:16.781Z",
+            "lastPublished": "2025-08-26T17:52:16.781Z",
+            "link": "https://www.bbc.com/mundo/articles/cn85n6vgg1lo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/6235/live/be817050-8294-11f0-be97-fd5500e1b5ea.jpg.webp",
+            "description": "El ejército israelí confirmó que ejecutó dos ataques aéreos contra la zona del hospital Nasser en Jan Yunis, en el sur de Gaza.",
+            "imageAlt": "Mariam Dagga, una periodista visual palestina que trabajó como freelance para AP desde el inicio de la guerra, posa frente a las cámaras en Jan Yunis, el 18 de enero de 2025.",
+            "id": "cn85n6vgg1lo",
+            "readTime": 8,
+            "visualProminence": "NORMAL"
           },
           {
             "type": "article",
-            "title": "El \"inexplicable\" calentamiento de los océanos que alarma a los científicos",
-            "firstPublished": "2023-04-25T16:17:27.000Z",
-            "link": "https://www.bbc.com/mundo/noticias-65388079",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3A4C/production/_129442941_gettyimages-1236993544.jpg",
-            "description": "La superficie del mar alcanzó un nuevo récord de temperatura debido a un aumento que nunca se había producido de manera tan brusca.",
-            "imageAlt": "Sol sobre el océano",
-            "id": "631efe72-a2bc-4a61-98f5-97ca8d85ba89"
+            "isLive": false,
+            "title": "Ucrania admite que las tropas rusas entraron en la región clave de Dnipropetrovsk",
+            "firstPublished": "2025-08-26T23:18:31.167Z",
+            "lastPublished": "2025-08-26T23:43:29.016Z",
+            "link": "https://www.bbc.com/mundo/articles/ckge497qdn4o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7d25/live/636511c0-82cd-11f0-ab3e-bd52082cd0ae.jpg.webp",
+            "description": "Aunque Rusia informó que sus soldados llegaron a la aldea de Zaporizke, Ucrania insiste en que mantiene el control del área.",
+            "imageAlt": "Tropas rusas en el pueblo de Zaporizke",
+            "id": "ckge497qdn4o",
+            "readTime": 5,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Quién es Lisa Cook, la gobernadora de la Reserva Federal a la que Trump ordenó destituir",
+            "firstPublished": "2025-08-26T14:02:49.254Z",
+            "lastPublished": "2025-08-26T20:38:37.945Z",
+            "link": "https://www.bbc.com/mundo/articles/c79lgq9zzjxo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/0065/live/ff9fd380-827e-11f0-856b-cd8744058cb6.jpg.webp",
+            "description": "El presidente acusó a la funcionaria de mentir al momento de obtener unos créditos hipotecarios para adquirir unas casas. El trasfondo es la disputa entre Trump y el presidente de la Fed, Jerome Powell.",
+            "imageAlt": "Lisa Cook volteando",
+            "id": "c79lgq9zzjxo",
+            "readTime": 6,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Sentarse erguido no es la única opción: otros 3 consejos para mantener una buena postura",
+            "firstPublished": "2025-08-27T09:36:47.728Z",
+            "lastPublished": "2025-08-27T09:36:47.728Z",
+            "link": "https://www.bbc.com/mundo/articles/cq87959qwejo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/8b33/live/c5ef64e0-7d0e-11f0-affd-3db3a18ad929.jpg.webp",
+            "description": "Aquí están las tres sugerencias de un doctor sobre cómo cuidar la espalda sin convertirse en una estatua.",
+            "imageAlt": "Mujer sentada en una silla sujetándose la zona lumbar y haciendo una mueca de dolor.",
+            "id": "cq87959qwejo",
+            "readTime": 5,
+            "visualProminence": "NORMAL"
           }
         ],
         "activePage": 1,
@@ -42,7 +82,7 @@
         "curationId": "urn:bbc:tipo:list:295a530d-b4fc-4747-9ca8-e2896e125568",
         "curationType": "tipo-curation",
         "position": 0,
-        "title": "Top Stories",
+        "title": "Principales",
         "visualProminence": "HIGH",
         "visualStyle": "COLLECTION"
       },
@@ -50,54 +90,1856 @@
         "summaries": [
           {
             "type": "article",
-            "title": "De Newton a Neil Armstrong: 7 frases famosas que realmente nunca se dijeron",
-            "firstPublished": "2023-04-02T19:22:17.000Z",
-            "link": "https://www.bbc.com/mundo/noticias-65090662",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/15B18/production/_129165888_gettyimages-1404442799.jpg",
-            "description": "Internet, pero también los libros, están plagados de citas atribuidas a personajes históricos que éstos jamás pronunciaron.",
-            "imageAlt": "El astronauta Neil Amstrong caminando por la Luna en 1969.",
-            "id": "d80aa5d0-e958-4df0-96f9-0b8b68b98436"
+            "isLive": false,
+            "title": "La joven que le ruega a Elon Musk que retire los enlaces a las imágenes de los abusos que sufrió cuando era niña",
+            "firstPublished": "2025-08-26T20:18:06.674Z",
+            "lastPublished": "2025-08-26T23:20:54.603Z",
+            "link": "https://www.bbc.com/mundo/articles/c8denr00jv6o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/b0a0/live/9b341db0-7cee-11f0-83cc-c5da98c419b8.png.webp",
+            "description": "Una investigación de la BBC revela que imágenes de víctimas de pedofilia en Estados Unidos se ponen a la venta por internet desde Indonesia.",
+            "imageAlt": "Montaje con la cabeza de una mujer de pelo largo de espaldas con espacios para mensajes de la red X en blanco. ",
+            "id": "c8denr00jv6o",
+            "readTime": 7,
+            "visualProminence": "NORMAL"
           },
           {
             "type": "article",
-            "title": "Quién es Stormy Daniels, la estrella porno que detonó la imputación a Donald Trump",
-            "firstPublished": "2023-03-31T18:53:19.000Z",
-            "link": "https://www.bbc.com/mundo/noticias-internacional-65143844",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7D8F/production/_100034123_mediaitem100034044.jpg",
-            "description": "El expresidente de Estados Unidos será detenido el martes luego de que un gran jurado en Nueva York lo imputara por supuestamente haberle pagado a la exactriz durante su campaña presidencial para silenciar una relación extramatrimonial.",
-            "imageAlt": "La actriz Stormy Daniels posando",
-            "id": "c99b52b7-78e8-4ac9-8792-ffef24d56400"
+            "isLive": false,
+            "title": "Cómo la amistad -y la admiración mutua- entre Dudamel y Chris Martin llevó al Sistema de Orquestas de Venezuela a tocar con Coldplay ",
+            "firstPublished": "2025-08-26T11:41:46.070Z",
+            "lastPublished": "2025-08-26T11:41:46.070Z",
+            "link": "https://www.bbc.com/mundo/articles/crlzwwly3nko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/9f3c/live/fea40f70-7f3e-11f0-ab3e-bd52082cd0ae.jpg.webp",
+            "description": "Pathrycia Mendonça integra la Orquesta Simón Bolívar, la cual participará en los conciertos que la banda británica ofrecerá en el estadio londinense de Wembley.",
+            "imageAlt": "Gustavo Dudamel y Chris Martin ríen durante uno de los ensayos en 2016.",
+            "id": "crlzwwly3nko",
+            "readTime": 8,
+            "visualProminence": "NORMAL"
           },
           {
             "type": "article",
-            "title": "\"Antes estábamos sitiados\": los barrios de El Salvador que se reencuentran tras la \"desaparición\" de las pandillas por la guerra de Bukele",
-            "firstPublished": "2023-03-27T12:54:51.000Z",
-            "link": "https://www.bbc.com/mundo/noticias-america-latina-65059584",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1BB7/production/_129159070_04ffa0db-984b-464c-9b6d-b277ce1ae0e3.jpg",
-            "description": "Entre denuncias por violación de derechos, el estado de excepción en El Salvador cumple un año con sus homicidios en mínimos históricos. ¿Qué tanto se notan los efectos de la \"guerra contra las pandillas\" en las calles?",
-            "imageAlt": "Cancha de deporte en La Campanera",
-            "id": "517b2f96-e804-4c6d-b68b-92c9b6ca0880"
+            "isLive": false,
+            "title": "\"Había cadáveres por todas partes\": la BBC reconstruye lo que ocurrió dentro de Evin, una de las prisiones más infames de Irán en la que murieron 80 personas en un ataque de Israel",
+            "firstPublished": "2025-08-26T02:02:05.623Z",
+            "lastPublished": "2025-08-26T02:32:42.614Z",
+            "link": "https://www.bbc.com/mundo/articles/cdd3ll3pyqno",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/321c/live/c9c6b560-8221-11f0-b786-bd64ae234df7.jpg.webp",
+            "description": "Las imágenes satelitales, los testimonios de testigos presenciales y las grabaciones verificadas obtenidas por la BBC revelan nuevos detalles sobre el ataque israelí al complejo penitenciario de Evin en Irán.",
+            "imageAlt": "Rescatistas en el interior de la prisión tras el ataque.",
+            "id": "cdd3ll3pyqno",
+            "readTime": 8,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Las conmovedoras experiencias de una doctora que prepara el último adiós de los bebés",
+            "firstPublished": "2025-08-26T10:22:41.950Z",
+            "lastPublished": "2025-08-26T10:22:41.950Z",
+            "link": "https://www.bbc.com/mundo/articles/cq5886jg7x2o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/8a7b/live/4098f6f0-779e-11f0-8688-f1caa7903057.jpg.webp",
+            "description": "La neonatóloga Lília Embiruçu trabaja para que las despedidas sean una forma de registrar la existencia, por breve que sea.",
+            "imageAlt": "La neonatóloga Lilia Embiruçu sentada en un sofá.",
+            "id": "cq5886jg7x2o",
+            "readTime": 6,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:669ab04a-9ec9-452d-9ca2-269204fba366",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "Más noticias",
+        "visualProminence": "NORMAL",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "El inesperado papel que pueden jugar los caracoles marinos para tratar los ronquidos y la apnea del sueño",
+            "firstPublished": "2025-08-26T09:28:41.177Z",
+            "lastPublished": "2025-08-26T09:28:41.177Z",
+            "link": "https://www.bbc.com/mundo/articles/cy4d2378n3yo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/0e73/live/791b3150-8199-11f0-a34f-318be3fb0481.jpg.webp",
+            "description": "Aunque la terapia de concha de caracol no va a revolucionar el tratamiento de la apnea del sueño, si podría servir como una estrategia amplia mejorar esa condición.",
+            "imageAlt": "Mujer soplando una caracola",
+            "id": "cy4d2378n3yo",
+            "readTime": 5,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Cómo El Dorado de Bogotá se convirtió en el aeropuerto más transitado de América Latina, superando el dominio de décadas de São Paulo y CDMX ",
+            "firstPublished": "2025-08-25T11:26:29.945Z",
+            "lastPublished": "2025-08-25T20:48:37.222Z",
+            "link": "https://www.bbc.com/mundo/articles/ce83n2z63d4o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/15b3/live/318226c0-81f1-11f0-ab3e-bd52082cd0ae.jpg.webp",
+            "description": "Bogotá y su aeropuerto viven un boom de popularidad, pero varios retos cuestionan su dinamismo a corto y medio plazo. ",
+            "imageAlt": "El Dorado",
+            "id": "ce83n2z63d4o",
+            "readTime": 8,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "\"No hay ningún lugar seguro\": al menos 20 muertos, entre ellos 5 periodistas, en un doble ataque de Israel contra un hospital en Gaza",
+            "firstPublished": "2025-08-25T19:06:10.615Z",
+            "lastPublished": "2025-08-25T19:06:10.615Z",
+            "link": "https://www.bbc.com/mundo/articles/crlzwg61jnyo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/2f03/live/db1f74c0-81de-11f0-bba3-f1a97d87f8f8.jpg.webp",
+            "description": "Varias personas murieron en un ataque inicial y otras perdieron la vida en un segundo embate que ocurrió mientras los rescatistas acudían al lugar, informó la Defensa Civil de Gaza.",
+            "imageAlt": "Miembros de equipos de rescate y otras personas se aglomeran en una terraza del hospital Nasser en Gaza.",
+            "id": "crlzwg61jnyo",
+            "readTime": 5,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "La cantante Taylor Swift y el jugador de fútbol americano Travis Kelce anuncian su compromiso",
+            "firstPublished": "2025-08-26T19:25:48.568Z",
+            "lastPublished": "2025-08-26T19:40:37.919Z",
+            "link": "https://www.bbc.com/mundo/articles/cg50lgd96vdo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/97c1/live/b2ad7d40-82ae-11f0-8874-4bc0b1b75fa7.png.webp",
+            "description": "En una publicación de Instagram el martes, Swift escribió: \"Tu profesora de inglés y tu profesor de gimnasia se casan\".",
+            "imageAlt": "Pareja",
+            "id": "cg50lgd96vdo",
+            "readTime": 3,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "5 de los países más seguros del mundo en 2025 (y qué los hace así, según sus residentes)",
+            "firstPublished": "2025-08-25T21:23:15.284Z",
+            "lastPublished": "2025-08-25T23:49:58.622Z",
+            "link": "https://www.bbc.com/mundo/articles/cx2x6mkr4ryo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/4a02/live/2795ff20-820e-11f0-83cc-c5da98c419b8.jpg.webp",
+            "description": "En un año marcado por conflictos, los residentes de 5 naciones que ocupan los primeros lugares como las más pacíficas revelan cómo las políticas y la cultura moldean la vida diaria y crean una sensación de calma.",
+            "imageAlt": "Dublín",
+            "id": "cx2x6mkr4ryo",
+            "readTime": 9,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Detectan el primer caso en humanos en EE.UU. del gusano barrenador del Nuevo Mundo",
+            "firstPublished": "2025-08-25T23:46:05.617Z",
+            "lastPublished": "2025-08-25T23:46:05.617Z",
+            "link": "https://www.bbc.com/mundo/articles/crkz5dvmky0o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/2f5e/live/09c80fa0-81e7-11f0-ab3e-bd52082cd0ae.jpg.webp",
+            "description": "Las larvas de una mosca son las responsables de esta plaga que puede devastar a la industria ganadera.",
+            "imageAlt": "Larvas de moscas barrenadoras tomadas de vacas infectadas en un líquido transparente. ",
+            "id": "crkz5dvmky0o",
+            "readTime": 3,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:144b02f9-d3c6-4c72-91b3-b92398832deb",
+        "curationType": "tipo-curation",
+        "position": 2,
+        "title": "Destacamos",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Cómo fue el legendario Imperio persa, la primera superpotencia de la historia",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://youtu.be/YRezDzil0yk",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/31dc/live/10111350-7f6e-11f0-ab3e-bd52082cd0ae.jpg.webp",
+            "imageAlt": "Se lee el texto: el Imperio persa, la primera superpotencia de la historia",
+            "id": "https%3A%2F%2Fyoutu.be%2FYRezDzil0yk",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Los búnkeres secretos de la Segunda Guerra Mundial que se ocultan bajo tierra en Río Janeiro",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://youtu.be/nLW8wVwu_vM",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/dd5c/live/50413f90-7f50-11f0-ab3e-bd52082cd0ae.jpg.webp",
+            "imageAlt": "Al fondo una foto de Río de Janeiro, al frente se lee el texto: Los búnkeres secretos de Río de Janeiro",
+            "id": "https%3A%2F%2Fyoutu.be%2FnLW8wVwu_vM",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "La brutalidad en la megacárcel de Bukele que denuncian 8 de los venezolanos deportados por EE.UU. a El Salvador",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://youtu.be/6YiRgq7PX_g",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/ce82/live/ae088fe0-7d14-11f0-ab3e-bd52082cd0ae.jpg.webp",
+            "imageAlt": "A la derecha uno de los veneolanos detenidos en el CECOT con la cabeza rapada, a la izquierda se lee: Bienvenidos al CECOT, el cementerio de hombres vivos",
+            "id": "https%3A%2F%2Fyoutu.be%2F6YiRgq7PX_g",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Por qué perdió la izquierda tras 20 años en el poder en Bolivia y quiénes  son los candidatos que se disputarán el balotaje",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://youtu.be/KythmZ5iWhg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/81ba/live/eca51120-7c64-11f0-a34f-318be3fb0481.jpg.webp",
+            "imageAlt": "Al fondo una foto de simpatizantes y una bandera de Bolivia, delante, alineado a la izquierda se lee el texto: La derrota de la izquierda en Bolivia tras casi 20 años en el poder y a la derecha la imagen de la periodista Ana María Roura",
+            "id": "https%3A%2F%2Fyoutu.be%2FKythmZ5iWhg",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Por qué en muchos países de América Latina y España usamos dos apellidos",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://youtu.be/jBLolsl_Mnc",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/e822/live/c10a81f0-79dd-11f0-83cc-c5da98c419b8.jpg.webp",
+            "imageAlt": "Al fondo una foto que muestra a una familia de los 1800 delante a la izquierda el título: Por qué tenemos dos apellifos en América Latina y España y la derecha la imagen de la periodista Paula Rosas",
+            "id": "https%3A%2F%2Fyoutu.be%2FjBLolsl_Mnc",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:c6447776-a6a0-4720-a81c-526bf0773e2e",
+        "curationType": "tipo-curation",
+        "position": 3,
+        "title": "Video y audio",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Únete a nuestro canal de WhatsApp",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.whatsapp.com/channel/0029VaUm1Ss3WHTbgIXrjw3D",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/9e7b/live/32956420-2264-11ef-80aa-699d54c46324.png.webp",
+            "imageAlt": "Logo de WhatsApp",
+            "id": "https%3A%2F%2Fwww.whatsapp.com%2Fchannel%2F0029VaUm1Ss3WHTbgIXrjw3D",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.whatsapp.com/channel/0029VaUm1Ss3WHTbgIXrjw3D",
+        "curationId": "urn:bbc:tipo:list:7a9bf294-3637-4951-ada8-2ee5946e1f8f",
+        "curationType": "tipo-curation",
+        "position": 4,
+        "title": "Ahora BBC Mundo está en WhatsApp",
+        "visualProminence": "NORMAL",
+        "visualStyle": "BANNER"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "\"Vamos a combatir el fuego con fuego\": cómo el gobernador Gavin Newsom emergió como el líder de la oposición a Donald Trump en EE.UU.",
+            "firstPublished": "2025-08-25T13:55:47.431Z",
+            "lastPublished": "2025-08-25T13:55:47.431Z",
+            "link": "https://www.bbc.com/mundo/articles/c4gq97xr7qvo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/8b8c/live/d100d730-7fa5-11f0-9cc4-df69a0381099.png.webp",
+            "description": "En medio de la saga por redibujar los mapas electorales de Texas y California, el gobernador se perfila como un político dispuesto a dar la batalla.",
+            "imageAlt": "El gobernador de California, Gavin Newsom, junto con representantes locales del congreso, funcionarios estatales y simpatizantes, habla mientras anuncia el rediseño de los mapas del congreso de California, pidiendo a los votantes que aprueben una medida en la boleta, en respuesta a un movimiento similar en Texas que cuenta con el apoyo del presidente estadounidense Donald Trump, en Los Ángeles, California, EE. UU., 14 de agosto de 2025. REUTERS/Mike Blake/Foto de archivo",
+            "id": "c4gq97xr7qvo",
+            "readTime": 11,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "\"El Mayo\" Zambada se declara culpable de narcotráfico en EE.UU. y asegura que sobornó a policías y políticos mexicanos",
+            "firstPublished": "2025-08-25T20:42:00.563Z",
+            "lastPublished": "2025-08-25T20:42:00.563Z",
+            "link": "https://www.bbc.com/mundo/articles/c4ge3ll019do",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/b1cb/live/a70cc380-81e9-11f0-aa40-9bf70e78287c.jpg.webp",
+            "description": "El líder del Cartel de Sinaloa cambió su declaración de culpabilidad en un tribunal de Nueva York y aseguró haber sobornado a autoridades mexicanas.",
+            "imageAlt": "Un dibujo de Ismael Zambada prestando juramento su audiencia en Nueva York",
+            "id": "c4ge3ll019do",
+            "readTime": 5,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Los \"trenes de la felicidad\": el proyecto solidario que llevó a 70.000 niños pobres a vivir con familias acomodadas en Italia",
+            "firstPublished": "2025-08-24T07:26:25.380Z",
+            "lastPublished": "2025-08-24T07:26:25.380Z",
+            "link": "https://www.bbc.com/mundo/articles/cpqn55yr1pwo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/de90/live/e29ae4e0-58cc-11f0-845c-d92b8e37d4ae.jpg.webp",
+            "description": "El plan organizado por la Unión de Mujeres y el Partido Comunista  supuso un esfuerzo por aliviar la situación de los niños más pobres en plena posguerra.\n\n",
+            "imageAlt": "La imagen referencial muestra a niños siendo evacuados de Roma durante la Segunda Guerra Mundial (1940). \n",
+            "id": "cpqn55yr1pwo",
+            "readTime": 7,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Nagyrev, el poblado húngaro donde cientos de hombres fueron asesinados por sus esposas",
+            "firstPublished": "2025-08-24T08:36:04.899Z",
+            "lastPublished": "2025-08-24T08:36:04.899Z",
+            "link": "https://www.bbc.com/mundo/articles/c9qy0xze5y5o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/1409/live/7a9c9ef0-73a8-11f0-98d8-b14683e68fab.jpg.webp",
+            "description": "Algunos lo consideran el asesinato masivo de hombres a mano de mujeres más grande de la historia moderna. ",
+            "imageAlt": "Mujeres durante un juicio en Hungría por el asesinato de varios hombres en la población de ",
+            "id": "c9qy0xze5y5o",
+            "readTime": 5,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "\"Nos vimos forzados a romper y quemar la madera del barco para cocinar\": por qué miles de marineros son abandonados cada año en sus buques",
+            "firstPublished": "2025-08-24T03:35:39.957Z",
+            "lastPublished": "2025-08-24T03:36:07.573Z",
+            "link": "https://www.bbc.com/mundo/articles/c30z95v9dzpo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/302c/live/4a544100-79e6-11f0-ab39-5f560085c471.jpg.webp",
+            "description": "Alrededor de 900 marineros indios fueron abandonados en barcos de todo el mundo en 2024. Pero no son los únicos.",
+            "imageAlt": "Un tripulante del carguero Anka, abandonado en un puerto ucraniano en un río que divide Ucrania y Rumanía, con camisa azul, observa la extensión del río desde la proa del buque.\n\n",
+            "id": "c30z95v9dzpo",
+            "readTime": 7,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "\"Bienvenidos al cementerio de hombres vivos\": la brutalidad en la megacárcel de Bukele que denuncian 8 de los venezolanos deportados por EE.UU. a El Salvador ",
+            "firstPublished": "2025-08-18T07:59:05.359Z",
+            "lastPublished": "2025-08-18T07:59:05.359Z",
+            "link": "https://www.bbc.com/mundo/articles/cwy19wx0g8qo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/f940/live/501a9dd0-79f7-11f0-a34f-318be3fb0481.jpg.webp",
+            "description": "Ocho migrantes venezolanos entrevistados por BBC News Mundo reconstruyen lo que ocurrió durante los cuatro meses que estuvieron detenidos en el Cecot, una cárcel de la que pocos habían salido y cuya rutina nadie había descrito con tanto detalle. ",
+            "imageAlt": "Mervin Yamarte, uno de los ocho migrantes entrevistados por BBC News Mundo, cuando le afeitaron la cabeza a su llegada al Cecot.  ",
+            "id": "cwy19wx0g8qo",
+            "readTime": 22,
+            "visualProminence": "NORMAL"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:b2bfa87b-189c-4c25-a254-3851cf49453f",
         "curationType": "tipo-curation",
-        "position": 1,
+        "position": 5,
         "title": "No te lo pierdas",
         "visualProminence": "HIGH",
         "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Quién es \"El Mayo\" Zambada, el hombre más buscado de México que se declaró culpable de narcotráfico en una corte de EE.UU.",
+            "firstPublished": "2025-08-26T11:30:30.361Z",
+            "lastPublished": "2025-08-26T11:30:30.361Z",
+            "link": "https://www.bbc.com/mundo/articles/cgkr43y3p7zo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/fbeb/live/60c8c1d0-8266-11f0-ab3e-bd52082cd0ae.png.webp",
+            "description": "La historia delictiva de uno de los jefes más conocidos del narcotráfico en México llegó a su final con la declatoria de culpabilidad de este lunes. ",
+            "imageAlt": "Imagen de Ismael Zambada cuando fue capturado en 2024",
+            "id": "cgkr43y3p7zo",
+            "readTime": 6,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "La \"pequeña Venezuela\": Sweida, la capital de los drusos en Siria donde el 20% de la población es venezolana",
+            "firstPublished": "2025-08-21T11:30:22.991Z",
+            "lastPublished": "2025-08-21T11:30:22.991Z",
+            "link": "https://www.bbc.com/mundo/articles/cp8zwkl1l0yo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c23d/live/f2ea1240-7e82-11f0-83cc-c5da98c419b8.jpg.webp",
+            "description": "La ciudad, que recientemente fue un centro de enfretamientos entre drusos y beduinos y donde luego intervino el ejército del gobierno interino y hasta la fuerza aérea israelí, tiene un 20% de la población de origen venezolano.",
+            "imageAlt": "Familia en Sweida",
+            "id": "cp8zwkl1l0yo",
+            "readTime": 11,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Las lujosas casas del dictador Rafael Leónidas Trujillo que quedaron abandonadas en República Dominicana",
+            "firstPublished": "2025-08-21T13:54:36.002Z",
+            "lastPublished": "2025-08-21T13:54:36.002Z",
+            "link": "https://www.bbc.com/mundo/articles/c4gm30vxrk5o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/0b76/live/6d614a20-7898-11f0-b1cd-a9ea7239675a.jpg.webp",
+            "description": "Mientras sectores de la población defienden establecer museos en algunas de las residencias que pertenecían a Trujillo, hay quienes afirman que esto resaltaría su figura y enviaría un mensaje equivocado a las víctimas del tirano y a las nuevas generaciones. ",
+            "imageAlt": "Casa de Marfil, ubicada frente a la playa en la Provincia de San Cristóbal. Se ve despintada, sin puertas ni ventanas. ",
+            "id": "c4gm30vxrk5o",
+            "readTime": 9,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Quiénes son los \"cazadores de gringos\", la unidad especializada en rastrear y detener a los prófugos de EE.UU. que se esconden en México",
+            "firstPublished": "2025-08-20T15:16:47.864Z",
+            "lastPublished": "2025-08-20T20:46:23.499Z",
+            "link": "https://www.bbc.com/mundo/articles/cwy0v9lwjyqo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/cde4/live/851090d0-7f97-11f0-ab3e-bd52082cd0ae.jpg.webp",
+            "description": "Una unidad de élite en el estado de Baja California ha perseguido, y con mucho éxito, a fugitivos de EE.UU. que buscan esconderse en México. ¿Cómo opera y puede ser replicado su modelo en el resto del país?",
+            "imageAlt": "Policía en Tijuana",
+            "id": "cwy0v9lwjyqo",
+            "readTime": 9,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Cuáles son y cuánto poder tienen los dos grupos de las disidencias de las FARC señalados como responsables de los atentados que dejaron 19 muertos en Colombia",
+            "firstPublished": "2025-08-22T23:54:59.638Z",
+            "lastPublished": "2025-08-23T01:17:20.236Z",
+            "link": "https://www.bbc.com/mundo/articles/cdx0p96nd1no",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/ca70/live/32d8c5a0-7f4a-11f0-83cc-c5da98c419b8.jpg.webp",
+            "description": "Colombia vivió este jueves una de las jornadas más sangrientas de los últimos años. Las autoridades responsabilizaron de los ataques a dos grupos de las disidencias de la extinta guerrilla de las FARC.\n",
+            "imageAlt": "Miembro del frente Carlos Patiño de la disidencia de las FARC",
+            "id": "cdx0p96nd1no",
+            "readTime": 8,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/mundo/topics/c7zp57yyz25t",
+        "curationId": "urn:bbc:tipo:list:ecef947d-c3e8-43cc-8846-024529a81bc1",
+        "curationType": "tipo-curation",
+        "position": 6,
+        "title": "América Latina",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "El infierno que viven los niños y adolescentes que son usados como esclavos sexuales en las minas ilegales de Sudáfrica",
+            "firstPublished": "2025-08-25T03:22:58.460Z",
+            "lastPublished": "2025-08-25T03:22:58.460Z",
+            "link": "https://www.bbc.com/mundo/articles/c2d55wd9zlzo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d766/live/14d008a0-36f9-11f0-8947-7d6241f9fce9.jpg.webp",
+            "description": "Una investigación de la BBC reveló que bandas criminales en el país africano reclutan específicamente a menores como esclavos sexuales para las minas ilegales \"porque son más fáciles de manipular y más baratos\".",
+            "imageAlt": "Un trozo de oro en la palma de una mano",
+            "id": "c2d55wd9zlzo",
+            "readTime": 6,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "La odisea de Kilmar Ábrego, el migrante salvadoreño que pelea por no ser deportado por segunda vez de EE.UU.",
+            "firstPublished": "2025-08-25T17:55:48.762Z",
+            "lastPublished": "2025-08-25T17:55:48.762Z",
+            "link": "https://www.bbc.com/mundo/articles/cyvn0dl7e14o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/3699/live/29250890-81d7-11f0-9fb8-d74a5f4416f6.jpg.webp",
+            "description": "El salvadoreño Kilmar Ábrego García ha luchado por mantenerse en EE.UU. desde hace cinco meses, tiempo en el que ha pasado por múltiples detenciones.",
+            "imageAlt": "Kilmar Ábrego y su esposa Jennifer llegan a una oficina de ICE en Baltimore",
+            "id": "cyvn0dl7e14o",
+            "readTime": 6,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "La increíble historia del niño de 12 años que fotografió la Guerra de Vietnam",
+            "firstPublished": "2025-08-23T02:56:01.235Z",
+            "lastPublished": "2025-08-23T02:56:01.235Z",
+            "link": "https://www.bbc.com/mundo/articles/cj9w28kr9m3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/f605/live/cb29d6f0-714e-11f0-b40d-2f2a77d02753.jpg.webp",
+            "description": "A sus 12 años, Lo Manh Hung -conocido como Jimmy- ya era un fotógrafo experimentado que seguía a su padre fotoperiodista en algunas de las situaciones más peligrosas de la guerra de Vietnam. ",
+            "imageAlt": "Jimmy",
+            "id": "cj9w28kr9m3o",
+            "readTime": 9,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Aldrich Ames, el doble agente que más daño le causó a EE.UU. durante la Guerra Fría",
+            "firstPublished": "2025-08-24T11:15:09.272Z",
+            "lastPublished": "2025-08-24T11:15:09.272Z",
+            "link": "https://www.bbc.com/mundo/articles/cwy7zwynn3do",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/4c55/live/c808a130-2749-11f0-a0f0-d7c4a36670bf.jpg.webp",
+            "description": "Pasó casi una década vendiendo información secreta a la Unión Soviética, comprometiendo más de 100 operaciones clandestinas y provocando la muerte de al menos 10 agentes de inteligencia occidentales. El 28 de abril de 1994 fue condenado a cadena perpetua.",
+            "imageAlt": "Aldrich Ames esposado y perseguido por varios periodistas y cámaras de televisión.",
+            "id": "cwy7zwynn3do",
+            "readTime": 9,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Antonio Salazar-Hobson, el chicano secuestrado y abusado a los 4 años que se convirtió en uno de los abogados más exitosos de EE.UU.",
+            "firstPublished": "2025-08-17T15:11:32.341Z",
+            "lastPublished": "2025-08-17T15:11:32.341Z",
+            "link": "https://www.bbc.com/mundo/articles/cvg0er8jpr7o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/ae49/live/508f8790-7163-11f0-af20-030418be2ca5.jpg.webp",
+            "description": "Le robaron su nombre, su idioma y su infancia. Pero nunca su dignidad. Pasó de ser un niño raptado a abogado defensor.",
+            "imageAlt": "Antonio Salazar-Hobson de niño",
+            "id": "cvg0er8jpr7o",
+            "readTime": 12,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/mundo/topics/c2lej05epw5t",
+        "curationId": "urn:bbc:tipo:list:d9658dc9-210c-4fb4-8fcf-0b1e0f3778f2",
+        "curationType": "tipo-curation",
+        "position": 7,
+        "title": "Internacional",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Suscríbete al newsletter de BBC Mundo",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/mundo/send/u184973209",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/2a46/live/3b2c99b0-89fb-11ef-8936-1185f9e7d044.png.webp",
+            "imageAlt": "Newsletter de BBC Mundo",
+            "id": "https%3A%2F%2Fbit.ly%2F3A0hJT4",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:cd18a86c-b6fa-4448-b629-b56dbef65bd3",
+        "curationType": "tipo-curation",
+        "position": 8,
+        "title": "Recibe las principales historias de la semana cada viernes en tu correo",
+        "visualProminence": "NORMAL",
+        "visualStyle": "BANNER"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Cómo 8 segundos de una grabación  mala y ruidosa me devolvieron la voz que perdí por la enfermedad de la neurona motora ",
+            "firstPublished": "2025-08-25T10:29:35.729Z",
+            "lastPublished": "2025-08-25T10:29:35.729Z",
+            "link": "https://www.bbc.com/mundo/articles/c4gz0mg80yko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a626/live/08725ab0-7db5-11f0-88de-21c2f8cb127a.jpg.webp",
+            "description": "La inteligencia artificial copió la voz de Sarah de un viejo VHS de la familia. ",
+            "imageAlt": "Sarah en entrevista con la periodista Emma Tracey. Le muestra su nueva voz creada por IA. ",
+            "id": "c4gz0mg80yko",
+            "readTime": 7,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "El superalimento creado por científicos de Oxford que busca salvar a las abejas de su desaparición",
+            "firstPublished": "2025-08-22T09:39:23.090Z",
+            "lastPublished": "2025-08-22T09:39:23.090Z",
+            "link": "https://www.bbc.com/mundo/articles/cwypwn0d1z2o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7189/live/bf16e2a0-7deb-11f0-ab3e-bd52082cd0ae.jpg.webp",
+            "description": "Los humanos dependemos de las abejas para polinizar nuestras plantas y cultivos, y un nuevo alimento podría protegerla de las crecientes amenazas.",
+            "imageAlt": "Primer plano de una abeja melífera con pelaje, alas, ojos y antenas visibles",
+            "id": "cwypwn0d1z2o",
+            "readTime": 5,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Mi ex me acosaba, así que me uní a una app para citas seguras. Luego, filtraron y compartieron mi dirección",
+            "firstPublished": "2025-08-22T10:40:16.251Z",
+            "lastPublished": "2025-08-22T10:40:16.251Z",
+            "link": "https://www.bbc.com/mundo/articles/cdj27zjzdn3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/ccd4/live/89f94410-7e85-11f0-9e05-3dbec5559644.jpg.webp",
+            "description": "Después de que se filtraran los datos de miles de mujeres que se habían registrado en la aplicación, los hombres crearon sitios web y aplicaciones para humillarlas.",
+            "imageAlt": "Una mujer sostiene un teléfono móvil. Lleva una camisa celeste. ",
+            "id": "cdj27zjzdn3o",
+            "readTime": 7,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "La alerta de un jefe de Microsoft por el aumento de la \"psicosis por inteligencia artificial\"",
+            "firstPublished": "2025-08-21T15:55:18.741Z",
+            "lastPublished": "2025-08-21T16:28:07.944Z",
+            "link": "https://www.bbc.com/mundo/articles/c7vlq1djng1o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/4323/live/9a9ac6f0-7e7a-11f0-96e5-5b061b987076.jpg.webp",
+            "description": "Muchas personas que recurren a la IA acaban confundiéndose y tomando por válidas afirmaciones que están alejadas de la realidad. ",
+            "imageAlt": "Mustafa Suleyman, vestido de negro y con un cordón de la cumbre de seguridad de la IA alrededor, se dirige al público.",
+            "id": "c7vlq1djng1o",
+            "readTime": 6,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Qué es la proyección de Mercator y por qué los países de África quieren que se deje de usar para elaborar los mapamundis",
+            "firstPublished": "2025-08-18T20:19:13.751Z",
+            "lastPublished": "2025-08-18T20:19:13.751Z",
+            "link": "https://www.bbc.com/mundo/articles/cy7ymzex6l2o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a70d/live/d3a2b9c0-7d09-11f0-ab3e-bd52082cd0ae.png.webp",
+            "description": "La proyección de Mercator muestra a Europa y Norteamérica desproporcionadamente grandes con respecto a África.",
+            "imageAlt": "Imagen tratada mostrando el continente africano en rojo y azul.",
+            "id": "cy7ymzex6l2o",
+            "readTime": 4,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:1992a638-f2eb-4933-a3f7-56b2e2820abb",
+        "curationType": "tipo-curation",
+        "position": 9,
+        "title": "Ciencia y Tecnología",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Joseph Lister, el cirujano que tuvo la brillante idea de desinfectarse las manos (e inspiró a los creadores de Listerine y Johnson & Johnson)",
+            "firstPublished": "2025-08-24T10:02:30.413Z",
+            "lastPublished": "2025-08-24T10:02:30.413Z",
+            "link": "https://www.bbc.com/mundo/articles/cp8927r4qngo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c2de/live/e7559530-7c57-11f0-adbd-f7cd4f760c3f.jpg.webp",
+            "description": "En una época en la que los quirófanos eran sinónimo de infecciones mortales, se atrevió a proponer algo insólito: desinfectar. Así nació la cirugía moderna.",
+            "imageAlt": "Un cirujano realizando una amputación de pierna en el siglo XVII. Óleo, siglo XIX",
+            "id": "cp8927r4qngo",
+            "readTime": 10,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Qué son los electrolitos y qué es lo mejor para hidratarse después del ejercicio según los expertos",
+            "firstPublished": "2025-08-21T10:31:23.237Z",
+            "lastPublished": "2025-08-21T10:31:23.237Z",
+            "link": "https://www.bbc.com/mundo/articles/c939j1le89vo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/635a/live/4f778420-7f96-11f0-9afa-eb21454a2d4c.jpg.webp",
+            "description": "Con la cantidad de bebidas para la hidratación disponibles en el mercado, es difícil saber qué sirve para qué. Dos expertas hacen algunas aclaraciones y recomendaciones.",
+            "imageAlt": "Una mujer en ropa deportiva sonríe mientras sostiene una botella de plástico con una bebida energética de color amarillo fluorescente. ",
+            "id": "c939j1le89vo",
+            "readTime": 6,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "\"El día que desperté con un par de manos nuevas 17 años después de que me las amputaran por una sepsis\"",
+            "firstPublished": "2025-08-20T15:21:08.051Z",
+            "lastPublished": "2025-08-20T19:46:52.723Z",
+            "link": "https://www.bbc.com/mundo/articles/c9qy5ynw3w2o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/4659/live/663463c0-7dfe-11f0-9f54-e365e5493530.jpg.webp",
+            "description": "Luka Krizanac perdió sus manos y sus piernas después de desarrollar una sepsis severa que comenzó con una simple tos y dolor de garganta. ",
+            "imageAlt": "Luka Krizanac",
+            "id": "c9qy5ynw3w2o",
+            "readTime": 6,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "\"Vi una luz caleidoscópica antes de quedarme ciego\": el joven que sobrevivió a un envenenamiento masivo por metanol en el que murieron 6 personas",
+            "firstPublished": "2025-08-19T18:36:42.800Z",
+            "lastPublished": "2025-08-19T18:36:42.800Z",
+            "link": "https://www.bbc.com/mundo/articles/ce872gxxp2mo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/5e42/live/7164dbe0-7c18-11f0-ab3e-bd52082cd0ae.jpg.webp",
+            "description": "Calum Macdonald y las familias de tres personas fallecidas en el sudeste asiático piden a las autoridades que ofrezcan consejos de viaje más claros.",
+            "imageAlt": "Calum Macdonald poses for a photo in a black rubber ring on a brown river. He has short black curly hair.",
+            "id": "ce872gxxp2mo",
+            "readTime": 7,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Lo que un \"terapeuta de ricos\" aprendió sobre la felicidad al escuchar los problemas de los millonarios",
+            "firstPublished": "2025-08-15T10:29:46.920Z",
+            "lastPublished": "2025-08-15T10:29:46.920Z",
+            "link": "https://www.bbc.com/mundo/articles/cx295qq3n2eo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/364c/live/81e56d20-7887-11f0-8071-1788c7e8ae0e.jpg.webp",
+            "description": "La práctica de Clay Cockrell se ha enfocado en los más ricos de Nueva York. Esto es lo que aprendió de ellos.",
+            "imageAlt": "Los actores de la serie de televisión Succession, aparecen en la terraza de un moderno edificio de cristal. En primer plano está el padre, y detrás están sus hijos y otros miembros de la familia ficticia.",
+            "id": "cx295qq3n2eo",
+            "readTime": 7,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:dd8dccca-0a8a-4a33-a86c-b14f6b57a867",
+        "curationType": "tipo-curation",
+        "position": 10,
+        "title": "Salud y Bienestar",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "La fascinante historia de Benidorm, el pueblo de pescadores que terminó convertido en la ciudad española con más rascacielos",
+            "firstPublished": "2025-08-22T07:18:39.322Z",
+            "lastPublished": "2025-08-22T19:20:48.319Z",
+            "link": "https://www.bbc.com/mundo/articles/cdxly0n5730o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/8c25/live/95b791c0-7f67-11f0-9b45-d97edf6817de.jpg.webp",
+            "description": "Es uno de los principales destinos de sol y playa de España. Y se configuró así desde los años 60 cuando, en lo que entonces era un pueblo de apenas 3.500 habitantes, vieron en el turismo la oportunidad para hacer crecer la economía local.",
+            "imageAlt": "Vista de rascacielos en Benidorm.",
+            "id": "cdxly0n5730o",
+            "readTime": 9,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Elizabeth, la ciudad de Nueva Jersey que concentra la mayor cantidad de uruguayos por kilómetro cuadrado en EE.UU.",
+            "firstPublished": "2025-08-25T13:25:32.012Z",
+            "lastPublished": "2025-08-25T13:25:32.012Z",
+            "link": "https://www.bbc.com/mundo/articles/c5ypwx0wz6ko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/e4f4/live/a4b609d0-7f9a-11f0-84a2-0722ea84f1f9.jpg.webp",
+            "description": "No hay otra localidad en el gigante norteamericano donde se respire tanta uruguayez como aquí. Así, no extraña que este lunes 25 de agosto se ice la bandera azul y blanca para conmemorar la independencia de Uruguay.",
+            "imageAlt": "Jacqueline Tejera, vistiendo una camiseta gris y un delantal rojo, con el local de la Pizzería Montevideo detrás.",
+            "id": "c5ypwx0wz6ko",
+            "readTime": 10,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "El intenso asedio al que Alejandro Magno sometió a Gaza y su cruel venganza contra el comandante enemigo",
+            "firstPublished": "2024-02-04T04:32:13.555Z",
+            "lastPublished": "2025-08-23T08:06:05.880Z",
+            "link": "https://www.bbc.com/mundo/articles/cz5x23jen4lo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/da4c/live/d93e51e0-b001-11ee-bc2f-cb5579b90709.jpg.webp",
+            "description": "Durante gran parte de los más de tres milenios de su historia, Gaza tuvo una imagen muy distinta a la de hoy, y fue muy codiciada por los imperios, incluido el de Alejandro Magno.",
+            "imageAlt": "Ilustración del sitio de Gaza",
+            "id": "cz5x23jen4lo",
+            "readTime": 7,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "5 herramientas sencillas que ayudan a lidiar con el duelo",
+            "firstPublished": "2025-08-23T10:03:50.866Z",
+            "lastPublished": "2025-08-23T10:03:50.866Z",
+            "link": "https://www.bbc.com/mundo/articles/c78mz28rjd4o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/6933/live/a0a8b110-79ca-11f0-8827-ede848a7813c.jpg.webp",
+            "description": "¿Cómo superar el dolor tras el fallecimiento de un ser querido? Una psicóloga especializada en el tema, que además perdió a su marido en un accidente, entrega recomendaciones para lidiar con ello. ",
+            "imageAlt": "Mujer sentada con la mano en el rostro, afligida por la pena, conversa con una terapeuta que toma nota de la conversación",
+            "id": "c78mz28rjd4o",
+            "readTime": 7,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "La polémica por la nueva serie de Amanda Knox, la estadounidense que fue condenada y absuelta en Italia por el asesinato de su compañera de casa ",
+            "firstPublished": "2025-08-20T19:20:31.078Z",
+            "lastPublished": "2025-08-20T21:20:21.236Z",
+            "link": "https://www.bbc.com/mundo/articles/cwy18ylyd2jo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/954e/live/f75dcb10-7e09-11f0-8eb8-35bafe422412.jpg.webp",
+            "description": "Una nueva producción de televisión recuenta los fatídicos hechos de 2007 que hicieron a Amanda Knox un personaje reconocido a nivel mundial.",
+            "imageAlt": "Imagen de Amanda Knox escoltada por la policía italiana en 2008.",
+            "id": "cwy18ylyd2jo",
+            "readTime": 8,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:f62b29ef-80f2-4aaa-8a74-a8d91b812faa",
+        "curationType": "tipo-curation",
+        "position": 11,
+        "title": "Sociedad y Cultura",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Demandan a las aerolíneas Delta y United por cobrar por asientos con ventana que no la tenían",
+            "firstPublished": "2025-08-21T19:09:05.428Z",
+            "lastPublished": "2025-08-21T19:09:05.428Z",
+            "link": "https://www.bbc.com/mundo/articles/c620lgn0z4zo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/2f29/live/9b2932a0-7e2a-11f0-bebe-e53cb25f8f71.jpg.webp",
+            "description": "Los abogados reclaman millones de dólares en daños para más de un millón de clientes de cada compañía. ",
+            "imageAlt": "Aviones de United Airlines, una de las aerolíneas demandadas, en el aeropuerto de San Francisco.  logo.",
+            "id": "c620lgn0z4zo",
+            "readTime": 3,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Öresund: cómo el puente que une Suecia y Dinamarca cambió la economía de los dos países",
+            "firstPublished": "2025-08-21T03:02:04.561Z",
+            "lastPublished": "2025-08-21T03:02:04.561Z",
+            "link": "https://www.bbc.com/mundo/articles/cdxy2len817o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/0dd3/live/ee53c960-706d-11f0-88d7-3985e30ab48f.jpg.webp",
+            "description": "El emblemático puente celebra su 25 aniversario. Sin embargo, a pesar de su enorme impacto en los negocios de la región, persisten los desafíos.",
+            "imageAlt": "Puente de Öresund ",
+            "id": "cdxy2len817o",
+            "readTime": 8,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Las \"supervacas\" que convirtieron a Brasil en el mayor exportador de carne en el mundo",
+            "firstPublished": "2025-08-19T11:34:02.504Z",
+            "lastPublished": "2025-08-19T11:34:02.504Z",
+            "link": "https://www.bbc.com/mundo/articles/cnv7mzr8d13o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7aa2/live/485fb0b0-74c7-11f0-8de5-d7af39eb1632.jpg.webp",
+            "description": "Una raza vacuna adoptada y mejorada por el gigante sudamericano cambió la ganadería y puede tener efectos en todo el mundo.",
+            "imageAlt": "Una manada de cebúes",
+            "id": "cnv7mzr8d13o",
+            "readTime": 9,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Por qué muchos jóvenes en China pagan para ir a una oficina y fingir que trabajan",
+            "firstPublished": "2025-08-12T09:32:50.689Z",
+            "lastPublished": "2025-08-12T09:32:50.689Z",
+            "link": "https://www.bbc.com/mundo/articles/ckgjx792n8lo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c944/live/c5cf4a40-72bc-11f0-af20-030418be2ca5.jpg.webp",
+            "description": "Las oficinas simuladas están apareciendo en las principales ciudades de China, donde se estima que más de 12 millones de jóvenes graduados se sumarán este año al mercado laboral.",
+            "imageAlt": "Shui Zhou, un joven adulto que finge tener un trabajo de oficina, hace el signo de la victoria con ambas manos ",
+            "id": "ckgjx792n8lo",
+            "readTime": 6,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "¿Es Perrier tan pura como afirman? El escándalo por el agua embotellada que sacude a Francia",
+            "firstPublished": "2025-08-11T09:32:48.130Z",
+            "lastPublished": "2025-08-11T09:32:48.130Z",
+            "link": "https://www.bbc.com/mundo/articles/czd0y6r3lmzo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/3b40/live/6f19b730-7474-11f0-ad5a-6daee3ba97a6.jpg.webp",
+            "description": "Las afirmaciones de que las empresas de agua mineral natural están filtrando su agua causaron una gran polémica en Francia.",
+            "imageAlt": "una botella de agua de Perrier",
+            "id": "czd0y6r3lmzo",
+            "readTime": 7,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/mundo/topics/c06gq9v4xp3t",
+        "curationId": "urn:bbc:tipo:list:838ed7e6-e078-4c6d-828e-ca1917185da1",
+        "curationType": "tipo-curation",
+        "position": 12,
+        "title": "Economía",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "WhatsApp",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://whatsapp.com/channel/0029VaUm1Ss3WHTbgIXrjw3D",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7a76/live/81f7b470-eac7-11ee-9410-0f893255c2a0.png.webp",
+            "imageAlt": "WhatsApp",
+            "id": "https%3A%2F%2Fwhatsapp.com%2Fchannel%2F0029VaUm1Ss3WHTbgIXrjw3D",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "YouTube",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.youtube.com/BBCMundo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/048e/live/ef849480-5ee1-11ee-8feb-1f7179b2c49b.png.webp",
+            "imageAlt": "YouTube logo",
+            "id": "https%3A%2F%2Fwww.youtube.com%2Fuser%2FBBCBrasil",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Instagram",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.instagram.com/bbcmundo/",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/df6c/live/d34c7580-5ee1-11ee-954a-413268577267.png.webp",
+            "imageAlt": "Instagram logo",
+            "id": "https%3A%2F%2Fwww.instagram.com%2Fbbcbrasil%2F%3Fhl%3Den",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "TikTok",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.tiktok.com/@bbcnewsmundo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/4796/live/0ded6870-5edd-11ee-93e8-5d16174eb488.png.webp",
+            "imageAlt": "TikTok logo",
+            "id": "https%3A%2F%2Fwww.tiktok.com%2F%40bbcnewsukrainian",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Facebook",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.facebook.com/BBCnewsMundo/",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c624/live/0631c950-5ee2-11ee-954a-413268577267.png.webp",
+            "imageAlt": "Facebook logo",
+            "id": "https%3A%2F%2Fwww.facebook.com%2Fbbcnewsbrasil%2F",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "X",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://twitter.com/bbcmundo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/ea9e/live/bb332d90-5ee1-11ee-954a-413268577267.png.webp",
+            "imageAlt": "X logo",
+            "id": "https%3A%2F%2Ftwitter.com%2Fbbcbrasil%3Flang%3Den",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:6fa33885-5aa1-4bde-8e6e-3ec8b9298349",
+        "curationType": "tipo-curation",
+        "position": 13,
+        "title": "En redes sociales",
+        "visualProminence": "NORMAL",
+        "visualStyle": "LINKS"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Las conmovedoras imágenes del funeral de Diogo Jota y su hermano André Silva",
+            "firstPublished": "2025-07-05T10:03:46.559Z",
+            "lastPublished": "2025-07-05T10:03:46.559Z",
+            "link": "https://www.bbc.com/mundo/articles/cx2kpl831mzo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/ccff/live/44834700-5982-11f0-bc91-6547cda71435.jpg.webp",
+            "description": "Familiares, amigos, colegas y otras figuras del fútbol asisten a las exequias del astro del Liverpool y de la selección nacional de Portugal, y de su hermano André Silva.",
+            "imageAlt": "Virgil van Dijk y Andrew Robertson llevan coronas de flores con  los números 20 y 30",
+            "id": "cx2kpl831mzo",
+            "readTime": 4,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Las imágenes del desfile militar de Trump y de las protestas más grandes en su contra desde que volvió al poder",
+            "firstPublished": "2025-06-14T23:39:39.041Z",
+            "lastPublished": "2025-06-15T00:16:20.866Z",
+            "link": "https://www.bbc.com/mundo/articles/c7v7v6rdg4eo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/3bad/live/2efc3c90-4a35-11f0-9ac1-17aeec7c1b0b.jpg.webp",
+            "description": "En el cumpleaños número 79 de Donald Trump, EE.UU. vio las manifestaciones más grandes en contra del presidente y un desfile militar en las calles de Washington DC.",
+            "imageAlt": "Soldados en un tanque en Estados Unidos saludan a la multitud mientras observa el presidente Donald Trump",
+            "id": "c7v7v6rdg4eo",
+            "readTime": 5,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Quién es el mexicano José María Velasco, el primer artista latinoamericano al que la National Gallery de Londres le dedica una exposición    ",
+            "firstPublished": "2025-06-07T12:16:01.851Z",
+            "lastPublished": "2025-06-07T12:16:01.851Z",
+            "link": "https://www.bbc.com/mundo/articles/c0j77yx106zo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/f7ad/live/68eef7a0-5c17-11f0-975c-5f75a80da356.jpg.webp",
+            "description": "El artista del siglo XIX contribuyó a la creación de un sentido de identidad mexicana, y fue, además de pintor, un polímata.",
+            "imageAlt": "Valle de México, con lagunas, rocas, caminos, ciudades y montañas",
+            "id": "c0j77yx106zo",
+            "readTime": 11,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "En imágenes: las protestas por los operativos del ICE contra inmigrantes en Los Ángeles ",
+            "firstPublished": "2025-06-07T09:44:48.788Z",
+            "lastPublished": "2025-06-07T09:44:48.788Z",
+            "link": "https://www.bbc.com/mundo/articles/cwyne84kmdxo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/5c0d/live/89c779c0-5c17-11f0-975c-5f75a80da356.jpg.webp",
+            "description": "Decenas de personas salieron a las calles de Los Ángeles para protestar por las redadas en contra de personas indocumentadas por parte del gobierno Trump.",
+            "imageAlt": "Decenas de personas con letreros que dicen \"Fuera ICE de Los Ángeles\". ",
+            "id": "cwyne84kmdxo",
+            "readTime": 3,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Los asombrosos dibujos que hizo Victor Hugo \"en los márgenes de mis manuscritos con lo que quedaba de tinta en mi pluma\"",
+            "firstPublished": "2025-06-01T11:52:07.933Z",
+            "lastPublished": "2025-06-01T11:52:07.933Z",
+            "link": "https://www.bbc.com/mundo/articles/cx272krzx7wo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/db90/live/1d296470-31bc-11f0-8519-3b5a01ebe413.jpg.webp",
+            "description": "El gran autor romántico, poeta, ensayista, dramaturgo, político, intelectual... ¿y también artista plástico?",
+            "imageAlt": "Detalle de \"Pulpo\" pintado por Victor Hugo",
+            "id": "cx272krzx7wo",
+            "readTime": 9,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:e357557a-793a-4c83-9f25-281bb838e6b1",
+        "curationType": "tipo-curation",
+        "position": 14,
+        "title": "En fotos",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "curationId": "urn:bbc:onward-journeys:most:read?=site=News",
+        "curationType": "most-popular",
+        "position": 15,
+        "title": "Más leídas",
+        "visualProminence": "NORMAL",
+        "visualStyle": "RANKED",
+        "link": "https://www.bbc.com/mundo/popular/read",
+        "mostRead": {
+          "generated": "2025-08-27T10:14:58.029332935Z",
+          "lastRecordTimeStamp": "2025-08-27T10:13:00Z",
+          "firstRecordTimeStamp": "2025-08-27T09:58:00Z",
+          "items": [
+            {
+              "id": "urn:bbc:optimo:asset:cdd3ll3pyqno",
+              "rank": 1,
+              "title": "\"Había cadáveres por todas partes\": la BBC reconstruye lo que ocurrió dentro de Evin, una de las prisiones más infames de Irán en la que murieron 80 personas en un ataque de Israel",
+              "href": "https://www.bbc.com/mundo/articles/cdd3ll3pyqno",
+              "timestamp": "2025-08-26T02:32:42.614Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Rescatistas en el interior de la prisión tras el ataque.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Rescatistas en el interior de la prisión tras el ataque.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Rescatistas en el interior de la prisión tras el ataque.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Rescatistas en el interior de la prisión tras el ataque.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 871,
+                        "height": 490,
+                        "locator": "321c/live/c9c6b560-8221-11f0-b786-bd64ae234df7.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Getty Images",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:crlzwwly3nko",
+              "rank": 2,
+              "title": "Cómo la amistad -y la admiración mutua- entre Dudamel y Chris Martin llevó al Sistema de Orquestas de Venezuela a tocar con Coldplay ",
+              "href": "https://www.bbc.com/mundo/articles/crlzwwly3nko",
+              "timestamp": "2025-08-26T11:41:46.070Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Gustavo Dudamel y Chris Martin durante los ensayos para la presentación de medio tiempo del Super Bowl de 2016.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Gustavo Dudamel y Chris Martin durante los ensayos para la presentación de medio tiempo del Super Bowl de 2016.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Gustavo Dudamel y Chris Martin ríen durante uno de los ensayos en 2016.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Gustavo Dudamel y Chris Martin ríen durante uno de los ensayos en 2016.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1073,
+                        "height": 800,
+                        "locator": "9f3c/live/fea40f70-7f3e-11f0-ab3e-bd52082cd0ae.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Los Angeles Philharmonic Association",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:ckge497qdn4o",
+              "rank": 3,
+              "title": "Ucrania admite que las tropas rusas entraron en la región clave de Dnipropetrovsk",
+              "href": "https://www.bbc.com/mundo/articles/ckge497qdn4o",
+              "timestamp": "2025-08-26T23:43:29.016Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "El Ministerio de Defensa ruso publicó una imagen que muestra a supuestas tropas rusas en el pueblo de Zaporizke.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "El Ministerio de Defensa ruso publicó una imagen que muestra a supuestas tropas rusas en el pueblo de Zaporizke.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Tropas rusas en el pueblo de Zaporizke",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Tropas rusas en el pueblo de Zaporizke",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1536,
+                        "height": 865,
+                        "locator": "7d25/live/636511c0-82cd-11f0-ab3e-bd52082cd0ae.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Ministerio de Defensa Ruso",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cn85n6vgg1lo",
+              "rank": 4,
+              "title": "\"Hazme sentir orgullosa\": el mensaje a su hijo de una reportera del grupo de periodistas muertos en un doble ataque de Israel al hospital Nasser en Gaza",
+              "href": "https://www.bbc.com/mundo/articles/cn85n6vgg1lo",
+              "timestamp": "2025-08-26T17:52:16.781Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Mariam Dagga era una periodista visual palestina que trabajó como freelance para AP desde el inicio de la guerra.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Mariam Dagga era una periodista visual palestina que trabajó como freelance para AP desde el inicio de la guerra.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Mariam Dagga, una periodista visual palestina que trabajó como freelance para AP desde el inicio de la guerra, posa frente a las cámaras en Jan Yunis, el 18 de enero de 2025.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Mariam Dagga, una periodista visual palestina que trabajó como freelance para AP desde el inicio de la guerra, posa frente a las cámaras en Jan Yunis, el 18 de enero de 2025.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 819,
+                        "height": 461,
+                        "locator": "6235/live/be817050-8294-11f0-be97-fd5500e1b5ea.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Getty Images",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cq87959qwejo",
+              "rank": 5,
+              "title": "Sentarse erguido no es la única opción: otros 3 consejos para mantener una buena postura",
+              "href": "https://www.bbc.com/mundo/articles/cq87959qwejo",
+              "timestamp": "2025-08-27T09:36:47.728Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "La postura se basa en el movimiento regular, el ejercicio y una mentalidad positiva.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "La postura se basa en el movimiento regular, el ejercicio y una mentalidad positiva.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Mujer sentada en una silla sujetándose la zona lumbar y haciendo una mueca de dolor.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Mujer sentada en una silla sujetándose la zona lumbar y haciendo una mueca de dolor.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 2003,
+                        "height": 1127,
+                        "locator": "8b33/live/c5ef64e0-7d0e-11f0-affd-3db3a18ad929.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Getty Images",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c79lgq9zzjxo",
+              "rank": 6,
+              "title": "Quién es Lisa Cook, la gobernadora de la Reserva Federal a la que Trump ordenó destituir",
+              "href": "https://www.bbc.com/mundo/articles/c79lgq9zzjxo",
+              "timestamp": "2025-08-26T20:38:37.945Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "La economista se ha convertido en el último blanco de los ataques del presidente contra la Reserva Federal.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "La economista se ha convertido en el último blanco de los ataques del presidente contra la Reserva Federal.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Lisa Cook volteando",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Lisa Cook volteando",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 920,
+                        "height": 518,
+                        "locator": "0065/live/ff9fd380-827e-11f0-856b-cd8744058cb6.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Bloomberg via Getty Images",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cgr97x7v5n2o",
+              "rank": 7,
+              "title": "Cómo Taiwán se prepara para una potencial invasión de China con actores, sangre falsa y simulacros de ataques con misiles",
+              "href": "https://www.bbc.com/mundo/articles/cgr97x7v5n2o",
+              "timestamp": "2025-08-27T03:01:50.840Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "En Taipéi, la gente practica cómo apagar incendios y descender por edificios.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "En Taipéi, la gente practica cómo apagar incendios y descender por edificios.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Los equipos de rescate y los voluntarios aseguran una instalación de telecomunicaciones mientras participan en el ejercicio de resiliencia urbana tras el simulacro de ataque aéreo.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Los equipos de rescate y los voluntarios aseguran una instalación de telecomunicaciones mientras participan en el ejercicio de resiliencia urbana tras el simulacro de ataque aéreo.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1536,
+                        "height": 864,
+                        "locator": "3e1f/live/daba53a0-8289-11f0-b582-ddd92628512a.png",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Ritchie B Tongo/ EPA/Shutterstock",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c8denr00jv6o",
+              "rank": 8,
+              "title": "La joven que le ruega a Elon Musk que retire los enlaces a las imágenes de los abusos que sufrió cuando era niña",
+              "href": "https://www.bbc.com/mundo/articles/c8denr00jv6o",
+              "timestamp": "2025-08-26T23:20:54.603Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Montaje con la cabeza de una mujer de pelo largo de espaldas con espacios para mensajes de la red X en blanco. ",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Montaje con la cabeza de una mujer de pelo largo de espaldas con espacios para mensajes de la red X en blanco. ",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1920,
+                        "height": 1080,
+                        "locator": "b0a0/live/9b341db0-7cee-11f0-83cc-c5da98c419b8.png",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "BBC",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:ce83n2z63d4o",
+              "rank": 9,
+              "title": "Cómo El Dorado de Bogotá se convirtió en el aeropuerto más transitado de América Latina, superando el dominio de décadas de São Paulo y CDMX ",
+              "href": "https://www.bbc.com/mundo/articles/ce83n2z63d4o",
+              "timestamp": "2025-08-25T20:48:37.222Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "El Dorado",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "El Dorado",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 2121,
+                        "height": 1414,
+                        "locator": "15b3/live/318226c0-81f1-11f0-ab3e-bd52082cd0ae.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Getty Images",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cwy18ylyd2jo",
+              "rank": 10,
+              "title": "La polémica por la nueva serie de Amanda Knox, la estadounidense que fue condenada y absuelta en Italia por el asesinato de su compañera de casa ",
+              "href": "https://www.bbc.com/mundo/articles/cwy18ylyd2jo",
+              "timestamp": "2025-08-20T21:20:21.236Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Imagen de Amanda Knox escoltada por la policía italiana en 2008.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Imagen de Amanda Knox escoltada por la policía italiana en 2008.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Imagen de Amanda Knox escoltada por la policía italiana en 2008.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Imagen de Amanda Knox escoltada por la policía italiana en 2008.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 906,
+                        "height": 509,
+                        "locator": "954e/live/f75dcb10-7e09-11f0-8eb8-35bafe422412.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Getty Images",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Socios comerciales de BBC Mundo",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/mundo/articles/crkex37d5dmo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/275a/live/aa17a510-d653-11ee-9a5b-e35447f6c53b.png.webp",
+            "imageAlt": "BBC News Mundo",
+            "id": "https%3A%2F%2Fbit.ly%2F3TeWTpN",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/mundo/articles/crkex37d5dmo",
+        "curationId": "urn:bbc:tipo:list:e198a1a3-c0a1-4cd0-a147-e75e56ee9327",
+        "curationType": "tipo-curation",
+        "position": 16,
+        "title": "Nuestros socios",
+        "visualProminence": "LOW",
+        "visualStyle": "LINKS"
       }
     ],
     "metadata": {
       "atiAnalytics": {
-        "contentId": "urn:bbc:tipo:topic:c93v2kkze2rt",
+        "contentId": "urn:bbc:tipo:topic:c1x6gk9rqmdt",
         "contentType": "index-home",
         "pageIdentifier": "mundo.page",
         "pageTitle": "Noticias - BBC News Mundo"
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "dataSource": "Data is from live TIPO"
+  "contentType": "application/json; charset=utf-8"
 }

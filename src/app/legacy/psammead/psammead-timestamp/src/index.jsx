@@ -14,14 +14,17 @@ const PADDING = `
   }
 `;
 
+// For experiment - otherwise always display:block
+const DISPLAY_BLOCK = `display: block;`;
+
 const StyledTimestamp = styled.time`
   ${({ script, typographyFunc }) =>
     script && typographyFunc && typographyFunc(script)}
   color: ${({ theme }) =>
     theme.isDarkUi ? theme.palette.GREY_3 : theme.palette.GREY_6};
-  display: block;
   ${({ service }) => getSansRegular(service)}
   ${props => props.padding && PADDING}
+  ${props => props.displayBlock && DISPLAY_BLOCK}
 `;
 
 const Timestamp = ({
@@ -30,6 +33,8 @@ const Timestamp = ({
   typographyFunc = getBrevier,
   script,
   padding = true,
+  // For experiment
+  displayBlock = true,
   service,
   className = '',
 }) => (
@@ -38,6 +43,8 @@ const Timestamp = ({
     typographyFunc={typographyFunc}
     script={script}
     padding={padding}
+    // For experiment
+    displayBlock={displayBlock}
     service={service}
     suppressHydrationWarning
     {...(className ? { className } : undefined)}

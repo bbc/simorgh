@@ -8,53 +8,1973 @@
         "summaries": [
           {
             "type": "article",
-            "title": "Hissedilen enflasyon: Kişisel enflasyonunuzu hesaplayın",
-            "firstPublished": "2023-03-30T08:55:53.000Z",
-            "link": "https://www.bbc.com/turkce/haberler-turkiye-64876429",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4B33/production/_129215291_index_549.png",
-            "description": "Açıklanan enflasyonun, hissettiğiniz enflasyondan yüksek olduğunu mu düşünüyorsunuz? Tüketici enflasyonu hesaplanırken kullanılan harcama sepeti sizi yansıtmıyor olabilir. Kişisel enflasyon hesaplayıcımızla, kendi harcamalarınıza göre enflasyon oranını hesaplayabilirsiniz.",
-            "imageAlt": "grafik",
-            "id": "f7265ccd-92c1-4562-b2cc-c97bf70f612f"
+            "isLive": false,
+            "title": "Yangınlar, madenler, enerji projeleri: Türkiye'nin ormanlarına karşı en büyük tehdit hangisi?",
+            "firstPublished": "2025-08-27T01:00:19.118Z",
+            "lastPublished": "2025-08-27T01:00:19.118Z",
+            "link": "https://www.bbc.com/turkce/articles/cdrkmrgj0j8o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/baca/live/e1292880-7f44-11f0-ace8-c7fe3706c172.jpg.webp",
+            "description": "Türkiye'de her yıl binlerce hektar alan; madencilik, ulaşım, enerji ve turizm gibi sektörlere izin verilerek orman vasfını kaybediyor.",
+            "imageAlt": "2021 yılında Rize İkizdere'deki bir taş ocağının görünümü.",
+            "id": "cdrkmrgj0j8o",
+            "readTime": 4,
+            "visualProminence": "NORMAL"
           },
           {
             "type": "article",
-            "title": "Türkiye'de seçmenlerin kişisel verileri manipülasyon için kullanılıyor mu?",
-            "firstPublished": "2023-03-30T04:37:15.479Z",
-            "link": "https://www.bbc.com/turkce/articles/c84mm9lvzv0o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b33f/live/0b755da0-ce50-11ed-8790-0b6b0487822e.jpg",
-            "description": "Yüksek Seçim Kurulu'nun (YSK) Mart ortasında yayımladığı propaganda dönemi esasları ve yayın ilkeleri ağırlıkla TV yayıncılığına odaklanıyor. Seçim düzenlemelerinde \"sosyal medya ve dijital pazarlamanın etkisinin gözardı edilmesi\" seçmenlerin manipülasyonu açısından endişe yaratıyor. \n",
-            "imageAlt": "hedefleme ",
-            "id": "c84mm9lvzv0o"
+            "isLive": false,
+            "title": "İsrail'in İran'daki Evin Hapishanesi'ne saldırısı: 'Hayatımın sonu geldi sandım'",
+            "firstPublished": "2025-08-27T00:10:10.373Z",
+            "lastPublished": "2025-08-27T00:10:10.373Z",
+            "link": "https://www.bbc.com/turkce/articles/cvg390617xlo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/2671/live/17e9d670-7eb0-11f0-83cc-c5da98c419b8.jpg.webp",
+            "description": "İsrail’in 23 Haziran’da Tahran’daki Evin Hapishanesi’ne düzenlediği saldırıda 80 kişi öldü, onlarca bina hasar gördü. Bir mahkûm saldırıda neler yaşandığını BBC'ye anlattı",
+            "imageAlt": "A man stands pointing upwards in the impact site of one of Israel's missiles on the administrative building at Evin Prison, where a large number of people were killed",
+            "id": "cvg390617xlo",
+            "readTime": 4,
+            "visualProminence": "NORMAL"
           },
           {
             "type": "article",
-            "title": "Trump ile eski porno yıldızı Stormy Daniels arasında ne yaşandı, neden ceza davası açıldı?",
-            "firstPublished": "2023-03-31T10:00:02.024Z",
-            "link": "https://www.bbc.com/turkce/articles/cyd68q0vrqdo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4557/live/c9e670c0-cf96-11ed-9374-e7827bf8df49.jpg",
-            "description": "ABD eski başkanı Donald Trump ile kendisiyle 2006 yılında cinsel ilişki yaşadığı ve bu nedenle susturulmak için ödeme yapıldığını iddia eden Stormy Daniels arasında bugüne kadar neler yaşandığını araştırdık. ",
-            "imageAlt": "Trump ve Daniels ",
-            "id": "cyd68q0vrqdo"
+            "isLive": false,
+            "title": "Venedik Film Festivali, Gazze tartışmalarıyla başlıyor",
+            "firstPublished": "2025-08-26T23:25:34.527Z",
+            "lastPublished": "2025-08-26T23:25:34.527Z",
+            "link": "https://www.bbc.com/turkce/articles/c2djkzj9ze3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d748/live/e0a2b7f0-8309-11f0-8e5d-356ffeb548eb.jpg.webp",
+            "description": "Sinema dünyasının en prestijli festivallerinden Venedik Film Festivali Gazze'de savaş tartışmaları eşliğinde bugün başlıyor.\n\n",
+            "imageAlt": "Venedik festivali alanında logosu ve önünde bisikletle geçen biri görülüyor.",
+            "id": "c2djkzj9ze3o",
+            "readTime": 4,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Avrupa'da son 80 yılın en büyük kitap soygunu",
+            "firstPublished": "2025-08-26T23:26:16.875Z",
+            "lastPublished": "2025-08-26T23:26:16.875Z",
+            "link": "https://www.bbc.com/turkce/articles/cx275k4lxelo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/f1e6/live/5374b6f0-6e12-11f0-8dbd-f3d32ebd3327.jpg.webp",
+            "description": "Avrupa’daki kütüphanelerden yüzlerce nadir eser çalındı, bazıları sahtelerle değiştirildi. “İkinci Dünya Savaşı’ndan bu yana en büyük kitap soygunu” olarak anılan olay, milyonlarca dolarlık zarara yol açtı. Europol’ün yürüttüğü “Puşkin Operasyonu” sürerken pek çok hırsız ve kayıp kitap hâlâ aranıyor.",
+            "imageAlt": "Collage with images of Gogol and the convicted Beka Tsirekidze",
+            "id": "cx275k4lxelo",
+            "readTime": 6,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Filenin Sultanları, Dünya Şampiyonası'nda Kanada ile karşı karşıya",
+            "firstPublished": "2025-08-23T08:07:19.853Z",
+            "lastPublished": "2025-08-27T09:42:16.000Z",
+            "link": "https://www.bbc.com/turkce/articles/cvg4zp9kn75o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7c87/live/cef4d980-82e5-11f0-a2b0-1b6fcc7c719f.jpg.webp",
+            "description": "Filenin Sultanları, son 16 turuna çıkmayı garantilediği 2025 Dünya Voleybol Şampiyonası'nda gruplardaki üçüncü ve son maçına bugün Kanada karşısında çıkıyor.",
+            "imageAlt": "Filenin Sultanları, Bulgaristan maçında buldukları sayının ardından sevinç yaşıyor",
+            "id": "cvg4zp9kn75o",
+            "readTime": 2,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:209f966e-0461-4be0-94d8-a397468cda40",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "Manşet haber",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "'Kadının beyanı esastır' ilkesi nedir, masumiyet karinesine aykırı mı?",
+            "firstPublished": "2025-08-26T11:36:05.343Z",
+            "lastPublished": "2025-08-26T11:36:05.343Z",
+            "link": "https://www.bbc.com/turkce/articles/cgjye835nwdo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/1a25/live/864ecaa0-825f-11f0-b146-97f338dfbf31.jpg.webp",
+            "description": "Türkiye, özellikle sinema ve yayıncılık sektöründe tanınmış bazı erkekler hakkındaki cinsel taciz iddialarıyla çalkalanıyor. Peki, 'kadının beyanı esastır' ilkesi nedir, masumiyet karinesine aykırı mıdır? ",
+            "imageAlt": "Kadınların protestosu ",
+            "id": "cgjye835nwdo",
+            "readTime": 5,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Ukrayna, Rusya'nın kilit bölge Dnipro'ya girdiğini kabul etti",
+            "firstPublished": "2025-08-25T00:58:25.404Z",
+            "lastPublished": "2025-08-26T19:22:57.581Z",
+            "link": "https://www.bbc.com/turkce/articles/cn85q148y87o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/3c96/live/d7722650-82b1-11f0-a34f-318be3fb0481.jpg.webp",
+            "description": "Ukrayna güçleri, Rus ordusunun doğudaki sanayi bölgesi Dnipro'ya girdiğini ve bir üs kurmaya çalıştığını açıkladı.\n\n",
+            "imageAlt": "Dar bir patika yolda Rus bayrağı ve işgal bayrağ açan iki asker, oldukça düşük pikselli bir karede görünüyor. ",
+            "id": "cn85q148y87o",
+            "readTime": 7,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "ABD'de et yiyen parazit bir insana bulaştı",
+            "firstPublished": "2025-08-27T00:49:56.667Z",
+            "lastPublished": "2025-08-27T07:19:52.936Z",
+            "link": "https://www.bbc.com/turkce/articles/c9d083exp7vo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/06b8/live/00600780-8285-11f0-856b-cd8744058cb6.jpg.webp",
+            "description": "ABD’de ilk kez insana bulaşan “et yiyen kurtçuk” vakası doğrulandı. Yetkililer riskin düşük olduğunu söylese de parazitin hayvancılık ve ekonomi için büyük tehdit oluşturabileceği uyarısında bulunuyor",
+            "imageAlt": "Bir çözelti içinde saklanan onlarca vidalı kurt",
+            "id": "c9d083exp7vo",
+            "readTime": 3,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Memura zam oranı belirlendi, sendikalar karara tepki gösterdi",
+            "firstPublished": "2025-08-12T11:15:47.550Z",
+            "lastPublished": "2025-08-27T07:15:27.281Z",
+            "link": "https://www.bbc.com/turkce/articles/cn47wz7y9g3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a51c/live/52c747f0-82a2-11f0-a21f-a946aea0c353.jpg.webp",
+            "description": "Memura zam oranını belirlemek üzere dördüncü kez toplanan Hakem Kurulu 2026 ve 2027 için zam oranlarına karar verdi. Memur sendikaları Memur-Sen ve Kamu-Sen kuruldan çekildiklerini açıkladı. \n\n\n",
+            "imageAlt": "Memur sendikaları üyeleri banner ve bayraklarıyla protesto yapıyorlar. ",
+            "id": "cn47wz7y9g3o",
+            "readTime": 5,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Türkiye, 2025 Avrupa Basketbol Şampiyonası'nda ilk maçında Letonya karşısında",
+            "firstPublished": "2025-08-27T02:29:44.543Z",
+            "lastPublished": "2025-08-27T02:29:44.543Z",
+            "link": "https://www.bbc.com/turkce/articles/ce354evzl64o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/78da/live/79d90b20-82ee-11f0-a819-c948892e2dca.jpg.webp",
+            "description": "Türkiye Milli Erkek Basketbol Takımı, 2025 Avrupa Basketbol Şampiyonası'nda (EuroBasket 2025) ilk maçına Letonya karşısında çıkıyor. Maç TSİ 18.00'de başlayacak",
+            "imageAlt": "Alperen Şengün antrenmanda şut atarken",
+            "id": "ce354evzl64o",
+            "readTime": 2,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:0b8c431b-3058-40a3-81ab-f6ef69ee4433",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "Diğer haberler",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Abone olmak için tıklayın",
+            "firstPublished": "2024-04-15T11:20:59.141Z",
+            "lastPublished": "2024-04-15T11:20:59.141Z",
+            "link": "https://www.whatsapp.com/channel/0029Vb5eTSkHFxP3rcjNq41i",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/45da/live/56e64420-2264-11ef-80aa-699d54c46324.png.webp",
+            "description": "BBC Türkçe'nin Türkiye ve dünyadaki gelişmelerle ilgili haberleri artık telefonunuzda",
+            "imageAlt": "WhatsApp logo",
+            "id": "cn4lmqq11zeo",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:84760498-5731-4f13-be19-3f6a68cdfb14",
+        "curationType": "tipo-curation",
+        "position": 2,
+        "title": "BBC Türkçe artık WhatsApp'ta",
+        "visualProminence": "NORMAL",
+        "visualStyle": "BANNER"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Rusya, Batı'nın ötesindeki dünyayı nasıl sessizce kazanmaya çalışıyor?",
+            "firstPublished": "2025-08-26T01:09:14.225Z",
+            "lastPublished": "2025-08-26T01:09:14.225Z",
+            "link": "https://www.bbc.com/turkce/articles/cgervz82pyqo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c2b6/live/da09a6b0-7f67-11f0-a34f-318be3fb0481.png.webp",
+            "description": "Rusya, kendisini Batı saldırganlığının mağduru ve Küresel Güney’in savunucusu olarak sunarak izolasyonunu kırmaya çalışıyor. Batı’nın medya alanında geri çekilmesi ise RT gibi aktörlere alan açarak Rusya’ya avantaj sağlıyor.",
+            "imageAlt": "RT television broadcast van is seen parked in front of St. Basil's Cathedral and the Kremlin",
+            "id": "cgervz82pyqo",
+            "readTime": 8,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Zeynep Sönmez, Amerika Açık'ta ikinci tura yükseldi",
+            "firstPublished": "2025-08-26T01:08:21.682Z",
+            "lastPublished": "2025-08-26T04:47:50.895Z",
+            "link": "https://www.bbc.com/turkce/articles/cnv7n3qv6y5o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a30b/live/cf8b9950-8237-11f0-bfa2-6f6d01b3428c.jpg.webp",
+            "description": "Türk milli tenisçi Zeynep Sönmez, Amerika Açık Grand Slam Tenis Turnuvası ilk turunda ABD'li rakibi Katie Volynets'i 2-0 mağlup ederek bir üst tura çıktı",
+            "imageAlt": "Zeynep Sönmez sevinç yaşarken",
+            "id": "cnv7n3qv6y5o",
+            "readTime": 3,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Yiyeceklerin ilaçlarla etkileşimleri hakkında neler biliniyor?",
+            "firstPublished": "2025-08-26T01:09:08.247Z",
+            "lastPublished": "2025-08-26T01:09:08.247Z",
+            "link": "https://www.bbc.com/turkce/articles/clyvezvmem3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/702b/live/722de7b0-813b-11f0-a34f-318be3fb0481.png.webp",
+            "description": "Bazı yiyecekler ilaçların etkisini güçlendirip tehlikeli sonuçlara yol açarken, bazıları ise tedaviyi zayıflatabiliyor. Greyfurt, nar suyu ya da zerdeçal gibi masum görünen besinler, ciddi yan etkilere neden olabilecek ilaç etkileşimlerine girebiliyor. Uzmanlar, hastaların ilaç kullanırken beslenme alışkanlıklarına dikkat etmeleri gerektiğini vurguluyor.",
+            "imageAlt": "Domino taşları arasında bir ",
+            "id": "clyvezvmem3o",
+            "readTime": 7,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Haftada dört gün çalışmak daha sağlıklıysa neden daha yaygın değil?",
+            "firstPublished": "2025-08-18T07:34:04.935Z",
+            "lastPublished": "2025-08-18T07:34:04.935Z",
+            "link": "https://www.bbc.com/turkce/articles/c3wn90qq832o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/ae24/live/c7e6c5c0-7c16-11f0-a94d-b339f9501fc4.jpg.webp",
+            "description": "İş yaşamının büyük çoğunluğunda geçerli olduğu gibi beş gün çalışıp iki gün hafta sonu yapmak, gerçekten bir zorunluluk mu? İşyerlerinin buna direnmesi için uzmanlar ne diyor?",
+            "imageAlt": "Ofiste bilgisayar başında bir kadın",
+            "id": "c3wn90qq832o",
+            "readTime": 6,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Pac-Man dünyayı nasıl değiştirdi?",
+            "firstPublished": "2025-08-25T01:06:26.658Z",
+            "lastPublished": "2025-08-25T01:06:26.658Z",
+            "link": "https://www.bbc.com/turkce/articles/c754k4kke94o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/efa1/live/0b44f1b0-7e70-11f0-83cc-c5da98c419b8.jpg.webp",
+            "description": "Bu yıl 45. yaşını kutlayacak olan Pac-Man, video oyunlarında bir devrim yaratmanın ötesinde bilimde bile kullanıldı. Peki Pac-Man’in maceraları neden bu kadar bağımlılık yaratıcı?",
+            "imageAlt": "Pac-Man ve hayaletlerin yan yana durduğu bir görsel",
+            "id": "c754k4kke94o",
+            "readTime": 6,
+            "visualProminence": "NORMAL"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:eb6ca135-cf1e-48aa-ad76-aaa5f4975aaa",
         "curationType": "tipo-curation",
-        "position": 0,
+        "position": 3,
         "title": "Seçtiklerimiz",
-        "visualProminence": "HIGH"
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Aigai antik kenti: Keçiler, gladyatörler ve antik bir AVM",
+            "firstPublished": "2025-08-24T13:20:13.627Z",
+            "lastPublished": "2025-08-24T13:20:13.627Z",
+            "link": "https://www.bbc.com/turkce/articles/cewypxvjpgxo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/f2b7/live/39b553f0-7f88-11f0-a520-c1d9b927a39c.jpg.webp",
+            "description": "Yaklaşık 2700 yıl önce, Ege kıyılarına 14 kilometre uzaktaki çorak kayalar üzerine, verimsiz bir arazinin ortasına bir kent kuruldu. Burası diğer antik yerleşimlerin çoğu gibi geniş tarım alanlarına ya da ticaret için kullanabileceği bir limana sahip değildi. Bu nedenle bölge halkı araziye en uygun üretimi yapmayı tercih etti ve büyük keçi sürüleri yetiştirdi. Bu onlara antik dönemin şatafatlı kentlerinden biri haline getirdi. ",
+            "imageAlt": "Aigai'daki meclis binası.",
+            "id": "cewypxvjpgxo",
+            "readTime": 5,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Athena'nın kanatları altında: Assos'ta bir tapınak, bir tanrıça ve zamanın izleri",
+            "firstPublished": "2025-08-16T09:40:08.127Z",
+            "lastPublished": "2025-08-16T11:08:54.449Z",
+            "link": "https://www.bbc.com/turkce/articles/cnv72yejrgpo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/fb25/live/bc185b70-7a84-11f0-81f2-1b12a33e5000.jpg.webp",
+            "description": "Çanakkale'nin Ayvacık ilçesinde, denizden 235 metre yükseklikte boğaza karşı bir antik kent yükseliyor: Assos. Assos hem felsefenin hem inancın hem de kültürel dönüşümün izlerini taşıyan, şehrin koruyucu tanrıçası Athena'nın kanatları altında şekillenmiş bir yer. Polisiye romanlarında tarih ve mitolojiyi harmanlayan Ahmet Ümit böyle anlatıyor kenti ve ekliyor: \"Güneş aynı Güneş, deniz aynı deniz ve karşınızda Midilli, aynı ada… Athena'dan Meryem'e ve İslam'a… Assos, yalnızca bir arkeolojik kent değil, insanlığın zihinsel ve inanç tarihine de bir yolculuk.\"",
+            "imageAlt": "Athena Tapınağı, Assos.",
+            "id": "cnv72yejrgpo",
+            "readTime": 5,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Ege'de bir gladyatörler kenti: Stratonikeia",
+            "firstPublished": "2025-08-09T12:28:03.205Z",
+            "lastPublished": "2025-08-09T12:28:03.205Z",
+            "link": "https://www.bbc.com/turkce/articles/cx2705694r2o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/6089/live/da38d390-735f-11f0-a005-65e0dd376795.jpg.webp",
+            "description": "Muğla'nın Eskihisar Mahallesi'nde bulunan Stratonikeia kentinde bundan 1850 yıl önce gladyatör dövüşleri ve Tanrıça Hekate için düzenlenen dini törenler sosyal hayatın bir parçasıydı. Dışarıdan gladyatörler gelir, burada gladyatörler yetiştirilirdi. Bugünse kentte dokuz ayrı dönemin kalıntılarını yerinde görme imkânı var.",
+            "imageAlt": "Lagina'daki Hekate Tapınağı.",
+            "id": "cx2705694r2o",
+            "readTime": 5,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Dünyanın en önemli antik kentlerinden Pergamon'da hayat nasıldı? ",
+            "firstPublished": "2025-08-02T07:21:08.042Z",
+            "lastPublished": "2025-08-02T07:21:08.042Z",
+            "link": "https://www.bbc.com/turkce/articles/cvg4p5e2qxdo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/8fc9/live/735c8060-6e26-11f0-91e6-fdb094521f8b.jpg.webp",
+            "description": "Bugün Ege sofralarının vazgeçilmezi zeytin, ekmek, peynir, balık, bakliyat ve şarap 2000 yıl önce de Pergamonluların masalarındaydı. Zenginlerin ziyafetlerinde ise kuşkusuz çok daha şatafatlı yiyecekler tüketilirdi... Peki Pergamon'da günlük hayat nasıldı? Koordinatör Kazı Başkanı Prof. Dr. Yusuf Sezgin anlatıyor.",
+            "imageAlt": "Bergama'daki Pergamon antik kenti",
+            "id": "cvg4p5e2qxdo",
+            "readTime": 5,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "2000 yıl önce Aphrodisias'ta yaşıyor olsaydınız nasıl bir hayatınız olurdu?",
+            "firstPublished": "2025-07-26T17:17:19.953Z",
+            "lastPublished": "2025-07-26T17:17:19.953Z",
+            "link": "https://www.bbc.com/turkce/articles/cev0vp273ddo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/9657/live/7f44b360-6959-11f0-af20-030418be2ca5.jpg.webp",
+            "description": "2017'de UNESCO Dünya Mirası Listesi'ne kaydedilen Aphrodisias; özellikle olağanüstü derecede iyi korunmuş, üstün kaliteli, stil ve ikonografik çeşitliliği öne çıkan heykeltraşlık eserleriyle ünlü. Çünkü Roma İmparatorluk Dönemi'nin ünlü heykeltıraşlarının yetiştiği atölyelerden birine ev sahipliği yapmıştı. Bu eserler dönemin günlük yaşamını ve kültürünü anlamak açısından çok önemli.",
+            "imageAlt": "Aphrodisias'ta başlardan oluşan figür duvarı",
+            "id": "cev0vp273ddo",
+            "readTime": 4,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:d028c1ee-8074-4b10-9e54-1e5900f38458",
+        "curationType": "tipo-curation",
+        "position": 4,
+        "title": "Türkiye'nin antik kentleri",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Ayşe Barım'dan mektup: Cezaevinde hayatımı kaybedersem sorumlusu kim olacak?",
+            "firstPublished": "2025-04-20T22:07:34.679Z",
+            "lastPublished": "2025-08-27T10:17:44.855Z",
+            "link": "https://www.bbc.com/turkce/articles/c5y5j1g1nylo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/853e/live/5277fa40-5af4-11f0-960d-e9f1088a89fe.jpg.webp",
+            "description": "Gezi Parkı protestolarının planlayıcılarından olma suçlamasıyla cezaevinde tutuklu bulunan menajer Ayşe Barım, son dönemde yaşadığı sağlık sorunlarını sıraladıktan sonra \"Tutuksuz yargılanabilecekken cezaevinde hayatımı kaybedersem bunun sorumluluğu kimdedir?\" diye sordu.",
+            "imageAlt": "ayşe barım",
+            "id": "c5y5j1g1nylo",
+            "readTime": 3
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Gram altın neden popüler, değeri neden artıyor?",
+            "firstPublished": "2025-06-17T13:22:48.401Z",
+            "lastPublished": "2025-08-27T07:41:52.074Z",
+            "link": "https://www.bbc.com/turkce/articles/c20n782qx03o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/5fe7/live/f675af90-4b75-11f0-8c47-237c2e4015f5.jpg.webp",
+            "description": "Altın, ABD Başkanı Donald Trump'ın 26 Ağustos Pazartesi günü ABD Merkez Bankası (Fed) Yönetim Kurulu Üyesi Lisa Cook'u görevden almasının ardından yükseldi. Gram altın fiyatı 4 bin 450'yi aştı. ",
+            "imageAlt": "altın",
+            "id": "c20n782qx03o",
+            "readTime": 4
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Fenerbahçe, Şampiyonlar Ligi için sahada",
+            "firstPublished": "2025-08-27T01:58:14.836Z",
+            "lastPublished": "2025-08-27T01:58:14.836Z",
+            "link": "https://www.bbc.com/turkce/articles/c4gzdym3178o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/ceba/live/e6303d30-82e8-11f0-ab3e-bd52082cd0ae.jpg.webp",
+            "description": "Fenerbahçe, UEFA Şampiyonlar Ligi play-off turu rövanş maçında bu akşam TSİ 22.00'de Portekiz'in Benfica takımıyla karşılaşacak.\n\n",
+            "imageAlt": "Fenerbahçe son idmanını Luz Stadyumu'nda yaptı",
+            "id": "c4gzdym3178o",
+            "readTime": 2
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Memur zammı: Hakem Kurulu nedir, geçmişte ne kararlar verdi?",
+            "firstPublished": "2023-08-26T07:12:12.400Z",
+            "lastPublished": "2025-08-26T15:26:38.642Z",
+            "link": "https://www.bbc.com/turkce/articles/ce4vjr530z0o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/05c2/live/74e7eb30-7da4-11f0-a34f-318be3fb0481.jpg.webp",
+            "description": "Hükümet ile memur sendikaları arasındaki sekizinci dönem toplu iş sözleşmesi görüşmeleri uzlaşmazlıkla sonuçlandı. Devreye giren Hakem Kurulu kimlerden oluşuyor ve geçmişte ne kararlar verdi?",
+            "imageAlt": "pankartlarla yürüyen memurlar",
+            "id": "ce4vjr530z0o",
+            "readTime": 4
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 40,
+        "link": "https://www.bbc.com/turkce/topics/ckdxn2xk95gt",
+        "curationId": "urn:bbc:vivo:curation:7a5adc90-1029-45f9-a54c-ff776437fff8",
+        "curationType": "vivo-stream",
+        "position": 5,
+        "title": "Türkiye",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "İsrail Gazze Şehri'nde hastaneyi vurdu: Beşi gazeteci en az 20 kişi hayatını kaybetti",
+            "firstPublished": "2025-08-20T22:43:34.696Z",
+            "lastPublished": "2025-08-25T20:05:34.662Z",
+            "link": "https://www.bbc.com/turkce/articles/ce35dy3lldro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/18ae/live/ef572ed0-81b4-11f0-bb47-d3827f7ae22f.jpg.webp",
+            "description": "İsrail, Gazze Şehri'ni işgal etme planını onaylamasının ardından, şehre yönelik bombardımanına devam etti. 25 Ağustos'taki son saldırılarda kentin güneyindeki Nasır Hastanesi vuruldu.  Gazzeli yetkililer İsrail saldırısında beşi gazeteci en az 20 kişinin öldürüldüğünü açıkladı. \n",
+            "imageAlt": "Mariam Dagga yıkıntılar önünde duruyor üzerinde P yazılı çelik yelek elinde kaskı ve omzunda Canon yazılı askıyla. ",
+            "id": "ce35dy3lldro",
+            "readTime": 4,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "İsrail Batı Şeria'yı ikiye bölen yerleşim planını onayladı: 'Filistin devleti fikrini gömüyoruz'",
+            "firstPublished": "2025-08-15T11:54:52.718Z",
+            "lastPublished": "2025-08-20T10:35:32.298Z",
+            "link": "https://www.bbc.com/turkce/articles/c6270p3vw0yo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a6f0/live/b3fe1610-79cf-11f0-a34f-318be3fb0481.jpg.webp",
+            "description": "İsrail'in Doğu Kudüs ve Batı Şeria arasında kalan bir alana 3400 konut yapılmasını öngören bir yerleşim planının hayata geçireceğini duyurmasına dünya çapından tepkiler geldi. E1 parseline yapılması planlanan proje neden tartışmalı?",
+            "imageAlt": "İsrail'in aşırı sağcı Maliye Bakanı Bezalel Smotrich, tartışmalı E1 yerleşim planını harita üzerinde gösteriyor.",
+            "id": "c6270p3vw0yo",
+            "readTime": 4,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Gazze'de ateşkes görüşülürken, Hamas'tan İsrail mevzisine saldırı",
+            "firstPublished": "2025-08-19T00:48:58.564Z",
+            "lastPublished": "2025-08-20T15:53:47.840Z",
+            "link": "https://www.bbc.com/turkce/articles/cqleg3n23ego",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/31a9/live/88c6a6d0-7ddd-11f0-99e4-291d86ee4065.jpg.webp",
+            "description": "Hamas kaynakları, Mısır ve Katar'dan gelen son ateşkes ve rehine takası teklifini kabul ettiklerini açıkladı. Arabulucular İsrail'in yanıtını beklerken, İsrailli yetkililerden \"tüm rehineler geri verilmeden savaş sona ermez\" açıklamaları geliyor. ",
+            "imageAlt": "Fotoğrafta bir hava saldırısı sırasında patlayan bir bina ve kaçışan Filistinliler aynı anda görülüyor.",
+            "id": "cqleg3n23ego",
+            "readTime": 4,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Sally Rooney'den Palestine Action'a destek: 'Bu beni terör destekçisi yapıyorsa yapsın'",
+            "firstPublished": "2025-08-19T15:34:35.664Z",
+            "lastPublished": "2025-08-19T15:34:35.664Z",
+            "link": "https://www.bbc.com/turkce/articles/cx298yd384eo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a117/live/2f20a530-7d11-11f0-affd-3db3a18ad929.jpg.webp",
+            "description": "Ünlü İrlandalı yazar Sally Rooney, İngiltere'de Gazze'deki savaşa karşı eylemler düzenleyen ve \"terör örgütü\" ilan edilen Palestine Action (Filistin için Eylem) grubuna destek vermeye devam edeceğini açıkladı.",
+            "imageAlt": "Sally Rooney üzerinde turuncu bir gömlekle kameraya poz veriyor",
+            "id": "cx298yd384eo",
+            "readTime": 3,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/turkce/topics/cr50y6xwj1zt",
+        "curationId": "urn:bbc:tipo:list:32051a1d-282b-492f-9deb-cb057a8a494d",
+        "curationType": "tipo-curation",
+        "position": 6,
+        "title": "İsrail-Gazze",
+        "visualProminence": "NORMAL",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "ABD ve İsrail destekli yardım kuruluşu GHF neden tartışılıyor?",
+            "firstPublished": "2025-05-29T13:03:20.631Z",
+            "lastPublished": "2025-08-27T08:50:32.262Z",
+            "link": "https://www.bbc.com/turkce/articles/c331mry14r2o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7bf3/live/701a6760-5872-11f0-960d-e9f1088a89fe.jpg.webp",
+            "description": "Dünyanın önde gelen 130'dan fazla yardım kuruluşu, 30 Haziran'da İsrail ve ABD'nin destek verdiği Gazze İnsani Yardım Vakfı'nın (GHF) kapatılması çağrısı yaptı. Peki bu örgüt nedir ve neden tartışılıyor?",
+            "imageAlt": "GHF yardım merkezlerindeki Gazzeliler",
+            "id": "c331mry14r2o",
+            "readTime": 6
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Rus yüzücünün Boğaz'da kaybolması ile ilgili neler biliniyor?",
+            "firstPublished": "2025-08-26T11:45:59.512Z",
+            "lastPublished": "2025-08-26T11:45:59.512Z",
+            "link": "https://www.bbc.com/turkce/articles/c24zmvv0mnro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/250f/live/0db97a60-8271-11f0-a832-3d1a9236e27e.jpg.webp",
+            "description": "İstanbul Boğazı'nda 25 Ağustos'ta düzenlenen 37. Boğaziçi Kıtalararası Yüzme Yarışı'nda kaybolan Rus sporcu Nikolay Svechnikov'u arama çalışmaları sürüyor. Rus sporcudan 25 Ağustos sabahı denize girmesinden bu yana haber alınamıyor.",
+            "imageAlt": "Yüzücüler Kanlıca iskelesinden yarışa başlıyor.",
+            "id": "c24zmvv0mnro",
+            "readTime": 2
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Trump, ABD Merkez Bankası yöneticisi Lisa Cook'u görevden aldığını açıkladı",
+            "firstPublished": "2025-08-26T01:30:04.459Z",
+            "lastPublished": "2025-08-26T05:06:19.220Z",
+            "link": "https://www.bbc.com/turkce/articles/clyr5vn75lpo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d68c/live/e3e81110-821b-11f0-83cc-c5da98c419b8.png.webp",
+            "description": "ABD Başkanı Donald Trump, 26 Ağustos'ta yaptığı açıklamada, ABD Merkez Bankası (Fed) Yönetim Kurulu Üyesi Lisa Cook'u görevden aldığını duyurdu.",
+            "imageAlt": "Lisa Cook, üzerinde lacivert ve siyah desenler olan bir ceket giyiyor",
+            "id": "clyr5vn75lpo",
+            "readTime": 3
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Arda Güler yıldızlaşmaya devam ediyor",
+            "firstPublished": "2025-08-20T01:10:06.733Z",
+            "lastPublished": "2025-08-25T02:07:25.460Z",
+            "link": "https://www.bbc.com/turkce/articles/cy0qddn904ko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/5293/live/be0b94a0-8142-11f0-982b-3d8780c27579.jpg.webp",
+            "description": "Türk milli futbolcu Arda Güler, Real Madrid'in La Liga'nın ikinci haftasında Oviedo'ya karşı oynadığı maça ilk 11'de başladı. Güler, Kylian Mbappe'nin 37'nci dakikada attığı ilk golün asistini yaptı.",
+            "imageAlt": "Arda Güler koşarken görülüyor",
+            "id": "cy0qddn904ko",
+            "readTime": 2
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 40,
+        "link": "https://www.bbc.com/turkce/topics/cmn3xd0epypt",
+        "curationId": "urn:bbc:vivo:curation:cdd7dccb-a88d-49a0-9b92-4304e4cf19b4",
+        "curationType": "vivo-stream",
+        "position": 7,
+        "title": "Dünya",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Merkez Bankası Kur Korumalı Mevduat'ı sonlandırdı: Ekonomistler nasıl yorumladı?",
+            "firstPublished": "2023-11-10T04:02:14.192Z",
+            "lastPublished": "2025-08-23T11:07:46.732Z",
+            "link": "https://www.bbc.com/turkce/articles/c6przp5vzmeo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/6d30/live/7e6c6f00-8006-11f0-83c9-e1191d1c16a3.jpg.webp",
+            "description": "Merkez Bankası bugün Resmi Gazete’de yayımlanan tebliğiyle Kur Korumalı Mevduat (KKM) uygulamasına son verdi. Ekonomistler, 60 milyar dolarlık maliyeti olduğunu hesapladıkları KKM'nin bitişini hakkında neler söyledi?",
+            "imageAlt": "Bankamatikten 200 liralık banknotlar çeken bir çift el",
+            "id": "c6przp5vzmeo",
+            "readTime": 3
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Merkez Bankası nasıl çalışıyor, neden altın ve döviz rezervi tutuyor? ",
+            "firstPublished": "2025-08-22T09:15:52.004Z",
+            "lastPublished": "2025-08-22T09:15:52.004Z",
+            "link": "https://www.bbc.com/turkce/articles/cj61p887555o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/b7f7/live/d4901630-630e-11f0-850d-85c4620826be.jpg.webp",
+            "description": "Türkiye Cumhuriyet Merkez Bankası (TCMB) belirli aralıklarla faiz kararını açıklayarak, enflasyon hedefini gerçekleştirmeye çalışıyor. Peki Merkez Bankası'nın kararı ne anlama geliyor, banka neden altın ve döviz rezervi saklıyor? BBC Türkçe bankanın görevlerini ve ortaklık yapısını inceledi. ",
+            "imageAlt": "TCMB logosu ",
+            "id": "cj61p887555o",
+            "readTime": 4
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Sosyoekonomik açıdan en üst ve en alttaki iller: TÜİK'in verileri ne anlama geliyor? ",
+            "firstPublished": "2025-08-20T03:51:55.087Z",
+            "lastPublished": "2025-08-20T03:51:55.087Z",
+            "link": "https://www.bbc.com/turkce/articles/ce3jg94wj05o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/8eef/live/ed3352e0-7d1e-11f0-b8e7-2dc6f436f923.jpg.webp",
+            "description": "Türkiye İstatistik Kurumu, (TÜİK) yeni yayımladığı bir istatistikle Türkiye genelindeki 26 milyondan fazla hanenin tamamının sosyoekonomik durumunu ölçümlediğini açıkladı. Peki bu ölçüm ne anlama geliyor, neden eleştiriliyor? ",
+            "imageAlt": "İstiklal Caddesi, İstanbul ",
+            "id": "ce3jg94wj05o",
+            "readTime": 5
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Yozgat Bira Fabrikası'nın sıradışı hikayesi",
+            "firstPublished": "2025-08-17T07:16:43.333Z",
+            "lastPublished": "2025-08-17T07:16:43.333Z",
+            "link": "https://www.bbc.com/turkce/articles/ce93dgzgpmdo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/ff12/live/cf596980-78e6-11f0-85e4-03ebbfd01895.png.webp",
+            "description": "1972'de açılışı yapılan 2004'te özelleştirilen ve 2007'de üretime ara veren Yozgat Bira Fabrikası; kentin ekonomik, sosyal ve kültürel yaşamına nasıl bir etkide bulundu? Mahmut Hamsici ve Azra Maryem Tosuner'in haberi. ",
+            "imageAlt": "Yozgat bira fabrikasına dair bir grafik tasarım. Tasarımda altınbaşak birası, açılış görseli ve fabrikanın tabelası görülüyor. ",
+            "id": "ce93dgzgpmdo",
+            "readTime": 6
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 40,
+        "link": "https://www.bbc.com/turkce/topics/cg726y2k82dt",
+        "curationId": "urn:bbc:vivo:curation:0a9cb61c-a97a-46be-ae23-949d26d323f1",
+        "curationType": "vivo-stream",
+        "position": 8,
+        "title": "Ekonomi",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Kas kaybetmeden kilo vermenin yolları",
+            "firstPublished": "2025-08-25T01:06:56.342Z",
+            "lastPublished": "2025-08-25T01:06:56.342Z",
+            "link": "https://www.bbc.com/turkce/articles/c2012665qnxo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/e3a7/live/a56ddb80-34c4-11f0-89a8-7f565660f11b.jpg.webp",
+            "description": "Uzmanlar, kilo kaybı sırasında kas kaybını en aza indirmek için dengeli beslenme, kuvvet antrenmanı, yeterli dinlenme ve iyi bir ruh sağlığının şart olduğunu söylüyor.",
+            "imageAlt": "Bir kadın başka bir kadının bel çevresini mezurayla ölçerken. Kot pantolon ve bej bir üst giymiş kadın, belinin ölçülebilmesi için üstünü hafifçe yukarı çekmiş",
+            "id": "c2012665qnxo",
+            "readTime": 4
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Hastalıklar kokuyla teşhis edilebilir mi?",
+            "firstPublished": "2025-08-24T08:31:19.701Z",
+            "lastPublished": "2025-08-24T09:33:03.962Z",
+            "link": "https://www.bbc.com/turkce/articles/c5ypxg4pr1xo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/9535/live/50fe0850-7e7e-11f0-ab3e-bd52082cd0ae.png.webp",
+            "description": "Vücut kokuları, diyabetten Parkinson’a kadar birçok hastalığın erken belirtilerini ortaya çıkarabiliyor. Bilim insanları, köpeklerin üstün koku alma gücünden ilham alarak bu kokuları tespit edecek cihazlar geliştiriyor. Bu sayede gelecekte hızlı ve basit teşhis yöntemleri mümkün olabilir.",
+            "imageAlt": "Ayak kokusunu resmeden bir görsel. Yeşil arka plan üzerinde bir çift ayak var.",
+            "id": "c5ypxg4pr1xo",
+            "readTime": 6
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "BM'den Gazze'de kıtlık ilanı: Emine Erdoğan'dan Melania Trump'a mektup",
+            "firstPublished": "2025-08-01T00:28:56.473Z",
+            "lastPublished": "2025-08-23T14:36:18.602Z",
+            "link": "https://www.bbc.com/turkce/articles/c98le5d53dro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/0299/live/bc0c0390-6bd7-11f0-acb3-89fdfd797fe1.jpg.webp",
+            "description": "Gazze Şehri'nde kıtlık olduğu Birleşmiş Milletler'in (BM) gıda güvenliğini izleyen kurumu tarafından ilk kez teyit edildi. Emine Erdoğan ABD First Leydisi Melania Trump'a bir mektup yazarak harekete geçmesini istedi.",
+            "imageAlt": "Ellerinde tencereler tutan eller. ",
+            "id": "c98le5d53dro",
+            "readTime": 5
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Erimeyen dondurma mümkün mü?",
+            "firstPublished": "2025-08-23T08:19:40.363Z",
+            "lastPublished": "2025-08-23T08:19:40.363Z",
+            "link": "https://www.bbc.com/turkce/articles/c4gz0z5vp4lo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/b7e6/live/4c70bc80-7d14-11f0-affd-3db3a18ad929.jpg.webp",
+            "description": "Dondurma yaz aylarının vazgeçilmezidir. Peki bilim insanları dondurmanın soğuk kalmasını sağlayabilir mi?",
+            "imageAlt": "Eriyen dondurmalarına bakan iki kadının halen keyfi yerinde",
+            "id": "c4gz0z5vp4lo",
+            "readTime": 3
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 19,
+        "link": "https://www.bbc.com/turkce/topics/cnq68n6wgzdt",
+        "curationId": "urn:bbc:vivo:curation:ea16f00c-9605-4b55-9587-e17a836abe2a",
+        "curationType": "vivo-stream",
+        "position": 9,
+        "title": "Sağlık",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Cengiz Han'ın eşi, Moğol İmparatorluğu'nun kuruluşunda nasıl bir rol oynadı?",
+            "firstPublished": "2025-08-17T11:06:42.624Z",
+            "lastPublished": "2025-08-17T11:06:42.624Z",
+            "link": "https://www.bbc.com/turkce/articles/cy0wekpggeqo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/da1d/live/0c6fd7d0-652f-11f0-8d99-7506e5c32286.jpg.webp",
+            "description": "Cengiz Han olarak da bilinen Temuçin'in karısı Börte, Moğol İmparatorluğu'nun önde gelen kadınlarından biriydi.\n",
+            "imageAlt": "Cengiz Han eşi Börte ile birlikte",
+            "id": "cy0wekpggeqo",
+            "readTime": 5
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Kadın dernekleri Diyanet’in cuma hutbesine neden tepki gösterdi?",
+            "firstPublished": "2025-08-15T19:07:21.307Z",
+            "lastPublished": "2025-08-15T19:07:21.307Z",
+            "link": "https://www.bbc.com/turkce/articles/c5ykpyzw071o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d3dd/live/67b5ba70-7a0a-11f0-b319-55e089610f9c.jpg.webp",
+            "description": "Diyanet'in kadınların miras hakkına değinen cuma hutbesi, kadın hakları savunucuları tarafından tepkiyle karşılandı. ",
+            "imageAlt": "İstanbul Beşiktaş'taki Küçük Mecidiye Camii. ",
+            "id": "c5ykpyzw071o",
+            "readTime": 4
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "'Aile arabuluculuğu' ile nasıl bir düzenleme planlanıyor?",
+            "firstPublished": "2025-08-13T09:21:41.062Z",
+            "lastPublished": "2025-08-13T09:21:41.062Z",
+            "link": "https://www.bbc.com/turkce/articles/cy4ddq2knv8o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/1662/live/94749a60-7828-11f0-9d98-05a3040a64d3.jpg.webp",
+            "description": "Boşanma davası öncesinde tarafların bir araya gelerek belli konularda anlaşmasını hedefleyen \"aile arabuluculuğu\" sistemi yeniden gündemde. Bu sistemle ne amaçlanıyor, kadın örgütleri ne düşünüyor?",
+            "imageAlt": "Bir mahkeme salonu ",
+            "id": "cy4ddq2knv8o",
+            "readTime": 4
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Perimenopoz ve menopoz belirtileri beslenmeyle nasıl hafifletilebilir?",
+            "firstPublished": "2025-08-13T02:05:19.841Z",
+            "lastPublished": "2025-08-13T02:05:19.841Z",
+            "link": "https://www.bbc.com/turkce/articles/c2k1vz7p38zo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/72bf/live/4b1f24f0-77df-11f0-9a41-c199d59beebf.jpg.webp",
+            "description": "Genellikle 45-55 yaş arasındaki kadınların etkilendiği menopoz sürecinde belirtiler çoğu zaman yaşam kalitesini ciddi şekilde bozabiliyor. Peki, beslenme düzeninde yapılacak bazı değişiklikler bu belirtileri hafifletmeye yardımcı olabilir mi?",
+            "imageAlt": "İçeceğini içen bir kadın.",
+            "id": "c2k1vz7p38zo",
+            "readTime": 6
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 29,
+        "link": "https://www.bbc.com/turkce/topics/c7zp5gpnp38t",
+        "curationId": "urn:bbc:vivo:curation:4a07c46f-0744-4fe1-a72a-1967729f189b",
+        "curationType": "vivo-stream",
+        "position": 10,
+        "title": "Kadın",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Deprem ivmesi nedir, hasarla bağlantısı ne? ",
+            "firstPublished": "2025-08-17T10:01:00.990Z",
+            "lastPublished": "2025-08-22T10:26:01.945Z",
+            "link": "https://www.bbc.com/turkce/articles/c14evdxepvlo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/bca0/live/7ac39160-5c0e-11f0-9d64-1b7197dd7c07.jpg.webp",
+            "description": "Aynı büyüklükte depremler, bazı bölgelerde büyük hasara neden olurken diğer yerlerde yıkım gözlenmeyebiliyor. BBC Türkçe bunun sebeplerini, deprem ivmesinin ne anlama geldiğini ve zemin özelliklerinin yıkıma etkisini uzmanlara sordu. ",
+            "imageAlt": "6 Şubat 2023 depremlerinin ardından Malatya'da yıkılmış bir bina. ",
+            "id": "c14evdxepvlo",
+            "readTime": 4
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Yerin kilometrelerce altındaki deprem fay hatları nasıl inceleniyor? ",
+            "firstPublished": "2025-08-22T06:49:54.905Z",
+            "lastPublished": "2025-08-22T06:50:14.715Z",
+            "link": "https://www.bbc.com/turkce/articles/clyl3n6keg7o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/6976/live/7f785b50-5c18-11f0-9ceb-afe35b36da75.jpg.webp",
+            "description": "Depremleri önceden bilmek mümkün olmasa da bilim insanları nerede ve nasıl olacaklarını anlamak için yerin milimetrik hareketlerini izliyor, hatta derinliklerine kadar iniyor.",
+            "imageAlt": "Hawaii Yanardağları Milli Parkı'nda son yanardağ patlamaları ve bağlı çökme nedeniyle oluşmuş otobandaki büyük bir çatlak 16 Eylül 2019: .",
+            "id": "clyl3n6keg7o",
+            "readTime": 5
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Antarktika'da 65 yıl sonra bulunan kemikler",
+            "firstPublished": "2025-08-22T00:31:38.881Z",
+            "lastPublished": "2025-08-22T06:46:23.720Z",
+            "link": "https://www.bbc.com/turkce/articles/cqxgd905vq3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/2179/live/854f9a60-763b-11f0-a975-cb151ca452f4.jpg.webp",
+            "description": "65 yıl önce Antarktika’da buzul çatlağına düşerek kaybolan İngiliz araştırmacı Dennis “Tink” Bell’in kalıntıları, eriyen buzulda bulundu. Ailesi, “Artık eve döndü” diyerek yıllar sonra gelen bu haberde teselli buldu",
+            "imageAlt": "A man with dark hair and a dark beard holding a husky dog",
+            "id": "cqxgd905vq3o",
+            "readTime": 5
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Sohbet robotlarını gerçek sanmak: Yapay zeka psikozu nedir?",
+            "firstPublished": "2025-08-21T11:01:03.474Z",
+            "lastPublished": "2025-08-21T11:01:03.474Z",
+            "link": "https://www.bbc.com/turkce/articles/c620lzx8dwpo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/6c82/live/f6254e30-7ed1-11f0-83cc-c5da98c419b8.jpg.webp",
+            "description": "Microsoft'un yapay zeka çalışmaları direktörü Mustafa Süleyman, \"Yapay zeka psikozu\" yaşayan insanlara dair raporların arttığını söyledi.",
+            "imageAlt": "insan eli ile robot eli birbirine dokunuyor ",
+            "id": "c620lzx8dwpo",
+            "readTime": 4
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 15,
+        "link": "https://www.bbc.com/turkce/topics/c404v74nk56t",
+        "curationId": "urn:bbc:vivo:curation:93ec4b29-5670-4ddd-bb40-7a4455874549",
+        "curationType": "vivo-stream",
+        "position": 11,
+        "title": "Bilim",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Yeni silah sistemleri Türkiye'nin savunma doktriniyle ilgili bize ne anlatıyor?",
+            "firstPublished": "2025-08-19T03:13:25.908Z",
+            "lastPublished": "2025-08-19T03:13:25.908Z",
+            "link": "https://www.bbc.com/turkce/articles/crr2jze72rxo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c908/live/23f78f80-78f6-11f0-8071-1788c7e8ae0e.jpg.webp",
+            "description": "IDEF 2025 fuarında Türk Silahlı Kuvvetleri envanterine giren ya da yakın zamanda girecek bazı gelişmiş savunma sistemleri kamuoyuyla ilk kez paylaşıldı. Bu sistemler, Türk savunma doktrininin gidişatıyla ilgili ne ipuçları veriyor? BBC Türkçe uzmanlara sordu.",
+            "imageAlt": "Tayfun füzesinin IDEF 2025'teki sergisinden bir fotoğraf.",
+            "id": "crr2jze72rxo",
+            "readTime": 6
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "AI2027 senaryosu: Yapay zeka insanlığın sonunu nasıl getirebilir?",
+            "firstPublished": "2025-08-01T09:33:43.713Z",
+            "lastPublished": "2025-08-01T09:33:43.713Z",
+            "link": "https://www.bbc.com/turkce/articles/c9vdklzee47o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/276a/live/c1edb390-6e38-11f0-8dbd-f3d32ebd3327.png.webp",
+            "description": "Yapay zeka uzmanlarının kaleme aldığı bir araştırmada dile getirilen AI2027 adlı senaryo, yapay zekanın 2027'de kontrolden çıkacağını ve 10 yıl içerisinde insanlığın sonunu getireceğini iddia ediyor.",
+            "imageAlt": "Geleceğe ait bir sokak görüntüsü.",
+            "id": "c9vdklzee47o",
+            "readTime": 5
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Ekran süresi çocukların beynini gerçekten kötü etkiliyor mu?",
+            "firstPublished": "2025-07-31T11:11:51.739Z",
+            "lastPublished": "2025-07-31T11:11:51.739Z",
+            "link": "https://www.bbc.com/turkce/articles/c4gjpzdz50ko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/5322/live/237f8df0-6e01-11f0-8407-7b8a51c69305.png.webp",
+            "description": "Ekran başında geçirilen zaman olumsuz etkilerle eş anlamlı hale geldi - ancak bilim bunun bu kadar basit olmadığını söylüyor.",
+            "imageAlt": "elinde tabletle bir çocuk",
+            "id": "c4gjpzdz50ko",
+            "readTime": 7
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Google Kahramanmaraş depremlerinde 10 milyon kişiye uyarı gönderemediğini kabul etti",
+            "firstPublished": "2025-07-27T23:54:55.990Z",
+            "lastPublished": "2025-07-28T00:22:25.059Z",
+            "link": "https://www.bbc.com/turkce/articles/c4gjlp6xer1o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/9a96/live/8e997b00-67da-11f0-bd11-e1b32ef27f62.jpg.webp",
+            "description": "Google 6 Şubat 2023'teki Kahramanmaraş depremlerinde yalnızca 469 kişinin telefonuna en ciddi deprem uyarısını gönderilebildiğini, yaklaşık 10 milyon kişinin bu uyarıyı alamadığını açıkladı.",
+            "imageAlt": "yıkılmış bir binanın enkazının üstünde duran iki kişi",
+            "id": "c4gjlp6xer1o",
+            "readTime": 3
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 10,
+        "link": "https://www.bbc.com/turkce/topics/c2dwqnwkvnqt",
+        "curationId": "urn:bbc:vivo:curation:de896fd2-b998-4010-8cf8-7255eb4c57f6",
+        "curationType": "vivo-stream",
+        "position": 12,
+        "title": "Teknoloji",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Milli yüzücü Kuzey Tunçelli üst üste iki dünya şampiyonluğu kazandı",
+            "firstPublished": "2025-08-25T13:58:10.978Z",
+            "lastPublished": "2025-08-25T13:58:10.978Z",
+            "link": "https://www.bbc.com/turkce/articles/cvgneyvkwnyo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/678b/live/59f935d0-81ba-11f0-b48b-b9088fa43ba7.jpg.webp",
+            "description": "Milli yüzücü Kuzey Tunçelli, Romanya'da düzenlenen Dünya Gençler Yüzme Şampiyonası'nda peş peşe iki şampiyonluk kazandı.",
+            "imageAlt": "Tunçelli'nin katıldığı erkekler 1500 metre serbest yarışından bir fotoğraf. Milli yüzücü kulaç atıyor.",
+            "id": "cvgneyvkwnyo",
+            "readTime": 2
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Neom SC: Var olmayan şehrin futbol takımı",
+            "firstPublished": "2025-08-22T16:15:06.809Z",
+            "lastPublished": "2025-08-24T23:29:50.843Z",
+            "link": "https://www.bbc.com/turkce/articles/c7765l3m6rko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/546e/live/a4ab0260-7f4f-11f0-ace8-c7fe3706c172.jpg.webp",
+            "description": "Suudi Arabistan’ın henüz kurulmamış şehrini temsil eden NEOM SC, Nisan’daki zaferiyle ilk kez Süper Lig’e yükseldi. Tabuk’tan Kızıldeniz kıyısına taşınmaya hazırlanan kulüp, yeni sezona Lacazette transferiyle iddialı giriyor.",
+            "imageAlt": "Neom SC'nin beyaz forması",
+            "id": "c7765l3m6rko",
+            "readTime": 4
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Premier Lig: Adı Galatasaray'la anılan Ederson, City - Tottenham maçında forma giymedi",
+            "firstPublished": "2025-08-15T03:16:41.322Z",
+            "lastPublished": "2025-08-23T14:43:07.367Z",
+            "link": "https://www.bbc.com/turkce/articles/c62600y6x6eo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/4ab3/live/900a7180-7930-11f0-ab3e-bd52082cd0ae.jpg.webp",
+            "description": "İngiltere Premier Lig'te 2025-2026 sezonunda ikinci haftanın maçları oynanıyor. Chelsea Londra derbisinde West Ham'i deplasmanda 5-1 yendi.",
+            "imageAlt": "Premier Lig topu",
+            "id": "c62600y6x6eo",
+            "readTime": 3
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Mükemmel penaltı atışının matematiği",
+            "firstPublished": "2025-08-18T19:44:47.896Z",
+            "lastPublished": "2025-08-18T19:44:47.896Z",
+            "link": "https://www.bbc.com/turkce/articles/c05e0yej085o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/cfd9/live/6d2f70c0-7c32-11f0-92c1-85a236087aea.jpg.webp",
+            "description": "Penaltılarda tek bir doğru yok; tahmin edilebilir olmak kaleciye avantaj sağlar. Matematiğin önerisi, atış yönünü rastgele seçerek rakibi şaşırtmak üzerine. Bu “karma strateji” yalnız sporda değil, siyasetten iş dünyasına kadar etkili bir yöntem",
+            "imageAlt": "Hırvatistan-Türkiye Euro 2008 çeyrek finalinde Türk kaleci Rüştü Reçber Mladen Petric'in penaltısını kurtardı",
+            "id": "c05e0yej085o",
+            "readTime": 5
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 16,
+        "link": "https://www.bbc.com/turkce/topics/c340qx04vwwt",
+        "curationId": "urn:bbc:vivo:curation:cafd51de-50ef-428d-b3e7-441eb947f34f",
+        "curationType": "vivo-stream",
+        "position": 13,
+        "title": "Spor",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Fotoğraflarla Perseid Meteor Yağmuru",
+            "firstPublished": "2025-08-12T03:58:18.552Z",
+            "lastPublished": "2025-08-13T06:46:21.302Z",
+            "link": "https://www.bbc.com/turkce/articles/cd9jydee4x0o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/2e30/live/dc310780-37be-11f0-96c3-cf669419a2b0.jpg.webp",
+            "description": "Yıldız gözlemcileri ve fotoğrafçılar, 12 ve 13 Ağustos tarihlerinde zirveye ulaşan Perseid Meteor Yağmuru ile bu yıl da en büyüleyici gökyüzü gösterilerinden birine tanıklık etti.",
+            "imageAlt": "Perseid Meteor Yağmuru",
+            "id": "cd9jydee4x0o",
+            "readTime": 4
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Fotoğraflarla Türkiye'de 19 Mayıs kutlamaları",
+            "firstPublished": "2025-04-23T07:24:50.222Z",
+            "lastPublished": "2025-05-19T15:00:10.381Z",
+            "link": "https://www.bbc.com/turkce/articles/cyvq9m3j6vdo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d823/live/dd0d6030-34bd-11f0-aa60-d5869f4a84da.jpg.webp",
+            "description": "Atatürk'ün Samsun'a ayak basmasının 106'ıncı yıl dönümü kapsamında, Atatürk'ü Anma, Gençlik ve Spor Bayramı için Türkiye genelinde kutlamalar yapıldı. ",
+            "imageAlt": "Anıtkabir önünde kalabalık ve açılan devasa bir türk bayrağıyla ",
+            "id": "cyvq9m3j6vdo",
+            "readTime": 3
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Fotoğraflarla Met Gala 2025",
+            "firstPublished": "2025-05-05T23:38:43.159Z",
+            "lastPublished": "2025-05-06T06:17:44.409Z",
+            "link": "https://www.bbc.com/turkce/articles/c75d29x9zqzo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d7a7/live/c22aa1a0-2a41-11f0-a26d-7d71d519d04b.jpg.webp",
+            "description": "Moda dünyasının en görkemli etkinlikleri arasında yer alan Met Gala, bu yıl da New York'taki geleneksel davette dünyaca ünlü yüzleri bir araya getiriyor.\n\n",
+            "imageAlt": "Ava DuVernay ve Zendaya",
+            "id": "c75d29x9zqzo",
+            "readTime": 4
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "1 Mayıs: Geçmişten bugüne sembol olmuş İşçi Bayramı afişleri",
+            "firstPublished": "2025-04-29T10:05:31.991Z",
+            "lastPublished": "2025-04-29T10:05:31.991Z",
+            "link": "https://www.bbc.com/turkce/articles/ckg18mnvdk1o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/6ae6/live/e60b3250-245c-11f0-8f57-b7237f6a66e6.png.webp",
+            "description": "Sovyetler Birliği'nden Fransa'ya, İngiltere'den Almanya'ya ve Türkiye'ye, farklı ülkelerden 1 Mayıs afişleri ",
+            "imageAlt": "1 Mayıs afişi",
+            "id": "ckg18mnvdk1o",
+            "readTime": 3
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 2,
+        "curationId": "urn:bbc:vivo:curation:feb65f74-47e7-4472-903e-4ac5410fb5f3",
+        "curationType": "vivo-stream",
+        "position": 14,
+        "title": "Fotoğraf Albümleri",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Komisyon, Cumartesi ve Barış annelerini dinledi: 'Çocuklarımızı değil, silahları toprağa gömelim'",
+            "firstPublished": "2025-08-20T18:17:03.374Z",
+            "lastPublished": "2025-08-20T18:17:03.374Z",
+            "link": "https://www.bbc.com/turkce/articles/cx29ex0nd1lo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/f681/live/7b553490-7df0-11f0-99a6-6566970a8a8a.jpg.webp",
+            "description": "TBMM'de kurulan Milli Dayanışma, Kardeşlik ve Demokrasi Komisyonu'nda konuşan Barış anneleri süreçle ilgili devletin adım atması, Abdullah Öcalan'ın serbest bırakılması ve komisyonca dinlenmesi taleplerini dile getirdi; \"Asker anaları, gerilla anaları birbirimize sarılalım\" çağrısı yaptı.",
+            "imageAlt": "TBMM'de kurulan Milli Dayanışma, Kardeşlik ve Demokrasi Komisyonu toplantısında Cumartesi Anneleri ve Diyarbakır Anneleri temsilcileri dinleniyor. ",
+            "id": "cx29ex0nd1lo",
+            "readTime": 6,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Meclis'te 'süreç' komisyonu: İlk gündem maddeleri ne olacak?",
+            "firstPublished": "2025-07-17T02:51:20.060Z",
+            "lastPublished": "2025-07-18T00:34:40.086Z",
+            "link": "https://www.bbc.com/turkce/articles/c8j12njp7reo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c329/live/788a3280-62b9-11f0-b1b9-2b94c1f6d9f3.jpg.webp",
+            "description": "PKK'nın sembolik bir törenle silah bırakma sürecini başlattığını açıklaması sonrası, gözler TBMM çatısı altında kurulacak olan komisyona çevrildi. Cuma yapılacak toplantıda, komisyonun yapısı, ismi, çalışma koşulları ve üyelerinin belirlenmesi bekleniyor.",
+            "imageAlt": "Meclis Başkanı Numan Kurtulmuş'un yanında Pervin Buldan ve bazı başka ünlü siyasetçiler var.",
+            "id": "c8j12njp7reo",
+            "readTime": 5,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Suriyeli Kürt siyasetçi İlham Ahmed BBC Türkçe'ye konuştu: Ankara ile ilişkileri nasıl? Şam ile müzakereler çöktü mü?",
+            "firstPublished": "2025-07-17T06:54:15.355Z",
+            "lastPublished": "2025-07-17T06:54:15.355Z",
+            "link": "https://www.bbc.com/turkce/articles/cd78wjpgvvdo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/409c/live/39321a90-6286-11f0-97bf-8f96c1d92299.jpg.webp",
+            "description": "Suriyeli Kürtlerin önde gelen temsilcilerinden İlham Ahmed, Türkiye'yle ilişkiler ve Suriye Demokratik Güçleri ile Şam arasındaki müzakerelerle ilgili BBC Türkçe'nin sorularını yanıtladı.",
+            "imageAlt": "İlham Ahmed, 2018 yılında Fransa'nın başkenti Paris'teki bir basın toplantısında konuşuyor. ",
+            "id": "cd78wjpgvvdo",
+            "readTime": 7,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Cumhurbaşkanı Erdoğan'ın 'üç partili süreç' çıkışına ne tepkiler geliyor?",
+            "firstPublished": "2025-07-12T07:08:07.763Z",
+            "lastPublished": "2025-07-14T19:53:37.397Z",
+            "link": "https://www.bbc.com/turkce/articles/ceq7vdyxe0eo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/3765/live/e5f20220-5ffe-11f0-960d-e9f1088a89fe.jpg.webp",
+            "description": "Cumhurbaşkanı Erdoğan'ın Terörsüz Türkiye adını verdikleri süreci üç partinin yürüteceğini söylemesine parti yönetimlerinden değerlendirmeler geliyor. CHP lideri Özel, Erdoğan'ı \"yine ayrımcılık\" yapmakla eleştirdi.",
+            "imageAlt": "Cumhurbaşkanı Erdoğan Kızılcahamam toplantısının kapanış konuşmasını yaparken. ",
+            "id": "ceq7vdyxe0eo",
+            "readTime": 5,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/turkce/topics/cqldwxm2q0jt",
+        "curationId": "urn:bbc:tipo:list:39681e7d-52d2-4938-9778-3425b17f285e",
+        "curationType": "tipo-curation",
+        "position": 15,
+        "title": "PKK silah bırakıyor",
+        "visualProminence": "NORMAL",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "WhatsApp",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://bit.ly/3Dwt9Qd",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7a76/live/81f7b470-eac7-11ee-9410-0f893255c2a0.png.webp",
+            "imageAlt": "WhatsApp",
+            "id": "https%3A%2F%2Fwhatsapp.com%2Fchannel%2F0029VaUm1Ss3WHTbgIXrjw3D",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Facebook",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.facebook.com/bbcnewsturkceservisi/",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d3ce/live/baa6e4f0-929b-11ee-91bf-230bfab3fcba.png.webp",
+            "imageAlt": "Facebook logo",
+            "id": "https%3A%2F%2Fwww.facebook.com%2Fbbcnewsafrique",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "X",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://x.com/bbcturkce",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c238/live/f608c4a0-929b-11ee-91bf-230bfab3fcba.png.webp",
+            "imageAlt": "X logo",
+            "id": "https%3A%2F%2Ftwitter.com%2Fbbcafrique",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "YouTube",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.youtube.com/user/bbcturkce",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/caba/live/d47493a0-929b-11ee-b9a7-c91b9dfa91e5.png.webp",
+            "imageAlt": "YouTube logo",
+            "id": "https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUCBte7YLdJx-O_YljuvN6whg",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Instagram",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.instagram.com/bbcturkce/",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/14e1/live/e52afd10-929b-11ee-8df3-1d2983d8814f.png.webp",
+            "imageAlt": "Instagram logo",
+            "id": "https%3A%2F%2Fwww.instagram.com%2Fbbcafrique%2F",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "TikTok",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.tiktok.com/@bbcnewsturkce",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/2439/live/208944a0-fb26-11ee-a9f7-4d961743aa47.png.webp",
+            "imageAlt": "TikTok logo",
+            "id": "https%3A%2F%2Fwww.tiktok.com%2F%40bbcnewsbrasil",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:40772cda-4ee9-44f2-9aa2-9ce8208d2490",
+        "curationType": "tipo-curation",
+        "position": 16,
+        "title": "Sosyal medya hesaplarımız",
+        "visualProminence": "NORMAL",
+        "visualStyle": "LINKS"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Tıklayın",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/ws/languages?xtor=CS1-13-[wsturkish~N~A39~MBC]-[Owned]&utm_source=mktg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c2f0/live/f1d32dc0-12ee-11ef-b9d8-4f52aebe147d.png.webp",
+            "imageAlt": "Tıklayın",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fws%2Flanguages%3Fxtor%3DCS1-13-%5Bwsturkish~N~A39~MBC%5D-%5BOwned%5D%26utm_source%3Dmktg",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/ws/languages",
+        "curationId": "urn:bbc:tipo:list:29ea5c8c-e46a-44db-a1c6-1c2294da9ebb",
+        "curationType": "tipo-curation",
+        "position": 17,
+        "title": "Farklı dillerde haberler",
+        "visualProminence": "NORMAL",
+        "visualStyle": "BANNER"
+      },
+      {
+        "curationId": "urn:bbc:onward-journeys:most:read?=site=News",
+        "curationType": "most-popular",
+        "position": 18,
+        "title": "En çok okunanlar",
+        "visualProminence": "NORMAL",
+        "visualStyle": "RANKED",
+        "link": "https://www.bbc.com/turkce/popular/read",
+        "mostRead": {
+          "generated": "2025-08-27T10:10:05.016037852Z",
+          "lastRecordTimeStamp": "2025-08-27T10:07:00Z",
+          "firstRecordTimeStamp": "2025-08-27T09:52:00Z",
+          "items": [
+            {
+              "id": "urn:bbc:optimo:asset:cdj2kp9078go",
+              "rank": 1,
+              "title": "YKS sonuçları: Yerleştirme sıralamaları neden değişti?",
+              "href": "https://www.bbc.com/turkce/articles/cdj2kp9078go",
+              "timestamp": "2025-08-26T11:38:58.988Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "ÖSYM logosu",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "ÖSYM logosu",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1412,
+                        "height": 702,
+                        "locator": "452f/live/15dd82b0-8184-11f0-a34f-318be3fb0481.png",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "osym.gov.tr",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cvg390617xlo",
+              "rank": 2,
+              "title": "İsrail'in İran'daki Evin Hapishanesi'ne saldırısı: 'Hayatımın sonu geldi sandım'",
+              "href": "https://www.bbc.com/turkce/articles/cvg390617xlo",
+              "timestamp": "2025-08-27T00:10:10.373Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "A man stands pointing upwards in the impact site of one of Israel's missiles on the administrative building at Evin Prison, where a large number of people were killed",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "A man stands pointing upwards in the impact site of one of Israel's missiles on the administrative building at Evin Prison, where a large number of people were killed",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1920,
+                        "height": 1080,
+                        "locator": "2671/live/17e9d670-7eb0-11f0-83cc-c5da98c419b8.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Getty Images",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c9d083exp7vo",
+              "rank": 3,
+              "title": "ABD'de et yiyen parazit bir insana bulaştı",
+              "href": "https://www.bbc.com/turkce/articles/c9d083exp7vo",
+              "timestamp": "2025-08-27T07:19:52.936Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Orta Amerika ve Meksika'da Yeni Dünya vida kurdu salgını tespit edildi",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Orta Amerika ve Meksika'da Yeni Dünya vida kurdu salgını tespit edildi",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Bir çözelti içinde saklanan onlarca vidalı kurt",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Bir çözelti içinde saklanan onlarca vidalı kurt",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1406,
+                        "height": 790,
+                        "locator": "06b8/live/00600780-8285-11f0-856b-cd8744058cb6.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Reuters",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cx275k4lxelo",
+              "rank": 4,
+              "title": "Avrupa'da son 80 yılın en büyük kitap soygunu",
+              "href": "https://www.bbc.com/turkce/articles/cx275k4lxelo",
+              "timestamp": "2025-08-26T23:26:16.875Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Collage with images of Gogol and the convicted Beka Tsirekidze",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Collage with images of Gogol and the convicted Beka Tsirekidze",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1920,
+                        "height": 1082,
+                        "locator": "f1e6/live/5374b6f0-6e12-11f0-8dbd-f3d32ebd3327.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "BBC",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:ce354evzl64o",
+              "rank": 5,
+              "title": "Türkiye, 2025 Avrupa Basketbol Şampiyonası'nda ilk maçında Letonya karşısında",
+              "href": "https://www.bbc.com/turkce/articles/ce354evzl64o",
+              "timestamp": "2025-08-27T02:29:44.543Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "NBA'de Houston Rockets forması giyen Alperen Şengün, Türkiye'nin önemli kozlarından birisi",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "NBA'de Houston Rockets forması giyen Alperen Şengün, Türkiye'nin önemli kozlarından birisi",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Alperen Şengün antrenmanda şut atarken",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Alperen Şengün antrenmanda şut atarken",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1024,
+                        "height": 576,
+                        "locator": "78da/live/79d90b20-82ee-11f0-a819-c948892e2dca.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Esra Bilgin/Anadolu via Getty Images",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cvg4zp9kn75o",
+              "rank": 6,
+              "title": "Filenin Sultanları, Dünya Şampiyonası'nda Kanada ile karşı karşıya",
+              "href": "https://www.bbc.com/turkce/articles/cvg4zp9kn75o",
+              "timestamp": "2025-08-27T09:42:16.000Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Filenin Sultanları, ilk iki maçta aldıkları galibiyetle son 16 turuna çıkmayı garantiledi",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Filenin Sultanları, ilk iki maçta aldıkları galibiyetle son 16 turuna çıkmayı garantiledi",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Filenin Sultanları, Bulgaristan maçında buldukları sayının ardından sevinç yaşıyor",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Filenin Sultanları, Bulgaristan maçında buldukları sayının ardından sevinç yaşıyor",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1024,
+                        "height": 576,
+                        "locator": "7c87/live/cef4d980-82e5-11f0-a2b0-1b6fcc7c719f.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Mustafa Hatipoglu/Anadolu via Getty Images",
+                        "suitableForSyndication": false
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cdrkmrgj0j8o",
+              "rank": 7,
+              "title": "Yangınlar, madenler, enerji projeleri: Türkiye'nin ormanlarına karşı en büyük tehdit hangisi?",
+              "href": "https://www.bbc.com/turkce/articles/cdrkmrgj0j8o",
+              "timestamp": "2025-08-27T01:00:19.118Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "2024 yılında 20 bin 439 hektar ormanlık alan, çeşitli sektörlerin kullanımına tahsis edildi.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "2024 yılında 20 bin 439 hektar ormanlık alan, çeşitli sektörlerin kullanımına tahsis edildi.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "2021 yılında Rize İkizdere'deki bir taş ocağının görünümü.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "2021 yılında Rize İkizdere'deki bir taş ocağının görünümü.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1024,
+                        "height": 576,
+                        "locator": "baca/live/e1292880-7f44-11f0-ace8-c7fe3706c172.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Getty Images",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cgjye835nwdo",
+              "rank": 8,
+              "title": "'Kadının beyanı esastır' ilkesi nedir, masumiyet karinesine aykırı mı?",
+              "href": "https://www.bbc.com/turkce/articles/cgjye835nwdo",
+              "timestamp": "2025-08-26T11:36:05.343Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Kadınların protestosu ",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Kadınların protestosu ",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1022,
+                        "height": 575,
+                        "locator": "1a25/live/864ecaa0-825f-11f0-b146-97f338dfbf31.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Getty Images",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cewypxvjpgxo",
+              "rank": 9,
+              "title": "Aigai antik kenti: Keçiler, gladyatörler ve antik bir AVM",
+              "href": "https://www.bbc.com/turkce/articles/cewypxvjpgxo",
+              "timestamp": "2025-08-24T13:20:13.627Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Aigai'daki meclis binasının ikinci katı ana toplantı salonuydu. Toplantı salonunun devamı, kayaların ve insan eliyle yapılmış bir terasın üstüne oturuyordu. Bu bölümde, konuşmacıyı dinleyen diğer meclis üyelerinin oturduğu taş oturma sıraları, yarım dairesel basamaklar halinde yükseliyordu. ",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Aigai'daki meclis binasının ikinci katı ana toplantı salonuydu. Toplantı salonunun devamı, kayaların ve insan eliyle yapılmış bir terasın üstüne oturuyordu. Bu bölümde, konuşmacıyı dinleyen diğer meclis üyelerinin oturduğu taş oturma sıraları, yarım dairesel basamaklar halinde yükseliyordu. ",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Aigai'daki meclis binası.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Aigai'daki meclis binası.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 4000,
+                        "height": 2250,
+                        "locator": "f2b7/live/39b553f0-7f88-11f0-a520-c1d9b927a39c.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Aigai Kazı Başkanlığı",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cn47wz7y9g3o",
+              "rank": 10,
+              "title": "Memura zam oranı belirlendi, sendikalar karara tepki gösterdi",
+              "href": "https://www.bbc.com/turkce/articles/cn47wz7y9g3o",
+              "timestamp": "2025-08-27T07:15:27.281Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Hakem Kurulu'nu protesto eden Memur-Sen ve Kamu-Sen kuruldan çekildi. ",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Hakem Kurulu'nu protesto eden Memur-Sen ve Kamu-Sen kuruldan çekildi. ",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Memur sendikaları üyeleri banner ve bayraklarıyla protesto yapıyorlar. ",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Memur sendikaları üyeleri banner ve bayraklarıyla protesto yapıyorlar. ",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 2027,
+                        "height": 1140,
+                        "locator": "a51c/live/52c747f0-82a2-11f0-a21f-a946aea0c353.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "@MemurSenKonf",
+                        "suitableForSyndication": false
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
       }
     ],
     "metadata": {
       "atiAnalytics": {
-        "contentId": "urn:bbc:tipo:topic:cmvw7884exet",
+        "contentId": "urn:bbc:tipo:topic:c3eg5kgl56zt",
         "contentType": "index-home",
         "pageIdentifier": "turkce.page",
         "pageTitle": "Haberler - BBC News Türkçe"
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "dataSource": "Data is from live TIPO"
+  "contentType": "application/json; charset=utf-8"
 }
