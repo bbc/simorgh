@@ -316,7 +316,7 @@ describe('Curation', () => {
           visualProminence={NORMAL}
           visualStyle={NONE}
           position={0}
-          summaries={summaries}
+          summaries={summaries as Summary[]}
           curationLength={1}
         />,
       );
@@ -332,7 +332,7 @@ describe('Curation', () => {
           visualProminence={HIGH}
           visualStyle={NONE}
           position={0}
-          summaries={summaries}
+          summaries={summaries as Summary[]}
           curationLength={1}
         />,
       );

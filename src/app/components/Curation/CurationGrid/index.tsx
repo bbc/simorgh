@@ -6,7 +6,6 @@ import CurationPromo from '../CurationPromo';
 import HighImpactPromo from '../HighImpactPromo';
 import { CurationGridProps } from '../types';
 
-// TODO: Move to lib/component?
 const isMediaType = (promo: Summary): boolean => {
   return ['video', 'audio', 'photogallery'].includes(promo.type);
 };

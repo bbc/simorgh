@@ -1,6 +1,5 @@
 import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
-import { spacing } from 'happy-dom/lib/PropertySymbol';
 
 export default {
   promo: ({ palette, mq, spacings }: Theme) =>
