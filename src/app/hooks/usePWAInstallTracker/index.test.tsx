@@ -51,7 +51,7 @@ describe('usePWAInstallTracker', () => {
     addedHandler();
 
     expect(mockTrackEvent).toHaveBeenCalledTimes(1);
-    expect(mockTrackEvent).toHaveBeenCalledWith();
+    expect(mockTrackEvent).toHaveBeenCalledWith('');
   });
 
   it('should only track the event once even if appinstalled event is fired multiple times', () => {
@@ -65,6 +65,6 @@ describe('usePWAInstallTracker', () => {
     addedHandler();
 
     expect(mockTrackEvent).toHaveBeenCalledTimes(1);
-    expect(mockTrackEvent).toHaveBeenCalledWith();
+    expect(mockTrackEvent).toHaveBeenCalledWith('');
   });
 });
