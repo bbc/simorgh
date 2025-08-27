@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import Url from 'url-parse';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
+import { data as mundoData } from '#data/mundo/homePage/index.json';
+import { data as turkceData } from '#data/turkce/homePage/index.json';
 import { Curation } from '#app/models/types/curationData';
 import { Services } from '#app/models/types/global';
 import { MemoryRouter } from 'react-router-dom';
@@ -87,6 +89,32 @@ export const Example = {
     <Component service={service} variant={variant} isLite={isLite} />
   ),
   parameters: { chromatic: { disableSnapshot: true } },
+};
+
+export const MundoExample = {
+  render: (_: StoryArgs, { isLite }: StoryProps) => (
+    <HomePage
+      service="mundo"
+      pageType={HOME_PAGE}
+      status={200}
+      isAmp={false}
+      isLite={isLite}
+      pageData={mundoData}
+    />
+  ),
+};
+
+export const TurkceExample = {
+  render: (_: StoryArgs, { isLite }: StoryProps) => (
+    <HomePage
+      service="turkce"
+      pageType={HOME_PAGE}
+      status={200}
+      isAmp={false}
+      isLite={isLite}
+      pageData={turkceData}
+    />
+  ),
 };
 
 // This story is for chromatic testing purposes only

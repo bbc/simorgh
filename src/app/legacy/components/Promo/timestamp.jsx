@@ -9,6 +9,7 @@ const PromoTimestamp = ({
   serviceDatetimeLocale = '',
   className = '',
   // For experiment
+  // change to false to get all to render inline
   displayBlock = true,
 }) => {
   const { altCalendar, script, datetimeLocale, service, timezone } =
@@ -27,6 +28,8 @@ const PromoTimestamp = ({
   const stackedStyles = {
     color: '#545658',
   };
+
+  const readTimeText = service === 'turkce' ? 'Uzun haber' : 'Lectura extensa';
 
   return (
     <>
@@ -53,12 +56,10 @@ const PromoTimestamp = ({
           ? { style: inlineStyles }
           : { style: stackedStyles })}
       >
-        Lectura extensa
+        {readTimeText}
       </Text>
     </>
   );
 };
-
-// {...(displayBlock && { styles: {{ color: '#545658' }} })}
 
 export default PromoTimestamp;
