@@ -48,13 +48,16 @@ export const MostReadLink = ({
   position,
   eventTrackingData,
 }: PropsWithChildren<MostReadLinkProps>) => {
+  const positionIndex =
+    typeof position === 'string' ? parseInt(position, 10) : position;
+
   const eventTrackingDataExtended = {
     ...eventTrackingData,
     itemTracker: {
       ...eventTrackingData?.itemTracker,
       type: 'most-read-promo',
       text: title,
-      position: position + 1,
+      position: positionIndex + 1,
       resourceId: id || href,
       ...(eventTrackingData?.groupTracker?.position && {
         groupPosition: eventTrackingData.groupTracker.position,
