@@ -1,5 +1,6 @@
 import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
+import { spacing } from 'happy-dom/lib/PropertySymbol';
 
 export default {
   promo: ({ palette, mq, spacings }: Theme) =>
@@ -77,7 +78,12 @@ export default {
       },
     }),
 
-  heading: ({ palette }: Theme) =>
+  heading: ({ spacings }: Theme) =>
+    css({
+      marginBottom: `${spacings.HALF + spacings.FULL}rem`,
+    }),
+
+  headingLink: ({ palette }: Theme) =>
     css({
       color: palette.GREY_2,
       textDecoration: 'none',
@@ -99,7 +105,6 @@ export default {
 
   divider: ({ spacings }: Theme) =>
     css({
-      // TODO: review spacing
       marginTop: 'auto',
       marginBottom: `${spacings.HALF + spacings.FULL}rem`,
       height: `${pixelsToRem(3)}rem`,

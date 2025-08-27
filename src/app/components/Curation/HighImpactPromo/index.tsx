@@ -5,13 +5,11 @@ import Promo from '#components/Promo';
 
 import styles from './index.styles';
 
-interface Subject {
-  href: string;
-  text: string;
-}
-
 interface HighImpactPromoProps extends Summary {
-  subject?: Subject;
+  subject?: {
+    href: string;
+    text: string;
+  };
 }
 
 const HighImpactPromo = ({
@@ -21,6 +19,7 @@ const HighImpactPromo = ({
   lazy,
   link,
   headingLevel = 3,
+  // TODO: temp - to be removed
   subject = {
     href: `https://www.bbc.com/news`,
     text: 'BBC News',
@@ -39,8 +38,8 @@ const HighImpactPromo = ({
         </div>
       )}
       <div css={styles.content}>
-        <Promo.Heading as={`h${headingLevel}`}>
-          <Promo.A href={link} css={styles.heading}>
+        <Promo.Heading as={`h${headingLevel}`} css={styles.heading}>
+          <Promo.A href={link} css={styles.headingLink}>
             {title}
           </Promo.A>
         </Promo.Heading>
