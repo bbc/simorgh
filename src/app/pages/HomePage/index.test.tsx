@@ -434,22 +434,29 @@ describe('Home Page', () => {
 
       const firstCuration = afriqueHomePageData.curations[0];
       const expectedTrackingData = {
-        componentName: 'hierarchical-curation-grid',
         groupTracker: {
-          itemCount: 4, // if the fixture data changes this will fail
           name: firstCuration.title,
           position: 1,
-          resourceId: firstCuration.curationId,
           type: 'hierarchical-curation-grid',
+          resourceId: firstCuration.curationId,
+          itemCount: 4, // if the fixture data changes this will fail
         },
+        componentName: 'hierarchical-curation-grid',
       };
 
-      expect(useViewTracker).toHaveBeenCalledWith(
-        expect.objectContaining(expectedTrackingData),
+      const { calls } = (useViewTracker as jest.Mock).mock;
+      const matchingCalls = calls.filter(
+        ([arg]) =>
+          arg.componentName === expectedTrackingData.componentName &&
+          JSON.stringify(arg.groupTracker) ===
+            JSON.stringify(expectedTrackingData.groupTracker),
       );
+      console.log(JSON.stringify(calls, null, 2));
+      console.log('Expected:', expectedTrackingData);
+      expect(matchingCalls).toHaveLength(1);
     });
 
-    it('Simple curation - calls useViewTracker with correct event tracking data for the 7th curation', () => {
+    it('Simple curation - calls useViewTracker with correct viewability event tracking data for the 7th curation', () => {
       // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
       render(<HomePage pageData={pidginHomePageDataFixture} />, {
         service: 'pidgin',
@@ -467,23 +474,14 @@ describe('Home Page', () => {
         },
         componentName: 'simple-curation-grid',
       };
-
       const { calls } = (useViewTracker as jest.Mock).mock;
-      const actual = calls.find(
+      const matchingCalls = calls.filter(
         ([arg]) =>
           arg.componentName === expectedTrackingData.componentName &&
-          arg.groupTracker?.name === expectedTrackingData.groupTracker.name,
+          JSON.stringify(arg.groupTracker) ===
+            JSON.stringify(expectedTrackingData.groupTracker),
       );
-      console.log('Actual:', actual?.[0]);
-      console.log('Expected:', expectedTrackingData);
-      expect(
-        calls.some(
-          ([arg]) =>
-            arg.componentName === expectedTrackingData.componentName &&
-            JSON.stringify(arg.groupTracker) ===
-              JSON.stringify(expectedTrackingData.groupTracker),
-        ),
-      ).toBe(true);
+      expect(matchingCalls).toHaveLength(1);
     });
 
     describe('Hierarchical curation - click tracking', () => {
