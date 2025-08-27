@@ -136,13 +136,9 @@ const getViewClickDetailsRegex = ({ contentType, component, pageIdentifier }) =>
     'g',
   );
 
-const getViewabilityEventDetailsRegex = ({
-  contentType,
-  component,
-  actionType,
-}) =>
+const getViewabilityEventDetailsRegex = ({ actionType }) =>
   new RegExp(
-    `\\[\\{"name":"viewability\\.${actionType}","data":\\{"group":\\{"name":"${contentType}(.*)?"\\},"event":\\{"category":"viewability","action":"${actionType}"\\}(?:.*)?"item":\\{(?:.*)?"name":"${component}(.*)?"(?:.*)?\\}\\}\\}\\]`,
+    `\\[\\{"name":"viewability\\.${actionType}","data":\\{"group":\\{"name":"[^"]+"(?:,"type":"[^"]+")?(?:,"link":"[^"]+")?(?:,"item_count":\\d+)?(?:,"resource_id":"[^"]+")?(?:,"position":"\\d+")?\\},"event":\\{"category":"viewability","action":"${actionType}"\\}(?:,"user":\\{"id":null\\})?(?:,"app":\\{"type":"[^"]+","name":"[^"]+"\\})?,"item":\\{"name":"[^"]+"(?:,"link":"[^"]+")?\\}\\}\\}\\]`,
     'g',
   );
 
