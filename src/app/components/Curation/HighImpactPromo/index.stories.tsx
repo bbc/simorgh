@@ -9,7 +9,7 @@ const Component = () => {
   return (
     <div
       style={{
-        display: `flex`,
+        display: 'flex',
         gap: '2rem',
         flexDirection: 'column',
         maxWidth: '480px',
@@ -17,12 +17,24 @@ const Component = () => {
     >
       <HighImpactPromo
         {...(highImpactFixtureCuration.summaries?.[0] as Summary)}
+        subject={{
+          href: '/pidgin',
+          text: 'BBC News Pidgin',
+        }}
       />
       <HighImpactPromo
         {...(highImpactFixtureCuration.summaries?.[1] as Summary)}
+        subject={{
+          href: '/mundo',
+          text: 'BBC News Mundo',
+        }}
       />
       <HighImpactPromo
         {...(highImpactFixtureCuration.summaries?.[2] as Summary)}
+        subject={{
+          href: '/',
+          text: 'BBC',
+        }}
       />
     </div>
   );

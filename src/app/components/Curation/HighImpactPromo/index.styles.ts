@@ -1,4 +1,5 @@
 import { css, Theme } from '@emotion/react';
+import pixelsToRem from '#app/utilities/pixelsToRem';
 
 export default {
   promo: ({ palette, mq, spacings }: Theme) =>
@@ -87,11 +88,41 @@ export default {
       },
 
       '&:visited': {
-        color: palette.GREY_5,
+        color: palette.GREY_4,
       },
 
       '&:visited:hover': {
-        color: palette.GREY_5,
+        color: palette.GREY_4,
+      },
+    }),
+
+  divider: ({ spacings }: Theme) =>
+    css({
+      marginTop: `${spacings.HALF}rem`,
+      marginBottom: `${spacings.HALF + spacings.FULL}rem`,
+      height: `${pixelsToRem(3)}rem`,
+      width: `${pixelsToRem(40)}rem`,
+      background: '#EB0000',
+    }),
+
+  subject: ({ palette, fontSizes, fontVariants }: Theme) =>
+    css({
+      ...fontSizes.brevier,
+      ...fontVariants.sansBold,
+      color: palette.GREY_2,
+      position: 'relative',
+
+      '&:hover': {
+        textDecoration: 'underline',
+        color: palette.GREY_2,
+      },
+
+      '&:visited': {
+        color: palette.GREY_4,
+      },
+
+      '&:visited:hover': {
+        color: palette.GREY_4,
       },
     }),
 };

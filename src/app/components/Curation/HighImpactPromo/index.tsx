@@ -5,7 +5,14 @@ import Promo from '#components/Promo';
 
 import styles from './index.styles';
 
-type HighImpactPromoProps = Summary;
+interface Subject {
+  href: string;
+  text: string;
+}
+
+interface HighImpactPromoProps extends Summary {
+  subject?: Subject;
+}
 
 const HighImpactPromo = ({
   title,
@@ -14,6 +21,10 @@ const HighImpactPromo = ({
   lazy,
   link,
   headingLevel = 3,
+  subject = {
+    href: `https://www.bbc.com/news`,
+    text: 'BBC News',
+  },
 }: HighImpactPromoProps) => {
   return (
     <div data-testid="high-impact-promo" css={styles.promo}>
@@ -33,6 +44,14 @@ const HighImpactPromo = ({
             {title}
           </Promo.A>
         </Promo.Heading>
+
+        {subject && <div css={styles.divider} />}
+
+        {subject && (
+          <Promo.A href={subject.href} css={styles.subject}>
+            {subject.text}
+          </Promo.A>
+        )}
       </div>
     </div>
   );
