@@ -10,6 +10,9 @@ const RadioSchedule = ({
   lang = null,
   className = '',
   toggleName,
+  eventTrackingData = {
+    componentName: 'radio-schedule',
+  },
 }) => {
   const { enabled } = useToggle(toggleName);
   const { isAmp } = use(RequestContext);
@@ -22,7 +25,12 @@ const RadioSchedule = ({
   }
 
   return (
-    <Canonical className={className} radioSchedule={initialData} lang={lang} />
+    <Canonical
+      className={className}
+      radioSchedule={initialData}
+      lang={lang}
+      eventTrackingData={eventTrackingData}
+    />
   );
 };
 

@@ -160,6 +160,7 @@ export default ({
         <RadioSchedule
           initialData={radioSchedule}
           toggleName="homePageRadioSchedule"
+          eventTrackingData={eventTrackingData}
         />
       );
     case EMBED:
