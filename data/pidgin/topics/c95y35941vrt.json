@@ -271,7 +271,7 @@
           {
             "type": "article",
             "isLive": false,
-            "title": "Feathers in the Forest: Bird Populations Thrive in Woodlands",
+            "title": "Feathers in the Forest: How Bird Populations Are Flourishing in Diverse Woodland Habitats Across the Seasons",
             "firstPublished": "2023-08-15T14:12:01.110Z",
             "lastPublished": "2023-08-15T14:12:01.110Z",
             "link": "https://www.bbc.com/pidgin/articles/c4g8x3zw4xno",
@@ -292,7 +292,7 @@
             "description": "Here we have an article about a particular topic",
             "imageAlt": "-",
             "id": "cda3bf00-2939-1a46-b6c1-f4376b944663",
-            "visualProminence": "MAXIMUM"
+            "visualProminence": "NORMAL"
           },
           {
             "type": "topic",

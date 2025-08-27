@@ -65,9 +65,10 @@ export default {
       flex: '0 0 66.66%',
       justifyContent: 'center',
       paddingLeft: `${spacings.FULL}rem`,
+      height: '100%',
 
       [mq.GROUP_2_MIN_WIDTH]: {
-        flex: 'none',
+        flex: '1',
         width: '100%',
         justifyContent: 'flex-start',
         paddingInline: `${spacings.FULL}rem`,
@@ -98,7 +99,8 @@ export default {
 
   divider: ({ spacings }: Theme) =>
     css({
-      marginTop: `${spacings.HALF}rem`,
+      // TODO: review spacing
+      marginTop: 'auto',
       marginBottom: `${spacings.HALF + spacings.FULL}rem`,
       height: `${pixelsToRem(3)}rem`,
       width: `${pixelsToRem(40)}rem`,

@@ -6,6 +6,17 @@ import CurationPromo from '../CurationPromo';
 import HighImpactPromo from '../HighImpactPromo';
 import { CurationGridProps } from '../types';
 
+// TODO: Move to lib/component?
+const isMediaType = (promo: Summary): boolean => {
+  return ['video', 'audio', 'photogallery'].includes(promo.type);
+};
+
+const isHighImpact = (promo: Summary): boolean => {
+  return (
+    promo.visualProminence === VISUAL_PROMINENCE.MAXIMUM && !isMediaType(promo)
+  );
+};
+
 const CurationGrid = ({
   summaries,
   isFirstCuration,
@@ -18,15 +29,13 @@ const CurationGrid = ({
     return null;
   }
 
+  const hasHighImpactPromo = summaries.some(isHighImpact);
+
   const renderPromo = (promo: Summary, index: number) => {
     const isFirstPromo = index === 0;
     const lazyLoadImages = !(isFirstPromo && isFirstCuration);
-    const isMedia = ['video', 'audio', 'photogallery'].includes(promo.type);
 
-    const isHighImpact =
-      promo.visualProminence === VISUAL_PROMINENCE.MAXIMUM && !isMedia;
-
-    if (isHighImpact) {
+    if (isHighImpact(promo)) {
       return <HighImpactPromo {...promo} lazy={lazyLoadImages} />;
     }
 
@@ -42,7 +51,11 @@ const CurationGrid = ({
   return (
     <div data-testid="curation-grid-normal">
       {hasMultiplePromos ? (
-        <ul css={styles.list} role="list" data-testid="topic-promos">
+        <ul
+          css={[styles.list, hasHighImpactPromo && styles.listStretchHeight]}
+          role="list"
+          data-testid="topic-promos"
+        >
           {summaries.map((promo, index) => (
             <li css={styles.item} key={promo.id}>
               {renderPromo(promo, index)}
