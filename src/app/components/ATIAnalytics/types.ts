@@ -170,12 +170,6 @@ export interface ATIEventTrackingProps {
   groupTracker?: GroupTracker;
   viewThreshold?: number;
   eventGroupingName?: string;
-  // Additional analytics fields for viewability. are these needed or added elsewhere?
-  page?: string;
-  pageTitle?: string;
-  appName?: string;
-  eventCategory?: string;
-  appType?: string;
 }
 
 export interface ItemTracker {
