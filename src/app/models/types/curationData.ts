@@ -22,7 +22,7 @@ export interface Summary extends BaseSummary {
   mediaType?: 'audio' | 'video' | 'photogallery';
   lazy?: boolean;
   headingLevel?: number;
-  visualProminence?: VisualProminence;
+  visualProminence?: VisualProminence | string;
 }
 
 export const VISUAL_STYLE = {
