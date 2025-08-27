@@ -33,7 +33,6 @@ const HighImpactPromo = ({
             src={imageUrl}
             alt={imageAlt}
             loading={lazy ? 'lazy' : 'eager'}
-            css={styles.image}
           />
         </div>
       )}

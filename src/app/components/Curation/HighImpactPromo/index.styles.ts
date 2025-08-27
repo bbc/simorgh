@@ -29,15 +29,8 @@ export default {
       position: 'relative',
       flex: '0 0 33.333%',
 
-      [mq.GROUP_1_MAX_WIDTH]: {
-        flex: '0 0 33.333%',
-      },
-
       // Gradient only in vertical layout
       [mq.GROUP_2_MIN_WIDTH]: {
-        flex: 'none',
-        width: '100%',
-
         '&::after': {
           content: '""',
           position: 'absolute',
@@ -51,28 +44,18 @@ export default {
       },
     }),
 
-  image: () =>
-    css({
-      width: '100%',
-      height: 'auto',
-      display: 'block',
-    }),
-
   content: ({ mq, spacings }: Theme) =>
     css({
       display: 'flex',
       flexDirection: 'column',
       flex: '0 0 66.66%',
-      justifyContent: 'center',
       paddingLeft: `${spacings.FULL}rem`,
       height: '100%',
 
       [mq.GROUP_2_MIN_WIDTH]: {
         flex: '1',
-        width: '100%',
-        justifyContent: 'flex-start',
         paddingInline: `${spacings.FULL}rem`,
-        marginTop: `-${spacings.TRIPLE + spacings.HALF}rem`,
+        marginTop: `-${spacings.TRIPLE}rem`,
         position: 'relative',
       },
     }),
@@ -85,19 +68,12 @@ export default {
   headingLink: ({ palette }: Theme) =>
     css({
       color: palette.GREY_2,
-      textDecoration: 'none',
-      outline: 'none',
 
-      '&:hover': {
-        textDecoration: 'underline',
+      '&:hover, &:focus': {
         textDecorationThickness: '2px',
       },
 
-      '&:visited': {
-        color: palette.GREY_4,
-      },
-
-      '&:visited:hover': {
+      '&:visited, &:visited:hover': {
         color: palette.GREY_4,
       },
     }),
@@ -118,16 +94,11 @@ export default {
       color: palette.GREY_2,
       position: 'relative',
 
-      '&:hover': {
-        textDecoration: 'underline',
+      '&:hover, &:focus': {
         color: palette.GREY_2,
       },
 
-      '&:visited': {
-        color: palette.GREY_4,
-      },
-
-      '&:visited:hover': {
+      '&:visited, &:visited:hover': {
         color: palette.GREY_4,
       },
     }),
