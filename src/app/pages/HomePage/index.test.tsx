@@ -438,7 +438,7 @@ describe('Home Page', () => {
         groupTracker: {
           itemCount: 4, // if the fixture data changes this will fail
           name: firstCuration.title,
-          position: '1',
+          position: 1,
           resourceId: firstCuration.curationId,
           type: 'hierarchical-curation-grid',
         },
@@ -460,7 +460,7 @@ describe('Home Page', () => {
         groupTracker: {
           name: seventhCuration.title,
           type: 'simple-curation-grid',
-          position: String(seventhCuration.position + 1),
+          position: seventhCuration.position + 1,
           link: seventhCuration.link,
           resourceId: seventhCuration.curationId,
           itemCount: seventhCuration.summaries?.length,
@@ -525,7 +525,7 @@ describe('Home Page', () => {
                 name: curation.title,
                 type: 'hierarchical-curation-grid',
                 link: curation.link,
-                position: '4',
+                position: 4,
                 resourceId: curation.curationId,
               }),
               componentName: 'hierarchical-curation-grid',
