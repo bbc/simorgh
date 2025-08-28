@@ -13,8 +13,6 @@ const BillboardCurationGrid = ({
 
   if (top4SummariesForGrid.length === 0) return null;
 
-  const viewTracker = useViewTracker(eventTrackingData);
-
   const hasMultiplePromos = top4SummariesForGrid.length > 1;
   const firstPromo = top4SummariesForGrid[0];
 
@@ -30,7 +28,7 @@ const BillboardCurationGrid = ({
   });
 
   return (
-    <div data-testid="billboard-curation-grid" {...viewTracker}>
+    <div data-testid="billboard-curation-grid">
       {hasMultiplePromos ? (
         <ul css={styles.list} role="list" data-testid="billboard-promos">
           {top4SummariesForGrid.map((promo, i) => (
