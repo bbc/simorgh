@@ -4,6 +4,7 @@ import { use } from 'react';
 import { css, jsx, Theme } from '@emotion/react';
 import moment from 'moment';
 import path from 'ramda/src/path';
+import useClickTrackerHandler from '../../../hooks/useClickTrackerHandler';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import formatDuration from '../../../lib/utilities/formatDuration';
 import Promo from '../../../legacy/components/Promo';
@@ -11,6 +12,7 @@ import { DESKTOP, TABLET, MOBILE, SMALL } from './dataStructures';
 import { styles } from './index.styles';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { CurationGridProps } from '../types';
+import { Summary } from '../../../models/types/curationData';
 import { RequestContext } from '../../../contexts/RequestContext';
 import LiveLabel from '../../LiveLabel';
 
@@ -35,6 +37,7 @@ const HiearchicalGrid = ({
   summaries,
   headingLevel,
   isFirstCuration,
+  eventTrackingData,
 }: CurationGridProps) => {
   const { isAmp } = use(RequestContext);
   const { translations } = use(ServiceContext);
@@ -43,8 +46,41 @@ const HiearchicalGrid = ({
   const videoTranslation = path(['media', 'video'], translations);
   const photoGalleryTranslation = path(['media', 'photogallery'], translations);
   const durationTranslation = path(['media', 'duration'], translations);
+
   if (!summaries || summaries.length < 3) return null;
+
   const promoItems = summaries.slice(0, 12);
+
+  const buildPromoEventTrackingData = (
+    promo: Summary,
+    i: number,
+    { readTime }: { readTime?: number } = {},
+  ) => {
+    const itemTracker = {
+      type: 'hierarchical-curation-grid-promo',
+      text: promo.title,
+      position: i + 1,
+      resourceId: promo.id,
+      ...(promo.type && { mediaType: promo.type }),
+      ...(promo.duration && {
+        duration: moment.duration(promo.duration, 'seconds').asMilliseconds(),
+      }),
+      ...(readTime && {
+        label:
+          readTime === 1
+            ? `Read time: ${readTime} minute`
+            : `Read time: ${readTime} minutes`,
+        duration: readTime * 60000,
+      }),
+    };
+    return {
+      itemTracker,
+      ...eventTrackingData,
+    };
+  };
+
+  const getClickTrackerHandler = useClickTrackerHandler;
+
   return (
     <div data-testid="hierarchical-grid">
       <ul role="list" css={styles.list} data-testid="topic-promos">
@@ -55,14 +91,10 @@ const HiearchicalGrid = ({
           const durationString = `, ${durationTranslation} ${formattedDuration}`;
 
           const useLargeImages = i === 0 && promoItems.length >= 3;
-
           const isFirstPromo = i === 0;
-
           const lazyLoadImages = !(isFirstPromo && isFirstCuration);
-
           const fetchpriority =
             isFirstPromo && isFirstCuration ? 'high' : undefined;
-
           const showDuration =
             promo.duration && ['video', 'audio'].includes(promo.type);
           const isMedia = ['video', 'audio', 'photogallery'].includes(
@@ -72,8 +104,15 @@ const HiearchicalGrid = ({
             (promo.type === 'audio' && `${audioTranslation}, `) ||
             (promo.type === 'video' && `${videoTranslation}, `) ||
             (promo.type === 'photogallery' && `${photoGalleryTranslation}, `);
-
           const { isLive } = promo;
+          console.log(promo?.readTime);
+
+          const promoEventTrackingData = buildPromoEventTrackingData(promo, i, {
+            readTime: promo?.readTime,
+          });
+          const clickTrackerHandler = getClickTrackerHandler(
+            promoEventTrackingData,
+          );
 
           return (
             <li
@@ -106,7 +145,11 @@ const HiearchicalGrid = ({
                   })}
                 >
                   {isMedia ? (
-                    <Promo.A href={promo.link} aria-labelledby={promo.id}>
+                    <Promo.A
+                      href={promo.link}
+                      aria-labelledby={promo.id}
+                      {...clickTrackerHandler}
+                    >
                       <span id={promo.id} role="text">
                         <VisuallyHiddenText data-testid="visually-hidden-text">
                           {typeTranslated}
@@ -120,7 +163,7 @@ const HiearchicalGrid = ({
                       </span>
                     </Promo.A>
                   ) : (
-                    <Promo.A href={promo.link}>
+                    <Promo.A href={promo.link} {...clickTrackerHandler}>
                       {isLive ? (
                         <LiveLabel
                           {...(isFirstPromo
@@ -137,9 +180,6 @@ const HiearchicalGrid = ({
                     </Promo.A>
                   )}
                 </Promo.Heading>
-                <Promo.ReadTime isLive={isLive}>
-                  {promo.readTime}
-                </Promo.ReadTime>
                 <Promo.Body className="promo-paragraph" css={styles.body}>
                   {promo.description}
                 </Promo.Body>
