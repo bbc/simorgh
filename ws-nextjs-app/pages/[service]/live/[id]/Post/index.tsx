@@ -122,6 +122,7 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
     paragraph: (props: ComponentToRenderProps) => (
       <Paragraph
         blocks={props.blocks}
+        position={props.position}
         className="postStyles"
         css={styles.bodyText}
       />
@@ -154,7 +155,10 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
       />
     ),
     video: (props: { blocks: MediaBlock[] }) => (
-      <MediaLoader blocks={props.blocks} css={styles.bodyMedia} />
+      <MediaLoader
+        blocks={props.blocks}
+        css={[styles.bodyMedia, styles.videoPost]}
+      />
     ),
     audio: (props: { blocks: MediaBlock[] }) => (
       <MediaLoader blocks={props.blocks} css={styles.audioPost} />
