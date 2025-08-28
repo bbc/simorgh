@@ -521,6 +521,43 @@ describe('Home Page', () => {
         expect(matchingCall).toBeTruthy();
       });
     });
+
+    it('Radio Schedule - calls useViewTracker with correct viewability event tracking data for each radio schedule', () => {
+      render(<HomePage pageData={afriqueHomePageData} />, {
+        service: 'afrique',
+        toggles: {
+          homePageRadioSchedule: { enabled: true },
+        },
+      });
+
+      const radioSchedules = afriqueHomePageData.curations.filter(
+        curation => curation.radioSchedule,
+      );
+
+      const expectedTrackingData = radioSchedules.map(schedule => ({
+        componentName: 'radio-schedule',
+        groupTracker: {
+          name: schedule.title,
+          type: 'radio-schedule',
+          position: schedule.position + 1,
+          resourceId: schedule.curationId,
+          itemCount: schedule.radioSchedule?.length,
+        },
+      }));
+
+      const { calls } = (useViewTracker as jest.Mock).mock;
+
+      expectedTrackingData.forEach(expected => {
+        const matchingCall = calls.find(
+          ([arg]) =>
+            arg.componentName === expected.componentName &&
+            JSON.stringify(arg.groupTracker) ===
+              JSON.stringify(expected.groupTracker),
+        );
+        expect(matchingCall).toBeTruthy();
+      });
+    });
+
     describe('Hierarchical curation - click tracking', () => {
       it.each([
         {
