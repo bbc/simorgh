@@ -50,7 +50,7 @@ const MostRead = ({
     },
   };
 
-  const viewTracker = useViewTracker(eventTrackingData);
+  const viewTracker = useViewTracker(eventTrackingDataExtended);
 
   const locale = serviceDatetimeLocale || datetimeLocale;
 
