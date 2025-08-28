@@ -40,7 +40,7 @@ export default ({
 }: BillboardProps) => {
   const { eventTrackingData = { componentName: 'billboard' } } = props;
 
-  const eventTrackingDataExtended = {
+  const mergedEventTrackingData = {
     ...eventTrackingData,
     groupTracker: {
       ...eventTrackingData?.groupTracker,
@@ -48,8 +48,8 @@ export default ({
     },
   };
 
-  const viewTracker = useViewTracker(eventTrackingDataExtended);
-  const clickTrackerHandler = useClickTrackerHandler(eventTrackingDataExtended);
+  const viewTracker = useViewTracker(mergedEventTrackingData);
+  const clickTrackerHandler = useClickTrackerHandler(mergedEventTrackingData);
   const { translations } = use(ServiceContext);
   const showMoreOnThisTitle = translations.moreOnThis;
 
@@ -106,8 +106,8 @@ export default ({
               <BillboardCurationGrid
                 summaries={summaries.slice(1)}
                 eventTrackingData={
-                  eventTrackingDataExtended ?? {
-                    componentName: 'billboard-board',
+                  mergedEventTrackingData ?? {
+                    componentName: 'billboard',
                   }
                 }
               />
