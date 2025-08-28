@@ -56,19 +56,17 @@ const ReadTime = ({
   const quickLongCopy = readTimeValue < 5 ? quickCopy : longCopy;
   const minutesCopy = `${readTimePrefix}: ${readTimeValue} ${minutesLabel}`;
 
-  const itemType = promoId ? `read-time-for-article-${promoId}` : 'read-time';
-
   const eventTrackingData: EventTrackingData = {
-    // need to change - but currently used in experiment as tracking value
-    componentName: 'read-time-on-article',
+    // changed - only push once experiment is concluded - determine if this needs to be unique
+    componentName: 'read-time',
     sendOptimizelyEvents: true,
     experimentName: 'newswb_ws_article_read_time',
     experimentVariant: readTimeVariant,
     itemTracker: {
       label: `Read time: ${readTimeValue} ${minutesLabel}`,
       duration: readTimeInMiliseconds,
-      // update this to include article ID - possibly only for homepage use
-      type: itemType,
+      type: 'read-time',
+      resourceId: promoId,
     },
   };
 
