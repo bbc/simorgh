@@ -78,7 +78,7 @@ describe('RadioSchedule', () => {
           itemCount: 4,
         },
         itemTracker: {
-          duration: 3600,
+          duration: 3600000,
           mediaType: 'audio',
           position: 1,
           resourceId: 'p0',
@@ -92,7 +92,7 @@ describe('RadioSchedule', () => {
           itemCount: 4,
         },
         itemTracker: {
-          duration: 3600,
+          duration: 3600000,
           mediaType: 'audio',
           position: 2,
           resourceId: 'p1',

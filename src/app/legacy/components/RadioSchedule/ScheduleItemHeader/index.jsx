@@ -113,7 +113,7 @@ const ScheduleItemHeader = ({
       text: episodeTitle,
       mediaType: 'audio',
       position: position + 1,
-      duration: moment.duration(duration).asSeconds(),
+      duration: moment.duration(duration).asMilliseconds(),
       resourceId: id,
     },
   };
