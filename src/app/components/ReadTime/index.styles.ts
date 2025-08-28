@@ -8,13 +8,18 @@ export default {
     }),
   readTimeContainer: ({ mq, spacings }: Theme) =>
     css({
-      margin: `0 ${spacings.FULL}rem ${spacings.DOUBLE}rem`,
-      [mq.GROUP_2_MIN_WIDTH]: {
-        margin: `0 ${spacings.DOUBLE}rem ${spacings.DOUBLE}rem`,
-      },
-      [mq.GROUP_4_MIN_WIDTH]: {
-        margin: `0 0 ${spacings.DOUBLE}rem`,
-      },
+      display: 'inline-block',
+      // margin: `0 ${spacings.FULL}rem ${spacings.DOUBLE}rem`,
+      // [mq.GROUP_2_MIN_WIDTH]: {
+      //   margin: `0 ${spacings.DOUBLE}rem ${spacings.DOUBLE}rem`,
+      // },
+      // [mq.GROUP_4_MIN_WIDTH]: {
+      //   margin: `0 0 ${spacings.DOUBLE}rem`,
+      // },
+    }),
+  readTimeInlineStyles: () =>
+    css({
+      paddingInlineStart: `0.5rem`,
     }),
   readTimePlaceholderControl: () =>
     css({

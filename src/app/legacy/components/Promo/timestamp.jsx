@@ -23,7 +23,7 @@ const PromoTimestamp = ({
 
   // For experiment
   const inlineStyles = {
-    paddingInlineStart: `0.5rem`,
+    marginInlineStart: `0.5rem`,
     color: '#545658',
   };
 
@@ -64,6 +64,7 @@ const PromoTimestamp = ({
         readTimeValue={5}
         readTimeVariant="below_timestamp_minutes_regular"
         promoId={promoId}
+        displayBlock={displayBlock}
       />
     </>
   );

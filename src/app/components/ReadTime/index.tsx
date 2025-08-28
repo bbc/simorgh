@@ -12,6 +12,7 @@ type ReadTimeProps = {
   className?: string;
   readTimeVariant?: string;
   promoId?: string;
+  displayBlock?: boolean;
 };
 
 const DEFAULT_TRANSLATIONS = {
@@ -26,6 +27,7 @@ const ReadTime = ({
   readTimeValue,
   readTimeVariant,
   promoId,
+  displayBlock,
   className,
 }: ReadTimeProps) => {
   const showReadTime = readTimeVariant && readTimeVariant !== 'off';
@@ -81,7 +83,10 @@ const ReadTime = ({
   return (
     <div
       className={className}
-      css={styles.readTimeContainer}
+      css={[
+        styles.readTimeContainer,
+        !displayBlock && styles.readTimeInlineStyles,
+      ]}
       {...viewRef}
       data-testid="read-time"
     >
