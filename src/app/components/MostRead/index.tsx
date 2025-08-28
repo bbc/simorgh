@@ -3,7 +3,6 @@ import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import { ReactSDKClient } from '@optimizely/react-sdk';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Canonical from './Canonical';
