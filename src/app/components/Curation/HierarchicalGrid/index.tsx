@@ -70,7 +70,7 @@ const HiearchicalGrid = ({
           readTime === 1
             ? `Read time: ${readTime} minute`
             : `Read time: ${readTime} minutes`,
-        duration: readTime * 60000,
+        // duration: readTime * 60000,
       }),
     };
     return {
@@ -105,7 +105,6 @@ const HiearchicalGrid = ({
             (promo.type === 'video' && `${videoTranslation}, `) ||
             (promo.type === 'photogallery' && `${photoGalleryTranslation}, `);
           const { isLive } = promo;
-          console.log(promo?.readTime);
 
           const promoEventTrackingData = buildPromoEventTrackingData(promo, i, {
             readTime: promo?.readTime,
