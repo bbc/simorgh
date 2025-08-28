@@ -19,7 +19,6 @@ const BillboardCurationGrid = ({
   const withItemTracking = (promo: typeof firstPromo, index: number) => ({
     ...eventTrackingData,
     itemTracker: {
-      ...(eventTrackingData.itemTracker || {}),
       type: 'billboard-grid-promo',
       text: promo.title,
       position: index + 1,
