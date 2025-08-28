@@ -63,6 +63,10 @@ export default ({
   };
 
   const visualStyleAndProminence = `${visualStyle}_${visualProminence}`;
-
-  return componentsByVisualStyleAndProminence[visualStyleAndProminence] || null;
+  // originally unmapped combinations would return null, but now they return simple-curation-grid,
+  // as this is the set of components that gets used in unmapped cases, and we need a componentName for tracking
+  return (
+    componentsByVisualStyleAndProminence[visualStyleAndProminence] ||
+    SIMPLE_CURATION_GRID
+  );
 };

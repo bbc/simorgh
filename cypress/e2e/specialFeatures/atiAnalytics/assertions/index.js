@@ -136,15 +136,83 @@ const getViewClickDetailsRegex = ({ contentType, component, pageIdentifier }) =>
     'g',
   );
 
-const getViewabilityEventDetailsRegex = ({
-  contentType,
-  component,
-  actionType,
-}) =>
-  new RegExp(
-    `\\[\\{"name":"viewability\\.${actionType}","data":\\{"group":\\{"name":"${contentType}(.*)?"\\},"event":\\{"category":"viewability","action":"${actionType}"\\}(?:.*)?"item":\\{(?:.*)?"name":"${component}(.*)?"(?:.*)?\\}\\}\\}\\]`,
-    'g',
-  );
+const fieldIsValidString = field =>
+  typeof field === 'string' && /^[^"]+$/.test(field);
+
+const validateViewabilityEventDetails = ({ payload, actionType }) => {
+  const arr = JSON.parse(payload);
+
+  return arr.some(event => {
+    if (event.name !== `viewability.${actionType}`) return false;
+
+    const group = event.data?.group ?? {};
+    const ev = event.data?.event ?? {};
+    const item = event.data?.item ?? {};
+
+    // strict checks
+    if (ev.category !== 'viewability' || ev.action !== actionType) return false;
+
+    // required fields in Group
+    const groupNameOk = fieldIsValidString(group.name);
+
+    const groupTypeOk = fieldIsValidString(group.type);
+
+    // optional fields in Group
+    const groupLinkOk = !group.link || fieldIsValidString(group.link);
+
+    const groupItemCountOk =
+      !group.item_count || Number.isInteger(group.item_count);
+
+    const groupResourceOk =
+      !group.resource_id || fieldIsValidString(group.resource_id);
+
+    const groupPositionOk = !group.position || Number.isInteger(group.position);
+
+    // required fields in Item
+    const itemNameOk = fieldIsValidString(item.name);
+
+    // optional fields in Item
+    const itemLinkOk = !item.link || fieldIsValidString(item.link);
+
+    const itemAdvertiserIdOk =
+      !item.advertiser_id || fieldIsValidString(item.advertiser_id);
+
+    const itemTypeOk = !item.type || fieldIsValidString(item.type);
+
+    const itemTextOk = !item.text || fieldIsValidString(item.text);
+
+    const itemPositionOk = !item.position || Number.isInteger(item.position);
+
+    const itemDurationOk = !item.duration || Number.isInteger(item.duration);
+
+    const itemMediaTypeOk =
+      !item.media_type || fieldIsValidString(item.media_type);
+
+    const itemLabelOk = !item.label || fieldIsValidString(item.label);
+
+    const itemResourceIdOk =
+      !item.resource_id || fieldIsValidString(item.resource_id);
+
+    return (
+      groupNameOk &&
+      groupTypeOk &&
+      groupLinkOk &&
+      groupItemCountOk &&
+      groupResourceOk &&
+      groupPositionOk &&
+      itemNameOk &&
+      itemLinkOk &&
+      itemAdvertiserIdOk &&
+      itemTypeOk &&
+      itemTextOk &&
+      itemPositionOk &&
+      itemDurationOk &&
+      itemMediaTypeOk &&
+      itemLabelOk &&
+      itemResourceIdOk
+    );
+  });
+};
 
 export const assertPageView = ({
   useReverb,
@@ -245,18 +313,14 @@ const assertClickPerViewModelViewEvent = ({
 };
 
 const assertViewabilityModelViewEvent = ({
-  component,
   pageIdentifier,
-  contentType,
   params,
   applicationType,
   siteId,
 }) => {
   const eventContext = JSON.parse(params.context);
 
-  assertReverbViewabilityComponentEventParamsExist({
-    params,
-  });
+  assertReverbViewabilityComponentEventParamsExist({ params });
 
   if (['responsive', 'lite'].includes(applicationType)) {
     expect(params.idclient).to.equal(
@@ -265,12 +329,9 @@ const assertViewabilityModelViewEvent = ({
     );
   }
 
-  expect(params.events).to.match(
-    getViewabilityEventDetailsRegex({
-      contentType,
-      component,
-      actionType: VIEW_EVENT,
-    }),
+  expect(params.events).to.satisfy(
+    payload =>
+      validateViewabilityEventDetails({ payload, actionType: VIEW_EVENT }),
     'params.events (publisher impression)',
   );
 
@@ -361,8 +422,6 @@ const assertClickPerViewModelClickEvent = ({
 };
 
 const assertViewabilityModelClickEvent = ({
-  component,
-  contentType,
   pageIdentifier,
   params,
   applicationType,
@@ -381,12 +440,12 @@ const assertViewabilityModelClickEvent = ({
     );
   }
 
-  expect(params.events).to.match(
-    getViewabilityEventDetailsRegex({
-      contentType,
-      component,
-      actionType: VIEWABILITY_CLICK_EVENT,
-    }),
+  expect(params.events).to.satisfy(
+    payload =>
+      validateViewabilityEventDetails({
+        payload,
+        actionType: VIEWABILITY_CLICK_EVENT,
+      }),
     'params.events (publisher click)',
   );
 
