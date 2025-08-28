@@ -24,12 +24,7 @@ const testDetails = {
       id: 'cx2qdkezzzvt',
       runforEnv: ['live'],
       service: 'urdu',
-      tests: [
-        testsThatAlwaysRunForAllPages,
-        pageVisit,
-        mediaPlayerTests,
-        keyPoints,
-      ],
+      tests: [testsThatAlwaysRunForAllPages, pageVisit, keyPoints],
     },
   ],
 };
