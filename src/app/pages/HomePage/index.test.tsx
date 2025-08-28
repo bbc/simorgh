@@ -761,5 +761,40 @@ describe('Home Page', () => {
         expectedTrackingData,
       );
     });
+
+    it('Radio Schedule promo - click tracking', () => {
+      render(<HomePage pageData={afriqueHomePageData} />, {
+        service: 'afrique',
+        toggles: {
+          homePageRadioSchedule: { enabled: true },
+        },
+      });
+
+      const radioSchedule = afriqueHomePageData.curations.find(
+        curation => curation.radioSchedule,
+      );
+
+      const radioSchedulePromo = document.querySelector(
+        '[aria-labelledby^="scheduleItem-"]',
+      ) as HTMLAnchorElement;
+
+      expect(radioSchedulePromo).toBeInTheDocument();
+
+      fireEvent.click(radioSchedulePromo);
+
+      const expectedTrackingData = expect.objectContaining({
+        componentName: 'radio-schedule-next',
+        groupTracker: expect.objectContaining({
+          name: radioSchedule?.title,
+          type: 'radio-schedule',
+          position: (radioSchedule?.position ?? 0) + 1,
+          resourceId: radioSchedule?.curationId,
+        }),
+      });
+
+      expect(useClickTrackerHandler as jest.Mock).toHaveBeenCalledWith(
+        expectedTrackingData,
+      );
+    });
   });
 });
