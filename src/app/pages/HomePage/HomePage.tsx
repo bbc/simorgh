@@ -51,7 +51,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
     curations,
     metadata: { atiAnalytics },
   } = pageData;
-  const { pageTitle, contentType } = atiAnalytics;
+
   const itemList = getItemList({ curations, name: brandName });
 
   return (
@@ -127,8 +127,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       portraitVideo={portraitVideo}
                       renderVisuallyHiddenH2Title={position === 0}
                       curationId={curationId}
-                      contentType={contentType ?? ''}
-                      pageTitle={pageTitle ?? ''}
                     />
                     {index === indexOfFirstNonBanner && <MPU />}
                   </React.Fragment>
