@@ -434,19 +434,56 @@ describe('Home Page', () => {
 
       const firstCuration = afriqueHomePageData.curations[0];
       const expectedTrackingData = {
-        componentName: 'hierarchical-curation-grid',
         groupTracker: {
-          itemCount: 4, // if the fixture data changes this will fail
           name: firstCuration.title,
-          position: '1',
-          resourceId: firstCuration.curationId,
           type: 'hierarchical-curation-grid',
+          position: 1,
+          resourceId: firstCuration.curationId,
+          itemCount: 4, // if the fixture data changes this will fail
         },
+        componentName: 'hierarchical-curation-grid',
       };
 
-      expect(useViewTracker).toHaveBeenCalledWith(
-        expect.objectContaining(expectedTrackingData),
+      const { calls } = (useViewTracker as jest.Mock).mock;
+      // finds the calls that match the component name and group tracking data
+      const matchingCalls = calls.filter(
+        ([arg]) =>
+          arg.componentName === expectedTrackingData.componentName &&
+          JSON.stringify(arg.groupTracker) ===
+            JSON.stringify(expectedTrackingData.groupTracker),
       );
+      // expects there to be one of these calls
+      expect(matchingCalls).toHaveLength(1);
+    });
+
+    it('Simple curation - calls useViewTracker with correct viewability event tracking data for the 7th curation', () => {
+      // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
+      render(<HomePage pageData={pidginHomePageDataFixture} />, {
+        service: 'pidgin',
+      });
+
+      const seventhCuration = pidginHomePageDataFixture.curations[6];
+      const expectedTrackingData = {
+        groupTracker: {
+          name: seventhCuration.title,
+          type: 'simple-curation-grid',
+          position: seventhCuration.position + 1,
+          link: seventhCuration.link,
+          resourceId: seventhCuration.curationId,
+          itemCount: seventhCuration.summaries?.length,
+        },
+        componentName: 'simple-curation-grid',
+      };
+      const { calls } = (useViewTracker as jest.Mock).mock;
+
+      const matchingCalls = calls.filter(
+        ([arg]) =>
+          arg.componentName === expectedTrackingData.componentName &&
+          JSON.stringify(arg.groupTracker) ===
+            JSON.stringify(expectedTrackingData.groupTracker),
+      );
+
+      expect(matchingCalls).toHaveLength(1);
     });
 
     describe('Hierarchical curation - click tracking', () => {
@@ -458,10 +495,19 @@ describe('Home Page', () => {
               '[data-testid="hierarchical-grid"] ul[role="list"] a',
             ) as HTMLAnchorElement,
           getExpectedData: (data: typeof afriqueHomePageData) => {
-            const promo = data.curations[0]?.summaries?.[0];
+            const curation = data.curations[0];
+            const promo = curation?.summaries?.[0];
+            // using objectContaining allows some flexibility for extra properties added to not break the tests
+            // we only care that the properties we want are present
             return expect.objectContaining({
               componentName: 'hierarchical-curation-grid',
-              groupTracker: expect.any(Object),
+              groupTracker: expect.objectContaining({
+                name: curation.title,
+                type: 'hierarchical-curation-grid',
+                position: curation.position + 1,
+                resourceId: curation.curationId,
+                itemCount: curation.summaries?.length,
+              }),
               itemTracker: expect.objectContaining({
                 type: 'hierarchical-curation-grid-promo',
                 text: promo?.title,
@@ -488,7 +534,7 @@ describe('Home Page', () => {
                 name: curation.title,
                 type: 'hierarchical-curation-grid',
                 link: curation.link,
-                position: '4',
+                position: 4,
                 resourceId: curation.curationId,
               }),
               componentName: 'hierarchical-curation-grid',
@@ -513,6 +559,95 @@ describe('Home Page', () => {
           expect(useClickTrackerHandler as jest.Mock).toHaveBeenCalledWith(
             getExpectedData(afriqueHomePageData),
           );
+        },
+      );
+    });
+
+    describe('Simple curation - click tracking', () => {
+      it.each([
+        {
+          description: 'promo link',
+          getElement: () =>
+            document.querySelector(
+              '[data-testid="curation-grid-normal"] ul[role="list"] a',
+            ) as HTMLAnchorElement,
+          getExpectedData: (data: typeof pidginHomePageDataFixture) => {
+            const promo = data.curations[6]?.summaries?.[0];
+            return expect.objectContaining({
+              componentName: 'simple-curation-grid',
+              groupTracker: expect.objectContaining({
+                name: data.curations[6].title,
+                type: 'simple-curation-grid',
+                link: data.curations[6].link,
+                position: data.curations[6].position + 1,
+                resourceId: data.curations[6].curationId,
+                itemCount: data.curations[6].summaries?.length,
+              }),
+              itemTracker: expect.objectContaining({
+                type: 'simple-curation-grid-promo',
+                text: promo?.title,
+                position: 1,
+                resourceId: promo?.id,
+                mediaType: 'video',
+                duration: 137000,
+              }),
+            });
+          },
+          click: true,
+        },
+        {
+          description: 'curation subheading link',
+          getElement: () => {
+            const subheading = document.querySelector('h2#low-feed-1');
+            return subheading?.querySelector('a') as HTMLAnchorElement;
+          },
+          getExpectedData: (data: typeof pidginHomePageDataFixture) => {
+            const curation = data.curations[6];
+            return expect.objectContaining({
+              componentName: 'simple-curation-grid',
+              groupTracker: expect.objectContaining({
+                name: curation.title,
+                type: 'simple-curation-grid',
+                link: curation.link,
+                position: curation.position + 1,
+                resourceId: curation.curationId,
+                itemCount: curation.summaries?.length,
+              }),
+            });
+          },
+          click: true,
+        },
+      ])(
+        'calls click tracking handler with correct data for $description',
+        ({ getElement, getExpectedData, click }) => {
+          // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
+          render(<HomePage pageData={pidginHomePageDataFixture} />, {
+            service: 'pidgin',
+          });
+
+          const element = getElement();
+          expect(element).toBeInTheDocument();
+          if (click) {
+            fireEvent.click(element);
+          }
+
+          const calls = (useClickTrackerHandler as jest.Mock).mock.calls
+            .map(([arg]) => arg)
+            .filter(Boolean);
+
+          const expected = getExpectedData(pidginHomePageDataFixture);
+
+          // Use asymmetricMatch if using expect.objectContaining, else fallback to deep match
+          const matchingCall = calls.find(call =>
+            expected.asymmetricMatch
+              ? expected.asymmetricMatch(call)
+              : call.componentName === expected.componentName &&
+                call.itemTracker &&
+                call.groupTracker &&
+                call.itemTracker.text === expected.itemTracker.text,
+          );
+
+          expect(matchingCall).toBeTruthy();
         },
       );
     });

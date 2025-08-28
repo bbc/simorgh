@@ -51,8 +51,8 @@ const HiearchicalGrid = ({
 
   const promoItems = summaries.slice(0, 12);
 
-  const buildPromoEventTrackingData = (promo: Summary, i: number) => ({
-    itemTracker: {
+  const buildPromoEventTrackingData = (promo: Summary, i: number) => {
+    const itemTracker = {
       type: 'hierarchical-curation-grid-promo',
       text: promo.title,
       position: i + 1,
@@ -61,9 +61,12 @@ const HiearchicalGrid = ({
       ...(promo.duration && {
         duration: moment.duration(promo.duration, 'seconds').asMilliseconds(),
       }),
-    },
-    ...eventTrackingData,
-  });
+    };
+    return {
+      itemTracker,
+      ...eventTrackingData,
+    };
+  };
 
   const getClickTrackerHandler = useClickTrackerHandler;
 

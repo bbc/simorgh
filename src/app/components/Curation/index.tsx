@@ -74,7 +74,6 @@ export default ({
     radioSchedule,
     embed,
   });
-
   const GridComponent = getGridComponent(componentName);
 
   const isFirstCuration = position === 0;
@@ -94,27 +93,17 @@ export default ({
     title: linkText,
   } = firstSummary || {};
 
-  const messageBannerId = `message-banner-${nthCurationByStyleAndProminence}`;
-
-  const viewabilityEventTrackingData: EventTrackingData = {
+  const eventTrackingData: EventTrackingData = {
+    componentName,
     groupTracker: {
       name: curationSubheading,
       type: `${componentName}`,
-      link,
-      position: `${position + 1}`,
+      position: position + 1,
+      ...(link && { link }),
       ...(curationId && { resourceId: curationId }),
-      ...(Array.isArray(summaries) && summaries.length > 0
-        ? { itemCount: summaries.length }
-        : {}),
+      ...(summaries?.length > 0 && { itemCount: summaries.length }),
     },
-    componentName,
   };
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const viewTracker = useViewTracker(viewabilityEventTrackingData as any);
-  // click tracker for curation subheading (if link is present)
-  const curationSubheadingClickTracker = link
-    ? useClickTrackerHandler(viewabilityEventTrackingData)
-    : undefined;
 
   switch (componentName) {
     case NOT_SUPPORTED:
@@ -152,11 +141,8 @@ export default ({
             link={summaryLink}
             linkText={linkText}
             image={imageUrl}
-            id={messageBannerId}
-            eventTrackingData={{
-              componentName: messageBannerId,
-              detailedPlacement: `${position + 1}`,
-            }}
+            id={`message-banner-${nthCurationByStyleAndProminence}`}
+            eventTrackingData={eventTrackingData}
           />
         );
       }
@@ -208,8 +194,13 @@ export default ({
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:
-      if (curationLength > 1) {
-        return (
+      if (summaries.length > 0) {
+        const viewTracker = useViewTracker(eventTrackingData);
+
+        const curationSubheadingClickTracker =
+          useClickTrackerHandler(eventTrackingData);
+
+        return curationLength > 1 ? (
           <section aria-labelledby={id} role="region">
             <div {...viewTracker}>
               {curationSubheading &&
@@ -230,21 +221,21 @@ export default ({
                 summaries={summaries}
                 headingLevel={3}
                 isFirstCuration={isFirstCuration}
-                eventTrackingData={viewabilityEventTrackingData}
+                eventTrackingData={eventTrackingData}
               />
             </div>
           </section>
+        ) : (
+          <div {...viewTracker}>
+            <GridComponent
+              summaries={summaries}
+              headingLevel={2} // if there is only one curation, all promos should be h2, and no subheading
+              isFirstCuration={isFirstCuration}
+              eventTrackingData={eventTrackingData}
+            />
+          </div>
         );
       }
-      return (
-        <div {...viewTracker}>
-          <GridComponent
-            summaries={summaries}
-            headingLevel={2} // if there is only one curation, all promos should be h2, and no subheading
-            isFirstCuration={isFirstCuration}
-            eventTrackingData={viewabilityEventTrackingData}
-          />
-        </div>
-      );
+      return null;
   }
 };
