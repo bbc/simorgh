@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import useViewTracker from '#app/hooks/useViewTracker';
 import styles from './index.styles';
 import CurationPromo from '../../Curation/CurationPromo';
 import { CurationGridProps } from '../../Curation/types';
