@@ -122,7 +122,6 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
     paragraph: (props: ComponentToRenderProps) => (
       <Paragraph
         blocks={props.blocks}
-        position={props.position}
         className="postStyles"
         css={styles.bodyText}
       />
