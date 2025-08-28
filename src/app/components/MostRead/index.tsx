@@ -3,7 +3,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import { OptimizelyContext, ReactSDKClient } from '@optimizely/react-sdk';
+import { ReactSDKClient } from '@optimizely/react-sdk';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Canonical from './Canonical';
@@ -82,10 +82,7 @@ const CanonicalMostRead = ({
   headingBackgroundColour: string;
   columnLayout?: ColumnLayout;
   size: Size;
-  eventTrackingData: {
-    optimizely?: ReactSDKClient | null | undefined;
-    componentName: string;
-  };
+  eventTrackingData?: EventTrackingData;
 }) =>
   data ? (
     <MostReadSection className={className}>
@@ -109,11 +106,9 @@ const MostRead = ({
   mobileDivider = false,
   headingBackgroundColour = WHITE,
   className = '',
-  sendOptimizelyEvents = false,
   eventTrackingData,
 }: MostReadProps) => {
   const { isAmp, pageType, variant } = use(RequestContext);
-  const { optimizely } = use(OptimizelyContext);
   const {
     service,
     mostRead: { hasMostRead },
@@ -137,19 +132,6 @@ const MostRead = ({
     isBff,
   });
 
-  const mergedEventTrackingData: EventTrackingData & {
-    optimizely?: ReactSDKClient | null | undefined;
-  } = {
-    componentName: eventTrackingData?.componentName ?? 'most-read',
-    ...(eventTrackingData?.groupTracker && {
-      groupTracker: eventTrackingData.groupTracker,
-    }),
-    ...(eventTrackingData?.itemTracker && {
-      itemTracker: eventTrackingData.itemTracker,
-    }),
-    ...(sendOptimizelyEvents ? { optimizely } : {}),
-  };
-
   return isAmp ? (
     <AmpMostRead
       pageType={pageType}
@@ -167,7 +149,7 @@ const MostRead = ({
       headingBackgroundColour={headingBackgroundColour}
       columnLayout={columnLayout}
       size={size}
-      eventTrackingData={mergedEventTrackingData}
+      eventTrackingData={eventTrackingData}
     />
   );
 };
