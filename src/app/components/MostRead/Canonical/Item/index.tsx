@@ -57,7 +57,7 @@ export const MostReadLink = ({
       ...eventTrackingData?.itemTracker,
       type: 'most-read-promo',
       text: title,
-      position: positionIndex + 1,
+      position: positionIndex,
       resourceId: id || href,
       ...(eventTrackingData?.groupTracker?.position && {
         groupPosition: eventTrackingData.groupTracker.position,
