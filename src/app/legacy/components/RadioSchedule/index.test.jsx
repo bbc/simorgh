@@ -73,7 +73,7 @@ describe('RadioSchedule', () => {
       );
 
       expect(clickTrackerSpy).toHaveBeenNthCalledWith(1, {
-        componentName: 'radio-schedule',
+        componentName: 'radio-schedule-live',
         groupTracker: {
           itemCount: 4,
         },
@@ -87,7 +87,7 @@ describe('RadioSchedule', () => {
         },
       });
       expect(clickTrackerSpy).toHaveBeenNthCalledWith(2, {
-        componentName: 'radio-schedule',
+        componentName: 'radio-schedule-onDemand',
         groupTracker: {
           itemCount: 4,
         },
