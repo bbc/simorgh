@@ -55,6 +55,7 @@ const ReadTime = ({
   const minutesCopy = `${readTimePrefix}: ${readTimeValue} ${minutesLabel}`;
 
   const eventTrackingData: EventTrackingData = {
+    // need to change - but currently used in experiment as tracking value
     componentName: 'read-time-on-article',
     sendOptimizelyEvents: true,
     experimentName: 'newswb_ws_article_read_time',
@@ -62,6 +63,7 @@ const ReadTime = ({
     itemTracker: {
       label: `Read time: ${readTimeValue} ${minutesLabel}`,
       duration: readTimeInMiliseconds,
+      // update this to include article ID - possibly only for homepage use
       type: `read-time`,
     },
   };

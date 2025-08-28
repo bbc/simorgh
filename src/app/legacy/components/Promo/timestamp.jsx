@@ -2,6 +2,7 @@ import React, { use } from 'react';
 import Timestamp from '#psammead/psammead-timestamp-container/src';
 import isTenHoursAgo from '#lib/utilities/isTenHoursAgo';
 import Text from '#app/components/Text';
+import ReadTime from '#app/components/ReadTime';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const PromoTimestamp = ({
@@ -49,7 +50,7 @@ const PromoTimestamp = ({
         displayBlock={displayBlock}
       />
       {/* // Holding - For experiment */}
-      <Text
+      {/* <Text
         size="brevier"
         style={{ color: '#545658' }}
         {...(!displayBlock
@@ -57,7 +58,11 @@ const PromoTimestamp = ({
           : { style: stackedStyles })}
       >
         {readTimeText}
-      </Text>
+      </Text> */}
+      <ReadTime
+        readTimeValue={5}
+        readTimeVariant="below_timestamp_minutes_regular"
+      />
     </>
   );
 };
