@@ -519,6 +519,11 @@ describe('Home Page', () => {
               JSON.stringify(expected.groupTracker),
         );
         expect(matchingCall).toBeTruthy();
+        const messageBannerCalls = calls.filter(
+          ([arg]) => arg.componentName === 'message-banner',
+        );
+
+        expect(messageBannerCalls.length).toBe(messageBanners.length);
       });
     });
 
@@ -724,6 +729,9 @@ describe('Home Page', () => {
       );
     });
 
+    // this can be changed later to check the number of calls by filtering by component name
+    // but will be easier to do this after the billboard work as the billboard currently has undefined componentNames
+    // which cause problems in this kind of test on the click tracker
     it('Message banner - click tracking', () => {
       // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
       render(<HomePage pageData={pidginHomePageDataFixture} />, {
