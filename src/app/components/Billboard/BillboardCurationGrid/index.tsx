@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
+import moment from 'moment';
 import styles from './index.styles';
 import CurationPromo from '../../Curation/CurationPromo';
 import { CurationGridProps } from '../../Curation/types';
@@ -23,6 +24,10 @@ const BillboardCurationGrid = ({
       text: promo.title,
       position: index + 1,
       resourceId: promo.id || promo.link,
+      ...(promo.type && { mediaType: promo.type }),
+      ...(promo.duration && {
+        duration: moment.duration(promo.duration, 'seconds').asMilliseconds(),
+      }),
     },
   });
 
