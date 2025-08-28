@@ -119,10 +119,7 @@ export default ({
               link={summaryLink}
               image={imageUrl}
               id={billboardId}
-              eventTrackingData={{
-                componentName: billboardId,
-                detailedPlacement: `${position + 1}`,
-              }}
+              eventTrackingData={eventTrackingData}
               showLiveLabel={summaryIsLive}
               altText={imageAlt}
               summaries={summaries}

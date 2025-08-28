@@ -4,8 +4,8 @@ import { jsx } from '@emotion/react';
 import { use } from 'react';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import { Summary } from '#app/models/types/curationData';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import Heading from '../Heading';
 import MaskedImage from '../MaskedImage';
 import styles from './index.styles';
@@ -22,7 +22,7 @@ interface BillboardProps {
   image: string;
   altText: string;
   id?: string;
-  eventTrackingData?: EventTrackingMetadata;
+  eventTrackingData?: EventTrackingData;
   showLiveLabel?: boolean;
   summaries?: Summary[];
 }
@@ -34,12 +34,22 @@ export default ({
   image,
   altText,
   id = 'billboard',
-  eventTrackingData,
   showLiveLabel,
   summaries = [],
+  ...props
 }: BillboardProps) => {
-  const viewTracker = useViewTracker(eventTrackingData);
-  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+  const { eventTrackingData = { componentName: 'billboard' } } = props;
+
+  const eventTrackingDataExtended = {
+    ...eventTrackingData,
+    groupTracker: {
+      ...eventTrackingData?.groupTracker,
+      itemCount: summaries.length,
+    },
+  };
+
+  const viewTracker = useViewTracker(eventTrackingDataExtended);
+  const clickTrackerHandler = useClickTrackerHandler(eventTrackingDataExtended);
   const { translations } = use(ServiceContext);
   const showMoreOnThisTitle = translations.moreOnThis;
 
@@ -96,8 +106,8 @@ export default ({
               <BillboardCurationGrid
                 summaries={summaries.slice(1)}
                 eventTrackingData={
-                  eventTrackingData ?? {
-                    componentName: 'billboard',
+                  eventTrackingDataExtended ?? {
+                    componentName: 'billboard-board',
                   }
                 }
               />
