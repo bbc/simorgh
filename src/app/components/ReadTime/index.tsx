@@ -11,6 +11,7 @@ type ReadTimeProps = {
   readTimeValue: number;
   className?: string;
   readTimeVariant?: string;
+  promoId?: string;
 };
 
 const DEFAULT_TRANSLATIONS = {
@@ -24,6 +25,7 @@ const DEFAULT_TRANSLATIONS = {
 const ReadTime = ({
   readTimeValue,
   readTimeVariant,
+  promoId,
   className,
 }: ReadTimeProps) => {
   const showReadTime = readTimeVariant && readTimeVariant !== 'off';
@@ -54,6 +56,8 @@ const ReadTime = ({
   const quickLongCopy = readTimeValue < 5 ? quickCopy : longCopy;
   const minutesCopy = `${readTimePrefix}: ${readTimeValue} ${minutesLabel}`;
 
+  const itemType = promoId ? `read-time-for-article-${promoId}` : 'read-time';
+
   const eventTrackingData: EventTrackingData = {
     // need to change - but currently used in experiment as tracking value
     componentName: 'read-time-on-article',
@@ -64,7 +68,7 @@ const ReadTime = ({
       label: `Read time: ${readTimeValue} ${minutesLabel}`,
       duration: readTimeInMiliseconds,
       // update this to include article ID - possibly only for homepage use
-      type: `read-time`,
+      type: itemType,
     },
   };
 

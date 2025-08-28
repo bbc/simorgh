@@ -9,6 +9,7 @@ const PromoTimestamp = ({
   children,
   serviceDatetimeLocale = '',
   className = '',
+  promoId = '',
   // For experiment
   // change to false to get all to render inline
   displayBlock = true,
@@ -62,6 +63,7 @@ const PromoTimestamp = ({
       <ReadTime
         readTimeValue={5}
         readTimeVariant="below_timestamp_minutes_regular"
+        promoId={promoId}
       />
     </>
   );

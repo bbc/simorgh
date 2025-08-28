@@ -146,6 +146,7 @@ const HiearchicalGrid = ({
                     className="promo-timestamp"
                     // For experiment
                     {...(isFirstPromo && { displayBlock: false })}
+                    promoId={promo.id}
                   >
                     {promo.lastPublished}
                   </Promo.Timestamp>
