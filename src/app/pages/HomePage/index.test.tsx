@@ -486,6 +486,41 @@ describe('Home Page', () => {
       expect(matchingCalls).toHaveLength(1);
     });
 
+    it('Message banner - calls useViewTracker with correct viewability event tracking data for each message banner', () => {
+      // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
+      render(<HomePage pageData={pidginHomePageDataFixture} />, {
+        service: 'pidgin',
+      });
+
+      // Find all banners in the fixture with visualProminence NORMAL and visualStyle BANNER
+      const messageBanners = pidginHomePageDataFixture.curations.filter(
+        curation =>
+          curation.visualProminence === 'NORMAL' &&
+          curation.visualStyle === 'BANNER',
+      );
+
+      const expectedTrackingData = messageBanners.map(curation => ({
+        componentName: 'message-banner',
+        groupTracker: {
+          name: curation.title,
+          type: 'message-banner',
+          position: curation.position + 1,
+          resourceId: curation.curationId,
+        },
+      }));
+
+      const { calls } = (useViewTracker as jest.Mock).mock;
+
+      expectedTrackingData.forEach(expected => {
+        const matchingCall = calls.find(
+          ([arg]) =>
+            arg.componentName === expected.componentName &&
+            JSON.stringify(arg.groupTracker) ===
+              JSON.stringify(expected.groupTracker),
+        );
+        expect(matchingCall).toBeTruthy();
+      });
+    });
     describe('Hierarchical curation - click tracking', () => {
       it.each([
         {
@@ -649,6 +684,44 @@ describe('Home Page', () => {
 
           expect(matchingCall).toBeTruthy();
         },
+      );
+    });
+
+    it('Message banner - click tracking', () => {
+      // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
+      render(<HomePage pageData={pidginHomePageDataFixture} />, {
+        service: 'pidgin',
+      });
+
+      // Find the first message banner (with visualProminence NORMAL and visualStyle BANNER)
+      const firstMessageBanner = pidginHomePageDataFixture.curations.find(
+        curation =>
+          curation.visualProminence === 'NORMAL' &&
+          curation.visualStyle === 'BANNER',
+      );
+
+      // Find the call to action link in the rendered DOM
+      const ctaLink = document.querySelector(
+        '[data-testid="message-banner-1"] a',
+      ) as HTMLAnchorElement;
+
+      expect(ctaLink).toBeInTheDocument();
+
+      fireEvent.click(ctaLink);
+
+      // The eventTrackingData for the CTA link should match the message banner's tracking data
+      const expectedTrackingData = expect.objectContaining({
+        componentName: 'message-banner',
+        groupTracker: expect.objectContaining({
+          name: firstMessageBanner?.title,
+          type: 'message-banner',
+          position: (firstMessageBanner?.position ?? -1) + 1, // if there is no message banner on the page the position is 0 and this will fail. It needs a fallback value for TS
+          resourceId: firstMessageBanner?.curationId,
+        }),
+      });
+
+      expect(useClickTrackerHandler as jest.Mock).toHaveBeenCalledWith(
+        expectedTrackingData,
       );
     });
   });
