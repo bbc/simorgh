@@ -22,8 +22,8 @@ const testDetails = {
     {
       path: '/urdu/live/cx2qdkezzzvt',
       id: 'cx2qdkezzzvt',
-      runforEnv: ['test', 'live'],
-      service: 'pidgin',
+      runforEnv: ['live'],
+      service: 'urdu',
       tests: [
         testsThatAlwaysRunForAllPages,
         pageVisit,
