@@ -6,14 +6,12 @@ import CurationPromo from '../CurationPromo';
 import HighImpactPromo from '../HighImpactPromo';
 import { CurationGridProps } from '../types';
 
-const isMediaType = (promo: Summary): boolean => {
-  return ['video', 'audio', 'photogallery'].includes(promo.type);
+const isMediaType = (summary: Summary): boolean => {
+  return ['video', 'audio', 'photogallery'].includes(summary.type);
 };
 
-const isHighImpact = (promo: Summary): boolean => {
-  return (
-    promo.visualProminence === VISUAL_PROMINENCE.MAXIMUM && !isMediaType(promo)
-  );
+const isHighImpact = (summary: Summary): boolean => {
+  return summary.visualProminence === VISUAL_PROMINENCE.MAXIMUM;
 };
 
 const CurationGrid = ({
@@ -28,19 +26,21 @@ const CurationGrid = ({
     return null;
   }
 
-  const hasHighImpactPromo = summaries.some(isHighImpact);
+  const hasHighImpactPromo = summaries.some(
+    summary => isHighImpact(summary) && !isMediaType(summary),
+  );
 
-  const renderPromo = (promo: Summary, index: number) => {
+  const renderPromo = (summary: Summary, index: number) => {
     const isFirstPromo = index === 0;
     const lazyLoadImages = !(isFirstPromo && isFirstCuration);
 
-    if (isHighImpact(promo)) {
-      return <HighImpactPromo {...promo} lazy={lazyLoadImages} />;
+    if (isHighImpact(summary) && !isMediaType(summary)) {
+      return <HighImpactPromo {...summary} lazy={lazyLoadImages} />;
     }
 
     return (
       <CurationPromo
-        {...promo}
+        {...summary}
         lazy={lazyLoadImages}
         headingLevel={headingLevel}
       />
