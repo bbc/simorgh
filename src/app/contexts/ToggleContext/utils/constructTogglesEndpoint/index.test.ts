@@ -1,7 +1,7 @@
 import getTogglesEndpoint from './index';
 
 beforeEach(() => {
-  process.env.SIMORGH_CONFIG_URL = 'https://config.int.api.bbci.co.uk/';
+  process.env.SIMORGH_CONFIG_URL = 'https://config.test.api.bbci.co.uk/';
 });
 
 afterEach(() => {
@@ -11,7 +11,7 @@ afterEach(() => {
 describe('Toggles endpoint constructor', () => {
   it('returns correct endpoint during ssr', () => {
     expect(getTogglesEndpoint('mundo', null)).toEqual(
-      `https://config.int.api.bbci.co.uk/?application=simorgh&service=mundo&__amp_source_origin=https://www.test.bbc.com`,
+      `https://config.test.api.bbci.co.uk/?application=simorgh&service=mundo&__amp_source_origin=https://www.test.bbc.com`,
     );
   });
 

@@ -9,6 +9,7 @@ export const assertPodcastLinksComponentView = ({
   useReverb,
   path,
   applicationType,
+  siteId,
 }) => {
   it('should send a view event for the Podcast Links component', () => {
     interceptATIAnalyticsBeacons();
@@ -24,6 +25,7 @@ export const assertPodcastLinksComponentView = ({
       contentType,
       useReverb,
       applicationType,
+      siteId,
     });
   });
 };
@@ -34,6 +36,7 @@ export const assertPodcastLinksComponentClick = ({
   useReverb,
   path,
   applicationType,
+  siteId,
 }) => {
   it('should send a click event for the Podcast Links component', () => {
     interceptATIAnalyticsBeacons();
@@ -52,6 +55,7 @@ export const assertPodcastLinksComponentClick = ({
       contentType,
       useReverb,
       applicationType,
+      siteId,
     });
   });
 };
