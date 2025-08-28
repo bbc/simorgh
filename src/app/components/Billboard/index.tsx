@@ -107,7 +107,7 @@ export default ({
                 summaries={summaries.slice(1)}
                 eventTrackingData={
                   eventTrackingDataExtended ?? {
-                    componentName: 'billboard-board',
+                    componentName: 'billboard',
                   }
                 }
               />
