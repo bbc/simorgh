@@ -4,7 +4,10 @@ import styles from './index.styles';
 import CurationPromo from '../../Curation/CurationPromo';
 import { CurationGridProps } from '../../Curation/types';
 
-const BillboardCurationGrid = ({ summaries }: CurationGridProps) => {
+const BillboardCurationGrid = ({
+  summaries,
+  eventTrackingData: _eventTrackingData, // Accept for use in other PR
+}: CurationGridProps) => {
   const top4SummariesForGrid = summaries.slice(0, 4);
 
   if (top4SummariesForGrid.length === 0) {
