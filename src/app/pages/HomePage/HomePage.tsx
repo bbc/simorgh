@@ -51,6 +51,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
     curations,
     metadata: { atiAnalytics },
   } = pageData;
+
   const itemList = getItemList({ curations, name: brandName });
 
   return (
