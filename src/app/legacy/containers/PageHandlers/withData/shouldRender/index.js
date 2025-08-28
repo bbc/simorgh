@@ -16,9 +16,7 @@ const shouldRender = (
   passportHomesOverride = [],
 ) => {
   let statusCode = status;
-
   const hasDataAnd200Status = pageData && status === OK;
-
   if (hasDataAnd200Status) {
     const passportHome = getPassportHome(pageData);
     const isValidService = isValidPassportHome(
@@ -26,26 +24,23 @@ const shouldRender = (
       service,
       passportHomesOverride,
     );
-
     const isValidArticle = () => {
       // Only check against Optimo Article pages
       if (pageType !== ARTICLE_PAGE) return true;
-
       if (service === 'sport') {
         const canonicalUrl = getCanonicalUrl(pageData);
         return matchesCanonicalUrl(canonicalUrl, pathName);
       }
+      return true;
     };
 
     const isValidRequest = isValidService && isValidArticle();
     statusCode = isValidRequest ? status : NOT_FOUND;
   }
   const hasRequestSucceeded = hasDataAnd200Status && statusCode !== NOT_FOUND;
-
   return {
     hasRequestSucceeded,
     status: statusCode,
   };
 };
-
 export default shouldRender;
