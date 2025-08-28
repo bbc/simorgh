@@ -519,6 +519,11 @@ describe('Home Page', () => {
               JSON.stringify(expected.groupTracker),
         );
         expect(matchingCall).toBeTruthy();
+        const messageBannerCalls = calls.filter(
+          ([arg]) => arg.componentName === 'message-banner',
+        );
+
+        expect(messageBannerCalls.length).toBe(messageBanners.length);
       });
     });
     describe('Hierarchical curation - click tracking', () => {
