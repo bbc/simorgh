@@ -238,7 +238,12 @@ describe('Billboard', () => {
           />,
         );
 
-        expect(viewTrackerSpy).toHaveBeenCalledWith(undefined);
+        expect(viewTrackerSpy).toHaveBeenCalledWith(
+          expect.objectContaining({
+            componentName: 'billboard',
+            groupTracker: expect.objectContaining({ itemCount: 0 }),
+          }),
+        );
       });
 
       it('should register view tracker if event tracking data provided', () => {
@@ -248,12 +253,20 @@ describe('Billboard', () => {
             description={description}
             link={link}
             image={imageUrl}
-            eventTrackingData={eventTrackingData}
             altText={imageAlt}
+            eventTrackingData={{ componentName: 'billboard' }}
+            summaries={pidginLiveBillboard.summaries}
           />,
         );
 
-        expect(viewTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
+        expect(viewTrackerSpy).toHaveBeenCalledWith(
+          expect.objectContaining({
+            componentName: 'billboard',
+            groupTracker: expect.objectContaining({
+              itemCount: pidginLiveBillboard.summaries.length,
+            }),
+          }),
+        );
       });
     });
 
@@ -273,7 +286,12 @@ describe('Billboard', () => {
           />,
         );
 
-        expect(clickTrackerSpy).toHaveBeenCalledWith(undefined);
+        expect(clickTrackerSpy).toHaveBeenCalledWith(
+          expect.objectContaining({
+            componentName: 'billboard',
+            groupTracker: expect.objectContaining({ itemCount: 0 }),
+          }),
+        );
 
         const [anchorTag] = container.getElementsByTagName('a');
         fireEvent.click(anchorTag);
@@ -287,12 +305,17 @@ describe('Billboard', () => {
             description={description}
             link={link}
             image={imageUrl}
-            eventTrackingData={eventTrackingData}
+            eventTrackingData={{ componentName: 'billboard' }}
             altText={imageAlt}
           />,
         );
 
-        expect(clickTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
+        expect(clickTrackerSpy).toHaveBeenCalledWith(
+          expect.objectContaining({
+            componentName: 'billboard',
+            groupTracker: expect.objectContaining({ itemCount: 0 }),
+          }),
+        );
       });
 
       it('should handle a click event when link clicked', () => {
