@@ -4,7 +4,33 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 import { focusIndicatorThickness } from '../../ThemeProvider/focusIndicator';
 
 const styles = {
-  placeholder: ({ mq }: Theme) =>
+  placeholder: ({ mq, palette }: Theme) =>
+    css({
+      position: 'relative',
+      cursor: 'pointer',
+      height: '100%',
+
+      [`.${NO_JS_CLASSNAME} &`]: {
+        cursor: 'default',
+      },
+      '&:hover, &:focus': {
+        '> button': {
+          backgroundColor: palette.POSTBOX,
+        },
+      },
+      [mq.FORCED_COLOURS]: {
+        '&:hover, &:focus': {
+          '> button': {
+            backgroundColor: 'canvas',
+            border: `${pixelsToRem(3)}rem solid canvasText`,
+            '> time': { textDecoration: 'underline' },
+          },
+        },
+      },
+    }),
+
+  // Duplicated to prevent splitting out existing styles
+  placeholderWithTranscript: ({ mq }: Theme) =>
     css({
       position: 'relative',
       cursor: 'pointer',

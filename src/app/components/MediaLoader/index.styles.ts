@@ -26,23 +26,19 @@ export default {
       }),
   withTranscriptVideo: ({ palette, isDarkUi }: Theme) =>
     css({
-      '&:has(details)': {
-        backgroundColor: isDarkUi ? palette.GREY_7 : palette.WHITE,
-      },
+      backgroundColor: isDarkUi ? palette.GREY_7 : palette.WHITE,
     }),
   withTranscriptCaption: ({ mq, spacings }: Theme) =>
     css({
-      '&:has(+ details)': {
-        margin: `${spacings.FULL}rem`,
+      margin: `${spacings.FULL}rem`,
+      width: 'auto',
+      [mq.GROUP_2_ONLY]: {
         width: 'auto',
-        [mq.GROUP_2_ONLY]: {
-          width: 'auto',
-          margin: `${spacings.FULL}rem`,
-        },
-        [mq.GROUP_4_MIN_WIDTH]: {
-          width: 'auto',
-          margin: `${spacings.FULL}rem`,
-        },
+        margin: `${spacings.FULL}rem`,
+      },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        width: 'auto',
+        margin: `${spacings.FULL}rem`,
       },
     }),
 

@@ -45,7 +45,11 @@ const MediaPlayerPlaceholder = ({
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
     <div
       onClick={onClick}
-      css={styles.placeholder}
+      css={
+        showSustinabilityMessage
+          ? styles.placeholderWithTranscript
+          : styles.placeholder
+      }
       data-e2e="media-loader__placeholder"
       {...(showSustinabilityMessage && { className: 'mediaLoaderPlaceholder' })}
     >
