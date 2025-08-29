@@ -51,7 +51,13 @@ export interface Translations {
     500: TranslationsError;
   };
   continueReading?: string;
-  readTime?: string;
+  readTime?: Partial<{
+    readTimePrefix: string;
+    quick: string;
+    long: string;
+    minute: string;
+    minutes: string;
+  }>;
   byline?: {
     author?: string;
     articleInformation?: string;
