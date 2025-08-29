@@ -169,7 +169,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
-  const experimentName = 'newswb_ws_read_more_b';
+  const experimentName = 'newswb_ws_personalised-topic-curation';
   const experimentVariant = useOptimizelyVariation({
     experimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
@@ -382,9 +382,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               tagBackgroundColour={WHITE}
             />
           )}
-          {pageData.secondaryColumn?.PersonalisedContent && (
-            <PersonalisedContent pageData={pageData} sendOptimizelyEvents />
-          )}
+          {pageData.secondaryColumn?.PersonalisedContent &&
+            experimentVariant !== 'control' && (
+              <PersonalisedContent pageData={pageData} sendOptimizelyEvents />
+            )}
           <RelatedContentSection
             content={blocks}
             sendOptimizelyEvents={false}
