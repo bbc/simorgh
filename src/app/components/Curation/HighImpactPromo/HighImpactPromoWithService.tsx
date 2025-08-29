@@ -16,13 +16,12 @@ const HighImpactPromoWithService = ({
 }: HighImpactPromoWithServiceProps) => {
   const serviceConfig = use(ServiceContext);
 
-  // Use the service configuration from context
-  const subject = {
-    href: `https://www.bbc.com/${service}`,
+  const attribution = {
+    link: `/${service}`,
     text: serviceConfig.brandName,
   };
 
-  return <HighImpactPromo {...summaryProps} subject={subject} />;
+  return <HighImpactPromo {...summaryProps} attribution={attribution} />;
 };
 
 export default HighImpactPromoWithService;

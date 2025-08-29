@@ -5,13 +5,15 @@ import { Summary } from '#app/models/types/curationData';
 import Promo from '#components/Promo';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { RequestContext } from '#app/contexts/RequestContext';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
 
+type Attribution = {
+  link: string;
+  text: string;
+};
 interface HighImpactPromoProps extends Summary {
-  subject?: {
-    href: string;
-    text: string;
-  };
+  attribution?: Attribution;
 }
 
 const HighImpactPromo = ({
@@ -22,18 +24,15 @@ const HighImpactPromo = ({
   link,
   headingLevel = 3,
   eventTrackingData,
-  // TODO: temp - to be removed
-  subject = {
-    href: `https://www.bbc.com/news`,
-    text: 'BBC News',
-  },
+  attribution,
 }: HighImpactPromoProps) => {
   const { isAmp } = use(RequestContext);
+  const { dir } = use(ServiceContext);
 
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
   return (
-    <div data-testid="high-impact-promo" css={styles.promo}>
+    <div data-testid="high-impact-promo" css={styles.promo} dir={dir}>
       {imageUrl && (
         <div css={styles.imageContainer}>
           <Promo.Image
@@ -54,16 +53,14 @@ const HighImpactPromo = ({
             {title}
           </Promo.A>
         </Promo.Heading>
-
-        {subject && <div css={styles.divider} />}
-
-        {subject && (
+        {attribution && <div css={styles.divider} />}
+        {attribution && (
           <Promo.A
-            href={subject.href}
+            href={attribution.link}
             css={styles.subject}
             {...clickTrackerHandler}
           >
-            {subject.text}
+            {attribution.text}
           </Promo.A>
         )}
       </div>

@@ -17,22 +17,22 @@ const Component = () => {
     >
       <HighImpactPromo
         {...(highImpactFixtureCuration.summaries?.[0] as Summary)}
-        subject={{
-          href: '/pidgin',
+        attribution={{
+          link: '/pidgin',
           text: 'BBC News Pidgin',
         }}
       />
       <HighImpactPromo
         {...(highImpactFixtureCuration.summaries?.[1] as Summary)}
-        subject={{
-          href: '/mundo',
+        attribution={{
+          link: '/mundo',
           text: 'BBC News Mundo',
         }}
       />
       <HighImpactPromo
         {...(highImpactFixtureCuration.summaries?.[2] as Summary)}
-        subject={{
-          href: '/',
+        attribution={{
+          link: '/',
           text: 'BBC',
         }}
       />
