@@ -257,6 +257,11 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
   cursor: default;
 }
 
+.emotion-8:hover>button,
+.emotion-8:focus>button {
+  background-color: #B80000;
+}
+
 @media screen and (forced-colors: active) {
   .emotion-8:hover>button,
   .emotion-8:focus>button {

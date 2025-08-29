@@ -67,6 +67,11 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   cursor: default;
 }
 
+.emotion-7:hover>button,
+.emotion-7:focus>button {
+  background-color: #B80000;
+}
+
 @media screen and (forced-colors: active) {
   .emotion-7:hover>button,
   .emotion-7:focus>button {
