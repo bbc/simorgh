@@ -1,6 +1,7 @@
 import { focusIndicatorThickness } from '#app/components/ThemeProvider/focusIndicator';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
+import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 
 const WIDTH = 250;
 const BUTTON_COLLAPSE_WIDTH = pixelsToRem(300);
@@ -17,6 +18,9 @@ const styles = {
       height: '100%',
       width: '100%',
       zIndex: '1',
+      [`.${NO_JS_CLASSNAME} &`]: {
+        display: 'none',
+      },
       [mq.GROUP_2_MIN_WIDTH]: {
         left: `calc(100% - ${pixelsToRem(WIDTH)}rem)`,
         width: `${pixelsToRem(WIDTH)}rem`,

@@ -1,12 +1,13 @@
 /** @jsx jsx */
-import { PlaceholderMode } from '#app/hooks/useDeterminePlaceholderMode';
+/* @jsxFrag React.Fragment */
 import { jsx } from '@emotion/react';
+import React from 'react';
 import Image from '../../Image';
 import { MediaInfo } from '../types';
 import Guidance from './Guidance';
 import styles from './index.styles';
 import PlayButton from './PlayButton';
-import WithSustainabilityMessageMediaIndicator from './WithSustainabilityMessage/MediaIndicator';
+import MediaIndicatorWithSustainabilityMessage from './WithSustainabilityMessage/MediaIndicator';
 import SustainabilityMessage from './WithSustainabilityMessage/Message';
 import SustainabilityMessageNoJs from './WithSustainabilityMessage/MessageNoJs';
 
@@ -16,7 +17,7 @@ interface Props {
   srcSet?: string;
   mediaInfo?: MediaInfo;
   noJsMessage?: string;
-  placeholderMode?: PlaceholderMode;
+  hasTranscript?: boolean;
   isPortraitOrientation?: boolean;
 }
 
@@ -26,7 +27,7 @@ const MediaPlayerPlaceholder = ({
   srcSet,
   mediaInfo,
   noJsMessage = '',
-  placeholderMode = PlaceholderMode.DEFAULT,
+  hasTranscript = false,
   isPortraitOrientation,
 }: Props) => {
   const {
@@ -38,39 +39,7 @@ const MediaPlayerPlaceholder = ({
     guidanceMessage,
   } = mediaInfo ?? {};
 
-  const playButton = (
-    <PlayButton
-      css={styles.playButton}
-      title={title}
-      // eslint-disable-next-line @typescript-eslint/no-empty-function
-      onClick={() => {}}
-      datetime={datetime}
-      duration={duration}
-      durationSpoken={durationSpoken}
-      type={type}
-      guidanceMessage={guidanceMessage}
-      className="focusIndicatorRemove"
-    />
-  );
-
-  const playButtonWithSustainabilityMessage = (
-    <WithSustainabilityMessageMediaIndicator
-      title={title}
-      datetime={datetime}
-      duration={duration}
-      durationSpoken={durationSpoken}
-      type={type}
-      guidanceMessage={guidanceMessage}
-    />
-  );
-
-  const guideComponent = (
-    <Guidance
-      css={styles.guidance}
-      guidanceMessage={guidanceMessage}
-      noJsMessage={noJsMessage}
-    />
-  );
+  const showSustinabilityMessage = hasTranscript;
 
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
@@ -80,17 +49,40 @@ const MediaPlayerPlaceholder = ({
       data-e2e="media-loader__placeholder"
       className="mediaLoaderPlaceholder"
     >
-      {placeholderMode === PlaceholderMode.DEFAULT ? guideComponent : null}
-      {placeholderMode === PlaceholderMode.SHOW_SUSTAINABILITY_MSG
-        ? playButtonWithSustainabilityMessage
-        : playButton}
-      {placeholderMode === PlaceholderMode.SHOW_SUSTAINABILITY_MSG ? (
-        <SustainabilityMessage title={title} />
-      ) : null}
-      {/* TODO - Check against requirements */}
-      {placeholderMode === PlaceholderMode.SHOW_SUSTAINABILITY_MSG ? (
-        <SustainabilityMessageNoJs noJsMessage={noJsMessage} />
-      ) : null}
+      {showSustinabilityMessage ? (
+        <>
+          <SustainabilityMessage title={title} />
+          <MediaIndicatorWithSustainabilityMessage
+            title={title}
+            datetime={datetime}
+            duration={duration}
+            durationSpoken={durationSpoken}
+            type={type}
+            guidanceMessage={guidanceMessage}
+          />
+          <SustainabilityMessageNoJs noJsMessage={noJsMessage} />
+        </>
+      ) : (
+        <>
+          <Guidance
+            css={styles.guidance}
+            guidanceMessage={guidanceMessage}
+            noJsMessage={noJsMessage}
+          />
+          <PlayButton
+            css={styles.playButton}
+            // eslint-disable-next-line @typescript-eslint/no-empty-function
+            onClick={() => {}}
+            title={title}
+            datetime={datetime}
+            duration={duration}
+            durationSpoken={durationSpoken}
+            type={type}
+            guidanceMessage={guidanceMessage}
+            className="focusIndicatorRemove"
+          />
+        </>
+      )}
       <Image
         alt=""
         src={src}

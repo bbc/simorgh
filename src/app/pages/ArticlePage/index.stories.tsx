@@ -239,13 +239,6 @@ export const ArticlePageWithTranscriptSustainabilityMessagePlaceholder = () => (
   />
 );
 
-export const ArticlePageWithTranscriptDefaultPlaceholder = () => (
-  <ComponentWithServiceContext
-    data={articleDataWithTranscript}
-    service="news"
-  />
-);
-
 export const ArticlePageWithPortraitVideo = () => (
   <ComponentWithContext data={articleDataWithPortraitVideo} service="mundo" />
 );

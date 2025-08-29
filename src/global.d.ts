@@ -55,11 +55,6 @@ declare global {
       reverbUrl?: string,
     ) => void;
   }
-
-  interface Navigator {
-    connection: { saveData: boolean };
-    getBattery: () => Promise;
-  }
 }
 
 export {};
