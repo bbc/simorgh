@@ -4,6 +4,8 @@ import { VISUAL_PROMINENCE, Summary } from '#app/models/types/curationData';
 import extractServiceFromUrl from '#app/lib/utilities/extractServiceFromUrl';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import moment from 'moment';
+import { use } from 'react';
+import { RequestContext } from '#app/contexts/RequestContext';
 import styles from './index.styles';
 import CurationPromo from '../CurationPromo';
 import HighImpactPromo from '../HighImpactPromo';
@@ -23,6 +25,8 @@ const CurationGrid = ({
   headingLevel,
   eventTrackingData,
 }: CurationGridProps) => {
+  const { isLite } = use(RequestContext);
+
   const hasMultiplePromos = summaries.length > 1;
   const firstPromo = summaries[0];
 
@@ -31,7 +35,7 @@ const CurationGrid = ({
   }
 
   const hasHighImpactPromo = summaries.some(
-    summary => isHighImpact(summary) && !isMediaType(summary),
+    promo => isHighImpact(promo) && !isMediaType(promo),
   );
 
   const buildPromoEventTrackingData = (promo: Summary, i: number) => ({
@@ -53,7 +57,7 @@ const CurationGrid = ({
     const lazyLoadImages = !(isFirstPromo && isFirstCuration);
     const service = extractServiceFromUrl(promo.link);
 
-    if (isHighImpact(promo) && !isMediaType(promo)) {
+    if (isHighImpact(promo) && !isMediaType(promo) && !isLite) {
       if (service) {
         return (
           <ServiceContextProvider service={service}>

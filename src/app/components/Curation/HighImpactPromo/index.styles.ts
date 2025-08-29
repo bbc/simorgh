@@ -49,7 +49,7 @@ export default {
       display: 'flex',
       flexDirection: 'column',
       flex: '0 0 66.66%',
-      paddingLeft: `${spacings.FULL}rem`,
+      paddingInlineStart: `${spacings.FULL}rem`,
       height: '100%',
       textAlign: 'start',
 
@@ -88,12 +88,22 @@ export default {
       background: '#EB0000',
     }),
 
-  subject: ({ palette, fontSizes, fontVariants }: Theme) =>
+  subject: ({ palette, fontSizes, fontVariants, spacings }: Theme) =>
     css({
       ...fontSizes.brevier,
       ...fontVariants.sansBold,
       color: palette.GREY_2,
       position: 'relative',
+      alignSelf: 'flex-start',
+
+      '&:before': {
+        content: '""',
+        position: 'absolute',
+        top: `-${spacings.FULL + spacings.HALF}rem`,
+        bottom: `-${spacings.DOUBLE}rem`,
+        left: `-${spacings.FULL}rem`,
+        right: `-${spacings.FULL}rem`,
+      },
 
       '&:hover, &:focus': {
         color: palette.GREY_2,
