@@ -47,7 +47,7 @@ const MediaPlayerPlaceholder = ({
       onClick={onClick}
       css={styles.placeholder}
       data-e2e="media-loader__placeholder"
-      className="mediaLoaderPlaceholder"
+      {...(showSustinabilityMessage && { className: 'mediaLoaderPlaceholder' })}
     >
       {showSustinabilityMessage ? (
         <>
