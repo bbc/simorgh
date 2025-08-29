@@ -54,11 +54,33 @@ const shouldDispatchEventBeacon = ({
     statsDestination,
   ].every(Boolean);
 
-  return [
-    hasRequiredProps,
-    trackingIsEnabled,
-    !eventSent,
-  ].every(Boolean);
+  return [hasRequiredProps, trackingIsEnabled, !eventSent].every(Boolean);
+};
+
+const trackComponentInOptimizely = ({
+  sendOptimizelyEvents,
+  experimentVariant,
+  componentName,
+}: Pick<
+  EventTrackingData,
+  'sendOptimizelyEvents' | 'experimentVariant' | 'componentName'
+>) => {
+  const { optimizely } = use(OptimizelyContext);
+
+  if (
+    optimizely &&
+    sendOptimizelyEvents &&
+    experimentVariant &&
+    experimentVariant !== 'off'
+  ) {
+    const overrideAttributes = optimizely?.user.attributes;
+
+    optimizely.track(
+      `${componentName}-views`,
+      optimizely.user.id as string,
+      overrideAttributes,
+    );
+  }
 };
 
 const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
@@ -133,20 +155,11 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
   useEffect(() => {
     if (alwaysInView) {
       if (shouldSendEvent) {
-        if (
-          optimizely &&
-          sendOptimizelyEvents &&
-          experimentVariant &&
-          experimentVariant !== 'off'
-        ) {
-          const overrideAttributes = optimizely?.user.attributes;
-
-          optimizely.track(
-            `${componentName}-views`,
-            optimizely.user.id as string,
-            overrideAttributes,
-          );
-        }
+        trackComponentInOptimizely({
+          sendOptimizelyEvents,
+          experimentVariant,
+          componentName,
+        });
 
         sendEventBeacon({
           campaignID,
@@ -176,20 +189,11 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
       // @ts-expect-error timer ref won't be null
       timer.current = setTimeout(() => {
         if (shouldSendEvent) {
-          if (
-            optimizely &&
-            sendOptimizelyEvents &&
-            experimentVariant &&
-            experimentVariant !== 'off'
-          ) {
-            const overrideAttributes = optimizely?.user.attributes;
-
-            optimizely.track(
-              `${componentName}-views`,
-              optimizely.user.id as string,
-              overrideAttributes,
-            );
-          }
+          trackComponentInOptimizely({
+            sendOptimizelyEvents,
+            experimentVariant,
+            componentName,
+          });
 
           sendEventBeacon({
             campaignID,
