@@ -3,12 +3,10 @@ import { jsx } from '@emotion/react';
 import { VISUAL_PROMINENCE, Summary } from '#app/models/types/curationData';
 import { extractServiceFromUrl } from '#app/lib/utilities/extractServiceFromUrl';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
-import type { Services } from '#app/models/types/global';
 import moment from 'moment';
 import styles from './index.styles';
 import CurationPromo from '../CurationPromo';
 import HighImpactPromo from '../HighImpactPromo';
-import HighImpactPromoWithService from '../HighImpactPromo/HighImpactPromoWithService';
 import { CurationGridProps } from '../types';
 
 const isMediaType = (summary: Summary): boolean => {
@@ -53,19 +51,13 @@ const CurationGrid = ({
   const renderPromo = (promo: Summary, index: number) => {
     const isFirstPromo = index === 0;
     const lazyLoadImages = !(isFirstPromo && isFirstCuration);
-
-    const service = extractServiceFromUrl(promo.link) as Services | null;
+    const service = extractServiceFromUrl(promo.link);
 
     if (isHighImpact(promo) && !isMediaType(promo)) {
       if (service) {
-        // TODO: Move this to another component
         return (
           <ServiceContextProvider service={service}>
-            <HighImpactPromoWithService
-              {...promo}
-              lazy={lazyLoadImages}
-              service={service}
-            />
+            <HighImpactPromo {...promo} lazy={lazyLoadImages} />
           </ServiceContextProvider>
         );
       }

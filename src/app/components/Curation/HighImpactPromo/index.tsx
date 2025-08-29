@@ -27,7 +27,11 @@ const HighImpactPromo = ({
   attribution,
 }: HighImpactPromoProps) => {
   const { isAmp } = use(RequestContext);
-  const { dir } = use(ServiceContext);
+  const { dir, service, brandName } = use(ServiceContext) || {};
+
+  const attributionLink = attribution?.link || (service ? `/${service}` : null);
+  const attributionText = attribution?.text || brandName;
+  const hasAttribution = attributionLink && attributionText;
 
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
@@ -53,14 +57,14 @@ const HighImpactPromo = ({
             {title}
           </Promo.A>
         </Promo.Heading>
-        {attribution && <div css={styles.divider} />}
-        {attribution && (
+        {hasAttribution && <div css={styles.divider} />}
+        {hasAttribution && (
           <Promo.A
-            href={attribution.link}
+            href={attributionLink}
             css={styles.subject}
             {...clickTrackerHandler}
           >
-            {attribution.text}
+            {attributionText}
           </Promo.A>
         )}
       </div>
