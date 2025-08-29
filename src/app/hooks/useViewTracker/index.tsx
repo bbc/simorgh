@@ -112,7 +112,8 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
 
   const observer = useRef(null);
   const timer = useRef(null);
-  const [isInView, setIsInView] = useState(false);
+  const [componentHasComeIntoView, setcomponentHasComeIntoView] =
+    useState(false);
   const [eventSent, setEventSent] = useState(false);
   const { trackingIsEnabled } = useTrackingToggle(componentName);
 
@@ -141,7 +142,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
         element => element.isIntersecting,
       );
 
-      setIsInView(someElementsAreInView);
+      setcomponentHasComeIntoView(someElementsAreInView);
     };
 
     const options = {
@@ -185,7 +186,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
             }),
         });
       }
-    } else if (isInView && !timer.current) {
+    } else if (componentHasComeIntoView && !timer.current) {
       // @ts-expect-error timer ref won't be null
       timer.current = setTimeout(() => {
         if (shouldSendEvent) {
@@ -240,7 +241,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     campaignID,
     componentName,
     format,
-    isInView,
+    componentHasComeIntoView,
     pageIdentifier,
     platform,
     producerId,
