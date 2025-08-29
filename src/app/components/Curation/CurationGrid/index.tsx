@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import { VISUAL_PROMINENCE, Summary } from '#app/models/types/curationData';
-import { extractServiceFromUrl } from '#app/lib/utilities/extractServiceFromUrl';
+import extractServiceFromUrl from '#app/lib/utilities/extractServiceFromUrl';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import moment from 'moment';
 import styles from './index.styles';
