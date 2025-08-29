@@ -4,6 +4,7 @@ import { VISUAL_PROMINENCE, Summary } from '#app/models/types/curationData';
 import { extractServiceFromUrl } from '#app/lib/utilities/extractServiceFromUrl';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import type { Services } from '#app/models/types/global';
+import moment from 'moment';
 import styles from './index.styles';
 import CurationPromo from '../CurationPromo';
 import HighImpactPromo from '../HighImpactPromo';
@@ -22,6 +23,7 @@ const CurationGrid = ({
   summaries,
   isFirstCuration,
   headingLevel,
+  eventTrackingData,
 }: CurationGridProps) => {
   const hasMultiplePromos = summaries.length > 1;
   const firstPromo = summaries[0];
@@ -34,33 +36,48 @@ const CurationGrid = ({
     summary => isHighImpact(summary) && !isMediaType(summary),
   );
 
-  const renderPromo = (summary: Summary, index: number) => {
+  const buildPromoEventTrackingData = (promo: Summary, i: number) => ({
+    itemTracker: {
+      type: 'simple-curation-grid-promo',
+      text: promo.title,
+      position: i + 1,
+      resourceId: promo.id,
+      ...(promo.type && { mediaType: promo.type }),
+      ...(promo.duration && {
+        duration: moment.duration(promo.duration, 'seconds').asMilliseconds(),
+      }),
+    },
+    ...eventTrackingData,
+  });
+
+  const renderPromo = (promo: Summary, index: number) => {
     const isFirstPromo = index === 0;
     const lazyLoadImages = !(isFirstPromo && isFirstCuration);
 
-    const service = extractServiceFromUrl(summary.link) as Services | null;
+    const service = extractServiceFromUrl(promo.link) as Services | null;
 
-    if (isHighImpact(summary) && !isMediaType(summary)) {
+    if (isHighImpact(promo) && !isMediaType(promo)) {
       if (service) {
         // TODO: Move this to another component
         return (
           <ServiceContextProvider service={service}>
             <HighImpactPromoWithService
-              {...summary}
+              {...promo}
               lazy={lazyLoadImages}
               service={service}
             />
           </ServiceContextProvider>
         );
       }
-      return <HighImpactPromo {...summary} lazy={lazyLoadImages} />;
+      return <HighImpactPromo {...promo} lazy={lazyLoadImages} />;
     }
 
     return (
       <CurationPromo
-        {...summary}
+        {...promo}
         lazy={lazyLoadImages}
         headingLevel={headingLevel}
+        eventTrackingData={buildPromoEventTrackingData(promo, index)}
       />
     );
   };

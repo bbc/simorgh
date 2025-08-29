@@ -1,6 +1,7 @@
 import { OEmbedData } from '#app/components/Embeds/types';
 import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
 import { RadioScheduleData } from '#app/models/types/radioSchedule';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { MostReadData } from '../../components/MostRead/types';
 
 // This maps to the Summary type definition from the BFF
@@ -22,6 +23,7 @@ export interface Summary extends BaseSummary {
   mediaType?: 'audio' | 'video' | 'photogallery';
   lazy?: boolean;
   headingLevel?: number;
+  eventTrackingData?: EventTrackingData;
   visualProminence?: VisualProminence | string;
 }
 
@@ -65,6 +67,8 @@ export interface BaseCuration {
   portraitVideo?: {
     blocks: PortraitClipMediaBlock[];
   };
+  contentType?: string;
+  pageTitle?: string;
 }
 
 export interface Curation extends BaseCuration {

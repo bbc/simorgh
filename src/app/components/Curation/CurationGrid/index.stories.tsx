@@ -3,8 +3,14 @@ import fixture from '#data/pidgin/topics/c95y35941vrt.json';
 import CurationGrid from '.';
 import { Summary } from '#app/models/types/curationData';
 
+const eventTrackingData = {
+  componentName: 'curation-grid-normal',
+};
+
 const Component = ({ summaries }: { summaries: Summary[] }) => {
-  return <CurationGrid summaries={summaries} />;
+  return (
+    <CurationGrid summaries={summaries} eventTrackingData={eventTrackingData} />
+  );
 };
 
 export default {
