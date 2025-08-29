@@ -57,10 +57,6 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   aspect-ratio: 16/9;
 }
 
-.emotion-6:has(details) {
-  background-color: #FFFFFF;
-}
-
 .emotion-7 {
   position: relative;
   cursor: pointer;
@@ -352,25 +348,6 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
 
 .emotion-18>span>p:last-child {
   padding-bottom: 0;
-}
-
-.emotion-18:has(+ details) {
-  margin: 0.5rem;
-  width: auto;
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-18:has(+ details) {
-    width: auto;
-    margin: 0.5rem;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-18:has(+ details) {
-    width: auto;
-    margin: 0.5rem;
-  }
 }
 
 @media (max-width: 14.9375rem) {

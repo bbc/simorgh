@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`OnDemand Radio Page  should match snapshot 1`] = `
 @keyframes animation-0 {
@@ -358,10 +358,6 @@ exports[`OnDemand Radio Page  should match snapshot 1`] = `
   position: relative;
   width: 100%;
   margin: 0 0 1.5rem 0;
-}
-
-.emotion-23:has(details) {
-  background-color: #FFFFFF;
 }
 
 .emotion-24 {

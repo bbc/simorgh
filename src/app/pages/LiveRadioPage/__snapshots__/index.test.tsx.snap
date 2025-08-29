@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 .emotion-1 {
@@ -237,10 +237,6 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   position: relative;
   width: 100%;
   margin: 0 0 1.5rem 0;
-}
-
-.emotion-9:has(details) {
-  background-color: #FFFFFF;
 }
 
 .emotion-10 {
