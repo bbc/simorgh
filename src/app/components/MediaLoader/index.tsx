@@ -298,14 +298,24 @@ const MediaLoader = ({
       <figure
         data-e2e="media-loader__container"
         className={`media-container${className ? ` ${className}` : ''}`}
-        css={[
-          styles.figure(embedded),
-          !isAudio && [
-            isPortrait && styles.portraitFigure(embedded),
-            isLandscape && styles.landscapeFigure,
-          ],
-          hasTranscript && styles.withTranscriptVideo,
-        ]}
+        css={
+          hasTranscript
+            ? [
+                styles.figure(embedded),
+                !isAudio && [
+                  isPortrait && styles.portraitFigure(embedded),
+                  isLandscape && styles.landscapeFigure,
+                ],
+                hasTranscript && styles.withTranscriptVideo,
+              ]
+            : [
+                styles.figure(embedded),
+                !isAudio && [
+                  isPortrait && styles.portraitFigure(embedded),
+                  isLandscape && styles.landscapeFigure,
+                ],
+              ]
+        }
       >
         {isAmp ? (
           <AmpMediaLoader
@@ -345,11 +355,18 @@ const MediaLoader = ({
             className={isPortrait ? 'portrait-caption' : ''}
             block={captionBlock}
             type={mediaType}
-            css={[
-              isAudio && styles.captionAudio,
-              !isAudio && [isPortrait && styles.captionPortrait],
-              hasTranscript && styles.withTranscriptCaption,
-            ]}
+            css={
+              hasTranscript
+                ? [
+                    isAudio && styles.captionAudio,
+                    !isAudio && [isPortrait && styles.captionPortrait],
+                    hasTranscript && styles.withTranscriptCaption,
+                  ]
+                : [
+                    isAudio && styles.captionAudio,
+                    !isAudio && [isPortrait && styles.captionPortrait],
+                  ]
+            }
           />
         )}
         {hasTranscript && (

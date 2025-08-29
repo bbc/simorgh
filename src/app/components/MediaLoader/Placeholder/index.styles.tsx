@@ -4,7 +4,7 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 import { focusIndicatorThickness } from '../../ThemeProvider/focusIndicator';
 
 const styles = {
-  placeholder: ({ mq, palette }: Theme) =>
+  placeholder: ({ palette, mq }: Theme) =>
     css({
       position: 'relative',
       cursor: 'pointer',
