@@ -239,10 +239,7 @@ describe('Billboard', () => {
         );
 
         expect(viewTrackerSpy).toHaveBeenCalledWith(
-          expect.objectContaining({
-            componentName: 'billboard',
-            groupTracker: expect.objectContaining({ itemCount: 0 }),
-          }),
+          expect.objectContaining({ componentName: 'billboard' }),
         );
       });
 
@@ -260,12 +257,7 @@ describe('Billboard', () => {
         );
 
         expect(viewTrackerSpy).toHaveBeenCalledWith(
-          expect.objectContaining({
-            componentName: 'billboard',
-            groupTracker: expect.objectContaining({
-              itemCount: pidginLiveBillboard.summaries.length,
-            }),
-          }),
+          expect.objectContaining({ componentName: 'billboard' }),
         );
       });
     });
@@ -286,12 +278,9 @@ describe('Billboard', () => {
           />,
         );
 
-        expect(clickTrackerSpy).toHaveBeenCalledWith(
-          expect.objectContaining({
-            componentName: 'billboard',
-            groupTracker: expect.objectContaining({ itemCount: 0 }),
-          }),
-        );
+        expect(clickTrackerSpy).toHaveBeenCalledWith({
+          componentName: 'billboard',
+        });
 
         const [anchorTag] = container.getElementsByTagName('a');
         fireEvent.click(anchorTag);
@@ -299,23 +288,20 @@ describe('Billboard', () => {
       });
 
       it('should register click tracker if event tracking data provided', () => {
+        const provided = { componentName: 'billboard' };
+
         render(
           <Billboard
             heading={title}
             description={description}
             link={link}
             image={imageUrl}
-            eventTrackingData={{ componentName: 'billboard' }}
+            eventTrackingData={provided}
             altText={imageAlt}
           />,
         );
 
-        expect(clickTrackerSpy).toHaveBeenCalledWith(
-          expect.objectContaining({
-            componentName: 'billboard',
-            groupTracker: expect.objectContaining({ itemCount: 0 }),
-          }),
-        );
+        expect(clickTrackerSpy).toHaveBeenCalledWith(provided);
       });
 
       it('should handle a click event when link clicked', () => {
