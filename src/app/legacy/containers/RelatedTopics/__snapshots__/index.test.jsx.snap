@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Related Topics Expected use should render correctly with a single tag 1`] = `
 .emotion-0 {
@@ -508,5 +508,3 @@ exports[`Related Topics Expected use should render correctly with multiple tags 
   ,
 </div>
 `;
-
-exports[`Related Topics Expected use should render correctly with no tags 1`] = `<div />`;

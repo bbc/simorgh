@@ -103,6 +103,7 @@ const LiveRadioPage = ({ pageData }: { pageData: LiveRadioPageData }) => {
         <RadioScheduleContainer
           initialData={radioScheduleData}
           toggleName="liveRadioSchedule"
+          eventTrackingData={{ componentName: 'radio-schedule' }}
         />
       )}
     </>

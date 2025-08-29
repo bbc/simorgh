@@ -25,10 +25,7 @@ import {
 import { PageTypes, Platforms } from '../../models/types/global';
 import { buildATIEventTrackingParams } from '../../components/ATIAnalytics/params';
 import { ServiceContext } from '../ServiceContext';
-import {
-  ATIData,
-  ATIEventTrackingProps,
-} from '../../components/ATIAnalytics/types';
+import { ATIData } from '../../components/ATIAnalytics/types';
 
 type EventTrackingContextProps =
   | {
@@ -102,7 +99,7 @@ export const EventTrackingContextProvider = ({
           requestContext,
           serviceContext,
           atiData,
-        }) as ATIEventTrackingProps;
+        });
 
       return {
         campaignID,
