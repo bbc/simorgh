@@ -62,7 +62,7 @@ exports[`Canonical Live Media Loader a11y assistive technology can read the medi
 
 exports[`Canonical Live Media Loader renders a figure caption 1`] = `
 <div
-  class="mediaLoaderPlaceholder css-1r8vrs6"
+  class="css-1r8vrs6"
   data-e2e="media-loader__placeholder"
 >
   <div
@@ -145,7 +145,7 @@ exports[`Canonical Live Media Loader renders a figure caption 1`] = `
 
 exports[`Canonical Live Media Loader renders a placeholder 1`] = `
 <div
-  class="mediaLoaderPlaceholder css-1r8vrs6"
+  class="css-1r8vrs6"
   data-e2e="media-loader__placeholder"
 >
   <div
@@ -232,7 +232,7 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
   data-e2e="media-loader__container"
 >
   <div
-    class="mediaLoaderPlaceholder css-1r8vrs6"
+    class="css-1r8vrs6"
     data-e2e="media-loader__placeholder"
   >
     <div

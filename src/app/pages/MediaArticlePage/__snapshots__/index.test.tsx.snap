@@ -825,7 +825,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
               data-e2e="media-loader__container"
             >
               <div
-                class="mediaLoaderPlaceholder emotion-7"
+                class="emotion-7"
                 data-e2e="media-loader__placeholder"
               >
                 <div
