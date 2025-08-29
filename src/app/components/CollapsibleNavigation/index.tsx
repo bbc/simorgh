@@ -125,8 +125,9 @@ const CollapsibleNavigation = ({
                             href={link.href}
                             css={styles.subNavLink}
                             aria-labelledby={linkLabelId}
-                          >
-                            <span id={linkLabelId}>{link.label}</span>
+                          > 
+                            {/* This is just a concept If altLabel is present then add aria-lapel on element*/}
+                            <span id={linkLabelId} lang={link.lang} aria-label={link.altLabel}>{link.label}</span>
                           </a>
                         </li>
                       );

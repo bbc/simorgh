@@ -14,8 +14,17 @@ const CollapsibleNavigationSections: CollapsibleNavigationSection[] = [
         id: 'afaanoromoo',
         href: 'https://www.bbc.com/afaanoromoo',
         label: 'Oduu Afaan Oromootiin',
+        lang: 'om',
+        altLabel: 'News in Afaan Oromo',
       },
-      { id: 'amharic', href: 'https://www.bbc.com/amharic', label: 'ዜና በአማርኛ' },
+      { id: 
+        'amharic',
+        href: 'https://www.bbc.com/amharic',
+        label: 'ዜና በአማርኛ',
+        lang  : 'am-ET',
+        // or add Latin pronunciation:
+        altLabel: 'Zena beAmharigna',
+      },
       {
         id: 'afrique',
         href: 'https://www.bbc.com/afrique',
