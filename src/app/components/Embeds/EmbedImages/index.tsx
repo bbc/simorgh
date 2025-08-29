@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { PropsWithChildren, useContext } from 'react';
+import { PropsWithChildren, use } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import styles from './index.styles';
@@ -12,7 +12,7 @@ type Props = {
 };
 
 const EmbedImages = ({ blocks: embedImages }: PropsWithChildren<Props>) => {
-  const { isAmp, env, isLite } = useContext(RequestContext);
+  const { isAmp, env, isLite } = use(RequestContext);
   const ampImage = embedImages?.[1]?.model?.blocks;
   const canonicalImage = embedImages?.[2]?.model?.blocks;
   const image = isAmp ? ampImage : canonicalImage;
@@ -37,7 +37,7 @@ const EmbedImages = ({ blocks: embedImages }: PropsWithChildren<Props>) => {
 
   return (
     <div css={styles.embedDiv} data-e2e="embed-image">
-      <Image src={src} alt={alt} width={width} height={height} isAmp={isAmp} />
+      <Image src={src} alt={alt} width={width} height={height} />
     </div>
   );
 };

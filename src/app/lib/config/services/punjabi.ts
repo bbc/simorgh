@@ -57,10 +57,12 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'ਸਭ ਦੋਖੇ',
       home: 'ਹੋਮ ਪੇਜ',
+      continueReading: 'ਅੱਗੇ ਪੜ੍ਹੋ',
       currentPage: 'ਮੌਜੂਦਾ ਪੇਜ',
       skipLinkText: `ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ`,
       relatedContent: 'ਇਸ ਖ਼ਬਰ ਬਾਰੇ ਹੋਰ',
       relatedTopics: 'ਸਬੰਧਿਤ ਵਿਸ਼ੇ',
+      moreOnThis: '',
       navMenuText: 'ਸੈਕਸ਼ਨਜ਼',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
@@ -230,6 +232,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Duration',
         recentEpisodes: 'ਤਾਜ਼ਾ ਐਪੀਸੋਡ',
         closeVideo: 'ਬਾਹਰ ਜਾਓ',
+        endOfContentClose: 'ਇਸ ਸਮੱਗਰੀ ਦਾ ਅੰਤ। ਬਾਹਰ ਜਾਓ',
       },
       socialEmbed: {
         caption: {

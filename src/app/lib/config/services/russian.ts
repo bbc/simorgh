@@ -119,6 +119,7 @@ export const mainTranslations = {
   skipLinkText: 'Перейти к содержанию',
   relatedContent: 'Читайте также',
   relatedTopics: 'Темы',
+  moreOnThis: '',
   mediaAssetPage: {
     mediaPlayer: 'Медиа плеер',
     audioPlayer: 'Аудио плеер',
@@ -207,6 +208,7 @@ export const mainTranslations = {
     podcastExternalLinks: 'Этот подкаст доступен на',
     download: 'Загрузить эпизод',
     closeVideo: 'Выйти',
+    endOfContentClose: 'Конец этого контента. Выйти',
   },
   socialEmbed: {
     caption: {

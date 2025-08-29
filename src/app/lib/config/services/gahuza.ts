@@ -74,6 +74,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'Simbira ku birimwo',
       relatedContent: 'Ibindi bisa n’ibi',
       relatedTopics: 'Ibindi bisa n’ibi',
+      moreOnThis: '',
       navMenuText: 'Imice',
       liteSite: {
         onboardingMessage: `Uriko ubona ku rubuga aherekana amakuru mu nyandiko gusa, hakoresha uburyo buke. Ja ku rubuga nyamukuru ubone amakuru mu nyandiko iherekejwe n'amasanamu.`,
@@ -259,6 +260,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'Iyi podcast iraboneka kandi kuri',
         download: 'Pakurura ikiganiro',
         closeVideo: 'Sohoka',
+        endOfContentClose: 'Iyi nkuru irangiye. Sohoka',
       },
       socialEmbed: {
         caption: {

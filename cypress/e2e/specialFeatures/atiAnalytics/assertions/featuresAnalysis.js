@@ -8,6 +8,8 @@ export const assertFeaturesAnalysisComponentView = ({
   contentType,
   useReverb,
   path,
+  applicationType,
+  siteId,
 }) => {
   it('should send a view event for the Features & Analysis component', () => {
     interceptATIAnalyticsBeacons();
@@ -20,6 +22,8 @@ export const assertFeaturesAnalysisComponentView = ({
       pageIdentifier,
       contentType,
       useReverb,
+      applicationType,
+      siteId,
     });
   });
 };
@@ -29,6 +33,8 @@ export const assertFeaturesAnalysisComponentClick = ({
   contentType,
   useReverb,
   path,
+  applicationType,
+  siteId,
 }) => {
   it('should send a click event for the Features & Analysis component', () => {
     interceptATIAnalyticsBeacons();
@@ -44,6 +50,8 @@ export const assertFeaturesAnalysisComponentClick = ({
       pageIdentifier,
       contentType,
       useReverb,
+      applicationType,
+      siteId,
     });
   });
 };

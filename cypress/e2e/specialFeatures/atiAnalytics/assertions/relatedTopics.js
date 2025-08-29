@@ -8,6 +8,8 @@ export const assertRelatedTopicsComponentView = ({
   contentType,
   useReverb,
   path,
+  applicationType,
+  siteId,
 }) => {
   it('should send a view event for the Related Topics component', () => {
     interceptATIAnalyticsBeacons();
@@ -22,6 +24,8 @@ export const assertRelatedTopicsComponentView = ({
       pageIdentifier,
       contentType,
       useReverb,
+      applicationType,
+      siteId,
     });
   });
 };
@@ -31,6 +35,8 @@ export const assertRelatedTopicsComponentClick = ({
   contentType,
   useReverb,
   path,
+  applicationType,
+  siteId,
 }) => {
   it('should send a click event for the Related Topics component', () => {
     interceptATIAnalyticsBeacons();
@@ -48,6 +54,8 @@ export const assertRelatedTopicsComponentClick = ({
       pageIdentifier,
       contentType,
       useReverb,
+      applicationType,
+      siteId,
     });
   });
 };

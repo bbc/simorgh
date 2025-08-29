@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import styled from '@emotion/styled';
 import path from 'ramda/src/path';
 import {
@@ -43,7 +43,7 @@ const FauxHeadlineContainer = ({
     },
   ],
 }) => {
-  const { script, service } = useContext(ServiceContext);
+  const { script, service } = use(ServiceContext);
 
   const arrayOfFragments = path(
     ['0', 'model', 'blocks', '0', 'model', 'blocks'],

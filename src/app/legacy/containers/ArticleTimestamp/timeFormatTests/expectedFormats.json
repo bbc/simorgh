@@ -89,6 +89,16 @@
       "exact date and time with timezone": "12 Gorffennaf 2019, 13:55 BST"
     }
   },
+  "dari": {
+    "default": {
+      "one minute ago": "یک دقیقه پیش",
+      "five minutes ago": "۵ دقیقه پیش",
+      "one hour ago": "یک ساعت پیش",
+      "five hours ago": "۵ ساعت پیش",
+      "exact date": "۱۸ میزان ۱۳۹۷ - ۱۰ جدی ۲۰۱۸",
+      "exact date and time with timezone": "۲۱ سرطان ۱۳۹۸ - ۱۲ میزان ۲۰۱۹، ۱۷:۲۵ +۰۴۳۰"
+    }
+  },
   "gahuza": {
     "default": {
       "one minute ago": "Haciye umunota 1",
@@ -235,8 +245,8 @@
       "five minutes ago": "۵ دقیقې وړاندې",
       "one hour ago": "۱ ساعت وړاندې",
       "five hours ago": "۵ ساعتونه وړاندې",
-      "exact date": "۱۰ اکتوبر ۲۰۱۸",
-      "exact date and time with timezone": "۱۲ جولای ۲۰۱۹، ۱۲:۵۵ GMT"
+      "exact date": "۱۸ تله ۱۳۹۷ - ۱۰ اکتوبر ۲۰۱۸",
+      "exact date and time with timezone": "۲۱ چنګاښ ۱۳۹۸ - ۱۲ جولای ۲۰۱۹، ۱۲:۵۵ GMT"
     }
   },
   "persian": {
@@ -245,8 +255,8 @@
       "five minutes ago": "۵ دقیقه پیش",
       "one hour ago": "یک ساعت پیش",
       "five hours ago": "۵ ساعت پیش",
-      "exact date": "۱۰ اکتبر ۲۰۱۸",
-      "exact date and time with timezone": "۱۲ ژوئیه ۲۰۱۹، ۱۲:۵۵ GMT"
+      "exact date": "۱۸ مهر ۱۳۹۷ - ۱۰ اکتبر ۲۰۱۸",
+      "exact date and time with timezone": "۲۱ تیر ۱۳۹۸ - ۱۲ ژوئیه ۲۰۱۹، ۱۲:۵۵ GMT"
     }
   },
   "pidgin": {
@@ -266,7 +276,7 @@
       "one hour ago": "godzinę temu",
       "five hours ago": "5 godzin temu",
       "exact date": "10 października 2018",
-      "exact date and time with timezone": "12 lipca 2019, 13:55 BST"
+      "exact date and time with timezone": "12 lipca 2019, 14:55 CEST"
     }
   },
   "portuguese": {

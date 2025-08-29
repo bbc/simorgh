@@ -8,6 +8,8 @@ export const assertBillboardComponentView = ({
   contentType,
   useReverb,
   path,
+  applicationType,
+  siteId,
 }) => {
   it('should send a view event for the Billboard component', () => {
     interceptATIAnalyticsBeacons();
@@ -22,6 +24,8 @@ export const assertBillboardComponentView = ({
       pageIdentifier,
       contentType,
       useReverb,
+      applicationType,
+      siteId,
     });
   });
 };
@@ -31,6 +35,8 @@ export const assertBillboardComponentClick = ({
   contentType,
   useReverb,
   path,
+  applicationType,
+  siteId,
 }) => {
   it('should send a click event for the Billboard component', () => {
     interceptATIAnalyticsBeacons();
@@ -48,6 +54,8 @@ export const assertBillboardComponentClick = ({
       pageIdentifier,
       contentType,
       useReverb,
+      applicationType,
+      siteId,
     });
   });
 };

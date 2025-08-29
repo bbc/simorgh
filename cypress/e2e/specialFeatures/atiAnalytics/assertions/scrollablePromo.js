@@ -8,6 +8,8 @@ export const assertScrollablePromoComponentView = ({
   contentType,
   useReverb,
   path,
+  applicationType,
+  siteId,
 }) => {
   it('should send a view event for the Scrollable Promo component', () => {
     interceptATIAnalyticsBeacons();
@@ -22,6 +24,8 @@ export const assertScrollablePromoComponentView = ({
       pageIdentifier,
       contentType,
       useReverb,
+      applicationType,
+      siteId,
     });
   });
 };
@@ -31,6 +35,8 @@ export const assertScrollablePromoComponentClick = ({
   contentType,
   useReverb,
   path,
+  applicationType,
+  siteId,
 }) => {
   it('should send a click event for the Scrollable Promo component', () => {
     interceptATIAnalyticsBeacons();
@@ -48,6 +54,8 @@ export const assertScrollablePromoComponentClick = ({
       pageIdentifier,
       contentType,
       useReverb,
+      applicationType,
+      siteId,
     });
   });
 };

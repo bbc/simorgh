@@ -14,6 +14,7 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'newsround',
     atiAnalyticsProducerId: '65',
     atiAnalyticsProducerName: 'NEWSROUND',
+    useReverb: true,
     chartbeatDomain: 'bbc.co.uk',
     brandName: 'CBBC Newsround',
     product: 'CBBC Newsround',
@@ -49,6 +50,7 @@ export const service: DefaultServiceConfig = {
       currentPage: 'Current page',
       skipLinkText: 'Skip to content',
       relatedContent: 'Related content',
+      moreOnThis: '',
       navMenuText: 'Sections',
       mediaAssetPage: {
         mediaPlayer: 'Media player',

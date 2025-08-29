@@ -9,6 +9,8 @@ export const assertScrollableNavigationComponentView = ({
   componentTrackingContentType,
   useReverb,
   path,
+  applicationType,
+  siteId,
 }) => {
   it('should send a view event for the Scrollable Navigation component', () => {
     interceptATIAnalyticsBeacons();
@@ -23,6 +25,8 @@ export const assertScrollableNavigationComponentView = ({
       pageIdentifier,
       contentType: componentTrackingContentType || contentType,
       useReverb,
+      applicationType,
+      siteId,
     });
   });
 };
@@ -33,6 +37,8 @@ export const assertScrollableNavigationComponentClick = ({
   componentTrackingContentType,
   useReverb,
   path,
+  applicationType,
+  siteId,
 }) => {
   it('should send a click event for the Scrollable Navigation component', () => {
     interceptATIAnalyticsBeacons();
@@ -50,6 +56,8 @@ export const assertScrollableNavigationComponentClick = ({
       pageIdentifier,
       contentType: componentTrackingContentType || contentType,
       useReverb,
+      applicationType,
+      siteId,
     });
   });
 };
@@ -61,6 +69,8 @@ export const assertDropdownNavigationComponentView = ({
   componentTrackingContentType,
   useReverb,
   path,
+  applicationType,
+  siteId,
 }) => {
   it('should send a view event for the Dropdown Navigation component', () => {
     interceptATIAnalyticsBeacons();
@@ -74,6 +84,8 @@ export const assertDropdownNavigationComponentView = ({
       pageIdentifier,
       contentType: componentTrackingContentType || contentType,
       useReverb,
+      applicationType,
+      siteId,
     });
   });
 };
@@ -84,6 +96,8 @@ export const assertDropdownNavigationComponentClick = ({
   componentTrackingContentType,
   useReverb,
   path,
+  applicationType,
+  siteId,
 }) => {
   it('should send a click event for the Dropdown Navigation component', () => {
     interceptATIAnalyticsBeacons();
@@ -100,6 +114,8 @@ export const assertDropdownNavigationComponentClick = ({
       pageIdentifier,
       contentType: componentTrackingContentType || contentType,
       useReverb,
+      applicationType,
+      siteId,
     });
   });
 };

@@ -73,6 +73,7 @@ const defaultCyrillicConfig = {
     skipLinkText: 'Саҳифага ўтиш',
     relatedContent: 'Мавзуга алоқадор',
     relatedTopics: 'Алоқадор мавзулар',
+    moreOnThis: '',
     navMenuText: 'Бўлимлар',
     mediaAssetPage: {
       mediaPlayer: 'Медиа плейер',
@@ -244,6 +245,7 @@ const defaultCyrillicConfig = {
       duration: 'Давомийлиги',
       recentEpisodes: 'Олдинги дастурлар',
       closeVideo: 'Чиқиш',
+      endOfContentClose: 'Бу контентнинг охири. Чиқиш',
     },
     socialEmbed: {
       caption: {

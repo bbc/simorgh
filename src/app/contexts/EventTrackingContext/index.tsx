@@ -1,9 +1,4 @@
-import React, {
-  createContext,
-  PropsWithChildren,
-  useContext,
-  useMemo,
-} from 'react';
+import React, { createContext, PropsWithChildren, use, useMemo } from 'react';
 
 import { RequestContext } from '../RequestContext';
 import useToggle from '../../hooks/useToggle';
@@ -30,10 +25,7 @@ import {
 import { PageTypes, Platforms } from '../../models/types/global';
 import { buildATIEventTrackingParams } from '../../components/ATIAnalytics/params';
 import { ServiceContext } from '../ServiceContext';
-import {
-  ATIData,
-  ATIEventTrackingProps,
-} from '../../components/ATIAnalytics/types';
+import { ATIData } from '../../components/ATIAnalytics/types';
 
 type EventTrackingContextProps =
   | {
@@ -94,10 +86,10 @@ export const EventTrackingContextProvider = ({
   children,
   atiData,
 }: PropsWithChildren<EventTrackingProviderProps>) => {
-  const requestContext = useContext(RequestContext);
+  const requestContext = use(RequestContext);
   const { pageType } = requestContext;
 
-  const serviceContext = useContext(ServiceContext);
+  const serviceContext = use(ServiceContext);
   const { atiAnalyticsProducerId, atiAnalyticsProducerName } = serviceContext;
 
   const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
@@ -111,7 +103,7 @@ export const EventTrackingContextProvider = ({
           requestContext,
           serviceContext,
           atiData,
-        }) as ATIEventTrackingProps;
+        });
 
       return {
         campaignID,

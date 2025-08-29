@@ -1,102 +1,100 @@
 import moment from 'moment-timezone';
-
-import buildIChefURL from '#lib/utilities/ichefURL';
 import filterForBlockType from '#lib/utilities/blockHandlers';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import onClient from '#app/lib/utilities/onClient';
+import { GROUP_3_MIN_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 import {
   PortraitClipMediaBlock,
   ConfigBuilderProps,
   ConfigBuilderReturnProps,
   PlaylistItem,
 } from '../types';
-import getCaptionBlock from '../utils/getCaptionBlock';
-import shouldDisplayAds from '../utils/shouldDisplayAds';
-import { getExternalEmbedUrl } from '../utils/urlConstructors';
-import AUDIO_UI_CONFIG from './constants';
-
-const DEFAULT_WIDTH = 512;
 
 export default ({
-  id,
-  lang,
   blocks,
   basePlayerConfig,
-  adsEnabled = false,
-  showAdsBasedOnLocation = false,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
-  const portraitClipMediaBlock: PortraitClipMediaBlock = filterForBlockType(
-    blocks,
-    'portraitClipMedia',
-  );
+  const { model }: PortraitClipMediaBlock =
+    filterForBlockType(blocks, 'portraitClipMedia') ?? {};
 
-  const { images, video, type } = portraitClipMediaBlock?.model || {};
+  const { video } = model;
+  const { id, title, version, holdingImageURL } = video;
 
-  const { source, urlTemplate: locator } = images?.[1] ?? {};
+  const items: PlaylistItem[] = [
+    {
+      versionID: version?.id,
+      kind: version?.kind,
+      duration: moment.duration(version?.duration || 'PT0S').asSeconds(),
+    },
+  ];
 
-  const originCode = source?.replace('Image', '');
+  const {
+    SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
+    SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
+  } = getEnvConfig();
 
-  const versionID = video?.version?.id;
+  let isMobile = false;
 
-  const clipISO8601Duration = video?.version?.duration;
-
-  const rawDuration = moment.duration(clipISO8601Duration).asSeconds();
-
-  const title = video?.title;
-
-  const videoId = video?.id;
-
-  const captionBlock = getCaptionBlock(blocks, 'live');
-
-  const caption =
-    captionBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
-
-  const kind = video?.version?.kind || 'programme';
-
-  const guidanceMessage = video?.version?.guidance;
-
-  const showAds = shouldDisplayAds({
-    adsEnabled,
-    showAdsBasedOnLocation,
-    duration: rawDuration,
-  });
-
-  const embeddingAllowed = video?.isEmbeddingAllowed ?? false;
-
-  const holdingImageURL = buildIChefURL({
-    originCode,
-    locator,
-    resolution: DEFAULT_WIDTH,
-  });
-
-  const items: PlaylistItem[] = [{ versionID, kind, duration: rawDuration }];
-
-  if (showAds) items.unshift({ kind: 'advert' });
-
-  const externalEmbedUrl = getExternalEmbedUrl({ id, versionID, lang });
+  if (onClient()) {
+    const matchMedia = window.matchMedia(
+      `(max-width: ${GROUP_3_MIN_WIDTH_BP}rem)`,
+    );
+    if (matchMedia.matches) {
+      isMobile = true;
+    } else {
+      isMobile = false;
+    }
+  }
 
   return {
-    mediaType: type || 'video',
+    mediaType: 'video',
     playerConfig: {
       ...basePlayerConfig,
-      ...(externalEmbedUrl && { externalEmbedUrl }),
       autoplay: true,
+      supportFakeFullscreen: true,
       playlistObject: {
         title,
-        summary: caption || '',
         holdingImageURL,
         items,
-        ...(guidanceMessage && { guidance: guidanceMessage }),
-        ...(embeddingAllowed && { embedRights: 'allowed' }),
       },
+      ...(isMobile && {
+        plugins: {
+          toLoad: [
+            {
+              html: `${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}smpPlugins/fullscreen.js`,
+              playerOnly: true,
+            },
+          ],
+        },
+      }),
       ui: {
         ...basePlayerConfig.ui,
-        ...(type === 'audio' && AUDIO_UI_CONFIG),
+        swipable: {
+          enabled: true,
+          direction: 'Y',
+        },
+        poster: {
+          availableWhenSettingUp: true,
+        },
+        controls: {
+          enabled: true,
+          includeNextButton: isMobile,
+          includePreviousButton: isMobile,
+        },
+        fullscreen: {
+          enabled: isMobile,
+          useCloseIconForExitFullscreen: true,
+        },
+        pictureInPicture: {
+          enabled: false,
+        },
       },
       statsObject: {
         ...basePlayerConfig.statsObject,
-        ...(videoId && { clipPID: videoId }),
+        ...(id && { clipPID: id }),
       },
     },
-    showAds,
+    showAds: false,
     orientation: 'portrait',
   };
 };

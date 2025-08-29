@@ -16,7 +16,7 @@ import routes from '../app/routes';
 import * as renderDocument from './Document';
 import sendCustomMetrics from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
-import { getMvtVaryHeaders } from './utilities/mvtHeader';
+import { getExperimentVaryHeaders } from './utilities/experimentHeader';
 
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`
 dotenv.config({ path: './envConfig/local.env' });
@@ -100,7 +100,7 @@ const mockRouteProps = ({
 };
 
 jest.mock('./utilities/customMetrics');
-jest.mock('./utilities/mvtHeader');
+jest.mock('./utilities/experimentHeader');
 
 const renderDocumentSpy = jest.spyOn(renderDocument, 'default');
 
@@ -131,6 +131,7 @@ const testRenderedData =
         isApp={isApp}
         legacyScripts="__mock_script_elements__"
         modernScripts="__mock_script_elements__"
+        service={service}
         links="__mock_link_elements__"
       />,
     );
@@ -165,7 +166,7 @@ const assertNon200ResponseCustomMetrics = ({
 }) => {
   it('should send custom metrics for non 200 response status code', async () => {
     await makeRequest(requestUrl);
-    expect(sendCustomMetrics).toBeCalledWith({
+    expect(sendCustomMetrics).toHaveBeenCalledWith({
       metricName: NON_200_RESPONSE,
       pageType,
       requestUrl,
@@ -1340,14 +1341,14 @@ describe('Server', () => {
     service: 'pashto',
     serviceId: 'bbc_pashto_tv',
     brandEpisode: 'tv',
-    mediaId: 'w172xcldhhrhmcf',
+    mediaId: 'w172xtq7x8660m1',
   });
 
   testOnDemandTvEpisodePages({
     platform: 'canonical',
     service: 'pashto',
     serviceId: 'bbc_pashto_tv',
-    mediaId: 'w172xcldhhrhmcf',
+    mediaId: 'w172xtq7x8660m1',
   });
 
   testAssetPages({
@@ -1448,6 +1449,7 @@ describe('Server', () => {
             isAmp={isAmp}
             legacyScripts="__mock_script_elements__"
             modernScripts="__mock_script_elements__"
+            service={service}
             links="__mock_link_elements__"
           />,
         );
@@ -1537,7 +1539,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
     mockRouteProps({
       dataResponse: successDataResponse,
     });
-    getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
+    getExperimentVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
 
     const { header } = await makeRequest('/mundo/c0000000001o');
 
@@ -1550,7 +1552,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
     mockRouteProps({
       dataResponse: successDataResponse,
     });
-    getMvtVaryHeaders.mockReturnValue('');
+    getExperimentVaryHeaders.mockReturnValue('');
 
     const { header } = await makeRequest('/mundo/articles/c0000000001o');
 
@@ -1562,7 +1564,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
       dataResponse: successDataResponse,
       isAmp: true,
     });
-    getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
+    getExperimentVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
 
     const { header } = await makeRequest('/mundo/articles/c0000000001o');
 
@@ -1591,7 +1593,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
       dataResponse: successDataResponse,
       isAmp: true,
     });
-    getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
+    getExperimentVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
 
     await makeRequest('/mundo/articles/c0000000001o', {
       'x-bbc-edge-isuk': 'no',
@@ -1609,7 +1611,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
       dataResponse: successDataResponse,
       isAmp: true,
     });
-    getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
+    getExperimentVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
 
     await makeRequest('/mundo/articles/c0000000001o', {
       'x-country': 'gb',
@@ -1627,7 +1629,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
       dataResponse: successDataResponse,
       isAmp: true,
     });
-    getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
+    getExperimentVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
 
     await makeRequest('/mundo/articles/c0000000001o', {});
 

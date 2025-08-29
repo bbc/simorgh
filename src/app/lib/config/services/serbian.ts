@@ -165,6 +165,7 @@ export const service: SerbianConfig = {
       skipLinkText: 'Pređite na sadržaj',
       relatedContent: 'Povezano',
       relatedTopics: 'Povezane teme',
+      moreOnThis: '',
       navMenuText: 'Odeljci',
       mediaAssetPage: {
         mediaPlayer: 'Media plejer',
@@ -334,6 +335,7 @@ export const service: SerbianConfig = {
         nextRadioShow: 'Sledeća radio emisija',
         duration: 'Trajanje',
         closeVideo: 'Izađi',
+        endOfContentClose: 'Kraj ovog sadržaja. Izađi',
       },
       socialEmbed: {
         caption: {
@@ -740,6 +742,7 @@ export const service: SerbianConfig = {
         duration: 'Трајање',
         recentEpisodes: 'Претходне епизоде',
         closeVideo: 'Изађи',
+        endOfContentClose: 'Крај садржаја. Излаз',
       },
       socialEmbed: {
         caption: {

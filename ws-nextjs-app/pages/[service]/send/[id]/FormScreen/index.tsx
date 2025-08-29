@@ -1,7 +1,7 @@
 /** @jsx jsx */
-import React, { useEffect, useRef, useContext } from 'react';
-import { useRouter } from 'next/router';
+import React, { useEffect, useRef, use } from 'react';
 import { jsx } from '@emotion/react';
+import { useRouter } from 'next/router';
 import Heading from '#app/components/Heading';
 import { LiveRegionContextProvider } from '#app/components/LiveRegion/LiveRegionContext';
 import LiveRegion from '#app/components/LiveRegion';
@@ -43,7 +43,7 @@ export default function FormScreen({
         validationRequired = fallbackTranslations.validationRequired,
       } = {},
     },
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
   const ref = useRef<HTMLDivElement>(null);
 

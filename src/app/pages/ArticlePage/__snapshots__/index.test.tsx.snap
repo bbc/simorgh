@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Article Page should render a ltr article (pidgin) with most read correctly 1`] = `
 .emotion-0 {
@@ -33,6 +33,12 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
 
 .emotion-3 {
   padding-bottom: 1.5rem;
+}
+
+.emotion-3 .continueReadingFocusedElement {
+  outline: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF;
+  outline-offset: 0.1875rem;
 }
 
 @media (max-width: 14.9375rem) {
@@ -826,7 +832,9 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
   <div
     class="emotion-0"
   >
-    <noscript />
+    <div>
+      ATI Analytics
+    </div>
     <div>
       chartbeat
     </div>
@@ -1147,6 +1155,12 @@ exports[`Article Page should render a news article correctly 1`] = `
 
 .emotion-3 {
   padding-bottom: 1.5rem;
+}
+
+.emotion-3 .continueReadingFocusedElement {
+  outline: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF;
+  outline-offset: 0.1875rem;
 }
 
 @media (max-width: 14.9375rem) {
@@ -2219,7 +2233,9 @@ exports[`Article Page should render a news article correctly 1`] = `
   <div
     class="emotion-0"
   >
-    <noscript />
+    <div>
+      ATI Analytics
+    </div>
     <div>
       chartbeat
     </div>
@@ -2791,6 +2807,12 @@ exports[`Article Page should render a news article with headline in the middle c
   padding-bottom: 1.5rem;
 }
 
+.emotion-3 .continueReadingFocusedElement {
+  outline: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF;
+  outline-offset: 0.1875rem;
+}
+
 .emotion-4 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -3074,7 +3096,9 @@ exports[`Article Page should render a news article with headline in the middle c
   <div
     class="emotion-0"
   >
-    <noscript />
+    <div>
+      ATI Analytics
+    </div>
     <div>
       chartbeat
     </div>
@@ -3167,6 +3191,12 @@ exports[`Article Page should render a news article without headline correctly 1`
 
 .emotion-3 {
   padding-bottom: 1.5rem;
+}
+
+.emotion-3 .continueReadingFocusedElement {
+  outline: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF;
+  outline-offset: 0.1875rem;
 }
 
 .emotion-4 {
@@ -3315,7 +3345,9 @@ exports[`Article Page should render a news article without headline correctly 1`
   <div
     class="emotion-0"
   >
-    <noscript />
+    <div>
+      ATI Analytics
+    </div>
     <div>
       chartbeat
     </div>
@@ -3387,6 +3419,12 @@ exports[`Article Page should render a rtl article (persian) with most read corre
 
 .emotion-3 {
   padding-bottom: 1.5rem;
+}
+
+.emotion-3 .continueReadingFocusedElement {
+  outline: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF;
+  outline-offset: 0.1875rem;
 }
 
 @media (max-width: 14.9375rem) {
@@ -4400,7 +4438,9 @@ exports[`Article Page should render a rtl article (persian) with most read corre
   <div
     class="emotion-0"
   >
-    <noscript />
+    <div>
+      ATI Analytics
+    </div>
     <div>
       chartbeat
     </div>

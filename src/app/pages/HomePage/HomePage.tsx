@@ -1,6 +1,6 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import ATIAnalytics from '../../components/ATIAnalytics';
@@ -43,7 +43,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
     homePageTitle,
     lang,
     brandName,
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
   const { topStoriesTitle, home } = translations;
   const {
     title,
@@ -51,7 +51,9 @@ const HomePage = ({ pageData }: HomePageProps) => {
     curations,
     metadata: { atiAnalytics },
   } = pageData;
+
   const itemList = getItemList({ curations, name: brandName });
+
   return (
     <>
       <ChartbeatAnalytics title={title} />
@@ -124,6 +126,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       embed={embed}
                       portraitVideo={portraitVideo}
                       renderVisuallyHiddenH2Title={position === 0}
+                      curationId={curationId}
                     />
                     {index === indexOfFirstNonBanner && <MPU />}
                   </React.Fragment>

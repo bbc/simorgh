@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { useContext } from 'react';
+import { use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './styles';
 import fallbackTranslations from '../fallbackTranslations';
@@ -10,7 +10,7 @@ const Submit = () => {
     translations: {
       ugc: { submitButton = fallbackTranslations.submitButton } = {},
     },
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
   return (
     <button css={styles.submit} type="submit">

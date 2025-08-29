@@ -1,98 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`AMP Articles A11y I can see the skip to content link 1`] = `"Skip to content"`;
 
-exports[`AMP Articles AMP Consent config 1`] = `
-{
-  "consents": {
-    "user-consent": {
-      "promptIfUnknownForGeoGroup": "eea",
-      "promptUI": "consent-prompt",
-    },
-  },
-  "policy": {
-    "default": {
-      "timeout": {
-        "fallbackAction": "reject",
-        "seconds": 0,
-      },
-      "waitFor": {
-        "user-consent": [],
-      },
-    },
-  },
-}
-`;
-
-exports[`AMP Articles AMP Geo config 1`] = `
-{
-  "AmpBind": true,
-  "ISOCountryGroups": {
-    "eea": [
-      "at",
-      "ax",
-      "be",
-      "bg",
-      "bl",
-      "cy",
-      "cz",
-      "de",
-      "dk",
-      "ea",
-      "ee",
-      "es",
-      "fi",
-      "fr",
-      "gb",
-      "gf",
-      "gg",
-      "gi",
-      "gp",
-      "gr",
-      "hr",
-      "hu",
-      "ic",
-      "ie",
-      "im",
-      "is",
-      "it",
-      "je",
-      "li",
-      "lt",
-      "lu",
-      "lv",
-      "mf",
-      "mq",
-      "mt",
-      "nc",
-      "nl",
-      "no",
-      "pf",
-      "pl",
-      "pm",
-      "pt",
-      "re",
-      "ro",
-      "se",
-      "si",
-      "sj",
-      "sk",
-      "tf",
-      "va",
-      "wf",
-      "yt",
-    ],
-    "gbOrUnknown": [
-      "gb",
-      "gg",
-      "im",
-      "je",
-      "uk",
-      "unknown",
-    ],
-  },
-}
-`;
+exports[`AMP Articles AMP Geo config 1`] = `"{"AmpBind":true,"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"],"gbOrUnknown":["gb","gg","im","je","uk","unknown"]}}"`;
 
 exports[`AMP Articles Footer Anchors should match text and url 1`] = `
 {
@@ -154,13 +64,6 @@ exports[`AMP Articles Footer Anchors should match text and url 9`] = `
 {
   "text": "Read about our approach to external linking.",
   "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
-}
-`;
-
-exports[`AMP Articles Footer Cookie Settings Button should match text and on handler 1`] = `
-{
-  "on": "tap:consent.prompt, cookie.show, AMP.setState({ isManagingSettings: true })",
-  "text": "Do not share or sell my info",
 }
 `;
 

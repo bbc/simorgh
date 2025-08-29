@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, use } from 'react';
 import styled from '@emotion/styled';
 import Navigation from '#psammead/psammead-navigation/src';
 import { ScrollableNavigation } from '#psammead/psammead-navigation/src/ScrollableNavigation';
@@ -9,8 +9,8 @@ import {
 import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
 import useMediaQuery from '#hooks/useMediaQuery';
 import { RequestContext } from '#app/contexts/RequestContext';
-import ScrollablePromo from '#components/ScrollablePromo';
-import isLiveEnv from '../../../lib/utilities/isLive';
+import TopBarOJs from '#app/components/TopBarOJs';
+import isLive from '#app/lib/utilities/isLive';
 
 const ScrollableWrapper = styled.div`
   position: relative;
@@ -43,9 +43,8 @@ const CanonicalNavigationContainer = ({
   scrollableListItems,
   dropdownListItems,
   blocks,
-  experimentVariant,
 }) => {
-  const { isLite } = useContext(RequestContext);
+  const { isLite } = use(RequestContext);
   const [isOpen, setIsOpen] = useState(false);
   useMediaQuery(`(max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX})`, event => {
     if (!event.matches) {
@@ -72,14 +71,7 @@ const CanonicalNavigationContainer = ({
       </ScrollableWrapper>
       <CanonicalDropdown isOpen={isOpen}>{dropdownListItems}</CanonicalDropdown>
       <Divider />
-      {isLiveEnv() === false &&
-        experimentVariant &&
-        experimentVariant !== 'off' && (
-          <ScrollablePromo
-            blocks={blocks}
-            experimentVariant={experimentVariant}
-          />
-        )}
+      {!isLive() && <TopBarOJs blocks={blocks} />}
     </Navigation>
   );
 };

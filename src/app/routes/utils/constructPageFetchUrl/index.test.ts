@@ -88,8 +88,8 @@ describe('constructPageFetchUrl', () => {
     ${CPS_ASSET}       | ${null}         | ${null}    | ${'live'}   | ${'/ukrainian/23263889'}                              | ${'https://mock-bff-path/?id=ukrainian%2F23263889&service=ukrainian&pageType=cpsAsset&serviceEnv=live'}
     ${CPS_ASSET}       | ${null}         | ${null}    | ${'local'}  | ${'/ukrainian'}                                       | ${'http://localhost/ukrainian'}
     ${CPS_ASSET}       | ${'serbian'}    | ${'cyr'}   | ${'local'}  | ${'/serbian/cyr'}                                     | ${'http://localhost/serbian/cyr'}
-    ${HOME_PAGE}       | ${null}         | ${null}    | ${'test'}   | ${'c0000000000t'}                                     | ${'https://mock-bff-path/?id=cl13j7792ljt&service=ukrainian&pageType=home&serviceEnv=test'}
-    ${HOME_PAGE}       | ${null}         | ${null}    | ${'live'}   | ${'c0000000000t'}                                     | ${'https://mock-bff-path/?id=c3eg5kglplrt&service=ukrainian&pageType=home&serviceEnv=live'}
+    ${HOME_PAGE}       | ${null}         | ${null}    | ${'test'}   | ${'c0000000000t'}                                     | ${'https://mock-bff-path/?id=ukrainian&service=ukrainian&pageType=home&serviceEnv=test'}
+    ${HOME_PAGE}       | ${null}         | ${null}    | ${'live'}   | ${'c0000000000t'}                                     | ${'https://mock-bff-path/?id=ukrainian&service=ukrainian&pageType=home&serviceEnv=live'}
     ${LIVE_PAGE}       | ${null}         | ${null}    | ${'local'}  | ${'c0000000000t'}                                     | ${'http://localhost/api/local/ukrainian/live/c0000000000t'}
     ${LIVE_PAGE}       | ${null}         | ${null}    | ${'local'}  | ${'c0000000000t.lite'}                                | ${'http://localhost/api/local/ukrainian/live/c0000000000t'}
     ${LIVE_PAGE}       | ${'serbian'}    | ${'cyr'}   | ${'local'}  | ${'c0000000000t'}                                     | ${'http://localhost/api/local/serbian/live/c0000000000t/cyr'}
@@ -128,11 +128,11 @@ describe('constructPageFetchUrl', () => {
     ${TOPIC_PAGE}      | ${'zhongwen'}   | ${'trad'}  | ${'live'}   | ${'/zhongwen/topics/cpydz21p02et/trad'}               | ${'https://mock-bff-path/?id=cpydz21p02et&service=zhongwen&pageType=topic&variant=trad&serviceEnv=live'}
     ${TOPIC_PAGE}      | ${'zhongwen'}   | ${'simp'}  | ${'live'}   | ${'/zhongwen/topics/c4vmr03pyn6t/simp'}               | ${'https://mock-bff-path/?id=c4vmr03pyn6t&service=zhongwen&pageType=topic&variant=simp&serviceEnv=live'}
     ${UGC_PAGE}        | ${'mundo'}      | ${null}    | ${'local'}  | ${'/u50853489'}                                       | ${'http://localhost/api/local/mundo/send/u50853489'}
-    ${TV_PAGE}         | ${'hausa'}      | ${null}    | ${'local'}  | ${'/hausa/bbc_hausa_tv/tv/w172yjj7rfhxp1p'}           | ${'http://localhost/hausa/bbc_hausa_tv/tv/w172yjj7rfhxp1p'}
+    ${TV_PAGE}         | ${'hausa'}      | ${null}    | ${'local'}  | ${'/hausa/bbc_hausa_tv/tv/w172yjj83ptptnj'}           | ${'http://localhost/hausa/bbc_hausa_tv/tv/w172yjj83ptptnj'}
     ${TV_PAGE}         | ${'hindi'}      | ${null}    | ${'local'}  | ${'/hindi/bbc_hindi_tv/tv_programmes/w13xttlw'}       | ${'http://localhost/hindi/bbc_hindi_tv/tv_programmes/w13xttlw'}
-    ${TV_PAGE}         | ${'hausa'}      | ${null}    | ${'test'}   | ${'/hausa/bbc_hausa_tv/tv/w172yjj7rfhxp1p'}           | ${'https://mock-bff-path/?id=hausa%2Fbbc_hausa_tv%2Ftv%2Fw172yjj7rfhxp1p&service=hausa&pageType=tv&serviceEnv=test'}
+    ${TV_PAGE}         | ${'hausa'}      | ${null}    | ${'test'}   | ${'/hausa/bbc_hausa_tv/tv/w172yjj83ptptnj'}           | ${'https://mock-bff-path/?id=hausa%2Fbbc_hausa_tv%2Ftv%2Fw172yjj83ptptnj&service=hausa&pageType=tv&serviceEnv=test'}
     ${TV_PAGE}         | ${'hindi'}      | ${null}    | ${'test'}   | ${'/hindi/bbc_hindi_tv/tv_programmes/w13xttlw'}       | ${'https://mock-bff-path/?id=hindi%2Fbbc_hindi_tv%2Ftv_programmes%2Fw13xttlw&service=hindi&pageType=tv&serviceEnv=test'}
-    ${TV_PAGE}         | ${'hausa'}      | ${null}    | ${'live'}   | ${'/hausa/bbc_hausa_tv/tv/w172yjj7rfhxp1p'}           | ${'https://mock-bff-path/?id=hausa%2Fbbc_hausa_tv%2Ftv%2Fw172yjj7rfhxp1p&service=hausa&pageType=tv&serviceEnv=live'}
+    ${TV_PAGE}         | ${'hausa'}      | ${null}    | ${'live'}   | ${'/hausa/bbc_hausa_tv/tv/w172yjj83ptptnj'}           | ${'https://mock-bff-path/?id=hausa%2Fbbc_hausa_tv%2Ftv%2Fw172yjj83ptptnj&service=hausa&pageType=tv&serviceEnv=live'}
     ${TV_PAGE}         | ${'hindi'}      | ${null}    | ${'live'}   | ${'/hindi/bbc_hindi_tv/tv_programmes/w13xttlw'}       | ${'https://mock-bff-path/?id=hindi%2Fbbc_hindi_tv%2Ftv_programmes%2Fw13xttlw&service=hindi&pageType=tv&serviceEnv=live'}
     ${LIVE_RADIO_PAGE} | ${'afrique'}    | ${null}    | ${'local'}  | ${'/afrique/bbc_afrique_radio/liveradio'}             | ${'http://localhost/afrique/bbc_afrique_radio/liveradio'}
     ${LIVE_RADIO_PAGE} | ${'afrique'}    | ${null}    | ${'test'}   | ${'/afrique/bbc_afrique_radio/liveradio'}             | ${'https://mock-bff-path/?id=bbc_afrique_radio&service=afrique&pageType=liveRadio&serviceEnv=test'}
@@ -163,7 +163,6 @@ describe('constructPageFetchUrl', () => {
 
   it.each`
     pageType           | service        | pathname                            | expected
-    ${HOME_PAGE}       | ${'foo'}       | ${'/foo/c0000000000t'}              | ${'Home ID is invalid'}
     ${LIVE_PAGE}       | ${'ukrainian'} | ${'foo'}                            | ${'Live ID is invalid'}
     ${TOPIC_PAGE}      | ${'ukrainian'} | ${'/ukrainian/topics/foo'}          | ${'Topic ID is invalid'}
     ${TOPIC_PAGE}      | ${'ukrainian'} | ${'/ukrainian/topics/c000000000t'}  | ${'Topic ID is invalid'}

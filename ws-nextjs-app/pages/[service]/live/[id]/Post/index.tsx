@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { jsx } from '@emotion/react';
 import pathOr from 'ramda/src/pathOr';
 import { OptimoBlock } from '#models/types/optimo';
@@ -68,7 +68,7 @@ const PostHeaderBanner = ({
         postDateFormat,
       },
     },
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
   const locale = serviceDatetimeLocale || datetimeLocale;
   const isRelative = isTenHoursAgo(new Date(curated).getTime());
   return (
@@ -154,7 +154,13 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
       />
     ),
     video: (props: { blocks: MediaBlock[] }) => (
-      <MediaLoader blocks={props.blocks} css={styles.bodyMedia} />
+      <MediaLoader
+        blocks={props.blocks}
+        css={[styles.bodyMedia, styles.videoPost]}
+      />
+    ),
+    audio: (props: { blocks: MediaBlock[] }) => (
+      <MediaLoader blocks={props.blocks} css={styles.audioPost} />
     ),
     social: SocialEmbedContainer,
   };

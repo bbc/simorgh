@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import is from 'ramda/src/is';
 import styled from '@emotion/styled';
 import {
@@ -8,6 +8,7 @@ import {
 } from '#psammead/gel-foundations/src/spacings';
 import { getMimeType } from '#lib/utilities/srcSet';
 import { ServiceContext } from '../../../contexts/ServiceContext';
+import { RequestContext } from '../../../contexts/RequestContext';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
 
 const paddingDir = ({ dir }) => `padding-${dir === 'rtl' ? 'left' : 'right'}`;
@@ -32,8 +33,11 @@ const smallImageSize = 128;
 const mediumImageSize = 256;
 const largeImageSize = 480;
 
-const OnDemandImage = ({ imageUrl, alt: altFromProps, dir = 'ltr' }) => {
-  const { defaultImageAltText } = useContext(ServiceContext);
+const OnDemandImage = ({ imageUrl, alt: altFromProps, className = '' }) => {
+  const { defaultImageAltText, dir } = use(ServiceContext);
+  const { isLite } = use(RequestContext);
+
+  if (isLite) return null;
 
   const alt = is(String, altFromProps) ? altFromProps : defaultImageAltText;
 
@@ -45,7 +49,7 @@ const OnDemandImage = ({ imageUrl, alt: altFromProps, dir = 'ltr' }) => {
   const sizes = '(min-width: 1008px) 228px, 30vw';
 
   return (
-    <ImageContainer data-e2e="on-demand-image" dir={dir}>
+    <ImageContainer data-e2e="on-demand-image" dir={dir} className={className}>
       <ImageWithPlaceholder
         src={src}
         alt={alt}

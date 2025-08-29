@@ -47,6 +47,13 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      readTime: {
+        readTimePrefix: 'Okuma süresi',
+        quick: 'Kısa haber',
+        long: 'Uzun haber',
+        minute: 'dk',
+        minutes: 'dk',
+      },
       pagination: {
         previousPage: 'Önceki',
         nextPage: 'Sonraki',
@@ -61,6 +68,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'İçeriğe götür',
       relatedContent: 'İlgili haberler',
       relatedTopics: 'İlgili Konular',
+      moreOnThis: '',
       navMenuText: 'Kategoriler',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
@@ -229,6 +237,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Duration',
         recentEpisodes: 'Diğerleri',
         closeVideo: 'Çıkış',
+        endOfContentClose: 'Bu içerik sona erdi. Çıkış',
       },
       socialEmbed: {
         caption: {
@@ -330,7 +339,7 @@ export const service: DefaultServiceConfig = {
         url: '/turkce/topics/ckdxn2xk95gt',
       },
       {
-        title: 'Orta Doğu',
+        title: 'Ortadoğu',
         url: '/turkce/topics/cg726y2qxg1t',
       },
       {

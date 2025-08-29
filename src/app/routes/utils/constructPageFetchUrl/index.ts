@@ -10,7 +10,6 @@ import {
   PageTypes,
 } from '#models/types/global';
 import handleError from '../handleError';
-import HOME_PAGE_CONFIG from '../../homePage/getInitialData/page-config';
 import {
   TOPIC_PAGE_CONFIG,
   TopicPagePaths,
@@ -70,13 +69,11 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
       break;
     case HOME_PAGE:
       getIdFunction = () => {
-        // ensure service is always defined before indexing
-        if (!service) return null;
-        return env !== 'local' ? HOME_PAGE_CONFIG?.[service]?.[env] : service;
+        return service;
       };
       break;
     case MOST_READ_PAGE:
-      getIdFunction = () => pageType;
+      getIdFunction = () => service;
       break;
     case LIVE_RADIO_PAGE:
       getIdFunction = (path: string) => {
@@ -219,8 +216,15 @@ const constructPageFetchUrl = ({
         fetchUrl = Url(`/${id}`);
         break;
       case HOME_PAGE: {
-        const variantPath = variant ? `/${variant}` : '';
-        fetchUrl = Url(`/${service}${variantPath}`);
+        if (process.env?.NEXTJS) {
+          const host = `http://${process.env.HOSTNAME || 'localhost'}`;
+          const port = process.env.PORT ? `:${process.env.PORT}` : '';
+          fetchUrl = Url(
+            `${host}${port}/api/local/${service}/homePage/${variant ? `${variant}` : 'index'}`,
+          );
+        } else {
+          fetchUrl = Url(`/${service}${variant ? `/${variant}` : ''}`);
+        }
         break;
       }
       case MOST_READ_PAGE:

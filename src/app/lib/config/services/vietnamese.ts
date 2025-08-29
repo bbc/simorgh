@@ -63,6 +63,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'Bỏ qua để xem nội dung',
       relatedContent: 'Tin liên quan',
       relatedTopics: 'Chủ đề liên quan',
+      moreOnThis: '',
       navMenuText: 'Mục',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
@@ -229,6 +230,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Thời lượng',
         recentEpisodes: 'Xem thêm',
         closeVideo: 'Thoát',
+        endOfContentClose: 'Kết thúc nội dung. Thoát',
       },
       socialEmbed: {
         caption: {
@@ -264,7 +266,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Mới nhất',
     },
     mostRead: {
-      header: 'Đọc nhiều or Phổ biến',
+      header: 'Phổ biến',
       lastUpdated: 'Cập nhật gần nhất:',
       numberOfItems: 10,
       hasMostRead: true,

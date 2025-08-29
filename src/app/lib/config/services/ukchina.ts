@@ -129,6 +129,7 @@ export const service: ChineseConfig = {
       skipLinkText: '跳过此内容',
       relatedContent: '更多相关内容',
       relatedTopics: '相关主题内容',
+      moreOnThis: '',
       navMenuText: '分类',
       mediaAssetPage: {
         mediaPlayer: '多媒体播放器',
@@ -282,6 +283,7 @@ export const service: ChineseConfig = {
         duration: '节目全长',
         recentEpisodes: '存档节目',
         closeVideo: '退出',
+        endOfContentClose: '此内容已结束。关闭',
       },
       socialEmbed: {
         caption: {
@@ -551,6 +553,7 @@ export const service: ChineseConfig = {
         duration: '節目全長',
         recentEpisodes: '存档节目',
         closeVideo: '退出',
+        endOfContentClose: '內容結尾。退出',
       },
       socialEmbed: {
         caption: {

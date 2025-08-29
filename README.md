@@ -2,7 +2,6 @@
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/cbca275e184057982f27/test_coverage)](https://codeclimate.com/github/bbc/simorgh/test_coverage)
 [![Known Vulnerabilities](https://snyk.io/test/github/bbc/simorgh/badge.svg)](https://snyk.io/test/github/bbc/simorgh)
-[![Maintainability](https://api.codeclimate.com/v1/badges/cbca275e184057982f27/maintainability)](https://codeclimate.com/github/bbc/simorgh/maintainability)
 [![Storybook](https://cdn.jsdelivr.net/gh/storybooks/brand@master/badge/badge-storybook.svg)](https://bbc.github.io/simorgh/)
 
 BBC World Service News websites are rendered using Simorgh, a ReactJS based application. Simorgh also renders AMP news article pages for World Service, Public Service News and BBC Sport.
@@ -73,7 +72,7 @@ If a user navigates to a url with a variant, and variant is set in cookie, the c
 
 #### withContexts
 
-The withContexts HOC is a wrapper that provides access to the different context providers available in the application. Any child component inside of these context providers has access to the context data via the useContexts hook.
+The withContexts HOC is a wrapper that provides access to the different context providers available in the application. Any child component inside of these context providers has access to the context data via the `use` hook.
 
 #### withPageWrapper
 

@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import { useContext } from 'react';
+import { use } from 'react';
 import { jsx, useTheme, Theme } from '@emotion/react';
 import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
@@ -65,7 +65,7 @@ import styles from './MediaArticlePage.styles';
 import { ComponentToRenderProps, TimestampProps } from './types';
 import checkIsLiveMedia from './utils/checkIsLiveMedia';
 
-import isPortraitVideo from '../utils/isPortraitVideo';
+import { isPortraitVideo } from '../utils/portraitVideo';
 
 const getAudioVideoComponent =
   (isCpsMap: boolean) => (props: ComponentToRenderProps) => {
@@ -144,7 +144,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
     isTrustProjectParticipant,
     showRelatedTopics,
     brandName,
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
 
   const {
@@ -167,7 +167,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const bylineLinkedData = bylineExtractor(bylineContribBlocks);
 
-  const hasByline = !!bylineLinkedData;
+  const hasByline = bylineLinkedData.length > 0;
 
   const articleAuthorTwitterHandle = hasByline
     ? getAuthorTwitterHandle(blocks)

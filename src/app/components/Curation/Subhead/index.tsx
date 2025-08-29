@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { Fragment, PropsWithChildren, useContext } from 'react';
+import { Fragment, PropsWithChildren, use } from 'react';
 
 import styles from './index.styles';
 
@@ -11,14 +11,23 @@ import { ServiceContext } from '../../../contexts/ServiceContext';
 interface Props {
   link?: string;
   id?: string;
+  [key: string]: unknown;
 }
 
-const Subhead = ({ children, link, id }: PropsWithChildren<Props>) => {
-  const { dir } = useContext(ServiceContext);
-
+const Subhead = ({
+  children,
+  link,
+  id,
+  ...curationSubheadingClickTracker
+}: PropsWithChildren<Props>) => {
+  const { dir } = use(ServiceContext);
   const Wrapper = link
     ? ({ children: innerChildren }: PropsWithChildren<Props>) => (
-        <a href={link} className="focusIndicatorDisplayBlock">
+        <a
+          href={link}
+          className="focusIndicatorDisplayBlock"
+          {...curationSubheadingClickTracker}
+        >
           <span>{innerChildren}</span>
           {dir === 'ltr' ? <RightChevron /> : <LeftChevron />}
         </a>

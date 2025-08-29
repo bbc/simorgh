@@ -52,11 +52,11 @@ describe('ScrollablePromo', () => {
   });
 
   describe('OJ Top Bar Promo', () => {
-    it('should display Top Stories content when experimentVariant is top_bar_top_stories', () => {
+    it('should display Top Stories content when experimentVariant is top-bar-top-stories', () => {
       const { container } = render(
         <ScrollablePromo
           block={topStoriesBlocks[0]}
-          experimentVariant="top_bar_top_stories"
+          experimentVariant="top-bar-top-stories"
         />,
       );
       const expectedHeadline =
@@ -65,42 +65,55 @@ describe('ScrollablePromo', () => {
       expect(container).toHaveTextContent(expectedHeadline);
     });
 
-    it('should display Most Read content when experimentVariant is top_bar_most_read', () => {
+    it('should display Top Stories content when experimentVariant is read-more-a-and-top-stories', () => {
+      const { container } = render(
+        <ScrollablePromo
+          block={topStoriesBlocks[0]}
+          experimentVariant="read-more-a-and-top-stories"
+        />,
+      );
+      const expectedHeadline =
+        topStoriesBlocks[0].headlines.promoHeadline.blocks[0].model.blocks[0]
+          .model.text;
+      expect(container).toHaveTextContent(expectedHeadline);
+    });
+
+    it('should display Most Read content when experimentVariant is top-bar-most-read', () => {
       const { container } = render(
         <ScrollablePromo
           block={mostReadBlocks[0]}
-          experimentVariant="top_bar_most_read"
+          experimentVariant="top-bar-most-read"
         />,
       );
       const expectedHeadline = mostReadBlocks[0].title;
       expect(container).toHaveTextContent(expectedHeadline);
     });
 
-    it('should render a link on Top Stories article headline when experimentVariant is top_bar_top_stories', () => {
+    it('should render a link on Top Stories article headline when experimentVariant is top-bar-top-stories', () => {
       const { queryByRole } = render(
         <ScrollablePromo
           block={topStoriesBlocks[2]}
-          experimentVariant="top_bar_top_stories"
+          experimentVariant="top-bar-top-stories"
         />,
       );
       expect(queryByRole('link')).toBeInTheDocument();
     });
 
-    it('should render a link on Most Read article headline when experimentVariant is top_bar_most_read', () => {
+    it('should render a link on Most Read article headline when experimentVariant is top-bar-most-read', () => {
       const { queryByRole } = render(
         <ScrollablePromo
           block={mostReadBlocks[0]}
-          experimentVariant="top_bar_most_read"
+          experimentVariant="top-bar-most-read"
         />,
       );
       expect(queryByRole('link')).toBeInTheDocument();
     });
 
-    it('should not display a timestamp when experimentVariant is top_bar_top_stories or top_bar_most_read', () => {
+    it('should not display a timestamp when experimentVariant is top-bar-top-stories or top-bar-most-read', () => {
       const { queryByTestId } = render(
         <ScrollablePromo
           block={topStoriesBlocks[0]}
-          experimentVariant="top_bar_most_read"
+          experimentVariant="top-bar-most-read"
         />,
       );
       expect(queryByTestId('timestamp')).not.toBeInTheDocument();
@@ -110,7 +123,7 @@ describe('ScrollablePromo', () => {
       const { container } = render(
         <ScrollablePromo
           block={topStoriesBlocksWithLiveItem[1]}
-          experimentVariant="top_bar_top_stories"
+          experimentVariant="top-bar-top-stories"
         />,
       );
       expect(

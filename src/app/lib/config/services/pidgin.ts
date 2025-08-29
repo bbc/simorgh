@@ -57,10 +57,12 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'See everitin',
       home: 'Home',
+      continueReading: 'Continue reading',
       currentPage: 'Page where you dey',
       skipLinkText: 'Waka go wetin de inside',
       relatedContent: 'Another thing we de for inside dis tori',
       relatedTopics: 'Topics Wey Dem Resemble',
+      moreOnThis: '',
       navMenuText: 'Plenti seshon',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
@@ -225,6 +227,7 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
         closeVideo: 'Exit',
+        endOfContentClose: 'End of this content. Exit',
       },
       socialEmbed: {
         caption: {

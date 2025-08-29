@@ -2,9 +2,11 @@ import React from 'react';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import fixture from '../../../../data/pidgin/topics/c95y35941vrt.json';
 import mundoFixture from '../../../../data/mundo/topics/c1en6xwmpkvt.json';
+import kyrgyzFixture from '../../../../data/kyrgyz/topics/cvpv9djp9qqt.json';
 import kyrgyzHomePage from '../../../../data/kyrgyz/homePage/index.json';
 import { data as kyrgyzMostRead } from '../../../../data/kyrgyz/mostRead/index.json';
 import afriqueHomePage from '../../../../data/afrique/homePage/index.json';
+import portuguseHomePage from '../../../../data/portuguese/homePage/index.json';
 import { render } from '../react-testing-library-with-providers';
 import Curation from '.';
 import {
@@ -16,10 +18,11 @@ import {
 } from '../../models/types/curationData';
 import { MostReadData } from '../MostRead/types';
 import { RadioScheduleData } from '../../models/types/radioSchedule';
+import { PortraitClipMediaBlock } from '../MediaLoader/types';
 
 jest.mock('../ThemeProvider');
 
-const { NONE, BANNER, RANKED, COLLECTION } = VISUAL_STYLE;
+const { NONE, BANNER, RANKED, COLLECTION, LINKS, INSITU } = VISUAL_STYLE;
 const { NORMAL, HIGH, LOW, MAXIMUM, MINIMUM } = VISUAL_PROMINENCE;
 
 const messageBannerCuration = kyrgyzHomePage.data.curations.find(
@@ -36,6 +39,27 @@ const billboardCuration = kyrgyzHomePage.data.curations.find(
     visualProminence === MAXIMUM &&
     summaries &&
     summaries.length > 0,
+);
+
+const usefulLinksCuration = kyrgyzFixture.data.curations.find(
+  ({ visualStyle, visualProminence, summaries }) =>
+    visualStyle === LINKS &&
+    visualProminence === LOW &&
+    summaries &&
+    summaries.length > 0,
+);
+
+const socialLinksCuration = kyrgyzFixture.data.curations.find(
+  ({ visualStyle, visualProminence, summaries }) =>
+    visualStyle === LINKS &&
+    visualProminence === NORMAL &&
+    summaries &&
+    summaries.length > 0,
+);
+
+const portraitVideoCuration = portuguseHomePage.data.curations.find(
+  ({ visualStyle, visualProminence, portraitVideo }) =>
+    visualStyle === INSITU && visualProminence === NORMAL && portraitVideo,
 );
 
 const components = {
@@ -69,12 +93,30 @@ const components = {
     visualProminence: MAXIMUM,
     summaries: billboardCuration?.summaries,
   },
+  'useful-links-1': {
+    visualStyle: LINKS,
+    visualProminence: LOW,
+    summaries: usefulLinksCuration?.summaries,
+  },
+  'social-links-1': {
+    visualStyle: LINKS,
+    visualProminence: NORMAL,
+    summaries: socialLinksCuration?.summaries,
+  },
+  'portrait-video-carousel': {
+    visualStyle: INSITU,
+    visualProminence: NORMAL,
+    portraitVideo: portraitVideoCuration?.portraitVideo,
+  },
 };
 
 interface TestProps {
   visualStyle: VisualStyle;
   visualProminence: VisualProminence;
   summaries?: Summary[];
+  portraitVideo?: {
+    blocks: PortraitClipMediaBlock[];
+  };
   mostRead?: MostReadData;
   radioSchedule?: RadioScheduleData[];
 }
@@ -93,6 +135,7 @@ describe('Curation', () => {
         visualStyle,
         visualProminence,
         summaries,
+        portraitVideo,
         mostRead,
         radioSchedule,
       }: TestProps,
@@ -105,6 +148,7 @@ describe('Curation', () => {
           summaries={summaries || []}
           mostRead={mostRead}
           radioSchedule={radioSchedule}
+          portraitVideo={portraitVideo}
         />,
         {
           toggles: {

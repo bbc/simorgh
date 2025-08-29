@@ -7,7 +7,7 @@ export default () => {
       'g',
     );
     const bbcOriginScripts = Array.from(
-      document.querySelectorAll('script[src]'),
+      Array.from(document.querySelectorAll('script[src]')),
     ).filter(script =>
       script.getAttribute('src').startsWith('http://localhost:7080'),
     );
@@ -23,7 +23,7 @@ export default () => {
       'g',
     );
     const bbcOriginScripts = Array.from(
-      document.querySelectorAll('script[src]'),
+      Array.from(document.querySelectorAll('script[src]')),
     ).filter(script =>
       script.getAttribute('src').startsWith('http://localhost:7080'),
     );
