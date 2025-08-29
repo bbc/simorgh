@@ -252,69 +252,6 @@
         "curationId": "urn:bbc:vivo:curation:bf45c519-cfee-4627-812f-41759cdeb30c",
         "curationType": "vivo-stream",
         "visualProminence": "NORMAL"
-      },
-      {
-        "summaries": [
-          {
-            "type": "commentary",
-            "isLive": true,
-            "title": "Man's Best Friend: Why Dogs Continue to Win Our Hearts",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://www.bbc.com/pidgin/articles/c706dn6459lo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/d12c/test/26da99e0-b39a-11ee-9627-8141b3381959.jpg.webp",
-            "description": "Puppies",
-            "imageAlt": "Photo of Puppies",
-            "id": "c3jl8r5kpe2t",
-            "visualProminence": "MAXIMUM"
-          },
-          {
-            "type": "article",
-            "isLive": false,
-            "title": "Feathers in the Forest: How Bird Populations Are Flourishing in Diverse Woodland Habitats Across the Seasons",
-            "firstPublished": "2023-08-15T14:12:01.110Z",
-            "lastPublished": "2023-08-15T14:12:01.110Z",
-            "link": "https://www.bbc.com/pidgin/articles/c4g8x3zw4xno",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/4414/test/146c2c30-3b75-11ee-93b4-83c41441672b.jpg.webp",
-            "description": "Probo lorem partem pro ex, unum prima expetenda eos ne. Melius viderer quaestio nec te.",
-            "imageAlt": "Bird",
-            "id": "c0ny73k281vo",
-            "visualProminence": "MAXIMUM"
-          },
-          {
-            "type": "article",
-            "isLive": false,
-            "title": "ATMs across the country",
-            "firstPublished": "2019-09-10T09:58:47.000Z",
-            "lastPublished": "2019-09-10T10:01:20.000Z",
-            "link": "https://www.bbc.com/arabic/articles/cp8zr6k2r7vo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/7DD4/test/_63721223_image1.jpg.webp",
-            "description": "Here we have an article about a particular topic",
-            "imageAlt": "-",
-            "id": "cda3bf00-2939-1a46-b6c1-f4376b944663",
-            "visualProminence": "NORMAL"
-          },
-          {
-            "type": "topic",
-            "isLive": false,
-            "title": "Noticias - BBC News Mundo",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://www.bbc.com/mundo/topics/c93v2kkze2rt",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
-            "description": "BBC Mundo le presenta una selección de contenidos y acontecimientos más importantes de la actualidad. Las últimas noticias e información en materia internacional, sobre América Latina, tecnología, ciencia, salud, economía. Fotos y videos.",
-            "id": "c93v2kkze2rt",
-            "visualProminence": "MAXIMUM"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:01ccede1-9a6e-4a30-be2d-a0a7b5ee9af2",
-        "curationType": "tipo-curation",
-        "position": 7,
-        "title": "Normal Curation - High Impact Promo",
-        "visualProminence": "NORMAL",
-        "visualStyle": "NONE"
       }
     ],
     "activePage": 1,

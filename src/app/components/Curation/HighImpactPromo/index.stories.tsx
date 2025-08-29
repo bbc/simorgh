@@ -1,9 +1,9 @@
 import React from 'react';
-import fixture from '#data/pidgin/topics/c95y35941vrt.json';
+import fixture from '#data/ws/homePage/index.json';
 import HighImpactPromo from '.';
 import { BaseCuration, Summary } from '#app/models/types/curationData';
 
-const highImpactFixtureCuration = fixture.data.curations[1] as BaseCuration;
+const highImpactFixtureCuration = fixture.data.curations[0] as BaseCuration;
 
 const Component = () => {
   return (
