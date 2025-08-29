@@ -22,7 +22,7 @@ export const getArticleRegex = services => {
   return `/:service(${serviceRegex})?:discipline(${sportDisciplineRegex})?/:local(${articleLocalRegex})/:id(${idRegex}):variant(${variantRegex})?:nonCanonicalArticleRenderPlatform(${nonCanonicalArticleRenderPlatform})?`;
 };
 
-const getWorldServices = services => {
+export const getWorldServices = services => {
   const publicServices = [
     'news',
     'sport',

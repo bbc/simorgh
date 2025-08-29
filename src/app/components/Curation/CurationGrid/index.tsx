@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import { VISUAL_PROMINENCE, Summary } from '#app/models/types/curationData';
-import extractServiceFromUrl from '#app/lib/utilities/extractServiceFromUrl';
+import extractWorldServiceFromUrl from '#app/lib/utilities/extractWorldServiceFromUrl';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import moment from 'moment';
 import { use } from 'react';
@@ -55,7 +55,7 @@ const CurationGrid = ({
   const renderPromo = (promo: Summary, index: number) => {
     const isFirstPromo = index === 0;
     const lazyLoadImages = !(isFirstPromo && isFirstCuration);
-    const service = extractServiceFromUrl(promo.link);
+    const service = extractWorldServiceFromUrl(promo.link);
 
     if (isHighImpact(promo) && !isMediaType(promo) && !isLite) {
       if (service) {
