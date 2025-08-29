@@ -16,7 +16,6 @@ import pidginArticle from '../../../../data/pidgin/articles/cw0x29n2pvqo.json';
 import portraitVideoArticle from '../../../../data/portuguese/articles/cn7v03e37eko.json';
 import portraitVideoArticleWithCaption from '../../../../data/portuguese/articles/cp319w676r0o.json';
 import arabicLiveTv from '../../../../data/arabic/cpsAssets/media-49522519.json';
-import articleDataWithTranscript from '../../../../data/hausa/articles/clep0qyz73eo.json';
 import withPageWrapper from '../../legacy/containers/PageHandlers/withPageWrapper';
 import withOptimizelyProvider from '../../legacy/containers/PageHandlers/withOptimizelyProvider';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
@@ -104,17 +103,6 @@ export const MediaArticlePageWithLiveTv = (
     isLite={isLite}
     service="arabic"
     pageType={MEDIA_ASSET_PAGE}
-  />
-);
-
-export const MediaArticlePageWithTranscript = (
-  _: StoryArgs,
-  { isLite }: StoryProps,
-) => (
-  <ComponentWithContext
-    data={articleDataWithTranscript}
-    service="hausa"
-    isLite={isLite}
   />
 );
 
