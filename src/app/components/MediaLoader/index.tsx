@@ -300,11 +300,11 @@ const MediaLoader = ({
         className={`media-container${className ? ` ${className}` : ''}`}
         css={[
           styles.figure(embedded),
-          styles.withTranscriptVideo,
           !isAudio && [
             isPortrait && styles.portraitFigure(embedded),
             isLandscape && styles.landscapeFigure,
           ],
+          hasTranscript && styles.withTranscriptVideo,
         ]}
       >
         {isAmp ? (
@@ -348,7 +348,7 @@ const MediaLoader = ({
             css={[
               isAudio && styles.captionAudio,
               !isAudio && [isPortrait && styles.captionPortrait],
-              styles.withTranscriptCaption,
+              hasTranscript && styles.withTranscriptCaption,
             ]}
           />
         )}
