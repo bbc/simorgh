@@ -51,6 +51,7 @@ export default {
       flex: '0 0 66.66%',
       paddingLeft: `${spacings.FULL}rem`,
       height: '100%',
+      textAlign: 'start',
 
       [mq.GROUP_2_MIN_WIDTH]: {
         flex: '1',
