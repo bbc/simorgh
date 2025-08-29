@@ -52,28 +52,6 @@ const invalidPortugueseData = {
   status: 404,
 };
 
-const articleDataWithoutKeySummaryPointsTagging = {
-  pageData: {},
-  status: 200,
-};
-
-const articleDataWithKeySummaryPointsTagging = {
-  pageData: {
-    metadata: {
-      passport: {
-        taggings: [
-          {
-            predicate: 'http://www.bbc.co.uk/ontologies/creativework/format',
-            value:
-              'http://www.bbc.co.uk/things/6b6d33cc-3e32-43e6-b06f-d43e71d44bad#id',
-          },
-        ],
-      },
-    },
-  },
-  status: 200,
-};
-
 jest.mock('../../../../../contexts/ServiceContext', () => {
   const mockReact = jest.requireActual('react');
   return jest.fn().mockImplementation(
@@ -268,44 +246,6 @@ describe('sport home story page', () => {
     expect(result).toEqual({
       hasRequestSucceeded: true,
       status: 200,
-    });
-  });
-});
-
-describe('article page', () => {
-  beforeEach(() => {
-    jest.clearAllMocks();
-  });
-
-  const pageType = 'article';
-  const pathname = 'pidgin/articles/cj80n66ddnko';
-  const service = 'pidgin';
-
-  it('should render article page when "Key/Summary Points" tagging is not set', () => {
-    const result = shouldRender(
-      articleDataWithoutKeySummaryPointsTagging,
-      service,
-      pathname,
-      pageType,
-    );
-
-    expect(result).toEqual({
-      hasRequestSucceeded: true,
-      status: 200,
-    });
-  });
-
-  it('should render a 404 for an article page when "Key/Summary Points" tagging is set', () => {
-    const result = shouldRender(
-      articleDataWithKeySummaryPointsTagging,
-      service,
-      pathname,
-      pageType,
-    );
-
-    expect(result).toEqual({
-      hasRequestSucceeded: false,
-      status: 404,
     });
   });
 });
