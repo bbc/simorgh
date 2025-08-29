@@ -38,5 +38,6 @@ describe('extractServiceFromUrl', () => {
   it('should return null for non-WS services', () => {
     expect(extractServiceFromUrl('https://www.bbc.com/news')).toBeNull();
     expect(extractServiceFromUrl('https://www.bbc.com/sport')).toBeNull();
+    expect(extractServiceFromUrl('')).toBeNull();
   });
 });
