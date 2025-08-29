@@ -170,7 +170,7 @@ exports[`Canonical Live Radio Main heading should match text 1`] = `"Radio BBC G
 
 exports[`Canonical Live Radio Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container bbc-1ezyova"
+  class="media-container bbc-ucozvf"
   data-e2e="media-loader__container"
 >
   <div
