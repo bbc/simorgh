@@ -42,7 +42,7 @@ const CurationGrid = ({
       }),
     },
     ...eventTrackingData,
-    // componentName: eventTrackingData?.componentName ?? 'someComponentName',
+    componentName: eventTrackingData?.componentName ?? 'someComponentName',
   });
 
   return (
@@ -59,7 +59,9 @@ const CurationGrid = ({
                   {...promo}
                   lazy={lazyLoadImages}
                   headingLevel={headingLevel}
-                  eventTrackingData={buildPromoEventTrackingData(promo, index)}
+                  eventTrackingData={buildPromoEventTrackingData(promo, index, {
+                    readTime: promo?.readTime,
+                  })}
                 />
               </li>
             );
