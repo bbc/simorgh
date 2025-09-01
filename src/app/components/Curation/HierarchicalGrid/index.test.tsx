@@ -36,7 +36,6 @@ describe('Hierarchical Grid Curation', () => {
       description:
         'Here na reminder of wetin happun on di historic day when rioters storm di Capitol exactly one year ago.',
       imageAlt: 'January 6 timeline: Wetin happun for January 6 one year ago?',
-      readTime: 1,
       id: 'e2263a1c-8d5a-4a73-a00c-881acfa34381',
     });
     render(
@@ -173,9 +172,29 @@ describe('Hierarchical Grid Curation', () => {
   });
 
   it('should display read time when readTime is provided in summary data', () => {
+    const fixtureDataIncludingReadTime = fixture.map(fixtureSummary => ({
+      ...fixtureSummary,
+      readTime: 5,
+    }));
+
     const container = render(
-      <HierarchicalGrid headingLevel={headingLevel} summaries={fixture} />,
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={fixtureDataIncludingReadTime}
+        eventTrackingData={minimalEventTrackingData}
+      />,
     );
-    expect(container.getAllByText(/readtime:\s*\d+/).length).toBeGreaterThan(0);
+    expect(container.queryAllByTestId('read-time').length).toBeGreaterThan(0);
+  });
+
+  it('should not display read time when readTime is provided in summary data', () => {
+    const container = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={fixture}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+    );
+    expect(expect(container.queryAllByTestId('read-time').length).toBe(0));
   });
 });

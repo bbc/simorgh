@@ -10,7 +10,6 @@ export const pidginPromos = [
     description:
       'Here na reminder of wetin happun on di historic day when rioters storm di Capitol exactly one year ago.',
     imageAlt: 'January 6 timeline: Wetin happun for January 6 one year ago?',
-    readTime: 1,
     id: 'e2263a1c-8d5a-4a73-a00c-881acfa34381',
   },
   {
@@ -24,7 +23,6 @@ export const pidginPromos = [
     description:
       'Former US President Donald Trump don tell Fox Business say im see Bitcoin as \'scam" wey dey affect di value of di US dollar.',
     imageAlt: 'Donald Trump',
-    readTime: 3,
     id: '11cd8a9d-0d67-4b92-b20b-df71740a4fdd',
   },
   {
@@ -39,7 +37,6 @@ export const pidginPromos = [
     description:
       'Di former president for im first political appearance for one conservative conference for Florida also tok say im fit run for presidency again for 2024.',
     imageAlt: 'Former US President Donald Trump',
-    readTime: 5,
     id: 'f6ec81d9-1152-4648-a319-33e116b219e8',
   },
   {
@@ -54,7 +51,6 @@ export const pidginPromos = [
     description:
       'A total of 57 senators vote to convict di former president, far short of di 67 votes dem need.',
     imageAlt: 'Donald Trump (file pic Dec 2020)',
-    readTime: 4,
     id: '97463752-18f3-4783-ada6-56f3aa841384',
   },
   {
@@ -68,7 +64,6 @@ export const pidginPromos = [
     description:
       'Trump dey face one single charge of "incitement of insurrection" for di speech wey im make to im supporters ahead of di deadly riot for US Capitol for January.',
     imageAlt: 'Former US President Donald Trump',
-    readTime: 6,
     id: '7ca69c90-2ccb-42bf-85de-9db681119f73',
   },
   {
@@ -82,7 +77,6 @@ export const pidginPromos = [
     description:
       'If Senate convict Trump, e fit be di end of im political dream to run for office for 2024.',
     imageAlt: 'Donald Trump',
-    readTime: 2,
     id: '2b7c3210-51a3-49d6-a1f9-a32206dd4eb0',
   },
   {
@@ -97,7 +91,6 @@ export const pidginPromos = [
       'Joe Biden inauguration live on Wednesday reach peak as im take oath of office as di 46th President of United State at about 11:48am ET (16:48 GMT) on Wednesday 20 January, 2021.',
     imageAlt:
       'Inauguration live stream: Joe Biden [President of United States], Kamala Harris inauguration ceremony live',
-    readTime: 8,
     id: '33d53e44-2f7a-9f43-8050-bcb4a27a4c8a',
   },
   {
@@ -111,7 +104,6 @@ export const pidginPromos = [
     description:
       'For di last few hours of im presidency, Donald Trump don give ova 140 clemency to different pipo dem.',
     imageAlt: 'Lil Wayne and Kodak Black',
-    readTime: 3,
     id: '8ac85b66-d103-4617-b148-ac83dabe27ae',
   },
   {
@@ -125,7 +117,6 @@ export const pidginPromos = [
     description:
       'For one video wey im post for YouTube, e tok say im take on di tough battles, di hardest fights... because dat na wetin dem elect am to do.',
     imageAlt: 'Donald Trump on board Air Force One (file pic)',
-    readTime: 4,
     id: '143222cd-e039-4fab-9e8e-de6cd2562469',
   },
   {
@@ -139,7 +130,6 @@ export const pidginPromos = [
     description:
       'From di size for im inauguration to North Korea relations and George Floyd, dis na Donald Trump Presidency in pictures.',
     imageAlt: 'Donald Trump',
-    readTime: 7,
     id: 'f3c4d93e-c14f-4f22-aabf-f377945a8819',
   },
   {
@@ -154,7 +144,6 @@ export const pidginPromos = [
     description:
       'On 20 January, Joe Biden go officially become president, and Kamala Harris will become vice-president. See wetin you need to know.',
     imageAlt: 'Biden and Harris',
-    readTime: 6,
     id: '04e47ea8-e68a-4c0d-9562-8399201324c0',
   },
   {
@@ -170,7 +159,6 @@ export const pidginPromos = [
       'Democrats don kick-start efforts to force di president out of office afta last week violence for Capitol Hill.',
     imageAlt:
       'President Donald Trump wave tori pipo for Tuscaloosa Regional Airport, Alabama, November 9, 2019',
-    readTime: 5,
     id: 'ed8c01f0-e76b-4d5c-8a17-2f9885e30fed',
   },
 ];
@@ -189,7 +177,6 @@ export const pidginPromosWithMedia = [
     description:
       'Reactions dey come in after Nigeria President Bola Tinubu declare a state of emergency for Rivers state and suspend di governor and oda elected officers.',
     imageAlt: 'Siminalayi Fubara',
-    readTime: 4,
     id: 'cjrypw53rg4o',
   },
   {
@@ -205,7 +192,6 @@ export const pidginPromosWithMedia = [
     description:
       'Ibok-Ete Ekwe Ibas join di Nigerian Defence Academy as a member of 26 Regular Course on 20 June 1979 and commissioned sub-lieutenant on 1 January 1983.',
     imageAlt: 'Ibok-Ete Ekwe Ibas',
-    readTime: 3,
     id: 'c5y082yr1zeo',
   },
   {
@@ -221,7 +207,6 @@ export const pidginPromosWithMedia = [
     description:
       'Di Trans Niger Pipeline na major pipeline wey dey transports crude for Niger delta.',
     imageAlt: 'Fire for Trans Niger Delta Pipeline',
-    readTime: 2,
     id: 'ckg8pknwn3lo',
   },
   {
@@ -236,7 +221,6 @@ export const pidginPromosWithMedia = [
     description:
       'Members of di House of Representatives pass di bills afta dem read am for di third time at plenary, wey Speaker Abbas Tajudeen preside ova.',
     imageAlt: "Speaker of Nigeria's House of Representatives, Tajudeen Abbas\n",
-    readTime: 5,
     id: 'c89y3d13w3qo',
   },
   {
@@ -252,7 +236,6 @@ export const pidginPromosWithMedia = [
     description:
       'Di Israeli military don attack different location for Gaza Strip, wey dem hit targets for Gaza City, Rafah and Khan Younis.',
     imageAlt: 'Di destruction from di airstrike',
-    readTime: 3,
     id: 'cj92pv4z2kxo',
   },
   {
@@ -283,7 +266,6 @@ export const pidginPromosWithMedia = [
     description:
       'During plenary on Monday 17 March 2025, di Rivers lawmakers resolve to transmit di letter containing claims of gross misconduct to Govnor Siminalayi Fubara and di deputy govnor.',
     imageAlt: 'Martin Amaewhule and Governor Fubara',
-    readTime: 6,
     id: 'cm2j937261do',
   },
   {
@@ -299,7 +281,6 @@ export const pidginPromosWithMedia = [
     description:
       'One video wey serving corp member post wey condemn Nigerian President Bola Tinubu administration don generate conversation for Nigeria.',
     imageAlt: 'NYSC corps members',
-    readTime: 4,
     id: 'cgm1ekn44p1o',
   },
 ];
