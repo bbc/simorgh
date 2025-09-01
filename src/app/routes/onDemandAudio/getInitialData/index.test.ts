@@ -4,7 +4,7 @@ import { FetchMock } from 'jest-fetch-mock';
 import * as fetchBFF from '#app/routes/utils/fetchDataFromBFF';
 import gahuzaOnDemandAudio from '#data/gahuza/bbc_gahuza_radio/p02pcb5c.json';
 import isTest from '#app/lib/utilities/isTest';
-import localToggles from '#app/lib/config/toggles/localConfig';
+import defaultToggles from '#app/lib/config/toggles';
 import gahuzaExternalLinks from '../podcastExternalLinks/gahuza';
 import getInitialData from '.';
 
@@ -18,7 +18,7 @@ jest.mock('#app/lib/utilities/isTest', () =>
 
 const fetchBFFSpy = jest.spyOn(fetchBFF, 'default');
 
-const toggles = { ...localToggles };
+const toggles = { ...defaultToggles.local };
 
 describe('Get initial data for on demand radio', () => {
   afterEach(() => {
