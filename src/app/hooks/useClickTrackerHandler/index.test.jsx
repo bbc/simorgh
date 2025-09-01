@@ -681,7 +681,7 @@ describe('Click tracking - Reverb', () => {
       '',
       {
         event: { action: 'select', category: 'viewability' },
-        group: { name: 'article-sty' },
+        group: { name: 'article-sty', type: trackingData.componentName },
         item: expectedItemEvent,
       },
       undefined,
