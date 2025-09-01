@@ -1,4 +1,5 @@
 import React from 'react';
+import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { data as arabicMostReadData } from '../../../../../data/arabic/mostRead/index.json';
 import { data as pidginMostReadData } from '../../../../../data/pidgin/mostRead/index.json';
 import { data as kyrgyzMostReadData } from '../../../../../data/kyrgyz/mostRead/index.json';
@@ -140,34 +141,67 @@ describe('MostRead Canonical', () => {
   });
 
   describe('Event Tracking', () => {
-    const blockLevelEventTrackingData = {
-      componentName: 'most-read',
-    };
-
     it('should call the view tracking hook with the correct params', () => {
       const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+
       render(
         <MostReadCanonicalWithContext
           service="pidgin"
           data={pidginMostReadData}
-          eventTrackingData={blockLevelEventTrackingData}
+          eventTrackingData={{ componentName: 'most-read' }}
         />,
       );
+      expect(viewTrackerSpy).toHaveBeenCalled();
 
-      expect(viewTrackerSpy).toHaveBeenCalledWith(blockLevelEventTrackingData);
+      const calls: EventTrackingData[] = viewTrackerSpy.mock.calls.map(
+        ([arg]) => arg as EventTrackingData,
+      );
+
+      const hasValidCall = calls.some(
+        call =>
+          call?.componentName === 'most-read' &&
+          (call?.groupTracker === undefined ||
+            typeof call.groupTracker === 'object'),
+      );
+
+      expect(hasValidCall).toBe(true);
     });
 
-    it('should call the click tracking hook with the correct params', () => {
+    it('should call the click tracking hook with enriched item params', () => {
       const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
-      render(
+
+      const { container } = render(
         <MostReadCanonicalWithContext
           service="pidgin"
           data={pidginMostReadData}
-          eventTrackingData={blockLevelEventTrackingData}
+          eventTrackingData={{ componentName: 'most-read' }}
         />,
       );
 
-      expect(clickTrackerSpy).toHaveBeenCalledWith(blockLevelEventTrackingData);
+      const linkCount = container.querySelectorAll('li a').length;
+
+      // strict mode in tests may double-invoke renders
+      expect(clickTrackerSpy.mock.calls.length).toBeGreaterThanOrEqual(
+        linkCount,
+      );
+
+      // type the argument so TS knows componentName/itemTracker exist
+      const calls: EventTrackingData[] = clickTrackerSpy.mock.calls.map(
+        ([arg]) => arg as EventTrackingData,
+      );
+
+      // check we have one valid payload per expected position (1..linkCount)
+      Array.from({ length: linkCount }, (_, i) => i + 1).forEach(position => {
+        const match = calls.some(
+          call =>
+            call?.componentName === 'most-read' &&
+            call?.itemTracker?.type === 'most-read-promo' &&
+            call?.itemTracker?.position === position &&
+            typeof call?.itemTracker?.text === 'string' &&
+            typeof call?.itemTracker?.resourceId === 'string',
+        );
+        expect(match).toBe(true);
+      });
     });
   });
 });

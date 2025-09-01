@@ -8,7 +8,6 @@ import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
-import isLive from '#app/lib/utilities/isLive';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
 import Headings from '#containers/Headings';
@@ -101,7 +100,6 @@ const getImageComponent =
 
 // EXPERIMENT: Read Time
 const Placeholder = ({ className }: { className?: string }) => {
-  if (isLive()) return null;
   const { service } = use(ServiceContext);
   const servicesInExperiment = ['turkce', 'mundo'];
   return servicesInExperiment.includes(service) ? (
@@ -185,8 +183,10 @@ const getPodcastPromoComponent = (podcastPromoEnabled: boolean) => () =>
 const getHeadlineComponent =
   (readTimeData: ReadTimeData) => (props: ComponentToRenderProps) => {
     const { readTimeValue, readTimeLocation, readTimeVariant } = readTimeData;
+    // Ensures we send view event for control variant
     const showReadTimeBelowHeadline =
-      readTimeValue && readTimeLocation === 'headline';
+      !!readTimeValue && ['headline', 'control'].includes(readTimeLocation);
+
     return (
       <>
         <ArticleHeadline
@@ -269,7 +269,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       return 'timestamp';
     }
     if (readTimeExperimentVariant.includes('control')) {
-      return 'off';
+      return 'control';
     }
     return 'off';
   })();
@@ -472,8 +472,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                 liteCTAShows={liteCTAShows}
               />
             )}
+            {/* EXPERIMENT: Read Time */}
             {readTimeValue && <OptimizelyPageMetrics trackPageComplete />}
           </main>
+          {/* EXPERIMENT: Read Time */}
           {readTimeValue && (
             <OptimizelyPageMetrics trackPageView trackPageDepth />
           )}

@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import { use } from 'react';
-import isLive from '#app/lib/utilities/isLive';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '#app/hooks/useViewTracker';
@@ -28,7 +27,7 @@ const ReadTime = ({
   className,
 }: ReadTimeProps) => {
   const showReadTime = readTimeVariant && readTimeVariant !== 'off';
-  if (isLive() || !showReadTime) return null;
+  if (!showReadTime) return null;
 
   const { translations } = use(ServiceContext);
   const readTimePrefix =
@@ -67,9 +66,13 @@ const ReadTime = ({
     },
   };
 
-  // Can remove disable-next-line when we remove isLive check
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const viewRef = useViewTracker(eventTrackingData);
+
+  const isControlVariant = readTimeVariant === 'control';
+
+  if (isControlVariant)
+    return <div {...viewRef} css={styles.readTimePlaceholderControl} />;
 
   return (
     <div
