@@ -526,6 +526,43 @@ describe('Home Page', () => {
         expect(messageBannerCalls.length).toBe(messageBanners.length);
       });
     });
+
+    it('Radio Schedule - calls useViewTracker with correct viewability event tracking data for each radio schedule', () => {
+      render(<HomePage pageData={afriqueHomePageData} />, {
+        service: 'afrique',
+        toggles: {
+          homePageRadioSchedule: { enabled: true },
+        },
+      });
+
+      const radioSchedules = afriqueHomePageData.curations.filter(
+        curation => curation.radioSchedule,
+      );
+
+      const expectedTrackingData = radioSchedules.map(schedule => ({
+        componentName: 'radio-schedule',
+        groupTracker: {
+          name: schedule.title,
+          type: 'radio-schedule',
+          position: schedule.position + 1,
+          resourceId: schedule.curationId,
+          itemCount: schedule.radioSchedule?.length,
+        },
+      }));
+
+      const { calls } = (useViewTracker as jest.Mock).mock;
+
+      expectedTrackingData.forEach(expected => {
+        const matchingCall = calls.find(
+          ([arg]) =>
+            arg.componentName === expected.componentName &&
+            JSON.stringify(arg.groupTracker) ===
+              JSON.stringify(expected.groupTracker),
+        );
+        expect(matchingCall).toBeTruthy();
+      });
+    });
+
     describe('Hierarchical curation - click tracking', () => {
       it.each([
         {
@@ -725,6 +762,41 @@ describe('Home Page', () => {
           type: 'message-banner',
           position: (firstMessageBanner?.position ?? -1) + 1, // if there is no message banner on the page the position is 0 and this will fail. It needs a fallback value for TS
           resourceId: firstMessageBanner?.curationId,
+        }),
+      });
+
+      expect(useClickTrackerHandler as jest.Mock).toHaveBeenCalledWith(
+        expectedTrackingData,
+      );
+    });
+
+    it('Radio Schedule promo - click tracking', () => {
+      render(<HomePage pageData={afriqueHomePageData} />, {
+        service: 'afrique',
+        toggles: {
+          homePageRadioSchedule: { enabled: true },
+        },
+      });
+
+      const radioSchedule = afriqueHomePageData.curations.find(
+        curation => curation.radioSchedule,
+      );
+
+      const radioSchedulePromo = document.querySelector(
+        '[aria-labelledby^="scheduleItem-"]',
+      ) as HTMLAnchorElement;
+
+      expect(radioSchedulePromo).toBeInTheDocument();
+
+      fireEvent.click(radioSchedulePromo);
+
+      const expectedTrackingData = expect.objectContaining({
+        componentName: 'radio-schedule-next',
+        groupTracker: expect.objectContaining({
+          name: radioSchedule?.title,
+          type: 'radio-schedule',
+          position: (radioSchedule?.position ?? 0) + 1,
+          resourceId: radioSchedule?.curationId,
         }),
       });
 
