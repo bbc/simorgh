@@ -194,7 +194,10 @@ export default ({
     case HIERARCHICAL_CURATION_GRID:
     default:
       if (summaries.length > 0) {
-        const viewTracker = useViewTracker(eventTrackingData);
+        const viewTracker = useViewTracker({
+          ...eventTrackingData,
+          viewThreshold: 0.2,
+        });
 
         const curationSubheadingClickTracker =
           useClickTrackerHandler(eventTrackingData);

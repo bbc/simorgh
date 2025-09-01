@@ -442,6 +442,7 @@ describe('Home Page', () => {
           itemCount: 4, // if the fixture data changes this will fail
         },
         componentName: 'hierarchical-curation-grid',
+        viewThreshold: 0.2,
       };
 
       const { calls } = (useViewTracker as jest.Mock).mock;
@@ -473,6 +474,7 @@ describe('Home Page', () => {
           itemCount: seventhCuration.summaries?.length,
         },
         componentName: 'simple-curation-grid',
+        viewThreshold: 0.2,
       };
       const { calls } = (useViewTracker as jest.Mock).mock;
 
