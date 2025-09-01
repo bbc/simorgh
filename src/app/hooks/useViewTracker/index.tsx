@@ -115,6 +115,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
       timer.current = setTimeout(() => {
         dispatchTrackingRequests({
           optimizelyParameters: {
+            optimizely,
             sendOptimizelyEvents,
             experimentVariant,
             componentName,
