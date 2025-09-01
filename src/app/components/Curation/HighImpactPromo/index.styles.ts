@@ -13,7 +13,6 @@ export default {
       display: 'flex',
       flexDirection: 'row',
       paddingTop: `${spacings.FULL}rem`,
-      paddingBottom: `${spacings.DOUBLE}rem`,
       paddingInline: `${spacings.FULL}rem`,
 
       // 400px and above: vertical layout
@@ -50,14 +49,15 @@ export default {
       flexDirection: 'column',
       flex: '0 0 66.66%',
       paddingInlineStart: `${spacings.FULL}rem`,
+      paddingBottom: `${spacings.DOUBLE}rem`,
       height: '100%',
       textAlign: 'start',
+      zIndex: 2,
 
       [mq.GROUP_2_MIN_WIDTH]: {
         flex: '1',
         paddingInline: `${spacings.FULL}rem`,
         marginTop: `-${spacings.TRIPLE}rem`,
-        position: 'relative',
       },
     }),
 
@@ -103,6 +103,8 @@ export default {
         bottom: `-${spacings.DOUBLE}rem`,
         left: `-${spacings.FULL}rem`,
         right: `-${spacings.FULL}rem`,
+        minHeight: `${pixelsToRem(46)}rem`,
+        minWidth: `${pixelsToRem(46)}rem`,
       },
 
       '&:hover, &:focus': {

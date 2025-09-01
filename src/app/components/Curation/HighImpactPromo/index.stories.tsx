@@ -48,7 +48,7 @@ export default {
   parameters: {
     metadata,
     docs: { readme },
-    chromatic: { disable: true },
+    chromatic: { disable: false },
   },
 };
 
