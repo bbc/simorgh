@@ -14,9 +14,9 @@ import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useTrackingToggle from '../useTrackingToggle';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import dispatchTrackingRequests from './dispatchTrackingRequests';
+import getIntersectionObserver from './getIntersectionObserver';
 
 const VIEWED_DURATION_MS = 1000;
-const MIN_VIEWED_PERCENT = 0.5;
 
 const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
   const {
@@ -53,28 +53,6 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
   const { trackingIsEnabled } = useTrackingToggle(componentName);
 
   const { service, useReverb } = use(ServiceContext);
-
-  const initObserver = async (threshold = MIN_VIEWED_PERCENT) => {
-    if (typeof window.IntersectionObserver === 'undefined') {
-      // Polyfill IntersectionObserver, e.g. for IE11
-      await import('intersection-observer');
-    }
-
-    const callback = (elements: IntersectionObserverEntry[]) => {
-      const someElementsAreInView = elements.some(
-        element => element.isIntersecting,
-      );
-
-      setcomponentHasComeIntoView(someElementsAreInView);
-    };
-
-    const options = {
-      threshold: [threshold],
-    };
-
-    // @ts-expect-error current element won't be null
-    observer.current = new IntersectionObserver(callback, options);
-  };
 
   useEffect(() => {
     if (alwaysInView) {
@@ -196,7 +174,13 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
         : !(!element || !trackingIsEnabled || eventSent);
 
       if (shouldSetupIntersectionObserver) {
-        if (!observer.current) await initObserver(viewThreshold);
+        if (!observer.current) {
+          // @ts-expect-error current element won't be null
+          observer.current = await getIntersectionObserver({
+            threshold: viewThreshold,
+            componentViewStateSetter: setcomponentHasComeIntoView,
+          });
+        }
         (observer.current as unknown as IntersectionObserver)?.observe(element);
       }
     },
