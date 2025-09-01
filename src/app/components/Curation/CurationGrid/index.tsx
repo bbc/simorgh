@@ -61,11 +61,21 @@ const CurationGrid = ({
       if (service) {
         return (
           <ServiceContextProvider service={service}>
-            <HighImpactPromo {...promo} lazy={lazyLoadImages} />
+            <HighImpactPromo
+              {...promo}
+              lazy={lazyLoadImages}
+              eventTrackingData={buildPromoEventTrackingData(promo, index)}
+            />
           </ServiceContextProvider>
         );
       }
-      return <HighImpactPromo {...promo} lazy={lazyLoadImages} />;
+      return (
+        <HighImpactPromo
+          {...promo}
+          lazy={lazyLoadImages}
+          eventTrackingData={buildPromoEventTrackingData(promo, index)}
+        />
+      );
     }
 
     return (

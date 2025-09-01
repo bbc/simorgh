@@ -2,6 +2,8 @@ import React from 'react';
 import fixture from '#data/ws/homePage/index.json';
 import HighImpactPromo from '.';
 import { BaseCuration, Summary } from '#app/models/types/curationData';
+import metadata from './metadata.json';
+import readme from './README.md';
 
 const highImpactFixtureCuration = fixture.data.curations[0] as BaseCuration;
 
@@ -44,6 +46,8 @@ export default {
   title: 'Components/Curation/High Impact Promo',
   component: Component,
   parameters: {
+    metadata,
+    docs: { readme },
     chromatic: { disable: true },
   },
 };
