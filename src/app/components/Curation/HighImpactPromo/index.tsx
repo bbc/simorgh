@@ -12,7 +12,7 @@ type Attribution = {
   link: string;
   text: string;
 };
-interface HighImpactPromoProps extends Summary {
+export interface HighImpactPromoProps extends Summary {
   attribution?: Attribution;
 }
 
