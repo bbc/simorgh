@@ -791,7 +791,7 @@ describe('Home Page', () => {
       fireEvent.click(radioSchedulePromo);
 
       const expectedTrackingData = expect.objectContaining({
-        componentName: 'radio-schedule-next',
+        componentName: 'radio-schedule',
         groupTracker: expect.objectContaining({
           name: radioSchedule?.title,
           type: 'radio-schedule',
