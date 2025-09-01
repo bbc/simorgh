@@ -73,7 +73,7 @@ describe('RadioSchedule', () => {
       );
 
       expect(clickTrackerSpy).toHaveBeenNthCalledWith(1, {
-        componentName: 'radio-schedule-live',
+        componentName: 'radio-schedule',
         groupTracker: {
           itemCount: 4,
         },
@@ -83,11 +83,11 @@ describe('RadioSchedule', () => {
           position: 1,
           resourceId: 'p0',
           text: '27 August 2019',
-          type: 'radio-schedule-promo',
+          type: 'radio-schedule-live',
         },
       });
       expect(clickTrackerSpy).toHaveBeenNthCalledWith(2, {
-        componentName: 'radio-schedule-onDemand',
+        componentName: 'radio-schedule',
         groupTracker: {
           itemCount: 4,
         },
@@ -97,7 +97,7 @@ describe('RadioSchedule', () => {
           position: 2,
           resourceId: 'p1',
           text: '27 August 2019',
-          type: 'radio-schedule-promo',
+          type: 'radio-schedule-onDemand',
         },
       });
     });
