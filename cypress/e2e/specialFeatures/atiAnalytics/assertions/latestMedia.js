@@ -9,6 +9,7 @@ export const assertLatestMediaComponentView = ({
   useReverb,
   path,
   applicationType,
+  siteId,
 }) => {
   it('should send a view event for the Latest Media component', () => {
     interceptATIAnalyticsBeacons();
@@ -22,6 +23,7 @@ export const assertLatestMediaComponentView = ({
       contentType,
       useReverb,
       applicationType,
+      siteId,
     });
   });
 };
@@ -32,6 +34,7 @@ export const assertLatestMediaComponentClick = ({
   useReverb,
   path,
   applicationType,
+  siteId,
 }) => {
   it('should send a click event for the Latest Media component', () => {
     interceptATIAnalyticsBeacons();
@@ -50,6 +53,7 @@ export const assertLatestMediaComponentClick = ({
       contentType,
       useReverb,
       applicationType,
+      siteId,
     });
   });
 };
