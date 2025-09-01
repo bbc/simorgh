@@ -40,6 +40,9 @@ describe('RadioSchedule', () => {
   describe('Event Tracking', () => {
     const eventTrackingData = {
       componentName: 'radio-schedule',
+      groupTracker: {
+        itemCount: 4,
+      },
     };
 
     it('should call the view tracking hook with the correct params', () => {
@@ -71,9 +74,31 @@ describe('RadioSchedule', () => {
 
       expect(clickTrackerSpy).toHaveBeenNthCalledWith(1, {
         componentName: 'radio-schedule-live',
+        groupTracker: {
+          itemCount: 4,
+        },
+        itemTracker: {
+          duration: 3600000,
+          mediaType: 'audio',
+          position: 1,
+          resourceId: 'p0',
+          text: '27 August 2019',
+          type: 'radio-schedule-promo',
+        },
       });
       expect(clickTrackerSpy).toHaveBeenNthCalledWith(2, {
         componentName: 'radio-schedule-onDemand',
+        groupTracker: {
+          itemCount: 4,
+        },
+        itemTracker: {
+          duration: 3600000,
+          mediaType: 'audio',
+          position: 2,
+          resourceId: 'p1',
+          text: '27 August 2019',
+          type: 'radio-schedule-promo',
+        },
       });
     });
   });

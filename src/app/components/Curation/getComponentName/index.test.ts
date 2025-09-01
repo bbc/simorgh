@@ -20,6 +20,8 @@ const {
 } = COMPONENT_NAMES;
 
 describe('getComponentName', () => {
+  // originally unmapped combinations would return null, but now they return simple-curation-grid,
+  // as this is the set of components that gets used in unmapped cases, and we need a componentName for tracking
   it.each`
     visualStyle     | visualProminence     | expected
     ${BANNER}       | ${MINIMUM}           | ${NOT_SUPPORTED}
@@ -31,7 +33,7 @@ describe('getComponentName', () => {
     ${NONE}         | ${HIGH}              | ${HIERARCHICAL_CURATION_GRID}
     ${COLLECTION}   | ${HIGH}              | ${HIERARCHICAL_CURATION_GRID}
     ${RANKED}       | ${NORMAL}            | ${MOST_READ}
-    ${'fake-style'} | ${'fake-prominence'} | ${null}
+    ${'fake-style'} | ${'fake-prominence'} | ${'simple-curation-grid'}
   `(
     'should return $expected when visual style is $visualStyle and visual prominence is $visualProminence',
     ({ visualStyle, visualProminence, expected }) => {
