@@ -173,9 +173,29 @@ describe('Hierarchical Grid Curation', () => {
   });
 
   it('should display read time when readTime is provided in summary data', () => {
+    const fixtureDataIncludingReadTime = fixture.map(fixtureSummary => ({
+      ...fixtureSummary,
+      readTime: 5,
+    }));
+
     const container = render(
-      <HierarchicalGrid headingLevel={headingLevel} summaries={fixture} />,
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={fixtureDataIncludingReadTime}
+        eventTrackingData={minimalEventTrackingData}
+      />,
     );
-    expect(container.getAllByText(/readtime:\s*\d+/).length).toBeGreaterThan(0);
+    expect(container.queryAllByTestId('read-time').length).toBeGreaterThan(0);
+  });
+
+  it('should not display read time when readTime is provided in summary data', () => {
+    const container = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={fixture}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+    );
+    expect(container.queryAllByTestId('read-time').length).toBe(0);
   });
 });
