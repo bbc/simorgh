@@ -72,6 +72,7 @@ export default async ({
     status = getErrorStatusCode(),
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   }: any | { message: string; status: number }) {
+    console.log({ message });
     logger.error(BFF_FETCH_ERROR, {
       service,
       status,
