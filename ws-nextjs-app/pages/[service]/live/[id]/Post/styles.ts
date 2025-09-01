@@ -132,4 +132,8 @@ export default {
         },
       },
     }),
+  videoPost: ({ spacings }: Theme) =>
+    css({
+      paddingBottom: `${spacings.FULL}rem`,
+    }),
 };

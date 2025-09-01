@@ -91,14 +91,10 @@ const HiearchicalGrid = ({
           const durationString = `, ${durationTranslation} ${formattedDuration}`;
 
           const useLargeImages = i === 0 && promoItems.length >= 3;
-
           const isFirstPromo = i === 0;
-
           const lazyLoadImages = !(isFirstPromo && isFirstCuration);
-
           const fetchpriority =
             isFirstPromo && isFirstCuration ? 'high' : undefined;
-
           const showDuration =
             promo.duration && ['video', 'audio'].includes(promo.type);
           const isMedia = ['video', 'audio', 'photogallery'].includes(

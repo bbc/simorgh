@@ -42,7 +42,7 @@ const CurationGrid = ({
       }),
     },
     ...eventTrackingData,
-    componentName: eventTrackingData?.componentName ?? 'someComponentName',
+    // componentName: eventTrackingData?.componentName ?? 'someComponentName',
   });
 
   return (
