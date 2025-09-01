@@ -11,112 +11,12 @@ import {
 import constructStaticATIUrl from '#app/lib/analyticsUtils/staticATITracking/constructATIUrl';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
-import { sendEventBeacon } from '../../components/ATIAnalytics/beacon';
 import useTrackingToggle from '../useTrackingToggle';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import dispatchTrackingRequests from './dispatchTrackingRequests';
 
 const VIEWED_DURATION_MS = 1000;
 const MIN_VIEWED_PERCENT = 0.5;
-
-type RequiredEventProps = Pick<
-  EventTrackingData,
-  | 'campaignID'
-  | 'componentName'
-  | 'pageIdentifier'
-  | 'platform'
-  | 'producerId'
-  | 'producerName'
-  | 'service'
-  | 'statsDestination'
-> & { trackingIsEnabled: boolean; eventSent: boolean };
-
-const shouldDispatchEventBeacon = ({
-  campaignID,
-  componentName,
-  pageIdentifier,
-  platform,
-  producerId,
-  producerName,
-  service,
-  statsDestination,
-  trackingIsEnabled,
-  eventSent,
-}: RequiredEventProps) => {
-  const hasRequiredProps = [
-    campaignID,
-    componentName,
-    pageIdentifier,
-    platform,
-    producerId,
-    producerName,
-    service,
-    statsDestination,
-  ].every(Boolean);
-
-  return [hasRequiredProps, trackingIsEnabled, !eventSent].every(Boolean);
-};
-
-const trackComponentInOptimizely = ({
-  optimizely,
-  sendOptimizelyEvents,
-  experimentVariant,
-  componentName,
-}: Pick<
-  EventTrackingData,
-  'sendOptimizelyEvents' | 'experimentVariant' | 'componentName'
->) => {
-  if (
-    optimizely &&
-    sendOptimizelyEvents &&
-    experimentVariant &&
-    experimentVariant !== 'off'
-  ) {
-    const overrideAttributes = optimizely?.user.attributes;
-
-    optimizely.track(
-      `${componentName}-views`,
-      optimizely.user.id as string,
-      overrideAttributes,
-    );
-  }
-};
-
-const dispatchTrackingRequests = ({
-  optimizelyParameters,
-  reverbParameters,
-  trackingIsEnabled,
-  eventSent,
-}) => {
-  const {
-    campaignID,
-    componentName,
-    pageIdentifier,
-    platform,
-    producerId,
-    producerName,
-    service,
-    statsDestination,
-  } = reverbParameters;
-
-  const shouldSendEvent = shouldDispatchEventBeacon({
-    campaignID,
-    componentName,
-    pageIdentifier,
-    platform,
-    producerId,
-    producerName,
-    service,
-    statsDestination,
-    trackingIsEnabled,
-    eventSent,
-  });
-
-  if (shouldSendEvent) {
-    trackComponentInOptimizely(optimizelyParameters);
-
-    sendEventBeacon(reverbParameters);
-  }
-};
 
 const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
   const {
@@ -209,7 +109,6 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
             }),
         },
         trackingIsEnabled,
-        eventSent,
       });
     } else if (componentHasComeIntoView && !timer.current) {
       // @ts-expect-error timer ref won't be null
