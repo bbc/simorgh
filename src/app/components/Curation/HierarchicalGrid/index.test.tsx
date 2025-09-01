@@ -195,6 +195,6 @@ describe('Hierarchical Grid Curation', () => {
         eventTrackingData={minimalEventTrackingData}
       />,
     );
-    expect(expect(container.queryAllByTestId('read-time').length).toBe(0));
+    expect(container.queryAllByTestId('read-time').length).toBe(0);
   });
 });

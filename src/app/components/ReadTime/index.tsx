@@ -40,13 +40,13 @@ const processReadTime = (readTimeValue: number) => {
   const minutesSuffix =
     translations.readTime?.minutes ?? DEFAULT_TRANSLATIONS.minutes;
 
-  const readTimeInMiliseconds = readTimeValue * 60000;
+  const readTimeInMilliseconds = readTimeValue * 60000;
   const minutesLabel = readTimeValue === 1 ? singleMinuteSuffix : minutesSuffix;
   const quickLongCopy = readTimeValue < 5 ? quickCopy : longCopy;
   const minutesCopy = `${readTimePrefix}: ${readTimeValue} ${minutesLabel}`;
 
   return {
-    readTimeInMiliseconds,
+    readTimeInMilliseconds,
     minutesLabel,
     quickLongCopy,
     minutesCopy,
@@ -61,7 +61,7 @@ export const ReadTimeArticle = ({
   const showReadTime = readTimeVariant && readTimeVariant !== 'off';
   if (!showReadTime) return null;
 
-  const { readTimeInMiliseconds, minutesLabel, quickLongCopy, minutesCopy } =
+  const { readTimeInMilliseconds, minutesLabel, quickLongCopy, minutesCopy } =
     processReadTime(readTimeValue);
 
   // EXPERIMENT: Read Time
@@ -80,7 +80,7 @@ export const ReadTimeArticle = ({
     experimentVariant: readTimeVariant,
     itemTracker: {
       label: `Read time: ${readTimeValue} ${minutesLabel}`,
-      duration: readTimeInMiliseconds,
+      duration: readTimeInMilliseconds,
       type: `read-time`,
     },
   };
@@ -114,14 +114,14 @@ export const ReadTimeHomepage = ({
 }: ReadTimeProps) => {
   if (isLive()) return null;
 
-  const { readTimeInMiliseconds, minutesLabel, minutesCopy } =
+  const { readTimeInMilliseconds, minutesLabel, minutesCopy } =
     processReadTime(readTimeValue);
 
   const eventTrackingData: EventTrackingData = {
     componentName: 'read-time',
     itemTracker: {
       label: `Read time: ${readTimeValue} ${minutesLabel}`,
-      duration: readTimeInMiliseconds,
+      duration: readTimeInMilliseconds,
       resourceId: promoId,
     },
   };
