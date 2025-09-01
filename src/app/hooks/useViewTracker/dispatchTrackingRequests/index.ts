@@ -1,13 +1,13 @@
-// import { OptimizelyContext } from '@optimizely/react-sdk';
+/* eslint-disable import/no-unresolved */
+import { OptimizelyContextInterface } from '@optimizely/react-sdk/dist/Context';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { sendEventBeacon } from '../../../components/ATIAnalytics/beacon';
 
-// { optimizely: typeof OptimizelyContext } &
-
-type OptimizelyParameters = Pick<
-  EventTrackingData,
-  'sendOptimizelyEvents' | 'experimentVariant' | 'componentName'
->;
+type OptimizelyParameters = Pick<OptimizelyContextInterface, 'optimizely'> &
+  Pick<
+    EventTrackingData,
+    'sendOptimizelyEvents' | 'experimentVariant' | 'componentName'
+  >;
 
 type RequiredEventProps = Pick<
   EventTrackingData,
