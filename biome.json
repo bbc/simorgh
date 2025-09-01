@@ -1,6 +1,10 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.0.2/schema.json",
-  "vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
+  "$schema": "https://biomejs.dev/schemas/2.2.2/schema.json",
+  "vcs": {
+    "enabled": false,
+    "clientKind": "git",
+    "useIgnoreFile": false
+  },
   "files": {
     "ignoreUnknown": false,
     "includes": [
@@ -26,12 +30,20 @@
     "attributePosition": "auto",
     "bracketSpacing": true
   },
-  "assist": { "actions": { "source": { "organizeImports": "on" } } },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  },
   "linter": {
     "enabled": true,
     "rules": {
       "recommended": false,
-      "a11y": { "useKeyWithClickEvents": "error" },
+      "a11y": {
+        "useKeyWithClickEvents": "error"
+      },
       "complexity": {
         "useOptionalChain": "error"
       },
@@ -46,7 +58,10 @@
         "noDangerouslySetInnerHtmlWithChildren": "error",
         "noGlobalEval": "error"
       },
-      "style": { "noParameterAssign": "error", "useImportType": "off" },
+      "style": {
+        "noParameterAssign": "error",
+        "useImportType": "off"
+      },
       "suspicious": {
         "noArrayIndexKey": "error",
         "noAssignInExpressions": "error",
