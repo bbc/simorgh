@@ -5,6 +5,7 @@ import {
   screen,
 } from '#app/components/react-testing-library-with-providers';
 import homePageFixture from '#data/ws/homePage/index.json';
+import { Services } from '#app/models/types/global';
 import HighImpactPromo, { HighImpactPromoProps } from '.';
 
 const { summaries } = homePageFixture.data.curations[0];
@@ -98,5 +99,14 @@ describe('High Impact Promo', () => {
     });
     expect(attributionLink).toBeInTheDocument();
     expect(attributionLink).toHaveAttribute('href', '/pidgin');
+  });
+
+  it.each<[Services, string]>([
+    ['mundo', 'ltr'],
+    ['arabic', 'rtl'],
+  ])('should render %s service with dir="%s"', (service, dir) => {
+    render(<Fixture />, { service });
+    const promo = screen.getByTestId('high-impact-promo');
+    expect(promo).toHaveAttribute('dir', dir);
   });
 });
