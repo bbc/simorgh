@@ -132,7 +132,9 @@ describe('Curation Promo', () => {
 
     it('should display read time when readTime is provided in summary data', () => {
       const container = render(<Fixture />);
-      expect(container.getAllByText('readtime: 1').length).toBeGreaterThan(0);
+      expect(
+        container.getAllByText('Estimated Read Time: 1 minute').length,
+      ).toBeGreaterThan(0);
     });
   });
 });

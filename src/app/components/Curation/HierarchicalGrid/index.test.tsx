@@ -180,6 +180,8 @@ describe('Hierarchical Grid Curation', () => {
         eventTrackingData={minimalEventTrackingData}
       />,
     );
-    expect(container.getAllByText(/readtime:\s*\d+/).length).toBeGreaterThan(0);
+    expect(
+      container.getAllByText('Estimated Read Time: 5 minutes').length,
+    ).toBeGreaterThan(0);
   });
 });
