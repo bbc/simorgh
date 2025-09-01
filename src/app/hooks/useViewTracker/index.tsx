@@ -83,6 +83,41 @@ const trackComponentInOptimizely = ({
   }
 };
 
+const dispatchTrackingRequests = ({
+  optimizelyParameters,
+  reverbParameters,
+  eventSent,
+}) => {
+  const {
+    campaignID,
+    componentName,
+    pageIdentifier,
+    platform,
+    producerId,
+    producerName,
+    service,
+    statsDestination,
+  } = reverbParameters;
+
+  const shouldSendEvent = shouldDispatchEventBeacon({
+    campaignID,
+    componentName,
+    pageIdentifier,
+    platform,
+    producerId,
+    producerName,
+    service,
+    statsDestination,
+    eventSent,
+  });
+
+  if (shouldSendEvent) {
+    trackComponentInOptimizely(optimizelyParameters);
+
+    sendEventBeacon(reverbParameters);
+  }
+};
+
 const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
   const {
     componentName,
@@ -119,18 +154,6 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
 
   const { service, useReverb } = use(ServiceContext);
 
-  const shouldSendEvent = shouldDispatchEventBeacon({
-    campaignID,
-    componentName,
-    pageIdentifier,
-    platform,
-    producerId,
-    producerName,
-    service,
-    statsDestination,
-    eventSent,
-  });
-
   const initObserver = async (threshold = MIN_VIEWED_PERCENT) => {
     if (typeof window.IntersectionObserver === 'undefined') {
       // Polyfill IntersectionObserver, e.g. for IE11
@@ -155,14 +178,13 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
 
   useEffect(() => {
     if (alwaysInView) {
-      if (shouldSendEvent) {
-        trackComponentInOptimizely({
+      dispatchTrackingRequests({
+        optimizelyParameters: {
           sendOptimizelyEvents,
           experimentVariant,
           componentName,
-        });
-
-        sendEventBeacon({
+        },
+        reverbParameters: {
           campaignID,
           componentName,
           format,
@@ -184,19 +206,19 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
               experimentName,
               experimentVariant,
             }),
-        });
-      }
+        },
+        eventSent,
+      });
     } else if (componentHasComeIntoView && !timer.current) {
       // @ts-expect-error timer ref won't be null
       timer.current = setTimeout(() => {
-        if (shouldSendEvent) {
-          trackComponentInOptimizely({
+        dispatchTrackingRequests({
+          optimizelyParameters: {
             sendOptimizelyEvents,
             experimentVariant,
             componentName,
-          });
-
-          sendEventBeacon({
+          },
+          reverbParameters: {
             campaignID,
             componentName,
             format,
@@ -218,14 +240,15 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
                 experimentName,
                 experimentVariant,
               }),
-          });
+          },
+          eventSent,
+        });
 
-          if (!alwaysInView) setEventSent(true);
+        if (!alwaysInView) setEventSent(true);
 
-          (observer.current as unknown as IntersectionObserver)?.disconnect();
-          observer.current = null;
-          timer.current = null;
-        }
+        (observer.current as unknown as IntersectionObserver)?.disconnect();
+        observer.current = null;
+        timer.current = null;
       }, VIEWED_DURATION_MS);
     } else {
       // @ts-expect-error current timer will not be null
