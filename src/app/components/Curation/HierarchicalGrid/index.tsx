@@ -5,7 +5,7 @@ import React, { use } from 'react';
 import { css, jsx, Theme } from '@emotion/react';
 import moment from 'moment';
 import path from 'ramda/src/path';
-import { ReadTimeHomepage as ReadTime } from '#app/components/ReadTime';
+import { ReadTime } from '#app/components/ReadTime';
 import useClickTrackerHandler from '../../../hooks/useClickTrackerHandler';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import formatDuration from '../../../lib/utilities/formatDuration';
@@ -177,12 +177,10 @@ const HiearchicalGrid = ({
                       {promo.lastPublished}
                     </Promo.Timestamp>
                     {/* EXPERIMENT: Read Time */}
-                    {promo.readTime && (
-                      <ReadTime
-                        readTimeValue={promo.readTime}
-                        promoId={promo.id}
-                      />
-                    )}
+                    <ReadTime
+                      readTimeValue={promo.readTime}
+                      promoId={promo.id}
+                    />
                   </>
                 ) : null}
               </Promo>

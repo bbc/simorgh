@@ -9,7 +9,7 @@ import Text from '#app/components/Text';
 import styles from './index.styles';
 
 type ReadTimeProps = {
-  readTimeValue: number;
+  readTimeValue?: number;
   className?: string;
   readTimeVariant?: string;
   promoId?: string;
@@ -23,13 +23,8 @@ const DEFAULT_TRANSLATIONS = {
   minutes: 'minutes',
 };
 
-const GetTranslations = () => {
+const ProcessReadTime = (readTimeValue: number) => {
   const { translations } = use(ServiceContext);
-  return translations;
-};
-
-const processReadTime = (readTimeValue: number) => {
-  const translations = GetTranslations();
   const readTimePrefix =
     translations.readTime?.readTimePrefix ??
     DEFAULT_TRANSLATIONS.readTimePrefix;
@@ -53,16 +48,17 @@ const processReadTime = (readTimeValue: number) => {
   };
 };
 
-export const ReadTimeArticle = ({
+export const ReadTimeArticleExperiment = ({
   readTimeValue,
   readTimeVariant,
   className,
 }: ReadTimeProps) => {
+  if (!readTimeValue) return null;
   const showReadTime = readTimeVariant && readTimeVariant !== 'off';
   if (!showReadTime) return null;
 
   const { readTimeInMilliseconds, minutesLabel, quickLongCopy, minutesCopy } =
-    processReadTime(readTimeValue);
+    ProcessReadTime(readTimeValue);
 
   // EXPERIMENT: Read Time
   const fontSize = readTimeVariant.includes('bold') ? 'pica' : 'brevier';
@@ -107,15 +103,15 @@ export const ReadTimeArticle = ({
   );
 };
 
-export const ReadTimeHomepage = ({
+export const ReadTime = ({
   readTimeValue,
   promoId,
   className,
 }: ReadTimeProps) => {
-  if (isLive()) return null;
+  if (isLive() || !readTimeValue) return null;
 
   const { readTimeInMilliseconds, minutesLabel, minutesCopy } =
-    processReadTime(readTimeValue);
+    ProcessReadTime(readTimeValue);
 
   const eventTrackingData: EventTrackingData = {
     componentName: 'read-time',

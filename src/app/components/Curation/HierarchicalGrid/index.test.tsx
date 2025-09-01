@@ -184,10 +184,10 @@ describe('Hierarchical Grid Curation', () => {
         eventTrackingData={minimalEventTrackingData}
       />,
     );
-    expect(container.queryAllByTestId('read-time').length).toBeGreaterThan(0);
+    expect(container.queryAllByTestId('read-time').length).toBe(12);
   });
 
-  it('should not display read time when readTime is provided in summary data', () => {
+  it('should not display read time when readTime is not provided in summary data', () => {
     const container = render(
       <HierarchicalGrid
         headingLevel={headingLevel}

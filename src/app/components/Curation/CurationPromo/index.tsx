@@ -8,7 +8,7 @@ import formatDuration from '#app/lib/utilities/formatDuration';
 import Promo from '#components/Promo';
 import { Summary } from '#app/models/types/curationData';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import { ReadTimeHomepage as ReadTime } from '#app/components/ReadTime';
+import { ReadTime } from '#app/components/ReadTime';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
@@ -97,7 +97,7 @@ const CurationPromo = ({
         </Promo.Timestamp>
       ) : null}
       {/* EXPERIMENT: Read Time */}
-      {readTime && <ReadTime readTimeValue={readTime} promoId={id} />}
+      <ReadTime readTimeValue={readTime} promoId={id} />
     </Promo>
   );
 };
