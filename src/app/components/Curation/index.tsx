@@ -119,10 +119,7 @@ export default ({
               link={summaryLink}
               image={imageUrl}
               id={billboardId}
-              eventTrackingData={{
-                componentName: billboardId,
-                detailedPlacement: `${position + 1}`,
-              }}
+              eventTrackingData={eventTrackingData}
               showLiveLabel={summaryIsLive}
               altText={imageAlt}
               summaries={summaries}
@@ -153,6 +150,7 @@ export default ({
           data={mostRead}
           columnLayout="twoColumn"
           headingBackgroundColour={GHOST}
+          eventTrackingData={eventTrackingData}
         />
       );
     case RADIO_SCHEDULE:
@@ -160,6 +158,7 @@ export default ({
         <RadioSchedule
           initialData={radioSchedule}
           toggleName="homePageRadioSchedule"
+          eventTrackingData={eventTrackingData}
         />
       );
     case EMBED:
@@ -195,7 +194,10 @@ export default ({
     case HIERARCHICAL_CURATION_GRID:
     default:
       if (summaries.length > 0) {
-        const viewTracker = useViewTracker(eventTrackingData);
+        const viewTracker = useViewTracker({
+          ...eventTrackingData,
+          viewThreshold: 0.2,
+        });
 
         const curationSubheadingClickTracker =
           useClickTrackerHandler(eventTrackingData);

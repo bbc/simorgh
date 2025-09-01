@@ -44,9 +44,25 @@ export const MostReadLink = ({
   href,
   children,
   size,
+  id,
+  position,
   eventTrackingData,
 }: PropsWithChildren<MostReadLinkProps>) => {
-  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+  const positionIndex =
+    typeof position === 'string' ? parseInt(position, 10) : position;
+
+  const eventTrackingDataExtended = {
+    ...eventTrackingData,
+    itemTracker: {
+      ...eventTrackingData?.itemTracker,
+      type: 'most-read-promo',
+      text: title,
+      position: positionIndex,
+      resourceId: id || href,
+    },
+  };
+
+  const clickTrackerHandler = useClickTrackerHandler(eventTrackingDataExtended);
 
   return (
     <div css={getItemCss({ dir, size })} dir={dir}>
