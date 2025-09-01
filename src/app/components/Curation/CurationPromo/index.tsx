@@ -91,12 +91,12 @@ const CurationPromo = ({
           </Promo.A>
         )}
       </Promo.Heading>
-
       {!isLive ? (
         <Promo.Timestamp className="promo-timestamp">
           {lastPublished}
         </Promo.Timestamp>
       ) : null}
+      {/* EXPERIMENT: Read Time */}
       {readTime && <ReadTime readTimeValue={readTime} promoId={id} />}
     </Promo>
   );

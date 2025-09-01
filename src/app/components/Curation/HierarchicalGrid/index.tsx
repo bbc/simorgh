@@ -175,6 +175,7 @@ const HiearchicalGrid = ({
                     <Promo.Timestamp className="promo-timestamp">
                       {promo.lastPublished}
                     </Promo.Timestamp>
+                    {/* EXPERIMENT: Read Time */}
                     {promo.readTime && (
                       <ReadTime
                         readTimeValue={promo.readTime}

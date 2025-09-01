@@ -131,7 +131,7 @@ export const ReadTimeHomepage = ({
   const viewRef = useViewTracker(eventTrackingData);
 
   return (
-    <span className={className} {...viewRef}>
+    <span className={className} data-testid="read-time" {...viewRef}>
       <Text css={styles.readTimeText} size="brevier">
         {minutesCopy}
       </Text>
