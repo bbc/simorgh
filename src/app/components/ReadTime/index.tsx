@@ -117,7 +117,6 @@ export const ReadTimeHomepage = ({
   const { readTimeInMiliseconds, minutesLabel, minutesCopy } =
     processReadTime(readTimeValue);
 
-  // Revised tracking componentName and type - see ticket
   const eventTrackingData: EventTrackingData = {
     componentName: 'read-time',
     itemTracker: {
