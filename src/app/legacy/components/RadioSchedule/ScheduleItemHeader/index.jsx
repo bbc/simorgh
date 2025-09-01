@@ -108,7 +108,7 @@ const ScheduleItemHeader = ({
   const eventTrackingDataExtended = {
     ...eventTrackingData,
     itemTracker: {
-      type: 'radio-schedule-promo',
+      type: `radio-schedule-${state}`,
       text: episodeTitle,
       mediaType: 'audio',
       position: position + 1,

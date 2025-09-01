@@ -83,7 +83,7 @@ describe('RadioSchedule', () => {
           position: 1,
           resourceId: 'p0',
           text: '27 August 2019',
-          type: 'radio-schedule-promo',
+          type: 'radio-schedule-live',
         },
       });
       expect(clickTrackerSpy).toHaveBeenNthCalledWith(2, {
@@ -97,7 +97,7 @@ describe('RadioSchedule', () => {
           position: 2,
           resourceId: 'p1',
           text: '27 August 2019',
-          type: 'radio-schedule-promo',
+          type: 'radio-schedule-onDemand',
         },
       });
     });
