@@ -174,7 +174,11 @@ describe('Hierarchical Grid Curation', () => {
 
   it('should display read time when readTime is provided in summary data', () => {
     const container = render(
-      <HierarchicalGrid headingLevel={headingLevel} summaries={fixture} />,
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={fixture}
+        eventTrackingData={minimalEventTrackingData}
+      />,
     );
     expect(container.getAllByText(/readtime:\s*\d+/).length).toBeGreaterThan(0);
   });

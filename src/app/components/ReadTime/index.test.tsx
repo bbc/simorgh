@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '#app/components/react-testing-library-with-providers';
 import * as viewTracking from '../../hooks/useViewTracker';
-import ReadTime from '.';
+import { ReadTimeArticle as ReadTime } from '.';
 
 describe('ReadTime', () => {
   beforeEach(() => {
