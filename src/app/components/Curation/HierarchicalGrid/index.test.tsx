@@ -50,10 +50,11 @@ describe('Hierarchical Grid Curation', () => {
   });
 
   it('returns null when less than three promos are in the data', async () => {
+    const splicedFixture = [...fixture].splice(0, 2);
     render(
       <HierarchicalGrid
         headingLevel={headingLevel}
-        summaries={fixture.splice(0, 2)}
+        summaries={splicedFixture}
         eventTrackingData={minimalEventTrackingData}
       />,
     );
