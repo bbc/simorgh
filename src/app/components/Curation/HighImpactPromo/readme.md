@@ -24,16 +24,16 @@ Typically used when editors set a curation item's prominence to "Maximum" in Tip
 
 ## Props
 
-| Prop | Type | Required | Description |
-|---|---|---|---|
-| `title` | string | Yes | The promotional headline. |
-| `link` | string | Yes | URL destination for the promo. |
-| `imageUrl` | string | Yes | Image URL for the promotional content. |
-| `imageAlt` | string | Yes | Alt text for the promotional image. |
-| `lazy` | boolean | No | Enables lazy loading for the image. |
-| `headingLevel` | number | No | The heading level for the title (defaults to 3). |
-| `eventTrackingData` | object | No | Tracking metadata for analytics. |
-| `attribution` | object | No | An object with `text` and `link` to override the default attribution. |
+| Prop                | Type    | Required | Description                                                           |
+| ------------------- | ------- | -------- | --------------------------------------------------------------------- |
+| `title`             | string  | Yes      | The promotional headline.                                             |
+| `link`              | string  | Yes      | URL destination for the promo.                                        |
+| `imageUrl`          | string  | Yes      | Image URL for the promotional content.                                |
+| `imageAlt`          | string  | Yes      | Alt text for the promotional image.                                   |
+| `lazy`              | boolean | No       | Enables lazy loading for the image.                                   |
+| `headingLevel`      | number  | No       | The heading level for the title (defaults to 3).                      |
+| `eventTrackingData` | object  | No       | Tracking metadata for analytics.                                      |
+| `attribution`       | object  | No       | An object with `text` and `link` to override the default attribution. |
 
 ---
 
