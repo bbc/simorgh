@@ -14,13 +14,11 @@ import {
 import runCommonEpisodeTests from '../commonEpisodeTests';
 
 describe('Canonical', () => {
-  describe(pageType, () => {
-    runExpiredEpisodeTests();
-    runCommonCrossPlatformTests(service);
-    runCommonEpisodeTests();
-    runRecentEpisodesTests();
-    runCoreCanonicalTests();
-    runCanonicalAnalyticsTests();
-    runRadioScheduleTests(pageType);
-  });
+  runExpiredEpisodeTests();
+  runCommonCrossPlatformTests(service);
+  runCommonEpisodeTests();
+  runRecentEpisodesTests();
+  runCoreCanonicalTests();
+  runCanonicalAnalyticsTests();
+  runRadioScheduleTests();
 });

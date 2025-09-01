@@ -1,7 +1,7 @@
 export default {
   _environment: 'local',
   ads: {
-    enabled: false,
+    enabled: true,
   },
   adsNonce: {
     enabled: true,
