@@ -6,17 +6,14 @@ import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import moment from 'moment';
 import { use } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
+import isMedia from '#app/lib/utilities/isMedia';
 import styles from './index.styles';
 import CurationPromo from '../CurationPromo';
 import HighImpactPromo from '../HighImpactPromo';
 import { CurationGridProps } from '../types';
 
-const isMediaType = (summary: Summary): boolean => {
-  return ['video', 'audio', 'photogallery'].includes(summary.type);
-};
-
-const isHighImpact = (summary: Summary): boolean => {
-  return summary.visualProminence === VISUAL_PROMINENCE.MAXIMUM;
+const isHighImpact = ({ visualProminence }: Summary): boolean => {
+  return visualProminence === VISUAL_PROMINENCE.MAXIMUM;
 };
 
 const CurationGrid = ({
@@ -35,7 +32,7 @@ const CurationGrid = ({
   }
 
   const hasHighImpactPromo = summaries.some(
-    promo => isHighImpact(promo) && !isMediaType(promo),
+    promo => isHighImpact(promo) && !isMedia(promo.type),
   );
 
   const buildPromoEventTrackingData = (promo: Summary, i: number) => ({
@@ -54,37 +51,26 @@ const CurationGrid = ({
 
   const renderPromo = (promo: Summary, index: number) => {
     const isFirstPromo = index === 0;
-    const lazyLoadImages = !(isFirstPromo && isFirstCuration);
     const service = extractWorldServiceFromUrl(promo.link);
+    const shouldUseHighImpact =
+      isHighImpact(promo) && !isMedia(promo.type) && !isLite;
 
-    if (isHighImpact(promo) && !isMediaType(promo) && !isLite) {
-      if (service) {
-        return (
-          <ServiceContextProvider service={service}>
-            <HighImpactPromo
-              {...promo}
-              lazy={lazyLoadImages}
-              eventTrackingData={buildPromoEventTrackingData(promo, index)}
-            />
-          </ServiceContextProvider>
-        );
-      }
-      return (
-        <HighImpactPromo
-          {...promo}
-          lazy={lazyLoadImages}
-          eventTrackingData={buildPromoEventTrackingData(promo, index)}
-        />
-      );
+    const commonProps = {
+      ...promo,
+      lazy: !(isFirstPromo && isFirstCuration),
+      eventTrackingData: buildPromoEventTrackingData(promo, index),
+    };
+
+    if (!shouldUseHighImpact) {
+      return <CurationPromo {...commonProps} headingLevel={headingLevel} />;
     }
 
-    return (
-      <CurationPromo
-        {...promo}
-        lazy={lazyLoadImages}
-        headingLevel={headingLevel}
-        eventTrackingData={buildPromoEventTrackingData(promo, index)}
-      />
+    return service ? (
+      <ServiceContextProvider service={service}>
+        <HighImpactPromo {...commonProps} />
+      </ServiceContextProvider>
+    ) : (
+      <HighImpactPromo {...commonProps} />
     );
   };
 

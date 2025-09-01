@@ -8,6 +8,7 @@ import formatDuration from '#app/lib/utilities/formatDuration';
 import Promo from '#components/Promo';
 import { Summary } from '#app/models/types/curationData';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import isMediaType from '#app/lib/utilities/isMedia';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
@@ -45,7 +46,7 @@ const CurationPromo = ({
   const durationString = `, ${durationTranslation} ${formattedDuration}`;
 
   const showDuration = mediaDuration && ['video', 'audio'].includes(type);
-  const isMedia = ['video', 'audio', 'photogallery'].includes(type);
+  const isMedia = isMediaType(type);
   const typeTranslated =
     (type === 'audio' && `${audioTranslation}, `) ||
     (type === 'video' && `${videoTranslation}, `) ||
