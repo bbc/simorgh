@@ -28,7 +28,7 @@ type RequiredEventProps = Pick<
   | 'producerName'
   | 'service'
   | 'statsDestination'
-> & { eventSent: boolean };
+> & { trackingIsEnabled: boolean; eventSent: boolean };
 
 const shouldDispatchEventBeacon = ({
   campaignID,
@@ -39,10 +39,9 @@ const shouldDispatchEventBeacon = ({
   producerName,
   service,
   statsDestination,
+  trackingIsEnabled,
   eventSent,
 }: RequiredEventProps) => {
-  const { trackingIsEnabled } = useTrackingToggle(componentName);
-
   const hasRequiredProps = [
     campaignID,
     componentName,
@@ -58,6 +57,7 @@ const shouldDispatchEventBeacon = ({
 };
 
 const trackComponentInOptimizely = ({
+  optimizely,
   sendOptimizelyEvents,
   experimentVariant,
   componentName,
@@ -65,8 +65,6 @@ const trackComponentInOptimizely = ({
   EventTrackingData,
   'sendOptimizelyEvents' | 'experimentVariant' | 'componentName'
 >) => {
-  const { optimizely } = use(OptimizelyContext);
-
   if (
     optimizely &&
     sendOptimizelyEvents &&
@@ -86,6 +84,7 @@ const trackComponentInOptimizely = ({
 const dispatchTrackingRequests = ({
   optimizelyParameters,
   reverbParameters,
+  trackingIsEnabled,
   eventSent,
 }) => {
   const {
@@ -108,6 +107,7 @@ const dispatchTrackingRequests = ({
     producerName,
     service,
     statsDestination,
+    trackingIsEnabled,
     eventSent,
   });
 
@@ -180,6 +180,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     if (alwaysInView) {
       dispatchTrackingRequests({
         optimizelyParameters: {
+          optimizely,
           sendOptimizelyEvents,
           experimentVariant,
           componentName,
@@ -207,6 +208,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
               experimentVariant,
             }),
         },
+        trackingIsEnabled,
         eventSent,
       });
     } else if (componentHasComeIntoView && !timer.current) {
@@ -241,6 +243,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
                 experimentVariant,
               }),
           },
+          trackingIsEnabled,
           eventSent,
         });
 
@@ -288,8 +291,9 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
 
   const viewTracker = useCallback(
     async (element: HTMLElement) => {
-      const shouldSetupIntersectionObserver =
-        !alwaysInView && (element || trackingIsEnabled || !eventSent);
+      const shouldSetupIntersectionObserver = alwaysInView
+        ? false
+        : !(!element || !trackingIsEnabled || eventSent);
 
       if (shouldSetupIntersectionObserver) {
         if (!observer.current) await initObserver(viewThreshold);
