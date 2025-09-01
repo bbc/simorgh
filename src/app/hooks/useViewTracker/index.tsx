@@ -288,10 +288,13 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
 
   const viewTracker = useCallback(
     async (element: HTMLElement) => {
-      if (alwaysInView) return;
-      if (!element || !trackingIsEnabled || eventSent) return;
-      if (!observer.current) await initObserver(viewThreshold);
-      (observer.current as unknown as IntersectionObserver)?.observe(element);
+      const shouldSetupIntersectionObserver =
+        !alwaysInView && (element || trackingIsEnabled || !eventSent);
+
+      if (shouldSetupIntersectionObserver) {
+        if (!observer.current) await initObserver(viewThreshold);
+        (observer.current as unknown as IntersectionObserver)?.observe(element);
+      }
     },
     [trackingIsEnabled, eventSent, viewThreshold, alwaysInView],
   );
