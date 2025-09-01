@@ -50,6 +50,7 @@ const HiearchicalGrid = ({
   const durationTranslation = path(['media', 'duration'], translations);
 
   if (!summaries || summaries.length < 3) return null;
+
   const promoItems = summaries.slice(0, 12);
 
   const buildPromoEventTrackingData = (promo: Summary, i: number) => {
