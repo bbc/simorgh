@@ -18,7 +18,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     'public, stale-if-error=300, stale-while-revalidate=120, max-age=30',
   );
 
-  const { id, renderer_env: rendererEnv } = context.query as PageDataParams;
+  const { renderer_env: rendererEnv } = context.query as PageDataParams;
   const baseProps = {
     error: null,
     isAmp: false,
@@ -47,7 +47,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
   }
 
   const { data } = await getPageData({
-    id,
     service: 'ws',
     rendererEnv,
     resolvedUrl: '/ws/languages',

@@ -11,7 +11,7 @@ import { PageTypes, Services, Variants } from '#app/models/types/global';
 const logger = nodeLogger(__filename);
 
 type Props = {
-  id: string;
+  id?: string;
   page?: string;
   service: Services;
   variant?: Variants | null;
@@ -21,7 +21,7 @@ type Props = {
 };
 
 const getPageData = async ({
-  id,
+  id = '',
   page,
   service,
   variant,
