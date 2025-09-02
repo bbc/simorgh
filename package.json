@@ -134,7 +134,7 @@
     "react-router-dom": "5.3.4",
     "undici": "7.15.0",
     "url-parse": "1.5.10",
-    "winston": "patch:winston@3.17.0#./patches/winston-file-descriptor.patch"
+    "winston": "3.17.0"
   },
   "devDependencies": {
     "@babel/core": "7.28.3",
