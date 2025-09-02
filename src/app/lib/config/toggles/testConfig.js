@@ -40,6 +40,9 @@ export default {
   mostRead: {
     enabled: true,
   },
+  newLanguageHomepage: {
+    enabled: true,
+  },
   nielsenAnalytics: {
     enabled: true,
   },

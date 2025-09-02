@@ -7,7 +7,7 @@ import {
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { RequestContext } from '#contexts/RequestContext';
-import isLive from '#app/lib/utilities/isLive';
+import useToggle from '#hooks/useToggle';
 import LanguageNavigation from './LanguageNavigation/lazy';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Canonical from './index.canonical';
@@ -55,6 +55,9 @@ const NavigationContainer = ({ propsForTopBarOJComponent }) => {
   const { blocks = [] } = propsForTopBarOJComponent || {};
   const { script, translations, navigation, service, dir } =
     use(ServiceContext);
+  const { enabled: isNewLanguageHomepageEnabled } = useToggle(
+    'newLanguageHomepage',
+  );
 
   const { canonicalLink, origin } = use(RequestContext);
   const { currentPage, navMenuText } = translations;
@@ -81,10 +84,7 @@ const NavigationContainer = ({ propsForTopBarOJComponent }) => {
 
   const dropdownNavViewTracker = useViewTracker(dropdownNavEventTrackingData);
 
-  // TODO: Feature toggle will be introduced https://bbc.atlassian.net/browse/WS-1073
-  const renderLanguageNavigation = !isLive() && service === 'ws';
-
-  if (renderLanguageNavigation) {
+  if (isNewLanguageHomepageEnabled && service === 'ws') {
     return <LanguageNavigation />;
   }
 

@@ -39,6 +39,9 @@ export default {
   mostRead: {
     enabled: false,
   },
+  newLanguageHomepage: {
+    enabled: false,
+  },
   nielsenAnalytics: {
     enabled: true,
   },
