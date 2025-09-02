@@ -6,7 +6,7 @@ export default {
     css({
       color: palette.GREY_6,
     }),
-  readTimeContainer: ({ mq, spacings }: Theme) =>
+  readTimeContainer: () =>
     css({
       display: 'inline-block',
       // margin: `0 ${spacings.FULL}rem ${spacings.DOUBLE}rem`,
@@ -20,6 +20,14 @@ export default {
   readTimeInlineStyles: () =>
     css({
       paddingInlineStart: `0.5rem`,
+      '::before': {
+        content: '""',
+        display: `inline-block`,
+        border: `0.0625rem solid #8A8C8E`,
+        backgroundColor: '#8A8C8E',
+        marginRight: '8px',
+        verticalAlign: 'middle',
+      },
     }),
   readTimePlaceholderControl: () =>
     css({
