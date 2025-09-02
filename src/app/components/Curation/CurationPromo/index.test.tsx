@@ -12,6 +12,7 @@ interface FixtureProps {
   duration?: number;
   link?: string;
   isLive?: boolean;
+  readTime?: number;
 }
 
 const Fixture = ({
@@ -20,6 +21,7 @@ const Fixture = ({
   duration,
   link = 'https://www.bbc.com/mundo/noticias-america-latina-60742314',
   isLive,
+  readTime,
 }: FixtureProps) => (
   <CurationPromo
     lazy={lazy}
@@ -33,6 +35,7 @@ const Fixture = ({
     type={type}
     duration={duration}
     isLive={isLive}
+    readTime={readTime}
   />
 );
 
@@ -127,6 +130,16 @@ describe('Curation Promo', () => {
         { service: 'mundo' },
       );
       expect(container.queryByText('17 abril 2023')).not.toBeInTheDocument();
+    });
+
+    it('should display read time when readTime is provided in summary data', () => {
+      const container = render(<Fixture readTime={1} />);
+      expect(container.queryByTestId('read-time')).toBeInTheDocument();
+    });
+
+    it('should not display read time when readTime is not provided in summary data', () => {
+      const container = render(<Fixture />);
+      expect(container.queryByTestId('read-time')).not.toBeInTheDocument();
     });
   });
 });

@@ -23,6 +23,7 @@ export interface Summary extends BaseSummary {
   mediaType?: 'audio' | 'video' | 'photogallery';
   lazy?: boolean;
   headingLevel?: number;
+  readTime?: number;
   eventTrackingData?: EventTrackingData;
   visualProminence?: VisualProminence | string;
 }
