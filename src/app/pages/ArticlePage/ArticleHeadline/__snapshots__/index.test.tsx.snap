@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`ArticleHeadline - Lite Site CTA with toggle disabled should not be displayed on canonical 1`] = `
 @media (max-width: 14.9375rem) {
