@@ -53,6 +53,11 @@ const CurationPromo = ({
     (type === 'video' && `${videoTranslation}, `) ||
     (type === 'photogallery' && `${photoGalleryTranslation}, `);
 
+  const matchesVJIDTPath = link.includes('/resources');
+  const isLink = ['link'].includes(type); // could we make a specific type in bff?
+
+  const isVJIDT = matchesVJIDTPath && isLink;
+
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
   return (
@@ -73,6 +78,7 @@ const CurationPromo = ({
         </Promo.Image>
       )}
       <Promo.Heading as={`h${headingLevel}`}>
+        {isVJIDT && <p>I will leave the lite site</p>}
         {isMedia ? (
           <Promo.A href={link} aria-labelledby={id} {...clickTrackerHandler}>
             <span id={id} role="text">

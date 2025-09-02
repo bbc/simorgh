@@ -16,6 +16,11 @@ const VALID_DOMAINS = [
 
 const RESERVED_ROUTE_EXTENSIONS = ['amp', 'app', 'lite'];
 
+const handleVjIDTAssets = (url: URL) => {
+  if (!url) return null;
+  return `/ws/languages?url=${url.pathname}`; // to do, pass in URL, service. Query string may be hacky approach. Push something into request header?
+};
+
 const addLiteExtension = (href?: string) => {
   if (!href) return null;
 
@@ -27,6 +32,7 @@ const addLiteExtension = (href?: string) => {
   const isRestrictedOnSoftLaunch = RESTRICTED_ON_SOFT_LAUNCH.includes(
     url.pathname,
   );
+  const isVjIDT = url.pathname.includes('/resources');
   const isWsService = SERVICES.includes(
     url.pathname?.split('/')?.[1] as Services,
   );
@@ -37,8 +43,13 @@ const addLiteExtension = (href?: string) => {
   const shouldAddLiteExtension =
     isValidDomain &&
     isWsService &&
+    !isVjIDT &&
     !hasReservedRouteExtension &&
     !isRestrictedOnSoftLaunch;
+
+  // if (isVjIDT) {
+  //   return handleVjIDTAssets(url);
+  // }
 
   if (shouldAddLiteExtension) {
     url.pathname += '.lite';

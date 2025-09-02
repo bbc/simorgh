@@ -97,6 +97,11 @@ const HiearchicalGrid = ({
             (promo.type === 'photogallery' && `${photoGalleryTranslation}, `);
           const { isLive } = promo;
 
+          const matchesVJIDTPath = promo.link.includes('/resources');
+          const isLink = ['link'].includes(promo.type); // could we make a specific type in bff?
+
+          const isVJIDT = matchesVJIDTPath && isLink;
+
           const promoEventTrackingData = buildPromoEventTrackingData(promo, i);
           const clickTrackerHandler = getClickTrackerHandler(
             promoEventTrackingData,
@@ -168,6 +173,7 @@ const HiearchicalGrid = ({
                     </Promo.A>
                   )}
                 </Promo.Heading>
+                {isVJIDT && <p>I will leave the lite site</p>}
                 <Promo.Body className="promo-paragraph" css={styles.body}>
                   {promo.description}
                 </Promo.Body>
