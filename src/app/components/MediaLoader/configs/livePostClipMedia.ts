@@ -81,7 +81,12 @@ export default ({
     guidanceMessage,
   });
 
-  const items: PlaylistItem[] = [{ versionID, kind, duration: rawDuration }];
+  const items: PlaylistItem[] = [
+    { versionID, kind, duration: rawDuration },
+    { versionID: 'p01wk3ty', kind: 'clip', duration: 29 },
+    { versionID: 'p01wk3wj', kind: 'clip', duration: 29 },
+    { versionID: 'p01wk3x9', kind: 'clip', duration: 29 },
+  ];
 
   if (showAds) items.unshift({ kind: 'advert' });
 
@@ -112,6 +117,7 @@ export default ({
         ...basePlayerConfig.statsObject,
         ...(videoId && { clipPID: videoId }),
       },
+      mediator: { host: 'open.test.bbc.co.uk' },
     },
     ...(!isAudio && { placeholderConfig }),
 

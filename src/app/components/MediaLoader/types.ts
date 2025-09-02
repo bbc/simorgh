@@ -134,6 +134,7 @@ export type ConfigBuilderReturnProps = {
   showAds: boolean;
   ampIframeUrl?: string;
   orientation?: Orientations;
+  countdownDurationSecs?: number;
 };
 
 export type MediaInfo = {

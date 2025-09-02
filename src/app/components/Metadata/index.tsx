@@ -64,6 +64,7 @@ const MetadataContainer = ({
     pathname,
     isUK,
     isLite,
+    nonce,
   } = use(RequestContext);
 
   const {

@@ -5,10 +5,11 @@ import { chartbeatSource as defaultChartbeatSource } from '../utils';
 
 const CanonicalChartbeatBeacon = ({
   chartbeatConfig,
+  nonce = null,
   chartbeatSource = defaultChartbeatSource,
 }: CanonicalChartbeatProps) => (
   <Helmet>
-    <script async type="text/javascript">
+    <script {...(nonce ? { nonce } : {})} async type="text/javascript">
       {`
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});

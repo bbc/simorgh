@@ -25,6 +25,7 @@ const injectCspHeader = (req, res, next) => {
     isAmp,
     isLive: isLiveEnv(),
     service,
+    ...(res.get('x-nonce') && { nonce: res.get('x-nonce') }),
   });
 
   const middleware = csp({

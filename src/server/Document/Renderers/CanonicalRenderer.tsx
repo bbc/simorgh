@@ -15,6 +15,8 @@ interface Props extends BaseRendererProps {
   legacyScripts: React.ReactElement;
   modernScripts: React.ReactElement;
   service?: string;
+  nonce?: string;
+  cspHeader?: string;
 }
 
 const showScripts = (scripts: React.ReactElement | React.ReactElement[]) => {
@@ -82,6 +84,7 @@ export default function CanonicalRenderer({
   styles,
   title,
   service,
+  nonce,
 }: Props) {
   const serialisedData = serialiseForScript(data);
   const appEnvVariables = serialiseForScript(getProcessEnvAppVariables());
@@ -89,7 +92,7 @@ export default function CanonicalRenderer({
   return (
     <html lang="en-GB" className={NO_JS_CLASSNAME} {...htmlAttrs}>
       <head>
-        <ReverbTemplate />
+        <ReverbTemplate nonce={nonce} />
         {isApp && <meta name="robots" content="noindex" />}
         {title}
         {helmetMetaTags}
@@ -100,12 +103,14 @@ export default function CanonicalRenderer({
           dangerouslySetInnerHTML={{ __html: styles }}
         />
         <script
+          nonce={nonce}
           dangerouslySetInnerHTML={{
             // Read env variables from the server and expose them to the client
             __html: `window.SIMORGH_ENV_VARS=${appEnvVariables}`,
           }}
         />
         <ComponentTracking
+          nonce={nonce}
           trackComponentViews={false}
           enableStaticClickTrackingOnOperaMiniOnly
         />
@@ -113,6 +118,7 @@ export default function CanonicalRenderer({
       <body>
         <div id="root" dangerouslySetInnerHTML={{ __html: html || '' }} />
         <script
+          nonce={nonce}
           // This script should be the first script tag in the body, otherwise Opera Mini has trouble parsing the `window.SIMORGH_DATA` object
           dangerouslySetInnerHTML={{
             __html: `window.SIMORGH_DATA=${serialisedData}`,
@@ -126,6 +132,7 @@ export default function CanonicalRenderer({
           {legacyScripts}
         </IfAboveIE9>
         <script
+          nonce={nonce}
           type="text/javascript"
           dangerouslySetInnerHTML={{
             __html: `document.documentElement.classList.remove("no-js");`,

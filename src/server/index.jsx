@@ -21,6 +21,7 @@ import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { BAD_REQUEST, INTERNAL_SERVER_ERROR, OK } from '#lib/statusCodes.const';
 import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
 import isLocal from '#app/lib/utilities/isLocal';
+import crypto from 'crypto';
 import injectCspHeader from './utilities/cspHeader';
 import logResponseTime from './utilities/logResponseTime';
 import renderDocument from './Document';
@@ -79,7 +80,7 @@ const skipMiddleware = (_req, _res, next) => {
 };
 
 const injectCspHeaderProdBuild =
-  process.env.NODE_ENV !== 'production' ? skipMiddleware : injectCspHeader;
+  process.env.NODE_ENV === 'production' ? skipMiddleware : injectCspHeader;
 
 server
   .disable('x-powered-by')
@@ -196,10 +197,26 @@ const injectReferrerPolicyHeader = (req, res, next) => {
   next();
 };
 
+// Set nonce as req header
+const injectNonceHeader = (req, res, next) => {
+  const nonce = crypto.randomBytes(16).toString('hex');
+  const thisService = req.originalUrl.split('/')[1];
+  const thisCountry =
+    req.headers['x-country'] || req.headers['x-bbc-edge-country'] || 'uk';
+  console.log('thisCountry', thisCountry);
+  if (
+    (thisCountry === 'mx' && thisService === 'mundo') ||
+    (thisCountry === 'eg' && thisService === 'arabic')
+  )
+    res.set('x-nonce', nonce);
+  next();
+};
+
 // Catch all for all routes
 server.get(
   '/*',
   [
+    injectNonceHeader,
     injectCspHeaderProdBuild,
     injectDefaultCacheHeader,
     injectReferrerPolicyHeader,
@@ -256,6 +273,8 @@ server.get(
       data.showCookieBannerBasedOnCountry = showCookieBannerBasedOnCountry;
       data.isUK = isUK;
       data.isLite = isLite;
+      data.nonce = res.get('x-nonce') || null;
+      data.cspHeader = res.get('Content-Security-Policy');
       data.country = (headers['x-country'] || headers['x-bbc-edge-country'])
         ?.toString()
         .toLowerCase();
@@ -294,6 +313,8 @@ server.get(
           service,
           url,
           variant,
+          nonce: data.nonce,
+          cspHeader: data.cspHeader,
         });
       } catch (error) {
         const { message } = error;
@@ -328,6 +349,8 @@ server.get(
           service,
           url,
           variant,
+          nonce: data.nonce,
+          cspHeader: data.cspHeader,
         });
       }
 

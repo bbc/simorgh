@@ -41,13 +41,17 @@ const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
 
 const logger = nodeLogger(__filename);
 
-export const BumpLoader = () => (
+type BumpLoaderProps = {
+  nonce?: string | null;
+};
+
+export const BumpLoader = ({ nonce }: BumpLoaderProps) => (
   <Helmet>
     <script
       type="text/javascript"
       src="https://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js"
     />
-    <script type="text/javascript">
+    <script type="text/javascript" {...(nonce ? { nonce } : {})}>
       {`bbcRequireMap = {
             "bump-4":"https://emp.bbci.co.uk/emp/bump-4/bump-4"
         }
@@ -203,6 +207,7 @@ type Props = {
   embedded?: boolean;
   uniqueId?: string;
   eventMapping?: EventMapping;
+  nonce?: string | null;
 };
 
 const MediaLoader = ({
@@ -211,6 +216,7 @@ const MediaLoader = ({
   embedded,
   uniqueId,
   eventMapping,
+  nonce,
 }: Props) => {
   const { lang, service, translations } = use(ServiceContext);
   const { pageIdentifier } = use(EventTrackingContext);
@@ -283,7 +289,11 @@ const MediaLoader = ({
       {
         // Prevents the av-embeds route itself rendering the Metadata component
         !embedded && (
-          <Metadata blocks={blocks} embedURL={playerConfig?.externalEmbedUrl} />
+          <Metadata
+            blocks={blocks}
+            nonce={nonce}
+            embedURL={playerConfig?.externalEmbedUrl}
+          />
         )
       }
       <figure
@@ -308,7 +318,7 @@ const MediaLoader = ({
         ) : (
           <>
             {showAds && <AdvertTagLoader />}
-            <BumpLoader />
+            <BumpLoader nonce={nonce} />
             {hasPlaceholder ? (
               <Placeholder
                 src={placeholderSrc}

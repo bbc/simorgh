@@ -22,6 +22,8 @@ const renderDocument = async ({
   routes,
   service,
   url,
+  nonce,
+  cspHeader,
 }) => {
   const isDev = process.env.NODE_ENV === 'development';
   const cache = createCache({ key: 'bbc' });
@@ -71,6 +73,8 @@ const renderDocument = async ({
             isAmp={isAmp}
             isApp={isApp}
             isLite={isLite}
+            nonce={nonce}
+            cspHeader={cspHeader}
           />
         </CacheProvider>
       </ChunkExtractorManager>,
@@ -109,10 +113,15 @@ const renderDocument = async ({
       isApp={isApp}
       isLite={isLite}
       service={service}
+      nonce={nonce}
+      cspHeader={cspHeader}
     />,
   );
 
-  return { html: `<!doctype html>${doc}`, redirectUrl: null };
+  return {
+    html: `<!doctype html>${doc.replaceAll('&#x27;', "'")}`,
+    redirectUrl: null,
+  };
 };
 
 export default renderDocument;

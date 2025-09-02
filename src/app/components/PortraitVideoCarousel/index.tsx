@@ -30,7 +30,7 @@ const PortraitVideoCarousel = ({
     null,
   );
 
-  const { isLite } = use(RequestContext);
+  const { isLite, nonce } = use(RequestContext);
 
   if (isLite) return null;
 
@@ -48,7 +48,7 @@ const PortraitVideoCarousel = ({
 
   return (
     <>
-      <BumpLoader />
+      <BumpLoader nonce={nonce} />
       <section
         aria-label={title}
         role="region"

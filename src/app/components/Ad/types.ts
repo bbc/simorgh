@@ -9,5 +9,5 @@ export interface AdProps {
   slotType: SlotType;
   adcampaign?: string;
   className?: string;
-  nonce?: string;
+  nonce?: string | null;
 }

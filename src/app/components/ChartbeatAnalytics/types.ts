@@ -22,6 +22,7 @@ export type CanonicalChartbeatConfig = ChartbeatConfig & {
 export interface CanonicalChartbeatProps {
   chartbeatConfig: CanonicalChartbeatConfig;
   chartbeatSource?: string;
+  nonce?: string | null;
 }
 
 export type AmpChartbeatConfig = ChartbeatConfig & {

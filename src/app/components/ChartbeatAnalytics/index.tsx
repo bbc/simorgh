@@ -19,7 +19,7 @@ const ChartbeatAnalytics = ({
   chapter,
 }: ChartbeatProps) => {
   const { service, brandName, chartbeatDomain } = use(ServiceContext);
-  const { env, isAmp, platform, pageType } = use(RequestContext);
+  const { env, isAmp, platform, pageType, nonce } = use(RequestContext);
 
   const { enabled } = useToggle('chartbeatAnalytics');
 
@@ -48,7 +48,9 @@ const ChartbeatAnalytics = ({
 
   if (isAmp) return <AmpChartbeatBeacon chartbeatConfig={chartbeatConfig} />;
 
-  return <CanonicalChartbeatBeacon chartbeatConfig={chartbeatConfig} />;
+  return (
+    <CanonicalChartbeatBeacon chartbeatConfig={chartbeatConfig} nonce={nonce} />
+  );
 };
 
 export default ChartbeatAnalytics;
