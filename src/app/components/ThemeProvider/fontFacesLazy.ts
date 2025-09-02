@@ -2,26 +2,19 @@ import { Services } from '#app/models/types/global';
 
 const REITH_FONTS_DIR = 'https://static.files.bbci.co.uk/fonts/reith/r2.512/';
 
-const NOTO_SERIF_SINHALA_FONTS_DIR =
-  'https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifSinhala/v1.00/';
+const NOTO_SERIF_SINHALA_FONTS_DIR = 'fonts/NotoSerifSinhala/v1.00/';
 
-const NOTO_SANS_TAMIL_FONTS_DIR =
-  'https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTamil/v1.00/';
+const NOTO_SANS_TAMIL_FONTS_DIR = 'fonts/NotoSansTamil/v1.00/';
 
-const NOTO_SANS_TELUGU_FONTS_DIR =
-  'https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTelugu/v1.00/';
+const NOTO_SANS_TELUGU_FONTS_DIR = 'fonts/NotoSansTelugu/v1.00/';
 
-const NOTO_SANS_GUJARATI_FONTS_DIR =
-  'https://ws-downloads.files.bbci.co.uk/fonts/NotoSansGujarati/v1.00/';
+const NOTO_SANS_GUJARATI_FONTS_DIR = 'fonts/NotoSansGujarati/v1.00/';
 
-const NOTO_SANS_ETHIOPIC_FONTS_DIR =
-  'https://ws-downloads.files.bbci.co.uk/fonts/NotoSansEthiopic/v1.901/';
+const NOTO_SANS_ETHIOPIC_FONTS_DIR = 'fonts/NotoSansEthiopic/v1.901/';
 
-const PADAUK_FONTS_DIR =
-  'https://ws-downloads.files.bbci.co.uk/fonts/Padauk/v2.8/';
+const PADAUK_FONTS_DIR = 'fonts/Padauk/v2.8/';
 
-const NOTO_SERIF_BENGALI_FONTS_DIR =
-  'https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifBengali/v1.00/';
+const NOTO_SERIF_BENGALI_FONTS_DIR = 'fonts/NotoSerifBengali/v1.00/';
 
 const REITH_QALAM_FONTS_DIR =
   'https://static.files.bbci.co.uk/fonts/reith-qalam/1.310/';
