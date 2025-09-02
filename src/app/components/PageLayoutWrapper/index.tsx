@@ -12,6 +12,7 @@ import WebVitals from '../../legacy/containers/WebVitals';
 import HeaderContainer from '../../legacy/containers/Header';
 import FooterContainer from '../../legacy/containers/Footer';
 import ManifestContainer from '../../legacy/containers/Manifest';
+import PWATelemetry from '../PWATelemetry';
 import ServiceWorker from '../ServiceWorker';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
@@ -214,6 +215,7 @@ const PageLayoutWrapper = ({
         ]}
       />
       <ServiceWorker />
+      <PWATelemetry />
       <ManifestContainer />
       {!isErrorPage && <WebVitals pageType={pageType} />}
       <GlobalStyles />
