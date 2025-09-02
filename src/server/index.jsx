@@ -272,9 +272,9 @@ server.get(
           ve: 'cpzd49v9rd1t',
           ec: 'cg72618r047t',
         };
-        const avaiableCountries = Object.keys(countrySpecificTopics);
+        const availableCountries = Object.keys(countrySpecificTopics);
         const topicIdToFetch =
-          data.country && avaiableCountries.includes(data.country)
+          data.country && availableCountries.includes(data.country)
             ? countrySpecificTopics[data.country]
             : 'c7zp57yyz25t';
         const countrySpecificdata = await fetchDataFromBFF({
@@ -291,6 +291,7 @@ server.get(
             title: countrySpecificdata.json.data.title,
             description: countrySpecificdata.json.data.description,
             articles: articles.slice(0, 4),
+            topicId: topicIdToFetch,
           };
         }
       }

@@ -244,14 +244,26 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
-  const experimentName = 'newswb_ws_personalised-topic-curation';
+  // EXPERIMENT: Continue reading button
+  const experimentName = 'newswb_ws_read_more_b';
   const experimentVariant = useOptimizelyVariation({
     experimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
 
+  // EXPERIMENT: Personalised Topic Curation
+  const personalisedTopicCurationExperimentName =
+    'newswb_ws_personalised_topic_curation';
+
+  // change back to const when experiment live and finished testing
+  let personalisedTopicCurationExperimentVariant = useOptimizelyVariation({
+    experimentName: personalisedTopicCurationExperimentName,
+    experimentType: ExperimentType.SERVER_SIDE,
+  });
+
   const isInServerSideExperiment =
-    experimentVariant && experimentVariant !== 'off';
+    personalisedTopicCurationExperimentVariant &&
+    personalisedTopicCurationExperimentVariant !== 'off';
 
   // EXPERIMENT: Read Time
   const readTimeExperimentName = 'newswb_ws_article_read_time';
@@ -401,7 +413,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         experimentVariant,
       ),
   );
-
+  personalisedTopicCurationExperimentVariant = 'personalised';
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics atiData={atiData} />
@@ -495,8 +507,15 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             />
           )}
           {pageData.secondaryColumn?.PersonalisedContent &&
-            experimentVariant !== 'control' && (
-              <PersonalisedContent pageData={pageData} sendOptimizelyEvents />
+            personalisedTopicCurationExperimentVariant &&
+            personalisedTopicCurationExperimentVariant !== 'control' && (
+              <PersonalisedContent
+                pageData={pageData}
+                personalisedTopicCurationExperimentVariant={
+                  personalisedTopicCurationExperimentVariant
+                }
+                sendOptimizelyEvents
+              />
             )}
           <RelatedContentSection
             content={blocks}
