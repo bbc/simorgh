@@ -94,7 +94,7 @@ export default ({
       text: headline,
       position: blockPosition + 1,
       resourceId: video?.id,
-      ...(momentDuration && { duration: momentDuration.asSeconds() }),
+      ...(momentDuration && { duration: momentDuration.asMilliseconds() }),
     },
   };
 
