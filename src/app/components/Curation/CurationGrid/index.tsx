@@ -12,9 +12,8 @@ import CurationPromo from '../CurationPromo';
 import HighImpactPromo from '../HighImpactPromo';
 import { CurationGridProps } from '../types';
 
-const isHighImpact = ({ visualProminence }: Summary): boolean => {
-  return visualProminence === VISUAL_PROMINENCE.MAXIMUM;
-};
+const isHighImpact = ({ visualProminence }: Summary): boolean =>
+  visualProminence === VISUAL_PROMINENCE.MAXIMUM;
 
 const CurationGrid = ({
   summaries,
