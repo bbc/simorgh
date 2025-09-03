@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Comscore Analytics Container AMP should render comscore amp-analytics component 1`] = `
 <amp-analytics
