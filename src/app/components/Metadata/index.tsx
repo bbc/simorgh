@@ -139,10 +139,6 @@ const MetadataContainer = ({
   const metaImageAltText = imageAltText || defaultImageAltText;
   const linkToAmpPage = hasAmpPage && !isAmp;
 
-  const id = canonicalNonUkLink.split('/').pop() || '';
-
-  const testOgImage = `http://localhost:7081/api/og?id=${id}&service=${service}`;
-
   return (
     <Helmet htmlAttributes={htmlAttributes}>
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -188,8 +184,7 @@ const MetadataContainer = ({
         content={getIconAssetUrl(service, '144x144')}
       />
       <meta property="og:description" content={description} />
-      {/* <meta property="og:image" content={metaImage} /> */}
-      <meta property="og:image" content={testOgImage} />
+      <meta property="og:image" content={metaImage} />
       <meta property="og:image:alt" content={metaImageAltText} />
       {imageWidth && (
         <meta property="og:image:width" content={String(imageWidth)} />
@@ -206,7 +201,7 @@ const MetadataContainer = ({
       <meta name="twitter:creator" content={metaTwitterHandle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image:alt" content={metaImageAltText} />
-      <meta name="twitter:image:src" content={testOgImage} />
+      <meta name="twitter:image:src" content={metaImage} />
       <meta name="twitter:site" content={twitterSite} />
       <meta name="twitter:title" content={socialTitle} />
       {!isAmp && (
