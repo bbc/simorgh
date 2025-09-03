@@ -86,7 +86,7 @@ exports[`Toggles Config when application environment is local should contain cor
 {
   "_environment": "local",
   "ads": {
-    "enabled": false,
+    "enabled": true,
   },
   "adsNonce": {
     "enabled": true,
