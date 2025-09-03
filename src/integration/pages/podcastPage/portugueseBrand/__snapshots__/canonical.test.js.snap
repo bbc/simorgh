@@ -265,20 +265,6 @@ exports[`Canonical Podcast Page Recent Episodes List items should match text and
 }
 `;
 
-exports[`Canonical Podcast Page Recent Episodes List items should match text and url 9`] = `
-{
-  "text": "Áudio, Que História!, 'Descobri que meu cabeleireiro é meu irmão',  Duration 12,40  Duration 12:4017 junho 2021",
-  "url": "/portuguese/podcasts/p07r3r3t/p09clshz",
-}
-`;
-
-exports[`Canonical Podcast Page Recent Episodes List items should match text and url 10`] = `
-{
-  "text": "Áudio, Que História!, O homem que passou 76 dias à deriva no Atlântico,  Duration 15,12  Duration 15:1210 junho 2021",
-  "url": "/portuguese/podcasts/p07r3r3t/p09cls7w",
-}
-`;
-
 exports[`Canonical Podcast Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
