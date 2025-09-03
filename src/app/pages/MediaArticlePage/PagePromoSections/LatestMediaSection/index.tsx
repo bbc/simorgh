@@ -30,7 +30,7 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
   const hasSingleItem = content.length === 1;
   const singleItem = content[0];
 
-  const ariaLabelledBy = generatePromoId({
+  let ariaLabelledBy = generatePromoId({
     sectionType: 'latest-media',
     assetUri: null,
     canonicalUrl: singleItem.link,
@@ -71,26 +71,30 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
         </div>
       ) : (
         <PromoList css={styles.latestMediaGridWrapper}>
-          {content.map((item, index) => (
-            <PromoItem
-              key={item.id}
-              css={styles.latestMediaPromoBorderAndWidth}
-            >
-              <LatestMediaItem
-                item={item}
-                ariaLabelledBy={generatePromoId({
-                  sectionType: 'latest-media',
-                  assetUri: null,
-                  canonicalUrl: item.link,
-                  uri: null,
-                  contentType: item.type,
-                  index,
-                })}
-                ref={viewTracker}
-                eventTrackingData={eventTrackingData}
-              />
-            </PromoItem>
-          ))}
+          {content.map((item, index) => {
+            ariaLabelledBy = generatePromoId({
+              sectionType: 'latest-media',
+              assetUri: null,
+              canonicalUrl: item.link,
+              uri: null,
+              contentType: item.type,
+              index,
+            });
+
+            return (
+              <PromoItem
+                key={item.id}
+                css={styles.latestMediaPromoBorderAndWidth}
+              >
+                <LatestMediaItem
+                  item={item}
+                  ariaLabelledBy={ariaLabelledBy}
+                  ref={viewTracker}
+                  eventTrackingData={eventTrackingData}
+                />
+              </PromoItem>
+            );
+          })}
         </PromoList>
       )}
     </section>
