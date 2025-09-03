@@ -13,14 +13,14 @@
     ]
   },
   "include": [
+    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "../src/**/*.d.ts",
     "build/types/**/*.ts",
-    "integration/IntegrationTestEnvironment.ts",
-    "next-env.d.ts",
     "next.config.js",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "integration/IntegrationTestEnvironment.ts"
   ],
   "exclude": [
     "node_modules",
