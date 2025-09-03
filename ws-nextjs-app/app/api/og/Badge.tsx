@@ -1,26 +1,21 @@
 import React from 'react';
-import { GREY_8, WHITE } from '#app/components/ThemeProvider/palette';
+import { BLACK, WHITE } from '#app/components/ThemeProvider/palette';
 
 type BadgeProps = {
-  backgroundColor?: string;
-  icon?: React.ReactNode;
   text: string;
+  icon?: React.ReactNode;
+  textColour?: string;
   uppercase?: boolean;
 };
 
-const Badge = ({
-  icon,
-  text,
-  backgroundColor = GREY_8,
-  uppercase,
-}: BadgeProps) => (
+const Badge = ({ text, textColour = WHITE, uppercase, icon }: BadgeProps) => (
   <div
     style={{
       display: 'flex',
       flexDirection: 'row',
-      backgroundColor,
+      backgroundColor: BLACK,
       padding: 15,
-      borderRadius: 40,
+      borderRadius: 8,
     }}
   >
     <div
@@ -35,7 +30,12 @@ const Badge = ({
       }}
     >
       {icon && icon}
-      <span style={uppercase ? { textTransform: 'uppercase' } : {}}>
+      <span
+        style={{
+          textTransform: uppercase ? 'uppercase' : 'none',
+          color: textColour,
+        }}
+      >
         {text}
       </span>
     </div>
