@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet';
 import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
 import { data as afriqueHomePageDataFixture } from '#data/afrique/homePage/index.json';
 import { data as pidginHomePageDataFixture } from '#data/pidgin/homePage/index.json';
+import { data as portugueseHomePageDataFixture } from '#data/portuguese/homePage/index.json';
 import { service as pidginServiceConfig } from '#app/lib/config/services/pidgin';
 import useViewTracker from '../../hooks/useViewTracker';
 import useClickTrackerHandler from '../../hooks/useClickTrackerHandler';
@@ -424,7 +425,7 @@ describe('Home Page', () => {
   describe('Viewability Analytics', () => {
     beforeEach(() => {
       (useViewTracker as jest.Mock).mockClear();
-      (useClickTrackerHandler as jest.Mock).mockClear?.();
+      (useClickTrackerHandler as jest.Mock).mockClear();
     });
 
     it('Hierarchical curation - calls useViewTracker with correct viewability event tracking data for the first curation', () => {
@@ -549,6 +550,41 @@ describe('Home Page', () => {
           position: schedule.position + 1,
           resourceId: schedule.curationId,
           itemCount: schedule.radioSchedule?.length,
+        },
+      }));
+
+      const { calls } = (useViewTracker as jest.Mock).mock;
+
+      expectedTrackingData.forEach(expected => {
+        const matchingCall = calls.find(
+          ([arg]) =>
+            arg.componentName === expected.componentName &&
+            JSON.stringify(arg.groupTracker) ===
+              JSON.stringify(expected.groupTracker),
+        );
+        expect(matchingCall).toBeTruthy();
+      });
+    });
+
+    it('Portrait Video Carousel - calls useViewTracker with correct viewability event tracking data for each portrait video carousel', async () => {
+      // @ts-expect-error - sample homepage data
+      render(<HomePage pageData={portugueseHomePageDataFixture} />, {
+        service: 'portuguese',
+      });
+
+      const portraitVideoCarousels =
+        portugueseHomePageDataFixture.curations.filter(
+          curation => curation.portraitVideo,
+        );
+
+      const expectedTrackingData = portraitVideoCarousels.map(carousel => ({
+        componentName: 'portrait-video-carousel',
+        groupTracker: {
+          name: carousel.title,
+          type: 'portrait-video-carousel',
+          position: carousel.position + 1,
+          resourceId: carousel.curationId,
+          itemCount: carousel.portraitVideo?.blocks.length,
         },
       }));
 
