@@ -50,4 +50,5 @@ export type FormattedPromo = {
   url?: string;
   footer: JSX.Element;
   eventTrackingData?: EventTrackingBlock['block'];
+  type?: string;
 };

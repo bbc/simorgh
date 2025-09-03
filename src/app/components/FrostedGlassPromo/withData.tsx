@@ -151,6 +151,7 @@ const linkPromoFormatter = (props: PromoProps): FormattedPromo => ({
   url: props?.item?.uri,
   image: buildImageProperties(props?.item?.indexImage),
   eventTrackingData: props?.eventTrackingData?.block,
+  type: props?.item?.type,
 });
 
 const normalise = (props: PromoProps): FormattedPromo => {

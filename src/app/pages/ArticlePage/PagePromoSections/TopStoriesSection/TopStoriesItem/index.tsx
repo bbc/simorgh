@@ -31,6 +31,11 @@ const getArticleTopStoryItem = (item: TopStoryItem) => {
   const canonicalUrl = item?.locators?.canonicalUrl ?? '';
   const uri = item?.uri ?? '';
 
+  const matchesVJIDTPath = uri.includes('/resources');
+  const isLink = ['link'].includes(item.type); // could we make a specific type in bff?
+
+  const isVJIDT = matchesVJIDTPath && isLink;
+
   const isLive = getIsLive(item);
 
   return {
@@ -43,6 +48,7 @@ const getArticleTopStoryItem = (item: TopStoryItem) => {
     mediaDuration,
     timestamp,
     uri,
+    isVJIDT,
   };
 };
 
@@ -61,6 +67,7 @@ const getLiveTopStoryItem = (item: TopStoryItem) => {
     mediaDuration: undefined,
     timestamp: undefined,
     isPhotoGallery: false,
+    isVJIDT: false,
   };
 };
 
@@ -96,6 +103,7 @@ const TopStoriesItem = forwardRef(
       mediaDuration,
       timestamp,
       uri,
+      isVJIDT,
     } = itemExtractor(item);
 
     const titleTag = timestamp || isLive ? 'h3' : 'div';
@@ -134,6 +142,7 @@ const TopStoriesItem = forwardRef(
                 )}
               </Promo.Link>
             </Promo.Title>
+            {isVJIDT && <p>I will leave the lite site</p>}
             {timestamp && (
               <Promo.Timestamp css={styles.timestamp}>
                 {timestamp}

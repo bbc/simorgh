@@ -38,6 +38,7 @@ type FrostedGlassPromoProps = {
   index: number;
   minimumContrast: number;
   paletteSize: number;
+  type?: string;
 };
 
 const FrostedGlassPromo = ({
@@ -49,10 +50,16 @@ const FrostedGlassPromo = ({
   index = 0,
   minimumContrast = 8,
   paletteSize = 10,
+  type = '',
 }: PropsWithChildren<FrostedGlassPromoProps>) => {
   const { isAmp } = use(RequestContext);
   const isCanonical = !isAmp;
   const relativeUrl = makeRelativeUrlPath(url);
+
+  const matchesVJIDTPath = url.includes('/resources');
+  const isLink = ['link'].includes(type); // could we make a specific type in bff?
+
+  const isVJIDT = matchesVJIDTPath && isLink;
 
   const clickTracker = useClickTrackerHandler({
     ...(eventTrackingData || {}),
@@ -141,6 +148,7 @@ const FrostedGlassPromo = ({
           paletteSize={paletteSize}
         >
           {promoText}
+          {isVJIDT && <p>I will leave the lite site</p>}
         </FrostedGlassPanel>
       </Lazyload>
     </div>
