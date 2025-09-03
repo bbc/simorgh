@@ -4,8 +4,8 @@ import { jsx } from '@emotion/react';
 import { use } from 'react';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import { Summary } from '#app/models/types/curationData';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import Heading from '../Heading';
 import MaskedImage from '../MaskedImage';
 import styles from './index.styles';
@@ -22,7 +22,7 @@ interface BillboardProps {
   image: string;
   altText: string;
   id?: string;
-  eventTrackingData?: EventTrackingMetadata;
+  eventTrackingData?: EventTrackingData;
   showLiveLabel?: boolean;
   summaries?: Summary[];
 }
@@ -34,8 +34,8 @@ export default ({
   image,
   altText,
   id = 'billboard',
-  eventTrackingData,
   showLiveLabel,
+  eventTrackingData = { componentName: 'billboard' },
   summaries = [],
 }: BillboardProps) => {
   const viewTracker = useViewTracker(eventTrackingData);
@@ -93,7 +93,10 @@ export default ({
                 </Heading>
               )}
 
-              <BillboardCurationGrid summaries={summaries.slice(1)} />
+              <BillboardCurationGrid
+                summaries={summaries.slice(1)}
+                eventTrackingData={eventTrackingData}
+              />
             </div>
           )}
         </div>
