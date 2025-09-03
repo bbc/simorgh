@@ -11,11 +11,14 @@ import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import Heading from '../Heading';
 import Image from '../Image';
 import styles from './index.styles';
-
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 interface SocialLinksProps {
   id?: string;
   title: string;
   summaries: Summary[];
+  eventTrackingData?: EventTrackingData,
+  groupPosition?: number,
+  curationId?: string,
 }
 
 const SocialLinkImage = ({ imageUrl }: { imageUrl: string }) => {
@@ -62,7 +65,7 @@ const SocialLinkImage = ({ imageUrl }: { imageUrl: string }) => {
   );
 };
 
-const SocialLink = ({ summary }: { summary: Summary }) => {
+const SocialLink = ({ summary }: { summary: Summary, eventTrackingData:EventTrackingData }) => {
   const linkLabelId = useId();
   const hasDescription = Boolean(summary.description);
 
@@ -92,6 +95,7 @@ const SocialLinks = ({
   title,
   summaries = [],
   id = 'social-links-1',
+  eventTrackingData = {componentName: 'social-links'},
 }: SocialLinksProps) => {
   if (!summaries.length) {
     return null;
@@ -114,14 +118,14 @@ const SocialLinks = ({
           {summaries.map(summary => {
             return (
               <li css={styles.item} key={summary.title}>
-                <SocialLink summary={summary} />
+                <SocialLink summary={summary} eventTrackingData={eventTrackingData} />
               </li>
             );
           })}
         </ul>
       ) : (
         <div css={styles.item}>
-          <SocialLink summary={summaries[0]} />
+          <SocialLink summary={summaries[0]} eventTrackingData={eventTrackingData} />
         </div>
       )}
     </section>
