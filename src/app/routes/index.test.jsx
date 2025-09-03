@@ -42,7 +42,7 @@ const getMatchingRoute = pathname => {
   return matchingRoutes?.[0]?.route;
 };
 
-const toggles = { ...defaultToggles.local };
+const toggles = defaultToggles.local;
 
 const renderRouter = props =>
   act(async () => {

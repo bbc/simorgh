@@ -18,7 +18,7 @@ jest.mock('#app/lib/utilities/isTest', () =>
 
 const fetchBFFSpy = jest.spyOn(fetchBFF, 'default');
 
-const toggles = { ...defaultToggles.local };
+const toggles = defaultToggles.local;
 
 describe('Get initial data for on demand radio', () => {
   afterEach(() => {
