@@ -15,7 +15,7 @@ import VisuallyHiddenText from '../VisuallyHiddenText';
 import { DownArrowIcon, UpArrowIcon } from '../icons';
 
 const eventTrackingData = {
-  componentName: 'potrait-video-modal',
+  componentName: 'portrait-video-modal',
   alwaysInView: true,
 };
 
@@ -147,7 +147,7 @@ const PortraitVideoModal = ({
       }
     };
 
-    const modal = document.getElementById('potrait-video-modal-container');
+    const modal = document.getElementById('portrait-video-modal-container');
     const reactRootElement = document.getElementById('root');
 
     if (modal) {
@@ -179,7 +179,7 @@ const PortraitVideoModal = ({
         aria-modal="true"
         aria-label={modalLabel}
         css={styles.modal}
-        id="potrait-video-modal-container"
+        id="portrait-video-modal-container"
         {...viewTracker}
       >
         <button
