@@ -2084,10 +2084,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bbc/reverb-url-helper@https://mybbc-analytics.files.bbci.co.uk/reverb-url-helper/bbc-reverb-url-helper-1.1.0.tgz":
-  version: 1.1.0
-  resolution: "@bbc/reverb-url-helper@https://mybbc-analytics.files.bbci.co.uk/reverb-url-helper/bbc-reverb-url-helper-1.1.0.tgz"
-  checksum: 10/0adc4ec46ba4f06ad382241024f0fd853c8a30ca4288664695be9728300514792c8c96cad3f71ef8321be852f617dfbdd42894220e959d6d6c22200acd128325
+"@bbc/reverb-url-helper@https://mybbc-analytics.test.files.bbci.co.uk/reverb-url-helper/bbc-reverb-url-helper-1.1.1.tgz":
+  version: 1.1.1
+  resolution: "@bbc/reverb-url-helper@https://mybbc-analytics.test.files.bbci.co.uk/reverb-url-helper/bbc-reverb-url-helper-1.1.1.tgz"
+  checksum: 10/d1605aa0f18b856c7ec58c2fa9c1d9d807a27de7a581907db66315a8818001599b44f6907069de532c7179c77e0b3eb4dd14344e38e3bbdecad3ab1cab7e6ffd
   languageName: node
   linkType: hard
 
@@ -15847,7 +15847,7 @@ __metadata:
     "@babel/preset-react": "npm:7.27.1"
     "@babel/preset-typescript": "npm:7.27.1"
     "@babel/runtime": "npm:7.28.3"
-    "@bbc/reverb-url-helper": "https://mybbc-analytics.files.bbci.co.uk/reverb-url-helper/bbc-reverb-url-helper-1.1.0.tgz"
+    "@bbc/reverb-url-helper": "https://mybbc-analytics.test.files.bbci.co.uk/reverb-url-helper/bbc-reverb-url-helper-1.1.1.tgz"
     "@bbc/web-vitals": "npm:2.5.3"
     "@cypress/webpack-preprocessor": "npm:7.0.1"
     "@emotion/babel-plugin": "npm:11.13.5"
