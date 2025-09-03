@@ -86,7 +86,10 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
               experimentVariant,
             }),
         },
-        trackingIsEnabled,
+        trackingFlags: {
+          trackingIsEnabled,
+          alwaysInView,
+        },
       });
     } else if (componentHasComeIntoView && !timer.current) {
       // @ts-expect-error timer ref won't be null
@@ -121,8 +124,10 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
                 experimentVariant,
               }),
           },
-          trackingIsEnabled,
-          eventSent,
+          trackingFlags: {
+            trackingIsEnabled,
+            eventSent,
+          },
         });
 
         if (!alwaysInView) setEventSent(true);

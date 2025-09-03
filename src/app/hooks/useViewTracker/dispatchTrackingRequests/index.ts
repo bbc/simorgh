@@ -19,13 +19,16 @@ type RequiredEventProps = Pick<
   | 'producerName'
   | 'service'
   | 'statsDestination'
-> & { trackingIsEnabled: boolean; eventSent?: boolean };
+> & { trackingIsEnabled: boolean; eventSent?: boolean; alwaysInView?: boolean };
 
 type ViewTrackerRequestsParameters = {
   optimizelyParameters: OptimizelyParameters;
   reverbParameters: EventTrackingData;
-  trackingIsEnabled: boolean;
-  eventSent?: boolean;
+  trackingFlags: {
+    trackingIsEnabled: boolean;
+    eventSent?: boolean;
+    alwaysInView?: boolean;
+  };
 };
 
 const shouldDispatchEventBeacon = ({
@@ -39,6 +42,7 @@ const shouldDispatchEventBeacon = ({
   statsDestination,
   trackingIsEnabled,
   eventSent,
+  alwaysInView,
 }: RequiredEventProps) => {
   const hasRequiredProps = [
     campaignID,
@@ -51,7 +55,11 @@ const shouldDispatchEventBeacon = ({
     statsDestination,
   ].every(Boolean);
 
-  return [hasRequiredProps, trackingIsEnabled, !eventSent].every(Boolean);
+  return [
+    hasRequiredProps,
+    trackingIsEnabled,
+    !eventSent || alwaysInView,
+  ].every(Boolean);
 };
 
 const trackComponentInOptimizely = ({
@@ -79,8 +87,7 @@ const trackComponentInOptimizely = ({
 const dispatchTrackingRequests = ({
   optimizelyParameters,
   reverbParameters,
-  trackingIsEnabled,
-  eventSent,
+  trackingFlags,
 }: ViewTrackerRequestsParameters) => {
   const {
     campaignID,
@@ -93,6 +100,8 @@ const dispatchTrackingRequests = ({
     statsDestination,
   } = reverbParameters;
 
+  const { trackingIsEnabled, eventSent, alwaysInView } = trackingFlags;
+
   const shouldSendEvent = shouldDispatchEventBeacon({
     campaignID,
     componentName,
@@ -104,6 +113,7 @@ const dispatchTrackingRequests = ({
     statsDestination,
     trackingIsEnabled,
     eventSent,
+    alwaysInView,
   });
 
   if (shouldSendEvent) {
