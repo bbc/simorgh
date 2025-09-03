@@ -7,13 +7,13 @@ import {
   WHITE,
 } from '#app/components/ThemeProvider/palette';
 import { REITH_FONTS_DIR } from '#app/components/ThemeProvider/fontFaces';
-import { Services, Variants } from '#app/models/types/global';
+import { Services } from '#app/models/types/global';
 import { FetchError } from '#app/models/types/fetch';
 import getPageData from '#nextjs/utilities/pageRequests/getPageData';
+import { ImageResponse } from 'next/og';
 import Badge from './Badge';
 import { getImages, responseNotFound } from './utils';
-import horizontalLayout from './HorizontalLayout';
-import socialCardLayout from './SocialCardLayout';
+import BackgroundImage from './BackgroundImage';
 
 const REITH_SANS_BOLD_FONT_URL = `${REITH_FONTS_DIR}/BBCReithSans_W_Bd.woff`;
 const REITH_SERIF_BOLD_FONT_URL = `${REITH_FONTS_DIR}/BBCReithSerif_W_Bd.woff`;
@@ -29,10 +29,7 @@ export async function GET(req: Request) {
 
     const id = searchParams.get('id');
     const service = searchParams.get('service') as Services;
-    const variant = searchParams.get('variant') as Variants;
-
-    const IS_SOCIAL_CARD = searchParams.get('socialCard') === 'true';
-    const IS_LIVE = searchParams.get('live') === 'true';
+    const IS_LIVE = searchParams.get('live') === 'true'; // TODO: Get from data
 
     if (!id || !service) return responseNotFound();
 
@@ -41,7 +38,6 @@ export async function GET(req: Request) {
       getPageData({
         id,
         service,
-        variant,
         resolvedUrl: req.url,
         rendererEnv: 'live',
         pageType: 'article',
@@ -55,8 +51,6 @@ export async function GET(req: Request) {
 
     if (!articleData) return responseNotFound();
 
-    const headline = articleData?.promo?.headlines?.seoHeadline;
-
     const promoImageBlocks =
       articleData?.promo?.images?.defaultPromoImage?.blocks ?? [];
 
@@ -64,7 +58,7 @@ export async function GET(req: Request) {
 
     const promoImage = promoImageRawBlock?.model;
 
-    const { unbrandedImage, brandedImage } = getImages({ promoImage, service });
+    const { brandedImage } = getImages({ promoImage, service });
 
     // For RTL services, we just return the branded image without any badges
     if (RTL_SERVICES.includes(service)) {
@@ -101,7 +95,7 @@ export async function GET(req: Request) {
       `#app/lib/config/services/${service}`
     ).then(mod => mod.service);
 
-    const { translations } = serviceConfig[variant || 'default'];
+    const { translations } = serviceConfig.default;
 
     const trendingText = translations?.trendingBadge || 'Trending';
 
@@ -166,24 +160,54 @@ export async function GET(req: Request) {
       ),
     ]
       .filter(Boolean)
-      .slice(0, 1); // Limit to one badge for now
+      .slice(0, 1); // Limit to one badge
 
-    switch (true) {
-      case IS_SOCIAL_CARD:
-        return socialCardLayout({
-          image: unbrandedImage,
-          headline,
-          badges,
-          fonts,
-        });
+    return new ImageResponse(
+      (
+        <div
+          style={{
+            display: 'flex',
+            width: '100%',
+            height: '100%',
+            position: 'relative',
+          }}
+        >
+          <BackgroundImage image={brandedImage} />
+          {/* gradient */}
+          <div
+            style={{
+              display: 'flex',
+              position: 'absolute',
+              bottom: 0,
+              width: '100%',
+              height: '50%',
+              background:
+                'linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent)',
+            }}
+          />
 
-      default:
-        return horizontalLayout({
-          image: unbrandedImage,
-          badges,
-          fonts,
-        });
-    }
+          {badges && badges.length > 0 && (
+            <div
+              style={{
+                position: 'absolute',
+                bottom: 30,
+                right: 25,
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 15,
+              }}
+            >
+              {badges.filter(Boolean).map(child => child)}
+            </div>
+          )}
+        </div>
+      ),
+      {
+        width: 1024,
+        height: 576,
+        fonts,
+      },
+    );
   } catch (error: unknown) {
     const { message } = error as FetchError;
 
