@@ -12,23 +12,28 @@ export const assertPortraitVideoCarouselComponentView = ({
   applicationType,
   siteId,
 }) => {
-  it('should send a view event for the Portrait Video Carousel component', () => {
-    interceptATIAnalyticsBeacons();
-    cy.visit(path);
+  const itOrSkip = applicationType === 'lite' ? it.skip : it;
 
-    cy.get('[data-testid="portrait-video-carousel"]').scrollIntoView({
-      duration: 1000,
-    });
+  itOrSkip(
+    'should send a view event for the Portrait Video Carousel component',
+    () => {
+      interceptATIAnalyticsBeacons();
+      cy.visit(path);
 
-    assertATIComponentViewEvent({
-      component: PORTRAIT_VIDEO_CAROUSEL,
-      pageIdentifier,
-      contentType: componentTrackingContentType || contentType,
-      useReverb,
-      applicationType,
-      siteId,
-    });
-  });
+      cy.get('[data-testid="portrait-video-carousel"]').scrollIntoView({
+        duration: 1000,
+      });
+
+      assertATIComponentViewEvent({
+        component: PORTRAIT_VIDEO_CAROUSEL,
+        pageIdentifier,
+        contentType: componentTrackingContentType || contentType,
+        useReverb,
+        applicationType,
+        siteId,
+      });
+    },
+  );
 };
 
 export default assertPortraitVideoCarouselComponentView;
