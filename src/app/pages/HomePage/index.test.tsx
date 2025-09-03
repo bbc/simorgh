@@ -565,6 +565,36 @@ describe('Home Page', () => {
       });
     });
 
+    it('Useful Links - calls useViewTracker with correct viewability event tracking data for Useful Links curation', () => {
+      // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
+      render(<HomePage pageData={homePageData} />, {
+        service: 'kyrgyz',
+      });
+
+      const usefulLinksCuration =
+        homePageData.curations[homePageData.curations.length - 1];
+      const expectedTrackingData = {
+        groupTracker: {
+          name: usefulLinksCuration.title,
+          type: 'useful-links',
+          position: usefulLinksCuration.position + 1,
+          resourceId: usefulLinksCuration.curationId,
+          itemCount: usefulLinksCuration.summaries?.length,
+        },
+        componentName: 'useful-links',
+        viewThreshold: 0.2,
+      };
+
+      const { calls } = (useViewTracker as jest.Mock).mock;
+      const matchingCalls = calls.filter(
+        ([arg]) =>
+          arg.componentName === expectedTrackingData.componentName &&
+          JSON.stringify(arg.groupTracker) ===
+            JSON.stringify(expectedTrackingData.groupTracker),
+      );
+      expect(matchingCalls).toHaveLength(1);
+    });
+
     describe('Hierarchical curation - click tracking', () => {
       it.each([
         {
@@ -730,11 +760,116 @@ describe('Home Page', () => {
         },
       );
     });
+    describe('Useful Links - click tracking', () => {
+      beforeEach(() => {
+        (useViewTracker as jest.Mock).mockClear();
+        (useClickTrackerHandler as jest.Mock).mockClear?.();
+      });
 
+      it('calls click tracking handler with correct data for Useful Links promo link', () => {
+        // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
+        render(<HomePage pageData={homePageData} />, {
+          service: 'kyrgyz',
+        });
+
+        // Find the first useful link anchor
+        const usefulLinksSection = screen.getByTestId('useful-links-1');
+        const firstUsefulLink = usefulLinksSection?.querySelector(
+          'ul[role="list"] a',
+        ) as HTMLAnchorElement;
+
+        expect(firstUsefulLink).toBeInTheDocument();
+
+        fireEvent.click(firstUsefulLink);
+
+        const usefulLinksCuration =
+          homePageData.curations[homePageData.curations.length - 1];
+        const promo = usefulLinksCuration.summaries?.[0];
+
+        const expectedTrackingData = expect.objectContaining({
+          componentName: 'useful-links',
+          groupTracker: expect.objectContaining({
+            name: usefulLinksCuration.title,
+            type: 'useful-links',
+            position: usefulLinksCuration.position + 1,
+            resourceId: usefulLinksCuration.curationId,
+            itemCount: usefulLinksCuration.summaries?.length,
+          }),
+          itemTracker: expect.objectContaining({
+            type: 'useful-link-promo',
+            text: promo?.title,
+            position: 1,
+            resourceId: promo?.id,
+          }),
+        });
+
+        expect(useClickTrackerHandler as jest.Mock).toHaveBeenCalledWith(
+          expectedTrackingData,
+        );
+      });
+      it('calls click tracking handler with correct data when Useful Links curation has only one summary', () => {
+        // Clone the fixture and remove all but the first summary from the last curation
+        const singleSummaryHomePageData = {
+          ...homePageData,
+          curations: [
+            ...homePageData.curations.slice(0, -1),
+            {
+              ...homePageData.curations[homePageData.curations.length - 1],
+              summaries: [
+                homePageData.curations[homePageData.curations.length - 1]
+                  .summaries?.[0],
+              ],
+            },
+          ],
+        };
+
+        // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
+        render(<HomePage pageData={singleSummaryHomePageData} />, {
+          service: 'kyrgyz',
+        });
+
+        // Find the single useful link anchor (should be inside a div, not a ul)
+        const usefulLinksSection = screen.getByTestId('useful-links-1');
+        const singleUsefulLink = usefulLinksSection?.querySelector(
+          'div[role="listitem"] a, div a',
+        ) as HTMLAnchorElement;
+
+        expect(singleUsefulLink).toBeInTheDocument();
+
+        fireEvent.click(singleUsefulLink);
+
+        const usefulLinksCuration =
+          singleSummaryHomePageData.curations[
+            singleSummaryHomePageData.curations.length - 1
+          ];
+        const promo = usefulLinksCuration.summaries?.[0];
+
+        const expectedTrackingData = expect.objectContaining({
+          componentName: 'useful-links',
+          groupTracker: expect.objectContaining({
+            name: usefulLinksCuration.title,
+            type: 'useful-links',
+            position: usefulLinksCuration.position + 1,
+            resourceId: usefulLinksCuration.curationId,
+            itemCount: usefulLinksCuration.summaries?.length,
+          }),
+          itemTracker: expect.objectContaining({
+            type: 'useful-link-promo',
+            text: promo?.title,
+            position: 1,
+            resourceId: promo?.id,
+          }),
+        });
+
+        expect(useClickTrackerHandler as jest.Mock).toHaveBeenCalledWith(
+          expectedTrackingData,
+        );
+      });
+    });
     // this can be changed later to check the number of calls by filtering by component name
     // but will be easier to do this after the billboard work as the billboard currently has undefined componentNames
     // which cause problems in this kind of test on the click tracker
-    it('Message banner - click tracking', () => {
+    describe('Message banner - click tracking', () => {
       // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
       render(<HomePage pageData={pidginHomePageDataFixture} />, {
         service: 'pidgin',
@@ -772,7 +907,7 @@ describe('Home Page', () => {
       );
     });
 
-    it('Radio Schedule promo - click tracking', () => {
+    describe('Radio Schedule promo - click tracking', () => {
       render(<HomePage pageData={afriqueHomePageData} />, {
         service: 'afrique',
         toggles: {
