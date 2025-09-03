@@ -20,7 +20,7 @@
     }
   },
   "swarm": {
-    "done": false,
+    "done": true,
     "reference": {
       "url": "https://paper.dropbox.com/doc/A11Y-Swarm-High-Impact-Promo--Csvi6qZxX0YnbVb4hdbWF5gvAg-HlL1gfa2bQaIXlSa8PsU9",
       "label": "Accessibility Swarm Notes"
