@@ -1,67 +1,135 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import { use } from 'react';
-import isLive from '#app/lib/utilities/isLive';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import useOptimizelyVariation, {
-  ExperimentType,
-} from '#app/hooks/useOptimizelyVariation';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '#app/hooks/useViewTracker';
+import isLive from '#app/lib/utilities/isLive';
+import Text from '#app/components/Text';
 import styles from './index.styles';
 
 type ReadTimeProps = {
-  readTime: number;
+  readTimeValue?: number;
   className?: string;
+  readTimeVariant?: string;
+  promoId?: string;
 };
 
-const ReadTime = ({ readTime, className }: ReadTimeProps) => {
-  if (isLive()) return null;
+const DEFAULT_TRANSLATIONS = {
+  readTimePrefix: 'Estimated Read Time',
+  quick: 'Quick Read',
+  long: 'Long Read',
+  minute: 'minute',
+  minutes: 'minutes',
+};
 
-  // TODO - update this to real experiment name and add it to OptimizelyPageMetrics/experimentsForPageMetrics
-  const experimentName = 'dummy_experiment_mvt';
-  // Can remove disable-next-line when we remove isLive check
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const experimentVariant = useOptimizelyVariation({
-    experimentName,
-    experimentType: ExperimentType.CLIENT_SIDE,
-  });
+const ProcessReadTime = (readTimeValue: number) => {
+  const { translations } = use(ServiceContext);
+  const readTimePrefix =
+    translations.readTime?.readTimePrefix ??
+    DEFAULT_TRANSLATIONS.readTimePrefix;
+  const quickCopy = translations.readTime?.quick ?? DEFAULT_TRANSLATIONS.quick;
+  const longCopy = translations.readTime?.long ?? DEFAULT_TRANSLATIONS.long;
+  const singleMinuteSuffix =
+    translations.readTime?.minute ?? DEFAULT_TRANSLATIONS.minute;
+  const minutesSuffix =
+    translations.readTime?.minutes ?? DEFAULT_TRANSLATIONS.minutes;
 
-  const readTimeInMiliseconds = readTime * 60000;
-  const minutesLabel = readTime === 1 ? 'minute' : 'minutes';
+  const readTimeInMilliseconds = readTimeValue * 60000;
+  const minutesLabel = readTimeValue === 1 ? singleMinuteSuffix : minutesSuffix;
+  const quickLongCopy = readTimeValue < 5 ? quickCopy : longCopy;
+  const minutesCopy = `${readTimePrefix}: ${readTimeValue} ${minutesLabel}`;
+
+  return {
+    readTimeInMilliseconds,
+    minutesLabel,
+    quickLongCopy,
+    minutesCopy,
+  };
+};
+
+export const ReadTimeArticleExperiment = ({
+  readTimeValue,
+  readTimeVariant,
+  className,
+}: ReadTimeProps) => {
+  if (!readTimeValue) return null;
+  const showReadTime = readTimeVariant && readTimeVariant !== 'off';
+  if (!showReadTime) return null;
+
+  const { readTimeInMilliseconds, minutesLabel, quickLongCopy, minutesCopy } =
+    ProcessReadTime(readTimeValue);
+
+  // EXPERIMENT: Read Time
+  const fontSize = readTimeVariant.includes('bold') ? 'pica' : 'brevier';
+  const fontVariant = readTimeVariant.includes('bold')
+    ? 'sansBold'
+    : 'sansRegular';
+  const readTimeCopyType = readTimeVariant.includes('minutes')
+    ? 'minutes'
+    : 'quickLong';
 
   const eventTrackingData: EventTrackingData = {
     componentName: 'read-time-on-article',
     sendOptimizelyEvents: true,
-    experimentName: 'dummy_experiment_mvt', // TODO - update this to real experiment name
-    experimentVariant,
+    experimentName: 'newswb_ws_article_read_time',
+    experimentVariant: readTimeVariant,
     itemTracker: {
-      label: `Read time: ${readTime} ${minutesLabel}`,
-      duration: readTimeInMiliseconds,
+      label: `Read time: ${readTimeValue} ${minutesLabel}`,
+      duration: readTimeInMilliseconds,
       type: `read-time`,
     },
   };
 
-  // Can remove disable-next-line when we remove isLive check
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const viewRef = useViewTracker(eventTrackingData);
 
-  const { translations } = use(ServiceContext);
-  const readTimeTranslation = translations.readTime || 'Estimated Read Time';
+  const isControlVariant = readTimeVariant === 'control';
+
+  if (isControlVariant)
+    return <div {...viewRef} css={styles.readTimePlaceholderControl} />;
 
   return (
     <div
       className={className}
-      css={styles.readTime}
+      css={styles.readTimeContainer}
       {...viewRef}
       data-testid="read-time"
     >
-      <p>
-        {readTimeTranslation}: {readTime} {minutesLabel}
-      </p>
-      <p>Experiment Variant: {experimentVariant}</p>
+      <Text size={fontSize} fontVariant={fontVariant} css={styles.readTimeText}>
+        {readTimeCopyType === 'minutes' ? minutesCopy : quickLongCopy}
+      </Text>
     </div>
   );
 };
 
-export default ReadTime;
+export const ReadTime = ({
+  readTimeValue,
+  promoId,
+  className,
+}: ReadTimeProps) => {
+  if (isLive() || !readTimeValue) return null;
+
+  const { readTimeInMilliseconds, minutesLabel, minutesCopy } =
+    ProcessReadTime(readTimeValue);
+
+  const eventTrackingData: EventTrackingData = {
+    componentName: 'read-time',
+    itemTracker: {
+      label: `Read time: ${readTimeValue} ${minutesLabel}`,
+      duration: readTimeInMilliseconds,
+      resourceId: promoId,
+    },
+  };
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const viewRef = useViewTracker(eventTrackingData);
+
+  return (
+    <span className={className} data-testid="read-time" {...viewRef}>
+      <Text css={styles.readTimeText} size="brevier">
+        {minutesCopy}
+      </Text>
+    </span>
+  );
+};

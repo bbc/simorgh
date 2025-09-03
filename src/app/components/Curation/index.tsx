@@ -6,6 +6,9 @@ import {
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
 import RadioSchedule from '#app/legacy/containers/RadioSchedule';
+import useViewTracker from '#app/hooks/useViewTracker';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
@@ -90,7 +93,17 @@ export default ({
     title: linkText,
   } = firstSummary || {};
 
-  const messageBannerId = `message-banner-${nthCurationByStyleAndProminence}`;
+  const eventTrackingData: EventTrackingData = {
+    componentName,
+    groupTracker: {
+      name: curationSubheading,
+      type: `${componentName}`,
+      position: position + 1,
+      ...(link && { link }),
+      ...(curationId && { resourceId: curationId }),
+      ...(summaries?.length > 0 && { itemCount: summaries.length }),
+    },
+  };
 
   switch (componentName) {
     case NOT_SUPPORTED:
@@ -106,10 +119,7 @@ export default ({
               link={summaryLink}
               image={imageUrl}
               id={billboardId}
-              eventTrackingData={{
-                componentName: billboardId,
-                detailedPlacement: `${position + 1}`,
-              }}
+              eventTrackingData={eventTrackingData}
               showLiveLabel={summaryIsLive}
               altText={imageAlt}
               summaries={summaries}
@@ -128,11 +138,8 @@ export default ({
             link={summaryLink}
             linkText={linkText}
             image={imageUrl}
-            id={messageBannerId}
-            eventTrackingData={{
-              componentName: messageBannerId,
-              detailedPlacement: `${position + 1}`,
-            }}
+            id={`message-banner-${nthCurationByStyleAndProminence}`}
+            eventTrackingData={eventTrackingData}
           />
         );
       }
@@ -143,6 +150,7 @@ export default ({
           data={mostRead}
           columnLayout="twoColumn"
           headingBackgroundColour={GHOST}
+          eventTrackingData={eventTrackingData}
         />
       );
     case RADIO_SCHEDULE:
@@ -150,6 +158,7 @@ export default ({
         <RadioSchedule
           initialData={radioSchedule}
           toggleName="homePageRadioSchedule"
+          eventTrackingData={eventTrackingData}
         />
       );
     case EMBED:
@@ -185,30 +194,48 @@ export default ({
     case HIERARCHICAL_CURATION_GRID:
     default:
       if (summaries.length > 0) {
+        const viewTracker = useViewTracker({
+          ...eventTrackingData,
+          viewThreshold: 0.2,
+        });
+
+        const curationSubheadingClickTracker =
+          useClickTrackerHandler(eventTrackingData);
+
         return curationLength > 1 ? (
           <section aria-labelledby={id} role="region">
-            {curationSubheading &&
-              (renderVisuallyHiddenH2Title ? (
-                <VisuallyHiddenText id={id} as="h2">
-                  {curationSubheading}
-                </VisuallyHiddenText>
-              ) : (
-                <Subheading id={id} link={link}>
-                  {curationSubheading}
-                </Subheading>
-              ))}
-            <GridComponent
-              summaries={summaries}
-              headingLevel={3}
-              isFirstCuration={isFirstCuration}
-            />
+            <div {...viewTracker}>
+              {curationSubheading &&
+                (renderVisuallyHiddenH2Title ? (
+                  <VisuallyHiddenText id={id} as="h2">
+                    {curationSubheading}
+                  </VisuallyHiddenText>
+                ) : (
+                  <Subheading
+                    id={id}
+                    link={link}
+                    {...(link ? curationSubheadingClickTracker : {})}
+                  >
+                    {curationSubheading}
+                  </Subheading>
+                ))}
+              <GridComponent
+                summaries={summaries}
+                headingLevel={3}
+                isFirstCuration={isFirstCuration}
+                eventTrackingData={eventTrackingData}
+              />
+            </div>
           </section>
         ) : (
-          <GridComponent
-            summaries={summaries}
-            headingLevel={2} // if there is only one curation, all promos should be h2, and no subheading
-            isFirstCuration={isFirstCuration}
-          />
+          <div {...viewTracker}>
+            <GridComponent
+              summaries={summaries}
+              headingLevel={2} // if there is only one curation, all promos should be h2, and no subheading
+              isFirstCuration={isFirstCuration}
+              eventTrackingData={eventTrackingData}
+            />
+          </div>
         );
       }
       return null;

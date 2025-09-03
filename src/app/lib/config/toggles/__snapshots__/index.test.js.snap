@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Toggles Config when application environment is live should contain correct default values 1`] = `
 {
@@ -15,15 +15,27 @@ exports[`Toggles Config when application environment is live should contain corr
   "chartbeatAnalytics": {
     "enabled": true,
   },
+  "comscoreAnalytics": {
+    "enabled": true,
+  },
+  "electionBanner": {
+    "enabled": false,
+  },
   "enableFetchingToggles": {
     "enabled": true,
-    "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|ws|vietnamese|yoruba|zhongwen)",
+    "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|dari|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|ws|vietnamese|yoruba|zhongwen)",
   },
   "eventTracking": {
     "enabled": true,
   },
+  "homePageRadioSchedule": {
+    "enabled": false,
+  },
   "include": {
     "enabled": true,
+  },
+  "liveRadioSchedule": {
+    "enabled": false,
   },
   "midArticleOnwardJourney": {
     "enabled": true,
@@ -34,13 +46,13 @@ exports[`Toggles Config when application environment is live should contain corr
   "nielsenAnalytics": {
     "enabled": true,
   },
+  "onDemandRadioSchedule": {
+    "enabled": false,
+  },
   "preloadLeadImage": {
     "enabled": true,
   },
   "prerollAds": {
-    "enabled": true,
-  },
-  "radioSchedule": {
     "enabled": true,
   },
   "scriptLink": {
@@ -79,7 +91,7 @@ exports[`Toggles Config when application environment is local should contain cor
   },
   "enableFetchingToggles": {
     "enabled": true,
-    "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|ws|vietnamese|yoruba|zhongwen)",
+    "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|dari|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|ws|vietnamese|yoruba|zhongwen)",
   },
   "eventTracking": {
     "enabled": true,
@@ -139,14 +151,26 @@ exports[`Toggles Config when application environment is test should contain corr
   "chartbeatAnalytics": {
     "enabled": true,
   },
+  "comscoreAnalytics": {
+    "enabled": true,
+  },
+  "electionBanner": {
+    "enabled": true,
+  },
   "enableFetchingToggles": {
     "enabled": true,
-    "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|ws|vietnamese|yoruba|zhongwen)",
+    "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|dari|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|ws|vietnamese|yoruba|zhongwen)",
   },
   "eventTracking": {
     "enabled": true,
   },
+  "homePageRadioSchedule": {
+    "enabled": true,
+  },
   "include": {
+    "enabled": true,
+  },
+  "liveRadioSchedule": {
     "enabled": true,
   },
   "midArticleOnwardJourney": {
@@ -158,13 +182,13 @@ exports[`Toggles Config when application environment is test should contain corr
   "nielsenAnalytics": {
     "enabled": true,
   },
+  "onDemandRadioSchedule": {
+    "enabled": true,
+  },
   "preloadLeadImage": {
     "enabled": true,
   },
   "prerollAds": {
-    "enabled": true,
-  },
-  "radioSchedule": {
     "enabled": true,
   },
   "scriptLink": {

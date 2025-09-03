@@ -11,7 +11,10 @@ import Headings from '#containers/Headings';
 import { ComponentToRenderProps } from '../types';
 import styles from './index.styles';
 
-const ArticleHeadline = (props: ComponentToRenderProps) => {
+const ArticleHeadline = ({
+  applyReadTimeSpacing,
+  ...props
+}: ComponentToRenderProps) => {
   const { pathname, isLite, isAmp, isApp } = use(RequestContext);
   const { translations } = use(ServiceContext);
   const eventTrackingData = {
@@ -36,6 +39,9 @@ const ArticleHeadline = (props: ComponentToRenderProps) => {
         {...props}
         {...(showArticleLiteSiteLink && {
           css: styles.reducePadding,
+        })}
+        {...(applyReadTimeSpacing && {
+          css: styles.readTimeReducedPadding,
         })}
       />
       {showArticleLiteSiteLink && (

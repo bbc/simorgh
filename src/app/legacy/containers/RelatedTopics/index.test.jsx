@@ -58,7 +58,7 @@ describe('Related Topics', () => {
           <RelatedTopics />
         </WithContexts>,
       );
-      expect(container).toMatchSnapshot();
+      expect(container.firstChild).toBeNull();
     });
 
     it('should render correctly with a single tag', () => {
