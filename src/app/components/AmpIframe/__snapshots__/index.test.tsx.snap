@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`VJ include container on Amp should render an amp-iframe with an image placeholder 1`] = `
 @media (max-width: 14.9375rem) {
