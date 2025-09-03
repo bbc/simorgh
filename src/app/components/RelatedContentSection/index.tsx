@@ -105,7 +105,7 @@ const RelatedContentSection = ({ content, sendOptimizelyEvents }: Props) => {
     reducedStoryPromoItems[0],
   );
 
-  const ariaLabelledBy = generatePromoId({
+  let ariaLabelledBy = generatePromoId({
     sectionType: 'promo-rel-content',
     assetUri,
   });
@@ -161,6 +161,12 @@ const RelatedContentSection = ({ content, sendOptimizelyEvents }: Props) => {
               item,
             );
 
+            ariaLabelledBy = generatePromoId({
+              sectionType: 'promo-rel-content',
+              assetUri: itemAssetUri,
+              index,
+            });
+
             return (
               <PromoItem
                 css={
@@ -172,11 +178,7 @@ const RelatedContentSection = ({ content, sendOptimizelyEvents }: Props) => {
               >
                 <RelatedContentItem
                   item={item}
-                  ariaLabelledBy={generatePromoId({
-                    sectionType: 'promo-rel-content',
-                    assetUri: itemAssetUri,
-                    index,
-                  })}
+                  ariaLabelledBy={ariaLabelledBy}
                   viewTracker={viewTracker}
                   eventTrackingData={eventTrackingData}
                 />
