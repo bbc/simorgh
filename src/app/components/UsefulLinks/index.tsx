@@ -75,24 +75,15 @@ const UsefulLinks = ({
         </ul>
       ) : (
         <div css={styles.item}>
-          {(() => {
-            const promoEventTrackingData = buildPromoEventTrackingData(
-              summaries[0],
-              0,
-            );
-            const clickTrackerHandler = getClickTrackerHandler(
-              promoEventTrackingData,
-            );
-            return (
-              <a
-                href={summaries[0].link}
-                css={styles.link}
-                {...clickTrackerHandler}
-              >
-                {summaries[0].title}
-              </a>
-            );
-          })()}
+          <a
+            href={summaries[0].link}
+            css={styles.link}
+            {...getClickTrackerHandler(
+              buildPromoEventTrackingData(summaries[0], 0),
+            )}
+          >
+            {summaries[0].title}
+          </a>
         </div>
       )}
     </section>

@@ -809,6 +809,7 @@ describe('Home Page', () => {
       });
       it('calls click tracking handler with correct data when Useful Links curation has only one summary', () => {
         // Clone the fixture and remove all but the first summary from the last curation
+        // to test the single summary useful links scenario
         const singleSummaryHomePageData = {
           ...homePageData,
           curations: [
@@ -828,7 +829,6 @@ describe('Home Page', () => {
           service: 'kyrgyz',
         });
 
-        // Find the single useful link anchor (should be inside a div, not a ul)
         const usefulLinksSection = screen.getByTestId('useful-links-1');
         const singleUsefulLink = usefulLinksSection?.querySelector(
           'div[role="listitem"] a, div a',
