@@ -12,12 +12,17 @@ const Component = ({
 }) => {
   const fixtureData =
     promosToRender === 'default' ? pidginPromos : pidginPromosWithMedia;
-  return (
-    <HierarchicalGrid
-      headingLevel={2}
-      summaries={fixtureData.slice(0, promoCount)}
-    />
-  );
+
+    const eventTrackingData = {
+      componentName: 'hierarchical-curation-grid',
+    };
+    return (
+      <HierarchicalGrid
+        headingLevel={2}
+        summaries={fixtureData.slice(0, promoCount)}
+        eventTrackingData={eventTrackingData}
+      />
+    );
 };
 
 export default {

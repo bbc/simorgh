@@ -48,7 +48,7 @@ import { Recommendation } from '#app/models/types/onwardJourney';
 
 import ScrollablePromo from '#components/ScrollablePromo';
 import Recommendations from '#app/components/Recommendations';
-import ReadTime from '#app/components/ReadTime';
+import { ReadTimeArticleExperiment as ReadTime } from '#app/components/ReadTime';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -183,8 +183,10 @@ const getPodcastPromoComponent = (podcastPromoEnabled: boolean) => () =>
 const getHeadlineComponent =
   (readTimeData: ReadTimeData) => (props: ComponentToRenderProps) => {
     const { readTimeValue, readTimeLocation, readTimeVariant } = readTimeData;
+    // Ensures we send view event for control variant
     const showReadTimeBelowHeadline =
-      readTimeValue && readTimeLocation === 'headline';
+      !!readTimeValue && ['headline', 'control'].includes(readTimeLocation);
+
     return (
       <>
         <ArticleHeadline
@@ -267,7 +269,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       return 'timestamp';
     }
     if (readTimeExperimentVariant.includes('control')) {
-      return 'off';
+      return 'control';
     }
     return 'off';
   })();
