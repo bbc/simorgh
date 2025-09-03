@@ -133,6 +133,10 @@ describe('extractServiceFromUrl', () => {
     expect(extractServiceFromUrl('https://www.bbc.com/random')).toBeNull();
     expect(extractServiceFromUrl('https://www.example.com/test')).toBeNull();
     expect(extractServiceFromUrl('http://tinyurl.com/kafqwek')).toBeNull();
+    expect(extractServiceFromUrl('http://tinyurl.com/kafqwek')).toBeNull();
+    expect(
+      extractServiceFromUrl('https://www.youtube.com/@BBCNews/videos'),
+    ).toBeNull();
     expect(extractServiceFromUrl('')).toBeNull();
   });
 });
