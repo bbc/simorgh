@@ -98,39 +98,51 @@ export async function GET(req: Request) {
         2. Most read
         3. Top Stories
     */
-    if (isLive) {
-      badge = (
-        <Badge
-          icon={
-            <svg viewBox="0 0 32 32" width="24" height="24">
-              <path
-                d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
-                style={{ fill: LIVE_LIGHT }}
-              />
-              <circle cx="16" cy="16" r="8.5" style={{ fill: LIVE_LIGHT }} />
-            </svg>
-          }
-          text={liveText}
-          textColour={LIVE_LIGHT}
-          uppercase
-          bold
-        />
-      );
-    }
-
-    if (isInMostRead) {
-      badge = <Badge text={mostReadText} />;
-    }
-
-    if (isInTopStories) {
-      badge = <Badge text={topStoriesText} />;
+    switch (true) {
+      case isLive:
+        badge = (
+          <Badge
+            icon={
+              <svg viewBox="0 0 32 32" width="24" height="24">
+                <path
+                  d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
+                  style={{ fill: LIVE_LIGHT }}
+                />
+                <circle cx="16" cy="16" r="8.5" style={{ fill: LIVE_LIGHT }} />
+              </svg>
+            }
+            text={liveText}
+            textColour={LIVE_LIGHT}
+            uppercase
+            bold
+          />
+        );
+        break;
+      case isInMostRead:
+        badge = <Badge text={mostReadText} />;
+        break;
+      case isInTopStories:
+        badge = <Badge text={topStoriesText} />;
+        break;
+      default:
+        badge = undefined;
     }
 
     // Library does not support RTL text, so we use pre-baked SVGs for the MostRead and TopStories badges
     if (service === 'arabic') {
-      if (isLive) badge = <LiveSVG />;
-      if (isInMostRead) badge = <ArabicMostReadSVG />;
-      if (isInTopStories) badge = <ArabicTopStoriesSVG />;
+      switch (true) {
+        case isLive:
+          badge = <LiveSVG />;
+          break;
+        case isInMostRead:
+          badge = <ArabicMostReadSVG />;
+          break;
+        case isInTopStories:
+          badge = <ArabicTopStoriesSVG />;
+          break;
+        default:
+          badge = undefined;
+      }
     } else if (RTL_SERVICES.includes(service)) {
       badge = null; // No badge for RTL services other than Arabic for initial experiment
     }
@@ -150,7 +162,7 @@ export async function GET(req: Request) {
             <div
               style={{
                 position: 'absolute',
-                bottom: 30,
+                bottom: 35,
                 right: 25,
                 display: 'flex',
                 flexDirection: 'column',
