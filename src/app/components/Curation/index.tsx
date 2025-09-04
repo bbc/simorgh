@@ -169,7 +169,7 @@ export default ({
           <PortraitVideoCarousel
             title={title}
             blocks={portraitVideo.blocks}
-            {...(curationId && { groupTrackingId: curationId })}
+            eventTrackingData={eventTrackingData}
           />
         );
       }
