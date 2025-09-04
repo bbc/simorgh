@@ -1,0 +1,29 @@
+{
+  "alpha": false,
+  "lastUpdated": {
+    "day": 1,
+    "month": "Sept",
+    "year": 2025
+  },
+  "uxAccessibilityDoc": {
+    "done": true,
+    "reference": {
+      "url": "https://www.figma.com/design/HhuCGgXRag4aJsduWK9EQ6/WS-Impactful-promo-%E2%80%94-handoff?node-id=104-10&p=f&t=nL52gckHmLTG3HQi-0",
+      "label": "Screen Reader UX"
+    }
+  },
+  "acceptanceCriteria": {
+    "done": true,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/Impactful-Promo-Accessibility-Acceptance-Criteria--CsujN0ubtxrpgf2p9DUQlG~kAg-NclO4KbTCgfzZ8VIQNEhz",
+      "label": "Accessibility Acceptance Criteria"
+    }
+  },
+  "swarm": {
+    "done": true,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/A11Y-Swarm-High-Impact-Promo--Csvi6qZxX0YnbVb4hdbWF5gvAg-HlL1gfa2bQaIXlSa8PsU9",
+      "label": "Accessibility Swarm Notes"
+    }
+  }
+}

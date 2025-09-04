@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Home Page should correctly render linked data for home pages 1`] = `
 {
@@ -430,9 +430,21 @@ exports[`Home Page should correctly render linked data for home pages 1`] = `
           "position": 65,
           "url": "https://www.test.bbc.com/pidgin/live/cg2pr8l7j3nt",
         },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 66,
+          "url": "https://www.bbc.com/hausa/articles/cpvpg2e6130o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 67,
+          "url": "https://www.bbc.com/hausa/articles/c2l2e8px0l3o",
+        },
       ],
       "name": "BBC News Кыргыз Кызматы",
-      "numberOfItems": 65,
+      "numberOfItems": 67,
     },
   ],
 }
