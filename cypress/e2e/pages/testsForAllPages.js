@@ -32,7 +32,7 @@ export const testsThatAlwaysRunForAllPages = ({
       }
     });
 
-    it('should have href values correctly formed', () => {
+    it('all BBC links should contain a World Service', () => {
       const allowedUrls = [
         'programmes/p0703hz7', // present on https://www.bbc.com/persian/topics/cw9qgeqd1zqt & redirects to https://www.bbc.com/persian/podcasts/p0703hz7
       ];
@@ -42,12 +42,14 @@ export const testsThatAlwaysRunForAllPages = ({
         expect(href).to.exist;
         expect(href).to.not.be.empty;
 
-        const containsValidService =
-          allServices.some(serviceName => href.includes(serviceName)) ||
-          allowedUrls.some(url => href.includes(url));
-        expect(containsValidService).to.be.true;
+        const isAllowed = allowedUrls.some(url => href.includes(url));
+
+        if (!isAllowed) {
+          expect(href).to.match(`https://www.bbc.com/${allServices}`);
+        }
       });
     });
+
     describe(
       'Image Tests',
       {
