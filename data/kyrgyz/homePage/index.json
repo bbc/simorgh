@@ -1069,6 +1069,43 @@
         "title": "Hierarchical Curation with Live Promos",
         "visualProminence": "HIGH",
         "visualStyle": "NONE"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Mitocin da muke watsa shirye-shiryenmu",
+            "firstPublished": "2023-12-08T18:50:55.425Z",
+            "lastPublished": "2023-12-08T18:50:55.425Z",
+            "link": "https://www.bbc.com/hausa/articles/cpvpg2e6130o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/fc08/live/f53400e0-95fb-11ee-b60d-058748ad2fb8.jpg.webp",
+            "description": "Sashen Hausa na BBC na watsa shirye-shirye guda huɗu a kowace rana, na tsawon minti talatin-talatin cikin harshen Hausa.",
+            "imageAlt": "...",
+            "id": "cpvpg2e6130o",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Abokan hulɗar BBC Hausa",
+            "firstPublished": "2023-12-08T18:57:22.367Z",
+            "lastPublished": "2023-12-08T18:57:22.367Z",
+            "link": "https://www.bbc.com/hausa/articles/c2l2e8px0l3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a8e4/live/834c9c30-95fb-11ee-b60d-058748ad2fb8.jpg.webp",
+            "imageAlt": "...",
+            "id": "c2l2e8px0l3o",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:ec7bfe5e-1caa-4465-9a9a-1ff411b5398c",
+        "curationType": "tipo-curation",
+        "position": 18,
+        "title": "Domin ma'abota BBC",
+        "visualProminence": "LOW",
+        "visualStyle": "LINKS"
       }
     ],
     "metadata": {
