@@ -12,13 +12,13 @@ import Heading from '../Heading';
 import Image from '../Image';
 import styles from './index.styles';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import useViewTracker from '#app/hooks/useViewTracker';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 interface SocialLinksProps {
   id?: string;
   title: string;
   summaries: Summary[];
   eventTrackingData?: EventTrackingData,
-  groupPosition?: number,
-  curationId?: string,
 }
 
 const SocialLinkImage = ({ imageUrl }: { imageUrl: string }) => {
@@ -97,11 +97,27 @@ const SocialLinks = ({
   id = 'social-links-1',
   eventTrackingData = {componentName: 'social-links'},
 }: SocialLinksProps) => {
+  const viewTracker = useViewTracker(eventTrackingData);
+  const getClickTrackerHandler = useClickTrackerHandler;
   if (!summaries.length) {
     return null;
   }
 
   const hasMultipleItems = summaries.length > 1;
+
+    const buildPromoEventTrackingData = (promo: Summary, index: number) => {
+      
+    const itemTracker = {
+      ...eventTrackingData,
+      type: 'social-link-promo',
+      text: promo.title,
+      position: index + 1,
+      resourceId: promo.id,
+    };
+    return {
+      itemTracker,
+    };
+  };
 
   return (
     <section
@@ -109,16 +125,30 @@ const SocialLinks = ({
       aria-labelledby={id}
       data-testid={id}
       css={styles.container}
+      {...viewTracker}
     >
       <Heading level={2} id={id} css={styles.heading}>
         {title}
       </Heading>
       {hasMultipleItems ? (
         <ul css={styles.unorderedList} role="list">
-          {summaries.map(summary => {
+          {summaries.map((summary, index) => {
+            const promoEventTrackingData = buildPromoEventTrackingData(
+              summary,
+              index,
+            );
+            const clickTrackerHandler = getClickTrackerHandler(
+              promoEventTrackingData,
+            );
             return (
               <li css={styles.item} key={summary.title}>
-                <SocialLink summary={summary} eventTrackingData={eventTrackingData} />
+                <a
+                  href={summary.link}
+                  css={styles.link}
+                  {...clickTrackerHandler}
+                >
+                  {summary.title}
+                </a>
               </li>
             );
           })}
