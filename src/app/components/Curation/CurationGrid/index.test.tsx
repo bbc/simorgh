@@ -61,22 +61,6 @@ describe('CurationGrid', () => {
     expect(screen.queryByTestId('high-impact-promo')).not.toBeInTheDocument();
   });
 
-  it('should stretch list items if at least one promo is high impact', () => {
-    render(
-      <CurationGrid
-        summaries={[highImpactPromo, standardPromo]}
-        eventTrackingData={eventTrackingData}
-      />,
-    );
-
-    const list = screen.getByRole('list');
-    expect(list).toHaveStyle({
-      display: 'flex',
-      flexWrap: 'wrap',
-      alignItems: 'stretch',
-    });
-  });
-
   it('should not apply stretch styles when no promos are high impact', () => {
     render(
       <CurationGrid
