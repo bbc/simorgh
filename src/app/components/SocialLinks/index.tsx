@@ -8,12 +8,14 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import { createSrcsets } from '#lib/utilities/srcSet';
 import getLocator from '#lib/utilities/imageSrcHelpers/locator';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
-import Heading from '../Heading';
-import Image from '../Image';
-import styles from './index.styles';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+
+import Heading from '../Heading';
+import Image from '../Image';
+import styles from './index.styles';
+
 interface SocialLinksProps {
   id?: string;
   title: string;
@@ -84,7 +86,7 @@ const SocialLink = ({
       >
         {hasDescription ? (
           // eslint-disable-next-line jsx-a11y/aria-role
-          <span id={linkLabelId} role="text">
+          <span id={linkLabelId}>
             {summary.title}
             <VisuallyHiddenText>{`, ${summary.description}`}</VisuallyHiddenText>
           </span>
@@ -158,7 +160,7 @@ const SocialLinks = ({
                   })}
                 >
                   {hasDescription ? (
-                    <span id={`social-link-label-${index}`} role="text">
+                    <span id={`social-link-label-${index}`}>
                       {summary.title}
                       <VisuallyHiddenText>{`, ${summary.description}`}</VisuallyHiddenText>
                     </span>
