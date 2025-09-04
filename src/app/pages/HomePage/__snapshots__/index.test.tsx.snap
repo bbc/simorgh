@@ -50,7 +50,7 @@ exports[`Home Page should correctly render linked data for home pages 1`] = `
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 2,
-          "url": "https://www.bbc.com/send/pepe",
+          "url": "https://www.bbc.com/kyrgyz",
         },
         {
           "@context": "http://schema.org",
