@@ -14,8 +14,8 @@ import Badge from './Badge';
 import { extractArticleData, extractLiveData, responseNotFound } from './utils';
 import BackgroundImage from './BackgroundImage';
 
+const REITH_SANS_MEDIUM_FONT_URL = `${REITH_FONTS_DIR}/BBCReithSans_W_Md.woff`;
 const REITH_SANS_BOLD_FONT_URL = `${REITH_FONTS_DIR}/BBCReithSans_W_Bd.woff`;
-const REITH_SERIF_BOLD_FONT_URL = `${REITH_FONTS_DIR}/BBCReithSerif_W_Bd.woff`;
 
 const getPageType = (id: string) => {
   if (getArticleId(id)) return 'article';
@@ -41,7 +41,7 @@ export async function GET(req: Request) {
 
     if (!pageType) return responseNotFound();
 
-    const [{ data }, sansBoldBuffer, serifBoldBuffer] = await Promise.all([
+    const [{ data }, sansMediumBuffer, sansBoldBuffer] = await Promise.all([
       // Fetch asset
       getPageData({
         id,
@@ -51,8 +51,8 @@ export async function GET(req: Request) {
         pageType,
       }),
       // Fetch fonts
+      fetch(REITH_SANS_MEDIUM_FONT_URL).then(res => res.arrayBuffer()),
       fetch(REITH_SANS_BOLD_FONT_URL).then(res => res.arrayBuffer()),
-      fetch(REITH_SERIF_BOLD_FONT_URL).then(res => res.arrayBuffer()),
     ]);
 
     const dataExtractor = {
@@ -67,8 +67,8 @@ export async function GET(req: Request) {
       });
 
     const fonts = [
+      { name: 'Reith Sans Medium', data: sansMediumBuffer },
       { name: 'Reith Sans Bold', data: sansBoldBuffer },
-      { name: 'Reith Serif Bold', data: serifBoldBuffer },
     ];
 
     const serviceConfig = await import(
@@ -102,6 +102,7 @@ export async function GET(req: Request) {
           text={liveText}
           textColour={LIVE_LIGHT}
           uppercase
+          bold
         />
       ),
       isInMostRead && <Badge text={mostReadText} />,

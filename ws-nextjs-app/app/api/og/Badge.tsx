@@ -6,16 +6,24 @@ type BadgeProps = {
   icon?: React.ReactNode;
   textColour?: string;
   uppercase?: boolean;
+  bold?: boolean;
 };
 
-const Badge = ({ text, textColour = WHITE, uppercase, icon }: BadgeProps) => (
+const Badge = ({
+  text,
+  textColour = WHITE,
+  uppercase,
+  icon,
+  bold,
+}: BadgeProps) => (
   <div
     style={{
       display: 'flex',
       flexDirection: 'row',
       backgroundColor: BLACK,
-      padding: 15,
+      padding: 16,
       borderRadius: 8,
+      fontFamily: bold ? 'Reith Sans Bold' : 'Reith Sans Medium',
     }}
   >
     <div
@@ -24,7 +32,6 @@ const Badge = ({ text, textColour = WHITE, uppercase, icon }: BadgeProps) => (
         flexDirection: 'row',
         gap: 10,
         alignItems: 'center',
-        fontWeight: 'bold',
         fontSize: 24,
         color: WHITE,
       }}
