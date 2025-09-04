@@ -21,6 +21,7 @@ import {
   assertMessageBannerComponentClick,
   assertMessageBannerComponentView,
 } from './assertions/messageBanner';
+import { assertPortraitVideoCarouselComponentView } from './assertions/portraitVideoCarousel';
 import {
   assertMostReadComponentClick,
   assertMostReadComponentView,
@@ -418,6 +419,17 @@ const canonicalTestSuites = [
     contentType: 'article',
     useReverb: true,
     tests: [assertPageView],
+  },
+  {
+    path: '/portuguese',
+    runforEnv: ['local'],
+    service: 'portuguese',
+    pageIdentifier: 'portuguese.page',
+    siteId: 33,
+    applicationType: 'responsive',
+    contentType: 'index-home',
+    useReverb: true,
+    tests: [assertPageView, assertPortraitVideoCarouselComponentView],
   },
   {
     path: '/portuguese/podcasts/p07r3r3t',

@@ -5,6 +5,7 @@ import React, { use } from 'react';
 import { css, jsx, Theme } from '@emotion/react';
 import moment from 'moment';
 import path from 'ramda/src/path';
+import isMediaType from '#app/lib/utilities/isMedia';
 import { ReadTime } from '#app/components/ReadTime';
 import useClickTrackerHandler from '../../../hooks/useClickTrackerHandler';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
@@ -88,9 +89,7 @@ const HiearchicalGrid = ({
             isFirstPromo && isFirstCuration ? 'high' : undefined;
           const showDuration =
             promo.duration && ['video', 'audio'].includes(promo.type);
-          const isMedia = ['video', 'audio', 'photogallery'].includes(
-            promo.type,
-          );
+          const isMedia = isMediaType(promo.type);
           const typeTranslated =
             (promo.type === 'audio' && `${audioTranslation}, `) ||
             (promo.type === 'video' && `${videoTranslation}, `) ||
