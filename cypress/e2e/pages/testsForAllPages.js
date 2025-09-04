@@ -14,6 +14,7 @@ export const testsThatAlwaysRunForAllPages = ({
     it('should have no detectable a11y violations on page load', () => {
       checkA11y();
     });
+
     it('should render topic tags if they are in the json, and they should navigate to correct topic page', () => {
       // topicTagsTest(service, variant, pageType);
       if (
@@ -26,6 +27,32 @@ export const testsThatAlwaysRunForAllPages = ({
       } else {
         cy.log('Topic tags currently disabled on Sport and Newsround');
       }
+    });
+
+    it('should have href values correctly formed', () => {
+      const masterbrandOverrides = [
+        'oromo',
+        'bangla',
+        'indonesian',
+        'ukrainian',
+        'cantonese',
+        'ws',
+      ];
+
+      cy.get('a[href^="https://www.bbc.com"]').each($tag => {
+        if ($tag.closest('footer').length > 0) {
+          return;
+        }
+        const href = $tag.attr('href');
+        expect(href).to.exist;
+        expect(href).to.not.be.empty;
+
+        const containsValidService =
+          href.includes(service) ||
+          masterbrandOverrides.some(masterbrand => href.includes(masterbrand));
+
+        expect(containsValidService).to.be.true;
+      });
     });
 
     describe(

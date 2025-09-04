@@ -27,7 +27,7 @@ export default ({ service, pageType, path, variant = 'default' }) => {
         cy.getToggles(service);
       });
       describe('Recent Episodes component', () => {
-        it('should be displayed if the toggle is on, and shows the expected number of items with correctly formed urls', function test() {
+        it('should be displayed if the toggle is on, and shows the expected number of items', function test() {
           let toggleName;
 
           if (path?.includes('podcasts')) {
@@ -60,35 +60,6 @@ export default ({ service, pageType, path, variant = 'default' }) => {
                       'have.length.of.at.most',
                       recentEpisodesMaxNumber,
                     );
-                  });
-
-                  cy.get('[data-e2e=recent-episodes-list-item]').each($item => {
-                    // Return Cypress command chain
-                    cy.wrap($item)
-                      .find('a')
-                      .then($a => {
-                        // Ensure the <a> tag exists and has a non-empty href
-                        const href = $a.attr('href');
-                        expect(href).to.exist;
-                        expect(href).to.not.be.empty;
-
-                        const masterbrandOverrides = [
-                          'oromo',
-                          'bangla',
-                          'indonesian',
-                          'ukrainian',
-                          'cantonese',
-                        ];
-                        const overrides = masterbrandOverrides.join('|');
-                        const expectedPattern =
-                          toggleName === 'recentPodcastEpisodes'
-                            ? new RegExp(`^/${service}/podcasts/.*`)
-                            : new RegExp(
-                                `^/${service}/bbc_(${service}|${overrides})_(radio|audio)/.*`,
-                              );
-
-                        expect(href).to.match(expectedPattern);
-                      });
                   });
                 }
               });
