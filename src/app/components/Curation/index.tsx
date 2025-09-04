@@ -180,6 +180,7 @@ export default ({
           summaries={summaries}
           title={title}
           id={`useful-links-${nthCurationByStyleAndProminence}`}
+          eventTrackingData={eventTrackingData}
         />
       );
     case SOCIAL_LINKS:
