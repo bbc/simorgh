@@ -772,7 +772,6 @@ describe('Home Page', () => {
           service: 'kyrgyz',
         });
 
-        // Find the first useful link anchor
         const usefulLinksSection = screen.getByTestId('useful-links-1');
         const firstUsefulLink = usefulLinksSection?.querySelector(
           'ul[role="list"] a',
