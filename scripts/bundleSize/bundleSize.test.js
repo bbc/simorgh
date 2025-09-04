@@ -9,7 +9,7 @@ jest.unstable_mockModule(
 
 jest.unstable_mockModule('./bundleSizeConfig', () => ({
   MIN_SIZE: 632,
-  MAX_SIZE: 1300,
+  MAX_SIZE: 728,
 }));
 
 jest.unstable_mockModule('./serviceList.js', () => ({
