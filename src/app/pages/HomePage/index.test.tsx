@@ -808,8 +808,6 @@ describe('Home Page', () => {
         );
       });
       it('calls click tracking handler with correct data when Useful Links curation has only one summary', () => {
-        // Clone the fixture and remove all but the first summary from the last curation
-        // to test the single summary useful links scenario
         const singleSummaryHomePageData = {
           ...homePageData,
           curations: [
@@ -861,9 +859,15 @@ describe('Home Page', () => {
           }),
         });
 
-        expect(useClickTrackerHandler as jest.Mock).toHaveBeenCalledWith(
-          expectedTrackingData,
-        );
+        // Only count calls for the Useful Links component
+        const usefulLinksCalls = (
+          useClickTrackerHandler as jest.Mock
+        ).mock.calls
+          .map(([arg]) => arg)
+          .filter(call => call?.componentName === 'useful-links');
+
+        expect(usefulLinksCalls).toHaveLength(1);
+        expect(usefulLinksCalls[0]).toMatchObject(expectedTrackingData);
       });
     });
     // this can be changed later to check the number of calls by filtering by component name
