@@ -1,10 +1,8 @@
 /* eslint-disable import/prefer-default-export */
 /* eslint-disable cypress/no-unnecessary-waiting */
-/* eslint-disable no-unused-expressions */
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
-import { allServices } from '#app/routes/utils/regex';
 import topicTagsTest from '../../support/helpers/topicTagsTest';
 import checkA11y from '../../support/helpers/checkA11y';
 
@@ -30,29 +28,6 @@ export const testsThatAlwaysRunForAllPages = ({
       } else {
         cy.log('Topic tags currently disabled on Sport and Newsround');
       }
-    });
-
-    it('all BBC links should contain a World Service', () => {
-      const allowedUrls = [
-        'programmes/p0703hz7', // present on https://www.bbc.com/persian/topics/cw9qgeqd1zqt & redirects to https://www.bbc.com/persian/podcasts/p0703hz7
-      ];
-
-      cy.get('main a[href^="https://www.bbc.com"]').each($tag => {
-        const servicesPattern = allServices.join('|');
-        const servicesRegex = new RegExp(
-          `^https://www\\.bbc\\.com/(?:${servicesPattern})/.*$`,
-        );
-
-        const href = $tag.attr('href');
-        expect(href).to.exist;
-        expect(href).to.not.be.empty;
-
-        const isAllowed = allowedUrls.some(url => href.includes(url));
-
-        if (!isAllowed) {
-          expect(href).to.match(servicesRegex);
-        }
-      });
     });
 
     describe(

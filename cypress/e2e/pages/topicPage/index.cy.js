@@ -1,9 +1,9 @@
 import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
 import crossPlatformTests from './tests';
 import { TOPIC_PAGE } from '../../../../src/app/routes/utils/pageTypes';
-import { testsThatAlwaysRunForAllPages as testsForAllPages } from '../testsForAllPages';
+import urlValidationTest from '../../../support/helpers/urlValidationTest';
 
-const tests = [crossPlatformTests, testsForAllPages];
+const tests = [crossPlatformTests, urlValidationTest];
 
 const testSuites = [
   {
