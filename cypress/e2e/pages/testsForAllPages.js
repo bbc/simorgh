@@ -1,5 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 /* eslint-disable cypress/no-unnecessary-waiting */
+/* eslint-disable no-unused-expressions */
+
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 import { allServices } from '#app/routes/utils/regex';
@@ -42,13 +44,11 @@ export const testsThatAlwaysRunForAllPages = ({
         expect(href).to.not.be.empty;
 
         const containsValidService =
-          allServices.some(service => href.includes(service)) ||
+          allServices.some(serviceName => href.includes(serviceName)) ||
           allowedUrls.some(url => href.includes(url));
-
         expect(containsValidService).to.be.true;
       });
     });
-
     describe(
       'Image Tests',
       {
