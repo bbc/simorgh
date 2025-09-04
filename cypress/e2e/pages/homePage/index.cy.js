@@ -12,6 +12,12 @@ const testSuites = [
     tests,
   },
   {
+    path: '/dari',
+    runforEnv: ['local', 'test'],
+    service: 'dari',
+    tests,
+  },
+  {
     path: '/kyrgyz',
     runforEnv: ['local', 'test', 'live'],
     service: 'kyrgyz',
