@@ -1,8 +1,9 @@
 import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import canonicalTests from './testsForCanonicalOnly';
+import { testsThatAlwaysRunForAllPages as testsForAllPages } from '../testsForAllPages';
 
-const tests = [canonicalTests];
+const tests = [canonicalTests, testsForAllPages];
 
 const testSuites = [
   {

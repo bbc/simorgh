@@ -4,6 +4,7 @@
 // We recommend using inline conditional logic to limit tests to services which differ.
 import topicTagsTest from '../../support/helpers/topicTagsTest';
 import checkA11y from '../../support/helpers/checkA11y';
+import { allServices } from '#app/routes/utils/regex';
 
 export const testsThatAlwaysRunForAllPages = ({
   service,
@@ -30,14 +31,7 @@ export const testsThatAlwaysRunForAllPages = ({
     });
 
     it('should have href values correctly formed', () => {
-      const masterbrandOverrides = [
-        'oromo',
-        'bangla',
-        'indonesian',
-        'ukrainian',
-        'cantonese',
-        'ws',
-      ];
+      const allowedUrls = ['programmes/p0703hz7'];
 
       cy.get('a[href^="https://www.bbc.com"]').each($tag => {
         if ($tag.closest('footer').length > 0) {
@@ -48,8 +42,8 @@ export const testsThatAlwaysRunForAllPages = ({
         expect(href).to.not.be.empty;
 
         const containsValidService =
-          href.includes(service) ||
-          masterbrandOverrides.some(masterbrand => href.includes(masterbrand));
+          allServices.some(service => href.includes(service)) ||
+          allowedUrls.some(url => href.includes(url));
 
         expect(containsValidService).to.be.true;
       });

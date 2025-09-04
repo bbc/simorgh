@@ -1,8 +1,9 @@
 import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
 import crossPlatformTests from './tests';
 import { TOPIC_PAGE } from '../../../../src/app/routes/utils/pageTypes';
+import { testsThatAlwaysRunForAllPages as testsForAllPages } from '../testsForAllPages';
 
-const tests = [crossPlatformTests];
+const tests = [crossPlatformTests, testsForAllPages];
 
 const testSuites = [
   {
@@ -12,9 +13,21 @@ const testSuites = [
     tests,
   },
   {
+    path: '/persian/topics/cw9qgeqd1zqt',
+    service: 'persian',
+    runforEnv: ['test', 'live'],
+    tests,
+  },
+  {
     path: '/pidgin/topics/c95y35941vrt',
     service: 'pidgin',
     runforEnv: ['local', 'test', 'live'],
+    tests,
+  },
+  {
+    path: '/portuguese/topics/cx2ggnx4j72t',
+    service: 'portuguese',
+    runforEnv: ['test', 'live'],
     tests,
   },
   {
