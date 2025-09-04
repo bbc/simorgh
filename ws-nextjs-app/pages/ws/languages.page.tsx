@@ -38,9 +38,9 @@ export const getServerSideProps: GetServerSideProps = async context => {
   };
 
   const toggles = await getToggles('ws');
-  const isNewLanguageHomepage = toggles?.newLanguageHomepage?.enabled;
+  const isGlobalLanguageHomepageEnabled = toggles?.globalLanguageHomepage?.enabled;
 
-  if (!isNewLanguageHomepage) {
+  if (!isGlobalLanguageHomepageEnabled) {
     return {
       props: baseProps,
     };
@@ -94,11 +94,11 @@ export const getServerSideProps: GetServerSideProps = async context => {
 };
 
 export default function LanguagesPage({ ...props }: LanguagesPageProps) {
-  const { enabled: isNewLanguageHomepageEnabled } = useToggle(
-    'newLanguageHomepage',
+  const { enabled: isGlobalLanguageHomepageEnabled } = useToggle(
+    'globalLanguageHomepage',
   );
 
-  if (!isNewLanguageHomepageEnabled) {
+  if (!isGlobalLanguageHomepageEnabled) {
     return <LanguagesPageLayout />;
   }
   return <HomePage pageData={props.pageData} />;

@@ -24,6 +24,9 @@ export default {
   eventTracking: {
     enabled: true,
   },
+  globalLanguageHomepage: {
+    enabled: false,
+  },
   homePageRadioSchedule: {
     enabled: false,
   },
@@ -37,9 +40,6 @@ export default {
     enabled: true,
   },
   mostRead: {
-    enabled: false,
-  },
-  newLanguageHomepage: {
     enabled: false,
   },
   nielsenAnalytics: {

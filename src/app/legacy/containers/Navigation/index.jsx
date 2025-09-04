@@ -55,8 +55,8 @@ const NavigationContainer = ({ propsForTopBarOJComponent }) => {
   const { blocks = [] } = propsForTopBarOJComponent || {};
   const { script, translations, navigation, service, dir } =
     use(ServiceContext);
-  const { enabled: isNewLanguageHomepageEnabled } = useToggle(
-    'newLanguageHomepage',
+  const { enabled: isGlobalLanguageHomepageEnabled } = useToggle(
+    'globalLanguageHomepage',
   );
 
   const { canonicalLink, origin } = use(RequestContext);
@@ -84,7 +84,7 @@ const NavigationContainer = ({ propsForTopBarOJComponent }) => {
 
   const dropdownNavViewTracker = useViewTracker(dropdownNavEventTrackingData);
 
-  if (isNewLanguageHomepageEnabled && service === 'ws') {
+  if (isGlobalLanguageHomepageEnabled && service === 'ws') {
     return <LanguageNavigation />;
   }
 

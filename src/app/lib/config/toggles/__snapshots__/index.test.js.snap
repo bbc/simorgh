@@ -43,7 +43,7 @@ exports[`Toggles Config when application environment is live should contain corr
   "mostRead": {
     "enabled": false,
   },
-  "newLanguageHomepage": {
+  "globalLanguageHomepage": {
     "enabled": false,
   },
   "nielsenAnalytics": {
@@ -114,7 +114,7 @@ exports[`Toggles Config when application environment is local should contain cor
   "mostRead": {
     "enabled": true,
   },
-  "newLanguageHomepage": {
+  "globalLanguageHomepage": {
     "enabled": true,
   },
   "nielsenAnalytics": {
@@ -185,7 +185,7 @@ exports[`Toggles Config when application environment is test should contain corr
   "mostRead": {
     "enabled": true,
   },
-  "newLanguageHomepage": {
+  "globalLanguageHomepage": {
     "enabled": true,
   },
   "nielsenAnalytics": {

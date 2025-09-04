@@ -279,7 +279,7 @@ describe('Navigation Container', () => {
           service: 'ws',
           statusCode: 200,
           pathname: '/ws/languages',
-          toggles: { newLanguageHomepage: { enabled: true } },
+          toggles: { globalLanguageHomepage: { enabled: true } },
         }),
       );
 
@@ -296,7 +296,7 @@ describe('Navigation Container', () => {
           service: 'ws',
           statusCode: 200,
           pathname: '/ws/languages',
-          toggles: { newLanguageHomepage: { enabled: false } },
+          toggles: { globalLanguageHomepage: { enabled: false } },
         }),
       );
 
