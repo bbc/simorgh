@@ -18,7 +18,7 @@ export default {
     enabled: true,
   },
   enableFetchingToggles: {
-    enabled: process.env.FETCH_TOGGLES === 'true' || false,
+    enabled: process?.env.FETCH_TOGGLES === 'true' || false,
     value:
       '(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|dari|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|ws|vietnamese|yoruba|zhongwen)',
   },
