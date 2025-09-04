@@ -37,7 +37,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     groupTracker,
     itemTracker,
     viewThreshold,
-    alwaysInView,
+    alwaysInView = false,
   } = extractATITrackingProps({
     eventTrackingData,
     eventType: VIEW_EVENT,
@@ -48,50 +48,14 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
   const observer = useRef(null);
   const timer = useRef(null);
   const [componentHasComeIntoView, setcomponentHasComeIntoView] =
-    useState(false);
+    useState(alwaysInView);
   const [eventSent, setEventSent] = useState(false);
   const { trackingIsEnabled } = useTrackingToggle(componentName);
 
   const { service, useReverb } = use(ServiceContext);
 
   useEffect(() => {
-    if (alwaysInView) {
-      dispatchTrackingRequests({
-        optimizelyParameters: {
-          optimizely,
-          sendOptimizelyEvents,
-          experimentVariant,
-          componentName,
-        },
-        reverbParameters: {
-          campaignID,
-          componentName,
-          format,
-          pageIdentifier,
-          platform,
-          producerId,
-          producerName,
-          service,
-          statsDestination,
-          type: VIEW_EVENT,
-          advertiserID,
-          url,
-          detailedPlacement,
-          useReverb,
-          ...(groupTracker && { groupTracker }),
-          ...(itemTracker && { itemTracker }),
-          ...(experimentVariant &&
-            experimentVariant !== 'off' && {
-              experimentName,
-              experimentVariant,
-            }),
-        },
-        trackingFlags: {
-          trackingIsEnabled,
-          alwaysInView,
-        },
-      });
-    } else if (componentHasComeIntoView && !timer.current) {
+    if (componentHasComeIntoView && !timer.current) {
       // @ts-expect-error timer ref won't be null
       timer.current = setTimeout(() => {
         dispatchTrackingRequests({
@@ -127,6 +91,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
           trackingFlags: {
             trackingIsEnabled,
             eventSent,
+            alwaysInView,
           },
         });
 
