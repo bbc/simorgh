@@ -18,7 +18,7 @@ interface SocialLinksProps {
   id?: string;
   title: string;
   summaries: Summary[];
-  eventTrackingData?: EventTrackingData,
+  eventTrackingData?: EventTrackingData;
 }
 
 const SocialLinkImage = ({ imageUrl }: { imageUrl: string }) => {
@@ -65,7 +65,12 @@ const SocialLinkImage = ({ imageUrl }: { imageUrl: string }) => {
   );
 };
 
-const SocialLink = ({ summary }: { summary: Summary, eventTrackingData:EventTrackingData }) => {
+const SocialLink = ({
+  summary,
+}: {
+  summary: Summary;
+  eventTrackingData: EventTrackingData;
+}) => {
   const linkLabelId = useId();
   const hasDescription = Boolean(summary.description);
 
@@ -95,7 +100,7 @@ const SocialLinks = ({
   title,
   summaries = [],
   id = 'social-links-1',
-  eventTrackingData = {componentName: 'social-links'},
+  eventTrackingData = { componentName: 'social-links' },
 }: SocialLinksProps) => {
   const viewTracker = useViewTracker(eventTrackingData);
   const getClickTrackerHandler = useClickTrackerHandler;
@@ -105,8 +110,7 @@ const SocialLinks = ({
 
   const hasMultipleItems = summaries.length > 1;
 
-    const buildPromoEventTrackingData = (promo: Summary, index: number) => {
-      
+  const buildPromoEventTrackingData = (promo: Summary, index: number) => {
     const itemTracker = {
       ...eventTrackingData,
       type: 'social-link-promo',
@@ -140,14 +144,27 @@ const SocialLinks = ({
             const clickTrackerHandler = getClickTrackerHandler(
               promoEventTrackingData,
             );
+            const hasDescription = Boolean(summary.description);
+
             return (
               <li css={styles.item} key={summary.title}>
+                <SocialLinkImage imageUrl={summary.imageUrl} />
                 <a
                   href={summary.link}
                   css={styles.link}
                   {...clickTrackerHandler}
+                  {...(hasDescription && {
+                    'aria-labelledby': `social-link-label-${index}`,
+                  })}
                 >
-                  {summary.title}
+                  {hasDescription ? (
+                    <span id={`social-link-label-${index}`} role="text">
+                      {summary.title}
+                      <VisuallyHiddenText>{`, ${summary.description}`}</VisuallyHiddenText>
+                    </span>
+                  ) : (
+                    summary.title
+                  )}
                 </a>
               </li>
             );
@@ -155,7 +172,10 @@ const SocialLinks = ({
         </ul>
       ) : (
         <div css={styles.item}>
-          <SocialLink summary={summaries[0]} eventTrackingData={eventTrackingData} />
+          <SocialLink
+            summary={summaries[0]}
+            eventTrackingData={eventTrackingData}
+          />
         </div>
       )}
     </section>
