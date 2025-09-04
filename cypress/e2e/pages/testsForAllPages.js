@@ -33,9 +33,11 @@ export const testsThatAlwaysRunForAllPages = ({
     });
 
     it('should have href values correctly formed', () => {
-      const allowedUrls = ['programmes/p0703hz7', 'send/u94753086'];
+      const allowedUrls = ['programmes/p0703hz7', // present on https://www.bbc.com/persian/topics/cw9qgeqd1zqt & redirects to https://www.bbc.com/persian/podcasts/p0703hz7
+      'send/u94753086' // insert comment here
+      ];
 
-      cy.get('a[href^="https://www.bbc.com"]').each($tag => {
+      cy.get('main a[href^="https://www.bbc.com"]').each($tag => {
         if ($tag.closest('footer').length) {
           return;
         }
