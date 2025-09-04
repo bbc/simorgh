@@ -13,6 +13,7 @@ import {
 import Badge from './Badge';
 import { extractArticleData, extractLiveData, responseNotFound } from './utils';
 import BackgroundImage from './BackgroundImage';
+import { ArabicMostReadSVG, ArabicTopStoriesSVG, LiveSVG } from './RTLBadges';
 
 const REITH_SANS_MEDIUM_FONT_URL = `${REITH_FONTS_DIR}/BBCReithSans_W_Md.woff`;
 const REITH_SANS_BOLD_FONT_URL = `${REITH_FONTS_DIR}/BBCReithSans_W_Bd.woff`;
@@ -23,6 +24,14 @@ const getPageType = (id: string) => {
 
   return null;
 };
+
+const RTL_SERVICES: Services[] = [
+  'arabic',
+  'dari',
+  'persian',
+  'urdu',
+  'pashto',
+] as const;
 
 export async function GET(req: Request) {
   try {
@@ -77,7 +86,7 @@ export async function GET(req: Request) {
 
     const { translations, mostRead } = serviceConfig.default;
 
-    const liveText = 'Live';
+    const liveText = translations?.liveExperiencePage?.liveLabel || 'Live';
     const mostReadText = mostRead?.header || 'Most read';
     const topStoriesText = translations?.topStoriesTitle || 'Top stories';
 
@@ -115,6 +124,15 @@ export async function GET(req: Request) {
 
     if (isInTopStories) {
       badge = <Badge text={topStoriesText} />;
+    }
+
+    // Library does not support RTL text, so we use pre-baked SVGs for the MostRead and TopStories badges
+    if (service === 'arabic') {
+      if (isLive) badge = <LiveSVG />;
+      if (isInMostRead) badge = <ArabicMostReadSVG />;
+      if (isInTopStories) badge = <ArabicTopStoriesSVG />;
+    } else if (RTL_SERVICES.includes(service)) {
+      badge = null; // No badge for RTL services other than Arabic for initial experiment
     }
 
     return new ImageResponse(
