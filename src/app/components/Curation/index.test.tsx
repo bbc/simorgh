@@ -1,6 +1,5 @@
 import React from 'react';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
-import { PortraitVideoPromoProps } from '#app/models/types/portraitVideo';
 import fixture from '../../../../data/pidgin/topics/c95y35941vrt.json';
 import mundoFixture from '../../../../data/mundo/topics/c1en6xwmpkvt.json';
 import kyrgyzFixture from '../../../../data/kyrgyz/topics/cvpv9djp9qqt.json';
@@ -19,6 +18,7 @@ import {
 } from '../../models/types/curationData';
 import { MostReadData } from '../MostRead/types';
 import { RadioScheduleData } from '../../models/types/radioSchedule';
+import { PortraitClipMediaBlock } from '../MediaLoader/types';
 
 jest.mock('../ThemeProvider');
 
@@ -59,10 +59,7 @@ const socialLinksCuration = kyrgyzFixture.data.curations.find(
 
 const portraitVideoCuration = portuguseHomePage.data.curations.find(
   ({ visualStyle, visualProminence, portraitVideo }) =>
-    visualStyle === INSITU &&
-    visualProminence === NORMAL &&
-    portraitVideo &&
-    portraitVideo?.items.length > 0,
+    visualStyle === INSITU && visualProminence === NORMAL && portraitVideo,
 );
 
 const components = {
@@ -118,7 +115,7 @@ interface TestProps {
   visualProminence: VisualProminence;
   summaries?: Summary[];
   portraitVideo?: {
-    items: PortraitVideoPromoProps[];
+    blocks: PortraitClipMediaBlock[];
   };
   mostRead?: MostReadData;
   radioSchedule?: RadioScheduleData[];

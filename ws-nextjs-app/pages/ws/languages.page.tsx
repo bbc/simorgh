@@ -79,6 +79,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
         ...data?.pageData,
         metadata: {
           ...data?.pageData?.metadata,
+          type: HOME_PAGE,
           atiAnalytics: {
             ...data?.pageData?.metadata?.atiAnalytics,
             pageIdentifier: 'ws.languages.page',

@@ -456,6 +456,10 @@ export const service: DefaultServiceConfig = {
         url: '/hindi/topics/c06gq3n0pp7t',
       },
       {
+        title: 'करियर',
+        url: '/hindi/topics/c95y3gjndw8t',
+      },
+      {
         title: 'फ़ाइनेंस',
         url: '/hindi/topics/c5qvpx5dq4qt',
       },

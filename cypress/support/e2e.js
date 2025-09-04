@@ -39,6 +39,7 @@ const KNOWN_ERRORS = [
   // https://www.whatsapp.com/channel/0029VawW7AjFy726zWLIFq2j
   'requireLazy is not defined',
   'ResizeObserver loop completed with undelivered notifications',
+  `Cannot read properties of null (reading 'postMessage')`,
 ];
 
 // eslint-disable-next-line consistent-return

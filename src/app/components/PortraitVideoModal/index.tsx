@@ -10,8 +10,8 @@ import {
 import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
-import { setImageWidth } from '../MediaLoader/configs/portraitClipMedia';
 import VisuallyHiddenText from '../VisuallyHiddenText';
+import { DownArrowIcon, UpArrowIcon } from '../icons';
 
 const getPlayerInstance = () =>
   window?.embeddedMedia?.api?.players()?.bbcMediaPlayer0;
@@ -25,9 +25,7 @@ export const playlistLoadedCallback = (
   if (!player) return;
 
   const { playlist } = e || {};
-
   const [currentItem] = playlist?.items || [];
-
   const currentId = currentItem?.vpid || currentItem?.versionID;
 
   const currentIndex = blocks?.findIndex(
@@ -36,18 +34,29 @@ export const playlistLoadedCallback = (
       item.model.video.version.id === currentId,
   );
 
+  const prevVideoButton = document.getElementById('previous-video-button');
+  const nextVideoButton = document.getElementById('next-video-button');
+
+  // Handle disabling buttons based on current index
+  if (currentIndex === 0) {
+    prevVideoButton?.setAttribute('disabled', 'true');
+    nextVideoButton?.removeAttribute('disabled');
+  } else if (currentIndex === blocks.length - 1) {
+    prevVideoButton?.removeAttribute('disabled');
+    nextVideoButton?.setAttribute('disabled', 'true');
+  } else {
+    prevVideoButton?.removeAttribute('disabled');
+    nextVideoButton?.removeAttribute('disabled');
+  }
+
   const previous = blocks?.[currentIndex - 1]?.model;
   const next = blocks?.[currentIndex + 1]?.model;
 
   if (previous) {
-    const [fallbackImage, portraitImage] = previous?.images || [];
-
     player.setPreviousPlaylist(
       {
         title: previous?.video?.title ?? '',
-        holdingImageURL: setImageWidth(
-          (portraitImage || fallbackImage)?.urlTemplate,
-        ),
+        holdingImageURL: previous?.video?.holdingImageURL ?? '',
         items: [{ versionID: previous?.video?.version?.id }],
       },
       { statsObject: { clipPID: previous?.video?.id } },
@@ -55,14 +64,10 @@ export const playlistLoadedCallback = (
   }
 
   if (next) {
-    const [fallbackImage, portraitImage] = next?.images || [];
-
     player.queuePlaylist(
       {
         title: next?.video?.title ?? '',
-        holdingImageURL: setImageWidth(
-          (portraitImage || fallbackImage)?.urlTemplate,
-        ),
+        holdingImageURL: next?.video?.holdingImageURL ?? '',
         items: [{ versionID: next?.video?.version?.id }],
       },
       { statsObject: { clipPID: next?.video?.id } },
@@ -72,56 +77,23 @@ export const playlistLoadedCallback = (
 
 const pluginLoadedCallback = () => {
   const player = getPlayerInstance();
-
   player.dispatchEvent('fullScreenPlugin.launchFullscreen');
 };
 
-export const getBlocks = (
-  items: PortraitVideoModalProps['items'],
-): PortraitClipMediaBlock[] =>
-  items.map(item => ({
-    type: 'portraitClipMedia',
-    model: {
-      type: 'video',
-      images: item.images.map(img => ({
-        source: img.url,
-        urlTemplate: img.urlTemplate,
-      })),
-      video: {
-        id: item.id,
-        title: item.title,
-        version: {
-          id: item.versionId,
-          duration: item.duration,
-          kind: item.kind,
-          guidance: item.guidance,
-          territories: item.territories,
-        },
-        isEmbeddingAllowed: item.isEmbeddingAllowed,
-      },
-    },
-  }));
+const handlePrevNextVideo = (direction: 'previous' | 'next') => {
+  const player = getPlayerInstance();
+
+  player?.[direction]?.();
+};
 
 export interface PortraitVideoModalProps {
-  items: {
-    id: string;
-    title: string;
-    versionId: string;
-    duration: string;
-    kind: string;
-    guidance: string | null;
-    territories: string[];
-    isEmbeddingAllowed: boolean;
-    images: {
-      url: string;
-      urlTemplate?: string;
-    }[];
-  }[];
+  blocks: PortraitClipMediaBlock[];
   onClose: () => void;
   selectedVideoIndex: number;
 }
+
 const PortraitVideoModal = ({
-  items,
+  blocks,
   onClose,
   selectedVideoIndex,
 }: PortraitVideoModalProps) => {
@@ -134,11 +106,10 @@ const PortraitVideoModal = ({
       },
     },
   } = use(ServiceContext);
+
   const modalRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const endOfContentButtonRef = useRef<HTMLButtonElement>(null);
-
-  const blocks = getBlocks(items);
 
   useEffect(() => {
     const handleBackdropClick = (event: MouseEvent | TouchEvent) => {
@@ -188,6 +159,7 @@ const PortraitVideoModal = ({
       modal?.removeEventListener('keydown', handleKeyDown);
 
       const player = getPlayerInstance();
+      // Pause any player if the modal is closed instantly
       if (player) player.pause();
     };
   }, [onClose]);
@@ -213,6 +185,31 @@ const PortraitVideoModal = ({
           {navigationIcons.cross}
           <VisuallyHiddenText>{closeVideo}</VisuallyHiddenText>
         </button>
+        {/* Navigation Buttons */}
+        <div css={styles.navButtonColumn}>
+          <button
+            id="previous-video-button"
+            type="button"
+            onClick={() => handlePrevNextVideo('previous')}
+            css={styles.navButton}
+            aria-label="Previous video"
+            data-testid="previous-video-button"
+            className="focusIndicatorInvert"
+          >
+            <UpArrowIcon />
+          </button>
+          <button
+            id="next-video-button"
+            type="button"
+            onClick={() => handlePrevNextVideo('next')}
+            css={styles.navButton}
+            aria-label="Next video"
+            data-testid="next-video-button"
+            className="focusIndicatorInvert"
+          >
+            <DownArrowIcon />
+          </button>
+        </div>
         <MediaLoader
           css={styles.mediaWrapper}
           blocks={[blocks?.[selectedVideoIndex]]}

@@ -11,9 +11,6 @@ export default {
       '&:hover, &:focus': {
         textDecoration: 'underline',
       },
-      '&:visited': {
-        color: `${palette.GREY_5}`,
-      },
       '::before': {
         position: 'absolute',
         top: 0,

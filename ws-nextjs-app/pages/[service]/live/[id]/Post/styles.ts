@@ -102,7 +102,7 @@ export default {
     }),
   bodyMedia: ({ spacings, mq }: Theme) =>
     css({
-      marginBottom: `${spacings.QUINTUPLE}rem`,
+      marginBottom: `${spacings.FULL}rem`,
       [mq.GROUP_2_MIN_WIDTH]: {
         paddingLeft: `${spacings.DOUBLE}rem`,
         paddingRight: `${spacings.DOUBLE}rem`,
@@ -131,5 +131,9 @@ export default {
           marginInlineStart: `-${spacings.DOUBLE}rem`,
         },
       },
+    }),
+  videoPost: ({ spacings }: Theme) =>
+    css({
+      paddingBottom: `${spacings.FULL}rem`,
     }),
 };

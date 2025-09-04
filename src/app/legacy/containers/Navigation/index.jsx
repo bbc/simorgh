@@ -7,6 +7,8 @@ import {
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { RequestContext } from '#contexts/RequestContext';
+import isLive from '#app/lib/utilities/isLive';
+import LanguageNavigation from './LanguageNavigation/lazy';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Canonical from './index.canonical';
 import Amp from './index.amp';
@@ -48,9 +50,9 @@ const renderListItems = (
     return [...listAcc, listItem];
   }, []);
 
-const NavigationContainer = ({ propsForOJExperiment }) => {
+const NavigationContainer = ({ propsForTopBarOJComponent }) => {
   const { isAmp, isLite } = use(RequestContext);
-  const { blocks, experimentVariant } = propsForOJExperiment || {};
+  const { blocks = [] } = propsForTopBarOJComponent || {};
   const { script, translations, navigation, service, dir } =
     use(ServiceContext);
 
@@ -78,6 +80,13 @@ const NavigationContainer = ({ propsForOJExperiment }) => {
   );
 
   const dropdownNavViewTracker = useViewTracker(dropdownNavEventTrackingData);
+
+  // TODO: Feature toggle will be introduced https://bbc.atlassian.net/browse/WS-1073
+  const renderLanguageNavigation = !isLive() && service === 'ws';
+
+  if (renderLanguageNavigation) {
+    return <LanguageNavigation />;
+  }
 
   if (!navigation || navigation.length === 0) {
     return null;
@@ -131,7 +140,6 @@ const NavigationContainer = ({ propsForOJExperiment }) => {
       script={script}
       service={service}
       blocks={blocks}
-      experimentVariant={experimentVariant}
     />
   );
 };

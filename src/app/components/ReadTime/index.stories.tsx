@@ -1,10 +1,10 @@
 import React from 'react';
-import ReadTime from '.';
+import { ReadTimeArticleExperiment as ReadTime } from '.';
 import readme from './README.md';
 import metadata from './metadata.json';
 
 const Component = ({ readTime }: { readTime: number }) => (
-  <ReadTime readTime={readTime} />
+  <ReadTime readTimeValue={readTime} />
 );
 
 export default {
@@ -16,5 +16,9 @@ export default {
   },
 };
 
-export const Example = () => <ReadTime readTime={7} />;
-export const OneMinuteReadTime = () => <ReadTime readTime={1} />;
+export const Example = () => (
+  <ReadTime readTimeValue={7} readTimeVariant="foo" />
+);
+export const OneMinuteReadTime = () => (
+  <ReadTime readTimeValue={1} readTimeVariant="foo" />
+);
