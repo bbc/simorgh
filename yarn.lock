@@ -5562,25 +5562,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@whatwg-node/fetch@npm:^0.10.8":
-  version: 0.10.8
-  resolution: "@whatwg-node/fetch@npm:0.10.8"
+"@whatwg-node/fetch@npm:^0.10.10":
+  version: 0.10.10
+  resolution: "@whatwg-node/fetch@npm:0.10.10"
   dependencies:
-    "@whatwg-node/node-fetch": "npm:^0.7.21"
+    "@whatwg-node/node-fetch": "npm:^0.7.25"
     urlpattern-polyfill: "npm:^10.0.0"
-  checksum: 10/53b3b35c8c725cbc2da6dce1135db6a374bac6bebd7dd572a41ead25f8c2158069cd35a7fc89030e68af25db17ffe79370def024296b1085a7d8af6b89da518d
+  checksum: 10/4303204632945969228ef86420c78536f79ed716c7d991a4b3dd7c544feb702135743016fe0010a24e8d98fcf523eea1a34eb140c484edf409d8263511adaa53
   languageName: node
   linkType: hard
 
-"@whatwg-node/node-fetch@npm:^0.7.21":
-  version: 0.7.21
-  resolution: "@whatwg-node/node-fetch@npm:0.7.21"
+"@whatwg-node/node-fetch@npm:^0.7.25":
+  version: 0.7.25
+  resolution: "@whatwg-node/node-fetch@npm:0.7.25"
   dependencies:
     "@fastify/busboy": "npm:^3.1.1"
     "@whatwg-node/disposablestack": "npm:^0.0.6"
     "@whatwg-node/promise-helpers": "npm:^1.3.2"
     tslib: "npm:^2.6.3"
-  checksum: 10/68257f2bb4642bfbbfbdb9c7285ebfa829901dabb111d52809ed98dc4f9e355eda030122aee313464c8eb503c01ecc66398a1949922245122d32434a026579d6
+  checksum: 10/07452c70b13fe78333f9a158f40004fa75349cebdbd6d71100f2c85bf3e5939fa7c938c8105c5a25bdc76e70af9cc67c391cdb0daef88de77a6909b008c7312a
   languageName: node
   linkType: hard
 
@@ -5602,16 +5602,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@whatwg-node/server@npm:^0.10.10":
-  version: 0.10.11
-  resolution: "@whatwg-node/server@npm:0.10.11"
+"@whatwg-node/server@npm:^0.10.12":
+  version: 0.10.12
+  resolution: "@whatwg-node/server@npm:0.10.12"
   dependencies:
     "@envelop/instrumentation": "npm:^1.0.0"
     "@whatwg-node/disposablestack": "npm:^0.0.6"
-    "@whatwg-node/fetch": "npm:^0.10.8"
+    "@whatwg-node/fetch": "npm:^0.10.10"
     "@whatwg-node/promise-helpers": "npm:^1.3.2"
     tslib: "npm:^2.6.3"
-  checksum: 10/db5e475c67d185ee21dac3626661d95638c6e1e770c5433c7a0cfb09bb3d80cf7c2d3cdb659a87049b40f9eb7812eefa2883302893632727a9134b2c9569deb4
+  checksum: 10/20cfaf9d2ae2c517f5eb8f507920513865fad07c09840f3cefad0a0aa74c7bd91b19fccaac84cfbe052a2c7c43a2ae3daeb74f1bac9f1d3d52865a7912ee33d1
   languageName: node
   linkType: hard
 
@@ -7426,7 +7426,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"core-js@npm:3.45.1":
+"core-js@npm:3.45.1, core-js@npm:^3.45.1":
   version: 3.45.1
   resolution: "core-js@npm:3.45.1"
   checksum: 10/b9dca79b1af8bb4f0d4af0752ea98d694fe157abaf55513fd4084df32dfd4398f0fc57898b32cdb643c1cecb87b9231c2a2ce535797c80ae328eac6d6078ee61
@@ -7437,13 +7437,6 @@ __metadata:
   version: 2.6.12
   resolution: "core-js@npm:2.6.12"
   checksum: 10/7c624eb00a59c74c769d5d80f751f3bf1fc6201205b6562f27286ad5e00bbca1483f2f7eb0c2854b86f526ef5c7dc958b45f2ff536f8a31b8e9cb1a13a96efca
-  languageName: node
-  linkType: hard
-
-"core-js@npm:^3.44.0":
-  version: 3.44.0
-  resolution: "core-js@npm:3.44.0"
-  checksum: 10/759ef4ab0d12c9a6e8a32537d2b0fe64c2d7be40e13e0d7eb9604a970c380d64f37489dee03bd1c286c169e47a69d3ca2a968e8fcde0f78094ea22a20465d763
   languageName: node
   linkType: hard
 
@@ -13220,16 +13213,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-test-api-route-handler@npm:5.0.0":
-  version: 5.0.0
-  resolution: "next-test-api-route-handler@npm:5.0.0"
+"next-test-api-route-handler@npm:5.0.2":
+  version: 5.0.2
+  resolution: "next-test-api-route-handler@npm:5.0.2"
   dependencies:
-    "@whatwg-node/server": "npm:^0.10.10"
+    "@whatwg-node/server": "npm:^0.10.12"
     cookie: "npm:^1.0.2"
-    core-js: "npm:^3.44.0"
+    core-js: "npm:^3.45.1"
   peerDependencies:
     next: ">=9"
-  checksum: 10/5df2b82bfe7822c24e4843a0efa1a5a68851479373b69847c185b7f0824a6dfb602da3b2452effe32a334cf1c047c002055081ce25c8a5d0d520bb4292a52e91
+  checksum: 10/8892d42a447d2003a3daeded551da3e5655aae8a86650e62b3321ad3fe20d73eb5c2f701101b0821df508a83883803ce6c8852cc64bbafbc40bfcb5fa1398ef4
   languageName: node
   linkType: hard
 
@@ -15587,7 +15580,7 @@ __metadata:
     jest: "npm:30.1.2"
     jest-environment-jsdom: "npm:30.1.2"
     next: "npm:15.5.2"
-    next-test-api-route-handler: "npm:5.0.0"
+    next-test-api-route-handler: "npm:5.0.2"
     npm-run-all2: "npm:8.0.4"
     ts-node: "npm:^10.9.2"
   languageName: unknown
