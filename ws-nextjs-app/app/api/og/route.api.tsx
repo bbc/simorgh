@@ -83,6 +83,12 @@ export async function GET(req: Request) {
 
     let badge: React.ReactNode;
 
+    /* 
+      Badge priority order:
+        1. Live
+        2. Most read
+        3. Top Stories
+    */
     if (isLive) {
       badge = (
         <Badge
