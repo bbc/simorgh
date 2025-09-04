@@ -38,6 +38,11 @@ export const testsThatAlwaysRunForAllPages = ({
       ];
 
       cy.get('main a[href^="https://www.bbc.com"]').each($tag => {
+        const servicesPattern = allServices.join('|');
+        const servicesRegex = new RegExp(
+          `^https://www\\.bbc\\.com/(?:${servicesPattern})/.*$`,
+        );
+
         const href = $tag.attr('href');
         expect(href).to.exist;
         expect(href).to.not.be.empty;
@@ -45,7 +50,7 @@ export const testsThatAlwaysRunForAllPages = ({
         const isAllowed = allowedUrls.some(url => href.includes(url));
 
         if (!isAllowed) {
-          expect(href).to.match(`https://www.bbc.com/${allServices}`);
+          expect(href).to.match(servicesRegex);
         }
       });
     });
