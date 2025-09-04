@@ -81,14 +81,10 @@ export async function GET(req: Request) {
     const mostReadText = mostRead?.header || 'Most read';
     const topStoriesText = translations?.topStoriesTitle || 'Top stories';
 
-    /* 
-      Badge priority order:
-        1. Live
-        2. Most read
-        3. Top Stories
-    */
-    const badges = [
-      isLive && (
+    let badge: React.ReactNode;
+
+    if (isLive) {
+      badge = (
         <Badge
           icon={
             <svg viewBox="0 0 32 32" width="24" height="24">
@@ -104,12 +100,16 @@ export async function GET(req: Request) {
           uppercase
           bold
         />
-      ),
-      isInMostRead && <Badge text={mostReadText} />,
-      isInTopStories && <Badge text={topStoriesText} />,
-    ]
-      .filter(Boolean)
-      .slice(0, 1); // Limit to one badge
+      );
+    }
+
+    if (isInMostRead) {
+      badge = <Badge text={mostReadText} />;
+    }
+
+    if (isInTopStories) {
+      badge = <Badge text={topStoriesText} />;
+    }
 
     return new ImageResponse(
       (
@@ -122,7 +122,7 @@ export async function GET(req: Request) {
           }}
         >
           <BackgroundImage image={backgroundImage} />
-          {badges && badges.length > 0 && (
+          {badge && (
             <div
               style={{
                 position: 'absolute',
@@ -133,7 +133,7 @@ export async function GET(req: Request) {
                 gap: 15,
               }}
             >
-              {badges.filter(Boolean).map(child => child)}
+              {badge}
             </div>
           )}
         </div>
