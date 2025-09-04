@@ -33,7 +33,7 @@ export const testsThatAlwaysRunForAllPages = ({
     });
 
     it('should have href values correctly formed', () => {
-      const allowedUrls = ['programmes/p0703hz7', 'send'];
+      const allowedUrls = ['programmes/p0703hz7', 'send/u94753086'];
 
       cy.get('a[href^="https://www.bbc.com"]').each($tag => {
         if ($tag.closest('footer').length) {
