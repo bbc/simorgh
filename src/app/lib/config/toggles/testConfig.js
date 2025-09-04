@@ -8,9 +8,6 @@ export default {
     value: 'es,mx',
   },
   articleLiteSiteLink: { enabled: true },
-  chartbeatAnalytics: {
-    enabled: true,
-  },
   comscoreAnalytics: {
     enabled: true,
   },

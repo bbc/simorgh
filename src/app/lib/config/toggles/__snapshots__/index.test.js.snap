@@ -12,9 +12,6 @@ exports[`Toggles Config when application environment is live should contain corr
   "articleLiteSiteLink": {
     "enabled": true,
   },
-  "chartbeatAnalytics": {
-    "enabled": true,
-  },
   "comscoreAnalytics": {
     "enabled": true,
   },
@@ -95,9 +92,6 @@ exports[`Toggles Config when application environment is local should contain cor
   "articleLiteSiteLink": {
     "enabled": true,
   },
-  "chartbeatAnalytics": {
-    "enabled": true,
-  },
   "comscoreAnalytics": {
     "enabled": true,
   },
@@ -176,9 +170,6 @@ exports[`Toggles Config when application environment is test should contain corr
     "value": "es,mx",
   },
   "articleLiteSiteLink": {
-    "enabled": true,
-  },
-  "chartbeatAnalytics": {
     "enabled": true,
   },
   "comscoreAnalytics": {

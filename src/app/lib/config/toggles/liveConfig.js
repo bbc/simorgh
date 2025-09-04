@@ -7,9 +7,6 @@ export default {
     enabled: false,
   },
   articleLiteSiteLink: { enabled: true },
-  chartbeatAnalytics: {
-    enabled: true,
-  },
   comscoreAnalytics: {
     enabled: true,
   },

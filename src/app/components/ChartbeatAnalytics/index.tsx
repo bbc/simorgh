@@ -21,10 +21,6 @@ const ChartbeatAnalytics = ({
   const { service, brandName, chartbeatDomain } = use(ServiceContext);
   const { env, isAmp, platform, pageType } = use(RequestContext);
 
-  const { enabled } = useToggle('chartbeatAnalytics');
-
-  if (!enabled) return null;
-
   const configDependencies: GetConfigProps = {
     isAmp,
     platform,
