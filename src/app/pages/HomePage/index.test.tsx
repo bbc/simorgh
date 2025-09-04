@@ -594,6 +594,7 @@ describe('Home Page', () => {
             JSON.stringify(expectedTrackingData.groupTracker),
       );
       expect(matchingCalls).toHaveLength(1);
+    });
 
     it('Portrait Video Carousel - calls useViewTracker with correct viewability event tracking data for each portrait video carousel', async () => {
       // @ts-expect-error - sample homepage data
