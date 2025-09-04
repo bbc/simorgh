@@ -1,5 +1,4 @@
 import React, { use } from 'react';
-import useToggle from '../../hooks/useToggle';
 import { RequestContext } from '../../contexts/RequestContext';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import AmpChartbeatBeacon from './amp';
