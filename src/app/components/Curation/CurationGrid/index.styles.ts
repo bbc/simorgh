@@ -17,13 +17,13 @@ const styles = {
       }),
     }),
 
-  listStretchHeight: () =>
+  listStretchHeight: ({ mq }: Theme) =>
     css({
-      display: 'flex',
-      flexWrap: 'wrap',
-      alignItems: 'stretch',
-      maxWidth: '100%',
-      minWidth: 0,
+      [mq.GROUP_2_MIN_WIDTH]: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        alignItems: 'stretch',
+      },
     }),
 
   item: ({ spacings, mq, palette }: Theme) =>
