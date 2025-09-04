@@ -34,7 +34,7 @@ export const testsThatAlwaysRunForAllPages = ({
       const allowedUrls = ['programmes/p0703hz7'];
 
       cy.get('a[href^="https://www.bbc.com"]').each($tag => {
-        if ($tag.closest('footer').length > 0) {
+        if ($tag.closest('footer').length) {
           return;
         }
         const href = $tag.attr('href');
