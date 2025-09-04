@@ -22,6 +22,8 @@ const styles = {
       display: 'flex',
       flexWrap: 'wrap',
       alignItems: 'stretch',
+      maxWidth: '100%',
+      minWidth: 0,
     }),
 
   item: ({ spacings, mq, palette }: Theme) =>
