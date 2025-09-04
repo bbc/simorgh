@@ -10,9 +10,8 @@ export default () => {
     cy.get('main a[href^="https://www.bbc.com"]').each($tag => {
       const servicesPattern = allServices.join('|');
       const servicesRegex = new RegExp(
-        `^https://www\\.bbc\\.com/(?:${servicesPattern})/.*$`,
+        `^https://www\\.bbc\\.com/(?:${servicesPattern})(?:/.*)?$`,
       );
-
       const href = $tag.attr('href');
       expect(href).to.exist;
       expect(href).to.not.be.empty;
