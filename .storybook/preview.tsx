@@ -144,7 +144,7 @@ const NOTO_SERIF_SINHALA_REGULAR = {
     fontFamily: 'Noto Serif Sinhala',
     fontWeight: 400,
     fontStyle: 'normal',
-    src: `url('fonts/NotoSerifSinhala/v1.00/normal.woff2') format('woff2'), url('fonts/NotoSerifSinhala/v1.00/normal.woff') format('woff'), url('fonts/NotoSerifSinhala/v1.00/normal.eot') format('eot'), url('fonts/NotoSerifSinhala/v1.00/normal.ttf') format('ttf')`,
+    src: `url('fonts/NotoSerifBengali/normal.woff2') format('woff2'), url('fonts/NotoSerifBengali/normal.woff') format('woff'), url('fonts/NotoSerifBengali/normal.eot') format('eot'), url('fonts/NotoSerifBengali/normal.ttf') format('ttf')`,
     fontDisplay: 'swap',
   },
 };
@@ -154,7 +154,7 @@ const NOTO_SERIF_SINHALA_BOLD = {
     fontFamily: 'Noto Serif Sinhala',
     fontWeight: 700,
     fontStyle: 'normal',
-    src: `url('fonts/NotoSerifSinhala/v1.00/bold.woff2') format('woff2'), url('fonts/NotoSerifSinhala/v1.00/bold.woff') format('woff'), url('fonts/NotoSerifSinhala/v1.00/bold.eot') format('eot'), url('fonts/NotoSerifSinhala/v1.00/bold.ttf') format('ttf')`,
+    src: `url('fonts/NotoSerifBengali/bold.woff2') format('woff2'), url('fonts/NotoSerifBengali/bold.woff') format('woff'), url('fonts/NotoSerifBengali/bold.eot') format('eot'), url('fonts/NotoSerifBengali/bold.ttf') format('ttf')`,
     fontDisplay: 'swap',
   },
 };
@@ -184,7 +184,7 @@ const NOTO_SANS_TELUGU_REGULAR = {
     fontFamily: 'Noto Sans Telugu',
     fontWeight: 400,
     fontStyle: 'normal',
-    src: `url('fonts/NotoSansTelugu/v1.00/normal.woff') format('woff'), url('fonts/NotoSansTelugu/v1.00/normal.eot') format('eot'), url('fonts/NotoSansTelugu/v1.00/normal.ttf') format('ttf')`,
+    src: `url('fonts/NotoSansTelugu/normal.woff') format('woff'), url('fonts/NotoSansTelugu/normal.eot') format('eot'), url('fonts/NotoSansTelugu/normal.ttf') format('ttf')`,
     fontDisplay: 'swap',
   },
 };
@@ -194,7 +194,7 @@ const NOTO_SANS_TELUGU_BOLD = {
     fontFamily: 'Noto Sans Telugu',
     fontWeight: 700,
     fontStyle: 'normal',
-    src: `url('fonts/NotoSansTelugu/v1.00/bold.woff') format('woff'), url('fonts/NotoSansTelugu/v1.00/bold.eot') format('eot'), url('fonts/NotoSansTelugu/v1.00/bold.ttf') format('ttf')`,
+    src: `url('fonts/NotoSansTelugu/bold.woff') format('woff'), url('fonts/NotoSansTelugu/bold.eot') format('eot'), url('fonts/NotoSansTelugu/bold.ttf') format('ttf')`,
     fontDisplay: 'swap',
   },
 };
@@ -204,7 +204,7 @@ const NOTO_SANS_GUJARATI_REGULAR = {
     fontFamily: 'Noto Sans Gujarati',
     fontWeight: 400,
     fontStyle: 'normal',
-    src: `url('fonts/NotoSansGujarati/v1.00/normal.woff') format('woff'), url('fonts/NotoSansGujarati/v1.00/normal.eot') format('eot'), url('fonts/NotoSansGujarati/v1.00/normal.ttf') format('ttf')`,
+    src: `url('fonts/NotoSansGujarati/normal.woff') format('woff'), url('fonts/NotoSansGujarati/normal.eot') format('eot'), url('fonts/NotoSansGujarati/normal.ttf') format('ttf')`,
     fontDisplay: 'swap',
   },
 };
@@ -214,7 +214,7 @@ const NOTO_SANS_GUJARATI_BOLD = {
     fontFamily: 'Noto Sans Gujarati',
     fontWeight: 700,
     fontStyle: 'normal',
-    src: `url('fonts/NotoSansGujarati/v1.00/bold.woff') format('woff'), url('fonts/NotoSansGujarati/v1.00/bold.eot') format('eot'), url('fonts/NotoSansGujarati/v1.00/bold.ttf') format('ttf')`,
+    src: `url('fonts/NotoSansGujarati/bold.woff') format('woff'), url('fonts/NotoSansGujarati/bold.eot') format('eot'), url('fonts/NotoSansGujarati/bold.ttf') format('ttf')`,
     fontDisplay: 'swap',
   },
 };
@@ -224,7 +224,7 @@ const NOTO_SANS_ETHIOPIC_REGULAR = {
     fontFamily: 'Noto Sans Ethiopic',
     fontWeight: 400,
     fontStyle: 'normal',
-    src: `url('fonts/NotoSansEthiopic/v1.901/normal.woff') format('woff'), url('fonts/NotoSansEthiopic/v1.901/normal.eot') format('eot'), url('fonts/NotoSansEthiopic/v1.901/normal.ttf') format('ttf')`,
+    src: `url('fonts/NotoSansEthiopic/normal.woff') format('woff'), url('fonts/NotoSansEthiopic/normal.eot') format('eot'), url('fonts/NotoSansEthiopic/normal.ttf') format('ttf')`,
     fontDisplay: 'swap',
   },
 };
@@ -234,7 +234,7 @@ const NOTO_SANS_ETHIOPIC_BOLD = {
     fontFamily: 'Noto Sans Ethiopic',
     fontWeight: 700,
     fontStyle: 'normal',
-    src: `url('fonts/NotoSansEthiopic/v1.901/bold.woff') format('woff'), url('fonts/NotoSansEthiopic/v1.901/bold.eot') format('eot'), url('fonts/NotoSansEthiopic/v1.901/bold.ttf') format('ttf')`,
+    src: `url('fonts/NotoSansEthiopic/bold.woff') format('woff'), url('fonts/NotoSansEthiopic/bold.eot') format('eot'), url('fonts/NotoSansEthiopic/bold.ttf') format('ttf')`,
     fontDisplay: 'swap',
   },
 };
@@ -244,7 +244,7 @@ const PADAUK_REGULAR = {
     fontFamily: 'Padauk',
     fontWeight: 400,
     fontStyle: 'normal',
-    src: `url('fonts/Padauk/v2.8/normal.woff') format('woff'), url('fonts/Padauk/v2.8/normal.eot') format('eot'), url('fonts/Padauk/v2.8/normal.ttf') format('ttf')`,
+    src: `url('fonts/Padauk/normal.woff') format('woff'), url('fonts/Padauk/normal.eot') format('eot'), url('fonts/Padauk/normal.ttf') format('ttf')`,
     fontDisplay: 'swap',
   },
 };
@@ -254,7 +254,7 @@ const PADAUK_BOLD = {
     fontFamily: 'Padauk',
     fontWeight: 700,
     fontStyle: 'normal',
-    src: `url('fonts/Padauk/v2.8/bold.woff') format('woff'), url('fonts/Padauk/v2.8/bold.eot') format('eot'), url('fonts/Padauk/v2.8/bold.ttf') format('ttf')`,
+    src: `url('fonts/Padauk/bold.woff') format('woff'), url('fonts/Padauk/bold.eot') format('eot'), url('fonts/Padauk/bold.ttf') format('ttf')`,
     fontDisplay: 'swap',
   },
 };
@@ -264,8 +264,8 @@ const NOTO_SERIF_BENGALI_REGULAR = {
     fontFamily: 'Noto Serif Bengali',
     fontWeight: 400,
     fontStyle: 'normal',
-    src: `url('fonts/NotoSerifBengali/v1.00/normal.woff2') format('woff2'), url('fonts/NotoSerifBengali/v1.00/normal.woff') format('woff'), url('fonts/NotoSerifBengali/v1.00/normal.eot') format('eot'), url('fonts/NotoSerifBengali/v1.00/normal.ttf') format('ttf')`,
-    fontDisplay: 'swap',
+    src: `url('fonts/NotoSerifBengali/normal.woff2') format('woff2'), url('fonts/NotoSerifBengali/normal.woff') format('woff'), url('fonts/NotoSerifBengali/normal.eot') format('eot'), url('fonts/NotoSerifBengali/normal.ttf') format('ttf')`,
+    fontDisplay: 'block',
   },
 };
 
@@ -274,8 +274,8 @@ const NOTO_SERIF_BENGALI_BOLD = {
     fontFamily: 'Noto Serif Bengali',
     fontWeight: 700,
     fontStyle: 'normal',
-    src: `url('fonts/NotoSerifBengali/v1.00/bold.woff2') format('woff2'), url('fonts/NotoSerifBengali/v1.00/bold.woff') format('woff'), url('fonts/NotoSerifBengali/v1.00/bold.eot') format('eot'), url('fonts/NotoSerifBengali/v1.00/bold.ttf') format('ttf')`,
-    fontDisplay: 'swap',
+    src: `url('fonts/NotoSerifBengali/bold.woff2') format('woff2'), url('fonts/NotoSerifBengali/bold.woff') format('woff'), url('fonts/NotoSerifBengali/normal.eot') format('eot'), url('fonts/NotoSerifBengali/bold.ttf') format('ttf')`,
+    fontDisplay: 'block',
   },
 };
 
