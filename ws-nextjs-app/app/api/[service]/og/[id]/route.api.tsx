@@ -10,10 +10,14 @@ import {
   getArticleId,
   getTipoId,
 } from '#app/routes/utils/constructPageFetchUrl';
-import Badge from './Badge';
-import { extractArticleData, extractLiveData, responseNotFound } from './utils';
-import BackgroundImage from './BackgroundImage';
-import { ArabicMostReadSVG, ArabicTopStoriesSVG, LiveSVG } from './RTLBadges';
+import Badge from '../Badge';
+import {
+  extractArticleData,
+  extractLiveData,
+  responseNotFound,
+} from '../utils';
+import BackgroundImage from '../BackgroundImage';
+import { ArabicMostReadSVG, ArabicTopStoriesSVG, LiveSVG } from '../RTLBadges';
 
 const REITH_SANS_MEDIUM_FONT_URL = `${REITH_FONTS_DIR}BBCReithSans_W_Md.woff`;
 const REITH_SANS_BOLD_FONT_URL = `${REITH_FONTS_DIR}BBCReithSans_W_Bd.woff`;
@@ -33,18 +37,22 @@ const RTL_SERVICES: Services[] = [
   'urdu',
 ] as const;
 
-export async function GET(req: Request) {
+export async function GET(
+  req: Request,
+  { params }: { params: { id: string; service: Services } },
+) {
   try {
     const { searchParams } = new URL(
       req.url ?? '',
       `https://${req.headers.get('host')}`,
     );
 
-    const id = searchParams.get('id');
-    const service = searchParams.get('service') as Services;
-    const rendererEnv = searchParams.get('renderer_env') || 'live';
+    // https://nextjs.org/docs/messages/sync-dynamic-apis
+    const { id, service } = await params;
 
     if (!id || !service) return responseNotFound();
+
+    const rendererEnv = searchParams.get('renderer_env') || 'live';
 
     const pageType = getPageType(id);
 
