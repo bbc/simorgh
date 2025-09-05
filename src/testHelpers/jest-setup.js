@@ -7,9 +7,15 @@ import { MessageChannel, MessagePort } from 'node:worker_threads';
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 global.fetch = fetch;
-// global.AbortSignal = {
-//   timeout: jest.fn(),
-// };
+
+const MockAbortSignal = {
+  AbortSignal: jest.fn().mockImplementation(() => {
+    return {};
+  }),
+  timeout: jest.fn(),
+};
+
+global.AbortSignal = MockAbortSignal;
 global.ReadableStream = ReadableStream;
 global.MessageChannel = MessageChannel;
 global.MessagePort = MessagePort;
