@@ -1,0 +1,177 @@
+{
+  "data": {
+    "generated": "2025-08-22T09:44:02.434911048Z",
+    "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+    "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
+    "items": [
+      {
+        "id": "urn:bbc:optimo:cz5qlq3vj71o",
+        "rank": 1,
+        "title": "Test Dari article",
+        "href": "https://www.bbc.com/dari/articles/cz5qlq3vj71o",
+        "timestamp": "2025-07-21T10:08:42.726Z",
+        "images": {}
+      },
+      {
+        "id": "urn:bbc:optimo:cx3ge1q6193o",
+        "rank": 2,
+        "title": "Testing Dari",
+        "href": "https://www.bbc.com/dari/articles/cx3ge1q6193o",
+        "timestamp": "2025-07-23T16:11:14.627Z",
+        "images": {}
+      },
+      {
+        "id": "urn:bbc:optimo:cr8w87z86l6o",
+        "rank": 3,
+        "title": "BBC Dari Test",
+        "href": "https://www.bbc.com/dari/articles/cr8w87z86l6o",
+        "timestamp": "2025-07-24T09:44:17.351Z",
+        "images": {}
+      },
+      {
+        "id": "urn:bbc:optimo:cm35dk7k66do",
+        "rank": 4,
+        "title": "داستان های تاین ساید که ممکن این هفته از دست داده باشید",
+        "href": "https://www.bbc.com/dari/articles/cm35dk7k66do",
+        "timestamp": "2025-07-28T15:50:23.698Z",
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "نان گلوریا استاپیلتون از لوسی برونز و عمه جولی تاف میگویند که آنها با تماشای فینال روز یکشنبه عصبی خواهند شد",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "نان گلوریا استاپیلتون از لوسی برونز و عمه جولی تاف میگویند که آنها با تماشای فینال روز یکشنبه عصبی خواهند شد",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "گلوریا ستاپیلتون (چپ) موهای کوتاه سفید دارد و لبخند میزند. او یک گردنبند مروارید و یک ژاکت سفید میپوشد. او یک نسخه از مجله صحت زنان را در دست دارد که روی آن یک تصویر لوسی برنز نوشته شده است. جولی تاف (راست) موهای کوتاه زنجبیل دارد و یک سگ کوچک سفید و یک روزنامه را در دست دارد. یک برش مقوایی لوسی در عقب آنها است.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "گلوریا ستاپیلتون (چپ) موهای کوتاه سفید دارد و لبخند میزند. او یک گردنبند مروارید و یک ژاکت سفید میپوشد. او یک نسخه از مجله صحت زنان را در دست دارد که روی آن یک تصویر لوسی برنز نوشته شده است. جولی تاف (راست) موهای کوتاه زنجبیل دارد و یک سگ کوچک سفید و یک روزنامه را در دست دارد. یک برش مقوایی لوسی در عقب آنها است.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 3393,
+                  "height": 1908,
+                  "locator": "e498/test/e97f7bd0-6bc9-11f0-82ec-0b95afadde24.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "urn:bbc:optimo:c502ljngpqeo",
+        "rank": 5,
+        "title": "آزمایش مقاله چها",
+        "href": "https://www.bbc.com/dari/articles/c502ljngpqeo",
+        "timestamp": "2025-08-07T09:50:24.054Z",
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "کاپیتان صنعت",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "کاپیتان صنعت",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 1024,
+                  "height": 576,
+                  "locator": "a7e3/test/6bb2c830-7e69-11f0-a6d0-5d585b139c80.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "dari.popular.read.page",
+        "timePublished": "2021-05-04T11:38:00Z",
+        "timeUpdated": "2021-05-04T11:53:00Z"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

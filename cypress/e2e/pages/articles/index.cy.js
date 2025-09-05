@@ -145,6 +145,12 @@ const nonSmokeCanonicalTestSuites = [
     tests: [...canonicalTests],
   },
   {
+    path: '/dari/articles/c502ljngpqeo',
+    runforEnv: ['local'],
+    service: 'dari',
+    tests: [...canonicalTests],
+  },
+  {
     path: '/gahuza/articles/cey23zx8wx8o',
     runforEnv: ['test'],
     service: 'gahuza',
