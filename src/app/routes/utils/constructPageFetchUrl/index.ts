@@ -198,6 +198,10 @@ const constructPageFetchUrl = ({
   );
 
   if (isLocal) {
+    const host = `http://${process.env.HOSTNAME || 'localhost'}`;
+    const port = process.env.PORT ? `:${process.env.PORT}` : '';
+    const baseURL = `${host}${port}`;
+
     switch (pageType) {
       case ARTICLE_PAGE: {
         const isOptimoId = isOptimoIdCheck(`/articles/${id}`);
@@ -217,10 +221,8 @@ const constructPageFetchUrl = ({
         break;
       case HOME_PAGE: {
         if (process.env?.NEXTJS) {
-          const host = `http://${process.env.HOSTNAME || 'localhost'}`;
-          const port = process.env.PORT ? `:${process.env.PORT}` : '';
           fetchUrl = Url(
-            `${host}${port}/api/local/${service}/homePage/${variant ? `${variant}` : 'index'}`,
+            `${baseURL}/api/local/${service}/homePage/${variant ? `${variant}` : 'index'}`,
           );
         } else {
           fetchUrl = Url(`/${service}${variant ? `/${variant}` : ''}`);
@@ -238,31 +240,24 @@ const constructPageFetchUrl = ({
       case LIVE_PAGE: {
         const [liveID] = pathname.split('.');
         const variantPath = variant ? `/${variant}` : '';
-        const host = `http://${process.env.HOSTNAME || 'localhost'}`;
-        const port = process.env.PORT ? `:${process.env.PORT}` : '';
         // pathname is the ID of the Live page without /service/live/, and supports both Tipo & CPS IDs
         fetchUrl = Url(
-          `${host}${port}/api/local/${service}/live/${liveID}${variantPath}`,
+          `${baseURL}/api/local/${service}/live/${liveID}${variantPath}`,
         );
         break;
       }
       case UGC_PAGE: {
-        const host = `http://${process.env.HOSTNAME || 'localhost'}`;
-        const port = process.env.PORT ? `:${process.env.PORT}` : '';
-        fetchUrl = Url(`${host}${port}/api/local/${service}/send/${id}`);
+        fetchUrl = Url(`${baseURL}/api/local/${service}/send/${id}`);
         break;
       }
       case AV_EMBEDS: {
         const parsedRoute = parseAvRoute(pathname);
 
-        const host = `http://${process.env.HOSTNAME || 'localhost'}`;
-        const port = process.env.PORT ? `:${process.env.PORT}` : '';
-
         if (parsedRoute.isWsRoute) {
           // handle /ws/av-embeds route
         } else {
           fetchUrl = Url(
-            `${host}${port}/api/local/${parsedRoute.service}/av-embeds/${parsedRoute.variant ? `${parsedRoute?.variant}/` : ''}${parsedRoute.assetId}${parsedRoute.mediaId ? `/${parsedRoute.mediaDelimiter}/${parsedRoute.mediaId}` : ''} ${parsedRoute.lang ? `/${parsedRoute.lang}` : ''}`,
+            `${baseURL}/api/local/${parsedRoute.service}/av-embeds/${parsedRoute.variant ? `${parsedRoute?.variant}/` : ''}${parsedRoute.assetId}${parsedRoute.mediaId ? `/${parsedRoute.mediaDelimiter}/${parsedRoute.mediaId}` : ''} ${parsedRoute.lang ? `/${parsedRoute.lang}` : ''}`,
           );
         }
         break;
