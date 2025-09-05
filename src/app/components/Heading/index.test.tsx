@@ -21,14 +21,36 @@ describe('Heading', () => {
       service: 'mundo',
     });
 
-    expect(screen.getByText('Hello World!')).toHaveStyle({
-      color: '#141414',
-      fontSize: '1.75rem',
-      lineHeight: '2.25rem',
-      fontFamily: 'ReithSans,Helvetica,Arial,sans-serif',
-      fontStyle: 'normal',
-      fontWeight: 700,
-      margin: 0,
-    });
+    expect(screen.getByText('Hello World!')).toMatchInlineSnapshot(`
+     .emotion-0 {
+       color: #141414;
+       font-size: 1.75rem;
+       line-height: 2.25rem;
+       font-family: ReithSans,Helvetica,Arial,sans-serif;
+       font-style: normal;
+       font-weight: 700;
+       margin: 0;
+     }
+
+     @media (min-width: 20rem) and (max-width: 37.4375rem) {
+       .emotion-0 {
+         font-size: 2rem;
+         line-height: 2.625rem;
+       }
+     }
+
+     @media (min-width: 37.5rem) {
+       .emotion-0 {
+         font-size: 2.75rem;
+         line-height: 3.625rem;
+       }
+     }
+
+     <h1
+       class="emotion-0"
+     >
+       Hello World!
+     </h1>
+    `);
   });
 });
