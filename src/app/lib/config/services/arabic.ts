@@ -379,7 +379,7 @@ export const service: DefaultServiceConfig = {
         text: 'لماذا يمكنك الاعتماد على أخبار بي بي سي',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
         text: 'سياستنا بخصوص الروابط الخارجية.',
       },
       links: [
