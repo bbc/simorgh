@@ -11,9 +11,6 @@ import { service as pidginServiceConfig } from '../../../lib/config/services/pid
 import ConsentBanner from './index';
 
 const defaultToggleState = {
-  chartbeatAnalytics: {
-    enabled: false,
-  },
   privacyPolicy: {
     enabled: true,
     value: 'july2019',
