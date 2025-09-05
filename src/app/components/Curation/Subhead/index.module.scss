@@ -1,6 +1,8 @@
 .h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-family: var(--sans-bold-font-family);
+  font-style: var(--sans-bold-font-style);
+  font-weight: var(--sans-bold-font-weight);
+
   margin: 0 0 0.5rem 0;
   display: flex;
   align-items: center;
