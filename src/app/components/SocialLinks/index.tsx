@@ -114,7 +114,6 @@ const SocialLinks = ({
 
   const buildPromoEventTrackingData = (promo: Summary, index: number) => {
     const itemTracker = {
-      ...eventTrackingData,
       type: 'social-link-promo',
       text: promo.title,
       position: index + 1,
@@ -122,6 +121,7 @@ const SocialLinks = ({
     };
     return {
       itemTracker,
+      ...eventTrackingData
     };
   };
 
