@@ -1,7 +1,6 @@
 import Cookie from 'js-cookie';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
-import Url from 'url-parse';
 import onClient from '#lib/utilities/onClient';
 import getUUID from '#lib/utilities/getUUID';
 import isOperaProxy from '#lib/utilities/isOperaProxy';
@@ -298,11 +297,28 @@ export const getThingAttributes = (attribute, articleData) => {
   return null;
 };
 
+const parseUrl = href => {
+  let query = null;
+  let hash = null;
+
+  if (href) {
+    const url = new URL(href);
+    const { searchParams } = url;
+    hash = url.hash;
+    query = Object.fromEntries(searchParams);
+  }
+
+  return {
+    query,
+    hash,
+  };
+};
+
 export const getCampaignType = () => {
   if (!onClient()) return null;
 
   // Gets the query string parameters from the current url parsing them as an object
-  const { query, hash } = new Url(window.location.href, true);
+  const { query, hash } = parseUrl(window.location.href);
 
   // Check for the presence of the `?at_medium` QS
   const isMediumCampaign = Object.prototype.hasOwnProperty.call(
@@ -333,10 +349,16 @@ export const getCampaignType = () => {
 /* This transforms urls with a hash param to query params
    ie. from bbc.com/mundo#some_param_1=24&some_param_2=48 to bbc.com/mundo?some_param_1=24&some_param_2=48
 */
-const parameteriseHash = hash => new Url(hash.replace('#', '?'), true).query;
+const parameteriseHash = hash => {
+  const { searchParams } = new URL(
+    `https://www.bbc.com${hash.replace('#', '?')}`,
+  );
+
+  return Object.fromEntries(searchParams);
+};
 
 const getMarketingUrlParam = (href, field) => {
-  const { query, hash } = new Url(href, true);
+  const { query, hash } = parseUrl(href);
 
   const queryWithParams = hash ? parameteriseHash(hash) : query;
 
@@ -355,7 +377,7 @@ const buildMarketingString = marketingValues =>
  * more information at https://developers.atinternet-solutions.com/as2-tagging-en/javascript-en/campaigns-javascript-en/marketing-campaigns-v2/?kw=at_custom#full-custom-campaigns_13
  */
 const buildRSSMarketingString = href => {
-  const { query, hash } = new Url(href, true);
+  const { query, hash } = parseUrl(href);
 
   const queryWithParams = hash ? parameteriseHash(hash) : query;
 
@@ -600,7 +622,7 @@ export const getCustomMarketingString = href =>
 export const getXtorMarketingString = href => {
   const field = 'xtor';
 
-  const { query, hash } = new Url(href, true);
+  const { query, hash } = parseUrl(href);
 
   const hashObject = hash ? parameteriseHash(hash) : '';
 
