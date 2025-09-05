@@ -1,6 +1,6 @@
 import { FetchMock } from 'jest-fetch-mock';
-
 import React from 'react';
+import * as prettier from 'prettier';
 import { render, act } from '../../react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import AmpMostRead from '.';
@@ -33,12 +33,16 @@ describe('AmpMostRead', () => {
       service: 'mundo',
     });
 
-    await act(async () => {
-      expect(
-        container.querySelector('amp-script amp-list li'),
-      ).toBeInTheDocument();
-      expect(container).toMatchSnapshot();
+    const str = await prettier.format(container.innerHTML, {
+      parser: 'html',
+      htmlWhitespaceSensitivity: 'strict',
     });
+
+    expect(
+      document.querySelector('amp-script amp-list template'),
+    ).toBeInTheDocument();
+
+    expect(str).toMatchSnapshot();
   });
 
   it('should render fallback when fetch fails to load', async () => {
@@ -53,7 +57,7 @@ describe('AmpMostRead', () => {
 
     await act(async () => {
       expect(
-        container.querySelector('amp-script amp-list li'),
+        container.querySelector('amp-script amp-list template'),
       ).toBeInTheDocument();
 
       const fallback = getByText('Contenido no disponible');
@@ -81,7 +85,7 @@ describe('AmpMostRead', () => {
 
     await act(async () => {
       expect(
-        container.querySelector('amp-script amp-list li'),
+        container.querySelector('amp-script amp-list template'),
       ).toBeInTheDocument();
 
       const fallback = getByText('Contenido no disponible');
@@ -108,7 +112,7 @@ describe('AmpMostRead', () => {
 
     await act(async () => {
       expect(
-        container.querySelector('amp-script amp-list li'),
+        container.querySelector('amp-script amp-list template'),
       ).toBeInTheDocument();
 
       const fallback = getByText('Contenido no disponible');
