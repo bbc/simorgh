@@ -10,11 +10,13 @@ import {
   getArticleId,
   getTipoId,
 } from '#app/routes/utils/constructPageFetchUrl';
+import { INTERNAL_SERVER_ERROR, NOT_FOUND } from '#app/lib/statusCodes.const';
 import Badge from '../Badge';
 import {
   extractArticleData,
   extractLiveData,
   responseNotFound,
+  responseServerError,
 } from '../utils';
 import BackgroundImage from '../BackgroundImage';
 import { ArabicMostReadSVG, ArabicTopStoriesSVG, LiveSVG } from '../RTLBadges';
@@ -52,7 +54,8 @@ export async function GET(
 
     if (!id || !service) return responseNotFound();
 
-    const rendererEnv = searchParams.get('renderer_env') || 'live';
+    const rendererEnv =
+      searchParams.get('renderer_env') || process.env.SIMORGH_APP_ENV;
 
     const pageType = getPageType(id);
 
@@ -72,7 +75,8 @@ export async function GET(
       fetch(REITH_SANS_BOLD_FONT_URL).then(res => res.arrayBuffer()),
     ]);
 
-    if (data.status === 404) return responseNotFound();
+    if (data.status === NOT_FOUND) return responseNotFound();
+    if (data.status === INTERNAL_SERVER_ERROR) return responseServerError();
 
     const dataExtractor = {
       live: extractLiveData,

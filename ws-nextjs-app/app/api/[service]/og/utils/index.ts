@@ -6,6 +6,8 @@ import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStorie
 
 const responseNotFound = () => new Response('Not found', { status: 404 });
 
+const responseServerError = () => new Response('Server error', { status: 500 });
+
 const getDefaultImage = (service: Services) =>
   `https://news.files.bbci.co.uk/ws/img/logos/og/${service}.png`;
 
@@ -94,4 +96,9 @@ const extractLiveData = ({
   };
 };
 
-export { responseNotFound, extractArticleData, extractLiveData };
+export {
+  responseNotFound,
+  responseServerError,
+  extractArticleData,
+  extractLiveData,
+};
