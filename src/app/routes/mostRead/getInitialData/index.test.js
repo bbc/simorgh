@@ -46,7 +46,7 @@ describe('MostReadPage - BFF Fetching', () => {
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'http://localhost/pidgin/mostread',
+      path: '/pidgin/mostread',
       pageType: MOST_READ_PAGE,
       timeout: 60000,
     });

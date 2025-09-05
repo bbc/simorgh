@@ -220,7 +220,7 @@ describe('get initial data for topic', () => {
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'http://localhost/pidgin/topics/c0000000000t',
+      path: '/pidgin/topics/c0000000000t',
       pageType: TOPIC_PAGE,
       timeout: 60000,
     });
