@@ -1,3 +1,4 @@
+/* eslint-disable max-classes-per-file */
 import fetch from 'jest-fetch-mock';
 import path from 'path';
 import { TextEncoder, TextDecoder } from 'util';
@@ -11,9 +12,8 @@ global.fetch = fetch;
 const MockAbortSignal = () => {
   return {
     AbortSignal: jest.fn().mockImplementation(() => {
-      return {};
+      return { timeout: jest.fn() };
     }),
-    timeout: jest.fn(),
   };
 };
 

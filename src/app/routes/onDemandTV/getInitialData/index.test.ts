@@ -1,5 +1,4 @@
 import onDemandTvJson from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json';
-import { FetchMock } from 'jest-fetch-mock';
 import { TV_PAGE } from '#app/routes/utils/pageTypes';
 import isTest from '#app/lib/utilities/isTest';
 import * as fetchBFF from '#app/routes/utils/fetchDataFromBFF';
@@ -7,17 +6,21 @@ import * as fetchBFF from '#app/routes/utils/fetchDataFromBFF';
 import getInitialData from '.';
 
 const { env } = process;
-const fetchMock = fetch as FetchMock;
 
 jest.mock('#app/lib/utilities/isTest', () =>
   jest.fn().mockImplementation(() => false),
 );
 
+const fetchBFFSpy = jest.spyOn(fetchBFF, 'default');
+
 const pageType = TV_PAGE;
 
 describe('Get initial data for on demand tv', () => {
   beforeEach(() => {
-    fetchMock.mockResponse(JSON.stringify(onDemandTvJson));
+    fetchBFFSpy.mockResolvedValueOnce({
+      json: onDemandTvJson,
+      status: 200,
+    });
   });
 
   afterEach(() => {
@@ -85,6 +88,8 @@ describe('Get initial data for on demand tv', () => {
       },
     });
 
+    console.log({ pageData });
+
     expect(pageData.recentEpisodes).toHaveLength(3);
     expect(pageData.recentEpisodes[0].id).toEqual('w172zmspxm02pfr');
   });
@@ -97,8 +102,6 @@ describe('Get initial data for on demand tv', () => {
     'should fetch from $expectedPathname when test environment is $isTestEnvironment',
     async ({ isTestEnvironment, expectedPathname }) => {
       (isTest as jest.Mock).mockImplementationOnce(() => isTestEnvironment);
-      const fetchBFFSpy = jest.spyOn(fetchBFF, 'default');
-
       await getInitialData({
         path: 'mock-on-demand-tv-path',
         pageType: TV_PAGE,
