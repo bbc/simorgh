@@ -3,12 +3,13 @@ import path from 'path';
 import { TextEncoder, TextDecoder } from 'util';
 import { ReadableStream } from 'node:stream/web';
 import { MessageChannel, MessagePort } from 'node:worker_threads';
-// import { PropertySymbol } from 'happy-dom';
 
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 global.fetch = fetch;
-// global.AbortSignal =
+// global.AbortSignal = {
+//   timeout: jest.fn(),
+// };
 global.ReadableStream = ReadableStream;
 global.MessageChannel = MessageChannel;
 global.MessagePort = MessagePort;
@@ -59,19 +60,6 @@ global.IntersectionObserver = class IntersectionObserver {
 
 // Mock RequireJS globally and let individual tests mock it as needed
 window.require = jest.fn();
-
-// It was "ownerWindow" in older versions of Happy DOM
-// const browserWindow =
-//   global.document[PropertySymbol.ownerWindow] ||
-//   global.document[PropertySymbol.window];
-
-// global.setTimeout = browserWindow.setTimeout;
-// global.clearTimeout = browserWindow.clearTimeout;
-// global.setInterval = browserWindow.setInterval;
-// global.clearInterval = browserWindow.clearInterval;
-// global.requestAnimationFrame = browserWindow.requestAnimationFrame;
-// global.cancelAnimationFrame = browserWindow.cancelAnimationFrame;
-// global.queueMicrotask = browserWindow.queueMicrotask;
 
 process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN = 'http://localhost:7080';
 process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH = '/';

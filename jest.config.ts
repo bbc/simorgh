@@ -1,4 +1,5 @@
-const { jestDirAlias } = require('./dirAlias');
+// import { Window, Request, Response } from 'happy-dom';
+import { jestDirAlias } from './dirAlias.js';
 
 const unitTests = {
   preset: 'ts-jest',
@@ -9,6 +10,16 @@ const unitTests = {
   ],
   moduleNameMapper: jestDirAlias,
   testEnvironment: '@happy-dom/jest-environment',
+  testEnvironmentOptions: {
+    url: 'http://localhost:7080',
+    width: 1024,
+    height: 768,
+    settings: {
+      disableJavaScriptFileLoading: true,
+      handleDisabledFileLoadingAsSuccess: true,
+      disableComputedStyleRendering: true,
+    },
+  },
   snapshotSerializers: ['@emotion/jest/serializer'],
   transform: {
     '^.+\\.[tj]sx?$': 'babel-jest',
