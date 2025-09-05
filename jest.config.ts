@@ -15,6 +15,9 @@ const unitTests = {
       disableJavaScriptFileLoading: true,
       handleDisabledFileLoadingAsSuccess: true,
       disableComputedStyleRendering: true,
+      navigation: {
+        disableChildFrameNavigation: true,
+      },
     },
   },
   snapshotSerializers: ['@emotion/jest/serializer'],
