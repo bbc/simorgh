@@ -72,6 +72,8 @@ export async function GET(
       fetch(REITH_SANS_BOLD_FONT_URL).then(res => res.arrayBuffer()),
     ]);
 
+    if (data.status === 404) return responseNotFound();
+
     const dataExtractor = {
       live: extractLiveData,
       article: extractArticleData,
