@@ -2,10 +2,20 @@
  * @jest-environment node
  */
 
+import * as fetchPageData from '#app/routes/utils/fetchPageData';
 import { GET as api } from './route.api';
 
 describe('GET /api/og', () => {
+  beforeEach(() => {
+    jest.restoreAllMocks();
+  });
+
   it('should return a 200 response with valid article id and service', async () => {
+    jest.spyOn(fetchPageData, 'default').mockResolvedValue({
+      status: 200,
+      json: {},
+    });
+
     const response = await api(
       new Request('https://www.bbc.com/pidgin/og/czjnnk9m8vdo'),
       {
@@ -17,6 +27,11 @@ describe('GET /api/og', () => {
   });
 
   it('should return a 200 response with valid live id and service', async () => {
+    jest.spyOn(fetchPageData, 'default').mockResolvedValue({
+      status: 200,
+      json: {},
+    });
+
     const response = await api(
       new Request('https://www.bbc.com/mundo/og/cemn2qq3x8vt'),
       {
@@ -60,5 +75,21 @@ describe('GET /api/og', () => {
     );
 
     expect(response.status).toBe(404);
+  });
+
+  it('should return a 500 response when page data fetch returns 500', async () => {
+    jest.spyOn(fetchPageData, 'default').mockResolvedValue({
+      status: 500,
+      json: {},
+    });
+
+    const response = await api(
+      new Request('https://www.bbc.com/pidgin/og/czjnnk9m8vdo'),
+      {
+        params: { id: 'czjnnk9m8vdo', service: 'pidgin' },
+      },
+    );
+
+    expect(response.status).toBe(500);
   });
 });
