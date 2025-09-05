@@ -63,7 +63,6 @@ const unitTests = {
   snapshotSerializers: ['@emotion/jest/serializer'],
   testEnvironment: '@happy-dom/jest-environment',
   testEnvironmentOptions: {
-    url: 'http://localhost:7081',
     settings: {
       disableJavaScriptFileLoading: true,
       handleDisabledFileLoadingAsSuccess: true,
