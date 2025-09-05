@@ -1,7 +1,7 @@
 /* eslint-disable cypress/no-unnecessary-waiting */
 /* eslint-disable consistent-return */
 import { getEpisodeAvailability } from '../../../support/helpers/onDemandRadioTv';
-import envConfig from '../../../support/config/envs';
+import chartbeatTests from '../../../support/helpers/chartbeatTests';
 
 export default ({ service, pageType, path, variant = 'default' }) => {
   describe(`Tests for ${service} ${pageType}`, () => {
@@ -98,15 +98,7 @@ export default ({ service, pageType, path, variant = 'default' }) => {
         });
       });
     });
-    describe('Chartbeat', () => {
-      if (envConfig.chartbeatEnabled) {
-        it('should have a script with src value set to chartbeat source', () => {
-          cy.hasScriptWithChartbeatSrc();
-        });
-        it('should have chartbeat config set to window object', () => {
-          cy.hasGlobalChartbeatConfig();
-        });
-      }
-    });
+
+    chartbeatTests();
   });
 };
