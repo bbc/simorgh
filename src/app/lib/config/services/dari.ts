@@ -362,7 +362,7 @@ export const service: DefaultServiceConfig = {
     mostRead: {
       header: 'مطالب پرخواننده',
       lastUpdated: 'به روز شده در',
-      numberOfItems: 10,
+      numberOfItems: 5,
       hasMostRead: true,
     },
     radioSchedule: {
