@@ -8,14 +8,16 @@ import { allServices } from '#app/routes/utils/regex';
  * @returns The service name if found and valid, otherwise null
  */
 export default (url: string): Services | null => {
-  const pathname = getUrlPath(url);
-  const service = pathname
-    .split('/')
-    .filter(Boolean)[0]
-    ?.replace(/\..*$/, '') as Services;
+  if (url) {
+    const pathname = getUrlPath(url);
+    const service = pathname
+      .split('/')
+      .filter(Boolean)[0]
+      ?.replace(/\..*$/, '') as Services;
 
-  if (allServices.includes(service)) {
-    return service;
+    if (allServices.includes(service)) {
+      return service;
+    }
   }
 
   return null;
