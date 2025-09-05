@@ -18,7 +18,7 @@ const mockGetServerSidePropsContext = {
     setHeader: jest.fn(),
     removeHeader: jest.fn(),
   } as unknown as GetServerSidePropsContext['res'],
-  resolvedUrl: '',
+  resolvedUrl: 'http://localhost:7081',
   query: {},
 } satisfies GetServerSidePropsContext;
 

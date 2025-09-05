@@ -1,10 +1,11 @@
 /* eslint-disable import/no-relative-packages */
 import { pathsToModuleNameMapper } from 'ts-jest';
 import type { Config } from '@jest/types';
-import { compilerOptions } from '../tsconfig.json';
+import baseConfig from '../tsconfig.json';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const { react, ...compilerOptionsPaths } = compilerOptions.paths;
+const { compilerOptions } = baseConfig;
+
+const { react: _react, ...compilerOptionsPaths } = compilerOptions.paths;
 
 const canonicalIntegrationTests = {
   displayName: 'Integration Tests - Canonical',
@@ -63,8 +64,11 @@ const unitTests = {
   testEnvironment: '@happy-dom/jest-environment',
   testEnvironmentOptions: {
     url: 'http://localhost:7081',
-    width: 1024,
-    height: 768,
+    settings: {
+      disableJavaScriptFileLoading: true,
+      handleDisabledFileLoadingAsSuccess: true,
+      disableComputedStyleRendering: true,
+    },
   },
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': [

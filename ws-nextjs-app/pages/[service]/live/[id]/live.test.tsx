@@ -115,6 +115,7 @@ describe('Live Page', () => {
         setHeader: jest.fn(),
         on: jest.fn(),
       },
+      resolvedUrl: 'http://localhost:7081',
     } as unknown as GetServerSidePropsContext;
 
     await getServerSideProps(context);
