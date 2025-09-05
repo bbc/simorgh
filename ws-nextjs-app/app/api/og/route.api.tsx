@@ -15,8 +15,8 @@ import { extractArticleData, extractLiveData, responseNotFound } from './utils';
 import BackgroundImage from './BackgroundImage';
 import { ArabicMostReadSVG, ArabicTopStoriesSVG, LiveSVG } from './RTLBadges';
 
-const REITH_SANS_MEDIUM_FONT_URL = `${REITH_FONTS_DIR}/BBCReithSans_W_Md.woff`;
-const REITH_SANS_BOLD_FONT_URL = `${REITH_FONTS_DIR}/BBCReithSans_W_Bd.woff`;
+const REITH_SANS_MEDIUM_FONT_URL = `${REITH_FONTS_DIR}BBCReithSans_W_Md.woff`;
+const REITH_SANS_BOLD_FONT_URL = `${REITH_FONTS_DIR}BBCReithSans_W_Bd.woff`;
 
 const getPageType = (id: string) => {
   if (getArticleId(id)) return 'article';

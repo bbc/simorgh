@@ -23,7 +23,6 @@ const Badge = ({
       backgroundColor: BLACK,
       padding: 16,
       borderRadius: 8,
-      fontFamily: bold ? 'Reith Sans Bold' : 'Reith Sans Medium',
     }}
   >
     <div
@@ -39,6 +38,7 @@ const Badge = ({
       {icon && icon}
       <span
         style={{
+          fontFamily: bold ? 'Reith Sans Bold' : 'Reith Sans Medium',
           textTransform: uppercase ? 'uppercase' : 'none',
           color: textColour,
         }}
