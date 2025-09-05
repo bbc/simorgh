@@ -109,8 +109,8 @@ export async function GET(
     /* 
       Badge priority order:
         1. Live
-        2. Most read
-        3. Top Stories
+        2. Top Stories
+        3. Most read
     */
     switch (true) {
       case isLive:
@@ -132,11 +132,11 @@ export async function GET(
           />
         );
         break;
-      case isInMostRead:
-        badge = <Badge text={mostReadText} />;
-        break;
       case isInTopStories:
         badge = <Badge text={topStoriesText} />;
+        break;
+      case isInMostRead:
+        badge = <Badge text={mostReadText} />;
         break;
       default:
         badge = undefined;
@@ -148,11 +148,11 @@ export async function GET(
         case isLive:
           badge = <LiveSVG />;
           break;
-        case isInMostRead:
-          badge = <ArabicMostReadSVG />;
-          break;
         case isInTopStories:
           badge = <ArabicTopStoriesSVG />;
+          break;
+        case isInMostRead:
+          badge = <ArabicMostReadSVG />;
           break;
         default:
           badge = undefined;
