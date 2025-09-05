@@ -121,7 +121,7 @@ const SocialLinks = ({
     };
     return {
       itemTracker,
-      ...eventTrackingData
+      ...eventTrackingData,
     };
   };
 
