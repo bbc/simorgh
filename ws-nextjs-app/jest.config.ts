@@ -62,7 +62,7 @@ const unitTests = {
   snapshotSerializers: ['@emotion/jest/serializer'],
   testEnvironment: '@happy-dom/jest-environment',
   testEnvironmentOptions: {
-    url: localBaseUrl,
+    url: 'http://localhost:7081',
     width: 1024,
     height: 768,
   },

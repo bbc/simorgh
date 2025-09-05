@@ -1,4 +1,4 @@
-// import { Window, Request, Response } from 'happy-dom';
+// eslint-disable-next-line import/no-import-module-exports, import/extensions
 import { jestDirAlias } from './dirAlias.js';
 
 const unitTests = {
