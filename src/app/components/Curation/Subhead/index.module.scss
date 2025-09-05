@@ -1,0 +1,39 @@
+.h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  display: flex;
+  align-items: center;
+}
+
+a {
+  display: inline-block;
+  color: var(--grey-10);
+  text-decoration: none;
+}
+
+span {
+  vertical-align: inline-block;
+  position: relative;
+}
+
+a:visited {
+  color: var(--grey-10);
+}
+
+a:hover,
+a:focus {
+  color: var(--postbox);
+  text-decoration: underline;
+  span: {
+    textdecoration: underline;
+  }
+}
+
+svg {
+  margin-inline-start: 0.5rem;
+  fill: currentColor;
+  width: (14 / 16) * 1rem;
+  height: (14 / 16) * 1rem;
+  position: relative;
+}
