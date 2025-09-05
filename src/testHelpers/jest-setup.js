@@ -8,11 +8,13 @@ global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 global.fetch = fetch;
 
-const MockAbortSignal = {
-  AbortSignal: jest.fn().mockImplementation(() => {
-    return {};
-  }),
-  timeout: jest.fn(),
+const MockAbortSignal = () => {
+  return {
+    AbortSignal: jest.fn().mockImplementation(() => {
+      return {};
+    }),
+    timeout: jest.fn(),
+  };
 };
 
 global.AbortSignal = MockAbortSignal;
