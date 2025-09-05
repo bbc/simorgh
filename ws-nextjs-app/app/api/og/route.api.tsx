@@ -28,9 +28,9 @@ const getPageType = (id: string) => {
 const RTL_SERVICES: Services[] = [
   'arabic',
   'dari',
+  'pashto',
   'persian',
   'urdu',
-  'pashto',
 ] as const;
 
 export async function GET(req: Request) {
