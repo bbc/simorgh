@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-constructor */
 /* eslint-disable max-classes-per-file */
 import fetch from 'jest-fetch-mock';
 import path from 'path';
@@ -9,15 +10,13 @@ global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 global.fetch = fetch;
 
-const MockAbortSignal = () => {
-  return {
-    AbortSignal: jest.fn().mockImplementation(() => {
-      return { timeout: jest.fn() };
-    }),
-  };
-};
+global.AbortSignal = class AbortSignal extends EventTarget {
+  constructor() {
+    super();
+  }
 
-global.AbortSignal = MockAbortSignal;
+  static timeout() {}
+};
 global.ReadableStream = ReadableStream;
 global.MessageChannel = MessageChannel;
 global.MessagePort = MessagePort;

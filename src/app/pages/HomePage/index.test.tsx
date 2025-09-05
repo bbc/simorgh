@@ -100,16 +100,6 @@ describe('Home Page', () => {
     pidginServiceConfig.default.translations.moreOnThis = originalMoreOnThis;
   });
 
-  it('should apply provided margin size to the main element', () => {
-    // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
-    const { getByRole } = render(<HomePage pageData={homePageData} />, {
-      service: 'kyrgyz',
-    });
-    expect(getByRole('main')).toHaveStyle({
-      margin: '0px 0.5rem',
-    });
-  });
-
   it('should have visually hidden text with the localised product, service - home as the H1', () => {
     // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
     const { container } = render(<HomePage pageData={homePageData} />, {

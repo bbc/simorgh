@@ -68,6 +68,7 @@ export default async ({
     return response;
   } catch (error: unknown) {
     const { message, status } = error as FetchError;
+    console.error({ message });
 
     logger.error(BFF_FETCH_ERROR, {
       service,

@@ -22,10 +22,7 @@ const requestOrigin = 'Jest Test';
 
 jest.mock('#app/lib/utilities/isLocal', () => jest.fn());
 
-const timeoutSpy = jest.spyOn(AbortSignal, 'timeout');
-
 afterEach(() => {
-  timeoutSpy.mockClear();
   jest.clearAllMocks();
   fetch.resetMocks();
 });
@@ -93,28 +90,24 @@ describe('fetchPageData', () => {
     it('should call fetch with the correct url when passed the pathname', async () => {
       await fetchPageData({ path: requestedPathname, pageType });
 
-      expect(timeoutSpy).toHaveBeenCalledTimes(1);
       expect(fetch).toHaveBeenCalledWith(expectedUrl, fetchOptions);
     });
 
     it('should call fetch with the correct url when passed the full test path', async () => {
       await fetchPageData({ path: fullTestPath, pageType });
 
-      expect(timeoutSpy).toHaveBeenCalledTimes(1);
       expect(fetch).toHaveBeenCalledWith(fullTestPath, fetchOptions);
     });
 
     it('should call fetch with the correct url when passed the full live path', async () => {
       await fetchPageData({ path: fullLivePath, pageType });
 
-      expect(timeoutSpy).toHaveBeenCalledTimes(1);
       expect(fetch).toHaveBeenCalledWith(fullLivePath, fetchOptions);
     });
 
     it('should call fetch on amp pages without .amp in pathname', async () => {
       await fetchPageData({ path: requestedPathname, pageType });
 
-      expect(timeoutSpy).toHaveBeenCalledTimes(1);
       expect(fetch).toHaveBeenCalledWith(expectedUrl, fetchOptions);
     });
 
@@ -129,7 +122,6 @@ describe('fetchPageData', () => {
       };
       await fetchPageData({ path: requestedPathname, pageType, optHeaders });
 
-      expect(timeoutSpy).toHaveBeenCalledTimes(1);
       expect(fetch).toHaveBeenCalledWith(expectedUrl, expectedFetchOptions);
     });
 

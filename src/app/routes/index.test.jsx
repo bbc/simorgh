@@ -77,6 +77,8 @@ jest.mock('#src/app/components/ATIAnalytics', () => () => (
   <div>ATI Analytics</div>
 ));
 
+const fetchBFFSpy = jest.spyOn(fetchDataFromBFF, 'default');
+
 describe('Routes', () => {
   beforeEach(() => {
     jest.setTimeout(10000);
@@ -92,7 +94,7 @@ describe('Routes', () => {
   afterEach(() => {
     jest.clearAllMocks();
     jest.restoreAllMocks();
-    fetch.resetMocks();
+    fetchBFFSpy.mockRestore();
     window.dotcom = undefined;
   });
 
@@ -115,7 +117,10 @@ describe('Routes', () => {
 
     it('should route to and render live radio page', async () => {
       const pathname = '/afrique/bbc_afrique_radio/liveradio';
-      fetch.mockResponseOnce(JSON.stringify(liveRadioPageJson));
+      fetchBFFSpy.mockResolvedValueOnce({
+        status: 200,
+        json: liveRadioPageJson,
+      });
 
       const { getInitialData, pageType } = getMatchingRoute(pathname);
       const { pageData } = await getInitialData({
@@ -141,9 +146,10 @@ describe('Routes', () => {
 
     it('should route to and render the podcast page', async () => {
       const pathname = '/gahuza/podcasts/p07yh8hb';
-      jest
-        .spyOn(fetchDataFromBFF, 'default')
-        .mockResolvedValueOnce({ json: gahuzaPodcastPage, status: 200 });
+      fetchBFFSpy.mockResolvedValueOnce({
+        status: 200,
+        json: gahuzaPodcastPage,
+      });
 
       const { getInitialData, pageType } = getMatchingRoute(pathname);
       const { pageData } = await getInitialData({
@@ -184,7 +190,10 @@ describe('Routes', () => {
           ...homePageJson.data.metadata,
         };
 
-        fetch.mockResponse(JSON.stringify({ ...homePageJson }));
+        fetchBFFSpy.mockResolvedValueOnce({
+          status: 200,
+          json: homePageJson,
+        });
 
         const { getInitialData, pageType } = getMatchingRoute(pathname);
         const { pageData } = await getInitialData({
@@ -210,9 +219,10 @@ describe('Routes', () => {
 
     it('should route to and render the onDemand Radio page', async () => {
       const pathname = '/gahuza/bbc_gahuza_radio/programmes/p02pcb5c';
-      jest
-        .spyOn(fetchDataFromBFF, 'default')
-        .mockResolvedValueOnce({ json: gahuzaOnDemandAudio, status: 200 });
+      fetchBFFSpy.mockResolvedValueOnce({
+        status: 200,
+        json: gahuzaOnDemandAudio,
+      });
 
       const { getInitialData, pageType } = getMatchingRoute(pathname);
       const { pageData } = await getInitialData({
@@ -239,7 +249,10 @@ describe('Routes', () => {
 
     it('should route to and render the onDemand TV Brand page', async () => {
       const pathname = '/indonesia/bbc_indonesian_tv/tv_programmes/w13xttn4';
-      fetch.mockResponseOnce(JSON.stringify(onDemandTvPageJson));
+      fetchBFFSpy.mockResolvedValueOnce({
+        status: 200,
+        json: onDemandTvPageJson,
+      });
 
       const { getInitialData, pageType } = getMatchingRoute(pathname);
       const { pageData } = await getInitialData({
@@ -272,11 +285,10 @@ describe('Routes', () => {
       process.env.SIMORGH_APP_ENV = 'local';
       const pathname = '/yoruba/media-23256797';
 
-      fetch.mockResponse(
-        JSON.stringify({
-          ...mediaAssetPageJson,
-        }),
-      );
+      fetchBFFSpy.mockResolvedValueOnce({
+        status: 200,
+        json: mediaAssetPageJson,
+      });
 
       const { getInitialData, pageType } = getMatchingRoute(pathname);
       const { pageData } = await getInitialData({
@@ -301,12 +313,10 @@ describe('Routes', () => {
     it('should route to and render a legacy media asset page', async () => {
       process.env.SIMORGH_APP_ENV = 'local';
       const pathname = '/azeri/multimedia/2012/09/120919_georgia_prison_video';
-
-      fetch.mockResponse(
-        JSON.stringify({
-          ...legacyMediaAssetPage,
-        }),
-      );
+      fetchBFFSpy.mockResolvedValueOnce({
+        status: 200,
+        json: legacyMediaAssetPage,
+      });
 
       const { getInitialData, pageType } = getMatchingRoute(pathname);
       const { pageData } = await getInitialData({
@@ -354,7 +364,9 @@ describe('Routes', () => {
 
     it('should fallback to and render a 500 error page if there is a problem with page data', async () => {
       const pathname = '/afrique';
-      fetch.mockResponse(JSON.stringify({ status: 500 }));
+      fetchBFFSpy.mockResolvedValueOnce({
+        status: 500,
+      });
 
       const { pageType, getInitialData } = getMatchingRoute(pathname);
       const { status, error } = await getInitialData({
@@ -401,9 +413,7 @@ describe('Routes', () => {
 
     it('should render a 404 error page if a data fetch responds with a 404', async () => {
       const pathname = '/pidgin/articles/cwl08rd38p6o';
-      const bffFetchSpy = jest.spyOn(fetchDataFromBFF, 'default');
-
-      bffFetchSpy.mockRejectedValue({ message: 'Not found', status: 404 });
+      fetchBFFSpy.mockRejectedValue({ message: 'Not found', status: 404 });
 
       const { pageType, getInitialData } = getMatchingRoute(pathname);
       const { status, error } = await getInitialData({
@@ -464,11 +474,10 @@ describe('Routes', () => {
 
       const pathname = '/persian/articles/c4vlle3q337o';
 
-      fetch.mockResponse(
-        JSON.stringify({
-          ...articlePageJson,
-        }),
-      );
+      fetchBFFSpy.mockResolvedValueOnce({
+        status: 200,
+        json: articlePageJson,
+      });
 
       process.env.SIMORGH_APP_ENV = 'local';
       const { getInitialData, pageType } = getMatchingRoute(pathname);
@@ -497,11 +506,10 @@ describe('Routes', () => {
     it.skip('should route to and render a Sport Discipline article page', async () => {
       const pathname = '/sport/judo/articles/cj80n66ddnko';
 
-      fetch.mockResponse(
-        JSON.stringify({
-          ...sportArticlePageJson,
-        }),
-      );
+      fetchBFFSpy.mockResolvedValueOnce({
+        status: 200,
+        json: sportArticlePageJson,
+      });
 
       const { getInitialData, pageType } = getMatchingRoute(pathname);
       process.env.SIMORGH_APP_ENV = 'local';
