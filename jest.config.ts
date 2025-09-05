@@ -15,6 +15,7 @@ const unitTests = {
       disableJavaScriptFileLoading: true,
       handleDisabledFileLoadingAsSuccess: true,
       disableComputedStyleRendering: true,
+      disableCSSFileLoading: true,
       navigation: {
         disableChildFrameNavigation: true,
       },
