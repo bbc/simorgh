@@ -30,8 +30,8 @@ module.exports = {
   async rewrites() {
     return [
       {
-        source: '/ws/og',
-        destination: '/api/og',
+        source: '/:service/og/:id',
+        destination: '/api/:service/og/:id',
       },
     ];
   },
