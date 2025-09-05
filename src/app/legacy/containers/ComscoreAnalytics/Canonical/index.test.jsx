@@ -21,7 +21,7 @@ describe('Canonical Comscore Analytics ', () => {
     });
 
     it('should render canonical comscore with noscript and script element', async () => {
-      const noScriptContent = `<img src="https://sb.scorecardresearch.com/p?c1=2&c2=17986528&cv=2.0&cj=1" />`;
+      const noScriptContent = `<img src="https://sb.scorecardresearch.com/p?c1=2&amp;c2=17986528&amp;cv=2.0&amp;cj=1">`;
 
       render(
         <UserContext.Provider value={{ personalisationEnabled: false }}>
@@ -31,7 +31,7 @@ describe('Canonical Comscore Analytics ', () => {
       await waitFor(() => {
         const noScriptEl = document.querySelector('noscript');
         expect(noScriptEl).toBeInTheDocument();
-        expect(noScriptEl.textContent).toEqual(noScriptContent);
+        expect(noScriptEl.innerHTML).toEqual(noScriptContent);
 
         const scriptEl = document.querySelector('script');
         expect(scriptEl).toBeInTheDocument();
