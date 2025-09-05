@@ -6,6 +6,7 @@ import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
 import { data as afriqueHomePageDataFixture } from '#data/afrique/homePage/index.json';
 import { data as pidginHomePageDataFixture } from '#data/pidgin/homePage/index.json';
 import { data as portugueseHomePageDataFixture } from '#data/portuguese/homePage/index.json';
+import { data as wsHomePageData } from '#data/ws/homePage/index.json';
 import { service as pidginServiceConfig } from '#app/lib/config/services/pidgin';
 import useViewTracker from '../../hooks/useViewTracker';
 import useClickTrackerHandler from '../../hooks/useClickTrackerHandler';
@@ -105,6 +106,7 @@ describe('Home Page', () => {
     const { getByRole } = render(<HomePage pageData={homePageData} />, {
       service: 'kyrgyz',
     });
+
     expect(getByRole('main')).toHaveStyle({
       margin: '0px 0.5rem',
     });
@@ -629,6 +631,46 @@ describe('Home Page', () => {
         );
         expect(matchingCall).toBeTruthy();
       });
+    });
+
+    it('Social Links - calls useViewTracker with correct viewability event tracking data for Social Links', () => {
+      const socialLinks = wsHomePageData.curations.find(
+        curation =>
+          curation.visualProminence === 'NORMAL' &&
+          curation.visualStyle === 'LINKS',
+      );
+      const pidginHomePageDataWithSocialLinks = {
+        ...pidginHomePageDataFixture,
+        curations: [
+          ...pidginHomePageDataFixture.curations,
+          socialLinks,
+        ],
+      };
+      // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
+      render(<HomePage pageData={pidginHomePageDataWithSocialLinks} />, {
+        service: 'pidgin',
+      });
+
+      const expectedTrackingData = {
+        groupTracker: {
+          name: socialLinks?.title,
+          type: 'social-links',
+          position: socialLinks?.position ? socialLinks.position + 1 : undefined,
+          resourceId: socialLinks?.curationId,
+          itemCount: socialLinks?.summaries?.length,
+        },
+        componentName: 'social-links',
+        viewThreshold: 0.2,
+      };
+
+      const { calls } = (useViewTracker as jest.Mock).mock;
+      const matchingCalls = calls.filter(
+        ([arg]) =>
+          arg.componentName === expectedTrackingData.componentName &&
+          JSON.stringify(arg.groupTracker) ===
+            JSON.stringify(expectedTrackingData.groupTracker),
+      );
+      expect(matchingCalls).toHaveLength(1);
     });
 
     describe('Hierarchical curation - click tracking', () => {
