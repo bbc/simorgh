@@ -1022,5 +1022,70 @@ describe('Home Page', () => {
         expectedTrackingData,
       );
     });
+
+
+
+    describe('Social Links - click tracking', () => {
+            beforeEach(() => {
+        (useViewTracker as jest.Mock).mockClear();
+        (useClickTrackerHandler as jest.Mock).mockClear?.();
+      });
+      it('calls click tracking handler with correct data for Social Links promo link', () => {
+    const socialLinks = wsHomePageData.curations.find(
+      curation =>
+        curation.visualProminence === 'NORMAL' &&
+        curation.visualStyle === 'LINKS',
+    );
+
+    const pidginHomePageDataWithSocialLinks = {
+      ...pidginHomePageDataFixture,
+      curations: [
+        ...pidginHomePageDataFixture.curations,
+        socialLinks,
+      ],
+    };
+
+    // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
+    render(<HomePage pageData={pidginHomePageDataWithSocialLinks} />, {
+      service: 'pidgin',
+    });
+
+    const socialLinksSection = screen.getByTestId('social-links-1');
+    const firstSocialLink = socialLinksSection?.querySelector(
+      'ul[role="list"] a',
+    ) as HTMLAnchorElement;
+
+    expect(firstSocialLink).toBeInTheDocument();
+
+    fireEvent.click(firstSocialLink);
+
+    const promo = socialLinks?.summaries?.[0];
+
+  const expectedTrackingData = expect.objectContaining({
+    componentName: 'social-links',
+    groupTracker: expect.objectContaining({
+      name: socialLinks?.title,
+      type: 'social-links',
+      position: socialLinks?.position ? socialLinks.position + 1 : undefined,
+      resourceId: socialLinks?.curationId,
+      itemCount: socialLinks?.summaries?.length,
+    }),
+    itemTracker: expect.objectContaining({
+      type: 'social-link-promo',
+      text: promo?.title,
+      position: 1,
+      resourceId: promo?.id,
+    }),
   });
+
+  const socialLinksCalls = (
+    useClickTrackerHandler as jest.Mock
+  ).mock.calls
+    .map(([arg]) => arg)
+    .filter(call => call?.componentName === 'social-links');
+
+  expect(socialLinksCalls).toContainEqual(expectedTrackingData);
 });
+    });
+  })
+})
