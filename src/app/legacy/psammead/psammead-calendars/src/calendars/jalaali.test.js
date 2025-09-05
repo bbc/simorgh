@@ -2,7 +2,7 @@ import moment from 'moment';
 import jalaali from './jalaali';
 
 describe('Jalaali Conversion Tests', () => {
-  moment.defineLocale('ps', {});
+  moment.updateLocale('ps', {});
   const testScenarios = [
     {
       testMoment: moment('2019-01-01').locale('fa'),
