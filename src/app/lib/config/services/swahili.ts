@@ -329,7 +329,7 @@ export const service: DefaultServiceConfig = {
         text: 'Kwanini unaweza kuiamini BBC News',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Soma kuhusu mtazamo wetu wa viambatanishi vya nje.',
       },
       links: [

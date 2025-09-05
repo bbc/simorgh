@@ -300,7 +300,7 @@ export const service: DefaultServiceConfig = {
         text: 'Sababta aad ku aamini kartid BBC News',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda.',
       },
       links: [
