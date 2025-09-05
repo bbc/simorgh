@@ -60,7 +60,12 @@ const unitTests = {
   },
   setupFilesAfterEnv: ['./setupTests.ts', 'jest-expect-message'],
   snapshotSerializers: ['@emotion/jest/serializer'],
-  testEnvironment: 'jest-environment-jsdom',
+  testEnvironment: '@happy-dom/jest-environment',
+  testEnvironmentOptions: {
+    url: 'http://localhost:7080',
+    width: 1024,
+    height: 768,
+  },
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': [
       'babel-jest',

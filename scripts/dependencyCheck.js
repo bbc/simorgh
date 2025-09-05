@@ -8,7 +8,6 @@ const options = {
   ignoreMatches: [
     'puppeteer',
     'isarray',
-    'jest-environment-jsdom',
     '@testing-library/dom',
     '@storybook/addon-knobs',
   ],

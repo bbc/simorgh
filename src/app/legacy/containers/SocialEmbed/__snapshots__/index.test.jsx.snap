@@ -737,7 +737,9 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Post block and 
             defer="1"
             nonce="fPyyhrbz"
             src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v13.0"
-          />
+          >
+            
+          </script>
           <div
             class="fb-post"
             data-href="https://www.facebook.com/RickAstley/posts/545713756920775"
@@ -1072,7 +1074,9 @@ min-height:55.5rem .no-js .emotion-2 {
             defer="1"
             nonce="8pqnGEmE"
             src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v13.0"
-          />
+          >
+            
+          </script>
           <div
             class="fb-video"
             data-href="https://www.facebook.com/RickAstley/videos/1378590239249667/"
@@ -1847,7 +1851,7 @@ exports[`SocialEmbedContainer Canonical should render a Twitter block and unmoun
                 https://t.co/xz93WmAdfR
               </a>
             </p>
-            — BBC News (UK) (@BBCNews) 
+            &mdash; BBC News (UK) (@BBCNews) 
             <a
               href="https://twitter.com/BBCNews/status/1384138850478346243?ref_src=twsrc%5Etfw"
             >
@@ -2607,7 +2611,9 @@ exports[`SocialEmbedContainer Canonical should render an Instagram block and unm
           <script
             async=""
             src="https://www.instagram.com/embed.js"
-          />
+          >
+            
+          </script>
         </div>
         <small
           class="emotion-12 emotion-13"

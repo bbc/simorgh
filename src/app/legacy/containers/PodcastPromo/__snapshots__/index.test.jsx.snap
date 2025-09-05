@@ -185,7 +185,13 @@ exports[`Inline Should render correctly 1`] = `
   }
 }
 
-.emotion-15 {
+.emotion-16 {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.emotion-18 {
   position: absolute;
   float: bottom;
   -webkit-transform: translateY(-100%);
@@ -205,7 +211,7 @@ exports[`Inline Should render correctly 1`] = `
 }
 
 @media (max-width: 15rem) {
-  .emotion-15 {
+  .emotion-18 {
     position: relative;
     -webkit-transform: translateY(0.75rem);
     -moz-transform: translateY(0.75rem);
@@ -216,7 +222,7 @@ exports[`Inline Should render correctly 1`] = `
   }
 }
 
-.emotion-17 {
+.emotion-20 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -225,20 +231,20 @@ exports[`Inline Should render correctly 1`] = `
   height: 1rem;
 }
 
-.podcastIconWrapper .emotion-17 {
+.podcastIconWrapper .emotion-20 {
   width: 2rem;
   height: 2rem;
   margin: auto;
 }
 
 @media (max-width: 16.25rem) {
-  .podcastIconWrapper .emotion-17 {
+  .podcastIconWrapper .emotion-20 {
     width: 1.5rem;
     height: 1.5rem;
   }
 }
 
-.emotion-19 {
+.emotion-22 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -246,36 +252,36 @@ exports[`Inline Should render correctly 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-19 {
+  .emotion-22 {
     padding: 0.5rem 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-19 {
+  .emotion-22 {
     padding: 1rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-19 {
+  .emotion-22 {
     padding: 0.5rem;
   }
 }
 
 @media (min-width: 15rem) {
-  .emotion-19 {
+  .emotion-22 {
     padding: 0 0.75rem 0.75rem;
   }
 }
 
 @media (min-width: 16.25rem) {
-  .emotion-19 {
+  .emotion-22 {
     padding: 0 1rem 1rem;
   }
 }
 
-.emotion-21 {
+.emotion-24 {
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -289,7 +295,7 @@ exports[`Inline Should render correctly 1`] = `
   color: #141414;
 }
 
-.emotion-21:before {
+.emotion-24:before {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -300,67 +306,67 @@ exports[`Inline Should render correctly 1`] = `
   z-index: 1;
 }
 
-.emotion-21:visited .podcast-promo--visited {
+.emotion-24:visited .podcast-promo--visited {
   color: #6E6E73;
 }
 
-.emotion-21:focus .podcast-promo--focus {
+.emotion-24:focus .podcast-promo--focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-21 {
+  .emotion-24 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-21 {
+  .emotion-24 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-21:visited {
+.emotion-24:visited {
   color: #545658;
 }
 
 @media (max-width: 15rem) {
-  .emotion-21 {
+  .emotion-24 {
     margin-top: 0;
   }
 }
 
 @media (min-width: 16.25rem) {
-  .emotion-21 {
+  .emotion-24 {
     margin-top: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-21 {
+  .emotion-24 {
     font-size: 0.9375rem;
     line-height: 1.25rem;
   }
 
   @media (min-width: 20rem) and (max-width: 37.4375rem) {
-    .emotion-21 {
+    .emotion-24 {
       font-size: 1rem;
       line-height: 1.25rem;
     }
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-21 {
+    .emotion-24 {
       font-size: 1rem;
       line-height: 1.25rem;
     }
   }
 }
 
-.emotion-24 {
+.emotion-27 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -377,40 +383,40 @@ exports[`Inline Should render correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-24 {
+  .emotion-27 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-24 {
+  .emotion-27 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-24 {
+  .emotion-27 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-24 {
+  .emotion-27 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 16.25rem) {
-  .emotion-24 {
+  .emotion-27 {
     margin: 1rem 0;
   }
 }
 
-.emotion-27 {
+.emotion-30 {
   display: inline;
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -424,20 +430,20 @@ exports[`Inline Should render correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-27 {
+  .emotion-30 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-27 {
+  .emotion-30 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-27>svg {
+.emotion-30>svg {
   fill: currentColor;
   color: unset;
   width: 1rem;
@@ -448,78 +454,78 @@ exports[`Inline Should render correctly 1`] = `
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-27>svg {
+  .emotion-30>svg {
     fill: canvasText;
   }
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-27 {
+  .emotion-30 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-27 {
+  .emotion-30 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-27 {
+  .emotion-30 {
     margin: 0 0.25rem;
   }
 }
 
 @media (min-width: 15rem) {
-  .emotion-27 {
+  .emotion-30 {
     margin: 0;
   }
 }
 
 @media (min-width: 16.25rem) {
-  .emotion-27 {
+  .emotion-30 {
     margin: 0;
   }
 }
 
 @media (min-width: 20rem) {
-  .emotion-27 {
+  .emotion-30 {
     margin: 0 0.25rem;
   }
 }
 
 @media (min-width: 22.5rem) {
-  .emotion-27 {
+  .emotion-30 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-27 {
+  .emotion-30 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
     margin: 0 0.25rem;
   }
 
   @media (min-width: 20rem) and (max-width: 37.4375rem) {
-    .emotion-27 {
+    .emotion-30 {
       font-size: 0.9375rem;
       line-height: 1.125rem;
     }
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-27 {
+    .emotion-30 {
       font-size: 0.875rem;
       line-height: 1.125rem;
     }
   }
 }
 
-.emotion-29 {
+.emotion-32 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -528,7 +534,7 @@ exports[`Inline Should render correctly 1`] = `
   height: 1rem;
 }
 
-.emotion-31 {
+.emotion-34 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -573,19 +579,24 @@ exports[`Inline Should render correctly 1`] = `
               <div
                 class="lazyload-wrapper "
               >
-                <div
-                  class="lazyload-placeholder"
+                <img
+                  alt="WhatsApp"
+                  class="emotion-15 emotion-16 emotion-17"
+                  height="100"
+                  sizes="(min-width: 1008px) 228px, 30vw"
+                  src="https://ichef.bbci.co.uk/images/ic/512x512/p0jq48n8.png.webp"
+                  width="100"
                 />
               </div>
               <noscript />
             </div>
           </div>
           <div
-            class="podcastIconWrapper emotion-15 emotion-16"
+            class="podcastIconWrapper emotion-18 emotion-19"
           >
             <svg
               aria-hidden="true"
-              class="emotion-17 emotion-18"
+              class="emotion-20 emotion-21"
               focusable="false"
               height="32"
               viewBox="0 0 32 32"
@@ -597,11 +608,11 @@ exports[`Inline Should render correctly 1`] = `
             </svg>
           </div>
           <div
-            class="emotion-19 emotion-20"
+            class="emotion-22 emotion-23"
           >
             <strong>
               <a
-                class="emotion-21 emotion-22"
+                class="emotion-24 emotion-25"
                 href="https://whatsapp.com/channel/0029VaZ437k4Y9li4jkzIU0G"
               >
                 <span
@@ -613,17 +624,17 @@ exports[`Inline Should render correctly 1`] = `
               </a>
             </strong>
             <p
-              class="emotion-23 emotion-24 emotion-25"
+              class="emotion-26 emotion-27 emotion-28"
             >
               Тут мы публикуем только главные новости и самые интересные тексты. Канал доступен для нероссийских номеров.
             </p>
             <p
-              class="emotion-26 emotion-27 emotion-28"
+              class="emotion-29 emotion-30 emotion-31"
               dir="ltr"
             >
               <svg
                 aria-hidden="true"
-                class="emotion-29 emotion-30"
+                class="emotion-32 emotion-33"
                 focusable="false"
                 height="32"
                 viewBox="0 0 32 32"
@@ -644,7 +655,7 @@ exports[`Inline Should render correctly 1`] = `
           </div>
         </div>
         <p
-          class="emotion-31 emotion-32"
+          class="emotion-34 emotion-35"
           id="end-of-podcasts"
           tabindex="-1"
         >
@@ -834,7 +845,13 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   }
 }
 
-.emotion-16 {
+.emotion-17 {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.emotion-19 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -842,18 +859,18 @@ exports[`SecondaryColumn Should render correctly 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-16 {
+  .emotion-19 {
     padding: 0.5rem 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-16 {
+  .emotion-19 {
     padding: 1rem;
   }
 }
 
-.emotion-18 {
+.emotion-21 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -865,26 +882,26 @@ exports[`SecondaryColumn Should render correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-21 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-21 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-20 {
+.emotion-23 {
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-20:before {
+.emotion-23:before {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -895,16 +912,16 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   z-index: 1;
 }
 
-.emotion-20:visited .podcast-promo--visited {
+.emotion-23:visited .podcast-promo--visited {
   color: #6E6E73;
 }
 
-.emotion-20:focus .podcast-promo--focus {
+.emotion-23:focus .podcast-promo--focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-22 {
+.emotion-25 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -916,20 +933,20 @@ exports[`SecondaryColumn Should render correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-22 {
+  .emotion-25 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-22 {
+  .emotion-25 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
-.emotion-24 {
+.emotion-27 {
   display: inline;
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -940,20 +957,20 @@ exports[`SecondaryColumn Should render correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-24 {
+  .emotion-27 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-24 {
+  .emotion-27 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-24>svg {
+.emotion-27>svg {
   fill: currentColor;
   color: unset;
   width: 1rem;
@@ -964,12 +981,12 @@ exports[`SecondaryColumn Should render correctly 1`] = `
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-24>svg {
+  .emotion-27>svg {
     fill: canvasText;
   }
 }
 
-.emotion-26 {
+.emotion-29 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -1025,21 +1042,26 @@ exports[`SecondaryColumn Should render correctly 1`] = `
             <div
               class="lazyload-wrapper "
             >
-              <div
-                class="lazyload-placeholder"
+              <img
+                alt="WhatsApp"
+                class="emotion-16 emotion-17 emotion-18"
+                height="1"
+                sizes="(min-width: 1008px) 228px, 30vw"
+                src="https://ichef.bbci.co.uk/images/ic/512x512/p0jq48n8.png.webp"
+                width="1"
               />
             </div>
             <noscript />
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17"
+          class="emotion-19 emotion-20"
         >
           <h3
-            class="emotion-18 emotion-19"
+            class="emotion-21 emotion-22"
           >
             <a
-              class="emotion-20 emotion-21"
+              class="emotion-23 emotion-24"
               href="https://whatsapp.com/channel/0029VaZ437k4Y9li4jkzIU0G"
             >
               <span
@@ -1050,17 +1072,17 @@ exports[`SecondaryColumn Should render correctly 1`] = `
             </a>
           </h3>
           <p
-            class="emotion-22 emotion-23"
+            class="emotion-25 emotion-26"
           >
             Тут мы публикуем только главные новости и самые интересные тексты. Канал доступен для нероссийских номеров.
           </p>
           <p
-            class="emotion-24 emotion-25"
+            class="emotion-27 emotion-28"
             dir="ltr"
           >
             <svg
               aria-hidden="true"
-              class="emotion-26 emotion-27"
+              class="emotion-29 emotion-30"
               focusable="false"
               height="32"
               viewBox="0 0 32 32"
