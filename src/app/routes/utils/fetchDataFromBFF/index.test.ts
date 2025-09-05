@@ -43,7 +43,7 @@ describe('Fetch Data from BFF', () => {
 
     it.each`
       environment | pathname                      | path                                                                                        | agent        | optHeaders
-      ${'local'}  | ${url}                        | ${'http://localhost/pidgin/articles/cwl08rd38p6o'}                                          | ${undefined} | ${undefined}
+      ${'local'}  | ${url}                        | ${'/pidgin/articles/cwl08rd38p6o'}                                                          | ${undefined} | ${undefined}
       ${'local'}  | ${`${url}?renderer_env=test`} | ${'https://mock-bff-path/?id=cwl08rd38p6o&service=pidgin&pageType=article&serviceEnv=test'} | ${mockAgent} | ${{ 'ctx-service-env': 'test' }}
       ${'local'}  | ${`${url}?renderer_env=live`} | ${'https://mock-bff-path/?id=cwl08rd38p6o&service=pidgin&pageType=article&serviceEnv=live'} | ${mockAgent} | ${{ 'ctx-service-env': 'live' }}
       ${'test'}   | ${url}                        | ${'https://mock-bff-path/?id=cwl08rd38p6o&service=pidgin&pageType=article&serviceEnv=test'} | ${mockAgent} | ${{ 'ctx-service-env': 'test' }}
@@ -81,7 +81,7 @@ describe('Fetch Data from BFF', () => {
 
     it.each`
       environment | pathname                      | path                                                                                              | agent        | optHeaders
-      ${'local'}  | ${url}                        | ${'http://localhost/pidgin/12345678'}                                                             | ${undefined} | ${undefined}
+      ${'local'}  | ${url}                        | ${'/pidgin/12345678'}                                                                             | ${undefined} | ${undefined}
       ${'local'}  | ${`${url}?renderer_env=test`} | ${'https://mock-bff-path/?id=pidgin%2F12345678&service=pidgin&pageType=cpsAsset&serviceEnv=test'} | ${mockAgent} | ${{ 'ctx-service-env': 'test' }}
       ${'local'}  | ${`${url}?renderer_env=live`} | ${'https://mock-bff-path/?id=pidgin%2F12345678&service=pidgin&pageType=cpsAsset&serviceEnv=live'} | ${mockAgent} | ${{ 'ctx-service-env': 'live' }}
       ${'test'}   | ${url}                        | ${'https://mock-bff-path/?id=pidgin%2F12345678&service=pidgin&pageType=cpsAsset&serviceEnv=test'} | ${mockAgent} | ${{ 'ctx-service-env': 'test' }}
@@ -119,7 +119,7 @@ describe('Fetch Data from BFF', () => {
 
     it.each`
       environment | pathname                      | path                                                                                      | agent        | optHeaders
-      ${'local'}  | ${url}                        | ${'http://localhost/pidgin/topics/c0000000000t'}                                          | ${undefined} | ${undefined}
+      ${'local'}  | ${url}                        | ${'/pidgin/topics/c0000000000t'}                                                          | ${undefined} | ${undefined}
       ${'local'}  | ${`${url}?renderer_env=test`} | ${'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic&serviceEnv=test'} | ${mockAgent} | ${{ 'ctx-service-env': 'test' }}
       ${'local'}  | ${`${url}?renderer_env=live`} | ${'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic&serviceEnv=live'} | ${mockAgent} | ${{ 'ctx-service-env': 'live' }}
       ${'test'}   | ${url}                        | ${'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic&serviceEnv=test'} | ${mockAgent} | ${{ 'ctx-service-env': 'test' }}
@@ -158,7 +158,7 @@ describe('Fetch Data from BFF', () => {
 
     it.each`
       environment | pathname                      | path                                                                                   | agent        | optHeaders
-      ${'local'}  | ${url}                        | ${'http://localhost/pidgin/mostread'}                                                  | ${undefined} | ${undefined}
+      ${'local'}  | ${url}                        | ${'/pidgin/mostread'}                                                                  | ${undefined} | ${undefined}
       ${'local'}  | ${`${url}?renderer_env=test`} | ${'https://mock-bff-path/?id=pidgin&service=pidgin&pageType=mostRead&serviceEnv=test'} | ${mockAgent} | ${{ 'ctx-service-env': 'test' }}
       ${'local'}  | ${`${url}?renderer_env=live`} | ${'https://mock-bff-path/?id=pidgin&service=pidgin&pageType=mostRead&serviceEnv=live'} | ${mockAgent} | ${{ 'ctx-service-env': 'live' }}
       ${'test'}   | ${url}                        | ${'https://mock-bff-path/?id=pidgin&service=pidgin&pageType=mostRead&serviceEnv=test'} | ${mockAgent} | ${{ 'ctx-service-env': 'test' }}
