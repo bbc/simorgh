@@ -43,10 +43,14 @@ export default ({ service, pageType, path, variant = 'default' }) => {
             );
             // There cannot be more episodes shown than the max allowed
             if (recentEpisodesEnabled) {
-              const recentEpisodesMaxNumber = toggles?.[toggleName]?.value;
-
+              const recentEpisodesMaxNumber = parseInt(
+                toggles?.[toggleName]?.value,
+                10,
+              );
               cy.getPageDataFromWindow().then(data => {
-                const { recentEpisodes } = data;
+                const {
+                  pageData: { recentEpisodes },
+                } = data;
 
                 if (recentEpisodes?.length > 0 && recentEpisodesMaxNumber > 1) {
                   cy.get('[data-e2e=recent-episodes-list]').should('exist');
