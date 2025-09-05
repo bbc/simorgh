@@ -88,8 +88,6 @@ describe('Get initial data for on demand tv', () => {
       },
     });
 
-    console.log({ pageData });
-
     expect(pageData.recentEpisodes).toHaveLength(3);
     expect(pageData.recentEpisodes[0].id).toEqual('w172zmspxm02pfr');
   });
