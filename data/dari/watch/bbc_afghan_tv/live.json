@@ -4,7 +4,7 @@
     "description": "Test for live tv page with multiple media collections & radio schedule",
     "curations": [
       {
-        "mediaCollections": [
+        "mediaCollection": [
           {
             "type": "liveMedia",
             "model": {
