@@ -69,7 +69,6 @@ const SocialLinkImage = ({ imageUrl }: { imageUrl: string }) => {
 
 const SocialLink = ({
   summary,
-  clickTrackerHandler,
 }: {
   summary: Summary;
   eventTrackingData?: EventTrackingData;
