@@ -84,7 +84,11 @@ const extractLiveData = ({
 }): ExtractReturnProps => {
   const defaultImage = getDefaultImage(service);
 
-  const imageLocator = pageData?.promoImage?.url.split('/').slice(-3).join('/'); // Seems brittle but Live promo images aren't broken down by 'locator'
+  // Seems brittle but Live promo images aren't broken down by 'locator'
+  const imageLocator = pageData?.promoImage?.url
+    ?.split('/')
+    ?.slice(-3)
+    ?.join('/');
 
   const brandedImage = imageLocator
     ? getBrandedImage(imageLocator, service)
