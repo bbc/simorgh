@@ -19,6 +19,7 @@ interface FetchDataFromBffParams {
   disableRadioSchedule?: boolean;
   page?: string;
   getAgent?: GetAgent;
+  isNextJs?: boolean;
 }
 
 export default async ({
@@ -30,11 +31,14 @@ export default async ({
   disableRadioSchedule,
   page,
   getAgent,
+  isNextJs,
 }: FetchDataFromBffParams) => {
   const environment = getEnvironment(pathname);
 
   const isLocal = !environment || environment === 'local';
   const optHeaders = isLocal ? undefined : { 'ctx-service-env': environment };
+
+  const isTestNextjs = environment === 'test' && isNextJs;
 
   const fetchUrl = constructPageFetchUrl({
     pathname,
@@ -49,7 +53,7 @@ export default async ({
   const useCerts = certsRequired(pathname);
 
   const agent = useCerts && getAgent ? await getAgent() : undefined;
-  const timeout = useCerts ? undefined : 60000;
+  const timeout = useCerts && !isTestNextjs ? undefined : 60000;
 
   try {
     const fetchPageDataArgs = {

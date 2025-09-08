@@ -46,6 +46,7 @@ const getPageData = async ({
       variant,
       page,
       getAgent,
+      isNextJs: true,
     }));
   } catch (error: unknown) {
     ({ message, status } = error as FetchError);
