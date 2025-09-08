@@ -23,7 +23,13 @@ const DEFAULT_TRANSLATIONS = {
   minutes: 'minutes',
 };
 
-const ProcessReadTime = (readTimeValue: number) => {
+const ProcessReadTime = ({
+  readTimeValue,
+  readTimeVariant,
+}: {
+  readTimeValue: number;
+  readTimeVariant: string;
+}) => {
   const { translations } = use(ServiceContext);
   const readTimePrefix =
     translations.readTime?.readTimePrefix ??
@@ -40,11 +46,16 @@ const ProcessReadTime = (readTimeValue: number) => {
   const quickLongCopy = readTimeValue < 5 ? quickCopy : longCopy;
   const minutesCopy = `${readTimePrefix}: ${readTimeValue} ${minutesLabel}`;
 
+  const readTimeCopyType = readTimeVariant.includes('minutes')
+    ? 'minutes'
+    : 'quickLong';
+
+  const copy = readTimeCopyType === 'minutes' ? minutesCopy : quickLongCopy;
+
   return {
     readTimeInMilliseconds,
     minutesLabel,
-    quickLongCopy,
-    minutesCopy,
+    copy,
   };
 };
 
@@ -57,17 +68,16 @@ export const ReadTimeArticleExperiment = ({
   const showReadTime = readTimeVariant && readTimeVariant !== 'off';
   if (!showReadTime) return null;
 
-  const { readTimeInMilliseconds, minutesLabel, quickLongCopy, minutesCopy } =
-    ProcessReadTime(readTimeValue);
+  const { readTimeInMilliseconds, minutesLabel, copy } = ProcessReadTime({
+    readTimeValue,
+    readTimeVariant,
+  });
 
   // EXPERIMENT: Read Time
   const fontSize = readTimeVariant.includes('bold') ? 'pica' : 'brevier';
   const fontVariant = readTimeVariant.includes('bold')
     ? 'sansBold'
     : 'sansRegular';
-  const readTimeCopyType = readTimeVariant.includes('minutes')
-    ? 'minutes'
-    : 'quickLong';
 
   const eventTrackingData: EventTrackingData = {
     componentName: 'read-time-on-article',
@@ -97,7 +107,7 @@ export const ReadTimeArticleExperiment = ({
       data-testid="read-time"
     >
       <Text size={fontSize} fontVariant={fontVariant} css={styles.readTimeText}>
-        {readTimeCopyType === 'minutes' ? minutesCopy : quickLongCopy}
+        {copy}
       </Text>
     </div>
   );
@@ -105,13 +115,25 @@ export const ReadTimeArticleExperiment = ({
 
 export const ReadTime = ({
   readTimeValue,
+  readTimeVariant,
   promoId,
   className,
 }: ReadTimeProps) => {
-  if (isLive() || !readTimeValue) return null;
+  const renderConditions = [
+    !isLive(),
+    readTimeValue,
+    readTimeVariant,
+    readTimeVariant !== 'off',
+  ];
 
-  const { readTimeInMilliseconds, minutesLabel, minutesCopy } =
-    ProcessReadTime(readTimeValue);
+  const validRender = renderConditions.every(condition => condition);
+
+  if (!validRender) return null;
+
+  const { readTimeInMilliseconds, minutesLabel, copy } = ProcessReadTime({
+    readTimeValue: readTimeValue as number,
+    readTimeVariant: readTimeVariant as string,
+  });
 
   const eventTrackingData: EventTrackingData = {
     componentName: 'read-time',
@@ -128,7 +150,7 @@ export const ReadTime = ({
   return (
     <span className={className} data-testid="read-time" {...viewRef}>
       <Text css={styles.readTimeText} size="brevier">
-        {minutesCopy}
+        {copy}
       </Text>
     </span>
   );

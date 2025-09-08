@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReadTimeArticleExperiment as ReadTime } from '.';
+import { ReadTimeExperiment as ReadTime } from '.';
 import readme from './README.md';
 import metadata from './metadata.json';
 
