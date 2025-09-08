@@ -5,6 +5,7 @@ import {
   HOME_PAGE,
   LIVE_PAGE,
   LIVE_RADIO_PAGE,
+  LIVE_TV_PAGE,
   TOPIC_PAGE,
   TV_PAGE,
   UGC_PAGE,
@@ -137,6 +138,9 @@ describe('constructPageFetchUrl', () => {
     ${LIVE_RADIO_PAGE} | ${'afrique'}    | ${null}    | ${'local'}  | ${'/afrique/bbc_afrique_radio/liveradio'}             | ${'http://localhost/afrique/bbc_afrique_radio/liveradio'}
     ${LIVE_RADIO_PAGE} | ${'afrique'}    | ${null}    | ${'test'}   | ${'/afrique/bbc_afrique_radio/liveradio'}             | ${'https://mock-bff-path/?id=bbc_afrique_radio&service=afrique&pageType=liveRadio&serviceEnv=test'}
     ${LIVE_RADIO_PAGE} | ${'afrique'}    | ${null}    | ${'live'}   | ${'/afrique/bbc_afrique_radio/liveradio'}             | ${'https://mock-bff-path/?id=bbc_afrique_radio&service=afrique&pageType=liveRadio&serviceEnv=live'}
+    ${LIVE_TV_PAGE}    | ${'dari'}       | ${null}    | ${'local'}  | ${'/dari/watch/bbc_afghan_tv/live'}                   | ${'http://localhost/api/local/dari/watch/bbc_afghan_tv/live'}
+    ${LIVE_TV_PAGE}    | ${'dari'}       | ${null}    | ${'test'}   | ${'/dari/watch/bbc_afghan_tv/live'}                   | ${'https://mock-bff-path/?id=bbc_afghan_tv&service=dari&pageType=liveTV&serviceEnv=test'}
+    ${LIVE_TV_PAGE}    | ${'dari'}       | ${null}    | ${'live'}   | ${'/dari/watch/bbc_afghan_tv/live'}                   | ${'https://mock-bff-path/?id=bbc_afghan_tv&service=dari&pageType=liveTV&serviceEnv=live'}
   `(
     `on $environment environment, should return $expected when path is $pathname, pageType is $pageType, service is $serviceOverride and variant is $variant`,
     ({
@@ -167,6 +171,7 @@ describe('constructPageFetchUrl', () => {
     ${TOPIC_PAGE}      | ${'ukrainian'} | ${'/ukrainian/topics/foo'}          | ${'Topic ID is invalid'}
     ${TOPIC_PAGE}      | ${'ukrainian'} | ${'/ukrainian/topics/c000000000t'}  | ${'Topic ID is invalid'}
     ${LIVE_RADIO_PAGE} | ${'afrique'}   | ${'/foo'}                           | ${'LiveRadio ID is invalid'}
+    ${LIVE_TV_PAGE}    | ${'afrique'}   | ${'/afrique'}                       | ${'LiveTV ID is invalid'}
     ${'foo'}           | ${'ukrainian'} | ${'/ukrainian/topics/c0000000000t'} | ${'Foo ID is invalid'}
   `(
     `should throw a 500 with message $expected, when pageType $pageType asset ID is incorrect with service of $service`,
