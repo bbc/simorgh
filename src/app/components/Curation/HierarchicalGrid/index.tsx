@@ -41,7 +41,7 @@ const HiearchicalGrid = ({
   headingLevel,
   isFirstCuration,
   eventTrackingData,
-  readTimeExperimentVariant,
+  readTimeVariant,
 }: CurationGridProps) => {
   const { isAmp } = use(RequestContext);
   const { translations } = use(ServiceContext);
@@ -180,7 +180,7 @@ const HiearchicalGrid = ({
                     <ReadTime
                       readTimeValue={promo.readTime}
                       promoId={promo.id}
-                      readTimeVariant={readTimeExperimentVariant}
+                      readTimeVariant={readTimeVariant}
                     />
                   </>
                 ) : null}

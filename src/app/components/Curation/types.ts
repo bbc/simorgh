@@ -6,5 +6,5 @@ export interface CurationGridProps {
   headingLevel?: number;
   isFirstCuration?: boolean;
   eventTrackingData: EventTrackingData;
-  readTimeExperimentVariant?: string;
+  readTimeVariant?: string;
 }

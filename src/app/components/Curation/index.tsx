@@ -9,9 +9,6 @@ import RadioSchedule from '#app/legacy/containers/RadioSchedule';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
-import useOptimizelyVariation, {
-  ExperimentType,
-} from '#app/hooks/useOptimizelyVariation';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
@@ -70,18 +67,13 @@ export default ({
   portraitVideo,
   renderVisuallyHiddenH2Title = false,
   curationId,
+  readTimeVariant,
 }: Curation) => {
   const componentName = getComponentName({
     visualStyle,
     visualProminence,
     radioSchedule,
     embed,
-  });
-  // EXPERIMENT: Homepage Read Time
-  const readTimeExperimentName = 'newswb_ws_homepage_read_time';
-  const readTimeExperimentVariant = useOptimizelyVariation({
-    experimentName: readTimeExperimentName,
-    experimentType: ExperimentType.CLIENT_SIDE,
   });
 
   const GridComponent = getGridComponent(componentName);
@@ -235,8 +227,8 @@ export default ({
                 headingLevel={3}
                 isFirstCuration={isFirstCuration}
                 eventTrackingData={eventTrackingData}
-                {...(readTimeExperimentVariant && {
-                  readTimeExperimentVariant,
+                {...(readTimeVariant && {
+                  readTimeVariant,
                 })}
               />
             </div>
@@ -248,8 +240,8 @@ export default ({
               headingLevel={2} // if there is only one curation, all promos should be h2, and no subheading
               isFirstCuration={isFirstCuration}
               eventTrackingData={eventTrackingData}
-              {...(readTimeExperimentVariant && {
-                readTimeExperimentVariant,
+              {...(readTimeVariant && {
+                readTimeVariant,
               })}
             />
           </div>
