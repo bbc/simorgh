@@ -8,6 +8,10 @@ import {
 import blocks from './fixture';
 import { Player, SMPEvent } from '../MediaLoader/types';
 
+const eventTrackingData = {
+  componentName: 'portrait-video-modal',
+};
+
 const mockClose = jest.fn();
 
 const mockPlayer = {
@@ -21,7 +25,12 @@ const mockPlayer = {
 describe('PortraitVideoModal', () => {
   it('should render the modal when active', () => {
     render(
-      <Component selectedVideoIndex={0} blocks={blocks} onClose={mockClose} />,
+      <Component
+        selectedVideoIndex={0}
+        blocks={blocks}
+        onClose={mockClose}
+        eventTrackingData={eventTrackingData}
+      />,
     );
 
     const modal = screen.getByRole('dialog');
@@ -32,7 +41,12 @@ describe('PortraitVideoModal', () => {
   it('should set the root React element to "inert" when the modal is open', () => {
     render(
       <div id="root">
-        <Component selectedVideoIndex={0} blocks={blocks} onClose={mockClose} />
+        <Component
+          selectedVideoIndex={0}
+          blocks={blocks}
+          onClose={mockClose}
+          eventTrackingData={eventTrackingData}
+        />
       </div>,
     );
 
@@ -43,7 +57,12 @@ describe('PortraitVideoModal', () => {
 
   it('should close the modal when the close button is clicked', () => {
     render(
-      <Component selectedVideoIndex={0} blocks={blocks} onClose={mockClose} />,
+      <Component
+        selectedVideoIndex={0}
+        blocks={blocks}
+        onClose={mockClose}
+        eventTrackingData={eventTrackingData}
+      />,
     );
 
     const closeButton = screen.getByTestId('close-modal-button');
@@ -55,7 +74,12 @@ describe('PortraitVideoModal', () => {
 
   it('should close the modal when the escape key is pressed', () => {
     render(
-      <Component selectedVideoIndex={0} blocks={blocks} onClose={mockClose} />,
+      <Component
+        selectedVideoIndex={0}
+        blocks={blocks}
+        onClose={mockClose}
+        eventTrackingData={eventTrackingData}
+      />,
     );
 
     const dialog = screen.getByRole('dialog');
@@ -66,7 +90,12 @@ describe('PortraitVideoModal', () => {
 
   it('should not close the modal when clicking outside the modal with a mouse', () => {
     render(
-      <Component selectedVideoIndex={0} blocks={blocks} onClose={mockClose} />,
+      <Component
+        selectedVideoIndex={0}
+        blocks={blocks}
+        onClose={mockClose}
+        eventTrackingData={eventTrackingData}
+      />,
     );
 
     const dialog = screen.getByRole('dialog');
@@ -77,7 +106,12 @@ describe('PortraitVideoModal', () => {
 
   it('should not close the modal when clicking outside the modal with touch', () => {
     render(
-      <Component selectedVideoIndex={0} blocks={blocks} onClose={mockClose} />,
+      <Component
+        selectedVideoIndex={0}
+        blocks={blocks}
+        onClose={mockClose}
+        eventTrackingData={eventTrackingData}
+      />,
     );
 
     const dialog = screen.getByRole('dialog');
@@ -97,7 +131,12 @@ describe('PortraitVideoModal', () => {
     });
 
     const { unmount } = render(
-      <Component selectedVideoIndex={0} blocks={blocks} onClose={mockClose} />,
+      <Component
+        selectedVideoIndex={0}
+        blocks={blocks}
+        onClose={mockClose}
+        eventTrackingData={eventTrackingData}
+      />,
     );
 
     const dialog = screen.getByRole('dialog');
@@ -127,6 +166,7 @@ describe('PortraitVideoModal', () => {
           selectedVideoIndex={0}
           blocks={blocks}
           onClose={mockClose}
+          eventTrackingData={eventTrackingData}
         />,
       );
       const hiddenCloseButton = screen.getByTestId(
@@ -145,6 +185,7 @@ describe('PortraitVideoModal', () => {
           selectedVideoIndex={0}
           blocks={blocks}
           onClose={mockClose}
+          eventTrackingData={eventTrackingData}
         />,
       );
       const hiddenCloseButton = screen.getByTestId(
@@ -159,6 +200,7 @@ describe('PortraitVideoModal', () => {
           selectedVideoIndex={0}
           blocks={blocks}
           onClose={mockClose}
+          eventTrackingData={eventTrackingData}
         />,
       );
       const hiddenCloseButton = screen.getByTestId(
@@ -178,6 +220,7 @@ describe('PortraitVideoModal', () => {
           selectedVideoIndex={0}
           blocks={blocks}
           onClose={mockClose}
+          eventTrackingData={eventTrackingData}
         />,
       );
       const closeButton = screen.getByTestId('close-modal-button');
@@ -197,6 +240,7 @@ describe('PortraitVideoModal', () => {
           selectedVideoIndex={0}
           blocks={blocks}
           onClose={mockClose}
+          eventTrackingData={eventTrackingData}
         />,
       );
       const closeButton = screen.getByTestId('close-modal-button');
@@ -324,6 +368,7 @@ describe('PortraitVideoModal', () => {
           selectedVideoIndex={0}
           blocks={blocks}
           onClose={mockClose}
+          eventTrackingData={eventTrackingData}
         />,
       );
 
@@ -344,6 +389,7 @@ describe('PortraitVideoModal', () => {
           selectedVideoIndex={blocks.length - 1}
           blocks={blocks}
           onClose={mockClose}
+          eventTrackingData={eventTrackingData}
         />,
       );
 
@@ -368,6 +414,7 @@ describe('PortraitVideoModal', () => {
           selectedVideoIndex={middleIndex}
           blocks={blocks}
           onClose={mockClose}
+          eventTrackingData={eventTrackingData}
         />,
       );
 
@@ -389,6 +436,7 @@ describe('PortraitVideoModal', () => {
           selectedVideoIndex={1}
           blocks={blocks}
           onClose={mockClose}
+          eventTrackingData={eventTrackingData}
         />,
       );
 
@@ -405,6 +453,7 @@ describe('PortraitVideoModal', () => {
           selectedVideoIndex={0}
           blocks={blocks}
           onClose={mockClose}
+          eventTrackingData={eventTrackingData}
         />,
       );
 
