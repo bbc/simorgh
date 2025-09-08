@@ -16,6 +16,7 @@ export const COMPONENT_NAMES = {
   PORTRAIT_VIDEO_CAROUSEL: 'portrait-video-carousel',
   USEFUL_LINKS: 'useful-links',
   SOCIAL_LINKS: 'social-links',
+  MEDIA_COLLECTION: 'media-collection',
 } as const;
 
 const { NONE, BANNER, COLLECTION, RANKED, INSITU, LINKS } = VISUAL_STYLE;
@@ -32,6 +33,7 @@ const {
   PORTRAIT_VIDEO_CAROUSEL,
   USEFUL_LINKS,
   SOCIAL_LINKS,
+  MEDIA_COLLECTION,
 } = COMPONENT_NAMES;
 
 export default ({
@@ -39,13 +41,11 @@ export default ({
   visualProminence,
   radioSchedule,
   embed,
+  mediaCollection,
 }: Partial<Curation>) => {
-  if (radioSchedule) {
-    return RADIO_SCHEDULE;
-  }
-  if (embed) {
-    return EMBED;
-  }
+  if (radioSchedule) return RADIO_SCHEDULE;
+  if (embed) return EMBED;
+  if (mediaCollection) return MEDIA_COLLECTION;
 
   const componentsByVisualStyleAndProminence = {
     [`${BANNER}_${MINIMUM}`]: NOT_SUPPORTED,

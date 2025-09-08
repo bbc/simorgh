@@ -327,6 +327,7 @@ export type MediaCollection = {
     };
     imageUrlTemplate: string;
     title: string;
+    overtypedTitle?: string;
   };
 };
 

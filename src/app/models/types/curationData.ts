@@ -1,5 +1,8 @@
 import { OEmbedData } from '#app/components/Embeds/types';
-import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
+import {
+  MediaCollection,
+  PortraitClipMediaBlock,
+} from '#app/components/MediaLoader/types';
 import { RadioScheduleData } from '#app/models/types/radioSchedule';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { MostReadData } from '../../components/MostRead/types';
@@ -70,6 +73,7 @@ export interface BaseCuration {
   };
   contentType?: string;
   pageTitle?: string;
+  mediaCollection?: MediaCollection[];
 }
 
 export interface Curation extends BaseCuration {

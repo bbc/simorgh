@@ -95,6 +95,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                   radioSchedule,
                   embed,
                   portraitVideo,
+                  mediaCollection,
                 },
                 index,
               ) => {
@@ -127,6 +128,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       portraitVideo={portraitVideo}
                       renderVisuallyHiddenH2Title={position === 0}
                       curationId={curationId}
+                      mediaCollection={mediaCollection}
                     />
                     {index === indexOfFirstNonBanner && <MPU />}
                   </React.Fragment>

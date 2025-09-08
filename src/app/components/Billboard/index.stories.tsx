@@ -139,6 +139,7 @@ export const PidginLiveWithFiveSummaries = () => {
 };
 
 export const PersianBillboard = () => {
+  // @ts-expect-error fixture data
   const summary = persianData.data.curations[2].summaries[0];
   return (
     <div dir="rtl">

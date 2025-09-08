@@ -23,6 +23,7 @@ import PortraitVideoCarousel from '../PortraitVideoCarousel';
 import UsefulLinks from '../UsefulLinks';
 import SocialLinks from '../SocialLinks';
 import styles from './index.styles';
+import MediaLoader from '../MediaLoader';
 
 const {
   SIMPLE_CURATION_GRID,
@@ -36,6 +37,7 @@ const {
   PORTRAIT_VIDEO_CAROUSEL,
   USEFUL_LINKS,
   SOCIAL_LINKS,
+  MEDIA_COLLECTION,
 } = COMPONENT_NAMES;
 
 const { NONE } = VISUAL_STYLE;
@@ -67,12 +69,14 @@ export default ({
   portraitVideo,
   renderVisuallyHiddenH2Title = false,
   curationId,
+  mediaCollection,
 }: Curation) => {
   const componentName = getComponentName({
     visualStyle,
     visualProminence,
     radioSchedule,
     embed,
+    mediaCollection,
   });
   const GridComponent = getGridComponent(componentName);
 
@@ -191,6 +195,8 @@ export default ({
           id={`social-links-${nthCurationByStyleAndProminence}`}
         />
       );
+    case MEDIA_COLLECTION:
+      return mediaCollection ? <MediaLoader blocks={mediaCollection} /> : null;
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:
