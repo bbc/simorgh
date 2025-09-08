@@ -100,7 +100,7 @@ exports[`Canonical Home Page Footer Anchors should match text and url 8`] = `
 exports[`Canonical Home Page Footer Anchors should match text and url 9`] = `
 {
   "text": "बाहरी साइटों का लिंक देने की हमारी नीति के बारे में पढ़ें.",
-  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
 }
 `;
 
