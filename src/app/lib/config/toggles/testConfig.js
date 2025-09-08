@@ -23,7 +23,7 @@ export default {
     enabled: true,
   },
   globalLanguageHomepage: {
-    enabled: false,
+    enabled: true,
   },
   homePageRadioSchedule: {
     enabled: true,
