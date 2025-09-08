@@ -147,16 +147,15 @@ const styles = {
       },
     }),
 
-    subNavCloseButtonIcon: ({ mq }: Theme) =>
-      css({
-        color: '${props => props.theme.palette.BLACK}',
-        fill: 'currentColor',
-        [mq.FORCED_COLOURS]: {
-          fill: 'linkText',
-        },
-        width: `${pixelsToRem(22)}rem`,
-        height: `${pixelsToRem(22)}rem`,
-      }),
+  subNavCloseButtonIcon: ({ mq }: Theme) =>
+    css({
+      fill: 'currentColor',
+      [mq.FORCED_COLOURS]: {
+        fill: 'linkText',
+      },
+      width: `${pixelsToRem(22)}rem`,
+      height: `${pixelsToRem(22)}rem`,
+    }),
 
   subNavGrid: ({ mq, spacings, palette }: Theme) =>
     css({
