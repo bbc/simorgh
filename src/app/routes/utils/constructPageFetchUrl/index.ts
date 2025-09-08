@@ -32,10 +32,12 @@ import parseAvRoute from '../parseAvRoute';
 
 const removeLeadingSlash = (path: string) => path?.replace(/^\/+/g, '');
 const removeAmp = (path: string) => path.split('.')[0];
-const getArticleId = (path: string) => path.match(/(c[a-zA-Z0-9]{10,}o)/)?.[1];
+export const getArticleId = (path: string) =>
+  path.match(/(c[a-zA-Z0-9]{10,}o)/)?.[1];
 const getCpsId = (path: string) => removeLeadingSlash(path);
 const getTVAudioId = (path: string) => removeLeadingSlash(path);
-const getTipoId = (path: string) => path.match(/(c[a-zA-Z0-9]{10,}t)/)?.[1];
+export const getTipoId = (path: string) =>
+  path.match(/(c[a-zA-Z0-9]{10,}t)/)?.[1];
 const getUgcId = (path: string) => path.match(/(u[a-zA-Z0-9]{8,})/)?.[1];
 const isOptimoIdCheck = (path: string) =>
   /\/(articles|sgeulachdan|erthyglau)\/(c[a-zA-Z0-9]{10,}o)/.test(path);
