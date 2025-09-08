@@ -11,6 +11,7 @@ import {
   getTipoId,
 } from '#app/routes/utils/constructPageFetchUrl';
 import { INTERNAL_SERVER_ERROR, NOT_FOUND } from '#app/lib/statusCodes.const';
+import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
 import Badge from '../Badge';
 import {
   extractArticleData,
@@ -98,7 +99,9 @@ export async function GET(
       `#app/lib/config/services/${service}`
     ).then(mod => mod.service);
 
-    const { translations, mostRead } = serviceConfig.default;
+    const defaultVariant = defaultServiceVariants[service] || 'default';
+
+    const { translations, mostRead } = serviceConfig[defaultVariant];
 
     const liveText = translations?.liveExperiencePage?.liveLabel || 'Live';
     const mostReadText = mostRead?.header || 'Most read';
