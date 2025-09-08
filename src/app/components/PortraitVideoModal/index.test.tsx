@@ -10,6 +10,7 @@ import { Player, SMPEvent } from '../MediaLoader/types';
 
 const eventTrackingData = {
   componentName: 'portrait-video-modal',
+  alwaysInView: true,
 };
 
 const mockClose = jest.fn();
