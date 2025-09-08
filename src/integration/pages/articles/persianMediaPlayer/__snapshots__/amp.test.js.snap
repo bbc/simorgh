@@ -63,7 +63,7 @@ exports[`AMP Articles Footer Anchors should match text and url 8`] = `
 exports[`AMP Articles Footer Anchors should match text and url 9`] = `
 {
   "text": "سیاست ما درباره لینک دادن به سایت های دیگر.",
-  "url": "https://www.bbc.com/persian/institutional/2011/04/000001_links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
 }
 `;
 
