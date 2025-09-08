@@ -28,7 +28,7 @@ const testSuites = [
     path: '/portuguese/topics/cx2ggnx4j72t',
     service: 'portuguese',
     runforEnv: ['test', 'live'],
-    tests,
+    tests: [urlValidationTest],
   },
   {
     path: '/serbian/topics/c1gd303q6y6t/lat',

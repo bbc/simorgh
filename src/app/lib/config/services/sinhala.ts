@@ -317,7 +317,7 @@ export const service: DefaultServiceConfig = {
         text: 'ඔබට බීබීසී විශ්වාස කළ හැක්කේ ඇයි',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'බාහිර යොමු කෙරෙහි අපගේ ප්‍රවේශය ගැන කියවන්න.',
       },
       links: [
