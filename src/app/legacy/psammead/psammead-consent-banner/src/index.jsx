@@ -2,11 +2,6 @@ import React, { forwardRef } from 'react';
 
 import styled from '@emotion/styled';
 import {
-  getDoublePica,
-  getLongPrimer,
-  getBodyCopy,
-} from '#psammead/gel-foundations/src/typography';
-import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
@@ -18,7 +13,6 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '#psammead/gel-foundations/src/spacings';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 
 // Transparent border is to show the top of the wrapper and button border in high-contrast mode
@@ -33,7 +27,7 @@ const hoverFocusStyles = ({ theme }) => `
 `;
 
 const Wrapper = styled.div`
-  ${({ service }) => getSansRegular(service)}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
   background-color: ${props => props.theme.palette.CONSENT_BACKGROUND};
   border-top: solid ${transparentBorderHeight} transparent;
 `;
@@ -76,7 +70,7 @@ const FocusableH2 = forwardRef(({ className, children, dir }, ref) => {
 });
 
 const Title = styled(FocusableH2)`
-  ${({ script }) => script && getDoublePica(script)};
+  ${({ theme: { fontSizes } }) => fontSizes.doublePica};
   color: ${props => props.theme.palette.WHITE};
   font-weight: 700;
   padding-top: 1rem;
@@ -91,7 +85,7 @@ const Title = styled(FocusableH2)`
  * The '& li + li' below allows for styling every `li` element except the first.
  */
 const Options = styled.ul`
-  ${({ script }) => script && getLongPrimer(script)};
+  ${({ theme: { fontSizes } }) => fontSizes.longPrimer};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -121,7 +115,7 @@ const Options = styled.ul`
 `;
 
 export const ConsentBannerText = styled.p`
-  ${({ script }) => script && getBodyCopy(script)};
+  ${({ theme: { fontSizes } }) => fontSizes.bodyCopy};
   margin-top: ${GEL_SPACING_DBL};
   margin-bottom: ${GEL_SPACING_TRPL};
   color: ${props => props.theme.palette.CONSENT_CONTENT};
@@ -148,7 +142,7 @@ const ListItem = styled.li`
   width: 100%;
   word-break: break-word;
   & button {
-    ${({ script }) => script && getLongPrimer(script)};
+    ${({ theme: { fontSizes } }) => fontSizes.longPrimer};
     width: 100%;
     min-height: 2.75rem;
     color: ${props => props.theme.palette.EBON};
