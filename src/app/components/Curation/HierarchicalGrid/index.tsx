@@ -98,9 +98,10 @@ const HiearchicalGrid = ({
           const { isLive } = promo;
 
           const promoEventTrackingData = buildPromoEventTrackingData(promo, i);
-          const clickTrackerHandler = getClickTrackerHandler(
-            promoEventTrackingData,
-          );
+          const clickTrackerHandler = getClickTrackerHandler({
+            sendOptimizelyEvents: true,
+            ...promoEventTrackingData,
+          });
 
           return (
             <li

@@ -55,7 +55,10 @@ const CurationPromo = ({
     (type === 'video' && `${videoTranslation}, `) ||
     (type === 'photogallery' && `${photoGalleryTranslation}, `);
 
-  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+  const clickTrackerHandler = useClickTrackerHandler({
+    sendOptimizelyEvents: true,
+    ...eventTrackingData,
+  });
 
   return (
     <Promo css={styles.promo} className="">
