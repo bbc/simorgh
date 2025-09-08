@@ -129,6 +129,7 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
       break;
     case LIVE_TV_PAGE:
       getIdFunction = (path: string) => {
+        // example path: /dari/watch/bbc_afghan_tv/live
         const [tv] = path.split('/').slice(-2);
         return tv;
       };
