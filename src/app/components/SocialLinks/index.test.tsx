@@ -99,14 +99,16 @@ describe('SocialLinks', () => {
 
   it('renders correct links', () => {
     render(<SocialLinks title="Social Links" summaries={mockSummaries} />);
+    const links = screen.getAllByRole('link');
+    expect(links.length).toBe(mockSummaries.length);
 
-    mockSummaries.forEach(summary => {
-      const link = screen.getByText(summary.title).closest('a');
-      expect(link).toHaveAttribute('href', summary.link);
-      expect(link).toHaveTextContent(summary.title);
+    mockSummaries.forEach((summary, index) => {
+      expect(links[index]).toHaveAttribute('href', summary.link);
 
-      if (link && summary.description) {
-        const visuallyHiddenText = link.querySelector(
+      expect(links[index]).toHaveTextContent(summary.title);
+
+      if (summary.description) {
+        const visuallyHiddenText = links[index].querySelector(
           '[class*="visuallyHiddenText"]',
         );
         expect(visuallyHiddenText).toHaveTextContent(summary.description);

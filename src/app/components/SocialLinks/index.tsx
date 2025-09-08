@@ -69,9 +69,11 @@ const SocialLinkImage = ({ imageUrl }: { imageUrl: string }) => {
 
 const SocialLink = ({
   summary,
+  clickTrackerHandler,
 }: {
   summary: Summary;
-  eventTrackingData: EventTrackingData;
+  eventTrackingData?: EventTrackingData;
+  clickTrackerHandler?: ReturnType<typeof useClickTrackerHandler>;
 }) => {
   const linkLabelId = useId();
   const hasDescription = Boolean(summary.description);
@@ -150,24 +152,18 @@ const SocialLinks = ({
 
             return (
               <li css={styles.item} key={summary.title}>
-                <SocialLinkImage imageUrl={summary.imageUrl} />
-                <a
-                  href={summary.link}
-                  css={styles.link}
-                  {...clickTrackerHandler}
-                  {...(hasDescription && {
-                    'aria-labelledby': `social-link-label-${index}`,
-                  })}
-                >
-                  {hasDescription ? (
-                    <span id={`social-link-label-${index}`}>
-                      {summary.title}
-                      <VisuallyHiddenText>{`, ${summary.description}`}</VisuallyHiddenText>
-                    </span>
-                  ) : (
-                    summary.title
-                  )}
-                </a>
+                <SocialLink
+                  summary={summary}
+                  clickTrackerHandler={clickTrackerHandler}
+                />
+                {hasDescription ? (
+                  <span id={`social-link-label-${index}`}>
+                    {summary.title}
+                    <VisuallyHiddenText>{`, ${summary.description}`}</VisuallyHiddenText>
+                  </span>
+                ) : (
+                  summary.title
+                )}
               </li>
             );
           })}
@@ -177,6 +173,9 @@ const SocialLinks = ({
           <SocialLink
             summary={summaries[0]}
             eventTrackingData={eventTrackingData}
+            clickTrackerHandler={getClickTrackerHandler(
+              buildPromoEventTrackingData(summaries[0], 0),
+            )}
           />
         </div>
       )}
