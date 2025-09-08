@@ -329,7 +329,7 @@ export const service: DefaultServiceConfig = {
         text: 'Ihe mere ị ga-eji nwee ntụkwasiobi na BBC News',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Usoro anyị maka njikọ dị na mpụga.',
       },
       links: [

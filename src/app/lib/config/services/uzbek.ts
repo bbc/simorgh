@@ -300,7 +300,7 @@ const defaultCyrillicConfig = {
       text: 'Нега сиз Би-би-сига ишонишингиз мумкин?',
     },
     externalLink: {
-      href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+      href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
       text: 'Ташқи линкларга бизнинг ёндашувимиз қандайлиги ҳақида маълумотга эга бўлинг',
     },
     links: [
@@ -642,7 +642,7 @@ export const service: UzbekConfig = {
         text: 'Нега сиз Би-би-сига ишонишингиз мумкин?',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Ташқи линкларга бизнинг ёндашувимиз қандайлиги ҳақида маълумотга эга бўлинг',
       },
       links: [

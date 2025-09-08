@@ -298,7 +298,7 @@ export const service: DefaultServiceConfig = {
         text: 'ስለምንታይ ንቢቢሲ ክትኣምንዎ ከም እትኽእሉ',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'ብዛዕባ ምስ ናይ ደገ መርበባት እንገብሮ መላግቦታት ዘለና ኣረኣእያ ንምርዳእ ኣንብቡ።',
       },
       links: [
