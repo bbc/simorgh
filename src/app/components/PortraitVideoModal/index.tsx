@@ -36,8 +36,8 @@ const getEventTrackingData = ({
       name,
       type: 'portrait-video-modal',
       position,
-      item_count: itemCount,
-      resource_id: resourceId,
+      itemCount,
+      resourceId,
     },
     itemTracker: {
       type: 'portrait-video',
