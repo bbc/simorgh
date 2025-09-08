@@ -307,7 +307,7 @@ export const service: DefaultServiceConfig = {
         text: 'तुम्ही बीबीसीवर विश्वास ठेवू शकता कारण',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'बाह्य लिंक्सबद्दल आम्हाल काय वाटतं? इथे वाचा.',
       },
       links: [
