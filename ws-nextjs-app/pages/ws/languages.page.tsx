@@ -38,7 +38,8 @@ export const getServerSideProps: GetServerSideProps = async context => {
   };
 
   const toggles = await getToggles('ws');
-  const isGlobalLanguageHomepageEnabled = toggles?.globalLanguageHomepage?.enabled;
+  const isGlobalLanguageHomepageEnabled =
+    toggles?.globalLanguageHomepage?.enabled;
 
   if (!isGlobalLanguageHomepageEnabled) {
     return {
@@ -78,6 +79,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       service: 'ws',
       pathname: '/ws/languages',
       status: data?.status,
+      toggles,
       pageData: {
         ...data?.pageData,
         metadata: {
