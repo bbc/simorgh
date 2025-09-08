@@ -69,7 +69,7 @@ const SocialLinkImage = ({ imageUrl }: { imageUrl: string }) => {
 
 const SocialLink = ({
   summary,
-  clickTrackerHandler
+  clickTrackerHandler,
 }: {
   summary: Summary;
   clickTrackerHandler?: ReturnType<typeof useClickTrackerHandler>;
