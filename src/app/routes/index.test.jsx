@@ -42,6 +42,8 @@ const getMatchingRoute = pathname => {
   return matchingRoutes?.[0]?.route;
 };
 
+const toggles = defaultToggles.local;
+
 const renderRouter = props =>
   act(async () => {
     render(
@@ -51,7 +53,7 @@ const renderRouter = props =>
           isApp: false,
           isAmp: false,
           status: props.status || 200,
-          toggles: defaultToggles.local,
+          toggles,
           ...props,
         })}
       </MemoryRouter>,
@@ -121,9 +123,7 @@ describe('Routes', () => {
       const { pageData } = await getInitialData({
         path: pathname,
         pageType,
-        toggles: {
-          liveRadioSchedule: { enabled: true },
-        },
+        toggles,
       });
 
       await renderRouter({
@@ -149,9 +149,7 @@ describe('Routes', () => {
       const { pageData } = await getInitialData({
         path: pathname,
         pageType,
-        toggles: {
-          recentAudioEpisodes: { enabled: false, value: 4 },
-        },
+        toggles,
       });
       await renderRouter({
         pathname,
@@ -163,7 +161,7 @@ describe('Routes', () => {
       const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'Baza Muganga';
 
       expect(
-        await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+        screen.getAllByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)[0],
       ).toBeInTheDocument();
     });
 
@@ -218,9 +216,7 @@ describe('Routes', () => {
       const { pageData } = await getInitialData({
         path: pathname,
         pageType,
-        toggles: {
-          recentAudioEpisodes: { enabled: false, value: 4 },
-        },
+        toggles,
       });
       await renderRouter({
         pathname,
@@ -245,9 +241,7 @@ describe('Routes', () => {
       const { pageData } = await getInitialData({
         path: pathname,
         pageType,
-        toggles: {
-          recentVideoEpisodes: { enabled: false, value: 4 },
-        },
+        toggles,
       });
       await renderRouter({
         pathname,
