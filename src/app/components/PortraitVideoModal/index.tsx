@@ -2,6 +2,7 @@
 /* @jsxFrag React.Fragment */
 import { Global, jsx } from '@emotion/react';
 import React, { use, useEffect, useRef } from 'react';
+import moment from 'moment-timezone';
 import MediaLoader from '#app/components/MediaLoader';
 import {
   PortraitClipMediaBlock,
@@ -14,9 +15,32 @@ import styles from './index.styles';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { DownArrowIcon, UpArrowIcon } from '../icons';
 
-const eventTrackingData = {
-  componentName: 'portrait-video-modal',
-  alwaysInView: true,
+const getEventTrackingData = ({ selectedVideo, selectedVideoIndex }) => {
+  const {
+    id,
+    title,
+    version: { duration },
+  } = selectedVideo.model.video;
+
+  return {
+    componentName: 'portrait-video-modal',
+    alwaysInView: true,
+    groupTracker: {
+      name: '<the video playlist>',
+      type: 'portrait-video-modal',
+      position: '<position on the Home Page>',
+      item_count: '<number of videos in the curation>',
+      resource_id: '<TIPO curation ID for the specific carousel>',
+    },
+    itemTracker: {
+      type: 'portrait-video',
+      text: title,
+      media_type: 'video',
+      position: selectedVideoIndex + 1,
+      duration: moment.duration(duration).asMilliseconds(),
+      resource_id: id,
+    },
+  };
 };
 
 const getPlayerInstance = () =>
@@ -113,7 +137,9 @@ const PortraitVideoModal = ({
     },
   } = use(ServiceContext);
 
-  const viewTracker = useViewTracker(eventTrackingData);
+  const viewTracker = useViewTracker(
+    getEventTrackingData({ video: blocks?.[selectedVideoIndex], selectedVideoIndex}),
+  );
 
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const endOfContentButtonRef = useRef<HTMLButtonElement>(null);
