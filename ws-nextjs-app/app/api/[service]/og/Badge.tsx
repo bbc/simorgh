@@ -11,9 +11,9 @@ type BadgeProps = {
 
 const Badge = ({
   text,
+  icon,
   textColour = WHITE,
   uppercase,
-  icon,
   bold,
 }: BadgeProps) => (
   <div

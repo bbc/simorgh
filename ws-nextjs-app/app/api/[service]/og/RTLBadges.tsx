@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LiveSVG = () => (
+const RTLLiveSVG = () => (
   <svg
     width="130"
     height="60"
@@ -52,4 +52,4 @@ const ArabicTopStoriesSVG = () => (
   </svg>
 );
 
-export { LiveSVG, ArabicMostReadSVG, ArabicTopStoriesSVG };
+export { RTLLiveSVG, ArabicMostReadSVG, ArabicTopStoriesSVG };

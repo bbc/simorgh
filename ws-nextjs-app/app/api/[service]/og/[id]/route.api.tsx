@@ -20,7 +20,11 @@ import {
   responseServerError,
 } from '../utils';
 import BackgroundImage from '../BackgroundImage';
-import { ArabicMostReadSVG, ArabicTopStoriesSVG, LiveSVG } from '../RTLBadges';
+import {
+  ArabicMostReadSVG,
+  ArabicTopStoriesSVG,
+  RTLLiveSVG,
+} from '../RTLBadges';
 
 const REITH_SANS_MEDIUM_FONT_URL = `${REITH_FONTS_DIR}BBCReithSans_W_Md.woff`;
 const REITH_SANS_BOLD_FONT_URL = `${REITH_FONTS_DIR}BBCReithSans_W_Bd.woff`;
@@ -149,7 +153,7 @@ export async function GET(
     if (service === 'arabic') {
       switch (true) {
         case isLive:
-          badge = <LiveSVG />;
+          badge = <RTLLiveSVG />;
           break;
         case isInTopStories:
           badge = <ArabicTopStoriesSVG />;
