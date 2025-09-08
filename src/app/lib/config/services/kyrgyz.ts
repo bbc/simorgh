@@ -295,7 +295,7 @@ export const service: DefaultServiceConfig = {
         text: 'Эмнеге BBC News ишенсе болот?',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Башка интернет сайттардын мазмуну боюнча биздин позиция.',
       },
       links: [
