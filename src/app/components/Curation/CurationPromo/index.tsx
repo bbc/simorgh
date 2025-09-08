@@ -32,6 +32,7 @@ const CurationPromo = ({
   isLive,
   readTime,
   eventTrackingData,
+  readTimeExperimentVariant,
 }: Summary) => {
   const { isAmp, isLite } = use(RequestContext);
   const { translations } = use(ServiceContext);
@@ -98,7 +99,11 @@ const CurationPromo = ({
         </Promo.Timestamp>
       ) : null}
       {/* EXPERIMENT: Read Time */}
-      <ReadTime readTimeValue={readTime} promoId={id} />
+      <ReadTime
+        readTimeValue={readTime}
+        promoId={id}
+        readTimeVariant={readTimeExperimentVariant}
+      />
     </Promo>
   );
 };

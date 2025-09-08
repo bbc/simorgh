@@ -26,6 +26,7 @@ export interface Summary extends BaseSummary {
   readTime?: number;
   eventTrackingData?: EventTrackingData;
   visualProminence?: VisualProminence | string;
+  readTimeExperimentVariant?: string;
 }
 
 export const VISUAL_STYLE = {
