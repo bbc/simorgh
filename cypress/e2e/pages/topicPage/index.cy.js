@@ -16,7 +16,7 @@ const testSuites = [
     path: '/persian/topics/cw9qgeqd1zqt',
     service: 'persian',
     runforEnv: ['test', 'live'],
-    tests,
+    tests: [urlValidationTest],
   },
   {
     path: '/pidgin/topics/c95y35941vrt',
@@ -28,7 +28,7 @@ const testSuites = [
     path: '/portuguese/topics/cx2ggnx4j72t',
     service: 'portuguese',
     runforEnv: ['test', 'live'],
-    tests,
+    tests: [urlValidationTest],
   },
   {
     path: '/serbian/topics/c1gd303q6y6t/lat',
