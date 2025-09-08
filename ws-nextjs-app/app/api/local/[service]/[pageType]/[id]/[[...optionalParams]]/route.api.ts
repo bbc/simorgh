@@ -39,7 +39,9 @@ const constructDataFilePath = ({
 
 export async function GET(
   _req: Request,
-  { params }: { params: { id: string; service: Services } },
+  {
+    params,
+  }: RouteContext<'/api/local/[service]/[pageType]/[id]/[[...optionalParams]]'>,
 ) {
   try {
     const { ...routeParams } = await params;
