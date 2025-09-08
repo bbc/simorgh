@@ -95,10 +95,13 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
           },
         });
 
-        if (!alwaysInView) setEventSent(true);
+        if (!alwaysInView) {
+          setEventSent(true);
 
-        (observer.current as unknown as IntersectionObserver)?.disconnect();
-        observer.current = null;
+          (observer.current as unknown as IntersectionObserver)?.disconnect();
+          observer.current = null;
+        }
+
         timer.current = null;
       }, VIEWED_DURATION_MS);
     } else {
