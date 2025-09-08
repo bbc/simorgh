@@ -1,4 +1,5 @@
 import Cookie from 'js-cookie';
+import * as WindowHelper from '#src/testHelpers/windowHelper';
 import onClient from '../../../lib/utilities/onClient';
 import {
   ARTICLE_PAGE,
@@ -29,13 +30,8 @@ jest.mock('#lib/utilities/onClient', () =>
   jest.fn().mockImplementation(() => true),
 );
 
-const mockWindowObj = {
-  location: {
-    pathname: '/',
-  },
-} as Window & typeof globalThis;
-
-jest.spyOn(window, 'window', 'get').mockImplementation(() => mockWindowObj);
+WindowHelper.beforeAll();
+WindowHelper.afterAll();
 
 describe('Chartbeat utilities', () => {
   afterEach(() => {

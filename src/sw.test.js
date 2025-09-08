@@ -4,6 +4,7 @@ import fs from 'fs';
 import { join, resolve } from 'path';
 import fetchMock from 'jest-fetch-mock';
 import { createHash } from 'crypto';
+import * as WindowHelper from '#src/testHelpers/windowHelper';
 
 const serviceWorker = fs.readFileSync(join(__dirname, '..', 'public/sw.js'));
 
@@ -16,20 +17,11 @@ fs.writeFileSync(
   serviceWorkerCode,
 );
 
-Object.defineProperty(self, 'location', {
-  writable: true,
-  value: { assign: jest.fn() },
-});
+WindowHelper.beforeAll();
+WindowHelper.afterAll();
 
 describe('Service Worker', () => {
   let fetchEventHandler;
-
-  beforeEach(() => {
-    global.self.location = {
-      pathname: 'https://www.bbc.com/mundo/articles/c2343244t',
-      hostname: 'www.bbc.com',
-    };
-  });
 
   afterEach(() => {
     jest.clearAllMocks();
@@ -163,10 +155,6 @@ describe('Service Worker', () => {
       // set up global cache
       global.caches = {
         open: () => Promise.resolve(serviceWorkerCache),
-      };
-      global.self.location = {
-        pathname: 'https://www.bbc.com/mundo/articles/c2343244t',
-        hostname: 'www.bbc.com',
       };
     });
 
