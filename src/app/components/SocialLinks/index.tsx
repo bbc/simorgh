@@ -71,7 +71,6 @@ const SocialLink = ({
   summary,
 }: {
   summary: Summary;
-  eventTrackingData?: EventTrackingData;
   clickTrackerHandler?: ReturnType<typeof useClickTrackerHandler>;
 }) => {
   const linkLabelId = useId();
@@ -147,22 +146,12 @@ const SocialLinks = ({
             const clickTrackerHandler = getClickTrackerHandler(
               promoEventTrackingData,
             );
-            const hasDescription = Boolean(summary.description);
-
             return (
               <li css={styles.item} key={summary.title}>
                 <SocialLink
                   summary={summary}
                   clickTrackerHandler={clickTrackerHandler}
                 />
-                {hasDescription ? (
-                  <span id={`social-link-label-${index}`}>
-                    {summary.title}
-                    <VisuallyHiddenText>{`, ${summary.description}`}</VisuallyHiddenText>
-                  </span>
-                ) : (
-                  summary.title
-                )}
               </li>
             );
           })}
@@ -171,7 +160,6 @@ const SocialLinks = ({
         <div css={styles.item}>
           <SocialLink
             summary={summaries[0]}
-            eventTrackingData={eventTrackingData}
             clickTrackerHandler={getClickTrackerHandler(
               buildPromoEventTrackingData(summaries[0], 0),
             )}
