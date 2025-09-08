@@ -10,12 +10,19 @@ import {
 } from '#app/components/MediaLoader/types';
 import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '../../hooks/useViewTracker';
 import styles from './index.styles';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { DownArrowIcon, UpArrowIcon } from '../icons';
 
-const getEventTrackingData = ({ selectedVideo, selectedVideoIndex }) => {
+const getEventTrackingData = ({
+  eventTrackingData,
+  selectedVideo,
+  selectedVideoIndex,
+}) => {
+  const { name, position, itemCount, resourceId } =
+    eventTrackingData.groupTracker;
   const {
     id,
     title,
@@ -26,11 +33,11 @@ const getEventTrackingData = ({ selectedVideo, selectedVideoIndex }) => {
     componentName: 'portrait-video-modal',
     alwaysInView: true,
     groupTracker: {
-      name: '<the video playlist>',
+      name,
       type: 'portrait-video-modal',
-      position: '<position on the Home Page>',
-      item_count: '<number of videos in the curation>',
-      resource_id: '<TIPO curation ID for the specific carousel>',
+      position,
+      item_count: itemCount,
+      resource_id: resourceId,
     },
     itemTracker: {
       type: 'portrait-video',
@@ -120,12 +127,14 @@ export interface PortraitVideoModalProps {
   blocks: PortraitClipMediaBlock[];
   onClose: () => void;
   selectedVideoIndex: number;
+  eventTrackingData: EventTrackingData;
 }
 
 const PortraitVideoModal = ({
   blocks,
   onClose,
   selectedVideoIndex,
+  eventTrackingData,
 }: PortraitVideoModalProps) => {
   const {
     translations: {
@@ -138,7 +147,11 @@ const PortraitVideoModal = ({
   } = use(ServiceContext);
 
   const viewTracker = useViewTracker(
-    getEventTrackingData({ video: blocks?.[selectedVideoIndex], selectedVideoIndex}),
+    getEventTrackingData({
+      eventTrackingData,
+      selectedVideo: blocks?.[selectedVideoIndex],
+      selectedVideoIndex,
+    }),
   );
 
   const closeButtonRef = useRef<HTMLButtonElement>(null);

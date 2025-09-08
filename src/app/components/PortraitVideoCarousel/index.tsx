@@ -106,6 +106,7 @@ const PortraitVideoCarousel = ({
               blocks={blocks}
               selectedVideoIndex={selectedVideoIndex}
               onClose={handleCloseModal}
+              eventTrackingData={eventTrackingDataExtended}
             />,
             document.body,
           )}
