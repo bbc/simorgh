@@ -139,16 +139,24 @@ const styles = {
       height: `${pixelsToRem(22)}rem`,
       color: palette.BLACK,
       '&:hover, &:focus': {
+        outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
+        outlineOffset: `${pixelsToRem(3)}rem`,
         backgroundColor: palette.POSTBOX,
         fill: palette.WHITE,
+        color: palette.WHITE,
       },
     }),
 
-  subNavCloseButtonIcon: () =>
-    css({
-      width: `${pixelsToRem(22)}rem`,
-      height: `${pixelsToRem(22)}rem`,
-    }),
+    subNavCloseButtonIcon: ({ mq }: Theme) =>
+      css({
+        color: '${props => props.theme.palette.BLACK}',
+        fill: 'currentColor',
+        [mq.FORCED_COLOURS]: {
+          fill: 'linkText',
+        },
+        width: `${pixelsToRem(22)}rem`,
+        height: `${pixelsToRem(22)}rem`,
+      }),
 
   subNavGrid: ({ mq, spacings, palette }: Theme) =>
     css({
