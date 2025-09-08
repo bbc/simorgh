@@ -11,8 +11,8 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
 
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   background-color: #323232;
   border-top: solid 0.0625rem transparent;
 }
@@ -1340,8 +1340,8 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
 
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   background-color: #323232;
   border-top: solid 0.0625rem transparent;
 }
@@ -2669,8 +2669,8 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   background-color: #323232;
   border-top: solid 0.0625rem transparent;
 }
@@ -3998,8 +3998,8 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   background-color: #323232;
   border-top: solid 0.0625rem transparent;
 }

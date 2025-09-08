@@ -11,8 +11,8 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
 
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   background-color: #323232;
   border-top: solid 0.0625rem transparent;
 }
@@ -363,8 +363,8 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
 
 .emotion-2 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   background-color: #323232;
   border-top: solid 0.0625rem transparent;
 }
@@ -715,8 +715,8 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
 
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   background-color: #323232;
   border-top: solid 0.0625rem transparent;
 }
@@ -1060,8 +1060,8 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
 
 .emotion-2 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   background-color: #323232;
   border-top: solid 0.0625rem transparent;
 }
