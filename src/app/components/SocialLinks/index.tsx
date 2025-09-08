@@ -69,6 +69,7 @@ const SocialLinkImage = ({ imageUrl }: { imageUrl: string }) => {
 
 const SocialLink = ({
   summary,
+  clickTrackerHandler
 }: {
   summary: Summary;
   clickTrackerHandler?: ReturnType<typeof useClickTrackerHandler>;
@@ -83,6 +84,7 @@ const SocialLink = ({
         href={summary.link}
         css={styles.link}
         {...(hasDescription && { 'aria-labelledby': linkLabelId })}
+        {...clickTrackerHandler}
       >
         {hasDescription ? (
           // eslint-disable-next-line jsx-a11y/aria-role
