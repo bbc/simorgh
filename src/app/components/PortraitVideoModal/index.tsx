@@ -16,13 +16,19 @@ import styles from './index.styles';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { DownArrowIcon, UpArrowIcon } from '../icons';
 
+type ModalTrackingParameters = {
+  eventTrackingData: EventTrackingData;
+  selectedVideo: PortraitClipMediaBlock;
+  selectedVideoIndex: number;
+};
+
 const getEventTrackingData = ({
   eventTrackingData,
   selectedVideo,
   selectedVideoIndex,
-}) => {
+}: ModalTrackingParameters) => {
   const { name, position, itemCount, resourceId } =
-    eventTrackingData.groupTracker;
+    eventTrackingData.groupTracker || {};
   const {
     id,
     title,
