@@ -26,6 +26,7 @@ import {
   TOPIC_PAGE,
   TV_PAGE,
   UGC_PAGE,
+  LIVE_TV_PAGE,
 } from '../pageTypes';
 import parseAvRoute from '../parseAvRoute';
 
@@ -128,6 +129,13 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
     case TV_PAGE:
       getIdFunction = (path: string) => getTVAudioId(path);
       break;
+    case LIVE_TV_PAGE:
+      getIdFunction = (path: string) => {
+        // example path: /dari/watch/bbc_afghan_tv/live
+        const [tv] = path.split('/').slice(-2);
+        return tv;
+      };
+      break;
     default:
       getIdFunction = () => null;
       break;
@@ -200,6 +208,9 @@ const constructPageFetchUrl = ({
   );
 
   if (isLocal) {
+    const host = `http://${process.env.HOSTNAME || 'localhost'}`;
+    const port = process.env.PORT ? `:${process.env.PORT}` : '';
+
     switch (pageType) {
       case ARTICLE_PAGE: {
         const isOptimoId = isOptimoIdCheck(`/articles/${id}`);
@@ -219,8 +230,6 @@ const constructPageFetchUrl = ({
         break;
       case HOME_PAGE: {
         if (process.env?.NEXTJS) {
-          const host = `http://${process.env.HOSTNAME || 'localhost'}`;
-          const port = process.env.PORT ? `:${process.env.PORT}` : '';
           fetchUrl = Url(
             `${host}${port}/api/local/${service}/homePage/${variant ? `${variant}` : 'index'}`,
           );
@@ -240,8 +249,6 @@ const constructPageFetchUrl = ({
       case LIVE_PAGE: {
         const [liveID] = pathname.split('.');
         const variantPath = variant ? `/${variant}` : '';
-        const host = `http://${process.env.HOSTNAME || 'localhost'}`;
-        const port = process.env.PORT ? `:${process.env.PORT}` : '';
         // pathname is the ID of the Live page without /service/live/, and supports both Tipo & CPS IDs
         fetchUrl = Url(
           `${host}${port}/api/local/${service}/live/${liveID}${variantPath}`,
@@ -249,16 +256,11 @@ const constructPageFetchUrl = ({
         break;
       }
       case UGC_PAGE: {
-        const host = `http://${process.env.HOSTNAME || 'localhost'}`;
-        const port = process.env.PORT ? `:${process.env.PORT}` : '';
         fetchUrl = Url(`${host}${port}/api/local/${service}/send/${id}`);
         break;
       }
       case AV_EMBEDS: {
         const parsedRoute = parseAvRoute(pathname);
-
-        const host = `http://${process.env.HOSTNAME || 'localhost'}`;
-        const port = process.env.PORT ? `:${process.env.PORT}` : '';
 
         if (parsedRoute.isWsRoute) {
           // handle /ws/av-embeds route
@@ -272,6 +274,10 @@ const constructPageFetchUrl = ({
       case LIVE_RADIO_PAGE:
         fetchUrl = Url(`${pathname}`);
         break;
+      case LIVE_TV_PAGE: {
+        fetchUrl = Url(`${host}${port}/api/local/${service}/watch/${id}/live`);
+        break;
+      }
       default:
         return fetchUrl;
     }
