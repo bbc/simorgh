@@ -126,7 +126,7 @@ export const ReadTime = ({
     readTimeVariant !== 'off',
   ];
 
-  const validRender = renderConditions.every(condition => condition);
+  const validRender = renderConditions.every(Boolean);
 
   if (!validRender) return null;
 
