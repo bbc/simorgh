@@ -52,7 +52,7 @@ export default ({ service, pageType, path, variant = 'default' }) => {
                   pageData: { recentEpisodes },
                 } = data;
 
-                if (recentEpisodes?.length > 0 && recentEpisodesMaxNumber > 1) {
+                if (recentEpisodes?.length > 1 && recentEpisodesMaxNumber > 1) {
                   cy.get('[data-e2e=recent-episodes-list]').should('exist');
 
                   cy.get('[data-e2e=recent-episodes-list]').within(() => {
