@@ -5,7 +5,7 @@ import testsThatFollowSmokeTestConfigForCanonicalOnly from './testsForCanonicalO
 import { ERROR_PAGE } from '../../../../src/app/routes/utils/pageTypes';
 
 const canonicalTests = [
-  // testsThatFollowSmokeTestConfig,
+  testsThatFollowSmokeTestConfig,
   testsThatFollowSmokeTestConfigForCanonicalOnly,
   testsThatFollowSmokeTestConfigForAMPOnly,
 ];
@@ -138,7 +138,6 @@ const ampTestSuites = [...canonicalTestSuites].map(testSuite => {
   return {
     ...testSuite,
     path: `${testSuite.path}.amp`,
-    tests: [...canonicalTests],
   };
 });
 
