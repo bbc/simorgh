@@ -27,12 +27,14 @@ const canonicalSmokeTestSuites = [
     path: '/zhongwen/articles/cabcdefghijo/simp',
     service: 'zhongwen',
     runforEnv: 'local',
+    variant: 'simp',
     tests: canonicalTests,
   },
   {
     path: '/zhongwen/articles/cabcdefghijo/trad',
     service: 'zhongwen',
     runforEnv: 'local',
+    variant: 'trad',
     tests: canonicalTests,
   },
 ];
