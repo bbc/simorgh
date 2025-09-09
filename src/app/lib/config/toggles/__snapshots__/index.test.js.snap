@@ -25,9 +25,6 @@ exports[`Toggles Config when application environment is live should contain corr
   "eventTracking": {
     "enabled": true,
   },
-  "globalLanguageHomepage": {
-    "enabled": false,
-  },
   "homePageRadioSchedule": {
     "enabled": false,
   },
@@ -108,9 +105,6 @@ exports[`Toggles Config when application environment is local should contain cor
   "eventTracking": {
     "enabled": true,
   },
-  "globalLanguageHomepage": {
-    "enabled": true,
-  },
   "homePageRadioSchedule": {
     "enabled": true,
   },
@@ -189,9 +183,6 @@ exports[`Toggles Config when application environment is test should contain corr
     "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|dari|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|ws|vietnamese|yoruba|zhongwen)",
   },
   "eventTracking": {
-    "enabled": true,
-  },
-  "globalLanguageHomepage": {
     "enabled": true,
   },
   "homePageRadioSchedule": {
