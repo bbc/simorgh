@@ -195,8 +195,19 @@ export default ({
           id={`social-links-${nthCurationByStyleAndProminence}`}
         />
       );
-    case MEDIA_COLLECTION:
-      return mediaCollection ? <MediaLoader blocks={mediaCollection} /> : null;
+    case MEDIA_COLLECTION: {
+      const mediaCollectionId = `media-collection-${nthCurationByStyleAndProminence}`;
+
+      return mediaCollection ? (
+        <section
+          role="region"
+          aria-labelledby="bbcMediaPlayer0"
+          data-testid={mediaCollectionId}
+        >
+          <MediaLoader blocks={mediaCollection} />
+        </section>
+      ) : null;
+    }
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:
