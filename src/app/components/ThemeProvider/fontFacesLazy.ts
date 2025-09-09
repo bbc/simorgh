@@ -1,23 +1,24 @@
 import { Services } from '#app/models/types/global';
 
-const REITH_FONTS_DIR = 'https://static.files.bbci.co.uk/fonts/reith/r2.512/';
+const FONTS_BASE_URL = 'https://static.files.bbci.co.uk/fonts/';
 
-const NOTO_SERIF_SINHALA_FONTS_DIR = 'fonts/NotoSerifSinhala/v1.00/';
+const REITH_FONTS_DIR = `${FONTS_BASE_URL}reith/r2.512/`;
 
-const NOTO_SANS_TAMIL_FONTS_DIR = 'fonts/NotoSansTamil/v1.00/';
+const NOTO_SERIF_SINHALA_FONTS_DIR = `${FONTS_BASE_URL}NotoSerifSinhala/v1.00/`;
 
-const NOTO_SANS_TELUGU_FONTS_DIR = 'fonts/NotoSansTelugu/v1.00/';
+const NOTO_SANS_TAMIL_FONTS_DIR = `${FONTS_BASE_URL}NotoSansTamil/v1.00/`;
 
-const NOTO_SANS_GUJARATI_FONTS_DIR = 'fonts/NotoSansGujarati/v1.00/';
+const NOTO_SANS_TELUGU_FONTS_DIR = `${FONTS_BASE_URL}NotoSansTelugu/v1.00/`;
 
-const NOTO_SANS_ETHIOPIC_FONTS_DIR = 'fonts/NotoSansEthiopic/v1.901/';
+const NOTO_SANS_GUJARATI_FONTS_DIR = `${FONTS_BASE_URL}NotoSansGujarati/v1.00/`;
 
-const PADAUK_FONTS_DIR = 'fonts/Padauk/v2.8/';
+const NOTO_SANS_ETHIOPIC_FONTS_DIR = `${FONTS_BASE_URL}NotoSansEthiopic/v1.901/`;
 
-const NOTO_SERIF_BENGALI_FONTS_DIR = 'fonts/NotoSerifBengali/v1.00/';
+const PADAUK_FONTS_DIR = `${FONTS_BASE_URL}Padauk/v2.8/`;
 
-const REITH_QALAM_FONTS_DIR =
-  'https://static.files.bbci.co.uk/fonts/reith-qalam/1.310/';
+const NOTO_SERIF_BENGALI_FONTS_DIR = `${FONTS_BASE_URL}NotoSerifBengali/v1.00/`;
+
+const REITH_QALAM_FONTS_DIR = `${FONTS_BASE_URL}reith-qalam/1.310/`;
 
 const REITH_SERIF_LIGHT = {
   name: 'BBCReithSerif_WNumbers_Lt',
