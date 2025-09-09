@@ -38,7 +38,7 @@ const Fixture = ({
     duration={duration}
     isLive={isLive}
     readTime={readTime}
-    {...(readTimeVariant && { readTimeVariant })}
+    readTimeVariant={readTimeVariant}
   />
 );
 
