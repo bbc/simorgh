@@ -269,7 +269,17 @@ describe('Navigation Container', () => {
   });
 
   describe('Language Navigation', () => {
-    it('renders LanguageNavigation for WS service when language homepage toggle is enabled', async () => {
+    const originalEnv = process.env.SIMORGH_APP_ENV;
+
+    beforeEach(() => {
+      process.env.SIMORGH_APP_ENV = 'test';
+    });
+
+    afterEach(() => {
+      process.env.SIMORGH_APP_ENV = originalEnv;
+    });
+
+    it('should render LanguageNavigation for WS service in non-live environment', async () => {
       const { getByTestId } = await act(async () =>
         render(<Navigation />, {
           bbcOrigin: 'https://www.test.bbc.co.uk',
@@ -279,14 +289,15 @@ describe('Navigation Container', () => {
           service: 'ws',
           statusCode: 200,
           pathname: '/ws/languages',
-          toggles: { globalLanguageHomepage: { enabled: true } },
         }),
       );
 
       expect(getByTestId('collapsible-nav')).toBeInTheDocument();
     });
 
-    it('renders standard navigation when toggle is disabled', async () => {
+    it('should render standard navigation for WS service in live environment', async () => {
+      process.env.SIMORGH_APP_ENV = 'live';
+
       const { container, queryByText } = await act(async () =>
         render(<Navigation />, {
           bbcOrigin: 'https://www.test.bbc.co.uk',
@@ -296,7 +307,6 @@ describe('Navigation Container', () => {
           service: 'ws',
           statusCode: 200,
           pathname: '/ws/languages',
-          toggles: { globalLanguageHomepage: { enabled: false } },
         }),
       );
 

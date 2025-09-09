@@ -22,9 +22,6 @@ export default {
   eventTracking: {
     enabled: true,
   },
-  globalLanguageHomepage: {
-    enabled: true,
-  },
   homePageRadioSchedule: {
     enabled: true,
   },

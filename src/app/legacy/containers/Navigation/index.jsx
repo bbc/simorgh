@@ -7,7 +7,7 @@ import {
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { RequestContext } from '#contexts/RequestContext';
-import useToggle from '#hooks/useToggle';
+import isLive from '#app/lib/utilities/isLive';
 import LanguageNavigation from './LanguageNavigation/lazy';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Canonical from './index.canonical';
@@ -53,11 +53,14 @@ const renderListItems = (
 const NavigationContainer = ({ propsForTopBarOJComponent }) => {
   const { isAmp, isLite } = use(RequestContext);
   const { blocks = [] } = propsForTopBarOJComponent || {};
-  const { script, translations, navigation, service, dir } =
-    use(ServiceContext);
-  const { enabled: isGlobalLanguageHomepageEnabled } = useToggle(
-    'globalLanguageHomepage',
-  );
+  const {
+    script,
+    translations,
+    navigation,
+    service,
+    dir,
+    collapsibleNavigation,
+  } = use(ServiceContext);
 
   const { canonicalLink, origin } = use(RequestContext);
   const { currentPage, navMenuText } = translations;
@@ -84,7 +87,10 @@ const NavigationContainer = ({ propsForTopBarOJComponent }) => {
 
   const dropdownNavViewTracker = useViewTracker(dropdownNavEventTrackingData);
 
-  if (isGlobalLanguageHomepageEnabled && service === 'ws') {
+  // TODO: isLive statement to be removed when Global Language page goes live. https://bbc.atlassian.net/browse/WS-1254
+  const renderLanguageNavigation = !isLive() && collapsibleNavigation?.length;
+
+  if (renderLanguageNavigation) {
     return <LanguageNavigation />;
   }
 

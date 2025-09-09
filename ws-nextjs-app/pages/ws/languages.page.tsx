@@ -3,8 +3,8 @@ import dynamic from 'next/dynamic';
 import { GetServerSideProps } from 'next';
 import { STATIC_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
 import PageDataParams from '#app/models/types/pageDataParams';
+import isLive from '#app/lib/utilities/isLive';
 import { Services, PageTypes } from '#app/models/types/global';
-import useToggle from '#hooks/useToggle';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import getPageData from '../../utilities/pageRequests/getPageData';
 import { LanguagesPageProps } from './types';
@@ -18,7 +18,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     'public, stale-if-error=300, stale-while-revalidate=120, max-age=30',
   );
 
-  const { renderer_env: rendererEnv } = context.query as PageDataParams;
+  const { id, renderer_env: rendererEnv } = context.query as PageDataParams;
   const baseProps = {
     error: null,
     isAmp: false,
@@ -37,17 +37,16 @@ export const getServerSideProps: GetServerSideProps = async context => {
     pathname: context?.resolvedUrl,
   };
 
-  const toggles = await getToggles('ws');
-  const isGlobalLanguageHomepageEnabled =
-    toggles?.globalLanguageHomepage?.enabled;
-
-  if (!isGlobalLanguageHomepageEnabled) {
+  if (isLive()) {
     return {
       props: baseProps,
     };
   }
 
+  const toggles = await getToggles('ws');
+
   const { data } = await getPageData({
+    id,
     service: 'ws',
     rendererEnv,
     resolvedUrl: '/ws/languages',
@@ -62,6 +61,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
         status: data?.status,
         pageType: HOME_PAGE,
         service: 'ws',
+        toggles,
         pageData: {
           metadata: {
             type: HOME_PAGE,
@@ -79,7 +79,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
       service: 'ws',
       pathname: '/ws/languages',
       status: data?.status,
-      toggles,
       pageData: {
         ...data?.pageData,
         metadata: {
@@ -96,11 +95,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
 };
 
 export default function LanguagesPage({ ...props }: LanguagesPageProps) {
-  const { enabled: isGlobalLanguageHomepageEnabled } = useToggle(
-    'globalLanguageHomepage',
-  );
-
-  if (!isGlobalLanguageHomepageEnabled) {
+  if (isLive()) {
     return <LanguagesPageLayout />;
   }
   return <HomePage pageData={props.pageData} />;
