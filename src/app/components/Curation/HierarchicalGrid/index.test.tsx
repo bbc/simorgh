@@ -183,7 +183,7 @@ describe('Hierarchical Grid Curation', () => {
         headingLevel={headingLevel}
         summaries={fixtureDataIncludingReadTime}
         eventTrackingData={minimalEventTrackingData}
-        readTimeVariant="control"
+        readTimeVariant="variant1"
       />,
     );
     expect(container.queryAllByTestId('read-time').length).toBe(12);

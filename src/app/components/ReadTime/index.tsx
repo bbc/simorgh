@@ -148,6 +148,10 @@ export const ReadTime = ({
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const viewRef = useViewTracker(eventTrackingData);
 
+  const isControlVariant = readTimeVariant === 'control';
+
+  if (isControlVariant) return <div {...viewRef} />;
+
   return (
     <span className={className} data-testid="read-time" {...viewRef}>
       <Text css={styles.readTimeText} size="brevier">

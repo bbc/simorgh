@@ -31,6 +31,12 @@ describe('ReadTime', () => {
       expect(getByText(expectedCopy)).toBeInTheDocument();
     },
   );
+  it('Optimizely - Should render a blank div for a control variant', () => {
+    const container = render(
+      <ReadTime readTimeValue={4} promoId="12345" readTimeVariant="control" />,
+    );
+    expect(container.queryByTestId('read-time')).not.toBeInTheDocument();
+  });
   describe('view tracking', () => {
     const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
 
