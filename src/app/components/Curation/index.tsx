@@ -193,6 +193,7 @@ export default ({
           summaries={summaries}
           title={title}
           id={`social-links-${nthCurationByStyleAndProminence}`}
+          eventTrackingData={eventTrackingData}
         />
       );
     case MEDIA_COLLECTION: {

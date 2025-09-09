@@ -47,6 +47,7 @@ const Component = ({
           <SocialLinks
             summaries={curation.summaries as Summary[]}
             title={curation.title || 'Social Links'}
+            eventTrackingData={{ componentName: 'social-links' }}
           />
         </ServiceContextProvider>
       </ThemeProvider>
