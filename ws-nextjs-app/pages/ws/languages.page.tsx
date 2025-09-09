@@ -5,7 +5,6 @@ import { STATIC_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
 import PageDataParams from '#app/models/types/pageDataParams';
 import isLive from '#app/lib/utilities/isLive';
 import { Services, PageTypes } from '#app/models/types/global';
-import getToggles from '#app/lib/utilities/getToggles/withCache';
 import getPageData from '../../utilities/pageRequests/getPageData';
 import { LanguagesPageProps } from './types';
 
@@ -18,7 +17,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     'public, stale-if-error=300, stale-while-revalidate=120, max-age=30',
   );
 
-  const { id, renderer_env: rendererEnv } = context.query as PageDataParams;
+  const { renderer_env: rendererEnv } = context.query as PageDataParams;
   const baseProps = {
     error: null,
     isAmp: false,
@@ -43,10 +42,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     };
   }
 
-  const toggles = await getToggles('ws');
-
-  const { data } = await getPageData({
-    id,
+  const { data, toggles } = await getPageData({
     service: 'ws',
     rendererEnv,
     resolvedUrl: '/ws/languages',
