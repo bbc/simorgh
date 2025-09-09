@@ -12,7 +12,7 @@ const canonicalTests = [
 
 const canonicalSmokeTestSuites = [
   {
-    path: '/news/articles/cxvxrj8tvppo?renderer_env=live',
+    path: '/news/articles/cxvxrj8tvppo',
     service: 'news',
     runforEnv: 'local',
     tests: canonicalTests,
