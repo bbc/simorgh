@@ -45,6 +45,9 @@ describe('ReadTime', () => {
 
       const expected = {
         componentName: 'read-time',
+        experimentName: 'newswb_ws_homepage_read_time',
+        experimentVariant: 'minutes',
+        sendOptimizelyEvents: true,
         itemTracker: {
           duration: 240000,
           label: 'Read time: 4 minutes',
