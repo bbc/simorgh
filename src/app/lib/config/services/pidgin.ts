@@ -318,7 +318,7 @@ export const service: DefaultServiceConfig = {
         text: 'Why you fit trust BBC News',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'De way wey we de take go external link.',
       },
       links: [

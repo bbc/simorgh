@@ -8,6 +8,10 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import { createSrcsets } from '#lib/utilities/srcSet';
 import getLocator from '#lib/utilities/imageSrcHelpers/locator';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import useViewTracker from '#app/hooks/useViewTracker';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+
 import Heading from '../Heading';
 import Image from '../Image';
 import styles from './index.styles';
@@ -16,6 +20,7 @@ interface SocialLinksProps {
   id?: string;
   title: string;
   summaries: Summary[];
+  eventTrackingData?: EventTrackingData;
 }
 
 const SocialLinkImage = ({ imageUrl }: { imageUrl: string }) => {
@@ -62,7 +67,13 @@ const SocialLinkImage = ({ imageUrl }: { imageUrl: string }) => {
   );
 };
 
-const SocialLink = ({ summary }: { summary: Summary }) => {
+const SocialLink = ({
+  summary,
+  clickTrackerHandler,
+}: {
+  summary: Summary;
+  clickTrackerHandler?: ReturnType<typeof useClickTrackerHandler>;
+}) => {
   const linkLabelId = useId();
   const hasDescription = Boolean(summary.description);
 
@@ -73,10 +84,11 @@ const SocialLink = ({ summary }: { summary: Summary }) => {
         href={summary.link}
         css={styles.link}
         {...(hasDescription && { 'aria-labelledby': linkLabelId })}
+        {...clickTrackerHandler}
       >
         {hasDescription ? (
           // eslint-disable-next-line jsx-a11y/aria-role
-          <span id={linkLabelId} role="text">
+          <span id={linkLabelId}>
             {summary.title}
             <VisuallyHiddenText>{`, ${summary.description}`}</VisuallyHiddenText>
           </span>
@@ -92,12 +104,28 @@ const SocialLinks = ({
   title,
   summaries = [],
   id = 'social-links-1',
+  eventTrackingData = { componentName: 'social-links' },
 }: SocialLinksProps) => {
+  const viewTracker = useViewTracker(eventTrackingData);
+  const getClickTrackerHandler = useClickTrackerHandler;
   if (!summaries.length) {
     return null;
   }
 
   const hasMultipleItems = summaries.length > 1;
+
+  const buildPromoEventTrackingData = (promo: Summary, index: number) => {
+    const itemTracker = {
+      type: 'social-link-promo',
+      text: promo.title,
+      position: index + 1,
+      resourceId: promo.id,
+    };
+    return {
+      itemTracker,
+      ...eventTrackingData,
+    };
+  };
 
   return (
     <section
@@ -105,23 +133,39 @@ const SocialLinks = ({
       aria-labelledby={id}
       data-testid={id}
       css={styles.container}
+      {...viewTracker}
     >
       <Heading level={2} id={id} css={styles.heading}>
         {title}
       </Heading>
       {hasMultipleItems ? (
         <ul css={styles.unorderedList} role="list">
-          {summaries.map(summary => {
+          {summaries.map((summary, index) => {
+            const promoEventTrackingData = buildPromoEventTrackingData(
+              summary,
+              index,
+            );
+            const clickTrackerHandler = getClickTrackerHandler(
+              promoEventTrackingData,
+            );
             return (
               <li css={styles.item} key={summary.title}>
-                <SocialLink summary={summary} />
+                <SocialLink
+                  summary={summary}
+                  clickTrackerHandler={clickTrackerHandler}
+                />
               </li>
             );
           })}
         </ul>
       ) : (
         <div css={styles.item}>
-          <SocialLink summary={summaries[0]} />
+          <SocialLink
+            summary={summaries[0]}
+            clickTrackerHandler={getClickTrackerHandler(
+              buildPromoEventTrackingData(summaries[0], 0),
+            )}
+          />
         </div>
       )}
     </section>

@@ -351,7 +351,7 @@ export const service: DefaultServiceConfig = {
         text: 'Dlaczego ufamy BBC',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Przeczytaj o naszych zasadach linkowania zewnętrznego.',
       },
       links: [
