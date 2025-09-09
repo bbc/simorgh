@@ -26,7 +26,7 @@ export interface Summary extends BaseSummary {
   readTime?: number;
   eventTrackingData?: EventTrackingData;
   visualProminence?: VisualProminence | string;
-  readTimeVariant?: string;
+  readTimeVariant?: string | null;
 }
 
 export const VISUAL_STYLE = {
@@ -78,5 +78,5 @@ export interface Curation extends BaseCuration {
   curationLength?: number;
   nthCurationByStyleAndProminence?: number;
   renderVisuallyHiddenH2Title?: boolean;
-  readTimeVariant?: string;
+  readTimeVariant?: string | null;
 }

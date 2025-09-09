@@ -138,7 +138,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       portraitVideo={portraitVideo}
                       renderVisuallyHiddenH2Title={position === 0}
                       curationId={curationId}
-                      {...(readTimeVariant && { readTimeVariant })}
+                      readTimeVariant={readTimeVariant}
                     />
                     {index === indexOfFirstNonBanner && <MPU />}
                   </React.Fragment>

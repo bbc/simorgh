@@ -20,4 +20,8 @@ export default {
     css({
       margin: `0 0 ${pixelsToRem(34.5)}rem`,
     }),
+  readTimeHomepagePlaceholderControl: () =>
+    css({
+      height: `${pixelsToRem(18.5)}rem`,
+    }),
 };

@@ -11,7 +11,7 @@ import styles from './index.styles';
 type ReadTimeProps = {
   readTimeValue?: number;
   className?: string;
-  readTimeVariant?: string;
+  readTimeVariant?: string | null;
   promoId?: string;
 };
 
@@ -113,6 +113,10 @@ export const ReadTimeArticleExperiment = ({
   );
 };
 
+const HomepagePlaceholder = (props: React.PropsWithChildren) => (
+  <div {...props} css={styles.readTimeHomepagePlaceholderControl} />
+);
+
 export const ReadTime = ({
   readTimeValue,
   readTimeVariant,
@@ -125,6 +129,8 @@ export const ReadTime = ({
     readTimeVariant,
     readTimeVariant !== 'off',
   ].every(Boolean);
+
+  if (readTimeVariant === null) return <HomepagePlaceholder />;
 
   if (!validRender) return null;
 
@@ -150,7 +156,7 @@ export const ReadTime = ({
 
   const isControlVariant = readTimeVariant === 'control';
 
-  if (isControlVariant) return <div {...viewRef} />;
+  if (isControlVariant) return <HomepagePlaceholder {...viewRef} />;
 
   return (
     <span className={className} data-testid="read-time" {...viewRef}>
