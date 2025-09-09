@@ -119,14 +119,12 @@ export const ReadTime = ({
   promoId,
   className,
 }: ReadTimeProps) => {
-  const renderConditions = [
+  const validRender = [
     !isLive(),
     readTimeValue,
     readTimeVariant,
     readTimeVariant !== 'off',
-  ];
-
-  const validRender = renderConditions.every(Boolean);
+  ].every(Boolean);
 
   if (!validRender) return null;
 
