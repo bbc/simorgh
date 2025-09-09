@@ -56,10 +56,10 @@ const CurationPromo = ({
     (type === 'photogallery' && `${photoGalleryTranslation}, `);
 
   const clickTrackerHandler = useClickTrackerHandler({
+    ...eventTrackingData,
     sendOptimizelyEvents: true,
     experimentName: 'newswb_ws_homepage_read_time',
     experimentVariant: readTimeVariant,
-    ...eventTrackingData,
   });
 
   return (

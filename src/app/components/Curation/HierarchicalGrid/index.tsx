@@ -99,10 +99,10 @@ const HiearchicalGrid = ({
 
           const promoEventTrackingData = buildPromoEventTrackingData(promo, i);
           const clickTrackerHandler = getClickTrackerHandler({
+            ...promoEventTrackingData,
             sendOptimizelyEvents: true,
             experimentName: 'newswb_ws_homepage_read_time',
             experimentVariant: readTimeVariant,
-            ...promoEventTrackingData,
           });
 
           return (
