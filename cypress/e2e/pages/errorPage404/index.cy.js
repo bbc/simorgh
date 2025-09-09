@@ -146,6 +146,7 @@ const canonicalTestSuites = Cypress.env('SMOKE')
 // });
 
 runTestsForPage({
+  failOnStatusCode: false,
   pageType: ERROR_PAGE,
   testSuites: [...canonicalTestSuites],
 });

@@ -4,6 +4,7 @@ export default ({
   pageType,
   testSuites,
   beforeAll = [],
+  failOnStatusCode = true,
   testIsolation = false,
 }) => {
   const serviceToRun = Cypress.env('ONLY_SERVICE');
@@ -24,7 +25,7 @@ export default ({
       describe(`${Cypress.config().baseUrl}${path}`, { testIsolation }, () => {
         before(() => {
           beforeAll.forEach(runBeforeAll => runBeforeAll());
-          cy.visit(path);
+          cy.visit(path, { failOnStatusCode });
         });
 
         beforeEach(() => {
