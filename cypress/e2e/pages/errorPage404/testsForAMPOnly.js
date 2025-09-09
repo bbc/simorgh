@@ -1,8 +1,5 @@
 // For testing features that may differ across services but share a common logic e.g. translated strings.
-export const testsThatFollowSmokeTestConfigForAMPOnly = ({
-  service,
-  pageType,
-}) =>
+export default ({ service, pageType, path }) =>
   describe(`Amp Tests for ${service} ${pageType}`, () => {
     it('should return a 404 error code', () => {
       cy.testResponseCodeAndType({

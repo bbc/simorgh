@@ -1,13 +1,13 @@
 import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
-// import { testsThatFollowSmokeTestConfig } from './tests';
-// import { testsThatFollowSmokeTestConfigForAMPOnly } from './testsForAMPOnly';
+import testsThatFollowSmokeTestConfig from './tests';
+import testsThatFollowSmokeTestConfigForAMPOnly from './testsForAMPOnly';
 import testsThatFollowSmokeTestConfigForCanonicalOnly from './testsForCanonicalOnly';
 import { ERROR_PAGE } from '../../../../src/app/routes/utils/pageTypes';
 
 const canonicalTests = [
-  //testsThatFollowSmokeTestConfig,
+  // testsThatFollowSmokeTestConfig,
   testsThatFollowSmokeTestConfigForCanonicalOnly,
-  // testsThatFollowSmokeTestConfigForAMPOnly,
+  testsThatFollowSmokeTestConfigForAMPOnly,
 ];
 
 const canonicalSmokeTestSuites = [
@@ -134,19 +134,16 @@ const canonicalTestSuites = Cypress.env('SMOKE')
   ? canonicalSmokeTestSuites
   : canonicalNonSmokeTestSuites;
 
-// const ampTestSuites = [
-//   ...canonicalTestSuites,
-//   ...ampOnlyNonSmokeTestSuites,
-// ].map(testSuite => {
-//   return {
-//     ...testSuite,
-//     path: `${testSuite.path}.amp`,
-//     tests: [...ampTests],
-//   };
-// });
+const ampTestSuites = [...canonicalTestSuites].map(testSuite => {
+  return {
+    ...testSuite,
+    path: `${testSuite.path}.amp`,
+    tests: [...canonicalTests],
+  };
+});
 
 runTestsForPage({
   failOnStatusCode: false,
   pageType: ERROR_PAGE,
-  testSuites: [...canonicalTestSuites],
+  testSuites: [...canonicalTestSuites, ...ampTestSuites],
 });
