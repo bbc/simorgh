@@ -137,6 +137,9 @@ export const ReadTime = ({
 
   const eventTrackingData: EventTrackingData = {
     componentName: 'read-time',
+    sendOptimizelyEvents: true,
+    experimentName: 'newswb_ws_homepage_read_time',
+    experimentVariant: readTimeVariant,
     itemTracker: {
       label: `Read time: ${readTimeValue} ${minutesLabel}`,
       duration: readTimeInMilliseconds,
