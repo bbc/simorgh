@@ -1,8 +1,10 @@
 import { Services } from '#app/models/types/global';
 
-const FONTS_BASE_URL = 'https://static.files.bbci.co.uk/fonts/';
+const REITH_BASE_URL = 'https://static.files.bbci.co.uk/fonts/';
 
-const REITH_FONTS_DIR = `${FONTS_BASE_URL}reith/r2.512/`;
+const REITH_FONTS_DIR = `${REITH_BASE_URL}reith/r2.512/`;
+
+const FONTS_BASE_URL = `https://static.files.bbci.co.uk/ws/simorgh-assets/public/fonts/`;
 
 const NOTO_SERIF_SINHALA_FONTS_DIR = `${FONTS_BASE_URL}NotoSerifSinhala/v1.00/`;
 
@@ -18,7 +20,7 @@ const PADAUK_FONTS_DIR = `${FONTS_BASE_URL}Padauk/v2.8/`;
 
 const NOTO_SERIF_BENGALI_FONTS_DIR = `${FONTS_BASE_URL}NotoSerifBengali/v1.00/`;
 
-const REITH_QALAM_FONTS_DIR = `${FONTS_BASE_URL}reith-qalam/1.310/`;
+const REITH_QALAM_FONTS_DIR = `${REITH_BASE_URL}reith-qalam/1.310/`;
 
 const REITH_SERIF_LIGHT = {
   name: 'BBCReithSerif_WNumbers_Lt',
