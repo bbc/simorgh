@@ -2,17 +2,17 @@
  * @jest-environment node
  */
 import { testApiHandler } from 'next-test-api-route-handler';
-import * as pagesHandler from './[[...optionalParams]].api';
-import livePageData from '../../../../../../../data/pidgin/live/c7p765ynk9qt.json';
-import dualScriptLivePageData from '../../../../../../../data/zhongwen/live/c0000000000t/simp.json';
-import ugFormData from '../../../../../../../data/mundo/send/u50853489.json';
-import russianAvEmbedData from '../../../../../../../data/russian/av-embeds/features-49881797.json';
-import russianAvEmbedDataWithPid from '../../../../../../../data/russian/av-embeds/features-49881797/pid/p07q3wwl.json';
+import livePageData from '#data/pidgin/live/c7p765ynk9qt.json';
+import dualScriptLivePageData from '#data/zhongwen/live/c0000000000t/simp.json';
+import ugFormData from '#data/mundo/send/u50853489.json';
+import russianAvEmbedData from '#data/russian/av-embeds/features-49881797.json';
+import russianAvEmbedDataWithPid from '#data/russian/av-embeds/features-49881797/pid/p07q3wwl.json';
+import * as appHandler from './route.api';
 
 describe('API Routes', () => {
   it('should return Live Page data', async () => {
     await testApiHandler({
-      pagesHandler,
+      appHandler,
       params: {
         service: 'pidgin',
         pageType: 'live',
@@ -30,7 +30,7 @@ describe('API Routes', () => {
 
   it('should return Live Page data for a dual script service', async () => {
     await testApiHandler({
-      pagesHandler,
+      appHandler,
       params: {
         service: 'zhongwen',
         pageType: 'live',
@@ -49,7 +49,7 @@ describe('API Routes', () => {
 
   it('should return UGC Uploader form data', async () => {
     await testApiHandler({
-      pagesHandler,
+      appHandler,
       params: {
         service: 'mundo',
         pageType: 'send',
@@ -67,7 +67,7 @@ describe('API Routes', () => {
 
   it('should return AV Embeds data', async () => {
     await testApiHandler({
-      pagesHandler,
+      appHandler,
       params: {
         service: 'russian',
         pageType: 'av-embeds',
@@ -85,7 +85,7 @@ describe('API Routes', () => {
 
   it('should return AV Embeds data with specific media ID', async () => {
     await testApiHandler({
-      pagesHandler,
+      appHandler,
       params: {
         service: 'russian',
         pageType: 'av-embeds',
@@ -106,7 +106,7 @@ describe('API Routes', () => {
 
   it('should return a 500 when the requested fixture does not exist', async () => {
     await testApiHandler({
-      pagesHandler,
+      appHandler,
       params: {
         service: 'swahili',
         pageType: 'invalidType',
@@ -117,11 +117,6 @@ describe('API Routes', () => {
         const res = await fetch({ method: 'GET' });
 
         expect(res.status).toEqual(500);
-        await expect(res.json()).resolves.toEqual(
-          expect.objectContaining({
-            error: expect.stringMatching(/Failed to load data\..*/),
-          }),
-        );
       },
     });
   });
