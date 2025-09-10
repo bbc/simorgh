@@ -41,7 +41,7 @@ const LiveHeaderMedia = ({
   clickCallback = () => null,
 }: LiveHeaderMediaProps) => {
   const { translations } = use(ServiceContext);
-  const { isLite, nonce } = use(RequestContext);
+  const { isLite } = use(RequestContext);
   const [showMedia, setShowMedia] = useState(false);
 
   const eventTrackingData: EventTrackingMetadata = {
