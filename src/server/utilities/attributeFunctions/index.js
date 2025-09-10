@@ -2,7 +2,7 @@ import encodeChunkFilename from '../encodeChunkUri';
 
 const crossOrigin = 'anonymous';
 
-export const getScriptAttributes = bundleType => chunk => {
+export const getScriptAttributes = (bundleType, nonce = null) => chunk => {
   if (chunk) {
     const { url } = chunk;
 
@@ -13,6 +13,7 @@ export const getScriptAttributes = bundleType => chunk => {
       ...(url && { src: encodeChunkFilename(chunk) }),
       ...(bundleType === 'modern' && { type: 'module' }),
       ...(bundleType === 'legacy' && { noModule: true }),
+      ...(nonce && { nonce: nonce }),
     };
   }
 

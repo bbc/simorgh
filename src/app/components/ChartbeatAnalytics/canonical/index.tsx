@@ -20,7 +20,7 @@ const CanonicalChartbeatBeacon = ({
         })();
       `}
     </script>
-    <script defer type="text/javascript" src={chartbeatSource} />
+    <script {...(nonce ? { nonce } : {})} defer type="text/javascript" src={chartbeatSource} />
   </Helmet>
 );
 

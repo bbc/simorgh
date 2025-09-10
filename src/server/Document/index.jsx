@@ -91,11 +91,11 @@ const renderDocument = async ({
   const headHelmet = Helmet.renderStatic();
 
   const modernScripts = modernExtractor.getScriptElements(
-    getScriptAttributes('modern'),
+    getScriptAttributes('modern', nonce),
   );
 
   const legacyScripts =
-    !isDev && legacyExtractor.getScriptElements(getScriptAttributes('legacy'));
+    !isDev && legacyExtractor.getScriptElements(getScriptAttributes('legacy', nonce));
 
   const links = modernExtractor.getLinkElements(getLinkAttributes); // TODO investigate a way to conditionally preload modern/legacy scripts
 
