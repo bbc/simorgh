@@ -80,7 +80,7 @@ const skipMiddleware = (_req, _res, next) => {
 };
 
 const injectCspHeaderProdBuild =
-  process.env.NODE_ENV !== 'production' ? skipMiddleware : injectCspHeader;
+  process.env.NODE_ENV === 'production' ? skipMiddleware : injectCspHeader;
 
 server
   .disable('x-powered-by')
