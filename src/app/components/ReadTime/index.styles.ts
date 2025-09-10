@@ -22,6 +22,6 @@ export default {
     }),
   readTimeHomepagePlaceholderControl: () =>
     css({
-      height: `${pixelsToRem(18.5)}rem`,
+      height: `${pixelsToRem(18.4)}rem`,
     }),
 };
