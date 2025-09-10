@@ -7,20 +7,8 @@ import { AdProps } from './types';
 import AdBootstrapJs from './Canonical/AdBootstrapJs';
 
 const AdContainer = ({ slotType, className, adcampaign }: AdProps) => {
-  const { isAmp, isLite, showAdsBasedOnLocation, country, nonce } =
+  const { isAmp, isLite, showAdsBasedOnLocation, nonce } =
     useContext(RequestContext);
-  const { enabled: isAdsNonceEnabled, value: countries } =
-    useToggle('adsNonce');
-
-  const countriesForNonce =
-    countries
-      ?.split(',')
-      ?.map((s: string) => s.trim())
-      .filter(Boolean) || [];
-  const nonceEnabledForCountry =
-    countriesForNonce?.length === 0 || countriesForNonce.includes(country);
-  const isNonceAllowed = isAdsNonceEnabled && nonceEnabledForCountry;
-  const addNonce = isNonceAllowed ? nonce : null;
 
   const { enabled: adsEnabled } = useToggle('ads');
 
@@ -33,8 +21,8 @@ const AdContainer = ({ slotType, className, adcampaign }: AdProps) => {
     return (
       <>
         {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
-        {!isAmp && <AdBootstrapJs adcampaign={adcampaign} nonce={addNonce} />}
-        <Ad nonce={addNonce} slotType={slotType} className={className} />
+        {!isAmp && <AdBootstrapJs adcampaign={adcampaign} nonce={nonce} />}
+        <Ad nonce={nonce} slotType={slotType} className={className} />
       </>
     );
   }

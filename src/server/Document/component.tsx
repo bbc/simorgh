@@ -20,7 +20,6 @@ type Props = {
   modernScripts: React.ReactElement;
   service?: string;
   nonce?: string;
-  cspHeader?: string;
 };
 
 const Document = ({
@@ -35,7 +34,6 @@ const Document = ({
   modernScripts,
   service,
   nonce,
-  cspHeader,
 }: Props) => {
   const title = helmet.title.toComponent();
   const htmlAttrs = helmet.htmlAttributes.toComponent();
@@ -92,7 +90,7 @@ const Document = ({
           styles={css}
           title={title}
           service={service}
-          cspHeader={cspHeader}
+          cspHeader={data.cspHeader}
           nonce={nonce}
         />
       );

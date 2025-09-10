@@ -23,7 +23,6 @@ const renderDocument = async ({
   service,
   url,
   nonce,
-  cspHeader,
 }) => {
   const isDev = process.env.NODE_ENV === 'development';
   const cache = createCache({ key: 'bbc' });
@@ -74,7 +73,6 @@ const renderDocument = async ({
             isApp={isApp}
             isLite={isLite}
             nonce={nonce}
-            cspHeader={cspHeader}
           />
         </CacheProvider>
       </ChunkExtractorManager>,
@@ -114,7 +112,6 @@ const renderDocument = async ({
       isLite={isLite}
       service={service}
       nonce={nonce}
-      cspHeader={cspHeader}
     />,
   );
 

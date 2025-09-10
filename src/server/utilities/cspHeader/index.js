@@ -1,10 +1,8 @@
-import csp from 'helmet-csp';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import isLiveEnv from '#lib/utilities/isLive';
 import { cspDirectives } from './directives';
 
-const injectCspHeader = (req, res, next) => {
-  const { isAmp, service } = getRouteProps(req.url);
+const injectCspHeader = ({ isAmp, service, nonce, res }) => {
 
   res.setHeader(
     'report-to',
@@ -25,15 +23,24 @@ const injectCspHeader = (req, res, next) => {
     isAmp,
     isLive: isLiveEnv(),
     service,
-    ...(res.get('x-nonce') && { nonce: res.get('x-nonce') }),
+    nonce,
   });
-
-  const middleware = csp({
-    directives,
-    useDefaults: false,
+  let cspHeader = '';
+  Object.keys(directives).forEach(directive => {
+    cspHeader += `${directive} `;
+    if (directives[directive] && Array.isArray(directives[directive])) {
+        cspHeader += directives[directive].join(' ');
+    }
+    else {
+        cspHeader += directives[directive];
+    }
+    cspHeader += ';'
+    
   });
-
-  middleware(req, res, next);
+  res.set(
+    'Content-Security-Policy',
+    cspHeader,
+  );
 };
 
 export default injectCspHeader;

@@ -16,7 +16,6 @@ interface Props extends BaseRendererProps {
   modernScripts: React.ReactElement;
   service?: string;
   nonce?: string;
-  cspHeader?: string;
 }
 
 const showScripts = (scripts: React.ReactElement | React.ReactElement[]) => {

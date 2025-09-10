@@ -75,13 +75,6 @@ const server = express();
  * Default headers, compression, logging, status route
  */
 
-const skipMiddleware = (_req, _res, next) => {
-  next();
-};
-
-const injectCspHeaderProdBuild =
-  process.env.NODE_ENV === 'production' ? skipMiddleware : injectCspHeader;
-
 server
   .disable('x-powered-by')
   .use(
@@ -222,13 +215,12 @@ const injectNonceHeader = (service, country, toggles, showAdsBasedOnLocation, re
 server.get(
   '/*',
   [
-    injectCspHeaderProdBuild,
     injectDefaultCacheHeader,
     injectReferrerPolicyHeader,
     injectResourceHintsHeader,
     injectPlatformToRequestChainHeader,
   ],
-  async ({ url, query, headers, path: urlPath }, res) => {
+  async ({ url, query, headers, path: urlPath }, res, req) => {
     let derivedPageType = 'Unknown';
     let serverSideExperiments = [];
 
@@ -278,20 +270,14 @@ server.get(
       data.showCookieBannerBasedOnCountry = showCookieBannerBasedOnCountry;
       data.isUK = isUK;
       data.isLite = isLite;
-      data.nonce = res.get('x-nonce') || null;
-      data.cspHeader = res.get('Content-Security-Policy');
       data.country = (headers['x-country'] || headers['x-bbc-edge-country'])
         ?.toString()
         .toLowerCase();
       const nonce = injectNonceHeader(service, data.country, toggles, data.showAdsBasedOnLocation, res);
-      if (nonce) {
-        // This is less than ideal
-        // Ideally we'd set CSP here with nonce as an argument but seems like a lot of work for now
-        res.set(
-          'Content-Security-Policy',
-          data.cspHeader.replace(';script-src', `;script-src 'nonce-${nonce}' 'unsafe-eval'`),
-        );
-      }
+      injectCspHeader({ isAmp, service, nonce, res });
+
+      data.nonce = nonce
+      data.cspHeader = res.get('Content-Security-Policy');
 
       let { status } = data;
       // Set derivedPageType based on returned page data
@@ -328,7 +314,6 @@ server.get(
           url,
           variant,
           nonce: data.nonce,
-          cspHeader: data.cspHeader,
         });
       } catch (error) {
         const { message } = error;
@@ -364,7 +349,6 @@ server.get(
           url,
           variant,
           nonce: data.nonce,
-          cspHeader: data.cspHeader,
         });
       }
 

@@ -74,10 +74,12 @@ const mockRouteProps = ({
   service,
   isAmp,
   isApp,
+  isLite,
   dataResponse,
   responseType,
   variant,
   pageType,
+  nonce,
 }) => {
   const getInitialData =
     responseType === 'reject'
@@ -90,8 +92,10 @@ const mockRouteProps = ({
   getRouteProps.mockReturnValue({
     isAmp,
     isApp,
+    isLite,
     service,
     variant,
+    nonce,
     route: { getInitialData, pageType },
     match: {
       params: { id, service, variant: mockVariantParam },
@@ -131,6 +135,7 @@ const testRenderedData =
         isApp={isApp}
         legacyScripts="__mock_script_elements__"
         modernScripts="__mock_script_elements__"
+        nonce={null}
         service={service}
         links="__mock_link_elements__"
       />,
@@ -1449,6 +1454,7 @@ describe('Server', () => {
             isAmp={isAmp}
             legacyScripts="__mock_script_elements__"
             modernScripts="__mock_script_elements__"
+            nonce={null}
             service={service}
             links="__mock_link_elements__"
           />,
