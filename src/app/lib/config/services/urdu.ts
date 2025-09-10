@@ -390,7 +390,7 @@ export const service: DefaultServiceConfig = {
         text: 'جانیے کہ آپ بی بی سی پر کیوں اعتماد کر سکتے ہیں',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'بیرونی لنکس کے بارے میں ہماری پالیسی.',
       },
       links: [
