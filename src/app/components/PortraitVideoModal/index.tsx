@@ -90,12 +90,14 @@ export interface PortraitVideoModalProps {
   blocks: PortraitClipMediaBlock[];
   onClose: () => void;
   selectedVideoIndex: number;
+  nonce?: string | null;
 }
 
 const PortraitVideoModal = ({
   blocks,
   onClose,
   selectedVideoIndex,
+  nonce,
 }: PortraitVideoModalProps) => {
   const {
     translations: {
@@ -218,6 +220,7 @@ const PortraitVideoModal = ({
             pluginLoaded: pluginLoadedCallback,
             fullscreenExit: onClose,
           }}
+          nonce={nonce}
         />
         <button
           ref={endOfContentButtonRef}

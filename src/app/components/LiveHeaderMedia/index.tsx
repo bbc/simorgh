@@ -190,7 +190,6 @@ const LiveHeaderMedia = ({
           <MemoizedMediaPlayer
             blocks={mediaCollection}
             uniqueId={vpid}
-            nonce={nonce}
           />
         </div>
       </div>
