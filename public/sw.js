@@ -17,6 +17,39 @@ self.addEventListener('install', event => {
   });
 });
 
+// Handle push events for notifications
+self.addEventListener('push', event => {
+  const data = event.data ? event.data.json() : {};
+  const title =
+    data.title ||
+    `${service.charAt(0).toUpperCase() + service.slice(1)} News Update`;
+  const options = {
+    body: data.body || 'Check out the latest news',
+    icon: data.icon || `/images/icons/icon-192x192.png`,
+    badge: data.badge || `/images/icons/icon-96x96.png`,
+    data: {
+      url: data.url || `/${service}`,
+    },
+    tag: data.tag || 'news-notification',
+    // Ensure notification is shown on iOS
+    renotify: true,
+  };
+
+  event.waitUntil(self.registration.showNotification(title, options));
+});
+
+// Handle notification click
+self.addEventListener('notificationclick', event => {
+  event.notification.close();
+  // Open the URL associated with the notification
+  event.waitUntil(clients.openWindow(event.notification.data.url));
+});
+
+// Handle notification close - no special action needed
+self.addEventListener('notificationclose', event => {
+  // Notification was dismissed by the user
+});
+
 const CACHEABLE_FILES = [
   // Reverb
   /^https:\/\/static(?:\.test)?\.files\.bbci\.co\.uk\/ws\/(?:simorgh-assets|simorgh1-preview-assets|simorgh2-preview-assets)\/public\/static\/js\/reverb\/reverb-3.10.2.js$/,

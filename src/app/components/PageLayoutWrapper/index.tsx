@@ -1,7 +1,7 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
 
-import React, { PropsWithChildren, use } from 'react';
+import React, { PropsWithChildren, use, useEffect } from 'react';
 import { jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
@@ -15,6 +15,7 @@ import ManifestContainer from '../../legacy/containers/Manifest';
 import ServiceWorker from '../ServiceWorker';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
+import NotificationPermission from '../NotificationPermission';
 import fontFacesLazy from '../ThemeProvider/fontFacesLazy';
 import styles from './index.styles';
 import { OptimoMostReadRecord, CPSMostReadRecord } from '../MostRead/types';
@@ -203,6 +204,15 @@ const PageLayoutWrapper = ({
                 localStorage.setItem(topicsStorageKey, JSON.stringify(topicsContents));
     `;
 
+  // Track last visit time for inactivity detection
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      // Record current visit time
+      const currentTime = new Date().getTime();
+      localStorage.setItem('lastVisitTime', currentTime.toString());
+    }
+  }, []);
+
   return (
     <>
       <Helmet
@@ -218,6 +228,7 @@ const PageLayoutWrapper = ({
       {!isErrorPage && <WebVitals pageType={pageType} />}
       <GlobalStyles />
       <div id="main-wrapper" css={styles.wrapper}>
+        <NotificationPermission />
         <HeaderContainer
           propsForTopBarOJComponent={{
             blocks: pageData?.secondaryColumn?.topStories || [],
