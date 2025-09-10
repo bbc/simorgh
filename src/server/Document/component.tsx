@@ -90,7 +90,6 @@ const Document = ({
           styles={css}
           title={title}
           service={service}
-          cspHeader={data.cspHeader}
           nonce={nonce}
         />
       );
