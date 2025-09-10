@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { use } from 'react';
+import { use, useContext } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '#app/hooks/useViewTracker';
@@ -123,6 +123,8 @@ export const ReadTime = ({
   promoId,
   className,
 }: ReadTimeProps) => {
+  const { service } = useContext(ServiceContext);
+
   const validRender = [
     !isLive(),
     readTimeValue,
@@ -130,7 +132,10 @@ export const ReadTime = ({
     readTimeVariant !== 'off',
   ].every(Boolean);
 
-  if (readTimeVariant === null) return <HomepagePlaceholder />;
+  const experimentEnabledServices = ['turkce', 'mundo'];
+
+  if (readTimeVariant === null && experimentEnabledServices.includes(service))
+    return <HomepagePlaceholder />;
 
   if (!validRender) return null;
 
