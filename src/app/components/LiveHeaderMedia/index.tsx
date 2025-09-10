@@ -41,7 +41,7 @@ const LiveHeaderMedia = ({
   clickCallback = () => null,
 }: LiveHeaderMediaProps) => {
   const { translations } = use(ServiceContext);
-  const { isLite } = use(RequestContext);
+  const { isLite, nonce } = use(RequestContext);
   const [showMedia, setShowMedia] = useState(false);
 
   const eventTrackingData: EventTrackingMetadata = {
@@ -187,7 +187,11 @@ const LiveHeaderMedia = ({
           )}
         </button>
         <div css={showMedia ? styles.mediaLoader : styles.hideComponent}>
-          <MemoizedMediaPlayer blocks={mediaCollection} uniqueId={vpid} />
+          <MemoizedMediaPlayer
+            blocks={mediaCollection}
+            uniqueId={vpid}
+            nonce={nonce}
+          />
         </div>
       </div>
     </>

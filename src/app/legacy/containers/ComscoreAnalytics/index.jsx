@@ -11,7 +11,6 @@ const ComscoreAnalytics = () => {
   if (!enabled || (isAmp && showCookieBannerBasedOnCountry)) {
     return null;
   }
-
   return isAmp ? (
     <AmpComscoreAnalytics />
   ) : (

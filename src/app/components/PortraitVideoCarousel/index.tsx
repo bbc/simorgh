@@ -106,6 +106,7 @@ const PortraitVideoCarousel = ({
               blocks={blocks}
               selectedVideoIndex={selectedVideoIndex}
               onClose={handleCloseModal}
+              nonce={nonce}
             />,
             document.body,
           )}

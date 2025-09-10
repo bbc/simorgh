@@ -6,7 +6,6 @@ import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 
 const CanonicalComscoreAnalytics = ({ nonce = null }) => {
   const { personalisationEnabled } = use(UserContext);
-
   const staticAssetsPath = `${
     getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN
   }${getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;

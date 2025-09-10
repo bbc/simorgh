@@ -207,7 +207,6 @@ type Props = {
   embedded?: boolean;
   uniqueId?: string;
   eventMapping?: EventMapping;
-  nonce?: string | null;
 };
 
 const MediaLoader = ({
@@ -216,7 +215,6 @@ const MediaLoader = ({
   embedded,
   uniqueId,
   eventMapping,
-  nonce,
 }: Props) => {
   const { lang, service, translations } = use(ServiceContext);
   const { pageIdentifier } = use(EventTrackingContext);
@@ -229,6 +227,7 @@ const MediaLoader = ({
     isAmp,
     isLite,
     showAdsBasedOnLocation,
+    nonce,
   } = use(RequestContext);
 
   const [showPlaceholder, setShowPlaceholder] = useState(

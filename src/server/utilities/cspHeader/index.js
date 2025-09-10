@@ -3,7 +3,6 @@ import isLiveEnv from '#lib/utilities/isLive';
 import { cspDirectives } from './directives';
 
 const injectCspHeader = ({ isAmp, service, nonce, res }) => {
-
   res.setHeader(
     'report-to',
     JSON.stringify({
@@ -29,18 +28,13 @@ const injectCspHeader = ({ isAmp, service, nonce, res }) => {
   Object.keys(directives).forEach(directive => {
     cspHeader += `${directive} `;
     if (directives[directive] && Array.isArray(directives[directive])) {
-        cspHeader += directives[directive].join(' ');
+      cspHeader += directives[directive].join(' ');
+    } else {
+      cspHeader += directives[directive];
     }
-    else {
-        cspHeader += directives[directive];
-    }
-    cspHeader += ';'
-    
+    cspHeader += ';';
   });
-  res.set(
-    'Content-Security-Policy',
-    cspHeader,
-  );
+  res.set('Content-Security-Policy', cspHeader);
 };
 
 export default injectCspHeader;

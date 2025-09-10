@@ -191,23 +191,30 @@ const injectReferrerPolicyHeader = (req, res, next) => {
 };
 
 // Set nonce as req header
-const injectNonceHeader = (service, country, toggles, showAdsBasedOnLocation, res) => {
+const injectNonceHeader = (
+  service,
+  country,
+  toggles,
+  showAdsBasedOnLocation,
+  res,
+) => {
   const nonceToggle = toggles.adsNonce;
   const adToggle = toggles.ads;
-  if (!nonceToggle.enabled || !adToggle.enabled || !showAdsBasedOnLocation) return;
-  
+  if (!nonceToggle.enabled || !adToggle.enabled || !showAdsBasedOnLocation)
+    return;
+
   const countriesForNonce =
     nonceToggle.value
       ?.split(',')
-      ?.map((s) => s.trim())
+      ?.map(s => s.trim())
       .filter(Boolean) || [];
   const nonceEnabledForCountry =
     countriesForNonce?.length === 0 || countriesForNonce.includes(country);
   if (!nonceEnabledForCountry) return;
-  
+
   const nonce = getUUID();
   res.set('x-nonce', nonce);
-  
+
   return nonce;
 };
 
@@ -273,10 +280,16 @@ server.get(
       data.country = (headers['x-country'] || headers['x-bbc-edge-country'])
         ?.toString()
         .toLowerCase();
-      const nonce = injectNonceHeader(service, data.country, toggles, data.showAdsBasedOnLocation, res);
+      const nonce = injectNonceHeader(
+        service,
+        data.country,
+        toggles,
+        data.showAdsBasedOnLocation,
+        res,
+      );
       injectCspHeader({ isAmp, service, nonce, res });
 
-      data.nonce = nonce
+      data.nonce = nonce;
       data.cspHeader = res.get('Content-Security-Policy');
 
       let { status } = data;
