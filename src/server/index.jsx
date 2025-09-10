@@ -203,7 +203,6 @@ const injectNonceHeader = (req, res, next) => {
   const thisService = req.originalUrl.split('/')[1];
   const thisCountry =
     req.headers['x-country'] || req.headers['x-bbc-edge-country'] || 'uk';
-  console.log('thisCountry', thisCountry);
   if (
     (thisCountry === 'mx' && thisService === 'mundo') ||
     (thisCountry === 'eg' && thisService === 'arabic')

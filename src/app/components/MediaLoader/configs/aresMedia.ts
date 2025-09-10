@@ -107,9 +107,6 @@ export default ({
 
   const items: PlaylistItem[] = [
     { versionID, kind, duration: rawDuration, ...(isLive && { live: true }) },
-    { versionID: 'p01wk3ty', kind: 'clip', duration: 29 },
-    { versionID: 'p01wk3wj', kind: 'clip', duration: 29 },
-    { versionID: 'p01wk3x9', kind: 'clip', duration: 29 },
   ];
 
   if (showAds) items.unshift({ kind: 'advert' });
@@ -152,9 +149,7 @@ export default ({
         ...(subType === 'clip' && { clipPID: videoId }),
         ...(subType === 'episode' && { episodePID: videoId }),
       },
-      mediator: { host: 'open.test.bbc.co.uk' },
     },
-    countdownDurationSecs: 3,
     placeholderConfig,
     showAds,
     orientation,
