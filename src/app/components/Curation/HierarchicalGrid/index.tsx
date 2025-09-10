@@ -41,6 +41,7 @@ const HiearchicalGrid = ({
   headingLevel,
   isFirstCuration,
   eventTrackingData,
+  readTimeVariant,
 }: CurationGridProps) => {
   const { isAmp } = use(RequestContext);
   const { translations } = use(ServiceContext);
@@ -97,9 +98,12 @@ const HiearchicalGrid = ({
           const { isLive } = promo;
 
           const promoEventTrackingData = buildPromoEventTrackingData(promo, i);
-          const clickTrackerHandler = getClickTrackerHandler(
-            promoEventTrackingData,
-          );
+          const clickTrackerHandler = getClickTrackerHandler({
+            ...promoEventTrackingData,
+            sendOptimizelyEvents: true,
+            experimentName: 'newswb_ws_homepage_read_time',
+            experimentVariant: readTimeVariant,
+          });
 
           return (
             <li
@@ -179,6 +183,7 @@ const HiearchicalGrid = ({
                     <ReadTime
                       readTimeValue={promo.readTime}
                       promoId={promo.id}
+                      readTimeVariant={readTimeVariant}
                     />
                   </>
                 ) : null}

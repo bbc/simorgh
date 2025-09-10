@@ -13,6 +13,7 @@ interface FixtureProps {
   link?: string;
   isLive?: boolean;
   readTime?: number;
+  readTimeVariant?: string;
 }
 
 const Fixture = ({
@@ -22,6 +23,7 @@ const Fixture = ({
   link = 'https://www.bbc.com/mundo/noticias-america-latina-60742314',
   isLive,
   readTime,
+  readTimeVariant,
 }: FixtureProps) => (
   <CurationPromo
     lazy={lazy}
@@ -36,6 +38,7 @@ const Fixture = ({
     duration={duration}
     isLive={isLive}
     readTime={readTime}
+    readTimeVariant={readTimeVariant}
   />
 );
 
@@ -133,7 +136,9 @@ describe('Curation Promo', () => {
     });
 
     it('should display read time when readTime is provided in summary data', () => {
-      const container = render(<Fixture readTime={1} />);
+      const container = render(
+        <Fixture readTime={1} readTimeVariant="variant1" />,
+      );
       expect(container.queryByTestId('read-time')).toBeInTheDocument();
     });
 

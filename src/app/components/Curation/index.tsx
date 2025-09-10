@@ -67,6 +67,7 @@ export default ({
   portraitVideo,
   renderVisuallyHiddenH2Title = false,
   curationId,
+  readTimeVariant,
 }: Curation) => {
   const componentName = getComponentName({
     visualStyle,
@@ -74,6 +75,7 @@ export default ({
     radioSchedule,
     embed,
   });
+
   const GridComponent = getGridComponent(componentName);
 
   const isFirstCuration = position === 0;
@@ -189,6 +191,7 @@ export default ({
           summaries={summaries}
           title={title}
           id={`social-links-${nthCurationByStyleAndProminence}`}
+          eventTrackingData={eventTrackingData}
         />
       );
     case SIMPLE_CURATION_GRID:
@@ -225,6 +228,9 @@ export default ({
                 headingLevel={3}
                 isFirstCuration={isFirstCuration}
                 eventTrackingData={eventTrackingData}
+                {...(readTimeVariant && {
+                  readTimeVariant,
+                })}
               />
             </div>
           </section>
@@ -235,6 +241,9 @@ export default ({
               headingLevel={2} // if there is only one curation, all promos should be h2, and no subheading
               isFirstCuration={isFirstCuration}
               eventTrackingData={eventTrackingData}
+              {...(readTimeVariant && {
+                readTimeVariant,
+              })}
             />
           </div>
         );
