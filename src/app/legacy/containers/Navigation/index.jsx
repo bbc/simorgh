@@ -53,8 +53,14 @@ const renderListItems = (
 const NavigationContainer = ({ propsForTopBarOJComponent }) => {
   const { isAmp, isLite } = use(RequestContext);
   const { blocks = [] } = propsForTopBarOJComponent || {};
-  const { script, translations, navigation, service, dir } =
-    use(ServiceContext);
+  const {
+    script,
+    translations,
+    navigation,
+    service,
+    dir,
+    collapsibleNavigation,
+  } = use(ServiceContext);
 
   const { canonicalLink, origin } = use(RequestContext);
   const { currentPage, navMenuText } = translations;
@@ -81,8 +87,8 @@ const NavigationContainer = ({ propsForTopBarOJComponent }) => {
 
   const dropdownNavViewTracker = useViewTracker(dropdownNavEventTrackingData);
 
-  // TODO: Feature toggle will be introduced https://bbc.atlassian.net/browse/WS-1073
-  const renderLanguageNavigation = !isLive() && service === 'ws';
+  // TODO: isLive statement to be removed when Global Language page goes live. https://bbc.atlassian.net/browse/WS-1254
+  const renderLanguageNavigation = !isLive() && collapsibleNavigation?.length;
 
   if (renderLanguageNavigation) {
     return <LanguageNavigation />;
