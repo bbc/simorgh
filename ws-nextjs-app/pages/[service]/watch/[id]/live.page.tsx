@@ -1,13 +1,10 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 import { GetServerSideProps } from 'next';
-import { LIVE_TV_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
+import { LIVE_TV_PAGE } from '#app/routes/utils/pageTypes';
 import PageDataParams from '#app/models/types/pageDataParams';
-import isLive from '#app/lib/utilities/isLive';
-import { Services, PageTypes } from '#app/models/types/global';
-import getPageData from '../../../../utilities/pageRequests/getPageData';
+import { PageTypes } from '#app/models/types/global';
 
-const HomePage = dynamic(() => import('#pages/HomePage/HomePage'));
 const LiveTvLayout = dynamic(() => import('./LiveTvLayout'));
 
 export const getServerSideProps: GetServerSideProps = async context => {
@@ -15,8 +12,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     'Cache-Control',
     'public, stale-if-error=300, stale-while-revalidate=120, max-age=30',
   );
-  const { renderer_env: rendererEnv, service } =
-    context.query as PageDataParams;
+  const { service } = context.query as PageDataParams;
   const baseProps = {
     error: null,
     isAmp: false,
