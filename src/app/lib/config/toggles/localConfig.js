@@ -5,7 +5,6 @@ export default {
   },
   adsNonce: {
     enabled: true,
-    value: 'es,mx',
   },
   articleLiteSiteLink: { enabled: true },
   comscoreAnalytics: {

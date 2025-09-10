@@ -9,6 +9,7 @@ import helmet from 'helmet';
 import routes from '#app/routes';
 import nodeLogger from '#lib/logger.node';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
+import getUUID from '#app/lib/utilities/getUUID';
 import {
   SERVICE_WORKER_SENDFILE_ERROR,
   MANIFEST_SENDFILE_ERROR,
@@ -21,7 +22,6 @@ import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { BAD_REQUEST, INTERNAL_SERVER_ERROR, OK } from '#lib/statusCodes.const';
 import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
 import isLocal from '#app/lib/utilities/isLocal';
-import crypto from 'crypto';
 import injectCspHeader from './utilities/cspHeader';
 import logResponseTime from './utilities/logResponseTime';
 import renderDocument from './Document';
@@ -80,7 +80,7 @@ const skipMiddleware = (_req, _res, next) => {
 };
 
 const injectCspHeaderProdBuild =
-  process.env.NODE_ENV === 'production' ? skipMiddleware : injectCspHeader;
+  process.env.NODE_ENV !== 'production' ? skipMiddleware : injectCspHeader;
 
 server
   .disable('x-powered-by')
@@ -198,24 +198,30 @@ const injectReferrerPolicyHeader = (req, res, next) => {
 };
 
 // Set nonce as req header
-const injectNonceHeader = (req, res, next) => {
-  const nonce = crypto.randomBytes(16).toString('hex');
-  const thisService = req.originalUrl.split('/')[1];
-  const thisCountry =
-    req.headers['x-country'] || req.headers['x-bbc-edge-country'] || 'uk';
-  if (
-    (thisCountry === 'mx' && thisService === 'mundo') ||
-    (thisCountry === 'eg' && thisService === 'arabic')
-  )
-    res.set('x-nonce', nonce);
-  next();
+const injectNonceHeader = (service, country, toggles, showAdsBasedOnLocation, res) => {
+  const nonceToggle = toggles.adsNonce;
+  const adToggle = toggles.ads;
+  if (!nonceToggle.enabled || !adToggle.enabled || !showAdsBasedOnLocation) return;
+  
+  const countriesForNonce =
+    nonceToggle.value
+      ?.split(',')
+      ?.map((s) => s.trim())
+      .filter(Boolean) || [];
+  const nonceEnabledForCountry =
+    countriesForNonce?.length === 0 || countriesForNonce.includes(country);
+  if (!nonceEnabledForCountry) return;
+  
+  const nonce = getUUID();
+  res.set('x-nonce', nonce);
+  
+  return nonce;
 };
 
 // Catch all for all routes
 server.get(
   '/*',
   [
-    injectNonceHeader,
     injectCspHeaderProdBuild,
     injectDefaultCacheHeader,
     injectReferrerPolicyHeader,
@@ -277,6 +283,15 @@ server.get(
       data.country = (headers['x-country'] || headers['x-bbc-edge-country'])
         ?.toString()
         .toLowerCase();
+      const nonce = injectNonceHeader(service, data.country, toggles, data.showAdsBasedOnLocation, res);
+      if (nonce) {
+        // This is less than ideal
+        // Ideally we'd set CSP here with nonce as an argument but seems like a lot of work for now
+        res.set(
+          'Content-Security-Policy',
+          data.cspHeader.replace(';script-src', `;script-src 'nonce-${nonce}' 'unsafe-eval'`),
+        );
+      }
 
       let { status } = data;
       // Set derivedPageType based on returned page data
