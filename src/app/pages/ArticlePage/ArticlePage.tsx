@@ -243,14 +243,14 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
-  const experimentName = 'newswb_ws_read_more_b';
-  const experimentVariant = useOptimizelyVariation({
-    experimentName,
+  const continueReadingExperimentName = 'newswb_ws_read_more_b';
+  const continueReadingVariant = useOptimizelyVariation({
+    experimentName: continueReadingExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
 
   const isInServerSideExperiment =
-    experimentVariant && experimentVariant !== 'off';
+    continueReadingVariant && continueReadingVariant !== 'off';
 
   // EXPERIMENT: Read Time
   const readTimeExperimentName = 'newswb_ws_article_read_time';
@@ -323,7 +323,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const atiData = {
     ...atiAnalytics,
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
-    ...(isInServerSideExperiment && { experimentName, experimentVariant }),
+    ...(isInServerSideExperiment && {
+      continueReadingExperimentName,
+      continueReadingVariant,
+    }),
   };
 
   // EXPERIMENT: Read Time
@@ -395,9 +398,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     !isAmp &&
       !isLite &&
       !isApp &&
-      experimentVariant &&
+      continueReadingVariant &&
       ['read-more-a', 'read-more-b', 'read-more-a-and-top-stories'].includes(
-        experimentVariant,
+        continueReadingVariant,
       ),
   );
 
@@ -467,16 +470,18 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                 showAllContent={showAllContent}
                 setShowAllContent={() => setShowAllContent(true)}
                 variation={
-                  experimentVariant as ContinueReadingProps['variation']
+                  continueReadingVariant as ContinueReadingProps['variation']
                 }
                 liteCTAShows={liteCTAShows}
               />
             )}
             {/* EXPERIMENT: Read Time */}
-            {readTimeValue && <OptimizelyPageMetrics trackPageComplete />}
+            {readTimeValue && continueReadingVariant && (
+              <OptimizelyPageMetrics trackPageComplete />
+            )}
           </main>
           {/* EXPERIMENT: Read Time */}
-          {readTimeValue && (
+          {readTimeValue && continueReadingVariant && (
             <OptimizelyPageMetrics trackPageView trackPageDepth />
           )}
           {showTopics && (
