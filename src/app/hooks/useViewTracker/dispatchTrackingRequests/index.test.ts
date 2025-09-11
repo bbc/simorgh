@@ -23,10 +23,6 @@ window.__reverb = {
 };
 
 describe('dispatchTrackingRequests', () => {
-  afterEach(() => {
-    jest.clearAllMocks();
-  });
-
   // describe('Optimizely tracking', () => {});
   describe('Reverb tracking', () => {
     // Define tracker parameters
