@@ -28,36 +28,9 @@ export const getServerSideProps: GetServerSideProps = async context => {
     },
     pathname: context?.resolvedUrl,
   };
-  // const { data, toggles } = await getPageData({
-  //   service,
-  //   rendererEnv,
-  //   resolvedUrl: context?.resolvedUrl,
-  //   pageType: LIVE_TV_PAGE,
-  // });
-  // if (data?.error) {
-  //   return {
-  //     props: {
-  //       ...baseProps,
-  //       error: data?.error,
-  //       status: data?.status,
-  //       pageType: LIVE_TV_PAGE,
-  //       service: 'dari',
-  //       toggles,
-  //       pageData: {
-  //         metadata: {
-  //           type: LIVE_TV_PAGE,
-  //           atiAnalytics: {},
-  //         },
-  //       },
-  //     },
-  //   };
-  // }
   return {
     props: {
       ...baseProps,
-      // pageData: {
-      //   ...data?.pageData,
-      // },
     },
   };
 };
