@@ -20,8 +20,11 @@ export default {
     css({
       margin: `0 0 ${pixelsToRem(34.5)}rem`,
     }),
-  readTimeHomepagePlaceholderControl: () =>
+  readTimeHomepagePlaceholderControl: ({ mq }: Theme) =>
     css({
       height: `${pixelsToRem(18.4)}rem`,
+      [mq.GROUP_2_MAX_WIDTH]: {
+        height: `${pixelsToRem(19.3)}rem`,
+      },
     }),
 };

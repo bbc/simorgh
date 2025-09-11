@@ -1,5 +1,8 @@
 import { css, Theme } from '@emotion/react';
-import { GROUP_1_MAX_WIDTH } from '#app/components/ThemeProvider/mediaQueries';
+import {
+  FORCED_COLOURS,
+  GROUP_1_MAX_WIDTH,
+} from '#app/components/ThemeProvider/mediaQueries';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { GREY_6 } from '#app/components/ThemeProvider/palette';
 
@@ -7,6 +10,8 @@ const readTimeExperimentBigPromoStyles = {
   '& .timestamp-read-time-container': {
     display: 'flex',
     alignItems: 'center',
+    'flex-wrap': 'wrap',
+    // EXPERIMENT - For readtime component
     '> span::before': {
       content: '""',
       display: 'inline-block',
@@ -15,7 +20,14 @@ const readTimeExperimentBigPromoStyles = {
       width: `${pixelsToRem(2)}rem`,
       backgroundColor: GREY_6,
       margin: `0 ${pixelsToRem(6)}rem`,
+      [FORCED_COLOURS]: {
+        backgroundColor: 'currentcolor',
+      },
     },
+    // // EXPERIMENT - For readtime placeholder component
+    // '> div': {
+    //   height: 0,
+    // },
   },
 };
 

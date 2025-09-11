@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { use, useContext } from 'react';
+import { use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '#app/hooks/useViewTracker';
@@ -123,7 +123,7 @@ export const ReadTime = ({
   promoId,
   className,
 }: ReadTimeProps) => {
-  const { service } = useContext(ServiceContext);
+  const { service } = use(ServiceContext);
 
   const validRender = [
     !isLive(),
