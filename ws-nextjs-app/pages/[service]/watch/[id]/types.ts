@@ -2,7 +2,7 @@ import { PageTypes } from '#app/models/types/global';
 import { Curation } from '#app/models/types/curationData';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 
-export interface LanguagesPageProps {
+export interface LiveTVPageProps {
   pageData: {
     id?: string;
     title: string;
