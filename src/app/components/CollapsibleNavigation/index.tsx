@@ -113,7 +113,6 @@ const CollapsibleNavigation = ({
                       href={`#${navigationLinkId}`}
                       onClick={handleClose}
                       role={isHydrated ? 'button' : 'link'}
-                      tabIndex={0}
                     >
                       <Close css={styles.subNavCloseButtonIcon} />
                     </a>
