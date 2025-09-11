@@ -11,7 +11,9 @@ const readTimeExperimentBigPromoStyles = {
     display: 'flex',
     alignItems: 'center',
     'flex-wrap': 'wrap',
-    // EXPERIMENT - For readtime component
+    '> span': {
+      lineHeight: 0,
+    },
     '> span::before': {
       content: '""',
       display: 'inline-block',
@@ -24,10 +26,10 @@ const readTimeExperimentBigPromoStyles = {
         backgroundColor: 'currentcolor',
       },
     },
-    // // EXPERIMENT - For readtime placeholder component
-    // '> div': {
-    //   height: 0,
-    // },
+    // EXPERIMENT - For readtime placeholder component
+    '> div': {
+      height: 0,
+    },
   },
 };
 
