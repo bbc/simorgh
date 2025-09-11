@@ -114,7 +114,7 @@ export const ReadTimeArticleExperiment = ({
 };
 
 const HomepagePlaceholder = (props: React.PropsWithChildren) => (
-  <div {...props} css={styles.readTimeHomepagePlaceholderControl} />
+  <span {...props} css={styles.readTimeHomepagePlaceholderControl} />
 );
 
 export const ReadTime = ({
@@ -164,10 +164,10 @@ export const ReadTime = ({
   if (isControlVariant) return <HomepagePlaceholder {...viewRef} />;
 
   return (
-    <span className={className} data-testid="read-time" {...viewRef}>
+    <div className={className} data-testid="read-time" {...viewRef}>
       <Text css={styles.readTimeText} size="brevier">
         {copy}
       </Text>
-    </span>
+    </div>
   );
 };
