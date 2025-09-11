@@ -48,10 +48,10 @@ const getEventTrackingData = ({
     itemTracker: {
       type: 'portrait-video',
       text: title,
-      media_type: 'video',
+      mediaType: 'video',
       position: selectedVideoIndex + 1,
       duration: moment.duration(duration).asMilliseconds(),
-      resource_id: id,
+      resourceId: id,
     },
   };
 };
