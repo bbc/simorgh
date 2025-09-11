@@ -84,67 +84,6 @@ const canonicalTestSuites = [
     tests,
   },
 ];
-//   {
-//     path: '/afrique/articles/c123456abcdo',
-//     service: 'afrique',
-//     runforEnv: 'local',
-//     tests,
-//   },
-//   {
-//     path: '/amharic/articles/c123456abcdo',
-//     service: 'amharic',
-//     runforEnv: 'local',
-//     tests,
-//   },
-//   {
-//     path: '/cymrufyw/erthyglau/c123456abcdo',
-//     service: 'cymrufyw',
-//     runforEnv: 'local',
-//     tests,
-//   },
-//   {
-//     path: '/hausa/articles/c123456abcdo',
-//     service: 'hausa',
-//     runforEnv: 'local',
-//     tests,
-//   },
-//   {
-//     path: '/hindi/articles/c123456abcdo',
-//     service: 'hindi',
-//     runforEnv: 'local',
-//     tests,
-//   },
-//   {
-//     path: '/japanese/articles/c123456abcdo',
-//     service: 'japanese',
-//     runforEnv: 'local',
-//     tests,
-//   },
-//   {
-//     path: '/korean/articles/c123456abcdo',
-//     service: 'korean',
-//     runforEnv: 'local',
-//     tests,
-//   },
-//   {
-//     path: '/punjabi/articles/c123456abcdo',
-//     service: 'punjabi',
-//     runforEnv: 'local',
-//     tests,
-//   },
-//   {
-//     path: '/russian/articles/c123456abcdo',
-//     service: 'russian',
-//     runforEnv: 'local',
-//     tests,
-//   },
-//   {
-//     path: '/tamil/articles/c123456abcdo',
-//     service: 'tamil',
-//     runforEnv: 'local',
-//     tests,
-//   },
-// ];
 
 const canonicalTestSuitesToRun = canonicalTestSuites.filter(
   testSuite => testSuite.service !== 'news',
