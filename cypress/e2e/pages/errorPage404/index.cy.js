@@ -3,6 +3,7 @@ import testsForAllPages from './tests';
 import ampTests from './testsForAMPOnly';
 import canonicalTests from './testsForCanonicalOnly';
 import { ERROR_PAGE } from '../../../../src/app/routes/utils/pageTypes';
+import liteTests from '../articles/testsForLiteOnly';
 
 const tests = [testsForAllPages, canonicalTests, ampTests];
 
@@ -96,8 +97,20 @@ const ampTestSuites = [...canonicalTestSuites].map(testSuite => {
   };
 });
 
+const liteTestSuitesToRun = canonicalTestSuites.map(testSuite => {
+  return {
+    ...testSuite,
+    path: `${testSuite.path}.lite`,
+    tests: [liteTests],
+  };
+});
+
 runTestsForPage({
   failOnStatusCode: false,
   pageType: ERROR_PAGE,
-  testSuites: [...canonicalTestSuitesToRun, ...ampTestSuites],
+  testSuites: [
+    ...canonicalTestSuitesToRun,
+    ...ampTestSuites,
+    ...liteTestSuitesToRun,
+  ],
 });
