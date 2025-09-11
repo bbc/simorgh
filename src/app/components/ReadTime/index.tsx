@@ -114,7 +114,7 @@ export const ReadTimeArticleExperiment = ({
 };
 
 const HomepagePlaceholder = (props: React.PropsWithChildren) => (
-  <span {...props} css={styles.readTimeHomepagePlaceholderControl} />
+  <div {...props} css={styles.readTimeHomepagePlaceholderControl} />
 );
 
 export const ReadTime = ({
