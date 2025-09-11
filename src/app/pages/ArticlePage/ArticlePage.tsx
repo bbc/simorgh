@@ -476,16 +476,14 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               />
             )}
             {/* EXPERIMENT: Read Time */}
-            {readTimeValue ||
-              (continueReadingVariant && (
-                <OptimizelyPageMetrics trackPageComplete />
-              ))}
+            {(readTimeValue || continueReadingVariant) && (
+              <OptimizelyPageMetrics trackPageComplete />
+            )}
           </main>
           {/* EXPERIMENT: Read Time */}
-          {readTimeValue ||
-            (continueReadingVariant && (
-              <OptimizelyPageMetrics trackPageView trackPageDepth />
-            ))}
+          {(readTimeValue || continueReadingVariant) && (
+            <OptimizelyPageMetrics trackPageView trackPageDepth />
+          )}
           {showTopics && (
             <RelatedTopics
               css={[
