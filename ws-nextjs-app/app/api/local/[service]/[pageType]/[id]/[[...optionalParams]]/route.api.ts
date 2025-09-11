@@ -1,7 +1,8 @@
+/* eslint-disable import/prefer-default-export */
 import fs from 'node:fs/promises';
 import path from 'path';
-import type { NextApiRequest, NextApiResponse } from 'next';
 import { PageTypes, Services } from '#app/models/types/global';
+import { FetchError } from '#app/models/types/fetch';
 
 type RequestPathParts = {
   service: Services;
@@ -36,17 +37,24 @@ const constructDataFilePath = ({
       );
 };
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
+export async function GET(
+  _req: Request,
+  {
+    params,
+  }: RouteContext<'/api/local/[service]/[pageType]/[id]/[[...optionalParams]]'>,
 ) {
   try {
-    const dataFilePath = constructDataFilePath(req.query as RequestPathParts);
+    const { ...routeParams } = await params;
+
+    const dataFilePath = constructDataFilePath(routeParams as RequestPathParts);
     const pageData = await fs.readFile(dataFilePath, {
       encoding: 'utf8',
     });
-    res.status(200).send(pageData);
+
+    return Response.json(JSON.parse(pageData));
   } catch (error) {
-    res.status(500).send({ error: `Failed to load data. ${error}` });
+    const { message } = error as FetchError;
+
+    return new Response(message, { status: 500 });
   }
 }
