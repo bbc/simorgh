@@ -5,7 +5,7 @@ import { LIVE_TV_PAGE } from '#app/routes/utils/pageTypes';
 import PageDataParams from '#app/models/types/pageDataParams';
 import { PageTypes } from '#app/models/types/global';
 
-const LiveTvLayout = dynamic(() => import('./LiveTvLayout'));
+const LiveTvLayout = dynamic(() => import('./LiveTvPageLayout'));
 
 export const getServerSideProps: GetServerSideProps = async context => {
   context.res.setHeader(
@@ -14,10 +14,8 @@ export const getServerSideProps: GetServerSideProps = async context => {
   );
   const { service } = context.query as PageDataParams;
   const baseProps = {
-    error: null,
     isAmp: false,
     isNextJs: true,
-    page: null,
     status: 200,
     timeOnServer: Date.now(),
     pageType: LIVE_TV_PAGE as PageTypes,
