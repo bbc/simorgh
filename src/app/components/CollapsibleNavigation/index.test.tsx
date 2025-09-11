@@ -11,20 +11,20 @@ const sections = [
     id: 'section1',
     title: 'Section 1',
     links: [
-      { id: 'link1', label: 'Link 1', href: '#link1' },
-      { id: 'link2', label: 'Link 2', href: '#link2' },
+      { id: 'link1', label: 'Link 1', href: '#link1', lang: 'en' },
+      { id: 'link2', label: 'Link 2', href: '#link2', lang: 'en' },
     ],
   },
   {
     id: 'section2',
     title: 'Section 2',
-    links: [{ id: 'link3', label: 'Link 3', href: '#link3' }],
+    links: [{ id: 'link3', label: 'Link 3', href: '#link3', lang: 'en' }],
   },
   {
     id: 'section3',
     title: 'Homepage',
     href: '/home',
-    links: [{ id: 'link1', label: 'Link 1', href: '#link1' }],
+    links: [{ id: 'link1', label: 'Link 1', href: '#link1', lang: 'en' }],
   },
 ];
 
