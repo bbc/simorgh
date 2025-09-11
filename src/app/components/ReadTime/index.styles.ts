@@ -22,7 +22,6 @@ export default {
     }),
   readTimeHomepagePlaceholderControl: ({ mq }: Theme) =>
     css({
-      display: 'block',
       height: `${pixelsToRem(18.4)}rem`,
       [mq.GROUP_2_MAX_WIDTH]: {
         height: `${pixelsToRem(19.3)}rem`,

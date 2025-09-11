@@ -11,10 +11,7 @@ const readTimeExperimentBigPromoStyles = {
     display: 'flex',
     alignItems: 'center',
     'flex-wrap': 'wrap',
-    '> div': {
-      lineHeight: 0,
-    },
-    '> div::before': {
+    '> .hierachical-read-time::before': {
       content: '""',
       display: 'inline-block',
       verticalAlign: 'middle',
@@ -25,10 +22,6 @@ const readTimeExperimentBigPromoStyles = {
       [FORCED_COLOURS]: {
         backgroundColor: 'currentcolor',
       },
-    },
-    // EXPERIMENT - For readtime placeholder component
-    '> span': {
-      height: 0,
     },
   },
 };

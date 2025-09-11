@@ -181,6 +181,7 @@ const HiearchicalGrid = ({
                     </Promo.Timestamp>
                     {/* EXPERIMENT: Read Time */}
                     <ReadTime
+                      className="hierachical-read-time"
                       readTimeValue={promo.readTime}
                       promoId={promo.id}
                       readTimeVariant={readTimeVariant}
