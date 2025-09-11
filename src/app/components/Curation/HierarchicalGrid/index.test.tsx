@@ -1,4 +1,7 @@
 import React from 'react';
+import * as viewTracking from '#app/hooks/useViewTracker';
+import * as clickTracking from '#app/hooks/useClickTrackerHandler';
+import { duration } from 'moment';
 import { suppressPropWarnings } from '../../../legacy/psammead/psammead-test-helpers/src';
 import { render } from '../../react-testing-library-with-providers';
 import { pidginPromos as fixture } from './fixtures';
@@ -198,5 +201,38 @@ describe('Hierarchical Grid Curation', () => {
       />,
     );
     expect(container.queryAllByTestId('read-time').length).toBe(0);
+  });
+
+  it('should show read time in view event tracking data if present', () => {
+    const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+    const expectedTrackingProps = {
+      componentName: 'read-time',
+      experimentName: 'newswb_ws_homepage_read_time',
+      experimentVariant: 'variant1',
+      itemTracker: {
+        duration: 300000,
+        label: 'Read time: 5 minutes',
+        resourceId: 'e2263a1c-8d5a-4a73-a00c-881acfa34381',
+      },
+      sendOptimizelyEvents: true,
+    };
+
+    const fixtureDataIncludingReadTime = fixture.map(fixtureSummary => ({
+      ...fixtureSummary,
+      readTime: 5,
+    }));
+
+    render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={fixtureDataIncludingReadTime}
+        eventTrackingData={minimalEventTrackingData}
+        readTimeVariant="variant1"
+      />,
+    );
+
+    expect(viewTrackerSpy).toHaveBeenCalledWith(
+      expect.objectContaining(expectedTrackingProps),
+    );
   });
 });
