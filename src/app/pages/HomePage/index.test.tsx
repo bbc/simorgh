@@ -6,6 +6,7 @@ import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
 import { data as afriqueHomePageDataFixture } from '#data/afrique/homePage/index.json';
 import { data as pidginHomePageDataFixture } from '#data/pidgin/homePage/index.json';
 import { data as portugueseHomePageDataFixture } from '#data/portuguese/homePage/index.json';
+import { data as wsHomePageData } from '#data/ws/homePage/index.json';
 import { service as pidginServiceConfig } from '#app/lib/config/services/pidgin';
 import useViewTracker from '../../hooks/useViewTracker';
 import useClickTrackerHandler from '../../hooks/useClickTrackerHandler';
@@ -105,6 +106,7 @@ describe('Home Page', () => {
     const { getByRole } = render(<HomePage pageData={homePageData} />, {
       service: 'kyrgyz',
     });
+
     expect(getByRole('main')).toHaveStyle({
       margin: '0px 0.5rem',
     });
@@ -631,6 +633,45 @@ describe('Home Page', () => {
       });
     });
 
+    it('Social Links - calls useViewTracker with correct viewability event tracking data for Social Links', () => {
+      const socialLinks = wsHomePageData.curations.find(
+        curation =>
+          curation.visualProminence === 'NORMAL' &&
+          curation.visualStyle === 'LINKS',
+      );
+      const pidginHomePageDataWithSocialLinks = {
+        ...pidginHomePageDataFixture,
+        curations: [...pidginHomePageDataFixture.curations, socialLinks],
+      };
+      // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
+      render(<HomePage pageData={pidginHomePageDataWithSocialLinks} />, {
+        service: 'pidgin',
+      });
+
+      const expectedTrackingData = {
+        groupTracker: {
+          name: socialLinks?.title,
+          type: 'social-links',
+          position: socialLinks?.position
+            ? socialLinks.position + 1
+            : undefined,
+          resourceId: socialLinks?.curationId,
+          itemCount: socialLinks?.summaries?.length,
+        },
+        componentName: 'social-links',
+        viewThreshold: 0.2,
+      };
+
+      const { calls } = (useViewTracker as jest.Mock).mock;
+      const matchingCalls = calls.filter(
+        ([arg]) =>
+          arg.componentName === expectedTrackingData.componentName &&
+          JSON.stringify(arg.groupTracker) ===
+            JSON.stringify(expectedTrackingData.groupTracker),
+      );
+      expect(matchingCalls).toHaveLength(1);
+    });
+
     describe('Hierarchical curation - click tracking', () => {
       it.each([
         {
@@ -979,6 +1020,68 @@ describe('Home Page', () => {
       expect(useClickTrackerHandler as jest.Mock).toHaveBeenCalledWith(
         expectedTrackingData,
       );
+    });
+
+    describe('Social Links - click tracking', () => {
+      beforeEach(() => {
+        (useViewTracker as jest.Mock).mockClear();
+        (useClickTrackerHandler as jest.Mock).mockClear?.();
+      });
+      it('calls click tracking handler with correct data for Social Links promo link', () => {
+        const socialLinks = wsHomePageData.curations.find(
+          curation =>
+            curation.visualProminence === 'NORMAL' &&
+            curation.visualStyle === 'LINKS',
+        );
+
+        const pidginHomePageDataWithSocialLinks = {
+          ...pidginHomePageDataFixture,
+          curations: [...pidginHomePageDataFixture.curations, socialLinks],
+        };
+
+        // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
+        render(<HomePage pageData={pidginHomePageDataWithSocialLinks} />, {
+          service: 'pidgin',
+        });
+
+        const socialLinksSection = screen.getByTestId('social-links-1');
+        const firstSocialLink = socialLinksSection?.querySelector(
+          'ul[role="list"] a',
+        ) as HTMLAnchorElement;
+
+        expect(firstSocialLink).toBeInTheDocument();
+
+        fireEvent.click(firstSocialLink);
+
+        const promo = socialLinks?.summaries?.[0];
+
+        const expectedTrackingData = expect.objectContaining({
+          componentName: 'social-links',
+          groupTracker: expect.objectContaining({
+            name: socialLinks?.title,
+            type: 'social-links',
+            position: socialLinks?.position
+              ? socialLinks.position + 1
+              : undefined,
+            resourceId: socialLinks?.curationId,
+            itemCount: socialLinks?.summaries?.length,
+          }),
+          itemTracker: expect.objectContaining({
+            type: 'social-link-promo',
+            text: promo?.title,
+            position: 1,
+            resourceId: promo?.id,
+          }),
+        });
+
+        const socialLinksCalls = (
+          useClickTrackerHandler as jest.Mock
+        ).mock.calls
+          .map(([arg]) => arg)
+          .filter(call => call?.componentName === 'social-links');
+
+        expect(socialLinksCalls).toContainEqual(expectedTrackingData);
+      });
     });
   });
 });
