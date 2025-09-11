@@ -7,20 +7,53 @@ describe('ReadTime', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
-  it('should render when readTime is supplied', () => {
-    const { getByText } = render(
-      <ReadTime readTimeValue={4} promoId="12345" />,
+  it.each([
+    {
+      variant: 'variant',
+      variantKey: 'below_headline_minutes_bold',
+      expectedCopy: 'Estimated Read Time: 4 minutes',
+    },
+    {
+      variant: 'variant',
+      variantKey: 'below_timestamp_quick_long_bold',
+      expectedCopy: 'Quick Read',
+    },
+  ])(
+    'should render $expectedCopy when readTime is supplied with a $variant variant',
+    ({ variantKey, expectedCopy }) => {
+      const { getByText } = render(
+        <ReadTime
+          readTimeValue={4}
+          promoId="12345"
+          readTimeVariant={variantKey}
+        />,
+      );
+      expect(getByText(expectedCopy)).toBeInTheDocument();
+    },
+  );
+  it('Optimizely - Should render a blank div for a control variant', () => {
+    const container = render(
+      <ReadTime readTimeValue={4} promoId="12345" readTimeVariant="control" />,
     );
-    expect(getByText('Estimated Read Time: 4 minutes')).toBeInTheDocument();
+    expect(container.queryByTestId('read-time')).not.toBeInTheDocument();
   });
   describe('view tracking', () => {
     const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
 
     it('should register view tracker', () => {
-      render(<ReadTime readTimeValue={4} promoId="12345" />);
+      render(
+        <ReadTime
+          readTimeValue={4}
+          promoId="12345"
+          readTimeVariant="minutes"
+        />,
+      );
 
       const expected = {
         componentName: 'read-time',
+        experimentName: 'newswb_ws_homepage_read_time',
+        experimentVariant: 'minutes',
+        sendOptimizelyEvents: true,
         itemTracker: {
           duration: 240000,
           label: 'Read time: 4 minutes',

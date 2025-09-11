@@ -32,6 +32,7 @@ const CurationPromo = ({
   isLive,
   readTime,
   eventTrackingData,
+  readTimeVariant,
 }: Summary) => {
   const { isAmp, isLite } = use(RequestContext);
   const { translations } = use(ServiceContext);
@@ -54,7 +55,12 @@ const CurationPromo = ({
     (type === 'video' && `${videoTranslation}, `) ||
     (type === 'photogallery' && `${photoGalleryTranslation}, `);
 
-  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+  const clickTrackerHandler = useClickTrackerHandler({
+    ...eventTrackingData,
+    sendOptimizelyEvents: true,
+    experimentName: 'newswb_ws_homepage_read_time',
+    experimentVariant: readTimeVariant,
+  });
 
   return (
     <Promo css={styles.promo} className="">
@@ -98,7 +104,11 @@ const CurationPromo = ({
         </Promo.Timestamp>
       ) : null}
       {/* EXPERIMENT: Read Time */}
-      <ReadTime readTimeValue={readTime} promoId={id} />
+      <ReadTime
+        readTimeValue={readTime}
+        promoId={id}
+        readTimeVariant={readTimeVariant}
+      />
     </Promo>
   );
 };
