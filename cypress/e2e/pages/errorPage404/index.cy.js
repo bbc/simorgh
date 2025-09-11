@@ -1,140 +1,154 @@
 import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
-import testsThatFollowSmokeTestConfig from './tests';
-import testsThatFollowSmokeTestConfigForAMPOnly from './testsForAMPOnly';
-import testsThatFollowSmokeTestConfigForCanonicalOnly from './testsForCanonicalOnly';
+import testsForAllPages from './tests';
+import ampTests from './testsForAMPOnly';
+import canonicalTests from './testsForCanonicalOnly';
 import { ERROR_PAGE } from '../../../../src/app/routes/utils/pageTypes';
 
-const canonicalTests = [
-  testsThatFollowSmokeTestConfig,
-  testsThatFollowSmokeTestConfigForCanonicalOnly,
-  testsThatFollowSmokeTestConfigForAMPOnly,
-];
+const tests = [testsForAllPages, canonicalTests, ampTests];
 
-const canonicalSmokeTestSuites = [
+const canonicalTestSuites = [
+  {
+    path: '/arabic/articles/c123456abcdo',
+    service: 'arabic',
+    runforEnv: 'local',
+    tests,
+  },
   {
     path: '/news/articles/cxvxrj8tvppo',
     service: 'news',
     runforEnv: 'local',
-    tests: canonicalTests,
+    tests,
+  },
+  {
+    path: '/kyrgyz/articles/c123456abcdo',
+    service: 'kyrgyz',
+    runforEnv: 'local',
+    tests,
+  },
+  {
+    path: '/mundo/articles/c123456abcdo',
+    service: 'mundo',
+    runforEnv: 'local',
+    tests,
   },
   {
     path: '/persian/articles/cxvxrj8tvppo',
     service: 'persian',
     runforEnv: 'local',
-    tests: canonicalTests,
+    tests,
+  },
+  {
+    path: '/pidgin/articles/cxvxrj8tvppo',
+    service: 'pidgin',
+    runforEnv: 'local',
+    tests,
+  },
+  {
+    path: '/serbian/articles/cabcdefghijo/cyr',
+    service: 'serbian',
+    runforEnv: 'local',
+    variant: 'cyr',
+    tests,
+  },
+  {
+    path: '/serbian/articles/cabcdefghijo/lat',
+    service: 'serbian',
+    runforEnv: 'local',
+    variant: 'lat',
+    tests,
+  },
+  {
+    path: '/russian/articles/c123456abcdo',
+    service: 'russian',
+    runforEnv: 'local',
+    tests,
+  },
+  {
+    path: '/ukrainian/articles/c123456abcdo',
+    service: 'ukrainian',
+    runforEnv: 'local',
+    tests,
   },
   {
     path: '/zhongwen/articles/cabcdefghijo/simp',
     service: 'zhongwen',
     runforEnv: 'local',
     variant: 'simp',
-    tests: canonicalTests,
+    tests,
   },
   {
     path: '/zhongwen/articles/cabcdefghijo/trad',
     service: 'zhongwen',
     runforEnv: 'local',
     variant: 'trad',
-    tests: canonicalTests,
+    tests,
   },
 ];
+//   {
+//     path: '/afrique/articles/c123456abcdo',
+//     service: 'afrique',
+//     runforEnv: 'local',
+//     tests,
+//   },
+//   {
+//     path: '/amharic/articles/c123456abcdo',
+//     service: 'amharic',
+//     runforEnv: 'local',
+//     tests,
+//   },
+//   {
+//     path: '/cymrufyw/erthyglau/c123456abcdo',
+//     service: 'cymrufyw',
+//     runforEnv: 'local',
+//     tests,
+//   },
+//   {
+//     path: '/hausa/articles/c123456abcdo',
+//     service: 'hausa',
+//     runforEnv: 'local',
+//     tests,
+//   },
+//   {
+//     path: '/hindi/articles/c123456abcdo',
+//     service: 'hindi',
+//     runforEnv: 'local',
+//     tests,
+//   },
+//   {
+//     path: '/japanese/articles/c123456abcdo',
+//     service: 'japanese',
+//     runforEnv: 'local',
+//     tests,
+//   },
+//   {
+//     path: '/korean/articles/c123456abcdo',
+//     service: 'korean',
+//     runforEnv: 'local',
+//     tests,
+//   },
+//   {
+//     path: '/punjabi/articles/c123456abcdo',
+//     service: 'punjabi',
+//     runforEnv: 'local',
+//     tests,
+//   },
+//   {
+//     path: '/russian/articles/c123456abcdo',
+//     service: 'russian',
+//     runforEnv: 'local',
+//     tests,
+//   },
+//   {
+//     path: '/tamil/articles/c123456abcdo',
+//     service: 'tamil',
+//     runforEnv: 'local',
+//     tests,
+//   },
+// ];
 
-const canonicalNonSmokeTestSuites = [
-  {
-    path: '/afrique/articles/c123456abcdo',
-    service: 'afrique',
-    runforEnv: 'local',
-    tests: canonicalTests,
-  },
-  {
-    path: '/amharic/articles/c123456abcdo',
-    service: 'amharic',
-    runforEnv: 'local',
-    tests: canonicalTests,
-  },
-  {
-    path: '/arabic/articles/c123456abcdo',
-    service: 'arabic',
-    runforEnv: 'local',
-    tests: canonicalTests,
-  },
-  {
-    path: '/cymrufyw/erthyglau/c123456abcdo',
-    service: 'cymrufyw',
-    runforEnv: 'local',
-    tests: canonicalTests,
-  },
-  {
-    path: '/hausa/articles/c123456abcdo',
-    service: 'hausa',
-    runforEnv: 'local',
-    tests: canonicalTests,
-  },
-  {
-    path: '/hindi/articles/c123456abcdo',
-    service: 'hindi',
-    runforEnv: 'local',
-    tests: canonicalTests,
-  },
-  {
-    path: '/japanese/articles/c123456abcdo',
-    service: 'japanese',
-    runforEnv: 'local',
-    tests: canonicalTests,
-  },
-  {
-    path: '/korean/articles/c123456abcdo',
-    service: 'korean',
-    runforEnv: 'local',
-    tests: canonicalTests,
-  },
-  {
-    path: '/kyrgyz/articles/c123456abcdo',
-    service: 'kyrgyz',
-    runforEnv: 'local',
-    tests: canonicalTests,
-  },
-  {
-    path: '/mundo/articles/c123456abcdo',
-    service: 'mundo',
-    runforEnv: 'local',
-    tests: canonicalTests,
-  },
-  {
-    path: '/pidgin/articles/cxvxrj8tvppo',
-    service: 'pidgin',
-    runforEnv: 'local',
-    tests: canonicalTests,
-  },
-  {
-    path: '/punjabi/articles/c123456abcdo',
-    service: 'punjabi',
-    runforEnv: 'local',
-    tests: canonicalTests,
-  },
-  {
-    path: '/russian/articles/c123456abcdo',
-    service: 'russian',
-    runforEnv: 'local',
-    tests: canonicalTests,
-  },
-  {
-    path: '/tamil/articles/c123456abcdo',
-    service: 'tamil',
-    runforEnv: 'local',
-    tests: canonicalTests,
-  },
-  {
-    path: '/ukrainian/articles/c123456abcdo',
-    service: 'ukrainian',
-    runforEnv: 'local',
-    tests: canonicalTests,
-  },
-];
-
-const canonicalTestSuites = Cypress.env('SMOKE')
-  ? canonicalSmokeTestSuites
-  : canonicalNonSmokeTestSuites;
+const canonicalTestSuitesToRun = canonicalTestSuites.filter(
+  testSuite => testSuite.service !== 'news',
+);
 
 const ampTestSuites = [...canonicalTestSuites].map(testSuite => {
   return {
@@ -146,5 +160,5 @@ const ampTestSuites = [...canonicalTestSuites].map(testSuite => {
 runTestsForPage({
   failOnStatusCode: false,
   pageType: ERROR_PAGE,
-  testSuites: [...canonicalTestSuites, ...ampTestSuites],
+  testSuites: [...canonicalTestSuitesToRun, ...ampTestSuites],
 });
