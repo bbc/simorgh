@@ -27,8 +27,7 @@ const focusIndicator = ({ palette }: Theme) => css`
   }
 
   // Removes focus indicator styling and stops default browser styling from displaying.
-  a.focusIndicatorRemove:focus-visible,
-  button.focusIndicatorRemove:focus-visible {
+  .focusIndicatorRemove:focus-visible {
     outline: none;
     box-shadow: none;
     outline-offset: 0;
