@@ -76,7 +76,7 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Tazama zote',
       home: 'Habari',
-      continueReading: 'Endelea kusoma',
+      continueReading: 'Soma zaidi',
       currentPage: 'Ukurasa uliopo ',
       skipLinkText: 'Ruka hadi maelezo',
       relatedContent: 'Maelezo zaidi kuhusu taarifa hii',
