@@ -91,6 +91,7 @@ const TopicPage = ({ pageData }) => {
                   visualStyle,
                   visualProminence,
                 });
+
               return (
                 <React.Fragment key={`${curationId}-${position}`}>
                   <Curation
