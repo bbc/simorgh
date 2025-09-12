@@ -1,9 +1,12 @@
 import { ReactSDKClient } from '@optimizely/react-sdk';
 import { Platforms, Services } from '#app/models/types/global';
-import * as sendEventBeacon from '../../../components/ATIAnalytics/beacon';
 import dispatchTrackingRequests from '.';
 
-const sendEventBeaconSpy = jest.spyOn(sendEventBeacon, 'default');
+const sendEventBeaconSpy = jest.spyOn(
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  require('../../../components/ATIAnalytics/beacon'),
+  'sendEventBeacon',
+);
 
 const defaultOptimizely = {
   track: jest.fn(),
@@ -29,7 +32,7 @@ describe('dispatchTrackingRequests', () => {
     // Test that reverb is called when all reverb parameters are provided
     // Test that reverb is not called when required reverb parameters are missing
 
-    it('should trigger a beacon for a view event when the required reverbParameters and trackingFlags are provided', () => {
+    it('should trigger a beacon for a view event when the required reverbParameters and trackingFlags are provided', async () => {
       const viewTrackerRequestsParameters = {
         optimizelyParameters: {
           optimizely: defaultOptimizely,
@@ -74,13 +77,12 @@ describe('dispatchTrackingRequests', () => {
         },
       };
 
-      dispatchTrackingRequests(viewTrackerRequestsParameters);
+      await dispatchTrackingRequests(viewTrackerRequestsParameters);
 
       expect(sendEventBeaconSpy).toHaveBeenCalled();
+      expect(sendEventBeaconSpy).toHaveBeenCalledTimes(1);
 
-      // expect(sendEventBeaconSpy).toHaveBeenCalledTimes(1);
-
-      // expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+      expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
       // expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
       //   'viewability',
       //   '',

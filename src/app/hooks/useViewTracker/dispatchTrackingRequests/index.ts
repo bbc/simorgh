@@ -84,7 +84,7 @@ const trackComponentInOptimizely = ({
   }
 };
 
-const dispatchTrackingRequests = ({
+const dispatchTrackingRequests = async ({
   optimizelyParameters,
   reverbParameters,
   trackingFlags,
@@ -119,7 +119,7 @@ const dispatchTrackingRequests = ({
   if (shouldSendEvent) {
     trackComponentInOptimizely(optimizelyParameters);
 
-    sendEventBeacon(reverbParameters);
+    await sendEventBeacon(reverbParameters);
   }
 };
 
