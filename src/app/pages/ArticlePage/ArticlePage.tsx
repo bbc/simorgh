@@ -243,9 +243,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
-  const continueReadingExperimentName = 'newswb_ws_read_more_b';
+  const experimentName = 'newswb_ws_read_more_b';
   const experimentVariant = useOptimizelyVariation({
-    experimentName: continueReadingExperimentName,
+    experimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
 
@@ -324,7 +324,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     ...atiAnalytics,
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
     ...(isInServerSideExperiment && {
-      continueReadingExperimentName,
+      experimentName,
       experimentVariant,
     }),
   };
