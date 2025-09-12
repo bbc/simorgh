@@ -77,6 +77,10 @@ const HiearchicalGrid = ({
 
           const { isLive } = promo;
 
+          const promoItemId = extractId(promo.id) ?? null;
+          const isMostReadStory =
+            mostReadItemId && promoItemId === mostReadItemId;
+
           return (
             <li
               key={promo.id}
