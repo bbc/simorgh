@@ -7,6 +7,7 @@ import moment from 'moment';
 import path from 'ramda/src/path';
 import isMediaType from '#app/lib/utilities/isMedia';
 import { ReadTime } from '#app/components/ReadTime';
+import { extractId } from '#app/pages/HomePage/HomePage';
 import useClickTrackerHandler from '../../../hooks/useClickTrackerHandler';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import formatDuration from '../../../lib/utilities/formatDuration';
@@ -42,6 +43,7 @@ const HiearchicalGrid = ({
   isFirstCuration,
   eventTrackingData,
   readTimeVariant,
+  mostReadItemId,
 }: CurationGridProps) => {
   const { isAmp } = use(RequestContext);
   const { translations } = use(ServiceContext);
@@ -104,6 +106,10 @@ const HiearchicalGrid = ({
             experimentName: 'newswb_ws_homepage_read_time',
             experimentVariant: readTimeVariant,
           });
+
+          const getPromoItemid = extractId(promo.id) ?? null;
+          const isMostReadStory =
+            mostReadItemId && getPromoItemid === mostReadItemId;
 
           return (
             <li
