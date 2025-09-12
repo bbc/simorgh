@@ -123,6 +123,7 @@ const HiearchicalGrid = ({
                     </Promo.A>
                   ) : (
                     <Promo.A href={promo.link}>
+                      {isMostReadStory ? <div>Most Read</div> : null}
                       {isLive ? (
                         <LiveLabel
                           {...(isFirstPromo
