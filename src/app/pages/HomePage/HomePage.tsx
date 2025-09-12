@@ -35,6 +35,8 @@ export interface HomePageProps {
   };
 }
 
+export const extractId = (id?: string | null) => (id ?? '').split(':').pop();
+
 const HomePage = ({ pageData }: HomePageProps) => {
   const {
     translations,
