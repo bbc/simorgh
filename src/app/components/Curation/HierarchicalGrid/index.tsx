@@ -161,6 +161,7 @@ const HiearchicalGrid = ({
                     </Promo.A>
                   ) : (
                     <Promo.A href={promo.link} {...clickTrackerHandler}>
+                      {isMostReadStory ? <div>Most Read</div> : null}
                       {isLive ? (
                         <LiveLabel
                           {...(isFirstPromo
