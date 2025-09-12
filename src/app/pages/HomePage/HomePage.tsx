@@ -67,6 +67,13 @@ const HomePage = ({ pageData }: HomePageProps) => {
 
   const itemList = getItemList({ curations, name: brandName });
 
+  const findMostReadCuration = curations.find(
+    curation => !!curation.mostRead?.items?.length,
+  );
+
+  const mostReadItemId =
+    extractId(findMostReadCuration?.mostRead?.items?.[0].id ?? null) ?? null;
+
   return (
     <>
       <ChartbeatAnalytics title={title} />
