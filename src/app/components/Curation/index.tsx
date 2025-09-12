@@ -64,6 +64,7 @@ export default ({
   portraitVideo,
   renderVisuallyHiddenH2Title = false,
   curationId,
+  mostReadItemId,
 }: Curation) => {
   const componentName = getComponentName({
     visualStyle,
@@ -201,6 +202,7 @@ export default ({
               summaries={summaries}
               headingLevel={3}
               isFirstCuration={isFirstCuration}
+              mostReadItemId={mostReadItemId}
             />
           </section>
         ) : (
@@ -208,6 +210,7 @@ export default ({
             summaries={summaries}
             headingLevel={2} // if there is only one curation, all promos should be h2, and no subheading
             isFirstCuration={isFirstCuration}
+            mostReadItemId={mostReadItemId}
           />
         );
       }
