@@ -39,10 +39,11 @@ const HiearchicalGrid = ({
   mostReadItemId,
 }: CurationGridProps) => {
   const { isAmp } = use(RequestContext);
-  const { translations } = use(ServiceContext);
+  const { mostRead, translations } = use(ServiceContext);
 
   const audioTranslation = path(['media', 'audio'], translations);
   const videoTranslation = path(['media', 'video'], translations);
+  const mostReadTranslation = path(['header'], mostRead);
   const photoGalleryTranslation = path(['media', 'photogallery'], translations);
   const durationTranslation = path(['media', 'duration'], translations);
   if (!summaries || summaries.length < 3) return null;
@@ -81,6 +82,10 @@ const HiearchicalGrid = ({
           const promoItemId = extractId(promo.id) ?? null;
           const isMostReadStory =
             mostReadItemId && promoItemId === mostReadItemId;
+
+          const mostReadTranslated =
+            (promo.type === 'mostRead' && `${mostReadTranslation}, `) ||
+            'Most Read';
 
           return (
             <li
@@ -128,7 +133,7 @@ const HiearchicalGrid = ({
                     </Promo.A>
                   ) : (
                     <Promo.A href={promo.link}>
-                      {isMostReadStory ? <div>Most Read</div> : null}
+                      {isMostReadStory ? <div>{mostReadTranslated}</div> : null}
                       {isLive ? (
                         <LiveLabel
                           {...(isFirstPromo
