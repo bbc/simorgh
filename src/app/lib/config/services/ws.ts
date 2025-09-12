@@ -576,7 +576,6 @@ export const service: DefaultServiceConfig = {
             href: 'https://www.bbc.co.uk/naidheachdan',
             label: 'Naidheachdan',
             lang: 'gd',
-            latinTransliteration: 'Naidheachdan',
           },
           {
             id: 'polska',
