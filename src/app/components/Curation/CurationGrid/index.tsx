@@ -8,6 +8,7 @@ const CurationGrid = ({
   summaries,
   isFirstCuration,
   headingLevel,
+  mostReadItemId,
 }: CurationGridProps) => {
   const hasMultiplePromos = summaries.length > 1;
   const firstPromo = summaries[0];
@@ -29,6 +30,7 @@ const CurationGrid = ({
                   {...promo}
                   lazy={lazyLoadImages}
                   headingLevel={headingLevel}
+                  mostReadItemId={mostReadItemId}
                 />
               </li>
             );
@@ -40,6 +42,7 @@ const CurationGrid = ({
             {...firstPromo}
             lazy={!isFirstCuration}
             headingLevel={headingLevel}
+            mostReadItemId={mostReadItemId}
           />
         </div>
       )}

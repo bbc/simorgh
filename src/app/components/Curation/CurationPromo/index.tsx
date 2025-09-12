@@ -7,6 +7,7 @@ import path from 'ramda/src/path';
 import formatDuration from '#app/lib/utilities/formatDuration';
 import Promo from '#components/Promo';
 import { Summary } from '#app/models/types/curationData';
+import { extractId } from '#app/pages/HomePage/HomePage';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
@@ -26,6 +27,7 @@ const CurationPromo = ({
   duration: mediaDuration,
   headingLevel = 2,
   isLive,
+  mostReadItemId,
 }: Summary) => {
   const { isAmp, isLite } = use(RequestContext);
   const { translations } = use(ServiceContext);
@@ -47,6 +49,10 @@ const CurationPromo = ({
     (type === 'audio' && `${audioTranslation}, `) ||
     (type === 'video' && `${videoTranslation}, `) ||
     (type === 'photogallery' && `${photoGalleryTranslation}, `);
+
+  const promoItemId = extractId(id) ?? null;
+  const isMostReadStory = mostReadItemId && promoItemId === mostReadItemId;
+
   return (
     <Promo css={styles.promo} className="">
       {imageUrl && (
@@ -79,6 +85,7 @@ const CurationPromo = ({
           </Promo.A>
         ) : (
           <Promo.A href={link}>
+            {isMostReadStory ? <div>Most Read</div> : null}
             {isLive ? <LiveLabel>{title}</LiveLabel> : title}
           </Promo.A>
         )}
