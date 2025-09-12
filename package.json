@@ -137,8 +137,8 @@
     "winston": "patch:winston@3.8.2#./patches/winston-file-descriptor.patch"
   },
   "devDependencies": {
-    "@babel/core": "7.28.3",
-    "@babel/eslint-parser": "7.28.0",
+    "@babel/core": "7.28.4",
+    "@babel/eslint-parser": "7.28.4",
     "@babel/plugin-proposal-export-default-from": "7.27.1",
     "@babel/plugin-proposal-object-rest-spread": "7.20.7",
     "@babel/plugin-proposal-throw-expressions": "7.27.1",
@@ -148,7 +148,7 @@
     "@babel/preset-env": "7.28.3",
     "@babel/preset-react": "7.27.1",
     "@babel/preset-typescript": "7.27.1",
-    "@babel/runtime": "7.28.3",
+    "@babel/runtime": "7.28.4",
     "@cypress/webpack-preprocessor": "7.0.1",
     "@emotion/babel-plugin": "11.13.5",
     "@emotion/babel-preset-css-prop": "11.12.0",
