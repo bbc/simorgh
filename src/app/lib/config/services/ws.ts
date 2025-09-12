@@ -629,7 +629,7 @@ export const service: DefaultServiceConfig = {
             id: 'mundo',
             href: 'https://www.bbc.com/mundo',
             label: 'Noticias para hispanoparlantes',
-            lang: 'es-419',
+            lang: 'es',
           },
         ],
       },
