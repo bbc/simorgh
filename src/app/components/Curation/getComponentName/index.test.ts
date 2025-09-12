@@ -6,7 +6,7 @@ import {
 import getComponentName, { COMPONENT_NAMES } from '.';
 import afriqueHomePage from '../../../../../data/afrique/homePage/index.json';
 import marathiTopic from '../../../../../data/marathi/topics/c1wmk63rjkvt.json';
-import persianHomePage from '../../../../../data/persian/homePage/index.json';
+import dariHomePage from '../../../../../data/dari/homePage/index.json';
 
 const { MINIMUM, LOW, NORMAL, HIGH, MAXIMUM } = VISUAL_PROMINENCE;
 const { NONE, BANNER, COLLECTION, RANKED } = VISUAL_STYLE;
@@ -59,7 +59,7 @@ describe('getComponentName', () => {
   });
 
   it('should return MEDIA_COLLECTION when a media collection is present', () => {
-    const { mediaCollection } = persianHomePage.data.curations[3] as Curation;
+    const { mediaCollection } = dariHomePage.data.curations[5] as Curation;
     expect(getComponentName({ mediaCollection })).toBe(`${MEDIA_COLLECTION}`);
   });
 });
