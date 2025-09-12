@@ -17,6 +17,7 @@ import { RequestContext } from '../../../contexts/RequestContext';
 import LiveLabel from '../../LiveLabel';
 
 import styles from './index.styles';
+import { extractId } from '#app/pages/HomePage/HomePage';
 
 const CurationPromo = ({
   id,
@@ -33,6 +34,7 @@ const CurationPromo = ({
   readTime,
   eventTrackingData,
   readTimeVariant,
+  mostReadItemId,
 }: Summary) => {
   const { isAmp, isLite } = use(RequestContext);
   const { translations } = use(ServiceContext);
@@ -61,6 +63,9 @@ const CurationPromo = ({
     experimentName: 'newswb_ws_homepage_read_time',
     experimentVariant: readTimeVariant,
   });
+
+  const getPromoItemId = extractId(id) ?? null;
+  const isMostReadStory = mostReadItemId && getPromoItemId === mostReadItemId;
 
   return (
     <Promo css={styles.promo} className="">
@@ -94,6 +99,7 @@ const CurationPromo = ({
           </Promo.A>
         ) : (
           <Promo.A href={link} {...clickTrackerHandler}>
+            {isMostReadStory ? <div>Most Read</div> : null}
             {isLive ? <LiveLabel>{title}</LiveLabel> : title}
           </Promo.A>
         )}

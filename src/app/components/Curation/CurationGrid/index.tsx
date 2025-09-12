@@ -21,6 +21,7 @@ const CurationGrid = ({
   headingLevel,
   eventTrackingData,
   readTimeVariant,
+  mostReadItemId,
 }: CurationGridProps) => {
   const { isLite } = use(RequestContext);
 
@@ -67,6 +68,7 @@ const CurationGrid = ({
           {...commonProps}
           headingLevel={headingLevel}
           readTimeVariant={readTimeVariant}
+          mostReadItemId={mostReadItemId}
         />
       );
     }
