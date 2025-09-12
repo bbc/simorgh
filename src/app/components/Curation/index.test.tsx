@@ -7,7 +7,7 @@ import kyrgyzHomePage from '../../../../data/kyrgyz/homePage/index.json';
 import { data as kyrgyzMostRead } from '../../../../data/kyrgyz/mostRead/index.json';
 import afriqueHomePage from '../../../../data/afrique/homePage/index.json';
 import portugueseHomePage from '../../../../data/portuguese/homePage/index.json';
-import persianHomePage from '../../../../data/persian/homePage/index.json';
+import dariHomePage from '../../../../data/dari/homePage/index.json';
 import { render } from '../react-testing-library-with-providers';
 import Curation from '.';
 import {
@@ -65,7 +65,7 @@ const portraitVideoCuration = portugueseHomePage.data.curations.find(
     visualStyle === INSITU && visualProminence === NORMAL && portraitVideo,
 );
 
-const mediaCollectionCuration = persianHomePage.data.curations.find(
+const mediaCollectionCuration = dariHomePage.data.curations.find(
   ({ intent, mediaCollection }) => intent === MEDIA_PLAYER && mediaCollection,
 );
 
