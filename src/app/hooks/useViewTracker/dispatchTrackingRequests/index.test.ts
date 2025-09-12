@@ -25,91 +25,210 @@ window.__reverb = {
   __reverbLoadedPromise: Promise.resolve(reverbMock),
 };
 
+const viewTrackerRequestsParameters = {
+  optimizelyParameters: {
+    optimizely: defaultOptimizely,
+    componentName: 'portrait-video-modal',
+  },
+  reverbParameters: {
+    campaignID: 'campaign123',
+    componentName: 'portrait-video-modal',
+    format: 'testFormat',
+    pageIdentifier: 'page123',
+    platform: 'canonical' as Platforms,
+    producerId: 'producer id',
+    producerName: 'producer name',
+    service: 'pidgin' as Services,
+    statsDestination: 'stats destination',
+    type: 'view',
+    advertiserID: 'advertiser id',
+    url: 'http://example.com',
+    detailedPlacement: 'detailed placement',
+    useReverb: true,
+    groupTracker: {
+      name: 'test group',
+      type: 'portrait-video-modal',
+      itemCount: 18,
+      resourceId: 'test-group-id',
+      position: 4,
+    },
+    itemTracker: {
+      type: 'portrait-video',
+      text: 'Rollercoaster facts... while riding a rollercoaster',
+      position: 1,
+      duration: 73000,
+      mediaType: 'video',
+      resourceId: 'test-item-id',
+    },
+  },
+  trackingFlags: {
+    trackingIsEnabled: true,
+    eventSent: false,
+    alwaysInView: false,
+  },
+};
+
 describe('dispatchTrackingRequests', () => {
   // describe('Optimizely tracking', () => {});
   describe('Reverb tracking', () => {
-    // Define tracker parameters
-    // Test that reverb is called when all reverb parameters are provided
-    // Test that reverb is not called when required reverb parameters are missing
+    afterEach(() => {
+      jest.clearAllMocks();
+    });
 
-    it('should trigger a beacon for a view event when the required reverbParameters and trackingFlags are provided', async () => {
-      const viewTrackerRequestsParameters = {
-        optimizelyParameters: {
-          optimizely: defaultOptimizely,
-          componentName: 'portrait-video-modal',
+    it.each([
+      {
+        title:
+          'the required reverbParameters are provided and trackingIsEnabled is set to true in trackingFlags',
+        eventTrackingData: {
+          ...viewTrackerRequestsParameters,
         },
-        reverbParameters: {
-          campaignID: 'campaign123',
-          componentName: 'portrait-video-modal',
-          format: 'testFormat',
-          pageIdentifier: 'page123',
-          platform: 'canonical' as Platforms,
-          producerId: 'producer id',
-          producerName: 'producer name',
-          service: 'pidgin' as Services,
-          statsDestination: 'stats destination',
-          type: 'view',
-          advertiserID: 'advertiser id',
-          url: 'http://example.com',
-          detailedPlacement: 'detailed placement',
-          useReverb: true,
-          groupTracker: {
-            name: 'test group',
-            type: 'portrait-video-modal',
-            itemCount: 18,
-            resourceId: 'test-group-id',
-            position: 4,
+      },
+      {
+        title:
+          'the required reverbParameters are provided and eventSent is set to false in trackingFlags',
+        eventTrackingData: {
+          ...viewTrackerRequestsParameters,
+          trackingFlags: {
+            trackingIsEnabled: true,
+            eventSent: false,
+            alwaysInView: false,
           },
-          itemTracker: {
-            type: 'portrait-video',
-            text: 'Rollercoaster facts... while riding a rollercoaster',
-            position: 1,
-            duration: 73000,
-            mediaType: 'video',
-            resourceId: 'test-item-id',
+        },
+      },
+      {
+        title:
+          'the required reverbParameters are provided and alwaysInView is set to true in trackingFlags',
+        eventTrackingData: {
+          ...viewTrackerRequestsParameters,
+          trackingFlags: {
+            trackingIsEnabled: true,
+            eventSent: false,
+            alwaysInView: true,
+          },
+        },
+      },
+    ])(
+      'should trigger a beacon for a view event when $title',
+      async ({ eventTrackingData }) => {
+        await dispatchTrackingRequests(eventTrackingData);
+
+        expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+        expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+          'viewability',
+          '',
+          {
+            event: { action: 'view', category: 'viewability' },
+            group: {
+              name: 'test group',
+              type: 'portrait-video-modal',
+              item_count: 18,
+              resource_id: 'test-group-id',
+              position: 4,
+            },
+            item: {
+              name: 'portrait-video-modal',
+              attribution: 'advertiser id',
+              link: 'http://example.com',
+              type: 'portrait-video',
+              text: 'Rollercoaster facts... while riding a rollercoaster',
+              media_type: 'video',
+              position: 1,
+              duration: 73000,
+              resource_id: 'test-item-id',
+            },
+          },
+          undefined,
+          undefined,
+          false,
+        );
+      },
+    );
+
+    it.each([
+      {
+        title: 'componentName is missing in reverbParameters',
+        eventTrackingData: {
+          ...viewTrackerRequestsParameters,
+          reverbParameters: {
+            campaignID: 'campaign123',
+            format: 'testFormat',
+            pageIdentifier: 'page123',
+            platform: 'canonical' as Platforms,
+            producerId: 'producer id',
+            producerName: 'producer name',
+            service: 'pidgin' as Services,
+            statsDestination: 'stats destination',
+          },
+        },
+      },
+      {
+        title: 'service is missing in reverbParameters',
+        eventTrackingData: {
+          ...viewTrackerRequestsParameters,
+          reverbParameters: {
+            campaignID: 'campaign123',
+            componentName: 'portrait-video-modal',
+            format: 'testFormat',
+            pageIdentifier: 'page123',
+            platform: 'canonical' as Platforms,
+            producerId: 'producer id',
+            producerName: 'producer name',
+            statsDestination: 'stats destination',
+          },
+        },
+      },
+      {
+        title: 'trackingIsEnabled is set to false in trackingFlags',
+        eventTrackingData: {
+          ...viewTrackerRequestsParameters,
+          reverbParameters: {
+            campaignID: 'campaign123',
+            componentName: 'portrait-video-modal',
+            format: 'testFormat',
+            pageIdentifier: 'page123',
+            platform: 'canonical' as Platforms,
+            producerId: 'producer id',
+            producerName: 'producer name',
+            statsDestination: 'stats destination',
+          },
+        },
+        trackingFlags: {
+          trackingIsEnabled: false,
+          eventSent: false,
+          alwaysInView: true,
+        },
+      },
+      {
+        title: 'eventSent is set to true in trackingFlags',
+        eventTrackingData: {
+          ...viewTrackerRequestsParameters,
+          reverbParameters: {
+            campaignID: 'campaign123',
+            componentName: 'portrait-video-modal',
+            format: 'testFormat',
+            pageIdentifier: 'page123',
+            platform: 'canonical' as Platforms,
+            producerId: 'producer id',
+            producerName: 'producer name',
+            statsDestination: 'stats destination',
           },
         },
         trackingFlags: {
           trackingIsEnabled: true,
-          eventSent: false,
-          alwaysInView: true,
+          eventSent: true,
+          alwaysInView: false,
         },
-      };
+      },
+    ])(
+      'should not trigger a beacon for a view event when $title',
+      async ({ eventTrackingData }) => {
+        // @ts-expect-error required to test shouldDispatchEventBeacon false condition
+        await dispatchTrackingRequests(eventTrackingData);
 
-      await dispatchTrackingRequests(viewTrackerRequestsParameters);
+        expect(sendEventBeaconSpy).not.toHaveBeenCalled();
 
-      expect(sendEventBeaconSpy).toHaveBeenCalled();
-      expect(sendEventBeaconSpy).toHaveBeenCalledTimes(1);
-
-      expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
-      expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
-        'viewability',
-        '',
-        {
-          event: { action: 'view', category: 'viewability' },
-          group: {
-            name: 'test group',
-            type: 'portrait-video-modal',
-            item_count: 18,
-            resource_id: 'test-group-id',
-            position: 4,
-          },
-          item: {
-            name: 'portrait-video-modal',
-            attribution: 'advertiser id',
-            link: 'http://example.com',
-            type: 'portrait-video',
-            text: 'Rollercoaster facts... while riding a rollercoaster',
-            media_type: 'video',
-            position: 1,
-            duration: 73000,
-            resource_id: 'test-item-id',
-          },
-        },
-        undefined,
-        undefined,
-        false,
-      );
-    });
+        expect(reverbMock.userActionEvent).not.toHaveBeenCalled();
+      },
+    );
   });
 });
