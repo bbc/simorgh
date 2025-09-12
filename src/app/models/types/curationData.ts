@@ -79,4 +79,5 @@ export interface Curation extends BaseCuration {
   nthCurationByStyleAndProminence?: number;
   renderVisuallyHiddenH2Title?: boolean;
   readTimeVariant?: string;
+  mostReadItemId?: string | null;
 }

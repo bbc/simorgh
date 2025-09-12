@@ -148,6 +148,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       renderVisuallyHiddenH2Title={position === 0}
                       curationId={curationId}
                       {...(readTimeVariant && { readTimeVariant })}
+                      mostReadItemId={mostReadItemId}
                     />
                     {index === indexOfFirstNonBanner && <MPU />}
                   </React.Fragment>
