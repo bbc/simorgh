@@ -4,6 +4,7 @@ import { use } from 'react';
 import { css, jsx, Theme } from '@emotion/react';
 import moment from 'moment';
 import path from 'ramda/src/path';
+import { extractId } from '#app/pages/HomePage/HomePage';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import formatDuration from '../../../lib/utilities/formatDuration';
 import Promo from '../../../legacy/components/Promo';
