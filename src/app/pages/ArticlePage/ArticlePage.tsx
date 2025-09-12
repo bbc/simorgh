@@ -323,7 +323,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const atiData = {
     ...atiAnalytics,
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
-    ...(isInServerSideExperiment && { experimentName, experimentVariant }),
+    ...(isInServerSideExperiment && {
+      experimentName,
+      experimentVariant,
+    }),
   };
 
   // EXPERIMENT: Read Time
@@ -472,11 +475,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                 liteCTAShows={liteCTAShows}
               />
             )}
-            {/* EXPERIMENT: Read Time */}
-            {readTimeValue && <OptimizelyPageMetrics trackPageComplete />}
+            {/* EXPERIMENT: Read Time & Continue Reading */}
+            {(readTimeValue || experimentVariant) && (
+              <OptimizelyPageMetrics trackPageComplete />
+            )}
           </main>
-          {/* EXPERIMENT: Read Time */}
-          {readTimeValue && (
+          {/* EXPERIMENT: Read Time & Continue Reading */}
+          {(readTimeValue || experimentVariant) && (
             <OptimizelyPageMetrics trackPageView trackPageDepth />
           )}
           {showTopics && (
