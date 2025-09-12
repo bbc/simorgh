@@ -1,12 +1,9 @@
 import { ReactSDKClient } from '@optimizely/react-sdk';
 import { Platforms, Services } from '#app/models/types/global';
+import * as sendEventBeacon from '../../../components/ATIAnalytics/beacon';
 import dispatchTrackingRequests from '.';
 
-const sendEventBeaconSpy = jest.spyOn(
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
-  require('../../../components/ATIAnalytics/beacon'),
-  'sendEventBeacon',
-);
+const sendEventBeaconSpy = jest.spyOn(sendEventBeacon, 'default');
 
 const defaultOptimizely = {
   track: jest.fn(),
