@@ -34,6 +34,7 @@ export interface ATIData {
   ampExperimentName?: string;
   experimentName?: string | null;
   experimentVariant?: string | null;
+  readTimeMilliseconds?: number | null;
 }
 
 export interface PageData {
@@ -213,6 +214,7 @@ export interface ATIPageTrackingProps {
   ampExperimentName?: string;
   experimentName?: string | null;
   experimentVariant?: string | null;
+  readTimeMilliseconds?: number | null;
 }
 
 export interface ATIProps {

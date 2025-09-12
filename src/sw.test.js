@@ -214,10 +214,10 @@ describe('Service Worker', () => {
       'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-144x144.png?v=2',
       'https://static.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-144x144.png?v=2',
       // Reverb - preview1, preview2, test & live
-      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/static/js/reverb/reverb-3.10.1.js',
-      'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/static/js/reverb/reverb-3.10.1.js',
-      'https://static.test.files.bbci.co.uk/ws/simorgh1-preview-assets/public/static/js/reverb/reverb-3.10.1.js',
-      'https://static.test.files.bbci.co.uk/ws/simorgh2-preview-assets/public/static/js/reverb/reverb-3.10.1.js',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/static/js/reverb/reverb-3.10.2.js',
+      'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/static/js/reverb/reverb-3.10.2.js',
+      'https://static.test.files.bbci.co.uk/ws/simorgh1-preview-assets/public/static/js/reverb/reverb-3.10.2.js',
+      'https://static.test.files.bbci.co.uk/ws/simorgh2-preview-assets/public/static/js/reverb/reverb-3.10.2.js',
       // Smart Tag
       'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/smarttag-5.29.4.min.js',
     ];
@@ -292,7 +292,7 @@ describe('Service Worker', () => {
   describe('version', () => {
     const CURRENT_VERSION = {
       number: 'v0.3.0',
-      fileContentHash: 'c2f44f5d446a24e1fcabacae38f033bd',
+      fileContentHash: '6150d6daf3d64a226a47e17b39dfc084',
     };
 
     it(`version number should be ${CURRENT_VERSION.number}`, async () => {

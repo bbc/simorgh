@@ -60,10 +60,10 @@ export const serviceWorkerCaching = () => {
       'woff2',
       'moment-lib',
       'frosted_promo',
-      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/static/js/reverb/reverb-3.10.1.js',
-      'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/static/js/reverb/reverb-3.10.1.js',
-      'https://static.test.files.bbci.co.uk/ws/simorgh1-preview-assets/public/static/js/reverb/reverb-3.10.1.js',
-      'https://static.test.files.bbci.co.uk/ws/simorgh2-preview-assets/public/static/js/reverb/reverb-3.10.1.js',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/static/js/reverb/reverb-3.10.2.js',
+      'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/static/js/reverb/reverb-3.10.2.js',
+      'https://static.test.files.bbci.co.uk/ws/simorgh1-preview-assets/public/static/js/reverb/reverb-3.10.2.js',
+      'https://static.test.files.bbci.co.uk/ws/simorgh2-preview-assets/public/static/js/reverb/reverb-3.10.2.js',
       'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/smarttag-5.29.4.min.js',
     ];
 

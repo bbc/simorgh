@@ -23,7 +23,10 @@ export interface Summary extends BaseSummary {
   mediaType?: 'audio' | 'video' | 'photogallery';
   lazy?: boolean;
   headingLevel?: number;
+  readTime?: number;
   eventTrackingData?: EventTrackingData;
+  visualProminence?: VisualProminence | string;
+  readTimeVariant?: string;
 }
 
 export const VISUAL_STYLE = {
@@ -75,4 +78,5 @@ export interface Curation extends BaseCuration {
   curationLength?: number;
   nthCurationByStyleAndProminence?: number;
   renderVisuallyHiddenH2Title?: boolean;
+  readTimeVariant?: string;
 }

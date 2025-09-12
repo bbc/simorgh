@@ -8,9 +8,6 @@ export default {
     value: 'es,mx',
   },
   articleLiteSiteLink: { enabled: true },
-  chartbeatAnalytics: {
-    enabled: true,
-  },
   comscoreAnalytics: {
     enabled: true,
   },
@@ -51,6 +48,21 @@ export default {
   },
   prerollAds: {
     enabled: true,
+  },
+  podcastPromo: {
+    enabled: true,
+  },
+  recentAudioEpisodes: {
+    enabled: true,
+    value: 4,
+  },
+  recentPodcastEpisodes: {
+    enabled: true,
+    value: 8,
+  },
+  recentVideoEpisodes: {
+    enabled: true,
+    value: 4,
   },
   scriptLink: {
     enabled: true,

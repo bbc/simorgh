@@ -50,10 +50,11 @@ describe('Hierarchical Grid Curation', () => {
   });
 
   it('returns null when less than three promos are in the data', async () => {
+    const splicedFixture = [...fixture].splice(0, 2);
     render(
       <HierarchicalGrid
         headingLevel={headingLevel}
-        summaries={fixture.splice(0, 2)}
+        summaries={splicedFixture}
         eventTrackingData={minimalEventTrackingData}
       />,
     );
@@ -169,5 +170,33 @@ describe('Hierarchical Grid Curation', () => {
       },
     );
     expect(container.queryByText('13 noviembre 2022')).not.toBeInTheDocument();
+  });
+
+  it('should display read time when readTime is provided in summary data', () => {
+    const fixtureDataIncludingReadTime = fixture.map(fixtureSummary => ({
+      ...fixtureSummary,
+      readTime: 5,
+    }));
+
+    const container = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={fixtureDataIncludingReadTime}
+        eventTrackingData={minimalEventTrackingData}
+        readTimeVariant="variant1"
+      />,
+    );
+    expect(container.queryAllByTestId('read-time').length).toBe(12);
+  });
+
+  it('should not display read time when readTime is not provided in summary data', () => {
+    const container = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={fixture}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+    );
+    expect(container.queryAllByTestId('read-time').length).toBe(0);
   });
 });

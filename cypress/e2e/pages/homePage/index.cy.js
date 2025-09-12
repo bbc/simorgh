@@ -1,14 +1,21 @@
 import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import canonicalTests from './testsForCanonicalOnly';
+import urlValidationTest from '../../../support/helpers/urlValidationTest';
 
-const tests = [canonicalTests];
+const tests = [canonicalTests, urlValidationTest];
 
 const testSuites = [
   {
     path: '/arabic',
     runforEnv: ['local', 'test', 'live'],
     service: 'arabic',
+    tests,
+  },
+  {
+    path: '/dari',
+    runforEnv: ['local', 'test'],
+    service: 'dari',
     tests,
   },
   {

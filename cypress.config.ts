@@ -5,6 +5,8 @@ import fs from 'fs';
 import path from 'path';
 import MomentTimezoneInclude from './src/app/legacy/psammead/moment-timezone-include/src';
 import { webpackDirAlias } from './dirAlias';
+import { DefinePlugin } from 'webpack';
+import dotenv from 'dotenv';
 
 const appDirectory = fs.realpathSync(process.cwd());
 const resolvePath = (relativePath: string) =>
@@ -23,6 +25,17 @@ export default defineConfig({
 
       const appEnv = config.env.APP_ENV;
       const env = config.env[appEnv];
+
+      const { parsed: appConfig } = dotenv.config({
+        path: `./envConfig/${config.env.APP_ENV}.env`,
+      });
+
+      // @ts-expect-error appConfig is a list of keys
+      const envVars = Object.keys(appConfig).reduce((vars, key) => {
+        // @ts-expect-error appConfig is a list of keys
+        vars[key] = JSON.stringify(appConfig[key]);
+        return vars;
+      }, {});
 
       config.baseUrl = env.baseUrl;
 
@@ -77,6 +90,11 @@ export default defineConfig({
           plugins: [
             // @ts-expect-error - TODO: fix types
             new MomentTimezoneInclude({ startYear: 2010, endYear: 2025 }),
+            new DefinePlugin({
+              process: {
+                env: envVars,
+              },
+            }),
           ],
         },
         watchOptions: {

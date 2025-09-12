@@ -48,7 +48,7 @@ import { Recommendation } from '#app/models/types/onwardJourney';
 
 import ScrollablePromo from '#components/ScrollablePromo';
 import Recommendations from '#app/components/Recommendations';
-import ReadTime from '#app/components/ReadTime';
+import { ReadTimeArticleExperiment as ReadTime } from '#app/components/ReadTime';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -336,7 +336,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const atiData = {
     ...atiAnalytics,
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
-    ...(isInServerSideExperiment && { experimentName, experimentVariant }),
+    ...(isInServerSideExperiment && {
+      experimentName,
+      experimentVariant,
+    }),
   };
 
   // EXPERIMENT: Read Time
@@ -485,11 +488,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                 liteCTAShows={liteCTAShows}
               />
             )}
-            {/* EXPERIMENT: Read Time */}
-            {readTimeValue && <OptimizelyPageMetrics trackPageComplete />}
+            {/* EXPERIMENT: Read Time & Continue Reading */}
+            {(readTimeValue || experimentVariant) && (
+              <OptimizelyPageMetrics trackPageComplete />
+            )}
           </main>
-          {/* EXPERIMENT: Read Time */}
-          {readTimeValue && (
+          {/* EXPERIMENT: Read Time & Continue Reading */}
+          {(readTimeValue || experimentVariant) && (
             <OptimizelyPageMetrics trackPageView trackPageDepth />
           )}
           {showTopics && (

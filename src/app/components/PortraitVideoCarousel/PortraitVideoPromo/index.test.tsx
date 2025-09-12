@@ -9,6 +9,10 @@ import * as useViewTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
 import PortraitVideoPromo from '.';
 
+const eventTrackingData = {
+  componentName: 'portrait-video-carousel',
+};
+
 describe('PortraitVideoPromo', () => {
   beforeAll(() => {
     jest.useFakeTimers();
@@ -29,7 +33,10 @@ describe('PortraitVideoPromo', () => {
     } as PortraitClipMediaBlock;
 
     const { container } = render(
-      <PortraitVideoPromo block={sampleVideoData} />,
+      <PortraitVideoPromo
+        block={sampleVideoData}
+        eventTrackingData={eventTrackingData}
+      />,
       { service: 'portuguese' },
     );
 
@@ -58,7 +65,10 @@ describe('PortraitVideoPromo', () => {
     } as PortraitClipMediaBlock;
 
     const { container } = render(
-      <PortraitVideoPromo block={sampleVideoData} />,
+      <PortraitVideoPromo
+        block={sampleVideoData}
+        eventTrackingData={eventTrackingData}
+      />,
       {
         service: 'portuguese',
       },
@@ -93,7 +103,10 @@ describe('PortraitVideoPromo', () => {
     } as PortraitClipMediaBlock;
 
     const { container } = render(
-      <PortraitVideoPromo block={sampleVideoData} />,
+      <PortraitVideoPromo
+        block={sampleVideoData}
+        eventTrackingData={eventTrackingData}
+      />,
     );
 
     const image = container.querySelector(
@@ -117,7 +130,10 @@ describe('PortraitVideoPromo', () => {
     } as PortraitClipMediaBlock;
 
     const { container } = render(
-      <PortraitVideoPromo block={sampleVideoData} />,
+      <PortraitVideoPromo
+        block={sampleVideoData}
+        eventTrackingData={eventTrackingData}
+      />,
     );
 
     const image = container.querySelector(
@@ -141,10 +157,6 @@ describe('PortraitVideoPromo', () => {
       },
     } as PortraitClipMediaBlock;
 
-    const groupTracker = {
-      itemCount: 15,
-      resourceId: 'test-group-resource-id',
-    };
     const clickTrackerSpy = jest.spyOn(useViewTrackerHandler, 'default');
 
     await act(async () => {
@@ -152,13 +164,19 @@ describe('PortraitVideoPromo', () => {
         <PortraitVideoPromo
           block={sampleVideoData}
           blockPosition={2}
-          groupTracker={groupTracker}
+          eventTrackingData={{
+            ...eventTrackingData,
+            groupTracker: {
+              itemCount: 15,
+              resourceId: 'test-group-resource-id',
+            },
+          }}
         />,
       );
     });
 
     expect(clickTrackerSpy).toHaveBeenCalledWith({
-      componentName: 'portrait-video-promo-3',
+      componentName: 'portrait-video-carousel',
       groupTracker: {
         itemCount: 15,
         resourceId: 'test-group-resource-id',
@@ -187,9 +205,15 @@ describe('PortraitVideoPromo', () => {
     } as PortraitClipMediaBlock;
 
     await act(async () => {
-      render(<PortraitVideoPromo block={sampleVideoData} />, {
-        service: 'portuguese',
-      });
+      render(
+        <PortraitVideoPromo
+          block={sampleVideoData}
+          eventTrackingData={eventTrackingData}
+        />,
+        {
+          service: 'portuguese',
+        },
+      );
     });
 
     const promoButton = screen.getByTestId('promo-button');
