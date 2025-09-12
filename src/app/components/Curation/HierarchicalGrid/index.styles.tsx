@@ -11,6 +11,13 @@ const readTimeExperimentBigPromoStyles = {
     display: 'flex',
     alignItems: 'center',
     'flex-wrap': 'wrap',
+    '> .hierachical-read-time': {
+      lineHeight: 0,
+    },
+    // EXPERIMENT - Placeholder for control variants
+    '> .placeholder': {
+      height: 0,
+    },
     '> .hierachical-read-time::before': {
       content: '""',
       display: 'inline-block',

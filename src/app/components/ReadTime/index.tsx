@@ -113,8 +113,13 @@ export const ReadTimeArticleExperiment = ({
   );
 };
 
+// EXPERIMENT - Placeholder for control variants
 const HomepagePlaceholder = (props: React.PropsWithChildren) => (
-  <div {...props} css={styles.readTimeHomepagePlaceholderControl} />
+  <div
+    {...props}
+    css={styles.readTimeHomepagePlaceholderControl}
+    className="placeholder"
+  />
 );
 
 export const ReadTime = ({

@@ -24,7 +24,7 @@ export default {
     css({
       height: `${pixelsToRem(18.4)}rem`,
       [mq.GROUP_2_MAX_WIDTH]: {
-        height: `${pixelsToRem(19.3)}rem`,
+        height: `${pixelsToRem(19.1)}rem`,
       },
     }),
 };
