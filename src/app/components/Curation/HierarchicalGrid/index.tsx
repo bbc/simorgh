@@ -35,6 +35,7 @@ const HiearchicalGrid = ({
   summaries,
   headingLevel,
   isFirstCuration,
+  mostReadItemId,
 }: CurationGridProps) => {
   const { isAmp } = use(RequestContext);
   const { translations } = use(ServiceContext);

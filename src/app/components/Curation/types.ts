@@ -4,4 +4,5 @@ export interface CurationGridProps {
   summaries: Summary[];
   headingLevel?: number;
   isFirstCuration?: boolean;
+  mostReadItemId?: string | null;
 }
