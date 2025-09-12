@@ -139,56 +139,6 @@
             "duration": "PT30M"
           }
         ]
-      },
-      {
-        "mediaCollection": [
-          {
-            "type": "liveMedia",
-            "model": {
-              "urn": "urn:bbc:pips:sid:bbc_arabic_tv",
-              "title": "08/09/2025 15:00 GMT",
-              "type": "episode",
-              "synopses": {
-                "short": "نشرة خاصة بوسائل التواصل الاجتماعي",
-                "medium": "نشرة خاصة بوسائل التواصل الاجتماعي",
-                "long": "نشرة خاصة بوسائل التواصل الاجتماعي"
-              },
-              "mediaType": "audio_video",
-              "imageUrlTemplate": "https://ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png",
-              "masterbrand": {
-                "id": "bbc_arabic_tv",
-                "name": "تلفزيون بي بي سي عربي",
-                "networkName": "تلفزيون بي بي سي عربي",
-                "type": "tv",
-                "imageUrlTemplate": "ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png"
-              },
-              "version": {
-                "vpid": "n4pdmd48l3",
-                "duration": "PT30M",
-                "availabilityType": "simulcast",
-                "versionTypes": [
-                  {
-                    "type": "Original",
-                    "name": "Original version"
-                  }
-                ],
-                "schedule": null,
-                "serviceId": "bbc_arabic_tv",
-                "authToken": null,
-                "status": "LIVE",
-                "warnings": null
-              },
-              "leadMedia": true
-            }
-          }
-        ],
-        "curationId": "urn:bbc:tipo:list:105b7867-4ce7-4682-9fdb-c9c97c8bafdb",
-        "curationType": "tipo-curation",
-        "position": 3,
-        "title": "Arabic TV Stream",
-        "visualProminence": "NORMAL",
-        "visualStyle": "NONE",
-        "intent": "MEDIA_PLAYER"
       }
     ],
     "metadata": {
