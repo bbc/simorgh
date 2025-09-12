@@ -298,7 +298,7 @@ const canonicalTestSuites = [
   },
   {
     path: '/kyrgyz',
-    runforEnv: ['local', 'test', 'live'],
+    runforEnv: ['local', 'live'],
     service: 'kyrgyz',
     pageIdentifier: 'kyrgyz.page',
     siteId: 58,
