@@ -36,11 +36,11 @@ describe('dispatchTrackingRequests', () => {
       const viewTrackerRequestsParameters = {
         optimizelyParameters: {
           optimizely: defaultOptimizely,
-          componentName: 'testComponent',
+          componentName: 'portrait-video-modal',
         },
         reverbParameters: {
           campaignID: 'campaign123',
-          componentName: 'testComponent',
+          componentName: 'portrait-video-modal',
           format: 'testFormat',
           pageIdentifier: 'page123',
           platform: 'canonical' as Platforms,
@@ -61,7 +61,6 @@ describe('dispatchTrackingRequests', () => {
             position: 4,
           },
           itemTracker: {
-            name: 'portrait-video-modal',
             type: 'portrait-video',
             text: 'Rollercoaster facts... while riding a rollercoaster',
             position: 1,
@@ -83,32 +82,34 @@ describe('dispatchTrackingRequests', () => {
       expect(sendEventBeaconSpy).toHaveBeenCalledTimes(1);
 
       expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
-      // expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
-      //   'viewability',
-      //   '',
-      //   {
-      //     event: { action: 'view', category: 'viewability' },
-      //     group: {
-      //       name: 'test group',
-      //       type: 'portrait-video-modal',
-      //       item_count: 18,
-      //       resource_id: 'test-group-id',
-      //       position: 4,
-      //     },
-      //     item: {
-      //       name: 'portrait-video-modal',
-      //       type: 'portrait-video',
-      //       text: 'Rollercoaster facts... while riding a rollercoaster',
-      //       media_type: 'video',
-      //       position: 1,
-      //       duration: 73000,
-      //       resource_id: 'test-item-id',
-      //     },
-      //   },
-      //   undefined,
-      //   undefined,
-      //   false,
-      // );
+      expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+        'viewability',
+        '',
+        {
+          event: { action: 'view', category: 'viewability' },
+          group: {
+            name: 'test group',
+            type: 'portrait-video-modal',
+            item_count: 18,
+            resource_id: 'test-group-id',
+            position: 4,
+          },
+          item: {
+            name: 'portrait-video-modal',
+            attribution: 'advertiser id',
+            link: 'http://example.com',
+            type: 'portrait-video',
+            text: 'Rollercoaster facts... while riding a rollercoaster',
+            media_type: 'video',
+            position: 1,
+            duration: 73000,
+            resource_id: 'test-item-id',
+          },
+        },
+        undefined,
+        undefined,
+        false,
+      );
     });
   });
 });
