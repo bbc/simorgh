@@ -68,6 +68,7 @@ export default ({
   renderVisuallyHiddenH2Title = false,
   curationId,
   readTimeVariant,
+  mostReadItemId,
 }: Curation) => {
   const componentName = getComponentName({
     visualStyle,
@@ -231,6 +232,7 @@ export default ({
                 {...(readTimeVariant && {
                   readTimeVariant,
                 })}
+                mostReadItemId={mostReadItemId}
               />
             </div>
           </section>
@@ -244,6 +246,7 @@ export default ({
               {...(readTimeVariant && {
                 readTimeVariant,
               })}
+              mostReadItemId={mostReadItemId}
             />
           </div>
         );
