@@ -7,4 +7,5 @@ export interface CurationGridProps {
   isFirstCuration?: boolean;
   eventTrackingData: EventTrackingData;
   readTimeVariant?: string;
+  mostReadItemId?: string | null;
 }
