@@ -78,6 +78,7 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'بیشتر',
       home: 'صفحه اول',
+      continueReading: 'ادامه مطلب را بخوانید',
       currentPage: 'صفحه فعلی',
       skipLinkText: 'مشاهده محتوا',
       relatedContent: 'مطالب مرتبط',
