@@ -1,9 +1,12 @@
 import { ReactSDKClient } from '@optimizely/react-sdk';
 import { Platforms, Services } from '#app/models/types/global';
-import * as sendEventBeacon from '../../../components/ATIAnalytics/beacon';
 import dispatchTrackingRequests from '.';
 
-const sendEventBeaconSpy = jest.spyOn(sendEventBeacon, 'default');
+const sendEventBeaconSpy = jest.spyOn(
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  require('../../../components/ATIAnalytics/beacon'),
+  'sendEventBeacon',
+);
 
 const defaultOptimizely = {
   track: jest.fn(),
@@ -66,7 +69,66 @@ const viewTrackerRequestsParameters = {
 };
 
 describe('dispatchTrackingRequests', () => {
-  // describe('Optimizely tracking', () => {});
+  describe('Optimizely tracking', () => {
+    afterEach(() => {
+      jest.clearAllMocks();
+    });
+
+    it('should send event to Optimizely when optimizely object exists and required parameters are set to true', async () => {
+      await dispatchTrackingRequests({
+        ...viewTrackerRequestsParameters,
+        optimizelyParameters: {
+          ...viewTrackerRequestsParameters.optimizelyParameters,
+          sendOptimizelyEvents: true,
+          experimentVariant: 'variantA',
+        },
+      });
+
+      expect(sendEventBeaconSpy).toHaveBeenCalled();
+
+      expect(defaultOptimizely.track).toHaveBeenCalledTimes(1);
+      expect(defaultOptimizely.track).toHaveBeenCalledWith(
+        'portrait-video-modal-views',
+        defaultOptimizely.user.id,
+        defaultOptimizely.user.attributes,
+      );
+    });
+
+    it.each([
+      {
+        title: 'sendOptimizelyEvents is set to false in optimizelyParameters',
+        eventTrackingData: {
+          ...viewTrackerRequestsParameters,
+          optimizelyParameters: {
+            ...viewTrackerRequestsParameters.optimizelyParameters,
+            sendOptimizelyEvents: false,
+            experimentVariant: 'variantA',
+          },
+        },
+      },
+      {
+        title: 'experimentVariant is set to off in optimizelyParameters',
+        eventTrackingData: {
+          ...viewTrackerRequestsParameters,
+          optimizelyParameters: {
+            ...viewTrackerRequestsParameters.optimizelyParameters,
+            sendOptimizelyEvents: true,
+            experimentVariant: 'off',
+          },
+        },
+      },
+    ])(
+      'should not send event to Optimizely when optimizely object exists and $title',
+      async ({ eventTrackingData }) => {
+        await dispatchTrackingRequests(eventTrackingData);
+
+        expect(sendEventBeaconSpy).toHaveBeenCalled();
+
+        expect(defaultOptimizely.track).not.toHaveBeenCalled();
+      },
+    );
+  });
+
   describe('Reverb tracking', () => {
     afterEach(() => {
       jest.clearAllMocks();
@@ -108,6 +170,8 @@ describe('dispatchTrackingRequests', () => {
       'should trigger a beacon for a view event when $title',
       async ({ eventTrackingData }) => {
         await dispatchTrackingRequests(eventTrackingData);
+
+        expect(sendEventBeaconSpy).toHaveBeenCalled();
 
         expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
         expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
