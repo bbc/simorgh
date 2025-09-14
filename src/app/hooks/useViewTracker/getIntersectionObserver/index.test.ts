@@ -1,11 +1,3 @@
-// Create a mock function to pass in as a callback
-// Spy on mock callback
-// Call initObserver with threshold set to 0 and 
-// componentViewStateSetter set to the mock callback
-
-// Bring an element into view
-// Expect mock callback to have been called with true
-
 import initObserver from '.';
 
 describe('getIntersectionObserver', () => {
@@ -14,7 +6,7 @@ describe('getIntersectionObserver', () => {
   });
 
   it('should create an IntersectionObserver instance with the specified threshold', async () => {
-    const mockCallback = jest.fn(); // Mock function to track calls
+    const mockCallback = jest.fn();
 
     // Mock IntersectionObserver
     const observe = jest.fn();
