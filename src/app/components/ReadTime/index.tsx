@@ -166,7 +166,7 @@ export const ReadTime = ({
     itemTracker: {
       type: promoType,
       position: promoPosition,
-      label: `Read time: ${readTimeValue} minutes`,
+      label: `Read time: ${readTimeValue} ${readTimeValue === 1 ? 'minute' : 'minutes'}`,
       duration: readTimeInMilliseconds,
       resourceId: promoId,
     },
