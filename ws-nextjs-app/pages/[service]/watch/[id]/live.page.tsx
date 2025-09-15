@@ -36,6 +36,4 @@ export const getServerSideProps: GetServerSideProps = async context => {
   };
 };
 
-export default function LiveTvPage({ ...props }: LiveTVPageProps) {
-  return <LiveTvLayout {...props} />;
-}
+export default LiveTvLayout;
