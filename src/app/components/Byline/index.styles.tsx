@@ -114,7 +114,7 @@ export default {
 
   timestampLineBreak: ({ palette, spacings, mq }: Theme) =>
     css({
-      '&:nth-child(2)::before': {
+      '::before': {
         content: '""',
         borderTop: `${pixelsToRem(2)}rem solid ${palette.GREY_5}`,
         width: `${pixelsToRem(40)}rem`,

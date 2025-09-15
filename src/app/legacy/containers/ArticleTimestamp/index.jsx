@@ -20,7 +20,6 @@ const ArticleTimestamp = ({
   popOut = true,
   minutesTolerance = 0,
   className = '',
-  showReadTimeBelowTimestamp = false,
 }) => {
   const {
     articleTimestampPrefix,
@@ -72,19 +71,11 @@ const ArticleTimestamp = ({
 
   return (
     <GridWrapper {...(className ? { className } : undefined)}>
-      <FirstPublishedTimestamp
-        {...timestampProps}
-        {...firstPublishedProps}
-        {...(showReadTimeBelowTimestamp && { padding: false })}
-      />
+      <FirstPublishedTimestamp {...timestampProps} {...firstPublishedProps} />
       {displayLastUpdatedTimestamp && (
         // Div has been used for No CSS formatting see #5554
         <div>
-          <LastUpdatedTimestamp
-            {...timestampProps}
-            {...lastPublishedProps}
-            {...(showReadTimeBelowTimestamp && { padding: false })}
-          />
+          <LastUpdatedTimestamp {...timestampProps} {...lastPublishedProps} />
         </div>
       )}
     </GridWrapper>

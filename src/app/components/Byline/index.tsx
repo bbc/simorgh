@@ -187,12 +187,7 @@ const Byline = ({
         </VisuallyHiddenText>
         <ul css={BylineCss.bylineList}>
           <li css={BylineCss.bylineContainer}>{contributors}</li>
-          {children &&
-            React.Children.map(children, (child, index) => (
-              <li key={index} css={BylineCss.timestampLineBreak}>
-                {child}
-              </li>
-            ))}
+          {children && <li css={BylineCss.timestampLineBreak}>{children}</li>}
         </ul>
       </section>
     )
