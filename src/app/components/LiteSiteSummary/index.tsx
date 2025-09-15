@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { useContext } from 'react';
+import { use } from 'react';
 import { jsx } from '@emotion/react';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import Paragraph from '../Paragraph';
@@ -11,8 +11,8 @@ import defaultTranslations from './defaultTranslations';
 import CallToActionLink from '../CallToActionLink';
 
 const LiteSiteSummary = () => {
-  const { translations } = useContext(ServiceContext);
-  const { canonicalLink } = useContext(RequestContext);
+  const { translations } = use(ServiceContext);
+  const { canonicalLink } = use(RequestContext);
   const { liteSite = defaultTranslations } = translations;
   const {
     onboardingMessage,

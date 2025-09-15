@@ -2,20 +2,20 @@ import React from 'react';
 import type { AppProps } from 'next/app';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import ThemeProvider from '#app/components/ThemeProvider';
-import { ToggleContextProvider } from '../../src/app/contexts/ToggleContext';
-import { ServiceContextProvider } from '../../src/app/contexts/ServiceContext';
-import { RequestContextProvider } from '../../src/app/contexts/RequestContext';
-import { EventTrackingContextProvider } from '../../src/app/contexts/EventTrackingContext';
-import { UserContextProvider } from '../../src/app/contexts/UserContext';
-import ErrorPage from '../../src/app/pages/ErrorPage/ErrorPage';
+import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import {
   PageTypes,
   Services,
   Toggles,
   Variants,
-  MvtExperiment,
-} from '../../src/app/models/types/global';
-import PageWrapper from '../../src/app/components/PageLayoutWrapper';
+  ServerSideExperiment,
+} from '#app/models/types/global';
+import ErrorPage from '#app//pages/ErrorPage/ErrorPage';
+import PageWrapper from '#app/components/PageLayoutWrapper';
+import { ServiceContextProvider } from '#app/contexts/ServiceContext';
+import { RequestContextProvider } from '#app/contexts/RequestContext';
+import { EventTrackingContextProvider } from '#app/contexts/EventTrackingContext';
+import { UserContextProvider } from '#app/contexts/UserContext';
 
 interface Props extends AppProps {
   pageProps: {
@@ -26,7 +26,7 @@ interface Props extends AppProps {
     isLite?: boolean;
     isNextJs: boolean;
     isAvEmbeds?: boolean;
-    mvtExperiments: MvtExperiment[] | null;
+    serverSideExperiments: ServerSideExperiment[] | null;
     pageData: {
       metadata: {
         type: PageTypes;
@@ -43,6 +43,7 @@ interface Props extends AppProps {
     toggles: Toggles;
     variant?: Variants;
     isUK?: boolean;
+    country?: string | null;
   };
 }
 
@@ -55,7 +56,7 @@ export default function App({ Component, pageProps }: Props) {
     isLite = false,
     isNextJs = true,
     isAvEmbeds = false,
-    mvtExperiments = null,
+    serverSideExperiments = null,
     pageData,
     pageLang = '',
     pageType,
@@ -67,6 +68,7 @@ export default function App({ Component, pageProps }: Props) {
     toggles,
     variant,
     isUK,
+    country,
   } = pageProps;
 
   const { metadata: { atiAnalytics = undefined } = {} } = pageData ?? {};
@@ -98,7 +100,8 @@ export default function App({ Component, pageProps }: Props) {
           variant={variant}
           timeOnServer={timeOnServer}
           showAdsBasedOnLocation={showAdsBasedOnLocation}
-          mvtExperiments={mvtExperiments}
+          serverSideExperiments={serverSideExperiments}
+          country={country}
           isNextJs={isNextJs}
           isUK={isUK ?? false}
         >

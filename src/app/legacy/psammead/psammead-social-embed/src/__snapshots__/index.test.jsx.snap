@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`AmpSocialEmbed should render a notice when the provider is unsupported 1`] = `
 .emotion-0 {
@@ -1382,8 +1382,6 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
   </div>
 </div>
 `;
-
-exports[`AmpSocialEmbed should render null when no social embed ID is provided 1`] = `<div />`;
 
 exports[`CanonicalSocialEmbed Instagram should render correctly for Instagram 1`] = `
 .emotion-0 {

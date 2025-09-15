@@ -1,0 +1,839 @@
+{
+  "data": {
+    "article": {
+      "metadata": {
+        "atiAnalytics": {
+          "categoryName": null,
+          "contentId": "urn:bbc:optimo:asset:c3yzpj6evklo",
+          "contentType": "article",
+          "language": "pt-br",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "nationsProducer": null,
+          "pageIdentifier": "portuguese.articles.c3yzpj6evklo.page",
+          "pageTitle": "this is an article with 2 PV's that have \"Watch Moments\" translations, but with a text block below the Headline",
+          "timePublished": "2025-06-23T07:44:17.804Z",
+          "timeUpdated": "2025-06-23T07:44:17.804Z"
+        },
+        "id": "urn:bbc:ares::article:c3yzpj6evklo",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:c3yzpj6evklo",
+          "canonicalUrl": "https://www.bbc.com/portuguese/articles/c3yzpj6evklo"
+        },
+        "type": "article",
+        "createdBy": "Brasil",
+        "language": "pt-br",
+        "firstPublished": 1750664657804,
+        "lastPublished": 1750664657804,
+        "isOppm": false,
+        "options": { "includeComments": false },
+        "analyticsLabels": {
+          "contentId": "urn:bbc:optimo:asset:c3yzpj6evklo",
+          "producer": "Brasil",
+          "page": "portuguese.articles.c3yzpj6evklo.page",
+          "irisKeyword": null
+        },
+        "passport": {
+          "language": "pt-br",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+          "taggings": [
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+              "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+              "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+              "value": "2025-06-23T07:44:17.804Z"
+            }
+          ],
+          "predicates": {
+            "infoClass": [
+              {
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                "type": "infoClass"
+              }
+            ],
+            "assetType": [
+              {
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                "type": "assetType"
+              }
+            ],
+            "dateFirstReleased": [
+              {
+                "value": "2025-06-23T07:44:17.804Z",
+                "type": "dateFirstReleased"
+              }
+            ]
+          }
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "video",
+          "caption",
+          "aresMedia",
+          "aresMediaMetadata",
+          "image",
+          "rawImage",
+          "altText"
+        ],
+        "includeComments": false,
+        "consumableAsSFV": false,
+        "allowAdvertising": true,
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false,
+        "breakingNews": { "isBreaking": false },
+        "useSensitiveOnwardJourneys": false,
+        "stats": { "readTime": 1, "wordCount": 50 },
+        "isTransliterated": false,
+        "isKeyPointsFormatAsset": false
+      },
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "41b2a260",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "69229588",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "200ac94e",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "this is an article with 2 PV's that have \"Watch Moments\" translations, but with a text block below the Headline",
+                            "blocks": [
+                              {
+                                "id": "9050dd4d",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "this is an article with 2 PV's that have \"Watch Moments\" translations, but with a text block below the Headline",
+                                  "attributes": []
+                                },
+                                "position": [1, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [1, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [1, 1]
+                  }
+                ]
+              },
+              "position": [1]
+            },
+            {
+              "id": "b2f06fd4",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1750664657804,
+                "lastPublished": 1750664657804
+              },
+              "position": [2]
+            },
+            {
+              "id": "5214da87",
+              "type": "text",
+              "model": {
+                "suitableForAbridgement": false,
+                "blocks": [
+                  {
+                    "id": "21758fe3",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "this is a text block under the H1 Headline. this means that the PV below should have a \"Watch Moments\" translation above it.",
+                      "blocks": [
+                        {
+                          "id": "9a8ff7a5",
+                          "type": "fragment",
+                          "model": {
+                            "text": "this is a text block under the H1 Headline. this means that the PV below should have a \"Watch Moments\" translation above it.",
+                            "attributes": []
+                          },
+                          "position": [3, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [3, 1]
+                  }
+                ]
+              },
+              "position": [3]
+            },
+            {
+              "id": "2e345d96",
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p01wjx1y",
+                "blocks": [
+                  {
+                    "id": "520e01a0",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "cf95c38f",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "b228016b",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "PV 1",
+                                  "blocks": [
+                                    {
+                                      "id": "710080b1",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "PV 1",
+                                        "attributes": []
+                                      },
+                                      "position": [4, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [4, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [4, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [4, 1]
+                  },
+                  {
+                    "id": "d02da78f",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "0c982418",
+                          "blockId": "urn:bbc:ares::clip:p01wjx1y",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p01wjx1y",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "Por que é tão difícil para Ucrânia e Rússia selarem paz (9x16)",
+                            "synopses": {
+                              "short": "Volodymyr Zelensky afirmou que representantes do seu país e dos EUA"
+                            },
+                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx8z.jpg",
+                            "embedding": true,
+                            "advertising": true,
+                            "versions": [
+                              {
+                                "versionId": "p01wjx20",
+                                "types": ["Portrait"],
+                                "duration": 46,
+                                "durationISO8601": "PT46S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1743087045000
+                              }
+                            ],
+                            "syndication": { "destinations": [] },
+                            "smpKind": "programme",
+                            "webcastVersions": []
+                          },
+                          "position": [4, 2, 1]
+                        },
+                        {
+                          "id": "bdf09a4e",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "b3d7e6dd",
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 546,
+                                  "height": 972,
+                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01wjx8z.jpg",
+                                  "originCode": "mpv"
+                                },
+                                "position": [4, 2, 2, 1]
+                              },
+                              {
+                                "id": "4ebee559",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "3304668e",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "da323c67",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Volodymyr Zelensky afirmou que representantes do seu país e dos EUA",
+                                              "blocks": [
+                                                {
+                                                  "id": "02d81d20",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Volodymyr Zelensky afirmou que representantes do seu país e dos EUA",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    4, 2, 2, 2, 1, 1, 1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [4, 2, 2, 2, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [4, 2, 2, 2, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [4, 2, 2, 2]
+                              }
+                            ]
+                          },
+                          "position": [4, 2, 2]
+                        }
+                      ]
+                    },
+                    "position": [4, 2]
+                  }
+                ]
+              },
+              "position": [4]
+            },
+            {
+              "id": "c16b9537",
+              "type": "text",
+              "model": {
+                "suitableForAbridgement": false,
+                "blocks": [
+                  {
+                    "id": "d6188e6d",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "another text block",
+                      "blocks": [
+                        {
+                          "id": "e8f4173c",
+                          "type": "fragment",
+                          "model": {
+                            "text": "another text block",
+                            "attributes": []
+                          },
+                          "position": [5, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 1]
+                  }
+                ]
+              },
+              "position": [5]
+            },
+            {
+              "id": "14e828e2",
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p01wjx35",
+                "blocks": [
+                  {
+                    "id": "a1c0e1d0",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "004cf667",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "ae29963f",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "PV 2",
+                                  "blocks": [
+                                    {
+                                      "id": "b06ec108",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "PV 2",
+                                        "attributes": []
+                                      },
+                                      "position": [6, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [6, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [6, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [6, 1]
+                  },
+                  {
+                    "id": "614aeb06",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "cc2a8108",
+                          "blockId": "urn:bbc:ares::clip:p01wjx35",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p01wjx35",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "Papa Francisco reencontra fiéis ao deixar hospital em Roma (9x16)",
+                            "synopses": {
+                              "short": "Após 37 dias de internação, o papa Francisco recebeu alta do hospital"
+                            },
+                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx3l.jpg",
+                            "embedding": true,
+                            "advertising": true,
+                            "versions": [
+                              {
+                                "versionId": "p01wjx37",
+                                "types": ["Portrait"],
+                                "duration": 13,
+                                "durationISO8601": "PT13S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1743087351000
+                              }
+                            ],
+                            "syndication": { "destinations": [] },
+                            "smpKind": "programme",
+                            "webcastVersions": []
+                          },
+                          "position": [6, 2, 1]
+                        },
+                        {
+                          "id": "1091c38a",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "825d33db",
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 546,
+                                  "height": 972,
+                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01wjx3l.jpg",
+                                  "originCode": "mpv"
+                                },
+                                "position": [6, 2, 2, 1]
+                              },
+                              {
+                                "id": "548cd9d8",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "218fba97",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "fd27e31a",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Após 37 dias de internação, o papa Francisco recebeu alta do hospital",
+                                              "blocks": [
+                                                {
+                                                  "id": "58fd4c78",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Após 37 dias de internação, o papa Francisco recebeu alta do hospital",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    6, 2, 2, 2, 1, 1, 1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [6, 2, 2, 2, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [6, 2, 2, 2, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [6, 2, 2, 2]
+                              }
+                            ]
+                          },
+                          "position": [6, 2, 2]
+                        }
+                      ]
+                    },
+                    "position": [6, 2]
+                  }
+                ]
+              },
+              "position": [6]
+            },
+            { "id": "907afb1b", "type": "mpu", "model": {}, "position": [7] },
+            {
+              "id": "02bcc083",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations",
+                "data": [
+                  {
+                    "id": "4b68e099-c83b-0646-a936-cf9dbd39e205",
+                    "title": "Esfera misteriosa encontrada em floresta intriga cientistas 6",
+                    "href": "/portuguese/curiosidades-23034407",
+                    "image": {
+                      "width": 976,
+                      "height": 549,
+                      "altText": "Esfera pedra",
+                      "copyrightHolder": "Reuters",
+                      "originCode": "cpsdevpb",
+                      "locator": "D870/test/_63480455_esfera_pedra.jpg"
+                    }
+                  },
+                  {
+                    "id": "15163aa4-7746-3048-a905-cdfd89baa941",
+                    "title": "O supercarro francês inspirado em aviões caça 6",
+                    "href": "/portuguese/vert-fut-23034326",
+                    "image": {
+                      "width": 976,
+                      "height": 549,
+                      "altText": "Bell Ross",
+                      "copyrightHolder": "Bell Ross",
+                      "originCode": "cpsdevpb",
+                      "locator": "4B08/test/_63480291_bellross.jpg"
+                    }
+                  },
+                  {
+                    "id": "b27183c8-b7ea-6a46-b37d-927f9b5dd0ee",
+                    "title": "Descoberta jacuzi no apartamento do Barruchosds",
+                    "href": "/portuguese/brasil-23042159",
+                    "image": {
+                      "width": 976,
+                      "height": 549,
+                      "altText": "Brazilian president",
+                      "copyrightHolder": "Reuters",
+                      "originCode": "cpsdevpb",
+                      "locator": "3F14/test/_63484161_1bf5f3d9-a934-448a-90e4-d0aa9dd58683.jpg"
+                    }
+                  },
+                  {
+                    "id": "9152c4ba-698c-8d41-9325-21c77ed843cd",
+                    "title": "Novo estudo anglo-brasileiro reforça relação entre Zika e microcefalia",
+                    "href": "/portuguese/brasil-23075123",
+                    "image": {
+                      "width": 976,
+                      "height": 549,
+                      "altText": "Alt tag",
+                      "copyrightHolder": "AP",
+                      "originCode": "cpsdevpb",
+                      "locator": "B022/test/_63509054_875d1f90-c3b0-46e2-b004-5d249f0ad4ce.jpg"
+                    }
+                  }
+                ]
+              },
+              "position": [8]
+            }
+          ]
+        }
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "this is an article with 2 PV's that have \"Watch Moments\" translations, but with a text block below the Headline",
+          "promoHeadline": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "this is an article with 2 PV's that have \"Watch Moments\" translations, but with a text block below the Headline",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "this is an article with 2 PV's that have \"Watch Moments\" translations, but with a text block below the Headline",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "summary": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": { "text": "", "attributes": [] }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "serviceIdentifier": "Brasil",
+        "breakingNews": { "isBreaking": false },
+        "consumableAsSFV": false
+      }
+    },
+    "secondaryData": {
+      "topStories": [],
+      "features": [],
+      "mostRead": {
+        "generated": "2025-06-23T11:02:56.93Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
+        "items": [
+          {
+            "id": "4b68e099-c83b-0646-a936-cf9dbd39e205",
+            "rank": 1,
+            "title": "Esfera misteriosa encontrada em floresta intriga cientistas 6",
+            "href": "/portuguese/curiosidades-23034407",
+            "timestamp": "2016-04-14T12:34:19.000Z",
+            "indexImage": {
+              "id": "63480455",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/D870/test/_63480455_esfera_pedra.jpg",
+              "path": "/cpsdevpb/D870/test/_63480455_esfera_pedra.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Esfera pedra",
+              "caption": "Esfera pedra",
+              "copyrightHolder": "Reuters",
+              "originCode": "cpsdevpb",
+              "type": "image"
+            }
+          },
+          {
+            "id": "15163aa4-7746-3048-a905-cdfd89baa941",
+            "rank": 2,
+            "title": "O supercarro francês inspirado em aviões caça 6",
+            "href": "/portuguese/vert-fut-23034326",
+            "timestamp": "2016-04-14T08:34:17.000Z",
+            "indexImage": {
+              "id": "63480291",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/4B08/test/_63480291_bellross.jpg",
+              "path": "/cpsdevpb/4B08/test/_63480291_bellross.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Bell Ross",
+              "caption": "Bell Ross",
+              "copyrightHolder": "Bell Ross",
+              "originCode": "cpsdevpb",
+              "type": "image"
+            }
+          },
+          {
+            "id": "b27183c8-b7ea-6a46-b37d-927f9b5dd0ee",
+            "rank": 3,
+            "title": "Descoberta jacuzi no apartamento do Barruchosds",
+            "href": "/portuguese/brasil-23042159",
+            "timestamp": "2016-05-17T12:55:47.000Z",
+            "indexImage": {
+              "id": "63484161",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/3F14/test/_63484161_1bf5f3d9-a934-448a-90e4-d0aa9dd58683.jpg",
+              "path": "/cpsdevpb/3F14/test/_63484161_1bf5f3d9-a934-448a-90e4-d0aa9dd58683.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Brazilian president",
+              "caption": "Michel Temer",
+              "copyrightHolder": "Reuters",
+              "originCode": "cpsdevpb",
+              "type": "image"
+            }
+          },
+          {
+            "id": "9152c4ba-698c-8d41-9325-21c77ed843cd",
+            "rank": 4,
+            "title": "Novo estudo anglo-brasileiro reforça relação entre Zika e microcefalia",
+            "href": "/portuguese/brasil-23075123",
+            "timestamp": "2016-09-16T11:14:38.000Z",
+            "indexImage": {
+              "id": "63509054",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/B022/test/_63509054_875d1f90-c3b0-46e2-b004-5d249f0ad4ce.jpg",
+              "path": "/cpsdevpb/B022/test/_63509054_875d1f90-c3b0-46e2-b004-5d249f0ad4ce.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Alt tag",
+              "copyrightHolder": "AP",
+              "originCode": "cpsdevpb",
+              "type": "image"
+            }
+          },
+          {
+            "id": "c61f2dfa-585d-984a-8350-f33559d3d4da",
+            "rank": 5,
+            "title": "O supercarro francês inspirado em aviões caça 3",
+            "href": "/portuguese/curiosidades-23034323",
+            "timestamp": "2016-04-14T08:31:40.000Z",
+            "indexImage": {
+              "id": "63482505",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/C560/test/_63482505_63482494.jpg",
+              "path": "/cpsdevpb/C560/test/_63482505_63482494.jpg",
+              "height": 351,
+              "width": 624,
+              "altText": "alamy",
+              "copyrightHolder": "Alamy",
+              "originCode": "cpsdevpb",
+              "type": "image"
+            }
+          },
+          {
+            "id": "9cc58160-dbb7-b542-a606-2679b924b12c",
+            "rank": 6,
+            "title": "Esfera misteriosa encontrada em floresta intriga cientistas 2",
+            "href": "/portuguese/brasil-23034402",
+            "timestamp": "2016-04-14T12:29:10.000Z",
+            "indexImage": {
+              "id": "63480455",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/D870/test/_63480455_esfera_pedra.jpg",
+              "path": "/cpsdevpb/D870/test/_63480455_esfera_pedra.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Esfera pedra",
+              "caption": "Esfera pedra",
+              "copyrightHolder": "Reuters",
+              "originCode": "cpsdevpb",
+              "type": "image"
+            }
+          },
+          {
+            "id": "c9b5f55c-d737-dd4a-b589-a577c39a3e8f",
+            "rank": 7,
+            "title": "African footballer of the year voting withheld",
+            "href": "/bengali/content-23163753",
+            "timestamp": "2017-11-13T05:39:59.000Z",
+            "indexImage": {
+              "id": "63599467",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/12AD3/test/_63599467_mediaitem63599465.jpg",
+              "path": "/cpsdevpb/12AD3/test/_63599467_mediaitem63599465.jpg",
+              "height": 432,
+              "width": 768,
+              "altText": "Christian Erikson",
+              "copyrightHolder": "Press Eye",
+              "originCode": "cpsdevpb",
+              "type": "image"
+            }
+          },
+          {
+            "id": "3ecbf972-0ca5-e04a-a9b4-271eec8c9856",
+            "rank": 8,
+            "title": "Esfera misteriosa encontrada em floresta intriga cientistas 9",
+            "href": "/portuguese/salasocial-23034410",
+            "timestamp": "2016-04-14T12:39:46.000Z",
+            "indexImage": {
+              "id": "63480455",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/D870/test/_63480455_esfera_pedra.jpg",
+              "path": "/cpsdevpb/D870/test/_63480455_esfera_pedra.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Esfera pedra",
+              "caption": "Esfera pedra",
+              "copyrightHolder": "Reuters",
+              "originCode": "cpsdevpb",
+              "type": "image"
+            }
+          },
+          {
+            "id": "3db750df-0a98-134d-9d48-c25affe66bea",
+            "rank": 9,
+            "title": "Por que é tão difícil determinar a altura de montanhas 5",
+            "href": "/portuguese/geral-23034696",
+            "timestamp": "2016-04-15T14:42:56.000Z",
+            "indexImage": {
+              "id": "63480738",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/146FC/test/_63480738_montanha.jpg",
+              "path": "/cpsdevpb/146FC/test/_63480738_montanha.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Montanha",
+              "caption": "Montanha",
+              "copyrightHolder": "Getty Images",
+              "originCode": "cpsdevpb",
+              "type": "image"
+            }
+          },
+          {
+            "id": "b73547ed-7384-354b-a124-5a9420e125ce",
+            "rank": 10,
+            "title": "Por que é tão difícil determinar a altura de montanhas",
+            "href": "/portuguese/aprenda-ingles-23034691",
+            "timestamp": "2016-04-15T14:40:17.000Z",
+            "indexImage": {
+              "id": "63482533",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/82F8/test/_63482533_c4786a15-a11a-4d0a-aa0b-6a32ae6bc7e9.jpg",
+              "path": "/cpsdevpb/82F8/test/_63482533_c4786a15-a11a-4d0a-aa0b-6a32ae6bc7e9.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "a",
+              "copyrightHolder": "Thinkstock",
+              "originCode": "cpsdevpb",
+              "type": "image"
+            }
+          }
+        ]
+      },
+      "latestMedia": null
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

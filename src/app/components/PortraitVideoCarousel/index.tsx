@@ -1,131 +1,116 @@
 /** @jsx jsx */
+/* @jsxFrag React.Fragment */
 import { jsx } from '@emotion/react';
-import { useContext, useEffect, useRef, useState } from 'react';
+import React, { use, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
+import { RequestContext } from '#app/contexts/RequestContext';
+import useViewTracker from '#app/hooks/useViewTracker';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import styles from './index.styles';
+import PortraitVideoModal from '../PortraitVideoModal';
+import { BumpLoader } from '../MediaLoader';
+import PortraitVideoPromo from './PortraitVideoPromo';
+import PortraitCarouselNavigation from './PortraitVideoCarouselNavigation';
 import Heading from '../Heading';
-import { LeftChevron, RightChevron } from '../icons';
-import styles, { PROMO_ITEM_WIDTH } from './index.styles';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import PortraitVideoNoJs from './PortraitVideoNoJs';
+import { PortraitClipMediaBlock } from '../MediaLoader/types';
 
-interface PortraitVideoItem {
-  id: string;
-  images?: { url: string; altText?: string }[];
-  headlines?: { promoHeadline?: string };
-  link?: { path: string };
-}
-
-interface PortraitVideoCarouselProps {
+type PortraitVideoCarouselProps = {
   title: string;
-  items: PortraitVideoItem[];
-}
+  blocks: PortraitClipMediaBlock[];
+  eventTrackingData: EventTrackingData;
+};
 
 const PortraitVideoCarousel = ({
   title,
-  items,
+  blocks,
+  eventTrackingData,
 }: PortraitVideoCarouselProps) => {
-  const { dir } = useContext(ServiceContext);
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(false);
+  const scrollRef = useRef<HTMLUListElement>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedVideoIndex, setSelectedVideoIndex] = useState<number | null>(
+    null,
+  );
 
-  const checkScrollButtons = () => {
-    if (!scrollRef.current) return;
-    const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+  const { isLite } = use(RequestContext);
 
-    setCanScrollLeft(scrollLeft > 0);
-    setCanScrollRight(scrollLeft + clientWidth < scrollWidth);
+  const eventTrackingDataExtended = {
+    ...eventTrackingData,
+    groupTracker: {
+      ...eventTrackingData?.groupTracker,
+      itemCount: blocks.length,
+    },
   };
 
-  const scroll = (direction: 'left' | 'right') => {
-    if (!scrollRef.current) return;
-    const scrollAmount =
-      direction === 'left' ? -PROMO_ITEM_WIDTH : PROMO_ITEM_WIDTH;
-    scrollRef.current.scrollBy({
-      left: scrollAmount,
-      behavior: 'smooth',
-    });
+  const viewTracker = useViewTracker(eventTrackingDataExtended);
 
-    setTimeout(checkScrollButtons, 100);
-  };
+  if (isLite) return null;
 
-  useEffect(() => {
-    const scrollElement = scrollRef.current;
-    if (scrollElement) {
-      scrollElement.addEventListener('scroll', checkScrollButtons);
+  const handlePromoClick = (index: number) => {
+    if (blocks?.[index]?.model?.video) {
+      setSelectedVideoIndex(index);
+      setIsModalOpen(true);
     }
+  };
 
-    checkScrollButtons();
-
-    return () => {
-      if (scrollElement) {
-        scrollElement.removeEventListener('scroll', checkScrollButtons);
-      }
-    };
-  }, [items]);
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedVideoIndex(null);
+  };
 
   return (
-    <section
-      aria-label={title}
-      role="region"
-      data-testid="portrait-video-carousel"
-    >
-      <h2 css={styles.heading}>{title}</h2>
-
-      <div css={styles.scrollContainer}>
-        <div ref={scrollRef} css={styles.scrollWrapper}>
-          {items.map(item => {
-            const image = item.images?.[0]?.url;
-            const alt = item.images?.[0]?.altText || '';
-            const headline = item.headlines?.promoHeadline || '';
-            const href = item.link?.path || '#';
-
-            return (
-              <a key={item.id} href={href} css={styles.promoItem}>
-                {image && (
-                  <img
-                    src={image}
-                    alt={alt}
-                    css={styles.image}
-                    loading="lazy"
-                  />
-                )}
-                <div css={styles.gradientOverlay}>
-                  <Heading
-                    level={3}
-                    size="longPrimer"
-                    css={styles.promoHeading}
-                  >
-                    {headline}
-                  </Heading>
-                </div>
-              </a>
-            );
-          })}
-          <div css={[styles.promoItem, styles.endBlankItem]} />
+    <>
+      <BumpLoader />
+      <section
+        aria-label={title}
+        role="region"
+        data-testid="portrait-video-carousel"
+        css={styles.section}
+        {...viewTracker}
+      >
+        <Heading
+          level={2}
+          size="doublePica"
+          fontVariant="sansBold"
+          css={styles.heading}
+        >
+          {title}
+        </Heading>
+        <noscript>
+          <PortraitVideoNoJs />
+        </noscript>
+        <div css={styles.carouselContainer}>
+          <PortraitCarouselNavigation scrollPaneRef={scrollRef} />
+          <ul
+            ref={scrollRef}
+            css={styles.carousel}
+            data-testid="pv-carousel"
+            tabIndex={-1}
+            role="list"
+          >
+            {blocks.map((block, index) => (
+              <PortraitVideoPromo
+                key={block?.model?.video?.id}
+                block={block}
+                onClick={() => handlePromoClick(index)}
+                blockPosition={index}
+                eventTrackingData={eventTrackingDataExtended}
+              />
+            ))}
+          </ul>
         </div>
-        <div css={styles.buttonGroupOverlay}>
-          <div css={styles.buttonGroup}>
-            <button
-              type="button"
-              aria-label="Scroll left"
-              onClick={() => scroll(dir === 'ltr' ? 'left' : 'right')}
-              disabled={!canScrollLeft}
-              css={styles.navButton}
-            >
-              <LeftChevron />
-            </button>
-            <button
-              type="button"
-              aria-label="Scroll right"
-              onClick={() => scroll(dir === 'ltr' ? 'right' : 'left')}
-              disabled={!canScrollRight}
-              css={styles.navButton}
-            >
-              <RightChevron />
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
+        {isModalOpen &&
+          selectedVideoIndex !== null &&
+          createPortal(
+            <PortraitVideoModal
+              blocks={blocks}
+              selectedVideoIndex={selectedVideoIndex}
+              onClose={handleCloseModal}
+            />,
+            document.body,
+          )}
+      </section>
+    </>
   );
 };
 

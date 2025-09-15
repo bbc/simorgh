@@ -1,7 +1,7 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
 import { jsx } from '@emotion/react';
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect, use } from 'react';
 import { Helmet } from 'react-helmet';
 import pathOr from 'ramda/src/pathOr';
 import useLocation from '#hooks/useLocation';
@@ -35,10 +35,10 @@ export const getBootstrapSrc = (queryString: string, useLegacy = false) => {
   return useLegacy ? adsLegacyTestScript : adsTestScript;
 };
 
-const CanonicalAd = ({ slotType, className }: AdProps) => {
+const CanonicalAd = ({ slotType, className, nonce }: AdProps) => {
   const location = useLocation();
   const queryString = location.search;
-  const { translations, dir } = useContext(ServiceContext);
+  const { translations, dir } = use(ServiceContext);
   const label = pathOr(
     'Advertisement',
     ['ads', 'advertisementLabel'],
@@ -75,8 +75,18 @@ const CanonicalAd = ({ slotType, className }: AdProps) => {
     <>
       <Helmet>
         {/* Add Ad scripts to document head */}
-        <script type="module" src={getBootstrapSrc(queryString)} async />
-        <script noModule src={getBootstrapSrc(queryString, true)} async />
+        <script
+          type="module"
+          src={getBootstrapSrc(queryString)}
+          async
+          {...(nonce ? { nonce } : {})}
+        />
+        <script
+          noModule
+          src={getBootstrapSrc(queryString, true)}
+          async
+          {...(nonce ? { nonce } : {})}
+        />
       </Helmet>
 
       <section

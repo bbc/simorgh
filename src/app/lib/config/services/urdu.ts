@@ -53,7 +53,7 @@ export const service: DefaultServiceConfig = {
       brandDescription:
         'بی بی سی اردو کی خبروں اور فیچرز کو اپنے فون پر حاصل کریں اور سب سے پہلے جانیں پاکستان اور دنیا بھر سے ان کہانیوں کے بارے میں جو آپ کے لیے معنی رکھتی ہیں',
       image: {
-        src: 'http://ichef.bbci.co.uk/images/ic/448xn/p0k7ks07.png',
+        src: 'http://ichef.bbci.co.uk/images/ic/448xn/p0m0rsyc.png',
         alt: 'بی بی سی اردو اب واٹس ایپ پر',
       },
       linkLabel: {
@@ -77,11 +77,24 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'سب دیکھیں',
       home: 'صفحۂ اول',
+      continueReading: 'پڑھتے رہیے',
       currentPage: 'موجودہ صفحہ',
       skipLinkText: 'مواد پر جائیں',
       relatedContent: 'اسی بارے میں',
       relatedTopics: 'متعلقہ عنوانات',
+      moreOnThis: '',
       navMenuText: 'سیکشن',
+      liteSite: {
+        onboardingMessage:
+          'آپ اس وقت اس ویب سائٹ کا ٹیکسٹ پر مبنی ورژن دیکھ رہے ہیں جو کم ڈیٹا استعمال کرتا ہے۔ مرکزی ویب سائٹ جہاں تمام تصاویر اور ویڈیوز موجود ہیں دیکھیے',
+        toMainSite: 'مجھے مرکزی ویب سائٹ یا ورژن پر لے جائیں',
+        informationPage:
+          'کم ڈیٹا استعمال کرنے والے ورژن کے بارے میں مزید جانیں',
+        informationPageLink: 'https://www.bbc.com/urdu/articles/cp866m0l4gno',
+        dataSaving: 'کم ڈیٹا استعمال کرنے کے لیے صرف تحریر پڑھیں',
+        articleDataSavingLinkText:
+          'کم ڈیٹا استعمال کرنے کے لیے صرف تحریر پڑھیں',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -251,6 +264,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'یہ پوڈکاسٹ ان پلیٹفارمز پر بھی دستیاب ہے',
         download: 'قسط ڈاؤن لوڈ کریں',
         closeVideo: 'بند کریں',
+        endOfContentClose: 'یہاں مواد ختم ہوتا ہے۔ بند کریں',
       },
       socialEmbed: {
         caption: {
@@ -376,7 +390,7 @@ export const service: DefaultServiceConfig = {
         text: 'جانیے کہ آپ بی بی سی پر کیوں اعتماد کر سکتے ہیں',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'بیرونی لنکس کے بارے میں ہماری پالیسی.',
       },
       links: [

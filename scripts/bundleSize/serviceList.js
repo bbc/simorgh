@@ -8,6 +8,7 @@ export default [
   'bengali',
   'burmese',
   'cymrufyw',
+  'dari',
   'gahuza',
   'gujarati',
   'hausa',

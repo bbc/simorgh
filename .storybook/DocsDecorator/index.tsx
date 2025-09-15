@@ -4,7 +4,7 @@ import {
   DocsContextProps,
   Title,
   Markdown,
-} from '@storybook/addon-docs';
+} from '@storybook/addon-docs/blocks';
 import ThemeProvider from '../../src/app/components/ThemeProvider';
 import HealthFactors from './HealthFactors';
 import { HealthFactorsProps } from './types';

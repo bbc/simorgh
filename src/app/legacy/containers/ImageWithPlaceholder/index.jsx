@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { use, useState } from 'react';
 import { useTheme } from '@emotion/react';
 import styled from '@emotion/styled';
 import LazyLoad from 'react-lazyload';
@@ -45,7 +45,7 @@ const ImageWithPlaceholder = ({
   darkPlaceholder = null,
   imageComponent: ImageComponent = StyledImage,
 }) => {
-  const { isAmp } = useContext(RequestContext);
+  const { isAmp } = use(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
   const imageProps = {
     alt,

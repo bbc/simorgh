@@ -50,12 +50,11 @@ export const service: DefaultServiceConfig = {
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     podcastPromo: {
       title: 'يستحق الانتباه',
-      brandTitle: 'حسابنا الرسمي على واتساب',
-      brandDescription:
-        'تابعوا التغطية الشاملة من بي بي سي نيوز عربي على واتساب.',
+      brandTitle: 'قناتنا الرسمية على واتساب',
+      brandDescription: 'تابعوا التغطية الشاملة من بي بي سي نيوز عربي',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0k7ksmj.png',
-        alt: 'حسابنا الرسمي على واتساب',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0lkrxsb.jpg',
+        alt: 'بي بي سي نيوز عربي على تطبيقWhatsApp ',
       },
       linkLabel: {
         text: 'اضغط هنا',
@@ -78,10 +77,12 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'المزيد',
       home: 'الرئيسية',
+      continueReading: 'واصل القراءة',
       currentPage: 'الصفحة الحالية',
       skipLinkText: 'إذهب الى المحتوى',
       relatedContent: 'المزيد حول هذه القصة',
       relatedTopics: 'كلمات مفتاحية',
+      moreOnThis: '',
       navMenuText: 'أقسام',
       mediaAssetPage: {
         mediaPlayer: 'مشغل وسائط',
@@ -252,6 +253,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'هذا البودكاست متاح عبر',
         download: 'تحميل الحلقة',
         closeVideo: 'خروج',
+        endOfContentClose: 'نهاية هذا المحتوى. خروج',
       },
       socialEmbed: {
         caption: {
@@ -283,6 +285,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'الأخبار الرئيسية',
       featuresAnalysisTitle: 'اخترنا لكم',
+      latestMediaTitle: 'أحدث الموضوعات',
       ugc: {
         // No JavaScript
         noJsHeading: undefined,
@@ -376,7 +379,7 @@ export const service: DefaultServiceConfig = {
         text: 'لماذا يمكنك الاعتماد على أخبار بي بي سي',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'سياستنا بخصوص الروابط الخارجية.',
       },
       links: [

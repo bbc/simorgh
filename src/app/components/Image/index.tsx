@@ -1,11 +1,6 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
-import React, {
-  Fragment,
-  PropsWithChildren,
-  useState,
-  useContext,
-} from 'react';
+import React, { Fragment, PropsWithChildren, useState, use } from 'react';
 import { Global, jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import styles from './index.styles';
@@ -13,7 +8,7 @@ import { RequestContext } from '../../contexts/RequestContext';
 import LiteMediaLoader from '../LiteComponents/LiteMediaLoader';
 import { HOME_PAGE } from '../../routes/utils/pageTypes';
 
-type Props = {
+export type ImageProps = {
   alt: string;
   aspectRatio?: [x: number, y: number];
   attribution?: string;
@@ -21,7 +16,6 @@ type Props = {
   fallbackMediaType?: string;
   fallbackSrcSet?: string;
   height?: number;
-  isAmp?: boolean;
   lazyLoad?: boolean;
   placeholder?: boolean;
   darkPlaceholder?: boolean;
@@ -34,6 +28,7 @@ type Props = {
   fetchPriority?: 'high';
   hasCaption?: boolean;
   showLiteLoadButton?: boolean;
+  isPortraitOrientation?: boolean;
 };
 
 const roundNumber = (num: number) => Math.round(num * 100) / 100;
@@ -50,7 +45,6 @@ const Image = ({
   fallbackMediaType,
   fallbackSrcSet,
   height,
-  isAmp = false,
   lazyLoad = false,
   placeholder = true,
   darkPlaceholder = false,
@@ -64,8 +58,9 @@ const Image = ({
   fetchPriority,
   hasCaption,
   showLiteLoadButton = false,
-}: PropsWithChildren<Props>) => {
-  const { pageType, isLite } = useContext(RequestContext);
+  isPortraitOrientation,
+}: PropsWithChildren<ImageProps>) => {
+  const { pageType, isLite, isAmp } = use(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
 
   if (isLite && !showLiteLoadButton) return null;
@@ -125,6 +120,7 @@ const Image = ({
           hasFixedAspectRatio
             ? styles.wrapperFixedAspectRatio
             : styles.wrapperResponsiveRatio,
+          isPortraitOrientation && styles.portraitOrientation,
           showPlaceholder && [
             styles.placeholder,
             {

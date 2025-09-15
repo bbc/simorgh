@@ -1,11 +1,11 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useContext, useEffect } from 'react';
+import React, { use, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { UserContext } from '#contexts/UserContext';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 
 const CanonicalComscoreAnalytics = () => {
-  const { personalisationEnabled } = useContext(UserContext);
+  const { personalisationEnabled } = use(UserContext);
 
   const staticAssetsPath = `${
     getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN

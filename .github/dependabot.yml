@@ -4,11 +4,10 @@ updates:
     directory: '/'
     schedule:
       interval: 'weekly'
+      day: 'wednesday'
+      time: '16:00'
     ignore:
-      - dependency-name: '@loadable/*'
-        update-types: ['version-update:semver-major']
-      - dependency-name: 'webpack'
-        update-types: ['version-update:semver-major']
+      # https://bbc.atlassian.net/browse/WS-106 - Replace `winston` logger because we currently have a workaround patch to fix a memory leak
       - dependency-name: 'winston'
       # https://jira.dev.bbc.co.uk/browse/NEWSWORLDSERVICE-2185: Latest version of eslint has breaking changes
       - dependency-name: eslint

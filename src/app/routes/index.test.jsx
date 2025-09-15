@@ -42,6 +42,8 @@ const getMatchingRoute = pathname => {
   return matchingRoutes?.[0]?.route;
 };
 
+const toggles = defaultToggles.local;
+
 const renderRouter = props =>
   act(async () => {
     render(
@@ -51,7 +53,7 @@ const renderRouter = props =>
           isApp: false,
           isAmp: false,
           status: props.status || 200,
-          toggles: defaultToggles.local,
+          toggles,
           ...props,
         })}
       </MemoryRouter>,
@@ -67,16 +69,15 @@ jest.mock('@optimizely/react-sdk', () => ({
   setLogger: jest.fn(),
   createInstance: jest.fn(),
 }));
-jest.mock('#app/legacy/containers/OptimizelyArticleCompleteTracking');
-jest.mock('#app/legacy/containers/OptimizelyPageViewTracking');
+jest.mock('#app/components/OptimizelyPageMetrics');
 jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
   default: jest.fn(),
 }));
-jest.mock('#app/hooks/useOptimizelyMvtVariation', () => ({
-  __esModule: true,
-  default: jest.fn(),
-}));
+jest.mock('#src/app/components/ATIAnalytics', () => () => (
+  <div>ATI Analytics</div>
+));
 
 describe('Routes', () => {
   beforeEach(() => {
@@ -122,9 +123,7 @@ describe('Routes', () => {
       const { pageData } = await getInitialData({
         path: pathname,
         pageType,
-        toggles: {
-          liveRadioSchedule: { enabled: true },
-        },
+        toggles,
       });
 
       await renderRouter({
@@ -150,9 +149,7 @@ describe('Routes', () => {
       const { pageData } = await getInitialData({
         path: pathname,
         pageType,
-        toggles: {
-          recentAudioEpisodes: { enabled: false, value: 4 },
-        },
+        toggles,
       });
       await renderRouter({
         pathname,
@@ -164,7 +161,7 @@ describe('Routes', () => {
       const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'Baza Muganga';
 
       expect(
-        await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+        screen.getAllByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)[0],
       ).toBeInTheDocument();
     });
 
@@ -201,7 +198,7 @@ describe('Routes', () => {
           service: 'kyrgyz',
         });
         const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
-          'АКШ: жаңы президент ким экенин аныктаган штаттар кайсылар?';
+          'Кыргыз-өзбек алакаcы: сандар жана фактылар';
 
         expect(
           await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
@@ -219,9 +216,7 @@ describe('Routes', () => {
       const { pageData } = await getInitialData({
         path: pathname,
         pageType,
-        toggles: {
-          recentAudioEpisodes: { enabled: false, value: 4 },
-        },
+        toggles,
       });
       await renderRouter({
         pathname,
@@ -246,9 +241,7 @@ describe('Routes', () => {
       const { pageData } = await getInitialData({
         path: pathname,
         pageType,
-        toggles: {
-          recentVideoEpisodes: { enabled: false, value: 4 },
-        },
+        toggles,
       });
       await renderRouter({
         pathname,

@@ -3,6 +3,7 @@ import latin from '../fontScripts/latin';
 import helmetFontVariants from '../fontVariants/helmet';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/pidgin';
+import getPWATypographyTheme from './getPWATypographyTheme';
 
 const pidginTheme = {
   palette: {
@@ -20,4 +21,4 @@ const pidginTheme = {
   brandSVG,
 };
 
-export default withThemeProvider(pidginTheme);
+export default withThemeProvider(pidginTheme, getPWATypographyTheme());

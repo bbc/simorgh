@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useRef } from 'react';
+import React, { useEffect, use, useRef } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import GenericMessage from '../GenericMessage';
 import fallbackTranslations from '../fallbackTranslations';
@@ -15,7 +15,7 @@ export default function ErrorScreen({ title }: Props) {
         errorDescription = fallbackTranslations.errorDescription,
       } = {},
     },
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
   const ref = useRef<HTMLHeadingElement>(null);
 

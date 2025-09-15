@@ -3,6 +3,17 @@ import pixelsToRem from '../../utilities/pixelsToRem';
 
 export const focusIndicatorThickness = `${pixelsToRem(3)}rem`; // 3px
 
+export const twoPixelFocusIndicatorThickness = 2;
+
+export const twoPixelFocusIndicatorStyle = (
+  innerColor: string,
+  outerColor: string,
+) => ({
+  boxShadow: `0 0 0 ${pixelsToRem(twoPixelFocusIndicatorThickness)}rem ${innerColor}`,
+  outline: `${pixelsToRem(twoPixelFocusIndicatorThickness)}rem solid ${outerColor}`,
+  outlineOffset: `${pixelsToRem(twoPixelFocusIndicatorThickness)}rem`,
+});
+
 const focusIndicator = ({ palette }: Theme) => css`
   // Adds focus indicator styling to all a, button and h3 elements by default.
   a:focus-visible,

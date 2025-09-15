@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`MediaArticlePage should render a news article correctly 1`] = `
 .emotion-0 {
@@ -776,7 +776,9 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   <div
     class="emotion-0"
   >
-    <noscript />
+    <div>
+      ATI Analytics
+    </div>
     <div>
       chartbeat
     </div>
@@ -801,7 +803,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
             class="emotion-5"
           >
             <figure
-              class="emotion-6"
+              class="media-container emotion-6"
               data-e2e="media-loader__container"
             >
               <div

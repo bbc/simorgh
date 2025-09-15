@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Ref, useContext } from 'react';
+import { use } from 'react';
 import { jsx } from '@emotion/react';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
@@ -10,37 +10,9 @@ import generatePromoId from '../../../../lib/utilities/generatePromoId';
 import LatestMediaItem from './LatestMediaItem';
 import styles from './index.styles';
 import { LatestMedia } from './types';
-import { EventTrackingBlock } from '../../../../models/types/eventTracking';
-
-const renderLatestMediaList = (
-  item: LatestMedia,
-  index: number,
-  eventTrackingData: EventTrackingBlock,
-  viewTracker: Ref<HTMLDivElement>,
-) => {
-  const ariaLabelledBy = generatePromoId({
-    sectionType: 'latest-media',
-    assetUri: null,
-    canonicalUrl: item.link,
-    uri: null,
-    contentType: item.type,
-    index,
-  });
-
-  return (
-    <PromoItem key={index} css={styles.latestMediaPromoBorderAndWidth}>
-      <LatestMediaItem
-        item={item}
-        ariaLabelledBy={ariaLabelledBy}
-        ref={viewTracker}
-        eventTrackingData={eventTrackingData}
-      />
-    </PromoItem>
-  );
-};
 
 const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
-  const { service, dir, translations, script } = useContext(ServiceContext);
+  const { service, dir, translations, script } = use(ServiceContext);
 
   const eventTrackingData = {
     block: {
@@ -58,7 +30,7 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
   const hasSingleItem = content.length === 1;
   const singleItem = content[0];
 
-  const ariaLabelledBy = generatePromoId({
+  let ariaLabelledBy = generatePromoId({
     sectionType: 'latest-media',
     assetUri: null,
     canonicalUrl: singleItem.link,
@@ -99,9 +71,30 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
         </div>
       ) : (
         <PromoList css={styles.latestMediaGridWrapper}>
-          {content.map((item, index) =>
-            renderLatestMediaList(item, index, eventTrackingData, viewTracker),
-          )}
+          {content.map((item, index) => {
+            ariaLabelledBy = generatePromoId({
+              sectionType: 'latest-media',
+              assetUri: null,
+              canonicalUrl: item.link,
+              uri: null,
+              contentType: item.type,
+              index,
+            });
+
+            return (
+              <PromoItem
+                key={item.id}
+                css={styles.latestMediaPromoBorderAndWidth}
+              >
+                <LatestMediaItem
+                  item={item}
+                  ariaLabelledBy={ariaLabelledBy}
+                  ref={viewTracker}
+                  eventTrackingData={eventTrackingData}
+                />
+              </PromoItem>
+            );
+          })}
         </PromoList>
       )}
     </section>

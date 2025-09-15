@@ -50,17 +50,17 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
-      title: 'Novo podcast investigativo: A Raposa',
-      brandTitle: 'Novo podcast investigativo: A Raposa',
+      title: 'Whatsapp!',
+      brandTitle: 'No WhatsApp',
       brandDescription:
-        'Uma tonelada de cocaína, três brasileiros inocentes e a busca por um suspeito inglês',
+        'Agora você pode receber as notícias da BBC News Brasil no seu celular.',
       image: {
-        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0k38tc4.jpg',
-        alt: 'Logo: A Raposa',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0lq77dv.png',
+        alt: 'BBC Brasil no WhatsAp',
       },
       linkLabel: {
-        text: 'Episódios',
-        href: 'https://www.bbc.com/portuguese/podcasts/p0cyhvny',
+        text: 'Clique para se inscrever',
+        href: 'https://www.whatsapp.com/channel/0029VaVHa4S6rsQrlMVx8c0b',
       },
       skipLink: {
         text: 'Pule %title% e continue lendo',
@@ -83,6 +83,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'Vá para o conteúdo',
       relatedContent: 'Histórias relacionadas',
       relatedTopics: 'Tópicos relacionados',
+      moreOnThis: '',
       navMenuText: 'Seções',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
@@ -237,6 +238,7 @@ export const service: DefaultServiceConfig = {
         photogallery: 'Galeria de fotos',
         video: 'Vídeo',
         listen: 'Listen',
+        play: 'Play',
         watch: 'Assista',
         watchMoments: 'Assista',
         listenLive: 'Ouça ao vivo',
@@ -250,6 +252,11 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'O podcast está disponível em',
         download: 'Baixar episódio',
         closeVideo: 'Sair',
+        endOfContentClose: 'Fim deste conteúdo. Sair',
+      },
+      carousel: {
+        previous: 'Scroll to previous item',
+        next: 'Scroll to next item',
       },
       socialEmbed: {
         caption: {
@@ -378,7 +385,7 @@ export const service: DefaultServiceConfig = {
         text: 'Por que você pode confiar na BBC',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Leia sobre nossa política em relação a links externos.',
       },
       links: [

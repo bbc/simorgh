@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -152,13 +152,16 @@ const ScrollablePromo = ({
   blockGroupIndex = null,
   experimentVariant = null,
 }) => {
-  const { script, service, dir, translations, mostRead } =
-    useContext(ServiceContext);
+  const { script, service, dir, translations, mostRead } = use(ServiceContext);
 
   const eventTrackingData = {
     componentName: `edoj${blockGroupIndex}`,
     format: 'CHD=edoj',
-    ...(experimentVariant && { sendOptimizelyEvents: true }),
+    ...(experimentVariant && {
+      componentName: 'top-bar-oj',
+      sendOptimizelyEvents: true,
+      viewThreshold: 0,
+    }),
   };
 
   const viewTracker = useViewTracker(eventTrackingData);
@@ -169,9 +172,13 @@ const ScrollablePromo = ({
   }
 
   let title;
-  if (experimentVariant === 'top_bar_top_stories') {
+  if (
+    ['top-bar-top-stories', 'read-more-a-and-top-stories'].includes(
+      experimentVariant,
+    )
+  ) {
     title = translations.topStoriesTitle || 'Top Stories';
-  } else if (experimentVariant === 'top_bar_most_read') {
+  } else if (experimentVariant === 'top-bar-most-read') {
     title = mostRead.header || 'Most Read';
   } else {
     title =

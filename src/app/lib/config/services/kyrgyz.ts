@@ -62,6 +62,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'Сайтка өтүү',
       relatedContent: 'Тема боюнча башка макалалар',
       relatedTopics: 'Тектеш темалар',
+      moreOnThis: '',
       navMenuText: 'Бөлүмдөр',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
@@ -237,6 +238,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'Бул подкастты башка платформалардан дагы угуңуз',
         download: 'Подкастты жүктөп алыңыз',
         closeVideo: 'Чыгуу',
+        endOfContentClose: 'Бул контенттин аягы. Чыгуу',
       },
       socialEmbed: {
         caption: {
@@ -272,7 +274,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Соңку',
     },
     mostRead: {
-      header: 'Эң көп окулгандар',
+      header: 'Көп окулгандар',
       lastUpdated: 'Акыркы жаңылоо:',
       numberOfItems: 5,
       hasMostRead: true,
@@ -293,7 +295,7 @@ export const service: DefaultServiceConfig = {
         text: 'Эмнеге BBC News ишенсе болот?',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Башка интернет сайттардын мазмуну боюнча биздин позиция.',
       },
       links: [

@@ -1,12 +1,12 @@
 /* eslint-disable consistent-return */
-import path from 'ramda/src/path';
-import envConfig from '../../../support/config/envs';
+import chartbeatTests from '../../../support/helpers/chartbeatTests';
 import {
   getEpisodeAvailability,
   videoPlaceholderImageUrl,
 } from '../../../support/helpers/onDemandRadioTv';
 
-export default ({ service, pageType, variant, isLite }) => {
+export default ({ service, pageType, path, variant = 'default' }) => {
+  const isLite = path.endsWith('lite');
   describe(`Tests for ${service} ${pageType}${isLite ? ' - isLite' : ''}`, () => {
     if (!isLite) {
       describe(
@@ -18,9 +18,7 @@ export default ({ service, pageType, variant, isLite }) => {
           it('should render a valid media player', () => {
             cy.getPageDataFromWindow().then(({ pageData }) => {
               if (!getEpisodeAvailability(pageData)) {
-                return cy.log(
-                  `Episode is not available: ${Cypress.env('currentPath')}`,
-                );
+                return cy.log(`Episode is not available: ${path}`);
               }
 
               cy.get('[data-e2e="media-loader__container"]').should(
@@ -38,16 +36,7 @@ export default ({ service, pageType, variant, isLite }) => {
           });
         },
 
-        describe('Chartbeat', () => {
-          if (envConfig.chartbeatEnabled) {
-            it('should have a script with src value set to chartbeat source', () => {
-              cy.hasScriptWithChartbeatSrc();
-            });
-            it('should have chartbeat config set to window object', () => {
-              cy.hasGlobalChartbeatConfig();
-            });
-          }
-        }),
+        chartbeatTests(),
       );
     }
     describe(`Tests for ${service} ${pageType} ${variant} with toggle use`, () => {
@@ -57,10 +46,7 @@ export default ({ service, pageType, variant, isLite }) => {
       describe('Recent Episodes component', () => {
         it('should be displayed if the toggle is on, and shows the expected number of items', function test() {
           cy.fixture(`toggles/${service}.json`).then(toggles => {
-            const recentEpisodesEnabled = path(
-              ['recentVideoEpisodes', 'enabled'],
-              toggles,
-            );
+            const recentEpisodesEnabled = toggles?.recentVideoEpisodes?.enabled;
             cy.log(
               `Recent Episodes component enabled? ${recentEpisodesEnabled}`,
             );
@@ -79,7 +65,7 @@ export default ({ service, pageType, variant, isLite }) => {
                 const { recentEpisodes } = data;
                 cy.log({ recentEpisodes });
 
-                if (recentEpisodes?.length > 0 && recentEpisodesMaxNumber > 1) {
+                if (recentEpisodes?.length > 1 && recentEpisodesMaxNumber > 1) {
                   cy.get('[data-e2e=recent-episodes-list]').should('exist');
 
                   cy.get('[data-e2e=recent-episodes-list]').within(() => {

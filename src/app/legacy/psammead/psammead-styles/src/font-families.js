@@ -371,6 +371,7 @@ export const azeri = helmetFontStyles;
 export const bengali = bengaliStyles;
 export const burmese = burmeseStyles;
 export const cymrufyw = latinReithFontStyles;
+export const dari = reithQalamStyles;
 export const gahuza = helmetFontStyles;
 export const gujarati = gujaratiStyles;
 export const hausa = helmetFontStyles;

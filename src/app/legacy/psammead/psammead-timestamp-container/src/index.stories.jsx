@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
+import { storiesOf } from '@storybook/react-webpack5'; // eslint-disable-line import/no-extraneous-dependencies
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import {
   boolean,

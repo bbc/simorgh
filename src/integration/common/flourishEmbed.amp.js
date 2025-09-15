@@ -1,8 +1,8 @@
 export default () => {
   describe('Flourish Embed', () => {
     describe('Error messages', () => {
-      const embedErrorMessages = document.querySelectorAll(
-        `[data-e2e="embed-error"]`,
+      const embedErrorMessages = Array.from(
+        document.querySelectorAll(`[data-e2e="embed-error"]`),
       );
 
       it('should all be in the document', () => {

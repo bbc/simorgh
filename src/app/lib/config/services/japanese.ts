@@ -63,6 +63,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'コンテンツへ移動',
       relatedContent: '関連コンテンツ',
       relatedTopics: '関連トピックス',
+      moreOnThis: '',
       navMenuText: 'ジャンル',
       mediaAssetPage: {
         mediaPlayer: 'メディアプレイヤー',
@@ -219,6 +220,7 @@ export const service: DefaultServiceConfig = {
         duration: '所要時間',
         recentEpisodes: 'さらに',
         closeVideo: '閉じる',
+        endOfContentClose: 'このコンテンツの終わり。閉じる',
       },
       socialEmbed: {
         caption: {

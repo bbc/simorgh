@@ -12,7 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-polska',
     atiAnalyticsProducerId: '135',
-    atiAnalyticsProducerName: 'POLSKA',
+    atiAnalyticsProducerName: 'POLISH',
+    useReverb: true,
     chartbeatDomain: 'polska.bbc.co.uk',
     brandName: 'BBC News Polska',
     product: 'BBC News',
@@ -67,6 +68,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'Przejdź do treści',
       relatedContent: 'Powiązane treści',
       relatedTopics: 'Powiązane tematy',
+      moreOnThis: '',
       navMenuText: 'Sekcje',
       liteSite: {
         onboardingMessage:
@@ -237,6 +239,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'Ten podcast dostępny jest też na',
         download: 'Pobierz',
         closeVideo: 'Zamknij',
+        endOfContentClose: 'Koniec tej treści. Zamknij',
       },
       socialEmbed: {
         caption: {
@@ -271,7 +274,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'Najważniejsze Wiadomości',
       latestMediaTitle: 'Najnowsze wideo',
-      featuresAnalysisTitle: 'Zobacz więcej',
+      featuresAnalysisTitle: 'Polecane przez redakcję',
       ugc: {
         noJsHeading: 'Nie można załadować tej strony.',
         noJsDescription:
@@ -344,25 +347,25 @@ export const service: DefaultServiceConfig = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
-        text: 'Dlaczego BBC jest godne zaufania',
+        href: 'https://www.bbc.com/polska/articles/c0l0x321d1xo',
+        text: 'Dlaczego ufamy BBC',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Przeczytaj o naszych zasadach linkowania zewnętrznego.',
       },
       links: [
         {
-          href: 'https://www.bbc.com/usingthebbc/terms/',
-          text: 'Zasady użytkowania',
+          href: 'https://www.bbc.com/polska/articles/c9djv7vl647o',
+          text: 'Warunki użytkowania',
         },
         {
-          href: 'https://www.bbc.com/aboutthebbc',
+          href: 'https://www.bbc.com/polska/articles/cwyn84e4n08o',
           text: 'O BBC',
         },
         {
-          href: 'https://www.bbc.com/usingthebbc/privacy/',
-          text: 'Polityka Prywatności',
+          href: 'https://www.bbc.com/polska/articles/ce82e738g0do',
+          text: 'Polityka prywatności',
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
@@ -370,11 +373,11 @@ export const service: DefaultServiceConfig = {
         },
         {
           href: 'https://www.bbc.com/polska/send/u203797512',
-          text: 'Skontaktuj się z BBC',
+          text: 'Skontaktuj się z nami',
         },
         {
           href: 'https://www.bbc.com/ws/languages',
-          text: 'BBC News w innych językach',
+          text: 'Inne języki',
         },
         {
           id: 'COOKIE_SETTINGS',
@@ -386,10 +389,10 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         'BBC. BBC nie ponosi odpowiedzialności za treści na stronach zewnętrznych.',
     },
-    timezone: 'Europe/London',
+    timezone: 'Europe/Warsaw',
     navigation: [
       {
-        title: 'News',
+        title: 'Strona główna',
         url: '/polska',
       },
       {
@@ -397,8 +400,16 @@ export const service: DefaultServiceConfig = {
         url: '/polska/topics/cly1xdxypzet',
       },
       {
-        title: 'Wojna w Ukrainie',
-        url: '/polska/topics/c8x8n9y15qnt',
+        title: 'Świat',
+        url: '/polska/topics/cvg9w8yplg1t',
+      },
+      {
+        title: 'Zdrowie',
+        url: '/polska/topics/c15nxyq4pqnt',
+      },
+      {
+        title: 'Wideo',
+        url: '/polska/topics/c4gk270dy10t',
       },
     ],
   },

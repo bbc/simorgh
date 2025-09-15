@@ -198,7 +198,8 @@ describe('Service Worker', () => {
 
     const cacheableAssets = [
       // Fonts
-      'https://ws-downloads.files.bbci.co.uk/fonts/ReithQalam/v1.210/bold.woff2',
+      'https://static.files.bbci.co.uk/fonts/reith-qalam/1.310/BBCReithQalam_W_Rg.woff2',
+      'https://static.files.bbci.co.uk/fonts/reith-qalam/1.310/BBCReithQalam_W_Bd.woff2',
       'https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSans_W_Bd.woff2',
       // Moment-lib - local, test & live
       'http://localhost:7080/static/js/modern.../moment-lib.abcd1234.js',
@@ -212,8 +213,12 @@ describe('Service Worker', () => {
       'https://static.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-72x72.png?v=1',
       'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-144x144.png?v=2',
       'https://static.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-144x144.png?v=2',
-      // Reverb
-      'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.9.2.js',
+      // Reverb - preview1, preview2, test & live
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/static/js/reverb/reverb-3.10.2.js',
+      'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/static/js/reverb/reverb-3.10.2.js',
+      'https://static.test.files.bbci.co.uk/ws/simorgh1-preview-assets/public/static/js/reverb/reverb-3.10.2.js',
+      'https://static.test.files.bbci.co.uk/ws/simorgh2-preview-assets/public/static/js/reverb/reverb-3.10.2.js',
+      // Smart Tag
       'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/smarttag-5.29.4.min.js',
     ];
 
@@ -286,8 +291,8 @@ describe('Service Worker', () => {
 
   describe('version', () => {
     const CURRENT_VERSION = {
-      number: 'v0.2.5',
-      fileContentHash: '26974f5a6392e235157568399fbb498b',
+      number: 'v0.3.0',
+      fileContentHash: '6150d6daf3d64a226a47e17b39dfc084',
     };
 
     it(`version number should be ${CURRENT_VERSION.number}`, async () => {

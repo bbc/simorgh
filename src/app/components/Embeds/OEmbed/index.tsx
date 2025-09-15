@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 /** @jsx jsx */
 import { jsx, Theme } from '@emotion/react';
-import { memo, useContext } from 'react';
+import { memo, use } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import LiteMediaLoader from '#app/components/LiteComponents/LiteMediaLoader';
 import { RequestContext } from '../../../contexts/RequestContext';
@@ -13,8 +13,8 @@ import AmpIframeEmbed from '../AmpIframeEmbed';
 import { OEmbedProps } from '../types';
 
 const OEmbedLoader = ({ oembed, embeddableContent }: OEmbedProps) => {
-  const { isAmp, isLite, canonicalLink } = useContext(RequestContext);
-  const { translations } = useContext(ServiceContext);
+  const { isAmp, isLite, canonicalLink } = use(RequestContext);
+  const { translations } = use(ServiceContext);
 
   const { html, provider_name, oEmbedType, parameters, url } = oembed || {};
   const isVDJEmbed = oEmbedType === 'vdj-embed';

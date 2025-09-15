@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`AmpDecorator should render correctly 1`] = `
 <div>
@@ -38,11 +38,6 @@ exports[`AmpDecorator should render correctly 1`] = `
       async={true}
       custom-element="amp-geo"
       src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
-    />
-    <script
-      async={true}
-      custom-element="amp-consent"
-      src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
     />
     <script
       async={true}

@@ -26,7 +26,7 @@ describe('Local Server', () => {
     ${'Most Read with variant'}          | ${'/zhongwen/mostread/trad.json'}                                | ${'/zhongwen/mostRead/trad.json'}
     ${'On Demand Radio Brand'}           | ${'/korean/bbc_korean_radio/w3ct0kn5.json'}                      | ${'/korean/bbc_korean_radio/w3ct0kn5.json'}
     ${'On Demand Radio Episode'}         | ${'/afaanoromoo/bbc_afaanoromoo_radio/programmes/w13xttnw.json'} | ${'/afaanoromoo/bbc_afaanoromoo_radio/w13xttnw.json'}
-    ${'On Demand TV Brand'}              | ${'/pashto/bbc_pashto_tv/tv/w172xcldhhrhmcf.json'}               | ${'/pashto/bbc_pashto_tv/tv/w172xcldhhrhmcf.json'}
+    ${'On Demand TV Brand'}              | ${'/pashto/bbc_pashto_tv/tv/w172xtq7x8660m1.json'}               | ${'/pashto/bbc_pashto_tv/tv/w172xtq7x8660m1.json'}
     ${'On Demand TV Episode'}            | ${'/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json'}           | ${'/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json'}
     ${'CPS Asset'}                       | ${'/pidgin/23248703.json'}                                       | ${'/pidgin/cpsAssets/23248703.json'}
     ${'CPS Asset with variant'}          | ${'/ukchina/simp/23279012.json'}                                 | ${'/ukchina/cpsAssets/simp/23279012.json'}
@@ -42,7 +42,7 @@ describe('Local Server', () => {
     async ({ dataPath, expectedDataFile }) => {
       const response = await makeRequest(dataPath);
       expect(response.status).toBe(200);
-      expect(sendFileSpy).toBeCalled();
+      expect(sendFileSpy).toHaveBeenCalled();
       expect(sendFileSpy.mock.calls[0][0]).toEqual(
         path.join(DATA_DIRECTORY, expectedDataFile),
       );

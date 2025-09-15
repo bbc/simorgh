@@ -1,9 +1,4 @@
-import React, {
-  createContext,
-  PropsWithChildren,
-  useContext,
-  useMemo,
-} from 'react';
+import React, { createContext, PropsWithChildren, use, useMemo } from 'react';
 
 import { RequestContext } from '../RequestContext';
 import useToggle from '../../hooks/useToggle';
@@ -26,14 +21,12 @@ import {
   LIVE_RADIO_PAGE,
   TV_PAGE,
   AUDIO_PAGE,
+  LIVE_TV_PAGE,
 } from '../../routes/utils/pageTypes';
 import { PageTypes, Platforms } from '../../models/types/global';
 import { buildATIEventTrackingParams } from '../../components/ATIAnalytics/params';
 import { ServiceContext } from '../ServiceContext';
-import {
-  ATIData,
-  ATIEventTrackingProps,
-} from '../../components/ATIAnalytics/types';
+import { ATIData } from '../../components/ATIAnalytics/types';
 
 type EventTrackingContextProps =
   | {
@@ -72,6 +65,7 @@ const getCampaignID = (pageType: CampaignPageTypes) => {
     [LIVE_RADIO_PAGE]: 'player-live',
     [AUDIO_PAGE]: 'player-episode',
     [TV_PAGE]: 'player-episode',
+    [LIVE_TV_PAGE]: 'live-tv',
   }[pageType];
 
   if (!campaignID) {
@@ -94,10 +88,10 @@ export const EventTrackingContextProvider = ({
   children,
   atiData,
 }: PropsWithChildren<EventTrackingProviderProps>) => {
-  const requestContext = useContext(RequestContext);
+  const requestContext = use(RequestContext);
   const { pageType } = requestContext;
 
-  const serviceContext = useContext(ServiceContext);
+  const serviceContext = use(ServiceContext);
   const { atiAnalyticsProducerId, atiAnalyticsProducerName } = serviceContext;
 
   const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
@@ -111,7 +105,7 @@ export const EventTrackingContextProvider = ({
           requestContext,
           serviceContext,
           atiData,
-        }) as ATIEventTrackingProps;
+        });
 
       return {
         campaignID,

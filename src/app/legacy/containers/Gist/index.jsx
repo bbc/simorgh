@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import { useTheme } from '@emotion/react';
@@ -113,7 +113,7 @@ const componentsToRender = (service, script, dir, bulletPointColour) => ({
 });
 
 const Gist = ({ blocks }) => {
-  const { service, script, dir, translations } = useContext(ServiceContext);
+  const { service, script, dir, translations } = use(ServiceContext);
   const {
     palette: { GREY_6: bulletPointColour },
   } = useTheme();

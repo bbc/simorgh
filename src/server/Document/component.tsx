@@ -18,6 +18,7 @@ type Props = {
   legacyScripts: React.ReactElement;
   links: React.ReactElement;
   modernScripts: React.ReactElement;
+  service?: string;
 };
 
 const Document = ({
@@ -30,6 +31,7 @@ const Document = ({
   legacyScripts,
   links,
   modernScripts,
+  service,
 }: Props) => {
   const title = helmet.title.toComponent();
   const htmlAttrs = helmet.htmlAttributes.toComponent();
@@ -85,6 +87,7 @@ const Document = ({
           modernScripts={modernScripts}
           styles={css}
           title={title}
+          service={service}
         />
       );
   }

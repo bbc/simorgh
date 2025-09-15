@@ -1,18 +1,10 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`AMP Boilerplate JavaScript should render AMP_ACCESS_JS 1`] = `
 {
   "async": true,
   "custom-element": "amp-access",
   "src": "https://cdn.ampproject.org/v0/amp-access-0.1.js",
-}
-`;
-
-exports[`AMP Boilerplate JavaScript should render AMP_AD 1`] = `
-{
-  "async": true,
-  "custom-element": "amp-ad",
-  "src": "https://cdn.ampproject.org/v0/amp-ad-0.1.js",
 }
 `;
 
@@ -37,22 +29,6 @@ exports[`AMP Boilerplate JavaScript should render AMP_BIND_JS 1`] = `
   "async": true,
   "custom-element": "amp-bind",
   "src": "https://cdn.ampproject.org/v0/amp-bind-0.1.js",
-}
-`;
-
-exports[`AMP Boilerplate JavaScript should render AMP_CONSENT_JS 1`] = `
-{
-  "async": true,
-  "custom-element": "amp-consent",
-  "src": "https://cdn.ampproject.org/v0/amp-consent-0.1.js",
-}
-`;
-
-exports[`AMP Boilerplate JavaScript should render AMP_GEO_JS 1`] = `
-{
-  "async": true,
-  "custom-element": "amp-geo",
-  "src": "https://cdn.ampproject.org/v0/amp-geo-0.1.js",
 }
 `;
 

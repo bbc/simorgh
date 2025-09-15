@@ -74,11 +74,23 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'ንኹሉ ርኣዩ',
       home: 'መእተዊ ገጽ',
+      continueReading: 'ምንባብ ቀጽል',
       currentPage: 'ዘለኹሞ ገጽ',
       skipLinkText: 'ናብቲ ትሕዝቶ ቀጽሉ',
       relatedContent: 'ተዛማዲ ትሕዝቶ',
       relatedTopics: 'ተዛማዲ ዛዕባታት',
+      moreOnThis: '',
       navMenuText: 'ክፍልታት',
+      liteSite: {
+        onboardingMessage:
+          'እዚ ውሑድ ዳታ ብምጥቃም፡ ጽሑፍ ጥራይ እተንብቡሉ መርበብ ሓበሬታ ቢቢሲ ትግርኛ እዩ። ምሉእ ኣሳእልን ቪድዮታትን ንምርኣይ ድማ ቀንዲ መርበብ ሓበሬታና ተጠቐሙ።',
+        toMainSite: 'ናብ ቀንዲ መርበብ ሓበሬታ ንምብጻሕ [መላግቦ ‘ምሉእ ትሕዝቶ’] ተጠቐሙ',
+        informationPage: 'ብዛዕባ ዳታ ምቝጣብ ንምፍላጥ ኣብዚ መላግቦ ነዚ ዝገልጽ ዓንቀጽ ጠውቑ',
+        informationPageLink:
+          'https://www.bbc.com/tigrinya/articles/cp3lwnwjp3qo',
+        dataSaving: 'ብውሑድ ዳታ ጽሑፍ ጥራሕ ኣንብቡ',
+        articleDataSavingLinkText: 'ብውሑድ ዳታ ጽሑፍ ጥራሕ ኣንብቡ',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -231,6 +243,7 @@ export const service: DefaultServiceConfig = {
         duration: 'ዕምሪ ፈነወ',
         recentEpisodes: 'ዝሓለፉ ክፋላት',
         closeVideo: 'ออก',
+        endOfContentClose: 'እዚ ትሕዝቶ ተወዲኡ። ዝጽዉዑ',
       },
       socialEmbed: {
         caption: {
@@ -263,7 +276,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'ናይ መወዳእታ',
     },
     mostRead: {
-      header: 'ብብዝሒ ዝተነበ',
+      header: 'ዝያዳ ዝተነበ',
       lastUpdated: 'ንመወዳእታ እዋን ዝተመሓየሸሉ:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -286,7 +299,7 @@ export const service: DefaultServiceConfig = {
         text: 'ስለምንታይ ንቢቢሲ ክትኣምንዎ ከም እትኽእሉ',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'ብዛዕባ ምስ ናይ ደገ መርበባት እንገብሮ መላግቦታት ዘለና ኣረኣእያ ንምርዳእ ኣንብቡ።',
       },
       links: [

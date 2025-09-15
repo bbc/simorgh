@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/react';
 import Text from '#app/components/Text';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import { useContext } from 'react';
+import { use } from 'react';
 import { InputProps } from '../types';
 import styles from './styles';
 import fallbackTranslations from '../fallbackTranslations';
@@ -26,7 +26,7 @@ export default ({
 }: Props) => {
   const {
     translations: { ugc: { optional = fallbackTranslations.optional } = {} },
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
   return (
     <Text

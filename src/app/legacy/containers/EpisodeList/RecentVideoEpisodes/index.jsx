@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/aria-role */
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { useTheme } from '@emotion/react';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
@@ -51,8 +51,8 @@ const getAmpImageComponent =
 
 const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
   const { script, service, dir, timezone, datetimeLocale, translations } =
-    useContext(ServiceContext);
-  const { isAmp, variant } = useContext(RequestContext);
+    use(ServiceContext);
+  const { isAmp, variant } = use(RequestContext);
 
   const {
     palette: { MIDNIGHT_BLACK },

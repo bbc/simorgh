@@ -1,17 +1,10 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Canonical Photo Gallery Page A11y I can see the skip to content link 1`] = `"Ir al contenido"`;
 
-exports[`Canonical Photo Gallery Page Analytics ATI tracking pixel excluding src 1`] = `
-<img
-  alt=""
-  height="1px"
-  style="position:absolute"
-  width="1px"
-/>
-`;
+exports[`Canonical Photo Gallery Page Analytics ATI tracking pixel excluding src 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" >"`;
 
-exports[`Canonical Photo Gallery Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/"`;
+exports[`Canonical Photo Gallery Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
 
 exports[`Canonical Photo Gallery Page Analytics ATI tracking pixel search params 1`] = `
 [
@@ -113,7 +106,7 @@ exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 8
 exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 9`] = `
 {
   "text": "Lee sobre nuestra postura acerca de enlaces externos.",
-  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
 }
 `;
 
@@ -153,43 +146,50 @@ exports[`Canonical Photo Gallery Page Header Navigation link should match text a
 
 exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 5`] = `
 {
-  "text": "Hay Festival",
-  "url": "/mundo/topics/cr50y7p7qyqt",
-}
-`;
-
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 6`] = `
-{
   "text": "Economía",
   "url": "/mundo/topics/c06gq9v4xp3t",
 }
 `;
 
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 7`] = `
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 6`] = `
 {
   "text": "Ciencia",
   "url": "/mundo/topics/ckdxnw959n7t",
 }
 `;
 
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 8`] = `
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 7`] = `
 {
   "text": "Salud",
   "url": "/mundo/topics/cpzd498zkxgt",
 }
 `;
 
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 9`] = `
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 8`] = `
 {
   "text": "Cultura",
   "url": "/mundo/topics/c2dwq9zyv4yt",
 }
 `;
 
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 10`] = `
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 9`] = `
 {
   "text": "Tecnología",
   "url": "/mundo/topics/cyx5krnw38vt",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 10`] = `
+{
+  "text": "Hay Festival",
+  "url": "/mundo/topics/cr50y7p7qyqt",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 11`] = `
+{
+  "text": "Centroamérica cuenta",
+  "url": "/mundo/topics/c404v5z1k8wt",
 }
 `;
 

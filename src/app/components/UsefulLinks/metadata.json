@@ -1,0 +1,29 @@
+{
+  "alpha": false,
+  "lastUpdated": {
+    "day": 15,
+    "month": "May",
+    "year": 2025
+  },
+  "uxAccessibilityDoc": {
+    "done": true,
+    "reference": {
+      "url": "https://www.figma.com/design/HjR6DJR77gTWLw1NEsCoyf/Useful---social-links-%E2%80%94-handoff?node-id=577-1052&t=ibCBNaq0JtfPm4ce-0",
+      "label": "Screen Reader UX"
+    }
+  },
+  "acceptanceCriteria": {
+    "done": true,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/Useful-links-Accessibility-Acceptance-Criteria--BxCodG7DtMwOCJEPn7sTF2HaAg-5bmeLmSWaeai0yuQf8yEO",
+      "label": "Accessibility Acceptance Criteria"
+    }
+  },
+  "swarm": {
+    "done": false,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/A11Y-Swarm-Useful-links-component--CmaWk9LP4gvTnfHz7Cjf4Nq2Ag-XVbiG0FkskWFdapCOCpI3",
+      "label": "Accessibility Swarm Notes"
+    }
+  }
+}

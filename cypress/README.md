@@ -13,7 +13,7 @@ We aim to keep the code reusable but also to leverage the cypress framework as m
 <!-- prettier-ignore -->
     .
     ├── integration                 # Cypress tests
-    ├── plugins                     # Internal behavior of Cypress
+    ├── plugins                     # Internal behaviour of Cypress
     └── support
         └── commands*               # Custom Cypress commands
         └── config*                 # What config isn't here should be imported from app config
@@ -25,7 +25,7 @@ We aim to keep the code reusable but also to leverage the cypress framework as m
 
 Use the scripts from Simorgh's [package.json](https://github.com/bbc/simorgh/blob/latest/package.json#L39#L40) to run Cypress test locally on LIVE/TEST environment.
 
-## Best Practises
+## Best Practices
 
 [Cypress best practices](https://docs.cypress.io/guides/references/best-practices.html)
 
@@ -42,10 +42,6 @@ Use the scripts from Simorgh's [package.json](https://github.com/bbc/simorgh/blo
 - Although the runtime of each test matters and making each test not too small is good practice always tend towards full coverage rather than limiting the scope of testing.
 
 ## Beyond this suite of tests
-
-We have one other cypress test suite for E2Es of 3rd party systems, the success of those tests may or may not be partially dependent on the simorgh application but they definitely include systems we use in a live environment and may break irrespective of the stability of this application. This is in the repo root under [3rdPartyCypress/](https://github.com/bbc/simorgh/blob/latest/3rdPartyCypress).
-
-We have a really custom way our approaching our E2E tests with a [comprehensive README.md](https://github.com/bbc/simorgh/blob/latest/cypress/integration/README.md).
 
 We also have [a very limited Puppeteer test suite](https://github.com/bbc/simorgh/tree/latest/puppeteer) for when we go beyond Cypress' functional limits.
 

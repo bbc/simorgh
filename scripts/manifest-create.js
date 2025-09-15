@@ -7,6 +7,7 @@ const services = [
   'azeri',
   'bengali',
   'burmese',
+  'dari',
   'gahuza',
   'gujarati',
   'hausa',

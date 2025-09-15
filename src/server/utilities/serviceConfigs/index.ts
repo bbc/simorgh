@@ -14,6 +14,7 @@ import { service as azeri } from '../../../app/lib/config/services/azeri';
 import { service as bengali } from '../../../app/lib/config/services/bengali';
 import { service as burmese } from '../../../app/lib/config/services/burmese';
 import { service as cymrufyw } from '../../../app/lib/config/services/cymrufyw';
+import { service as dari } from '../../../app/lib/config/services/dari';
 import { service as gahuza } from '../../../app/lib/config/services/gahuza';
 import { service as gujarati } from '../../../app/lib/config/services/gujarati';
 import { service as hausa } from '../../../app/lib/config/services/hausa';
@@ -74,6 +75,7 @@ export default {
   bengali,
   burmese,
   cymrufyw,
+  dari,
   gahuza,
   gujarati,
   hausa,

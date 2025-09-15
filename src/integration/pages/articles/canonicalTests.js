@@ -7,5 +7,8 @@ import runCrossPlatformTests from './crossPlatformTests';
 export default service => {
   runCrossPlatformTests(service);
   runCoreCanonicalTests();
-  runCanonicalAnalyticsTests();
+
+  if (service !== 'news') {
+    runCanonicalAnalyticsTests();
+  }
 };

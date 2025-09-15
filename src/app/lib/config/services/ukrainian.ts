@@ -46,16 +46,16 @@ const baseServiceConfig = {
   showAdPlaceholder: true,
   showRelatedTopics: true,
   podcastPromo: {
-    title: 'телеграм',
+    title: 'Viber',
     brandTitle: 'Як дізнатися головне про Україну та світ?',
-    brandDescription: 'Стежте за BBC News Україна в телеграмі.',
+    brandDescription: 'Стежте за BBC News Україна у Viber!',
     image: {
-      src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0l8hlvk.png',
-      alt: 'Чнтайте наш телеграм',
+      src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0ld00bz.jpg',
+      alt: 'Підписуйтесь на наш Viber',
     },
     linkLabel: {
-      text: 'Підпишіться на наш канал тут!',
-      href: 'https://t.me/bbcukrainian',
+      text: 'Підписуйтеся на канал тут!',
+      href: 'https://invite.viber.com/?g2=AQAYCiHrGU3SlUeR%2FZaHRAQ4%2FGdXWGFgaUOXbMnWlHpIli4mBJEfTyN%2FHRPjb7GW',
     },
     skipLink: {
       text: 'Пропустити %title% і продовжити',
@@ -75,6 +75,7 @@ const baseServiceConfig = {
     home: 'Головна',
     currentPage: 'Поточна сторінка',
     skipLinkText: 'Перейти до змісту',
+    moreOnThis: '',
     navMenuText: 'Розділи',
     mediaAssetPage: {
       mediaPlayer: 'Медіаплеєр',
@@ -246,6 +247,7 @@ const baseServiceConfig = {
       podcastExternalLinks: 'Цей подкаст доступний у',
       download: 'Завантажити епізод',
       closeVideo: 'Вийти',
+      endOfContentClose: 'Кінець контенту. Вийти',
     },
     socialEmbed: {
       caption: {
@@ -303,7 +305,7 @@ const baseServiceConfig = {
       text: 'Чому BBC заслуговує на довіру',
     },
     externalLink: {
-      href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+      href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
       text: 'Ознайомтеся з нашими правилами зовнішніх посилань.',
     },
     links: [

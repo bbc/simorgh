@@ -1,5 +1,5 @@
 import React from 'react';
-import { renderToString, renderToStaticMarkup } from 'react-dom/server';
+import { renderToString, renderToStaticMarkup } from 'react-dom/server.node';
 import { Helmet } from 'react-helmet';
 import { JSDOM } from 'jsdom';
 import dotenv from 'dotenv';
@@ -9,11 +9,14 @@ import DocumentComponent from './component';
 Helmet.canUseDOM = false;
 
 jest.mock(
-  '#app/lib/analyticsUtils/staticATITracking/addProcessClientDeviceAndSendStaticBeaconToWindow',
-  () =>
-    function addProcessClientDeviceAndSendStaticBeaconToWindow() {
+  '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon',
+  () => {
+    const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
       return 'Add process client device and send static beacon to window placeholder';
-    }.toString(),
+    };
+
+    return { addProcessClientDeviceAndSendStaticBeaconToWindow };
+  },
 );
 
 jest.mock('#app/lib/analyticsUtils/staticATITracking/clickTracking', () =>

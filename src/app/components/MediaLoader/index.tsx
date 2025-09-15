@@ -1,7 +1,7 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
 import { jsx } from '@emotion/react';
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { use, useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
@@ -15,7 +15,13 @@ import {
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { PageTypes } from '#app/models/types/global';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
-import { BumpType, MediaBlock, PlayerConfig } from './types';
+import {
+  BumpType,
+  EventMapping,
+  MediaBlock,
+  MediaPlayerEvents,
+  PlayerConfig,
+} from './types';
 import Caption from '../Caption';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
@@ -27,6 +33,7 @@ import { getBootstrapSrc } from '../Ad/Canonical';
 import Metadata from './Metadata';
 import AmpMediaLoader from './Amp';
 import LiteMediaLoader from '../LiteComponents/LiteMediaLoader';
+import Message from './Message';
 
 const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
   MEDIA_ARTICLE_PAGE,
@@ -35,7 +42,7 @@ const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
 
 const logger = nodeLogger(__filename);
 
-const BumpLoader = () => (
+export const BumpLoader = () => (
   <Helmet>
     <script
       type="text/javascript"
@@ -97,14 +104,22 @@ type MediaContainerProps = {
   playerConfig: PlayerConfig;
   showAds: boolean;
   uniqueId?: string;
+  noJsMessage?: string;
+  eventMapping?: EventMapping;
 };
+
+const isAudioPlayer = (playerConfig: PlayerConfig) =>
+  playerConfig?.ui?.skin === 'audio';
 
 const MediaContainer = ({
   playerConfig,
   showAds,
   uniqueId,
+  noJsMessage,
+  eventMapping,
 }: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
+  const isAudio = isAudioPlayer(playerConfig);
 
   useEffect(() => {
     try {
@@ -115,8 +130,6 @@ const MediaContainer = ({
             playerConfig,
           );
 
-          mediaPlayer.load();
-
           if (uniqueId != null) {
             const { mediaPlayers } = window;
             if (mediaPlayers == null) {
@@ -124,6 +137,16 @@ const MediaContainer = ({
             } else {
               mediaPlayers[uniqueId] = mediaPlayer;
             }
+          }
+
+          // Bind any events passed in to the player
+          if (eventMapping && Object.keys(eventMapping || {}).length > 0) {
+            Object.keys(eventMapping).forEach(bindingKey => {
+              const key = bindingKey as MediaPlayerEvents;
+              const handler = eventMapping[key];
+
+              if (handler) mediaPlayer.bind(key, handler);
+            });
           }
 
           if (showAds) {
@@ -152,23 +175,26 @@ const MediaContainer = ({
               );
             });
           }
+
+          mediaPlayer.load();
         }
       });
     } catch (error) {
       logger.error(MEDIA_PLAYER_STATUS, error);
     }
-  }, [playerConfig, showAds, uniqueId]);
+  }, [playerConfig, showAds, uniqueId, eventMapping]);
 
   return (
     <div
       ref={playerElementRef}
       data-e2e="media-player"
-      css={
-        playerConfig?.ui?.skin === 'audio'
-          ? styles.audioMediaContainer
-          : styles.standardMediaContainer
-      }
-    />
+      className="media-player"
+      css={isAudio ? styles.audioMediaContainer : styles.standardMediaContainer}
+    >
+      <noscript>
+        <Message message={noJsMessage} />
+      </noscript>
+    </div>
   );
 };
 
@@ -177,22 +203,28 @@ type Props = {
   className?: string;
   embedded?: boolean;
   uniqueId?: string;
+  eventMapping?: EventMapping;
 };
 
-const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
-  const { lang, translations } = useContext(ServiceContext);
-  const { pageIdentifier } = useContext(EventTrackingContext);
+const MediaLoader = ({
+  blocks,
+  className,
+  embedded,
+  uniqueId,
+  eventMapping,
+}: Props) => {
+  const { lang, service, translations } = use(ServiceContext);
+  const { pageIdentifier } = use(EventTrackingContext);
   const { enabled: adsEnabled } = useToggle('ads');
 
   const {
     id,
     pageType,
     statsDestination,
-    service,
     isAmp,
     isLite,
     showAdsBasedOnLocation,
-  } = useContext(RequestContext);
+  } = use(RequestContext);
 
   const [showPlaceholder, setShowPlaceholder] = useState(
     !PAGETYPES_IGNORE_PLACEHOLDER.includes(pageType),
@@ -230,7 +262,9 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
   } = config;
 
   const captionBlock = getCaptionBlock(blocks, pageType);
-  const isPortraitVideo = orientation === 'portrait';
+  const isPortrait = orientation === 'portrait';
+  const isLandscape = orientation === 'landscape';
+  const isAudio = isAudioPlayer(playerConfig);
 
   const {
     placeholderSrc,
@@ -238,6 +272,8 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
     translatedNoJSMessage,
     mediaInfo,
   } = placeholderConfig ?? {};
+
+  const noJsMessage = translatedNoJSMessage || translations?.media?.noJs;
 
   const hasPlaceholder = Boolean(showPlaceholder && placeholderSrc);
 
@@ -251,12 +287,12 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
       }
       <figure
         data-e2e="media-loader__container"
-        className={className}
+        className={`media-container${className ? ` ${className}` : ''}`}
         css={[
           styles.figure(embedded),
-          playerConfig?.ui?.skin === 'classic' && [
-            orientation === 'portrait' && styles.portraitFigure(embedded),
-            orientation === 'landscape' && styles.landscapeFigure,
+          !isAudio && [
+            isPortrait && styles.portraitFigure(embedded),
+            isLandscape && styles.landscapeFigure,
           ],
         ]}
       >
@@ -269,7 +305,7 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
                   title={mediaInfo?.title}
                   placeholderSrc={placeholderSrc}
                   placeholderSrcset={placeholderSrcset}
-                  noJsMessage={translatedNoJSMessage}
+                  noJsMessage={noJsMessage}
                 />
               );
             case isLite:
@@ -292,15 +328,18 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
                     <Placeholder
                       src={placeholderSrc}
                       srcSet={placeholderSrcset}
-                      noJsMessage={translatedNoJSMessage}
+                      noJsMessage={noJsMessage}
                       mediaInfo={mediaInfo}
                       onClick={() => setShowPlaceholder(false)}
+                      isPortraitOrientation={!!isPortrait}
                     />
                   ) : (
                     <MediaContainer
                       playerConfig={playerConfig}
                       showAds={showAds}
                       uniqueId={uniqueId}
+                      noJsMessage={noJsMessage}
+                      eventMapping={eventMapping}
                     />
                   )}
                 </>
@@ -309,10 +348,13 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
         })()}
         {captionBlock && (
           <Caption
-            className={isPortraitVideo ? 'portrait-caption' : ''}
+            className={isPortrait ? 'portrait-caption' : ''}
             block={captionBlock}
             type={mediaType}
-            css={isPortraitVideo && styles.captionPortrait}
+            css={[
+              isAudio && styles.captionAudio,
+              !isAudio && [isPortrait && styles.captionPortrait],
+            ]}
           />
         )}
       </figure>

@@ -73,6 +73,7 @@ const defaultCyrillicConfig = {
     skipLinkText: 'Саҳифага ўтиш',
     relatedContent: 'Мавзуга алоқадор',
     relatedTopics: 'Алоқадор мавзулар',
+    moreOnThis: '',
     navMenuText: 'Бўлимлар',
     mediaAssetPage: {
       mediaPlayer: 'Медиа плейер',
@@ -244,6 +245,7 @@ const defaultCyrillicConfig = {
       duration: 'Давомийлиги',
       recentEpisodes: 'Олдинги дастурлар',
       closeVideo: 'Чиқиш',
+      endOfContentClose: 'Бу контентнинг охири. Чиқиш',
     },
     socialEmbed: {
       caption: {
@@ -298,7 +300,7 @@ const defaultCyrillicConfig = {
       text: 'Нега сиз Би-би-сига ишонишингиз мумкин?',
     },
     externalLink: {
-      href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+      href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
       text: 'Ташқи линкларга бизнинг ёндашувимиз қандайлиги ҳақида маълумотга эга бўлинг',
     },
     links: [
@@ -640,7 +642,7 @@ export const service: UzbekConfig = {
         text: 'Нега сиз Би-би-сига ишонишингиз мумкин?',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Ташқи линкларга бизнинг ёндашувимиз қандайлиги ҳақида маълумотга эга бўлинг',
       },
       links: [
