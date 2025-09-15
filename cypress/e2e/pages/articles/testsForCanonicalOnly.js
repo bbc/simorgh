@@ -160,7 +160,7 @@ export default ({ service, pageType, variant = 'default' }) =>
                 .click();
               cy.get('[data-e2e="media-player"]').should('be.visible');
 
-              cy.testResponseCodeAndTypeRetry({
+              cy.testResponseCodeAndRetry({
                 path: embedUrl,
                 responseCode: 200,
                 type: 'text/html',
