@@ -131,7 +131,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       }
                       renderVisuallyHiddenH2Title={position === 0}
                       curationId={curationId}
-                      {...(readTimeVariant && { readTimeVariant })}
+                      readTimeVariant={readTimeVariant}
                       {...curationProps}
                     />
                     {index === indexOfFirstNonBanner && <MPU />}
