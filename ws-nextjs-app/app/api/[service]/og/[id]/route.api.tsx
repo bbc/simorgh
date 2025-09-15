@@ -201,7 +201,7 @@ export async function GET(
         fonts,
         headers: {
           'Cache-Control':
-            'public, stale-if-error=300, stale-while-revalidate=120, max-age=30',
+            'public, stale-if-error=3600, stale-while-revalidate=3600, max-age=600',
         },
       },
     );
