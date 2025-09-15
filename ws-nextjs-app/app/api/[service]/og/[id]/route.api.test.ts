@@ -5,6 +5,15 @@
 import * as fetchPageData from '#app/routes/utils/fetchPageData';
 import { GET as api } from './route.api';
 
+// mock ImageResponse
+jest.mock('next/og', () => {
+  return {
+    ImageResponse: jest.fn().mockImplementation(() => {
+      return new Response('mocked image response', { status: 200 });
+    }),
+  };
+});
+
 describe('GET /api/og', () => {
   beforeEach(() => {
     jest.restoreAllMocks();
