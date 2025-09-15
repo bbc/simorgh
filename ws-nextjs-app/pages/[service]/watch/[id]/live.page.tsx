@@ -1,10 +1,8 @@
-import React from 'react';
 import dynamic from 'next/dynamic';
 import { GetServerSideProps } from 'next';
 import { LIVE_TV_PAGE } from '#app/routes/utils/pageTypes';
 import PageDataParams from '#app/models/types/pageDataParams';
 import { PageTypes } from '#app/models/types/global';
-import { LiveTVPageProps } from './types';
 
 const LiveTvLayout = dynamic(() => import('./LiveTvPageLayout'));
 
