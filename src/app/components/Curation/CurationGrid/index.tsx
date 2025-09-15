@@ -70,6 +70,7 @@ const CurationGrid = ({
       ...promo,
       lazy: !(isFirstPromo && isFirstCuration),
       eventTrackingData: buildPromoEventTrackingData(promo, index),
+      position: index,
     };
 
     if (!shouldUseHighImpact) {

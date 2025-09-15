@@ -33,6 +33,7 @@ const CurationPromo = ({
   readTime,
   eventTrackingData,
   readTimeVariant,
+  position,
 }: Summary) => {
   const { isAmp, isLite } = use(RequestContext);
   const { translations } = use(ServiceContext);
@@ -107,6 +108,8 @@ const CurationPromo = ({
       <ReadTime
         readTimeValue={readTime}
         promoId={id}
+        promoType={type}
+        promoPosition={position}
         readTimeVariant={readTimeVariant}
       />
     </Promo>

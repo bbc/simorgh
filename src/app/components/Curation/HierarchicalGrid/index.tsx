@@ -69,13 +69,14 @@ const HiearchicalGrid = ({
       ...(promo.duration && {
         duration: moment.duration(promo.duration, 'seconds').asMilliseconds(),
       }),
-      ...(readTime && {
-        label:
-          readTime === 1
-            ? `Read time: ${readTime} minute`
-            : `Read time: ${readTime} minutes`,
-        duration: readTime * 60000,
-      }),
+      ...(readTime &&
+        readTimeVariant !== 'control' && {
+          label:
+            readTime === 1
+              ? `Read time: ${readTime} minute`
+              : `Read time: ${readTime} minutes`,
+          duration: readTime * 60000,
+        }),
     };
     return {
       itemTracker,
@@ -107,6 +108,7 @@ const HiearchicalGrid = ({
             (promo.type === 'video' && `${videoTranslation}, `) ||
             (promo.type === 'photogallery' && `${photoGalleryTranslation}, `);
           const { isLive, readTime } = promo;
+          const promoPosition = i + 1;
 
           const promoEventTrackingData = buildPromoEventTrackingData(promo, i, {
             readTime,
@@ -197,6 +199,8 @@ const HiearchicalGrid = ({
                       readTimeValue={readTime}
                       className="hierachical-read-time"
                       promoId={promo.id}
+                      promoType={promo.type}
+                      promoPosition={promoPosition}
                       readTimeVariant={readTimeVariant}
                     />
                   </div>

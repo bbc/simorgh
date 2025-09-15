@@ -1,7 +1,5 @@
 import React from 'react';
 import * as viewTracking from '#app/hooks/useViewTracker';
-import * as clickTracking from '#app/hooks/useClickTrackerHandler';
-import { duration } from 'moment';
 import { suppressPropWarnings } from '../../../legacy/psammead/psammead-test-helpers/src';
 import { render } from '../../react-testing-library-with-providers';
 import { pidginPromos as fixture } from './fixtures';
@@ -213,6 +211,8 @@ describe('Hierarchical Grid Curation', () => {
         duration: 300000,
         label: 'Read time: 5 minutes',
         resourceId: 'e2263a1c-8d5a-4a73-a00c-881acfa34381',
+        position: 1,
+        type: 'article',
       },
       sendOptimizelyEvents: true,
     };

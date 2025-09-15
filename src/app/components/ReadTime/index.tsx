@@ -13,6 +13,8 @@ type ReadTimeProps = {
   className?: string;
   readTimeVariant?: string | null;
   promoId?: string;
+  promoType?: string;
+  promoPosition?: number;
 };
 
 const DEFAULT_TRANSLATIONS = {
@@ -126,6 +128,8 @@ export const ReadTime = ({
   readTimeValue,
   readTimeVariant,
   promoId,
+  promoType,
+  promoPosition,
   className,
 }: ReadTimeProps) => {
   const { service } = use(ServiceContext);
@@ -145,27 +149,35 @@ export const ReadTime = ({
 
   if (!validRender) return null;
 
-  const { readTimeInMilliseconds, minutesLabel, copy } = ProcessReadTime({
+  const { readTimeInMilliseconds, copy } = ProcessReadTime({
     readTimeValue: readTimeValue as number,
     readTimeVariant: readTimeVariant as string,
   });
 
-  const eventTrackingData: EventTrackingData = {
+  const optimizelyTrackingData: EventTrackingData = {
     componentName: 'read-time',
     sendOptimizelyEvents: true,
     experimentName: 'newswb_ws_homepage_read_time',
     experimentVariant: readTimeVariant,
+  };
+
+  const eventTrackingData: EventTrackingData = {
+    ...optimizelyTrackingData,
     itemTracker: {
-      label: `Read time: ${readTimeValue} ${minutesLabel}`,
+      type: promoType,
+      position: promoPosition,
+      label: `Read time: ${readTimeValue} minutes`,
       duration: readTimeInMilliseconds,
       resourceId: promoId,
     },
   };
 
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const viewRef = useViewTracker(eventTrackingData);
-
   const isControlVariant = readTimeVariant === 'control';
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const viewRef = useViewTracker(
+    isControlVariant ? optimizelyTrackingData : eventTrackingData,
+  );
 
   if (isControlVariant) return <HomepagePlaceholder {...viewRef} />;
 
