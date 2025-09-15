@@ -27,6 +27,12 @@ export default ({
         () => {
           before(() => {
             beforeAll.forEach(runBeforeAll => runBeforeAll());
+
+            // Ensure that the page is returning a 200 response code
+            cy.testResponseCodeAndRetry({
+              url: path,
+            });
+
             cy.visit(path);
           });
 
