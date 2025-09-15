@@ -15598,7 +15598,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sharp@npm:^0.34.3":
+"sharp@npm:0.34.3, sharp@npm:^0.34.3":
   version: 0.34.3
   resolution: "sharp@npm:0.34.3"
   dependencies:
@@ -15789,6 +15789,7 @@ __metadata:
     next: "npm:15.5.2"
     next-test-api-route-handler: "npm:5.0.2"
     npm-run-all2: "npm:8.0.4"
+    sharp: "npm:0.34.3"
     ts-node: "npm:^10.9.2"
   languageName: unknown
   linkType: soft
