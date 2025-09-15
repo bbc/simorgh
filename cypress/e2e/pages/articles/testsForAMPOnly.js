@@ -45,8 +45,6 @@ export default ({ service, pageType, variant = 'default' }) => {
 
               cy.testResponseCodeAndRetry({
                 path: src,
-                responseCode: 200,
-                type: 'text/html',
                 allowFallback: true,
               });
             });
