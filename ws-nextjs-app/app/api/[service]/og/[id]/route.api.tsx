@@ -10,7 +10,11 @@ import {
   getArticleId,
   getTipoId,
 } from '#app/routes/utils/constructPageFetchUrl';
-import { INTERNAL_SERVER_ERROR, NOT_FOUND } from '#app/lib/statusCodes.const';
+import {
+  INTERNAL_SERVER_ERROR,
+  NOT_FOUND,
+  OK,
+} from '#app/lib/statusCodes.const';
 import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
 import sendCustomMetric from '#src/server/utilities/customMetrics';
 import { NON_200_RESPONSE } from '#src/server/utilities/customMetrics/metrics.const';
@@ -228,7 +232,7 @@ export async function GET(
 
     logger.debug(ROUTING_INFORMATION, {
       url: req.url,
-      status: 200,
+      status: OK,
       pageType: pageTypeToLog,
     });
 
@@ -245,19 +249,19 @@ export async function GET(
 
     sendCustomMetric({
       metricName: NON_200_RESPONSE,
-      statusCode: 500,
+      statusCode: INTERNAL_SERVER_ERROR,
       // @ts-expect-error - Not a real pageType yet
       pageType: pageTypeToLog,
       requestUrl: req.url,
     });
 
     logger.error(SERVER_SIDE_REQUEST_FAILED, {
-      status: 500,
+      status: INTERNAL_SERVER_ERROR,
       message: { message, url: req.url },
       url: req.url,
       pageType: pageTypeToLog,
     });
 
-    return new Response(message, { status: 500 });
+    return new Response(message, { status: INTERNAL_SERVER_ERROR });
   }
 }
