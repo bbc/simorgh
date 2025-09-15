@@ -199,6 +199,10 @@ export async function GET(
         width: 1024,
         height: 576,
         fonts,
+        headers: {
+          'Cache-Control':
+            'public, stale-if-error=300, stale-while-revalidate=120, max-age=30',
+        },
       },
     );
   } catch (error: unknown) {
