@@ -27,8 +27,6 @@ const getEventTrackingData = ({
   selectedVideo,
   selectedVideoIndex,
 }: ModalTrackingParameters) => {
-  const { name, position, itemCount, resourceId } =
-    eventTrackingData.groupTracker || {};
   const {
     id,
     title,
@@ -39,11 +37,8 @@ const getEventTrackingData = ({
     componentName: 'portrait-video-modal',
     alwaysInView: true,
     groupTracker: {
-      name,
+      ...eventTrackingData.groupTracker,
       type: 'portrait-video-modal',
-      position,
-      itemCount,
-      resourceId,
     },
     itemTracker: {
       type: 'portrait-video',

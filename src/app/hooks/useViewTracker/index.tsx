@@ -47,7 +47,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
 
   const observer = useRef(null);
   const timer = useRef(null);
-  const [componentHasComeIntoView, setcomponentHasComeIntoView] =
+  const [componentHasComeIntoView, setComponentHasComeIntoView] =
     useState(alwaysInView);
   const [eventSent, setEventSent] = useState(false);
   const { trackingIsEnabled } = useTrackingToggle(componentName);
@@ -151,7 +151,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
           // @ts-expect-error current element won't be null
           observer.current = await getIntersectionObserver({
             threshold: viewThreshold,
-            componentViewStateSetter: setcomponentHasComeIntoView,
+            componentViewStateSetter: setComponentHasComeIntoView,
           });
         }
         (observer.current as unknown as IntersectionObserver)?.observe(element);
