@@ -1,10 +1,4 @@
-export interface TestResponseCodeAndRetry {
-  url: string;
-  responseCode?: number;
-  type?: string;
-  retriesLeft?: number;
-  allowFallback?: boolean;
-}
+import { TestResponseCodeAndRetry } from '../commands';
 
 export default ({
   url,

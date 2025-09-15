@@ -1,8 +1,6 @@
 /* eslint-disable @typescript-eslint/no-namespace */
 import { LanguagesPageProps } from '../../pages/ws/types';
-import testResponseCodeAndRetry, {
-  TestResponseCodeAndRetry,
-} from './helpers/testResponseCodeAndRetry';
+import testResponseCodeAndRetry from './helpers/testResponseCodeAndRetry';
 
 interface CustomWindow extends Window {
   __NEXT_DATA__?: {
@@ -10,6 +8,14 @@ interface CustomWindow extends Window {
       pageProps?: LanguagesPageProps;
     };
   };
+}
+
+export interface TestResponseCodeAndRetry {
+  url: string;
+  responseCode?: number;
+  type?: string;
+  retriesLeft?: number;
+  allowFallback?: boolean;
 }
 
 declare global {
