@@ -224,7 +224,7 @@ export async function GET(
 
     return new Response(compressedImage, {
       headers: {
-        'Content-Type': 'image/png',
+        'Content-Type': 'image/jpeg',
         'Content-Length': compressedImage.byteLength.toString(),
         'Cache-Control':
           'public, stale-if-error=3600, stale-while-revalidate=3600, max-age=600',
