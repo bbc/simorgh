@@ -335,7 +335,6 @@ export const service: DefaultServiceConfig = {
             href: 'https://www.bbc.com/afaanoromoo',
             label: 'Oduu Afaan Oromootiin',
             lang: 'om',
-            latinTransliteration: 'Oduu Afaan Oromootiin',
           },
           {
             id: 'amharic',
@@ -367,27 +366,24 @@ export const service: DefaultServiceConfig = {
             href: 'https://www.bbc.com/gahuza',
             label: 'Amakuru mu Kinyarwanda/ Kirundi',
             lang: 'rw',
-            latinTransliteration: 'Amakuru mu Kinyarwanda/ Kirundi',
           },
           {
             id: 'pidgin',
             href: 'https://www.bbc.com/pidgin',
             label: 'News in Pidgin',
-            lang: 'en',
+            lang: 'pcm',
           },
           {
             id: 'somali',
             href: 'https://www.bbc.com/somali',
             label: 'War Af Soomaali ah',
             lang: 'so',
-            latinTransliteration: 'War Af Soomaali ah',
           },
           {
             id: 'swahili',
             href: 'https://www.bbc.com/swahili',
             label: 'Habari kwa Kiswahili',
             lang: 'sw',
-            latinTransliteration: 'Habari kwa Kiswahili',
           },
           {
             id: 'tigrinya',
@@ -418,10 +414,10 @@ export const service: DefaultServiceConfig = {
           },
           {
             id: 'uzbek',
-            href: 'https://www.bbc.com/uzbek',
+            href: 'https://www.bbc.com/uzbek/cyr',
             label: 'Ўзбек тилидаги янгиликлар',
-            lang: 'uz',
-            latinTransliteration: 'Ozbek tilidagi yangiliklar',
+            lang: 'uz-latn',
+            latinTransliteration: "O'zbek",
           },
         ],
       },
@@ -438,9 +434,9 @@ export const service: DefaultServiceConfig = {
           },
           {
             id: 'zhongwen',
-            href: 'https://www.bbc.com/zhongwen/simp',
+            href: 'https://www.bbc.com/zhongwen/trad',
             label: '中文新闻',
-            lang: 'zh',
+            lang: 'zh-hant',
           },
           {
             id: 'indonesia',
@@ -591,9 +587,9 @@ export const service: DefaultServiceConfig = {
           },
           {
             id: 'serbian',
-            href: 'https://www.bbc.com/serbian',
+            href: 'https://www.bbc.com/serbian/lat',
             label: 'BBC News na srpskom',
-            lang: 'sr',
+            lang: 'sr-latn',
           },
           {
             id: 'turkce',
