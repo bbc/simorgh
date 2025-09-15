@@ -1,11 +1,9 @@
-import { TestResponseCodeAndRetry } from '../commands';
-
 export default ({
   url,
   responseCode = 200,
   retriesLeft = 2,
   allowFallback = false,
-}: TestResponseCodeAndRetry) => {
+}) => {
   cy.request({ url, retryOnStatusCodeFailure: true }).then(
     ({ status, headers }) => {
       expect(status, `Unexpected status code for ${url}`).to.equal(

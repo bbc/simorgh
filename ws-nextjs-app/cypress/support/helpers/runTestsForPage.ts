@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-relative-packages
 import getOptimizelyKey from '../../../../cypress/support/helpers/getOptimizelyKey';
 
 export default ({

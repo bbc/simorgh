@@ -10,7 +10,7 @@ interface CustomWindow extends Window {
   };
 }
 
-export interface TestResponseCodeAndRetry {
+interface TestResponseCodeAndRetry {
   url: string;
   responseCode?: number;
   type?: string;
