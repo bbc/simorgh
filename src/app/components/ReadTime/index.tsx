@@ -137,6 +137,7 @@ export const ReadTime = ({
     readTimeVariant !== 'off',
   ].every(Boolean);
 
+  // EXPERIMENT: Homepage Read Time
   const experimentEnabledServices = ['turkce', 'mundo'];
 
   if (readTimeVariant === null && experimentEnabledServices.includes(service))
