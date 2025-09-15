@@ -12,6 +12,10 @@ import {
 } from '#app/routes/utils/constructPageFetchUrl';
 import { INTERNAL_SERVER_ERROR, NOT_FOUND } from '#app/lib/statusCodes.const';
 import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
+import sendCustomMetric from '#src/server/utilities/customMetrics';
+import { NON_200_RESPONSE } from '#src/server/utilities/customMetrics/metrics.const';
+import nodeLogger from '#lib/logger.node';
+import { SERVER_SIDE_REQUEST_FAILED } from '#app/lib/logger.const';
 import Badge from '../Badge';
 import {
   extractArticleData,
@@ -25,6 +29,9 @@ import {
   ArabicTopStoriesSVG,
   RTLLiveSVG,
 } from '../RTLBadges';
+
+const logger = nodeLogger(__filename);
+const pageTypeToLog = 'og-image';
 
 const REITH_SANS_MEDIUM_FONT_URL = `${REITH_FONTS_DIR}BBCReithSans_W_Md.woff`;
 const REITH_SANS_BOLD_FONT_URL = `${REITH_FONTS_DIR}BBCReithSans_W_Bd.woff`;
@@ -168,7 +175,7 @@ export async function GET(
       badge = null; // No badge for RTL services other than Arabic for initial experiment
     }
 
-    return new ImageResponse(
+    const imageResponse = new ImageResponse(
       (
         <div
           style={{
@@ -201,8 +208,34 @@ export async function GET(
         fonts,
       },
     );
+
+    const buffer = Buffer.from(await imageResponse.arrayBuffer());
+
+    return new Response(buffer, {
+      headers: {
+        'Content-Type': 'image/png',
+        'Content-Length': buffer.length.toString(),
+        'Cache-Control':
+          'public, stale-if-error=3600, stale-while-revalidate=3600, max-age=600',
+      },
+    });
   } catch (error: unknown) {
     const { message } = error as FetchError;
+
+    sendCustomMetric({
+      metricName: NON_200_RESPONSE,
+      statusCode: 500,
+      // @ts-expect-error - Not a real pageType yet
+      pageType: pageTypeToLog,
+      requestUrl: req.url,
+    });
+
+    logger.error(SERVER_SIDE_REQUEST_FAILED, {
+      status: 500,
+      message: { message, url: req.url },
+      url: req.url,
+      pageType: pageTypeToLog,
+    });
 
     return new Response(message, { status: 500 });
   }
