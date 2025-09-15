@@ -5,7 +5,6 @@
 import * as fetchPageData from '#app/routes/utils/fetchPageData';
 import { GET as api } from './route.api';
 
-// mock ImageResponse
 jest.mock('next/og', () => {
   return {
     ImageResponse: jest.fn().mockImplementation(() => {
@@ -15,7 +14,6 @@ jest.mock('next/og', () => {
 });
 
 const mockResponse = (status: number) => {
-  // mock Response
   global.Response = jest.fn().mockImplementation(() => {
     return { status };
   }) as unknown as typeof Response;
