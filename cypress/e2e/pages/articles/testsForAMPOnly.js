@@ -44,7 +44,7 @@ export default ({ service, pageType, variant = 'default' }) => {
               cy.log(`src is ${src}`);
 
               cy.testResponseCodeAndRetry({
-                path: src,
+                url: src,
                 allowFallback: true,
               });
             });

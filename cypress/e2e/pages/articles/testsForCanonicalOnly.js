@@ -161,7 +161,7 @@ export default ({ service, pageType, variant = 'default' }) =>
               cy.get('[data-e2e="media-player"]').should('be.visible');
 
               cy.testResponseCodeAndRetry({
-                path: embedUrl,
+                url: embedUrl,
                 allowFallback: true,
               });
             }

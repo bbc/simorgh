@@ -8,7 +8,7 @@ export default ({ service, pageType, path }) => {
 
           cy.get('amp-iframe').then($ampIframe => {
             cy.testResponseCodeAndRetry({
-              path: $ampIframe.attr('src'),
+              url: $ampIframe.attr('src'),
               allowFallback: true,
             });
           });
