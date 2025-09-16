@@ -1,8 +1,5 @@
 /* eslint-disable no-underscore-dangle */
-import shouldSmokeTest from '../../cypress/support/helpers/shouldSmokeTest';
-import serviceHasPageType from '../../cypress/support/helpers/serviceHasPageType';
-import config from '../../cypress/support/config/services';
-import getPaths from '../../cypress/support/helpers/getPaths';
+
 import {
   assertLoadsExpectedBundles,
   assertLoadsModernBundles,
@@ -21,28 +18,37 @@ const onPageRequest = request => {
   context.page.__requests.push(request.url());
 };
 
-const testSuites = Object.keys(config)
-  .map(serviceId => {
-    return Object.keys(config[serviceId].pageTypes)
-      .filter(
-        pageType =>
-          shouldSmokeTest(pageType, serviceId) &&
-          serviceHasPageType(serviceId, pageType),
-      )
-      .map(pageType => {
-        const paths = getPaths(serviceId, pageType);
-
-        const [path] = paths;
-
-        return {
-          path,
-          pageType,
-          service: config[serviceId].name,
-          runforEnv: ['local'],
-          tests: [assertLoadsExpectedBundles, assertLoadsModernBundles],
-        };
-      });
-  })
-  .flat();
+const testSuites = [
+  {
+    path: '/pidgin',
+    pageType: 'homepage',
+    service: 'pidgin',
+    runforEnv: ['local'],
+    tests: [assertLoadsExpectedBundles, assertLoadsModernBundles],
+  },
+  {
+    path: '/serbian/cyr',
+    pageType: 'homepage',
+    service: 'serbian',
+    runforEnv: 'local',
+    variant: 'cyr',
+    tests: [assertLoadsExpectedBundles, assertLoadsModernBundles],
+  },
+  {
+    path: '/serbian/lat',
+    pageType: 'homepage',
+    service: 'serbian',
+    runforEnv: 'local',
+    variant: 'lat',
+    tests: [assertLoadsExpectedBundles, assertLoadsModernBundles],
+  },
+  {
+    path: '/news/articles/c0g992jmmkko',
+    pageType: 'articles',
+    service: 'news',
+    runforEnv: 'local',
+    tests: [assertLoadsExpectedBundles, assertLoadsModernBundles],
+  },
+];
 
 runTestsForPage({ testSuites, onPageRequest });
