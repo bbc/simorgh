@@ -1,5 +1,5 @@
 import { STATIC_PAGE } from '#app/routes/utils/pageTypes';
-import { assertLiveTvPage, assertLiveTvPageLocal } from './assertions';
+import { assertLiveTvPageTest, assertLiveTvPageLocal } from './assertions';
 import runTestsForPage from '../../support/helpers/runTestsForPage';
 
 const testSuites = [
@@ -12,8 +12,8 @@ const testSuites = [
   {
     path: '/[service]/watch/[id]/live',
     service: 'ws',
-    runforEnv: ['live'],
-    tests: [assertLiveTvPage],
+    runforEnv: ['test'],
+    tests: [assertLiveTvPageTest],
   },
 ];
 
