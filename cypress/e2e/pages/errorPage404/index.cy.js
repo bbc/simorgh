@@ -3,7 +3,6 @@ import testsForAllPages from './tests';
 import ampTests from './testsForAMPOnly';
 import canonicalTests from './testsForCanonicalOnly';
 import { ERROR_PAGE } from '../../../../src/app/routes/utils/pageTypes';
-// import liteTests from '../articles/testsForLiteOnly';
 
 const tests = [testsForAllPages, canonicalTests, ampTests];
 
