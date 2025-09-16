@@ -7,9 +7,18 @@ const PromoTimestamp = ({
   children,
   serviceDatetimeLocale = '',
   className = '',
+  showPrefix,
 }) => {
-  const { altCalendar, script, datetimeLocale, service, timezone } =
-    use(ServiceContext);
+  const {
+    altCalendar,
+    script,
+    datetimeLocale,
+    service,
+    timezone,
+    translations: {
+      timstampPrefix: { publishedAgo },
+    },
+  } = use(ServiceContext);
 
   const locale = serviceDatetimeLocale || datetimeLocale;
 
@@ -28,6 +37,7 @@ const PromoTimestamp = ({
       timezone={timezone}
       isRelative={isRelative}
       className={className}
+      {...(isRelative && showPrefix && { prefix: publishedAgo })}
     />
   );
 };

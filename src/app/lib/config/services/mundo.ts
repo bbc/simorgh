@@ -73,6 +73,9 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      timstampPrefix: {
+        publishedAgo: 'Publicado hace',
+      },
       readTime: {
         readTimePrefix: 'Tiempo de lectura',
         quick: 'Lectura rápida',
