@@ -99,7 +99,7 @@ const CurationPromo = ({
         )}
       </Promo.Heading>
       {!isLive ? (
-        <Promo.Timestamp className="promo-timestamp">
+        <Promo.Timestamp className="promo-timestamp" showPrefix>
           {lastPublished}
         </Promo.Timestamp>
       ) : null}
