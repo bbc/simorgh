@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/aria-role */
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
-import React, { use } from 'react';
+import { use } from 'react';
 import { css, jsx, Theme } from '@emotion/react';
 import moment from 'moment';
 import path from 'ramda/src/path';
@@ -175,17 +175,18 @@ const HiearchicalGrid = ({
                   {promo.description}
                 </Promo.Body>
                 {!isLive ? (
-                  <>
+                  <div className="timestamp-read-time-container">
                     <Promo.Timestamp className="promo-timestamp">
                       {promo.lastPublished}
                     </Promo.Timestamp>
                     {/* EXPERIMENT: Read Time */}
                     <ReadTime
+                      className="hierachical-read-time"
                       readTimeValue={promo.readTime}
                       promoId={promo.id}
                       readTimeVariant={readTimeVariant}
                     />
-                  </>
+                  </div>
                 ) : null}
               </Promo>
             </li>

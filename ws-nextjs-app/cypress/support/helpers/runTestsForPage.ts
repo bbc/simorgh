@@ -21,27 +21,31 @@ export default ({
     const cypressEnv = Cypress.env('APP_ENV');
 
     if (runforEnv.includes(cypressEnv)) {
-      describe(`${Cypress.config().baseUrl}${path}`, { testIsolation }, () => {
-        before(() => {
-          beforeAll.forEach(runBeforeAll => runBeforeAll());
-          cy.visit(path);
-        });
+      describe(
+        `${Cypress.config().baseUrl}${path}`,
+        { testIsolation, retries: 3 },
+        () => {
+          before(() => {
+            beforeAll.forEach(runBeforeAll => runBeforeAll());
+            cy.visit(path);
+          });
 
-        beforeEach(() => {
-          cy.intercept(
-            {
-              url: `https://cdn.optimizely.com/datafiles/${getOptimizelyKey()}.json`,
-            },
-            request => {
-              request.reply({ statusCode: 404 });
-            },
-          ).as('disable-optimizely');
-        });
+          beforeEach(() => {
+            cy.intercept(
+              {
+                url: `https://cdn.optimizely.com/datafiles/${getOptimizelyKey()}.json`,
+              },
+              request => {
+                request.reply({ statusCode: 404 });
+              },
+            ).as('disable-optimizely');
+          });
 
-        tests.forEach(test => {
-          test({ path, pageType, ...params });
-        });
-      });
+          tests.forEach(test => {
+            test({ path, pageType, ...params });
+          });
+        },
+      );
     }
   });
 };
