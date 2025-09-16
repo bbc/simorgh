@@ -4,13 +4,13 @@ import runTestsForPage from '../../support/helpers/runTestsForPage';
 
 const testSuites = [
   {
-    path: '/[service]/watch/[id]/live',
+    path: 'dari/watch/bbc_afghan_tv/live',
     service: 'ws',
     runforEnv: ['local'],
     tests: [assertLiveTvPageLocal],
   },
   {
-    path: '/[service]/watch/[id]/live',
+    path: 'dari/watch/bbc_afghan_tv/live',
     service: 'ws',
     runforEnv: ['test'],
     tests: [assertLiveTvPageTest],
