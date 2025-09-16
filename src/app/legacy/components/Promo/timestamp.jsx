@@ -22,6 +22,7 @@ const PromoTimestamp = ({
 
   const isRelative = isTenHoursAgo(new Date(children).getTime());
 
+  // EXPERIMENT: Homepage Read Time
   const prefix = timstampPrefix?.publishedAgo;
 
   return (

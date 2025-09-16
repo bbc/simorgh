@@ -73,6 +73,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      // EXPERIMENT: Homepage Read Time
       timstampPrefix: {
         publishedAgo: 'Publicado hace',
       },

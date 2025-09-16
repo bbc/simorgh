@@ -54,6 +54,7 @@ export interface Translations {
     minute: string;
     minutes: string;
   }>;
+  // EXPERIMENT: Homepage Read Time
   timstampPrefix?: {
     publishedAgo?: string;
   };
