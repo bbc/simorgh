@@ -1,7 +1,6 @@
 import React from 'react';
 import * as viewTracking from '#app/hooks/useViewTracker';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
-// import { suppressPropWarnings } from '../../../legacy/psammead/psammead-test-helpers/src';
 import { fireEvent, render } from '../../react-testing-library-with-providers';
 import { pidginPromos as fixture } from './fixtures';
 import mediaFixture from './mediaFixtures';
