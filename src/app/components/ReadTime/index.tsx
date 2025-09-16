@@ -4,7 +4,6 @@ import { use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '#app/hooks/useViewTracker';
-import isLive from '#app/lib/utilities/isLive';
 import Text from '#app/components/Text';
 import styles from './index.styles';
 
