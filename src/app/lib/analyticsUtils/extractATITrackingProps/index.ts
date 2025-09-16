@@ -21,6 +21,7 @@ export default ({
     itemTracker,
     groupTracker,
     viewThreshold,
+    alwaysInView,
   } = eventTrackingData || {};
 
   const {
@@ -54,5 +55,6 @@ export default ({
     itemTracker,
     groupTracker,
     viewThreshold,
+    alwaysInView,
   };
 };
