@@ -69,14 +69,13 @@ const HiearchicalGrid = ({
       ...(promo.duration && {
         duration: moment.duration(promo.duration, 'seconds').asMilliseconds(),
       }),
-      ...(readTime &&
-        readTimeVariant !== 'control' && {
-          label:
-            readTime === 1
-              ? `Read time: ${readTime} minute`
-              : `Read time: ${readTime} minutes`,
-          duration: readTime * 60000,
-        }),
+      ...(readTime && {
+        label:
+          readTime === 1
+            ? `Read time: ${readTime} minute`
+            : `Read time: ${readTime} minutes`,
+        duration: readTime * 60000,
+      }),
     };
     return {
       itemTracker,

@@ -175,9 +175,7 @@ export const ReadTime = ({
   const isControlVariant = readTimeVariant === 'control';
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const viewRef = useViewTracker(
-    isControlVariant ? optimizelyTrackingData : eventTrackingData,
-  );
+  const viewRef = useViewTracker(eventTrackingData);
 
   if (isControlVariant) return <HomepagePlaceholder {...viewRef} />;
 
