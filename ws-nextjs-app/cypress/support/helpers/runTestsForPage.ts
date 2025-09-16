@@ -28,22 +28,21 @@ export default ({
           cy.visit(path, { failOnStatusCode });
         });
 
-          beforeEach(() => {
-            cy.intercept(
-              {
-                url: `https://cdn.optimizely.com/datafiles/${getOptimizelyKey()}.json`,
-              },
-              request => {
-                request.reply({ statusCode: 404 });
-              },
-            ).as('disable-optimizely');
-          });
+        beforeEach(() => {
+          cy.intercept(
+            {
+              url: `https://cdn.optimizely.com/datafiles/${getOptimizelyKey()}.json`,
+            },
+            request => {
+              request.reply({ statusCode: 404 });
+            },
+          ).as('disable-optimizely');
+        });
 
-          tests.forEach(test => {
-            test({ path, pageType, ...params });
-          });
-        },
-      );
+        tests.forEach(test => {
+          test({ path, pageType, ...params });
+        });
+      });
     }
   });
 };
