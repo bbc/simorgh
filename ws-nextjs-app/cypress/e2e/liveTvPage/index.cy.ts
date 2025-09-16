@@ -1,4 +1,4 @@
-import { STATIC_PAGE } from '#app/routes/utils/pageTypes';
+import { LIVE_TV_PAGE } from '#app/routes/utils/pageTypes';
 import { assertLiveTvPageTest, assertLiveTvPageLocal } from './assertions';
 import runTestsForPage from '../../support/helpers/runTestsForPage';
 
@@ -19,5 +19,5 @@ const testSuites = [
 
 runTestsForPage({
   testSuites,
-  pageType: STATIC_PAGE,
+  pageType: LIVE_TV_PAGE,
 });
