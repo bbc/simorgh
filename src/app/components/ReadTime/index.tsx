@@ -75,7 +75,7 @@ export const ReadTimeArticleExperiment = ({
     readTimeVariant,
   });
 
-  // EXPERIMENT: Read Time
+  // EXPERIMENT: Article Read Time
   const fontSize = readTimeVariant.includes('bold') ? 'pica' : 'brevier';
   const fontVariant = readTimeVariant.includes('bold')
     ? 'sansBold'

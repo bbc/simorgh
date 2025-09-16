@@ -11,6 +11,15 @@ const minimalEventTrackingData = { componentName: 'test-component' };
 
 describe('Hierarchical Grid Curation', () => {
   const headingLevel = 2;
+
+  beforeAll(() => {
+    jest.useFakeTimers().setSystemTime(new Date('2025-09-16T11:34:20.000Z'));
+  });
+
+  afterAll(() => {
+    jest.useRealTimers();
+  });
+
   it('renders twelve promos when twelve items are provided', async () => {
     render(
       <HierarchicalGrid
@@ -116,6 +125,21 @@ describe('Hierarchical Grid Curation', () => {
     );
 
     expect(getByText('29 julio 2023')).toBeInTheDocument();
+  });
+
+  it('for articles pushed under 10 hours ago, it should render the last published date in a relative format', async () => {
+    const { container } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={mediaFixture}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+      {
+        service: 'mundo',
+      },
+    );
+    const timestampText = container.querySelectorAll('time')?.[2].innerHTML;
+    expect(timestampText).toBe('Publicado hace 34 minutos');
   });
 
   it('should use role text when using nested spans', async () => {
