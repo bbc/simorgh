@@ -417,7 +417,7 @@ export const service: DefaultServiceConfig = {
             href: 'https://www.bbc.com/uzbek/cyr',
             label: 'Ўзбек тилидаги янгиликлар',
             lang: 'uz-latn',
-            latinTransliteration: "O'zbek",
+            latinTransliteration: "O'zbek tilidagi yangiliklar",
           },
         ],
       },
