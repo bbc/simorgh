@@ -15,14 +15,14 @@ const PromoTimestamp = ({
     datetimeLocale,
     service,
     timezone,
-    translations: {
-      timstampPrefix: { publishedAgo },
-    },
+    translations: { timstampPrefix },
   } = use(ServiceContext);
 
   const locale = serviceDatetimeLocale || datetimeLocale;
 
   const isRelative = isTenHoursAgo(new Date(children).getTime());
+
+  const prefix = timstampPrefix?.publishedAgo;
 
   return (
     <Timestamp
@@ -37,7 +37,7 @@ const PromoTimestamp = ({
       timezone={timezone}
       isRelative={isRelative}
       className={className}
-      {...(isRelative && showPrefix && { prefix: publishedAgo })}
+      {...(isRelative && showPrefix && { prefix })}
     />
   );
 };
