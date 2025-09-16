@@ -7,7 +7,7 @@ const PromoTimestamp = ({
   children,
   serviceDatetimeLocale = '',
   className = '',
-  showPrefix,
+  showPrefix = false,
 }) => {
   const {
     altCalendar,
