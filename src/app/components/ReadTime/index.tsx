@@ -131,7 +131,6 @@ export const ReadTime = ({
   const { service } = use(ServiceContext);
 
   const validRender = [
-    !isLive(),
     readTimeValue,
     readTimeVariant,
     readTimeVariant !== 'off',
