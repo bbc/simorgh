@@ -1,4 +1,5 @@
-import getOptimizelyKey from '../../../../cypress/support/helpers/getOptimizelyKey';
+// import getOptimizelyKey from '../../../../cypress/support/helpers/getOptimizelyKey';
+import getOptimizelyKey from '#cypress/support/helpers/getOptimizelyKey';
 
 export default ({
   pageType,
