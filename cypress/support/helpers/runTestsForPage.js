@@ -1,9 +1,7 @@
 import config from '../config/services';
-import shouldSmokeTest from './shouldSmokeTest';
 import { testsThatAlwaysRunForAllPages } from '../../e2e/pages/testsForAllPages';
 import { testsThatFollowSmokeTestConfigForAllAMPPages } from '../../e2e/pages/testsForAllAMPPages';
 import { testsThatFollowSmokeTestConfigForAllCanonicalPages } from '../../e2e/pages/testsForAllCanonicalPages';
-
 import getPaths from './getPaths';
 import serviceHasPageType from './serviceHasPageType';
 import ampOnlyServices from './ampOnlyServices';
@@ -13,6 +11,9 @@ import getLiteUrl from './getLiteUrl';
 import getOptimizelyKey from './getOptimizelyKey';
 
 // This function takes all types of tests we have and runs in this series of steps with the fewest possible page visits
+
+const shouldSmokeTest = (pageType, service) =>
+  Cypress.env('SMOKE') ? config[service]?.pageTypes?.[pageType]?.smoke : true;
 
 const noOp = () => {};
 
