@@ -114,6 +114,7 @@ export default {
 
   timestampLineBreak: ({ palette, spacings, mq }: Theme) =>
     css({
+      // EXPERIMENT: Article Read Time
       '&:nth-child(2)::before': {
         content: '""',
         borderTop: `${pixelsToRem(2)}rem solid ${palette.GREY_5}`,
