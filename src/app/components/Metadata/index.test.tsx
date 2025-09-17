@@ -1339,5 +1339,25 @@ describe('Metadata', () => {
         'https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png',
       );
     });
+
+    it('should return the default image if page type is not in the experiment', () => {
+      process.env.SIMORGH_APP_ENV = 'test';
+
+      render(
+        // @ts-expect-error - testing with subset of data
+        <MetadataWithContext
+          service="mundo"
+          bbcOrigin={dotCoDotUKOrigin}
+          pageType={STORY_PAGE}
+          pathname="/mundo/c0000000001o"
+        />,
+      );
+
+      const ogImageTag = getOgImageTag();
+
+      expect(ogImageTag?.content).toEqual(
+        'https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png',
+      );
+    });
   });
 });
