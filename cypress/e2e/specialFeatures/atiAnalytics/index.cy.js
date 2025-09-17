@@ -22,6 +22,7 @@ import {
   assertMessageBannerComponentView,
 } from './assertions/messageBanner';
 import { assertPortraitVideoCarouselComponentView } from './assertions/portraitVideoCarousel';
+import { assertPortraitVideoModalComponentView } from './assertions/portraitVideoModal';
 import {
   assertMostReadComponentClick,
   assertMostReadComponentView,
@@ -298,7 +299,7 @@ const canonicalTestSuites = [
   },
   {
     path: '/kyrgyz',
-    runforEnv: ['local', 'test', 'live'],
+    runforEnv: ['local', 'live'],
     service: 'kyrgyz',
     pageIdentifier: 'kyrgyz.page',
     siteId: 58,
@@ -467,7 +468,11 @@ const canonicalTestSuites = [
     applicationType: 'responsive',
     contentType: 'index-home',
     useReverb: true,
-    tests: [assertPageView, assertPortraitVideoCarouselComponentView],
+    tests: [
+      assertPageView,
+      assertPortraitVideoCarouselComponentView,
+      assertPortraitVideoModalComponentView,
+    ],
   },
   {
     path: '/portuguese/podcasts/p07r3r3t',

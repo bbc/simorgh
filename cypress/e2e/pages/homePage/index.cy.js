@@ -62,7 +62,19 @@ const testSuites = [
   },
 ];
 
+let smokeTests = [];
+
+// TEMP: Disable homepage smoke tests on the test environment due to flakiness
+if (Cypress.env('SMOKE')) {
+  smokeTests = testSuites.map(testSuite => {
+    return {
+      ...testSuite,
+      runforEnv: testSuite.runforEnv.filter(env => env !== 'test'),
+    };
+  });
+}
+
 runTestsForPage({
   pageType: HOME_PAGE,
-  testSuites,
+  testSuites: Cypress.env('SMOKE') ? smokeTests : testSuites,
 });

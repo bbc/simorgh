@@ -11,7 +11,7 @@ import styles from './index.styles';
 type ReadTimeProps = {
   readTimeValue?: number;
   className?: string;
-  readTimeVariant?: string;
+  readTimeVariant?: string | null;
   promoId?: string;
 };
 
@@ -73,7 +73,7 @@ export const ReadTimeArticleExperiment = ({
     readTimeVariant,
   });
 
-  // EXPERIMENT: Read Time
+  // EXPERIMENT: Article Read Time
   const fontSize = readTimeVariant.includes('bold') ? 'pica' : 'brevier';
   const fontVariant = readTimeVariant.includes('bold')
     ? 'sansBold'
@@ -113,18 +113,35 @@ export const ReadTimeArticleExperiment = ({
   );
 };
 
+// EXPERIMENT - Placeholder for control variants
+const HomepagePlaceholder = (props: React.PropsWithChildren) => (
+  <div
+    {...props}
+    css={styles.readTimeHomepagePlaceholderControl}
+    className="placeholder"
+  />
+);
+
 export const ReadTime = ({
   readTimeValue,
   readTimeVariant,
   promoId,
   className,
 }: ReadTimeProps) => {
+  const { service } = use(ServiceContext);
+
   const validRender = [
     !isLive(),
     readTimeValue,
     readTimeVariant,
     readTimeVariant !== 'off',
   ].every(Boolean);
+
+  // EXPERIMENT: Homepage Read Time
+  const experimentEnabledServices = ['turkce', 'mundo'];
+
+  if (readTimeVariant === null && experimentEnabledServices.includes(service))
+    return <HomepagePlaceholder />;
 
   if (!validRender) return null;
 
@@ -150,13 +167,13 @@ export const ReadTime = ({
 
   const isControlVariant = readTimeVariant === 'control';
 
-  if (isControlVariant) return <div {...viewRef} />;
+  if (isControlVariant) return <HomepagePlaceholder {...viewRef} />;
 
   return (
-    <span className={className} data-testid="read-time" {...viewRef}>
+    <div className={className} data-testid="read-time" {...viewRef}>
       <Text css={styles.readTimeText} size="brevier">
         {copy}
       </Text>
-    </span>
+    </div>
   );
 };
