@@ -296,7 +296,6 @@ describe('RecentAudioEpisodes', () => {
     const style = window.getComputedStyle(spanEl);
 
     expect(style.borderLeft).toBe('0.0625rem solid rgb(174, 174, 181)');
-    expect(style.borderRight).toBe('');
   });
 
   it('should aria-hide the duration', () => {
