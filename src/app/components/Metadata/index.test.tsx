@@ -1247,74 +1247,80 @@ describe('Metadata', () => {
       return metaTags?.find(tag => tag.property === 'og:image');
     };
 
-    it.each`
-      env        | pageType              | pathName                 | expectedUrl
-      ${'local'} | ${ARTICLE_PAGE}       | ${'/mundo/c0000000001o'} | ${'http://localhost:7081/mundo/og/c0000000001o'}
-      ${'test'}  | ${ARTICLE_PAGE}       | ${'/mundo/c0000000001o'} | ${'https://web-cdn.test.api.bbci.co.uk/mundo/og/c0000000001o'}
-      ${'local'} | ${MEDIA_ARTICLE_PAGE} | ${'/mundo/c0000000001o'} | ${'http://localhost:7081/mundo/og/c0000000001o'}
-      ${'test'}  | ${MEDIA_ARTICLE_PAGE} | ${'/mundo/c0000000001o'} | ${'https://web-cdn.test.api.bbci.co.uk/mundo/og/c0000000001o'}
-      ${'local'} | ${LIVE_PAGE}          | ${'/mundo/c0000000001t'} | ${'http://localhost:7081/mundo/og/c0000000001t'}
-      ${'test'}  | ${LIVE_PAGE}          | ${'/mundo/c0000000001t'} | ${'https://web-cdn.test.api.bbci.co.uk/mundo/og/c0000000001t'}
-    `(
-      'should return the Opengraph image API url for $pageType page on $env Env',
-      ({ env, pageType, pathName, expectedUrl }) => {
-        process.env.SIMORGH_APP_ENV = env;
+    ['arabic', 'hausa', 'hindi', 'indonesia', 'mundo', 'ukrainian'].forEach(
+      service => {
+        describe(`for ${service} service`, () => {
+          it.each`
+            env        | pageType              | pathName                      | expectedUrl
+            ${'local'} | ${ARTICLE_PAGE}       | ${`/${service}/c0000000001o`} | ${`http://localhost:7081/${service}/og/c0000000001o`}
+            ${'test'}  | ${ARTICLE_PAGE}       | ${`/${service}/c0000000001o`} | ${`https://web-cdn.test.api.bbci.co.uk/${service}/og/c0000000001o`}
+            ${'local'} | ${MEDIA_ARTICLE_PAGE} | ${`/${service}/c0000000001o`} | ${`http://localhost:7081/${service}/og/c0000000001o`}
+            ${'test'}  | ${MEDIA_ARTICLE_PAGE} | ${`/${service}/c0000000001o`} | ${`https://web-cdn.test.api.bbci.co.uk/${service}/og/c0000000001o`}
+            ${'local'} | ${LIVE_PAGE}          | ${`/${service}/c0000000001t`} | ${`http://localhost:7081/${service}/og/c0000000001t`}
+            ${'test'}  | ${LIVE_PAGE}          | ${`/${service}/c0000000001t`} | ${`https://web-cdn.test.api.bbci.co.uk/${service}/og/c0000000001t`}
+          `(
+            `should return the Opengraph image API url for $pageType page on $env Env`,
+            ({ env, pageType, pathName, expectedUrl }) => {
+              process.env.SIMORGH_APP_ENV = env;
 
-        render(
-          // @ts-expect-error - testing with subset of data
-          <MetadataWithContext
-            service="mundo"
-            bbcOrigin={dotCoDotUKOrigin}
-            pageType={pageType}
-            pathname={pathName}
-          />,
-        );
+              render(
+                // @ts-expect-error - testing with subset of data
+                <MetadataWithContext
+                  service={service as Services}
+                  bbcOrigin={dotCoDotUKOrigin}
+                  pageType={pageType}
+                  pathname={pathName}
+                />,
+              );
 
-        const ogImageTag = getOgImageTag();
+              const ogImageTag = getOgImageTag();
 
-        expect(ogImageTag?.content).toEqual(expectedUrl);
+              expect(ogImageTag?.content).toEqual(expectedUrl);
+            },
+          );
+
+          it(`should return the default image if on Live Env`, () => {
+            process.env.SIMORGH_APP_ENV = 'live';
+
+            render(
+              // @ts-expect-error - testing with subset of data
+              <MetadataWithContext
+                service={service as Services}
+                bbcOrigin={dotCoDotUKOrigin}
+                pageType={ARTICLE_PAGE}
+                pathname={`/${service}/c0000000001o`}
+              />,
+            );
+
+            const ogImageTag = getOgImageTag();
+
+            expect(ogImageTag?.content).toEqual(
+              `https://news.files.bbci.co.uk/ws/img/logos/og/${service}.png`,
+            );
+          });
+
+          it(`should return the default image if the id cannot be determined from the pathname`, () => {
+            process.env.SIMORGH_APP_ENV = 'test';
+
+            render(
+              // @ts-expect-error - testing with subset of data
+              <MetadataWithContext
+                service={service as Services}
+                bbcOrigin={dotCoDotUKOrigin}
+                pageType={ARTICLE_PAGE}
+                pathname={`/${service}/c000000001o`} // Malformed Article ID
+              />,
+            );
+
+            const ogImageTag = getOgImageTag();
+
+            expect(ogImageTag?.content).toEqual(
+              `https://news.files.bbci.co.uk/ws/img/logos/og/${service}.png`,
+            );
+          });
+        });
       },
     );
-
-    it('should return the default image if not an article or live page', () => {
-      process.env.SIMORGH_APP_ENV = 'test';
-
-      render(
-        // @ts-expect-error - testing with subset of data
-        <MetadataWithContext
-          service="mundo"
-          bbcOrigin={dotCoDotUKOrigin}
-          pageType={STORY_PAGE}
-          pathname="/mundo/news-12345678"
-        />,
-      );
-
-      const ogImageTag = getOgImageTag();
-
-      expect(ogImageTag?.content).toEqual(
-        'https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png',
-      );
-    });
-
-    it('should return the default image if on Live Env', () => {
-      process.env.SIMORGH_APP_ENV = 'live';
-
-      render(
-        // @ts-expect-error - testing with subset of data
-        <MetadataWithContext
-          service="mundo"
-          bbcOrigin={dotCoDotUKOrigin}
-          pageType={ARTICLE_PAGE}
-          pathname="/mundo/c0000000001o"
-        />,
-      );
-
-      const ogImageTag = getOgImageTag();
-
-      expect(ogImageTag?.content).toEqual(
-        'https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png',
-      );
-    });
 
     it('should return the default image if service is not in the experiment', () => {
       process.env.SIMORGH_APP_ENV = 'test';
@@ -1333,26 +1339,6 @@ describe('Metadata', () => {
 
       expect(ogImageTag?.content).toEqual(
         'https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png',
-      );
-    });
-
-    it('should return the default image if the id cannot be determined from the pathname', () => {
-      process.env.SIMORGH_APP_ENV = 'test';
-
-      render(
-        // @ts-expect-error - testing with subset of data
-        <MetadataWithContext
-          service="mundo"
-          bbcOrigin={dotCoDotUKOrigin}
-          pageType={ARTICLE_PAGE}
-          pathname="/mundo/c000000001o" // Malformed Article ID
-        />,
-      );
-
-      const ogImageTag = getOgImageTag();
-
-      expect(ogImageTag?.content).toEqual(
-        'https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png',
       );
     });
   });
