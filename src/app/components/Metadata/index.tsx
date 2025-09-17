@@ -79,18 +79,18 @@ const getSocialShareImage = ({
   if (!OG_EXPERIMENT_SERVICES.includes(service)) return metaImage;
   if (!OG_EXPERIMENT_PAGETYPES.includes(pageType)) return metaImage;
 
+  const id = getArticleId(pathname) || getTipoId(pathname);
+
+  // Fallback to 'metaImage' if no id can be determined
+  if (!id) return metaImage;
+
   const CDN_URL = {
     local: 'http://localhost:7081',
     test: 'https://web-cdn.test.api.bbci.co.uk',
     live: 'https://web-cdn.api.bbci.co.uk',
   }[process.env.SIMORGH_APP_ENV as string];
 
-  const id = getArticleId(pathname) || getTipoId(pathname);
-
-  if (id) return `${CDN_URL}/${service}/og/${id}`;
-
-  // Fallback to 'metaImage' if no id can be determined
-  return metaImage;
+  return `${CDN_URL}/${service}/og/${id}`;
 };
 
 const MetadataContainer = ({
