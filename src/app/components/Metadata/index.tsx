@@ -9,7 +9,11 @@ import {
   getTipoId,
 } from '#app/routes/utils/constructPageFetchUrl';
 import isLive from '#app/lib/utilities/isLive';
-import { ARTICLE_PAGE, LIVE_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  ARTICLE_PAGE,
+  LIVE_PAGE,
+  MEDIA_ARTICLE_PAGE,
+} from '#app/routes/utils/pageTypes';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import {
   getIconAssetUrl,
@@ -66,7 +70,11 @@ const getSocialShareImage = ({
     'ukrainian',
   ];
 
-  const OG_EXPERIMENT_PAGETYPES: PageTypes[] = [ARTICLE_PAGE, LIVE_PAGE];
+  const OG_EXPERIMENT_PAGETYPES: PageTypes[] = [
+    MEDIA_ARTICLE_PAGE,
+    ARTICLE_PAGE,
+    LIVE_PAGE,
+  ];
 
   if (!OG_EXPERIMENT_SERVICES.includes(service)) return metaImage;
   if (!OG_EXPERIMENT_PAGETYPES.includes(pageType)) return metaImage;

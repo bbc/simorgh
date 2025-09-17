@@ -10,6 +10,7 @@ import {
   AUDIO_PAGE,
   TV_PAGE,
   LIVE_PAGE,
+  MEDIA_ARTICLE_PAGE,
 } from '#app/routes/utils/pageTypes';
 import {
   articleDataNews,
@@ -1246,95 +1247,38 @@ describe('Metadata', () => {
       return metaTags?.find(tag => tag.property === 'og:image');
     };
 
-    it('should return the Opengraph image API url for an article page on Local Env', () => {
-      process.env.SIMORGH_APP_ENV = 'local';
+    it.each`
+      env        | pageType              | pathName                 | expectedUrl
+      ${'local'} | ${ARTICLE_PAGE}       | ${'/mundo/c0000000001o'} | ${'http://localhost:7081/mundo/og/c0000000001o'}
+      ${'test'}  | ${ARTICLE_PAGE}       | ${'/mundo/c0000000001o'} | ${'https://web-cdn.test.api.bbci.co.uk/mundo/og/c0000000001o'}
+      ${'local'} | ${MEDIA_ARTICLE_PAGE} | ${'/mundo/c0000000001o'} | ${'http://localhost:7081/mundo/og/c0000000001o'}
+      ${'test'}  | ${MEDIA_ARTICLE_PAGE} | ${'/mundo/c0000000001o'} | ${'https://web-cdn.test.api.bbci.co.uk/mundo/og/c0000000001o'}
+      ${'local'} | ${LIVE_PAGE}          | ${'/mundo/c0000000001t'} | ${'http://localhost:7081/mundo/og/c0000000001t'}
+      ${'test'}  | ${LIVE_PAGE}          | ${'/mundo/c0000000001t'} | ${'https://web-cdn.test.api.bbci.co.uk/mundo/og/c0000000001t'}
+    `(
+      'should return the Opengraph image API url for $pageType page on $env Env',
+      ({ env, pageType, pathName, expectedUrl }) => {
+        process.env.SIMORGH_APP_ENV = env;
 
-      render(
-        // @ts-expect-error - testing with subset of data
-        <MetadataWithContext
-          service="mundo"
-          bbcOrigin={dotCoDotUKOrigin}
-          platform="canonical"
-          id="c0000000001o"
-          pageType={ARTICLE_PAGE}
-          pathname="/mundo/c0000000001o"
-        />,
-      );
+        render(
+          // @ts-expect-error - testing with subset of data
+          <MetadataWithContext
+            service="mundo"
+            bbcOrigin={dotCoDotUKOrigin}
+            platform="canonical"
+            id="c0000000001o"
+            pageType={pageType}
+            pathname={pathName}
+          />,
+        );
 
-      const ogImageTag = getOgImageTag();
+        const ogImageTag = getOgImageTag();
 
-      expect(ogImageTag?.content).toEqual(
-        'http://localhost:7081/mundo/og/c0000000001o',
-      );
-    });
+        expect(ogImageTag?.content).toEqual(expectedUrl);
+      },
+    );
 
-    it('should return the Opengraph image API url for a Live page on Local Env', () => {
-      process.env.SIMORGH_APP_ENV = 'local';
-
-      render(
-        // @ts-expect-error - testing with subset of data
-        <MetadataWithContext
-          service="mundo"
-          bbcOrigin={dotCoDotUKOrigin}
-          platform="canonical"
-          id="c0000000001t"
-          pageType={LIVE_PAGE}
-          pathname="/mundo/c0000000001t"
-        />,
-      );
-
-      const ogImageTag = getOgImageTag();
-
-      expect(ogImageTag?.content).toEqual(
-        'http://localhost:7081/mundo/og/c0000000001t',
-      );
-    });
-
-    it('should return the Opengraph image API url for an article page on Test Env', () => {
-      process.env.SIMORGH_APP_ENV = 'test';
-
-      render(
-        // @ts-expect-error - testing with subset of data
-        <MetadataWithContext
-          service="mundo"
-          bbcOrigin={dotCoDotUKOrigin}
-          platform="canonical"
-          id="c0000000001o"
-          pageType={ARTICLE_PAGE}
-          pathname="/mundo/c0000000001o"
-        />,
-      );
-
-      const ogImageTag = getOgImageTag();
-
-      expect(ogImageTag?.content).toEqual(
-        'https://web-cdn.test.api.bbci.co.uk/mundo/og/c0000000001o',
-      );
-    });
-
-    it('should return the Opengraph image API url for a Live page on Test Env', () => {
-      process.env.SIMORGH_APP_ENV = 'test';
-
-      render(
-        // @ts-expect-error - testing with subset of data
-        <MetadataWithContext
-          service="mundo"
-          bbcOrigin={dotCoDotUKOrigin}
-          platform="canonical"
-          id="c0000000001t"
-          pageType={LIVE_PAGE}
-          pathname="/mundo/c0000000001t"
-        />,
-      );
-
-      const ogImageTag = getOgImageTag();
-
-      expect(ogImageTag?.content).toEqual(
-        'https://web-cdn.test.api.bbci.co.uk/mundo/og/c0000000001t',
-      );
-    });
-
-    it('should return the default image if not an article or live page on Test Env', () => {
+    it('should return the default image if not an article or live page', () => {
       process.env.SIMORGH_APP_ENV = 'test';
 
       render(
