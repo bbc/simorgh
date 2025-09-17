@@ -1265,8 +1265,6 @@ describe('Metadata', () => {
           <MetadataWithContext
             service="mundo"
             bbcOrigin={dotCoDotUKOrigin}
-            platform="canonical"
-            id="c0000000001o"
             pageType={pageType}
             pathname={pathName}
           />,
@@ -1286,8 +1284,6 @@ describe('Metadata', () => {
         <MetadataWithContext
           service="mundo"
           bbcOrigin={dotCoDotUKOrigin}
-          platform="canonical"
-          id="c0000000001t"
           pageType={STORY_PAGE}
           pathname="/mundo/news-12345678"
         />,
@@ -1308,8 +1304,6 @@ describe('Metadata', () => {
         <MetadataWithContext
           service="mundo"
           bbcOrigin={dotCoDotUKOrigin}
-          platform="canonical"
-          id="c0000000001t"
           pageType={ARTICLE_PAGE}
           pathname="/mundo/c0000000001o"
         />,
@@ -1330,8 +1324,6 @@ describe('Metadata', () => {
         <MetadataWithContext
           service="pidgin"
           bbcOrigin={dotCoDotUKOrigin}
-          platform="canonical"
-          id="c0000000001t"
           pageType={ARTICLE_PAGE}
           pathname="/pidgin/c0000000001o"
         />,
@@ -1352,8 +1344,6 @@ describe('Metadata', () => {
         <MetadataWithContext
           service="mundo"
           bbcOrigin={dotCoDotUKOrigin}
-          platform="canonical"
-          id="c0000000001t"
           pageType={ARTICLE_PAGE}
           pathname="/mundo/c000000001o" // Malformed Article ID
         />,
