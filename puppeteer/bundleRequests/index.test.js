@@ -21,14 +21,12 @@ const onPageRequest = request => {
 const testSuites = [
   {
     path: '/pidgin',
-    pageType: 'homepage',
     service: 'pidgin',
     runforEnv: ['local'],
     tests: [assertLoadsExpectedBundles, assertLoadsModernBundles],
   },
   {
     path: '/serbian/cyr',
-    pageType: 'homepage',
     service: 'serbian',
     runforEnv: 'local',
     variant: 'cyr',
@@ -36,7 +34,6 @@ const testSuites = [
   },
   {
     path: '/serbian/lat',
-    pageType: 'homepage',
     service: 'serbian',
     runforEnv: 'local',
     variant: 'lat',
