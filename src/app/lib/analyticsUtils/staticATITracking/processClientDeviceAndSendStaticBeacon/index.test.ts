@@ -2,12 +2,10 @@ import * as WindowHelper from '#src/testHelpers/WindowHelper';
 import { addProcessClientDeviceAndSendStaticBeaconToWindow } from '.';
 
 describe('addProcessClientDeviceAndSendStaticBeaconToWindow script', () => {
-  const originalWindowLocation = global.window.location;
   const testSystemTime = new Date('2024-11-13T16:30:02.000Z');
   const testHour = testSystemTime.getHours();
   const testMinute = testSystemTime.getMinutes();
   const testSecond = testSystemTime.getSeconds();
-  WindowHelper.getWindowOverride();
 
   beforeAll(() => {
     WindowHelper.beforeAll();
@@ -36,30 +34,15 @@ describe('addProcessClientDeviceAndSendStaticBeaconToWindow script', () => {
       document.body.removeChild(document.body.firstChild);
     }
     window.sendStaticBeacon = jest.fn();
-    Object.defineProperty(global.window, 'location', {
-      writable: true,
-      value: { ...window.location, search: '' },
-    });
 
     addProcessClientDeviceAndSendStaticBeaconToWindow();
-    console.log({ window });
   });
 
   afterAll(() => {
-    // WindowHelper.afterAll();
-
-    Object.defineProperty(window, 'location', {
-      value: {
-        ...originalWindowLocation,
-      },
-    });
+    WindowHelper.afterAll();
   });
 
   it('Does not call sendBeacon if the event has no data-ati-tracking parameter', () => {
-    console.log({
-      // @ts-expect-error debug
-      processClientDevice: window.processClientDeviceAndSendStaticBeacon,
-    });
     window.processClientDeviceAndSendStaticBeacon('');
     expect(window.sendStaticBeacon).toHaveBeenCalledTimes(0);
   });
@@ -135,6 +118,10 @@ describe('addProcessClientDeviceAndSendStaticBeaconToWindow script', () => {
   });
 
   describe('on lite pages', () => {
+    beforeEach(() => {
+      window.location.pathname = '/persian.articles.c4vlle3q337o.lite';
+    });
+
     it.each([
       {
         atiUrl: 'https://logws1363.ati-host.net/?',
@@ -143,7 +130,7 @@ describe('addProcessClientDeviceAndSendStaticBeaconToWindow script', () => {
           idclient: 'userCookieId',
           hl: `${testHour}x${testMinute}x${testSecond}`,
           lng: 'en-GB',
-          r: '0x0x24x24',
+          r: '100x400x24x24',
           re: '4060x1080',
           app_type: 'lite',
           ref: 'https://www.bbc.com',
@@ -157,7 +144,7 @@ describe('addProcessClientDeviceAndSendStaticBeaconToWindow script', () => {
           idclient: 'userCookieId',
           hl: `${testHour}x${testMinute}x${testSecond}`,
           lng: 'en-GB',
-          r: '0x0x24x24',
+          r: '100x400x24x24',
           re: '4060x1080',
           app_type: 'lite',
           x6: '[https://www.bbc.com]',
@@ -289,7 +276,7 @@ describe('addProcessClientDeviceAndSendStaticBeaconToWindow script', () => {
         idclient: 'userCookieId',
         hl: `${testHour}x${testMinute}x${testSecond}`,
         lng: 'en-GB',
-        r: '0x0x24x24',
+        r: '100x400x24x24',
         re: '4060x1080',
         app_type: 'lite',
         ref: 'https://www.bbc.com',
