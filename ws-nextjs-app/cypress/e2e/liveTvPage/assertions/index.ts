@@ -1,11 +1,6 @@
-export const assertLiveTvPageLocal = () => {
-  it('hould render the Live TV Page on Local with a h1', () => {
-    cy.get('h1').should('contain.text', 'HELLO WORLD');
-  });
-};
-
-export const assertLiveTvPageTest = () => {
-  it('should render the Live TV Page on Test with a h1', () => {
-    cy.get('h1').should('contain.text', 'HELLO WORLD');
+export const assertLiveTvPage = ({ service }: { service: string }) => {
+  it(`should render the Live TV Page with a h1 containing Hello World for ${service}`, () => {
+    const expectedHeading = `HELLO WORLD`;
+    cy.get('h1').should('have.text', expectedHeading);
   });
 };
