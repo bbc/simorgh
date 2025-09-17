@@ -8,6 +8,7 @@ import { waitFor } from '@testing-library/dom';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import * as trackingToggle from '#hooks/useTrackingToggle';
 import constructATIUrl from '#app/lib/analyticsUtils/staticATITracking/constructATIUrl';
+import * as WindowHelper from '#src/testHelpers/windowHelper';
 import * as useOptimizelyVariation from '../useOptimizelyVariation';
 import {
   AllTheProviders,
@@ -17,7 +18,6 @@ import {
   fireEvent,
 } from '../../components/react-testing-library-with-providers';
 import * as serviceContextModule from '../../contexts/ServiceContext';
-
 import pidginData from './fixtureData/tori-51745682.json';
 import useClickTrackerHandler from '.';
 
@@ -108,17 +108,12 @@ jest.mock('#app/lib/utilities/getUUID', () =>
   jest.fn().mockImplementation(() => '12345678-abcd-1fed-0123-a1b2c3d4e5f6'),
 );
 
+WindowHelper.beforeAll();
+WindowHelper.afterAll();
+
 beforeEach(() => {
   jest.clearAllMocks();
   console.error = jest.fn();
-
-  const { href, assign, ...rest } = window.location;
-  delete window.location;
-  window.location = {
-    href: 'http://bbc.com/pidgin/tori-51745682',
-    assign: jest.fn(),
-    ...rest,
-  };
 
   jest.spyOn(useOptimizelyVariation, 'default').mockReturnValue(null);
 
