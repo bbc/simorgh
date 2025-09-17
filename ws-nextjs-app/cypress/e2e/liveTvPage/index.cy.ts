@@ -6,6 +6,7 @@ const testSuites = [
   {
     path: 'dari/watch/bbc_afghan_tv/live',
     service: 'ws',
+    pageType: LIVE_TV_PAGE,
     runforEnv: ['local', 'test'],
     tests: [assertLiveTvPage],
   },
