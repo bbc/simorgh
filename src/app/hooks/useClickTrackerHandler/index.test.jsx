@@ -8,7 +8,7 @@ import { waitFor } from '@testing-library/dom';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import * as trackingToggle from '#hooks/useTrackingToggle';
 import constructATIUrl from '#app/lib/analyticsUtils/staticATITracking/constructATIUrl';
-import * as WindowHelper from '#src/testHelpers/_windowHelper';
+import * as WindowHelper from '#src/testHelpers/WindowHelper';
 import * as useOptimizelyVariation from '../useOptimizelyVariation';
 import {
   AllTheProviders,

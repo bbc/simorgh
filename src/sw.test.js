@@ -4,7 +4,7 @@ import fs from 'fs';
 import { join, resolve } from 'path';
 import fetchMock from 'jest-fetch-mock';
 import { createHash } from 'crypto';
-import * as WindowHelper from '#src/testHelpers/_windowHelper';
+import * as WindowHelper from '#src/testHelpers/WindowHelper';
 
 const serviceWorker = fs.readFileSync(join(__dirname, '..', 'public/sw.js'));
 

@@ -1,4 +1,4 @@
-import * as WindowHelper from '#src/testHelpers/_windowHelper';
+import * as WindowHelper from '#src/testHelpers/WindowHelper';
 import { addProcessClientDeviceAndSendStaticBeaconToWindow } from '.';
 
 describe('addProcessClientDeviceAndSendStaticBeaconToWindow script', () => {
