@@ -18,13 +18,13 @@ const sections = [
   {
     id: 'section2',
     title: 'Section 2',
-    links: [{ id: 'link3', label: 'Link 3', href: '#link3', lang: 'yo' }],
+    links: [{ id: 'link3', label: 'Link 3', href: '#link3' }],
   },
   {
     id: 'section3',
     title: 'Homepage',
     href: '/home',
-    links: [{ id: 'link1', label: 'Link 1', href: '#link1', lang: 'en' }],
+    links: [{ id: 'link1', label: 'Link 1', href: '#link1' }],
   },
 ];
 
