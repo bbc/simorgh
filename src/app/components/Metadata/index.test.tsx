@@ -1401,5 +1401,28 @@ describe('Metadata', () => {
         'https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png',
       );
     });
+
+    it('should return the default image if the id cannot be determined from the pathname', () => {
+      process.env.SIMORGH_APP_ENV = 'test';
+
+      render(
+        // @ts-expect-error - testing with subset of data
+        <MetadataWithContext
+          service="mundo"
+          bbcOrigin={dotCoDotUKOrigin}
+          platform="canonical"
+          id="c0000000001t"
+          pageType={ARTICLE_PAGE}
+          pathname="/mundo/c000000001o" // Malformed Article ID
+        />,
+      );
+
+      const metaTags = Helmet.peek()?.metaTags;
+      const ogImageTag = metaTags?.find(tag => tag.property === 'og:image');
+
+      expect(ogImageTag?.content).toEqual(
+        'https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png',
+      );
+    });
   });
 });
