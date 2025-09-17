@@ -1,4 +1,3 @@
-import { resetWindowValue } from '#psammead/psammead-test-helpers/src';
 import { Platforms } from '#app/models/types/global';
 import * as genericLabelHelpers from '../../../lib/analyticsUtils';
 import {
@@ -41,8 +40,6 @@ const rssMarketingStringFunc = {
 };
 
 describe('getThingAttributes', () => {
-  const windowLocation = window.location;
-
   beforeEach(() => {
     analyticsUtilFunctions.push(marketingCampaignFunc);
     analyticsUtilFunctions.push(rssMarketingStringFunc);
@@ -54,8 +51,6 @@ describe('getThingAttributes', () => {
 
   afterEach(() => {
     jest.resetAllMocks();
-
-    resetWindowValue('location', windowLocation);
   });
 
   it('should not add empty or null values', () => {
