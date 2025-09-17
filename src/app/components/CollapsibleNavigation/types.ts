@@ -2,7 +2,7 @@ type CollapsibleNavigationSubLink = {
   id: string;
   label: string;
   href: string;
-  lang: string;
+  lang?: string;
   latinTransliteration?: string;
 };
 
