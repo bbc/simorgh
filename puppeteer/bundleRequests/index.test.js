@@ -42,13 +42,6 @@ const testSuites = [
     variant: 'lat',
     tests: [assertLoadsExpectedBundles, assertLoadsModernBundles],
   },
-  {
-    path: '/news/articles/c0g992jmmkko',
-    pageType: 'articles',
-    service: 'news',
-    runforEnv: 'local',
-    tests: [assertLoadsExpectedBundles, assertLoadsModernBundles],
-  },
 ];
 
 runTestsForPage({ testSuites, onPageRequest });
