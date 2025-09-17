@@ -1,4 +1,5 @@
 import React, { use } from 'react';
+import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import CollapsibleNavigation from '../../../../components/CollapsibleNavigation';
 import Navigation from '../../../psammead/psammead-navigation/src';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
@@ -12,6 +13,9 @@ const LanguageNavigation = () => {
 
   return (
     <Navigation script={script} service={service} dir={dir}>
+      <VisuallyHiddenText>
+        Navigation, BBC World Service regions
+      </VisuallyHiddenText>
       <CollapsibleNavigation
         navigationSections={collapsibleNavigation}
         as={React.Fragment}
