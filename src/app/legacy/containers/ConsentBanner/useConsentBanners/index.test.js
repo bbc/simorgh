@@ -17,23 +17,10 @@ const DEFAULT_POLICY_COOKIE = '111';
 jest.mock('#hooks/useToggle');
 const cookieSetterSpy = jest.spyOn(Cookies, 'set');
 
-beforeAll(() => {
-  const { location } = window;
-  delete global.window.location;
-  global.window.location = { ...location };
-});
-
 beforeEach(() => {
-  global.window.location = new URL('https://www.bbc.com');
   Cookies.set(PRIVACY_COOKIE, DEFAULT_PRIVACY_COOKIE);
   Cookies.set(EXPLICIT_COOKIE, DEFAULT_EXPLICIT_COOKIE);
   Cookies.set(POLICY_COOKIE, DEFAULT_POLICY_COOKIE);
-});
-
-afterAll(() => {
-  const { location } = window;
-  delete global.window.location;
-  global.window.location = { ...location };
 });
 
 describe('useConsentBanners', () => {
