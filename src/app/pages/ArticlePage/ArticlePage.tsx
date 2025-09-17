@@ -71,12 +71,12 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import RelatedContentSection from '../../components/RelatedContentSection';
 import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
-import PersonalisedContent from './PersonalisedContent';
 import styles from './ArticlePage.styles';
 import { ComponentToRenderProps, TimeStampProps } from './types';
 import ContinueReadingButton, {
   Props as ContinueReadingProps,
 } from './ContinueReadingButton';
+import PersonalisedContent from './PersonalisedContent';
 import ArticleHeadline from './ArticleHeadline';
 import {
   isPortraitVideo,
@@ -244,26 +244,14 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
-  // EXPERIMENT: Continue reading button
   const experimentName = 'newswb_ws_read_more_b';
   const experimentVariant = useOptimizelyVariation({
     experimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
 
-  // EXPERIMENT: Personalised Topic Curation
-  const personalisedTopicCurationExperimentName =
-    'newswb_ws_personalised_topic_curation';
-
-  // change back to const when experiment live and finished testing
-  let personalisedTopicCurationExperimentVariant = useOptimizelyVariation({
-    experimentName: personalisedTopicCurationExperimentName,
-    experimentType: ExperimentType.SERVER_SIDE,
-  });
-
   const isInServerSideExperiment =
-    personalisedTopicCurationExperimentVariant &&
-    personalisedTopicCurationExperimentVariant !== 'off';
+    experimentVariant && experimentVariant !== 'off';
 
   // EXPERIMENT: Read Time
   const readTimeExperimentName = 'newswb_ws_article_read_time';
@@ -286,6 +274,26 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     }
     return 'off';
   })();
+
+  // EXPERIMENT: Personalised Content Rail
+  const personalisedContentExperimentName = 'newswb_ws_personalised_content';
+  const personalisedContentExperimentVariant = useOptimizelyVariation({
+    experimentName: personalisedContentExperimentName,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
+  const personalisedContentOverride = true;
+
+  const showPersonalisedContent = personalisedContentOverride
+    ? true
+    : Boolean(
+        !isAmp &&
+          !isLite &&
+          !isApp &&
+          personalisedContentExperimentVariant &&
+          ['personalised-content-a', 'personalised-content-b'].includes(
+            personalisedContentExperimentVariant,
+          ),
+      );
 
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
@@ -416,7 +424,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         experimentVariant,
       ),
   );
-  personalisedTopicCurationExperimentVariant = 'personalised';
+
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics atiData={atiData} />
@@ -488,6 +496,16 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                 liteCTAShows={liteCTAShows}
               />
             )}
+            {/* EXPERIMENT: Personalised Content */}
+            {showPersonalisedContent && (
+              <PersonalisedContent
+                pageData={pageData}
+                personalisedTopicCurationExperimentVariant={
+                  personalisedContentExperimentVariant ?? ''
+                }
+                sendOptimizelyEvents
+              />
+            )}
             {/* EXPERIMENT: Read Time & Continue Reading */}
             {(readTimeValue || experimentVariant) && (
               <OptimizelyPageMetrics trackPageComplete />
@@ -511,17 +529,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               tagBackgroundColour={WHITE}
             />
           )}
-          {pageData.secondaryColumn?.PersonalisedContent &&
-            personalisedTopicCurationExperimentVariant &&
-            personalisedTopicCurationExperimentVariant !== 'control' && (
-              <PersonalisedContent
-                pageData={pageData}
-                personalisedTopicCurationExperimentVariant={
-                  personalisedTopicCurationExperimentVariant
-                }
-                sendOptimizelyEvents
-              />
-            )}
           <RelatedContentSection
             content={blocks}
             sendOptimizelyEvents={false}
