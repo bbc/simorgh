@@ -17,7 +17,6 @@ import {
   articleDataPidginWithByline,
 } from '#pages/ArticlePage/fixtureData';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { data as mundoArticlePage } from '#data/mundo/articles/c1ep2gnx45qo.json';
 import { data as gahuzaAudioPage } from '#data/gahuza/bbc_gahuza_radio/p02pcb5c.json';
 import { data as liveRadioPageData } from '#data/korean/bbc_korean_radio/liveradio.json';
 import { data as hindiTVBrand } from '#data/hindi/bbc_hindi_tv/tv_programmes/w13xttlw.json';
@@ -1241,6 +1240,12 @@ describe('Metadata', () => {
       delete process.env.SIMORGH_APP_ENV;
     });
 
+    const getOgImageTag = () => {
+      const metaTags = Helmet.peek()?.metaTags;
+      // @ts-expect-error - property does exist on Helmet meta tags
+      return metaTags?.find(tag => tag.property === 'og:image');
+    };
+
     it('should return the Opengraph image API url for an article page on Local Env', () => {
       process.env.SIMORGH_APP_ENV = 'local';
 
@@ -1256,8 +1261,7 @@ describe('Metadata', () => {
         />,
       );
 
-      const metaTags = Helmet.peek()?.metaTags;
-      const ogImageTag = metaTags?.find(tag => tag.property === 'og:image');
+      const ogImageTag = getOgImageTag();
 
       expect(ogImageTag?.content).toEqual(
         'http://localhost:7081/mundo/og/c0000000001o',
@@ -1279,8 +1283,7 @@ describe('Metadata', () => {
         />,
       );
 
-      const metaTags = Helmet.peek()?.metaTags;
-      const ogImageTag = metaTags?.find(tag => tag.property === 'og:image');
+      const ogImageTag = getOgImageTag();
 
       expect(ogImageTag?.content).toEqual(
         'http://localhost:7081/mundo/og/c0000000001t',
@@ -1302,8 +1305,7 @@ describe('Metadata', () => {
         />,
       );
 
-      const metaTags = Helmet.peek()?.metaTags;
-      const ogImageTag = metaTags?.find(tag => tag.property === 'og:image');
+      const ogImageTag = getOgImageTag();
 
       expect(ogImageTag?.content).toEqual(
         'https://web-cdn.test.api.bbci.co.uk/mundo/og/c0000000001o',
@@ -1325,8 +1327,7 @@ describe('Metadata', () => {
         />,
       );
 
-      const metaTags = Helmet.peek()?.metaTags;
-      const ogImageTag = metaTags?.find(tag => tag.property === 'og:image');
+      const ogImageTag = getOgImageTag();
 
       expect(ogImageTag?.content).toEqual(
         'https://web-cdn.test.api.bbci.co.uk/mundo/og/c0000000001t',
@@ -1348,8 +1349,7 @@ describe('Metadata', () => {
         />,
       );
 
-      const metaTags = Helmet.peek()?.metaTags;
-      const ogImageTag = metaTags?.find(tag => tag.property === 'og:image');
+      const ogImageTag = getOgImageTag();
 
       expect(ogImageTag?.content).toEqual(
         'https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png',
@@ -1371,8 +1371,7 @@ describe('Metadata', () => {
         />,
       );
 
-      const metaTags = Helmet.peek()?.metaTags;
-      const ogImageTag = metaTags?.find(tag => tag.property === 'og:image');
+      const ogImageTag = getOgImageTag();
 
       expect(ogImageTag?.content).toEqual(
         'https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png',
@@ -1394,8 +1393,7 @@ describe('Metadata', () => {
         />,
       );
 
-      const metaTags = Helmet.peek()?.metaTags;
-      const ogImageTag = metaTags?.find(tag => tag.property === 'og:image');
+      const ogImageTag = getOgImageTag();
 
       expect(ogImageTag?.content).toEqual(
         'https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png',
@@ -1417,8 +1415,7 @@ describe('Metadata', () => {
         />,
       );
 
-      const metaTags = Helmet.peek()?.metaTags;
-      const ogImageTag = metaTags?.find(tag => tag.property === 'og:image');
+      const ogImageTag = getOgImageTag();
 
       expect(ogImageTag?.content).toEqual(
         'https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png',
