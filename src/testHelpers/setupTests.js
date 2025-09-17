@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import colours from 'colors';
 import '@testing-library/jest-dom';
 
@@ -22,6 +23,24 @@ const SUPPRESSED_WARNINGS = [
 const SUPPRESSED_REGEX = new RegExp(SUPPRESSED_WARNINGS.join('|'));
 
 const { warn } = console;
+
+/**
+ * Suppress JSDOM errors relating to navigation not implemented
+ *  */
+const listeners = window._virtualConsole.listeners('jsdomError');
+const originalListener = listeners && listeners[0];
+
+window._virtualConsole.removeAllListeners('jsdomError');
+
+// Add a new listener to swallow JSDOM errors
+window._virtualConsole.addListener('jsdomError', error => {
+  if (
+    error.message !== 'Not implemented: navigation (except hash changes)' &&
+    originalListener
+  ) {
+    originalListener(error);
+  }
+});
 
 const getFormattedMessage = (message, rest) => {
   let theMessage = message;

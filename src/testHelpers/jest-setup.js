@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import fetch from 'jest-fetch-mock';
 import path from 'path';
 import { TextEncoder, TextDecoder } from 'util';
