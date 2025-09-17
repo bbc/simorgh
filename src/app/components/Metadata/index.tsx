@@ -47,6 +47,21 @@ const renderTags = (tags?: Tag[]) =>
     <meta name="article:tag" content={content} key={content} />
   ));
 
+export const OG_EXPERIMENT_SERVICES: Services[] = [
+  'arabic',
+  'hausa',
+  'hindi',
+  'indonesia',
+  'mundo',
+  'ukrainian',
+];
+
+const OG_EXPERIMENT_PAGETYPES: PageTypes[] = [
+  MEDIA_ARTICLE_PAGE,
+  ARTICLE_PAGE,
+  LIVE_PAGE,
+];
+
 const getSocialShareImage = ({
   metaImage,
   pageType,
@@ -60,21 +75,6 @@ const getSocialShareImage = ({
 }) => {
   // TODO: Remove to release experiment
   if (isLive()) return metaImage;
-
-  const OG_EXPERIMENT_SERVICES: Services[] = [
-    'arabic',
-    'hausa',
-    'hindi',
-    'indonesia',
-    'mundo',
-    'ukrainian',
-  ];
-
-  const OG_EXPERIMENT_PAGETYPES: PageTypes[] = [
-    MEDIA_ARTICLE_PAGE,
-    ARTICLE_PAGE,
-    LIVE_PAGE,
-  ];
 
   if (!OG_EXPERIMENT_SERVICES.includes(service)) return metaImage;
   if (!OG_EXPERIMENT_PAGETYPES.includes(pageType)) return metaImage;
