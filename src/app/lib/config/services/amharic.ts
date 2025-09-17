@@ -369,7 +369,7 @@ export const service: DefaultServiceConfig = {
         text: 'ቢቢሲን ለምን ማመን እንደሚገባዎ',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'ስለ ውጪ ሊንኮች ያለን አቀራረብ',
       },
       links: [

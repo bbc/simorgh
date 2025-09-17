@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/aria-role */
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
-import React, { use } from 'react';
+import { use } from 'react';
 import { css, jsx, Theme } from '@emotion/react';
 import moment from 'moment';
 import path from 'ramda/src/path';
@@ -41,6 +41,7 @@ const HiearchicalGrid = ({
   headingLevel,
   isFirstCuration,
   eventTrackingData,
+  readTimeVariant,
 }: CurationGridProps) => {
   const { isAmp } = use(RequestContext);
   const { translations } = use(ServiceContext);
@@ -97,9 +98,12 @@ const HiearchicalGrid = ({
           const { isLive } = promo;
 
           const promoEventTrackingData = buildPromoEventTrackingData(promo, i);
-          const clickTrackerHandler = getClickTrackerHandler(
-            promoEventTrackingData,
-          );
+          const clickTrackerHandler = getClickTrackerHandler({
+            ...promoEventTrackingData,
+            sendOptimizelyEvents: true,
+            experimentName: 'newswb_ws_homepage_read_time',
+            experimentVariant: readTimeVariant,
+          });
 
           return (
             <li
@@ -171,16 +175,18 @@ const HiearchicalGrid = ({
                   {promo.description}
                 </Promo.Body>
                 {!isLive ? (
-                  <>
-                    <Promo.Timestamp className="promo-timestamp">
+                  <div className="timestamp-read-time-container">
+                    <Promo.Timestamp className="promo-timestamp" showPrefix>
                       {promo.lastPublished}
                     </Promo.Timestamp>
                     {/* EXPERIMENT: Read Time */}
                     <ReadTime
+                      className="hierachical-read-time"
                       readTimeValue={promo.readTime}
                       promoId={promo.id}
+                      readTimeVariant={readTimeVariant}
                     />
-                  </>
+                  </div>
                 ) : null}
               </Promo>
             </li>

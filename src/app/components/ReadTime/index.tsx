@@ -11,7 +11,7 @@ import styles from './index.styles';
 type ReadTimeProps = {
   readTimeValue?: number;
   className?: string;
-  readTimeVariant?: string;
+  readTimeVariant?: string | null;
   promoId?: string;
 };
 
@@ -23,7 +23,13 @@ const DEFAULT_TRANSLATIONS = {
   minutes: 'minutes',
 };
 
-const ProcessReadTime = (readTimeValue: number) => {
+const ProcessReadTime = ({
+  readTimeValue,
+  readTimeVariant,
+}: {
+  readTimeValue: number;
+  readTimeVariant: string;
+}) => {
   const { translations } = use(ServiceContext);
   const readTimePrefix =
     translations.readTime?.readTimePrefix ??
@@ -40,11 +46,16 @@ const ProcessReadTime = (readTimeValue: number) => {
   const quickLongCopy = readTimeValue < 5 ? quickCopy : longCopy;
   const minutesCopy = `${readTimePrefix}: ${readTimeValue} ${minutesLabel}`;
 
+  const readTimeCopyType = readTimeVariant.includes('minutes')
+    ? 'minutes'
+    : 'quickLong';
+
+  const copy = readTimeCopyType === 'minutes' ? minutesCopy : quickLongCopy;
+
   return {
     readTimeInMilliseconds,
     minutesLabel,
-    quickLongCopy,
-    minutesCopy,
+    copy,
   };
 };
 
@@ -57,17 +68,16 @@ export const ReadTimeArticleExperiment = ({
   const showReadTime = readTimeVariant && readTimeVariant !== 'off';
   if (!showReadTime) return null;
 
-  const { readTimeInMilliseconds, minutesLabel, quickLongCopy, minutesCopy } =
-    ProcessReadTime(readTimeValue);
+  const { readTimeInMilliseconds, minutesLabel, copy } = ProcessReadTime({
+    readTimeValue,
+    readTimeVariant,
+  });
 
-  // EXPERIMENT: Read Time
+  // EXPERIMENT: Article Read Time
   const fontSize = readTimeVariant.includes('bold') ? 'pica' : 'brevier';
   const fontVariant = readTimeVariant.includes('bold')
     ? 'sansBold'
     : 'sansRegular';
-  const readTimeCopyType = readTimeVariant.includes('minutes')
-    ? 'minutes'
-    : 'quickLong';
 
   const eventTrackingData: EventTrackingData = {
     componentName: 'read-time-on-article',
@@ -97,24 +107,54 @@ export const ReadTimeArticleExperiment = ({
       data-testid="read-time"
     >
       <Text size={fontSize} fontVariant={fontVariant} css={styles.readTimeText}>
-        {readTimeCopyType === 'minutes' ? minutesCopy : quickLongCopy}
+        {copy}
       </Text>
     </div>
   );
 };
 
+// EXPERIMENT - Placeholder for control variants
+const HomepagePlaceholder = (props: React.PropsWithChildren) => (
+  <div
+    {...props}
+    css={styles.readTimeHomepagePlaceholderControl}
+    className="placeholder"
+  />
+);
+
 export const ReadTime = ({
   readTimeValue,
+  readTimeVariant,
   promoId,
   className,
 }: ReadTimeProps) => {
-  if (isLive() || !readTimeValue) return null;
+  const { service } = use(ServiceContext);
 
-  const { readTimeInMilliseconds, minutesLabel, minutesCopy } =
-    ProcessReadTime(readTimeValue);
+  const validRender = [
+    !isLive(),
+    readTimeValue,
+    readTimeVariant,
+    readTimeVariant !== 'off',
+  ].every(Boolean);
+
+  // EXPERIMENT: Homepage Read Time
+  const experimentEnabledServices = ['turkce', 'mundo'];
+
+  if (readTimeVariant === null && experimentEnabledServices.includes(service))
+    return <HomepagePlaceholder />;
+
+  if (!validRender) return null;
+
+  const { readTimeInMilliseconds, minutesLabel, copy } = ProcessReadTime({
+    readTimeValue: readTimeValue as number,
+    readTimeVariant: readTimeVariant as string,
+  });
 
   const eventTrackingData: EventTrackingData = {
     componentName: 'read-time',
+    sendOptimizelyEvents: true,
+    experimentName: 'newswb_ws_homepage_read_time',
+    experimentVariant: readTimeVariant,
     itemTracker: {
       label: `Read time: ${readTimeValue} ${minutesLabel}`,
       duration: readTimeInMilliseconds,
@@ -125,11 +165,15 @@ export const ReadTime = ({
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const viewRef = useViewTracker(eventTrackingData);
 
+  const isControlVariant = readTimeVariant === 'control';
+
+  if (isControlVariant) return <HomepagePlaceholder {...viewRef} />;
+
   return (
-    <span className={className} data-testid="read-time" {...viewRef}>
+    <div className={className} data-testid="read-time" {...viewRef}>
       <Text css={styles.readTimeText} size="brevier">
-        {minutesCopy}
+        {copy}
       </Text>
-    </span>
+    </div>
   );
 };

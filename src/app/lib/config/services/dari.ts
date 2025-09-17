@@ -379,24 +379,24 @@ export const service: DefaultServiceConfig = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/persian/institutional-49283091',
+        href: 'https://www.bbc.com/dari/articles/c8jpnremrrvo',
         text: 'چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟',
       },
       externalLink: {
-        href: 'https://www.bbc.com/persian/institutional/2011/04/000001_links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'سیاست ما درباره لینک دادن به سایت های دیگر.',
       },
       links: [
         {
-          href: 'https://www.bbc.com/persian/institutional-37474133',
+          href: 'https://www.bbc.com/dari/articles/cy85mvgyr23o',
           text: 'شرایط استفاده',
         },
         {
-          href: 'https://www.bbc.com/persian/institutional-37474136',
-          text: 'درباره بی بی سی',
+          href: 'https://www.bbc.com/dari/articles/cjeyjknpvn5o',
+          text: 'در باره بی‌بی‌سی',
         },
         {
-          href: 'https://www.bbc.com/persian/institutional-37540067',
+          href: 'https://www.bbc.com/dari/articles/cq5860pd7q3o',
           text: 'سیاست حفظ حریم خصوصی',
         },
         {
@@ -404,8 +404,8 @@ export const service: DefaultServiceConfig = {
           text: 'کوکی ها',
         },
         {
-          href: 'https://www.bbc.co.uk/persian/send/u50853555',
-          text: 'تماس با بی بی سی',
+          href: 'https://www.bbc.com/dari/send/u214757345',
+          text: 'تماس با بی‌بی‌سی',
         },
         {
           href: 'https://www.bbc.com/ws/languages',
