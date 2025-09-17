@@ -1,5 +1,5 @@
 import Cookie from 'js-cookie';
-import * as WindowHelper from '#src/testHelpers/windowHelper';
+import * as WindowHelper from '#src/testHelpers/WindowHelper';
 import onClient from '../../../lib/utilities/onClient';
 import {
   ARTICLE_PAGE,
