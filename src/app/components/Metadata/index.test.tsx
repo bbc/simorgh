@@ -9,6 +9,7 @@ import {
   LIVE_RADIO_PAGE,
   AUDIO_PAGE,
   TV_PAGE,
+  LIVE_PAGE,
 } from '#app/routes/utils/pageTypes';
 import {
   articleDataNews,
@@ -16,6 +17,7 @@ import {
   articleDataPidginWithByline,
 } from '#pages/ArticlePage/fixtureData';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import { data as mundoArticlePage } from '#data/mundo/articles/c1ep2gnx45qo.json';
 import { data as gahuzaAudioPage } from '#data/gahuza/bbc_gahuza_radio/p02pcb5c.json';
 import { data as liveRadioPageData } from '#data/korean/bbc_korean_radio/liveradio.json';
 import { data as hindiTVBrand } from '#data/hindi/bbc_hindi_tv/tv_programmes/w13xttlw.json';
@@ -1088,7 +1090,7 @@ describe('Metadata', () => {
           bbcOrigin={dotComOrigin}
           platform="canonical"
           id="news-53577781"
-          pageType={ARTICLE_PAGE}
+          pageType={STORY_PAGE}
           pathname="/ukrainian/news-53577781"
           description="BBC Ukrainian"
           openGraphType="website"
@@ -1107,7 +1109,7 @@ describe('Metadata', () => {
           bbcOrigin={dotComOrigin}
           platform="amp"
           id="news-53577781"
-          pageType={ARTICLE_PAGE}
+          pageType={STORY_PAGE}
           pathname="/ukrainian/news-53577781.amp"
           description="BBC Ukrainian"
           openGraphType="website"
@@ -1126,7 +1128,7 @@ describe('Metadata', () => {
           bbcOrigin={dotComOrigin}
           platform="canonical"
           id="news-53577781"
-          pageType={ARTICLE_PAGE}
+          pageType={STORY_PAGE}
           pathname="/ukrainian/news-53577781"
           description="BBC Ukrainian"
           openGraphType="website"
@@ -1145,7 +1147,7 @@ describe('Metadata', () => {
           bbcOrigin={dotComOrigin}
           platform="amp"
           id="news-53577781"
-          pageType={ARTICLE_PAGE}
+          pageType={STORY_PAGE}
           pathname="/ukrainian/news-53577781.amp"
           description="BBC Ukrainian"
           openGraphType="website"
@@ -1232,5 +1234,172 @@ describe('Metadata', () => {
         ).not.toBeInTheDocument();
       },
     );
+  });
+
+  describe('Opengraph Image Experiment', () => {
+    beforeEach(() => {
+      delete process.env.SIMORGH_APP_ENV;
+    });
+
+    it('should return the Opengraph image API url for an article page on Local Env', () => {
+      process.env.SIMORGH_APP_ENV = 'local';
+
+      render(
+        // @ts-expect-error - testing with subset of data
+        <MetadataWithContext
+          service="mundo"
+          bbcOrigin={dotCoDotUKOrigin}
+          platform="canonical"
+          id="c0000000001o"
+          pageType={ARTICLE_PAGE}
+          pathname="/mundo/c0000000001o"
+        />,
+      );
+
+      const metaTags = Helmet.peek()?.metaTags;
+      const ogImageTag = metaTags?.find(tag => tag.property === 'og:image');
+
+      expect(ogImageTag?.content).toEqual(
+        'http://localhost:7081/mundo/og/c0000000001o',
+      );
+    });
+
+    it('should return the Opengraph image API url for a Live page on Local Env', () => {
+      process.env.SIMORGH_APP_ENV = 'local';
+
+      render(
+        // @ts-expect-error - testing with subset of data
+        <MetadataWithContext
+          service="mundo"
+          bbcOrigin={dotCoDotUKOrigin}
+          platform="canonical"
+          id="c0000000001t"
+          pageType={LIVE_PAGE}
+          pathname="/mundo/c0000000001t"
+        />,
+      );
+
+      const metaTags = Helmet.peek()?.metaTags;
+      const ogImageTag = metaTags?.find(tag => tag.property === 'og:image');
+
+      expect(ogImageTag?.content).toEqual(
+        'http://localhost:7081/mundo/og/c0000000001t',
+      );
+    });
+
+    it('should return the Opengraph image API url for an article page on Test Env', () => {
+      process.env.SIMORGH_APP_ENV = 'test';
+
+      render(
+        // @ts-expect-error - testing with subset of data
+        <MetadataWithContext
+          service="mundo"
+          bbcOrigin={dotCoDotUKOrigin}
+          platform="canonical"
+          id="c0000000001o"
+          pageType={ARTICLE_PAGE}
+          pathname="/mundo/c0000000001o"
+        />,
+      );
+
+      const metaTags = Helmet.peek()?.metaTags;
+      const ogImageTag = metaTags?.find(tag => tag.property === 'og:image');
+
+      expect(ogImageTag?.content).toEqual(
+        'https://web-cdn.test.api.bbci.co.uk/mundo/og/c0000000001o',
+      );
+    });
+
+    it('should return the Opengraph image API url for a Live page on Test Env', () => {
+      process.env.SIMORGH_APP_ENV = 'test';
+
+      render(
+        // @ts-expect-error - testing with subset of data
+        <MetadataWithContext
+          service="mundo"
+          bbcOrigin={dotCoDotUKOrigin}
+          platform="canonical"
+          id="c0000000001t"
+          pageType={LIVE_PAGE}
+          pathname="/mundo/c0000000001t"
+        />,
+      );
+
+      const metaTags = Helmet.peek()?.metaTags;
+      const ogImageTag = metaTags?.find(tag => tag.property === 'og:image');
+
+      expect(ogImageTag?.content).toEqual(
+        'https://web-cdn.test.api.bbci.co.uk/mundo/og/c0000000001t',
+      );
+    });
+
+    it('should return the default image if not an article or live page on Test Env', () => {
+      process.env.SIMORGH_APP_ENV = 'test';
+
+      render(
+        // @ts-expect-error - testing with subset of data
+        <MetadataWithContext
+          service="mundo"
+          bbcOrigin={dotCoDotUKOrigin}
+          platform="canonical"
+          id="c0000000001t"
+          pageType={STORY_PAGE}
+          pathname="/mundo/news-12345678"
+        />,
+      );
+
+      const metaTags = Helmet.peek()?.metaTags;
+      const ogImageTag = metaTags?.find(tag => tag.property === 'og:image');
+
+      expect(ogImageTag?.content).toEqual(
+        'https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png',
+      );
+    });
+
+    it('should return the default image if on Live Env', () => {
+      process.env.SIMORGH_APP_ENV = 'live';
+
+      render(
+        // @ts-expect-error - testing with subset of data
+        <MetadataWithContext
+          service="mundo"
+          bbcOrigin={dotCoDotUKOrigin}
+          platform="canonical"
+          id="c0000000001t"
+          pageType={ARTICLE_PAGE}
+          pathname="/mundo/c0000000001o"
+        />,
+      );
+
+      const metaTags = Helmet.peek()?.metaTags;
+      const ogImageTag = metaTags?.find(tag => tag.property === 'og:image');
+
+      expect(ogImageTag?.content).toEqual(
+        'https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png',
+      );
+    });
+
+    it('should return the default image if service is not in the experiment', () => {
+      process.env.SIMORGH_APP_ENV = 'test';
+
+      render(
+        // @ts-expect-error - testing with subset of data
+        <MetadataWithContext
+          service="pidgin"
+          bbcOrigin={dotCoDotUKOrigin}
+          platform="canonical"
+          id="c0000000001t"
+          pageType={ARTICLE_PAGE}
+          pathname="/pidgin/c0000000001o"
+        />,
+      );
+
+      const metaTags = Helmet.peek()?.metaTags;
+      const ogImageTag = metaTags?.find(tag => tag.property === 'og:image');
+
+      expect(ogImageTag?.content).toEqual(
+        'https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png',
+      );
+    });
   });
 });

@@ -72,8 +72,7 @@ const getSocialShareImage = ({
   if (!OG_EXPERIMENT_PAGETYPES.includes(pageType)) return metaImage;
 
   const CDN_URL = {
-    // local: 'http://localhost:7081',
-    local: 'https://web-cdn.api.bbci.co.uk',
+    local: 'http://localhost:7081',
     test: 'https://web-cdn.test.api.bbci.co.uk',
     live: 'https://web-cdn.api.bbci.co.uk',
   }[process.env.SIMORGH_APP_ENV as string];
@@ -83,7 +82,6 @@ const getSocialShareImage = ({
   if (id) return `${CDN_URL}/${service}/og/${id}`;
 
   // Fallback to 'metaImage' if no id can be determined
-  // This is the case for older CPS content that is rendered via the ArticlePage
   return metaImage;
 };
 
