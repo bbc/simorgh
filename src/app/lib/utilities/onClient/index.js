@@ -1,3 +1,1 @@
-const onClient = () => typeof window !== 'undefined' && window.location;
-
-export default onClient;
+export default () => typeof window !== 'undefined' && window.location;

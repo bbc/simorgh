@@ -4,11 +4,8 @@ import {
   DATA_REQUEST_RECEIVED,
   DATA_RESPONSE_FROM_CACHE,
 } from '#lib/logger.const';
-import {
-  setWindowValue,
-  resetWindowValue,
-} from '#psammead/psammead-test-helpers/src';
 import isLocal from '#app/lib/utilities/isLocal';
+import onClient from '#app/lib/utilities/onClient';
 import fetchPageData from '.';
 
 const expectedBaseUrl = 'http://localhost';
@@ -21,16 +18,20 @@ const pageType = 'Fetch Page Data';
 const requestOrigin = 'Jest Test';
 
 jest.mock('#app/lib/utilities/isLocal', () => jest.fn());
+jest.mock('#app/lib/utilities/onClient', () => jest.fn());
 
 const timeoutSpy = jest.spyOn(AbortSignal, 'timeout');
 
-afterEach(() => {
-  timeoutSpy.mockClear();
-  jest.clearAllMocks();
-  fetch.resetMocks();
-});
+// WindowHelper.beforeAll();
+// WindowHelper.afterAll();
 
 describe('fetchPageData', () => {
+  afterEach(() => {
+    jest.clearAllMocks();
+    fetch.resetMocks();
+    timeoutSpy.mockClear();
+  });
+
   describe('data request received logging', () => {
     beforeEach(() => {
       fetch.mockResponse(
@@ -158,22 +159,17 @@ describe('fetchPageData', () => {
         ({ message, status }) =>
           expect({ message, status }).toEqual({
             message: 'Failed to fetch',
-            status: 502,
+            status: 500,
           }),
       );
     });
   });
 
   describe('Request returns 200 status code, but invalid JSON', () => {
-    afterAll(() => {
-      resetWindowValue('location', window.location);
-    });
     fetch.mockResponse('Some Invalid JSON');
 
     describe('on server', () => {
       it('should return a 500 error code', () => {
-        setWindowValue('location', false);
-
         return fetchPageData({ path: requestedPathname, pageType }).catch(
           ({ message, status }) => {
             expect(loggerMock.error).toHaveBeenCalledWith(DATA_FETCH_ERROR, {
@@ -196,9 +192,11 @@ describe('fetchPageData', () => {
     });
 
     describe('on client', () => {
-      it('should return a 502 error code', () => {
-        setWindowValue('location', true);
+      beforeEach(() => {
+        onClient.mockReturnValueOnce(true);
+      });
 
+      it('should return a 502 error code', () => {
         return fetchPageData({ path: requestedPathname, pageType }).catch(
           ({ message, status }) => {
             expect(loggerMock.error).toHaveBeenCalledWith(DATA_FETCH_ERROR, {
@@ -236,15 +234,7 @@ describe('fetchPageData', () => {
   });
 
   describe('Request returns a non-200, non-404 status code', () => {
-    afterAll(() => {
-      resetWindowValue('location', window.location);
-    });
-
     describe('on server', () => {
-      beforeEach(() => {
-        setWindowValue('location', false);
-      });
-
       it('should log, and return the status code as 500', async () => {
         fetch.mockResponse("I'm a teapot", { status: 418 });
 
@@ -292,7 +282,7 @@ describe('fetchPageData', () => {
 
   describe('on client', () => {
     beforeEach(() => {
-      setWindowValue('location', true);
+      onClient.mockReturnValueOnce(true);
     });
 
     it('should log, and return the status code as 502', async () => {
