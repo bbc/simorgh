@@ -75,6 +75,7 @@ const ArticleTimestamp = ({
       <FirstPublishedTimestamp
         {...timestampProps}
         {...firstPublishedProps}
+        // EXPERIMENT: Article Read Time
         {...(showReadTimeBelowTimestamp && { padding: false })}
       />
       {displayLastUpdatedTimestamp && (
@@ -83,6 +84,7 @@ const ArticleTimestamp = ({
           <LastUpdatedTimestamp
             {...timestampProps}
             {...lastPublishedProps}
+            // EXPERIMENT: Article Read Time
             {...(showReadTimeBelowTimestamp && { padding: false })}
           />
         </div>

@@ -16,6 +16,7 @@ import sendCustomMetric from '#src/server/utilities/customMetrics';
 import { NON_200_RESPONSE } from '#src/server/utilities/customMetrics/metrics.const';
 import nodeLogger from '#lib/logger.node';
 import { SERVER_SIDE_REQUEST_FAILED } from '#app/lib/logger.const';
+import sharp from 'sharp';
 import Badge from '../Badge';
 import {
   extractArticleData,
@@ -50,6 +51,14 @@ const RTL_SERVICES: Services[] = [
   'persian',
   'urdu',
 ] as const;
+
+const compressArrayBuffer = async (
+  arrayBuffer: ArrayBuffer,
+): Promise<ArrayBuffer> => {
+  const buffer = Buffer.from(arrayBuffer);
+  const compressedBuffer = await sharp(buffer).jpeg({ quality: 65 }).toBuffer();
+  return new Uint8Array(compressedBuffer).buffer;
+};
 
 export async function GET(
   req: Request,
@@ -209,12 +218,14 @@ export async function GET(
       },
     );
 
-    const buffer = Buffer.from(await imageResponse.arrayBuffer());
+    const buffer = await imageResponse.arrayBuffer();
 
-    return new Response(buffer, {
+    const compressedImage = await compressArrayBuffer(buffer);
+
+    return new Response(compressedImage, {
       headers: {
-        'Content-Type': 'image/png',
-        'Content-Length': buffer.length.toString(),
+        'Content-Type': 'image/jpeg',
+        'Content-Length': compressedImage.byteLength.toString(),
         'Cache-Control':
           'public, stale-if-error=3600, stale-while-revalidate=3600, max-age=600',
       },
