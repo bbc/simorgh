@@ -20,14 +20,14 @@ const canonicalTestSuites = [
     tests,
   },
   {
-    path: '/serbian/articles/cabcdefghijo/cyr',
+    path: '/serbian/articles/c123456abcdo/cyr',
     service: 'serbian',
     runforEnv: ['local', 'test', 'live'],
     variant: 'cyr',
     tests,
   },
   {
-    path: '/serbian/articles/cabcdefghijo/lat',
+    path: '/serbian/articles/c123456abcdo/lat',
     service: 'serbian',
     runforEnv: ['local', 'test', 'live'],
     variant: 'lat',
