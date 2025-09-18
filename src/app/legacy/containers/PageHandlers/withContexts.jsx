@@ -2,6 +2,7 @@ import React from 'react';
 
 // context providers
 import { ThemeProvider } from '../../../components/ThemeProvider';
+import ThemeProviderSCSSModules from '../../../components/ThemeProviderSCSSModules';
 import { RequestContextProvider } from '../../../contexts/RequestContext';
 import { ToggleContextProvider } from '../../../contexts/ToggleContext';
 import { UserContextProvider } from '../../../contexts/UserContext';
@@ -66,9 +67,11 @@ const WithContexts = Component => {
               data={pageData}
             >
               <UserContextProvider>
-                <ThemeProvider service={service} variant={variant}>
-                  <Component {...props} />
-                </ThemeProvider>
+                <ThemeProviderSCSSModules service={service} variant={variant}>
+                  <ThemeProvider service={service} variant={variant}>
+                    <Component {...props} />
+                  </ThemeProvider>
+                </ThemeProviderSCSSModules>
               </UserContextProvider>
             </EventTrackingContextProvider>
           </RequestContextProvider>
