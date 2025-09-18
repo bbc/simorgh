@@ -75,6 +75,7 @@ export type PlayerConfig = {
   plugins?: {
     toLoad: { html: string; playerOnly?: boolean }[];
   };
+  startTime: number;
 };
 
 export type PlayerUiConfig = {
@@ -155,6 +156,8 @@ export type Player = {
   pause: () => void;
   previous: () => void;
   next: () => void;
+  currentTime: () => number;
+  identifier: () => string;
   bind: (event: MediaPlayerEvents, callback: (e: SMPEvent) => void) => void;
   loadPlugin: (
     pluginName: { [key: string]: string },
