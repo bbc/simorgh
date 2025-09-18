@@ -10,17 +10,25 @@ import {
   getArticleId,
   getTipoId,
 } from '#app/routes/utils/constructPageFetchUrl';
-import { INTERNAL_SERVER_ERROR, NOT_FOUND } from '#app/lib/statusCodes.const';
+import {
+  INTERNAL_SERVER_ERROR,
+  NOT_FOUND,
+  OK,
+} from '#app/lib/statusCodes.const';
 import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
 import sendCustomMetric from '#src/server/utilities/customMetrics';
 import { NON_200_RESPONSE } from '#src/server/utilities/customMetrics/metrics.const';
 import nodeLogger from '#lib/logger.node';
-import { SERVER_SIDE_REQUEST_FAILED } from '#app/lib/logger.const';
+import {
+  ROUTING_INFORMATION,
+  SERVER_SIDE_REQUEST_FAILED,
+} from '#app/lib/logger.const';
 import sharp from 'sharp';
 import Badge from '../Badge';
 import {
   extractArticleData,
   extractLiveData,
+  pageTypeToLog,
   responseNotFound,
   responseServerError,
 } from '../utils';
@@ -32,7 +40,6 @@ import {
 } from '../RTLBadges';
 
 const logger = nodeLogger(__filename);
-const pageTypeToLog = 'og-image';
 
 const REITH_SANS_MEDIUM_FONT_URL = `${REITH_FONTS_DIR}BBCReithSans_W_Md.woff`;
 const REITH_SANS_BOLD_FONT_URL = `${REITH_FONTS_DIR}BBCReithSans_W_Bd.woff`;
@@ -73,14 +80,14 @@ export async function GET(
     // https://nextjs.org/docs/messages/sync-dynamic-apis
     const { id, service } = await params;
 
-    if (!id || !service) return responseNotFound();
+    if (!id || !service) return responseNotFound({ url: req.url });
 
     const rendererEnv =
       searchParams.get('renderer_env') || process.env.SIMORGH_APP_ENV;
 
     const pageType = getPageType(id);
 
-    if (!pageType) return responseNotFound();
+    if (!pageType) return responseNotFound({ url: req.url });
 
     const [{ data }, sansMediumBuffer, sansBoldBuffer] = await Promise.all([
       // Fetch asset
@@ -96,8 +103,9 @@ export async function GET(
       fetch(REITH_SANS_BOLD_FONT_URL).then(res => res.arrayBuffer()),
     ]);
 
-    if (data.status === NOT_FOUND) return responseNotFound();
-    if (data.status === INTERNAL_SERVER_ERROR) return responseServerError();
+    if (data.status === NOT_FOUND) return responseNotFound({ url: req.url });
+    if (data.status === INTERNAL_SERVER_ERROR)
+      return responseServerError({ url: req.url });
 
     const dataExtractor = {
       live: extractLiveData,
@@ -222,6 +230,12 @@ export async function GET(
 
     const compressedImage = await compressArrayBuffer(buffer);
 
+    logger.debug(ROUTING_INFORMATION, {
+      url: req.url,
+      status: OK,
+      pageType: pageTypeToLog,
+    });
+
     return new Response(compressedImage, {
       headers: {
         'Content-Type': 'image/jpeg',
@@ -235,19 +249,19 @@ export async function GET(
 
     sendCustomMetric({
       metricName: NON_200_RESPONSE,
-      statusCode: 500,
+      statusCode: INTERNAL_SERVER_ERROR,
       // @ts-expect-error - Not a real pageType yet
       pageType: pageTypeToLog,
       requestUrl: req.url,
     });
 
     logger.error(SERVER_SIDE_REQUEST_FAILED, {
-      status: 500,
+      status: INTERNAL_SERVER_ERROR,
       message: { message, url: req.url },
       url: req.url,
       pageType: pageTypeToLog,
     });
 
-    return new Response(message, { status: 500 });
+    return new Response(message, { status: INTERNAL_SERVER_ERROR });
   }
 }

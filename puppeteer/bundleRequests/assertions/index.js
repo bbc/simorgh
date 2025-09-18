@@ -44,7 +44,7 @@ export const assertLoadsModernBundles = ({ service }) => {
 
     const serviceMatches = context.page.__requests.filter(url =>
       url.match(
-        new RegExp(`(\\/static\\/js\\/modern.${serviceRegex}.+?.js)`, 'g'),
+        new RegExp(`(\\/static\\/js\\/modern.${serviceRegex}.*.js)`, 'g'),
       ),
     );
 
