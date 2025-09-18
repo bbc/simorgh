@@ -11,8 +11,8 @@ const sections = [
     id: 'section1',
     title: 'Section 1',
     links: [
-      { id: 'link1', label: 'Link 1', href: '#link1' },
-      { id: 'link2', label: 'Link 2', href: '#link2' },
+      { id: 'link1', label: 'Link 1', href: '#link1', lang: 'en' },
+      { id: 'link2', label: 'Link 2', href: '#link2', lang: 'fr' },
     ],
   },
   {
@@ -107,5 +107,150 @@ describe('LanguageNavigation', () => {
     fireEvent.click(sectionLink);
 
     expect(screen.queryByText('Link 1')).not.toBeInTheDocument();
+  });
+
+  test('applies lang attribute to links when provided', () => {
+    render(<CollapsibleNavigation navigationSections={sections} />);
+
+    const sectionTitle = screen.getByText('Section 1');
+    fireEvent.click(sectionTitle);
+
+    const link1 = screen.getByRole('link', { name: 'Link 1' });
+    const link2 = screen.getByRole('link', { name: 'Link 2' });
+
+    expect(link1).toHaveAttribute('lang', 'en');
+    expect(link2).toHaveAttribute('lang', 'fr');
+  });
+
+  test('applies latinTransliteration as aria-label when provided', () => {
+    const sectionsWithLatinTransliteration = [
+      {
+        id: 'section1',
+        title: 'Section 1',
+        links: [
+          {
+            id: 'link1',
+            label: 'Link 1',
+            href: '#link1',
+            lang: 'ky',
+            latinTransliteration: 'Kyrgyz tilindegi zhaniliktar',
+          },
+          {
+            id: 'link2',
+            label: 'Link 2',
+            href: '#link2',
+            lang: 'yo',
+            latinTransliteration: 'Iroyin ni Yoruba',
+          },
+        ],
+      },
+    ];
+
+    render(
+      <CollapsibleNavigation
+        navigationSections={sectionsWithLatinTransliteration}
+      />,
+    );
+
+    const sectionTitle = screen.getByText('Section 1');
+    fireEvent.click(sectionTitle);
+
+    const link1 = screen.getByRole('link', {
+      name: 'Kyrgyz tilindegi zhaniliktar',
+    });
+    const link2 = screen.getByRole('link', { name: 'Iroyin ni Yoruba' });
+
+    expect(link1).toHaveAttribute('aria-label', 'Kyrgyz tilindegi zhaniliktar');
+    expect(link2).toHaveAttribute('aria-label', 'Iroyin ni Yoruba');
+  });
+
+  test('applies both lang and latinTransliteration attributes together', () => {
+    const sectionsWithBothAttributes = [
+      {
+        id: 'section1',
+        title: 'Section 1',
+        links: [
+          {
+            id: 'link1',
+            label: 'Кыргыз тилиндеги жаңылыкта',
+            href: '#link1',
+            lang: 'ky',
+            latinTransliteration: 'Kyrgyz tilindegi zhaniliktar',
+          },
+        ],
+      },
+    ];
+
+    render(
+      <CollapsibleNavigation navigationSections={sectionsWithBothAttributes} />,
+    );
+
+    const sectionTitle = screen.getByText('Section 1');
+    fireEvent.click(sectionTitle);
+
+    const link1 = screen.getByRole('link', {
+      name: 'Kyrgyz tilindegi zhaniliktar',
+    });
+
+    expect(link1).toHaveAttribute('lang', 'ky');
+    expect(link1).toHaveAttribute('aria-label', 'Kyrgyz tilindegi zhaniliktar');
+  });
+
+  test('does not apply lang attribute when not provided', () => {
+    const sectionsWithoutLang = [
+      {
+        id: 'section1',
+        title: 'Section 1',
+        links: [
+          {
+            id: 'link1',
+            label: 'Link 1',
+            href: '#link1',
+            // No lang attribute
+          },
+        ],
+      },
+    ];
+
+    render(<CollapsibleNavigation navigationSections={sectionsWithoutLang} />);
+
+    const sectionTitle = screen.getByText('Section 1');
+    fireEvent.click(sectionTitle);
+
+    const link1 = screen.getByRole('link', { name: 'Link 1' });
+
+    expect(link1).not.toHaveAttribute('lang');
+  });
+
+  test('does not apply aria-label when latinTransliteration is not provided', () => {
+    const sectionsWithoutLatinTransliteration = [
+      {
+        id: 'section1',
+        title: 'Section 1',
+        links: [
+          {
+            id: 'link1',
+            label: 'Link 1',
+            href: '#link1',
+            lang: 'en',
+            // No latinTransliteration
+          },
+        ],
+      },
+    ];
+
+    render(
+      <CollapsibleNavigation
+        navigationSections={sectionsWithoutLatinTransliteration}
+      />,
+    );
+
+    const sectionTitle = screen.getByText('Section 1');
+    fireEvent.click(sectionTitle);
+
+    const link1 = screen.getByRole('link', { name: 'Link 1' });
+
+    expect(link1).toHaveAttribute('lang', 'en');
+    expect(link1).not.toHaveAttribute('aria-label');
   });
 });

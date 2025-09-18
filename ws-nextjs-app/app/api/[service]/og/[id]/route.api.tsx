@@ -10,12 +10,25 @@ import {
   getArticleId,
   getTipoId,
 } from '#app/routes/utils/constructPageFetchUrl';
-import { INTERNAL_SERVER_ERROR, NOT_FOUND } from '#app/lib/statusCodes.const';
+import {
+  INTERNAL_SERVER_ERROR,
+  NOT_FOUND,
+  OK,
+} from '#app/lib/statusCodes.const';
 import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
+import sendCustomMetric from '#src/server/utilities/customMetrics';
+import { NON_200_RESPONSE } from '#src/server/utilities/customMetrics/metrics.const';
+import nodeLogger from '#lib/logger.node';
+import {
+  ROUTING_INFORMATION,
+  SERVER_SIDE_REQUEST_FAILED,
+} from '#app/lib/logger.const';
+import sharp from 'sharp';
 import Badge from '../Badge';
 import {
   extractArticleData,
   extractLiveData,
+  pageTypeToLog,
   responseNotFound,
   responseServerError,
 } from '../utils';
@@ -25,6 +38,8 @@ import {
   ArabicTopStoriesSVG,
   RTLLiveSVG,
 } from '../RTLBadges';
+
+const logger = nodeLogger(__filename);
 
 const REITH_SANS_MEDIUM_FONT_URL = `${REITH_FONTS_DIR}BBCReithSans_W_Md.woff`;
 const REITH_SANS_BOLD_FONT_URL = `${REITH_FONTS_DIR}BBCReithSans_W_Bd.woff`;
@@ -44,6 +59,14 @@ const RTL_SERVICES: Services[] = [
   'urdu',
 ] as const;
 
+const compressArrayBuffer = async (
+  arrayBuffer: ArrayBuffer,
+): Promise<ArrayBuffer> => {
+  const buffer = Buffer.from(arrayBuffer);
+  const compressedBuffer = await sharp(buffer).jpeg({ quality: 65 }).toBuffer();
+  return new Uint8Array(compressedBuffer).buffer;
+};
+
 export async function GET(
   req: Request,
   { params }: { params: { id: string; service: Services } },
@@ -57,14 +80,14 @@ export async function GET(
     // https://nextjs.org/docs/messages/sync-dynamic-apis
     const { id, service } = await params;
 
-    if (!id || !service) return responseNotFound();
+    if (!id || !service) return responseNotFound({ url: req.url });
 
     const rendererEnv =
       searchParams.get('renderer_env') || process.env.SIMORGH_APP_ENV;
 
     const pageType = getPageType(id);
 
-    if (!pageType) return responseNotFound();
+    if (!pageType) return responseNotFound({ url: req.url });
 
     const [{ data }, sansMediumBuffer, sansBoldBuffer] = await Promise.all([
       // Fetch asset
@@ -80,8 +103,9 @@ export async function GET(
       fetch(REITH_SANS_BOLD_FONT_URL).then(res => res.arrayBuffer()),
     ]);
 
-    if (data.status === NOT_FOUND) return responseNotFound();
-    if (data.status === INTERNAL_SERVER_ERROR) return responseServerError();
+    if (data.status === NOT_FOUND) return responseNotFound({ url: req.url });
+    if (data.status === INTERNAL_SERVER_ERROR)
+      return responseServerError({ url: req.url });
 
     const dataExtractor = {
       live: extractLiveData,
@@ -168,7 +192,7 @@ export async function GET(
       badge = null; // No badge for RTL services other than Arabic for initial experiment
     }
 
-    return new ImageResponse(
+    const imageResponse = new ImageResponse(
       (
         <div
           style={{
@@ -201,9 +225,43 @@ export async function GET(
         fonts,
       },
     );
+
+    const buffer = await imageResponse.arrayBuffer();
+
+    const compressedImage = await compressArrayBuffer(buffer);
+
+    logger.debug(ROUTING_INFORMATION, {
+      url: req.url,
+      status: OK,
+      pageType: pageTypeToLog,
+    });
+
+    return new Response(compressedImage, {
+      headers: {
+        'Content-Type': 'image/jpeg',
+        'Content-Length': compressedImage.byteLength.toString(),
+        'Cache-Control':
+          'public, stale-if-error=3600, stale-while-revalidate=3600, max-age=600',
+      },
+    });
   } catch (error: unknown) {
     const { message } = error as FetchError;
 
-    return new Response(message, { status: 500 });
+    sendCustomMetric({
+      metricName: NON_200_RESPONSE,
+      statusCode: INTERNAL_SERVER_ERROR,
+      // @ts-expect-error - Not a real pageType yet
+      pageType: pageTypeToLog,
+      requestUrl: req.url,
+    });
+
+    logger.error(SERVER_SIDE_REQUEST_FAILED, {
+      status: INTERNAL_SERVER_ERROR,
+      message: { message, url: req.url },
+      url: req.url,
+      pageType: pageTypeToLog,
+    });
+
+    return new Response(message, { status: INTERNAL_SERVER_ERROR });
   }
 }
