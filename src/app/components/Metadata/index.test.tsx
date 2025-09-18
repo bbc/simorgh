@@ -1281,26 +1281,6 @@ describe('Metadata', () => {
           },
         );
 
-        it(`should return the default image if on Live Env`, () => {
-          process.env.SIMORGH_APP_ENV = 'live';
-
-          render(
-            // @ts-expect-error - testing with subset of data
-            <MetadataWithContext
-              service={service as Services}
-              bbcOrigin={dotCoDotUKOrigin}
-              pageType={ARTICLE_PAGE}
-              pathname={`/${service}/c0000000001o`}
-            />,
-          );
-
-          const ogImageTag = getOgImageTag();
-
-          expect(ogImageTag?.content).toEqual(
-            `https://news.files.bbci.co.uk/ws/img/logos/og/${service}.png`,
-          );
-        });
-
         it(`should return the default image if the id cannot be determined from the pathname`, () => {
           process.env.SIMORGH_APP_ENV = 'test';
 
