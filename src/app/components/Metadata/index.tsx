@@ -8,7 +8,6 @@ import {
   getArticleId,
   getTipoId,
 } from '#app/routes/utils/constructPageFetchUrl';
-import isLive from '#app/lib/utilities/isLive';
 import {
   ARTICLE_PAGE,
   LIVE_PAGE,
