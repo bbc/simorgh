@@ -27,20 +27,22 @@ const { warn } = console;
 /**
  * Suppress JSDOM errors relating to navigation not implemented
  *  */
-const listeners = window._virtualConsole.listeners('jsdomError');
-const originalListener = listeners && listeners[0];
+if (window._virtualConsole) {
+  const listeners = window._virtualConsole.listeners('jsdomError');
+  const originalListener = listeners && listeners[0];
 
-window._virtualConsole.removeAllListeners('jsdomError');
+  window._virtualConsole.removeAllListeners('jsdomError');
 
-// Add a new listener to swallow JSDOM errors
-window._virtualConsole.addListener('jsdomError', error => {
-  if (
-    error.message !== 'Not implemented: navigation (except hash changes)' &&
-    originalListener
-  ) {
-    originalListener(error);
-  }
-});
+  // Add a new listener to swallow JSDOM errors
+  window._virtualConsole.addListener('jsdomError', error => {
+    if (
+      error.message !== 'Not implemented: navigation (except hash changes)' &&
+      originalListener
+    ) {
+      originalListener(error);
+    }
+  });
+}
 
 const getFormattedMessage = (message, rest) => {
   let theMessage = message;
