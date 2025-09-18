@@ -27,7 +27,7 @@ const { warn } = console;
 /**
  * Suppress JSDOM errors relating to navigation not implemented
  *  */
-if (window._virtualConsole) {
+if (window?._virtualConsole) {
   const listeners = window._virtualConsole.listeners('jsdomError');
   const originalListener = listeners && listeners[0];
 
