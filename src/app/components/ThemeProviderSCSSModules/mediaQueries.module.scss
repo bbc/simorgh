@@ -1,14 +1,14 @@
 // SCSS variables for GEL Grid breakpoints, matching mediaQueries.ts
 $group-0-max-width-bp: 14.9375; // 239px / 16
-$group-1-min-width-bp: 15;      // 240px / 16
+$group-1-min-width-bp: 15; // 240px / 16
 $group-1-max-width-bp: 24.9375; // 399px / 16
-$group-2-min-width-bp: 25;      // 400px / 16
+$group-2-min-width-bp: 25; // 400px / 16
 $group-2-max-width-bp: 37.4375; // 599px / 16
-$group-3-min-width-bp: 37.5;    // 600px / 16
+$group-3-min-width-bp: 37.5; // 600px / 16
 $group-3-max-width-bp: 62.9375; // 1007px / 16
-$group-4-min-width-bp: 63;      // 1008px / 16
+$group-4-min-width-bp: 63; // 1008px / 16
 $group-4-max-width-bp: 79.9375; // 1279px / 16
-$group-5-min-width-bp: 80;      // 1280px / 16
+$group-5-min-width-bp: 80; // 1280px / 16
 
 // Usage example:
 // @media (max-width: #{$group-0-max-width-bp}rem) { ... }

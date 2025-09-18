@@ -5,79 +5,214 @@
 
 $font-sizes: (
   atlas: (
-    groupA: (font-size: var(--font-size-atlas-group-a), line-height: var(--line-height-atlas-group-a)),
-    groupB: (font-size: var(--font-size-atlas-group-b), line-height: var(--line-height-atlas-group-b)),
-    groupD: (font-size: var(--font-size-atlas-group-d), line-height: var(--line-height-atlas-group-d)),
+    groupA: (
+      font-size: var(--font-size-atlas-group-a),
+      line-height: var(--line-height-atlas-group-a),
+    ),
+    groupB: (
+      font-size: var(--font-size-atlas-group-b),
+      line-height: var(--line-height-atlas-group-b),
+    ),
+    groupD: (
+      font-size: var(--font-size-atlas-group-d),
+      line-height: var(--line-height-atlas-group-d),
+    ),
   ),
   elephant: (
-    groupA: (font-size: var(--font-size-elephant-group-a), line-height: var(--line-height-elephant-group-a)),
-    groupB: (font-size: var(--font-size-elephant-group-b), line-height: var(--line-height-elephant-group-b)),
-    groupD: (font-size: var(--font-size-elephant-group-d), line-height: var(--line-height-elephant-group-d)),
+    groupA: (
+      font-size: var(--font-size-elephant-group-a),
+      line-height: var(--line-height-elephant-group-a),
+    ),
+    groupB: (
+      font-size: var(--font-size-elephant-group-b),
+      line-height: var(--line-height-elephant-group-b),
+    ),
+    groupD: (
+      font-size: var(--font-size-elephant-group-d),
+      line-height: var(--line-height-elephant-group-d),
+    ),
   ),
   imperial: (
-    groupA: (font-size: var(--font-size-imperial-group-a), line-height: var(--line-height-imperial-group-a)),
-    groupB: (font-size: var(--font-size-imperial-group-b), line-height: var(--line-height-imperial-group-b)),
-    groupD: (font-size: var(--font-size-imperial-group-d), line-height: var(--line-height-imperial-group-d)),
+    groupA: (
+      font-size: var(--font-size-imperial-group-a),
+      line-height: var(--line-height-imperial-group-a),
+    ),
+    groupB: (
+      font-size: var(--font-size-imperial-group-b),
+      line-height: var(--line-height-imperial-group-b),
+    ),
+    groupD: (
+      font-size: var(--font-size-imperial-group-d),
+      line-height: var(--line-height-imperial-group-d),
+    ),
   ),
   royal: (
-    groupA: (font-size: var(--font-size-royal-group-a), line-height: var(--line-height-royal-group-a)),
-    groupB: (font-size: var(--font-size-royal-group-b), line-height: var(--line-height-royal-group-b)),
-    groupD: (font-size: var(--font-size-royal-group-d), line-height: var(--line-height-royal-group-d)),
+    groupA: (
+      font-size: var(--font-size-royal-group-a),
+      line-height: var(--line-height-royal-group-a),
+    ),
+    groupB: (
+      font-size: var(--font-size-royal-group-b),
+      line-height: var(--line-height-royal-group-b),
+    ),
+    groupD: (
+      font-size: var(--font-size-royal-group-d),
+      line-height: var(--line-height-royal-group-d),
+    ),
   ),
   foolscap: (
-    groupA: (font-size: var(--font-size-foolscap-group-a), line-height: var(--line-height-foolscap-group-a)),
-    groupB: (font-size: var(--font-size-foolscap-group-b), line-height: var(--line-height-foolscap-group-b)),
-    groupD: (font-size: var(--font-size-foolscap-group-d), line-height: var(--line-height-foolscap-group-d)),
+    groupA: (
+      font-size: var(--font-size-foolscap-group-a),
+      line-height: var(--line-height-foolscap-group-a),
+    ),
+    groupB: (
+      font-size: var(--font-size-foolscap-group-b),
+      line-height: var(--line-height-foolscap-group-b),
+    ),
+    groupD: (
+      font-size: var(--font-size-foolscap-group-d),
+      line-height: var(--line-height-foolscap-group-d),
+    ),
   ),
   canon: (
-    groupA: (font-size: var(--font-size-canon-group-a), line-height: var(--line-height-canon-group-a)),
-    groupB: (font-size: var(--font-size-canon-group-b), line-height: var(--line-height-canon-group-b)),
-    groupD: (font-size: var(--font-size-canon-group-d), line-height: var(--line-height-canon-group-d)),
+    groupA: (
+      font-size: var(--font-size-canon-group-a),
+      line-height: var(--line-height-canon-group-a),
+    ),
+    groupB: (
+      font-size: var(--font-size-canon-group-b),
+      line-height: var(--line-height-canon-group-b),
+    ),
+    groupD: (
+      font-size: var(--font-size-canon-group-d),
+      line-height: var(--line-height-canon-group-d),
+    ),
   ),
   trafalgar: (
-    groupA: (font-size: var(--font-size-trafalgar-group-a), line-height: var(--line-height-trafalgar-group-a)),
-    groupB: (font-size: var(--font-size-trafalgar-group-b), line-height: var(--line-height-trafalgar-group-b)),
-    groupD: (font-size: var(--font-size-trafalgar-group-d), line-height: var(--line-height-trafalgar-group-d)),
+    groupA: (
+      font-size: var(--font-size-trafalgar-group-a),
+      line-height: var(--line-height-trafalgar-group-a),
+    ),
+    groupB: (
+      font-size: var(--font-size-trafalgar-group-b),
+      line-height: var(--line-height-trafalgar-group-b),
+    ),
+    groupD: (
+      font-size: var(--font-size-trafalgar-group-d),
+      line-height: var(--line-height-trafalgar-group-d),
+    ),
   ),
   paragon: (
-    groupA: (font-size: var(--font-size-paragon-group-a), line-height: var(--line-height-paragon-group-a)),
-    groupB: (font-size: var(--font-size-paragon-group-b), line-height: var(--line-height-paragon-group-b)),
-    groupD: (font-size: var(--font-size-paragon-group-d), line-height: var(--line-height-paragon-group-d)),
+    groupA: (
+      font-size: var(--font-size-paragon-group-a),
+      line-height: var(--line-height-paragon-group-a),
+    ),
+    groupB: (
+      font-size: var(--font-size-paragon-group-b),
+      line-height: var(--line-height-paragon-group-b),
+    ),
+    groupD: (
+      font-size: var(--font-size-paragon-group-d),
+      line-height: var(--line-height-paragon-group-d),
+    ),
   ),
   doublePica: (
-    groupA: (font-size: var(--font-size-double-pica-group-a), line-height: var(--line-height-double-pica-group-a)),
-    groupB: (font-size: var(--font-size-double-pica-group-b), line-height: var(--line-height-double-pica-group-b)),
-    groupD: (font-size: var(--font-size-double-pica-group-d), line-height: var(--line-height-double-pica-group-d)),
+    groupA: (
+      font-size: var(--font-size-double-pica-group-a),
+      line-height: var(--line-height-double-pica-group-a),
+    ),
+    groupB: (
+      font-size: var(--font-size-double-pica-group-b),
+      line-height: var(--line-height-double-pica-group-b),
+    ),
+    groupD: (
+      font-size: var(--font-size-double-pica-group-d),
+      line-height: var(--line-height-double-pica-group-d),
+    ),
   ),
   greatPrimer: (
-    groupA: (font-size: var(--font-size-great-primer-group-a), line-height: var(--line-height-great-primer-group-a)),
-    groupB: (font-size: var(--font-size-great-primer-group-b), line-height: var(--line-height-great-primer-group-b)),
-    groupD: (font-size: var(--font-size-great-primer-group-d), line-height: var(--line-height-great-primer-group-d)),
+    groupA: (
+      font-size: var(--font-size-great-primer-group-a),
+      line-height: var(--line-height-great-primer-group-a),
+    ),
+    groupB: (
+      font-size: var(--font-size-great-primer-group-b),
+      line-height: var(--line-height-great-primer-group-b),
+    ),
+    groupD: (
+      font-size: var(--font-size-great-primer-group-d),
+      line-height: var(--line-height-great-primer-group-d),
+    ),
   ),
   bodyCopy: (
-    groupA: (font-size: var(--font-size-body-copy-group-a), line-height: var(--line-height-body-copy-group-a)),
-    groupB: (font-size: var(--font-size-body-copy-group-b), line-height: var(--line-height-body-copy-group-b)),
-    groupD: (font-size: var(--font-size-body-copy-group-d), line-height: var(--line-height-body-copy-group-d)),
+    groupA: (
+      font-size: var(--font-size-body-copy-group-a),
+      line-height: var(--line-height-body-copy-group-a),
+    ),
+    groupB: (
+      font-size: var(--font-size-body-copy-group-b),
+      line-height: var(--line-height-body-copy-group-b),
+    ),
+    groupD: (
+      font-size: var(--font-size-body-copy-group-d),
+      line-height: var(--line-height-body-copy-group-d),
+    ),
   ),
   pica: (
-    groupA: (font-size: var(--font-size-pica-group-a), line-height: var(--line-height-pica-group-a)),
-    groupB: (font-size: var(--font-size-pica-group-b), line-height: var(--line-height-pica-group-b)),
-    groupD: (font-size: var(--font-size-pica-group-d), line-height: var(--line-height-pica-group-d)),
+    groupA: (
+      font-size: var(--font-size-pica-group-a),
+      line-height: var(--line-height-pica-group-a),
+    ),
+    groupB: (
+      font-size: var(--font-size-pica-group-b),
+      line-height: var(--line-height-pica-group-b),
+    ),
+    groupD: (
+      font-size: var(--font-size-pica-group-d),
+      line-height: var(--line-height-pica-group-d),
+    ),
   ),
   longPrimer: (
-    groupA: (font-size: var(--font-size-long-primer-group-a), line-height: var(--line-height-long-primer-group-a)),
-    groupB: (font-size: var(--font-size-long-primer-group-b), line-height: var(--line-height-long-primer-group-b)),
-    groupD: (font-size: var(--font-size-long-primer-group-d), line-height: var(--line-height-long-primer-group-d)),
+    groupA: (
+      font-size: var(--font-size-long-primer-group-a),
+      line-height: var(--line-height-long-primer-group-a),
+    ),
+    groupB: (
+      font-size: var(--font-size-long-primer-group-b),
+      line-height: var(--line-height-long-primer-group-b),
+    ),
+    groupD: (
+      font-size: var(--font-size-long-primer-group-d),
+      line-height: var(--line-height-long-primer-group-d),
+    ),
   ),
   brevier: (
-    groupA: (font-size: var(--font-size-brevier-group-a), line-height: var(--line-height-brevier-group-a)),
-    groupB: (font-size: var(--font-size-brevier-group-b), line-height: var(--line-height-brevier-group-b)),
-    groupD: (font-size: var(--font-size-brevier-group-d), line-height: var(--line-height-brevier-group-d)),
+    groupA: (
+      font-size: var(--font-size-brevier-group-a),
+      line-height: var(--line-height-brevier-group-a),
+    ),
+    groupB: (
+      font-size: var(--font-size-brevier-group-b),
+      line-height: var(--line-height-brevier-group-b),
+    ),
+    groupD: (
+      font-size: var(--font-size-brevier-group-d),
+      line-height: var(--line-height-brevier-group-d),
+    ),
   ),
   minion: (
-    groupA: (font-size: var(--font-size-minion-group-a), line-height: var(--line-height-minion-group-a)),
-    groupB: (font-size: var(--font-size-minion-group-b), line-height: var(--line-height-minion-group-b)),
-    groupD: (font-size: var(--font-size-minion-group-d), line-height: var(--line-height-minion-group-d)),
+    groupA: (
+      font-size: var(--font-size-minion-group-a),
+      line-height: var(--line-height-minion-group-a),
+    ),
+    groupB: (
+      font-size: var(--font-size-minion-group-b),
+      line-height: var(--line-height-minion-group-b),
+    ),
+    groupD: (
+      font-size: var(--font-size-minion-group-d),
+      line-height: var(--line-height-minion-group-d),
+    ),
   ),
 );
 

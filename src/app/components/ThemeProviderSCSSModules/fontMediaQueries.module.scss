@@ -2,11 +2,25 @@
 // SCSS variables for font media query breakpoints, matching fontMediaQueries.ts
 // These are static values representing only the media query condition (no @media, no quotes).
 
-$group-a-max-width: (max-width: 19.9375rem); // 319px
-$group-b-max-width: (max-width: 37.4375rem); // 599px
-$group-b-min-width: (min-width: 20rem); // 320px
-$group-b-only: (min-width: 20rem) and (max-width: 37.4375rem); // 320px - 599px
-$group-d-min-width: (min-width: 37.5rem); // 600px
+$group-a-max-width: (
+  max-width: 19.9375rem,
+); // 319px
+$group-b-max-width: (
+  max-width: 37.4375rem,
+); // 599px
+$group-b-min-width: (
+  min-width: 20rem,
+); // 320px
+$group-b-only: (
+    min-width: 20rem,
+  )
+  and
+  (
+    max-width: 37.4375rem,
+  ); // 320px - 599px
+$group-d-min-width: (
+  min-width: 37.5rem,
+); // 600px
 
 // Usage example:
 // @media #{$group-b-only} { ... }

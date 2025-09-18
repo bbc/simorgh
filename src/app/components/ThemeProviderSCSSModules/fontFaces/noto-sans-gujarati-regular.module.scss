@@ -2,8 +2,12 @@
   font-family: 'Noto Sans Gujarati';
   font-weight: 400;
   font-style: normal;
-  src: url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansGujarati/v1.00/normal.woff') format('woff'),
-       url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansGujarati/v1.00/normal.eot') format('eot'),
-       url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansGujarati/v1.00/normal.ttf') format('ttf');
+  src:
+    url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansGujarati/v1.00/normal.woff')
+      format('woff'),
+    url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansGujarati/v1.00/normal.eot')
+      format('eot'),
+    url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansGujarati/v1.00/normal.ttf')
+      format('ttf');
   font-display: swap;
 }

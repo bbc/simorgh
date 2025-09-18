@@ -2,8 +2,12 @@
   font-family: 'Padauk';
   font-weight: 400;
   font-style: normal;
-  src: url('https://ws-downloads.files.bbci.co.uk/fonts/Padauk/v2.8/normal.woff') format('woff'),
-       url('https://ws-downloads.files.bbci.co.uk/fonts/Padauk/v2.8/normal.eot') format('eot'),
-       url('https://ws-downloads.files.bbci.co.uk/fonts/Padauk/v2.8/normal.ttf') format('ttf');
+  src:
+    url('https://ws-downloads.files.bbci.co.uk/fonts/Padauk/v2.8/normal.woff')
+      format('woff'),
+    url('https://ws-downloads.files.bbci.co.uk/fonts/Padauk/v2.8/normal.eot')
+      format('eot'),
+    url('https://ws-downloads.files.bbci.co.uk/fonts/Padauk/v2.8/normal.ttf')
+      format('ttf');
   font-display: swap;
 }

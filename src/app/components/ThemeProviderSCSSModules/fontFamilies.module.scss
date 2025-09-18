@@ -2,21 +2,38 @@
 // SCSS variables for font-family stacks, matching fontFamilies.ts
 // Usage: font-family: $reith-sans;
 
-$apple-sd-gothic-pro: "Apple SD Gothic Neo", AppleGothic, "Malgun Gothic", Dotum, "Noto Sans CJK KR", sans-serif;
+$apple-sd-gothic-pro:
+  'Apple SD Gothic Neo', AppleGothic, 'Malgun Gothic', Dotum,
+  'Noto Sans CJK KR', sans-serif;
 $arial: Arial, Verdana, Geneva, Helvetica, sans-serif;
 $helmet: Helmet, Freesans, Helvetica, Arial, sans-serif;
-$helvetica-chinese: Helvetica, Arial, STHeiti, 华文黑体, "Microsoft YaHei", 微软雅黑, SimSun, 宋体;
-$hiragino-kagu-gothic-pro: "Hiragino Kaku Gothic Pro", "ﾋﾗギﾉ角ゴPro W3", "MS PGothic", "MS UI Gothic", Helvetica, Arial, sans-serif;
-$noto-sans-telugu: "Noto Sans Telugu", "Hind Guntur", Gautami, "Kohinoor Telugu", sans-serif;
-$noto-sans-gujarati: "Noto Sans Gujarati", Rasa, "Hind vadodara", Shruti, Gautami, "Gujarati Sangam MN", "Gujarati MT", sans-serif;
-$noto-sans-bengali: "Noto Serif Bengali", Helmet, Freesans, Helvetica, Arial, sans-serif;
-$noto-sans-devanagari: "Noto Sans Devanagari", Hind, "Mukta Vaani", Gautami, "Kohinoor Devanagari", sans-serif;
-$noto-sans-ethiopic: "Noto Sans Ethiopic", Arial, Verdana, Geneva, Helvetica, sans-serif;
-$noto-sans-gurmukhi: "Noto Sans Gurmukhi", Gautami, "Kohinoor Gurmukhi", sans-serif;
-$noto-sans-sinhala: "Noto Serif Sinhala", Arial, Verdana, Geneva, Helvetica, sans-serif;
-$noto-sans-tamil: "Noto Sans Tamil", Helmet, Freesans, Helvetica, Arial, sans-serif;
+$helvetica-chinese:
+  Helvetica, Arial, STHeiti, 华文黑体, 'Microsoft YaHei', 微软雅黑, SimSun, 宋体;
+$hiragino-kagu-gothic-pro:
+  'Hiragino Kaku Gothic Pro', 'ﾋﾗギﾉ角ゴPro W3', 'MS PGothic', 'MS UI Gothic',
+  Helvetica, Arial, sans-serif;
+$noto-sans-telugu:
+  'Noto Sans Telugu', 'Hind Guntur', Gautami, 'Kohinoor Telugu', sans-serif;
+$noto-sans-gujarati:
+  'Noto Sans Gujarati', Rasa, 'Hind vadodara', Shruti, Gautami,
+  'Gujarati Sangam MN', 'Gujarati MT', sans-serif;
+$noto-sans-bengali:
+  'Noto Serif Bengali', Helmet, Freesans, Helvetica, Arial, sans-serif;
+$noto-sans-devanagari:
+  'Noto Sans Devanagari', Hind, 'Mukta Vaani', Gautami, 'Kohinoor Devanagari',
+  sans-serif;
+$noto-sans-ethiopic:
+  'Noto Sans Ethiopic', Arial, Verdana, Geneva, Helvetica, sans-serif;
+$noto-sans-gurmukhi:
+  'Noto Sans Gurmukhi', Gautami, 'Kohinoor Gurmukhi', sans-serif;
+$noto-sans-sinhala:
+  'Noto Serif Sinhala', Arial, Verdana, Geneva, Helvetica, sans-serif;
+$noto-sans-tamil:
+  'Noto Sans Tamil', Helmet, Freesans, Helvetica, Arial, sans-serif;
 $padauk: Padauk, Arial, Verdana, Geneva, Helvetica, sans-serif;
 $reith-sans: ReithSans, Helvetica, Arial, sans-serif;
 $reith-serif: ReithSerif, Helvetica, Arial, sans-serif;
-$reith-qalam: "BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;
+$reith-qalam:
+  'BBC Reith Qalam', 'Times New Roman', Arial, Verdana, Geneva, Helvetica,
+  sans-serif;
 $tahoma: Tahoma, Helmet, freesans, Helvetica, Arial, sans-serif;

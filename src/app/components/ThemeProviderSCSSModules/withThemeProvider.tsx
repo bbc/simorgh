@@ -1,10 +1,9 @@
-
 import React, { createContext, ReactNode } from 'react';
 const ThemeContext = createContext<Theme | undefined>(undefined);
 import { BrandSVG } from '../../models/types/theming';
 
 type Theme = {
-    brandSVG: BrandSVG;
+  brandSVG: BrandSVG;
 };
 
 export const ThemeProvider = (theme: Theme) => {
@@ -15,6 +14,5 @@ export const ThemeProvider = (theme: Theme) => {
     </ThemeContext.Provider>
   );
 };
-
 
 export default ThemeProvider;

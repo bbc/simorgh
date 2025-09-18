@@ -1,7 +1,10 @@
 @font-face {
   font-family: 'ReithSerif';
-  src: url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSerif_W_Md.woff2') format('woff2'),
-       url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSerif_W_Md.woff') format('woff');
+  src:
+    url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSerif_W_Md.woff2')
+      format('woff2'),
+    url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSerif_W_Md.woff')
+      format('woff');
   font-weight: 500;
   font-display: optional;
 }

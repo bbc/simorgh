@@ -4,9 +4,8 @@ import { Variants } from '../../models/types/global';
 import themes from './themes/loadableConfig';
 import fallBackTheme from '../ThemeProvider/themes/news';
 
-
 interface Props {
-  service: "mundo";
+  service: 'mundo';
   variant?: Variants | null;
 }
 
