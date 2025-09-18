@@ -8,7 +8,7 @@ import { waitFor } from '@testing-library/dom';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import * as trackingToggle from '#hooks/useTrackingToggle';
 import constructATIUrl from '#app/lib/analyticsUtils/staticATITracking/constructATIUrl';
-import * as WindowHelper from '#src/testHelpers/WindowHelper';
+
 import * as useOptimizelyVariation from '../useOptimizelyVariation';
 import {
   AllTheProviders,
@@ -107,9 +107,6 @@ const TestComponentSingleLink = ({ hookProps }) => {
 jest.mock('#app/lib/utilities/getUUID', () =>
   jest.fn().mockImplementation(() => '12345678-abcd-1fed-0123-a1b2c3d4e5f6'),
 );
-
-WindowHelper.beforeAll();
-WindowHelper.afterAll();
 
 beforeEach(() => {
   jest.clearAllMocks();

@@ -27,20 +27,43 @@ const { warn } = console;
 /**
  * Suppress JSDOM errors relating to navigation not implemented
  *  */
-if (window?._virtualConsole) {
-  const listeners = window._virtualConsole.listeners('jsdomError');
-  const originalListener = listeners && listeners[0];
+if (!process.env.PUPPETEER_APP_ENV) {
+  if (window?._virtualConsole) {
+    const listeners = window._virtualConsole.listeners('jsdomError');
+    const originalListener = listeners && listeners[0];
 
-  window._virtualConsole.removeAllListeners('jsdomError');
+    window._virtualConsole.removeAllListeners('jsdomError');
 
-  // Add a new listener to swallow JSDOM errors
-  window._virtualConsole.addListener('jsdomError', error => {
-    if (
-      error.message !== 'Not implemented: navigation (except hash changes)' &&
-      originalListener
-    ) {
-      originalListener(error);
-    }
+    // Add a new listener to swallow JSDOM errors
+    window._virtualConsole.addListener('jsdomError', error => {
+      if (
+        error.message !== 'Not implemented: navigation (except hash changes)' &&
+        originalListener
+      ) {
+        originalListener(error);
+      }
+    });
+  }
+
+  const oldWindowLocation = window.location;
+
+  beforeAll(() => {
+    delete window.location;
+
+    window.location = Object.defineProperties(
+      {},
+      {
+        ...Object.getOwnPropertyDescriptors(oldWindowLocation),
+        assign: {
+          configurable: true,
+          value: jest.fn(),
+        },
+      },
+    );
+  });
+  afterAll(() => {
+    // restore `window.location` to the original `jsdom` Location` object
+    window.location = oldWindowLocation;
   });
 }
 

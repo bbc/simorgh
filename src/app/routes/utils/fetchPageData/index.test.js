@@ -22,8 +22,8 @@ jest.mock('#app/lib/utilities/onClient', () => jest.fn());
 
 const timeoutSpy = jest.spyOn(AbortSignal, 'timeout');
 
-// WindowHelper.beforeAll();
-// WindowHelper.afterAll();
+//
+//
 
 describe('fetchPageData', () => {
   afterEach(() => {

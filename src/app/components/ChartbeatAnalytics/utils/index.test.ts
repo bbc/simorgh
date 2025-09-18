@@ -1,5 +1,4 @@
 import Cookie from 'js-cookie';
-import * as WindowHelper from '#src/testHelpers/WindowHelper';
 import onClient from '../../../lib/utilities/onClient';
 import {
   ARTICLE_PAGE,
@@ -29,9 +28,6 @@ import { PageTypes, Services } from '../../../models/types/global';
 jest.mock('#lib/utilities/onClient', () =>
   jest.fn().mockImplementation(() => true),
 );
-
-WindowHelper.beforeAll();
-WindowHelper.afterAll();
 
 describe('Chartbeat utilities', () => {
   afterEach(() => {

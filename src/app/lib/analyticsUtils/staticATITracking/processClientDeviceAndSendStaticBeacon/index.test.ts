@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-nocheck
-import * as WindowHelper from '#src/testHelpers/WindowHelper';
+import { Browser } from 'happy-dom';
+
 import { addProcessClientDeviceAndSendStaticBeaconToWindow } from '.';
 
 describe('addProcessClientDeviceAndSendStaticBeaconToWindow script', () => {
@@ -10,8 +11,6 @@ describe('addProcessClientDeviceAndSendStaticBeaconToWindow script', () => {
   const testSecond = testSystemTime.getSeconds();
 
   beforeAll(() => {
-    WindowHelper.beforeAll();
-
     jest.useFakeTimers().setSystemTime(testSystemTime);
     let mockCookie = '';
     Object.defineProperty(document, 'cookie', {
@@ -118,15 +117,13 @@ describe('addProcessClientDeviceAndSendStaticBeaconToWindow script', () => {
   });
 
   describe('on lite pages', () => {
+    // global.jsdom?.reconfigure({ url: 'http://localhost/persian.lite' });
     beforeEach(() => {
-      window.location = { pathname: '/persian.lite' };
-      console.log({
-        window: window.location,
-        mock: window.location,
-      });
+      window.location.assign.mockReset();
     });
+
     afterEach(() => {
-      // WindowHelper.resetWindow();
+      WindowHelper.resetWindow();
     });
 
     it.each([

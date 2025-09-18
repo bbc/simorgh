@@ -4,7 +4,6 @@ import fs from 'fs';
 import { join, resolve } from 'path';
 import fetchMock from 'jest-fetch-mock';
 import { createHash } from 'crypto';
-import * as WindowHelper from '#src/testHelpers/WindowHelper';
 
 const serviceWorker = fs.readFileSync(join(__dirname, '..', 'public/sw.js'));
 
@@ -16,9 +15,6 @@ fs.writeFileSync(
   resolve(__dirname, 'service-worker-test.js'),
   serviceWorkerCode,
 );
-
-WindowHelper.beforeAll();
-WindowHelper.afterAll();
 
 describe('Service Worker', () => {
   let fetchEventHandler;
