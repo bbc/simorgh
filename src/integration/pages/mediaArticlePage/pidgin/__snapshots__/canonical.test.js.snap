@@ -115,7 +115,7 @@ exports[`Canonical Media Article Page Footer Anchors should match text and url 8
 exports[`Canonical Media Article Page Footer Anchors should match text and url 9`] = `
 {
   "text": "De way wey we de take go external link.",
-  "url": "https://www.bbc.com/editorialguidelines/guidance/feeds-and-links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
 }
 `;
 

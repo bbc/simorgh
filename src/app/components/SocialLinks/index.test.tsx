@@ -7,6 +7,10 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import SocialLinks from '.';
 
+const eventTrackingData = {
+  componentName: 'social-links',
+};
+
 const mockSummaries: Summary[] = [
   {
     type: 'link',
@@ -36,7 +40,11 @@ const socialLinksId = 'social-links-1';
 describe('SocialLinks', () => {
   it('should render section correctly', () => {
     const { getByRole } = render(
-      <SocialLinks title="Social Links" summaries={mockSummaries} />,
+      <SocialLinks
+        title="Social Links"
+        summaries={mockSummaries}
+        eventTrackingData={eventTrackingData}
+      />,
     );
 
     const section = getByRole('region');
@@ -46,13 +54,23 @@ describe('SocialLinks', () => {
 
   it('should return null if no summaries are passed', () => {
     const { container } = render(
-      <SocialLinks title="Social Links" summaries={[]} />,
+      <SocialLinks
+        title="Social Links"
+        summaries={[]}
+        eventTrackingData={eventTrackingData}
+      />,
     );
     expect(container.firstChild).toBeNull();
   });
 
   it('renders a single h2 heading with correct content', () => {
-    render(<SocialLinks title="Social Links" summaries={mockSummaries} />);
+    render(
+      <SocialLinks
+        title="Social Links"
+        summaries={mockSummaries}
+        eventTrackingData={eventTrackingData}
+      />,
+    );
     const headers = screen.getAllByRole('heading', { level: 2 });
     expect(headers.length).toBe(1);
     expect(headers[0]).toHaveAttribute('id', socialLinksId);
@@ -81,14 +99,16 @@ describe('SocialLinks', () => {
 
   it('renders correct links', () => {
     render(<SocialLinks title="Social Links" summaries={mockSummaries} />);
+    const links = screen.getAllByRole('link');
+    expect(links.length).toBe(mockSummaries.length);
 
-    mockSummaries.forEach(summary => {
-      const link = screen.getByText(summary.title).closest('a');
-      expect(link).toHaveAttribute('href', summary.link);
-      expect(link).toHaveTextContent(summary.title);
+    mockSummaries.forEach((summary, index) => {
+      expect(links[index]).toHaveAttribute('href', summary.link);
 
-      if (link && summary.description) {
-        const visuallyHiddenText = link.querySelector(
+      expect(links[index]).toHaveTextContent(summary.title);
+
+      if (summary.description) {
+        const visuallyHiddenText = links[index].querySelector(
           '[class*="visuallyHiddenText"]',
         );
         expect(visuallyHiddenText).toHaveTextContent(summary.description);

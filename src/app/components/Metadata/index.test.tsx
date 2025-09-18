@@ -9,6 +9,8 @@ import {
   LIVE_RADIO_PAGE,
   AUDIO_PAGE,
   TV_PAGE,
+  LIVE_PAGE,
+  MEDIA_ARTICLE_PAGE,
 } from '#app/routes/utils/pageTypes';
 import {
   articleDataNews,
@@ -27,7 +29,7 @@ import { render, waitFor } from '../react-testing-library-with-providers';
 import services from '../../../server/utilities/serviceConfigs';
 import { getAuthorTwitterHandle } from '../Byline/utilities';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import MetadataContainer from './index';
+import MetadataContainer, { OG_EXPERIMENT_SERVICES } from './index';
 import { MetadataProps } from './types';
 
 const dotComOrigin = 'https://www.bbc.com';
@@ -1088,7 +1090,7 @@ describe('Metadata', () => {
           bbcOrigin={dotComOrigin}
           platform="canonical"
           id="news-53577781"
-          pageType={ARTICLE_PAGE}
+          pageType={STORY_PAGE}
           pathname="/ukrainian/news-53577781"
           description="BBC Ukrainian"
           openGraphType="website"
@@ -1107,7 +1109,7 @@ describe('Metadata', () => {
           bbcOrigin={dotComOrigin}
           platform="amp"
           id="news-53577781"
-          pageType={ARTICLE_PAGE}
+          pageType={STORY_PAGE}
           pathname="/ukrainian/news-53577781.amp"
           description="BBC Ukrainian"
           openGraphType="website"
@@ -1126,7 +1128,7 @@ describe('Metadata', () => {
           bbcOrigin={dotComOrigin}
           platform="canonical"
           id="news-53577781"
-          pageType={ARTICLE_PAGE}
+          pageType={STORY_PAGE}
           pathname="/ukrainian/news-53577781"
           description="BBC Ukrainian"
           openGraphType="website"
@@ -1145,7 +1147,7 @@ describe('Metadata', () => {
           bbcOrigin={dotComOrigin}
           platform="amp"
           id="news-53577781"
-          pageType={ARTICLE_PAGE}
+          pageType={STORY_PAGE}
           pathname="/ukrainian/news-53577781.amp"
           description="BBC Ukrainian"
           openGraphType="website"
@@ -1232,5 +1234,130 @@ describe('Metadata', () => {
         ).not.toBeInTheDocument();
       },
     );
+  });
+
+  describe('Opengraph Image Experiment', () => {
+    beforeEach(() => {
+      delete process.env.SIMORGH_APP_ENV;
+    });
+
+    const getOgImageTag = () => {
+      const metaTags = Helmet.peek()?.metaTags;
+      // @ts-expect-error - property does exist on Helmet meta tags
+      return metaTags?.find(tag => tag.property === 'og:image');
+    };
+
+    OG_EXPERIMENT_SERVICES.forEach(service => {
+      describe(`for ${service} service`, () => {
+        it.each`
+          env        | pageType              | pathName                      | expectedUrl
+          ${'local'} | ${ARTICLE_PAGE}       | ${`/${service}/c0000000001o`} | ${`http://localhost:7081/${service}/og/c0000000001o`}
+          ${'test'}  | ${ARTICLE_PAGE}       | ${`/${service}/c0000000001o`} | ${`https://web-cdn.test.api.bbci.co.uk/${service}/og/c0000000001o`}
+          ${'local'} | ${MEDIA_ARTICLE_PAGE} | ${`/${service}/c0000000001o`} | ${`http://localhost:7081/${service}/og/c0000000001o`}
+          ${'test'}  | ${MEDIA_ARTICLE_PAGE} | ${`/${service}/c0000000001o`} | ${`https://web-cdn.test.api.bbci.co.uk/${service}/og/c0000000001o`}
+          ${'local'} | ${LIVE_PAGE}          | ${`/${service}/c0000000001t`} | ${`http://localhost:7081/${service}/og/c0000000001t`}
+          ${'test'}  | ${LIVE_PAGE}          | ${`/${service}/c0000000001t`} | ${`https://web-cdn.test.api.bbci.co.uk/${service}/og/c0000000001t`}
+        `(
+          `should return the Opengraph image API url for $pageType page on $env Env`,
+          ({ env, pageType, pathName, expectedUrl }) => {
+            process.env.SIMORGH_APP_ENV = env;
+
+            render(
+              // @ts-expect-error - testing with subset of data
+              <MetadataWithContext
+                service={service as Services}
+                bbcOrigin={dotCoDotUKOrigin}
+                pageType={pageType}
+                pathname={pathName}
+              />,
+            );
+
+            const ogImageTag = getOgImageTag();
+
+            expect(ogImageTag?.content).toEqual(expectedUrl);
+          },
+        );
+
+        it(`should return the default image if on Live Env`, () => {
+          process.env.SIMORGH_APP_ENV = 'live';
+
+          render(
+            // @ts-expect-error - testing with subset of data
+            <MetadataWithContext
+              service={service as Services}
+              bbcOrigin={dotCoDotUKOrigin}
+              pageType={ARTICLE_PAGE}
+              pathname={`/${service}/c0000000001o`}
+            />,
+          );
+
+          const ogImageTag = getOgImageTag();
+
+          expect(ogImageTag?.content).toEqual(
+            `https://news.files.bbci.co.uk/ws/img/logos/og/${service}.png`,
+          );
+        });
+
+        it(`should return the default image if the id cannot be determined from the pathname`, () => {
+          process.env.SIMORGH_APP_ENV = 'test';
+
+          render(
+            // @ts-expect-error - testing with subset of data
+            <MetadataWithContext
+              service={service as Services}
+              bbcOrigin={dotCoDotUKOrigin}
+              pageType={ARTICLE_PAGE}
+              pathname={`/${service}/c000000001o`} // Malformed Article ID
+            />,
+          );
+
+          const ogImageTag = getOgImageTag();
+
+          expect(ogImageTag?.content).toEqual(
+            `https://news.files.bbci.co.uk/ws/img/logos/og/${service}.png`,
+          );
+        });
+      });
+    });
+
+    it('should return the default image if service is not in the experiment', () => {
+      process.env.SIMORGH_APP_ENV = 'test';
+
+      render(
+        // @ts-expect-error - testing with subset of data
+        <MetadataWithContext
+          service="pidgin"
+          bbcOrigin={dotCoDotUKOrigin}
+          pageType={ARTICLE_PAGE}
+          pathname="/pidgin/c0000000001o"
+        />,
+      );
+
+      const ogImageTag = getOgImageTag();
+
+      expect(ogImageTag?.content).toEqual(
+        'https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png',
+      );
+    });
+
+    it('should return the default image if page type is not in the experiment', () => {
+      process.env.SIMORGH_APP_ENV = 'test';
+
+      render(
+        // @ts-expect-error - testing with subset of data
+        <MetadataWithContext
+          service="mundo"
+          bbcOrigin={dotCoDotUKOrigin}
+          pageType={STORY_PAGE}
+          pathname="/mundo/c0000000001o"
+        />,
+      );
+
+      const ogImageTag = getOgImageTag();
+
+      expect(ogImageTag?.content).toEqual(
+        'https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png',
+      );
+    });
   });
 });

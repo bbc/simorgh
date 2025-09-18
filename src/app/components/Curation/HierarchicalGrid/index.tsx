@@ -1,9 +1,12 @@
 /* eslint-disable jsx-a11y/aria-role */
 /** @jsx jsx */
+/* @jsxFrag React.Fragment */
 import { use } from 'react';
 import { css, jsx, Theme } from '@emotion/react';
 import moment from 'moment';
 import path from 'ramda/src/path';
+import isMediaType from '#app/lib/utilities/isMedia';
+import { ReadTime } from '#app/components/ReadTime';
 import useClickTrackerHandler from '../../../hooks/useClickTrackerHandler';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import formatDuration from '../../../lib/utilities/formatDuration';
@@ -38,6 +41,7 @@ const HiearchicalGrid = ({
   headingLevel,
   isFirstCuration,
   eventTrackingData,
+  readTimeVariant,
 }: CurationGridProps) => {
   const { isAmp } = use(RequestContext);
   const { translations } = use(ServiceContext);
@@ -86,9 +90,7 @@ const HiearchicalGrid = ({
             isFirstPromo && isFirstCuration ? 'high' : undefined;
           const showDuration =
             promo.duration && ['video', 'audio'].includes(promo.type);
-          const isMedia = ['video', 'audio', 'photogallery'].includes(
-            promo.type,
-          );
+          const isMedia = isMediaType(promo.type);
           const typeTranslated =
             (promo.type === 'audio' && `${audioTranslation}, `) ||
             (promo.type === 'video' && `${videoTranslation}, `) ||
@@ -96,9 +98,12 @@ const HiearchicalGrid = ({
           const { isLive } = promo;
 
           const promoEventTrackingData = buildPromoEventTrackingData(promo, i);
-          const clickTrackerHandler = getClickTrackerHandler(
-            promoEventTrackingData,
-          );
+          const clickTrackerHandler = getClickTrackerHandler({
+            ...promoEventTrackingData,
+            sendOptimizelyEvents: true,
+            experimentName: 'newswb_ws_homepage_read_time',
+            experimentVariant: readTimeVariant,
+          });
 
           return (
             <li
@@ -170,9 +175,18 @@ const HiearchicalGrid = ({
                   {promo.description}
                 </Promo.Body>
                 {!isLive ? (
-                  <Promo.Timestamp className="promo-timestamp">
-                    {promo.lastPublished}
-                  </Promo.Timestamp>
+                  <div className="timestamp-read-time-container">
+                    <Promo.Timestamp className="promo-timestamp" showPrefix>
+                      {promo.lastPublished}
+                    </Promo.Timestamp>
+                    {/* EXPERIMENT: Read Time */}
+                    <ReadTime
+                      className="hierachical-read-time"
+                      readTimeValue={promo.readTime}
+                      promoId={promo.id}
+                      readTimeVariant={readTimeVariant}
+                    />
+                  </div>
                 ) : null}
               </Promo>
             </li>

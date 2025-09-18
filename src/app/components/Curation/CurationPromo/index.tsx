@@ -8,6 +8,8 @@ import formatDuration from '#app/lib/utilities/formatDuration';
 import Promo from '#components/Promo';
 import { Summary } from '#app/models/types/curationData';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import isMediaType from '#app/lib/utilities/isMedia';
+import { ReadTime } from '#app/components/ReadTime';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
@@ -28,7 +30,9 @@ const CurationPromo = ({
   duration: mediaDuration,
   headingLevel = 2,
   isLive,
+  readTime,
   eventTrackingData,
+  readTimeVariant,
 }: Summary) => {
   const { isAmp, isLite } = use(RequestContext);
   const { translations } = use(ServiceContext);
@@ -45,13 +49,18 @@ const CurationPromo = ({
   const durationString = `, ${durationTranslation} ${formattedDuration}`;
 
   const showDuration = mediaDuration && ['video', 'audio'].includes(type);
-  const isMedia = ['video', 'audio', 'photogallery'].includes(type);
+  const isMedia = isMediaType(type);
   const typeTranslated =
     (type === 'audio' && `${audioTranslation}, `) ||
     (type === 'video' && `${videoTranslation}, `) ||
     (type === 'photogallery' && `${photoGalleryTranslation}, `);
 
-  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+  const clickTrackerHandler = useClickTrackerHandler({
+    ...eventTrackingData,
+    sendOptimizelyEvents: true,
+    experimentName: 'newswb_ws_homepage_read_time',
+    experimentVariant: readTimeVariant,
+  });
 
   return (
     <Promo css={styles.promo} className="">
@@ -89,12 +98,17 @@ const CurationPromo = ({
           </Promo.A>
         )}
       </Promo.Heading>
-
       {!isLive ? (
-        <Promo.Timestamp className="promo-timestamp">
+        <Promo.Timestamp className="promo-timestamp" showPrefix>
           {lastPublished}
         </Promo.Timestamp>
       ) : null}
+      {/* EXPERIMENT: Read Time */}
+      <ReadTime
+        readTimeValue={readTime}
+        promoId={id}
+        readTimeVariant={readTimeVariant}
+      />
     </Promo>
   );
 };

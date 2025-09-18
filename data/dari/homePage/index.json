@@ -477,6 +477,106 @@
         "title": "برنامه‌های رادیو",
         "visualProminence": "NORMAL",
         "visualStyle": "COLLECTION"
+      },
+      {
+        "mediaCollection": [
+          {
+            "type": "liveMedia",
+            "model": {
+              "urn": "urn:bbc:pips:sid:bbc_arabic_tv",
+              "title": "08/09/2025 15:00 GMT",
+              "type": "episode",
+              "synopses": {
+                "short": "نشرة خاصة بوسائل التواصل الاجتماعي",
+                "medium": "نشرة خاصة بوسائل التواصل الاجتماعي",
+                "long": "نشرة خاصة بوسائل التواصل الاجتماعي"
+              },
+              "mediaType": "audio_video",
+              "imageUrlTemplate": "https://ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png",
+              "masterbrand": {
+                "id": "bbc_arabic_tv",
+                "name": "تلفزيون بي بي سي عربي",
+                "networkName": "تلفزيون بي بي سي عربي",
+                "type": "tv",
+                "imageUrlTemplate": "ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png"
+              },
+              "version": {
+                "vpid": "n4pdmd48l3",
+                "duration": "PT30M",
+                "availabilityType": "simulcast",
+                "versionTypes": [
+                  {
+                    "type": "Original",
+                    "name": "Original version"
+                  }
+                ],
+                "schedule": null,
+                "serviceId": "bbc_arabic_tv",
+                "authToken": null,
+                "status": "LIVE",
+                "warnings": null
+              },
+              "leadMedia": true
+            }
+          }
+        ],
+        "curationId": "urn:bbc:tipo:list:105b7867-4ce7-4682-9fdb-c9c97c8bafdb",
+        "curationType": "tipo-curation",
+        "position": 5,
+        "title": "Arabic TV Stream",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE",
+        "intent": "MEDIA_PLAYER"
+      },
+      {
+        "mediaCollection": [
+          {
+            "type": "liveMedia",
+            "model": {
+              "urn": "urn:bbc:pips:sid:bbc_persian_tv",
+              "title": "05/09/2025 23:30 GMT",
+              "type": "episode",
+              "synopses": {
+                "short": "دستچین بهترین گزارش‌های تهیه شده توسط خبرنگاران بی‌بی‌سی فارسی.",
+                "medium": "دستچین بهترین گزارش‌های تهیه شده توسط خبرنگاران بی‌بی‌سی فارسی.",
+                "long": "برنامه خبرنگاران هر شنبه مجموعه‌ای از بهترین گزارش‌های تهیه شده توسط خبرنگاران بی‌بی‌سی فارسی در لندن و شهرهای دیگر جهان را ارائه می‌دهد."
+              },
+              "mediaType": "audio_video",
+              "imageUrlTemplate": "https://ichef.bbci.co.uk/images/ic/$recipe/p061c4nc.jpg",
+              "masterbrand": {
+                "id": "bbc_persian_tv",
+                "name": "BBC Persian TV",
+                "networkName": "BBC Persian TV",
+                "type": "tv",
+                "imageUrlTemplate": "ichef.bbci.co.uk/images/ic/$recipe/p08b21g3.png"
+              },
+              "version": {
+                "vpid": "n4pdm49gqv",
+                "duration": "PT30M",
+                "availabilityType": "simulcast",
+                "versionTypes": [
+                  {
+                    "type": "Original",
+                    "name": "Original version"
+                  }
+                ],
+                "schedule": null,
+                "serviceId": "bbc_persian_tv",
+                "authToken": null,
+                "status": "LIVE",
+                "warnings": null
+              },
+              "overtypedTitle": "BBC Persian TV"
+            }
+          }
+        ],
+        "curationId": "urn:bbc:tipo:list:7aa12492-4236-4190-8161-5b109355e94f",
+        "curationType": "tipo-curation",
+        "position": 6,
+        "title": "Persian TV Stream",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE",
+        "intent": "MEDIA_PLAYER"
       }
     ],
     "metadata": {

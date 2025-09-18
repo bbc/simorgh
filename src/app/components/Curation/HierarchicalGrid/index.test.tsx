@@ -12,6 +12,15 @@ describe('Hierarchical Grid Curation', () => {
   suppressPropWarnings(['children', 'string', 'MediaIcon']);
 
   const headingLevel = 2;
+
+  beforeAll(() => {
+    jest.useFakeTimers().setSystemTime(new Date('2025-09-16T11:34:20.000Z'));
+  });
+
+  afterAll(() => {
+    jest.useRealTimers();
+  });
+
   it('renders twelve promos when twelve items are provided', async () => {
     render(
       <HierarchicalGrid
@@ -50,10 +59,11 @@ describe('Hierarchical Grid Curation', () => {
   });
 
   it('returns null when less than three promos are in the data', async () => {
+    const splicedFixture = [...fixture].splice(0, 2);
     render(
       <HierarchicalGrid
         headingLevel={headingLevel}
-        summaries={fixture.splice(0, 2)}
+        summaries={splicedFixture}
         eventTrackingData={minimalEventTrackingData}
       />,
     );
@@ -118,6 +128,21 @@ describe('Hierarchical Grid Curation', () => {
     expect(getByText('29 julio 2023')).toBeInTheDocument();
   });
 
+  it('for articles pushed under 10 hours ago, it should render the last published date in a relative format', async () => {
+    const { container } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={mediaFixture}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+      {
+        service: 'mundo',
+      },
+    );
+    const timestampText = container.querySelectorAll('time')?.[2].innerHTML;
+    expect(timestampText).toBe('Publicado hace 34 minutos');
+  });
+
   it('should use role text when using nested spans', async () => {
     render(
       <HierarchicalGrid
@@ -169,5 +194,33 @@ describe('Hierarchical Grid Curation', () => {
       },
     );
     expect(container.queryByText('13 noviembre 2022')).not.toBeInTheDocument();
+  });
+
+  it('should display read time when readTime is provided in summary data', () => {
+    const fixtureDataIncludingReadTime = fixture.map(fixtureSummary => ({
+      ...fixtureSummary,
+      readTime: 5,
+    }));
+
+    const container = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={fixtureDataIncludingReadTime}
+        eventTrackingData={minimalEventTrackingData}
+        readTimeVariant="variant1"
+      />,
+    );
+    expect(container.queryAllByTestId('read-time').length).toBe(12);
+  });
+
+  it('should not display read time when readTime is not provided in summary data', () => {
+    const container = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={fixture}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+    );
+    expect(container.queryAllByTestId('read-time').length).toBe(0);
   });
 });

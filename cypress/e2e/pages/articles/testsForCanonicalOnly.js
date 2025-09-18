@@ -1,9 +1,8 @@
 /* eslint-disable import/prefer-default-export */
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
-import envConfig from '../../../support/config/envs';
-import appToggles from '../../../support/helpers/useAppToggles';
 import { getBlockData, getBlockByType, getVideoEmbedUrl } from './helpers';
 import runIfToggleEnabled from '../../../support/helpers/runIfToggleEnabled';
+import chartbeatTests from '../../../support/helpers/chartbeatTests';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasCaption = service => service === 'news';
@@ -11,18 +10,7 @@ const serviceHasCaption = service => service === 'news';
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export default ({ service, pageType, variant = 'default' }) =>
   describe(`Canonical Tests for ${service} ${pageType}`, () => {
-    if (appToggles.chartbeatAnalytics.enabled) {
-      describe('Chartbeat', () => {
-        if (envConfig.chartbeatEnabled) {
-          it('should have a script with src value set to chartbeat source', () => {
-            cy.hasScriptWithChartbeatSrc();
-          });
-          it('should have chartbeat config set to window object', () => {
-            cy.hasGlobalChartbeatConfig();
-          });
-        }
-      });
-    }
+    chartbeatTests();
 
     if (serviceHasCaption(service)) {
       describe('Image with placeholder', () => {
@@ -172,10 +160,8 @@ export default ({ service, pageType, variant = 'default' }) =>
                 .click();
               cy.get('[data-e2e="media-player"]').should('be.visible');
 
-              cy.testResponseCodeAndTypeRetry({
-                path: embedUrl,
-                responseCode: 200,
-                type: 'text/html',
+              cy.testResponseCodeAndRetry({
+                url: embedUrl,
                 allowFallback: true,
               });
             }

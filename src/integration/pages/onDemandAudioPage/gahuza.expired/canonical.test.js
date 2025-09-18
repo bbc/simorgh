@@ -21,6 +21,6 @@ describe('Canonical', () => {
     runRecentEpisodesTests();
     runCoreCanonicalTests();
     runCanonicalAnalyticsTests();
-    runRadioScheduleTests(pageType);
+    runRadioScheduleTests();
   });
 });

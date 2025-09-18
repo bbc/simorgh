@@ -38,6 +38,11 @@ const CollapsibleNavigation = ({
     } else {
       activeNavItemRef.current = e.currentTarget;
       setOpenSection(section.id);
+
+      setTimeout(() => {
+        const subNavElement = document.getElementById(section.id);
+        subNavElement?.focus({ preventScroll: true });
+      }, 200);
     }
   };
 
@@ -91,6 +96,8 @@ const CollapsibleNavigation = ({
                   css={[styles.subNav, !isHydrated && styles.subNavNoJs]}
                   role="region"
                   aria-labelledby={subNavigationTitleId}
+                  tabIndex={-1}
+                  className="focusIndicatorRemove"
                 >
                   <div css={styles.subNavHeader}>
                     <Heading
@@ -124,7 +131,10 @@ const CollapsibleNavigation = ({
                           <a
                             href={link.href}
                             css={styles.subNavLink}
-                            aria-labelledby={linkLabelId}
+                            {...(link?.lang && { lang: link.lang })}
+                            {...(link?.latinTransliteration && {
+                              'aria-label': link?.latinTransliteration,
+                            })}
                           >
                             <span id={linkLabelId}>{link.label}</span>
                           </a>

@@ -537,6 +537,10 @@ const preview: Preview = {
             value: { service: 'ukrainian', variant: 'ru-UA' },
             title: 'ukrainian-ru-UA',
           },
+          {
+            value: { service: 'ws', variant: 'default' },
+            title: 'ws',
+          },
         ],
         dynamicTitle: true,
       },
