@@ -3,7 +3,7 @@ import { jsx, useTheme } from '@emotion/react';
 import { use } from 'react';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
-import { PageTypes, Services } from '#app/models/types/global';
+import { Environments, PageTypes, Services } from '#app/models/types/global';
 import {
   getArticleId,
   getTipoId,
@@ -14,6 +14,7 @@ import {
   LIVE_PAGE,
   MEDIA_ARTICLE_PAGE,
 } from '#app/routes/utils/pageTypes';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import {
   getIconAssetUrl,
@@ -62,6 +63,12 @@ const OG_EXPERIMENT_PAGETYPES: PageTypes[] = [
   LIVE_PAGE,
 ];
 
+const CDN_URLS: Record<Environments, string> = {
+  local: 'http://localhost:7081',
+  test: 'https://web-cdn.test.api.bbci.co.uk',
+  live: 'https://web-cdn.api.bbci.co.uk',
+};
+
 const getSocialShareImage = ({
   metaImage,
   pageType,
@@ -84,11 +91,7 @@ const getSocialShareImage = ({
   // Fallback to 'metaImage' if no id can be determined
   if (!id) return metaImage;
 
-  const CDN_URL = {
-    local: 'http://localhost:7081',
-    test: 'https://web-cdn.test.api.bbci.co.uk',
-    live: 'https://web-cdn.api.bbci.co.uk',
-  }[process.env.SIMORGH_APP_ENV as string];
+  const CDN_URL = CDN_URLS[getEnvConfig().SIMORGH_APP_ENV];
 
   return `${CDN_URL}/${service}/og/${id}`;
 };
