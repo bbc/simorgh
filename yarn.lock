@@ -2862,19 +2862,49 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hapi/hoek@npm:^9.0.0, @hapi/hoek@npm:^9.3.0":
-  version: 9.3.0
-  resolution: "@hapi/hoek@npm:9.3.0"
-  checksum: 10/ad83a223787749f3873bce42bd32a9a19673765bf3edece0a427e138859ff729469e68d5fdf9ff6bbee6fb0c8e21bab61415afa4584f527cfc40b59ea1957e70
+"@hapi/address@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "@hapi/address@npm:5.1.1"
+  dependencies:
+    "@hapi/hoek": "npm:^11.0.2"
+  checksum: 10/9462b22f96f1081a07b3bb07f046c5fdfa1940805b3433476f56c0df3b8eded026f62a2e8395534a14a48f689757f9eb8b44c0c4360d96a12ad34ff21989a534
   languageName: node
   linkType: hard
 
-"@hapi/topo@npm:^5.1.0":
-  version: 5.1.0
-  resolution: "@hapi/topo@npm:5.1.0"
+"@hapi/formula@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "@hapi/formula@npm:3.0.2"
+  checksum: 10/c6d4fdcd19fdeb02f0995174497b69ca1f2d534d9f55d512b404ce78a3ce4c53618d4c339fb708c812de4ad1db49122cef960eb1d2cc17e284aa9a7ce4283e2b
+  languageName: node
+  linkType: hard
+
+"@hapi/hoek@npm:^11.0.2, @hapi/hoek@npm:^11.0.7":
+  version: 11.0.7
+  resolution: "@hapi/hoek@npm:11.0.7"
+  checksum: 10/d0cbacf2edcedac1f06dd1d731c1f8c83ef32f2432630c4b1ebe119729cbf79e3da69fa3e5991f19d80e344f5d246b03b7e96998a032940e18bfda7ba2a56f0e
+  languageName: node
+  linkType: hard
+
+"@hapi/pinpoint@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@hapi/pinpoint@npm:2.0.1"
+  checksum: 10/28e72305c13de10893be33273cd33c7d7b1c89cfcf707de5a7e214b08f8e3c440adf7df0ff1c9ab4d86744eefdab3ae549456b641f66a2af47ed862f764d6c49
+  languageName: node
+  linkType: hard
+
+"@hapi/tlds@npm:^1.1.1":
+  version: 1.1.3
+  resolution: "@hapi/tlds@npm:1.1.3"
+  checksum: 10/4e1a3fcec7c403d1ece5057c223da0d9d63ef5acd53a3aed407080a6d19d415cef25ce8920e1d5550e3462f9f64d539bb45c76ae60762935445fe9195b34d9c3
+  languageName: node
+  linkType: hard
+
+"@hapi/topo@npm:^6.0.2":
+  version: 6.0.2
+  resolution: "@hapi/topo@npm:6.0.2"
   dependencies:
-    "@hapi/hoek": "npm:^9.0.0"
-  checksum: 10/084bfa647015f4fd3fdd51fadb2747d09ef2f5e1443d6cbada2988b0c88494f85edf257ec606c790db146ac4e34ff57f3fcb22e3299b8e06ed5c87ba7583495c
+    "@hapi/hoek": "npm:^11.0.2"
+  checksum: 10/ef959d3796638e11e5f7a9f2a64295ded7c638d6a21fa37bf1265b14c3a6636da593c9976138826c5b8972830a706d18a82b489e3d902e77026f7f0bec908704
   languageName: node
   linkType: hard
 
@@ -3919,29 +3949,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sideway/address@npm:^4.1.5":
-  version: 4.1.5
-  resolution: "@sideway/address@npm:4.1.5"
-  dependencies:
-    "@hapi/hoek": "npm:^9.0.0"
-  checksum: 10/c4c73ac0339504f34e016d3a687118e7ddf197c1c968579572123b67b230be84caa705f0f634efdfdde7f2e07a6e0224b3c70665dc420d8bc95bf400cfc4c998
-  languageName: node
-  linkType: hard
-
-"@sideway/formula@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "@sideway/formula@npm:3.0.1"
-  checksum: 10/8d3ee7f80df4e5204b2cbe92a2a711ca89684965a5c9eb3b316b7051212d3522e332a65a0bb2a07cc708fcd1d0b27fcb30f43ff0bcd5089d7006c7160a89eefe
-  languageName: node
-  linkType: hard
-
-"@sideway/pinpoint@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@sideway/pinpoint@npm:2.0.0"
-  checksum: 10/1ed21800128b2b23280ba4c9db26c8ff6142b97a8683f17639fd7f2128aa09046461574800b30fb407afc5b663c2331795ccf3b654d4b38fa096e41a5c786bf8
-  languageName: node
-  linkType: hard
-
 "@sinclair/typebox@npm:^0.27.8":
   version: 0.27.8
   resolution: "@sinclair/typebox@npm:0.27.8"
@@ -3978,6 +3985,13 @@ __metadata:
   dependencies:
     "@sinonjs/commons": "npm:^3.0.1"
   checksum: 10/11ee417968fc4dce1896ab332ac13f353866075a9d2a88ed1f6258f17cc4f7d93e66031b51fcddb8c203aa4d53fd980b0ae18aba06269f4682164878a992ec3f
+  languageName: node
+  linkType: hard
+
+"@standard-schema/spec@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@standard-schema/spec@npm:1.0.0"
+  checksum: 10/aee780cc1431888ca4b9aba9b24ffc8f3073fc083acc105e3951481478a2f4dc957796931b2da9e2d8329584cf211e4542275f188296c1cdff3ed44fd93a8bc8
   languageName: node
   linkType: hard
 
@@ -6248,14 +6262,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^1.11.0":
-  version: 1.11.0
-  resolution: "axios@npm:1.11.0"
+"axios@npm:^1.12.1":
+  version: 1.12.2
+  resolution: "axios@npm:1.12.2"
   dependencies:
     follow-redirects: "npm:^1.15.6"
     form-data: "npm:^4.0.4"
     proxy-from-env: "npm:^1.1.0"
-  checksum: 10/232df4af7a4e4e07baa84621b9cc4b0c518a757b4eacc7f635c0eb3642cb98dff347326739f24b891b3b4481b7b838c79a3a0c4819c9fbc1fc40232431b9c5dc
+  checksum: 10/886a79770594eaad76493fecf90344b567bd956240609b5dcd09bd0afe8d3e6f1ad6d3257a93a483b6192b409d4b673d9515a34619e3e3ed1b2c0ec2a83b20ba
   languageName: node
   linkType: hard
 
@@ -12195,16 +12209,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"joi@npm:^17.13.3":
-  version: 17.13.3
-  resolution: "joi@npm:17.13.3"
+"joi@npm:^18.0.1":
+  version: 18.0.1
+  resolution: "joi@npm:18.0.1"
   dependencies:
-    "@hapi/hoek": "npm:^9.3.0"
-    "@hapi/topo": "npm:^5.1.0"
-    "@sideway/address": "npm:^4.1.5"
-    "@sideway/formula": "npm:^3.0.1"
-    "@sideway/pinpoint": "npm:^2.0.0"
-  checksum: 10/4c150db0c820c3a52f4a55c82c1fc5e144a5b5f4da9ffebc7339a15469d1a447ebb427ced446efcb9709ab56bd71a06c4c67c9381bc1b9f9ae63fc7c89209bdf
+    "@hapi/address": "npm:^5.1.1"
+    "@hapi/formula": "npm:^3.0.2"
+    "@hapi/hoek": "npm:^11.0.7"
+    "@hapi/pinpoint": "npm:^2.0.1"
+    "@hapi/tlds": "npm:^1.1.1"
+    "@hapi/topo": "npm:^6.0.2"
+    "@standard-schema/spec": "npm:^1.0.0"
+  checksum: 10/d8e391c0e93ca1e83836bd8eb3562004a038d5184e74b9e6c6877fc60c782cbc549dcaa003e41ddb12c10899be3c4da175e7dc290e9457e92f2f4d28b46094df
   languageName: node
   linkType: hard
 
@@ -15939,7 +15955,7 @@ __metadata:
     typescript: "npm:5.9.2"
     undici: "npm:7.16.0"
     url-parse: "npm:1.5.10"
-    wait-on: "npm:8.0.4"
+    wait-on: "npm:9.0.0"
     webpack: "npm:5.101.3"
     webpack-bundle-analyzer: "npm:4.10.2"
     webpack-cli: "npm:6.0.1"
@@ -17707,18 +17723,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"wait-on@npm:8.0.4":
-  version: 8.0.4
-  resolution: "wait-on@npm:8.0.4"
+"wait-on@npm:9.0.0":
+  version: 9.0.0
+  resolution: "wait-on@npm:9.0.0"
   dependencies:
-    axios: "npm:^1.11.0"
-    joi: "npm:^17.13.3"
+    axios: "npm:^1.12.1"
+    joi: "npm:^18.0.1"
     lodash: "npm:^4.17.21"
     minimist: "npm:^1.2.8"
     rxjs: "npm:^7.8.2"
   bin:
     wait-on: bin/wait-on
-  checksum: 10/e48c562bebeeaac5aedabe0ed6983eea973e3c9cc3843ee72b270b2fe6aba6034033498e0f7d233866076c17190af4c2601b1e682745e9f21c2b9da2744796e8
+  checksum: 10/bbdaceb2843d140f23c6e25cf6dfdffcbb8c8ab2781a19cadc4b65c53762901dd183ad61621790cf60598e868bbce338d5c523b1019ce18e156afa598fd7c2b2
   languageName: node
   linkType: hard
 
