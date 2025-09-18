@@ -138,7 +138,6 @@
   },
   "devDependencies": {
     "@babel/core": "7.28.4",
-    "@babel/eslint-parser": "7.28.4",
     "@babel/plugin-proposal-export-default-from": "7.27.1",
     "@babel/plugin-proposal-object-rest-spread": "7.20.7",
     "@babel/plugin-proposal-throw-expressions": "7.27.1",
