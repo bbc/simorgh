@@ -1,4 +1,5 @@
 import { STATIC_ATI_CLICK_TRACKING } from '#app/lib/analyticsUtils/analytics.const';
+import { fireEvent } from '#app/components/react-testing-library-with-providers';
 import clickTracking from '.';
 
 const createAnchor = ({
@@ -20,23 +21,11 @@ const createAnchor = ({
 };
 
 const dispatchClick = (targetElement: HTMLElement) => {
-  const event = new MouseEvent('click', {
-    view: window,
-    bubbles: true,
-    cancelable: true,
-  });
-  targetElement.dispatchEvent(event);
+  fireEvent.click(targetElement);
 };
 
 describe('Click tracking script', () => {
-  const originalWindowLocation = window.location;
-
   beforeAll(() => {
-    Object.defineProperty(window, 'location', {
-      value: {
-        assign: jest.fn(),
-      },
-    });
     clickTracking();
   });
 
@@ -46,14 +35,6 @@ describe('Click tracking script', () => {
       document.body.removeChild(document.body.firstChild);
     }
     window.processClientDeviceAndSendStaticBeacon = jest.fn();
-  });
-
-  afterAll(() => {
-    Object.defineProperty(window, 'location', {
-      value: {
-        ...originalWindowLocation,
-      },
-    });
   });
 
   it('STATIC_ATI_CLICK_TRACKING variable is correct', () => {
@@ -70,14 +51,13 @@ describe('Click tracking script', () => {
 
   it('Redirects all clicks', () => {
     const anchorElement = createAnchor({
-      href: '/gahuza',
+      href: '#gahuza',
       isLite: false,
     });
 
     dispatchClick(anchorElement);
 
-    const nextPageUrl = (window.location.assign as jest.Mock).mock.calls[0][0];
-    expect(nextPageUrl).toContain('/gahuza');
+    expect(window.location.toString()).toContain('gahuza');
   });
 
   it('Calls processClientDeviceAndSendStaticBeacon() with the right parameters', () => {
