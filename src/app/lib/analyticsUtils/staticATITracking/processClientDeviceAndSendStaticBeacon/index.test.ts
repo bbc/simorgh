@@ -117,15 +117,6 @@ describe('addProcessClientDeviceAndSendStaticBeaconToWindow script', () => {
   });
 
   describe('on lite pages', () => {
-    // global.jsdom?.reconfigure({ url: 'http://localhost/persian.lite' });
-    beforeEach(() => {
-      window.location.assign.mockReset();
-    });
-
-    afterEach(() => {
-      WindowHelper.resetWindow();
-    });
-
     it.each([
       {
         atiUrl: 'https://logws1363.ati-host.net/?',
