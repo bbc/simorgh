@@ -280,6 +280,7 @@ module.exports = ({
         filename: `${BUNDLE_TYPE}-loadable-stats-${APP_ENV}.json`,
         writeToDisk: true,
       }),
+      new MiniCssExtractPlugin(),
     ],
   };
 
