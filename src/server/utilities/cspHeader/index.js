@@ -1,4 +1,3 @@
-import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import isLiveEnv from '#lib/utilities/isLive';
 import { cspDirectives } from './directives';
 

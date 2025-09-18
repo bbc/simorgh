@@ -95,7 +95,8 @@ const renderDocument = async ({
   );
 
   const legacyScripts =
-    !isDev && legacyExtractor.getScriptElements(getScriptAttributes('legacy', nonce));
+    !isDev &&
+    legacyExtractor.getScriptElements(getScriptAttributes('legacy', nonce));
 
   const links = modernExtractor.getLinkElements(getLinkAttributes); // TODO investigate a way to conditionally preload modern/legacy scripts
 

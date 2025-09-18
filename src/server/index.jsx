@@ -201,7 +201,7 @@ const injectNonceHeader = (
   const nonceToggle = toggles.adsNonce;
   const adToggle = toggles.ads;
   if (!nonceToggle.enabled || !adToggle.enabled || !showAdsBasedOnLocation)
-    return;
+    return null;
 
   const countriesForNonce =
     nonceToggle.value
@@ -210,7 +210,7 @@ const injectNonceHeader = (
       .filter(Boolean) || [];
   const nonceEnabledForCountry =
     countriesForNonce?.length === 0 || countriesForNonce.includes(country);
-  if (!nonceEnabledForCountry) return;
+  if (!nonceEnabledForCountry) return null;
 
   const nonce = getUUID();
   res.set('x-nonce', nonce);
@@ -227,7 +227,7 @@ server.get(
     injectResourceHintsHeader,
     injectPlatformToRequestChainHeader,
   ],
-  async ({ url, query, headers, path: urlPath }, res, req) => {
+  async ({ url, query, headers, path: urlPath }, res) => {
     let derivedPageType = 'Unknown';
     let serverSideExperiments = [];
 
@@ -326,7 +326,7 @@ server.get(
           service,
           url,
           variant,
-          nonce: data.nonce,
+          nonce,
         });
       } catch (error) {
         const { message } = error;
@@ -361,7 +361,7 @@ server.get(
           service,
           url,
           variant,
-          nonce: data.nonce,
+          nonce,
         });
       }
 

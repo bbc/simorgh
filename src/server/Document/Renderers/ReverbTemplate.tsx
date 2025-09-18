@@ -1,12 +1,12 @@
 import React from 'react';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 
-const ReverbTemplate = ({ nonce }: { nonce?: string }) => {
+const ReverbTemplate = ({ nonce }: { nonce?: string | null }) => {
   const envConfig = getEnvConfig();
 
   return (
     <script
-      nonce={nonce}
+      {...(nonce ? { nonce } : {})}
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{
         __html: `

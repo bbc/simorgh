@@ -136,7 +136,6 @@ const PortraitVideoModal = ({
   blocks,
   onClose,
   selectedVideoIndex,
-  nonce,
   eventTrackingData,
 }: PortraitVideoModalProps) => {
   const {
@@ -268,7 +267,6 @@ const PortraitVideoModal = ({
             pluginLoaded: pluginLoadedCallback,
             fullscreenExit: onClose,
           }}
-          nonce={nonce}
         />
         <button
           ref={endOfContentButtonRef}

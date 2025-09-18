@@ -15,10 +15,13 @@ interface Props extends BaseRendererProps {
   legacyScripts: React.ReactElement;
   modernScripts: React.ReactElement;
   service?: string;
-  nonce?: string;
+  nonce?: string | null;
 }
 
-const showScripts = (scripts: React.ReactElement | React.ReactElement[], nonce: string | null) => {
+const showScripts = (
+  scripts: React.ReactElement | React.ReactElement[],
+  nonce?: string | null,
+) => {
   const scriptsArray = Array.isArray(scripts) ? scripts : [scripts];
   let scriptText = "const scriptcontainer = document.createElement('div');";
   scriptsArray.forEach((script: React.ReactElement) => {
@@ -62,7 +65,7 @@ const showScripts = (scripts: React.ReactElement | React.ReactElement[], nonce: 
         }`;
   return (
     <script
-      nonce={nonce}
+      {...(nonce ? { nonce } : {})}
       // This script should be the first script tag in the body, otherwise Opera Mini has trouble parsing the `window.SIMORGH_DATA` object
       dangerouslySetInnerHTML={{
         __html: scriptText,
@@ -105,14 +108,14 @@ export default function CanonicalRenderer({
           dangerouslySetInnerHTML={{ __html: styles }}
         />
         <script
-          nonce={nonce}
+          {...(nonce ? { nonce } : {})}
           dangerouslySetInnerHTML={{
             // Read env variables from the server and expose them to the client
             __html: `window.SIMORGH_ENV_VARS=${appEnvVariables}`,
           }}
         />
         <ComponentTracking
-          nonce={nonce}
+          {...(nonce ? { nonce } : {})}
           trackComponentViews={false}
           enableStaticClickTrackingOnOperaMiniOnly
         />
@@ -120,7 +123,7 @@ export default function CanonicalRenderer({
       <body>
         <div id="root" dangerouslySetInnerHTML={{ __html: html || '' }} />
         <script
-          nonce={nonce}
+          {...(nonce ? { nonce } : {})}
           // This script should be the first script tag in the body, otherwise Opera Mini has trouble parsing the `window.SIMORGH_DATA` object
           dangerouslySetInnerHTML={{
             __html: `window.SIMORGH_DATA=${serialisedData}`,
@@ -134,7 +137,7 @@ export default function CanonicalRenderer({
           {legacyScripts}
         </IfAboveIE9>
         <script
-          nonce={nonce}
+          {...(nonce ? { nonce } : {})}
           type="text/javascript"
           dangerouslySetInnerHTML={{
             __html: `document.documentElement.classList.remove("no-js");`,
