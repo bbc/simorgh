@@ -113,7 +113,11 @@ module.exports = ({
         },
         {
           test: /(?<!\.module)\.scss$/,
-          use: [IS_PROD ? MiniCssExtractPlugin.loader : 'style-loader', 'css-loader', 'sass-loader'],
+          use: [
+            IS_PROD ? MiniCssExtractPlugin.loader : 'style-loader',
+            'css-loader',
+            'sass-loader',
+          ],
         },
       ],
     },
