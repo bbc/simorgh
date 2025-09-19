@@ -131,7 +131,10 @@ const CollapsibleNavigation = ({
                           <a
                             href={link.href}
                             css={styles.subNavLink}
-                            aria-labelledby={linkLabelId}
+                            {...(link?.lang && { lang: link.lang })}
+                            {...(link?.latinTransliteration && {
+                              'aria-label': link?.latinTransliteration,
+                            })}
                           >
                             <span id={linkLabelId}>{link.label}</span>
                           </a>
