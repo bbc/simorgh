@@ -209,11 +209,19 @@ const PageLayoutWrapper = ({
         script={[
           {
             type: 'text/javascript',
-            nonce,
-            innerHTML: fontJs,
+            // WIP: TBC
+            innerHTML: `
+                (function() {
+                  if (window.__bbcScriptLoaded) return;
+                  window.__bbcScriptLoaded = true;                  
+                  ${fontJs}
+                })();
+            `,
+            nonce: nonce ?? undefined,
           },
         ]}
       />
+
       <Helmet>
         {nonce && (
           <meta
