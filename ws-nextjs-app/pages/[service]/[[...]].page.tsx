@@ -2,7 +2,7 @@ import React from 'react';
 import { GetServerSideProps } from 'next';
 import dynamic from 'next/dynamic';
 import logResponseTime from '#server/utilities/logResponseTime';
-import isLitePath from '#app/routes/utils/isLitePath';
+import getPathExtension from '#app/utilities/getPathExtension';
 import extractHeaders from '#server/utilities/extractHeaders';
 // AV Embeds
 import { AV_EMBEDS } from '#app/routes/utils/pageTypes';
@@ -44,7 +44,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     return handleAvRoute(context);
   }
 
-  const isLite = isLitePath(resolvedUrl);
+  const { isLite } = getPathExtension(resolvedUrl);
 
   logResponseTime(
     {
