@@ -8,7 +8,6 @@ import {
   getArticleId,
   getTipoId,
 } from '#app/routes/utils/constructPageFetchUrl';
-import isLive from '#app/lib/utilities/isLive';
 import {
   ARTICLE_PAGE,
   LIVE_PAGE,
@@ -80,9 +79,6 @@ const getSocialShareImage = ({
   pathname: string;
   service: Services;
 }) => {
-  // TODO: Remove to release experiment
-  if (isLive()) return metaImage;
-
   if (!OG_EXPERIMENT_SERVICES.includes(service)) return metaImage;
   if (!OG_EXPERIMENT_PAGETYPES.includes(pageType)) return metaImage;
 
