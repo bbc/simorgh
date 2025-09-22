@@ -54,12 +54,16 @@ const getPageType = (id: string) => {
   return null;
 };
 
-const NON_LATIN_SERVICES: Services[] = ['arabic', 'hindi'];
+const NON_LATIN_SERVICES: Services[] = ['arabic', 'hindi'] as const;
 
-const SVG_BADGES: {
-  arabic: Record<'Live' | 'MostRead' | 'TopStories', () => React.JSX.Element>;
-  hindi: Record<'Live' | 'MostRead' | 'TopStories', () => React.JSX.Element>;
-} = {
+type SVGBadgesMap = {
+  [S in (typeof NON_LATIN_SERVICES)[number]]: Record<
+    'Live' | 'MostRead' | 'TopStories',
+    () => React.ReactNode
+  >;
+};
+
+const SVG_BADGES = {
   arabic: {
     Live: ArabicLiveSVG,
     MostRead: ArabicMostReadSVG,
@@ -70,7 +74,7 @@ const SVG_BADGES: {
     MostRead: HindiMostReadSVG,
     TopStories: HindiTopStoriesSVG,
   },
-};
+} as SVGBadgesMap;
 
 const compressArrayBuffer = async (
   arrayBuffer: ArrayBuffer,
