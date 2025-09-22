@@ -208,6 +208,7 @@ describe('Hierarchical Grid Curation', () => {
         eventTrackingData={minimalEventTrackingData}
         readTimeVariant="variant1"
       />,
+      { service: 'mundo' },
     );
     expect(container.queryAllByTestId('read-time').length).toBe(12);
   });
@@ -251,6 +252,7 @@ describe('Hierarchical Grid Curation', () => {
         eventTrackingData={minimalEventTrackingData}
         readTimeVariant="variant1"
       />,
+      { service: 'mundo' },
     );
 
     expect(viewTrackerSpy).toHaveBeenCalledWith(
