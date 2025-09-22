@@ -86,6 +86,17 @@ const EXAMPLE_ROUTES = [
       lang: 'pcm',
     },
   },
+  {
+    route: '/ws/av-embeds/live/c7p765ynk9qt/p01thw20/pcm/amp',
+    expectedOutput: {
+      service: null,
+      platform: 'tipo',
+      assetId: 'c7p765ynk9qt',
+      mediaId: 'p01thw20',
+      lang: 'pcm',
+      isAmp: true,
+    },
+  },
 ];
 
 describe('parseRoute', () => {
