@@ -11,12 +11,12 @@ describe('ReadTime', () => {
     {
       variant: 'Minute variant',
       variantKey: 'below_headline_minutes_bold',
-      expectedCopy: 'Estimated Read Time: 4 minutes',
+      expectedCopy: 'Tiempo de lectura: 4 min',
     },
     {
       variant: 'Quick/Read variant',
       variantKey: 'below_timestamp_quick_long_bold',
-      expectedCopy: 'Quick Read',
+      expectedCopy: 'Lectura rápida',
     },
   ])(
     'should render $expectedCopy when readTime is supplied with a $variant variant',
@@ -27,6 +27,7 @@ describe('ReadTime', () => {
           promoId="12345"
           readTimeVariant={variantKey}
         />,
+        { service: 'mundo' },
       );
       expect(getByText(expectedCopy)).toBeInTheDocument();
     },
@@ -47,6 +48,7 @@ describe('ReadTime', () => {
           promoId="12345"
           readTimeVariant="minutes"
         />,
+        { service: 'mundo' },
       );
 
       const expected = {
