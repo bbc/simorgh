@@ -1,7 +1,7 @@
 import onClient from '#lib/utilities/onClient';
 
-jest.mock('#lib/utilities/onClient', () =>
-  jest.fn().mockImplementation(() => true),
+jest.mock('#app/lib/utilities/onClient', () =>
+  jest.fn().mockImplementation(() => false),
 );
 
 const mockUrl =
