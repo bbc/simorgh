@@ -10,7 +10,7 @@ const readTimeExperimentBigPromoStyles = {
   '& .timestamp-read-time-container': {
     display: 'flex',
     alignItems: 'center',
-    'flex-wrap': 'wrap',
+    flexWrap: 'wrap',
     '> .hierachical-read-time': {
       lineHeight: 0,
     },

@@ -142,10 +142,9 @@ export const ReadTime = ({
   // EXPERIMENT: Homepage Read Time
   const experimentEnabledServices = ['turkce', 'mundo'];
 
-  if (readTimeVariant === null && experimentEnabledServices.includes(service))
-    return <HomepagePlaceholder />;
+  if (!experimentEnabledServices.includes(service)) return null;
 
-  if (!validRender) return null;
+  if (readTimeVariant === null || !validRender) return <HomepagePlaceholder />;
 
   const { readTimeInMilliseconds, copy } = ProcessReadTime({
     readTimeValue: readTimeValue as number,
