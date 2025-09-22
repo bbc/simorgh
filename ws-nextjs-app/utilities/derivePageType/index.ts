@@ -1,5 +1,15 @@
 import { PageTypes } from '#app/models/types/global';
-import { AV_EMBEDS, DOWNLOADS_PAGE, LIVE_PAGE, UGC_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  ARTICLE_PAGE,
+  AV_EMBEDS,
+  DOWNLOADS_PAGE,
+  LIVE_PAGE,
+  UGC_PAGE,
+} from '#app/routes/utils/pageTypes';
+import {
+  isOptimoIdCheck,
+  isCpsIdCheck,
+} from '#app/routes/utils/constructPageFetchUrl';
 
 export default function derivePageType(
   pathname: string,
@@ -10,6 +20,8 @@ export default function derivePageType(
   if (sanitisedPathname.includes('send')) return UGC_PAGE;
   if (sanitisedPathname.includes('av-embeds')) return AV_EMBEDS;
   if (sanitisedPathname.includes('downloads')) return DOWNLOADS_PAGE;
+  if (isOptimoIdCheck(sanitisedPathname)) return ARTICLE_PAGE;
+  if (isCpsIdCheck(sanitisedPathname)) return ARTICLE_PAGE;
 
   return 'Unknown';
 }

@@ -39,9 +39,9 @@ const getTVAudioId = (path: string) => removeLeadingSlash(path);
 export const getTipoId = (path: string) =>
   path.match(/(c[a-zA-Z0-9]{10,}t)/)?.[1];
 const getUgcId = (path: string) => path.match(/(u[a-zA-Z0-9]{8,})/)?.[1];
-const isOptimoIdCheck = (path: string) =>
+export const isOptimoIdCheck = (path: string) =>
   /\/(articles|sgeulachdan|erthyglau)\/(c[a-zA-Z0-9]{10,}o)/.test(path);
-const isCpsIdCheck = (path: string) =>
+export const isCpsIdCheck = (path: string) =>
   /([0-9]{5,9}|[a-z0-9\-_]+-[0-9]{5,9})$/.test(path);
 const isTipoIdCheck = (path: string) => /(c[a-zA-Z0-9]{10,}t)/.test(path);
 
