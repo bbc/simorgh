@@ -35,7 +35,11 @@ const CurationGrid = ({
     promo => isHighImpact(promo) && !isMedia(promo.type),
   );
 
-  const buildPromoEventTrackingData = (promo: Summary, i: number) => ({
+  const buildPromoEventTrackingData = (
+    promo: Summary,
+    i: number,
+    { readTime }: { readTime?: number } = {},
+  ) => ({
     itemTracker: {
       type: 'simple-curation-grid-promo',
       text: promo.title,
@@ -44,6 +48,13 @@ const CurationGrid = ({
       ...(promo.type && { mediaType: promo.type }),
       ...(promo.duration && {
         duration: moment.duration(promo.duration, 'seconds').asMilliseconds(),
+      }),
+      ...(readTime && {
+        label:
+          readTime === 1
+            ? `Read time: ${readTime} minute`
+            : `Read time: ${readTime} minutes`,
+        duration: readTime * 60000,
       }),
     },
     ...eventTrackingData,
@@ -59,6 +70,7 @@ const CurationGrid = ({
       ...promo,
       lazy: !(isFirstPromo && isFirstCuration),
       eventTrackingData: buildPromoEventTrackingData(promo, index),
+      position: index,
     };
 
     if (!shouldUseHighImpact) {
