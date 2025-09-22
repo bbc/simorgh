@@ -147,7 +147,7 @@ const extractMediaDelimiter = (query: Query) => {
   return mediaDelimiter ?? null;
 };
 
-export default function parseAvRoute(resolvedUrl: string) {
+export default function parseRoute(resolvedUrl: string) {
   const resolvedUrlWithoutQuery = resolvedUrl.split('?')?.[0];
 
   const query = resolvedUrlWithoutQuery.split(/[/.]/).filter(Boolean);
