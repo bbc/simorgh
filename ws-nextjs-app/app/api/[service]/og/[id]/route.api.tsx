@@ -163,7 +163,7 @@ export async function GET(
     // If service is non-latin (currently Arabic and Hindi), use SVG badges as its more difficult to load fonts for these
     // RTL scripts are also not supported by the ImageResponse function
     if (NON_LATIN_SERVICES.includes(service)) {
-      const BadgeSVGs = SVG_BADGES[service as 'arabic' | 'hindi'];
+      const BadgeSVGs = SVG_BADGES[service];
 
       switch (true) {
         case isLive:
