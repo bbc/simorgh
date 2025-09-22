@@ -4,10 +4,6 @@ import { articleDataNews } from '#pages/ArticlePage/fixtureData';
 import styUkrainianAssetData from '#data/ukrainian/cpsAssets/news-53561143.json';
 import styUkrainianInRussianAssetData from '#data/ukrainian/cpsAssets/features-russian-53477115.json';
 import * as analyticsUtils from '#lib/analyticsUtils';
-import {
-  setWindowValue,
-  resetWindowValue,
-} from '#psammead/psammead-test-helpers/src';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { ServiceConfig } from '#models/types/serviceConfig';
 import styAssetData from './fixtures/storyPage.json';
@@ -829,15 +825,10 @@ describe('ATI Analytics Container', () => {
   });
 
   describe('XTO Marketing string', () => {
-    const windowLocation = window.location;
-    afterEach(() => {
-      resetWindowValue('location', windowLocation);
-    });
-
     it('should include the xto marketing string for a valid campaign type', () => {
-      setWindowValue('location', {
-        href: 'https://localhost?at_medium=email&at_emailtype=acquisition&at_creation=my_creation',
-      });
+      window.location.href =
+        'https://localhost?at_medium=email&at_emailtype=acquisition&at_creation=my_creation';
+
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       canonical.default = mockCanonical;
@@ -892,9 +883,8 @@ describe('ATI Analytics Container', () => {
       });
     });
     it('should not include the xto marketing string when a campaign type is not specified', () => {
-      setWindowValue('location', {
-        href: 'http://localhost?foo=bar',
-      });
+      window.location.href = 'http://localhost?foo=bar';
+
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       canonical.default = mockCanonical;

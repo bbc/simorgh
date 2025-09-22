@@ -58,9 +58,16 @@ if (!process.env.PUPPETEER_APP_ENV) {
           configurable: true,
           value: jest.fn(),
         },
+        href: {
+          configurable: true,
+        },
+        pathname: {
+          configurable: true,
+        },
       },
     );
   });
+
   afterAll(() => {
     // restore `window.location` to the original `jsdom` Location` object
     window.location = oldWindowLocation;

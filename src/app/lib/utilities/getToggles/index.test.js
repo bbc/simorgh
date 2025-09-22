@@ -1,3 +1,9 @@
+import onClient from '#lib/utilities/onClient';
+
+jest.mock('#lib/utilities/onClient', () =>
+  jest.fn().mockImplementation(() => true),
+);
+
 const mockUrl =
   'https://mock-config-endpoint?application=simorgh&service=mundo&__amp_source_origin=http://localhost';
 const mockResponse = {
@@ -14,7 +20,7 @@ describe('getToggles', () => {
 
   afterEach(() => {
     jest.resetModules();
-    jest.resetAllMocks();
+    jest.clearAllMocks();
     fetch.resetMocks();
   });
 
@@ -48,7 +54,6 @@ describe('getToggles', () => {
 
     it('should return the merged local and remote toggles', async () => {
       const { default: getToggles } = await import('.');
-      jest.spyOn(window, 'document', 'get').mockReturnValue(undefined);
 
       const toggles = await getToggles('mundo');
 
@@ -118,7 +123,6 @@ describe('getToggles', () => {
       const hrtTimeSpy = jest
         .spyOn(process, 'hrtime')
         .mockReturnValue([10, 1000]);
-      jest.spyOn(window, 'document', 'get').mockReturnValue(undefined);
 
       await getToggles('mundo');
 
@@ -126,9 +130,9 @@ describe('getToggles', () => {
     });
 
     it('should not calculate and log response when running on client', async () => {
+      onClient.mockImplementationOnce(() => true);
       const { default: getToggles } = await import('.');
       const hrtTimeSpy = jest.spyOn(process, 'hrtime');
-      jest.spyOn(window, 'document', 'get').mockReturnValue({});
 
       await getToggles('mundo');
 

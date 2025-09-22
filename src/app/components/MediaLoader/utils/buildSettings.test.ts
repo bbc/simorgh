@@ -469,16 +469,6 @@ describe('buildSettings', () => {
     });
 
     it('Should process an AresMediaLiveStream block into a valid playlist item for an "live stream" MAP page.', () => {
-      const mockWindowObj = {
-        location: {
-          hostname: 'https://www.bbc.com/',
-        },
-      } as Window & typeof globalThis;
-
-      jest
-        .spyOn(window, 'window', 'get')
-        .mockImplementation(() => mockWindowObj);
-
       const result = buildSettings({
         ...baseSettings,
         blocks: aresMediaLiveStreamBlocks as MediaBlock[],

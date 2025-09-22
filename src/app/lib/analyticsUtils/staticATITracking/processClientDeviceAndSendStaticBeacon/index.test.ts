@@ -1,7 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-nocheck
-import { Browser } from 'happy-dom';
-
 import { addProcessClientDeviceAndSendStaticBeaconToWindow } from '.';
 
 describe('addProcessClientDeviceAndSendStaticBeaconToWindow script', () => {
@@ -117,6 +115,7 @@ describe('addProcessClientDeviceAndSendStaticBeaconToWindow script', () => {
   });
 
   describe('on lite pages', () => {
+    window.location.assign('http://localhost#persian.lite');
     it.each([
       {
         atiUrl: 'https://logws1363.ati-host.net/?',

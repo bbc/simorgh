@@ -8,6 +8,7 @@ import {
   TOGGLE_API_RESPONSE_TIME,
   CONFIG_RESPONSE_EMPTY_ERROR,
 } from '#lib/logger.const';
+import onClient from '#lib/utilities/onClient';
 import getOriginContext from '#contexts/RequestContext/getOriginContext';
 import { getEnvConfig } from '../getEnvConfig';
 
@@ -15,10 +16,8 @@ const logger = nodeLogger(__filename);
 const NS_PER_SEC = 1e9;
 
 const logResponseTime = async (url, origin, service, timeout) => {
-  const isBrowser =
-    typeof window !== 'undefined' && typeof window.document !== 'undefined';
-
-  if (isBrowser) {
+  console.log({ onClient, fn: onClient() });
+  if (onClient()) {
     return fetch(url, { headers: { origin }, timeout });
   }
 

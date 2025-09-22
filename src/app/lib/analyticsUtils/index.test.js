@@ -1,9 +1,5 @@
 /* eslint-disable no-template-curly-in-string */
 import Cookie from 'js-cookie';
-import {
-  setWindowValue,
-  resetWindowValue,
-} from '#psammead/psammead-test-helpers/src';
 import onClient from '../utilities/onClient';
 
 let isOnClient = true;
@@ -168,18 +164,18 @@ describe('analyticsUtils', () => {
     const windowScreen = window.screen;
 
     afterEach(() => {
-      resetWindowValue('screen', windowScreen);
+      window.screen = windowScreen;
     });
 
     returnsNullWhenOffClient(getScreenInfo);
 
     it('should concat screen values, joined by "x"', () => {
-      setWindowValue('screen', {
+      window.screen = {
         width: 1,
         height: 2,
         colorDepth: 3,
         pixelDepth: 4,
-      });
+      };
 
       const screenInfo = getScreenInfo();
 
@@ -187,12 +183,12 @@ describe('analyticsUtils', () => {
     });
 
     it('should use 0 to fill unknown values', () => {
-      setWindowValue('screen', {
+      window.screen = {
         width: 1,
         height: 2,
         colorDepth: null,
         pixelDepth: null,
-      });
+      };
 
       const screenInfo = getScreenInfo();
 
@@ -205,15 +201,15 @@ describe('analyticsUtils', () => {
     const windowInnerHeight = window.innerHeight;
 
     afterEach(() => {
-      resetWindowValue('innerWidth', windowInnerWidth);
-      resetWindowValue('innerHeight', windowInnerHeight);
+      window.innerWidth = windowInnerWidth;
+      window.innerHeight = windowInnerHeight;
     });
 
     returnsNullWhenOffClient(getBrowserViewPort);
 
     it('should concat values, joined by "x"', () => {
-      setWindowValue('innerWidth', 1234);
-      setWindowValue('innerHeight', 4321);
+      window.innerWidth = 1234;
+      window.innerHeight = 4321;
 
       const browserViewPort = getBrowserViewPort();
 
@@ -221,8 +217,8 @@ describe('analyticsUtils', () => {
     });
 
     it('should use 0 to fill unknown values', () => {
-      setWindowValue('innerWidth', null);
-      setWindowValue('innerHeight', 4321);
+      window.innerWidth = null;
+      window.innerHeight = 4321;
 
       const browserViewPort = getBrowserViewPort();
 
@@ -257,25 +253,25 @@ describe('analyticsUtils', () => {
     const windowNavigator = window.navigator;
 
     afterEach(() => {
-      resetWindowValue('navigator', windowNavigator);
+      window.navigator = windowNavigator;
     });
 
     returnsNullWhenOffClient(getDeviceLanguage);
 
     it('should return navigator language', () => {
-      setWindowValue('navigator', {
+      window.navigator = {
         language: 'abc',
-      });
+      };
 
       const deviceLanguage = getDeviceLanguage();
 
       expect(deviceLanguage).toEqual('abc');
     });
 
-    it('should return null if langage isnt set', () => {
-      setWindowValue('navigator', {
+    it('should return null if language is not set', () => {
+      window.navigator = {
         language: null,
-      });
+      };
 
       const deviceLanguage = getDeviceLanguage();
 
@@ -329,38 +325,23 @@ describe('analyticsUtils', () => {
   });
 
   describe('getHref', () => {
-    const windowLocation = window.location;
-
-    afterEach(() => {
-      resetWindowValue('location', windowLocation);
-    });
-
     returnsNullWhenOffClient(getHref);
 
     it('should return location href', () => {
-      setWindowValue('location', {
-        href: 'https://href.com',
-      });
-
       const href = getHref();
 
       expect(href).toEqual('https://href.com');
     });
 
     it('should return null if href isnt set', () => {
-      setWindowValue('location', {
-        href: null,
-      });
-
       const href = getHref();
 
       expect(href).toEqual(null);
     });
 
     it('should return href with anchor text', () => {
-      setWindowValue('location', {
-        href: 'https://www.example.com/#anchortext',
-      });
+      window.location.assign('https://www.example.com/#anchortext');
+
       const href = getHref();
       expect(href).toEqual('https://www.example.com/#anchortext');
     });
@@ -576,9 +557,7 @@ describe('analyticsUtils', () => {
       ${'?xtor=123'}            | ${'XTOR'}
       ${'?at_medium=RSS'}       | ${'RSS'}
     `('should return a campaign type of $expected', ({ qsValue, expected }) => {
-      setWindowValue('location', {
-        href: `https://www.bbc.com/mundo${qsValue}`,
-      });
+      window.location.href = `https://www.bbc.com/mundo${qsValue}`;
 
       const campaignType = getCampaignType();
 
@@ -586,9 +565,9 @@ describe('analyticsUtils', () => {
     });
 
     it('should return campaign type of XTOR', () => {
-      setWindowValue('location', {
+      window.location = {
         href: 'https://www.bbc.com/mundo#xtor',
-      });
+      };
 
       const campaignType = getCampaignType();
 
