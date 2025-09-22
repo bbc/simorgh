@@ -265,7 +265,7 @@ const MetadataContainer = ({
       <meta name="twitter:creator" content={metaTwitterHandle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image:alt" content={metaImageAltText} />
-      <meta name="twitter:image:src" content={socialShareImage} />
+      <meta name="twitter:image:src" content={metaImage} />
       <meta name="twitter:site" content={twitterSite} />
       <meta name="twitter:title" content={socialTitle} />
       {!isAmp && (
