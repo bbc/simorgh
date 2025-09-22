@@ -1,5 +1,5 @@
 import isLive from '#app/lib/utilities/isLive';
-import parseAvRoute from '#app/routes/utils/parseAvRoute';
+import parseAvRoute from '#app/routes/utils/parseRoute';
 
 const LIVE_BASE_URL = 'https://www.bbc.com';
 const TEST_BASE_URL = 'https://www.test.bbc.com';

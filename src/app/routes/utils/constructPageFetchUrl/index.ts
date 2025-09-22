@@ -28,7 +28,7 @@ import {
   UGC_PAGE,
   LIVE_TV_PAGE,
 } from '../pageTypes';
-import parseAvRoute from '../parseAvRoute';
+import parseAvRoute from '../parseRoute';
 
 const removeLeadingSlash = (path: string) => path?.replace(/^\/+/g, '');
 const removeAmp = (path: string) => path.split('.')[0];

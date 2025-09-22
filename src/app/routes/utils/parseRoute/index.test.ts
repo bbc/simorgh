@@ -1,4 +1,4 @@
-import parseAvRoute from '.';
+import parseRoute from '.';
 
 const EXAMPLE_ROUTES = [
   {
@@ -88,11 +88,11 @@ const EXAMPLE_ROUTES = [
   },
 ];
 
-describe('parseAvRoute', () => {
+describe('parseRoute', () => {
   it.each(EXAMPLE_ROUTES)(
     'should return valid route config for %s route',
     ({ route, expectedOutput }) => {
-      const result = parseAvRoute(route);
+      const result = parseRoute(route);
 
       expect(result).toMatchObject(expectedOutput);
     },
@@ -107,7 +107,7 @@ describe('parseAvRoute', () => {
       assetId: '67303123',
     };
 
-    const result = parseAvRoute(route);
+    const result = parseRoute(route);
 
     expect(result).toMatchObject(expectedOutput);
   });
