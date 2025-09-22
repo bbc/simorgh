@@ -6,7 +6,7 @@ import certsRequired from '#app/routes/utils/certsRequired';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import { FetchError } from '#app/models/types/fetch';
 import constructPageFetchUrl from '#app/routes/utils/constructPageFetchUrl';
-import parseAvRoute from '#app/routes/utils/parseRoute';
+import parseRoute from '#app/routes/utils/parseRoute';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
 import nodeLogger from '#lib/logger.node';
 import { OK } from '#app/lib/statusCodes.const';
@@ -37,7 +37,7 @@ export default async (context: GetServerSidePropsContext) => {
   // Remove x-frame-options header to allow embedding
   context.res.removeHeader('x-frame-options');
 
-  const parsedRoute = parseAvRoute(resolvedUrl);
+  const parsedRoute = parseRoute(resolvedUrl);
 
   const avEmbedsUrl = constructPageFetchUrl({
     pageType: AV_EMBEDS,

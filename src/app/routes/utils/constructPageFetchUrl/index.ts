@@ -28,7 +28,7 @@ import {
   UGC_PAGE,
   LIVE_TV_PAGE,
 } from '../pageTypes';
-import parseAvRoute from '../parseRoute';
+import parseRoute from '../parseRoute';
 
 const removeLeadingSlash = (path: string) => path?.replace(/^\/+/g, '');
 const removeAmp = (path: string) => path.split('.')[0];
@@ -112,7 +112,7 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
       break;
     case AV_EMBEDS:
       getIdFunction = (path: string) => {
-        const parsedRoute = parseAvRoute(path);
+        const parsedRoute = parseRoute(path);
 
         const isShortCpsId = parsedRoute?.assetId?.length === 8;
 
@@ -260,7 +260,7 @@ const constructPageFetchUrl = ({
         break;
       }
       case AV_EMBEDS: {
-        const parsedRoute = parseAvRoute(pathname);
+        const parsedRoute = parseRoute(pathname);
 
         if (parsedRoute.isWsRoute) {
           // handle /ws/av-embeds route
