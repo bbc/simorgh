@@ -1253,10 +1253,13 @@ describe('Metadata', () => {
           env        | pageType              | pathName                      | expectedUrl
           ${'local'} | ${ARTICLE_PAGE}       | ${`/${service}/c0000000001o`} | ${`http://localhost:7081/${service}/og/c0000000001o`}
           ${'test'}  | ${ARTICLE_PAGE}       | ${`/${service}/c0000000001o`} | ${`https://web-cdn.test.api.bbci.co.uk/${service}/og/c0000000001o`}
+          ${'live'}  | ${ARTICLE_PAGE}       | ${`/${service}/c0000000001o`} | ${`https://web-cdn.api.bbci.co.uk/${service}/og/c0000000001o`}
           ${'local'} | ${MEDIA_ARTICLE_PAGE} | ${`/${service}/c0000000001o`} | ${`http://localhost:7081/${service}/og/c0000000001o`}
           ${'test'}  | ${MEDIA_ARTICLE_PAGE} | ${`/${service}/c0000000001o`} | ${`https://web-cdn.test.api.bbci.co.uk/${service}/og/c0000000001o`}
+          ${'live'}  | ${MEDIA_ARTICLE_PAGE} | ${`/${service}/c0000000001o`} | ${`https://web-cdn.api.bbci.co.uk/${service}/og/c0000000001o`}
           ${'local'} | ${LIVE_PAGE}          | ${`/${service}/c0000000001t`} | ${`http://localhost:7081/${service}/og/c0000000001t`}
           ${'test'}  | ${LIVE_PAGE}          | ${`/${service}/c0000000001t`} | ${`https://web-cdn.test.api.bbci.co.uk/${service}/og/c0000000001t`}
+          ${'live'}  | ${LIVE_PAGE}          | ${`/${service}/c0000000001t`} | ${`https://web-cdn.api.bbci.co.uk/${service}/og/c0000000001t`}
         `(
           `should return the Opengraph image API url for $pageType page on $env Env`,
           ({ env, pageType, pathName, expectedUrl }) => {
@@ -1277,26 +1280,6 @@ describe('Metadata', () => {
             expect(ogImageTag?.content).toEqual(expectedUrl);
           },
         );
-
-        it(`should return the default image if on Live Env`, () => {
-          process.env.SIMORGH_APP_ENV = 'live';
-
-          render(
-            // @ts-expect-error - testing with subset of data
-            <MetadataWithContext
-              service={service as Services}
-              bbcOrigin={dotCoDotUKOrigin}
-              pageType={ARTICLE_PAGE}
-              pathname={`/${service}/c0000000001o`}
-            />,
-          );
-
-          const ogImageTag = getOgImageTag();
-
-          expect(ogImageTag?.content).toEqual(
-            `https://news.files.bbci.co.uk/ws/img/logos/og/${service}.png`,
-          );
-        });
 
         it(`should return the default image if the id cannot be determined from the pathname`, () => {
           process.env.SIMORGH_APP_ENV = 'test';

@@ -118,29 +118,29 @@ exports[`Canonical Story Page Header I can see the branding 1`] = `"BBC News, К
 
 exports[`Canonical Story Page Header Navigation link should match text and url 1`] = `
 {
-  "text": "Башталгыч бет",
+  "text": "Башкы бет",
   "url": "/kyrgyz",
 }
 `;
 
 exports[`Canonical Story Page Header Navigation link should match text and url 2`] = `
 {
-  "text": "Кыргызстан",
-  "url": "/kyrgyz/topics/cz74kjpyk07t",
+  "text": "Видео жаңылыктар",
+  "url": "/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4t",
 }
 `;
 
 exports[`Canonical Story Page Header Navigation link should match text and url 3`] = `
 {
-  "text": "Дүйнө",
-  "url": "/kyrgyz/topics/ck2l9z012nkt",
+  "text": "Кыргызстан",
+  "url": "/kyrgyz/topics/cz74kjpyk07t",
 }
 `;
 
 exports[`Canonical Story Page Header Navigation link should match text and url 4`] = `
 {
-  "text": "САПАР",
-  "url": "/kyrgyz/topics/c6z8lg83w7mt",
+  "text": "Дүйнө",
+  "url": "/kyrgyz/topics/ck2l9z012nkt",
 }
 `;
 
@@ -148,13 +148,6 @@ exports[`Canonical Story Page Header Navigation link should match text and url 5
 {
   "text": "Журнал",
   "url": "/kyrgyz/topics/czp8pjrkgp0t",
-}
-`;
-
-exports[`Canonical Story Page Header Navigation link should match text and url 6`] = `
-{
-  "text": "Подкасттар",
-  "url": "/kyrgyz/podcasts/p0c80v81",
 }
 `;
 
