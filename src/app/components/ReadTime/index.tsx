@@ -12,8 +12,6 @@ type ReadTimeProps = {
   className?: string;
   readTimeVariant?: string | null;
   promoId?: string;
-  promoType?: string;
-  promoPosition?: number;
 };
 
 const DEFAULT_TRANSLATIONS = {
@@ -127,8 +125,6 @@ export const ReadTime = ({
   readTimeValue,
   readTimeVariant,
   promoId,
-  promoType,
-  promoPosition,
   className,
 }: ReadTimeProps) => {
   const { service } = use(ServiceContext);
@@ -137,43 +133,37 @@ export const ReadTime = ({
     readTimeValue,
     readTimeVariant,
     readTimeVariant !== 'off',
+    false,
   ].every(Boolean);
 
   // EXPERIMENT: Homepage Read Time
   const experimentEnabledServices = ['turkce', 'mundo'];
 
-  if (readTimeVariant === null && experimentEnabledServices.includes(service))
-    return <HomepagePlaceholder />;
+  if (!experimentEnabledServices.includes(service)) return null;
 
-  if (!validRender) return null;
+  if (readTimeVariant === null || !validRender) return <HomepagePlaceholder />;
 
-  const { readTimeInMilliseconds, copy } = ProcessReadTime({
+  const { readTimeInMilliseconds, minutesLabel, copy } = ProcessReadTime({
     readTimeValue: readTimeValue as number,
     readTimeVariant: readTimeVariant as string,
   });
 
-  const optimizelyTrackingData: EventTrackingData = {
+  const eventTrackingData: EventTrackingData = {
     componentName: 'read-time',
     sendOptimizelyEvents: true,
     experimentName: 'newswb_ws_homepage_read_time',
     experimentVariant: readTimeVariant,
-  };
-
-  const eventTrackingData: EventTrackingData = {
-    ...optimizelyTrackingData,
     itemTracker: {
-      type: promoType,
-      position: promoPosition,
-      label: `Read time: ${readTimeValue} ${readTimeValue === 1 ? 'minute' : 'minutes'}`,
+      label: `Read time: ${readTimeValue} ${minutesLabel}`,
       duration: readTimeInMilliseconds,
       resourceId: promoId,
     },
   };
 
-  const isControlVariant = readTimeVariant === 'control';
-
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const viewRef = useViewTracker(eventTrackingData);
+
+  const isControlVariant = readTimeVariant === 'control';
 
   if (isControlVariant) return <HomepagePlaceholder {...viewRef} />;
 
