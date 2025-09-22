@@ -1,6 +1,10 @@
 import { GetServerSidePropsContext } from 'next';
 import extractHeaders from '#server/utilities/extractHeaders';
-import { ARTICLE_PAGE, MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  ARTICLE_PAGE,
+  MEDIA_ARTICLE_PAGE,
+  ERROR_PAGE,
+} from '#app/routes/utils/pageTypes';
 import parseRoute from '#app/routes/utils/parseRoute';
 import nodeLogger from '#lib/logger.node';
 import { OK } from '#app/lib/statusCodes.const';
