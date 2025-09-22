@@ -97,6 +97,17 @@ const EXAMPLE_ROUTES = [
       isAmp: true,
     },
   },
+  {
+    route: '/pidgin/articles/cvpde7nqj92o',
+    expectedOutput: {
+      assetId: 'cvpde7nqj92o',
+      isAmp: false,
+      lang: null,
+      mediaId: null,
+      platform: 'articles',
+      service: 'pidgin',
+    },
+  },
 ];
 
 describe('parseRoute', () => {
