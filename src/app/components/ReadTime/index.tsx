@@ -144,7 +144,7 @@ export const ReadTime = ({
 
   if (!experimentEnabledServices.includes(service)) return null;
 
-  if (readTimeVariant === null || !validRender) return <HomepagePlaceholder />;
+  if (!validRender) return <HomepagePlaceholder />;
 
   const { readTimeInMilliseconds, copy } = ProcessReadTime({
     readTimeValue: readTimeValue as number,
