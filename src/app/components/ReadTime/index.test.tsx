@@ -9,12 +9,12 @@ describe('ReadTime', () => {
   });
   it.each([
     {
-      variant: 'variant',
+      variant: 'Minute variant',
       variantKey: 'below_headline_minutes_bold',
       expectedCopy: 'Estimated Read Time: 4 minutes',
     },
     {
-      variant: 'variant',
+      variant: 'Quick/Read variant',
       variantKey: 'below_timestamp_quick_long_bold',
       expectedCopy: 'Quick Read',
     },
