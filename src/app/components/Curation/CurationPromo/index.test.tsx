@@ -156,6 +156,7 @@ describe('Curation Promo', () => {
     it('should display read time when readTime is provided in summary data', () => {
       const container = render(
         <Fixture readTime={1} readTimeVariant="variant1" />,
+        { service: 'mundo' },
       );
       expect(container.queryByTestId('read-time')).toBeInTheDocument();
     });
@@ -181,7 +182,9 @@ describe('Curation Promo', () => {
         sendOptimizelyEvents: true,
       };
 
-      render(<Fixture readTime={1} readTimeVariant="variant1" />);
+      render(<Fixture readTime={1} readTimeVariant="variant1" />, {
+        service: 'mundo',
+      });
 
       expect(viewTrackerSpy).toHaveBeenCalledWith(
         expect.objectContaining(expectedTrackingProps),
