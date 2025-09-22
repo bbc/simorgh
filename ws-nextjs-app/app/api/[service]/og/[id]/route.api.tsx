@@ -57,18 +57,18 @@ const getPageType = (id: string) => {
 const NON_LATIN_SERVICES: Services[] = ['arabic', 'hindi'];
 
 const SVG_BADGES: {
-  arabic: Record<string, () => React.JSX.Element>;
-  hindi: Record<string, () => React.JSX.Element>;
+  arabic: Record<'Live' | 'MostRead' | 'TopStories', () => React.JSX.Element>;
+  hindi: Record<'Live' | 'MostRead' | 'TopStories', () => React.JSX.Element>;
 } = {
   arabic: {
-    live: ArabicLiveSVG,
-    mostRead: ArabicMostReadSVG,
-    topStories: ArabicTopStoriesSVG,
+    Live: ArabicLiveSVG,
+    MostRead: ArabicMostReadSVG,
+    TopStories: ArabicTopStoriesSVG,
   },
   hindi: {
-    live: HindiLiveSVG,
-    mostRead: HindiMostReadSVG,
-    topStories: HindiTopStoriesSVG,
+    Live: HindiLiveSVG,
+    MostRead: HindiMostReadSVG,
+    TopStories: HindiTopStoriesSVG,
   },
 };
 
@@ -163,13 +163,13 @@ export async function GET(
 
       switch (true) {
         case isLive:
-          badge = <BadgeSVGs.live />;
+          badge = <BadgeSVGs.Live />;
           break;
         case isInTopStories:
-          badge = <BadgeSVGs.topStories />;
+          badge = <BadgeSVGs.TopStories />;
           break;
         case isInMostRead:
-          badge = <BadgeSVGs.mostRead />;
+          badge = <BadgeSVGs.MostRead />;
           break;
         default:
           badge = null;
