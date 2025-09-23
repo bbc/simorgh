@@ -12,7 +12,6 @@ import MetadataContainer from '#app/components/Metadata';
 import LinkedDataContainer from '#app/components/LinkedData';
 import getLiveBlogPostingSchema from '#app/lib/seoUtils/getLiveBlogPostingSchema';
 import { MediaCollection } from '#app/components/MediaLoader/types';
-import { useRouter } from 'next/router';
 import { OptimoBlock } from '#models/types/optimo';
 import Stream from './Stream';
 import Header from './Header';
@@ -132,7 +131,11 @@ const getImageFromPost = (post: Post) => {
     : null;
 };
 
-const LivePage = ({ pageData }: ComponentProps) => {
+interface LivePageProps extends ComponentProps {
+  assetId?: string | null;
+}
+
+const LivePage = ({ pageData, assetId }: LivePageProps) => {
   const { lang, translations, defaultImage, brandName } = use(ServiceContext);
   const { canonicalNonUkLink } = use(RequestContext);
   const {
@@ -168,15 +171,12 @@ const LivePage = ({ pageData }: ComponentProps) => {
   };
 
   const showPaginatedTitle = pageCount && activePage && activePage >= 2;
-
   const pageSeoTitle = seoTitle || title;
-
   const pageTitle = showPaginatedTitle
     ? `${pageSeoTitle}, ${pageXOfY
         .replace('{x}', activePage.toString())
         .replace('{y}', pageCount.toString())}`
     : pageSeoTitle;
-
   const pageDescription = seoDescription || description || pageSeoTitle;
 
   const liveBlogPostingSchema = getLiveBlogPostingSchema({
@@ -188,33 +188,16 @@ const LivePage = ({ pageData }: ComponentProps) => {
     endDateTime,
   });
 
-  const router = useRouter();
+  const postWithMatchingAssetId =
+    assetId && liveTextStream?.content?.data?.results
+      ? liveTextStream.content.data.results.find(post => post.urn === assetId)
+      : null;
 
-  const assetId = React.useMemo(() => {
-    const postParam = router.query.post as string | undefined;
-    if (!postParam) return null;
-    try {
-      const decoded = decodeURIComponent(postParam);
-      const match = decoded.match(/^asset:([a-z0-9-]+)$/i);
-      return match ? `asset:${match[1]}` : null;
-    } catch {
-      return null;
-    }
-  }, [router.query.post]);
+  const metaImage =
+    postWithMatchingAssetId && getImageFromPost(postWithMatchingAssetId)
+      ? getImageFromPost(postWithMatchingAssetId)
+      : promoImage;
 
-  const postWithMatchingAssetId = React.useMemo(() => {
-    if (!assetId || !liveTextStream?.content?.data?.results) return null;
-    return liveTextStream.content.data.results.find(
-      post => post.urn === assetId,
-    );
-  }, [assetId, liveTextStream?.content?.data?.results]);
-
-  const metaImage = React.useMemo(() => {
-    const postImage =
-      postWithMatchingAssetId && getImageFromPost(postWithMatchingAssetId);
-    return postImage?.url ? postImage : promoImage;
-  }, [postWithMatchingAssetId, promoImage]);
-  console.log('metaImage', metaImage);
   return (
     <>
       <ATIAnalytics atiData={atiAnalytics} />
@@ -236,15 +219,9 @@ const LivePage = ({ pageData }: ComponentProps) => {
         headline={pageTitle}
         showAuthor
         promoImage={metaImage?.url}
-        {...(datePublished && {
-          datePublished,
-        })}
-        {...(dateModified && {
-          dateModified,
-        })}
-        {...(liveBlogPostingSchema && {
-          entities: [liveBlogPostingSchema],
-        })}
+        {...(datePublished && { datePublished })}
+        {...(dateModified && { dateModified })}
+        {...(liveBlogPostingSchema && { entities: [liveBlogPostingSchema] })}
       />
       <main>
         <Header

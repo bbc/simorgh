@@ -13,8 +13,9 @@ import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const'
 import isLitePath from '#app/routes/utils/isLitePath';
 import PageDataParams from '#app/models/types/pageDataParams';
 import deriveVariant from '#nextjs/utilities/deriveVariant';
-
-import extractHeaders from '../../../../../src/server/utilities/extractHeaders';
+// on latest this line is import extractHeaders from '../../../../../src/server/utilities/extractHeaders'; but when I save it changes it to 'simorgh/src/server/utilities/extractHeaders/extractHeaders' which doesn't work
+import extractHeaders from 'simorgh/src/server/utilities/extractHeaders/extractHeaders';
+// import extractHeaders from 'simorgh/src/server/utilities/extractHeaders/extractHeaders';
 import isValidPageNumber from '../../../../utilities/pageQueryValidator';
 import getPageData from '../../../../utilities/pageRequests/getPageData';
 
@@ -42,6 +43,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     variant: variantFromUrl,
     renderer_env: rendererEnv,
     page = '1',
+    post: assetId,
   } = context.query as PageDataParams;
 
   const { headers: reqHeaders } = context.req;
@@ -116,6 +118,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
             },
           }
         : null,
+      assetId: assetId || null,
       pageType: LIVE_PAGE,
       pathname: context.resolvedUrl,
       service,
