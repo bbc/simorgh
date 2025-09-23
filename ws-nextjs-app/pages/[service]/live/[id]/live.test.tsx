@@ -9,8 +9,16 @@ import {
 import liveFixture from '#data/pidgin/live/c7p765ynk9qt.json';
 import postFixture from '#data/pidgin/posts/postFixture.json';
 import { GetServerSidePropsContext } from 'next';
+import { OptimoBlock } from '#models/types/optimo';
 import Live from './LivePageLayout';
 import { getServerSideProps } from './[[...variant]].page';
+import type { Post } from './Post/types';
+
+type HelmetMetaTag = {
+  property?: string;
+  content?: string;
+  name?: string;
+};
 
 const mockPageData = {
   ...liveFixture.data,
@@ -432,5 +440,36 @@ describe('Live Page', () => {
     );
 
     expect(container).toMatchSnapshot();
+  });
+
+  it('sets the correct og:image meta tag from the post with assetId', () => {
+    const assetId = 'asset:18d24593-b615-4c84-867c-ac1fdec87136';
+    const pageData = liveFixture.data;
+
+    render(<Live pageData={pageData} assetId={assetId} />);
+
+    const expectedImageUrl =
+      'https://ichef.bbci.co.uk/news/624/cpsprodpb/0781b49d-0b5b-43b5-9b39-605b189c2136.jpg';
+
+    const helmetMetaTags = Helmet.peek().metaTags;
+    const ogImageMeta = helmetMetaTags.find(
+      meta => (meta as HelmetMetaTag).property === 'og:image',
+    );
+    expect((ogImageMeta as HelmetMetaTag)?.content).toEqual(expectedImageUrl);
+  });
+  it('sets the correct og:title meta tag from the post with assetId', () => {
+    const assetId = 'asset:18d24593-b615-4c84-867c-ac1fdec87136';
+    const pageData = liveFixture.data;
+
+    render(<Live pageData={pageData} assetId={assetId} />);
+    // - BBC News gets appended to the end of the title for og:title
+    const expectedOgTitle =
+      'UK looking at more routes for aid to reach Gaza - BBC News';
+
+    const helmetMetaTags = Helmet.peek().metaTags;
+    const ogTitleMeta = helmetMetaTags.find(
+      meta => (meta as HelmetMetaTag).property === 'og:title',
+    );
+    expect((ogTitleMeta as HelmetMetaTag)?.content).toEqual(expectedOgTitle);
   });
 });
