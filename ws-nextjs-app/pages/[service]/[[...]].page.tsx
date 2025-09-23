@@ -37,28 +37,9 @@ type PageProps = {
 } & AvEmbedsPageProps &
   ArticlePageProps;
 
-export default function PageTypeToRender({ pageType, ...rest }: PageProps) {
-  switch (pageType) {
-    // AV Embeds
-    case AV_EMBEDS:
-      return <AvEmbedsPageLayout {...rest} />;
-    // Article Pages (CPS + Legacy TC2 assets)
-    case STORY_PAGE:
-    case CORRESPONDENT_STORY_PAGE:
-    case PHOTO_GALLERY_PAGE:
-      return <ArticlePage {...rest} />;
-    // Media Article Pages (CPS + Legacy TC2 assets)
-    case MEDIA_ASSET_PAGE:
-      return <MediaArticlePage {...rest} />;
-    default:
-      // Return nothing, 404 is handled in _app.tsx
-      return null;
-  }
-}
-
 const getPageTypeFromHeaders = (headers: IncomingHttpHeaders) => {
   // TODO: 'pagetype' header is for testing purposes only
-  const pageTypeHeader = headers.pagetype?.toString()?.toLowerCase();
+  const pageTypeHeader = headers['page-type']?.toString()?.toLowerCase();
 
   switch (pageTypeHeader) {
     case AV_EMBEDS?.toLowerCase():
@@ -83,15 +64,10 @@ export const getServerSideProps: GetServerSideProps = async context => {
   // Determine the page type
   const pageType = getPageTypeFromHeaders(reqHeaders);
 
-  switch (pageType) {
-    case AV_EMBEDS:
-      return handleAvRoute(context);
-    // (CPS + Legacy TC2 articles)
-    case ARTICLE_PAGE:
-      return handleArticleRoute(context);
-    // Default break out and return 404 below
-    default:
-      break;
+  if (resolvedUrl?.includes('av-embeds')) {
+    return handleAvRoute(context);
+  } else if (pageType === ARTICLE_PAGE) {
+    return handleArticleRoute(context);
   }
 
   const { isAmp, isApp, isLite } = getPathExtension(resolvedUrl);
@@ -114,3 +90,22 @@ export const getServerSideProps: GetServerSideProps = async context => {
     },
   };
 };
+
+export default function PageTypeToRender({ pageType, ...rest }: PageProps) {
+  switch (pageType) {
+    // AV Embeds
+    case AV_EMBEDS:
+      return <AvEmbedsPageLayout {...rest} />;
+    // Article Pages (CPS + Legacy TC2 assets)
+    case STORY_PAGE:
+    case CORRESPONDENT_STORY_PAGE:
+    case PHOTO_GALLERY_PAGE:
+      return <ArticlePage {...rest} />;
+    // Media Article Pages (CPS + Legacy TC2 assets)
+    case MEDIA_ASSET_PAGE:
+      return <MediaArticlePage {...rest} />;
+    default:
+      // Return nothing, 404 is handled in _app.tsx
+      return null;
+  }
+}
