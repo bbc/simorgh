@@ -187,10 +187,7 @@ const LiveHeaderMedia = ({
           )}
         </button>
         <div css={showMedia ? styles.mediaLoader : styles.hideComponent}>
-          <MemoizedMediaPlayer
-            blocks={mediaCollection}
-            uniqueId={vpid}
-          />
+          <MemoizedMediaPlayer blocks={mediaCollection} uniqueId={vpid} />
         </div>
       </div>
     </>
