@@ -198,6 +198,8 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
       ? getImageFromPost(postWithMatchingAssetId)
       : promoImage;
 
+  console.log('metaImage', metaImage);
+
   return (
     <>
       <ATIAnalytics atiData={atiAnalytics} />

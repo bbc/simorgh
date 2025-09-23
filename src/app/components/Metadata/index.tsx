@@ -202,7 +202,7 @@ const MetadataContainer = ({
     service,
     metaImage,
   });
-
+  console.log('in MetadataContainer', metaImage, socialShareImage);
   return (
     <Helmet htmlAttributes={htmlAttributes}>
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
