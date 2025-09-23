@@ -131,6 +131,32 @@ const getImageFromPost = (post: Post) => {
     : null;
 };
 
+const getHeadlineFromPost = (post: Post) => {
+  const headlineBlock = post?.header?.model?.blocks?.find(
+    block => block.type === 'headline',
+  ) as OptimoBlock | undefined;
+
+  if (!headlineBlock || !('model' in headlineBlock)) return '';
+
+  const textBlock = (
+    headlineBlock.model as { blocks?: OptimoBlock[] }
+  ).blocks?.find(block => block.type === 'text') as OptimoBlock | undefined;
+
+  if (!textBlock || !('model' in textBlock)) return '';
+
+  const paragraphBlock = (
+    textBlock.model as { blocks?: OptimoBlock[] }
+  ).blocks?.find(block => block.type === 'paragraph') as
+    | OptimoBlock
+    | undefined;
+
+  return paragraphBlock &&
+    'model' in paragraphBlock &&
+    typeof (paragraphBlock.model as any).text === 'string'
+    ? (paragraphBlock.model as { text: string }).text
+    : '';
+};
+
 interface LivePageProps extends ComponentProps {
   assetId?: string | null;
 }
@@ -198,14 +224,19 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
       ? getImageFromPost(postWithMatchingAssetId)
       : promoImage;
 
-  console.log('metaImage', metaImage);
+  const metaTitle =
+    postWithMatchingAssetId && getHeadlineFromPost(postWithMatchingAssetId)
+      ? getHeadlineFromPost(postWithMatchingAssetId)
+      : pageTitle;
 
+  console.log('metaImage', metaImage);
+  console.log('metaTitle', metaTitle);
   return (
     <>
       <ATIAnalytics atiData={atiAnalytics} />
-      <ChartbeatAnalytics title={pageTitle} />
+      <ChartbeatAnalytics title={metaTitle ?? pageTitle} />
       <MetadataContainer
-        title={pageTitle}
+        title={metaTitle ?? pageTitle}
         lang={lang}
         image={metaImage?.url}
         imageAltText={metaImage?.altText}
@@ -217,8 +248,8 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
       />
       <LinkedDataContainer
         type="NewsArticle"
-        seoTitle={pageTitle}
-        headline={pageTitle}
+        seoTitle={metaTitle ?? pageTitle}
+        headline={metaTitle ?? pageTitle}
         showAuthor
         promoImage={metaImage?.url}
         {...(datePublished && { datePublished })}
