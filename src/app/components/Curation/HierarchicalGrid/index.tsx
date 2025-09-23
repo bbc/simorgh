@@ -7,7 +7,7 @@ import moment from 'moment';
 import path from 'ramda/src/path';
 import isMediaType from '#app/lib/utilities/isMedia';
 import { ReadTime } from '#app/components/ReadTime';
-import useClickTrackerHandler from '../../../hooks/useClickTrackerHandler';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import formatDuration from '../../../lib/utilities/formatDuration';
 import Promo from '../../../legacy/components/Promo';
@@ -55,7 +55,11 @@ const HiearchicalGrid = ({
 
   const promoItems = summaries.slice(0, 12);
 
-  const buildPromoEventTrackingData = (promo: Summary, i: number) => {
+  const buildPromoEventTrackingData = (
+    promo: Summary,
+    i: number,
+    { readTime }: { readTime?: number } = {},
+  ) => {
     const itemTracker = {
       type: 'hierarchical-curation-grid-promo',
       text: promo.title,
@@ -64,6 +68,13 @@ const HiearchicalGrid = ({
       ...(promo.type && { mediaType: promo.type }),
       ...(promo.duration && {
         duration: moment.duration(promo.duration, 'seconds').asMilliseconds(),
+      }),
+      ...(readTime && {
+        label:
+          readTime === 1
+            ? `Read time: ${readTime} minute`
+            : `Read time: ${readTime} minutes`,
+        duration: readTime * 60000,
       }),
     };
     return {
@@ -95,9 +106,12 @@ const HiearchicalGrid = ({
             (promo.type === 'audio' && `${audioTranslation}, `) ||
             (promo.type === 'video' && `${videoTranslation}, `) ||
             (promo.type === 'photogallery' && `${photoGalleryTranslation}, `);
-          const { isLive } = promo;
+          const { isLive, readTime } = promo;
+          const promoPosition = i + 1;
 
-          const promoEventTrackingData = buildPromoEventTrackingData(promo, i);
+          const promoEventTrackingData = buildPromoEventTrackingData(promo, i, {
+            readTime,
+          });
           const clickTrackerHandler = getClickTrackerHandler({
             ...promoEventTrackingData,
             sendOptimizelyEvents: true,
@@ -181,9 +195,11 @@ const HiearchicalGrid = ({
                     </Promo.Timestamp>
                     {/* EXPERIMENT: Read Time */}
                     <ReadTime
+                      readTimeValue={readTime}
                       className="hierachical-read-time"
-                      readTimeValue={promo.readTime}
                       promoId={promo.id}
+                      promoType={promo.type}
+                      promoPosition={promoPosition}
                       readTimeVariant={readTimeVariant}
                     />
                   </div>
