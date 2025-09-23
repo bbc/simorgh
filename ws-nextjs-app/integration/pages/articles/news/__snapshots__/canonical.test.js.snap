@@ -1,0 +1,434 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Canonical Articles A11y I can see the skip to content link 1`] = `"Skip to content"`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News",
+  "url": "/news",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 2`] = `
+{
+  "text": "Why you can trust the BBC",
+  "url": "https://www.bbc.com/news/help-41670342",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 3`] = `
+{
+  "text": "Terms of Use",
+  "url": "https://www.bbc.com/terms",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 4`] = `
+{
+  "text": "About the BBC",
+  "url": "https://www.bbc.co.uk/aboutthebbc/",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 5`] = `
+{
+  "text": "Privacy Policy",
+  "url": "https://www.bbc.com/privacy/",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 6`] = `
+{
+  "text": "Cookies",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 7`] = `
+{
+  "text": "Accessibility Help",
+  "url": "https://www.bbc.com/accessibility/",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 8`] = `
+{
+  "text": "Contact the BBC",
+  "url": "https://www.bbc.com/contact/",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 9`] = `
+{
+  "text": "Read about our approach to external linking.",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+}
+`;
+
+exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/news"`;
+
+exports[`Canonical Articles Footer Paragraphs should match text 1`] = `"© 2025 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
+
+exports[`Canonical Articles Header I can see the branding 1`] = `"BBC News"`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 1`] = `
+{
+  "text": "Home",
+  "url": "/news",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 2`] = `
+{
+  "text": "UK",
+  "url": "/news/uk",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 3`] = `
+{
+  "text": "World",
+  "url": "/news/world",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 4`] = `
+{
+  "text": "Business",
+  "url": "/news/business",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 5`] = `
+{
+  "text": "Politics",
+  "url": "/news/politics",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 6`] = `
+{
+  "text": "Tech",
+  "url": "/news/technology",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 7`] = `
+{
+  "text": "Science",
+  "url": "/news/science_and_environment",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 8`] = `
+{
+  "text": "Health",
+  "url": "/news/health",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 9`] = `
+{
+  "text": "Family & Education",
+  "url": "/news/education",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 10`] = `
+{
+  "text": "Entertainment & Arts",
+  "url": "/news/entertainment_and_arts",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 11`] = `
+{
+  "text": "Stories",
+  "url": "/news/stories",
+}
+`;
+
+exports[`Canonical Articles Image Caption should match text 1`] = `"Image caption, Former embroider Pauline Clayton described the gift as "lovely""`;
+
+exports[`Canonical Articles Image should match snapshot 1`] = `
+<img
+  alt="Pauline Clayton"
+  class="bbc-139onq"
+  height="360"
+  loading="eager"
+  sizes="(min-width: 1008px) 760px, 100vw"
+  src="https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg.webp"
+  srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg.webp 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg.webp 624w, https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg.webp 640w"
+  style="aspect-ratio:640 / 360"
+  width="640"
+/>
+`;
+
+exports[`Canonical Articles Main heading should match text 1`] = `"Royal wedding flowers given to Hackney hospice"`;
+
+exports[`Canonical Articles Most Read has item with rank 1`] = `
+{
+  "text": "The rise of the priority queue",
+  "url": "/news/magazine-19712847",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 2`] = `
+{
+  "text": "Laura Trott sees off challenge!",
+  "url": "/sport/cycling/23039307",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 3`] = `
+{
+  "text": "Japan MP drinks Fukushima water",
+  "url": "/news/world-asia-pacific-15533018",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 4`] = `
+{
+  "text": "Inside the 21st floor of Grenfell Tower",
+  "url": "/news/uk-23154961",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 5`] = `
+{
+  "text": "Ai Weiwei served with tax demand",
+  "url": "/news/world-asia-pacific-15533014",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 6`] = `
+{
+  "text": "Two die in Israel hotel shootings",
+  "url": "/news/world-middle-east-19841596",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 7`] = `
+{
+  "text": "Soong enters Taiwan election race",
+  "url": "/news/world-asia-pacific-15538239",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 8`] = `
+{
+  "text": "Welcome to the UKs peaceful place",
+  "url": "/news/business-20070473",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 9`] = `
+{
+  "text": "Budget 2018: Everything you need to know",
+  "url": "/news/uk-23220380",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 10`] = `
+{
+  "text": "Anger grows over Bangkok floods new",
+  "url": "/news/world-asia-pacific-15533579",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 1`] = `
+{
+  "sizes": null,
+  "url": "http://localhost:7080/news/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 2`] = `
+{
+  "sizes": "72x72",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 3`] = `
+{
+  "sizes": "96x96",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 4`] = `
+{
+  "sizes": "128x128",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 5`] = `
+{
+  "sizes": "144x144",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 6`] = `
+{
+  "sizes": "152x152",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 7`] = `
+{
+  "sizes": "180x180",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 8`] = `
+{
+  "sizes": "192x192",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 9`] = `
+{
+  "sizes": "384x384",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 10`] = `
+{
+  "sizes": "512x512",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-512x512.png",
+}
+`;
+
+exports[`Canonical Articles SEO Canonical link 1`] = `"http://localhost:7080/news/articles/c0g992jmmkko"`;
+
+exports[`Canonical Articles SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical Articles SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical Articles SEO Heading level 1 1`] = `"Royal wedding flowers given to Hackney hospice"`;
+
+exports[`Canonical Articles SEO Lang attribute 1`] = `"en-gb"`;
+
+exports[`Canonical Articles SEO Linked data should match text 1`] = `
+{
+  "@context": "http://schema.org",
+  "@graph": [
+    {
+      "@type": "NewsArticle",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Wedding of Prince Harry and Meghan Markle",
+        },
+        {
+          "@type": "Person",
+          "name": "Duchess of Sussex",
+          "sameAs": [
+            "http://dbpedia.org/resource/Meghan_Markle",
+          ],
+        },
+        {
+          "@type": "Place",
+          "name": "Hackney",
+        },
+        {
+          "@type": "Place",
+          "name": "Windsor",
+        },
+      ],
+      "author": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
+          "width": 1024,
+        },
+        "name": "BBC News",
+        "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+      },
+      "dateModified": "2019-05-28T13:38:19.412Z",
+      "datePublished": "2019-05-28T13:38:19.412Z",
+      "description": "Royal wedding flowers given to Hackney hospice",
+      "headline": "Royal wedding flowers given to Hackney hospice",
+      "image": {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://ichef.bbci.co.uk/news/1024/branded_news/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg",
+        "width": 1024,
+      },
+      "inLanguage": {
+        "@type": "Language",
+        "alternateName": "en-GB",
+        "name": "English",
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:7080/news/articles/c0g992jmmkko",
+        "@type": "WebPage",
+        "name": "Royal wedding flowers given to Hackney hospice",
+      },
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 16,
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/publisher-nx16.png",
+          "width": 103,
+        },
+        "name": "BBC News",
+        "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
+      },
+      "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_news/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg",
+      "url": "http://localhost:7080/news/articles/c0g992jmmkko",
+    },
+  ],
+}
+`;
+
+exports[`Canonical Articles SEO OG description 1`] = `"Royal wedding flowers given to Hackney hospice"`;
+
+exports[`Canonical Articles SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_news/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg"`;
+
+exports[`Canonical Articles SEO OG image alt 1`] = `"Pauline Clayton"`;
+
+exports[`Canonical Articles SEO OG locale 1`] = `"en_GB"`;
+
+exports[`Canonical Articles SEO OG site name 1`] = `"BBC News"`;
+
+exports[`Canonical Articles SEO OG title 1`] = `"Royal wedding flowers given to Hackney hospice - BBC News"`;
+
+exports[`Canonical Articles SEO OG type 1`] = `"article"`;
+
+exports[`Canonical Articles SEO OG url 1`] = `"http://localhost:7080/news/articles/c0g992jmmkko"`;
+
+exports[`Canonical Articles SEO Page title 1`] = `"Royal wedding flowers given to Hackney hospice - BBC News"`;
+
+exports[`Canonical Articles SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
+
+exports[`Canonical Articles SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical Articles SEO Twitter creator 1`] = `"@BBCNews"`;
+
+exports[`Canonical Articles SEO Twitter description 1`] = `"Royal wedding flowers given to Hackney hospice"`;
+
+exports[`Canonical Articles SEO Twitter image alt 1`] = `"Pauline Clayton"`;
+
+exports[`Canonical Articles SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_news/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg"`;
+
+exports[`Canonical Articles SEO Twitter site 1`] = `"@BBCNews"`;
+
+exports[`Canonical Articles SEO Twitter title 1`] = `"Royal wedding flowers given to Hackney hospice - BBC News"`;
+
+exports[`Canonical Articles Timestamp should match text and date 1`] = `
+{
+  "date": "2019-05-28",
+  "text": "28 May 2019",
+}
+`;
