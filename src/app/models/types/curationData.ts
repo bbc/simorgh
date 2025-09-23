@@ -20,6 +20,7 @@ interface BaseSummary {
   lastPublished?: string | number;
   duration?: string | number;
   isLive?: boolean;
+  position?: number;
 }
 
 export interface Summary extends BaseSummary {
