@@ -69,7 +69,7 @@ describe('constructPageFetchUrl', () => {
 
   it.each`
     pageType           | serviceOverride | variant    | environment | pathname                                              | expected
-    ${ARTICLE_PAGE}    | ${null}         | ${null}    | ${'local'}  | ${'/ukrainian/articles/c0000000000o'}                 | ${'http://localhost/ukrainian/articles/c0000000000o'}
+    ${ARTICLE_PAGE}    | ${null}         | ${null}    | ${'local'}  | ${'/ukrainian/articles/c0000000000o'}                 | ${'http://localhost/api/local/ukrainian/articles/c0000000000o'}
     ${ARTICLE_PAGE}    | ${null}         | ${null}    | ${'test'}   | ${'/ukrainian/articles/c0000000000o'}                 | ${'https://mock-bff-path/?id=c0000000000o&service=ukrainian&pageType=article&serviceEnv=test'}
     ${ARTICLE_PAGE}    | ${null}         | ${null}    | ${'live'}   | ${'/ukrainian/articles/c0000000000o'}                 | ${'https://mock-bff-path/?id=c0000000000o&service=ukrainian&pageType=article&serviceEnv=live'}
     ${ARTICLE_PAGE}    | ${null}         | ${'ru-UA'} | ${'local'}  | ${'/ukrainian/articles/c0000000000o'}                 | ${'http://localhost/ukrainian/articles/c0000000000o/ru-UA'}

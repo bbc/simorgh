@@ -42,7 +42,7 @@ const getUgcId = (path: string) => path.match(/(u[a-zA-Z0-9]{8,})/)?.[1];
 export const isOptimoIdCheck = (path: string) =>
   /\/(articles|sgeulachdan|erthyglau)\/(c[a-zA-Z0-9]{10,}o)/.test(path);
 export const isCpsIdCheck = (path: string) =>
-  /([0-9]{5,9}|[a-z0-9\-_]+-[0-9]{5,9})$/.test(path);
+  /([0-9]{5,9}|[a-z0-9\-_]+-[0-9]{5,9})/.test(path);
 const isTipoIdCheck = (path: string) => /(c[a-zA-Z0-9]{10,}t)/.test(path);
 
 interface GetIdProps {
@@ -213,13 +213,21 @@ const constructPageFetchUrl = ({
 
     switch (pageType) {
       case ARTICLE_PAGE: {
-        const isOptimoId = isOptimoIdCheck(`/articles/${id}`);
+        const { assetId } = parseRoute(pathname);
 
-        fetchUrl = Url(
-          isOptimoId
-            ? `/${service}/articles/${id}${variant ? `/${variant}` : ''}`
-            : `/${id}`,
-        );
+        if (isOptimoIdCheck(pathname)) {
+          fetchUrl = Url(
+            `${host}${port}/api/local/${service}/articles/${assetId}${variant ? `/${variant}` : ''}`,
+          );
+          break;
+        }
+
+        if (isCpsIdCheck(pathname)) {
+          fetchUrl = Url(
+            `${host}${port}/api/local/${service}/cpsAssets/${variant ? `${variant}/` : ''}${assetId}`,
+          );
+          break;
+        }
 
         break;
       }
