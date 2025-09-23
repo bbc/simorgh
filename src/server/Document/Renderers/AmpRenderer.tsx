@@ -10,7 +10,7 @@ import { AMP_GEO_SCRIPT } from '#components/AmpGeo';
 import { BaseRendererProps } from './types';
 
 interface Props extends BaseRendererProps {
-  bodyContent: ReactElement;
+  bodyContent?: ReactElement;
   data?: Record<string, unknown>;
 }
 
