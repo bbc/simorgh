@@ -3,7 +3,7 @@
  * @pathname /pidgin/articles/c39rjygpmv1o
  */
 
-import { runCanonicalEmbedHtmlTests } from '../../../common';
+import { runCanonicalEmbedHtmlTests } from '#src/integration/common';
 
 describe('Canonical', () => {
   describe(pageType, () => {

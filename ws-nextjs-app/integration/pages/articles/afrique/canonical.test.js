@@ -3,9 +3,9 @@
  * @pathname /afrique/articles/c7yn6nznljdo
  */
 
+import runMediaPlayerTests from '#src/integration/common';
 import runGistTests from '../gistTests';
 import runImageCopyrightBBC from '../imageCopyrightBBC';
-import runMediaPlayerTests from '../../../common/mediaPlayer';
 
 describe('Canonical', () => {
   describe(pageType, () => {

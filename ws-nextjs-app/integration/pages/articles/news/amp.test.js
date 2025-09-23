@@ -3,9 +3,9 @@
  * @pathname /news/articles/c0g992jmmkko
  */
 
+import topicTags from '#src/integration/common/topicTags';
 import runAmpTests from '../ampTests';
 import runInlineLinkTests from '../inlineLink';
-import topicTags from '../../../common/topicTags';
 
 describe('AMP', () => {
   describe(pageType, () => {
