@@ -229,19 +229,18 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
       ? getHeadlineFromPost(postWithMatchingAssetId)
       : pageTitle;
 
-  console.log('metaImage', metaImage);
-  console.log('metaTitle', metaTitle);
   return (
     <>
       <ATIAnalytics atiData={atiAnalytics} />
       <ChartbeatAnalytics title={metaTitle ?? pageTitle} />
       <MetadataContainer
-        title={metaTitle ?? pageTitle}
+        title={metaTitle}
         lang={lang}
         image={metaImage?.url}
         imageAltText={metaImage?.altText}
         imageWidth={metaImage?.width}
         imageHeight={metaImage?.height}
+        // do we want the description from the page?
         description={pageDescription}
         openGraphType="website"
         hasAmpPage={false}

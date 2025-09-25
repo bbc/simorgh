@@ -472,4 +472,63 @@ describe('Live Page', () => {
     );
     expect((ogTitleMeta as HelmetMetaTag)?.content).toEqual(expectedOgTitle);
   });
+
+  it('sets og:image meta tag to promoImage when assetId matches a post without an image', () => {
+    const assetId = 'asset:ec227190-49f3-43eb-b373-e52b6e1ba035';
+    const pageData = liveFixture.data;
+
+    render(<Live pageData={pageData} assetId={assetId} />);
+
+    const expectedImageUrl = pageData.promoImage.url;
+
+    const helmetMetaTags = Helmet.peek().metaTags;
+    const ogImageMeta = helmetMetaTags.find(
+      meta => (meta as HelmetMetaTag).property === 'og:image',
+    );
+
+    expect((ogImageMeta as HelmetMetaTag)?.content).toEqual(expectedImageUrl);
+  });
+  it('sets og:title and og:image meta tags to pageTitle and promoImage when assetId does not match any post', () => {
+    const assetId = 'asset:non-existent-id';
+    const pageData = liveFixture.data;
+
+    render(<Live pageData={pageData} assetId={assetId} />);
+    // when we are using a title for the page and not a post, seoTitle is used as priority
+    // and page title is a back up if seoTitle is not available.
+    // See LivePageLayout.tsx for where this happens
+    // the brand name is appended in component/Metadata/index.tsx
+    const expectedOgTitle = `${pageData.seo.seoTitle} - BBC News`;
+    const expectedOgImage = pageData.promoImage.url;
+
+    const helmetMetaTags = Helmet.peek().metaTags;
+    const ogTitleMeta = helmetMetaTags.find(
+      meta => (meta as HelmetMetaTag).property === 'og:title',
+    );
+    const ogImageMeta = helmetMetaTags.find(
+      meta => (meta as HelmetMetaTag).property === 'og:image',
+    );
+
+    expect((ogTitleMeta as HelmetMetaTag)?.content).toEqual(expectedOgTitle);
+    expect((ogImageMeta as HelmetMetaTag)?.content).toEqual(expectedOgImage);
+  });
+
+  it('sets og:title and og:image meta tags to pageTitle and promoImage when assetId is not provided', () => {
+    const pageData = liveFixture.data;
+
+    render(<Live pageData={pageData} />);
+
+    const expectedOgTitle = `${pageData.seo.seoTitle} - BBC News`;
+    const expectedOgImage = pageData.promoImage.url;
+
+    const helmetMetaTags = Helmet.peek().metaTags;
+    const ogTitleMeta = helmetMetaTags.find(
+      meta => (meta as HelmetMetaTag).property === 'og:title',
+    );
+    const ogImageMeta = helmetMetaTags.find(
+      meta => (meta as HelmetMetaTag).property === 'og:image',
+    );
+
+    expect((ogTitleMeta as HelmetMetaTag)?.content).toEqual(expectedOgTitle);
+    expect((ogImageMeta as HelmetMetaTag)?.content).toEqual(expectedOgImage);
+  });
 });
