@@ -473,20 +473,25 @@ describe('Live Page', () => {
     expect((ogTitleMeta as HelmetMetaTag)?.content).toEqual(expectedOgTitle);
   });
 
-  it('sets og:image meta tag to promoImage when assetId matches a post without an image', () => {
+  it('sets og:image meta tag to the page promoImage when assetId matches a post without an image, and still uses the posts title', () => {
     const assetId = 'asset:ec227190-49f3-43eb-b373-e52b6e1ba035';
     const pageData = liveFixture.data;
 
     render(<Live pageData={pageData} assetId={assetId} />);
 
     const expectedImageUrl = pageData.promoImage.url;
+    const expectedOgTitle = 'test - BBC News';
 
     const helmetMetaTags = Helmet.peek().metaTags;
     const ogImageMeta = helmetMetaTags.find(
       meta => (meta as HelmetMetaTag).property === 'og:image',
     );
+    const ogTitleMeta = helmetMetaTags.find(
+      meta => (meta as HelmetMetaTag).property === 'og:title',
+    );
 
     expect((ogImageMeta as HelmetMetaTag)?.content).toEqual(expectedImageUrl);
+    expect((ogTitleMeta as HelmetMetaTag)?.content).toEqual(expectedOgTitle);
   });
   it('sets og:title and og:image meta tags to pageTitle and promoImage when assetId does not match any post', () => {
     const assetId = 'asset:non-existent-id';
