@@ -1,0 +1,284 @@
+{
+    "data": {
+        "article": {
+            "metadata": {
+                "atiAnalytics": {
+                    "categoryName": null,
+                    "contentId": "urn:bbc:optimo:asset:cjxvnv0rvr0o",
+                    "contentType": "article",
+                    "language": "hu",
+                    "ldpThingIds": null,
+                    "ldpThingLabels": null,
+                    "nationsProducer": null,
+                    "pageIdentifier": "magyarul.articles.cjxvnv0rvr0o.page",
+                    "pageTitle": "Test ",
+                    "timePublished": "2025-07-21T10:15:56.372Z",
+                    "timeUpdated": "2025-07-21T10:15:56.372Z",
+                    "readTimeMilliseconds": 60000
+                },
+                "id": "urn:bbc:ares::article:cjxvnv0rvr0o",
+                "locators": {
+                    "optimoUrn": "urn:bbc:optimo:asset:cjxvnv0rvr0o",
+                    "canonicalUrl": "https://www.bbc.com/magyarul/articles/cjxvnv0rvr0o"
+                },
+                "type": "article",
+                "createdBy": "Magyarul",
+                "language": "hu",
+                "firstPublished": 1753092956372,
+                "lastPublished": 1753092956372,
+                "isOppm": false,
+                "options": {
+                    "includeComments": false
+                },
+                "analyticsLabels": {
+                    "contentId": "urn:bbc:optimo:asset:cjxvnv0rvr0o",
+                    "producer": "Hungarian",
+                    "page": "magyarul.articles.cjxvnv0rvr0o.page",
+                    "irisKeyword": null
+                },
+                "passport": {
+                    "language": "hu",
+                    "home": "http://www.bbc.co.uk/ontologies/passport/home/Magyarul",
+                    "taggings": [
+                        {
+                            "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                            "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+                        },
+                        {
+                            "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                            "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+                        },
+                        {
+                            "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+                            "value": "2025-07-21T10:15:56.372Z"
+                        }
+                    ],
+                    "predicates": {
+                        "infoClass": [
+                            {
+                                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                                "type": "infoClass"
+                            }
+                        ],
+                        "primaryMediaType": [
+                            {
+                                "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
+                                "type": "primaryMediaType"
+                            }
+                        ],
+                        "dateFirstReleased": [
+                            {
+                                "value": "2025-07-21T10:15:56.372Z",
+                                "type": "dateFirstReleased"
+                            }
+                        ]
+                    }
+                },
+                "blockTypes": [
+                    "headline",
+                    "text",
+                    "paragraph",
+                    "fragment"
+                ],
+                "includeComments": false,
+                "consumableAsSFV": false,
+                "allowAdvertising": true,
+                "consumableOnRedButton": false,
+                "consumableOnlyOnRedButton": false,
+                "breakingNews": {
+                    "isBreaking": false
+                },
+                "useSensitiveOnwardJourneys": false,
+                "stats": {
+                    "readTime": 1,
+                    "wordCount": 6
+                },
+                "isTransliterated": false,
+                "isKeyPointsFormatAsset": false
+            },
+            "content": {
+                "model": {
+                    "blocks": [
+                        {
+                            "id": "4cd53d1b",
+                            "type": "headline",
+                            "model": {
+                                "blocks": [
+                                    {
+                                        "id": "df13998f",
+                                        "type": "text",
+                                        "model": {
+                                            "blocks": [
+                                                {
+                                                    "id": "88292af9",
+                                                    "type": "paragraph",
+                                                    "model": {
+                                                        "text": "Test Hungarian article",
+                                                        "blocks": [
+                                                            {
+                                                                "id": "919a9e9d",
+                                                                "type": "fragment",
+                                                                "model": {
+                                                                    "text": "Test Hungarian article",
+                                                                    "attributes": []
+                                                                },
+                                                                "position": [
+                                                                    1,
+                                                                    1,
+                                                                    1,
+                                                                    1
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "position": [
+                                                        1,
+                                                        1,
+                                                        1
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "position": [
+                                            1,
+                                            1
+                                        ]
+                                    }
+                                ]
+                            },
+                            "position": [
+                                1
+                            ]
+                        },
+                        {
+                            "id": "33840c0e",
+                            "type": "timestamp",
+                            "model": {
+                                "firstPublished": 1753092956372,
+                                "lastPublished": 1753092956372
+                            },
+                            "position": [
+                                2
+                            ]
+                        },
+                        {
+                            "id": "c7b06ec3",
+                            "type": "text",
+                            "model": {
+                                "suitableForAbridgement": false,
+                                "blocks": [
+                                    {
+                                        "id": "97a55cff",
+                                        "type": "paragraph",
+                                        "model": {
+                                            "text": "content in Hungarian",
+                                            "blocks": [
+                                                {
+                                                    "id": "687492ab",
+                                                    "type": "fragment",
+                                                    "model": {
+                                                        "text": "content in Hungarian",
+                                                        "attributes": []
+                                                    },
+                                                    "position": [
+                                                        3,
+                                                        1,
+                                                        1
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "position": [
+                                            3,
+                                            1
+                                        ]
+                                    }
+                                ]
+                            },
+                            "position": [
+                                3
+                            ]
+                        },
+                        {
+                            "id": "0935d6a9",
+                            "type": "mpu",
+                            "model": {},
+                            "position": [
+                                4
+                            ]
+                        }
+                    ]
+                }
+            },
+            "promo": {
+                "headlines": {
+                    "seoHeadline": "Test ",
+                    "promoHeadline": {
+                        "blocks": [
+                            {
+                                "type": "text",
+                                "model": {
+                                    "blocks": [
+                                        {
+                                            "type": "paragraph",
+                                            "model": {
+                                                "text": "Test Hungarian article",
+                                                "blocks": [
+                                                    {
+                                                        "type": "fragment",
+                                                        "model": {
+                                                            "text": "Test Hungarian article",
+                                                            "attributes": []
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                "summary": {
+                    "blocks": [
+                        {
+                            "type": "text",
+                            "model": {
+                                "blocks": [
+                                    {
+                                        "type": "paragraph",
+                                        "model": {
+                                            "text": "",
+                                            "blocks": [
+                                                {
+                                                    "type": "fragment",
+                                                    "model": {
+                                                        "text": "",
+                                                        "attributes": []
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                "serviceIdentifier": "Magyarul",
+                "breakingNews": {
+                    "isBreaking": false
+                },
+                "consumableAsSFV": false
+            }
+        },
+        "secondaryData": {
+            "topStories": null,
+            "features": null,
+            "mostRead": null,
+            "latestMedia": null
+        }
+    },
+    "contentType": "application/json; charset=utf-8"
+}
