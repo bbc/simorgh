@@ -31,6 +31,9 @@ jobs:
       - name: Add bbc.com domain
         run: sudo echo "127.0.0.1 localhost.bbc.com" | sudo tee -a /etc/hosts
 
+      - name: Install Cypress
+        run: yarn cypress:install
+
       - name: Run Simorgh E2Es (Pages)
         uses: cypress-io/github-action@v6
         with:
