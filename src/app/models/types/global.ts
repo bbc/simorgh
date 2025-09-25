@@ -97,7 +97,7 @@ export type ServicesWithNoVariants = {
     | 'polska'
     | 'portuguese'
     | 'punjabi'
-    | 'romania'    
+    | 'romania'
     | 'russian'
     | 'scotland'
     | 'sport'
