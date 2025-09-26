@@ -50,7 +50,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
     lang,
     brandName,
   } = use(ServiceContext);
-  const { topStoriesTitle, home } = translations;
+  const { topStoriesTitle, mostReadBadgeText, home } = translations;
   const {
     title,
     description,
@@ -141,6 +141,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       renderVisuallyHiddenH2Title={position === 0}
                       curationId={curationId}
                       mostReadItemId={mostReadItemId}
+                      mostReadBadgeText={mostReadBadgeText}
                       readTimeVariant={readTimeVariant}
                       {...curationProps}
                     />

@@ -43,6 +43,7 @@ const CurationPromo = ({
   const photoGalleryTranslation = path(['media', 'photogallery'], translations);
   const durationTranslation = path(['media', 'duration'], translations);
   const duration = moment.duration(mediaDuration, 'seconds');
+  const mostReadBadgeTranslation = translations.mostReadBadgeText || 'Hello';
 
   const separator = ',';
 
@@ -98,7 +99,9 @@ const CurationPromo = ({
           </Promo.A>
         ) : (
           <Promo.A href={link} {...clickTrackerHandler}>
-            {isMostReadStory ? <div>Most Read</div> : null}
+            {isMostReadStory ? (
+              <div css={styles.mostReadBadge}>{mostReadBadgeTranslation}</div>
+            ) : null}
             {isLive ? <LiveLabel>{title}</LiveLabel> : title}
           </Promo.A>
         )}

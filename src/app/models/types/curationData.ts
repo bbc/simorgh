@@ -92,5 +92,6 @@ export interface Curation extends BaseCuration {
   nthCurationByStyleAndProminence?: number;
   renderVisuallyHiddenH2Title?: boolean;
   mostReadItemId?: string | null;
+  mostReadBadgeText?: string;
   readTimeVariant?: string | null;
 }

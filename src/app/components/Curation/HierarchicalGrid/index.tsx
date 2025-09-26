@@ -52,6 +52,9 @@ const HiearchicalGrid = ({
   const videoTranslation = path(['media', 'video'], translations);
   const photoGalleryTranslation = path(['media', 'photogallery'], translations);
   const durationTranslation = path(['media', 'duration'], translations);
+  const mostReadBadgeTranslation = (
+    translations.mostReadBadgeText || 'Most Read'
+  ).toUpperCase();
 
   if (!summaries || summaries.length < 3) return null;
 
@@ -175,7 +178,17 @@ const HiearchicalGrid = ({
                     </Promo.A>
                   ) : (
                     <Promo.A href={promo.link} {...clickTrackerHandler}>
-                      {isMostReadStory ? <div>Most Read</div> : null}
+                      {isMostReadStory ? (
+                        <div
+                          css={
+                            isFirstPromo
+                              ? styles.mostReadBadgeLarge
+                              : styles.mostReadBadgeSmall
+                          }
+                        >
+                          {mostReadBadgeTranslation}
+                        </div>
+                      ) : null}
                       {isLive ? (
                         <LiveLabel
                           {...(isFirstPromo
