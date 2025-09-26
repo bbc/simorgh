@@ -205,6 +205,7 @@ export interface Translations {
     linkText: string;
   };
   topStoriesTitle?: string;
+  mostReadTitle?: string;
   featuresAnalysisTitle?: string;
   latestMediaTitle?: string;
   infoBannerLabel?: string;
