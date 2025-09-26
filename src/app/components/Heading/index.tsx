@@ -43,7 +43,6 @@ const Heading: FC<Props> = forwardRef(
     ref: ForwardedRef<HTMLElement>,
   ) => {
     const element: Element = `h${level}`;
-
     return (
       <Text
         as={element}

@@ -1,11 +1,11 @@
-import React, { useContext, useMemo } from 'react';
+import React, { use, useMemo } from 'react';
 import styled from '@emotion/styled';
 import partition from 'ramda/src/partition';
 
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 import Image from './image';
-import MediaIcon, { TYPES } from './media-icon';
+import MediaIcon from './media-icon';
 import Heading from './heading';
 import Body from './body';
 import Footer from './footer';
@@ -23,8 +23,8 @@ const Wrapper = styled.div`
   position: relative;
 `;
 
-const Promo = ({ children }) => {
-  const { script, service } = useContext(ServiceContext);
+const Promo = ({ children, className }) => {
+  const { script, service } = use(ServiceContext);
 
   // Image components are moved to a left column on mobile
   const [leftChildren, rightChildren] = partition(
@@ -39,7 +39,7 @@ const Promo = ({ children }) => {
     [script, service],
   );
   return (
-    <Wrapper>
+    <Wrapper className={className}>
       <PromoContext.Provider value={promoValue}>
         {leftChildren && <div className="promo-image">{leftChildren}</div>}
         {rightChildren && <div className="promo-text">{rightChildren}</div>}
@@ -56,5 +56,4 @@ Promo.Footer = withPromoContext(Footer);
 Promo.A = withPromoContext(A);
 Promo.Timestamp = withPromoContext(Timestamp);
 
-export const MEDIA_TYPES = TYPES;
 export default Promo;

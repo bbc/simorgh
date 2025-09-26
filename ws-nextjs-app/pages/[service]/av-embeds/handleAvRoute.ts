@@ -6,7 +6,7 @@ import certsRequired from '#app/routes/utils/certsRequired';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import { FetchError } from '#app/models/types/fetch';
 import constructPageFetchUrl from '#app/routes/utils/constructPageFetchUrl';
-import parseAvRoute from '#app/routes/utils/parseAvRoute';
+import parseRoute from '#app/routes/utils/parseRoute';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
 import nodeLogger from '#lib/logger.node';
 import { OK } from '#app/lib/statusCodes.const';
@@ -26,15 +26,18 @@ export default async (context: GetServerSidePropsContext) => {
   let pageStatus;
   let pageJson;
 
-  // Remove x-frame-options header to allow embedding
-  context.res.removeHeader('x-frame-options');
-
-  const parsedRoute = parseAvRoute(resolvedUrl);
+  // Set x-robots-tag header to prevent search engine indexing
+  context.res.setHeader('x-robots-tag', 'noindex');
 
   context.res.setHeader(
     'Cache-Control',
     'public, stale-if-error=90, stale-while-revalidate=30, max-age=30',
   );
+
+  // Remove x-frame-options header to allow embedding
+  context.res.removeHeader('x-frame-options');
+
+  const parsedRoute = parseRoute(resolvedUrl);
 
   const avEmbedsUrl = constructPageFetchUrl({
     pageType: AV_EMBEDS,

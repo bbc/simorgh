@@ -15,11 +15,7 @@ const articleHasPlayer = articleId =>
   ].includes(articleId);
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
-export const testsThatFollowSmokeTestConfigForAMPOnly = ({
-  service,
-  pageType,
-  variant,
-}) => {
+export default ({ service, pageType, variant = 'default' }) => {
   let articleId;
   describe(`Running testsForAMPOnly for ${service} ${pageType}`, () => {
     before(() => {
@@ -47,10 +43,8 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
             .then(src => {
               cy.log(`src is ${src}`);
 
-              cy.testResponseCodeAndTypeRetry({
-                path: src,
-                responseCode: 200,
-                type: 'text/html',
+              cy.testResponseCodeAndRetry({
+                url: src,
                 allowFallback: true,
               });
             });

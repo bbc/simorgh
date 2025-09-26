@@ -5,6 +5,7 @@ import Transcript from '.';
 import transcriptFixture from './fixture.json';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { MEDIA_ARTICLE_PAGE, ARTICLE_PAGE } from '../../routes/utils/pageTypes';
+import metadata from './metadata.json';
 
 type Props = {
   pageType: PageTypes;
@@ -30,7 +31,7 @@ export default {
   title: 'Components/Transcript',
   ComponentWithContext,
   parameters: {
-    // metadata, // TO DO - add A11y docs
+    metadata,
     backgrounds: {
       default: 'Optimo',
     },

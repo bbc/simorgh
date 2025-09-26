@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import moment from 'moment';
-import { storiesOf } from '@storybook/react';
+import { storiesOf } from '@storybook/react-webpack5';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,

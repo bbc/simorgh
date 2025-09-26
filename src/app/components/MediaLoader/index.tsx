@@ -1,35 +1,40 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
-
 import { jsx } from '@emotion/react';
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { use, useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useLocation from '#app/hooks/useLocation';
 import useToggle from '#app/hooks/useToggle';
+import { PageTypes } from '#app/models/types/global';
+import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
 import {
   MEDIA_ARTICLE_PAGE,
   MEDIA_ASSET_PAGE,
 } from '#app/routes/utils/pageTypes';
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import { PageTypes } from '#app/models/types/global';
-import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
-import { Stages } from '#app/hooks/useExperimentHook';
-import { BumpType, MediaBlock, PlayerConfig } from './types';
-import Caption from '../Caption';
+import {
+  BumpType,
+  EventMapping,
+  MediaBlock,
+  MediaPlayerEvents,
+  PlayerConfig,
+} from './types';
 import nodeLogger from '../../lib/logger.node';
-import buildConfig from './utils/buildSettings';
-import Placeholder from './Placeholder';
-import getProducerFromServiceName from './utils/getProducerFromServiceName';
-import getCaptionBlock from './utils/getCaptionBlock';
-import styles from './index.styles';
 import { getBootstrapSrc } from '../Ad/Canonical';
-import Metadata from './Metadata';
-import getTranscriptBlock from './utils/getTranscriptBlock';
+import Caption from '../Caption';
 import Transcript from '../Transcript';
 import AmpMediaLoader from './Amp';
+import styles from './index.styles';
+import Metadata from './Metadata';
+import Placeholder from './Placeholder';
+import buildConfig from './utils/buildSettings';
+import getCaptionBlock from './utils/getCaptionBlock';
+import getProducerFromServiceName from './utils/getProducerFromServiceName';
+import getTranscriptBlock from './utils/getTranscriptBlock';
+import Message from './Message';
 
 const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
   MEDIA_ARTICLE_PAGE,
@@ -38,7 +43,7 @@ const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
 
 const logger = nodeLogger(__filename);
 
-const BumpLoader = () => (
+export const BumpLoader = () => (
   <Helmet>
     <script
       type="text/javascript"
@@ -99,10 +104,23 @@ const AdvertTagLoader = () => {
 type MediaContainerProps = {
   playerConfig: PlayerConfig;
   showAds: boolean;
+  uniqueId?: string;
+  noJsMessage?: string;
+  eventMapping?: EventMapping;
 };
 
-const MediaContainer = ({ playerConfig, showAds }: MediaContainerProps) => {
+const isAudioPlayer = (playerConfig: PlayerConfig) =>
+  playerConfig?.ui?.skin === 'audio';
+
+const MediaContainer = ({
+  playerConfig,
+  showAds,
+  uniqueId,
+  noJsMessage,
+  eventMapping,
+}: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
+  const isAudio = isAudioPlayer(playerConfig);
 
   useEffect(() => {
     try {
@@ -113,7 +131,24 @@ const MediaContainer = ({ playerConfig, showAds }: MediaContainerProps) => {
             playerConfig,
           );
 
-          mediaPlayer.load();
+          if (uniqueId != null) {
+            const { mediaPlayers } = window;
+            if (mediaPlayers == null) {
+              window.mediaPlayers = { [uniqueId]: mediaPlayer };
+            } else {
+              mediaPlayers[uniqueId] = mediaPlayer;
+            }
+          }
+
+          // Bind any events passed in to the player
+          if (eventMapping && Object.keys(eventMapping || {}).length > 0) {
+            Object.keys(eventMapping).forEach(bindingKey => {
+              const key = bindingKey as MediaPlayerEvents;
+              const handler = eventMapping[key];
+
+              if (handler) mediaPlayer.bind(key, handler);
+            });
+          }
 
           if (showAds) {
             const adTag = await window.dotcom.ads.getAdTag();
@@ -141,23 +176,26 @@ const MediaContainer = ({ playerConfig, showAds }: MediaContainerProps) => {
               );
             });
           }
+
+          mediaPlayer.load();
         }
       });
     } catch (error) {
       logger.error(MEDIA_PLAYER_STATUS, error);
     }
-  }, [playerConfig, showAds]);
+  }, [playerConfig, showAds, uniqueId, eventMapping]);
 
   return (
     <div
       ref={playerElementRef}
       data-e2e="media-player"
-      css={
-        playerConfig?.ui?.skin === 'audio'
-          ? styles.audioMediaContainer
-          : styles.standardMediaContainer
-      }
-    />
+      className="media-player"
+      css={isAudio ? styles.audioMediaContainer : styles.standardMediaContainer}
+    >
+      <noscript>
+        <Message message={noJsMessage} />
+      </noscript>
+    </div>
   );
 };
 
@@ -165,36 +203,35 @@ type Props = {
   blocks: MediaBlock[];
   className?: string;
   embedded?: boolean;
-  experimentStage?: Stages;
+  uniqueId?: string;
+  eventMapping?: EventMapping;
 };
 
 const MediaLoader = ({
   blocks,
   className,
   embedded,
-  experimentStage,
+  uniqueId,
+  eventMapping,
 }: Props) => {
-  const { lang, translations } = useContext(ServiceContext);
-  const { pageIdentifier } = useContext(EventTrackingContext);
+  const transcriptBlock = getTranscriptBlock(blocks);
+  const hasTranscript = !!transcriptBlock;
+  const { lang, service, translations } = use(ServiceContext);
+  const { pageIdentifier } = use(EventTrackingContext);
   const { enabled: adsEnabled } = useToggle('ads');
 
   const {
     id,
     pageType,
     statsDestination,
-    service,
     isAmp,
     isLite,
     showAdsBasedOnLocation,
-  } = useContext(RequestContext);
+  } = use(RequestContext);
 
   const [showPlaceholder, setShowPlaceholder] = useState(
     !PAGETYPES_IGNORE_PLACEHOLDER.includes(pageType),
   );
-
-  // TODO - refactor to improve experience on .lite
-  const transcriptBlock = getTranscriptBlock(blocks);
-  const hasTranscript = !!transcriptBlock;
 
   if (isLite && !hasTranscript) return null;
 
@@ -230,6 +267,9 @@ const MediaLoader = ({
   } = config;
 
   const captionBlock = getCaptionBlock(blocks, pageType);
+  const isPortrait = orientation === 'portrait';
+  const isLandscape = orientation === 'landscape';
+  const isAudio = isAudioPlayer(playerConfig);
 
   const {
     placeholderSrc,
@@ -238,93 +278,104 @@ const MediaLoader = ({
     mediaInfo,
   } = placeholderConfig ?? {};
 
+  const noJsMessage = translatedNoJSMessage || translations?.media?.noJs;
+
   const hasPlaceholder = Boolean(showPlaceholder && placeholderSrc);
 
-  const showPortraitTitle = orientation === 'portrait' && !embedded;
-
-  const experimentEnabled = experimentStage === Stages.STAGE_2;
-
-  return (
+  return isLite && hasTranscript ? (
+    <Transcript
+      transcript={transcriptBlock}
+      title={placeholderConfig?.mediaInfo?.title}
+    />
+  ) : (
     <>
-      {isLite && hasTranscript ? (
-        <Transcript
-          transcript={transcriptBlock}
-          title={placeholderConfig?.mediaInfo?.title}
-        />
-      ) : (
-        <>
-          {
-            // Prevents the av-embeds route itself rendering the Metadata component
-            !embedded && (
-              <Metadata
-                blocks={blocks}
-                embedURL={playerConfig?.externalEmbedUrl}
-              />
-            )
-          }
-          {showPortraitTitle && (
-            <strong css={styles.titlePortrait}>Watch Moments</strong>
-          )}
-          <figure
-            data-e2e="media-loader__container"
-            className={className}
-            css={[
-              styles.figure(embedded),
-              experimentEnabled && styles.experimentVideo,
-              playerConfig?.ui?.skin === 'classic' && [
-                orientation === 'portrait' && styles.portraitFigure(embedded),
-                orientation === 'landscape' && styles.landscapeFigure,
-              ],
-            ]}
-          >
-            {isAmp ? (
-              <AmpMediaLoader
-                src={ampIframeUrl}
-                title={mediaInfo?.title}
-                placeholderSrc={placeholderSrc}
-                placeholderSrcset={placeholderSrcset}
-                noJsMessage={translatedNoJSMessage}
+      {
+        // Prevents the av-embeds route itself rendering the Metadata component
+        !embedded && (
+          <Metadata blocks={blocks} embedURL={playerConfig?.externalEmbedUrl} />
+        )
+      }
+      <figure
+        data-e2e="media-loader__container"
+        className={`media-container${className ? ` ${className}` : ''}`}
+        css={
+          hasTranscript
+            ? [
+                styles.figure(embedded),
+                !isAudio && [
+                  isPortrait && styles.portraitFigure(embedded),
+                  isLandscape && styles.landscapeFigure,
+                ],
+                hasTranscript && styles.withTranscriptVideo,
+              ]
+            : [
+                styles.figure(embedded),
+                !isAudio && [
+                  isPortrait && styles.portraitFigure(embedded),
+                  isLandscape && styles.landscapeFigure,
+                ],
+              ]
+        }
+      >
+        {isAmp ? (
+          <AmpMediaLoader
+            src={ampIframeUrl}
+            title={mediaInfo?.title}
+            placeholderSrc={placeholderSrc}
+            placeholderSrcset={placeholderSrcset}
+            noJsMessage={noJsMessage}
+          />
+        ) : (
+          <>
+            {showAds && <AdvertTagLoader />}
+            <BumpLoader />
+            {hasPlaceholder ? (
+              <Placeholder
+                src={placeholderSrc}
+                srcSet={placeholderSrcset}
+                noJsMessage={noJsMessage}
+                mediaInfo={mediaInfo}
+                onClick={() => setShowPlaceholder(false)}
+                hasTranscript={hasTranscript}
+                isPortraitOrientation={!!isPortrait}
               />
             ) : (
-              <>
-                {showAds && <AdvertTagLoader />}
-                <BumpLoader />
-                {hasPlaceholder ? (
-                  <Placeholder
-                    src={placeholderSrc}
-                    srcSet={placeholderSrcset}
-                    noJsMessage={translatedNoJSMessage}
-                    mediaInfo={mediaInfo}
-                    onClick={() => setShowPlaceholder(false)}
-                    experimentStage={experimentStage}
-                  />
-                ) : (
-                  <MediaContainer
-                    playerConfig={playerConfig}
-                    showAds={showAds}
-                  />
-                )}
-              </>
-            )}
-            {captionBlock && (
-              <Caption
-                block={captionBlock}
-                type={mediaType}
-                css={
-                  (orientation === 'portrait' && styles.captionPortrait,
-                  experimentEnabled && styles.experimentCaption)
-                }
+              <MediaContainer
+                playerConfig={playerConfig}
+                showAds={showAds}
+                uniqueId={uniqueId}
+                noJsMessage={noJsMessage}
+                eventMapping={eventMapping}
               />
             )}
-            {transcriptBlock && (
-              <Transcript
-                transcript={transcriptBlock}
-                title={placeholderConfig?.mediaInfo?.title}
-              />
-            )}
-          </figure>
-        </>
-      )}
+          </>
+        )}
+        {captionBlock && (
+          <Caption
+            className={isPortrait ? 'portrait-caption' : ''}
+            block={captionBlock}
+            type={mediaType}
+            css={
+              hasTranscript
+                ? [
+                    isAudio && styles.captionAudio,
+                    !isAudio && [isPortrait && styles.captionPortrait],
+                    hasTranscript && styles.withTranscriptCaption,
+                  ]
+                : [
+                    isAudio && styles.captionAudio,
+                    !isAudio && [isPortrait && styles.captionPortrait],
+                  ]
+            }
+          />
+        )}
+        {hasTranscript && (
+          <Transcript
+            transcript={transcriptBlock}
+            title={placeholderConfig?.mediaInfo?.title}
+          />
+        )}
+      </figure>
     </>
   );
 };

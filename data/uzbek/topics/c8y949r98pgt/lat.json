@@ -1,0 +1,323 @@
+{
+  "data": {
+    "title": "O‘zbekiston",
+    "description": "",
+    "imageData": null,
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Zaharli chiqindini ushlab bo‘ladimi yoxud nega Mirziyoyev tanqid qilgan sement sanoati o‘syapti? Podkast",
+            "firstPublished": "2025-07-07T11:24:16.924Z",
+            "lastPublished": "2025-07-07T11:24:16.924Z",
+            "link": "https://www.bbc.com/uzbek/articles/c4g8ex7ked1o/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d786/live/8fe9d4c0-5b21-11f0-a40e-a1af2950b220.jpg.webp",
+            "description": "Karbonat angidridni ushlash va ko‘mish jarayoni tabiiy jarayondan farq qiladi. Tabiiy jarayonda uni daraxtlar o‘ziga so‘rib oladi va qancha ko‘p daraxt bo‘lsa, atmosferaga shuncha kam chiqindi chiqadi. Karbonatni ushlash va ko‘mish yo g‘amlash deganda elektr stantsiyalari va sanoat zavodlari havoga chiqaruvchi CO2 ni manbaning o‘zidayoq ushlab olish tushuniladi. ",
+            "imageAlt": "Britaniya karbonat angidridni ushlash va g‘amlash texnologiyalari ishga tushgach, avval to‘xtab qolgan zavodlarni ham qayta ochishi mumkin. ",
+            "id": "c4g8ex7ked1o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Rossiya hech kim qilmagan ishni qildi, Markaziy Osiyo davlatlari hozircha jim...",
+            "firstPublished": "2025-07-04T07:19:12.731Z",
+            "lastPublished": "2025-07-04T07:19:12.731Z",
+            "link": "https://www.bbc.com/uzbek/articles/cqx2zeerq72o/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/e024/live/9169a9e0-58a3-11f0-bce0-953293c47b25.jpg.webp",
+            "description": "Rossiya so‘nggi soatlarda sarlavhalarga chiqdi.... Xuddi shu manzarada Shavkat Mirziyoyev Tolibon hukumati Bosh vaziri o‘rinbosari vazifasini bajaruvchi Abdul G‘ani Barodar bilan uchrashdi.",
+            "imageAlt": "Putin va Shoygu",
+            "id": "cqx2zeerq72o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "O‘zbekiston: Prezident qarshisiga xotin-qizlar hijobsiz va erkaklar soqolsiz chiqarilmoqdami – Bu kimning tashabbusi?",
+            "firstPublished": "2025-07-04T05:11:18.338Z",
+            "lastPublished": "2025-07-04T05:11:18.338Z",
+            "link": "https://www.bbc.com/uzbek/articles/clym3m1ld5no/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/dc4f/live/be449ae0-5751-11f0-960d-e9f1088a89fe.jpg.webp",
+            "description": "Xalqaro musobaqalarda hijobi bilan qatnashgan qizlarning prezident qarshisida uni yechgan holatda ko‘rinishi berishi, yana diniy e’tiqod masalasi ko‘tarilishiga sabab bo‘ldi. Oldinroq futbolchilar prezident kelgan stadionga soqoli qirilgan holda chiqqan edilar.",
+            "imageAlt": "Prezident kollaj",
+            "id": "clym3m1ld5no"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "O‘zbek Internet foydalanuvchilari Bokuning Moskvaga itoatsizligini maqtayaptilar. Video",
+            "firstPublished": "2025-07-03T11:49:40.912Z",
+            "lastPublished": "2025-07-03T11:49:40.912Z",
+            "link": "https://www.bbc.com/uzbek/articles/cwyg5je516po/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/328c/live/3206f750-57e5-11f0-bac7-59e5f1e1335c.jpg.webp",
+            "description": "O‘zbekiston Prezidenti Shavkat Mirziyoyevning Bokuga rasmiy tashrifi Internet ijtimoiy tarmoqlarida qo‘llab-quvvatlab turilgani kuzatilgan bir vaqtda o‘zbekistonlik sharhlovchilar Ozarbayjonning Rossiyadagi o‘z fuqarolari ta’qib qilinishiga qarshi qattiq turganini maqtadilar.\n\n",
+            "imageAlt": "Prezident Mirziyoyev Ozarbayjon Prezidenti Ilhom Aliev bilan",
+            "id": "cwyg5je516po"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Rossiya qamoqxonalarida ikki kishining o‘limi sobiq ittifoqchisi Ozarbayjon bilan ziddiyatni kuchaytirdi. Video",
+            "firstPublished": "2025-06-30T15:07:30.960Z",
+            "lastPublished": "2025-07-01T15:51:03.992Z",
+            "link": "https://www.bbc.com/uzbek/articles/c86gg3z0058o/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/afb0/live/54be1810-5672-11f0-9074-8989d8c97d87.jpg.webp",
+            "description": "Rossiya qamoqxonalarida Ozarbayjonlik ikki aka-ukaning o‘limi, Ozarbayjon allaqachon  Moskvani Janubiy Kavkazdagi hukmron mavqeini shubha ostiga qo‘yib, mintaqaviy kuch sifatida shakllanayotgan bir davrida, mavjud diplomatik kelishmovchiliklarni gazak oldirdi.",
+            "imageAlt": "Dushanba kuni Ozarbayjonda ikki nafar Rossiya davlat ommaviy axborot vositalari xodimi FSB ga ishlashda ayblanib hibsga olindi.",
+            "id": "c86gg3z0058o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Qozog‘iston va O‘zbekiston: Dipfeyk videolar uchun Rossiya ayblanayapti - Video",
+            "firstPublished": "2025-07-01T14:34:52.315Z",
+            "lastPublished": "2025-07-01T14:34:52.315Z",
+            "link": "https://www.bbc.com/uzbek/articles/c93992wk6zeo/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/1cba/live/2734ed90-5683-11f0-960d-e9f1088a89fe.jpg.webp",
+            "description": "Avval O‘zbekistonda, so‘ng Qozog‘istonda ikki mamlakatning siyosatchilari, taniqli insonlarining yuzi va ovozidan foydalanib sun’iy idrok yordamida yasalgan dipfeyk videolar tarqalmoqda, bu videolarda O‘zbekiston yoki Qozog‘iston fuqarolarining Ukraina urushida Rossiya tarafida jang qilishlari yaxshi ish ekani aytilgan. ",
+            "imageAlt": "Soxta videolar",
+            "id": "c93992wk6zeo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "\"Manchester Siti murabbiysi\": Anchadan beri bunday o‘ynamagan edik",
+            "firstPublished": "2025-06-27T14:20:52.016Z",
+            "lastPublished": "2025-06-27T14:20:52.016Z",
+            "link": "https://www.bbc.com/uzbek/articles/cy8ken5evklo/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/cb50/live/bed07ec0-5341-11f0-b4be-8f7caf53b80c.jpg.webp",
+            "description": "Klublar o‘rtasidagi Jahon chempionatining guruh bosqichida \"Manchester Siti\" \"Yuventus\" ustidan 5:2 hisobida g‘alaba qildi.",
+            "imageAlt": "Manchester City have scored 13 goals in their three group stage games at this Club World Cup\n\n",
+            "id": "cy8ken5evklo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Kamtarlik va davlat xizmatchisi bir-biriga yot tushunchalarmi?",
+            "firstPublished": "2025-06-27T08:43:42.213Z",
+            "lastPublished": "2025-06-27T08:43:42.213Z",
+            "link": "https://www.bbc.com/uzbek/articles/cx23wwnvjygo/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/9145/live/51ebd890-532d-11f0-a2ff-17a82c2e8bc4.jpg.webp",
+            "description": "Singapur Prezidenti Halima Yoqub \"O‘zbekiston Havo yo‘llari\" samolyotida Toshkentga kelgani yodingizdami? Nima uchun aholining davlat xizmatchilariga bo‘lgan ishonchi past?, degan savolni qo‘ydi gazeta.uz veb-nashri.",
+            "imageAlt": "BMT davlat xizmati forumi ishtirokchilari",
+            "id": "cx23wwnvjygo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Tahlil: O‘nlab yillik e’tiborsizlikdan so‘ng nega Markaziy Osiyo Mo‘g‘uliston sari yuzlanmoqda?",
+            "firstPublished": "2025-06-26T15:22:03.898Z",
+            "lastPublished": "2025-06-26T15:22:03.898Z",
+            "link": "https://www.bbc.com/uzbek/articles/crl0xyn6jd1o/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7ac4/live/626f6a10-529c-11f0-971a-49c187c3b380.jpg.webp",
+            "description": "Shavkat Mirziyoyev Mo‘g‘uliston zaminiga oyoq qo‘ygan O‘zbekistonning ilk prezidenti bo‘ldi.  Undan oldinroq Turkmaniston prezidentining ham Mo‘g‘ulistonga borishi mintaqa davlatlari o‘nlab yillar e’tiborsiz qoldirgan davlatga nima sababdan yuzlanyapti, degan savollarni paydo qildi.",
+            "imageAlt": "Shavkat Mirziyoyev Mo‘g‘ulistonga tashrif buyurgan ilk O‘zbekiston prezidenti bo‘lgani aytilmoqda",
+            "id": "crl0xyn6jd1o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "O‘zbekiston: siyosiy muxolifat qonuni qabul qilindi",
+            "firstPublished": "2025-05-14T14:17:39.393Z",
+            "lastPublished": "2025-06-25T14:55:47.565Z",
+            "link": "https://www.bbc.com/uzbek/articles/c93y8xp0ey3o/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/19e7/live/57f87ae0-30c8-11f0-b5da-71555b1343d7.jpg.webp",
+            "description": "O‘zbekiston parlamenti yuqori palatasi mamlakatda siyosiy muxolifat qonunan faoliyat yuritishi mumkinligiga yo‘l ochadigan qonunni ma’qulladi.",
+            "imageAlt": "O‘zbekiston Xalq Demokratik partiyasi raisi Ulug‘bek Inoyatov",
+            "id": "c93y8xp0ey3o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Lavrov Turkmanistonda, Tojikiston Isroil-Eron otashkesimini olqishladi",
+            "firstPublished": "2025-06-23T17:08:31.075Z",
+            "lastPublished": "2025-06-25T12:22:44.913Z",
+            "link": "https://www.bbc.com/uzbek/articles/cvg489jy7gyo/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/bc99/live/1ebc88f0-51b8-11f0-a2ff-17a82c2e8bc4.jpg.webp",
+            "description": "Eronga qo‘shni mamlakat Turkmanistonga Rossiya Tashqi ishlar vaziri Sergey Lavrov bordi. Tojikiston Tashqi ishlar vazirligi Isroil bilan Eron o‘t ochishni to‘xtatishga kelishganlarini olqishlab bayonot tarqatdi.",
+            "imageAlt": "Эрондан чиқишга мажбур бўлган покистонлик талаба қизлар Покистонда",
+            "id": "cvg489jy7gyo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Eron AQSh va Isroilni dog‘da qoldirdimi? Video",
+            "firstPublished": "2025-06-19T12:41:13.396Z",
+            "lastPublished": "2025-06-25T09:18:40.145Z",
+            "link": "https://www.bbc.com/uzbek/articles/clyl6pxdveyo/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/bdd6/live/5dd54630-51a4-11f0-8485-7bd50fa63665.jpg.webp",
+            "description": "Yangi savollar o‘rtaga chiqmoqda – ammo nega?",
+            "imageAlt": "Eronning Fordo yadroviy ob’ekti",
+            "id": "clyl6pxdveyo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "O‘zbekiston: Prezident administratsiyasi rahbari lavozimi qayta tashkil qilindi, unga rahbar etib prezidentning qizi Saida Mirziyoyeva tayinlandi",
+            "firstPublished": "2025-06-24T15:15:15.820Z",
+            "lastPublished": "2025-06-24T15:15:43.909Z",
+            "link": "https://www.bbc.com/uzbek/articles/cj4e80qzn11o/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c246/live/fc654330-5100-11f0-86d5-3b52b53af158.jpg.webp",
+            "description": "O‘zbekistonda qudrat tizimida balki eng ta’sirli o‘rinlardan biriga Saida Mirziyoyevaning o‘z otasi tomonidan tayinlanishini tabiiyki hamma qarsak bilan xush qarshilayotgani yo‘q.\nAmmo qarsaklar yo‘q emas, ayniqsa bu kabi qudratli mansabni ayol kishi egallayotgani O‘zbekiston internet tarmog‘idagi faol ayollar tomonidan olqishlanmoqda.",
+            "imageAlt": "Saida Mirziyoyeva",
+            "id": "cj4e80qzn11o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Eron: Isroilning Markaziy Osiyoga chegaradosh davlatga hujumi mintaqa uchun qanchalik xavotirli - endi Rossiya kuchayadimi?",
+            "firstPublished": "2025-06-18T12:07:59.593Z",
+            "lastPublished": "2025-06-22T15:59:26.233Z",
+            "link": "https://www.bbc.com/uzbek/articles/c24v35d67zzo/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/3263/live/1de219a0-4c35-11f0-96bb-172b7e186897.jpg.webp",
+            "description": "Mintaqada yangi xavotir va savollar o‘rtaga chiqmoqda...",
+            "imageAlt": "Markaziy Osiyo xaritasi",
+            "id": "c24v35d67zzo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Rossiya: migrantlar masalasi prezidentlar e’tiborida, Qozog‘iston va O‘zbekiston AESlarini Rosatom quradi, O‘zbekiston BRIKS bankiga qo‘shilmoqchi",
+            "firstPublished": "2025-06-19T11:02:49.363Z",
+            "lastPublished": "2025-06-19T11:02:49.363Z",
+            "link": "https://www.bbc.com/uzbek/articles/c24v3gr422eo/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c75c/live/d60c9850-4cfa-11f0-8c47-237c2e4015f5.jpg.webp",
+            "description": "Rossiya Prezidenti Vladimir Putin aytishicha, migratsiya masalalarini O‘zbekiston Prezidenti Shavkat Mirziyoyev bilan birga hal qilishga kelishganlar.",
+            "imageAlt": "Prezident Mirziyoyev va Prezident Putin",
+            "id": "c24v3gr422eo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Markaziy Osiyo mustaqilligi, suvereniteti, hududiy yaxlitligidan ortiq qo‘rqmasa ham bo‘ladimi, Xitoy shunchalik uzoqqa ketdimi va Rossiya nega xotirjam?",
+            "firstPublished": "2025-06-18T10:51:52.566Z",
+            "lastPublished": "2025-06-18T10:51:52.566Z",
+            "link": "https://www.bbc.com/uzbek/articles/cdx5rvrvn9po/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/27ed/live/321faad0-4c31-11f0-a380-d5e16029f677.jpg.webp",
+            "description": "Qozog‘istondagi kelishuv mintaqa qolib, G‘arbda ham sarlavhalarga chiqdi...",
+            "imageAlt": "Xitoy va O‘zbekiston prezidentlari",
+            "id": "cdx5rvrvn9po"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Ingliz tarixchi: Amir Temur Chingizxondan vahshiyroq bo‘lgan - video",
+            "firstPublished": "2025-06-04T13:25:45.249Z",
+            "lastPublished": "2025-06-17T08:15:49.518Z",
+            "link": "https://www.bbc.com/uzbek/articles/cyvm1vg54jno/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/0150/live/81e65140-4141-11f0-8a46-a5d782130fea.jpg.webp",
+            "description": "Britaniyaning Keele universiteti professori Piter Jakson o‘tmishda ham bir necha tarixiy asarlari bilan tanilgan. Ular sirasiga «Dehli sultonligining siyosiy va harbiy tarixi», «Mo‘g‘ullar va Islom dunyosi», «Yettinchi salb urushi, 1244-54: Manbalar va hujjatlar» kitoblari kiradi. U Kembridj universitetidagi doktorlik unvonini 1977 yilda «Mo‘g‘ullar va Hindiston, 1221-1351» tadqiqot ishi bilan olgan. ",
+            "imageAlt": "Professor Piter Jakson",
+            "id": "cyvm1vg54jno"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "O‘zbekiston va Markaziy Osiyo yana nimadan xavotirda?",
+            "firstPublished": "2025-06-16T13:45:23.018Z",
+            "lastPublished": "2025-06-16T13:45:23.018Z",
+            "link": "https://www.bbc.com/uzbek/articles/c9wgww4ejgzo/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/8c7c/live/4a80a1e0-4ab7-11f0-bbaa-4bc03e0665b7.jpg.webp",
+            "description": "Markaziy Osiyo davlatlarining deyarli barchasi bir kunda birdek bayonot bilan chiqdi. Neytral Turkmaniston esa yanada uzoqroq ketdi – so‘nggi keskinlik ularni shunchalik xavotirga soldimi?",
+            "imageAlt": "Central Asian leaders",
+            "id": "c9wgww4ejgzo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Markaziy Osiyo 'NATO'sini tuzsa bo‘ladimi?",
+            "firstPublished": "2025-06-12T07:36:27.286Z",
+            "lastPublished": "2025-06-12T07:36:27.286Z",
+            "link": "https://www.bbc.com/uzbek/articles/cwyj718dzxwo/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/5e6f/live/cd504790-4758-11f0-8556-17c42f0c6f8c.jpg.webp",
+            "description": "Qozog‘istonlik va o‘zbekistonlik ekspertlar ishtirok etgan muhokamada Markaziy Osiyo mudofaa ittifoqini barpo etish chaqirig‘i yangradi.",
+            "imageAlt": "2024 yil iyulida Qozog‘iston hududida o‘tkazilgan \"Bіrlestіk-2024\" harbiy mashqlari.",
+            "id": "cwyj718dzxwo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "O‘zbekiston va dunyo: \"Markaziy Osiyo kuchliroq qizib borayapti\" ",
+            "firstPublished": "2025-06-11T15:02:37.298Z",
+            "lastPublished": "2025-06-11T16:14:18.413Z",
+            "link": "https://www.bbc.com/uzbek/articles/c0mrez1wp3jo/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/092d/live/8ce05ad0-46d4-11f0-a3bb-3f62a138271c.jpg.webp",
+            "description": "Jahon Meteorologiya tashkiloti tahlillariga ko‘ra, Markaziy Osiyo mintaqasi dunyoning boshqa joylariga solishtirganda ham kuchliroq qizib borayapti.  \n",
+            "imageAlt": "Qurib qolgan suv omborining tubi",
+            "id": "c0mrez1wp3jo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Video: O‘zbekiston Rossiyaga nota topshirdi, 300 ming migrant bola maktabga bormaydi",
+            "firstPublished": "2025-06-10T14:42:05.463Z",
+            "lastPublished": "2025-06-11T15:51:01.230Z",
+            "link": "https://www.bbc.com/uzbek/articles/cz0dzn4g83zo/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/f636/live/5c15ab70-4699-11f0-bbaa-4bc03e0665b7.jpg.webp",
+            "description": "O‘zbekiston Tashqi ishlar vazirligi Moskva shahridagi reydda mehnat muhojirlariga qilingan muomala munosabati bilan Rossiya Tashqi ishlar vazirligiga nota yuborilganini xabar qildi. Rossiyada 300 mingdan ortiq voyaga yetmagan xorijlik biror bir o‘quv muassasasida ro‘yxatga olinmagani ma’lum bo‘ldi.\n\n",
+            "imageAlt": "O‘zbekiston Tashqi ishlar vazirligi va Rossiyaning O‘zbekistondagi elchiligi rasmiylari uchrashuvi",
+            "id": "cz0dzn4g83zo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Markaziy Osiyodan birinchi, sobiq Ittifoqdan uchinchi - O‘zbekiston futbolchilari tarix yaratdi. Video",
+            "firstPublished": "2025-06-06T14:36:59.797Z",
+            "lastPublished": "2025-06-09T14:03:32.263Z",
+            "link": "https://www.bbc.com/uzbek/articles/c87j2de71lyo/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/47e0/live/f111dd40-42e1-11f0-90bf-b10bb5ee7272.jpg.webp",
+            "description": "Futbol bo‘yicha O‘zbekiston milliy terma jamoasi BAA bilan durang kechgan o‘yindan so‘ng guruhda ikkinchi jamoa bo‘lib Jahon Chempionatiga yo‘llanmani qo‘lga kiritishi nufuzli nashrlarning e’tiborini tortdi.",
+            "imageAlt": "oyin",
+            "id": "c87j2de71lyo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Markaziy Osiyoda Leninning 'eng baland haykali' olib tashlandi, yangilik o‘zbekistonliklarni ham e’tiborsiz qoldirmadi - Rossiya hozircha jim",
+            "firstPublished": "2025-06-09T10:30:57.440Z",
+            "lastPublished": "2025-06-09T10:30:57.440Z",
+            "link": "https://www.bbc.com/uzbek/articles/ckgr48xpd0yo/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/400c/live/de1b49a0-4517-11f0-bace-e1270fc31f5e.jpg.webp",
+            "description": "Yangilik shu kunlarda hatto G‘arbda ham e’tibor topdi. G‘arbning qator yetakchi nashrlarida sarlavhalarga ham chiqdi. ",
+            "imageAlt": "Lenin haykali",
+            "id": "ckgr48xpd0yo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "O‘zbekiston Islomiy harakati yana O‘zbekiston uchun tahdidga aylanadimi? Video",
+            "firstPublished": "2025-04-29T15:43:04.026Z",
+            "lastPublished": "2025-06-06T14:23:06.524Z",
+            "link": "https://www.bbc.com/uzbek/articles/cn5x90lq67xo/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/6301/live/a8362d50-24ec-11f0-8a86-5183b8130d5d.jpg.webp",
+            "description": "Afg‘onistondagi o‘zbekistonlik jangarilar kuchayishning yangi imkoniyatini topishdimi? Jahon miqyosidagi yangilik shu kunlarda O‘zbekiston va mintaqa xavfsizligi bilan bog‘liq yangi xavotirlarni ham paydo qilmay qolmadi...",
+            "imageAlt": "Jangarilar",
+            "id": "cn5x90lq67xo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 40,
+        "curationId": "urn:bbc:vivo:curation:31b00914-de47-4ee3-9ae9-01f932d1fb0b",
+        "curationType": "vivo-stream",
+        "position": 0,
+        "visualProminence": "NORMAL",
+        "visualStyle": "FEED"
+      }
+    ],
+    "activePage": 1,
+    "pageCount": 40,
+    "metadata": {
+      "analytics": {
+        "name": "uzbek.topics.c8y949r98pgt.page",
+        "producer": "UZBEK"
+      },
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:c8y949r98pgt",
+        "contentType": "index-category",
+        "pageIdentifier": "uzbek.topics.c8y949r98pgt.page",
+        "pageTitle": "O‘zbekiston"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

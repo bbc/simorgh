@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/aria-role */
 /** @jsx jsx */
-import { useContext, useRef } from 'react';
+import { use, useRef } from 'react';
 import { jsx } from '@emotion/react';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
@@ -36,17 +36,18 @@ const ShareButton = ({
   };
   headline: string;
 }) => {
-  const viewRef = useViewTracker(eventTrackingData);
+  const viewTracker = useViewTracker(eventTrackingData);
   const focusRef = useRef<HTMLButtonElement>(null);
-  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+  const { onClick: clickTrackerHandler } =
+    useClickTrackerHandler(eventTrackingData);
   const {
     translations: {
       liveExperiencePage: { shareButtonText = 'Share' },
     },
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
   const handleShare = async (event: React.MouseEvent<HTMLButtonElement>) => {
-    clickTrackerHandler(event);
+    if (clickTrackerHandler) clickTrackerHandler(event);
     try {
       const currentUrlNoHash = new URL(window.location.href.split('#')[0]);
 
@@ -70,7 +71,7 @@ const ShareButton = ({
   };
 
   return (
-    <div ref={viewRef}>
+    <div {...viewTracker} data-e2e="share">
       <button
         type="button"
         ref={focusRef}

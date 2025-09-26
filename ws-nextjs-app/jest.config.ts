@@ -1,3 +1,4 @@
+/* eslint-disable import/no-relative-packages */
 import { pathsToModuleNameMapper } from 'ts-jest';
 import type { Config } from '@jest/types';
 import { compilerOptions } from '../tsconfig.json';
@@ -10,6 +11,10 @@ const canonicalIntegrationTests = {
   testEnvironment: './integration/IntegrationTestEnvironment.ts',
   testEnvironmentOptions: {
     platform: 'canonical',
+  },
+  modulePaths: ['../'],
+  moduleNameMapper: {
+    ...pathsToModuleNameMapper(compilerOptionsPaths),
   },
   setupFilesAfterEnv: ['./setupTests.ts'],
   transform: {
@@ -30,6 +35,10 @@ const ampIntegrationTests = {
   testEnvironmentOptions: {
     platform: 'amp',
   },
+  modulePaths: ['../'],
+  moduleNameMapper: {
+    ...pathsToModuleNameMapper(compilerOptionsPaths),
+  },
   setupFilesAfterEnv: ['./setupTests.ts'],
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': [
@@ -49,7 +58,7 @@ const unitTests = {
   moduleNameMapper: {
     ...pathsToModuleNameMapper(compilerOptionsPaths),
   },
-  setupFilesAfterEnv: ['./setupTests.ts'],
+  setupFilesAfterEnv: ['./setupTests.ts', 'jest-expect-message'],
   snapshotSerializers: ['@emotion/jest/serializer'],
   testEnvironment: 'jest-environment-jsdom',
   transform: {
@@ -70,6 +79,7 @@ const unitTests = {
 
 const config: import('jest').Config = {
   projects: [unitTests, canonicalIntegrationTests, ampIntegrationTests],
+  workerIdleMemoryLimit: '512MB',
 };
 
 export default config;

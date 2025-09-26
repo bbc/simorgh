@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-mundo',
     atiAnalyticsProducerId: '62',
+    atiAnalyticsProducerName: 'MUNDO',
+    useReverb: true,
     chartbeatDomain: 'mundo.bbc.co.uk',
     brandName: 'BBC News Mundo',
     product: 'BBC News',
@@ -39,30 +41,70 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/mundo/institucional-51359666',
     isTrustProjectParticipant: true,
     script: latinWithDiacritics,
-    manifestPath: '/manifest.json',
+    manifestPath: '/mundo/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Noticias',
+    homePageTitle: 'Noticias',
     iTunesAppId: 515255747,
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    electionBanner: {
+      electionThingIds: ['647d5613-e0e2-4ef5-b0ce-b491de38bdbd'],
+      iframeSrc:
+        'include/vjafwest/1365-2024-us-presidential-election-banner/mundo/app',
+      iframeDevSrc:
+        'include/vjafwest/1365-2024-us-presidential-election-banner/develop/mundo/app',
+    },
+    podcastPromo: {
+      title: 'WhatsApp',
+      brandTitle: 'Únete a nuestro WhatsApp',
+      brandDescription:
+        'Recibe el mejor contenido de BBC News Mundo en tu celular',
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0lrtll8.png',
+        alt: 'Redes sociales - Únete a nuestro WhatsApp',
+      },
+      linkLabel: {
+        text: 'Suscríbete aquí',
+        href: 'https://whatsapp.com/channel/0029VaUm1Ss3WHTbgIXrjw3D',
+      },
+      skipLink: {
+        text: 'Saltar %title% y continuar leyendo',
+        endTextVisuallyHidden: 'Fin de %title%',
+      },
+    },
     translations: {
+      // EXPERIMENT: Homepage Read Time
+      timstampPrefix: {
+        publishedAgo: 'Publicado hace',
+      },
+      readTime: {
+        readTimePrefix: 'Tiempo de lectura',
+        quick: 'Lectura rápida',
+        long: 'Lectura extensa',
+        minute: 'min',
+        minutes: 'min',
+      },
       pagination: {
         page: 'Página',
         previousPage: 'Anterior',
         nextPage: 'Siguiente',
         pageXOfY: 'Página {x} de {y}',
       },
+      transcript: {
+        readTranscript: 'Read transcript',
+        disclaimer:
+          ' This transcript has been reviewed by a journalist, it was generated with AI (Artificial Intelligence).',
+      },
       ads: {
         advertisementLabel: 'Publicidad',
       },
-      recommendationTitle: 'Recomendamos',
-      splitRecommendationTitle: 'Más recomendaciones',
       seeAll: 'Ver todo',
       home: 'Página de inicio',
       currentPage: 'Página actual',
       skipLinkText: 'Ir al contenido',
       relatedContent: 'Contenido relacionado',
       relatedTopics: 'Temas relacionados',
+      moreOnThis: '',
       navMenuText: 'Secciones',
       mediaAssetPage: {
         mediaPlayer: 'Reproductor multimedia',
@@ -218,7 +260,7 @@ export const service: DefaultServiceConfig = {
         },
       },
       media: {
-        signPost:
+        sustainabilitySignpost:
           'Ayude a reducir su uso de energía y datos al no reproducir contenido de video.',
         loadVideo: 'Cargar vídeo',
         noJs: 'Para ver este contenido, favor activar JavaScript, o intentar con otro navegador',
@@ -237,6 +279,8 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Próximo programa',
         duration: 'Duración',
         recentEpisodes: 'Más',
+        closeVideo: 'Salir',
+        endOfContentClose: 'Fin de este contenido. Salir',
       },
       socialEmbed: {
         caption: {
@@ -345,7 +389,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'Más leídas',
+      header: 'Lecturas más populares',
       lastUpdated: 'Última actualización:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -354,7 +398,7 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'Más leídas',
       skipLink: {
         text: 'Saltar %title% y continuar leyendo',
         endTextVisuallyHidden: 'Final de %title%',
@@ -366,7 +410,7 @@ export const service: DefaultServiceConfig = {
         text: 'Por qué puedes confiar en la BBC',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Lee sobre nuestra postura acerca de enlaces externos.',
       },
       links: [
@@ -392,7 +436,7 @@ export const service: DefaultServiceConfig = {
         },
         {
           href: 'https://www.bbc.com/ws/languages',
-          text: 'Other Languages',
+          text: 'Otros idiomas',
         },
         {
           id: 'COOKIE_SETTINGS',
@@ -419,8 +463,8 @@ export const service: DefaultServiceConfig = {
         url: '/mundo/topics/c2lej05epw5t',
       },
       {
-        title: 'Hay Festival',
-        url: '/mundo/topics/cr50y7p7qyqt',
+        title: 'EE.UU.',
+        url: '/mundo/topics/cdr5613yzwqt',
       },
       {
         title: 'Economía',
@@ -441,6 +485,14 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Tecnología',
         url: '/mundo/topics/cyx5krnw38vt',
+      },
+      {
+        title: 'Hay Festival',
+        url: '/mundo/topics/cr50y7p7qyqt',
+      },
+      {
+        title: 'Centroamérica cuenta',
+        url: '/mundo/topics/c404v5z1k8wt',
       },
     ],
   },

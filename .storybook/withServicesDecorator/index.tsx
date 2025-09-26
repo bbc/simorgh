@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { type JSX } from 'react';
 import { Helmet } from 'react-helmet';
 import { StoryProps } from '#app/models/types/storybook';
 import { Services, Variants } from '#app/models/types/global';

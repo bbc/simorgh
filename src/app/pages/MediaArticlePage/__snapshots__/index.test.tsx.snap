@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`MediaArticlePage should render a news article correctly 1`] = `
 .emotion-0 {
@@ -70,17 +70,6 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
 .emotion-7:hover>button,
 .emotion-7:focus>button {
   background-color: #B80000;
-}
-
-.emotion-7:hover .experimentButtonFocus,
-.emotion-7:focus .experimentButtonFocus {
-  background-color: #B80000;
-  color: #FFFFFF;
-}
-
-.emotion-7:hover .experimentButtonFocus svg,
-.emotion-7:focus .experimentButtonFocus svg {
-  color: #FFFFFF;
 }
 
 @media screen and (forced-colors: active) {
@@ -787,7 +776,9 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   <div
     class="emotion-0"
   >
-    <noscript />
+    <div>
+      ATI Analytics
+    </div>
     <div>
       chartbeat
     </div>
@@ -812,7 +803,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
             class="emotion-5"
           >
             <figure
-              class="emotion-6"
+              class="media-container emotion-6"
               data-e2e="media-loader__container"
             >
               <div
@@ -871,7 +862,6 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
                     00:54
                   </time>
                 </button>
-                <noscript />
                 <div
                   class="emotion-16"
                   style="padding-bottom: 0px; overflow: hidden;"
@@ -879,6 +869,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
                   <img
                     alt=""
                     class="emotion-17"
+                    loading="eager"
                     src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01thw3g.jpg.webp"
                     srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01thw3g.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01thw3g.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01thw3g.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01thw3g.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01thw3g.jpg.webp 800w"
                   />

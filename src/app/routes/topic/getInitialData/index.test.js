@@ -24,12 +24,10 @@ const topicJSON = {
         ],
         activePage: 1,
         pageCount: 14,
-        variantTopicId: null,
       },
     ],
     activePage: 1,
     pageCount: 14,
-    variantTopicId: null,
     metadata: {
       type: 'Topic',
       analytics: {
@@ -89,7 +87,6 @@ describe('get initial data for topic', () => {
     expect(curations[0].summaries[0].link).toEqual('mock-link');
     expect(curations[0].summaries[0].imageAlt).toEqual('mock-image-alt');
     expect(curations[0].summaries[0].id).toEqual('54321');
-    expect(pageData.scriptSwitchId).toBeNull();
     expect(pageData.activePage).toEqual(1);
     expect(pageData.pageCount).toEqual(14);
   });

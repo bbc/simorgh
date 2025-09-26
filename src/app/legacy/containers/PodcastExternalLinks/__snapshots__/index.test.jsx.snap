@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`PodcastExternalLinks Should render external links 1`] = `
 .emotion-0 {
@@ -128,6 +128,7 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
   <aside
     aria-labelledby="third-party-links"
     class="emotion-0 emotion-1"
+    data-e2e="podcast-links"
     role="complementary"
   >
     <h2

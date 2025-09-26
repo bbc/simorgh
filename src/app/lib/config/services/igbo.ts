@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-igbo',
     atiAnalyticsProducerId: '53',
+    atiAnalyticsProducerName: 'IGBO',
+    useReverb: true,
     chartbeatDomain: 'igbo.bbc.co.uk',
     brandName: 'BBC News Ìgbò',
     product: 'BBC News',
@@ -33,9 +35,9 @@ export const service: DefaultServiceConfig = {
     defaultCaptionOffscreenText: 'Ihe a na-akpọ ya, ',
     imageCopyrightOffscreenText: 'Ebe foto si, ',
     script: latin,
-    manifestPath: '/manifest.json',
+    manifestPath: '/igbo/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Ogbako',
+    homePageTitle: 'Ogbako',
     noBylinesPolicy:
       'https://www.bbc.com/igbo/institutional-48529074#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/igbo/institutional-48529074',
@@ -44,6 +46,23 @@ export const service: DefaultServiceConfig = {
     twitterSite: '@BBCNews', // to be updated
     showAdPlaceholder: false,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'Ọkwa azụmahịa WhatsApp',
+      brandTitle: 'Anyị nọ na WhatsApp',
+      brandDescription: `Ugbua, i nwereike inweta akụkọ BBC Igbo niile n'ekwenti gị.`,
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0lq7863.png',
+        alt: `WhatsApp BBC News Igbo nọ n'obaozi`,
+      },
+      linkLabel: {
+        text: 'Pịa aka ebe a ka i soro anyị',
+        href: 'https://www.whatsapp.com/channel/0029Vb7AO14Ae5Vgu4VMmJ0R',
+      },
+      skipLink: {
+        text: `Gafere %title% ma gaa n'ihu na-agụ`,
+        endTextVisuallyHidden: 'Ebe %title% kwụsịrị',
+      },
+    },
     translations: {
       pagination: {
         previousPage: 'Ikpeazụ',
@@ -55,10 +74,12 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Lee ha niile',
       home: 'Akụkọ',
+      continueReading: 'Gaa n’ihu gụọ',
       currentPage: 'Peegi ị nọ ugbua',
       skipLinkText: 'Wụga n’ọdịnaya',
       relatedContent: "Ihe ndị ọzọ n'akụkọ a",
       relatedTopics: 'Isiokwu ndị emetụtara',
+      moreOnThis: '',
       navMenuText: 'Ngalaba',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
@@ -231,6 +252,8 @@ export const service: DefaultServiceConfig = {
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
+        closeVideo: 'Wepu',
+        endOfContentClose: 'Ngwugwu nke ọdịnaya a. Pụọ',
       },
       socialEmbed: {
         caption: {
@@ -267,7 +290,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Kachasị ọhụrụ',
     },
     mostRead: {
-      header: 'Akachasị Gụọ',
+      header: 'Akụkọ akachasị gụọ',
       lastUpdated: 'Emelitere ikpeazụ na:',
       numberOfItems: 5,
       hasMostRead: true,
@@ -276,7 +299,11 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'Akachasị Gụọ',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     navigation: [
       {
@@ -302,7 +329,7 @@ export const service: DefaultServiceConfig = {
         text: 'Ihe mere ị ga-eji nwee ntụkwasiobi na BBC News',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Usoro anyị maka njikọ dị na mpụga.',
       },
       links: [
@@ -328,7 +355,7 @@ export const service: DefaultServiceConfig = {
         },
         {
           href: 'https://www.bbc.com/ws/languages',
-          text: 'Other Languages',
+          text: 'Akụkọ BBC n’asụsụ ndị ọzọ',
         },
         {
           id: 'COOKIE_SETTINGS',

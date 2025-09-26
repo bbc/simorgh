@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import React, { PropsWithChildren, useContext } from 'react';
+import React, { PropsWithChildren, use } from 'react';
 import pick from 'ramda/src/pick';
 import Lazyload from 'react-lazyload';
 
@@ -50,7 +50,7 @@ const FrostedGlassPromo = ({
   minimumContrast = 8,
   paletteSize = 10,
 }: PropsWithChildren<FrostedGlassPromoProps>) => {
-  const { isAmp } = useContext(RequestContext);
+  const { isAmp } = use(RequestContext);
   const isCanonical = !isAmp;
   const relativeUrl = makeRelativeUrlPath(url);
 
@@ -58,8 +58,6 @@ const FrostedGlassPromo = ({
     ...(eventTrackingData || {}),
     url: relativeUrl,
   });
-
-  const onClick = eventTrackingData ? clickTracker : () => null;
 
   const promoText = (
     <React.Fragment>
@@ -76,7 +74,7 @@ const FrostedGlassPromo = ({
             },
           ]}
           href={relativeUrl}
-          onClick={onClick}
+          {...(eventTrackingData && clickTracker)}
         >
           {children}
         </a>
@@ -93,7 +91,7 @@ const FrostedGlassPromo = ({
       <a
         css={styles.clickableArea}
         href={relativeUrl}
-        onClick={onClick}
+        {...(eventTrackingData && clickTracker)}
         aria-hidden="true"
         tabIndex={-1}
       />

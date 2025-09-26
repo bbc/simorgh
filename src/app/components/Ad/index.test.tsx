@@ -2,8 +2,9 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
-import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import { Helmet } from 'react-helmet';
+import { Toggles } from '#app/models/types/global';
 import { render } from '../react-testing-library-with-providers';
 import latinDiacritics from '../ThemeProvider/fontScripts/latinWithDiacritics';
 import {
@@ -22,6 +23,10 @@ const context = {
     },
   },
 };
+
+jest.mock('#app/lib/utilities/getUUID', () =>
+  jest.fn().mockImplementation(() => '12345678-abcd-1fed-0123-a1b2c3d4e5f6'),
+);
 
 describe('Ad Container', () => {
   const originalConfigUrl = process.env.SIMORGH_CONFIG_URL;
@@ -68,7 +73,7 @@ describe('Ad Container', () => {
               id="c0000000000o"
               isAmp
               isApp={false}
-              pageType={FRONT_PAGE}
+              pageType={HOME_PAGE}
               service="mundo"
               statusCode={200}
               pathname="/mundo"
@@ -94,7 +99,7 @@ describe('Ad Container', () => {
               id="c0000000000o"
               isAmp
               isApp={false}
-              pageType={FRONT_PAGE}
+              pageType={HOME_PAGE}
               service="mundo"
               statusCode={200}
               pathname="/mundo"
@@ -120,7 +125,7 @@ describe('Ad Container', () => {
               id="c0000000000o"
               isAmp
               isApp={false}
-              pageType={FRONT_PAGE}
+              pageType={HOME_PAGE}
               service="mundo"
               statusCode={200}
               pathname="/mundo"
@@ -146,7 +151,7 @@ describe('Ad Container', () => {
               id="c0000000000o"
               isAmp
               isApp={false}
-              pageType={FRONT_PAGE}
+              pageType={HOME_PAGE}
               service="mundo"
               statusCode={200}
               pathname="/mundo"
@@ -171,7 +176,7 @@ describe('Ad Container', () => {
               id="c0000000000o"
               isAmp={false}
               isApp={false}
-              pageType={FRONT_PAGE}
+              pageType={HOME_PAGE}
               service="mundo"
               statusCode={200}
               pathname="/mundo"
@@ -196,7 +201,7 @@ describe('Ad Container', () => {
               id="c0000000000o"
               isAmp={false}
               isApp={false}
-              pageType={FRONT_PAGE}
+              pageType={HOME_PAGE}
               service="mundo"
               statusCode={200}
               pathname="/mundo"
@@ -239,7 +244,7 @@ describe('Ad Container', () => {
             id="c0000000000o"
             isAmp
             isApp={false}
-            pageType={FRONT_PAGE}
+            pageType={HOME_PAGE}
             service="mundo"
             statusCode={200}
             pathname="/mundo"
@@ -263,7 +268,7 @@ describe('Ad Container', () => {
             isAmp={false}
             isApp={false}
             id="c0000000000o"
-            pageType={FRONT_PAGE}
+            pageType={HOME_PAGE}
             service="mundo"
             statusCode={200}
             pathname="/mundo"
@@ -303,7 +308,7 @@ describe('Ad Container', () => {
             id="c0000000000o"
             isAmp
             isApp={false}
-            pageType={FRONT_PAGE}
+            pageType={HOME_PAGE}
             service="mundo"
             statusCode={200}
             pathname="/mundo"
@@ -327,7 +332,7 @@ describe('Ad Container', () => {
             isAmp={false}
             isApp={false}
             id="c0000000000o"
-            pageType={FRONT_PAGE}
+            pageType={HOME_PAGE}
             service="mundo"
             statusCode={200}
             pathname="/mundo"
@@ -372,7 +377,7 @@ describe('Ad Container', () => {
             id="c0000000000o"
             isAmp
             isApp={false}
-            pageType={FRONT_PAGE}
+            pageType={HOME_PAGE}
             service="mundo"
             statusCode={200}
             pathname="/mundo"
@@ -397,7 +402,7 @@ describe('Ad Container', () => {
             isAmp={false}
             isApp={false}
             id="c0000000000o"
-            pageType={FRONT_PAGE}
+            pageType={HOME_PAGE}
             service="mundo"
             statusCode={200}
             pathname="/mundo"
@@ -413,6 +418,135 @@ describe('Ad Container', () => {
       );
 
       expect(getBootstrapScript()).toBeTruthy();
+    });
+  });
+
+  describe('Ad script nonce', () => {
+    const adsToggle = {
+      ads: {
+        enabled: true,
+      },
+    };
+
+    const mockToggleDispatch = jest.fn();
+
+    const renderAdContainer = (toggleState: Toggles, country: string) => {
+      const toggleContextMock = {
+        toggleState,
+        toggleDispatch: mockToggleDispatch,
+      };
+
+      return render(
+        <ServiceContext.Provider
+          // @ts-expect-error require partial data for testing purposes
+          value={{ showAdPlaceholder: true, ...context }}
+        >
+          <RequestContextProvider
+            bbcOrigin="https://www.test.bbc.co.uk"
+            id="c0000000000o"
+            isAmp={false}
+            isApp={false}
+            pageType={HOME_PAGE}
+            service="mundo"
+            statusCode={200}
+            pathname="/mundo"
+            showAdsBasedOnLocation
+            country={country}
+          >
+            <ToggleContext.Provider value={toggleContextMock}>
+              <BrowserRouter>
+                <AdContainer slotType="leaderboard" />
+              </BrowserRouter>
+            </ToggleContext.Provider>
+          </RequestContextProvider>
+        </ServiceContext.Provider>,
+      );
+    };
+
+    const getAdScripts = () => {
+      const helmetContent = Helmet.peek().scriptTags;
+      return helmetContent.filter(
+        script => script.type === 'module' || script.noModule === true,
+      );
+    };
+
+    describe('when adsNonce toggle is enabled with country restrictions', () => {
+      it('should add nonce when user is from an allowed country', () => {
+        const toggleState = {
+          ...adsToggle,
+          adsNonce: {
+            enabled: true,
+            value: 'ES, US',
+          },
+        };
+
+        renderAdContainer(toggleState, 'ES');
+
+        const adScripts = getAdScripts();
+
+        adScripts.forEach(script => {
+          expect(script.nonce).toBeTruthy();
+        });
+      });
+
+      it('should not add nonce when user is outside allowed countries', () => {
+        const toggleState = {
+          ...adsToggle,
+          adsNonce: {
+            enabled: true,
+            value: 'ES, US',
+          },
+        };
+
+        renderAdContainer(toggleState, 'FR');
+
+        const adScripts = getAdScripts();
+
+        adScripts.forEach(script => {
+          expect(script.src).toBeTruthy();
+          expect(script).not.toHaveProperty('nonce');
+        });
+      });
+    });
+
+    describe('when adsNonce toggle is enabled for all countries', () => {
+      it('should add nonce for all countries', () => {
+        const toggleState = {
+          ...adsToggle,
+          adsNonce: {
+            enabled: true,
+            value: '',
+          },
+        };
+
+        renderAdContainer(toggleState, 'ES');
+
+        const adScripts = getAdScripts();
+
+        adScripts.forEach(script => {
+          expect(script.nonce).toBeTruthy();
+        });
+      });
+    });
+
+    describe('when adsNonce toggle is disabled', () => {
+      it('should not add nonce', () => {
+        const toggleState = {
+          ...adsToggle,
+          adsNonce: {
+            enabled: false,
+          },
+        };
+
+        renderAdContainer(toggleState, 'ES');
+
+        const adScripts = getAdScripts();
+
+        adScripts.forEach(script => {
+          expect(script.src).toBeTruthy();
+          expect(script).not.toHaveProperty('nonce');
+        });
+      });
     });
   });
 });

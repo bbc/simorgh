@@ -1,18 +1,10 @@
-import React, {
-  createContext,
-  PropsWithChildren,
-  useContext,
-  useMemo,
-} from 'react';
+import React, { createContext, PropsWithChildren, use, useMemo } from 'react';
 
 import { RequestContext } from '../RequestContext';
 import useToggle from '../../hooks/useToggle';
 import {
   ARTICLE_PAGE,
-  FRONT_PAGE,
-  MEDIA_PAGE,
   MOST_READ_PAGE,
-  FEATURE_INDEX_PAGE,
   MEDIA_ASSET_PAGE,
   STORY_PAGE,
   PHOTO_GALLERY_PAGE,
@@ -29,15 +21,12 @@ import {
   LIVE_RADIO_PAGE,
   TV_PAGE,
   AUDIO_PAGE,
+  LIVE_TV_PAGE,
 } from '../../routes/utils/pageTypes';
 import { PageTypes, Platforms } from '../../models/types/global';
 import { buildATIEventTrackingParams } from '../../components/ATIAnalytics/params';
 import { ServiceContext } from '../ServiceContext';
-import {
-  ATIData,
-  ATIEventTrackingProps,
-  PageData,
-} from '../../components/ATIAnalytics/types';
+import { ATIData } from '../../components/ATIAnalytics/types';
 
 type EventTrackingContextProps =
   | {
@@ -46,6 +35,7 @@ type EventTrackingContextProps =
       platform: Platforms;
       producerId: string;
       statsDestination: string;
+      producerName: string;
     }
   | Record<string, never>;
 
@@ -59,10 +49,7 @@ const getCampaignID = (pageType: CampaignPageTypes) => {
   const campaignID = {
     [ARTICLE_PAGE]: 'article',
     [MEDIA_ARTICLE_PAGE]: 'article-sfv',
-    [FRONT_PAGE]: 'index-home',
-    [MEDIA_PAGE]: 'player-episode',
     [MOST_READ_PAGE]: 'list-datadriven-read',
-    [FEATURE_INDEX_PAGE]: 'index-section-fix',
     [MEDIA_ASSET_PAGE]: 'article-media-asset',
     [STORY_PAGE]: 'article-sty',
     [PHOTO_GALLERY_PAGE]: 'article-photo-gallery',
@@ -78,6 +65,7 @@ const getCampaignID = (pageType: CampaignPageTypes) => {
     [LIVE_RADIO_PAGE]: 'player-live',
     [AUDIO_PAGE]: 'player-episode',
     [TV_PAGE]: 'player-episode',
+    [LIVE_TV_PAGE]: 'live-tv',
   }[pageType];
 
   if (!campaignID) {
@@ -93,55 +81,53 @@ const getCampaignID = (pageType: CampaignPageTypes) => {
 const NO_TRACKING_PROPS = {};
 
 type EventTrackingProviderProps = {
-  data?: PageData;
   atiData?: ATIData;
 };
 
 export const EventTrackingContextProvider = ({
   children,
-  data,
   atiData,
 }: PropsWithChildren<EventTrackingProviderProps>) => {
-  const requestContext = useContext(RequestContext);
+  const requestContext = use(RequestContext);
   const { pageType } = requestContext;
 
-  const serviceContext = useContext(ServiceContext);
-  const { atiAnalyticsProducerId } = serviceContext;
+  const serviceContext = use(ServiceContext);
+  const { atiAnalyticsProducerId, atiAnalyticsProducerName } = serviceContext;
 
   const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
 
   const trackingProps = useMemo(() => {
-    if (eventTrackingIsEnabled || (data && atiData)) {
+    if (eventTrackingIsEnabled && atiData) {
       const campaignID = getCampaignID(pageType as CampaignPageTypes);
 
       const { pageIdentifier, platform, statsDestination } =
         buildATIEventTrackingParams({
           requestContext,
           serviceContext,
-          data,
           atiData,
-        }) as ATIEventTrackingProps;
+        });
 
       return {
         campaignID,
         pageIdentifier,
         platform,
         producerId: atiAnalyticsProducerId,
+        producerName: atiAnalyticsProducerName,
         statsDestination,
       };
     }
     return null;
   }, [
     atiAnalyticsProducerId,
+    atiAnalyticsProducerName,
     atiData,
-    data,
     eventTrackingIsEnabled,
     pageType,
     requestContext,
     serviceContext,
   ]);
 
-  if (!eventTrackingIsEnabled || (!data && !atiData)) {
+  if (!eventTrackingIsEnabled || !atiData) {
     return (
       <EventTrackingContext.Provider value={NO_TRACKING_PROPS}>
         {children}

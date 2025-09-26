@@ -5,9 +5,14 @@ import {
   act,
 } from '#app/components/react-testing-library-with-providers';
 import postFixture from '#data/pidgin/posts/postFixtureCleaned.json';
-import { LIVE_PAGE } from '../../../../../../src/app/routes/utils/pageTypes';
+import { LIVE_PAGE } from '#src/app/routes/utils/pageTypes';
 import Post from '.';
-import { samplePost, twitterSamplePost, videoSamplePost } from './fixture';
+import {
+  audioSamplePost,
+  samplePost,
+  twitterSamplePost,
+  videoSamplePost,
+} from './fixture';
 
 const singlePostWithTitle = postFixture.data.results[0];
 
@@ -26,9 +31,10 @@ describe('Post', () => {
 
   describe('Timestamp', () => {
     it.each`
-      service       | expectedTime
-      ${'pidgin'}   | ${'28 April 2023'}
-      ${'zhongwen'} | ${'2023年4月28日'}
+      service        | expectedTime
+      ${'pidgin'}    | ${'28 April 2023'}
+      ${'zhongwen'}  | ${'2023年4月28日'}
+      ${'ukrainian'} | ${'28 квітня 2023'}
     `(
       'Shows timestamp in the expected format for $service for articles over 10 hours old.',
       async ({ service, expectedTime }) => {
@@ -53,26 +59,36 @@ describe('Post', () => {
       },
     );
 
-    it('Shows timestamp as a relative time for articles under 10 hours old.', async () => {
-      jest.useFakeTimers().setSystemTime(new Date('2023-04-28T10:35:10.293Z'));
-      const { container } = await act(async () => {
-        const postData = {
-          ...samplePost,
-          dates: {
-            firstPublished: '2023-04-28T10:33:09+00:00',
-            lastPublished: '2023-04-28T10:33:09+00:00',
-            time: null,
-            curated: '2023-04-28T10:33:10.293Z',
-          },
-        };
+    it.each`
+      service        | expectedTime
+      ${'pidgin'}    | ${'2 minutes wey don pass'}
+      ${'zhongwen'}  | ${'2 分钟前'}
+      ${'ukrainian'} | ${'2 хвилин(и) тому'}
+    `(
+      'Shows timestamp as a relative time for $service articles under 10 hours old.',
+      async ({ service, expectedTime }) => {
+        jest
+          .useFakeTimers()
+          .setSystemTime(new Date('2023-04-28T10:35:10.293Z'));
+        const { container } = await act(async () => {
+          const postData = {
+            ...samplePost,
+            dates: {
+              firstPublished: '2023-04-28T10:33:09+00:00',
+              lastPublished: '2023-04-28T10:33:09+00:00',
+              time: null,
+              curated: '2023-04-28T10:33:10.293Z',
+            },
+          };
 
-        return render(<Post post={postData} />, {
-          service: 'pidgin',
+          return render(<Post post={postData} />, {
+            service,
+          });
         });
-      });
-      const time = container.querySelector('time');
-      expect(time?.textContent).toEqual('2 minutes wey don pass');
-    });
+        const time = container.querySelector('time');
+        expect(time?.textContent).toEqual(expectedTime);
+      },
+    );
   });
 
   describe('Header', () => {
@@ -156,6 +172,21 @@ describe('Post', () => {
 
       expect(
         container.querySelector('[data-e2e="media-loader__placeholder"]'),
+      ).toBeInTheDocument();
+    });
+
+    it('should render the new media player in a post containing audio', async () => {
+      const { container } = await act(async () => {
+        return render(<Post post={audioSamplePost} />, {
+          id: 'c7p765ynk9qt',
+          service: 'pidgin',
+          pageType: LIVE_PAGE,
+          pathname: '/pidgin/live/c7p765ynk9qt',
+        });
+      });
+
+      expect(
+        container.querySelector('[data-e2e="media-loader__container"]'),
       ).toBeInTheDocument();
     });
 

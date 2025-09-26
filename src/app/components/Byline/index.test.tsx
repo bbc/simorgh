@@ -1,6 +1,10 @@
 /* eslint-disable no-template-curly-in-string */
 import React from 'react';
-import { render, screen } from '../react-testing-library-with-providers';
+import {
+  render,
+  screen,
+  within,
+} from '../react-testing-library-with-providers';
 import Byline from '.';
 import ArticleTimestamp from '../../legacy/containers/ArticleTimestamp';
 import {
@@ -54,7 +58,7 @@ describe('Byline', () => {
   it('should render a list when required data is passed correctly', () => {
     render(<Byline blocks={bylineWithNameAndRole} />);
 
-    const list = screen.getByRole('list');
+    const [list] = screen.getAllByRole('list');
 
     expect(list).toBeInTheDocument();
   });
@@ -62,17 +66,19 @@ describe('Byline', () => {
   it('should render all listitems correctly', () => {
     render(<Byline blocks={bylineWithPngPhoto} />);
 
-    const listItems = screen.getAllByRole('listitem');
+    const [firstContributor] = screen.getAllByRole('list');
+    const firstContributorItems =
+      within(firstContributor).getAllByRole('listitem');
 
-    expect(listItems.length).toBe(5);
+    expect(firstContributorItems.length).toBe(5);
   });
 
   it('should correctly use the buildIChefURL function to create the image url', () => {
     render(<Byline blocks={bylineWithPngPhoto} />);
 
-    const imageSrc = screen.getAllByRole('presentation');
+    const imageSrc = screen.getByRole('img');
 
-    expect(imageSrc[0]).toHaveAttribute(
+    expect(imageSrc).toHaveAttribute(
       'src',
       'https://ichef.bbci.co.uk/ace/ws/160/cpsprodpb/f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png.webp',
     );
@@ -109,7 +115,6 @@ describe('Byline', () => {
 
     expect(timestamp).toBeInTheDocument();
   });
-
   it('should correctly render an extra listitem for Timestamp', () => {
     render(
       <Byline blocks={bylineWithNameAndRole}>
@@ -123,7 +128,7 @@ describe('Byline', () => {
 
     const listItems = screen.getAllByRole('listitem');
 
-    expect(listItems.length).toBe(3);
+    expect(listItems.length).toBe(4);
   });
 
   it('should render the Byline correctly with location, image and links', () => {
@@ -133,7 +138,7 @@ describe('Byline', () => {
     const TwitterLink = screen.getByText('@MayeniJones');
     const Links = screen.getAllByRole('link');
     const Location = screen.getByText('Lagos, Nigeria');
-    const Image = screen.getByRole('presentation');
+    const Image = screen.getByRole('img');
 
     expect(AuthorLink).toBeInTheDocument();
     expect(TwitterLink).toBeInTheDocument();
@@ -146,7 +151,7 @@ describe('Byline', () => {
     expectation         | info                | text
     ${'Author'}         | ${'Author'}         | ${'Author,'}
     ${'Role'}           | ${'Role'}           | ${'Role,'}
-    ${'Twitter'}        | ${'Twitter'}        | ${'Twitter,'}
+    ${'X'}              | ${'X'}              | ${'X,'}
     ${'Reporting from'} | ${'Reporting from'} | ${'Reporting from'}
   `('should correctly announce $expectation for $info', ({ text }) => {
     render(

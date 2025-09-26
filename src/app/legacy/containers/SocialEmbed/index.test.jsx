@@ -179,7 +179,7 @@ describe('SocialEmbedContainer', () => {
         { service: 'news', isAmp: false, pageType: ARTICLE_PAGE },
       );
 
-      expect(screen.getByText('End of Twitter content, 1')).toBeInTheDocument();
+      expect(screen.getByText('End of X content, 1')).toBeInTheDocument();
     });
 
     it('should render the correct skip link text when indexOfType is not provided (means this is the only e.g. Twitter embed in the article)', () => {
@@ -216,10 +216,8 @@ describe('SocialEmbedContainer', () => {
         { service: 'news', isAmp: false, pageType: ARTICLE_PAGE },
       );
 
-      expect(
-        screen.queryByText('End of Twitter content, 1'),
-      ).not.toBeInTheDocument();
-      expect(screen.queryByText('End of Twitter content')).toBeInTheDocument();
+      expect(screen.queryByText('End of X content, 1')).not.toBeInTheDocument();
+      expect(screen.queryByText('End of X content')).toBeInTheDocument();
     });
   });
 

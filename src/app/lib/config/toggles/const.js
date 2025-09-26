@@ -1,8 +1,6 @@
 export default {
   ADS: 'ads',
-  CHARTBEAT_ANALYTICS: 'chartbeatAnalytics',
   COMSCORE_ANALYTICS: 'comscoreAnalytics',
-  CPS_RECOMMENDATIONS: 'cpsRecommendations',
   ENABLE_FETCHING_TOGGLES: 'enableFetchingToggles',
   EVENT_TRACKING: 'eventTracking',
   INCLUDE: 'include',

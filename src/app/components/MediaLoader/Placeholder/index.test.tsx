@@ -1,10 +1,9 @@
-import React from 'react';
 import {
-  render,
   fireEvent,
   getByText,
+  render,
 } from '#app/components/react-testing-library-with-providers';
-import { Stages } from '#app/hooks/useExperimentHook';
+import React from 'react';
 import Placeholder from '.';
 
 describe('Media Player: Placeholder', () => {
@@ -26,7 +25,6 @@ describe('Media Player: Placeholder', () => {
         src="http://foo.bar/placeholder.png"
         mediaInfo={{ title: 'Dog chases cat.', ...withDuration }}
         noJsMessage="no js"
-        experimentStage={Stages.STAGE_3}
       />,
       { service: 'news' },
     );
@@ -40,7 +38,6 @@ describe('Media Player: Placeholder', () => {
         src="http://foo.bar/placeholder.png"
         mediaInfo={{ title: 'Dog chases cat.' }}
         noJsMessage="no js"
-        experimentStage={Stages.STAGE_3}
       />,
       { service: 'news' },
     );
@@ -58,7 +55,6 @@ describe('Media Player: Placeholder', () => {
           ...withDuration,
         }}
         noJsMessage="no js"
-        experimentStage={Stages.STAGE_3}
       />,
       { service: 'news' },
     );
@@ -72,7 +68,6 @@ describe('Media Player: Placeholder', () => {
         src="http://foo.bar/placeholder.png"
         mediaInfo={{ type: 'audio', title: 'Dog barks at cat.' }}
         noJsMessage="no js"
-        experimentStage={Stages.STAGE_3}
       />,
       { service: 'news' },
     );
@@ -86,7 +81,6 @@ describe('Media Player: Placeholder', () => {
         src="http://foo.bar/placeholder.png"
         mediaInfo={{ title: 'Dog chases cat.', ...withDuration }}
         noJsMessage="no js"
-        experimentStage={Stages.STAGE_3}
       />,
       { service: 'news' },
     );
@@ -107,7 +101,6 @@ describe('Media Player: Placeholder', () => {
           ...withDuration,
         }}
         noJsMessage="no js"
-        experimentStage={Stages.STAGE_3}
       />,
       { service: 'news' },
     );
@@ -126,7 +119,25 @@ describe('Media Player: Placeholder', () => {
           ...withDuration,
         }}
         noJsMessage="no js"
-        experimentStage={Stages.STAGE_3}
+      />,
+      { service: 'news' },
+    );
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should render a video placeholder with Sustainability message if Transcript is provided', () => {
+    const { container } = render(
+      <Placeholder
+        onClick={mockOnClick}
+        src="http://foo.bar/placeholder.png"
+        mediaInfo={{
+          title: 'Dog chases cat.',
+          guidanceMessage:
+            'Guidance: May contain strong language, sexual or violent content that may offend.',
+          ...withDuration,
+        }}
+        noJsMessage="no js"
+        hasTranscript
       />,
       { service: 'news' },
     );

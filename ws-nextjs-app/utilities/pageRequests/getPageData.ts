@@ -1,25 +1,39 @@
 import { BFF_FETCH_ERROR } from '#app/lib/logger.const';
 import getToggles from '#app/lib/utilities/getToggles';
 import { FetchError } from '#app/models/types/fetch';
-import PageDataParams from '#app/models/types/pageDataParams';
 import sendCustomMetric from '#server/utilities/customMetrics';
 import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
 import getAgent from '#server/utilities/getAgent';
 import fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
 import nodeLogger from '#lib/logger.node';
+import { PageTypes, Services, Variants } from '#app/models/types/global';
 
 const logger = nodeLogger(__filename);
 
+type Props = {
+  id?: string;
+  page?: string;
+  service: Services;
+  variant?: Variants | null;
+  rendererEnv?: string;
+  resolvedUrl: string;
+  pageType: PageTypes;
+};
+
 const getPageData = async ({
-  id,
+  id = '',
   page,
   service,
   variant,
   rendererEnv,
   resolvedUrl,
   pageType,
-}: PageDataParams) => {
-  const pathname = `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`;
+}: Props) => {
+  const path = `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`;
+  const url = new URL(path, 'https://www.bbc.com');
+  const rendererEnvironment = url.searchParams.get('renderer_env');
+  const pathname = `${id}${rendererEnvironment ? `?renderer_env=${rendererEnvironment}` : ''}`;
+
   let message;
   let status;
   let json;

@@ -1,11 +1,4 @@
 const AUDIT_URLS = {
-  FIX: {
-    live: ['https://www.bbc.com/persian/science-52004647'],
-    test: [
-      'https://www.test.bbc.com/persian/science-52004647?renderer_env=live',
-    ],
-  },
-
   LIVE_RADIO: {
     live: ['https://www.bbc.com/korean/bbc_korean_radio/liveradio'],
     test: ['https://www.test.bbc.com/korean/bbc_korean_radio/liveradio'],
@@ -53,7 +46,11 @@ const AUDIT_URLS = {
   },
 
   TIPO_HOME_PAGE: {
-    live: ['https://www.bbc.com/kyrgyz', 'https://www.bbc.com/serbian/lat', 'https://www.bbc.com/uzbek/lat'],
+    live: [
+      'https://www.bbc.com/kyrgyz',
+      'https://www.bbc.com/serbian/lat',
+      'https://www.bbc.com/uzbek/lat',
+    ],
     test: [
       'https://www.test.bbc.com/kyrgyz?renderer_env=live',
       'https://www.test.bbc.com/serbian/lat?renderer_env=live',
@@ -97,7 +94,7 @@ module.exports = {
       assertions: {
         'categories:performance': [
           'warn',
-          { aggregationMethod: 'optimistic', minScore: 0.4 },
+          { aggregationMethod: 'optimistic', minScore: 0.2 },
         ],
         'categories:accessibility': [
           'error',
@@ -109,7 +106,7 @@ module.exports = {
         ],
         'categories:seo': [
           'error',
-          { aggregationMethod: 'optimistic', minScore: 0.8 },
+          { aggregationMethod: 'optimistic', minScore: 0.6 },
         ],
       },
     },

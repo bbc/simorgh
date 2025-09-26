@@ -1,21 +1,27 @@
 /** @jsx jsx */
 /* eslint-disable jsx-a11y/aria-role */
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import { jsx } from '@emotion/react';
 import useViewTracker from '#app/hooks/useViewTracker';
 import styles from './index.styles';
+import { use } from 'react';
 import Text from '../Text';
-import TranscriptTimestamp from './TranscriptTimestamp';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { RightArrow as ArrowSvg } from '../icons';
+import TranscriptTimestamp from './TranscriptTimestamp';
+import styles from './index.styles';
 import { TranscriptBlock, TranscriptItem } from './types';
 
-// TO DO - move this to BFF
-const removeHoursMilliseconds = (timestamp: string) => timestamp.slice(3, -4);
+const DEFAULT_TRANSLATIONS = {
+  readTranscript: 'Read transcript',
+  disclaimer:
+    'This transcript has been reviewed by a journalist, it was generated with AI (Artificial Intelligence).',
+};
 
 const TranscriptListItem = ({ id, start, content }: TranscriptItem) => (
   <li key={id} css={styles.listItem}>
     <Text role="text" css={styles.transcriptText} size="bodyCopy">
-      <TranscriptTimestamp timestamp={removeHoursMilliseconds(start)} />
+      <TranscriptTimestamp timestamp={start} />
       <VisuallyHiddenText> </VisuallyHiddenText>
       <span css={styles.itemText}>{content}</span>
     </Text>
@@ -30,10 +36,15 @@ const Transcript = ({
   title?: string;
 }) => {
   const viewRef = useViewTracker({ componentName: 'Transcript' });
+  const { translations } = use(ServiceContext);
   const transcriptItems = transcript?.model?.blocks;
   if (!transcriptItems) {
     return null;
   }
+
+  const { transcript: transcriptTranslations = DEFAULT_TRANSLATIONS } =
+    translations;
+  const { readTranscript, disclaimer } = transcriptTranslations;
 
   const formattedTitle = title ? `, ${title}` : '';
 
@@ -42,16 +53,17 @@ const Transcript = ({
       <summary css={styles.summary}>
         <ArrowSvg />
         <span role="text">
-          {/* TO DO - add translations */}
           <Text size="pica" fontVariant="sansBold" css={styles.summaryTitle}>
-            Read transcript
+            {readTranscript}
           </Text>
           {title && <VisuallyHiddenText>{formattedTitle}</VisuallyHiddenText>}
         </span>
       </summary>
+      <Text size="brevier" css={styles.disclaimer} as="small">
+        {disclaimer}
+      </Text>
       <ul css={styles.ul} role="list" ref={viewRef}>
-        {/*  eslint-disable-next-line @typescript-eslint/no-unused-vars */}
-        {transcriptItems.map((item, _index) => (
+        {transcriptItems.map(item => (
           <TranscriptListItem
             key={item.id}
             id={item.id}
@@ -60,9 +72,6 @@ const Transcript = ({
           />
         ))}
       </ul>
-      <Text size="brevier" css={styles.disclaimer} as="small">
-        This transcript was reviewed by a journalist after AI generation.
-      </Text>
     </details>
   );
 };

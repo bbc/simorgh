@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Canonical Send A11y I can see the skip to content link 1`] = `"U gudub qaybta macluumaadka"`;
 
@@ -53,7 +53,7 @@ exports[`Canonical Send Footer Anchors should match text and url 7`] = `
 
 exports[`Canonical Send Footer Anchors should match text and url 8`] = `
 {
-  "text": "Other Languages",
+  "text": "Wararka BBC ee luqadaha kale",
   "url": "https://www.bbc.com/ws/languages",
 }
 `;
@@ -61,13 +61,13 @@ exports[`Canonical Send Footer Anchors should match text and url 8`] = `
 exports[`Canonical Send Footer Anchors should match text and url 9`] = `
 {
   "text": "Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda.",
-  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
 }
 `;
 
 exports[`Canonical Send Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/somali"`;
 
-exports[`Canonical Send Footer Paragraphs should match text 1`] = `"© 2024 BBC. BBC masuul kama ahan macluumadka bogagga kale ee dibadda. Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda."`;
+exports[`Canonical Send Footer Paragraphs should match text 1`] = `"© 2025 BBC. BBC masuul kama ahan macluumadka bogagga kale ee dibadda. Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda."`;
 
 exports[`Canonical Send Header I can see the branding 1`] = `"BBC News, Somali"`;
 
@@ -106,6 +106,6 @@ exports[`Canonical Send Header Navigation link should match text and url 5`] = `
 }
 `;
 
-exports[`Canonical Send UGC form should render a heading 1`] = `"Test campaign for /:service/send/:campaignId endpoint UGC Spike WSTEAMA-98 2022"`;
+exports[`Canonical Send UGC form should render a heading 1`] = `"Sorry, this page cannot be loaded."`;
 
 exports[`Canonical Send UGC form should render a submit button 1`] = `"Submit"`;

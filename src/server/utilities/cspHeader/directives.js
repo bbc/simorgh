@@ -45,7 +45,11 @@ const advertisingDirectives = {
   ],
   defaultSrc: [...bbcDomains, 'https://*.googlesyndication.com'],
   styleSrc: ['https://fonts.googleapis.com'],
-  fontSrc: ['https://fonts.gstatic.com'],
+  fontSrc: [
+    'https://fonts.gstatic.com',
+    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/',
+    'https://*.teads.tv',
+  ],
 };
 
 const directives = {
@@ -192,7 +196,6 @@ const directives = {
     ],
     canonicalLive: [
       ...bbcDomains,
-      'https://*.wearehearken.eu',
       'https://*.chartbeat.com',
       'https://*.twitter.com', // Social Embeds
       'https://www.instagram.com', // Social Embeds
@@ -222,7 +225,6 @@ const directives = {
     ],
     canonicalNonLive: [
       ...bbcDomains,
-      'https://*.wearehearken.eu',
       'https://*.chartbeat.com',
       'http://*.chartbeat.com', // for localhost canonical connecting via http
       'http://localhost:1124', // for localhost canonical JavaScript
@@ -270,14 +272,12 @@ const directives = {
     canonicalLive: [
       ...bbcDomains,
       'data:', // localstorage
-      'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/', // Adverts
       ...advertisingDirectives.fontSrc,
     ],
     ampNonLive: [...bbcDomains],
     canonicalNonLive: [
       ...bbcDomains,
       'data:',
-      'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/', // Adverts
       ...advertisingDirectives.fontSrc,
     ],
   },

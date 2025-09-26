@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import { PageTypes, Platforms, Services } from '../../models/types/global';
 import { RequestContextProps } from '../../contexts/RequestContext';
 import { ServiceConfig } from '../../models/types/serviceConfig';
@@ -31,6 +32,9 @@ export interface ATIData {
   timePublished?: string | null;
   timeUpdated?: string | null;
   ampExperimentName?: string;
+  experimentName?: string | null;
+  experimentVariant?: string | null;
+  readTimeMilliseconds?: number | null;
 }
 
 export interface PageData {
@@ -88,30 +92,104 @@ export interface ATIDataWithContexts {
 export interface ATIConfigurationDetailsProviders {
   requestContext: RequestContextProps;
   serviceContext: ServiceConfig;
-  data?: PageData;
-  atiData?: ATIData;
+  atiData: ATIData;
 }
+
+export interface ReverbDetailsProviders {
+  requestContext: RequestContextProps;
+  serviceContext: ServiceConfig;
+  atiData: ATIData;
+}
+
+export type ReverbPageVars = {
+  name?: string | null;
+  additionalProperties?: {
+    app_name?: string | null;
+    content_language?: string | null;
+    type?: string | null;
+  };
+  destination?: string | null;
+  producer?: string | null;
+  contentId?: string | null;
+  contentType?: string | null;
+};
+
+export type ReverbUserVars = {
+  isSignedIn: boolean;
+};
+
+export type ReverbEventDetails = {
+  anchorElement?: HTMLElement;
+  experience?: {
+    engine_type: Array<string>;
+    engine_id: Array<string>;
+  };
+  event?: {
+    category: string;
+    action: 'select' | 'view';
+    grouping?: string;
+  };
+  eventName: 'pageView' | 'sectionView' | 'sectionClick';
+  eventPublisher?: string;
+  group?: string | object;
+  isClick?: boolean;
+  item?: string | object;
+  originalEvent?: Event;
+};
+
+export type ReverbBeaconConfig = {
+  params: { page: ReverbPageVars; user: ReverbUserVars };
+  eventDetails: ReverbEventDetails;
+};
 
 export interface ATIAnalyticsProps {
   baseUrl?: string;
   pageviewParams: string;
+  reverbParams?: ReverbBeaconConfig | null;
 }
 
 export interface ATIEventTrackingProps {
   campaignID?: string;
-  componentName?: string;
+  componentName: string;
   format?: string;
   pageIdentifier?: string;
   platform?: Platforms;
   producerId?: string;
+  producerName?: string;
   service?: Services;
   statsDestination?: string;
   type?: string;
   advertiserID?: string;
   url?: string;
   detailedPlacement?: string;
-  experimentVariant?: string;
+  useReverb?: boolean;
+  experimentName?: string;
+  experimentVariant?: string | null;
   ampExperimentName?: string;
+  preventNavigation?: string;
+  itemTracker?: ItemTracker;
+  groupTracker?: GroupTracker;
+  viewThreshold?: number;
+  eventGroupingName?: string;
+}
+
+export interface ItemTracker {
+  type?: string;
+  text?: string;
+  position?: number;
+  duration?: number;
+  resourceId?: string;
+  label?: string;
+  mediaType?: string;
+}
+
+export interface GroupTracker {
+  name?: string;
+  type?: string;
+  position?: string | number;
+  resourceId?: string;
+  itemCount?: number;
+  link?: string;
 }
 
 export interface ATIPageTrackingProps {
@@ -124,20 +202,21 @@ export interface ATIPageTrackingProps {
   pageIdentifier?: string;
   pageTitle?: string | null;
   producerId?: string;
+  producerName?: string;
   libraryVersion?: string;
   platform?: Platforms;
   statsDestination?: string;
   timePublished?: string | null;
   timeUpdated?: string | null;
-  origin?: string;
-  previousPath?: string | null;
   categoryName?: string | null;
   campaigns?: { campaignId?: string; campaignName?: string }[] | null;
   nationsProducer?: string | null;
   ampExperimentName?: string;
+  experimentName?: string | null;
+  experimentVariant?: string | null;
+  readTimeMilliseconds?: number | null;
 }
 
 export interface ATIProps {
-  data?: PageData;
   atiData?: ATIData;
 }

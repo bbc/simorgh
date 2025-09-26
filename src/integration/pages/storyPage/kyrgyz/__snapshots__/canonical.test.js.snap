@@ -1,17 +1,10 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Canonical Story Page A11y I can see the skip to content link 1`] = `"Сайтка өтүү"`;
 
-exports[`Canonical Story Page Analytics ATI tracking pixel excluding src 1`] = `
-<img
-  alt=""
-  height="1px"
-  style="position:absolute"
-  width="1px"
-/>
-`;
+exports[`Canonical Story Page Analytics ATI tracking pixel excluding src 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" >"`;
 
-exports[`Canonical Story Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/"`;
+exports[`Canonical Story Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
 
 exports[`Canonical Story Page Analytics ATI tracking pixel search params 1`] = `
 [
@@ -105,7 +98,7 @@ exports[`Canonical Story Page Footer Anchors should match text and url 7`] = `
 
 exports[`Canonical Story Page Footer Anchors should match text and url 8`] = `
 {
-  "text": "Other Languages",
+  "text": "Башка тилдерде",
   "url": "https://www.bbc.com/ws/languages",
 }
 `;
@@ -113,41 +106,41 @@ exports[`Canonical Story Page Footer Anchors should match text and url 8`] = `
 exports[`Canonical Story Page Footer Anchors should match text and url 9`] = `
 {
   "text": "Башка интернет сайттардын мазмуну боюнча биздин позиция.",
-  "url": "https://www.bbc.com/editorialguidelines/guidance/feeds-and-links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
 }
 `;
 
 exports[`Canonical Story Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/kyrgyz"`;
 
-exports[`Canonical Story Page Footer Paragraphs should match text 1`] = `"© 2024 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
+exports[`Canonical Story Page Footer Paragraphs should match text 1`] = `"© 2025 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
 
 exports[`Canonical Story Page Header I can see the branding 1`] = `"BBC News, Кыргыз КызMATы"`;
 
 exports[`Canonical Story Page Header Navigation link should match text and url 1`] = `
 {
-  "text": "Башталгыч бет",
+  "text": "Башкы бет",
   "url": "/kyrgyz",
 }
 `;
 
 exports[`Canonical Story Page Header Navigation link should match text and url 2`] = `
 {
-  "text": "Кыргызстан",
-  "url": "/kyrgyz/topics/cz74kjpyk07t",
+  "text": "Видео жаңылыктар",
+  "url": "/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4t",
 }
 `;
 
 exports[`Canonical Story Page Header Navigation link should match text and url 3`] = `
 {
-  "text": "Дүйнө",
-  "url": "/kyrgyz/topics/ck2l9z012nkt",
+  "text": "Кыргызстан",
+  "url": "/kyrgyz/topics/cz74kjpyk07t",
 }
 `;
 
 exports[`Canonical Story Page Header Navigation link should match text and url 4`] = `
 {
-  "text": "САПАР",
-  "url": "/kyrgyz/topics/c6z8lg83w7mt",
+  "text": "Дүйнө",
+  "url": "/kyrgyz/topics/ck2l9z012nkt",
 }
 `;
 
@@ -158,13 +151,6 @@ exports[`Canonical Story Page Header Navigation link should match text and url 5
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 6`] = `
-{
-  "text": "Подкасттар",
-  "url": "/kyrgyz/podcasts/p0c80v81",
-}
-`;
-
 exports[`Canonical Story Page Image Caption should match text 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
 
 exports[`Canonical Story Page Image should match snapshot 1`] = `
@@ -172,6 +158,7 @@ exports[`Canonical Story Page Image should match snapshot 1`] = `
   alt="social media"
   class="bbc-139onq"
   height="351"
+  loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"
   src="https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/11D53/test/_63734037_socialmedia.jpg.webp"
   srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/11D53/test/_63734037_socialmedia.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/11D53/test/_63734037_socialmedia.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/11D53/test/_63734037_socialmedia.jpg.webp 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsdevpb/11D53/test/_63734037_socialmedia.jpg.webp 624w"

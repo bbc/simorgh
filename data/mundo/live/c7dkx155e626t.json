@@ -1,0 +1,465 @@
+{
+  "data": {
+    "title": "USA Elections Aftermath: Get the latest updates",
+    "description": "Live Streaming: The Inauguration of the 45th President of the United States",
+    "language": "es",
+    "headerImage": {
+      "url": "https://ichef.bbci.co.uk/ace/standard/480/cpsdevpb/ed77/test/98a4c130-b304-11ef-acb8-cfaabd95075c.jpg",
+      "urlTemplate": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/ed77/test/98a4c130-b304-11ef-acb8-cfaabd95075c.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "test",
+      "copyright": "BBC"
+    },
+    "promoImage": {
+      "url": "https://ichef.bbci.co.uk/ace/standard/480/cpsdevpb/8edf/test/a9379d10-b304-11ef-acb8-cfaabd95075c.jpg",
+      "urlTemplate": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/8edf/test/a9379d10-b304-11ef-acb8-cfaabd95075c.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "test",
+      "copyright": "BBC"
+    },
+    "home": "mundo",
+    "section": null,
+    "commercialInfo": {
+      "adCategory": null,
+      "adSubCategory": null,
+      "hasAdvertising": true
+    },
+    "sportDataEvent": {
+      "id": null
+    },
+    "eavisEvent": {
+      "id": null
+    },
+    "article": {
+      "id": null
+    },
+    "mediaCollections": [
+      {
+        "type": "liveMedia",
+        "model": {
+          "urn": "urn:bbc:pips:pid:p0gh4n63",
+          "title": "Non-Stop Cartoons!",
+          "type": "episode",
+          "synopses": {
+            "short": "Toon in, kick back and relax to 100% cartoons!",
+            "medium": "Toon in, kick back and relax. From laugh out loud to mischief and mayhem. 100% cartoons all day long.",
+            "long": "Toon in, kick back and relax. From laugh out loud to mischief and mayhem. 100% cartoons all day long. Join your favourites Grizzy, Shaun, Taffy, Boy Girl Dog Cat Mouse Cheese, The Deep and those Monster Loving Maniacs."
+          },
+          "mediaType": "audio_video",
+          "imageUrlTemplate": "https://ichef.bbci.co.uk/images/ic/$recipe/p0k31t4d.jpg",
+          "masterbrand": {
+            "id": "cbbc",
+            "name": "CBBC",
+            "networkName": "CBBC",
+            "type": "tv",
+            "imageUrlTemplate": "ichef.bbci.co.uk/images/ic/$recipe/p0f8qps2.jpg"
+          },
+          "version": {
+            "vpid": "p0gh4n67",
+            "duration": "PT24H",
+            "availabilityType": "webcast",
+            "versionTypes": [
+              {
+                "type": "Original",
+                "name": "Original version"
+              }
+            ],
+            "schedule": {
+              "start": "2024-12-19T07:00:20Z",
+              "accurateStart": "2024-12-19T07:00:20Z",
+              "end": "2024-12-19T12:00:20Z"
+            },
+            "serviceId": null,
+            "authToken": null,
+            "status": "LIVE",
+            "warnings": {
+              "warning_text": "Contains some upsetting scenes.",
+              "warning": [
+                {
+                  "warning_code": "L1",
+                  "short_description": "Some upsetting scenes"
+                }
+              ]
+            }
+          },
+          "leadMedia": true
+        }
+      },
+      {
+        "type": "liveMedia",
+        "model": {
+          "urn": "urn:bbc:pips:pid:l0056wdq",
+          "title": "Starmer Scrutinised By MPs",
+          "type": "episode",
+          "synopses": {
+            "short": "Keir Starmer facing questions in his first appearance before the Liaison Committee",
+            "medium": "",
+            "long": ""
+          },
+          "mediaType": "audio_video",
+          "imageUrlTemplate": "https://ichef.bbci.co.uk/images/ic/$recipe/p0kd22h2.jpg",
+          "masterbrand": {
+            "id": "bbc_news",
+            "name": "BBC News",
+            "networkName": "BBC News",
+            "type": "",
+            "imageUrlTemplate": "ichef.bbci.co.uk/images/ic/$recipe/p0bvs4dq.jpg"
+          },
+          "version": {
+            "vpid": "l0056wdr",
+            "duration": "PT23H56M13S",
+            "availabilityType": "webcast",
+            "versionTypes": [
+              {
+                "type": "Original",
+                "name": "Original version"
+              }
+            ],
+            "schedule": {
+              "start": "2024-12-19T14:14:48Z",
+              "accurateStart": "2024-12-19T14:17:35Z",
+              "end": "2024-12-20T14:13:48Z"
+            },
+            "serviceId": null,
+            "authToken": null,
+            "status": "LIVE",
+            "warnings": null
+          },
+          "leadMedia": true
+        }
+      }
+    ],
+    "keyHighlight": {
+      "id": null
+    },
+    "electionBanner": {
+      "id": null
+    },
+    "supportingLinks": {
+      "id": null
+    },
+    "riddle": {
+      "id": null
+    },
+    "seo": {
+      "seoTitle": "USA Elections Aftermath: Get the latest updates",
+      "seoDescription": "Live Streaming: The Inauguration of the 45th President of the United States",
+      "datePublished": "2024-12-05T11:26:00.000Z",
+      "dateModified": "2024-12-05T12:23:32.000Z"
+    },
+    "endDateTime": "2025-12-06T11:25:00.000Z",
+    "startDateTime": "2024-12-05T11:26:00.000Z",
+    "firstPublishedDateTime": "2024-12-05T11:51:25.301Z",
+    "type": "live-coverage",
+    "dataSource": "TIPO",
+    "isLive": true,
+    "summaryPoints": {
+      "id": "urn:bbc:optimo:asset:c12x81qd94vo",
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "982be8ac",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "8596bac4",
+                    "type": "unorderedList",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "9b4a62ca",
+                          "type": "listItem",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "ae7b1150",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Brian Thompson, director ejecutivo de United Health Care (UHC), la mayor aseguradora de salud privada de Estados Unidos, fue asesinado este miércoles en Nueva York por un hombre enmascarado",
+                                  "blocks": [
+                                    {
+                                      "id": "c5947833",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Brian Thompson, director ejecutivo de United Health Care (UHC), la mayor aseguradora de salud privada de Estados Unidos, fue asesinado este miércoles en Nueva York por un hombre enmascarado",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "id": "e9cb4a5b",
+                          "type": "listItem",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "79250da1",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "En lo que los investigadores describieron como un \"ataque descarado y selectivo\".",
+                                  "blocks": [
+                                    {
+                                      "id": "cde27120",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "En lo que los investigadores describieron como un \"ataque descarado y selectivo\".",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "id": "b4be2cf4",
+                          "type": "listItem",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "11342a4b",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Agentes de policía de la ciudad de Nueva York están utilizando tecnología de reconocimiento facial y un teléfono celular desechado para identificar al hombre que mató a Thompson.",
+                                  "blocks": [
+                                    {
+                                      "id": "62fb4406",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Agentes de policía de la ciudad de Nueva York están utilizando tecnología de reconocimiento facial y un teléfono celular desechado para identificar al hombre que mató a Thompson.",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "liveTextStream": {
+      "id": "52C95343A578423ABFA312004999027F",
+      "contributors": null,
+      "content": {
+        "data": {
+          "results": [
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "c2934708",
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "9b4e950e",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "b706438f",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Asesinan a tiros en Nueva York al director ejecutivo de la principal aseguradora privada de salud de EE.UU.",
+                                    "blocks": [
+                                      {
+                                        "id": "c389157d",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Asesinan a tiros en Nueva York al director ejecutivo de la principal aseguradora privada de salud de EE.UU.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "7eff4bad",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Brian Thompson, director ejecutivo de United Health Care (UHC), la mayor aseguradora de salud privada de Estados Unidos, fue asesinado este miércoles en Nueva York por un hombre enmascarado, en lo que los investigadores describieron como un \"ataque descarado y selectivo\".",
+                        "blocks": [
+                          {
+                            "id": "1a200412",
+                            "type": "fragment",
+                            "model": {
+                              "text": "Brian Thompson, director ejecutivo de United Health Care (UHC), la mayor aseguradora de salud privada de Estados Unidos, fue asesinado este miércoles en Nueva York por un hombre enmascarado, en lo que los investigadores describieron como un \"ataque descarado y selectivo\".",
+                              "attributes": ["bold"]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "a71ec7cb",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Agentes de policía de la ciudad de Nueva York están utilizando tecnología de reconocimiento facial y un teléfono celular desechado para identificar al hombre que mató a Thompson.",
+                        "blocks": [
+                          {
+                            "id": "b7768413",
+                            "type": "fragment",
+                            "model": {
+                              "text": "Agentes de policía de la ciudad de Nueva York están utilizando tecnología de reconocimiento facial y un teléfono celular desechado para identificar al hombre que mató a Thompson.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "4c027bca",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "El ejecutivo, de 50 años de edad, fue atacado a disparos alrededor de las 06:45 hora local (11:45 GMT) en la entrada de un hotel en Manhattan, donde tenía previsto hablar en una conferencia de inversores más tarde ese mismo día.",
+                        "blocks": [
+                          {
+                            "id": "35186eb8",
+                            "type": "fragment",
+                            "model": {
+                              "text": "El ejecutivo, de 50 años de edad, fue atacado a disparos alrededor de las 06:45 hora local (11:45 GMT) en la entrada de un hotel en Manhattan, donde tenía previsto hablar en una conferencia de inversores más tarde ese mismo día.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "b2f51c7d",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Vistiendo un suéter con capucha, el atacante llegó al lugar caminando unos cinco minutos antes que Thompson. Cuando el ejecutivo llegó, se le acercó y le disparó con una pistola. Después desatascó el arma e hizo un segundo disparo.",
+                        "blocks": [
+                          {
+                            "id": "891df326",
+                            "type": "fragment",
+                            "model": {
+                              "text": "Vistiendo un suéter con capucha, el atacante llegó al lugar caminando unos cinco minutos antes que Thompson. Cuando el ejecutivo llegó, ",
+                              "attributes": []
+                            }
+                          },
+                          {
+                            "id": "2e3d7d9a",
+                            "type": "fragment",
+                            "model": {
+                              "text": "se le acercó y le disparó con una pistola",
+                              "attributes": ["bold"]
+                            }
+                          },
+                          {
+                            "id": "98c981f7",
+                            "type": "fragment",
+                            "model": {
+                              "text": ". Después desatascó el arma e hizo ",
+                              "attributes": []
+                            }
+                          },
+                          {
+                            "id": "5d795bf0",
+                            "type": "fragment",
+                            "model": {
+                              "text": "un segundo disparo",
+                              "attributes": ["bold"]
+                            }
+                          },
+                          {
+                            "id": "0d82c61b",
+                            "type": "fragment",
+                            "model": {
+                              "text": ".",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:4b5c66af-7b36-4e25-a49c-ce975df249f5",
+              "type": "POST",
+              "options": {
+                "isBreakingNews": false
+              },
+              "dates": {
+                "firstPublished": "2024-12-05T12:23:32.000Z",
+                "lastPublished": "2024-12-05T12:23:32.000Z",
+                "time": null,
+                "curated": "2024-12-05T12:23:33.050Z"
+              },
+              "titles": [
+                {
+                  "title": null,
+                  "source": "primary"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": null,
+                  "source": "summary"
+                }
+              ],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            }
+          ],
+          "page": {
+            "index": 1,
+            "total": 1
+          }
+        }
+      }
+    },
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:c7dkx155e626t",
+        "contentType": "live-coverage",
+        "pageIdentifier": "live_coverage.c7dkx155e626t.page",
+        "pageTitle": "USA Elections Aftermath: Get the latest updates",
+        "timePublished": "2024-12-05T11:26:00.000Z",
+        "timeUpdated": "2024-12-05T12:23:32.000Z"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

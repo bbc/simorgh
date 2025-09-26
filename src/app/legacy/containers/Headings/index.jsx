@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import { Headline, SubHeading } from '#psammead/psammead-headings/src';
@@ -46,8 +46,9 @@ const HeadingsContainer = ({
     },
   ],
   type,
+  className,
 }) => {
-  const { script, service } = useContext(ServiceContext);
+  const { script, service } = use(ServiceContext);
   const Heading = Headings[type];
   const GridItem = GridItems[type];
 
@@ -71,6 +72,7 @@ const HeadingsContainer = ({
     id: isHeading ? headingId : subHeadingId,
     as: isHeading && !isFirstBlock ? 'strong' : null,
     tabIndex: isHeading && !isFirstBlock ? null : '-1',
+    className,
   };
 
   return (

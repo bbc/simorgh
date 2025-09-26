@@ -62,7 +62,7 @@ describe('LinkedData', () => {
     seoTitle: 'BBC News Radio',
   };
 
-  const propsForFrontpage = {
+  const propsForHomepage = {
     type: 'WebPage',
     seoTitle: 'Home - BBC News',
   };
@@ -153,10 +153,10 @@ describe('LinkedData', () => {
     expect(getLinkedDataOutput()).toMatchSnapshot();
   });
 
-  it('should correctly render linked data for front pages', () => {
+  it('should correctly render linked data for home pages', () => {
     render(
       <Context>
-        <LinkedData {...propsForFrontpage} />
+        <LinkedData {...propsForHomepage} />
       </Context>,
     );
 
@@ -218,15 +218,17 @@ describe('LinkedData', () => {
   });
 
   describe('bylineLinkedData', () => {
-    const bylineLinkedData = {
-      authorName: 'John',
-      jobRole: 'Journalist',
-      twitterText: 'BBC News',
-      twitterLink: 'https://twitter.com/BBCNews',
-      authorImage: 'https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg',
-      location: 'London',
-      authorTopicUrl: 'https://www.bbc.co.uk/news/topics/cg2gmrxlde0t',
-    };
+    const bylineLinkedData = [
+      {
+        authorName: 'John',
+        jobRole: 'Journalist',
+        twitterText: 'BBC News',
+        twitterLink: 'https://twitter.com/BBCNews',
+        authorImage: 'https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg',
+        location: 'London',
+        authorTopicUrl: 'https://www.bbc.co.uk/news/topics/cg2gmrxlde0t',
+      },
+    ];
 
     const articleProps = assocPath(
       ['bylineLinkedData'],

@@ -1,17 +1,10 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Canonical On Demand T V Page A11y I can see the skip to content link 1`] = `"Tsallaka zuwa abubuwan da ke ciki"`;
 
-exports[`Canonical On Demand T V Page Analytics ATI tracking pixel excluding src 1`] = `
-<img
-  alt=""
-  height="1px"
-  style="position:absolute"
-  width="1px"
-/>
-`;
+exports[`Canonical On Demand T V Page Analytics ATI tracking pixel excluding src 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" >"`;
 
-exports[`Canonical On Demand T V Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/"`;
+exports[`Canonical On Demand T V Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
 
 exports[`Canonical On Demand T V Page Analytics ATI tracking pixel search params 1`] = `
 [
@@ -22,10 +15,10 @@ exports[`Canonical On Demand T V Page Analytics ATI tracking pixel search params
     "s2": "51",
   },
   {
-    "p": "hausa.bbc_hausa_tv.tv.w172yjj7rfhxp1p.page",
+    "p": "hausa.bbc_hausa_tv.tv.w172yjj83ptptnj.page",
   },
   {
-    "x1": "[urn:bbc:pips:w172yjj7rfhxp1p]",
+    "x1": "[urn:bbc:pips:w172yjj83ptptnj]",
   },
   {
     "x2": "[responsive]",
@@ -99,7 +92,7 @@ exports[`Canonical On Demand T V Page Footer Anchors should match text and url 7
 
 exports[`Canonical On Demand T V Page Footer Anchors should match text and url 8`] = `
 {
-  "text": "Other Languages",
+  "text": "Labaran BBC a sauran harsuna",
   "url": "https://www.bbc.com/ws/languages",
 }
 `;
@@ -107,13 +100,13 @@ exports[`Canonical On Demand T V Page Footer Anchors should match text and url 8
 exports[`Canonical On Demand T V Page Footer Anchors should match text and url 9`] = `
 {
   "text": "Karanta hanyoyin da muke bi dangane da adireshin waje.",
-  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
 }
 `;
 
 exports[`Canonical On Demand T V Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/hausa"`;
 
-exports[`Canonical On Demand T V Page Footer Paragraphs should match text 1`] = `"© 2024 BBC. BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba.  Karanta hanyoyin da muke bi dangane da adireshin waje."`;
+exports[`Canonical On Demand T V Page Footer Paragraphs should match text 1`] = `"© 2025 BBC. BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba.  Karanta hanyoyin da muke bi dangane da adireshin waje."`;
 
 exports[`Canonical On Demand T V Page Header I can see the branding 1`] = `"BBC News, Hausa"`;
 
@@ -141,7 +134,7 @@ exports[`Canonical On Demand T V Page Header Navigation link should match text a
 exports[`Canonical On Demand T V Page Header Navigation link should match text and url 4`] = `
 {
   "text": "Cikakkun Rahotanni",
-  "url": "/hausa/52140979",
+  "url": "/hausa/topics/cnl7wd77wj2t",
 }
 `;
 
@@ -155,7 +148,7 @@ exports[`Canonical On Demand T V Page Header Navigation link should match text a
 exports[`Canonical On Demand T V Page Header Navigation link should match text and url 6`] = `
 {
   "text": "Shirye-shirye na Musamman",
-  "url": "/hausa/shirye-shirye-na-musamman-54712348",
+  "url": "/hausa/topics/cnl7wd9pddlt",
 }
 `;
 
@@ -172,13 +165,13 @@ exports[`Canonical On Demand T V Page I can see the episode summary 1`] = `"Sash
 
 exports[`Canonical On Demand T V Page I can see the episode title 1`] = `"Labaran Talabijin"`;
 
-exports[`Canonical On Demand T V Page Main heading should match text 1`] = `"Labaran Talabijin, 17 Maris 2023"`;
+exports[`Canonical On Demand T V Page Main heading should match text 1`] = `"Labaran Talabijin, 24 Maris 2023"`;
 
 exports[`Canonical On Demand T V Page Media Loader a11y assistive technology can read the media player title 1`] = `"Play video, "Labaran Talabijin", Tsawon lokaci 10,00"`;
 
 exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] = `
 <div
-  class="bbc-182h924"
+  class="bbc-145siv3"
   data-e2e="media-loader__placeholder"
 >
   <div
@@ -188,7 +181,9 @@ exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] 
     <noscript
       class="bbc-n2zqlz"
     >
-      &lt;strong&gt;Na&#x27;urarku na da matsalar sauraren sauti&lt;/strong&gt;
+      <strong>
+        Na'urarku na da matsalar sauraren sauti
+      </strong>
     </noscript>
   </div>
   <button
@@ -235,16 +230,14 @@ exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] 
       10:00
     </time>
   </button>
-  <noscript>
-    &lt;div class="bbc-fym37b"&gt;&lt;p class="bbc-cqzsv2"&gt;Na&#x27;urarku na da matsalar sauraren sauti&lt;/p&gt;&lt;/div&gt;
-  </noscript>
   <div
-    class="bbc-lgx6cw"
+    class="bbc-1jf2q50"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
       alt=""
       class="bbc-ipdj63"
+      loading="eager"
       src="https://ichef.bbci.co.uk/images/ic/$recipe/p08b216l.png"
       srcset="https://ichef.bbci.co.uk/images/ic/240xn/p08b216l.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p08b216l.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p08b216l.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p08b216l.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p08b216l.png.webp 800w"
       style="aspect-ratio:auto"
@@ -255,7 +248,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] 
 
 exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
 <div
-  class="bbc-182h924"
+  class="bbc-145siv3"
   data-e2e="media-loader__placeholder"
 >
   <div
@@ -265,7 +258,9 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
     <noscript
       class="bbc-n2zqlz"
     >
-      &lt;strong&gt;Na&#x27;urarku na da matsalar sauraren sauti&lt;/strong&gt;
+      <strong>
+        Na'urarku na da matsalar sauraren sauti
+      </strong>
     </noscript>
   </div>
   <button
@@ -312,16 +307,14 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
       10:00
     </time>
   </button>
-  <noscript>
-    &lt;div class="bbc-fym37b"&gt;&lt;p class="bbc-cqzsv2"&gt;Na&#x27;urarku na da matsalar sauraren sauti&lt;/p&gt;&lt;/div&gt;
-  </noscript>
   <div
-    class="bbc-lgx6cw"
+    class="bbc-1jf2q50"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
       alt=""
       class="bbc-ipdj63"
+      loading="eager"
       src="https://ichef.bbci.co.uk/images/ic/$recipe/p08b216l.png"
       srcset="https://ichef.bbci.co.uk/images/ic/240xn/p08b216l.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p08b216l.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p08b216l.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p08b216l.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p08b216l.png.webp 800w"
       style="aspect-ratio:auto"
@@ -332,11 +325,11 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
 
 exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`] = `
 <figure
-  class="bbc-7rf7s3"
+  class="media-container bbc-1ayt58x"
   data-e2e="media-loader__container"
 >
   <div
-    class="bbc-182h924"
+    class="bbc-145siv3"
     data-e2e="media-loader__placeholder"
   >
     <div
@@ -346,7 +339,9 @@ exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`]
       <noscript
         class="bbc-n2zqlz"
       >
-        &lt;strong&gt;Na&#x27;urarku na da matsalar sauraren sauti&lt;/strong&gt;
+        <strong>
+          Na'urarku na da matsalar sauraren sauti
+        </strong>
       </noscript>
     </div>
     <button
@@ -393,16 +388,14 @@ exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`]
         10:00
       </time>
     </button>
-    <noscript>
-      &lt;div class="bbc-fym37b"&gt;&lt;p class="bbc-cqzsv2"&gt;Na&#x27;urarku na da matsalar sauraren sauti&lt;/p&gt;&lt;/div&gt;
-    </noscript>
     <div
-      class="bbc-lgx6cw"
+      class="bbc-1jf2q50"
       style="padding-bottom:0;overflow:hidden"
     >
       <img
         alt=""
         class="bbc-ipdj63"
+        loading="eager"
         src="https://ichef.bbci.co.uk/images/ic/$recipe/p08b216l.png"
         srcset="https://ichef.bbci.co.uk/images/ic/240xn/p08b216l.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p08b216l.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p08b216l.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p08b216l.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p08b216l.png.webp 800w"
         style="aspect-ratio:auto"
@@ -414,8 +407,8 @@ exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`]
 
 exports[`Canonical On Demand T V Page Recent Episodes List items should match text and url 1`] = `
 {
-  "text": "10:00Bidiyo, Labaran Talabijin, Labaran Talabijin, Tsawon lokaci 10,00 24 Maris 2023",
-  "url": "/hausa/bbc_hausa_tv/tv/w172yjj83ptptnj",
+  "text": "10:00Bidiyo, Labaran Talabijin, Labaran Talabijin, Tsawon lokaci 10,00 17 Maris 2023",
+  "url": "/hausa/bbc_hausa_tv/tv/w172yjj7rfhxp1p",
 }
 `;
 
@@ -510,13 +503,13 @@ exports[`Canonical On Demand T V Page SEO Apple Touch Icon should match attribut
 }
 `;
 
-exports[`Canonical On Demand T V Page SEO Canonical link 1`] = `"http://localhost:7080/hausa/bbc_hausa_tv/tv/w172yjj7rfhxp1p"`;
+exports[`Canonical On Demand T V Page SEO Canonical link 1`] = `"http://localhost:7080/hausa/bbc_hausa_tv/tv/w172yjj83ptptnj"`;
 
 exports[`Canonical On Demand T V Page SEO Dir attribute 1`] = `"ltr"`;
 
 exports[`Canonical On Demand T V Page SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`Canonical On Demand T V Page SEO Heading level 1 1`] = `"Labaran Talabijin, 17 Maris 2023"`;
+exports[`Canonical On Demand T V Page SEO Heading level 1 1`] = `"Labaran Talabijin, 24 Maris 2023"`;
 
 exports[`Canonical On Demand T V Page SEO Lang attribute 1`] = `"ha"`;
 
@@ -538,7 +531,7 @@ exports[`Canonical On Demand T V Page SEO Linked data should match text 1`] = `
         "name": "Hausa",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7080/hausa/bbc_hausa_tv/tv/w172yjj7rfhxp1p",
+        "@id": "http://localhost:7080/hausa/bbc_hausa_tv/tv/w172yjj83ptptnj",
         "@type": "WebPage",
         "name": "Labaran Talabijin - Labaran Talabijin - BBC News Hausa",
       },
@@ -554,7 +547,7 @@ exports[`Canonical On Demand T V Page SEO Linked data should match text 1`] = `
         "publishingPrinciples": "https://www.bbc.com/hausa/game-da-mu-49283501",
       },
       "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
-      "url": "http://localhost:7080/hausa/bbc_hausa_tv/tv/w172yjj7rfhxp1p",
+      "url": "http://localhost:7080/hausa/bbc_hausa_tv/tv/w172yjj83ptptnj",
     },
     {
       "@type": "VideoObject",
@@ -562,7 +555,7 @@ exports[`Canonical On Demand T V Page SEO Linked data should match text 1`] = `
       "duration": "PT10M",
       "name": "Labaran Talabijin",
       "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p08b216l.png",
-      "uploadDate": "2023-03-17T00:00:00.000Z",
+      "uploadDate": "2023-03-24T00:00:00.000Z",
     },
   ],
 }
@@ -582,7 +575,7 @@ exports[`Canonical On Demand T V Page SEO OG title 1`] = `"Labaran Talabijin - L
 
 exports[`Canonical On Demand T V Page SEO OG type 1`] = `"website"`;
 
-exports[`Canonical On Demand T V Page SEO OG url 1`] = `"http://localhost:7080/hausa/bbc_hausa_tv/tv/w172yjj7rfhxp1p"`;
+exports[`Canonical On Demand T V Page SEO OG url 1`] = `"http://localhost:7080/hausa/bbc_hausa_tv/tv/w172yjj83ptptnj"`;
 
 exports[`Canonical On Demand T V Page SEO Page title 1`] = `"Labaran Talabijin - Labaran Talabijin - BBC News Hausa - BBC News Hausa"`;
 
@@ -602,4 +595,4 @@ exports[`Canonical On Demand T V Page SEO Twitter site 1`] = `"@bbchausa"`;
 
 exports[`Canonical On Demand T V Page SEO Twitter title 1`] = `"Labaran Talabijin - Labaran Talabijin - BBC News Hausa - BBC News Hausa"`;
 
-exports[`Canonical On Demand T V Page a11y Assistive technology reads the brand and episode title as the headline 1`] = `"Labaran Talabijin, 17 Maris 2023"`;
+exports[`Canonical On Demand T V Page a11y Assistive technology reads the brand and episode title as the headline 1`] = `"Labaran Talabijin, 24 Maris 2023"`;

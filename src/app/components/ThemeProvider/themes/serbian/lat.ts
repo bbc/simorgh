@@ -2,6 +2,7 @@ import { mergeDeepLeft } from 'ramda';
 import latinWithDiacriticsScript from '../../fontScripts/latinWithDiacritics';
 import withThemeProvider from '../../withThemeProvider';
 import baseSerbianTheme from './base';
+import getPWATypographyTheme from '../getPWATypographyTheme';
 
 const serbianLatinTheme = mergeDeepLeft(
   {
@@ -12,4 +13,7 @@ const serbianLatinTheme = mergeDeepLeft(
   baseSerbianTheme,
 );
 
-export default withThemeProvider(serbianLatinTheme);
+export default withThemeProvider(
+  serbianLatinTheme,
+  getPWATypographyTheme(latinWithDiacriticsScript),
+);

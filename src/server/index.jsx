@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable camelcase */
 import express from 'express';
 import compression from 'compression';
@@ -18,22 +19,27 @@ import {
 } from '#lib/logger.const';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { BAD_REQUEST, INTERNAL_SERVER_ERROR, OK } from '#lib/statusCodes.const';
+import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
+import isLocal from '#app/lib/utilities/isLocal';
 import injectCspHeader from './utilities/cspHeader';
 import logResponseTime from './utilities/logResponseTime';
 import renderDocument from './Document';
 import {
-  articleManifestPath,
-  articleSwPath,
-  frontPageManifestPath,
-  frontPageSwPath,
+  homePageManifestPath,
+  homePageSwPath,
 } from '../app/routes/utils/regex';
 import sendCustomMetric from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
 import local from './local';
 import getAgent from './utilities/getAgent';
-import { getMvtExperiments, getMvtVaryHeaders } from './utilities/mvtHeader';
+import {
+  getServerExperiments,
+  getExperimentVaryHeaders,
+} from './utilities/experimentHeader';
 import getAssetOrigins from './utilities/getAssetOrigins';
 import extractHeaders from './utilities/extractHeaders';
+import addPlatformToRequestChainHeader from './utilities/addPlatformToRequestChainHeader';
+import serviceConfigs from './utilities/serviceConfigs';
 
 const morgan = require('morgan');
 
@@ -109,7 +115,7 @@ server
  * Application env routes
  */
 server
-  .get([articleSwPath, frontPageSwPath], (req, res) => {
+  .get(homePageSwPath, (req, res) => {
     const swPath = `${__dirname}/public/sw.js`;
     res.set(
       `Cache-Control`,
@@ -122,23 +128,21 @@ server
       }
     });
   })
-  .get(
-    [articleManifestPath, frontPageManifestPath],
-    async ({ params }, res) => {
-      const { service } = params;
-      const manifestPath = `${__dirname}/public/${service}/manifest.json`;
-      res.set(
-        'Cache-Control',
-        'public, stale-if-error=1209600, stale-while-revalidate=1209600, max-age=604800',
-      );
-      res.sendFile(manifestPath, {}, error => {
-        if (error) {
-          logger.error(MANIFEST_SENDFILE_ERROR, { error });
-          res.status(500).send('Unable to find manifest.');
-        }
-      });
-    },
-  );
+  .get(homePageManifestPath, async ({ params }, res) => {
+    const { service } = params;
+    const variant = defaultServiceVariants[service] || 'default';
+    const manifestPath = `${__dirname}/public${serviceConfigs[service][variant].manifestPath}`;
+    res.set(
+      'Cache-Control',
+      'public, stale-if-error=172800, stale-while-revalidate=172800, max-age=86400',
+    );
+    res.sendFile(manifestPath, {}, error => {
+      if (error) {
+        logger.error(MANIFEST_SENDFILE_ERROR, { error });
+        res.status(500).send('Unable to find manifest.');
+      }
+    });
+  });
 
 // Set Up Local Server
 if (process.env.SIMORGH_APP_ENV === 'local') {
@@ -156,6 +160,14 @@ const injectDefaultCacheHeader = (req, res, next) => {
     `public, stale-if-error=${maxAge * 10}, stale-while-revalidate=${
       maxAge * 4
     }, max-age=${maxAge}`,
+  );
+  next();
+};
+
+const injectPlatformToRequestChainHeader = (req, res, next) => {
+  res.set(
+    'req-svc-chain',
+    addPlatformToRequestChainHeader({ headers: req.headers }),
   );
   next();
 };
@@ -192,10 +204,11 @@ server.get(
     injectDefaultCacheHeader,
     injectReferrerPolicyHeader,
     injectResourceHintsHeader,
+    injectPlatformToRequestChainHeader,
   ],
   async ({ url, query, headers, path: urlPath }, res) => {
     let derivedPageType = 'Unknown';
-    let mvtExperiments = [];
+    let serverSideExperiments = [];
 
     try {
       const {
@@ -243,14 +256,21 @@ server.get(
       data.showCookieBannerBasedOnCountry = showCookieBannerBasedOnCountry;
       data.isUK = isUK;
       data.isLite = isLite;
+      data.country = (headers['x-country'] || headers['x-bbc-edge-country'])
+        ?.toString()
+        .toLowerCase();
 
       let { status } = data;
       // Set derivedPageType based on returned page data
       if (status === OK) {
         derivedPageType = ramdaPath(['pageData', 'metadata', 'type'], data);
 
-        mvtExperiments = getMvtExperiments(headers, service, derivedPageType);
-        data.mvtExperiments = mvtExperiments;
+        serverSideExperiments = getServerExperiments({
+          headers,
+          service,
+          derivedPageType,
+        });
+        data.serverSideExperiments = serverSideExperiments;
       } else {
         sendCustomMetric({
           metricName: NON_200_RESPONSE,
@@ -275,7 +295,9 @@ server.get(
           url,
           variant,
         });
-      } catch ({ message }) {
+      } catch (error) {
+        const { message } = error;
+
         status = 500;
         sendCustomMetric({
           metricName: NON_200_RESPONSE,
@@ -283,6 +305,10 @@ server.get(
           pageType: derivedPageType,
           requestUrl: url,
         });
+
+        if (isLocal()) {
+          console.error(error);
+        }
 
         logger.error(SERVER_SIDE_REQUEST_FAILED, {
           status,
@@ -332,8 +358,9 @@ server.get(
         );
 
         const allVaryHeaders = ['X-Country'];
-        const mvtVaryHeaders = !isAmp && getMvtVaryHeaders(mvtExperiments);
-        if (mvtVaryHeaders) allVaryHeaders.push(mvtVaryHeaders);
+        const experimentVaryHeaders =
+          !isAmp && getExperimentVaryHeaders(serverSideExperiments);
+        if (experimentVaryHeaders) allVaryHeaders.push(experimentVaryHeaders);
 
         res.set('vary', allVaryHeaders);
 

@@ -2,11 +2,11 @@ import React from 'react';
 import {
   render,
   waitFor,
-} from '../../../../src/app/components/react-testing-library-with-providers';
-import serbianCyrCps from '../../../../data/serbian/av-embeds/cyr/srbija-68707945.json';
+} from '#app/components/react-testing-library-with-providers';
+import serbianCyrCps from '#data/serbian/av-embeds/cyr/srbija-68707945.json';
+import { AV_EMBEDS } from '#app/routes/utils/pageTypes';
+import { MediaBlock } from '#app/components/MediaLoader/types';
 import AvEmbedsMetadata from './AvEmbedsMetadata';
-import { AV_EMBEDS } from '../../../../src/app/routes/utils/pageTypes';
-import { MediaBlock } from '../../../../src/app/components/MediaLoader/types';
 
 const avEmbedsMetadataProps = {
   pageData: {
@@ -30,6 +30,18 @@ const avEmbedsMetadataProps = {
 };
 
 describe('AV Embeds Page', () => {
+  it('should render the noindex meta tag', async () => {
+    render(<AvEmbedsMetadata {...avEmbedsMetadataProps} />);
+
+    await waitFor(() => {
+      const actual = document
+        .querySelector('head > meta[name="robots"]')
+        ?.getAttribute('content');
+
+      expect(actual).toEqual('noindex');
+    });
+  });
+
   it('should render the viewport meta tag', async () => {
     render(<AvEmbedsMetadata {...avEmbedsMetadataProps} />);
 

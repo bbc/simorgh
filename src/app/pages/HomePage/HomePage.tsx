@@ -1,8 +1,12 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import useOptimizelyVariation, {
+  ExperimentType,
+} from '#app/hooks/useOptimizelyVariation';
+import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import {
   Curation,
@@ -40,10 +44,10 @@ const HomePage = ({ pageData }: HomePageProps) => {
     translations,
     product,
     serviceLocalizedName,
-    frontPageTitle,
+    homePageTitle,
     lang,
     brandName,
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
   const { topStoriesTitle, home } = translations;
   const {
     title,
@@ -51,12 +55,21 @@ const HomePage = ({ pageData }: HomePageProps) => {
     curations,
     metadata: { atiAnalytics },
   } = pageData;
+
+  // EXPERIMENT: Homepage Read Time
+  const readTimeExperimentName = 'newswb_ws_homepage_read_time';
+  const readTimeVariant = useOptimizelyVariation({
+    experimentName: readTimeExperimentName,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
+
   const itemList = getItemList({ curations, name: brandName });
+
   return (
     <>
       <ChartbeatAnalytics title={title} />
       <MetadataContainer
-        title={frontPageTitle}
+        title={homePageTitle}
         lang={lang}
         description={description}
         openGraphType="website"
@@ -89,9 +102,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                   link,
                   position,
                   visualStyle,
-                  mostRead,
-                  radioSchedule,
-                  embed,
+                  ...curationProps
                 },
                 index,
               ) => {
@@ -114,13 +125,14 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       topStoriesTitle={topStoriesTitle}
                       position={position}
                       link={link}
-                      curationLength={curations && curations.length}
-                      mostRead={mostRead}
-                      radioSchedule={radioSchedule}
+                      curationLength={curations?.length}
                       nthCurationByStyleAndProminence={
                         nthCurationByStyleAndProminence
                       }
-                      embed={embed}
+                      renderVisuallyHiddenH2Title={position === 0}
+                      curationId={curationId}
+                      readTimeVariant={readTimeVariant}
+                      {...curationProps}
                     />
                     {index === indexOfFirstNonBanner && <MPU />}
                   </React.Fragment>
@@ -130,6 +142,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
           </div>
         </div>
       </main>
+      {readTimeVariant && <OptimizelyPageMetrics trackPageView />}
     </>
   );
 };

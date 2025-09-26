@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
@@ -13,6 +13,7 @@ import { ContentType } from '#app/components/ChartbeatAnalytics/types';
 import MediaLoader from '#app/components/MediaLoader';
 import { OnDemandTVBlock } from '#app/models/types/media';
 import { ATIData } from '#app/components/ATIAnalytics/types';
+import { RequestContext } from '#app/contexts/RequestContext';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
@@ -85,7 +86,8 @@ const OnDemandTvPage = ({
     metadata: { atiAnalytics },
   } = pageData;
 
-  const { timezone, datetimeLocale, brandName } = useContext(ServiceContext);
+  const { timezone, datetimeLocale, brandName } = use(ServiceContext);
+  const { isLite } = use(RequestContext);
 
   const formattedTimestamp = formatUnixTimestamp({
     timestamp: releaseDateTimeStamp,
@@ -168,6 +170,8 @@ const OnDemandTvPage = ({
             releaseDateTimeStamp={releaseDateTimeStamp}
             episodeTitle={episodeTitle}
             ariaHidden
+            //  @ts-expect-error: pass prop to StyledTvHeadingContainer, but the styled component does not accept it
+            isLite={isLite}
           />
         </Grid>
         {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}

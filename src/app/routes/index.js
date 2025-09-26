@@ -1,5 +1,4 @@
 import article from './article';
-import frontPage from './frontPage';
 import homePage from './homePage';
 import liveRadio from './liveRadio';
 import mostRead from './mostRead';
@@ -12,7 +11,6 @@ import errorNoRouteMatch from './errorNoRouteMatch';
 
 export default [
   homePage,
-  frontPage,
   liveRadio,
   mostRead,
   podcast,

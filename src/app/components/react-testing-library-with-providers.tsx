@@ -12,6 +12,11 @@ import { ATIData } from './ATIAnalytics/types';
 
 jest.mock('./ThemeProvider');
 
+jest.mock('#app/hooks/useIsPWA', () => ({
+  __esModule: true,
+  default: () => false,
+}));
+
 interface Props extends PropsWithChildren {
   id?: string | null;
   isAmp?: boolean;
@@ -36,7 +41,6 @@ interface Props extends PropsWithChildren {
 
 const AllTheProviders: FC<Props> = ({
   children,
-  pageData,
   atiData,
   id = null,
   isAmp = false,
@@ -80,7 +84,7 @@ const AllTheProviders: FC<Props> = ({
           statusCode={statusCode}
           isUK={isUK}
         >
-          <EventTrackingContextProvider data={pageData} atiData={atiData}>
+          <EventTrackingContextProvider atiData={atiData}>
             <UserContextProvider>
               <ThemeProvider service={service} variant={variant}>
                 {children}

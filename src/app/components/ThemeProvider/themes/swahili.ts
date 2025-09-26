@@ -3,6 +3,7 @@ import latinScript from '../fontScripts/latin';
 import helmetFontVariants from '../fontVariants/helmet';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/swahili';
+import getPWATypographyTheme from './getPWATypographyTheme';
 
 const swahiliTheme = {
   palette: {
@@ -20,4 +21,4 @@ const swahiliTheme = {
   brandSVG,
 };
 
-export default withThemeProvider(swahiliTheme);
+export default withThemeProvider(swahiliTheme, getPWATypographyTheme());

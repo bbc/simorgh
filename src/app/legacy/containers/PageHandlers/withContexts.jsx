@@ -21,15 +21,15 @@ const WithContexts = Component => {
       isLite = false,
       pageType,
       pathname,
-      previousPath = null,
       variant = null,
       timeOnServer = null,
       pageData = null,
       showAdsBasedOnLocation = false,
       showCookieBannerBasedOnCountry = true,
-      mvtExperiments = null,
+      serverSideExperiments = null,
       isNextJs = false,
       isUK = false,
+      country = null,
     } = props;
 
     const { metadata: { atiAnalytics } = {} } = pageData ?? {};
@@ -52,14 +52,14 @@ const WithContexts = Component => {
             service={service}
             statusCode={status}
             pathname={pathname}
-            previousPath={previousPath}
             variant={variant}
             timeOnServer={timeOnServer}
             showAdsBasedOnLocation={showAdsBasedOnLocation}
             showCookieBannerBasedOnCountry={showCookieBannerBasedOnCountry}
-            mvtExperiments={mvtExperiments}
+            serverSideExperiments={serverSideExperiments}
             isNextJs={isNextJs}
             isUK={isUK}
+            country={country}
           >
             <EventTrackingContextProvider
               atiData={atiAnalytics}

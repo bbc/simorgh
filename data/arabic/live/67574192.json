@@ -32,7 +32,7 @@
     "sportDataEvent": { "id": null },
     "eavisEvent": { "id": null },
     "article": { "id": null },
-    "mediaCollections": [],
+    "mediaCollections": null,
     "keyHighlight": { "id": null },
     "electionBanner": { "id": null },
     "supportingLinks": { "id": null },

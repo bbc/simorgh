@@ -1,25 +1,24 @@
-import React from 'react';
-import { PageTypes, Services } from '#app/models/types/global';
 import { RequestContextProvider } from '#app/contexts/RequestContext';
-import { Stages } from '#app/hooks/useExperimentHook';
+import { PageTypes, Services } from '#app/models/types/global';
+import React from 'react';
 import MediaLoaderComponent from '.';
 import {
   aresMediaBlocks,
   aresMediaPortraitBlocks,
-  clipMediaBlocks,
+  videoClipMediaBlocks,
   legacyMediaBlock,
+  aresMediaBlockWithTranscript,
 } from './fixture';
-import { MediaBlock } from './types';
 import readme from './README.md';
+import { MediaBlock } from './types';
 
 type Props = {
   pageType: PageTypes;
   service: Services;
   blocks: MediaBlock[];
-  experimentStage?: Stages;
 };
 
-const Component = ({ service, pageType, blocks, experimentStage }: Props) => (
+const Component = ({ service, pageType, blocks }: Props) => (
   <RequestContextProvider
     id="testID"
     isAmp={false}
@@ -28,7 +27,7 @@ const Component = ({ service, pageType, blocks, experimentStage }: Props) => (
     pathname=""
     service={service}
   >
-    <MediaLoaderComponent blocks={blocks} experimentStage={experimentStage} />
+    <MediaLoaderComponent blocks={blocks} />
   </RequestContextProvider>
 );
 
@@ -36,8 +35,8 @@ export default {
   title: 'Components/MediaLoader',
   Component,
   argTypes: {
-    experimentStage: {
-      options: [Stages.STAGE_2, Stages.STAGE_3],
+    hasTranscript: {
+      options: [true, false],
       control: { type: 'radio' },
     },
   },
@@ -46,12 +45,11 @@ export default {
   },
 };
 
-export const ExperimentMediaLoader = ({ experimentStage }: Props) => (
+export const MediaLoaderWithTranscript = () => (
   <Component
     service="pidgin"
     pageType="article"
-    blocks={aresMediaBlocks as MediaBlock[]}
-    experimentStage={experimentStage}
+    blocks={aresMediaBlockWithTranscript as MediaBlock[]}
   />
 );
 
@@ -83,6 +81,6 @@ export const LivePageMedia = () => (
   <Component
     service="pidgin"
     pageType="live"
-    blocks={clipMediaBlocks as MediaBlock[]}
+    blocks={videoClipMediaBlocks as MediaBlock[]}
   />
 );

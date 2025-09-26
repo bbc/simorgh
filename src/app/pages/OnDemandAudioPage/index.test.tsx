@@ -78,6 +78,10 @@ jest.mock('../../components/ChartbeatAnalytics', () => {
   return ChartbeatAnalytics;
 });
 
+jest.mock('#src/app/components/ATIAnalytics', () => () => (
+  <div>ATI Analytics</div>
+));
+
 const { env } = process;
 
 describe('OnDemand Radio Page ', () => {

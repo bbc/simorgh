@@ -1,31 +1,49 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import CanonicalATIAnalytics from './canonical';
 import AmpATIAnalytics from './amp';
+import AmpGeo from '../../legacy/components/AmpGeo';
 import { ATIProps } from './types';
-import buildATIUrl from './params';
+import { buildATIUrl, buildReverbParams } from './params';
 
-const ATIAnalytics = ({ data, atiData }: ATIProps) => {
-  const requestContext = useContext(RequestContext);
-  const serviceContext = useContext(ServiceContext);
+const ATIAnalytics = ({ atiData = {} }: ATIProps) => {
+  const requestContext = use(RequestContext);
+  const serviceContext = use(ServiceContext);
   const { isAmp } = requestContext;
+  const { useReverb } = serviceContext;
 
-  const pageviewParams = buildATIUrl({
+  const urlPageViewParams = buildATIUrl({
     requestContext,
     serviceContext,
-    data,
     atiData,
   }) as string;
 
-  if (!pageviewParams) {
+  const reverbParams = useReverb
+    ? buildReverbParams({
+        requestContext,
+        serviceContext,
+        atiData,
+      })
+    : null;
+
+  if (!urlPageViewParams) {
     return null;
   }
 
   return isAmp ? (
-    <AmpATIAnalytics pageviewParams={pageviewParams} />
+    <>
+      <AmpGeo />
+      <AmpATIAnalytics
+        pageviewParams={urlPageViewParams}
+        reverbParams={reverbParams}
+      />
+    </>
   ) : (
-    <CanonicalATIAnalytics pageviewParams={pageviewParams} />
+    <CanonicalATIAnalytics
+      pageviewParams={urlPageViewParams}
+      reverbParams={reverbParams}
+    />
   );
 };
 

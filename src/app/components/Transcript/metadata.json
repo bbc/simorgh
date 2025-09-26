@@ -1,0 +1,28 @@
+{
+  "lastUpdated": {
+    "day": 28,
+    "month": "February",
+    "year": 2025
+  },
+  "uxAccessibilityDoc": {
+    "done": true,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/Transcript-first-video-Screen-reader-UX--CgiT6SE5mU5yG~eks1gzpEwoAg-ZJGBJjMxHv3RqSF2WbWAs",
+      "label": "Screen Reader UX"
+    }
+  },
+  "acceptanceCriteria": {
+    "done": true,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/Transcript-first-video-Acceptance-criteria-and-Translations--ChOLnyw2l1ClkyYQ8XSxUVszAg-3dInEQq6OXzBLMvnrOqSa",
+      "label": "Accessibility Acceptance Criteria"
+    }
+  },
+  "swarm": {
+    "done": false,
+    "reference": {
+      "url": "",
+      "label": "Accessibility Swarm"
+    }
+  }
+}

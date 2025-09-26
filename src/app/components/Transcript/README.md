@@ -4,11 +4,10 @@ The `Transcript` component renders video transcripts.
 
 ## Props
 
-| Name            | type    | Description                                           |
-| --------------- | ------- | ----------------------------------------------------- |
-| transcript      | object  | contains transcript content                           |
-| title           | string  | title of video                                        |
-| hideDisclaimer? | boolean | decides whether to show disclaimer (defaults to true) |
+| Name       | type   | Description                 |
+| ---------- | ------ | --------------------------- |
+| transcript | object | contains transcript content |
+| title      | string | title of video              |
 
 ## Example
 

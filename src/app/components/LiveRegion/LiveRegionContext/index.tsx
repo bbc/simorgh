@@ -1,7 +1,8 @@
 import React, {
   PropsWithChildren,
   createContext,
-  useContext,
+  use,
+  useMemo,
   useState,
 } from 'react';
 
@@ -19,18 +20,21 @@ export const LiveRegionContextProvider = ({ children }: PropsWithChildren) => {
     setLiveRegionItem(item);
   };
 
+  const memoisedLiveRegion = useMemo(
+    () => ({
+      liveRegionItem,
+      replaceLiveRegionWith,
+    }),
+    [liveRegionItem],
+  );
+
   return (
-    <LiveRegionContext.Provider
-      value={{
-        liveRegionItem,
-        replaceLiveRegionWith,
-      }}
-    >
+    <LiveRegionContext.Provider value={memoisedLiveRegion}>
       {children}
     </LiveRegionContext.Provider>
   );
 };
 
 export function useLiveRegionContext() {
-  return useContext(LiveRegionContext);
+  return use(LiveRegionContext);
 }

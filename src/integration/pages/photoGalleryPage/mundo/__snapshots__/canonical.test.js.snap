@@ -1,17 +1,10 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Canonical Photo Gallery Page A11y I can see the skip to content link 1`] = `"Ir al contenido"`;
 
-exports[`Canonical Photo Gallery Page Analytics ATI tracking pixel excluding src 1`] = `
-<img
-  alt=""
-  height="1px"
-  style="position:absolute"
-  width="1px"
-/>
-`;
+exports[`Canonical Photo Gallery Page Analytics ATI tracking pixel excluding src 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" >"`;
 
-exports[`Canonical Photo Gallery Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/"`;
+exports[`Canonical Photo Gallery Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
 
 exports[`Canonical Photo Gallery Page Analytics ATI tracking pixel search params 1`] = `
 [
@@ -105,7 +98,7 @@ exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 7
 
 exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 8`] = `
 {
-  "text": "Other Languages",
+  "text": "Otros idiomas",
   "url": "https://www.bbc.com/ws/languages",
 }
 `;
@@ -113,13 +106,13 @@ exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 8
 exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 9`] = `
 {
   "text": "Lee sobre nuestra postura acerca de enlaces externos.",
-  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
 }
 `;
 
 exports[`Canonical Photo Gallery Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
 
-exports[`Canonical Photo Gallery Page Footer Paragraphs should match text 1`] = `"© 2024 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
+exports[`Canonical Photo Gallery Page Footer Paragraphs should match text 1`] = `"© 2025 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
 
 exports[`Canonical Photo Gallery Page Header I can see the branding 1`] = `"BBC News, Mundo"`;
 
@@ -146,8 +139,8 @@ exports[`Canonical Photo Gallery Page Header Navigation link should match text a
 
 exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 4`] = `
 {
-  "text": "Hay Festival",
-  "url": "/mundo/topics/cr50y7p7qyqt",
+  "text": "EE.UU.",
+  "url": "/mundo/topics/cdr5613yzwqt",
 }
 `;
 
@@ -186,6 +179,20 @@ exports[`Canonical Photo Gallery Page Header Navigation link should match text a
 }
 `;
 
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 10`] = `
+{
+  "text": "Hay Festival",
+  "url": "/mundo/topics/cr50y7p7qyqt",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 11`] = `
+{
+  "text": "Centroamérica cuenta",
+  "url": "/mundo/topics/c404v5z1k8wt",
+}
+`;
+
 exports[`Canonical Photo Gallery Page Image Caption should match text 1`] = `"Pie de foto, En tenis, las competidoras en los juegos de principios del siglo XX utilizaban vestidos y medias largas, algo impensable para los estándares de la actualidad. Fue hasta 1920 en Amberes cuando las mujeres tuvieron participación reconocida oficialmente."`;
 
 exports[`Canonical Photo Gallery Page Image should match snapshot 1`] = `
@@ -193,6 +200,7 @@ exports[`Canonical Photo Gallery Page Image should match snapshot 1`] = `
   alt="Tenista de 1904"
   class="bbc-139onq"
   height="549"
+  loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"
   src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg.webp"
   srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg.webp 480w, https://ichef.bbci.co.uk/ace/ws/549/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg.webp 549w"

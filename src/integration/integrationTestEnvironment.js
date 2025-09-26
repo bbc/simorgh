@@ -1,18 +1,17 @@
 /* eslint-disable no-console */
 
-const JsdomEnvironment = require('jest-environment-jsdom').TestEnvironment;
-const fetchDom = require('./utils/fetchDom');
+const TestEnvironment = require('@happy-dom/jest-environment').default;
+const fetchHtml = require('./utils/fetchHtml');
 const getPageTypeFromTestPath = require('./utils/getPageTypeFromTestPath');
 const camelCaseToText = require('./utils/camelCaseToText');
 
-class IntegrationTestEnvironment extends JsdomEnvironment {
+class IntegrationTestEnvironment extends TestEnvironment {
   constructor(config, context) {
     super(config, context);
     const { platform } = config.projectConfig.testEnvironmentOptions;
     const {
       pathname,
       service,
-      runScripts = 'true',
       displayAds = 'false',
       isInUK = 'no',
     } = context.docblockPragmas;
@@ -24,7 +23,6 @@ class IntegrationTestEnvironment extends JsdomEnvironment {
 
     this.pageType = camelCaseToText(pageType);
     this.service = service;
-    this.runScripts = runScripts === 'true';
     this.displayAds = displayAds === 'true';
     this.isInUK = isInUK;
     this.url = `http://localhost:7080${pathname}${platformForPath}`;
@@ -33,25 +31,21 @@ class IntegrationTestEnvironment extends JsdomEnvironment {
   async setup() {
     await super.setup();
 
-    try {
-      const dom = await fetchDom({
-        url: this.url,
-        runScripts: this.runScripts,
-        headers: {
-          ...(this.displayAds && { 'BBC-Adverts': 'true' }),
-          ...{ 'x-bbc-edge-isuk': this.isInUK },
-        },
-      });
+    const { window, document } = await fetchHtml({
+      url: this.url,
+      headers: {
+        ...(this.displayAds && { 'BBC-Adverts': 'true' }),
+        ...{ 'x-bbc-edge-isuk': this.isInUK },
+      },
+    });
 
-      Object.defineProperties(this.global, {
-        pageType: { value: this.pageType },
-        service: { value: this.service },
-        window: { value: dom.window },
-        document: { value: dom.window.document },
-      });
-    } catch (e) {
-      console.error(e);
-    }
+    Object.defineProperties(this.global, {
+      pageType: { value: this.pageType },
+      service: { value: this.service },
+      window: { value: window },
+      document: { value: document },
+      fetch: { value: fetch },
+    });
   }
 
   async teardown() {

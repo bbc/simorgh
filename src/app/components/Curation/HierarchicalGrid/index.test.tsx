@@ -1,18 +1,32 @@
 import React from 'react';
-import { suppressPropWarnings } from '../../../legacy/psammead/psammead-test-helpers/src';
-import { render } from '../../react-testing-library-with-providers';
-import fixture from './fixtures';
+import * as viewTracking from '#app/hooks/useViewTracker';
+import * as clickTracking from '#app/hooks/useClickTrackerHandler';
+import { fireEvent, render } from '../../react-testing-library-with-providers';
+import { pidginPromos as fixture } from './fixtures';
 import mediaFixture from './mediaFixtures';
 import liveFixtures from './liveFixtures';
 import HierarchicalGrid from '.';
 
-describe('Hierarchical Grid Curation', () => {
-  suppressPropWarnings(['children', 'string', 'MediaIcon']);
+const minimalEventTrackingData = { componentName: 'test-component' };
 
+describe('Hierarchical Grid Curation', () => {
   const headingLevel = 2;
+
+  beforeAll(() => {
+    jest.useFakeTimers().setSystemTime(new Date('2025-09-16T11:34:20.000Z'));
+  });
+
+  afterAll(() => {
+    jest.useRealTimers();
+  });
+
   it('renders twelve promos when twelve items are provided', async () => {
     render(
-      <HierarchicalGrid headingLevel={headingLevel} summaries={fixture} />,
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={fixture}
+        eventTrackingData={minimalEventTrackingData}
+      />,
     );
 
     expect(document.querySelectorAll('li').length).toBe(12);
@@ -33,17 +47,23 @@ describe('Hierarchical Grid Curation', () => {
       id: 'e2263a1c-8d5a-4a73-a00c-881acfa34381',
     });
     render(
-      <HierarchicalGrid headingLevel={headingLevel} summaries={extraPromos} />,
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={extraPromos}
+        eventTrackingData={minimalEventTrackingData}
+      />,
     );
 
     expect(document.querySelectorAll('li').length).toBe(12);
   });
 
   it('returns null when less than three promos are in the data', async () => {
+    const splicedFixture = [...fixture].splice(0, 2);
     render(
       <HierarchicalGrid
         headingLevel={headingLevel}
-        summaries={fixture.splice(0, 2)}
+        summaries={splicedFixture}
+        eventTrackingData={minimalEventTrackingData}
       />,
     );
     expect(document.querySelectorAll('li').length).toBe(0);
@@ -51,7 +71,11 @@ describe('Hierarchical Grid Curation', () => {
 
   it('renders list with role of list', async () => {
     render(
-      <HierarchicalGrid headingLevel={headingLevel} summaries={fixture} />,
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={fixture}
+        eventTrackingData={minimalEventTrackingData}
+      />,
     );
 
     expect(document.querySelectorAll('ul').length).toBe(1);
@@ -60,7 +84,11 @@ describe('Hierarchical Grid Curation', () => {
 
   it('should use formatted duration when a valid duration is provided - audio', async () => {
     const container = render(
-      <HierarchicalGrid headingLevel={headingLevel} summaries={mediaFixture} />,
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={mediaFixture}
+        eventTrackingData={minimalEventTrackingData}
+      />,
     );
 
     const durationString = ', Duration 2,03';
@@ -71,7 +99,11 @@ describe('Hierarchical Grid Curation', () => {
 
   it('should use formatted duration when a valid duration is provided - video', async () => {
     const container = render(
-      <HierarchicalGrid headingLevel={headingLevel} summaries={mediaFixture} />,
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={mediaFixture}
+        eventTrackingData={minimalEventTrackingData}
+      />,
     );
 
     const durationString = ', Duration 3,43';
@@ -82,7 +114,11 @@ describe('Hierarchical Grid Curation', () => {
 
   it('should render the last published date', async () => {
     const { getByText } = render(
-      <HierarchicalGrid summaries={mediaFixture} />,
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={mediaFixture}
+        eventTrackingData={minimalEventTrackingData}
+      />,
       {
         service: 'mundo',
       },
@@ -91,9 +127,28 @@ describe('Hierarchical Grid Curation', () => {
     expect(getByText('29 julio 2023')).toBeInTheDocument();
   });
 
+  it('for articles pushed under 10 hours ago, it should render the last published date in a relative format', async () => {
+    const { container } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={mediaFixture}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+      {
+        service: 'mundo',
+      },
+    );
+    const timestampText = container.querySelectorAll('time')?.[2].innerHTML;
+    expect(timestampText).toBe('Publicado hace 34 minutos');
+  });
+
   it('should use role text when using nested spans', async () => {
     render(
-      <HierarchicalGrid headingLevel={headingLevel} summaries={mediaFixture} />,
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={mediaFixture}
+        eventTrackingData={minimalEventTrackingData}
+      />,
     );
 
     expect(document.querySelector('span')?.getAttribute('role')).toBe('text');
@@ -101,7 +156,11 @@ describe('Hierarchical Grid Curation', () => {
 
   it('should use visually hidden text only when type is media i.e video, audio and photogallery', async () => {
     const container = render(
-      <HierarchicalGrid headingLevel={headingLevel} summaries={mediaFixture} />,
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={mediaFixture}
+        eventTrackingData={minimalEventTrackingData}
+      />,
     );
 
     expect(container.queryAllByTestId('visually-hidden-text')).toHaveLength(2);
@@ -109,16 +168,133 @@ describe('Hierarchical Grid Curation', () => {
   });
 
   it('should display LiveLabel on a Live Promo', () => {
-    const container = render(<HierarchicalGrid summaries={mediaFixture} />, {
-      service: 'mundo',
-    });
+    const container = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={mediaFixture}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+      {
+        service: 'mundo',
+      },
+    );
     expect(container.getByText('EN VIVO')).toBeInTheDocument();
   });
 
   it('should not display a timestamp on a Live Promo', () => {
-    const container = render(<HierarchicalGrid summaries={liveFixtures} />, {
-      service: 'mundo',
-    });
+    const container = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={liveFixtures}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+      {
+        service: 'mundo',
+      },
+    );
     expect(container.queryByText('13 noviembre 2022')).not.toBeInTheDocument();
+  });
+
+  it('should display read time when readTime is provided in summary data', () => {
+    const fixtureDataIncludingReadTime = fixture.map(fixtureSummary => ({
+      ...fixtureSummary,
+      readTime: 5,
+    }));
+
+    const container = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={fixtureDataIncludingReadTime}
+        eventTrackingData={minimalEventTrackingData}
+        readTimeVariant="variant1"
+      />,
+    );
+    expect(container.queryAllByTestId('read-time').length).toBe(12);
+  });
+
+  it('should not display read time when readTime is not provided in summary data', () => {
+    const container = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={fixture}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+    );
+    expect(container.queryAllByTestId('read-time').length).toBe(0);
+  });
+
+  it('should show promo data in read time view event', () => {
+    const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+    const expectedTrackingProps = {
+      componentName: 'read-time',
+      experimentName: 'newswb_ws_homepage_read_time',
+      experimentVariant: 'variant1',
+      itemTracker: {
+        duration: 300000,
+        label: 'Read time: 5 minutes',
+        resourceId: 'e2263a1c-8d5a-4a73-a00c-881acfa34381',
+        position: 1,
+        type: 'article',
+      },
+      sendOptimizelyEvents: true,
+    };
+
+    const fixtureDataIncludingReadTime = fixture.map(fixtureSummary => ({
+      ...fixtureSummary,
+      readTime: 5,
+    }));
+
+    render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={fixtureDataIncludingReadTime}
+        eventTrackingData={minimalEventTrackingData}
+        readTimeVariant="variant1"
+      />,
+    );
+
+    expect(viewTrackerSpy).toHaveBeenCalledWith(
+      expect.objectContaining(expectedTrackingProps),
+    );
+  });
+
+  it('should include read time data if a promo link is clicked when a user is in any variant except control', () => {
+    const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
+    const expectedTrackingProps = {
+      componentName: 'test-component',
+      experimentName: 'newswb_ws_homepage_read_time',
+      experimentVariant: 'variant1',
+      itemTracker: {
+        duration: 300000,
+        label: 'Read time: 5 minutes',
+        resourceId: 'e2263a1c-8d5a-4a73-a00c-881acfa34381',
+        position: 1,
+        type: 'hierarchical-curation-grid-promo',
+        mediaType: 'article',
+        text: 'Wetin happun for January 6 one year ago?',
+      },
+      sendOptimizelyEvents: true,
+    };
+
+    const fixtureDataIncludingReadTime = fixture.map(fixtureSummary => ({
+      ...fixtureSummary,
+      readTime: 5,
+    }));
+
+    const { container } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={fixtureDataIncludingReadTime}
+        eventTrackingData={minimalEventTrackingData}
+        readTimeVariant="variant1"
+      />,
+    );
+    const [promoLink] = container.getElementsByTagName('a');
+    fireEvent.click(promoLink);
+
+    expect(promoLink.onclick).toBeTruthy();
+    expect(clickTrackerSpy).toHaveBeenCalledWith(
+      expect.objectContaining(expectedTrackingProps),
+    );
   });
 });

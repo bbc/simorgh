@@ -664,6 +664,10 @@ const arabicLiveTvPageData = {
       ],
     },
   },
+  metadata: {
+    firstPublished: 1673964186410,
+    lastPublished: 1673964957894,
+  },
 };
 
 export { arabicLiveTvPageData, pidginPageData };

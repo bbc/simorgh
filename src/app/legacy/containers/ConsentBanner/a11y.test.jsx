@@ -1,8 +1,6 @@
 import React, { createRef, useMemo } from 'react';
 import { UserContextProvider } from '#contexts/UserContext';
 import { ToggleContext } from '#contexts/ToggleContext';
-import { RequestContextProvider } from '#contexts/RequestContext';
-import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import Cookies from 'js-cookie';
 import {
   render,
@@ -13,46 +11,22 @@ import { service as pidginServiceConfig } from '../../../lib/config/services/pid
 import ConsentBanner from './index';
 
 const defaultToggleState = {
-  chartbeatAnalytics: {
-    enabled: false,
+  privacyPolicy: {
+    enabled: true,
+    value: 'july2019',
   },
 };
+
 const mockToggleDispatch = jest.fn();
 
-const AmpBannerWithContext = ({ service, serviceConfig, variant }) => {
-  const toggleContextValue = useMemo(
-    () => ({
-      toggleState: defaultToggleState,
-      toggleDispatch: mockToggleDispatch,
-    }),
-    [],
-  );
-  return (
-    <RequestContextProvider
-      isAmp
-      pageType={FRONT_PAGE}
-      pathname="/"
-      service={service}
-    >
-      <ToggleContext.Provider value={toggleContextValue}>
-        <UserContextProvider>
-          <ServiceContext.Provider value={serviceConfig[variant]}>
-            <ConsentBanner />
-          </ServiceContext.Provider>
-        </UserContextProvider>
-      </ToggleContext.Provider>
-    </RequestContextProvider>
-  );
-};
-
 const CanonicalBannerWithContext = React.forwardRef(
-  ({ serviceConfig, variant }, ref) => {
+  ({ serviceConfig, variant, toggleStateOverride }, ref) => {
     const toggleContextValue = useMemo(
       () => ({
-        toggleState: defaultToggleState,
+        toggleState: { ...defaultToggleState, ...(toggleStateOverride || {}) },
         toggleDispatch: mockToggleDispatch,
       }),
-      [],
+      [toggleStateOverride],
     );
     return (
       <>
@@ -77,7 +51,8 @@ describe('canonical', () => {
       Cookies.remove(cookieName);
     });
   });
-  it('should focus on canonical consent banner heading on mount on canonical', () => {
+
+  it('should focus on canonical consent privacy banner heading on mount on canonical', () => {
     const { getByText } = render(
       <CanonicalBannerWithContext
         serviceConfig={pidginServiceConfig}
@@ -88,6 +63,25 @@ describe('canonical', () => {
       pidginServiceConfig.default.translations.consentBanner.privacy.title;
 
     expect(document.activeElement).toBe(getByText(pidginPrivacyHeading));
+  });
+
+  it('should focus on canonical consent cookie banner heading on mount on canonical when privacy policy toggle is disabled', () => {
+    const { getByText } = render(
+      <CanonicalBannerWithContext
+        serviceConfig={pidginServiceConfig}
+        variant="default"
+        toggleStateOverride={{
+          privacyPolicy: {
+            enabled: false,
+          },
+        }}
+      />,
+    );
+    const pidginCookieHeading =
+      pidginServiceConfig.default.translations.consentBanner.cookie.canonical
+        .title;
+
+    expect(document.activeElement).toBe(getByText(pidginCookieHeading));
   });
 
   it('should focus on the link within the referenced element after cookie accept on canonical', () => {
@@ -110,43 +104,5 @@ describe('canonical', () => {
     fireEvent.click(getByText(pidginCookieAccept));
 
     expect(document.activeElement).toBe(getByText('BBC Brand'));
-  });
-});
-
-describe('amp', () => {
-  it('should render a focussable manage cookies heading on AMP', () => {
-    const { container } = render(
-      <AmpBannerWithContext
-        service="pidgin"
-        serviceConfig={pidginServiceConfig}
-        variant="default"
-      />,
-    );
-
-    const manageCookiesHeading = container.querySelector(
-      '#manageCookiesHeading',
-    );
-    manageCookiesHeading.focus();
-
-    expect(document.activeElement).toBe(manageCookiesHeading);
-  });
-
-  it('should render a focussable cookie banner heading on AMP', () => {
-    const { getByText } = render(
-      <AmpBannerWithContext
-        service="pidgin"
-        serviceConfig={pidginServiceConfig}
-        variant="default"
-      />,
-    );
-
-    const pidginCookieAcceptAmp =
-      pidginServiceConfig.default.translations.consentBanner.cookie.amp.initial
-        .title;
-
-    const pidginCookieHeading = getByText(pidginCookieAcceptAmp);
-    pidginCookieHeading.focus();
-
-    expect(document.activeElement).toBe(pidginCookieHeading);
   });
 });

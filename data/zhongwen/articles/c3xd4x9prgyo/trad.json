@@ -157,7 +157,7 @@
         "atiAnalytics": {
           "categoryName": null,
           "contentId": "urn:bbc:optimo:asset:c3xd4x9prgyo",
-          "language": "zh-hans",
+          "language": "zh-hant",
           "ldpThingIds": null,
           "ldpThingLabels": null,
           "nationsProducer": null,
@@ -171,7 +171,7 @@
         },
         "type": "article",
         "createdBy": "Zhongwen",
-        "language": "zh-hans",
+        "language": "zh-hant",
         "firstPublished": 1562943152251,
         "lastPublished": 1562943152251,
         "analyticsLabels": {

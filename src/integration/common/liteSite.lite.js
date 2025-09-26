@@ -1,13 +1,15 @@
 export default () => {
-  describe('Lite Site Cta', () => {
-    const liteSiteCta = document.querySelector("section[data-e2e='lite-cta']");
+  describe('Lite Site Summary', () => {
+    const liteSiteSummary = document.querySelector(
+      "section[data-e2e='lite-summary']",
+    );
 
     it('should be in the document', () => {
-      expect(liteSiteCta).toBeInTheDocument();
+      expect(liteSiteSummary).toBeInTheDocument();
     });
 
     it('should match snapshot', () => {
-      expect(liteSiteCta).toMatchSnapshot();
+      expect(liteSiteSummary).toMatchSnapshot();
     });
   });
 };

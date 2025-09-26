@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Canonical Navigation snapshots should correctly render Canonical navigation 1`] = `
 .emotion-0 {
@@ -6,13 +6,15 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
   background-color: #FFFFFF;
 }
 
-.emotion-0::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  border-bottom: 0.0625rem solid #E6E8EA;
+@media (min-width: 62.9375rem) {
+  .emotion-0::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-bottom: 0.0625rem solid #E6E8EA;
+  }
 }
 
 .emotion-0 .e11sm0on2::after {
@@ -185,6 +187,34 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
   }
 }
 
+.emotion-15 {
+  position: absolute;
+  width: calc(100vw - 0.8rem);
+  inset-inline-start: 0;
+}
+
+@media (min-width: 1041px) {
+  .emotion-15 {
+    width: calc(100vw + 0.8rem);
+    inset-inline-start: calc(-1 * (100vw - 1014px) / 2);
+  }
+}
+
+.emotion-15::after {
+  content: '';
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline: -0.8rem 0;
+  width: calc(100% + 0.8rem);
+  border-bottom: 0.0625rem solid #E6E8EA;
+}
+
+@media (min-width: 1008px) {
+  .emotion-15 {
+    display: none;
+  }
+}
+
 <div>
   <nav
     class="emotion-0 emotion-1"
@@ -248,6 +278,9 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
           </li>
         </ul>
       </div>
+      <div
+        class="emotion-15 emotion-16"
+      />
     </div>
   </nav>
 </div>

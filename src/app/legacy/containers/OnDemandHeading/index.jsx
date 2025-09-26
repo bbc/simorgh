@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import styled from '@emotion/styled';
 import { Headline } from '#psammead/psammead-headings/src';
 import {
@@ -49,15 +49,14 @@ const Subheading = styled.span`
 `;
 
 const OnDemandHeadingContainer = ({
-  idAttr = null,
+  idAttr = '',
   brandTitle,
   releaseDateTimeStamp,
   episodeTitle = '',
   ariaHidden = false,
   className = '',
 }) => {
-  const { script, service, timezone, datetimeLocale } =
-    useContext(ServiceContext);
+  const { script, service, timezone, datetimeLocale } = use(ServiceContext);
 
   const formattedTimestamp = formatUnixTimestamp({
     timestamp: releaseDateTimeStamp,
@@ -73,8 +72,8 @@ const OnDemandHeadingContainer = ({
     <Headline
       script={script}
       service={service}
-      id={idAttr}
-      {...(className && { className })}
+      {...(idAttr && { id: idAttr })}
+      {...(className ? { className } : undefined)}
       {...(idAttr === 'content' && { tabIndex: '-1' })}
       {...(ariaHidden && { as: 'strong', 'aria-hidden': 'true' })}
     >

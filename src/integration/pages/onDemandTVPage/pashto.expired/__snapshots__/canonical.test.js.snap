@@ -1,17 +1,10 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Canonical Pashto On Demand TV Page A11y I can see the skip to content link 1`] = `"مطلب ته ورشئ"`;
 
-exports[`Canonical Pashto On Demand TV Page Analytics ATI tracking pixel excluding src 1`] = `
-<img
-  alt=""
-  height="1px"
-  style="position:absolute"
-  width="1px"
-/>
-`;
+exports[`Canonical Pashto On Demand TV Page Analytics ATI tracking pixel excluding src 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" >"`;
 
-exports[`Canonical Pashto On Demand TV Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/"`;
+exports[`Canonical Pashto On Demand TV Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
 
 exports[`Canonical Pashto On Demand TV Page Analytics ATI tracking pixel search params 1`] = `
 [
@@ -22,10 +15,10 @@ exports[`Canonical Pashto On Demand TV Page Analytics ATI tracking pixel search 
     "s2": "68",
   },
   {
-    "p": "pashto.bbc_pashto_tv.tv.w172xcldhhrhmcf.page",
+    "p": "pashto.bbc_pashto_tv.tv.w172xtq7x8660m1.page",
   },
   {
-    "x1": "[urn:bbc:pips:w172xcldhhrhmcf]",
+    "x1": "[urn:bbc:pips:w172xtq7x8660m1]",
   },
   {
     "x2": "[responsive]",
@@ -50,13 +43,13 @@ exports[`Canonical Pashto On Demand TV Page Analytics ATI tracking pixel search 
 
 exports[`Canonical Pashto On Demand TV Page Expired Episode I can see the 'Content is not available' placeholder 1`] = `"دغه فایل نور د لاسرسي وړ نه دی."`;
 
-exports[`Canonical Pashto On Demand TV Page Expired Episode I can see the brand title 1`] = `" د بي بي سي خبرونه "`;
+exports[`Canonical Pashto On Demand TV Page Expired Episode I can see the brand title 1`] = `" د بي بي سي خبرونه "`;
 
 exports[`Canonical Pashto On Demand TV Page Expired Episode I can see the episode summary 1`] = `"د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."`;
 
-exports[`Canonical Pashto On Demand TV Page Expired Episode I can see the episode title 1`] = `" د بي بي سي خبرونه "`;
+exports[`Canonical Pashto On Demand TV Page Expired Episode I can see the episode title 1`] = `"نړۍ دا وخت"`;
 
-exports[`Canonical Pashto On Demand TV Page Expired Episode a11y Assistive technology reads the brand and episode title as the headline 1`] = `" د بي بي سي خبرونه , ۲۸ می ۲۰۲۰"`;
+exports[`Canonical Pashto On Demand TV Page Expired Episode a11y Assistive technology reads the brand and episode title as the headline 1`] = `" د بي بي سي خبرونه , ۸ جون ۲۰۲۱"`;
 
 exports[`Canonical Pashto On Demand TV Page Footer Anchors should match text and url 1`] = `
 {
@@ -109,7 +102,7 @@ exports[`Canonical Pashto On Demand TV Page Footer Anchors should match text and
 
 exports[`Canonical Pashto On Demand TV Page Footer Anchors should match text and url 8`] = `
 {
-  "text": "Other Languages",
+  "text": "نورې ژبې",
   "url": "https://www.bbc.com/ws/languages",
 }
 `;
@@ -117,13 +110,13 @@ exports[`Canonical Pashto On Demand TV Page Footer Anchors should match text and
 exports[`Canonical Pashto On Demand TV Page Footer Anchors should match text and url 9`] = `
 {
   "text": "د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره.",
-  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
 }
 `;
 
 exports[`Canonical Pashto On Demand TV Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pashto"`;
 
-exports[`Canonical Pashto On Demand TV Page Footer Paragraphs should match text 1`] = `"© 2024 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
+exports[`Canonical Pashto On Demand TV Page Footer Paragraphs should match text 1`] = `"© 2025 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
 
 exports[`Canonical Pashto On Demand TV Page Header I can see the branding 1`] = `"BBC News, پښتو"`;
 
@@ -171,72 +164,65 @@ exports[`Canonical Pashto On Demand TV Page Header Navigation link should match 
 
 exports[`Canonical Pashto On Demand TV Page Header Navigation link should match text and url 7`] = `
 {
-  "text": "ويډيوګانې",
-  "url": "/pashto/topics/c2m45zyk0mmt",
+  "text": "اقتصاد او سوداګري",
+  "url": "/pashto/topics/cy087kqvl1yt",
 }
 `;
 
 exports[`Canonical Pashto On Demand TV Page Header Navigation link should match text and url 8`] = `
 {
-  "text": "ځانګړې پاڼې",
-  "url": "/pashto/topics/c6pxyz4e0ryt",
+  "text": "ساینس او ټکنالوژي",
+  "url": "/pashto/topics/ckgrvled11kt",
 }
 `;
 
 exports[`Canonical Pashto On Demand TV Page Header Navigation link should match text and url 9`] = `
 {
-  "text": "کالم",
-  "url": "/pashto/topics/cq57nwne9lzt",
+  "text": "هنر او ادب",
+  "url": "/pashto/topics/c8xqkd91knnt",
 }
 `;
 
 exports[`Canonical Pashto On Demand TV Page Header Navigation link should match text and url 10`] = `
-{
-  "text": "پر سټلایت خپرونې",
-  "url": "/pashto/articles/c4n55eygdn0o",
-}
-`;
-
-exports[`Canonical Pashto On Demand TV Page Header Navigation link should match text and url 11`] = `
 {
   "text": "راډیویي خپرونې",
   "url": "/pashto/topics/c9xz1ekw79nt",
 }
 `;
 
-exports[`Canonical Pashto On Demand TV Page I can see the brand title 1`] = `" د بي بي سي خبرونه "`;
+exports[`Canonical Pashto On Demand TV Page I can see the brand title 1`] = `" د بي بي سي خبرونه "`;
 
 exports[`Canonical Pashto On Demand TV Page I can see the episode summary 1`] = `"د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."`;
 
-exports[`Canonical Pashto On Demand TV Page I can see the episode title 1`] = `" د بي بي سي خبرونه "`;
+exports[`Canonical Pashto On Demand TV Page I can see the episode title 1`] = `"نړۍ دا وخت"`;
 
-exports[`Canonical Pashto On Demand TV Page Main heading should match text 1`] = `" د بي بي سي خبرونه , ۲۸ می ۲۰۲۰"`;
+exports[`Canonical Pashto On Demand TV Page Main heading should match text 1`] = `" د بي بي سي خبرونه , ۸ جون ۲۰۲۱"`;
 
 exports[`Canonical Pashto On Demand TV Page Recent Episodes List items should match text and url 1`] = `
 {
-  "text": "۲۸:۰۰ویډیو,  د بي بي سي خبرونه ,  د بي بي سي خبرونه , موده ۲۸،۰۰ ۱۹ نومبر ۲۰۲۴",
-  "url": "/pashto/bbc_pashto_tv/tv/w172zmspxlzzsjn",
+  "text": "۲۸:۰۰ویډیو,  د بي بي سي خبرونه ,  د بي بي سي خبرونه , موده ۲۸،۰۰ ۳۰ می ۲۰۲۵",
+  "url": "/pashto/bbc_pashto_tv/tv/w173016q5gc46gj",
 }
 `;
 
 exports[`Canonical Pashto On Demand TV Page Recent Episodes List items should match text and url 2`] = `
 {
-  "text": "۲۸:۰۰ویډیو,  د بي بي سي خبرونه ,  د بي بي سي خبرونه , موده ۲۸،۰۰ ۱۸ نومبر ۲۰۲۴",
-  "url": "/pashto/bbc_pashto_tv/tv/w172zmspxlzwwmk",
+  "text": "۲۸:۰۰ویډیو,  د بي بي سي خبرونه ,  د بي بي سي خبرونه , موده ۲۸،۰۰ ۲۹ می ۲۰۲۵",
+  "url": "/pashto/bbc_pashto_tv/tv/w173016q5gc19kf",
 }
 `;
 
 exports[`Canonical Pashto On Demand TV Page Recent Episodes List items should match text and url 3`] = `
 {
-  "text": "۲۸:۰۰ویډیو,  د بي بي سي خبرونه ,  د بي بي سي خبرونه , موده ۲۸،۰۰ ۱۵ نومبر ۲۰۲۴",
-  "url": "/pashto/bbc_pashto_tv/tv/w172zmspkbphbn3",
+  "text": "۲۸:۰۰ویډیو,  د بي بي سي خبرونه ,  د بي بي سي خبرونه , موده ۲۸،۰۰ ۲۸ می ۲۰۲۵",
+  "url": "/pashto/bbc_pashto_tv/tv/w173016q5gbydnb",
 }
 `;
 
 exports[`Canonical Pashto On Demand TV Page Recent Episodes List items should match text and url 4`] = `
 {
-  "text": "۲۸:۰۰ویډیو,  د بي بي سي خبرونه ,  د بي بي سي خبرونه , موده ۲۸،۰۰ ۱۴ نومبر ۲۰۲۴",
-  "url": "/pashto/bbc_pashto_tv/tv/w172zmspkbpdfr0",
+  "text": "۲۸:۰۰ویډیو,  د بي بي سي خبرونه ,  د بي بي سي خبرونه , موده ۲۸،۰۰ ۲۷ می ۲۰۲۵",
+  "url": "/pashto/bbc_pashto_tv/tv/w173016q5gbvhr7",
 }
 `;
 
@@ -310,13 +296,13 @@ exports[`Canonical Pashto On Demand TV Page SEO Apple Touch Icon should match at
 }
 `;
 
-exports[`Canonical Pashto On Demand TV Page SEO Canonical link 1`] = `"http://localhost:7080/pashto/bbc_pashto_tv/tv/w172xcldhhrhmcf"`;
+exports[`Canonical Pashto On Demand TV Page SEO Canonical link 1`] = `"http://localhost:7080/pashto/bbc_pashto_tv/tv/w172xtq7x8660m1"`;
 
 exports[`Canonical Pashto On Demand TV Page SEO Dir attribute 1`] = `"rtl"`;
 
 exports[`Canonical Pashto On Demand TV Page SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`Canonical Pashto On Demand TV Page SEO Heading level 1 1`] = `" د بي بي سي خبرونه , ۲۸ می ۲۰۲۰"`;
+exports[`Canonical Pashto On Demand TV Page SEO Heading level 1 1`] = `" د بي بي سي خبرونه , ۸ جون ۲۰۲۱"`;
 
 exports[`Canonical Pashto On Demand TV Page SEO Lang attribute 1`] = `"ps"`;
 
@@ -338,9 +324,9 @@ exports[`Canonical Pashto On Demand TV Page SEO Linked data should match text 1`
         "name": "Pashto",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7080/pashto/bbc_pashto_tv/tv/w172xcldhhrhmcf",
+        "@id": "http://localhost:7080/pashto/bbc_pashto_tv/tv/w172xtq7x8660m1",
         "@type": "WebPage",
-        "name": " د بي بي سي خبرونه  -  د بي بي سي خبرونه  - BBC News پښتو",
+        "name": " د بي بي سي خبرونه  - نړۍ دا وخت - BBC News پښتو",
       },
       "publisher": {
         "@type": "NewsMediaOrganization",
@@ -354,7 +340,7 @@ exports[`Canonical Pashto On Demand TV Page SEO Linked data should match text 1`
         "publishingPrinciples": "https://www.bbc.com/pashto/institutional-49283007",
       },
       "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png",
-      "url": "http://localhost:7080/pashto/bbc_pashto_tv/tv/w172xcldhhrhmcf",
+      "url": "http://localhost:7080/pashto/bbc_pashto_tv/tv/w172xtq7x8660m1",
     },
   ],
 }
@@ -370,13 +356,13 @@ exports[`Canonical Pashto On Demand TV Page SEO OG locale 1`] = `"ps"`;
 
 exports[`Canonical Pashto On Demand TV Page SEO OG site name 1`] = `"BBC News پښتو"`;
 
-exports[`Canonical Pashto On Demand TV Page SEO OG title 1`] = `" د بي بي سي خبرونه  -  د بي بي سي خبرونه  - BBC News پښتو - BBC News پښتو"`;
+exports[`Canonical Pashto On Demand TV Page SEO OG title 1`] = `" د بي بي سي خبرونه  - نړۍ دا وخت - BBC News پښتو - BBC News پښتو"`;
 
 exports[`Canonical Pashto On Demand TV Page SEO OG type 1`] = `"website"`;
 
-exports[`Canonical Pashto On Demand TV Page SEO OG url 1`] = `"http://localhost:7080/pashto/bbc_pashto_tv/tv/w172xcldhhrhmcf"`;
+exports[`Canonical Pashto On Demand TV Page SEO OG url 1`] = `"http://localhost:7080/pashto/bbc_pashto_tv/tv/w172xtq7x8660m1"`;
 
-exports[`Canonical Pashto On Demand TV Page SEO Page title 1`] = `" د بي بي سي خبرونه  -  د بي بي سي خبرونه  - BBC News پښتو - BBC News پښتو"`;
+exports[`Canonical Pashto On Demand TV Page SEO Page title 1`] = `" د بي بي سي خبرونه  - نړۍ دا وخت - BBC News پښتو - BBC News پښتو"`;
 
 exports[`Canonical Pashto On Demand TV Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
@@ -392,6 +378,6 @@ exports[`Canonical Pashto On Demand TV Page SEO Twitter image src 1`] = `"https:
 
 exports[`Canonical Pashto On Demand TV Page SEO Twitter site 1`] = `"@bbcpashto"`;
 
-exports[`Canonical Pashto On Demand TV Page SEO Twitter title 1`] = `" د بي بي سي خبرونه  -  د بي بي سي خبرونه  - BBC News پښتو - BBC News پښتو"`;
+exports[`Canonical Pashto On Demand TV Page SEO Twitter title 1`] = `" د بي بي سي خبرونه  - نړۍ دا وخت - BBC News پښتو - BBC News پښتو"`;
 
-exports[`Canonical Pashto On Demand TV Page a11y Assistive technology reads the brand and episode title as the headline 1`] = `" د بي بي سي خبرونه , ۲۸ می ۲۰۲۰"`;
+exports[`Canonical Pashto On Demand TV Page a11y Assistive technology reads the brand and episode title as the headline 1`] = `" د بي بي سي خبرونه , ۸ جون ۲۰۲۱"`;

@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { MouseEvent, useContext } from 'react';
-import { AmpCookieSettingsButton } from '#containers/ConsentBanner/Banner/cookie.amp';
+import { MouseEvent, use } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import Link from './Link';
@@ -11,54 +10,52 @@ import styles from './index.styles';
 const openPrivacyManagerModal = (e: MouseEvent<HTMLAnchorElement>) => {
   e.preventDefault();
   // @ts-expect-error dotcom is required for ads
-  if (window.dotcom && window.dotcom.openPrivacyManagerModal) {
+  if (window.dotcom?.openPrivacyManagerModal) {
     // @ts-expect-error dotcom is required for ads
     window.dotcom.openPrivacyManagerModal();
   }
 };
 
 export default () => {
-  const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
-  const { footer } = useContext(ServiceContext);
+  const { showAdsBasedOnLocation } = use(RequestContext);
+  const { footer } = use(ServiceContext);
 
   const {
     externalLink,
     links,
+    extraLinks,
     copyrightText,
     trustProjectLink,
     collectiveNewsroomText,
   } = footer;
 
-  const elements = links?.map(({ id, text, href, lang }) => {
-    if (id === 'COOKIE_SETTINGS') {
-      if (isAmp) {
-        return (
-          // @ts-expect-error we do not have a className
-          <AmpCookieSettingsButton
-            lang={lang}
-            css={styles.ampCookieSettingButton}
-          >
-            {text}
-          </AmpCookieSettingsButton>
-        );
-      }
+  const extraLinkElements =
+    Array.isArray(extraLinks) && extraLinks.length > 0
+      ? extraLinks.map(({ id, text, href, lang }) => (
+          <Link key={id || href} text={text} href={href} lang={lang} />
+        ))
+      : [];
 
-      if (showAdsBasedOnLocation) {
-        return (
-          <Link
-            text={text}
-            href={href}
-            lang={lang}
-            onClick={openPrivacyManagerModal}
-            onlyShowIfJSenabled
-          />
-        );
+  const elements = links
+    ?.map(({ id, text, href, lang }) => {
+      if (id === 'COOKIE_SETTINGS') {
+        if (showAdsBasedOnLocation) {
+          return (
+            <Link
+              text={text}
+              href={href}
+              lang={lang}
+              onClick={openPrivacyManagerModal}
+              onlyShowIfJSenabled
+            />
+          );
+        }
+      } else {
+        return <Link text={text} href={href} lang={lang} />;
       }
-    } else {
-      return <Link text={text} href={href} lang={lang} />;
-    }
-    return null;
-  });
+      return null;
+    })
+    .filter(Boolean);
 
   return (
     <div css={styles.siteWideLinksWrapper}>
@@ -70,6 +67,9 @@ export default () => {
         }
       >
         <List elements={elements} trustProjectLink={trustProjectLink} />
+        {extraLinkElements.length > 0 && (
+          <List elements={extraLinkElements} extraLinks />
+        )}
         {collectiveNewsroomText && (
           <p css={styles.paragraphWithBorderBottom}>{collectiveNewsroomText}</p>
         )}

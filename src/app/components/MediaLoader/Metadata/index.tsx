@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { Helmet } from 'react-helmet';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
 import { RequestContext } from '#app/contexts/RequestContext';
@@ -48,7 +48,7 @@ type Props = {
 };
 
 const Metadata = ({ blocks, embedURL }: Props) => {
-  const { pageType } = useContext(RequestContext);
+  const { pageType } = use(RequestContext);
 
   if (!SUPPORTED_PAGE_TYPES.includes(pageType)) return null;
 

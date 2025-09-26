@@ -3,7 +3,7 @@ import { render, waitFor } from '../react-testing-library-with-providers';
 import AmpExperiment from './index';
 
 const experimentConfig = {
-  someExperiment: {
+  someAmpExperiment: {
     variants: {
       control: 33,
       variant_1: 33,
@@ -55,7 +55,7 @@ describe('Amp experiment container on Amp pages', () => {
         <script
           type="application/json"
         >
-          {"someExperiment":{"variants":{"control":33,"variant_1":33,"variant_2":33}}}
+          {"someAmpExperiment":{"variants":{"control":33,"variant_1":33,"variant_2":33}}}
         </script>
       </amp-experiment>
     </div>
@@ -94,7 +94,7 @@ describe('Amp experiment container on Amp pages', () => {
         <script
           type="application/json"
         >
-          {"someExperiment":{"variants":{"control":33,"variant_1":33,"variant_2":33}}}
+          {"someAmpExperiment":{"variants":{"control":33,"variant_1":33,"variant_2":33}}}
         </script>
       </amp-experiment>
       <amp-analytics

@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-indonesia',
     atiAnalyticsProducerId: '54',
+    atiAnalyticsProducerName: 'INDONESIAN',
+    useReverb: true,
     chartbeatDomain: 'indonesian.bbc.co.uk', // this is meant to be different to the service name
     brandName: 'BBC News Indonesia',
     product: 'BBC News',
@@ -40,9 +42,9 @@ export const service: DefaultServiceConfig = {
       'https://www.bbc.com/indonesia/institutional-49283175',
     isTrustProjectParticipant: true,
     script: latin,
-    manifestPath: '/manifest.json',
+    manifestPath: '/indonesia/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Berita',
+    homePageTitle: 'Berita',
     showAdPlaceholder: true,
     showRelatedTopics: true,
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
@@ -73,14 +75,13 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'Iklan',
       },
-      recommendationTitle: 'Artikel-artikel yang direkomendasikan',
-      splitRecommendationTitle: 'Artikel-artikel lainnya yang direkomendasikan',
       seeAll: 'Lihat semua',
       home: 'Berita',
       currentPage: 'Halaman saat ini',
       skipLinkText: 'Langsung ke konten',
       relatedContent: 'Berita terkait',
       relatedTopics: 'Topik terkait',
+      moreOnThis: '',
       navMenuText: 'Kategori',
       mediaAssetPage: {
         mediaPlayer: 'Pemutar Media',
@@ -254,6 +255,8 @@ export const service: DefaultServiceConfig = {
         recentEpisodes: 'Siaran sebelumnya',
         podcastExternalLinks: 'Podcast ini juga tersedia di',
         download: 'Unduh episode',
+        closeVideo: 'Keluar',
+        endOfContentClose: 'Akhir dari konten ini. Keluar',
       },
       socialEmbed: {
         caption: {
@@ -290,7 +293,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Terbaru',
     },
     mostRead: {
-      header: 'Paling banyak dibaca',
+      header: 'Artikel terpopuler',
       lastUpdated: 'Terakhir diperbarui:',
       numberOfItems: 5,
       hasMostRead: true,
@@ -301,7 +304,7 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'Durasi %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'Paling banyak dibaca',
       skipLink: {
         text: 'Lewatkan %title% dan terus membaca',
         endTextVisuallyHidden: 'Akhir dari %title%',
@@ -339,7 +342,7 @@ export const service: DefaultServiceConfig = {
         },
         {
           href: 'https://www.bbc.com/ws/languages',
-          text: 'Other Languages',
+          text: 'BC News dalam bahasa-bahasa lain',
         },
         {
           id: 'COOKIE_SETTINGS',

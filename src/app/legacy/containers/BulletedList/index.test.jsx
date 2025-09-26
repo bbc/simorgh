@@ -90,7 +90,7 @@ describe('BulletedListContainer', () => {
         />,
       );
 
-      expect(viewTrackerSpy).toHaveBeenCalledTimes(2);
+      expect(viewTrackerSpy).toHaveBeenCalledTimes(4);
       expect(viewTrackerSpy).toHaveBeenCalledWith({
         componentName: 'bullet1',
         format: 'CHD=bullet',

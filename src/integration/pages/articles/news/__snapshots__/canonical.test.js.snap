@@ -1,67 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Canonical Articles A11y I can see the skip to content link 1`] = `"Skip to content"`;
-
-exports[`Canonical Articles Analytics ATI tracking pixel excluding src 1`] = `
-<img
-  alt=""
-  height="1px"
-  style="position:absolute"
-  width="1px"
-/>
-`;
-
-exports[`Canonical Articles Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/"`;
-
-exports[`Canonical Articles Analytics ATI tracking pixel search params 1`] = `
-[
-  {
-    "s": "598286",
-  },
-  {
-    "s2": "64",
-  },
-  {
-    "p": "news.articles.c0g992jmmkko.page",
-  },
-  {
-    "x1": "[urn:bbc:optimo:asset:c0g992jmmkko]",
-  },
-  {
-    "x2": "[responsive]",
-  },
-  {
-    "x3": "[news]",
-  },
-  {
-    "x4": "[en-gb]",
-  },
-  {
-    "x7": "[article]",
-  },
-  {
-    "x8": "[simorgh-nojs]",
-  },
-  {
-    "x9": "[Royal%20wedding%20flowers%20given%20to%20Hackney%20hospice]",
-  },
-  {
-    "x11": "[2019-05-28T13:38:19.412Z]",
-  },
-  {
-    "x12": "[2019-05-28T13:38:19.412Z]",
-  },
-  {
-    "x13": "[Wedding+of+Prince+Harry+and+Meghan+Markle~Duchess+of+Sussex~Hackney~Windsor]",
-  },
-  {
-    "x14": "[2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc~dba7dfeb-87d3-4801-80ba-fa8be6c9555e~f94940f0-476c-4ec7-b48d-e58120bb1956]",
-  },
-  {
-    "x17": "[Wedding+of+Prince+Harry+and+Meghan+Markle~Duchess+of+Sussex~Hackney~Windsor]",
-  },
-]
-`;
 
 exports[`Canonical Articles Footer Anchors should match text and url 1`] = `
 {
@@ -128,7 +67,7 @@ exports[`Canonical Articles Footer Anchors should match text and url 9`] = `
 
 exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/news"`;
 
-exports[`Canonical Articles Footer Paragraphs should match text 1`] = `"© 2024 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
+exports[`Canonical Articles Footer Paragraphs should match text 1`] = `"© 2025 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
 
 exports[`Canonical Articles Header I can see the branding 1`] = `"BBC News"`;
 
@@ -216,6 +155,7 @@ exports[`Canonical Articles Image should match snapshot 1`] = `
   alt="Pauline Clayton"
   class="bbc-139onq"
   height="360"
+  loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"
   src="https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg.webp"
   srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg.webp 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg.webp 624w, https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg.webp 640w"

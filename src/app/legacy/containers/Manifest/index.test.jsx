@@ -5,8 +5,8 @@ import { ServiceContext } from '../../../contexts/ServiceContext';
 import ManifestContainer from '.';
 
 const contextStub = {
-  manifestPath: '/manifest.json',
-  service: 'news',
+  manifestPath: '/pidgin/manifest.json',
+  service: 'pidgin',
 };
 
 const mountManifest = context =>
@@ -23,7 +23,7 @@ describe('ManifestContainer', () => {
     const { href, rel } = linkTags[0];
 
     expect(linkTags).toHaveLength(1);
-    expect(href).toEqual('/news/manifest.json');
+    expect(href).toEqual('/pidgin/manifest.json');
     expect(rel).toEqual('manifest');
 
     wrapper.unmount();

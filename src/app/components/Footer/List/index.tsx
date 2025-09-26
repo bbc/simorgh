@@ -8,9 +8,11 @@ import styles, { gridTemplateRows } from './index.styles';
 export default ({
   elements = [],
   trustProjectLink,
+  extraLinks,
 }: {
   elements?: (ReactElement | null)[];
   trustProjectLink?: FooterLink;
+  extraLinks?: boolean;
 }) => {
   return (
     <ul
@@ -27,6 +29,7 @@ export default ({
           itemCount: elements.length,
           trustProjectLink,
         }),
+        extraLinks && styles.listExtraLinks,
       ]}
     >
       {trustProjectLink && (
@@ -36,9 +39,7 @@ export default ({
       )}
       {elements.map((elem, index) => (
         // eslint-disable-next-line react/no-array-index-key
-        <li key={index} role="listitem">
-          {elem}
-        </li>
+        <li key={index}>{elem}</li>
       ))}
     </ul>
   );

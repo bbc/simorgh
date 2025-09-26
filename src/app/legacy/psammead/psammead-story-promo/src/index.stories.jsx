@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+import { storiesOf } from '@storybook/react-webpack5';
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
 import Image from '#psammead/psammead-image/src';
 import MediaIndicator from '#psammead/psammead-media-indicator/src';

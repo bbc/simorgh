@@ -1,4 +1,6 @@
 import React from 'react';
+import mundoLiveFixture from '#data/mundo/live/c7dkx155e626t.json';
+import { MediaCollection } from '#app/components/MediaLoader/types';
 import Header from '.';
 import metadata from './metadata.json';
 
@@ -9,6 +11,7 @@ interface ComponentProps {
   imageUrl?: string;
   imageUrlTemplate?: string;
   imageWidth?: number;
+  mediaCollections?: MediaCollection[] | null;
 }
 
 const Component = ({
@@ -18,6 +21,7 @@ const Component = ({
   imageUrl,
   imageUrlTemplate,
   imageWidth,
+  mediaCollections,
 }: ComponentProps) => {
   return (
     <Header
@@ -27,6 +31,7 @@ const Component = ({
       imageUrl={imageUrl}
       imageUrlTemplate={imageUrlTemplate}
       imageWidth={imageWidth}
+      mediaCollections={mediaCollections}
     />
   );
 };
@@ -131,5 +136,19 @@ export const TitleAndDescriptionWithLiveLabelAndImageExtraLongText = () => (
     imageUrl="https://ichef.bbci.co.uk/ace/standard/480/cpsdevpb/1d5b/test/5f969ec0-c4d8-11ed-8319-9b394d8ed0dd.jpg"
     imageUrlTemplate="https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1d5b/test/5f969ec0-c4d8-11ed-8319-9b394d8ed0dd.jpg"
     imageWidth={660}
+  />
+);
+
+export const WithLiveMediaStream = () => (
+  <Component
+    title="An kai wa jirgin kwashe yan Turkiyya hari a Sudan"
+    showLiveLabel
+    description="Wannan shaft ne da ke kawo muku laqbarai daga sassan duniya daban-daban"
+    imageUrl="https://ichef.bbci.co.uk/ace/standard/480/cpsdevpb/1d5b/test/5f969ec0-c4d8-11ed-8319-9b394d8ed0dd.jpg"
+    imageUrlTemplate="https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1d5b/test/5f969ec0-c4d8-11ed-8319-9b394d8ed0dd.jpg"
+    imageWidth={660}
+    mediaCollections={
+      mundoLiveFixture.data.mediaCollections as MediaCollection[]
+    }
   />
 );

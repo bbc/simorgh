@@ -1,66 +1,38 @@
 /** @jsx jsx */
 
 import { jsx, useTheme } from '@emotion/react';
-import React, { useContext } from 'react';
+import { use } from 'react';
 import useViewTracker from '#hooks/useViewTracker';
-import { EventTrackingBlock } from '#app/models/types/eventTracking';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import PromoItem from '#components/OptimoPromos/PromoItem/index.styles';
 import PromoList from '#components/OptimoPromos/PromoList';
+import { OptimizelyContext } from '@optimizely/react-sdk';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import styles from './index.styles';
 import TopStoriesItem from './TopStoriesItem';
 import generatePromoId from '../../../../lib/utilities/generatePromoId';
 import { TopStoryItem } from './types';
 
-type TopStoriesListProps = {
-  item: TopStoryItem;
-  index: number;
-  eventTrackingData: EventTrackingBlock;
-  viewRef: React.Ref<HTMLDivElement>;
-};
+const TopStoriesSection = ({
+  content = [],
+  sendOptimizelyEvents,
+}: {
+  content: TopStoryItem[];
+  sendOptimizelyEvents?: boolean;
+}) => {
+  const { translations, script, service } = use(ServiceContext);
+  const { optimizely } = use(OptimizelyContext);
 
-const renderTopStoriesList = ({
-  item,
-  index,
-  eventTrackingData,
-  viewRef,
-}: TopStoriesListProps) => {
-  const contentType = item?.contentType ?? '';
-  const assetUri = item?.locators?.assetUri ?? '';
-  const canonicalUrl = item?.locators?.canonicalUrl ?? '';
-  const uri = item?.uri ?? '';
-
-  const ariaLabelledBy = generatePromoId({
-    sectionType: 'top-stories',
-    assetUri,
-    canonicalUrl,
-    uri,
-    contentType,
-    index,
-  });
-
-  return (
-    <PromoItem css={styles.promoItem} key={ariaLabelledBy}>
-      <TopStoriesItem
-        item={item}
-        ariaLabelledBy={ariaLabelledBy}
-        ref={viewRef}
-        eventTrackingData={eventTrackingData}
-      />
-    </PromoItem>
-  );
-};
-
-const TopStoriesSection = ({ content = [] }: { content: TopStoryItem[] }) => {
-  const { translations, script, service } = useContext(ServiceContext);
   const eventTrackingData = {
     block: {
       componentName: 'top-stories',
+      ...(sendOptimizelyEvents && {
+        optimizely,
+      }),
     },
   };
   const eventTrackingDataSend = eventTrackingData?.block;
-  const viewRef = useViewTracker(eventTrackingDataSend);
+  const viewTracker = useViewTracker(eventTrackingDataSend);
 
   const {
     palette: { GREY_2 },
@@ -75,7 +47,7 @@ const TopStoriesSection = ({ content = [] }: { content: TopStoryItem[] }) => {
   const contentType = content?.[0]?.contentType ?? '';
   const assetUri = content?.[0]?.locators?.assetUri ?? '';
   const uri = content?.[0]?.uri ?? '';
-  const ariaLabelledBy = generatePromoId({
+  let ariaLabelledBy = generatePromoId({
     sectionType: 'top-stories',
     assetUri,
     uri,
@@ -104,14 +76,32 @@ const TopStoriesSection = ({ content = [] }: { content: TopStoryItem[] }) => {
         <TopStoriesItem
           item={content[0]}
           ariaLabelledBy={ariaLabelledBy}
-          ref={viewRef}
+          ref={viewTracker}
           eventTrackingData={eventTrackingData}
         />
       ) : (
         <PromoList css={styles.promoList}>
-          {content.map((item, index) =>
-            renderTopStoriesList({ item, index, eventTrackingData, viewRef }),
-          )}
+          {content.map((item, index) => {
+            ariaLabelledBy = generatePromoId({
+              sectionType: 'top-stories',
+              assetUri: item?.locators?.assetUri ?? '',
+              canonicalUrl: item?.locators?.canonicalUrl ?? '',
+              uri: item?.uri ?? '',
+              contentType: item?.contentType ?? '',
+              index,
+            });
+
+            return (
+              <PromoItem css={styles.promoItem} key={ariaLabelledBy}>
+                <TopStoriesItem
+                  item={item}
+                  ariaLabelledBy={ariaLabelledBy}
+                  ref={viewTracker}
+                  eventTrackingData={eventTrackingData}
+                />
+              </PromoItem>
+            );
+          })}
         </PromoList>
       )}
     </section>

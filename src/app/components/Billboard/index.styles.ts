@@ -5,13 +5,11 @@ export default {
   link: ({ palette }: Theme) =>
     css({
       textDecoration: 'none',
+      display: 'block',
       color: palette.WHITE,
       cursor: 'pointer',
       '&:hover, &:focus': {
         textDecoration: 'underline',
-      },
-      '&:visited': {
-        color: `${palette.GREY_5}`,
       },
       '::before': {
         position: 'absolute',
@@ -31,20 +29,36 @@ export default {
         border: `solid ${pixelsToRem(3)}rem transparent`,
       },
     }),
-  backgroundContainer: ({ palette }: Theme) =>
+  backgroundContainer: () =>
     css({
       zIndex: 2,
       position: 'absolute',
       top: '0',
-      backgroundColor: palette.BLACK,
       bottom: '0',
       width: '100%',
       overflow: 'hidden',
+    }),
+  backgroundRedGradient: ({ mq }: Theme) =>
+    css({
+      background:
+        'linear-gradient(to left bottom, rgba(80, 0, 0, 1) 10%, rgba(40, 0, 0, 1) 50%)',
+
+      [mq.GROUP_3_MIN_WIDTH]: {
+        background:
+          'linear-gradient(to left, rgba(80, 0, 0, 1) 10%, rgba(40, 0, 0, 1) 50%)',
+      },
+
+      [mq.GROUP_4_MIN_WIDTH]: {
+        background:
+          'linear-gradient(to bottom, rgba(130, 0, 0, 1) 10%, rgba(40, 0, 0, 1) 70%)',
+      },
     }),
   contentContainer: ({ mq, gridWidths, spacings }: Theme) =>
     css({
       zIndex: 3,
       paddingBottom: `${spacings.QUADRUPLE}`,
+      overflow: 'hidden',
+
       [mq.GROUP_4_MIN_WIDTH]: {
         maxWidth: `${pixelsToRem(gridWidths[1280])}rem`,
         margin: '0 auto',
@@ -64,6 +78,13 @@ export default {
         paddingBottom: `${spacings.FULL}rem`,
       },
     }),
+
+  billboardMoreOnThisHeading: ({ palette, spacings }: Theme) =>
+    css({
+      color: palette.WHITE,
+      marginBottom: `${spacings.DOUBLE}rem`,
+    }),
+
   liveLabelPulse: ({ mq, palette, spacings }: Theme) =>
     css({
       width: `${spacings.HALF + spacings.DOUBLE}rem`,
@@ -114,5 +135,17 @@ export default {
     css({
       color: palette.GREY_2,
       margin: 0,
+    }),
+  curationGridSection: ({ mq, spacings }: Theme) =>
+    css({
+      width: '100%',
+      padding: `${spacings.FULL}rem ${spacings.DOUBLE}rem 0 ${spacings.DOUBLE}rem`,
+      boxSizing: 'border-box',
+      display: 'flex',
+      flexDirection: 'column',
+      [mq.GROUP_1_MAX_WIDTH]: {
+        paddingLeft: `${spacings.FULL}rem`,
+        paddingRight: `${spacings.FULL}rem`,
+      },
     }),
 };

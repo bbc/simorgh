@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import styled from '@emotion/styled';
 import { keyframes, css } from '@emotion/react';
 import { RequestContext } from '../../../../contexts/RequestContext';
-import { FRONT_PAGE, HOME_PAGE } from '../../../../routes/utils/pageTypes';
+import { HOME_PAGE } from '../../../../routes/utils/pageTypes';
 
 export { default as AmpImg } from './index.amp';
 
@@ -45,10 +45,10 @@ export const Img = props => {
     ...otherProps
   } = props;
 
-  const { pageType } = useContext(RequestContext);
+  const { pageType } = use(RequestContext);
   return (
     <>
-      {[FRONT_PAGE, HOME_PAGE].includes(pageType) && (
+      {pageType === HOME_PAGE && (
         <StyledPicture onLoad={onLoad}>
           {srcset && (
             <source srcSet={srcset} type={primaryMimeType} sizes={sizes} />
@@ -64,7 +64,7 @@ export const Img = props => {
         </StyledPicture>
       )}
 
-      {![FRONT_PAGE, HOME_PAGE].includes(pageType) && (
+      {pageType !== HOME_PAGE && (
         <StyledImg
           sizes={sizes}
           srcSet={fallbackSrcset}

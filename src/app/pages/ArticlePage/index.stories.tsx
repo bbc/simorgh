@@ -1,29 +1,32 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React from 'react';
 import ThemeProvider from '#app/components/ThemeProvider';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
+import latin from '#app/components/ThemeProvider/fontScripts/latin';
+import React, { useMemo } from 'react';
+import { RequestContextProvider } from '#app/contexts/RequestContext';
 import {
   ServiceContext,
   ServiceContextProvider,
 } from '#app/contexts/ServiceContext';
-import { RequestContextProvider } from '#app/contexts/RequestContext';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import articleData from '#data/news/articles/c0g992jmmkko.json';
-import articleDataBurmese from '#data/burmese/articles/cn0exdy1jzvo.json';
-import articleDataWithRelatedContent from '#data/afrique/articles/c7yn6nznljdo.json';
-import articleDataWithSingleRelatedContent from '#data/afrique/articles/cz216x22106o.json';
-import articleDataWithPodcastPromo from '#data/russian/articles/c61q94n3rm3o.json';
-import articleDataWithTranscript from '#data/mundo/articles/ce42wzqr2mko.json';
-import articleNewsWithPodcastPromo from '#data/news/articles/crkxdvxzwxk2.json';
-import articleDataWithElectionTag from '#data/mundo/articles/c206j730722o.json';
-import articleDataWithJumpTo from '#data/news/articles/c6v11qzyv8po.json';
-import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
-import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import { service as newsConfig } from '#app/lib/config/services/news';
-import latin from '#app/components/ThemeProvider/fontScripts/latin';
 import { Services } from '#app/models/types/global';
 import { StoryArgs, StoryProps } from '#app/models/types/storybook';
-import { Stages } from '#app/hooks/useExperimentHook';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
+import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
+import articleDataWithRelatedContent from '#data/afrique/articles/c7yn6nznljdo.json';
+import articleDataWithSingleRelatedContent from '#data/afrique/articles/cz216x22106o.json';
+import articleDataArabic from '#data/arabic/articles/cn0m90verwvo.json';
+import articleDataBurmese from '#data/burmese/articles/cn0exdy1jzvo.json';
+import articleDataGahuza from '#data/gahuza/articles/c5y51yxeg53o.json';
+import articleDataWithPortraitVideo from '#data/mundo/articles/c1xv2q1gewvo.json';
+import articleDataWithElectionTag from '#data/mundo/articles/c206j730722o.json';
+import articleDataWithTranscript from '#data/mundo/articles/cle16n19nd9o.json';
+import articleData from '#data/news/articles/c0g992jmmkko.json';
+import articleNewsWithPodcastPromo from '#data/news/articles/crkxdvxzwxk2.json';
+import articleDataWithPortraitVideoRTL from '#data/persian/articles/c149pnldynxo.json';
+import articleDataWithPodcastPromo from '#data/russian/articles/c61q94n3rm3o.json';
+import articleDataMultipleContributors from '#data/news/articles/cgrj2g29kzxo.json';
 import ArticlePageComponent from './ArticlePage';
 
 const PageWithOptimizely = withOptimizelyProvider(ArticlePageComponent);
@@ -64,7 +67,7 @@ type Props = {
   service?: Services;
   podcastEnabled?: boolean;
   electionBanner?: boolean;
-  experimentStage?: Stages;
+  articleLiteSiteLinkEnabled?: boolean;
 };
 
 const ComponentWithContext = ({
@@ -72,6 +75,7 @@ const ComponentWithContext = ({
   service = 'news',
   podcastEnabled = false,
   electionBanner = false,
+  articleLiteSiteLinkEnabled = false,
 }: Props) => {
   return (
     <ToggleContextProvider
@@ -81,6 +85,7 @@ const ComponentWithContext = ({
         frostedPromo: { enabled: true, value: 1 },
         podcastPromo: { enabled: podcastEnabled },
         electionBanner: { enabled: electionBanner },
+        articleLiteSiteLink: { enabled: articleLiteSiteLinkEnabled },
       }}
     >
       {/* Service set to news to enable most read. Article data is in english */}
@@ -114,8 +119,13 @@ const ComponentWithServiceContext = ({
   service = 'news',
   podcastEnabled = false,
   electionBanner = false,
-  experimentStage,
+  articleLiteSiteLinkEnabled = false,
 }: Props) => {
+  const memoisedServiceContext = useMemo(
+    () => ({ ...serviceContextMock, service }),
+    [service],
+  );
+
   return (
     <ToggleContextProvider
       toggles={{
@@ -124,12 +134,15 @@ const ComponentWithServiceContext = ({
         frostedPromo: { enabled: true, value: 1 },
         podcastPromo: { enabled: podcastEnabled },
         electionBanner: { enabled: electionBanner },
+        articleLiteSiteLink: {
+          enabled: articleLiteSiteLinkEnabled,
+        },
       }}
     >
       {/* Service set to news to enable most read. Article data is in english */}
       <ServiceContext.Provider
         // @ts-expect-error - passing partial service context
-        value={{ ...serviceContextMock, service }}
+        value={memoisedServiceContext}
       >
         <ThemeProvider service={service}>
           <Page
@@ -138,7 +151,6 @@ const ComponentWithServiceContext = ({
               secondaryColumn: data.secondaryData,
               mostRead: data.secondaryData.mostRead,
             }}
-            experimentStage={experimentStage}
           />
         </ThemeProvider>
       </ServiceContext.Provider>
@@ -150,17 +162,12 @@ export default {
   Component: ComponentWithContext,
   title: 'Pages/Article Page',
   parameters: { layout: 'fullscreen' },
-  argTypes: {
-    experimentStage: {
-      options: [Stages.STAGE_2, Stages.STAGE_3],
-      control: { type: 'radio' },
-    },
-  },
 };
 
 export const ArticlePage = (_: StoryArgs, { service }: StoryProps) => (
   <ComponentWithContext data={articleData} service={service} />
 );
+
 export const Burmese = () => (
   <ComponentWithServiceContext data={articleDataBurmese} service="burmese" />
 );
@@ -193,6 +200,22 @@ export const ArticlePageWithPodcastPromo = () => (
   />
 );
 
+export const ArticlePageWithTopStoriesPidgin = () => (
+  <ComponentWithContext
+    data={articleDataWithPodcastPromo}
+    service="pidgin"
+    podcastEnabled
+  />
+);
+
+export const ArticlePageWithMostReadMundo = () => (
+  <ComponentWithContext
+    data={articleDataWithPodcastPromo}
+    service="mundo"
+    podcastEnabled
+  />
+);
+
 export const ArticlePageWithPodcastPromoRightToLeft = () => (
   <ComponentWithContext
     data={articleDataWithPodcastPromo}
@@ -209,10 +232,21 @@ export const ArticlePageWithPodcastNews = () => (
   />
 );
 
-export const ArticlePageWithTranscript = ({ experimentStage }: Props) => (
+export const ArticlePageWithTranscriptSustainabilityMessagePlaceholder = () => (
   <ComponentWithServiceContext
     data={articleDataWithTranscript}
-    experimentStage={experimentStage}
+    service="mundo"
+  />
+);
+
+export const ArticlePageWithPortraitVideo = () => (
+  <ComponentWithContext data={articleDataWithPortraitVideo} service="mundo" />
+);
+
+export const ArticlePageWithPortraitVideoRightToLeft = () => (
+  <ComponentWithContext
+    data={articleDataWithPortraitVideoRTL}
+    service="persian"
   />
 );
 
@@ -229,6 +263,46 @@ export const ArticlePageWithElectionBanner = {
   },
 };
 
-export const ArticlePageWithJumpTo = () => (
-  <ComponentWithContext data={articleDataWithJumpTo} service="news" />
-);
+export const ArticlePageWithLiteSiteLink = {
+  render: (_: StoryArgs, { service }: StoryProps) => (
+    <ComponentWithContext
+      data={articleData}
+      service={service}
+      articleLiteSiteLinkEnabled
+    />
+  ),
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+};
+
+export const ArticlePageWithMultipleContributors = {
+  render: () => (
+    <ComponentWithContext
+      data={articleDataMultipleContributors}
+      service="news"
+    />
+  ),
+};
+
+export const TestArticlePageWithLiteSiteLink = {
+  render: () => (
+    <ComponentWithContext
+      data={articleDataGahuza}
+      service="gahuza"
+      articleLiteSiteLinkEnabled
+    />
+  ),
+  tags: ['!dev'],
+};
+
+export const TestArticlePageWithLiteSiteLinkRTL = {
+  render: () => (
+    <ComponentWithContext
+      data={articleDataArabic}
+      service="arabic"
+      articleLiteSiteLinkEnabled
+    />
+  ),
+  tags: ['!dev'],
+};

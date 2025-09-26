@@ -1,4 +1,4 @@
-name: Simorgh CI - Unit Tests & Code Coverage
+name: Unit Tests
 on:
   pull_request:
     branches:
@@ -11,33 +11,21 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [22.x]
     env:
       CI: true
       LOG_LEVEL: 'error'
-      CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
-      GIT_COMMIT_SHA: ${{ github.sha }}
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
 
-      # Sets the GIT_BRANCH env variable on a push event which occurs when we merge a PR. ${GITHUB_REF##*/} is the shorthand syntax for getting the short branch name
-      - name: Set GIT_BRANCH Environment Variable For Push Event
-        if: ${{ github.event_name == 'push' }}
-        run: echo "GIT_BRANCH=$(echo ${GITHUB_REF##*/})" >> $GITHUB_ENV
-
-      # Sets the GIT_BRANCH env variable on a pull request event which occurs when we create/update a PR. ${{ github.head_ref }} is the syntax for getting the short branch name
-      - name: Set GIT_BRANCH Environment Variable For Pull Request Event
-        if: ${{ github.event_name == 'pull_request' }}
-        run: echo "GIT_BRANCH=${{ github.head_ref }}" >> $GITHUB_ENV
-
       - name: Cache Node Modules
         id: cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             node_modules
@@ -55,22 +43,9 @@ jobs:
         working-directory: ./ws-nextjs-app
         run: yarn build
 
-      - name: Setup Code Climate Test Coverage
-        if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == 'bbc/simorgh' }} # Only run if PR originates from the Simorgh repo
-        run: |
-          echo $GIT_BRANCH
-          echo $GIT_COMMIT_SHA
-          curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-          chmod +x ./cc-test-reporter
-          ./cc-test-reporter before-build
-
       - name: Unit Tests - Express App
-        run: yarn test:unit
+        run: yarn test:unit:ci
 
       - name: Unit Tests - Next.JS App
         working-directory: ./ws-nextjs-app
         run: yarn test
-
-      - name: Report Code Climate Test Coverage
-        if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == 'bbc/simorgh' }} # Only run if PR originates from the Simorgh repo
-        run: ./cc-test-reporter after-build -t lcov --debug --exit-code 0

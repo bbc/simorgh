@@ -1,5 +1,6 @@
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
-import clipMedia from './clipMedia';
+import livePostClipMedia from './livePostClipMedia';
+import portraitClipMedia from './portraitClipMedia';
 import aresMedia from './aresMedia';
 import tv from './tv';
 import liveRadio from './liveRadio';
@@ -11,26 +12,31 @@ import {
   MediaBlock,
   ConfigBuilderProps,
 } from '../types';
+import liveMedia from './liveMedia';
 
 const BLOCK_TYPES = [
   'aresMedia',
   'clipMedia',
+  'portraitClipMedia',
   'tv',
   'liveRadio',
   'audio',
   'legacyMedia',
+  'liveMedia',
 ] as const;
 
 const blockTypeMapping: Record<
   (typeof BLOCK_TYPES)[number],
-  (arg0: ConfigBuilderProps) => ConfigBuilderReturnProps
+  (_arg0: ConfigBuilderProps) => ConfigBuilderReturnProps
 > = {
   aresMedia,
-  clipMedia,
+  clipMedia: livePostClipMedia,
+  portraitClipMedia,
   tv,
   liveRadio,
   audio,
   legacyMedia,
+  liveMedia,
 };
 
 export default (blocks: MediaBlock[]) => {

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import {
@@ -170,8 +170,8 @@ const StyledPodcastIconWrapper = styled.div`
 `;
 
 const Promo = () => {
-  const { podcastPromo, script, service, dir } = useContext(ServiceContext);
-  const { pageType, isLite } = useContext(RequestContext);
+  const { podcastPromo, script, service, dir } = use(ServiceContext);
+  const { pageType, isLite } = use(RequestContext);
 
   const {
     podcastPromoTitle,
@@ -209,7 +209,11 @@ const Promo = () => {
   };
 
   return (
-    <ResponsivePodcastPromoWrapper ref={viewTrackerRef} dir={dir}>
+    <ResponsivePodcastPromoWrapper
+      {...viewTrackerRef}
+      dir={dir}
+      data-e2e="podcast-promo"
+    >
       <StyledPromoComponent
         script={script}
         service={service}
@@ -247,7 +251,7 @@ const Promo = () => {
               <strong>
                 <StyledCardLink
                   href={url}
-                  onClick={clickTrackerRef}
+                  {...clickTrackerRef}
                   script={script}
                   service={service}
                 >

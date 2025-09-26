@@ -5,11 +5,7 @@ const getOriginContext = (bbcOrigin: string | null) => {
 
   if (bbcOrigin) {
     origin = bbcOrigin;
-  } else if (
-    process &&
-    process.env &&
-    getEnvConfig().SIMORGH_APP_ENV === 'local'
-  ) {
+  } else if (process?.env && getEnvConfig().SIMORGH_APP_ENV === 'local') {
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     origin = getEnvConfig().SIMORGH_BASE_URL!;
   } else if (

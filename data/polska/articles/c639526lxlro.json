@@ -1,0 +1,2167 @@
+{
+  "data": {
+    "article": {
+      "metadata": {
+        "atiAnalytics": {
+          "categoryName": "Science~Donald+Tusk~Poland",
+          "contentId": "urn:bbc:optimo:asset:c639526lxlro",
+          "contentType": "article",
+          "language": "pl",
+          "ldpThingIds": "0f469e6a-d4a6-46f2-b727-2bd039cb6b53~b4fb4c0d-8256-4032-be1d-0b233ed316c9~c0deef5a-45d4-459d-80f0-6f1d5c23a28d",
+          "ldpThingLabels": "Science~Donald+Tusk~Poland",
+          "nationsProducer": null,
+          "pageIdentifier": "polska.articles.c639526lxlro.page",
+          "pageTitle": "Polski artykuł testowy",
+          "timePublished": "2025-03-26T10:40:12.938Z",
+          "timeUpdated": "2025-03-26T10:40:12.938Z"
+        },
+        "id": "urn:bbc:ares::article:c639526lxlro",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:c639526lxlro",
+          "canonicalUrl": "https://www.bbc.com/polska/articles/c639526lxlro"
+        },
+        "type": "article",
+        "createdBy": "Polska",
+        "language": "pl",
+        "firstPublished": 1742985612938,
+        "lastPublished": 1742985612938,
+        "options": {
+          "includeComments": false
+        },
+        "analyticsLabels": {
+          "ldp_tags": "Science~Donald+Tusk~Poland",
+          "page": "polska.articles.c639526lxlro.page",
+          "irisKeyword": null,
+          "audience_motivation": "Help me understand",
+          "ldp_ids": "0f469e6a-d4a6-46f2-b727-2bd039cb6b53~b4fb4c0d-8256-4032-be1d-0b233ed316c9~c0deef5a-45d4-459d-80f0-6f1d5c23a28d",
+          "contentId": "urn:bbc:optimo:asset:c639526lxlro",
+          "producer": "Polska"
+        },
+        "passport": {
+          "language": "pl",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Polska",
+          "taggings": [
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/c0deef5a-45d4-459d-80f0-6f1d5c23a28d#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+              "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+              "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/b4fb4c0d-8256-4032-be1d-0b233ed316c9#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+              "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+              "value": "2025-03-26T10:40:12.938Z"
+            }
+          ],
+          "predicates": {
+            "about": [
+              {
+                "value": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id",
+                "thingLabel": "Nauka",
+                "thingUri": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id",
+                "thingId": "0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
+                "thingType": [
+                  "core:Thing",
+                  "tagging:TagConcept",
+                  "core:Theme"
+                ],
+                "thingSameAs": [
+                  "http://dbpedia.org/resource/Science",
+                  "http://www.wikidata.org/entity/Q336"
+                ],
+                "thingEnglishLabel": "Science",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/b4fb4c0d-8256-4032-be1d-0b233ed316c9#id",
+                "thingLabel": "Donald Tusk",
+                "thingUri": "http://www.bbc.co.uk/things/b4fb4c0d-8256-4032-be1d-0b233ed316c9#id",
+                "thingId": "b4fb4c0d-8256-4032-be1d-0b233ed316c9",
+                "thingType": [
+                  "core:Thing",
+                  "tagging:TagConcept",
+                  "tagging:AmbiguousTerm",
+                  "core:Person",
+                  "tagging:Agent"
+                ],
+                "thingSameAs": [
+                  "http://dbpedia.org/resource/Donald_Tusk"
+                ],
+                "thingEnglishLabel": "Donald Tusk",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/c0deef5a-45d4-459d-80f0-6f1d5c23a28d#id",
+                "thingLabel": "Polska",
+                "thingUri": "http://www.bbc.co.uk/things/c0deef5a-45d4-459d-80f0-6f1d5c23a28d#id",
+                "thingId": "c0deef5a-45d4-459d-80f0-6f1d5c23a28d",
+                "thingType": [
+                  "core:Thing",
+                  "tagging:TagConcept",
+                  "core:Place"
+                ],
+                "thingSameAs": [
+                  "http://sws.geonames.org/798544/",
+                  "http://www.wikidata.org/entity/Q36"
+                ],
+                "thingEnglishLabel": "Poland",
+                "type": "about"
+              }
+            ],
+            "formats": [
+              {
+                "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                "thingLabel": "Feature",
+                "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                "thingType": [
+                  "tagging:Format",
+                  "tagging:TagConcept"
+                ],
+                "thingSameAs": [
+                  "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                ],
+                "thingEnglishLabel": "Feature",
+                "thingPreferredLabel": "Feature",
+                "thingLabelLanguage": "pl",
+                "type": "formats"
+              }
+            ],
+            "assetType": [
+              {
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                "type": "assetType"
+              }
+            ],
+            "dateFirstReleased": [
+              {
+                "value": "2025-03-26T10:40:12.938Z",
+                "type": "dateFirstReleased"
+              }
+            ]
+          }
+        },
+        "tags": {
+          "about": [
+            {
+              "thingLabel": "Nauka",
+              "thingUri": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id",
+              "thingId": "0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
+              "thingType": [
+                "core:Thing",
+                "tagging:TagConcept",
+                "core:Theme"
+              ],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Science",
+                "http://www.wikidata.org/entity/Q336"
+              ],
+              "thingEnglishLabel": "Science",
+              "thingLabelLanguage": "pl",
+              "thingPreferredLabel": "Science"
+            },
+            {
+              "thingLabel": "Donald Tusk",
+              "thingUri": "http://www.bbc.co.uk/things/b4fb4c0d-8256-4032-be1d-0b233ed316c9#id",
+              "thingId": "b4fb4c0d-8256-4032-be1d-0b233ed316c9",
+              "thingType": [
+                "core:Thing",
+                "tagging:TagConcept",
+                "tagging:AmbiguousTerm",
+                "core:Person",
+                "tagging:Agent"
+              ],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Donald_Tusk"
+              ],
+              "thingEnglishLabel": "Donald Tusk",
+              "thingLabelLanguage": "pl",
+              "thingPreferredLabel": "Donald Tusk"
+            },
+            {
+              "thingLabel": "Polska",
+              "thingUri": "http://www.bbc.co.uk/things/c0deef5a-45d4-459d-80f0-6f1d5c23a28d#id",
+              "thingId": "c0deef5a-45d4-459d-80f0-6f1d5c23a28d",
+              "thingType": [
+                "core:Thing",
+                "tagging:TagConcept",
+                "core:Place"
+              ],
+              "thingSameAs": [
+                "http://sws.geonames.org/798544/",
+                "http://www.wikidata.org/entity/Q36"
+              ],
+              "thingEnglishLabel": "Poland",
+              "thingLabelLanguage": "pl",
+              "thingPreferredLabel": "Poland"
+            }
+          ]
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "image",
+          "altText",
+          "rawImage"
+        ],
+        "includeComments": false,
+        "consumableAsSFV": false,
+        "allowAdvertising": true,
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false,
+        "breakingNews": {
+          "isBreaking": false
+        },
+        "useSensitiveOnwardJourneys": false,
+        "stats": {
+          "readTime": 1,
+          "wordCount": 117
+        },
+        "isTransliterated": false
+      },
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "584e5148",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "bea7602c",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "046ded8c",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Polski artykuł testowy",
+                            "blocks": [
+                              {
+                                "id": "b6ec7f7a",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Polski artykuł testowy",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      1,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                1
+              ]
+            },
+            {
+              "id": "2379aaac",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1742985612938,
+                "lastPublished": 1742985612938
+              },
+              "position": [
+                2
+              ]
+            },
+            {
+              "id": "eb101ea1",
+              "type": "text",
+              "model": {
+                "suitableForAbridgement": false,
+                "blocks": [
+                  {
+                    "id": "8a90aed7",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel lacus non nisi imperdiet venenatis id eu odio. Mauris scelerisque metus in risus porttitor, non vehicula ex pulvinar. Quisque est diam, pulvinar at mattis et, tincidunt quis eros. Nulla semper augue dwa piwa proszę non volutpat luctus. Praesent pretium magna sed augue pharetra, et sodales sapien elementum ",
+                      "blocks": [
+                        {
+                          "id": "1abc8356",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel lacus non nisi imperdiet venenatis id eu odio. Mauris scelerisque metus in risus porttitor, non vehicula ex pulvinar. Quisque est diam, pulvinar at mattis et, tincidunt quis eros. Nulla semper augue dwa piwa proszę non volutpat luctus. Praesent pretium magna sed augue pharetra, et sodales sapien elementum ",
+                            "attributes": []
+                          },
+                          "position": [
+                            3,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      3,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                3
+              ]
+            },
+            {
+              "id": "413626e4",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "e04c8a1c",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "27e50ad2",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "3a113356",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Rzeszow",
+                                  "blocks": [
+                                    {
+                                      "id": "c25b270d",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Rzeszow",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        4,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  4,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      4,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "b3bc7f82",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 2048,
+                      "height": 1365,
+                      "locator": "a567/test/96cb3ac0-0a2e-11f0-8e5b-11eec158954c.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "BBC",
+                      "suitableForSyndication": true
+                    },
+                    "position": [
+                      4,
+                      2
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                4
+              ]
+            },
+            {
+              "id": "e6da0e73",
+              "type": "text",
+              "model": {
+                "suitableForAbridgement": false,
+                "blocks": [
+                  {
+                    "id": "5db918c2",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel lacus non nisi imperdiet venenatis id eu odio. Mauris scelerisque metus in risus porttitor, non vehicula ex pulvinar. Quisque est diam, pulvinar at mattis et, tincidunt quis eros. Nulla semper augue non volutpat luctus. Praesent pretium magna sed augue pharetra, et sodales sapien elementum ",
+                      "blocks": [
+                        {
+                          "id": "cd1edb9b",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel lacus non nisi imperdiet venenatis id eu odio. Mauris scelerisque metus in risus porttitor, non vehicula ex pulvinar. Quisque est diam, pulvinar at mattis et, tincidunt quis eros. Nulla semper augue non volutpat luctus. Praesent pretium magna sed augue pharetra, et sodales sapien elementum ",
+                            "attributes": []
+                          },
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                5
+              ]
+            },
+            {
+              "id": "c59e6416",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                6
+              ]
+            }
+          ]
+        }
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "Polski artykuł testowy",
+          "promoHeadline": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Polski artykuł testowy",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Polski artykuł testowy",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Rzeszow",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Rzeszow",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 2048,
+                  "height": 1365,
+                  "locator": "a567/test/96cb3ac0-0a2e-11f0-8e5b-11eec158954c.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        },
+        "summary": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "serviceIdentifier": "Polska",
+        "breakingNews": {
+          "isBreaking": false
+        },
+        "consumableAsSFV": false
+      }
+    },
+    "secondaryData": {
+      "topStories": [
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:c2568r7j01do",
+            "canonicalUrl": "https://www.bbc.com/polska/articles/c2568r7j01do"
+          },
+          "timestamp": 1747219197361,
+          "suitableForSyndication": true,
+          "language": "pl",
+          "headlines": {
+            "seoHeadline": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją (01)",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją (01)",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "caption",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Image caption",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Image caption",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Alternative description",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Alternative description",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 1920,
+                    "height": 1080,
+                    "locator": "cc0c/test/1cb48df0-1923-11f0-bcf9-151a6cfcfd52.png",
+                    "originCode": "cpsdevpb",
+                    "copyrightHolder": "BBC",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "pl",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Polska",
+            "locator": "urn:bbc:optimo:asset:c2568r7j01do",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+                "value": "2025-05-14T10:39:57.361Z"
+              }
+            ],
+            "schemaVersion": "1.5.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ],
+              "dateFirstReleased": [
+                {
+                  "value": "2025-05-14T10:39:57.361Z",
+                  "type": "dateFirstReleased"
+                }
+              ]
+            }
+          },
+          "serviceIdentifier": "Polska",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:c2568r7j01do",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:c63rwl0drdyo",
+            "canonicalUrl": "https://www.bbc.com/polska/articles/c63rwl0drdyo"
+          },
+          "timestamp": 1747219263429,
+          "suitableForSyndication": true,
+          "language": "pl",
+          "headlines": {
+            "seoHeadline": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją (02)",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją (02)",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "caption",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Image caption",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Image caption",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Alternative description",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Alternative description",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 1920,
+                    "height": 1080,
+                    "locator": "cc0c/test/1cb48df0-1923-11f0-bcf9-151a6cfcfd52.png",
+                    "originCode": "cpsdevpb",
+                    "copyrightHolder": "BBC",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "pl",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Polska",
+            "locator": "urn:bbc:optimo:asset:c63rwl0drdyo",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+                "value": "2025-05-14T10:41:03.429Z"
+              }
+            ],
+            "schemaVersion": "1.5.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ],
+              "dateFirstReleased": [
+                {
+                  "value": "2025-05-14T10:41:03.429Z",
+                  "type": "dateFirstReleased"
+                }
+              ]
+            }
+          },
+          "serviceIdentifier": "Polska",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:c63rwl0drdyo",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:cdkl2qrn770o",
+            "canonicalUrl": "https://www.bbc.com/polska/articles/cdkl2qrn770o"
+          },
+          "timestamp": 1747219304871,
+          "suitableForSyndication": true,
+          "language": "pl",
+          "headlines": {
+            "seoHeadline": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją (03)",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją (03)",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "caption",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Image caption",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Image caption",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Alternative description",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Alternative description",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 1920,
+                    "height": 1080,
+                    "locator": "cc0c/test/1cb48df0-1923-11f0-bcf9-151a6cfcfd52.png",
+                    "originCode": "cpsdevpb",
+                    "copyrightHolder": "BBC",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "pl",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Polska",
+            "locator": "urn:bbc:optimo:asset:cdkl2qrn770o",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+                "value": "2025-05-14T10:41:44.871Z"
+              }
+            ],
+            "schemaVersion": "1.5.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ],
+              "dateFirstReleased": [
+                {
+                  "value": "2025-05-14T10:41:44.871Z",
+                  "type": "dateFirstReleased"
+                }
+              ]
+            }
+          },
+          "serviceIdentifier": "Polska",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:cdkl2qrn770o",
+          "type": "optimo"
+        }
+      ],
+      "features": [
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:c63d4nrq482o",
+            "canonicalUrl": "https://www.bbc.com/polska/articles/c63d4nrq482o"
+          },
+          "timestamp": 1744630808894,
+          "suitableForSyndication": true,
+          "language": "pl",
+          "headlines": {
+            "seoHeadline": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją - 11",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją - 11",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "caption",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Image caption",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Image caption",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Alternative description",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Alternative description",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 1920,
+                    "height": 1080,
+                    "locator": "cc0c/test/1cb48df0-1923-11f0-bcf9-151a6cfcfd52.png",
+                    "originCode": "cpsdevpb",
+                    "copyrightHolder": "BBC",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "pl",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Polska",
+            "locator": "urn:bbc:optimo:asset:c63d4nrq482o",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+                "value": "2025-04-14T11:40:08.894Z"
+              }
+            ],
+            "schemaVersion": "1.5.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ],
+              "dateFirstReleased": [
+                {
+                  "value": "2025-04-14T11:40:08.894Z",
+                  "type": "dateFirstReleased"
+                }
+              ]
+            }
+          },
+          "serviceIdentifier": "Polska",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:c63d4nrq482o",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:ce2q457qwp5o",
+            "canonicalUrl": "https://www.bbc.com/polska/articles/ce2q457qwp5o"
+          },
+          "timestamp": 1747227389385,
+          "suitableForSyndication": true,
+          "language": "pl",
+          "headlines": {
+            "seoHeadline": "Input here your article's headline",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "Input your article's headline here",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "Input your article's headline here",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Image",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Image",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 2383,
+                    "height": 1340,
+                    "locator": "f07b/test/423e4ae0-30c3-11f0-9ae9-afd6be589415.jpg",
+                    "originCode": "cpsdevpb",
+                    "copyrightHolder": "BBC",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "pl",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Polska",
+            "locator": "urn:bbc:optimo:asset:ce2q457qwp5o",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+                "value": "2025-05-14T12:56:29.385Z"
+              }
+            ],
+            "schemaVersion": "1.5.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ],
+              "dateFirstReleased": [
+                {
+                  "value": "2025-05-14T12:56:29.385Z",
+                  "type": "dateFirstReleased"
+                }
+              ]
+            }
+          },
+          "byline": {
+            "blocks": [
+              {
+                "type": "contributor",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "name",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "John Smith",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "John Smith",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "role",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "BBC correspondent",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "BBC correspondent",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "location",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Bogota, Colombia",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Bogota, Colombia",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "serviceIdentifier": "Polska",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:ce2q457qwp5o",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:cw0ld9r3025o",
+            "canonicalUrl": "https://www.bbc.com/polska/articles/cw0ld9r3025o"
+          },
+          "timestamp": 1744630864232,
+          "suitableForSyndication": true,
+          "language": "pl",
+          "headlines": {
+            "seoHeadline": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją - 13",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją - 13",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "caption",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Image caption",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Image caption",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Alternative description",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Alternative description",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 1920,
+                    "height": 1080,
+                    "locator": "cc0c/test/1cb48df0-1923-11f0-bcf9-151a6cfcfd52.png",
+                    "originCode": "cpsdevpb",
+                    "copyrightHolder": "BBC",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "pl",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Polska",
+            "locator": "urn:bbc:optimo:asset:cw0ld9r3025o",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+                "value": "2025-04-14T11:41:04.232Z"
+              }
+            ],
+            "schemaVersion": "1.5.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ],
+              "dateFirstReleased": [
+                {
+                  "value": "2025-04-14T11:41:04.232Z",
+                  "type": "dateFirstReleased"
+                }
+              ]
+            }
+          },
+          "serviceIdentifier": "Polska",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:cw0ld9r3025o",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:c3y78ql0g56o",
+            "canonicalUrl": "https://www.bbc.com/polska/articles/c3y78ql0g56o"
+          },
+          "timestamp": 1744630836433,
+          "suitableForSyndication": true,
+          "language": "pl",
+          "headlines": {
+            "seoHeadline": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją - 12",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją - 12",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "caption",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Image caption",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Image caption",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Alternative description",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Alternative description",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 1920,
+                    "height": 1080,
+                    "locator": "cc0c/test/1cb48df0-1923-11f0-bcf9-151a6cfcfd52.png",
+                    "originCode": "cpsdevpb",
+                    "copyrightHolder": "BBC",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "pl",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Polska",
+            "locator": "urn:bbc:optimo:asset:c3y78ql0g56o",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+                "value": "2025-04-14T11:40:36.433Z"
+              }
+            ],
+            "schemaVersion": "1.5.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ],
+              "dateFirstReleased": [
+                {
+                  "value": "2025-04-14T11:40:36.433Z",
+                  "type": "dateFirstReleased"
+                }
+              ]
+            }
+          },
+          "serviceIdentifier": "Polska",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:c3y78ql0g56o",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:cjxp5kl5mvdo",
+            "canonicalUrl": "https://www.bbc.com/polska/articles/cjxp5kl5mvdo"
+          },
+          "timestamp": 1744630776631,
+          "suitableForSyndication": true,
+          "language": "pl",
+          "headlines": {
+            "seoHeadline": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją - 10",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją - 10",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "caption",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Image caption",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Image caption",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Alternative description",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Alternative description",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 1920,
+                    "height": 1080,
+                    "locator": "cc0c/test/1cb48df0-1923-11f0-bcf9-151a6cfcfd52.png",
+                    "originCode": "cpsdevpb",
+                    "copyrightHolder": "BBC",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "pl",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Polska",
+            "locator": "urn:bbc:optimo:asset:cjxp5kl5mvdo",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+                "value": "2025-04-14T11:39:36.631Z"
+              }
+            ],
+            "schemaVersion": "1.5.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ],
+              "dateFirstReleased": [
+                {
+                  "value": "2025-04-14T11:39:36.631Z",
+                  "type": "dateFirstReleased"
+                }
+              ]
+            }
+          },
+          "serviceIdentifier": "Polska",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:cjxp5kl5mvdo",
+          "type": "optimo"
+        }
+      ],
+      "mostRead": null,
+      "latestMedia": null
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

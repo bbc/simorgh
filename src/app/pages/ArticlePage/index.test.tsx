@@ -6,14 +6,15 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import {
   articleDataNews,
-  articleDataNewsLongLength,
   articleDataNewsWithEmbeds,
   articleDataPersian,
   articleDataPidgin,
   articleDataPidginWithAds,
   articleDataPidginWithByline,
+  articleDataRussianWithPVButNoWatchMomentsTranslation,
+  articleDataPortugueseWithPVNotUnderHeadline,
+  articleDataPortugueseWithPVUnderHeadline,
   promoSample,
-  sampleRecommendations,
   articlePglDataPidgin,
   articleStyDataPidgin,
 } from '#pages/ArticlePage/fixtureData';
@@ -30,6 +31,8 @@ import { suppressPropWarnings } from '#app/legacy/psammead/psammead-test-helpers
 import { Services } from '#app/models/types/global';
 
 import { Article } from '#app/models/types/optimo';
+import * as clickTracking from '#app/hooks/useClickTrackerHandler';
+import * as viewTracking from '#app/hooks/useViewTracker';
 import {
   render,
   screen,
@@ -39,8 +42,7 @@ import {
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ArticlePage from './ArticlePage';
 import ThemeProvider from '../../components/ThemeProvider';
-import ATIAnalytics from '../../components/ATIAnalytics';
-import { topStoriesList } from './PagePromoSections/TopStoriesSection/fixture/index';
+import * as ATIAnalytics from '../../components/ATIAnalytics';
 
 jest.mock('../../components/ThemeProvider');
 
@@ -48,12 +50,15 @@ jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });
-jest.mock('../../components/ATIAnalytics');
-jest.mock('#app/legacy/containers/OptimizelyArticleCompleteTracking');
-jest.mock('#app/legacy/containers/OptimizelyPageViewTracking');
+
+const atiAnalyticsSpy = jest.spyOn(ATIAnalytics, 'default');
+atiAnalyticsSpy.mockImplementation(() => <div>ATI Analytics</div>);
+
+jest.mock('#app/components/OptimizelyPageMetrics');
 
 jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
   default: jest.fn(),
 }));
 
@@ -74,6 +79,7 @@ type Props = {
   isApp?: boolean;
   promo?: boolean | null;
   isAmp?: boolean;
+  isLite?: boolean;
   id?: string | null;
 };
 
@@ -86,6 +92,7 @@ const Context = ({
   isApp = false,
   promo = null,
   isAmp = false,
+  isLite = false,
   id,
 }: PropsWithChildren<Props> = {}) => {
   const appInput = {
@@ -94,6 +101,7 @@ const Context = ({
     showAdsBasedOnLocation,
     isApp,
     isAmp,
+    isLite,
     id,
   };
 
@@ -107,9 +115,6 @@ const Context = ({
             },
             ads: {
               enabled: adsToggledOn,
-            },
-            cpsRecommendations: {
-              enabled: true,
             },
             podcastPromo: { enabled: promo != null },
           }}
@@ -131,17 +136,64 @@ beforeEach(() => {
 
 afterEach(() => {
   delete process.env.SIMORGH_ICHEF_BASE_URL;
-
-  (ATIAnalytics as jest.Mock).mockImplementation(
-    jest.requireActual('../../components/ATIAnalytics').default,
-  );
-});
-
-afterAll(() => {
-  (ATIAnalytics as jest.Mock).mockReset();
 });
 
 describe('Article Page', () => {
+  it.each([
+    {
+      testScenario:
+        'should show the lite site link on non Lite pages, when the toggle is enabled',
+      isLite: false,
+      toggleEnabled: true,
+      shouldBeDisplayed: true,
+    },
+    {
+      testScenario:
+        'should not show the lite site link on non Lite pages, when the toggle is false',
+      isLite: false,
+      toggleEnabled: false,
+      shouldBeDisplayed: false,
+    },
+    {
+      testScenario:
+        'should not show the lite site link on Lite pages, regardless of the toggle',
+      isLite: true,
+      toggleEnabled: true,
+      shouldBeDisplayed: false,
+    },
+  ])('$testScenario', ({ isLite, toggleEnabled, shouldBeDisplayed }) => {
+    render(<ArticlePage pageData={articleDataPersian} />, {
+      service: 'gahuza',
+      isLite,
+      toggles: { articleLiteSiteLink: { enabled: toggleEnabled } },
+    });
+
+    const liteCTA = screen.queryByRole('link', { name: /Inyandiko gusa/ });
+
+    if (shouldBeDisplayed) {
+      expect(liteCTA).toBeInTheDocument();
+    } else {
+      expect(liteCTA).not.toBeInTheDocument();
+    }
+  });
+
+  it('should apply click and view tracking data on lite site link', () => {
+    const eventTrackingData = {
+      componentName: 'article-lite-site-link',
+    };
+    const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
+    const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+
+    render(<ArticlePage pageData={articleDataPersian} />, {
+      service: 'gahuza',
+      isLite: false,
+      toggles: { articleLiteSiteLink: { enabled: true } },
+    });
+
+    expect(clickTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
+    expect(viewTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
+  });
+
   it('should use headline for meta description if summary does not exist', async () => {
     const articleDataNewsWithSummary = mergeDeepLeft(
       {
@@ -638,22 +690,6 @@ describe('Article Page', () => {
     });
   });
 
-  it('should render WSOJ recommendations when passed', async () => {
-    suppressPropWarnings(['optimizely', 'ForwardRef', 'null']);
-    const pageDataWithSecondaryColumn = {
-      ...articleDataNews,
-      recommendations: sampleRecommendations,
-    };
-    const { getByText } = render(
-      <Context service="turkce">
-        <ArticlePage pageData={pageDataWithSecondaryColumn} />
-      </Context>,
-      { service: 'turkce' },
-    );
-
-    expect(getByText('SAMPLE RECOMMENDATION 1 - HEADLINE')).toBeInTheDocument();
-  });
-
   it('should render PodcastPromos when passed', async () => {
     suppressPropWarnings(['pageData.promo.id', 'ArticlePage', 'undefined']);
     suppressPropWarnings(['pageData.promo.id', 'SecondaryColumn', 'undefined']);
@@ -764,19 +800,6 @@ describe('Article Page', () => {
     expect(ampHtmlLink).toBeUndefined();
   });
 
-  const services = ['serbian', 'uzbek', 'zhongwen'] satisfies Services[];
-
-  services.forEach(service => {
-    it(`should not render a relatedTopics onward journey for a ${service} optimo article`, async () => {
-      const { queryByTestId } = render(
-        <Context service={service}>
-          <ArticlePage pageData={articleDataNews} />
-        </Context>,
-      );
-      const relatedTopics = queryByTestId('related-topics');
-      expect(relatedTopics).toBeNull();
-    });
-  });
   describe('when rendering a PGL page', () => {
     it('should not render secondary column', async () => {
       const pageDataWithSecondaryColumn = {
@@ -813,15 +836,13 @@ describe('Article Page', () => {
     });
 
     it('should add brandname to page title in atiAnalytics', async () => {
-      (ATIAnalytics as jest.Mock).mockImplementation(() => <div />);
-
       render(
         <Context service="pidgin">
           <ArticlePage pageData={articlePglDataPidgin} />
         </Context>,
       );
 
-      expect(ATIAnalytics).toHaveBeenLastCalledWith(
+      expect(atiAnalyticsSpy).toHaveBeenLastCalledWith(
         {
           atiData: {
             categoryName: null,
@@ -836,7 +857,7 @@ describe('Article Page', () => {
             timeUpdated: '2018-01-01T14:00:00.000Z',
           },
         },
-        {},
+        undefined,
       );
     });
 
@@ -848,24 +869,25 @@ describe('Article Page', () => {
       );
 
       const helmetContent = Helmet.peek();
-      const schemaType = JSON.parse(helmetContent.scriptTags[1].innerHTML)[
-        '@graph'
-      ][0]['@type'];
+
+      const linkedData = helmetContent.scriptTags.find(
+        ({ type }) => type === 'application/ld+json',
+      ) || { innerHTML: '' };
+
+      const schemaType = JSON.parse(linkedData.innerHTML)['@graph'][0]['@type'];
 
       expect(schemaType).toEqual('Article');
     });
   });
   describe('when rendering an STY page', () => {
     it('should add brandname to page title in atiAnalytics', async () => {
-      (ATIAnalytics as jest.Mock).mockImplementation(() => <div />);
-
       render(
         <Context service="pidgin">
           <ArticlePage pageData={articleStyDataPidgin} />
         </Context>,
       );
 
-      expect(ATIAnalytics).toHaveBeenLastCalledWith(
+      expect(atiAnalyticsSpy).toHaveBeenLastCalledWith(
         {
           atiData: {
             categoryName: null,
@@ -880,125 +902,80 @@ describe('Article Page', () => {
             timeUpdated: '2018-01-01T14:00:00.000Z',
           },
         },
-        {},
+        undefined,
       );
     });
   });
 
-  describe('when rendering an AMP page', () => {
-    const renderAmpPage = ({
-      service,
-      id,
-      isShortArticle,
-    }: {
-      service: Services;
-      id: string | null;
-      isShortArticle?: boolean;
-    }) => {
-      const pageData = isShortArticle
-        ? articleDataNews
-        : articleDataNewsLongLength;
-
-      const pageDataWithSecondaryColumn = {
-        ...pageData,
-        secondaryColumn: {
-          topStories: topStoriesList,
-          features: [],
-        },
-      };
-
-      return render(
-        <Context isAmp service={service} id={id}>
-          <ArticlePage pageData={pageDataWithSecondaryColumn} />
+  describe('when rendering an article page with a portrait video', () => {
+    it.each`
+      pageData                                                | service         | expected     | scenario
+      ${articleDataPortugueseWithPVNotUnderHeadline}          | ${'portuguese'} | ${'Assista'} | ${'should render the Watch Moments title because translation exists'}
+      ${articleDataRussianWithPVButNoWatchMomentsTranslation} | ${'russian'}    | ${undefined} | ${'should not render the Watch Moments title because no translation exists'}
+    `('$scenario', ({ pageData, service, expected }) => {
+      render(
+        <Context service={service}>
+          <ArticlePage pageData={pageData} />
         </Context>,
-        {
-          isAmp: true,
-          service,
-          id,
-        },
       );
-    };
 
-    const validNewsAsset = 'c6v11qzyv8po';
-    const validSportAsset = 'cpgw0xjmpd3o';
+      const title = screen.queryByRole('strong');
+      if (expected) {
+        expect(title).toBeInTheDocument();
+        expect(title?.textContent).toEqual(expected);
+      } else {
+        expect(title).not.toBeInTheDocument();
+      }
+    });
 
-    it.each`
-      service    | id
-      ${'news'}  | ${validNewsAsset}
-      ${'sport'} | ${validSportAsset}
-    `(
-      'should render page with experiment-top-stories blocks on $service assets that are long enough',
-      ({ service, id }) => {
-        const { queryByTestId } = renderAmpPage({
-          service,
-          id,
-        });
+    it('should not render the portrait video title when the portrait video is directly under a headline', () => {
+      render(
+        <Context service="portuguese">
+          <ArticlePage pageData={articleDataPortugueseWithPVUnderHeadline} />
+        </Context>,
+      );
 
-        expect(
-          queryByTestId('experiment-top-stories-Quarter'),
-        ).toBeInTheDocument();
-        expect(
-          queryByTestId('experiment-top-stories-Half'),
-        ).toBeInTheDocument();
-        expect(
-          queryByTestId('experiment-top-stories-ThreeQuarters'),
-        ).toBeInTheDocument();
-      },
-    );
+      const title = screen.queryByRole('strong');
+      expect(title).not.toBeInTheDocument();
+    });
 
-    it.each`
-      service     | id                 | isShortArticle | testDescription
-      ${'pidgin'} | ${validNewsAsset}  | ${false}       | ${`services which are not 'news' or 'sport'`}
-      ${'news'}   | ${validNewsAsset}  | ${true}        | ${`'news' assets that are too short`}
-      ${'sport'}  | ${validSportAsset} | ${true}        | ${`'sport' assets that are too short`}
-    `(
-      'should render page without experiment-top-stories blocks on $testDescription',
-      ({ service, id, isShortArticle }) => {
-        const { queryByTestId } = renderAmpPage({
-          service,
-          id,
-          isShortArticle,
-        });
-
-        expect(
-          queryByTestId('experiment-top-stories-Quarter'),
-        ).not.toBeInTheDocument();
-        expect(
-          queryByTestId('experiment-top-stories-Half'),
-        ).not.toBeInTheDocument();
-        expect(
-          queryByTestId('experiment-top-stories-ThreeQuarters'),
-        ).not.toBeInTheDocument();
-      },
-    );
-
-    it('should add ampExperimentName to ATIAnalytics on valid services', async () => {
-      (ATIAnalytics as jest.Mock).mockImplementation(() => <div />);
-      const service = 'news';
-      const id = validNewsAsset;
-
-      renderAmpPage({ service, id });
-
-      expect(ATIAnalytics).toHaveBeenLastCalledWith(
-        {
-          atiData: {
-            categoryName: 'Royal+Wedding+2018~Duchess+of+Sussex',
-            contentType: 'article',
-            contentId: 'urn:bbc:optimo:c0000000001o',
-            language: 'en-gb',
-            ldpThingIds:
-              '2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc',
-            ldpThingLabels: 'Royal+Wedding+2018~Duchess+of+Sussex',
-            nationsProducer: null,
-            pageIdentifier: 'news.articles.c0000000001o.page',
-            pageTitle: 'Article Headline for SEO',
-            timePublished: '2018-01-01T12:01:00.000Z',
-            timeUpdated: '2018-01-01T14:00:00.000Z',
-            ampExperimentName: 'topStoriesExperiment',
+    // EXPERIMENT: Article Read Time
+    it.skip('should render read time component when readTime is supplied in metadata', () => {
+      const dataWithReadTime = {
+        ...articleDataPidgin,
+        metadata: {
+          ...articleDataPidgin.metadata,
+          stats: {
+            readTime: 5,
+            wordCount: 500,
           },
         },
-        {},
+      };
+      const { queryByTestId } = render(
+        <Context service="pidgin">
+          <ArticlePage pageData={dataWithReadTime} />
+        </Context>,
       );
+
+      expect(queryByTestId('read-time')).toBeInTheDocument();
+    });
+
+    // EXPERIMENT: Article Read Time
+    it.skip('should not render read time component when readTime is not supplied in metadata', () => {
+      const dataMissingReadTime = {
+        ...articleDataPidgin,
+        metadata: {
+          ...articleDataPidgin.metadata,
+          stats: {},
+        },
+      };
+      const { queryByTestId } = render(
+        <Context service="pidgin">
+          <ArticlePage pageData={dataMissingReadTime} />
+        </Context>,
+      );
+
+      expect(queryByTestId('read-time')).not.toBeInTheDocument();
     });
   });
 });

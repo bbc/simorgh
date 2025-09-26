@@ -1,7 +1,7 @@
 {
   "data": {
-    "title": "Uzbek",
-    "description": "",
+    "title": "BBC News , O'zbek - Бош саҳифа",
+    "description": "BBC Uzbek ( Би-би-си Ўзбек хизмати) Ўзбекистон, минтақа ва жаҳон янгиликлари учун холис ҳамда ишончли манбадир",
     "pageType": "home",
     "curations": [
       {
@@ -9,51 +9,1258 @@
           {
             "type": "article",
             "isLive": false,
-            "title": "Суриянинг темир хоними Асмо Асад ким?",
-            "firstPublished": "2024-07-30T16:58:46.760Z",
-            "lastPublished": "2024-07-30T16:58:46.760Z",
-            "link": "https://www.bbc.com/uzbek/articles/cve6ql6nr9do",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/8e45/test/ee2a18b0-4e93-11ef-ae89-b10ee2354b32.jpg.webp",
-            "imageAlt": "Россиянинг Яқин Шарқдаги асосий иттифоқчиси Сурия 13 йиллик урушдан кейин вайронага айланган. Ундан нима қолган бўлса",
-            "id": "cve6ql6nr9do"
+            "title": "Ўлгунча рўза тутадиган диндорлар ким?",
+            "firstPublished": "2025-03-13T08:59:07.090Z",
+            "lastPublished": "2025-03-13T08:59:07.090Z",
+            "link": "https://www.bbc.com/uzbek/articles/cqjd2rq0vx0o/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/472a/live/d9f03190-df11-11ef-a75f-9dd268073925.jpg.webp",
+            "description": "Очликдан ўлаётган одамни кузатиш ҳеч ёқимли бўлмайди ва сўнгги дақиқалар даҳшатли бўлиши мумкин. Инсон охирида овқат ёки сув сўраши мумкин. Бу сўровга жавоб берилмаслиги мумкин.",
+            "imageAlt": "88 ёшли Саяр Деви Моди даволанишдан воз кечишга қарор қилди",
+            "id": "cqjd2rq0vx0o"
           },
           {
             "type": "article",
             "isLive": false,
-            "title": "Сўз сизга: Ўзбекистон аҳолиси 37 миллиондан ошди деб мақтанамиз, лекин миллионлар ишсиз ё мардикор",
-            "firstPublished": "2024-09-16T15:46:52.239Z",
-            "lastPublished": "2024-09-16T15:46:52.239Z",
-            "link": "https://www.bbc.com/uzbek/articles/cl066728v0zo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
-            "id": "cl066728v0zo"
+            "title": "Ўзбекистон ҳукумати Хитойга қарши кафиятни юмшатишга ҳаракат қилмоқда",
+            "firstPublished": "2025-03-10T16:40:06.726Z",
+            "lastPublished": "2025-03-12T15:51:03.232Z",
+            "link": "https://www.bbc.com/uzbek/articles/c3w19jdd4jzo/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d44e/live/2ac679b0-ff58-11ef-a8b1-950887ddc6e5.jpg.webp",
+            "description": "Ўзбекистон Бош вазири матбуот котиби Бекзод Ҳидоятов Хитойнинг Ўзбекистондаги иқтисодий кенгайиши ва хитойлик муҳожирлар сонининг кўпайиши бўйича билдирилаётган хавотирларни рад этди.",
+            "imageAlt": "Учрашув",
+            "id": "c3w19jdd4jzo"
           },
           {
             "type": "article",
             "isLive": false,
-            "title": "Борис Николаевич Ельцин",
-            "firstPublished": "2024-10-07T09:52:06.034Z",
-            "lastPublished": "2024-10-07T09:58:27.823Z",
-            "link": "https://www.bbc.com/uzbek/articles/c6328w94722o/cyr",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
-            "id": "c6328w94722o"
+            "title": "\"Тўп Россияда\" – Украина 30 кунлик оташкесимга рози бўлди",
+            "firstPublished": "2025-03-11T08:11:45.722Z",
+            "lastPublished": "2025-03-12T11:45:02.132Z",
+            "link": "https://www.bbc.com/uzbek/articles/cgm1n1r2g23o/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/2ec2/live/d171cb20-ff35-11ef-a8b1-950887ddc6e5.png.webp",
+            "description": "Украина АҚШ таклиф қилган Россия билан 30 кунлик ўт очишни тўхтатишга рози эканлигини маълум қилди. Ушбу музокаралар иш берадими?",
+            "imageAlt": "Tramp va Zelenskiy",
+            "id": "cgm1n1r2g23o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Қариндошлар никоҳи: янги далиллар болалар касалликлари ҳақида нималарга ишора қилади?",
+            "firstPublished": "2025-03-12T09:24:14.545Z",
+            "lastPublished": "2025-03-12T09:24:14.545Z",
+            "link": "https://www.bbc.com/uzbek/articles/cwynxzdjl2lo/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/881e/live/e969b7e0-f38e-11ef-896e-d7e7fb1719a4.png.webp",
+            "description": "Тадқиқотдаги ҳар олтинчи боланинг ота-онаси асосан Бредфорднинг Покистон жамоасидан бўлган амакиваччалардир. Бу эса амакивачча никоҳларнинг соғлиққа таъсирини ўрганишда дунёдаги энг қимматли тадқиқотлардан бири ҳисобланади.",
+            "imageAlt": "A treated image of two wedding rings",
+            "id": "cwynxzdjl2lo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Ўзбекистон, Марказий Осиёга бугун ким жиддий таҳдид? Видео",
+            "firstPublished": "2025-03-11T13:22:52.191Z",
+            "lastPublished": "2025-03-11T13:22:52.191Z",
+            "link": "https://www.bbc.com/uzbek/articles/czxnpey8ry1o/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/79b4/live/620682b0-fe74-11ef-8c3d-b7dcc7510cb1.jpg.webp",
+            "description": "Минтақа жиддий таҳдид қаршисидами - Россия томони огоҳлантирди. Хавф кимдан?",
+            "imageAlt": "Коллаж",
+            "id": "czxnpey8ry1o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Ўзбекистон: Одамлар умид ва хавотир орасида қолишганми?",
+            "firstPublished": "2025-03-11T11:35:35.070Z",
+            "lastPublished": "2025-03-11T11:35:35.070Z",
+            "link": "https://www.bbc.com/uzbek/articles/c6253n7zr73o/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7da4/live/f6249060-fe68-11ef-8c3d-b7dcc7510cb1.jpg.webp",
+            "description": "Ўзбекистон бир гуруҳ инсонлар фикри ижтимоий тармоқда юзлаб изоҳларга сабаб бўлмоқда. Асосий гап, Ўзбекистон фуқаролари эртанги кунларини қандай кўришади?",
+            "imageAlt": "Ўзбекистонлик аёллар",
+            "id": "c6253n7zr73o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Сурия: Аҳмад аш-Шараа тинч аҳоли ўлимида айбдорларни жазоламоқчи",
+            "firstPublished": "2025-03-10T12:44:06.857Z",
+            "lastPublished": "2025-03-10T12:44:06.857Z",
+            "link": "https://www.bbc.com/uzbek/articles/cx280x8l90qo/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/f98b/live/e869ba20-fdac-11ef-9e61-71ee71f26eb1.jpg.webp",
+            "description": "Буюк Британияда жойлашган Сурия Инсон ҳуқуқларини кузатиш маркази (SOHR) хабар қилишича, 6 март куни бошланиб кетган жанглардан кейин 830 тинч аҳоли вакили ўлдирилган.",
+            "imageAlt": "Сурия муваққат президенти Аҳмад аш Шараа",
+            "id": "cx280x8l90qo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Англия фермаларига келаётган мигрантларни қандай қийин аҳволга солишмоқда?",
+            "firstPublished": "2025-03-10T10:38:58.738Z",
+            "lastPublished": "2025-03-11T11:24:20.882Z",
+            "link": "https://www.bbc.com/uzbek/articles/ce8v6py3p4go/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/edea/live/dfa69b70-ea3c-11ef-a819-277e390a7a08.jpg.webp",
+            "description": "Британия ҳукумати деҳқончилик фермаларида аниқланган ҳар қандай таҳқирловчи амалларга қарши \"қатъий чора\" кўришини айтган.",
+            "imageAlt": "Хулия Кекано Касимиро қўлида \"Биз адолат истаймиз\" ёзувини ушлаб турипти",
+            "id": "ce8v6py3p4go"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "8 март: Халқаро хотин-қизлар куни нимаси билан аҳамиятли?",
+            "firstPublished": "2025-03-07T16:33:28.635Z",
+            "lastPublished": "2025-03-07T16:33:28.635Z",
+            "link": "https://www.bbc.com/uzbek/articles/c757ql25xvgo/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/3887/live/38d29080-fb6f-11ef-a62e-e9ee8ea585f1.jpg.webp",
+            "description": "Бир асрдан ортиқ вақт давомида бутун дунё аҳолиси 8 мартни Халқаро хотин-қизлар куни сифатида нишонлаб келмоқда. Аммо бунинг нима аҳамияти бор?",
+            "imageAlt": "8-mart",
+            "id": "c757ql25xvgo"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:40724044-f99a-412d-a948-1f7410adeeab",
+        "curationId": "urn:bbc:tipo:list:9cb5d9a9-5e8e-4c0f-937d-9e72f6129301",
         "curationType": "tipo-curation",
         "position": 0,
-        "title": "Top Stories",
+        "title": "Бош мақола",
         "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Аъзо бўлиш учун бу ерга босинг",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.whatsapp.com/channel/0029Vb6cFgKHAdNMsH1hKy2H",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/ece9/live/0191caa0-f444-11ef-896e-d7e7fb1719a4.png.webp",
+            "description": "Ўзбекистон, минтақа, дунё янгиликлари ҳамда таҳлил ва муносабат",
+            "imageAlt": "WhatsApp logo",
+            "id": "https%3A%2F%2Fbit.ly%2F3Xgfl35"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:d05bfd3f-f0b8-4776-8a28-8a986b65558d",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "BBC News O‘zbek WhatsApp",
+        "visualProminence": "NORMAL",
+        "visualStyle": "BANNER"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Ўзбекистон: \"Жумага борган ўғлим штраф олди\" – Болаларнинг Рамазонда масжидга киришига чеклов қўйилгани ортидан баҳс кучаймоқда",
+            "firstPublished": "2025-03-07T15:55:23.799Z",
+            "lastPublished": "2025-03-07T15:55:23.799Z",
+            "link": "https://www.bbc.com/uzbek/articles/ckgdqzx2w9do/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7489/live/8987d3a0-fb6a-11ef-a273-e52c9fc8f09b.png.webp",
+            "description": "Ўзбекистонда болаларни Рамазон вақтида масжидга киришига тўсқинлик қилиш ортаётгани айтилган хабарлар кўпайган. Тармоқ фойдаланувчилари ўқитувчилар ва хавфсизлик ходимлари болаларнинг масжидга киришини чеклаётгани ҳақида ёзган.",
+            "imageAlt": "video",
+            "id": "ckgdqzx2w9do"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Сўз сизга: \"Ўзбекларнинг уйғонгани рост бўлсин\" – Йўл ёпилишига муносабат",
+            "firstPublished": "2025-03-06T15:48:22.512Z",
+            "lastPublished": "2025-03-06T16:42:42.635Z",
+            "link": "https://www.bbc.com/uzbek/articles/cpdej6le2yqo/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/13f4/live/c406dc30-faa0-11ef-98de-ebba6a9f6737.png.webp",
+            "description": "Чинозда катта трасса ёпиб қўйилгач, метан заправкалар очила бошлангани ҳақидаги BBC Ўзбек хизматининг қисқа видеоси Instagram да 2 миллиондан кўпроқ томоша қилинди. 3 мингга яқин изоҳ ёзилди.",
+            "imageAlt": "Йўл ёпиб қўйилгач, Тошкент вилоятидаги метан заправкалар очила бошланганди",
+            "id": "cpdej6le2yqo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Рамазон. Савол ва жавоб: Тишни ювиш рўзани бузадими, рўзадор тупугини ютса нима бўлади? Нима бўлса ҳам рўза тутиш керакми?",
+            "firstPublished": "2025-03-05T09:40:47.630Z",
+            "lastPublished": "2025-03-10T17:50:47.314Z",
+            "link": "https://www.bbc.com/uzbek/articles/c5y2g2v2n5yo/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/270c/live/e0b84ef0-f9a5-11ef-a629-ef88fbd35a13.jpg.webp",
+            "description": "Муқаддас Рамазон ойида худди шу каби саволлар сизни ҳам қизиқтираяптими? У ҳолда ҳофизи Қуръон, диний илмлар бўйича илғор Шобир Ҳасаннинг жавоблари билан танишинг. ",
+            "imageAlt": "Ифтор дастурхони",
+            "id": "c5y2g2v2n5yo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Миллион-миллион долларлик: Толибон Афғонистонни Ғарб ёрдамисиз ҳам кўтараяптими?",
+            "firstPublished": "2025-03-04T16:45:44.906Z",
+            "lastPublished": "2025-03-04T16:45:44.906Z",
+            "link": "https://www.bbc.com/uzbek/articles/crlx0jyrj54o/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/017d/live/c1f7d9d0-f915-11ef-896e-d7e7fb1719a4.jpg.webp",
+            "description": "Толибон хабар қилишича, Ўзбекистон билан турли соҳаларда $200 миллион долларлик сармоя масаласи муҳокама қилинган, Туркманистондан темир йўлни Афғонистон ичига узайтириш бўйича  $7 миллионлик ҳужжатлар имзоланган, 1500 тача компания жами 1 миллиард доллардан зиёд сармоя киритишга тайёрлигини билдирган.",
+            "imageAlt": "\"Ҳайратон\"да темир йўл вагонидан юк автомобилига ун қопларини ортаётган ҳаммол йигитлар",
+            "id": "crlx0jyrj54o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 6,
+        "curationId": "urn:bbc:vivo:curation:16fbc71e-26c3-490a-9f99-a9dae80d97d1",
+        "curationType": "vivo-stream",
+        "position": 2,
+        "title": "Ўзбекистон",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Бу қизиқ: Толибон камералар орқали миллионлаб одамни қандай кузатмоқда?",
+            "firstPublished": "2025-03-03T07:26:14.141Z",
+            "lastPublished": "2025-03-03T07:26:14.141Z",
+            "link": "https://www.bbc.com/uzbek/articles/clyzn92xld1o/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/f7be/live/24243ad0-f7ff-11ef-896e-d7e7fb1719a4.jpg.webp",
+            "description": "Ўнлаб телеэкранлар билан ўралган гавжум бошқарув марказида Толибон полицияси миллионлаб одамнинг кундалик ҳаётини кузатадиган 90 000 та CCTV камерадан иборат янги тармоғини фахр билан намойиш этмоқда. Би-би-си ушбу тизимни кўришга рухсат берилган биринчи халқаро оммавий ахборот воситасидир.",
+            "imageAlt": "kamera",
+            "id": "clyzn92xld1o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Янгиликлар: Трампнинг гапига Москва жим, Киев ҳайрон, рубль қимматлаяпти, Тоқаев минтақада илдамлик қилдими ва Марказий Осиёда ўнлаб одам ҳукм қилинди – улар ИШИД га алоқадорми? Видео",
+            "firstPublished": "2025-02-14T11:50:09.947Z",
+            "lastPublished": "2025-02-14T14:42:11.013Z",
+            "link": "https://www.bbc.com/uzbek/articles/ceq93dj32j5o/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/833f/live/fbdb1d40-eac6-11ef-bd1b-d536627785f2.jpg.webp",
+            "description": "Минтақа ва дунёда нима гап – шу соатларда сарлавҳаларга чиққан ва чиқаётган янгиликлар. ",
+            "imageAlt": "Путин ва Зеленский",
+            "id": "ceq93dj32j5o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Янгиланди. Россия: Путиннинг яқин иттифоқчиси Марказий Осиёда, минтақага таҳдид кучайдими? Подкаст",
+            "firstPublished": "2025-02-12T14:06:07.339Z",
+            "lastPublished": "2025-02-12T15:17:35.348Z",
+            "link": "https://www.bbc.com/uzbek/articles/czdlz8gq661o/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a6db/live/18cf2340-e948-11ef-a319-fb4e7360c4ec.jpg.webp",
+            "description": "Сергей Шойгуга қадар сўнгги бир неча ойнинг ичида Россия президенти, Бош вазири ва Ташқи ишлар вазири ҳам Қозоғистонда бўлиб қайтган. Нима гап?",
+            "imageAlt": "Путин ва аксарият постсовет давлатлари лидерлари",
+            "id": "czdlz8gq661o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Толибон Ўзбекистонга яна нима қилиши кераклигини айтдими?",
+            "firstPublished": "2025-02-10T13:09:15.189Z",
+            "lastPublished": "2025-02-10T13:09:15.189Z",
+            "link": "https://www.bbc.com/uzbek/articles/cjw4x70378yo/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/ecca/live/5d325150-e7aa-11ef-a819-277e390a7a08.jpg.webp",
+            "description": "Афғонистон Мудофаа вазирлиги янги баёнот билан чиқди. Толибоннинг муваққат Мудофаа вазири номи чиққан марҳум лидери Мулла Умарнинг ўғли бўлади. У орада минтақа давлатларини огоҳлантиришгача борган. Расмий Тошкент ҳозирча жим, Америка ҳам.... Буёғи нима бўлади?",
+            "imageAlt": "Афғонистон муваққат Мудофаа вазири",
+            "id": "cjw4x70378yo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 2,
+        "curationId": "urn:bbc:vivo:curation:58bf518d-e84c-4723-a5fe-6a67fb4e2643",
+        "curationType": "vivo-stream",
+        "position": 3,
+        "title": "Минтақа",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Украина ва Америка Саудия Арабистонида гаплашиб олмоқчи. Путин эса \"қандай кўринишдаги тинчлик\" истаётгани ҳақида очиқ гапирди",
+            "firstPublished": "2025-03-07T12:35:15.797Z",
+            "lastPublished": "2025-03-07T12:35:15.797Z",
+            "link": "https://www.bbc.com/uzbek/articles/crknjm1x6nmo/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/62c2/live/857e3110-fb50-11ef-9e61-71ee71f26eb1.jpg.webp",
+            "description": "Украина дипломатлари АҚШ билан урушни тугатиш масаласини музокара қилиш мақсадида келаси ҳафтада Саудия Арабистонига бормоқчи. Шу манзарада Владимир Путин Россия айнан қандай кўринишдаги тинчлик хоҳлаётгани ҳақидаги саволга очиқ жавоб берган. ",
+            "imageAlt": "putin",
+            "id": "crknjm1x6nmo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "АҚШ Украинага разведка маълумотлари беришни тўхтатди – Бу урушга қандай таъсир қилади?",
+            "firstPublished": "2025-02-20T09:37:58.803Z",
+            "lastPublished": "2025-03-06T11:33:17.395Z",
+            "link": "https://www.bbc.com/uzbek/articles/cdrxj01y2p2o/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/2ac0/live/5f67aa20-fa7d-11ef-9e61-71ee71f26eb1.png.webp",
+            "description": "АҚШнинг Украинани қўллаб-қувватлаш истиқболи янада шубҳа остида қолмоқда. Миллий хавфсизлик бўйича маслаҳатчи Майк Уолц АҚШ Украина билан разведка маълумотлари алмашишни тўхтатганини тасдиқлади.",
+            "imageAlt": "Razvedka",
+            "id": "cdrxj01y2p2o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Сурия: Эрон қувилдими ҳамда Уйғур ва Афғон жангчилар тақдири",
+            "firstPublished": "2025-03-06T09:02:31.904Z",
+            "lastPublished": "2025-03-06T09:02:31.904Z",
+            "link": "https://www.bbc.com/uzbek/articles/c1d4nv6l54do/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a4f7/live/bf8ce1e0-ebaf-11ef-a819-277e390a7a08.jpg.webp",
+            "description": "Эрон Суриядаги ҳарбий базаларини ташлаб чиқишга мажбур бўлгач, BBC ундан қолган вайроналарни ўрганди.",
+            "imageAlt": "Posters strewn all over the floor",
+            "id": "c1d4nv6l54do"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Хитой АҚШ билан \"ҳар қандай\" урушга киришга тайёр - расмий Пекин",
+            "firstPublished": "2025-02-27T09:24:08.036Z",
+            "lastPublished": "2025-03-05T14:49:20.169Z",
+            "link": "https://www.bbc.com/uzbek/articles/cn899vvq3j8o/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/1a5c/live/a661aba0-f9cf-11ef-80e1-652badcf05bd.jpg.webp",
+            "description": "Хитойнинг сунъий идрок чатботи DeepSeekнинг юксалиши бутун дунё учун кутилмаган бўлди, аммо хитойликлар учун бу янгилик эмасди.\nХитой охирги ўн йил ичида \"Made in China 2025\" деб номланган улкан режа доирасида юқори технологияли маҳсулотлар, жумладан, сунъий интеллект бўйича ўз тажрибасини аста-секин ошириб келаётган эди.\n",
+            "imageAlt": "Президент Ши АҚШ билан савдо уруши хавфига юз тутяпти.",
+            "id": "cn899vvq3j8o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 40,
+        "curationId": "urn:bbc:vivo:curation:d34f244f-0695-4a30-aa2b-6a792357087e",
+        "curationType": "vivo-stream",
+        "position": 4,
+        "title": "Дунё",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Каспийдан Карачигача: Рус транспорт йўлакларига қарамликдан қутилиш учун Ўзбекистон қандай йўлларни изламоқда?",
+            "firstPublished": "2025-02-24T09:06:26.731Z",
+            "lastPublished": "2025-02-24T09:06:26.731Z",
+            "link": "https://www.bbc.com/uzbek/articles/cly37djr8r6o/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/2472/live/86dbb8d0-f28a-11ef-8c03-7dfdbeeb2526.jpg.webp",
+            "description": "Россия Украинадаги уруш билан банд бўларкан, Марказий Осиё давлатлари, жумладан, Ўзбекистон унинг таъсиридан қочишга интилётгандек. Бу, айниқса, мамлакат сўнгги вақтларда жиддий киришган транспорт лойиҳаларида намоён бўлади.",
+            "imageAlt": "xarita",
+            "id": "cly37djr8r6o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Бу қизиқ: Ўзини дори билан даволовчи гориллалар ҳақида эшитганмисиз? Уларнинг билими бизга тиббиётда ёрдам бериши мумкин",
+            "firstPublished": "2025-01-31T08:41:51.762Z",
+            "lastPublished": "2025-01-31T08:41:51.762Z",
+            "link": "https://www.bbc.com/uzbek/articles/cn57l1p91z3o/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/3508/live/95333780-dfae-11ef-88d3-dd7c96a87c10.jpg.webp",
+            "description": "Олимлар таъкидлашича, гориллаларнинг ўз-ўзини қандай даволашини ўрганиш келажакда янги дори-дармонлар кашф этилиши калити бўлиши мумкин.",
+            "imageAlt": "gorilla",
+            "id": "cn57l1p91z3o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Оғзи бор, кети йўқ махлуқ одамзоднинг аждоди бўлганми?",
+            "firstPublished": "2025-01-20T09:12:42.794Z",
+            "lastPublished": "2025-01-20T09:12:42.794Z",
+            "link": "https://www.bbc.com/uzbek/articles/cwye71qxkevo/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a172/live/80c19920-d70e-11ef-94cb-5f844ceb9e30.png.webp",
+            "description": "Олимлар ярим миллиард йиллик кети йўқ - орқа чиқарув тешигисиз махлуқнинг сирини ва ниҳоят очишди.",
+            "imageAlt": "keti yo'q",
+            "id": "cwye71qxkevo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:6352d87b-2255-439b-873e-688bffcfc025",
+        "curationType": "tipo-curation",
+        "position": 5,
+        "title": "Фақат бизда",
+        "visualProminence": "NORMAL",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Украина Америка қурол-яроғисиз урушдан омон чиқа оладими?",
+            "firstPublished": "2025-02-28T15:10:17.293Z",
+            "lastPublished": "2025-03-04T13:23:52.789Z",
+            "link": "https://www.bbc.com/uzbek/articles/cevxdjekrlko/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/091c/live/e2a59b20-f5e3-11ef-8c03-7dfdbeeb2526.jpg.webp",
+            "description": "АҚШ Украинага бундан уч йил аввал кенг кўламли уруш бошлангандан бери ҳарбий ёрдам бериб келди. Бироқ эндиликда у тўхтатилиши мумкин. Ҳеч бўлмаганда, Америка президенти Доналд Трамп бундай эҳтимолни истисно қилмаётир ва Киевга берилаётган мудофаа ёрдами юки Европа зиммасига тушиши керак, демоқда. Бу Украина учун нимани англатади?",
+            "imageAlt": "tank",
+            "id": "cevxdjekrlko"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "АҚШ Украинага ҳарбий ёрдамни тўхтатди",
+            "firstPublished": "2025-03-03T12:29:49.431Z",
+            "lastPublished": "2025-03-04T11:21:09.662Z",
+            "link": "https://www.bbc.com/uzbek/articles/cddy2qdgpj5o/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/f7b9/live/e546e490-f8f1-11ef-896e-d7e7fb1719a4.jpg.webp",
+            "description": "АҚШ Президенти Доналд Трамп Украинага берилаётган Америка ҳарбий ёрдамини тўхтатишга фармон берди.",
+            "imageAlt": "ATACMS ракета тизими",
+            "id": "cddy2qdgpj5o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Трамп ва Зеленский учрашмоқда. Музокара Украина учун манфаатли тугайдими?",
+            "firstPublished": "2025-02-25T12:36:04.406Z",
+            "lastPublished": "2025-02-28T16:54:56.972Z",
+            "link": "https://www.bbc.com/uzbek/articles/clyrkk9d4jdo/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/4f27/live/533e4570-f5f4-11ef-896e-d7e7fb1719a4.jpg.webp",
+            "description": "Шу соатларда Вашингтонда президентлар Доналд Трамп ва Володимир Зеленский юзма-юз учрашмоқда. Аввалроқ Америка етакчиси Украинага нисбатан жиддий босим қилган эди. Учрашув Украина учун қандай натижа билан тугаши мумкин?",
+            "imageAlt": "meeting",
+            "id": "clyrkk9d4jdo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "\"Трамп Путиндек фикрлайди\": либерал дунё тартиби якун топдими?",
+            "firstPublished": "2025-02-27T12:05:26.510Z",
+            "lastPublished": "2025-02-27T12:05:26.510Z",
+            "link": "https://www.bbc.com/uzbek/articles/ce8y5lrl9pno/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/0395/live/adfdd770-f31d-11ef-a845-cfdaa7743d4f.jpg.webp",
+            "description": "АҚШ ва унинг иттифоқчилари Россияни халқаро якканишинга айлантирмоқчи эдилар. Нега Доналд Трамп Москва билан муносабатларни қайта тиклаяпти?",
+            "imageAlt": "Калифорниядаги ёнғин оқибати",
+            "id": "ce8y5lrl9pno"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 26,
+        "link": "https://www.bbc.com/uzbek/topics/cqm6qnememet",
+        "curationId": "urn:bbc:vivo:curation:d82b05c8-16ee-4e8d-8d04-436c5e432988",
+        "curationType": "vivo-stream",
+        "position": 6,
+        "title": "Россиянинг Украинага босқини",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "BBC'нинг WhatsAppʼдаги каналлари ва гуруҳларидаги махфийлик тўғрисида хабарнома",
+            "firstPublished": "2025-02-14T11:08:57.711Z",
+            "lastPublished": "2025-02-14T11:08:57.711Z",
+            "link": "https://www.bbc.com/uzbek/articles/c07k05pxmjeo/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "c07k05pxmjeo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Ўзбекистон яна HRW ҳисоботида, Мубашшир Аҳмад қидирувда, энди Полша визаси ўзбекларга қийинлашадими? - Дайжест",
+            "firstPublished": "2025-02-20T13:55:24.101Z",
+            "lastPublished": "2025-02-20T13:55:24.101Z",
+            "link": "https://www.bbc.com/uzbek/articles/czx7d7qwygno/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/5762/live/8ad564d0-ef8e-11ef-bd1b-d536627785f2.jpg.webp",
+            "description": "10 йил олдин Ўзбекистон халқаро инсон ҳуқуқлари ташкилотлари ҳисоботларида мунтазам инсон ҳуқуқлари қўпол поймол этиладиган мамлакат  сифатида ёмонотлиқ қилиб келинар, вазият аслида ҳам шундай бўлганини Ўзбекистон расмийлари тан олишган, охирги йилларда аҳвол яхшилангани эътироф этиб келинаётган эди. Халқаро Хюман Райтс Уотч(HRW) ташкилоти бирданига икки маҳкум жасади Ўзбекистон қамоқхоналаридан чиққани, учинчиси шифохонада ҳушсиз экани ҳақида ҳисобот тарқатди.",
+            "imageAlt": "Ўзбекистон қамоқхонасидан ўлиги чиққан Муҳаммадқодир Пўлатов фотоси",
+            "id": "czx7d7qwygno"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Ғарбда савдоси чекланган \"Huawei\" ишчилари Тошкентда байроқ кўтариб тадбир ўтказиши мумкинми? Видео",
+            "firstPublished": "2025-02-17T13:06:18.627Z",
+            "lastPublished": "2025-02-17T13:06:18.627Z",
+            "link": "https://www.bbc.com/uzbek/articles/c23n3egx7gko/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/ba7d/live/7f6b1f20-ed2e-11ef-b008-3d63fe428927.jpg.webp",
+            "description": "Ўзбекистон фуқаролари турли байроқлар билан бир жойга йиғилиб спорт акциясини ўтказишса, Миллий боғ маъмурияти ва Ички ишлар бошқармаси уларга рухсат олишни тавсия қилган бўлармиди? Хитойликларга қонун-қоидалар ИИВ томонидан тушунтирилдими?",
+            "imageAlt": "Хитойлик бир гуруҳ одамлар Миллий Боғда ўтказган акция.",
+            "id": "c23n3egx7gko"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Россия: Нега кўпхотинлик сўнгги беш йилликнинг энг кескин баҳсларидан бирига айланди?",
+            "firstPublished": "2025-01-31T13:31:33.791Z",
+            "lastPublished": "2025-01-31T13:31:33.791Z",
+            "link": "https://www.bbc.com/uzbek/articles/cwypl95xzp3o/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7080/live/f1f83830-dfd1-11ef-a319-fb4e7360c4ec.jpg.webp",
+            "description": "Россияда туғилиш даражаси сўнгги 25 йилликда энг паст кўрсаткичга тушди. Демографик инқироз авж олар экан, “кўпхотинлик ечими” ўртага чиққан.",
+            "imageAlt": "masjid",
+            "id": "cwypl95xzp3o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Ўзбекистон: 15 сутка – қонунчилик масаласими ёки сиёсий эркинлик? Нега бу жазо қўлланиши кўпайган? - Видео",
+            "firstPublished": "2025-01-27T08:52:20.367Z",
+            "lastPublished": "2025-01-27T08:52:20.367Z",
+            "link": "https://www.bbc.com/uzbek/articles/cjde29gd4v5o/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a8d9/live/c0f82a20-da76-11ef-a37f-eba91255dc3d.jpg.webp",
+            "description": "Маъмурий жазо тўғрисидаги кодексда 50 дан ошиқ турдаги ҳатти-ҳаракатлар учун 15 суткалик қамоқ жазоси берилиши мумкинлиги белгиланган. 15 суткалик қамоқ ҳақида гап кетар экан, Ўзбекистонда бундай қарор устидан аппеляция беришдан фойда йўқ, деган қараш аллақачон шаклланиб бўлган. ",
+            "imageAlt": "Ўзбекистонда 15 суткагача маъмурий қамоқ жазосини қўллаш ҳолатлари ошган. ",
+            "id": "cjde29gd4v5o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Ўзбекистон: \"Таппи қилишни тўхтатишни хоҳлайман\". Қишлоқ қандай қишлаяпти? (Видео)",
+            "firstPublished": "2025-01-16T12:06:03.183Z",
+            "lastPublished": "2025-02-05T14:58:10.266Z",
+            "link": "https://www.bbc.com/uzbek/articles/c93qg21nlqgo/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/70c5/live/1cdcea70-d3eb-11ef-94cb-5f844ceb9e30.jpg.webp",
+            "description": "Эгарчи қишлоғига кирар экансиз,  бир зумда бу ерда одамлар қандай шароитда яшашларини англайсиз.\nКўча четларида ўтин ё гўзапоя,  деворларда таппи ва баъзида эски мунғайган симёғочларга кўзингиз тушади.\nKўчалар лой ва балчиқ. Онда-сонда кўча четидан лойга ботмай юришга интилиб кетаётган одамларни кўрасиз.\n",
+            "imageAlt": "Ўтин ёраётган эркак ва унинг ишини кузатиб турган аёл",
+            "id": "c93qg21nlqgo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Аҳмад ал-Шараа Сурия президенти бўлди. Дунё яна қайси жангариларни давлат арбоби ўлароқ қабул қилган эди?",
+            "firstPublished": "2025-01-30T12:12:02.523Z",
+            "lastPublished": "2025-01-30T12:12:02.523Z",
+            "link": "https://www.bbc.com/uzbek/articles/c7vdm5z0j8po/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7877/live/9de6d700-df00-11ef-a319-fb4e7360c4ec.jpg.webp",
+            "description": "Тарихда бир пайтлар жангари, қуролли гуруҳ етакчиси ёки ҳаттоки террорчи сифатида тамғаланган шахслар сиёсий арбобга айланиб, ўз халқлари тақдирини шакллантирган ҳолатлар бир неча бор учраган. Сурия етакчиси Аҳмад ал-Шараа бу рўйхатни тўлдирган сўнгги шахсга айланди.",
+            "imageAlt": "prezident",
+            "id": "c7vdm5z0j8po"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Украина уруши ва Ўзбекистон: \"Енгил\" ҳукмлар урушга қатнашишга рағбатлантирмайдими? Видео",
+            "firstPublished": "2025-01-13T08:33:13.144Z",
+            "lastPublished": "2025-01-13T08:33:13.144Z",
+            "link": "https://www.bbc.com/uzbek/articles/c4g3v2z5gd2o/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/bd9f/live/e4ea73e0-cf48-11ef-94cb-5f844ceb9e30.jpg.webp",
+            "description": "Охирги пайтда Украина уруши билан боғлиқ Ўзбек расмийлари жавоб бермаётган ёки беролмаётган саволлар кўпайди: Украинада қанча ўзбекистонлик ўлди? Нега Ўзбекистон ҳукумати ўз фуқароларини Украина урушига ёллаётган Россия расмийларига норозилик билдирмайди? Украинадаги урушда қатнашгани учун Ўзбекистонда судланган шахслар сони қанча ва нега баъзиларига енгил жазо берилаяпти? Ҳукумат ўзбекистонликлар Украина урушига ёлланиши олдини олиш учун нима қилаяпти? ",
+            "imageAlt": "Украина урушидаги жабҳа. Қуёш ботар чоғи сим тўр орасидан кетаётган икки аскар",
+            "id": "c4g3v2z5gd2o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Махфий амалиёт: Моссад ходимлари Ҳизбуллоҳ рация ва пейжерлари қандай портлатиб юборилгани ҳақида гапириб берди",
+            "firstPublished": "2024-12-24T10:55:52.716Z",
+            "lastPublished": "2024-12-24T10:55:52.716Z",
+            "link": "https://www.bbc.com/uzbek/articles/cn85j1dgz20o/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/3bbe/live/459ac590-c1e4-11ef-aff0-072ce821b6ab.jpg.webp",
+            "description": "Моссаднинг икки ходими CBS телеканали билан интервьюда Ҳизбуллоҳ жангариларининг рация ва пейжерлари қандай портлатиб юборилганини сўзлаб берди. Маълум бўлишича, Ҳизбуллоҳ аъзолари рацияларни – ичида портловчи модда борлигидан бехабар – 10 йил давомида ишлатиб юрган. ",
+            "imageAlt": "jangari",
+            "id": "cn85j1dgz20o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "BBC 100 Аёл лойиҳаси ва Ўзбекистон: Нимага айнан Дилором Йўлдошева танланди?",
+            "firstPublished": "2024-12-17T13:02:08.245Z",
+            "lastPublished": "2024-12-17T13:49:14.610Z",
+            "link": "https://www.bbc.com/uzbek/articles/cy53pe631x4o/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36c3/live/ccbeff10-bc66-11ef-aff0-072ce821b6ab.jpg.webp",
+            "description": "BBC 100 аёл лойиҳаси ўзи қандай лойиҳа? Ўзбекистон аёллари учун аҳамиятга эгами? Ва нимага асосланиб айнан Дилоромни танлашди? Шулар ҳақида лойиҳа муҳарриридан сўраб, билиб олдик.",
+            "imageAlt": "Dilorom Yo'ldosheva BBC yuz ayol loyihasi uchun suratda",
+            "id": "cy53pe631x4o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "\"Қандай юзлари чидайди, ахир?\" –  Тошкентдаги ногирон болалар жамияти энди кўчада қоладими? - Видео",
+            "firstPublished": "2024-12-19T15:41:33.074Z",
+            "lastPublished": "2024-12-19T15:41:33.074Z",
+            "link": "https://www.bbc.com/uzbek/articles/c4gz73dyde1o/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/cf39/live/455d0320-be1c-11ef-a2ca-e99d0c9a24e3.jpg.webp",
+            "description": "Тошкент шаҳридаги \"АПЛА\" ногирон болаларга ёрдамлашадиган нодавлат хайрия ташкилотидан 22 йил мобайнида фаолият юритиб келган биносидан чиқиб кетишни талаб қилмоқдалар.",
+            "imageAlt": "Тошкентдаги \"АПЛА\" ташкилоти ичида",
+            "id": "c4gz73dyde1o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:12ca91ba-0117-4b1d-ae42-4de99d9a6dff",
+        "curationType": "tipo-curation",
+        "position": 7,
+        "title": "Муҳаррир танлови",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Томоша қилинг",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/uzbek/bbc_uzbek_tv/tv_programmes/w13xttqv?limit=4",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/0ecf/live/ddef1a10-5eff-11ee-a49e-a37c20a4f120.png.webp",
+            "description": "Афғонистон учун Ўзбек тилида ТВ дастур",
+            "imageAlt": "Cameran",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fkyrgyz%2Fbbc_kyrgyz_tv%2Ftv_programmes%2Fw13xttqx%3Flimit%3D4"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:c86c5e92-5ec3-4f35-b6f6-b26ffb59d79b",
+        "curationType": "tipo-curation",
+        "position": 8,
+        "title": "BBC Ўзбек ТВ Дастури",
+        "visualProminence": "NORMAL",
+        "visualStyle": "BANNER"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "WhatsApp",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://bit.ly/4kdKVIt",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7a76/live/81f7b470-eac7-11ee-9410-0f893255c2a0.png.webp",
+            "imageAlt": "WhatsApp",
+            "id": "https%3A%2F%2Fwhatsapp.com%2Fchannel%2F0029VaUm1Ss3WHTbgIXrjw3D"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Telegram",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.telegram.me/bbcuzbek",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/6f5b/live/0ccddc30-af01-11ee-bc2f-cb5579b90709.png.webp",
+            "imageAlt": "Telegram",
+            "id": "https%3A%2F%2Ft.me%2Fbbcrussian"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "YouTube",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "http://www.youtube.com/user/bbcuzbek",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a77f/live/d0e56760-af00-11ee-beb5-e1400df560f2.png.webp",
+            "imageAlt": "YouTube",
+            "id": "https%3A%2F%2Fwww.youtube.com%2Fbbcrussian"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Instagram",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.instagram.com/bbcuzbek/",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/b4f2/live/9c698a80-aeff-11ee-beb5-e1400df560f2.png.webp",
+            "imageAlt": "Instagram",
+            "id": "https%3A%2F%2Fwww.instagram.com%2Fbbcrussian%2F"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Facebook",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.facebook.com/bbcuzbek",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d3ce/live/baa6e4f0-929b-11ee-91bf-230bfab3fcba.png.webp",
+            "imageAlt": "Facebook logo",
+            "id": "https%3A%2F%2Fwww.facebook.com%2Fbbcnewsafrique"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "X",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://x.com/bbcuzbek",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c238/live/f608c4a0-929b-11ee-91bf-230bfab3fcba.png.webp",
+            "imageAlt": "X logo",
+            "id": "https%3A%2F%2Ftwitter.com%2Fbbcafrique"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Odnoklassniki",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://ok.ru/bbcuzbek",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/162b/live/d2c348a0-ae68-11ef-8ab9-9192db313061.png.webp",
+            "imageAlt": "Odnoklassniki",
+            "id": "https%3A%2F%2Fok.ru%2Fbbcuzbek"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:839e56fd-7692-49e1-9c2c-783b0566cd61",
+        "curationType": "tipo-curation",
+        "position": 9,
+        "title": "Бизни ижтимоий тармоқларда кузатинг",
+        "visualProminence": "NORMAL",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "curationId": "urn:bbc:onward-journeys:most:read?=site=News",
+        "curationType": "most-popular",
+        "position": 10,
+        "title": "Энг кўп ўқилган",
+        "visualProminence": "NORMAL",
+        "visualStyle": "RANKED",
+        "link": "https://www.bbc.com/uzbek/cyr/popular/read",
+        "mostRead": {
+          "generated": "2025-03-13T10:58:44.325Z",
+          "lastRecordTimeStamp": "2025-03-13T10:56:00Z",
+          "firstRecordTimeStamp": "2025-03-13T08:56:00Z",
+          "items": [
+            {
+              "id": "urn:bbc:optimo:asset:cqjd2rq0vx0o",
+              "rank": 1,
+              "title": "Ўлгунча рўза тутадиган диндорлар ким?",
+              "href": "https://www.bbc.com/uzbek/articles/cqjd2rq0vx0o/cyr",
+              "timestamp": "2025-03-13T08:59:07.090Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "88 ёшли Саяр Деви Моди даволанишдан воз кечишга қарор қилди.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "88 ёшли Саяр Деви Моди даволанишдан воз кечишга қарор қилди.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "88 ёшли Саяр Деви Моди даволанишдан воз кечишга қарор қилди",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "88 ёшли Саяр Деви Моди даволанишдан воз кечишга қарор қилди",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 679,
+                        "height": 382,
+                        "locator": "472a/live/d9f03190-df11-11ef-a75f-9dd268073925.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Pranay Modi",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c3w19jdd4jzo",
+              "rank": 2,
+              "title": "Ўзбекистон ҳукумати Хитойга қарши кафиятни юмшатишга ҳаракат қилмоқда",
+              "href": "https://www.bbc.com/uzbek/articles/c3w19jdd4jzo/cyr",
+              "timestamp": "2025-03-12T15:51:03.232Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Учрашув",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Учрашув",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1280,
+                        "height": 907,
+                        "locator": "d44e/live/2ac679b0-ff58-11ef-a8b1-950887ddc6e5.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Расмий",
+                        "suitableForSyndication": false
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:czxnpey8ry1o",
+              "rank": 3,
+              "title": "Ўзбекистон, Марказий Осиёга бугун ким жиддий таҳдид? Видео",
+              "href": "https://www.bbc.com/uzbek/articles/czxnpey8ry1o/cyr",
+              "timestamp": "2025-03-11T13:22:52.191Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "ИШИД-Хуросон қаноти сўнгги йилларда Россия томони ҳам  Марказий Осиё давлатларини каттаю кичик минбарлардан энг кўп огоҳлантириб келаётган таҳдидлардан бири бўлади.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "ИШИД-Хуросон қаноти сўнгги йилларда Россия томони ҳам  Марказий Осиё давлатларини каттаю кичик минбарлардан энг кўп огоҳлантириб келаётган таҳдидлардан бири бўлади.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Коллаж",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Коллаж",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1600,
+                        "height": 900,
+                        "locator": "79b4/live/620682b0-fe74-11ef-8c3d-b7dcc7510cb1.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Alamy/BBC/kremlin.ru",
+                        "suitableForSyndication": false
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "caf92629-179c-344d-98ea-e6780bfa221b",
+              "rank": 4,
+              "title": "Sex - ўзбекчанинг бош муаммосими?",
+              "href": "/uzbek/uzbekistan-45932839",
+              "timestamp": "2018-10-21T12:14:08.000Z",
+              "indexImage": {
+                "id": "103949412",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/53F6/production/_103949412_non.jpg",
+                "path": "/cpsprodpb/53F6/production/_103949412_non.jpg",
+                "height": 1080,
+                "width": 1920,
+                "altText": "нон",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsprodpb",
+                "allowSyndication": true,
+                "type": "image"
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cwynxzdjl2lo",
+              "rank": 5,
+              "title": "Қариндошлар никоҳи: янги далиллар болалар касалликлари ҳақида нималарга ишора қилади?",
+              "href": "https://www.bbc.com/uzbek/articles/cwynxzdjl2lo/cyr",
+              "timestamp": "2025-03-12T09:24:14.545Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "A treated image of two wedding rings",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "A treated image of two wedding rings",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1920,
+                        "height": 1080,
+                        "locator": "881e/live/e969b7e0-f38e-11ef-896e-d7e7fb1719a4.png",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Getty Images",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "dd58f3bf-685d-426d-868d-22085c754b3c",
+              "rank": 6,
+              "title": "O’zbek trans ayol Ichki ishlar bo’limida jinsiy tegajoqlik qilingani, do’pposlangani va qamalganini da’vo qilmoqda - Video",
+              "href": "/uzbek/uzbekistan-69210653",
+              "timestamp": "2024-07-22T13:59:12.000Z",
+              "indexImage": {
+                "id": "133503128",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/140D2/production/_133503128_e68592ed-562e-4b61-af1d-c5e649266e1d.jpg",
+                "path": "/cpsprodpb/140D2/production/_133503128_e68592ed-562e-4b61-af1d-c5e649266e1d.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Kamilla Norova Rossiyada 'Kamilla Zakharova' taxallusi ostida musiqiy ijod qiladi.",
+                "caption": "Kamilla Norova Rossiyada 'Kamilla Zakharova' taxallusi ostida musiqiy ijod qiladi.",
+                "copyrightHolder": "Kamilla Norova",
+                "originCode": "cpsprodpb",
+                "allowSyndication": false,
+                "type": "image"
+              }
+            },
+            {
+              "id": "d00e28df-b60e-4b4e-a7de-ed266ec1b15b",
+              "rank": 7,
+              "title": "Рамазон. Савол ва жавоб: Тишни ювиш рўзани бузадими, рўзадор тупугини ютса нима бўлади? Нима бўлса ҳам рўза тутиш керакми?",
+              "href": "/uzbek/world-61006262",
+              "timestamp": "2024-04-01T17:35:18.000Z",
+              "indexImage": {
+                "id": "124278387",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/13233/production/_124278387_ramadan.jpg",
+                "path": "/cpsprodpb/13233/production/_124278387_ramadan.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Ramazon",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsprodpb",
+                "allowSyndication": true,
+                "type": "image"
+              }
+            },
+            {
+              "id": "5674014a-aef3-a34b-b937-eb29ac483daf",
+              "rank": 8,
+              "title": "Ўзбекистон: Фоҳишабозлик, секс ва ўзбек эркаклари, улар ечимни нимада кўришади? (18+)",
+              "href": "/uzbek/uzbekistan-47838092",
+              "timestamp": "2019-04-06T09:28:28.000Z",
+              "indexImage": {
+                "id": "106326463",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/8E6E/production/_106326463_b5e0e42b-033f-4686-8213-81b55b975f7b.jpg",
+                "path": "/cpsprodpb/8E6E/production/_106326463_b5e0e42b-033f-4686-8213-81b55b975f7b.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Ўзбек қизлари",
+                "copyrightHolder": "GETTYIMAGES/CHINA PHOTOS",
+                "originCode": "cpsprodpb",
+                "allowSyndication": false,
+                "type": "image"
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cz0lz4vx1p8o",
+              "rank": 9,
+              "title": "Ўзбекистон: Журналистлар нимадан норози, уларни ким ҳимоя қилади?",
+              "href": "https://www.bbc.com/uzbek/articles/cz0lz4vx1p8o/cyr",
+              "timestamp": "2025-02-11T14:58:13.512Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Журналистлар йиғинидан\n",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Журналистлар йиғинидан\n",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1119,
+                        "height": 630,
+                        "locator": "b238/live/3548b820-e884-11ef-acf4-d3a321e6d53f.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Facebook/Anora Sodiq",
+                        "suitableForSyndication": false
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cgm1n1r2g23o",
+              "rank": 10,
+              "title": "\"Тўп Россияда\" – Украина 30 кунлик оташкесимга рози бўлди",
+              "href": "https://www.bbc.com/uzbek/articles/cgm1n1r2g23o/cyr",
+              "timestamp": "2025-03-12T11:45:02.132Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Tramp va Zelenskiy",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Tramp va Zelenskiy",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1604,
+                        "height": 906,
+                        "locator": "2ec2/live/d171cb20-ff35-11ef-a8b1-950887ddc6e5.png",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Getty Images",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "summaries": [
+          {
+            "type": "video",
+            "isLive": false,
+            "title": "Махсус лойиҳа: Каримовдан “аразлаган” “инжиқ” Туркманистон билан Мирзиёев нега яқинлашишга ошиқмоқда?",
+            "firstPublished": "2023-10-09T08:50:09.000Z",
+            "lastPublished": "2023-10-09T08:50:09.000Z",
+            "link": "https://www.bbc.com/uzbek/uzbekistan-66853875",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/6704/production/_131227362_1021820919_0_0_1600_2238_1440x900_80_0_1_8357088c72b976ca58209c75bf4a2962.jpg.jpg.webp",
+            "description": "Шавкат Мирзиёев дунёдаги энг ёпиқ мамлакатлардан ҳисобланмиш Туркманистон билан тобора яқинлашишга интилмоқда. Яккаҳоким бошқаруви ўта кучли жанубий қўшни нимаси билан Ўзбекистонга бу қадар жозибадор кўринади?",
+            "imageAlt": "turkmen",
+            "id": "8fb40e8f-81ee-49b1-a440-b7698d7659c9"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Ўзбекистон аёллари Ипак Йўли бозорларини қандай қўлга олмоқда? - BBCUzbek тадқиқ этади",
+            "firstPublished": "2019-10-30T07:18:04.000Z",
+            "lastPublished": "2019-10-30T17:56:20.000Z",
+            "link": "https://www.bbc.com/uzbek/uzbekistan-50219916",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/79EF/production/_109451213_feruzatwofinal.jpg.webp",
+            "description": "Ўзбекистон аёллари Ипак Йўли бозорларидан эркакларни қандай сиқиб чиқармоқда, янги ҳужжатли фильм - бозордаги савдо-сотиғи, деб икки ўлимдан қайтган Муҳайё ҳозир манаман, деган тадбиркор. Кичиккина Риштондан туриб, маҳсулотларини энди Қафқоз қадар экспорт қилмоқчи. У Осиёни Европага боғлай оладими?",
+            "imageAlt": "Тожир аёл",
+            "id": "082397be-510b-4a4e-a14a-b3f727e04690"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "BBC News Ўзбек хизмати \"Бобурий маликалар изидан\" номли уч қисмдан иборат ҳужжатли-драматик фильм суратга олди",
+            "firstPublished": "2020-02-14T13:51:08.000Z",
+            "lastPublished": "2020-02-14T13:51:08.000Z",
+            "link": "https://www.bbc.com/uzbek/uzbekistan-51462034",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/11615/production/_110898117_de22.jpg.webp",
+            "description": "Андижон қоқ марказида Бобур Шоҳнинг ҳайкали қад ростлаган. Тошкент, Самарқанд ва Шаҳрисабзда эса, унинг бобокалони Амир Темур ҳайкалларини кўрасиз. Тарих дарсликларида шарафланган аксар қаҳрамонлар ҳам асосан эркаклар, бу ўринда шоҳлару шаҳзодалар...Ҳукмдорларга ҳамнафас бўлган, уларни қўриган, қўллаган маликалар-чи?",
+            "imageAlt": "Эсон Давлат Бегим, рассом Исомиддин Эшонқулов",
+            "id": "39786bbf-c2f2-3c4b-acc2-f93cb26878e1"
+          },
+          {
+            "type": "video",
+            "isLive": false,
+            "title": "Америка ва ўзбеклар: Америкада бизнес қилиш осонми? Ёш тадбиркорнинг ҳикояси",
+            "firstPublished": "2024-04-29T11:41:53.000Z",
+            "lastPublished": "2024-04-29T11:41:53.000Z",
+            "link": "https://www.bbc.com/uzbek/uzbekistan-68921039",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/9EC4/production/_133244604_4.jpg.webp",
+            "description": "“Шу ишни бу ёқда кўрдим, қилдим. Энг биринчи бўлиб, Ўзбекистонга илинаман шу нарсаларни. Биздаям халқ қийналмаса, шундай маҳсулотларни ола олса, дейман. Америкада нима яхши нарса кўрсам, ҳар доим илинаман”, - дейди Сардор.",
+            "imageAlt": "BBC",
+            "id": "699b30a2-099d-4274-abca-9dbd0b102c74"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:7a2c3efb-5313-48fb-96f2-91896d3462a8",
+        "curationType": "tipo-curation",
+        "position": 11,
+        "title": "BBC Сандиқ",
+        "visualProminence": "NORMAL",
         "visualStyle": "COLLECTION"
       }
     ],
     "metadata": {
       "atiAnalytics": {
-        "contentId": "urn:bbc:tipo:topic:cvp5j113ngqt",
+        "contentId": "urn:bbc:tipo:topic:c44d8kd7q4gt",
         "contentType": "index-home",
         "pageIdentifier": "uzbekcyr.page",
-        "pageTitle": "Uzbek"
+        "pageTitle": "BBC News , O'zbek - Бош саҳифа"
       }
     }
   },

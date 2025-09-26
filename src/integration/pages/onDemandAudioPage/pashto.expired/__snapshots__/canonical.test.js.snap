@@ -1,17 +1,10 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Canonical On Demand Audio Page A11y I can see the skip to content link 1`] = `"مطلب ته ورشئ"`;
 
-exports[`Canonical On Demand Audio Page Analytics ATI tracking pixel excluding src 1`] = `
-<img
-  alt=""
-  height="1px"
-  style="position:absolute"
-  width="1px"
-/>
-`;
+exports[`Canonical On Demand Audio Page Analytics ATI tracking pixel excluding src 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" >"`;
 
-exports[`Canonical On Demand Audio Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/"`;
+exports[`Canonical On Demand Audio Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
 
 exports[`Canonical On Demand Audio Page Analytics ATI tracking pixel search params 1`] = `
 [
@@ -111,7 +104,7 @@ exports[`Canonical On Demand Audio Page Footer Anchors should match text and url
 
 exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 8`] = `
 {
-  "text": "Other Languages",
+  "text": "نورې ژبې",
   "url": "https://www.bbc.com/ws/languages",
 }
 `;
@@ -119,13 +112,13 @@ exports[`Canonical On Demand Audio Page Footer Anchors should match text and url
 exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 9`] = `
 {
   "text": "د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره.",
-  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
 }
 `;
 
 exports[`Canonical On Demand Audio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pashto"`;
 
-exports[`Canonical On Demand Audio Page Footer Paragraphs should match text 1`] = `"© 2024 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
+exports[`Canonical On Demand Audio Page Footer Paragraphs should match text 1`] = `"© 2025 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
 
 exports[`Canonical On Demand Audio Page Header I can see the branding 1`] = `"BBC News, پښتو"`;
 
@@ -173,33 +166,26 @@ exports[`Canonical On Demand Audio Page Header Navigation link should match text
 
 exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 7`] = `
 {
-  "text": "ويډيوګانې",
-  "url": "/pashto/topics/c2m45zyk0mmt",
+  "text": "اقتصاد او سوداګري",
+  "url": "/pashto/topics/cy087kqvl1yt",
 }
 `;
 
 exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 8`] = `
 {
-  "text": "ځانګړې پاڼې",
-  "url": "/pashto/topics/c6pxyz4e0ryt",
+  "text": "ساینس او ټکنالوژي",
+  "url": "/pashto/topics/ckgrvled11kt",
 }
 `;
 
 exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 9`] = `
 {
-  "text": "کالم",
-  "url": "/pashto/topics/cq57nwne9lzt",
+  "text": "هنر او ادب",
+  "url": "/pashto/topics/c8xqkd91knnt",
 }
 `;
 
 exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 10`] = `
-{
-  "text": "پر سټلایت خپرونې",
-  "url": "/pashto/articles/c4n55eygdn0o",
-}
-`;
-
-exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 11`] = `
 {
   "text": "راډیویي خپرونې",
   "url": "/pashto/topics/c9xz1ekw79nt",

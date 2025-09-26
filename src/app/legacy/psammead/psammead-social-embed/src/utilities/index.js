@@ -9,7 +9,7 @@ export const getProviderName = provider => {
     throw Error("Expected 'provider' to be a string.");
   return {
     instagram: 'Instagram',
-    twitter: 'Twitter',
+    twitter: 'X',
     youtube: 'YouTube',
     facebook: 'Facebook',
     tiktok: 'TikTok',

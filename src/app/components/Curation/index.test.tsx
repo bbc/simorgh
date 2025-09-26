@@ -2,25 +2,31 @@ import React from 'react';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import fixture from '../../../../data/pidgin/topics/c95y35941vrt.json';
 import mundoFixture from '../../../../data/mundo/topics/c1en6xwmpkvt.json';
+import kyrgyzFixture from '../../../../data/kyrgyz/topics/cvpv9djp9qqt.json';
 import kyrgyzHomePage from '../../../../data/kyrgyz/homePage/index.json';
 import { data as kyrgyzMostRead } from '../../../../data/kyrgyz/mostRead/index.json';
 import afriqueHomePage from '../../../../data/afrique/homePage/index.json';
+import portugueseHomePage from '../../../../data/portuguese/homePage/index.json';
+import dariHomePage from '../../../../data/dari/homePage/index.json';
 import { render } from '../react-testing-library-with-providers';
 import Curation from '.';
 import {
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
+  INTENT,
   VisualStyle,
   VisualProminence,
   Summary,
 } from '../../models/types/curationData';
 import { MostReadData } from '../MostRead/types';
 import { RadioScheduleData } from '../../models/types/radioSchedule';
+import { MediaCollection, PortraitClipMediaBlock } from '../MediaLoader/types';
 
 jest.mock('../ThemeProvider');
 
-const { NONE, BANNER, RANKED, COLLECTION } = VISUAL_STYLE;
+const { NONE, BANNER, RANKED, COLLECTION, LINKS, INSITU } = VISUAL_STYLE;
 const { NORMAL, HIGH, LOW, MAXIMUM, MINIMUM } = VISUAL_PROMINENCE;
+const { MEDIA_PLAYER } = INTENT;
 
 const messageBannerCuration = kyrgyzHomePage.data.curations.find(
   ({ visualStyle, visualProminence, summaries }) =>
@@ -36,6 +42,31 @@ const billboardCuration = kyrgyzHomePage.data.curations.find(
     visualProminence === MAXIMUM &&
     summaries &&
     summaries.length > 0,
+);
+
+const usefulLinksCuration = kyrgyzFixture.data.curations.find(
+  ({ visualStyle, visualProminence, summaries }) =>
+    visualStyle === LINKS &&
+    visualProminence === LOW &&
+    summaries &&
+    summaries.length > 0,
+);
+
+const socialLinksCuration = kyrgyzFixture.data.curations.find(
+  ({ visualStyle, visualProminence, summaries }) =>
+    visualStyle === LINKS &&
+    visualProminence === NORMAL &&
+    summaries &&
+    summaries.length > 0,
+);
+
+const portraitVideoCuration = portugueseHomePage.data.curations.find(
+  ({ visualStyle, visualProminence, portraitVideo }) =>
+    visualStyle === INSITU && visualProminence === NORMAL && portraitVideo,
+);
+
+const mediaCollectionCuration = dariHomePage.data.curations.find(
+  ({ intent, mediaCollection }) => intent === MEDIA_PLAYER && mediaCollection,
 );
 
 const components = {
@@ -69,14 +100,36 @@ const components = {
     visualProminence: MAXIMUM,
     summaries: billboardCuration?.summaries,
   },
+  'useful-links-1': {
+    visualStyle: LINKS,
+    visualProminence: LOW,
+    summaries: usefulLinksCuration?.summaries,
+  },
+  'social-links-1': {
+    visualStyle: LINKS,
+    visualProminence: NORMAL,
+    summaries: socialLinksCuration?.summaries,
+  },
+  'portrait-video-carousel': {
+    visualStyle: INSITU,
+    visualProminence: NORMAL,
+    portraitVideo: portraitVideoCuration?.portraitVideo,
+  },
+  'media-collection-1': {
+    mediaCollection: mediaCollectionCuration?.mediaCollection,
+  },
 };
 
 interface TestProps {
   visualStyle: VisualStyle;
   visualProminence: VisualProminence;
   summaries?: Summary[];
+  portraitVideo?: {
+    blocks: PortraitClipMediaBlock[];
+  };
   mostRead?: MostReadData;
   radioSchedule?: RadioScheduleData[];
+  mediaCollection?: MediaCollection[];
 }
 
 describe('Curation', () => {
@@ -93,8 +146,10 @@ describe('Curation', () => {
         visualStyle,
         visualProminence,
         summaries,
+        portraitVideo,
         mostRead,
         radioSchedule,
+        mediaCollection,
       }: TestProps,
     ) => {
       const { getByTestId } = render(
@@ -105,11 +160,13 @@ describe('Curation', () => {
           summaries={summaries || []}
           mostRead={mostRead}
           radioSchedule={radioSchedule}
+          portraitVideo={portraitVideo}
+          mediaCollection={mediaCollection}
         />,
         {
           toggles: {
             mostRead: { enabled: true },
-            frontPageRadioSchedule: { enabled: true },
+            homePageRadioSchedule: { enabled: true },
           },
           service: 'afrique',
         },
@@ -211,6 +268,7 @@ describe('Curation', () => {
           // @ts-expect-error summary will not be undefined
           summaries={[summary]}
           curationLength={2}
+          title={summary?.title}
         />,
       );
 
@@ -263,7 +321,7 @@ describe('Curation', () => {
       expect(document.querySelectorAll('h3').length).toBe(8);
     });
 
-    it('should have h2 summary titles when page has one curation - somple curation', () => {
+    it('should have h2 summary titles when page has one curation - simple curation', () => {
       const { summaries } = fixture.data.curations[0];
 
       render(
@@ -306,10 +364,13 @@ describe('Curation', () => {
           position={0}
           summaries={summaries}
           curationLength={6}
+          renderVisuallyHiddenH2Title
         />,
       );
       expect(document.querySelectorAll('h2').length).toBe(1); // the visually hidden h2 heading
       expect(document.querySelectorAll('h3').length).toBe(8); // the visible h3 promos
+      const subheading = document.querySelector('h2.Subheading');
+      expect(subheading).not.toBeInTheDocument(); // no subheading for first curation on a home page
     });
 
     it('should have visually hidden title text as h2 if it is the first curation of multiple and has a title - hierarchial curation', () => {
@@ -323,10 +384,149 @@ describe('Curation', () => {
           position={0}
           summaries={summaries}
           curationLength={6}
+          renderVisuallyHiddenH2Title
         />,
       );
       expect(document.querySelectorAll('h2').length).toBe(1); // the visually hidden h2 heading
       expect(document.querySelectorAll('h3').length).toBe(8); // the visible h3 promos
+      const subheading = document.querySelector('h2.Subheading');
+      expect(subheading).not.toBeInTheDocument(); // no subheading for first curation on a home page
+    });
+    it('should have a subheading as h2 if it is the first curation of multiple and has a title - simple curation', () => {
+      const { summaries, title } = mundoFixture.data.curations[0];
+      render(
+        <Curation
+          title={title}
+          visualProminence={NORMAL}
+          visualStyle={NONE}
+          position={0}
+          summaries={summaries}
+          curationLength={6}
+          renderVisuallyHiddenH2Title={false}
+        />,
+      );
+
+      expect(document.querySelectorAll('h2').length).toBe(1); // the subheading h2
+      const subheading = document.querySelector('h2');
+      expect(subheading).toBeInTheDocument();
+      // Check that the <h2> does NOT have a classname containing 'visuallyHiddenText'
+      const classList = Array.from(subheading?.classList || []);
+      const hasVisuallyHiddenClass = classList.some(className =>
+        className.includes('visuallyHiddenText'),
+      );
+      expect(hasVisuallyHiddenClass).toBe(false); // Ensure it's not visually hidden
+      expect(subheading?.textContent).toBe(title);
+    });
+
+    it('should have a subheading as h2 if it is the first curation of multiple and has a title - hierarchical curation', () => {
+      const { summaries, title } = mundoFixture.data.curations[0];
+
+      render(
+        <Curation
+          title={title}
+          visualProminence={HIGH}
+          visualStyle={NONE}
+          position={0}
+          summaries={summaries}
+          curationLength={6}
+          renderVisuallyHiddenH2Title={false}
+        />,
+      );
+
+      expect(document.querySelectorAll('h2').length).toBe(1); // the subheading h2
+      const subheading = document.querySelector('h2');
+      expect(subheading).toBeInTheDocument();
+      // Check that the <h2> does NOT have a classname containing 'visuallyHiddenText'
+      const classList = Array.from(subheading?.classList || []);
+      const hasVisuallyHiddenClass = classList.some(className =>
+        className.includes('visuallyHiddenText'),
+      );
+      expect(hasVisuallyHiddenClass).toBe(false); // Ensure it's not visually hidden
+      expect(subheading?.textContent).toBe(title);
+    });
+
+    it('should not render visually hidden title as h2 if it is the first curation of multiple and does not have a title - simple curation', () => {
+      const { summaries } = mundoFixture.data.curations[0];
+
+      render(
+        <Curation
+          visualProminence={NORMAL}
+          visualStyle={NONE}
+          position={0}
+          summaries={summaries}
+          curationLength={6}
+          renderVisuallyHiddenH2Title={false}
+        />,
+      );
+
+      expect(document.querySelectorAll('h2').length).toBe(0);
+
+      const subheading = document.querySelector('h2');
+
+      expect(subheading).not.toBeInTheDocument();
+    });
+
+    it('should not render visually hidden title as h2 if it is the first curation of multiple and does not have a title - hierarchical curation', () => {
+      const { summaries } = mundoFixture.data.curations[0];
+
+      render(
+        <Curation
+          visualProminence={HIGH}
+          visualStyle={NONE}
+          position={0}
+          summaries={summaries}
+          curationLength={6}
+          renderVisuallyHiddenH2Title={false}
+        />,
+      );
+
+      expect(document.querySelectorAll('h2').length).toBe(0);
+
+      const subheading = document.querySelector('h2');
+
+      expect(subheading).not.toBeInTheDocument();
+    });
+
+    it('should not have a subheading or visually hidden text as h2 if it is a topic page with only one curation', () => {
+      const { summaries, title } = mundoFixture.data.curations[0];
+
+      render(
+        <Curation
+          title={title}
+          visualProminence={NORMAL}
+          visualStyle={NONE}
+          position={0}
+          summaries={summaries}
+          curationLength={1} // Only one curation
+          renderVisuallyHiddenH2Title={false}
+        />,
+      );
+
+      expect(document.querySelectorAll('h2').length).toBe(summaries.length);
+      const firstHeading = document.querySelector('h2');
+      expect(firstHeading).toBeInTheDocument();
+      expect(firstHeading?.textContent).not.toBe(title);
+    });
+
+    it('should render the curation title as a link if the title has a link in the data on a topic page', () => {
+      const { title, link, summaries } = mundoFixture.data.curations[0];
+
+      render(
+        <Curation
+          title={title}
+          link={link}
+          visualProminence={NORMAL}
+          visualStyle={NONE}
+          position={0}
+          summaries={summaries}
+          curationLength={6}
+          renderVisuallyHiddenH2Title={false}
+        />,
+      );
+
+      const titleLink = document.querySelector(`a[href="${link}"]`);
+      expect(titleLink).toBeInTheDocument();
+      expect(titleLink?.textContent).toBe(title);
     });
   });
 });

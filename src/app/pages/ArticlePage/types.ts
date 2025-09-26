@@ -1,13 +1,12 @@
-import { MediaBlock } from '#app/components/MediaLoader/types';
 import { OptimoBlock } from '#app/models/types/optimo';
 
-export type ComponentToRenderProps = {
-  blocks: OptimoBlock[];
+export type Block = Omit<OptimoBlock, 'model'> & {
+  model: { blocks: OptimoBlock[] };
 };
 
-// Temporary - For rendering storybook asset. To replace with hook use.
-export type MediaComponentToRenderProps = {
-  blocks: MediaBlock[];
+export type ComponentToRenderProps = {
+  type: string;
+  blocks: Block[];
 };
 
 export type TimeStampProps = {

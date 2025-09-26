@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Canonical Home Page A11y I can see the skip to content link 1`] = `"إذهب الى المحتوى"`;
 
@@ -16,16 +16,9 @@ exports[`Canonical Home Page Ads should have the following properties 2`] = `
 />
 `;
 
-exports[`Canonical Home Page Analytics ATI tracking pixel excluding src 1`] = `
-<img
-  alt=""
-  height="1px"
-  style="position:absolute"
-  width="1px"
-/>
-`;
+exports[`Canonical Home Page Analytics ATI tracking pixel excluding src 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" >"`;
 
-exports[`Canonical Home Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/"`;
+exports[`Canonical Home Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
 
 exports[`Canonical Home Page Analytics ATI tracking pixel search params 1`] = `
 [
@@ -113,7 +106,7 @@ exports[`Canonical Home Page Footer Anchors should match text and url 7`] = `
 
 exports[`Canonical Home Page Footer Anchors should match text and url 8`] = `
 {
-  "text": "Other Languages",
+  "text": "بي بي سي نيوز عربي في لغات أخرى",
   "url": "https://www.bbc.com/ws/languages",
 }
 `;
@@ -128,13 +121,13 @@ exports[`Canonical Home Page Footer Anchors should match text and url 9`] = `
 exports[`Canonical Home Page Footer Anchors should match text and url 10`] = `
 {
   "text": "سياستنا بخصوص الروابط الخارجية.",
-  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
 }
 `;
 
 exports[`Canonical Home Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/arabic"`;
 
-exports[`Canonical Home Page Footer Paragraphs should match text 1`] = `"© 2024 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
+exports[`Canonical Home Page Footer Paragraphs should match text 1`] = `"© 2025 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
 
 exports[`Canonical Home Page Header I can see the branding 1`] = `"BBC News, عربي"`;
 
@@ -216,7 +209,8 @@ exports[`Canonical Home Page Page content First item in the first curation is th
 <img
   alt="الرياضه"
   class="bbc-139onq"
-  loading="lazy"
+  fetchpriority="high"
+  loading="eager"
   src="https://ichef.test.bbci.co.uk/ace/standard/240/cpsdevpb/36C4/test/_63702041_tv000117434.jpg"
   style="aspect-ratio:16 / 9"
 />

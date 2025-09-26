@@ -96,3 +96,15 @@ export const getCookieBannerRejectInManageSettings = (service, variant) =>
       appConfig[config[service].name][variant].translations.consentBanner.cookie
         .amp.reject,
     );
+
+export const shouldRunBannerTest = ({ isPrivacyTests, testContext }) => {
+  cy.get('@toggles').then(toggles => {
+    const privacyPolicyEnabled = toggles?.privacyPolicy?.enabled;
+    if (isPrivacyTests && !privacyPolicyEnabled) {
+      testContext.skip();
+    }
+    if (!isPrivacyTests && privacyPolicyEnabled) {
+      testContext.skip();
+    }
+  });
+};

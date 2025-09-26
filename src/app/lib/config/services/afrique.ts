@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-afrique',
     atiAnalyticsProducerId: '3',
+    atiAnalyticsProducerName: 'AFRIQUE',
+    useReverb: true,
     chartbeatDomain: 'afrique.bbc.co.uk',
     brandName: 'BBC News Afrique',
     product: 'BBC News',
@@ -40,11 +42,28 @@ export const service: DefaultServiceConfig = {
       'https://www.bbc.com/afrique/institutionelles-49283281',
     isTrustProjectParticipant: true,
     script: latinWithDiacritics,
-    manifestPath: '/manifest.json',
+    manifestPath: '/afrique/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Accueil',
+    homePageTitle: 'Accueil',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'Promotion WhatsApp',
+      brandTitle: 'BBC Afrique est sur WhatsApp',
+      brandDescription: 'Des informations vérifiées à portée de main',
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0lp89nq.jpg',
+        alt: `BBC News Afrique Whatsapp : L'information sur votre téléphone`,
+      },
+      linkLabel: {
+        text: 'Cliquez ici et abonnez-vous !',
+        href: 'https://www.whatsapp.com/channel/0029Vb5lcPBIHphLRjicWN1K',
+      },
+      skipLink: {
+        text: 'Ignorer %title% et continuer la lecture',
+        endTextVisuallyHidden: 'Fin de %title%',
+      },
+    },
     translations: {
       pagination: {
         page: 'Page',
@@ -55,14 +74,26 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'Publicités',
       },
-      recommendationTitle: 'Recommended articles',
       seeAll: 'Tout voir',
       home: 'Accueil',
+      continueReading: 'Continuer la lecture',
       currentPage: 'Page en cours',
       skipLinkText: 'Aller au contenu',
       relatedContent: 'Lire plus',
       relatedTopics: 'Sujets associés',
+      moreOnThis: '',
       navMenuText: 'Rubriques',
+      liteSite: {
+        onboardingMessage:
+          'Vous visualisez une version texte de ce site web qui utilise moins de données. Voir la version principale du site, avec toutes les images et vidéos.',
+        toMainSite: 'Me rediriger vers le site principal',
+        informationPage: 'En savoir plus sur cette version économe en données',
+        informationPageLink:
+          'https://www.bbc.com/afrique/articles/c861e868x5eo',
+        dataSaving: 'Lire uniquement le texte pour utiliser moins de données',
+        articleDataSavingLinkText:
+          'Lire uniquement le texte pour utiliser moins de données',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Lecteur média',
         audioPlayer: 'Lecteur audio',
@@ -235,6 +266,8 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Emission de radio suivante',
         duration: 'Durée',
         recentEpisodes: 'Editions Précédentes',
+        closeVideo: 'Sortir',
+        endOfContentClose: 'Fin de ce contenu. Sortir',
       },
       socialEmbed: {
         caption: {
@@ -270,7 +303,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'Le choix de la rédaction',
     },
     mostRead: {
-      header: 'Les plus lus',
+      header: 'Les plus populaires',
       lastUpdated: 'Dernière mise à jour:',
       numberOfItems: 5,
       hasMostRead: true,
@@ -281,7 +314,7 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'Durée %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'Les plus lus',
       skipLink: {
         text: 'Skip %title% and continue reading',
         endTextVisuallyHidden: 'End of %title%',
@@ -293,7 +326,7 @@ export const service: DefaultServiceConfig = {
         text: 'Pourquoi vous pouvez faire confiance à BBC News',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Découvrez notre approche en matière de liens externes.',
       },
       links: [
@@ -318,8 +351,12 @@ export const service: DefaultServiceConfig = {
           text: 'Contactez la BBC',
         },
         {
+          href: 'https://www.bbc.com/afrique.lite',
+          text: 'Lire en version allégée',
+        },
+        {
           href: 'https://www.bbc.com/ws/languages',
-          text: 'Other Languages',
+          text: 'Autres langues',
         },
         {
           id: 'COOKIE_SETTINGS',
@@ -336,6 +373,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Accueil',
         url: '/afrique',
+      },
+      {
+        title: 'Conflit en RDC',
+        url: '/afrique/topics/cge72ry253jt',
       },
       {
         title: 'Ecoutez en direct',
@@ -368,10 +409,12 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Vidéos',
         url: '/afrique/topics/cz4vn9gyd6rt',
+        hideOnLiteSite: true,
       },
       {
         title: 'Nos émissions',
         url: '/afrique/topics/c88nzggm8gxt',
+        hideOnLiteSite: true,
       },
     ],
   },

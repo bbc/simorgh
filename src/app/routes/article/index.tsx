@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  ArticlePage,
-  ErrorPage,
-  MediaArticlePage,
-  FeatureIdxPage,
-} from '#pages/index';
+import { ArticlePage, ErrorPage, MediaArticlePage } from '#pages/index';
 import {
   articlePath,
   cpsAssetPagePath,
@@ -18,7 +13,6 @@ import {
   ERROR_PAGE,
   STORY_PAGE,
   PHOTO_GALLERY_PAGE,
-  FEATURE_INDEX_PAGE,
 } from '#app/routes/utils/pageTypes';
 import { Article } from '#app/models/types/optimo';
 import getInitialData from '#app/routes/article/getInitialData';
@@ -29,8 +23,7 @@ type SupportedPageTypes =
   | typeof STORY_PAGE
   | typeof PHOTO_GALLERY_PAGE
   | typeof MEDIA_ARTICLE_PAGE
-  | typeof MEDIA_ASSET_PAGE
-  | typeof FEATURE_INDEX_PAGE;
+  | typeof MEDIA_ASSET_PAGE;
 
 const ArticleVariation = (props: { pageData: Article }) => {
   const consumableAsSFV = props?.pageData?.metadata?.consumableAsSFV ?? false;
@@ -46,7 +39,6 @@ const ArticleVariation = (props: { pageData: Article }) => {
     [PHOTO_GALLERY_PAGE]: ArticlePage,
     [MEDIA_ARTICLE_PAGE]: MediaArticlePage,
     [MEDIA_ASSET_PAGE]: MediaArticlePage,
-    [FEATURE_INDEX_PAGE]: FeatureIdxPage,
   }[pageType];
 
   return PageType ? (

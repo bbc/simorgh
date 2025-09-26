@@ -1,7 +1,7 @@
 {
   "data": {
-    "title": "Uzbek",
-    "description": "",
+    "title": "BBC News , O'zbek - Bosh sahifa",
+    "description": "BBC Uzbek ( Bi-bi-si O‘zbek xizmati) O‘zbekiston, mintaqa va jahon yangiliklari uchun xolis hamda ishonchli manbadir",
     "pageType": "home",
     "curations": [
       {
@@ -9,51 +9,1314 @@
           {
             "type": "article",
             "isLive": false,
-            "title": "Суриянинг темир хоними Асмо Асад ким?",
-            "firstPublished": "2024-07-30T16:58:46.760Z",
-            "lastPublished": "2024-07-30T16:58:46.760Z",
-            "link": "https://www.bbc.com/uzbek/articles/cve6ql6nr9do",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/8e45/test/ee2a18b0-4e93-11ef-ae89-b10ee2354b32.jpg.webp",
-            "imageAlt": "Россиянинг Яқин Шарқдаги асосий иттифоқчиси Сурия 13 йиллик урушдан кейин вайронага айланган. Ундан нима қолган бўлса",
-            "id": "cve6ql6nr9do"
+            "title": "O‘lguncha ro‘za tutadigan dindorlar kim?",
+            "firstPublished": "2025-03-13T08:59:07.090Z",
+            "lastPublished": "2025-03-13T08:59:07.090Z",
+            "link": "https://www.bbc.com/uzbek/articles/cqjd2rq0vx0o/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/472a/live/d9f03190-df11-11ef-a75f-9dd268073925.jpg.webp",
+            "description": "Ochlikdan o‘layotgan odamni kuzatish hech yoqimli bo‘lmaydi va so‘nggi daqiqalar dahshatli bo‘lishi mumkin. Inson oxirida ovqat yoki suv so‘rashi mumkin. Bu so‘rovga javob berilmasligi mumkin.",
+            "imageAlt": "88 yoshli Sayar Devi Modi davolanishdan voz kechishga qaror qildi",
+            "id": "cqjd2rq0vx0o"
           },
           {
             "type": "article",
             "isLive": false,
-            "title": "Сўз сизга: Ўзбекистон аҳолиси 37 миллиондан ошди деб мақтанамиз, лекин миллионлар ишсиз ё мардикор",
-            "firstPublished": "2024-09-16T15:46:52.239Z",
-            "lastPublished": "2024-09-16T15:46:52.239Z",
-            "link": "https://www.bbc.com/uzbek/articles/cl066728v0zo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
-            "id": "cl066728v0zo"
+            "title": "O‘zbekiston hukumati Xitoyga qarshi kafiyatni yumshatishga harakat qilmoqda",
+            "firstPublished": "2025-03-10T16:40:06.726Z",
+            "lastPublished": "2025-03-12T15:51:03.232Z",
+            "link": "https://www.bbc.com/uzbek/articles/c3w19jdd4jzo/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d44e/live/2ac679b0-ff58-11ef-a8b1-950887ddc6e5.jpg.webp",
+            "description": "O‘zbekiston Bosh vaziri matbuot kotibi Bekzod Hidoyatov Xitoyning O‘zbekistondagi iqtisodiy kengayishi va xitoylik muhojirlar sonining ko‘payishi bo‘yicha bildirilayotgan xavotirlarni rad etdi.",
+            "imageAlt": "Uchrashuv",
+            "id": "c3w19jdd4jzo"
           },
           {
             "type": "article",
             "isLive": false,
-            "title": "Борис Николаевич Ельцин",
-            "firstPublished": "2024-10-07T09:52:06.034Z",
-            "lastPublished": "2024-10-07T09:58:27.823Z",
-            "link": "https://www.bbc.com/uzbek/articles/c6328w94722o/cyr",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
-            "id": "c6328w94722o"
+            "title": "\"To‘p Rossiyada\" – Ukraina 30 kunlik otashkesimga rozi bo‘ldi",
+            "firstPublished": "2025-03-11T08:11:45.722Z",
+            "lastPublished": "2025-03-12T11:45:02.132Z",
+            "link": "https://www.bbc.com/uzbek/articles/cgm1n1r2g23o/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/2ec2/live/d171cb20-ff35-11ef-a8b1-950887ddc6e5.png.webp",
+            "description": "Ukraina AQSh taklif qilgan Rossiya bilan 30 kunlik o‘t ochishni to‘xtatishga rozi ekanligini ma’lum qildi. Ushbu muzokaralar ish beradimi?",
+            "imageAlt": "Tramp va Zelenskiy",
+            "id": "cgm1n1r2g23o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Qarindoshlar nikohi: yangi dalillar bolalar kasalliklari haqida nimalarga ishora qiladi?",
+            "firstPublished": "2025-03-12T09:24:14.545Z",
+            "lastPublished": "2025-03-12T09:24:14.545Z",
+            "link": "https://www.bbc.com/uzbek/articles/cwynxzdjl2lo/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/881e/live/e969b7e0-f38e-11ef-896e-d7e7fb1719a4.png.webp",
+            "description": "Tadqiqotdagi har oltinchi bolaning ota-onasi asosan Bredfordning Pokiston jamoasidan bo‘lgan amakivachchalardir. Bu esa amakivachcha nikohlarning sog‘liqqa ta’sirini o‘rganishda dunyodagi eng qimmatli tadqiqotlardan biri hisoblanadi.",
+            "imageAlt": "A treated image of two wedding rings",
+            "id": "cwynxzdjl2lo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "O‘zbekiston, Markaziy Osiyoga bugun kim jiddiy tahdid? Video",
+            "firstPublished": "2025-03-11T13:22:52.191Z",
+            "lastPublished": "2025-03-11T13:22:52.191Z",
+            "link": "https://www.bbc.com/uzbek/articles/czxnpey8ry1o/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/79b4/live/620682b0-fe74-11ef-8c3d-b7dcc7510cb1.jpg.webp",
+            "description": "Mintaqa jiddiy tahdid qarshisidami - Rossiya tomoni ogohlantirdi. Xavf kimdan?",
+            "imageAlt": "Kollaj",
+            "id": "czxnpey8ry1o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "O‘zbekiston: Odamlar umid va xavotir orasida qolishganmi?",
+            "firstPublished": "2025-03-11T11:35:35.070Z",
+            "lastPublished": "2025-03-11T11:35:35.070Z",
+            "link": "https://www.bbc.com/uzbek/articles/c6253n7zr73o/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7da4/live/f6249060-fe68-11ef-8c3d-b7dcc7510cb1.jpg.webp",
+            "description": "O‘zbekiston bir guruh insonlar fikri ijtimoiy tarmoqda yuzlab izohlarga sabab bo‘lmoqda. Asosiy gap, O‘zbekiston fuqarolari ertangi kunlarini qanday ko‘rishadi?",
+            "imageAlt": "O‘zbekistonlik ayollar",
+            "id": "c6253n7zr73o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Suriya: Ahmad ash-Sharaa tinch aholi o‘limida aybdorlarni jazolamoqchi",
+            "firstPublished": "2025-03-10T12:44:06.857Z",
+            "lastPublished": "2025-03-10T12:44:06.857Z",
+            "link": "https://www.bbc.com/uzbek/articles/cx280x8l90qo/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/f98b/live/e869ba20-fdac-11ef-9e61-71ee71f26eb1.jpg.webp",
+            "description": "Buyuk Britaniyada joylashgan Suriya Inson huquqlarini kuzatish markazi (SOHR) xabar qilishicha, 6 mart kuni boshlanib ketgan janglardan keyin 830 tinch aholi vakili o‘ldirilgan.",
+            "imageAlt": "Suriya muvaqqat prezidenti Ahmad ash Sharaa",
+            "id": "cx280x8l90qo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Angliya fermalariga kelayotgan migrantlarni qanday qiyin ahvolga solishmoqda?",
+            "firstPublished": "2025-03-10T10:38:58.738Z",
+            "lastPublished": "2025-03-11T11:24:20.882Z",
+            "link": "https://www.bbc.com/uzbek/articles/ce8v6py3p4go/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/edea/live/dfa69b70-ea3c-11ef-a819-277e390a7a08.jpg.webp",
+            "description": "Britaniya hukumati dehqonchilik fermalarida aniqlangan har qanday tahqirlovchi amallarga qarshi \"qat’iy chora\" ko‘rishini aytgan.",
+            "imageAlt": "Xuliya Kekano Kasimiro qo‘lida \"Biz adolat istaymiz\" yozuvini ushlab turipti",
+            "id": "ce8v6py3p4go"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "8 mart: Xalqaro xotin-qizlar kuni nimasi bilan ahamiyatli?",
+            "firstPublished": "2025-03-07T16:33:28.635Z",
+            "lastPublished": "2025-03-07T16:33:28.635Z",
+            "link": "https://www.bbc.com/uzbek/articles/c757ql25xvgo/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/3887/live/38d29080-fb6f-11ef-a62e-e9ee8ea585f1.jpg.webp",
+            "description": "Bir asrdan ortiq vaqt davomida butun dunyo aholisi 8 martni Xalqaro xotin-qizlar kuni sifatida nishonlab kelmoqda. Ammo buning nima ahamiyati bor?",
+            "imageAlt": "8-mart",
+            "id": "c757ql25xvgo"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:40724044-f99a-412d-a948-1f7410adeeab",
+        "curationId": "urn:bbc:tipo:list:9cb5d9a9-5e8e-4c0f-937d-9e72f6129301",
         "curationType": "tipo-curation",
         "position": 0,
-        "title": "Top Stories",
+        "title": "Bosh maqola",
         "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "A’zo bo‘lish uchun bu yerga bosing",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.whatsapp.com/channel/0029Vb6cFgKHAdNMsH1hKy2H",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/ece9/live/0191caa0-f444-11ef-896e-d7e7fb1719a4.png.webp",
+            "description": "O‘zbekiston, mintaqa, dunyo yangiliklari hamda tahlil va munosabat",
+            "imageAlt": "WhatsApp logo",
+            "id": "https%3A%2F%2Fbit.ly%2F3Xgfl35"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:d05bfd3f-f0b8-4776-8a28-8a986b65558d",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "BBC News O‘zbek WhatsApp",
+        "visualProminence": "NORMAL",
+        "visualStyle": "BANNER"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "O‘zbekiston: \"Jumaga borgan o‘g‘lim shtraf oldi\" – Bolalarning Ramazonda masjidga kirishiga cheklov qo‘yilgani ortidan bahs kuchaymoqda",
+            "firstPublished": "2025-03-07T15:55:23.799Z",
+            "lastPublished": "2025-03-07T15:55:23.799Z",
+            "link": "https://www.bbc.com/uzbek/articles/ckgdqzx2w9do/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7489/live/8987d3a0-fb6a-11ef-a273-e52c9fc8f09b.png.webp",
+            "description": "O‘zbekistonda bolalarni Ramazon vaqtida masjidga kirishiga to‘sqinlik qilish ortayotgani aytilgan xabarlar ko‘paygan. Tarmoq foydalanuvchilari o‘qituvchilar va xavfsizlik xodimlari bolalarning masjidga kirishini cheklayotgani haqida yozgan.",
+            "imageAlt": "video",
+            "id": "ckgdqzx2w9do"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "So‘z sizga: \"O‘zbeklarning uyg‘ongani rost bo‘lsin\" – Yo‘l yopilishiga munosabat",
+            "firstPublished": "2025-03-06T15:48:22.512Z",
+            "lastPublished": "2025-03-06T16:42:42.635Z",
+            "link": "https://www.bbc.com/uzbek/articles/cpdej6le2yqo/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/13f4/live/c406dc30-faa0-11ef-98de-ebba6a9f6737.png.webp",
+            "description": "Chinozda katta trassa yopib qo‘yilgach, metan zapravkalar ochila boshlangani haqidagi BBC O‘zbek xizmatining qisqa videosi Instagram da 2 milliondan ko‘proq tomosha qilindi. 3 mingga yaqin izoh yozildi.",
+            "imageAlt": "Yo‘l yopib qo‘yilgach, Toshkent viloyatidagi metan zapravkalar ochila boshlangandi",
+            "id": "cpdej6le2yqo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Ramazon. Savol va javob: Tishni yuvish ro‘zani buzadimi, ro‘zador tupugini yutsa nima bo‘ladi? Nima bo‘lsa ham ro‘za tutish kerakmi?",
+            "firstPublished": "2025-03-05T09:40:47.630Z",
+            "lastPublished": "2025-03-10T17:50:47.314Z",
+            "link": "https://www.bbc.com/uzbek/articles/c5y2g2v2n5yo/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/270c/live/e0b84ef0-f9a5-11ef-a629-ef88fbd35a13.jpg.webp",
+            "description": "Muqaddas Ramazon oyida xuddi shu kabi savollar sizni ham qiziqtirayaptimi? U holda hofizi Qur’on, diniy ilmlar bo‘yicha ilg‘or Shobir Hasanning javoblari bilan tanishing. ",
+            "imageAlt": "Iftor dasturxoni",
+            "id": "c5y2g2v2n5yo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Million-million dollarlik: Tolibon Afg‘onistonni G‘arb yordamisiz ham ko‘tarayaptimi?",
+            "firstPublished": "2025-03-04T16:45:44.906Z",
+            "lastPublished": "2025-03-04T16:45:44.906Z",
+            "link": "https://www.bbc.com/uzbek/articles/crlx0jyrj54o/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/017d/live/c1f7d9d0-f915-11ef-896e-d7e7fb1719a4.jpg.webp",
+            "description": "Tolibon xabar qilishicha, O‘zbekiston bilan turli sohalarda $200 million dollarlik sarmoya masalasi muhokama qilingan, Turkmanistondan temir yo‘lni Afg‘oniston ichiga uzaytirish bo‘yicha  $7 millionlik hujjatlar imzolangan, 1500 tacha kompaniya jami 1 milliard dollardan ziyod sarmoya kiritishga tayyorligini bildirgan.",
+            "imageAlt": "\"Hayraton\"da temir yo‘l vagonidan yuk avtomobiliga un qoplarini ortayotgan hammol yigitlar",
+            "id": "crlx0jyrj54o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 6,
+        "curationId": "urn:bbc:vivo:curation:16fbc71e-26c3-490a-9f99-a9dae80d97d1",
+        "curationType": "vivo-stream",
+        "position": 2,
+        "title": "O‘zbekiston",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Bu qiziq: Tolibon kameralar orqali millionlab odamni qanday kuzatmoqda?",
+            "firstPublished": "2025-03-03T07:26:14.141Z",
+            "lastPublished": "2025-03-03T07:26:14.141Z",
+            "link": "https://www.bbc.com/uzbek/articles/clyzn92xld1o/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/f7be/live/24243ad0-f7ff-11ef-896e-d7e7fb1719a4.jpg.webp",
+            "description": "O‘nlab teleekranlar bilan o‘ralgan gavjum boshqaruv markazida Tolibon politsiyasi millionlab odamning kundalik hayotini kuzatadigan 90 000 ta CCTV kameradan iborat yangi tarmog‘ini faxr bilan namoyish etmoqda. Bi-bi-si ushbu tizimni ko‘rishga ruxsat berilgan birinchi xalqaro ommaviy axborot vositasidir.",
+            "imageAlt": "kamera",
+            "id": "clyzn92xld1o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Yangiliklar: Trampning gapiga Moskva jim, Kiev hayron, rubl qimmatlayapti, Toqaev mintaqada ildamlik qildimi va Markaziy Osiyoda o‘nlab odam hukm qilindi – ular IShID ga aloqadormi? Video",
+            "firstPublished": "2025-02-14T11:50:09.947Z",
+            "lastPublished": "2025-02-14T14:42:11.013Z",
+            "link": "https://www.bbc.com/uzbek/articles/ceq93dj32j5o/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/833f/live/fbdb1d40-eac6-11ef-bd1b-d536627785f2.jpg.webp",
+            "description": "Mintaqa va dunyoda nima gap – shu soatlarda sarlavhalarga chiqqan va chiqayotgan yangiliklar. ",
+            "imageAlt": "Putin va Zelenskiy",
+            "id": "ceq93dj32j5o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Yangilandi. Rossiya: Putinning yaqin ittifoqchisi Markaziy Osiyoda, mintaqaga tahdid kuchaydimi? Podkast",
+            "firstPublished": "2025-02-12T14:06:07.339Z",
+            "lastPublished": "2025-02-12T15:17:35.348Z",
+            "link": "https://www.bbc.com/uzbek/articles/czdlz8gq661o/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a6db/live/18cf2340-e948-11ef-a319-fb4e7360c4ec.jpg.webp",
+            "description": "Sergey Shoyguga qadar so‘nggi bir necha oyning ichida Rossiya prezidenti, Bosh vaziri va Tashqi ishlar vaziri ham Qozog‘istonda bo‘lib qaytgan. Nima gap?",
+            "imageAlt": "Putin va aksariyat postsovet davlatlari liderlari",
+            "id": "czdlz8gq661o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Tolibon O‘zbekistonga yana nima qilishi kerakligini aytdimi?",
+            "firstPublished": "2025-02-10T13:09:15.189Z",
+            "lastPublished": "2025-02-10T13:09:15.189Z",
+            "link": "https://www.bbc.com/uzbek/articles/cjw4x70378yo/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/ecca/live/5d325150-e7aa-11ef-a819-277e390a7a08.jpg.webp",
+            "description": "Afg‘oniston Mudofaa vazirligi yangi bayonot bilan chiqdi. Tolibonning muvaqqat Mudofaa vaziri nomi chiqqan marhum lideri Mulla Umarning o‘g‘li bo‘ladi. U orada mintaqa davlatlarini ogohlantirishgacha borgan. Rasmiy Toshkent hozircha jim, Amerika ham.... Buyog‘i nima bo‘ladi?",
+            "imageAlt": "Afg‘oniston muvaqqat Mudofaa vaziri",
+            "id": "cjw4x70378yo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 2,
+        "curationId": "urn:bbc:vivo:curation:58bf518d-e84c-4723-a5fe-6a67fb4e2643",
+        "curationType": "vivo-stream",
+        "position": 3,
+        "title": "Mintaqa",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Ukraina va Amerika Saudiya Arabistonida gaplashib olmoqchi. Putin esa \"qanday ko‘rinishdagi tinchlik\" istayotgani haqida ochiq gapirdi",
+            "firstPublished": "2025-03-07T12:35:15.797Z",
+            "lastPublished": "2025-03-07T12:35:15.797Z",
+            "link": "https://www.bbc.com/uzbek/articles/crknjm1x6nmo/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/62c2/live/857e3110-fb50-11ef-9e61-71ee71f26eb1.jpg.webp",
+            "description": "Ukraina diplomatlari AQSh bilan urushni tugatish masalasini muzokara qilish maqsadida kelasi haftada Saudiya Arabistoniga bormoqchi. Shu manzarada Vladimir Putin Rossiya aynan qanday ko‘rinishdagi tinchlik xohlayotgani haqidagi savolga ochiq javob bergan. ",
+            "imageAlt": "putin",
+            "id": "crknjm1x6nmo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "AQSh Ukrainaga razvedka ma’lumotlari berishni to‘xtatdi – Bu urushga qanday ta’sir qiladi?",
+            "firstPublished": "2025-02-20T09:37:58.803Z",
+            "lastPublished": "2025-03-06T11:33:17.395Z",
+            "link": "https://www.bbc.com/uzbek/articles/cdrxj01y2p2o/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/2ac0/live/5f67aa20-fa7d-11ef-9e61-71ee71f26eb1.png.webp",
+            "description": "AQShning Ukrainani qo‘llab-quvvatlash istiqboli yanada shubha ostida qolmoqda. Milliy xavfsizlik bo‘yicha maslahatchi Mayk Uolts AQSh Ukraina bilan razvedka ma’lumotlari almashishni to‘xtatganini tasdiqladi.",
+            "imageAlt": "Razvedka",
+            "id": "cdrxj01y2p2o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Suriya: Eron quvildimi hamda Uyg‘ur va Afg‘on jangchilar taqdiri",
+            "firstPublished": "2025-03-06T09:02:31.904Z",
+            "lastPublished": "2025-03-06T09:02:31.904Z",
+            "link": "https://www.bbc.com/uzbek/articles/c1d4nv6l54do/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a4f7/live/bf8ce1e0-ebaf-11ef-a819-277e390a7a08.jpg.webp",
+            "description": "Eron Suriyadagi harbiy bazalarini tashlab chiqishga majbur bo‘lgach, BBC undan qolgan vayronalarni o‘rgandi.",
+            "imageAlt": "Posters strewn all over the floor",
+            "id": "c1d4nv6l54do"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Xitoy AQSh bilan \"har qanday\" urushga kirishga tayyor - rasmiy Pekin",
+            "firstPublished": "2025-02-27T09:24:08.036Z",
+            "lastPublished": "2025-03-05T14:49:20.169Z",
+            "link": "https://www.bbc.com/uzbek/articles/cn899vvq3j8o/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/1a5c/live/a661aba0-f9cf-11ef-80e1-652badcf05bd.jpg.webp",
+            "description": "Xitoyning sun’iy idrok chatboti DeepSeekning yuksalishi butun dunyo uchun kutilmagan bo‘ldi, ammo xitoyliklar uchun bu yangilik emasdi.\nXitoy oxirgi o‘n yil ichida \"Made in China 2025\" deb nomlangan ulkan reja doirasida yuqori texnologiyali mahsulotlar, jumladan, sun’iy intellekt bo‘yicha o‘z tajribasini asta-sekin oshirib kelayotgan edi.\n",
+            "imageAlt": "Prezident Shi AQSh bilan savdo urushi xavfiga yuz tutyapti.",
+            "id": "cn899vvq3j8o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 40,
+        "curationId": "urn:bbc:vivo:curation:d34f244f-0695-4a30-aa2b-6a792357087e",
+        "curationType": "vivo-stream",
+        "position": 4,
+        "title": "Dunyo",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Kaspiydan Karachigacha: Rus transport yo‘laklariga qaramlikdan qutilish uchun O‘zbekiston qanday yo‘llarni izlamoqda?",
+            "firstPublished": "2025-02-24T09:06:26.731Z",
+            "lastPublished": "2025-02-24T09:06:26.731Z",
+            "link": "https://www.bbc.com/uzbek/articles/cly37djr8r6o/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/2472/live/86dbb8d0-f28a-11ef-8c03-7dfdbeeb2526.jpg.webp",
+            "description": "Rossiya Ukrainadagi urush bilan band bo‘larkan, Markaziy Osiyo davlatlari, jumladan, O‘zbekiston uning ta’siridan qochishga intilyotgandek. Bu, ayniqsa, mamlakat so‘nggi vaqtlarda jiddiy kirishgan transport loyihalarida namoyon bo‘ladi.",
+            "imageAlt": "xarita",
+            "id": "cly37djr8r6o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Bu qiziq: O‘zini dori bilan davolovchi gorillalar haqida eshitganmisiz? Ularning bilimi bizga tibbiyotda yordam berishi mumkin",
+            "firstPublished": "2025-01-31T08:41:51.762Z",
+            "lastPublished": "2025-01-31T08:41:51.762Z",
+            "link": "https://www.bbc.com/uzbek/articles/cn57l1p91z3o/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/3508/live/95333780-dfae-11ef-88d3-dd7c96a87c10.jpg.webp",
+            "description": "Olimlar ta’kidlashicha, gorillalarning o‘z-o‘zini qanday davolashini o‘rganish kelajakda yangi dori-darmonlar kashf etilishi kaliti bo‘lishi mumkin.",
+            "imageAlt": "gorilla",
+            "id": "cn57l1p91z3o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Og‘zi bor, keti yo‘q maxluq odamzodning ajdodi bo‘lganmi?",
+            "firstPublished": "2025-01-20T09:12:42.794Z",
+            "lastPublished": "2025-01-20T09:12:42.794Z",
+            "link": "https://www.bbc.com/uzbek/articles/cwye71qxkevo/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a172/live/80c19920-d70e-11ef-94cb-5f844ceb9e30.png.webp",
+            "description": "Olimlar yarim milliard yillik keti yo‘q - orqa chiqaruv teshigisiz maxluqning sirini va nihoyat ochishdi.",
+            "imageAlt": "keti yo'q",
+            "id": "cwye71qxkevo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:6352d87b-2255-439b-873e-688bffcfc025",
+        "curationType": "tipo-curation",
+        "position": 5,
+        "title": "Faqat bizda",
+        "visualProminence": "NORMAL",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Ukraina Amerika qurol-yarog‘isiz urushdan omon chiqa oladimi?",
+            "firstPublished": "2025-02-28T15:10:17.293Z",
+            "lastPublished": "2025-03-04T13:23:52.789Z",
+            "link": "https://www.bbc.com/uzbek/articles/cevxdjekrlko/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/091c/live/e2a59b20-f5e3-11ef-8c03-7dfdbeeb2526.jpg.webp",
+            "description": "AQSh Ukrainaga bundan uch yil avval keng ko‘lamli urush boshlangandan beri harbiy yordam berib keldi. Biroq endilikda u to‘xtatilishi mumkin. Hech bo‘lmaganda, Amerika prezidenti Donald Tramp bunday ehtimolni istisno qilmayotir va Kievga berilayotgan mudofaa yordami yuki Yevropa zimmasiga tushishi kerak, demoqda. Bu Ukraina uchun nimani anglatadi?",
+            "imageAlt": "tank",
+            "id": "cevxdjekrlko"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "AQSh Ukrainaga harbiy yordamni to‘xtatdi",
+            "firstPublished": "2025-03-03T12:29:49.431Z",
+            "lastPublished": "2025-03-04T11:21:09.662Z",
+            "link": "https://www.bbc.com/uzbek/articles/cddy2qdgpj5o/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/f7b9/live/e546e490-f8f1-11ef-896e-d7e7fb1719a4.jpg.webp",
+            "description": "AQSh Prezidenti Donald Tramp Ukrainaga berilayotgan Amerika harbiy yordamini to‘xtatishga farmon berdi.",
+            "imageAlt": "ATACMS raketa tizimi",
+            "id": "cddy2qdgpj5o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Tramp va Zelenskiy uchrashmoqda. Muzokara Ukraina uchun manfaatli tugaydimi?",
+            "firstPublished": "2025-02-25T12:36:04.406Z",
+            "lastPublished": "2025-02-28T16:54:56.972Z",
+            "link": "https://www.bbc.com/uzbek/articles/clyrkk9d4jdo/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/4f27/live/533e4570-f5f4-11ef-896e-d7e7fb1719a4.jpg.webp",
+            "description": "Shu soatlarda Vashingtonda prezidentlar Donald Tramp va Volodimir Zelenskiy yuzma-yuz uchrashmoqda. Avvalroq Amerika yetakchisi Ukrainaga nisbatan jiddiy bosim qilgan edi. Uchrashuv Ukraina uchun qanday natija bilan tugashi mumkin?",
+            "imageAlt": "meeting",
+            "id": "clyrkk9d4jdo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "\"Tramp Putindek fikrlaydi\": liberal dunyo tartibi yakun topdimi?",
+            "firstPublished": "2025-02-27T12:05:26.510Z",
+            "lastPublished": "2025-02-27T12:05:26.510Z",
+            "link": "https://www.bbc.com/uzbek/articles/ce8y5lrl9pno/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/0395/live/adfdd770-f31d-11ef-a845-cfdaa7743d4f.jpg.webp",
+            "description": "AQSh va uning ittifoqchilari Rossiyani xalqaro yakkanishinga aylantirmoqchi edilar. Nega Donald Tramp Moskva bilan munosabatlarni qayta tiklayapti?",
+            "imageAlt": "Kaliforniyadagi yong‘in oqibati",
+            "id": "ce8y5lrl9pno"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 26,
+        "link": "https://www.bbc.com/uzbek/topics/cqm6qnememet",
+        "curationId": "urn:bbc:vivo:curation:d82b05c8-16ee-4e8d-8d04-436c5e432988",
+        "curationType": "vivo-stream",
+        "position": 6,
+        "title": "Rossiyaning Ukrainaga bosqini",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "BBC'ning WhatsAppʼdagi kanallari va guruhlaridagi maxfiylik to‘g‘risida xabarnoma",
+            "firstPublished": "2025-02-14T11:08:57.711Z",
+            "lastPublished": "2025-02-14T11:08:57.711Z",
+            "link": "https://www.bbc.com/uzbek/articles/c07k05pxmjeo/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "c07k05pxmjeo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "O‘zbekiston yana HRW hisobotida, Mubashshir Ahmad qidiruvda, endi Polsha vizasi o‘zbeklarga qiyinlashadimi? - Dayjest",
+            "firstPublished": "2025-02-20T13:55:24.101Z",
+            "lastPublished": "2025-02-20T13:55:24.101Z",
+            "link": "https://www.bbc.com/uzbek/articles/czx7d7qwygno/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/5762/live/8ad564d0-ef8e-11ef-bd1b-d536627785f2.jpg.webp",
+            "description": "10 yil oldin O‘zbekiston xalqaro inson huquqlari tashkilotlari hisobotlarida muntazam inson huquqlari qo‘pol poymol etiladigan mamlakat  sifatida yomonotliq qilib kelinar, vaziyat aslida ham shunday bo‘lganini O‘zbekiston rasmiylari tan olishgan, oxirgi yillarda ahvol yaxshilangani e’tirof etib kelinayotgan edi. Xalqaro Xyuman Rayts Uotch(HRW) tashkiloti birdaniga ikki mahkum jasadi O‘zbekiston qamoqxonalaridan chiqqani, uchinchisi shifoxonada hushsiz ekani haqida hisobot tarqatdi.",
+            "imageAlt": "O‘zbekiston qamoqxonasidan o‘ligi chiqqan Muhammadqodir Po‘latov fotosi",
+            "id": "czx7d7qwygno"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "G‘arbda savdosi cheklangan \"Huawei\" ishchilari Toshkentda bayroq ko‘tarib tadbir o‘tkazishi mumkinmi? Video",
+            "firstPublished": "2025-02-17T13:06:18.627Z",
+            "lastPublished": "2025-02-17T13:06:18.627Z",
+            "link": "https://www.bbc.com/uzbek/articles/c23n3egx7gko/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/ba7d/live/7f6b1f20-ed2e-11ef-b008-3d63fe428927.jpg.webp",
+            "description": "O‘zbekiston fuqarolari turli bayroqlar bilan bir joyga yig‘ilib sport aktsiyasini o‘tkazishsa, Milliy bog‘ ma’muriyati va Ichki ishlar boshqarmasi ularga ruxsat olishni tavsiya qilgan bo‘larmidi? Xitoyliklarga qonun-qoidalar IIV tomonidan tushuntirildimi?",
+            "imageAlt": "Xitoylik bir guruh odamlar Milliy Bog‘da o‘tkazgan aktsiya.",
+            "id": "c23n3egx7gko"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Rossiya: Nega ko‘pxotinlik so‘nggi besh yillikning eng keskin bahslaridan biriga aylandi?",
+            "firstPublished": "2025-01-31T13:31:33.791Z",
+            "lastPublished": "2025-01-31T13:31:33.791Z",
+            "link": "https://www.bbc.com/uzbek/articles/cwypl95xzp3o/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7080/live/f1f83830-dfd1-11ef-a319-fb4e7360c4ec.jpg.webp",
+            "description": "Rossiyada tug‘ilish darajasi so‘nggi 25 yillikda eng past ko‘rsatkichga tushdi. Demografik inqiroz avj olar ekan, “ko‘pxotinlik yechimi” o‘rtaga chiqqan.",
+            "imageAlt": "masjid",
+            "id": "cwypl95xzp3o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "O‘zbekiston: 15 sutka – qonunchilik masalasimi yoki siyosiy erkinlik? Nega bu jazo qo‘llanishi ko‘paygan? - Video",
+            "firstPublished": "2025-01-27T08:52:20.367Z",
+            "lastPublished": "2025-01-27T08:52:20.367Z",
+            "link": "https://www.bbc.com/uzbek/articles/cjde29gd4v5o/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a8d9/live/c0f82a20-da76-11ef-a37f-eba91255dc3d.jpg.webp",
+            "description": "Ma’muriy jazo to‘g‘risidagi kodeksda 50 dan oshiq turdagi hatti-harakatlar uchun 15 sutkalik qamoq jazosi berilishi mumkinligi belgilangan. 15 sutkalik qamoq haqida gap ketar ekan, O‘zbekistonda bunday qaror ustidan appelyatsiya berishdan foyda yo‘q, degan qarash allaqachon shakllanib bo‘lgan. ",
+            "imageAlt": "O‘zbekistonda 15 sutkagacha ma’muriy qamoq jazosini qo‘llash holatlari oshgan. ",
+            "id": "cjde29gd4v5o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "O‘zbekiston: \"Tappi qilishni to‘xtatishni xohlayman\". Qishloq qanday qishlayapti? (Video)",
+            "firstPublished": "2025-01-16T12:06:03.183Z",
+            "lastPublished": "2025-02-05T14:58:10.266Z",
+            "link": "https://www.bbc.com/uzbek/articles/c93qg21nlqgo/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/70c5/live/1cdcea70-d3eb-11ef-94cb-5f844ceb9e30.jpg.webp",
+            "description": "Egarchi qishlog‘iga kirar ekansiz,  bir zumda bu yerda odamlar qanday sharoitda yashashlarini anglaysiz.\nKo‘cha chetlarida o‘tin yo go‘zapoya,  devorlarda tappi va ba’zida eski mung‘aygan simyog‘ochlarga ko‘zingiz tushadi.\nKo‘chalar loy va balchiq. Onda-sonda ko‘cha chetidan loyga botmay yurishga intilib ketayotgan odamlarni ko‘rasiz.\n",
+            "imageAlt": "O‘tin yorayotgan erkak va uning ishini kuzatib turgan ayol",
+            "id": "c93qg21nlqgo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Ahmad al-Sharaa Suriya prezidenti bo‘ldi. Dunyo yana qaysi jangarilarni davlat arbobi o‘laroq qabul qilgan edi?",
+            "firstPublished": "2025-01-30T12:12:02.523Z",
+            "lastPublished": "2025-01-30T12:12:02.523Z",
+            "link": "https://www.bbc.com/uzbek/articles/c7vdm5z0j8po/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7877/live/9de6d700-df00-11ef-a319-fb4e7360c4ec.jpg.webp",
+            "description": "Tarixda bir paytlar jangari, qurolli guruh yetakchisi yoki hattoki terrorchi sifatida tamg‘alangan shaxslar siyosiy arbobga aylanib, o‘z xalqlari taqdirini shakllantirgan holatlar bir necha bor uchragan. Suriya yetakchisi Ahmad al-Sharaa bu ro‘yxatni to‘ldirgan so‘nggi shaxsga aylandi.",
+            "imageAlt": "prezident",
+            "id": "c7vdm5z0j8po"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Ukraina urushi va O‘zbekiston: \"Yengil\" hukmlar urushga qatnashishga rag‘batlantirmaydimi? Video",
+            "firstPublished": "2025-01-13T08:33:13.144Z",
+            "lastPublished": "2025-01-13T08:33:13.144Z",
+            "link": "https://www.bbc.com/uzbek/articles/c4g3v2z5gd2o/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/bd9f/live/e4ea73e0-cf48-11ef-94cb-5f844ceb9e30.jpg.webp",
+            "description": "Oxirgi paytda Ukraina urushi bilan bog‘liq O‘zbek rasmiylari javob bermayotgan yoki berolmayotgan savollar ko‘paydi: Ukrainada qancha o‘zbekistonlik o‘ldi? Nega O‘zbekiston hukumati o‘z fuqarolarini Ukraina urushiga yollayotgan Rossiya rasmiylariga norozilik bildirmaydi? Ukrainadagi urushda qatnashgani uchun O‘zbekistonda sudlangan shaxslar soni qancha va nega ba’zilariga yengil jazo berilayapti? Hukumat o‘zbekistonliklar Ukraina urushiga yollanishi oldini olish uchun nima qilayapti? ",
+            "imageAlt": "Украина урушидаги жабҳа. Қуёш ботар чоғи сим тўр орасидан кетаётган икки аскар",
+            "id": "c4g3v2z5gd2o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Maxfiy amaliyot: Mossad xodimlari Hizbulloh ratsiya va peyjerlari qanday portlatib yuborilgani haqida gapirib berdi",
+            "firstPublished": "2024-12-24T10:55:52.716Z",
+            "lastPublished": "2024-12-24T10:55:52.716Z",
+            "link": "https://www.bbc.com/uzbek/articles/cn85j1dgz20o/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/3bbe/live/459ac590-c1e4-11ef-aff0-072ce821b6ab.jpg.webp",
+            "description": "Mossadning ikki xodimi CBS telekanali bilan intervyuda Hizbulloh jangarilarining ratsiya va peyjerlari qanday portlatib yuborilganini so‘zlab berdi. Ma’lum bo‘lishicha, Hizbulloh a’zolari ratsiyalarni – ichida portlovchi modda borligidan bexabar – 10 yil davomida ishlatib yurgan. ",
+            "imageAlt": "jangari",
+            "id": "cn85j1dgz20o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "BBC 100 Ayol loyihasi va O‘zbekiston: Nimaga aynan Dilorom Yo‘ldosheva tanlandi?",
+            "firstPublished": "2024-12-17T13:02:08.245Z",
+            "lastPublished": "2024-12-17T13:49:14.610Z",
+            "link": "https://www.bbc.com/uzbek/articles/cy53pe631x4o/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36c3/live/ccbeff10-bc66-11ef-aff0-072ce821b6ab.jpg.webp",
+            "description": "BBC 100 ayol loyihasi o‘zi qanday loyiha? O‘zbekiston ayollari uchun ahamiyatga egami? Va nimaga asoslanib aynan Diloromni tanlashdi? Shular haqida loyiha muharriridan so‘rab, bilib oldik.",
+            "imageAlt": "Dilorom Yo'ldosheva BBC yuz ayol loyihasi uchun suratda",
+            "id": "cy53pe631x4o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "\"Qanday yuzlari chidaydi, axir?\" –  Toshkentdagi nogiron bolalar jamiyati endi ko‘chada qoladimi? - Video",
+            "firstPublished": "2024-12-19T15:41:33.074Z",
+            "lastPublished": "2024-12-19T15:41:33.074Z",
+            "link": "https://www.bbc.com/uzbek/articles/c4gz73dyde1o/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/cf39/live/455d0320-be1c-11ef-a2ca-e99d0c9a24e3.jpg.webp",
+            "description": "Toshkent shahridagi \"APLA\" nogiron bolalarga yordamlashadigan nodavlat xayriya tashkilotidan 22 yil mobaynida faoliyat yuritib kelgan binosidan chiqib ketishni talab qilmoqdalar.",
+            "imageAlt": "Toshkentdagi \"APLA\" tashkiloti ichida",
+            "id": "c4gz73dyde1o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:12ca91ba-0117-4b1d-ae42-4de99d9a6dff",
+        "curationType": "tipo-curation",
+        "position": 7,
+        "title": "Muharrir tanlovi",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Tomosha qiling",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/uzbek/bbc_uzbek_tv/tv_programmes/w13xttqv?limit=4",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/0ecf/live/ddef1a10-5eff-11ee-a49e-a37c20a4f120.png.webp",
+            "description": "Afg‘oniston uchun O‘zbek tilida TV dastur",
+            "imageAlt": "Cameran",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fkyrgyz%2Fbbc_kyrgyz_tv%2Ftv_programmes%2Fw13xttqx%3Flimit%3D4"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:c86c5e92-5ec3-4f35-b6f6-b26ffb59d79b",
+        "curationType": "tipo-curation",
+        "position": 8,
+        "title": "BBC O‘zbek TV Dasturi",
+        "visualProminence": "NORMAL",
+        "visualStyle": "BANNER"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "WhatsApp",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://bit.ly/4kdKVIt",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7a76/live/81f7b470-eac7-11ee-9410-0f893255c2a0.png.webp",
+            "imageAlt": "WhatsApp",
+            "id": "https%3A%2F%2Fwhatsapp.com%2Fchannel%2F0029VaUm1Ss3WHTbgIXrjw3D"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Telegram",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.telegram.me/bbcuzbek",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/6f5b/live/0ccddc30-af01-11ee-bc2f-cb5579b90709.png.webp",
+            "imageAlt": "Telegram",
+            "id": "https%3A%2F%2Ft.me%2Fbbcrussian"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "YouTube",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "http://www.youtube.com/user/bbcuzbek",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a77f/live/d0e56760-af00-11ee-beb5-e1400df560f2.png.webp",
+            "imageAlt": "YouTube",
+            "id": "https%3A%2F%2Fwww.youtube.com%2Fbbcrussian"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Instagram",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.instagram.com/bbcuzbek/",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/b4f2/live/9c698a80-aeff-11ee-beb5-e1400df560f2.png.webp",
+            "imageAlt": "Instagram",
+            "id": "https%3A%2F%2Fwww.instagram.com%2Fbbcrussian%2F"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Facebook",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.facebook.com/bbcuzbek",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d3ce/live/baa6e4f0-929b-11ee-91bf-230bfab3fcba.png.webp",
+            "imageAlt": "Facebook logo",
+            "id": "https%3A%2F%2Fwww.facebook.com%2Fbbcnewsafrique"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "X",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://x.com/bbcuzbek",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c238/live/f608c4a0-929b-11ee-91bf-230bfab3fcba.png.webp",
+            "imageAlt": "X logo",
+            "id": "https%3A%2F%2Ftwitter.com%2Fbbcafrique"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Odnoklassniki",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://ok.ru/bbcuzbek",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/162b/live/d2c348a0-ae68-11ef-8ab9-9192db313061.png.webp",
+            "imageAlt": "Odnoklassniki",
+            "id": "https%3A%2F%2Fok.ru%2Fbbcuzbek"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:839e56fd-7692-49e1-9c2c-783b0566cd61",
+        "curationType": "tipo-curation",
+        "position": 9,
+        "title": "Bizni ijtimoiy tarmoqlarda kuzating",
+        "visualProminence": "NORMAL",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "curationId": "urn:bbc:onward-journeys:most:read?=site=News",
+        "curationType": "most-popular",
+        "position": 10,
+        "title": "Eng ko‘p o‘qilgan",
+        "visualProminence": "NORMAL",
+        "visualStyle": "RANKED",
+        "link": "https://www.bbc.com/uzbek/lat/popular/read",
+        "mostRead": {
+          "generated": "2025-03-13T10:58:48.82Z",
+          "lastRecordTimeStamp": "2025-03-13T10:56:00Z",
+          "firstRecordTimeStamp": "2025-03-13T08:56:00Z",
+          "items": [
+            {
+              "id": "e9199bdb-7ad5-444e-b826-4dba5fde3aca",
+              "rank": 1,
+              "title": "Jinsiy zoʻrlangan 10 yashar qiz farzand koʻrdi",
+              "href": "/uzbek/lotin-40964020",
+              "timestamp": "2017-08-17T13:07:59.000Z",
+              "indexImage": {
+                "id": "97418342",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/5F3D/production/_97418342_gettyimages-459218004.jpg",
+                "path": "/cpsprodpb/5F3D/production/_97418342_gettyimages-459218004.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Bolalarni jinsiy zoʻrlashga qarshi norozilik namoyishi",
+                "caption": "Hindistonda voyaga yetmaganlarga nisbatan jinsiy zoʻravonlik miqyosi dahshatga soladi: 2015 yili 10000 dan ortiq zoʻrlash qayd etilgan.",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsprodpb",
+                "type": "image"
+              }
+            },
+            {
+              "id": "055834e7-ac5b-cd40-9d88-f7d3659b434a",
+              "rank": 2,
+              "title": "‘Zoʻrlanganimni hatto sezmagan ham edimʼ",
+              "href": "/uzbek/lotin-46149793",
+              "timestamp": "2018-11-14T16:57:29.000Z",
+              "indexImage": {
+                "id": "103800565",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/DCB4/production/_103800565_bbc3_1.jpg",
+                "path": "/cpsprodpb/DCB4/production/_103800565_bbc3_1.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "BBC THREE",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsprodpb",
+                "allowSyndication": true,
+                "type": "image"
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cqjd2rq0vx0o",
+              "rank": 3,
+              "title": "O‘lguncha ro‘za tutadigan dindorlar kim?",
+              "href": "https://www.bbc.com/uzbek/articles/cqjd2rq0vx0o/lat",
+              "timestamp": "2025-03-13T08:59:07.090Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "88 yoshli Sayar Devi Modi davolanishdan voz kechishga qaror qildi.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "88 yoshli Sayar Devi Modi davolanishdan voz kechishga qaror qildi.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "88 yoshli Sayar Devi Modi davolanishdan voz kechishga qaror qildi",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "88 yoshli Sayar Devi Modi davolanishdan voz kechishga qaror qildi",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 679,
+                        "height": 382,
+                        "locator": "472a/live/d9f03190-df11-11ef-a75f-9dd268073925.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Pranay Modi",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "54771dec-bf4c-904b-af59-946077152115",
+              "rank": 4,
+              "title": "Video - Gey yigitlar maydonda qamchilandi",
+              "href": "/uzbek/lotin-40045142",
+              "timestamp": "2017-05-25T10:09:08.000Z",
+              "indexImage": {
+                "id": "96205691",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/4CC2/production/_96205691_gay-2.jpg",
+                "path": "/cpsprodpb/4CC2/production/_96205691_gay-2.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Qamchilash payti",
+                "caption": "Besoqolboz erkaklar Shariat hukmiga muvofiq jazolandi.",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsprodpb",
+                "type": "image"
+              }
+            },
+            {
+              "id": "3a5cd262-dd0b-6d4b-9f76-0984d73cb6c6",
+              "rank": 5,
+              "title": "Seks darsi Angliyaning barcha maktablarida oʻqitiladi",
+              "href": "/uzbek/lotin-39154091",
+              "timestamp": "2017-03-03T11:30:26.000Z",
+              "indexImage": {
+                "id": "94894485",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/E451/production/_94894485_sexeducation-sciencephotolibrary.jpg",
+                "path": "/cpsprodpb/E451/production/_94894485_sexeducation-sciencephotolibrary.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Angliya maktabida jinsiy tarbiya darsi",
+                "copyrightHolder": "Science Photo Library",
+                "originCode": "cpsprodpb",
+                "type": "image"
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cz0lz4vx1p8o",
+              "rank": 6,
+              "title": "O‘zbekiston: Jurnalistlar nimadan norozi, ularni kim himoya qiladi?",
+              "href": "https://www.bbc.com/uzbek/articles/cz0lz4vx1p8o/lat",
+              "timestamp": "2025-02-11T14:58:13.512Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Jurnalistlar yig‘inidan\n",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Jurnalistlar yig‘inidan\n",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1119,
+                        "height": 630,
+                        "locator": "b238/live/3548b820-e884-11ef-acf4-d3a321e6d53f.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Facebook/Anora Sodiq",
+                        "suitableForSyndication": false
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c778lxxgdkro",
+              "rank": 7,
+              "title": "Uch yillik: G‘arb rahbarlari Kievda yig‘ildi. Ular Ukrainaga qanday va’dalar bermoqda?",
+              "href": "https://www.bbc.com/uzbek/articles/c778lxxgdkro/lat",
+              "timestamp": "2025-02-24T15:57:14.309Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "10 dan ortiq G‘arb yetakchilari Kievga yig‘ilgan.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "10 dan ortiq G‘arb yetakchilari Kievga yig‘ilgan.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "sammit",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "sammit",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 800,
+                        "height": 449,
+                        "locator": "a406/live/14b625f0-f2c7-11ef-8c03-7dfdbeeb2526.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Reuters",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cgmvdpd2pxmo",
+              "rank": 8,
+              "title": "Turkiya: O‘zbek ayollari “fohisha” degan stereotip qayerdan keldi?",
+              "href": "https://www.bbc.com/uzbek/articles/cgmvdpd2pxmo/lat",
+              "timestamp": "2024-11-22T12:47:50.705Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Turkiyalik qiziqchi Ummuxan O‘zdenning ayganlari bahsu munozalarni keltirdi",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Turkiyalik qiziqchi Ummuxan O‘zdenning ayganlari bahsu munozalarni keltirdi",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Turkiyalik qiziqchi Ummuxan O‘zdenning ayganlari bahsu munozalarni keltirdi",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Turkiyalik qiziqchi Ummuxan O‘zdenning ayganlari bahsu munozalarni keltirdi",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 476,
+                        "height": 268,
+                        "locator": "3b10/live/39e34620-a8ce-11ef-a5b6-bffae7385746.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Ijtimoiy tarmoqdan",
+                        "suitableForSyndication": false
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cd0nvml2820o",
+              "rank": 9,
+              "title": "\"Yetti yil o‘tib onam bilan gaplasha oldim\" – Londondagi uyg‘ur hikoyasi",
+              "href": "https://www.bbc.com/uzbek/articles/cd0nvml2820o/lat",
+              "timestamp": "2025-03-05T08:01:06.454Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Azizning onasi Hepizixon uni 2011 yilda Londonga kelib ko‘rgandi.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Azizning onasi Hepizixon uni 2011 yilda Londonga kelib ko‘rgandi.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Azizning onasi Hepizixon uni 2011 yilda Londonga kelib ko‘rgandi.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Azizning onasi Hepizixon uni 2011 yilda Londonga kelib ko‘rgandi.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 638,
+                        "height": 359,
+                        "locator": "a88d/live/e0b1a090-f997-11ef-ae5c-2f8723cb2041.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Aziz Isa Elkun",
+                        "suitableForSyndication": false
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c8d4q8lrqvmo",
+              "rank": 10,
+              "title": "Jinsiy zo‘rlash, bola oldirish va o‘spirinlar seksi haqida gapirish nega muhim?",
+              "href": "https://www.bbc.com/uzbek/articles/c8d4q8lrqvmo/lat",
+              "timestamp": "2025-02-25T08:47:15.479Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Treysi Emin hayotda qolishini tasavvur qilolmasdi",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Treysi Emin hayotda qolishini tasavvur qilolmasdi",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Treysi Emin",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Treysi Emin",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 2729,
+                        "height": 1534,
+                        "locator": "ff1d/live/8416e9b0-ce7e-11ef-9fd6-0be88a764111.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "BBC",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "summaries": [
+          {
+            "type": "video",
+            "isLive": false,
+            "title": "Maxsus loyiha: Karimovdan “arazlagan” “injiq” Turkmaniston bilan Mirziyoyev nega yaqinlashishga oshiqmoqda?",
+            "firstPublished": "2023-10-09T08:50:09.000Z",
+            "lastPublished": "2023-10-09T08:50:09.000Z",
+            "link": "https://www.bbc.com/uzbek/uzbekistan-66853875",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/6704/production/_131227362_1021820919_0_0_1600_2238_1440x900_80_0_1_8357088c72b976ca58209c75bf4a2962.jpg.jpg.webp",
+            "description": "Шавкат Мирзиёев дунёдаги энг ёпиқ мамлакатлардан ҳисобланмиш Туркманистон билан тобора яқинлашишга интилмоқда. Яккаҳоким бошқаруви ўта кучли жанубий қўшни нимаси билан Ўзбекистонга бу қадар жозибадор кўринади?",
+            "imageAlt": "turkmen",
+            "id": "8fb40e8f-81ee-49b1-a440-b7698d7659c9"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "O‘zbekiston ayollari Ipak Yo‘li bozorlarini qanday qo‘lga olmoqda? - BBCUzbek tadqiq etadi",
+            "firstPublished": "2019-10-30T07:18:04.000Z",
+            "lastPublished": "2019-10-30T17:56:20.000Z",
+            "link": "https://www.bbc.com/uzbek/uzbekistan-50219916",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/79EF/production/_109451213_feruzatwofinal.jpg.webp",
+            "description": "Ўзбекистон аёллари Ипак Йўли бозорларидан эркакларни қандай сиқиб чиқармоқда, янги ҳужжатли фильм - бозордаги савдо-сотиғи, деб икки ўлимдан қайтган Муҳайё ҳозир манаман, деган тадбиркор. Кичиккина Риштондан туриб, маҳсулотларини энди Қафқоз қадар экспорт қилмоқчи. У Осиёни Европага боғлай оладими?",
+            "imageAlt": "Тожир аёл",
+            "id": "082397be-510b-4a4e-a14a-b3f727e04690"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "BBC News O‘zbek xizmati \"Boburiy malikalar izidan\" nomli uch qismdan iborat hujjatli-dramatik film suratga oldi",
+            "firstPublished": "2020-02-14T13:51:08.000Z",
+            "lastPublished": "2020-02-14T13:51:08.000Z",
+            "link": "https://www.bbc.com/uzbek/uzbekistan-51462034",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/11615/production/_110898117_de22.jpg.webp",
+            "description": "Андижон қоқ марказида Бобур Шоҳнинг ҳайкали қад ростлаган. Тошкент, Самарқанд ва Шаҳрисабзда эса, унинг бобокалони Амир Темур ҳайкалларини кўрасиз. Тарих дарсликларида шарафланган аксар қаҳрамонлар ҳам асосан эркаклар, бу ўринда шоҳлару шаҳзодалар...Ҳукмдорларга ҳамнафас бўлган, уларни қўриган, қўллаган маликалар-чи?",
+            "imageAlt": "Эсон Давлат Бегим, рассом Исомиддин Эшонқулов",
+            "id": "39786bbf-c2f2-3c4b-acc2-f93cb26878e1"
+          },
+          {
+            "type": "video",
+            "isLive": false,
+            "title": "Amerika va o‘zbeklar: Amerikada biznes qilish osonmi? Yosh tadbirkorning hikoyasi",
+            "firstPublished": "2024-04-29T11:41:53.000Z",
+            "lastPublished": "2024-04-29T11:41:53.000Z",
+            "link": "https://www.bbc.com/uzbek/uzbekistan-68921039",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/9EC4/production/_133244604_4.jpg.webp",
+            "description": "“Шу ишни бу ёқда кўрдим, қилдим. Энг биринчи бўлиб, Ўзбекистонга илинаман шу нарсаларни. Биздаям халқ қийналмаса, шундай маҳсулотларни ола олса, дейман. Америкада нима яхши нарса кўрсам, ҳар доим илинаман”, - дейди Сардор.",
+            "imageAlt": "BBC",
+            "id": "699b30a2-099d-4274-abca-9dbd0b102c74"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:7a2c3efb-5313-48fb-96f2-91896d3462a8",
+        "curationType": "tipo-curation",
+        "position": 11,
+        "title": "BBC Sandiq",
+        "visualProminence": "NORMAL",
         "visualStyle": "COLLECTION"
       }
     ],
     "metadata": {
       "atiAnalytics": {
-        "contentId": "urn:bbc:tipo:topic:cvp5j113ngqt",
+        "contentId": "urn:bbc:tipo:topic:c44d8kd7q4gt",
         "contentType": "index-home",
         "pageIdentifier": "uzbeklat.page",
-        "pageTitle": "Uzbek"
+        "pageTitle": "BBC News , O'zbek - Bosh sahifa"
       }
     }
   },

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import styled from '@emotion/styled';
 import {
@@ -90,6 +90,28 @@ const OptionallyRenderedSkipWrapper = ({
     children
   );
 
+const CpsOnwardJourneyWrapper = ({
+  children,
+  parentColumns,
+  labelId,
+  a11yAttributes,
+  className,
+  dir,
+}) =>
+  parentColumns ? (
+    <Wrapper
+      data-e2e={labelId}
+      {...a11yAttributes}
+      {...(className ? { className } : undefined)}
+    >
+      {children}
+    </Wrapper>
+  ) : (
+    <GridWrapper data-e2e={labelId} {...a11yAttributes}>
+      <LegacyGridItemLarge dir={dir}>{children}</LegacyGridItemLarge>
+    </GridWrapper>
+  );
+
 const CpsOnwardJourney = ({
   className = '',
   LabelComponent = StyledSectionLabel,
@@ -106,8 +128,9 @@ const CpsOnwardJourney = ({
   columnType,
   skipLink = null,
   eventTrackingData = null,
+  sendOptimizelyEvents = false,
 }) => {
-  const { script, service, dir } = useContext(ServiceContext);
+  const { script, service, dir } = use(ServiceContext);
 
   const a11yAttributes = {
     as: 'section',
@@ -115,27 +138,18 @@ const CpsOnwardJourney = ({
     'aria-labelledby': labelId,
   };
 
-  const CpsOnwardJourneyWrapper = ({ children }) =>
-    parentColumns ? (
-      <Wrapper
-        data-e2e={labelId}
-        {...a11yAttributes}
-        {...(className && { className })}
-      >
-        {children}
-      </Wrapper>
-    ) : (
-      <GridWrapper data-e2e={labelId} {...a11yAttributes}>
-        <LegacyGridItemLarge dir={dir}>{children}</LegacyGridItemLarge>
-      </GridWrapper>
-    );
-
   if (!content.length) return null;
   const hasSingleContent = content.length === 1;
   const [singleContent] = content;
 
   return (
-    <CpsOnwardJourneyWrapper>
+    <CpsOnwardJourneyWrapper
+      parentColumns={parentColumns}
+      labelId={labelId}
+      a11yAttributes={a11yAttributes}
+      className={className}
+      dir={dir}
+    >
       <OptionallyRenderedSkipWrapper skipLink={skipLink} service={service}>
         {title ? (
           <LabelComponent
@@ -157,6 +171,7 @@ const CpsOnwardJourney = ({
               promo={singleContent}
               dir={dir}
               eventTrackingData={eventTrackingData}
+              sendOptimizelyEvents={sendOptimizelyEvents}
             />
           </SingleContentWrapper>
         ) : (
@@ -165,6 +180,7 @@ const CpsOnwardJourney = ({
             dir={dir}
             isMediaContent={isMediaContent}
             eventTrackingData={eventTrackingData}
+            sendOptimizelyEvents={sendOptimizelyEvents}
           />
         )}
       </OptionallyRenderedSkipWrapper>

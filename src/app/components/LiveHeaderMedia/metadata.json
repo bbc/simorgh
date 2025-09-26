@@ -1,0 +1,29 @@
+{
+  "alpha": false,
+  "lastUpdated": {
+    "day": 10,
+    "month": "Jan",
+    "year": 2025
+  },
+  "uxAccessibilityDoc": {
+    "done": true,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/WS-Live-page-Screen-reader-UX--Cd_drUzfpS3DH8PtsqpcHWTrAg-8qm1UHDGVMhv5Qj9Q2mbi",
+      "label": "Screen Reader UX"
+    }
+  },
+  "acceptanceCriteria": {
+    "done": true,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/Media-streaming-on-Live-page-header-Accessibility-Acceptance-Criteria--Cd9XeuiOa~qvgofSxoEXe6jRAg-IJpFNBmz2Anh6JxczSMit",
+      "label": "Accessibility Acceptance Criteria"
+    }
+  },
+  "swarm": {
+    "done": true,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/A11Y-Swarm-Live-page-header-Streamed-Media--CeUOiCNKMADIzJAdF1fNyKS8Ag-GUnv4JyaoWuciSkdhuLLz",
+      "label": "Accessibility Swarm Notes"
+    }
+  }
+}

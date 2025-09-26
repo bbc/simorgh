@@ -1,17 +1,10 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Canonical Story Page A11y I can see the skip to content link 1`] = `"Tsallaka zuwa abubuwan da ke ciki"`;
 
-exports[`Canonical Story Page Analytics ATI tracking pixel excluding src 1`] = `
-<img
-  alt=""
-  height="1px"
-  style="position:absolute"
-  width="1px"
-/>
-`;
+exports[`Canonical Story Page Analytics ATI tracking pixel excluding src 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" >"`;
 
-exports[`Canonical Story Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/"`;
+exports[`Canonical Story Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
 
 exports[`Canonical Story Page Analytics ATI tracking pixel search params 1`] = `
 [
@@ -105,7 +98,7 @@ exports[`Canonical Story Page Footer Anchors should match text and url 7`] = `
 
 exports[`Canonical Story Page Footer Anchors should match text and url 8`] = `
 {
-  "text": "Other Languages",
+  "text": "Labaran BBC a sauran harsuna",
   "url": "https://www.bbc.com/ws/languages",
 }
 `;
@@ -120,13 +113,13 @@ exports[`Canonical Story Page Footer Anchors should match text and url 9`] = `
 exports[`Canonical Story Page Footer Anchors should match text and url 10`] = `
 {
   "text": "Karanta hanyoyin da muke bi dangane da adireshin waje.",
-  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
 }
 `;
 
 exports[`Canonical Story Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/hausa"`;
 
-exports[`Canonical Story Page Footer Paragraphs should match text 1`] = `"© 2024 BBC. BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba.  Karanta hanyoyin da muke bi dangane da adireshin waje."`;
+exports[`Canonical Story Page Footer Paragraphs should match text 1`] = `"© 2025 BBC. BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba.  Karanta hanyoyin da muke bi dangane da adireshin waje."`;
 
 exports[`Canonical Story Page Header I can see the branding 1`] = `"BBC News, Hausa"`;
 
@@ -154,7 +147,7 @@ exports[`Canonical Story Page Header Navigation link should match text and url 3
 exports[`Canonical Story Page Header Navigation link should match text and url 4`] = `
 {
   "text": "Cikakkun Rahotanni",
-  "url": "/hausa/52140979",
+  "url": "/hausa/topics/cnl7wd77wj2t",
 }
 `;
 
@@ -168,7 +161,7 @@ exports[`Canonical Story Page Header Navigation link should match text and url 5
 exports[`Canonical Story Page Header Navigation link should match text and url 6`] = `
 {
   "text": "Shirye-shirye na Musamman",
-  "url": "/hausa/shirye-shirye-na-musamman-54712348",
+  "url": "/hausa/topics/cnl7wd9pddlt",
 }
 `;
 
@@ -185,7 +178,9 @@ exports[`Canonical Story Page Image should match snapshot 1`] = `
 <noscript
   class="bbc-n2zqlz"
 >
-  &lt;strong&gt;Na&#x27;urarku na da matsalar sauraren sauti&lt;/strong&gt;
+  <strong>
+    Na'urarku na da matsalar sauraren sauti
+  </strong>
 </noscript>
 `;
 

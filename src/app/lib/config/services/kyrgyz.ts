@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-kyrgyz',
     atiAnalyticsProducerId: '58',
+    atiAnalyticsProducerName: 'KYRGYZ',
+    useReverb: true,
     chartbeatDomain: 'kyrgyz.bbc.co.uk',
     brandName: 'BBC News Кыргыз Кызматы',
     product: 'BBC News',
@@ -39,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/kyrgyz/institutional-49677275',
     isTrustProjectParticipant: true,
     script: cyrillic,
-    manifestPath: '/manifest.json',
+    manifestPath: '/kyrgyz/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео',
+    homePageTitle: 'Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео',
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -60,6 +62,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'Сайтка өтүү',
       relatedContent: 'Тема боюнча башка макалалар',
       relatedTopics: 'Тектеш темалар',
+      moreOnThis: '',
       navMenuText: 'Бөлүмдөр',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
@@ -234,6 +237,8 @@ export const service: DefaultServiceConfig = {
         recentEpisodes: 'Мурдагы берүүлөр',
         podcastExternalLinks: 'Бул подкастты башка платформалардан дагы угуңуз',
         download: 'Подкастты жүктөп алыңыз',
+        closeVideo: 'Чыгуу',
+        endOfContentClose: 'Бул контенттин аягы. Чыгуу',
       },
       socialEmbed: {
         caption: {
@@ -269,7 +274,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Соңку',
     },
     mostRead: {
-      header: 'Эң көп окулгандар',
+      header: 'Көп окулгандар',
       lastUpdated: 'Акыркы жаңылоо:',
       numberOfItems: 5,
       hasMostRead: true,
@@ -278,7 +283,11 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'Эң көп окулгандар',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
@@ -286,7 +295,7 @@ export const service: DefaultServiceConfig = {
         text: 'Эмнеге BBC News ишенсе болот?',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Башка интернет сайттардын мазмуну боюнча биздин позиция.',
       },
       links: [
@@ -312,7 +321,7 @@ export const service: DefaultServiceConfig = {
         },
         {
           href: 'https://www.bbc.com/ws/languages',
-          text: 'Other Languages',
+          text: 'Башка тилдерде',
         },
         {
           id: 'COOKIE_SETTINGS',
@@ -327,8 +336,12 @@ export const service: DefaultServiceConfig = {
     timezone: 'GMT',
     navigation: [
       {
-        title: 'Башталгыч бет',
+        title: 'Башкы бет',
         url: '/kyrgyz',
+      },
+      {
+        title: 'Видео жаңылыктар',
+        url: '/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4t',
       },
       {
         title: 'Кыргызстан',
@@ -339,16 +352,8 @@ export const service: DefaultServiceConfig = {
         url: '/kyrgyz/topics/ck2l9z012nkt',
       },
       {
-        title: 'САПАР',
-        url: '/kyrgyz/topics/c6z8lg83w7mt',
-      },
-      {
         title: 'Журнал',
         url: '/kyrgyz/topics/czp8pjrkgp0t',
-      },
-      {
-        title: 'Подкасттар',
-        url: '/kyrgyz/podcasts/p0c80v81',
       },
     ],
   },

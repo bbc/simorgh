@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Sign Post should render a 'Help reduce your power consumption' message 1`] = `
-<div>
-  <noscript />
-</div>
-`;

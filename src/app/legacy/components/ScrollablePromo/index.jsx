@@ -1,10 +1,14 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
+  GEL_SPACING_QUAD,
 } from '#psammead/gel-foundations/src/spacings';
 
-import { getDoublePica } from '#psammead/gel-foundations/src/typography';
+import {
+  getDoublePica,
+  getBrevier,
+} from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import styled from '@emotion/styled';
 import path from 'ramda/src/path';
@@ -14,12 +18,15 @@ import tail from 'ramda/src/tail';
 import {
   GEL_GROUP_0_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MAX,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import { GridItemMediumNoMargin } from '#components/Grid';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import idSanitiser from '#lib/utilities/idSanitiser';
+import { GREY_2 } from '#app/components/ThemeProvider/palette';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Promo from './Promo';
 import PromoList from './PromoList';
@@ -33,6 +40,40 @@ const PromoWrapper = styled.div`
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     ${({ dir }) => `margin-${dir === 'ltr' ? 'left' : 'right'}: 0;`}
   }
+`;
+
+const ScrollablePromoContainer = styled.div`
+  background: ${GREY_2};
+  padding: ${GEL_SPACING};
+  display: flex;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  ${({ experimentVariant }) =>
+    experimentVariant &&
+    experimentVariant !== 'off' &&
+    `
+    padding: 0 ${GEL_SPACING} ${GEL_SPACING_DBL};
+    margin: 0rem;
+
+    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+      padding: 0 ${GEL_SPACING_DBL} ${GEL_SPACING_DBL};
+      margin: 0 -0.2rem;
+    }
+    
+    @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+      margin: 0 -0.8rem;
+    }
+    
+    @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+      display: none;
+    }
+
+    width: 100vw;
+  `}
 `;
 
 const LabelComponent = styled.strong`
@@ -57,27 +98,96 @@ const LabelComponent = styled.strong`
 `}
 `;
 
-const ScrollablePromo = ({ blocks, blockGroupIndex = null }) => {
-  const { script, service, dir, translations } = useContext(ServiceContext);
+const LabelComponentOJTopBar = styled(({ ariaLabel, ...props }) => (
+  <strong aria-label={ariaLabel} {...props} />
+))`
+  ${({ script }) => script && getBrevier(script)};
+  ${({ service }) => getSansRegular(service)}
+  display: inline-block;
+  margin-bottom: ${GEL_SPACING_DBL};
+  color: ${({ theme }) =>
+    theme.isDarkUi ? theme.palette.GREY_2 : theme.palette.SHADOW};
+
+  ${({ dir }) =>
+    `
+    @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}){
+      margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING};
+    }
+    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}){
+      margin-${dir === 'ltr' ? `left` : `right`}: ${GEL_SPACING_DBL};  
+    }
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}){
+      margin-${dir === 'ltr' ? `left` : `right`}: 0;
+    }
+  `}
+
+  padding: 0 ${GEL_SPACING};
+
+  @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}) {
+    margin: 0rem;
+  }
+
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    padding: 0 ${GEL_SPACING_DBL};
+    margin: 0 -0.2rem;
+  }
+
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    margin: 0 -0.8rem;
+  }
+
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    display: none;
+  }
+
+  display: flex;
+  align-items: center;
+  height: ${GEL_SPACING_QUAD};
+  background: ${GREY_2};
+  width: 100vw;
+`;
+
+const ScrollablePromo = ({
+  blocks,
+  blockGroupIndex = null,
+  experimentVariant = null,
+}) => {
+  const { script, service, dir, translations, mostRead } = use(ServiceContext);
 
   const eventTrackingData = {
     componentName: `edoj${blockGroupIndex}`,
     format: 'CHD=edoj',
+    ...(experimentVariant && {
+      componentName: 'top-bar-oj',
+      sendOptimizelyEvents: true,
+      viewThreshold: 0,
+    }),
   };
 
-  const viewRef = useViewTracker(eventTrackingData);
-  const handleClickTracking = useClickTrackerHandler(eventTrackingData);
+  const viewTracker = useViewTracker(eventTrackingData);
+  const clickTracker = useClickTrackerHandler(eventTrackingData);
 
   if (!blocks || isEmpty(blocks)) {
     return null;
   }
 
-  const title =
-    blocks[0].type === 'title' &&
-    path(
-      ['0', 'model', 'blocks', '0', 'model', 'blocks', '0', 'model', 'text'],
-      blocks,
-    );
+  let title;
+  if (
+    ['top-bar-top-stories', 'read-more-a-and-top-stories'].includes(
+      experimentVariant,
+    )
+  ) {
+    title = translations.topStoriesTitle || 'Top Stories';
+  } else if (experimentVariant === 'top-bar-most-read') {
+    title = mostRead.header || 'Most Read';
+  } else {
+    title =
+      blocks[0].type === 'title' &&
+      path(
+        ['0', 'model', 'blocks', '0', 'model', 'blocks', '0', 'model', 'text'],
+        blocks,
+      );
+  }
 
   const blocksWithoutTitle = blocks[0].type === 'title' ? tail(blocks) : blocks;
 
@@ -86,8 +196,10 @@ const ScrollablePromo = ({ blocks, blockGroupIndex = null }) => {
   const ariaLabel = title && idSanitiser(title);
 
   const a11yAttributes = {
-    as: 'section',
-    role: 'region',
+    ...(!experimentVariant && {
+      as: 'section',
+      role: 'region',
+    }),
     ...(ariaLabel
       ? { 'aria-labelledby': ariaLabel }
       : {
@@ -99,8 +211,31 @@ const ScrollablePromo = ({ blocks, blockGroupIndex = null }) => {
         }),
   };
 
-  return (
-    <GridItemMediumNoMargin {...a11yAttributes}>
+  return experimentVariant ? (
+    <>
+      <LabelComponentOJTopBar
+        id={ariaLabel}
+        data-testid="oj-top-bar"
+        script={script}
+        service={service}
+        dir={dir}
+      >
+        {title}
+      </LabelComponentOJTopBar>
+      <ScrollablePromoContainer experimentVariant={experimentVariant}>
+        <GridItemMediumNoMargin>
+          <PromoList
+            blocks={blocks}
+            experimentVariant={experimentVariant}
+            viewTracker={viewTracker}
+            clickTracker={clickTracker}
+            a11yAttributes={a11yAttributes}
+          />
+        </GridItemMediumNoMargin>
+      </ScrollablePromoContainer>
+    </>
+  ) : (
+    <GridItemMediumNoMargin {...a11yAttributes} data-e2e="scrollable-promos">
       {title && (
         <LabelComponent
           id={ariaLabel}
@@ -113,14 +248,14 @@ const ScrollablePromo = ({ blocks, blockGroupIndex = null }) => {
         </LabelComponent>
       )}
       {isSingleItem ? (
-        <PromoWrapper dir={dir} ref={viewRef}>
-          <Promo block={blocksWithoutTitle[0]} onClick={handleClickTracking} />
+        <PromoWrapper dir={dir} {...viewTracker}>
+          <Promo block={blocksWithoutTitle[0]} clickTracker={clickTracker} />
         </PromoWrapper>
       ) : (
         <PromoList
           blocks={blocksWithoutTitle}
-          viewTracker={viewRef}
-          onClick={handleClickTracking}
+          viewTracker={viewTracker}
+          clickTracker={clickTracker}
         />
       )}
     </GridItemMediumNoMargin>

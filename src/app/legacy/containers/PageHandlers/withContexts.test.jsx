@@ -3,14 +3,9 @@ import { render, act } from '@testing-library/react';
 import { ComponentUsingContext } from '#testHelpers/mockComponents';
 import getOriginContext from '#contexts/RequestContext/getOriginContext';
 import getStatsDestination from '#contexts/RequestContext/getStatsDestination';
-import getStatsPageIdentifier from '#contexts/RequestContext/getStatsPageIdentifier';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { UserContext } from '#contexts/UserContext';
-import {
-  ARTICLE_PAGE,
-  FRONT_PAGE,
-  HOME_PAGE,
-} from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
 import * as serviceContextImports from '../../../contexts/ServiceContext';
 import * as requestContextImports from '../../../contexts/RequestContext';
 import * as eventTrackingContextImports from '../../../contexts/EventTrackingContext';
@@ -26,12 +21,6 @@ getOriginContext.mockImplementation(origin => ({
 jest.mock('#contexts/RequestContext/getStatsDestination', () => jest.fn());
 
 getStatsDestination.mockImplementation(() => 'NEWS_PS_TEST');
-
-jest.mock('#contexts/RequestContext/getStatsPageIdentifier', () => jest.fn());
-
-getStatsPageIdentifier.mockImplementation(
-  () => 'news.articles.c0000000000o.page',
-);
 
 describe('withContexts HOC', () => {
   const Component = () => (
@@ -63,7 +52,7 @@ describe('withContexts HOC', () => {
         enabled: false,
       },
     },
-    mvtExperiments: [{ experimentName: 'foo', variation: 'bar' }],
+    serverSideExperiments: [{ experimentName: 'foo', variation: 'bar' }],
     isUK: true,
   };
 
@@ -101,7 +90,7 @@ describe('withContexts HOC', () => {
       jest.clearAllMocks();
     });
 
-    const pageTypes = [ARTICLE_PAGE, FRONT_PAGE, 'chicken'];
+    const pageTypes = [ARTICLE_PAGE, HOME_PAGE, 'chicken'];
 
     pageTypes.forEach(pageType => {
       it(`passing pageType==${pageType} should pass along`, async () => {
@@ -120,7 +109,7 @@ describe('withContexts HOC', () => {
               enabled: false,
             },
           },
-          mvtExperiments: [{ experimentName: 'foo', variation: 'bar' }],
+          serverSideExperiments: [{ experimentName: 'foo', variation: 'bar' }],
         };
         await act(async () => render(<ContextsHOC {...fixture} />));
         expect(requestContextSpy).toHaveBeenCalled();
@@ -128,13 +117,13 @@ describe('withContexts HOC', () => {
           expect.objectContaining({
             pageType,
           }),
-          {},
+          undefined,
         );
         expect(serviceContextSpy).toHaveBeenCalledWith(
           expect.objectContaining({
             variant: null,
           }),
-          {},
+          undefined,
         );
       });
     });
@@ -156,7 +145,7 @@ describe('withContexts HOC', () => {
             enabled: false,
           },
         },
-        mvtExperiments: [{ experimentName: 'foo', variation: 'bar' }],
+        serverSideExperiments: [{ experimentName: 'foo', variation: 'bar' }],
       };
 
       await act(async () => render(<ContextsHOC {...fixture} />));
@@ -165,13 +154,13 @@ describe('withContexts HOC', () => {
         expect.objectContaining({
           variant: 'trad',
         }),
-        {},
+        undefined,
       );
       expect(requestContextSpy).toHaveBeenCalledWith(
         expect.objectContaining({
           variant: 'trad',
         }),
-        {},
+        undefined,
       );
     });
 
@@ -297,14 +286,14 @@ describe('withContexts HOC', () => {
               enabled: false,
             },
           },
-          mvtExperiments: [{ experimentName: 'foo', variation: 'bar' }],
+          serverSideExperiments: [{ experimentName: 'foo', variation: 'bar' }],
         };
 
         await act(async () => render(<ContextsHOC {...fixture} />));
 
         expect(eventTrackingContextSpy).toHaveBeenCalledWith(
           expect.objectContaining(componentProps),
-          {},
+          undefined,
         );
       },
     );

@@ -1,0 +1,324 @@
+{
+  "data": {
+    "title": "نتائج الانتخابات الأمريكية: احصل على آخر التحديثات",
+    "description": "البث المباشر: حفل تنصيب الرئيس الخامس والأربعين للولايات المتحدة",
+    "language": "ar",
+    "headerImage": null,
+    "promoImage": null,
+    "home": "arabic",
+    "section": null,
+    "commercialInfo": {
+      "adCategory": null,
+      "adSubCategory": null,
+      "hasAdvertising": false
+    },
+    "sportDataEvent": {
+      "id": null
+    },
+    "eavisEvent": {
+      "id": null
+    },
+    "article": {
+      "id": null
+    },
+    "mediaCollections": [
+      {
+        "type": "liveMedia",
+        "model": {
+          "urn": "urn:bbc:pips:sid:bbc_arabic_tv",
+          "title": "BBC Arabic TV",
+          "type": "episode",
+          "synopses": {
+            "short": "جولة إخبارية يومية تتناول أهم الأحداث العربية والعالمية في تقارير ولقاءات وتحليلات ",
+            "medium": "جولة إخبارية يومية تتناول أهم الأحداث العربية والعالمية في تقارير ولقاءات وتحليلات ",
+            "long": "جولة إخبارية يومية تتناول أهم الأحداث العربية والعالمية في تقارير ولقاءات وتحليلات "
+          },
+          "mediaType": "audio_video",
+          "imageUrlTemplate": "https://ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png",
+          "masterbrand": {
+            "id": "bbc_arabic_tv",
+            "name": "تلفزيون بي بي سي عربي",
+            "networkName": "تلفزيون بي بي سي عربي",
+            "type": "tv",
+            "imageUrlTemplate": "ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png"
+          },
+          "version": {
+            "vpid": "n4pdm3cdh4",
+            "duration": "PT1H",
+            "availabilityType": "simulcast",
+            "versionTypes": [
+              {
+                "type": "Original",
+                "name": "Original version"
+              }
+            ],
+            "schedule": null,
+            "serviceId": "bbc_arabic_tv",
+            "authToken": null,
+            "status": "LIVE",
+            "warnings": null
+          },
+          "leadMedia": true
+        }
+      }
+    ],
+    "keyHighlight": {
+      "id": null
+    },
+    "electionBanner": {
+      "id": null
+    },
+    "supportingLinks": {
+      "id": null
+    },
+    "riddle": {
+      "id": null
+    },
+    "seo": {
+      "seoTitle": "نتائج الانتخابات الأمريكية: احصل على آخر التحديثات",
+      "seoDescription": "البث المباشر: حفل تنصيب الرئيس الخامس والأربعين للولايات المتحدة",
+      "datePublished": "2024-12-20T11:25:00.000Z",
+      "dateModified": "2024-12-20T11:25:00.000Z"
+    },
+    "endDateTime": "2025-01-10T17:00:00.000Z",
+    "startDateTime": "2024-12-20T11:25:00.000Z",
+    "firstPublishedDateTime": "2024-12-20T11:26:28.576Z",
+    "type": "live-coverage",
+    "dataSource": "TIPO",
+    "isLive": false,
+    "summaryPoints": {
+      "id": null,
+      "content": null
+    },
+    "liveTextStream": {
+      "id": "39A9B954BC394441ACFDC0A2E6CAD80F",
+      "contributors": null,
+      "content": {
+        "data": {
+          "results": [
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "f4dc5312",
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "d9a41071",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "df5cbb32",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "انشر عنوانًا واحدًا",
+                                    "blocks": [
+                                      {
+                                        "id": "3dea2ef4",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "انشر عنوانًا واحدًا",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "eff4c25c",
+                      "type": "subheadline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "e0fb639f",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "2bb7258d",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "أضف عنوان فرعي واحد",
+                                    "blocks": [
+                                      {
+                                        "id": "d4c63f8a",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "أضف عنوان فرعي واحد",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "047416cb",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "انشر نص واحد هنا",
+                        "blocks": [
+                          {
+                            "id": "43167322",
+                            "type": "fragment",
+                            "model": {
+                              "text": "انشر نص واحد هنا",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "f511af36",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "",
+                        "blocks": []
+                      }
+                    },
+                    {
+                      "id": "47e47ec1",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "انشر نص واحد هنا",
+                        "blocks": [
+                          {
+                            "id": "c3f2553c",
+                            "type": "fragment",
+                            "model": {
+                              "text": "انشر نص واحد هنا",
+                              "attributes": ["bold"]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "a0b92a9d",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "",
+                        "blocks": []
+                      }
+                    },
+                    {
+                      "id": "d12a64cf",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "انشر نص واحد هنا",
+                        "blocks": [
+                          {
+                            "id": "31e6edf3",
+                            "type": "fragment",
+                            "model": {
+                              "text": "انشر نص واحد هنا",
+                              "attributes": ["italic"]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "e70c8ab7",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "",
+                        "blocks": []
+                      }
+                    },
+                    {
+                      "id": "b051f499",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "",
+                        "blocks": []
+                      }
+                    },
+                    {
+                      "id": "54b1f147",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "",
+                        "blocks": []
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:09f3b54d-fbe4-4bfd-a19e-263bc0f26633",
+              "type": "POST",
+              "options": {
+                "isBreakingNews": false
+              },
+              "dates": {
+                "firstPublished": "2023-03-22T11:34:11.000Z",
+                "lastPublished": "2023-03-22T11:34:11.000Z",
+                "time": null,
+                "curated": "2023-03-22T11:34:12.537Z"
+              },
+              "titles": [
+                {
+                  "title": null,
+                  "source": "primary"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": null,
+                  "source": "summary"
+                }
+              ],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            }
+          ],
+          "page": {
+            "index": 1,
+            "total": 1
+          }
+        }
+      }
+    },
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:cvp5r6m6mgpt",
+        "contentType": "live-coverage",
+        "pageIdentifier": "live_coverage.cvp5r6m6mgpt.page",
+        "pageTitle": "نتائج الانتخابات الأمريكية: احصل على آخر التحديثات",
+        "timePublished": "2024-12-20T11:25:00.000Z",
+        "timeUpdated": "2024-12-20T11:25:00.000Z"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

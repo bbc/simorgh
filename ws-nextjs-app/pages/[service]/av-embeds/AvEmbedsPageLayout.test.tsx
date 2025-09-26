@@ -55,6 +55,7 @@ describe('AV Embeds Page', () => {
     const helmetMetaTags = Helmet.peek()?.metaTags;
 
     expect(helmetMetaTags).toEqual([
+      { name: 'robots', content: 'noindex' },
       {
         name: 'viewport',
         content: 'width=device-width, initial-scale=1, user-scalable=1',

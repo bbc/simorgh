@@ -24,8 +24,8 @@ describe('Home Page - BFF Fetching', () => {
 
   it('should request local fixture data when the app env is "local"', async () => {
     process.env.SIMORGH_APP_ENV = 'local';
-
     const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
+
     fetchDataSpy.mockImplementation(() =>
       Promise.resolve({
         status: 200,
@@ -34,14 +34,14 @@ describe('Home Page - BFF Fetching', () => {
     );
 
     await getInitialData({
-      path: '/kyrgyz/tipohome',
+      path: '/kyrgyz',
       service: 'kyrgyz',
       pageType: 'home',
       getAgent: mockGetAgent,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'http://localhost/kyrgyz/tipohome',
+      path: 'http://localhost/kyrgyz',
       pageType: HOME_PAGE,
       timeout: 60000,
     });
@@ -59,14 +59,14 @@ describe('Home Page - BFF Fetching', () => {
     );
 
     await getInitialData({
-      path: '/kyrgyz/tipohome',
+      path: '/kyrgyz',
       service: 'kyrgyz',
       pageType: 'home',
       getAgent: mockGetAgent,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=cm7682qz7v1t&service=kyrgyz&pageType=home&serviceEnv=test',
+      path: 'https://mock-bff-path/?id=kyrgyz&service=kyrgyz&pageType=home&serviceEnv=test',
       agent,
       optHeaders: {
         'ctx-service-env': 'test',
@@ -87,14 +87,14 @@ describe('Home Page - BFF Fetching', () => {
     );
 
     await getInitialData({
-      path: '/kyrgyz/tipohome',
+      path: '/kyrgyz',
       service: 'kyrgyz',
       pageType: 'home',
       getAgent: mockGetAgent,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=crg7kj2e52nt&service=kyrgyz&pageType=home&serviceEnv=live',
+      path: 'https://mock-bff-path/?id=kyrgyz&service=kyrgyz&pageType=home&serviceEnv=live',
       agent,
       optHeaders: {
         'ctx-service-env': 'live',

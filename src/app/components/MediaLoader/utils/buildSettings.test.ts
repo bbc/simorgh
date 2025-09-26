@@ -2,6 +2,7 @@ import { PageTypes, Services } from '#app/models/types/global';
 import { data as hindiTvProgramme } from '#data/hindi/bbc_hindi_tv/tv_programmes/w13xttlw.json';
 import {
   AUDIO_PAGE,
+  LIVE_PAGE,
   LIVE_RADIO_PAGE,
   TV_PAGE,
 } from '#app/routes/utils/pageTypes';
@@ -10,11 +11,15 @@ import afriqueRadio from '#data/afrique/bbc_afrique_radio/p030s6dq.json';
 import { service as hausaServiceConfig } from '#app/lib/config/services/hausa';
 import { service as hindiServiceConfig } from '#app/lib/config/services/hindi';
 import { service as afriqueServiceConfig } from '#app/lib/config/services/afrique';
+import { service as mundoServiceConfig } from '#app/lib/config/services/mundo';
+import { service as arabicServiceConfig } from '#app/lib/config/services/arabic';
 import isLive from '#app/lib/utilities/isLive';
 import buildSettings from './buildSettings';
 import {
   aresMediaBlocks,
-  clipMediaBlocks,
+  videoClipMediaBlocks,
+  audioClipMediaBlocks,
+  homePagePortraitClipMediaBlocks,
   buildAresMediaPlayerBlock,
   aresMediaBlock,
   aresMediaLiveStreamBlocks,
@@ -48,17 +53,17 @@ describe('buildSettings', () => {
   });
 
   describe('Clip Media', () => {
-    it('Should process a ClipMedia block into a valid playlist item for a "Live" page.', () => {
+    it('Should process a video ClipMedia block into a valid playlist item for a "Live" page.', () => {
       const result = buildSettings({
         ...baseSettings,
-        blocks: clipMediaBlocks as MediaBlock[],
+        blocks: videoClipMediaBlocks as MediaBlock[],
         pageType: 'live',
       });
 
       expect(result).toStrictEqual({
         mediaType: 'video',
         playerConfig: {
-          autoplay: true,
+          autoplay: false,
           product: 'news',
           statsObject: {
             clipPID: 'p01thw20',
@@ -71,6 +76,7 @@ describe('buildSettings', () => {
           appName: 'news-serbian',
           appType: 'responsive',
           counterName: 'live_coverage.testID.page',
+          superResponsive: true,
           playlistObject: {
             title:
               "BBC launch trailer for We Know Our Place women's sport campaign",
@@ -116,10 +122,66 @@ describe('buildSettings', () => {
       } satisfies ConfigBuilderReturnProps);
     });
 
+    it('Should process an audio ClipMedia block into a valid playlist item for a "Live" page.', () => {
+      const result = buildSettings({
+        ...baseSettings,
+        blocks: audioClipMediaBlocks as MediaBlock[],
+        pageType: 'live',
+      });
+
+      expect(result).toStrictEqual({
+        mediaType: 'audio',
+        playerConfig: {
+          autoplay: false,
+          product: 'news',
+          statsObject: {
+            clipPID: 'p01vqk5l',
+            destination: 'WS_NEWS_LANGUAGES',
+            producer: 'SERBIAN',
+          },
+          enableToucan: true,
+          externalEmbedUrl:
+            'https://www.bbc.com/serbian/lat/av-embeds/srbija-68707945/vpid/p01vqk5n',
+          appName: 'news-serbian',
+          appType: 'responsive',
+          counterName: 'live_coverage.testID.page',
+          superResponsive: false,
+          playlistObject: {
+            title: 'a',
+            summary:
+              'BBC launch trailer for We Know Our Place women\'s sport campaign"',
+            holdingImageURL:
+              'https://ichef.test.bbci.co.uk/images/ic/512xn/p01vkjg8.png.webp',
+            items: [
+              {
+                duration: 27,
+                kind: 'audio',
+                versionID: 'p01vqk5n',
+              },
+            ],
+            embedRights: 'allowed',
+          },
+          ui: {
+            skin: 'audio',
+            baseColour: '#222222',
+            colour: '#b80000',
+            colourOnBaseColour: '#ffffff',
+            controls: { enabled: true, volumeSlider: true },
+            fallbackBackgroundColour: '#ffffff',
+            foreColour: '#222222',
+            locale: { lang: 'sr-latn' },
+            subtitles: { enabled: true, defaultOn: true },
+            fullscreen: { enabled: true },
+          },
+        },
+        showAds: false,
+      } satisfies ConfigBuilderReturnProps);
+    });
+
     it('Should add an advert item for a "Live" page when showAds is set to true.', () => {
       const result = buildSettings({
         ...baseSettings,
-        blocks: clipMediaBlocks as MediaBlock[],
+        blocks: videoClipMediaBlocks as MediaBlock[],
         pageType: 'live',
         adsEnabled: true,
         showAdsBasedOnLocation: true,
@@ -127,6 +189,148 @@ describe('buildSettings', () => {
 
       expect(result?.playerConfig.playlistObject?.items[0]).toStrictEqual({
         kind: 'advert',
+      });
+    });
+  });
+
+  describe('Portrait Clip Media', () => {
+    it('Should return a playlist of portrait video items for the homepage for mobile', () => {
+      window.matchMedia = jest.fn().mockImplementation(query => {
+        return {
+          matches: true,
+          media: query,
+        };
+      });
+
+      const result = buildSettings({
+        ...baseSettings,
+        blocks: homePagePortraitClipMediaBlocks as MediaBlock[],
+        pageType: 'home',
+      });
+
+      expect(result).toStrictEqual({
+        mediaType: 'video',
+        playerConfig: {
+          autoplay: true,
+          product: 'news',
+          enableToucan: true,
+          appType: 'responsive',
+          appName: 'news-serbian',
+          ui: {
+            skin: 'classic',
+            controls: {
+              enabled: true,
+              includeNextButton: true,
+              includePreviousButton: true,
+            },
+            locale: { lang: 'sr-latn' },
+            subtitles: { defaultOn: true, enabled: true },
+            fullscreen: { enabled: true, useCloseIconForExitFullscreen: true },
+            swipable: { direction: 'Y', enabled: true },
+            poster: {
+              availableWhenSettingUp: true,
+            },
+            pictureInPicture: {
+              enabled: false,
+            },
+          },
+          superResponsive: true,
+          supportFakeFullscreen: true,
+          counterName: 'live_coverage.testID.page',
+          statsObject: {
+            destination: 'WS_NEWS_LANGUAGES',
+            producer: 'SERBIAN',
+            clipPID: 'p0abc001',
+          },
+          playlistObject: {
+            title: 'Portrait Video 1',
+            holdingImageURL:
+              'https://ichef.bbci.co.uk/images/ic/512xn/p0abc001.jpg',
+            items: [
+              {
+                duration: 60,
+                kind: 'programme',
+                versionID: 'p0abc002',
+              },
+            ],
+          },
+          plugins: {
+            toLoad: [
+              {
+                html: 'http://localhost:7080/smpPlugins/fullscreen.js',
+                playerOnly: true,
+              },
+            ],
+          },
+        },
+        showAds: false,
+        orientation: 'portrait',
+      });
+    });
+
+    it('should return a playlist of portrait video items for the homepage for desktop', () => {
+      window.matchMedia = jest.fn().mockImplementation(query => {
+        return {
+          matches: false,
+          media: query,
+        };
+      });
+      const result = buildSettings({
+        ...baseSettings,
+        blocks: homePagePortraitClipMediaBlocks as MediaBlock[],
+        pageType: 'home',
+        isAmp: false,
+      });
+
+      expect(result).toStrictEqual({
+        mediaType: 'video',
+        playerConfig: {
+          autoplay: true,
+          product: 'news',
+          enableToucan: true,
+          appType: 'responsive',
+          appName: 'news-serbian',
+          ui: {
+            skin: 'classic',
+            controls: {
+              enabled: true,
+              includeNextButton: false,
+              includePreviousButton: false,
+            },
+            locale: { lang: 'sr-latn' },
+            subtitles: { defaultOn: true, enabled: true },
+            fullscreen: { enabled: false, useCloseIconForExitFullscreen: true },
+            swipable: { direction: 'Y', enabled: true },
+            poster: {
+              availableWhenSettingUp: true,
+            },
+            pictureInPicture: {
+              enabled: false,
+            },
+          },
+          superResponsive: true,
+          supportFakeFullscreen: true,
+          counterName: 'live_coverage.testID.page',
+          statsObject: {
+            destination: 'WS_NEWS_LANGUAGES',
+            producer: 'SERBIAN',
+            clipPID: 'p0abc001',
+          },
+          playlistObject: {
+            title: 'Portrait Video 1',
+            holdingImageURL:
+              'https://ichef.bbci.co.uk/images/ic/512xn/p0abc001.jpg',
+            items: [
+              {
+                duration: 60,
+                kind: 'programme',
+                versionID: 'p0abc002',
+              },
+            ],
+          },
+        },
+        showAds: false,
+        orientation: 'portrait',
       });
     });
   });
@@ -155,6 +359,7 @@ describe('buildSettings', () => {
           appName: 'news-serbian',
           appType: 'responsive',
           counterName: 'live_coverage.testID.page',
+          superResponsive: true,
           playlistObject: {
             title: 'Five things ants can teach us about management',
             summary: 'This is a caption!',
@@ -221,6 +426,7 @@ describe('buildSettings', () => {
           appName: 'news-serbian',
           appType: 'responsive',
           counterName: 'live_coverage.testID.page',
+          superResponsive: true,
           playlistObject: {
             title: 'Five things ants can teach us about management',
             summary: 'This is a caption!',
@@ -289,6 +495,7 @@ describe('buildSettings', () => {
         appName: 'news-serbian',
         appType: 'responsive',
         counterName: 'live_coverage.testID.page',
+        superResponsive: true,
         externalEmbedUrl:
           'https://www.bbc.com/serbian/lat/av-embeds/srbija-68707945/vpid/bbc_arabic_tv',
         playlistObject: {
@@ -346,11 +553,20 @@ describe('buildSettings', () => {
           appName: 'news-arabic',
           appType: 'responsive',
           counterName: 'arabic.multimedia.2013.12.131208_iraq_blast_.page',
+          superResponsive: true,
           playlistObject: {
             title: 'Legacy Media Page Title',
             holdingImageURL:
               'http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/12/08/131208135805_iraq_blast_640x360_bbc_nocredit.jpg',
             items: [
+              {
+                href: 'https://wsodprogrf.akamaized.net/arabic/3gp/2013/12/iraqblast_16x9_lo.3gp',
+                kind: 'programme',
+              },
+              {
+                href: 'https://wsodprogrf.akamaized.net/zhongwen/simp/3gp/2013/12/iraqblast_16x9_hi.3gp',
+                kind: 'programme',
+              },
               {
                 href: 'https://wsodprogrf.akamaized.net/arabic/dps/2013/12/iraqblast_16x9_lo.mp4',
                 kind: 'programme',
@@ -478,6 +694,54 @@ describe('buildSettings', () => {
       });
 
       expect(result?.orientation).toEqual('portrait');
+    });
+
+    it('Should process an AresMedia block with portrait video as the orientation when type is editorial and portrait', () => {
+      const myFixture = [
+        {
+          ...aresMediaBlock,
+          model: {
+            blocks: [
+              {
+                ...buildAresMediaPlayerBlock({
+                  types: ['Editorial', 'Portrait'],
+                }),
+              },
+            ],
+          },
+        },
+      ] as unknown as MediaBlock[];
+
+      const result = buildSettings({
+        ...baseSettings,
+        blocks: myFixture,
+      });
+
+      expect(result?.orientation).toEqual('portrait');
+    });
+
+    it('Should process an AresMedia block with landscape video as the orientation when type is editorial', () => {
+      const myFixture = [
+        {
+          ...aresMediaBlock,
+          model: {
+            blocks: [
+              {
+                ...buildAresMediaPlayerBlock({
+                  types: ['Editorial'],
+                }),
+              },
+            ],
+          },
+        },
+      ] as unknown as MediaBlock[];
+
+      const result = buildSettings({
+        ...baseSettings,
+        blocks: myFixture,
+      });
+
+      expect(result?.orientation).toEqual('landscape');
     });
 
     it('Should process an AresMedia block with landscape video as the orientation if nothing exists in types', () => {
@@ -697,6 +961,7 @@ describe('buildSettings', () => {
           autoplay: false,
           appName: 'news-hindi',
           counterName: 'hindi.bbc_hindi_tv.tv.w172zm8920nck2z.page',
+          superResponsive: true,
           statsObject: {
             destination: 'WS_NEWS_LANGUAGES',
             producer: 'HINDI',
@@ -757,7 +1022,7 @@ describe('buildSettings', () => {
 
       const result = buildSettings({
         ...baseSettings,
-        blocks: clipMediaBlocks as MediaBlock[],
+        blocks: videoClipMediaBlocks as MediaBlock[],
         pageType: 'live',
       });
 
@@ -795,7 +1060,7 @@ describe('buildSettings', () => {
 
             const result = buildSettings({
               ...baseSettings,
-              blocks: clipMediaBlocks as MediaBlock[],
+              blocks: videoClipMediaBlocks as MediaBlock[],
               pageType: 'live',
             });
 
@@ -835,7 +1100,7 @@ describe('buildSettings', () => {
 
             const result = buildSettings({
               ...baseSettings,
-              blocks: clipMediaBlocks as MediaBlock[],
+              blocks: videoClipMediaBlocks as MediaBlock[],
               pageType: 'live',
             });
 
@@ -908,6 +1173,7 @@ describe('buildSettings', () => {
               enabled: true,
             },
           },
+          superResponsive: false,
         },
         mediaType: 'liveRadio',
         showAds: false,
@@ -953,6 +1219,7 @@ describe('buildSettings', () => {
           autoplay: false,
           appName: 'news-afrique',
           counterName: 'afrique.bbc_afrique_radio.w172zn0kxd65h3g.page',
+          superResponsive: false,
           statsObject: {
             destination: 'WS_NEWS_LANGUAGES',
             producer: 'AFRIQUE',
@@ -993,6 +1260,229 @@ describe('buildSettings', () => {
           },
         },
         mediaType: 'audio',
+        showAds: false,
+      });
+    });
+  });
+
+  describe('liveMedia', () => {
+    const mundoMediaBaseSettings = {
+      counterName: 'live_coverage.c7dkx155e626t.page',
+      lang: 'es',
+      service: 'mundo' as Services,
+      statsDestination: 'WS_NEWS_LANGUAGES',
+      producer: 'MUNDO',
+      translations: mundoServiceConfig.default.translations,
+    } as BuildConfigProps;
+
+    const arabicMediaBaseSettings = {
+      counterName: 'live_coverage.cvp5r6m6mgpt.page',
+      lang: 'ar',
+      service: 'arabic' as Services,
+      statsDestination: 'WS_NEWS_LANGUAGES',
+      producer: 'ARABIC',
+      translations: arabicServiceConfig.default.translations,
+    } as BuildConfigProps;
+
+    it('Should process a live media block into a valid playlist item.', () => {
+      const mediaBlock = {
+        type: 'liveMedia',
+        model: {
+          urn: 'urn:bbc:pips:pid:p0gh4n63',
+          title: 'Non-Stop Cartoons!',
+          type: 'episode',
+          synopses: {
+            short: 'Toon in, kick back and relax to 100% cartoons!',
+            medium:
+              'Toon in, kick back and relax. From laugh out loud to mischief and mayhem. 100% cartoons all day long.',
+            long: 'Toon in, kick back and relax. From laugh out loud to mischief and mayhem. 100% cartoons all day long. Join your favourites Grizzy, Shaun, Taffy, Boy Girl Dog Cat Mouse Cheese, The Deep and those Monster Loving Maniacs.',
+          },
+          mediaType: 'audio_video',
+          imageUrlTemplate:
+            'https://ichef.bbci.co.uk/images/ic/$recipe/p0k31t4d.jpg',
+          masterbrand: {
+            id: 'cbbc',
+            name: 'CBBC',
+            networkName: 'CBBC',
+            type: 'tv',
+            imageUrlTemplate: 'ichef.bbci.co.uk/images/ic/$recipe/p0f8qps2.jpg',
+          },
+          version: {
+            vpid: 'p0gh4n67',
+            duration: 'PT24H',
+            availabilityType: 'webcast',
+            versionTypes: [
+              {
+                type: 'Original',
+                name: 'Original version',
+              },
+            ],
+            schedule: {
+              start: '2024-12-15T08:00:21Z',
+              accurateStart: '2024-12-15T08:00:21Z',
+              end: '2024-12-15T13:00:21Z',
+            },
+            serviceId: null,
+            authToken: null,
+            status: 'LIVE',
+            warnings: null,
+          },
+          leadMedia: true,
+        },
+      };
+
+      const result = buildSettings({
+        ...mundoMediaBaseSettings,
+        blocks: [mediaBlock] as MediaBlock[],
+        pageType: LIVE_PAGE,
+      });
+
+      expect(result).toStrictEqual({
+        mediaType: 'video',
+        playerConfig: {
+          appName: 'news-mundo',
+          appType: 'responsive',
+          autoplay: false,
+          counterName: 'live_coverage.c7dkx155e626t.page',
+          enableToucan: true,
+          superResponsive: true,
+          playlistObject: {
+            holdingImageURL:
+              'https://ichef.bbci.co.uk/images/ic/$recipe/p0k31t4d.jpg',
+            items: [
+              {
+                duration: 86400,
+                kind: 'programme',
+                live: true,
+                versionID: 'p0gh4n67',
+              },
+            ],
+            summary: 'Toon in, kick back and relax to 100% cartoons!',
+            title: 'Non-Stop Cartoons!',
+          },
+          product: 'news',
+          statsObject: {
+            destination: 'WS_NEWS_LANGUAGES',
+            episodePID: undefined,
+            producer: 'MUNDO',
+          },
+          ui: {
+            controls: {
+              enabled: true,
+            },
+            fullscreen: {
+              enabled: true,
+            },
+            locale: {
+              lang: 'es',
+            },
+            skin: 'classic',
+            subtitles: {
+              defaultOn: true,
+              enabled: true,
+            },
+          },
+        },
+        showAds: false,
+      });
+    });
+
+    it('Should process a live media block with service ID into a valid playlist item', () => {
+      const mediaBlock = {
+        type: 'liveMedia',
+        model: {
+          urn: 'urn:bbc:pips:sid:bbc_arabic_tv',
+          title: 'BBC Arabic TV',
+          type: 'episode',
+          synopses: {
+            short:
+              'جولة إخبارية يومية تتناول أهم الأحداث العربية والعالمية في تقارير ولقاءات وتحليلات ',
+            medium:
+              'جولة إخبارية يومية تتناول أهم الأحداث العربية والعالمية في تقارير ولقاءات وتحليلات ',
+            long: 'جولة إخبارية يومية تتناول أهم الأحداث العربية والعالمية في تقارير ولقاءات وتحليلات ',
+          },
+          mediaType: 'audio_video',
+          imageUrlTemplate:
+            'https://ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png',
+          masterbrand: {
+            id: 'bbc_arabic_tv',
+            name: 'تلفزيون بي بي سي عربي',
+            networkName: 'تلفزيون بي بي سي عربي',
+            type: 'tv',
+            imageUrlTemplate: 'ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png',
+          },
+          version: {
+            vpid: 'n4pdm3cdh4',
+            duration: 'PT1H',
+            availabilityType: 'simulcast',
+            versionTypes: [
+              {
+                type: 'Original',
+                name: 'Original version',
+              },
+            ],
+            schedule: null,
+            serviceId: 'bbc_arabic_tv',
+            authToken: null,
+            status: 'LIVE',
+            warnings: null,
+          },
+          leadMedia: true,
+        },
+      };
+
+      const result = buildSettings({
+        ...arabicMediaBaseSettings,
+        blocks: [mediaBlock] as MediaBlock[],
+        pageType: LIVE_PAGE,
+      });
+
+      expect(result).toStrictEqual({
+        mediaType: 'video',
+        playerConfig: {
+          appName: 'news-arabic',
+          appType: 'responsive',
+          autoplay: false,
+          counterName: 'live_coverage.cvp5r6m6mgpt.page',
+          enableToucan: true,
+          superResponsive: true,
+          playlistObject: {
+            holdingImageURL:
+              'https://ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png',
+            items: [
+              {
+                kind: 'programme',
+                live: true,
+                serviceID: 'bbc_arabic_tv',
+              },
+            ],
+            summary:
+              'جولة إخبارية يومية تتناول أهم الأحداث العربية والعالمية في تقارير ولقاءات وتحليلات ',
+            title: 'BBC Arabic TV',
+          },
+          product: 'news',
+          statsObject: {
+            destination: 'WS_NEWS_LANGUAGES',
+            episodePID: undefined,
+            producer: 'ARABIC',
+          },
+          ui: {
+            controls: {
+              enabled: true,
+            },
+            fullscreen: {
+              enabled: true,
+            },
+            locale: {
+              lang: 'ar',
+            },
+            skin: 'classic',
+            subtitles: {
+              defaultOn: true,
+              enabled: true,
+            },
+          },
+        },
         showAds: false,
       });
     });

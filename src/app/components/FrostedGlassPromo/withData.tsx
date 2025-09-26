@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { PropsWithChildren, useContext } from 'react';
+import { PropsWithChildren, use } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import pick from 'ramda/src/pick';
@@ -74,7 +74,7 @@ const buildImageProperties = (imageProps?: ImageProps) => {
 };
 
 const TimestampFooterWithAmp = (props: PromoProps) => {
-  const { isAmp } = useContext(RequestContext);
+  const { isAmp } = use(RequestContext);
 
   if (!props?.item?.timestamp) return null;
 

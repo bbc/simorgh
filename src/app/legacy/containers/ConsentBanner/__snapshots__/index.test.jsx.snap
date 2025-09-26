@@ -1,12 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Consent Banner Container should correctly render amp banner 1`] = `
-<div>
-  <div>
-    Amp Cookie banner
-  </div>
-</div>
-`;
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Consent Banner Container should correctly render canonical banner 1`] = `
 <div>

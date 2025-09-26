@@ -1,3 +1,4 @@
+import { Direction } from '#app/models/types/global';
 import React from 'react';
 
 export const Ellipsis = () => (
@@ -11,6 +12,7 @@ export const Ellipsis = () => (
     <path d="M1.6 18.8h5.8v-5.6H1.6v5.6zm11.5 0h5.8v-5.6h-5.8v5.6zm11.5 0h5.8v-5.6h-5.8v5.6z" />
   </svg>
 );
+
 export const LeftChevron = ({ className }: { className?: string }) => (
   <svg
     viewBox="0 0 32 32"
@@ -37,6 +39,203 @@ export const RightChevron = ({ className }: { className?: string }) => (
   </svg>
 );
 
+export enum ChevronOrientation {
+  BACKWARD = 'backward',
+  FORWARD = 'forward',
+}
+
+type ChevronProps = {
+  className?: string;
+  dir: Direction;
+  orientation: ChevronOrientation;
+};
+
+export const Chevron = ({ className, dir, orientation }: ChevronProps) => {
+  let normalisedDirection = null;
+  const paths = {
+    [ChevronOrientation.BACKWARD]: (
+      <path d="M10.4 14.3L26.5 31h-6.4L5.5 16 20.1 1h6.4L10.4 17.7v-3.4z" />
+    ),
+    [ChevronOrientation.FORWARD]: (
+      <path d="M21.6 14.3L5.5 31h6.4l14.6-15L11.9 1H5.5l16.1 16.7v-3.4z" />
+    ),
+  };
+
+  if (orientation === ChevronOrientation.BACKWARD) {
+    normalisedDirection =
+      dir === 'ltr' ? ChevronOrientation.BACKWARD : ChevronOrientation.FORWARD;
+  }
+
+  if (orientation === ChevronOrientation.FORWARD) {
+    normalisedDirection =
+      dir === 'ltr' ? ChevronOrientation.FORWARD : ChevronOrientation.BACKWARD;
+  }
+
+  if (!normalisedDirection) return null;
+
+  return (
+    <svg
+      viewBox="0 0 32 32"
+      focusable="false"
+      aria-hidden="true"
+      width="12"
+      height="12"
+      className={className}
+    >
+      {paths[normalisedDirection]}
+    </svg>
+  );
+};
+
+export const Clock = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    aria-hidden="true"
+    width="12"
+    height="12"
+    className={className}
+  >
+    <path d="M16 31c8.5 0 15-6.5 15-15S24.5 1 16 1 1 7.5 1 16s6.5 15 15 15zm0-2.7C9 28.3 3.7 23 3.7 16S9 3.7 16 3.7C23 3.7 28.3 9 28.3 16S23 28.3 16 28.3zm6.2-6.7 1-1.5-5.7-4.5-.6-8.6H15l-.7 10.5 7.9 4.1z" />
+  </svg>
+);
+
+export const Book = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    aria-hidden="true"
+    width="12"
+    height="12"
+    className={className}
+  >
+    <path d="M8.6 1.6c-3.1 0-5 1.8-5 5v18.9c0 3.1 1.8 5 5 5h19.7V6.1h-2.2v21.7H8.2c-1.2 0-2.3-1-2.3-2.3s1-2.3 2.3-2.3h15.3V1.6H8.6z" />
+  </svg>
+);
+
+export const Words = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    aria-hidden="true"
+    width="12"
+    height="12"
+    className={className}
+  >
+    <path d="M6 15.9h10v2H6zm4-4h12v2H10zm8 4h8v2h-8z" />
+    <path d="M28 3.9H4c-1.1 0-2 .9-2 2v15c0 1.1.9 2 2 2h10.2v7l7.4-7H28c1.1 0 2-.9 2-2v-15c0-1.1-.9-2-2-2zm-6.4 17H20L16.2 25v-4.1H4v-15h24v15h-6.4z" />
+  </svg>
+);
+
+export const Articles = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    aria-hidden="true"
+    width="12"
+    height="12"
+    className={className}
+  >
+    <path d="M5 9v20h22V9Zm20 18h-3a5.89 5.89 0 0 0-6-5 5.89 5.89 0 0 0-6 5H7V11h18ZM7 6h18v2H7zm2-3h14v2H9z" />
+    <circle cx="15.998" cy="17.5" r="3.5" />
+  </svg>
+);
+
+export const Calendar = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    aria-hidden="true"
+    width="12"
+    height="12"
+    className={className}
+  >
+    <path d="M6.2 30.5h19.5c5 0 5.3-2.5 5.3-5.3V9.3h-2.6v16c0 2-.6 2.6-2.6 2.6H6.3c-2 0-2.6-.6-2.6-2.6v-16H1v15.9c0 2.8.2 5.3 5.2 5.3zM10.8 15h2v-2h-2v2zM1 9.6h30V1.5h-5.3v3h-3v-3H9.2v3h-3v-3H1v8.1zM15 15h2v-2h-2v2zm4.1 0h2v-2h-2v2zm4.2 0h2v-2h-2v2zm-12.5 4.7h2v-2h-2v2zm4.2 0h2v-2h-2v2zm4.1 0h2v-2h-2v2zm4.2 0h2v-2h-2v2zm-16.6 0h2v-2h-2v2zm4.1 4.7h2v-2h-2v2zm4.2 0h2v-2h-2v2zm4.1 0h2v-2h-2v2zm-12.4 0h2v-2h-2v2z" />
+  </svg>
+);
+
+export const Favourites = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    aria-hidden="true"
+    width="12"
+    height="12"
+    className={className}
+  >
+    <path d="M9.1 7.5h21.8V1.9H9.1v5.6zm0 22.6h21.8v-5.6H9.1v5.6zm7.2-11.3h14.6v-5.6H16.3v5.6zm-2.8-4.6H9.1V9.8H5.5v4.4H1.1v3.5h4.4v4.4h3.6v-4.4h4.4v-3.5z" />
+  </svg>
+);
+
+export const Calculator = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    aria-hidden="true"
+    width="12"
+    height="12"
+    className={className}
+  >
+    <path d="M22.8 32H9.2c-1.2 0-2.1-.3-2.6-.8s-.8-1.4-.8-2.6V3.4c0-1.2.3-2.1.8-2.6S8 0 9.2 0h13.6c1.3 0 2.1.3 2.6.8s.8 1.4.8 2.6v25.2c0 1.2-.3 2.1-.8 2.6s-1.3.8-2.6.8zm.8-29.4H8.4V12h15.2V2.6zM12.1 14.2H8.4v3.7h3.7v-3.7zm0 5.7H8.4v3.7h3.7v-3.7zm0 5.8H8.4v3.7h3.7v-3.7zm5.7-11.5h-3.7v3.7h3.7v-3.7zm0 5.7h-3.7v3.7h3.7v-3.7zm0 5.8h-3.7v3.7h3.7v-3.7zm5.8-11.5h-3.7v3.7h3.7v-3.7zm0 5.7h-3.7v9.5h3.7v-9.5z" />
+  </svg>
+);
+
+export const Close = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    width="12"
+    height="12"
+    className={className}
+    focusable="false"
+    aria-hidden="true"
+  >
+    <path d="m30 4.6-2.8-2.8L2 27.4l2.8 2.8zM4.8 1.8 1.9 4.7l25.2 25.5 2.9-2.9z" />
+  </svg>
+);
+
+export const Play = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    width="12"
+    height="12"
+    className={className}
+    focusable="false"
+    aria-hidden="true"
+  >
+    <path d="M29 16 5.8 1v30z" />
+  </svg>
+);
+
+export const Fan = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+    viewBox="0 0 1.51 1.83"
+    focusable="false"
+    aria-hidden="true"
+    width="4rem"
+    height="2rem"
+  >
+    <path d="M.76,1.51c.42,0,.76-.33.76-.76s-.33-.75-.76-.75-.76.32-.76.75.33.76.76.76M.76,1.34C.43,1.34.17,1.09.17.76S.43.16.76.16s.59.26.59.59-.26.59-.59.59M.76.88s.03,0,.04,0l.05.04c.06.05.05.13.13.18.06.04.16.01.22-.09.05-.09.04-.19-.05-.24-.04-.04-.08-.04-.11-.04h-.15s-.02-.05-.04-.07v-.06c.03-.06.1-.11.1-.2,0-.07-.07-.14-.19-.14-.11,0-.19.06-.19.16,0,.06.02.09.04.12l.07.12s-.04.04-.04.07l-.06.02c-.07.02-.14-.02-.22.02-.06.04-.09.13-.03.24.05.09.14.13.23.08.05-.03.07-.06.09-.09l.07-.12s.02,0,.03,0M.67,1.49v.18h-.26c-.09,0-.13.04-.13.13v.03h.95v-.03c0-.09-.04-.13-.13-.13h-.26v-.18h-.16ZM.76.83s-.07-.03-.07-.07.03-.07.07-.07.07.03.07.07-.03.07-.07.07" />{' '}
+  </svg>
+);
+
+export const Plus = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+    focusable="false"
+    aria-hidden="true"
+    viewBox="0 0 32 32"
+    width="0.8rem"
+    height="0.8rem"
+  >
+    <path d="M29.6 13.4H18.7v-11h-5.4v11H2.4v5.3h10.9v11h5.4v-11h10.9z" />
+  </svg>
+);
+
 export const RightArrow = ({ className }: { className?: string }) => (
   <svg
     viewBox="0 0 32 32"
@@ -49,5 +248,56 @@ export const RightArrow = ({ className }: { className?: string }) => (
     <g>
       <path d="M12.6,26.7L23.2,16L12.6,5.3H8.8v21.4H12.6z" />
     </g>
+  </svg>
+);
+
+export const TriangleDown = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    className={className}
+    focusable="false"
+    aria-hidden="true"
+  >
+    <path d="M26.7 12.6 16 23.2 5.3 12.6V8.8h21.4z" />
+  </svg>
+);
+
+export const Warning = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    width="24"
+    height="24"
+    className={className}
+    focusable="false"
+    aria-hidden="true"
+  >
+    <path d="M3.1 30.2h25.8c1.6 0 2.3-.8 2.3-1.9 0-.8-.3-1.4-1-2.9L18.6 3.8c-.8-1.5-1.5-2-2.6-2s-1.8.5-2.6 2L1.8 25.4C1 26.9.7 27.5.7 28.3c.1 1.1.8 1.9 2.4 1.9M16 26.9c-1.6 0-2.4-1-2.4-2.1 0-1.2.8-2.1 2.4-2.1s2.4 1 2.4 2.1-.8 2.1-2.4 2.1m-1.7-6.7-.8-10.6h5l-.8 10.6z" />
+  </svg>
+);
+
+export const UpArrowIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    width="24"
+    height="24"
+    aria-hidden="true"
+    focusable="false"
+  >
+    <path d="M31.1 2.5H1v2.8h30.1zM14.3 13.3 31 29.5v-6.7L16 8.1.9 22.8v6.7l16.8-16.2z" />
+  </svg>
+);
+export const DownArrowIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    width="24"
+    height="24"
+    aria-hidden="true"
+    focusable="false"
+  >
+    <path d="M.9 29.5H31v-2.8H.9zm16.8-10.8L1 2.5v6.7l15 14.7L31.1 9.2V2.5L14.3 18.7z" />
   </svg>
 );

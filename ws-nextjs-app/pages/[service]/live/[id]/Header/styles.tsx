@@ -17,6 +17,12 @@ export default {
         outline: 'none',
       },
     }),
+  hideMaskedImage: ({ mq }: Theme) =>
+    css({
+      [mq.GROUP_4_MIN_WIDTH]: {
+        opacity: 0,
+      },
+    }),
   backgroundContainer: () =>
     css({
       position: 'absolute',
@@ -42,6 +48,31 @@ export default {
         width: '100%',
       },
     }),
+  liveMedia: ({ mq, spacings }: Theme) =>
+    css({
+      padding: `0rem ${spacings.FULL}rem ${spacings.DOUBLE}rem`,
+      [mq.GROUP_2_MIN_WIDTH]: {
+        padding: `0rem ${spacings.DOUBLE}rem ${spacings.DOUBLE}rem`,
+      },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        padding: `${spacings.DOUBLE}rem  ${spacings.DOUBLE}rem ${pixelsToRem(40)}rem`,
+        maxWidth: '50%', // determines width of text overlay.
+      },
+    }),
+  liveMediaOpen: ({ mq }: Theme) =>
+    css({
+      [mq.GROUP_4_MIN_WIDTH]: {
+        maxWidth: '100%',
+      },
+    }),
+  fixedHeight: ({ mq, spacings }: Theme) =>
+    css({
+      [mq.GROUP_4_MIN_WIDTH]: {
+        minHeight: '0',
+        padding: `${pixelsToRem(40)}rem ${spacings.DOUBLE}rem 0`,
+        maxWidth: '50%', // determines width of text overlay.
+      },
+    }),
   textContainerWithoutImage: ({ mq, gridWidths, spacings }: Theme) =>
     css({
       position: 'relative',
@@ -51,7 +82,6 @@ export default {
       [mq.GROUP_2_MIN_WIDTH]: {
         padding: `${spacings.DOUBLE}rem`,
       },
-
       [mq.GROUP_4_MIN_WIDTH]: {
         paddingTop: `${spacings.TRIPLE}rem`,
         paddingBottom: `${spacings.QUADRUPLE}rem`,

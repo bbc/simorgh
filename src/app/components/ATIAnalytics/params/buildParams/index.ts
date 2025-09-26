@@ -1,5 +1,5 @@
 import { LIBRARY_VERSION } from '../../../../lib/analyticsUtils';
-import { buildATIPageTrackPath } from '../../atiUrl';
+import { buildATIPageTrackPath, buildReverbAnalyticsModel } from '../../atiUrl';
 import { ATIDataWithContexts } from '../../types';
 
 export const buildPageATIParams = ({
@@ -7,10 +7,14 @@ export const buildPageATIParams = ({
   requestContext,
   serviceContext,
 }: ATIDataWithContexts) => {
-  const { isUK, origin, platform, previousPath, statsDestination } =
-    requestContext;
-  const { atiAnalyticsAppName, atiAnalyticsProducerId, lang, service } =
-    serviceContext;
+  const { isUK, platform, statsDestination } = requestContext;
+  const {
+    atiAnalyticsAppName,
+    atiAnalyticsProducerId,
+    atiAnalyticsProducerName,
+    lang,
+    service,
+  } = serviceContext;
   const {
     campaigns,
     categoryName,
@@ -26,6 +30,9 @@ export const buildPageATIParams = ({
     timePublished,
     timeUpdated,
     ampExperimentName,
+    experimentName,
+    experimentVariant,
+    readTimeMilliseconds,
   } = atiData;
 
   return {
@@ -40,17 +47,19 @@ export const buildPageATIParams = ({
     ldpThingLabels,
     libraryVersion: LIBRARY_VERSION,
     nationsProducer,
-    origin,
     pageIdentifier,
     pageTitle,
     platform,
-    previousPath,
     producerId: producerId || atiAnalyticsProducerId,
+    producerName: atiAnalyticsProducerName,
     service,
     statsDestination,
     timePublished,
     timeUpdated,
+    ...(readTimeMilliseconds && { readTimeMilliseconds }),
     ...(ampExperimentName && { ampExperimentName }),
+    ...(experimentName && { experimentName }),
+    ...(experimentVariant && { experimentVariant }),
   };
 };
 
@@ -60,5 +69,14 @@ export const buildPageATIUrl = ({
   serviceContext,
 }: ATIDataWithContexts) =>
   buildATIPageTrackPath(
+    buildPageATIParams({ atiData, requestContext, serviceContext }),
+  );
+
+export const buildPageReverbParams = ({
+  atiData,
+  requestContext,
+  serviceContext,
+}: ATIDataWithContexts) =>
+  buildReverbAnalyticsModel(
     buildPageATIParams({ atiData, requestContext, serviceContext }),
   );

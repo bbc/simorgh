@@ -7,7 +7,7 @@ import {
 import {
   ARTICLE_PAGE,
   AUDIO_PAGE,
-  MEDIA_PAGE,
+  LIVE_RADIO_PAGE,
   TV_PAGE,
 } from '#app/routes/utils/pageTypes';
 import Metadata from '.';
@@ -64,7 +64,7 @@ describe('Media Loader - Metadata', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it.each([MEDIA_PAGE, AUDIO_PAGE, TV_PAGE])(
+  it.each([AUDIO_PAGE, TV_PAGE, LIVE_RADIO_PAGE])(
     'should not render metadata component as the %s page type is not supported',
     async pageType => {
       let container;

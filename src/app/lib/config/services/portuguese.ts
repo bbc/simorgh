@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-portuguese',
     atiAnalyticsProducerId: '33',
+    atiAnalyticsProducerName: 'BRASIL',
+    useReverb: true,
     chartbeatDomain: 'brasil.bbc.co.uk', // this is meant to be different to the service name
     brandName: 'BBC News Brasil',
     product: 'BBC News',
@@ -41,24 +43,24 @@ export const service: DefaultServiceConfig = {
       'https://www.bbc.com/portuguese/institutional-50054434',
     isTrustProjectParticipant: true,
     script: latinWithDiacritics,
-    manifestPath: '/manifest.json',
+    manifestPath: '/portuguese/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Notícias, vídeos, análise e contexto em português',
+    homePageTitle: 'Notícias, vídeos, análise e contexto em português',
     passportHomes: ['brasil'],
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
-      title: 'Novo podcast investigativo: A Raposa',
-      brandTitle: 'Novo podcast investigativo: A Raposa',
+      title: 'Whatsapp!',
+      brandTitle: 'No WhatsApp',
       brandDescription:
-        'Uma tonelada de cocaína, três brasileiros inocentes e a busca por um suspeito inglês',
+        'Agora você pode receber as notícias da BBC News Brasil no seu celular.',
       image: {
-        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0k38tc4.jpg',
-        alt: 'Logo: A Raposa',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0lq77dv.png',
+        alt: 'BBC Brasil no WhatsAp',
       },
       linkLabel: {
-        text: 'Episódios',
-        href: 'https://www.bbc.com/portuguese/podcasts/p0cyhvny',
+        text: 'Clique para se inscrever',
+        href: 'https://www.whatsapp.com/channel/0029VaVHa4S6rsQrlMVx8c0b',
       },
       skipLink: {
         text: 'Pule %title% e continue lendo',
@@ -75,14 +77,13 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'Publicidade',
       },
-      recommendationTitle: 'Matérias recomendadas',
-      splitRecommendationTitle: 'Mais matérias recomendadas',
       seeAll: 'Ver todos',
       home: 'Início',
       currentPage: 'Página atual',
       skipLinkText: 'Vá para o conteúdo',
       relatedContent: 'Histórias relacionadas',
       relatedTopics: 'Tópicos relacionados',
+      moreOnThis: '',
       navMenuText: 'Seções',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
@@ -237,7 +238,9 @@ export const service: DefaultServiceConfig = {
         photogallery: 'Galeria de fotos',
         video: 'Vídeo',
         listen: 'Listen',
+        play: 'Play',
         watch: 'Assista',
+        watchMoments: 'Assista',
         listenLive: 'Ouça ao vivo',
         listenNext: 'Ouça o próximo',
         liveLabel: 'AO VIVO',
@@ -248,6 +251,12 @@ export const service: DefaultServiceConfig = {
         recentEpisodes: 'Mais',
         podcastExternalLinks: 'O podcast está disponível em',
         download: 'Baixar episódio',
+        closeVideo: 'Sair',
+        endOfContentClose: 'Fim deste conteúdo. Sair',
+      },
+      carousel: {
+        previous: 'Scroll to previous item',
+        next: 'Scroll to next item',
       },
       socialEmbed: {
         caption: {
@@ -293,11 +302,11 @@ export const service: DefaultServiceConfig = {
         optional: 'opcional',
 
         // File upload
-        fileUploadLiveRegionText: undefined,
+        fileUploadLiveRegionText: 'O que você está uploading:',
         fileUploadLiveRegionUpdateText: undefined,
         fileUploadListHeading: 'O que você está uploading:',
         fileUploadButton: 'Selecione um arquivo',
-        fileUploadRemoveButton: undefined,
+        fileUploadRemoveButton: 'Selecione um arquivo',
 
         // Submit button
         submitButton: 'Enviar',
@@ -320,7 +329,8 @@ export const service: DefaultServiceConfig = {
         validationWordLimit: 'Máximo de {{wordLimit}} palavras',
 
         // Messaging
-        retentionPeriodDays: undefined,
+        retentionPeriodDays:
+          'Nós guardaremos a sua mensagem por até {{days}} dias. Caso não usemos o conteúdo, ele será apagado junto a qualquer outra informação que você nos tenha enviado.',
         referenceNumber: 'Número de referência',
         submissionInfoSignedOutMessage:
           'Você deve anotar esses detalhes para sua referência.',
@@ -331,7 +341,7 @@ export const service: DefaultServiceConfig = {
         removalGuidelineText: undefined,
 
         // Form Screen
-        dataPolicyHeading: undefined,
+        dataPolicyHeading: 'Nossa política de dados',
 
         // Uploading Screen
         uploadingHeading: 'Uploading seus arquivos...',
@@ -340,8 +350,9 @@ export const service: DefaultServiceConfig = {
         // Success Screen
         successHeading: 'Mensagem enviada',
         successDescription: 'Obrigado por entrar em contato.',
-        privacyPolicyLinkHref: undefined,
-        privacyPolicyLinkText: undefined,
+        privacyPolicyLinkHref:
+          'https://www.bbc.com/portuguese/articles/cw0w9z6p491o',
+        privacyPolicyLinkText: 'Política de privacidade',
 
         // Error Screen
         errorHeading: 'Sua mensagem não foi enviada',
@@ -353,7 +364,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'Mais lidas',
+      header: 'Mais clicadas',
       lastUpdated: 'Última atualização:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -362,7 +373,7 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'Mais lidas',
       skipLink: {
         text: 'Pule %title% e continue lendo',
         endTextVisuallyHidden: 'Fim do %title%',
@@ -374,7 +385,7 @@ export const service: DefaultServiceConfig = {
         text: 'Por que você pode confiar na BBC',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Leia sobre nossa política em relação a links externos.',
       },
       links: [
@@ -400,7 +411,7 @@ export const service: DefaultServiceConfig = {
         },
         {
           href: 'https://www.bbc.com/ws/languages',
-          text: 'Other Languages',
+          text: 'BBC News em outras línguas',
         },
         {
           id: 'COOKIE_SETTINGS',
@@ -447,8 +458,8 @@ export const service: DefaultServiceConfig = {
         url: '/portuguese/topics/c9y2j35dn2zt',
       },
       {
-        title: 'BBC Lê',
-        url: '/portuguese/topics/cxndrr1qgllt',
+        title: 'Podcasts',
+        url: '/portuguese/topics/cx2ggnx4j72t',
       },
     ],
   },

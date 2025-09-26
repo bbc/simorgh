@@ -13,6 +13,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'newsround',
     atiAnalyticsProducerId: '65',
+    atiAnalyticsProducerName: 'NEWSROUND',
+    useReverb: true,
     chartbeatDomain: 'bbc.co.uk',
     brandName: 'CBBC Newsround',
     product: 'CBBC Newsround',
@@ -35,8 +37,9 @@ export const service: DefaultServiceConfig = {
     twitterSite: '@BBCNewsround',
     isTrustProjectParticipant: false,
     script: latin,
-    manifestPath: '/articles/manifest.json',
-    frontPageTitle: 'Home',
+    manifestPath:
+      'https://static.files.bbci.co.uk/core/manifest.1ccdbcfd4cc3bf889128a50903c2b22c81758637.json',
+    homePageTitle: 'Home',
     showAdPlaceholder: false,
     showRelatedTopics: false,
     translations: {
@@ -47,6 +50,7 @@ export const service: DefaultServiceConfig = {
       currentPage: 'Current page',
       skipLinkText: 'Skip to content',
       relatedContent: 'Related content',
+      moreOnThis: '',
       navMenuText: 'Sections',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
@@ -207,16 +211,13 @@ export const service: DefaultServiceConfig = {
       socialEmbed: {},
     },
     mostRead: {
-      header: 'Most read',
+      header: 'Popular Reads',
       lastUpdated: 'Last updated:',
       numberOfItems: 10,
       hasMostRead: false,
     },
     radioSchedule: {
       hasRadioSchedule: false,
-    },
-    recommendations: {
-      hasStoryRecommendations: false,
     },
     footer: {
       externalLink: {

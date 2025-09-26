@@ -15,7 +15,7 @@ const defaultToggles = {
   },
 };
 
-const listItemBlock = (id = null, listBlocks) => ({
+const listItemBlock = (id, listBlocks) => ({
   id,
   type: 'listItem',
   model: {
@@ -23,7 +23,7 @@ const listItemBlock = (id = null, listBlocks) => ({
   },
 });
 
-const listBlock = (id = null, blocks, type = 'unorderedList') => ({
+const listBlock = (id, blocks, type = 'unorderedList') => ({
   id,
   type,
   model: {

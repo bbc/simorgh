@@ -1,8 +1,19 @@
 /** @jsx jsx */
 import { jsx, useTheme } from '@emotion/react';
-import { useContext } from 'react';
+import { use } from 'react';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
+import { Environments, PageTypes, Services } from '#app/models/types/global';
+import {
+  getArticleId,
+  getTipoId,
+} from '#app/routes/utils/constructPageFetchUrl';
+import {
+  ARTICLE_PAGE,
+  LIVE_PAGE,
+  MEDIA_ARTICLE_PAGE,
+} from '#app/routes/utils/pageTypes';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import {
   getIconAssetUrl,
@@ -12,10 +23,7 @@ import {
   renderAppleItunesApp,
 } from './utils';
 import { IconSizes, MetadataProps, Tag } from './types';
-import {
-  defaultTranslations,
-  liteEnabledServices,
-} from '../LiteSiteCta/liteSiteConfig';
+import defaultTranslations from '../LiteSiteSummary/defaultTranslations';
 
 const ENGLISH_SERVICES = ['news', 'sport', 'ws'];
 const FACEBOOK_APP_ID = '1609039196070050';
@@ -38,6 +46,51 @@ const renderTags = (tags?: Tag[]) =>
   tags?.map(({ thingLabel: content }) => (
     <meta name="article:tag" content={content} key={content} />
   ));
+
+export const OG_EXPERIMENT_SERVICES: Services[] = [
+  'arabic',
+  'hausa',
+  'hindi',
+  'indonesia',
+  'mundo',
+  'ukrainian',
+];
+
+const OG_EXPERIMENT_PAGETYPES: PageTypes[] = [
+  MEDIA_ARTICLE_PAGE,
+  ARTICLE_PAGE,
+  LIVE_PAGE,
+];
+
+const CDN_URLS: Record<Environments, string> = {
+  local: 'http://localhost:7081',
+  test: 'https://web-cdn.test.api.bbci.co.uk',
+  live: 'https://web-cdn.api.bbci.co.uk',
+};
+
+const getSocialShareImage = ({
+  metaImage,
+  pageType,
+  pathname,
+  service,
+}: {
+  metaImage: string;
+  pageType: PageTypes;
+  pathname: string;
+  service: Services;
+}) => {
+  if (!OG_EXPERIMENT_SERVICES.includes(service)) return metaImage;
+  if (!OG_EXPERIMENT_PAGETYPES.includes(pageType)) return metaImage;
+
+  const id = getArticleId(pathname) || getTipoId(pathname);
+
+  // Fallback to 'metaImage' if no id can be determined
+  if (!id) return metaImage;
+
+  const CDN_URL = CDN_URLS[getEnvConfig().SIMORGH_APP_ENV];
+
+  return `${CDN_URL}/${service}/og/${id}`;
+};
 
 const MetadataContainer = ({
   title,
@@ -67,7 +120,8 @@ const MetadataContainer = ({
     pathname,
     isUK,
     isLite,
-  } = useContext(RequestContext);
+    pageType,
+  } = use(RequestContext);
 
   const {
     service,
@@ -82,7 +136,7 @@ const MetadataContainer = ({
     iTunesAppId,
     googleSiteVerification,
     translations,
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
   const {
     palette: { BRAND_BACKGROUND },
   } = useTheme();
@@ -95,9 +149,7 @@ const MetadataContainer = ({
     '/sport/rugby-league/articles',
   ];
 
-  const isUKLink = pathsForUkLink.some(
-    path => pathname && pathname.startsWith(path),
-  );
+  const isUKLink = pathsForUkLink.some(path => pathname?.startsWith(path));
 
   const showAlternateUKAmp = !isUKLink && isAmp;
 
@@ -134,7 +186,6 @@ const MetadataContainer = ({
   const { liteSite = defaultTranslations } = translations;
   const { dataSaving } = liteSite;
 
-  const showLiteTitle = isLite && liteEnabledServices.includes(service);
   const litePageTitle = `${title} - ${dataSaving}: ${brandName}`;
   const pageTitle = `${title} - ${brandName}`;
   const socialTitle = `${socialHeadline || title} - ${brandName}`;
@@ -144,6 +195,13 @@ const MetadataContainer = ({
   const metaImage = image || defaultImage;
   const metaImageAltText = imageAltText || defaultImageAltText;
   const linkToAmpPage = hasAmpPage && !isAmp;
+
+  const socialShareImage = getSocialShareImage({
+    pageType,
+    pathname,
+    service,
+    metaImage,
+  });
 
   return (
     <Helmet htmlAttributes={htmlAttributes}>
@@ -161,12 +219,13 @@ const MetadataContainer = ({
         name="viewport"
         content="width=device-width, initial-scale=1, minimum-scale=1"
       />
-      <title>{showLiteTitle ? litePageTitle : pageTitle}</title>
+      <title>{isLite ? litePageTitle : pageTitle}</title>
       <link rel="canonical" href={canonicalToUse} />
       {isEnglishService && alternateLinksEnglishSites.map(renderAlternateLinks)}
       {isoLang &&
         !isEnglishService &&
         alternateLinksWsSites.map(renderAlternateLinks)}
+      {/* eslint-disable-next-line react/no-invalid-html-attribute */}
       {linkToAmpPage && <link rel="amphtml" href={ampLink} />}
       {renderAppleItunesApp({
         iTunesAppId,
@@ -189,7 +248,7 @@ const MetadataContainer = ({
         content={getIconAssetUrl(service, '144x144')}
       />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={metaImage} />
+      <meta property="og:image" content={socialShareImage} />
       <meta property="og:image:alt" content={metaImageAltText} />
       {imageWidth && (
         <meta property="og:image:width" content={String(imageWidth)} />
@@ -215,8 +274,8 @@ const MetadataContainer = ({
           content={`https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion${pathname}`}
         />
       )}
-      {Boolean(aboutTags && aboutTags.length) && renderTags(aboutTags)}
-      {Boolean(mentionsTags && mentionsTags.length) && renderTags(mentionsTags)}
+      {Boolean(aboutTags?.length) && renderTags(aboutTags)}
+      {Boolean(mentionsTags?.length) && renderTags(mentionsTags)}
       <link rel="apple-touch-icon" href={appleTouchIcon} />
       {getIconLinks(service, iconSizes)}
       <link

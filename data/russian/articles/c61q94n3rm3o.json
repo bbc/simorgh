@@ -421,32 +421,26 @@
           "type": "cps"
         },
         {
-          "headlines": {
-            "headline": "Tory leadership rivals face first party vote"
+          "name": "Ukraine crisis - item 2",
+          "summary": "Ukraine crisis - item 2 - summary",
+          "indexImage": {
+            "id": "63711781",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/4917/test/_63711781_clinton.jpg",
+            "path": "/cpsdevpb/4917/test/_63711781_clinton.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "Clinton",
+            "caption": "Clinton",
+            "copyrightHolder": "BBC",
+            "type": "image"
           },
-          "locators": {
-            "assetUri": "/russian/23241517",
-            "curieCpsUrn": "urn:bbc:cps:curie:asset:1743c672-c7c8-8f4b-9841-bd04296a5812",
-            "assetId": "23241517",
-            "cpsUrn": "urn:bbc:content:assetUri:russian/23241517",
-            "curie": "http://www.bbc.co.uk/asset/1743c672-c7c8-8f4b-9841-bd04296a5812"
-          },
-          "summary": "Conservative MPs have begun voting for their new leader and next prime minister in the party's first ballot in Parliament.",
-          "timestamp": 1560430132000,
-          "language": "ru",
-          "cpsType": "STY",
-          "options": {
-            "isBreakingNews": false,
-            "isFactCheck": false
-          },
-          "section": {
-            "subType": "IDX",
-            "name": "Главная",
-            "uri": "/russian/front_page",
-            "type": "simple"
-          },
-          "id": "urn:bbc:ares::asset:russian/23241517",
-          "type": "cps"
+          "uri": "https://www.bbc.co.uk/news",
+          "contentType": "RadioBulletin",
+          "assetTypeCode": "PRO",
+          "timestamp": 1571655919000,
+          "isLive": true,
+          "type": "link"
         },
         {
           "headlines": {

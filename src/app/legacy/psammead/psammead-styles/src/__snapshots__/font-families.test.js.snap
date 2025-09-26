@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Psammead Styles - Font Families should match afaanoromoo 1`] = `
 {
@@ -240,6 +240,21 @@ exports[`Psammead Styles - Font Families should match cymrufyw 1`] = `
   "serifRegular": "
    font-family: ReithSerif, Helvetica, Arial, sans-serif;
    font-weight: 400;
+   font-style: normal;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match dari 1`] = `
+{
+  "sansBold": "
+    font-family: "BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  ",
+  "sansRegular": "
+    font-family: "BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
    font-style: normal;
   ",
 }
@@ -816,6 +831,61 @@ exports[`Psammead Styles - Font Families should match pidgin 1`] = `
     font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
     font-weight: 400;
    font-style: italic;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match polska 1`] = `
+{
+  "sansBold": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: normal;
+  ",
+  "sansBoldItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: italic;
+  ",
+  "sansLight": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  ",
+  "sansRegular": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  ",
+  "sansRegularItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: italic;
+  ",
+  "serifBold": "
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  ",
+  "serifLight": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  ",
+  "serifMedium": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: normal;
+  ",
+  "serifMediumItalic": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: italic;
+  ",
+  "serifRegular": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
   ",
 }
 `;

@@ -17,13 +17,27 @@ const styles = {
         '> button': {
           backgroundColor: palette.POSTBOX,
         },
-        '.experimentButtonFocus': {
-          backgroundColor: palette.POSTBOX,
-          color: palette.WHITE,
-          svg: {
-            color: palette.WHITE,
+      },
+      [mq.FORCED_COLOURS]: {
+        '&:hover, &:focus': {
+          '> button': {
+            backgroundColor: 'canvas',
+            border: `${pixelsToRem(3)}rem solid canvasText`,
+            '> time': { textDecoration: 'underline' },
           },
         },
+      },
+    }),
+
+  // Duplicated to prevent splitting out existing styles
+  placeholderWithTranscript: ({ mq }: Theme) =>
+    css({
+      position: 'relative',
+      cursor: 'pointer',
+      height: '100%',
+
+      [`.${NO_JS_CLASSNAME} &`]: {
+        cursor: 'default',
       },
       [mq.FORCED_COLOURS]: {
         '&:hover, &:focus': {

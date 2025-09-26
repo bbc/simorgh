@@ -3,7 +3,10 @@ const { jestDirAlias } = require('./dirAlias');
 const unitTests = {
   preset: 'ts-jest',
   setupFiles: ['./src/testHelpers/jest-setup.js'],
-  setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
+  setupFilesAfterEnv: [
+    './src/testHelpers/setupTests.js',
+    'jest-expect-message',
+  ],
   moduleNameMapper: jestDirAlias,
   testEnvironment: 'jsdom',
   snapshotSerializers: ['@emotion/jest/serializer'],
@@ -22,15 +25,18 @@ const unitTests = {
     '**/__tests__/**/*.{js,jsx,ts,tsx}',
     '**/?(*.)+(spec|test).{js,jsx,ts,tsx}',
     '!**/src/integration/!(utils)/**/*',
+    '!**/puppeteer/**/*',
   ],
 };
 
 const ampIntegrationTests = {
   displayName: 'Integration Tests - AMP',
+  setupFiles: ['./src/testHelpers/jest-setup.js'],
   testEnvironment: './src/integration/integrationTestEnvironment.js',
   testEnvironmentOptions: {
     platform: 'amp',
   },
+  moduleNameMapper: jestDirAlias,
   setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
   testMatch: ['**/src/integration/!(utils)/**/*.test.js'],
   testPathIgnorePatterns: ['.*lite\\.test\\.js$', '.*canonical\\.test\\.js$'],
@@ -38,10 +44,12 @@ const ampIntegrationTests = {
 
 const canonicalIntegrationTests = {
   displayName: 'Integration Tests - Canonical',
+  setupFiles: ['./src/testHelpers/jest-setup.js'],
   testEnvironment: './src/integration/integrationTestEnvironment.js',
   testEnvironmentOptions: {
     platform: 'canonical',
   },
+  moduleNameMapper: jestDirAlias,
   setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
   testMatch: ['**/src/integration/!(utils)/**/*.test.js'],
   testPathIgnorePatterns: ['.*lite\\.test\\.js$', '.*amp\\.test\\.js$'],
@@ -49,13 +57,27 @@ const canonicalIntegrationTests = {
 
 const liteIntegrationTests = {
   displayName: 'Integration Tests - Lite',
+  setupFiles: ['./src/testHelpers/jest-setup.js'],
   testEnvironment: './src/integration/integrationTestEnvironment.js',
   testEnvironmentOptions: {
     platform: 'lite',
   },
+  moduleNameMapper: jestDirAlias,
   setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
   testMatch: ['**/src/integration/!(utils)/**/*.test.js'],
   testPathIgnorePatterns: ['.*canonical\\.test\\.js$', '.*amp\\.test\\.js$'],
+};
+
+const puppeteerTests = {
+  preset: 'ts-jest',
+  setupFiles: ['./puppeteer/jest-setup.js'],
+  setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
+  moduleNameMapper: jestDirAlias,
+  transform: {
+    '^.+\\.[tj]sx?$': 'babel-jest',
+  },
+  displayName: 'Puppeteer Tests',
+  testMatch: ['**/puppeteer/**/*.test.js'],
 };
 
 module.exports = {
@@ -64,6 +86,7 @@ module.exports = {
     ampIntegrationTests,
     canonicalIntegrationTests,
     liteIntegrationTests,
+    puppeteerTests,
   ],
   reporters: [
     'default',
@@ -77,5 +100,8 @@ module.exports = {
       },
     ],
   ],
-  timers: 'modern',
+  fakeTimers: {
+    enableGlobally: true,
+  },
+  workerIdleMemoryLimit: '512MB',
 };

@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-burmese',
     atiAnalyticsProducerId: '35',
+    atiAnalyticsProducerName: 'BURMESE',
+    useReverb: true,
     chartbeatDomain: 'burmese.bbc.co.uk',
     brandName: 'BBC News မြန်မာ',
     product: 'BBC News',
@@ -39,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/burmese/institutional-51387206',
     isTrustProjectParticipant: true,
     script: burmese,
-    manifestPath: '/manifest.json',
+    manifestPath: '/burmese/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle:
+    homePageTitle:
       'ဘီဘီစီ မြန်မာ | အထူးသတင်း | နောက်ဆုံးရ သတင်း | နောက်ဆုံးရခေါင်းစဉ် သတင်း |မြန်မာသတင်း',
     showAdPlaceholder: false,
     showRelatedTopics: true,
@@ -74,7 +76,18 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'အကြောင်းအရာများဆီ ကျော်သွားရန်',
       relatedContent: 'ဒီသတင်းနဲ့ ပတ်သက်သမျှ',
       relatedTopics: 'ဆက်စပ်အကြောင်းအရာများ',
+      moreOnThis: '',
       navMenuText: 'ကဏ္ဍများ',
+      liteSite: {
+        onboardingMessage: `ဒေတာကုန်ကျမှုလျှော့ချနိုင်ရန်အတွက် ယခုဝက်ဘ်ဆိုက်မှ စာမျက်နှာများကို ရုပ်ပုံမပါ စာသားဖြင့်သာတင်ဆက်ပေးထားပါသည်။ ရုပ်ပုံ ဗီဒီယိုများနှင့် ကြည့်လိုလျှင် မူလစာမျက်နှာတွင်ကြည့်နိုင်ပါသည်။`,
+        toMainSite: 'ပင်မဝက်ဘ်ဆိုက်သို့သွားရန်။',
+        informationPage:
+          'ဒေတာကုန်ကျမှုသက်သာစေသည့် ဤဝက်ဘ်ဆိုက်အကြောင်းထပ်မံသိလိုလျှင်',
+        informationPageLink:
+          'https://www.bbc.com/burmese/articles/cwy69wyx71go',
+        dataSaving: 'ဒေတာကုန်ကျမှုသက်သာစေသည့် ဝက်ဘ်စာမျက်နှာ',
+        articleDataSavingLinkText: 'ဒေတာကုန်ကျမှုသက်သာအောင် စာသားသက်သက်ဖတ်ရန်',
+      },
       mediaAssetPage: {
         mediaPlayer: 'မီဒီယာ ပလေယာ',
         audioPlayer: 'အသံဖိုင်ပလေယာ',
@@ -257,6 +270,8 @@ export const service: DefaultServiceConfig = {
         recentEpisodes: 'ထုတ်လွှင့်ပြီး အစီအစဉ်မျာ',
         podcastExternalLinks: 'ဒီပေါ့ဒ်ကတ်စ်ကို နောက်ထပ်ရနိုင်သည့်နေရာ',
         download: 'ဒေါင်းလုပ်လုပ် ရယူရန်',
+        closeVideo: 'ပိတ်မယ်',
+        endOfContentClose: 'ဤအကြောင်းအရာ၏ အဆုံးဖြစ်သည်။ ပိတ်မယ်',
       },
       socialEmbed: {
         caption: {
@@ -294,7 +309,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'နောက်ဆုံးရ',
     },
     mostRead: {
-      header: 'အဖတ်အများဆုံး',
+      header: 'အဖတ်များနေသော သတင်းဆောင်းပါးများ',
       lastUpdated: 'နောက်ဆုံးအသစ်တင်ချိန်:',
       numberOfItems: 5,
       hasMostRead: true,
@@ -305,7 +320,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'ကြာမြင့်ချိန် %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'အဖတ်အများဆုံး',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
@@ -313,7 +332,7 @@ export const service: DefaultServiceConfig = {
         text: 'ဘီဘီစီကို ဘာကြောင့် ယုံကြည်နိုင်သလဲ။',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'ပြင်ပဝက်ဆိုက်များကို လင့် ထည့်ပေးခြင်းနှင့် ပတ်သက်သော ဘီဘီစီလုပ်ထုံးလုပ်နည်းကို ဖတ်ရန်။',
       },
       links: [
@@ -335,7 +354,7 @@ export const service: DefaultServiceConfig = {
         },
         {
           href: 'https://www.bbc.com/ws/languages',
-          text: 'Other Languages',
+          text: 'အခြားဘာသာစကားနှင့် ဘီဘီစီသတင်းများ',
         },
         {
           id: 'COOKIE_SETTINGS',
@@ -352,6 +371,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'ပင်မစာမျက်နှာ',
         url: '/burmese',
+      },
+      {
+        title: 'မြန်မာငလျင်',
+        url: '/burmese/topics/c793wppj0r1t',
       },
       {
         title: 'မြန်မာ့ရေးရာ',
@@ -376,6 +399,7 @@ export const service: DefaultServiceConfig = {
       {
         title: 'ဗီဒီယိုများ',
         url: '/burmese/topics/cj7v92le02qt',
+        hideOnLiteSite: true,
       },
     ],
   },

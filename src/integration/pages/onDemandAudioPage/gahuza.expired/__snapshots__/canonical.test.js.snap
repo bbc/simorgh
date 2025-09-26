@@ -1,17 +1,10 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Canonical On Demand Audio Page A11y I can see the skip to content link 1`] = `"Simbira ku birimwo"`;
 
-exports[`Canonical On Demand Audio Page Analytics ATI tracking pixel excluding src 1`] = `
-<img
-  alt=""
-  height="1px"
-  style="position:absolute"
-  width="1px"
-/>
-`;
+exports[`Canonical On Demand Audio Page Analytics ATI tracking pixel excluding src 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" >"`;
 
-exports[`Canonical On Demand Audio Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/"`;
+exports[`Canonical On Demand Audio Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
 
 exports[`Canonical On Demand Audio Page Analytics ATI tracking pixel search params 1`] = `
 [
@@ -119,13 +112,13 @@ exports[`Canonical On Demand Audio Page Footer Anchors should match text and url
 exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 9`] = `
 {
   "text": "Soma ibijanye n'aho duhagaze ku mihora ijana ahandi",
-  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
 }
 `;
 
 exports[`Canonical On Demand Audio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/gahuza"`;
 
-exports[`Canonical On Demand Audio Page Footer Paragraphs should match text 1`] = `"© 2024 BBC. BBC ntibazwa ibivuye ku zindi mbuga. Soma ibijanye n'aho duhagaze ku mihora ijana ahandi"`;
+exports[`Canonical On Demand Audio Page Footer Paragraphs should match text 1`] = `"© 2025 BBC. BBC ntibazwa ibivuye ku zindi mbuga. Soma ibijanye n'aho duhagaze ku mihora ijana ahandi"`;
 
 exports[`Canonical On Demand Audio Page Header I can see the branding 1`] = `"BBC News, Gahuza"`;
 
@@ -138,33 +131,47 @@ exports[`Canonical On Demand Audio Page Header Navigation link should match text
 
 exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 2`] = `
 {
+  "text": "Ibitero bya M23 muri Congo",
+  "url": "/gahuza/topics/cx2qn9pqx4yt",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 3`] = `
+{
   "text": "Ibiyaga binini",
   "url": "/gahuza/topics/c06gq67y3w5t",
 }
 `;
 
-exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 3`] = `
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 4`] = `
 {
   "text": "Afrika",
   "url": "/gahuza/topics/crvnv566zx9t",
 }
 `;
 
-exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 4`] = `
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 5`] = `
 {
   "text": "Mpuzamahanga",
   "url": "/gahuza/topics/c9dvd93jjkkt",
 }
 `;
 
-exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 5`] = `
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 6`] = `
+{
+  "text": "Ubuzima",
+  "url": "/gahuza/topics/cnq68qp4kxjt",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 7`] = `
 {
   "text": "Imikino",
   "url": "/gahuza/topics/c5qvpq0jzy7t",
 }
 `;
 
-exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 6`] = `
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 8`] = `
 {
   "text": "Amajwi n’amashusho",
   "url": "/gahuza/topics/crldzm936jmt",

@@ -5,13 +5,6 @@ import Transcript from './index';
 import * as viewTracking from '../../hooks/useViewTracker';
 
 describe('Transcript Component', () => {
-  it('should match snapshot (temp)', () => {
-    const { container } = render(
-      <Transcript transcript={transcriptFixture} title="My Title" />,
-    );
-    expect(container).toMatchSnapshot();
-  });
-
   it('should render details element', () => {
     const { container } = render(
       <Transcript transcript={transcriptFixture} title="My Title" />,

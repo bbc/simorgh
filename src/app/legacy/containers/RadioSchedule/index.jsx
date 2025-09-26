@@ -1,43 +1,33 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '#contexts/RequestContext';
-import useLocation from '#hooks/useLocation';
 import useToggle from '#hooks/useToggle';
-import { getRadioScheduleEndpoint } from '#lib/utilities/getUrlHelpers/getRadioSchedulesUrls';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Canonical from './Canonical';
 
 const RadioSchedule = ({
   initialData,
-  radioScheduleEndpointOverride = null,
   lang = null,
   className = '',
   toggleName,
+  eventTrackingData,
 }) => {
   const { enabled } = useToggle(toggleName);
-  const { isAmp, env } = useContext(RequestContext);
-  const { service, radioSchedule } = useContext(ServiceContext);
-  const location = useLocation();
+  const { isAmp } = use(RequestContext);
+  const { radioSchedule } = use(ServiceContext);
   const hasRadioSchedule = pathOr(null, ['hasRadioSchedule'], radioSchedule);
   const radioScheduleEnabled = !isAmp && enabled && hasRadioSchedule;
 
   if (!radioScheduleEnabled) {
     return null;
   }
-  const endpoint =
-    radioScheduleEndpointOverride ||
-    getRadioScheduleEndpoint({
-      service,
-      env,
-      queryString: location.search,
-    });
 
   return (
     <Canonical
       className={className}
-      endpoint={endpoint}
-      initialData={initialData}
+      radioSchedule={initialData}
       lang={lang}
+      eventTrackingData={eventTrackingData}
     />
   );
 };

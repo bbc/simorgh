@@ -2,6 +2,7 @@ import { mergeDeepLeft } from 'ramda';
 import latinWithDiacriticsScript from '../../fontScripts/latinWithDiacritics';
 import withThemeProvider from '../../withThemeProvider';
 import baseUzbekTheme from './base';
+import getPWATypographyTheme from '../getPWATypographyTheme';
 
 const uzbekLatinTheme = mergeDeepLeft(
   {
@@ -12,4 +13,7 @@ const uzbekLatinTheme = mergeDeepLeft(
   baseUzbekTheme,
 );
 
-export default withThemeProvider(uzbekLatinTheme);
+export default withThemeProvider(
+  uzbekLatinTheme,
+  getPWATypographyTheme(latinWithDiacriticsScript),
+);

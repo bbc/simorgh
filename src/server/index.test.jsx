@@ -10,13 +10,13 @@ import {
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
   SERVER_SIDE_REQUEST_FAILED,
 } from '#lib/logger.const';
-import { FRONT_PAGE, MEDIA_PAGE } from '#app/routes/utils/pageTypes';
+import { HOME_PAGE, LIVE_RADIO_PAGE } from '#app/routes/utils/pageTypes';
 import Document from './Document/component';
 import routes from '../app/routes';
 import * as renderDocument from './Document';
 import sendCustomMetrics from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
-import { getMvtVaryHeaders } from './utilities/mvtHeader';
+import { getExperimentVaryHeaders } from './utilities/experimentHeader';
 
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`
 dotenv.config({ path: './envConfig/local.env' });
@@ -100,7 +100,7 @@ const mockRouteProps = ({
 };
 
 jest.mock('./utilities/customMetrics');
-jest.mock('./utilities/mvtHeader');
+jest.mock('./utilities/experimentHeader');
 
 const renderDocumentSpy = jest.spyOn(renderDocument, 'default');
 
@@ -131,6 +131,7 @@ const testRenderedData =
         isApp={isApp}
         legacyScripts="__mock_script_elements__"
         modernScripts="__mock_script_elements__"
+        service={service}
         links="__mock_link_elements__"
       />,
     );
@@ -165,7 +166,7 @@ const assertNon200ResponseCustomMetrics = ({
 }) => {
   it('should send custom metrics for non 200 response status code', async () => {
     await makeRequest(requestUrl);
-    expect(sendCustomMetrics).toBeCalledWith({
+    expect(sendCustomMetrics).toHaveBeenCalledWith({
       metricName: NON_200_RESPONSE,
       pageType,
       requestUrl,
@@ -174,7 +175,7 @@ const assertNon200ResponseCustomMetrics = ({
   });
 };
 
-const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
+const testHomePages = ({ platform, service, variant, queryString = '' }) => {
   const isAmp = platform === 'amp';
   const isApp = platform === 'app';
   const extension =
@@ -186,7 +187,7 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
     variant ? `/${variant}` : ''
   }${extension}${queryString}`;
 
-  describe(`Front Page: ${serviceURL}`, () => {
+  describe(`Home Page: ${serviceURL}`, () => {
     const successDataResponse = {
       isAmp,
       data: { some: 'data' },
@@ -228,7 +229,7 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
       });
 
       describe('404 status code', () => {
-        const pageType = 'Front Page';
+        const pageType = 'Home Page';
         beforeEach(() => {
           mockRouteProps({
             service,
@@ -257,7 +258,7 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
     });
 
     describe('Unknown error within the data fetch, react router or its dependencies', () => {
-      const pageType = FRONT_PAGE;
+      const pageType = HOME_PAGE;
       beforeEach(() => {
         mockRouteProps({
           service,
@@ -390,6 +391,100 @@ const testArticles = ({ platform, service, variant, queryString = '' }) => {
 
       assertNon200ResponseCustomMetrics({
         requestUrl: articleURL,
+        pageType,
+      });
+    });
+  });
+};
+
+const testTopics = ({ service, variant, queryString = '' }) => {
+  describe(`Tipo Topic: /${service}/topics/tipoId/${variant}${queryString}`, () => {
+    const successDataResponse = {
+      data: { some: 'data' },
+      service: 'someService',
+      status: 200,
+    };
+
+    const notFoundDataResponse = {
+      data: { some: 'data' },
+      service: 'someService',
+      status: 404,
+    };
+
+    const id = `c0000000001o`;
+    const topicURL = `/${service}/topics/${id}/${variant}${queryString}`;
+
+    describe('Successful render', () => {
+      describe('200 status code', () => {
+        beforeEach(() => {
+          mockRouteProps({
+            id,
+            service,
+            dataResponse: successDataResponse,
+            variant,
+          });
+        });
+
+        const configs = {
+          url: topicURL,
+          service,
+          successDataResponse,
+          variant,
+        };
+
+        it('should respond with rendered data', testRenderedData(configs));
+      });
+
+      describe('404 status code', () => {
+        const pageType = 'topic';
+
+        beforeEach(() => {
+          mockRouteProps({
+            id,
+            service,
+            dataResponse: notFoundDataResponse,
+            variant,
+            pageType,
+          });
+        });
+
+        it('should respond with a rendered 404', async () => {
+          const { status, text } = await makeRequest(topicURL);
+          expect(status).toBe(404);
+          expect(text).toEqual(
+            '<!doctype html><html><body><h1>Mock app</h1></body></html>',
+          );
+        });
+
+        assertNon200ResponseCustomMetrics({
+          requestUrl: topicURL,
+          pageType,
+          statusCode: 404,
+        });
+      });
+    });
+
+    describe('Unknown error within the data fetch, react router or its dependencies', () => {
+      const pageType = 'topic';
+      beforeEach(() => {
+        mockRouteProps({
+          id,
+          service,
+          dataResponse: Error('Error!'),
+          responseType: 'reject',
+          variant,
+          pageType,
+        });
+      });
+
+      it('should respond with a 500', async () => {
+        const { status, text } = await makeRequest(topicURL);
+        expect(status).toEqual(500);
+        expect(text).toEqual('Internal server error');
+      });
+
+      assertNon200ResponseCustomMetrics({
+        requestUrl: topicURL,
         pageType,
       });
     });
@@ -562,7 +657,7 @@ const testMediaPages = ({
     });
 
     describe('404 status code', () => {
-      const pageType = MEDIA_PAGE;
+      const pageType = LIVE_RADIO_PAGE;
 
       beforeEach(() => {
         mockRouteProps({
@@ -589,7 +684,7 @@ const testMediaPages = ({
     });
 
     describe('Unknown error within the data fetch, react router or its dependencies', () => {
-      const pageType = 'liveRadio';
+      const pageType = LIVE_RADIO_PAGE;
 
       beforeEach(() => {
         mockRouteProps({
@@ -844,6 +939,11 @@ describe('Server', () => {
     jest.clearAllMocks();
   });
 
+  it('should add SIMORGH platform to the service request chain header', async () => {
+    const { header } = await makeRequest('/*');
+    expect(header['req-svc-chain']).toBe('SIMORGH');
+  });
+
   describe('/status', () => {
     it('should respond with a 200', async () => {
       const { statusCode, text } = await makeRequest('/status');
@@ -854,14 +954,14 @@ describe('Server', () => {
 
   describe('Service workers', () => {
     it('should serve a file for existing service workers', async () => {
-      await makeRequest('/news/articles/sw.js');
+      await makeRequest('/gahuza/sw.js');
       expect(sendFileSpy.mock.calls[0][0]).toEqual(
         path.join(__dirname, '/public/sw.js'),
       );
     });
 
     it('should not serve a file for non-existing service workers', async () => {
-      const { statusCode } = await makeRequest('/some-service/articles/sw.js');
+      const { statusCode } = await makeRequest('/news/sw.js');
       expect(sendFileSpy.mock.calls.length).toEqual(0);
       expect(statusCode).toEqual(500);
     });
@@ -875,12 +975,19 @@ describe('Server', () => {
   });
 
   describe('Manifest json', () => {
-    it('should serve a file for valid service paths', async () => {
-      await makeRequest('/news/articles/manifest.json');
-      expect(sendFileSpy.mock.calls[0][0]).toEqual(
-        path.join(__dirname, '/public/news/manifest.json'),
-      );
-    });
+    it.each`
+      manifestPath                | expectedManifestFile
+      ${'/pidgin/manifest.json'}  | ${'/pidgin/manifest.json'}
+      ${'/serbian/manifest.json'} | ${'/serbian/manifest.json'}
+    `(
+      'should serve a file for $manifestPath',
+      async ({ manifestPath, expectedManifestFile }) => {
+        await makeRequest(manifestPath);
+        expect(sendFileSpy.mock.calls[0][0]).toEqual(
+          path.join(__dirname, `/public/${expectedManifestFile}`),
+        );
+      },
+    );
 
     it('should not serve a manifest file for non-existing services', async () => {
       const { statusCode } = await makeRequest('/some-service/manifest.json');
@@ -888,10 +995,10 @@ describe('Server', () => {
       expect(statusCode).toEqual(500);
     });
 
-    it('should serve a response cache control of 7 days', async () => {
-      const { header } = await makeRequest('/news/articles/manifest.json');
+    it('should serve a response cache control of 1 day', async () => {
+      const { header } = await makeRequest('/pidgin/manifest.json');
       expect(header['cache-control']).toBe(
-        'public, stale-if-error=1209600, stale-while-revalidate=1209600, max-age=604800',
+        'public, stale-if-error=172800, stale-while-revalidate=172800, max-age=86400',
       );
     });
   });
@@ -939,40 +1046,6 @@ describe('Server', () => {
     it('should respond with a 500 for non-existing services', async () => {
       const { statusCode } = await makeRequest(
         '/some-service/sty-secondary-column.json',
-      );
-      expect(statusCode).toEqual(500);
-    });
-  });
-
-  describe('Recommendations json', () => {
-    // This is being skipped due to variants not needing recommendations
-    it.skip('should serve a file for valid service paths with variants', async () => {
-      const { body } = await makeRequest(
-        '/zhongwen/uk-23283128/recommendations/trad.json',
-      );
-      expect(body).toEqual(
-        expect.arrayContaining([
-          expect.objectContaining({
-            headlines: expect.any(Object),
-          }),
-        ]),
-      );
-    });
-    it('should serve a file for valid service paths without variants', async () => {
-      const { body } = await makeRequest(
-        '/mundo/23263889/recommendations.json',
-      );
-      expect(body).toEqual(
-        expect.arrayContaining([
-          expect.objectContaining({
-            headlines: expect.any(Object),
-          }),
-        ]),
-      );
-    });
-    it('should respond with a 500 for non-existing services', async () => {
-      const { statusCode } = await makeRequest(
-        '/some-service/recommendations.json',
       );
       expect(statusCode).toEqual(500);
     });
@@ -1141,31 +1214,31 @@ describe('Server', () => {
     });
   });
 
-  testFrontPages({ platform: 'canonical', service: 'igbo' });
-  testFrontPages({
+  testHomePages({ platform: 'canonical', service: 'igbo' });
+  testHomePages({
     platform: 'canonical',
     service: 'igbo',
     queryString: QUERY_STRING,
   });
-  testFrontPages({ platform: 'amp', service: 'igbo' });
-  testFrontPages({
+  testHomePages({ platform: 'amp', service: 'igbo' });
+  testHomePages({
     platform: 'amp',
     service: 'igbo',
     queryString: QUERY_STRING,
   });
-  testFrontPages({
+  testHomePages({
     platform: 'canonical',
     service: 'ukchina',
     variant: 'simp',
   });
-  testFrontPages({
+  testHomePages({
     platform: 'canonical',
     service: 'ukchina',
     variant: 'simp',
     queryString: QUERY_STRING,
   });
-  testFrontPages({ platform: 'amp', service: 'serbian', variant: 'lat' });
-  testFrontPages({
+  testHomePages({ platform: 'amp', service: 'serbian', variant: 'lat' });
+  testHomePages({
     platform: 'amp',
     service: 'serbian',
     variant: 'lat',
@@ -1200,6 +1273,10 @@ describe('Server', () => {
     service: 'yoruba',
     queryString: QUERY_STRING,
   });
+
+  testTopics({ service: 'pidgin' });
+
+  testTopics({ service: 'zhongwen', variant: 'simp' });
 
   testMediaPages({
     platform: 'amp',
@@ -1264,14 +1341,14 @@ describe('Server', () => {
     service: 'pashto',
     serviceId: 'bbc_pashto_tv',
     brandEpisode: 'tv',
-    mediaId: 'w172xcldhhrhmcf',
+    mediaId: 'w172xtq7x8660m1',
   });
 
   testOnDemandTvEpisodePages({
     platform: 'canonical',
     service: 'pashto',
     serviceId: 'bbc_pashto_tv',
-    mediaId: 'w172xcldhhrhmcf',
+    mediaId: 'w172xtq7x8660m1',
   });
 
   testAssetPages({
@@ -1372,6 +1449,7 @@ describe('Server', () => {
             isAmp={isAmp}
             legacyScripts="__mock_script_elements__"
             modernScripts="__mock_script_elements__"
+            service={service}
             links="__mock_link_elements__"
           />,
         );
@@ -1461,7 +1539,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
     mockRouteProps({
       dataResponse: successDataResponse,
     });
-    getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
+    getExperimentVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
 
     const { header } = await makeRequest('/mundo/c0000000001o');
 
@@ -1474,7 +1552,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
     mockRouteProps({
       dataResponse: successDataResponse,
     });
-    getMvtVaryHeaders.mockReturnValue('');
+    getExperimentVaryHeaders.mockReturnValue('');
 
     const { header } = await makeRequest('/mundo/articles/c0000000001o');
 
@@ -1486,7 +1564,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
       dataResponse: successDataResponse,
       isAmp: true,
     });
-    getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
+    getExperimentVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
 
     const { header } = await makeRequest('/mundo/articles/c0000000001o');
 
@@ -1515,7 +1593,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
       dataResponse: successDataResponse,
       isAmp: true,
     });
-    getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
+    getExperimentVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
 
     await makeRequest('/mundo/articles/c0000000001o', {
       'x-bbc-edge-isuk': 'no',
@@ -1533,7 +1611,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
       dataResponse: successDataResponse,
       isAmp: true,
     });
-    getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
+    getExperimentVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
 
     await makeRequest('/mundo/articles/c0000000001o', {
       'x-country': 'gb',
@@ -1551,7 +1629,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
       dataResponse: successDataResponse,
       isAmp: true,
     });
-    getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
+    getExperimentVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
 
     await makeRequest('/mundo/articles/c0000000001o', {});
 

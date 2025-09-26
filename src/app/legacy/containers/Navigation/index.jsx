@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { NavigationUl, NavigationLi } from '#psammead/psammead-navigation/src';
 import {
   DropdownUl,
@@ -7,6 +7,8 @@ import {
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { RequestContext } from '#contexts/RequestContext';
+import isLive from '#app/lib/utilities/isLive';
+import LanguageNavigation from './LanguageNavigation/lazy';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Canonical from './index.canonical';
 import Amp from './index.amp';
@@ -19,8 +21,8 @@ const renderListItems = (
   service,
   dir,
   activeIndex,
-  clickTrackerHandler,
-  viewRef,
+  clickTracker,
+  viewTracker,
   isLite,
 ) =>
   navigation.reduce((listAcc, item, index) => {
@@ -38,8 +40,8 @@ const renderListItems = (
         currentPageText={currentPage}
         service={service}
         dir={dir}
-        clickTrackerHandler={clickTrackerHandler}
-        viewRef={viewRef}
+        clickTracker={clickTracker}
+        viewTracker={viewTracker}
       >
         {title}
       </Li>
@@ -48,13 +50,19 @@ const renderListItems = (
     return [...listAcc, listItem];
   }, []);
 
-const NavigationContainer = () => {
-  const { isAmp, isLite } = useContext(RequestContext);
+const NavigationContainer = ({ propsForTopBarOJComponent }) => {
+  const { isAmp, isLite } = use(RequestContext);
+  const { blocks = [] } = propsForTopBarOJComponent || {};
+  const {
+    script,
+    translations,
+    navigation,
+    service,
+    dir,
+    collapsibleNavigation,
+  } = use(ServiceContext);
 
-  const { script, translations, navigation, service, dir } =
-    useContext(ServiceContext);
-
-  const { canonicalLink, origin } = useContext(RequestContext);
+  const { canonicalLink, origin } = use(RequestContext);
   const { currentPage, navMenuText } = translations;
 
   const scrollableNavEventTrackingData = {
@@ -73,9 +81,18 @@ const NavigationContainer = () => {
     dropdownNavEventTrackingData,
   );
 
-  const scrollableNavViewRef = useViewTracker(scrollableNavEventTrackingData);
+  const scrollableNavViewTracker = useViewTracker(
+    scrollableNavEventTrackingData,
+  );
 
-  const dropdownNavViewRef = useViewTracker(dropdownNavEventTrackingData);
+  const dropdownNavViewTracker = useViewTracker(dropdownNavEventTrackingData);
+
+  // TODO: isLive statement to be removed when Global Language page goes live. https://bbc.atlassian.net/browse/WS-1254
+  const renderLanguageNavigation = !isLive() && collapsibleNavigation?.length;
+
+  if (renderLanguageNavigation) {
+    return <LanguageNavigation />;
+  }
 
   if (!navigation || navigation.length === 0) {
     return null;
@@ -96,7 +113,7 @@ const NavigationContainer = () => {
         dir,
         activeIndex,
         scrollableNavClickTrackerHandler,
-        scrollableNavViewRef,
+        scrollableNavViewTracker,
         isLite,
       )}
     </NavigationUl>
@@ -113,7 +130,7 @@ const NavigationContainer = () => {
         dir,
         activeIndex,
         dropdownNavClickTrackerHandler,
-        dropdownNavViewRef,
+        dropdownNavViewTracker,
       )}
     </DropdownUl>
   );
@@ -128,6 +145,7 @@ const NavigationContainer = () => {
       dir={dir}
       script={script}
       service={service}
+      blocks={blocks}
     />
   );
 };

@@ -1,30 +1,23 @@
-import path from 'ramda/src/path';
-import pathOr from 'ramda/src/pathOr';
 import { BFF_FETCH_ERROR } from '#lib/logger.const';
 import { InitialDataProps } from '#app/models/types/initialData';
 import fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
 import overrideRendererOnTest from '#app/routes/utils/overrideRendererOnTest';
 import isTest from '#app/lib/utilities/isTest';
 import getErrorStatusCode from '#app/routes/utils/fetchPageData/utils/getErrorStatusCode';
-import { getPodcastExternalLinks } from '#app/routes/onDemandAudio/tempData/podcastExternalLinks';
+import getPodcastExternalLinks from '#app/routes/onDemandAudio/podcastExternalLinks';
 import nodeLogger from '#lib/logger.node';
 
 const logger = nodeLogger(__filename);
-const getScheduleToggle = path(['onDemandRadioSchedule', 'enabled']);
 
 const getConfig = (pathname: string) => {
   const isPodcast = pathname.includes('podcast');
-  const DEFAULT_TOGGLE_VALUE = { enabled: false, value: isPodcast ? 8 : 4 };
-  const recentEpisodesKey = isPodcast
+  const recentEpisodesToggle = isPodcast
     ? 'recentPodcastEpisodes'
     : 'recentAudioEpisodes';
-  const getRecentEpisodesToggle = pathOr(DEFAULT_TOGGLE_VALUE, [
-    recentEpisodesKey,
-  ]);
 
   return {
     isPodcast,
-    getRecentEpisodesToggle,
+    recentEpisodesToggle,
   };
 };
 
@@ -37,7 +30,7 @@ export default async ({
   variant,
 }: InitialDataProps) => {
   try {
-    const { isPodcast, getRecentEpisodesToggle } = getConfig(pathname);
+    const { isPodcast, recentEpisodesToggle } = getConfig(pathname);
 
     const { json, status } = await fetchDataFromBFF({
       pathname: isTest() ? overrideRendererOnTest(pathname) : pathname,
@@ -48,20 +41,20 @@ export default async ({
 
     const { externalLinkVersionId, brandId, recentEpisodes } = json.data;
 
-    const scheduleIsEnabled = getScheduleToggle(toggles);
-
-    const recentEpisodesToggle = getRecentEpisodesToggle(toggles);
+    // @ts-expect-error lookup toggle by name
+    const { enabled: scheduleIsEnabled } = toggles.onDemandRadioSchedule;
 
     const { enabled: showRecentEpisodes, value: recentEpisodesLimit } =
-      recentEpisodesToggle;
+      // @ts-expect-error lookup toggle by name
+      toggles[recentEpisodesToggle];
 
     const externalLinks = isPodcast
-      ? await getPodcastExternalLinks(
+      ? await getPodcastExternalLinks({
           service,
-          brandId,
           variant,
-          externalLinkVersionId,
-        )
+          brandId,
+          versionId: externalLinkVersionId,
+        })
       : [];
     return {
       status,

@@ -1,14 +1,15 @@
-import { serviceNumerals } from '../../../../src/app/components/MostRead/Canonical/Rank';
-import config from '../../../support/config/services';
-import appConfig from '../../../../src/server/utilities/serviceConfigs';
-import { getMostReadEndpoint } from '../../../../src/app/lib/utilities/getUrlHelpers/getMostReadUrls';
-import getAppEnv from '../../../support/helpers/getAppEnv';
-import ampOnlyServices from '../../../support/helpers/ampOnlyServices';
+/* eslint-disable import/no-unresolved */
+import appConfig from '#src/server/utilities/serviceConfigs';
+import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
+import { serviceNumerals } from '#app/components/MostRead/Canonical/Rank';
+import config from '#cypress/support/config/services';
+import getAppEnv from '#cypress/support/helpers/getAppEnv';
+import ampOnlyServices from '#cypress/support/helpers/ampOnlyServices';
 
 // news, newsround, and sport are services we serve on amp, but do not want to run most read tests on
 const MOST_READ_EXCLUDED_SERVICES = [...ampOnlyServices, 'ukchina'];
 
-export const crossPlatform = ({ service, variant }) => {
+export const crossPlatform = ({ service, variant = 'default' }) => {
   const serviceID = config[service]?.name || service;
 
   if (!MOST_READ_EXCLUDED_SERVICES.includes(serviceID)) {
@@ -67,7 +68,7 @@ export const crossPlatform = ({ service, variant }) => {
   }
 };
 
-export const ampOnly = ({ service, variant }) => {
+export const ampOnly = ({ service, variant = 'default' }) => {
   const serviceID = config[service]?.name || service;
 
   if (!MOST_READ_EXCLUDED_SERVICES.includes(serviceID)) {

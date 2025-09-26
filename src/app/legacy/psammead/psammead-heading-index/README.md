@@ -3,7 +3,7 @@
 
 ## Description
 
-The `HeadingIndex` uses a `h1` HTML element and is used on index pages, such as FIX and Most Read.
+The `HeadingIndex` uses a `h1` HTML element and is used on index pages such as Most Read.
 
 ## Installation
 

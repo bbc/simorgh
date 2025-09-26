@@ -2,6 +2,14 @@ import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import { renderProgramCard, uniqueStates } from '../testHelpers/helper';
 
+jest.mock('#lib/analyticsUtils', () => {
+  return {
+    ...jest.requireActual('#lib/analyticsUtils'),
+    getAtUserId: jest.fn(),
+    getCurrentTime: jest.fn().mockReturnValue('00-00-00'),
+  };
+});
+
 describe('ProgramCard', () => {
   suppressPropWarnings(['program', 'ProgramCard']);
   suppressPropWarnings(['id', 'ProgramCard', 'undefined']);

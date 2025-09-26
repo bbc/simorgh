@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: 'अद्यावधिक',
     atiAnalyticsAppName: 'news-nepali',
     atiAnalyticsProducerId: '63',
+    atiAnalyticsProducerName: 'NEPALI',
+    useReverb: true,
     chartbeatDomain: 'nepali.bbc.co.uk',
     brandName: 'BBC News नेपाली',
     product: 'BBC News',
@@ -39,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/nepali/institutional-50318130',
     isTrustProjectParticipant: true,
     script: devanagari,
-    manifestPath: '/manifest.json',
+    manifestPath: '/nepali/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'मुख पृष्ठ',
+    homePageTitle: 'मुख पृष्ठ',
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -60,7 +62,19 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'सामग्रीमा जानुहोस्',
       relatedContent: 'सम्बन्धित सामग्री',
       relatedTopics: 'सम्बन्धित सामग्री',
+      moreOnThis: '',
       navMenuText: 'सूची',
+      liteSite: {
+        onboardingMessage:
+          'तपाईँ अहिले हाम्रो वेबसाइटको थोरै डेटा प्रयोग हुने ‘टेक्स्ट-ओन्ली’ साइटमा हुनुहुन्छ। सबै तस्बिर र भिडिओसहित मूल वेबसाइटमा जान यहाँ क्लिक गर्नुहोस्।',
+        toMainSite: 'मूल वेबसाइट तथा पूरा संस्करणमा जानुहोस्।',
+        informationPage:
+          'हाम्रो वेबसाइटको थोरै डेटा प्रयोग हुने संस्करणबारे थप जान्नुहोस्।',
+        informationPageLink: 'https://www.bbc.com/nepali/articles/c3w44py8q72o',
+        dataSaving: 'थोरै डेटा खपत गर्ने गरी पढ्न मिल्ने संस्करण हेर्नुहोस्।',
+        articleDataSavingLinkText:
+          'थोरै डेटा खपत गर्ने गरी पढ्न मिल्ने संस्करण हेर्नुहोस्।',
+      },
       mediaAssetPage: {
         mediaPlayer: 'मिडिया प्लेअर',
         audioPlayer: 'अडिओ प्लेअर',
@@ -229,6 +243,8 @@ export const service: DefaultServiceConfig = {
         recentEpisodes: 'पहिलेका कार्यक्रमहरू',
         podcastExternalLinks: 'यो पडकास्ट सुन्नकालागि यहाँ उपलब्ध छ',
         download: 'एपिसोड डाउनलोड',
+        closeVideo: 'बाहिरिनुहोस्',
+        endOfContentClose: 'यस सामग्रीको अन्त्य। बाहिरिनुहोस्',
       },
       socialEmbed: {
         caption: {
@@ -263,7 +279,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'अन‌ि यो पनि',
     },
     mostRead: {
-      header: 'धेरै पढिएको',
+      header: 'धेरै रुचाइएको',
       lastUpdated: 'मा अन्तिम चोटि अद्यावधिक',
       numberOfItems: 5,
       hasMostRead: true,
@@ -274,7 +290,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'अवधि %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'धेरै पढिएको',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
@@ -282,7 +302,7 @@ export const service: DefaultServiceConfig = {
         text: 'बीबीसीको विश्वसनीयता',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'बाह्य वेबसाइटको लिङ्क प्रयोग सम्बन्धमा हाम्रो नीति पढ्नुहोस्।',
       },
       links: [
@@ -308,7 +328,7 @@ export const service: DefaultServiceConfig = {
         },
         {
           href: 'https://www.bbc.com/ws/languages',
-          text: 'Other Languages',
+          text: 'अरू भाषामा बीबीसी',
         },
         {
           id: 'COOKIE_SETTINGS',
@@ -323,16 +343,28 @@ export const service: DefaultServiceConfig = {
     timezone: 'Asia/Kathmandu',
     navigation: [
       {
-        title: 'मुख पृष्ठ',
+        title: 'समाचार',
         url: '/nepali',
       },
       {
-        title: 'पछिल्लो कार्यक्रम',
-        url: '/nepali/bbc_nepali_radio/programmes/p0340xzv',
+        title: 'नेपाल',
+        url: '/nepali/topics/cyx5k2yzyj6t',
       },
       {
-        title: 'भिडिओ',
-        url: '/nepali/topics/cw9kv027nwnt',
+        title: 'विश्व',
+        url: '/nepali/topics/cy5nkr41gx6t',
+      },
+      {
+        title: 'स्वास्थ्य',
+        url: '/nepali/topics/c2dwqjg83q0t',
+      },
+      {
+        title: 'विज्ञान तथा प्रविधि',
+        url: '/nepali/topics/c9de5jl3967t',
+      },
+      {
+        title: 'रेडिओ',
+        url: '/nepali/bbc_nepali_radio/programmes/p0340xzv',
       },
     ],
   },

@@ -14,11 +14,14 @@ const root = document.getElementById('root');
 const isModernBrowser = 'noModule' in document.createElement('script');
 const bundleToExecute = isModernBrowser ? 'modern' : 'legacy';
 
+const SIMORGH_DATA_PATH = window?.SIMORGH_DATA?.path;
+const WINDOW_LOCATION_PATH = window.location.pathname;
+
 // Only hydrate the client if we're on the expected path
 // When on an unknown route, the SSR would be discarded and the user would only
 // see a blank screen. Avoid this by only hydrating when the embedded page data
 // and window location agree what the path is. Otherwise, fallback to the SSR.
-if (window.SIMORGH_DATA.path === window.location.pathname) {
+if (SIMORGH_DATA_PATH === WINDOW_LOCATION_PATH) {
   loadableReady(
     () => {
       const cache = createCache({ key: 'bbc' });
@@ -37,8 +40,8 @@ if (window.SIMORGH_DATA.path === window.location.pathname) {
 } else {
   logger.warn(`
     Simorgh refused to hydrate.
-    It attempted to hydrate page with path ${window.SIMORGH_DATA.path},
-    but window.location says path is ${window.location.pathname}
+    It attempted to hydrate page with path ${SIMORGH_DATA_PATH},
+    but window.location says path is ${WINDOW_LOCATION_PATH}
   `);
 }
 

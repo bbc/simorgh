@@ -49,8 +49,12 @@ module.exports = ({ resolvePath, START_DEV_SERVER }) => {
       new StartServerPlugin('server.js'), // only start the server if we've run `yarn dev`
       new CopyPlugin({
         patterns: [
-          { from: 'public/sw.js', to: 'public/sw.js' },
-          { from: 'public/favicon.ico', to: 'public/favicon.ico' },
+          {
+            from: 'public/**/*',
+            globOptions: {
+              ignore: ['**/images/**'],
+            },
+          },
         ],
       }),
     ];

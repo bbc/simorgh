@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-japanese',
     atiAnalyticsProducerId: '56',
+    atiAnalyticsProducerName: 'JAPANESE',
+    useReverb: true,
     chartbeatDomain: 'japanese.bbc.co.uk',
     brandName: 'BBCニュース',
     product: 'BBC News',
@@ -40,9 +42,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/japanese/help-49677253',
     isTrustProjectParticipant: true,
     script: noAscendersOrDescenders,
-    manifestPath: '/manifest.json',
+    manifestPath: '/japanese/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: '最新ニュース',
+    homePageTitle: '最新ニュース',
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -61,6 +63,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'コンテンツへ移動',
       relatedContent: '関連コンテンツ',
       relatedTopics: '関連トピックス',
+      moreOnThis: '',
       navMenuText: 'ジャンル',
       mediaAssetPage: {
         mediaPlayer: 'メディアプレイヤー',
@@ -216,6 +219,8 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: '次のラジオ番組',
         duration: '所要時間',
         recentEpisodes: 'さらに',
+        closeVideo: '閉じる',
+        endOfContentClose: 'このコンテンツの終わり。閉じる',
       },
       socialEmbed: {
         caption: {
@@ -250,7 +255,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: '読み物・解説',
     },
     mostRead: {
-      header: '読まれた記事ランキング',
+      header: '注目の記事',
       lastUpdated: '最終更新:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -259,7 +264,11 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: '読まれた記事ランキング',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
@@ -293,7 +302,7 @@ export const service: DefaultServiceConfig = {
         },
         {
           href: 'https://www.bbc.com/ws/languages',
-          text: 'Other Languages',
+          text: 'BBCニュースを他言語で読む',
         },
         {
           id: 'COOKIE_SETTINGS',

@@ -111,6 +111,34 @@ describe('MediaLoader', () => {
 
       expect(mockRequire.mock.calls[0][0]).toStrictEqual(['bump-4']);
     });
+
+    it('Adds a media player object to the window with a specified uniqueId', async () => {
+      const mockRequire = jest.fn();
+      const mockBump = {
+        player: () => ({
+          load: jest.fn(),
+        }),
+      };
+
+      window.requirejs = mockRequire;
+
+      await act(async () => {
+        render(
+          <MediaPlayer
+            blocks={aresMediaBlocks as MediaBlock[]}
+            uniqueId="testId"
+          />,
+          {
+            id: 'testId',
+          },
+        );
+      });
+
+      const callbackFn = mockRequire.mock.calls[0][1];
+      callbackFn(mockBump);
+
+      expect(window.mediaPlayers.testId).not.toBeNull();
+    });
   });
 
   describe('Placeholder', () => {

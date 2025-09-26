@@ -1,0 +1,148 @@
+{
+  "data": {
+    "metadata": {
+      "type": "On Demand Radio",
+      "atiAnalytics": {
+        "pageIdentifier": "gahuza.bbc_gahuza_radio.programmes.p0340x2m.page",
+        "contentType": "player-episode",
+        "pageTitle": "Urunana - BBC News Gahuza",
+        "language": "rw",
+        "contentId": "urn:bbc:pips:p0340x2m"
+      }
+    },
+    "language": "rw",
+    "brandTitle": "Urunana",
+    "episodeTitle": "Urunana",
+    "headline": "Urunana",
+    "shortSynopsis": "Ikinamico-Urunana- ku wambere no ku wakane. Ibiganiro byombi- omnibus- ku cyumweru.",
+    "mediumSynopsis": "Ikinamico-Urunana- ku wambere no ku wakane. Ibiganiro byombi- omnibus- ku cyumweru.",
+    "id": "urn:bbc:ares:ws_media:brand:bbc_gahuza_radio/p0340x2m",
+    "brandId": "p0340x2m",
+    "episodeId": "w3ct7wjx",
+    "masterBrand": "bbc_gahuza_radio",
+    "releaseDateTimeStamp": "2025-05-04T00:00:00.000Z",
+    "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gwv126.png",
+    "imageAltText": null,
+    "promoBrandTitle": "Urunana",
+    "durationISO8601": "PT30M",
+    "thumbnailImageUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p0gwv126.png",
+    "episodeAvailability": "available",
+    "recentEpisodes": [
+      {
+        "id": "w3ct7wjw",
+        "brandTitle": "Urunana",
+        "episodeTitle": "Urunana",
+        "timestamp": "2025-04-27T00:00:00.000Z",
+        "duration": "PT30M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0gwv126.png",
+        "altText": "Urunana"
+      },
+      {
+        "id": "w3ct7wjv",
+        "brandTitle": "Urunana",
+        "episodeTitle": "Urunana",
+        "timestamp": "2025-04-20T00:00:00.000Z",
+        "duration": "PT30M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0gwv126.png",
+        "altText": "Urunana"
+      },
+      {
+        "id": "w3ct7wjt",
+        "brandTitle": "Urunana",
+        "episodeTitle": "Urunana",
+        "timestamp": "2025-04-13T00:00:00.000Z",
+        "duration": "PT30M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0gwv126.png",
+        "altText": "Urunana"
+      }
+    ],
+    "mediaBlocks": [
+      {
+        "type": "audio",
+        "model": {
+          "id": "w3ct7wjx",
+          "subType": "episode",
+          "format": "Audio",
+          "title": "Urunana",
+          "synopses": {
+            "short": "Ikinamico-Urunana- ku wambere no ku wakane. Ibiganiro byombi- omnibus- ku cyumweru.",
+            "medium": "Ikinamico-Urunana- ku wambere no ku wakane. Ibiganiro byombi- omnibus- ku cyumweru."
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gwv126.png",
+          "embedding": false,
+          "advertising": false,
+          "versions": [
+            {
+              "versionId": "w4hr3zmc",
+              "types": ["Original"],
+              "duration": 1800,
+              "durationISO8601": "PT30M",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true,
+                "world": false
+              },
+              "availableUntil": "2025-06-03T15:29:30.000Z",
+              "availableFrom": "2025-05-04T05:59:00.000Z",
+              "availabilityStatus": "available"
+            }
+          ],
+          "availability": "available",
+          "smpKind": "radioProgramme",
+          "episodeTitle": "Urunana",
+          "type": "media"
+        }
+      },
+      {
+        "type": "mediaOverrides",
+        "model": {
+          "language": "rw",
+          "pageIdentifierOverride": "gahuza.bbc_gahuza_radio.w3ct7wjx.page"
+        }
+      }
+    ],
+    "isPodcast": false,
+    "summary": "Ikinamico-Urunana- ku wambere no ku wakane. Ibiganiro byombi- omnibus- ku cyumweru.",
+    "radioScheduleData": [
+      {
+        "id": "p0l28ypg",
+        "state": "next",
+        "startTime": "2025-05-08T16:29:30.000Z",
+        "link": "/gahuza/bbc_gahuza_radio/w1730530cm2d1vn",
+        "brandTitle": "Amakuru ya Gahuzamiryango",
+        "summary": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
+        "duration": "PT15M"
+      },
+      {
+        "id": "p0l1rzn6",
+        "state": "onDemand",
+        "startTime": "2025-05-07T16:29:30.000Z",
+        "link": "/gahuza/bbc_gahuza_radio/w173053f2zcmt56",
+        "brandTitle": "Amakuru ya Gahuzamiryango",
+        "summary": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
+        "duration": "PT30M"
+      },
+      {
+        "id": "p0l1qkhm",
+        "state": "onDemand",
+        "startTime": "2025-05-06T16:29:30.000Z",
+        "link": "/gahuza/bbc_gahuza_radio/w1730530cm2681g",
+        "brandTitle": "Amakuru ya Gahuzamiryango",
+        "summary": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
+        "duration": "PT15M"
+      },
+      {
+        "id": "p0l1j9vb",
+        "state": "onDemand",
+        "startTime": "2025-05-05T16:29:30.000Z",
+        "link": "/gahuza/bbc_gahuza_radio/w173053f2zcg0c0",
+        "brandTitle": "Amakuru ya Gahuzamiryango",
+        "summary": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
+        "duration": "PT30M"
+      }
+    ],
+    "externalLinkVersionId": null
+  },
+  "contentType": "application/json; charset=utf-8"
+}

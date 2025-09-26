@@ -1,17 +1,10 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Canonical Home Page A11y I can see the skip to content link 1`] = `"सामग्री को स्किप करें"`;
 
-exports[`Canonical Home Page Analytics ATI tracking pixel excluding src 1`] = `
-<img
-  alt=""
-  height="1px"
-  style="position:absolute"
-  width="1px"
-/>
-`;
+exports[`Canonical Home Page Analytics ATI tracking pixel excluding src 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" >"`;
 
-exports[`Canonical Home Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/"`;
+exports[`Canonical Home Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
 
 exports[`Canonical Home Page Analytics ATI tracking pixel search params 1`] = `
 [
@@ -25,7 +18,7 @@ exports[`Canonical Home Page Analytics ATI tracking pixel search params 1`] = `
     "p": "hindi.page",
   },
   {
-    "x1": "[urn:bbc:tipo:topic:cg8nwjjm7vet]",
+    "x1": "[urn:bbc:tipo:topic:c6z8lgd39q7t]",
   },
   {
     "x2": "[responsive]",
@@ -99,7 +92,7 @@ exports[`Canonical Home Page Footer Anchors should match text and url 7`] = `
 
 exports[`Canonical Home Page Footer Anchors should match text and url 8`] = `
 {
-  "text": "Other Languages",
+  "text": "अन्य भाषाएँ",
   "url": "https://www.bbc.com/ws/languages",
 }
 `;
@@ -107,7 +100,7 @@ exports[`Canonical Home Page Footer Anchors should match text and url 8`] = `
 exports[`Canonical Home Page Footer Anchors should match text and url 9`] = `
 {
   "text": "बाहरी साइटों का लिंक देने की हमारी नीति के बारे में पढ़ें.",
-  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
 }
 `;
 
@@ -115,7 +108,7 @@ exports[`Canonical Home Page Footer I can click on the BBC branding and it would
 
 exports[`Canonical Home Page Footer Paragraphs should match text 1`] = `"बीबीसी के लिए कलेक्टिव न्यूज़रूम की ओर से प्रकाशित"`;
 
-exports[`Canonical Home Page Footer Paragraphs should match text 2`] = `"© 2024 BBC. बाहरी साइटों की सामग्री के लिए बीबीसी ज़िम्मेदार नहीं है. बाहरी साइटों का लिंक देने की हमारी नीति के बारे में पढ़ें."`;
+exports[`Canonical Home Page Footer Paragraphs should match text 2`] = `"© 2025 BBC. बाहरी साइटों की सामग्री के लिए बीबीसी ज़िम्मेदार नहीं है. बाहरी साइटों का लिंक देने की हमारी नीति के बारे में पढ़ें."`;
 
 exports[`Canonical Home Page Header I can see the branding 1`] = `"BBC News, हिंदी"`;
 
@@ -142,43 +135,64 @@ exports[`Canonical Home Page Header Navigation link should match text and url 3`
 
 exports[`Canonical Home Page Header Navigation link should match text and url 4`] = `
 {
+  "text": "हेल्थ",
+  "url": "/hindi/topics/cr50ykdx5wqt",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 5`] = `
+{
   "text": "मनोरंजन",
   "url": "/hindi/topics/c06gq3n0pp7t",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 5`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 6`] = `
+{
+  "text": "करियर",
+  "url": "/hindi/topics/c95y3gjndw8t",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 7`] = `
+{
+  "text": "फ़ाइनेंस",
+  "url": "/hindi/topics/c5qvpx5dq4qt",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 8`] = `
 {
   "text": "खेल",
   "url": "/hindi/topics/cwr9j8g1kj9t",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 6`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 9`] = `
 {
   "text": "विज्ञान-टेक्नॉलॉजी",
   "url": "/hindi/topics/c2lej0594knt",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 7`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 10`] = `
 {
   "text": "सोशल",
   "url": "/hindi/topics/c2e4q0z9qznt",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 8`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 11`] = `
 {
   "text": "वीडियो",
   "url": "/hindi/topics/cw9kv0kpxydt",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 9`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 12`] = `
 {
   "text": "पॉडकास्ट",
-  "url": "/hindi/institutional-61824775",
+  "url": "/hindi/topics/cv22x3pmrvmt",
 }
 `;
 
@@ -186,82 +200,82 @@ exports[`Canonical Home Page Main heading should match text 1`] = `"BBC News, �
 
 exports[`Canonical Home Page Most Read has item with rank 1`] = `
 {
-  "text": "पाक: मोदी की 'तारीफ़' पर गद्दारी का मुकदमा! 13",
-  "url": "/hindi/23068672",
+  "text": "पाकिस्तान भारत के मिसाइल हमलों को क्यों नहीं रोक पाया?",
+  "url": "https://www.bbc.com/hindi/articles/cx2jgwp0je1o",
 }
 `;
 
 exports[`Canonical Home Page Most Read has item with rank 2`] = `
 {
-  "text": "grdfjfzxczn",
-  "url": "/hindi/india-23185273",
+  "text": "लाहौर का एयर डिफ़ेंस सिस्टम तबाह करने का भारत का दावा, पाकिस्तान ने 25 भारतीय ड्रोन गिराने का दावा किया",
+  "url": "https://www.bbc.com/hindi/articles/c365nejek65o",
 }
 `;
 
 exports[`Canonical Home Page Most Read has item with rank 3`] = `
 {
-  "text": "पाक: मोदी की 'तारीफ़' पर गद्दारी का मुकदमा! 30",
-  "url": "/hindi/23068699",
+  "text": "भारत-पाकिस्तान के बीच बढ़े तनाव की दुनिया भर में चर्चा, क्या कह रहा है अंतरराष्ट्रीय मीडिया?",
+  "url": "https://www.bbc.com/hindi/articles/cz703jn7y2wo",
 }
 `;
 
 exports[`Canonical Home Page Most Read has item with rank 4`] = `
 {
-  "text": "Brexit bill passed in parliament সা্ব",
-  "url": "/news/uk-politics-23164548",
+  "text": "चीन क्यों नहीं चाहेगा कि भारत और पाकिस्तान के बीच युद्ध हो?",
+  "url": "https://www.bbc.com/hindi/articles/cddedl5vdq4o",
 }
 `;
 
 exports[`Canonical Home Page Most Read has item with rank 5`] = `
 {
-  "text": "Flights axed as Monarch ceases trading",
-  "url": "/gujarati/india-23155321",
+  "text": "भारत का हवाई हमला: अमेरिका, इसराइल,  चीन, रूस और तुर्की  क्या बोले?",
+  "url": "https://www.bbc.com/hindi/articles/c3r8rzpz881o",
 }
 `;
 
 exports[`Canonical Home Page Most Read has item with rank 6`] = `
 {
-  "text": "क्या आपको भी समुद्र में उबकाई आती है? 2",
-  "url": "/hindi/international-23069805",
+  "text": "भारत ने बहावलपुर को निशाना क्यों बनाया?",
+  "url": "https://www.bbc.com/hindi/articles/cgjljw6xq4jo",
 }
 `;
 
 exports[`Canonical Home Page Most Read has item with rank 7`] = `
 {
-  "text": "फ़्लोरिडा शहर में खेले गए पहले टी-20 मैच",
-  "url": "/hindi/live/sport-23070449",
+  "text": "कौन है द रेज़िस्टेंस फ़्रंट ग्रुप जिसका नाम पहलगाम हमले में आ रहा है?",
+  "url": "https://www.bbc.com/hindi/articles/c5yq871757po",
 }
 `;
 
 exports[`Canonical Home Page Most Read has item with rank 8`] = `
 {
-  "text": "पाक: मोदी की 'तारीफ़' पर गद्दारी का मुकदमा! 10",
-  "url": "/hindi/23068669",
+  "text": "पाकिस्तान क्या भारतीय हवाई हमले का जवाब देगा? चार बड़े सवाल",
+  "url": "https://www.bbc.com/hindi/articles/cly2ypjrkp2o",
 }
 `;
 
 exports[`Canonical Home Page Most Read has item with rank 9`] = `
 {
-  "text": "बिजनौर में तीन हत्याओं के बाद तनाव",
-  "url": "/hindi/india-23075154",
+  "text": "भारत का मिसाइल और एयर डिफ़ेंस सिस्टम पाकिस्तान की तुलना में कैसा है?",
+  "url": "https://www.bbc.com/hindi/articles/c9343dq12z4o",
 }
 `;
 
 exports[`Canonical Home Page Most Read has item with rank 10`] = `
 {
-  "text": "पाक: मोदी की 'तारीफ़' पर गद्दारी का मुकदमा! 23",
-  "url": "/hindi/23068682",
+  "text": "भारत के 'ऑपरेशन सिंदूर' पर मीडिया को जानकारी देने वाली दो महिला अधिकारी कौन हैं?",
+  "url": "https://www.bbc.com/hindi/articles/c77n7zz1zg2o",
 }
 `;
 
-exports[`Canonical Home Page Page content First item in the first curation is the correct headline 1`] = `"पाक: मोदी की 'तारीफ़' पर गद्दारी का मुकदमा! 23"`;
+exports[`Canonical Home Page Page content First item in the first curation is the correct headline 1`] = `"कौन है द रेज़िस्टेंस फ़्रंट ग्रुप जिसका नाम पहलगाम हमले में आ रहा है?"`;
 
 exports[`Canonical Home Page Page content First item in the first curation is the correct image 1`] = `
 <img
-  alt="पढ़ें"
+  alt="पहलगाम"
   class="bbc-139onq"
   loading="lazy"
-  src="https://ichef.test.bbci.co.uk/ace/standard/240/cpsdevpb/15392/test/_63503968_160822002233_rio_olympic_closing_624x351_afp.jpg"
+  src="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/8b52/live/6c11f130-2c01-11f0-8da1-ad2bbee6cda5.jpg.webp"
   style="aspect-ratio:16 / 9"
 />
 `;
@@ -390,29 +404,395 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 1,
-          "url": "https://www.bbc.com/hindi/23068682",
+          "url": "https://www.bbc.com/hindi/articles/c365nejek65o",
         },
         {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 2,
-          "url": "https://www.bbc.com/hindi/india-23075154",
+          "url": "https://www.bbc.com/hindi/articles/c5yq871757po",
         },
         {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 3,
-          "url": "https://www.bbc.com/hindi/international-23069805",
+          "url": "https://www.bbc.com/hindi/articles/cx2jgwp0je1o",
         },
         {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 4,
-          "url": "https://www.bbc.com/hindi/articles/c558wpnqq4qo",
+          "url": "https://www.bbc.com/hindi/live/c1memd40vk5t",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 5,
+          "url": "https://www.bbc.com/hindi/articles/cgjljw6xq4jo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 6,
+          "url": "https://www.bbc.com/hindi/articles/cz703jn7y2wo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 7,
+          "url": "https://www.bbc.com/hindi/articles/cddedl5vdq4o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 8,
+          "url": "https://www.bbc.com/hindi/articles/cly2ypjrkp2o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 9,
+          "url": "https://www.bbc.com/hindi/articles/c5ygyg8j794o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 10,
+          "url": "https://www.bbc.com/hindi/articles/cj6860krekgo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 11,
+          "url": "https://www.bbc.com/hindi/articles/c3r8rzpz881o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 12,
+          "url": "https://www.bbc.com/hindi/articles/c77n7zz1zg2o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 13,
+          "url": "https://www.bbc.com/hindi/articles/c0l0lk2r0r4o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 14,
+          "url": "https://www.bbc.com/hindi/articles/creqevwwrqeo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 15,
+          "url": "https://www.bbc.com/hindi/articles/c9343dq12z4o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 16,
+          "url": "https://www.bbc.com/hindi/articles/cx2y278l8v0o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 17,
+          "url": "https://www.bbc.com/hindi/articles/cx2v2v8mldeo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 18,
+          "url": "https://www.bbc.com/hindi/articles/cy5r5wn2n7wo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 19,
+          "url": "https://www.bbc.com/hindi/articles/cy9vzq3pg0no",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 20,
+          "url": "https://whatsapp.com/channel/0029Vaf8zY1ElagsEvZ4Gp1I",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 21,
+          "url": "https://www.bbc.com/hindi/articles/cm2xp04glj3o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 22,
+          "url": "https://www.bbc.com/hindi/articles/ce8g5z7x85yo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 23,
+          "url": "https://www.bbc.com/hindi/articles/cedyq5y6zg3o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 24,
+          "url": "https://www.bbc.com/hindi/articles/cze1ee3w4xeo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 25,
+          "url": "https://www.bbc.com/hindi/articles/cgjl384z5z5o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 26,
+          "url": "https://www.bbc.com/hindi/articles/ce8gkn4dkg6o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 27,
+          "url": "https://www.bbc.com/hindi/articles/c209rrnl5rqo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 28,
+          "url": "https://www.bbc.com/hindi/articles/c8dgzvd2rvgo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 29,
+          "url": "https://www.bbc.com/hindi/articles/cx20vvrkprzo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 30,
+          "url": "https://www.bbc.com/hindi/articles/c628392j6zeo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 31,
+          "url": "https://www.bbc.com/hindi/articles/c2kvkx0y0d9o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 32,
+          "url": "https://www.bbc.com/hindi/articles/c9djd6d2e79o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 33,
+          "url": "https://www.bbc.com/hindi/articles/c0jzjqx8w3jo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 34,
+          "url": "https://www.bbc.com/hindi/articles/c8x8xrkx9x1o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 35,
+          "url": "https://www.bbc.com/hindi/articles/c2dedprnw75o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 36,
+          "url": "https://www.bbc.com/hindi/articles/c89g9l0157wo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 37,
+          "url": "https://www.bbc.com/hindi/articles/cpdzw61lpxjo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 38,
+          "url": "https://www.bbc.com/hindi/bbc_hindi_tv/tv_programmes/w13xttlw",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 39,
+          "url": "https://www.bbc.com/programmes/p08s9wv2",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 40,
+          "url": "https://www.bbc.com/hindi/podcasts/p05525mc",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 41,
+          "url": "https://www.bbc.com/hindi/podcasts/p0552909",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 42,
+          "url": "https://www.bbc.com/hindi/podcasts/p0kjf03y",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 43,
+          "url": "https://www.bbc.com/hindi/podcasts/p09ds7zx",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 44,
+          "url": "https://www.youtube.com/playlist?list=PLYxuvEJLss6A0bxcJJ5wKJASYN_veB0Wp",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 45,
+          "url": "https://www.bbc.com/hindi/articles/ce9p7dy1qd1o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 46,
+          "url": "https://www.bbc.com/hindi/articles/c9djz01093po",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 47,
+          "url": "https://www.bbc.com/hindi/articles/c93g38p51pzo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 48,
+          "url": "https://www.bbc.com/hindi/articles/cevdvjkl2jro",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 49,
+          "url": "https://www.bbc.com/hindi/articles/cgkgl6k4pxzo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 50,
+          "url": "https://www.bbc.com/hindi/articles/c4grnx2kwrpo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 51,
+          "url": "https://www.bbc.com/hindi/articles/cgqvwgvenxno",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 52,
+          "url": "https://www.bbc.com/hindi/articles/cedy31d9192o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 53,
+          "url": "https://www.bbc.com/hindi/articles/c33zg0lk31xo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 54,
+          "url": "https://www.bbc.com/hindi/articles/c62xy96wy0eo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 55,
+          "url": "https://www.bbc.com/hindi/articles/c9qwrjp8zpgo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 56,
+          "url": "https://www.bbc.com/hindi/articles/cpq73gnr8r1o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 57,
+          "url": "https://www.bbc.com/hindi/articles/czrvz25yx4ko",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 58,
+          "url": "https://www.bbc.com/hindi/articles/ce8grxyd18ro",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 59,
+          "url": "https://www.bbc.com/hindi/articles/ckgevrd222ko",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 60,
+          "url": "https://www.bbc.com/hindi/articles/cy5r0dg461zo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 61,
+          "url": "https://bit.ly/4gA4bwJ",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 62,
+          "url": "https://www.facebook.com/bbchindi",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 63,
+          "url": "https://x.com/BBCHindi",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 64,
+          "url": "https://www.youtube.com/user/bbchindi",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 65,
+          "url": "https://www.instagram.com/bbchindi/",
         },
       ],
       "name": "BBC News हिंदी",
-      "numberOfItems": 4,
+      "numberOfItems": 65,
     },
   ],
 }
@@ -454,7 +834,24 @@ exports[`Canonical Home Page SEO Twitter title 1`] = `"ब्रेकिंग 
 
 exports[`Canonical Home Page Timestamp should match text and date 1`] = `
 {
-  "date": "2016-08-22",
-  "text": "22 अगस्त 2016",
+  "date": "2025-05-08",
+  "text": "8 मई 2025",
 }
+`;
+
+exports[`Canonical Home Page messageBanner has a link 1`] = `"https://whatsapp.com/channel/0029Vaf8zY1ElagsEvZ4Gp1I"`;
+
+exports[`Canonical Home Page messageBanner has an image 1`] = `
+<img
+  alt=""
+  class="bbc-139onq"
+  loading="eager"
+  sizes="(max-width: 37.4375rem) 184px, 224px"
+  src="https://ichef.bbci.co.uk/ace/ws/224/cpsprodpb/3bc3/live/e712bd90-225e-11ef-80aa-699d54c46324.png.webp"
+  srcset="https://ichef.bbci.co.uk/ace/ws/184/cpsprodpb/3bc3/live/e712bd90-225e-11ef-80aa-699d54c46324.png.webp 184w, 
+                          https://ichef.bbci.co.uk/ace/ws/368/cpsprodpb/3bc3/live/e712bd90-225e-11ef-80aa-699d54c46324.png.webp 368w, 
+                          https://ichef.bbci.co.uk/ace/ws/224/cpsprodpb/3bc3/live/e712bd90-225e-11ef-80aa-699d54c46324.png.webp 224w, 
+                          https://ichef.bbci.co.uk/ace/ws/448/cpsprodpb/3bc3/live/e712bd90-225e-11ef-80aa-699d54c46324.png.webp 448w"
+  style="aspect-ratio:16 / 9"
+/>
 `;

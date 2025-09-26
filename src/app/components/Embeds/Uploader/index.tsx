@@ -1,14 +1,11 @@
 /** @jsx jsx */
-import { useContext } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { jsx } from '@emotion/react';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import CallToActionLink from '#app/components/CallToActionLink';
 import Paragraph from '../../Paragraph';
 import Text from '../../Text';
 import styles from './index.styles';
-import { LeftChevron, RightChevron } from '../../icons';
-import CallToActionLink from '../../CallToActionLink';
 import idSanitiser from '../../../lib/utilities/idSanitiser';
 
 interface UploaderProps {
@@ -23,10 +20,7 @@ type UploaderBlock = {
 };
 
 const Uploader = ({ blocks }: UploaderProps) => {
-  const { dir } = useContext(ServiceContext);
-  const isRtl = dir === 'rtl';
-
-  if (!blocks || !blocks.length) return null;
+  if (!blocks?.length) return null;
 
   const type = path([0, 'type'], blocks); // aresUploader
   if (type !== 'aresUploader') return null;
@@ -99,13 +93,13 @@ const Uploader = ({ blocks }: UploaderProps) => {
         </Text>
         <Paragraph css={styles.text}>{text}</Paragraph>
         <div css={styles.linkContainer}>
-          <CallToActionLink href={linkAddress} css={styles.callToActionLink}>
-            {linkText}
-            {isRtl ? (
-              <LeftChevron css={styles.chevron} />
-            ) : (
-              <RightChevron css={styles.chevron} />
-            )}
+          <CallToActionLink url={linkAddress} css={styles.callToActionLink}>
+            <CallToActionLink.ButtonLikeWrapper>
+              <CallToActionLink.Text shouldUnderlineOnHoverFocus>
+                {linkText}
+                <CallToActionLink.Chevron css={styles.chevronSpacing} />
+              </CallToActionLink.Text>
+            </CallToActionLink.ButtonLikeWrapper>
           </CallToActionLink>
         </div>
       </div>

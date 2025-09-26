@@ -5,10 +5,9 @@ import {
   PageTypes,
   Services,
   Variants,
-  MvtExperiment,
+  ServerSideExperiment,
 } from '#app/models/types/global';
 import getStatsDestination from './getStatsDestination';
-import getStatsPageIdentifier from './getStatsPageIdentifier';
 import getOriginContext from './getOriginContext';
 import getEnv from './getEnv';
 import getMetaUrls from './getMetaUrls';
@@ -27,21 +26,20 @@ export type RequestContextProps = {
   isLite: boolean;
   isNextJs: boolean;
   isUK: boolean;
-  mvtExperiments?: MvtExperiment[] | null;
+  serverSideExperiments?: ServerSideExperiment[] | null;
   origin: string;
   pageType: PageTypes;
   derivedPageType: string | null;
   pathname: string;
   platform: Platforms;
-  previousPath: string | null;
   service: Services;
   showAdsBasedOnLocation: boolean;
   showCookieBannerBasedOnCountry: boolean;
   statsDestination: string;
-  statsPageIdentifier: string | null;
   statusCode: number | null;
   timeOnServer: number | null;
   variant: Variants | null;
+  country?: string | null;
 };
 
 export const RequestContext = React.createContext<RequestContextProps>(
@@ -58,15 +56,15 @@ type RequestProviderProps = {
   isNextJs?: boolean;
   pageType: PageTypes;
   pathname: string;
-  previousPath?: string | null;
   service: Services;
   showAdsBasedOnLocation?: boolean;
   showCookieBannerBasedOnCountry?: boolean;
   statusCode?: number | null;
   timeOnServer?: number | null;
-  mvtExperiments?: MvtExperiment[] | null;
+  serverSideExperiments?: ServerSideExperiment[] | null;
   variant?: Variants | null;
   isUK?: boolean | null;
+  country?: string | null;
 };
 
 export const RequestContextProvider = ({
@@ -78,20 +76,21 @@ export const RequestContextProvider = ({
   isApp = false,
   isLite = false,
   isNextJs = false,
-  mvtExperiments = null,
+  serverSideExperiments = null,
   pageType,
   pathname,
-  previousPath = null,
   service,
   showAdsBasedOnLocation = false,
   showCookieBannerBasedOnCountry = true,
+  country,
   statusCode = null,
   timeOnServer = null,
   variant = null,
   isUK = null,
 }: PropsWithChildren<RequestProviderProps>) => {
-  const { origin } = getOriginContext(bbcOrigin);
+  let { origin } = getOriginContext(bbcOrigin);
   const env: Environments = getEnv(origin);
+  if (isNextJs && env === 'local') origin = 'http://localhost:7081';
   const formattedIsUK = isUK ?? false;
 
   const getPlatform = (): Platforms => {
@@ -113,11 +112,6 @@ export const RequestContextProvider = ({
     env,
     service,
   });
-  const statsPageIdentifier = getStatsPageIdentifier({
-    pageType,
-    service,
-    id,
-  });
 
   const value = useMemo(
     () => ({
@@ -133,9 +127,7 @@ export const RequestContextProvider = ({
       isNextJs,
       platform,
       statsDestination,
-      statsPageIdentifier,
       statusCode,
-      previousPath,
       variant,
       timeOnServer,
       showAdsBasedOnLocation,
@@ -143,7 +135,8 @@ export const RequestContextProvider = ({
       service,
       pathname,
       ...getMetaUrls(origin, pathname),
-      mvtExperiments,
+      serverSideExperiments,
+      country,
     }),
     [
       derivedPageType,
@@ -154,20 +147,19 @@ export const RequestContextProvider = ({
       isApp,
       isLite,
       isNextJs,
-      mvtExperiments,
+      serverSideExperiments,
       origin,
       pageType,
       pathname,
       platform,
-      previousPath,
       service,
       showAdsBasedOnLocation,
       showCookieBannerBasedOnCountry,
       statsDestination,
-      statsPageIdentifier,
       statusCode,
       timeOnServer,
       variant,
+      country,
     ],
   );
 

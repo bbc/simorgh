@@ -1,0 +1,19 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Coding Standards/Lite Page JS" />
+
+# Lite Page JS
+Our Lite pages are different to our canonical pages in that we do not have the React library available on the client; the library is only available to build the serverside response and React is stripped out of the client JS. With this in mind, we need a way to support limited dynamic functionality on lite pages; we should minimize this for two primary reasons:
+- Integrating JS is more complex and we do not benefit from bundle splitting offered by webpack in Express and NextJS's in built support
+- We want to minimize page weight, JS adds to this
+
+## Recommended Approach
+It is important any inline JS is transpiled to ensure it works on our supported browsers as is the case for any JS we add to our canonical pages. To do so inline JS should be maintained in its own file as shown on [this PR](https://github.com/bbc/simorgh/pull/12360/files#diff-bc423afafae9fdc5e0704ecc79da153814074be3a9c5c88de299dde09667a5bc); this allows it be included in a way where transpilation can take place.
+
+The file can then be included in the serverside response via the `toString()` api as is shown on [this PR](https://github.com/bbc/simorgh/pull/12360/files#diff-7740db73fb905cc3cb804a52fc779531d18dab5bd04724335dd5237481149defR30); the inline script can be transpiled at build time ensuring the transpiled JS is included in the page response appropriately.
+
+By applying this approach we can use modern JS and Typescript when maintaining the code rather than inlining transpiled code directly in our React components and [maintaining it as a string](https://github.com/bbc/simorgh/blob/42b0ff4ac9ae78f2fda6035f54605b296e256304/src/app/components/ATIAnalytics/canonical/sendBeaconOperaMiniScript/index.ts#L3).
+
+Additionally we are able to reliably test this code as we do any other code we maintain as shown in [this PR](https://github.com/bbc/simorgh/pull/12360/files#diff-a2444976147693573560a81ce6e248fa83e719d9474f021ba94707f0225560c4R2).
+
+It is to be noted that using this pattern makes it impossible to import code from other files; this is seen as an acceptable restriction when presented against the alternative of maintaining transpiled code [as a string](https://github.com/bbc/simorgh/blob/42b0ff4ac9ae78f2fda6035f54605b296e256304/src/app/components/ATIAnalytics/canonical/sendBeaconOperaMiniScript/index.ts#L3). Being unable to import modules, code repetition is likely, but as above we should minimize the code we inline for lite page usage meaning this shouldn't have too negative an impact on codebase maintainability.

@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-azeri',
     atiAnalyticsProducerId: '6',
+    atiAnalyticsProducerName: 'AZERI',
+    useReverb: true,
     chartbeatDomain: 'azeri.bbc.co.uk',
     brandName: 'BBC News Azərbaycanca',
     product: 'BBC News',
@@ -39,11 +41,29 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/azeri/institutional-49283479',
     isTrustProjectParticipant: true,
     script: latinWithDiacritics,
-    manifestPath: '/manifest.json',
+    manifestPath: '/azeri/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Xəbərlər, Qaynar Xəbərlər, Analiz, Video',
+    homePageTitle: 'Xəbərlər, Qaynar Xəbərlər, Analiz, Video',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'WhatsApp reklamı',
+      brandTitle: 'WhatsApp kanalımızı izləyin',
+      brandDescription:
+        'BBC News Azərbaycancanın xəbərlərini indi telefonunuzda ala bilərsiniz.',
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0lq79gb.png',
+        alt: 'BBC News Azarbaycancanin Whatsapp kanalina qosulun',
+      },
+      linkLabel: {
+        text: 'Buradan izləyin',
+        href: 'https://www.whatsapp.com/channel/0029Vb6Ewy00lwgwO4iuS32p',
+      },
+      skipLink: {
+        text: '%title%-ı bağlayın  və oxumağa davam edin',
+        endTextVisuallyHidden: '%title%-ın sonu',
+      },
+    },
     translations: {
       pagination: {
         page: 'səhifə',
@@ -60,6 +80,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'Mətnə keçid',
       relatedContent: 'Bu barədə daha geniş',
       relatedTopics: 'Əlaqəli mövzular',
+      moreOnThis: '',
       navMenuText: 'Bölümlər',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
@@ -227,6 +248,8 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
         recentEpisodes: 'Daha ətraflı',
+        closeVideo: 'Bağla',
+        endOfContentClose: 'Bu məzmunun sonu. Bağla',
       },
       socialEmbed: {
         caption: {
@@ -259,9 +282,41 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'Digər xəbərlər',
       featuresAnalysisTitle: 'Bunları da oxuyun',
+      ugc: {
+        // Optional
+        optional: 'vacib deyil',
+
+        // File upload
+        fileUploadLiveRegionText: `Göndərdikləriniz bunlardır: `,
+        fileUploadListHeading: `Göndərdikləriniz bunlardır:`,
+        fileUploadButton: 'Faylı seçin',
+
+        // Submit button
+        submitButton: 'Göndərin',
+
+        // Messaging
+        referenceNumber: 'İstinad nömrəniz',
+        retentionPeriodDays: `Bizə göndərdiyiniz məlumatları {{days}} günədək saxlayacağıq. Ondan istifadə etmədiyimiz halda bizə göndərdiyiniz bu və digər məlumatları siləcəyik.`,
+        privacyInfoHtml: `Sizin məlumatlarınızı qoruyuruq – ətraflı {{privacyInfoLink}} oxuyun.`,
+        emailToHtml: `Fikrinizi dəyişsəniz və ya məlumatlarınızdan istifadə etməyimizi istəmirsinizsə, {{emailLink}} emailinə yazın. İstinad nömrənizi də qeyd edin.`,
+        removalGuidelineText: `Lakin proqramlarımız və ya saytımız üçün məlumat göndərmisinizsə və biz ondan istifadə etmişiksə, onu silmək mümkün olmayacaq.`,
+
+        // Form Screen
+        dataPolicyHeading: 'Bizim informasiya siyasə timiz',
+
+        // Uploading Screen
+        uploadingHeading: 'Yüklənir',
+        uploadingDescription: 'Zəhmət olmasa, yüklənmə bitənədək gözləyin.',
+
+        // Success Screen
+        successHeading: 'Mesaj göndərildi!',
+        successDescription: 'Əlaqə saxladığınız üçün təşəkkür edirik.',
+        privacyPolicyLinkHref: 'https://www.bbc.com/usingthebbc/privacy',
+        privacyPolicyLinkText: 'Məxfilik siyasətimizi',
+      },
     },
     mostRead: {
-      header: 'Ən çox oxunan',
+      header: 'Geniş oxunanlar',
       lastUpdated: 'Ən son yeniləmə:',
       numberOfItems: 5,
       hasMostRead: true,
@@ -270,7 +325,11 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'Ən çox oxunan',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
@@ -278,7 +337,7 @@ export const service: DefaultServiceConfig = {
         text: 'BBC News-a niyə etibar etməlisiniz',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Bizim kənar keçidlərə dair yanaşmamız barədə oxuyun.',
       },
       links: [
@@ -304,7 +363,7 @@ export const service: DefaultServiceConfig = {
         },
         {
           href: 'https://www.bbc.com/ws/languages',
-          text: 'Other Languages',
+          text: 'BBC News digər dillərdə',
         },
         {
           id: 'COOKIE_SETTINGS',

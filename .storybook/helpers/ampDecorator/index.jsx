@@ -4,10 +4,9 @@ import {
   AMP_SCRIPT,
   AMP_NO_SCRIPT,
   AMP_JS,
-  AMP_GEO_JS,
-  AMP_CONSENT_JS,
   AMP_ANALYTICS_JS,
 } from '#psammead/psammead-assets/src/amp-boilerplate';
+import {AMP_GEO_SCRIPT} from '#app/legacy/components/AmpGeo'
 
 /*
   Contains AMP required markup https://www.ampproject.org/docs/fundamentals/spec#required-markup
@@ -22,8 +21,7 @@ const AmpDecorator = storyFn => (
       <style amp-boilerplate="">{AMP_SCRIPT}</style>
       <noscript>{`<style amp-boilerplate="">${AMP_NO_SCRIPT}</style>`}</noscript>
       {AMP_JS}
-      {AMP_GEO_JS}
-      {AMP_CONSENT_JS}
+      {AMP_GEO_SCRIPT}
       {AMP_ANALYTICS_JS}
     </Helmet>
     {storyFn()}

@@ -77,6 +77,7 @@ describe('Render Document', () => {
         isLite: false,
         legacyScripts: '__mock_script_elements__',
         modernScripts: '__mock_script_elements__',
+        service: 'news',
         links: '__mock_link_elements__',
       });
 

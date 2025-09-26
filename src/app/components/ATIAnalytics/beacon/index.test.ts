@@ -11,6 +11,18 @@ const sendBeaconSpy = jest.spyOn(sendBeacon, 'default');
   .fn()
   .mockReturnValue('00-00-00');
 
+const reverbMock = {
+  isReady: jest.fn(),
+  initialise: jest.fn(() => Promise.resolve()),
+  viewEvent: jest.fn(),
+  userActionEvent: jest.fn(),
+};
+
+// eslint-disable-next-line no-underscore-dangle
+window.__reverb = {
+  __reverbLoadedPromise: Promise.resolve(reverbMock),
+};
+
 describe('beacon', () => {
   const originalATIBaseUrl = process.env.SIMORGH_ATI_BASE_URL;
   const atiBaseUrl = 'https://foobar.com?';
@@ -46,6 +58,112 @@ describe('beacon', () => {
         lng: 'en-US',
         atc: 'PUB-[]-[component]-[]-[]-[pageIdentifier]-[detailedPlacement]-[]-[]',
         type: 'AT',
+      });
+    });
+
+    describe('Reverb', () => {
+      describe('Viewability Model', () => {
+        it('should call reverb userActionEvent exactly once for a view event', async () => {
+          await sendEventBeacon({
+            type: 'view',
+            service: 'news',
+            pageIdentifier: 'pageIdentifier',
+            producerName: 'producer',
+            statsDestination: 'statsDestination',
+            componentName: 'component',
+            campaignID: 'campaign1',
+            format: 'format',
+            advertiserID: 'advertiserID',
+            url: 'http://localhost',
+            detailedPlacement: 'detailedPlacement',
+            useReverb: true,
+          });
+          expect(sendBeaconSpy).toHaveBeenCalledTimes(1);
+
+          expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+
+          expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+            'viewability',
+            '',
+            {
+              item: {
+                attribution: 'advertiserID',
+                name: 'component',
+                link: 'http://localhost',
+              },
+              group: {
+                name: 'campaign1',
+                type: 'component',
+              },
+              event: {
+                category: 'viewability',
+                action: 'view',
+              },
+            },
+            undefined,
+            undefined,
+            false,
+          );
+        });
+
+        it('should call reverb click event exactly once for a click event', async () => {
+          await sendEventBeacon({
+            type: 'click',
+            service: 'news',
+            pageIdentifier: 'pageIdentifier',
+            producerName: 'producer',
+            statsDestination: 'statsDestination',
+            componentName: 'component',
+            campaignID: 'campaign1',
+            format: 'format',
+            advertiserID: 'advertiserID',
+            url: 'http://localhost',
+            detailedPlacement: 'detailedPlacement',
+            useReverb: true,
+          });
+          expect(sendBeaconSpy).toHaveBeenCalledTimes(1);
+
+          expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+
+          expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+            'viewability',
+            '',
+            {
+              item: {
+                attribution: 'advertiserID',
+                name: 'component',
+                link: 'http://localhost',
+              },
+              group: {
+                name: 'campaign1',
+                type: 'component',
+              },
+              event: {
+                category: 'viewability',
+                action: 'select',
+              },
+            },
+            undefined,
+            undefined,
+            true,
+          );
+        });
+      });
+
+      it('should resolve reverbParams to null when Reverb is disabled for a service', () => {
+        sendEventBeacon({
+          type: 'click',
+          service: 'news',
+          componentName: 'component',
+          pageIdentifier: 'pageIdentifier',
+          detailedPlacement: 'detailedPlacement',
+          useReverb: false,
+        });
+
+        const reverbParams = sendBeaconSpy.mock.calls[0][1];
+
+        expect(sendBeaconSpy).toHaveBeenCalledTimes(1);
+        expect(reverbParams).toBeNull();
       });
     });
   });

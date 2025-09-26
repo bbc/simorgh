@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { useContext } from 'react';
+import { use } from 'react';
 import { Helmet } from 'react-helmet';
 import {
   AMP_LIST_JS,
@@ -28,7 +28,7 @@ const AmpMostRead = ({ endpoint, size = 'default' }: AmpMostReadProps) => {
     dir,
     mostRead: { numberOfItems },
     translations,
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
   const onlyinnerscript = getRemoteDataScript({ endpoint, service });
 
@@ -75,11 +75,18 @@ const AmpMostRead = ({ endpoint, size = 'default' }: AmpMostReadProps) => {
         width="300"
         height="50"
       >
-        <p css={styles.paragraph} fallback="">
+        <p
+          css={styles.paragraph}
+          // @ts-expect-error - fallback is an AMP specific attribute
+          fallback=""
+        >
           {fallbackText}
         </p>
 
-        <template type="amp-mustache">
+        <template
+          // @ts-expect-error - type is an AMP specific attribute in this context
+          type="amp-mustache"
+        >
           <MostReadItemWrapper dir={direction} columnLayout="oneColumn">
             <MostReadRank
               service={service}
@@ -96,6 +103,8 @@ const AmpMostRead = ({ endpoint, size = 'default' }: AmpMostReadProps) => {
               title="{{title}}"
               href="{{href}}"
               size={size}
+              id=""
+              position="{{index}}"
             />
           </MostReadItemWrapper>
         </template>

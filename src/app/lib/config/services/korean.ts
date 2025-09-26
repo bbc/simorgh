@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '에 업데이트 됨',
     atiAnalyticsAppName: 'news-korean',
     atiAnalyticsProducerId: '57',
+    atiAnalyticsProducerName: 'KOREAN',
+    useReverb: true,
     chartbeatDomain: 'korean.bbc.co.uk',
     brandName: 'BBC News 코리아',
     product: 'BBC News',
@@ -39,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/korean/institutional-49283197',
     isTrustProjectParticipant: true,
     script: noAscendersOrDescenders,
-    manifestPath: '/manifest.json',
+    manifestPath: '/korean/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: '홈페이지',
+    homePageTitle: '홈페이지',
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
@@ -53,13 +55,13 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: '광고',
       },
-      recommendationTitle: 'Recommended articles',
       seeAll: '모든 기사 보기',
       home: '홈',
       currentPage: '현재 페이지',
       skipLinkText: '내용 보기',
       relatedContent: '관련 기사 더 보기',
       relatedTopics: '관련 토픽',
+      moreOnThis: '',
       navMenuText: '섹션',
       mediaAssetPage: {
         mediaPlayer: '미디어 플레이어',
@@ -226,6 +228,8 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: '다음 라디오 방송',
         duration: '방송 길이',
         recentEpisodes: '이전',
+        closeVideo: '나가기',
+        endOfContentClose: '이 콘텐츠의 끝입니다. 나가기',
       },
       socialEmbed: {
         caption: {
@@ -262,7 +266,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: '최신 뉴스',
     },
     mostRead: {
-      header: 'TOP 뉴스',
+      header: '많이 본 뉴스',
       lastUpdated: '마지막 업데이트일',
       numberOfItems: 10,
       hasMostRead: true,
@@ -273,7 +277,7 @@ export const service: DefaultServiceConfig = {
       durationLabel: '방송 길이 %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'TOP 뉴스',
       skipLink: {
         text: 'Skip %title% and continue reading',
         endTextVisuallyHidden: 'End of %title%',
@@ -285,7 +289,7 @@ export const service: DefaultServiceConfig = {
         text: 'BBC News를 신뢰할 수 있는 이유',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: '외부 링크에 대한 본사 정책 보기',
       },
       links: [
@@ -311,7 +315,7 @@ export const service: DefaultServiceConfig = {
         },
         {
           href: 'https://www.bbc.com/ws/languages',
-          text: 'Other Languages',
+          text: '다른 언어로 보기',
         },
         {
           id: 'COOKIE_SETTINGS',
