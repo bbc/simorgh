@@ -8,7 +8,6 @@ import path from 'ramda/src/path';
 import isMediaType from '#app/lib/utilities/isMedia';
 import { ReadTime } from '#app/components/ReadTime';
 import { extractId } from '#app/pages/HomePage/HomePage';
-import useClickTrackerHandler from '../../../hooks/useClickTrackerHandler';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import formatDuration from '../../../lib/utilities/formatDuration';
