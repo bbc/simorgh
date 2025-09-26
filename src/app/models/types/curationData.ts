@@ -1,5 +1,8 @@
 import { OEmbedData } from '#app/components/Embeds/types';
-import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
+import {
+  MediaCollection,
+  PortraitClipMediaBlock,
+} from '#app/components/MediaLoader/types';
 import { RadioScheduleData } from '#app/models/types/radioSchedule';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { MostReadData } from '../../components/MostRead/types';
@@ -17,13 +20,17 @@ interface BaseSummary {
   lastPublished?: string | number;
   duration?: string | number;
   isLive?: boolean;
+  position?: number;
 }
 
 export interface Summary extends BaseSummary {
   mediaType?: 'audio' | 'video' | 'photogallery';
   lazy?: boolean;
   headingLevel?: number;
+  readTime?: number;
   eventTrackingData?: EventTrackingData;
+  visualProminence?: VisualProminence | string;
+  readTimeVariant?: string | null;
 }
 
 export const VISUAL_STYLE = {
@@ -44,15 +51,22 @@ export const VISUAL_PROMINENCE = {
   MAXIMUM: 'MAXIMUM',
 } as const;
 
+export const INTENT = {
+  MEDIA_PLAYER: 'MEDIA_PLAYER',
+} as const;
+
 export type VisualStyle = keyof typeof VISUAL_STYLE;
 
 export type VisualProminence = keyof typeof VISUAL_PROMINENCE;
+
+export type Intent = keyof typeof INTENT;
 
 // This maps to the Curation type definition in the BFF
 export interface BaseCuration {
   summaries?: Summary[];
   visualStyle?: VisualStyle | string;
   visualProminence: VisualProminence | string;
+  intent?: Intent | string;
   curationId?: string;
   title?: string;
   link?: string;
@@ -68,6 +82,7 @@ export interface BaseCuration {
   };
   contentType?: string;
   pageTitle?: string;
+  mediaCollection?: MediaCollection[];
 }
 
 export interface Curation extends BaseCuration {
@@ -75,4 +90,5 @@ export interface Curation extends BaseCuration {
   curationLength?: number;
   nthCurationByStyleAndProminence?: number;
   renderVisuallyHiddenH2Title?: boolean;
+  readTimeVariant?: string | null;
 }

@@ -1,6 +1,7 @@
 import React from 'react';
-import { suppressPropWarnings } from '../../../legacy/psammead/psammead-test-helpers/src';
-import { render } from '../../react-testing-library-with-providers';
+import * as viewTracking from '#app/hooks/useViewTracker';
+import * as clickTracking from '#app/hooks/useClickTrackerHandler';
+import { fireEvent, render } from '../../react-testing-library-with-providers';
 import { pidginPromos as fixture } from './fixtures';
 import mediaFixture from './mediaFixtures';
 import liveFixtures from './liveFixtures';
@@ -9,9 +10,16 @@ import HierarchicalGrid from '.';
 const minimalEventTrackingData = { componentName: 'test-component' };
 
 describe('Hierarchical Grid Curation', () => {
-  suppressPropWarnings(['children', 'string', 'MediaIcon']);
-
   const headingLevel = 2;
+
+  beforeAll(() => {
+    jest.useFakeTimers().setSystemTime(new Date('2025-09-16T11:34:20.000Z'));
+  });
+
+  afterAll(() => {
+    jest.useRealTimers();
+  });
+
   it('renders twelve promos when twelve items are provided', async () => {
     render(
       <HierarchicalGrid
@@ -50,10 +58,11 @@ describe('Hierarchical Grid Curation', () => {
   });
 
   it('returns null when less than three promos are in the data', async () => {
+    const splicedFixture = [...fixture].splice(0, 2);
     render(
       <HierarchicalGrid
         headingLevel={headingLevel}
-        summaries={fixture.splice(0, 2)}
+        summaries={splicedFixture}
         eventTrackingData={minimalEventTrackingData}
       />,
     );
@@ -118,6 +127,21 @@ describe('Hierarchical Grid Curation', () => {
     expect(getByText('29 julio 2023')).toBeInTheDocument();
   });
 
+  it('for articles pushed under 10 hours ago, it should render the last published date in a relative format', async () => {
+    const { container } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={mediaFixture}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+      {
+        service: 'mundo',
+      },
+    );
+    const timestampText = container.querySelectorAll('time')?.[2].innerHTML;
+    expect(timestampText).toBe('Publicado hace 34 minutos');
+  });
+
   it('should use role text when using nested spans', async () => {
     render(
       <HierarchicalGrid
@@ -169,5 +193,108 @@ describe('Hierarchical Grid Curation', () => {
       },
     );
     expect(container.queryByText('13 noviembre 2022')).not.toBeInTheDocument();
+  });
+
+  it('should display read time when readTime is provided in summary data', () => {
+    const fixtureDataIncludingReadTime = fixture.map(fixtureSummary => ({
+      ...fixtureSummary,
+      readTime: 5,
+    }));
+
+    const container = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={fixtureDataIncludingReadTime}
+        eventTrackingData={minimalEventTrackingData}
+        readTimeVariant="variant1"
+      />,
+    );
+    expect(container.queryAllByTestId('read-time').length).toBe(12);
+  });
+
+  it('should not display read time when readTime is not provided in summary data', () => {
+    const container = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={fixture}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+    );
+    expect(container.queryAllByTestId('read-time').length).toBe(0);
+  });
+
+  it('should show promo data in read time view event', () => {
+    const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+    const expectedTrackingProps = {
+      componentName: 'read-time',
+      experimentName: 'newswb_ws_homepage_read_time',
+      experimentVariant: 'variant1',
+      itemTracker: {
+        duration: 300000,
+        label: 'Read time: 5 minutes',
+        resourceId: 'e2263a1c-8d5a-4a73-a00c-881acfa34381',
+        position: 1,
+        type: 'article',
+      },
+      sendOptimizelyEvents: true,
+    };
+
+    const fixtureDataIncludingReadTime = fixture.map(fixtureSummary => ({
+      ...fixtureSummary,
+      readTime: 5,
+    }));
+
+    render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={fixtureDataIncludingReadTime}
+        eventTrackingData={minimalEventTrackingData}
+        readTimeVariant="variant1"
+      />,
+    );
+
+    expect(viewTrackerSpy).toHaveBeenCalledWith(
+      expect.objectContaining(expectedTrackingProps),
+    );
+  });
+
+  it('should include read time data if a promo link is clicked when a user is in any variant except control', () => {
+    const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
+    const expectedTrackingProps = {
+      componentName: 'test-component',
+      experimentName: 'newswb_ws_homepage_read_time',
+      experimentVariant: 'variant1',
+      itemTracker: {
+        duration: 300000,
+        label: 'Read time: 5 minutes',
+        resourceId: 'e2263a1c-8d5a-4a73-a00c-881acfa34381',
+        position: 1,
+        type: 'hierarchical-curation-grid-promo',
+        mediaType: 'article',
+        text: 'Wetin happun for January 6 one year ago?',
+      },
+      sendOptimizelyEvents: true,
+    };
+
+    const fixtureDataIncludingReadTime = fixture.map(fixtureSummary => ({
+      ...fixtureSummary,
+      readTime: 5,
+    }));
+
+    const { container } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={fixtureDataIncludingReadTime}
+        eventTrackingData={minimalEventTrackingData}
+        readTimeVariant="variant1"
+      />,
+    );
+    const [promoLink] = container.getElementsByTagName('a');
+    fireEvent.click(promoLink);
+
+    expect(promoLink.onclick).toBeTruthy();
+    expect(clickTrackerSpy).toHaveBeenCalledWith(
+      expect.objectContaining(expectedTrackingProps),
+    );
   });
 });

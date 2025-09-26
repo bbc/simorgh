@@ -23,6 +23,7 @@ import PortraitVideoCarousel from '../PortraitVideoCarousel';
 import UsefulLinks from '../UsefulLinks';
 import SocialLinks from '../SocialLinks';
 import styles from './index.styles';
+import MediaLoader from '../MediaLoader';
 
 const {
   SIMPLE_CURATION_GRID,
@@ -36,6 +37,7 @@ const {
   PORTRAIT_VIDEO_CAROUSEL,
   USEFUL_LINKS,
   SOCIAL_LINKS,
+  MEDIA_COLLECTION,
 } = COMPONENT_NAMES;
 
 const { NONE } = VISUAL_STYLE;
@@ -67,13 +69,17 @@ export default ({
   portraitVideo,
   renderVisuallyHiddenH2Title = false,
   curationId,
+  readTimeVariant,
+  mediaCollection,
 }: Curation) => {
   const componentName = getComponentName({
     visualStyle,
     visualProminence,
     radioSchedule,
     embed,
+    mediaCollection,
   });
+
   const GridComponent = getGridComponent(componentName);
 
   const isFirstCuration = position === 0;
@@ -119,10 +125,7 @@ export default ({
               link={summaryLink}
               image={imageUrl}
               id={billboardId}
-              eventTrackingData={{
-                componentName: billboardId,
-                detailedPlacement: `${position + 1}`,
-              }}
+              eventTrackingData={eventTrackingData}
               showLiveLabel={summaryIsLive}
               altText={imageAlt}
               summaries={summaries}
@@ -153,6 +156,7 @@ export default ({
           data={mostRead}
           columnLayout="twoColumn"
           headingBackgroundColour={GHOST}
+          eventTrackingData={eventTrackingData}
         />
       );
     case RADIO_SCHEDULE:
@@ -160,6 +164,7 @@ export default ({
         <RadioSchedule
           initialData={radioSchedule}
           toggleName="homePageRadioSchedule"
+          eventTrackingData={eventTrackingData}
         />
       );
     case EMBED:
@@ -170,7 +175,7 @@ export default ({
           <PortraitVideoCarousel
             title={title}
             blocks={portraitVideo.blocks}
-            {...(curationId && { groupTrackingId: curationId })}
+            eventTrackingData={eventTrackingData}
           />
         );
       }
@@ -181,6 +186,7 @@ export default ({
           summaries={summaries}
           title={title}
           id={`useful-links-${nthCurationByStyleAndProminence}`}
+          eventTrackingData={eventTrackingData}
         />
       );
     case SOCIAL_LINKS:
@@ -189,13 +195,30 @@ export default ({
           summaries={summaries}
           title={title}
           id={`social-links-${nthCurationByStyleAndProminence}`}
+          eventTrackingData={eventTrackingData}
         />
       );
+    case MEDIA_COLLECTION: {
+      const mediaCollectionId = `media-collection-${nthCurationByStyleAndProminence}`;
+
+      return mediaCollection ? (
+        <section
+          role="region"
+          aria-labelledby="bbcMediaPlayer0"
+          data-testid={mediaCollectionId}
+        >
+          <MediaLoader blocks={mediaCollection} />
+        </section>
+      ) : null;
+    }
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:
       if (summaries.length > 0) {
-        const viewTracker = useViewTracker(eventTrackingData);
+        const viewTracker = useViewTracker({
+          ...eventTrackingData,
+          viewThreshold: 0.2,
+        });
 
         const curationSubheadingClickTracker =
           useClickTrackerHandler(eventTrackingData);
@@ -222,6 +245,7 @@ export default ({
                 headingLevel={3}
                 isFirstCuration={isFirstCuration}
                 eventTrackingData={eventTrackingData}
+                readTimeVariant={readTimeVariant}
               />
             </div>
           </section>
@@ -232,6 +256,7 @@ export default ({
               headingLevel={2} // if there is only one curation, all promos should be h2, and no subheading
               isFirstCuration={isFirstCuration}
               eventTrackingData={eventTrackingData}
+              readTimeVariant={readTimeVariant}
             />
           </div>
         );

@@ -30,7 +30,7 @@ const canonicalTestSuites = [
   },
   {
     path: '/mundo/live/c7dkx155e626t',
-    runforEnv: ['local', 'test'],
+    runforEnv: ['local'],
     service: 'mundo',
     pageIdentifier: 'live_coverage.c7dkx155e626t.page',
     siteId: 62,

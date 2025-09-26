@@ -154,7 +154,7 @@ exports[`AMP Story Page Footer Anchors should match text and url 8`] = `
 exports[`AMP Story Page Footer Anchors should match text and url 9`] = `
 {
   "text": "Башка интернет сайттардын мазмуну боюнча биздин позиция.",
-  "url": "https://www.bbc.com/editorialguidelines/guidance/feeds-and-links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
 }
 `;
 
@@ -166,29 +166,29 @@ exports[`AMP Story Page Header I can see the branding 1`] = `"BBC News, Кырг
 
 exports[`AMP Story Page Header Navigation link should match text and url 1`] = `
 {
-  "text": "Башталгыч бет",
+  "text": "Башкы бет",
   "url": "/kyrgyz",
 }
 `;
 
 exports[`AMP Story Page Header Navigation link should match text and url 2`] = `
 {
-  "text": "Кыргызстан",
-  "url": "/kyrgyz/topics/cz74kjpyk07t",
+  "text": "Видео жаңылыктар",
+  "url": "/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4t",
 }
 `;
 
 exports[`AMP Story Page Header Navigation link should match text and url 3`] = `
 {
-  "text": "Дүйнө",
-  "url": "/kyrgyz/topics/ck2l9z012nkt",
+  "text": "Кыргызстан",
+  "url": "/kyrgyz/topics/cz74kjpyk07t",
 }
 `;
 
 exports[`AMP Story Page Header Navigation link should match text and url 4`] = `
 {
-  "text": "САПАР",
-  "url": "/kyrgyz/topics/c6z8lg83w7mt",
+  "text": "Дүйнө",
+  "url": "/kyrgyz/topics/ck2l9z012nkt",
 }
 `;
 
@@ -196,13 +196,6 @@ exports[`AMP Story Page Header Navigation link should match text and url 5`] = `
 {
   "text": "Журнал",
   "url": "/kyrgyz/topics/czp8pjrkgp0t",
-}
-`;
-
-exports[`AMP Story Page Header Navigation link should match text and url 6`] = `
-{
-  "text": "Подкасттар",
-  "url": "/kyrgyz/podcasts/p0c80v81",
 }
 `;
 

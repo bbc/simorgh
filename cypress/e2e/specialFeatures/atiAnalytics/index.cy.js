@@ -21,6 +21,8 @@ import {
   assertMessageBannerComponentClick,
   assertMessageBannerComponentView,
 } from './assertions/messageBanner';
+import { assertPortraitVideoCarouselComponentView } from './assertions/portraitVideoCarousel';
+import { assertPortraitVideoModalComponentView } from './assertions/portraitVideoModal';
 import {
   assertMostReadComponentClick,
   assertMostReadComponentView,
@@ -128,6 +130,44 @@ const canonicalTestSuites = [
     contentType: 'player-episode',
     useReverb: true,
     tests: [assertPageView],
+  },
+  {
+    path: '/dari',
+    runforEnv: ['local'],
+    service: 'dari',
+    pageIdentifier: 'dari.page',
+    siteId: 142,
+    applicationType: 'responsive',
+    contentType: 'index-home',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertScrollableNavigationComponentView,
+      assertScrollableNavigationComponentClick,
+      assertDropdownNavigationComponentView,
+      assertDropdownNavigationComponentClick,
+      assertMessageBannerComponentView,
+      assertMessageBannerComponentClick,
+    ],
+  },
+  {
+    path: '/dari',
+    runforEnv: ['test'],
+    service: 'dari',
+    pageIdentifier: 'dari.page',
+    siteId: 142,
+    applicationType: 'responsive',
+    contentType: 'index-home',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertScrollableNavigationComponentView,
+      assertScrollableNavigationComponentClick,
+      assertDropdownNavigationComponentView,
+      assertDropdownNavigationComponentClick,
+      assertMostReadComponentView,
+      assertMostReadComponentClick,
+    ],
   },
   {
     path: '/gahuza/articles/c5y51yxeg53o',
@@ -259,7 +299,7 @@ const canonicalTestSuites = [
   },
   {
     path: '/kyrgyz',
-    runforEnv: ['local', 'test', 'live'],
+    runforEnv: ['local', 'live'],
     service: 'kyrgyz',
     pageIdentifier: 'kyrgyz.page',
     siteId: 58,
@@ -418,6 +458,21 @@ const canonicalTestSuites = [
     contentType: 'article',
     useReverb: true,
     tests: [assertPageView],
+  },
+  {
+    path: '/portuguese',
+    runforEnv: ['local'],
+    service: 'portuguese',
+    pageIdentifier: 'portuguese.page',
+    siteId: 33,
+    applicationType: 'responsive',
+    contentType: 'index-home',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertPortraitVideoCarouselComponentView,
+      assertPortraitVideoModalComponentView,
+    ],
   },
   {
     path: '/portuguese/podcasts/p07r3r3t',

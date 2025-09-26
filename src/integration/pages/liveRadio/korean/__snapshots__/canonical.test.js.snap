@@ -100,7 +100,7 @@ exports[`Canonical Korean Live Radio Page Footer Anchors should match text and u
 exports[`Canonical Korean Live Radio Page Footer Anchors should match text and url 9`] = `
 {
   "text": "외부 링크에 대한 본사 정책 보기",
-  "url": "https://www.bbc.com/editorialguidelines/guidance/feeds-and-links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
 }
 `;
 

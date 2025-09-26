@@ -204,6 +204,7 @@ const OnDemandAudioPage = ({
         <RadioScheduleContainer
           initialData={radioScheduleData}
           toggleName="onDemandRadioSchedule"
+          eventTrackingData={{ componentName: 'radio-schedule' }}
         />
       )}
     </>

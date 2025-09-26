@@ -20,6 +20,7 @@ const loadableConfig = {
   japanese: loadable(() => import('./japanese')),
   korean: loadable(() => import('./korean')),
   kyrgyz: loadable(() => import('./kyrgyz')),
+  magyarul: loadable(() => import('./magyarul')),
   marathi: loadable(() => import('./marathi')),
   mundo: loadable(() => import('./mundo')),
   naidheachdan: loadable(() => import('./naidheachdan')),

@@ -33,6 +33,8 @@ const BILLBOARD = 'billboard';
 const SOCIAL_EMBED = 'social-consent-banner';
 const LIVE_MEDIA = 'live-header-media';
 const SHARE = 'asset:';
+const PORTRAIT_VIDEO_CAROUSEL = 'portrait-video-carousel';
+const PORTRAIT_VIDEO_MODAL = 'portrait-video-modal';
 
 export const COMPONENTS = {
   ARTICLE_LITE_SITE_LINK,
@@ -56,6 +58,8 @@ export const COMPONENTS = {
   SHARE,
   SOCIAL_EMBED,
   TOP_STORIES,
+  PORTRAIT_VIDEO_CAROUSEL,
+  PORTRAIT_VIDEO_MODAL,
 };
 
 export const interceptATIAnalyticsBeacons = () => {

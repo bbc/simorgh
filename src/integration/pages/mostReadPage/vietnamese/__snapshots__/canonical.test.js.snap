@@ -103,7 +103,7 @@ exports[`Canonical Most Read Page Footer Anchors should match text and url 8`] =
 exports[`Canonical Most Read Page Footer Anchors should match text and url 9`] = `
 {
   "text": "Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài",
-  "url": "https://www.bbc.com/editorialguidelines/guidance/feeds-and-links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
 }
 `;
 

@@ -8,9 +8,12 @@ import Text from '#app/components/Text';
 import styles from './index.styles';
 
 type ReadTimeProps = {
-  readTimeValue: number;
+  readTimeValue?: number;
   className?: string;
-  readTimeVariant?: string;
+  readTimeVariant?: string | null;
+  promoId?: string;
+  promoType?: string;
+  promoPosition?: number;
 };
 
 const DEFAULT_TRANSLATIONS = {
@@ -21,14 +24,13 @@ const DEFAULT_TRANSLATIONS = {
   minutes: 'minutes',
 };
 
-const ReadTime = ({
+const ProcessReadTime = ({
   readTimeValue,
   readTimeVariant,
-  className,
-}: ReadTimeProps) => {
-  const showReadTime = readTimeVariant && readTimeVariant !== 'off';
-  if (!showReadTime) return null;
-
+}: {
+  readTimeValue: number;
+  readTimeVariant: string;
+}) => {
   const { translations } = use(ServiceContext);
   const readTimePrefix =
     translations.readTime?.readTimePrefix ??
@@ -40,19 +42,43 @@ const ReadTime = ({
   const minutesSuffix =
     translations.readTime?.minutes ?? DEFAULT_TRANSLATIONS.minutes;
 
-  // EXPERIMENT: Read Time
-  const fontSize = readTimeVariant.includes('bold') ? 'pica' : 'brevier';
-  const fontVariant = readTimeVariant.includes('bold')
-    ? 'sansBold'
-    : 'sansRegular';
+  const readTimeInMilliseconds = readTimeValue * 60000;
+  const minutesLabel = readTimeValue === 1 ? singleMinuteSuffix : minutesSuffix;
+  const quickLongCopy = readTimeValue < 5 ? quickCopy : longCopy;
+  const minutesCopy = `${readTimePrefix}: ${readTimeValue} ${minutesLabel}`;
+
   const readTimeCopyType = readTimeVariant.includes('minutes')
     ? 'minutes'
     : 'quickLong';
 
-  const readTimeInMiliseconds = readTimeValue * 60000;
-  const minutesLabel = readTimeValue === 1 ? singleMinuteSuffix : minutesSuffix;
-  const quickLongCopy = readTimeValue < 5 ? quickCopy : longCopy;
-  const minutesCopy = `${readTimePrefix}: ${readTimeValue} ${minutesLabel}`;
+  const copy = readTimeCopyType === 'minutes' ? minutesCopy : quickLongCopy;
+
+  return {
+    readTimeInMilliseconds,
+    minutesLabel,
+    copy,
+  };
+};
+
+export const ReadTimeArticleExperiment = ({
+  readTimeValue,
+  readTimeVariant,
+  className,
+}: ReadTimeProps) => {
+  if (!readTimeValue) return null;
+  const showReadTime = readTimeVariant && readTimeVariant !== 'off';
+  if (!showReadTime) return null;
+
+  const { readTimeInMilliseconds, minutesLabel, copy } = ProcessReadTime({
+    readTimeValue,
+    readTimeVariant,
+  });
+
+  // EXPERIMENT: Article Read Time
+  const fontSize = readTimeVariant.includes('bold') ? 'pica' : 'brevier';
+  const fontVariant = readTimeVariant.includes('bold')
+    ? 'sansBold'
+    : 'sansRegular';
 
   const eventTrackingData: EventTrackingData = {
     componentName: 'read-time-on-article',
@@ -61,7 +87,7 @@ const ReadTime = ({
     experimentVariant: readTimeVariant,
     itemTracker: {
       label: `Read time: ${readTimeValue} ${minutesLabel}`,
-      duration: readTimeInMiliseconds,
+      duration: readTimeInMilliseconds,
       type: `read-time`,
     },
   };
@@ -82,10 +108,80 @@ const ReadTime = ({
       data-testid="read-time"
     >
       <Text size={fontSize} fontVariant={fontVariant} css={styles.readTimeText}>
-        {readTimeCopyType === 'minutes' ? minutesCopy : quickLongCopy}
+        {copy}
       </Text>
     </div>
   );
 };
 
-export default ReadTime;
+// EXPERIMENT - Placeholder for control variants
+const HomepagePlaceholder = (props: React.PropsWithChildren) => (
+  <div
+    {...props}
+    css={styles.readTimeHomepagePlaceholderControl}
+    className="placeholder"
+  />
+);
+
+export const ReadTime = ({
+  readTimeValue,
+  readTimeVariant,
+  promoId,
+  promoType,
+  promoPosition,
+  className,
+}: ReadTimeProps) => {
+  const { service } = use(ServiceContext);
+
+  const validRender = [
+    readTimeValue,
+    readTimeVariant,
+    readTimeVariant !== 'off',
+  ].every(Boolean);
+
+  // EXPERIMENT: Homepage Read Time
+  const experimentEnabledServices = ['turkce', 'mundo'];
+
+  if (readTimeVariant === null && experimentEnabledServices.includes(service))
+    return <HomepagePlaceholder />;
+
+  if (!validRender) return null;
+
+  const { readTimeInMilliseconds, copy } = ProcessReadTime({
+    readTimeValue: readTimeValue as number,
+    readTimeVariant: readTimeVariant as string,
+  });
+
+  const optimizelyTrackingData: EventTrackingData = {
+    componentName: 'read-time',
+    sendOptimizelyEvents: true,
+    experimentName: 'newswb_ws_homepage_read_time',
+    experimentVariant: readTimeVariant,
+  };
+
+  const eventTrackingData: EventTrackingData = {
+    ...optimizelyTrackingData,
+    itemTracker: {
+      type: promoType,
+      position: promoPosition,
+      label: `Read time: ${readTimeValue} ${readTimeValue === 1 ? 'minute' : 'minutes'}`,
+      duration: readTimeInMilliseconds,
+      resourceId: promoId,
+    },
+  };
+
+  const isControlVariant = readTimeVariant === 'control';
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const viewRef = useViewTracker(eventTrackingData);
+
+  if (isControlVariant) return <HomepagePlaceholder {...viewRef} />;
+
+  return (
+    <div className={className} data-testid="read-time" {...viewRef}>
+      <Text css={styles.readTimeText} size="brevier">
+        {copy}
+      </Text>
+    </div>
+  );
+};

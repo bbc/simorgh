@@ -7,10 +7,8 @@ export default ({ service, pageType, path }) => {
           cy.get(`amp-iframe`).should('be.visible');
 
           cy.get('amp-iframe').then($ampIframe => {
-            cy.testResponseCodeAndTypeRetry({
-              path: $ampIframe.attr('src'),
-              responseCode: 200,
-              type: 'text/html',
+            cy.testResponseCodeAndRetry({
+              url: $ampIframe.attr('src'),
               allowFallback: true,
             });
           });

@@ -4,6 +4,7 @@ import { FetchMock } from 'jest-fetch-mock';
 import * as fetchBFF from '#app/routes/utils/fetchDataFromBFF';
 import gahuzaOnDemandAudio from '#data/gahuza/bbc_gahuza_radio/p02pcb5c.json';
 import isTest from '#app/lib/utilities/isTest';
+import defaultToggles from '#app/lib/config/toggles';
 import gahuzaExternalLinks from '../podcastExternalLinks/gahuza';
 import getInitialData from '.';
 
@@ -16,6 +17,8 @@ jest.mock('#app/lib/utilities/isTest', () =>
 );
 
 const fetchBFFSpy = jest.spyOn(fetchBFF, 'default');
+
+const toggles = defaultToggles.local;
 
 describe('Get initial data for on demand radio', () => {
   afterEach(() => {
@@ -34,9 +37,7 @@ describe('Get initial data for on demand radio', () => {
       path: 'mock-on-demand-radio-path',
       pageType: AUDIO_PAGE,
       service: 'gahuza',
-      toggles: {
-        recentAudioEpisodes: { enabled: false, value: 4 },
-      },
+      toggles,
     });
 
     expect(pageData?.headline).toEqual("Imvo  n'imvano");
@@ -63,9 +64,7 @@ describe('Get initial data for on demand radio', () => {
       path: 'mock-podcast-path',
       pageType: AUDIO_PAGE,
       service: 'gahuza',
-      toggles: {
-        recentPodcastEpisodes: { enabled: false, value: 8 },
-      },
+      toggles,
     });
 
     expect(pageData?.headline).toEqual('Baza Muganga');
@@ -104,15 +103,13 @@ describe('Get initial data for on demand radio', () => {
       path: 'mock-podcast-path',
       pageType: AUDIO_PAGE,
       service: 'gahuza',
-      toggles: {
-        recentPodcastEpisodes: { enabled: false, value: 8 },
-      },
+      toggles,
     });
 
     expect(pageData?.summary).toEqual('Baza Muganga 15/11/2024');
   });
 
-  it('should return essential data for a page to render when the episode toggle is null', async () => {
+  it('should return essential data for a page to render when the episode toggle is disabled', async () => {
     fetchBFFSpy.mockResolvedValueOnce({
       json: gahuzaOnDemandAudio,
       status: 200,
@@ -121,9 +118,10 @@ describe('Get initial data for on demand radio', () => {
     const { pageData } = await getInitialData({
       path: 'mock-on-demand-radio-path',
       pageType: AUDIO_PAGE,
+      service: 'gahuza',
       toggles: {
-        // @ts-expect-error partial data required for testing purposes
-        recentAudioEpisodes: null,
+        ...toggles,
+        recentAudioEpisodes: { enabled: false },
       },
     });
 
@@ -154,9 +152,7 @@ describe('Get initial data for on demand radio', () => {
       path: 'mock-on-demand-radio-path',
       pageType: AUDIO_PAGE,
       service: 'gahuza',
-      toggles: {
-        recentAudioEpisodes: { enabled: false, value: 4 },
-      },
+      toggles,
     });
 
     expect(pageData?.metadata.atiAnalytics.pageIdentifier).toEqual(
@@ -171,9 +167,7 @@ describe('Get initial data for on demand radio', () => {
       path: 'mock-podcast-path',
       pageType: AUDIO_PAGE,
       service: 'gahuza',
-      toggles: {
-        recentPodcastEpisodes: { enabled: false, value: 8 },
-      },
+      toggles,
     });
 
     expect(pageData?.metadata.atiAnalytics.pageIdentifier).toEqual(
@@ -192,6 +186,7 @@ describe('Get initial data for on demand radio', () => {
       pageType: AUDIO_PAGE,
       service: 'gahuza',
       toggles: {
+        ...toggles,
         recentAudioEpisodes: { enabled: true, value: 4 },
       },
     });
@@ -207,6 +202,7 @@ describe('Get initial data for on demand radio', () => {
       pageType: AUDIO_PAGE,
       service: 'gahuza',
       toggles: {
+        ...toggles,
         recentPodcastEpisodes: { enabled: true, value: 4 },
       },
     });
