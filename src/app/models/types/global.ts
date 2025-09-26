@@ -84,6 +84,7 @@ export type ServicesWithNoVariants = {
     | 'japanese'
     | 'korean'
     | 'kyrgyz'
+    | 'magyarul'
     | 'marathi'
     | 'mundo'
     | 'naidheachdan'

@@ -1,10 +1,12 @@
 import {
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
+  Curation,
 } from '#app/models/types/curationData';
 import getComponentName, { COMPONENT_NAMES } from '.';
 import afriqueHomePage from '../../../../../data/afrique/homePage/index.json';
 import marathiTopic from '../../../../../data/marathi/topics/c1wmk63rjkvt.json';
+import dariHomePage from '../../../../../data/dari/homePage/index.json';
 
 const { MINIMUM, LOW, NORMAL, HIGH, MAXIMUM } = VISUAL_PROMINENCE;
 const { NONE, BANNER, COLLECTION, RANKED } = VISUAL_STYLE;
@@ -17,6 +19,7 @@ const {
   RADIO_SCHEDULE,
   EMBED,
   BILLBOARD,
+  MEDIA_COLLECTION,
 } = COMPONENT_NAMES;
 
 describe('getComponentName', () => {
@@ -45,13 +48,18 @@ describe('getComponentName', () => {
       ).toBe(expected);
     },
   );
-  it('should return radio schedule when a radio schedule is present', () => {
+  it('should return RADIO_SCHEDULE when a radio schedule is present', () => {
     const { radioSchedule } = afriqueHomePage.data.curations[4];
     expect(getComponentName({ radioSchedule })).toBe(`${RADIO_SCHEDULE}`);
   });
 
-  it('should return embed when an embed is present', () => {
+  it('should return EMBED when an embed is present', () => {
     const { embed } = marathiTopic.data.curations[0];
     expect(getComponentName({ embed })).toBe(`${EMBED}`);
+  });
+
+  it('should return MEDIA_COLLECTION when a media collection is present', () => {
+    const { mediaCollection } = dariHomePage.data.curations[5] as Curation;
+    expect(getComponentName({ mediaCollection })).toBe(`${MEDIA_COLLECTION}`);
   });
 });

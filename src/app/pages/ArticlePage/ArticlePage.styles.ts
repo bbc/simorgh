@@ -176,16 +176,9 @@ export default {
     }),
     commonMarginSpacing,
   ],
-  // EXPERIMENT: Read Time
+  // EXPERIMENT: Article Read Time
   readTimePlaceholderBelowTimestamp: () =>
     css({
       marginBottom: `${pixelsToRem(18.5)}rem`,
-    }),
-  readTimePlaceholderBelowHeadline: ({ mq }: Theme) =>
-    css({
-      marginBottom: `${pixelsToRem(6.5)}rem`,
-      [mq.GROUP_2_MAX_WIDTH]: {
-        marginBottom: `${pixelsToRem(26.5)}rem`,
-      },
     }),
 };

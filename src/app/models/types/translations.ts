@@ -54,6 +54,10 @@ export interface Translations {
     minute: string;
     minutes: string;
   }>;
+  // EXPERIMENT: Homepage Read Time
+  timstampPrefix?: {
+    publishedAgo?: string;
+  };
   byline?: {
     author?: string;
     articleInformation?: string;

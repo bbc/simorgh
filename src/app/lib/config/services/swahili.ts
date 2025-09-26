@@ -373,6 +373,10 @@ export const service: DefaultServiceConfig = {
         url: '/swahili',
       },
       {
+        title: 'Uchaguzi Tanzania',
+        url: '/swahili/topics/c5y9ng5gqert',
+      },
+      {
         title: 'Michezo',
         url: '/swahili/topics/ckdxndddjkxt',
       },
