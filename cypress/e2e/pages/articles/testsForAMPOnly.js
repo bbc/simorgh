@@ -43,10 +43,8 @@ export default ({ service, pageType, variant = 'default' }) => {
             .then(src => {
               cy.log(`src is ${src}`);
 
-              cy.testResponseCodeAndTypeRetry({
-                path: src,
-                responseCode: 200,
-                type: 'text/html',
+              cy.testResponseCodeAndRetry({
+                url: src,
                 allowFallback: true,
               });
             });

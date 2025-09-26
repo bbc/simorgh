@@ -290,7 +290,7 @@ exports[`AMP Articles SEO Linked data should match text 2`] = `
 
 exports[`AMP Articles SEO OG description 1`] = `"Wannan shine taken SEO na wannan labarin gwaji"`;
 
-exports[`AMP Articles SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png"`;
+exports[`AMP Articles SEO OG image 1`] = `"http://localhost:7081/hausa/og/c2nr6xqmnewo"`;
 
 exports[`AMP Articles SEO OG image alt 1`] = `"BBC News Hausa"`;
 

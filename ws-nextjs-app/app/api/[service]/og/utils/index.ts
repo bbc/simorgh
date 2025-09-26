@@ -1,12 +1,43 @@
+import { ROUTING_INFORMATION } from '#app/lib/logger.const';
+import { INTERNAL_SERVER_ERROR, NOT_FOUND } from '#app/lib/statusCodes.const';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
 import getBrandedImage from '#app/lib/utilities/getBrandedImage';
 import { Services } from '#app/models/types/global';
 import { Article } from '#app/models/types/optimo';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
+import nodeLogger from '#lib/logger.node';
 
-const responseNotFound = () => new Response('Not found', { status: 404 });
+const logger = nodeLogger(__filename);
 
-const responseServerError = () => new Response('Server error', { status: 500 });
+export const pageTypeToLog = 'og-image';
+
+export const responseNotFound = ({
+  pathname,
+}: {
+  pathname: URL['pathname'];
+}) => {
+  logger.error(ROUTING_INFORMATION, {
+    url: pathname,
+    status: NOT_FOUND,
+    pageType: pageTypeToLog,
+  });
+
+  return new Response('Not found', { status: NOT_FOUND });
+};
+
+export const responseServerError = ({
+  pathname,
+}: {
+  pathname: URL['pathname'];
+}) => {
+  logger.error(ROUTING_INFORMATION, {
+    url: pathname,
+    status: INTERNAL_SERVER_ERROR,
+    pageType: pageTypeToLog,
+  });
+
+  return new Response('Server error', { status: INTERNAL_SERVER_ERROR });
+};
 
 const getDefaultImage = (service: Services) =>
   `https://news.files.bbci.co.uk/ws/img/logos/og/${service}.png`;
@@ -18,7 +49,7 @@ type ExtractReturnProps = {
   isLive?: boolean;
 };
 
-const extractArticleData = ({
+export const extractArticleData = ({
   pageData,
   service,
 }: {
@@ -69,7 +100,7 @@ const extractArticleData = ({
   };
 };
 
-const extractLiveData = ({
+export const extractLiveData = ({
   pageData,
   service,
 }: {
@@ -98,11 +129,4 @@ const extractLiveData = ({
     backgroundImage: brandedImage,
     isLive: pageData?.isLive || false,
   };
-};
-
-export {
-  responseNotFound,
-  responseServerError,
-  extractArticleData,
-  extractLiveData,
 };

@@ -14,8 +14,8 @@ import { CacheProvider } from '@emotion/react';
 import createEmotionServer from '@emotion/server/create-instance';
 import createCache from '@emotion/cache';
 
-import isAppPath from '#app/routes/utils/isAppPath';
-import isLitePath from '#app/routes/utils/isLitePath';
+import getPathExtension from '#app/utilities/getPathExtension';
+
 import {
   EnvConfig,
   getProcessEnvAppVariables,
@@ -89,8 +89,8 @@ type DocProps = {
 export default class AppDocument extends Document<DocProps> {
   static async getInitialProps(ctx: DocumentContext) {
     const url = ctx.asPath || '';
-    const isApp = isAppPath(url);
-    const isLite = isLitePath(url);
+
+    const { isApp, isLite } = getPathExtension(url);
 
     const cache = createCache({ key: 'css' });
     const { extractCritical } = createEmotionServer(cache);

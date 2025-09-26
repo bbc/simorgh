@@ -1,9 +1,11 @@
+// eslint-disable-next-line import/no-relative-packages
 import getOptimizelyKey from '../../../../cypress/support/helpers/getOptimizelyKey';
 
 export default ({
   pageType,
   testSuites,
   beforeAll = [],
+  failOnStatusCode = true,
   testIsolation = false,
 }) => {
   const serviceToRun = Cypress.env('ONLY_SERVICE');
@@ -21,27 +23,39 @@ export default ({
     const cypressEnv = Cypress.env('APP_ENV');
 
     if (runforEnv.includes(cypressEnv)) {
-      describe(`${Cypress.config().baseUrl}${path}`, { testIsolation }, () => {
-        before(() => {
-          beforeAll.forEach(runBeforeAll => runBeforeAll());
-          cy.visit(path);
-        });
+      describe(
+        `${Cypress.config().baseUrl}${path}`,
+        { testIsolation, retries: 3 },
+        () => {
+          before(() => {
+            beforeAll.forEach(runBeforeAll => runBeforeAll());
 
-        beforeEach(() => {
-          cy.intercept(
-            {
-              url: `https://cdn.optimizely.com/datafiles/${getOptimizelyKey()}.json`,
-            },
-            request => {
-              request.reply({ statusCode: 404 });
-            },
-          ).as('disable-optimizely');
-        });
+            // Ensure that the page is returning a 200 response code
+            if (failOnStatusCode) {
+              cy.testResponseCodeAndRetry({
+                url: path,
+              });
+            }
 
-        tests.forEach(test => {
-          test({ path, pageType, ...params });
-        });
-      });
+            cy.visit(path, { failOnStatusCode });
+          });
+
+          beforeEach(() => {
+            cy.intercept(
+              {
+                url: `https://cdn.optimizely.com/datafiles/${getOptimizelyKey()}.json`,
+              },
+              request => {
+                request.reply({ statusCode: 404 });
+              },
+            ).as('disable-optimizely');
+          });
+
+          tests.forEach(test => {
+            test({ path, pageType, ...params });
+          });
+        },
+      );
     }
   });
 };

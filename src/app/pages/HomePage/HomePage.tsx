@@ -111,10 +111,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                   link,
                   position,
                   visualStyle,
-                  mostRead,
-                  radioSchedule,
-                  embed,
-                  portraitVideo,
+                  ...curationProps
                 },
                 index,
               ) => {
@@ -138,17 +135,14 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       position={position}
                       link={link}
                       curationLength={curations?.length}
-                      mostRead={mostRead}
-                      radioSchedule={radioSchedule}
                       nthCurationByStyleAndProminence={
                         nthCurationByStyleAndProminence
                       }
-                      embed={embed}
-                      portraitVideo={portraitVideo}
                       renderVisuallyHiddenH2Title={position === 0}
                       curationId={curationId}
-                      {...(readTimeVariant && { readTimeVariant })}
                       mostReadItemId={mostReadItemId}
+                      readTimeVariant={readTimeVariant}
+                      {...curationProps}
                     />
                     {index === indexOfFirstNonBanner && <MPU />}
                   </React.Fragment>
