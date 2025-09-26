@@ -45,6 +45,14 @@ jobs:
           start: yarn start
           command: yarn cypress:application
 
+      - name: Install Cypress dependency (Next.js app)
+        working-directory: ws-nextjs-app
+        run: yarn add cypress --dev
+
+      - name: Install Cypress binary (Next.js app)
+        working-directory: ws-nextjs-app
+        run: yarn cypress:install
+
       - name: Run Simorgh NextJS E2Es
         uses: cypress-io/github-action@v6
         with:
