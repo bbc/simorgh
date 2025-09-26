@@ -31,9 +31,13 @@ jobs:
       - name: Add bbc.com domain
         run: sudo echo "127.0.0.1 localhost.bbc.com" | sudo tee -a /etc/hosts
 
-      - name: Install Node Modules
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: ./scripts/installNodeModules.sh
+      - name: Restore Cypress binary cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/Cypress
+          key: cypress-${{ runner.os }}-${{ hashFiles('yarn.lock', 'ws-nextjs-app/yarn.lock') }}
+          restore-keys: |
+            cypress-${{ runner.os }}-
 
       - name: Run Simorgh E2Es (Pages)
         uses: cypress-io/github-action@v6
