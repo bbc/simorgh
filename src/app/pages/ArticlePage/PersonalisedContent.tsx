@@ -11,11 +11,9 @@ import useViewTracker from '#app/hooks/useViewTracker';
 const PersonalisedContent = ({
   pageData,
   personalisedTopicCurationExperimentVariant,
-  sendOptimizelyEvents,
 }: {
   pageData: Article;
   personalisedTopicCurationExperimentVariant: string;
-  sendOptimizelyEvents: boolean;
 }) => {
   type PersonalisedContentType = {
     title?: string;
@@ -33,12 +31,16 @@ const PersonalisedContent = ({
   //   palette: { GREY_2 },
   // } = useTheme();
   console.log(
+    'xxx',
     typeof pageData.secondaryColumn?.PersonalisedContent,
     pageData.secondaryColumn?.PersonalisedContent,
   );
   const personalisedContentData = pageData.secondaryColumn
     ?.PersonalisedContent as PersonalisedContentType | undefined;
-
+  console.log(
+    'personalised content data before null return',
+    personalisedContentData,
+  );
   const {
     title,
     articles = [],
@@ -47,10 +49,6 @@ const PersonalisedContent = ({
     isFirstCuration = false,
     topicId = '',
   } = personalisedContentData || {};
-
-  if (!personalisedContentData) {
-    return null;
-  }
 
   const eventTrackingData: EventTrackingData = {
     componentName: 'personalised-topic-curation',
@@ -66,8 +64,13 @@ const PersonalisedContent = ({
     },
   };
   const viewTracker = useViewTracker(eventTrackingData);
+
+  if (!personalisedContentData) {
+    return null;
+  }
+
   return (
-    <section aria-labelledby={id} role="region">
+    <section aria-labelledby={id} role="region" {...viewTracker}>
       {title && (
         <Subheading id={id} link={link}>
           {title}

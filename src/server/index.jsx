@@ -286,7 +286,12 @@ server.get(
           getAgent,
         });
         const articles = countrySpecificdata.json.data.curations[0].summaries;
-        if (Array.isArray(articles) && articles.length > 0) {
+        if (
+          Array.isArray(articles) &&
+          articles.length > 0 &&
+          data.pageData?.metadata?.type === 'article'
+        ) {
+          console.log('in server', data.pageData);
           data.pageData.secondaryColumn.PersonalisedContent = {
             title: countrySpecificdata.json.data.title,
             description: countrySpecificdata.json.data.description,
