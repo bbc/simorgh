@@ -32,7 +32,7 @@ jobs:
         run: sudo echo "127.0.0.1 localhost.bbc.com" | sudo tee -a /etc/hosts
 
       - name: Install dependencies
-        run: yarn install --immutable --check-cache
+        run: ./scripts/installCypress.sh
 
       - name: Install Cypress binary
         run: yarn cypress:install
