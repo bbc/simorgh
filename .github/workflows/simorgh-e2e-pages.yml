@@ -36,11 +36,12 @@ jobs:
         with:
           path: ~/.cache/Cypress
           key: cypress-${{ runner.os }}-${{ hashFiles('yarn.lock', 'ws-nextjs-app/yarn.lock') }}
-          restore-keys: |
-            cypress-${{ runner.os }}-
+
+      - name: Install Cypress dependency
+        run: yarn add cypress --dev
 
       - name: Install Cypress
-        run: yarn add cypress --dev
+        run: yarn cypress:install
 
       - name: Run Simorgh E2Es (Pages)
         uses: cypress-io/github-action@v6
