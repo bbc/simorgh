@@ -39,6 +39,9 @@ jobs:
           restore-keys: |
             cypress-${{ runner.os }}-
 
+      - name: Install Cypress
+        run: yarn add cypress --dev
+
       - name: Run Simorgh E2Es (Pages)
         uses: cypress-io/github-action@v6
         with:
