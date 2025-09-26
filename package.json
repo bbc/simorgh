@@ -35,6 +35,7 @@
     "cypress:pages": "cypress run --browser chrome --spec ./cypress/e2e/pages",
     "cypress:special-features": "cypress run --browser chrome --spec ./cypress/e2e/specialFeatures",
     "cypress": "run-p --print-name --aggregate-output --continue-on-error cypress:application cypress:pages cypress:special-features",
+    "cypress:install": "cypress install",
     "cypress:onefile": "CYPRESS_APP_ENV=live CYPRESS_SMOKE=false cypress run --spec './cypress/e2e/pages/storyPage/*'",
     "cypress:oneservice": "CYPRESS_APP_ENV=live CYPRESS_SMOKE=false CYPRESS_ONLY_SERVICE=mundo cypress run",
     "cypress:oneserviceandonefile": "CYPRESS_APP_ENV=live CYPRESS_SMOKE=false CYPRESS_ONLY_SERVICE=mundo cypress run  --spec './cypress/e2e/pages/storyPage/*'",

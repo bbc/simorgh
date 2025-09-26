@@ -19,7 +19,8 @@ export const service: DefaultServiceConfig = {
     chartbeatDomain: 'dari.bbc.co.uk',
     brandName: 'BBC News فارسی',
     serviceLocalizedName: 'فارسی',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/dari.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/dari/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News فارسی',
     dir: 'rtl',
     externalLinkText: '، خارجی',
