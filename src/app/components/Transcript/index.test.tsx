@@ -61,6 +61,7 @@ describe('Transcript Component', () => {
 
       expect(viewTrackerSpy).toHaveBeenCalledWith({
         componentName: 'Transcript',
+        viewThreshold: 0.2,
       });
     });
   });

@@ -34,7 +34,11 @@ const Transcript = ({
   transcript: TranscriptBlock;
   title?: string;
 }) => {
-  const viewRef = useViewTracker({ componentName: 'Transcript' });
+  const eventTrackingData = {
+    componentName: 'Transcript',
+    viewThreshold: 0.2,
+  };
+  const viewTracker = useViewTracker(eventTrackingData);
   const { translations } = use(ServiceContext);
   const transcriptItems = transcript?.model?.blocks;
   if (!transcriptItems) {
@@ -61,7 +65,7 @@ const Transcript = ({
       <Text size="brevier" css={styles.disclaimer} as="small">
         {disclaimer}
       </Text>
-      <ul css={styles.ul} role="list" ref={viewRef}>
+      <ul css={styles.ul} role="list" {...viewTracker}>
         {transcriptItems.map(item => (
           <TranscriptListItem
             key={item.id}
