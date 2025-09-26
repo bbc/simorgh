@@ -3,7 +3,6 @@
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { jsx } from '@emotion/react';
 import useViewTracker from '#app/hooks/useViewTracker';
-import styles from './index.styles';
 import { use } from 'react';
 import Text from '../Text';
 import VisuallyHiddenText from '../VisuallyHiddenText';
