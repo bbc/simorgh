@@ -10,14 +10,12 @@ import { Summary } from '#app/models/types/curationData';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import isMediaType from '#app/lib/utilities/isMedia';
 import { ReadTime } from '#app/components/ReadTime';
+import { extractId } from '#app/pages/HomePage/HomePage';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
-
 import LiveLabel from '../../LiveLabel';
-
 import styles from './index.styles';
-import { extractId } from '#app/pages/HomePage/HomePage';
 
 const CurationPromo = ({
   id,
