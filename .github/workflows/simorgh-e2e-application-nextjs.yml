@@ -50,7 +50,7 @@ jobs:
       - name: Install Cypress dependency (Next.js app)
         run: |
           chmod +x ./scripts/installCypress.sh
-          ./scripts/installCypress.sh /ws-nextjs-app
+          ./scripts/installCypress.sh ws-nextjs-app
 
       - name: Install Cypress binary (Next.js app)
         working-directory: ws-nextjs-app
