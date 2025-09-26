@@ -29,10 +29,10 @@ import {
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { suppressPropWarnings } from '#app/legacy/psammead/psammead-test-helpers/src';
 import { Services } from '#app/models/types/global';
-
 import { Article } from '#app/models/types/optimo';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import * as viewTracking from '#app/hooks/useViewTracker';
+import PersonalisedContent from './PersonalisedContent';
 import {
   render,
   screen,
@@ -975,5 +975,49 @@ describe('Article Page', () => {
 
       expect(queryByTestId('read-time')).not.toBeInTheDocument();
     });
+  });
+
+  describe('Personalised topic curation', () => {
+    it('renders nothing if personalisedContentData is undefined', () => {
+      const pageData = {
+        ...articleDataNews,
+        secondaryColumn: {
+          topStories: [],
+          features: [],
+        },
+      };
+      const { container } = render(
+        <PersonalisedContent
+          pageData={pageData}
+          personalisedTopicCurationExperimentVariant="variantA"
+        />,
+      );
+      expect(container).toBeEmptyDOMElement();
+    });
+    // it('renders section and subheading when personalisedContentData is present', () => {
+    //   const personalisedContent = {
+    //     title: 'Recommended for you',
+    //     articles: [{ headline: 'Article 1' }, { headline: 'Article 2' }],
+    //     id: 'personalised-content',
+    //   };
+    //   const pageData = {
+    //     ...articleDataNews,
+    //     secondaryColumn: {
+    //       topStories: [],
+    //       features: [],
+    //       PersonalisedContent: personalisedContent, // <-- Pass as object
+    //     },
+    //   };
+    //   render(
+    //     <PersonalisedContent
+    //       pageData={pageData}
+    //       personalisedTopicCurationExperimentVariant="variantA"
+    //     />,
+    //   );
+    //   expect(screen.getByRole('region')).toBeInTheDocument();
+    //   expect(screen.getByText('Recommended for you')).toBeInTheDocument();
+    //   expect(screen.getByText('Article 1')).toBeInTheDocument();
+    //   expect(screen.getByText('Article 2')).toBeInTheDocument();
+    // });
   });
 });

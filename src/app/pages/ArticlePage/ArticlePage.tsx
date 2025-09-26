@@ -277,11 +277,14 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   // EXPERIMENT: Personalised Content Rail
   const personalisedContentExperimentName = 'newswb_ws_personalised_content';
-  const personalisedContentExperimentVariant = useOptimizelyVariation({
+  let personalisedContentExperimentVariant = useOptimizelyVariation({
     experimentName: personalisedContentExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
+
+  // temp overrides for testing
   const personalisedContentOverride = true;
+  personalisedContentExperimentVariant = 'personalised';
 
   const showPersonalisedContent = personalisedContentOverride
     ? true
@@ -290,7 +293,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           !isLite &&
           !isApp &&
           personalisedContentExperimentVariant &&
-          ['personalised-content-a', 'personalised-content-b'].includes(
+          ['personalised', 'default'].includes(
             personalisedContentExperimentVariant,
           ),
       );
@@ -503,7 +506,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                 personalisedTopicCurationExperimentVariant={
                   personalisedContentExperimentVariant ?? ''
                 }
-                sendOptimizelyEvents
               />
             )}
             {/* EXPERIMENT: Read Time & Continue Reading */}

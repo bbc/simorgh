@@ -35,12 +35,30 @@ const PersonalisedContent = ({
     typeof pageData.secondaryColumn?.PersonalisedContent,
     pageData.secondaryColumn?.PersonalisedContent,
   );
-  const personalisedContentData = pageData.secondaryColumn
-    ?.PersonalisedContent as PersonalisedContentType | undefined;
-  console.log(
-    'personalised content data before null return',
-    personalisedContentData,
-  );
+
+  const personalisedContentArray = pageData.secondaryColumn
+    ?.PersonalisedContent as PersonalisedContentType[] | undefined;
+
+  const getPersonalisedContentData = () => {
+    if (
+      !Array.isArray(personalisedContentArray) ||
+      personalisedContentArray.length === 0
+    ) {
+      return undefined;
+    }
+    if (personalisedTopicCurationExperimentVariant === 'personalised') {
+      // Country-specific data is always first
+      return personalisedContentArray[0];
+    }
+    if (personalisedTopicCurationExperimentVariant === 'default') {
+      // Default data is always last (or only)
+      return personalisedContentArray[personalisedContentArray.length - 1];
+    }
+    return undefined;
+  };
+
+  const personalisedContentData = getPersonalisedContentData();
+  console.log('yyy', personalisedContentData);
   const {
     title,
     articles = [],

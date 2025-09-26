@@ -273,31 +273,73 @@ server.get(
           ec: 'cg72618r047t',
         };
         const availableCountries = Object.keys(countrySpecificTopics);
-        const topicIdToFetch =
-          data.country && availableCountries.includes(data.country)
-            ? countrySpecificTopics[data.country]
-            : 'c7zp57yyz25t';
-        const countrySpecificdata = await fetchDataFromBFF({
-          pathname: `/${service}/topics/${topicIdToFetch}?renderer_env=live`,
-          pageType: 'topic',
-          service,
-          variant,
-          isAmp,
-          getAgent,
-        });
-        const articles = countrySpecificdata.json.data.curations[0].summaries;
+        const hasCountryMatch =
+          data.country && availableCountries.includes(data.country);
+        const topicIdToFetch = hasCountryMatch
+          ? countrySpecificTopics[data.country]
+          : 'c7zp57yyz25t';
+
+        // Always fetch the default topic
+        const defaultTopicId = 'c7zp57yyz25t';
+        const [countrySpecificData, defaultTopicData] = await Promise.all([
+          fetchDataFromBFF({
+            pathname: `/${service}/topics/${topicIdToFetch}?renderer_env=live`,
+            pageType: 'topic',
+            service,
+            variant,
+            isAmp,
+            getAgent,
+          }),
+          hasCountryMatch
+            ? fetchDataFromBFF({
+                pathname: `/${service}/topics/${defaultTopicId}?renderer_env=live`,
+                pageType: 'topic',
+                service,
+                variant,
+                isAmp,
+                getAgent,
+              })
+            : null,
+        ]);
+
+        const countryArticles =
+          countrySpecificData?.json?.data?.curations?.[0]?.summaries || [];
+        const defaultArticles =
+          defaultTopicData?.json?.data?.curations?.[0]?.summaries ||
+          countryArticles; // fallback for no match
+
         if (
-          Array.isArray(articles) &&
-          articles.length > 0 &&
+          Array.isArray(countryArticles) &&
+          countryArticles.length > 0 &&
           data.pageData?.metadata?.type === 'article'
         ) {
-          console.log('in server', data.pageData);
-          data.pageData.secondaryColumn.PersonalisedContent = {
-            title: countrySpecificdata.json.data.title,
-            description: countrySpecificdata.json.data.description,
-            articles: articles.slice(0, 4),
-            topicId: topicIdToFetch,
-          };
+          if (hasCountryMatch && defaultTopicData) {
+            // Two topics: country-specific and default
+            data.pageData.secondaryColumn.PersonalisedContent = [
+              {
+                title: countrySpecificData.json.data.title,
+                description: countrySpecificData.json.data.description,
+                articles: countryArticles.slice(0, 4),
+                topicId: topicIdToFetch,
+              },
+              {
+                title: defaultTopicData.json.data.title,
+                description: defaultTopicData.json.data.description,
+                articles: defaultArticles.slice(0, 4),
+                topicId: defaultTopicId,
+              },
+            ];
+          } else if (defaultTopicData) {
+            // Only default topic, use only default data
+            data.pageData.secondaryColumn.PersonalisedContent = [
+              {
+                title: defaultTopicData.json.data.title,
+                description: defaultTopicData.json.data.description,
+                articles: defaultArticles.slice(0, 4),
+                topicId: defaultTopicId,
+              },
+            ];
+          }
         }
       }
 
