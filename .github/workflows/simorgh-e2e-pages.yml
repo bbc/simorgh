@@ -34,7 +34,7 @@ jobs:
       - name: Install Cypress dependency
         run: yarn add cypress --dev
 
-      - name: Install Cypress
+      - name: Install Cypress binary
         run: yarn cypress:install
 
       - name: Run Simorgh E2Es (Pages)
