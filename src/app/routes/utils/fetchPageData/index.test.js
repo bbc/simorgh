@@ -44,7 +44,7 @@ describe('fetchPageData', () => {
 
     it('should always log data url and path', async () => {
       await fetchPageData({ path: requestedPathname });
-      expect(loggerMock.debug).toBeCalledWith(DATA_REQUEST_RECEIVED, {
+      expect(loggerMock.debug).toHaveBeenCalledWith(DATA_REQUEST_RECEIVED, {
         data: expectedUrl,
         path: requestedPathname,
       });
@@ -53,7 +53,7 @@ describe('fetchPageData', () => {
     it('should log additional arguments if passed', async () => {
       await fetchPageData({ path: requestedPathname, pageType, requestOrigin });
 
-      expect(loggerMock.debug).toBeCalledWith(DATA_REQUEST_RECEIVED, {
+      expect(loggerMock.debug).toHaveBeenCalledWith(DATA_REQUEST_RECEIVED, {
         data: expectedUrl,
         path: requestedPathname,
         pageType,
@@ -176,7 +176,7 @@ describe('fetchPageData', () => {
 
         return fetchPageData({ path: requestedPathname, pageType }).catch(
           ({ message, status }) => {
-            expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {
+            expect(loggerMock.error).toHaveBeenCalledWith(DATA_FETCH_ERROR, {
               error:
                 'invalid json response body at  reason: Unexpected end of JSON input',
               status: 500,
@@ -201,7 +201,7 @@ describe('fetchPageData', () => {
 
         return fetchPageData({ path: requestedPathname, pageType }).catch(
           ({ message, status }) => {
-            expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {
+            expect(loggerMock.error).toHaveBeenCalledWith(DATA_FETCH_ERROR, {
               error:
                 'invalid json response body at  reason: Unexpected end of JSON input',
               status: 502,
@@ -250,7 +250,7 @@ describe('fetchPageData', () => {
 
         return fetchPageData({ path: requestedPathname, pageType }).catch(
           ({ message, status }) => {
-            expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {
+            expect(loggerMock.error).toHaveBeenCalledWith(DATA_FETCH_ERROR, {
               error:
                 'Unexpected upstream response (HTTP status code 418) when requesting http://localhost/path/to/asset.json',
               status: 500,
@@ -272,7 +272,7 @@ describe('fetchPageData', () => {
 
         return fetchPageData({ path: requestedPathname, pageType }).catch(
           ({ message, status }) => {
-            expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {
+            expect(loggerMock.error).toHaveBeenCalledWith(DATA_FETCH_ERROR, {
               error: `Unexpected upstream response (HTTP status code 500) when requesting ${expectedUrl}`,
               status: 500,
               data: expectedUrl,
@@ -300,7 +300,7 @@ describe('fetchPageData', () => {
 
       return fetchPageData({ path: requestedPathname, pageType }).catch(
         ({ message, status }) => {
-          expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {
+          expect(loggerMock.error).toHaveBeenCalledWith(DATA_FETCH_ERROR, {
             error: `Unexpected upstream response (HTTP status code 418) when requesting ${expectedUrl}`,
             status: 502,
             data: expectedUrl,
@@ -320,7 +320,7 @@ describe('fetchPageData', () => {
       fetch.mockResponse('Internal server error', { status: 500 });
       return fetchPageData({ path: requestedPathname, pageType }).catch(
         ({ message, status }) => {
-          expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {
+          expect(loggerMock.error).toHaveBeenCalledWith(DATA_FETCH_ERROR, {
             error: `Unexpected upstream response (HTTP status code 500) when requesting ${expectedUrl}`,
             status: 502,
             data: expectedUrl,
@@ -356,7 +356,7 @@ describe('fetchPageData', () => {
 
       await fetchPageData({ path: requestedPathname, pageType, cache });
 
-      expect(loggerMock.info).not.toBeCalledWith(
+      expect(loggerMock.info).not.toHaveBeenCalledWith(
         DATA_RESPONSE_FROM_CACHE,
         expect.any(Object),
       );

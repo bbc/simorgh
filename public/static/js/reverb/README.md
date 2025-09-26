@@ -3,11 +3,11 @@
 We are self-hosting the Reverb script. The script should be available via the paths listed below:
 
 ```
-https://static.files.bbci.co.uk/ws/simorgh-assets/public/static/js/reverb/reverb-3.10.1.js on LIVE
-https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/static/js/reverb/reverb-3.10.1.js on TEST
-https://static.test.files.bbci.co.uk/ws/simorgh2-preview-assets/public/static/js/reverb/reverb-3.10.1.js on PREVIEW2
-https://static.test.files.bbci.co.uk/ws/simorgh1-preview-assets/public/static/js/reverb/reverb-3.10.1.js on PREVIEW1
-http://localhost:7080/static/js/reverb/reverb-3.10.1.js on LOCAL
+https://static.files.bbci.co.uk/ws/simorgh-assets/public/static/js/reverb/reverb-3.10.2.js on LIVE
+https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/static/js/reverb/reverb-3.10.2.js on TEST
+https://static.test.files.bbci.co.uk/ws/simorgh2-preview-assets/public/static/js/reverb/reverb-3.10.2.js on PREVIEW2
+https://static.test.files.bbci.co.uk/ws/simorgh1-preview-assets/public/static/js/reverb/reverb-3.10.2.js on PREVIEW1
+http://localhost:7080/static/js/reverb/reverb-3.10.2.js on LOCAL
 ```
 
 ## How to update Reverb script

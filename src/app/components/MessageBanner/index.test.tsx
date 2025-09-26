@@ -11,7 +11,13 @@ import * as clickTracking from '../../hooks/useClickTrackerHandler';
 
 describe('MessageBanner', () => {
   const summary = kyrgyzMessageBannerOnePromo.summaries[0];
-  const eventTrackingData = { componentName: 'message-banner' };
+  const eventTrackingData = {
+    componentName: 'message-banner',
+    groupTracker: {
+      type: 'message-banner',
+      position: '1',
+    },
+  };
 
   beforeEach(() => {
     jest.clearAllMocks();
@@ -141,6 +147,14 @@ describe('MessageBanner', () => {
     });
 
     it('should register view tracker if event tracking data provided', () => {
+      const eventTrackingDataModel = {
+        ...eventTrackingData,
+        groupTracker: {
+          ...eventTrackingData,
+          link: summary.link,
+        },
+      };
+
       render(
         <MessageBanner
           heading={kyrgyzMessageBannerOnePromo.title}
@@ -148,11 +162,11 @@ describe('MessageBanner', () => {
           link={summary.link}
           linkText={summary.title}
           image={summary.imageUrl}
-          eventTrackingData={eventTrackingData}
+          eventTrackingData={eventTrackingDataModel}
         />,
       );
 
-      expect(viewTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
+      expect(viewTrackerSpy).toHaveBeenCalledWith(eventTrackingDataModel);
     });
   });
 
@@ -180,6 +194,14 @@ describe('MessageBanner', () => {
     });
 
     it('should register click tracker if event tracking data provided', () => {
+      const eventTrackingDataModel = {
+        ...eventTrackingData,
+        groupTracker: {
+          ...eventTrackingData,
+          link: summary.link,
+        },
+      };
+
       render(
         <MessageBanner
           heading={kyrgyzMessageBannerOnePromo.title}
@@ -187,11 +209,11 @@ describe('MessageBanner', () => {
           link={summary.link}
           linkText={summary.title}
           image={summary.imageUrl}
-          eventTrackingData={eventTrackingData}
+          eventTrackingData={eventTrackingDataModel}
         />,
       );
 
-      expect(clickTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
+      expect(clickTrackerSpy).toHaveBeenCalledWith(eventTrackingDataModel);
     });
 
     it('should handle a click event when call to action link clicked', () => {

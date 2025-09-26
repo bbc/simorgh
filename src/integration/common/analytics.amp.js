@@ -1,6 +1,8 @@
 export default () => {
   describe('Analytics', () => {
-    const analyticsElements = document.querySelectorAll('amp-analytics');
+    const analyticsElements = Array.from(
+      document.querySelectorAll('amp-analytics'),
+    );
 
     analyticsElements.forEach(analyticsEl => {
       const type = analyticsEl.getAttribute('type') || 'ATI';

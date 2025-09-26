@@ -9,48 +9,47 @@ import { Tag } from '#app/components/Metadata/types';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { MetadataTaggings } from '#app/models/types/metadata';
-import { Services } from '#app/models/types/global';
 import styles from './index.styles';
-import BANNER_CONFIG from './config';
 
 type Props = {
   aboutTags: Tag[];
   taggings: MetadataTaggings;
 };
 
-const handleUrlServiceTransform = (url: string, service: Services) => {
-  switch (service) {
-    case 'turkce':
-      return url.replace('{service}', 'turkish');
-    case 'news':
-      return url.replace('{service}', 'english');
-    default:
-      return url.replace('{service}', service);
-  }
+type ToggleType = {
+  enabled: boolean | null;
+  value: string | null;
 };
 
+const DEFAULT_HEIGHTS = {
+  desktop: 350,
+  tablet: 320,
+  mobile: 315,
+};
+
+const SENSITIVE_ARTICLE_ID = 'f2b5dd0e-dda0-454c-893d-792d46ff48c3';
+
 export default function ElectionBanner({ aboutTags, taggings }: Props) {
-  const { service } = use(ServiceContext);
+  const { electionBanner } = use(ServiceContext);
   const { isAmp, isLite } = use(RequestContext);
-  const { enabled: electionBannerEnabled }: { enabled: boolean | null } =
+  const { enabled: electionBannerEnabled }: ToggleType =
     useToggle('electionBanner');
 
-  if (isLite) return null;
+  if (isLite || !electionBanner) return null;
 
   const {
-    heights,
+    heights = DEFAULT_HEIGHTS,
     iframeSrc,
     iframeDevSrc,
-    editorialSensitivityId,
-    usElectionThingId,
-  } = BANNER_CONFIG;
+    electionThingIds,
+  } = electionBanner;
 
   const isEditoriallySensitive = taggings?.some(({ value }) =>
-    value.includes(editorialSensitivityId),
+    value.includes(SENSITIVE_ARTICLE_ID),
   );
 
-  const validAboutTag = aboutTags?.find(
-    ({ thingId }) => thingId === usElectionThingId,
+  const validAboutTag = aboutTags?.find(({ thingId }) =>
+    electionThingIds.includes(thingId),
   );
 
   const showBanner =
@@ -65,19 +64,18 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
   } = getEnvConfig();
 
   const iframeSrcToUse = SIMORGH_APP_ENV === 'live' ? iframeSrc : iframeDevSrc;
-  const iframeSrcWithService = handleUrlServiceTransform(
-    iframeSrcToUse,
-    service,
-  );
 
   if (isAmp) {
     return (
-      <div data-testid="election-banner" css={styles.electionBannerWrapperAmp}>
+      <div
+        data-testid="election-banner"
+        css={styles.electionBannerWrapperAmp(heights)}
+      >
         <AmpIframe
           ampMetadata={{
             imageWidth: 1,
             imageHeight: 1,
-            src: `${SIMORGH_INCLUDES_BASE_AMP_URL}/${iframeSrcWithService}/amp`,
+            src: `${SIMORGH_INCLUDES_BASE_AMP_URL}/${iframeSrcToUse}/amp`,
             image:
               'https://news.files.bbci.co.uk/include/vjassets/img/app-launcher.png',
             title: validAboutTag.thingLabel,
@@ -91,9 +89,9 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
     <div data-testid="election-banner" css={styles.electionBannerWrapper}>
       <iframe
         title={validAboutTag.thingLabel}
-        src={`${SIMORGH_INCLUDES_BASE_URL}/${iframeSrcWithService}`}
+        src={`${SIMORGH_INCLUDES_BASE_URL}/${iframeSrcToUse}`}
         scrolling="no"
-        css={styles.electionBannerIframe}
+        css={styles.electionBannerIframe(heights)}
         height={heights.desktop}
         width="100%"
       />

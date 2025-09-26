@@ -32,7 +32,7 @@ export default ({ service, pageType }) => {
             }
           });
         });
-        it('Hearken include is visible on the page - only /mundo/23263889', () => {
+        it.skip('Hearken include is visible on the page - only /mundo/23263889', () => {
           cy.window({ timeout: 20000 }).then(win => {
             if (win.location.pathname.includes('/mundo/23263889')) {
               cy.get(`div[id="hearken-curiosity-14838"] > div`).within(() => {

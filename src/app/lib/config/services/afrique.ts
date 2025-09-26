@@ -267,6 +267,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Durée',
         recentEpisodes: 'Editions Précédentes',
         closeVideo: 'Sortir',
+        endOfContentClose: 'Fin de ce contenu. Sortir',
       },
       socialEmbed: {
         caption: {
@@ -325,7 +326,7 @@ export const service: DefaultServiceConfig = {
         text: 'Pourquoi vous pouvez faire confiance à BBC News',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Découvrez notre approche en matière de liens externes.',
       },
       links: [
@@ -348,6 +349,10 @@ export const service: DefaultServiceConfig = {
         {
           href: 'https://www.bbc.co.uk/afrique/send/u50853159',
           text: 'Contactez la BBC',
+        },
+        {
+          href: 'https://www.bbc.com/afrique.lite',
+          text: 'Lire en version allégée',
         },
         {
           href: 'https://www.bbc.com/ws/languages',

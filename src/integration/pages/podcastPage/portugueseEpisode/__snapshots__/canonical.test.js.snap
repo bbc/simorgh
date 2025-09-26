@@ -1,15 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Canonical Podcast Page A11y I can see the skip to content link 1`] = `"Vá para o conteúdo"`;
 
-exports[`Canonical Podcast Page Analytics ATI tracking pixel excluding src 1`] = `
-<img
-  alt=""
-  height="1px"
-  style="position:absolute"
-  width="1px"
-/>
-`;
+exports[`Canonical Podcast Page Analytics ATI tracking pixel excluding src 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" >"`;
 
 exports[`Canonical Podcast Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
 
@@ -107,7 +100,7 @@ exports[`Canonical Podcast Page Footer Anchors should match text and url 8`] = `
 exports[`Canonical Podcast Page Footer Anchors should match text and url 9`] = `
 {
   "text": "Leia sobre nossa política em relação a links externos.",
-  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
 }
 `;
 
@@ -200,7 +193,17 @@ exports[`Canonical Podcast Page Media Loader renders a valid container 1`] = `
     data-e2e="media-player"
   >
     <noscript>
-      &lt;div&gt;&lt;div class="bbc-1ezssgh"&gt;&lt;strong class="bbc-pow7hy"&gt;A reprodução deste formato de vídeo não é compatível com seu dispositivo&lt;/strong&gt;&lt;/div&gt;&lt;/div&gt;
+      <div>
+        <div
+          class="bbc-1ezssgh"
+        >
+          <strong
+            class="bbc-pow7hy"
+          >
+            A reprodução deste formato de vídeo não é compatível com seu dispositivo
+          </strong>
+        </div>
+      </div>
     </noscript>
   </div>
 </figure>

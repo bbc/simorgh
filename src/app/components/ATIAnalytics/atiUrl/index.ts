@@ -54,6 +54,7 @@ export const buildATIPageTrackPath = ({
   nationsProducer,
   ampExperimentName,
   experimentVariant,
+  readTimeMilliseconds,
 }: ATIPageTrackingProps) => {
   const href = getHref(platform);
   const referrer = getReferrer(platform);
@@ -221,6 +222,12 @@ export const buildATIPageTrackPath = ({
       key: 'xto',
       description: 'marketing campaign',
       value: getATIMarketingString(href, campaignType),
+      wrap: false,
+    },
+    {
+      key: 'item_duration',
+      description: 'read time of article in milliseconds',
+      value: readTimeMilliseconds,
       wrap: false,
     },
     ...(experimentVariant
@@ -453,6 +460,7 @@ export const buildReverbAnalyticsModel = ({
   timeUpdated,
   experimentName,
   experimentVariant,
+  readTimeMilliseconds,
 }: ATIPageTrackingProps): ReverbBeaconConfig => {
   const href = getHref(platform);
   const referrer = getReferrer(platform);
@@ -491,6 +499,7 @@ export const buildReverbAnalyticsModel = ({
           x16: aggregatedCampaigns,
           x17: categoryName,
           x18: isLocServeCookieSet(),
+          item_duration: readTimeMilliseconds,
           ...(experimentVariant &&
             experimentName && {
               mv_test: experimentName,
@@ -521,15 +530,25 @@ export const buildReverbEventModel = ({
   experimentVariant,
   itemTracker = {},
   groupTracker = {},
+  eventGroupingName,
 }: ATIEventTrackingProps): ReverbBeaconConfig => {
   const {
     type: itemType,
     text,
     position,
     duration,
+    label,
+    mediaType,
     resourceId: itemResourceId,
   } = itemTracker;
-  const { itemCount, resourceId: groupResourceId } = groupTracker;
+
+  const {
+    name,
+    itemCount,
+    resourceId: groupResourceId,
+    position: groupPosition,
+    link,
+  } = groupTracker;
 
   return {
     params: {
@@ -549,23 +568,29 @@ export const buildReverbEventModel = ({
       eventName: type === VIEW_EVENT ? 'sectionView' : 'sectionClick',
       eventPublisher: 'viewability',
       item: {
-        ...(advertiserID && { attribution: advertiserID }),
         name: componentName,
+        ...(advertiserID && { attribution: advertiserID }),
         ...(url && { link: url }),
         ...(itemType && { type: itemType }),
         ...(text && { text }),
         ...(position && { position }),
         ...(duration && { duration }),
+        ...(mediaType && { media_type: mediaType }),
+        ...(label && { label }),
         ...(itemResourceId && { resource_id: itemResourceId }),
       },
       group: {
-        name: campaignID,
+        name: name || campaignID,
+        type: componentName,
+        ...(link && { link }),
         ...(itemCount && { item_count: itemCount }),
         ...(groupResourceId && { resource_id: groupResourceId }),
+        ...(groupPosition && { position: groupPosition }),
       },
       event: {
         category: 'viewability',
         action: type === CLICK_EVENT ? VIEWABILITY_CLICK_EVENT : VIEW_EVENT,
+        ...(eventGroupingName && { grouping: eventGroupingName }),
       },
       isClick: type === CLICK_EVENT,
       ...(experimentVariant && {

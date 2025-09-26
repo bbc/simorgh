@@ -239,6 +239,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'Ten podcast dostępny jest też na',
         download: 'Pobierz',
         closeVideo: 'Zamknij',
+        endOfContentClose: 'Koniec tej treści. Zamknij',
       },
       socialEmbed: {
         caption: {
@@ -350,7 +351,7 @@ export const service: DefaultServiceConfig = {
         text: 'Dlaczego ufamy BBC',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Przeczytaj o naszych zasadach linkowania zewnętrznego.',
       },
       links: [
@@ -395,8 +396,16 @@ export const service: DefaultServiceConfig = {
         url: '/polska',
       },
       {
+        title: 'Polska',
+        url: '/polska/topics/cly1xdxypzet',
+      },
+      {
         title: 'Świat',
         url: '/polska/topics/cvg9w8yplg1t',
+      },
+      {
+        title: 'Zdrowie',
+        url: '/polska/topics/c15nxyq4pqnt',
       },
       {
         title: 'Wideo',

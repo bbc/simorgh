@@ -7,7 +7,6 @@ import canonicalAndAmpArticleTests from './tests';
 import ampArticleTests from './testsForAMPOnly';
 import canonicalArticleTests from './testsForCanonicalOnly';
 import liteArticleTests from './testsForLiteOnly';
-import getOptimizelyKey from '../../../support/helpers/getOptimizelyKey';
 
 const canonicalTests = [
   testsForAllPages,
@@ -146,6 +145,12 @@ const nonSmokeCanonicalTestSuites = [
     tests: [...canonicalTests],
   },
   {
+    path: '/dari/articles/c502ljngpqeo',
+    runforEnv: ['local'],
+    service: 'dari',
+    tests: [...canonicalTests],
+  },
+  {
     path: '/gahuza/articles/cey23zx8wx8o',
     runforEnv: ['test'],
     service: 'gahuza',
@@ -248,20 +253,7 @@ const liteTestSuites = canonicalTestSuites
     };
   });
 
-describe('Article Page', () => {
-  beforeEach(() => {
-    cy.intercept(
-      {
-        url: `https://cdn.optimizely.com/datafiles/${getOptimizelyKey()}.json`,
-      },
-      request => {
-        request.reply({ statusCode: 404 });
-      },
-    ).as('disable-optimizely');
-  });
-
-  runTestsForPage({
-    pageType: 'articles',
-    testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],
-  });
+runTestsForPage({
+  pageType: 'articles',
+  testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],
 });

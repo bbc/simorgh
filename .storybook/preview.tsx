@@ -350,6 +350,10 @@ const preview: Preview = {
             title: 'cymrufyw',
           },
           {
+            value: { service: 'dari', variant: 'default' },
+            title: 'dari',
+          },
+          {
             value: { service: 'gahuza', variant: 'default' },
             title: 'gahuza',
           },
@@ -532,6 +536,10 @@ const preview: Preview = {
           {
             value: { service: 'ukrainian', variant: 'ru-UA' },
             title: 'ukrainian-ru-UA',
+          },
+          {
+            value: { service: 'ws', variant: 'default' },
+            title: 'ws',
           },
         ],
         dynamicTitle: true,

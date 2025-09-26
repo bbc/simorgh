@@ -9,7 +9,8 @@ import {
 import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
 import useMediaQuery from '#hooks/useMediaQuery';
 import { RequestContext } from '#app/contexts/RequestContext';
-import ScrollablePromo from '#components/ScrollablePromo';
+import TopBarOJs from '#app/components/TopBarOJs';
+import isLive from '#app/lib/utilities/isLive';
 
 const ScrollableWrapper = styled.div`
   position: relative;
@@ -42,7 +43,6 @@ const CanonicalNavigationContainer = ({
   scrollableListItems,
   dropdownListItems,
   blocks,
-  experimentVariant,
 }) => {
   const { isLite } = use(RequestContext);
   const [isOpen, setIsOpen] = useState(false);
@@ -71,14 +71,7 @@ const CanonicalNavigationContainer = ({
       </ScrollableWrapper>
       <CanonicalDropdown isOpen={isOpen}>{dropdownListItems}</CanonicalDropdown>
       <Divider />
-      {experimentVariant &&
-        experimentVariant !== 'off' &&
-        experimentVariant !== 'control' && (
-          <ScrollablePromo
-            blocks={blocks}
-            experimentVariant={experimentVariant}
-          />
-        )}
+      {!isLive() && <TopBarOJs blocks={blocks} />}
     </Navigation>
   );
 };

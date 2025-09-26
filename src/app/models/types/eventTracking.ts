@@ -1,3 +1,4 @@
+// Types consolidated into ATIAnalytics/types.ts. Use EventTrackingData everywhere.
 export type ReverbClient = {
   isReady: () => boolean;
   initialise: () => Promise<void>;
@@ -11,6 +12,7 @@ export type EventTrackingMetadata = {
   campaignID?: string;
   advertiserID?: string;
   sendOptimizelyEvents?: boolean;
+  alwaysInView?: boolean;
 };
 
 export type EventTrackingBlock = {

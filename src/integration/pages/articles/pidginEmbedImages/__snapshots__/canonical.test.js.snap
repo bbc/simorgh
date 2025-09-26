@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Canonical Articles Embed Images should match snapshot 1`] = `
 <div
@@ -6,7 +6,7 @@ exports[`Canonical Articles Embed Images should match snapshot 1`] = `
   data-e2e="embed-image"
 >
   <div
-    class="bbc-j1srjl"
+    class="bbc-17ytifv"
     style="padding-bottom:76.72%;overflow:hidden"
   >
     <img

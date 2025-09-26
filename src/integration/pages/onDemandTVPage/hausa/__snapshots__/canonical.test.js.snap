@@ -1,15 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Canonical On Demand T V Page A11y I can see the skip to content link 1`] = `"Tsallaka zuwa abubuwan da ke ciki"`;
 
-exports[`Canonical On Demand T V Page Analytics ATI tracking pixel excluding src 1`] = `
-<img
-  alt=""
-  height="1px"
-  style="position:absolute"
-  width="1px"
-/>
-`;
+exports[`Canonical On Demand T V Page Analytics ATI tracking pixel excluding src 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" >"`;
 
 exports[`Canonical On Demand T V Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
 
@@ -107,7 +100,7 @@ exports[`Canonical On Demand T V Page Footer Anchors should match text and url 8
 exports[`Canonical On Demand T V Page Footer Anchors should match text and url 9`] = `
 {
   "text": "Karanta hanyoyin da muke bi dangane da adireshin waje.",
-  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
 }
 `;
 
@@ -188,7 +181,9 @@ exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] 
     <noscript
       class="bbc-n2zqlz"
     >
-      &lt;strong&gt;Na&#x27;urarku na da matsalar sauraren sauti&lt;/strong&gt;
+      <strong>
+        Na'urarku na da matsalar sauraren sauti
+      </strong>
     </noscript>
   </div>
   <button
@@ -236,7 +231,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] 
     </time>
   </button>
   <div
-    class="bbc-lgx6cw"
+    class="bbc-1jf2q50"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
@@ -263,7 +258,9 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
     <noscript
       class="bbc-n2zqlz"
     >
-      &lt;strong&gt;Na&#x27;urarku na da matsalar sauraren sauti&lt;/strong&gt;
+      <strong>
+        Na'urarku na da matsalar sauraren sauti
+      </strong>
     </noscript>
   </div>
   <button
@@ -311,7 +308,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
     </time>
   </button>
   <div
-    class="bbc-lgx6cw"
+    class="bbc-1jf2q50"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
@@ -342,7 +339,9 @@ exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`]
       <noscript
         class="bbc-n2zqlz"
       >
-        &lt;strong&gt;Na&#x27;urarku na da matsalar sauraren sauti&lt;/strong&gt;
+        <strong>
+          Na'urarku na da matsalar sauraren sauti
+        </strong>
       </noscript>
     </div>
     <button
@@ -390,7 +389,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`]
       </time>
     </button>
     <div
-      class="bbc-lgx6cw"
+      class="bbc-1jf2q50"
       style="padding-bottom:0;overflow:hidden"
     >
       <img

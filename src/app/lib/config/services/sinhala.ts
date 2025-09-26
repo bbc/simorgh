@@ -56,7 +56,7 @@ export const service: DefaultServiceConfig = {
         alt: 'WhatsApp BBC News සිංහල',
       },
       linkLabel: {
-        text: 'සම්බන්ධ වීමට link එක click කරන්නr',
+        text: 'සම්බන්ධ වීමට link එක click කරන්න',
         href: 'https://www.whatsapp.com/channel/0029VbAdrSX5PO0xbywORN25',
       },
     },
@@ -260,6 +260,7 @@ export const service: DefaultServiceConfig = {
         duration: 'ධාවන කාලය',
         recentEpisodes: 'පෙර වැඩසටහන්',
         closeVideo: 'ඉවත්වෙන්න',
+        endOfContentClose: 'මෙම අන්තර්ගතයේ අවසන්. ඉවත්වෙන්න',
       },
       socialEmbed: {
         caption: {
@@ -316,7 +317,7 @@ export const service: DefaultServiceConfig = {
         text: 'ඔබට බීබීසී විශ්වාස කළ හැක්කේ ඇයි',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'බාහිර යොමු කෙරෙහි අපගේ ප්‍රවේශය ගැන කියවන්න.',
       },
       links: [
@@ -335,6 +336,10 @@ export const service: DefaultServiceConfig = {
         {
           href: 'https://www.bbc.co.uk/sinhala/send/u50853687',
           text: 'බීබීසී ය අමතන්න',
+        },
+        {
+          href: 'https://www.bbc.com/sinhala.lite',
+          text: 'ලිපිවල පෙළ පමණක් අඩංගු වෙබ් අඩවිය',
         },
         {
           href: 'https://www.bbc.com/ws/languages',

@@ -46,6 +46,24 @@ export const service: DefaultServiceConfig = {
     homePageTitle: 'Xəbərlər, Qaynar Xəbərlər, Analiz, Video',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'WhatsApp reklamı',
+      brandTitle: 'WhatsApp kanalımızı izləyin',
+      brandDescription:
+        'BBC News Azərbaycancanın xəbərlərini indi telefonunuzda ala bilərsiniz.',
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0lq79gb.png',
+        alt: 'BBC News Azarbaycancanin Whatsapp kanalina qosulun',
+      },
+      linkLabel: {
+        text: 'Buradan izləyin',
+        href: 'https://www.whatsapp.com/channel/0029Vb6Ewy00lwgwO4iuS32p',
+      },
+      skipLink: {
+        text: '%title%-ı bağlayın  və oxumağa davam edin',
+        endTextVisuallyHidden: '%title%-ın sonu',
+      },
+    },
     translations: {
       pagination: {
         page: 'səhifə',
@@ -231,6 +249,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Duration',
         recentEpisodes: 'Daha ətraflı',
         closeVideo: 'Bağla',
+        endOfContentClose: 'Bu məzmunun sonu. Bağla',
       },
       socialEmbed: {
         caption: {
@@ -318,7 +337,7 @@ export const service: DefaultServiceConfig = {
         text: 'BBC News-a niyə etibar etməlisiniz',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Bizim kənar keçidlərə dair yanaşmamız barədə oxuyun.',
       },
       links: [

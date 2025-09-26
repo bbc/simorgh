@@ -539,6 +539,20 @@ describe('Reverb', () => {
         item_count: 11,
         name: '1234',
         resource_id: 'blockLevelResourceId',
+        type: 'top-stories',
+      });
+    });
+
+    it('should return the correct Reverb event details grouping data', () => {
+      const result = buildReverbEventModel({
+        ...input,
+        eventGroupingName: 'customEventGroupingName',
+      });
+
+      expect(result.eventDetails.event).toEqual({
+        action: 'view',
+        category: 'viewability',
+        grouping: 'customEventGroupingName',
       });
     });
 
@@ -556,6 +570,7 @@ describe('Reverb', () => {
           },
           group: {
             name: '1234',
+            type: 'top-stories',
           },
           event: {
             category: 'viewability',
@@ -581,6 +596,7 @@ describe('Reverb', () => {
           },
           group: {
             name: '1234',
+            type: 'top-stories',
           },
           event: {
             category: 'viewability',
@@ -613,6 +629,7 @@ describe('Reverb', () => {
           },
           group: {
             name: '1234',
+            type: 'top-stories',
           },
           event: {
             category: 'viewability',
@@ -639,6 +656,7 @@ describe('Reverb', () => {
           },
           group: {
             name: '1234',
+            type: 'top-stories',
           },
           event: {
             category: 'viewability',

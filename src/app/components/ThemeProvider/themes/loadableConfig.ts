@@ -28,6 +28,7 @@ export const themes = {
   cymrufyw: loadable(
     () => import(/* webpackChunkName: "themes-cymrufyw" */ './cymrufyw'),
   ),
+  dari: loadable(() => import(/* webpackChunkName: "themes-dari" */ './dari')),
   gahuza: loadable(
     () => import(/* webpackChunkName: "themes-gahuza" */ './gahuza'),
   ),
@@ -52,6 +53,9 @@ export const themes = {
   ),
   kyrgyz: loadable(
     () => import(/* webpackChunkName: "themes-kyrgyz" */ './kyrgyz'),
+  ),
+  magyarul: loadable(
+    () => import(/* webpackChunkName: "themes-magyarul" */ './magyarul'),
   ),
   marathi: loadable(
     () => import(/* webpackChunkName: "themes-marathi" */ './marathi'),

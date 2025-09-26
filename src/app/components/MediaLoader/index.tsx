@@ -316,6 +316,7 @@ const MediaLoader = ({
                 noJsMessage={noJsMessage}
                 mediaInfo={mediaInfo}
                 onClick={() => setShowPlaceholder(false)}
+                isPortraitOrientation={!!isPortrait}
               />
             ) : (
               <MediaContainer

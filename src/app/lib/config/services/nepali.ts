@@ -244,6 +244,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'यो पडकास्ट सुन्नकालागि यहाँ उपलब्ध छ',
         download: 'एपिसोड डाउनलोड',
         closeVideo: 'बाहिरिनुहोस्',
+        endOfContentClose: 'यस सामग्रीको अन्त्य। बाहिरिनुहोस्',
       },
       socialEmbed: {
         caption: {
@@ -301,7 +302,7 @@ export const service: DefaultServiceConfig = {
         text: 'बीबीसीको विश्वसनीयता',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'बाह्य वेबसाइटको लिङ्क प्रयोग सम्बन्धमा हाम्रो नीति पढ्नुहोस्।',
       },
       links: [

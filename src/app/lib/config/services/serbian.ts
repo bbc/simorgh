@@ -65,7 +65,7 @@ export const service: SerbianConfig = {
         text: 'Zašto BBC zaslužuje vaše poverenje',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Pročitajte naša pravila o linkovanju drugih sajtova.',
       },
       links: [
@@ -335,6 +335,7 @@ export const service: SerbianConfig = {
         nextRadioShow: 'Sledeća radio emisija',
         duration: 'Trajanje',
         closeVideo: 'Izađi',
+        endOfContentClose: 'Kraj ovog sadržaja. Izađi',
       },
       socialEmbed: {
         caption: {
@@ -471,7 +472,7 @@ export const service: SerbianConfig = {
         text: 'Зашто ББЦ заслужује ваше поверење',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Прочитајте наша правила о линковању других сајтова.',
       },
       links: [
@@ -741,6 +742,7 @@ export const service: SerbianConfig = {
         duration: 'Трајање',
         recentEpisodes: 'Претходне епизоде',
         closeVideo: 'Изађи',
+        endOfContentClose: 'Крај садржаја. Излаз',
       },
       socialEmbed: {
         caption: {

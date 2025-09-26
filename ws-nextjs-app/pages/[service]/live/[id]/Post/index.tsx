@@ -154,7 +154,10 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
       />
     ),
     video: (props: { blocks: MediaBlock[] }) => (
-      <MediaLoader blocks={props.blocks} css={styles.bodyMedia} />
+      <MediaLoader
+        blocks={props.blocks}
+        css={[styles.bodyMedia, styles.videoPost]}
+      />
     ),
     audio: (props: { blocks: MediaBlock[] }) => (
       <MediaLoader blocks={props.blocks} css={styles.audioPost} />

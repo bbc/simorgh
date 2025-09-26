@@ -1,15 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Canonical Podcast Page A11y I can see the skip to content link 1`] = `"Vá para o conteúdo"`;
 
-exports[`Canonical Podcast Page Analytics ATI tracking pixel excluding src 1`] = `
-<img
-  alt=""
-  height="1px"
-  style="position:absolute"
-  width="1px"
-/>
-`;
+exports[`Canonical Podcast Page Analytics ATI tracking pixel excluding src 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" >"`;
 
 exports[`Canonical Podcast Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
 
@@ -107,7 +100,7 @@ exports[`Canonical Podcast Page Footer Anchors should match text and url 8`] = `
 exports[`Canonical Podcast Page Footer Anchors should match text and url 9`] = `
 {
   "text": "Leia sobre nossa política em relação a links externos.",
-  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
 }
 `;
 
@@ -200,7 +193,17 @@ exports[`Canonical Podcast Page Media Loader renders a valid container 1`] = `
     data-e2e="media-player"
   >
     <noscript>
-      &lt;div&gt;&lt;div class="bbc-1ezssgh"&gt;&lt;strong class="bbc-pow7hy"&gt;A reprodução deste formato de vídeo não é compatível com seu dispositivo&lt;/strong&gt;&lt;/div&gt;&lt;/div&gt;
+      <div>
+        <div
+          class="bbc-1ezssgh"
+        >
+          <strong
+            class="bbc-pow7hy"
+          >
+            A reprodução deste formato de vídeo não é compatível com seu dispositivo
+          </strong>
+        </div>
+      </div>
     </noscript>
   </div>
 </figure>
@@ -259,90 +262,6 @@ exports[`Canonical Podcast Page Recent Episodes List items should match text and
 {
   "text": "Áudio, Que História!, Vem aí a 3ª temporada do 'Que História!': ouça o trailer,  Duration 00,43  Duration 00:4323 julho 2024",
   "url": "/portuguese/podcasts/p07r3r3t/p0jd7041",
-}
-`;
-
-exports[`Canonical Podcast Page Recent Episodes List items should match text and url 9`] = `
-{
-  "text": "Áudio, Que História!, 'Descobri que meu cabeleireiro é meu irmão',  Duration 12,40  Duration 12:4017 junho 2021",
-  "url": "/portuguese/podcasts/p07r3r3t/p09clshz",
-}
-`;
-
-exports[`Canonical Podcast Page Recent Episodes List items should match text and url 10`] = `
-{
-  "text": "Áudio, Que História!, O homem que passou 76 dias à deriva no Atlântico,  Duration 15,12  Duration 15:1210 junho 2021",
-  "url": "/portuguese/podcasts/p07r3r3t/p09cls7w",
-}
-`;
-
-exports[`Canonical Podcast Page Recent Episodes List items should match text and url 11`] = `
-{
-  "text": "Áudio, Que História!, O caso dos passageiros sugados para fora de avião,  Duration 11,59  Duration 11:593 junho 2021",
-  "url": "/portuguese/podcasts/p07r3r3t/p09clrrg",
-}
-`;
-
-exports[`Canonical Podcast Page Recent Episodes List items should match text and url 12`] = `
-{
-  "text": "Áudio, Que História!, O médico que virou pianista após ser atingido por um raio,  Duration 14,01  Duration 14:0127 maio 2021",
-  "url": "/portuguese/podcasts/p07r3r3t/p09clrc9",
-}
-`;
-
-exports[`Canonical Podcast Page Recent Episodes List items should match text and url 13`] = `
-{
-  "text": "Áudio, Que História!, A jovem que passou 12 anos sem conseguir emitir um som,  Duration 15,11  Duration 15:1120 maio 2021",
-  "url": "/portuguese/podcasts/p07r3r3t/p09clqpf",
-}
-`;
-
-exports[`Canonical Podcast Page Recent Episodes List items should match text and url 14`] = `
-{
-  "text": "Áudio, Que História!, A poção que criava 'zumbis' no Haiti,  Duration 15,06  Duration 15:0613 maio 2021",
-  "url": "/portuguese/podcasts/p07r3r3t/p09clpjz",
-}
-`;
-
-exports[`Canonical Podcast Page Recent Episodes List items should match text and url 15`] = `
-{
-  "text": "Áudio, Que História!, A espontânea 'trégua' de Natal em plena frente de combates da Primeira Guerra,  Duration 12,12  Duration 12:126 maio 2021",
-  "url": "/portuguese/podcasts/p07r3r3t/p09cl7zl",
-}
-`;
-
-exports[`Canonical Podcast Page Recent Episodes List items should match text and url 16`] = `
-{
-  "text": "Áudio, Que História!, O mergulhador que passou 30 minutos sem ar e escapou da morte,  Duration 15,48  Duration 15:4829 abril 2021",
-  "url": "/portuguese/podcasts/p07r3r3t/p09cj16h",
-}
-`;
-
-exports[`Canonical Podcast Page Recent Episodes List items should match text and url 17`] = `
-{
-  "text": "Áudio, Que História!, Como Jorge Amado e Dorival Caymmi encantaram a URSS,  Duration 18,20  Duration 18:2022 abril 2021",
-  "url": "/portuguese/podcasts/p07r3r3t/p09chv2t",
-}
-`;
-
-exports[`Canonical Podcast Page Recent Episodes List items should match text and url 18`] = `
-{
-  "text": "Áudio, Que História!, O pedido de SOS em decoração de Dia das Bruxas,  Duration 16,45  Duration 16:458 abril 2021",
-  "url": "/portuguese/podcasts/p07r3r3t/p099wpnb",
-}
-`;
-
-exports[`Canonical Podcast Page Recent Episodes List items should match text and url 19`] = `
-{
-  "text": "Áudio, Que História!, Segunda temporada vem aí: ouça o trailer,  Duration 00,49  Duration 00:4931 março 2021",
-  "url": "/portuguese/podcasts/p07r3r3t/p09chbv1",
-}
-`;
-
-exports[`Canonical Podcast Page Recent Episodes List items should match text and url 20`] = `
-{
-  "text": "Áudio, Que História!, 'A vida secreta de meu filho que só conheci quando ele morreu',  Duration 16,22  Duration 16:2212 março 2020",
-  "url": "/portuguese/podcasts/p07r3r3t/p083x9gr",
 }
 `;
 

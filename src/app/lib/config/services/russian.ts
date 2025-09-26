@@ -208,6 +208,7 @@ export const mainTranslations = {
     podcastExternalLinks: 'Этот подкаст доступен на',
     download: 'Загрузить эпизод',
     closeVideo: 'Выйти',
+    endOfContentClose: 'Конец этого контента. Выйти',
   },
   socialEmbed: {
     caption: {
@@ -402,7 +403,7 @@ export const service: DefaultServiceConfig = {
         text: 'Почему BBC News заслуживает доверия',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Познакомьтесь с нашими правилами внешних ссылок.',
       },
       links: [

@@ -51,7 +51,7 @@ const ensureExplicitPolicyCookieExpiryDates = () => {
   assertCookieExpiryDate('ckns_policy', inOneYear);
 };
 
-export default ({ service, variant, pageType, path }) => {
+export default ({ service, variant = 'default', pageType, path }) => {
   describe('Canonical consent banner', () => {
     before(() => cy.getToggles(service));
     beforeEach(() => cy.fixture(`toggles/${service}.json`).as('toggles'));

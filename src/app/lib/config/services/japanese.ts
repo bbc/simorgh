@@ -220,6 +220,7 @@ export const service: DefaultServiceConfig = {
         duration: '所要時間',
         recentEpisodes: 'さらに',
         closeVideo: '閉じる',
+        endOfContentClose: 'このコンテンツの終わり。閉じる',
       },
       socialEmbed: {
         caption: {

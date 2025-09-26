@@ -4,21 +4,12 @@ import { Helmet } from 'react-helmet';
 import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import { ToggleContext } from '../../contexts/ToggleContext';
 import { UserContext } from '../../contexts/UserContext';
 import ChartbeatAnalytics from '.';
 import * as testUtils from './utils';
 import * as amp from './amp';
-import { localBaseUrl } from '../../../testHelpers/config';
 import { PageTypes, Platforms } from '../../models/types/global';
 
-const defaultToggleState = {
-  chartbeatAnalytics: {
-    enabled: false,
-  },
-};
-
-const mockToggleDispatch = jest.fn();
 const sendCanonicalChartbeatBeacon = jest.fn();
 
 interface Props {
@@ -26,12 +17,6 @@ interface Props {
   platform: Platforms;
   origin: string;
   isLite?: boolean;
-  toggleState?: {
-    chartbeatAnalytics: {
-      enabled: boolean;
-      value?: string;
-    };
-  };
 }
 
 const ContextWrap = ({
@@ -40,13 +25,7 @@ const ContextWrap = ({
   origin,
   children,
   isLite = false,
-  toggleState = defaultToggleState,
 }: PropsWithChildren<Props>) => {
-  const memoizedToggleContextValue = useMemo(
-    () => ({ toggleState, toggleDispatch: mockToggleDispatch }),
-    [toggleState],
-  );
-
   const memoizedUserContextValue = useMemo(
     () => ({ sendCanonicalChartbeatBeacon }),
     [],
@@ -63,24 +42,22 @@ const ContextWrap = ({
       pathname="/pathname"
     >
       <ServiceContextProvider service="news">
-        <ToggleContext.Provider value={memoizedToggleContextValue}>
-          <UserContext.Provider
-            // @ts-expect-error requires mocking for testing purposes
-            value={memoizedUserContextValue}
-          >
-            {children}
-          </UserContext.Provider>
-        </ToggleContext.Provider>
+        <UserContext.Provider
+          // @ts-expect-error requires mocking for testing purposes
+          value={memoizedUserContextValue}
+        >
+          {children}
+        </UserContext.Provider>
       </ServiceContextProvider>
     </RequestContextProvider>
   );
 };
 
-describe('Charbeats Analytics Container', () => {
+describe('Chartbeat Analytics Container', () => {
   beforeEach(() => {
     jest.resetAllMocks();
   });
-  it('should call AmpCharbeatsBeacon when platform is amp and toggle enabled for chartbeat on live', () => {
+  it('should call AmpChartbeatBeacon when platform is amp for chartbeat on live', () => {
     process.env.SIMORGH_APP_ENV = 'live';
     const mockAmp = jest.fn().mockReturnValue('amp-return-value');
     // @ts-expect-error requires mocking for testing purposes
@@ -100,19 +77,8 @@ describe('Charbeats Analytics Container', () => {
     // @ts-expect-error requires mocking for testing purposes
     testUtils.getConfig = mockGetConfig;
 
-    const toggleState = {
-      chartbeatAnalytics: {
-        enabled: true,
-      },
-    };
-
     const { container } = render(
-      <ContextWrap
-        platform="amp"
-        pageType={ARTICLE_PAGE}
-        origin="bbc.com"
-        toggleState={toggleState}
-      >
+      <ContextWrap platform="amp" pageType={ARTICLE_PAGE} origin="bbc.com">
         <ChartbeatAnalytics title="Home" sectionName="Home" />
       </ContextWrap>,
     );
@@ -128,42 +94,7 @@ describe('Charbeats Analytics Container', () => {
     expect(container.firstChild?.textContent).toEqual('amp-return-value');
   });
 
-  it('should return null when toggle is disabled for live', () => {
-    const toggleState = {
-      chartbeatAnalytics: {
-        enabled: false,
-      },
-    };
-    const { container } = render(
-      <ContextWrap
-        platform="canonical"
-        pageType={ARTICLE_PAGE}
-        origin="bbc.com"
-        toggleState={toggleState}
-      >
-        <ChartbeatAnalytics title="Home" sectionName="Home" />
-      </ContextWrap>,
-    );
-
-    expect(container.firstChild).toBeNull();
-  });
-
-  it('should return null when toggle is disbaled for localhost', () => {
-    process.env.SIMORGH_APP_ENV = 'local';
-    const { container } = render(
-      <ContextWrap
-        platform="canonical"
-        pageType={ARTICLE_PAGE}
-        origin={localBaseUrl}
-      >
-        <ChartbeatAnalytics title="Home" sectionName="Home" />
-      </ContextWrap>,
-    );
-
-    expect(container.firstChild).toBeNull();
-  });
-
-  it('should add Chartbeat Helmet script with correct config when platform is canonical, toggle enabled and on test in Lite mode', () => {
+  it('should add Chartbeat Helmet script with correct config when platform is canonical, and on test in Lite mode', () => {
     process.env.SIMORGH_APP_ENV = 'test';
 
     const expectedConfig = {
@@ -179,12 +110,6 @@ describe('Charbeats Analytics Container', () => {
       useCanonical: true,
     };
 
-    const toggleState = {
-      chartbeatAnalytics: {
-        enabled: true,
-      },
-    };
-
     const mockGetConfig = jest.fn().mockReturnValue(expectedConfig);
     // @ts-expect-error requires mocking for testing purposes
     testUtils.getConfig = mockGetConfig;
@@ -194,7 +119,6 @@ describe('Charbeats Analytics Container', () => {
         platform="canonical"
         pageType={ARTICLE_PAGE}
         origin="test.bbc.com"
-        toggleState={toggleState}
       >
         <ChartbeatAnalytics title="Home" sectionName="Home" />
       </ContextWrap>,

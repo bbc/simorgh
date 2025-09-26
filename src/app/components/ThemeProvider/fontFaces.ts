@@ -1,4 +1,5 @@
-const REITH_FONTS_DIR = 'https://static.files.bbci.co.uk/fonts/reith/r2.512/';
+export const REITH_FONTS_DIR =
+  'https://static.files.bbci.co.uk/fonts/reith/r2.512/';
 
 const NOTO_SERIF_SINHALA_FONTS_DIR =
   'https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifSinhala/v1.00/';
@@ -22,7 +23,7 @@ const NOTO_SERIF_BENGALI_FONTS_DIR =
   'https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifBengali/v1.00/';
 
 const REITH_QALAM_FONTS_DIR =
-  'https://ws-downloads.files.bbci.co.uk/fonts/ReithQalam/v1.310/';
+  'https://static.files.bbci.co.uk/fonts/reith-qalam/1.310/';
 
 export const REITH_SERIF_REGULAR = {
   '@font-face': {
@@ -294,7 +295,7 @@ export const REITH_QALAM_REGULAR = {
     fontFamily: 'BBC Reith Qalam',
     fontWeight: 400,
     fontStyle: 'normal',
-    src: `url('${REITH_QALAM_FONTS_DIR}normal.woff2') format('woff2'), url('${REITH_QALAM_FONTS_DIR}normal.woff') format('woff')`,
+    src: `url('${REITH_QALAM_FONTS_DIR}BBCReithQalam_W_Rg.woff2') format('woff2'), url('${REITH_QALAM_FONTS_DIR}BBCReithQalam_W_Rg.woff') format('woff')`,
     fontDisplay: 'optional',
   },
 };
@@ -304,7 +305,7 @@ export const REITH_QALAM_BOLD = {
     fontFamily: 'BBC Reith Qalam',
     fontWeight: 700,
     fontStyle: 'normal',
-    src: `url('${REITH_QALAM_FONTS_DIR}bold.woff2') format('woff2'), url('${REITH_QALAM_FONTS_DIR}bold.woff') format('woff')`,
+    src: `url('${REITH_QALAM_FONTS_DIR}BBCReithQalam_W_Bd.woff2') format('woff2'), url('${REITH_QALAM_FONTS_DIR}BBCReithQalam_W_Bd.woff') format('woff')`,
     fontDisplay: 'optional',
   },
 };

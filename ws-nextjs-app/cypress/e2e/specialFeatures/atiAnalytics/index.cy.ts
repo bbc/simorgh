@@ -17,6 +17,7 @@ const canonicalTestSuites = [
     runforEnv: ['local', 'live'],
     service: 'burmese',
     pageIdentifier: 'live_coverage.ckg19998pldt.page',
+    siteId: 35,
     applicationType: 'responsive',
     contentType: 'live-coverage',
     componentTrackingContentType: LIVE_PAGE,
@@ -29,9 +30,10 @@ const canonicalTestSuites = [
   },
   {
     path: '/mundo/live/c7dkx155e626t',
-    runforEnv: ['local', 'test'],
+    runforEnv: ['local'],
     service: 'mundo',
     pageIdentifier: 'live_coverage.c7dkx155e626t.page',
+    siteId: 62,
     applicationType: 'responsive',
     contentType: 'live-coverage',
     componentTrackingContentType: LIVE_PAGE,
@@ -42,25 +44,47 @@ const canonicalTestSuites = [
       assertScrollableNavigationComponentClick,
     ],
   },
+  {
+    path: '/ws/languages',
+    runforEnv: ['local', 'test'],
+    service: 'ws',
+    pageIdentifier: 'ws.languages.page',
+    siteId: 64,
+    applicationType: 'responsive',
+    contentType: 'index-home',
+    tests: [assertPageView],
+  },
+  {
+    path: '/ws/languages',
+    runforEnv: ['live'],
+    service: 'ws',
+    pageIdentifier: 'ws.languages.page',
+    siteId: 64,
+    applicationType: 'responsive',
+    contentType: 'static',
+    tests: [assertPageView],
+  },
 ];
 
-const liteTestSuites = canonicalTestSuites.map(testSuite => {
-  const liteSiteTests = testSuite.tests.filter(
-    test =>
-      // Exclude component click tests, as component click support is not supported on all components yet
-      !test.name.toLowerCase().includes('click'),
-  );
+const liteTestSuites = canonicalTestSuites
+  .filter(({ path }) => path !== '/ws/languages')
+  .map(testSuite => {
+    const liteSiteTests = testSuite.tests.filter(
+      test =>
+        // Exclude component click tests, as component click support is not supported on all components yet
+        !test.name.toLowerCase().includes('click'),
+    );
 
-  liteSiteTests.push(assertLiteSiteSummaryComponentToMainSiteClick);
+    liteSiteTests.push(assertLiteSiteSummaryComponentToMainSiteClick);
 
-  return {
-    ...testSuite,
-    path: `${testSuite.path}.lite`,
-    applicationType: 'lite',
-    useReverb: false,
-    tests: [...liteSiteTests],
-  };
-});
+    return {
+      ...testSuite,
+      path: `${testSuite.path}.lite`,
+      applicationType: 'lite',
+      useReverb: false,
+      tests: [...liteSiteTests],
+    };
+  });
 
 runTestsForPage({
   testSuites: [...canonicalTestSuites, ...liteTestSuites],

@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Document Component should render AMP version correctly 1`] = `
 <html
@@ -115,7 +115,7 @@ exports[`Document Component should render APP version correctly 1`] = `
               window.__reverb.__rejectReverbLoaded();
             }, 5000);
             const reverbScript = document.createElement('script');
-            reverbScript.setAttribute('src','http://localhost:7080/static/js/reverb/reverb-3.10.1.js');
+            reverbScript.setAttribute('src','http://localhost:7080/static/js/reverb/reverb-3.10.2.js');
             document.head.appendChild(reverbScript);
             
     </script>
@@ -125,7 +125,7 @@ exports[`Document Component should render APP version correctly 1`] = `
       .css-7prgni-StyledLink{display:inline-block;}
     </style>
     <script>
-      window.SIMORGH_ENV_VARS={"SIMORGH_APP_ENV":"local","SIMORGH_ATI_BASE_URL":"https://logws1363.ati-host.net?","SIMORGH_BASE_URL":"http://localhost:7080","SIMORGH_CONFIG_CACHE_ITEMS":"400","SIMORGH_CONFIG_CACHE_MAX_AGE_SECONDS":"300","SIMORGH_CONFIG_TIMEOUT_SECONDS":"5","SIMORGH_CONFIG_URL":"https://config.test.api.bbci.co.uk/","SIMORGH_CSP_REPORTING_ENDPOINT":"https://ws.bbc-reporting-api.app/report-endpoint","SIMORGH_ICHEF_BASE_URL":"https://ichef.bbci.co.uk","SIMORGH_INCLUDES_BASE_URL":"https://www.test.bbc.com/ws/includes","SIMORGH_INCLUDES_BASE_AMP_URL":"https://news.test.files.bbci.co.uk","SIMORGH_MOST_READ_CDN_URL":"http://localhost:7080","SIMORGH_OPTIMIZELY_SDK_KEY":"LptPKDnHyAFu9V12s5xCz","SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN":"http://localhost:7080","SIMORGH_PUBLIC_STATIC_ASSETS_PATH":"/","SIMORGH_REVERB_SOURCE":"http://localhost:7080/static/js/reverb/reverb-3.10.1.js","SIMORGH_WEBVITALS_REPORTING_ENDPOINT":"https://ws.bbc-reporting-api.app/report-endpoint","SIMORGH_WEBVITALS_DEFAULT_SAMPLING_RATE":"100"}
+      window.SIMORGH_ENV_VARS={"SIMORGH_APP_ENV":"local","SIMORGH_ATI_BASE_URL":"https://logws1363.ati-host.net?","SIMORGH_BASE_URL":"http://localhost:7080","SIMORGH_CONFIG_CACHE_ITEMS":"400","SIMORGH_CONFIG_CACHE_MAX_AGE_SECONDS":"300","SIMORGH_CONFIG_TIMEOUT_SECONDS":"5","SIMORGH_CONFIG_URL":"https://config.test.api.bbci.co.uk/","SIMORGH_CSP_REPORTING_ENDPOINT":"https://ws.bbc-reporting-api.app/report-endpoint","SIMORGH_ICHEF_BASE_URL":"https://ichef.bbci.co.uk","SIMORGH_INCLUDES_BASE_URL":"https://www.test.bbc.com/ws/includes","SIMORGH_INCLUDES_BASE_AMP_URL":"https://news.test.files.bbci.co.uk","SIMORGH_MOST_READ_CDN_URL":"http://localhost:7080","SIMORGH_OPTIMIZELY_SDK_KEY":"LptPKDnHyAFu9V12s5xCz","SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN":"http://localhost:7080","SIMORGH_PUBLIC_STATIC_ASSETS_PATH":"/","SIMORGH_REVERB_SOURCE":"http://localhost:7080/static/js/reverb/reverb-3.10.2.js","SIMORGH_WEBVITALS_REPORTING_ENDPOINT":"https://ws.bbc-reporting-api.app/report-endpoint","SIMORGH_WEBVITALS_DEFAULT_SAMPLING_RATE":"100"}
     </script>
     <script
       type="text/javascript"
@@ -320,7 +320,7 @@ exports[`Document Component should render correctly 1`] = `
               window.__reverb.__rejectReverbLoaded();
             }, 5000);
             const reverbScript = document.createElement('script');
-            reverbScript.setAttribute('src','http://localhost:7080/static/js/reverb/reverb-3.10.1.js');
+            reverbScript.setAttribute('src','http://localhost:7080/static/js/reverb/reverb-3.10.2.js');
             document.head.appendChild(reverbScript);
             
     </script>
@@ -330,7 +330,7 @@ exports[`Document Component should render correctly 1`] = `
       .css-7prgni-StyledLink{display:inline-block;}
     </style>
     <script>
-      window.SIMORGH_ENV_VARS={"SIMORGH_APP_ENV":"local","SIMORGH_ATI_BASE_URL":"https://logws1363.ati-host.net?","SIMORGH_BASE_URL":"http://localhost:7080","SIMORGH_CONFIG_CACHE_ITEMS":"400","SIMORGH_CONFIG_CACHE_MAX_AGE_SECONDS":"300","SIMORGH_CONFIG_TIMEOUT_SECONDS":"5","SIMORGH_CONFIG_URL":"https://config.test.api.bbci.co.uk/","SIMORGH_CSP_REPORTING_ENDPOINT":"https://ws.bbc-reporting-api.app/report-endpoint","SIMORGH_ICHEF_BASE_URL":"https://ichef.bbci.co.uk","SIMORGH_INCLUDES_BASE_URL":"https://www.test.bbc.com/ws/includes","SIMORGH_INCLUDES_BASE_AMP_URL":"https://news.test.files.bbci.co.uk","SIMORGH_MOST_READ_CDN_URL":"http://localhost:7080","SIMORGH_OPTIMIZELY_SDK_KEY":"LptPKDnHyAFu9V12s5xCz","SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN":"http://localhost:7080","SIMORGH_PUBLIC_STATIC_ASSETS_PATH":"/","SIMORGH_REVERB_SOURCE":"http://localhost:7080/static/js/reverb/reverb-3.10.1.js","SIMORGH_WEBVITALS_REPORTING_ENDPOINT":"https://ws.bbc-reporting-api.app/report-endpoint","SIMORGH_WEBVITALS_DEFAULT_SAMPLING_RATE":"100"}
+      window.SIMORGH_ENV_VARS={"SIMORGH_APP_ENV":"local","SIMORGH_ATI_BASE_URL":"https://logws1363.ati-host.net?","SIMORGH_BASE_URL":"http://localhost:7080","SIMORGH_CONFIG_CACHE_ITEMS":"400","SIMORGH_CONFIG_CACHE_MAX_AGE_SECONDS":"300","SIMORGH_CONFIG_TIMEOUT_SECONDS":"5","SIMORGH_CONFIG_URL":"https://config.test.api.bbci.co.uk/","SIMORGH_CSP_REPORTING_ENDPOINT":"https://ws.bbc-reporting-api.app/report-endpoint","SIMORGH_ICHEF_BASE_URL":"https://ichef.bbci.co.uk","SIMORGH_INCLUDES_BASE_URL":"https://www.test.bbc.com/ws/includes","SIMORGH_INCLUDES_BASE_AMP_URL":"https://news.test.files.bbci.co.uk","SIMORGH_MOST_READ_CDN_URL":"http://localhost:7080","SIMORGH_OPTIMIZELY_SDK_KEY":"LptPKDnHyAFu9V12s5xCz","SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN":"http://localhost:7080","SIMORGH_PUBLIC_STATIC_ASSETS_PATH":"/","SIMORGH_REVERB_SOURCE":"http://localhost:7080/static/js/reverb/reverb-3.10.2.js","SIMORGH_WEBVITALS_REPORTING_ENDPOINT":"https://ws.bbc-reporting-api.app/report-endpoint","SIMORGH_WEBVITALS_DEFAULT_SAMPLING_RATE":"100"}
     </script>
     <script
       type="text/javascript"

@@ -1,15 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Canonical Articles A11y I can see the skip to content link 1`] = `"مشاهده محتوا"`;
 
-exports[`Canonical Articles Analytics ATI tracking pixel excluding src 1`] = `
-<img
-  alt=""
-  height="1px"
-  style="position:absolute"
-  width="1px"
-/>
-`;
+exports[`Canonical Articles Analytics ATI tracking pixel excluding src 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" >"`;
 
 exports[`Canonical Articles Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
 
@@ -110,7 +103,7 @@ exports[`Canonical Articles Footer Anchors should match text and url 8`] = `
 exports[`Canonical Articles Footer Anchors should match text and url 9`] = `
 {
   "text": "سیاست ما درباره لینک دادن به سایت های دیگر.",
-  "url": "https://www.bbc.com/persian/institutional/2011/04/000001_links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
 }
 `;
 
@@ -244,7 +237,9 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
     <noscript
       class="bbc-n2zqlz"
     >
-      &lt;strong&gt;برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.&lt;/strong&gt;
+      <strong>
+        برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.
+      </strong>
     </noscript>
   </div>
   <button
@@ -292,7 +287,7 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
     </time>
   </button>
   <div
-    class="bbc-lgx6cw"
+    class="bbc-1jf2q50"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
@@ -319,7 +314,9 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
     <noscript
       class="bbc-n2zqlz"
     >
-      &lt;strong&gt;برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.&lt;/strong&gt;
+      <strong>
+        برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.
+      </strong>
     </noscript>
   </div>
   <button
@@ -367,7 +364,7 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
     </time>
   </button>
   <div
-    class="bbc-lgx6cw"
+    class="bbc-1jf2q50"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
@@ -398,7 +395,9 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
       <noscript
         class="bbc-n2zqlz"
       >
-        &lt;strong&gt;برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.&lt;/strong&gt;
+        <strong>
+          برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.
+        </strong>
       </noscript>
     </div>
     <button
@@ -446,7 +445,7 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
       </time>
     </button>
     <div
-      class="bbc-lgx6cw"
+      class="bbc-1jf2q50"
       style="padding-bottom:0;overflow:hidden"
     >
       <img

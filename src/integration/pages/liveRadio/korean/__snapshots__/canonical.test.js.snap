@@ -1,15 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Canonical Korean Live Radio Page A11y I can see the skip to content link 1`] = `"내용 보기"`;
 
-exports[`Canonical Korean Live Radio Page Analytics ATI tracking pixel excluding src 1`] = `
-<img
-  alt=""
-  height="1px"
-  style="position:absolute"
-  width="1px"
-/>
-`;
+exports[`Canonical Korean Live Radio Page Analytics ATI tracking pixel excluding src 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" >"`;
 
 exports[`Canonical Korean Live Radio Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
 
@@ -107,7 +100,7 @@ exports[`Canonical Korean Live Radio Page Footer Anchors should match text and u
 exports[`Canonical Korean Live Radio Page Footer Anchors should match text and url 9`] = `
 {
   "text": "외부 링크에 대한 본사 정책 보기",
-  "url": "https://www.bbc.com/editorialguidelines/guidance/feeds-and-links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
 }
 `;
 
@@ -164,7 +157,17 @@ exports[`Canonical Korean Live Radio Page Media Loader renders a valid container
     data-e2e="media-player"
   >
     <noscript>
-      &lt;div&gt;&lt;div class="bbc-i4t8f7"&gt;&lt;strong class="bbc-pow7hy"&gt;사용 기기에서 미디어 재생이 지원되지 않습니다&lt;/strong&gt;&lt;/div&gt;&lt;/div&gt;
+      <div>
+        <div
+          class="bbc-i4t8f7"
+        >
+          <strong
+            class="bbc-pow7hy"
+          >
+            사용 기기에서 미디어 재생이 지원되지 않습니다
+          </strong>
+        </div>
+      </div>
     </noscript>
   </div>
 </figure>

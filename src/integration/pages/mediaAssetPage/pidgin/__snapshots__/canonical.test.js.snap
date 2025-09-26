@@ -1,15 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Canonical Media Asset Page A11y I can see the skip to content link 1`] = `"Waka go wetin de inside"`;
 
-exports[`Canonical Media Asset Page Analytics ATI tracking pixel excluding src 1`] = `
-<img
-  alt=""
-  height="1px"
-  style="position:absolute"
-  width="1px"
-/>
-`;
+exports[`Canonical Media Asset Page Analytics ATI tracking pixel excluding src 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" >"`;
 
 exports[`Canonical Media Asset Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
 
@@ -119,7 +112,7 @@ exports[`Canonical Media Asset Page Footer Anchors should match text and url 8`]
 exports[`Canonical Media Asset Page Footer Anchors should match text and url 9`] = `
 {
   "text": "De way wey we de take go external link.",
-  "url": "https://www.bbc.com/editorialguidelines/guidance/feeds-and-links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
 }
 `;
 
@@ -185,11 +178,11 @@ exports[`Canonical Media Asset Page Header Navigation link should match text and
 }
 `;
 
-exports[`Canonical Media Asset Page I can see a bulleted list item 1`] = `"<Media Asset Page>"`;
+exports[`Canonical Media Asset Page I can see a bulleted list item 1`] = `"this is the link text"`;
 
-exports[`Canonical Media Asset Page I can see a bulleted list item with link: <Media Asset Page> 1`] = `"/afrique/23248423"`;
+exports[`Canonical Media Asset Page I can see a bulleted list item with link 1`] = `"/afrique/23248423"`;
 
-exports[`Canonical Media Asset Page Main heading should match text 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur"`;
+exports[`Canonical Media Asset Page Main heading should match text 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sitamet, consectetur"`;
 
 exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 1`] = `
 {
@@ -267,7 +260,7 @@ exports[`Canonical Media Asset Page SEO Dir attribute 1`] = `"ltr"`;
 
 exports[`Canonical Media Asset Page SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`Canonical Media Asset Page SEO Heading level 1 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur"`;
+exports[`Canonical Media Asset Page SEO Heading level 1 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sitamet, consectetur"`;
 
 exports[`Canonical Media Asset Page SEO Lang attribute 1`] = `"pcm"`;
 
@@ -354,7 +347,7 @@ exports[`Canonical Media Asset Page SEO OG type 1`] = `"article"`;
 
 exports[`Canonical Media Asset Page SEO OG url 1`] = `"http://localhost:7080/pidgin/23248703"`;
 
-exports[`Canonical Media Asset Page SEO Page title 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur - BBC News Pidgin"`;
+exports[`Canonical Media Asset Page SEO Page title 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sitamet, consectetur - BBC News Pidgin"`;
 
 exports[`Canonical Media Asset Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 

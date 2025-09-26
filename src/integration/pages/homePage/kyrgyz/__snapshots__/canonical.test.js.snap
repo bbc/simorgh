@@ -1,15 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Canonical Home Page A11y I can see the skip to content link 1`] = `"Сайтка өтүү"`;
 
-exports[`Canonical Home Page Analytics ATI tracking pixel excluding src 1`] = `
-<img
-  alt=""
-  height="1px"
-  style="position:absolute"
-  width="1px"
-/>
-`;
+exports[`Canonical Home Page Analytics ATI tracking pixel excluding src 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" >"`;
 
 exports[`Canonical Home Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
 
@@ -107,7 +100,7 @@ exports[`Canonical Home Page Footer Anchors should match text and url 8`] = `
 exports[`Canonical Home Page Footer Anchors should match text and url 9`] = `
 {
   "text": "Башка интернет сайттардын мазмуну боюнча биздин позиция.",
-  "url": "https://www.bbc.com/editorialguidelines/guidance/feeds-and-links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
 }
 `;
 
@@ -119,29 +112,29 @@ exports[`Canonical Home Page Header I can see the branding 1`] = `"BBC News, К�
 
 exports[`Canonical Home Page Header Navigation link should match text and url 1`] = `
 {
-  "text": "Ачылып турган баракча, Башталгыч бет",
+  "text": "Ачылып турган баракча, Башкы бет",
   "url": "/kyrgyz",
 }
 `;
 
 exports[`Canonical Home Page Header Navigation link should match text and url 2`] = `
 {
-  "text": "Кыргызстан",
-  "url": "/kyrgyz/topics/cz74kjpyk07t",
+  "text": "Видео жаңылыктар",
+  "url": "/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4t",
 }
 `;
 
 exports[`Canonical Home Page Header Navigation link should match text and url 3`] = `
 {
-  "text": "Дүйнө",
-  "url": "/kyrgyz/topics/ck2l9z012nkt",
+  "text": "Кыргызстан",
+  "url": "/kyrgyz/topics/cz74kjpyk07t",
 }
 `;
 
 exports[`Canonical Home Page Header Navigation link should match text and url 4`] = `
 {
-  "text": "САПАР",
-  "url": "/kyrgyz/topics/c6z8lg83w7mt",
+  "text": "Дүйнө",
+  "url": "/kyrgyz/topics/ck2l9z012nkt",
 }
 `;
 
@@ -149,13 +142,6 @@ exports[`Canonical Home Page Header Navigation link should match text and url 5`
 {
   "text": "Журнал",
   "url": "/kyrgyz/topics/czp8pjrkgp0t",
-}
-`;
-
-exports[`Canonical Home Page Header Navigation link should match text and url 6`] = `
-{
-  "text": "Подкасттар",
-  "url": "/kyrgyz/podcasts/p0c80v81",
 }
 `;
 
@@ -332,13 +318,13 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 1,
-          "url": "https://www.bbc.com/sounds/play/live:bbc_sounds_mundo",
+          "url": "https://www.bbc.com/kyrgyz",
         },
         {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 2,
-          "url": "https://www.bbc.com/send/pepe",
+          "url": "https://www.bbc.com/kyrgyz",
         },
         {
           "@context": "http://schema.org",
@@ -350,7 +336,7 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 4,
-          "url": "https://www.bbc.com/weather/videos/cxvdd15r56do",
+          "url": "https://www.bbc.com/kyrgyz",
         },
         {
           "@context": "http://schema.org",
@@ -374,7 +360,7 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 8,
-          "url": "https://www.bbc.com/sounds/play/m001dmln",
+          "url": "https://www.bbc.com/kyrgyz",
         },
         {
           "@context": "http://schema.org",
@@ -398,7 +384,7 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 12,
-          "url": "https://www.bbc.com/articles/cem4313m1ldo",
+          "url": "https://www.bbc.com/kyrgyz/articles/cem4313m1ldo",
         },
         {
           "@context": "http://schema.org",
@@ -662,7 +648,7 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 56,
-          "url": "https://www.bbc.com/",
+          "url": "https://www.bbc.com/kyrgyz",
         },
         {
           "@context": "http://schema.org",
@@ -718,9 +704,21 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
           "position": 65,
           "url": "https://www.test.bbc.com/pidgin/live/cg2pr8l7j3nt",
         },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 66,
+          "url": "https://www.bbc.com/hausa/articles/cpvpg2e6130o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 67,
+          "url": "https://www.bbc.com/hausa/articles/c2l2e8px0l3o",
+        },
       ],
       "name": "BBC News Кыргыз Кызматы",
-      "numberOfItems": 65,
+      "numberOfItems": 67,
     },
   ],
 }
