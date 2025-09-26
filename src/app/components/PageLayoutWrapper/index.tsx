@@ -1,7 +1,7 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
 
-import React, { PropsWithChildren, use, useContext } from 'react';
+import React, { PropsWithChildren, use } from 'react';
 import { jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
@@ -51,7 +51,7 @@ const PageLayoutWrapper = ({
   status,
 }: PropsWithChildren<Props>) => {
   const { service } = use(ServiceContext);
-  const { isLite, isAmp, nonce, cspHeader } = useContext(RequestContext);
+  const { isLite, isAmp, nonce, cspHeader } = use(RequestContext);
   const isPWA = useIsPWA();
 
   const isErrorPage = ![200].includes(status) || !status;

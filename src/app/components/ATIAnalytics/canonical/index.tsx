@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useEffect, useState, use } from 'react';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { RequestContext } from '#app/contexts/RequestContext';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
@@ -44,7 +44,7 @@ const CanonicalATIAnalytics = ({
   pageviewParams,
   reverbParams,
 }: ATIAnalyticsProps) => {
-  const { isLite, nonce } = useContext(RequestContext);
+  const { isLite, nonce } = use(RequestContext);
 
   usePWAInstallTracker();
 
