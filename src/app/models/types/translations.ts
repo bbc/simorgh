@@ -209,7 +209,7 @@ export interface Translations {
     linkText: string;
   };
   topStoriesTitle?: string;
-  mostReadTitle?: string;
+  mostReadBadgeText?: string;
   featuresAnalysisTitle?: string;
   latestMediaTitle?: string;
   infoBannerLabel?: string;
