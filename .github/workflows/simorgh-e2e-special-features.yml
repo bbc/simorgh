@@ -31,8 +31,8 @@ jobs:
       - name: Add bbc.com domain
         run: sudo echo "127.0.0.1 localhost.bbc.com" | sudo tee -a /etc/hosts
 
-      - name: Install Cypress dependency
-        run: yarn add cypress --dev
+      - name: Install dependencies
+        run: yarn install
 
       - name: Install Cypress binary
         run: yarn cypress:install
