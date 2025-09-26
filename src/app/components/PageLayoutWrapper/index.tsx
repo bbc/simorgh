@@ -205,22 +205,17 @@ const PageLayoutWrapper = ({
 
   return (
     <>
-      <Helmet
-        script={[
-          {
-            type: 'text/javascript',
-            // WIP: TBC
-            innerHTML: `
-                (function() {
-                  if (window.__bbcScriptLoaded) return;
-                  window.__bbcScriptLoaded = true;                  
-                  ${fontJs}
-                })();
-            `,
-            nonce: nonce ?? undefined,
-          },
-        ]}
-      />
+      {fontJs && (
+        <Helmet
+          script={[
+            {
+              type: 'text/javascript',
+              innerHTML: `(function() { ${fontJs} })();`,
+              nonce: nonce ?? undefined,
+            },
+          ]}
+        />
+      )}
 
       <Helmet>
         {nonce && (
