@@ -107,6 +107,32 @@ const styles = {
         },
       }),
     }),
+  mostReadBadgeLarge: ({ fontSizes, fontVariants, palette, spacings }: Theme) =>
+    css({
+      position: 'relative',
+      display: 'inline',
+      verticalAlign: '0.25rem',
+      backgroundColor: palette.POSTBOX,
+      color: palette.WHITE,
+      borderRadius: `${spacings.HALF}rem`,
+      ...fontSizes.pica,
+      ...fontVariants.sansBold,
+      padding: `${spacings.HALF}rem`,
+      marginInlineEnd: `${spacings.HALF}rem`,
+      height: '100%',
+    }),
+  mostReadBadgeSmall: ({ fontSizes, fontVariants, palette, spacings }: Theme) =>
+    css({
+      position: 'relative',
+      display: 'inline-flex',
+      backgroundColor: palette.POSTBOX,
+      color: palette.WHITE,
+      borderRadius: pixelsToRem(4),
+      ...fontSizes.minion,
+      ...fontVariants.sansBold,
+      padding: pixelsToRem(4),
+      marginInlineEnd: pixelsToRem(4),
+    }),
 };
 
 const DesktopBigPromo = css({
