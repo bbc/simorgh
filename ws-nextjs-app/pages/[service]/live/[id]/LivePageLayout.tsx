@@ -124,15 +124,17 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
       ? liveTextStream.content.data.results.find(post => post.urn === assetId)
       : null;
 
-  const metaImage =
-    postWithMatchingAssetId && getImageFromPost(postWithMatchingAssetId)
-      ? getImageFromPost(postWithMatchingAssetId)
-      : promoImage;
+  const imageFromPost = postWithMatchingAssetId
+    ? getImageFromPost(postWithMatchingAssetId)
+    : null;
 
-  const metaTitle =
-    postWithMatchingAssetId && getHeadlineFromPost(postWithMatchingAssetId)
-      ? getHeadlineFromPost(postWithMatchingAssetId)
-      : pageTitle;
+  const metaImage = imageFromPost || promoImage;
+
+  const headlineFromPost = postWithMatchingAssetId
+    ? getHeadlineFromPost(postWithMatchingAssetId)
+    : null;
+
+  const metaTitle = headlineFromPost || pageTitle;
 
   return (
     <>
