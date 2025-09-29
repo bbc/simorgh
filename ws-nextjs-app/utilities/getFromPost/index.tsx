@@ -78,13 +78,13 @@ export const getHeadlineFromPost = (post: Post) => {
     block => block.type === 'headline',
   ) as OptimoBlock | undefined;
 
-  if (!headlineBlock || !('model' in headlineBlock)) return '';
+  if (!headlineBlock || !('model' in headlineBlock)) return null;
 
   const textBlock = (
     headlineBlock.model as { blocks?: OptimoBlock[] }
   ).blocks?.find(block => block.type === 'text') as OptimoBlock | undefined;
 
-  if (!textBlock || !('model' in textBlock)) return '';
+  if (!textBlock || !('model' in textBlock)) return null;
 
   const paragraphBlock = (
     textBlock.model as { blocks?: OptimoBlock[] }
@@ -96,5 +96,5 @@ export const getHeadlineFromPost = (post: Post) => {
     'model' in paragraphBlock &&
     typeof (paragraphBlock.model as any).text === 'string'
     ? (paragraphBlock.model as { text: string }).text
-    : '';
+    : null;
 };
