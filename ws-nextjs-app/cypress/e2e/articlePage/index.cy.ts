@@ -216,7 +216,7 @@ const nonSmokeCanonicalTestSuites = [
 const canonicalTestSuites = Cypress.env('SMOKE')
   ? smokeCanonicalTestSuites
   : nonSmokeCanonicalTestSuites;
-console.log('CHECK 123', Cypress.env('SMOKE'));
+
 const ampTestSuites = canonicalTestSuites.map(testSuite => {
   return {
     ...testSuite,
