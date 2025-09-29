@@ -17,24 +17,16 @@ import { bbcDomains, advertisingServiceCountryDomains } from './domainLists';
 
 const nonce = '7088dae1fe17eee6bf8a2ccbcf9ac115';
 
-// Express Fixtures
-const req = ({ urlExample = '', originExample = '' } = {}) => ({
-  url: urlExample,
-  headers: {
-    'user-agent': 'local-agent',
-    'bbc-origin': originExample,
-  },
-});
-
 let headers = {};
 
 const res = {
   setHeader: (key, value) => {
     headers[key] = value;
   },
+  set: (key, value) => {
+    headers[key] = value;
+  },
 };
-
-const next = jest.fn();
 
 describe('cspHeader', () => {
   afterEach(() => {
@@ -53,7 +45,7 @@ describe('cspHeader', () => {
       originExample: 'https://www.bbc.com',
       urlExample: 'https://www.bbc.com/pidgin.amp',
       childSrcExpectation: ['blob:'],
-      connectSrcExpectation: ["'self' https:"],
+      connectSrcExpectation: ["'self' https: ws:"],
       defaultSrcExpectation: [
         ...bbcDomains,
         'https://*.googlesyndication.com',
@@ -125,7 +117,7 @@ describe('cspHeader', () => {
       originExample: 'https://www.bbc.com',
       urlExample: 'https://www.bbc.com/pidgin',
       childSrcExpectation: ["'self'"],
-      connectSrcExpectation: ["'self' https:"],
+      connectSrcExpectation: ["'self' https: ws:"],
       defaultSrcExpectation: [
         ...bbcDomains,
         'https://*.googlesyndication.com',
@@ -222,6 +214,7 @@ describe('cspHeader', () => {
         ...advertisingServiceCountryDomains,
         "'self'",
         "'unsafe-inline'",
+        "'unsafe-eval'",
         `'nonce-${nonce}'`,
       ].sort(),
       styleSrcExpectation: [
@@ -242,7 +235,7 @@ describe('cspHeader', () => {
       originExample: 'https://www.test.bbc.com',
       urlExample: 'https://www.test.bbc.com/pidgin.amp',
       childSrcExpectation: ['blob:'],
-      connectSrcExpectation: ["'self' https:"],
+      connectSrcExpectation: ["'self' https: ws:"],
       defaultSrcExpectation: [
         ...bbcDomains,
         'https://*.googlesyndication.com',
@@ -316,7 +309,7 @@ describe('cspHeader', () => {
       originExample: 'https://www.test.bbc.com',
       urlExample: 'https://www.test.bbc.com/pidgin',
       childSrcExpectation: ["'self'"],
-      connectSrcExpectation: ["'self' https:"],
+      connectSrcExpectation: ["'self' https: ws:"],
       defaultSrcExpectation: [
         ...bbcDomains,
         'https://*.googlesyndication.com',
@@ -417,6 +410,7 @@ describe('cspHeader', () => {
         ...advertisingServiceCountryDomains,
         "'self'",
         "'unsafe-inline'",
+        "'unsafe-eval'",
         `'nonce-${nonce}'`,
       ].sort(),
       styleSrcExpectation: [
@@ -435,8 +429,6 @@ describe('cspHeader', () => {
     ({
       isAmp,
       isLive,
-      originExample,
-      urlExample,
       childSrcExpectation,
       connectSrcExpectation,
       defaultSrcExpectation,
@@ -504,9 +496,7 @@ describe('cspHeader', () => {
         it(`Then injectCspHeader middleware applies the correct Content-Security-Policy header`, () => {
           process.env.SIMORGH_APP_ENV = isLive ? 'live' : 'test';
 
-          injectCspHeader(req({ urlExample, originExample }), res, next, nonce);
-
-          expect(next).toHaveBeenCalled();
+          injectCspHeader({ isAmp, nonce, res });
 
           const expectedCSPHeaderString =
             `default-src ${defaultSrcExpectation.join(' ')};` +
@@ -520,7 +510,7 @@ describe('cspHeader', () => {
             `media-src ${mediaSrcExpectation.join(' ')};` +
             `worker-src ${workerSrcExpectation.join(' ')};` +
             `report-to worldsvc;` +
-            `upgrade-insecure-requests`;
+            `upgrade-insecure-requests;`;
 
           expect(headers['Content-Security-Policy']).toEqual(
             expectedCSPHeaderString,
@@ -531,7 +521,7 @@ describe('cspHeader', () => {
           process.env.SIMORGH_APP_ENV = isLive ? 'live' : 'test';
           process.env.SIMORGH_CSP_REPORTING_ENDPOINT = 'mocked-value';
 
-          injectCspHeader(req({ urlExample, originExample }), res, next, nonce);
+          injectCspHeader({ isAmp, nonce, res });
 
           expect(headers['report-to']).toEqual(
             JSON.stringify({

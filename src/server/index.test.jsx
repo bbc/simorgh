@@ -149,6 +149,7 @@ const testRenderedData =
       service,
       routes,
       url,
+      nonce: null,
     };
 
     if (variant) {

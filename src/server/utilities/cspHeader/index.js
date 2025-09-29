@@ -23,6 +23,7 @@ const injectCspHeader = ({ isAmp, service, nonce, res }) => {
     service,
     nonce,
   });
+
   let cspHeader = '';
   Object.keys(directives).forEach(directive => {
     cspHeader += `${directive} `;
@@ -31,8 +32,9 @@ const injectCspHeader = ({ isAmp, service, nonce, res }) => {
     } else {
       cspHeader += directives[directive];
     }
-    cspHeader += ';';
+    cspHeader = `${cspHeader.trimEnd()};`;
   });
+
   res.set('Content-Security-Policy', cspHeader);
 };
 
