@@ -17,6 +17,12 @@ const faultTolerantFetch = ({ url, headers }) =>
     });
 
     operation.attempt(async currentAttempt => {
+      // // Optional delay before first attempt
+      // if (currentAttempt === 1) {
+      //   // eslint-disable-next-line no-promise-executor-return
+      //   await new Promise(res => setTimeout(res, 1000)); // wait 1s
+      // }
+
       if (currentAttempt > 1) {
         console.warn(
           `Error getting HTML from ${url}`,
@@ -27,15 +33,30 @@ const faultTolerantFetch = ({ url, headers }) =>
       try {
         const response = await fetch(url, headers && { headers });
 
+        console.log(
+          `Received HTTP ${response.status} ${response.statusText} for ${url}`,
+        );
+
         if (!response.ok) {
           const error = new Error(
             `Error: Received HTTP ${response.status} ${response.statusText} for ${url}`,
           );
+
+          // Retry on server errors (5xx) - handle nextJS timeout
+          // not sure this fully works
+          if (response.status === 500) {
+            if (operation.retry(error)) {
+              return;
+            }
+          }
+
           reject(error);
           return;
         }
 
         const html = await response.text();
+
+        // console.log(`Final HTML for ${url}:\n`, html); // show first 500 char
 
         const window = new Window({ url });
         const document = new window.DOMParser().parseFromString(
@@ -47,6 +68,24 @@ const faultTolerantFetch = ({ url, headers }) =>
         );
 
         resolve({ window, document });
+
+        // // Check for required elements in the parsed DOM
+        // const hasMain = !!document.querySelector('main');
+        // const hasTime = !!document.querySelector('time');
+
+        // if (!hasMain || !hasTime) {
+        //   const error = new Error(
+        //     `Parsed document missing expected elements for ${url}:` +
+        //       `${!hasMain ? ' <main>' : ''}${!hasTime ? ' <time>' : ''}`,
+        //   );
+        //   if (operation.retry(error)) {
+        //     return;
+        //   }
+        //   reject(operation.mainError());
+        //   return;
+        // }
+
+        // resolve({ window, document });
       } catch (error) {
         const isSocketHangUpError = error
           .toString()

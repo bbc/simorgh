@@ -18,16 +18,24 @@ class CustomTestEnvironment extends TestEnvironment {
 
   url: string;
 
+  // isInUK: string | string[];
+
   constructor(config: JestEnvironmentConfig, context: EnvironmentContext) {
     super(config, context);
     const { platform } = config.projectConfig.testEnvironmentOptions;
-    const { pathname, service, displayAds = 'false' } = context.docblockPragmas;
+    const {
+      pathname,
+      service,
+      displayAds = 'false',
+      // isInUK = 'no',
+    } = context.docblockPragmas;
 
     const pageType = getPageTypeFromTestPath(context.testPath);
 
     this.pageType = camelCaseToText(pageType);
     this.service = service;
     this.displayAds = displayAds === 'true';
+    // this.isInUK = isInUK;
     this.url = `http://localhost:7081${pathname}${
       platform === 'amp' ? '.amp' : ''
     }`;
@@ -41,6 +49,7 @@ class CustomTestEnvironment extends TestEnvironment {
         url: this.url,
         headers: {
           ...(this.displayAds && { 'BBC-Adverts': 'true' }),
+          // ...{ 'x-bbc-edge-isuk': this.isInUK },
         },
       });
 
@@ -63,6 +72,8 @@ class CustomTestEnvironment extends TestEnvironment {
   getVmContext() {
     return super.getVmContext();
   }
+
+  // run scripts?
 }
 
 export default CustomTestEnvironment;

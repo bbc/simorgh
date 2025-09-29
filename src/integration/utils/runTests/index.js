@@ -74,6 +74,8 @@ const runNextJSTests = () =>
     'yarn',
     [
       'test:integration',
+      // '--runInBand',
+      // '--colors',
       '--detectOpenHandles',
       '--forceExit',
       ...getJestArgs(),

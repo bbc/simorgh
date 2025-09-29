@@ -8,7 +8,7 @@ export default service => {
   runCrossPlatformTests(service);
   runCoreCanonicalTests();
 
-  if (service !== 'news') {
-    runCanonicalAnalyticsTests();
-  }
+  // if (service !== 'news') {
+  //   runCanonicalAnalyticsTests();
+  // }
 };

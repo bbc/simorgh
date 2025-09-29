@@ -8,6 +8,7 @@ const { react, ...compilerOptionsPaths } = compilerOptions.paths;
 
 const canonicalIntegrationTests = {
   displayName: 'Integration Tests - Canonical',
+  // setupFiles: ['../src/testHelpers/jest-setup.js'], // see - don't think this does anything
   testEnvironment: './integration/IntegrationTestEnvironment.ts',
   testEnvironmentOptions: {
     platform: 'canonical',
