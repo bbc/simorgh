@@ -45,6 +45,7 @@ class CustomTestEnvironment extends TestEnvironment {
     await super.setup();
 
     try {
+      console.log("I'm trying to fetch", this.url);
       const { window, document } = await fetchHtml({
         url: this.url,
         headers: {
@@ -61,6 +62,7 @@ class CustomTestEnvironment extends TestEnvironment {
         fetch: { value: fetch },
       });
     } catch (e) {
+      console.log('There is an error with', this.url);
       console.error(e);
     }
   }

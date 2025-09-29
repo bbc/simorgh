@@ -8,13 +8,17 @@ dns.setDefaultResultOrder('ipv4first');
 
 const faultTolerantFetch = ({ url, headers }) =>
   new Promise((resolve, reject) => {
-    const oneSecond = 1000;
+    // const oneSecond = 1000;
+    const fiveSeconds = 5000;
     const operation = retry.operation({
       retries: 5,
       factor: 1,
-      minTimeout: oneSecond,
-      maxTimeout: oneSecond,
+      minTimeout: fiveSeconds,
+      maxTimeout: fiveSeconds,
     });
+
+    console.log("i'm running for", url);
+    console.log('headers', headers);
 
     operation.attempt(async currentAttempt => {
       // // Optional delay before first attempt
@@ -22,6 +26,7 @@ const faultTolerantFetch = ({ url, headers }) =>
       //   // eslint-disable-next-line no-promise-executor-return
       //   await new Promise(res => setTimeout(res, 1000)); // wait 1s
       // }
+      console.log("I'm trying - attempt number", currentAttempt);
 
       if (currentAttempt > 1) {
         console.warn(
@@ -56,6 +61,8 @@ const faultTolerantFetch = ({ url, headers }) =>
 
         const html = await response.text();
 
+        console.log('I have the HTML I need');
+
         // console.log(`Final HTML for ${url}:\n`, html); // show first 500 char
 
         const window = new Window({ url });
@@ -87,6 +94,7 @@ const faultTolerantFetch = ({ url, headers }) =>
 
         // resolve({ window, document });
       } catch (error) {
+        console.log('Oops There is an error', error.toString());
         const isSocketHangUpError = error
           .toString()
           .includes('Error: socket hang up');
