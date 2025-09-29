@@ -17,6 +17,7 @@ const services = [
   'japanese',
   'korean',
   'kyrgyz',
+  'magyarul',
   'marathi',
   'mundo',
   'nepali',

@@ -18,6 +18,7 @@ export default [
   'japanese',
   'korean',
   'kyrgyz',
+  'magyarul',
   'marathi',
   'mundo',
   'naidheachdan',
