@@ -61,7 +61,7 @@ export const getImageFromPost = (post: Post) => {
 
   return locator
     ? {
-        url: `https://ichef.bbci.co.uk/news/${width}/cpsprodpb/${locator.replace(/^.*\//, '')}`,
+        url: `https://ichef.bbci.co.uk/ace/ws/${width}/cpsprodpb/${locator}`,
         altText,
         width,
         height,
