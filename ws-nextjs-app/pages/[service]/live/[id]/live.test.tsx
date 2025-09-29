@@ -447,7 +447,7 @@ describe('Live Page', () => {
     render(<Live pageData={pageData} assetId={assetId} />);
 
     const expectedImageUrl =
-      'https://ichef.bbci.co.uk/news/624/cpsprodpb/0781b49d-0b5b-43b5-9b39-605b189c2136.jpg';
+      'https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/vivo/test/images/2023/12/7/0781b49d-0b5b-43b5-9b39-605b189c2136.jpg';
 
     const helmetMetaTags = Helmet.peek().metaTags;
     const ogImageMeta = helmetMetaTags.find(

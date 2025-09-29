@@ -73,7 +73,7 @@ describe('getImageFromPost', () => {
       },
     } as Post;
     expect(getImageFromPost(post)).toEqual({
-      url: 'https://ichef.bbci.co.uk/news/640/cpsprodpb/123.jpg',
+      url: 'https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/images/123.jpg',
       altText: 'Alt text here',
       width: 640,
       height: 480,
@@ -106,7 +106,7 @@ describe('getImageFromPost', () => {
       },
     } as Post;
     expect(getImageFromPost(post)).toEqual({
-      url: 'https://ichef.bbci.co.uk/news/300/cpsprodpb/abc.png',
+      url: 'https://ichef.bbci.co.uk/ace/ws/300/cpsprodpb/images/abc.png',
       altText: '',
       width: 300,
       height: 200,
