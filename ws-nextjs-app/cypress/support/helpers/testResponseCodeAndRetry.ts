@@ -3,7 +3,16 @@ export default ({
   responseCode = 200,
   retriesLeft = 2,
   allowFallback = false,
+}: {
+  url?: string;
+  responseCode?: number;
+  retriesLeft?: number;
+  allowFallback?: boolean;
 }) => {
+  if (!url) {
+    throw new Error('URL is undefined at function testResponseCodeAndRetry');
+  }
+
   cy.request({ url, retryOnStatusCodeFailure: true }).then(
     ({ status, headers }) => {
       expect(status, `Unexpected status code for ${url}`).to.equal(
