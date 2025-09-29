@@ -255,12 +255,5 @@ const liteTestSuites = canonicalTestSuites
 
 runTestsForPage({
   pageType: 'articles',
-  testSuites: [
-    {
-      path: '/gahuza/articles/c5y51yxeg53o',
-      runforEnv: ['local', 'live'],
-      service: 'gahuza',
-      tests: [...canonicalTests],
-    },
-  ],
+  testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],
 });
