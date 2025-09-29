@@ -1,12 +1,10 @@
-import { Article } from '#app/models/types/optimo';
+import { LanguagesPageProps } from '../pages/ws/types';
 
 declare global {
   interface Window {
     __NEXT_DATA__: {
       props: {
-        pageProps: {
-          pageData: Article;
-        };
+        pageProps: LanguagesPageProps;
       };
     };
   }

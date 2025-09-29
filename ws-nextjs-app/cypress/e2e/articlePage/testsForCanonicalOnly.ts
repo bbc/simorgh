@@ -48,8 +48,7 @@ export default ({
         });
 
         it('should have an image with a caption', () => {
-          cy.window().then(win => {
-            const { pageData } = win.__NEXT_DATA__.props.pageProps;
+          cy.getPageDataFromWindow().then(pageData => {
             const imageData = getBlockData('image', pageData);
             const captionBlock =
               imageData?.model?.blocks &&
@@ -103,105 +102,110 @@ export default ({
 
     describe('Media Player: Canonical', () => {
       it('should render a visible placeholder image', () => {
-        cy.window().then(win => {
-          const { pageData } = win.__NEXT_DATA__.props.pageProps;
-          const media = getBlockData('video', pageData);
+        cy.window()
+          .getPageDataFromWindow()
+          .then(pageData => {
+            const media = getBlockData('video', pageData);
 
-          if (media) {
-            cy.get('[data-e2e="media-loader__container"]')
-              .first()
-              .within(() => {
-                cy.get('[data-e2e="media-loader__placeholder"] img')
-                  .should('be.visible')
-                  .should('have.attr', 'src')
-                  .should('not.be.empty');
-              });
-          }
-        });
+            if (media) {
+              cy.get('[data-e2e="media-loader__container"]')
+                .first()
+                .within(() => {
+                  cy.get('[data-e2e="media-loader__placeholder"] img')
+                    .should('be.visible')
+                    .should('have.attr', 'src')
+                    .should('not.be.empty');
+                });
+            }
+          });
       });
 
       it('should render a visible guidance message', () => {
-        cy.window().then(win => {
-          const { pageData } = win.__NEXT_DATA__.props.pageProps;
-          const media = getBlockData('video', pageData);
+        cy.window()
+          .getPageDataFromWindow()
+          .then(pageData => {
+            const media = getBlockData('video', pageData);
 
-          if (media) {
-            const aresMediaMetadata = (media.model.blocks[1] as ArticleContent)
-              .model.blocks[0] as AresMediaMetadataBlock;
+            if (media) {
+              const aresMediaMetadata = (
+                media.model.blocks[1] as ArticleContent
+              ).model.blocks[0] as AresMediaMetadataBlock;
 
-            const longGuidanceWarning =
-              aresMediaMetadata.model.versions[0].warnings?.long;
+              const longGuidanceWarning =
+                aresMediaMetadata.model.versions[0].warnings?.long;
 
-            cy.get('[data-e2e="media-loader__container"]')
-              .eq(0)
-              .within(() => {
-                // Check for video with guidance message
-                if (longGuidanceWarning) {
-                  cy.get('[data-e2e="media-player__guidance"] strong')
-                    .should('be.visible')
-                    .and('contain', longGuidanceWarning);
-                  // Check for video with no guidance message
-                } else {
-                  cy.get('[data-e2e="media-player__guidance"] strong').should(
-                    'not.exist',
-                  );
-                }
-              });
-          }
-        });
+              cy.get('[data-e2e="media-loader__container"]')
+                .eq(0)
+                .within(() => {
+                  // Check for video with guidance message
+                  if (longGuidanceWarning) {
+                    cy.get('[data-e2e="media-player__guidance"] strong')
+                      .should('be.visible')
+                      .and('contain', longGuidanceWarning);
+                    // Check for video with no guidance message
+                  } else {
+                    cy.get('[data-e2e="media-player__guidance"] strong').should(
+                      'not.exist',
+                    );
+                  }
+                });
+            }
+          });
       });
 
       it('should have a visible play button and valid duration', () => {
-        cy.window().then(win => {
-          const { pageData } = win.__NEXT_DATA__.props.pageProps;
-          const media = getBlockData<ArticleContent & { type: string }>(
-            'video',
-            pageData,
-          );
+        cy.window()
+          .getPageDataFromWindow()
+          .then(pageData => {
+            const media = getBlockData<ArticleContent & { type: string }>(
+              'video',
+              pageData,
+            );
 
-          if (media && media.type === 'video') {
-            const aresMediaMetaDataBlock = (
-              media.model.blocks[1] as AresMediaBlock
-            ).model.blocks[0] as AresMediaMetadataBlock;
+            if (media && media.type === 'video') {
+              const aresMediaMetaDataBlock = (
+                media.model.blocks[1] as AresMediaBlock
+              ).model.blocks[0] as AresMediaMetadataBlock;
 
-            const { durationISO8601 } =
-              aresMediaMetaDataBlock.model.versions[0];
+              const { durationISO8601 } =
+                aresMediaMetaDataBlock.model.versions[0];
 
-            cy.get('[data-e2e="media-loader__container"]')
-              .first()
-              .within(() => {
-                cy.get('button')
-                  .should('be.visible')
-                  .within(() => {
-                    cy.get('svg').should('be.visible');
-                    cy.get('time')
-                      .should('be.visible')
-                      .should('have.attr', 'datetime')
-                      .and('eq', durationISO8601);
-                  });
-              });
-          }
-        });
+              cy.get('[data-e2e="media-loader__container"]')
+                .first()
+                .within(() => {
+                  cy.get('button')
+                    .should('be.visible')
+                    .within(() => {
+                      cy.get('svg').should('be.visible');
+                      cy.get('time')
+                        .should('be.visible')
+                        .should('have.attr', 'datetime')
+                        .and('eq', durationISO8601);
+                    });
+                });
+            }
+          });
       });
       if (service === 'pidgin') {
         it('should render a media player with a valid embed URL when a user clicks play', () => {
-          cy.window().then(win => {
-            const { pageData } = win.__NEXT_DATA__.props.pageProps;
-            const media = getBlockData<OptimoBlock>('video', pageData);
-            if (media && media.type === 'video') {
-              const { lang } = appConfig[service][variant];
-              const embedUrl = getVideoEmbedUrl(pageData, lang);
-              cy.get('[data-e2e="media-loader__container"] button')
-                .first()
-                .click();
-              cy.get('[data-e2e="media-player"]').should('be.visible');
+          cy.window()
+            .getPageDataFromWindow()
+            .then(pageData => {
+              const media = getBlockData<OptimoBlock>('video', pageData);
+              if (media && media.type === 'video') {
+                const { lang } = appConfig[service][variant];
+                const embedUrl = getVideoEmbedUrl(pageData, lang);
+                cy.get('[data-e2e="media-loader__container"] button')
+                  .first()
+                  .click();
+                cy.get('[data-e2e="media-player"]').should('be.visible');
 
-              cy.testResponseCodeAndRetry({
-                url: embedUrl,
-                allowFallback: true,
-              });
-            }
-          });
+                cy.testResponseCodeAndRetry({
+                  url: embedUrl,
+                  allowFallback: true,
+                });
+              }
+            });
         });
       }
     });

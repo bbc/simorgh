@@ -2,18 +2,9 @@
 import memoizeWith from 'ramda/src/memoizeWith';
 import identity from 'ramda/src/identity';
 import defaultToggles from '#app/lib/config/toggles';
-import { LanguagesPageProps } from '../../pages/ws/types';
 import testResponseCodeAndRetry from './helpers/testResponseCodeAndRetry';
 import getAppEnv from './helpers/getAppEnv';
 import envConfig, { EnvironmentConfigType } from './config/envs';
-
-interface CustomWindow extends Window {
-  __NEXT_DATA__?: {
-    props?: {
-      pageProps?: LanguagesPageProps;
-    };
-  };
-}
 
 interface TestResponseCodeAndRetry {
   url: string;
@@ -26,7 +17,7 @@ interface TestResponseCodeAndRetry {
 declare global {
   namespace Cypress {
     interface Chainable {
-      getPageDataFromWindow: () => Chainable<Record<string, unknown>>;
+      getPageDataFromWindow: () => Chainable;
       testResponseCodeAndRetry: (
         props: TestResponseCodeAndRetry,
       ) => Chainable<Record<string, unknown>>;
@@ -40,7 +31,7 @@ const getPageDataFromWindow = () => {
   return cy.window().then(win => {
     return (
       // eslint-disable-next-line no-underscore-dangle
-      (win as CustomWindow)?.__NEXT_DATA__?.props?.pageProps?.pageData || {}
+      win?.__NEXT_DATA__?.props?.pageProps?.pageData
     );
   });
 };
