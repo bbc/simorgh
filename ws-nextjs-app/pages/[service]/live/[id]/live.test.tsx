@@ -9,10 +9,8 @@ import {
 import liveFixture from '#data/pidgin/live/c7p765ynk9qt.json';
 import postFixture from '#data/pidgin/posts/postFixture.json';
 import { GetServerSidePropsContext } from 'next';
-import { OptimoBlock } from '#models/types/optimo';
 import Live from './LivePageLayout';
 import { getServerSideProps } from './[[...variant]].page';
-import type { Post } from './Post/types';
 
 type HelmetMetaTag = {
   property?: string;
