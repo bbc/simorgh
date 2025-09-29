@@ -42,6 +42,7 @@ const buildApp = () =>
 
 const startApp = () => {
   const portNumber = argv.nextJS ? 7081 : 7080;
+  console.log('portNumber', portNumber);
   return new Promise(resolve => {
     const child = exec(
       `yarn ${
@@ -87,12 +88,15 @@ const runNextJSTests = () =>
 
 const runTests = () =>
   new Promise((resolve, reject) => {
+    console.log('env is nextJS', argv.nextJS);
     const child = argv.nextJS ? runNextJSTests() : runExpressTests();
 
     child.on('exit', code => {
       if (code === 1) {
+        console.log('child code 1');
         reject();
       } else {
+        console.log('child else');
         resolve();
       }
     });

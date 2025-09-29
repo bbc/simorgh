@@ -42,6 +42,7 @@ class CustomTestEnvironment extends TestEnvironment {
   }
 
   async setup() {
+    console.log("I'm trying to set up", this.url);
     await super.setup();
 
     try {
@@ -54,6 +55,11 @@ class CustomTestEnvironment extends TestEnvironment {
         },
       });
 
+      // test
+      if (!document || !window) {
+        console.log('no document or no window');
+      }
+
       Object.defineProperties(this.global, {
         pageType: { value: this.pageType },
         service: { value: this.service },
@@ -64,6 +70,7 @@ class CustomTestEnvironment extends TestEnvironment {
     } catch (e) {
       console.log('There is an error with', this.url);
       console.error(e);
+      // throw e; // ⬅️ This ensures the test fails instead of running with broken state
     }
   }
 
