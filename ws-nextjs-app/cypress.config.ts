@@ -38,7 +38,7 @@ export default defineConfig({
       /* eslint-disable no-console */
       console.log('\n\n\n\n\n');
       console.log('Cypress running config:');
-      // console.log('SMOKE:', config.env.SMOKE);
+      console.log('SMOKE:', config.env.SMOKE);
       console.log('APP_ENV:', config.env.APP_ENV);
       console.log('Base URL:', config.baseUrl);
       // console.log('UK:', config.env.UK);
@@ -122,6 +122,9 @@ export default defineConfig({
       return config;
     },
     env: {
+      APP_ENV: 'local',
+      SMOKE: true,
+      UK: false,
       isNextJs: true,
       live: {
         baseUrl: 'https://www.bbc.com',
