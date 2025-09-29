@@ -1,6 +1,5 @@
 /* eslint-disable no-param-reassign */
 import { defineConfig } from 'cypress';
-
 import fs from 'fs';
 import path from 'path';
 import MomentTimezoneInclude from '../src/app/legacy/psammead/moment-timezone-include/src'
