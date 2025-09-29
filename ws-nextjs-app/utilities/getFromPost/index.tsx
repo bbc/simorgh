@@ -1,26 +1,35 @@
 import { OptimoBlock } from '#models/types/optimo';
 import { Post } from '../../pages/[service]/live/[id]/Post/types';
 
+type OptimoBlockWithBlocks = OptimoBlock & { model: { blocks: OptimoBlock[] } };
+type OptimoBlockWithText = OptimoBlock & { model: { text: string } };
+
+const isBlockWithBlocks = (
+  block: OptimoBlock,
+): block is OptimoBlockWithBlocks =>
+  block &&
+  typeof block.model === 'object' &&
+  Array.isArray((block.model as { blocks?: unknown }).blocks);
+
+const isBlockWithText = (block: OptimoBlock): block is OptimoBlockWithText =>
+  block &&
+  typeof block.model === 'object' &&
+  typeof (block.model as { text?: unknown }).text === 'string';
+
 export const getImageFromPost = (post: Post) => {
   const imageBlock = post?.content?.model?.blocks?.find(
     (block: OptimoBlock) => block.type === 'image',
-  ) as OptimoBlock | undefined;
+  );
 
-  if (
-    !imageBlock ||
-    !('model' in imageBlock) ||
-    !Array.isArray((imageBlock.model as any).blocks)
-  ) {
+  if (!imageBlock || !isBlockWithBlocks(imageBlock)) {
     return null;
   }
 
-  const rawImageBlock = (
-    imageBlock.model as { blocks: OptimoBlock[] }
-  ).blocks.find((block: OptimoBlock) => block.type === 'rawImage') as
-    | OptimoBlock
-    | undefined;
+  const rawImageBlock = imageBlock.model.blocks.find(
+    (block: OptimoBlock) => block.type === 'rawImage',
+  );
 
-  if (!rawImageBlock || !('model' in rawImageBlock)) {
+  if (!rawImageBlock || typeof rawImageBlock.model !== 'object') {
     return null;
   }
 
@@ -31,33 +40,17 @@ export const getImageFromPost = (post: Post) => {
     copyrightHolder?: string;
   };
 
-  const altTextBlock = (
-    imageBlock.model as { blocks: OptimoBlock[] }
-  ).blocks.find((block: OptimoBlock) => block.type === 'altText') as
-    | OptimoBlock
-    | undefined;
+  const altTextBlock = imageBlock.model.blocks.find(
+    (block: OptimoBlock) => block.type === 'altText',
+  );
 
   let altText = '';
-  if (
-    altTextBlock &&
-    'model' in altTextBlock &&
-    Array.isArray((altTextBlock.model as any).blocks)
-  ) {
-    const textBlock = (altTextBlock.model as { blocks: OptimoBlock[] })
-      .blocks[0];
-    if (
-      textBlock &&
-      'model' in textBlock &&
-      Array.isArray((textBlock.model as any).blocks)
-    ) {
-      const paragraphBlock = (textBlock.model as { blocks: OptimoBlock[] })
-        .blocks[0];
-      if (
-        paragraphBlock &&
-        'model' in paragraphBlock &&
-        typeof (paragraphBlock.model as any).text === 'string'
-      ) {
-        altText = (paragraphBlock.model as { text: string }).text;
+  if (altTextBlock && isBlockWithBlocks(altTextBlock)) {
+    const textBlock = altTextBlock.model.blocks[0];
+    if (textBlock && isBlockWithBlocks(textBlock)) {
+      const paragraphBlock = textBlock.model.blocks[0];
+      if (paragraphBlock && isBlockWithText(paragraphBlock)) {
+        altText = paragraphBlock.model.text;
       }
     }
   }
@@ -76,25 +69,21 @@ export const getImageFromPost = (post: Post) => {
 export const getHeadlineFromPost = (post: Post) => {
   const headlineBlock = post?.header?.model?.blocks?.find(
     block => block.type === 'headline',
-  ) as OptimoBlock | undefined;
+  );
 
-  if (!headlineBlock || !('model' in headlineBlock)) return null;
+  if (!headlineBlock || !isBlockWithBlocks(headlineBlock)) return null;
 
-  const textBlock = (
-    headlineBlock.model as { blocks?: OptimoBlock[] }
-  ).blocks?.find(block => block.type === 'text') as OptimoBlock | undefined;
+  const textBlock = headlineBlock.model.blocks?.find(
+    block => block.type === 'text',
+  );
 
-  if (!textBlock || !('model' in textBlock)) return null;
+  if (!textBlock || !isBlockWithBlocks(textBlock)) return null;
 
-  const paragraphBlock = (
-    textBlock.model as { blocks?: OptimoBlock[] }
-  ).blocks?.find(block => block.type === 'paragraph') as
-    | OptimoBlock
-    | undefined;
+  const paragraphBlock = textBlock.model.blocks?.find(
+    block => block.type === 'paragraph',
+  );
 
-  return paragraphBlock &&
-    'model' in paragraphBlock &&
-    typeof (paragraphBlock.model as any).text === 'string'
-    ? (paragraphBlock.model as { text: string }).text
+  return paragraphBlock && isBlockWithText(paragraphBlock)
+    ? paragraphBlock.model.text
     : null;
 };

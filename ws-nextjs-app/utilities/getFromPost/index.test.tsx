@@ -1,29 +1,36 @@
+import { OptimoBlock } from '#models/types/optimo';
 import { getImageFromPost, getHeadlineFromPost } from './index';
+import { Post } from '../../pages/[service]/live/[id]/Post/types';
+
+type OptimoBlockWithBlocks = OptimoBlock & { model: { blocks: OptimoBlock[] } };
+type OptimoBlockWithText = OptimoBlock & { model: { text: string } };
 
 describe('getImageFromPost', () => {
   it('returns null if no image block exists', () => {
-    const post = { content: { model: { blocks: [] } } };
-    expect(getImageFromPost(post as any)).toBeNull();
+    const post: Post = {
+      content: { model: { blocks: [] as OptimoBlock[] } },
+    } as Post;
+    expect(getImageFromPost(post)).toBeNull();
   });
 
   it('returns null if image block has no rawImage', () => {
-    const post = {
+    const post: Post = {
       content: {
         model: {
           blocks: [
             {
               type: 'image',
-              model: { blocks: [] },
-            },
+              model: { blocks: [] as OptimoBlock[] },
+            } as OptimoBlockWithBlocks,
           ],
         },
       },
-    };
-    expect(getImageFromPost(post as any)).toBeNull();
+    } as Post;
+    expect(getImageFromPost(post)).toBeNull();
   });
 
   it('returns image data with alt text', () => {
-    const post = {
+    const post: Post = {
       content: {
         model: {
           blocks: [
@@ -39,7 +46,7 @@ describe('getImageFromPost', () => {
                       height: 480,
                       copyrightHolder: 'BBC',
                     },
-                  },
+                  } as OptimoBlock,
                   {
                     type: 'altText',
                     model: {
@@ -51,21 +58,21 @@ describe('getImageFromPost', () => {
                               {
                                 type: 'paragraph',
                                 model: { text: 'Alt text here' },
-                              },
+                              } as OptimoBlockWithText,
                             ],
                           },
-                        },
+                        } as OptimoBlockWithBlocks,
                       ],
                     },
-                  },
+                  } as OptimoBlockWithBlocks,
                 ],
               },
-            },
+            } as OptimoBlockWithBlocks,
           ],
         },
       },
-    };
-    expect(getImageFromPost(post as any)).toEqual({
+    } as Post;
+    expect(getImageFromPost(post)).toEqual({
       url: 'https://ichef.bbci.co.uk/news/640/cpsprodpb/123.jpg',
       altText: 'Alt text here',
       width: 640,
@@ -75,7 +82,7 @@ describe('getImageFromPost', () => {
   });
 
   it('returns image data with empty alt text if altText block is missing', () => {
-    const post = {
+    const post: Post = {
       content: {
         model: {
           blocks: [
@@ -90,15 +97,15 @@ describe('getImageFromPost', () => {
                       width: 300,
                       height: 200,
                     },
-                  },
+                  } as OptimoBlock,
                 ],
               },
-            },
+            } as OptimoBlockWithBlocks,
           ],
         },
       },
-    };
-    expect(getImageFromPost(post as any)).toEqual({
+    } as Post;
+    expect(getImageFromPost(post)).toEqual({
       url: 'https://ichef.bbci.co.uk/news/300/cpsprodpb/abc.png',
       altText: '',
       width: 300,
@@ -110,23 +117,30 @@ describe('getImageFromPost', () => {
 
 describe('getHeadlineFromPost', () => {
   it('returns null if no headline block exists', () => {
-    const post = { header: { model: { blocks: [] } } };
-    expect(getHeadlineFromPost(post as any)).toBeNull();
+    const post: Post = {
+      header: { model: { blocks: [] as OptimoBlock[] } },
+    } as Post;
+    expect(getHeadlineFromPost(post)).toBeNull();
   });
 
   it('returns null if headline block has no text', () => {
-    const post = {
+    const post: Post = {
       header: {
         model: {
-          blocks: [{ type: 'headline', model: { blocks: [] } }],
+          blocks: [
+            {
+              type: 'headline',
+              model: { blocks: [] as OptimoBlock[] },
+            } as OptimoBlockWithBlocks,
+          ],
         },
       },
-    };
-    expect(getHeadlineFromPost(post as any)).toBeNull();
+    } as Post;
+    expect(getHeadlineFromPost(post)).toBeNull();
   });
 
   it('returns the headline text if present', () => {
-    const post = {
+    const post: Post = {
       header: {
         model: {
           blocks: [
@@ -141,17 +155,17 @@ describe('getHeadlineFromPost', () => {
                         {
                           type: 'paragraph',
                           model: { text: 'This is the headline' },
-                        },
+                        } as OptimoBlockWithText,
                       ],
                     },
-                  },
+                  } as OptimoBlockWithBlocks,
                 ],
               },
-            },
+            } as OptimoBlockWithBlocks,
           ],
         },
       },
-    };
-    expect(getHeadlineFromPost(post as any)).toBe('This is the headline');
+    } as Post;
+    expect(getHeadlineFromPost(post)).toBe('This is the headline');
   });
 });
