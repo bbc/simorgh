@@ -3,7 +3,6 @@ import { defineConfig } from 'cypress';
 import fs from 'fs';
 import path from 'path';
 import MomentTimezoneInclude from '../src/app/legacy/psammead/moment-timezone-include/src'
-import { webpackDirAlias } from '../dirAlias';
 import webpackPreprocessor from '@cypress/webpack-preprocessor';
 import { DefinePlugin } from 'webpack';
 import dotenv from 'dotenv';
