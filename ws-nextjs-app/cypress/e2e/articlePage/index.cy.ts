@@ -11,8 +11,8 @@ import liteArticleTests from './testsForLiteOnly';
 const canonicalTests = [
   testsForAllPages,
   testsForAllCanonicalPages,
-  // canonicalAndAmpArticleTests,
-  // canonicalArticleTests,
+  canonicalAndAmpArticleTests,
+  canonicalArticleTests,
 ];
 
 const ampTests = [

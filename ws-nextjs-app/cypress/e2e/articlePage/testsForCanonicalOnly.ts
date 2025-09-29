@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 /* eslint-disable import/prefer-default-export */
 import appConfig from '#src/server/utilities/serviceConfigs';
 import { Services } from '#app/models/types/global';
@@ -48,7 +49,8 @@ export default ({
 
         it('should have an image with a caption', () => {
           cy.window().then(win => {
-            const imageData = getBlockData('image', win.SIMORGH_DATA.pageData);
+            const { pageData } = win.__NEXT_DATA__.props.pageProps;
+            const imageData = getBlockData('image', pageData);
             const captionBlock =
               imageData?.model?.blocks &&
               getBlockByType(imageData.model.blocks, 'caption');
@@ -102,7 +104,8 @@ export default ({
     describe('Media Player: Canonical', () => {
       it('should render a visible placeholder image', () => {
         cy.window().then(win => {
-          const media = getBlockData('video', win.SIMORGH_DATA.pageData);
+          const { pageData } = win.__NEXT_DATA__.props.pageProps;
+          const media = getBlockData('video', pageData);
 
           if (media) {
             cy.get('[data-e2e="media-loader__container"]')
@@ -119,7 +122,8 @@ export default ({
 
       it('should render a visible guidance message', () => {
         cy.window().then(win => {
-          const media = getBlockData('video', win.SIMORGH_DATA.pageData);
+          const { pageData } = win.__NEXT_DATA__.props.pageProps;
+          const media = getBlockData('video', pageData);
 
           if (media) {
             const aresMediaMetadata = (media.model.blocks[1] as ArticleContent)
@@ -149,9 +153,10 @@ export default ({
 
       it('should have a visible play button and valid duration', () => {
         cy.window().then(win => {
+          const { pageData } = win.__NEXT_DATA__.props.pageProps;
           const media = getBlockData<ArticleContent & { type: string }>(
             'video',
-            win.SIMORGH_DATA.pageData,
+            pageData,
           );
 
           if (media && media.type === 'video') {
@@ -181,11 +186,11 @@ export default ({
       if (service === 'pidgin') {
         it('should render a media player with a valid embed URL when a user clicks play', () => {
           cy.window().then(win => {
-            const body = win.SIMORGH_DATA.pageData;
-            const media = getBlockData<OptimoBlock>('video', body);
+            const { pageData } = win.__NEXT_DATA__.props.pageProps;
+            const media = getBlockData<OptimoBlock>('video', pageData);
             if (media && media.type === 'video') {
               const { lang } = appConfig[service][variant];
-              const embedUrl = getVideoEmbedUrl(body, lang);
+              const embedUrl = getVideoEmbedUrl(pageData, lang);
               cy.get('[data-e2e="media-loader__container"] button')
                 .first()
                 .click();

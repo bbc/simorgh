@@ -2,8 +2,12 @@ import { Article } from '#app/models/types/optimo';
 
 declare global {
   interface Window {
-    SIMORGH_DATA: {
-      pageData: Article;
+    __NEXT_DATA__: {
+      props: {
+        pageProps: {
+          pageData: Article;
+        };
+      };
     };
   }
 }
