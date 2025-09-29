@@ -46,9 +46,13 @@ export const getImageFromPost = (post: Post) => {
 
   let altText = '';
   if (altTextBlock && isBlockWithBlocks(altTextBlock)) {
-    const textBlock = altTextBlock.model.blocks[0];
+    const textBlock = altTextBlock.model.blocks.find(
+      block => block.type === 'text',
+    );
     if (textBlock && isBlockWithBlocks(textBlock)) {
-      const paragraphBlock = textBlock.model.blocks[0];
+      const paragraphBlock = textBlock.model.blocks.find(
+        block => block.type === 'paragraph',
+      );
       if (paragraphBlock && isBlockWithText(paragraphBlock)) {
         altText = paragraphBlock.model.text;
       }
