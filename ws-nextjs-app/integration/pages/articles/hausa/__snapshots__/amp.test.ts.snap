@@ -210,7 +210,7 @@ exports[`AMP Articles SEO Apple Touch Icon should match attributes 10`] = `
 }
 `;
 
-exports[`AMP Articles SEO Canonical link 1`] = `"http://localhost:7080/hausa/articles/c2nr6xqmnewo"`;
+exports[`AMP Articles SEO Canonical link 1`] = `"http://localhost:7081/hausa/articles/c2nr6xqmnewo"`;
 
 exports[`AMP Articles SEO Dir attribute 1`] = `"ltr"`;
 
@@ -253,7 +253,7 @@ exports[`AMP Articles SEO Linked data should match text 1`] = `
         "name": "Hausa",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7080/hausa/articles/c2nr6xqmnewo",
+        "@id": "http://localhost:7081/hausa/articles/c2nr6xqmnewo",
         "@type": "WebPage",
         "name": "Wannan shine taken SEO na wannan labarin gwaji",
       },
@@ -269,7 +269,7 @@ exports[`AMP Articles SEO Linked data should match text 1`] = `
         "publishingPrinciples": "https://www.bbc.com/hausa/game-da-mu-49283501",
       },
       "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
-      "url": "http://localhost:7080/hausa/articles/c2nr6xqmnewo",
+      "url": "http://localhost:7081/hausa/articles/c2nr6xqmnewo",
     },
   ],
 }
@@ -302,7 +302,7 @@ exports[`AMP Articles SEO OG title 1`] = `"Wannan shine taken SEO na wannan laba
 
 exports[`AMP Articles SEO OG type 1`] = `"article"`;
 
-exports[`AMP Articles SEO OG url 1`] = `"http://localhost:7080/hausa/articles/c2nr6xqmnewo"`;
+exports[`AMP Articles SEO OG url 1`] = `"http://localhost:7081/hausa/articles/c2nr6xqmnewo"`;
 
 exports[`AMP Articles SEO Page title 1`] = `"Wannan shine taken SEO na wannan labarin gwaji - BBC News Hausa"`;
 
