@@ -27,7 +27,8 @@ const canonicalIntegrationTests = {
       },
     ],
   },
-  testMatch: ['**/integration/!(utils)/**/*[^.amp].test.ts'],
+  testMatch: ['**/integration/!(utils)/**/*.test.ts'],
+  testPathIgnorePatterns: ['.*lite\\.test\\.ts$', '.*amp\\.test\\.ts$'],
 } satisfies Config.InitialProjectOptions;
 
 const ampIntegrationTests = {
@@ -50,7 +51,32 @@ const ampIntegrationTests = {
       },
     ],
   },
-  testMatch: ['**/integration/!(utils)/**/amp.test.ts'],
+  testMatch: ['**/integration/!(utils)/**/*.test.ts'],
+  testPathIgnorePatterns: ['.*lite\\.test\\.ts$', '.*canonical\\.test\\.ts$'],
+} satisfies Config.InitialProjectOptions;
+
+const liteIntegrationTests = {
+  displayName: 'Integration Tests - Lite',
+  testEnvironment: './integration/IntegrationTestEnvironment.ts',
+  testEnvironmentOptions: {
+    platform: 'lite',
+  },
+  modulePaths: ['../'],
+  moduleNameMapper: {
+    ...pathsToModuleNameMapper(compilerOptionsPaths),
+  },
+  setupFilesAfterEnv: ['./setupTests.ts'],
+  transform: {
+    '^.+\\.(js|jsx|ts|tsx)$': [
+      'babel-jest',
+      {
+        configFile: './.babelrc',
+        presets: ['next/babel'],
+      },
+    ],
+  },
+  testMatch: ['**/integration/!(utils)/**/*.test.ts'],
+  testPathIgnorePatterns: ['.*canonical\\.test\\.ts$', '.*amp\\.test\\.ts$'],
 } satisfies Config.InitialProjectOptions;
 
 const unitTests = {
@@ -79,7 +105,12 @@ const unitTests = {
 } satisfies Config.InitialProjectOptions;
 
 const config: import('jest').Config = {
-  projects: [unitTests, canonicalIntegrationTests, ampIntegrationTests],
+  projects: [
+    unitTests,
+    canonicalIntegrationTests,
+    ampIntegrationTests,
+    liteIntegrationTests,
+  ],
   workerIdleMemoryLimit: '512MB',
 };
 

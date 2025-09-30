@@ -3,43 +3,43 @@
 exports[`Lite Site Articles Lite Site Summary should match snapshot 1`] = `
 <section
   aria-labelledby="LiteSiteSummary"
-  class="bbc-1x0h7k"
+  class="css-1x0h7k"
   data-e2e="lite-summary"
   role="region"
 >
   <strong
-    class="bbc-ory9gk"
+    class="css-ory9gk"
     hidden=""
     id="LiteSiteSummary"
   >
     Ahagusaba uburyo (ama mega) buke
   </strong>
   <div
-    class="bbc-zudp5j"
+    class="css-zudp5j"
   >
     <p
-      class="bbc-11k1lfi"
+      class="css-11k1lfi"
     >
       Uriko ubona ku rubuga aherekana amakuru mu nyandiko gusa, hakoresha uburyo buke. Ja ku rubuga nyamukuru ubone amakuru mu nyandiko iherekejwe n'amasanamu.
     </p>
     <p
-      class="bbc-vit5au"
+      class="css-e7m1on"
       data-e2e="to-main-site"
     >
       <a
-        class="bbc-y2sji4"
+        class="css-x4gdjv"
         data-ignore-lite="true"
         data-static-ati-click="https://logws1363.ati-host.net?s=598285&atc=PUB-[]-[lite-site-summary]-[]-[]-[]-[]-[]-[]&type=AT"
-        href="http://localhost:7080/gahuza/articles/cey23zx8wx8o"
+        href="http://localhost:7081/gahuza/articles/cey23zx8wx8o"
       >
         <span
-          class="bbc-1kzs7zk"
+          class="css-1hza8cj"
         >
           Njana ku rubuga nyamukuru canke aho gusoma gusa
         </span>
         <svg
           aria-hidden="true"
-          class="bbc-1xkt713"
+          class="css-1xkt713"
           focusable="false"
           height="12"
           viewBox="0 0 32 32"
@@ -52,15 +52,15 @@ exports[`Lite Site Articles Lite Site Summary should match snapshot 1`] = `
       </a>
     </p>
     <p
-      class="bbc-vit5au"
+      class="css-e7m1on"
       data-e2e="information-page"
     >
       <a
-        class="bbc-1ufi7i1"
+        class="css-2tkjgn"
         href="https://www.bbc.com/gahuza/articles/cn7y7pvem0vo.lite"
       >
         <span
-          class="bbc-b00bw5"
+          class="css-h4fwue"
         >
           Ibindi vyerekeye ingene urwo rubuga rugutwara uburyo (ama mega) buke
         </span>

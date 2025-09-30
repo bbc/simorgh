@@ -19,6 +19,7 @@
     "test": "NODE_OPTIONS=--no-experimental-strip-types jest --ci --colors --selectProjects='Unit Tests'",
     "test:integration": "NODE_OPTIONS=--no-experimental-strip-types jest --ci --colors --selectProjects='Integration Tests - Canonical'",
     "test:integration:amp": "NODE_OPTIONS=--no-experimental-strip-types jest --ci --colors --selectProjects='Integration Tests - AMP'",
+    "test:integration:lite": "NODE_OPTIONS=--no-experimental-strip-types jest --ci --colors --selectProjects='Integration Tests - Lite'",
     "cypress": "cypress run --browser chrome",
     "cypress:interactive": "cypress open --browser chrome",
     "test:e2e": "yarn stop && yarn build && run-p --race start cypress -- --e2e",

@@ -22,7 +22,11 @@ class CustomTestEnvironment extends TestEnvironment {
 
   constructor(config: JestEnvironmentConfig, context: EnvironmentContext) {
     super(config, context);
-    const { platform } = config.projectConfig.testEnvironmentOptions;
+
+    const { platform } = config.projectConfig.testEnvironmentOptions as {
+      platform: string;
+    };
+
     const {
       pathname,
       service,
@@ -32,13 +36,15 @@ class CustomTestEnvironment extends TestEnvironment {
 
     const pageType = getPageTypeFromTestPath(context.testPath);
 
+    const platformForPath = ['amp', 'lite'].includes(platform)
+      ? `.${platform}`
+      : '';
+
     this.pageType = camelCaseToText(pageType);
     this.service = service;
     this.displayAds = displayAds === 'true';
     // this.isInUK = isInUK;
-    this.url = `http://localhost:7081${pathname}${
-      platform === 'amp' ? '.amp' : ''
-    }`;
+    this.url = `http://localhost:7081${pathname}${platformForPath}`;
   }
 
   async setup() {
