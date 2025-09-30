@@ -33,6 +33,7 @@ const loadableConfig = {
   polska: loadable(() => import('./polska')),
   portuguese: loadable(() => import('./portuguese')),
   punjabi: loadable(() => import('./punjabi')),
+  romania: loadable(() => import('./romania')),
   russian: loadable(() => import('./russian')),
   scotland: loadable(() => import('./scotland')),
   serbian: loadable(() => import('./serbian')),
