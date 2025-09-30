@@ -2,20 +2,20 @@
 
 exports[`AMP Articles Embed HTML should match snapshot 1`] = `
 <div
-  class="bbc-z6vcvl"
+  class="css-z6vcvl"
   data-e2e="embed-error"
 >
   <strong
-    class="bbc-ayvsvz"
+    class="css-ayvsvz"
   >
     Sorry, we can’t display this part of the story on this lightweight mobile page.
   </strong>
   <div
-    class="bbc-yzszhh"
+    class="css-yzszhh"
   >
     <a
-      class="bbc-gu9ena"
-      href="http://localhost:7080/pidgin/articles/c39rjygpmv1o"
+      class="css-gu9ena"
+      href="http://localhost:7081/pidgin/articles/c39rjygpmv1o"
     >
       View the full version of the page to see all the content.
     </a>

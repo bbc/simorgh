@@ -255,7 +255,7 @@ exports[`AMP Articles SEO Apple Touch Icon should match attributes 10`] = `
 }
 `;
 
-exports[`AMP Articles SEO Canonical link 1`] = `"http://localhost:7080/persian/articles/cej3lzd5e0go"`;
+exports[`AMP Articles SEO Canonical link 1`] = `"http://localhost:7081/persian/articles/cej3lzd5e0go"`;
 
 exports[`AMP Articles SEO Dir attribute 1`] = `"rtl"`;
 
@@ -298,7 +298,7 @@ exports[`AMP Articles SEO Linked data should match text 1`] = `
         "name": "Persian",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7080/persian/articles/cej3lzd5e0go",
+        "@id": "http://localhost:7081/persian/articles/cej3lzd5e0go",
         "@type": "WebPage",
         "name": "این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.",
       },
@@ -314,7 +314,7 @@ exports[`AMP Articles SEO Linked data should match text 1`] = `
         "publishingPrinciples": "https://www.bbc.com/persian/institutional-49283091",
       },
       "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_persian/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg",
-      "url": "http://localhost:7080/persian/articles/cej3lzd5e0go",
+      "url": "http://localhost:7081/persian/articles/cej3lzd5e0go",
     },
   ],
 }
@@ -350,7 +350,7 @@ exports[`AMP Articles SEO OG title 1`] = `"این تصویر آزمایشی ، �
 
 exports[`AMP Articles SEO OG type 1`] = `"article"`;
 
-exports[`AMP Articles SEO OG url 1`] = `"http://localhost:7080/persian/articles/cej3lzd5e0go"`;
+exports[`AMP Articles SEO OG url 1`] = `"http://localhost:7081/persian/articles/cej3lzd5e0go"`;
 
 exports[`AMP Articles SEO Page title 1`] = `"این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد. - BBC News فارسی"`;
 

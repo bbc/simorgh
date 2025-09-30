@@ -263,7 +263,7 @@ exports[`AMP Articles SEO Apple Touch Icon should match attributes 10`] = `
 }
 `;
 
-exports[`AMP Articles SEO Canonical link 1`] = `"http://localhost:7080/persian/articles/c4vlle3q337o"`;
+exports[`AMP Articles SEO Canonical link 1`] = `"http://localhost:7081/persian/articles/c4vlle3q337o"`;
 
 exports[`AMP Articles SEO Dir attribute 1`] = `"rtl"`;
 
@@ -306,7 +306,7 @@ exports[`AMP Articles SEO Linked data should match text 1`] = `
         "name": "Persian",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7080/persian/articles/c4vlle3q337o",
+        "@id": "http://localhost:7081/persian/articles/c4vlle3q337o",
         "@type": "WebPage",
         "name": "پهپادی که برایتان قهوه می‌آورد",
       },
@@ -322,7 +322,7 @@ exports[`AMP Articles SEO Linked data should match text 1`] = `
         "publishingPrinciples": "https://www.bbc.com/persian/institutional-49283091",
       },
       "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
-      "url": "http://localhost:7080/persian/articles/c4vlle3q337o",
+      "url": "http://localhost:7081/persian/articles/c4vlle3q337o",
     },
   ],
 }
@@ -342,7 +342,7 @@ exports[`AMP Articles SEO OG title 1`] = `"پهپادی که برایتان قه
 
 exports[`AMP Articles SEO OG type 1`] = `"article"`;
 
-exports[`AMP Articles SEO OG url 1`] = `"http://localhost:7080/persian/articles/c4vlle3q337o"`;
+exports[`AMP Articles SEO OG url 1`] = `"http://localhost:7081/persian/articles/c4vlle3q337o"`;
 
 exports[`AMP Articles SEO Page title 1`] = `"پهپادی که برایتان قهوه می‌آورد - BBC News فارسی"`;
 

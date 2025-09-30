@@ -2,11 +2,11 @@
 
 exports[`AMP Articles Embed Images should match snapshot 1`] = `
 <div
-  class="bbc-1oz17mt"
+  class="css-1oz17mt"
   data-e2e="embed-image"
 >
   <div
-    class="bbc-17ytifv"
+    class="css-17ytifv"
     style="padding-bottom:82.34%;overflow:hidden"
   >
     <amp-img
