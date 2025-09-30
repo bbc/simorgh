@@ -147,7 +147,6 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
         imageAltText={metaImage?.altText}
         imageWidth={metaImage?.width}
         imageHeight={metaImage?.height}
-        // do we want the description from the page?
         description={pageDescription}
         openGraphType="website"
         hasAmpPage={false}
