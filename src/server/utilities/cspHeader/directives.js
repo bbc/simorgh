@@ -243,6 +243,7 @@ const directives = {
       ...advertisingDirectives.scriptSrc,
       "'self'",
       "'unsafe-inline'",
+      "'unsafe-eval'",
     ],
   },
   styleSrc: {
@@ -322,7 +323,9 @@ export const generateScriptSrc = ({ isAmp, isLive, nonce }) => {
   const insertedNonce = nonce ? [`'nonce-${nonce}'`, "'unsafe-eval'"] : [];
   if (!isLive && isAmp) return directives.scriptSrc.ampNonLive.sort();
   if (!isLive && !isAmp)
-    return [...insertedNonce, ...directives.scriptSrc.canonicalNonLive].sort();
+    return [
+      ...new Set([...insertedNonce, ...directives.scriptSrc.canonicalNonLive]),
+    ].sort();
   if (isLive && isAmp) return directives.scriptSrc.ampLive.sort();
   return [...insertedNonce, ...directives.scriptSrc.canonicalLive].sort();
 };
