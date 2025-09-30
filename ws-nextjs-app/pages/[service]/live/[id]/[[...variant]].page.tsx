@@ -1,6 +1,6 @@
 import { GetServerSideProps } from 'next';
 import dynamic from 'next/dynamic';
-
+import isLive from '#app/lib/utilities/isLive';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import nodeLogger from '#lib/logger.node';
 import logResponseTime from '#server/utilities/logResponseTime';
@@ -96,6 +96,11 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   context.res.statusCode = data.status;
 
+  // in order to only have the live post og metadata code on test only, (https://bbc.atlassian.net/browse/WS-1001)
+  // we can send assetId into LivePage only if the env is not live
+  // this means that on live, assetId will always be null and the full page metadata will be used instead of the individual post metadata
+  const assetIdForTestEnv = isLive() ? null : assetId;
+
   return {
     props: {
       error: data?.error || null,
@@ -114,7 +119,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
             },
           }
         : null,
-      assetId: assetId || null,
+      assetId: assetIdForTestEnv || null,
       pageType: LIVE_PAGE,
       pathname: context.resolvedUrl,
       service,
