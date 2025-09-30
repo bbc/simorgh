@@ -309,6 +309,16 @@
       "exact date and time with timezone": "12 ਜੁਲਾਈ 2019, 18:25 IST"
     }
   },
+  "romania": {
+    "default": {
+      "one minute ago": "1 minute ago",
+      "five minutes ago": "5 minutes ago",
+      "one hour ago": "1 hour ago",
+      "five hours ago": "5 hours ago",
+      "exact date": "10 October 2018",
+      "exact date and time with timezone": "12 July 2019, 13:55 BST"
+    }
+  },
   "russian": {
     "default": {
       "one minute ago": "минуту назад",

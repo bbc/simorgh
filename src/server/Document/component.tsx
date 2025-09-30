@@ -61,10 +61,12 @@ const Document = ({
     case isAmp:
       return (
         <AmpRenderer
+          bodyContent={
+            <div id="root" dangerouslySetInnerHTML={{ __html: html || '' }} />
+          }
           helmetMetaTags={helmetMetaTags}
           helmetLinkTags={helmetLinkTags}
           helmetScriptTags={helmetScriptTags}
-          html={html}
           htmlAttrs={htmlAttrs}
           ids={ids}
           styles={css}
