@@ -66,6 +66,10 @@ class CustomTestEnvironment extends TestEnvironment {
         document: { value: document },
         fetch: { value: fetch },
       });
+
+      Object.defineProperty(window, 'INTEGRATION_TEST', {
+        value: true,
+      });
     } catch (e) {
       console.error(e);
     }
