@@ -186,7 +186,7 @@ exports[`Canonical Articles Image Caption should match text 1`] = `"Insiguro y'i
 exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="Alexei Navalny na Yulia Navalnaya bari i Moscow mu 2013 muri metingi yo kwiyamamaza kw'abakuru b'imijyi"
-  class="bbc-139onq"
+  class="css-4ejld5"
   height="864"
   loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"
@@ -304,7 +304,7 @@ exports[`Canonical Articles SEO Apple Touch Icon should match attributes 10`] = 
 }
 `;
 
-exports[`Canonical Articles SEO Canonical link 1`] = `"http://localhost:7080/gahuza/articles/c5y51yxeg53o"`;
+exports[`Canonical Articles SEO Canonical link 1`] = `"http://localhost:7081/gahuza/articles/c5y51yxeg53o"`;
 
 exports[`Canonical Articles SEO Dir attribute 1`] = `"ltr"`;
 
@@ -353,7 +353,7 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
         "name": "Kinyarwanda",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7080/gahuza/articles/c5y51yxeg53o",
+        "@id": "http://localhost:7081/gahuza/articles/c5y51yxeg53o",
         "@type": "WebPage",
         "name": "Russia: Yulia Navalnaya yabwiye BBC ko afite intego yo kuziyamamariza kuba Perezida",
       },
@@ -369,7 +369,7 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
         "publishingPrinciples": "https://www.bbc.com/gahuza/institutional-49283343",
       },
       "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_gahuza/8654/live/6fd0abe0-8f8a-11ef-8e6d-e3e64e16c628.jpg",
-      "url": "http://localhost:7080/gahuza/articles/c5y51yxeg53o",
+      "url": "http://localhost:7081/gahuza/articles/c5y51yxeg53o",
     },
   ],
 }
@@ -389,7 +389,7 @@ exports[`Canonical Articles SEO OG title 1`] = `"Russia: Yulia Navalnaya yabwiye
 
 exports[`Canonical Articles SEO OG type 1`] = `"article"`;
 
-exports[`Canonical Articles SEO OG url 1`] = `"http://localhost:7080/gahuza/articles/c5y51yxeg53o"`;
+exports[`Canonical Articles SEO OG url 1`] = `"http://localhost:7081/gahuza/articles/c5y51yxeg53o"`;
 
 exports[`Canonical Articles SEO Page title 1`] = `"Russia: Yulia Navalnaya yabwiye BBC ko afite intego yo kuziyamamariza kuba Perezida - BBC News Gahuza"`;
 

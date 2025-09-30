@@ -2,6 +2,48 @@
 
 exports[`Canonical Articles A11y I can see the skip to content link 1`] = `"مشاهده محتوا"`;
 
+exports[`Canonical Articles Analytics ATI tracking pixel excluding src 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" >"`;
+
+exports[`Canonical Articles Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
+
+exports[`Canonical Articles Analytics ATI tracking pixel search params 1`] = `
+[
+  {
+    "s": "598343",
+  },
+  {
+    "s2": "69",
+  },
+  {
+    "p": "persian.articles.cej3lzd5e0go.page",
+  },
+  {
+    "x1": "[urn:bbc:optimo:asset:cej3lzd5e0go]",
+  },
+  {
+    "x2": "[responsive]",
+  },
+  {
+    "x3": "[news-persian]",
+  },
+  {
+    "x4": "[fa]",
+  },
+  {
+    "x8": "[simorgh-nojs]",
+  },
+  {
+    "x9": "[این%20تصویر%20آزمایشی%20،%20کپی%20رایت%20بی%20بی%20سی%20،%20نقشه%20ای%20از%20فرانسه%20را%20نشان%20می%20دهد.%20تصویر%20در%20سه%20بلوک%20اول%20است%20و%20این%20عنوان%20را%20دارد.]",
+  },
+  {
+    "x11": "[2019-10-04T10:36:45.464Z]",
+  },
+  {
+    "x12": "[2019-10-04T10:36:45.464Z]",
+  },
+]
+`;
+
 exports[`Canonical Articles Footer Anchors should match text and url 1`] = `
 {
   "text": "BBC News, فارسی",

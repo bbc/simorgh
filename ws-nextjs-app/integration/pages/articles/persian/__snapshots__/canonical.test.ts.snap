@@ -2,6 +2,51 @@
 
 exports[`Canonical Articles A11y I can see the skip to content link 1`] = `"مشاهده محتوا"`;
 
+exports[`Canonical Articles Analytics ATI tracking pixel excluding src 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" >"`;
+
+exports[`Canonical Articles Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
+
+exports[`Canonical Articles Analytics ATI tracking pixel search params 1`] = `
+[
+  {
+    "s": "598343",
+  },
+  {
+    "s2": "69",
+  },
+  {
+    "p": "persian.articles.c4vlle3q337o.page",
+  },
+  {
+    "x1": "[urn:bbc:optimo:asset:c4vlle3q337o]",
+  },
+  {
+    "x2": "[responsive]",
+  },
+  {
+    "x3": "[news-persian]",
+  },
+  {
+    "x4": "[fa]",
+  },
+  {
+    "x7": "[article]",
+  },
+  {
+    "x8": "[simorgh-nojs]",
+  },
+  {
+    "x9": "[پهپادی%20که%20برایتان%20قهوه%20می‌آورد]",
+  },
+  {
+    "x11": "[2019-05-28T13:42:44.996Z]",
+  },
+  {
+    "x12": "[2019-07-23T15:47:11.893Z]",
+  },
+]
+`;
+
 exports[`Canonical Articles Footer Anchors should match text and url 1`] = `
 {
   "text": "BBC News, فارسی",
