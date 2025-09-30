@@ -11,9 +11,10 @@ import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import Cookie from 'js-cookie';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
-import isCypress from './isCypress';
+// import isCypress from './isCypress';
 
-const isInCypress = isCypress();
+// const isInCypress = isCypress();
+const isInCypress = true;
 const TIMEOUT_INTERVAL = 1000;
 
 if (isLive() || isInCypress) {
