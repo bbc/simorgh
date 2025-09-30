@@ -42,11 +42,9 @@ class CustomTestEnvironment extends TestEnvironment {
   }
 
   async setup() {
-    console.log("I'm trying to set up", this.url);
     await super.setup();
 
     try {
-      console.log("I'm trying to fetch", this.url);
       const { window, document } = await fetchHtml({
         url: this.url,
         headers: {
@@ -54,11 +52,6 @@ class CustomTestEnvironment extends TestEnvironment {
           // ...{ 'x-bbc-edge-isuk': this.isInUK },
         },
       });
-
-      // test
-      if (!document || !window) {
-        console.log('no document or no window');
-      }
 
       Object.defineProperties(this.global, {
         pageType: { value: this.pageType },
@@ -68,9 +61,7 @@ class CustomTestEnvironment extends TestEnvironment {
         fetch: { value: fetch },
       });
     } catch (e) {
-      console.log('There is an error with', this.url);
       console.error(e);
-      // throw e; // ⬅️ This ensures the test fails instead of running with broken state
     }
   }
 
@@ -81,8 +72,6 @@ class CustomTestEnvironment extends TestEnvironment {
   getVmContext() {
     return super.getVmContext();
   }
-
-  // run scripts?
 }
 
 export default CustomTestEnvironment;
