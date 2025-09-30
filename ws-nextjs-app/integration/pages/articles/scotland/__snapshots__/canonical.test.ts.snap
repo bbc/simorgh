@@ -114,7 +114,7 @@ exports[`Canonical Articles Image Caption should match text 1`] = `"Image captio
 exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="Map of France showing Paris and Cognac"
-  class="bbc-139onq"
+  class="css-4ejld5"
   height="351"
   loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"
@@ -197,7 +197,7 @@ exports[`Canonical Articles SEO Apple Touch Icon should match attributes 10`] = 
 }
 `;
 
-exports[`Canonical Articles SEO Canonical link 1`] = `"http://localhost:7080/scotland/articles/czwj5l0n210o"`;
+exports[`Canonical Articles SEO Canonical link 1`] = `"http://localhost:7081/scotland/articles/czwj5l0n210o"`;
 
 exports[`Canonical Articles SEO Dir attribute 1`] = `"ltr"`;
 
@@ -239,7 +239,7 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
         "name": "English",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7080/scotland/articles/czwj5l0n210o",
+        "@id": "http://localhost:7081/scotland/articles/czwj5l0n210o",
         "@type": "WebPage",
         "name": "This is the SEO headline of this test article",
       },
@@ -254,7 +254,7 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
         "name": "BBC",
       },
       "thumbnailUrl": "https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png",
-      "url": "http://localhost:7080/scotland/articles/czwj5l0n210o",
+      "url": "http://localhost:7081/scotland/articles/czwj5l0n210o",
     },
   ],
 }
@@ -287,7 +287,7 @@ exports[`Canonical Articles SEO OG title 1`] = `"This is the SEO headline of thi
 
 exports[`Canonical Articles SEO OG type 1`] = `"article"`;
 
-exports[`Canonical Articles SEO OG url 1`] = `"http://localhost:7080/scotland/articles/czwj5l0n210o"`;
+exports[`Canonical Articles SEO OG url 1`] = `"http://localhost:7081/scotland/articles/czwj5l0n210o"`;
 
 exports[`Canonical Articles SEO Page title 1`] = `"This is the SEO headline of this test article - BBC Scotland"`;
 
