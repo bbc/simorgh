@@ -255,13 +255,5 @@ const liteTestSuites = canonicalTestSuites
 
 runTestsForPage({
   pageType: 'articles',
-  testSuites: [
-    {
-      path: '/zhongwen/articles/c3xd4x9prgyo/trad',
-      runforEnv: ['local'],
-      service: 'zhongwen',
-      variant: 'trad',
-      tests: [...canonicalTests],
-    },
-  ],
+  testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],
 });
