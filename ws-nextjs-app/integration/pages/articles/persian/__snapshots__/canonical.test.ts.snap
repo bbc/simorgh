@@ -2,51 +2,6 @@
 
 exports[`Canonical Articles A11y I can see the skip to content link 1`] = `"مشاهده محتوا"`;
 
-exports[`Canonical Articles Analytics ATI tracking pixel excluding src 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" >"`;
-
-exports[`Canonical Articles Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
-
-exports[`Canonical Articles Analytics ATI tracking pixel search params 1`] = `
-[
-  {
-    "s": "598343",
-  },
-  {
-    "s2": "69",
-  },
-  {
-    "p": "persian.articles.c4vlle3q337o.page",
-  },
-  {
-    "x1": "[urn:bbc:optimo:asset:c4vlle3q337o]",
-  },
-  {
-    "x2": "[responsive]",
-  },
-  {
-    "x3": "[news-persian]",
-  },
-  {
-    "x4": "[fa]",
-  },
-  {
-    "x7": "[article]",
-  },
-  {
-    "x8": "[simorgh-nojs]",
-  },
-  {
-    "x9": "[پهپادی%20که%20برایتان%20قهوه%20می‌آورد]",
-  },
-  {
-    "x11": "[2019-05-28T13:42:44.996Z]",
-  },
-  {
-    "x12": "[2019-07-23T15:47:11.893Z]",
-  },
-]
-`;
-
 exports[`Canonical Articles Footer Anchors should match text and url 1`] = `
 {
   "text": "BBC News, فارسی",
@@ -220,7 +175,7 @@ exports[`Canonical Articles Image Copyright Non BBC should match snapshot 1`] = 
 exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="قهوه"
-  class="bbc-139onq"
+  class="css-4ejld5"
   height="360"
   loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"
@@ -375,7 +330,7 @@ exports[`Canonical Articles SEO Apple Touch Icon should match attributes 10`] = 
 }
 `;
 
-exports[`Canonical Articles SEO Canonical link 1`] = `"http://localhost:7080/persian/articles/c4vlle3q337o"`;
+exports[`Canonical Articles SEO Canonical link 1`] = `"http://localhost:7081/persian/articles/c4vlle3q337o"`;
 
 exports[`Canonical Articles SEO Dir attribute 1`] = `"rtl"`;
 
@@ -418,7 +373,7 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
         "name": "Persian",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7080/persian/articles/c4vlle3q337o",
+        "@id": "http://localhost:7081/persian/articles/c4vlle3q337o",
         "@type": "WebPage",
         "name": "پهپادی که برایتان قهوه می‌آورد",
       },
@@ -434,7 +389,7 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
         "publishingPrinciples": "https://www.bbc.com/persian/institutional-49283091",
       },
       "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
-      "url": "http://localhost:7080/persian/articles/c4vlle3q337o",
+      "url": "http://localhost:7081/persian/articles/c4vlle3q337o",
     },
   ],
 }
@@ -454,7 +409,7 @@ exports[`Canonical Articles SEO OG title 1`] = `"پهپادی که برایتا�
 
 exports[`Canonical Articles SEO OG type 1`] = `"article"`;
 
-exports[`Canonical Articles SEO OG url 1`] = `"http://localhost:7080/persian/articles/c4vlle3q337o"`;
+exports[`Canonical Articles SEO OG url 1`] = `"http://localhost:7081/persian/articles/c4vlle3q337o"`;
 
 exports[`Canonical Articles SEO Page title 1`] = `"پهپادی که برایتان قهوه می‌آورد - BBC News فارسی"`;
 
