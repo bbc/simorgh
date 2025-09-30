@@ -1,6 +1,7 @@
 export default () => {
   if (process.env.DEV_MODE) return;
 
+  // this passes
   it('Bundle scripts', () => {
     const bundleScriptMatcher = new RegExp(
       `(\\/static\\/js\\/(?:comscore\\/)?(main|framework|commons|shared|${global.service}|.+Page).+?.js)|(\\/static\\/.+?-lib.+?.js)`,
@@ -8,8 +9,10 @@ export default () => {
     );
     const bbcOriginScripts = Array.from(
       Array.from(document.querySelectorAll('script[src]')),
-    ).filter(script =>
-      script.getAttribute('src').startsWith('http://localhost:7080'),
+    ).filter(
+      script =>
+        script.getAttribute('src').startsWith('http://localhost:7080') ||
+        script.getAttribute('src').startsWith('http://localhost:7081'),
     );
 
     bbcOriginScripts.forEach(bbcOriginScript => {
@@ -17,6 +20,7 @@ export default () => {
     });
   });
 
+  // this fails
   it('Service bundle is loaded', () => {
     const bundleScriptMatcher = new RegExp(
       `(\\/static\\/js\\/(${global.service})-\\w+\\.\\w+\\.js)`,
@@ -24,8 +28,10 @@ export default () => {
     );
     const bbcOriginScripts = Array.from(
       Array.from(document.querySelectorAll('script[src]')),
-    ).filter(script =>
-      script.getAttribute('src').startsWith('http://localhost:7080'),
+    ).filter(
+      script =>
+        script.getAttribute('src').startsWith('http://localhost:7080') ||
+        script.getAttribute('src').startsWith('http://localhost:7081'),
     );
     const serviceScripts = bbcOriginScripts.filter(script =>
       bundleScriptMatcher.test(script.getAttribute('src')),

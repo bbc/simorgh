@@ -17,17 +17,7 @@ const faultTolerantFetch = ({ url, headers }) =>
       maxTimeout: fiveSeconds,
     });
 
-    console.log("i'm running for", url);
-    console.log('headers', headers);
-
     operation.attempt(async currentAttempt => {
-      // // Optional delay before first attempt
-      // if (currentAttempt === 1) {
-      //   // eslint-disable-next-line no-promise-executor-return
-      //   await new Promise(res => setTimeout(res, 1000)); // wait 1s
-      // }
-      console.log("I'm trying - attempt number", currentAttempt);
-
       if (currentAttempt > 1) {
         console.warn(
           `Error getting HTML from ${url}`,
@@ -61,10 +51,6 @@ const faultTolerantFetch = ({ url, headers }) =>
 
         const html = await response.text();
 
-        console.log('I have the HTML I need');
-
-        // console.log(`Final HTML for ${url}:\n`, html); // show first 500 char
-
         const window = new Window({ url });
         const document = new window.DOMParser().parseFromString(
           html
@@ -75,26 +61,7 @@ const faultTolerantFetch = ({ url, headers }) =>
         );
 
         resolve({ window, document });
-
-        // // Check for required elements in the parsed DOM
-        // const hasMain = !!document.querySelector('main');
-        // const hasTime = !!document.querySelector('time');
-
-        // if (!hasMain || !hasTime) {
-        //   const error = new Error(
-        //     `Parsed document missing expected elements for ${url}:` +
-        //       `${!hasMain ? ' <main>' : ''}${!hasTime ? ' <time>' : ''}`,
-        //   );
-        //   if (operation.retry(error)) {
-        //     return;
-        //   }
-        //   reject(operation.mainError());
-        //   return;
-        // }
-
-        // resolve({ window, document });
       } catch (error) {
-        console.log('Oops There is an error', error.toString());
         const isSocketHangUpError = error
           .toString()
           .includes('Error: socket hang up');
