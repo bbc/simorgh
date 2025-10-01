@@ -1,0 +1,466 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Canonical Story Page A11y I can see the skip to content link 1`] = `"Ir al contenido"`;
+
+exports[`Canonical Story Page Analytics ATI tracking pixel excluding src 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" >"`;
+
+exports[`Canonical Story Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
+
+exports[`Canonical Story Page Analytics ATI tracking pixel search params 1`] = `
+[
+  {
+    "s": "598343",
+  },
+  {
+    "s2": "62",
+  },
+  {
+    "p": "mundo.world.story.51266689.page",
+  },
+  {
+    "x1": "[urn:bbc:cps:curie:asset:faf2993a-dcc0-0746-81a6-a6aca4cd59b1]",
+  },
+  {
+    "x2": "[responsive]",
+  },
+  {
+    "x3": "[news-mundo]",
+  },
+  {
+    "x4": "[es]",
+  },
+  {
+    "x7": "[article]",
+  },
+  {
+    "x8": "[simorgh-nojs]",
+  },
+  {
+    "x9": "[Brexit:%20qué%20cambiará%20para%20visitar,%20trabajar%20y%20estudiar%20en%20Reino%20Unido%20tras%20la%20salida%20del%20país%20de%20la%20Unión%20Europea%20-%20BBC%20News%20Mundo]",
+  },
+  {
+    "x11": "[2020-01-30T06:35:49.000Z]",
+  },
+  {
+    "x12": "[2020-01-30T06:35:49.000Z]",
+  },
+  {
+    "x16": "[WS - Give me perspective]",
+  },
+  {
+    "x17": "[Explainer]",
+  },
+]
+`;
+
+exports[`Canonical Story Page Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, Mundo",
+  "url": "/mundo",
+}
+`;
+
+exports[`Canonical Story Page Footer Anchors should match text and url 2`] = `
+{
+  "text": "Por qué puedes confiar en la BBC",
+  "url": "https://www.bbc.com/mundo/institucional-51359666",
+}
+`;
+
+exports[`Canonical Story Page Footer Anchors should match text and url 3`] = `
+{
+  "text": "Términos de uso",
+  "url": "https://www.bbc.com/mundo/institucional-36400005",
+}
+`;
+
+exports[`Canonical Story Page Footer Anchors should match text and url 4`] = `
+{
+  "text": "Sobre la BBC",
+  "url": "https://www.bbc.com/mundo/institucional-36400007",
+}
+`;
+
+exports[`Canonical Story Page Footer Anchors should match text and url 5`] = `
+{
+  "text": "Política de privacidad",
+  "url": "https://www.bbc.com/mundo/institucional-36400009",
+}
+`;
+
+exports[`Canonical Story Page Footer Anchors should match text and url 6`] = `
+{
+  "text": "Cookies",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical Story Page Footer Anchors should match text and url 7`] = `
+{
+  "text": "Escribe a BBC Mundo",
+  "url": "https://www.bbc.co.uk/mundo/send/u50853489",
+}
+`;
+
+exports[`Canonical Story Page Footer Anchors should match text and url 8`] = `
+{
+  "text": "Otros idiomas",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`Canonical Story Page Footer Anchors should match text and url 9`] = `
+{
+  "text": "Do not share or sell my info",
+  "url": "#",
+}
+`;
+
+exports[`Canonical Story Page Footer Anchors should match text and url 10`] = `
+{
+  "text": "Lee sobre nuestra postura acerca de enlaces externos.",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
+}
+`;
+
+exports[`Canonical Story Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
+
+exports[`Canonical Story Page Footer Paragraphs should match text 1`] = `"© 2025 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
+
+exports[`Canonical Story Page Header I can see the branding 1`] = `"BBC News, Mundo"`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 1`] = `
+{
+  "text": "Noticias",
+  "url": "/mundo",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 2`] = `
+{
+  "text": "América Latina",
+  "url": "/mundo/topics/c7zp57yyz25t",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 3`] = `
+{
+  "text": "Internacional",
+  "url": "/mundo/topics/c2lej05epw5t",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 4`] = `
+{
+  "text": "EE.UU.",
+  "url": "/mundo/topics/cdr5613yzwqt",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 5`] = `
+{
+  "text": "Economía",
+  "url": "/mundo/topics/c06gq9v4xp3t",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 6`] = `
+{
+  "text": "Ciencia",
+  "url": "/mundo/topics/ckdxnw959n7t",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 7`] = `
+{
+  "text": "Salud",
+  "url": "/mundo/topics/cpzd498zkxgt",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 8`] = `
+{
+  "text": "Cultura",
+  "url": "/mundo/topics/c2dwq9zyv4yt",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 9`] = `
+{
+  "text": "Tecnología",
+  "url": "/mundo/topics/cyx5krnw38vt",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 10`] = `
+{
+  "text": "Hay Festival",
+  "url": "/mundo/topics/cr50y7p7qyqt",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 11`] = `
+{
+  "text": "Centroamérica cuenta",
+  "url": "/mundo/topics/c404v5z1k8wt",
+}
+`;
+
+exports[`Canonical Story Page Image Caption should match text 1`] = `"Pie de foto, Llegó el día de la salida de Reino Unido de la UE."`;
+
+exports[`Canonical Story Page Image should match snapshot 1`] = `
+<img
+  alt="A person holding a union jack umbrella in front of Big Ben"
+  class="bbc-139onq"
+  height="549"
+  loading="eager"
+  sizes="(min-width: 1008px) 760px, 100vw"
+  src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg.webp"
+  srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg.webp 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg.webp 624w, https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg.webp 800w"
+  style="aspect-ratio:976 / 549"
+  width="976"
+/>
+`;
+
+exports[`Canonical Story Page Lead image I can see an image with a caption 1`] = `"Pie de foto, Llegó el día de la salida de Reino Unido de la UE."`;
+
+exports[`Canonical Story Page Main heading should match text 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea"`;
+
+exports[`Canonical Story Page Most Read has item with rank 1`] = `
+{
+  "text": "3 posibles escenarios en Venezuela tras el triunfo de Maduro rechazado por la oposición",
+  "url": "https://www.bbc.com/mundo/articles/c3gekqplyn4o",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 2`] = `
+{
+  "text": "El Consejo Nacional Electoral anuncia el triunfo de Nicolás Maduro en las elecciones presidenciales de Venezuela y la oposición rechaza los resultados",
+  "url": "https://www.bbc.com/mundo/articles/cn38n9knl3no",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 3`] = `
+{
+  "text": ""Difíciles de creer": los cuestionamientos internacionales a los resultados que dieron ganador a Maduro en Venezuela",
+  "url": "https://www.bbc.com/mundo/articles/cz47dxzyzd1o",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 4`] = `
+{
+  "text": "Cómo funciona el proceso electoral en Venezuela y por qué han puesto en duda el resultado de los comicios",
+  "url": "https://www.bbc.com/mundo/articles/c2x0vlnzm17o",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 5`] = `
+{
+  "text": ""Hay un nuevo presidente electo y es Edmundo González": la oposición de Venezuela rechaza la victoria de Maduro anunciada por el CNE",
+  "url": "https://www.bbc.com/mundo/articles/cv2gwyg11z1o",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 6`] = `
+{
+  "text": "La elaborada operación encubierta con la que engañaron al capo de las drogas "El Mayo" Zambada para llevarlo a EE.UU.",
+  "url": "https://www.bbc.com/mundo/articles/c4ngy135jw5o",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 7`] = `
+{
+  "text": "¿Es la comida fermentada buena para la salud de tus intestinos? Y otras 8 preguntas sobre estos alimentos",
+  "url": "https://www.bbc.com/mundo/articles/c3g0r9vgl9lo",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 8`] = `
+{
+  "text": ""Si alguien como El Mayo soltara toda la información, sería algo potencialmente desestabilizador para las relaciones de México y EE.UU."",
+  "url": "https://www.bbc.com/mundo/articles/cg3jxdg727xo",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 9`] = `
+{
+  "text": "La física cuyo descubrimiento ayudó a predecir partículas como el bosón de Higgs y ahora recibe su doctorado (a los 98 años)",
+  "url": "https://www.bbc.com/mundo/articles/c4ngv9gr7qlo",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 10`] = `
+{
+  "text": "Nicolás Maduro: "Hay que respetar al árbitro y que nadie pretenda manchar esta jornada bella"",
+  "url": "https://www.bbc.com/mundo/articles/cy945e5nen4o",
+}
+`;
+
+exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 1`] = `
+{
+  "sizes": null,
+  "url": "http://localhost:7080/mundo/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 2`] = `
+{
+  "sizes": "72x72",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 3`] = `
+{
+  "sizes": "96x96",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 4`] = `
+{
+  "sizes": "128x128",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 5`] = `
+{
+  "sizes": "144x144",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 6`] = `
+{
+  "sizes": "152x152",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 7`] = `
+{
+  "sizes": "180x180",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 8`] = `
+{
+  "sizes": "192x192",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 9`] = `
+{
+  "sizes": "384x384",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 10`] = `
+{
+  "sizes": "512x512",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-512x512.png",
+}
+`;
+
+exports[`Canonical Story Page SEO Canonical link 1`] = `"http://localhost:7080/mundo/noticias-internacional-51266689"`;
+
+exports[`Canonical Story Page SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical Story Page SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical Story Page SEO Heading level 1 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea"`;
+
+exports[`Canonical Story Page SEO Lang attribute 1`] = `"es"`;
+
+exports[`Canonical Story Page SEO Linked data should match text 1`] = `
+{
+  "@context": "http://schema.org",
+  "@graph": [
+    {
+      "@type": "NewsArticle",
+      "author": {
+        "@type": "Person",
+        "name": "Redacción  ",
+      },
+      "dateModified": "2020-01-30T06:35:49.000Z",
+      "datePublished": "2020-01-30T06:35:49.000Z",
+      "description": "Tras casi cuatro años de desacuerdos y negociaciones, este viernes Reino Unido dejará formalmente la Unión Europea. ¿Qué cambios supone esto para quienes quieran hacer turismo, estudiar o trabajar en Reino Unido?",
+      "headline": "Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea",
+      "image": {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://ichef.bbci.co.uk/news/1024/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg",
+        "width": 1024,
+      },
+      "inLanguage": {
+        "@type": "Language",
+        "alternateName": "es",
+        "name": "Spanish",
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:7080/mundo/noticias-internacional-51266689",
+        "@type": "WebPage",
+        "name": "Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea",
+      },
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
+          "width": 1024,
+        },
+        "name": "BBC News Mundo",
+        "publishingPrinciples": "https://www.bbc.com/mundo/institucional-51359666",
+      },
+      "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg",
+      "url": "http://localhost:7080/mundo/noticias-internacional-51266689",
+    },
+  ],
+}
+`;
+
+exports[`Canonical Story Page SEO OG description 1`] = `"Tras casi cuatro años de desacuerdos y negociaciones, este viernes Reino Unido dejará formalmente la Unión Europea. ¿Qué cambios supone esto para quienes quieran hacer turismo, estudiar o trabajar en Reino Unido?"`;
+
+exports[`Canonical Story Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg"`;
+
+exports[`Canonical Story Page SEO OG image alt 1`] = `"A person holding a union jack umbrella in front of Big Ben"`;
+
+exports[`Canonical Story Page SEO OG locale 1`] = `"es-005"`;
+
+exports[`Canonical Story Page SEO OG site name 1`] = `"BBC News Mundo"`;
+
+exports[`Canonical Story Page SEO OG title 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea - BBC News Mundo"`;
+
+exports[`Canonical Story Page SEO OG type 1`] = `"article"`;
+
+exports[`Canonical Story Page SEO OG url 1`] = `"http://localhost:7080/mundo/noticias-internacional-51266689"`;
+
+exports[`Canonical Story Page SEO Page title 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea - BBC News Mundo"`;
+
+exports[`Canonical Story Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
+
+exports[`Canonical Story Page SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical Story Page SEO Twitter creator 1`] = `"@bbcmundo"`;
+
+exports[`Canonical Story Page SEO Twitter description 1`] = `"Tras casi cuatro años de desacuerdos y negociaciones, este viernes Reino Unido dejará formalmente la Unión Europea. ¿Qué cambios supone esto para quienes quieran hacer turismo, estudiar o trabajar en Reino Unido?"`;
+
+exports[`Canonical Story Page SEO Twitter image alt 1`] = `"A person holding a union jack umbrella in front of Big Ben"`;
+
+exports[`Canonical Story Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg"`;
+
+exports[`Canonical Story Page SEO Twitter site 1`] = `"@bbcmundo"`;
+
+exports[`Canonical Story Page SEO Twitter title 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea - BBC News Mundo"`;
+
+exports[`Canonical Story Page Timestamp should match text and date 1`] = `
+{
+  "date": "2020-01-30",
+  "text": "30 enero 2020",
+}
+`;

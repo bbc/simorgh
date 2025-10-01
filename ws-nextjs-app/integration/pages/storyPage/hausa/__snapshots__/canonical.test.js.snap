@@ -1,0 +1,406 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Canonical Story Page A11y I can see the skip to content link 1`] = `"Tsallaka zuwa abubuwan da ke ciki"`;
+
+exports[`Canonical Story Page Analytics ATI tracking pixel excluding src 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" >"`;
+
+exports[`Canonical Story Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
+
+exports[`Canonical Story Page Analytics ATI tracking pixel search params 1`] = `
+[
+  {
+    "s": "598343",
+  },
+  {
+    "s2": "51",
+  },
+  {
+    "p": "hausa.news.story.23246985.page",
+  },
+  {
+    "x1": "[urn:bbc:cps:curie:asset:142c7232-ebaf-2d4e-8e70-6b68dda2f199]",
+  },
+  {
+    "x2": "[responsive]",
+  },
+  {
+    "x3": "[news-hausa]",
+  },
+  {
+    "x4": "[ha]",
+  },
+  {
+    "x7": "[article]",
+  },
+  {
+    "x8": "[simorgh-nojs]",
+  },
+  {
+    "x9": "[Ɗanɗano:%20Kuskure%20a%20Hausa%20da%20Ƙa’idar%20hira%20da%20baƙì%20-%20Ɓ%20ɓ%20ɗ%20Ɗ%20ƙ%20Ƙ%20-%20BBC%20News%20Hausa]",
+  },
+  {
+    "x11": "[2019-08-20T12:21:00.000Z]",
+  },
+  {
+    "x12": "[2019-08-20T12:21:00.000Z]",
+  },
+]
+`;
+
+exports[`Canonical Story Page Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, Hausa",
+  "url": "/hausa",
+}
+`;
+
+exports[`Canonical Story Page Footer Anchors should match text and url 2`] = `
+{
+  "text": "Me ya sa za ku iya aminta da BBC",
+  "url": "https://www.bbc.com/hausa/game-da-mu-49283501",
+}
+`;
+
+exports[`Canonical Story Page Footer Anchors should match text and url 3`] = `
+{
+  "text": "Sharuddan yin amfani",
+  "url": "https://www.bbc.com/hausa/game-da-mu-37377086",
+}
+`;
+
+exports[`Canonical Story Page Footer Anchors should match text and url 4`] = `
+{
+  "text": "A game da BBC",
+  "url": "https://www.bbc.com/hausa/game-da-mu-37377088",
+}
+`;
+
+exports[`Canonical Story Page Footer Anchors should match text and url 5`] = `
+{
+  "text": "Ka'idojin tsare sirri",
+  "url": "https://www.bbc.com/hausa/game-da-mu-37377090",
+}
+`;
+
+exports[`Canonical Story Page Footer Anchors should match text and url 6`] = `
+{
+  "text": "Ka'idoji",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical Story Page Footer Anchors should match text and url 7`] = `
+{
+  "text": "Tuntubi BBC",
+  "url": "https://www.bbc.co.uk/hausa/send/u50853335",
+}
+`;
+
+exports[`Canonical Story Page Footer Anchors should match text and url 8`] = `
+{
+  "text": "Labaran BBC a sauran harsuna",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`Canonical Story Page Footer Anchors should match text and url 9`] = `
+{
+  "text": "Do not share or sell my info",
+  "url": "#",
+}
+`;
+
+exports[`Canonical Story Page Footer Anchors should match text and url 10`] = `
+{
+  "text": "Karanta hanyoyin da muke bi dangane da adireshin waje.",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
+}
+`;
+
+exports[`Canonical Story Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/hausa"`;
+
+exports[`Canonical Story Page Footer Paragraphs should match text 1`] = `"© 2025 BBC. BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba.  Karanta hanyoyin da muke bi dangane da adireshin waje."`;
+
+exports[`Canonical Story Page Header I can see the branding 1`] = `"BBC News, Hausa"`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 1`] = `
+{
+  "text": "Labaran Duniya",
+  "url": "/hausa",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 2`] = `
+{
+  "text": "Wasanni",
+  "url": "/hausa/topics/cz74kjgv220t",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 3`] = `
+{
+  "text": "Nishadi",
+  "url": "/hausa/topics/cg726kz37wdt",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 4`] = `
+{
+  "text": "Cikakkun Rahotanni",
+  "url": "/hausa/topics/cnl7wd77wj2t",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 5`] = `
+{
+  "text": "Bidiyo",
+  "url": "/hausa/topics/cn09qmz4jryt",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 6`] = `
+{
+  "text": "Shirye-shirye na Musamman",
+  "url": "/hausa/topics/cnl7wd9pddlt",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 7`] = `
+{
+  "text": "Shirye-shiryen rediyo",
+  "url": "/hausa/topics/c4nx34q5724t",
+}
+`;
+
+exports[`Canonical Story Page Image Caption should match text 1`] = `"Bayanan sautiमुंबई इंडियन्सला आता दुसऱ्या क्वॉलिफायर लढतीत खेळावे लागणार आहे."`;
+
+exports[`Canonical Story Page Image should match snapshot 1`] = `
+<noscript
+  class="bbc-n2zqlz"
+>
+  <strong>
+    Na'urarku na da matsalar sauraren sauti
+  </strong>
+</noscript>
+`;
+
+exports[`Canonical Story Page Lead image I can see an image with a caption 1`] = `"Bayanan sautiमुंबई इंडियन्सला आता दुसऱ्या क्वॉलिफायर लढतीत खेळावे लागणार आहे."`;
+
+exports[`Canonical Story Page Main heading should match text 1`] = `"Ɗanɗano: Kuskure a Hausa da Ƙa’idar hira da baƙì - Ɓ ɓ ɗ Ɗ ƙ Ƙ"`;
+
+exports[`Canonical Story Page Most Read has item with rank 1`] = `
+{
+  "text": "Zuma ya fuskanci koma baya kan cin hanci 32",
+  "url": "/hausa/23057301",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 2`] = `
+{
+  "text": "Zuma ya fuskanci koma baya kan cin hanci 3",
+  "url": "/hausa/23055778",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 3`] = `
+{
+  "text": "Zuma ya fuskanci koma baya kan cin hanci 11",
+  "url": "/hausa/23055796",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 4`] = `
+{
+  "text": "Zuma ya fuskanci koma baya kan cin hanci 23",
+  "url": "/hausa/23055836",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 5`] = `
+{
+  "text": "Zuma ya fuskanci koma baya kan cin hanci 34",
+  "url": "/hausa/23057304",
+}
+`;
+
+exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 1`] = `
+{
+  "sizes": null,
+  "url": "http://localhost:7080/hausa/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 2`] = `
+{
+  "sizes": "72x72",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 3`] = `
+{
+  "sizes": "96x96",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 4`] = `
+{
+  "sizes": "128x128",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 5`] = `
+{
+  "sizes": "144x144",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 6`] = `
+{
+  "sizes": "152x152",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 7`] = `
+{
+  "sizes": "180x180",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 8`] = `
+{
+  "sizes": "192x192",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 9`] = `
+{
+  "sizes": "384x384",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 10`] = `
+{
+  "sizes": "512x512",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-512x512.png",
+}
+`;
+
+exports[`Canonical Story Page SEO Canonical link 1`] = `"http://localhost:7080/hausa/labarai-23246985"`;
+
+exports[`Canonical Story Page SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical Story Page SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical Story Page SEO Heading level 1 1`] = `"Ɗanɗano: Kuskure a Hausa da Ƙa’idar hira da baƙì - Ɓ ɓ ɗ Ɗ ƙ Ƙ"`;
+
+exports[`Canonical Story Page SEO Lang attribute 1`] = `"ha"`;
+
+exports[`Canonical Story Page SEO Linked data should match text 1`] = `
+{
+  "@context": "http://schema.org",
+  "@graph": [
+    {
+      "@type": "NewsArticle",
+      "author": {
+        "@type": "Person",
+        "name": "Kalkidan Yibeltal",
+      },
+      "dateModified": "2019-08-20T12:21:00.000Z",
+      "datePublished": "2019-08-20T12:21:00.000Z",
+      "description": "French football fans sing God Save The Queen ahead of the match between France and England in tribute to the victims of attacks in London and Manchester.",
+      "headline": "Ɗanɗano: Kuskure a Hausa da Ƙa’idar hira da baƙì - Ɓ ɓ ɗ Ɗ ƙ Ƙ",
+      "image": {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://ichef.bbci.co.uk/news/1024/branded_hausa/1745C/test/_63542359_hi035712328.jpg",
+        "width": 1024,
+      },
+      "inLanguage": {
+        "@type": "Language",
+        "alternateName": "ha",
+        "name": "Hausa",
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:7080/hausa/labarai-23246985",
+        "@type": "WebPage",
+        "name": "Ɗanɗano: Kuskure a Hausa da Ƙa’idar hira da baƙì - Ɓ ɓ ɗ Ɗ ƙ Ƙ",
+      },
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
+          "width": 1024,
+        },
+        "name": "BBC News Hausa",
+        "publishingPrinciples": "https://www.bbc.com/hausa/game-da-mu-49283501",
+      },
+      "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_hausa/1745C/test/_63542359_hi035712328.jpg",
+      "url": "http://localhost:7080/hausa/labarai-23246985",
+    },
+  ],
+}
+`;
+
+exports[`Canonical Story Page SEO Linked data should match text 2`] = `
+{
+  "@context": "http://schema.org",
+  "@type": "AudioObject",
+  "description": "मुंबई इंडियन्सला आता दुसऱ्या क्वॉलिफायर लढतीत खेळावे लागणार आहे.",
+  "duration": "PT16S",
+  "embedURL": "https://www.test.bbc.com/hausa/av-embeds/labarai-23246985/vpid/p01b7w2z",
+  "name": "पुणे सुपरजायंट्स आयपीएलच्या अंतिम फेरीत!",
+  "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01b7w9z.jpg",
+  "uploadDate": "2017-05-22T15:38:23.000Z",
+}
+`;
+
+exports[`Canonical Story Page SEO OG description 1`] = `"French football fans sing God Save The Queen ahead of the match between France and England in tribute to the victims of attacks in London and Manchester."`;
+
+exports[`Canonical Story Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_hausa/1745C/test/_63542359_hi035712328.jpg"`;
+
+exports[`Canonical Story Page SEO OG image alt 1`] = `"hai;le"`;
+
+exports[`Canonical Story Page SEO OG locale 1`] = `"ha-GH"`;
+
+exports[`Canonical Story Page SEO OG site name 1`] = `"BBC News Hausa"`;
+
+exports[`Canonical Story Page SEO OG title 1`] = `"Ɗanɗano: Kuskure a Hausa da Ƙa’idar hira da baƙì - Ɓ ɓ ɗ Ɗ ƙ Ƙ - BBC News Hausa"`;
+
+exports[`Canonical Story Page SEO OG type 1`] = `"article"`;
+
+exports[`Canonical Story Page SEO OG url 1`] = `"http://localhost:7080/hausa/labarai-23246985"`;
+
+exports[`Canonical Story Page SEO Page title 1`] = `"Ɗanɗano: Kuskure a Hausa da Ƙa’idar hira da baƙì - Ɓ ɓ ɗ Ɗ ƙ Ƙ - BBC News Hausa"`;
+
+exports[`Canonical Story Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
+
+exports[`Canonical Story Page SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical Story Page SEO Twitter creator 1`] = `"@bbchausa"`;
+
+exports[`Canonical Story Page SEO Twitter description 1`] = `"French football fans sing God Save The Queen ahead of the match between France and England in tribute to the victims of attacks in London and Manchester."`;
+
+exports[`Canonical Story Page SEO Twitter image alt 1`] = `"hai;le"`;
+
+exports[`Canonical Story Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_hausa/1745C/test/_63542359_hi035712328.jpg"`;
+
+exports[`Canonical Story Page SEO Twitter site 1`] = `"@bbchausa"`;
+
+exports[`Canonical Story Page SEO Twitter title 1`] = `"Ɗanɗano: Kuskure a Hausa da Ƙa’idar hira da baƙì - Ɓ ɓ ɗ Ɗ ƙ Ƙ - BBC News Hausa"`;
+
+exports[`Canonical Story Page Timestamp should match text and date 1`] = `
+{
+  "date": "2019-08-20",
+  "text": "20 Agusta 2019",
+}
+`;
