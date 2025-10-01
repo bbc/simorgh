@@ -179,7 +179,6 @@ export default function parseRoute(resolvedUrl: string) {
   const service = extractService(query);
   const variant = extractVariant(query);
   const platform = extractPlatform(query);
-  console.log('parsing route:', resolvedUrl);
   const assetId = extractAssetId(query);
   const mediaId = extractMediaId(query);
   const mediaDelimiter = extractMediaDelimiter(query);
