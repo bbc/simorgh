@@ -58,7 +58,6 @@ const ComponentTracking = ({
         __html: `${trackingScripts({
           enableStaticClickTrackingOnOperaMiniOnly,
           trackComponentViews,
-          nonce,
         })}`,
       }}
     />

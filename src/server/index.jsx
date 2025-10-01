@@ -197,11 +197,18 @@ const injectNonceHeader = (
   toggles,
   showAdsBasedOnLocation,
   res,
+  isLite,
 ) => {
   const nonceToggle = toggles.adsNonce;
   const adToggle = toggles.ads;
-  if (!nonceToggle.enabled || !adToggle.enabled || !showAdsBasedOnLocation)
+  if (
+    !nonceToggle.enabled ||
+    !adToggle.enabled ||
+    !showAdsBasedOnLocation ||
+    isLite
+  ) {
     return null;
+  }
 
   const countriesForNonce =
     nonceToggle.value
@@ -280,12 +287,14 @@ server.get(
       data.country = (headers['x-country'] || headers['x-bbc-edge-country'])
         ?.toString()
         .toLowerCase();
+
       const nonce = injectNonceHeader(
         service,
         data.country,
         toggles,
         data.showAdsBasedOnLocation,
         res,
+        isLite,
       );
       injectCspHeader({ isAmp, service, nonce, res });
 
