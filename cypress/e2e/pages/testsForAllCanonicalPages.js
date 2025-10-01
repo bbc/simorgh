@@ -5,10 +5,7 @@ import envConfig from '../../support/config/envs';
 import config from '../../support/config/services';
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
-export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
-  service,
-  pageType,
-}) => {
+export default ({ service, pageType }) => {
   if (pageType !== 'errorPage404') {
     describe(`Running testsForAllCanonicalPages for ${service} ${pageType}`, () => {
       if (Cypress.env('SMOKE')) {
