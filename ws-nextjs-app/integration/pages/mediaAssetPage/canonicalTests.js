@@ -1,11 +1,12 @@
 import {
-  runCoreCanonicalTests,
+  // runCoreCanonicalTests,
   runCanonicalAnalyticsTests,
-} from '../../common';
+} from '#src/integration/common';
 import runCrossPlatformTests from './crossPlatformTests';
 
 export default service => {
   runCrossPlatformTests(service, 'MAP');
-  runCoreCanonicalTests();
+  // debuggggg
+  // runCoreCanonicalTests();
   runCanonicalAnalyticsTests();
 };

@@ -2,7 +2,7 @@ import {
   runCoreAmpTests,
   runAmpAnalyticsTests,
   runSeoAmpTests,
-} from '../../common';
+} from '#src/integration/common';
 import runCrossPlatformTests from './crossPlatformTests';
 
 export default service => {

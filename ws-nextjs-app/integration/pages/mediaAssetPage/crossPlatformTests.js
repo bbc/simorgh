@@ -1,4 +1,7 @@
-import { runCommonCrossPlatformTests, runTimestampTests } from '../../common';
+import {
+  runCommonCrossPlatformTests,
+  runTimestampTests,
+} from '#src/integration/common';
 
 export default service => {
   runCommonCrossPlatformTests(service);

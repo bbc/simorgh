@@ -2,7 +2,7 @@ import {
   runCommonCrossPlatformTests,
   runTimestampTests,
   runImageTests,
-} from '../../common';
+} from '#src/integration/common';
 
 export default service => {
   runCommonCrossPlatformTests(service);
