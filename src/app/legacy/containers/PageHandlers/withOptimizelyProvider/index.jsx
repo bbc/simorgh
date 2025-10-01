@@ -11,10 +11,10 @@ import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import Cookie from 'js-cookie';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
-// import isCypress from './isCypress';
+import isCypress from './isCypress';
 
-// const isInCypress = isCypress();
-const isInCypress = true;
+const isInCypress = isCypress();
+// const isInCypress = true;
 const TIMEOUT_INTERVAL = 1000;
 
 if (isLive() || isInCypress) {
@@ -32,10 +32,11 @@ const withOptimizelyProvider = Component => {
     const { service } = use(ServiceContext);
     const isStoryBook = process.env.STORYBOOK;
 
-    const isIntegrationTest =
-      onClient() && typeof window !== 'undefined' && window.INTEGRATION_TEST;
+    // const isIntegrationTest =
+    //   onClient() && typeof window !== 'undefined' && window.INTEGRATION_TEST;
 
-    const disableOptimizely = isStoryBook || isInCypress || isIntegrationTest;
+    // const disableOptimizely = isStoryBook || isInCypress || isIntegrationTest;
+    const disableOptimizely = isStoryBook || isInCypress;
 
     if (disableOptimizely) return <Component {...props} />;
 

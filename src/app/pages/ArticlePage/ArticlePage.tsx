@@ -15,7 +15,7 @@ import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import gist from '#containers/Gist';
 import text from '#containers/Text';
 import Blocks from '#containers/Blocks';
-// import Timestamp from '#containers/ArticleTimestamp';
+import Timestamp from '#containers/ArticleTimestamp';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import SocialEmbedContainer from '#containers/SocialEmbed';
 import MediaLoader from '#app/components/MediaLoader';
@@ -41,7 +41,7 @@ import {
   Article,
   OptimoBlock,
   OptimoBylineBlock,
-  // OptimoBylineContributorBlock,
+  OptimoBylineContributorBlock,
 } from '#app/models/types/optimo';
 import { Translations } from '#app/models/types/translations';
 import { Recommendation } from '#app/models/types/onwardJourney';
@@ -58,7 +58,7 @@ import MostRead from '../../components/MostRead';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
-// import Byline from '../../components/Byline';
+import Byline from '../../components/Byline';
 import OEmbedLoader from '../../components/Embeds/OEmbed';
 import UnsupportedEmbed from '../../components/Embeds/UnsupportedEmbed';
 import Uploader from '../../components/Embeds/Uploader';
@@ -72,7 +72,7 @@ import RelatedContentSection from '../../components/RelatedContentSection';
 import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
 import styles from './ArticlePage.styles';
-import { ComponentToRenderProps } from './types';
+import { ComponentToRenderProps, TimeStampProps } from './types';
 import ContinueReadingButton, {
   Props as ContinueReadingProps,
 } from './ContinueReadingButton';
@@ -161,6 +161,27 @@ const getImageComponent =
 //       </>
 //     );
 //   };
+
+const getTimestampComponent =
+  (
+    hasByline: boolean,
+    bylineContribBlocks: OptimoBylineContributorBlock[],
+    firstPublished: string,
+    lastPublished: string,
+  ) =>
+  (props: ComponentToRenderProps & TimeStampProps) => {
+    return hasByline ? (
+      <Byline blocks={bylineContribBlocks}>
+        <Timestamp
+          firstPublished={new Date(firstPublished).getTime()}
+          lastPublished={new Date(lastPublished).getTime()}
+          popOut={false}
+        />
+      </Byline>
+    ) : (
+      <Timestamp {...props} popOut={false} />
+    );
+  };
 
 const getMpuComponent =
   (allowAdvertising: boolean) => (props: ComponentToRenderProps) =>
@@ -304,14 +325,14 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     video: getVideoComponent(translations, blocks),
     text,
     image: getImageComponent(preloadLeadImageToggle),
-    // // EXPERIMENT: Article Read Time
-    // timestamp: getTimestampComponent(
-    //   hasByline,
-    //   bylineContribBlocks,
-    //   firstPublished,
-    //   lastPublished,
-    //   readTimeData,
-    // ),
+    // EXPERIMENT: Article Read Time
+    timestamp: getTimestampComponent(
+      hasByline,
+      bylineContribBlocks,
+      firstPublished,
+      lastPublished,
+      // readTimeData,
+    ),
     social: SocialEmbedContainer,
     embed: UnsupportedEmbed,
     embedHtml: EmbedHtml,
