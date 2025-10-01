@@ -123,10 +123,10 @@ const extractAssetId = (query: Query) => {
   });
 
   if (!assetId) {
-    const tc2PartsCheck = query.slice(-3);
-    if (tc2PartsCheck.length !== 3) return null;
+    const tc2PartsCheck = query.slice(-4);
+    if (tc2PartsCheck.length !== 4) return null;
 
-    const [yearPart, monthPart, tc2AssetId] = tc2PartsCheck;
+    const [categoryPart, yearPart, monthPart, tc2AssetId] = tc2PartsCheck;
 
     const isValidTC2Year = Number(yearPart) >= 1999 && Number(yearPart) <= 2018;
 
@@ -135,7 +135,7 @@ const extractAssetId = (query: Query) => {
       TC2_MONTH_REGEX.test(monthPart) &&
       TC2_ID_REGEX.test(tc2AssetId)
     ) {
-      assetId = tc2AssetId;
+      assetId = `${categoryPart}/${yearPart}/${monthPart}/${tc2AssetId}`;
     }
   }
 
