@@ -45,6 +45,7 @@ const getPageTypeFromHeaders = (headers: IncomingHttpHeaders) => {
     case AV_EMBEDS?.toLowerCase():
       return AV_EMBEDS;
     case ARTICLE_PAGE:
+    case 'tc2': // Legacy TC2 articles are handled as ARTICLE_PAGE
       return ARTICLE_PAGE;
     default:
       return null;
@@ -66,7 +67,9 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   if (resolvedUrl?.includes('av-embeds')) {
     return handleAvRoute(context);
-  } else if (pageType === ARTICLE_PAGE) {
+  }
+
+  if (pageType === ARTICLE_PAGE) {
     return handleArticleRoute(context);
   }
 
