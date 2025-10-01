@@ -1,4 +1,4 @@
-import { Curation } from '../../../models/types/curationData';
+import { Curation } from '../../../../models/types/curationData';
 
 // Hindi curation IDs
 const HINDI_TOP_STORIES_ID =
