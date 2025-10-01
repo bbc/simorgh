@@ -67,8 +67,11 @@ const HomePage = ({ pageData }: HomePageProps) => {
 
   const itemList = getItemList({ curations, name: brandName });
   const timeOfDayVariant = 'variantA'; // hardcoded for now, to be replaced with actual optimizely hook
-  // if service is Hindi and optimizely variant is set to 'variantA' then reorder curations
-  if (service === 'hindi' && timeOfDayVariant === 'variantA') {
+  // if service is Hindi or Tamil and optimizely variant is set to 'variantA' then reorder curations
+  if (
+    (service === 'hindi' || service === 'tamil') &&
+    timeOfDayVariant === 'variantA'
+  ) {
     curations = reorderCurations({
       curations,
       service,
