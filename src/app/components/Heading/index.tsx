@@ -38,7 +38,7 @@ const Heading: FC<Props> = forwardRef(
       fontVariant = 'sansBold',
       level,
       size,
-      // ...htmlAttributes
+      ...htmlAttributes
     }: Props,
     ref: ForwardedRef<HTMLElement>,
   ) => {
@@ -61,7 +61,7 @@ const Heading: FC<Props> = forwardRef(
           margin: 0,
         }}
         {...(ref && { ref })}
-        // {...htmlAttributes}
+        {...htmlAttributes}
       >
         {children}
       </Text>

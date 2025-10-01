@@ -10,7 +10,7 @@ import useOptimizelyVariation, {
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
-// import Headings from '#containers/Headings';
+import Headings from '#containers/Headings';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import gist from '#containers/Gist';
 import text from '#containers/Text';
@@ -41,6 +41,7 @@ import {
   Article,
   OptimoBlock,
   OptimoBylineBlock,
+  // OptimoBylineContributorBlock,
 } from '#app/models/types/optimo';
 import { Translations } from '#app/models/types/translations';
 import { Recommendation } from '#app/models/types/onwardJourney';
@@ -56,13 +57,14 @@ import EmbedHtml from '../../components/Embeds/EmbedHtml';
 import MostRead from '../../components/MostRead';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
-// import LinkedData from '../../components/LinkedData';
+import LinkedData from '../../components/LinkedData';
 // import Byline from '../../components/Byline';
 import OEmbedLoader from '../../components/Embeds/OEmbed';
 import UnsupportedEmbed from '../../components/Embeds/UnsupportedEmbed';
 import Uploader from '../../components/Embeds/Uploader';
 import {
   bylineExtractor,
+  categoryName,
   getAuthorTwitterHandle,
 } from '../../components/Byline/utilities';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -203,8 +205,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const { isApp, isAmp, isLite } = use(RequestContext);
 
-  const { articleAuthor, showRelatedTopics, brandName, translations } =
-    use(ServiceContext);
+  const {
+    articleAuthor,
+    isTrustProjectParticipant,
+    showRelatedTopics,
+    brandName,
+    translations,
+  } = use(ServiceContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
 
@@ -265,6 +272,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     : null;
 
   const taggings = pageData?.metadata?.passport?.taggings ?? [];
+  const formats = pageData?.metadata?.passport?.predicates?.formats ?? [];
 
   const isPGL = pageData?.metadata?.type === PHOTO_GALLERY_PAGE;
   const isSTY = pageData?.metadata?.type === STORY_PAGE;
@@ -291,6 +299,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const componentsToRender = {
     visuallyHiddenHeadline,
     headline: getHeadlineComponent,
+    subheadline: Headings,
     audio: MediaLoader,
     video: getVideoComponent(translations, blocks),
     text,
@@ -380,7 +389,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         imageAltText={promoImageAltText}
         hasAmpPage={!isTC2Asset}
       />
-      {/* <LinkedData
+      <LinkedData
         showAuthor
         bylineLinkedData={bylineLinkedData}
         type={
@@ -395,7 +404,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         dateModified={lastPublished}
         aboutTags={aboutTags}
         imageLocator={promoImage}
-      /> */}
+      />
       {allowAdvertising && (
         <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
       )}
