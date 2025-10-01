@@ -82,9 +82,6 @@ module.exports = {
         ),
       );
     }
-    if (isServer) {
-      config.devtool = 'source-map';
-    }
 
     return config;
   },

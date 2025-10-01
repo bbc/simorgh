@@ -48,7 +48,7 @@ import { Recommendation } from '#app/models/types/onwardJourney';
 
 import ScrollablePromo from '#components/ScrollablePromo';
 import Recommendations from '#app/components/Recommendations';
-// import { ReadTimeArticleExperiment as ReadTime } from '#app/components/ReadTime';
+import { ReadTimeArticleExperiment as ReadTime } from '#app/components/ReadTime';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -83,10 +83,10 @@ import {
 } from '../utils/portraitVideo';
 
 // EXPERIMENT: Article Read Time
-// interface ReadTimeData {
-//   readTimeValue: number | undefined;
-//   readTimeVariant: string;
-// }
+interface ReadTimeData {
+  readTimeValue: number | undefined;
+  readTimeVariant: string;
+}
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -97,89 +97,68 @@ const getImageComponent =
     />
   );
 
-// // EXPERIMENT: Article Read Time
-// const Placeholder = ({ className }: { className?: string }) => {
-//   const { service } = use(ServiceContext);
-//   const servicesInExperiment = ['']; // adding services will show placeholder regardless of whether experiment is running
-//   return servicesInExperiment.includes(service) ? (
-//     <div className={className} />
-//   ) : null;
-// };
+// EXPERIMENT: Article Read Time
+const Placeholder = ({ className }: { className?: string }) => {
+  const { service } = use(ServiceContext);
+  const servicesInExperiment = ['']; // adding services will show placeholder regardless of whether experiment is running
+  return servicesInExperiment.includes(service) ? (
+    <div className={className} />
+  ) : null;
+};
 
-// // EXPERIMENT: Article Read Time
-// const getTimestampComponent =
-//   (
-//     hasByline: boolean,
-//     bylineContribBlocks: OptimoBylineContributorBlock[],
-//     firstPublished: string,
-//     lastPublished: string,
-//     readTimeData: ReadTimeData,
-//   ) =>
-//   (props: ComponentToRenderProps & TimeStampProps) => {
-//     // EXPERIMENT: Article Read Time
-//     const { readTimeValue, readTimeVariant } = readTimeData;
-//     const isReadTimeVariantValid = readTimeVariant !== 'off' && readTimeVariant;
-//     const showReadTimeBelowTimestamp =
-//       !!readTimeValue && readTimeValue !== 0 && !!isReadTimeVariantValid;
-
-//     return hasByline ? (
-//       <>
-//         <Byline blocks={bylineContribBlocks}>
-//           <Timestamp
-//             firstPublished={new Date(firstPublished).getTime()}
-//             lastPublished={new Date(lastPublished).getTime()}
-//             popOut={false}
-//             showReadTimeBelowTimestamp={showReadTimeBelowTimestamp}
-//           />
-//           {showReadTimeBelowTimestamp && (
-//             <ReadTime
-//               readTimeValue={readTimeValue}
-//               readTimeVariant={readTimeVariant}
-//             />
-//           )}
-//         </Byline>
-//         {!showReadTimeBelowTimestamp && (
-//           <Placeholder css={styles.readTimePlaceholderBelowTimestamp} />
-//         )}
-//       </>
-//     ) : (
-//       <>
-//         <Timestamp
-//           {...props}
-//           popOut={false}
-//           showReadTimeBelowTimestamp={showReadTimeBelowTimestamp}
-//         />
-//         {/* EXPERIMENT: Article Read Time */}
-//         {showReadTimeBelowTimestamp ? (
-//           <ReadTime
-//             readTimeValue={readTimeValue}
-//             readTimeVariant={readTimeVariant}
-//           />
-//         ) : (
-//           <Placeholder css={styles.readTimePlaceholderBelowTimestamp} />
-//         )}
-//       </>
-//     );
-//   };
-
+// EXPERIMENT: Article Read Time
 const getTimestampComponent =
   (
     hasByline: boolean,
     bylineContribBlocks: OptimoBylineContributorBlock[],
     firstPublished: string,
     lastPublished: string,
+    readTimeData: ReadTimeData,
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
+    // EXPERIMENT: Article Read Time
+    const { readTimeValue, readTimeVariant } = readTimeData;
+    const isReadTimeVariantValid = readTimeVariant !== 'off' && readTimeVariant;
+    const showReadTimeBelowTimestamp =
+      !!readTimeValue && readTimeValue !== 0 && !!isReadTimeVariantValid;
+
     return hasByline ? (
-      <Byline blocks={bylineContribBlocks}>
-        <Timestamp
-          firstPublished={new Date(firstPublished).getTime()}
-          lastPublished={new Date(lastPublished).getTime()}
-          popOut={false}
-        />
-      </Byline>
+      <>
+        <Byline blocks={bylineContribBlocks}>
+          <Timestamp
+            firstPublished={new Date(firstPublished).getTime()}
+            lastPublished={new Date(lastPublished).getTime()}
+            popOut={false}
+            showReadTimeBelowTimestamp={showReadTimeBelowTimestamp}
+          />
+          {showReadTimeBelowTimestamp && (
+            <ReadTime
+              readTimeValue={readTimeValue}
+              readTimeVariant={readTimeVariant}
+            />
+          )}
+        </Byline>
+        {!showReadTimeBelowTimestamp && (
+          <Placeholder css={styles.readTimePlaceholderBelowTimestamp} />
+        )}
+      </>
     ) : (
-      <Timestamp {...props} popOut={false} />
+      <>
+        <Timestamp
+          {...props}
+          popOut={false}
+          showReadTimeBelowTimestamp={showReadTimeBelowTimestamp}
+        />
+        {/* EXPERIMENT: Article Read Time */}
+        {showReadTimeBelowTimestamp ? (
+          <ReadTime
+            readTimeValue={readTimeValue}
+            readTimeVariant={readTimeVariant}
+          />
+        ) : (
+          <Placeholder css={styles.readTimePlaceholderBelowTimestamp} />
+        )}
+      </>
     );
   };
 
@@ -250,11 +229,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     experimentVariant && experimentVariant !== 'off';
 
   // EXPERIMENT: Article Read Time
-  // const readTimeExperimentName = 'newswb_ws_article_read_time';
-  // const readTimeExperimentVariant = useOptimizelyVariation({
-  //   experimentName: readTimeExperimentName,
-  //   experimentType: ExperimentType.CLIENT_SIDE,
-  // });
+  const readTimeExperimentName = 'newswb_ws_article_read_time';
+  const readTimeExperimentVariant = useOptimizelyVariation({
+    experimentName: readTimeExperimentName,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
 
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
@@ -267,8 +246,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
   const { enabled: liteCTAShows } = useToggle('liteSiteCTA');
 
-  // // EXPERIMENT: Article Read Time
-  // const readTimeValue = pageData?.metadata?.stats?.readTime;
+  // EXPERIMENT: Article Read Time
+  const readTimeValue = pageData?.metadata?.stats?.readTime;
 
   const headline = getHeadline(pageData) ?? '';
   const description = getSummary(pageData) || getHeadline(pageData);
@@ -311,11 +290,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     }),
   };
 
-  // // EXPERIMENT: Article Read Time
-  // const readTimeData = {
-  //   readTimeValue,
-  //   readTimeVariant: readTimeExperimentVariant || 'off',
-  // };
+  // EXPERIMENT: Article Read Time
+  const readTimeData = {
+    readTimeValue,
+    readTimeVariant: readTimeExperimentVariant || 'off',
+  };
 
   const componentsToRender = {
     visuallyHiddenHeadline,
@@ -331,7 +310,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       bylineContribBlocks,
       firstPublished,
       lastPublished,
-      // readTimeData,
+      readTimeData,
     ),
     social: SocialEmbedContainer,
     embed: UnsupportedEmbed,
