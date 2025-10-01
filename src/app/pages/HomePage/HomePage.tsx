@@ -25,6 +25,7 @@ import getItemList from '../../lib/seoUtils/getItemList';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
 import getIndexOfFirstNonBanner from '../utils/getIndexOfFirstNonBanner';
+import reorderCurations from './utils/reorderCurations';
 
 export interface HomePageProps {
   pageData: {
@@ -47,14 +48,15 @@ const HomePage = ({ pageData }: HomePageProps) => {
     homePageTitle,
     lang,
     brandName,
+    service,
   } = use(ServiceContext);
   const { topStoriesTitle, home } = translations;
   const {
     title,
     description,
-    curations,
     metadata: { atiAnalytics },
   } = pageData;
+  let { curations } = pageData;
 
   // EXPERIMENT: Homepage Read Time
   const readTimeExperimentName = 'newswb_ws_homepage_read_time';
@@ -64,7 +66,22 @@ const HomePage = ({ pageData }: HomePageProps) => {
   });
 
   const itemList = getItemList({ curations, name: brandName });
-
+  const timeOfDayVariant = 'variantA'; // hardcoded for now, to be replaced with actual optimizely hook
+  // if service is Hindi and optimizely variant is set to 'variantA' then reorder curations
+  if (service === 'hindi' && timeOfDayVariant === 'variantA') {
+    curations = reorderCurations({
+      curations,
+      service,
+    });
+  }
+  // eslint-disable-next-line no-console
+  console.log(
+    'Curations after reorder:',
+    curations.map(({ curationId, position }) => ({
+      curationId,
+      position,
+    })),
+  );
   return (
     <>
       <ChartbeatAnalytics title={title} />
@@ -103,8 +120,8 @@ const HomePage = ({ pageData }: HomePageProps) => {
                   position,
                   visualStyle,
                   ...curationProps
-                },
-                index,
+                }: Curation,
+                index: number,
               ) => {
                 const nthCurationByStyleAndProminence =
                   getNthCurationByStyleAndProminence({
