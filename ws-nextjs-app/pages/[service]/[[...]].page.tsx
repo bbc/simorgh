@@ -45,6 +45,7 @@ const getPageTypeFromHeaders = (headers: IncomingHttpHeaders) => {
     case AV_EMBEDS?.toLowerCase():
       return AV_EMBEDS;
     case ARTICLE_PAGE:
+    case 'tc2': // Legacy TC2 articles are handled as ARTICLE_PAGE
       return ARTICLE_PAGE;
     default:
       return null;
@@ -66,7 +67,9 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   if (resolvedUrl?.includes('av-embeds')) {
     return handleAvRoute(context);
-  } else if (pageType === ARTICLE_PAGE) {
+  }
+
+  if (pageType === ARTICLE_PAGE) {
     return handleArticleRoute(context);
   }
 
@@ -91,19 +94,19 @@ export const getServerSideProps: GetServerSideProps = async context => {
   };
 };
 
-export default function PageTypeToRender({ pageType, ...rest }: PageProps) {
+export default function PageTypeToRender({ pageType, ...props }: PageProps) {
   switch (pageType) {
     // AV Embeds
     case AV_EMBEDS:
-      return <AvEmbedsPageLayout {...rest} />;
+      return <AvEmbedsPageLayout {...props} />;
     // Article Pages (CPS + Legacy TC2 assets)
     case STORY_PAGE:
     case CORRESPONDENT_STORY_PAGE:
     case PHOTO_GALLERY_PAGE:
-      return <ArticlePage {...rest} />;
+      return <ArticlePage {...props} />;
     // Media Article Pages (CPS + Legacy TC2 assets)
     case MEDIA_ASSET_PAGE:
-      return <MediaArticlePage {...rest} />;
+      return <MediaArticlePage {...props} />;
     default:
       // Return nothing, 404 is handled in _app.tsx
       return null;

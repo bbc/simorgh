@@ -229,6 +229,10 @@ const constructPageFetchUrl = ({
           break;
         }
 
+        fetchUrl = Url(
+          `${host}${port}/api/local/${service}/legacyAssets/${variant ? `${variant}/` : ''}${assetId}`,
+        );
+
         break;
       }
       case CPS_ASSET:
