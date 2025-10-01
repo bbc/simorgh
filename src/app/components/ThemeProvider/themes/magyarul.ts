@@ -10,7 +10,7 @@ import reithFontVariants from '../fontVariants/reith';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/news';
 
-const newsTheme = {
+const magyarulTheme = {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -31,4 +31,4 @@ const newsTheme = {
   brandSVG,
 };
 
-export default withThemeProvider(newsTheme);
+export default withThemeProvider(magyarulTheme);
