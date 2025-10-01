@@ -94,7 +94,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
   };
 };
 
-export default function PageTypeToRender({ pageType, ...rest }: PageProps) {
+export default function PageTypeToRender({ pageType, ...props }: PageProps) {
   switch (pageType) {
     // AV Embeds
     case AV_EMBEDS:
