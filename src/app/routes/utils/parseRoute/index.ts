@@ -5,8 +5,10 @@ type Query = string[];
 type Platform = 'cps' | 'articles' | 'tipo';
 
 // Asset ID regexes
+const TC2_ID_REGEX = /^[a-z0-9-_]{1,}$/;
+const TC2_MONTH_REGEX = /^(0[1-9]|1[0-2])$/;
 const CPS_ID_REGEX = /([0-9]{5,9}|[a-z0-9\-_]+-[0-9]{5,9})$/;
-const OPTIMO_ID_REGEX = /^c[a-zA-Z0-9]{10}o$/;
+const OPTIMO_ID_REGEX = /^c[a-zA-Z0-9]{10,}o$/;
 const TIPO_ID_REGEX =
   /^(c[a-zA-Z0-9]{10,11}t)|([a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})$/;
 
@@ -110,13 +112,32 @@ const extractPlatform = (query: Query): Platform | null => {
 };
 
 const extractAssetId = (query: Query) => {
-  const assetId = query?.find((id: string) => {
+  let assetId;
+
+  assetId = query?.find((id: string) => {
     return (
       CPS_ID_REGEX.test(id) ||
       OPTIMO_ID_REGEX.test(id) ||
       TIPO_ID_REGEX.test(id)
     );
   });
+
+  if (!assetId) {
+    const tc2PartsCheck = query.slice(-3);
+    if (tc2PartsCheck.length !== 3) return null;
+
+    const [yearPart, monthPart, tc2AssetId] = tc2PartsCheck;
+
+    const isValidTC2Year = Number(yearPart) >= 1999 && Number(yearPart) <= 2018;
+
+    if (
+      isValidTC2Year &&
+      TC2_MONTH_REGEX.test(monthPart) &&
+      TC2_ID_REGEX.test(tc2AssetId)
+    ) {
+      assetId = tc2AssetId;
+    }
+  }
 
   return assetId ?? null;
 };
@@ -158,6 +179,7 @@ export default function parseRoute(resolvedUrl: string) {
   const service = extractService(query);
   const variant = extractVariant(query);
   const platform = extractPlatform(query);
+  console.log('parsing route:', resolvedUrl);
   const assetId = extractAssetId(query);
   const mediaId = extractMediaId(query);
   const mediaDelimiter = extractMediaDelimiter(query);
