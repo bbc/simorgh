@@ -1,9 +1,10 @@
 import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import canonicalTests from './testsForCanonicalOnly';
+import testsForAllPages from '../testsForAllPages';
 import urlValidationTest from '../../../support/helpers/urlValidationTest';
 
-const tests = [canonicalTests, urlValidationTest];
+const tests = [canonicalTests, testsForAllPages, urlValidationTest];
 
 const testSuites = [
   {
@@ -16,12 +17,6 @@ const testSuites = [
     path: '/dari',
     runforEnv: ['local', 'test'],
     service: 'dari',
-    tests,
-  },
-  {
-    path: '/kyrgyz',
-    runforEnv: ['local', 'test', 'live'],
-    service: 'kyrgyz',
     tests,
   },
   {
@@ -46,18 +41,6 @@ const testSuites = [
     path: '/serbian/cyr',
     runforEnv: ['local', 'test', 'live'],
     service: '/serbian/cyr',
-    tests,
-  },
-  {
-    path: '/uzbek/lat',
-    runforEnv: ['local', 'test', 'live'],
-    service: '/uzbek/lat',
-    tests,
-  },
-  {
-    path: '/uzbek/cyr',
-    runforEnv: ['local', 'test', 'live'],
-    service: '/uzbek/cyr',
     tests,
   },
 ];

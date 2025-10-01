@@ -204,7 +204,7 @@ export default ({
       return mediaCollection ? (
         <section
           role="region"
-          aria-labelledby="bbcMediaPlayer0"
+          aria-labelledby={`bbcMediaPlayer${nthCurationByStyleAndProminence - 1}`}
           data-testid={mediaCollectionId}
         >
           <MediaLoader blocks={mediaCollection} />

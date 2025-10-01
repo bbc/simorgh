@@ -7,12 +7,14 @@ import canonicalAndAmpArticleTests from './tests';
 import ampArticleTests from './testsForAMPOnly';
 import canonicalArticleTests from './testsForCanonicalOnly';
 import liteArticleTests from './testsForLiteOnly';
+import topicTagsTest from '../../../support/helpers/topicTagsTest';
 
 const canonicalTests = [
   testsForAllPages,
   testsForAllCanonicalPages,
   canonicalAndAmpArticleTests,
   canonicalArticleTests,
+  topicTagsTest,
 ];
 
 const ampTests = [
@@ -20,6 +22,7 @@ const ampTests = [
   testsForAllAMPPages,
   canonicalAndAmpArticleTests,
   ampArticleTests,
+  topicTagsTest,
 ];
 
 const smokeCanonicalTestSuites = [

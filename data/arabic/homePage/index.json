@@ -8,36 +8,42 @@
         "summaries": [
           {
             "type": "article",
+            "isLive": false,
+            "title": "Template article 3",
+            "firstPublished": "2023-08-15T14:11:28.287Z",
+            "lastPublished": "2023-08-15T14:11:28.287Z",
+            "link": "https://www.bbc.com/mundo/articles/czmkdrzdwkno",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/4414/test/146c2c30-3b75-11ee-93b4-83c41441672b.jpg.webp",
+            "description": "Probo lorem partem pro ex, unum prima expetenda eos ne. Melius viderer quaestio nec te.",
+            "imageAlt": "Bird",
+            "id": "czmkdrzdwkno",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Template article 4",
+            "firstPublished": "2023-08-15T14:12:01.110Z",
+            "lastPublished": "2023-08-15T14:12:01.110Z",
+            "link": "https://www.bbc.com/mundo/articles/c0ny73k281vo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/4414/test/146c2c30-3b75-11ee-93b4-83c41441672b.jpg.webp",
+            "description": "Probo lorem partem pro ex, unum prima expetenda eos ne. Melius viderer quaestio nec te.",
+            "imageAlt": "Bird",
+            "id": "c0ny73k281vo",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
             "title": "مرأة الخارقة \"",
             "firstPublished": "2019-03-13T15:31:50.000Z",
             "lastPublished": "2019-03-13T15:31:50.000Z",
             "link": "https://www.bbc.com/arabic/tv-and-radio-23233470",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/36C4/test/_63702041_tv000117434.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/36C4/test/_63702041_tv000117434.jpg.webp",
             "description": "الممثلة الإسرائيلية",
             "imageAlt": "الرياضه",
-            "id": "6bc4c1da-8b0d-544f-8e7f-a02d969e4236"
-          },
-          {
-            "type": "article",
-            "title": "مكتب نتنياهو يسرب فيديو لوزراء خارجية عرب يدافعون عن إسرائيل",
-            "firstPublished": "2019-02-15T12:08:58.000Z",
-            "lastPublished": "2019-02-15T12:08:58.000Z",
-            "link": "https://www.bbc.com/arabic/23231121",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/5014/test/_63700502_000085333-1.jpg",
-            "description": "كشفت وسائل إعلام إسرائيلية، الخميس، عن مقطع فيديو مسرب عن مكتب رئيس الوزراء بنيامين نتنياهو، ظهر فيه وزراء خارجية ثلاث دول عربية خليجية يدافعون عن إسرائيل ويهاجمون إيران.",
-            "imageAlt": "Netanyahu, Benjamin - Prime Minister of Israel",
-            "id": "af7513dc-be60-ef48-ba5a-a29705b5569e"
-          },
-          {
-            "type": "article",
-            "title": "نجمة الفيلم الأمريكي \" المرأة الخارقة \"",
-            "firstPublished": "2019-03-13T12:54:00.000Z",
-            "lastPublished": "2019-03-13T14:23:21.000Z",
-            "link": "https://www.bbc.com/arabic/tv-and-radio-23233465",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/885E/test/_63701943_mediaitem63701942.jpg",
-            "description": "المملثة الإسرائيلية غال غادوت تنتقد تصريحات بنيامين نتانياهو حول العرب.السامري",
-            "imageAlt": "الكلمة",
-            "id": "79a9117c-fd48-5a47-af27-e2bc8f393862"
+            "id": "6bc4c1da-8b0d-544f-8e7f-a02d969e4236",
+            "visualProminence": "NORMAL"
           }
         ],
         "activePage": 1,
@@ -45,100 +51,185 @@
         "curationId": "urn:bbc:tipo:list:f465a1b6-50ff-4b5c-8f0d-a673153573bf",
         "curationType": "tipo-curation",
         "position": 0,
-        "title": "Arabic Top Stories",
         "visualProminence": "HIGH",
+        "title": "Arabic Top Stories",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "فيسبوك",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.facebook.com/BBCnewsArabic",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/9931/test/2f7a7db0-30a1-11f0-ac60-8553ded2cfd2.png.webp",
+            "description": "BBCNewsArabic",
+            "imageAlt": "Faceboom",
+            "id": "https%3A%2F%2Fwww.facebook.com%2FBBCnewsArabic",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "إكس",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://twitter.com/BBCArabic",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/e552/test/18c4bd60-30a1-11f0-ac60-8553ded2cfd2.png.webp",
+            "description": "BBCArabic",
+            "imageAlt": "BBC",
+            "id": "https%3A%2F%2Ftwitter.com%2FBBCArabic",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "إنستغرام",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.instagram.com/bbcarabic/",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/f003/test/e4e13370-30a0-11f0-ac60-8553ded2cfd2.png.webp",
+            "description": "BBCArabic",
+            "imageAlt": "Instagram",
+            "id": "https%3A%2F%2Fwww.instagram.com%2Fbbcarabic%2F",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "يوتيوب",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.youtube.com/bbcarabic",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/d518/test/d387fa50-30a0-11f0-ac60-8553ded2cfd2.png.webp",
+            "description": "BBCArabic",
+            "imageAlt": "Youtube",
+            "id": "https%3A%2F%2Fwww.youtube.com%2Fbbcarabic",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:710923e0-e84d-43c0-93ba-6056d54be3a2",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "visualProminence": "NORMAL",
+        "title": "مواقعنا على وسائل التواصل الاجتماعي",
+        "visualStyle": "LINKS"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "الحرب في السودان",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://tinyurl.com/5ewab7av",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/adf7/test/96db1e70-f423-11ef-ba42-33247ebe5c2b.png.webp",
+            "imageAlt": "test",
+            "id": "https%3A%2F%2Ftinyurl.com%2F5ewab7av",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "بي بي سي إكسترا",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://tinyurl.com/8kzr37cz",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/3900/test/6d082de0-f423-11ef-ba42-33247ebe5c2b.png.webp",
+            "imageAlt": "test",
+            "id": "https%3A%2F%2Ftinyurl.com%2F8kzr37cz",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "audio",
+            "isLive": false,
+            "title": "يستحق الانتباه",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/arabic/podcasts/p02pc9qc",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/b943/test/f06a0190-f41e-11ef-ba42-33247ebe5c2b.png.webp",
+            "description": "سوريا: ما الذي نعرفه عن مجزرة حماة؟",
+            "imageAlt": "test",
+            "id": "p0h6d6nm",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:10bf8450-810d-4e5f-ba1b-015b819bfad9",
+        "curationType": "tipo-curation",
+        "position": 2,
+        "visualProminence": "HIGH",
+        "title": "Latest podcasts and radio programmes",
         "visualStyle": "COLLECTION"
       },
       {
         "summaries": [
           {
             "type": "article",
+            "isLive": false,
+            "title": "ما أثر الخلاف بين نتنياهو وغالانت على مجرى الحرب ومصيرهما؟",
+            "firstPublished": "2024-05-17T14:00:23.159Z",
+            "lastPublished": "2024-05-17T14:00:23.159Z",
+            "link": "https://www.bbc.com/arabic/articles/cw6p0j65p75o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/d26e/test/1b525150-1455-11ef-abd7-95a9f1a42287.jpg.webp",
+            "imageAlt": "خلافات داخل حكومة الحرب في إسرائيل وسط توتر حاد بين نتنياهو وغالانت",
+            "id": "cw6p0j65p75o",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
             "title": "Small Island and Long Song author dies aged 62",
             "firstPublished": "2019-02-15T12:04:33.000Z",
             "lastPublished": "2019-02-15T12:04:33.000Z",
             "link": "https://www.bbc.com/swahili/23231091",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/09C4/test/_63700520_000964414-1.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/09C4/test/_63700520_000964414-1.jpg.webp",
             "description": "British author Andrea Levy, whose award-winning novels captured the black British experience in the years after Windrush, has died at the age of 62.",
             "imageAlt": "Andrea Levy black and white picture",
-            "id": "6f02f033-e855-784e-b408-b997eb03809e"
+            "id": "6f02f033-e855-784e-b408-b997eb03809e",
+            "visualProminence": "NORMAL"
           },
           {
             "type": "article",
+            "isLive": false,
             "title": "\"نقطة نيمو\": أبعد بقعة عن اليابسة على كوكب الأرض 108",
             "firstPublished": "2016-10-14T14:10:52.000Z",
             "lastPublished": "2016-10-14T14:10:52.000Z",
             "link": "https://www.bbc.com/arabic/trending-23083197",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg.webp",
             "description": "ثمة بقعة في المحيط الهادئ تبعد أكثر من غيرها عن اليابسة، وهي على نحو ما ذات طابع غريب وخاص.",
             "imageAlt": "planet",
-            "id": "897c1da8-656c-c743-88e4-ef5901fbfb50"
+            "id": "897c1da8-656c-c743-88e4-ef5901fbfb50",
+            "visualProminence": "NORMAL"
           },
           {
             "type": "article",
+            "isLive": false,
             "title": "\"نقطة نيمو\": أبعد بقعة عن اليابسة على كوكب الأرض 103",
             "firstPublished": "2016-10-14T14:07:50.000Z",
             "lastPublished": "2016-10-14T14:07:50.000Z",
             "link": "https://www.bbc.com/arabic/business-23083189",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg.webp",
             "description": "ثمة بقعة في المحيط الهادئ تبعد أكثر من غيرها عن اليابسة، وهي على نحو ما ذات طابع غريب وخاص.",
             "imageAlt": "planet",
-            "id": "036ad2c9-654b-e74a-a832-f39bb3576a53"
+            "id": "036ad2c9-654b-e74a-a832-f39bb3576a53",
+            "visualProminence": "NORMAL"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:8b258037-2fac-40f8-a7d3-6d4b19deb140",
         "curationType": "tipo-curation",
-        "position": 1,
-        "title": "اخترنا لكم",
+        "position": 3,
         "visualProminence": "HIGH",
+        "title": "اخترنا لكم",
         "visualStyle": "COLLECTION"
-      },
-      {
-        "curationId": "urn:bbc:programmes:available-episodes:bbc_arabic_radio",
-        "curationType": "available-episodes",
-        "position": 2,
-        "title": "Radio Schedule",
-        "visualProminence": "NORMAL",
-        "visualStyle": "NONE",
-        "radioSchedule": [
-          {
-            "id": "p0h6nsbc",
-            "state": "next",
-            "startTime": "2024-02-27T14:59:30.000Z",
-            "link": "/arabic/bbc_arabic_radio/w172zm1vwcvc55y",
-            "brandTitle": "غزة اليوم ",
-            "summary": "البرنامج يقدم خدمة اخبارية  ومعلومات   تهدف الى توعية  الجمهور في غزة  بما يحدث على الأرض ",
-            "duration": "PT30M"
-          },
-          {
-            "id": "p0h6kmn3",
-            "state": "onDemand",
-            "startTime": "2024-02-27T05:59:30.000Z",
-            "link": "/arabic/bbc_arabic_radio/w172zkzmfvfh83j",
-            "brandTitle": "غزة اليوم ",
-            "summary": "البرنامج يقدم خدمة اخبارية  ومعلومات   تهدف الى توعية  الجمهور في غزة  بما يحدث على الأرض ",
-            "duration": "PT30M"
-          },
-          {
-            "id": "p0h6grgz",
-            "state": "onDemand",
-            "startTime": "2024-02-26T14:59:30.000Z",
-            "link": "/arabic/bbc_arabic_radio/w172zm1vwcv888v",
-            "brandTitle": "غزة اليوم ",
-            "summary": "البرنامج يقدم خدمة اخبارية  ومعلومات   تهدف الى توعية  الجمهور في غزة  بما يحدث على الأرض ",
-            "duration": "PT30M"
-          },
-          {
-            "id": "p0h6csjx",
-            "state": "onDemand",
-            "startTime": "2024-02-26T05:59:30.000Z",
-            "link": "/arabic/bbc_arabic_radio/w172zkzmfvfdc6f",
-            "brandTitle": "غزة اليوم ",
-            "summary": "البرنامج يقدم خدمة اخبارية  ومعلومات   تهدف الى توعية  الجمهور في غزة  بما يحدث على الأرض ",
-            "duration": "PT30M"
-          }
-        ]
       }
     ],
     "metadata": {

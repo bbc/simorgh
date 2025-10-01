@@ -7,14 +7,21 @@ import canonicalArticleTests from './testsForCanonicalOnly';
 import liteTests from '../articles/testsForLiteOnly';
 import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
 import { MEDIA_ASSET_PAGE } from '../../../../src/app/routes/utils/pageTypes';
+import topicTagsTest from '../../../support/helpers/topicTagsTest';
 
 const canonicalTests = [
   testsForAllPages,
   testsForAllCanonicalPages,
   canonicalArticleTests,
+  topicTagsTest,
 ];
 
-const ampTests = [testsForAllPages, testsForAllAMPPages, ampArticleTests];
+const ampTests = [
+  testsForAllPages,
+  testsForAllAMPPages,
+  ampArticleTests,
+  topicTagsTest,
+];
 
 const canonicalSmokeTestSuites = [
   {
