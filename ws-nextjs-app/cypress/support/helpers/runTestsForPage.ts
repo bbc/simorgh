@@ -1,5 +1,25 @@
-// eslint-disable-next-line import/no-relative-packages
+/* eslint-disable import/no-relative-packages */
+import { PageTypes } from '#app/models/types/global';
+import { ServiceParametersType } from '../../types';
 import getOptimizelyKey from '../../../../cypress/support/helpers/getOptimizelyKey';
+
+type TestType = (props: ServiceParametersType) => void;
+
+type TestDataType = {
+  path: string;
+  tests: TestType[];
+  runforEnv: string[];
+  service: string;
+};
+
+type FunctionProps = {
+  pageType: PageTypes;
+  testSuites: TestDataType[];
+  beforeAll?: (() => void)[];
+  failOnStatusCode?: boolean;
+  testIsolation?: boolean;
+  deleteServiceWorker?: boolean;
+};
 
 export default ({
   pageType,
@@ -7,7 +27,8 @@ export default ({
   beforeAll = [],
   failOnStatusCode = true,
   testIsolation = false,
-}) => {
+  deleteServiceWorker = false,
+}: FunctionProps) => {
   const serviceToRun = Cypress.env('ONLY_SERVICE');
 
   let testSuitesToRun = testSuites;
@@ -37,7 +58,24 @@ export default ({
               });
             }
 
-            cy.visit(path, { failOnStatusCode });
+            // Potential fix for a11y tests causing a 'Failed to register a ServiceWorker: The document is in an invalid state.' error.
+            const removeServiceWorker = (win: Window) => {
+              if (win.navigator.serviceWorker) {
+                win.navigator.serviceWorker
+                  .getRegistrations()
+                  .then(registrations => {
+                    for (let i = 0; i < registrations.length; i += 1) {
+                      const registration = registrations[i];
+                      registration.unregister();
+                    }
+                  });
+              }
+            };
+
+            cy.visit(path, {
+              failOnStatusCode,
+              ...(deleteServiceWorker && { onBeforeLoad: removeServiceWorker }),
+            });
           });
 
           beforeEach(() => {
@@ -51,8 +89,14 @@ export default ({
             ).as('disable-optimizely');
           });
 
+          const testParams = {
+            path,
+            pageType,
+            ...params,
+          } as unknown as ServiceParametersType;
+
           tests.forEach(test => {
-            test({ path, pageType, ...params });
+            test(testParams);
           });
         },
       );
