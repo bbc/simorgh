@@ -35,8 +35,7 @@ module.exports = {
       },
     ];
   },
-  productionBrowserSourceMaps: true,
-  reactStrictMode: false,
+  reactStrictMode: true,
   distDir: 'build',
   output: 'standalone',
   assetPrefix: isLocal ? undefined : assetPrefix,
