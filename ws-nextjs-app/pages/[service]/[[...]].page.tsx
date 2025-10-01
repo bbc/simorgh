@@ -98,15 +98,15 @@ export default function PageTypeToRender({ pageType, ...props }: PageProps) {
   switch (pageType) {
     // AV Embeds
     case AV_EMBEDS:
-      return <AvEmbedsPageLayout {...rest} />;
+      return <AvEmbedsPageLayout {...props} />;
     // Article Pages (CPS + Legacy TC2 assets)
     case STORY_PAGE:
     case CORRESPONDENT_STORY_PAGE:
     case PHOTO_GALLERY_PAGE:
-      return <ArticlePage {...rest} />;
+      return <ArticlePage {...props} />;
     // Media Article Pages (CPS + Legacy TC2 assets)
     case MEDIA_ASSET_PAGE:
-      return <MediaArticlePage {...rest} />;
+      return <MediaArticlePage {...props} />;
     default:
       // Return nothing, 404 is handled in _app.tsx
       return null;
