@@ -202,7 +202,6 @@ const MetadataContainer = ({
     service,
     metaImage,
   });
-
   return (
     <Helmet htmlAttributes={htmlAttributes}>
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
