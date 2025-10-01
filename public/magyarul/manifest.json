@@ -1,6 +1,6 @@
 {
-  "name": "BBC News magyarul",
-  "short_name": "BBC magyarul",
+  "name": "BBC News Magyarul",
+  "short_name": "BBC Magyarul",
   "scope": "/magyarul",
   "background_color": "#b80000",
   "display": "standalone",

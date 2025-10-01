@@ -8,7 +8,7 @@ import {
 } from '../fontFaces';
 import reithFontVariants from '../fontVariants/reith';
 import withThemeProvider from '../withThemeProvider';
-import brandSVG from '../chameleonLogos/news';
+import brandSVG from '../chameleonLogos/magyarul';
 
 const magyarulTheme = {
   palette: {
