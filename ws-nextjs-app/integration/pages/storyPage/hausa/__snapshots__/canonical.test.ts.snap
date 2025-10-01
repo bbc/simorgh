@@ -176,7 +176,7 @@ exports[`Canonical Story Page Image Caption should match text 1`] = `"Bayanan sa
 
 exports[`Canonical Story Page Image should match snapshot 1`] = `
 <noscript
-  class="bbc-n2zqlz"
+  class="css-lllaou"
 >
   <strong>
     Na'urarku na da matsalar sauraren sauti
@@ -293,7 +293,7 @@ exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 10`] 
 }
 `;
 
-exports[`Canonical Story Page SEO Canonical link 1`] = `"http://localhost:7080/hausa/labarai-23246985"`;
+exports[`Canonical Story Page SEO Canonical link 1`] = `"http://localhost:7081/hausa/labarai-23246985"`;
 
 exports[`Canonical Story Page SEO Dir attribute 1`] = `"ltr"`;
 
@@ -329,7 +329,7 @@ exports[`Canonical Story Page SEO Linked data should match text 1`] = `
         "name": "Hausa",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7080/hausa/labarai-23246985",
+        "@id": "http://localhost:7081/hausa/labarai-23246985",
         "@type": "WebPage",
         "name": "Ɗanɗano: Kuskure a Hausa da Ƙa’idar hira da baƙì - Ɓ ɓ ɗ Ɗ ƙ Ƙ",
       },
@@ -345,7 +345,7 @@ exports[`Canonical Story Page SEO Linked data should match text 1`] = `
         "publishingPrinciples": "https://www.bbc.com/hausa/game-da-mu-49283501",
       },
       "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_hausa/1745C/test/_63542359_hi035712328.jpg",
-      "url": "http://localhost:7080/hausa/labarai-23246985",
+      "url": "http://localhost:7081/hausa/labarai-23246985",
     },
   ],
 }
@@ -378,7 +378,7 @@ exports[`Canonical Story Page SEO OG title 1`] = `"Ɗanɗano: Kuskure a Hausa da
 
 exports[`Canonical Story Page SEO OG type 1`] = `"article"`;
 
-exports[`Canonical Story Page SEO OG url 1`] = `"http://localhost:7080/hausa/labarai-23246985"`;
+exports[`Canonical Story Page SEO OG url 1`] = `"http://localhost:7081/hausa/labarai-23246985"`;
 
 exports[`Canonical Story Page SEO Page title 1`] = `"Ɗanɗano: Kuskure a Hausa da Ƙa’idar hira da baƙì - Ɓ ɓ ɗ Ɗ ƙ Ƙ - BBC News Hausa"`;
 

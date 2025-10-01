@@ -176,7 +176,7 @@ exports[`Canonical Photo Gallery Page Image Caption should match text 1`] = `"�
 exports[`Canonical Photo Gallery Page Image should match snapshot 1`] = `
 <img
   alt="ดอกไม้ถูกนำมาวางไว้ที่ประติมานุสรณ์"
-  class="bbc-139onq"
+  class="css-4ejld5"
   height="549"
   loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"
@@ -259,7 +259,7 @@ exports[`Canonical Photo Gallery Page SEO Apple Touch Icon should match attribut
 }
 `;
 
-exports[`Canonical Photo Gallery Page SEO Canonical link 1`] = `"http://localhost:7080/thai/thailand-49950038"`;
+exports[`Canonical Photo Gallery Page SEO Canonical link 1`] = `"http://localhost:7081/thai/thailand-49950038"`;
 
 exports[`Canonical Photo Gallery Page SEO Dir attribute 1`] = `"ltr"`;
 
@@ -302,7 +302,7 @@ exports[`Canonical Photo Gallery Page SEO Linked data should match text 1`] = `
         "name": "Thai",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7080/thai/thailand-49950038",
+        "@id": "http://localhost:7081/thai/thailand-49950038",
         "@type": "WebPage",
         "name": "6 ตุลา : ธรรมศาสตร์จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519",
       },
@@ -318,7 +318,7 @@ exports[`Canonical Photo Gallery Page SEO Linked data should match text 1`] = `
         "publishingPrinciples": "https://www.bbc.com/thai/institutional-49281839",
       },
       "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_thai/17431/production/_109118259_01.jpg",
-      "url": "http://localhost:7080/thai/thailand-49950038",
+      "url": "http://localhost:7081/thai/thailand-49950038",
     },
   ],
 }
@@ -338,7 +338,7 @@ exports[`Canonical Photo Gallery Page SEO OG title 1`] = `"6 ตุลา : ธ�
 
 exports[`Canonical Photo Gallery Page SEO OG type 1`] = `"article"`;
 
-exports[`Canonical Photo Gallery Page SEO OG url 1`] = `"http://localhost:7080/thai/thailand-49950038"`;
+exports[`Canonical Photo Gallery Page SEO OG url 1`] = `"http://localhost:7081/thai/thailand-49950038"`;
 
 exports[`Canonical Photo Gallery Page SEO Page title 1`] = `"6 ตุลา : ธรรมศาสตร์จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519 - BBC News ไทย"`;
 

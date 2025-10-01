@@ -255,7 +255,7 @@ exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes
 }
 `;
 
-exports[`Canonical Media Asset Page SEO Canonical link 1`] = `"http://localhost:7080/arabic/worldnews/2015/11/151120_t_arabic_av"`;
+exports[`Canonical Media Asset Page SEO Canonical link 1`] = `"http://localhost:7081/arabic/worldnews/2015/11/151120_t_arabic_av"`;
 
 exports[`Canonical Media Asset Page SEO Dir attribute 1`] = `"rtl"`;
 
@@ -297,7 +297,7 @@ exports[`Canonical Media Asset Page SEO Linked data should match text 1`] = `
         "name": "Arabic",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7080/arabic/worldnews/2015/11/151120_t_arabic_av",
+        "@id": "http://localhost:7081/arabic/worldnews/2015/11/151120_t_arabic_av",
         "@type": "WebPage",
         "name": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
       },
@@ -313,7 +313,7 @@ exports[`Canonical Media Asset Page SEO Linked data should match text 1`] = `
         "publishingPrinciples": "https://www.bbc.com/arabic/institutional-49283069",
       },
       "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_arabic/worldservice/test/assets/images/2014/09/22/140922130059_144x81.jpg",
-      "url": "http://localhost:7080/arabic/worldnews/2015/11/151120_t_arabic_av",
+      "url": "http://localhost:7081/arabic/worldnews/2015/11/151120_t_arabic_av",
     },
   ],
 }
@@ -333,7 +333,7 @@ exports[`Canonical Media Asset Page SEO OG title 1`] = `"شركة شارب لل�
 
 exports[`Canonical Media Asset Page SEO OG type 1`] = `"article"`;
 
-exports[`Canonical Media Asset Page SEO OG url 1`] = `"http://localhost:7080/arabic/worldnews/2015/11/151120_t_arabic_av"`;
+exports[`Canonical Media Asset Page SEO OG url 1`] = `"http://localhost:7081/arabic/worldnews/2015/11/151120_t_arabic_av"`;
 
 exports[`Canonical Media Asset Page SEO Page title 1`] = `"شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها - BBC News عربي"`;
 

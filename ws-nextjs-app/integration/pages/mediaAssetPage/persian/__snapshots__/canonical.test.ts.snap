@@ -279,7 +279,7 @@ exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes
 }
 `;
 
-exports[`Canonical Media Asset Page SEO Canonical link 1`] = `"http://localhost:7080/persian/iran-23231114"`;
+exports[`Canonical Media Asset Page SEO Canonical link 1`] = `"http://localhost:7081/persian/iran-23231114"`;
 
 exports[`Canonical Media Asset Page SEO Dir attribute 1`] = `"rtl"`;
 
@@ -321,7 +321,7 @@ exports[`Canonical Media Asset Page SEO Linked data should match text 1`] = `
         "name": "Persian",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7080/persian/iran-23231114",
+        "@id": "http://localhost:7081/persian/iran-23231114",
         "@type": "WebPage",
         "name": "Trump long headline",
       },
@@ -337,7 +337,7 @@ exports[`Canonical Media Asset Page SEO Linked data should match text 1`] = `
         "publishingPrinciples": "https://www.bbc.com/persian/institutional-49283091",
       },
       "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_persian/14DFC/test/_63700558_p01lmkk5.jpg",
-      "url": "http://localhost:7080/persian/iran-23231114",
+      "url": "http://localhost:7081/persian/iran-23231114",
     },
   ],
 }
@@ -370,7 +370,7 @@ exports[`Canonical Media Asset Page SEO OG title 1`] = `"Trump long headline - B
 
 exports[`Canonical Media Asset Page SEO OG type 1`] = `"article"`;
 
-exports[`Canonical Media Asset Page SEO OG url 1`] = `"http://localhost:7080/persian/iran-23231114"`;
+exports[`Canonical Media Asset Page SEO OG url 1`] = `"http://localhost:7081/persian/iran-23231114"`;
 
 exports[`Canonical Media Asset Page SEO Page title 1`] = `"Trump long headline - BBC News فارسی"`;
 
