@@ -18,8 +18,6 @@ class CustomTestEnvironment extends TestEnvironment {
 
   url: string;
 
-  // isInUK: string | string[];
-
   constructor(config: JestEnvironmentConfig, context: EnvironmentContext) {
     super(config, context);
 
@@ -27,12 +25,7 @@ class CustomTestEnvironment extends TestEnvironment {
       platform: string;
     };
 
-    const {
-      pathname,
-      service,
-      displayAds = 'false',
-      // isInUK = 'no',
-    } = context.docblockPragmas;
+    const { pathname, service, displayAds = 'false' } = context.docblockPragmas;
 
     const pageType = getPageTypeFromTestPath(context.testPath);
 
@@ -43,7 +36,6 @@ class CustomTestEnvironment extends TestEnvironment {
     this.pageType = camelCaseToText(pageType);
     this.service = service;
     this.displayAds = displayAds === 'true';
-    // this.isInUK = isInUK;
     this.url = `http://localhost:7081${pathname}${platformForPath}`;
   }
 
@@ -55,7 +47,6 @@ class CustomTestEnvironment extends TestEnvironment {
         url: this.url,
         headers: {
           ...(this.displayAds && { 'BBC-Adverts': 'true' }),
-          // ...{ 'x-bbc-edge-isuk': this.isInUK },
         },
       });
 
@@ -65,10 +56,6 @@ class CustomTestEnvironment extends TestEnvironment {
         window: { value: window },
         document: { value: document },
         fetch: { value: fetch },
-      });
-
-      Object.defineProperty(window, 'INTEGRATION_TEST', {
-        value: true,
       });
     } catch (e) {
       console.error(e);

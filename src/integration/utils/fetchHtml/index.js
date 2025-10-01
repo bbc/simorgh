@@ -8,13 +8,12 @@ dns.setDefaultResultOrder('ipv4first');
 
 const faultTolerantFetch = ({ url, headers }) =>
   new Promise((resolve, reject) => {
-    // const oneSecond = 1000;
-    const fiveSeconds = 5000;
+    const oneSecond = 1000;
     const operation = retry.operation({
       retries: 5,
       factor: 1,
-      minTimeout: fiveSeconds,
-      maxTimeout: fiveSeconds,
+      minTimeout: oneSecond,
+      maxTimeout: oneSecond,
     });
 
     operation.attempt(async currentAttempt => {
@@ -27,10 +26,6 @@ const faultTolerantFetch = ({ url, headers }) =>
 
       try {
         const response = await fetch(url, headers && { headers });
-
-        console.log(
-          `Received HTTP ${response.status} ${response.statusText} for ${url}`,
-        );
 
         if (!response.ok) {
           const error = new Error(

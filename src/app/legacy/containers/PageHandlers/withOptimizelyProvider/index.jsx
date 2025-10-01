@@ -30,7 +30,6 @@ const withOptimizelyProvider = Component => {
   return props => {
     const { service } = use(ServiceContext);
     const isStoryBook = process.env.STORYBOOK;
-
     const disableOptimizely = isStoryBook || isInCypress;
 
     if (disableOptimizely) return <Component {...props} />;

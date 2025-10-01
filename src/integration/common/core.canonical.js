@@ -1,7 +1,6 @@
 export default () => {
   if (process.env.DEV_MODE) return;
 
-  // this passes
   it('Bundle scripts', () => {
     const bundleScriptMatcher = new RegExp(
       `(\\/static\\/js\\/(?:comscore\\/)?(main|framework|commons|shared|${global.service}|.+Page).+?.js)|(\\/static\\/.+?-lib.+?.js)`,
@@ -20,7 +19,6 @@ export default () => {
     });
   });
 
-  // this fails
   it('Service bundle is loaded', () => {
     const bundleScriptMatcher = new RegExp(
       `(\\/static\\/js\\/(${global.service})-\\w+\\.\\w+\\.js)`,

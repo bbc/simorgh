@@ -46,7 +46,7 @@ const startApp = () => {
     const child = exec(
       `yarn ${
         isDev ? 'dev' : 'start'
-      } & ./node_modules/.bin/wait-on -t 20000 http://localhost:${portNumber}/status`, // this might not be right
+      } & ./node_modules/.bin/wait-on -t 20000 http://localhost:${portNumber}/status`,
     );
 
     child.on('exit', resolve);
