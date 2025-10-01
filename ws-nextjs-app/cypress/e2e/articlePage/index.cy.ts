@@ -254,6 +254,7 @@ const liteTestSuites = canonicalTestSuites
   });
 
 runTestsForPage({
-  pageType: 'articles',
+  pageType: 'article',
   testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],
+  deleteServiceWorker: true,
 });

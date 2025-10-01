@@ -14,7 +14,9 @@ export const getBlockData = <T = ArticleContent>(
   blockType: string,
   articleData: Article,
 ) => {
-  const { blocks } = articleData.content.model;
+  const blocks = articleData?.content?.model?.blocks;
+
+  if (!blocks) return null;
 
   return getBlockByType<T>(blocks, blockType);
 };

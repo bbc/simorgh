@@ -23,6 +23,9 @@ declare global {
       ) => Chainable<Record<string, unknown>>;
       getToggles(serviceID: string): Chainable;
       hasNoscriptImgAtiUrl(atiUrl: string): Chainable;
+      testResponseCodeAndType(
+        props: TestResponseAndTypeFunctionProps,
+      ): Chainable;
     }
   }
 }
@@ -71,7 +74,59 @@ const hasNoscriptImgAtiUrl = (atiUrl: string) => {
     });
 };
 
+type TestResponseAndTypeFunctionProps = {
+  path: string;
+  responseCode: number;
+  type: string;
+  retriesLeft?: number;
+  allowFallback?: boolean;
+};
+const testResponseCodeAndType = ({
+  path,
+  responseCode,
+  type,
+  retriesLeft = 2,
+  allowFallback = false,
+}: TestResponseAndTypeFunctionProps) => {
+  cy.request({ url: path, failOnStatusCode: false }).then(
+    ({ status, headers }) => {
+      expect(status, `Unexpected status code for ${path}`).to.equal(
+        responseCode,
+      );
+      expect(
+        headers['content-type'],
+        `Unexpected content-type for ${path}`,
+      ).to.include(type);
+
+      // Ensure we're not seeing the Mozart fallback during smoke testing
+      if (Cypress.env('SMOKE') && !allowFallback) {
+        try {
+          expect(
+            headers,
+            `Belfrage fallback response detected for ${path}`,
+          ).not.to.have.property('belfrage-cache-status: STALE');
+        } catch (e) {
+          if (retriesLeft < 1) {
+            throw e;
+          }
+
+          // Wait before retrying to allow for transient problems to go away
+          // eslint-disable-next-line cypress/no-unnecessary-waiting
+          cy.wait(5000).testResponseCodeAndType({
+            path,
+            responseCode,
+            type,
+            retriesLeft: retriesLeft - 1,
+            allowFallback: false,
+          });
+        }
+      }
+    },
+  );
+};
+
 Cypress.Commands.add('getPageDataFromWindow', getPageDataFromWindow);
 Cypress.Commands.add('testResponseCodeAndRetry', testResponseCodeAndRetry);
 Cypress.Commands.add('getToggles', getToggles);
 Cypress.Commands.add('hasNoscriptImgAtiUrl', hasNoscriptImgAtiUrl);
+Cypress.Commands.add('testResponseCodeAndType', testResponseCodeAndType);

@@ -4,4 +4,5 @@ export type ServiceParametersType = {
   service: Services;
   variant: Variants;
   pageType?: PageTypes & 'errorPage404';
+  path?: string;
 };

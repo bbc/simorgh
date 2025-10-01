@@ -1,5 +1,6 @@
-import { PageTypes, Services, Variants } from '#app/models/types/global';
+import { Services } from '#app/models/types/global';
 import appConfig from '#src/server/utilities/serviceConfigs';
+import { ServiceParametersType } from '../../types';
 import config from '../../support/config/services';
 import { crossPlatform } from '../assertions/crossPlatformAssertion';
 
@@ -20,11 +21,7 @@ export default ({
   service,
   pageType,
   variant = 'default',
-}: {
-  service: Services;
-  pageType: PageTypes;
-  variant: Variants;
-}) => {
+}: ServiceParametersType) => {
   describe(`Running tests for ${service} ${pageType}`, () => {
     describe(`Metadata`, () => {
       const serviceID = (config[service]?.name || service) as Services;
