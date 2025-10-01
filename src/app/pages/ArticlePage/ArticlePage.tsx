@@ -10,12 +10,12 @@ import useOptimizelyVariation, {
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
-import Headings from '#containers/Headings';
+// import Headings from '#containers/Headings';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import gist from '#containers/Gist';
 import text from '#containers/Text';
 import Blocks from '#containers/Blocks';
-import Timestamp from '#containers/ArticleTimestamp';
+// import Timestamp from '#containers/ArticleTimestamp';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import SocialEmbedContainer from '#containers/SocialEmbed';
 import MediaLoader from '#app/components/MediaLoader';
@@ -41,14 +41,13 @@ import {
   Article,
   OptimoBlock,
   OptimoBylineBlock,
-  OptimoBylineContributorBlock,
 } from '#app/models/types/optimo';
 import { Translations } from '#app/models/types/translations';
 import { Recommendation } from '#app/models/types/onwardJourney';
 
 import ScrollablePromo from '#components/ScrollablePromo';
 import Recommendations from '#app/components/Recommendations';
-import { ReadTimeArticleExperiment as ReadTime } from '#app/components/ReadTime';
+// import { ReadTimeArticleExperiment as ReadTime } from '#app/components/ReadTime';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -57,14 +56,13 @@ import EmbedHtml from '../../components/Embeds/EmbedHtml';
 import MostRead from '../../components/MostRead';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
-import LinkedData from '../../components/LinkedData';
-import Byline from '../../components/Byline';
+// import LinkedData from '../../components/LinkedData';
+// import Byline from '../../components/Byline';
 import OEmbedLoader from '../../components/Embeds/OEmbed';
 import UnsupportedEmbed from '../../components/Embeds/UnsupportedEmbed';
 import Uploader from '../../components/Embeds/Uploader';
 import {
   bylineExtractor,
-  categoryName,
   getAuthorTwitterHandle,
 } from '../../components/Byline/utilities';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -72,7 +70,7 @@ import RelatedContentSection from '../../components/RelatedContentSection';
 import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
 import styles from './ArticlePage.styles';
-import { ComponentToRenderProps, TimeStampProps } from './types';
+import { ComponentToRenderProps } from './types';
 import ContinueReadingButton, {
   Props as ContinueReadingProps,
 } from './ContinueReadingButton';
@@ -83,10 +81,10 @@ import {
 } from '../utils/portraitVideo';
 
 // EXPERIMENT: Article Read Time
-interface ReadTimeData {
-  readTimeValue: number | undefined;
-  readTimeVariant: string;
-}
+// interface ReadTimeData {
+//   readTimeValue: number | undefined;
+//   readTimeVariant: string;
+// }
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -97,70 +95,70 @@ const getImageComponent =
     />
   );
 
-// EXPERIMENT: Article Read Time
-const Placeholder = ({ className }: { className?: string }) => {
-  const { service } = use(ServiceContext);
-  const servicesInExperiment = ['']; // adding services will show placeholder regardless of whether experiment is running
-  return servicesInExperiment.includes(service) ? (
-    <div className={className} />
-  ) : null;
-};
+// // EXPERIMENT: Article Read Time
+// const Placeholder = ({ className }: { className?: string }) => {
+//   const { service } = use(ServiceContext);
+//   const servicesInExperiment = ['']; // adding services will show placeholder regardless of whether experiment is running
+//   return servicesInExperiment.includes(service) ? (
+//     <div className={className} />
+//   ) : null;
+// };
 
-// EXPERIMENT: Article Read Time
-const getTimestampComponent =
-  (
-    hasByline: boolean,
-    bylineContribBlocks: OptimoBylineContributorBlock[],
-    firstPublished: string,
-    lastPublished: string,
-    readTimeData: ReadTimeData,
-  ) =>
-  (props: ComponentToRenderProps & TimeStampProps) => {
-    // EXPERIMENT: Article Read Time
-    const { readTimeValue, readTimeVariant } = readTimeData;
-    const isReadTimeVariantValid = readTimeVariant !== 'off' && readTimeVariant;
-    const showReadTimeBelowTimestamp =
-      !!readTimeValue && readTimeValue !== 0 && !!isReadTimeVariantValid;
+// // EXPERIMENT: Article Read Time
+// const getTimestampComponent =
+//   (
+//     hasByline: boolean,
+//     bylineContribBlocks: OptimoBylineContributorBlock[],
+//     firstPublished: string,
+//     lastPublished: string,
+//     readTimeData: ReadTimeData,
+//   ) =>
+//   (props: ComponentToRenderProps & TimeStampProps) => {
+//     // EXPERIMENT: Article Read Time
+//     const { readTimeValue, readTimeVariant } = readTimeData;
+//     const isReadTimeVariantValid = readTimeVariant !== 'off' && readTimeVariant;
+//     const showReadTimeBelowTimestamp =
+//       !!readTimeValue && readTimeValue !== 0 && !!isReadTimeVariantValid;
 
-    return hasByline ? (
-      <>
-        <Byline blocks={bylineContribBlocks}>
-          <Timestamp
-            firstPublished={new Date(firstPublished).getTime()}
-            lastPublished={new Date(lastPublished).getTime()}
-            popOut={false}
-            showReadTimeBelowTimestamp={showReadTimeBelowTimestamp}
-          />
-          {showReadTimeBelowTimestamp && (
-            <ReadTime
-              readTimeValue={readTimeValue}
-              readTimeVariant={readTimeVariant}
-            />
-          )}
-        </Byline>
-        {!showReadTimeBelowTimestamp && (
-          <Placeholder css={styles.readTimePlaceholderBelowTimestamp} />
-        )}
-      </>
-    ) : (
-      <>
-        <Timestamp
-          {...props}
-          popOut={false}
-          showReadTimeBelowTimestamp={showReadTimeBelowTimestamp}
-        />
-        {/* EXPERIMENT: Article Read Time */}
-        {showReadTimeBelowTimestamp ? (
-          <ReadTime
-            readTimeValue={readTimeValue}
-            readTimeVariant={readTimeVariant}
-          />
-        ) : (
-          <Placeholder css={styles.readTimePlaceholderBelowTimestamp} />
-        )}
-      </>
-    );
-  };
+//     return hasByline ? (
+//       <>
+//         <Byline blocks={bylineContribBlocks}>
+//           <Timestamp
+//             firstPublished={new Date(firstPublished).getTime()}
+//             lastPublished={new Date(lastPublished).getTime()}
+//             popOut={false}
+//             showReadTimeBelowTimestamp={showReadTimeBelowTimestamp}
+//           />
+//           {showReadTimeBelowTimestamp && (
+//             <ReadTime
+//               readTimeValue={readTimeValue}
+//               readTimeVariant={readTimeVariant}
+//             />
+//           )}
+//         </Byline>
+//         {!showReadTimeBelowTimestamp && (
+//           <Placeholder css={styles.readTimePlaceholderBelowTimestamp} />
+//         )}
+//       </>
+//     ) : (
+//       <>
+//         <Timestamp
+//           {...props}
+//           popOut={false}
+//           showReadTimeBelowTimestamp={showReadTimeBelowTimestamp}
+//         />
+//         {/* EXPERIMENT: Article Read Time */}
+//         {showReadTimeBelowTimestamp ? (
+//           <ReadTime
+//             readTimeValue={readTimeValue}
+//             readTimeVariant={readTimeVariant}
+//           />
+//         ) : (
+//           <Placeholder css={styles.readTimePlaceholderBelowTimestamp} />
+//         )}
+//       </>
+//     );
+//   };
 
 const getMpuComponent =
   (allowAdvertising: boolean) => (props: ComponentToRenderProps) =>
@@ -205,13 +203,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const { isApp, isAmp, isLite } = use(RequestContext);
 
-  const {
-    articleAuthor,
-    isTrustProjectParticipant,
-    showRelatedTopics,
-    brandName,
-    translations,
-  } = use(ServiceContext);
+  const { articleAuthor, showRelatedTopics, brandName, translations } =
+    use(ServiceContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
 
@@ -229,11 +222,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     experimentVariant && experimentVariant !== 'off';
 
   // EXPERIMENT: Article Read Time
-  const readTimeExperimentName = 'newswb_ws_article_read_time';
-  const readTimeExperimentVariant = useOptimizelyVariation({
-    experimentName: readTimeExperimentName,
-    experimentType: ExperimentType.CLIENT_SIDE,
-  });
+  // const readTimeExperimentName = 'newswb_ws_article_read_time';
+  // const readTimeExperimentVariant = useOptimizelyVariation({
+  //   experimentName: readTimeExperimentName,
+  //   experimentType: ExperimentType.CLIENT_SIDE,
+  // });
 
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
@@ -246,8 +239,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
   const { enabled: liteCTAShows } = useToggle('liteSiteCTA');
 
-  // EXPERIMENT: Article Read Time
-  const readTimeValue = pageData?.metadata?.stats?.readTime;
+  // // EXPERIMENT: Article Read Time
+  // const readTimeValue = pageData?.metadata?.stats?.readTime;
 
   const headline = getHeadline(pageData) ?? '';
   const description = getSummary(pageData) || getHeadline(pageData);
@@ -272,7 +265,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     : null;
 
   const taggings = pageData?.metadata?.passport?.taggings ?? [];
-  const formats = pageData?.metadata?.passport?.predicates?.formats ?? [];
 
   const isPGL = pageData?.metadata?.type === PHOTO_GALLERY_PAGE;
   const isSTY = pageData?.metadata?.type === STORY_PAGE;
@@ -290,28 +282,27 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     }),
   };
 
-  // EXPERIMENT: Article Read Time
-  const readTimeData = {
-    readTimeValue,
-    readTimeVariant: readTimeExperimentVariant || 'off',
-  };
+  // // EXPERIMENT: Article Read Time
+  // const readTimeData = {
+  //   readTimeValue,
+  //   readTimeVariant: readTimeExperimentVariant || 'off',
+  // };
 
   const componentsToRender = {
     visuallyHiddenHeadline,
     headline: getHeadlineComponent,
-    subheadline: Headings,
     audio: MediaLoader,
     video: getVideoComponent(translations, blocks),
     text,
     image: getImageComponent(preloadLeadImageToggle),
-    // EXPERIMENT: Article Read Time
-    timestamp: getTimestampComponent(
-      hasByline,
-      bylineContribBlocks,
-      firstPublished,
-      lastPublished,
-      readTimeData,
-    ),
+    // // EXPERIMENT: Article Read Time
+    // timestamp: getTimestampComponent(
+    //   hasByline,
+    //   bylineContribBlocks,
+    //   firstPublished,
+    //   lastPublished,
+    //   readTimeData,
+    // ),
     social: SocialEmbedContainer,
     embed: UnsupportedEmbed,
     embedHtml: EmbedHtml,
@@ -389,7 +380,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         imageAltText={promoImageAltText}
         hasAmpPage={!isTC2Asset}
       />
-      <LinkedData
+      {/* <LinkedData
         showAuthor
         bylineLinkedData={bylineLinkedData}
         type={
@@ -404,7 +395,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         dateModified={lastPublished}
         aboutTags={aboutTags}
         imageLocator={promoImage}
-      />
+      /> */}
       {allowAdvertising && (
         <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
       )}

@@ -35,7 +35,8 @@ module.exports = {
       },
     ];
   },
-  reactStrictMode: true,
+  productionBrowserSourceMaps: true,
+  reactStrictMode: false,
   distDir: 'build',
   output: 'standalone',
   assetPrefix: isLocal ? undefined : assetPrefix,
@@ -81,6 +82,9 @@ module.exports = {
           },
         ),
       );
+    }
+    if (isServer) {
+      config.devtool = 'source-map';
     }
 
     return config;

@@ -47,12 +47,11 @@ import EmbedImages from '../../components/Embeds/EmbedImages';
 import EmbedHtml from '../../components/Embeds/EmbedHtml';
 import OEmbedLoader from '../../components/Embeds/OEmbed';
 
-import LinkedData from '../../components/LinkedData';
+// import LinkedData from '../../components/LinkedData';
 import Byline from '../../components/Byline';
 
 import {
   bylineExtractor,
-  categoryName,
   getAuthorTwitterHandle,
 } from '../../components/Byline/utilities';
 
@@ -139,12 +138,7 @@ const getTimestampComponent =
     showTimestamp ? <Timestamp {...props} popOut={false} /> : null;
 
 const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
-  const {
-    articleAuthor,
-    isTrustProjectParticipant,
-    showRelatedTopics,
-    brandName,
-  } = use(ServiceContext);
+  const { articleAuthor, showRelatedTopics, brandName } = use(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
 
   const {
@@ -174,8 +168,6 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
     : null;
 
   const taggings = pageData?.metadata?.passport?.taggings ?? [];
-
-  const formats = pageData?.metadata?.passport?.predicates?.formats ?? [];
 
   // ATI
   const {
@@ -265,7 +257,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
         imageAltText={promoImageAltText}
         hasAmpPage={!isTC2Asset}
       />
-      <LinkedData
+      {/* <LinkedData
         showAuthor
         bylineLinkedData={bylineLinkedData}
         type={
@@ -279,7 +271,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
         dateModified={lastPublished}
         aboutTags={aboutTags}
         imageLocator={promoImage}
-      />
+      /> */}
       <div css={styles.grid}>
         <div css={isCpsMap ? styles.fullWidthContainer : styles.primaryColumn}>
           <main css={styles.mainContent} role="main">
