@@ -2,7 +2,7 @@ import { Services } from '#app/models/types/global';
 import appConfig from '#src/server/utilities/serviceConfigs';
 import { ServiceParametersType } from '../../types';
 import config from '../../support/config/services';
-import { crossPlatform } from '../assertions/crossPlatformAssertion';
+// import { crossPlatform } from '../assertions/crossPlatformAssertion';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasFigure = (service: Services) =>
@@ -114,10 +114,5 @@ export default ({
         }
       });
     });
-
-    /**
-     * Most Read Component
-     */
-    crossPlatform({ service, variant });
   });
 };

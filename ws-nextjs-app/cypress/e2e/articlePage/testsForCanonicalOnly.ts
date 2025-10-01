@@ -12,6 +12,7 @@ import { ServiceParametersType } from '../../types';
 import { getBlockData, getBlockByType, getVideoEmbedUrl } from './helpers';
 import runIfToggleEnabled from '../../support/helpers/runIfToggleEnabled';
 import chartbeatTests from '../../support/helpers/chartbeatTests';
+import { crossPlatform } from '../assertions/crossPlatformAssertion';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasCaption = (service: Services) => service === 'news';
@@ -209,4 +210,9 @@ export default ({
         });
       }
     });
+
+    // /**
+    //  * Most Read Component
+    //  */
+    crossPlatform({ service, variant });
   });

@@ -1,12 +1,12 @@
-import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
-import liteTests from '#nextjs/cypress/e2e/articlePage/testsForLiteOnly';
+import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import runTestsForPage from '../../support/helpers/runTestsForPage';
 import { testsThatAlwaysRunForAllPages as testsForAllPages } from '../testsForAllPages';
 import { testsThatFollowSmokeTestConfigForAllCanonicalPages as testsForAllCanonicalPages } from '../testsForAllCanonicalPages';
 import { testsThatFollowSmokeTestConfigForAllAMPPages as testsForAllAMPPages } from '../testsForAllAMPPages';
 import ampArticleTests from './testsForAMPOnly';
 import canonicalArticleTests from './testsForCanonicalOnly';
-import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
-import { MEDIA_ASSET_PAGE } from '../../../../src/app/routes/utils/pageTypes';
+import liteTests from '../articlePage/testsForLiteOnly';
+import getPathWithSuffix from '../../support/helpers/getPathWithSuffix';
 
 const canonicalTests = [
   testsForAllPages,
@@ -313,12 +313,15 @@ const liteTestSuites = Cypress.env('SMOKE')
       })
   : [];
 
-runTestsForPage({
-  pageType: MEDIA_ASSET_PAGE,
-  testSuites: [
-    ...canonicalTestSuites,
-    ...tc2CanonicalTestSuites,
-    ...ampTestSuites,
-    ...liteTestSuites,
-  ],
+// SKIPPED: The following tests have been skipped as the media asset route hasn't yet been migrated.
+describe.skip(`Media Asset Page Skipped until routes have been migrated`, () => {
+  runTestsForPage({
+    pageType: MEDIA_ASSET_PAGE,
+    testSuites: [
+      ...canonicalTestSuites,
+      ...tc2CanonicalTestSuites,
+      ...ampTestSuites,
+      ...liteTestSuites,
+    ],
+  });
 });

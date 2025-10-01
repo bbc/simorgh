@@ -66,7 +66,8 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   if (resolvedUrl?.includes('av-embeds')) {
     return handleAvRoute(context);
-  } else if (pageType === ARTICLE_PAGE) {
+  }
+  if (pageType === ARTICLE_PAGE) {
     return handleArticleRoute(context);
   }
 

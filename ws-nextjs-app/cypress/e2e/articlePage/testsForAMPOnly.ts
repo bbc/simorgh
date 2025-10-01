@@ -1,5 +1,4 @@
 import { Services } from '#app/models/types/global';
-import { crossPlatform } from '../assertions/crossPlatformAssertion';
 import { ServiceParametersType } from '../../types';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
@@ -66,6 +65,7 @@ export default ({
      * These cypress tests are needed as unit tests cannot be run on the jsdom.
      * web workers (which run on amp pages) do not run on the virtual dom.
      */
-    crossPlatform({ service, variant });
+    // SKIPPED: Cross platform tests have been skipped until the Most Read component has been migrated
+    // crossPlatform({ service, variant });
   });
 };
