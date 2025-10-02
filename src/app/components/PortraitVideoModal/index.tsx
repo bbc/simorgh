@@ -12,6 +12,7 @@ import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '../../hooks/useViewTracker';
+import useSwipeTracker from '../../hooks/useSwipeTracker';
 import styles from './index.styles';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { DownArrowIcon, UpArrowIcon } from '../icons';
@@ -155,6 +156,40 @@ const PortraitVideoModal = ({
     }),
   );
 
+  const swipeTracker = useSwipeTracker(
+    getEventTrackingData({
+      eventTrackingData,
+      selectedVideo: blocks?.[selectedVideoIndex],
+      selectedVideoIndex,
+    }),
+  );
+
+  const onSwipe = async e => {
+    const { direction, method } = e;
+
+    if (['swipe', 'wheel'].includes(method)) {
+      const { playlist } = e || {};
+      const [currentItem] = playlist?.items || [];
+      const currentId = currentItem?.vpid || currentItem?.versionID;
+      const currentIndex = blocks?.findIndex(
+        item =>
+          item.model.video.id === currentId ||
+          item.model.video.version.id === currentId,
+      );
+
+      const newIndex =
+        direction === 'next' ? currentIndex + 1 : currentIndex - 1;
+
+      const newEventTrackingData = getEventTrackingData({
+        eventTrackingData,
+        selectedVideo: blocks?.[newIndex],
+        selectedVideoIndex: newIndex,
+      });
+
+      await swipeTracker(newEventTrackingData);
+    }
+  };
+
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const endOfContentButtonRef = useRef<HTMLButtonElement>(null);
 
@@ -265,6 +300,7 @@ const PortraitVideoModal = ({
             playlistLoaded: e => playlistLoadedCallback(e, blocks),
             pluginLoaded: pluginLoadedCallback,
             fullscreenExit: onClose,
+            statsNavigation: e => onSwipe(e),
           }}
         />
         <button
