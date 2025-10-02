@@ -337,7 +337,7 @@ exports[`AMP Story Page SEO Apple Touch Icon should match attributes 10`] = `
 }
 `;
 
-exports[`AMP Story Page SEO Canonical link 1`] = `"http://localhost:7080/mundo/noticias-internacional-51266689"`;
+exports[`AMP Story Page SEO Canonical link 1`] = `"http://localhost:7081/mundo/noticias-internacional-51266689"`;
 
 exports[`AMP Story Page SEO Dir attribute 1`] = `"ltr"`;
 
@@ -373,7 +373,7 @@ exports[`AMP Story Page SEO Linked data should match text 1`] = `
         "name": "Spanish",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7080/mundo/noticias-internacional-51266689",
+        "@id": "http://localhost:7081/mundo/noticias-internacional-51266689",
         "@type": "WebPage",
         "name": "Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea",
       },
@@ -389,7 +389,7 @@ exports[`AMP Story Page SEO Linked data should match text 1`] = `
         "publishingPrinciples": "https://www.bbc.com/mundo/institucional-51359666",
       },
       "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg",
-      "url": "http://localhost:7080/mundo/noticias-internacional-51266689",
+      "url": "http://localhost:7081/mundo/noticias-internacional-51266689",
     },
   ],
 }
@@ -409,7 +409,7 @@ exports[`AMP Story Page SEO OG title 1`] = `"Brexit: qué cambiará para visitar
 
 exports[`AMP Story Page SEO OG type 1`] = `"article"`;
 
-exports[`AMP Story Page SEO OG url 1`] = `"http://localhost:7080/mundo/noticias-internacional-51266689"`;
+exports[`AMP Story Page SEO OG url 1`] = `"http://localhost:7081/mundo/noticias-internacional-51266689"`;
 
 exports[`AMP Story Page SEO Page title 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea - BBC News Mundo"`;
 

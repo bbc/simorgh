@@ -330,7 +330,7 @@ exports[`AMP Photo Gallery Page SEO Apple Touch Icon should match attributes 10`
 }
 `;
 
-exports[`AMP Photo Gallery Page SEO Canonical link 1`] = `"http://localhost:7080/mundo/deportes-36935058"`;
+exports[`AMP Photo Gallery Page SEO Canonical link 1`] = `"http://localhost:7081/mundo/deportes-36935058"`;
 
 exports[`AMP Photo Gallery Page SEO Dir attribute 1`] = `"ltr"`;
 
@@ -373,7 +373,7 @@ exports[`AMP Photo Gallery Page SEO Linked data should match text 1`] = `
         "name": "Spanish",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7080/mundo/deportes-36935058",
+        "@id": "http://localhost:7081/mundo/deportes-36935058",
         "@type": "WebPage",
         "name": "Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos",
       },
@@ -389,7 +389,7 @@ exports[`AMP Photo Gallery Page SEO Linked data should match text 1`] = `
         "publishingPrinciples": "https://www.bbc.com/mundo/institucional-51359666",
       },
       "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_mundo/16506/production/_90689319_gettyimages-2642105-1.jpg",
-      "url": "http://localhost:7080/mundo/deportes-36935058",
+      "url": "http://localhost:7081/mundo/deportes-36935058",
     },
   ],
 }
@@ -409,7 +409,7 @@ exports[`AMP Photo Gallery Page SEO OG title 1`] = `"Río 2016, el antes y el ah
 
 exports[`AMP Photo Gallery Page SEO OG type 1`] = `"article"`;
 
-exports[`AMP Photo Gallery Page SEO OG url 1`] = `"http://localhost:7080/mundo/deportes-36935058"`;
+exports[`AMP Photo Gallery Page SEO OG url 1`] = `"http://localhost:7081/mundo/deportes-36935058"`;
 
 exports[`AMP Photo Gallery Page SEO Page title 1`] = `"Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos - BBC News Mundo"`;
 

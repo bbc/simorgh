@@ -287,7 +287,7 @@ exports[`AMP Story Page SEO Apple Touch Icon should match attributes 10`] = `
 }
 `;
 
-exports[`AMP Story Page SEO Canonical link 1`] = `"http://localhost:7080/kyrgyz/23292889"`;
+exports[`AMP Story Page SEO Canonical link 1`] = `"http://localhost:7081/kyrgyz/23292889"`;
 
 exports[`AMP Story Page SEO Dir attribute 1`] = `"ltr"`;
 
@@ -330,7 +330,7 @@ exports[`AMP Story Page SEO Linked data should match text 1`] = `
         "name": "Kyrgyz",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7080/kyrgyz/23292889",
+        "@id": "http://localhost:7081/kyrgyz/23292889",
         "@type": "WebPage",
         "name": "Test STY for social embeds",
       },
@@ -346,7 +346,7 @@ exports[`AMP Story Page SEO Linked data should match text 1`] = `
         "publishingPrinciples": "https://www.bbc.com/kyrgyz/institutional-49677275",
       },
       "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_kyrgyz/CF33/test/_63734035_socialmedia.jpg",
-      "url": "http://localhost:7080/kyrgyz/23292889",
+      "url": "http://localhost:7081/kyrgyz/23292889",
     },
   ],
 }
@@ -366,7 +366,7 @@ exports[`AMP Story Page SEO OG title 1`] = `"Test STY for social embeds - BBC Ne
 
 exports[`AMP Story Page SEO OG type 1`] = `"article"`;
 
-exports[`AMP Story Page SEO OG url 1`] = `"http://localhost:7080/kyrgyz/23292889"`;
+exports[`AMP Story Page SEO OG url 1`] = `"http://localhost:7081/kyrgyz/23292889"`;
 
 exports[`AMP Story Page SEO Page title 1`] = `"Test STY for social embeds - BBC News Кыргыз Кызматы"`;
 
