@@ -12,6 +12,7 @@ interface TestResponseCodeAndRetry {
   type?: string;
   retriesLeft?: number;
   allowFallback?: boolean;
+  headers?: Record<string, string>;
 }
 
 declare global {

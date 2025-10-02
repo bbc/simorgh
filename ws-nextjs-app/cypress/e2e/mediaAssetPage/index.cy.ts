@@ -2,11 +2,11 @@ import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import runTestsForPage from '../../support/helpers/runTestsForPage';
 import { testsThatAlwaysRunForAllPages as testsForAllPages } from '../testsForAllPages';
 import { testsThatFollowSmokeTestConfigForAllCanonicalPages as testsForAllCanonicalPages } from '../testsForAllCanonicalPages';
-import { testsThatFollowSmokeTestConfigForAllAMPPages as testsForAllAMPPages } from '../testsForAllAMPPages';
-import ampArticleTests from './testsForAMPOnly';
+// import { testsThatFollowSmokeTestConfigForAllAMPPages as testsForAllAMPPages } from '../testsForAllAMPPages';
+// import ampArticleTests from './testsForAMPOnly';
 import canonicalArticleTests from './testsForCanonicalOnly';
-import liteTests from '../articlePage/testsForLiteOnly';
-import getPathWithSuffix from '../../support/helpers/getPathWithSuffix';
+// import liteTests from '../articlePage/testsForLiteOnly';
+// import getPathWithSuffix from '../../support/helpers/getPathWithSuffix';
 
 const canonicalTests = [
   testsForAllPages,
@@ -14,7 +14,7 @@ const canonicalTests = [
   canonicalArticleTests,
 ];
 
-const ampTests = [testsForAllPages, testsForAllAMPPages, ampArticleTests];
+// const ampTests = [testsForAllPages, testsForAllAMPPages, ampArticleTests];
 
 const canonicalSmokeTestSuites = [
   {
@@ -291,37 +291,39 @@ const canonicalTestSuites = Cypress.env('SMOKE')
   ? canonicalSmokeTestSuites
   : canonicalNonSmokeTestSuites;
 
-const ampTestSuites = canonicalTestSuites.map(testSuite => {
-  return {
-    ...testSuite,
-    path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
-    tests: [...ampTests],
-  };
-});
+// SKIPPED: AMP ignored until routes have been fully migrated.
+// const ampTestSuites = canonicalTestSuites.map(testSuite => {
+//   return {
+//     ...testSuite,
+//     path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
+//     tests: [...ampTests],
+//   };
+// });
 
-const liteTestSuites = Cypress.env('SMOKE')
-  ? canonicalTestSuites
-      .filter(
-        ({ service }) => !['news', 'sport', 'newsround'].includes(service),
-      )
-      .map(testSuite => {
-        return {
-          ...testSuite,
-          path: `${testSuite.path}.lite`,
-          tests: [liteTests],
-        };
-      })
-  : [];
+// SKIPPED: LITE ignored until routes have been fully migrated.
+// const liteTestSuites = Cypress.env('SMOKE')
+//   ? canonicalTestSuites
+//       .filter(
+//         ({ service }) => !['news', 'sport', 'newsround'].includes(service),
+//       )
+//       .map(testSuite => {
+//         return {
+//           ...testSuite,
+//           path: `${testSuite.path}.lite`,
+//           tests: [liteTests],
+//         };
+//       })
+//   : [];
 
-// SKIPPED: The following tests have been skipped as the media asset route hasn't yet been migrated.
-describe.skip(`Media Asset Page Skipped until routes have been migrated`, () => {
-  runTestsForPage({
-    pageType: MEDIA_ASSET_PAGE,
-    testSuites: [
-      ...canonicalTestSuites,
-      ...tc2CanonicalTestSuites,
-      ...ampTestSuites,
-      ...liteTestSuites,
-    ],
-  });
+runTestsForPage({
+  pageType: MEDIA_ASSET_PAGE,
+  headers: {
+    'page-type': 'tc2',
+  },
+  testSuites: [
+    ...canonicalTestSuites,
+    ...tc2CanonicalTestSuites,
+    // ...ampTestSuites,
+    // ...liteTestSuites,
+  ],
 });

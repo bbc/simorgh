@@ -19,6 +19,7 @@ type FunctionProps = {
   failOnStatusCode?: boolean;
   testIsolation?: boolean;
   deleteServiceWorker?: boolean;
+  headers?: Record<string, string>;
 };
 
 export default ({
@@ -28,6 +29,7 @@ export default ({
   failOnStatusCode = true,
   testIsolation = false,
   deleteServiceWorker = false,
+  headers,
 }: FunctionProps) => {
   const serviceToRun = Cypress.env('ONLY_SERVICE');
 
@@ -55,6 +57,7 @@ export default ({
             if (failOnStatusCode) {
               cy.testResponseCodeAndRetry({
                 url: path,
+                headers,
               });
             }
 
@@ -75,6 +78,7 @@ export default ({
             cy.visit(path, {
               failOnStatusCode,
               ...(deleteServiceWorker && { onBeforeLoad: removeServiceWorker }),
+              ...(headers && { headers }),
             });
           });
 
