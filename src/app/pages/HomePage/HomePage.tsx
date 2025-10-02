@@ -66,6 +66,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
   });
 
   const itemList = getItemList({ curations, name: brandName });
+
   const timeOfDayVariant = 'variantA'; // hardcoded for now, to be replaced with actual optimizely hook
   // if service is Hindi or Tamil and optimizely variant is set to 'variantA' then reorder curations
   if (
@@ -77,14 +78,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
       service,
     });
   }
-  // eslint-disable-next-line no-console
-  console.log(
-    'Curations after reorder:',
-    curations.map(({ curationId, position }) => ({
-      curationId,
-      position,
-    })),
-  );
+
   return (
     <>
       <ChartbeatAnalytics title={title} />
