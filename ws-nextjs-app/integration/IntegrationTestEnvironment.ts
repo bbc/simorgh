@@ -28,11 +28,13 @@ class CustomTestEnvironment extends TestEnvironment {
     const { pathname, service, displayAds = 'false' } = context.docblockPragmas;
 
     const pageType = getPageTypeFromTestPath(context.testPath);
+    // const pageType = 'article';
 
     const platformForPath = ['amp', 'lite'].includes(platform)
       ? `.${platform}`
       : '';
 
+    console.log('platformForPath', platformForPath);
     this.pageType = camelCaseToText(pageType);
     this.service = service;
     this.displayAds = displayAds === 'true';
@@ -47,6 +49,7 @@ class CustomTestEnvironment extends TestEnvironment {
         url: this.url,
         headers: {
           ...(this.displayAds && { 'BBC-Adverts': 'true' }),
+          'page-type': 'article', // to check
         },
       });
 
