@@ -64,7 +64,7 @@ export default async (context: GetServerSidePropsContext) => {
 
   let routingInfoLogger = logger.debug;
 
-  const { hasRequestSucceeded, status: shouldRenderStatus } = shouldRender(
+  const { hasRequestSucceeded, status: renderStatus } = shouldRender(
     { pageData, status },
     service,
     urlWithoutQuery,
@@ -72,7 +72,7 @@ export default async (context: GetServerSidePropsContext) => {
   );
 
   // If request has fails or should not be rendered, return non-200 status
-  if (!hasRequestSucceeded && shouldRenderStatus !== OK) {
+  if (!hasRequestSucceeded && renderStatus !== OK) {
     routingInfoLogger = logger.error;
 
     return {
@@ -82,7 +82,7 @@ export default async (context: GetServerSidePropsContext) => {
         isLite,
         isNextJs: true,
         service,
-        status: shouldRenderStatus,
+        status: renderStatus,
         timeOnServer: Date.now(),
         variant: variant || null,
         ...extractHeaders(reqHeaders),
