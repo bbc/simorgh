@@ -539,6 +539,7 @@ describe('Reverb', () => {
         item_count: 11,
         name: '1234',
         resource_id: 'blockLevelResourceId',
+        type: 'top-stories',
       });
     });
 
@@ -569,6 +570,7 @@ describe('Reverb', () => {
           },
           group: {
             name: '1234',
+            type: 'top-stories',
           },
           event: {
             category: 'viewability',
@@ -594,6 +596,7 @@ describe('Reverb', () => {
           },
           group: {
             name: '1234',
+            type: 'top-stories',
           },
           event: {
             category: 'viewability',
@@ -626,6 +629,7 @@ describe('Reverb', () => {
           },
           group: {
             name: '1234',
+            type: 'top-stories',
           },
           event: {
             category: 'viewability',
@@ -652,6 +656,7 @@ describe('Reverb', () => {
           },
           group: {
             name: '1234',
+            type: 'top-stories',
           },
           event: {
             category: 'viewability',

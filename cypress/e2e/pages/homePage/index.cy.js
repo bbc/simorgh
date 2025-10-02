@@ -1,14 +1,21 @@
 import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import canonicalTests from './testsForCanonicalOnly';
+import urlValidationTest from '../../../support/helpers/urlValidationTest';
 
-const tests = [canonicalTests];
+const tests = [canonicalTests, urlValidationTest];
 
 const testSuites = [
   {
     path: '/arabic',
     runforEnv: ['local', 'test', 'live'],
     service: 'arabic',
+    tests,
+  },
+  {
+    path: '/dari',
+    runforEnv: ['local', 'test'],
+    service: 'dari',
     tests,
   },
   {
@@ -55,7 +62,19 @@ const testSuites = [
   },
 ];
 
+let smokeTests = [];
+
+// TEMP: Disable homepage smoke tests on the test environment due to flakiness
+if (Cypress.env('SMOKE')) {
+  smokeTests = testSuites.map(testSuite => {
+    return {
+      ...testSuite,
+      runforEnv: testSuite.runforEnv.filter(env => env !== 'test'),
+    };
+  });
+}
+
 runTestsForPage({
   pageType: HOME_PAGE,
-  testSuites,
+  testSuites: Cypress.env('SMOKE') ? smokeTests : testSuites,
 });

@@ -7,7 +7,7 @@ import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {
-    lang: 'fa',
+    lang: 'prs',
     product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'به روز شده در',
@@ -19,7 +19,8 @@ export const service: DefaultServiceConfig = {
     chartbeatDomain: 'dari.bbc.co.uk',
     brandName: 'BBC News فارسی',
     serviceLocalizedName: 'فارسی',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/dari/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News فارسی',
     dir: 'rtl',
     externalLinkText: '، خارجی',
@@ -36,8 +37,8 @@ export const service: DefaultServiceConfig = {
     serviceName: 'Dari',
     languageName: 'Dari',
     altCalendar: jalaali,
-    twitterCreator: '@BBCNews',
-    twitterSite: '@BBCNews',
+    twitterCreator: '@bbcafghanistan',
+    twitterSite: '@bbcafghanistan',
     noBylinesPolicy:
       'https://www.bbc.com/persian/institutional-49283091#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/persian/institutional-49283091',
@@ -48,24 +49,6 @@ export const service: DefaultServiceConfig = {
     homePageTitle: 'صفحه اول',
     showAdPlaceholder: true,
     showRelatedTopics: true,
-    podcastPromo: {
-      title: 'پادکست',
-      brandTitle: 'اسطوره تختی',
-      brandDescription:
-        'در مجموعه چهار قسمتی «اسطوره تختی» از زندگی شخصی، ورزشی و اجتماعی غلامرضا تختی می‌شنویم.',
-      image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0jkc7rj.jpg',
-        alt: 'اسطوره تختی',
-      },
-      linkLabel: {
-        text: 'پادکست',
-        href: 'https://www.bbc.com/persian/podcasts/p0703hz7',
-      },
-      skipLink: {
-        text: 'از %title% رد شوید و به خواندن ادامه دهید',
-        endTextVisuallyHidden: 'پایان %title%',
-      },
-    },
     translations: {
       pagination: {
         page: 'صفحه',
@@ -256,20 +239,10 @@ export const service: DefaultServiceConfig = {
         photogallery: 'عکس',
         video: 'ویدیو',
         recentEpisodes: 'برنامه قبلی',
-        bbc_persian_radio: {
-          title: 'رادیو فارسی بی‌بی‌سی',
-          subtitle:
-            'مجله خبری بخش فارسی رادیو بی‌بی‌سی را هر روز از ساعت ۶ تا ۸ صبح به وقت تهران (۲:۳۰ تا ۴:۳۰ به وقت گرینیچ) بشنوید. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است.',
-        },
         bbc_dari_radio: {
           title: 'بی بی سی افغانستان (برنامه های دری)',
           subtitle:
             'بی بی سی برای افغانستان تازه ترین و دقیق ترین خبرهای افغانستان ، منطقه و جهان را با تحلیل های همه جانبه ارایه می کند. برنامه های مختلف سیاسی، اجتماعی، فرهنگی و آموزشی از ساعت پنج صبح تا دوازده شب به زبان های دری و پشتو از بی بی سی برای افغانستان.',
-        },
-        bbc_persian_tv: {
-          title: '۶٠ دقیقه',
-          subtitle:
-            'برنامه خبری-تحلیلی یک ساعته که تصویری روشن و ساده از رویدادهای پیچیده جهان ارائه می‌کند.',
         },
         listen: 'بشنوید',
         watch: 'ببینید',
@@ -355,7 +328,8 @@ export const service: DefaultServiceConfig = {
         // Messaging
         removalGuidelineText:
           'اگر محتوایی را برای استفاده در وبسایت یا برنامه ای ارسال کرده اید، در صورتی که ما از ان محتوا استفاده کرده باشیم دیگرامکان حذف آن موجود نیست.',
-        retentionPeriodDays: undefined,
+        retentionPeriodDays:
+          'اطلاعات ارسالی شما تا {{days}} روز نگهداری خواهد شد و در صورتی که مورد استفاده قرار نگیرد، همراه با سایر اطلاعات ارسالی، حذف خواهد شد.',
         referenceNumber: 'شماره',
         submissionInfoSignedOutMessage:
           'شاید بخواهید این جزئیات را برای خود یادداشت کنید.',
@@ -365,7 +339,7 @@ export const service: DefaultServiceConfig = {
           'اگر نظر خود را تغییر داده اید، به ما ایمیل {{emailLink}} بزنید. شماره را ذکر کنید و به ما بگویید که ما از آن استفاده نکنیم.',
 
         // Form Screen
-        dataPolicyHeading: undefined,
+        dataPolicyHeading: 'سیاست حفظ حریم خصوصی',
 
         // Uploading Screen
         uploadingHeading: 'در حال آپلود فایل ها...',
@@ -389,7 +363,7 @@ export const service: DefaultServiceConfig = {
     mostRead: {
       header: 'مطالب پرخواننده',
       lastUpdated: 'به روز شده در',
-      numberOfItems: 10,
+      numberOfItems: 5,
       hasMostRead: true,
     },
     radioSchedule: {
@@ -406,24 +380,24 @@ export const service: DefaultServiceConfig = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/persian/institutional-49283091',
+        href: 'https://www.bbc.com/dari/articles/c8jpnremrrvo',
         text: 'چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟',
       },
       externalLink: {
-        href: 'https://www.bbc.com/persian/institutional/2011/04/000001_links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'سیاست ما درباره لینک دادن به سایت های دیگر.',
       },
       links: [
         {
-          href: 'https://www.bbc.com/persian/institutional-37474133',
+          href: 'https://www.bbc.com/dari/articles/cy85mvgyr23o',
           text: 'شرایط استفاده',
         },
         {
-          href: 'https://www.bbc.com/persian/institutional-37474136',
-          text: 'درباره بی بی سی',
+          href: 'https://www.bbc.com/dari/articles/cjeyjknpvn5o',
+          text: 'در باره بی‌بی‌سی',
         },
         {
-          href: 'https://www.bbc.com/persian/institutional-37540067',
+          href: 'https://www.bbc.com/dari/articles/cq5860pd7q3o',
           text: 'سیاست حفظ حریم خصوصی',
         },
         {
@@ -431,8 +405,8 @@ export const service: DefaultServiceConfig = {
           text: 'کوکی ها',
         },
         {
-          href: 'https://www.bbc.co.uk/persian/send/u50853555',
-          text: 'تماس با بی بی سی',
+          href: 'https://www.bbc.com/dari/send/u214757345',
+          text: 'تماس با بی‌بی‌سی',
         },
         {
           href: 'https://www.bbc.com/ws/languages',

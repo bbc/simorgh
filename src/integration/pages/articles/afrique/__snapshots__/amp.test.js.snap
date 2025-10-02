@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`AMP Articles Gist list item should match text 1`] = `"Lorem ipsum dolor sit amet, consectetur adipiscing elit."`;
 

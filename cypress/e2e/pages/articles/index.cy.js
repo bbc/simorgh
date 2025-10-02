@@ -1,6 +1,6 @@
 /* eslint-disable import/no-relative-packages */
 import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
-import { testsThatAlwaysRunForAllPages as testsForAllPages } from '../testsForAllPages';
+import testsForAllPages from '../testsForAllPages';
 import { testsThatFollowSmokeTestConfigForAllCanonicalPages as testsForAllCanonicalPages } from '../testsForAllCanonicalPages';
 import { testsThatFollowSmokeTestConfigForAllAMPPages as testsForAllAMPPages } from '../testsForAllAMPPages';
 import canonicalAndAmpArticleTests from './tests';
@@ -142,6 +142,12 @@ const nonSmokeCanonicalTestSuites = [
     path: '/azeri/articles/cv0lm08kngmo',
     runforEnv: ['live'],
     service: 'azeri',
+    tests: [...canonicalTests],
+  },
+  {
+    path: '/dari/articles/c502ljngpqeo',
+    runforEnv: ['local'],
+    service: 'dari',
     tests: [...canonicalTests],
   },
   {

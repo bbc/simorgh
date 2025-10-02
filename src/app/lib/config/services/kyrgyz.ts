@@ -295,7 +295,7 @@ export const service: DefaultServiceConfig = {
         text: 'Эмнеге BBC News ишенсе болот?',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Башка интернет сайттардын мазмуну боюнча биздин позиция.',
       },
       links: [
@@ -336,8 +336,12 @@ export const service: DefaultServiceConfig = {
     timezone: 'GMT',
     navigation: [
       {
-        title: 'Башталгыч бет',
+        title: 'Башкы бет',
         url: '/kyrgyz',
+      },
+      {
+        title: 'Видео жаңылыктар',
+        url: '/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4t',
       },
       {
         title: 'Кыргызстан',
@@ -348,16 +352,8 @@ export const service: DefaultServiceConfig = {
         url: '/kyrgyz/topics/ck2l9z012nkt',
       },
       {
-        title: 'САПАР',
-        url: '/kyrgyz/topics/c6z8lg83w7mt',
-      },
-      {
         title: 'Журнал',
         url: '/kyrgyz/topics/czp8pjrkgp0t',
-      },
-      {
-        title: 'Подкасттар',
-        url: '/kyrgyz/podcasts/p0c80v81',
       },
     ],
   },

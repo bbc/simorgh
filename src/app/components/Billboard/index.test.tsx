@@ -238,7 +238,9 @@ describe('Billboard', () => {
           />,
         );
 
-        expect(viewTrackerSpy).toHaveBeenCalledWith(undefined);
+        expect(viewTrackerSpy).toHaveBeenCalledWith(
+          expect.objectContaining({ componentName: 'billboard' }),
+        );
       });
 
       it('should register view tracker if event tracking data provided', () => {
@@ -248,12 +250,15 @@ describe('Billboard', () => {
             description={description}
             link={link}
             image={imageUrl}
-            eventTrackingData={eventTrackingData}
             altText={imageAlt}
+            eventTrackingData={{ componentName: 'billboard' }}
+            summaries={pidginLiveBillboard.summaries}
           />,
         );
 
-        expect(viewTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
+        expect(viewTrackerSpy).toHaveBeenCalledWith(
+          expect.objectContaining({ componentName: 'billboard' }),
+        );
       });
     });
 
@@ -273,7 +278,9 @@ describe('Billboard', () => {
           />,
         );
 
-        expect(clickTrackerSpy).toHaveBeenCalledWith(undefined);
+        expect(clickTrackerSpy).toHaveBeenCalledWith({
+          componentName: 'billboard',
+        });
 
         const [anchorTag] = container.getElementsByTagName('a');
         fireEvent.click(anchorTag);
@@ -281,18 +288,20 @@ describe('Billboard', () => {
       });
 
       it('should register click tracker if event tracking data provided', () => {
+        const provided = { componentName: 'billboard' };
+
         render(
           <Billboard
             heading={title}
             description={description}
             link={link}
             image={imageUrl}
-            eventTrackingData={eventTrackingData}
+            eventTrackingData={provided}
             altText={imageAlt}
           />,
         );
 
-        expect(clickTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
+        expect(clickTrackerSpy).toHaveBeenCalledWith(provided);
       });
 
       it('should handle a click event when link clicked', () => {

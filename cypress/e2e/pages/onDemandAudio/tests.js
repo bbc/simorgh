@@ -1,7 +1,7 @@
 /* eslint-disable cypress/no-unnecessary-waiting */
 /* eslint-disable consistent-return */
 import { getEpisodeAvailability } from '../../../support/helpers/onDemandRadioTv';
-import envConfig from '../../../support/config/envs';
+import chartbeatTests from '../../../support/helpers/chartbeatTests';
 
 export default ({ service, pageType, path, variant = 'default' }) => {
   describe(`Tests for ${service} ${pageType}`, () => {
@@ -43,12 +43,16 @@ export default ({ service, pageType, path, variant = 'default' }) => {
             );
             // There cannot be more episodes shown than the max allowed
             if (recentEpisodesEnabled) {
-              const recentEpisodesMaxNumber = toggles?.[toggleName]?.value;
-
+              const recentEpisodesMaxNumber = parseInt(
+                toggles?.[toggleName]?.value,
+                10,
+              );
               cy.getPageDataFromWindow().then(data => {
-                const { recentEpisodes } = data;
+                const {
+                  pageData: { recentEpisodes },
+                } = data;
 
-                if (recentEpisodes?.length > 0 && recentEpisodesMaxNumber > 1) {
+                if (recentEpisodes?.length > 1 && recentEpisodesMaxNumber > 1) {
                   cy.get('[data-e2e=recent-episodes-list]').should('exist');
 
                   cy.get('[data-e2e=recent-episodes-list]').within(() => {
@@ -94,15 +98,7 @@ export default ({ service, pageType, path, variant = 'default' }) => {
         });
       });
     });
-    describe('Chartbeat', () => {
-      if (envConfig.chartbeatEnabled) {
-        it('should have a script with src value set to chartbeat source', () => {
-          cy.hasScriptWithChartbeatSrc();
-        });
-        it('should have chartbeat config set to window object', () => {
-          cy.hasGlobalChartbeatConfig();
-        });
-      }
-    });
+
+    chartbeatTests();
   });
 };

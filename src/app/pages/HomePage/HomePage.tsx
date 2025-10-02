@@ -3,6 +3,10 @@
 import React, { use } from 'react';
 import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import useOptimizelyVariation, {
+  ExperimentType,
+} from '#app/hooks/useOptimizelyVariation';
+import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import {
   Curation,
@@ -51,6 +55,14 @@ const HomePage = ({ pageData }: HomePageProps) => {
     curations,
     metadata: { atiAnalytics },
   } = pageData;
+
+  // EXPERIMENT: Homepage Read Time
+  const readTimeExperimentName = 'newswb_ws_homepage_read_time';
+  const readTimeVariant = useOptimizelyVariation({
+    experimentName: readTimeExperimentName,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
+
   const itemList = getItemList({ curations, name: brandName });
 
   return (
@@ -90,10 +102,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                   link,
                   position,
                   visualStyle,
-                  mostRead,
-                  radioSchedule,
-                  embed,
-                  portraitVideo,
+                  ...curationProps
                 },
                 index,
               ) => {
@@ -117,15 +126,13 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       position={position}
                       link={link}
                       curationLength={curations?.length}
-                      mostRead={mostRead}
-                      radioSchedule={radioSchedule}
                       nthCurationByStyleAndProminence={
                         nthCurationByStyleAndProminence
                       }
-                      embed={embed}
-                      portraitVideo={portraitVideo}
                       renderVisuallyHiddenH2Title={position === 0}
                       curationId={curationId}
+                      readTimeVariant={readTimeVariant}
+                      {...curationProps}
                     />
                     {index === indexOfFirstNonBanner && <MPU />}
                   </React.Fragment>
@@ -135,6 +142,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
           </div>
         </div>
       </main>
+      {readTimeVariant && <OptimizelyPageMetrics trackPageView />}
     </>
   );
 };

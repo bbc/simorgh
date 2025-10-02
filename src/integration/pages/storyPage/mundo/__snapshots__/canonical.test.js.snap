@@ -119,7 +119,7 @@ exports[`Canonical Story Page Footer Anchors should match text and url 9`] = `
 exports[`Canonical Story Page Footer Anchors should match text and url 10`] = `
 {
   "text": "Lee sobre nuestra postura acerca de enlaces externos.",
-  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
 }
 `;
 
