@@ -1,9 +1,10 @@
 import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
 import e2eTests from './tests';
+import testsForAllPages from '../testsForAllPages';
 
 const pageType = 'onDemandAudio';
 
-const tests = [e2eTests];
+const tests = [e2eTests, testsForAllPages];
 const testSuites = [
   {
     path: '/afaanoromoo/bbc_afaanoromoo_radio/programmes/w13xttnw', // On Demand Brand
