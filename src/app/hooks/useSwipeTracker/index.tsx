@@ -84,22 +84,9 @@ const getComponentSwipeTracker = (eventTrackingData?: EventTrackingData) => {
         },
       };
 
-      console.log('$$$$$$$$$$$$$$$$$$%%%%%%%%%%%%%%%%%%');
-      console.log(`SWIPE EVENT FIRED`);
-      console.log(`${JSON.stringify(eventTrackingData)}`);
-      console.log(`${JSON.stringify(swipeTrackingParameters)}`);
-      console.log('$$$$$$$$$$$$$$$$$$%%%%%%%%%%%%%%%%%%');
-
       await dispatchTrackingRequests(swipeTrackingParameters);
     },
-    [
-      eventTrackingContext,
-      eventTrackingData,
-      optimizely,
-      service,
-      trackingIsEnabled,
-      useReverb,
-    ],
+    [eventTrackingContext, optimizely, service, trackingIsEnabled, useReverb],
   );
 
   return swipeTracker;

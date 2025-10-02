@@ -119,6 +119,36 @@ const pluginLoadedCallback = () => {
   player.dispatchEvent('fullScreenPlugin.launchFullscreen');
 };
 
+const statsNavigationCallback = async (
+  e,
+  blocks,
+  eventTrackingData,
+  swipeTracker,
+) => {
+  const { direction, method } = e;
+
+  if (['swipe', 'wheel'].includes(method)) {
+    const { playlist } = e || {};
+    const [currentItem] = playlist?.items || [];
+    const currentId = currentItem?.vpid || currentItem?.versionID;
+    const currentIndex = blocks?.findIndex(
+      item =>
+        item.model.video.id === currentId ||
+        item.model.video.version.id === currentId,
+    );
+
+    const newIndex = direction === 'next' ? currentIndex + 1 : currentIndex - 1;
+
+    const newEventTrackingData = getEventTrackingData({
+      eventTrackingData,
+      selectedVideo: blocks?.[newIndex],
+      selectedVideoIndex: newIndex,
+    });
+
+    await swipeTracker(newEventTrackingData);
+  }
+};
+
 const handlePrevNextVideo = (direction: 'previous' | 'next') => {
   const player = getPlayerInstance();
 
@@ -163,32 +193,6 @@ const PortraitVideoModal = ({
       selectedVideoIndex,
     }),
   );
-
-  const onSwipe = async e => {
-    const { direction, method } = e;
-
-    if (['swipe', 'wheel'].includes(method)) {
-      const { playlist } = e || {};
-      const [currentItem] = playlist?.items || [];
-      const currentId = currentItem?.vpid || currentItem?.versionID;
-      const currentIndex = blocks?.findIndex(
-        item =>
-          item.model.video.id === currentId ||
-          item.model.video.version.id === currentId,
-      );
-
-      const newIndex =
-        direction === 'next' ? currentIndex + 1 : currentIndex - 1;
-
-      const newEventTrackingData = getEventTrackingData({
-        eventTrackingData,
-        selectedVideo: blocks?.[newIndex],
-        selectedVideoIndex: newIndex,
-      });
-
-      await swipeTracker(newEventTrackingData);
-    }
-  };
 
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const endOfContentButtonRef = useRef<HTMLButtonElement>(null);
@@ -300,7 +304,13 @@ const PortraitVideoModal = ({
             playlistLoaded: e => playlistLoadedCallback(e, blocks),
             pluginLoaded: pluginLoadedCallback,
             fullscreenExit: onClose,
-            statsNavigation: e => onSwipe(e),
+            statsNavigation: e =>
+              statsNavigationCallback(
+                e,
+                blocks,
+                eventTrackingData,
+                swipeTracker,
+              ),
           }}
         />
         <button
