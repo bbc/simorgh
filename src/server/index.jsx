@@ -280,7 +280,7 @@ server.get(
       data.toggles = toggles;
       data.path = urlPath;
       data.timeOnServer = Date.now();
-      data.showAdsBasedOnLocation = headers['bbc-adverts'] === 'true';
+      data.showAdsBasedOnLocation = headers['bbc-adverts'] === 'true' || true; // TODO: TEMP - used for testing!
       data.showCookieBannerBasedOnCountry = showCookieBannerBasedOnCountry;
       data.isUK = isUK;
       data.isLite = isLite;
