@@ -43,7 +43,8 @@ export default async (context: GetServerSidePropsContext) => {
     'public, stale-if-error=90, stale-while-revalidate=30, max-age=30',
   );
 
-  const urlWithoutQuery = resolvedUrl.split('?')?.[0];
+  const { href, search } = new URL(resolvedUrl);
+  const urlWithoutQuery = href.replace(search, '');
 
   const { isAmp, isApp, isLite } = getPathExtension(urlWithoutQuery);
   const { variant } = parseRoute(resolvedUrl);
