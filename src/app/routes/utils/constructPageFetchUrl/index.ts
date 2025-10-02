@@ -214,15 +214,16 @@ const constructPageFetchUrl = ({
     switch (pageType) {
       case ARTICLE_PAGE: {
         const { assetId } = parseRoute(pathname);
+        const pathnameNoDotValue = pathname.split('.')[0];
 
-        if (isOptimoIdCheck(pathname)) {
+        if (isOptimoIdCheck(pathnameNoDotValue)) {
           fetchUrl = Url(
             `${host}${port}/api/local/${service}/articles/${assetId}${variant ? `/${variant}` : ''}`,
           );
           break;
         }
 
-        if (isCpsIdCheck(pathname)) {
+        if (isCpsIdCheck(pathnameNoDotValue)) {
           fetchUrl = Url(
             `${host}${port}/api/local/${service}/cpsAssets/${variant ? `${variant}/` : ''}${assetId}`,
           );

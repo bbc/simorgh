@@ -43,17 +43,17 @@ export default async (context: GetServerSidePropsContext) => {
     'public, stale-if-error=90, stale-while-revalidate=30, max-age=30',
   );
 
-  const urlWithoutQuery = resolvedUrl.split('?')?.[0];
+  const resolvedUrlWithoutQuery = resolvedUrl.split('?')?.[0];
 
-  const { isAmp, isApp, isLite } = getPathExtension(urlWithoutQuery);
+  const { isAmp, isApp, isLite } = getPathExtension(resolvedUrlWithoutQuery);
   const { variant } = parseRoute(resolvedUrl);
 
   const { data, toggles } = await getPageData({
-    id: urlWithoutQuery,
+    id: resolvedUrlWithoutQuery,
     service,
     variant: variant || undefined,
     rendererEnv,
-    resolvedUrl: urlWithoutQuery,
+    resolvedUrl: resolvedUrlWithoutQuery,
     pageType: ARTICLE_PAGE,
   });
 
@@ -63,15 +63,15 @@ export default async (context: GetServerSidePropsContext) => {
 
   let routingInfoLogger = logger.debug;
 
-  const { hasRequestSucceeded, status: shouldRenderStatus } = shouldRender(
+  const { hasRequestSucceeded, status: renderStatus } = shouldRender(
     { pageData, status },
     service,
-    urlWithoutQuery,
+    resolvedUrlWithoutQuery,
     ARTICLE_PAGE,
   );
 
   // If request has fails or should not be rendered, return non-200 status
-  if (!hasRequestSucceeded && shouldRenderStatus !== OK) {
+  if (!hasRequestSucceeded && renderStatus !== OK) {
     routingInfoLogger = logger.error;
 
     return {
@@ -81,7 +81,7 @@ export default async (context: GetServerSidePropsContext) => {
         isLite,
         isNextJs: true,
         service,
-        status: shouldRenderStatus,
+        status: renderStatus,
         timeOnServer: Date.now(),
         variant: variant || null,
         ...extractHeaders(reqHeaders),
@@ -100,7 +100,7 @@ export default async (context: GetServerSidePropsContext) => {
   const transformedArticleData = transformPageData(toggles)(article);
 
   routingInfoLogger(ROUTING_INFORMATION, {
-    url: urlWithoutQuery,
+    url: resolvedUrlWithoutQuery,
     status,
     pageType: ARTICLE_PAGE,
   });
@@ -109,7 +109,7 @@ export default async (context: GetServerSidePropsContext) => {
 
   return {
     props: {
-      id: urlWithoutQuery,
+      id: resolvedUrlWithoutQuery,
       isAmp,
       isApp,
       isLite,
@@ -124,7 +124,7 @@ export default async (context: GetServerSidePropsContext) => {
         mostRead,
       },
       pageType: derivedPageType,
-      pathname: urlWithoutQuery,
+      pathname: resolvedUrlWithoutQuery,
       service,
       status,
       toggles,
