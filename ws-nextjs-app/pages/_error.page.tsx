@@ -1,14 +1,22 @@
 import React from 'react';
 import { NextPageContext } from 'next';
 import NextError from 'next/error';
+import { NOT_FOUND } from '#app/lib/statusCodes.const';
 
 function Error({ statusCode }: { statusCode: number }) {
   return <NextError statusCode={statusCode} />;
 }
 
 Error.getInitialProps = ({ res, err }: NextPageContext) => {
-  // eslint-disable-next-line no-nested-ternary
-  const statusCode = res ? res.statusCode : err ? err.statusCode : 404;
+  let statusCode = NOT_FOUND;
+
+  if (res) {
+    statusCode = res.statusCode;
+  } else if (err) {
+    statusCode =
+      typeof err.statusCode === 'number' ? err.statusCode : statusCode;
+  }
+
   return { statusCode };
 };
 
