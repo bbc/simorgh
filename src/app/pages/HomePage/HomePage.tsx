@@ -65,9 +65,14 @@ const HomePage = ({ pageData }: HomePageProps) => {
     experimentType: ExperimentType.CLIENT_SIDE,
   });
 
-  const itemList = getItemList({ curations, name: brandName });
+  // EXPERIMENT: Homepage Time of Day Adaptive Curations
+  const timeOfDayExperimentName = 'newswb_ws_homepage_time_of_day';
+  let timeOfDayVariant = useOptimizelyVariation({
+    experimentName: timeOfDayExperimentName,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
 
-  const timeOfDayVariant = 'variantA'; // hardcoded for now, to be replaced with actual optimizely hook
+  timeOfDayVariant = 'variantA'; // hardcoded for now, to be replaced with actual optimizely hook
   // if service is Hindi or Tamil and optimizely variant is set to 'variantA' then reorder curations
   if (
     (service === 'hindi' || service === 'tamil') &&
@@ -78,6 +83,8 @@ const HomePage = ({ pageData }: HomePageProps) => {
       service,
     });
   }
+
+  const itemList = getItemList({ curations, name: brandName });
 
   return (
     <>
