@@ -34,10 +34,13 @@ import {
 } from '../utils';
 import BackgroundImage from '../BackgroundImage';
 import {
+  ArabicLiveSVG,
   ArabicMostReadSVG,
   ArabicTopStoriesSVG,
-  RTLLiveSVG,
-} from '../RTLBadges';
+  HindiLiveSVG,
+  HindiMostReadSVG,
+  HindiTopStoriesSVG,
+} from '../NonLatinBadges';
 
 const logger = nodeLogger(__filename);
 
@@ -51,13 +54,27 @@ const getPageType = (id: string) => {
   return null;
 };
 
-const RTL_SERVICES: Services[] = [
-  'arabic',
-  'dari',
-  'pashto',
-  'persian',
-  'urdu',
-] as const;
+const NON_LATIN_SERVICES: Services[] = ['arabic', 'hindi'] as const;
+
+type SVGBadgesMap = {
+  [S in (typeof NON_LATIN_SERVICES)[number]]: Record<
+    'Live' | 'MostRead' | 'TopStories',
+    () => React.ReactNode
+  >;
+};
+
+const SVG_BADGES = {
+  arabic: {
+    Live: ArabicLiveSVG,
+    MostRead: ArabicMostReadSVG,
+    TopStories: ArabicTopStoriesSVG,
+  },
+  hindi: {
+    Live: HindiLiveSVG,
+    MostRead: HindiMostReadSVG,
+    TopStories: HindiTopStoriesSVG,
+  },
+} as SVGBadgesMap;
 
 const compressArrayBuffer = async (
   arrayBuffer: ArrayBuffer,
@@ -71,30 +88,30 @@ export async function GET(
   req: Request,
   { params }: { params: { id: string; service: Services } },
 ) {
-  try {
-    const { searchParams } = new URL(
-      req.url ?? '',
-      `https://${req.headers.get('host')}`,
-    );
+  const { searchParams, pathname } = new URL(
+    req.url ?? '',
+    `https://${req.headers.get('host')}`,
+  );
 
+  try {
     // https://nextjs.org/docs/messages/sync-dynamic-apis
     const { id, service } = await params;
 
-    if (!id || !service) return responseNotFound({ url: req.url });
+    if (!id || !service) return responseNotFound({ pathname });
 
     const rendererEnv =
       searchParams.get('renderer_env') || process.env.SIMORGH_APP_ENV;
 
     const pageType = getPageType(id);
 
-    if (!pageType) return responseNotFound({ url: req.url });
+    if (!pageType) return responseNotFound({ pathname });
 
     const [{ data }, sansMediumBuffer, sansBoldBuffer] = await Promise.all([
       // Fetch asset
       getPageData({
         id,
         service,
-        resolvedUrl: req.url,
+        resolvedUrl: pathname,
         rendererEnv,
         pageType,
       }),
@@ -103,9 +120,9 @@ export async function GET(
       fetch(REITH_SANS_BOLD_FONT_URL).then(res => res.arrayBuffer()),
     ]);
 
-    if (data.status === NOT_FOUND) return responseNotFound({ url: req.url });
+    if (data.status === NOT_FOUND) return responseNotFound({ pathname });
     if (data.status === INTERNAL_SERVER_ERROR)
-      return responseServerError({ url: req.url });
+      return responseServerError({ pathname });
 
     const dataExtractor = {
       live: extractLiveData,
@@ -143,53 +160,59 @@ export async function GET(
         2. Top Stories
         3. Most read
     */
-    switch (true) {
-      case isLive:
-        badge = (
-          <Badge
-            icon={
-              <svg viewBox="0 0 32 32" width="24" height="24">
-                <path
-                  d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
-                  style={{ fill: LIVE_LIGHT }}
-                />
-                <circle cx="16" cy="16" r="8.5" style={{ fill: LIVE_LIGHT }} />
-              </svg>
-            }
-            text={liveText}
-            textColour={LIVE_LIGHT}
-            uppercase
-            bold
-          />
-        );
-        break;
-      case isInTopStories:
-        badge = <Badge text={topStoriesText} />;
-        break;
-      case isInMostRead:
-        badge = <Badge text={mostReadText} />;
-        break;
-      default:
-        badge = undefined;
-    }
+    // If service is non-latin (currently Arabic and Hindi), use SVG badges as its more difficult to load fonts for these
+    // RTL scripts are also not supported by the ImageResponse function
+    if (NON_LATIN_SERVICES.includes(service)) {
+      const BadgeSVGs = SVG_BADGES[service];
 
-    // Library does not support RTL text, so we use pre-baked SVGs for the MostRead and TopStories badges
-    if (service === 'arabic') {
       switch (true) {
         case isLive:
-          badge = <RTLLiveSVG />;
+          badge = <BadgeSVGs.Live />;
           break;
         case isInTopStories:
-          badge = <ArabicTopStoriesSVG />;
+          badge = <BadgeSVGs.TopStories />;
           break;
         case isInMostRead:
-          badge = <ArabicMostReadSVG />;
+          badge = <BadgeSVGs.MostRead />;
+          break;
+        default:
+          badge = null;
+      }
+    } else {
+      switch (true) {
+        case isLive:
+          badge = (
+            <Badge
+              icon={
+                <svg viewBox="0 0 32 32" width="24" height="24">
+                  <path
+                    d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
+                    style={{ fill: LIVE_LIGHT }}
+                  />
+                  <circle
+                    cx="16"
+                    cy="16"
+                    r="8.5"
+                    style={{ fill: LIVE_LIGHT }}
+                  />
+                </svg>
+              }
+              text={liveText}
+              textColour={LIVE_LIGHT}
+              uppercase
+              bold
+            />
+          );
+          break;
+        case isInTopStories:
+          badge = <Badge text={topStoriesText} />;
+          break;
+        case isInMostRead:
+          badge = <Badge text={mostReadText} />;
           break;
         default:
           badge = undefined;
       }
-    } else if (RTL_SERVICES.includes(service)) {
-      badge = null; // No badge for RTL services other than Arabic for initial experiment
     }
 
     const imageResponse = new ImageResponse(
@@ -231,7 +254,7 @@ export async function GET(
     const compressedImage = await compressArrayBuffer(buffer);
 
     logger.debug(ROUTING_INFORMATION, {
-      url: req.url,
+      url: pathname,
       status: OK,
       pageType: pageTypeToLog,
     });
@@ -252,13 +275,13 @@ export async function GET(
       statusCode: INTERNAL_SERVER_ERROR,
       // @ts-expect-error - Not a real pageType yet
       pageType: pageTypeToLog,
-      requestUrl: req.url,
+      requestUrl: pathname,
     });
 
     logger.error(SERVER_SIDE_REQUEST_FAILED, {
       status: INTERNAL_SERVER_ERROR,
-      message: { message, url: req.url },
-      url: req.url,
+      message: { message, url: pathname },
+      url: pathname,
       pageType: pageTypeToLog,
     });
 

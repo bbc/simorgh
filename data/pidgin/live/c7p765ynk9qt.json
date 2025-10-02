@@ -4,7 +4,15 @@
     "description": "The refugee camp has been hit by hundreds of shells, where Hamas says 100,000 people are still sheltering",
     "language": "pcm",
     "headerImage": null,
-    "promoImage": null,
+    "promoImage": {
+      "url": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/93e7/live/b48225f0-9896-11f0-af62-91486a511a31.jpg",
+      "urlTemplate": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/93e7/live/b48225f0-9896-11f0-af62-91486a511a31.jpg",
+      "height": 720,
+      "width": 1080,
+      "altText": "Qalyare",
+      "copyright": "Facebook",
+      "suitableForSyndication": false
+    },
     "home": "pidgin",
     "section": null,
     "commercialInfo": {
