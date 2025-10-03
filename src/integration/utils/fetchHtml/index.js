@@ -32,14 +32,6 @@ const faultTolerantFetch = ({ url, headers }) =>
             `Error: Received HTTP ${response.status} ${response.statusText} for ${url}`,
           );
 
-          // Retry on server errors (5xx) - handle nextJS timeout
-          // not sure this fully works
-          if (response.status === 500) {
-            if (operation.retry(error)) {
-              return;
-            }
-          }
-
           reject(error);
           return;
         }
