@@ -5,14 +5,11 @@ timemachine is a node module which overrides the system time for a repo. There a
 
 // Sets the date and time whilst leaving the clock ticking from that point onwards.
 export const startTimeMachine = ({
-  tick = true,
-  dateString = 'Tuesday, 1 January 2019 02:00:00 GMT',
-  timestamp = 1546308000,
+  // tick = true,
+  dateString = 'Wednesday, 1 January 2025 02:00:00 GMT',
 }) => {
   timemachine.config({
     dateString,
-    timestamp,
-    tick,
   });
 };
 

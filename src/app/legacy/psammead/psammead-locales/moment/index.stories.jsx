@@ -12,6 +12,7 @@ import services from '../../../../../../src/server/utilities/serviceConfigs';
 import PromoTimestamp from '../../../components/Promo/timestamp';
 import ArticleTimestamp from '../../../containers/ArticleTimestamp';
 import MostReadTimestamp from '../../../../components/MostRead/Canonical/LastUpdated';
+import StartTime from '../../../../legacy/components/RadioSchedule/StartTime';
 
 import notes from '../README.md';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
@@ -21,12 +22,7 @@ const ws = services.ws.default;
 
 const timeFunctions = [];
 
-const formatDateAltCalendar = ({ date, altCalendar, format }) => {
-  if (altCalendar) {
-    return `${altCalendar.formatDate(date)} - ${date.format(format)}`;
-  }
-  return date.format(format);
-};
+const originalNow = moment.now;
 
 const WithService = ({ service, variant, children }) => (
   <ServiceContextProvider service={service} variant={variant}>
@@ -34,7 +30,7 @@ const WithService = ({ service, variant, children }) => (
   </ServiceContextProvider>
 );
 
-const fixedTimestamp = '2019-08-27T13:54:21.212Z';
+const fixedTimestamp = '2025-08-27T13:54:21.212Z';
 const fixedDate = moment(fixedTimestamp);
 const exactDate = new Intl.DateTimeFormat('en-gb', {
   day: 'numeric',
@@ -42,24 +38,16 @@ const exactDate = new Intl.DateTimeFormat('en-gb', {
   year: 'numeric',
 }).format(fixedDate);
 
-timeFunctions.push({ heading: `Common Timestamp Formats for ${exactDate}` });
+timeFunctions.push({
+  heading: `Common Timestamp Formats for ${exactDate} (${fixedDate})`,
+});
 
 timeFunctions.push(
   ...[
     { heading: '' },
+    { heading: 'Article Timestamp' },
     {
-      subheading: `Promo Timestamp (D MMMM YYYY)`,
-    },
-    ({ service, variant }) => {
-      return (
-        <WithService service={service} variant={variant}>
-          <PromoTimestamp>{fixedTimestamp}</PromoTimestamp>
-        </WithService>
-      );
-    },
-    { heading: '' },
-    {
-      subheading: `Article first and last published on the same day (D MMMM YYYY)`,
+      subheading: `First and last published on the same day`,
     },
     ({ service, variant }) => {
       const date = new Date(fixedTimestamp);
@@ -71,51 +59,160 @@ timeFunctions.push(
       );
     },
     {
-      subheading: `Article first and last published on different days (D MMMM YYYY)`,
+      subheading: `First and last published at same time`,
     },
     ({ service, variant }) => {
       const date = new Date(fixedTimestamp);
 
+      const firstPublished = new Date(date);
+      const lastPublished = new Date(firstPublished);
+
       return (
         <WithService service={service} variant={variant}>
-          <ArticleTimestamp
-            firstPublished={new Date(date).setDate(date.getDate() - 1)}
-            lastPublished={date}
-            minutesTolerance={1}
-          />
+          <WithTimeMachine
+            dateString={date.toDateString()}
+            timestamp={date.getTime()}
+          >
+            <ArticleTimestamp
+              firstPublished={firstPublished}
+              lastPublished={lastPublished}
+            />
+          </WithTimeMachine>
+        </WithService>
+      );
+    },
+    {
+      subheading: `First and last published on different days`,
+    },
+    ({ service, variant }) => {
+      const date = new Date(fixedTimestamp);
+      const dayBefore = new Date(date).setDate(date.getDate() - 1);
+
+      return (
+        <WithService service={service} variant={variant}>
+          <ArticleTimestamp firstPublished={dayBefore} lastPublished={date} />
+        </WithService>
+      );
+    },
+    {
+      subheading: `First and last published at different times on the same day, last updated 1 minute ago`,
+    },
+    ({ service, variant }) => {
+      const date = new Date(fixedTimestamp);
+      const elevenHoursAgo = new Date(date);
+      elevenHoursAgo.setHours(elevenHoursAgo.getHours() - 11);
+
+      const firstPublished = new Date(elevenHoursAgo);
+
+      const lastPublished = new Date(date);
+      lastPublished.setMinutes(lastPublished.getMinutes() - 1);
+
+      moment.now = () => date;
+
+      return (
+        <WithService service={service} variant={variant}>
+          <WithTimeMachine
+            dateString={date.toDateString()}
+            timestamp={date.getTime()}
+          >
+            <ArticleTimestamp
+              firstPublished={firstPublished}
+              lastPublished={lastPublished}
+            />
+          </WithTimeMachine>
+        </WithService>
+      );
+    },
+    {
+      subheading: `First and last published at different times on the same day, last updated 10 minutes ago`,
+    },
+    ({ service, variant }) => {
+      const date = new Date(fixedTimestamp);
+      const elevenHoursAgo = new Date(date);
+      elevenHoursAgo.setHours(elevenHoursAgo.getHours() - 11);
+
+      const firstPublished = new Date(elevenHoursAgo);
+
+      const lastPublished = new Date(date);
+      lastPublished.setMinutes(lastPublished.getMinutes() - 10);
+
+      moment.now = () => date;
+
+      return (
+        <WithService service={service} variant={variant}>
+          <WithTimeMachine
+            dateString={date.toDateString()}
+            timestamp={date.getTime()}
+          >
+            <ArticleTimestamp
+              firstPublished={firstPublished}
+              lastPublished={lastPublished}
+            />
+          </WithTimeMachine>
+        </WithService>
+      );
+    },
+    {
+      subheading: `First and last published at different times on the same day, last updated 1 hour ago`,
+    },
+    ({ service, variant }) => {
+      const date = new Date(fixedTimestamp);
+      const elevenHoursAgo = new Date(date);
+      elevenHoursAgo.setHours(elevenHoursAgo.getHours() - 11);
+
+      const firstPublished = new Date(elevenHoursAgo);
+
+      const lastPublished = new Date(date);
+      lastPublished.setHours(lastPublished.getHours() - 1);
+
+      moment.now = () => date;
+
+      return (
+        <WithService service={service} variant={variant}>
+          <WithTimeMachine
+            dateString={date.toDateString()}
+            timestamp={date.getTime()}
+          >
+            <ArticleTimestamp
+              firstPublished={firstPublished}
+              lastPublished={lastPublished}
+            />
+          </WithTimeMachine>
+        </WithService>
+      );
+    },
+    {
+      subheading: `First and last published at different times on the same day, last updated 10 hours ago`,
+    },
+    ({ service, variant }) => {
+      const date = new Date(fixedTimestamp);
+      const elevenHoursAgo = new Date(date);
+      elevenHoursAgo.setHours(elevenHoursAgo.getHours() - 11);
+
+      const firstPublished = new Date(elevenHoursAgo);
+
+      const lastPublished = new Date(date);
+      lastPublished.setHours(lastPublished.getHours() - 10);
+
+      moment.now = () => date;
+
+      return (
+        <WithService service={service} variant={variant}>
+          <WithTimeMachine
+            dateString={date.toDateString()}
+            timestamp={date.getTime()}
+          >
+            <ArticleTimestamp
+              firstPublished={firstPublished}
+              lastPublished={lastPublished}
+            />
+          </WithTimeMachine>
         </WithService>
       );
     },
     { heading: '' },
     {
-      subheading: `Article first and last published at different times on the same day, more than 10 hours ago`,
-    },
-    ({ service, variant }) => {
-      const date = new Date(fixedTimestamp);
-      const firstPublished = new Date(date);
-      firstPublished.setHours(firstPublished.getHours() - 2);
-
-      const lastPublished = new Date(date);
-      lastPublished.setHours(lastPublished.getHours() - 1);
-
-      return (
-        <WithTimeMachine
-          dateString={lastPublished.toDateString()}
-          timestamp={lastPublished.getTime()}
-        >
-          <WithService service={service} variant={variant}>
-            <ArticleTimestamp
-              firstPublished={firstPublished}
-              lastPublished={lastPublished}
-              minutesTolerance={1}
-            />
-          </WithService>
-        </WithTimeMachine>
-      );
-    },
-    { heading: '' },
-    {
-      subheading: `Most Read, article more than 60 days old (D MMMM YYYY)`,
+      subheading: `Most Read Timestamp: article more than 60 days old`,
     },
     ({ service, variant }) => {
       const { articleTimestampPrefix, script, locale, timezone } =
@@ -134,9 +231,26 @@ timeFunctions.push(
         </WithService>
       );
     },
+    { heading: '' },
+    {
+      subheading: `Promo Timestamp`,
+    },
+    ({ service, variant }) => {
+      return (
+        <WithService service={service} variant={variant}>
+          <PromoTimestamp>{fixedTimestamp}</PromoTimestamp>
+        </WithService>
+      );
+    },
   ]
 );
 
+timeFunctions.push({ heading: '' });
+timeFunctions.push({
+  heading:
+    '------------------------------------------------------------------------------------------------------------------------',
+});
+timeFunctions.push({ heading: '' });
 timeFunctions.push({ heading: 'Days of the Week' });
 
 Array.from({ length: 7 }, (_, index) => index).forEach((day) => {
@@ -184,8 +298,6 @@ years.forEach((year) => {
     return altCalendar
       ? `${formattedYear} - ${altCalendar.formatDate(lastYear).split(' ')[2]} - ${altCalendar.formatDate(thisYear).split(' ')[2]}`
       : thisYear.format('YYYY');
-
-    return formattedYear;
   });
 });
 
@@ -228,7 +340,7 @@ const Paragraph = styled.p`
 const issueHref = (localeName) =>
   `https://github.com/bbc/simorgh/issues/new?labels=bug&title=Moment+translation+correction+for+${localeName}`;
 
-const Component = ({ service, variant, dir, locale }) => {
+const Component = ({ service, variant, dir, locale, script }) => {
   return (
     <>
       <Table>
@@ -252,6 +364,7 @@ const Component = ({ service, variant, dir, locale }) => {
                       timezone: ws.timezone,
                       articleTimestampPrefix: ws.articleTimestampPrefix,
                       articleTimestampSuffix: ws.articleTimestampSuffix,
+                      script,
                     })}
                   </td>
                   <td dir={dir}>
@@ -259,6 +372,7 @@ const Component = ({ service, variant, dir, locale }) => {
                       service,
                       variant,
                       locale,
+                      script,
                     })}
                   </td>
                 </tr>
@@ -313,12 +427,16 @@ export const Example = (_, { service, variant }) => {
     timezone,
     articleTimestampPrefix,
     articleTimestampSuffix,
+    script,
   } = use(ServiceContext);
+
+  moment.now = originalNow;
 
   return (
     <Component
       service={service}
       variant={variant}
+      script={script}
       dir={dir}
       locale={datetimeLocale}
       altCalendar={altCalendar}
