@@ -6,13 +6,14 @@ import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {
-    lang: 'hu',
+    lang: 'en-GB',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Frissítve',
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-magyarul',
     atiAnalyticsProducerId: '134',
     atiAnalyticsProducerName: 'HUNGARIAN',
+    useReverb: true,
     chartbeatDomain: 'magyarul.bbc.co.uk',
     brandName: 'BBC News Magyarul',
     product: 'BBC News',
@@ -26,9 +27,9 @@ export const service: DefaultServiceConfig = {
     audioCaptionOffscreenText: 'Hangfelirat',
     defaultCaptionOffscreenText: 'Felirat, ',
     imageCopyrightOffscreenText: 'Kép forrás, ',
-    locale: 'hu-HU',
-    isoLang: 'hu',
-    datetimeLocale: 'hu',
+    locale: 'en_GB',
+    isoLang: 'en',
+    datetimeLocale: 'en-gb',
     service: 'magyarul',
     serviceName: 'Magyarul',
     serviceLocalizedName: 'Magyarul',
@@ -62,7 +63,6 @@ export const service: DefaultServiceConfig = {
         reportingFrom: '',
         role: 'Pozíció',
       },
-      recommendationTitle: 'Ajánlott cikkek',
       seeAll: 'Összes megtekintése',
       home: 'Főoldal',
       currentPage: 'Jelenlegi oldal',
@@ -337,7 +337,6 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'Időtartam %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
       skipLink: {
         text: 'Ugrás %title%-ra és az olvasás folyatatása',
         endTextVisuallyHidden: '%title% vége',
@@ -386,7 +385,7 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         'A BBC. A BBC-t nem terheli felelősség a külső oldalak tartalmáért.',
     },
-    timezone: 'Europe/Budapest',
+    timezone: 'Europe/London',
     navigation: [
       {
         title: 'Hírek',
