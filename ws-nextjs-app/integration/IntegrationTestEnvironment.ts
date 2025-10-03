@@ -9,6 +9,13 @@ import getPageTypeFromTestPath from '../../src/integration/utils/getPageTypeFrom
 import camelCaseToText from '../../src/integration/utils/camelCaseToText';
 import fetchHtml from '../../src/integration/utils/fetchHtml';
 
+const shouldPassArticleHeaders = [
+  'Story Page',
+  'Media Asset Page',
+  'Photo Gallery Page',
+  'Media Article Page',
+  'Articles',
+];
 class CustomTestEnvironment extends TestEnvironment {
   pageType: string;
 
@@ -47,7 +54,9 @@ class CustomTestEnvironment extends TestEnvironment {
         url: this.url,
         headers: {
           ...(this.displayAds && { 'BBC-Adverts': 'true' }),
-          'page-type': 'article', // to check
+          ...(shouldPassArticleHeaders.includes(this.pageType) && {
+            'page-type': 'article',
+          }),
         },
       });
 
