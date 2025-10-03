@@ -80,7 +80,7 @@ const getSocialShareImage = ({
   pathname: string;
   service: Services;
 }) => {
-  // TODO: Remove to release experiment
+  // Remove to release to Production
   if (isLive()) return metaImage;
 
   if (!OG_EXPERIMENT_SERVICES.includes(service)) return metaImage;
