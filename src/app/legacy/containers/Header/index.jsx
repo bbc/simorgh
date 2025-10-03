@@ -8,6 +8,7 @@ import {
   HOME_PAGE,
   TOPIC_PAGE,
   ERROR_PAGE,
+  LIVE_PAGE,
 } from '#app/routes/utils/pageTypes';
 import LiteSiteSummary from '#app/components/LiteSiteSummary';
 import { ServiceContext } from '../../../contexts/ServiceContext';
@@ -76,7 +77,8 @@ const HeaderContainer = ({ propsForTopBarOJComponent }) => {
 
   if (scriptLink) {
     switch (true) {
-      case ['zhongwen', 'uzbek', 'serbian'].includes(service) &&
+      case ['zhongwen', 'serbian'].includes(service) && pageType === LIVE_PAGE:
+      case service === 'uzbek' &&
         ![ARTICLE_PAGE, HOME_PAGE, TOPIC_PAGE, ERROR_PAGE].includes(pageType):
         shouldRenderScriptSwitch = false;
         break;

@@ -145,23 +145,74 @@ describe(`Header`, () => {
       expect(container.querySelectorAll(scriptLinkSelector).length).toBe(1);
     });
 
-    describe.each([
-      { service: 'zhongwen', variants: ['simp', 'trad'] },
-      { service: 'uzbek', variants: ['cyr', 'lat'] },
-      { service: 'serbian', variants: ['cyr', 'lat'] },
-    ])('when service is $service', ({ service, variants }) => {
-      describe.each(variants)('and variant is %s', variant => {
-        const supportedPageTypes = [
+    describe('when service is uzbek', () => {
+      describe.each(['cyr', 'lat'])('and variant is %s', variant => {
+        const supportedUzbekPageTypes = [
           ARTICLE_PAGE,
           HOME_PAGE,
           TOPIC_PAGE,
           ERROR_PAGE,
         ];
-        const unsupportedPageTypes = Object.values(PAGE_TYPES).filter(
-          pageType => !supportedPageTypes.includes(pageType),
+        const unsupportedUzbekPageTypes = Object.values(PAGE_TYPES).filter(
+          pageType => !supportedUzbekPageTypes.includes(pageType),
         );
 
-        it.each(supportedPageTypes)(
+        it.each(supportedUzbekPageTypes)(
+          'should render script link when page type is %s',
+          pageType => {
+            const { container } = HeaderContainerWithContext({
+              renderOptions: {
+                pageType,
+                service: 'uzbek',
+                variant,
+              },
+            });
+
+            expect(container.querySelectorAll(scriptLinkSelector).length).toBe(
+              1,
+            );
+          },
+        );
+
+        it.each(unsupportedUzbekPageTypes)(
+          'should not render script link when page type is %s',
+          pageType => {
+            const { container } = HeaderContainerWithContext({
+              renderOptions: {
+                pageType,
+                service: 'uzbek',
+                variant,
+              },
+            });
+
+            expect(container.querySelectorAll(scriptLinkSelector).length).toBe(
+              0,
+            );
+          },
+        );
+      });
+    });
+
+    describe.each([
+      { service: 'zhongwen', variants: ['simp', 'trad'] },
+      { service: 'serbian', variants: ['cyr', 'lat'] },
+    ])('when service is $service', ({ service, variants }) => {
+      describe.each(variants)('and variant is %s', variant => {
+        const { LIVE_PAGE, ...supportedPageTypes } = PAGE_TYPES;
+
+        it('should not render script link when page type is "live"', () => {
+          const { container } = HeaderContainerWithContext({
+            renderOptions: {
+              pageType: LIVE_PAGE,
+              service,
+              variant,
+            },
+          });
+
+          expect(container.querySelectorAll(scriptLinkSelector).length).toBe(0);
+        });
+
+        it.each(Object.values(supportedPageTypes))(
           'should render script link when page type is %s',
           pageType => {
             const { container } = HeaderContainerWithContext({
@@ -174,23 +225,6 @@ describe(`Header`, () => {
 
             expect(container.querySelectorAll(scriptLinkSelector).length).toBe(
               1,
-            );
-          },
-        );
-
-        it.each(unsupportedPageTypes)(
-          'should not render script link when page type is %s',
-          pageType => {
-            const { container } = HeaderContainerWithContext({
-              renderOptions: {
-                pageType,
-                service,
-                variant,
-              },
-            });
-
-            expect(container.querySelectorAll(scriptLinkSelector).length).toBe(
-              0,
             );
           },
         );
