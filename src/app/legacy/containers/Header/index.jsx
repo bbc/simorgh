@@ -76,7 +76,7 @@ const HeaderContainer = ({ propsForTopBarOJComponent }) => {
 
   if (scriptLink) {
     switch (true) {
-      case service === 'uzbek' &&
+      case ['zhongwen', 'uzbek', 'serbian'].includes(service) &&
         ![ARTICLE_PAGE, HOME_PAGE, TOPIC_PAGE, ERROR_PAGE].includes(pageType):
         shouldRenderScriptSwitch = false;
         break;

@@ -145,25 +145,29 @@ describe(`Header`, () => {
       expect(container.querySelectorAll(scriptLinkSelector).length).toBe(1);
     });
 
-    describe('when service is uzbek', () => {
-      describe.each(['cyr', 'lat'])('and variant is %s', variant => {
-        const supportedUzbekPageTypes = [
+    describe.each([
+      { service: 'zhongwen', variants: ['simp', 'trad'] },
+      { service: 'uzbek', variants: ['cyr', 'lat'] },
+      { service: 'serbian', variants: ['cyr', 'lat'] },
+    ])('when service is $service', ({ service, variants }) => {
+      describe.each(variants)('and variant is %s', variant => {
+        const supportedPageTypes = [
           ARTICLE_PAGE,
           HOME_PAGE,
           TOPIC_PAGE,
           ERROR_PAGE,
         ];
-        const unsupportedUzbekPageTypes = Object.values(PAGE_TYPES).filter(
-          pageType => !supportedUzbekPageTypes.includes(pageType),
+        const unsupportedPageTypes = Object.values(PAGE_TYPES).filter(
+          pageType => !supportedPageTypes.includes(pageType),
         );
 
-        it.each(supportedUzbekPageTypes)(
+        it.each(supportedPageTypes)(
           'should render script link when page type is %s',
           pageType => {
             const { container } = HeaderContainerWithContext({
               renderOptions: {
                 pageType,
-                service: 'uzbek',
+                service,
                 variant,
               },
             });
@@ -174,13 +178,13 @@ describe(`Header`, () => {
           },
         );
 
-        it.each(unsupportedUzbekPageTypes)(
+        it.each(unsupportedPageTypes)(
           'should not render script link when page type is %s',
           pageType => {
             const { container } = HeaderContainerWithContext({
               renderOptions: {
                 pageType,
-                service: 'uzbek',
+                service,
                 variant,
               },
             });
