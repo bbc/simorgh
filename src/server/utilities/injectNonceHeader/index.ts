@@ -12,12 +12,9 @@ interface InjectNonceHeader {
 
 const getToggleDefinitions = (
   toggles: Toggles,
-): Record<string, ToggleDefinition> | null => {
-  if ('_environment' in toggles) {
-    const { _environment, ...toggleDefinitions } = toggles;
-    return toggleDefinitions;
-  }
-  return toggles;
+): Record<string, ToggleDefinition> => {
+  const { _environment, ...toggleDefinitions } = toggles;
+  return toggleDefinitions;
 };
 
 const isNonceEnabledForCountry = (
