@@ -211,7 +211,7 @@ const PageLayoutWrapper = ({
             {
               type: 'text/javascript',
               innerHTML: `(function() { ${fontJs} })();`,
-              nonce: nonce ?? undefined,
+              ...(nonce && { nonce }),
             },
           ]}
         />

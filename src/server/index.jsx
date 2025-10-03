@@ -9,7 +9,6 @@ import helmet from 'helmet';
 import routes from '#app/routes';
 import nodeLogger from '#lib/logger.node';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
-import getUUID from '#app/lib/utilities/getUUID';
 import {
   SERVICE_WORKER_SENDFILE_ERROR,
   MANIFEST_SENDFILE_ERROR,
@@ -41,6 +40,7 @@ import getAssetOrigins from './utilities/getAssetOrigins';
 import extractHeaders from './utilities/extractHeaders';
 import addPlatformToRequestChainHeader from './utilities/addPlatformToRequestChainHeader';
 import serviceConfigs from './utilities/serviceConfigs';
+import injectNonceHeader from './utilities/injectNonceHeader';
 
 const morgan = require('morgan');
 
@@ -190,41 +190,6 @@ const injectReferrerPolicyHeader = (req, res, next) => {
   next();
 };
 
-// Set nonce as req header
-const injectNonceHeader = (
-  service,
-  country,
-  toggles,
-  showAdsBasedOnLocation,
-  res,
-  isLite,
-) => {
-  const nonceToggle = toggles.adsNonce;
-  const adToggle = toggles.ads;
-  if (
-    !nonceToggle.enabled ||
-    !adToggle.enabled ||
-    !showAdsBasedOnLocation ||
-    isLite
-  ) {
-    return null;
-  }
-
-  const countriesForNonce =
-    nonceToggle.value
-      ?.split(',')
-      ?.map(s => s.trim())
-      .filter(Boolean) || [];
-  const nonceEnabledForCountry =
-    countriesForNonce?.length === 0 || countriesForNonce.includes(country);
-  if (!nonceEnabledForCountry) return null;
-
-  const nonce = getUUID();
-  res.set('x-nonce', nonce);
-
-  return nonce;
-};
-
 // Catch all for all routes
 server.get(
   '/*',
@@ -288,14 +253,13 @@ server.get(
         ?.toString()
         .toLowerCase();
 
-      const nonce = injectNonceHeader(
-        service,
-        data.country,
-        toggles,
-        data.showAdsBasedOnLocation,
+      const nonce = injectNonceHeader({
         res,
+        toggles,
+        country: data.country,
+        showAdsBasedOnLocation: data.showAdsBasedOnLocation,
         isLite,
-      );
+      });
       injectCspHeader({ isAmp, service, nonce, res });
 
       data.nonce = nonce;
