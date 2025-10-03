@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-namespace */
 import { LanguagesPageProps } from '../../pages/ws/types';
+import testResponseCodeAndRetry from './helpers/testResponseCodeAndRetry';
 
 interface CustomWindow extends Window {
   __NEXT_DATA__?: {
@@ -9,10 +10,21 @@ interface CustomWindow extends Window {
   };
 }
 
+interface TestResponseCodeAndRetry {
+  url: string;
+  responseCode?: number;
+  type?: string;
+  retriesLeft?: number;
+  allowFallback?: boolean;
+}
+
 declare global {
   namespace Cypress {
     interface Chainable {
       getPageDataFromWindow: () => Chainable<Record<string, unknown>>;
+      testResponseCodeAndRetry: (
+        props: TestResponseCodeAndRetry,
+      ) => Chainable<Record<string, unknown>>;
     }
   }
 }
@@ -27,3 +39,4 @@ const getPageDataFromWindow = () => {
 };
 
 Cypress.Commands.add('getPageDataFromWindow', getPageDataFromWindow);
+Cypress.Commands.add('testResponseCodeAndRetry', testResponseCodeAndRetry);

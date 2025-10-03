@@ -1,9 +1,10 @@
 import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
 import testsForCanonicalOnly from './testsForCanonicalOnly';
 import crossPlatformTests from './tests';
+import testsForAllPages from '../testsForAllPages';
 
 const pageType = 'mostReadPage';
-const tests = [crossPlatformTests, testsForCanonicalOnly];
+const tests = [crossPlatformTests, testsForCanonicalOnly, testsForAllPages];
 
 /**
  * Use a selection of services to ensure Most Read page renders as expected

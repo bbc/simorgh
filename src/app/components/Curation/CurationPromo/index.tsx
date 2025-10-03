@@ -33,6 +33,7 @@ const CurationPromo = ({
   readTime,
   eventTrackingData,
   readTimeVariant,
+  position,
 }: Summary) => {
   const { isAmp, isLite } = use(RequestContext);
   const { translations } = use(ServiceContext);
@@ -99,7 +100,7 @@ const CurationPromo = ({
         )}
       </Promo.Heading>
       {!isLive ? (
-        <Promo.Timestamp className="promo-timestamp">
+        <Promo.Timestamp className="promo-timestamp" showPrefix>
           {lastPublished}
         </Promo.Timestamp>
       ) : null}
@@ -107,6 +108,8 @@ const CurationPromo = ({
       <ReadTime
         readTimeValue={readTime}
         promoId={id}
+        promoType={type}
+        promoPosition={position}
         readTimeVariant={readTimeVariant}
       />
     </Promo>

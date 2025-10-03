@@ -6,12 +6,8 @@
 import topicTagsTest from '../../support/helpers/topicTagsTest';
 import checkA11y from '../../support/helpers/checkA11y';
 
-export const testsThatAlwaysRunForAllPages = ({
-  service,
-  variant,
-  pageType,
-}) => {
-  describe(`testsToAlwaysRunForAllPages to run for ${service} ${pageType}`, () => {
+export default ({ service, variant, pageType }) => {
+  describe(`testForAllPages to run for ${service} ${pageType}`, () => {
     it('should have no detectable a11y violations on page load', () => {
       checkA11y();
     });

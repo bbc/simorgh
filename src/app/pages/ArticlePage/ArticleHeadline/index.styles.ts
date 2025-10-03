@@ -28,11 +28,4 @@ export default {
         paddingBottom: `${pixelsToRem(12)}rem`,
       },
     }),
-  readTimeReducedPadding: ({ spacings, mq }: Theme) =>
-    css({
-      paddingBottom: `${spacings.TRIPLE}rem`,
-      [mq.GROUP_3_MIN_WIDTH]: {
-        paddingBottom: `${pixelsToRem(12)}rem`,
-      },
-    }),
 };

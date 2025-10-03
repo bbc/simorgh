@@ -2,6 +2,7 @@
 /* @jsxFrag React.Fragment */
 import { Global, jsx } from '@emotion/react';
 import React, { use, useEffect, useRef } from 'react';
+import moment from 'moment-timezone';
 import MediaLoader from '#app/components/MediaLoader';
 import {
   PortraitClipMediaBlock,
@@ -9,9 +10,46 @@ import {
 } from '#app/components/MediaLoader/types';
 import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import useViewTracker from '../../hooks/useViewTracker';
 import styles from './index.styles';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { DownArrowIcon, UpArrowIcon } from '../icons';
+
+type ModalTrackingParameters = {
+  eventTrackingData: EventTrackingData;
+  selectedVideo: PortraitClipMediaBlock;
+  selectedVideoIndex: number;
+};
+
+const getEventTrackingData = ({
+  eventTrackingData,
+  selectedVideo,
+  selectedVideoIndex,
+}: ModalTrackingParameters) => {
+  const {
+    id,
+    title,
+    version: { duration },
+  } = selectedVideo.model.video;
+
+  return {
+    componentName: 'portrait-video-modal',
+    alwaysInView: true,
+    groupTracker: {
+      ...eventTrackingData.groupTracker,
+      type: 'portrait-video-modal',
+    },
+    itemTracker: {
+      type: 'portrait-video',
+      text: title,
+      mediaType: 'video',
+      position: selectedVideoIndex + 1,
+      duration: moment.duration(duration).asMilliseconds(),
+      resourceId: id,
+    },
+  };
+};
 
 const getPlayerInstance = () =>
   window?.embeddedMedia?.api?.players()?.bbcMediaPlayer0;
@@ -90,12 +128,14 @@ export interface PortraitVideoModalProps {
   blocks: PortraitClipMediaBlock[];
   onClose: () => void;
   selectedVideoIndex: number;
+  eventTrackingData: EventTrackingData;
 }
 
 const PortraitVideoModal = ({
   blocks,
   onClose,
   selectedVideoIndex,
+  eventTrackingData,
 }: PortraitVideoModalProps) => {
   const {
     translations: {
@@ -107,7 +147,14 @@ const PortraitVideoModal = ({
     },
   } = use(ServiceContext);
 
-  const modalRef = useRef<HTMLDivElement>(null);
+  const viewTracker = useViewTracker(
+    getEventTrackingData({
+      eventTrackingData,
+      selectedVideo: blocks?.[selectedVideoIndex],
+      selectedVideoIndex,
+    }),
+  );
+
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const endOfContentButtonRef = useRef<HTMLButtonElement>(null);
 
@@ -140,7 +187,7 @@ const PortraitVideoModal = ({
       }
     };
 
-    const modal = modalRef.current;
+    const modal = document.getElementById('portrait-video-modal-container');
     const reactRootElement = document.getElementById('root');
 
     if (modal) {
@@ -171,8 +218,9 @@ const PortraitVideoModal = ({
         role="dialog"
         aria-modal="true"
         aria-label={modalLabel}
-        ref={modalRef}
         css={styles.modal}
+        id="portrait-video-modal-container"
+        {...viewTracker}
       >
         <button
           ref={closeButtonRef}
