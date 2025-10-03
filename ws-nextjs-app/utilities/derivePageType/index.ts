@@ -9,15 +9,16 @@ import {
 import {
   isOptimoIdCheck,
   isCpsIdCheck,
-  removeAmp,
+  removeRendererExtension,
 } from '#app/routes/utils/constructPageFetchUrl';
 
 export default function derivePageType(
   pathname: string,
 ): PageTypes | 'Unknown' {
-  const pathWithAmpRemoved = removeAmp(pathname);
-  const sanitisedPathname = new URL(pathWithAmpRemoved, 'http://bbc.com')
-    .pathname;
+  const sanitisedPathname = new URL(
+    removeRendererExtension(pathname),
+    'http://bbc.com',
+  ).pathname;
 
   if (sanitisedPathname.includes('live')) return LIVE_PAGE;
   if (sanitisedPathname.includes('send')) return UGC_PAGE;
