@@ -31,7 +31,7 @@ import {
 import parseRoute from '../parseRoute';
 
 const removeLeadingSlash = (path: string) => path?.replace(/^\/+/g, '');
-const removeAmp = (path: string) => path.split('.')[0];
+const removeRendererExtension = (path: string) => path.split('.')[0];
 export const getArticleId = (path: string) =>
   path.match(/(c[a-zA-Z0-9]{10,}o)/)?.[1];
 const getCpsId = (path: string) => removeLeadingSlash(path);
@@ -140,7 +140,7 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
       getIdFunction = () => null;
       break;
   }
-  return pipe(getUrlPath, removeAmp, getIdFunction);
+  return pipe(getUrlPath, removeRendererExtension, getIdFunction);
 };
 
 export interface UrlConstructParams {
@@ -214,16 +214,16 @@ const constructPageFetchUrl = ({
     switch (pageType) {
       case ARTICLE_PAGE: {
         const { assetId } = parseRoute(pathname);
-        const pathnameNoDotValue = pathname.split('.')[0];
+        const pathnameNoRendererExtension = removeRendererExtension(pathname);
 
-        if (isOptimoIdCheck(pathnameNoDotValue)) {
+        if (isOptimoIdCheck(pathnameNoRendererExtension)) {
           fetchUrl = Url(
             `${host}${port}/api/local/${service}/articles/${assetId}${variant ? `/${variant}` : ''}`,
           );
           break;
         }
 
-        if (isCpsIdCheck(pathnameNoDotValue)) {
+        if (isCpsIdCheck(pathnameNoRendererExtension)) {
           fetchUrl = Url(
             `${host}${port}/api/local/${service}/cpsAssets/${variant ? `${variant}/` : ''}${assetId}`,
           );
