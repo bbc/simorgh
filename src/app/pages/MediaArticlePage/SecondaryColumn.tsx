@@ -7,6 +7,7 @@ import styles from './MediaArticlePage.styles';
 const SecondaryColumn = ({ pageData }: { pageData: Article }) => {
   const latestMediaContent = pageData?.secondaryColumn?.latestMedia;
   if (!latestMediaContent) return null;
+
   return (
     <div css={styles.secondaryColumn}>
       {latestMediaContent && (
