@@ -444,17 +444,3 @@ export const Example = (_, { service, variant }) => {
     />
   );
 };
-
-// export const TestArabic = {
-//   render: () => (
-//     <Component
-//       service={arabic.service}
-//       variant={arabic.variant}
-//       dir={arabic.dir}
-//       locale={arabic.datetimeLocale}
-//       altCalendar={arabic.altCalendar}
-//       timezone={arabic.timezone}
-//     />
-//   ),
-//   // tags: ['!dev'],
-// };
