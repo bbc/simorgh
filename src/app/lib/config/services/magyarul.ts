@@ -40,7 +40,7 @@ export const service: DefaultServiceConfig = {
     isTrustProjectParticipant: true,
     script: latin,
     manifestPath: '/magyarul/manifest.json',
-    swPath: '/magyarul/sw.js',
+    swPath: '/sw.js',
     homePageTitle: 'Főoldal',
     showAdPlaceholder: false,
     showRelatedTopics: true,
