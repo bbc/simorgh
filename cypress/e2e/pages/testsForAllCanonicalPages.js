@@ -1,6 +1,3 @@
-/* eslint-disable no-unused-expressions */
-/* eslint-disable cypress/unsafe-to-chain-command */
-/* eslint-disable import/prefer-default-export */
 import envConfig from '../../support/config/envs';
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
