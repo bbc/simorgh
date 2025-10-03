@@ -108,6 +108,17 @@ const EXAMPLE_ROUTES = [
       service: 'pidgin',
     },
   },
+  {
+    route: '/afrique/institutionelles/2015/07/150714_hissene_habre_explainer',
+    expectedOutput: {
+      assetId: 'institutionelles/2015/07/150714_hissene_habre_explainer',
+      isAmp: false,
+      lang: null,
+      mediaId: null,
+      platform: null,
+      service: 'afrique',
+    },
+  },
 ];
 
 describe('parseRoute', () => {
