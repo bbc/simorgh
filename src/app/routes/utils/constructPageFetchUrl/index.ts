@@ -31,7 +31,7 @@ import {
 import parseRoute from '../parseRoute';
 
 const removeLeadingSlash = (path: string) => path?.replace(/^\/+/g, '');
-const removeAmp = (path: string) => path.split('.')[0];
+export const removeAmp = (path: string) => path.split('.')[0];
 export const getArticleId = (path: string) =>
   path.match(/(c[a-zA-Z0-9]{10,}o)/)?.[1];
 const getCpsId = (path: string) => removeLeadingSlash(path);
