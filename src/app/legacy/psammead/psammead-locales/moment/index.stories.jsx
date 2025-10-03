@@ -12,7 +12,6 @@ import services from '../../../../../../src/server/utilities/serviceConfigs';
 import PromoTimestamp from '../../../components/Promo/timestamp';
 import ArticleTimestamp from '../../../containers/ArticleTimestamp';
 import MostReadTimestamp from '../../../../components/MostRead/Canonical/LastUpdated';
-import StartTime from '../../../../legacy/components/RadioSchedule/StartTime';
 
 import notes from '../README.md';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
@@ -45,21 +44,26 @@ timeFunctions.push({
 timeFunctions.push(
   ...[
     { heading: '' },
-    { heading: 'Article Timestamp' },
     {
-      subheading: `First and last published on the same day`,
+      subheading: `Article Timestamp: First and last published on the same day`,
     },
     ({ service, variant }) => {
       const date = new Date(fixedTimestamp);
+      date.setDate(date.getDate() - 1);
+      const firstPublished = new Date(date);
+      const lastPublished = new Date(firstPublished);
 
       return (
         <WithService service={service} variant={variant}>
-          <ArticleTimestamp firstPublished={date} lastPublished={date} />
+          <ArticleTimestamp
+            firstPublished={firstPublished}
+            lastPublished={lastPublished}
+          />
         </WithService>
       );
     },
     {
-      subheading: `First and last published at same time`,
+      subheading: `Article Timestamp: First and last published at same time`,
     },
     ({ service, variant }) => {
       const date = new Date(fixedTimestamp);
@@ -82,20 +86,24 @@ timeFunctions.push(
       );
     },
     {
-      subheading: `First and last published on different days`,
+      subheading: `Article Timestamp: First and last published on different days`,
     },
     ({ service, variant }) => {
       const date = new Date(fixedTimestamp);
       const dayBefore = new Date(date).setDate(date.getDate() - 1);
+      const lastPublished = new Date(date);
 
       return (
         <WithService service={service} variant={variant}>
-          <ArticleTimestamp firstPublished={dayBefore} lastPublished={date} />
+          <ArticleTimestamp
+            firstPublished={dayBefore}
+            lastPublished={lastPublished}
+          />
         </WithService>
       );
     },
     {
-      subheading: `First and last published at different times on the same day, last updated 1 minute ago`,
+      subheading: `Article Timestamp: First and last published at different times on the same day, last updated 1 minute ago`,
     },
     ({ service, variant }) => {
       const date = new Date(fixedTimestamp);
@@ -124,7 +132,7 @@ timeFunctions.push(
       );
     },
     {
-      subheading: `First and last published at different times on the same day, last updated 10 minutes ago`,
+      subheading: `Article Timestamp: First and last published at different times on the same day, last updated 10 minutes ago`,
     },
     ({ service, variant }) => {
       const date = new Date(fixedTimestamp);
@@ -153,7 +161,7 @@ timeFunctions.push(
       );
     },
     {
-      subheading: `First and last published at different times on the same day, last updated 1 hour ago`,
+      subheading: `Article Timestamp: First and last published at different times on the same day, last updated 1 hour ago`,
     },
     ({ service, variant }) => {
       const date = new Date(fixedTimestamp);
@@ -246,10 +254,6 @@ timeFunctions.push(
 );
 
 timeFunctions.push({ heading: '' });
-timeFunctions.push({
-  heading:
-    '------------------------------------------------------------------------------------------------------------------------',
-});
 timeFunctions.push({ heading: '' });
 timeFunctions.push({ heading: 'Days of the Week' });
 
@@ -340,7 +344,7 @@ const Paragraph = styled.p`
 const issueHref = (localeName) =>
   `https://github.com/bbc/simorgh/issues/new?labels=bug&title=Moment+translation+correction+for+${localeName}`;
 
-const Component = ({ service, variant, dir, locale, script }) => {
+const Component = ({ service, variant, dir, locale }) => {
   return (
     <>
       <Table>
@@ -364,7 +368,6 @@ const Component = ({ service, variant, dir, locale, script }) => {
                       timezone: ws.timezone,
                       articleTimestampPrefix: ws.articleTimestampPrefix,
                       articleTimestampSuffix: ws.articleTimestampSuffix,
-                      script,
                     })}
                   </td>
                   <td dir={dir}>
@@ -372,7 +375,6 @@ const Component = ({ service, variant, dir, locale, script }) => {
                       service,
                       variant,
                       locale,
-                      script,
                     })}
                   </td>
                 </tr>
@@ -427,7 +429,6 @@ export const Example = (_, { service, variant }) => {
     timezone,
     articleTimestampPrefix,
     articleTimestampSuffix,
-    script,
   } = use(ServiceContext);
 
   moment.now = originalNow;
@@ -436,7 +437,6 @@ export const Example = (_, { service, variant }) => {
     <Component
       service={service}
       variant={variant}
-      script={script}
       dir={dir}
       locale={datetimeLocale}
       altCalendar={altCalendar}
