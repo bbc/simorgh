@@ -232,7 +232,7 @@ timeFunctions.push(
             prefix={articleTimestampPrefix}
             script={script}
             service={service}
-            timestamp={fixedTimestamp}
+            timestamp={new Date(fixedTimestamp)}
             locale={locale}
             timezone={timezone}
           />
@@ -383,7 +383,6 @@ const Component = ({ service, variant, dir, locale }) => {
 
             const { heading, subheading } = timeFunction;
 
-            // if (heading || subheading) {
             return (
               <tr key={index}>
                 <td colSpan={2}>
@@ -398,7 +397,6 @@ const Component = ({ service, variant, dir, locale }) => {
                 </td>
               </tr>
             );
-            // }
           })}
         </tbody>
       </Table>
