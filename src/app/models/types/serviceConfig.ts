@@ -165,6 +165,7 @@ export interface Recommendations {
     text: string;
     endTextVisuallyHidden: string;
   };
+  hasStoryRecommendations?: boolean;
 }
 
 export interface FooterLink {
