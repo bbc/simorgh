@@ -246,7 +246,7 @@ timeFunctions.push(
     ({ service, variant }) => {
       return (
         <WithService service={service} variant={variant}>
-          <PromoTimestamp>{fixedTimestamp}</PromoTimestamp>
+          <PromoTimestamp>{new Date(fixedTimestamp)}</PromoTimestamp>
         </WithService>
       );
     },
