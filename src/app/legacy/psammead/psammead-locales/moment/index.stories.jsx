@@ -423,6 +423,8 @@ const issueHref = (localeName) =>
   `https://github.com/bbc/simorgh/issues/new?labels=bug&title=Moment+translation+correction+for+${localeName}`;
 
 const Component = ({ service, variant, dir, locale }) => {
+  moment.now = originalNow;
+
   return (
     <>
       <Table>
@@ -506,8 +508,6 @@ export const Example = (_, { service, variant }) => {
     articleTimestampPrefix,
     articleTimestampSuffix,
   } = use(ServiceContext);
-
-  moment.now = originalNow;
 
   return (
     <Component
