@@ -1,7 +1,7 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
 import { Global, jsx } from '@emotion/react';
-import React, { use, useEffect, useRef } from 'react';
+import React, { use, useCallback, useEffect, useRef, useState } from 'react';
 import moment from 'moment-timezone';
 import MediaLoader from '#app/components/MediaLoader';
 import {
@@ -72,6 +72,14 @@ export const playlistLoadedCallback = (
       item.model.video.id === currentId ||
       item.model.video.version.id === currentId,
   );
+
+  console.log('$$$$$$$$$$$$$$$$$$%%%%%%%%%%%%%%%%%%');
+  console.log(`PLAYLIST\n ${Object.keys(e.playlist)}`);
+  console.log(`PLAYLIST ITEMS\n ${Object.keys(e.playlist?.items[0])}`);
+  console.log(`versionID\n ${e.playlist?.items[0].versionID}`);
+  console.log(`vpid\n ${e.playlist?.items[0].vpid}`);
+  console.log(`currentIndex\n ${JSON.stringify(blocks[currentIndex])}`);
+  console.log('$$$$$$$$$$$$$$$$$$%%%%%%%%%%%%%%%%%%');
 
   const prevVideoButton = document.getElementById('previous-video-button');
   const nextVideoButton = document.getElementById('next-video-button');
@@ -144,6 +152,65 @@ const statsNavigationCallback = async (
       selectedVideo: blocks?.[newIndex],
       selectedVideoIndex: newIndex,
     });
+
+    console.log('$$$$$$$$$$$$$$$$$$%%%%%%%%%%%%%%%%%%');
+    console.log(`NEW DATA\n ${JSON.stringify(blocks?.[newIndex])}`);
+    console.log('$$$$$$$$$$$$$$$$$$%%%%%%%%%%%%%%%%%%');
+
+    await swipeTracker(newEventTrackingData);
+  }
+};
+
+const playbackEndedCallback = async (
+  e,
+  blocks,
+  eventTrackingData,
+  swipeTracker,
+) => {
+  //   https://html.spec.whatwg.org/multipage/media.html#ended-playback
+  //   https://confluence.dev.bbc.co.uk/spaces/mp/pages/73323849/Common+Problems+and+Questions+embedding+SMP#CommonProblemsandQuestionsembeddingSMP-Didyouknowthere'sapauseeventjustbeforetheend%3F
+  //   https://confluence.dev.bbc.co.uk/spaces/mp/pages/73309931/SMP+Events
+  //   SMP Event: pause
+  //   IF autoplay: true, IN SMP CONFIG AND VIDEO HAS ENDED
+  //   THEN ASSUME THE NEXT VIDEO WILL BE PLAYED
+  //   AND FIRE OFF VIEW EVENT
+  //   NOTE
+  //   CONSIDER FIRING THE BEACON ON playlistLoaded EVENT IF THE VIDEO WASN'T TRIGGERED VIA SWIPING
+  const player = getPlayerInstance();
+  const { ended } = e;
+  const { autoplay } = player.settings();
+
+  // console.log('$$$$$$$$$$$$$$$$$$%%%%%%%%%%%%%%%%%%');
+  // console.log(`THE VIDEO HAS PLAYBACK HAS ENDED --- ENDED: ${ended}`);
+  // console.log(
+  //   `VIDEO DETAILS --- PLAYLIST: ${JSON.stringify(player.playlist().items[0].versionID)}`,
+  // );
+  // console.log(
+  //   `VIDEO DETAILS --- PLAYLIST: ${JSON.stringify(player.playlist().items[0].vpid)}`,
+  // );
+  // console.log('$$$$$$$$$$$$$$$$$$%%%%%%%%%%%%%%%%%%');
+
+  if (ended && autoplay) {
+    const playlist = player.playlist();
+    const [currentItem] = playlist.items || [];
+    const currentId = currentItem?.vpid || currentItem?.versionID;
+    const currentIndex = blocks?.findIndex(
+      item =>
+        item.model.video.id === currentId ||
+        item.model.video.version.id === currentId,
+    );
+
+    const newIndex = currentIndex + 1;
+
+    const newEventTrackingData = getEventTrackingData({
+      eventTrackingData,
+      selectedVideo: blocks?.[newIndex],
+      selectedVideoIndex: newIndex,
+    });
+
+    console.log('$$$$$$$$$$$$$$$$$$%%%%%%%%%%%%%%%%%%');
+    console.log(`NEW DATA\n ${JSON.stringify(blocks?.[newIndex])}`);
+    console.log('$$$$$$$$$$$$$$$$$$%%%%%%%%%%%%%%%%%%');
 
     await swipeTracker(newEventTrackingData);
   }
@@ -311,6 +378,8 @@ const PortraitVideoModal = ({
                 eventTrackingData,
                 swipeTracker,
               ),
+            pause: e =>
+              playbackEndedCallback(e, blocks, eventTrackingData, swipeTracker),
           }}
         />
         <button
