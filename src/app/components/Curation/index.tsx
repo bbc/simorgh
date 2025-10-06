@@ -176,6 +176,7 @@ export default ({
             title={title}
             blocks={portraitVideo.blocks}
             eventTrackingData={eventTrackingData}
+            timeOfDayVariant={timeOfDayVariant ?? undefined}
           />
         );
       }
@@ -245,7 +246,7 @@ export default ({
                 headingLevel={3}
                 isFirstCuration={isFirstCuration}
                 eventTrackingData={eventTrackingData}
-                timeOfDayVariant={timeOfDayVariant}
+                timeOfDayVariant={timeOfDayVariant ?? undefined}
               />
             </div>
           </section>
@@ -256,7 +257,7 @@ export default ({
               headingLevel={2} // if there is only one curation, all promos should be h2, and no subheading
               isFirstCuration={isFirstCuration}
               eventTrackingData={eventTrackingData}
-              timeOfDayVariant={timeOfDayVariant}
+              timeOfDayVariant={timeOfDayVariant ?? undefined}
             />
           </div>
         );

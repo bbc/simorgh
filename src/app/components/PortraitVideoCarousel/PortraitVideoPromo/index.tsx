@@ -25,6 +25,7 @@ type PortraitVideoPromoProps = {
   block: PortraitClipMediaBlock;
   eventTrackingData: EventTrackingData;
   blockPosition?: number;
+  timeOfDayVariant?: string;
   onClick?: () => void;
 };
 
@@ -33,6 +34,7 @@ export default ({
   blockPosition = 0,
   eventTrackingData,
   onClick,
+  timeOfDayVariant,
 }: PortraitVideoPromoProps) => {
   const { mq } = useTheme();
   const {
@@ -88,6 +90,9 @@ export default ({
 
   const eventTrackingDataExtended = {
     ...eventTrackingData,
+    sendOptimizelyEvents: true,
+    experimentName: 'newswb_ws_tod_homepage',
+    experimentVariant: timeOfDayVariant,
     viewThreshold: 1,
     itemTracker: {
       type: 'portrait-video-promo',
