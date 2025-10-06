@@ -1,4 +1,5 @@
 /* eslint-disable import/no-relative-packages */
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import runTestsForPage from '../../support/helpers/runTestsForPage';
 import { testsThatAlwaysRunForAllPages as testsForAllPages } from '../testsForAllPages';
 import { testsThatFollowSmokeTestConfigForAllCanonicalPages as testsForAllCanonicalPages } from '../testsForAllCanonicalPages';
@@ -254,7 +255,7 @@ const liteTestSuites = canonicalTestSuites
   });
 
 runTestsForPage({
-  pageType: 'article',
+  pageType: ARTICLE_PAGE,
   testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],
   deleteServiceWorker: true,
 });

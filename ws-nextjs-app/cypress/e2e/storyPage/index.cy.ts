@@ -1,11 +1,12 @@
-import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
-import testsForAllPages from '../testsForAllPages';
+import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import runTestsForPage from '../../support/helpers/runTestsForPage';
+import { testsThatAlwaysRunForAllPages as testsForAllPages } from '../testsForAllPages';
 import { testsThatFollowSmokeTestConfigForAllCanonicalPages as testsForAllCanonicalPages } from '../testsForAllCanonicalPages';
 import { testsThatFollowSmokeTestConfigForAllAMPPages as testsForAllAMPPages } from '../testsForAllAMPPages';
 import canonicalAndAmpArticleTests from './tests';
 import ampArticleTests from './testsForAMPOnly';
 import canonicalArticleTests from './testsForCanonicalOnly';
-import liteTests from '../articles/testsForLiteOnly';
+// import liteTests from '../articlePage/testsForLiteOnly';
 
 const canonicalTests = [
   testsForAllPages,
@@ -21,13 +22,11 @@ const ampTests = [
   ampArticleTests,
 ];
 
-const pageType = 'storyPage';
-
 const canonicalSmokeTestSuites = [
   {
     path: '/hausa/labarai-54292969',
     service: 'hausa',
-    runforEnv: 'live',
+    runforEnv: ['live'],
     tests: canonicalTests,
   },
   {
@@ -39,13 +38,13 @@ const canonicalSmokeTestSuites = [
   {
     path: '/mundo/noticias-54274735',
     service: 'mundo',
-    runforEnv: 'live',
+    runforEnv: ['live'],
     tests: canonicalTests,
   },
   {
     path: '/mundo/noticias-66171332',
     service: 'mundo',
-    runforEnv: 'live',
+    runforEnv: ['live'],
     tests: canonicalTests,
   },
   {
@@ -57,7 +56,7 @@ const canonicalSmokeTestSuites = [
   {
     path: '/mundo/noticias-internacional-51266689',
     service: 'mundo',
-    runforEnv: 'local',
+    runforEnv: ['local'],
     tests: canonicalTests,
   },
   {
@@ -75,13 +74,13 @@ const canonicalSmokeTestSuites = [
   {
     path: '/thai/international-53381389',
     service: 'thai',
-    runforEnv: 'live',
+    runforEnv: ['live'],
     tests: canonicalTests,
   },
   {
     path: '/uzbek/uzbekistan-53263099',
     service: 'uzbek',
-    runforEnv: 'local',
+    runforEnv: ['local'],
     tests: canonicalTests,
   },
 ];
@@ -90,7 +89,7 @@ const canonicalNonSmokeTestSuites = [
   {
     path: '/gahuza/amakuru-52821373',
     service: 'gahuza',
-    runforEnv: 'live',
+    runforEnv: ['live'],
     tests: canonicalTests,
   },
   {
@@ -102,7 +101,7 @@ const canonicalNonSmokeTestSuites = [
   {
     path: '/igbo/afirika-52816709',
     service: 'igbo',
-    runforEnv: 'live',
+    runforEnv: ['live'],
     tests: canonicalTests,
   },
   {
@@ -114,55 +113,55 @@ const canonicalNonSmokeTestSuites = [
   {
     path: '/indonesia/dunia-53413801',
     service: 'indonesia',
-    runforEnv: 'live',
+    runforEnv: ['live'],
     tests: canonicalTests,
   },
   {
     path: '/kyrgyz/kyrgyzstan-52891593',
     service: 'kyrgyz',
-    runforEnv: 'live',
+    runforEnv: ['live'],
     tests: canonicalTests,
   },
   {
     path: '/kyrgyz/23292889',
     service: 'kyrgyz',
-    runforEnv: 'test',
+    runforEnv: ['test'],
     tests: canonicalTests,
   },
   {
     path: '/pashto/world-52873295',
     service: 'pashto',
-    runforEnv: 'live',
+    runforEnv: ['live'],
     tests: canonicalTests,
   },
   {
     path: '/pashto/23289748',
     service: 'pashto',
-    runforEnv: 'test',
+    runforEnv: ['test'],
     tests: canonicalTests,
   },
   {
     path: '/sinhala/world-51723376',
     service: 'sinhala',
-    runforEnv: 'live',
+    runforEnv: ['live'],
     tests: canonicalTests,
   },
   {
     path: '/sinhala/23225618',
     service: 'sinhala',
-    runforEnv: 'test',
+    runforEnv: ['test'],
     tests: canonicalTests,
   },
   {
     path: '/yoruba/afrika-58539527',
     service: 'yoruba',
-    runforEnv: 'live',
+    runforEnv: ['live'],
     tests: canonicalTests,
   },
   {
     path: '/yoruba/afrika-23252769',
     service: 'yoruba',
-    runforEnv: 'test',
+    runforEnv: ['test'],
     tests: canonicalTests,
   },
 ];
@@ -171,27 +170,27 @@ const ampOnlyNonSmokeTestSuites = [
   {
     path: '/news/uk-56342465',
     service: 'news',
-    runforEnv: 'live',
+    runforEnv: ['live'],
   },
   {
     path: '/news/technology-56294493',
     service: 'news',
-    runforEnv: 'live',
+    runforEnv: ['live'],
   },
   {
     path: '/news/23393110',
     service: 'news',
-    runforEnv: 'test',
+    runforEnv: ['test'],
   },
   {
     path: '/newsround/56331357',
     service: 'newsround',
-    runforEnv: 'live',
+    runforEnv: ['live'],
   },
   {
     path: '/newsround/23212028',
     service: 'newsround',
-    runforEnv: 'test',
+    runforEnv: ['test'],
   },
 ];
 
@@ -210,17 +209,25 @@ const ampTestSuites = [
   };
 });
 
-const liteTestSuites = canonicalTestSuites
-  .filter(({ service }) => !['news', 'newsround'].includes(service))
-  .map(testSuite => {
-    return {
-      ...testSuite,
-      path: `${testSuite.path}.lite`,
-      tests: [liteTests],
-    };
-  });
+// const liteTestSuites = canonicalTestSuites
+//   .filter(({ service }) => !['news', 'newsround'].includes(service))
+//   .map(testSuite => {
+//     return {
+//       ...testSuite,
+//       path: `${testSuite.path}.lite`,
+//       tests: [liteTests],
+//     };
+//   });
 
 runTestsForPage({
-  pageType,
-  testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],
+  pageType: STORY_PAGE,
+  headers: {
+    'page-type': 'tc2',
+    'BBC-Adverts': 'true',
+  },
+  testSuites: [
+    ...canonicalTestSuites,
+    ...ampTestSuites,
+    // ...liteTestSuites
+  ],
 });

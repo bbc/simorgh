@@ -1,6 +1,6 @@
 import path from 'ramda/src/path';
-import { crossPlatform as mostReadAssertions } from '../mostReadPage/mostReadAssertions';
-import getAppEnv from '../../../support/helpers/getAppEnv';
+import { ServiceParametersType } from '../../types';
+import getAppEnv from '../../support/helpers/getAppEnv';
 
 const twoYearsAgo = new Date().getFullYear() - 2;
 
@@ -9,17 +9,14 @@ const isArticleLessThanTwoYearsOld = () => {
     .get(`main time`)
     .invoke('attr', 'datetime')
     .then(fullDate => {
+      if (!fullDate) return false;
+
       const isNewArticle = Number(fullDate.split('-')[0]) > Number(twoYearsAgo);
       return isNewArticle && getAppEnv() === 'live';
     });
 };
-export default ({ service, pageType, isAmp, variant = 'default' }) => {
+export default ({ service, pageType, isAmp }: ServiceParametersType) => {
   describe(`Running tests for ${service} ${pageType} `, () => {
-    /**
-     * Most Read Component
-     */
-    mostReadAssertions({ service, variant });
-
     describe(`Recommendations on ${service} ${pageType}`, () => {
       it('Recommendations have images', () => {
         isArticleLessThanTwoYearsOld().then(runRecommendationTests => {
