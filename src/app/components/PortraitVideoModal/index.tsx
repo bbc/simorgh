@@ -5,6 +5,9 @@ import React, { use, useEffect, useRef } from 'react';
 import moment from 'moment-timezone';
 import MediaLoader from '#app/components/MediaLoader';
 import {
+  Player,
+  Playlist,
+  PlaylistItem,
   PortraitClipMediaBlock,
   SMPEvent,
 } from '#app/components/MediaLoader/types';
@@ -55,6 +58,28 @@ const getEventTrackingData = ({
 const getPlayerInstance = () =>
   window?.embeddedMedia?.api?.players()?.bbcMediaPlayer0;
 
+const getCurrentIndex = ({
+  e,
+  blocks,
+  player,
+}: {
+  e?: SMPEvent;
+  blocks: PortraitClipMediaBlock[];
+  player?: Player;
+}): number => {
+  const playlist = (e?.playlist || player?.playlist() || {}) as Playlist;
+  const [currentItem] = (playlist?.items || []) as PlaylistItem[];
+  const currentId = currentItem?.vpid || currentItem?.versionID;
+
+  const currentIndex = blocks?.findIndex(
+    item =>
+      item.model.video.id === currentId ||
+      item.model.video.version.id === currentId,
+  );
+
+  return currentIndex;
+};
+
 export const playlistLoadedCallback = (
   e: SMPEvent,
   blocks: PortraitClipMediaBlock[],
@@ -63,15 +88,7 @@ export const playlistLoadedCallback = (
 
   if (!player) return;
 
-  const { playlist } = e || {};
-  const [currentItem] = playlist?.items || [];
-  const currentId = currentItem?.vpid || currentItem?.versionID;
-
-  const currentIndex = blocks?.findIndex(
-    item =>
-      item.model.video.id === currentId ||
-      item.model.video.version.id === currentId,
-  );
+  const currentIndex = getCurrentIndex({ e, blocks });
 
   const prevVideoButton = document.getElementById('previous-video-button');
   const nextVideoButton = document.getElementById('next-video-button');
@@ -120,22 +137,18 @@ const pluginLoadedCallback = () => {
 };
 
 const statsNavigationCallback = async (
-  e,
-  blocks,
-  eventTrackingData,
-  swipeTracker,
+  e: SMPEvent,
+  blocks: PortraitClipMediaBlock[],
+  eventTrackingData: EventTrackingData,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  swipeTracker: any,
 ) => {
-  const { direction, method } = e;
+  const { direction, method } = e || {};
 
-  if (['swipe', 'wheel'].includes(method)) {
-    const { playlist } = e || {};
-    const [currentItem] = playlist?.items || [];
-    const currentId = currentItem?.vpid || currentItem?.versionID;
-    const currentIndex = blocks?.findIndex(
-      item =>
-        item.model.video.id === currentId ||
-        item.model.video.version.id === currentId,
-    );
+  const isSupportedNavigation = method && ['swipe', 'wheel'].includes(method);
+
+  if (isSupportedNavigation) {
+    const currentIndex = getCurrentIndex({ e, blocks });
 
     const newIndex = direction === 'next' ? currentIndex + 1 : currentIndex - 1;
 
@@ -150,24 +163,18 @@ const statsNavigationCallback = async (
 };
 
 const playbackEndedCallback = async (
-  e,
-  blocks,
-  eventTrackingData,
-  swipeTracker,
+  e: SMPEvent,
+  blocks: PortraitClipMediaBlock[],
+  eventTrackingData: EventTrackingData,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  swipeTracker: any,
 ) => {
   const player = getPlayerInstance();
   const { ended } = e;
   const { autoplay } = player.settings();
 
   if (ended && autoplay) {
-    const playlist = player.playlist();
-    const [currentItem] = playlist.items || [];
-    const currentId = currentItem?.vpid || currentItem?.versionID;
-    const currentIndex = blocks?.findIndex(
-      item =>
-        item.model.video.id === currentId ||
-        item.model.video.version.id === currentId,
-    );
+    const currentIndex = getCurrentIndex({ blocks, player });
 
     const newIndex = currentIndex + 1;
 
