@@ -34,8 +34,7 @@ const isNonceEnabledForCountry = (
   return allowedCountries.includes(country.toLowerCase());
 };
 
-const injectNonceHeader = ({
-  res,
+const generateNonceValue = ({
   toggles,
   country,
   showAdsBasedOnLocation,
@@ -57,9 +56,7 @@ const injectNonceHeader = ({
   }
 
   const nonce = getUUID();
-  res.set('x-nonce', nonce);
-
   return nonce;
 };
 
-export default injectNonceHeader;
+export default generateNonceValue;

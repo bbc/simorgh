@@ -40,7 +40,7 @@ import getAssetOrigins from './utilities/getAssetOrigins';
 import extractHeaders from './utilities/extractHeaders';
 import addPlatformToRequestChainHeader from './utilities/addPlatformToRequestChainHeader';
 import serviceConfigs from './utilities/serviceConfigs';
-import injectNonceHeader from './utilities/injectNonceHeader';
+import generateNonceValue from '../app/utilities/generateNonceValue';
 
 const morgan = require('morgan');
 
@@ -188,6 +188,28 @@ const injectResourceHintsHeader = (req, res, next) => {
 const injectReferrerPolicyHeader = (req, res, next) => {
   res.set('Referrer-Policy', 'no-referrer-when-downgrade');
   next();
+};
+
+const injectNonceHeader = ({
+  toggles,
+  country,
+  showAdsBasedOnLocation,
+  isLite,
+  res,
+}) => {
+  const nonce = generateNonceValue({
+    toggles,
+    country,
+    showAdsBasedOnLocation,
+    isLite,
+  });
+
+  if (!nonce) {
+    return null;
+  }
+
+  res.set('x-nonce', nonce);
+  return nonce;
 };
 
 // Catch all for all routes
