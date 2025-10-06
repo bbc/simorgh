@@ -14,7 +14,7 @@ export type SMPEvent = {
     items: PlaylistItem[];
   };
   direction?: string;
-  method?: 'swipe | wheel';
+  method?: 'swipe' | 'wheel';
   ended?: boolean;
 };
 

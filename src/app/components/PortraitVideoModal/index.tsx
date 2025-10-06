@@ -131,12 +131,7 @@ export const playlistLoadedCallback = (
   }
 };
 
-const pluginLoadedCallback = () => {
-  const player = getPlayerInstance();
-  player.dispatchEvent('fullScreenPlugin.launchFullscreen');
-};
-
-const statsNavigationCallback = async (
+export const statsNavigationCallback = async (
   e: SMPEvent,
   blocks: PortraitClipMediaBlock[],
   eventTrackingData: EventTrackingData,
@@ -162,7 +157,7 @@ const statsNavigationCallback = async (
   }
 };
 
-const playbackEndedCallback = async (
+export const playbackEndedCallback = async (
   e: SMPEvent,
   blocks: PortraitClipMediaBlock[],
   eventTrackingData: EventTrackingData,
@@ -186,6 +181,11 @@ const playbackEndedCallback = async (
 
     await swipeTracker(newEventTrackingData);
   }
+};
+
+const pluginLoadedCallback = () => {
+  const player = getPlayerInstance();
+  player.dispatchEvent('fullScreenPlugin.launchFullscreen');
 };
 
 const handlePrevNextVideo = (direction: 'previous' | 'next') => {
