@@ -390,6 +390,10 @@ const preview: Preview = {
             title: 'kyrgyz',
           },
           {
+            value: { service: 'magyarul', variant: 'default' },
+            title: 'magyarul',
+          },
+          {
             value: { service: 'marathi', variant: 'default' },
             title: 'marathi',
           },
