@@ -69,7 +69,7 @@ export default ({
   portraitVideo,
   renderVisuallyHiddenH2Title = false,
   curationId,
-  readTimeVariant,
+  timeOfDayVariant,
   mediaCollection,
 }: Curation) => {
   const componentName = getComponentName({
@@ -245,7 +245,7 @@ export default ({
                 headingLevel={3}
                 isFirstCuration={isFirstCuration}
                 eventTrackingData={eventTrackingData}
-                readTimeVariant={readTimeVariant}
+                timeOfDayVariant={timeOfDayVariant}
               />
             </div>
           </section>
@@ -256,7 +256,7 @@ export default ({
               headingLevel={2} // if there is only one curation, all promos should be h2, and no subheading
               isFirstCuration={isFirstCuration}
               eventTrackingData={eventTrackingData}
-              readTimeVariant={readTimeVariant}
+              timeOfDayVariant={timeOfDayVariant}
             />
           </div>
         );

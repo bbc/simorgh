@@ -58,13 +58,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
   } = pageData;
   let { curations } = pageData;
 
-  // EXPERIMENT: Homepage Read Time
-  const readTimeExperimentName = 'newswb_ws_homepage_read_time';
-  const readTimeVariant = useOptimizelyVariation({
-    experimentName: readTimeExperimentName,
-    experimentType: ExperimentType.CLIENT_SIDE,
-  });
-
   // EXPERIMENT: Homepage Time of Day Adaptive Curations
   const timeOfDayExperimentName = 'newswb_ws_tod_homepage';
   const timeOfDayVariant = useOptimizelyVariation({
@@ -152,7 +145,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       }
                       renderVisuallyHiddenH2Title={position === 0}
                       curationId={curationId}
-                      readTimeVariant={readTimeVariant}
+                      timeOfDayVariant={timeOfDayVariant}
                       {...curationProps}
                     />
                     {index === indexOfFirstNonBanner && <MPU />}
@@ -163,7 +156,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
           </div>
         </div>
       </main>
-      {readTimeVariant && <OptimizelyPageMetrics trackPageView />}
+      {timeOfDayVariant && <OptimizelyPageMetrics trackPageView />}
     </>
   );
 };
