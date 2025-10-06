@@ -303,7 +303,7 @@ export const service: DefaultServiceConfig = {
         submissionInfoSignedOutMessage:
           'Érdemes lehet feljegyeznie ezeket a részleteket, hogy később hivatkozhasson rájuk.',
         retentionPeriodDays:
-          'Az ön által beküldött adatokat {{days}}-ig tartjuk meg - ha nem használjuk fel, kitöröljük őket.',
+          'Az ön által beküldött adatokat {{days}} napig tartjuk meg - ha nem használjuk fel, kitöröljük őket.',
         privacyInfoHtml:
           'Ne aggódjon, megvédjük adatait - olvassa el a{{privacyInfoLink}}, ha további információra van szüksége.',
         emailToHtml:
