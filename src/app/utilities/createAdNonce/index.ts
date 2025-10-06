@@ -1,9 +1,7 @@
-import { Response } from 'express';
 import getUUID from '#app/lib/utilities/getUUID';
 import { Toggles, ToggleDefinition } from '#app/models/types/global';
 
 interface InjectNonceHeader {
-  res: Response;
   toggles: Toggles;
   country: string;
   showAdsBasedOnLocation: boolean;
@@ -11,7 +9,7 @@ interface InjectNonceHeader {
 }
 
 const getToggleDefinitions = (
-  toggles: Toggles,
+  toggles: Toggles = {},
 ): Record<string, ToggleDefinition> => {
   const { _environment, ...toggleDefinitions } = toggles;
   return toggleDefinitions;
@@ -34,16 +32,16 @@ const isNonceEnabledForCountry = (
   return allowedCountries.includes(country.toLowerCase());
 };
 
-const generateNonceValue = ({
+export default ({
   toggles,
   country,
   showAdsBasedOnLocation,
   isLite,
 }: InjectNonceHeader) => {
-  const toggleDefinitions = getToggleDefinitions(toggles) || {};
+  const toggleDefinitions = getToggleDefinitions(toggles);
   const { enabled: isNonceToggleEnabled, value: nonceCountries = '' } =
-    toggleDefinitions.adsNonce;
-  const { enabled: isAdsToggleEnabled } = toggleDefinitions.ads;
+    toggleDefinitions.adsNonce || {};
+  const { enabled: isAdsToggleEnabled } = toggleDefinitions.ads || {};
 
   if (
     isLite ||
@@ -58,5 +56,3 @@ const generateNonceValue = ({
   const nonce = getUUID();
   return nonce;
 };
-
-export default generateNonceValue;

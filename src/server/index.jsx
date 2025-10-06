@@ -40,7 +40,7 @@ import getAssetOrigins from './utilities/getAssetOrigins';
 import extractHeaders from './utilities/extractHeaders';
 import addPlatformToRequestChainHeader from './utilities/addPlatformToRequestChainHeader';
 import serviceConfigs from './utilities/serviceConfigs';
-import generateNonceValue from '../app/utilities/generateNonceValue';
+import createAdNonce from '../app/utilities/createAdNonce';
 
 const morgan = require('morgan');
 
@@ -197,7 +197,7 @@ const injectNonceHeader = ({
   isLite,
   res,
 }) => {
-  const nonce = generateNonceValue({
+  const nonce = createAdNonce({
     toggles,
     country,
     showAdsBasedOnLocation,
