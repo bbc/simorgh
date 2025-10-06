@@ -43,7 +43,7 @@ export const localisedMoment = ({ locale, timestamp }) => {
 };
 
 export const formatUnixTimestamp = ({
-  format = 'LL, LT z',
+  format,
   isRelative,
   locale,
   timestamp,
@@ -57,5 +57,5 @@ export const formatUnixTimestamp = ({
     return momentObj.fromNow();
   }
 
-  return momentObj.format(format);
+  return momentObj.format(format || 'LL, LT z');
 };
