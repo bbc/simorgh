@@ -63,7 +63,24 @@ timeFunctions.push(
       );
     },
     {
-      subheading: `Article Timestamp: First and last published at same time`,
+      subheading: `Article Timestamp: First and last published on different days`,
+    },
+    ({ service, variant }) => {
+      const date = new Date(fixedTimestamp);
+      const dayBefore = new Date(date).setDate(date.getDate() - 1);
+      const lastPublished = new Date(date);
+
+      return (
+        <WithService service={service} variant={variant}>
+          <ArticleTimestamp
+            firstPublished={dayBefore}
+            lastPublished={lastPublished}
+          />
+        </WithService>
+      );
+    },
+    {
+      subheading: `Article Timestamp: First and last published at same time, within the last 10 hours`,
     },
     ({ service, variant }) => {
       const date = new Date(fixedTimestamp);
@@ -86,24 +103,7 @@ timeFunctions.push(
       );
     },
     {
-      subheading: `Article Timestamp: First and last published on different days`,
-    },
-    ({ service, variant }) => {
-      const date = new Date(fixedTimestamp);
-      const dayBefore = new Date(date).setDate(date.getDate() - 1);
-      const lastPublished = new Date(date);
-
-      return (
-        <WithService service={service} variant={variant}>
-          <ArticleTimestamp
-            firstPublished={dayBefore}
-            lastPublished={lastPublished}
-          />
-        </WithService>
-      );
-    },
-    {
-      subheading: `Article Timestamp: First and last published at different times on the same day, last updated 1 minute ago`,
+      subheading: `Article Timestamp: First and last published at different times within the last 10 hours, last updated 1 minute ago`,
     },
     ({ service, variant }) => {
       const date = new Date(fixedTimestamp);
@@ -132,7 +132,7 @@ timeFunctions.push(
       );
     },
     {
-      subheading: `Article Timestamp: First and last published at different times on the same day, last updated 10 minutes ago`,
+      subheading: `Article Timestamp: First and last published at different times within the last 10 hours, last updated 5 minutes ago`,
     },
     ({ service, variant }) => {
       const date = new Date(fixedTimestamp);
@@ -142,7 +142,7 @@ timeFunctions.push(
       const firstPublished = new Date(elevenHoursAgo);
 
       const lastPublished = new Date(date);
-      lastPublished.setMinutes(lastPublished.getMinutes() - 10);
+      lastPublished.setMinutes(lastPublished.getMinutes() - 5);
 
       moment.now = () => date;
 
@@ -161,7 +161,7 @@ timeFunctions.push(
       );
     },
     {
-      subheading: `Article Timestamp: First and last published at different times on the same day, last updated 1 hour ago`,
+      subheading: `Article Timestamp: First and last published at different times within the last 10 hours, last updated 1 hour ago`,
     },
     ({ service, variant }) => {
       const date = new Date(fixedTimestamp);
@@ -190,7 +190,7 @@ timeFunctions.push(
       );
     },
     {
-      subheading: `First and last published at different times on the same day, last updated 10 hours ago`,
+      subheading: `First and last published at different times within the last 10 hours, last updated 5 hours ago`,
     },
     ({ service, variant }) => {
       const date = new Date(fixedTimestamp);
@@ -200,7 +200,7 @@ timeFunctions.push(
       const firstPublished = new Date(elevenHoursAgo);
 
       const lastPublished = new Date(date);
-      lastPublished.setHours(lastPublished.getHours() - 10);
+      lastPublished.setHours(lastPublished.getHours() - 5);
 
       moment.now = () => date;
 
@@ -250,12 +250,90 @@ timeFunctions.push(
         </WithService>
       );
     },
+    {
+      subheading: `Promo Timestamp: 1 minute ago`,
+    },
+    ({ service, variant }) => {
+      const date = new Date(fixedTimestamp);
+      const promoDate = new Date(fixedTimestamp);
+      promoDate.setMinutes(promoDate.getMinutes() - 1);
+
+      return (
+        <WithService service={service} variant={variant}>
+          <WithTimeMachine
+            dateString={date.toDateString()}
+            timestamp={date.getTime()}
+          >
+            <PromoTimestamp>{promoDate}</PromoTimestamp>
+          </WithTimeMachine>
+        </WithService>
+      );
+    },
+    {
+      subheading: `Promo Timestamp: 5 minutes ago`,
+    },
+    ({ service, variant }) => {
+      const date = new Date(fixedTimestamp);
+      const promoDate = new Date(fixedTimestamp);
+      promoDate.setMinutes(promoDate.getMinutes() - 5);
+
+      return (
+        <WithService service={service} variant={variant}>
+          <WithTimeMachine
+            dateString={date.toDateString()}
+            timestamp={date.getTime()}
+          >
+            <PromoTimestamp>{promoDate}</PromoTimestamp>
+          </WithTimeMachine>
+        </WithService>
+      );
+    },
+    {
+      subheading: `Promo Timestamp: 1 hour ago`,
+    },
+    ({ service, variant }) => {
+      const date = new Date(fixedTimestamp);
+      const promoDate = new Date(fixedTimestamp);
+      promoDate.setHours(promoDate.getHours() - 1);
+
+      return (
+        <WithService service={service} variant={variant}>
+          <WithTimeMachine
+            dateString={date.toDateString()}
+            timestamp={date.getTime()}
+          >
+            <PromoTimestamp>{promoDate}</PromoTimestamp>
+          </WithTimeMachine>
+        </WithService>
+      );
+    },
+    {
+      subheading: `Promo Timestamp: 5 hours ago`,
+    },
+    ({ service, variant }) => {
+      const date = new Date(fixedTimestamp);
+      const promoDate = new Date(fixedTimestamp);
+      promoDate.setHours(promoDate.getHours() - 5);
+
+      return (
+        <WithService service={service} variant={variant}>
+          <WithTimeMachine
+            dateString={date.toDateString()}
+            timestamp={date.getTime()}
+          >
+            <PromoTimestamp>{promoDate}</PromoTimestamp>
+          </WithTimeMachine>
+        </WithService>
+      );
+    },
   ]
 );
 
 timeFunctions.push({ heading: '' });
-timeFunctions.push({ heading: '' });
-timeFunctions.push({ heading: 'Days of the Week' });
+timeFunctions.push({
+  heading: 'Other',
+});
+timeFunctions.push({ subheading: 'Days of the Week' });
 
 Array.from({ length: 7 }, (_, index) => index).forEach((day) => {
   timeFunctions.push(({ locale }) =>
@@ -263,7 +341,7 @@ Array.from({ length: 7 }, (_, index) => index).forEach((day) => {
   );
 });
 
-timeFunctions.push({ heading: ' Days of the Week (Abbreviated)' });
+timeFunctions.push({ subheading: ' Days of the Week (Abbreviated)' });
 
 Array.from({ length: 7 }, (_, index) => index).forEach((day) => {
   timeFunctions.push(({ locale }) =>
@@ -271,14 +349,14 @@ Array.from({ length: 7 }, (_, index) => index).forEach((day) => {
   );
 });
 
-timeFunctions.push({ heading: 'Months' });
+timeFunctions.push({ subheading: 'Months' });
 
 Array.from({ length: 12 }, (_, index) => index).forEach((month) => {
   timeFunctions.push(({ locale }) =>
     moment('20240101').locale(locale).add(month, 'months').format('MMMM')
   );
 });
-timeFunctions.push({ heading: 'Months (Abbreviated)' });
+timeFunctions.push({ subheading: 'Months (Abbreviated)' });
 
 Array.from({ length: 12 }, (_, index) => index).forEach((month) => {
   timeFunctions.push(({ locale }) =>
@@ -290,7 +368,7 @@ const currentYear = new Date().getFullYear();
 const years = Array.from({ length: 11 }, (_, i) => currentYear - 5 + i);
 
 timeFunctions.push({
-  heading: `Years (±5 from ${currentYear})`,
+  subheading: `Years (±5 from ${currentYear})`,
 });
 
 years.forEach((year) => {
@@ -306,7 +384,7 @@ years.forEach((year) => {
 });
 
 timeFunctions.push({
-  heading: 'Numerals',
+  subheading: 'Numerals',
 });
 
 Array.from({ length: 31 }, (_, index) => index).forEach((day) => {
@@ -316,7 +394,7 @@ Array.from({ length: 31 }, (_, index) => index).forEach((day) => {
 });
 
 timeFunctions.push({
-  heading: 'Ordinal Numerals',
+  subheading: 'Ordinal Numerals',
 });
 Array.from({ length: 31 }, (_, index) => index).forEach((day) => {
   timeFunctions.push(({ locale }) =>
