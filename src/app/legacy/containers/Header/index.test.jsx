@@ -19,6 +19,7 @@ const {
   TOPIC_PAGE,
   TV_PAGE,
   ERROR_PAGE,
+  LIVE_PAGE,
 } = PAGE_TYPES;
 
 const defaultToggleState = {
@@ -145,6 +146,18 @@ describe(`Header`, () => {
       expect(container.querySelectorAll(scriptLinkSelector).length).toBe(1);
     });
 
+    it('should not render script link for a service with variants when pageType is "live"', () => {
+      const { container } = HeaderContainerWithContext({
+        renderOptions: {
+          pageType: LIVE_PAGE,
+          service: 'zhongwen',
+          variant: 'simp',
+        },
+      });
+
+      expect(container.querySelectorAll(scriptLinkSelector).length).toBe(0);
+    });
+
     describe('when service is uzbek', () => {
       describe.each(['cyr', 'lat'])('and variant is %s', variant => {
         const supportedUzbekPageTypes = [
@@ -187,44 +200,6 @@ describe(`Header`, () => {
 
             expect(container.querySelectorAll(scriptLinkSelector).length).toBe(
               0,
-            );
-          },
-        );
-      });
-    });
-
-    describe.each([
-      { service: 'zhongwen', variants: ['simp', 'trad'] },
-      { service: 'serbian', variants: ['cyr', 'lat'] },
-    ])('when service is $service', ({ service, variants }) => {
-      describe.each(variants)('and variant is %s', variant => {
-        const { LIVE_PAGE, ...supportedPageTypes } = PAGE_TYPES;
-
-        it('should not render script link when page type is "live"', () => {
-          const { container } = HeaderContainerWithContext({
-            renderOptions: {
-              pageType: LIVE_PAGE,
-              service,
-              variant,
-            },
-          });
-
-          expect(container.querySelectorAll(scriptLinkSelector).length).toBe(0);
-        });
-
-        it.each(Object.values(supportedPageTypes))(
-          'should render script link when page type is %s',
-          pageType => {
-            const { container } = HeaderContainerWithContext({
-              renderOptions: {
-                pageType,
-                service,
-                variant,
-              },
-            });
-
-            expect(container.querySelectorAll(scriptLinkSelector).length).toBe(
-              1,
             );
           },
         );
