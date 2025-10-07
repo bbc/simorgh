@@ -14,6 +14,7 @@ import { DESKTOP, TABLET, MOBILE, SMALL } from './dataStructures';
 import { styles } from './index.styles';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { CurationGridProps } from '../types';
+import { Summary } from '../../../models/types/curationData';
 import { RequestContext } from '../../../contexts/RequestContext';
 import LiveLabel from '../../LiveLabel';
 
@@ -33,24 +34,39 @@ const getStyles = (promoCount: number, i: number, mq: Theme['mq']) => {
     },
   });
 };
-
 const HiearchicalGrid = ({
   summaries,
   headingLevel,
   isFirstCuration,
   eventTrackingData,
+  timeOfDayVariant,
 }: CurationGridProps) => {
   const { isAmp } = use(RequestContext);
   const { translations } = use(ServiceContext);
-
   const audioTranslation = path(['media', 'audio'], translations);
   const videoTranslation = path(['media', 'video'], translations);
   const photoGalleryTranslation = path(['media', 'photogallery'], translations);
   const durationTranslation = path(['media', 'duration'], translations);
-
   if (!summaries || summaries.length < 3) return null;
 
   const promoItems = summaries.slice(0, 12);
+
+  const buildPromoEventTrackingData = (promo: Summary, i: number) => {
+    const itemTracker = {
+      type: 'hierarchical-curation-grid-promo',
+      text: promo.title,
+      position: i + 1,
+      resourceId: promo.id,
+      ...(promo.type && { mediaType: promo.type }),
+      ...(promo.duration && {
+        duration: moment.duration(promo.duration, 'seconds').asMilliseconds(),
+      }),
+    };
+    return {
+      itemTracker,
+      ...eventTrackingData,
+    };
+  };
 
   const getClickTrackerHandler = useClickTrackerHandler;
 
@@ -62,7 +78,6 @@ const HiearchicalGrid = ({
           const separator = ',';
           const formattedDuration = formatDuration({ duration, separator });
           const durationString = `, ${durationTranslation} ${formattedDuration}`;
-
           const useLargeImages = i === 0 && promoItems.length >= 3;
           const isFirstPromo = i === 0;
           const lazyLoadImages = !(isFirstPromo && isFirstCuration);
@@ -77,7 +92,13 @@ const HiearchicalGrid = ({
             (promo.type === 'photogallery' && `${photoGalleryTranslation}, `);
           const { isLive } = promo;
 
-          const clickTrackerHandler = getClickTrackerHandler(eventTrackingData);
+          const promoEventTrackingData = buildPromoEventTrackingData(promo, i);
+          const clickTrackerHandler = getClickTrackerHandler({
+            ...promoEventTrackingData,
+            sendOptimizelyEvents: true,
+            experimentName: 'newswb_ws_tod_homepage',
+            experimentVariant: timeOfDayVariant,
+          });
 
           return (
             <li
@@ -163,5 +184,4 @@ const HiearchicalGrid = ({
     </div>
   );
 };
-
 export default HiearchicalGrid;
