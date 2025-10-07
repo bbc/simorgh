@@ -2,7 +2,7 @@
 import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
 import testsForAllPages from '../testsForAllPages';
 import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
-import { testsThatFollowSmokeTestConfigForAllAMPPages as testsForAllAMPPages } from '../testsForAllAMPPages';
+import testsForAllAMPPages from '../testsForAllAMPPages';
 import canonicalAndAmpArticleTests from './tests';
 import ampArticleTests from './testsForAMPOnly';
 import canonicalArticleTests from './testsForCanonicalOnly';
