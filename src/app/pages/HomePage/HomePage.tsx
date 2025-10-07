@@ -66,10 +66,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
   });
 
   // if service is Hindi or Tamil and optimizely variant is set to 'variantA' then reorder curations
-  if (
-    (service === 'hindi' || service === 'tamil') &&
-    timeOfDayVariant === 'homepage_time_of_day_a'
-  ) {
+  if (timeOfDayVariant === 'homepage_time_of_day_a') {
     curations = reorderCurations({
       curations,
       service,
