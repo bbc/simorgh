@@ -55,9 +55,11 @@ const CurationPromo = ({
 
   const clickTrackerHandler = useClickTrackerHandler({
     ...eventTrackingData,
-    sendOptimizelyEvents: true,
-    experimentName: 'newswb_ws_tod_homepage',
-    experimentVariant: timeOfDayVariant,
+    ...(timeOfDayVariant != null && {
+      sendOptimizelyEvents: true,
+      experimentName: 'newswb_ws_tod_homepage',
+      experimentVariant: timeOfDayVariant,
+    }),
   });
 
   return (

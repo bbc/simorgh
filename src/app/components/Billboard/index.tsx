@@ -45,9 +45,11 @@ export default ({
   const viewTracker = useViewTracker(eventTrackingData);
   const clickTrackerHandler = useClickTrackerHandler({
     ...eventTrackingData,
-    sendOptimizelyEvents: true,
-    experimentName: 'newswb_ws_tod_homepage',
-    experimentVariant: timeOfDayVariant,
+    ...(timeOfDayVariant != null && {
+      sendOptimizelyEvents: true,
+      experimentName: 'newswb_ws_tod_homepage',
+      experimentVariant: timeOfDayVariant,
+    }),
   });
 
   return (

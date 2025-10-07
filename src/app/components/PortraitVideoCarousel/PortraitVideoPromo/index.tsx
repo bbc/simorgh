@@ -90,9 +90,11 @@ export default ({
 
   const eventTrackingDataExtended = {
     ...eventTrackingData,
-    sendOptimizelyEvents: true,
-    experimentName: 'newswb_ws_tod_homepage',
-    experimentVariant: timeOfDayVariant,
+    ...(timeOfDayVariant != null && {
+      sendOptimizelyEvents: true,
+      experimentName: 'newswb_ws_tod_homepage',
+      experimentVariant: timeOfDayVariant,
+    }),
     viewThreshold: 1,
     itemTracker: {
       type: 'portrait-video-promo',
