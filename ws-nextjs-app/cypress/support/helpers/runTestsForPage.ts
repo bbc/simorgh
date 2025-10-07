@@ -5,7 +5,7 @@ import getOptimizelyKey from '../../../../cypress/support/helpers/getOptimizelyK
 
 type TestType = (props: ServiceParametersType) => void;
 
-type TestDataType = {
+export type TestDataType = {
   path: string;
   tests: TestType[];
   runforEnv: string[];
@@ -16,6 +16,7 @@ type FunctionProps = {
   pageType: PageTypes;
   testSuites: TestDataType[];
   beforeAll?: (() => void)[];
+  beforeEachFns?: (() => void)[];
   failOnStatusCode?: boolean;
   testIsolation?: boolean;
   deleteServiceWorker?: boolean;
@@ -26,6 +27,7 @@ export default ({
   pageType,
   testSuites,
   beforeAll = [],
+  beforeEachFns = [],
   failOnStatusCode = true,
   testIsolation = false,
   deleteServiceWorker = false,
@@ -48,7 +50,7 @@ export default ({
     if (runforEnv.includes(cypressEnv)) {
       describe(
         `${Cypress.config().baseUrl}${path}`,
-        { testIsolation, retries: 3 },
+        { testIsolation, retries: 1 },
         () => {
           before(() => {
             beforeAll.forEach(runBeforeAll => runBeforeAll());
@@ -83,6 +85,8 @@ export default ({
           });
 
           beforeEach(() => {
+            beforeEachFns.forEach(runBeforeEach => runBeforeEach());
+
             cy.intercept(
               {
                 url: `https://cdn.optimizely.com/datafiles/${getOptimizelyKey()}.json`,

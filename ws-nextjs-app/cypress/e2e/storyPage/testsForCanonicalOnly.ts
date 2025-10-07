@@ -3,9 +3,9 @@ import path from 'ramda/src/path';
 import { ServiceParametersType } from '#nextjs/cypress/types';
 import { OptimoBlock } from '#app/models/types/optimo';
 import runCanonicalAdsTests from '../../support/helpers/adsTests/testsForCanonicalOnly';
-// import { crossPlatform as mostReadAssertions } from '../assertions/crossPlatformAssertion';
+import { crossPlatform as mostReadAssertions } from '../assertions/crossPlatformAssertion';
 
-export default ({ service, pageType }: ServiceParametersType) => {
+export default ({ service, pageType, variant }: ServiceParametersType) => {
   describe(`Canonical Tests for ${service} ${pageType}`, () => {
     const skipOnLocal =
       Cypress.env('APP_ENV') !== 'local' ? describe : describe.skip;
@@ -70,8 +70,7 @@ export default ({ service, pageType }: ServiceParametersType) => {
     /**
      * Most Read Component
      */
-    // SKIPPED: Cross platform tests have been skipped until the Most Read component has been migrated
-    // mostReadAssertions({ service, variant });
+    mostReadAssertions({ service, variant });
 
     describe.skip('Social Embed', () => {
       // This test specifically covers an edge case where more than one tweet is
