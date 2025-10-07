@@ -18,10 +18,7 @@ const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
   {
     // EXPERIMENT: Read Time for homepages
     pageType: HOME_PAGE,
-    activeExperiments: [
-      'newswb_ws_homepage_read_time',
-      'newswb_ws_tod_homepage',
-    ],
+    activeExperiments: ['newswb_ws_tod_homepage'],
   },
 ];
 
