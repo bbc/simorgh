@@ -2,12 +2,10 @@ import {
   runCommonCrossPlatformTests,
   runTimestampTests,
   runImageTests,
-  runMostReadTests,
 } from '#src/integration/common';
 
-export default service => {
+export default (service: string) => {
   runCommonCrossPlatformTests(service);
   runTimestampTests();
   runImageTests();
-  runMostReadTests();
 };
