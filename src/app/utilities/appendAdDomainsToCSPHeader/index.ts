@@ -1,10 +1,11 @@
 import AD_DOMAINS from './constants';
 
 /**
- * Appends ad domains to the CSP script-src directive to augment the server-defined policy via a meta[httpEquiv="Content-Security-Policy"] tag.
- * This prevents header size limits while enabling secondary header bidding scripts to load post-DOM initialization.
+ * Appends ad domains to the CSP script-src directive. It is used to augment the server-defined policy via a meta[httpEquiv="Content-Security-Policy"] tag.
+ * This prevents header size limits while enabling secondary header bidding scripts to load after DOM initialization.
  *
  * @param cspHeader - The original CSP header string
+ * @param adDomains - An array of ad domains to append to the `script-src` directive. Defaults to `AD_DOMAINS`.
  * @returns The modified CSP header with ad domains added to script-src
  */
 

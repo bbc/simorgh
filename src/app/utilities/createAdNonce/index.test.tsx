@@ -16,7 +16,7 @@ describe('generateAdNonce', () => {
 
   const defaultParams = {
     toggles: defaultToggles,
-    country: 'GB',
+    country: 'LT',
     showAdsBasedOnLocation: true,
     isLite: false,
   };
@@ -68,7 +68,7 @@ describe('generateAdNonce', () => {
   it('should return nonce when toggle is enabled and country matches nonceCountries list', () => {
     const toggles: Toggles = {
       ...defaultToggles,
-      adsNonce: { enabled: true, value: 'GB,US,CA' },
+      adsNonce: { enabled: true, value: 'LT,US,CA' },
     };
 
     const result = generateNonceValue({ ...defaultParams, toggles });
@@ -78,7 +78,7 @@ describe('generateAdNonce', () => {
   it('should return nonce when nonceCountries has mixed case and extra spaces', () => {
     const toggles: Toggles = {
       ...defaultToggles,
-      adsNonce: { enabled: true, value: 'gb ,us,CA' },
+      adsNonce: { enabled: true, value: 'lt ,us,CA' },
     };
 
     const result = generateNonceValue({ ...defaultParams, toggles });
