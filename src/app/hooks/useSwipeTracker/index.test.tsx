@@ -1,18 +1,14 @@
 /* eslint-disable no-console */
 
-import React, { createContext, ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
 import {
   renderHook,
-  act,
+  AllTheProviders,
 } from '#app/components/react-testing-library-with-providers';
-import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
-import { RequestContextProvider } from '#contexts/RequestContext';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import { Toggles } from '#app/models/types/global';
-import * as serviceContextModule from '../../contexts/ServiceContext';
 import useSwipeTracker from '.';
 import fixtureData from './fixtureData.json';
 
@@ -54,24 +50,8 @@ window.__reverb = {
   __reverbLoadedPromise: Promise.resolve(reverbMock),
 };
 
-beforeEach(() => {
-  jest.clearAllMocks();
-
-  jest.replaceProperty(
-    serviceContextModule,
-    'ServiceContext',
-    // @ts-expect-error override service context for tests
-    createContext({
-      atiAnalyticsProducerId: '52',
-      atiAnalyticsProducerName: 'HINDI',
-      service: 'hindi',
-      useReverb: true,
-    }),
-  );
-});
-
 const wrapper = ({
-  atiData,
+  atiData = atiAnalytics,
   children,
   toggles = defaultToggles,
   mockOptimizely = defaultOptimizely,
@@ -82,21 +62,18 @@ const wrapper = ({
   mockOptimizely?: ReactSDKClient;
 }) => (
   <OptimizelyProvider optimizely={mockOptimizely} isServerSide>
-    <RequestContextProvider
+    <AllTheProviders
+      atiData={atiData}
       bbcOrigin="https://www.test.bbc.com"
+      pageData={fixtureData}
       pageType={HOME_PAGE}
       isAmp={false}
       service="hindi"
       pathname="/hindi"
+      toggles={toggles}
     >
-      <serviceContextModule.ServiceContextProvider service="hindi">
-        <ToggleContextProvider toggles={toggles}>
-          <EventTrackingContextProvider atiData={atiData}>
-            {children}
-          </EventTrackingContextProvider>
-        </ToggleContextProvider>
-      </serviceContextModule.ServiceContextProvider>
-    </RequestContextProvider>
+      {children}
+    </AllTheProviders>
   </OptimizelyProvider>
 );
 
@@ -198,121 +175,65 @@ describe('useSwipeTracker', () => {
     //   });
     // });
 
-    // describe('View tracking - Reverb', () => {
-    //   beforeEach(() => {
-    //     jest.replaceProperty(
-    //       serviceContextModule,
-    //       'ServiceContext',
-    //       // @ts-expect-error override service context for tests
-    //       createContext({
-    //         atiAnalyticsProducerId: '70',
-    //         atiAnalyticsProducerName: 'PIDGIN',
-    //         service: 'pidgin',
-    //         useReverb: true,
-    //       }),
-    //     );
-    //   });
+    describe('View tracking - Reverb', () => {
+      describe('Viewability Model', () => {
+        it('should trigger a beacon for a view event', async () => {
+          const {
+            result: { current: swipeTracker },
+          } = renderHook(() => useSwipeTracker(eventTrackingData), {
+            wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
+          });
 
-    //   describe('Viewability Model', () => {
-    //     it.each([
-    //       {
-    //         title: 'should trigger a beacon for a view event',
-    //         eventTrackingData: { ...trackingData },
-    //         expectedItemEvent: {
-    //           link: 'http://www.bbc.com/pidgin/tori-51745682',
-    //           name: 'most-read',
-    //         },
-    //         expectedGroupEvent: {
-    //           name: 'article-sty',
-    //           type: 'most-read',
-    //         },
-    //       },
-    //       {
-    //         title: 'should trigger a beacon for an item level click event',
-    //         eventTrackingData: {
-    //           ...trackingData,
-    //           componentName: 'portrait-video',
-    //           itemTracker: {
-    //             type: 'portrait-video-promo',
-    //             text: 'Rollercoaster facts... while riding a rollercoaster',
-    //             position: 1,
-    //             duration: 73000,
-    //             resourceId: 'test-item-id',
-    //             label: 'test-item-label',
-    //           },
-    //           groupTracker: {
-    //             itemCount: 15,
-    //             resourceId: 'test-group-id',
-    //           },
-    //         },
-    //         expectedItemEvent: {
-    //           duration: 73000,
-    //           link: 'http://www.bbc.com/pidgin/tori-51745682',
-    //           name: 'portrait-video',
-    //           position: 1,
-    //           resource_id: 'test-item-id',
-    //           text: 'Rollercoaster facts... while riding a rollercoaster',
-    //           type: 'portrait-video-promo',
-    //           label: 'test-item-label',
-    //         },
-    //         expectedGroupEvent: {
-    //           item_count: 15,
-    //           name: 'article-sty',
-    //           resource_id: 'test-group-id',
-    //           type: 'portrait-video',
-    //         },
-    //       },
-    //     ])(
-    //       '$title',
-    //       async ({
-    //         eventTrackingData,
-    //         expectedItemEvent,
-    //         expectedGroupEvent,
-    //       }) => {
-    //         const { result } = renderHook(
-    //           () => useViewTracker(eventTrackingData),
-    //           {
-    //             wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
-    //           },
-    //         );
-    //         const element = document.createElement('div');
+          await swipeTracker({
+            ...eventTrackingData,
+            groupTracker: {
+              name: 'group name',
+              itemCount: 20,
+              resourceId:
+                'urn:bbc:tipo:list:fe4a1c8c-9a7c-4a50-845d-7da91aa65204',
+              position: 4,
+              type: 'portrait-video-modal',
+            },
+            itemTracker: {
+              type: 'portrait-video',
+              text: 'टेलर स्विफ़्ट ने अपने इस डर का किया ज़िक्र',
+              mediaType: 'video',
+              position: 2,
+              duration: 22000,
+              resourceId: 'urn:bbc:pips:pid:p0m6zysd',
+            },
+          });
 
-    //         await result.current.ref(element);
-
-    //         const observerInstance = getObserverInstance(element);
-
-    //         act(() => {
-    //           triggerIntersection({
-    //             changes: [{ isIntersecting: true }],
-    //             observer: observerInstance,
-    //           });
-    //         });
-
-    //         await act(() => {
-    //           jest.advanceTimersByTime(1100);
-    //         });
-
-    //         const [[, options]] = (global.IntersectionObserver as jest.Mock)
-    //           .mock.calls;
-
-    //         expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
-    //         expect(options).toEqual({ threshold: [0.5] });
-    //         expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
-    //         expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
-    //           'viewability',
-    //           '',
-    //           {
-    //             event: { action: 'view', category: 'viewability' },
-    //             group: expectedGroupEvent,
-    //             item: expectedItemEvent,
-    //           },
-    //           undefined,
-    //           undefined,
-    //           false,
-    //         );
-    //       },
-    //     );
-    //   });
-    // });
+          expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+          expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+            'viewability',
+            '',
+            {
+              event: { action: 'view', category: 'viewability' },
+              group: {
+                name: 'group name',
+                item_count: 20,
+                resource_id:
+                  'urn:bbc:tipo:list:fe4a1c8c-9a7c-4a50-845d-7da91aa65204',
+                position: 4,
+                type: 'portrait-video-modal',
+              },
+              item: {
+                name: 'portrait-video-modal',
+                type: 'portrait-video',
+                text: 'टेलर स्विफ़्ट ने अपने इस डर का किया ज़िक्र',
+                media_type: 'video',
+                position: 2,
+                duration: 22000,
+                resource_id: 'urn:bbc:pips:pid:p0m6zysd',
+              },
+            },
+            undefined,
+            undefined,
+            false,
+          );
+        });
+      });
+    });
   });
 });
