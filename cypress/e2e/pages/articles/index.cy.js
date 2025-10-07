@@ -1,7 +1,7 @@
 /* eslint-disable import/no-relative-packages */
 import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
 import testsForAllPages from '../testsForAllPages';
-import { testsThatFollowSmokeTestConfigForAllCanonicalPages as testsForAllCanonicalPages } from '../testsForAllCanonicalPages';
+import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
 import { testsThatFollowSmokeTestConfigForAllAMPPages as testsForAllAMPPages } from '../testsForAllAMPPages';
 import canonicalAndAmpArticleTests from './tests';
 import ampArticleTests from './testsForAMPOnly';
