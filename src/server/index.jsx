@@ -195,6 +195,7 @@ const injectNonceHeader = ({
   country,
   showAdsBasedOnLocation,
   isLite,
+  isAmp,
   res,
 }) => {
   const nonce = createAdNonce({
@@ -202,6 +203,7 @@ const injectNonceHeader = ({
     country,
     showAdsBasedOnLocation,
     isLite,
+    isAmp,
   });
 
   if (!nonce) {
@@ -281,6 +283,7 @@ server.get(
         country: data.country,
         showAdsBasedOnLocation: data.showAdsBasedOnLocation,
         isLite,
+        isAmp,
       });
       injectCspHeader({ isAmp, service, nonce, res });
 

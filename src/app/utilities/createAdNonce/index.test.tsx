@@ -19,6 +19,7 @@ describe('generateAdNonce', () => {
     country: 'LT',
     showAdsBasedOnLocation: true,
     isLite: false,
+    isAmp: false,
   };
 
   it('should not return nonce value when adsNonce is disabled', () => {
@@ -43,6 +44,11 @@ describe('generateAdNonce', () => {
 
   it('should not return nonce value when isLite is true', () => {
     const result = generateNonceValue({ ...defaultParams, isLite: true });
+    expect(result).toBeNull();
+  });
+
+  it('should not return nonce value when isAmp is true', () => {
+    const result = generateNonceValue({ ...defaultParams, isAmp: true });
     expect(result).toBeNull();
   });
 

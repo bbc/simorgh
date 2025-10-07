@@ -6,6 +6,7 @@ interface InjectNonceHeader {
   country: string;
   showAdsBasedOnLocation: boolean;
   isLite: boolean;
+  isAmp: boolean;
 }
 
 const getToggleDefinitions = (
@@ -37,6 +38,7 @@ export default ({
   country,
   showAdsBasedOnLocation,
   isLite,
+  isAmp,
 }: InjectNonceHeader) => {
   const toggleDefinitions = getToggleDefinitions(toggles);
   const { enabled: isNonceToggleEnabled, value: nonceCountries = '' } =
@@ -45,6 +47,7 @@ export default ({
 
   if (
     isLite ||
+    isAmp ||
     !isNonceToggleEnabled ||
     !isAdsToggleEnabled ||
     !showAdsBasedOnLocation ||
