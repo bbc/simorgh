@@ -65,7 +65,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
     experimentType: ExperimentType.CLIENT_SIDE,
   });
 
-  // timeOfDayVariant = 'variantA'; // hardcode for testing if needed, remove when no longer needed
   // if service is Hindi or Tamil and optimizely variant is set to 'variantA' then reorder curations
   if (
     (service === 'hindi' || service === 'tamil') &&
