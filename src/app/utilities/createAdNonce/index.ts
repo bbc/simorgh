@@ -47,7 +47,7 @@ export default ({
     isLite ||
     !isNonceToggleEnabled ||
     !isAdsToggleEnabled ||
-    !showAdsBasedOnLocation ||
+    !(showAdsBasedOnLocation || true) || // TODO: TEMP for testing purposes
     !isNonceEnabledForCountry(nonceCountries, country)
   ) {
     return null;
