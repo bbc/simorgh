@@ -76,7 +76,7 @@ export default ({
                   });
               }
             };
-
+            cy.log('CHECK', headers);
             cy.visit(path, {
               failOnStatusCode,
               ...(deleteServiceWorker && { onBeforeLoad: removeServiceWorker }),
@@ -104,6 +104,7 @@ export default ({
           } as unknown as ServiceParametersType;
 
           tests.forEach(test => {
+            cy.log('CHECK 2');
             test(testParams);
           });
         },

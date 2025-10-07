@@ -222,7 +222,7 @@ const ampTestSuites = [
 runTestsForPage({
   pageType: STORY_PAGE,
   headers: {
-    'page-type': 'tc2',
+    'page-type': 'article',
     'BBC-Adverts': 'true',
   },
   testSuites: [
