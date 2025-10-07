@@ -90,7 +90,7 @@ export default ({
 
   const eventTrackingDataExtended = {
     ...eventTrackingData,
-    ...(timeOfDayVariant != null && {
+    ...(timeOfDayVariant && {
       sendOptimizelyEvents: true,
       experimentName: 'newswb_ws_tod_homepage',
       experimentVariant: timeOfDayVariant,
