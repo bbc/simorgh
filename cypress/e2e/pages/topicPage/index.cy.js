@@ -2,8 +2,13 @@ import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
 import crossPlatformTests from './tests';
 import { TOPIC_PAGE } from '../../../../src/app/routes/utils/pageTypes';
 import urlValidationTest from '../../../support/helpers/urlValidationTest';
+import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
 
-const tests = [crossPlatformTests, urlValidationTest];
+const tests = [
+  crossPlatformTests,
+  urlValidationTest,
+  testsForAllCanonicalPages,
+];
 
 const testSuites = [
   {
