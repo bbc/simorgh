@@ -9,7 +9,7 @@ import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useTrackingToggle from '../useTrackingToggle';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { EventTrackingContext } from '../../contexts/EventTrackingContext';
-import dispatchTrackingRequests from '../useViewTracker/dispatchTrackingRequests';
+import dispatchTrackingRequests from '../../lib/analyticsUtils/dispatchTrackingRequests';
 
 const getComponentSwipeTracker = (eventTrackingData?: EventTrackingData) => {
   const { optimizely } = use(OptimizelyContext);
