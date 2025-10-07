@@ -129,6 +129,7 @@ export default ({
               showLiveLabel={summaryIsLive}
               altText={imageAlt}
               summaries={summaries}
+              timeOfDayVariant={timeOfDayVariant ?? undefined}
             />
           </div>
         );
