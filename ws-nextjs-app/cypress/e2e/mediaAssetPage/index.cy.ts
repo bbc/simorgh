@@ -299,7 +299,7 @@ const ampTestSuites = canonicalTestSuites.map(testSuite => {
   };
 });
 
-// SKIPPED: LITE ignored until routes have been fully migrated.
+// SKIPPED: We are not able to set page-type headers in cy.click and cy.back
 // const liteTestSuites = Cypress.env('SMOKE')
 //   ? canonicalTestSuites
 //       .filter(

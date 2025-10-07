@@ -1,5 +1,7 @@
 import { Services } from '#app/models/types/global';
+import skipOnLocal from '../../support/helpers/skipOnLocal';
 import { ServiceParametersType } from '../../types';
+import { ampOnly as crossPlatform } from '../assertions/crossPlatformAssertion';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasFigure = (service: Services) =>
@@ -65,7 +67,8 @@ export default ({
      * These cypress tests are needed as unit tests cannot be run on the jsdom.
      * web workers (which run on amp pages) do not run on the virtual dom.
      */
-    // SKIPPED: Cross platform tests have been skipped until the Most Read component has been migrated
-    // crossPlatform({ service, variant });
+    skipOnLocal('Most Read - Amp', () => {
+      crossPlatform({ service, variant });
+    });
   });
 };

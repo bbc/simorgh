@@ -1,7 +1,7 @@
 /* eslint-disable import/no-relative-packages */
 import { PageTypes } from '#app/models/types/global';
-import { ServiceParametersType } from '#nextjs/cypress/types';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ServiceParametersType } from '../../../../types';
 import interceptGetRequests from '../../../../../../cypress/e2e/specialFeatures/liteSiteWeight/helpers/interceptGetRequests';
 import getTotalPageSize from '../../../../../../cypress/e2e/specialFeatures/liteSiteWeight/helpers/getTotalPageSize';
 import roundTo2Decimals from '../../../../../../cypress/e2e/specialFeatures/liteSiteWeight/helpers/roundTo2Decimals';
