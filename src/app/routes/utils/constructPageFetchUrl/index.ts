@@ -213,17 +213,16 @@ const constructPageFetchUrl = ({
 
     switch (pageType) {
       case ARTICLE_PAGE: {
-        const { assetId } = parseRoute(pathname);
-        const pathnameNoRendererExtension = removeRendererExtension(pathname);
+        const { assetId, platform } = parseRoute(pathname);
 
-        if (isOptimoIdCheck(pathnameNoRendererExtension)) {
+        if (platform === 'articles') {
           fetchUrl = Url(
             `${host}${port}/api/local/${service}/articles/${assetId}${variant ? `/${variant}` : ''}`,
           );
           break;
         }
 
-        if (isCpsIdCheck(pathnameNoRendererExtension)) {
+        if (platform === 'cps') {
           fetchUrl = Url(
             `${host}${port}/api/local/${service}/cpsAssets/${variant ? `${variant}/` : ''}${assetId}`,
           );
