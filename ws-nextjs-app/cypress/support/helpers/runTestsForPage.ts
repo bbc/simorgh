@@ -76,7 +76,7 @@ export default ({
                   });
               }
             };
-            cy.log('CHECK', headers);
+
             cy.visit(path, {
               failOnStatusCode,
               ...(deleteServiceWorker && { onBeforeLoad: removeServiceWorker }),

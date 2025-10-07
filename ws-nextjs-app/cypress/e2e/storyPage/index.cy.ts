@@ -209,6 +209,7 @@ const ampTestSuites = [
   };
 });
 
+// SKIPPED: We are not able to set page-type headers in cy.click and cy.back
 // const liteTestSuites = canonicalTestSuites
 //   .filter(({ service }) => !['news', 'newsround'].includes(service))
 //   .map(testSuite => {
