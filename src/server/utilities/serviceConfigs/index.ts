@@ -36,6 +36,7 @@ import { service as pidgin } from '../../../app/lib/config/services/pidgin';
 import { service as polska } from '../../../app/lib/config/services/polska';
 import { service as portuguese } from '../../../app/lib/config/services/portuguese';
 import { service as punjabi } from '../../../app/lib/config/services/punjabi';
+import { service as romania } from '../../../app/lib/config/services/romania';
 import { service as russian } from '../../../app/lib/config/services/russian';
 import { service as scotland } from '../../../app/lib/config/services/scotland';
 import { service as sport } from '../../../app/lib/config/services/sport';
@@ -98,6 +99,7 @@ export default {
   polska,
   portuguese,
   punjabi,
+  romania,
   russian,
   sport,
   scotland,
