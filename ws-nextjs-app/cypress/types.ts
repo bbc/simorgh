@@ -6,4 +6,5 @@ export type ServiceParametersType = {
   pageType?: PageTypes & 'errorPage404';
   path?: string;
   isAmp?: boolean;
+  headers?: Record<string, string>;
 };

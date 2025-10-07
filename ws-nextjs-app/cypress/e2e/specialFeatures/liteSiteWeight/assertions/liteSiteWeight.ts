@@ -22,7 +22,7 @@ const formatTableData = (sizes: { url: string; size: number }[]) => {
   }));
 };
 
-export default ({ path, pageType }: ServiceParametersType) => {
+export default ({ path, pageType, headers }: ServiceParametersType) => {
   describe('', () => {
     let allRequests = [] as Request[];
     let liveRequests = [] as Request[];
@@ -34,7 +34,6 @@ export default ({ path, pageType }: ServiceParametersType) => {
       cy.clearCookies();
       cy.clearLocalStorage();
       interceptGetRequests(allRequests);
-      // cy.visit(`${path}`);
     });
 
     afterEach(() => {
@@ -48,7 +47,9 @@ export default ({ path, pageType }: ServiceParametersType) => {
       getTotalPageSize(allRequests).then(
         ({ totalSize: localPageWeight, requestSizes: localRequestSizes }) => {
           interceptGetRequests(liveRequests);
-          cy.visit(`https://www.bbc.com${path}`);
+          cy.visit(`https://www.bbc.com${path}`, {
+            ...(headers && { headers }),
+          });
 
           getTotalPageSize(liveRequests).then(
             ({ totalSize: livePageWeight, requestSizes: liveRequestSizes }) => {

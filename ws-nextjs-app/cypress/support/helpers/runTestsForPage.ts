@@ -104,7 +104,6 @@ export default ({
           } as unknown as ServiceParametersType;
 
           tests.forEach(test => {
-            cy.log('CHECK 2');
             test(testParams);
           });
         },
