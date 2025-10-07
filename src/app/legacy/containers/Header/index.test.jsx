@@ -19,6 +19,7 @@ const {
   TOPIC_PAGE,
   TV_PAGE,
   ERROR_PAGE,
+  LIVE_PAGE,
 } = PAGE_TYPES;
 
 const defaultToggleState = {
@@ -143,6 +144,18 @@ describe(`Header`, () => {
       });
 
       expect(container.querySelectorAll(scriptLinkSelector).length).toBe(1);
+    });
+
+    it('should not render script link for a service with variants when pageType is "live"', () => {
+      const { container } = HeaderContainerWithContext({
+        renderOptions: {
+          pageType: LIVE_PAGE,
+          service: 'zhongwen',
+          variant: 'simp',
+        },
+      });
+
+      expect(container.querySelectorAll(scriptLinkSelector).length).toBe(0);
     });
 
     describe('when service is uzbek', () => {
