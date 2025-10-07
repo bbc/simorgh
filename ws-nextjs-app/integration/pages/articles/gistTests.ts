@@ -1,11 +1,11 @@
 export default () => {
   describe('Gist', () => {
     const gistTitle = document.getElementById('gist-title');
-    const gistTitleText = gistTitle.textContent;
+    const gistTitleText = gistTitle?.textContent;
     const listItem = document.querySelector(
       `div[aria-labelledby='gist-title'] ul[role="list"] > li`,
     );
-    const listItemText = listItem.textContent;
+    const listItemText = listItem?.textContent;
 
     it('title should be in the document', () => {
       expect(gistTitle).toBeInTheDocument();

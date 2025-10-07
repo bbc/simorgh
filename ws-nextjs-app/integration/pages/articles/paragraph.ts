@@ -6,7 +6,7 @@ export default () => {
     });
 
     it('should match paragraph text', () => {
-      expect(paragraphEl.textContent).toMatchSnapshot();
+      expect(paragraphEl?.textContent).toMatchSnapshot();
     });
   });
 };
