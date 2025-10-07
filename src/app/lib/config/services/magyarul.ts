@@ -1,6 +1,6 @@
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
-import '#psammead/psammead-locales/moment/en-gb';
-import '#psammead/moment-timezone-include/tz/Europe/London';
+import 'moment/locale/hu';
+import '#psammead/moment-timezone-include/tz/Europe/Budapest';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
