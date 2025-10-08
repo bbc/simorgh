@@ -15,7 +15,7 @@ import ManifestContainer from '../../legacy/containers/Manifest';
 import ServiceWorker from '../ServiceWorker';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
-import fontFacesLazy from '../ThemeProvider/fontFacesLazy';
+import fontFaces from '../ThemeProvider/fontFaces';
 import styles from './index.styles';
 import { OptimoMostReadRecord, CPSMostReadRecord } from '../MostRead/types';
 
@@ -74,7 +74,7 @@ const PageLayoutWrapper = ({
       }, 0);
   }
 
-  const serviceFonts = fontFacesLazy(service, isPWA);
+  const serviceFonts = fontFaces(service, isPWA);
 
   const fontJs =
     isLite ||
