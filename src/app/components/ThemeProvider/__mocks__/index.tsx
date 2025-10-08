@@ -1,5 +1,6 @@
 import React from 'react';
 import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
+import { Services, Variants } from '#app/models/types/global';
 import { StoryProps } from '../../../models/types/storybook';
 
 import afaanoromoo from '../themes/afaanoromoo';
@@ -11,6 +12,7 @@ import azeri from '../themes/azeri';
 import bengali from '../themes/bengali';
 import burmese from '../themes/burmese';
 import cymrufyw from '../themes/cymrufyw';
+import dari from '../themes/dari';
 import gahuza from '../themes/gahuza';
 import gujarati from '../themes/gujarati';
 import hausa from '../themes/hausa';
@@ -20,6 +22,7 @@ import indonesia from '../themes/indonesia';
 import japanese from '../themes/japanese';
 import korean from '../themes/korean';
 import kyrgyz from '../themes/kyrgyz';
+import magyarul from '../themes/magyarul';
 import marathi from '../themes/marathi';
 import mundo from '../themes/mundo';
 import naidheachdan from '../themes/naidheachdan';
@@ -32,6 +35,7 @@ import pidgin from '../themes/pidgin';
 import polska from '../themes/polska';
 import portuguese from '../themes/portuguese';
 import punjabi from '../themes/punjabi';
+import romania from '../themes/romania';
 import russian from '../themes/russian';
 import scotland from '../themes/scotland';
 import serbianCyr from '../themes/serbian/cyr';
@@ -58,7 +62,7 @@ import zhongwenTrad from '../themes/zhongwen/trad';
 import ws from '../themes/ws';
 
 type ThemeProvider = {
-  [index: string]: React.FC<Props> | { [index: string]: React.FC<Props> };
+  [_service in Services]: React.FC<Props> | Record<Variants, React.FC<Props>>;
 };
 
 const themeProviders: ThemeProvider = {
@@ -71,6 +75,7 @@ const themeProviders: ThemeProvider = {
   bengali,
   burmese,
   cymrufyw,
+  dari,
   gahuza,
   gujarati,
   hausa,
@@ -80,6 +85,7 @@ const themeProviders: ThemeProvider = {
   japanese,
   korean,
   kyrgyz,
+  magyarul,
   marathi,
   mundo,
   naidheachdan,
@@ -92,6 +98,7 @@ const themeProviders: ThemeProvider = {
   polska,
   portuguese,
   punjabi,
+  romania,
   russian,
   scotland,
   serbian: {
@@ -118,12 +125,12 @@ const themeProviders: ThemeProvider = {
     lat: uzbekLat,
   },
   vietnamese,
+  ws,
   yoruba,
   zhongwen: {
     simp: zhongwenSimp,
     trad: zhongwenTrad,
   },
-  ws,
 };
 
 interface Props extends StoryProps {
@@ -140,9 +147,7 @@ const ThemeProvider = ({ children, service, ...rest }: Props) => {
   const ThemeProviderSynchronous =
     variant === 'default' || !variant
       ? themeProviders[service]
-      : // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore - TODO: come back to this
-        themeProviders[service][variant];
+      : themeProviders[service as Services][variant as Variants];
 
   return <ThemeProviderSynchronous>{children}</ThemeProviderSynchronous>;
 };
