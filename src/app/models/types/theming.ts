@@ -398,8 +398,11 @@ export interface Typography {
       fontFamily: string;
       fontWeight?: number;
       fontStyle?: string;
-      src: string;
+      src?: string;
       fontDisplay: string;
+      name?: string;
+      version?: string;
+      subset?: boolean;
     };
   }[];
   fontVariants: FontVariants;
