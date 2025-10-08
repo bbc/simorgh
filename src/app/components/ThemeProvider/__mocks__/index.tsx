@@ -62,7 +62,9 @@ import zhongwenTrad from '../themes/zhongwen/trad';
 import ws from '../themes/ws';
 
 type ThemeProvider = {
-  [_service in Services]: React.FC<Props> | Record<Variants, React.FC<Props>>;
+  [_service in Services]:
+    | React.FC<Props>
+    | { [_variant in Variants]?: React.FC<Props> };
 };
 
 const themeProviders: ThemeProvider = {
@@ -147,7 +149,7 @@ const ThemeProvider = ({ children, service, ...rest }: Props) => {
   const ThemeProviderSynchronous =
     variant === 'default' || !variant
       ? themeProviders[service]
-      : themeProviders[service as Services][variant as Variants];
+      : themeProviders[service][variant as Variants];
 
   return <ThemeProviderSynchronous>{children}</ThemeProviderSynchronous>;
 };
