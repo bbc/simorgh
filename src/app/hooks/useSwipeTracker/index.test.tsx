@@ -1,7 +1,6 @@
 /* eslint-disable no-console */
 
 import React, { ReactNode } from 'react';
-import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
 import {
   renderHook,
   AllTheProviders,
