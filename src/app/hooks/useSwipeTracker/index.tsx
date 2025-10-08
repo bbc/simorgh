@@ -2,7 +2,6 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable react-hooks/rules-of-hooks */
 import { use, useCallback } from 'react';
-import { OptimizelyContext } from '@optimizely/react-sdk';
 import { VIEW_EVENT } from '#app/lib/analyticsUtils/analytics.const';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
@@ -12,8 +11,6 @@ import { EventTrackingContext } from '../../contexts/EventTrackingContext';
 import dispatchTrackingRequests from '../../lib/analyticsUtils/dispatchTrackingRequests';
 
 const getComponentSwipeTracker = (eventTrackingData?: EventTrackingData) => {
-  const { optimizely } = use(OptimizelyContext);
-
   const { service, useReverb } = use(ServiceContext);
 
   const eventTrackingContext = use(EventTrackingContext);
@@ -36,9 +33,6 @@ const getComponentSwipeTracker = (eventTrackingData?: EventTrackingData) => {
         statsDestination,
         campaignID,
         detailedPlacement,
-        sendOptimizelyEvents,
-        experimentName,
-        experimentVariant,
         groupTracker,
         itemTracker,
         alwaysInView = false,
@@ -50,9 +44,6 @@ const getComponentSwipeTracker = (eventTrackingData?: EventTrackingData) => {
 
       const swipeTrackingParameters = {
         optimizelyParameters: {
-          optimizely,
-          sendOptimizelyEvents,
-          experimentVariant,
           componentName,
         },
         reverbParameters: {
@@ -72,11 +63,6 @@ const getComponentSwipeTracker = (eventTrackingData?: EventTrackingData) => {
           useReverb,
           ...(groupTracker && { groupTracker }),
           ...(itemTracker && { itemTracker }),
-          ...(experimentVariant &&
-            experimentVariant !== 'off' && {
-              experimentName,
-              experimentVariant,
-            }),
         },
         trackingFlags: {
           trackingIsEnabled,
@@ -86,7 +72,7 @@ const getComponentSwipeTracker = (eventTrackingData?: EventTrackingData) => {
 
       await dispatchTrackingRequests(swipeTrackingParameters);
     },
-    [eventTrackingContext, optimizely, service, trackingIsEnabled, useReverb],
+    [eventTrackingContext, service, trackingIsEnabled, useReverb],
   );
 
   return swipeTracker;

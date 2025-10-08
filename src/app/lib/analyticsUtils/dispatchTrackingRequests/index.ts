@@ -3,11 +3,13 @@ import { OptimizelyContextInterface } from '@optimizely/react-sdk/dist/Context';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { sendEventBeacon } from '../../../components/ATIAnalytics/beacon';
 
-type OptimizelyParameters = Pick<OptimizelyContextInterface, 'optimizely'> &
-  Pick<
-    EventTrackingData,
-    'sendOptimizelyEvents' | 'experimentVariant' | 'componentName'
-  >;
+type OptimizelyParameters =
+  | (Pick<OptimizelyContextInterface, 'optimizely'> &
+      Pick<
+        EventTrackingData,
+        'sendOptimizelyEvents' | 'experimentVariant' | 'componentName'
+      >)
+  | undefined;
 
 type RequiredEventProps = Pick<
   EventTrackingData,
@@ -22,7 +24,7 @@ type RequiredEventProps = Pick<
 > & { trackingIsEnabled: boolean; eventSent?: boolean; alwaysInView?: boolean };
 
 type ViewTrackerRequestsParameters = {
-  optimizelyParameters: OptimizelyParameters;
+  optimizelyParameters?: OptimizelyParameters;
   reverbParameters: EventTrackingData;
   trackingFlags: {
     trackingIsEnabled: boolean;
