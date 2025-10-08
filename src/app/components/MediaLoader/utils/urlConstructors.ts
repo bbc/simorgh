@@ -14,7 +14,12 @@ type FuncProps = {
   lang?: string;
 };
 
-export const getAmpIframeUrl = ({ id, versionPID, lang }: FuncProps) => {
+export const getAmpIframeUrl = ({
+  id,
+  parentPID,
+  versionPID,
+  lang,
+}: FuncProps) => {
   if (!id) return null;
 
   const { platform, service, variant, assetId } = parseRoute(id);
@@ -26,7 +31,7 @@ export const getAmpIframeUrl = ({ id, versionPID, lang }: FuncProps) => {
   }
 
   if (platform === 'articles') {
-    return `${ampBaseUrl}/ws/av-embeds/articles/${assetId}${versionPID ? `/${versionPID}` : ''}${lang ? `/${lang}` : ''}/amp`;
+    return `${ampBaseUrl}/ws/av-embeds/articles/${assetId}${parentPID ? `/${parentPID}` : ''}${lang ? `/${lang}` : ''}/amp`;
   }
 
   return null;
