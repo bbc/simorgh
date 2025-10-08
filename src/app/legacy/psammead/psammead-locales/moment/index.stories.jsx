@@ -7,15 +7,17 @@ import {
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
 import { GEL_FF_REITH_SANS } from '#psammead/gel-foundations/src/typography';
-import { ServiceContext } from '#app/contexts/ServiceContext';
-import services from '../../../../../../src/server/utilities/serviceConfigs';
-import PromoTimestamp from '../../../components/Promo/timestamp';
-import ArticleTimestamp from '../../../containers/ArticleTimestamp';
-import MostReadTimestamp from '../../../../components/MostRead/Canonical/LastUpdated';
+import {
+  ServiceContext,
+  ServiceContextProvider,
+} from '#app/contexts/ServiceContext';
+import services from '#src/server/utilities/serviceConfigs';
+import PromoTimestamp from '#components/Promo/timestamp';
+import ArticleTimestamp from '#containers/ArticleTimestamp';
+import MostReadTimestamp from '#src/app/components/MostRead/Canonical/LastUpdated';
 
 import notes from '../README.md';
-import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
-import WithTimeMachine from '../../../../../testHelpers/withTimeMachine';
+import WithTimeMachine from '#src/testHelpers/withTimeMachine';
 
 const ws = services.ws.default;
 
