@@ -16,7 +16,7 @@ const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
     activeExperiments: ['newswb_ws_read_more_b'],
   },
   {
-    // EXPERIMENT: Read Time for homepages
+    // EXPERIMENT: Homepage Time of Day Adaptive Curations
     pageType: HOME_PAGE,
     activeExperiments: ['newswb_ws_tod_homepage'],
   },
