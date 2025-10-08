@@ -7,4 +7,5 @@ export type ServiceParametersType = {
   path?: string;
   isAmp?: boolean;
   otherVariant?: Variants;
+  headers?: Record<string, string>;
 };

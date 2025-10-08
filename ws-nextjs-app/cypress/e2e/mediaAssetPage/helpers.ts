@@ -1,6 +1,6 @@
 import paths from 'ramda/src/paths';
-import { LanguagesPageProps } from '#nextjs/pages/ws/types';
 import { ArticleContent } from '#app/models/types/optimo';
+import { LanguagesPageProps } from '../../../pages/ws/types';
 import envConfig, { EnvironmentConfigType } from '../../support/config/envs';
 
 export const hasMedia = (pageData: LanguagesPageProps['pageData']) => {

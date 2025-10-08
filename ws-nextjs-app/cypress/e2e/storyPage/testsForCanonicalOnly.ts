@@ -1,15 +1,13 @@
 /* eslint-disable cypress/no-unnecessary-waiting */
 import path from 'ramda/src/path';
-import { ServiceParametersType } from '#nextjs/cypress/types';
 import { OptimoBlock } from '#app/models/types/optimo';
+import { ServiceParametersType } from '../../types';
 import runCanonicalAdsTests from '../../support/helpers/adsTests/testsForCanonicalOnly';
 import { crossPlatform as mostReadAssertions } from '../assertions/crossPlatformAssertion';
+import skipOnLocal from '../../support/helpers/skipOnLocal';
 
 export default ({ service, pageType, variant }: ServiceParametersType) => {
   describe(`Canonical Tests for ${service} ${pageType}`, () => {
-    const skipOnLocal =
-      Cypress.env('APP_ENV') !== 'local' ? describe : describe.skip;
-
     skipOnLocal(
       `Include initialisation only on Mundo on specific page for ${service}`,
       {
