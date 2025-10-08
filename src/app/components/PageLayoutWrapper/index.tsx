@@ -120,7 +120,6 @@ const PageLayoutWrapper = ({
                     });
                 };
                 fontsForStorage.forEach(font => {
-                    console.log({font});
                     const storageKey = 'font-' + font.name;
                     let fontContents = localStorage.getItem(storageKey);
 
