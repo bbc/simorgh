@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import styled from '@emotion/styled';
 import { keyframes, css } from '@emotion/react';
 import { RequestContext } from '../../../../contexts/RequestContext';
@@ -45,7 +45,7 @@ export const Img = props => {
     ...otherProps
   } = props;
 
-  const { pageType } = useContext(RequestContext);
+  const { pageType } = use(RequestContext);
   return (
     <>
       {pageType === HOME_PAGE && (

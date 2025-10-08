@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 .emotion-1 {
@@ -240,7 +240,6 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 }
 
 .emotion-10 {
-  background-color: #FFFFFF;
   height: 165px;
 }
 
@@ -1086,7 +1085,9 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 }
 
 <div>
-  <noscript />
+  <noscript
+    id="analytics-noscript"
+  />
   <div>
     chartbeat
   </div>
@@ -1112,13 +1113,15 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
         Infos, musique et sports
       </p>
       <figure
-        class="emotion-9"
+        class="media-container emotion-9"
         data-e2e="media-loader__container"
       >
         <div
-          class="emotion-10"
+          class="media-player emotion-10"
           data-e2e="media-player"
-        />
+        >
+          <noscript />
+        </div>
       </figure>
     </div>
   </main>

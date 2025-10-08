@@ -11,8 +11,9 @@ import {
   articleDataPidgin,
   articleDataPidginWithAds,
   articleDataPidginWithByline,
-  articleDataPidginWithPV,
-  articleDataPortugueseWithPV,
+  articleDataRussianWithPVButNoWatchMomentsTranslation,
+  articleDataPortugueseWithPVNotUnderHeadline,
+  articleDataPortugueseWithPVUnderHeadline,
   promoSample,
   articlePglDataPidgin,
   articleStyDataPidgin,
@@ -41,7 +42,7 @@ import {
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ArticlePage from './ArticlePage';
 import ThemeProvider from '../../components/ThemeProvider';
-import ATIAnalytics from '../../components/ATIAnalytics';
+import * as ATIAnalytics from '../../components/ATIAnalytics';
 
 jest.mock('../../components/ThemeProvider');
 
@@ -49,13 +50,15 @@ jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });
-jest.mock('../../components/ATIAnalytics');
 
-jest.mock('#app/legacy/containers/OptimizelyArticleCompleteTracking');
-jest.mock('#app/legacy/containers/OptimizelyPageViewTracking');
+const atiAnalyticsSpy = jest.spyOn(ATIAnalytics, 'default');
+atiAnalyticsSpy.mockImplementation(() => <div>ATI Analytics</div>);
+
+jest.mock('#app/components/OptimizelyPageMetrics');
 
 jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
   default: jest.fn(),
 }));
 
@@ -76,6 +79,7 @@ type Props = {
   isApp?: boolean;
   promo?: boolean | null;
   isAmp?: boolean;
+  isLite?: boolean;
   id?: string | null;
 };
 
@@ -88,6 +92,7 @@ const Context = ({
   isApp = false,
   promo = null,
   isAmp = false,
+  isLite = false,
   id,
 }: PropsWithChildren<Props> = {}) => {
   const appInput = {
@@ -96,6 +101,7 @@ const Context = ({
     showAdsBasedOnLocation,
     isApp,
     isAmp,
+    isLite,
     id,
   };
 
@@ -130,14 +136,6 @@ beforeEach(() => {
 
 afterEach(() => {
   delete process.env.SIMORGH_ICHEF_BASE_URL;
-
-  (ATIAnalytics as jest.Mock).mockImplementation(
-    jest.requireActual('../../components/ATIAnalytics').default,
-  );
-});
-
-afterAll(() => {
-  (ATIAnalytics as jest.Mock).mockReset();
 });
 
 describe('Article Page', () => {
@@ -838,15 +836,13 @@ describe('Article Page', () => {
     });
 
     it('should add brandname to page title in atiAnalytics', async () => {
-      (ATIAnalytics as jest.Mock).mockImplementation(() => <div />);
-
       render(
         <Context service="pidgin">
           <ArticlePage pageData={articlePglDataPidgin} />
         </Context>,
       );
 
-      expect(ATIAnalytics).toHaveBeenLastCalledWith(
+      expect(atiAnalyticsSpy).toHaveBeenLastCalledWith(
         {
           atiData: {
             categoryName: null,
@@ -873,24 +869,25 @@ describe('Article Page', () => {
       );
 
       const helmetContent = Helmet.peek();
-      const schemaType = JSON.parse(helmetContent.scriptTags[1].innerHTML)[
-        '@graph'
-      ][0]['@type'];
+
+      const linkedData = helmetContent.scriptTags.find(
+        ({ type }) => type === 'application/ld+json',
+      ) || { innerHTML: '' };
+
+      const schemaType = JSON.parse(linkedData.innerHTML)['@graph'][0]['@type'];
 
       expect(schemaType).toEqual('Article');
     });
   });
   describe('when rendering an STY page', () => {
     it('should add brandname to page title in atiAnalytics', async () => {
-      (ATIAnalytics as jest.Mock).mockImplementation(() => <div />);
-
       render(
         <Context service="pidgin">
           <ArticlePage pageData={articleStyDataPidgin} />
         </Context>,
       );
 
-      expect(ATIAnalytics).toHaveBeenLastCalledWith(
+      expect(atiAnalyticsSpy).toHaveBeenLastCalledWith(
         {
           atiData: {
             categoryName: null,
@@ -912,21 +909,73 @@ describe('Article Page', () => {
 
   describe('when rendering an article page with a portrait video', () => {
     it.each`
-      pageData                       | service         | expected
-      ${articleDataPidginWithPV}     | ${'pidgin'}     | ${'Watch Moments'}
-      ${articleDataPortugueseWithPV} | ${'portuguese'} | ${'Assista'}
-    `(
-      `should render the $expected title with the MediaLoader component`,
-      ({ pageData, service, expected }) => {
-        render(
-          <Context service={service}>
-            <ArticlePage pageData={pageData} />
-          </Context>,
-        );
+      pageData                                                | service         | expected     | scenario
+      ${articleDataPortugueseWithPVNotUnderHeadline}          | ${'portuguese'} | ${'Assista'} | ${'should render the Watch Moments title because translation exists'}
+      ${articleDataRussianWithPVButNoWatchMomentsTranslation} | ${'russian'}    | ${undefined} | ${'should not render the Watch Moments title because no translation exists'}
+    `('$scenario', ({ pageData, service, expected }) => {
+      render(
+        <Context service={service}>
+          <ArticlePage pageData={pageData} />
+        </Context>,
+      );
 
-        const title = screen.queryByRole('strong');
+      const title = screen.queryByRole('strong');
+      if (expected) {
+        expect(title).toBeInTheDocument();
         expect(title?.textContent).toEqual(expected);
-      },
-    );
+      } else {
+        expect(title).not.toBeInTheDocument();
+      }
+    });
+
+    it('should not render the portrait video title when the portrait video is directly under a headline', () => {
+      render(
+        <Context service="portuguese">
+          <ArticlePage pageData={articleDataPortugueseWithPVUnderHeadline} />
+        </Context>,
+      );
+
+      const title = screen.queryByRole('strong');
+      expect(title).not.toBeInTheDocument();
+    });
+
+    // EXPERIMENT: Article Read Time
+    it.skip('should render read time component when readTime is supplied in metadata', () => {
+      const dataWithReadTime = {
+        ...articleDataPidgin,
+        metadata: {
+          ...articleDataPidgin.metadata,
+          stats: {
+            readTime: 5,
+            wordCount: 500,
+          },
+        },
+      };
+      const { queryByTestId } = render(
+        <Context service="pidgin">
+          <ArticlePage pageData={dataWithReadTime} />
+        </Context>,
+      );
+
+      expect(queryByTestId('read-time')).toBeInTheDocument();
+    });
+
+    // EXPERIMENT: Article Read Time
+    it.skip('should not render read time component when readTime is not supplied in metadata', () => {
+      const dataMissingReadTime = {
+        ...articleDataPidgin,
+        metadata: {
+          ...articleDataPidgin.metadata,
+          stats: {},
+        },
+      };
+      const { queryByTestId } = render(
+        <Context service="pidgin">
+          <ArticlePage pageData={dataMissingReadTime} />
+        </Context>,
+      );
+
+      expect(queryByTestId('read-time')).not.toBeInTheDocument();
+    });
   });
 });

@@ -1,4 +1,4 @@
-const pidginPromos = [
+export const pidginPromos = [
   {
     title: 'Wetin happun for January 6 one year ago?',
     type: 'article',
@@ -163,4 +163,124 @@ const pidginPromos = [
   },
 ];
 
-export default pidginPromos;
+export const pidginPromosWithMedia = [
+  {
+    type: 'article',
+    isLive: false,
+    title:
+      'Fubara call for calm, NBA, PDP and odas tackle President Tinubu call for state of emergency for Rivers state',
+    firstPublished: '2025-03-19T07:07:12.709Z',
+    lastPublished: '2025-03-19T08:01:52.982Z',
+    link: 'https://www.bbc.com/pidgin/articles/cjrypw53rg4o',
+    imageUrl:
+      'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/12e2/live/17ba6a60-0490-11f0-aaf8-43ddac80c079.jpg.webp',
+    description:
+      'Reactions dey come in after Nigeria President Bola Tinubu declare a state of emergency for Rivers state and suspend di governor and oda elected officers.',
+    imageAlt: 'Siminalayi Fubara',
+    id: 'cjrypw53rg4o',
+  },
+  {
+    type: 'article',
+    isLive: false,
+    title:
+      'Who be Vice Admiral Ibok-Ete Ibas wey President Tinubu appoint Administrator of Rivers State?',
+    firstPublished: '2025-03-18T19:11:23.902Z',
+    lastPublished: '2025-03-18T19:11:23.902Z',
+    link: 'https://www.bbc.com/pidgin/articles/c5y082yr1zeo',
+    imageUrl:
+      'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/1ce9/live/fa4e6840-042c-11f0-94d4-6f954f5dcfa3.jpg.webp',
+    description:
+      'Ibok-Ete Ekwe Ibas join di Nigerian Defence Academy as a member of 26 Regular Course on 20 June 1979 and commissioned sub-lieutenant on 1 January 1983.',
+    imageAlt: 'Ibok-Ete Ekwe Ibas',
+    id: 'c5y082yr1zeo',
+  },
+  {
+    type: 'article',
+    isLive: false,
+    title:
+      'Wetin we know about di trans-Niger pipeline explosion for Rivers State',
+    firstPublished: '2025-03-18T16:08:20.474Z',
+    lastPublished: '2025-03-18T16:08:20.474Z',
+    link: 'https://www.bbc.com/pidgin/articles/ckg8pknwn3lo',
+    imageUrl:
+      'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a763/live/d5e4f3d0-0403-11f0-94d4-6f954f5dcfa3.jpg.webp',
+    description:
+      'Di Trans Niger Pipeline na major pipeline wey dey transports crude for Niger delta.',
+    imageAlt: 'Fire for Trans Niger Delta Pipeline',
+    id: 'ckg8pknwn3lo',
+  },
+  {
+    type: 'article',
+    isLive: false,
+    title: 'Nigeria House of Representatives pass Tinubu tax reform bills',
+    firstPublished: '2025-03-18T12:47:54.448Z',
+    lastPublished: '2025-03-18T12:47:54.448Z',
+    link: 'https://www.bbc.com/pidgin/articles/c89y3d13w3qo',
+    imageUrl:
+      'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a32e/live/2671c100-03f7-11f0-9bb2-ab6d3a01d537.jpg.webp',
+    description:
+      'Members of di House of Representatives pass di bills afta dem read am for di third time at plenary, wey Speaker Abbas Tajudeen preside ova.',
+    imageAlt: "Speaker of Nigeria's House of Representatives, Tajudeen Abbas\n",
+    id: 'c89y3d13w3qo',
+  },
+  {
+    type: 'article',
+    isLive: false,
+    title:
+      'Over 400 pipo die after Israel strike Gaza overnight, Hamas ministry tok',
+    firstPublished: '2025-03-18T11:12:53.693Z',
+    lastPublished: '2025-03-18T11:12:53.693Z',
+    link: 'https://www.bbc.com/pidgin/articles/cj92pv4z2kxo',
+    imageUrl:
+      'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/ec9d/live/e30126b0-03db-11f0-a387-437e2fb661fc.png.webp',
+    description:
+      'Di Israeli military don attack different location for Gaza Strip, wey dem hit targets for Gaza City, Rafah and Khan Younis.',
+    imageAlt: 'Di destruction from di airstrike',
+    id: 'cj92pv4z2kxo',
+  },
+  {
+    type: 'video',
+    duration: 'PT1M29S',
+    isLive: false,
+    title: 'Nigeria senate chamber be like "cult" - Natasha Akpoti-Uduaghan',
+    firstPublished: '2025-03-18T05:31:33.314Z',
+    lastPublished: '2025-03-18T10:06:56.157Z',
+    link: 'https://www.bbc.com/pidgin/articles/crmjpzy4vwlo',
+    imageUrl:
+      'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/85ea/live/a4fc9b30-0384-11f0-9bb2-ab6d3a01d537.jpg.webp',
+    description:
+      'Nigerian Senator Natasha Akpoti-Uduaghan allege say she experience sexual harassment involving di President of di Nigerian Senate, allegation wey e deny.',
+    imageAlt: 'Natasha Akpotu-Uduaghan',
+    id: 'crmjpzy4vwlo',
+  },
+  {
+    type: 'article',
+    isLive: false,
+    title:
+      'All allegations Rivers House of Assembly members sama Govnor Fubara and im deputy',
+    firstPublished: '2025-03-17T13:12:41.451Z',
+    lastPublished: '2025-03-17T13:12:41.451Z',
+    link: 'https://www.bbc.com/pidgin/articles/cm2j937261do',
+    imageUrl:
+      'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/21ff/live/64d16ce0-0332-11f0-9d83-c7f80f10afdc.jpg.webp',
+    description:
+      'During plenary on Monday 17 March 2025, di Rivers lawmakers resolve to transmit di letter containing claims of gross misconduct to Govnor Siminalayi Fubara and di deputy govnor.',
+    imageAlt: 'Martin Amaewhule and Governor Fubara',
+    id: 'cm2j937261do',
+  },
+  {
+    type: 'article',
+    isLive: false,
+    title:
+      "Youth Corper wey call Tinubu 'terrible president' break any law? - Wetin NYSC Bye-Law tok",
+    firstPublished: '2025-03-17T12:17:56.418Z',
+    lastPublished: '2025-03-17T12:17:56.418Z',
+    link: 'https://www.bbc.com/pidgin/articles/cgm1ekn44p1o',
+    imageUrl:
+      'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/2630/live/bee8f3e0-0320-11f0-8c3d-b7dcc7510cb1.jpg.webp',
+    description:
+      'One video wey serving corp member post wey condemn Nigerian President Bola Tinubu administration don generate conversation for Nigeria.',
+    imageAlt: 'NYSC corps members',
+    id: 'cgm1ekn44p1o',
+  },
+];

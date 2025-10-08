@@ -46,6 +46,24 @@ export const service: DefaultServiceConfig = {
     homePageTitle: 'Swahili',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'Whatsapp',
+      brandTitle: 'BBC Swahili sasa kwenye WhatsApp',
+      brandDescription:
+        'Pata habari za kina kutoka BBC News Swahili, moja kwa moja kupitia WhatsApp.',
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0ljr69d.png',
+        alt: 'BBC Swahili WhatsApp bofya kutufuatilia',
+      },
+      linkLabel: {
+        text: 'Bonyeza hapa kujiunga',
+        href: 'https://www.whatsapp.com/channel/0029Vaguu59FcowC5O1Nl01o',
+      },
+      skipLink: {
+        text: 'Hauhitaji %title%',
+        endTextVisuallyHidden: 'Mwisho wa %title%',
+      },
+    },
     translations: {
       pagination: {
         page: 'Ukurasa',
@@ -58,11 +76,25 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Tazama zote',
       home: 'Habari',
+      continueReading: 'Soma zaidi',
       currentPage: 'Ukurasa uliopo ',
       skipLinkText: 'Ruka hadi maelezo',
       relatedContent: 'Maelezo zaidi kuhusu taarifa hii',
       relatedTopics: 'Mada zinazohusiana',
+      moreOnThis: '',
       navMenuText: 'Yaliyomo',
+      liteSite: {
+        onboardingMessage:
+          'Hii ni tovuti ya maandishi pekee ambayo inatumia data kidogo. Tazama toleo kuu la tovuti likijumuisha picha na video zote.',
+        toMainSite: 'Bofya kuelekea tovuti kuu',
+        informationPage:
+          'Pata maelezo zaidi kuhusu toleo hili la linalotumia kiasi kidogo cha data',
+        informationPageLink:
+          'https://www.bbc.com/swahili/articles/cpw79gwzkv1o',
+        dataSaving: 'Usomaji maandishi tu kupunguza gharama za data',
+        articleDataSavingLinkText:
+          'Usomaji maandishi tu kupunguza gharama za data',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Kicheza Nyenzo',
         audioPlayer: 'Kicheza Sauti',
@@ -239,6 +271,8 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Kipindi kijacho cha redio',
         duration: 'Muda',
         recentEpisodes: 'Vipindi vilivyopita',
+        closeVideo: 'Funga',
+        endOfContentClose: 'Mwisho wa maudhui. Funga',
       },
       socialEmbed: {
         caption: {
@@ -295,7 +329,7 @@ export const service: DefaultServiceConfig = {
         text: 'Kwanini unaweza kuiamini BBC News',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Soma kuhusu mtazamo wetu wa viambatanishi vya nje.',
       },
       links: [
@@ -339,6 +373,10 @@ export const service: DefaultServiceConfig = {
         url: '/swahili',
       },
       {
+        title: 'Uchaguzi Tanzania',
+        url: '/swahili/topics/c5y9ng5gqert',
+      },
+      {
         title: 'Michezo',
         url: '/swahili/topics/ckdxndddjkxt',
       },
@@ -357,10 +395,12 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Video',
         url: '/swahili/topics/cz40xlzvj6kt',
+        hideOnLiteSite: true,
       },
       {
         title: 'Vipindi vya Redio',
         url: '/swahili/topics/ckrdle3133xt',
+        hideOnLiteSite: true,
       },
     ],
   },

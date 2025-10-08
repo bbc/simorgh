@@ -1,8 +1,10 @@
-import React, { useContext } from 'react';
+/** @jsx jsx */
+/* @jsxFrag React.Fragment */
+import React, { use } from 'react';
+import { jsx } from '@emotion/react';
 import path from 'ramda/src/path';
 import is from 'ramda/src/is';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import Grid, { GelPageGrid } from '#components/Grid';
 import StyledRadioHeadingContainer from '#containers/OnDemandHeading/StyledRadioHeadingContainer';
 import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
 import EpisodeImage from '#containers/OnDemandImage';
@@ -27,38 +29,6 @@ import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
-
-const getGroups = (
-  zero: number | boolean,
-  one: number | boolean,
-  two: number | boolean,
-  three: number | boolean,
-  four: number | boolean,
-  five: number | boolean,
-) => ({
-  group0: zero,
-  group1: one,
-  group2: two,
-  group3: three,
-  group4: four,
-  group5: five,
-});
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const PageGrid = ({ children }: any) => (
-  // @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags
-  <GelPageGrid columns={getGroups(6, 6, 6, 6, 8, 20)} enableGelGutters>
-    {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
-    <Grid
-      item
-      startOffset={getGroups(1, 1, 1, 1, 2, 5)}
-      columns={getGroups(6, 6, 6, 6, 6, 12)}
-      margins={getGroups(true, true, true, true, false, false)}
-    >
-      {children}
-    </Grid>
-  </GelPageGrid>
-);
 
 export interface OnDemandAudioProps {
   pageData: {
@@ -122,8 +92,7 @@ const OnDemandAudioPage = ({
 
   const pageType = path(['metadata', 'type'], pageData);
 
-  const { dir, serviceName } = useContext(ServiceContext);
-  const oppDir = dir === 'rtl' ? 'ltr' : 'rtl';
+  const { serviceName } = use(ServiceContext);
 
   const hasRecentEpisodes = recentEpisodes && Boolean(recentEpisodes.length);
   const metadataTitle = episodeTitle
@@ -157,104 +126,85 @@ const OnDemandAudioPage = ({
         {...metadataImageProps}
         hasAmpPage={false}
       />
-      {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
-      <GelPageGrid
-        as="main"
-        role="main"
-        columns={getGroups(6, 6, 6, 6, 8, 20)}
-        enableGelGutters
-      >
-        {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
-        <Grid
-          item
-          startOffset={getGroups(1, 1, 1, 1, 2, 5)}
-          columns={getGroups(6, 6, 6, 6, 6, 12)}
-          margins={getGroups(true, true, true, true, false, false)}
-        >
-          {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
-          <GelPageGrid
-            dir={oppDir}
-            columns={getGroups(6, 6, 6, 6, 6, 6)}
-            enableGelGutters
-            css={styles.wrapper}
-          >
-            {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
-            <Grid
-              item
-              columns={getGroups(6, 6, 4, 4, 4, 4)}
-              parentColumns={getGroups(6, 6, 6, 6, 6, 6)}
-              parentEnableGelGutters
-              css={styles.paragraph}
-            >
-              <StyledRadioHeadingContainer
-                // @ts-expect-error idAttr is a string
-                idAttr={idAttr}
-                brandTitle={brandTitle}
-                episodeTitle={episodeTitle}
-                releaseDateTimeStamp={releaseDateTimeStamp}
+      <div css={styles.grid}>
+        <div css={styles.contentWrapper}>
+          <main role="main">
+            <div css={styles.flexWrapper}>
+              <div css={styles.text}>
+                <StyledRadioHeadingContainer
+                  idAttr={idAttr}
+                  brandTitle={brandTitle}
+                  episodeTitle={episodeTitle}
+                  releaseDateTimeStamp={releaseDateTimeStamp}
+                />
+                <OnDemandParagraphContainer testid="summary" text={summary} />
+                {episodeTitle && (
+                  <FooterTimestamp
+                    releaseDateTimeStamp={releaseDateTimeStamp}
+                  />
+                )}
+              </div>
+              <EpisodeImage
+                imageUrl={imageUrl}
+                alt={imageAltText}
+                css={styles.image}
+                className="imageStyles"
               />
-              <OnDemandParagraphContainer testid="summary" text={summary} />
-              {episodeTitle && (
-                <FooterTimestamp releaseDateTimeStamp={releaseDateTimeStamp} />
-              )}
-            </Grid>
-            {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
-            <Grid
-              item
-              columns={getGroups(0, 0, 2, 2, 2, 2)}
-              parentColumns={getGroups(6, 6, 6, 6, 6, 6)}
-              parentEnableGelGutters
-              css={styles.image}
-            >
-              <EpisodeImage imageUrl={imageUrl} alt={imageAltText} />
-            </Grid>
-          </GelPageGrid>
-          {mediaIsAvailable ? (
-            <MediaLoader blocks={pageData?.mediaBlocks} />
-          ) : (
-            //  @ts-expect-error allow rendering of MediaError component when media is not available
-            <MediaError skin="audio" />
-          )}
+            </div>
+            {mediaIsAvailable ? (
+              <MediaLoader blocks={pageData?.mediaBlocks} />
+            ) : (
+              //  @ts-expect-error allow rendering of MediaError component when media is not available
+              <MediaError skin="audio" />
+            )}
 
-          <LinkedData
-            type="WebPage"
-            seoTitle={metadataTitle}
-            entities={
-              mediaIsAvailable
-                ? [
-                    {
-                      '@type': 'AudioObject',
-                      name: promoBrandTitle,
-                      description: shortSynopsis,
-                      thumbnailUrl: thumbnailImageUrl,
-                      duration: durationISO8601,
-                      uploadDate: new Date(releaseDateTimeStamp).toISOString(),
-                    },
-                  ]
-                : []
-            }
-          />
-        </Grid>
-      </GelPageGrid>
-      {isPodcast && (
-        <PageGrid>
-          <PodcastExternalLinks links={externalLinks} brandTitle={brandTitle} />
-        </PageGrid>
-      )}
-      {hasRecentEpisodes && (
-        <PageGrid>
-          <RecentAudioEpisodes
-            masterBrand={masterBrand}
-            episodes={recentEpisodes}
-            brandId={brandId}
-            pageType={pageType}
-          />
-        </PageGrid>
-      )}
+            <LinkedData
+              type="WebPage"
+              seoTitle={metadataTitle}
+              entities={
+                mediaIsAvailable
+                  ? [
+                      {
+                        '@type': 'AudioObject',
+                        name: promoBrandTitle,
+                        description: shortSynopsis,
+                        thumbnailUrl: thumbnailImageUrl,
+                        duration: durationISO8601,
+                        uploadDate: new Date(
+                          releaseDateTimeStamp,
+                        ).toISOString(),
+                      },
+                    ]
+                  : []
+              }
+            />
+          </main>
+
+          {isPodcast && (
+            <div css={styles.aside}>
+              <PodcastExternalLinks
+                links={externalLinks}
+                brandTitle={brandTitle}
+              />
+            </div>
+          )}
+          {hasRecentEpisodes && (
+            <div css={styles.aside}>
+              <RecentAudioEpisodes
+                masterBrand={masterBrand}
+                episodes={recentEpisodes}
+                brandId={brandId}
+                pageType={pageType}
+              />
+            </div>
+          )}
+        </div>
+      </div>
       {radioScheduleData && (
         <RadioScheduleContainer
           initialData={radioScheduleData}
           toggleName="onDemandRadioSchedule"
+          eventTrackingData={{ componentName: 'radio-schedule' }}
         />
       )}
     </>

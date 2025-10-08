@@ -1,8 +1,11 @@
 import React from 'react';
 import { fireEvent } from '@testing-library/dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import { render } from '../../../components/react-testing-library-with-providers';
+import { ARTICLE_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  render,
+  act,
+} from '../../../components/react-testing-library-with-providers';
 import {
   ServiceContextProvider,
   ServiceContext,
@@ -11,10 +14,6 @@ import { service as newsConfig } from '../../../lib/config/services/news';
 import Navigation from './index';
 import * as viewTracking from '../../../hooks/useViewTracker';
 import * as clickTracking from '../../../hooks/useClickTrackerHandler';
-import {
-  mostReadBlocks,
-  topStoriesBlocks,
-} from '../../components/ScrollablePromo/helpers/fixtureData';
 
 describe('Navigation Container', () => {
   it('should correctly render amp navigation', () => {
@@ -207,43 +206,6 @@ describe('Navigation Container', () => {
     expect(queryAllByText(mockNavigation[0].title)[0]).toBeVisible();
   });
 
-  it.each`
-    description                              | blocks              | experimentVariant        | shouldRender
-    ${'render Scrollable Promo Top Stories'} | ${topStoriesBlocks} | ${'top_bar_top_stories'} | ${true}
-    ${'render Scrollable Promo Most Read'}   | ${mostReadBlocks}   | ${'top_bar_most_read'}   | ${true}
-    ${'not render Scrollable Promo'}         | ${mostReadBlocks}   | ${'off'}                 | ${false}
-    ${'not render Scrollable Promo'}         | ${mostReadBlocks}   | ${null}                  | ${false}
-  `(
-    'should $description when experiment variant is $experimentVariant',
-    ({ blocks, experimentVariant, shouldRender }) => {
-      const propsForOJExperiment = {
-        blocks,
-        experimentVariant,
-      };
-      const { container } = render(
-        <Navigation propsForOJExperiment={propsForOJExperiment} />,
-        {
-          bbcOrigin: 'https://www.test.bbc.co.uk',
-          id: 'c0000000000o',
-          isAmp: false,
-          pageType: ARTICLE_PAGE,
-          service: 'news',
-          statusCode: 200,
-          pathname: '/news',
-        },
-      );
-      if (shouldRender) {
-        expect(
-          container.querySelector('[class*="ScrollablePromoContainer"]'),
-        ).toBeInTheDocument();
-      } else {
-        expect(
-          container.querySelector('[class*="ScrollablePromoContainer"]'),
-        ).not.toBeInTheDocument();
-      }
-    },
-  );
-
   describe('View and click tracking', () => {
     const scrollEventTrackingData = {
       componentName: 'scrollable-navigation',
@@ -303,6 +265,55 @@ describe('Navigation Container', () => {
       fireEvent.click(container);
 
       expect(container.onclick).toBeTruthy();
+    });
+  });
+
+  describe('Language Navigation', () => {
+    const originalEnv = process.env.SIMORGH_APP_ENV;
+
+    beforeEach(() => {
+      process.env.SIMORGH_APP_ENV = 'test';
+    });
+
+    afterEach(() => {
+      process.env.SIMORGH_APP_ENV = originalEnv;
+    });
+
+    it('should render LanguageNavigation for WS service in non-live environment', async () => {
+      const { getByTestId } = await act(async () =>
+        render(<Navigation />, {
+          bbcOrigin: 'https://www.test.bbc.co.uk',
+          id: 'c0000000000o',
+          isAmp: false,
+          pageType: HOME_PAGE,
+          service: 'ws',
+          statusCode: 200,
+          pathname: '/ws/languages',
+        }),
+      );
+
+      expect(getByTestId('collapsible-nav')).toBeInTheDocument();
+    });
+
+    it('should render standard navigation for WS service in live environment', async () => {
+      process.env.SIMORGH_APP_ENV = 'live';
+
+      const { container, queryByText } = await act(async () =>
+        render(<Navigation />, {
+          bbcOrigin: 'https://www.test.bbc.co.uk',
+          id: 'c0000000000o',
+          isAmp: false,
+          pageType: HOME_PAGE,
+          service: 'ws',
+          statusCode: 200,
+          pathname: '/ws/languages',
+        }),
+      );
+
+      expect(
+        container.querySelector('div[data-e2e="scrollable-nav"]'),
+      ).toBeInTheDocument();
+      expect(queryByText('collapsible-nav')).not.toBeInTheDocument();
     });
   });
 });

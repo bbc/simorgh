@@ -87,6 +87,65 @@
         "title": "Top Stories",
         "visualProminence": "HIGH",
         "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "صفحه زنده حنیف",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/persian/live/cg611x6m4d0mt",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/00af/test/fd5a36d0-2f03-11ef-b253-5daa34f0b803.jpg.webp",
+            "description": "برای امتحان برای امتحان برای امتحان برای امتحان برای امتحان برای امتحان برای امتحان برای امتحان برای امتحان برای امتحان برای امتحان برای امتحان برای امتحان برای امتحان برای امتحان برای امتحان برای امتحان برای امتحان برای امتحان برای امتحان برای امتحان برای امتحان برای امتحان",
+            "imageAlt": "مکه",
+            "id": "cg611x6m4d0mt"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "گسترش درگیری نظامی اسرائیل و حزب‌الله",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/persian/live/cxg29915757lt",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/341c/test/d19162c0-1622-11ef-abd7-95a9f1a42287.png.webp",
+            "description": "عبدالله بو حبیب، وزیر خارجه لبنان گفته است که کشورش از گسترش عملیات نظامی اسرائیل علیه حزب‌الله می‌ترسد. حزب‌الله لبنان و اسرائیل از هفت ماه پیش و پس حمله حماس، در طول مرز با  یکدیگر درگیر شده‌اند.",
+            "imageAlt": "ytyt",
+            "id": "cxg29915757lt"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "واکنش اتحادیه اروپا به اعدام و سرکوب معترضان در ایران",
+            "firstPublished": "2023-07-12T13:59:48.943Z",
+            "lastPublished": "2023-07-12T13:59:48.943Z",
+            "link": "https://www.bbc.com/persian/articles/c3kr439dnzgo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/5eef/test/334864d0-f8a8-11ed-9bd3-b1ae82702c11.jpg.webp",
+            "description": "اتحادیه اروپا روز دوشنبه یکم خرداد در تازه‌ترین اقدام در ارتباط با نقض «جدی» حقوق بشر در ایران از جمله سرکوب «خشونت‌بار» اعتراضات دانشجویی در پاییز ۱۴۰۱، هشتمین بستۀ تحریمی خود را علیه پنج مقام و دو نهاد جمهوری اسلامی به تصویب رساند.",
+            "imageAlt": "زط",
+            "id": "c3kr439dnzgo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "مولوی عبدالحمید به رهبران جمهوری اسلامی: نمی‌توانید فریاد زنان را خاموش کنید  ",
+            "firstPublished": "2023-07-12T13:58:52.043Z",
+            "lastPublished": "2023-07-12T13:58:52.043Z",
+            "link": "https://www.bbc.com/persian/articles/czm0vwkr0p6o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/6cbc/test/c6e521d0-0c56-11ee-a81d-07e4fe474984.jpg.webp",
+            "imageAlt": "مولوی عبدالحمید ",
+            "id": "czm0vwkr0p6o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:c9b24e64-2271-4ec0-a985-71f85efa2677",
+        "curationType": "tipo-curation",
+        "position": 3,
+        "title": "پوشش ویژه",
+        "visualProminence": "MAXIMUM",
+        "visualStyle": "BANNER"
       }
     ],
     "metadata": {

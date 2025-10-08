@@ -1,9 +1,8 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { createSrcsets } from '#lib/utilities/srcSet';
 import buildIChefURL from '#lib/utilities/ichefURL';
 import Image from '#app/components/Image';
 import { Recommendation } from '#models/types/onwardJourney';
-import { RequestContext } from '#app/contexts/RequestContext';
 
 const RecommendationsImage = ({
   image,
@@ -12,8 +11,6 @@ const RecommendationsImage = ({
   image?: Recommendation['image'] | null;
   lazyLoad?: boolean;
 }) => {
-  const { isAmp } = useContext(RequestContext);
-
   if (!image) return null;
 
   const { height, width, altText, copyrightHolder, originCode, locator } =
@@ -35,7 +32,6 @@ const RecommendationsImage = ({
 
   return (
     <Image
-      isAmp={isAmp}
       alt={altText}
       aspectRatio={[width, height]}
       src={src}

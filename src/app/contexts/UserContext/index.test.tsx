@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { render } from '@testing-library/react';
 import Cookie from 'js-cookie';
 import * as onClient from '#app/lib/utilities/onClient';
@@ -6,13 +6,12 @@ import * as isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import setCookie from '#app/lib/utilities/setCookie';
 import { UserContext, UserContextProvider } from '.';
 import { getCookiePolicy, personalisationEnabled } from './cookies';
-import * as chartbeat from './Chartbeat';
 
 jest.mock('react', () => {
   const original = jest.requireActual('react');
   return {
     ...original,
-    useContext: jest.fn().mockImplementation(original.useContext),
+    use: jest.fn().mockImplementation(original.use),
   };
 });
 
@@ -21,14 +20,8 @@ jest.mock('./cookies', () => ({
   personalisationEnabled: jest.fn(),
 }));
 
-jest.mock('./Chartbeat');
-
-const mockChartbeat = (chartbeat.default as jest.Mock).mockReturnValue(
-  'chartbeat',
-);
-
 const DummyComponent = () => {
-  useContext(UserContext);
+  use(UserContext);
   return null;
 };
 
@@ -49,26 +42,19 @@ describe('UserContext', () => {
     jest.clearAllMocks();
   });
 
-  it('should provide cookie values, state function and render chartbeat', () => {
+  it('should provide cookie values and state function', () => {
     render(<DummyComponentWithContext />);
 
     expect(personalisationEnabled).toHaveBeenCalledWith('111');
 
-    expect(React.useContext).toHaveBeenCalledTimes(1);
-    expect(React.useContext).toHaveReturnedWith({
+    expect(React.use).toHaveBeenCalledTimes(1);
+    expect(React.use).toHaveReturnedWith({
       cookiePolicy: '111',
       personalisationEnabled: true,
       updateCookiePolicy: expect.any(Function),
-      sendCanonicalChartbeatBeacon: expect.any(Function),
     });
-    expect(mockChartbeat).toHaveBeenCalledTimes(1);
-    expect(mockChartbeat).toHaveBeenCalledWith(
-      {
-        config: null,
-      },
-      undefined,
-    );
   });
+
   describe('ckns_mvt cookie', () => {
     const cookieSetterSpy = jest.spyOn(Cookie, 'set');
     const cookieGetterSpy = jest.spyOn(Cookie, 'get');

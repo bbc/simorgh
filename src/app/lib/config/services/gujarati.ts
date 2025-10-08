@@ -46,6 +46,24 @@ export const service: DefaultServiceConfig = {
     homePageTitle: 'સમાચાર',
     showAdPlaceholder: false,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'Whatsapp',
+      brandTitle: 'બીબીસી ન્યૂઝ ગુજરાતી હવે વૉટ્સઍપ પર',
+      brandDescription:
+        'તમારા કામની સ્ટોરીઓ અને મહત્ત્વના સમાચારો હવે સીધા જ તમારા મોબાઇલમાં વૉટ્સઍપમાંથી વાંચો',
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0lgrrs2.png',
+        alt: 'હવામાન સમાચાર જાણવા અમને WhatsApp પર ફૉલો કરો',
+      },
+      linkLabel: {
+        text: 'વૉટ્સઍપ ચેનલ સાથે જોડાવ',
+        href: 'https://www.whatsapp.com/channel/0029VaawoDgC1Fu6slfo4f0R',
+      },
+      skipLink: {
+        text: 'બદલો %title%',
+        endTextVisuallyHidden: '%title% કન્ટેન્ટ પૂર્ણ',
+      },
+    },
     translations: {
       pagination: {
         previousPage: 'આ પહેલાં',
@@ -57,10 +75,12 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'વધુ વાંચો',
       home: 'સમાચાર',
+      continueReading: 'આગળ વાંચો',
       currentPage: 'વર્તમાન પેજ',
       skipLinkText: 'કન્ટેન્ટ પર જાવ',
       relatedContent: 'સંબંધિત સમાચાર',
       relatedTopics: 'સંબંધિત મુદ્દા',
+      moreOnThis: '',
       navMenuText: 'વિભાગો',
       mediaAssetPage: {
         mediaPlayer: 'મીડિયા પ્લેયર',
@@ -234,8 +254,11 @@ export const service: DefaultServiceConfig = {
         previousRadioShow: 'આ પહેલાંનો રેડિયો શો',
         nextRadioShow: 'આગામી રેડિયો શો',
         duration: 'અવધિ',
+        podcastExternalLinks: 'આ પૉડકાસ્ટ આ પ્લેટફૉર્મ્સ પર પણ ઉપલબ્ધ છે',
+        download: 'ડાઉનલોડકરો',
         recentEpisodes: 'તાજેતરનાં એપિસોડ્સ',
         closeVideo: 'બહાર નીકળો',
+        endOfContentClose: 'આ કન્ટેન્ટનો અંત. બહાર નીકળો',
       },
       socialEmbed: {
         caption: {
@@ -292,7 +315,7 @@ export const service: DefaultServiceConfig = {
         text: 'બીબીસી વિશ્વાસપાત્ર કેમ?',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'બહારની વેબસાઇટ્સની લિંક આપવા અંગેની અમારી નીતિ વિશે વાંચો',
       },
       links: [

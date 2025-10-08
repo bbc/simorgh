@@ -1,5 +1,4 @@
-import { ReactSDKClient } from '@optimizely/react-sdk';
-
+// Types consolidated into ATIAnalytics/types.ts. Use EventTrackingData everywhere.
 export type ReverbClient = {
   isReady: () => boolean;
   initialise: () => Promise<void>;
@@ -12,8 +11,8 @@ export type EventTrackingMetadata = {
   detailedPlacement?: string;
   campaignID?: string;
   advertiserID?: string;
-  optimizely?: ReactSDKClient | null;
-  optimizelyMetricNameOverride?: string;
+  sendOptimizelyEvents?: boolean;
+  alwaysInView?: boolean;
 };
 
 export type EventTrackingBlock = {

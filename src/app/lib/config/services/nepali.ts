@@ -62,7 +62,19 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'सामग्रीमा जानुहोस्',
       relatedContent: 'सम्बन्धित सामग्री',
       relatedTopics: 'सम्बन्धित सामग्री',
+      moreOnThis: '',
       navMenuText: 'सूची',
+      liteSite: {
+        onboardingMessage:
+          'तपाईँ अहिले हाम्रो वेबसाइटको थोरै डेटा प्रयोग हुने ‘टेक्स्ट-ओन्ली’ साइटमा हुनुहुन्छ। सबै तस्बिर र भिडिओसहित मूल वेबसाइटमा जान यहाँ क्लिक गर्नुहोस्।',
+        toMainSite: 'मूल वेबसाइट तथा पूरा संस्करणमा जानुहोस्।',
+        informationPage:
+          'हाम्रो वेबसाइटको थोरै डेटा प्रयोग हुने संस्करणबारे थप जान्नुहोस्।',
+        informationPageLink: 'https://www.bbc.com/nepali/articles/c3w44py8q72o',
+        dataSaving: 'थोरै डेटा खपत गर्ने गरी पढ्न मिल्ने संस्करण हेर्नुहोस्।',
+        articleDataSavingLinkText:
+          'थोरै डेटा खपत गर्ने गरी पढ्न मिल्ने संस्करण हेर्नुहोस्।',
+      },
       mediaAssetPage: {
         mediaPlayer: 'मिडिया प्लेअर',
         audioPlayer: 'अडिओ प्लेअर',
@@ -232,6 +244,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'यो पडकास्ट सुन्नकालागि यहाँ उपलब्ध छ',
         download: 'एपिसोड डाउनलोड',
         closeVideo: 'बाहिरिनुहोस्',
+        endOfContentClose: 'यस सामग्रीको अन्त्य। बाहिरिनुहोस्',
       },
       socialEmbed: {
         caption: {
@@ -289,7 +302,7 @@ export const service: DefaultServiceConfig = {
         text: 'बीबीसीको विश्वसनीयता',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'बाह्य वेबसाइटको लिङ्क प्रयोग सम्बन्धमा हाम्रो नीति पढ्नुहोस्।',
       },
       links: [

@@ -3,6 +3,7 @@ import latinScript from '../fontScripts/latin';
 import helmetFontVariants from '../fontVariants/helmet';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/hausa';
+import getPWATypographyTheme from './getPWATypographyTheme';
 
 const hausaTheme = {
   palette: {
@@ -20,4 +21,4 @@ const hausaTheme = {
   brandSVG,
 };
 
-export default withThemeProvider(hausaTheme);
+export default withThemeProvider(hausaTheme, getPWATypographyTheme());

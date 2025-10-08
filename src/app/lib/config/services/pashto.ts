@@ -64,7 +64,19 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'مطلب ته ورشئ',
       relatedContent: 'ورته مطالب',
       relatedTopics: 'اړونده مطالب',
+      moreOnThis: '',
       navMenuText: 'برخې',
+      liteSite: {
+        onboardingMessage:
+          'تاسې د وېب‌سایټ داسې بڼه ګورئ چې یوازې متن لري او لږ انټرنېټ کاروي. که غواړئ عکسونه او ویډیوګانې وګورئ، نو د وېب‌سایټ اصلي (لومړنۍ) بڼې ته ورشئ.',
+        toMainSite: 'د وېب‌سایټ اصلي بڼې ته مې وروله',
+        informationPage:
+          'د وېب‌سایټ دې بڼې په اړه چې ډېر انټرنېټ نه مصرفوي نور معلومات دلته موندلای شئ.',
+        informationPageLink: 'https://www.bbc.com/pashto/articles/ce9vxxy2zkpo',
+        dataSaving: 'دې لپاره چې انټرنېټ مو لږ مصرف شي، یوازې متن ولولئ',
+        articleDataSavingLinkText:
+          'دې لپاره چې انټرنېټ مو لږ مصرف شي، یوازې متن ولولئ',
+      },
       mediaAssetPage: {
         mediaPlayer: 'میډیا پلیئر',
         audioPlayer: 'اډیو پلیئر',
@@ -243,6 +255,7 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'راتلونکې راډیویي خپرونه',
         duration: 'موده',
         closeVideo: 'وتل',
+        endOfContentClose: 'د دې منځپانګې پای. وتل',
       },
       socialEmbed: {
         caption: {
@@ -303,7 +316,7 @@ export const service: DefaultServiceConfig = {
         text: 'ولې تاسې پر بي بي سي خبرونو باور کولی شئ',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره.',
       },
       links: [
@@ -381,6 +394,7 @@ export const service: DefaultServiceConfig = {
       {
         title: 'راډیویي خپرونې',
         url: '/pashto/topics/c9xz1ekw79nt',
+        hideOnLiteSite: true,
       },
     ],
   },

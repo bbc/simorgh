@@ -1,23 +1,22 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable react-hooks/rules-of-hooks */
-import { useContext, useEffect, useState, useRef } from 'react';
-
+import { use, useEffect, useState, useRef, useCallback } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
+import { OptimizelyContext } from '@optimizely/react-sdk';
 import {
-  LITE_ATI_VIEW_TRACKING,
+  STATIC_ATI_VIEW_TRACKING,
   VIEW_EVENT,
 } from '#app/lib/analyticsUtils/analytics.const';
-import constructLiteSiteATIEventTrackUrl from '#src/server/utilities/liteATITracking/constructATIUrl';
+import constructStaticATIUrl from '#app/lib/analyticsUtils/staticATITracking/constructATIUrl';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
-import { sendEventBeacon } from '../../components/ATIAnalytics/beacon';
 import useTrackingToggle from '../useTrackingToggle';
-import OPTIMIZELY_CONFIG from '../../lib/config/optimizely';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import dispatchTrackingRequests from './dispatchTrackingRequests';
+import getIntersectionObserver from './getIntersectionObserver';
 
 const VIEWED_DURATION_MS = 1000;
-const MIN_VIEWED_PERCENT = 0.5;
 
 const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
   const {
@@ -32,86 +31,41 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     statsDestination,
     campaignID,
     detailedPlacement,
-    optimizely,
-    optimizelyMetricNameOverride,
+    sendOptimizelyEvents,
+    experimentName,
+    experimentVariant,
+    groupTracker,
+    itemTracker,
+    viewThreshold,
+    alwaysInView = false,
   } = extractATITrackingProps({
     eventTrackingData,
     eventType: VIEW_EVENT,
   });
 
+  const { optimizely } = use(OptimizelyContext);
+
   const observer = useRef(null);
   const timer = useRef(null);
-  const [isInView, setIsInView] = useState(false);
+  const [componentHasComeIntoView, setComponentHasComeIntoView] =
+    useState(alwaysInView);
   const [eventSent, setEventSent] = useState(false);
   const { trackingIsEnabled } = useTrackingToggle(componentName);
 
-  const { service, useReverb } = useContext(ServiceContext);
-
-  const initObserver = async () => {
-    if (typeof window.IntersectionObserver === 'undefined') {
-      // Polyfill IntersectionObserver, e.g. for IE11
-      await import('intersection-observer');
-    }
-
-    const callback = (elements: IntersectionObserverEntry[]) => {
-      const someElementsAreInView = elements.some(
-        element => element.isIntersecting,
-      );
-
-      setIsInView(someElementsAreInView);
-    };
-
-    const options = {
-      threshold: [MIN_VIEWED_PERCENT],
-    };
-
-    // @ts-expect-error current element won't be null
-    observer.current = new IntersectionObserver(callback, options);
-  };
+  const { service, useReverb } = use(ServiceContext);
 
   useEffect(() => {
-    if (isInView && !timer.current) {
+    if (componentHasComeIntoView && !timer.current) {
       // @ts-expect-error timer ref won't be null
       timer.current = setTimeout(() => {
-        const hasRequiredProps = [
-          campaignID,
-          componentName,
-          pageIdentifier,
-          platform,
-          producerId,
-          producerName,
-          service,
-          statsDestination,
-        ].every(Boolean);
-
-        const shouldSendEvent = [
-          hasRequiredProps,
-          trackingIsEnabled,
-          !eventSent,
-        ].every(Boolean);
-
-        if (shouldSendEvent) {
-          if (optimizely) {
-            const eventName = OPTIMIZELY_CONFIG.viewClickAttributeId;
-
-            const overrideAttributes = {
-              ...optimizely.user.attributes,
-              [`viewed_${eventName}`]: true,
-            };
-
-            optimizely.track(
-              optimizelyMetricNameOverride
-                ? `${optimizelyMetricNameOverride}_views`
-                : 'component_views',
-              optimizely.user.id as string,
-              overrideAttributes,
-            );
-          }
-
-          const optimizelyVariation =
-            optimizely?.getVariation(OPTIMIZELY_CONFIG.ruleKey) || null;
-
-          sendEventBeacon({
+        dispatchTrackingRequests({
+          optimizelyParameters: {
+            optimizely,
+            sendOptimizelyEvents,
+            experimentVariant,
+            componentName,
+          },
+          reverbParameters: {
             campaignID,
             componentName,
             format,
@@ -126,16 +80,29 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
             url,
             detailedPlacement,
             useReverb,
-            ...(optimizelyVariation &&
-              optimizelyVariation !== 'off' && {
-                experimentVariant: optimizelyVariation,
+            ...(groupTracker && { groupTracker }),
+            ...(itemTracker && { itemTracker }),
+            ...(experimentVariant &&
+              experimentVariant !== 'off' && {
+                experimentName,
+                experimentVariant,
               }),
-          });
+          },
+          trackingFlags: {
+            trackingIsEnabled,
+            eventSent,
+            alwaysInView,
+          },
+        });
+
+        if (!alwaysInView) {
           setEventSent(true);
+
           (observer.current as unknown as IntersectionObserver)?.disconnect();
           observer.current = null;
-          timer.current = null;
         }
+
+        timer.current = null;
       }, VIEWED_DURATION_MS);
     } else {
       // @ts-expect-error current timer will not be null
@@ -151,7 +118,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     campaignID,
     componentName,
     format,
-    isInView,
+    componentHasComeIntoView,
     pageIdentifier,
     platform,
     producerId,
@@ -162,34 +129,52 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     eventSent,
     advertiserID,
     url,
+    sendOptimizelyEvents,
     optimizely,
-    optimizelyMetricNameOverride,
+    experimentName,
+    experimentVariant,
     detailedPlacement,
     useReverb,
+    itemTracker,
+    groupTracker,
+    alwaysInView,
   ]);
 
-  return async (element: HTMLElement) => {
-    if (!element || !trackingIsEnabled || eventSent) {
-      return;
-    }
-    if (!observer.current) {
-      await initObserver();
-    }
+  const viewTracker = useCallback(
+    async (element: HTMLElement) => {
+      const shouldSetupIntersectionObserver = alwaysInView
+        ? false
+        : !(!element || !trackingIsEnabled || eventSent);
 
-    (observer.current as unknown as IntersectionObserver)?.observe(element);
-  };
+      if (shouldSetupIntersectionObserver) {
+        if (!observer.current) {
+          // @ts-expect-error current element won't be null
+          observer.current = await getIntersectionObserver({
+            threshold: viewThreshold,
+            componentViewStateSetter: setComponentHasComeIntoView,
+          });
+        }
+        (observer.current as unknown as IntersectionObserver)?.observe(element);
+      }
+    },
+    [trackingIsEnabled, eventSent, viewThreshold, alwaysInView],
+  );
+
+  return viewTracker;
 };
 
 export default (eventTrackingData?: EventTrackingData): any => {
-  const { isLite } = useContext(RequestContext);
+  const { isLite } = use(RequestContext);
+
   const viewTracker = getComponentViewTracker(eventTrackingData);
-  const liteATIUrl = constructLiteSiteATIEventTrackUrl({
+
+  const staticATIUrl = constructStaticATIUrl({
     eventTrackingData,
     eventType: VIEW_EVENT,
   });
 
   return isLite
-    ? { [LITE_ATI_VIEW_TRACKING]: liteATIUrl }
+    ? { [STATIC_ATI_VIEW_TRACKING]: staticATIUrl }
     : {
         ref: viewTracker,
       };

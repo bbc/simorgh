@@ -52,7 +52,7 @@ describe('withContexts HOC', () => {
         enabled: false,
       },
     },
-    mvtExperiments: [{ experimentName: 'foo', variation: 'bar' }],
+    serverSideExperiments: [{ experimentName: 'foo', variation: 'bar' }],
     isUK: true,
   };
 
@@ -109,7 +109,7 @@ describe('withContexts HOC', () => {
               enabled: false,
             },
           },
-          mvtExperiments: [{ experimentName: 'foo', variation: 'bar' }],
+          serverSideExperiments: [{ experimentName: 'foo', variation: 'bar' }],
         };
         await act(async () => render(<ContextsHOC {...fixture} />));
         expect(requestContextSpy).toHaveBeenCalled();
@@ -145,7 +145,7 @@ describe('withContexts HOC', () => {
             enabled: false,
           },
         },
-        mvtExperiments: [{ experimentName: 'foo', variation: 'bar' }],
+        serverSideExperiments: [{ experimentName: 'foo', variation: 'bar' }],
       };
 
       await act(async () => render(<ContextsHOC {...fixture} />));
@@ -286,7 +286,7 @@ describe('withContexts HOC', () => {
               enabled: false,
             },
           },
-          mvtExperiments: [{ experimentName: 'foo', variation: 'bar' }],
+          serverSideExperiments: [{ experimentName: 'foo', variation: 'bar' }],
         };
 
         await act(async () => render(<ContextsHOC {...fixture} />));

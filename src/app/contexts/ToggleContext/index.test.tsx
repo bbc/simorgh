@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, useContext } from 'react';
+import React, { PropsWithChildren, use } from 'react';
 import { render, act } from '@testing-library/react';
 import { queryByText } from '@testing-library/dom';
 import { Toggles } from '../../models/types/global';
@@ -17,7 +17,7 @@ type Props = {
 };
 
 const TestComponent = ({ toggle, children }: PropsWithChildren<Props>) => {
-  const { toggleState } = useContext(ToggleContext);
+  const { toggleState } = use(ToggleContext);
   // @ts-expect-error - mocking a fake toggle
   const toggleIsEnabled = !!toggleState[toggle as Toggles]?.enabled;
   if (!toggleIsEnabled) {

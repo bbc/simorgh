@@ -1,14 +1,15 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import CanonicalATIAnalytics from './canonical';
 import AmpATIAnalytics from './amp';
+import AmpGeo from '../../legacy/components/AmpGeo';
 import { ATIProps } from './types';
 import { buildATIUrl, buildReverbParams } from './params';
 
 const ATIAnalytics = ({ atiData = {} }: ATIProps) => {
-  const requestContext = useContext(RequestContext);
-  const serviceContext = useContext(ServiceContext);
+  const requestContext = use(RequestContext);
+  const serviceContext = use(ServiceContext);
   const { isAmp } = requestContext;
   const { useReverb } = serviceContext;
 
@@ -31,7 +32,13 @@ const ATIAnalytics = ({ atiData = {} }: ATIProps) => {
   }
 
   return isAmp ? (
-    <AmpATIAnalytics pageviewParams={urlPageViewParams} />
+    <>
+      <AmpGeo />
+      <AmpATIAnalytics
+        pageviewParams={urlPageViewParams}
+        reverbParams={reverbParams}
+      />
+    </>
   ) : (
     <CanonicalATIAnalytics
       pageviewParams={urlPageViewParams}

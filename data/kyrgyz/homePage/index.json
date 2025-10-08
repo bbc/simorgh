@@ -9,34 +9,10 @@
           {
             "type": "link",
             "isLive": false,
-            "title": "100 women_group 0&1&2&3",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=10",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/fc68/test/de0a79e0-40b9-11ee-ab8d-9d4cf3ebd5e5.png.webp",
-            "description": "this is the description property",
-            "imageAlt": "bbc",
-            "id": "https%3A%2F%2Fwww.bbc.com%2Fkyrgyz%2Fbbc_kyrgyz_tv%2Ftv_programmes%2Fw13xttqx%3Flimit%3D4"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:83477d70-3b69-4187-b187-1f0febb250d8",
-        "curationType": "tipo-curation",
-        "position": 0,
-        "title": "100 women_group 0&1&2&3",
-        "visualProminence": "MAXIMUM",
-        "visualStyle": "BANNER"
-      },
-      {
-        "summaries": [
-          {
-            "type": "link",
-            "isLive": false,
             "title": "Test promo overtype URL",
             "firstPublished": "",
             "lastPublished": "",
-            "link": "https://www.bbc.com/sounds/play/live:bbc_sounds_mundo",
+            "link": "https://www.bbc.com/kyrgyz",
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
             "id": "https%3A%2F%2Fwww.bbc.co.uk%2Fsounds%2Fplay%2Flive%3Abbc_sounds_news"
           },
@@ -46,7 +22,7 @@
             "title": "Overtyped headline",
             "firstPublished": "",
             "lastPublished": "",
-            "link": "https://www.bbc.com/send/pepe",
+            "link": "https://www.bbc.com/kyrgyz",
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
             "id": "https%3A%2F%2Fwww.bbc.co.uk%2Fsend%2Fu188759689"
           },
@@ -68,7 +44,7 @@
             "title": "Weather video overtyped",
             "firstPublished": "2023-01-06T08:36:03.306Z",
             "lastPublished": "2023-03-28T13:53:21.841Z",
-            "link": "https://www.bbc.com/weather/videos/cxvdd15r56do",
+            "link": "https://www.bbc.com/kyrgyz",
             "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/acdd/test/57453f80-c129-11ee-9cfe-dd6b961b2ea5.jpg.webp",
             "description": "Overtyped summary",
             "imageAlt": "Mountains",
@@ -115,7 +91,7 @@
             "title": "Overtype PID Headline",
             "firstPublished": "",
             "lastPublished": "2022-10-29T19:00:00.000Z",
-            "link": "https://www.bbc.com/sounds/play/m001dmln",
+            "link": "https://www.bbc.com/kyrgyz",
             "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/7bd5/test/aba7b010-c1bc-11ee-9cfe-dd6b961b2ea5.png.webp",
             "description": "Actor Florence Pugh talks to John Wilson about her career and formative influences.",
             "imageAlt": "Overtyped promo desc.",
@@ -156,10 +132,10 @@
           {
             "type": "article",
             "isLive": false,
-            "title": "Little A﻿bby Goes Crazy!",
+            "title": "Little Abby Goes Crazy!",
             "firstPublished": "2022-10-28T13:56:14.723Z",
             "lastPublished": "2023-06-20T06:11:44.857Z",
-            "link": "https://www.bbc.com/articles/cem4313m1ldo",
+            "link": "https://www.bbc.com/kyrgyz/articles/cem4313m1ldo",
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/d021/test/ce1dd100-0b6f-11ee-add0-c7c64fc8119c.jpg.webp",
             "description": "Stuff goes here",
             "imageAlt": "Cenotaph",
@@ -170,7 +146,7 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:991081c1-6b45-4631-9b3e-cb6767319192",
         "curationType": "tipo-curation",
-        "position": 1,
+        "position": 0,
         "title": "Testing Something",
         "visualProminence": "HIGH",
         "visualStyle": "COLLECTION",
@@ -199,6 +175,31 @@
           }
         ]
       },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "100 women_group 0&1&2&3",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=10",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/fc68/test/de0a79e0-40b9-11ee-ab8d-9d4cf3ebd5e5.png.webp",
+            "description": "this is the description property",
+            "imageAlt": "bbc",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fkyrgyz%2Fbbc_kyrgyz_tv%2Ftv_programmes%2Fw13xttqx%3Flimit%3D4"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:83477d70-3b69-4187-b187-1f0febb250d8",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "100 women_group 0&1&2&3",
+        "visualProminence": "MAXIMUM",
+        "visualStyle": "BANNER"
+      },
+
       {
         "summaries": [
           {
@@ -327,7 +328,7 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:524cf34b-cac2-4ce2-ac64-53eb70019202",
         "curationType": "tipo-curation",
-        "position": 3,
+        "position": 1,
         "title": "Редактордун тандоосу",
         "visualProminence": "HIGH",
         "visualStyle": "COLLECTION"
@@ -436,7 +437,7 @@
         "link": "https://www.bbc.com/kyrgyz/topics/cz74kjpyk07t",
         "curationId": "urn:bbc:tipo:list:4991ab89-0967-4653-9760-f3e133896a46",
         "curationType": "tipo-curation",
-        "position": 4,
+        "position": 2,
         "title": "Кыргызстан",
         "visualProminence": "NORMAL",
         "visualStyle": "COLLECTION"
@@ -545,7 +546,7 @@
         "link": "https://www.bbc.com/kyrgyz/topics/ck2l9z012nkt",
         "curationId": "urn:bbc:tipo:list:d4ec3c0c-1aa7-445e-9ef2-59d341b41038",
         "curationType": "tipo-curation",
-        "position": 5,
+        "position": 3,
         "title": "Дүйнө",
         "visualProminence": "NORMAL",
         "visualStyle": "COLLECTION"
@@ -570,7 +571,7 @@
         "link": "https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4",
         "curationId": "urn:bbc:tipo:list:d296b66f-a9d7-4a2f-bea4-7a9d253368c5",
         "curationType": "tipo-curation",
-        "position": 6,
+        "position": 4,
         "title": "Би-Би-Си ТВ жаңылыктары",
         "visualProminence": "NORMAL",
         "visualStyle": "BANNER"
@@ -594,7 +595,7 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:20425623-94ec-4a37-9401-630da2dba9de",
         "curationType": "tipo-curation",
-        "position": 7,
+        "position": 5,
         "title": "Minimum curation test",
         "visualProminence": "NORMAL",
         "visualStyle": "NONE"
@@ -631,7 +632,7 @@
         "link": "https://www.bbc.com/kyrgyz/topics/czp8pjrkgp0t",
         "curationId": "urn:bbc:tipo:list:1bd01bb2-78c3-4189-8961-2c5395d1ee13",
         "curationType": "tipo-curation",
-        "position": 8,
+        "position": 6,
         "title": "Журнал",
         "visualProminence": "HIGH",
         "visualStyle": "NONE"
@@ -687,7 +688,7 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:04e600ed-76ff-4c71-be9f-86fac52bf8c0",
         "curationType": "tipo-curation",
-        "position": 9,
+        "position": 7,
         "title": "Useful links",
         "visualProminence": "NORMAL",
         "visualStyle": "COLLECTION"
@@ -711,7 +712,7 @@
         "link": "https://www.bbc.com/punjabi/articles/cn37pkelzrpo",
         "curationId": "urn:bbc:tipo:list:95aa88fb-eb83-42bc-b3de-6c51e52b4d62",
         "curationType": "tipo-curation",
-        "position": 10,
+        "position": 8,
         "title": "Message banner 2 - hay festival_group 4.png",
         "visualProminence": "NORMAL",
         "visualStyle": "BANNER"
@@ -747,7 +748,7 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:e547697b-26f9-45d4-9146-477dd8a6ee9e",
         "curationType": "tipo-curation",
-        "position": 11,
+        "position": 9,
         "title": "hay festival_group 0&1&2&3",
         "visualProminence": "MAXIMUM",
         "visualStyle": "BANNER"
@@ -771,7 +772,7 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:f8ab8a50-0c24-411b-ba91-ac31a60e583d",
         "curationType": "tipo-curation",
-        "position": 12,
+        "position": 10,
         "title": "radio_group 0&1&2&3",
         "visualProminence": "MAXIMUM",
         "visualStyle": "BANNER"
@@ -794,7 +795,7 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:b42365ef-1ee6-49ff-af7e-7eff7472e315",
         "curationType": "tipo-curation",
-        "position": 13,
+        "position": 11,
         "title": "BBC News Kyrgyz - lite version",
         "visualProminence": "NORMAL",
         "visualStyle": "BANNER"
@@ -817,7 +818,7 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:0b2d4c54-954f-49cb-bde7-1cc364431287",
         "curationType": "tipo-curation",
-        "position": 14,
+        "position": 12,
         "title": "100 women_group 4",
         "visualProminence": "NORMAL",
         "visualStyle": "BANNER"
@@ -839,7 +840,7 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:f124f62b-496c-49b9-9df4-ee57a313732c",
         "curationType": "tipo-curation",
-        "position": 15,
+        "position": 13,
         "title": "Curation with Flourish",
         "visualProminence": "NORMAL",
         "visualStyle": "NONE"
@@ -852,7 +853,7 @@
             "title": "Title of the page",
             "firstPublished": "",
             "lastPublished": "",
-            "link": "https://www.bbc.com/",
+            "link": "https://www.bbc.com/kyrgyz",
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/73e5/test/959c2380-ec2f-11ee-9173-83ca10832ce2.jpg.webp",
             "description": "Summary / description",
             "imageAlt": "The description of the image",
@@ -873,7 +874,7 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:e42ffdab-652b-4c77-87c8-fbbb38b4cc2b",
         "curationType": "tipo-curation",
-        "position": 16,
+        "position": 14,
         "title": "Curation with Include",
         "visualProminence": "NORMAL",
         "visualStyle": "NONE"
@@ -881,7 +882,7 @@
       {
         "curationId": "urn:bbc:onward-journeys:most:read?=site=News",
         "curationType": "most-popular",
-        "position": 17,
+        "position": 15,
         "title": "Most Read",
         "visualProminence": "NORMAL",
         "visualStyle": "RANKED",
@@ -1012,7 +1013,7 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:30934ac9-baec-44b4-bd80-738622667d8d",
         "curationType": "tipo-curation",
-        "position": 18,
+        "position": 16,
         "title": "Curation with Live Promo",
         "visualProminence": "NORMAL",
         "visualStyle": "NONE"
@@ -1064,10 +1065,47 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:b016ab49-c95c-4129-9a06-c28fac463064",
         "curationType": "tipo-curation",
-        "position": 19,
+        "position": 17,
         "title": "Hierarchical Curation with Live Promos",
         "visualProminence": "HIGH",
         "visualStyle": "NONE"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Mitocin da muke watsa shirye-shiryenmu",
+            "firstPublished": "2023-12-08T18:50:55.425Z",
+            "lastPublished": "2023-12-08T18:50:55.425Z",
+            "link": "https://www.bbc.com/hausa/articles/cpvpg2e6130o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/fc08/live/f53400e0-95fb-11ee-b60d-058748ad2fb8.jpg.webp",
+            "description": "Sashen Hausa na BBC na watsa shirye-shirye guda huɗu a kowace rana, na tsawon minti talatin-talatin cikin harshen Hausa.",
+            "imageAlt": "...",
+            "id": "cpvpg2e6130o",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Abokan hulɗar BBC Hausa",
+            "firstPublished": "2023-12-08T18:57:22.367Z",
+            "lastPublished": "2023-12-08T18:57:22.367Z",
+            "link": "https://www.bbc.com/hausa/articles/c2l2e8px0l3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a8e4/live/834c9c30-95fb-11ee-b60d-058748ad2fb8.jpg.webp",
+            "imageAlt": "...",
+            "id": "c2l2e8px0l3o",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:ec7bfe5e-1caa-4465-9a9a-1ff411b5398c",
+        "curationType": "tipo-curation",
+        "position": 18,
+        "title": "Domin ma'abota BBC",
+        "visualProminence": "LOW",
+        "visualStyle": "LINKS"
       }
     ],
     "metadata": {

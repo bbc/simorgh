@@ -2,7 +2,7 @@ import React, {
   createContext,
   FormEvent,
   PropsWithChildren,
-  useContext,
+  use,
   useState,
 } from 'react';
 
@@ -251,5 +251,5 @@ export const FormContextProvider = ({
 };
 
 export function useFormContext() {
-  return useContext(FormContext);
+  return use(FormContext);
 }

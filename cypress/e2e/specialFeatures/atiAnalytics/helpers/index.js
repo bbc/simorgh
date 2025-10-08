@@ -10,6 +10,8 @@ export const ATI_PAGE_VIEW = 'ati-page-view';
 
 export const ATI_PAGE_VIEW_REVERB = 'ati-page-view-reverb';
 
+export const ATI_USER_ID_COOKIE = 'atuserid-cookie-value';
+
 const SCROLLABLE_NAVIGATION = 'scrollable-navigation';
 const DROPDOWN_NAVIGATION = 'dropdown-navigation';
 const TOP_STORIES = 'top-stories';
@@ -20,7 +22,7 @@ const MESSAGE_BANNER = 'message-banner';
 const RELATED_CONTENT = 'related-content';
 const RELATED_TOPICS = 'topics';
 const PODCAST_PROMO = 'promo-podcast';
-const LITE_SITE_CTA = 'lite-site-cta';
+const LITE_SITE_SUMMARY = 'lite-site-summary';
 const ARTICLE_LITE_SITE_LINK = 'article-lite-site-link';
 const RECENT_AUDIO_EPISODES = 'episodes-audio';
 const PODCAST_LINKS = 'third-party';
@@ -31,6 +33,8 @@ const BILLBOARD = 'billboard';
 const SOCIAL_EMBED = 'social-consent-banner';
 const LIVE_MEDIA = 'live-header-media';
 const SHARE = 'asset:';
+const PORTRAIT_VIDEO_CAROUSEL = 'portrait-video-carousel';
+const PORTRAIT_VIDEO_MODAL = 'portrait-video-modal';
 
 export const COMPONENTS = {
   ARTICLE_LITE_SITE_LINK,
@@ -38,7 +42,7 @@ export const COMPONENTS = {
   DROPDOWN_NAVIGATION,
   FEATURES,
   LATEST_MEDIA,
-  LITE_SITE_CTA,
+  LITE_SITE_SUMMARY,
   LIVE_MEDIA,
   MESSAGE_BANNER,
   MOST_READ,
@@ -54,18 +58,21 @@ export const COMPONENTS = {
   SHARE,
   SOCIAL_EMBED,
   TOP_STORIES,
+  PORTRAIT_VIDEO_CAROUSEL,
+  PORTRAIT_VIDEO_MODAL,
 };
 
 export const interceptATIAnalyticsBeacons = () => {
   const atiUrl = new URL(envs.atiUrl).origin;
 
-  // Component Views
+  // Component Views & Clicks - Click Per View Model
   Object.values(COMPONENTS).forEach(component => {
     const viewClickEventRegex = new RegExp(
       `PUB-\\[(.*)?\\]-\\[${component}(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]`,
       'g',
     );
 
+    // Component Views
     cy.intercept(
       {
         url: `${atiUrl}/*`,
@@ -90,6 +97,45 @@ export const interceptATIAnalyticsBeacons = () => {
         request.reply({ statusCode: 200 });
       },
     ).as(`${component}-ati-click`);
+  });
+
+  // Component Views & Clicks - Viewability Model
+  Object.values(COMPONENTS).forEach(component => {
+    const viewabilityViewRegex = new RegExp(
+      `\\[\\{"name":"viewability\\.view","data":\\{(?:.*)?"event":\\{"category":"viewability","action":"view"\\}(?:.*)?"item":\\{(?:.*)?"name":"${component}(.*)?"(?:.*)?\\}\\}\\}\\]`,
+      'g',
+    );
+
+    const viewabilityClickRegex = new RegExp(
+      `\\[\\{"name":"viewability\\.select","data":\\{(?:.*)?"event":\\{"category":"viewability","action":"select"\\}(?:.*)?"item":\\{(?:.*)?"name":"${component}(.*)?"(?:.*)?\\}\\}\\}\\]`,
+      'g',
+    );
+
+    // Component Views
+    cy.intercept(
+      {
+        url: `${atiUrl}/*`,
+        query: {
+          events: viewabilityViewRegex,
+        },
+      },
+      request => {
+        request.reply({ statusCode: 200 });
+      },
+    ).as(`${component}-viewability-view`);
+
+    // Component Clicks
+    cy.intercept(
+      {
+        url: `${atiUrl}/*`,
+        query: {
+          events: viewabilityClickRegex,
+        },
+      },
+      request => {
+        request.reply({ statusCode: 200 });
+      },
+    ).as(`${component}-viewability-click`);
   });
 
   // NOT REVERB - Page View (only fires once per page visit)
@@ -119,19 +165,51 @@ export const interceptATIAnalyticsBeacons = () => {
   ).as(`${ATI_PAGE_VIEW_REVERB}`);
 };
 
-export const getPathWithSuffix = ({ path, suffix = '' }) => {
-  const { pathname, search } = new URL(`https://www.bbc.com${path}`);
-
-  return `${pathname}${suffix}${search}`;
+export const setUserIDCookie = () => {
+  cy.setCookie('atuserid', JSON.stringify({ val: ATI_USER_ID_COOKIE }));
 };
 
-export const runIfToggleEnabled = ({ service, toggleName, testContext }) => {
-  cy.getToggles(service);
+export const getExpectedAtiDestination = ({ service, applicationEnv }) => {
+  const publicServiceDestinationNames = {
+    news: 'NEWS_PS',
+    cymrufyw: 'NEWS_LANGUAGES_PS',
+    naidheachdan: 'NEWS_LANGUAGES_PS',
+    scotland: 'PS_HOMEPAGE',
+    newsround: 'NEWSROUND',
+    sport: 'SPORT_PS',
+  };
 
-  cy.fixture(`toggles/${service}.json`).then(toggles => {
-    const { enabled } = toggles[toggleName];
-    if (!enabled) {
-      testContext.skip();
-    }
-  });
+  const expectedAtiDestinationsForAmp = {
+    WS_NEWS_LANGUAGES: '598342',
+    WS_NEWS_LANGUAGES_TEST: '598343',
+    NEWS_PS:
+      // eslint-disable-next-line no-template-curly-in-string
+      '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598285, 598287)',
+    NEWS_PS_TEST:
+      // eslint-disable-next-line no-template-curly-in-string
+      '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598286, 598288)',
+    NEWS_LANGUAGES_PS:
+      // eslint-disable-next-line no-template-curly-in-string
+      '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598291, 598289)',
+    NEWS_LANGUAGES_PS_TEST:
+      // eslint-disable-next-line no-template-curly-in-string
+      '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598292, 598290)',
+    PS_HOMEPAGE: '598273',
+    PS_HOMEPAGE_TEST: '598274',
+    NEWSROUND: '598293',
+    NEWSROUND_TEST: '598294',
+    SPORT_PS:
+      // eslint-disable-next-line no-template-curly-in-string
+      '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598310, 598308)',
+    SPORT_PS_TEST:
+      // eslint-disable-next-line no-template-curly-in-string
+      '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598311, 598309)',
+  };
+
+  const destinationName =
+    publicServiceDestinationNames[service] ?? 'WS_NEWS_LANGUAGES';
+
+  return expectedAtiDestinationsForAmp[
+    applicationEnv === 'live' ? destinationName : `${destinationName}_TEST`
+  ];
 };

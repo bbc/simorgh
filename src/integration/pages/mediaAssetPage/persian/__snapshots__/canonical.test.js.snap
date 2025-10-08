@@ -1,17 +1,10 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Canonical Media Asset Page A11y I can see the skip to content link 1`] = `"مشاهده محتوا"`;
 
-exports[`Canonical Media Asset Page Analytics ATI tracking pixel excluding src 1`] = `
-<img
-  alt=""
-  height="1px"
-  style="position:absolute"
-  width="1px"
-/>
-`;
+exports[`Canonical Media Asset Page Analytics ATI tracking pixel excluding src 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" >"`;
 
-exports[`Canonical Media Asset Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/"`;
+exports[`Canonical Media Asset Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
 
 exports[`Canonical Media Asset Page Analytics ATI tracking pixel search params 1`] = `
 [
@@ -113,7 +106,7 @@ exports[`Canonical Media Asset Page Footer Anchors should match text and url 8`]
 exports[`Canonical Media Asset Page Footer Anchors should match text and url 9`] = `
 {
   "text": "سیاست ما درباره لینک دادن به سایت های دیگر.",
-  "url": "https://www.bbc.com/persian/institutional/2011/04/000001_links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
 }
 `;
 
@@ -132,8 +125,8 @@ exports[`Canonical Media Asset Page Header Navigation link should match text and
 
 exports[`Canonical Media Asset Page Header Navigation link should match text and url 2`] = `
 {
-  "text": "بحران خاورمیانه",
-  "url": "/persian/topics/cj31ldvmg1et",
+  "text": "جنگ اسرائیل-ایران",
+  "url": "/persian/topics/cwy6874zgpqt",
 }
 `;
 

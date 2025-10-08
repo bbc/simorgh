@@ -1,11 +1,32 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
 import getBrandedImage from '#lib/utilities/getBrandedImage';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import getAboutTagsContent from './getAboutTagsContent';
-import { LinkedDataProps } from './types';
+import { BylineLinkedData, LinkedDataProps } from './types';
+
+type OrgAuthor = {
+  noBylinesPolicy?: string | null | undefined;
+  '@type': string;
+  name: string;
+  logo: {
+    '@type': string;
+    width: number;
+    height: number;
+    url: string;
+  };
+};
+
+type AuthorStructure = {
+  image?: string;
+  sameAs?: string[];
+  '@type': string;
+  name: string | undefined;
+};
+
+type Author = AuthorStructure | AuthorStructure[];
 
 const LinkedData = ({
   showAuthor = false,
@@ -32,8 +53,8 @@ const LinkedData = ({
     service,
     languageName,
     lang,
-  } = useContext(ServiceContext);
-  const { canonicalNonUkLink } = useContext(RequestContext);
+  } = use(ServiceContext);
+  const { canonicalNonUkLink } = use(RequestContext);
   const IMG_TYPE = 'ImageObject';
   const ORG_TYPE = isTrustProjectParticipant
     ? 'NewsMediaOrganization'
@@ -111,12 +132,33 @@ const LinkedData = ({
 
   const hasByline = !!bylineLinkedData;
 
-  const { authorName, authorTopicUrl, twitterLink, authorImage, location } =
-    bylineLinkedData || {};
+  const places: string[] = [];
 
-  const sameAs = [authorTopicUrl, twitterLink].filter(Boolean);
+  const getAuthorTagging = (data: BylineLinkedData | null) => {
+    const { authorName, authorTopicUrl, twitterLink, authorImage, location } =
+      data || {};
 
-  const locationCreated = { '@place': location };
+    const sameAs = [authorTopicUrl, twitterLink].filter(
+      (link): link is string => Boolean(link),
+    );
+    if (location) {
+      if (!places.includes(location)) {
+        places.push(location);
+      }
+    }
+
+    return {
+      '@type': 'Person',
+      name: authorName,
+      ...(sameAs.length && { sameAs }),
+      ...(authorImage && { image: authorImage }),
+    };
+  };
+  const bylineAuthors = bylineLinkedData?.map(data => getAuthorTagging(data));
+
+  const locationCreated = {
+    '@place': places.length === 1 ? places[0] : places,
+  };
 
   const orgAuthor = {
     '@type': ORG_TYPE,
@@ -130,15 +172,11 @@ const LinkedData = ({
     ...(isTrustProjectParticipant && { noBylinesPolicy }),
   };
 
-  const bylineAuthor = {
-    '@type': 'Person',
-    name: authorName,
-    ...(sameAs.length && { sameAs }),
-    ...(authorImage && { image: authorImage }),
-  };
+  let author: OrgAuthor | Author = orgAuthor;
 
-  const author = hasByline ? bylineAuthor : orgAuthor;
-
+  if (hasByline && bylineAuthors && bylineAuthors.length > 0) {
+    author = bylineAuthors.length === 1 ? bylineAuthors[0] : bylineAuthors;
+  }
   const linkedData = {
     '@type': type,
     url: canonicalNonUkLink,
@@ -156,7 +194,7 @@ const LinkedData = ({
     ...(showAuthor && {
       author,
     }),
-    ...(hasByline && location && { locationCreated }),
+    ...(hasByline && places.length > 0 && { locationCreated }),
   };
 
   return (

@@ -62,74 +62,92 @@ describe('beacon', () => {
     });
 
     describe('Reverb', () => {
-      it('should call reverb userActionEvent exactly once for a view event', async () => {
-        await sendEventBeacon({
-          type: 'view',
-          service: 'news',
-          pageIdentifier: 'pageIdentifier',
-          producerName: 'producer',
-          statsDestination: 'statsDestination',
-          componentName: 'component',
-          campaignID: 'campaign1',
-          format: 'format',
-          advertiserID: 'advertiserID',
-          url: 'http://localhost',
-          detailedPlacement: 'detailedPlacement',
-          useReverb: true,
+      describe('Viewability Model', () => {
+        it('should call reverb userActionEvent exactly once for a view event', async () => {
+          await sendEventBeacon({
+            type: 'view',
+            service: 'news',
+            pageIdentifier: 'pageIdentifier',
+            producerName: 'producer',
+            statsDestination: 'statsDestination',
+            componentName: 'component',
+            campaignID: 'campaign1',
+            format: 'format',
+            advertiserID: 'advertiserID',
+            url: 'http://localhost',
+            detailedPlacement: 'detailedPlacement',
+            useReverb: true,
+          });
+          expect(sendBeaconSpy).toHaveBeenCalledTimes(1);
+
+          expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+
+          expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+            'viewability',
+            '',
+            {
+              item: {
+                attribution: 'advertiserID',
+                name: 'component',
+                link: 'http://localhost',
+              },
+              group: {
+                name: 'campaign1',
+                type: 'component',
+              },
+              event: {
+                category: 'viewability',
+                action: 'view',
+              },
+            },
+            undefined,
+            undefined,
+            false,
+          );
         });
-        expect(sendBeaconSpy).toHaveBeenCalledTimes(1);
 
-        expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+        it('should call reverb click event exactly once for a click event', async () => {
+          await sendEventBeacon({
+            type: 'click',
+            service: 'news',
+            pageIdentifier: 'pageIdentifier',
+            producerName: 'producer',
+            statsDestination: 'statsDestination',
+            componentName: 'component',
+            campaignID: 'campaign1',
+            format: 'format',
+            advertiserID: 'advertiserID',
+            url: 'http://localhost',
+            detailedPlacement: 'detailedPlacement',
+            useReverb: true,
+          });
+          expect(sendBeaconSpy).toHaveBeenCalledTimes(1);
 
-        expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
-          'impression',
-          'component',
-          {
-            container: 'campaign1',
-            attribute: 'component',
-            placement: 'pageIdentifier',
-            source: 'advertiserID',
-            result: 'http://localhost',
-          },
-          undefined,
-          undefined,
-          false,
-        );
-      });
+          expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
 
-      it('should call reverb click event exactly once for a click event', async () => {
-        await sendEventBeacon({
-          type: 'click',
-          service: 'news',
-          pageIdentifier: 'pageIdentifier',
-          producerName: 'producer',
-          statsDestination: 'statsDestination',
-          componentName: 'component',
-          campaignID: 'campaign1',
-          format: 'format',
-          advertiserID: 'advertiserID',
-          url: 'http://localhost',
-          detailedPlacement: 'detailedPlacement',
-          useReverb: true,
+          expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+            'viewability',
+            '',
+            {
+              item: {
+                attribution: 'advertiserID',
+                name: 'component',
+                link: 'http://localhost',
+              },
+              group: {
+                name: 'campaign1',
+                type: 'component',
+              },
+              event: {
+                category: 'viewability',
+                action: 'select',
+              },
+            },
+            undefined,
+            undefined,
+            true,
+          );
         });
-        expect(sendBeaconSpy).toHaveBeenCalledTimes(1);
-
-        expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
-
-        expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
-          'click',
-          'component',
-          {
-            container: 'campaign1',
-            attribute: 'component',
-            placement: 'pageIdentifier',
-            source: 'advertiserID',
-            result: 'http://localhost',
-          },
-          undefined,
-          undefined,
-          true,
-        );
       });
 
       it('should resolve reverbParams to null when Reverb is disabled for a service', () => {

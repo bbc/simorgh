@@ -57,10 +57,12 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'See everitin',
       home: 'Home',
+      continueReading: 'Kontinu to dey read',
       currentPage: 'Page where you dey',
       skipLinkText: 'Waka go wetin de inside',
       relatedContent: 'Another thing we de for inside dis tori',
       relatedTopics: 'Topics Wey Dem Resemble',
+      moreOnThis: '',
       navMenuText: 'Plenti seshon',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
@@ -225,6 +227,7 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
         closeVideo: 'Exit',
+        endOfContentClose: 'End of this content. Exit',
       },
       socialEmbed: {
         caption: {
@@ -315,7 +318,7 @@ export const service: DefaultServiceConfig = {
         text: 'Why you fit trust BBC News',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'De way wey we de take go external link.',
       },
       links: [

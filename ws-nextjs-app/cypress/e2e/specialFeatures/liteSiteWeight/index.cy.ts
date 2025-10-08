@@ -1,18 +1,18 @@
 /* eslint-disable import/no-relative-packages */
+import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import * as assertPageWeight from '../../../../../cypress/e2e/specialFeatures/liteSiteWeight/assertions/liteSiteWeight';
 import runTestsForPage from '../../../support/helpers/runTestsForPage';
 
 const testSuites = [
   {
-    path: '/urdu/live/c04z6x46l0vt.lite?renderer_env=live',
+    path: '/burmese/live/ckg19998pldt.lite',
     runforEnv: ['local'],
-    pageType: 'Live',
     tests: [assertPageWeight],
   },
 ];
 
 runTestsForPage({
-  testSuites: [...testSuites],
+  testSuites,
   testIsolation: true,
-  pageType: 'all',
+  pageType: LIVE_PAGE,
 });

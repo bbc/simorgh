@@ -5,7 +5,6 @@ module.exports = {
     'airbnb',
     'plugin:prettier/recommended',
     'plugin:jsx-a11y/recommended',
-    'plugin:cypress/recommended',
   ],
   env: {
     es6: true,
@@ -25,6 +24,7 @@ module.exports = {
   ignorePatterns: [
     '**/tz/**',
     'index.stories.jsx',
+    'index.stories.tsx',
     'index.amp.stories.jsx',
     '.storybook/**/*',
   ],
@@ -37,6 +37,22 @@ module.exports = {
     'import',
     'no-only-tests',
   ],
+  globals: {
+    cy: false,
+    Cypress: false,
+    expect: false,
+    assert: false,
+    chai: false,
+    before: false,
+    beforeEach: false,
+    after: false,
+    afterEach: false,
+    describe: false,
+    it: false,
+    context: false,
+    specify: false,
+    test: false,
+  },
   rules: {
     'react/prop-types': 'off',
     'react/forbid-foreign-prop-types': 'error',
@@ -79,6 +95,10 @@ module.exports = {
     'jsx-a11y/no-redundant-roles': 'off',
     'no-only-tests/no-only-tests': 'error',
     'no-unsafe-optional-chaining': 'error',
+    'cypress/no-assigning-return-values': 'error',
+    'cypress/no-unnecessary-waiting': 'error',
+    'cypress/no-async-tests': 'error',
+    'cypress/unsafe-to-chain-command': 'error',
   },
   settings: {
     'import/resolver': {

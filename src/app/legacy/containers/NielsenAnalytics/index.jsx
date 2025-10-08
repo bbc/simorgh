@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import AmpNielsenAnalytics from './Amp';
 
 const NielsenAnalytics = () => {
-  const { service, isAmp, pathname } = useContext(RequestContext);
+  const { service, isAmp, pathname } = use(RequestContext);
 
   // nielsenAnalytics toggle only set up as local toggle at the moment...
   const { enabled } = useToggle('nielsenAnalytics');

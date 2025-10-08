@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, use } from 'react';
 import styled from '@emotion/styled';
 import Navigation from '#psammead/psammead-navigation/src';
 import { ScrollableNavigation } from '#psammead/psammead-navigation/src/ScrollableNavigation';
@@ -9,8 +9,8 @@ import {
 import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
 import useMediaQuery from '#hooks/useMediaQuery';
 import { RequestContext } from '#app/contexts/RequestContext';
-import ScrollablePromo from '#components/ScrollablePromo';
-import isLiveEnv from '../../../lib/utilities/isLive';
+import TopBarOJs from '#app/components/TopBarOJs';
+import isLive from '#app/lib/utilities/isLive';
 
 const ScrollableWrapper = styled.div`
   position: relative;
@@ -18,17 +18,16 @@ const ScrollableWrapper = styled.div`
 const Divider = styled.div`
   position: absolute;
   width: calc(100vw - 0.8rem);
-  left: 0;
+  inset-inline-start: 0;
   @media (min-width: 1041px) {
     width: calc(100vw + 0.8rem);
-    left: calc(-1 * (100vw - 1014px) / 2);
+    inset-inline-start: calc(-1 * (100vw - 1014px) / 2);
   }
   &::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    right: 0;
-    left: -0.8rem;
+    inset-block-end: 0;
+    inset-inline: -0.8rem 0;
     width: calc(100% + 0.8rem);
     border-bottom: 0.0625rem solid ${props => props.theme.palette.GREY_3};
   }
@@ -44,9 +43,8 @@ const CanonicalNavigationContainer = ({
   scrollableListItems,
   dropdownListItems,
   blocks,
-  experimentVariant,
 }) => {
-  const { isLite } = useContext(RequestContext);
+  const { isLite } = use(RequestContext);
   const [isOpen, setIsOpen] = useState(false);
   useMediaQuery(`(max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX})`, event => {
     if (!event.matches) {
@@ -73,14 +71,7 @@ const CanonicalNavigationContainer = ({
       </ScrollableWrapper>
       <CanonicalDropdown isOpen={isOpen}>{dropdownListItems}</CanonicalDropdown>
       <Divider />
-      {isLiveEnv() === false &&
-        experimentVariant &&
-        experimentVariant !== 'off' && (
-          <ScrollablePromo
-            blocks={blocks}
-            experimentVariant={experimentVariant}
-          />
-        )}
+      {!isLive() && <TopBarOJs blocks={blocks} />}
     </Navigation>
   );
 };

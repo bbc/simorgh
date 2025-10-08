@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 .emotion-0 {
@@ -556,7 +556,9 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 }
 
 <div>
-  <noscript />
+  <noscript
+    id="analytics-noscript"
+  />
   <div>
     chartbeat
   </div>

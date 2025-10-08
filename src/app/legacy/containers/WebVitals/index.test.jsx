@@ -64,7 +64,7 @@ describe('WebVitals', () => {
       ${'sample rate override'}                      | ${{ featureToggle: true, personalisationEnabled: true, pageType: 'STY', sampleRate: 65 }} | ${{ enabled: true, reportParams: { pageType: 'WS-STY' }, reportingEndpoint: 'endpoint', sampleRate: 65 }}
     `(`$testDescription`, ({ testConfig, webVitalsParams }) => {
       render(<WebVitalsWithContext {...testConfig} />);
-      expect(useWebVitals).toBeCalledWith(webVitalsParams);
+      expect(useWebVitals).toHaveBeenCalledWith(webVitalsParams);
     });
 
     it('should log an error to the console if there is no page type data', () => {
@@ -79,7 +79,7 @@ describe('WebVitals', () => {
 
       render(<WebVitalsWithContext {...testConfig} />);
 
-      expect(useWebVitals).toBeCalledWith({
+      expect(useWebVitals).toHaveBeenCalledWith({
         enabled: true,
         reportingEndpoint: 'endpoint',
         sampleRate: 20,

@@ -207,7 +207,6 @@ describe('cspHeader', () => {
         'https://sb.scorecardresearch.com',
         'https://*.twimg.com',
         'https://*.twitter.com',
-        'https://*.wearehearken.eu',
         'https://*.webcontentassessor.com',
         'https://www.tiktok.com',
         'https://lf16-tiktok-web.ttwstatic.com',
@@ -381,7 +380,6 @@ describe('cspHeader', () => {
       ].sort(),
       scriptSrcExpectation: [
         ...bbcDomains,
-        'https://*.wearehearken.eu',
         'https://*.chartbeat.com',
         'http://*.chartbeat.com',
         'http://localhost:1124',

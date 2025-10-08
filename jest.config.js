@@ -3,7 +3,10 @@ const { jestDirAlias } = require('./dirAlias');
 const unitTests = {
   preset: 'ts-jest',
   setupFiles: ['./src/testHelpers/jest-setup.js'],
-  setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
+  setupFilesAfterEnv: [
+    './src/testHelpers/setupTests.js',
+    'jest-expect-message',
+  ],
   moduleNameMapper: jestDirAlias,
   testEnvironment: 'jsdom',
   snapshotSerializers: ['@emotion/jest/serializer'],
@@ -28,6 +31,7 @@ const unitTests = {
 
 const ampIntegrationTests = {
   displayName: 'Integration Tests - AMP',
+  setupFiles: ['./src/testHelpers/jest-setup.js'],
   testEnvironment: './src/integration/integrationTestEnvironment.js',
   testEnvironmentOptions: {
     platform: 'amp',
@@ -40,6 +44,7 @@ const ampIntegrationTests = {
 
 const canonicalIntegrationTests = {
   displayName: 'Integration Tests - Canonical',
+  setupFiles: ['./src/testHelpers/jest-setup.js'],
   testEnvironment: './src/integration/integrationTestEnvironment.js',
   testEnvironmentOptions: {
     platform: 'canonical',
@@ -52,6 +57,7 @@ const canonicalIntegrationTests = {
 
 const liteIntegrationTests = {
   displayName: 'Integration Tests - Lite',
+  setupFiles: ['./src/testHelpers/jest-setup.js'],
   testEnvironment: './src/integration/integrationTestEnvironment.js',
   testEnvironmentOptions: {
     platform: 'lite',
@@ -94,6 +100,8 @@ module.exports = {
       },
     ],
   ],
-  timers: 'modern',
+  fakeTimers: {
+    enableGlobally: true,
+  },
   workerIdleMemoryLimit: '512MB',
 };

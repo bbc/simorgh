@@ -1,10 +1,10 @@
 import React, { useMemo } from 'react';
+import { Helmet } from 'react-helmet';
 import { render } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { UserContext } from '#contexts/UserContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import ComscoreAnalytics from '.';
 
@@ -12,12 +12,20 @@ const mockToggleDispatch = jest.fn();
 
 const defaultPersonalisation = { personalisationEnabled: false };
 
+jest.mock('#app/lib/utilities/getEnvConfig', () => ({
+  getEnvConfig: jest.fn(() => ({
+    SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN: 'https://static.files.bbci.co.uk',
+    SIMORGH_PUBLIC_STATIC_ASSETS_PATH: '/ws/simorgh-assets/public/',
+  })),
+}));
+
 const ContextWrap = ({
   pageType,
   platform,
   origin,
   children,
   comscoreAnalyticsToggle,
+  showCookieBannerBasedOnCountry,
   personalisation = defaultPersonalisation,
 }) => {
   const requestContextValue = useMemo(
@@ -39,6 +47,7 @@ const ContextWrap = ({
       statusCode={200}
       bbcOrigin={origin}
       pathname="/pathname"
+      showCookieBannerBasedOnCountry={showCookieBannerBasedOnCountry}
     >
       <ServiceContextProvider service="pidgin">
         <ToggleContext.Provider value={requestContextValue}>
@@ -75,6 +84,7 @@ describe('Comscore Analytics Container', () => {
           pageType={ARTICLE_PAGE}
           origin="bbc.com"
           comscoreAnalyticsToggle
+          showCookieBannerBasedOnCountry={false}
         >
           <ComscoreAnalytics />
         </ContextWrap>,
@@ -83,20 +93,50 @@ describe('Comscore Analytics Container', () => {
       expect(container.firstChild).not.toBeNull();
       expect(container.firstChild).toMatchSnapshot();
     });
+
+    it('should return null when country-based cookie logic is enabled', () => {
+      const { container } = render(
+        <ContextWrap
+          platform="amp"
+          pageType={ARTICLE_PAGE}
+          origin="bbc.com"
+          comscoreAnalyticsToggle
+          showCookieBannerBasedOnCountry
+        >
+          <ComscoreAnalytics />
+        </ContextWrap>,
+      );
+
+      expect(container.firstChild).toBeNull();
+    });
   });
 
   describe('Canonical', () => {
-    shouldMatchSnapshot(
-      'should render comscore script when on canonical',
-      <ContextWrap
-        platform="amp"
-        pageType={ARTICLE_PAGE}
-        origin="bbc.com"
-        comscoreAnalyticsToggle
-      >
-        <ComscoreAnalytics />
-      </ContextWrap>,
-    );
+    it('should render comscore script with correct static assets path', async () => {
+      render(
+        <ContextWrap
+          platform="canonical"
+          pageType={ARTICLE_PAGE}
+          origin="bbc.com"
+          comscoreAnalyticsToggle
+          showCookieBannerBasedOnCountry
+        >
+          <ComscoreAnalytics />
+        </ContextWrap>,
+      );
+
+      const { scriptTags, noscriptTags } = Helmet.peek();
+
+      expect(scriptTags[0]).toMatchObject({
+        async: true,
+        type: 'text/javascript',
+        src: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/static/js/comscore/main-1.0.js',
+      });
+
+      expect(noscriptTags[0].innerHTML).toContain(
+        '<img src="https://sb.scorecardresearch.com/p?c1=2&c2=17986528&cv=2.0&cj=1" />',
+      );
+    });
 
     it('should return null when toggle is disabled', async () => {
       const { container } = render(

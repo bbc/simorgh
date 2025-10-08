@@ -1,15 +1,15 @@
 /* eslint-disable camelcase */
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { useContext } from 'react';
+import { use } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '../../../contexts/RequestContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import EmbedError from '../EmbedError';
 
 const UnsupportedEmbed = () => {
-  const { isAmp, canonicalLink } = useContext(RequestContext);
-  const { translations } = useContext(ServiceContext);
+  const { isAmp, canonicalLink } = use(RequestContext);
+  const { translations } = use(ServiceContext);
 
   if (isAmp) {
     const errorMessage = pathOr(

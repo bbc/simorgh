@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/react';
 import Paragraph from '#app/components/Paragraph';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import { useContext } from 'react';
+import { use } from 'react';
 import { InputProps } from '../types';
 import Label from './FieldLabel';
 import styles from './styles';
@@ -24,7 +24,7 @@ export default ({
         validationWordLimit = fallbackTranslations.validationWordLimit,
       } = {},
     },
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
   const {
     isValid,

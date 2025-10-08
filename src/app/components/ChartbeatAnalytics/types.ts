@@ -15,8 +15,8 @@ type ChartbeatConfig = {
 };
 
 export type CanonicalChartbeatConfig = ChartbeatConfig & {
-  type: string;
-  useCanonical: boolean;
+  type?: string;
+  useCanonical?: boolean;
 };
 
 export interface CanonicalChartbeatProps {

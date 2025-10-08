@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import {
   articleDataNews,
   articleDataPersian,
@@ -125,15 +126,14 @@ it("should render the twitter creator meta tag with the author's handle if provi
 });
 
 it('should match snapshot for News & International', () => {
-  const { container } = render(
-    <ArticleMetadata {...propsForNewsInternational} />,
-    { service: 'news' },
-  );
-  expect(container).toMatchSnapshot();
+  render(<ArticleMetadata {...propsForNewsInternational} />, {
+    service: 'news',
+  });
+  expect(Helmet.peek()).toMatchSnapshot();
 });
 
 it('should match snapshot for Persian News & UK origin', () => {
-  const { container } = render(
+  render(
     <ArticleMetadata
       articleId={articleDataPersian.metadata.id}
       title={articleDataPersian.promo.headlines.seoHeadline}
@@ -152,13 +152,12 @@ it('should match snapshot for Persian News & UK origin', () => {
     />,
     { service: 'persian' },
   );
-  expect(container).toMatchSnapshot();
+  expect(Helmet.peek()).toMatchSnapshot();
 });
 
 it('should match snapshot for News article with provided author twitter handle', () => {
-  const { container } = render(
-    <ArticleMetadata {...propsForNewsInternationalWithByline} />,
-    { service: 'news' },
-  );
-  expect(container).toMatchSnapshot();
+  render(<ArticleMetadata {...propsForNewsInternationalWithByline} />, {
+    service: 'news',
+  });
+  expect(Helmet.peek()).toMatchSnapshot();
 });

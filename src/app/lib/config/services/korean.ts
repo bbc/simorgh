@@ -61,6 +61,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: '내용 보기',
       relatedContent: '관련 기사 더 보기',
       relatedTopics: '관련 토픽',
+      moreOnThis: '',
       navMenuText: '섹션',
       mediaAssetPage: {
         mediaPlayer: '미디어 플레이어',
@@ -228,6 +229,7 @@ export const service: DefaultServiceConfig = {
         duration: '방송 길이',
         recentEpisodes: '이전',
         closeVideo: '나가기',
+        endOfContentClose: '이 콘텐츠의 끝입니다. 나가기',
       },
       socialEmbed: {
         caption: {
@@ -287,7 +289,7 @@ export const service: DefaultServiceConfig = {
         text: 'BBC News를 신뢰할 수 있는 이유',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: '외부 링크에 대한 본사 정책 보기',
       },
       links: [

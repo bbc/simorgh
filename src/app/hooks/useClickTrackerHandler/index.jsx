@@ -1,14 +1,15 @@
 /* eslint-disable no-console */
-import { useContext, useCallback, useState } from 'react';
-import { RequestContext } from '#app/contexts/RequestContext';
+import { use, useCallback, useState } from 'react';
+import { OptimizelyContext } from '@optimizely/react-sdk';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
-import constructLiteSiteATIEventTrackUrl from '#src/server/utilities/liteATITracking/constructATIUrl';
+import constructStaticATIUrl from '#app/lib/analyticsUtils/staticATITracking/constructATIUrl';
 import {
   CLICK_EVENT,
-  LITE_ATI_CLICK_TRACKING,
+  STATIC_ATI_CLICK_TRACKING,
 } from '#app/lib/analyticsUtils/analytics.const';
+import { RequestContext } from '#app/contexts/RequestContext';
+import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import useTrackingToggle from '../useTrackingToggle';
-import OPTIMIZELY_CONFIG from '../../lib/config/optimizely';
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon/index';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { isValidClick } from './clickTypes';
@@ -27,14 +28,19 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
     detailedPlacement,
     producerName,
     preventNavigation,
-    optimizely,
-    optimizelyMetricNameOverride,
+    sendOptimizelyEvents,
+    experimentName,
+    experimentVariant,
+    groupTracker,
+    itemTracker,
   } = extractATITrackingProps({ eventTrackingData, eventType: CLICK_EVENT });
 
   const { trackingIsEnabled } = useTrackingToggle(componentName);
   const [clicked, setClicked] = useState(false);
 
-  const { service, useReverb } = useContext(ServiceContext);
+  const { service, useReverb } = use(ServiceContext);
+
+  const { optimizely } = use(OptimizelyContext);
 
   return useCallback(
     async event => {
@@ -62,25 +68,20 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
           event.stopPropagation();
           event.preventDefault();
 
-          if (optimizely) {
-            const eventName = OPTIMIZELY_CONFIG.viewClickAttributeId;
-
-            const overrideAttributes = {
-              ...optimizely.user.attributes,
-              [`clicked_${eventName}`]: true,
-            };
+          if (
+            optimizely &&
+            experimentVariant &&
+            experimentVariant !== 'off' &&
+            sendOptimizelyEvents
+          ) {
+            const overrideAttributes = optimizely?.user.attributes;
 
             optimizely.track(
-              optimizelyMetricNameOverride
-                ? `${optimizelyMetricNameOverride}_clicks`
-                : 'component_clicks',
+              `${componentName}-clicks`,
               optimizely.user.id,
               overrideAttributes,
             );
           }
-
-          const optimizelyVariation =
-            optimizely?.getVariation(OPTIMIZELY_CONFIG.ruleKey) || null;
 
           try {
             await sendEventBeacon({
@@ -95,12 +96,15 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
               service,
               advertiserID,
               statsDestination,
-              url,
+              url: url || nextPageUrl,
               detailedPlacement,
               useReverb,
-              ...(optimizelyVariation &&
-                optimizelyVariation !== 'off' && {
-                  experimentVariant: optimizelyVariation,
+              ...(groupTracker && { groupTracker }),
+              ...(itemTracker && { itemTracker }),
+              ...(experimentVariant &&
+                experimentVariant !== 'off' && {
+                  experimentName,
+                  experimentVariant,
                 }),
             });
           } finally {
@@ -129,23 +133,36 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
       url,
       advertiserID,
       format,
+      sendOptimizelyEvents,
       optimizely,
-      optimizelyMetricNameOverride,
+      experimentName,
+      experimentVariant,
       detailedPlacement,
       useReverb,
+      itemTracker,
+      groupTracker,
     ],
   );
 };
 
 export default (eventTrackingData = {}) => {
-  const { isLite } = useContext(RequestContext);
+  const { isAmp } = use(RequestContext);
+  const isHydrated = useHydrationDetection();
+
   const clickTracker = useClickTrackerHandler(eventTrackingData);
-  const liteATIUrl = constructLiteSiteATIEventTrackUrl({
+  const staticAtiUrl = constructStaticATIUrl({
     eventTrackingData,
     eventType: CLICK_EVENT,
+    isStatic: !isHydrated,
   });
 
-  return isLite
-    ? { [LITE_ATI_CLICK_TRACKING]: liteATIUrl }
-    : { onClick: clickTracker };
+  const enableStaticTracking = !isHydrated && !isAmp;
+
+  return {
+    ...(enableStaticTracking && {
+      [STATIC_ATI_CLICK_TRACKING]: staticAtiUrl,
+    }),
+
+    ...(isHydrated && { onClick: clickTracker }),
+  };
 };

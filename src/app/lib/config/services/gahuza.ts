@@ -70,10 +70,12 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Raba vyose',
       home: `Urupapuro rw'itangiriro`,
+      continueReading: 'Komeza usome',
       currentPage: 'Uru rupapuro',
       skipLinkText: 'Simbira ku birimwo',
       relatedContent: 'Ibindi bisa n’ibi',
       relatedTopics: 'Ibindi bisa n’ibi',
+      moreOnThis: '',
       navMenuText: 'Imice',
       liteSite: {
         onboardingMessage: `Uriko ubona ku rubuga aherekana amakuru mu nyandiko gusa, hakoresha uburyo buke. Ja ku rubuga nyamukuru ubone amakuru mu nyandiko iherekejwe n'amasanamu.`,
@@ -259,6 +261,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'Iyi podcast iraboneka kandi kuri',
         download: 'Pakurura ikiganiro',
         closeVideo: 'Sohoka',
+        endOfContentClose: 'Iyi nkuru irangiye. Sohoka',
       },
       socialEmbed: {
         caption: {
@@ -317,7 +320,7 @@ export const service: DefaultServiceConfig = {
         text: 'Igituma ushobora kwizera BBC News',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: "Soma ibijanye n'aho duhagaze ku mihora ijana ahandi",
       },
       links: [

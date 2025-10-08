@@ -3,7 +3,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
-const version = 'v0.2.4';
+const version = 'v0.3.0';
 const cacheName = 'simorghCache_v1';
 
 const service = self.location.pathname.split('/')[1];
@@ -17,18 +17,32 @@ self.addEventListener('install', event => {
   });
 });
 
-// versioned JS files
-const cacheableFiles = [
-  'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.9.2.js',
+const CACHEABLE_FILES = [
+  // Reverb
+  /^https:\/\/static(?:\.test)?\.files\.bbci\.co\.uk\/ws\/(?:simorgh-assets|simorgh1-preview-assets|simorgh2-preview-assets)\/public\/static\/js\/reverb\/reverb-3.10.2.js$/,
+  // Smart Tag
   'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/smarttag-5.29.4.min.js',
+  // Fonts
+  /\.woff2$/,
+  // Frosted Promo (test and live environments only)
+  /^https:\/\/static(\.test)?\.files\.bbci\.co\.uk\/ws\/simorgh-assets\/public\/static\/js\/modern\.frosted_promo+.*?\.js$/,
+  // Moment
+  /\/moment-lib+.*?\.js$/,
+  // PWA Icons
+  /\/images\/icons\/icon-.*?\.png\??v?=?\d*$/,
 ];
 
+const WEBP_IMAGE =
+  /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|images|ace\/(standard|ws))\/.+.webp$/;
+
 const fetchEventHandler = async event => {
-  if (
-    /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|images|ace\/(standard|ws))\/.+.webp$/.test(
-      event.request.url,
-    )
-  ) {
+  const isRequestForCacheableFile = CACHEABLE_FILES.some(cacheableFile =>
+    new RegExp(cacheableFile).test(event.request.url),
+  );
+
+  const isRequestForWebpImage = WEBP_IMAGE.test(event.request.url);
+
+  if (isRequestForWebpImage) {
     const req = event.request.clone();
 
     // Inspect the accept header for WebP support
@@ -47,12 +61,7 @@ const fetchEventHandler = async event => {
         }),
       );
     }
-  } else if (
-    cacheableFiles.includes(event.request.url) ||
-    /((\.woff2$)|(^https:\/\/static(\.test)?\.files\.bbci\.co\.uk\/ws\/simorgh-assets\/public\/static\/js\/modern\.frosted_promo+.*?\.js$)|(\/moment-lib+.*?\.js$)|(\/images\/icons\/icon-.*?\.png\??v?=?\d*$))/.test(
-      event.request.url,
-    )
-  ) {
+  } else if (isRequestForCacheableFile) {
     event.respondWith(
       (async () => {
         const cache = await caches.open(cacheName);

@@ -1,17 +1,10 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Canonical On Demand T V Page A11y I can see the skip to content link 1`] = `"مطلب ته ورشئ"`;
 
-exports[`Canonical On Demand T V Page Analytics ATI tracking pixel excluding src 1`] = `
-<img
-  alt=""
-  height="1px"
-  style="position:absolute"
-  width="1px"
-/>
-`;
+exports[`Canonical On Demand T V Page Analytics ATI tracking pixel excluding src 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" >"`;
 
-exports[`Canonical On Demand T V Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/"`;
+exports[`Canonical On Demand T V Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
 
 exports[`Canonical On Demand T V Page Analytics ATI tracking pixel search params 1`] = `
 [
@@ -107,7 +100,7 @@ exports[`Canonical On Demand T V Page Footer Anchors should match text and url 8
 exports[`Canonical On Demand T V Page Footer Anchors should match text and url 9`] = `
 {
   "text": "د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره.",
-  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
 }
 `;
 
@@ -212,7 +205,9 @@ exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] 
     <noscript
       class="bbc-n2zqlz"
     >
-      &lt;strong&gt;په دې وسیله کې د غږ اوريدل او ویډیو لیدنه شونې نه ده.&lt;/strong&gt;
+      <strong>
+        په دې وسیله کې د غږ اوريدل او ویډیو لیدنه شونې نه ده.
+      </strong>
     </noscript>
   </div>
   <button
@@ -260,7 +255,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] 
     </time>
   </button>
   <div
-    class="bbc-lgx6cw"
+    class="bbc-1jf2q50"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
@@ -287,7 +282,9 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
     <noscript
       class="bbc-n2zqlz"
     >
-      &lt;strong&gt;په دې وسیله کې د غږ اوريدل او ویډیو لیدنه شونې نه ده.&lt;/strong&gt;
+      <strong>
+        په دې وسیله کې د غږ اوريدل او ویډیو لیدنه شونې نه ده.
+      </strong>
     </noscript>
   </div>
   <button
@@ -335,7 +332,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
     </time>
   </button>
   <div
-    class="bbc-lgx6cw"
+    class="bbc-1jf2q50"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
@@ -352,7 +349,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
 
 exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`] = `
 <figure
-  class="bbc-7rf7s3"
+  class="media-container bbc-1ayt58x"
   data-e2e="media-loader__container"
 >
   <div
@@ -366,7 +363,9 @@ exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`]
       <noscript
         class="bbc-n2zqlz"
       >
-        &lt;strong&gt;په دې وسیله کې د غږ اوريدل او ویډیو لیدنه شونې نه ده.&lt;/strong&gt;
+        <strong>
+          په دې وسیله کې د غږ اوريدل او ویډیو لیدنه شونې نه ده.
+        </strong>
       </noscript>
     </div>
     <button
@@ -414,7 +413,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`]
       </time>
     </button>
     <div
-      class="bbc-lgx6cw"
+      class="bbc-1jf2q50"
       style="padding-bottom:0;overflow:hidden"
     >
       <img

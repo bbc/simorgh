@@ -8,7 +8,7 @@ declare namespace React.JSX {
     placeholder?: string;
     'amp-access'?: string;
     'amp-access-hide'?: string;
-    'data-lite-ati-view'?: string;
+    'data-static-ati-view'?: string;
   }
 
   interface ParagraphProps extends React.HTMLAttributes<HTMLParagraphElement> {

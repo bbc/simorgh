@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState } from 'react';
+import React, { use, useRef, useState } from 'react';
 import SkipLink from '#psammead/psammead-brand/src/SkipLink';
 import { RequestContext } from '#contexts/RequestContext';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
@@ -8,9 +8,9 @@ import {
   HOME_PAGE,
   TOPIC_PAGE,
   ERROR_PAGE,
+  LIVE_PAGE,
 } from '#app/routes/utils/pageTypes';
-import LiteSiteCta from '#app/components/LiteSiteCta';
-import { liteEnabledServices } from '#app/components/LiteSiteCta/liteSiteConfig';
+import LiteSiteSummary from '#app/components/LiteSiteSummary';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ConsentBanner from '../ConsentBanner';
 import NavigationContainer from '../Navigation';
@@ -48,10 +48,10 @@ const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
   );
 };
 
-const HeaderContainer = ({ propsForOJExperiment }) => {
-  const { isAmp, isApp, pageType, isLite } = useContext(RequestContext);
+const HeaderContainer = ({ propsForTopBarOJComponent }) => {
+  const { isAmp, isApp, pageType, isLite } = use(RequestContext);
   const { service, script, translations, dir, scriptLink, lang, serviceLang } =
-    useContext(ServiceContext);
+    use(ServiceContext);
   const { skipLinkText } = translations;
 
   const isOperaMini = useOperaMiniDetection();
@@ -77,6 +77,7 @@ const HeaderContainer = ({ propsForOJExperiment }) => {
 
   if (scriptLink) {
     switch (true) {
+      case pageType === LIVE_PAGE:
       case service === 'uzbek' &&
         ![ARTICLE_PAGE, HOME_PAGE, TOPIC_PAGE, ERROR_PAGE].includes(pageType):
         shouldRenderScriptSwitch = false;
@@ -86,7 +87,6 @@ const HeaderContainer = ({ propsForOJExperiment }) => {
         break;
     }
   }
-  const renderLiteSiteCTA = isLite && liteEnabledServices.includes(service);
 
   if (isApp) return null;
 
@@ -105,8 +105,10 @@ const HeaderContainer = ({ propsForOJExperiment }) => {
           scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
         />
       )}
-      {renderLiteSiteCTA && <LiteSiteCta />}
-      <NavigationContainer propsForOJExperiment={propsForOJExperiment} />
+      {isLite && <LiteSiteSummary />}
+      <NavigationContainer
+        propsForTopBarOJComponent={propsForTopBarOJComponent}
+      />
     </header>
   );
 };

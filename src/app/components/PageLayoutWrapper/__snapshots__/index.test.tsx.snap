@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`PageLayoutWrapper should render default page wrapper with children 1`] = `
 .emotion-0 {
@@ -26,8 +26,8 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 
 .emotion-3 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   background-color: #323232;
   border-top: solid 0.0625rem transparent;
 }
@@ -826,22 +826,21 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 .emotion-136 {
   position: absolute;
   width: calc(100vw - 0.8rem);
-  left: 0;
+  inset-inline-start: 0;
 }
 
 @media (min-width: 1041px) {
   .emotion-136 {
     width: calc(100vw + 0.8rem);
-    left: calc(-1 * (100vw - 1014px) / 2);
+    inset-inline-start: calc(-1 * (100vw - 1014px) / 2);
   }
 }
 
 .emotion-136::after {
   content: '';
   position: absolute;
-  bottom: 0;
-  right: 0;
-  left: -0.8rem;
+  inset-block-end: 0;
+  inset-inline: -0.8rem 0;
   width: calc(100% + 0.8rem);
   border-bottom: 0.0625rem solid #E6E8EA;
 }

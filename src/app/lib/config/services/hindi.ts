@@ -50,16 +50,16 @@ export const service: DefaultServiceConfig = {
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     podcastPromo: {
       title: 'पॉडकास्ट',
-      brandTitle: 'दुनिया जहान',
+      brandTitle: 'कहानी ज़िंदगी की',
       brandDescription:
-        'दुनिया जहान: अंतरराष्ट्रीय विषयों की गहन पड़ताल करता कार्यक्रम.',
+        'मशहूर हस्तियों की कहानी पूरी तसल्ली और इत्मीनान से इरफ़ान के साथ.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09krv89.jpg',
-        alt: 'मुकेश शर्मा',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0l8hm5m.jpg',
+        alt: 'पॉडकास्ट: कहानी ज़िंदगी की',
       },
       linkLabel: {
-        text: 'दिनभर: पूरा दिन,पूरी ख़बर',
-        href: 'https://www.bbc.com/hindi/podcasts/p05525mc',
+        text: 'एपिसोड',
+        href: 'https://www.bbc.com/hindi/podcasts/p08s9wv2',
       },
       skipLink: {
         text: 'छोड़कर %title% आगे बढ़ें',
@@ -77,10 +77,12 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'सब देखें',
       home: 'होम पेज',
+      continueReading: 'पढ़ना जारी रखें',
       currentPage: 'मौजूदा पन्ना',
       skipLinkText: 'सामग्री को स्किप करें',
       relatedContent: 'संबंधित समाचार',
       relatedTopics: 'मिलते-जुलते मुद्दे',
+      moreOnThis: '',
       navMenuText: 'सेक्शन',
       mediaAssetPage: {
         mediaPlayer: 'मीडिया प्लेयर',
@@ -264,6 +266,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'ये पॉडकास्ट इन प्लेटफ़ॉर्म्स पर भी उपलब्ध है -',
         download: 'एपिसोड डाउनलोड करें',
         closeVideo: 'बाहर निकलें',
+        endOfContentClose: 'इस सामग्री का अंत. बाहर निकलें',
       },
       socialEmbed: {
         caption: {
@@ -390,7 +393,7 @@ export const service: DefaultServiceConfig = {
         text: 'आप बीबीसी पर क्यों भरोसा कर सकते हैं',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'बाहरी साइटों का लिंक देने की हमारी नीति के बारे में पढ़ें.',
       },
       links: [
@@ -451,6 +454,14 @@ export const service: DefaultServiceConfig = {
       {
         title: 'मनोरंजन',
         url: '/hindi/topics/c06gq3n0pp7t',
+      },
+      {
+        title: 'करियर',
+        url: '/hindi/topics/c95y3gjndw8t',
+      },
+      {
+        title: 'फ़ाइनेंस',
+        url: '/hindi/topics/c5qvpx5dq4qt',
       },
       {
         title: 'खेल',

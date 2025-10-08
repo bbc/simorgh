@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import styled from '@emotion/styled';
 import StoryPromo, {
   Headline,
@@ -148,8 +148,8 @@ const StoryPromoContainer = ({
   labelId = '',
   sectionType = '',
 }) => {
-  const { script, service } = useContext(ServiceContext);
-  const { isAmp, isLite, pageType, variant } = useContext(RequestContext);
+  const { script, service } = use(ServiceContext);
+  const { isAmp, isLite, pageType, variant } = use(RequestContext);
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
 
   const linkId = buildUniquePromoId({

@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Ad Container Snapshots AMP should correctly render a leaderboard ad 1`] = `
 .amp-geo-pending .emotion-0,

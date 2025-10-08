@@ -58,10 +58,12 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Arag dhammaan',
       home: 'War',
+      continueReading: 'Sii Akhri',
       currentPage: 'Bogga hadda',
       skipLinkText: 'U gudub qaybta macluumaadka',
       relatedContent: 'Warar kale oo dheeraad ah oo la xiriira qodobkan',
       relatedTopics: 'Mowduucyada la xiriira',
+      moreOnThis: '',
       navMenuText: 'Qaybaha',
       mediaAssetPage: {
         mediaPlayer: 'Ciyaaridda warbixinnada',
@@ -236,6 +238,8 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Barnaamijka Xiga ee Raadiyaha',
         duration: 'Muddada',
         recentEpisodes: 'Barnaamijyadii Hore',
+        closeVideo: 'Xir',
+        endOfContentClose: 'Kani waa dhammaadka nuxurka. Xir',
       },
       socialEmbed: {
         caption: {
@@ -296,7 +300,7 @@ export const service: DefaultServiceConfig = {
         text: 'Sababta aad ku aamini kartid BBC News',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda.',
       },
       links: [

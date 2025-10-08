@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import {
@@ -66,8 +66,8 @@ const PromoListComponent = ({
   dir = 'ltr',
   sendOptimizelyEvents,
 }) => {
-  const { serviceDatetimeLocale } = useContext(ServiceContext);
-  const { optimizely } = useContext(OptimizelyContext);
+  const { serviceDatetimeLocale } = use(ServiceContext);
+  const { optimizely } = use(OptimizelyContext);
 
   const eventTrackingDataWithOptimizely = {
     block: {
@@ -108,8 +108,8 @@ const PromoListComponent = ({
 };
 
 const PromoComponent = ({ promo, dir = 'ltr', sendOptimizelyEvents }) => {
-  const { optimizely } = useContext(OptimizelyContext);
-  const { serviceDatetimeLocale } = useContext(ServiceContext);
+  const { optimizely } = use(OptimizelyContext);
+  const { serviceDatetimeLocale } = use(ServiceContext);
 
   const eventTrackingDataWithOptimizely = {
     block: {
@@ -143,7 +143,7 @@ const FeaturesAnalysis = ({
   sectionLabelBackground,
   sendOptimizelyEvents,
 }) => {
-  const { translations } = useContext(ServiceContext);
+  const { translations } = use(ServiceContext);
 
   const title = pathOr(
     'Features & Analysis',

@@ -1,17 +1,10 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Canonical Kyrgyz Live Radio Page A11y I can see the skip to content link 1`] = `"Сайтка өтүү"`;
 
-exports[`Canonical Kyrgyz Live Radio Page Analytics ATI tracking pixel excluding src 1`] = `
-<img
-  alt=""
-  height="1px"
-  style="position:absolute"
-  width="1px"
-/>
-`;
+exports[`Canonical Kyrgyz Live Radio Page Analytics ATI tracking pixel excluding src 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" >"`;
 
-exports[`Canonical Kyrgyz Live Radio Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/"`;
+exports[`Canonical Kyrgyz Live Radio Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
 
 exports[`Canonical Kyrgyz Live Radio Page Analytics ATI tracking pixel search params 1`] = `
 [
@@ -107,7 +100,7 @@ exports[`Canonical Kyrgyz Live Radio Page Footer Anchors should match text and u
 exports[`Canonical Kyrgyz Live Radio Page Footer Anchors should match text and url 9`] = `
 {
   "text": "Башка интернет сайттардын мазмуну боюнча биздин позиция.",
-  "url": "https://www.bbc.com/editorialguidelines/guidance/feeds-and-links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
 }
 `;
 
@@ -119,29 +112,29 @@ exports[`Canonical Kyrgyz Live Radio Page Header I can see the branding 1`] = `"
 
 exports[`Canonical Kyrgyz Live Radio Page Header Navigation link should match text and url 1`] = `
 {
-  "text": "Башталгыч бет",
+  "text": "Башкы бет",
   "url": "/kyrgyz",
 }
 `;
 
 exports[`Canonical Kyrgyz Live Radio Page Header Navigation link should match text and url 2`] = `
 {
-  "text": "Кыргызстан",
-  "url": "/kyrgyz/topics/cz74kjpyk07t",
+  "text": "Видео жаңылыктар",
+  "url": "/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4t",
 }
 `;
 
 exports[`Canonical Kyrgyz Live Radio Page Header Navigation link should match text and url 3`] = `
 {
-  "text": "Дүйнө",
-  "url": "/kyrgyz/topics/ck2l9z012nkt",
+  "text": "Кыргызстан",
+  "url": "/kyrgyz/topics/cz74kjpyk07t",
 }
 `;
 
 exports[`Canonical Kyrgyz Live Radio Page Header Navigation link should match text and url 4`] = `
 {
-  "text": "САПАР",
-  "url": "/kyrgyz/topics/c6z8lg83w7mt",
+  "text": "Дүйнө",
+  "url": "/kyrgyz/topics/ck2l9z012nkt",
 }
 `;
 
@@ -152,24 +145,31 @@ exports[`Canonical Kyrgyz Live Radio Page Header Navigation link should match te
 }
 `;
 
-exports[`Canonical Kyrgyz Live Radio Page Header Navigation link should match text and url 6`] = `
-{
-  "text": "Подкасттар",
-  "url": "/kyrgyz/podcasts/p0c80v81",
-}
-`;
-
 exports[`Canonical Kyrgyz Live Radio Page Main heading should match text 1`] = `"Би-Би-Си Кыргыз кызматынын радиосу"`;
 
 exports[`Canonical Kyrgyz Live Radio Page Media Loader renders a valid container 1`] = `
 <figure
-  class="bbc-ucozvf"
+  class="media-container bbc-ucozvf"
   data-e2e="media-loader__container"
 >
   <div
-    class="bbc-1eq7znh"
+    class="media-player bbc-1ty1x88"
     data-e2e="media-player"
-  />
+  >
+    <noscript>
+      <div>
+        <div
+          class="bbc-1mgo2mg"
+        >
+          <strong
+            class="bbc-pow7hy"
+          >
+            Жабдыгыңыз медианын бул түрүн ойнотууга ылайыктуу эмес.
+          </strong>
+        </div>
+      </div>
+    </noscript>
+  </div>
 </figure>
 `;
 

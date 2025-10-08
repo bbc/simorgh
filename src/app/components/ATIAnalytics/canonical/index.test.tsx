@@ -5,6 +5,8 @@ import {
   act,
 } from '#app/components/react-testing-library-with-providers';
 import * as isOperaProxy from '#app/lib/utilities/isOperaProxy';
+import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
+import processClientDeviceAndSendStaticBeacon from '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon';
 import * as beacon from '../../../lib/analyticsUtils/sendBeacon';
 import CanonicalATIAnalytics from '.';
 
@@ -15,6 +17,7 @@ describe('Canonical ATI Analytics', () => {
 
   const atiBaseUrl = 'https://foobar.com?';
   const mockPageviewParams = 'key=value&key2=value2&x8=[simorgh]';
+
   const mockSendBeacon = jest.fn().mockReturnValue('beacon-return-value');
   process.env.SIMORGH_ATI_BASE_URL = atiBaseUrl;
   // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
@@ -32,10 +35,34 @@ describe('Canonical ATI Analytics', () => {
     expect(mockSendBeacon).toHaveBeenCalledWith(expectedUrl, reverbConfig);
   });
 
-  it('should render lite Helmet script when isLite is true', () => {
+  it('should add scripts to helmet', () => {
     jest.spyOn(isOperaProxy, 'default').mockImplementation(() => false);
 
-    const expectedUrl = `${atiBaseUrl}${mockPageviewParams}`;
+    act(() => {
+      render(<CanonicalATIAnalytics pageviewParams={mockPageviewParams} />);
+    });
+
+    const helmet = Helmet.peek();
+
+    expect(helmet.scriptTags).toHaveLength(2);
+  });
+
+  it('should render sendStaticBeacon Helmet script', () => {
+    jest.spyOn(isOperaProxy, 'default').mockImplementation(() => false);
+
+    act(() => {
+      render(<CanonicalATIAnalytics pageviewParams={mockPageviewParams} />);
+    });
+
+    const helmet = Helmet.peek();
+
+    expect(helmet.scriptTags[0].innerHTML).toEqual(
+      addSendStaticBeaconToWindow(),
+    );
+  });
+
+  it('should contain a beacon onLoad script via processClientDeviceAndSendStaticBeacon on lite', () => {
+    jest.spyOn(isOperaProxy, 'default').mockImplementation(() => false);
 
     act(() => {
       render(<CanonicalATIAnalytics pageviewParams={mockPageviewParams} />, {
@@ -44,18 +71,14 @@ describe('Canonical ATI Analytics', () => {
     });
 
     const helmet = Helmet.peek();
+    const sendPageViewBeaconLite = helmet.scriptTags[1].innerHTML;
 
-    expect(helmet.scriptTags).toHaveLength(1);
-    expect(helmet.scriptTags[0].innerHTML).toEqual(`
-    function sendBeaconLite (atiPageViewUrlString) {
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", atiPageViewUrlString, true);
-        xhr.withCredentials = true;
-        xhr.send();
-    }
-    
-    sendBeaconLite("${expectedUrl}");
-`);
+    expect(sendPageViewBeaconLite).toContain(
+      processClientDeviceAndSendStaticBeacon.toString(),
+    );
+    expect(sendPageViewBeaconLite).toContain(
+      `${atiBaseUrl}${mockPageviewParams}`,
+    );
   });
 
   it('should not send beacon when browser is Opera Mini', () => {
