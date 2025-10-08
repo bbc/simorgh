@@ -1,4 +1,5 @@
-import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import runTestsForPage from '../../../support/helpers/runTestsForPage';
 import {
   serviceWorkerIsAvailable,
   serviceWorkerIsRegistered,
@@ -58,5 +59,6 @@ const ampTestSuites = testSuites.map(testSuite => ({
 }));
 
 runTestsForPage({
+  pageType: ARTICLE_PAGE,
   testSuites: [...testSuites, ...ampTestSuites],
 });

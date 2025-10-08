@@ -1,5 +1,7 @@
 /* eslint-disable no-console */
 /* eslint-disable no-unused-expressions */
+import { Services } from '#app/models/types/global';
+
 const SERVICE_WORKER_CACHE = 'simorghCache_v1';
 
 export const serviceWorkerIsAvailable = () => {
@@ -11,7 +13,11 @@ export const serviceWorkerIsAvailable = () => {
   });
 };
 
-export const serviceWorkerIsRegistered = ({ service }) => {
+export const serviceWorkerIsRegistered = ({
+  service,
+}: {
+  service: Services;
+}) => {
   it('Service Worker is registered', () => {
     cy.window().then(win => {
       win.navigator.serviceWorker.getRegistrations().then(registrations => {
@@ -94,7 +100,7 @@ export const serviceWorkerCaching = () => {
       cy.window().then(win => {
         win.caches.open(SERVICE_WORKER_CACHE).then(simorghCache =>
           simorghCache.keys().then(keys => {
-            const matchingCachedItems = [];
+            const matchingCachedItems: string[] = [];
             const urls = keys.map(({ url }) => url).flat();
             cacheableItems.forEach(cachedItem => {
               const matchingItems = urls.filter(url =>
