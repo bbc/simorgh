@@ -43,9 +43,6 @@ const getComponentSwipeTracker = (eventTrackingData?: EventTrackingData) => {
       });
 
       const swipeTrackingParameters = {
-        optimizelyParameters: {
-          componentName,
-        },
         reverbParameters: {
           campaignID,
           componentName,
