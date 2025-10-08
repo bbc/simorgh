@@ -64,19 +64,21 @@ const shouldDispatchEventBeacon = ({
   ].every(Boolean);
 };
 
-const trackComponentInOptimizely = ({
-  optimizely,
-  sendOptimizelyEvents,
-  experimentVariant,
-  componentName,
-}: OptimizelyParameters) => {
+const trackComponentInOptimizely = (
+  optimizelyParameters: OptimizelyParameters,
+) => {
+  if (!optimizelyParameters) return;
+
+  const { optimizely, sendOptimizelyEvents, experimentVariant, componentName } =
+    optimizelyParameters;
+
   if (
     optimizely &&
     sendOptimizelyEvents &&
     experimentVariant &&
     experimentVariant !== 'off'
   ) {
-    const overrideAttributes = optimizely?.user.attributes;
+    const overrideAttributes = optimizely.user.attributes;
 
     optimizely.track(
       `${componentName}-views`,
