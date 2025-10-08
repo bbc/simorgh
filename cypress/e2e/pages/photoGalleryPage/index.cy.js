@@ -1,7 +1,7 @@
 import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
 import testsForAllPages from '../testsForAllPages';
 import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
-import { testsThatFollowSmokeTestConfigForAllAMPPages as testsForAllAMPPages } from '../testsForAllAMPPages';
+import testsForAllAMPPages from '../testsForAllAMPPages';
 import { PHOTO_GALLERY_PAGE } from '../../../../src/app/routes/utils/pageTypes';
 import liteArticleTests from '../articles/testsForLiteOnly';
 
