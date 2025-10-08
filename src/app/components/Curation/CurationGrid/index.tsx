@@ -20,7 +20,7 @@ const CurationGrid = ({
   isFirstCuration,
   headingLevel,
   eventTrackingData,
-  readTimeVariant,
+  timeOfDayVariant,
 }: CurationGridProps) => {
   const { isLite } = use(RequestContext);
 
@@ -35,11 +35,7 @@ const CurationGrid = ({
     promo => isHighImpact(promo) && !isMedia(promo.type),
   );
 
-  const buildPromoEventTrackingData = (
-    promo: Summary,
-    i: number,
-    { readTime }: { readTime?: number } = {},
-  ) => ({
+  const buildPromoEventTrackingData = (promo: Summary, i: number) => ({
     itemTracker: {
       type: 'simple-curation-grid-promo',
       text: promo.title,
@@ -48,13 +44,6 @@ const CurationGrid = ({
       ...(promo.type && { mediaType: promo.type }),
       ...(promo.duration && {
         duration: moment.duration(promo.duration, 'seconds').asMilliseconds(),
-      }),
-      ...(readTime && {
-        label:
-          readTime === 1
-            ? `Read time: ${readTime} minute`
-            : `Read time: ${readTime} minutes`,
-        duration: readTime * 60000,
       }),
     },
     ...eventTrackingData,
@@ -78,7 +67,7 @@ const CurationGrid = ({
         <CurationPromo
           {...commonProps}
           headingLevel={headingLevel}
-          readTimeVariant={readTimeVariant}
+          timeOfDayVariant={timeOfDayVariant}
         />
       );
     }
