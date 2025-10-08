@@ -78,14 +78,12 @@ const styles = {
 };
 
 const DesktopBigPromo = css({
-  ...readTimeExperimentBigPromoStyles,
   gridColumn: 'span 2',
   gridRow: 'span 4',
   marginTop: '0.5rem',
 });
 
 const BigPromo = css({
-  ...readTimeExperimentBigPromoStyles,
   gridRow: 'span 3',
   gridColumn: 'span 2',
   marginTop: '0.5rem',
