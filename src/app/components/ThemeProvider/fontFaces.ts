@@ -1,4 +1,5 @@
 import { Services } from '#app/models/types/global';
+import { useTheme } from '@emotion/react';
 
 /**
  * Font Directories
@@ -26,231 +27,250 @@ const PADAUK_FONTS_DIR = `${FONTS_BASE_URL}Padauk/v2.8/`;
  */
 
 // Noto Sans Tamil
-const notoSansTamilBold = {
-  name: 'Noto_Sans_Tamil_B',
-  fontFamily: 'Noto Sans Tamil',
-  fontWeight: 700,
-  fontStyle: 'normal',
-  src: `${NOTO_SANS_TAMIL_FONTS_DIR}bold.woff2`,
-  fontDisplay: 'swap',
-  baseUrl: NOTO_SANS_TAMIL_FONTS_DIR,
-};
-
 export const NOTO_SANS_TAMIL_BOLD = {
   '@font-face': {
-    ...notoSansTamilBold,
+    name: 'Noto_Sans_Tamil_B',
+    fontFamily: 'Noto Sans Tamil',
+    fontWeight: 700,
+    fontStyle: 'normal',
+    src: `${NOTO_SANS_TAMIL_FONTS_DIR}bold.woff2`,
+    fontDisplay: 'swap',
+    baseUrl: NOTO_SANS_TAMIL_FONTS_DIR,
   },
-};
-
-const notoSansTamilRegular = {
-  name: 'Noto_Sans_Tamil',
-  fontFamily: 'Noto Sans Tamil',
-  fontWeight: 400,
-  fontStyle: 'normal',
-  src: `${NOTO_SANS_TAMIL_FONTS_DIR}normal.woff2`,
-  fontDisplay: 'swap',
-  baseUrl: NOTO_SANS_TAMIL_FONTS_DIR,
 };
 
 export const NOTO_SANS_TAMIL_REGULAR = {
   '@font-face': {
-    ...notoSansTamilRegular,
+    name: 'Noto_Sans_Tamil',
+    fontFamily: 'Noto Sans Tamil',
+    fontWeight: 400,
+    fontStyle: 'normal',
+    src: `${NOTO_SANS_TAMIL_FONTS_DIR}normal.woff2`,
+    fontDisplay: 'swap',
+    baseUrl: NOTO_SANS_TAMIL_FONTS_DIR,
   },
 };
 
 // Noto Sans Telugu
-const notoSansTeluguBold = {
-  name: 'Noto_Sans_Telugu_B',
-  fontFamily: 'Noto Sans Telugu',
-  fontWeight: 700,
-  fontStyle: 'normal',
-  src: `${NOTO_SANS_TELUGU_FONTS_DIR}bold.woff2`,
-  fontDisplay: 'swap',
-  baseUrl: NOTO_SANS_TELUGU_FONTS_DIR,
-};
-
 export const NOTO_SANS_TELUGU_BOLD = {
   '@font-face': {
-    ...notoSansTeluguBold,
+    name: 'Noto_Sans_Telugu_B',
+    fontFamily: 'Noto Sans Telugu',
+    fontWeight: 700,
+    fontStyle: 'normal',
+    src: `${NOTO_SANS_TELUGU_FONTS_DIR}bold.woff2`,
+    fontDisplay: 'swap',
+    baseUrl: NOTO_SANS_TELUGU_FONTS_DIR,
   },
-};
-
-const notoSansTeluguRegular = {
-  name: 'Noto_Sans_Telugu',
-  fontFamily: 'Noto Sans Telugu',
-  fontWeight: 400,
-  fontStyle: 'normal',
-  src: `${NOTO_SANS_TELUGU_FONTS_DIR}normal.woff2`,
-  fontDisplay: 'swap',
-  baseUrl: NOTO_SANS_TELUGU_FONTS_DIR,
 };
 
 export const NOTO_SANS_TELUGU_REGULAR = {
   '@font-face': {
-    ...notoSansTeluguRegular,
+    name: 'Noto_Sans_Telugu',
+    fontFamily: 'Noto Sans Telugu',
+    fontWeight: 400,
+    fontStyle: 'normal',
+    src: `${NOTO_SANS_TELUGU_FONTS_DIR}normal.woff2`,
+    fontDisplay: 'swap',
+    baseUrl: NOTO_SANS_TELUGU_FONTS_DIR,
   },
 };
 
 // Noto Sans Gujarati
-const notoSansGujaratiBold = {
-  name: 'Noto_Sans_Gujarati_B',
-  fontFamily: 'Noto Sans Gujarati',
-  fontWeight: 700,
-  fontStyle: 'normal',
-  src: `${NOTO_SANS_GUJARATI_FONTS_DIR}bold.woff2`,
-  fontDisplay: 'swap',
-  baseUrl: NOTO_SANS_GUJARATI_FONTS_DIR,
-};
-
 export const NOTO_SANS_GUJARATI_BOLD = {
   '@font-face': {
-    ...notoSansGujaratiBold,
+    name: 'Noto_Sans_Gujarati_B',
+    fontFamily: 'Noto Sans Gujarati',
+    fontWeight: 700,
+    fontStyle: 'normal',
+    src: `${NOTO_SANS_GUJARATI_FONTS_DIR}bold.woff2`,
+    fontDisplay: 'swap',
+    baseUrl: NOTO_SANS_GUJARATI_FONTS_DIR,
   },
-};
-
-const notoSansGujaratiRegular = {
-  name: 'Noto_Sans_Gujarati',
-  fontFamily: 'Noto Sans Gujarati',
-  fontWeight: 400,
-  fontStyle: 'normal',
-  src: `${NOTO_SANS_GUJARATI_FONTS_DIR}normal.woff2`,
-  fontDisplay: 'swap',
-  baseUrl: NOTO_SANS_GUJARATI_FONTS_DIR,
 };
 
 export const NOTO_SANS_GUJARATI_REGULAR = {
   '@font-face': {
-    ...notoSansGujaratiRegular,
+    name: 'Noto_Sans_Gujarati',
+    fontFamily: 'Noto Sans Gujarati',
+    fontWeight: 400,
+    fontStyle: 'normal',
+    src: `${NOTO_SANS_GUJARATI_FONTS_DIR}normal.woff2`,
+    fontDisplay: 'swap',
+    baseUrl: NOTO_SANS_GUJARATI_FONTS_DIR,
   },
 };
 
 // Noto Sans Ethiopic
-const notoSansEthiopicBold = {
-  name: 'Noto_Sans_Ethiopic_B',
-  fontFamily: 'Noto Sans Ethiopic',
-  fontWeight: 700,
-  fontStyle: 'normal',
-  src: `${NOTO_SANS_ETHIOPIC_FONTS_DIR}bold.woff2`,
-  fontDisplay: 'swap',
-  baseUrl: NOTO_SANS_ETHIOPIC_FONTS_DIR,
-};
-
 export const NOTO_SANS_ETHIOPIC_BOLD = {
   '@font-face': {
-    ...notoSansEthiopicBold,
+    name: 'Noto_Sans_Ethiopic_B',
+    fontFamily: 'Noto Sans Ethiopic',
+    fontWeight: 700,
+    fontStyle: 'normal',
+    src: `${NOTO_SANS_ETHIOPIC_FONTS_DIR}bold.woff2`,
+    fontDisplay: 'swap',
+    baseUrl: NOTO_SANS_ETHIOPIC_FONTS_DIR,
   },
-};
-
-const notoSansEthiopicRegular = {
-  name: 'Noto_Sans_Ethiopic',
-  fontFamily: 'Noto Sans Ethiopic',
-  fontWeight: 400,
-  fontStyle: 'normal',
-  src: `${NOTO_SANS_ETHIOPIC_FONTS_DIR}normal.woff2`,
-  fontDisplay: 'swap',
-  baseUrl: NOTO_SANS_ETHIOPIC_FONTS_DIR,
 };
 
 export const NOTO_SANS_ETHIOPIC_REGULAR = {
   '@font-face': {
-    ...notoSansEthiopicRegular,
+    name: 'Noto_Sans_Ethiopic',
+    fontFamily: 'Noto Sans Ethiopic',
+    fontWeight: 400,
+    fontStyle: 'normal',
+    src: `${NOTO_SANS_ETHIOPIC_FONTS_DIR}normal.woff2`,
+    fontDisplay: 'swap',
+    baseUrl: NOTO_SANS_ETHIOPIC_FONTS_DIR,
   },
 };
 
 // Noto Serif Bengali
-const notoSerifBengaliBold = {
-  name: 'notoserifbold',
-  fontFamily: 'Noto Serif Bengali',
-  fontWeight: 700,
-  fontStyle: 'normal',
-  src: `${NOTO_SERIF_BENGALI_FONTS_DIR}bold.woff2`,
-  fontDisplay: 'optional',
-};
-
 export const NOTO_SERIF_BENGALI_BOLD = {
   '@font-face': {
-    ...notoSerifBengaliBold,
+    name: 'Noto_Serif_Bengali_B',
+    fontFamily: 'Noto Serif Bengali',
+    fontWeight: 700,
+    fontStyle: 'normal',
+    src: `${NOTO_SERIF_BENGALI_FONTS_DIR}bold.woff2`,
+    fontDisplay: 'optional',
   },
-};
-
-const notoSerifBengaliRegular = {
-  name: 'notoserifregular',
-  fontFamily: 'Noto Serif Bengali',
-  fontWeight: 400,
-  fontStyle: 'normal',
-  src: `${NOTO_SERIF_BENGALI_FONTS_DIR}normal.woff2`,
-  fontDisplay: 'optional',
 };
 
 export const NOTO_SERIF_BENGALI_REGULAR = {
   '@font-face': {
-    ...notoSerifBengaliRegular,
+    name: 'Noto_Serif_Bengali',
+    fontFamily: 'Noto Serif Bengali',
+    fontWeight: 400,
+    fontStyle: 'normal',
+    src: `${NOTO_SERIF_BENGALI_FONTS_DIR}normal.woff2`,
+    fontDisplay: 'optional',
   },
 };
 
 // Noto Serif Sinhala
-const notoSerifSinhalaBold = {
-  name: 'Noto_Serif_Sinhala_B',
-  fontFamily: 'Noto Serif Sinhala',
-  fontWeight: 700,
-  fontStyle: 'normal',
-  src: `${NOTO_SERIF_SINHALA_FONTS_DIR}bold.woff2`,
-  fontDisplay: 'swap',
-  baseUrl: NOTO_SERIF_SINHALA_FONTS_DIR,
-};
-
 export const NOTO_SERIF_SINHALA_BOLD = {
   '@font-face': {
-    ...notoSerifSinhalaBold,
+    name: 'Noto_Serif_Sinhala_B',
+    fontFamily: 'Noto Serif Sinhala',
+    fontWeight: 700,
+    fontStyle: 'normal',
+    src: `${NOTO_SERIF_SINHALA_FONTS_DIR}bold.woff2`,
+    fontDisplay: 'swap',
+    baseUrl: NOTO_SERIF_SINHALA_FONTS_DIR,
   },
-};
-
-const notoSerifSinhalaRegular = {
-  name: 'Noto_Serif_Sinhala',
-  fontFamily: 'Noto Serif Sinhala',
-  fontWeight: 400,
-  fontStyle: 'normal',
-  src: `${NOTO_SERIF_SINHALA_FONTS_DIR}normal.woff2`,
-  fontDisplay: 'swap',
-  baseUrl: NOTO_SERIF_SINHALA_FONTS_DIR,
 };
 
 export const NOTO_SERIF_SINHALA_REGULAR = {
   '@font-face': {
-    ...notoSerifSinhalaRegular,
+    name: 'Noto_Serif_Sinhala',
+    fontFamily: 'Noto Serif Sinhala',
+    fontWeight: 400,
+    fontStyle: 'normal',
+    src: `${NOTO_SERIF_SINHALA_FONTS_DIR}normal.woff2`,
+    fontDisplay: 'swap',
+    baseUrl: NOTO_SERIF_SINHALA_FONTS_DIR,
   },
 };
 
 // Padauk
-const padaukBold = {
-  name: 'Padauk_B',
-  fontFamily: 'Padauk',
-  fontWeight: 700,
-  fontStyle: 'normal',
-  src: `${PADAUK_FONTS_DIR}bold.woff2`,
-  fontDisplay: 'swap',
-  baseUrl: PADAUK_FONTS_DIR,
-};
-
 export const PADAUK_BOLD = {
   '@font-face': {
-    ...padaukBold,
+    name: 'Padauk_B',
+    fontFamily: 'Padauk',
+    fontWeight: 700,
+    fontStyle: 'normal',
+    src: `${PADAUK_FONTS_DIR}bold.woff2`,
+    fontDisplay: 'swap',
+    baseUrl: PADAUK_FONTS_DIR,
   },
-};
-
-const padaukRegular = {
-  name: 'Padauk',
-  fontFamily: 'Padauk',
-  fontWeight: 400,
-  fontStyle: 'normal',
-  src: `${PADAUK_FONTS_DIR}normal.woff2`,
-  fontDisplay: 'swap',
-  baseUrl: PADAUK_FONTS_DIR,
 };
 
 export const PADAUK_REGULAR = {
   '@font-face': {
-    ...padaukRegular,
+    name: 'Padauk',
+    fontFamily: 'Padauk',
+    fontWeight: 400,
+    fontStyle: 'normal',
+    src: `${PADAUK_FONTS_DIR}normal.woff2`,
+    fontDisplay: 'swap',
+    baseUrl: PADAUK_FONTS_DIR,
+  },
+};
+
+// ReithSans
+export const REITH_SANS_BOLD = {
+  '@font-face': {
+    name: 'BBCReithSans_W_Bd',
+    version: 'r2.512',
+    subsets: false,
+    fontFamily: 'ReithSans',
+    fontWeight: 700,
+    fontDisplay: 'optional',
+    baseUrl: REITH_FONTS_DIR,
+  },
+};
+
+export const REITH_SANS_REGULAR = {
+  '@font-face': {
+    name: 'BBCReithSans_W_Rg',
+    version: 'r2.512',
+    subsets: false,
+    fontWeight: 400,
+    fontFamily: 'ReithSans',
+    fontDisplay: 'optional',
+    baseUrl: REITH_FONTS_DIR,
+  },
+};
+
+// ReithSerif
+export const REITH_SERIF_LIGHT = {
+  '@font-face': {
+    name: 'BBCReithSerif_WNumbers_Lt',
+    version: 'r2.512',
+    subsets: true,
+    fontFamily: 'ReithSerif',
+    fontWeight: 300,
+    fontDisplay: 'optional',
+    baseUrl: REITH_FONTS_DIR,
+  },
+};
+
+export const REITH_SERIF_MEDIUM = {
+  '@font-face': {
+    name: 'BBCReithSerif_W_Md',
+    version: 'r2.512',
+    subsets: false,
+    fontFamily: 'ReithSerif',
+    fontWeight: 500,
+    fontDisplay: 'optional',
+    baseUrl: REITH_FONTS_DIR,
+  },
+};
+
+// Reith Qalam
+export const REITH_QALAM_BOLD = {
+  '@font-face': {
+    name: 'qalamBold',
+    fontFamily: 'BBC Reith Qalam',
+    fontWeight: 700,
+    version: 'v1.310',
+    fontStyle: 'normal',
+    src: `${REITH_QALAM_FONTS_DIR}BBCReithQalam_W_Bd.woff2`,
+    fontDisplay: 'optional',
+  },
+};
+
+export const REITH_QALAM_REGULAR = {
+  '@font-face': {
+    name: 'qalamNormal',
+    fontFamily: 'BBC Reith Qalam',
+    fontWeight: 400,
+    version: 'v1.310',
+    fontStyle: 'normal',
+    src: `${REITH_QALAM_FONTS_DIR}BBCReithQalam_W_Rg.woff2`,
+    fontDisplay: 'optional',
   },
 };
 
@@ -272,137 +292,23 @@ const REITH_FOR_PWA_SERVICES: Services[] = [
   'yoruba',
 ];
 
-// ReithSans
-const reithSansBold = {
-  name: 'BBCReithSans_W_Bd',
-  version: 'r2.512',
-  subsets: false,
-  fontFamily: 'ReithSans',
-  fontWeight: 700,
-  fontDisplay: 'optional',
-  baseUrl: REITH_FONTS_DIR,
-};
+export default ({ service, isPWA }: { service: Services; isPWA: boolean }) => {
+  let fontFaces;
 
-export const REITH_SANS_BOLD = {
-  '@font-face': {
-    ...reithSansBold,
-  },
-};
-
-const reithSansRegular = {
-  name: 'BBCReithSans_W_Rg',
-  version: 'r2.512',
-  subsets: false,
-  fontWeight: 400,
-  fontFamily: 'ReithSans',
-  fontDisplay: 'optional',
-  baseUrl: REITH_FONTS_DIR,
-};
-
-export const REITH_SANS_REGULAR = {
-  '@font-face': {
-    ...reithSansRegular,
-  },
-};
-
-// ReithSerif
-const reithSerifLight = {
-  name: 'BBCReithSerif_WNumbers_Lt',
-  version: 'r2.512',
-  subsets: true,
-  fontFamily: 'ReithSerif',
-  fontWeight: 300,
-  fontDisplay: 'optional',
-  baseUrl: REITH_FONTS_DIR,
-};
-
-export const REITH_SERIF_LIGHT = {
-  '@font-face': {
-    ...reithSerifLight,
-  },
-};
-
-const reithSerifMedium = {
-  name: 'BBCReithSerif_W_Md',
-  version: 'r2.512',
-  subsets: false,
-  fontFamily: 'ReithSerif',
-  fontWeight: 500,
-  fontDisplay: 'optional',
-  baseUrl: REITH_FONTS_DIR,
-};
-
-export const REITH_SERIF_MEDIUM = {
-  '@font-face': {
-    ...reithSerifMedium,
-  },
-};
-
-// Reith Qalam
-const reithQalamBold = {
-  name: 'qalamBold',
-  fontFamily: 'BBC Reith Qalam',
-  fontWeight: 700,
-  version: 'v1.310',
-  fontStyle: 'normal',
-  src: `${REITH_QALAM_FONTS_DIR}BBCReithQalam_W_Bd.woff2`,
-  fontDisplay: 'optional',
-};
-
-export const REITH_QALAM_BOLD = {
-  '@font-face': {
-    ...reithQalamBold,
-  },
-};
-
-const reithQalamRegular = {
-  name: 'qalamNormal',
-  fontFamily: 'BBC Reith Qalam',
-  fontWeight: 400,
-  version: 'v1.310',
-  fontStyle: 'normal',
-  src: `${REITH_QALAM_FONTS_DIR}BBCReithQalam_W_Rg.woff2`,
-  fontDisplay: 'optional',
-};
-
-export const REITH_QALAM_REGULAR = {
-  '@font-face': {
-    ...reithQalamRegular,
-  },
-};
-
-export default (service: Services, isPWA: boolean) => {
   if (isPWA && REITH_FOR_PWA_SERVICES.includes(service)) {
-    return [reithSansBold, reithSansRegular, reithSerifMedium, reithSerifLight];
+    fontFaces = [
+      REITH_SANS_BOLD,
+      REITH_SANS_REGULAR,
+      REITH_SERIF_LIGHT,
+      REITH_SERIF_MEDIUM,
+    ];
+  } else {
+    // Font faces as defined in the service theme
+    ({ fontFaces } = useTheme());
   }
 
-  switch (service) {
-    case 'arabic':
-    case 'pashto':
-    case 'persian':
-    case 'urdu':
-      return [reithQalamRegular, reithQalamBold];
-    case 'sinhala':
-      return [notoSerifSinhalaRegular, notoSerifSinhalaBold];
-    case 'bengali':
-      return [notoSerifBengaliRegular, notoSerifBengaliBold];
-    case 'tamil':
-      return [notoSansTamilRegular, notoSansTamilBold];
-    case 'telugu':
-      return [notoSansTeluguRegular, notoSansTeluguBold];
-    case 'gujarati':
-      return [notoSansGujaratiRegular, notoSansGujaratiBold];
-    case 'amharic':
-    case 'tigrinya':
-      return [notoSansEthiopicRegular, notoSansEthiopicBold];
-    case 'burmese':
-      return [padaukRegular, padaukBold];
-    default:
-      return [
-        reithSansBold,
-        reithSansRegular,
-        reithSerifMedium,
-        reithSerifLight,
-      ];
-  }
+  // Return the raw font info
+  const fonts = fontFaces.map(font => font['@font-face']);
+
+  return fonts;
 };

@@ -74,7 +74,7 @@ const PageLayoutWrapper = ({
       }, 0);
   }
 
-  const serviceFonts = fontFaces(service, isPWA);
+  const serviceFonts = fontFaces({ service, isPWA });
 
   const fontJs =
     isLite ||
@@ -120,6 +120,7 @@ const PageLayoutWrapper = ({
                     });
                 };
                 fontsForStorage.forEach(font => {
+                    console.log({font});
                     const storageKey = 'font-' + font.name;
                     let fontContents = localStorage.getItem(storageKey);
 
