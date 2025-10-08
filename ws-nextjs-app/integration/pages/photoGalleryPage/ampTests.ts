@@ -1,8 +1,7 @@
 import { runCoreAmpTests, runAmpAnalyticsTests } from '#src/integration/common';
-import { Services } from '#app/models/types/global';
 import runCrossPlatformTests from './crossPlatformTests';
 
-export default (service: Services) => {
+export default (service: string) => {
   runCrossPlatformTests(service);
   runCoreAmpTests();
   runAmpAnalyticsTests();
