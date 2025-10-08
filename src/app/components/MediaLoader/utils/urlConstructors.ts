@@ -9,11 +9,12 @@ const TEST_AMP_URL = 'https://web-cdn.test.api.bbci.co.uk';
 
 type FuncProps = {
   id: string | null;
-  versionID?: string;
+  parentPID?: string;
+  versionPID?: string;
   lang?: string;
 };
 
-export const getAmpIframeUrl = ({ id, versionID, lang }: FuncProps) => {
+export const getAmpIframeUrl = ({ id, versionPID, lang }: FuncProps) => {
   if (!id) return null;
 
   const { platform, service, variant, assetId } = parseRoute(id);
@@ -21,17 +22,22 @@ export const getAmpIframeUrl = ({ id, versionID, lang }: FuncProps) => {
   const ampBaseUrl = isLive() ? LIVE_AMP_URL : TEST_AMP_URL;
 
   if (platform === 'cps') {
-    return `${ampBaseUrl}/ws/av-embeds/cps/${service}${variant ? `/${variant}` : ''}/${assetId}${versionID ? `/${versionID}` : ''}${lang ? `/${lang}` : ''}/amp`;
+    return `${ampBaseUrl}/ws/av-embeds/cps/${service}${variant ? `/${variant}` : ''}/${assetId}${versionPID ? `/${versionPID}` : ''}${lang ? `/${lang}` : ''}/amp`;
   }
 
   if (platform === 'articles') {
-    return `${ampBaseUrl}/ws/av-embeds/articles/${assetId}${versionID ? `/${versionID}` : ''}${lang ? `/${lang}` : ''}/amp`;
+    return `${ampBaseUrl}/ws/av-embeds/articles/${assetId}${versionPID ? `/${versionPID}` : ''}${lang ? `/${lang}` : ''}/amp`;
   }
 
   return null;
 };
 
-export const getExternalEmbedUrl = ({ id, versionID, lang }: FuncProps) => {
+export const getExternalEmbedUrl = ({
+  id,
+  parentPID,
+  versionPID,
+  lang,
+}: FuncProps) => {
   if (!id) return null;
 
   const { platform, service, variant, assetId } = parseRoute(id);
@@ -39,11 +45,11 @@ export const getExternalEmbedUrl = ({ id, versionID, lang }: FuncProps) => {
   const baseUrl = isLive() ? LIVE_BASE_URL : TEST_BASE_URL;
 
   if (platform === 'cps') {
-    return `${baseUrl}/${service}${variant ? `/${variant}` : ''}/av-embeds/${assetId}${versionID ? `/vpid/${versionID}` : ''}`;
+    return `${baseUrl}/${service}${variant ? `/${variant}` : ''}/av-embeds/${assetId}${versionPID ? `/vpid/${versionPID}` : ''}`;
   }
 
   if (platform === 'articles') {
-    return `${baseUrl}/ws/av-embeds/articles/${assetId}${versionID ? `/${versionID}` : ''}${lang ? `/${lang}` : ''}`;
+    return `${baseUrl}/ws/av-embeds/articles/${assetId}${parentPID ? `/${parentPID}` : ''}${lang ? `/${lang}` : ''}`;
   }
 
   return null;
