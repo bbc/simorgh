@@ -135,8 +135,7 @@ export const statsNavigationCallback = async (
   e: SMPEvent,
   blocks: PortraitClipMediaBlock[],
   eventTrackingData: EventTrackingData,
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  swipeTracker: any,
+  swipeTracker: ReturnType<typeof useSwipeTracker>,
 ) => {
   const { direction, method } = e || {};
 
@@ -161,8 +160,7 @@ export const playbackEndedCallback = async (
   e: SMPEvent,
   blocks: PortraitClipMediaBlock[],
   eventTrackingData: EventTrackingData,
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  swipeTracker: any,
+  swipeTracker: ReturnType<typeof useSwipeTracker>,
 ) => {
   const player = getPlayerInstance();
   const { ended } = e;
