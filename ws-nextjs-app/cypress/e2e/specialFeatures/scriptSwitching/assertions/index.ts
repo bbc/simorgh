@@ -76,6 +76,8 @@ export default ({
       );
       allVariantAssertions({ service, variant: otherVariant });
 
+      // SKIPPED: The following tests have been skipped as the Home Page hasn't yet been migrated.
+      // SKIPPED: When we migrate home pages we should consider refactoring these tests to reduce visits we make to home pages
       // // Navigate to home page by clicking link in the banner
       // clickHomePageLink(service, otherVariant);
 
@@ -92,13 +94,13 @@ export default ({
       // );
       // allVariantAssertions(service, otherVariant);
 
-      // Clicks script switcher to original variant
-      clickScriptSwitcher(variant as Variants);
+      // // Clicks script switcher to original variant
+      // clickScriptSwitcher(variant as Variants);
 
-      cy.log(
-        `Asserting script switch button, url and document lang have changed after clicking script switcher to ${variant}`,
-      );
-      allVariantAssertions({ service, variant });
+      // cy.log(
+      //   `Asserting script switch button, url and document lang have changed after clicking script switcher to ${variant}`,
+      // );
+      // allVariantAssertions({ service, variant });
     });
   });
 };

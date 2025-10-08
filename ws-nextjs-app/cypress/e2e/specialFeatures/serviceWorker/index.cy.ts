@@ -61,8 +61,4 @@ const ampTestSuites = testSuites.map(testSuite => ({
 runTestsForPage({
   pageType: ARTICLE_PAGE,
   testSuites: [...testSuites, ...ampTestSuites],
-  deleteServiceWorker: true,
-  headers: {
-    'page-type': 'article',
-  },
 });
