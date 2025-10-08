@@ -528,5 +528,6 @@ declare module '@emotion/react' {
     gridWidths: GridWidths;
     isDarkUi: boolean;
     isLite: boolean;
+    fontFaces: Typography['fontFaces'];
   }
 }
