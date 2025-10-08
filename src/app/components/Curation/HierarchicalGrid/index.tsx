@@ -170,11 +170,9 @@ const HiearchicalGrid = ({
                   {promo.description}
                 </Promo.Body>
                 {!isLive ? (
-                  <div className="timestamp-read-time-container">
-                    <Promo.Timestamp className="promo-timestamp" showPrefix>
-                      {promo.lastPublished}
-                    </Promo.Timestamp>
-                  </div>
+                  <Promo.Timestamp className="promo-timestamp" showPrefix>
+                    {promo.lastPublished}
+                  </Promo.Timestamp>
                 ) : null}
               </Promo>
             </li>
