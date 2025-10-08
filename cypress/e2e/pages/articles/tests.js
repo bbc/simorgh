@@ -1,4 +1,3 @@
-import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import { crossPlatform as mostReadAssertions } from '../mostReadPage/mostReadAssertions';
 
@@ -17,14 +16,12 @@ const serviceHasInlineLink = service =>
 export default ({ service, pageType, variant = 'default' }) => {
   describe(`Running tests for ${service} ${pageType}`, () => {
     describe(`Metadata`, () => {
-      const serviceID = config[service]?.name || service;
-
       // Here we should only have metadata tests that are unique to articles pages
       it('should have the correct articles metadata', () => {
         cy.get('meta[name="article:author"]').should(
           'have.attr',
           'content',
-          appConfig[serviceID][variant].articleAuthor,
+          appConfig[service][variant].articleAuthor,
         );
       });
 
