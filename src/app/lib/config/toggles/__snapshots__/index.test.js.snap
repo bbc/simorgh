@@ -87,7 +87,6 @@ exports[`Toggles Config when application environment is local should contain cor
   },
   "adsNonce": {
     "enabled": true,
-    "value": "es,mx",
   },
   "articleLiteSiteLink": {
     "enabled": true,
