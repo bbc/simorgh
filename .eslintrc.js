@@ -5,6 +5,7 @@ module.exports = {
     'airbnb',
     'plugin:prettier/recommended',
     'plugin:jsx-a11y/recommended',
+    'plugin:react-hooks/recommended',
   ],
   env: {
     es6: true,
@@ -32,7 +33,6 @@ module.exports = {
     'prettier',
     'json',
     'jsx-a11y',
-    'react-hooks',
     'cypress',
     'import',
     'no-only-tests',
@@ -76,9 +76,6 @@ module.exports = {
       },
     ],
     'linebreak-style': process.platform === 'win32' ? 'off' : ['error', 'unix'],
-    'react-hooks/react-compiler': 'error',
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
     'import/no-import-module-exports': [
       'error',
       {
