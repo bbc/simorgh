@@ -1,12 +1,12 @@
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
-import '#psammead/psammead-locales/moment/en-gb';
-import '#psammead/moment-timezone-include/tz/Europe/London';
+import 'moment/locale/hu';
+import '#psammead/moment-timezone-include/tz/Europe/Budapest';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {
-    lang: 'en-GB',
+    lang: 'hu',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Frissítve',
     articleTimestampSuffix: '',
@@ -27,9 +27,9 @@ export const service: DefaultServiceConfig = {
     audioCaptionOffscreenText: 'Hangfelirat',
     defaultCaptionOffscreenText: 'Felirat, ',
     imageCopyrightOffscreenText: 'Kép forrás, ',
-    locale: 'en_GB',
-    isoLang: 'en',
-    datetimeLocale: 'en-gb',
+    locale: 'hu-HU',
+    isoLang: 'hu',
+    datetimeLocale: 'hu',
     service: 'magyarul',
     serviceName: 'Magyarul',
     serviceLocalizedName: 'Magyarul',
@@ -385,7 +385,7 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         'A BBC. A BBC-t nem terheli felelősség a külső oldalak tartalmáért.',
     },
-    timezone: 'Europe/London',
+    timezone: 'Europe/Budapest',
     navigation: [
       {
         title: 'Hírek',
