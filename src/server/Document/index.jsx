@@ -116,10 +116,7 @@ const renderDocument = async ({
     />,
   );
 
-  return {
-    html: `<!doctype html>${doc.replaceAll('&#x27;', "'")}`,
-    redirectUrl: null,
-  };
+  return { html: `<!doctype html>${doc}`, redirectUrl: null };
 };
 
 export default renderDocument;

@@ -45,10 +45,9 @@ const getUploadDate = (availableFrom?: string, firstPublished?: string) => {
 type Props = {
   blocks: MediaBlock[];
   embedURL?: string;
-  nonce?: string | null;
 };
 
-const Metadata = ({ blocks, embedURL, nonce }: Props) => {
+const Metadata = ({ blocks, embedURL }: Props) => {
   const { pageType } = use(RequestContext);
 
   if (!SUPPORTED_PAGE_TYPES.includes(pageType)) return null;
@@ -87,9 +86,7 @@ const Metadata = ({ blocks, embedURL, nonce }: Props) => {
 
   return (
     <Helmet>
-      <script {...(nonce ? { nonce } : {})} type="application/ld+json">
-        {JSON.stringify(metadataJson)}
-      </script>
+      <script type="application/ld+json">{JSON.stringify(metadataJson)}</script>
     </Helmet>
   );
 };

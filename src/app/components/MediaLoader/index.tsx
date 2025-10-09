@@ -289,11 +289,7 @@ const MediaLoader = ({
       {
         // Prevents the av-embeds route itself rendering the Metadata component
         !embedded && (
-          <Metadata
-            blocks={blocks}
-            nonce={nonce}
-            embedURL={playerConfig?.externalEmbedUrl}
-          />
+          <Metadata blocks={blocks} embedURL={playerConfig?.externalEmbedUrl} />
         )
       }
       <figure
