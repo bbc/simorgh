@@ -23,7 +23,8 @@ export const getParentColumns = (columnLayout: ColumnLayout) => {
 };
 
 const getItemCss = ({ dir, size }: { dir: Direction; size: Size }) => {
-  const itemCss: unknown[] = [];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const itemCss: any[] = [];
 
   if (size === 'small') {
     itemCss.push(styles.smallPaddingTop);
