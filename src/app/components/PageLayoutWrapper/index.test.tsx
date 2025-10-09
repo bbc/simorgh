@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { allServices } from '#app/routes/utils/regex';
+import { services } from '#app/lib/config/services/loadableConfig';
 import { Services } from '#app/models/types/global';
 import { act, render } from '../react-testing-library-with-providers';
 import PageLayoutWrapper from '.';
@@ -23,7 +23,7 @@ describe('PageLayoutWrapper', () => {
   });
 
   it.each(
-    allServices.filter(
+    services.filter(
       service => !['newsround', 'ukrainian'].includes(service),
     ) as Services[],
   )('should render fonts for %s', async (service: Services) => {
