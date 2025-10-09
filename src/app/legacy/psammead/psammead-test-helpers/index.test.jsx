@@ -7,7 +7,7 @@ const ensureErrorWhenMissingExport = testHelperMethod => {
 
   expect(() => {
     testHelperMethod(actualWithAll, expectedMissing, 'testing');
-  }).toThrowError(
+  }).toThrow(
     "Missing value 'foo' in the expected export for 'testing/utility'.",
   );
 
@@ -17,9 +17,7 @@ const ensureErrorWhenMissingExport = testHelperMethod => {
 
   expect(() => {
     testHelperMethod(actualMissing, expectedWithAll, 'testing');
-  }).toThrowError(
-    "Missing value 'bar' in the actual export for 'testing/utility'.",
-  );
+  }).toThrow("Missing value 'bar' in the actual export for 'testing/utility'.");
 };
 
 const ensureErrorWhenMissingFileDefinition = testHelperMethod => {
@@ -34,7 +32,7 @@ const ensureErrorWhenMissingFileDefinition = testHelperMethod => {
 
   expect(() => {
     testHelperMethod(actualWithAll, expectedMissing, 'testing');
-  }).toThrowError(
+  }).toThrow(
     "Missing value 'utilityTwo' in the expected utilities for 'testing'.",
   );
 
@@ -49,7 +47,7 @@ const ensureErrorWhenMissingFileDefinition = testHelperMethod => {
 
   expect(() => {
     testHelperMethod(actualMissing, expectedWithAll, 'testing');
-  }).toThrowError(
+  }).toThrow(
     "Missing value 'utilityTwo' in the actual utilities for 'testing'.",
   );
 };

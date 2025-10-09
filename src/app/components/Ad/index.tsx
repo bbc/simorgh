@@ -1,23 +1,13 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import useToggle from '#hooks/useToggle';
 import { RequestContext } from '#contexts/RequestContext';
-import getUUID from '#app/lib/utilities/getUUID';
 import AmpAd from './Amp';
 import CanonicalAd from './Canonical';
 import { AdProps } from './types';
 import AdBootstrapJs from './Canonical/AdBootstrapJs';
 
 const AdContainer = ({ slotType, className, adcampaign }: AdProps) => {
-  const { isAmp, isLite, showAdsBasedOnLocation, country } =
-    useContext(RequestContext);
-  const { enabled: isAdsNonceEnabled, value: countries } =
-    useToggle('adsNonce');
-
-  const countriesForNonce = countries?.split(',') || [];
-  const nonceEnabledForCountry =
-    countriesForNonce?.length === 0 || countriesForNonce.includes(country);
-  const isNonceAllowed = isAdsNonceEnabled && nonceEnabledForCountry;
-  const nonce = isNonceAllowed ? getUUID() : undefined;
+  const { isAmp, isLite, showAdsBasedOnLocation, nonce } = use(RequestContext);
 
   const { enabled: adsEnabled } = useToggle('ads');
 
@@ -30,7 +20,7 @@ const AdContainer = ({ slotType, className, adcampaign }: AdProps) => {
     return (
       <>
         {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
-        {!isAmp && <AdBootstrapJs adcampaign={adcampaign} />}
+        {!isAmp && <AdBootstrapJs adcampaign={adcampaign} nonce={nonce} />}
         <Ad nonce={nonce} slotType={slotType} className={className} />
       </>
     );

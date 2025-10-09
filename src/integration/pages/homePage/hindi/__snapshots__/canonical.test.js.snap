@@ -1,15 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Canonical Home Page A11y I can see the skip to content link 1`] = `"सामग्री को स्किप करें"`;
 
-exports[`Canonical Home Page Analytics ATI tracking pixel excluding src 1`] = `
-<img
-  alt=""
-  height="1px"
-  style="position:absolute"
-  width="1px"
-/>
-`;
+exports[`Canonical Home Page Analytics ATI tracking pixel excluding src 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" >"`;
 
 exports[`Canonical Home Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
 
@@ -107,7 +100,7 @@ exports[`Canonical Home Page Footer Anchors should match text and url 8`] = `
 exports[`Canonical Home Page Footer Anchors should match text and url 9`] = `
 {
   "text": "बाहरी साइटों का लिंक देने की हमारी नीति के बारे में पढ़ें.",
-  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
 }
 `;
 
@@ -156,40 +149,47 @@ exports[`Canonical Home Page Header Navigation link should match text and url 5`
 
 exports[`Canonical Home Page Header Navigation link should match text and url 6`] = `
 {
+  "text": "करियर",
+  "url": "/hindi/topics/c95y3gjndw8t",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 7`] = `
+{
   "text": "फ़ाइनेंस",
   "url": "/hindi/topics/c5qvpx5dq4qt",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 7`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 8`] = `
 {
   "text": "खेल",
   "url": "/hindi/topics/cwr9j8g1kj9t",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 8`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 9`] = `
 {
   "text": "विज्ञान-टेक्नॉलॉजी",
   "url": "/hindi/topics/c2lej0594knt",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 9`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 10`] = `
 {
   "text": "सोशल",
   "url": "/hindi/topics/c2e4q0z9qznt",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 10`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 11`] = `
 {
   "text": "वीडियो",
   "url": "/hindi/topics/cw9kv0kpxydt",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 11`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 12`] = `
 {
   "text": "पॉडकास्ट",
   "url": "/hindi/topics/cv22x3pmrvmt",

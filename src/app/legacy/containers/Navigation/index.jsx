@@ -7,6 +7,8 @@ import {
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { RequestContext } from '#contexts/RequestContext';
+import isLive from '#app/lib/utilities/isLive';
+import LanguageNavigation from './LanguageNavigation/lazy';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Canonical from './index.canonical';
 import Amp from './index.amp';
@@ -48,11 +50,17 @@ const renderListItems = (
     return [...listAcc, listItem];
   }, []);
 
-const NavigationContainer = ({ propsForOJExperiment }) => {
+const NavigationContainer = ({ propsForTopBarOJComponent }) => {
   const { isAmp, isLite } = use(RequestContext);
-  const { blocks, experimentVariant } = propsForOJExperiment || {};
-  const { script, translations, navigation, service, dir } =
-    use(ServiceContext);
+  const { blocks = [] } = propsForTopBarOJComponent || {};
+  const {
+    script,
+    translations,
+    navigation,
+    service,
+    dir,
+    collapsibleNavigation,
+  } = use(ServiceContext);
 
   const { canonicalLink, origin } = use(RequestContext);
   const { currentPage, navMenuText } = translations;
@@ -78,6 +86,13 @@ const NavigationContainer = ({ propsForOJExperiment }) => {
   );
 
   const dropdownNavViewTracker = useViewTracker(dropdownNavEventTrackingData);
+
+  // TODO: isLive statement to be removed when Global Language page goes live. https://bbc.atlassian.net/browse/WS-1254
+  const renderLanguageNavigation = !isLive() && collapsibleNavigation?.length;
+
+  if (renderLanguageNavigation) {
+    return <LanguageNavigation />;
+  }
 
   if (!navigation || navigation.length === 0) {
     return null;
@@ -131,7 +146,6 @@ const NavigationContainer = ({ propsForOJExperiment }) => {
       script={script}
       service={service}
       blocks={blocks}
-      experimentVariant={experimentVariant}
     />
   );
 };

@@ -350,6 +350,10 @@ const preview: Preview = {
             title: 'cymrufyw',
           },
           {
+            value: { service: 'dari', variant: 'default' },
+            title: 'dari',
+          },
+          {
             value: { service: 'gahuza', variant: 'default' },
             title: 'gahuza',
           },
@@ -384,6 +388,10 @@ const preview: Preview = {
           {
             value: { service: 'kyrgyz', variant: 'default' },
             title: 'kyrgyz',
+          },
+          {
+            value: { service: 'magyarul', variant: 'default' },
+            title: 'magyarul',
           },
           {
             value: { service: 'marathi', variant: 'default' },
@@ -532,6 +540,10 @@ const preview: Preview = {
           {
             value: { service: 'ukrainian', variant: 'ru-UA' },
             title: 'ukrainian-ru-UA',
+          },
+          {
+            value: { service: 'ws', variant: 'default' },
+            title: 'ws',
           },
         ],
         dynamicTitle: true,

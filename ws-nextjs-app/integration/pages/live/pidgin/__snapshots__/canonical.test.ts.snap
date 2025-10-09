@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Canonical Live Header I can see the branding 1`] = `"BBC News, Pidgin"`;
 
@@ -78,7 +78,9 @@ exports[`Canonical Live Media Loader renders a figure caption 1`] = `
     <noscript
       class="css-lllaou"
     >
-      &lt;strong&gt;Dem no support media player for your device&lt;/strong&gt;
+      <strong>
+        Dem no support media player for your device
+      </strong>
     </noscript>
   </div>
   <button
@@ -126,7 +128,7 @@ exports[`Canonical Live Media Loader renders a figure caption 1`] = `
     </time>
   </button>
   <div
-    class="css-lgx6cw"
+    class="css-1jf2q50"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
@@ -159,7 +161,9 @@ exports[`Canonical Live Media Loader renders a placeholder 1`] = `
     <noscript
       class="css-lllaou"
     >
-      &lt;strong&gt;Dem no support media player for your device&lt;/strong&gt;
+      <strong>
+        Dem no support media player for your device
+      </strong>
     </noscript>
   </div>
   <button
@@ -207,7 +211,7 @@ exports[`Canonical Live Media Loader renders a placeholder 1`] = `
     </time>
   </button>
   <div
-    class="css-lgx6cw"
+    class="css-1jf2q50"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
@@ -224,7 +228,7 @@ exports[`Canonical Live Media Loader renders a placeholder 1`] = `
 
 exports[`Canonical Live Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container css-1c2jhne"
+  class="media-container css-1gajiay"
   data-e2e="media-loader__container"
 >
   <div
@@ -244,7 +248,9 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
       <noscript
         class="css-lllaou"
       >
-        &lt;strong&gt;Dem no support media player for your device&lt;/strong&gt;
+        <strong>
+          Dem no support media player for your device
+        </strong>
       </noscript>
     </div>
     <button
@@ -292,7 +298,7 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
       </time>
     </button>
     <div
-      class="css-lgx6cw"
+      class="css-1jf2q50"
       style="padding-bottom:0;overflow:hidden"
     >
       <img

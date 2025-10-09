@@ -23,6 +23,10 @@ const context = {
   },
 };
 
+jest.mock('#app/lib/utilities/getUUID', () =>
+  jest.fn().mockImplementation(() => '12345678-abcd-1fed-0123-a1b2c3d4e5f6'),
+);
+
 describe('Ad Container', () => {
   const originalConfigUrl = process.env.SIMORGH_CONFIG_URL;
 
@@ -413,6 +417,57 @@ describe('Ad Container', () => {
       );
 
       expect(getBootstrapScript()).toBeTruthy();
+    });
+  });
+
+  describe('Ad script nonce', () => {
+    const nonce = '7088dae1fe17eee6bf8a2ccbcf9ac115';
+    const mockToggleDispatch = jest.fn();
+
+    const toggleContextMock = {
+      toggleState: { ads: { enabled: true } },
+      toggleDispatch: mockToggleDispatch,
+    };
+
+    const getAdScripts = () => {
+      const helmetContent = Helmet.peek().scriptTags;
+      return helmetContent.filter(
+        script => script.type === 'module' || script.noModule === true,
+      );
+    };
+
+    it('should add a nonce to the script when it is defined', () => {
+      render(
+        <ServiceContext.Provider
+          // @ts-expect-error require partial data for testing purposes
+          value={{ showAdPlaceholder: true, ...context }}
+        >
+          <RequestContextProvider
+            bbcOrigin="https://www.test.bbc.co.uk"
+            id="c0000000000o"
+            isAmp={false}
+            isApp={false}
+            pageType={HOME_PAGE}
+            service="mundo"
+            statusCode={200}
+            pathname="/mundo"
+            showAdsBasedOnLocation
+            country="ES"
+            nonce={nonce}
+          >
+            <ToggleContext.Provider value={toggleContextMock}>
+              <BrowserRouter>
+                <AdContainer slotType="leaderboard" />
+              </BrowserRouter>
+            </ToggleContext.Provider>
+          </RequestContextProvider>
+        </ServiceContext.Provider>,
+      );
+      const adScripts = getAdScripts();
+
+      adScripts.forEach(script => {
+        expect(script.nonce).toBeTruthy();
+      });
     });
   });
 });

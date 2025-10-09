@@ -1,5 +1,5 @@
 /* eslint-disable consistent-return */
-import envConfig from '../../../support/config/envs';
+import chartbeatTests from '../../../support/helpers/chartbeatTests';
 import {
   getEpisodeAvailability,
   videoPlaceholderImageUrl,
@@ -36,16 +36,7 @@ export default ({ service, pageType, path, variant = 'default' }) => {
           });
         },
 
-        describe('Chartbeat', () => {
-          if (envConfig.chartbeatEnabled) {
-            it('should have a script with src value set to chartbeat source', () => {
-              cy.hasScriptWithChartbeatSrc();
-            });
-            it('should have chartbeat config set to window object', () => {
-              cy.hasGlobalChartbeatConfig();
-            });
-          }
-        }),
+        chartbeatTests(),
       );
     }
     describe(`Tests for ${service} ${pageType} ${variant} with toggle use`, () => {
@@ -74,7 +65,7 @@ export default ({ service, pageType, path, variant = 'default' }) => {
                 const { recentEpisodes } = data;
                 cy.log({ recentEpisodes });
 
-                if (recentEpisodes?.length > 0 && recentEpisodesMaxNumber > 1) {
+                if (recentEpisodes?.length > 1 && recentEpisodesMaxNumber > 1) {
                   cy.get('[data-e2e=recent-episodes-list]').should('exist');
 
                   cy.get('[data-e2e=recent-episodes-list]').within(() => {

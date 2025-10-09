@@ -80,6 +80,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'Tsallaka zuwa abubuwan da ke ciki',
       relatedContent: 'Karin bayani',
       relatedTopics: 'Labarai masu alaka',
+      moreOnThis: '',
       navMenuText: 'Sassa',
       liteSite: {
         onboardingMessage:
@@ -96,7 +97,7 @@ export const service: DefaultServiceConfig = {
         videoPlayer: 'Video player',
       },
       liveExperiencePage: {
-        liveLabel: 'Kai-tsaye',
+        liveLabel: 'Kai tsaye',
         liveCoverage: 'Rahoto kai-tsaye',
         breaking: 'Labarai da dumi-dumi',
         postedAt: 'An wallafa a',
@@ -270,6 +271,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'Za a iya samun wannan Podcast din a',
         download: 'Sauke shiri',
         closeVideo: 'Fita',
+        endOfContentClose: 'Karshen wannan abun ciki. Fita',
       },
       socialEmbed: {
         caption: {
@@ -393,7 +395,7 @@ export const service: DefaultServiceConfig = {
         text: 'Me ya sa za ku iya aminta da BBC',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Karanta hanyoyin da muke bi dangane da adireshin waje.',
       },
       links: [

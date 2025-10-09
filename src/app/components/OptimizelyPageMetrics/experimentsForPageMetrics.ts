@@ -1,4 +1,5 @@
 import { PageTypes } from '#app/models/types/global';
+import { ARTICLE_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
 
 // Any running serverside and client side experiments which collect Optimizely Page Metrics; page view, page complete, scroll depth
 // Includes PageType so that different experiments can be run on different pageTypes
@@ -8,6 +9,17 @@ type ExperimentsForPageTypeMetrics = {
   activeExperiments: string[];
 }[];
 
-const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [];
+const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
+  {
+    // EXPERIMENT: Continue Reading button for articles
+    pageType: ARTICLE_PAGE,
+    activeExperiments: ['newswb_ws_read_more_b'],
+  },
+  {
+    // EXPERIMENT: Homepage Time of Day Adaptive Curations
+    pageType: HOME_PAGE,
+    activeExperiments: ['newswb_ws_tod_homepage'],
+  },
+];
 
 export default experimentsForPageMetrics;

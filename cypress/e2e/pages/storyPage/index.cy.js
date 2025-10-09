@@ -1,11 +1,10 @@
 import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
-import { testsThatAlwaysRunForAllPages as testsForAllPages } from '../testsForAllPages';
-import { testsThatFollowSmokeTestConfigForAllCanonicalPages as testsForAllCanonicalPages } from '../testsForAllCanonicalPages';
-import { testsThatFollowSmokeTestConfigForAllAMPPages as testsForAllAMPPages } from '../testsForAllAMPPages';
+import testsForAllPages from '../testsForAllPages';
+import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
+import testsForAllAMPPages from '../testsForAllAMPPages';
 import canonicalAndAmpArticleTests from './tests';
 import ampArticleTests from './testsForAMPOnly';
 import canonicalArticleTests from './testsForCanonicalOnly';
-import getOptimizelyKey from '../../../support/helpers/getOptimizelyKey';
 import liteTests from '../articles/testsForLiteOnly';
 
 const canonicalTests = [
@@ -194,27 +193,6 @@ const ampOnlyNonSmokeTestSuites = [
     service: 'newsround',
     runforEnv: 'test',
   },
-  {
-    path: '/sport/rugby-union/56359986',
-    service: 'sport',
-    runforEnv: 'live',
-  },
-  {
-    path: '/sport/golf/56318994',
-    service: 'sport',
-    runforEnv: 'live',
-  },
-  {
-    path: '/sport/tennis/23372108',
-    service: 'sport',
-    runforEnv: 'test',
-  },
-  {
-    path: '/sport/formula1/23355387',
-    service: 'sport',
-    runforEnv: 'test',
-    tests: canonicalTests,
-  },
 ];
 
 const canonicalTestSuites = Cypress.env('SMOKE')
@@ -233,7 +211,7 @@ const ampTestSuites = [
 });
 
 const liteTestSuites = canonicalTestSuites
-  .filter(({ service }) => !['news', 'sport', 'newsround'].includes(service))
+  .filter(({ service }) => !['news', 'newsround'].includes(service))
   .map(testSuite => {
     return {
       ...testSuite,
@@ -242,20 +220,7 @@ const liteTestSuites = canonicalTestSuites
     };
   });
 
-describe('storyPage', () => {
-  beforeEach(() => {
-    cy.intercept(
-      {
-        url: `https://cdn.optimizely.com/datafiles/${getOptimizelyKey()}.json`,
-      },
-      request => {
-        request.reply({ statusCode: 404 });
-      },
-    ).as('disable-optimizely');
-  });
-
-  runTestsForPage({
-    pageType,
-    testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],
-  });
+runTestsForPage({
+  pageType,
+  testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],
 });

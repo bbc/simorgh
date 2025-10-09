@@ -62,6 +62,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: `ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ`,
       relatedContent: 'ਇਸ ਖ਼ਬਰ ਬਾਰੇ ਹੋਰ',
       relatedTopics: 'ਸਬੰਧਿਤ ਵਿਸ਼ੇ',
+      moreOnThis: '',
       navMenuText: 'ਸੈਕਸ਼ਨਜ਼',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
@@ -231,6 +232,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Duration',
         recentEpisodes: 'ਤਾਜ਼ਾ ਐਪੀਸੋਡ',
         closeVideo: 'ਬਾਹਰ ਜਾਓ',
+        endOfContentClose: 'ਇਸ ਸਮੱਗਰੀ ਦਾ ਅੰਤ। ਬਾਹਰ ਜਾਓ',
       },
       socialEmbed: {
         caption: {
@@ -310,7 +312,7 @@ export const service: DefaultServiceConfig = {
         text: "ਤੁਸੀਂ ਬੀਬੀਸੀ 'ਤੇ ਕਿਉਂ ਵਿਸ਼ਵਾਸ਼ ਕਰ ਸਕਦੇ ਹੋ",
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'ਬਾਹਰੀ ਲਿੰਕਿੰਗ ਲਈ ਸਾਡੇ ਤਰੀਕੇ ਬਾਰੇ ਪੜ੍ਹੋ',
       },
       links: [

@@ -8,6 +8,7 @@ import {
   HOME_PAGE,
   TOPIC_PAGE,
   ERROR_PAGE,
+  LIVE_PAGE,
 } from '#app/routes/utils/pageTypes';
 import LiteSiteSummary from '#app/components/LiteSiteSummary';
 import { ServiceContext } from '../../../contexts/ServiceContext';
@@ -47,7 +48,7 @@ const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
   );
 };
 
-const HeaderContainer = ({ propsForOJExperiment }) => {
+const HeaderContainer = ({ propsForTopBarOJComponent }) => {
   const { isAmp, isApp, pageType, isLite } = use(RequestContext);
   const { service, script, translations, dir, scriptLink, lang, serviceLang } =
     use(ServiceContext);
@@ -76,6 +77,7 @@ const HeaderContainer = ({ propsForOJExperiment }) => {
 
   if (scriptLink) {
     switch (true) {
+      case pageType === LIVE_PAGE:
       case service === 'uzbek' &&
         ![ARTICLE_PAGE, HOME_PAGE, TOPIC_PAGE, ERROR_PAGE].includes(pageType):
         shouldRenderScriptSwitch = false;
@@ -104,7 +106,9 @@ const HeaderContainer = ({ propsForOJExperiment }) => {
         />
       )}
       {isLite && <LiteSiteSummary />}
-      <NavigationContainer propsForOJExperiment={propsForOJExperiment} />
+      <NavigationContainer
+        propsForTopBarOJComponent={propsForTopBarOJComponent}
+      />
     </header>
   );
 };

@@ -10,11 +10,6 @@ import {
   PlaylistItem,
 } from '../types';
 
-const DEFAULT_WIDTH = 512;
-
-export const setImageWidth = (url?: string) =>
-  url?.replace('{width}', String(DEFAULT_WIDTH));
-
 export default ({
   blocks,
   basePlayerConfig,
@@ -22,15 +17,8 @@ export default ({
   const { model }: PortraitClipMediaBlock =
     filterForBlockType(blocks, 'portraitClipMedia') ?? {};
 
-  const { video, images = [] } = model;
-
-  const { id, title, version } = video;
-
-  const [fallbackImage, portraitImage] = images;
-
-  const holdingImageURL = setImageWidth(
-    (portraitImage || fallbackImage)?.urlTemplate,
-  );
+  const { video } = model;
+  const { id, title, version, holdingImageURL } = video;
 
   const items: PlaylistItem[] = [
     {
@@ -90,8 +78,8 @@ export default ({
         },
         controls: {
           enabled: true,
-          includeNextButton: true,
-          includePreviousButton: true,
+          includeNextButton: isMobile,
+          includePreviousButton: isMobile,
         },
         fullscreen: {
           enabled: isMobile,

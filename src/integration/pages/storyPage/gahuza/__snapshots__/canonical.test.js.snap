@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Canonical Story Page Includes I can see a fallback image when there are disallowed scripts 1`] = `
 <img

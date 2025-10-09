@@ -74,6 +74,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'Fò kọjá sí nnkan tí ó wà nínú rẹ̀',
       relatedContent: 'Àwọn afíkun lórí ìròyìn yìí',
       relatedTopics: 'Àwọn Àkórí Tójọra',
+      moreOnThis: '',
       navMenuText: 'Àwọn abala',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
@@ -237,6 +238,7 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
         closeVideo: 'Jáde',
+        endOfContentClose: 'Kò sí àkóónú mọ́. Jáde',
       },
       socialEmbed: {
         caption: {
@@ -289,7 +291,7 @@ export const service: DefaultServiceConfig = {
         text: 'Ìdí tí ẹ fi le è nígbàagbọ́ nínú ìròyìn BBC',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Ọwọ́ tí a fi mú ìbáṣepọ̀ ti ìta.',
       },
       links: [

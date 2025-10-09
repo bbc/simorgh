@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import fixture from '#data/pidgin/topics/c95y35941vrt.json';
-import { MEDIA_TYPES } from '#components/Promo';
 import Promo from '.';
+import { MEDIA_TYPES } from '#app/lib/utilities/isMedia';
 
 const Wrapper = styled.div`
   max-width: 30rem;

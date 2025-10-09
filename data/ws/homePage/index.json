@@ -1,0 +1,295 @@
+{
+  "data": {
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "topic",
+            "isLive": false,
+            "title": "Las deslumbrantes imágenes de los premios Fotógrafo de la Vida Silvestre 2025",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/mundo/articles/c78z0d995zno",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/ae2e/test/c5984f50-84d1-11f0-b3f4-613a9b56827d.png.webp",
+            "description": "BBC Mundo le presenta una selección de contenidos y acontecimientos más importantes de la actualidad. Las últimas noticias e información en materia internacional, sobre América Latina, tecnología, ciencia, salud, economía. Fotos y videos.",
+            "imageAlt": "bee",
+            "id": "c93v2kkze2rt",
+            "visualProminence": "MAXIMUM"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "ما هي المشاعر المشتركة بين الإنسان وبعض الحيوانات؟",
+            "firstPublished": "2023-08-15T14:12:01.110Z",
+            "lastPublished": "2023-08-15T14:12:01.110Z",
+            "link": "https://www.bbc.com/arabic/articles/cp8zr6k2r7vo",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/ef29/test/cf8357f0-84d4-11f0-b3f4-613a9b56827d.png.webp",
+            "description": "Probo lorem partem pro ex, unum prima expetenda eos ne. Melius viderer quaestio nec te.",
+            "imageAlt": "butterfly on a flower",
+            "id": "c0ny73k281vo",
+            "visualProminence": "MAXIMUM"
+          },
+          {
+            "type": "topic",
+            "isLive": false,
+            "title": "وائلڈ لائف فوٹوگرافر ایوارڈز کی شاندار تصاویر",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/urdu/topics/c44evpp9wp1t",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/a4d1/test/fa3d0660-84d1-11f0-b3f4-613a9b56827d.png.webp",
+            "description": "تازہ ترین خبروں، ویڈیوز اور آڈیوز کے لیے بی بی سی اردو پر آئیے۔ بی بی سی اردو دنیا بھر کی خبروں کے حصول کے لیے ایک قابلِ اعتماد ویب سائٹ ہے۔",
+            "imageAlt": "fields",
+            "id": "c44evpp9wp1t",
+            "visualProminence": "MAXIMUM"
+          },
+          {
+            "type": "topic",
+            "isLive": false,
+            "title": "वन्यजीव फोटोग्राफर पुरस्कारों की आश्चर्यजनक तस्वीरें",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/hindi/topics/cw9kv0kpxydt",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/9a99/test/37a64ed0-84d2-11f0-b3f4-613a9b56827d.png.webp",
+            "description": "हिंदी में ताज़ा समाचार, ब्रेकिंग न्यूज़, वीडियो, ऑडियो और फ़ीचर. बीबीसी हिंदी डॉटकॉम पर भारत, पाकिस्तान और चीन सहित दुनिया भर की ताज़ा ख़बरें. BBC HINDI for up-to-the-minute news, breaking news, video, audio and feature stories.",
+            "imageAlt": "wind power",
+            "id": "cg8nwjjm7vet",
+            "visualProminence": "MAXIMUM"
+          },
+          {
+            "type": "topic",
+            "isLive": false,
+            "title": "Ікони у фейках: таємниця фальшивих прикрас, що підкорили Голлівуд",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/ukrainian/articles/c93dwvrpvvdo",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/b4e5/test/ead922b0-84d3-11f0-b3f4-613a9b56827d.jpg.webp",
+            "imageAlt": "Колаж з Мерилін Монро, Коко Шанель і Джоан Кроуфорд",
+            "id": "cl13j7792ljt",
+            "visualProminence": "MAXIMUM"
+          },
+          {
+            "type": "topic",
+            "isLive": false,
+            "title": "日本豐明市提議限制每日使用手機時間至兩小時引發爭議",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/zhongwen/articles/c2063mpr4yro/trad",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/bc7c/test/3464a670-84d4-11f0-b3f4-613a9b56827d.png.webp",
+            "imageAlt": "BBC",
+            "id": "cw95pll8714t",
+            "visualProminence": "MAXIMUM"
+          },
+          {
+            "type": "topic",
+            "isLive": false,
+            "title": "Di shine-shine pictures wey dem show for di Wildlife Photographer Awards",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/pidgin/popular/read",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/af6d/test/42a0c110-84d4-11f0-b3f4-613a9b56827d.png.webp",
+            "description": "BBC News Pidgin description demo",
+            "imageAlt": "animal",
+            "id": "c93v2kkz841t",
+            "visualProminence": "MAXIMUM"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:d7060861-e414-40c6-8675-3ed0eacdcb58",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "High Impact Promo",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE"
+      },
+      {
+        "summaries": [
+          {
+            "type": "topic",
+            "isLive": false,
+            "title": "Las deslumbrantes imágenes de los premios Fotógrafo de la Vida Silvestre 2025",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/mundo/articles/c78z0d995zno",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/ae2e/test/c5984f50-84d1-11f0-b3f4-613a9b56827d.png.webp",
+            "description": "BBC Mundo le presenta una selección de contenidos y acontecimientos más importantes de la actualidad. Las últimas noticias e información en materia internacional, sobre América Latina, tecnología, ciencia, salud, economía. Fotos y videos.",
+            "imageAlt": "bee",
+            "id": "c93v2kkze2rt",
+            "visualProminence": "MAXIMUM"
+          },
+          
+          {
+            "type": "topic",
+            "isLive": false,
+            "title": "Ікони у фейках: таємниця фальшивих прикрас, що підкорили Голлівуд",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/ukrainian/articles/c93dwvrpvvdo",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/b4e5/test/ead922b0-84d3-11f0-b3f4-613a9b56827d.jpg.webp",
+            "imageAlt": "Колаж з Мерилін Монро, Коко Шанель і Джоан Кроуфорд",
+            "id": "cl13j7792ljt",
+            "visualProminence": "MAXIMUM"
+          },
+          {
+            "type": "topic",
+            "isLive": false,
+            "title": "日本豐明市提議限制每日使用手機時間至兩小時引發爭議",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/zhongwen/articles/c2063mpr4yro/trad",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/bc7c/test/3464a670-84d4-11f0-b3f4-613a9b56827d.png.webp",
+            "imageAlt": "BBC",
+            "id": "cw95pll8714t",
+            "visualProminence": "MAXIMUM"
+          },
+          {
+            "type": "article",
+            "title": "Hiệp ước đại dương: Thỏa thuận lịch sử đạt được sau 10 năm đàm phán",
+            "firstPublished": "2023-03-05T15:28:21.000Z",
+            "link": "https://www.bbc.com/vietnamese/world-64856389",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3D1D/production/_128854651_gettyimages-452418175.jpg",
+            "description": "Hiệp ước Biển cả nhằm mục đích đặt 30% diện tích biển vào các khu vực được bảo vệ vào năm 2030 để bảo vệ và phục hồi thiên nhiên biển.",
+            "imageAlt": "Whale shark",
+            "id": "6bcd95bb-17a4-4ff8-a589-8b720a2d5eaa"
+          },
+          {
+            "type": "article",
+            "title": "Macron inaugure le TGV au Maroc",
+            "firstPublished": "2018-11-15T11:18:31.000Z",
+            "lastPublished": "2018-11-15T11:18:31.000Z",
+            "link": "https://www.bbc.com/afrique/23222399",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/1161/test/_63694440_043549290-1.jpg",
+            "description": "Le président Emmanuel Macron se rend jeudi au Maroc pour une visite de quelques heures.",
+            "imageAlt": "Macron pendant l inauguration du tgv",
+            "id": "625cdde8-911d-db45-aebf-cf70373255f7"
+          },
+          {
+            "type": "topic",
+            "isLive": false,
+            "title": "Di shine-shine pictures wey dem show for di Wildlife Photographer Awards",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/pidgin/popular/read",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/af6d/test/42a0c110-84d4-11f0-b3f4-613a9b56827d.png.webp",
+            "description": "BBC News Pidgin description demo",
+            "imageAlt": "animal",
+            "id": "c93v2kkz841t",
+            "visualProminence": "MAXIMUM"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:d7060861-e5423-40c6-8675-3ed0eacdcbaa",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "Mixed Promos",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE"
+      },
+      {
+        "activePage": 1,
+        "curationId": "urn:bbc:tipo:list:0b433aee-4417-410b-9dd3-6c6ad6f12735",
+        "curationType": "tipo-curation",
+        "pageCount": 1,
+        "position": 1,
+        "summaries": [
+          
+          {
+            "description": "bbc news pidgin",
+            "firstPublished": "",
+            "id": "https%3A%2F%2Fx.com%2Fbbcnewspidgin",
+            "imageAlt": "X",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/2183/test/4e3ed810-2f3c-11f0-ac60-8553ded2cfd2.png.webp",
+            "isLive": false,
+            "lastPublished": "",
+            "link": "https://x.com/bbcnewspidgin",
+            "title": "X",
+            "type": "link"
+          },
+          {
+            "description": "BBC News Pidgin",
+            "firstPublished": "",
+            "id": "https%3A%2F%2Fwww.facebook.com%2Fbbcnewspidgin",
+            "imageAlt": "Facebook",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/da70/test/3231c0b0-2f3c-11f0-ac60-8553ded2cfd2.png.webp",
+            "isLive": false,
+            "lastPublished": "",
+            "link": "https://www.facebook.com/bbcnewspidgin",
+            "title": "Facebook",
+            "type": "link"
+          },
+          {
+            "firstPublished": "",
+            "id": "https%3A%2F%2Fwww.youtube.com%2F%40BBCnews",
+            "imageAlt": "Youtube",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/069c/test/4b9469d0-2f42-11f0-ac60-8553ded2cfd2.png.webp",
+            "isLive": false,
+            "lastPublished": "",
+            "link": "https://www.youtube.com/@BBCnews",
+            "title": "Youtube - BBC News",
+            "type": "link"
+          },
+          {
+            "firstPublished": "",
+            "id": "https%3A%2F%2Fwww.youtube.com%2F%40BBCAfrica",
+            "imageAlt": "Youtube",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/7a7b/test/1efbc990-2f42-11f0-ac60-8553ded2cfd2.png.webp",
+            "isLive": false,
+            "lastPublished": "",
+            "link": "https://www.youtube.com/@BBCAfrica",
+            "title": "Youtube - BBC Africa",
+            "type": "link"
+          },
+          {
+            "description": "BBC News",
+            "firstPublished": "",
+            "id": "https%3A%2F%2Fwww.tiktok.com%2F%40bbcnews",
+            "imageAlt": "Tiktok",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/4e3d/test/9fe7f770-2f3f-11f0-ac60-8553ded2cfd2.png.webp",
+            "isLive": false,
+            "lastPublished": "",
+            "link": "https://www.tiktok.com/@bbcnews",
+            "title": "TikTok",
+            "type": "link"
+          },
+          {
+            "description": "BBC News Pidgin",
+            "firstPublished": "",
+            "id": "https%3A%2F%2Fwww.instagram.com%2Fbbcnewspidgin%2F",
+            "imageAlt": "Instagram",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/dd51/test/ae954740-2f3b-11f0-ac60-8553ded2cfd2.png.webp",
+            "isLive": false,
+            "lastPublished": "",
+            "link": "https://www.instagram.com/bbcnewspidgin/",
+            "title": "Instagram",
+            "type": "link"
+          },
+          {
+            "firstPublished": "",
+            "id": "https%3A%2F%2Flinkedin.com%2Fcompany%2Fbbc-news",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "isLive": false,
+            "lastPublished": "",
+            "link": "https://linkedin.com/company/bbc-news",
+            "title": "Linkedin",
+            "type": "link"
+          }
+        ],
+        "title": "Social links",
+        "visualProminence": "NORMAL",
+        "visualStyle": "LINKS"
+      }
+    ],
+    "description": "",
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:c6jdzrejj3p3t",
+        "contentType": "index-home",
+        "pageIdentifier": "ws.page",
+        "pageTitle": "BBC World Service - global front page"
+      }
+    },
+    "title": "BBC World Service - global front page",
+    "contentType": "application/json; charset=utf-8"
+  }
+}

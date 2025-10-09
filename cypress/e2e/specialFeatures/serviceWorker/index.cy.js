@@ -4,7 +4,7 @@ import {
   serviceWorkerIsRegistered,
   serviceWorkerCaching,
 } from './assertions';
-import { getPathWithSuffix } from '../atiAnalytics/helpers';
+import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
 
 const tests = [
   serviceWorkerIsAvailable,

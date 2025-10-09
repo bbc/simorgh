@@ -19,9 +19,11 @@ export default service => {
 
     if (service !== 'scotland') {
       describe('Navigation link', () => {
-        const navigationLinks = document
-          .querySelector('header nav [role="list"]')
-          .querySelectorAll('a');
+        const navigationLinks = Array.from(
+          document
+            .querySelector('header nav [role="list"]')
+            .querySelectorAll('a'),
+        );
 
         navigationLinks.forEach(navigationLink => {
           const linkText = navigationLink.textContent;

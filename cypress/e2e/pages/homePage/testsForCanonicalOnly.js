@@ -1,4 +1,5 @@
 import runAdsTests from '../../../support/helpers/adsTests/testsForCanonicalOnly';
+import chartbeatTests from '../../../support/helpers/chartbeatTests';
 import getAppEnv from '../../../support/helpers/getAppEnv';
 
 export default ({ service }) => {
@@ -121,17 +122,99 @@ export default ({ service }) => {
       });
     });
   });
+  describe('Billboard', () => {
+    it('should display the correct number of items in the curation grid if there is at least 2 summaries', () => {
+      cy.viewport(1008, 900);
+      cy.getPageDataFromWindow().then(data => {
+        const billboardCurations =
+          data?.pageData?.curations?.filter(
+            curation =>
+              curation.visualProminence === 'MAXIMUM' &&
+              curation.visualStyle === 'BANNER',
+          ) || [];
+
+        if (billboardCurations.length === 0) {
+          cy.log('No billboard curations found in page data');
+          return;
+        }
+
+        billboardCurations.forEach((curation, index) => {
+          const summaries = curation?.summaries || [];
+          const expectedNumberOfAdditionalItems = Math.min(
+            Math.max(summaries.length - 1, 0),
+            4,
+          );
+          if (summaries.length > 1) {
+            const testId = `billboard-${index + 1}`;
+            const gridSelector = `[data-testid="${testId}"] [data-testid="billboard-curation-grid"]`;
+
+            if (summaries.length > 2) {
+              cy.get(gridSelector).then($grid => {
+                cy.log(`Billboard index: ${index + 1}`);
+                cy.log(`Grid selector: ${gridSelector}`);
+                cy.log(`Number of grids found: ${$grid.length}`);
+                cy.log(`Grid HTML: ${$grid.html()}`);
+
+                cy.get(`${gridSelector} li`).then($lis => {
+                  cy.log(`Number of li in grid: ${$lis.length}`);
+                  $lis.each((i, el) => {
+                    cy.log(`li[${i}] visible: ${Cypress.$(el).is(':visible')}`);
+                    cy.log(`li[${i}] HTML: ${el.outerHTML}`);
+                  });
+                });
+              });
+              cy.get(`${gridSelector} li:visible`).should(
+                'have.length',
+                expectedNumberOfAdditionalItems,
+              );
+            } else if (summaries.length === 2) {
+              cy.get(`${gridSelector} div.promo-image`)
+                .should('have.length', 1)
+                .and('be.visible');
+              cy.get(`${gridSelector} div.promo-text`)
+                .should('have.length', 1)
+                .and('be.visible');
+            }
+          } else {
+            cy.log(
+              `No billboard with more than 1 summary found billboard ${index + 1} with title: ${summaries[0]?.title}`,
+            );
+          }
+        });
+      });
+    });
+    it('should not render a curation grid if there is only one summary in the curation', () => {
+      cy.getPageDataFromWindow().then(data => {
+        const billboardCurations =
+          data?.pageData?.curations?.filter(
+            curation =>
+              curation.visualProminence === 'MAXIMUM' &&
+              curation.visualStyle === 'BANNER',
+          ) || [];
+
+        if (billboardCurations.length === 0) {
+          cy.log('No billboard curations found in page data');
+          return;
+        }
+
+        billboardCurations.forEach((curation, index) => {
+          const summaries = curation?.summaries || [];
+          if (summaries.length === 1) {
+            const testId = `billboard-${index + 1}`;
+            cy.get(`[data-testid="${testId}"]`).within(() => {
+              cy.get('[data-testid="billboard-curation-grid"]').should(
+                'not.exist',
+              );
+            });
+          }
+        });
+      });
+    });
+  });
 
   if (getAppEnv() === 'local') {
     runAdsTests({ service });
   }
 
-  describe(`Chartbeat analytics`, () => {
-    it('should have a script with src value set to chartbeat source', () => {
-      cy.hasScriptWithChartbeatSrc();
-    });
-    it('should have chartbeat config set to window object', () => {
-      cy.hasGlobalChartbeatConfig();
-    });
-  });
+  chartbeatTests();
 };

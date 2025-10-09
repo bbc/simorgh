@@ -3,8 +3,8 @@ import React, { use, useEffect } from 'react';
 import { jsx } from '@emotion/react';
 import Text from '#app/components/Text';
 import { TriangleDown } from '#app/components/icons';
-import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
@@ -26,9 +26,11 @@ const ContinueReadingButton = ({
   variation,
   liteCTAShows,
 }: Props) => {
-  const eventTrackingData: EventTrackingMetadata = {
+  const eventTrackingData: EventTrackingData = {
     componentName: 'read-more-button',
     sendOptimizelyEvents: true,
+    experimentName: 'newswb_ws_read_more_b',
+    experimentVariant: 'read-more-b',
   };
 
   const viewRef = useViewTracker(eventTrackingData);

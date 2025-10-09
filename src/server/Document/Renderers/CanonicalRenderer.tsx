@@ -14,7 +14,65 @@ interface Props extends BaseRendererProps {
   links: React.ReactElement;
   legacyScripts: React.ReactElement;
   modernScripts: React.ReactElement;
+  service?: string;
+  nonce?: string | null;
 }
+
+const showScripts = (
+  scripts: React.ReactElement | React.ReactElement[],
+  nonce?: string | null,
+) => {
+  const scriptsArray = Array.isArray(scripts) ? scripts : [scripts];
+  let scriptText = "const scriptcontainer = document.createElement('div');";
+  scriptsArray.forEach((script: React.ReactElement) => {
+    const scriptKey = (script.key ?? 'script')
+      .toString()
+      .replace(/[^a-zA-Z0-9]/g, '');
+    type ScriptWithDataChunk = React.ScriptHTMLAttributes<HTMLScriptElement> & {
+      'data-chunk'?: string;
+    };
+
+    const scriptProps = script.props as ScriptWithDataChunk;
+    if (scriptProps.dangerouslySetInnerHTML) {
+      scriptText += `const ${scriptKey} = document.createElement('script');`;
+      scriptText += `${scriptKey}.setAttribute('id','${scriptProps.id}');`;
+      scriptText += `${scriptKey}.setAttribute('type','${scriptProps.type}');`;
+      if (nonce) scriptText += `${scriptKey}.setAttribute('nonce','${nonce}');`;
+      /* eslint-disable no-underscore-dangle */
+      scriptText += `${scriptKey}.innerHTML = ${JSON.stringify(scriptProps.dangerouslySetInnerHTML?.__html)};`;
+      scriptText += `scriptcontainer.appendChild(${scriptKey});`;
+    } else {
+      scriptText += `const ${scriptKey} = document.createElement('script');`;
+      if (nonce) scriptText += `${scriptKey}.setAttribute('nonce','${nonce}');`;
+      scriptText += `${scriptKey}.setAttribute('src','${scriptProps.src}');`;
+      scriptText += `${scriptKey}.setAttribute('crossOrigin','${scriptProps.crossOrigin}');`;
+      scriptText += `${scriptKey}.setAttribute('type','${scriptProps.type}');`;
+      scriptText += `${scriptKey}.setAttribute('defer','${scriptProps.defer}');`;
+      scriptText += `${scriptKey}.setAttribute('async','${scriptProps.async}');`;
+      scriptText += `${scriptKey}.setAttribute('data-chunk','${scriptProps['data-chunk'] ?? ''}');`;
+      scriptText += `scriptcontainer.appendChild(${scriptKey});`;
+    }
+  });
+  scriptText += `
+        if (!((navigator && navigator.connection) && ['2g', 'slow-2g', '3g'].includes(navigator.connection.effectiveType))){ 
+          document.body.appendChild(scriptcontainer);
+        }
+        else {
+          const noscriptTag = window.document.getElementsByTagName('noscript')[0];
+          const trackingDiv = document.createElement('DIV');
+          trackingDiv.innerHTML = noscriptTag.innerHTML;
+          window.document.body.appendChild(trackingDiv);
+        }`;
+  return (
+    <script
+      {...(nonce ? { nonce } : {})}
+      // This script should be the first script tag in the body, otherwise Opera Mini has trouble parsing the `window.SIMORGH_DATA` object
+      dangerouslySetInnerHTML={{
+        __html: scriptText,
+      }}
+    />
+  );
+};
 
 export default function CanonicalRenderer({
   data,
@@ -30,6 +88,8 @@ export default function CanonicalRenderer({
   modernScripts,
   styles,
   title,
+  service,
+  nonce,
 }: Props) {
   const serialisedData = serialiseForScript(data);
   const appEnvVariables = serialiseForScript(getProcessEnvAppVariables());
@@ -37,7 +97,7 @@ export default function CanonicalRenderer({
   return (
     <html lang="en-GB" className={NO_JS_CLASSNAME} {...htmlAttrs}>
       <head>
-        <ReverbTemplate />
+        <ReverbTemplate nonce={nonce} />
         {isApp && <meta name="robots" content="noindex" />}
         {title}
         {helmetMetaTags}
@@ -48,12 +108,14 @@ export default function CanonicalRenderer({
           dangerouslySetInnerHTML={{ __html: styles }}
         />
         <script
+          {...(nonce ? { nonce } : {})}
           dangerouslySetInnerHTML={{
             // Read env variables from the server and expose them to the client
             __html: `window.SIMORGH_ENV_VARS=${appEnvVariables}`,
           }}
         />
         <ComponentTracking
+          {...(nonce ? { nonce } : {})}
           trackComponentViews={false}
           enableStaticClickTrackingOnOperaMiniOnly
         />
@@ -61,6 +123,7 @@ export default function CanonicalRenderer({
       <body>
         <div id="root" dangerouslySetInnerHTML={{ __html: html || '' }} />
         <script
+          {...(nonce ? { nonce } : {})}
           // This script should be the first script tag in the body, otherwise Opera Mini has trouble parsing the `window.SIMORGH_DATA` object
           dangerouslySetInnerHTML={{
             __html: `window.SIMORGH_DATA=${serialisedData}`,
@@ -68,10 +131,13 @@ export default function CanonicalRenderer({
         />
         {links}
         <IfAboveIE9>
-          {modernScripts}
+          {['urdu', 'hausa'].includes(service ?? '')
+            ? showScripts(modernScripts, nonce)
+            : modernScripts}
           {legacyScripts}
         </IfAboveIE9>
         <script
+          {...(nonce ? { nonce } : {})}
           type="text/javascript"
           dangerouslySetInnerHTML={{
             __html: `document.documentElement.classList.remove("no-js");`,

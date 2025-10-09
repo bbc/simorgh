@@ -13,7 +13,10 @@ const Component = (_: StoryArgs, __: Props) => {
   return (
     <PortraitVideoCarousel
       title={portraitVideoFixture.title}
-      items={portraitVideoFixture.items}
+      blocks={portraitVideoFixture.blocks}
+      eventTrackingData={{
+        componentName: 'portrait-video-carousel',
+      }}
     />
   );
 };

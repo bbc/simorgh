@@ -1,15 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Canonical Most Read Page A11y I can see the skip to content link 1`] = `"Bỏ qua để xem nội dung"`;
 
-exports[`Canonical Most Read Page Analytics ATI tracking pixel excluding src 1`] = `
-<img
-  alt=""
-  height="1px"
-  style="position:absolute"
-  width="1px"
-/>
-`;
+exports[`Canonical Most Read Page Analytics ATI tracking pixel excluding src 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" >"`;
 
 exports[`Canonical Most Read Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
 
@@ -110,7 +103,7 @@ exports[`Canonical Most Read Page Footer Anchors should match text and url 8`] =
 exports[`Canonical Most Read Page Footer Anchors should match text and url 9`] = `
 {
   "text": "Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài",
-  "url": "https://www.bbc.com/editorialguidelines/guidance/feeds-and-links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
 }
 `;
 

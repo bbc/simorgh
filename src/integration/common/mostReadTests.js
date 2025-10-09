@@ -9,7 +9,7 @@ export default () => {
       });
 
       it('has item with rank', () => {
-        const mostReadLinks = mostRead.querySelectorAll('a');
+        const mostReadLinks = Array.from(mostRead.querySelectorAll('a'));
 
         mostReadLinks.forEach(link => {
           const url = link.getAttribute('href');

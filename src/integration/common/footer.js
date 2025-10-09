@@ -17,7 +17,7 @@ export default () => {
     });
 
     describe('Anchors', () => {
-      const footerAnchors = document.querySelectorAll('footer a');
+      const footerAnchors = Array.from(document.querySelectorAll('footer a'));
 
       footerAnchors.forEach(footerAnchor => {
         const anchorText = footerAnchor.textContent;
@@ -41,7 +41,9 @@ export default () => {
     });
 
     describe('Paragraphs', () => {
-      const footerParagraphs = document.querySelectorAll('footer div p');
+      const footerParagraphs = Array.from(
+        document.querySelectorAll('footer div p'),
+      );
 
       footerParagraphs.forEach(footerParagraph => {
         it('should be in the document', () => {

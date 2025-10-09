@@ -1,30 +1,19 @@
 import { Services } from '#app/models/types/global';
 
-const REITH_FONTS_DIR = 'https://static.files.bbci.co.uk/fonts/reith/r2.512/';
+const REITH_BASE_URL = 'https://static.files.bbci.co.uk/fonts/';
 
-const NOTO_SERIF_SINHALA_FONTS_DIR =
-  'https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifSinhala/v1.00/';
+const REITH_FONTS_DIR = `${REITH_BASE_URL}reith/r2.512/`;
+const REITH_QALAM_FONTS_DIR = `${REITH_BASE_URL}reith-qalam/1.310/`;
 
-const NOTO_SANS_TAMIL_FONTS_DIR =
-  'https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTamil/v1.00/';
+const FONTS_BASE_URL = `https://static.files.bbci.co.uk/ws/simorgh-assets/public/fonts/`;
 
-const NOTO_SANS_TELUGU_FONTS_DIR =
-  'https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTelugu/v1.00/';
-
-const NOTO_SANS_GUJARATI_FONTS_DIR =
-  'https://ws-downloads.files.bbci.co.uk/fonts/NotoSansGujarati/v1.00/';
-
-const NOTO_SANS_ETHIOPIC_FONTS_DIR =
-  'https://ws-downloads.files.bbci.co.uk/fonts/NotoSansEthiopic/v1.901/';
-
-const PADAUK_FONTS_DIR =
-  'https://ws-downloads.files.bbci.co.uk/fonts/Padauk/v2.8/';
-
-const NOTO_SERIF_BENGALI_FONTS_DIR =
-  'https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifBengali/v1.00/';
-
-const REITH_QALAM_FONTS_DIR =
-  'https://ws-downloads.files.bbci.co.uk/fonts/ReithQalam/v1.310/';
+const NOTO_SERIF_SINHALA_FONTS_DIR = `${FONTS_BASE_URL}NotoSerifSinhala/v1.00/`;
+const NOTO_SANS_TAMIL_FONTS_DIR = `${FONTS_BASE_URL}NotoSansTamil/v1.00/`;
+const NOTO_SANS_TELUGU_FONTS_DIR = `${FONTS_BASE_URL}NotoSansTelugu/v1.00/`;
+const NOTO_SANS_GUJARATI_FONTS_DIR = `${FONTS_BASE_URL}NotoSansGujarati/v1.00/`;
+const NOTO_SANS_ETHIOPIC_FONTS_DIR = `${FONTS_BASE_URL}NotoSansEthiopic/v1.901/`;
+const NOTO_SERIF_BENGALI_FONTS_DIR = `${FONTS_BASE_URL}NotoSerifBengali/v1.00/`;
+const PADAUK_FONTS_DIR = `${FONTS_BASE_URL}Padauk/v2.8/`;
 
 const REITH_SERIF_LIGHT = {
   name: 'BBCReithSerif_WNumbers_Lt',
@@ -210,7 +199,7 @@ const REITH_QALAM_REGULAR = {
   fontWeight: 400,
   version: 'v1.310',
   fontStyle: 'normal',
-  src: `${REITH_QALAM_FONTS_DIR}normal.woff2`,
+  src: `${REITH_QALAM_FONTS_DIR}BBCReithQalam_W_Rg.woff2`,
   fontDisplay: 'optional',
 };
 
@@ -220,7 +209,7 @@ const REITH_QALAM_BOLD = {
   fontWeight: 700,
   version: 'v1.310',
   fontStyle: 'normal',
-  src: `${REITH_QALAM_FONTS_DIR}bold.woff2`,
+  src: `${REITH_QALAM_FONTS_DIR}BBCReithQalam_W_Bd.woff2`,
   fontDisplay: 'optional',
 };
 

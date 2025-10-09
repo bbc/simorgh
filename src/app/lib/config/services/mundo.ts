@@ -47,7 +47,43 @@ export const service: DefaultServiceConfig = {
     iTunesAppId: 515255747,
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    electionBanner: {
+      electionThingIds: ['647d5613-e0e2-4ef5-b0ce-b491de38bdbd'],
+      iframeSrc:
+        'include/vjafwest/1365-2024-us-presidential-election-banner/mundo/app',
+      iframeDevSrc:
+        'include/vjafwest/1365-2024-us-presidential-election-banner/develop/mundo/app',
+    },
+    podcastPromo: {
+      title: 'WhatsApp',
+      brandTitle: 'Únete a nuestro WhatsApp',
+      brandDescription:
+        'Recibe el mejor contenido de BBC News Mundo en tu celular',
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0lrtll8.png',
+        alt: 'Redes sociales - Únete a nuestro WhatsApp',
+      },
+      linkLabel: {
+        text: 'Suscríbete aquí',
+        href: 'https://whatsapp.com/channel/0029VaUm1Ss3WHTbgIXrjw3D',
+      },
+      skipLink: {
+        text: 'Saltar %title% y continuar leyendo',
+        endTextVisuallyHidden: 'Fin de %title%',
+      },
+    },
     translations: {
+      // EXPERIMENT: Homepage Read Time
+      timstampPrefix: {
+        publishedAgo: 'Publicado hace',
+      },
+      readTime: {
+        readTimePrefix: 'Tiempo de lectura',
+        quick: 'Lectura rápida',
+        long: 'Lectura extensa',
+        minute: 'min',
+        minutes: 'min',
+      },
       pagination: {
         page: 'Página',
         previousPage: 'Anterior',
@@ -63,6 +99,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'Ir al contenido',
       relatedContent: 'Contenido relacionado',
       relatedTopics: 'Temas relacionados',
+      moreOnThis: '',
       navMenuText: 'Secciones',
       mediaAssetPage: {
         mediaPlayer: 'Reproductor multimedia',
@@ -235,6 +272,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Duración',
         recentEpisodes: 'Más',
         closeVideo: 'Salir',
+        endOfContentClose: 'Fin de este contenido. Salir',
       },
       socialEmbed: {
         caption: {
@@ -364,7 +402,7 @@ export const service: DefaultServiceConfig = {
         text: 'Por qué puedes confiar en la BBC',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Lee sobre nuestra postura acerca de enlaces externos.',
       },
       links: [

@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`AMP Media Asset Page A11y I can see the skip to content link 1`] = `"Waka go wetin de inside"`;
 
@@ -160,7 +160,7 @@ exports[`AMP Media Asset Page Footer Anchors should match text and url 8`] = `
 exports[`AMP Media Asset Page Footer Anchors should match text and url 9`] = `
 {
   "text": "De way wey we de take go external link.",
-  "url": "https://www.bbc.com/editorialguidelines/guidance/feeds-and-links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
 }
 `;
 
@@ -226,11 +226,11 @@ exports[`AMP Media Asset Page Header Navigation link should match text and url 8
 }
 `;
 
-exports[`AMP Media Asset Page I can see a bulleted list item 1`] = `"<Media Asset Page>"`;
+exports[`AMP Media Asset Page I can see a bulleted list item 1`] = `"this is the link text"`;
 
-exports[`AMP Media Asset Page I can see a bulleted list item with link: <Media Asset Page> 1`] = `"/afrique/23248423"`;
+exports[`AMP Media Asset Page I can see a bulleted list item with link 1`] = `"/afrique/23248423"`;
 
-exports[`AMP Media Asset Page Main heading should match text 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur"`;
+exports[`AMP Media Asset Page Main heading should match text 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sitamet, consectetur"`;
 
 exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 1`] = `
 {
@@ -308,7 +308,7 @@ exports[`AMP Media Asset Page SEO Dir attribute 1`] = `"ltr"`;
 
 exports[`AMP Media Asset Page SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`AMP Media Asset Page SEO Heading level 1 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur"`;
+exports[`AMP Media Asset Page SEO Heading level 1 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sitamet, consectetur"`;
 
 exports[`AMP Media Asset Page SEO Lang attribute 1`] = `"pcm"`;
 
@@ -395,7 +395,7 @@ exports[`AMP Media Asset Page SEO OG type 1`] = `"article"`;
 
 exports[`AMP Media Asset Page SEO OG url 1`] = `"http://localhost:7080/pidgin/23248703"`;
 
-exports[`AMP Media Asset Page SEO Page title 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur - BBC News Pidgin"`;
+exports[`AMP Media Asset Page SEO Page title 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sitamet, consectetur - BBC News Pidgin"`;
 
 exports[`AMP Media Asset Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 

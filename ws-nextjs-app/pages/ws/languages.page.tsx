@@ -17,7 +17,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     'public, stale-if-error=300, stale-while-revalidate=120, max-age=30',
   );
 
-  const { id, renderer_env: rendererEnv } = context.query as PageDataParams;
+  const { renderer_env: rendererEnv } = context.query as PageDataParams;
   const baseProps = {
     error: null,
     isAmp: false,
@@ -42,11 +42,10 @@ export const getServerSideProps: GetServerSideProps = async context => {
     };
   }
 
-  const { data } = await getPageData({
-    id,
-    service: 'pidgin',
+  const { data, toggles } = await getPageData({
+    service: 'ws',
     rendererEnv,
-    resolvedUrl: '/pidgin',
+    resolvedUrl: '/ws/languages',
     pageType: HOME_PAGE,
   });
 
@@ -57,7 +56,8 @@ export const getServerSideProps: GetServerSideProps = async context => {
         error: data?.error,
         status: data?.status,
         pageType: HOME_PAGE,
-        service: 'pidgin',
+        service: 'ws',
+        toggles,
         pageData: {
           metadata: {
             type: HOME_PAGE,
@@ -72,11 +72,19 @@ export const getServerSideProps: GetServerSideProps = async context => {
     props: {
       ...baseProps,
       pageType: HOME_PAGE,
-      service: 'pidgin',
-      pathname: '/pidgin',
+      service: 'ws',
+      pathname: '/ws/languages',
       status: data?.status,
       pageData: {
         ...data?.pageData,
+        metadata: {
+          ...data?.pageData?.metadata,
+          type: HOME_PAGE,
+          atiAnalytics: {
+            ...data?.pageData?.metadata?.atiAnalytics,
+            pageIdentifier: 'ws.languages.page',
+          },
+        },
       },
     },
   };

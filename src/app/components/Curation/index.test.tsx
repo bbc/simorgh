@@ -1,29 +1,32 @@
 import React from 'react';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
-import { PortraitVideoPromoProps } from '#app/models/types/portraitVideo';
 import fixture from '../../../../data/pidgin/topics/c95y35941vrt.json';
 import mundoFixture from '../../../../data/mundo/topics/c1en6xwmpkvt.json';
 import kyrgyzFixture from '../../../../data/kyrgyz/topics/cvpv9djp9qqt.json';
 import kyrgyzHomePage from '../../../../data/kyrgyz/homePage/index.json';
 import { data as kyrgyzMostRead } from '../../../../data/kyrgyz/mostRead/index.json';
 import afriqueHomePage from '../../../../data/afrique/homePage/index.json';
-import portuguseHomePage from '../../../../data/portuguese/homePage/index.json';
+import portugueseHomePage from '../../../../data/portuguese/homePage/index.json';
+import dariHomePage from '../../../../data/dari/homePage/index.json';
 import { render } from '../react-testing-library-with-providers';
 import Curation from '.';
 import {
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
+  INTENT,
   VisualStyle,
   VisualProminence,
   Summary,
 } from '../../models/types/curationData';
 import { MostReadData } from '../MostRead/types';
 import { RadioScheduleData } from '../../models/types/radioSchedule';
+import { MediaCollection, PortraitClipMediaBlock } from '../MediaLoader/types';
 
 jest.mock('../ThemeProvider');
 
 const { NONE, BANNER, RANKED, COLLECTION, LINKS, INSITU } = VISUAL_STYLE;
 const { NORMAL, HIGH, LOW, MAXIMUM, MINIMUM } = VISUAL_PROMINENCE;
+const { MEDIA_PLAYER } = INTENT;
 
 const messageBannerCuration = kyrgyzHomePage.data.curations.find(
   ({ visualStyle, visualProminence, summaries }) =>
@@ -57,12 +60,13 @@ const socialLinksCuration = kyrgyzFixture.data.curations.find(
     summaries.length > 0,
 );
 
-const portraitVideoCuration = portuguseHomePage.data.curations.find(
+const portraitVideoCuration = portugueseHomePage.data.curations.find(
   ({ visualStyle, visualProminence, portraitVideo }) =>
-    visualStyle === INSITU &&
-    visualProminence === NORMAL &&
-    portraitVideo &&
-    portraitVideo?.items.length > 0,
+    visualStyle === INSITU && visualProminence === NORMAL && portraitVideo,
+);
+
+const mediaCollectionCuration = dariHomePage.data.curations.find(
+  ({ intent, mediaCollection }) => intent === MEDIA_PLAYER && mediaCollection,
 );
 
 const components = {
@@ -111,6 +115,9 @@ const components = {
     visualProminence: NORMAL,
     portraitVideo: portraitVideoCuration?.portraitVideo,
   },
+  'media-collection-1': {
+    mediaCollection: mediaCollectionCuration?.mediaCollection,
+  },
 };
 
 interface TestProps {
@@ -118,10 +125,11 @@ interface TestProps {
   visualProminence: VisualProminence;
   summaries?: Summary[];
   portraitVideo?: {
-    items: PortraitVideoPromoProps[];
+    blocks: PortraitClipMediaBlock[];
   };
   mostRead?: MostReadData;
   radioSchedule?: RadioScheduleData[];
+  mediaCollection?: MediaCollection[];
 }
 
 describe('Curation', () => {
@@ -141,6 +149,7 @@ describe('Curation', () => {
         portraitVideo,
         mostRead,
         radioSchedule,
+        mediaCollection,
       }: TestProps,
     ) => {
       const { getByTestId } = render(
@@ -152,6 +161,7 @@ describe('Curation', () => {
           mostRead={mostRead}
           radioSchedule={radioSchedule}
           portraitVideo={portraitVideo}
+          mediaCollection={mediaCollection}
         />,
         {
           toggles: {

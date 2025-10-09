@@ -54,6 +54,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'Air adhart',
       relatedContent: 'Co-cheangailte',
       relatedTopics: 'Cuspairean Ceangailte',
+      moreOnThis: '',
       navMenuText: 'Earrannan',
       mediaAssetPage: {
         mediaPlayer: 'Media player',

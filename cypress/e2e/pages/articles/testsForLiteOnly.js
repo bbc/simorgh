@@ -4,7 +4,7 @@ export const hasInformationPageLinkTranslation = ({
   service,
   variant = 'default',
 }) => {
-  return appConfig[service][variant].translations?.liteSite
+  return appConfig[service][variant]?.translations?.liteSite
     ?.informationPageLink;
 };
 

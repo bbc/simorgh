@@ -8,19 +8,37 @@ import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#app/lib/utilities/imageSrcHelpers/locator';
 import styles from './styles';
 
+type Props = {
+  imageUrl: string;
+  imageUrlTemplate: string;
+  imageWidth: number;
+  altText?: string;
+  showPlaceholder?: boolean;
+  showVignette?: boolean;
+};
+
+const getGradientStyles = ({
+  isRtl,
+  showVignette,
+}: {
+  isRtl: boolean;
+  showVignette: boolean;
+}) => {
+  if (showVignette) return styles.vignette(isRtl);
+
+  if (isRtl) return styles.linearGradientRtl;
+
+  return styles.linearGradientLtr;
+};
+
 const MaskedImage = ({
   imageUrl,
   imageUrlTemplate,
   imageWidth,
   altText = '',
   showPlaceholder = true,
-}: {
-  imageUrl: string;
-  imageUrlTemplate: string;
-  imageWidth: number;
-  altText?: string;
-  showPlaceholder?: boolean;
-}) => {
+  showVignette = false,
+}: Props) => {
   const { dir } = use(ServiceContext);
   const isRtl = dir === 'rtl';
 
@@ -36,13 +54,10 @@ const MaskedImage = ({
       originalImageWidth: imageWidth,
     });
 
+  const gradientStyles = getGradientStyles({ isRtl, showVignette });
+
   return (
-    <div
-      css={[
-        styles.maskedImageWrapper,
-        isRtl ? styles.linearGradientRtl : styles.linearGradientLtr,
-      ]}
-    >
+    <div css={[styles.maskedImageWrapper, gradientStyles]}>
       <Image
         alt={altText}
         src={imageUrl}
