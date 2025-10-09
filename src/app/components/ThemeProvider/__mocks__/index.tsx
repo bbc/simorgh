@@ -1,7 +1,11 @@
 import React from 'react';
 import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
-import { Services, Variants } from '#app/models/types/global';
-import { StoryProps } from '../../../models/types/storybook';
+import {
+  Services,
+  ServicesWithNoVariants,
+  ServicesWithVariants,
+  Variants,
+} from '#app/models/types/global';
 
 import afaanoromoo from '../themes/afaanoromoo';
 import afrique from '../themes/afrique';
@@ -61,13 +65,19 @@ import zhongwenSimp from '../themes/zhongwen/simp';
 import zhongwenTrad from '../themes/zhongwen/trad';
 import ws from '../themes/ws';
 
-type ThemeProvider = {
-  [_service in Services]:
-    | React.FC<Props>
-    | { [_variant in Variants]?: React.FC<Props> };
+type ThemeProviderNoVariants = {
+  [_service in ServicesWithNoVariants['service']]: React.FC<Props>;
 };
 
-const themeProviders: ThemeProvider = {
+type ThemeProviderWithVariants = {
+  [_service in ServicesWithVariants['service']]: {
+    [_variant in ServicesWithVariants['variant']]?: React.FC<Props>;
+  };
+};
+
+type ThemeProviders = ThemeProviderNoVariants | ThemeProviderWithVariants;
+
+const themeProviders: ThemeProviders = {
   afaanoromoo,
   afrique,
   amharic,
@@ -120,7 +130,10 @@ const themeProviders: ThemeProvider = {
     simp: ukchinaSimp,
     trad: ukchinaTrad,
   },
-  ukrainian,
+  ukrainian: {
+    default: ukrainian,
+    'ru-UA': ukrainian,
+  },
   urdu,
   uzbek: {
     cyr: uzbekCyr,
@@ -135,7 +148,9 @@ const themeProviders: ThemeProvider = {
   },
 };
 
-interface Props extends StoryProps {
+interface Props {
+  service: Services;
+  variant?: Variants;
   children: React.ReactNode;
 }
 
@@ -146,9 +161,10 @@ const ThemeProvider = ({ children, service, ...rest }: Props) => {
   if (defaultServiceVariants[service] && variant === 'default') {
     variant = defaultServiceVariants[service];
   }
+
   const ThemeProviderSynchronous =
     variant === 'default' || !variant
-      ? themeProviders[service]
+      ? themeProviders[service as Services]
       : themeProviders[service][variant as Variants];
 
   return <ThemeProviderSynchronous>{children}</ThemeProviderSynchronous>;
