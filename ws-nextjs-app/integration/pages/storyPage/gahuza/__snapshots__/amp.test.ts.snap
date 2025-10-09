@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Amp Story Page Includes IDT2 I can see a fallback image 1`] = `
+<amp-img
+  alt="Map: St. Albans"
+  class="bbc-image"
+  fallback=""
+  height="720"
+  layout="responsive"
+  src="https://ichef.bbci.co.uk/news/1280/idt2-test/idt2/3686672a-0a64-4cdb-91c6-ae9ed0f214f7/image/640"
+  width="1280"
+/>
+`;
