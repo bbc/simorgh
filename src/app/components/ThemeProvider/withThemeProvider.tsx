@@ -1,21 +1,15 @@
 import React, { use, useMemo } from 'react';
 import { Global, ThemeProvider as EmotionThemeProvider } from '@emotion/react';
 import useIsPWA from '#app/hooks/useIsPWA';
+import { ServiceTheme } from '#app/models/types/theming';
 import focusIndicator from './focusIndicator';
 import { RequestContext } from '../../contexts/RequestContext';
 import { MEDIA_ARTICLE_PAGE, TV_PAGE } from '../../routes/utils/pageTypes';
-import { BrandPalette, Typography, BrandSVG } from '../../models/types/theming';
 import { PageTypes } from '../../models/types/global';
 import getThemeConfig from './getThemeConfig';
 
 const isDarkUiPage = (pageType: PageTypes) =>
   pageType === MEDIA_ARTICLE_PAGE || pageType === TV_PAGE;
-
-type ServiceTheme = {
-  palette: BrandPalette;
-  typography: Typography;
-  brandSVG: BrandSVG;
-};
 
 const useMergeTheme = (
   baseTheme: ServiceTheme,

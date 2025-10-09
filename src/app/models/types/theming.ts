@@ -478,6 +478,12 @@ export type GridWidths = {
   1280: number;
 };
 
+export type ServiceTheme = {
+  palette: BrandPalette;
+  typography: Typography;
+  brandSVG: BrandSVG;
+};
+
 declare module '@emotion/react' {
   export interface Theme {
     palette: Palette;
