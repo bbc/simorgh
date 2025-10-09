@@ -265,9 +265,13 @@ const canonicalTestSuites = [
 ];
 
 const supportsAmp = ({ contentType }: { contentType: string }) =>
-  !['index-home', 'player-live', 'player-episode', 'index-category'].includes(
-    contentType,
-  );
+  ![
+    'index-home',
+    'player-live',
+    'player-episode',
+    'index-category',
+    'live-coverage',
+  ].includes(contentType);
 
 const ampTestSuites = canonicalTestSuites
   .filter(supportsAmp)
