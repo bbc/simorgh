@@ -56,6 +56,6 @@ export const formatUnixTimestamp = ({
   if (isRelative) {
     return momentObj.fromNow();
   }
-  const defaultFormat = 'LL, LT z';
-  return format ? momentObj.format(format) : momentObj.format(defaultFormat);
+
+  return momentObj.format(format || 'LL, LT z');
 };
