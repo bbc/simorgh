@@ -5,7 +5,7 @@ import themes from './themes/loadableConfig';
 import fallBackTheme from './themes/news';
 
 const nonVariantThemes = Object.fromEntries(
-  Object.entries(themes).filter(([_service, theme]) => {
+  Object.entries(themes).filter(([, theme]) => {
     return Object.keys(theme).includes('load');
   }),
 );
