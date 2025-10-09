@@ -45,7 +45,7 @@ describe('cspHeader', () => {
       originExample: 'https://www.bbc.com',
       urlExample: 'https://www.bbc.com/pidgin.amp',
       childSrcExpectation: ['blob:'],
-      connectSrcExpectation: ["'self' https: ws:"],
+      connectSrcExpectation: ["'self' https:"],
       defaultSrcExpectation: [
         ...bbcDomains,
         'https://*.googlesyndication.com',
@@ -117,7 +117,7 @@ describe('cspHeader', () => {
       originExample: 'https://www.bbc.com',
       urlExample: 'https://www.bbc.com/pidgin',
       childSrcExpectation: ["'self'"],
-      connectSrcExpectation: ["'self' https: ws:"],
+      connectSrcExpectation: ["'self' https:"],
       defaultSrcExpectation: [
         ...bbcDomains,
         'https://*.googlesyndication.com',
@@ -448,7 +448,7 @@ describe('cspHeader', () => {
         });
 
         it(`Then it has this connectSrc`, () => {
-          expect(generateConnectSrc()).toEqual(connectSrcExpectation);
+          expect(generateConnectSrc({ isLive })).toEqual(connectSrcExpectation);
         });
 
         it(`Then it has this defaultSrc`, () => {

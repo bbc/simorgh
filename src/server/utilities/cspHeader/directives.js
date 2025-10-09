@@ -286,8 +286,8 @@ const directives = {
 
 export const generateChildSrc = ({ isAmp }) => (isAmp ? ['blob:'] : ["'self'"]);
 
-export const generateConnectSrc = () => {
-  return ["'self' https: ws:"];
+export const generateConnectSrc = ({ isLive }) => {
+  return isLive ? ["'self' https:"] : ["'self' https: ws:"];
 };
 
 export const generateDefaultSrc = () => {
@@ -351,7 +351,7 @@ export const cspDirectives = ({ isAmp, isLive, service, nonce = null }) => ({
   directives: {
     'default-src': generateDefaultSrc(),
     'child-src': generateChildSrc({ isAmp }),
-    'connect-src': generateConnectSrc(),
+    'connect-src': generateConnectSrc({ isLive }),
     'font-src': generateFontSrc({ isAmp, isLive }),
     'frame-src': generateFrameSrc({ isAmp, isLive }),
     'img-src': generateImgSrc({ isAmp, isLive }),
