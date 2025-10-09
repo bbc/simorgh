@@ -52,7 +52,6 @@ describe('Font Faces', () => {
   )('%s font has expected values', (_fontId, fontDefinition) => {
     expect(fontDefinition).toHaveProperty('@font-face');
 
-    // @ts-expect-error remaining font definitions (excludes REITH_FONTS_DIR) will contain an @font-face key
     const font = fontDefinition['@font-face'];
 
     // Mandatory properties for all fonts

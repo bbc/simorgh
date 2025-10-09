@@ -11,7 +11,8 @@ type ChevronProps = {
 };
 
 const getChevronCss = (size = 'pica') => {
-  const chevronCss = [];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const chevronCss: any[] = [];
 
   if (size === 'brevier') {
     chevronCss.push(styles.brevierSize);

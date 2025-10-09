@@ -1,7 +1,14 @@
 import { Services } from '#app/models/types/global';
-import loadable from '@loadable/component';
+import loadable, { LoadableComponent } from '@loadable/component';
 
-const loadableConfig = {
+const loadableConfig: Record<
+  Services,
+  LoadableComponent<{
+    Context: unknown;
+    dataKey?: null | undefined;
+    children: unknown;
+  }>
+> = {
   afaanoromoo: loadable(() => import('./afaanoromoo')),
   afrique: loadable(() => import('./afrique')),
   amharic: loadable(() => import('./amharic')),

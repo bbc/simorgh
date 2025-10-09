@@ -854,13 +854,16 @@ describe('Metadata', () => {
     const expected = [
       {
         property: 'og:image',
-        content: serviceConfig.defaultImage,
+        content: serviceConfig?.defaultImage,
       },
-      { property: 'og:image:alt', content: serviceConfig.defaultImageAltText },
-      { name: 'twitter:image:alt', content: serviceConfig.defaultImageAltText },
+      { property: 'og:image:alt', content: serviceConfig?.defaultImageAltText },
+      {
+        name: 'twitter:image:alt',
+        content: serviceConfig?.defaultImageAltText,
+      },
       {
         name: 'twitter:image:src',
-        content: serviceConfig.defaultImage,
+        content: serviceConfig?.defaultImage,
       },
     ];
 

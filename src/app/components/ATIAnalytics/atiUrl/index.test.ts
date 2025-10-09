@@ -9,7 +9,6 @@ import {
 } from '.';
 import splitUrl from './splitUrl';
 
-// @ts-expect-error required for testing purposes
 const mockAndSet = ({ name, source }, response) => {
   source[name] = jest.fn(); // eslint-disable-line no-param-reassign
   source[name].mockImplementation(() => response);
