@@ -2,7 +2,6 @@ import React, { use } from 'react';
 import omit from 'ramda/src/omit';
 import styled from '@emotion/styled';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
-import { getMinion } from '#psammead/gel-foundations/src/typography';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
@@ -74,7 +73,7 @@ const PlayWrapper = withEpisodeContext(styled.div`
 `);
 
 const DurationWrapper = withEpisodeContext(styled.span`
-  ${({ script }) => getMinion(script)}
+  ${({ theme: { fontSizes } }) => fontSizes.minion}
   ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
   color: ${props => props.theme.palette.WHITE};
   ${({ dir }) =>

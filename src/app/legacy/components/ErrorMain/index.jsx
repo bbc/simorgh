@@ -2,15 +2,15 @@ import React from 'react';
 import styled from '@emotion/styled';
 import InlineLink from '#psammead/psammead-inline-link/src';
 import Paragraph from '#psammead/psammead-paragraph/src';
-import { GEL_FF_REITH_SANS } from '#psammead/gel-foundations/src/typography';
 import idSanitiser from '#lib/utilities/idSanitiser';
 import Grid, { GelPageGrid } from '#components/Grid';
+import { REITH_SANS } from '#app/components/ThemeProvider/fontFamilies';
 
 const StatusCode = styled.span`
   ${({ theme: { fontSizes } }) => fontSizes.paragon}
   color: ${props => props.theme.palette.POSTBOX};
   display: block;
-  font-family: ${GEL_FF_REITH_SANS};
+  font-family: ${REITH_SANS};
   font-weight: 600;
   padding: 2.5rem 0 0.5rem 0;
 `;

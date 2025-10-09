@@ -3,7 +3,6 @@ import { jsx } from '@emotion/react';
 import styled from '@emotion/styled';
 import detokenise from '#psammead/psammead-detokeniser/src';
 
-import { GEL_BREVIER } from '#psammead/gel-foundations/src/typography';
 import { visuallyHiddenStyle } from '../../../lib/styles.const';
 
 const BORDER_WIDTH = '0.125rem';
@@ -15,7 +14,7 @@ const Wrapper = styled.div`
 
 const SkipLink = styled.a`
   ${({ theme: { fontVariants } }) => fontVariants.sansBold}
-  ${GEL_BREVIER}
+  ${({ theme: { fontSizes } }) => fontSizes.brevier}
   background-color: ${props => props.theme.palette.WHITE};
   border: ${BORDER_WIDTH} solid ${props => props.theme.palette.EBON};
   color: ${props => props.theme.palette.EBON};

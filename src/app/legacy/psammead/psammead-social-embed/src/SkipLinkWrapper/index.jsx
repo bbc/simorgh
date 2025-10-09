@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { GEL_BREVIER } from '#psammead/gel-foundations/src/typography';
 
 import { detokenise, dictionaryFactory } from '../utilities';
 
@@ -19,7 +18,7 @@ const Wrapper = styled.div`
 
 const SkipLink = styled.a`
   ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
-  ${GEL_BREVIER}
+  ${({ theme: { fontSizes } }) => fontSizes.brevier}
   background-color: ${props => props.theme.palette.WHITE};
   border: ${BORDER_WEIGHT} solid ${props => props.theme.palette.EBON};
   display: block;

@@ -6,7 +6,6 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
-import { getBrevier } from '#psammead/gel-foundations/src/typography';
 
 const MIN_TAG_HEIGHT = '2.75rem'; // 44px
 

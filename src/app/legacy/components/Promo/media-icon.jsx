@@ -2,7 +2,6 @@ import React from 'react';
 import moment from 'moment-timezone';
 import styled from '@emotion/styled';
 import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
-import { getMinion } from '#psammead/gel-foundations/src/typography';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
 import formatDuration from '#lib/utilities/formatDuration';
 
@@ -17,7 +16,7 @@ const Wrapper = styled.div`
   color: ${props => props.theme.palette.EBON};
   background-color: ${props => props.theme.palette.WHITE};
   ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
-  ${({ script }) => script && getMinion(script)};
+  ${({ theme: { fontSizes } }) => fontSizes.minion};
 `;
 
 const StyledTime = styled.time`

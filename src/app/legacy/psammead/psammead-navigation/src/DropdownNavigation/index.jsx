@@ -181,8 +181,9 @@ const MenuButton = styled(Button)`
   border: 0;
 
   ${({ dir }) => (dir === 'ltr' ? `float: left;` : `float: right;`)}
-  ${({ script }) =>
-    script && getButtonDimensions(script.pica.groupA.lineHeight)}
+  ${({ theme: fontSizes }) =>
+    fontSizes?.pica?.lineHeight &&
+    getButtonDimensions(fontSizes.pica.lineHeight)}
 
   &:hover,
   &:focus {
@@ -200,8 +201,11 @@ const MenuButton = styled(Button)`
     visibility: hidden;
   }
   @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
-    ${({ script }) =>
-      script && getButtonDimensions(script.pica.groupB.lineHeight)}
+    ${({ theme }) =>
+      theme.fontSizes?.pica?.[theme.fontMq.GROUP_B_ONLY].lineHeight &&
+      getButtonDimensions(
+        theme.fontSizes.pica[theme.fontMq.GROUP_B_ONLY].lineHeight,
+      )}
   }
 
   & svg {

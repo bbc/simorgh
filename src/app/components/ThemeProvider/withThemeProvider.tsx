@@ -50,14 +50,14 @@ const withThemeProvider = (
 
     const brandTheme = useMergeTheme(baseTheme, pwaTheme);
 
+    const theme = getThemeConfig({
+      ...brandTheme,
+      isDarkUi: isDarkUiPage(pageType),
+      isLite,
+    });
+
     return (
-      <EmotionThemeProvider
-        theme={getThemeConfig({
-          ...brandTheme,
-          isDarkUi: isDarkUiPage(pageType),
-          isLite,
-        })}
-      >
+      <EmotionThemeProvider theme={theme}>
         {children}
         {isAmp && <Global styles={baseTheme.typography.fontFaces} />}
         <Global styles={focusIndicator} />

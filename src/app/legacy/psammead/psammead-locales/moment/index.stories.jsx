@@ -6,7 +6,6 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
-import { GEL_FF_REITH_SANS } from '#psammead/gel-foundations/src/typography';
 import {
   ServiceContext,
   ServiceContextProvider,
@@ -18,6 +17,7 @@ import MostReadTimestamp from '#src/app/components/MostRead/Canonical/LastUpdate
 
 import notes from '../README.md';
 import WithTimeMachine from '#src/testHelpers/withTimeMachine';
+import { REITH_SANS } from '../../../../components/ThemeProvider/fontFamilies';
 
 const ws = services.ws.default;
 
@@ -407,7 +407,7 @@ Array.from({ length: 31 }, (_, index) => index).forEach((day) => {
 const Table = styled.table`
   margin: ${GEL_SPACING_DBL};
   border: 1px solid ${(props) => props.theme.palette.PEBBLE};
-  font-family: ${GEL_FF_REITH_SANS};
+  font-family: ${REITH_SANS};
 
   & td,
   th {
@@ -417,7 +417,7 @@ const Table = styled.table`
 `;
 
 const Paragraph = styled.p`
-  font-family: ${GEL_FF_REITH_SANS};
+  font-family: ${REITH_SANS};
   margin: ${GEL_SPACING_DBL};
 `;
 

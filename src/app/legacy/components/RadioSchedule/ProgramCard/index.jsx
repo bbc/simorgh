@@ -5,7 +5,6 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
-import { getMinion } from '#psammead/gel-foundations/src/typography';
 import { formatDuration } from '#psammead/psammead-timestamp-container/src/utilities';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import ScheduleItemHeader from '../ScheduleItemHeader';
@@ -43,7 +42,7 @@ const SummaryWrapper = styled.p`
 
 const ButtonWrapper = styled.div`
   ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
-  ${({ script }) => script && getMinion(script)}
+  ${({ theme: { fontSizes } }) => fontSizes.minion}
   padding: ${GEL_SPACING};
   background-color: ${({ backgroundColor }) => backgroundColor};
   outline: 0.0625rem solid transparent;
