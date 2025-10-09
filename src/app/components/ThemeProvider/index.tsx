@@ -22,8 +22,6 @@ export const ThemeProvider = ({
   if (serviceVariant === 'default' || !serviceVariant) {
     LoadableContextProvider = themes[service];
   } else {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore - TODO: come back to this
     LoadableContextProvider = themes[service][serviceVariant];
   }
 
