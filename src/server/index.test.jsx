@@ -70,6 +70,7 @@ jest.mock('#app/lib/utilities/getToggles/withCache');
 jest.mock('#app/utilities/createAdNonce');
 
 getToggles.mockImplementation(() => defaultToggles.local);
+createAdNonce.mockReturnValue(null);
 
 const mockRouteProps = ({
   id,
@@ -1878,11 +1879,6 @@ describe('Nonce functionality', () => {
         isApp: false,
         dataResponse: successDataResponse,
       });
-    });
-
-    it('should set x-nonce header', async () => {
-      const { header } = await makeRequest(`/${service}`);
-      expect(header['x-nonce']).toBe(mockNonce);
     });
 
     it('should pass nonce to renderDocument', async () => {

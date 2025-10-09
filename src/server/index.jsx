@@ -190,30 +190,6 @@ const injectReferrerPolicyHeader = (req, res, next) => {
   next();
 };
 
-const injectNonceHeader = ({
-  toggles,
-  country,
-  showAdsBasedOnLocation,
-  isLite,
-  isAmp,
-  res,
-}) => {
-  const nonce = createAdNonce({
-    toggles,
-    country,
-    showAdsBasedOnLocation,
-    isLite,
-    isAmp,
-  });
-
-  if (!nonce) {
-    return null;
-  }
-
-  res.set('x-nonce', nonce);
-  return nonce;
-};
-
 // Catch all for all routes
 server.get(
   '/*',
@@ -277,14 +253,14 @@ server.get(
         ?.toString()
         .toLowerCase();
 
-      const nonce = injectNonceHeader({
-        res,
+      const nonce = createAdNonce({
         toggles,
         country: data.country,
         showAdsBasedOnLocation: data.showAdsBasedOnLocation,
         isLite,
         isAmp,
       });
+
       injectCspHeader({ isAmp, service, nonce, res });
 
       data.nonce = nonce;
