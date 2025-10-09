@@ -9,7 +9,7 @@ const plugins = [
 
 // allows dynamic `import()` in Node tests.
 if (process.env.NODE_ENV === 'test') {
-  plugins.splice(0, 1); // Remove 'babel-plugin-react-compiler'
+  plugins.splice(plugins.indexOf('babel-plugin-react-compiler'), 1);
   plugins.push('dynamic-import-node');
   plugins.push('@babel/plugin-proposal-throw-expressions'); // allows `throw new Error();`
 }
