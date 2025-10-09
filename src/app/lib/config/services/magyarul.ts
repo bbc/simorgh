@@ -75,7 +75,6 @@ export const service: DefaultServiceConfig = {
           'Jelenleg a weboldal szöveges, adatkímélő változatát tekinti meg. A weboldal teljes, képeket és videókat is tartalmazó verziója itt érhető el.',
         toMainSite: 'Ugrás a főoldalra',
         informationPage: 'Tudjon meg többet az adatkímélő verzióról',
-        informationPageLink: '#',
         dataSaving: 'Adatkímélő verzió',
         articleDataSavingLinkText: 'Adatkímélő verzió',
       },
@@ -104,9 +103,9 @@ export const service: DefaultServiceConfig = {
           message:
             'Elnézését kérjük, de a keresett oldal jelenleg nem elérhető. Kérjük, próbálja meg:',
           solutions: ['ellenőrizni az URL-t', 'újratölteni a böngészőt'],
-          callToActionFirst: 'Vagy látogassa meg a',
+          callToActionFirst: 'Vagy látogassa meg a ',
           callToActionLinkText: 'BBC Magyarul',
-          callToActionLast: 'weboldalát. ',
+          callToActionLast: ' weboldalát. ',
           callToActionLinkUrl: 'https://www.bbc.com/magyarul',
         },
         500: {
@@ -117,7 +116,7 @@ export const service: DefaultServiceConfig = {
           solutions: ['újratölteni a böngészőt', 'később újra '],
           callToActionFirst: 'Vagy látogassa meg a ',
           callToActionLinkText: 'BBC News Magyarul',
-          callToActionLast: 'weboldalát. ',
+          callToActionLast: ' weboldalát. ',
           callToActionLinkUrl: 'https://www.bbc.com/magyarul',
         },
         home: 'Kezdőlap',
