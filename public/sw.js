@@ -92,4 +92,17 @@ const fetchEventHandler = async event => {
   return;
 };
 
+self.addEventListener('message', async event => {
+  if (event.data && event.data.type === 'SAVE_ARTICLE') {
+    const articleUrl = event.data.url;
+    try {
+      const cache = await caches.open('manualSaveCache');
+      await cache.add(articleUrl);
+      console.log(`[SW] Cached article for offline use: ${articleUrl}`);
+    } catch (err) {
+      console.error('[SW] Failed to cache article:', err);
+    }
+  }
+});
+
 onfetch = fetchEventHandler;
