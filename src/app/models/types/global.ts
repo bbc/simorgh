@@ -123,3 +123,8 @@ export type Services =
 export type Variants =
   | ServicesWithNoVariants['variant']
   | ServicesWithVariants['variant'];
+
+export type ServicesVariantsProps = {
+  service: Services;
+  variant?: Variants;
+};
