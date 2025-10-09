@@ -1,7 +1,7 @@
 import { Services } from '#app/models/types/global';
 import loadable from '@loadable/component';
 
-const loadableConfig: Record<Services, object> = {
+const loadableConfig = {
   afaanoromoo: loadable(() => import('./afaanoromoo')),
   afrique: loadable(() => import('./afrique')),
   amharic: loadable(() => import('./amharic')),
