@@ -96,7 +96,6 @@ export type ServiceConfig = {
   radioSchedule?: RadioSchedule;
   recommendations?: Recommendations;
   footer: Footer;
-  fonts?: ((baseUrlOverride: string) => string)[];
   collapsibleNavigation?: CollapsibleNavigationSection[];
   navigation?: {
     title: string;

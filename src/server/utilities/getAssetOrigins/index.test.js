@@ -1,21 +1,6 @@
 import getAssetOrigins from '.';
 
-jest.mock('../serviceConfigs', () => ({
-  news: {
-    default: {
-      fonts: ['sans-serif'],
-    },
-  },
-  foobar: {
-    default: {
-      fonts: [],
-    },
-  },
-}));
-
 const analyticsOrigins = ['https://ping.chartbeat.net'];
-
-const fontOrigins = ['https://ws-downloads.files.bbci.co.uk'];
 
 describe('getAssetOrigins', () => {
   beforeEach(() => {
@@ -27,7 +12,7 @@ describe('getAssetOrigins', () => {
   it('should return the asset origins as an array for Test environment', async () => {
     process.env.SIMORGH_APP_ENV = 'test';
 
-    expect(getAssetOrigins('foobar')).toEqual([
+    expect(getAssetOrigins()).toEqual([
       'https://ichef.bbci.co.uk',
       'http://some.statichost.net',
       'http://some.ati.static.host.net',
@@ -38,35 +23,11 @@ describe('getAssetOrigins', () => {
   it('should return the asset origins as an array for Live environment', async () => {
     process.env.SIMORGH_APP_ENV = 'live';
 
-    expect(getAssetOrigins('foobar')).toEqual([
+    expect(getAssetOrigins()).toEqual([
       'https://ichef.bbci.co.uk',
       'http://some.statichost.net',
       'http://some.ati.static.host.net',
       ...analyticsOrigins,
-    ]);
-  });
-
-  it('asset origins should include fonts origins for Test environment', async () => {
-    process.env.SIMORGH_APP_ENV = 'test';
-
-    expect(getAssetOrigins('news')).toEqual([
-      'https://ichef.bbci.co.uk',
-      'http://some.statichost.net',
-      'http://some.ati.static.host.net',
-      ...analyticsOrigins,
-      ...fontOrigins,
-    ]);
-  });
-
-  it('asset origins should include fonts origins for Live environment', async () => {
-    process.env.SIMORGH_APP_ENV = 'live';
-
-    expect(getAssetOrigins('news')).toEqual([
-      'https://ichef.bbci.co.uk',
-      'http://some.statichost.net',
-      'http://some.ati.static.host.net',
-      ...analyticsOrigins,
-      ...fontOrigins,
     ]);
   });
 
