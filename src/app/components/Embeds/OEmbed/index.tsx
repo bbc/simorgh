@@ -13,7 +13,7 @@ import AmpIframeEmbed from '../AmpIframeEmbed';
 import { OEmbedProps } from '../types';
 
 const OEmbedLoader = ({ oembed, embeddableContent }: OEmbedProps) => {
-  const { isAmp, isLite, canonicalLink } = use(RequestContext);
+  const { isAmp, isLite, canonicalLink, nonce } = use(RequestContext);
   const { translations } = use(ServiceContext);
 
   const { html, provider_name, oEmbedType, parameters, url } = oembed || {};
@@ -50,6 +50,12 @@ const OEmbedLoader = ({ oembed, embeddableContent }: OEmbedProps) => {
     return null;
   }
 
+  const htmlToUse = html || embeddableContent;
+
+  const parsedHtml = nonce
+    ? htmlToUse?.replaceAll('<script', `<script nonce="${nonce}"`)
+    : htmlToUse;
+
   if (isLite) {
     return (
       <div
@@ -61,7 +67,7 @@ const OEmbedLoader = ({ oembed, embeddableContent }: OEmbedProps) => {
           {provider_name === 'Flourish' ? (
             <FlourishEmbed {...oembed} />
           ) : (
-            <EmbedHtml embeddableContent={html || embeddableContent} />
+            <EmbedHtml embeddableContent={parsedHtml} />
           )}
         </LiteMediaLoader>
       </div>
@@ -69,10 +75,10 @@ const OEmbedLoader = ({ oembed, embeddableContent }: OEmbedProps) => {
   }
 
   if (provider_name === 'Flourish') {
-    return <FlourishEmbed {...oembed} />;
+    return FlourishEmbed(oembed, nonce);
   }
 
-  return <EmbedHtml embeddableContent={html || embeddableContent} />;
+  return <EmbedHtml embeddableContent={parsedHtml} />;
 };
 
 export default memo(OEmbedLoader);

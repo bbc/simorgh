@@ -25,6 +25,7 @@ interface BillboardProps {
   eventTrackingData?: EventTrackingData;
   showLiveLabel?: boolean;
   summaries?: Summary[];
+  timeOfDayVariant?: string;
 }
 
 export default ({
@@ -37,11 +38,19 @@ export default ({
   showLiveLabel,
   eventTrackingData = { componentName: 'billboard' },
   summaries = [],
+  timeOfDayVariant,
 }: BillboardProps) => {
-  const viewTracker = useViewTracker(eventTrackingData);
-  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
   const { translations } = use(ServiceContext);
   const showMoreOnThisTitle = translations.moreOnThis;
+  const viewTracker = useViewTracker(eventTrackingData);
+  const clickTrackerHandler = useClickTrackerHandler({
+    ...eventTrackingData,
+    ...(timeOfDayVariant && {
+      sendOptimizelyEvents: true,
+      experimentName: 'newswb_ws_tod_homepage',
+      experimentVariant: timeOfDayVariant,
+    }),
+  });
 
   return (
     <section role="region" aria-labelledby={id} data-testid={id}>

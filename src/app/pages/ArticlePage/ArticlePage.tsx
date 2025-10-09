@@ -81,10 +81,9 @@ import {
   isPortraitVideoUnderHeadline,
 } from '../utils/portraitVideo';
 
-// EXPERIMENT: Read Time
+// EXPERIMENT: Article Read Time
 interface ReadTimeData {
   readTimeValue: number | undefined;
-  readTimeLocation: string;
   readTimeVariant: string;
 }
 
@@ -97,16 +96,16 @@ const getImageComponent =
     />
   );
 
-// EXPERIMENT: Read Time
+// EXPERIMENT: Article Read Time
 const Placeholder = ({ className }: { className?: string }) => {
   const { service } = use(ServiceContext);
-  const servicesInExperiment = ['turkce', 'mundo'];
+  const servicesInExperiment = ['']; // adding services will show placeholder regardless of whether experiment is running
   return servicesInExperiment.includes(service) ? (
     <div className={className} />
   ) : null;
 };
 
-// EXPERIMENT: Read Time
+// EXPERIMENT: Article Read Time
 const getTimestampComponent =
   (
     hasByline: boolean,
@@ -116,12 +115,11 @@ const getTimestampComponent =
     readTimeData: ReadTimeData,
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
-    const { readTimeValue, readTimeLocation, readTimeVariant } = readTimeData;
-    // EXPERIMENT: Read Time
+    // EXPERIMENT: Article Read Time
+    const { readTimeValue, readTimeVariant } = readTimeData;
+    const isReadTimeVariantValid = readTimeVariant !== 'off' && readTimeVariant;
     const showReadTimeBelowTimestamp =
-      !!readTimeValue &&
-      readTimeValue !== 0 &&
-      readTimeLocation === 'timestamp';
+      !!readTimeValue && readTimeValue !== 0 && !!isReadTimeVariantValid;
 
     return hasByline ? (
       <>
@@ -150,7 +148,7 @@ const getTimestampComponent =
           popOut={false}
           showReadTimeBelowTimestamp={showReadTimeBelowTimestamp}
         />
-        {/* EXPERIMENT: Read Time */}
+        {/* EXPERIMENT: Article Read Time */}
         {showReadTimeBelowTimestamp ? (
           <ReadTime
             readTimeValue={readTimeValue}
@@ -178,31 +176,9 @@ const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
 const getPodcastPromoComponent = (podcastPromoEnabled: boolean) => () =>
   podcastPromoEnabled ? <InlinePodcastPromo /> : null;
 
-// EXPERIMENT: Read Time
-const getHeadlineComponent =
-  (readTimeData: ReadTimeData) => (props: ComponentToRenderProps) => {
-    const { readTimeValue, readTimeLocation, readTimeVariant } = readTimeData;
-    // Ensures we send view event for control variant
-    const showReadTimeBelowHeadline =
-      !!readTimeValue && ['headline', 'control'].includes(readTimeLocation);
-
-    return (
-      <>
-        <ArticleHeadline
-          {...props}
-          {...(showReadTimeBelowHeadline && { applyReadTimeSpacing: true })}
-        />
-        {showReadTimeBelowHeadline ? (
-          <ReadTime
-            readTimeValue={readTimeValue}
-            readTimeVariant={readTimeVariant}
-          />
-        ) : (
-          <Placeholder css={styles.readTimePlaceholderBelowHeadline} />
-        )}
-      </>
-    );
-  };
+const getHeadlineComponent = (props: ComponentToRenderProps) => (
+  <ArticleHeadline {...props} />
+);
 
 const getVideoComponent =
   (translations: Translations, pageBlocks: OptimoBlock[]) =>
@@ -251,27 +227,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const isInServerSideExperiment =
     experimentVariant && experimentVariant !== 'off';
 
-  // EXPERIMENT: Read Time
+  // EXPERIMENT: Article Read Time
   const readTimeExperimentName = 'newswb_ws_article_read_time';
   const readTimeExperimentVariant = useOptimizelyVariation({
     experimentName: readTimeExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
-
-  const readTimeLocation = (() => {
-    if (!readTimeExperimentVariant) return 'off';
-
-    if (readTimeExperimentVariant.includes('headline')) {
-      return 'headline';
-    }
-    if (readTimeExperimentVariant.includes('timestamp')) {
-      return 'timestamp';
-    }
-    if (readTimeExperimentVariant.includes('control')) {
-      return 'control';
-    }
-    return 'off';
-  })();
 
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
@@ -284,7 +245,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
   const { enabled: liteCTAShows } = useToggle('liteSiteCTA');
 
-  // EXPERIMENT: Read Time
+  // EXPERIMENT: Article Read Time
   const readTimeValue = pageData?.metadata?.stats?.readTime;
 
   const headline = getHeadline(pageData) ?? '';
@@ -328,23 +289,21 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     }),
   };
 
-  // EXPERIMENT: Read Time
+  // EXPERIMENT: Article Read Time
   const readTimeData = {
     readTimeValue,
-    readTimeLocation,
     readTimeVariant: readTimeExperimentVariant || 'off',
   };
 
   const componentsToRender = {
     visuallyHiddenHeadline,
-    // EXPERIMENT: Read Time
-    headline: getHeadlineComponent(readTimeData),
+    headline: getHeadlineComponent,
     subheadline: Headings,
     audio: MediaLoader,
     video: getVideoComponent(translations, blocks),
     text,
     image: getImageComponent(preloadLeadImageToggle),
-    // EXPERIMENT: Read Time
+    // EXPERIMENT: Article Read Time
     timestamp: getTimestampComponent(
       hasByline,
       bylineContribBlocks,
@@ -474,15 +433,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                 liteCTAShows={liteCTAShows}
               />
             )}
-            {/* EXPERIMENT: Read Time & Continue Reading */}
-            {(readTimeValue || experimentVariant) && (
-              <OptimizelyPageMetrics trackPageComplete />
-            )}
+            <OptimizelyPageMetrics trackPageComplete />
           </main>
-          {/* EXPERIMENT: Read Time & Continue Reading */}
-          {(readTimeValue || experimentVariant) && (
-            <OptimizelyPageMetrics trackPageView trackPageDepth />
-          )}
+          <OptimizelyPageMetrics trackPageView trackPageDepth />
           {showTopics && (
             <RelatedTopics
               css={[

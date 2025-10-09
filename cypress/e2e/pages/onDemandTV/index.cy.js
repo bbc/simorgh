@@ -1,9 +1,10 @@
 import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
 import e2eTests from './tests';
+import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
 
 const pageType = 'onDemandTV';
 
-const tests = [e2eTests];
+const tests = [e2eTests, testsForAllCanonicalPages];
 const testSuites = [
   {
     path: '/afrique/bbc_afrique_tv/tv_programmes/w13xttmz', // Brand
@@ -197,6 +198,7 @@ const liteTestSuites = testSuites.map(testSuite => {
   return {
     ...testSuite,
     path: `${testSuite.path}.lite`,
+    tests: [e2eTests],
   };
 });
 

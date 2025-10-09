@@ -20,6 +20,7 @@ interface BaseSummary {
   lastPublished?: string | number;
   duration?: string | number;
   isLive?: boolean;
+  position?: number;
 }
 
 export interface Summary extends BaseSummary {
@@ -29,7 +30,7 @@ export interface Summary extends BaseSummary {
   readTime?: number;
   eventTrackingData?: EventTrackingData;
   visualProminence?: VisualProminence | string;
-  readTimeVariant?: string | null;
+  timeOfDayVariant?: string | null;
 }
 
 export const VISUAL_STYLE = {
@@ -89,5 +90,5 @@ export interface Curation extends BaseCuration {
   curationLength?: number;
   nthCurationByStyleAndProminence?: number;
   renderVisuallyHiddenH2Title?: boolean;
-  readTimeVariant?: string | null;
+  timeOfDayVariant?: string | null;
 }

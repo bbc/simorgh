@@ -1,5 +1,5 @@
 import isLive from '#app/lib/utilities/isLive';
-import parseAvRoute from '#app/routes/utils/parseAvRoute';
+import parseRoute from '#app/routes/utils/parseRoute';
 
 const LIVE_BASE_URL = 'https://www.bbc.com';
 const TEST_BASE_URL = 'https://www.test.bbc.com';
@@ -16,7 +16,7 @@ type FuncProps = {
 export const getIframeUrl = ({ id, versionID, lang }: FuncProps) => {
   if (!id) return null;
 
-  const { platform, service, variant, assetId } = parseAvRoute(id);
+  const { platform, service, variant, assetId } = parseRoute(id);
 
   const ampBaseUrl = isLive() ? LIVE_AMP_URL : TEST_AMP_URL;
 
@@ -34,7 +34,7 @@ export const getIframeUrl = ({ id, versionID, lang }: FuncProps) => {
 export const getExternalEmbedUrl = ({ id, versionID, lang }: FuncProps) => {
   if (!id) return null;
 
-  const { platform, service, variant, assetId } = parseAvRoute(id);
+  const { platform, service, variant, assetId } = parseRoute(id);
 
   const baseUrl = isLive() ? LIVE_BASE_URL : TEST_BASE_URL;
 

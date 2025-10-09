@@ -1,9 +1,11 @@
+// eslint-disable-next-line import/no-relative-packages
 import getOptimizelyKey from '../../../../cypress/support/helpers/getOptimizelyKey';
 
 export default ({
   pageType,
   testSuites,
   beforeAll = [],
+  failOnStatusCode = true,
   testIsolation = false,
 }) => {
   const serviceToRun = Cypress.env('ONLY_SERVICE');
@@ -27,7 +29,15 @@ export default ({
         () => {
           before(() => {
             beforeAll.forEach(runBeforeAll => runBeforeAll());
-            cy.visit(path);
+
+            // Ensure that the page is returning a 200 response code
+            if (failOnStatusCode) {
+              cy.testResponseCodeAndRetry({
+                url: path,
+              });
+            }
+
+            cy.visit(path, { failOnStatusCode });
           });
 
           beforeEach(() => {
