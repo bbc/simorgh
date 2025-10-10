@@ -377,7 +377,7 @@ exports[`Media Player: Placeholder should render a video placeholder with Sustai
 
 @media (min-width: 25rem) {
   .emotion-1 {
-    left: calc(100% - 15.625rem);
+    inset-inline-start: calc(100% - 15.625rem);
     width: 15.625rem;
     height: unset;
   }
@@ -523,7 +523,7 @@ exports[`Media Player: Placeholder should render a video placeholder with Sustai
   padding: 0.5rem;
   position: absolute;
   bottom: 0;
-  left: 0;
+  inset-inline-start: 0;
   z-index: 2;
 }
 

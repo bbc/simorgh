@@ -16,7 +16,7 @@ const styles = {
       zIndex: '1',
       [mq.GROUP_1_MIN_WIDTH]: {
         textAlign: 'end',
-        left: `calc(100% - ${pixelsToRem(WIDTH)}rem)`,
+        insetInlineStart: `calc(100% - ${pixelsToRem(WIDTH)}rem)`,
         width: `${pixelsToRem(WIDTH)}rem`,
         height: 'unset',
       },

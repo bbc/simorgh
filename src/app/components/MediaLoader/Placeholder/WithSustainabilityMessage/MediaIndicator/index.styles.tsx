@@ -16,7 +16,7 @@ const styles = {
       padding: `${spacings.FULL}rem`,
       position: 'absolute',
       bottom: '0',
-      left: '0',
+      insetInlineStart: '0',
       zIndex: '2',
       [`.${NO_JS_CLASSNAME} &`]: {
         display: 'none',
