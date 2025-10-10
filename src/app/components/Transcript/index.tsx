@@ -40,27 +40,39 @@ const Transcript = ({
     componentName: 'Transcript',
   };
 
-  const eventTrackingDataDefault = {
-    ...eventTrackingData,
-    itemTracker: {
-      type: 'transcript-default-state',
-    },
+  const formatEventTrackingData = ({
+    eventName,
+    viewThreshold,
+  }: {
+    eventName: string;
+    viewThreshold?: number;
+  }) => {
+    return {
+      ...eventTrackingData,
+      ...(viewThreshold && { viewThreshold }),
+      itemTracker: {
+        type: `transcript-${eventName}`,
+      },
+    };
   };
 
-  const eventTrackingDataOpenTranscript = {
-    ...eventTrackingData,
-    viewThreshold: 0.2,
-    itemTracker: {
-      type: 'transcript-open',
-    },
-  };
-
-  const viewTrackerForDefaultState = useViewTracker(eventTrackingDataDefault);
-  const viewTrackerForOpenTranscript = useViewTracker(
-    eventTrackingDataOpenTranscript,
+  const viewTrackerForDefaultState = useViewTracker(
+    formatEventTrackingData({ eventName: 'default-state' }),
   );
+
+  const viewTrackerForOpenTranscript = useViewTracker(
+    formatEventTrackingData({
+      eventName: 'open',
+      viewThreshold: 0.2,
+    }),
+  );
+
+  const viewTrackerForTranscriptEnd = useViewTracker(
+    formatEventTrackingData({ eventName: 'end' }),
+  );
+
   const { onClick: clickTrackerHandler } = useClickTrackerHandler(
-    eventTrackingDataDefault,
+    formatEventTrackingData({ eventName: 'default-state' }),
   );
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     if (clickTrackerHandler) clickTrackerHandler(event);
@@ -116,6 +128,14 @@ const Transcript = ({
           />
         ))}
       </ul>
+      <img
+        {...viewTrackerForTranscriptEnd}
+        height="1px"
+        width="1px"
+        alt=""
+        style={{ position: 'absolute' }}
+        aria-hidden="true"
+      />
     </details>
   );
 };

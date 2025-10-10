@@ -58,25 +58,34 @@ describe('Transcript Component', () => {
     afterEach(() => {
       jest.clearAllMocks();
     });
-    const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
-
     it('should register view tracking', () => {
+      const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+
       render(<Transcript transcript={transcriptFixture} title="My Title" />);
 
-      expect(viewTrackerSpy).toHaveBeenCalledWith({
-        componentName: 'Transcript',
-        itemTracker: {
-          type: 'transcript-default-state',
-        },
-      });
-
-      expect(viewTrackerSpy).toHaveBeenCalledWith({
-        componentName: 'Transcript',
-        viewThreshold: 0.2,
-        itemTracker: {
-          type: 'transcript-open',
-        },
-      });
+      expect(viewTrackerSpy.mock.calls).toEqual(
+        expect.arrayContaining([
+          [
+            {
+              componentName: 'Transcript',
+              itemTracker: { type: 'transcript-default-state' },
+            },
+          ],
+          [
+            {
+              componentName: 'Transcript',
+              viewThreshold: 0.2,
+              itemTracker: { type: 'transcript-open' },
+            },
+          ],
+          [
+            {
+              componentName: 'Transcript',
+              itemTracker: { type: 'transcript-end' },
+            },
+          ],
+        ]),
+      );
     });
   });
 
