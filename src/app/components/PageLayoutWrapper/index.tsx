@@ -202,7 +202,7 @@ const PageLayoutWrapper = ({
                 wrappedContentsShortcut.byMonth[wrappedMonth] = wrappedContentsShortcut.byMonth[wrappedMonth] ? wrappedContentsShortcut.byMonth[wrappedMonth] + 1 : 1;
                 wrappedContents[wrappedYear] = wrappedContentsShortcut;
                 const numberOfLanguagesConsumed = Object.keys(topicsContents).length;
-                if (topicsContents.hasOwnProperty(${service}) && Object.keys(topicsContents.${service}).length) {
+                if (topicsContents.hasOwnProperty("${service}") && Object.keys(topicsContents.${service}).length) {
                     const topcats = Object.keys(topicsContents.${service}).filter(topic => topicsContents.${service}[topic].count > 1).sort((a, b) => topicsContents.${service}[b].count - topicsContents.${service}[a].count);
                     let allTopicsCount = 0;
                     for (var i = 0; i < topcats.length; i++) {
