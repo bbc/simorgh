@@ -25,7 +25,7 @@ exports[`Message should render a 'Help reduce your power consumption' message 1`
 
 @media (min-width: 25rem) {
   .emotion-0 {
-    left: calc(100% - 15.625rem);
+    inset-inline-start: calc(100% - 15.625rem);
     width: 15.625rem;
     height: unset;
   }
