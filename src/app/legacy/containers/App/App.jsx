@@ -18,6 +18,8 @@ const mapToState = ({ pathname, initialData, routeProps, toggles }) => {
         'variant',
         'id',
         'assetUri',
+        'cspHeader',
+        'nonce',
         'errorCode',
       ],
       routeProps,
@@ -30,6 +32,8 @@ const mapToState = ({ pathname, initialData, routeProps, toggles }) => {
         'timeOnServer',
         'errorCode',
         'isLite', // isLite is here as it can come from the 'save-data' header setting
+        'nonce',
+        'cspHeader',
       ],
       initialData,
     ),

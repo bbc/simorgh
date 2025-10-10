@@ -7,6 +7,7 @@ import { Helmet } from 'react-helmet';
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
 import { PageTypes } from '#app/models/types/global';
 import useIsPWA from '#app/hooks/useIsPWA';
+import appendAdDomainsToCSPHeader from '#app/utilities/appendAdDomainsToCSPHeader';
 import { TopStoryItem } from '../../pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import WebVitals from '../../legacy/containers/WebVitals';
 import HeaderContainer from '../../legacy/containers/Header';
@@ -51,7 +52,7 @@ const PageLayoutWrapper = ({
   status,
 }: PropsWithChildren<Props>) => {
   const { service } = use(ServiceContext);
-  const { isLite, isAmp } = use(RequestContext);
+  const { isLite, isAmp, nonce, cspHeader } = use(RequestContext);
   const isPWA = useIsPWA();
 
   const isErrorPage = ![200].includes(status) || !status;
@@ -205,14 +206,26 @@ const PageLayoutWrapper = ({
 
   return (
     <>
-      <Helmet
-        script={[
-          {
-            type: 'text/javascript',
-            innerHTML: fontJs,
-          },
-        ]}
-      />
+      {fontJs && (
+        <Helmet
+          script={[
+            {
+              type: 'text/javascript',
+              innerHTML: `(function() { ${fontJs} })();`,
+              ...(nonce && { nonce }),
+            },
+          ]}
+        />
+      )}
+
+      {nonce && cspHeader && (
+        <Helmet>
+          <meta
+            httpEquiv="Content-Security-Policy"
+            content={appendAdDomainsToCSPHeader(cspHeader)}
+          />
+        </Helmet>
+      )}
       <ServiceWorker />
       <ManifestContainer />
       {!isErrorPage && <WebVitals pageType={pageType} />}
