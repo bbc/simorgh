@@ -707,7 +707,12 @@ const preview: Preview = {
           service={context.globals.service.service}
           variant={context.globals.service.variant}
         >
-          <RequestContextProvider isLite={context.globals.isLite}>
+          <RequestContextProvider
+            isLite={context.globals.isLite}
+            pageType={undefined}
+            pathname={`/${context.globals.service.service}`}
+            service={context.globals.service.service}
+          >
             <EventTrackingContextProvider
               // @ts-expect-error - mock data for Storybook
               pageData={pageDataFixture}
