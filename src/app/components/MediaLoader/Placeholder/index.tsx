@@ -39,21 +39,23 @@ const MediaPlayerPlaceholder = ({
     guidanceMessage,
   } = mediaInfo ?? {};
 
-  const showSustinabilityMessage = hasTranscript;
+  const showSustainabilityMessage = hasTranscript;
 
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
     <div
       onClick={onClick}
       css={
-        showSustinabilityMessage
+        showSustainabilityMessage
           ? styles.placeholderWithTranscript
           : styles.placeholder
       }
       data-e2e="media-loader__placeholder"
-      {...(showSustinabilityMessage && { className: 'mediaLoaderPlaceholder' })}
+      {...(showSustainabilityMessage && {
+        className: 'mediaLoaderPlaceholder',
+      })}
     >
-      {showSustinabilityMessage ? (
+      {showSustainabilityMessage ? (
         <>
           <SustainabilityMessage title={title} />
           <MediaIndicatorWithSustainabilityMessage
