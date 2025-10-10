@@ -1,35 +1,60 @@
 import React, { PropsWithChildren } from 'react';
+import type { LoadableComponent } from '@loadable/component';
 import defaultServiceVariants from '../../lib/config/services/defaultServiceVariants';
-import { ServicesVariantsProps, Variants } from '../../models/types/global';
+import {
+  ServicesVariantsProps,
+  Variants,
+  ServicesWithVariants,
+  ServicesWithNoVariants,
+} from '../../models/types/global';
 import themes from './themes/loadableConfig';
 import fallBackTheme from './themes/news';
 
+type ThemeComponentLoadable = LoadableComponent<{ children: React.ReactNode }>;
+type FallbackThemeComponent = React.FC<{ children: React.ReactNode }>;
+
+type NonVariantThemesType = {
+  [_service in ServicesWithNoVariants['service']]: ThemeComponentLoadable;
+};
+
+type VariantThemesType = {
+  [_service in ServicesWithVariants['service']]: {
+    [_variant in Variants]?: ThemeComponentLoadable;
+  };
+};
+
 const nonVariantThemes = Object.fromEntries(
   Object.entries(themes).filter(([_service, theme]) => {
-    return Object.keys(theme).includes('load');
+    return typeof theme === 'function' || Object.keys(theme).includes('load');
   }),
-);
+) as unknown as NonVariantThemesType;
 
 const variantThemes = Object.fromEntries(
   Object.entries(themes).filter(
     ([service]) => !Object.keys(nonVariantThemes).includes(service),
   ),
-);
+) as unknown as VariantThemesType;
 
 export const ThemeProvider = ({
   children,
   service,
   variant,
 }: PropsWithChildren<ServicesVariantsProps>) => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  let LoadableContextProvider: any = fallBackTheme;
+  let LoadableContextProvider: ThemeComponentLoadable | FallbackThemeComponent =
+    fallBackTheme;
 
   const serviceVariant: Variants = variant || defaultServiceVariants[service];
 
-  if (serviceVariant && service in variantThemes) {
-    LoadableContextProvider = variantThemes[service];
+  if (service in variantThemes) {
+    const serviceVariants =
+      variantThemes[service as ServicesWithVariants['service']][serviceVariant];
+
+    if (serviceVariants) {
+      LoadableContextProvider = serviceVariants;
+    }
   } else {
-    LoadableContextProvider = nonVariantThemes[service];
+    LoadableContextProvider =
+      nonVariantThemes[service as ServicesWithNoVariants['service']];
   }
 
   if (!LoadableContextProvider) {
