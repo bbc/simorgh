@@ -22,7 +22,7 @@ const styles = {
         display: 'none',
       },
       [mq.GROUP_2_MIN_WIDTH]: {
-        left: `calc(100% - ${pixelsToRem(WIDTH)}rem)`,
+        insetInlineStart: `calc(100% - ${pixelsToRem(WIDTH)}rem)`,
         width: `${pixelsToRem(WIDTH)}rem`,
         height: 'unset',
       },
