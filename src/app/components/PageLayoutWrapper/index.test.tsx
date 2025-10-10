@@ -43,6 +43,8 @@ describe('PageLayoutWrapper', () => {
 
     expect({
       'font-family': style.getPropertyValue('font-family'),
+      'font-style': style.getPropertyValue('font-style'),
+      'font-weight': style.getPropertyValue('font-weight'),
     }).toMatchSnapshot();
   });
 });

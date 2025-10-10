@@ -335,75 +335,42 @@ export type TypographyScript = {
   };
 };
 
+export type FontStyles = {
+  fontFamily: string;
+  fontStyle: string;
+  fontWeight: number;
+};
+
 export type FontVariants = {
   sans: {
-    regular: {
-      fontFamily: string;
-      fontStyle: string;
-      fontWeight: number;
-    };
-    regularItalic?: {
-      fontFamily: string;
-      fontStyle: string;
-      fontWeight: number;
-    };
-    bold: {
-      fontFamily: string;
-      fontStyle: string;
-      fontWeight: number;
-    };
-    boldItalic?: {
-      fontFamily: string;
-      fontStyle: string;
-      fontWeight: number;
-    };
-    light?: {
-      fontFamily: string;
-      fontStyle: string;
-      fontWeight: number;
-    };
+    regular: FontStyles;
+    regularItalic?: FontStyles;
+    bold: FontStyles;
+    boldItalic?: FontStyles;
+    light?: FontStyles;
   };
   serif?: {
-    regular: {
-      fontFamily: string;
-      fontStyle: string;
-      fontWeight: number;
-    };
-    medium: {
-      fontFamily: string;
-      fontStyle: string;
-      fontWeight: number;
-    };
-    mediumItalic: {
-      fontFamily: string;
-      fontStyle: string;
-      fontWeight: number;
-    };
-    bold: {
-      fontFamily: string;
-      fontStyle: string;
-      fontWeight: number;
-    };
-    light: {
-      fontFamily: string;
-      fontStyle: string;
-      fontWeight: number;
-    };
+    regular: FontStyles;
+    medium: FontStyles;
+    mediumItalic: FontStyles;
+    bold: FontStyles;
+    light: FontStyles;
   };
+};
+
+export type FontFace = Partial<FontStyles> & {
+  fontFamily: string;
+  src: string;
+  downloadSrc: string;
+  fontDisplay: string;
+  name: string;
+  version?: string;
+  subset?: boolean;
 };
 
 export interface Typography {
   fontFaces: {
-    '@font-face'?: {
-      fontFamily: string;
-      fontWeight?: number;
-      fontStyle?: string;
-      src?: string;
-      fontDisplay: string;
-      name?: string;
-      version?: string;
-      subset?: boolean;
-    };
+    '@font-face'?: FontFace;
   }[];
   fontVariants: FontVariants;
   script: TypographyScript;
@@ -448,12 +415,6 @@ export type FontVariant =
   | 'serifMediumItalic'
   | 'serifBold'
   | 'serifLight';
-
-export type FontStyles = {
-  fontFamily: string;
-  fontStyle: string;
-  fontWeight: number;
-};
 
 export type BrandSVG = {
   width?: number;
