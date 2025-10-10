@@ -1,3 +1,4 @@
+import { ServiceTheme } from '#app/models/types/theming';
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import devanagariScript from '../fontScripts/devanagari';
 import { NOTO_SANS_TELUGU_REGULAR, NOTO_SANS_TELUGU_BOLD } from '../fontFaces';
@@ -5,7 +6,7 @@ import teluguFontVariants from '../fontVariants/telugu';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/telugu';
 
-const teluguTheme = {
+const teluguTheme: ServiceTheme = {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -19,6 +20,7 @@ const teluguTheme = {
     fontFaces: [NOTO_SANS_TELUGU_REGULAR, NOTO_SANS_TELUGU_BOLD],
   },
   brandSVG,
+  service: 'telugu',
 };
 
 export default withThemeProvider(teluguTheme);

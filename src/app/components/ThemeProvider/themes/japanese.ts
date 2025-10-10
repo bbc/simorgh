@@ -1,10 +1,11 @@
+import { ServiceTheme } from '#app/models/types/theming';
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import noAscOrDescScript from '../fontScripts/noAscOrDesc';
 import japaneseFontVariants from '../fontVariants/japanese';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/japanese';
 
-const japaneseTheme = {
+const japaneseTheme: ServiceTheme = {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -18,6 +19,7 @@ const japaneseTheme = {
     fontFaces: [],
   },
   brandSVG,
+  service: 'japanese',
 };
 
 export default withThemeProvider(japaneseTheme);

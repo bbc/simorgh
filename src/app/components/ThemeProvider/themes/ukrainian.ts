@@ -1,3 +1,4 @@
+import { ServiceTheme } from '#app/models/types/theming';
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import cyrillicScript from '../fontScripts/cyrillic';
 import helmetFontVariants from '../fontVariants/helmet';
@@ -5,7 +6,7 @@ import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/ukrainian';
 import getPWATypographyTheme from './getPWATypographyTheme';
 
-const ukrainianTheme = {
+const ukrainianTheme: ServiceTheme = {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -19,6 +20,7 @@ const ukrainianTheme = {
     fontFaces: [],
   },
   brandSVG,
+  service: 'ukrainian',
 };
 
 export default withThemeProvider(

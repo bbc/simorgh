@@ -1,3 +1,4 @@
+import { ServiceTheme } from '#app/models/types/theming';
 import { ARCHIVE_BLUE, WHITE } from '../palette';
 import latinScript from '../fontScripts/latin';
 import {
@@ -9,7 +10,7 @@ import reithFontVariants from '../fontVariants/reith';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../../../legacy/psammead/psammead-assets/src/svgs/archive';
 
-const archiveTheme = {
+const archiveTheme: ServiceTheme = {
   palette: {
     BRAND_BACKGROUND: ARCHIVE_BLUE,
     BRAND_LOGO: WHITE,
@@ -23,6 +24,7 @@ const archiveTheme = {
     fontFaces: [REITH_SANS_BOLD, REITH_SANS_REGULAR, REITH_SERIF_MEDIUM],
   },
   brandSVG,
+  service: 'archive',
 };
 
 export default withThemeProvider(archiveTheme);

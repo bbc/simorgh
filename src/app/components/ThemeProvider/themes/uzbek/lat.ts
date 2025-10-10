@@ -1,3 +1,4 @@
+import { ServiceTheme } from '#app/models/types/theming';
 import { mergeDeepLeft } from 'ramda';
 import latinWithDiacriticsScript from '../../fontScripts/latinWithDiacritics';
 import withThemeProvider from '../../withThemeProvider';
@@ -14,6 +15,6 @@ const uzbekLatinTheme = mergeDeepLeft(
 );
 
 export default withThemeProvider(
-  uzbekLatinTheme,
+  { ...uzbekLatinTheme, service: 'uzbek' },
   getPWATypographyTheme(latinWithDiacriticsScript),
 );

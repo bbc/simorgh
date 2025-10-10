@@ -1,10 +1,11 @@
+import { ServiceTheme } from '#app/models/types/theming';
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import thaiScript from '../fontScripts/thai';
 import thaiFontVariants from '../fontVariants/thai';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/thai';
 
-const thaiTheme = {
+const thaiTheme: ServiceTheme = {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -18,6 +19,7 @@ const thaiTheme = {
     fontFaces: [],
   },
   brandSVG,
+  service: 'thai',
 };
 
 export default withThemeProvider(thaiTheme);

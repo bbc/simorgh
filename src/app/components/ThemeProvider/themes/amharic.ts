@@ -1,3 +1,4 @@
+import { ServiceTheme } from '#app/models/types/theming';
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import noAscOrDescScript from '../fontScripts/noAscOrDesc';
 import {
@@ -8,7 +9,7 @@ import amharicFontVariants from '../fontVariants/amharic';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/amharic';
 
-const amharicTheme = {
+const amharicTheme: ServiceTheme = {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -22,6 +23,7 @@ const amharicTheme = {
     fontFaces: [NOTO_SANS_ETHIOPIC_BOLD, NOTO_SANS_ETHIOPIC_REGULAR],
   },
   brandSVG,
+  service: 'amharic',
 };
 
 export default withThemeProvider(amharicTheme);

@@ -1,3 +1,4 @@
+import { ServiceTheme } from '#app/models/types/theming';
 import { NEWSROUND_PURPLE, NEWSROUND_PURPLE_30, WHITE } from '../palette';
 import latinScript from '../fontScripts/latin';
 import {
@@ -10,7 +11,7 @@ import reithFontVariants from '../fontVariants/reith';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../../../legacy/psammead/psammead-assets/src/svgs/newsround';
 
-const newsroundTheme = {
+const newsroundTheme: ServiceTheme = {
   palette: {
     BRAND_BACKGROUND: NEWSROUND_PURPLE,
     BRAND_LOGO: WHITE,
@@ -29,6 +30,7 @@ const newsroundTheme = {
     ],
   },
   brandSVG,
+  service: 'newsround',
 };
 
 export default withThemeProvider(newsroundTheme);

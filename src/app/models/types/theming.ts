@@ -1,4 +1,5 @@
 import type { JSX } from 'react';
+import { Services } from './global';
 
 export interface BrandPalette {
   BRAND_BACKGROUND: string;
@@ -440,6 +441,7 @@ export type GridWidths = {
 };
 
 export type ServiceTheme = {
+  service: Services;
   palette: BrandPalette;
   typography: Typography;
   brandSVG: BrandSVG;
