@@ -30,20 +30,13 @@ storiesOf('Components/MediaIndicator/Video', module)
   .addDecorator(withServicesKnob())
   .add(
     'video without duration',
-    ({ script, service, dir }) => (
-      <MediaIndicator
-        type="video"
-        script={script}
-        dir={dir}
-        service={service}
-      />
-    ),
+    ({ dir }) => <MediaIndicator type="video" dir={dir} />,
     { notes },
   )
   .add(
     'video with duration',
-    ({ script, service, dir }) => (
-      <MediaIndicator type="video" script={script} service={service} dir={dir}>
+    ({ dir }) => (
+      <MediaIndicator type="video" dir={dir}>
         <TimeDuration dateTime={text('datetime', 'PT2M15S')}>
           {text('duration', '2:15')}
         </TimeDuration>
@@ -53,16 +46,14 @@ storiesOf('Components/MediaIndicator/Video', module)
   )
   .add(
     'inline video media indicator with headline',
-    ({ longText: textSnippet, script, service, dir }) => (
+    ({ longText: textSnippet, dir }) => (
       <>
         <MediaIndicator
           type="video"
-          script={script}
-          service={service}
           dir={dir}
           isInline={boolean('inline?', true)}
         />
-        <StyledHeadline script={script} service={service} promoHasImage={false}>
+        <StyledHeadline promoHasImage={false}>
           <Link href="https://www.bbc.co.uk/news">{textSnippet}</Link>
         </StyledHeadline>
       </>
@@ -76,20 +67,13 @@ storiesOf('Components/MediaIndicator/Audio', module)
   .addDecorator(withServicesKnob())
   .add(
     'audio without duration',
-    ({ script, service, dir }) => (
-      <MediaIndicator
-        type="audio"
-        script={script}
-        service={service}
-        dir={dir}
-      />
-    ),
+    ({ dir }) => <MediaIndicator type="audio" dir={dir} />,
     { notes },
   )
   .add(
     'audio with duration',
-    ({ script, service, dir }) => (
-      <MediaIndicator type="audio" script={script} service={service} dir={dir}>
+    ({ dir }) => (
+      <MediaIndicator type="audio" dir={dir}>
         <time dateTime={text('datetime', 'PT2M15S')}>
           {text('duration', '2:15')}
         </time>
@@ -99,16 +83,14 @@ storiesOf('Components/MediaIndicator/Audio', module)
   )
   .add(
     'inline audio media indicator with headline',
-    ({ longText: textSnippet, script, service, dir }) => (
+    ({ longText: textSnippet, dir }) => (
       <>
         <MediaIndicator
           type="audio"
-          script={script}
-          service={service}
           dir={dir}
           isInline={boolean('inline?', true)}
         />
-        <StyledHeadline script={script} service={service} promoHasImage={false}>
+        <StyledHeadline promoHasImage={false}>
           <Link href="https://www.bbc.co.uk/news">{textSnippet}</Link>
         </StyledHeadline>
       </>
@@ -122,28 +104,19 @@ storiesOf('Components/MediaIndicator/Photo', module)
   .addDecorator(withServicesKnob())
   .add(
     'photogallery',
-    ({ script, service, dir }) => (
-      <MediaIndicator
-        type="photogallery"
-        script={script}
-        service={service}
-        dir={dir}
-      />
-    ),
+    ({ dir }) => <MediaIndicator type="photogallery" dir={dir} />,
     { notes },
   )
   .add(
     'inline photogallery with headline',
-    ({ longText: textSnippet, script, service, dir }) => (
+    ({ longText: textSnippet, dir }) => (
       <>
         <MediaIndicator
           type="photogallery"
-          script={script}
-          service={service}
           dir={dir}
           isInline={boolean('inline?', true)}
         />
-        <StyledHeadline script={script} service={service} promoHasImage={false}>
+        <StyledHeadline promoHasImage={false}>
           <Link href="https://www.bbc.co.uk/news">{textSnippet}</Link>
         </StyledHeadline>
       </>

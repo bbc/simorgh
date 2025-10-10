@@ -20,7 +20,7 @@ const TopStoriesSection = ({
   content: TopStoryItem[];
   sendOptimizelyEvents?: boolean;
 }) => {
-  const { translations, script, service } = use(ServiceContext);
+  const { translations } = use(ServiceContext);
   const { optimizely } = use(OptimizelyContext);
 
   const eventTrackingData = {
@@ -66,8 +66,6 @@ const TopStoriesSection = ({
         labelId={LABEL_ID}
         columnType="secondary"
         backgroundColor={GREY_2}
-        script={script}
-        service={service}
       >
         {title}
       </SectionLabel>

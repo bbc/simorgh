@@ -42,7 +42,7 @@ type Props = {
 };
 
 const RelatedContentSection = ({ content, sendOptimizelyEvents }: Props) => {
-  const { translations, script, service } = use(ServiceContext);
+  const { translations } = use(ServiceContext);
   const { optimizely } = use(OptimizelyContext);
 
   const {
@@ -117,12 +117,7 @@ const RelatedContentSection = ({ content, sendOptimizelyEvents }: Props) => {
       role="region"
       data-e2e={LABEL_ID}
     >
-      <SectionLabel
-        labelId={LABEL_ID}
-        backgroundColor={GREY_2}
-        script={script}
-        service={service}
-      >
+      <SectionLabel labelId={LABEL_ID} backgroundColor={GREY_2}>
         {title}
       </SectionLabel>
       {hasSingleContent ? (

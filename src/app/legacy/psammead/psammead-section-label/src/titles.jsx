@@ -93,19 +93,11 @@ export const PlainTitle = ({
   children: title,
   dir,
   labelId,
-  script,
-  service,
   backgroundColor = GHOST,
 }) => (
   <FlexColumn>
     <FlexRow>
-      <Title
-        script={script}
-        dir={dir}
-        id={labelId}
-        service={service}
-        backgroundColor={backgroundColor}
-      >
+      <Title dir={dir} id={labelId} backgroundColor={backgroundColor}>
         {title}
       </Title>
     </FlexRow>
@@ -118,8 +110,6 @@ export const LinkTitle = ({
   href,
   labelId,
   linkText,
-  script,
-  service,
   backgroundColor = GHOST,
 }) => (
   <SectionLabelLink
@@ -129,19 +119,11 @@ export const LinkTitle = ({
   >
     <FlexColumn>
       <FlexRow role="text">
-        <Title
-          id={labelId}
-          dir={dir}
-          script={script}
-          service={service}
-          backgroundColor={backgroundColor}
-        >
+        <Title id={labelId} dir={dir} backgroundColor={backgroundColor}>
           {title}
         </Title>
         <IndexLinkCta
           dir={dir}
-          script={script}
-          service={service}
           backgroundColor={backgroundColor}
           aria-hidden="true"
         >

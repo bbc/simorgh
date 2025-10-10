@@ -25,7 +25,7 @@ const ResponsivePodcastPromoWrapper = styled.div`
 `;
 
 const Promo = () => {
-  const { podcastPromo, script, service, dir } = use(ServiceContext);
+  const { podcastPromo, dir } = use(ServiceContext);
 
   const {
     podcastPromoTitle,
@@ -51,12 +51,7 @@ const Promo = () => {
 
   return (
     <ResponsivePodcastPromoWrapper {...viewTrackerRef} data-e2e="podcast-promo">
-      <PromoComponent
-        script={script}
-        service={service}
-        role="region"
-        aria-labelledby="podcast-promo"
-      >
+      <PromoComponent role="region" aria-labelledby="podcast-promo">
         <PromoComponent.Title id="podcast-promo" dir={dir}>
           {podcastPromoTitle}
         </PromoComponent.Title>

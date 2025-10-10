@@ -116,11 +116,9 @@ StyledCurrentLink.defaultProps = {
 
 export const DropdownLi = ({
   children,
-  script,
   clickTracker = null,
   currentPageText = null,
   active = false,
-  service,
   url,
   dir = 'ltr',
   viewTracker = null,
@@ -131,13 +129,7 @@ export const DropdownLi = ({
   return (
     // aria-labelledby is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     <StyledDropdownLi role="listitem" {...viewTracker}>
-      <StyledDropdownLink
-        script={script}
-        service={service}
-        href={url}
-        aria-labelledby={ariaId}
-        {...clickTracker}
-      >
+      <StyledDropdownLink href={url} aria-labelledby={ariaId} {...clickTracker}>
         {active && currentPageText ? (
           // ID is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
           <StyledCurrentLink dir={dir} id={ariaId}>
@@ -181,7 +173,7 @@ const MenuButton = styled(Button)`
   border: 0;
 
   ${({ dir }) => (dir === 'ltr' ? `float: left;` : `float: right;`)}
-  ${({ theme: fontSizes }) =>
+  ${({ theme: { fontSizes } }) =>
     fontSizes?.pica?.lineHeight &&
     getButtonDimensions(fontSizes.pica.lineHeight)}
 
@@ -201,11 +193,9 @@ const MenuButton = styled(Button)`
     visibility: hidden;
   }
   @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
-    ${({ theme }) =>
-      theme.fontSizes?.pica?.[theme.fontMq.GROUP_B_ONLY].lineHeight &&
-      getButtonDimensions(
-        theme.fontSizes.pica[theme.fontMq.GROUP_B_ONLY].lineHeight,
-      )}
+    ${({ theme: { fontSizes, fontMq } }) =>
+      fontSizes?.pica?.[fontMq.GROUP_B_ONLY].lineHeight &&
+      getButtonDimensions(fontSizes.pica[fontMq.GROUP_B_ONLY].lineHeight)}
   }
 
   & svg {
@@ -218,13 +208,11 @@ export const CanonicalMenuButton = ({
   isOpen,
   onClick,
   dir = 'ltr',
-  script,
 }) => (
   <MenuButton
     onClick={onClick}
     aria-expanded={isOpen ? 'true' : 'false'}
     dir={dir}
-    script={script}
     className="focusIndicatorRemove"
   >
     {isOpen ? navigationIcons.cross : navigationIcons.hamburger}
@@ -247,12 +235,7 @@ const expandedHandler =
 
 const initialState = { expanded: false };
 
-export const AmpMenuButton = ({
-  announcedText,
-  onToggle,
-  dir = 'ltr',
-  script,
-}) => (
+export const AmpMenuButton = ({ announcedText, onToggle, dir = 'ltr' }) => (
   <>
     <AmpHead />
     <amp-state id="menuState">
@@ -267,7 +250,6 @@ export const AmpMenuButton = ({
       data-amp-bind-aria-expanded='menuState.expanded ? "true" : "false"'
       on={`tap:${expandedHandler},${onToggle}`}
       dir={dir}
-      script={script}
       className="focusIndicatorRemove"
     >
       {cloneElement(navigationIcons.hamburger, {

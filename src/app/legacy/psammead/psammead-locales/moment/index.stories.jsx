@@ -232,8 +232,6 @@ timeFunctions.push(
         <WithService service={service} variant={variant}>
           <MostReadTimestamp
             prefix={articleTimestampPrefix}
-            script={script}
-            service={service}
             timestamp={new Date(fixedTimestamp)}
             locale={locale}
             timezone={timezone}

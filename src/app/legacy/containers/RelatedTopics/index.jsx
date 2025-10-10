@@ -37,7 +37,7 @@ const RelatedTopics = ({
   backgroundColour = '',
   tagBackgroundColour = '',
 }) => {
-  const { service, script, translations, dir } = use(ServiceContext);
+  const { service, translations, dir } = use(ServiceContext);
   const { variant } = use(RequestContext);
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
   const viewTracker = useViewTracker(eventTrackingData);
@@ -69,8 +69,6 @@ const RelatedTopics = ({
       >
         <StyledSectionLabel
           bar={bar}
-          script={script}
-          service={service}
           dir={dir}
           labelId="related-topics"
           mobileDivider={mobileDivider}
@@ -78,11 +76,7 @@ const RelatedTopics = ({
         >
           {heading}
         </StyledSectionLabel>
-        <TopicTags
-          service={service}
-          script={script}
-          {...(tagBackgroundColour && { tagBackgroundColour })}
-        >
+        <TopicTags {...(tagBackgroundColour && { tagBackgroundColour })}>
           {topics.length === 1 ? (
             <TopicTag
               name={topics[0].topicName}

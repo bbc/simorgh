@@ -18,7 +18,6 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
     timezone,
     locale,
     altCalendar,
-    script,
     translations: {
       downloads: {
         instructions = 'You can download and view today’s news.',
@@ -56,8 +55,6 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
                     format="D MMMM YYYY"
                     locale={locale}
                     timezone={timezone}
-                    service={service}
-                    script={script}
                     altCalendar={altCalendar}
                     padding={false}
                     isRelative={false}

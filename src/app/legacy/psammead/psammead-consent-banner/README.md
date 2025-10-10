@@ -16,7 +16,7 @@ The `psammead-consent-banner` component is a styled `div` that encapsulates info
 | Argument | Type | Required | Default | Example |
 | -------- | ---- | -------- | ------- | --------|
 | title | string | Yes | N/A | `We've updated our Privacy and Cookies Policy` |
-| text | element | Yes | N/A | `<ConsentBannerText script={script}> This is some text</ConsentBannerText>` |
+| text | element | Yes | N/A | `<ConsentBannerText> This is some text</ConsentBannerText>` |
 | accept | element | Yes | N/A | `<button type="button">Accept</button>` |
 | reject | element | Yes | N/A | `<a href="https://www.bbc.co.uk/usingthebbc/your-data-matters">Find out what's changed</a>` |
 | id | string | No | Null | `ConsentBanner` |

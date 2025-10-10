@@ -77,15 +77,9 @@ const SingleContentWrapper = styled.div`
   `}
 `;
 
-const OptionallyRenderedSkipWrapper = ({
-  skipLink = null,
-  service,
-  children,
-}) =>
+const OptionallyRenderedSkipWrapper = ({ skipLink = null, children }) =>
   skipLink ? (
-    <SkipLinkWrapper service={service} {...skipLink}>
-      {children}
-    </SkipLinkWrapper>
+    <SkipLinkWrapper {...skipLink}>{children}</SkipLinkWrapper>
   ) : (
     children
   );
@@ -130,7 +124,7 @@ const CpsOnwardJourney = ({
   eventTrackingData = null,
   sendOptimizelyEvents = false,
 }) => {
-  const { script, service, dir } = use(ServiceContext);
+  const { dir } = use(ServiceContext);
 
   const a11yAttributes = {
     as: 'section',
@@ -150,11 +144,9 @@ const CpsOnwardJourney = ({
       className={className}
       dir={dir}
     >
-      <OptionallyRenderedSkipWrapper skipLink={skipLink} service={service}>
+      <OptionallyRenderedSkipWrapper skipLink={skipLink}>
         {title ? (
           <LabelComponent
-            script={script}
-            service={service}
             dir={dir}
             labelId={labelId}
             columnType={columnType}

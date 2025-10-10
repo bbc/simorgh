@@ -5,14 +5,14 @@ import Navigation from '../../../psammead/psammead-navigation/src';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 const LanguageNavigation = () => {
-  const { script, service, dir, collapsibleNavigation } = use(ServiceContext);
+  const { dir, collapsibleNavigation } = use(ServiceContext);
 
   if (!collapsibleNavigation?.length) {
     return null;
   }
 
   return (
-    <Navigation script={script} service={service} dir={dir}>
+    <Navigation dir={dir}>
       <VisuallyHiddenText>
         Navigation, BBC World Service regions
       </VisuallyHiddenText>

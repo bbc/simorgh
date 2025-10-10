@@ -37,22 +37,10 @@ const formatChildren = children => {
   );
 };
 
-const MediaIcon = ({
-  script,
-  service,
-  children = null,
-  type = null,
-  className,
-}) => {
+const MediaIcon = ({ children = null, type = null, className }) => {
   if (!type || !mediaIcons[type]) return null;
   return (
-    <Wrapper
-      script={script}
-      service={service}
-      aria-hidden="true"
-      className={className}
-      data-e2e="media-icon"
-    >
+    <Wrapper aria-hidden="true" className={className} data-e2e="media-icon">
       {mediaIcons[type]}
       {formatChildren(children)}
     </Wrapper>

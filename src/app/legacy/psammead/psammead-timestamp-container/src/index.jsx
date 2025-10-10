@@ -15,9 +15,7 @@ const TimestampContainer = ({
   prefix = '',
   suffix = '',
   timezone = 'Europe/London',
-  script,
   locale = 'en-gb',
-  service,
   altCalendar,
   className = '',
 }) => {
@@ -53,8 +51,6 @@ const TimestampContainer = ({
         timezone,
       })}
       padding={padding}
-      script={script}
-      service={service}
       className={className}
     >
       {timestampText}

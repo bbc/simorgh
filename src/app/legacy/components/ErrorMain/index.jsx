@@ -39,8 +39,6 @@ const ErrorMain = ({
   callToActionLinkText,
   callToActionLinkUrl,
   callToActionLast = null,
-  script,
-  service,
 }) => (
   <StyledGelPageGrid
     as="main"
@@ -75,28 +73,19 @@ const ErrorMain = ({
       }}
       margins={{ group0: true, group1: true, group2: true, group3: true }}
     >
-      <StatusCode script={script} data-e2e="status-code">
-        {statusCode}
-      </StatusCode>
-      <Heading id="content" script={script} service={service} tabIndex="-1">
+      <StatusCode data-e2e="status-code">{statusCode}</StatusCode>
+      <Heading id="content" tabIndex="-1">
         {title}
       </Heading>
-      <CustomParagraph script={script} service={service}>
-        {message}
-      </CustomParagraph>
+      <CustomParagraph>{message}</CustomParagraph>
       <ul>
         {solutions.map(text => (
-          <CustomParagraph
-            script={script}
-            service={service}
-            as="li"
-            key={idSanitiser(text)}
-          >
+          <CustomParagraph as="li" key={idSanitiser(text)}>
             {text}
           </CustomParagraph>
         ))}
       </ul>
-      <CustomParagraph script={script} service={service}>
+      <CustomParagraph>
         {callToActionFirst}
         <InlineLink
           href={callToActionLinkUrl}

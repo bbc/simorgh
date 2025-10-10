@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 import path from 'ramda/src/path';
 import {
@@ -13,7 +13,6 @@ import {
 } from '#psammead/gel-foundations/src/breakpoints';
 import { Headline } from '#psammead/psammead-headings/src';
 import { GridItemLarge } from '#components/Grid';
-import { ServiceContext } from '../../../contexts/ServiceContext';
 import Fragment from '../Fragment';
 import Blocks from '../Blocks';
 
@@ -43,8 +42,6 @@ const FauxHeadlineContainer = ({
     },
   ],
 }) => {
-  const { script, service } = use(ServiceContext);
-
   const arrayOfFragments = path(
     ['0', 'model', 'blocks', '0', 'model', 'blocks'],
     blocks,
@@ -61,9 +58,7 @@ const FauxHeadlineContainer = ({
 
   return (
     <GridItemLarge>
-      <StyledFauxHeadline script={script} service={service}>
-        {renderText()}
-      </StyledFauxHeadline>
+      <StyledFauxHeadline>{renderText()}</StyledFauxHeadline>
     </GridItemLarge>
   );
 };

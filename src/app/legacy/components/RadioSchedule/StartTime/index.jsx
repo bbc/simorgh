@@ -46,7 +46,7 @@ const StyledTimestamp = styled.span`
   &::after {
     content: '';
     border-top: 0.0625rem solid ${props => props.theme.palette.PEBBLE};
-    top: ${({ theme: fontSizes }) =>
+    top: ${({ theme: { fontSizes } }) =>
       fontSizes?.minion?.lineHeight &&
       0.5 + fontSizes.minion.lineHeight / 2 / 16}rem;
     ${({ dir }) =>
@@ -59,17 +59,10 @@ export const StartTimestamp = ({
   timestamp,
   timezone = 'Europe/London',
   locale = 'en-gb',
-  script,
-  service,
   dir = 'ltr',
 }) => {
   return (
-    <StyledTimestamp
-      script={script}
-      service={service}
-      dir={dir}
-      aria-hidden="true"
-    >
+    <StyledTimestamp dir={dir} aria-hidden="true">
       <TimestampContainer
         timestamp={timestamp}
         dateTimeFormat="YYYY-MM-DD"
@@ -77,16 +70,14 @@ export const StartTimestamp = ({
         isRelative={false}
         padding={false}
         timezone={timezone}
-        script={script}
         locale={locale}
-        service={service}
       />
     </StyledTimestamp>
   );
 };
 
 const StartTime = ({ timestamp }) => {
-  const { script, locale, service, timezone, dir } = use(ServiceContext);
+  const { locale, timezone, dir } = use(ServiceContext);
   return (
     <Wrapper>
       <ClockIcon dir={dir} />
@@ -94,8 +85,6 @@ const StartTime = ({ timestamp }) => {
         timestamp={timestamp}
         timezone={timezone}
         locale={locale}
-        script={script}
-        service={service}
         dir={dir}
       />
     </Wrapper>

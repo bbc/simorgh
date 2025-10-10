@@ -11,9 +11,7 @@ const PromoTimestamp = ({
 }) => {
   const {
     altCalendar,
-    script,
     datetimeLocale,
-    service,
     timezone,
     translations: { timstampPrefix },
   } = use(ServiceContext);
@@ -32,9 +30,7 @@ const PromoTimestamp = ({
       locale={locale}
       dateTimeFormat="YYYY-MM-DD"
       format="LL"
-      script={script}
       padding={false}
-      service={service}
       timezone={timezone}
       isRelative={isRelative}
       className={className}

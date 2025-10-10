@@ -12,7 +12,7 @@ import styles from './index.styles';
 import { LatestMedia } from './types';
 
 const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
-  const { service, dir, translations, script } = use(ServiceContext);
+  const { dir, translations } = use(ServiceContext);
 
   const eventTrackingData = {
     block: {
@@ -51,8 +51,6 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
         href=""
         labelId={LABEL_ID}
         linkText=""
-        script={script}
-        service={service}
         backgroundColor="transparent"
         overrideHeadingAs=""
         visuallyHidden={false}

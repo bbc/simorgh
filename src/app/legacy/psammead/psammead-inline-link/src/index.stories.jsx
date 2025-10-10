@@ -67,8 +67,8 @@ storiesOf('Components/InlineLink', module)
   )
   .add(
     'inline-link inside a regular paragraph',
-    ({ longText, script, service, text }) => (
-      <RegularParagraph script={script} service={service}>
+    ({ longText, text }) => (
+      <RegularParagraph>
         {renderWrappedInlineLink({ longText, text })}
       </RegularParagraph>
     ),
@@ -76,8 +76,8 @@ storiesOf('Components/InlineLink', module)
   )
   .add(
     'inline-link inside a bold paragraph',
-    ({ longText, script, service, text }) => (
-      <BoldParagraph script={script} service={service}>
+    ({ longText, text }) => (
+      <BoldParagraph>
         {renderWrappedInlineLink({ longText, text })}
       </BoldParagraph>
     ),
@@ -85,8 +85,8 @@ storiesOf('Components/InlineLink', module)
   )
   .add(
     'inline-link inside a italic paragraph',
-    ({ longText, script, service, text }) => (
-      <ItalicParagraph script={script} service={service}>
+    ({ longText, text }) => (
+      <ItalicParagraph>
         {renderWrappedInlineLink({ longText, text })}
       </ItalicParagraph>
     ),
@@ -94,8 +94,8 @@ storiesOf('Components/InlineLink', module)
   )
   .add(
     'inline-link inside a bold and italic paragraph',
-    ({ longText, script, service, text }) => (
-      <BoldItalicParagraph script={script} service={service}>
+    ({ longText, text }) => (
+      <BoldItalicParagraph>
         {renderWrappedInlineLink({ longText, text })}
       </BoldItalicParagraph>
     ),
@@ -103,16 +103,16 @@ storiesOf('Components/InlineLink', module)
   )
   .add(
     'experimental styled inline link with text-decoration style',
-    ({ longText, script, service, text }) => (
+    ({ longText, text }) => (
       <>
-        <RegularParagraph script={script} service={service}>
+        <RegularParagraph>
           {renderWrappedInlineLink({
             longText,
             text,
             style: textDecorationStyle,
           })}
         </RegularParagraph>
-        <Caption script={script} service={service}>
+        <Caption>
           {renderWrappedInlineLink({
             longText,
             text,

@@ -4,11 +4,10 @@ import StartTime from '.';
 
 const storiesUnixTimestamp = 1566914061212;
 
-const Component = ({ service, locale, script, dir, timezone }) => (
+const Component = ({ service, locale, dir, timezone }) => (
   <ServiceContextProvider
     service={service}
     locale={locale}
-    script={script}
     dir={dir}
     timezone={timezone}
   >
@@ -22,15 +21,7 @@ export default {
 };
 
 export const Default = (_, globalArgs) => {
-  const { service, locale, script, dir, timezone } = globalArgs;
+  const { service, dir, timezone } = globalArgs;
 
-  return (
-    <Component
-      service={service}
-      locale={locale}
-      script={script}
-      dir={dir}
-      timezone={timezone}
-    />
-  );
+  return <Component service={service} dir={dir} timezone={timezone} />;
 };

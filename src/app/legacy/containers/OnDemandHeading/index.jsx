@@ -51,7 +51,7 @@ const OnDemandHeadingContainer = ({
   ariaHidden = false,
   className = '',
 }) => {
-  const { script, service, timezone, datetimeLocale } = use(ServiceContext);
+  const { timezone, datetimeLocale } = use(ServiceContext);
 
   const formattedTimestamp = formatUnixTimestamp({
     timestamp: releaseDateTimeStamp,
@@ -65,19 +65,15 @@ const OnDemandHeadingContainer = ({
 
   return (
     <Headline
-      script={script}
-      service={service}
       {...(idAttr && { id: idAttr })}
       {...(className ? { className } : undefined)}
       {...(idAttr === 'content' && { tabIndex: '-1' })}
       {...(ariaHidden && { as: 'strong', 'aria-hidden': 'true' })}
     >
       <TextWrapper {...(ariaHidden ? {} : { role: 'text' })}>
-        <BrandTitle script={script} data-testid="brand-title">
-          {brandTitle}
-        </BrandTitle>
+        <BrandTitle data-testid="brand-title">{brandTitle}</BrandTitle>
         <VisuallyHiddenText>, </VisuallyHiddenText>
-        <Subheading script={script} service={service} data-testid="sub-heading">
+        <Subheading data-testid="sub-heading">
           {episodeTitle || formattedTimestamp}
         </Subheading>
       </TextWrapper>

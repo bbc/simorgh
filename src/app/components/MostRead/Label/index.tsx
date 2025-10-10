@@ -24,17 +24,13 @@ const MostReadSectionLabel = ({
   overrideHeadingAs,
 }: MostReadSectionLabelProps) => {
   const {
-    service,
-    script,
     dir,
     mostRead: { header },
   } = use(ServiceContext);
   return (
     <SectionLabel
       css={styles.sectionLabel}
-      script={script}
       labelId="Most-Read"
-      service={service}
       dir={dir}
       mobileDivider={mobileDivider}
       backgroundColor={backgroundColor}

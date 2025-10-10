@@ -24,20 +24,12 @@ const StyledAmpScrollableNavigation = styled(ScrollableNavigation)`
 `;
 
 const AmpNavigationContainer = ({
-  script,
-  service,
   dir,
   menuAnnouncedText,
   scrollableListItems,
   dropdownListItems,
 }) => (
-  <Navigation
-    script={script}
-    service={service}
-    dir={dir}
-    id={NAVIGATION_ID}
-    ampOpenClass={OPEN_CLASS_NAME}
-  >
+  <Navigation dir={dir} id={NAVIGATION_ID} ampOpenClass={OPEN_CLASS_NAME}>
     <AmpMenuButton
       announcedText={menuAnnouncedText}
       onToggle={`
@@ -46,7 +38,6 @@ const AmpNavigationContainer = ({
         ${NAVIGATION_ID}.toggleClass(class=${OPEN_CLASS_NAME})
       `}
       dir={dir}
-      script={script}
     />
     {/* Hidden attribute allows us to toggle visibility on the dropdown
     using AMP actions. */}

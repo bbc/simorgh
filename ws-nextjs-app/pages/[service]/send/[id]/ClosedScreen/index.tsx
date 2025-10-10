@@ -17,8 +17,6 @@ export default function ClosedScreen({ title, closingTime }: Props) {
     timezone,
     locale,
     altCalendar,
-    service,
-    script,
     translations: {
       ugc: { closedDescription = fallbackTranslations.closedDescription } = {},
     },
@@ -38,8 +36,6 @@ export default function ClosedScreen({ title, closingTime }: Props) {
             format="D MMMM YYYY"
             locale={locale}
             timezone={timezone}
-            service={service}
-            script={script}
             altCalendar={altCalendar}
             padding={false}
           />

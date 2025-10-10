@@ -9,19 +9,14 @@ import Paragraph from './index';
 storiesOf('Components/Paragraph', module)
   .addDecorator(withKnobs)
   .addDecorator(withServicesKnob())
-  .add(
-    'default',
-    ({ text, script, service }) => (
-      <Paragraph script={script} service={service}>
-        {text}
-      </Paragraph>
-    ),
-    { notes, knobs: { escapeHTML: false } },
-  )
+  .add('default', ({ text }) => <Paragraph>{text}</Paragraph>, {
+    notes,
+    knobs: { escapeHTML: false },
+  })
   .add(
     'containing an inline link',
-    ({ text, script, service }) => (
-      <Paragraph script={script} service={service}>
+    ({ text }) => (
+      <Paragraph>
         {`${text} `}
         <InlineLink href="https://www.bbc.com">{text}</InlineLink>
         {` ${text}`}

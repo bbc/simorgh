@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import React from 'react';
 import { Headline } from '#psammead/psammead-headings/src';
 import Paragraph from '#psammead/psammead-paragraph/src';
 import RadioScheduleContainer from '#containers/RadioSchedule';
@@ -9,7 +9,6 @@ import { ContentType } from '#app/components/ChartbeatAnalytics/types';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import MetadataContainer from '../../components/Metadata';
-import { ServiceContext } from '../../contexts/ServiceContext';
 import LinkedData from '../../components/LinkedData';
 import { LiveRadioPageData } from './types';
 
@@ -23,7 +22,6 @@ const LiveRadioPage = ({ pageData }: { pageData: LiveRadioPageData }) => {
     radioScheduleData,
     mediaBlock,
   } = pageData;
-  const { script, service } = use(ServiceContext);
 
   const hasRadioScheduleData = Boolean(radioScheduleData);
   return (
@@ -80,22 +78,10 @@ const LiveRadioPage = ({ pageData }: { pageData: LiveRadioPageData }) => {
           }}
           margins={{ group0: true, group1: true, group2: true, group3: true }}
         >
-          <Headline
-            // @ts-expect-error script is an object
-            script={script}
-            service={service}
-            id="content"
-            tabIndex={-1}
-          >
+          <Headline id="content" tabIndex={-1}>
             {heading}
           </Headline>
-          <Paragraph
-            // @ts-expect-error script is an object
-            script={script}
-            service={service}
-          >
-            {bodySummary}
-          </Paragraph>
+          <Paragraph>{bodySummary}</Paragraph>
           <MediaLoader blocks={mediaBlock} />
         </Grid>
       </GelPageGrid>

@@ -2,7 +2,6 @@ import React from 'react';
 import TEXT_VARIANTS from '#storybook/withServicesDecorator/text-variants';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
-import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
 import ProgramCard from '../ProgramCard';
 import RadioSchedule from '../index';
 
@@ -50,8 +49,6 @@ export const renderProgramCard = ({
 }) => {
   const { text, articlePath, longText, dir, timezone } = TEXT_VARIANTS[service];
 
-  const script = dir === 'rtl' ? arabic : latin;
-
   const props = {
     durationLabel: dir === 'rtl' ? 'المدة الزمنية %duration%' : durationLabel,
     linkComponent,
@@ -69,13 +66,7 @@ export const renderProgramCard = ({
   };
 
   return (
-    <ServiceContextProvider
-      dir={dir}
-      service={service}
-      script={script}
-      locale="ar"
-      timezone={timezone}
-    >
+    <ServiceContextProvider dir={dir} locale="ar" timezone={timezone}>
       <ProgramCard program={program} id={id} {...props} />
     </ServiceContextProvider>
   );
@@ -88,7 +79,6 @@ export const renderRadioSchedule = ({
   service,
   locale = 'en-gb',
   timezone = 'Europe/London',
-  script = latin,
   dir = 'ltr',
   selectedService = 'news',
 }) => {
@@ -102,8 +92,6 @@ export const renderRadioSchedule = ({
       schedule={getSchedule(selectedService, withLongSummary)}
       locale={locale}
       timezone={timezone}
-      script={script}
-      service={service}
       nextLabel={nextLabel}
       liveLabel={liveLabel}
       listenLabelTranslations={listenLabelTranslations}

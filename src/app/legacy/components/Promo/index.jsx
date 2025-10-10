@@ -24,23 +24,15 @@ const Wrapper = styled.div`
 `;
 
 const Promo = ({ children, className }) => {
-  const { script, service } = use(ServiceContext);
-
   // Image components are moved to a left column on mobile
   const [leftChildren, rightChildren] = partition(
     child => child.type === Promo.Image,
     children.filter(Boolean),
   );
-  const promoValue = useMemo(
-    () => ({
-      script,
-      service,
-    }),
-    [script, service],
-  );
+
   return (
     <Wrapper className={className}>
-      <PromoContext.Provider value={promoValue}>
+      <PromoContext.Provider>
         {leftChildren && <div className="promo-image">{leftChildren}</div>}
         {rightChildren && <div className="promo-text">{rightChildren}</div>}
       </PromoContext.Provider>

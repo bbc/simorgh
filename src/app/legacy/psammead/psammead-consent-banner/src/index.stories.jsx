@@ -18,8 +18,8 @@ const Reject = rejectText => (
   <a href="https://www.bbc.co.uk/usingthebbc/your-data-matters">{rejectText}</a>
 );
 
-const Text = ({ dir = 'ltr', script, service, shortText, text }) => (
-  <ConsentBannerText dir={dir} script={script} service={service}>
+const Text = ({ dir = 'ltr', shortText, text }) => (
+  <ConsentBannerText dir={dir}>
     {`${text} `}
     <a href="https://www.bbc.com/news">{shortText}</a>
   </ConsentBannerText>
@@ -37,7 +37,7 @@ storiesOf(STORY_KIND, module)
   .addDecorator(withServicesKnob())
   .add(
     'default',
-    ({ text, dir, script, service }) => {
+    ({ text, dir, service }) => {
       const shortText = (service === 'news' ? BANNER_TEXT : text)
         .trim()
         .split(' ')[0];
@@ -51,8 +51,6 @@ storiesOf(STORY_KIND, module)
           }
           text={Text({
             dir,
-            script,
-            service,
             text: service === 'news' ? NEWS_BODY_TEXT : text,
             shortText,
           })}
@@ -62,8 +60,6 @@ storiesOf(STORY_KIND, module)
           reject={
             service === 'news' ? Reject(NEWS_REJECT_TEXT) : Reject(shortText)
           }
-          script={script}
-          service={service}
         />
       );
     },

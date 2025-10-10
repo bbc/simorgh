@@ -147,7 +147,7 @@ const ScrollablePromo = ({
   blockGroupIndex = null,
   experimentVariant = null,
 }) => {
-  const { script, service, dir, translations, mostRead } = use(ServiceContext);
+  const { dir, translations, mostRead } = use(ServiceContext);
 
   const eventTrackingData = {
     componentName: `edoj${blockGroupIndex}`,
@@ -208,13 +208,7 @@ const ScrollablePromo = ({
 
   return experimentVariant ? (
     <>
-      <LabelComponentOJTopBar
-        id={ariaLabel}
-        data-testid="oj-top-bar"
-        script={script}
-        service={service}
-        dir={dir}
-      >
+      <LabelComponentOJTopBar id={ariaLabel} data-testid="oj-top-bar" dir={dir}>
         {title}
       </LabelComponentOJTopBar>
       <ScrollablePromoContainer experimentVariant={experimentVariant}>
@@ -235,8 +229,6 @@ const ScrollablePromo = ({
         <LabelComponent
           id={ariaLabel}
           data-testid="eoj-recommendations-heading"
-          script={script}
-          service={service}
           dir={dir}
         >
           {title}

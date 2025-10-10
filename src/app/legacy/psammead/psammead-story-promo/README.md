@@ -61,7 +61,7 @@ On the other hand, when there is exactly one Index Also, it should use the `Inde
 <!-- prettier-ignore -->
 | Argument | Type | Required | Default | Example        |
 | -------- | ---- | -------- | ------- | -------------- |
-| children | node | yes      | N/A     | `<IndexAlsosUl><IndexAlsosLi script={latin} service="news" url="https://www.bbc.co.uk/news" mediaIndicator={<MediaIndicator service="news" type="video" indexAlsos/>}>Related content 1</IndexAlsosLi><IndexAlsosLi script={latin} service="news" url="https://www.bbc.co.uk/news">Related content 2</IndexAlsosLi></IndexAlsosUl>`|
+| children | node | yes      | N/A     | `<IndexAlsosUl><IndexAlsosLi service="news" url="https://www.bbc.co.uk/news" mediaIndicator={<MediaIndicator service="news" type="video" indexAlsos/>}>Related content 1</IndexAlsosLi><IndexAlsosLi service="news" url="https://www.bbc.co.uk/news">Related content 2</IndexAlsosLi></IndexAlsosUl>`|
 | offScreenText | string | no | null | `Related content` |
 
 Data attributes, such as `data-e2e` can be passed in for testing as well.
@@ -71,7 +71,7 @@ Data attributes, such as `data-e2e` can be passed in for testing as well.
 <!-- prettier-ignore -->
 | Argument | Type | Required | Default | Example        |
 | -------- | ---- | -------- | ------- | -------------- |
-| children | node | yes      | N/A     | `<IndexAlsosLi script={latin} service="news" url="https://www.bbc.co.uk/news" mediaIndicator={<MediaIndicator service="news" type="video" indexAlsos/>}>Related content 1</IndexAlsosLi><IndexAlsosLi script={latin} service="news url="https://www.bbc.co.uk/news">Related content 2</IndexAlsosLi>`|
+| children | node | yes      | N/A     | `<IndexAlsosLi service="news" url="https://www.bbc.co.uk/news" mediaIndicator={<MediaIndicator service="news" type="video" indexAlsos/>}>Related content 1</IndexAlsosLi><IndexAlsosLi service="news url="https://www.bbc.co.uk/news">Related content 2</IndexAlsosLi>`|
 
 #### IndexAlsoLi Props
 
@@ -135,8 +135,6 @@ const IndexAlsosComponent = ({ alsoItems, script, service }) => (
     {alsoItems.length > 1 ? (
       <IndexAlsosUl>
         <IndexAlsosLi
-          script={script}
-          service={service}
           url="https://www.bbc.co.uk/news"
           mediaIndicator={
             <MediaIndicator service={service} type="video" indexAlsos />
@@ -144,11 +142,7 @@ const IndexAlsosComponent = ({ alsoItems, script, service }) => (
         >
           Related text 1
         </IndexAlsosLi>
-        <IndexAlsosLi
-          script={script}
-          service={service}
-          url="https://www.bbc.co.uk/news"
-        >
+        <IndexAlsosLi url="https://www.bbc.co.uk/news">
           Related text 2
         </IndexAlsosLi>
       </IndexAlsosUl>
@@ -160,18 +154,16 @@ const IndexAlsosComponent = ({ alsoItems, script, service }) => (
 
 const Info = ({ isLive, alsoItems }) => (
   <Fragment>
-    <Headline script={latin} service="news" promoType="top">
+    <Headline service="news" promoType="top">
       <Link href="https://www.bbc.co.uk/news">
         {isLive ? (
-          <LiveLabel>
-            The headline of the live promo
-          </LiveLabel>
+          <LiveLabel>The headline of the live promo</LiveLabel>
         ) : (
           'The headline of the promo'
         )}
       </Link>
     </Headline>
-    <Summary script={latin} service="news" promoType="top">
+    <Summary service="news" promoType="top">
       The summary of the promo
     </Summary>
     <time>12 March 2019</time>

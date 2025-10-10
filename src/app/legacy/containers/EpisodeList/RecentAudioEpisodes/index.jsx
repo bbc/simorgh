@@ -51,7 +51,7 @@ const RecentAudioEpisodes = ({
   brandId = '',
   pageType,
 }) => {
-  const { translations, service, script, dir, timezone, datetimeLocale } =
+  const { translations, service, dir, timezone, datetimeLocale } =
     use(ServiceContext);
   const eventTrackingData = {
     componentName: 'episodes-audio',
@@ -101,22 +101,10 @@ const RecentAudioEpisodes = ({
 
   return (
     <Spacer role="complementary" aria-labelledby="recent-episodes">
-      <StyledSectionLabel
-        script={script}
-        service={service}
-        dir={dir}
-        bar={false}
-        labelId="recent-episodes"
-      >
+      <StyledSectionLabel dir={dir} bar={false} labelId="recent-episodes">
         {recentEpisodesTranslation}
       </StyledSectionLabel>
-      <EpisodeList
-        script={script}
-        service={service}
-        dir={dir}
-        ulProps={ulProps}
-        liProps={liProps}
-      >
+      <EpisodeList dir={dir} ulProps={ulProps} liProps={liProps}>
         {episodes.map((episode, index) => (
           <EpisodeList.Episode key={episode.id} ref={viewTrackerRef}>
             <EpisodeList.Link
@@ -163,9 +151,7 @@ const RecentAudioEpisodes = ({
                     format="LL"
                     dateTimeFormat="YYYY-MM-DD"
                     padding={false}
-                    script={script}
                     locale={datetimeLocale}
-                    service={service}
                     timezone={timezone}
                   />
                 </InlineDiv>

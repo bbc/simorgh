@@ -66,16 +66,11 @@ export const TopicTag = forwardRef(
   ),
 );
 
-export const TopicTags = ({
-  children = [],
-  script,
-  service,
-  tagBackgroundColour = LUNAR,
-}) => {
+export const TopicTags = ({ children = [], tagBackgroundColour = LUNAR }) => {
   const hasMultipleChildren = children.length > 1;
 
   return hasMultipleChildren ? (
-    <TopicsList role="list" service={service} script={script}>
+    <TopicsList role="list">
       {children.map((child, index) => {
         if (child.type !== TopicTag) return null;
         return (
@@ -84,8 +79,6 @@ export const TopicTags = ({
             backgroundColour={tagBackgroundColour}
             // eslint-disable-next-line react/no-array-index-key
             key={index}
-            service={service}
-            script={script}
           >
             {child}
           </SingleTopicTagItem>
@@ -93,12 +86,8 @@ export const TopicTags = ({
       })}
     </TopicsList>
   ) : (
-    <SingleTopicTagContainer service={service} script={script}>
-      <SingleTopicTagItem
-        service={service}
-        script={script}
-        backgroundColour={tagBackgroundColour}
-      >
+    <SingleTopicTagContainer>
+      <SingleTopicTagItem backgroundColour={tagBackgroundColour}>
         {children.type === TopicTag && children}
       </SingleTopicTagItem>
     </SingleTopicTagContainer>

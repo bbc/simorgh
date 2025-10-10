@@ -56,8 +56,7 @@ const ScheduleItemHeader = ({
     eventTrackingData,
   } = props;
 
-  const { script, locale, service, timezone, dir, translations } =
-    use(ServiceContext);
+  const { locale, timezone, dir, translations } = use(ServiceContext);
   const nextLabel = pathOr('NEXT', ['media', 'nextLabel'], translations);
   const isLive = state === 'live';
   const isNext = state === 'next';
@@ -123,24 +122,13 @@ const ScheduleItemHeader = ({
       )}
       {isLive && <LiveLabel offScreenText={`${listenLive}, `} />}
       {isNext && (
-        <NextLabel
-          aria-hidden="true"
-          service={service}
-          script={script}
-          dir={dir}
-        >
+        <NextLabel aria-hidden="true" dir={dir}>
           {`${nextLabel} `}
         </NextLabel>
       )}
       {brandTitle}
       <VisuallyHiddenText>{`, ${formattedStartTime}, `}</VisuallyHiddenText>
-      <TitleWrapper
-        service={service}
-        script={script}
-        {...programStateConfig[state]}
-      >
-        {episodeTitle}
-      </TitleWrapper>
+      <TitleWrapper {...programStateConfig[state]}>{episodeTitle}</TitleWrapper>
       <VisuallyHiddenText>{`, ${formattedDuration} `}</VisuallyHiddenText>
     </span>
   );

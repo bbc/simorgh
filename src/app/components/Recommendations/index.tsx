@@ -17,8 +17,7 @@ const eventTrackingData = {
 };
 
 const Recommendations = ({ data }: { data: Recommendation[] }) => {
-  const { recommendations, mostRead, script, service, dir } =
-    use(ServiceContext);
+  const { recommendations, mostRead, dir } = use(ServiceContext);
 
   const viewTracker = useViewTracker(eventTrackingData);
 
@@ -67,12 +66,10 @@ const Recommendations = ({ data }: { data: Recommendation[] }) => {
       data-e2e={labelId}
       {...a11yAttributes}
     >
-      <SkipLinkWrapper service={service} {...skipLinkProps}>
+      <SkipLinkWrapper {...skipLinkProps}>
         {title ? (
           <SectionLabel
             css={styles.labelComponent}
-            script={script}
-            service={service}
             dir={dir}
             labelId={labelId}
             columnType="main"

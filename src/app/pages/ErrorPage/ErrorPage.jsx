@@ -34,8 +34,7 @@ const ErrorMetadata = ({ dir, lang, messaging, brandName, themeColor }) => {
 };
 
 const ErrorPage = ({ errorCode }) => {
-  const { brandName, dir, lang, script, service, translations } =
-    use(ServiceContext);
+  const { brandName, dir, lang, translations } = use(ServiceContext);
   const messaging = translations.error[errorCode] || translations.error[500];
 
   const {
@@ -51,7 +50,7 @@ const ErrorPage = ({ errorCode }) => {
         messaging={messaging}
         themeColor={BRAND_BACKGROUND}
       />
-      <ErrorMain {...messaging} dir={dir} script={script} service={service} />
+      <ErrorMain {...messaging} dir={dir} />
     </>
   );
 };

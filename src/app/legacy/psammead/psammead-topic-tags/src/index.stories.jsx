@@ -12,11 +12,11 @@ storiesOf(STORY_KIND, module)
   .addDecorator(withServicesKnob())
   .add(
     'default',
-    ({ service, script, text }) => {
+    ({ service, text }) => {
       const shortText = service === 'news' ? text : text.trim().split(' ')[0];
 
       return (
-        <TopicTags service={service} script={script}>
+        <TopicTags>
           <TopicTag name={shortText} link="#" />
         </TopicTags>
       );
@@ -25,13 +25,13 @@ storiesOf(STORY_KIND, module)
   )
   .add(
     'multiple topics',
-    ({ service, script, text }) => {
+    ({ service, text }) => {
       const textArray =
         service === 'ukchina'
           ? [text.trim().split(' ')[0], text.trim().split()[0]]
           : text.trim().split(' ');
       return (
-        <TopicTags service={service} script={script}>
+        <TopicTags>
           {textArray.map((shortText, index) => {
             return (
               <TopicTag

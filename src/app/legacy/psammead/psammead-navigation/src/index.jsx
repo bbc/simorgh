@@ -130,16 +130,10 @@ const StyledSpan = styled.span`
   }
 `;
 
-const CurrentLink = ({
-  linkId,
-  children: link,
-  script,
-  currentPageText = null,
-}) => (
+const CurrentLink = ({ linkId, children: link, currentPageText = null }) => (
   <StyledSpan
     // eslint-disable-next-line jsx-a11y/aria-role
     role="text"
-    script={script}
     // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     id={`NavigationLinks-${linkId}`}
   >
@@ -157,11 +151,9 @@ export const NavigationUl = ({ children, ...props }) => (
 export const NavigationLi = ({
   children: link,
   url,
-  script,
   clickTracker = null,
   currentPageText = null,
   active = false,
-  service,
   dir = 'ltr',
   viewTracker = null,
   ...props
@@ -171,8 +163,6 @@ export const NavigationLi = ({
       {active && currentPageText ? (
         <StyledLink
           href={url}
-          script={script}
-          service={service}
           currentLink
           // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
           aria-labelledby={`NavigationLinks-${link}`}
@@ -180,19 +170,13 @@ export const NavigationLi = ({
           {...clickTracker}
           {...props}
         >
-          <CurrentLink
-            linkId={link}
-            script={script}
-            currentPageText={currentPageText}
-          >
+          <CurrentLink linkId={link} currentPageText={currentPageText}>
             {link}
           </CurrentLink>
         </StyledLink>
       ) : (
         <StyledLink
           href={url}
-          script={script}
-          service={service}
           className="focusIndicatorRemove"
           {...clickTracker}
           {...props}

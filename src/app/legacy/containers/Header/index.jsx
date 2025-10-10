@@ -50,7 +50,7 @@ const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
 
 const HeaderContainer = ({ propsForTopBarOJComponent }) => {
   const { isAmp, isApp, pageType, isLite } = use(RequestContext);
-  const { service, script, translations, dir, scriptLink, lang, serviceLang } =
+  const { service, translations, dir, scriptLink, lang, serviceLang } =
     use(ServiceContext);
   const { skipLinkText } = translations;
 
@@ -62,13 +62,7 @@ const HeaderContainer = ({ propsForTopBarOJComponent }) => {
   // language of the service. `serviceLang` is used to override the page language.
   // However, the skip to content link remains set in the page language.
   const skipLink = !isOperaMini && (
-    <SkipLink
-      service={service}
-      script={script}
-      dir={dir}
-      href="#content"
-      lang={serviceLang && lang}
-    >
+    <SkipLink dir={dir} href="#content" lang={serviceLang && lang}>
       <div>{skipLinkText}</div>
     </SkipLink>
   );

@@ -29,8 +29,6 @@ const FlexWrapper = styled.div`
 
 const MediaIndicator = ({
   type = 'video',
-  script,
-  service,
   dir = 'ltr',
   isInline = false,
   children = null,
@@ -38,8 +36,6 @@ const MediaIndicator = ({
   <StyledMediaIndicator
     data-e2e="media-indicator"
     aria-hidden="true"
-    script={script}
-    service={service}
     dir={dir}
     isInline={isInline}
   >

@@ -37,7 +37,6 @@ const EndText = styled.p`
 `;
 
 const SkipLinkWrapper = ({
-  service,
   endTextId,
   children,
   text,
@@ -46,9 +45,7 @@ const SkipLinkWrapper = ({
 }) => {
   return (
     <Wrapper>
-      <SkipLink service={service} href={`#${endTextId}`}>
-        {detokenise(text, terms)}
-      </SkipLink>
+      <SkipLink href={`#${endTextId}`}>{detokenise(text, terms)}</SkipLink>
       {children}
       <EndText tabIndex="-1" id={endTextId}>
         {detokenise(endTextVisuallyHidden, terms)}

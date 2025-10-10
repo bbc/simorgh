@@ -10,22 +10,14 @@ storiesOf('Components/Index Heading', module)
   .addDecorator(withServicesKnob())
   .add(
     'default',
-    ({ text: textSnippet, script, service }) => (
-      <HeadingIndex script={script} service={service}>
-        {textSnippet}
-      </HeadingIndex>
-    ),
+    ({ text: textSnippet }) => <HeadingIndex>{textSnippet}</HeadingIndex>,
     { notes, knobs: { escapeHTML: false } },
   )
   .add(
     'with optional ID',
     ({ text: textSnippet, script, service }) => {
       const id = text('ID', 'content', 'Other');
-      return (
-        <HeadingIndex id={id} script={script} service={service}>
-          {textSnippet}
-        </HeadingIndex>
-      );
+      return <HeadingIndex id={id}>{textSnippet}</HeadingIndex>;
     },
     { notes, knobs: { escapeHTML: false } },
   );

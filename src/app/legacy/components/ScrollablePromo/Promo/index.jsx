@@ -100,7 +100,7 @@ const TimeStamp = styled(PromoTimestamp)`
 `;
 
 const Promo = ({ block, experimentVariant, clickTracker }) => {
-  const { script, service, serviceDatetimeLocale } = use(ServiceContext);
+  const { serviceDatetimeLocale } = use(ServiceContext);
   let title;
   let href;
   let textBlock;
@@ -175,8 +175,6 @@ const Promo = ({ block, experimentVariant, clickTracker }) => {
     <WrapperPromoBox experimentVariant={experimentVariant}>
       <StyledLink
         href={href}
-        service={service}
-        script={script}
         {...clickTracker}
         experimentVariant={experimentVariant}
       >

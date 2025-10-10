@@ -46,13 +46,7 @@ const StyledTime = styled.time`
   padding: 0 ${GEL_SPACING_HLF};
 `;
 
-const MediaIndicatorContainer = ({
-  item,
-  script,
-  service,
-  dir = 'ltr',
-  isInline = false,
-}) => {
+const MediaIndicatorContainer = ({ item, dir = 'ltr', isInline = false }) => {
   const type = getMediaType(item);
 
   if (!type) {
@@ -67,7 +61,7 @@ const MediaIndicatorContainer = ({
     const durationString = formatDuration({ duration });
     const isoDuration = duration.toISOString();
     return (
-      <MediaIndicator type={type} script={script} service={service} dir={dir}>
+      <MediaIndicator type={type} dir={dir}>
         <StyledTime dateTime={isoDuration} suppressHydrationWarning>
           {durationString}
         </StyledTime>
@@ -75,15 +69,7 @@ const MediaIndicatorContainer = ({
     );
   }
 
-  return (
-    <MediaIndicator
-      type={type}
-      script={script}
-      service={service}
-      dir={dir}
-      isInline={isInline}
-    />
-  );
+  return <MediaIndicator type={type} dir={dir} isInline={isInline} />;
 };
 
 export default MediaIndicatorContainer;

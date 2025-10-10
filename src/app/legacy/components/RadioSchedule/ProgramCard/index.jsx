@@ -74,16 +74,12 @@ const DurationWrapper = styled.time`
 `;
 
 const ProgramCard = ({ program, id, ...props }) => {
-  const { service, script, locale, dir } = use(ServiceContext);
+  const { locale, dir } = use(ServiceContext);
   const { state, startTime, link, brandTitle, summary, duration } = program;
   return (
     <CardWrapper>
       <TextWrapper>
-        <StyledH3
-          service={service}
-          script={script}
-          {...programStateConfig[state]}
-        >
+        <StyledH3 {...programStateConfig[state]}>
           <ScheduleItemHeader
             {...props}
             state={state}
@@ -95,17 +91,9 @@ const ProgramCard = ({ program, id, ...props }) => {
             id={id}
           />
         </StyledH3>
-        {summary && (
-          <SummaryWrapper service={service} script={script}>
-            {summary}
-          </SummaryWrapper>
-        )}
+        {summary && <SummaryWrapper>{summary}</SummaryWrapper>}
       </TextWrapper>
-      <ButtonWrapper
-        service={service}
-        script={script}
-        {...programStateConfig[state]}
-      >
+      <ButtonWrapper {...programStateConfig[state]}>
         <IconWrapper {...programStateConfig[state]}>
           {mediaIcons.audio}
         </IconWrapper>

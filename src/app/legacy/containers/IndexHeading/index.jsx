@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 import IndexHeading from '#psammead/psammead-heading-index/src';
 import {
@@ -11,7 +11,6 @@ import {
   GEL_SPACING,
   GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
-import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const StyledIndexHeading = styled(IndexHeading)`
   padding-bottom: ${GEL_SPACING_TRPL};
@@ -32,13 +31,7 @@ const StyledIndexHeading = styled(IndexHeading)`
 `;
 
 const IndexHeadingContainer = ({ children = null, ...props }) => {
-  const { script, service, dir } = use(ServiceContext);
-
-  return (
-    <StyledIndexHeading script={script} service={service} dir={dir} {...props}>
-      {children}
-    </StyledIndexHeading>
-  );
+  return <StyledIndexHeading {...props}>{children}</StyledIndexHeading>;
 };
 
 export default IndexHeadingContainer;
