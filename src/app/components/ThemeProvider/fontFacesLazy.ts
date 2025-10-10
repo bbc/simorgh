@@ -244,6 +244,7 @@ export default (service: Services, isPWA: boolean) => {
   switch (service) {
     case 'news':
     case 'newsround':
+    case 'magyarul':
     case 'mundo':
     case 'polska':
     case 'portuguese':
