@@ -12,7 +12,7 @@ import AmpIframeEmbed from '../AmpIframeEmbed';
 import { OEmbedProps } from '../types';
 
 const OEmbedLoader = ({ oembed }: OEmbedProps) => {
-  const { isAmp, isLite, canonicalLink } = use(RequestContext);
+  const { isAmp, isLite, canonicalLink, nonce } = use(RequestContext);
   const { translations } = use(ServiceContext);
 
   if (isLite) return null;
@@ -50,12 +50,15 @@ const OEmbedLoader = ({ oembed }: OEmbedProps) => {
   if (html == null) {
     return null;
   }
+  const parsedHtml = nonce
+    ? html.replaceAll('<script', `<script nonce="${nonce}"`)
+    : html;
 
   if (provider_name === 'Flourish') {
-    return <FlourishEmbed {...oembed} />;
+    return FlourishEmbed(oembed, nonce);
   }
 
-  return <EmbedHtml embeddableContent={html} />;
+  return <EmbedHtml embeddableContent={parsedHtml} />;
 };
 
 export default memo(OEmbedLoader);

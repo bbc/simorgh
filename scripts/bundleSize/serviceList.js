@@ -31,6 +31,7 @@ export default [
   'polska',
   'portuguese',
   'punjabi',
+  'romania',
   'russian',
   'scotland',
   'serbian',

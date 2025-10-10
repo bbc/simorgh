@@ -243,6 +243,7 @@ const directives = {
       ...advertisingDirectives.scriptSrc,
       "'self'",
       "'unsafe-inline'",
+      "'unsafe-eval'",
     ],
   },
   styleSrc: {
@@ -285,8 +286,8 @@ const directives = {
 
 export const generateChildSrc = ({ isAmp }) => (isAmp ? ['blob:'] : ["'self'"]);
 
-export const generateConnectSrc = () => {
-  return ["'self' https:"];
+export const generateConnectSrc = ({ isLive }) => {
+  return isLive ? ["'self' https:"] : ["'self' https: ws:"];
 };
 
 export const generateDefaultSrc = () => {
@@ -318,11 +319,15 @@ export const generateMediaSrc = () => {
   return ["'self' blob: https:"];
 };
 
-export const generateScriptSrc = ({ isAmp, isLive }) => {
+export const generateScriptSrc = ({ isAmp, isLive, nonce }) => {
+  const insertedNonce = nonce ? [`'nonce-${nonce}'`, "'unsafe-eval'"] : [];
   if (!isLive && isAmp) return directives.scriptSrc.ampNonLive.sort();
-  if (!isLive && !isAmp) return directives.scriptSrc.canonicalNonLive.sort();
+  if (!isLive && !isAmp)
+    return [
+      ...new Set([...insertedNonce, ...directives.scriptSrc.canonicalNonLive]),
+    ].sort();
   if (isLive && isAmp) return directives.scriptSrc.ampLive.sort();
-  return directives.scriptSrc.canonicalLive.sort();
+  return [...insertedNonce, ...directives.scriptSrc.canonicalLive].sort();
 };
 
 export const generateStyleSrc = ({ isAmp, isLive }) => {
@@ -342,15 +347,15 @@ export const generateWorkerSrc = ({ isAmp }) =>
  * `yarn build && yarn start` & visit a localhost URL.
  * View the developer console for errors.
  */
-export const cspDirectives = ({ isAmp, isLive, service }) => ({
+export const cspDirectives = ({ isAmp, isLive, service, nonce = null }) => ({
   directives: {
     'default-src': generateDefaultSrc(),
     'child-src': generateChildSrc({ isAmp }),
-    'connect-src': generateConnectSrc(),
+    'connect-src': generateConnectSrc({ isLive }),
     'font-src': generateFontSrc({ isAmp, isLive }),
     'frame-src': generateFrameSrc({ isAmp, isLive }),
     'img-src': generateImgSrc({ isAmp, isLive }),
-    'script-src': generateScriptSrc({ isAmp, isLive }),
+    'script-src': generateScriptSrc({ isAmp, isLive, nonce }),
     'style-src': generateStyleSrc({ isAmp, isLive }),
     'media-src': generateMediaSrc(),
     'worker-src': generateWorkerSrc({ isAmp }),

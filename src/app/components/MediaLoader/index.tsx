@@ -35,6 +35,7 @@ import getCaptionBlock from './utils/getCaptionBlock';
 import getProducerFromServiceName from './utils/getProducerFromServiceName';
 import getTranscriptBlock from './utils/getTranscriptBlock';
 import Message from './Message';
+import getTitleForLiteSiteTranscriptBlock from './utils/getTitleForLiteSiteTranscriptBlock';
 
 const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
   MEDIA_ARTICLE_PAGE,
@@ -43,13 +44,18 @@ const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
 
 const logger = nodeLogger(__filename);
 
-export const BumpLoader = () => (
+type BumpLoaderProps = {
+  nonce?: string | null;
+};
+
+export const BumpLoader = ({ nonce }: BumpLoaderProps) => (
   <Helmet>
     <script
       type="text/javascript"
+      {...(nonce ? { nonce } : {})}
       src="https://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js"
     />
-    <script type="text/javascript">
+    <script type="text/javascript" {...(nonce ? { nonce } : {})}>
       {`bbcRequireMap = {
             "bump-4":"https://emp.bbci.co.uk/emp/bump-4/bump-4"
         }
@@ -227,13 +233,20 @@ const MediaLoader = ({
     isAmp,
     isLite,
     showAdsBasedOnLocation,
+    nonce,
   } = use(RequestContext);
 
   const [showPlaceholder, setShowPlaceholder] = useState(
     !PAGETYPES_IGNORE_PLACEHOLDER.includes(pageType),
   );
 
-  if (isLite && !hasTranscript) return null;
+  // returns transcript for lite site pages with transcript
+  if (isLite && hasTranscript) {
+    const title = getTitleForLiteSiteTranscriptBlock(blocks);
+    return <Transcript transcript={transcriptBlock} title={title} />;
+  }
+
+  if (isLite) return null;
 
   const { model: mediaOverrides } =
     filterForBlockType(blocks, 'mediaOverrides') || {};
@@ -282,12 +295,7 @@ const MediaLoader = ({
 
   const hasPlaceholder = Boolean(showPlaceholder && placeholderSrc);
 
-  return isLite && hasTranscript ? (
-    <Transcript
-      transcript={transcriptBlock}
-      title={placeholderConfig?.mediaInfo?.title}
-    />
-  ) : (
+  return (
     <>
       {
         // Prevents the av-embeds route itself rendering the Metadata component
@@ -328,7 +336,7 @@ const MediaLoader = ({
         ) : (
           <>
             {showAds && <AdvertTagLoader />}
-            <BumpLoader />
+            <BumpLoader nonce={nonce} />
             {hasPlaceholder ? (
               <Placeholder
                 src={placeholderSrc}
