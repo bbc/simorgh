@@ -252,7 +252,7 @@ export const REITH_SERIF_MEDIUM: Font = {
     fontWeight: 500,
     fontDisplay: 'optional',
     src: `url("${REITH_FONTS_DIR}BBCReithSerif_W_Md.woff2") format("woff2"), url("${REITH_FONTS_DIR}BBCReithSerif_W_Md.woff") format("woff")`,
-    downloadSrc: `${REITH_FONTS_DIR}BBCReithSerif_W_Md.woff2"`,
+    downloadSrc: `${REITH_FONTS_DIR}BBCReithSerif_W_Md.woff2`,
   },
 };
 
