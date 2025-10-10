@@ -40,13 +40,12 @@ const runValidator = async () => {
   const validator = await amphtmlValidator.getInstance();
 
   const urlsToValidate = [
+    '/hindi/articles/c9w59wnx27ro',
     '/mundo/articles/ce42wzqr2mko',
     '/news/articles/cn7k01xp8kxo',
     '/persian/articles/cej3lzd5e0go',
     '/serbian/articles/c805k05kr73o/cyr',
     '/serbian/articles/c805k05kr73o/lat',
-    '/hindi/articles/c9w59wnx27ro',
-    '/mundo/articles/ce42wzqr2mko',
   ];
 
   return Promise.all(
