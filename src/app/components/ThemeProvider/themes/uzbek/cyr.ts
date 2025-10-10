@@ -14,6 +14,6 @@ const uzbekCyrillicTheme = mergeDeepLeft(
 );
 
 export default withThemeProvider(
-  { ...uzbekCyrillicTheme, service: 'uzbek' },
+  uzbekCyrillicTheme,
   getPWATypographyTheme(cyrillicScript),
 );

@@ -146,11 +146,9 @@ export const themes = {
         import(/* webpackChunkName: "themes-ukchina-trad" */ './ukchina/trad'),
     ),
   },
-  ukrainian: {
-    default: loadable(
-      () => import(/* webpackChunkName: "themes-ukrainian" */ './ukrainian'),
-    ),
-  },
+  ukrainian: loadable(
+    () => import(/* webpackChunkName: "themes-ukrainian" */ './ukrainian'),
+  ),
   urdu: loadable(() => import(/* webpackChunkName: "themes-urdu" */ './urdu')),
   uzbek: {
     cyr: loadable(
