@@ -4,10 +4,7 @@ import appConfig from '../../../src/server/utilities/serviceConfigs';
 const PAGES_WITHOUT_SERVICE_WORKER = [
   'archive',
   'cymrufyw',
-  'dari',
-  'magyarul',
   'naidheachdan',
-  'romania',
   'scotland',
   'ws',
   'news',
