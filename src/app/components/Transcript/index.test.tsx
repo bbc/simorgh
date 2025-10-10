@@ -2,6 +2,8 @@ import React from 'react';
 import { render } from '../react-testing-library-with-providers';
 import transcriptFixture from './fixture.json';
 import Transcript from './index';
+import * as viewTracking from '../../hooks/useViewTracker';
+import * as clickTracking from '../../hooks/useClickTrackerHandler';
 
 describe('Transcript Component', () => {
   it('should render details element', () => {
@@ -50,5 +52,62 @@ describe('Transcript Component', () => {
     );
     const details = container.querySelector('details');
     expect(details).not.toBeInTheDocument();
+  });
+
+  describe('view tracking', () => {
+    afterEach(() => {
+      jest.clearAllMocks();
+    });
+    it('should register view tracking', () => {
+      const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+
+      render(<Transcript transcript={transcriptFixture} title="My Title" />);
+
+      expect(viewTrackerSpy.mock.calls).toEqual(
+        expect.arrayContaining([
+          [
+            {
+              componentName: 'Transcript',
+              itemTracker: { type: 'transcript-default-state' },
+            },
+          ],
+          [
+            {
+              componentName: 'Transcript',
+              viewThreshold: 0.2,
+              itemTracker: { type: 'transcript-open' },
+            },
+          ],
+          [
+            {
+              componentName: 'Transcript',
+              itemTracker: { type: 'transcript-end' },
+            },
+          ],
+        ]),
+      );
+    });
+  });
+
+  describe('click tracking', () => {
+    afterEach(() => {
+      jest.clearAllMocks();
+    });
+
+    it('should call click tracker handler when summary is clicked', () => {
+      const clickTrackerMock = jest.fn();
+      jest
+        .spyOn(clickTracking, 'default')
+        .mockReturnValue({ onClick: clickTrackerMock });
+
+      const { container } = render(
+        <Transcript transcript={transcriptFixture} title="My Title" />,
+      );
+
+      const summary = container.querySelector('summary');
+      summary?.click();
+
+      expect(clickTrackerMock).toHaveBeenCalledTimes(1);
+    });
   });
 });
