@@ -75,6 +75,7 @@ export type ServicesWithNoVariants = {
     | 'burmese'
     | 'cymrufyw'
     | 'dari'
+    | 'foobar'
     | 'gahuza'
     | 'gujarati'
     | 'hausa'
