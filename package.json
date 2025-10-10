@@ -117,7 +117,6 @@
     "express": "4.21.2",
     "express-static-gzip": "3.0.0",
     "helmet": "8.1.0",
-    "helmet-csp": "4.0.0",
     "intersection-observer": "0.12.2",
     "jalaali-js": "1.2.8",
     "js-cookie": "3.0.5",

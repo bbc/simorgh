@@ -10581,13 +10581,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"helmet-csp@npm:4.0.0":
-  version: 4.0.0
-  resolution: "helmet-csp@npm:4.0.0"
-  checksum: 10/855034bb528574944da1a47ea398ca5c86e7024218c27129e04af5899909ab5267bc54b5e94d60958f7afc3440ce4e7e0f22a6c4e16d3ea4629c22dbcffbb0c9
-  languageName: node
-  linkType: hard
-
 "helmet@npm:8.1.0":
   version: 8.1.0
   resolution: "helmet@npm:8.1.0"
@@ -16071,7 +16064,6 @@ __metadata:
     glob: "npm:11.0.3"
     happy-dom: "npm:18.0.1"
     helmet: "npm:8.1.0"
-    helmet-csp: "npm:4.0.0"
     husky: "npm:9.1.7"
     intersection-observer: "npm:0.12.2"
     jalaali-js: "npm:1.2.8"
