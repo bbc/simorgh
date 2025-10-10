@@ -1,3 +1,5 @@
+import { Services } from '#app/models/types/global';
+
 /*
  *  BBC REITH
  */
@@ -5,7 +7,7 @@ const reithFallback = `Helvetica, Arial, sans-serif;`;
 const reithSans = `font-family: ReithSans, ${reithFallback}`;
 const reithSerif = `font-family: ReithSerif, ${reithFallback}`;
 
-const getFontStyleAndWeight = (style, weight) =>
+const getFontStyleAndWeight = (style: string, weight: number) =>
   `font-weight: ${weight};
    font-style: ${style};`;
 
@@ -351,68 +353,114 @@ const tigrinyaStyles = {
   `,
 };
 
-/*
- *  OPTIMO BASE
- */
-const optimoBaseFontStyles = {
-  sansRegular: latinReithFontStyles.sansRegular,
-  sansRegularItalic: latinReithFontStyles.sansRegularItalic,
-  sansBold: latinReithFontStyles.sansBold,
-  sansBoldItalic: latinReithFontStyles.sansBoldItalic,
-  sansLight: latinReithFontStyles.sansLight,
+const afaanoromoo = helmetFontStyles;
+const afrique = helmetFontStyles;
+const amharic = amharicStyles;
+const arabic = reithQalamStyles;
+const archive = latinReithFontStyles;
+const azeri = helmetFontStyles;
+const bengali = bengaliStyles;
+const burmese = burmeseStyles;
+const cymrufyw = latinReithFontStyles;
+const dari = reithQalamStyles;
+const gahuza = helmetFontStyles;
+const gujarati = gujaratiStyles;
+const hausa = helmetFontStyles;
+const hindi = hindiStyles;
+const igbo = helmetFontStyles;
+const indonesia = helmetFontStyles;
+const japanese = japaneseStyles;
+const korean = koreanStyles;
+const kyrgyz = helmetFontStyles;
+const magyarul = latinReithFontStyles;
+const marathi = marathiStyles;
+const mundo = latinReithFontStyles;
+const naidheachdan = latinReithFontStyles;
+const nepali = nepaliStyles;
+const news = latinReithFontStyles;
+const newsround = latinReithFontStyles;
+const pashto = reithQalamStyles;
+const persian = reithQalamStyles;
+const pidgin = helmetFontStyles;
+const polska = latinReithFontStyles;
+const portuguese = latinReithFontStyles;
+const punjabi = punjabiStyles;
+const romania = latinReithFontStyles;
+const russian = latinReithFontStyles;
+const scotland = latinReithFontStyles;
+const serbian = helmetFontStyles;
+const sinhala = sinhalaStyles;
+const somali = helmetFontStyles;
+const sport = latinReithFontStyles;
+const swahili = helmetFontStyles;
+const tamil = tamilStyles;
+const telugu = teluguStyles;
+const thai = thaiStyles;
+const tigrinya = tigrinyaStyles;
+const turkce = latinReithFontStyles;
+const ukchina = chineseFontStyles;
+const ukrainian = helmetFontStyles;
+const urdu = reithQalamStyles;
+const uzbek = helmetFontStyles;
+const vietnamese = helmetFontStyles;
+const ws = latinReithFontStyles;
+const yoruba = helmetFontStyles;
+const zhongwen = chineseFontStyles;
+
+const fonts: Record<Services, object> = {
+  afaanoromoo,
+  afrique,
+  amharic,
+  arabic,
+  archive,
+  azeri,
+  bengali,
+  burmese,
+  cymrufyw,
+  dari,
+  gahuza,
+  gujarati,
+  hausa,
+  hindi,
+  igbo,
+  indonesia,
+  japanese,
+  korean,
+  kyrgyz,
+  magyarul,
+  marathi,
+  mundo,
+  naidheachdan,
+  nepali,
+  news,
+  newsround,
+  pashto,
+  persian,
+  pidgin,
+  polska,
+  portuguese,
+  punjabi,
+  romania,
+  russian,
+  scotland,
+  sport,
+  sinhala,
+  somali,
+  swahili,
+  tamil,
+  telugu,
+  thai,
+  tigrinya,
+  turkce,
+  urdu,
+  vietnamese,
+  ws,
+  yoruba,
+  serbian,
+  ukchina,
+  zhongwen,
+  ukrainian,
+  uzbek,
 };
 
-export const afaanoromoo = helmetFontStyles;
-export const afrique = helmetFontStyles;
-export const amharic = amharicStyles;
-export const arabic = reithQalamStyles;
-export const archive = latinReithFontStyles;
-export const azeri = helmetFontStyles;
-export const bengali = bengaliStyles;
-export const burmese = burmeseStyles;
-export const cymrufyw = latinReithFontStyles;
-export const dari = reithQalamStyles;
-export const gahuza = helmetFontStyles;
-export const gujarati = gujaratiStyles;
-export const hausa = helmetFontStyles;
-export const hindi = hindiStyles;
-export const igbo = helmetFontStyles;
-export const indonesia = helmetFontStyles;
-export const japanese = japaneseStyles;
-export const korean = koreanStyles;
-export const kyrgyz = helmetFontStyles;
-export const learningenglish = latinReithFontStyles;
-export const magyarul = latinReithFontStyles;
-export const marathi = marathiStyles;
-export const mundo = latinReithFontStyles;
-export const naidheachdan = latinReithFontStyles;
-export const nepali = nepaliStyles;
-export const news = latinReithFontStyles;
-export const newsround = latinReithFontStyles;
-export const optimobase = optimoBaseFontStyles;
-export const pashto = reithQalamStyles;
-export const persian = reithQalamStyles;
-export const pidgin = helmetFontStyles;
-export const polska = latinReithFontStyles;
-export const portuguese = latinReithFontStyles;
-export const punjabi = punjabiStyles;
-export const russian = latinReithFontStyles;
-export const scotland = latinReithFontStyles;
-export const serbian = helmetFontStyles;
-export const sinhala = sinhalaStyles;
-export const somali = helmetFontStyles;
-export const sport = latinReithFontStyles;
-export const swahili = helmetFontStyles;
-export const tamil = tamilStyles;
-export const telugu = teluguStyles;
-export const thai = thaiStyles;
-export const tigrinya = tigrinyaStyles;
-export const turkce = latinReithFontStyles;
-export const ukchina = chineseFontStyles;
-export const ukrainian = helmetFontStyles;
-export const urdu = reithQalamStyles;
-export const uzbek = helmetFontStyles;
-export const vietnamese = helmetFontStyles;
-export const weather = latinReithFontStyles;
-export const yoruba = helmetFontStyles;
-export const zhongwen = chineseFontStyles;
+export default { ...fonts };
