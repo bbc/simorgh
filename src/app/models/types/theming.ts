@@ -479,18 +479,7 @@ declare module '@emotion/react' {
       /** 600px and above */
       GROUP_D_MIN_WIDTH: string;
     };
-    fontVariants: {
-      sansRegular: FontStyles;
-      sansRegularItalic: FontStyles;
-      sansBold: FontStyles;
-      sansBoldItalic: FontStyles;
-      sansLight: FontStyles;
-      serifRegular: FontStyles;
-      serifMedium: FontStyles;
-      serifMediumItalic: FontStyles;
-      serifBold: FontStyles;
-      serifLight: FontStyles;
-    };
+    fontVariants: Record<FontVariant, FontStyles>;
     brandSVG: BrandSVG;
     gridWidths: GridWidths;
     isDarkUi: boolean;

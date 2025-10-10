@@ -272,6 +272,14 @@ exports[`should render SansBold correctly for punjabi 1`] = `
   "
 `;
 
+exports[`should render SansBold correctly for romania 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: normal;
+  "
+`;
+
 exports[`should render SansBold correctly for russian 1`] = `
 "
    font-family: ReithSans, Helvetica, Arial, sans-serif;
@@ -409,6 +417,14 @@ exports[`should render SansBold correctly for vietnamese 1`] = `
 `;
 
 exports[`should render SansBold correctly for weather 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for ws 1`] = `
 "
    font-family: ReithSans, Helvetica, Arial, sans-serif;
    font-weight: 700;
@@ -704,6 +720,14 @@ exports[`should render SansBoldItalic correctly for punjabi 1`] = `
   "
 `;
 
+exports[`should render SansBoldItalic correctly for romania 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: italic;
+  "
+`;
+
 exports[`should render SansBoldItalic correctly for russian 1`] = `
 "
    font-family: ReithSans, Helvetica, Arial, sans-serif;
@@ -841,6 +865,14 @@ exports[`should render SansBoldItalic correctly for vietnamese 1`] = `
 `;
 
 exports[`should render SansBoldItalic correctly for weather 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for ws 1`] = `
 "
    font-family: ReithSans, Helvetica, Arial, sans-serif;
    font-weight: 700;
@@ -1136,6 +1168,14 @@ exports[`should render SansLight correctly for punjabi 1`] = `
   "
 `;
 
+exports[`should render SansLight correctly for romania 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  "
+`;
+
 exports[`should render SansLight correctly for russian 1`] = `
 "
    font-family: ReithSans, Helvetica, Arial, sans-serif;
@@ -1273,6 +1313,14 @@ exports[`should render SansLight correctly for vietnamese 1`] = `
 `;
 
 exports[`should render SansLight correctly for weather 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for ws 1`] = `
 "
    font-family: ReithSans, Helvetica, Arial, sans-serif;
    font-weight: 300;
@@ -1568,6 +1616,14 @@ exports[`should render SansRegular correctly for punjabi 1`] = `
   "
 `;
 
+exports[`should render SansRegular correctly for romania 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
 exports[`should render SansRegular correctly for russian 1`] = `
 "
    font-family: ReithSans, Helvetica, Arial, sans-serif;
@@ -1705,6 +1761,14 @@ exports[`should render SansRegular correctly for vietnamese 1`] = `
 `;
 
 exports[`should render SansRegular correctly for weather 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for ws 1`] = `
 "
    font-family: ReithSans, Helvetica, Arial, sans-serif;
    font-weight: 400;
@@ -2000,6 +2064,14 @@ exports[`should render SansRegularItalic correctly for punjabi 1`] = `
   "
 `;
 
+exports[`should render SansRegularItalic correctly for romania 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: italic;
+  "
+`;
+
 exports[`should render SansRegularItalic correctly for russian 1`] = `
 "
    font-family: ReithSans, Helvetica, Arial, sans-serif;
@@ -2137,6 +2209,14 @@ exports[`should render SansRegularItalic correctly for vietnamese 1`] = `
 `;
 
 exports[`should render SansRegularItalic correctly for weather 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for ws 1`] = `
 "
    font-family: ReithSans, Helvetica, Arial, sans-serif;
    font-weight: 400;
@@ -2432,6 +2512,14 @@ exports[`should render SerifBold correctly for punjabi 1`] = `
   "
 `;
 
+exports[`should render SerifBold correctly for romania 1`] = `
+"
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
 exports[`should render SerifBold correctly for russian 1`] = `
 "
     font-family: ReithSerif, Helvetica, Arial, sans-serif;
@@ -2569,6 +2657,14 @@ exports[`should render SerifBold correctly for vietnamese 1`] = `
 `;
 
 exports[`should render SerifBold correctly for weather 1`] = `
+"
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for ws 1`] = `
 "
     font-family: ReithSerif, Helvetica, Arial, sans-serif;
     font-weight: 700;
@@ -2864,6 +2960,14 @@ exports[`should render SerifLight correctly for punjabi 1`] = `
   "
 `;
 
+exports[`should render SerifLight correctly for romania 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  "
+`;
+
 exports[`should render SerifLight correctly for russian 1`] = `
 "
    font-family: ReithSerif, Helvetica, Arial, sans-serif;
@@ -3001,6 +3105,14 @@ exports[`should render SerifLight correctly for vietnamese 1`] = `
 `;
 
 exports[`should render SerifLight correctly for weather 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for ws 1`] = `
 "
    font-family: ReithSerif, Helvetica, Arial, sans-serif;
    font-weight: 300;
@@ -3296,6 +3408,14 @@ exports[`should render SerifMedium correctly for punjabi 1`] = `
   "
 `;
 
+exports[`should render SerifMedium correctly for romania 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: normal;
+  "
+`;
+
 exports[`should render SerifMedium correctly for russian 1`] = `
 "
    font-family: ReithSerif, Helvetica, Arial, sans-serif;
@@ -3433,6 +3553,14 @@ exports[`should render SerifMedium correctly for vietnamese 1`] = `
 `;
 
 exports[`should render SerifMedium correctly for weather 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for ws 1`] = `
 "
    font-family: ReithSerif, Helvetica, Arial, sans-serif;
    font-weight: 500;
@@ -3728,6 +3856,14 @@ exports[`should render SerifMediumItalic correctly for punjabi 1`] = `
   "
 `;
 
+exports[`should render SerifMediumItalic correctly for romania 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: italic;
+  "
+`;
+
 exports[`should render SerifMediumItalic correctly for russian 1`] = `
 "
    font-family: ReithSerif, Helvetica, Arial, sans-serif;
@@ -3865,6 +4001,14 @@ exports[`should render SerifMediumItalic correctly for vietnamese 1`] = `
 `;
 
 exports[`should render SerifMediumItalic correctly for weather 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for ws 1`] = `
 "
    font-family: ReithSerif, Helvetica, Arial, sans-serif;
    font-weight: 500;
@@ -4160,6 +4304,14 @@ exports[`should render SerifRegular correctly for punjabi 1`] = `
   "
 `;
 
+exports[`should render SerifRegular correctly for romania 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
 exports[`should render SerifRegular correctly for russian 1`] = `
 "
    font-family: ReithSerif, Helvetica, Arial, sans-serif;
@@ -4297,6 +4449,14 @@ exports[`should render SerifRegular correctly for vietnamese 1`] = `
 `;
 
 exports[`should render SerifRegular correctly for weather 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for ws 1`] = `
 "
    font-family: ReithSerif, Helvetica, Arial, sans-serif;
    font-weight: 400;
