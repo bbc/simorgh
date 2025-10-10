@@ -20,6 +20,8 @@ export default async () => {
     '/newsround/articles/cp8v6lm0ek6o.amp',
     '/cymrufyw/erthyglau/c4ge78ry9dmo.amp',
     '/naidheachdan/sgeulachdan/c3w14wqg1x8o.amp',
+    '/hindi/articles/c9w59wnx27ro.amp',
+    '/mundo/articles/ce42wzqr2mko.amp',
   ];
 
   const testResults = await Promise.all(
