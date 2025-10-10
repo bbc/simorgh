@@ -35,6 +35,7 @@ import getCaptionBlock from './utils/getCaptionBlock';
 import getProducerFromServiceName from './utils/getProducerFromServiceName';
 import getTranscriptBlock from './utils/getTranscriptBlock';
 import Message from './Message';
+import getTitleForLiteSiteTranscriptBlock from './utils/getTitleForLiteSiteTranscriptBlock';
 
 const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
   MEDIA_ARTICLE_PAGE,
@@ -239,7 +240,13 @@ const MediaLoader = ({
     !PAGETYPES_IGNORE_PLACEHOLDER.includes(pageType),
   );
 
-  if (isLite && !hasTranscript) return null;
+  // returns transcript for lite site pages with transcript
+  if (isLite && hasTranscript) {
+    const title = getTitleForLiteSiteTranscriptBlock(blocks);
+    return <Transcript transcript={transcriptBlock} title={title} />;
+  }
+
+  if (isLite) return null;
 
   const { model: mediaOverrides } =
     filterForBlockType(blocks, 'mediaOverrides') || {};
@@ -288,12 +295,7 @@ const MediaLoader = ({
 
   const hasPlaceholder = Boolean(showPlaceholder && placeholderSrc);
 
-  return isLite && hasTranscript ? (
-    <Transcript
-      transcript={transcriptBlock}
-      title={placeholderConfig?.mediaInfo?.title}
-    />
-  ) : (
+  return (
     <>
       {
         // Prevents the av-embeds route itself rendering the Metadata component
