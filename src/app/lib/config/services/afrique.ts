@@ -375,12 +375,16 @@ export const service: DefaultServiceConfig = {
         url: '/afrique',
       },
       {
-        title: 'Conflit en RDC',
-        url: '/afrique/topics/cge72ry253jt',
-      },
-      {
         title: 'Ecoutez en direct',
         url: '/afrique/bbc_afrique_radio/liveradio',
+      },
+      {
+        title: 'Election Côte d’Ivoire',
+        url: '/afrique/topics/ckglqk3zzxxt',
+      },
+      {
+        title: 'Election Cameroun',
+        url: '/afrique/topics/c70xvpqg58yt',
       },
       {
         title: 'Afrique',
@@ -397,10 +401,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Science et technologie',
         url: '/afrique/topics/crezq2zk0q4t',
-      },
-      {
-        title: 'Economie',
-        url: '/afrique/topics/cnq687nr9v1t',
       },
       {
         title: 'Culture',
