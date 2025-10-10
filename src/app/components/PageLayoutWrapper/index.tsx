@@ -51,7 +51,7 @@ const PageLayoutWrapper = ({
   pageData,
   status,
 }: PropsWithChildren<Props>) => {
-  const { service } = use(ServiceContext);
+  const { atiAnalyticsProducerId, service } = use(ServiceContext);
   const { isLite, isAmp, nonce, cspHeader } = use(RequestContext);
   const isPWA = useIsPWA();
 
@@ -201,6 +201,30 @@ const PageLayoutWrapper = ({
                 wrappedContentsShortcut.pageTypeCounts.${reportingPageType} = wrappedContentsShortcut.pageTypeCounts.${reportingPageType} ? wrappedContentsShortcut.pageTypeCounts.${reportingPageType} + 1 : 1;
                 wrappedContentsShortcut.byMonth[wrappedMonth] = wrappedContentsShortcut.byMonth[wrappedMonth] ? wrappedContentsShortcut.byMonth[wrappedMonth] + 1 : 1;
                 wrappedContents[wrappedYear] = wrappedContentsShortcut;
+                const numberOfLanguagesConsumed = Object.keys(topicsContents).length;
+                const topcats = Object.keys(topicsContents.${service}).filter(topic => topicsContents.${service}[topic].count > 1).sort((a, b) => topicsContents.${service}[b].count - topicsContents.${service}[a].count);
+                let allTopicsCount = 0;
+                for (var i = 0; i < topcats.length; i++) {
+                    allTopicsCount += topicsContents.${service}[topcats[i]].count;
+                }
+                const topCatRatio = Math.round((topicsContents.${service}[topcats[0]].count / allTopicsCount) * 100);
+                if(("cookieStore" in window)) {
+                    cookieStore.get('atuserid').then(atuseridCookie => {
+                        const atuseridCookieValue = atuseridCookie ? JSON.parse(decodeURIComponent(atuseridCookie.value)).val : 'kjasd8998sd';
+                        const deliveryPoint = 'https://a1.api.bbc.co.uk/hit.xiti?s=598342&idclient=' + atuseridCookieValue + '&col=2&ts=' + Date.now() + '&ptag=js&context=' + encodeURIComponent(JSON.stringify([{"data":{"page":{"$":"${service}.page"},"site":{"level2_id":${atiAnalyticsProducerId}}}}])) + '&events=';
+                        const payload = new Array();
+                        payload.push(deliveryPoint + encodeURIComponent(JSON.stringify([{"name":"viewability.view","data":{"group":{"name":"topics-viewed","type":""},"event":{"category":"viewability","action":"view","grouping":"topics-viewed"},"user":{"id":"' + atuseridCookieValue + '"},"app":{"type":"responsive","name":"news-${service}"},"item":{"name":"languages-viewed", "position": numberOfLanguagesConsumed }}}])));
+                        payload.push(deliveryPoint + encodeURIComponent(JSON.stringify([{"name":"viewability.view","data":{"group":{"name":"topics-viewed","type":""},"event":{"category":"viewability","action":"view","grouping":"topics-viewed"},"user":{"id":"' + atuseridCookieValue + '"},"app":{"type":"responsive","name":"news-${service}"},"item":{"name":"topics-viewed", "position": topcats.length }}}])));
+                        payload.push(deliveryPoint + encodeURIComponent(JSON.stringify([{"name":"viewability.view","data":{"group":{"name":"topics-viewed","type":""},"event":{"category":"viewability","action":"view","grouping":"topics-viewed"},"user":{"id":"' + atuseridCookieValue + '"},"app":{"type":"responsive","name":"news-${service}"},"item":{"name":"top-topic-id", "position": topCatRatio, "text": topicsContents.${service}[topcats[0]].id }}}])));
+
+                        payload.forEach(key => {
+                            const trackingImage = new Image(1,1);
+                            trackingImage.src = key;
+                            document.body.appendChild(trackingImage);
+                            
+                        });
+                    });
+                }
                 localStorage.setItem(topicsStorageKey, JSON.stringify(topicsContents));
     `;
 
