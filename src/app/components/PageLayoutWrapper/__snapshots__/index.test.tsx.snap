@@ -2021,6 +2021,12 @@ exports[`PageLayoutWrapper should render fonts for ukchina 1`] = `
 }
 `;
 
+exports[`PageLayoutWrapper should render fonts for ukrainian 1`] = `
+{
+  "font-family": "Helmet,Freesans,Helvetica,Arial,sans-serif",
+}
+`;
+
 exports[`PageLayoutWrapper should render fonts for urdu 1`] = `
 {
   "font-family": ""BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif",

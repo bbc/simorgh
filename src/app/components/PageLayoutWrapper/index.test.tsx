@@ -23,9 +23,7 @@ describe('PageLayoutWrapper', () => {
   });
 
   it.each(
-    services.filter(
-      service => !['newsround', 'ukrainian'].includes(service),
-    ) as Services[],
+    services.filter(service => !['newsround'].includes(service)) as Services[],
   )('should render fonts for %s', async (service: Services) => {
     await act(() =>
       render(
