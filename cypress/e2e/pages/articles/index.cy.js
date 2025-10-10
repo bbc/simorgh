@@ -187,6 +187,12 @@ const nonSmokeCanonicalTestSuites = [
     tests: [...canonicalTests],
   },
   {
+    path: '/magyarul/articles/cjxvnv0rvr0o',
+    runforEnv: ['local', 'test'],
+    service: 'magyarul',
+    tests: [...canonicalTests],
+  },
+  {
     path: '/mundo/articles/ce7p1pw7165o',
     runforEnv: ['live'],
     service: 'mundo',
