@@ -709,7 +709,8 @@ const preview: Preview = {
         >
           <RequestContextProvider
             isLite={context.globals.isLite}
-            pageType={undefined}
+            // @ts-expect-error error TS2322: Type '"unknown"' is not assignable to type 'PageTypes'.
+            pageType={'unknown'}
             pathname={`/${context.globals.service.service}`}
             service={context.globals.service.service}
           >
