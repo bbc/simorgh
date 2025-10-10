@@ -191,12 +191,12 @@
   },
   "magyarul": {
     "default": {
-      "one minute ago": "1 minute ago",
-      "five minutes ago": "5 minutes ago",
-      "one hour ago": "1 hour ago",
-      "five hours ago": "5 hours ago",
-      "exact date": "10 October 2018",
-      "exact date and time with timezone": "12 July 2019, 13:55 BST"
+      "one minute ago": "egy perce",
+      "five minutes ago": "5 perce",
+      "one hour ago": "egy órája",
+      "five hours ago": "5 órája",
+      "exact date": "2018. október 10.",
+      "exact date and time with timezone": "2019. július 12. 14:55"
     }
   },
   "marathi": {
@@ -307,6 +307,16 @@
       "five hours ago": "5 ਘੰਟੇ ਪਹਿਲਾਂ",
       "exact date": "10 ਅਕਤੂਬਰ 2018",
       "exact date and time with timezone": "12 ਜੁਲਾਈ 2019, 18:25 IST"
+    }
+  },
+  "romania": {
+    "default": {
+      "one minute ago": "1 minute ago",
+      "five minutes ago": "5 minutes ago",
+      "one hour ago": "1 hour ago",
+      "five hours ago": "5 hours ago",
+      "exact date": "10 October 2018",
+      "exact date and time with timezone": "12 July 2019, 13:55 BST"
     }
   },
   "russian": {

@@ -92,6 +92,9 @@ export const themes = {
   punjabi: loadable(
     () => import(/* webpackChunkName: "themes-punjabi" */ './punjabi'),
   ),
+  romania: loadable(
+    () => import(/* webpackChunkName: "themes-romania" */ './romania'),
+  ),
   russian: loadable(
     () => import(/* webpackChunkName: "themes-russian" */ './russian'),
   ),

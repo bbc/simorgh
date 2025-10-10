@@ -8,6 +8,7 @@ import {
   getArticleId,
   getTipoId,
 } from '#app/routes/utils/constructPageFetchUrl';
+import isLive from '#app/lib/utilities/isLive';
 import {
   ARTICLE_PAGE,
   LIVE_PAGE,
@@ -79,6 +80,9 @@ const getSocialShareImage = ({
   pathname: string;
   service: Services;
 }) => {
+  // Remove to release to Production
+  if (isLive()) return metaImage;
+
   if (!OG_EXPERIMENT_SERVICES.includes(service)) return metaImage;
   if (!OG_EXPERIMENT_PAGETYPES.includes(pageType)) return metaImage;
 
@@ -202,7 +206,6 @@ const MetadataContainer = ({
     service,
     metaImage,
   });
-
   return (
     <Helmet htmlAttributes={htmlAttributes}>
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />

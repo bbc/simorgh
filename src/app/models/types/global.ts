@@ -15,13 +15,13 @@ export type SocialEmbedProviders =
 
 export type PageTypes = (typeof PAGE_TYPES)[keyof typeof PAGE_TYPES];
 
+export type ToggleDefinition = {
+  enabled: boolean;
+  value?: string | number;
+};
+
 export type Toggles =
-  | {
-      [key: string]: {
-        enabled: boolean;
-        value?: string | number;
-      };
-    }
+  | Record<string, ToggleDefinition>
   | { _environment: string };
 
 export type ServerSideExperiment = {
@@ -97,6 +97,7 @@ export type ServicesWithNoVariants = {
     | 'polska'
     | 'portuguese'
     | 'punjabi'
+    | 'romania'
     | 'russian'
     | 'scotland'
     | 'sport'

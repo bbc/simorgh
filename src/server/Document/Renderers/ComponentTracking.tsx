@@ -7,6 +7,7 @@ import { addProcessClientDeviceAndSendStaticBeaconToWindow } from '#app/lib/anal
 type Props = {
   enableStaticClickTrackingOnOperaMiniOnly: boolean;
   trackComponentViews: boolean;
+  nonce?: string;
 };
 
 const trackingScripts = ({
@@ -46,9 +47,11 @@ const trackingScripts = ({
 const ComponentTracking = ({
   enableStaticClickTrackingOnOperaMiniOnly,
   trackComponentViews,
+  nonce,
 }: Props) => {
   return (
     <script
+      nonce={nonce}
       type="text/javascript"
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{
