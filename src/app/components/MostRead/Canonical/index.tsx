@@ -9,7 +9,6 @@ import MostReadRank from './Rank';
 import LastUpdated from './LastUpdated';
 import { ColumnLayout, MostReadData, Size } from '../types';
 import { Direction } from '../../../models/types/global';
-import { TypographyScript } from '../../../models/types/theming';
 
 interface MostReadProps {
   columnLayout?: ColumnLayout;
