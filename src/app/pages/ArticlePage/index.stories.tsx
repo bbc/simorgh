@@ -1,19 +1,19 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import ThemeProvider from '#app/components/ThemeProvider';
-import latin from '#app/components/ThemeProvider/fontScripts/latin';
 import React, { useMemo } from 'react';
-import { RequestContextProvider } from '#app/contexts/RequestContext';
+import ThemeProvider from '#app/components/ThemeProvider';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import {
   ServiceContext,
   ServiceContextProvider,
 } from '#app/contexts/ServiceContext';
+import { RequestContextProvider } from '#app/contexts/RequestContext';
 import { service as newsConfig } from '#app/lib/config/services/news';
 import { Services } from '#app/models/types/global';
 import { StoryArgs, StoryProps } from '#app/models/types/storybook';
+import latin from '#app/components/ThemeProvider/fontScripts/latin';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
 import articleDataWithRelatedContent from '#data/afrique/articles/c7yn6nznljdo.json';
 import articleDataWithSingleRelatedContent from '#data/afrique/articles/cz216x22106o.json';
 import articleDataArabic from '#data/arabic/articles/cn0m90verwvo.json';
