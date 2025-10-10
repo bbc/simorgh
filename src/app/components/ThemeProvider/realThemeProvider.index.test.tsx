@@ -33,10 +33,6 @@ describe('Real Theme Provider', () => {
         );
       });
 
-      // //  @ts-expect-error Cannot invoke an object which is possibly 'undefined'.ts(2722)
-      //   const divElement = getByText(service);
-      //   console.log({ divElement });
-
       const svg = document.querySelector('svg g path');
 
       expect(svg).toMatchSnapshot();
