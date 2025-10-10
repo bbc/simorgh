@@ -63,56 +63,67 @@ export type ServicesWithVariants =
   | UkrainianService
   | UzbekService;
 
+export const SERVICES_WITH_VARIANTS = [
+  'serbian',
+  'ukchina',
+  'ukrainian',
+  'uzbek',
+  'zhongwen',
+];
+
+export const SERVICES_NO_VARIANTS = [
+  'afaanoromoo',
+  'afrique',
+  'amharic',
+  'arabic',
+  'archive',
+  'azeri',
+  'bengali',
+  'burmese',
+  'cymrufyw',
+  'dari',
+  'gahuza',
+  'gujarati',
+  'hausa',
+  'hindi',
+  'igbo',
+  'indonesia',
+  'japanese',
+  'korean',
+  'kyrgyz',
+  'magyarul',
+  'marathi',
+  'mundo',
+  'naidheachdan',
+  'nepali',
+  'news',
+  'newsround',
+  'pashto',
+  'persian',
+  'pidgin',
+  'polska',
+  'portuguese',
+  'punjabi',
+  'romania',
+  'russian',
+  'scotland',
+  'sport',
+  'sinhala',
+  'somali',
+  'swahili',
+  'tamil',
+  'telugu',
+  'thai',
+  'tigrinya',
+  'turkce',
+  'urdu',
+  'vietnamese',
+  'ws',
+  'yoruba',
+];
+
 export type ServicesWithNoVariants = {
-  service:
-    | 'afaanoromoo'
-    | 'afrique'
-    | 'amharic'
-    | 'arabic'
-    | 'archive'
-    | 'azeri'
-    | 'bengali'
-    | 'burmese'
-    | 'cymrufyw'
-    | 'dari'
-    | 'gahuza'
-    | 'gujarati'
-    | 'hausa'
-    | 'hindi'
-    | 'igbo'
-    | 'indonesia'
-    | 'japanese'
-    | 'korean'
-    | 'kyrgyz'
-    | 'magyarul'
-    | 'marathi'
-    | 'mundo'
-    | 'naidheachdan'
-    | 'nepali'
-    | 'news'
-    | 'newsround'
-    | 'pashto'
-    | 'persian'
-    | 'pidgin'
-    | 'polska'
-    | 'portuguese'
-    | 'punjabi'
-    | 'romania'
-    | 'russian'
-    | 'scotland'
-    | 'sport'
-    | 'sinhala'
-    | 'somali'
-    | 'swahili'
-    | 'tamil'
-    | 'telugu'
-    | 'thai'
-    | 'tigrinya'
-    | 'turkce'
-    | 'urdu'
-    | 'vietnamese'
-    | 'ws'
-    | 'yoruba';
+  service: (typeof SERVICES_NO_VARIANTS)[number];
   variant: 'default';
 };
 

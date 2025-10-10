@@ -6,6 +6,8 @@ import {
   Variants,
   ServicesWithVariants,
   ServicesWithNoVariants,
+  SERVICES_NO_VARIANTS,
+  SERVICES_WITH_VARIANTS,
 } from '../../models/types/global';
 import themes from './themes/loadableConfig';
 import fallBackTheme from './themes/news';
@@ -23,17 +25,19 @@ type VariantThemesType = {
   };
 };
 
-const nonVariantThemes = Object.fromEntries(
-  Object.entries(themes).filter(([_service, theme]) => {
-    return typeof theme === 'function' || Object.keys(theme).includes('load');
-  }),
-) as unknown as NonVariantThemesType;
-
 const variantThemes = Object.fromEntries(
-  Object.entries(themes).filter(
-    ([service]) => !Object.keys(nonVariantThemes).includes(service),
+  Object.entries(themes).filter(([service]) =>
+    SERVICES_WITH_VARIANTS.includes(service),
   ),
 ) as unknown as VariantThemesType;
+
+const nonVariantThemes = Object.fromEntries(
+  Object.entries(themes).filter(([service]) =>
+    SERVICES_NO_VARIANTS.includes(service),
+  ),
+) as unknown as NonVariantThemesType;
+
+console.log({ variantThemes, nonVariantThemes });
 
 export const ThemeProvider = ({
   children,
@@ -43,7 +47,8 @@ export const ThemeProvider = ({
   let LoadableContextProvider: ThemeComponentLoadable | FallbackThemeComponent =
     fallBackTheme;
 
-  const serviceVariant: Variants = variant || defaultServiceVariants[service];
+  const serviceVariant: Variants =
+    variant || defaultServiceVariants[service as string];
 
   if (service in variantThemes) {
     const serviceVariants =
