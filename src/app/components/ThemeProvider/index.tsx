@@ -24,14 +24,14 @@ type VariantThemesType = {
 };
 
 const nonVariantThemes = Object.fromEntries(
-  Object.entries(themes).filter(([_service, theme]) => {
-    return typeof theme === 'function' || Object.keys(theme).includes('load');
-  }),
+  Object.entries(themes).filter(([_service, theme]) =>
+    Object.keys(theme).includes('render'),
+  ),
 ) as unknown as NonVariantThemesType;
 
 const variantThemes = Object.fromEntries(
   Object.entries(themes).filter(
-    ([service]) => !Object.keys(nonVariantThemes).includes(service),
+    ([_service, theme]) => !Object.keys(theme).includes('render'),
   ),
 ) as unknown as VariantThemesType;
 
