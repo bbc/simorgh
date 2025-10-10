@@ -64,8 +64,6 @@ const Component = ({ service, variant, isLite }: StoryProps) => {
   return (
     <MemoryRouter>
       <HomePage
-        service={service}
-        variant={variant}
         pageType={HOME_PAGE}
         status={200}
         isAmp={false}

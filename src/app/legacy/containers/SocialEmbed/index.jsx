@@ -63,7 +63,6 @@ const SocialEmbedContainer = ({ blocks, source }) => {
         {isAmp ? (
           <AmpSocialEmbed
             provider={provider}
-            service={service}
             id={id}
             fallback={fallback}
             skipLink={skipLink}
@@ -73,7 +72,6 @@ const SocialEmbedContainer = ({ blocks, source }) => {
         ) : (
           <CanonicalSocialEmbed
             provider={provider}
-            service={service}
             id={id}
             oEmbed={oEmbed}
             fallback={fallback}

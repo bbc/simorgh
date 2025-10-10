@@ -14,8 +14,6 @@ The `MediaIndicator` component provides a 'play', 'audio' or 'camera' icon as we
 | Argument   | Type    | Required | Default | Example      |
 | ---------- | ------- | -------- | ------- | ------------ |
 | type       | string  | no       | 'video' | 'audio'      |
-| script | object | yes | N/A | `{ canon: { groupA: { fontSize: '28', lineHeight: '32',}, groupB: { fontSize: '32', lineHeight: '36', }, groupD: { fontSize: '44', lineHeight: '48', }, }, trafalgar: { groupA: { fontSize: '20', lineHeight: '24', }, groupB: { fontSize: '24', lineHeight: '28', }, groupD: { fontSize: '32', lineHeight: '36', }, }, }` |
-| service    | string  | yes      | N/A     | `'news'`     |
 | dir        | string  | no       | `'ltr'` | `'rtl'`  |
 | isInline   | boolean | no       | false   | true         |
 | children   | node    | no       | null    | <IndexAlsos> |
@@ -37,7 +35,7 @@ Top story promos can also have related stories links called `Index Alsos`. When 
 import MediaIndicator from '#psammead/psammead-media-indicator/src';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 
-<MediaIndicator type="audio" script={latin} service="news" />;
+<MediaIndicator type="audio" />;
 ```
 
 When using this component ensure you add the relevant spacing.
@@ -47,13 +45,12 @@ E.g.
 ```jsx
 import styled from '@emotion/styled';
 import MediaIndicator from '#psammead/psammead-media-indicator/src';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
 
 const TimeDuration = styled.time`
   margin: 0 ${GEL_SPACING_HLF};
 `;
 
-<MediaIndicator type="audio" script={latin} service="news">
+<MediaIndicator type="audio">
   <TimeDuration datetime="PT2M15S">2:15</TimeDuration>
 </MediaIndicator>;
 ```

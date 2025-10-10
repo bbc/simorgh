@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const italic = styled.i`
   ${({ theme: { fontVariants } }) => fontVariants.sansRegularItalic}
@@ -23,12 +22,11 @@ const Fragment = ({ text, attributes }) => {
     These components are nested inside each other as children as the array is iterated through.
     The text string is passed in as the initial value, so it is the first child or the returned value if there are no attributes.
   */
-  const { service } = React.use(ServiceContext);
   return (
     attributes.reduce((previousAttribute, attribute) => {
       const Attribute =
         attributeComponents[attribute] || fallbackAttributeComponent; // If attribute is unknown, will use a fallback component that just returns the passed children
-      return <Attribute service={service}>{previousAttribute}</Attribute>;
+      return <Attribute>{previousAttribute}</Attribute>;
     }, text) || ''
   );
 };

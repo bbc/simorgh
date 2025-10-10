@@ -46,8 +46,8 @@ The `scriptLink` can be used to render [ScriptLink](https://github.com/bbc/psamm
 | serviceLocalisedName | String | no | N/A | `'Yoruba'` |
 | borderTop | Boolean | no | `false` | `true` |
 | borderBottom | Boolean | no | `false` | `true` |
-| scriptLink | Node | no | `null` | `<ScriptLink service='news' script={latin} href='https://www.bbc.com/serbian/lat'> Lat </ScriptLink>` |
-| skipLink | Node | no | `null` | `<SkipLink service='news' script={latin} href='#content'> Skip to content </SkipLink>` |
+| scriptLink | Node | no | `null` | `<ScriptLink service='news' href='https://www.bbc.com/serbian/lat'> Lat </ScriptLink>` |
+| skipLink | Node | no | `null` | `<SkipLink service='news' href='#content'> Skip to content </SkipLink>` |
 | linkId | String | no | `null` | `'brandLink'` |
 
 ## Usage
@@ -67,20 +67,10 @@ import { POSTBOX, WHITE } from '../../../../components/ThemeProvider/palette';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 
 const scriptLink = (
-  <ScriptLink
-    service="news"
-    script={latin}
-    href="https://www.bbc.com/serbian/lat"
-  >
-    Lat
-  </ScriptLink>
+  <ScriptLink href="https://www.bbc.com/serbian/lat">Lat</ScriptLink>
 );
 
-const skipLink = (
-  <SkipLink service="news" script={latin} href="#content">
-    Skip to content
-  </SkipLink>
-);
+const skipLink = <SkipLink href="#content">Skip to content</SkipLink>;
 
 const Header = (product, serviceName) => (
   <header role="banner">

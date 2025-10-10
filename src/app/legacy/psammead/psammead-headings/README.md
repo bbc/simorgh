@@ -25,12 +25,8 @@ import latin from '../../../components/ThemeProvider/fontScripts/latin';
 
 const Wrapper = () => (
   <Fragment>
-    <Heading script={latin} service="news">
-      Some headline
-    </Heading>
-    <SubHeading script={latin} service="news">
-      Some subheadline
-    </SubHeading>
+    <Heading service="news">Some headline</Heading>
+    <SubHeading service="news">Some subheadline</SubHeading>
   </Fragment>
 );
 ```
@@ -38,7 +34,7 @@ const Wrapper = () => (
 `SubHeading` components can be used as page anchors when passed an `id` prop. To take the above usage as an example:
 
 ```jsx
-<SubHeading id="some-subheadline" script={latin} service="news">
+<SubHeading id="some-subheadline" service="news">
   Some subheadline
 </SubHeading>
 ```

@@ -3,7 +3,6 @@ import MediaIndicator from '#psammead/psammead-media-indicator/src';
 import styled from '@emotion/styled';
 import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
 import { render } from '../../../../components/react-testing-library-with-providers';
-import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import LiveLabel from '../../../../components/LiveLabel';
 import StoryPromo, { Headline, Summary, Link } from './index';
 import relatedItems from '../testHelpers/relatedItems';
@@ -18,12 +17,7 @@ const Info = ({
   promoHasImage = true,
 }) => (
   <>
-    <Headline
-      script={latin}
-      service="news"
-      promoType={promoType}
-      promoHasImage={promoHasImage}
-    >
+    <Headline promoType={promoType} promoHasImage={promoHasImage}>
       <Link href="https://www.bbc.co.uk/news">
         {isLive ? (
           <LiveLabel ariaHidden offScreenText="Live">
@@ -34,21 +28,12 @@ const Info = ({
         )}
       </Link>
     </Headline>
-    <Summary
-      script={latin}
-      service="news"
-      promoType={promoType}
-      promoHasImage={promoHasImage}
-    >
+    <Summary promoType={promoType} promoHasImage={promoHasImage}>
       The summary of the promo
     </Summary>
     <time>12 March 2019</time>
     {promoType === 'top' && alsoItems && (
-      <IndexAlsosContainer
-        alsoItems={alsoItems}
-        script={latin}
-        service="news"
-      />
+      <IndexAlsosContainer alsoItems={alsoItems} />
     )}
   </>
 );
@@ -57,8 +42,8 @@ const StyledTime = styled.time`
   padding: 0 ${GEL_SPACING_HLF};
 `;
 
-const MediaInfo = ({ dir = 'ltr', service = 'news' }) => (
-  <MediaIndicator script={latin} service={service} dir={dir}>
+const MediaInfo = ({ dir = 'ltr' }) => (
+  <MediaIndicator dir={dir}>
     <StyledTime datetime="PT2M15S">2:15</StyledTime>
   </MediaIndicator>
 );
@@ -102,8 +87,9 @@ describe('StoryPromo with Media Indicator', () => {
       <StoryPromo
         image={Image}
         info={Info({})}
-        mediaIndicator={<MediaInfo service="persian" dir="rtl" />}
+        mediaIndicator={<MediaInfo dir="rtl" />}
       />,
+      { service: 'persian' },
     );
     expect(container).toMatchSnapshot();
   });

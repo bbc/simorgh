@@ -129,16 +129,14 @@ import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
 const Image = <img src="https://foobar.com/image.jpg" />;
 
-const IndexAlsosComponent = ({ alsoItems, script, service }) => (
+const IndexAlsosComponent = ({ alsoItems, script }) => (
   //This example doesn't show how the alsoItems are destructured to get the respective data
   <IndexAlsos offScreenText="Related content">
     {alsoItems.length > 1 ? (
       <IndexAlsosUl>
         <IndexAlsosLi
           url="https://www.bbc.co.uk/news"
-          mediaIndicator={
-            <MediaIndicator service={service} type="video" indexAlsos />
-          }
+          mediaIndicator={<MediaIndicator type="video" indexAlsos />}
         >
           Related text 1
         </IndexAlsosLi>
@@ -154,7 +152,7 @@ const IndexAlsosComponent = ({ alsoItems, script, service }) => (
 
 const Info = ({ isLive, alsoItems }) => (
   <Fragment>
-    <Headline service="news" promoType="top">
+    <Headline promoType="top">
       <Link href="https://www.bbc.co.uk/news">
         {isLive ? (
           <LiveLabel>The headline of the live promo</LiveLabel>
@@ -163,17 +161,9 @@ const Info = ({ isLive, alsoItems }) => (
         )}
       </Link>
     </Headline>
-    <Summary service="news" promoType="top">
-      The summary of the promo
-    </Summary>
+    <Summary promoType="top">The summary of the promo</Summary>
     <time>12 March 2019</time>
-    {topStory && alsoItems && (
-      <IndexAlsosComponent
-        alsoItems={alsoItems}
-        script={latin}
-        service="news"
-      />
-    )}
+    {topStory && alsoItems && <IndexAlsosComponent alsoItems={alsoItems} />}
   </Fragment>
 );
 

@@ -37,7 +37,6 @@ const Component = ({ service, isLite }: StoryProps) => {
         // @ts-expect-error partial data for testing purposes
         pageData={onDemandTvFixtures[service] || afrique}
         status={200}
-        service={service}
         loading={false}
         error=""
         pageType={TV_PAGE}

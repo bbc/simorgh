@@ -7,51 +7,34 @@ import { MEDIA_ARTICLE_PAGE } from '../../../../routes/utils/pageTypes';
 
 describe('Headline component', () => {
   it('should render correctly', () => {
-    const { container } = render(
-      <Headline script={latin} service="news">
-        This is my headline.
-      </Headline>,
-    );
+    const { container } = render(<Headline>This is my headline.</Headline>);
     expect(container).toMatchSnapshot();
   });
 
   it('should render correctly on page types that support a dark ui', () => {
-    const { container } = render(
-      <Headline script={latin} service="news">
-        This is my headline.
-      </Headline>,
-      {
-        pageType: MEDIA_ARTICLE_PAGE,
-      },
-    );
+    const { container } = render(<Headline>This is my headline.</Headline>, {
+      pageType: MEDIA_ARTICLE_PAGE,
+    });
     expect(container).toMatchSnapshot();
   });
 
   it('should render correctly with arabic script typography values', () => {
-    const { container } = render(
-      <Headline script={arabic} service="persian">
-        هذا هو العنوان الخاص بي
-      </Headline>,
-    );
+    const { container } = render(<Headline>هذا هو العنوان الخاص بي</Headline>, {
+      service: 'persian',
+    });
     expect(container).toMatchSnapshot();
   });
 });
 
 describe('SubHeading component', () => {
   it('should render correctly', () => {
-    const { container } = render(
-      <SubHeading script={latin} service="news">
-        This is a SubHeading
-      </SubHeading>,
-    );
+    const { container } = render(<SubHeading>This is a SubHeading</SubHeading>);
     expect(container).toMatchSnapshot();
   });
 
   it('should render correctly on page types that support a dark ui', () => {
     const { container } = render(
-      <SubHeading script={latin} service="news">
-        This is a SubHeading
-      </SubHeading>,
+      <SubHeading>This is a SubHeading</SubHeading>,
       {
         pageType: MEDIA_ARTICLE_PAGE,
       },
@@ -60,19 +43,15 @@ describe('SubHeading component', () => {
   });
 
   it('should render correctly with arabic script typography values', () => {
-    const { container } = render(
-      <SubHeading script={arabic} service="news">
-        هذا عنوان فرعي
-      </SubHeading>,
-    );
+    const { container } = render(<SubHeading>هذا عنوان فرعي</SubHeading>, {
+      service: 'persian',
+    });
     expect(container).toMatchSnapshot();
   });
 
   it('should render correctly with an ID', () => {
     const { container } = render(
-      <SubHeading id="This-is-a-SubHeading" script={latin} service="news">
-        This is a SubHeading
-      </SubHeading>,
+      <SubHeading id="This-is-a-SubHeading">This is a SubHeading</SubHeading>,
     );
     expect(container).toMatchSnapshot();
   });

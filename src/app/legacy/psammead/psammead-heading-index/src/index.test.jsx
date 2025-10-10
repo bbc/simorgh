@@ -7,18 +7,15 @@ import HeadingIndex from './index';
 describe('Index Heading', () => {
   it('should render correctly', () => {
     const { container } = render(
-      <HeadingIndex script={latin} service="news">
-        This is a page heading
-      </HeadingIndex>,
+      <HeadingIndex>This is a page heading</HeadingIndex>,
     );
     expect(container).toMatchSnapshot();
   });
 
   it('should render correctly with arabic script typography values', () => {
     const { container } = render(
-      <HeadingIndex script={arabic} service="persian">
-        هذا عنوان الصفحة
-      </HeadingIndex>,
+      <HeadingIndex>هذا عنوان الصفحة</HeadingIndex>,
+      { service: 'persian' },
     );
     expect(container).toMatchSnapshot();
   });

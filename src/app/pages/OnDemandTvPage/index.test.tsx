@@ -31,7 +31,7 @@ interface Props {
 const renderPage = async ({ pageData, service }: Props) => {
   let result;
   await act(async () => {
-    result = render(<OnDemandTvPage service={service} pageData={pageData} />, {
+    result = render(<OnDemandTvPage pageData={pageData} />, {
       bbcOrigin: 'https://www.test.bbc.com',
       derivedPageType: 'On Demand TV',
       pageType,

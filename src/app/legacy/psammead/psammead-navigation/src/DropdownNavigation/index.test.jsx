@@ -4,8 +4,6 @@ import {
   fireEvent,
   getByRole,
 } from '../../../../../components/react-testing-library-with-providers';
-import latin from '../../../../../components/ThemeProvider/fontScripts/latin';
-import arabic from '../../../../../components/ThemeProvider/fontScripts/arabic';
 import {
   CanonicalDropdown,
   DropdownUl,
@@ -23,8 +21,6 @@ const dropdownList = (
 
       return (
         <DropdownLi
-          script={latin}
-          service="news"
           url={url}
           key={title}
           active={active}
@@ -46,7 +42,6 @@ describe('Canonical', () => {
           announcedText="Menu"
           onClick={mockOnClick}
           isOpen
-          script={latin}
         />,
       );
       const menuButton = getByRole(container, 'button');
@@ -57,12 +52,7 @@ describe('Canonical', () => {
 
     it('should have aria-expanded set as true', () => {
       const { container } = render(
-        <CanonicalMenuButton
-          announcedText="Menu"
-          onClick={() => {}}
-          isOpen
-          script={latin}
-        />,
+        <CanonicalMenuButton announcedText="Menu" onClick={() => {}} isOpen />,
       );
       const menuButton = getByRole(container, 'button');
       expect(menuButton.getAttribute('aria-expanded')).toBe('true');
@@ -74,7 +64,6 @@ describe('Canonical', () => {
           announcedText="Menu"
           onClick={() => {}}
           isOpen
-          script={latin}
           dir="ltr"
         />,
       );
@@ -87,9 +76,9 @@ describe('Canonical', () => {
           announcedText="Menu"
           onClick={() => {}}
           isOpen
-          script={arabic}
           dir="rtl"
         />,
+        { service: 'persian' },
       );
       expect(container).toMatchSnapshot();
     });
@@ -103,7 +92,6 @@ describe('Canonical', () => {
           announcedText="Menu"
           onClick={mockOnClick}
           isOpen={false}
-          script={latin}
         />,
       );
       const menuButton = getByRole(container, 'button');
@@ -118,7 +106,6 @@ describe('Canonical', () => {
           announcedText="Menu"
           onClick={() => {}}
           isOpen={false}
-          script={latin}
         />,
       );
       const menuButton = getByRole(container, 'button');
@@ -131,7 +118,6 @@ describe('Canonical', () => {
           announcedText="Menu"
           onClick={() => {}}
           isOpen={false}
-          script={latin}
           dir="ltr"
         />,
       );
@@ -144,9 +130,9 @@ describe('Canonical', () => {
           announcedText="Menu"
           onClick={() => {}}
           isOpen={false}
-          script={arabic}
           dir="rtl"
         />,
+        { service: 'persian' },
       );
       expect(container).toMatchSnapshot();
     });
@@ -174,7 +160,6 @@ describe('Dropdown navigation', () => {
         <AmpMenuButton
           announcedText="Menu"
           onToggle="other-element.toggleVisibility"
-          script={latin}
           dir="ltr"
         />,
       );
@@ -186,9 +171,9 @@ describe('Dropdown navigation', () => {
         <AmpMenuButton
           announcedText="Menu"
           onToggle="other-element.toggleVisibility"
-          script={arabic}
           dir="rtl"
         />,
+        { service: 'persian' },
       );
       expect(container).toMatchSnapshot();
     });

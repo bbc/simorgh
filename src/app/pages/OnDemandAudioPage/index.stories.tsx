@@ -74,7 +74,6 @@ const Component = ({ service, isLite }: StoryProps) => {
         // @ts-expect-error partial data for storybook
         pageData={onDemandAudioFixtures[service] || gahuza}
         status={200}
-        service={service}
         loading={false}
         error=""
         pageType={AUDIO_PAGE}

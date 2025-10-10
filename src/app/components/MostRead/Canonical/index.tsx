@@ -26,7 +26,6 @@ const MostRead = ({
 }: MostReadProps) => {
   const {
     service,
-    script,
     dir,
     datetimeLocale,
     serviceDatetimeLocale,
@@ -55,7 +54,6 @@ const MostRead = ({
   const locale = serviceDatetimeLocale || datetimeLocale;
 
   const direction = dir as Direction;
-  const fontScript = script as TypographyScript;
 
   return (
     <MostReadList
@@ -94,8 +92,6 @@ const MostRead = ({
                 {shouldRenderLastUpdated(timestamp) && timestamp && (
                   <LastUpdated
                     prefix={lastUpdated}
-                    script={fontScript}
-                    service={service}
                     timestamp={timestamp}
                     locale={locale}
                     timezone={timezone}

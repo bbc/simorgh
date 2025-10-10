@@ -79,7 +79,7 @@ it('heading should be externally focusable', () => {
 describe('ConsentBannerText', () => {
   it('should correctly render', () => {
     const { container } = render(
-      <ConsentBannerText dir="ltr" script={latin} service="news">
+      <ConsentBannerText dir="ltr">
         We have made some important changes to our Privacy and Cookies Policy
         and we want you to know what this means for you and your data.
       </ConsentBannerText>,

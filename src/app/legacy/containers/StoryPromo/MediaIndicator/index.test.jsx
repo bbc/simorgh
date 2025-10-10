@@ -115,118 +115,63 @@ const noMediaFormat = {
 
 describe('Story Promo Media Indicator', () => {
   it('should render an audio item correctly', () => {
-    const { container } = render(
-      <MediaIndicator
-        dir="ltr"
-        item={audioItem}
-        script={latin}
-        service="news"
-      />,
-    );
+    const { container } = render(<MediaIndicator dir="ltr" item={audioItem} />);
     expect(container).toMatchSnapshot();
   });
 
   it('should render a video item correctly', () => {
-    const { container } = render(
-      <MediaIndicator
-        dir="ltr"
-        item={videoItem}
-        script={latin}
-        service="news"
-      />,
-    );
+    const { container } = render(<MediaIndicator dir="ltr" item={videoItem} />);
     expect(container).toMatchSnapshot();
   });
 
   it('should render video indicator correctly when inline', () => {
     const { container } = render(
-      <MediaIndicator
-        dir="ltr"
-        item={videoItem}
-        script={latin}
-        service="news"
-        isInline
-      />,
+      <MediaIndicator dir="ltr" item={videoItem} isInline />,
     );
     expect(container).toMatchSnapshot();
   });
 
   it('should render video indicator correctly when inline on RTL', () => {
     const { container } = render(
-      <MediaIndicator
-        dir="rtl"
-        item={videoItem}
-        script={arabic}
-        service="persian"
-        isInline
-      />,
+      <MediaIndicator dir="rtl" item={videoItem} isInline />,
+      { service: 'persian' },
     );
     expect(container).toMatchSnapshot();
   });
 
   it('should render a photo gallery item correctly', () => {
     const { container } = render(
-      <MediaIndicator
-        dir="ltr"
-        item={photogalleryItem}
-        script={latin}
-        service="news"
-      />,
+      <MediaIndicator dir="ltr" item={photogalleryItem} />,
     );
     expect(container).toMatchSnapshot();
   });
 
   it('should render correctly even without duration', () => {
     const { container } = render(
-      <MediaIndicator
-        dir="ltr"
-        item={noDurationItem}
-        script={latin}
-        service="news"
-      />,
+      <MediaIndicator dir="ltr" item={noDurationItem} />,
     );
     expect(container).toMatchSnapshot();
   });
 
   it('should render correctly even without duration and cps type', () => {
     const { container } = render(
-      <MediaIndicator
-        dir="ltr"
-        item={externalVpidNoCpsTypeItem}
-        script={latin}
-        service="news"
-      />,
+      <MediaIndicator dir="ltr" item={externalVpidNoCpsTypeItem} />,
     );
     expect(container.querySelector('div')).toBeInTheDocument();
   });
 
   isNull(
     'should not render if item media object has no format',
-    <MediaIndicator
-      dir="ltr"
-      item={noMediaFormat}
-      script={latin}
-      service="news"
-    />,
+    <MediaIndicator dir="ltr" item={noMediaFormat} />,
   );
 
   isNull(
     'should not render if item is not media',
-    <MediaIndicator
-      dir="ltr"
-      item={nonMediaItem}
-      script={latin}
-      service="news"
-    />,
+    <MediaIndicator dir="ltr" item={nonMediaItem} />,
   );
 
   isNull(
     'should not render if item media object is missing',
-    <MediaIndicator
-      dir="ltr"
-      item={noMediaObject}
-      script={latin}
-      service="news"
-    />,
+    <MediaIndicator dir="ltr" item={noMediaObject} />,
   );
 });

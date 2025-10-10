@@ -52,20 +52,17 @@ const renderPage = async ({
 }: PageProps) => {
   let result;
   await act(async () => {
-    result = render(
-      <OnDemandAudioPage service={service} pageData={pageData} />,
-      {
-        service,
-        ...(variant && { variant }),
-        pageLang: lang,
-        bbcOrigin: 'https://www.test.bbc.com',
-        pageType: AUDIO_PAGE,
-        derivedPageType: 'On Demand Radio',
-        pathname: '/pathname',
-        statusCode: 200,
-        toggles,
-      },
-    );
+    result = render(<OnDemandAudioPage pageData={pageData} />, {
+      service,
+      ...(variant && { variant }),
+      pageLang: lang,
+      bbcOrigin: 'https://www.test.bbc.com',
+      pageType: AUDIO_PAGE,
+      derivedPageType: 'On Demand Radio',
+      pathname: '/pathname',
+      statusCode: 200,
+      toggles,
+    });
   });
 
   return result;
