@@ -126,7 +126,7 @@ const StyledEpisodeTextWrapper = styled(PromoComponent.Card.EpisodesText)`
 `;
 
 const StyledCardLink = styled(PromoComponent.Card.Link)`
-  ${({ theme: { fontSize } }) => fontSize.greatPrimer}
+  ${({ theme: { fontSizes } }) => fontSizes.greatPrimer}
   ${({ theme: { fontVariants } }) => fontVariants.serifMedium}
   display: block;
   margin-top: ${GEL_SPACING_HLF_TRPL};
@@ -141,7 +141,7 @@ const StyledCardLink = styled(PromoComponent.Card.Link)`
     margin-top: ${GEL_SPACING_DBL};
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    ${({ theme: { fontSize } }) => fontSize.pica}
+    ${({ theme: { fontSizes } }) => fontSizes.pica}
   }
 `;
 
