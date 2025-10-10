@@ -7,7 +7,7 @@ import PageLayoutWrapper from '../PageLayoutWrapper';
 
 jest.unmock('.');
 
-describe('Theme Provider', () => {
+describe('Real Theme Provider', () => {
   it.each(services.filter(service => !['newsround'].includes(service)))(
     `renders the correct Brand SVG for %s`,
     async service => {
