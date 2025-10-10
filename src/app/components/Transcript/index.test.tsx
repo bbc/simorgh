@@ -3,6 +3,7 @@ import { render } from '../react-testing-library-with-providers';
 import transcriptFixture from './fixture.json';
 import Transcript from './index';
 import * as viewTracking from '../../hooks/useViewTracker';
+import * as clickTracking from '../../hooks/useClickTrackerHandler';
 
 describe('Transcript Component', () => {
   it('should render details element', () => {
@@ -76,6 +77,28 @@ describe('Transcript Component', () => {
           type: 'transcript-open',
         },
       });
+    });
+  });
+
+  describe('click tracking', () => {
+    afterEach(() => {
+      jest.clearAllMocks();
+    });
+
+    it('should call click tracker handler when summary is clicked', () => {
+      const clickTrackerMock = jest.fn();
+      jest
+        .spyOn(clickTracking, 'default')
+        .mockReturnValue({ onClick: clickTrackerMock });
+
+      const { container } = render(
+        <Transcript transcript={transcriptFixture} title="My Title" />,
+      );
+
+      const summary = container.querySelector('summary');
+      summary?.click();
+
+      expect(clickTrackerMock).toHaveBeenCalledTimes(1);
     });
   });
 });
