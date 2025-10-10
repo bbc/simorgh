@@ -1,4 +1,3 @@
-import { ServiceTheme } from '#app/models/types/theming';
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import latinScript from '../fontScripts/latin';
 import helmetFontVariants from '../fontVariants/helmet';
@@ -6,7 +5,7 @@ import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/somali';
 import getPWATypographyTheme from './getPWATypographyTheme';
 
-const somaliTheme: ServiceTheme = {
+const somaliTheme = {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -20,7 +19,6 @@ const somaliTheme: ServiceTheme = {
     fontFaces: [],
   },
   brandSVG,
-  service: 'somali',
 };
 
 export default withThemeProvider(somaliTheme, getPWATypographyTheme());

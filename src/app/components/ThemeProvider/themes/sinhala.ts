@@ -1,4 +1,3 @@
-import { ServiceTheme } from '#app/models/types/theming';
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import sinhaleseScript from '../fontScripts/sinhalese';
 import {
@@ -9,7 +8,7 @@ import sinhalaFontVariants from '../fontVariants/sinhala';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/sinhala';
 
-const sinhalaTheme: ServiceTheme = {
+const sinhalaTheme = {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -23,7 +22,6 @@ const sinhalaTheme: ServiceTheme = {
     fontFaces: [NOTO_SERIF_SINHALA_BOLD, NOTO_SERIF_SINHALA_REGULAR],
   },
   brandSVG,
-  service: 'sinhala',
 };
 
 export default withThemeProvider(sinhalaTheme);

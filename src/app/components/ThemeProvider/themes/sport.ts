@@ -1,4 +1,3 @@
-import { ServiceTheme } from '#app/models/types/theming';
 import {
   SPORT_YELLOW,
   BLACK,
@@ -16,7 +15,7 @@ import reithFontVariants from '../fontVariants/reith';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/sport';
 
-const sportTheme: ServiceTheme = {
+const sportTheme = {
   palette: {
     BRAND_BACKGROUND: SPORT_YELLOW,
     BRAND_LOGO: BLACK,
@@ -35,7 +34,6 @@ const sportTheme: ServiceTheme = {
     ],
   },
   brandSVG,
-  service: 'sport',
 };
 
 export default withThemeProvider(sportTheme);

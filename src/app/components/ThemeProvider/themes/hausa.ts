@@ -1,4 +1,3 @@
-import { ServiceTheme } from '#app/models/types/theming';
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import latinScript from '../fontScripts/latin';
 import helmetFontVariants from '../fontVariants/helmet';
@@ -6,7 +5,7 @@ import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/hausa';
 import getPWATypographyTheme from './getPWATypographyTheme';
 
-const hausaTheme: ServiceTheme = {
+const hausaTheme = {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -20,7 +19,6 @@ const hausaTheme: ServiceTheme = {
     fontFaces: [],
   },
   brandSVG,
-  service: 'hausa',
 };
 
 export default withThemeProvider(hausaTheme, getPWATypographyTheme());

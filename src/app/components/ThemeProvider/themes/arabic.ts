@@ -1,4 +1,3 @@
-import { ServiceTheme } from '#app/models/types/theming';
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import arabicScript from '../fontScripts/arabic';
 import { REITH_QALAM_BOLD, REITH_QALAM_REGULAR } from '../fontFaces';
@@ -6,7 +5,7 @@ import reithQalamFontVariants from '../fontVariants/reithQalam';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/arabic';
 
-const arabicTheme: ServiceTheme = {
+const arabicTheme = {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -20,7 +19,6 @@ const arabicTheme: ServiceTheme = {
     fontFaces: [REITH_QALAM_BOLD, REITH_QALAM_REGULAR],
   },
   brandSVG,
-  service: 'arabic',
 };
 
 export default withThemeProvider(arabicTheme);

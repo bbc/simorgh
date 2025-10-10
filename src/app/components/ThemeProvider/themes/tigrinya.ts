@@ -1,4 +1,3 @@
-import { ServiceTheme } from '#app/models/types/theming';
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import noAscOrDescScript from '../fontScripts/noAscOrDesc';
 import {
@@ -9,7 +8,7 @@ import tigrinyaFontVariants from '../fontVariants/tigrinya';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/tigrinya';
 
-const tigrinyaTheme: ServiceTheme = {
+const tigrinyaTheme = {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -23,7 +22,6 @@ const tigrinyaTheme: ServiceTheme = {
     fontFaces: [NOTO_SANS_ETHIOPIC_BOLD, NOTO_SANS_ETHIOPIC_REGULAR],
   },
   brandSVG,
-  service: 'tigrinya',
 };
 
 export default withThemeProvider(tigrinyaTheme);

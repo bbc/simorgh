@@ -1,4 +1,3 @@
-import { ServiceTheme } from '#app/models/types/theming';
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import tamilScript from '../fontScripts/tamil';
 import { NOTO_SANS_TAMIL_BOLD, NOTO_SANS_TAMIL_REGULAR } from '../fontFaces';
@@ -6,7 +5,7 @@ import tamilFontVariants from '../fontVariants/tamil';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/tamil';
 
-const tamilTheme: ServiceTheme = {
+const tamilTheme = {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -20,7 +19,6 @@ const tamilTheme: ServiceTheme = {
     fontFaces: [NOTO_SANS_TAMIL_BOLD, NOTO_SANS_TAMIL_REGULAR],
   },
   brandSVG,
-  service: 'tamil',
 };
 
 export default withThemeProvider(tamilTheme);

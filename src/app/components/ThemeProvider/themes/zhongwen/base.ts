@@ -1,10 +1,9 @@
-import { ServiceTheme } from '#app/models/types/theming';
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../../palette';
 import noAscOrDescScript from '../../fontScripts/noAscOrDesc';
 import chineseFontVariants from '../../fontVariants/chinese';
 import brandSVG from '../../chameleonLogos/zhongwen';
 
-const zhongwenTheme: ServiceTheme = {
+const zhongwenTheme = {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -18,7 +17,6 @@ const zhongwenTheme: ServiceTheme = {
     fontFaces: [],
   },
   brandSVG,
-  service: 'zhongwen',
 };
 
 export default zhongwenTheme;

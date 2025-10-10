@@ -1,4 +1,3 @@
-import { ServiceTheme } from '#app/models/types/theming';
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import latinScript from '../fontScripts/latin';
 import {
@@ -11,7 +10,7 @@ import reithFontVariants from '../fontVariants/reith';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/news';
 
-const romaniaTheme: ServiceTheme = {
+const romaniaTheme = {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -30,7 +29,6 @@ const romaniaTheme: ServiceTheme = {
     ],
   },
   brandSVG,
-  service: 'romania',
 };
 
 export default withThemeProvider(romaniaTheme);

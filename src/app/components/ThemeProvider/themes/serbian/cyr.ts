@@ -14,6 +14,6 @@ const serbianCyrillicTheme = mergeDeepLeft(
 );
 
 export default withThemeProvider(
-  { ...serbianCyrillicTheme, service: 'serbian' },
+  serbianCyrillicTheme,
   getPWATypographyTheme(cyrillicScript),
 );

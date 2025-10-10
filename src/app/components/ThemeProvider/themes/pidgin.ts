@@ -1,4 +1,3 @@
-import { ServiceTheme } from '#app/models/types/theming';
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import latin from '../fontScripts/latin';
 import helmetFontVariants from '../fontVariants/helmet';
@@ -6,7 +5,7 @@ import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/pidgin';
 import getPWATypographyTheme from './getPWATypographyTheme';
 
-const pidginTheme: ServiceTheme = {
+const pidginTheme = {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -20,7 +19,6 @@ const pidginTheme: ServiceTheme = {
     fontFaces: [],
   },
   brandSVG,
-  service: 'pidgin',
 };
 
 export default withThemeProvider(pidginTheme, getPWATypographyTheme());

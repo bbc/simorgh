@@ -14,6 +14,6 @@ const serbianLatinTheme = mergeDeepLeft(
 );
 
 export default withThemeProvider(
-  { ...serbianLatinTheme, service: 'serbian' },
+  serbianLatinTheme,
   getPWATypographyTheme(latinWithDiacriticsScript),
 );

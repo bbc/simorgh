@@ -1,4 +1,3 @@
-import { ServiceTheme } from '#app/models/types/theming';
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import latinWithDiacriticsScript from '../fontScripts/latinWithDiacritics';
 import {
@@ -10,7 +9,7 @@ import reithFontVariants from '../fontVariants/reith';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../../../legacy/psammead/psammead-assets/src/svgs/naidheachdan';
 
-const naidheachdanTheme: ServiceTheme = {
+const naidheachdanTheme = {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -24,7 +23,6 @@ const naidheachdanTheme: ServiceTheme = {
     fontFaces: [REITH_SANS_BOLD, REITH_SANS_REGULAR, REITH_SERIF_MEDIUM],
   },
   brandSVG,
-  service: 'naidheachdan',
 };
 
 export default withThemeProvider(naidheachdanTheme);

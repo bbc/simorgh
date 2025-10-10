@@ -1,11 +1,10 @@
-import { ServiceTheme } from '#app/models/types/theming';
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import devanagariScript from '../fontScripts/devanagari';
 import nepaliFontVariants from '../fontVariants/nepali';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/nepali';
 
-const nepaliTheme: ServiceTheme = {
+const nepaliTheme = {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -19,7 +18,6 @@ const nepaliTheme: ServiceTheme = {
     fontFaces: [],
   },
   brandSVG,
-  service: 'nepali',
 };
 
 export default withThemeProvider(nepaliTheme);

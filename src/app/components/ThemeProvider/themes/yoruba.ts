@@ -1,4 +1,3 @@
-import { ServiceTheme } from '#app/models/types/theming';
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import latinScript from '../fontScripts/latin';
 import helmetFontVariants from '../fontVariants/helmet';
@@ -6,7 +5,7 @@ import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/yoruba';
 import getPWATypographyTheme from './getPWATypographyTheme';
 
-const yorubaTheme: ServiceTheme = {
+const yorubaTheme = {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -20,7 +19,6 @@ const yorubaTheme: ServiceTheme = {
     fontFaces: [],
   },
   brandSVG,
-  service: 'yoruba',
 };
 
 export default withThemeProvider(yorubaTheme, getPWATypographyTheme());
