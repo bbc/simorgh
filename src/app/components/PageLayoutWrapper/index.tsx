@@ -209,23 +209,30 @@ const PageLayoutWrapper = ({
                         allTopicsCount += topicsContents.${service}[topcats[i]].count;
                     }
                     const topCatRatio = Math.round((topicsContents.${service}[topcats[0]].count / allTopicsCount) * 100);
-                    if(("cookieStore" in window)) {
-                        cookieStore.get('atuserid').then(atuseridCookie => {
-                            const atuseridCookieValue = atuseridCookie ? JSON.parse(decodeURIComponent(atuseridCookie.value)).val : 'kjasd8998sd';
-                            const deliveryPoint = 'https://a1.api.bbc.co.uk/hit.xiti?s=598342&idclient=' + atuseridCookieValue + '&col=2&ts=' + Date.now() + '&ptag=js&context=' + encodeURIComponent(JSON.stringify([{"data":{"page":{"$":"${service}.page"},"site":{"level2_id":${atiAnalyticsProducerId}}}}])) + '&events=';
-                            const payload = new Array();
-                            payload.push(deliveryPoint + encodeURIComponent(JSON.stringify([{"name":"viewability.view","data":{"group":{"name":"topics-viewed","type":""},"event":{"category":"viewability","action":"view","grouping":"topics-viewed"},"user":{"id":"' + atuseridCookieValue + '"},"app":{"type":"responsive","name":"news-${service}"},"item":{"name":"languages-viewed", "position": numberOfLanguagesConsumed }}}])));
-                            payload.push(deliveryPoint + encodeURIComponent(JSON.stringify([{"name":"viewability.view","data":{"group":{"name":"topics-viewed","type":""},"event":{"category":"viewability","action":"view","grouping":"topics-viewed"},"user":{"id":"' + atuseridCookieValue + '"},"app":{"type":"responsive","name":"news-${service}"},"item":{"name":"topics-viewed", "position": topcats.length }}}])));
-                            payload.push(deliveryPoint + encodeURIComponent(JSON.stringify([{"name":"viewability.view","data":{"group":{"name":"topics-viewed","type":""},"event":{"category":"viewability","action":"view","grouping":"topics-viewed"},"user":{"id":"' + atuseridCookieValue + '"},"app":{"type":"responsive","name":"news-${service}"},"item":{"name":"top-topic-id", "position": topCatRatio, "text": topicsContents.${service}[topcats[0]].id }}}])));
-
-                            payload.forEach(key => {
-                                const trackingImage = new Image(1,1);
-                                trackingImage.src = key;
-                                document.body.appendChild(trackingImage);
-                            
-                            });
-                        });
+                    function getCookie(name) {
+                        var value = "; " + document.cookie;
+                        var parts = value.split("; " + name + "=");
+                        if (parts.length == 2) {
+                            return parts.pop().split(";").shift();
+                        }
+                        return null;
                     }
+                    var atuseridCookie = getCookie('atuserid');
+                    const atuseridCookieValue = atuseridCookie ? JSON.parse(decodeURIComponent(atuseridCookie.value)).val : 'kjasd8998sd';
+                    const deliveryPoint = 'https://a1.api.bbc.co.uk/hit.xiti?s=598342&idclient=' + atuseridCookieValue + '&col=2&ts=' + Date.now() + '&ptag=js&context=' + encodeURIComponent(JSON.stringify([{"data":{"page":{"$":"${service}.page"},"site":{"level2_id":${atiAnalyticsProducerId}}}}])) + '&events=';
+                    const payload = new Array();
+                    payload.push(deliveryPoint + encodeURIComponent(JSON.stringify([{"name":"viewability.view","data":{"group":{"name":"topics-viewed","type":""},"event":{"category":"viewability","action":"view","grouping":"topics-viewed"},"user":{"id":"' + atuseridCookieValue + '"},"app":{"type":"responsive","name":"news-${service}"},"item":{"name":"languages-viewed", "position": numberOfLanguagesConsumed }}}])));
+                    payload.push(deliveryPoint + encodeURIComponent(JSON.stringify([{"name":"viewability.view","data":{"group":{"name":"topics-viewed","type":""},"event":{"category":"viewability","action":"view","grouping":"topics-viewed"},"user":{"id":"' + atuseridCookieValue + '"},"app":{"type":"responsive","name":"news-${service}"},"item":{"name":"topics-viewed", "position": topcats.length }}}])));
+                    payload.push(deliveryPoint + encodeURIComponent(JSON.stringify([{"name":"viewability.view","data":{"group":{"name":"topics-viewed","type":""},"event":{"category":"viewability","action":"view","grouping":"topics-viewed"},"user":{"id":"' + atuseridCookieValue + '"},"app":{"type":"responsive","name":"news-${service}"},"item":{"name":"top-topic-id", "position": topCatRatio, "text": topicsContents.${service}[topcats[0]].id }}}])));
+                    var trackingDivContainer = document.createElement('DIV');
+                    payload.forEach(key => {
+                        const trackingImage = new Image(1,1);
+                        trackingImage.src = key;
+                        trackingDivContainer.appendChild(trackingImage);
+                    });
+                    document.addEventListener("DOMContentLoaded", function(arg) {
+                        document.body.appendChild(trackingDivContainer);
+                    });
                 }
                 localStorage.setItem(topicsStorageKey, JSON.stringify(topicsContents));
     `;
