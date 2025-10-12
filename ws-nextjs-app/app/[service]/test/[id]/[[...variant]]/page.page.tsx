@@ -7,7 +7,7 @@ import getPageData from '#nextjs/utilities/pageRequests/getPageData';
 import sendCustomMetric from '#src/server/utilities/customMetrics';
 import { NON_200_RESPONSE } from '#src/server/utilities/customMetrics/metrics.const';
 import extractHeaders from '#src/server/utilities/extractHeaders';
-import logResponseTime from '#src/server/utilities/logResponseTime';
+// import logResponseTime from '#src/server/utilities/logResponseTime';
 import { headers } from 'next/headers';
 import { notFound } from 'next/navigation';
 import nodeLogger from '#lib/logger.node';
@@ -19,7 +19,7 @@ export const dynamic = 'force-dynamic';
 interface PageProps {
   params: {
     service: Services;
-    variant?: Variants;
+    variant?: Variants[];
     id: string;
   };
   searchParams: {
@@ -43,8 +43,9 @@ export default async function LivePage({ params, searchParams }: PageProps) {
 
   const { renderer_env: rendererEnv, page = '1' } = await searchParams;
 
-  const variant = null;
-  const resolvedUrl = `/live/${service}/${id}`; // reconstruct if needed
+  const variant = deriveVariant(variantFromUrl);
+
+  const resolvedUrl = `/live/${service}/${id}`;
 
   const { isApp, isLite } = getPathExtension(resolvedUrl);
 
@@ -58,7 +59,6 @@ export default async function LivePage({ params, searchParams }: PageProps) {
     notFound(); // Redirect to 404 page
   }
 
-  // ✅ Fetch data server-side
   const { data, toggles } = await getPageData({
     id,
     page,
@@ -111,7 +111,6 @@ export default async function LivePage({ params, searchParams }: PageProps) {
     ...extractHeaders(Object.fromEntries(reqHeaders)),
   };
 
-  // 📌 Render directly or pass to a client component
   return (
     <div>
       hello<p>{JSON.stringify(props, null, 2)}</p>
