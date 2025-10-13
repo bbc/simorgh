@@ -7,6 +7,7 @@ import { RequestContext } from '../../contexts/RequestContext';
 import { MEDIA_ARTICLE_PAGE, TV_PAGE } from '../../routes/utils/pageTypes';
 import { PageTypes } from '../../models/types/global';
 import getThemeConfig from './getThemeConfig';
+import mergeThemeWithPWATypography from './themes/mergeThemeWithPWATypography';
 
 const isDarkUiPage = (pageType: PageTypes) =>
   pageType === MEDIA_ARTICLE_PAGE || pageType === TV_PAGE;
@@ -19,13 +20,7 @@ const useMergeTheme = (
 
   return useMemo(() => {
     if (isPWA && pwaTheme) {
-      return {
-        ...baseTheme,
-        typography: {
-          ...baseTheme.typography,
-          ...pwaTheme.typography,
-        },
-      };
+      mergeThemeWithPWATypography({ baseTheme, pwaTheme });
     }
     return baseTheme;
   }, [isPWA, baseTheme, pwaTheme]);

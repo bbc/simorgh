@@ -1,4 +1,3 @@
-import { Services } from '#app/models/types/global';
 import { useTheme } from '@emotion/react';
 import { FontFace } from '#app/models/types/theming';
 
@@ -283,41 +282,11 @@ export const REITH_QALAM_REGULAR: Font = {
   },
 };
 
-const REITH_FOR_PWA_SERVICES: Services[] = [
-  'afaanoromoo',
-  'afrique',
-  'azeri',
-  'gahuza',
-  'hausa',
-  'igbo',
-  'indonesia',
-  'kyrgyz',
-  'pidgin',
-  'serbian',
-  'somali',
-  'swahili',
-  'ukrainian',
-  'uzbek',
-  'yoruba',
-];
-
-export default ({ service, isPWA }: { service: Services; isPWA: boolean }) => {
-  let fontFaces;
-
-  if (isPWA && REITH_FOR_PWA_SERVICES.includes(service)) {
-    fontFaces = [
-      REITH_SANS_BOLD,
-      REITH_SANS_REGULAR,
-      REITH_SERIF_MEDIUM,
-      REITH_SERIF_LIGHT,
-    ];
-  } else {
-    // Font faces as defined in the service theme
-    ({ fontFaces } = useTheme());
-  }
+export default () => {
+  const { fontFaces } = useTheme();
 
   // Return the raw font info
-  const fonts = fontFaces.map(font => font['@font-face']);
+  const fonts = fontFaces.map(font => font['@font-face']).sort();
 
   return fonts;
 };

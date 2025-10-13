@@ -132,6 +132,7 @@ export default ({
   typography,
   brandSVG,
   palette,
+  usePWATypography,
   isLite,
   isDarkUi,
 }: {
@@ -140,6 +141,7 @@ export default ({
   brandSVG: BrandSVG;
   isLite: boolean;
   isDarkUi: boolean;
+  usePWATypography?: boolean;
 }): Theme => {
   const { fontVariants, script, fontFaces } = typography;
   const {
@@ -284,6 +286,7 @@ export default ({
     isLite,
     isDarkUi,
     fontFaces,
+    usePWATypography,
   };
 
   return themeConfig;

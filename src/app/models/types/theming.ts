@@ -443,6 +443,7 @@ export type ServiceTheme = {
   palette: BrandPalette;
   typography: Typography;
   brandSVG: BrandSVG;
+  usePWATypography?: boolean;
 };
 
 declare module '@emotion/react' {
@@ -485,5 +486,6 @@ declare module '@emotion/react' {
     isDarkUi: boolean;
     isLite: boolean;
     fontFaces: Typography['fontFaces'];
+    usePWATypography?: ServiceTheme['usePWATypography'];
   }
 }

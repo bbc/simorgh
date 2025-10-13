@@ -1,11 +1,13 @@
+import { ServiceTheme } from '#app/models/types/theming';
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import latinScript from '../fontScripts/latin';
 import helmetFontVariants from '../fontVariants/helmet';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/igbo';
 import getPWATypographyTheme from './getPWATypographyTheme';
+import mergeThemeWithPWATypography from './mergeThemeWithPWATypography';
 
-const igboTheme = {
+const baseTheme: ServiceTheme = {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -19,6 +21,14 @@ const igboTheme = {
     fontFaces: [],
   },
   brandSVG,
+  usePWATypography: true,
 };
 
-export default withThemeProvider(igboTheme, getPWATypographyTheme());
+const pwaTheme = getPWATypographyTheme();
+
+export const theme = mergeThemeWithPWATypography({
+  baseTheme,
+  pwaTheme,
+});
+
+export default withThemeProvider(baseTheme, pwaTheme);
