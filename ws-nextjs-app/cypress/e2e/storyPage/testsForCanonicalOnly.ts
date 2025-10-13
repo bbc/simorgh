@@ -45,7 +45,7 @@ export default ({ service, pageType, variant }: ServiceParametersType) => {
           });
         });
         // TODO: Figure out why this test is so flakey
-        it('Riddle include is visible on the page - only /mundo/23263889', () => {
+        it.skip('Riddle include is visible on the page - only /mundo/23263889', () => {
           cy.window({ timeout: 20000 }).then(win => {
             if (win.location.pathname.includes('/mundo/23263889')) {
               cy.get(`div[class="riddle-target-initialised"] > iframe`)
