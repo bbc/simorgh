@@ -54,7 +54,6 @@ export async function GET(
     return Response.json(JSON.parse(pageData));
   } catch (error) {
     const { message } = error as FetchError;
-
-    return new Response(message, { status: 500 });
+    return new Response(message, { status: 404 });
   }
 }

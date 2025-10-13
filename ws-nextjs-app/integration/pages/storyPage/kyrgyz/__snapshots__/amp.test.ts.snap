@@ -1,0 +1,394 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`AMP Story Page A11y I can see the skip to content link 1`] = `"Сайтка өтүү"`;
+
+exports[`AMP Story Page AMP Geo config 1`] = `"{"AmpBind":true,"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"],"gbOrUnknown":["gb","gg","im","je","uk","unknown"]}}"`;
+
+exports[`AMP Story Page Analytics ATI 1`] = `
+{
+  "requests": {
+    "base": "https://logws1363.ati-host.net/hit.xiti?",
+    "pageview": [
+      {
+        "s": "598343",
+      },
+      {
+        "s2": "58",
+      },
+      {
+        "p": "kyrgyz.story.23292889.page",
+      },
+      {
+        "r": "\${screenWidth}x\${screenHeight}x\${screenColorDepth}",
+      },
+      {
+        "re": "\${availableScreenWidth}x\${availableScreenHeight}",
+      },
+      {
+        "hl": "\${timestamp}",
+      },
+      {
+        "lng": "\${browserLanguage}",
+      },
+      {
+        "x1": "[urn:bbc:cps:curie:asset:bb9390aa-4b35-e448-b295-cbd7369fe457]",
+      },
+      {
+        "x2": "[amp]",
+      },
+      {
+        "x3": "[news-kyrgyz]",
+      },
+      {
+        "x4": "[ky]",
+      },
+      {
+        "x5": "[\${sourceUrl}]",
+      },
+      {
+        "x6": "[\${documentReferrer}]",
+      },
+      {
+        "x7": "[article]",
+      },
+      {
+        "x8": "[simorgh]",
+      },
+      {
+        "x9": "[Test%20STY%20for%20social%20embeds%20-%20BBC%20News%20Кыргыз%20Кызматы]",
+      },
+      {
+        "x11": "[2020-04-24T14:51:17.000Z]",
+      },
+      {
+        "x12": "[2020-04-24T14:51:17.000Z]",
+      },
+      {
+        "ref": "\${documentReferrer}",
+      },
+    ],
+  },
+  "transport": {
+    "beacon": false,
+    "image": true,
+    "xhrpost": false,
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview",
+    },
+  },
+}
+`;
+
+exports[`AMP Story Page Analytics chartbeat 1`] = `
+{
+  "vars": {
+    "contentType": "STY",
+    "domain": "test.bbc.co.uk",
+    "sections": "Kyrgyz, Kyrgyz - STY",
+    "title": "Test STY for social embeds",
+    "uid": 50924,
+    "virtualReferrer": "\${documentReferrer}",
+  },
+}
+`;
+
+exports[`AMP Story Page Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, Кыргыз КызMATы",
+  "url": "/kyrgyz",
+}
+`;
+
+exports[`AMP Story Page Footer Anchors should match text and url 2`] = `
+{
+  "text": "Эмнеге BBC News ишенсе болот?",
+  "url": "https://www.bbc.com/kyrgyz/institutional-49677275",
+}
+`;
+
+exports[`AMP Story Page Footer Anchors should match text and url 3`] = `
+{
+  "text": "Колдонуу эрежелери",
+  "url": "https://www.bbc.com/kyrgyz/institutional-38157280",
+}
+`;
+
+exports[`AMP Story Page Footer Anchors should match text and url 4`] = `
+{
+  "text": "Би-Би-Си жөнүндө",
+  "url": "https://www.bbc.com/kyrgyz/institutional-38157281",
+}
+`;
+
+exports[`AMP Story Page Footer Anchors should match text and url 5`] = `
+{
+  "text": "Купуялык",
+  "url": "https://www.bbc.com/kyrgyz/institutional-38157282",
+}
+`;
+
+exports[`AMP Story Page Footer Anchors should match text and url 6`] = `
+{
+  "text": "Cookies",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`AMP Story Page Footer Anchors should match text and url 7`] = `
+{
+  "text": "Би-Би-Си менен байланышыңыз",
+  "url": "https://www.bbc.co.uk/kyrgyz/send/u50853445",
+}
+`;
+
+exports[`AMP Story Page Footer Anchors should match text and url 8`] = `
+{
+  "text": "Башка тилдерде",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`AMP Story Page Footer Anchors should match text and url 9`] = `
+{
+  "text": "Башка интернет сайттардын мазмуну боюнча биздин позиция.",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
+}
+`;
+
+exports[`AMP Story Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/kyrgyz"`;
+
+exports[`AMP Story Page Footer Paragraphs should match text 1`] = `"© 2025 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
+
+exports[`AMP Story Page Header I can see the branding 1`] = `"BBC News, Кыргыз КызMATы"`;
+
+exports[`AMP Story Page Header Navigation link should match text and url 1`] = `
+{
+  "text": "Башкы бет",
+  "url": "/kyrgyz",
+}
+`;
+
+exports[`AMP Story Page Header Navigation link should match text and url 2`] = `
+{
+  "text": "Видео жаңылыктар",
+  "url": "/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4t",
+}
+`;
+
+exports[`AMP Story Page Header Navigation link should match text and url 3`] = `
+{
+  "text": "Кыргызстан",
+  "url": "/kyrgyz/topics/cz74kjpyk07t",
+}
+`;
+
+exports[`AMP Story Page Header Navigation link should match text and url 4`] = `
+{
+  "text": "Дүйнө",
+  "url": "/kyrgyz/topics/ck2l9z012nkt",
+}
+`;
+
+exports[`AMP Story Page Header Navigation link should match text and url 5`] = `
+{
+  "text": "Журнал",
+  "url": "/kyrgyz/topics/czp8pjrkgp0t",
+}
+`;
+
+exports[`AMP Story Page Image Caption should match text 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
+
+exports[`AMP Story Page Image should match snapshot 1`] = `
+<amp-img
+  alt="social media"
+  class="bbc-image"
+  data-hero="true"
+  fallback=""
+  height="351"
+  layout="responsive"
+  src="https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/11D53/test/_63734037_socialmedia.jpg.webp"
+  srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/11D53/test/_63734037_socialmedia.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/11D53/test/_63734037_socialmedia.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/11D53/test/_63734037_socialmedia.jpg.webp 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsdevpb/11D53/test/_63734037_socialmedia.jpg.webp 624w"
+  width="624"
+/>
+`;
+
+exports[`AMP Story Page Main heading should match text 1`] = `"Test STY for social embeds"`;
+
+exports[`AMP Story Page SEO Apple Touch Icon should match attributes 1`] = `
+{
+  "sizes": null,
+  "url": "http://localhost:7080/kyrgyz/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`AMP Story Page SEO Apple Touch Icon should match attributes 2`] = `
+{
+  "sizes": "72x72",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`AMP Story Page SEO Apple Touch Icon should match attributes 3`] = `
+{
+  "sizes": "96x96",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`AMP Story Page SEO Apple Touch Icon should match attributes 4`] = `
+{
+  "sizes": "128x128",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`AMP Story Page SEO Apple Touch Icon should match attributes 5`] = `
+{
+  "sizes": "144x144",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`AMP Story Page SEO Apple Touch Icon should match attributes 6`] = `
+{
+  "sizes": "152x152",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`AMP Story Page SEO Apple Touch Icon should match attributes 7`] = `
+{
+  "sizes": "180x180",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`AMP Story Page SEO Apple Touch Icon should match attributes 8`] = `
+{
+  "sizes": "192x192",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`AMP Story Page SEO Apple Touch Icon should match attributes 9`] = `
+{
+  "sizes": "384x384",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`AMP Story Page SEO Apple Touch Icon should match attributes 10`] = `
+{
+  "sizes": "512x512",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-512x512.png",
+}
+`;
+
+exports[`AMP Story Page SEO Canonical link 1`] = `"http://localhost:7081/kyrgyz/23292889"`;
+
+exports[`AMP Story Page SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`AMP Story Page SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`AMP Story Page SEO Heading level 1 1`] = `"Test STY for social embeds"`;
+
+exports[`AMP Story Page SEO Lang attribute 1`] = `"ky"`;
+
+exports[`AMP Story Page SEO Linked data should match text 1`] = `
+{
+  "@context": "http://schema.org",
+  "@graph": [
+    {
+      "@type": "NewsArticle",
+      "author": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
+          "width": 1024,
+        },
+        "name": "BBC News Кыргыз Кызматы",
+        "noBylinesPolicy": "https://www.bbc.com/kyrgyz/institutional-49677275#authorexpertise",
+      },
+      "dateModified": "2020-04-24T14:51:17.000Z",
+      "datePublished": "2020-04-24T14:51:17.000Z",
+      "description": "A test STY for social embeds",
+      "headline": "Test STY for social embeds",
+      "image": {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://ichef.bbci.co.uk/news/1024/branded_kyrgyz/CF33/test/_63734035_socialmedia.jpg",
+        "width": 1024,
+      },
+      "inLanguage": {
+        "@type": "Language",
+        "alternateName": "ky",
+        "name": "Kyrgyz",
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:7081/kyrgyz/23292889",
+        "@type": "WebPage",
+        "name": "Test STY for social embeds",
+      },
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
+          "width": 1024,
+        },
+        "name": "BBC News Кыргыз Кызматы",
+        "publishingPrinciples": "https://www.bbc.com/kyrgyz/institutional-49677275",
+      },
+      "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_kyrgyz/CF33/test/_63734035_socialmedia.jpg",
+      "url": "http://localhost:7081/kyrgyz/23292889",
+    },
+  ],
+}
+`;
+
+exports[`AMP Story Page SEO OG description 1`] = `"A test STY for social embeds"`;
+
+exports[`AMP Story Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_kyrgyz/CF33/test/_63734035_socialmedia.jpg"`;
+
+exports[`AMP Story Page SEO OG image alt 1`] = `"social media"`;
+
+exports[`AMP Story Page SEO OG locale 1`] = `"ky-KG"`;
+
+exports[`AMP Story Page SEO OG site name 1`] = `"BBC News Кыргыз Кызматы"`;
+
+exports[`AMP Story Page SEO OG title 1`] = `"Test STY for social embeds - BBC News Кыргыз Кызматы"`;
+
+exports[`AMP Story Page SEO OG type 1`] = `"article"`;
+
+exports[`AMP Story Page SEO OG url 1`] = `"http://localhost:7081/kyrgyz/23292889"`;
+
+exports[`AMP Story Page SEO Page title 1`] = `"Test STY for social embeds - BBC News Кыргыз Кызматы"`;
+
+exports[`AMP Story Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
+
+exports[`AMP Story Page SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`AMP Story Page SEO Twitter creator 1`] = `"@bbckyrgyz"`;
+
+exports[`AMP Story Page SEO Twitter description 1`] = `"A test STY for social embeds"`;
+
+exports[`AMP Story Page SEO Twitter image alt 1`] = `"social media"`;
+
+exports[`AMP Story Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_kyrgyz/CF33/test/_63734035_socialmedia.jpg"`;
+
+exports[`AMP Story Page SEO Twitter site 1`] = `"@bbckyrgyz"`;
+
+exports[`AMP Story Page SEO Twitter title 1`] = `"Test STY for social embeds - BBC News Кыргыз Кызматы"`;
+
+exports[`AMP Story Page Timestamp should match text and date 1`] = `
+{
+  "date": "2020-04-24",
+  "text": "24 апрель 2020",
+}
+`;
