@@ -5,8 +5,10 @@ import { EventTrackingData, EventTrackingProps } from '../types';
 export default ({
   eventTrackingData,
   eventType,
+  eventTrackingContextFromHook,
 }: EventTrackingProps): EventTrackingData => {
-  const eventTrackingContext = use(EventTrackingContext);
+  const eventTrackingContext =
+    eventTrackingContextFromHook || use(EventTrackingContext);
 
   const {
     componentName = '',
