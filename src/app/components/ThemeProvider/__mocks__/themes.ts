@@ -165,7 +165,6 @@ const themes = [
   ...Object.entries(themesWithVariants),
 ].reduce((config, [service, serviceTheme]) => {
   const defaultThemeProps = { isLite: false, isDarkUi: false };
-  // @ts-expect-error need to initialise the object in case it does not exist
   config[service] = {};
 
   if (Object.keys(themesNoVariants).includes(service)) {
@@ -176,7 +175,6 @@ const themes = [
     });
   } else {
     Object.entries(serviceTheme).forEach(([variant, variantTheme]) => {
-      // @ts-expect-error service with variant theme
       config[service][variant] = getThemeConfig({
         ...variantTheme,
         ...defaultThemeProps,

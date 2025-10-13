@@ -44,15 +44,12 @@ export const ThemeProvider = ({
   service,
   ...rest
 }: PropsWithChildren<ServicesVariantsProps>) => {
-  let LoadableContextProvider:
-    | ThemeComponentLoadable
-    | FallbackThemeComponent
-    | null = null;
+  let LoadableContextProvider: ThemeComponentLoadable | FallbackThemeComponent;
 
   const variant: Variants = rest.variant || defaultServiceVariants[service];
 
-  let serviceVariants;
-  let serviceNoVariants;
+  let serviceVariants: ThemeComponentLoadable | undefined;
+  let serviceNoVariants: ThemeComponentLoadable | undefined;
 
   if (service in variantThemes) {
     serviceVariants =

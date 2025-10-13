@@ -12,10 +12,8 @@ const loadFontFaces = ({ service, variant }: ServicesVariantsProps) => {
   let theme: emotionReact.Theme;
 
   if (variant) {
-    // @ts-expect-error lookup theme by service & variant
     theme = themes[service][variant];
   } else {
-    // @ts-expect-error lookup theme by service
     theme = themes[service];
   }
 
