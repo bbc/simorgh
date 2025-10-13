@@ -1,8 +1,14 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Services } from '#app/models/types/global';
 import loadable, { LoadableComponent } from '@loadable/component';
 
-const loadableConfig: Record<Services, LoadableComponent<any>> = {
+const loadableConfig: Record<
+  Services,
+  LoadableComponent<{
+    Context: unknown;
+    dataKey?: null;
+    children: unknown;
+  }>
+> = {
   afaanoromoo: loadable(() => import('./afaanoromoo')),
   afrique: loadable(() => import('./afrique')),
   amharic: loadable(() => import('./amharic')),
