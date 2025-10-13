@@ -1,8 +1,10 @@
 /* eslint-disable no-console */
 
-const { exec, spawn } = require('child_process');
-const argv = require('minimist')(process.argv.slice(2));
-const path = require('path');
+import { exec, spawn } from 'child_process';
+import path, { join } from 'path';
+import minimist from 'minimist';
+
+const argv = minimist(process.argv.slice(2));
 
 const onlyRunTests = Boolean(argv.onlyRunTests);
 const isDev = Boolean(argv.dev);
@@ -103,7 +105,7 @@ if (onlyRunTests) {
   });
 } else {
   if (argv.nextJS) {
-    const nextAppDir = path.join(path.resolve(), 'ws-nextjs-app');
+    const nextAppDir = join(path.resolve(), 'ws-nextjs-app');
     process.chdir(nextAppDir);
   }
 
