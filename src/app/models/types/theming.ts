@@ -335,72 +335,46 @@ export type TypographyScript = {
   };
 };
 
+export type FontStyles = {
+  fontFamily: string;
+  fontStyle: string;
+  fontWeight: number;
+};
+
 export type FontVariants = {
   sans: {
-    regular: {
-      fontFamily: string;
-      fontStyle: string;
-      fontWeight: number;
-    };
-    regularItalic?: {
-      fontFamily: string;
-      fontStyle: string;
-      fontWeight: number;
-    };
-    bold: {
-      fontFamily: string;
-      fontStyle: string;
-      fontWeight: number;
-    };
-    boldItalic?: {
-      fontFamily: string;
-      fontStyle: string;
-      fontWeight: number;
-    };
-    light?: {
-      fontFamily: string;
-      fontStyle: string;
-      fontWeight: number;
-    };
+    regular: FontStyles;
+    regularItalic?: FontStyles;
+    bold: FontStyles;
+    boldItalic?: FontStyles;
+    light?: FontStyles;
   };
   serif?: {
-    regular: {
-      fontFamily: string;
-      fontStyle: string;
-      fontWeight: number;
-    };
-    medium: {
-      fontFamily: string;
-      fontStyle: string;
-      fontWeight: number;
-    };
-    mediumItalic: {
-      fontFamily: string;
-      fontStyle: string;
-      fontWeight: number;
-    };
-    bold: {
-      fontFamily: string;
-      fontStyle: string;
-      fontWeight: number;
-    };
-    light: {
-      fontFamily: string;
-      fontStyle: string;
-      fontWeight: number;
-    };
+    regular: FontStyles;
+    medium: FontStyles;
+    mediumItalic: FontStyles;
+    bold: FontStyles;
+    light: FontStyles;
   };
+};
+
+export type FontFace = Partial<FontStyles> & {
+  fontFamily: string;
+  src: string;
+  downloadSrc: string;
+  fontDisplay: string;
+  name: string;
+  version?: string;
+  subset?: boolean;
+};
+
+export type Font = {
+  '@font-face': FontFace;
 };
 
 export interface Typography {
   fontFaces: {
-    '@font-face'?: {
-      fontFamily: string;
-      fontWeight?: number;
-      fontStyle?: string;
-      src: string;
-      fontDisplay: string;
-    };
+    '@font-face'?: FontFace;
   }[];
   fontVariants: FontVariants;
   script: TypographyScript;
@@ -446,12 +420,6 @@ export type FontVariant =
   | 'serifBold'
   | 'serifLight';
 
-export type FontStyles = {
-  fontFamily: string;
-  fontStyle: string;
-  fontWeight: number;
-};
-
 export type BrandSVG = {
   width?: number;
   height?: number;
@@ -473,6 +441,13 @@ export type GridWidths = {
   900: number;
   1008: number;
   1280: number;
+};
+
+export type ServiceTheme = {
+  palette: BrandPalette;
+  typography: Typography;
+  brandSVG: BrandSVG;
+  usePWATypography?: boolean;
 };
 
 declare module '@emotion/react' {
@@ -509,21 +484,12 @@ declare module '@emotion/react' {
       /** 600px and above */
       GROUP_D_MIN_WIDTH: string;
     };
-    fontVariants: {
-      sansRegular: FontStyles;
-      sansRegularItalic: FontStyles;
-      sansBold: FontStyles;
-      sansBoldItalic: FontStyles;
-      sansLight: FontStyles;
-      serifRegular: FontStyles;
-      serifMedium: FontStyles;
-      serifMediumItalic: FontStyles;
-      serifBold: FontStyles;
-      serifLight: FontStyles;
-    };
+    fontVariants: Record<FontVariant, FontStyles>;
     brandSVG: BrandSVG;
     gridWidths: GridWidths;
     isDarkUi: boolean;
     isLite: boolean;
+    fontFaces: Typography['fontFaces'];
+    usePWATypography?: ServiceTheme['usePWATypography'];
   }
 }

@@ -2,7 +2,7 @@ import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../../palette';
 import helmetFontVariants from '../../fontVariants/helmet';
 import brandSVG from '../../chameleonLogos/uzbek';
 
-const baseUzbekTheme = {
+export default {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -15,6 +15,5 @@ const baseUzbekTheme = {
     fontFaces: [],
   },
   brandSVG,
+  usePWATypography: true,
 };
-
-export default baseUzbekTheme;

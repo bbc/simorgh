@@ -1,3 +1,4 @@
+import { ServiceTheme } from '#app/models/types/theming';
 import { ARCHIVE_BLUE, WHITE } from '../palette';
 import latinScript from '../fontScripts/latin';
 import {
@@ -9,7 +10,7 @@ import reithFontVariants from '../fontVariants/reith';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../../../legacy/psammead/psammead-assets/src/svgs/archive';
 
-const archiveTheme = {
+export const theme: ServiceTheme = {
   palette: {
     BRAND_BACKGROUND: ARCHIVE_BLUE,
     BRAND_LOGO: WHITE,
@@ -25,4 +26,4 @@ const archiveTheme = {
   brandSVG,
 };
 
-export default withThemeProvider(archiveTheme);
+export default withThemeProvider(theme);

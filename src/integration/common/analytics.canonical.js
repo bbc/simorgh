@@ -1,7 +1,7 @@
 /* eslint-disable no-restricted-syntax */
 export default () => {
   describe('Analytics', () => {
-    const noscriptImage = document.querySelector('noscript');
+    const noscriptImage = document.querySelector('noscript#analytics-noscript');
 
     const src = noscriptImage.innerHTML.match(/src="([^"]+)"/)?.[1];
     const srcUrl = new URL(src.replaceAll('&amp;', '&'));

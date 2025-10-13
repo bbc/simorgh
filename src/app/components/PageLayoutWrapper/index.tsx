@@ -6,7 +6,6 @@ import { jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
 import { PageTypes } from '#app/models/types/global';
-import useIsPWA from '#app/hooks/useIsPWA';
 import appendAdDomainsToCSPHeader from '#app/utilities/appendAdDomainsToCSPHeader';
 import { TopStoryItem } from '../../pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import WebVitals from '../../legacy/containers/WebVitals';
@@ -16,7 +15,7 @@ import ManifestContainer from '../../legacy/containers/Manifest';
 import ServiceWorker from '../ServiceWorker';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
-import fontFacesLazy from '../ThemeProvider/fontFacesLazy';
+import fontFaces from '../ThemeProvider/fontFaces';
 import styles from './index.styles';
 import { OptimoMostReadRecord, CPSMostReadRecord } from '../MostRead/types';
 
@@ -51,9 +50,8 @@ const PageLayoutWrapper = ({
   pageData,
   status,
 }: PropsWithChildren<Props>) => {
-  const { service } = use(ServiceContext);
+  const { atiAnalyticsProducerId, service } = use(ServiceContext);
   const { isLite, isAmp, nonce, cspHeader } = use(RequestContext);
-  const isPWA = useIsPWA();
 
   const isErrorPage = ![200].includes(status) || !status;
   const pageType = pageData?.metadata?.type;
@@ -75,7 +73,7 @@ const PageLayoutWrapper = ({
       }, 0);
   }
 
-  const serviceFonts = fontFacesLazy(service, isPWA);
+  const serviceFonts = fontFaces();
 
   const fontJs =
     isLite ||
@@ -108,9 +106,8 @@ const PageLayoutWrapper = ({
 					head.appendChild(fontStylePlaceholder);
                 };
                 const retrieveAndStoreFont = (font, storageKey, shouldAttachStyle) => {
-                	const fontLocation = font.src ? font.src : 'https://static.files.bbci.co.uk/fonts/reith/'+ font.version + (font.subsets ? '/subsets' : '') + '/' + font.name + '.woff2';
                     window.addEventListener("load", (e) => {
-                    getFont(fontLocation).then((fontContents) => {
+                    getFont(font.downloadSrc).then((fontContents) => {
                     	const forStorage = { base64Contents: fontContents, fontFamily: font.fontFamily, fontWeight: font.fontWeight, fontVersion: font.version };
                     	localStorage.setItem(storageKey, JSON.stringify(forStorage));
                     	if (shouldAttachStyle) {
@@ -201,6 +198,39 @@ const PageLayoutWrapper = ({
                 wrappedContentsShortcut.pageTypeCounts.${reportingPageType} = wrappedContentsShortcut.pageTypeCounts.${reportingPageType} ? wrappedContentsShortcut.pageTypeCounts.${reportingPageType} + 1 : 1;
                 wrappedContentsShortcut.byMonth[wrappedMonth] = wrappedContentsShortcut.byMonth[wrappedMonth] ? wrappedContentsShortcut.byMonth[wrappedMonth] + 1 : 1;
                 wrappedContents[wrappedYear] = wrappedContentsShortcut;
+                const numberOfLanguagesConsumed = Object.keys(topicsContents).length;
+                if (topicsContents.hasOwnProperty("${service}") && Object.keys(topicsContents.${service}).length) {
+                    const topcats = Object.keys(topicsContents.${service}).filter(topic => topicsContents.${service}[topic].count > 1).sort((a, b) => topicsContents.${service}[b].count - topicsContents.${service}[a].count);
+                    let allTopicsCount = 0;
+                    for (var i = 0; i < topcats.length; i++) {
+                        allTopicsCount += topicsContents.${service}[topcats[i]].count;
+                    }
+                    const topCatRatio = Math.round((topicsContents.${service}[topcats[0]].count / allTopicsCount) * 100);
+                    function getCookie(name) {
+                        var value = "; " + document.cookie;
+                        var parts = value.split("; " + name + "=");
+                        if (parts.length == 2) {
+                            return parts.pop().split(";").shift();
+                        }
+                        return null;
+                    }
+                    var atuseridCookie = getCookie('atuserid');
+                    const atuseridCookieValue = atuseridCookie ? JSON.parse(decodeURIComponent(atuseridCookie.value)).val : 'kjasd8998sd';
+                    const deliveryPoint = 'https://a1.api.bbc.co.uk/hit.xiti?s=598342&idclient=' + atuseridCookieValue + '&col=2&ts=' + Date.now() + '&ptag=js&context=' + encodeURIComponent(JSON.stringify([{"data":{"page":{"$":"${service}.page"},"site":{"level2_id":${atiAnalyticsProducerId}}}}])) + '&events=';
+                    const payload = new Array();
+                    payload.push(deliveryPoint + encodeURIComponent(JSON.stringify([{"name":"viewability.view","data":{"group":{"name":"topics-viewed","type":""},"event":{"category":"viewability","action":"view","grouping":"topics-viewed"},"user":{"id":"' + atuseridCookieValue + '"},"app":{"type":"responsive","name":"news-${service}"},"item":{"name":"languages-viewed", "position": numberOfLanguagesConsumed }}}])));
+                    payload.push(deliveryPoint + encodeURIComponent(JSON.stringify([{"name":"viewability.view","data":{"group":{"name":"topics-viewed","type":""},"event":{"category":"viewability","action":"view","grouping":"topics-viewed"},"user":{"id":"' + atuseridCookieValue + '"},"app":{"type":"responsive","name":"news-${service}"},"item":{"name":"topics-viewed", "position": topcats.length }}}])));
+                    payload.push(deliveryPoint + encodeURIComponent(JSON.stringify([{"name":"viewability.view","data":{"group":{"name":"topics-viewed","type":""},"event":{"category":"viewability","action":"view","grouping":"topics-viewed"},"user":{"id":"' + atuseridCookieValue + '"},"app":{"type":"responsive","name":"news-${service}"},"item":{"name":"top-topic-id", "position": topCatRatio, "text": topicsContents.${service}[topcats[0]].id }}}])));
+                    var trackingDivContainer = document.createElement('DIV');
+                    payload.forEach(key => {
+                        const trackingImage = new Image(1,1);
+                        trackingImage.src = key;
+                        trackingDivContainer.appendChild(trackingImage);
+                    });
+                    document.addEventListener("DOMContentLoaded", function(arg) {
+                        document.body.appendChild(trackingDivContainer);
+                    });
+                }
                 localStorage.setItem(topicsStorageKey, JSON.stringify(topicsContents));
     `;
 

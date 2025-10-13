@@ -5,7 +5,7 @@ const loadableConfig: Record<
   Services,
   LoadableComponent<{
     Context: unknown;
-    dataKey?: null | undefined;
+    dataKey?: null;
     children: unknown;
   }>
 > = {

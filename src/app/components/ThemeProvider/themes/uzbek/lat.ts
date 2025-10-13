@@ -1,19 +1,24 @@
 import { mergeDeepLeft } from 'ramda';
 import latinWithDiacriticsScript from '../../fontScripts/latinWithDiacritics';
 import withThemeProvider from '../../withThemeProvider';
-import baseUzbekTheme from './base';
+import uzbekTheme from './base';
 import getPWATypographyTheme from '../getPWATypographyTheme';
+import mergeThemeWithPWATypography from '../mergeThemeWithPWATypography';
 
-const uzbekLatinTheme = mergeDeepLeft(
+const baseTheme = mergeDeepLeft(
   {
     typography: {
       script: latinWithDiacriticsScript,
     },
   },
-  baseUzbekTheme,
+  uzbekTheme,
 );
 
-export default withThemeProvider(
-  uzbekLatinTheme,
-  getPWATypographyTheme(latinWithDiacriticsScript),
-);
+const pwaTheme = getPWATypographyTheme(latinWithDiacriticsScript);
+
+export const theme = mergeThemeWithPWATypography({
+  baseTheme,
+  pwaTheme,
+});
+
+export default withThemeProvider(baseTheme, pwaTheme);

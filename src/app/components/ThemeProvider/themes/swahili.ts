@@ -4,8 +4,9 @@ import helmetFontVariants from '../fontVariants/helmet';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/swahili';
 import getPWATypographyTheme from './getPWATypographyTheme';
+import mergeThemeWithPWATypography from './mergeThemeWithPWATypography';
 
-const swahiliTheme = {
+const baseTheme = {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -19,6 +20,14 @@ const swahiliTheme = {
     fontFaces: [],
   },
   brandSVG,
+  usePWATypography: true,
 };
 
-export default withThemeProvider(swahiliTheme, getPWATypographyTheme());
+const pwaTheme = getPWATypographyTheme();
+
+export const theme = mergeThemeWithPWATypography({
+  baseTheme,
+  pwaTheme,
+});
+
+export default withThemeProvider(baseTheme, pwaTheme);
