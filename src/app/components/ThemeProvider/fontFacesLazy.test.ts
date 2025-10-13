@@ -8,6 +8,7 @@ const getFontFaces = (service: Services, isPWA: boolean) =>
 const reithServices: Services[] = [
   'news',
   'newsround',
+  'magyarul',
   'mundo',
   'polska',
   'portuguese',
