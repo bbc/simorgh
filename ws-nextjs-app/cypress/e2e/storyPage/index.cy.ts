@@ -1,6 +1,6 @@
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import runTestsForPage from '../../support/helpers/runTestsForPage';
-import { testsThatAlwaysRunForAllPages as testsForAllPages } from '../testsForAllPages';
+import testsForAllPages from '../testsForAllPages';
 import { testsThatFollowSmokeTestConfigForAllCanonicalPages as testsForAllCanonicalPages } from '../testsForAllCanonicalPages';
 import { testsThatFollowSmokeTestConfigForAllAMPPages as testsForAllAMPPages } from '../testsForAllAMPPages';
 import canonicalAndAmpArticleTests from './tests';

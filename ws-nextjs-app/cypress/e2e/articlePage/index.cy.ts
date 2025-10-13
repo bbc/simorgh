@@ -1,7 +1,7 @@
 /* eslint-disable import/no-relative-packages */
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import runTestsForPage from '../../support/helpers/runTestsForPage';
-import { testsThatAlwaysRunForAllPages as testsForAllPages } from '../testsForAllPages';
+import testsForAllPages from '../testsForAllPages';
 import { testsThatFollowSmokeTestConfigForAllCanonicalPages as testsForAllCanonicalPages } from '../testsForAllCanonicalPages';
 import { testsThatFollowSmokeTestConfigForAllAMPPages as testsForAllAMPPages } from '../testsForAllAMPPages';
 import canonicalAndAmpArticleTests from './tests';
@@ -193,7 +193,6 @@ const nonSmokeCanonicalTestSuites = [
     service: 'mundo',
     tests: [...canonicalTests],
   },
-
   {
     path: '/nepali/articles/c16ljg1v008o',
     runforEnv: ['live'],
