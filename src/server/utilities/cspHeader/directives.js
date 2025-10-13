@@ -228,6 +228,7 @@ const directives = {
       'https://*.chartbeat.com',
       'http://*.chartbeat.com', // for localhost canonical connecting via http
       'http://localhost:1124', // for localhost canonical JavaScript
+      'http://localhost:7080', // for localhost self-hosted Reverb JavaScript
       'https://*.twitter.com', // Social Embeds
       'https://www.instagram.com', // Social Embeds
       'https://www.tiktok.com', // Social Embeds

@@ -13,7 +13,7 @@ import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingP
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useTrackingToggle from '../useTrackingToggle';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import dispatchTrackingRequests from './dispatchTrackingRequests';
+import dispatchTrackingRequests from '../../lib/analyticsUtils/dispatchTrackingRequests';
 import getIntersectionObserver from './getIntersectionObserver';
 
 const VIEWED_DURATION_MS = 1000;
