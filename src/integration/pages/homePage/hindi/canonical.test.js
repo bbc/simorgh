@@ -3,10 +3,11 @@
  * @pathname /hindi
  */
 
+import hindiData from '../../../../../data/hindi/homePage/index.json';
 import runCanonicalTests from '../canonicalTests';
-import { data as pageData } from '../../../../../data/hindi/homePage/index.json';
 
 describe('Canonical', () => {
+  const { data: pageData } = hindiData;
   describe(pageType, () => {
     runCanonicalTests({ service, pageData });
   });
