@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Services } from '#app/models/types/global';
-import loadable from '@loadable/component';
+import loadable, { LoadableComponent } from '@loadable/component';
 
-export const themes: Record<Services, object> = {
+export const themes: Record<Services, LoadableComponent<any>> = {
   afaanoromoo: loadable(
     () => import(/* webpackChunkName: "themes-afaanoromoo" */ './afaanoromoo'),
   ),
