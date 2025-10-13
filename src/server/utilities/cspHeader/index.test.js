@@ -379,6 +379,7 @@ describe('cspHeader', () => {
         'https://*.chartbeat.com',
         'http://*.chartbeat.com',
         'http://localhost:1124',
+        'http://localhost:7080',
         'https://*.twitter.com',
         'https://www.instagram.com',
         'https://*.twimg.com',

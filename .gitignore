@@ -10,6 +10,7 @@ cypress/screenshots
 cypress/downloads
 cypress/results
 cypress/fixtures/toggles
+ws-nextjs-app/cypress/fixtures/toggles
 pack
 storybook_dist
 simorgh.report.html
