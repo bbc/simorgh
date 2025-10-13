@@ -4,8 +4,9 @@ import helmetFontVariants from '../fontVariants/helmet';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/azeri';
 import getPWATypographyTheme from './getPWATypographyTheme';
+import mergeThemeWithPWATypography from './mergeThemeWithPWATypography';
 
-const azeriTheme = {
+const baseTheme = {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -19,9 +20,14 @@ const azeriTheme = {
     fontVariants: helmetFontVariants,
   },
   brandSVG,
+  usePWATypography: true,
 };
 
-export default withThemeProvider(
-  azeriTheme,
-  getPWATypographyTheme(latinWithDiacriticsScript),
-);
+const pwaTheme = getPWATypographyTheme(latinWithDiacriticsScript);
+
+export const theme = mergeThemeWithPWATypography({
+  baseTheme,
+  pwaTheme,
+});
+
+export default withThemeProvider(baseTheme, pwaTheme);

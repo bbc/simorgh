@@ -1,8 +1,10 @@
 /* eslint-disable no-console */
 
-const { exec, spawn } = require('child_process');
-const argv = require('minimist')(process.argv.slice(2));
-const path = require('path');
+import { exec, spawn } from 'child_process';
+import path, { join } from 'path';
+import minimist from 'minimist';
+
+const argv = minimist(process.argv.slice(2));
 
 const onlyRunTests = Boolean(argv.onlyRunTests);
 const isDev = Boolean(argv.dev);
@@ -42,11 +44,12 @@ const buildApp = () =>
 
 const startApp = () => {
   const portNumber = argv.nextJS ? 7081 : 7080;
+  const pathname = argv.nextJS ? '' : '/status';
   return new Promise(resolve => {
     const child = exec(
       `yarn ${
         isDev ? 'dev' : 'start'
-      } & ./node_modules/.bin/wait-on -t 20000 http://localhost:${portNumber}/status`,
+      } & ./node_modules/.bin/wait-on -t 20000 http://localhost:${portNumber}${pathname}`,
     );
 
     child.on('exit', resolve);
@@ -102,7 +105,7 @@ if (onlyRunTests) {
   });
 } else {
   if (argv.nextJS) {
-    const nextAppDir = path.join(path.resolve(), 'ws-nextjs-app');
+    const nextAppDir = join(path.resolve(), 'ws-nextjs-app');
     process.chdir(nextAppDir);
   }
 

@@ -1,9 +1,10 @@
+import { ServiceTheme } from '#app/models/types/theming';
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../../palette';
 import noAscOrDescScript from '../../fontScripts/noAscOrDesc';
 import chineseFontVariants from '../../fontVariants/chinese';
 import brandSVG from '../../chameleonLogos/zhongwen';
 
-const ukChinaTheme = {
+export default {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -17,6 +18,4 @@ const ukChinaTheme = {
     fontFaces: [],
   },
   brandSVG,
-};
-
-export default ukChinaTheme;
+} as ServiceTheme;

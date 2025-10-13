@@ -488,9 +488,9 @@ const preview: Preview = {
         >
           <RequestContextProvider
             isLite={context.globals.isLite}
-            // @ts-expect-error set page type to unknown in storybook
+            // @ts-expect-error error TS2322: Type '"unknown"' is not assignable to type 'PageTypes'.
             pageType={'unknown'}
-            pathname={`/${context.globals.service.service}`}
+            pathname={''}
             service={context.globals.service.service}
           >
             <EventTrackingContextProvider
