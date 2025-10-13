@@ -6,7 +6,6 @@ import { jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
 import { PageTypes } from '#app/models/types/global';
-import useIsPWA from '#app/hooks/useIsPWA';
 import appendAdDomainsToCSPHeader from '#app/utilities/appendAdDomainsToCSPHeader';
 import { TopStoryItem } from '../../pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import WebVitals from '../../legacy/containers/WebVitals';
@@ -53,7 +52,6 @@ const PageLayoutWrapper = ({
 }: PropsWithChildren<Props>) => {
   const { service } = use(ServiceContext);
   const { isLite, isAmp, nonce, cspHeader } = use(RequestContext);
-  const isPWA = useIsPWA();
 
   const isErrorPage = ![200].includes(status) || !status;
   const pageType = pageData?.metadata?.type;
@@ -75,7 +73,7 @@ const PageLayoutWrapper = ({
       }, 0);
   }
 
-  const serviceFonts = fontFaces({ service, isPWA });
+  const serviceFonts = fontFaces();
 
   const fontJs =
     isLite ||
