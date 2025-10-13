@@ -3,7 +3,7 @@
  * @pathname /hindi
  */
 
-import hindiData from '../../../../../data/hindi/homePage/index.json';
+import hindiData from '#data/hindi/homePage/index.json';
 import runCanonicalTests from '../canonicalTests';
 
 describe('Canonical', () => {
