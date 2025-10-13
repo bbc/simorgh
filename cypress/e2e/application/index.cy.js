@@ -5,11 +5,12 @@ const PAGES_WITHOUT_SERVICE_WORKER = [
   'archive',
   'cymrufyw',
   'naidheachdan',
-  'scotland',
-  'ws',
   'news',
   'newsround',
+  'romania',
+  'scotland',
   'sport',
+  'ws',
 ];
 
 describe('Application', () => {
