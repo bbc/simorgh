@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`AMP Articles Embed HTML should match snapshot 1`] = `
+<div
+  class="css-z6vcvl"
+  data-e2e="embed-error"
+>
+  <strong
+    class="css-ayvsvz"
+  >
+    Sorry, we can’t display this part of the story on this lightweight mobile page.
+  </strong>
+  <div
+    class="css-yzszhh"
+  >
+    <a
+      class="css-gu9ena"
+      href="http://localhost:7081/pidgin/articles/c39rjygpmv1o"
+    >
+      View the full version of the page to see all the content.
+    </a>
+  </div>
+</div>
+`;

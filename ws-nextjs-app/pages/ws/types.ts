@@ -1,6 +1,12 @@
 import { PageTypes } from '#app/models/types/global';
 import { Curation } from '#app/models/types/curationData';
 import { ATIData } from '#app/components/ATIAnalytics/types';
+import { OptimoBlock } from '#app/models/types/optimo';
+
+type PromoMedia = {
+  blocks: OptimoBlock[];
+  type: string;
+};
 
 export interface LanguagesPageProps {
   pageData: {
@@ -11,6 +17,14 @@ export interface LanguagesPageProps {
     metadata: {
       type: PageTypes;
       atiAnalytics: ATIData;
+      blockTypes: string[];
+      locators?: {
+        assetUri: string;
+      };
+    };
+    promo: {
+      media?: PromoMedia;
+      extrinsicPromo?: { media?: PromoMedia };
     };
   };
   pageType: PageTypes;
