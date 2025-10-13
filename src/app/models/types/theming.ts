@@ -368,6 +368,10 @@ export type FontFace = Partial<FontStyles> & {
   subset?: boolean;
 };
 
+export type Font = {
+  '@font-face': FontFace;
+};
+
 export interface Typography {
   fontFaces: {
     '@font-face'?: FontFace;

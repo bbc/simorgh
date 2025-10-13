@@ -1,5 +1,5 @@
 import { useTheme } from '@emotion/react';
-import { FontFace } from '#app/models/types/theming';
+import { Font } from '#app/models/types/theming';
 
 /**
  * Font Directories
@@ -25,10 +25,6 @@ const PADAUK_FONTS_DIR = `${FONTS_BASE_URL}Padauk/v2.8/`;
 /**
  * Font Definitions
  */
-
-type Font = {
-  '@font-face': FontFace;
-};
 
 // Noto Sans Tamil
 export const NOTO_SANS_TAMIL_BOLD: Font = {
@@ -286,7 +282,10 @@ export default () => {
   const { fontFaces } = useTheme();
 
   // Return the raw font info
-  const fonts = fontFaces.map(font => font['@font-face']).sort();
+  const fonts = fontFaces
+    .map(font => font['@font-face'])
+    .filter(Boolean)
+    .sort();
 
   return fonts;
 };
