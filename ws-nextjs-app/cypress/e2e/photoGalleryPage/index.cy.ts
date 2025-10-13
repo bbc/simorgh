@@ -1,8 +1,8 @@
 import { PHOTO_GALLERY_PAGE } from '#app/routes/utils/pageTypes';
 import runTestsForPage from '../../support/helpers/runTestsForPage';
-import { testsThatAlwaysRunForAllPages as testsForAllPages } from '../testsForAllPages';
-import { testsThatFollowSmokeTestConfigForAllCanonicalPages as testsForAllCanonicalPages } from '../testsForAllCanonicalPages';
-import { testsThatFollowSmokeTestConfigForAllAMPPages as testsForAllAMPPages } from '../testsForAllAMPPages';
+import testsForAllPages from '../testsForAllPages';
+import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
+import testsForAllAMPPages from '../testsForAllAMPPages';
 import liteArticleTests from '../articlePage/testsForLiteOnly';
 
 const tests = [testsForAllPages, testsForAllCanonicalPages];
