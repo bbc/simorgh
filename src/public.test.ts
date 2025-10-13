@@ -1,6 +1,6 @@
 import fs from 'fs';
 import { services } from '#app/lib/config/services/loadableConfig';
-import { resolve } from 'path';
+import path, { resolve } from 'path';
 import { promisify } from 'util';
 import { Services } from '#app/models/types/global';
 
@@ -24,6 +24,18 @@ const PUBLIC_SERVICES = [
   'sport',
 ];
 
+const iconNames = [
+  'icon-72x72.png',
+  'icon-96x96.png',
+  'icon-128x128.png',
+  'icon-144x144.png',
+  'icon-152x152.png',
+  'icon-180x180.png',
+  'icon-192x192.png',
+  'icon-384x384.png',
+  'icon-512x512.png',
+];
+
 describe('public directory', () => {
   describe.each(services.filter(service => !['ws'].includes(service)))(
     'public/%s',
@@ -35,11 +47,36 @@ describe('public directory', () => {
         expect(fileList.length).toBeGreaterThan(0);
       });
 
-      it(`should contain a manifest file`, async () => {
+      describe('manifest.json', () => {
         if (!PUBLIC_SERVICES.includes(service)) {
-          const fileList = await listFiles({ service });
+          it(`should exist`, async () => {
+            const fileList = await listFiles({ service });
 
-          expect(fileList).toContain('manifest.json');
+            expect(fileList).toContain('manifest.json');
+          });
+
+          it(`should contain correct icons`, async () => {
+            const { default: manifest } = await import(
+              path.resolve(`./public/${service}/manifest.json`)
+            );
+
+            const { icons } = manifest;
+
+            const iconSrc = icons.map(({ src }) => src);
+
+            expect(iconSrc).toHaveLength(9);
+
+            const version = ['magyarul'].includes(service) ? 2 : 1;
+
+            const expectedIconSrc = iconNames.map(
+              iconName =>
+                `https://static.files.bbci.co.uk/ws/simorgh-assets/public/${service}/images/icons/${iconName}?v=${version}`,
+            );
+
+            expect(iconSrc).toStrictEqual(
+              expect.arrayContaining(expectedIconSrc),
+            );
+          });
         }
       });
 
@@ -49,22 +86,49 @@ describe('public directory', () => {
         expect(fileList).toContain('images');
       });
 
-      it(`public/${service}/images/icons should exist`, async () => {
-        const fileList = await listFiles({ service, suffix: '/images/icons' });
-
-        expect(fileList).not.toBeNull();
-        expect(fileList.length).toBeGreaterThan(0);
-      });
-
-      it(`public/${service}/images/syndication should exist`, async () => {
-        if (![...PUBLIC_SERVICES, 'ukchina'].includes(service)) {
+      describe(`public/${service}/images/icons`, () => {
+        it(`should exist`, async () => {
           const fileList = await listFiles({
             service,
-            suffix: '/images/syndication',
+            suffix: '/images/icons',
           });
 
           expect(fileList).not.toBeNull();
           expect(fileList.length).toBeGreaterThan(0);
+        });
+
+        it.each(iconNames)(`should contain %s`, async () => {
+          const fileList = await listFiles({
+            service,
+            suffix: '/images/icons',
+          });
+
+          expect(fileList).toStrictEqual(
+            expect.arrayContaining(iconNames.map(iconName => iconName)),
+          );
+        });
+      });
+
+      describe(`public/${service}/images/syndication`, () => {
+        if (![...PUBLIC_SERVICES, 'ukchina'].includes(service)) {
+          it('should exist', async () => {
+            const fileList = await listFiles({
+              service,
+              suffix: '/images/syndication',
+            });
+
+            expect(fileList).not.toBeNull();
+            expect(fileList.length).toBeGreaterThan(0);
+          });
+
+          it('should contain brand-40xn.png', async () => {
+            const fileList = await listFiles({
+              service,
+              suffix: '/images/syndication',
+            });
+
+            expect(fileList).toStrictEqual(['brand-40xn.png']);
+          });
         }
       });
     },
