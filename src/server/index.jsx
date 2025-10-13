@@ -272,77 +272,96 @@ server.get(
           ve: 'cpzd49v9rd1t',
           ec: 'cg72618r047t',
         };
-        const availableCountries = Object.keys(countrySpecificTopics);
-        const hasCountryMatch =
-          data.country && availableCountries.includes(data.country);
-        const topicIdToFetch = hasCountryMatch
-          ? countrySpecificTopics[data.country]
-          : 'c7zp57yyz25t';
-
-        // Always fetch the default topic
         const defaultTopicId = 'c7zp57yyz25t';
-        const [countrySpecificData, defaultTopicData] = await Promise.all([
-          fetchDataFromBFF({
-            pathname: `/${service}/topics/${topicIdToFetch}?renderer_env=live`,
+        const hasCountryMatch =
+          data.country &&
+          Object.keys(countrySpecificTopics).includes(data.country);
+
+        const topicIdsToFetch = hasCountryMatch
+          ? [countrySpecificTopics[data.country], defaultTopicId]
+          : [defaultTopicId];
+        console.log('topicIdsToFetch:', topicIdsToFetch);
+        let countrySpecificData;
+        let defaultTopicData;
+        if (hasCountryMatch) {
+          const countrySpecificId = countrySpecificTopics[data.country];
+          [countrySpecificData, defaultTopicData] = await Promise.all([
+            fetchDataFromBFF({
+              pathname: `/${service}/topics/${countrySpecificId}?renderer_env=live`,
+              pageType: 'topic',
+              service,
+              variant,
+              isAmp,
+              getAgent,
+            }),
+            fetchDataFromBFF({
+              pathname: `/${service}/topics/${defaultTopicId}?renderer_env=live`,
+              pageType: 'topic',
+              service,
+              variant,
+              isAmp,
+              getAgent,
+            }),
+          ]);
+        } else {
+          defaultTopicData = await fetchDataFromBFF({
+            pathname: `/${service}/topics/${defaultTopicId}?renderer_env=live`,
             pageType: 'topic',
             service,
             variant,
             isAmp,
             getAgent,
-          }),
-          hasCountryMatch
-            ? fetchDataFromBFF({
-                pathname: `/${service}/topics/${defaultTopicId}?renderer_env=live`,
-                pageType: 'topic',
-                service,
-                variant,
-                isAmp,
-                getAgent,
-              })
-            : null,
-        ]);
-
+          });
+        }
+        console.log('defaultTopicData:', defaultTopicData);
         const countryArticles =
           countrySpecificData?.json?.data?.curations?.[0]?.summaries || [];
         const defaultArticles =
-          defaultTopicData?.json?.data?.curations?.[0]?.summaries ||
-          countryArticles; // fallback for no match
+          defaultTopicData?.json?.data?.curations?.[0]?.summaries || [];
+        console.log('articles', countryArticles, defaultArticles);
 
-        if (
-          Array.isArray(countryArticles) &&
-          countryArticles.length > 0 &&
-          data.pageData?.metadata?.type === 'article'
-        ) {
-          if (hasCountryMatch && defaultTopicData) {
-            // Two topics: country-specific and default
-            data.pageData.secondaryColumn.PersonalisedContent = [
-              {
-                title: countrySpecificData.json.data.title,
-                description: countrySpecificData.json.data.description,
-                articles: countryArticles.slice(0, 4),
-                topicId: topicIdToFetch,
-              },
-              {
-                title: defaultTopicData.json.data.title,
-                description: defaultTopicData.json.data.description,
-                articles: defaultArticles.slice(0, 4),
-                topicId: defaultTopicId,
-              },
-            ];
-          } else if (defaultTopicData) {
-            // Only default topic, use only default data
-            data.pageData.secondaryColumn.PersonalisedContent = [
-              {
-                title: defaultTopicData.json.data.title,
-                description: defaultTopicData.json.data.description,
-                articles: defaultArticles.slice(0, 4),
-                topicId: defaultTopicId,
-              },
-            ];
-          }
+        console.log('hasCountryMatch:', hasCountryMatch);
+        console.log('defaultTopicData:', defaultTopicData);
+        console.log('countrySpecificData:', countrySpecificData);
+
+        if (hasCountryMatch && defaultTopicData) {
+          console.log('in if 1)');
+          data.pageData.secondaryColumn.PersonalisedContent = [
+            {
+              title: countrySpecificData.json.data.title,
+              description: countrySpecificData.json.data.description,
+              articles: Array.isArray(countryArticles)
+                ? countryArticles.slice(0, 4)
+                : [],
+              topicId: countrySpecificTopics[data.country],
+            },
+            {
+              title: defaultTopicData.json.data.title,
+              description: defaultTopicData.json.data.description,
+              articles: Array.isArray(defaultArticles)
+                ? defaultArticles.slice(0, 4)
+                : [],
+              topicId: defaultTopicId,
+            },
+          ];
+        } else if (defaultTopicData) {
+          console.log('in if 2)');
+          data.pageData.secondaryColumn.PersonalisedContent = [
+            {
+              title: defaultTopicData.json.data.title,
+              description: defaultTopicData.json.data.description,
+              articles: Array.isArray(defaultArticles)
+                ? defaultArticles.slice(0, 4)
+                : [],
+              topicId: defaultTopicId,
+            },
+          ];
         }
       }
-
+      console.log(
+        'sliced data',
+        data.pageData?.secondaryColumn?.PersonalisedContent,
+      );
       let { status } = data;
       // Set derivedPageType based on returned page data
       if (status === OK) {
