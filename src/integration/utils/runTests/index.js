@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 
 import { exec, spawn } from 'child_process';
-import { join, resolve as _resolve } from 'path';
+import path, { join } from 'path';
 import minimist from 'minimist';
 
 const argv = minimist(process.argv.slice(2));
@@ -104,7 +104,7 @@ if (onlyRunTests) {
   });
 } else {
   if (argv.nextJS) {
-    const nextAppDir = join(_resolve(), 'ws-nextjs-app');
+    const nextAppDir = join(path.resolve(), 'ws-nextjs-app');
     process.chdir(nextAppDir);
   }
 
