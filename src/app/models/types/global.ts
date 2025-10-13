@@ -1,3 +1,5 @@
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import { LoadableComponent } from '@loadable/component';
 import * as PAGE_TYPES from '../../routes/utils/pageTypes';
 
 export type Environments = 'local' | 'test' | 'live';
@@ -128,3 +130,9 @@ export type ServicesVariantsProps = {
   service: Services;
   variant?: Variants;
 };
+
+export type LoadableService = LoadableComponent<{
+  Context: typeof ServiceContext;
+  dataKey?: null;
+  children: unknown;
+}>;
