@@ -1,10 +1,11 @@
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import { Services } from '#app/models/types/global';
 import loadable, { LoadableComponent } from '@loadable/component';
 
 const loadableConfig: Record<
   Services,
   LoadableComponent<{
-    Context: unknown;
+    Context: typeof ServiceContext;
     dataKey?: null;
     children: unknown;
   }>
