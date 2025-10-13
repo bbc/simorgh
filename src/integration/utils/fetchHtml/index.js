@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import { Window } from 'happy-dom';
-import { operation as _operation } from 'retry';
+import { operation } from 'retry';
 import { setDefaultResultOrder } from 'node:dns';
 
 // https://github.com/node-fetch/node-fetch/issues/1624#issuecomment-1407717012
@@ -9,14 +9,14 @@ setDefaultResultOrder('ipv4first');
 export default ({ url, headers }) =>
   new Promise((resolve, reject) => {
     const oneSecond = 1000;
-    const operation = _operation({
+    const retry = operation({
       retries: 5,
       factor: 1,
       minTimeout: oneSecond,
       maxTimeout: oneSecond,
     });
 
-    operation.attempt(async currentAttempt => {
+    retry.attempt(async currentAttempt => {
       if (currentAttempt > 1) {
         console.warn(
           `Error getting HTML from ${url}`,
