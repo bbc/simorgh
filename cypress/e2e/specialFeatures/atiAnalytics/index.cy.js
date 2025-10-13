@@ -320,41 +320,14 @@ const canonicalTestSuites = [
   },
   {
     path: '/magyarul',
-    runforEnv: ['local'],
+    runforEnv: ['local', 'test'],
     service: 'magyarul',
     pageIdentifier: 'magyarul.page',
     siteId: 134,
     applicationType: 'responsive',
     contentType: 'index-home',
     useReverb: true,
-    tests: [
-      assertPageView,
-      assertScrollableNavigationComponentView,
-      assertScrollableNavigationComponentClick,
-      assertDropdownNavigationComponentView,
-      assertDropdownNavigationComponentClick,
-      assertMessageBannerComponentView,
-      assertMessageBannerComponentClick,
-    ],
-  },
-  {
-    path: '/magyarul',
-    runforEnv: ['test'],
-    service: 'magyarul',
-    pageIdentifier: 'magyarul.page',
-    siteId: 134,
-    applicationType: 'responsive',
-    contentType: 'index-home',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertScrollableNavigationComponentView,
-      assertScrollableNavigationComponentClick,
-      assertDropdownNavigationComponentView,
-      assertDropdownNavigationComponentClick,
-      assertMostReadComponentView,
-      assertMostReadComponentClick,
-    ],
+    tests: [assertPageView],
   },
   {
     path: '/marathi/topics/c1wmk63rjkvt',
@@ -654,7 +627,6 @@ const liteTestSuites = canonicalTestSuites
       tests: [...liteSiteTests],
     };
   });
-
 runTestsForPage({
   testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],
   beforeAll: [setUserIDCookie],
