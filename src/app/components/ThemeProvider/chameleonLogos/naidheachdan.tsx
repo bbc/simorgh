@@ -1,8 +1,12 @@
 import React from 'react';
+import build from '.';
 
 const height = 22.465;
 const width = 269.0145;
-const naidheachdan = {
+
+export default build({
+  height,
+  width,
   group: (
     <g
       fillRule="evenodd"
@@ -15,11 +19,8 @@ const naidheachdan = {
       <path d="M13.578 10.118c.505-.365.75-.878.754-1.65-.002-.53-.154-.984-.536-1.322-.383-.34-1.032-.58-2.08-.58H9.8v4.12h1.316c1.139.002 1.956-.202 2.463-.568m1.416 3.683c-.539-.383-1.396-.627-2.603-.627H9.799v4.35h2.711c1.348 0 2.16-.315 2.632-.729.47-.413.632-.942.635-1.469-.007-.634-.248-1.14-.783-1.525" />
     </g>
   ),
-  ratio: width / height,
   viewbox: {
     height,
     width,
   },
-};
-
-export default naidheachdan;
+});
