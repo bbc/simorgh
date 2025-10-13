@@ -53,7 +53,7 @@ export default ({ url, headers }) =>
           .includes('Error: socket hang up');
 
         if (isSocketHangUpError) {
-          if (operation.retry(error)) {
+          if (retry.retry(error)) {
             return;
           }
         }
