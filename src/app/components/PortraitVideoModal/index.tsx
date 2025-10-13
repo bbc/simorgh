@@ -128,6 +128,7 @@ export interface PortraitVideoModalProps {
   blocks: PortraitClipMediaBlock[];
   onClose: () => void;
   selectedVideoIndex: number;
+  nonce?: string | null;
   eventTrackingData: EventTrackingData;
 }
 

@@ -34,7 +34,7 @@ const PortraitVideoCarousel = ({
     null,
   );
 
-  const { isLite } = use(RequestContext);
+  const { isLite, nonce } = use(RequestContext);
 
   const eventTrackingDataExtended = {
     ...eventTrackingData,
@@ -62,7 +62,7 @@ const PortraitVideoCarousel = ({
 
   return (
     <>
-      <BumpLoader />
+      <BumpLoader nonce={nonce} />
       <section
         aria-label={title}
         role="region"
@@ -109,6 +109,7 @@ const PortraitVideoCarousel = ({
               blocks={blocks}
               selectedVideoIndex={selectedVideoIndex}
               onClose={handleCloseModal}
+              nonce={nonce}
               eventTrackingData={eventTrackingDataExtended}
             />,
             document.body,
