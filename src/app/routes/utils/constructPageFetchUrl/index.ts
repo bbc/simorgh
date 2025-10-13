@@ -31,7 +31,7 @@ import {
 import parseRoute from '../parseRoute';
 
 const removeLeadingSlash = (path: string) => path?.replace(/^\/+/g, '');
-const removeAmp = (path: string) => path.split('.')[0];
+export const removeRendererExtension = (path: string) => path.split('.')[0];
 export const getArticleId = (path: string) =>
   path.match(/(c[a-zA-Z0-9]{10,}o)/)?.[1];
 const getCpsId = (path: string) => removeLeadingSlash(path);
@@ -39,9 +39,9 @@ const getTVAudioId = (path: string) => removeLeadingSlash(path);
 export const getTipoId = (path: string) =>
   path.match(/(c[a-zA-Z0-9]{10,}t)/)?.[1];
 const getUgcId = (path: string) => path.match(/(u[a-zA-Z0-9]{8,})/)?.[1];
-const isOptimoIdCheck = (path: string) =>
+export const isOptimoIdCheck = (path: string) =>
   /\/(articles|sgeulachdan|erthyglau)\/(c[a-zA-Z0-9]{10,}o)/.test(path);
-const isCpsIdCheck = (path: string) =>
+export const isCpsIdCheck = (path: string) =>
   /([0-9]{5,9}|[a-z0-9\-_]+-[0-9]{5,9})$/.test(path);
 const isTipoIdCheck = (path: string) => /(c[a-zA-Z0-9]{10,}t)/.test(path);
 
@@ -140,7 +140,7 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
       getIdFunction = () => null;
       break;
   }
-  return pipe(getUrlPath, removeAmp, getIdFunction);
+  return pipe(getUrlPath, removeRendererExtension, getIdFunction);
 };
 
 export interface UrlConstructParams {
@@ -213,12 +213,24 @@ const constructPageFetchUrl = ({
 
     switch (pageType) {
       case ARTICLE_PAGE: {
-        const isOptimoId = isOptimoIdCheck(`/articles/${id}`);
+        const { assetId, platform } = parseRoute(pathname);
+
+        if (platform === 'articles') {
+          fetchUrl = Url(
+            `${host}${port}/api/local/${service}/articles/${assetId}${variant ? `/${variant}` : ''}`,
+          );
+          break;
+        }
+
+        if (platform === 'cps') {
+          fetchUrl = Url(
+            `${host}${port}/api/local/${service}/cpsAssets/${variant ? `${variant}/` : ''}${assetId}`,
+          );
+          break;
+        }
 
         fetchUrl = Url(
-          isOptimoId
-            ? `/${service}/articles/${id}${variant ? `/${variant}` : ''}`
-            : `/${id}`,
+          `${host}${port}/api/local/${service}/legacyAssets/${variant ? `${variant}/` : ''}${assetId}`,
         );
 
         break;

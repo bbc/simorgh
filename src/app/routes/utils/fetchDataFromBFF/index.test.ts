@@ -43,7 +43,7 @@ describe('Fetch Data from BFF', () => {
 
     it.each`
       environment | pathname                      | path                                                                                        | agent        | optHeaders
-      ${'local'}  | ${url}                        | ${'http://localhost/pidgin/articles/cwl08rd38p6o'}                                          | ${undefined} | ${undefined}
+      ${'local'}  | ${url}                        | ${'http://localhost/api/local/pidgin/articles/cwl08rd38p6o'}                                | ${undefined} | ${undefined}
       ${'local'}  | ${`${url}?renderer_env=test`} | ${'https://mock-bff-path/?id=cwl08rd38p6o&service=pidgin&pageType=article&serviceEnv=test'} | ${mockAgent} | ${{ 'ctx-service-env': 'test' }}
       ${'local'}  | ${`${url}?renderer_env=live`} | ${'https://mock-bff-path/?id=cwl08rd38p6o&service=pidgin&pageType=article&serviceEnv=live'} | ${mockAgent} | ${{ 'ctx-service-env': 'live' }}
       ${'test'}   | ${url}                        | ${'https://mock-bff-path/?id=cwl08rd38p6o&service=pidgin&pageType=article&serviceEnv=test'} | ${mockAgent} | ${{ 'ctx-service-env': 'test' }}
