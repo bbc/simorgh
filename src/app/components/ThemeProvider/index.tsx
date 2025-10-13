@@ -1,7 +1,11 @@
 import React, { PropsWithChildren } from 'react';
-import type { LoadableComponent } from '@loadable/component';
 import nodeLogger from '#lib/logger.node';
 import { THEME_PROVIDER_ERROR } from '#app/lib/logger.const';
+import {
+  LoadableTheme,
+  ThemeWithNoVariant,
+  ThemeWithVariant,
+} from '#app/models/types/theming';
 import defaultServiceVariants from '../../lib/config/services/defaultServiceVariants';
 import {
   ServicesVariantsProps,
@@ -14,42 +18,31 @@ import fallBackTheme from './themes/news';
 
 const logger = nodeLogger(__filename);
 
-type ThemeComponentLoadable = LoadableComponent<{ children: React.ReactNode }>;
 type FallbackThemeComponent = React.FC<{ children: React.ReactNode }>;
-
-type NonVariantThemesType = {
-  [_service in ServicesWithNoVariants['service']]: ThemeComponentLoadable;
-};
-
-type VariantThemesType = {
-  [_service in ServicesWithVariants['service']]: {
-    [_variant in Variants]?: ThemeComponentLoadable;
-  };
-};
 
 const nonVariantThemes = Object.fromEntries(
   Object.entries(themes).filter(([_service, theme]) =>
     Object.keys(theme).includes('render'),
   ),
-) as unknown as NonVariantThemesType;
+) as unknown as ThemeWithNoVariant;
 
 const variantThemes = Object.fromEntries(
   Object.entries(themes).filter(
     ([_service, theme]) => !Object.keys(theme).includes('render'),
   ),
-) as unknown as VariantThemesType;
+) as unknown as ThemeWithVariant;
 
 export const ThemeProvider = ({
   children,
   service,
   ...rest
 }: PropsWithChildren<ServicesVariantsProps>) => {
-  let LoadableContextProvider: ThemeComponentLoadable | FallbackThemeComponent;
+  let LoadableContextProvider: LoadableTheme | FallbackThemeComponent;
 
   const variant: Variants = rest.variant || defaultServiceVariants[service];
 
-  let serviceVariants: ThemeComponentLoadable | undefined;
-  let serviceNoVariants: ThemeComponentLoadable | undefined;
+  let serviceVariants: LoadableTheme | undefined;
+  let serviceNoVariants: LoadableTheme | undefined;
 
   if (service in variantThemes) {
     serviceVariants =
