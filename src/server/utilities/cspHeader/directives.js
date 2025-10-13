@@ -288,7 +288,7 @@ const directives = {
 export const generateChildSrc = ({ isAmp, shouldServeLimitedCsp }) => {
   if (shouldServeLimitedCsp) return ["blob: https: 'self'"];
 
-  return isAmp ? ['blob:'] : ["'self'"]
+  return isAmp ? ['blob:'] : ["'self'"];
 };
 
 export const generateConnectSrc = ({ isLive, shouldServeLimitedCsp }) => {
@@ -313,7 +313,7 @@ export const generateFontSrc = ({ isAmp, isLive, shouldServeLimitedCsp }) => {
 };
 
 export const generateFrameSrc = ({ isAmp, isLive, shouldServeLimitedCsp }) => {
-  if (shouldServeLimitedCsp) return ['https: data:']; 
+  if (shouldServeLimitedCsp) return ['https: data:'];
   if (!isLive && isAmp) return directives.frameSrc.ampNonLive.sort();
   if (!isLive && !isAmp) return directives.frameSrc.canonicalNonLive.sort();
   if (isLive && isAmp) return directives.frameSrc.ampLive.sort();
@@ -321,7 +321,7 @@ export const generateFrameSrc = ({ isAmp, isLive, shouldServeLimitedCsp }) => {
 };
 
 export const generateImgSrc = ({ isAmp, isLive, shouldServeLimitedCsp }) => {
-  if (shouldServeLimitedCsp) return ['https: data: blob:']
+  if (shouldServeLimitedCsp) return ['https: data: blob:'];
   if (!isLive && isAmp) return directives.imgSrc.ampNonLive.sort();
   if (!isLive && !isAmp) return directives.imgSrc.canonicalNonLive.sort();
   if (isLive && isAmp) return directives.imgSrc.ampLive.sort();
@@ -333,8 +333,14 @@ export const generateMediaSrc = ({ shouldServeLimitedCsp }) => {
   return ["'self' blob: https:"];
 };
 
-export const generateScriptSrc = ({ isAmp, isLive, nonce, shouldServeLimitedCsp }) => {
-  if (shouldServeLimitedCsp) return ["https: 'unsafe-inline' 'unsafe-eval' blob:"];
+export const generateScriptSrc = ({
+  isAmp,
+  isLive,
+  nonce,
+  shouldServeLimitedCsp,
+}) => {
+  if (shouldServeLimitedCsp)
+    return ["https: 'unsafe-inline' 'unsafe-eval' blob:"];
   const insertedNonce = nonce ? [`'nonce-${nonce}'`, "'unsafe-eval'"] : [];
   if (!isLive && isAmp) return directives.scriptSrc.ampNonLive.sort();
   if (!isLive && !isAmp)
@@ -354,10 +360,12 @@ export const generateStyleSrc = ({ isAmp, isLive, shouldServeLimitedCsp }) => {
 };
 
 export const generateWorkerSrc = ({ isAmp, shouldServeLimitedCsp }) => {
-  if (shouldServeLimitedCsp) return ['blob:', 'data:', "'self'", '*.bbc.co.uk', '*.bbc.com'];
+  if (shouldServeLimitedCsp)
+    return ['blob:', 'data:', "'self'", '*.bbc.co.uk', '*.bbc.com'];
   return isAmp
     ? ['blob:', '*.bbc.co.uk', '*.bbc.com']
-    : ['blob:', "'self'", '*.bbc.co.uk', '*.bbc.com']};
+    : ['blob:', "'self'", '*.bbc.co.uk', '*.bbc.com'];
+};
 
 /*
  * On localhost these CSP headers currently only apply on the production build.
@@ -375,7 +383,12 @@ export const cspDirectives = ({ isAmp, isLive, service, nonce = null }) => {
       'font-src': generateFontSrc({ isAmp, isLive, shouldServeLimitedCsp }),
       'frame-src': generateFrameSrc({ isAmp, isLive, shouldServeLimitedCsp }),
       'img-src': generateImgSrc({ isAmp, isLive, shouldServeLimitedCsp }),
-      'script-src': generateScriptSrc({ isAmp, isLive, nonce, shouldServeLimitedCsp }),
+      'script-src': generateScriptSrc({
+        isAmp,
+        isLive,
+        nonce,
+        shouldServeLimitedCsp,
+      }),
       'style-src': generateStyleSrc({ isAmp, isLive, shouldServeLimitedCsp }),
       'media-src': generateMediaSrc(shouldServeLimitedCsp),
       'worker-src': generateWorkerSrc({ isAmp, shouldServeLimitedCsp }),
