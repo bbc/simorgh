@@ -2,6 +2,7 @@
 /* @jsxFrag React.Fragment */
 import React, { use } from 'react';
 import { jsx } from '@emotion/react';
+import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import useOptimizelyVariation, {
   ExperimentType,
@@ -74,6 +75,28 @@ const HomePage = ({ pageData }: HomePageProps) => {
   }
 
   const itemList = getItemList({ curations, name: brandName });
+
+  const MOST_READ_ENDPOINT = getMostReadEndpoint({
+    service,
+    variant: null,
+    isBff: true,
+  });
+
+  React.useEffect(() => {
+    const fetchMostReadData = async () => {
+      try {
+        const response = await fetch(MOST_READ_ENDPOINT);
+        const data = await response.json();
+        // eslint-disable-next-line no-console
+        console.log('Fetched Most Read Data:', data);
+      } catch (error) {
+        // eslint-disable-next-line no-console
+        console.error('Error fetching Most Read Data:', error);
+      }
+    };
+
+    fetchMostReadData();
+  }, [MOST_READ_ENDPOINT]);
 
   return (
     <>

@@ -3,18 +3,65 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
+import { getMostReadEndpoint } from '../src/app/lib/utilities/getUrlHelpers/getMostReadUrls';
+
 const version = 'v0.3.0';
 const cacheName = 'simorghCache_v1';
 
-const service = self.location.pathname.split('/')[1];
-const hasOfflinePageFunctionality = false;
-const OFFLINE_PAGE = `/${service}/offline`;
+// const service = self.location.pathname.split('/')[1];
+const service = self.location.pathname.split('/').pop();
+const hasOfflinePageFunctionality = true;
+const OFFLINE_PAGE = `/${service}.lite`;
+const isLocalEnv = self.location.hostname === 'localhost';
+let appEnv;
+if (isLocalEnv) {
+  appEnv = 'local';
+} else if (self.location.hostname.includes('test')) {
+  appEnv = 'test';
+} else {
+  appEnv = 'live';
+}
+
+const MOST_READ_ENDPOINT = getMostReadEndpoint({
+  service,
+  isBff: appEnv !== 'local',
+});
+
+// OFFLINE_PAGE: `/${service}.lite`
+// MOST_READ_ENDPOINT: dynamically generated based on environment
+
+function logToClients(message) {
+  self.clients.matchAll().then(clients => {
+    clients.forEach(client => {
+      client.postMessage(message);
+    });
+  });
+}
+
+async function cacheMostReadStories(cache) {
+  try {
+    const response = await fetch(MOST_READ_ENDPOINT);
+    if (response.ok) {
+      const { items } = await response.json();
+      const storyUrls = items.map(item => item.href);
+      await Promise.all(storyUrls.map(url => cache.add(url)));
+    }
+  } catch (error) {
+    // Removed logToClients for error in caching
+  }
+}
 
 self.addEventListener('install', event => {
-  event.waitUntil(async () => {
-    const cache = await caches.open(cacheName);
-    if (hasOfflinePageFunctionality) await cache.add(OFFLINE_PAGE);
-  });
+  event.waitUntil(
+    (async () => {
+      const cache = await caches.open(cacheName);
+      if (hasOfflinePageFunctionality) {
+        await cache.add(OFFLINE_PAGE);
+        await cache.add(MOST_READ_ENDPOINT);
+        await cacheMostReadStories(cache);
+      }
+    })(),
+  );
 });
 
 const CACHEABLE_FILES = [
@@ -41,6 +88,7 @@ const fetchEventHandler = async event => {
   );
 
   const isRequestForWebpImage = WEBP_IMAGE.test(event.request.url);
+  const isRequestForMostRead = event.request.url.endsWith(MOST_READ_ENDPOINT);
 
   if (isRequestForWebpImage) {
     const req = event.request.clone();
@@ -68,6 +116,18 @@ const fetchEventHandler = async event => {
         let response = await cache.match(event.request);
         if (!response) {
           response = await fetch(event.request.url);
+          cache.put(event.request, response.clone());
+        }
+        return response;
+      })(),
+    );
+  } else if (isRequestForMostRead) {
+    event.respondWith(
+      (async () => {
+        const cache = await caches.open(cacheName);
+        let response = await cache.match(event.request);
+        if (!response) {
+          response = await fetch(event.request);
           cache.put(event.request, response.clone());
         }
         return response;
