@@ -1,3 +1,5 @@
+import { services } from '../services/loadableConfig';
+
 export default {
   _environment: 'local',
   ads: {
@@ -15,8 +17,7 @@ export default {
   },
   enableFetchingToggles: {
     enabled: process?.env.FETCH_TOGGLES === 'true' || false,
-    value:
-      '(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|dari|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|magyarul|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|romania|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|ws|vietnamese|yoruba|zhongwen)',
+    value: `(${services.join('|')})`,
   },
   eventTracking: {
     enabled: true,
