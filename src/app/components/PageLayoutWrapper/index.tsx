@@ -172,8 +172,16 @@ const PageLayoutWrapper = ({
                 if (wrappedTopics) {
                     wrappedTopics.forEach(({ topicName, topicId }) => {
                         if (!topicsContents.${service}) topicsContents.${service} = {};
-
-
+                        if (topicsContents.${service}[topicName]) {
+                            topicsContents.${service}[topicName].count++;
+                        }
+                        else {
+                            topicsContents.${service}[topicName] = {
+                                'count': 1,
+                                'id': topicId,
+                                'path': "/${service}/topics/" + topicId
+                            };
+                        }
                         wrappedContentsShortcut.topicCounts[topicName] = wrappedContentsShortcut.topicCounts[topicName] ? wrappedContentsShortcut.topicCounts[topicName] + 1 : 1;
                     });
                 }
