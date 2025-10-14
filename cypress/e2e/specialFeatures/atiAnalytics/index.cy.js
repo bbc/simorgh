@@ -323,7 +323,7 @@ const canonicalTestSuites = [
     runforEnv: ['local', 'test'],
     service: 'magyarul',
     pageIdentifier: 'magyarul.page',
-    siteId: 134,
+    siteId: 30,
     applicationType: 'responsive',
     contentType: 'index-home',
     useReverb: true,
@@ -624,6 +624,7 @@ const liteTestSuites = canonicalTestSuites
       path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
       applicationType: 'lite',
       useReverb: false,
+      siteId: testSuite.service === 'magyarul' ? 134 : testSuite.siteId,
       tests: [...liteSiteTests],
     };
   });
