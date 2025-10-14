@@ -39,35 +39,31 @@
   },
   "linter": {
     "enabled": true,
+    "domains": {
+      "next": "recommended"
+    },
     "rules": {
-      "recommended": false,
+      "recommended": true,
       "a11y": {
         "useKeyWithClickEvents": "error"
-      },
-      "complexity": {
-        "useOptionalChain": "error"
       },
       "correctness": {
         "noUndeclaredVariables": "error",
         "useExhaustiveDependencies": "warn",
-        "useHookAtTopLevel": "error",
-        "useValidTypeof": "error"
+        "useHookAtTopLevel": "error"
       },
       "security": {
         "noDangerouslySetInnerHtml": "warn",
-        "noDangerouslySetInnerHtmlWithChildren": "error",
-        "noGlobalEval": "error"
+        "noDangerouslySetInnerHtmlWithChildren": "warn"
       },
       "style": {
         "noParameterAssign": "error",
         "useImportType": "off"
       },
       "suspicious": {
-        "noArrayIndexKey": "error",
-        "noAssignInExpressions": "error",
         "noConsole": "warn",
-        "noExplicitAny": "off",
-        "noGlobalAssign": "error"
+        "noImplicitAnyLet": "off",
+        "noExplicitAny": "off"
       }
     }
   },
