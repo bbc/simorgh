@@ -85,13 +85,17 @@ const HomePage = ({ pageData }: HomePageProps) => {
   React.useEffect(() => {
     const fetchMostReadData = async () => {
       try {
+        console.log('Debug: MOST_READ_ENDPOINT value:', MOST_READ_ENDPOINT);
+        console.log('Debug: Starting fetch call to MOST_READ_ENDPOINT');
         const response = await fetch(MOST_READ_ENDPOINT);
+        console.log('Debug: Fetch call completed with status:', response.status);
+        if (!response.ok) {
+          throw new Error(`Fetch failed with status ${response.status}`);
+        }
         const data = await response.json();
-        // eslint-disable-next-line no-console
-        console.log('Fetched Most Read Data:', data);
+        console.log('Debug: Fetched Most Read Data:', data);
       } catch (error) {
-        // eslint-disable-next-line no-console
-        console.error('Error fetching Most Read Data:', error);
+        console.error('Debug: Error fetching Most Read Data:', error);
       }
     };
 

@@ -5,7 +5,7 @@
 /* eslint-disable no-restricted-globals */
 import { getMostReadEndpoint } from '../src/app/lib/utilities/getUrlHelpers/getMostReadUrls';
 
-const version = 'v0.3.0';
+const version = 'v0.3.1';
 const cacheName = 'simorghCache_v1';
 
 // const service = self.location.pathname.split('/')[1];
@@ -27,9 +27,6 @@ const MOST_READ_ENDPOINT = getMostReadEndpoint({
   isBff: appEnv !== 'local',
 });
 
-// OFFLINE_PAGE: `/${service}.lite`
-// MOST_READ_ENDPOINT: dynamically generated based on environment
-
 function logToClients(message) {
   self.clients.matchAll().then(clients => {
     clients.forEach(client => {
@@ -44,10 +41,20 @@ async function cacheMostReadStories(cache) {
     if (response.ok) {
       const { items } = await response.json();
       const storyUrls = items.map(item => item.href);
-      await Promise.all(storyUrls.map(url => cache.add(url)));
+
+      await Promise.all(
+        storyUrls.map(async url => {
+          const storyResponse = await fetch(url);
+          if (storyResponse.ok) {
+            await cache.put(url, storyResponse);
+          } else {
+            logToClients(`Failed to fetch content for ${url}`);
+          }
+        }),
+      );
     }
   } catch (error) {
-    // Removed logToClients for error in caching
+    logToClients(`Failed to cache most read stories: ${error.message}`);
   }
 }
 
@@ -58,6 +65,8 @@ self.addEventListener('install', event => {
       if (hasOfflinePageFunctionality) {
         await cache.add(OFFLINE_PAGE);
         await cache.add(MOST_READ_ENDPOINT);
+        await cache.add('123123');
+
         await cacheMostReadStories(cache);
       }
     })(),
