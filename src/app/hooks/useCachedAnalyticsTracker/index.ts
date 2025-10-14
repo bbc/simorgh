@@ -94,11 +94,11 @@ const sendSequentially = async (isOnline: boolean): Promise<void> => {
     // stop early if we go offline midway
     // retry logic: on a single failure of an item, re-enqueue at tail and continue with next
     let safetyCounter = 0; // prevent infinite loops if something goes wrong
-    while (isOnline) {
+    while (isOnline || hasQueuedItems()) {
       const item = shift();
       if (!item) break;
       try {
-        // Sequential processing is intentional to preserve event order
+        console.log('Send sendEventBeacon');
         // eslint-disable-next-line no-await-in-loop
         await sendEventBeacon(item.props);
       } catch {
@@ -265,6 +265,7 @@ export const useCachedAnalyticsTracker = (
       }
 
       try {
+        console.log('Send sendEventBeacon');
         await sendEventBeacon(props);
       } catch {
         enqueueWithLog(
