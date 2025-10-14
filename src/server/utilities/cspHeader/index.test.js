@@ -487,7 +487,7 @@ describe('cspHeader', () => {
         });
 
         it(`Then it has this mediaSrc`, () => {
-          expect(generateMediaSrc()).toEqual(mediaSrcExpectation);
+          expect(generateMediaSrc({})).toEqual(mediaSrcExpectation);
         });
 
         it(`Then it has this workerSrc`, () => {
