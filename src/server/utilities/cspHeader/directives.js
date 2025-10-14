@@ -312,7 +312,7 @@ export const generateFontSrc = ({
   isLive,
   shouldServeLimitedCsp = false,
 }) => {
-  if (shouldServeLimitedCsp) return ['https:  data:'];
+  if (shouldServeLimitedCsp) return ["https:  data: 'self'"];
   if (!isLive && isAmp) return directives.fontSrc.ampNonLive.sort();
   if (!isLive && !isAmp) return directives.fontSrc.canonicalNonLive.sort();
   if (isLive && isAmp) return directives.fontSrc.ampLive.sort();
@@ -344,7 +344,7 @@ export const generateImgSrc = ({
 };
 
 export const generateMediaSrc = ({ shouldServeLimitedCsp = false }) => {
-  if (shouldServeLimitedCsp) return ["'self' blob: data: https:"];
+  if (shouldServeLimitedCsp) return ["'self' blob: data: https: "];
   return ["'self' blob: https:"];
 };
 
@@ -355,7 +355,7 @@ export const generateScriptSrc = ({
   shouldServeLimitedCsp = false,
 }) => {
   if (shouldServeLimitedCsp)
-    return ["https: 'unsafe-inline' 'unsafe-eval' blob:"];
+    return ["https: 'unsafe-inline' 'unsafe-eval' blob: data: 'self'"];
   const insertedNonce = nonce ? [`'nonce-${nonce}'`, "'unsafe-eval'"] : [];
   if (!isLive && isAmp) return directives.scriptSrc.ampNonLive.sort();
   if (!isLive && !isAmp)
