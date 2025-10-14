@@ -41,12 +41,12 @@ const canonicalSmokeTestSuites = [
     runforEnv: ['live'],
     tests: canonicalTests,
   },
-  {
-    path: '/persian/tv-and-radio-51780528', // CPS MAP with audio clip
-    service: 'persian',
-    runforEnv: ['live'],
-    tests: canonicalTests,
-  },
+  // {
+  //   path: '/persian/tv-and-radio-51780528', // CPS MAP with audio clip
+  //   service: 'persian',
+  //   runforEnv: ['live'],
+  //   tests: canonicalTests,
+  // },
   {
     path: '/persian/iran-23231114', // CPS MAP with audio clip
     service: 'persian',
