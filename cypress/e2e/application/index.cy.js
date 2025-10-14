@@ -1,7 +1,7 @@
 import loadableConfig from '#app/lib/config/services/loadableConfig';
 import appConfig from '../../../src/server/utilities/serviceConfigs';
 
-const PAGES_WITHOUT_SERVICE_WORKER = [
+const PUBLIC_SERVICES = [
   'archive',
   'cymrufyw',
   'naidheachdan',
@@ -15,7 +15,7 @@ const PAGES_WITHOUT_SERVICE_WORKER = [
 
 describe('Application', () => {
   Object.keys(loadableConfig)
-    .filter(service => !PAGES_WITHOUT_SERVICE_WORKER.includes(service))
+    .filter(service => !PUBLIC_SERVICES.includes(service))
     .forEach(service => {
       it(`should return a 200 status code for ${service}'s service worker`, () => {
         cy.testResponseCodeAndType({
