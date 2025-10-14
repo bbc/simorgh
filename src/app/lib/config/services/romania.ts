@@ -38,7 +38,7 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
     isTrustProjectParticipant: true,
     script: latin,
-    manifestPath: 'https://static.files.bbci.co.uk/core/romania/manifest.json',
+    manifestPath: '/romania/manifest.json',
     homePageTitle: 'Home',
     showAdPlaceholder: false,
     showRelatedTopics: true,
