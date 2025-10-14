@@ -81,6 +81,7 @@ import {
   isPortraitVideo,
   isPortraitVideoUnderHeadline,
 } from '../utils/portraitVideo';
+import SaveForLaterButton from '../../components/SaveForLaterButton/SaveForLaterButton';
 
 // EXPERIMENT: Article Read Time
 interface ReadTimeData {
@@ -149,6 +150,8 @@ const getTimestampComponent =
           popOut={false}
           showReadTimeBelowTimestamp={showReadTimeBelowTimestamp}
         />
+        <SaveForLaterButton />
+
         {/* EXPERIMENT: Article Read Time */}
         {showReadTimeBelowTimestamp ? (
           <ReadTime

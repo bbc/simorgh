@@ -75,22 +75,29 @@ const fetchEventHandler = async event => {
     );
   } else if (hasOfflinePageFunctionality && event.request.mode === 'navigate') {
     event.respondWith(async () => {
-      try {
-        const preloadResponse = await event.preloadResponse;
-        if (preloadResponse) {
-          return preloadResponse;
-        }
-        const networkResponse = await fetch(event.request);
-        return networkResponse;
-      } catch (error) {
-        const cache = await caches.open(cacheName);
-        const cachedResponse = await cache.match(OFFLINE_PAGE);
-        return cachedResponse;
-      }
+
+    const cachedResponse = await caches.match(event.request);
+    if (cachedResponse) {
+    console.log('[SW] Serving saved article from cache:', event.request.url);
+    return cachedResponse;
+    }
+
+    try {
+    const networkResponse = await fetch(event.request);
+    const cache = await caches.open('manualSaveCache');
+    cache.put(event.request, networkResponse.clone());
+    console.log('[SW] Fetched and cached article:', event.request.url);
+    return networkResponse;
+    } catch (error) {
+
+    const cache = await caches.open(cacheName);
+    const offlineResponse = await cache.match(OFFLINE_PAGE);
+    console.log('[SW] Offline fallback triggered for:', event.request.url);
+    return offlineResponse;
+    }
     });
-  }
-  return;
-};
+    return;
+    }
 
 self.addEventListener('message', async event => {
   if (event.data && event.data.type === 'SAVE_ARTICLE') {
@@ -104,5 +111,5 @@ self.addEventListener('message', async event => {
     }
   }
 });
-
+}
 onfetch = fetchEventHandler;
