@@ -42,6 +42,7 @@ const KNOWN_ERRORS = [
   `Cannot read properties of null (reading 'postMessage')`,
   'Error emitting event to page/plugin, swallowed by Toucan',
   `Cannot read properties of undefined (reading 'exitPictureInPicture')`,
+  `Cannot read properties of undefined (reading 'count')`,
 ];
 
 // eslint-disable-next-line consistent-return
