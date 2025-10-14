@@ -285,26 +285,33 @@ const directives = {
   },
 };
 
-export const generateChildSrc = ({ isAmp, shouldServeLimitedCsp }) => {
+export const generateChildSrc = ({ isAmp, shouldServeLimitedCsp = false }) => {
   if (shouldServeLimitedCsp) return ["blob: https: 'self'"];
 
   return isAmp ? ['blob:'] : ["'self'"];
 };
 
-export const generateConnectSrc = ({ isLive, shouldServeLimitedCsp }) => {
+export const generateConnectSrc = ({
+  isLive,
+  shouldServeLimitedCsp = false,
+}) => {
   if (shouldServeLimitedCsp) return ["'self' https: ws:"];
 
   return isLive ? ["'self' https:"] : ["'self' https: ws:"];
 };
 
-export const generateDefaultSrc = ({ shouldServeLimitedCsp }) => {
+export const generateDefaultSrc = ({ shouldServeLimitedCsp = false }) => {
   if (shouldServeLimitedCsp) {
     return [...bbcDomains, 'https:'].sort();
   }
   return [...advertisingDirectives.defaultSrc, "'self'"].sort();
 };
 
-export const generateFontSrc = ({ isAmp, isLive, shouldServeLimitedCsp }) => {
+export const generateFontSrc = ({
+  isAmp,
+  isLive,
+  shouldServeLimitedCsp = false,
+}) => {
   if (shouldServeLimitedCsp) return ['https:  data:'];
   if (!isLive && isAmp) return directives.fontSrc.ampNonLive.sort();
   if (!isLive && !isAmp) return directives.fontSrc.canonicalNonLive.sort();
@@ -312,7 +319,11 @@ export const generateFontSrc = ({ isAmp, isLive, shouldServeLimitedCsp }) => {
   return directives.fontSrc.canonicalLive.sort();
 };
 
-export const generateFrameSrc = ({ isAmp, isLive, shouldServeLimitedCsp }) => {
+export const generateFrameSrc = ({
+  isAmp,
+  isLive,
+  shouldServeLimitedCsp = false,
+}) => {
   if (shouldServeLimitedCsp) return ['https: data:'];
   if (!isLive && isAmp) return directives.frameSrc.ampNonLive.sort();
   if (!isLive && !isAmp) return directives.frameSrc.canonicalNonLive.sort();
@@ -320,7 +331,11 @@ export const generateFrameSrc = ({ isAmp, isLive, shouldServeLimitedCsp }) => {
   return directives.frameSrc.canonicalLive.sort();
 };
 
-export const generateImgSrc = ({ isAmp, isLive, shouldServeLimitedCsp }) => {
+export const generateImgSrc = ({
+  isAmp,
+  isLive,
+  shouldServeLimitedCsp = false,
+}) => {
   if (shouldServeLimitedCsp) return ['https: data: blob:'];
   if (!isLive && isAmp) return directives.imgSrc.ampNonLive.sort();
   if (!isLive && !isAmp) return directives.imgSrc.canonicalNonLive.sort();
@@ -328,7 +343,7 @@ export const generateImgSrc = ({ isAmp, isLive, shouldServeLimitedCsp }) => {
   return directives.imgSrc.canonicalLive.sort();
 };
 
-export const generateMediaSrc = ({ shouldServeLimitedCsp }) => {
+export const generateMediaSrc = ({ shouldServeLimitedCsp = false }) => {
   if (shouldServeLimitedCsp) return ["'self' blob: data: https:"];
   return ["'self' blob: https:"];
 };
@@ -337,7 +352,7 @@ export const generateScriptSrc = ({
   isAmp,
   isLive,
   nonce,
-  shouldServeLimitedCsp,
+  shouldServeLimitedCsp = false,
 }) => {
   if (shouldServeLimitedCsp)
     return ["https: 'unsafe-inline' 'unsafe-eval' blob:"];
@@ -351,7 +366,11 @@ export const generateScriptSrc = ({
   return [...insertedNonce, ...directives.scriptSrc.canonicalLive].sort();
 };
 
-export const generateStyleSrc = ({ isAmp, isLive, shouldServeLimitedCsp }) => {
+export const generateStyleSrc = ({
+  isAmp,
+  isLive,
+  shouldServeLimitedCsp = false,
+}) => {
   if (shouldServeLimitedCsp) return ["https: 'unsafe-inline'"];
   if (!isLive && isAmp) return directives.styleSrc.ampNonLive.sort();
   if (!isLive && !isAmp) return directives.styleSrc.canonicalNonLive.sort();
@@ -359,7 +378,7 @@ export const generateStyleSrc = ({ isAmp, isLive, shouldServeLimitedCsp }) => {
   return directives.styleSrc.canonicalLive.sort();
 };
 
-export const generateWorkerSrc = ({ isAmp, shouldServeLimitedCsp }) => {
+export const generateWorkerSrc = ({ isAmp, shouldServeLimitedCsp = false }) => {
   if (shouldServeLimitedCsp)
     return ['blob:', 'data:', "'self'", '*.bbc.co.uk', '*.bbc.com'];
   return isAmp
