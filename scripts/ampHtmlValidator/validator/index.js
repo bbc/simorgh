@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 const amphtmlValidator = require('amphtml-validator');
 
-const baseUrl = 'http://localhost:7080';
+const baseUrl = 'http://localhost:7081';
 
 const getPageString = async url => {
   const response = await fetch(url);
