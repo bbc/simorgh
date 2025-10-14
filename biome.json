@@ -43,9 +43,10 @@
       "next": "recommended"
     },
     "rules": {
-      "recommended": true,
       "a11y": {
-        "useKeyWithClickEvents": "error"
+        "useKeyWithClickEvents": "error",
+        "useSemanticElements": "warn",
+        "noRedundantRoles": "warn"
       },
       "correctness": {
         "noUndeclaredVariables": "error",
