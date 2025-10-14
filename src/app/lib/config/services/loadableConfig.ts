@@ -1,5 +1,12 @@
-import { LoadableService, Services } from '#app/models/types/global';
-import loadable from '@loadable/component';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import loadable, { LoadableComponent } from '@loadable/component';
+import { Services } from '#app/models/types/global';
+
+type LoadableService = LoadableComponent<{
+  Context: typeof ServiceContext;
+  dataKey?: null;
+  children: unknown;
+}>;
 
 const loadableConfig: Record<Services, LoadableService> = {
   afaanoromoo: loadable(() => import('./afaanoromoo')),
