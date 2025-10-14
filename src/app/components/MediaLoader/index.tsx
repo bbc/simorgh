@@ -41,13 +41,18 @@ const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
 
 const logger = nodeLogger(__filename);
 
-export const BumpLoader = () => (
+type BumpLoaderProps = {
+  nonce?: string | null;
+};
+
+export const BumpLoader = ({ nonce }: BumpLoaderProps) => (
   <Helmet>
     <script
       type="text/javascript"
+      {...(nonce ? { nonce } : {})}
       src="https://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js"
     />
-    <script type="text/javascript">
+    <script type="text/javascript" {...(nonce ? { nonce } : {})}>
       {`bbcRequireMap = {
             "bump-4":"https://emp.bbci.co.uk/emp/bump-4/bump-4"
         }
@@ -228,6 +233,7 @@ const MediaLoader = ({
     isAmp,
     isLite,
     showAdsBasedOnLocation,
+    nonce,
   } = use(RequestContext);
 
   const [showPlaceholder, setShowPlaceholder] = useState(
@@ -313,7 +319,7 @@ const MediaLoader = ({
         ) : (
           <>
             {showAds && <AdvertTagLoader />}
-            <BumpLoader />
+            <BumpLoader nonce={nonce} />
             {hasPlaceholder ? (
               <Placeholder
                 src={placeholderSrc}

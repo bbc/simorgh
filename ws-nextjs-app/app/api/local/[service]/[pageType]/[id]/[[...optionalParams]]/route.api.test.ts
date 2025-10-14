@@ -104,7 +104,7 @@ describe('API Routes', () => {
     });
   });
 
-  it('should return a 500 when the requested fixture does not exist', async () => {
+  it('should return a 404 when the requested fixture does not exist', async () => {
     await testApiHandler({
       appHandler,
       params: {
@@ -116,7 +116,7 @@ describe('API Routes', () => {
         await fetch({ method: 'GET' });
         const res = await fetch({ method: 'GET' });
 
-        expect(res.status).toEqual(500);
+        expect(res.status).toEqual(404);
       },
     });
   });

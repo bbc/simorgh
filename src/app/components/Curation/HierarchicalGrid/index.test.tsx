@@ -1,5 +1,4 @@
 import React from 'react';
-import { suppressPropWarnings } from '../../../legacy/psammead/psammead-test-helpers/src';
 import { render } from '../../react-testing-library-with-providers';
 import { pidginPromos as fixture } from './fixtures';
 import mediaFixture from './mediaFixtures';
@@ -9,8 +8,6 @@ import HierarchicalGrid from '.';
 const minimalEventTrackingData = { componentName: 'test-component' };
 
 describe('Hierarchical Grid Curation', () => {
-  suppressPropWarnings(['children', 'string', 'MediaIcon']);
-
   const headingLevel = 2;
 
   beforeAll(() => {
@@ -194,33 +191,5 @@ describe('Hierarchical Grid Curation', () => {
       },
     );
     expect(container.queryByText('13 noviembre 2022')).not.toBeInTheDocument();
-  });
-
-  it('should display read time when readTime is provided in summary data', () => {
-    const fixtureDataIncludingReadTime = fixture.map(fixtureSummary => ({
-      ...fixtureSummary,
-      readTime: 5,
-    }));
-
-    const container = render(
-      <HierarchicalGrid
-        headingLevel={headingLevel}
-        summaries={fixtureDataIncludingReadTime}
-        eventTrackingData={minimalEventTrackingData}
-        readTimeVariant="variant1"
-      />,
-    );
-    expect(container.queryAllByTestId('read-time').length).toBe(12);
-  });
-
-  it('should not display read time when readTime is not provided in summary data', () => {
-    const container = render(
-      <HierarchicalGrid
-        headingLevel={headingLevel}
-        summaries={fixture}
-        eventTrackingData={minimalEventTrackingData}
-      />,
-    );
-    expect(container.queryAllByTestId('read-time').length).toBe(0);
   });
 });

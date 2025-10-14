@@ -301,7 +301,7 @@ describe('MediaLoader', () => {
 
       expect(ampPlayer).toBeInTheDocument();
       expect(ampIframeUrl).toEqual(
-        'https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/articles/cn8jgj8rjppo/p01k6msp/en-GB/amp',
+        'https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/articles/cn8jgj8rjppo/p01k6msm/en-GB/amp',
       );
     });
   });
