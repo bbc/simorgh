@@ -409,7 +409,7 @@ export const cspDirectives = ({ isAmp, isLive, service, nonce = null }) => {
         shouldServeLimitedCsp,
       }),
       'style-src': generateStyleSrc({ isAmp, isLive, shouldServeLimitedCsp }),
-      'media-src': generateMediaSrc(shouldServeLimitedCsp),
+      'media-src': generateMediaSrc({ shouldServeLimitedCsp }),
       'worker-src': generateWorkerSrc({ isAmp, shouldServeLimitedCsp }),
       'report-to': 'worldsvc',
       'upgrade-insecure-requests': [],
