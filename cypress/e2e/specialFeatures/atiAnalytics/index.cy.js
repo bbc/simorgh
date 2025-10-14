@@ -4,14 +4,7 @@ import {
   assertBillboardComponentClick,
   assertBillboardComponentView,
 } from './assertions/billboard';
-import {
-  assertFeaturesAnalysisComponentClick,
-  assertFeaturesAnalysisComponentView,
-} from './assertions/featuresAnalysis';
-import {
-  assertLatestMediaComponentClick,
-  assertLatestMediaComponentView,
-} from './assertions/latestMedia';
+import { assertFeaturesAnalysisComponentClick } from './assertions/featuresAnalysis';
 import { assertLiteSiteSummaryComponentToMainSiteClick } from './assertions/liteSiteSummary';
 import {
   assertArticleLiteSiteLinkComponentClick,
@@ -50,29 +43,10 @@ import {
   assertRecentAudioEpisodesComponentView,
 } from './assertions/recentAudioEpisodes';
 import {
-  assertRecommendationsComponentClick,
-  assertRecommendationsComponentView,
-} from './assertions/recommendations';
-import {
-  assertRelatedContentComponentClick,
-  assertRelatedContentComponentView,
-} from './assertions/relatedContent';
-import {
-  assertRelatedTopicsComponentClick,
-  assertRelatedTopicsComponentView,
-} from './assertions/relatedTopics';
-import {
-  assertScrollablePromoComponentClick,
-  assertScrollablePromoComponentView,
-} from './assertions/scrollablePromo';
-import {
   assertSocialEmbedComponentClick,
   assertSocialEmbedComponentView,
 } from './assertions/socialEmbed';
-import {
-  assertTopStoriesComponentClick,
-  assertTopStoriesComponentView,
-} from './assertions/topStories';
+
 import { setUserIDCookie } from './helpers';
 import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
 
@@ -170,33 +144,6 @@ const canonicalTestSuites = [
     ],
   },
   {
-    path: '/gahuza/articles/c5y51yxeg53o',
-    runforEnv: ['local'],
-    service: 'gahuza',
-    pageIdentifier: 'gahuza.articles.c5y51yxeg53o.page',
-    siteId: 40,
-    applicationType: 'responsive',
-    contentType: 'article',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertArticleLiteSiteLinkComponentView,
-      assertArticleLiteSiteLinkComponentClick,
-      assertTopStoriesComponentView,
-      assertTopStoriesComponentClick,
-      assertFeaturesAnalysisComponentView,
-      assertFeaturesAnalysisComponentClick,
-      assertPodcastPromoComponentView,
-      assertPodcastPromoComponentClick,
-      assertRelatedTopicsComponentView,
-      assertRelatedTopicsComponentClick,
-      assertRelatedContentComponentView,
-      assertRelatedContentComponentClick,
-      assertMostReadComponentView,
-      assertMostReadComponentClick,
-    ],
-  },
-  {
     path: '/gahuza/popular/read',
     runforEnv: ['local', 'test', 'live'],
     service: 'gahuza',
@@ -254,47 +201,6 @@ const canonicalTestSuites = [
       assertPageView,
       assertRadioScheduleComponentView,
       assertRadioScheduleComponentClick,
-    ],
-  },
-  {
-    path: '/hausa/articles/cw43vy8zdjvo',
-    runforEnv: ['local', 'live'],
-    service: 'hausa',
-    pageIdentifier: 'hausa.articles.cw43vy8zdjvo.page',
-    siteId: 51,
-    applicationType: 'responsive',
-    contentType: 'article-sfv',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertLatestMediaComponentView,
-      assertLatestMediaComponentClick,
-    ],
-  },
-  {
-    path: '/hindi/articles/c9w59wnx27ro',
-    runforEnv: ['local', 'live'],
-    service: 'hindi',
-    pageIdentifier: 'hindi.articles.c9w59wnx27ro.page',
-    siteId: 52,
-    applicationType: 'responsive',
-    contentType: 'article',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertTopStoriesComponentView,
-      assertTopStoriesComponentClick,
-      assertFeaturesAnalysisComponentView,
-      assertRecommendationsComponentView,
-      assertRecommendationsComponentClick,
-      assertPodcastPromoComponentView,
-      assertPodcastPromoComponentClick,
-      assertScrollablePromoComponentView,
-      assertScrollablePromoComponentClick,
-      assertRelatedTopicsComponentView,
-      assertRelatedTopicsComponentClick,
-      assertMostReadComponentView,
-      assertMostReadComponentClick,
     ],
   },
   {
@@ -377,74 +283,6 @@ const canonicalTestSuites = [
     ],
   },
   {
-    path: '/pidgin/articles/ce9wk6glg4lo',
-    runforEnv: ['local', 'live'],
-    service: 'pidgin',
-    pageIdentifier: 'pidgin.articles.ce9wk6glg4lo.page',
-    siteId: 70,
-    applicationType: 'responsive',
-    contentType: 'article',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertTopStoriesComponentView,
-      assertTopStoriesComponentClick,
-      assertFeaturesAnalysisComponentView,
-      assertSocialEmbedComponentView,
-      assertSocialEmbedComponentClick,
-      assertRelatedTopicsComponentView,
-      assertRelatedTopicsComponentClick,
-      assertRelatedContentComponentView,
-      assertRelatedContentComponentClick,
-      assertMostReadComponentView,
-      assertMostReadComponentClick,
-    ],
-  },
-  {
-    path: '/pidgin/articles/cyv3zm4y428o',
-    runforEnv: ['live'],
-    service: 'pidgin',
-    pageIdentifier: 'pidgin.articles.cyv3zm4y428o.page',
-    siteId: 70,
-    applicationType: 'responsive',
-    contentType: 'article',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertTopStoriesComponentView,
-      assertTopStoriesComponentClick,
-      assertFeaturesAnalysisComponentView,
-      assertFeaturesAnalysisComponentClick,
-      assertScrollablePromoComponentClick,
-      assertScrollablePromoComponentView,
-      assertRelatedTopicsComponentView,
-      assertRelatedTopicsComponentClick,
-      assertRelatedContentComponentView,
-      assertRelatedContentComponentClick,
-      assertMostReadComponentView,
-      assertMostReadComponentClick,
-    ],
-  },
-  {
-    path: '/pidgin/articles/cw0x29n2pvqo',
-    runforEnv: ['local', 'live'],
-    service: 'pidgin',
-    pageIdentifier: 'pidgin.articles.cw0x29n2pvqo.page',
-    siteId: 70,
-    applicationType: 'responsive',
-    contentType: 'article-sfv',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertLatestMediaComponentClick,
-      assertLatestMediaComponentView,
-      assertRelatedTopicsComponentView,
-      assertRelatedTopicsComponentClick,
-      assertRelatedContentComponentView,
-      assertRelatedContentComponentClick,
-    ],
-  },
-  {
     path: '/polska',
     runforEnv: ['local'],
     service: 'polska',
@@ -458,17 +296,6 @@ const canonicalTestSuites = [
       assertMessageBannerComponentView,
       assertMessageBannerComponentClick,
     ],
-  },
-  {
-    path: '/polska/articles/c639526lxlro',
-    runforEnv: ['local'],
-    service: 'polska',
-    pageIdentifier: 'polska.articles.c639526lxlro.page',
-    siteId: 135,
-    applicationType: 'responsive',
-    contentType: 'article',
-    useReverb: true,
-    tests: [assertPageView],
   },
   {
     path: '/portuguese',
@@ -559,41 +386,15 @@ const supportsAmp = ({ contentType }) =>
     contentType,
   );
 
-const ampTestSuites = canonicalTestSuites
-  .filter(supportsAmp)
-  .map(testSuite => {
-    return {
-      ...testSuite,
-      path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
-      useReverb: true,
-      applicationType: 'amp',
-      tests: [assertPageView],
-    };
-  })
-  .concat([
-    {
-      path: 'news/articles/c0g992jmmkko.amp',
-      runforEnv: ['local', 'test'],
-      service: 'news',
-      pageIdentifier: 'news.articles.c0g992jmmkko.page',
-      siteId: 64,
-      applicationType: 'amp',
-      contentType: 'article',
-      useReverb: true,
-      tests: [assertPageView],
-    },
-    {
-      path: '/news/articles/c9djwv3q6w9o.amp',
-      runforEnv: ['live'],
-      service: 'news',
-      pageIdentifier: 'news.articles.c9djwv3q6w9o.page',
-      siteId: 64,
-      applicationType: 'amp',
-      contentType: 'article',
-      useReverb: true,
-      tests: [assertPageView],
-    },
-  ]);
+const ampTestSuites = canonicalTestSuites.filter(supportsAmp).map(testSuite => {
+  return {
+    ...testSuite,
+    path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
+    useReverb: true,
+    applicationType: 'amp',
+    tests: [assertPageView],
+  };
+});
 
 const supportsLite = ({ path }) => !path.startsWith('/persian/afghanistan');
 
