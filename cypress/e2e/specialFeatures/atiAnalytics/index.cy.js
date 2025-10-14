@@ -225,6 +225,17 @@ const canonicalTestSuites = [
     ],
   },
   {
+    path: '/magyarul',
+    runforEnv: ['local', 'test'],
+    service: 'magyarul',
+    pageIdentifier: 'magyarul.page',
+    siteId: 30,
+    applicationType: 'responsive',
+    contentType: 'index-home',
+    useReverb: true,
+    tests: [assertPageView],
+  },
+  {
     path: '/marathi/topics/c1wmk63rjkvt',
     runforEnv: ['local', 'live'],
     service: 'marathi',
@@ -414,10 +425,10 @@ const liteTestSuites = canonicalTestSuites
       path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
       applicationType: 'lite',
       useReverb: false,
+      siteId: testSuite.service === 'magyarul' ? 134 : testSuite.siteId,
       tests: [...liteSiteTests],
     };
   });
-
 runTestsForPage({
   testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],
   beforeAll: [setUserIDCookie],
