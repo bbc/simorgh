@@ -7,7 +7,6 @@ const PUBLIC_SERVICES = [
   'naidheachdan',
   'news',
   'newsround',
-  'romania',
   'scotland',
   'sport',
   'ws',
