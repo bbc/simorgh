@@ -173,6 +173,6 @@ export default defineConfig({
   blockHosts: 'gn-web-assets.api.bbc.com',
   defaultCommandTimeout: 10000,
   pageLoadTimeout: 100000,
-  responseTimeout: 50000,
+  responseTimeout: 70000,
   chromeWebSecurity: false,
 });

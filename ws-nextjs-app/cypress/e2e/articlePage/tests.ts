@@ -1,7 +1,6 @@
 import { Services } from '#app/models/types/global';
 import appConfig from '#src/server/utilities/serviceConfigs';
 import { ServiceParametersType } from '../../types';
-import config from '../../support/config/services';
 // import { crossPlatform } from '../assertions/crossPlatformAssertion';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
@@ -24,14 +23,12 @@ export default ({
 }: ServiceParametersType) => {
   describe(`Running tests for ${service} ${pageType}`, () => {
     describe(`Metadata`, () => {
-      const serviceID = (config[service]?.name || service) as Services;
-
       // Here we should only have metadata tests that are unique to articles pages
       it('should have the correct articles metadata', () => {
         cy.get('meta[name="article:author"]').should(
           'have.attr',
           'content',
-          appConfig[serviceID][variant].articleAuthor,
+          appConfig[service][variant].articleAuthor,
         );
       });
 
