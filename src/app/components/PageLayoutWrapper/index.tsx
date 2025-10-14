@@ -172,9 +172,7 @@ const PageLayoutWrapper = ({
                 if (wrappedTopics) {
                     wrappedTopics.forEach(({ topicName, topicId }) => {
                         if (!topicsContents.${service}) topicsContents.${service} = {};
-                        if (topicsContents.${service}[topicName] && topicsContents.${service}[topicName].hasOwnProperty('count')) {
-                            topicsContents.${service}[topicName].count++;
-                        }
+                        
                         else {
                             topicsContents.${service}[topicName] = {
                                 'count': 1,
