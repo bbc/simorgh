@@ -12,7 +12,7 @@ const PUBLIC_SERVICES = [
   'ws',
 ];
 
-const NOT_LIVE_SERVICES = ['magyarul'];
+const NOT_LIVE_SERVICES = ['magyarul', 'romania', 'dari'];
 
 const servicesToIgnore = [...PUBLIC_SERVICES, ...NOT_LIVE_SERVICES];
 
