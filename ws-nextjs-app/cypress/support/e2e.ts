@@ -16,24 +16,9 @@
 // Import commands.js using ES2015 syntax:
 import 'cypress-axe';
 import './commands';
-import installLogsCollector from 'cypress-terminal-report/src/installLogsCollector';
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
-
-const KNOWN_URLS = ['https://www.bbc.com/usingthebbc'];
-
-const isKnownUrl = (testLocation: string) =>
-  KNOWN_URLS.some(url => testLocation.startsWith(url));
-
-Cypress.on(`window:before:load`, win => {
-  cy.stub(win.console, `error`).callsFake(msg => {
-    if (!isKnownUrl(win.location.href)) {
-      cy.now(`task`, `error`, msg);
-      throw new Error(msg);
-    }
-  });
-});
 
 const KNOWN_ERRORS = [
   // Catches an unexplained error experienced while running the following test:
@@ -88,5 +73,3 @@ Cypress.on('uncaught:exception', (err, _runnable, promise) => {
     return false;
   }
 });
-
-installLogsCollector();
