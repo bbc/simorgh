@@ -312,7 +312,7 @@ export const generateFontSrc = ({
   isLive,
   shouldServeLimitedCsp = false,
 }) => {
-  if (shouldServeLimitedCsp) return ["https:  data: 'self'"];
+  if (shouldServeLimitedCsp) return ["https:  data: blob: 'self'"];
   if (!isLive && isAmp) return directives.fontSrc.ampNonLive.sort();
   if (!isLive && !isAmp) return directives.fontSrc.canonicalNonLive.sort();
   if (isLive && isAmp) return directives.fontSrc.ampLive.sort();
