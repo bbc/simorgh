@@ -344,7 +344,7 @@ export const generateImgSrc = ({
 };
 
 export const generateMediaSrc = ({ shouldServeLimitedCsp = false }) => {
-  if (shouldServeLimitedCsp) return ["'self' blob: data: https: "];
+  if (shouldServeLimitedCsp) return ["'self' blob: data: https:"];
   return ["'self' blob: https:"];
 };
 
