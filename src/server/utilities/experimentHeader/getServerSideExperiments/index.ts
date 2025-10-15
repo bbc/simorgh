@@ -7,7 +7,7 @@ import { IncomingHttpHeaders } from 'node:http';
 import enabledExperimentList from '../enabledExperimentsList';
 
 type Props = {
-  headers: Record<string, string> | IncomingHttpHeaders;
+  headers: IncomingHttpHeaders;
   service: Services;
   pageType: PageTypes;
 };
