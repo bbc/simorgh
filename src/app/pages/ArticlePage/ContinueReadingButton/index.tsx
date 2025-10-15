@@ -53,7 +53,6 @@ const ContinueReadingButton = ({
         // Apply the custom focus style dynamically
         nthElement.tabIndex = 0;
         nthElement.focus();
-        nthElement.classList.add('continueReadingFocusedElement');
       }
     }
 
