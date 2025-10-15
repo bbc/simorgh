@@ -3,6 +3,7 @@ import { use } from 'react';
 import { jsx } from '@emotion/react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Image from '#app/components/Image';
+import buildIChefURL from '#app/lib/utilities/ichefURL';
 import { createSrcsets } from '#app/lib/utilities/srcSet';
 import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#app/lib/utilities/imageSrcHelpers/locator';
@@ -32,7 +33,7 @@ const getGradientStyles = ({
 };
 
 const MaskedImage = ({
-  imageUrl,
+  // imageUrl,
   imageUrlTemplate,
   imageWidth,
   altText = '',
@@ -54,13 +55,20 @@ const MaskedImage = ({
       originalImageWidth: imageWidth,
     });
 
+  const DEFAULT_IMAGE_RES = 660;
+  const src = buildIChefURL({
+    originCode,
+    locator,
+    resolution: DEFAULT_IMAGE_RES,
+  });
+
   const gradientStyles = getGradientStyles({ isRtl, showVignette });
 
   return (
     <div css={[styles.maskedImageWrapper, gradientStyles]}>
       <Image
         alt={altText}
-        src={imageUrl}
+        src={src}
         srcSet={primarySrcset || undefined}
         fallbackSrcSet={fallbackSrcset || undefined}
         mediaType={primaryMimeType || undefined}
