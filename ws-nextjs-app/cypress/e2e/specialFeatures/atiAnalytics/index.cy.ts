@@ -112,7 +112,7 @@ const canonicalTestSuites = [
     pageIdentifier: 'ws.languages.page',
     siteId: 64,
     applicationType: 'responsive',
-    contentType: 'index-home',
+    contentType: 'static',
     tests: [assertPageView],
   },
   {
