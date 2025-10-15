@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, { use, useEffect, MouseEvent } from 'react';
+import { use, useEffect, MouseEvent } from 'react';
 import { jsx } from '@emotion/react';
 import Text from '#app/components/Text';
 import { TriangleDown } from '#app/components/icons';
