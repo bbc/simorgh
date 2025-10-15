@@ -3,10 +3,11 @@ import {
   ServerSideExperiment,
   Services,
 } from '#app/models/types/global';
+import { IncomingHttpHeaders } from 'node:http';
 import enabledExperimentList from '../enabledExperimentsList';
 
 type Props = {
-  headers: Record<string, string>;
+  headers: IncomingHttpHeaders;
   service: Services;
   pageType: PageTypes;
 };
@@ -24,9 +25,10 @@ export default ({ headers, service, pageType }: Props) => {
             pageTypes.includes(pageType),
         );
 
-        const hasType = content.includes(';');
+        const isString = typeof content === 'string';
+        const hasType = isString && content.includes(';');
 
-        if (hasType) {
+        if (hasType && isString) {
           const [type, variation] = content.split(';');
           result.push({
             experimentName,
@@ -35,7 +37,7 @@ export default ({ headers, service, pageType }: Props) => {
             enabled,
           });
         } else {
-          const variation = content;
+          const variation = isString ? content : '';
           result.push({
             experimentName,
             variation,
