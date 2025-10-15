@@ -12,9 +12,13 @@ const PUBLIC_SERVICES = [
   'ws',
 ];
 
+const NOT_LIVE_SERVICES = ['magyarul'];
+
+const servicesToIgnore = [...PUBLIC_SERVICES, ...NOT_LIVE_SERVICES];
+
 describe('Application', () => {
   Object.keys(loadableConfig)
-    .filter(service => !PUBLIC_SERVICES.includes(service))
+    .filter(service => !servicesToIgnore.includes(service))
     .forEach(service => {
       it(`should return a 200 status code for ${service}'s service worker`, () => {
         cy.testResponseCodeAndType({
