@@ -44,8 +44,6 @@ const MOST_READ_ENDPOINT = getMostReadEndpoint({
   isBff: appEnv !== 'local',
 });
 
-const offlinePageUrl = new URL(OFFLINE_PAGE, self.location.origin).href;
-
 async function cacheMostReadStories(cache) {
   try {
     const response = await fetch(MOST_READ_ENDPOINT);
