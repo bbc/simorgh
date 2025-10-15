@@ -1,33 +1,36 @@
-import config from '../../support/config/services';
+import loadableConfig from '#app/lib/config/services/loadableConfig';
 import appConfig from '../../../src/server/utilities/serviceConfigs';
-import serviceHasPageType from '../../support/helpers/serviceHasPageType';
-import ampOnlyServices from '../../support/helpers/ampOnlyServices';
+
+const PUBLIC_SERVICES = [
+  'archive',
+  'cymrufyw',
+  'naidheachdan',
+  'news',
+  'newsround',
+  'scotland',
+  'sport',
+  'ws',
+];
 
 describe('Application', () => {
-  Object.keys(config)
-    .filter(service =>
-      Object.keys(config[service].pageTypes).some(pageType =>
-        serviceHasPageType(service, pageType),
-      ),
-    )
+  Object.keys(loadableConfig)
+    .filter(service => !PUBLIC_SERVICES.includes(service))
     .forEach(service => {
-      if (!ampOnlyServices.includes(service)) {
-        it(`should return a 200 status code for ${service}'s service worker`, () => {
-          cy.testResponseCodeAndType({
-            path: `/${config[service].name}/sw.js`,
-            responseCode: 200,
-            type: 'application/javascript',
-          });
+      it(`should return a 200 status code for ${service}'s service worker`, () => {
+        cy.testResponseCodeAndType({
+          path: `/${service}/sw.js`,
+          responseCode: 200,
+          type: 'application/javascript',
         });
+      });
 
-        it(`should return a 200 status code for ${service} manifest file`, () => {
-          cy.testResponseCodeAndType({
-            path: `/${config[service].name}/manifest.json`,
-            responseCode: 200,
-            type: 'application/json',
-          });
+      it(`should return a 200 status code for ${service} manifest file`, () => {
+        cy.testResponseCodeAndType({
+          path: `/${service}/manifest.json`,
+          responseCode: 200,
+          type: 'application/json',
         });
-      }
+      });
     });
 });
 
