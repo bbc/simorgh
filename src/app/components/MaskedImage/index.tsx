@@ -10,12 +10,13 @@ import getLocator from '#app/lib/utilities/imageSrcHelpers/locator';
 import styles from './styles';
 
 type Props = {
-  imageUrl: string;
+  imageUrl?: string;
   imageUrlTemplate: string;
   imageWidth: number;
   altText?: string;
   showPlaceholder?: boolean;
   showVignette?: boolean;
+  isLivePageHeaderImage?: boolean;
 };
 
 const getGradientStyles = ({
@@ -33,12 +34,13 @@ const getGradientStyles = ({
 };
 
 const MaskedImage = ({
-  // imageUrl,
+  imageUrl,
   imageUrlTemplate,
   imageWidth,
   altText = '',
   showPlaceholder = true,
   showVignette = false,
+  isLivePageHeaderImage = false,
 }: Props) => {
   const { dir } = use(ServiceContext);
   const isRtl = dir === 'rtl';
@@ -55,8 +57,8 @@ const MaskedImage = ({
       originalImageWidth: imageWidth,
     });
 
-  const DEFAULT_IMAGE_RES = 660;
-  const src = buildIChefURL({
+  const DEFAULT_IMAGE_RES = 480;
+  const srcWebp = buildIChefURL({
     originCode,
     locator,
     resolution: DEFAULT_IMAGE_RES,
@@ -68,7 +70,7 @@ const MaskedImage = ({
     <div css={[styles.maskedImageWrapper, gradientStyles]}>
       <Image
         alt={altText}
-        src={src}
+        src={isLivePageHeaderImage ? srcWebp : imageUrl}
         srcSet={primarySrcset || undefined}
         fallbackSrcSet={fallbackSrcset || undefined}
         mediaType={primaryMimeType || undefined}
