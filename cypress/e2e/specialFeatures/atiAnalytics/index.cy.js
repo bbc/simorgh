@@ -376,7 +376,7 @@ const supportsAmp = ({ contentType }) =>
     'player-live',
     'player-episode',
     'index-category',
-    'static', // maybe
+    'static',
   ].includes(contentType);
 
 const ampTestSuites = canonicalTestSuites.filter(supportsAmp).map(testSuite => {

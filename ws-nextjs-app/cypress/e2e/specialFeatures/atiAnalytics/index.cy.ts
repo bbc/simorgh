@@ -102,7 +102,7 @@ const canonicalTestSuites = [
     pageIdentifier: 'ws.languages.page',
     siteId: 64,
     applicationType: 'responsive',
-    contentType: 'index-home', // why
+    contentType: 'index-home',
     tests: [assertPageView],
   },
   {
@@ -112,7 +112,7 @@ const canonicalTestSuites = [
     pageIdentifier: 'ws.languages.page',
     siteId: 64,
     applicationType: 'responsive',
-    contentType: 'static', // why
+    contentType: 'static',
     tests: [assertPageView],
   },
   {

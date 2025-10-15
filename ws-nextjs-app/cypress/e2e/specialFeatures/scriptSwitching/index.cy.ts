@@ -208,14 +208,14 @@ const scriptSwitchTestSuites = [
     runforEnv: ['live'],
     tests: [assertScriptSwitch],
   },
-  // {
-  //   path: '/zhongwen/trad/world-53107744',
-  //   service: 'zhongwen',
-  //   variant: 'trad',
-  //   otherVariant: 'simp',
-  //   runforEnv: ['live'],
-  //   tests: [assertScriptSwitch],
-  // },
+  {
+    path: '/zhongwen/trad/world-53107744',
+    service: 'zhongwen',
+    variant: 'trad',
+    otherVariant: 'simp',
+    runforEnv: ['live'],
+    tests: [assertScriptSwitch],
+  },
 ];
 
 runTestsForPage({
