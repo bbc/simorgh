@@ -413,7 +413,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
           <main
             css={[
-              styles.mainContent,
+              styles.mainContent(liteCTAShows),
               ...(showContinueReadingButton
                 ? [!showAllContent && styles.contentHidden(liteCTAShows)]
                 : []),

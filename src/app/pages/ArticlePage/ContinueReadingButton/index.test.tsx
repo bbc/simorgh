@@ -186,7 +186,7 @@ describe('ContinueReadingButton', () => {
         );
 
         const button = getByTestId('read-more-button') as HTMLElement;
-        fireEvent.mouseDown(button);
+        fireEvent.click(button);
 
         // Verify that the mockSetShowAllContent function is called
         expect(mockSetShowAllContent).toHaveBeenCalledTimes(1);
