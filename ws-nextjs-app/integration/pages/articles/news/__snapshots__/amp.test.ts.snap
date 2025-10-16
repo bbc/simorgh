@@ -172,7 +172,7 @@ exports[`AMP Articles Main heading should match text 1`] = `"Royal wedding flowe
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://localhost:7080/news/images/icons/icon-192x192.png",
+  "url": "http://localhost:7081/news/images/icons/icon-192x192.png",
 }
 `;
 

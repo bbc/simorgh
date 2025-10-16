@@ -299,7 +299,7 @@ exports[`Canonical Story Page Most Read has item with rank 10`] = `
 exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://localhost:7080/mundo/images/icons/icon-192x192.png",
+  "url": "http://localhost:7081/mundo/images/icons/icon-192x192.png",
 }
 `;
 
