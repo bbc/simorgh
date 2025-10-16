@@ -4,9 +4,11 @@
  */
 
 import numberOfCurationsTest from '#src/integration/pages/homePage/numberOfCurations';
-import { data as pageData } from '../../../../../data/portuguese/homePage/index.json';
+import portugueseData from '#data/portuguese/homePage/index.json';
 
 describe('Canonical', () => {
+  const { data: pageData } = portugueseData;
+
   numberOfCurationsTest(pageData);
 
   const portraitVideoCurations = pageData.curations.filter(

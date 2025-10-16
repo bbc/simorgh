@@ -274,8 +274,9 @@ server.get(
         serverSideExperiments = getServerExperiments({
           headers,
           service,
-          derivedPageType,
+          pageType: derivedPageType,
         });
+
         data.serverSideExperiments = serverSideExperiments;
       } else {
         sendCustomMetric({
