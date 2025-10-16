@@ -3,10 +3,7 @@ import config from '../support/config/services';
 import { ServiceParametersType } from '../types';
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
-export const testsThatFollowSmokeTestConfigForAllAMPPages = ({
-  service,
-  pageType,
-}: ServiceParametersType) => {
+export default ({ service, pageType }: ServiceParametersType) => {
   describe(`testsThatFollowSmokeTestConfigForAllAMPPages to run for ${service} ${pageType}`, () => {
     describe('Header Tests', () => {
       const serviceName = config[service]?.name || service;
