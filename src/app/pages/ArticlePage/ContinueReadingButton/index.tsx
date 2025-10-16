@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, { use, useEffect } from 'react';
+import { use, useEffect, MouseEvent } from 'react';
 import { jsx } from '@emotion/react';
 import Text from '#app/components/Text';
 import { TriangleDown } from '#app/components/icons';
@@ -37,20 +37,7 @@ const ContinueReadingButton = ({
   const { onClick: clickTrackerHandler } =
     useClickTrackerHandler(eventTrackingData);
 
-  const handleEvent = (
-    event:
-      | React.MouseEvent<HTMLButtonElement>
-      | React.KeyboardEvent<HTMLButtonElement>
-      | React.TouchEvent<HTMLButtonElement>,
-  ) => {
-    if (event.type === 'keydown') {
-      const keyboardEvent = event as React.KeyboardEvent<HTMLButtonElement>;
-      if (keyboardEvent.key !== 'Enter' && keyboardEvent.key !== ' ') {
-        return; // Ignore keys other than Enter and Space otherwise tabbing to the next element will actually click the button
-      }
-    }
-
-    event.preventDefault();
+  const handleEvent = (event: MouseEvent<HTMLButtonElement>) => {
     clickTrackerHandler?.(event);
     setShowAllContent();
   };
@@ -66,25 +53,9 @@ const ContinueReadingButton = ({
         // Apply the custom focus style dynamically
         nthElement.tabIndex = 0;
         nthElement.focus();
-        nthElement.classList.add('continueReadingFocusedElement');
-
-        const handleBlur = () => {
-          // Remove the custom focus style
-          nthElement.removeAttribute('tabindex');
-          nthElement.classList.remove('continueReadingFocusedElement');
-        };
-
-        nthElement.addEventListener('blur', handleBlur);
-
-        // Return the cleanup function
-        return () => {
-          nthElement.removeEventListener('blur', handleBlur);
-        };
       }
     }
 
-    // Explicitly return undefined if nthElement does not exist
-    return undefined;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [showAllContent]);
 
@@ -105,9 +76,7 @@ const ContinueReadingButton = ({
     <button
       css={[buttonStyle, styles.hideButtonOnDesktop]}
       type="button"
-      onMouseDown={handleEvent}
-      onKeyDown={handleEvent}
-      onTouchStart={handleEvent}
+      onClick={handleEvent}
       data-testid="read-more-button"
       {...viewRef}
     >
