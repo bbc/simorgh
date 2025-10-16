@@ -6,8 +6,7 @@
 const version = 'v0.3.1';
 const cacheName = 'simorghCache_v1';
 
-// const service = self.location.pathname.split('/')[1];
-const service = self.location.pathname.split('/').pop();
+const service = self.location.pathname.split('/')[1];
 const hasOfflinePageFunctionality = true;
 const OFFLINE_PAGE = `/${service}.lite`;
 const isLocalEnv = self.location.hostname === 'localhost';
@@ -28,55 +27,12 @@ function logToClients(message) {
   });
 }
 
-const getMostReadEndpoint = ({ service, variant, isBff = false }) => {
-  if (isBff) {
-    return variant
-      ? `/fd/simorgh-bff?pageType=mostRead&service=${service}&variant=${variant}`
-      : `/fd/simorgh-bff?pageType=mostRead&service=${service}`;
-  }
-  return variant
-    ? `/${service}/mostread/${variant}.json`
-    : `/${service}/mostread.json`;
-};
-
-const MOST_READ_ENDPOINT = getMostReadEndpoint({
-  service,
-  isBff: appEnv !== 'local',
-});
-
-async function cacheMostReadStories(cache) {
-  try {
-    const response = await fetch(MOST_READ_ENDPOINT);
-    if (response.ok) {
-      const { items } = await response.json();
-      const storyUrls = items.map(item => {
-        const offlinePageUrl = new URL(item.href, self.location.origin).href;
-        return offlinePageUrl;
-      });
-
-      await Promise.all(
-        storyUrls.map(async url => {
-          const storyResponse = await fetch(url);
-          if (storyResponse.ok) {
-            await cache.put(url, storyResponse);
-          } else {
-            logToClients(`Failed to fetch content for ${url}`);
-          }
-        }),
-      );
-    }
-  } catch (error) {
-    logToClients(`Failed to cache most read stories: ${error.message}`);
-  }
-}
-
 self.addEventListener('install', event => {
   event.waitUntil(
     (async () => {
       const cache = await caches.open(cacheName);
       if (hasOfflinePageFunctionality) {
         await cache.add(OFFLINE_PAGE);
-        await cache.add(MOST_READ_ENDPOINT);
         await cacheMostReadStories(cache);
       }
     })(),
@@ -107,7 +63,6 @@ const fetchEventHandler = async event => {
   );
 
   const isRequestForWebpImage = WEBP_IMAGE.test(event.request.url);
-  const isRequestForMostRead = event.request.url.endsWith(MOST_READ_ENDPOINT);
 
   if (isRequestForWebpImage) {
     const req = event.request.clone();
@@ -172,3 +127,39 @@ const fetchEventHandler = async event => {
 };
 
 onfetch = fetchEventHandler;
+
+self.addEventListener('message', async event => {
+  logToClients(`[SW] Received message: ${event.data?.type}`);
+  if (event.data && event.data.type === 'CACHE_HOME_PAGE_AND_MOST_READ') {
+    if (!navigator.serviceWorker.controller) {
+      logToClients(
+        '[SW] Service worker is not active. Skipping caching logic.',
+      );
+      return;
+    }
+    const { homePageUrl, mostReadUrls } = event.data;
+
+    try {
+      const cache = await caches.open('simorghCache_v1');
+      // Most read URLs by default are canonical--> Append ".lite" to each URL and cache all
+      if (homePageUrl && mostReadUrls && Array.isArray(mostReadUrls)) {
+        const liteUrls = mostReadUrls.map(url => `${url}.lite`);
+        await Promise.all(
+          liteUrls.map(async url => {
+            try {
+              await cache.add(url);
+              // eslint-disable-next-line no-console
+              console.log(`[SW] Cached most read URL: ${url}`);
+            } catch (err) {
+              // eslint-disable-next-line no-console
+              console.error(`[SW] Failed to cache most read URL: ${url}`, err);
+            }
+          }),
+        );
+      }
+    } catch (err) {
+      // eslint-disable-next-line no-console
+      console.error('[SW] Failed to cache URLs:', err);
+    }
+  }
+});

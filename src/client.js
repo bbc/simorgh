@@ -53,3 +53,12 @@ if (process.env.NODE_ENV === 'production') {
 if (module.hot) {
   module.hot.accept();
 }
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker
+      .register('/sw.js')
+      .then(() => console.log('Service Worker registered successfully'))
+      .catch(err => console.error('Service Worker registration failed:', err));
+  });
+}
