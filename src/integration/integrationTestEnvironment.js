@@ -1,9 +1,9 @@
 /* eslint-disable no-console */
 
-const TestEnvironment = require('@happy-dom/jest-environment').default;
-const fetchHtml = require('./utils/fetchHtml');
-const getPageTypeFromTestPath = require('./utils/getPageTypeFromTestPath');
-const camelCaseToText = require('./utils/camelCaseToText');
+import TestEnvironment from '@happy-dom/jest-environment';
+import fetchHtml from './utils/fetchHtml';
+import getPageTypeFromTestPath from './utils/getPageTypeFromTestPath';
+import camelCaseToText from './utils/camelCaseToText';
 
 class IntegrationTestEnvironment extends TestEnvironment {
   constructor(config, context) {
@@ -57,4 +57,4 @@ class IntegrationTestEnvironment extends TestEnvironment {
   }
 }
 
-module.exports = IntegrationTestEnvironment;
+export default IntegrationTestEnvironment;

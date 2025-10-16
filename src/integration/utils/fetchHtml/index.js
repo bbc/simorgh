@@ -1,22 +1,22 @@
 /* eslint-disable no-console */
-const { Window } = require('happy-dom');
-const retry = require('retry');
-const dns = require('node:dns');
+import { Window } from 'happy-dom';
+import { operation } from 'retry';
+import { setDefaultResultOrder } from 'node:dns';
 
 // https://github.com/node-fetch/node-fetch/issues/1624#issuecomment-1407717012
-dns.setDefaultResultOrder('ipv4first');
+setDefaultResultOrder('ipv4first');
 
-const faultTolerantFetch = ({ url, headers }) =>
+export default ({ url, headers }) =>
   new Promise((resolve, reject) => {
     const oneSecond = 1000;
-    const operation = retry.operation({
+    const retry = operation({
       retries: 5,
       factor: 1,
       minTimeout: oneSecond,
       maxTimeout: oneSecond,
     });
 
-    operation.attempt(async currentAttempt => {
+    retry.attempt(async currentAttempt => {
       if (currentAttempt > 1) {
         console.warn(
           `Error getting HTML from ${url}`,
@@ -53,7 +53,7 @@ const faultTolerantFetch = ({ url, headers }) =>
           .includes('Error: socket hang up');
 
         if (isSocketHangUpError) {
-          if (operation.retry(error)) {
+          if (retry.retry(error)) {
             return;
           }
         }
@@ -62,5 +62,3 @@ const faultTolerantFetch = ({ url, headers }) =>
       }
     });
   });
-
-module.exports = faultTolerantFetch;

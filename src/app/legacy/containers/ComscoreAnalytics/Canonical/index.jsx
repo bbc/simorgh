@@ -4,9 +4,8 @@ import { Helmet } from 'react-helmet';
 import { UserContext } from '#contexts/UserContext';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 
-const CanonicalComscoreAnalytics = () => {
+const CanonicalComscoreAnalytics = ({ nonce = null }) => {
   const { personalisationEnabled } = use(UserContext);
-
   const staticAssetsPath = `${
     getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN
   }${getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
@@ -25,6 +24,7 @@ const CanonicalComscoreAnalytics = () => {
         async
         type="text/javascript"
         src={`${staticAssetsPath}${comscoreScript}`}
+        nonce={nonce}
       />
       <noscript>
         {`<img src="https://sb.scorecardresearch.com/p?c1=2&c2=17986528&cv=2.0&cj=1" />`}

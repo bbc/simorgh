@@ -1,13 +1,10 @@
 import path from 'ramda/src/path';
-import config from '../../config/services';
 
 export default ({ service }) => {
   describe(`AMP Ads`, () => {
     it('should be displayed based on whether ads toggle is enabled/disabled', () => {
-      const serviceName = config[service].name;
-
-      cy.getToggles(serviceName).then(() => {
-        cy.fixture(`toggles/${serviceName}.json`).then(toggles => {
+      cy.getToggles(service).then(() => {
+        cy.fixture(`toggles/${service}.json`).then(toggles => {
           const adsEnabled = path(['ads', 'enabled'], toggles);
 
           if (adsEnabled) {

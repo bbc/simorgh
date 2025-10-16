@@ -1,12 +1,12 @@
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
-import '#psammead/psammead-locales/moment/en-gb';
-import '#psammead/moment-timezone-include/tz/Europe/London';
+import 'moment/locale/hu';
+import '#psammead/moment-timezone-include/tz/Europe/Budapest';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {
-    lang: 'en-GB',
+    lang: 'hu',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Frissítve',
     articleTimestampSuffix: '',
@@ -27,9 +27,9 @@ export const service: DefaultServiceConfig = {
     audioCaptionOffscreenText: 'Hangfelirat',
     defaultCaptionOffscreenText: 'Felirat, ',
     imageCopyrightOffscreenText: 'Kép forrás, ',
-    locale: 'en_GB',
-    isoLang: 'en',
-    datetimeLocale: 'en-gb',
+    locale: 'hu-HU',
+    isoLang: 'hu',
+    datetimeLocale: 'hu',
     service: 'magyarul',
     serviceName: 'Magyarul',
     serviceLocalizedName: 'Magyarul',
@@ -75,7 +75,6 @@ export const service: DefaultServiceConfig = {
           'Jelenleg a weboldal szöveges, adatkímélő változatát tekinti meg. A weboldal teljes, képeket és videókat is tartalmazó verziója itt érhető el.',
         toMainSite: 'Ugrás a főoldalra',
         informationPage: 'Tudjon meg többet az adatkímélő verzióról',
-        informationPageLink: '#',
         dataSaving: 'Adatkímélő verzió',
         articleDataSavingLinkText: 'Adatkímélő verzió',
       },
@@ -104,9 +103,9 @@ export const service: DefaultServiceConfig = {
           message:
             'Elnézését kérjük, de a keresett oldal jelenleg nem elérhető. Kérjük, próbálja meg:',
           solutions: ['ellenőrizni az URL-t', 'újratölteni a böngészőt'],
-          callToActionFirst: 'Vagy látogassa meg a',
-          callToActionLinkText: 'BBC Magyarul',
-          callToActionLast: 'weboldalát. ',
+          callToActionFirst: 'Vagy látogassa meg a ',
+          callToActionLinkText: 'BBC News Magyarul',
+          callToActionLast: ' weboldalát. ',
           callToActionLinkUrl: 'https://www.bbc.com/magyarul',
         },
         500: {
@@ -117,7 +116,7 @@ export const service: DefaultServiceConfig = {
           solutions: ['újratölteni a böngészőt', 'később újra '],
           callToActionFirst: 'Vagy látogassa meg a ',
           callToActionLinkText: 'BBC News Magyarul',
-          callToActionLast: 'weboldalát. ',
+          callToActionLast: ' weboldalát. ',
           callToActionLinkUrl: 'https://www.bbc.com/magyarul',
         },
         home: 'Kezdőlap',
@@ -385,7 +384,7 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         'A BBC. A BBC-t nem terheli felelősség a külső oldalak tartalmáért.',
     },
-    timezone: 'Europe/London',
+    timezone: 'Europe/Budapest',
     navigation: [
       {
         title: 'Hírek',
