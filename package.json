@@ -180,7 +180,7 @@
     "@types/loadable__component": "5.13.10",
     "@types/ramda": "0.31.0",
     "@types/react": "19.2.2",
-    "@types/react-dom": "19.2.1",
+    "@types/react-dom": "19.2.2",
     "@types/react-helmet": "6.1.11",
     "@types/react-lazyload": "^3.2.0",
     "@types/react-router-dom": "5.3.3",
