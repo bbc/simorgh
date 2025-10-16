@@ -9166,14 +9166,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-cypress@npm:5.1.1":
-  version: 5.1.1
-  resolution: "eslint-plugin-cypress@npm:5.1.1"
+"eslint-plugin-cypress@npm:5.2.0":
+  version: 5.2.0
+  resolution: "eslint-plugin-cypress@npm:5.2.0"
   dependencies:
     globals: "npm:^16.2.0"
   peerDependencies:
     eslint: ">=9"
-  checksum: 10/1b395d615069f0bafc8f2c8b36f304a48f8db794c1570318de3f2fee1f33524cc57af6c85f09e41b11209e4b130801de3d430a141d83a3ebad895e4424c889e8
+  checksum: 10/4701b3e6b6bfba21fdfdabb3551e066d683faf1e0f38d943cb51a2faa409a1bce4e489c6dbcac2bf2a8e498f96059da3c61d41193a0a4d792269fd9c2728f42f
   languageName: node
   linkType: hard
 
@@ -16225,7 +16225,7 @@ __metadata:
     eslint-config-airbnb: "npm:19.0.4"
     eslint-config-prettier: "npm:10.1.8"
     eslint-import-resolver-alias: "npm:1.1.2"
-    eslint-plugin-cypress: "npm:5.1.1"
+    eslint-plugin-cypress: "npm:5.2.0"
     eslint-plugin-import: "npm:2.32.0"
     eslint-plugin-json: "npm:4.0.1"
     eslint-plugin-jsx-a11y: "npm:6.10.2"
