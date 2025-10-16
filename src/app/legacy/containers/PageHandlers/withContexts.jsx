@@ -31,6 +31,8 @@ const WithContexts = Component => {
       isNextJs = false,
       isUK = false,
       country = null,
+      nonce = null,
+      cspHeader = null,
     } = props;
 
     const { metadata: { atiAnalytics } = {} } = pageData ?? {};
@@ -61,6 +63,8 @@ const WithContexts = Component => {
             isNextJs={isNextJs}
             isUK={isUK}
             country={country}
+            nonce={nonce}
+            cspHeader={cspHeader}
           >
             <EventTrackingContextProvider
               atiData={atiAnalytics}

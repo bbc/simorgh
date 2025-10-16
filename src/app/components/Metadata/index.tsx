@@ -80,7 +80,7 @@ const getSocialShareImage = ({
   pathname: string;
   service: Services;
 }) => {
-  // TODO: Remove to release experiment
+  // Remove to release to Production
   if (isLive()) return metaImage;
 
   if (!OG_EXPERIMENT_SERVICES.includes(service)) return metaImage;
@@ -206,7 +206,6 @@ const MetadataContainer = ({
     service,
     metaImage,
   });
-
   return (
     <Helmet htmlAttributes={htmlAttributes}>
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -269,7 +268,7 @@ const MetadataContainer = ({
       <meta name="twitter:creator" content={metaTwitterHandle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image:alt" content={metaImageAltText} />
-      <meta name="twitter:image:src" content={socialShareImage} />
+      <meta name="twitter:image:src" content={metaImage} />
       <meta name="twitter:site" content={twitterSite} />
       <meta name="twitter:title" content={socialTitle} />
       {!isAmp && (

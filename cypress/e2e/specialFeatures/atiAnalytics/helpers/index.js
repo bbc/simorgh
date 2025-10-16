@@ -166,7 +166,9 @@ export const interceptATIAnalyticsBeacons = () => {
 };
 
 export const setUserIDCookie = () => {
-  cy.setCookie('atuserid', JSON.stringify({ val: ATI_USER_ID_COOKIE }));
+  cy.session('user-session', () => {
+    cy.setCookie('atuserid', JSON.stringify({ val: ATI_USER_ID_COOKIE }));
+  });
 };
 
 export const getExpectedAtiDestination = ({ service, applicationEnv }) => {
