@@ -16279,7 +16279,7 @@ __metadata:
     start-server-nestjs-webpack-plugin: "npm:2.2.5"
     storybook: "npm:9.1.10"
     stream-browserify: "npm:3.0.0"
-    strip-ansi: "npm:7.1.0"
+    strip-ansi: "npm:7.1.2"
     supertest: "npm:7.1.4"
     terser-webpack-plugin: "npm:5.3.14"
     timemachine: "npm:0.3.2"
@@ -16774,7 +16774,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"strip-ansi@npm:7.1.0, strip-ansi@npm:^7.0.1":
+"strip-ansi@npm:7.1.2":
+  version: 7.1.2
+  resolution: "strip-ansi@npm:7.1.2"
+  dependencies:
+    ansi-regex: "npm:^6.0.1"
+  checksum: 10/db0e3f9654e519c8a33c50fc9304d07df5649388e7da06d3aabf66d29e5ad65d5e6315d8519d409c15b32fa82c1df7e11ed6f8cd50b0e4404463f0c9d77c8d0b
+  languageName: node
+  linkType: hard
+
+"strip-ansi@npm:^7.0.1":
   version: 7.1.0
   resolution: "strip-ansi@npm:7.1.0"
   dependencies:
