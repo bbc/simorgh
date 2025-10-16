@@ -12,6 +12,7 @@ import { PageTypes, Toggles } from '#app/models/types/global';
 import augmentWithDisclaimer from '#app/routes/article/utils/augmentWithDisclaimer';
 import shouldRender from '#app/legacy/containers/PageHandlers/withData/shouldRender';
 import { ArticleMetadata } from '#app/models/types/optimo';
+import { getServerExperiments } from '#server/utilities/experimentHeader';
 import getPageData from '../../../utilities/pageRequests/getPageData';
 
 const logger = nodeLogger(__filename);
@@ -107,6 +108,12 @@ export default async (context: GetServerSidePropsContext) => {
 
   const derivedPageType = getDerivedArticleType(article.metadata);
 
+  const serverSideExperiments = getServerExperiments({
+    headers: reqHeaders,
+    service,
+    pageType: derivedPageType,
+  });
+
   return {
     props: {
       id: resolvedUrlWithoutQuery,
@@ -125,6 +132,7 @@ export default async (context: GetServerSidePropsContext) => {
       },
       pageType: derivedPageType,
       pathname: resolvedUrlWithoutQuery,
+      serverSideExperiments,
       service,
       status,
       toggles,

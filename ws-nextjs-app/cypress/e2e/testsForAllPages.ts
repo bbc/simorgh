@@ -36,7 +36,7 @@ export const testsThatAlwaysRunForAllPages = ({
         retries: 3,
       },
       () => {
-        const pageTypesNoImages = ['liveRadio', 'errorPage404'];
+        const pageTypesNoImages = ['liveRadio', 'errorPage404', 'live'];
         // live radio pages and error pages do not have an image
         if (pageType && !pageTypesNoImages.includes(pageType)) {
           it('should have webp images on pages', () => {
