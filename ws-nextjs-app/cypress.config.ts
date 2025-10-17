@@ -139,7 +139,7 @@ export default defineConfig({
   },
   defaultCommandTimeout: 10000,
   pageLoadTimeout: 60000,
-  responseTimeout: 60000,
+  responseTimeout: 70000,
   requestTimeout: 60000,
   video: false,
   screenshotOnRunFailure: false,

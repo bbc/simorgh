@@ -271,6 +271,7 @@ const supportsAmp = ({ contentType }: { contentType: string }) =>
     'player-episode',
     'index-category',
     'live-coverage',
+    'static',
   ].includes(contentType);
 
 const ampTestSuites = canonicalTestSuites

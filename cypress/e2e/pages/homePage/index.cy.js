@@ -26,6 +26,12 @@ const testSuites = [
     tests,
   },
   {
+    path: '/magyarul',
+    runforEnv: ['local', 'test'],
+    service: 'magyarul',
+    tests,
+  },
+  {
     path: '/polska',
     runforEnv: ['local', 'test', 'live'],
     service: 'polska',
