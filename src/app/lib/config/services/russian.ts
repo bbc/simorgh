@@ -7,7 +7,6 @@ import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 // Translations used in the header and footer elements of the page
 const headerFooterTranslations = {
   home: 'Главная',
-  continueReading: 'Читать дальше',
   currentPage: 'Текущая страница',
   navMenuText: 'Разделы',
   consentBanner: {
@@ -117,6 +116,7 @@ export const mainTranslations = {
     advertisementLabel: 'Реклама',
   },
   seeAll: 'Посмотреть все',
+  continueReading: 'Читать дальше',
   skipLinkText: 'Перейти к содержанию',
   relatedContent: 'Читайте также',
   relatedTopics: 'Темы',
