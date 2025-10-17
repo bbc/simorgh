@@ -6,14 +6,10 @@ import { LiveTVPageProps } from './types';
 
 const Component = ({ pageData }: LiveTVPageProps) => (
   <PageLayoutWrapper pageData={pageData} status={200}>
-    <LiveTvLayout
-      pageData={pageData}
-      pageType="liveTV"
-      pathname=""
-      service=""
-      status={0}
-      timeOnServer={0}
-    />
+    {
+      // @ts-expect-error partial data required for storybook
+      <LiveTvLayout pageData={pageData} />
+    }
   </PageLayoutWrapper>
 );
 
