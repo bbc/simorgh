@@ -211,6 +211,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     showRelatedTopics,
     brandName,
     translations,
+    service,
   } = use(ServiceContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
@@ -219,11 +220,19 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
-  const experimentName = 'newswb_ws_read_more_b';
-  const experimentVariant = useOptimizelyVariation({
+  let experimentName;
+  if (service === 'hindi' || service === 'tamil') {
+    experimentName = 'newswb_ws_tod_article';
+  } else {
+    experimentName = 'newswb_ws_read_more_b';
+  }
+  let experimentVariant = useOptimizelyVariation({
     experimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
+
+  // temporarily override variant for dev
+  experimentVariant = 'variant_a';
 
   const isInServerSideExperiment =
     experimentVariant && experimentVariant !== 'off';
@@ -326,153 +335,149 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
   };
 
-  const visuallyHiddenBlock = {
-    id: null,
-    model: { blocks: [singleTextBlock(headline)] },
-    type: 'visuallyHiddenHeadline',
-  };
+const visuallyHiddenBlock = {
+  id: null,
+  model: { blocks: [singleTextBlock(headline)] },
+  type: 'visuallyHiddenHeadline',
+};
 
-  const articleBlocks = startsWithHeading
-    ? blocks
-    : [visuallyHiddenBlock, ...blocks];
+const articleBlocks = startsWithHeading
+  ? blocks
+  : [visuallyHiddenBlock, ...blocks];
 
-  const promoImageBlocks =
-    pageData?.promo?.images?.defaultPromoImage?.blocks ?? [];
+const promoImageBlocks =
+  pageData?.promo?.images?.defaultPromoImage?.blocks ?? [];
 
-  const promoImageAltTextBlock = filterForBlockType(
-    promoImageBlocks,
-    'altText',
-  );
+const promoImageAltTextBlock = filterForBlockType(promoImageBlocks, 'altText');
 
-  const promoImageRawBlock = filterForBlockType(promoImageBlocks, 'rawImage');
-  const promoImageAltText =
-    promoImageAltTextBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
+const promoImageRawBlock = filterForBlockType(promoImageBlocks, 'rawImage');
+const promoImageAltText =
+  promoImageAltTextBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
 
-  const promoImage = promoImageRawBlock?.model?.locator;
+const promoImage = promoImageRawBlock?.model?.locator;
 
-  const showTopics = Boolean(showRelatedTopics && topics.length > 0);
-  const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
+const showTopics = Boolean(showRelatedTopics && topics.length > 0);
+const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
-  const showContinueReadingButton = Boolean(
-    !isAmp &&
-      !isLite &&
-      !isApp &&
-      experimentVariant &&
-      ['read-more-a', 'read-more-b', 'read-more-a-and-top-stories'].includes(
-        experimentVariant,
-      ),
-  );
+const showContinueReadingButton = Boolean(
+  !isAmp &&
+    !isLite &&
+    !isApp &&
+    experimentVariant &&
+    ['read-more-a', 'read-more-b', 'read-more-a-and-top-stories'].includes(
+      experimentVariant,
+    ),
+);
 
-  return (
-    <div css={styles.pageWrapper}>
-      <ATIAnalytics atiData={atiData} />
-      <ChartbeatAnalytics
-        sectionName={pageData?.relatedContent?.section?.name}
-        title={headline}
-        authors={authors}
-      />
-      <ComscoreAnalytics />
-      <NielsenAnalytics />
-      <ArticleMetadata
-        articleId={getArticleId(pageData)}
-        title={headline}
-        author={articleAuthor}
-        twitterHandle={articleAuthorTwitterHandle}
-        firstPublished={firstPublished}
-        lastPublished={lastPublished}
-        section={getArticleSection(pageData)}
-        aboutTags={aboutTags}
-        mentionsTags={getMentions(pageData)}
-        lang={getLang(pageData)}
-        description={description}
-        imageLocator={promoImage}
-        imageAltText={promoImageAltText}
-        hasAmpPage={!isTC2Asset}
-      />
-      <LinkedData
-        showAuthor
-        bylineLinkedData={bylineLinkedData}
-        type={
-          !isPGL
-            ? categoryName(isTrustProjectParticipant, taggings, formats)
-            : 'Article'
-        }
-        seoTitle={headline}
-        headline={headline}
-        description={description}
-        datePublished={firstPublished}
-        dateModified={lastPublished}
-        aboutTags={aboutTags}
-        imageLocator={promoImage}
-      />
-      {allowAdvertising && (
-        <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
-      )}
-      <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
-      <div css={styles.grid}>
-        <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
-          <main
-            css={[
-              styles.mainContent(liteCTAShows),
-              ...(showContinueReadingButton
-                ? [!showAllContent && styles.contentHidden(liteCTAShows)]
-                : []),
-            ]}
-            role="main"
-          >
-            <Blocks
-              blocks={articleBlocks}
-              componentsToRender={componentsToRender}
-            />
-            {showContinueReadingButton && (
-              <ContinueReadingButton
-                showAllContent={showAllContent}
-                setShowAllContent={() => setShowAllContent(true)}
-                variation={
-                  experimentVariant as ContinueReadingProps['variation']
-                }
-                liteCTAShows={liteCTAShows}
-              />
-            )}
-            <OptimizelyPageMetrics trackPageComplete />
-          </main>
-          <OptimizelyPageMetrics trackPageView trackPageDepth />
-          {showTopics && (
-            <RelatedTopics
-              css={[
-                styles.relatedTopics,
-                ...(showContinueReadingButton
-                  ? [!showAllContent && styles.hideRelatedTopics]
-                  : []),
-              ]}
-              topics={topics}
-              mobileDivider={false}
-              backgroundColour={GREY_2}
-              tagBackgroundColour={WHITE}
+return (
+  <div css={styles.pageWrapper}>
+    <ATIAnalytics atiData={atiData} />
+    <ChartbeatAnalytics
+      sectionName={pageData?.relatedContent?.section?.name}
+      title={headline}
+      authors={authors}
+    />
+    <ComscoreAnalytics />
+    <NielsenAnalytics />
+    <ArticleMetadata
+      articleId={getArticleId(pageData)}
+      title={headline}
+      author={articleAuthor}
+      twitterHandle={articleAuthorTwitterHandle}
+      firstPublished={firstPublished}
+      lastPublished={lastPublished}
+      section={getArticleSection(pageData)}
+      aboutTags={aboutTags}
+      mentionsTags={getMentions(pageData)}
+      lang={getLang(pageData)}
+      description={description}
+      imageLocator={promoImage}
+      imageAltText={promoImageAltText}
+      hasAmpPage={!isTC2Asset}
+    />
+    <LinkedData
+      showAuthor
+      bylineLinkedData={bylineLinkedData}
+      type={
+        !isPGL
+          ? categoryName(isTrustProjectParticipant, taggings, formats)
+          : 'Article'
+      }
+      seoTitle={headline}
+      headline={headline}
+      description={description}
+      datePublished={firstPublished}
+      dateModified={lastPublished}
+      aboutTags={aboutTags}
+      imageLocator={promoImage}
+    />
+    {allowAdvertising && (
+      <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
+    )}
+    <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
+    <div css={styles.grid}>
+      <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
+        <main
+          css={[
+            styles.mainContent(liteCTAShows),
+            ...(showContinueReadingButton
+              ? [!showAllContent && styles.contentHidden(liteCTAShows)]
+              : []),
+          ]}
+          role="main"
+        >
+          <Blocks
+            blocks={articleBlocks}
+            componentsToRender={componentsToRender}
+          />
+          {showContinueReadingButton && (
+            <ContinueReadingButton
+              showAllContent={showAllContent}
+              setShowAllContent={() => setShowAllContent(true)}
+              variation={experimentVariant as ContinueReadingProps['variation']}
+              liteCTAShows={liteCTAShows}
             />
           )}
-          <RelatedContentSection
-            content={blocks}
-            sendOptimizelyEvents={false}
+          <OptimizelyPageMetrics trackPageComplete />
+        </main>
+        <OptimizelyPageMetrics trackPageView trackPageDepth />
+        {showTopics && (
+          <RelatedTopics
+            css={[
+              styles.relatedTopics,
+              ...(showContinueReadingButton
+                ? [!showAllContent && styles.hideRelatedTopics]
+                : []),
+            ]}
+            topics={topics}
+            mobileDivider={false}
+            backgroundColour={GREY_2}
+            tagBackgroundColour={WHITE}
           />
-        </div>
-        {!isApp && !isPGL && (
-          <SecondaryColumn pageData={pageData} sendOptimizelyEvents={false} />
         )}
+        <RelatedContentSection content={blocks} sendOptimizelyEvents={false} />
       </div>
       {!isApp && !isPGL && (
-        <MostRead
-          css={styles.mostReadSection}
-          data={mostReadInitialData}
-          columnLayout="multiColumn"
-          size="default"
-          headingBackgroundColour={GREY_2}
-          mobileDivider={showTopics}
+        <SecondaryColumn
+          pageData={pageData}
           sendOptimizelyEvents={false}
+          experimentVariant={experimentVariant}
         />
       )}
     </div>
-  );
+    {!isApp && !isPGL && (
+      <MostRead
+        css={styles.mostReadSection}
+        data={mostReadInitialData}
+        columnLayout="multiColumn"
+        size="default"
+        headingBackgroundColour={GREY_2}
+        mobileDivider={showTopics}
+        sendOptimizelyEvents={false}
+      />
+    )}
+  </div>
+);
 };
 
 export default ArticlePage;
