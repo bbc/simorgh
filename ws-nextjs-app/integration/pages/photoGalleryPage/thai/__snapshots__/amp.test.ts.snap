@@ -248,7 +248,7 @@ exports[`AMP Photo Gallery Page Main heading should match text 1`] = `"6 ตุ�
 exports[`AMP Photo Gallery Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://localhost:7080/thai/images/icons/icon-192x192.png",
+  "url": "http://localhost:7081/thai/images/icons/icon-192x192.png",
 }
 `;
 

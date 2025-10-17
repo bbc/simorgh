@@ -195,7 +195,7 @@ exports[`AMP Articles Media Player Caption should have a caption under the media
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://localhost:7080/persian/images/icons/icon-192x192.png",
+  "url": "http://localhost:7081/persian/images/icons/icon-192x192.png",
 }
 `;
 

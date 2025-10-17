@@ -150,7 +150,7 @@ exports[`AMP Articles Main heading should match text 1`] = `"Wannan shine taken 
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://localhost:7080/hausa/images/icons/icon-192x192.png",
+  "url": "http://localhost:7081/hausa/images/icons/icon-192x192.png",
 }
 `;
 
