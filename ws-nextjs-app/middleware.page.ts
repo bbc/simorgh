@@ -10,13 +10,21 @@ export function middleware(request: NextRequest) {
   const hostname = request.headers.get('host') ?? request.nextUrl.hostname;
   let response = NextResponse.next();
 
+  const isLocalhost = LOCALHOST_DOMAINS.includes(hostname.split(':')?.[0]);
+
+  const PRODUCTION_ONLY = !isLocalhost && process.env.NODE_ENV === 'production';
+
+  const LOCAL_DEV_ONLY = isLocalhost && process.env.NODE_ENV !== 'production';
+
   // Service worker is registered at the root (e.g. /pidgin) so will work as is on Test/Live
   // but will not work on localhost. This middleware rewrites the request to the sw.js file found in the 'public' folder
-  if (LOCALHOST_DOMAINS.includes(hostname.split(':')[0])) {
+  if (LOCAL_DEV_ONLY) {
     if (request.nextUrl.pathname.endsWith('/sw.js')) {
       return NextResponse.rewrite(new URL('/sw.js', request.url));
     }
-  } else if (process.env.NODE_ENV === 'production') {
+  }
+
+  if (PRODUCTION_ONLY) {
     response = cspHeaderResponse({ request });
   }
 
