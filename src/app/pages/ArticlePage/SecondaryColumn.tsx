@@ -92,12 +92,13 @@ const dummySimpleCurationGridContent = {
     },
   ],
   activePage: 1,
-  pageCount: 1,
-  curationId: 'urn:bbc:tipo:list:907e1c33-e9dc-4b9f-b6f2-6615e886bf74',
-  curationType: 'tipo-curation',
-  position: 3,
-  visualProminence: 'LOW',
-  title: 'test multimedia grid curation',
+  pageCount: 40,
+  link: 'https://www.bbc.com/hindi/topics/cw9kv0kpxydt',
+  curationId: 'urn:bbc:vivo:curation:23b426a2-6119-4c26-9c6b-b19d468186fd',
+  curationType: 'vivo-stream',
+  position: 6,
+  visualProminence: 'NORMAL',
+  title: 'मल्टीमीडिया',
   visualStyle: 'FEED',
 };
 const dummyTvBulletinContent = {
@@ -168,6 +169,7 @@ const SecondaryColumn = ({
             title={dummyTvBulletinContent.title}
             position={dummyTvBulletinContent.position}
             curationId={dummyTvBulletinContent.curationId}
+            link={dummyTvBulletinContent.link}
           />
           <Curation
             visualStyle={VISUAL_STYLE.FEED}
@@ -177,6 +179,7 @@ const SecondaryColumn = ({
             position={dummySimpleCurationGridContent.position}
             curationId={dummySimpleCurationGridContent.curationId}
             curationLength={4}
+            link={dummySimpleCurationGridContent.link}
           />
         </section>
       )}
