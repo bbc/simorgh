@@ -36,6 +36,7 @@ import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 import getPathExtension from '#app/utilities/getPathExtension';
 import ReverbTemplate from '#src/server/Document/Renderers/ReverbTemplate';
 import { PageTypes } from '#app/models/types/global';
+import ComponentTracking from '#src/server/Document/Renderers/ComponentTracking';
 import removeSensitiveHeaders from '../utilities/removeSensitiveHeaders';
 import derivePageType from '../utilities/derivePageType';
 
@@ -203,6 +204,10 @@ export default class AppDocument extends Document<DocProps> {
               {helmetMetaTags}
               {helmetLinkTags}
               {helmetScriptTags}
+              <ComponentTracking
+                trackComponentViews={false}
+                enableStaticClickTrackingOnOperaMiniOnly
+              />
               <style
                 data-emotion={ids.join(' ')}
                 dangerouslySetInnerHTML={{ __html: css }}
