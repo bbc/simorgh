@@ -242,7 +242,7 @@
     "supertest": "7.1.4",
     "terser-webpack-plugin": "5.3.14",
     "timemachine": "0.3.2",
-    "ts-jest": "29.4.1",
+    "ts-jest": "29.4.4",
     "ts-loader": "9.5.4",
     "typescript": "5.9.2",
     "wait-on": "9.0.0",
