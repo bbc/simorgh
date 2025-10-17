@@ -9,7 +9,7 @@ export default (): boolean => {
   const [isHydrated, setIsHydrated] = useState(false);
 
   useEffect(() => {
-    setIsHydrated(true);
+    // setIsHydrated(true);
   }, []);
 
   return isHydrated;
