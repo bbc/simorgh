@@ -5,7 +5,13 @@ export default service => {
 
       expect(logo).toBeInTheDocument();
       expect(logo.parentNode.textContent).toBeTruthy();
-      expect(logo.parentNode.textContent).toMatchSnapshot();
+
+      const svg = logo.querySelector('g path');
+
+      expect({
+        svg,
+        brandLink: logo.parentNode.textContent,
+      }).toMatchSnapshot();
     });
 
     if (service !== 'news' && service !== 'scotland') {
