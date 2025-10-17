@@ -4743,12 +4743,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/ramda@npm:0.31.0":
-  version: 0.31.0
-  resolution: "@types/ramda@npm:0.31.0"
+"@types/ramda@npm:0.31.1":
+  version: 0.31.1
+  resolution: "@types/ramda@npm:0.31.1"
   dependencies:
     types-ramda: "npm:^0.31.0"
-  checksum: 10/5870f219b1234c1bc1a8254a566ad41264c18d45e32b8c080faad51bc29755dc0564171feb3e3f63b5f25d7ae66f66317b653737720149a6951b417a34b139d9
+  checksum: 10/a16b41a30f33e1ef521d4d57ce4949887906fae0a333d2845ee34ff39b21eee9a0b8db963338a5e9343ed9b23878fac1c362114bb4366d81abfc66d01e0066c2
   languageName: node
   linkType: hard
 
@@ -6614,6 +6614,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"baseline-browser-mapping@npm:^2.8.9":
+  version: 2.8.16
+  resolution: "baseline-browser-mapping@npm:2.8.16"
+  bin:
+    baseline-browser-mapping: dist/cli.js
+  checksum: 10/52a5807591daeffc810b783b1afa20c4017dd94e5bb74934bcde4dd408758e492610e330cfe6e609a0f0bde5ce210dd934271540fb931389d6838db17ec8cfef
+  languageName: node
+  linkType: hard
+
 "basic-auth@npm:~2.0.1":
   version: 2.0.1
   resolution: "basic-auth@npm:2.0.1"
@@ -6759,6 +6768,21 @@ __metadata:
   bin:
     browserslist: cli.js
   checksum: 10/bfb5511b425886279bbe2ea44d10e340c8aea85866c9d45083c13491d049b6362e254018c0afbf56d41ceeb64f994957ea8ae98dbba74ef1e54ef901c8732987
+  languageName: node
+  linkType: hard
+
+"browserslist@npm:^4.26.3":
+  version: 4.26.3
+  resolution: "browserslist@npm:4.26.3"
+  dependencies:
+    baseline-browser-mapping: "npm:^2.8.9"
+    caniuse-lite: "npm:^1.0.30001746"
+    electron-to-chromium: "npm:^1.5.227"
+    node-releases: "npm:^2.0.21"
+    update-browserslist-db: "npm:^1.1.3"
+  bin:
+    browserslist: cli.js
+  checksum: 10/49add06fd753a2514d84c75a7de8d9fb3d70be675e53b72981d87f0c0ff40d8a8cd0bd92f77400381704be0bf1c9c5c65aef95d03843d69475ff55188aa12124
   languageName: node
   linkType: hard
 
@@ -6935,6 +6959,13 @@ __metadata:
   version: 1.0.30001726
   resolution: "caniuse-lite@npm:1.0.30001726"
   checksum: 10/04d4bd6be8e426199aace9b4d26402bbb043358b590136417b8a1b3888c43301256bff007b30276c37c3d56e3e97aa8f547d80ffb9ac3644937b2ba4a3f9b156
+  languageName: node
+  linkType: hard
+
+"caniuse-lite@npm:^1.0.30001746":
+  version: 1.0.30001750
+  resolution: "caniuse-lite@npm:1.0.30001750"
+  checksum: 10/2b912758d817cd2c2c179246e282f8b598695ec733bc446183e1d381eada60889c4770a1dfd86075e046a43d55f9922e2eaed1501347fcb12a38716cc14be297
   languageName: node
   linkType: hard
 
@@ -8523,6 +8554,13 @@ __metadata:
   version: 1.5.180
   resolution: "electron-to-chromium@npm:1.5.180"
   checksum: 10/8d7f68650427f6bcb107ee1dcbe18f68b5c582601653095bec653fa898bd8427be4b1836581ce74405dca7cb36ebfc265a85c186e750b4de6e6f3ac4cfeef71b
+  languageName: node
+  linkType: hard
+
+"electron-to-chromium@npm:^1.5.227":
+  version: 1.5.234
+  resolution: "electron-to-chromium@npm:1.5.234"
+  checksum: 10/58ea98f920ab88cbf02337f50a78bbff224e0cb171a40bc8d0cd53bb7c7119190c5ff281604b237abebb03d6fac05b52b21a4b9ca32221be76ca62f2019d5559
   languageName: node
   linkType: hard
 
@@ -13750,6 +13788,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"node-releases@npm:^2.0.21":
+  version: 2.0.23
+  resolution: "node-releases@npm:2.0.23"
+  checksum: 10/f937b23e279b791bc7842d71536e8520ea12efa2c307e5803227ecbba1c807a932bbe3c26d6a8c0e12e21cb3f9c6a6d4ed14beee489ff9e9be49f6d4cf0c7aa4
+  languageName: node
+  linkType: hard
+
 "nopt@npm:^7.0.0":
   version: 7.2.0
   resolution: "nopt@npm:7.2.0"
@@ -15603,7 +15648,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"schema-utils@npm:^4.0.0, schema-utils@npm:^4.2.0, schema-utils@npm:^4.3.0, schema-utils@npm:^4.3.2":
+"schema-utils@npm:^4.0.0, schema-utils@npm:^4.2.0, schema-utils@npm:^4.3.0":
   version: 4.3.2
   resolution: "schema-utils@npm:4.3.2"
   dependencies:
@@ -15612,6 +15657,18 @@ __metadata:
     ajv-formats: "npm:^2.1.1"
     ajv-keywords: "npm:^5.1.0"
   checksum: 10/02c32c34aae762d48468f98465a96a167fede637772871c7c7d8923671ddb9f20b2cc6f6e8448ae6bef5363e3597493c655212c8b06a4ee73aa099d9452fbd8b
+  languageName: node
+  linkType: hard
+
+"schema-utils@npm:^4.3.3":
+  version: 4.3.3
+  resolution: "schema-utils@npm:4.3.3"
+  dependencies:
+    "@types/json-schema": "npm:^7.0.9"
+    ajv: "npm:^8.9.0"
+    ajv-formats: "npm:^2.1.1"
+    ajv-keywords: "npm:^5.1.0"
+  checksum: 10/dba77a46ad7ff0c906f7f09a1a61109e6cb56388f15a68070b93c47a691f516c6a3eb454f81a8cceb0a0e55b87f8b05770a02bfb1f4e0a3143b5887488b2f900
   languageName: node
   linkType: hard
 
@@ -15987,7 +16044,7 @@ __metadata:
     "@cypress/webpack-preprocessor": "npm:7.0.1"
     "@emotion/babel-plugin": "npm:11.13.5"
     "@emotion/jest": "npm:^11.11.0"
-    "@jest/environment": "npm:30.1.2"
+    "@jest/environment": "npm:30.2.0"
     "@jest/types": "npm:30.0.5"
     "@next/swc-darwin-arm64": "npm:15.5.2"
     "@next/swc-darwin-x64": "npm:15.5.2"
@@ -16044,7 +16101,7 @@ __metadata:
     "@esbuild/win32-arm64": "npm:0.25.10"
     "@esbuild/win32-x64": "npm:0.25.10"
     "@happy-dom/jest-environment": "npm:20.0.2"
-    "@jest/environment": "npm:30.1.2"
+    "@jest/environment": "npm:30.2.0"
     "@jest/globals": "npm:30.2.0"
     "@loadable/babel-plugin": "npm:5.16.1"
     "@loadable/component": "npm:5.16.7"
@@ -16065,7 +16122,7 @@ __metadata:
     "@types/js-cookie": "npm:^3.0.3"
     "@types/jsdom": "npm:21.1.7"
     "@types/loadable__component": "npm:5.13.10"
-    "@types/ramda": "npm:0.31.0"
+    "@types/ramda": "npm:0.31.1"
     "@types/react": "npm:19.2.2"
     "@types/react-dom": "npm:19.2.2"
     "@types/react-helmet": "npm:6.1.11"
@@ -16158,7 +16215,7 @@ __metadata:
     undici: "npm:7.16.0"
     url-parse: "npm:1.5.10"
     wait-on: "npm:9.0.0"
-    webpack: "npm:5.101.3"
+    webpack: "npm:5.102.1"
     webpack-bundle-analyzer: "npm:4.10.2"
     webpack-cli: "npm:6.0.1"
     webpack-dev-server: "npm:5.2.2"
@@ -16864,6 +16921,13 @@ __metadata:
   version: 2.2.1
   resolution: "tapable@npm:2.2.1"
   checksum: 10/1769336dd21481ae6347611ca5fca47add0962fd8e80466515032125eca0084a4f0ede11e65341b9c0018ef4e1cf1ad820adbb0fba7cc99865c6005734000b0a
+  languageName: node
+  linkType: hard
+
+"tapable@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "tapable@npm:2.3.0"
+  checksum: 10/496a841039960533bb6e44816a01fffc2a1eb428bb2051ecab9e87adf07f19e1f937566cbbbb09dceff31163c0ffd81baafcad84db900b601f0155dd0b37e9f2
   languageName: node
   linkType: hard
 
@@ -17938,13 +18002,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"watchpack@npm:^2.4.1":
-  version: 2.4.1
-  resolution: "watchpack@npm:2.4.1"
+"watchpack@npm:^2.4.1, watchpack@npm:^2.4.4":
+  version: 2.4.4
+  resolution: "watchpack@npm:2.4.4"
   dependencies:
     glob-to-regexp: "npm:^0.4.1"
     graceful-fs: "npm:^4.1.2"
-  checksum: 10/0736ebd20b75d3931f9b6175c819a66dee29297c1b389b2e178bc53396a6f867ecc2fd5d87a713ae92dcb73e487daec4905beee20ca00a9e27f1184a7c2bca5e
+  checksum: 10/cfa3473fc12a1a1b88123056941e90c462a67aedc10b242229eeeccdd45ed0b763c3b591caaffb0f7d77295b539b5518bb1ad3bcd891ae6505dfeae4cf51fd15
   languageName: node
   linkType: hard
 
@@ -18198,9 +18262,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webpack@npm:5.101.3":
-  version: 5.101.3
-  resolution: "webpack@npm:5.101.3"
+"webpack@npm:5.102.1":
+  version: 5.102.1
+  resolution: "webpack@npm:5.102.1"
   dependencies:
     "@types/eslint-scope": "npm:^3.7.7"
     "@types/estree": "npm:^1.0.8"
@@ -18210,7 +18274,7 @@ __metadata:
     "@webassemblyjs/wasm-parser": "npm:^1.14.1"
     acorn: "npm:^8.15.0"
     acorn-import-phases: "npm:^1.0.3"
-    browserslist: "npm:^4.24.0"
+    browserslist: "npm:^4.26.3"
     chrome-trace-event: "npm:^1.0.2"
     enhanced-resolve: "npm:^5.17.3"
     es-module-lexer: "npm:^1.2.1"
@@ -18222,17 +18286,17 @@ __metadata:
     loader-runner: "npm:^4.2.0"
     mime-types: "npm:^2.1.27"
     neo-async: "npm:^2.6.2"
-    schema-utils: "npm:^4.3.2"
-    tapable: "npm:^2.1.1"
+    schema-utils: "npm:^4.3.3"
+    tapable: "npm:^2.3.0"
     terser-webpack-plugin: "npm:^5.3.11"
-    watchpack: "npm:^2.4.1"
+    watchpack: "npm:^2.4.4"
     webpack-sources: "npm:^3.3.3"
   peerDependenciesMeta:
     webpack-cli:
       optional: true
   bin:
     webpack: bin/webpack.js
-  checksum: 10/c4740e9c59d1e0562d1e5654e12559e6308acd60fc639cf3089657c85e946c8910ba06cbd9d74b08daa7f28b5ff786c0482617415a7c1fa8e4637a88b20b76a6
+  checksum: 10/4ba737916c4b72812cdd1961ea82d0a6de8ac814134584b54d523a2c4b9e1d377490d63b2c74856e2b9146dbe6d09b05c8878439b0783c3e5195ca3e248b2131
   languageName: node
   linkType: hard
 
