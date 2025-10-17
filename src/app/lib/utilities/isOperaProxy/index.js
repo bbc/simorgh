@@ -4,7 +4,5 @@
 // The below line prevents Jest from generating code coverage for this file, due to same inlining with toString() https://github.com/istanbuljs/istanbuljs/issues/499#issuecomment-579815603, https://github.com/istanbuljs/istanbuljs/issues/499#issuecomment-613427710
 /* istanbul ignore next */
 export default function isOperaProxy() {
-  return (
-    Object.prototype.toString.call(window.operamini) === '[object OperaMini]'
-  );
+  return true;
 }
