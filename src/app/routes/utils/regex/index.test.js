@@ -1,4 +1,5 @@
 import { matchPath } from 'react-router-dom';
+import { services } from '#app/lib/config/services/loadableConfig';
 import {
   articleDataPath,
   articlePath,
@@ -20,7 +21,6 @@ import {
   topicPath,
 } from './index';
 
-import serviceConfig from '../../../lib/config/services/loadableConfig';
 import { getHomePageRegex } from './utils/index';
 
 jest.mock('#server/utilities/serviceConfigs', () => ({
@@ -393,8 +393,6 @@ describe('legacyAssetPageDataPath', () => {
 });
 
 describe('homepages on environments', () => {
-  const services = Object.keys(serviceConfig);
-
   const serviceToRoute = service => `/${service}`;
 
   const migratedServices = [
