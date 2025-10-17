@@ -7,10 +7,7 @@ import checkA11y from '../../../cypress/support/helpers/checkA11y';
 import topicTagsTest from '../support/helpers/topicTagsTest';
 import { ServiceParametersType } from '../types';
 
-export const testsThatAlwaysRunForAllPages = ({
-  service,
-  pageType,
-}: ServiceParametersType) => {
+export default ({ service, pageType }: ServiceParametersType) => {
   describe(`testsToAlwaysRunForAllPages to run for ${service} ${pageType}`, () => {
     it('should have no detectable a11y violations on page load', () => {
       checkA11y();
