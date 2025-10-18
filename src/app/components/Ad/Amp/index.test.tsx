@@ -4,7 +4,6 @@ import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import AmpAd, { AMP_ACCESS_FETCH } from './index';
 import { render } from '../../react-testing-library-with-providers';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import latinDiacritics from '../../ThemeProvider/fontScripts/latinWithDiacritics';
 import { SlotType } from '../types';
 
 const adJsonAttributes = (slotType: SlotType) => ({
@@ -34,7 +33,6 @@ const adWithContext = (slotType: SlotType, showAdPlaceholder = false) => (
       value={{
         service: 'afrique',
         dir: 'ltr',
-        script: latinDiacritics,
         // @ts-expect-error partial data required for testing
         translations: adTranslations,
         showAdPlaceholder,
