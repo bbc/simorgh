@@ -2,7 +2,9 @@
 /* eslint-disable import/prefer-default-export */
 
 export const fontsAreCached = ({ expectedFonts }) => {
-  it(`${expectedFonts} fonts are cached`, () => {
+  const testPrefix = expectedFonts.length > 0 ? expectedFonts : 'No ';
+
+  it(`${testPrefix} fonts are cached`, () => {
     cy.reload(true);
 
     cy.getAllLocalStorage().then(allLocalStorage => {
