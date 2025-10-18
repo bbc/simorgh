@@ -26,8 +26,8 @@ describe('Text', () => {
       fontSize: '0.9375rem',
       lineHeight: '1.25rem',
       fontFamily: 'ReithSans,Helvetica,Arial,sans-serif',
-      fontStyle: 'normal',
       fontWeight: 400,
+      fontStyle: 'normal',
     });
   });
 
@@ -57,8 +57,8 @@ describe('Text', () => {
       lineHeight: '1.5rem',
       fontFamily:
         '"BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif',
-      fontStyle: 'normal',
       fontWeight: 400,
+      fontStyle: 'normal',
     });
   });
 
@@ -70,8 +70,8 @@ describe('Text', () => {
       fontSize: '4.875rem',
       lineHeight: '5.25rem',
       fontFamily: 'ReithSans,Helvetica,Arial,sans-serif',
-      fontStyle: 'normal',
       fontWeight: 400,
+      fontStyle: 'normal',
     });
   });
 
@@ -85,8 +85,8 @@ describe('Text', () => {
       fontSize: '0.9375rem',
       lineHeight: '1.25rem',
       fontFamily: 'ReithSans,Helvetica,Arial,sans-serif',
-      fontStyle: 'normal',
       fontWeight: 400,
+      fontStyle: 'normal',
     });
   });
 
@@ -116,8 +116,8 @@ describe('Text', () => {
       lineHeight: '1.5rem',
       fontFamily:
         '"BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif',
-      fontStyle: 'normal',
       fontWeight: 400,
+      fontStyle: 'normal',
     });
   });
 

@@ -4,13 +4,13 @@ const punjabi = {
   sans: {
     regular: {
       fontFamily: NOTO_SANS_GURMUKHI,
-      fontStyle: 'normal',
       fontWeight: 400,
+      fontStyle: 'normal',
     },
     bold: {
       fontFamily: NOTO_SANS_GURMUKHI,
-      fontStyle: 'normal',
       fontWeight: 700,
+      fontStyle: 'normal',
     },
   },
 };
