@@ -624,6 +624,7 @@ exports[`Ad Container Snapshots Canonical should correctly render an mpu ad 1`] 
   display: none;
   visibility: hidden;
   padding: 0;
+  margin-bottom: 1.5rem;
 }
 
 @media (min-width: 18.75rem) {

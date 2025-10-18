@@ -95,6 +95,7 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Ver todo',
       home: 'Página de inicio',
+      continueReading: 'Continuar leyendo',
       currentPage: 'Página actual',
       skipLinkText: 'Ir al contenido',
       relatedContent: 'Contenido relacionado',
