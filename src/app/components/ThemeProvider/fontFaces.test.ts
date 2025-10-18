@@ -1,3 +1,5 @@
+/* eslint-disable consistent-return */
+/* eslint-disable array-callback-return */
 import { Services, ServicesVariantsProps } from '#app/models/types/global';
 import * as emotionReact from '@emotion/react';
 import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
@@ -36,7 +38,7 @@ const preload = ({ service, variant, isPWA = false }: LoadFontFaces) => {
 
 const getFontNames = ({ service, variant, isPWA = false }: LoadFontFaces) => {
   preload({ service, variant, isPWA });
-  return getFontFaces().map(({ fontFace: { name } }) => name);
+  return getFontFaces().map(({ name }) => name);
 };
 
 const getFonts = ({ service, variant, isPWA = false }: LoadFontFaces) => {
@@ -48,7 +50,16 @@ const reithFontsDir = 'REITH_FONTS_DIR';
 
 const servicesWithPWA = Object.keys(pwaThemes) as Services[];
 
-const servicesWithNoFonts = [...servicesWithPWA, 'ukchina', 'zhongwen'];
+const servicesWithNoFonts = Object.entries(themes)
+  .map(([service, theme]) => {
+    const variant = defaultServiceVariants[service];
+    const baseTheme = variant ? theme[variant] : theme;
+
+    if (baseTheme.fontFaces.length === 0) {
+      return service;
+    }
+  })
+  .filter(Boolean) as Services[];
 
 const servicesWithFonts = services.filter(
   service => !servicesWithNoFonts.includes(service),
@@ -132,13 +143,17 @@ describe('Font Faces', () => {
   };
 
   const runFontPropertyAssertions = (fonts: FontFaces.FontInfo[]) => {
-    fonts.forEach((font: { fontFace: { name: string | string[] } }) => {
-      expect(font).toHaveProperty('fontFace');
+    expect(fonts.length).toBeGreaterThan(0);
+
+    fonts.forEach((font: { name: string | string[] }) => {
+      expect(font).toHaveProperty('name');
+      expect(font).toHaveProperty('src');
+      expect(font).toHaveProperty('fontFamily');
+      expect(font).toHaveProperty('fontWeight');
+      expect(font).toHaveProperty('fontDisplay');
       expect(font).toHaveProperty('downloadSrc');
 
-      expect(fonts.length).toBeGreaterThan(0);
-
-      if (font.fontFace.name.includes('Reith')) {
+      if (font.name.includes('Reith')) {
         expect(font).toHaveProperty('version');
       }
     });
@@ -146,16 +161,16 @@ describe('Font Faces', () => {
 
   describe('Get Font Faces', () => {
     describe.each(servicesWithFonts)(
-      'Service with font has expected properties',
+      'Service with font has expected properties for',
       service => {
         const variants = getVariantsForService(service);
 
         if (variants.length > 0) {
-          it.each(variants)(`for ${service} with variant %s`, variant => {
+          it.each(variants)(`${service} with variant %s`, variant => {
             runFontPropertyAssertions(getFonts({ service, variant }));
           });
         } else {
-          it(`for ${service}`, () => {
+          it(`${service}`, () => {
             runFontPropertyAssertions(getFonts({ service }));
           });
         }
@@ -163,14 +178,19 @@ describe('Font Faces', () => {
     );
 
     it.each([
+      'archive',
       'cymrufyw',
+      'magyarul',
+      'mundo',
       'naidheachdan',
       'news',
       'newsround',
       'mundo',
       'polska',
       'portuguese',
+      'romania',
       'russian',
+      'scotland',
       'sport',
       'turkce',
       'ws',
@@ -306,5 +326,26 @@ describe('Font Faces', () => {
         });
       }
     });
+
+    describe.each(
+      servicesWithNoFonts.filter(
+        service => !servicesWithPWA.includes(service),
+      ) as Services[],
+    )(
+      'returns no fonts for service without fonts and does not have PWA configured for',
+      service => {
+        const variants = getVariantsForService(service);
+
+        if (variants.length > 0) {
+          it.each(variants)(`${service} with variant %s`, variant => {
+            expect(getFontNames({ service, variant })).toStrictEqual([]);
+          });
+        } else {
+          it(`${service}`, () => {
+            expect(getFontNames({ service })).toStrictEqual([]);
+          });
+        }
+      },
+    );
   });
 });

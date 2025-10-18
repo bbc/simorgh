@@ -252,99 +252,98 @@ export const REITH_QALAM_REGULAR: Font = {
   },
 };
 
-export type FontInfo = {
-  fontFace: FontFace;
+export type FontInfo = FontFace & {
   downloadSrc: string;
   version?: string;
 };
 
-const fontFace = '@font-face';
+const fontFaceKey = '@font-face';
 
 const fontInfo: Record<FontName, FontInfo> = {
   BBCReithSans_W_Bd: {
-    fontFace: REITH_SANS_BOLD[fontFace],
+    ...REITH_SANS_BOLD[fontFaceKey],
     downloadSrc: `${REITH_FONTS_DIR}BBCReithSans_W_Bd.woff2`,
     version: 'r2.512',
   },
   BBCReithSans_W_Rg: {
-    fontFace: REITH_SANS_REGULAR[fontFace],
+    ...REITH_SANS_REGULAR[fontFaceKey],
     downloadSrc: `${REITH_FONTS_DIR}BBCReithSans_W_Rg.woff2`,
     version: 'r2.512',
   },
   BBCReithSerif_WNumbers_Lt: {
-    fontFace: REITH_SERIF_LIGHT[fontFace],
+    ...REITH_SERIF_LIGHT[fontFaceKey],
     downloadSrc: `${REITH_FONTS_DIR}subsets/BBCReithSerif_WNumbers_Lt.woff2`,
     version: 'r2.512',
   },
   BBCReithSerif_W_Md: {
-    fontFace: REITH_SERIF_MEDIUM[fontFace],
+    ...REITH_SERIF_MEDIUM[fontFaceKey],
     downloadSrc: `${REITH_FONTS_DIR}BBCReithSerif_W_Md.woff2`,
     version: 'r2.512',
   },
   BBCReithQalam_W_Bd: {
-    fontFace: REITH_QALAM_BOLD[fontFace],
+    ...REITH_QALAM_BOLD[fontFaceKey],
     downloadSrc: `${REITH_QALAM_FONTS_DIR}BBCReithQalam_W_Bd.woff2`,
     version: 'v1.310',
   },
   BBCReithQalam_W_Rg: {
-    fontFace: REITH_QALAM_REGULAR[fontFace],
+    ...REITH_QALAM_REGULAR[fontFaceKey],
     downloadSrc: `${REITH_QALAM_FONTS_DIR}BBCReithQalam_W_Rg.woff2`,
     version: 'v1.310',
   },
   Noto_Sans_Ethiopic: {
-    fontFace: NOTO_SANS_ETHIOPIC_REGULAR[fontFace],
+    ...NOTO_SANS_ETHIOPIC_REGULAR[fontFaceKey],
     downloadSrc: `${NOTO_SANS_ETHIOPIC_FONTS_DIR}normal.woff2`,
   },
   Noto_Sans_Ethiopic_Bold: {
-    fontFace: NOTO_SANS_ETHIOPIC_BOLD[fontFace],
+    ...NOTO_SANS_ETHIOPIC_BOLD[fontFaceKey],
     downloadSrc: `${NOTO_SANS_ETHIOPIC_FONTS_DIR}bold.woff`,
   },
   Noto_Sans_Gujarati: {
-    fontFace: NOTO_SANS_GUJARATI_REGULAR[fontFace],
+    ...NOTO_SANS_GUJARATI_REGULAR[fontFaceKey],
     downloadSrc: `${NOTO_SANS_GUJARATI_FONTS_DIR}normal.woff2`,
   },
   Noto_Sans_Gujarati_Bold: {
-    fontFace: NOTO_SANS_GUJARATI_BOLD[fontFace],
+    ...NOTO_SANS_GUJARATI_BOLD[fontFaceKey],
     downloadSrc: `${NOTO_SANS_GUJARATI_FONTS_DIR}bold.woff2`,
   },
   Noto_Sans_Tamil: {
-    fontFace: NOTO_SANS_TAMIL_REGULAR[fontFace],
+    ...NOTO_SANS_TAMIL_REGULAR[fontFaceKey],
     downloadSrc: `${NOTO_SANS_TAMIL_FONTS_DIR}normal.woff2`,
   },
   Noto_Sans_Tamil_Bold: {
-    fontFace: NOTO_SANS_TAMIL_BOLD[fontFace],
+    ...NOTO_SANS_TAMIL_BOLD[fontFaceKey],
     downloadSrc: `${NOTO_SANS_TAMIL_FONTS_DIR}bold.woff2`,
   },
   Noto_Sans_Telugu: {
-    fontFace: NOTO_SANS_TELUGU_REGULAR[fontFace],
+    ...NOTO_SANS_TELUGU_REGULAR[fontFaceKey],
     downloadSrc: `${NOTO_SANS_TELUGU_FONTS_DIR}normal.woff2`,
   },
   Noto_Sans_Telugu_Bold: {
-    fontFace: NOTO_SANS_TELUGU_BOLD[fontFace],
+    ...NOTO_SANS_TELUGU_BOLD[fontFaceKey],
     downloadSrc: `${NOTO_SANS_TELUGU_FONTS_DIR}bold.woff2`,
   },
   Noto_Serif_Bengali: {
-    fontFace: NOTO_SERIF_BENGALI_REGULAR[fontFace],
+    ...NOTO_SERIF_BENGALI_REGULAR[fontFaceKey],
     downloadSrc: `${NOTO_SERIF_BENGALI_FONTS_DIR}normal.woff2`,
   },
   Noto_Serif_Bengali_Bold: {
-    fontFace: NOTO_SERIF_BENGALI_BOLD[fontFace],
+    ...NOTO_SERIF_BENGALI_BOLD[fontFaceKey],
     downloadSrc: `${NOTO_SERIF_BENGALI_FONTS_DIR}bold.woff2`,
   },
   Noto_Serif_Sinhala: {
-    fontFace: NOTO_SERIF_SINHALA_REGULAR[fontFace],
+    ...NOTO_SERIF_SINHALA_REGULAR[fontFaceKey],
     downloadSrc: `${NOTO_SERIF_SINHALA_FONTS_DIR}normal.woff2`,
   },
   Noto_Serif_Sinhala_Bold: {
-    fontFace: NOTO_SERIF_SINHALA_BOLD[fontFace],
+    ...NOTO_SERIF_SINHALA_BOLD[fontFaceKey],
     downloadSrc: `${NOTO_SERIF_SINHALA_FONTS_DIR}bold.woff2`,
   },
   Padauk: {
-    fontFace: PADAUK_REGULAR[fontFace],
+    ...PADAUK_REGULAR[fontFaceKey],
     downloadSrc: `${PADAUK_FONTS_DIR}normal.woff2`,
   },
   Padauk_Bold: {
-    fontFace: PADAUK_BOLD[fontFace],
+    ...PADAUK_BOLD[fontFaceKey],
     downloadSrc: `${PADAUK_FONTS_DIR}bold.woff2`,
   },
 };
