@@ -5,7 +5,7 @@ import * as clickTracking from '../../../hooks/useClickTrackerHandler';
 
 describe('RadioSchedule', () => {
   it('should render ltr radio schedules correctly', () => {
-    const { container } = render(renderRadioSchedule({}));
+    const { container } = render(renderRadioSchedule({ service: 'news' }));
     expect(container).toMatchSnapshot();
   });
 
@@ -24,6 +24,7 @@ describe('RadioSchedule', () => {
   it('should render with passed component', () => {
     const { container } = render(
       renderRadioSchedule({
+        service: 'news',
         linkComponent: 'aside',
         linkComponentAttr: 'to',
       }),
@@ -47,7 +48,7 @@ describe('RadioSchedule', () => {
         renderRadioSchedule({
           dir: 'ltr',
           locale: 'ha',
-          selectedService: 'hausa',
+          service: 'hausa',
         }),
       );
 

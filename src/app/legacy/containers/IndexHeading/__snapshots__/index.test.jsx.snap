@@ -49,7 +49,6 @@ exports[`Index Heading snapshot should render correctly for IDX 1`] = `
 <div>
   <h1
     class="emotion-0 emotion-1"
-    dir="ltr"
     tabindex="-1"
   >
     Index Heading
@@ -106,7 +105,6 @@ exports[`Index Heading snapshot should render rtl correctly for IDX 1`] = `
 <div>
   <h1
     class="emotion-0 emotion-1"
-    dir="rtl"
     tabindex="-1"
   >
     Index Heading

@@ -314,7 +314,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
 .emotion-14::after {
   content: '';
   border-top: 0.0625rem solid #AEAEB5;
-  top: 1rem;
+  top: NaNrem;
   margin-left: 0.625rem;
   width: 100%;
 }

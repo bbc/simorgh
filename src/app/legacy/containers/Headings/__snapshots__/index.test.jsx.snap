@@ -589,6 +589,7 @@ exports[`Headings with plain text subheadline should render h2 containing correc
 
 @media (min-width: 37.5rem) {
   .emotion-2 {
+    padding-top: 0.5rem;
     margin-top: calc(2rem - 0.5rem);
   }
 }
@@ -1570,6 +1571,7 @@ exports[`Headings with subheadline data should render correctly 1`] = `
 
 @media (min-width: 37.5rem) {
   .emotion-2 {
+    padding-top: 0.5rem;
     margin-top: calc(2rem - 0.5rem);
   }
 }

@@ -65,7 +65,12 @@ export const renderProgramCard = ({
   };
 
   return (
-    <ServiceContextProvider dir={dir} locale="ar" timezone={timezone}>
+    <ServiceContextProvider
+      dir={dir}
+      service={service}
+      locale="ar"
+      timezone={timezone}
+    >
       <ProgramCard program={program} id={id} {...props} />
     </ServiceContextProvider>
   );

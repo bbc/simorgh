@@ -66,6 +66,9 @@ describe('Related Topics', () => {
         <WithContexts>
           <RelatedTopics topics={[{ topicName: 'topic', topicId: '123' }]} />
         </WithContexts>,
+        {
+          service: 'mundo',
+        },
       );
       expect(container).toMatchSnapshot();
     });
@@ -82,6 +85,9 @@ describe('Related Topics', () => {
           />
           ,
         </WithContexts>,
+        {
+          service: 'mundo',
+        },
       );
       expect(container).toMatchSnapshot();
     });
@@ -91,6 +97,9 @@ describe('Related Topics', () => {
         <WithContexts service="pidgin">
           <RelatedTopics topics={[topic]} />
         </WithContexts>,
+        {
+          service: 'pidgin',
+        },
       );
 
       expect(getByText(topic.topicName)).toHaveAttribute(
@@ -104,6 +113,9 @@ describe('Related Topics', () => {
         <WithContexts service="cymrufyw">
           <RelatedTopics topics={[topic]} />
         </WithContexts>,
+        {
+          service: 'cymrufyw',
+        },
       );
 
       expect(getByText(topic.topicName)).toHaveAttribute(
@@ -117,6 +129,10 @@ describe('Related Topics', () => {
         <WithContexts service="uzbek" variant="cyr">
           <RelatedTopics topics={[topic]} />
         </WithContexts>,
+        {
+          service: 'uzbek',
+          variant: 'cyr',
+        },
       );
 
       expect(getByText(topic.topicName)).toHaveAttribute(
@@ -131,6 +147,10 @@ describe('Related Topics', () => {
           <WithContexts service="zhongwen" variant="simp">
             <RelatedTopics topics={[topic]} />
           </WithContexts>,
+          {
+            service: 'zhongwen',
+            variant: 'simp',
+          },
         );
 
         expect(container.firstChild).toBeNull();
@@ -141,6 +161,10 @@ describe('Related Topics', () => {
           <WithContexts service="zhongwen" variant="trad">
             <RelatedTopics topics={[topic]} />
           </WithContexts>,
+          {
+            service: 'zhongwen',
+            variant: 'trad',
+          },
         );
 
         expect(container.firstChild).not.toBeNull();
@@ -154,6 +178,7 @@ describe('Related Topics', () => {
         <WithContexts>
           <RelatedTopics topics={[{ topicName: 'topic1', topicId: '1' }]} />
         </WithContexts>,
+        { service: 'mundo' },
       );
       expect(container.querySelector('ul')).toBeNull();
     });
@@ -168,6 +193,7 @@ describe('Related Topics', () => {
             ]}
           />
         </WithContexts>,
+        { service: 'mundo' },
       );
       expect(container.querySelector('ul')).not.toBeNull();
     });
@@ -184,6 +210,7 @@ describe('Related Topics', () => {
         <WithContexts>
           <RelatedTopics topics={[{ topicName: 'topic', topicId: 'id' }]} />
         </WithContexts>,
+        { service: 'mundo' },
       );
 
       expect(clickTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
@@ -195,6 +222,7 @@ describe('Related Topics', () => {
         <WithContexts>
           <RelatedTopics topics={[{ topicName: 'topic', topicId: 'id' }]} />
         </WithContexts>,
+        { service: 'mundo' },
       );
 
       expect(viewTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
