@@ -153,9 +153,9 @@ export const NOTO_SANS_GUJARATI_BOLD: Font = {
   '@font-face': {
     name: 'Noto_Sans_Gujarati_Bold',
     fontFamily: 'Noto Sans Gujarati',
-    src: `url('${NOTO_SANS_GUJARATI_FONTS_DIR}bold.woff') format('woff'), url('${NOTO_SANS_GUJARATI_FONTS_DIR}bold.eot') format('eot'), url('${NOTO_SANS_GUJARATI_FONTS_DIR}bold.ttf') format('ttf')`,
     fontWeight: 700,
     fontStyle: 'normal',
+    src: `url('${NOTO_SANS_GUJARATI_FONTS_DIR}bold.woff') format('woff'), url('${NOTO_SANS_GUJARATI_FONTS_DIR}bold.eot') format('eot'), url('${NOTO_SANS_GUJARATI_FONTS_DIR}bold.ttf') format('ttf')`,
     fontDisplay: 'swap',
   },
 };
