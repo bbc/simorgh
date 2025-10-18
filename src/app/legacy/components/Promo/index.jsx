@@ -1,8 +1,6 @@
-import React, { use, useMemo } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 import partition from 'ramda/src/partition';
-
-import { ServiceContext } from '../../../contexts/ServiceContext';
 
 import Image from './image';
 import MediaIcon from './media-icon';
