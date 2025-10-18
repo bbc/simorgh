@@ -1,9 +1,7 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import * as optimizelyReactSdk from '@optimizely/react-sdk';
 import { render } from '@testing-library/react';
 import Cookie from 'js-cookie';
-import latin from '../../../../components/ThemeProvider/fontScripts/latin';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
 import withOptimizelyProvider from '.';
 
 const props = {
@@ -26,16 +24,7 @@ const Component = () => <h1>Hola Optimizely</h1>;
 const TestComponent = () => {
   const OptimizelyComponent = withOptimizelyProvider(Component);
 
-  const memoizedServiceContextValue = useMemo(
-    () => ({ script: latin, service: 'news' }),
-    [],
-  );
-
-  return (
-    <ServiceContext.Provider value={memoizedServiceContextValue}>
-      <OptimizelyComponent {...props} />
-    </ServiceContext.Provider>
-  );
+  return <OptimizelyComponent {...props} />;
 };
 
 jest.mock('./isCypress', () => jest.fn().mockImplementation(() => false));

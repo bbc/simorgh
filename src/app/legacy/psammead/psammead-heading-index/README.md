@@ -25,7 +25,9 @@ import latin from '../../../components/ThemeProvider/fontScripts/latin';
 
 const Wrapper = () => (
   <Fragment>
-    <HeadingIndex service="news">Heading</HeadingIndex>
+    <HeadingIndex script={latin} service="news">
+      Heading
+    </HeadingIndex>
   </Fragment>
 );
 ```
@@ -37,7 +39,7 @@ This component is designed to be used once at the top of the page.
 The `HeadingIndex` can take an optional `id` attribute which can be used as an anchor when referencing content.
 
 ```jsx
-<HeadingIndex id="content" service="news">
+<HeadingIndex id="content" script={latin} service="news">
   Heading
 </HeadingIndex>
 ```

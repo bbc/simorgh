@@ -81,8 +81,8 @@ exports[`SectionLabel With bar When hideSectionHeader is true should add styling
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
@@ -225,8 +225,8 @@ exports[`SectionLabel With bar With heading overriden should render a span eleme
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
@@ -379,8 +379,8 @@ exports[`SectionLabel With bar With linking title should render correctly 1`] = 
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
@@ -424,8 +424,8 @@ exports[`SectionLabel With bar With linking title should render correctly 1`] = 
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   margin: 1rem 0;
   color: #222222;
   background-color: #FDFDFD;
@@ -589,8 +589,8 @@ exports[`SectionLabel With bar With linking title should render correctly with a
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #FDFDFD;
   margin: 1rem 0;
   padding-left: 0.5rem;
@@ -634,8 +634,8 @@ exports[`SectionLabel With bar With linking title should render correctly with a
   font-size: 0.9375rem;
   line-height: 1.375rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   margin: 1rem 0;
   color: #222222;
   background-color: #FDFDFD;
@@ -799,8 +799,8 @@ exports[`SectionLabel With bar With linking title should render correctly with e
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
@@ -844,8 +844,8 @@ exports[`SectionLabel With bar With linking title should render correctly with e
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   margin: 1rem 0;
   color: #222222;
   background-color: #FDFDFD;
@@ -1009,8 +1009,8 @@ exports[`SectionLabel With bar With linking title should render correctly with e
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
@@ -1054,8 +1054,8 @@ exports[`SectionLabel With bar With linking title should render correctly with e
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   margin: 1rem 0;
   color: #222222;
   background-color: #FDFDFD;
@@ -1213,8 +1213,8 @@ exports[`SectionLabel With bar With plain title should render correctly with ara
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #FDFDFD;
   margin: 1rem 0;
   padding-left: 0.5rem;
@@ -1357,8 +1357,8 @@ exports[`SectionLabel With bar With plain title should render correctly with exp
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
@@ -1501,8 +1501,8 @@ exports[`SectionLabel With bar With plain title should render correctly with exp
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
@@ -1645,8 +1645,8 @@ exports[`SectionLabel With bar With plain title should render correctly with mob
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
@@ -1801,8 +1801,8 @@ exports[`SectionLabel With bar Without bar With linking title should render corr
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
@@ -1846,8 +1846,8 @@ exports[`SectionLabel With bar Without bar With linking title should render corr
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   margin: 1rem 0;
   color: #222222;
   background-color: #FDFDFD;
@@ -2011,8 +2011,8 @@ exports[`SectionLabel With bar Without bar With linking title should render corr
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #FDFDFD;
   margin: 1rem 0;
   padding-left: 0.5rem;
@@ -2056,8 +2056,8 @@ exports[`SectionLabel With bar Without bar With linking title should render corr
   font-size: 0.9375rem;
   line-height: 1.375rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   margin: 1rem 0;
   color: #222222;
   background-color: #FDFDFD;
@@ -2221,8 +2221,8 @@ exports[`SectionLabel With bar Without bar With linking title should render corr
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
@@ -2266,8 +2266,8 @@ exports[`SectionLabel With bar Without bar With linking title should render corr
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   margin: 1rem 0;
   color: #222222;
   background-color: #FDFDFD;
@@ -2419,8 +2419,8 @@ exports[`SectionLabel With bar Without bar With plain title should render correc
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
@@ -2563,8 +2563,8 @@ exports[`SectionLabel With bar Without bar With plain title should render correc
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #FDFDFD;
   margin: 1rem 0;
   padding-left: 0.5rem;
@@ -2707,8 +2707,8 @@ exports[`SectionLabel With bar Without bar With plain title should render correc
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;

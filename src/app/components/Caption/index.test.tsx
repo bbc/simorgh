@@ -3,8 +3,6 @@ import { OptimoBlock } from '#app/models/types/optimo';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { ServiceConfig } from '#app/models/types/serviceConfig';
 import CaptionContainer from '.';
-import latin from '../ThemeProvider/fontScripts/latin';
-import arabic from '../ThemeProvider/fontScripts/arabic';
 import { render } from '../react-testing-library-with-providers';
 import captionBlock, {
   captionBlock3Paragraphs,
@@ -15,14 +13,12 @@ const newsServiceContextStub = {
   imageCaptionOffscreenText: 'Image caption, ',
   videoCaptionOffscreenText: 'Video caption, ',
   defaultCaptionOffscreenText: 'Caption, ',
-  script: latin,
   service: 'news',
 };
 const persianServiceContextStub = {
   imageCaptionOffscreenText: ' ، عنوان تصویر',
   videoCaptionOffscreenText: ' ، عنوان ویدئو',
   defaultCaptionOffscreenText: ' ، عنوان',
-  script: arabic,
   service: 'persian',
 };
 

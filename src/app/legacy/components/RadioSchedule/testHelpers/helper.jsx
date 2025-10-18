@@ -1,7 +1,6 @@
 import React from 'react';
 import TEXT_VARIANTS from '#storybook/withServicesDecorator/text-variants';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
-import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import ProgramCard from '../ProgramCard';
 import RadioSchedule from '../index';
 
@@ -80,7 +79,6 @@ export const renderRadioSchedule = ({
   locale = 'en-gb',
   timezone = 'Europe/London',
   dir = 'ltr',
-  selectedService = 'news',
 }) => {
   const nextLabel = dir === 'rtl' ? 'مباشر' : 'NEXT';
   const liveLabel = dir === 'rtl' ? 'مباشر' : 'LIVE';
@@ -89,7 +87,7 @@ export const renderRadioSchedule = ({
 
   return (
     <RadioSchedule
-      schedule={getSchedule(selectedService, withLongSummary)}
+      schedule={getSchedule(service, withLongSummary)}
       locale={locale}
       timezone={timezone}
       nextLabel={nextLabel}

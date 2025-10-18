@@ -20,7 +20,7 @@ The `#legacy/psammead-navigation/src` package is a set of two components, `Navig
 <!-- prettier-ignore -->
 | Argument | Type | Required | Default | Example |
 | -------- | ---- | -------- | ------- | ------- |
-| children | node | Yes | N/A | `<ScrollableNavigation dir={dir}><NavigationUl><NavigationLi url="/"  active="true">Home</NavigationLi><NavigationLi url="/sport" >{Sport}</NavigationLi></NavigationUl><ScrollableNavigation/>` |
+| children | node | Yes | N/A | `<ScrollableNavigation dir={dir}><NavigationUl><NavigationLi url="/" script={latin} active="true">Home</NavigationLi><NavigationLi url="/sport" script={latin}>{Sport}</NavigationLi></NavigationUl><ScrollableNavigation/>` |
 | dir | string | No | `'ltr'` | `'rtl'` |
 | isOpen | boolean | No | `false` | `true` |
 | ampOpenClass | string | No | `null` | `'open'` |
@@ -34,7 +34,7 @@ The `#legacy/psammead-navigation/src` package is a set of two components, `Navig
 <!-- prettier-ignore -->
 | Argument | Type | Required | Default | Example |
 | -------- | ---- | -------- | ------- | ------- |
-| children | node | Yes      | N/A     | `<NavigationLi url="/"  active="true">Home</NavigationLi><NavigationLi url="/sport" >{Sport}</NavigationLi>` |
+| children | node | Yes      | N/A     | `<NavigationLi url="/" script={latin} active="true">Home</NavigationLi><NavigationLi url="/sport" script={latin}>{Sport}</NavigationLi>` |
 
 ### NavigationLi
 
@@ -42,8 +42,10 @@ The `#legacy/psammead-navigation/src` package is a set of two components, `Navig
 | Argument | Type    | Required | Default | Example  |
 | -------- | ------- | -------- | ------- | -------- |
 | url      | string  | Yes      | N/A     | `/sport` |
+| script   | object  | Yes      | N/A     |  `{ canon: { groupA: { fontSize: '28', lineHeight: '32',}, groupB: { fontSize: '32', lineHeight: '36', }, groupD: { fontSize: '44', lineHeight: '48', }, }, trafalgar: { groupA: { fontSize: '20', lineHeight: '24', }, groupB: { fontSize: '24', lineHeight: '28', }, groupD: { fontSize: '32', lineHeight: '36', }, }, }` |
 | active   | boolean | No       | `false` | `true`   |
 | currentPageText | string | No | `null`  | `Current page` |
+| service | string | Yes | N/A | `'news'` |
 | dir      | string  | No       | `'ltr'`   | `'rtl'` |
 | brandForegroundColour | string | Yes | N/A | `'#FDFDFD'` |
 | brandBorderColour | string | Yes | N/A | `'#EAB3B3'` |
@@ -54,7 +56,7 @@ The `#legacy/psammead-navigation/src` package is a set of two components, `Navig
 <!-- prettier-ignore -->
 | Argument | Type | Required | Default | Example |
 | -------- | ---- | -------- | ------- | ------- |
-| children | node | Yes      | N/A     | `<NavigationUl><NavigationLi url="/"  active="true">Home</NavigationLi><NavigationLi url="/sport" >{Sport}</NavigationLi></NavigationUl>` |
+| children | node | Yes      | N/A     | `<NavigationUl><NavigationLi url="/" script={latin} active="true">Home</NavigationLi><NavigationLi url="/sport" script={latin}>{Sport}</NavigationLi></NavigationUl>` |
 | dir      | string  | No       | `'ltr'`   | `'rtl'` |
 | brandBackgroundColour | string | Yes | N/A | `'#B80000'` |
 | brandHighlightColour | string YesNo | N/A | `'#FFFFFF'` |
@@ -64,7 +66,7 @@ The `#legacy/psammead-navigation/src` package is a set of two components, `Navig
 <!-- prettier-ignore -->
 | Argument | Type | Required | Default | Example |
 | -------- | ---- | -------- | ------- | ------- |
-| children | node | Yes | N/A | `<DropdownUl><DropdownLi  service='news' key='sport' url='/sport' active="false"> Sport </DropdownLi></DropdownUl>` |
+| children | node | Yes | N/A | `<DropdownUl><DropdownLi script={latin} service='news' key='sport' url='/sport' active="false"> Sport </DropdownLi></DropdownUl>` |
 | isOpen | bool | Yes | N/A | `false` |
 
 ### AmpDropdown
@@ -72,7 +74,7 @@ The `#legacy/psammead-navigation/src` package is a set of two components, `Navig
 <!-- prettier-ignore -->
 | Argument | Type | Required | Default | Example |
 | -------- | ---- | -------- | ------- | ------- |
-| children | node | Yes | N/A | `<DropdownUl><DropdownLi  service='news' key='sport' url='/sport' active="false"> Sport </DropdownLi></DropdownUl>` |
+| children | node | Yes | N/A | `<DropdownUl><DropdownLi script={latin} service='news' key='sport' url='/sport' active="false"> Sport </DropdownLi></DropdownUl>` |
 
 ### DropdownLi
 
@@ -81,6 +83,8 @@ The `#legacy/psammead-navigation/src` package is a set of two components, `Navig
 | -------- | ------- | -------- | ------- | -------- |
 | children | string | Yes | N/A | `'Sport'` |
 | url | string | Yes | N/A | `/sport` |
+| script | object | Yes | N/A | `{ canon: { groupA: { fontSize: '28', lineHeight: '32',}, groupB: { fontSize: '32', lineHeight: '36', }, groupD: { fontSize: '44', lineHeight: '48', }, }, trafalgar: { groupA: { fontSize: '20', lineHeight: '24', }, groupB: { fontSize: '24', lineHeight: '28', }, groupD: { fontSize: '32', lineHeight: '36', }, }, }` |
+| service | string | Yes | N/A | `'news'` |
 | active | boolean | No | `false` | `true` |
 | currentPageText | string | No | `null` | `Current page` |
 | dir | string | No | `ltr` | `rtl` |
@@ -94,6 +98,7 @@ The `#legacy/psammead-navigation/src` package is a set of two components, `Navig
 | onClick | function | Yes | N/A | `() => { console.log("Handle onClick action"); }` |
 | isOpen | bool | Yes | N/A | `false` |
 | dir | string | no | `'ltr'` | `'rtl'` |
+| script   | object  | Yes      | N/A     |  `{ canon: { groupA: { fontSize: '28', lineHeight: '32',}, groupB: { fontSize: '32', lineHeight: '36', }, groupD: { fontSize: '44', lineHeight: '48', }, }, trafalgar: { groupA: { fontSize: '20', lineHeight: '24', }, groupB: { fontSize: '24', lineHeight: '28', }, groupD: { fontSize: '32', lineHeight: '36', }, }, }` |
 
 ### AmpMenuButton
 
@@ -103,6 +108,7 @@ The `#legacy/psammead-navigation/src` package is a set of two components, `Navig
 | announcedText | string | Yes | N/A | `'Menu'` |
 | onToggle | string | Yes | N/A | `"menu.toggleVisibility"` - must be an action on a valid AMP target|
 | dir | string | no | `'ltr'` | `'rtl'` |
+| script   | object  | Yes      | N/A     |  `{ canon: { groupA: { fontSize: '28', lineHeight: '32',}, groupB: { fontSize: '32', lineHeight: '36', }, groupD: { fontSize: '44', lineHeight: '48', }, }, trafalgar: { groupA: { fontSize: '20', lineHeight: '24', }, groupB: { fontSize: '24', lineHeight: '28', }, groupD: { fontSize: '32', lineHeight: '36', }, }, }` |
 
 ## Navigation Usage
 
@@ -128,6 +134,7 @@ import latin from '../../../components/ThemeProvider/fontScripts/latin';
     <NavigationUl>
       <NavigationLi
         url="/"
+        script={latin}
         active
         currentPageText="Current Page"
         service="news"
@@ -139,6 +146,7 @@ import latin from '../../../components/ThemeProvider/fontScripts/latin';
       </NavigationLi>
       <NavigationLi
         url="/sport"
+        script={latin}
         service="news"
         brandForegroundColour="#FDFDFD"
         brandBorderColour="#EAB3B3"
@@ -148,6 +156,7 @@ import latin from '../../../components/ThemeProvider/fontScripts/latin';
       </NavigationLi>
       <NavigationLi
         url="/weather"
+        script={latin}
         service="news"
         brandForegroundColour="#FDFDFD"
         brandBorderColour="#EAB3B3"
@@ -174,6 +183,7 @@ import latin from '../../../components/ThemeProvider/fontScripts/latin';
 <CanonicalDropdown isOpen={isOpen}>
   <DropdownUl>
     <DropdownLi
+      script={latin}
       service="news"
       key="Home"
       url="/"
@@ -182,7 +192,7 @@ import latin from '../../../components/ThemeProvider/fontScripts/latin';
     >
       Home
     </DropdownLi>
-    <DropdownLi service="news" key="Sport" url="/sport">
+    <DropdownLi script={latin} service="news" key="Sport" url="/sport">
       Sport
     </DropdownLi>
   </DropdownUl>
@@ -203,6 +213,7 @@ import latin from '../../../components/ThemeProvider/fontScripts/latin';
   onClick={() => {
     console.log('Handle onClick action');
   }}
+  script={latin}
 />;
 ```
 
@@ -216,6 +227,7 @@ import latin from '../../../components/ThemeProvider/fontScripts/latin';
 <AmpMenuButton
   announcedText="Menu"
   onToggle="menu.toggleVisibility"
+  script={latin}
   dir={dir}
 />;
 ```

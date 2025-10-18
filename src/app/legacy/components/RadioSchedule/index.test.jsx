@@ -1,6 +1,4 @@
 import { render } from '../../../components/react-testing-library-with-providers';
-import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import { renderRadioSchedule } from './testHelpers/helper';
 import * as viewTracking from '../../../hooks/useViewTracker';
 import * as clickTracking from '../../../hooks/useClickTrackerHandler';
@@ -15,10 +13,8 @@ describe('RadioSchedule', () => {
     const { container } = render(
       renderRadioSchedule({
         service: 'arabic',
-        script: arabic,
         dir: 'rtl',
         locale: 'ar',
-        selectedService: 'arabic',
       }),
       { service: 'arabic' },
     );
@@ -49,8 +45,6 @@ describe('RadioSchedule', () => {
       const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
       render(
         renderRadioSchedule({
-          service: 'hausa',
-          script: latin,
           dir: 'ltr',
           locale: 'ha',
           selectedService: 'hausa',
@@ -65,10 +59,8 @@ describe('RadioSchedule', () => {
       render(
         renderRadioSchedule({
           service: 'hausa',
-          script: latin,
           dir: 'ltr',
           locale: 'ha',
-          selectedService: 'hausa',
         }),
       );
 

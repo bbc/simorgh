@@ -50,6 +50,7 @@ const Wrapper = styled.div`
 
 const Notice = ({
   provider,
+  service,
   text,
   linkText,
   linkTextSuffixVisuallyHidden = null,
@@ -63,7 +64,7 @@ const Notice = ({
   ];
 
   return (
-    <Wrapper>
+    <Wrapper service={service}>
       <p data-testid="social-embed-fallback-title">
         {detokenise(text, dictionary)}
       </p>

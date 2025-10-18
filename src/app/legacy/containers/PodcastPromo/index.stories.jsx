@@ -1,15 +1,11 @@
 import React from 'react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 import InlinePodcastPromo from './Inline';
 import SecondaryColumnPodcastPromo from './SecondaryColumn';
 
 const serviceContextMock = {
-  service: 'news',
-  script: latin,
-  dir: 'ltr',
   podcastPromo: {
     title: 'Podcast',
     brandTitle: 'Sounds of the 90s with Fearne Cotton',

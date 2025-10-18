@@ -34,8 +34,8 @@ exports[`Podcast Promo Card Description should match snapshot 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   max-width: 30rem;
   color: #6E6E73;
   margin-top: 0.5rem;
@@ -70,8 +70,8 @@ exports[`Podcast Promo Card Episodes Text should match snapshot 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   color: #6E6E73;
 }
 
@@ -238,8 +238,8 @@ exports[`Podcast Promo Card Title should match snapshot 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 500;
+  font-style: normal;
   margin-top: 0;
   margin-bottom: 0.5rem;
   color: #222222;
@@ -308,8 +308,8 @@ exports[`Podcast Promo Title should match snapshot 1`] = `
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   display: inline;
   color: #222222;
 }
