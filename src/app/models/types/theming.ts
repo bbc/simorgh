@@ -1,4 +1,5 @@
 import type { JSX } from 'react';
+import { SerbianService, UkrainianService, UzbekService } from './global';
 
 export interface BrandPalette {
   BRAND_BACKGROUND: string;
@@ -358,14 +359,33 @@ export type FontVariants = {
   };
 };
 
+export type FontName =
+  | 'BBCReithSans_W_Bd'
+  | 'BBCReithSans_W_Rg'
+  | 'BBCReithSerif_WNumbers_Lt'
+  | 'BBCReithSerif_W_Md'
+  | 'BBCReithQalam_W_Bd'
+  | 'BBCReithQalam_W_Rg'
+  | 'Noto_Sans_Ethiopic_Bold'
+  | 'Noto_Sans_Ethiopic'
+  | 'Noto_Sans_Gujarati_Bold'
+  | 'Noto_Sans_Gujarati'
+  | 'Noto_Sans_Tamil_Bold'
+  | 'Noto_Sans_Tamil'
+  | 'Noto_Sans_Telugu_Bold'
+  | 'Noto_Sans_Telugu'
+  | 'Noto_Serif_Bengali_Bold'
+  | 'Noto_Serif_Bengali'
+  | 'Noto_Serif_Sinhala_Bold'
+  | 'Noto_Serif_Sinhala'
+  | 'Padauk'
+  | 'Padauk_Bold';
+
 export type FontFace = Partial<FontStyles> & {
   fontFamily: string;
   src: string;
-  downloadSrc: string;
   fontDisplay: string;
-  name: string;
-  version?: string;
-  subset?: boolean;
+  name: FontName;
 };
 
 export type Font = {
@@ -447,8 +467,29 @@ export type ServiceTheme = {
   palette: BrandPalette;
   typography: Typography;
   brandSVG: BrandSVG;
-  usePWATypography?: boolean;
 };
+
+export type ServicesWithNoVariantsWithPWATypography = {
+  service:
+    | 'afaanoromoo'
+    | 'afrique'
+    | 'azeri'
+    | 'gahuza'
+    | 'hausa'
+    | 'igbo'
+    | 'indonesia'
+    | 'kyrgyz'
+    | 'pidgin'
+    | 'somali'
+    | 'swahili'
+    | 'yoruba';
+  variant: 'default';
+};
+
+export type ServicesWithVariantsWithPWATypography =
+  | SerbianService
+  | UzbekService
+  | UkrainianService;
 
 declare module '@emotion/react' {
   export interface Theme {
@@ -490,6 +531,5 @@ declare module '@emotion/react' {
     isDarkUi: boolean;
     isLite: boolean;
     fontFaces: Typography['fontFaces'];
-    usePWATypography?: ServiceTheme['usePWATypography'];
   }
 }
