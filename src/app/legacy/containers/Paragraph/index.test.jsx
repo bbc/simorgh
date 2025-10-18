@@ -78,9 +78,6 @@ describe('ParagraphContainer', () => {
   it('should render correctly with inline block', () => {
     const { container } = render(
       <ParagraphContainer blocks={blocksWithInline} />,
-      // {
-      //   service: 'persian',
-      // },
     );
     expect(container).toMatchSnapshot();
   });
