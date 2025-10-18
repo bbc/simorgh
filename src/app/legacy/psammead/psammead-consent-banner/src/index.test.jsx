@@ -1,7 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import { render } from '../../../../components/react-testing-library-with-providers';
-import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
-import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import { ConsentBanner, ConsentBannerText } from '.';
 
 const baseProps = {
@@ -9,7 +7,6 @@ const baseProps = {
   dir: 'ltr',
   id: 'banner-id',
   reject: <a href="https://foobar.com">Reject</a>,
-  script: latin,
   service: 'news',
   text: <p>Hello</p>,
   title: "We've updated our Privacy and Cookies Policy",
@@ -20,7 +17,6 @@ const rtlProps = {
   dir: 'rtl',
   id: 'banner-id',
   reject: <a href="https://foobar.com">رفض</a>,
-  script: arabic,
   service: 'arabic',
   text: <p>مرحبا</p>,
   title: 'عنوان',

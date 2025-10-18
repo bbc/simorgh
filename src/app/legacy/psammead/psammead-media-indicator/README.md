@@ -33,7 +33,6 @@ Top story promos can also have related stories links called `Index Alsos`. When 
 
 ```jsx
 import MediaIndicator from '#psammead/psammead-media-indicator/src';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
 
 <MediaIndicator type="audio" />;
 ```

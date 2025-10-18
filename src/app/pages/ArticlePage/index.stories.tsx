@@ -22,7 +22,6 @@ import articleDataWithPortraitVideoRTL from '#data/persian/articles/c149pnldynxo
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import { service as newsConfig } from '#app/lib/config/services/news';
-import latin from '#app/components/ThemeProvider/fontScripts/latin';
 import { Services } from '#app/models/types/global';
 import { StoryArgs, StoryProps } from '#app/models/types/storybook';
 import articleDataMultipleContributors from '#data/news/articles/cgrj2g29kzxo.json';
@@ -34,7 +33,6 @@ const Page = withPageWrapper(PageWithOptimizely);
 const serviceContextMock = {
   ...newsConfig.default,
   service: 'news',
-  script: latin,
   dir: 'ltr',
   podcastPromo: {
     title: 'Podcast',

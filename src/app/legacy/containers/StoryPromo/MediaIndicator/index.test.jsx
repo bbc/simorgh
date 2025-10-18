@@ -5,8 +5,6 @@ import {
 } from '#app/routes/utils/pageTypes';
 import { isNull } from '#psammead/psammead-test-helpers/src';
 import { render } from '../../../../components/react-testing-library-with-providers';
-import latin from '../../../../components/ThemeProvider/fontScripts/latin';
-import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
 import MediaIndicator from '.';
 
 const audioItem = {

@@ -3,7 +3,6 @@ import { storiesOf } from '@storybook/react-webpack5';
 import { boolean, withKnobs } from '@storybook/addon-knobs';
 import Timestamp from '#psammead/psammead-timestamp/src';
 import Image from '#psammead/psammead-image/src';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import StoryPromo, {
   Headline,
   Summary,

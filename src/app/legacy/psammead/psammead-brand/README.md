@@ -64,7 +64,6 @@ import SkipLink from '#psammead/psammead-brand/src/skip-link';
 import { igbo } from '#psammead/psammead-assets/src/svgs';
 import ScriptLink from '../../../components/Header/ScriptLink';
 import { POSTBOX, WHITE } from '../../../../components/ThemeProvider/palette';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
 
 const scriptLink = (
   <ScriptLink href="https://www.bbc.com/serbian/lat">Lat</ScriptLink>

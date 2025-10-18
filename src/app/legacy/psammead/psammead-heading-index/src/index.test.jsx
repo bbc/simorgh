@@ -1,7 +1,5 @@
 import React from 'react';
 import { render } from '../../../../components/react-testing-library-with-providers';
-import latin from '../../../../components/ThemeProvider/fontScripts/latin';
-import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
 import HeadingIndex from './index';
 
 describe('Index Heading', () => {
