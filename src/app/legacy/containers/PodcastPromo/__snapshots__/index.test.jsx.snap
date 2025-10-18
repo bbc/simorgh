@@ -48,7 +48,7 @@ exports[`Inline Should render correctly 1`] = `
   font-weight: 700;
   font-style: normal;
   font-size: 0.875rem;
-  line-height: 1rem;
+  line-height: 1.125rem;
   background-color: #FFFFFF;
   border: 0.125rem solid #222222;
   color: #222222;
@@ -65,6 +65,7 @@ exports[`Inline Should render correctly 1`] = `
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-7 {
+    font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
@@ -72,6 +73,7 @@ exports[`Inline Should render correctly 1`] = `
 @media (min-width: 37.5rem) {
   .emotion-7 {
     font-size: 0.8125rem;
+    line-height: 1rem;
   }
 }
 
@@ -360,7 +362,7 @@ exports[`Inline Should render correctly 1`] = `
   }
 }
 
-.emotion-24 {
+.emotion-23 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -377,40 +379,40 @@ exports[`Inline Should render correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-24 {
+  .emotion-23 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-24 {
+  .emotion-23 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-24 {
+  .emotion-23 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-24 {
+  .emotion-23 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 16.25rem) {
-  .emotion-24 {
+  .emotion-23 {
     margin: 1rem 0;
   }
 }
 
-.emotion-27 {
+.emotion-26 {
   display: inline;
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -424,20 +426,20 @@ exports[`Inline Should render correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-27 {
+  .emotion-26 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-27 {
+  .emotion-26 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-27>svg {
+.emotion-26>svg {
   fill: currentColor;
   color: unset;
   width: 1rem;
@@ -448,78 +450,78 @@ exports[`Inline Should render correctly 1`] = `
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-27>svg {
+  .emotion-26>svg {
     fill: canvasText;
   }
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-27 {
+  .emotion-26 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-27 {
+  .emotion-26 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-27 {
+  .emotion-26 {
     margin: 0 0.25rem;
   }
 }
 
 @media (min-width: 15rem) {
-  .emotion-27 {
+  .emotion-26 {
     margin: 0;
   }
 }
 
 @media (min-width: 16.25rem) {
-  .emotion-27 {
+  .emotion-26 {
     margin: 0;
   }
 }
 
 @media (min-width: 20rem) {
-  .emotion-27 {
+  .emotion-26 {
     margin: 0 0.25rem;
   }
 }
 
 @media (min-width: 22.5rem) {
-  .emotion-27 {
+  .emotion-26 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-27 {
+  .emotion-26 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
     margin: 0 0.25rem;
   }
 
   @media (min-width: 20rem) and (max-width: 37.4375rem) {
-    .emotion-27 {
+    .emotion-26 {
       font-size: 0.9375rem;
       line-height: 1.125rem;
     }
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-27 {
+    .emotion-26 {
       font-size: 0.875rem;
       line-height: 1.125rem;
     }
   }
 }
 
-.emotion-29 {
+.emotion-28 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -528,7 +530,7 @@ exports[`Inline Should render correctly 1`] = `
   height: 1rem;
 }
 
-.emotion-31 {
+.emotion-30 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -613,17 +615,17 @@ exports[`Inline Should render correctly 1`] = `
               </a>
             </strong>
             <p
-              class="emotion-23 emotion-24 emotion-25"
+              class="emotion-23 emotion-24"
             >
               Тут мы публикуем только главные новости и самые интересные тексты. Канал доступен для нероссийских номеров.
             </p>
             <p
-              class="emotion-26 emotion-27 emotion-28"
+              class="emotion-25 emotion-26 emotion-27"
               dir="ltr"
             >
               <svg
                 aria-hidden="true"
-                class="emotion-29 emotion-30"
+                class="emotion-28 emotion-29"
                 focusable="false"
                 height="32"
                 viewBox="0 0 32 32"
@@ -644,7 +646,7 @@ exports[`Inline Should render correctly 1`] = `
           </div>
         </div>
         <p
-          class="emotion-31 emotion-32"
+          class="emotion-30 emotion-31"
           id="end-of-podcasts"
           tabindex="-1"
         >
