@@ -65,6 +65,7 @@ describe('ArticleTimestamp', () => {
         lastPublished={1552666749637}
         service="mundo" // Prefix is Actualizado
       />,
+      { service: 'mundo' },
     );
 
     expect(container).toMatchSnapshot();
@@ -77,6 +78,7 @@ describe('ArticleTimestamp', () => {
         lastPublished={1552666749637}
         service="nepali" // Suffix is मा अद्यावधिक
       />,
+      { service: 'nepali' },
     );
 
     expect(container).toMatchSnapshot();
@@ -89,6 +91,7 @@ describe('ArticleTimestamp', () => {
         lastPublished={1530947227000}
         service="mundo"
       />,
+      { service: 'mundo' },
     );
 
     expect(container).toMatchSnapshot();
@@ -352,9 +355,7 @@ describe('ArticleTimestamp', () => {
     };
 
     it('should show the correct local date', () => {
-      const { getByText } = render(
-        <WrappedArticleTimestamp {...props} service="news" />,
-      );
+      const { getByText } = render(<WrappedArticleTimestamp {...props} />);
       const timeEl = getByText(/9 August 2019/);
       const time = timeEl.getAttribute('datetime');
 
@@ -364,6 +365,7 @@ describe('ArticleTimestamp', () => {
     it('should show the correct local date for Bengali', () => {
       const { getByText } = render(
         <WrappedArticleTimestamp {...props} service="bengali" />,
+        { service: 'bengali' },
       );
       const timeEl = getByText(/১০ অগাস্ট ২০১৯/);
       const time = timeEl.getAttribute('datetime');
