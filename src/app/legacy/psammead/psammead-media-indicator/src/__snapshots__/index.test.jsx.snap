@@ -5,8 +5,8 @@ exports[`MediaIndicator should render audio indicator correctly 1`] = `
   color: #222222;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   font-size: 0.75rem;
   line-height: 1rem;
   display: block;
@@ -82,8 +82,8 @@ exports[`MediaIndicator should render photogallery correctly 1`] = `
   color: #222222;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   font-size: 0.75rem;
   line-height: 1rem;
   display: block;
@@ -161,8 +161,8 @@ exports[`MediaIndicator should render video by default 1`] = `
   color: #222222;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   font-size: 0.75rem;
   line-height: 1rem;
   display: block;
@@ -245,8 +245,8 @@ exports[`MediaIndicator should render video indicator correctly 1`] = `
   color: #222222;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   font-size: 0.75rem;
   line-height: 1rem;
   display: block;
@@ -329,8 +329,8 @@ exports[`MediaIndicator should render video indicator correctly when inline 1`] 
   color: #222222;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   font-size: 0.75rem;
   line-height: 1rem;
   display: inline-block;
@@ -415,8 +415,8 @@ exports[`MediaIndicator should render video indicator correctly when inline on R
   color: #222222;
   background-color: #FFFFFF;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   font-size: 0.75rem;
   line-height: 1.125rem;
   display: inline-block;
