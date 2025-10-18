@@ -5,7 +5,7 @@ import * as emotionReact from '@emotion/react';
 import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
 import serviceConfigs from '#src/server/utilities/serviceConfigs';
 import { services } from '#app/lib/config/services/loadableConfig';
-import getFontFaces, * as FontFaces from './fontFaces';
+import getFontFaces, * as fontFaces from './fontFaces';
 import { themes, pwaThemes } from './__mocks__/themes';
 
 const themeSpy = jest.spyOn(emotionReact, 'useTheme');
@@ -67,7 +67,7 @@ const servicesWithFonts = services.filter(
 
 describe('Font Faces', () => {
   it('exports font faces', () => {
-    expect(Object.keys(FontFaces)).toMatchInlineSnapshot(`
+    expect(Object.keys(fontFaces)).toMatchInlineSnapshot(`
      [
        "NOTO_SANS_ETHIOPIC_BOLD",
        "NOTO_SANS_ETHIOPIC_REGULAR",
@@ -96,11 +96,11 @@ describe('Font Faces', () => {
   });
 
   it(`exports ${reithFontsDir} as a string`, () => {
-    expect(typeof FontFaces[reithFontsDir]).toBe('string');
+    expect(typeof fontFaces[reithFontsDir]).toBe('string');
   });
 
   it.each(
-    Object.entries(FontFaces).filter(
+    Object.entries(fontFaces).filter(
       ([fontID]) => ![reithFontsDir, 'default'].includes(fontID),
     ),
   )('%s font has expected properties', (fontId, fontDefinition) => {
@@ -112,8 +112,7 @@ describe('Font Faces', () => {
     // Mandatory properties for all fonts
     expect(font).toHaveProperty('fontDisplay');
     expect(font).toHaveProperty('fontFamily');
-
-    if (font) expect(font).toHaveProperty('fontWeight');
+    expect(font).toHaveProperty('fontWeight');
     expect(font).toHaveProperty('name');
     expect(font).toHaveProperty('src');
 
@@ -142,7 +141,7 @@ describe('Font Faces', () => {
     return [];
   };
 
-  const runFontPropertyAssertions = (fonts: FontFaces.FontInfo[]) => {
+  const runFontPropertyAssertions = (fonts: fontFaces.FontInfo[]) => {
     expect(fonts.length).toBeGreaterThan(0);
 
     fonts.forEach((font: { name: string | string[] }) => {
