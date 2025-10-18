@@ -64,6 +64,7 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Hepsini görüntüle',
       home: 'Ana sayfa',
+      continueReading: 'Okumaya devam edin',
       currentPage: 'Bulunduğunuz sayfa',
       skipLinkText: 'İçeriğe götür',
       relatedContent: 'İlgili haberler',

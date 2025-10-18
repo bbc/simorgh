@@ -79,6 +79,7 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Ver todos',
       home: 'Início',
+      continueReading: 'Continue lendo',
       currentPage: 'Página atual',
       skipLinkText: 'Vá para o conteúdo',
       relatedContent: 'Histórias relacionadas',

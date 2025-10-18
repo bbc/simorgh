@@ -363,8 +363,8 @@ exports[`ArticleHeadline - Lite Site CTA with toggle enabled should be displayed
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   color: inherit;
   border-bottom: 0.0625rem solid #141414;
 }

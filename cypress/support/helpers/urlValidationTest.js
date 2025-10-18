@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-expressions */
-import { allServices } from '#app/routes/utils/regex';
+import { services } from '#app/lib/config/services/loadableConfig';
 
 export default () => {
   it('all BBC links should contain a World Service', () => {
@@ -8,7 +8,7 @@ export default () => {
     ];
 
     cy.get('main a[href^="https://www.bbc.com"]').each($tag => {
-      const servicesPattern = allServices.join('|');
+      const servicesPattern = services.join('|');
       const servicesRegex = new RegExp(
         `^https://www\\.bbc\\.com/(?:${servicesPattern})(?:/.*)?$`,
       );

@@ -3,8 +3,8 @@
 exports[`Fragment with italic attributes in Farsi 1`] = `
 .emotion-0 {
   font-family: inherit;
-  font-style: normal;
   font-weight: inherit;
+  font-style: normal;
 }
 
 <div>

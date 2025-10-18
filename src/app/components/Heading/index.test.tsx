@@ -26,8 +26,8 @@ describe('Heading', () => {
       fontSize: '1.75rem',
       lineHeight: '2.25rem',
       fontFamily: 'ReithSans,Helvetica,Arial,sans-serif',
-      fontStyle: 'normal',
       fontWeight: 700,
+      fontStyle: 'normal',
       margin: 0,
     });
   });

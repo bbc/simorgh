@@ -82,8 +82,8 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
 
 .emotion-7 {
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.33;
   display: inline-block;
@@ -239,8 +239,8 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
 
 .emotion-7 {
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.33;
   display: inline-block;
@@ -276,8 +276,8 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
   font-weight: 400;
   font-style: normal;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   font-size: 0.8125rem;
   padding: 0.75rem 0.5rem 0 0.5rem;
   color: #E6E8EA;
@@ -441,8 +441,8 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
 
 .emotion-7 {
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.33;
   display: inline-block;
@@ -478,8 +478,8 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
   font-weight: 400;
   font-style: normal;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   font-size: 0.8125rem;
   padding: 0.75rem 0.5rem 0 0.5rem;
   color: #E6E8EA;
@@ -643,8 +643,8 @@ exports[`Frosted Glass Promo when given props for a Optimo promo 1`] = `
 
 .emotion-7 {
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.33;
   display: inline-block;
@@ -680,8 +680,8 @@ exports[`Frosted Glass Promo when given props for a Optimo promo 1`] = `
   font-weight: 400;
   font-style: normal;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   font-size: 0.8125rem;
   padding: 0.75rem 0.5rem 0 0.5rem;
   color: #E6E8EA;
@@ -845,8 +845,8 @@ exports[`Frosted Glass Promo when given props for an a Optimo promo with no imag
 
 .emotion-7 {
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.33;
   display: inline-block;
@@ -882,8 +882,8 @@ exports[`Frosted Glass Promo when given props for an a Optimo promo with no imag
   font-weight: 400;
   font-style: normal;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   font-size: 0.8125rem;
   padding: 0.75rem 0.5rem 0 0.5rem;
   color: #E6E8EA;

@@ -172,8 +172,8 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   background-color: #222222;
   padding: 0 1rem;
 }
@@ -307,8 +307,8 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
 
 .emotion-16 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   color: #FFFFFF;
   padding: 0.75rem 0 0.75rem;
   -webkit-text-decoration: none;
@@ -334,8 +334,8 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
 
 .emotion-24 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   color: #FFFFFF;
   padding: 0.75rem 0 0.75rem;
   -webkit-text-decoration: none;
