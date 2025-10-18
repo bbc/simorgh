@@ -656,6 +656,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
 
 @media (min-width: 37.5rem) {
   .emotion-31 {
+    padding-top: 0.5rem;
     margin-top: calc(2rem - 0.5rem);
   }
 }

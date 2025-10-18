@@ -543,8 +543,8 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   background-color: transparent;
   border: 0;
   float: left;
-  height: 2.75rem;
-  width: 2.75rem;
+  height: NaNrem;
+  width: NaNrem;
 }
 
 .emotion-35:hover,
@@ -573,8 +573,8 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 
 @media (min-width: 20rem) {
   .emotion-35 {
-    height: 2.75rem;
-    width: 2.75rem;
+    height: NaNrem;
+    width: NaNrem;
   }
 }
 

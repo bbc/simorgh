@@ -528,8 +528,8 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
   background-color: transparent;
   border: 0;
   float: left;
-  height: 2.75rem;
-  width: 2.75rem;
+  height: NaNrem;
+  width: NaNrem;
 }
 
 .emotion-34:hover,
@@ -558,8 +558,8 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
 
 @media (min-width: 20rem) {
   .emotion-34 {
-    height: 2.75rem;
-    width: 2.75rem;
+    height: NaNrem;
+    width: NaNrem;
   }
 }
 
@@ -1857,8 +1857,8 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
   background-color: transparent;
   border: 0;
   float: left;
-  height: 2.75rem;
-  width: 2.75rem;
+  height: NaNrem;
+  width: NaNrem;
 }
 
 .emotion-34:hover,
@@ -1887,8 +1887,8 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
 
 @media (min-width: 20rem) {
   .emotion-34 {
-    height: 2.75rem;
-    width: 2.75rem;
+    height: NaNrem;
+    width: NaNrem;
   }
 }
 
@@ -3186,8 +3186,8 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   background-color: transparent;
   border: 0;
   float: left;
-  height: 2.75rem;
-  width: 2.75rem;
+  height: NaNrem;
+  width: NaNrem;
 }
 
 .emotion-34:hover,
@@ -3216,8 +3216,8 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 
 @media (min-width: 20rem) {
   .emotion-34 {
-    height: 2.75rem;
-    width: 2.75rem;
+    height: NaNrem;
+    width: NaNrem;
   }
 }
 
@@ -4515,8 +4515,8 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   background-color: transparent;
   border: 0;
   float: left;
-  height: 2.75rem;
-  width: 2.75rem;
+  height: NaNrem;
+  width: NaNrem;
 }
 
 .emotion-34:hover,
@@ -4545,8 +4545,8 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 
 @media (min-width: 20rem) {
   .emotion-34 {
-    height: 2.75rem;
-    width: 2.75rem;
+    height: NaNrem;
+    width: NaNrem;
   }
 }
 

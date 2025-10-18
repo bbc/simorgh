@@ -86,7 +86,7 @@ exports[`StartTime should render LTR correctly 1`] = `
 .emotion-6::after {
   content: '';
   border-top: 0.0625rem solid #AEAEB5;
-  top: 1rem;
+  top: NaNrem;
   margin-left: 0.625rem;
   width: 100%;
 }
@@ -241,7 +241,7 @@ exports[`StartTime should render RTL correctly 1`] = `
 .emotion-6::after {
   content: '';
   border-top: 0.0625rem solid #AEAEB5;
-  top: 1.0625rem;
+  top: NaNrem;
   margin-right: 0.625rem;
   width: 100%;
 }

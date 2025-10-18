@@ -844,7 +844,7 @@ exports[`OnDemand Radio Page  should match snapshot 1`] = `
 .emotion-54::after {
   content: '';
   border-top: 0.0625rem solid #AEAEB5;
-  top: 1rem;
+  top: NaNrem;
   margin-left: 0.625rem;
   width: 100%;
 }
@@ -2839,7 +2839,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
 .emotion-56::after {
   content: '';
   border-top: 0.0625rem solid #AEAEB5;
-  top: 1rem;
+  top: NaNrem;
   margin-left: 0.625rem;
   width: 100%;
 }
@@ -4739,7 +4739,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 .emotion-56::after {
   content: '';
   border-top: 0.0625rem solid #AEAEB5;
-  top: 1rem;
+  top: NaNrem;
   margin-left: 0.625rem;
   width: 100%;
 }
