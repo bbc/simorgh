@@ -31,13 +31,13 @@ const nonVariantThemes = Object.fromEntries(
   Object.entries(themes).filter(([_service, theme]) =>
     Object.keys(theme).includes('render'),
   ),
-) as unknown as NonVariantThemesType;
+) as NonVariantThemesType;
 
 const variantThemes = Object.fromEntries(
   Object.entries(themes).filter(
     ([_service, theme]) => !Object.keys(theme).includes('render'),
   ),
-) as unknown as VariantThemesType;
+) as VariantThemesType;
 
 export const ThemeProvider = ({
   children,
