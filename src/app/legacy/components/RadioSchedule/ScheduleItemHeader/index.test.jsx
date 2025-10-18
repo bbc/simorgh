@@ -1,10 +1,8 @@
 import React from 'react';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
-import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
 import ScheduleItemHeader from '.';
 
-const service = 'arabic';
 const dir = 'rtl';
 const state = 'live';
 const link = 'www.bbc.co.uk';
@@ -13,12 +11,7 @@ const startTime = 1566914061212;
 const duration = 'PT30M';
 
 const renderHeaderWithContext = () => (
-  <ServiceContextProvider
-    dir={dir}
-    service={service}
-    script={arabic}
-    locale="ar"
-  >
+  <ServiceContextProvider service="arabic" dir={dir} locale="ar">
     <ScheduleItemHeader
       durationLabel="المدة %duration%"
       state={state}
