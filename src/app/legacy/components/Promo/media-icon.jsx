@@ -37,7 +37,7 @@ const formatChildren = children => {
   );
 };
 
-const MediaIcon = ({ children = null, type = null, className }) => {
+const MediaIcon = ({ children, type, className = '' }) => {
   if (!type || !mediaIcons[type]) return null;
   return (
     <Wrapper aria-hidden="true" className={className} data-e2e="media-icon">
