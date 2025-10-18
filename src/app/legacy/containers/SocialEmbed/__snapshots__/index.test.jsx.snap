@@ -225,8 +225,8 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   margin: 0;
   margin: 1rem 0;
 }
@@ -1342,8 +1342,8 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   margin: 0;
   margin: 1rem 0;
 }
@@ -2101,8 +2101,8 @@ min-height:7.0625rem .no-js .emotion-2 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   margin: 0;
   margin: 1rem 0;
 }

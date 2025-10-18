@@ -162,8 +162,8 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
 
 .emotion-4 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   position: relative;
   color: #B80000;
   margin: 0;
@@ -960,8 +960,8 @@ exports[`MostReadItemWrapper should render rtl correctly with 10 items 1`] = `
 
 .emotion-4 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   position: relative;
   color: #B80000;
   margin: 0;

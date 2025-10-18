@@ -51,8 +51,8 @@ exports[`Ad Container Snapshots AMP should correctly render a leaderboard ad 1`]
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   color: #5A5A5A;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -188,8 +188,8 @@ exports[`Ad Container Snapshots AMP should correctly render an mpu ad 1`] = `
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   color: #5A5A5A;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -316,8 +316,8 @@ exports[`Ad Container Snapshots AMP should render a leaderboard ad with placehol
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   color: #5A5A5A;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -459,8 +459,8 @@ exports[`Ad Container Snapshots AMP should render a leaderboard ad without a pla
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   color: #5A5A5A;
   -webkit-text-decoration: none;
   text-decoration: none;

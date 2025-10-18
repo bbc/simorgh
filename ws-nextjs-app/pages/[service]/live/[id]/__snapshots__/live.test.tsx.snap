@@ -129,8 +129,8 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   color: #F6F6F6;
   margin: 0;
   margin-top: 1rem;
@@ -411,8 +411,8 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -544,8 +544,8 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   margin: 0;
   padding-bottom: 1rem;
 }
@@ -658,8 +658,8 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   padding: 0.25rem 0.75rem;
   background-color: #B80000;
   display: inline-block;
@@ -946,8 +946,8 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   color: #000000;
   display: inline-block;
   width: 100%;
@@ -992,8 +992,8 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 
 .emotion-66 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: italic;
+  font-weight: 400;
   font-family: inherit;
   font-weight: inherit;
 }
@@ -1131,8 +1131,8 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {

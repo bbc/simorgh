@@ -253,8 +253,8 @@ exports[`AmpSocialEmbed should render correctly for Facebook 1`] = `
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -276,8 +276,8 @@ exports[`AmpSocialEmbed should render correctly for Facebook 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   margin: 0;
   margin: 1rem 0;
 }
@@ -319,8 +319,8 @@ exports[`AmpSocialEmbed should render correctly for Facebook 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #FFFFFF;
   border: 0.0625rem solid #8A8C8E;
   border-radius: 0;
@@ -545,8 +545,8 @@ exports[`AmpSocialEmbed should render correctly for Instagram 1`] = `
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -568,8 +568,8 @@ exports[`AmpSocialEmbed should render correctly for Instagram 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   margin: 0;
   margin: 1rem 0;
 }
@@ -611,8 +611,8 @@ exports[`AmpSocialEmbed should render correctly for Instagram 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #FFFFFF;
   border: 0.0625rem solid #8A8C8E;
   border-radius: 0;
@@ -838,8 +838,8 @@ exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -861,8 +861,8 @@ exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   margin: 0;
   margin: 1rem 0;
 }
@@ -904,8 +904,8 @@ exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #FFFFFF;
   border: 0.0625rem solid #8A8C8E;
   border-radius: 0;
@@ -1135,8 +1135,8 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1158,8 +1158,8 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   margin: 0;
   margin: 1rem 0;
 }
@@ -1201,8 +1201,8 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #FFFFFF;
   border: 0.0625rem solid #8A8C8E;
   border-radius: 0;
@@ -1938,7 +1938,7 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
   class="emotion-0 emotion-1"
 >
   <a
-    aria-describedby="_r_9_"
+    aria-describedby="«r9»"
     class="focusIndicatorRemove emotion-2 emotion-3"
     href="#skip-youtube-content"
   >
@@ -1963,7 +1963,7 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
     </div>
     <small
       class="emotion-8 emotion-9"
-      id="_r_9_"
+      id="«r9»"
     >
       undefined
     </small>

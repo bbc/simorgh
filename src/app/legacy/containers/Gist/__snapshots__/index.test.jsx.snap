@@ -293,8 +293,8 @@ exports[`Gist should render the gist with multiple list items 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -336,8 +336,8 @@ exports[`Gist should render the gist with multiple list items 1`] = `
 
 .emotion-13 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: italic;
+  font-weight: 400;
   font-family: inherit;
   font-weight: inherit;
 }
@@ -753,8 +753,8 @@ exports[`Gist should render the gist with one list item 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {

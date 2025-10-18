@@ -6863,8 +6863,8 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
   color: #006666;
   display: inline-block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
 }
@@ -7253,8 +7253,8 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
   color: #006666;
   display: inline-block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
 }
@@ -7590,8 +7590,8 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
   color: #006666;
   display: inline-block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
 }
@@ -8080,8 +8080,8 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
   color: #006666;
   display: inline-block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
 }

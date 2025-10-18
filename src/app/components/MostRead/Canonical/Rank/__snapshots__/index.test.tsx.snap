@@ -27,8 +27,8 @@ exports[`MostReadRank should render as expected when dir=ltr, service=bengali, l
 
 .emotion-1 {
   font-family: "Noto Serif Bengali",Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   position: relative;
   color: #B80000;
   margin: 0;
@@ -92,8 +92,8 @@ exports[`MostReadRank should render as expected when dir=ltr, service=japanese, 
 
 .emotion-1 {
   font-family: "Hiragino Kaku Gothic Pro","ﾋﾗギﾉ角ゴPro W3","MS PGothic","MS UI Gothic",Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   position: relative;
   color: #B80000;
   margin: 0;
@@ -178,8 +178,8 @@ exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, li
 
 .emotion-1 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   position: relative;
   color: #B80000;
   margin: 0;
@@ -243,8 +243,8 @@ exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, li
 
 .emotion-1 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   position: relative;
   color: #B80000;
   margin: 0;
@@ -322,8 +322,8 @@ exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, li
 
 .emotion-1 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   position: relative;
   color: #B80000;
   margin: 0;
@@ -387,8 +387,8 @@ exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, li
 
 .emotion-1 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   position: relative;
   color: #B80000;
   margin: 0;
@@ -472,8 +472,8 @@ exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, li
 
 .emotion-1 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   position: relative;
   color: #B80000;
   margin: 0;
@@ -537,8 +537,8 @@ exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, li
 
 .emotion-1 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   position: relative;
   color: #B80000;
   margin: 0;
@@ -616,8 +616,8 @@ exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, li
 
 .emotion-1 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   position: relative;
   color: #B80000;
   margin: 0;
@@ -681,8 +681,8 @@ exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, li
 
 .emotion-1 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   position: relative;
   color: #B80000;
   margin: 0;
@@ -766,8 +766,8 @@ exports[`MostReadRank should render as expected when dir=rtl, service=persian, l
 
 .emotion-1 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   position: relative;
   color: #B80000;
   margin: 0;
@@ -831,8 +831,8 @@ exports[`MostReadRank should render as expected when dir=rtl, service=persian, l
 
 .emotion-1 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   position: relative;
   color: #B80000;
   margin: 0;
@@ -910,8 +910,8 @@ exports[`MostReadRank should render as expected when dir=rtl, service=persian, l
 
 .emotion-1 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   position: relative;
   color: #B80000;
   margin: 0;
@@ -975,8 +975,8 @@ exports[`MostReadRank should render as expected when dir=rtl, service=persian, l
 
 .emotion-1 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   position: relative;
   color: #B80000;
   margin: 0;
@@ -1060,8 +1060,8 @@ exports[`MostReadRank should render as expected when dir=rtl, service=persian, l
 
 .emotion-1 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   position: relative;
   color: #B80000;
   margin: 0;
@@ -1125,8 +1125,8 @@ exports[`MostReadRank should render as expected when dir=rtl, service=persian, l
 
 .emotion-1 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   position: relative;
   color: #B80000;
   margin: 0;
@@ -1204,8 +1204,8 @@ exports[`MostReadRank should render as expected when dir=rtl, service=persian, l
 
 .emotion-1 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   position: relative;
   color: #B80000;
   margin: 0;
@@ -1269,8 +1269,8 @@ exports[`MostReadRank should render as expected when dir=rtl, service=persian, l
 
 .emotion-1 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   position: relative;
   color: #B80000;
   margin: 0;
