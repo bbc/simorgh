@@ -6,8 +6,8 @@ exports[`Form should render and match snapshot 1`] = `
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   margin: 0;
 }
 
@@ -70,8 +70,8 @@ exports[`Form should render and match snapshot 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
 }
 
 .emotion-1 a:visited {
@@ -90,8 +90,8 @@ exports[`Form should render and match snapshot 1`] = `
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   margin: 0;
 }
 
@@ -158,8 +158,8 @@ exports[`Form should render and match snapshot 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
 }
 
 .emotion-4 a:visited {
@@ -441,8 +441,8 @@ exports[`Form should render and match snapshot 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
 }
 
 .emotion-21 a:visited {
@@ -463,8 +463,8 @@ exports[`Form should render and match snapshot 1`] = `
 .emotion-23 {
   color: #000000;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.125rem;
 }
@@ -529,8 +529,8 @@ exports[`Form should render and match snapshot 1`] = `
 
 .emotion-25 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   margin-top: 1rem;

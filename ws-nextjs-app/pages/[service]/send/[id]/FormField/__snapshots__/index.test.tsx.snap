@@ -119,8 +119,8 @@ exports[`FormField should render a checkbox input with an associated label 1`] =
   -webkit-text-decoration: none;
   text-decoration: none;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
 }
 
 .emotion-3 a:visited {
@@ -210,8 +210,8 @@ exports[`FormField should render a required input with an associated label 1`] =
   -webkit-text-decoration: none;
   text-decoration: none;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
 }
 
 .emotion-1 a:visited {
@@ -341,8 +341,8 @@ exports[`FormField should render a tel input with an associated label 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
 }
 
 .emotion-1 a:visited {
@@ -472,8 +472,8 @@ exports[`FormField should render a text input with an associated label 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
 }
 
 .emotion-1 a:visited {
@@ -603,8 +603,8 @@ exports[`FormField should render a textarea input with an associated label 1`] =
   -webkit-text-decoration: none;
   text-decoration: none;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
 }
 
 .emotion-1 a:visited {
@@ -734,8 +734,8 @@ exports[`FormField should render an email input with an associated label 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
 }
 
 .emotion-1 a:visited {

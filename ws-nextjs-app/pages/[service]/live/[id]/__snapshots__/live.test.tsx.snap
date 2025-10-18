@@ -68,8 +68,8 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   margin: 0;
 }
 
@@ -198,8 +198,8 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   margin: 0;
   padding: 0.5rem 0 1rem;
 }
@@ -292,8 +292,8 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 .emotion-12 a {
   color: #141414;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   border-bottom: 0.0625rem solid #141414;
 }
 
@@ -491,8 +491,8 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   margin: 0;
   padding: 1rem 0 1rem;
 }
@@ -608,8 +608,8 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   margin: 0;
 }
 
@@ -698,8 +698,8 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   color: #FFFFFF;
   background-color: #B80000;
   padding: 0.25rem 0.75rem;
@@ -736,8 +736,8 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   color: #000000;
   display: inline-block;
   width: 100%;
@@ -992,8 +992,8 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 
 .emotion-66 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: italic;
   font-weight: 400;
+  font-style: italic;
   font-family: inherit;
   font-weight: inherit;
 }
