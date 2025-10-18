@@ -12,7 +12,7 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
   data-e2e="media-loader__placeholder"
 >
   <div
-    class="css-1qgypv3"
+    class="css-1y08bvy"
     data-e2e="media-player__guidance"
   >
     <noscript
@@ -24,7 +24,7 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove css-4vlf9b"
+    class="focusIndicatorRemove css-1qx1rpk"
     type="button"
   >
     <span
@@ -89,7 +89,7 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
   data-e2e="media-loader__placeholder"
 >
   <div
-    class="css-1qgypv3"
+    class="css-1y08bvy"
     data-e2e="media-player__guidance"
   >
     <noscript
@@ -101,7 +101,7 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove css-4vlf9b"
+    class="focusIndicatorRemove css-1qx1rpk"
     type="button"
   >
     <span
@@ -170,7 +170,7 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
     data-e2e="media-loader__placeholder"
   >
     <div
-      class="css-1qgypv3"
+      class="css-1y08bvy"
       data-e2e="media-player__guidance"
     >
       <noscript
@@ -182,7 +182,7 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
       </noscript>
     </div>
     <button
-      class="focusIndicatorRemove css-4vlf9b"
+      class="focusIndicatorRemove css-1qx1rpk"
       type="button"
     >
       <span
@@ -240,7 +240,7 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
     </div>
   </div>
   <figcaption
-    class="css-1dw163z"
+    class="css-1rtxzwr"
     dir="ltr"
   >
     <span

@@ -73,7 +73,7 @@ exports[`Canonical Live Media Loader renders a figure caption 1`] = `
   data-e2e="media-loader__placeholder"
 >
   <div
-    class="css-czokpf"
+    class="css-3r2diq"
     data-e2e="media-player__guidance"
   >
     <strong
@@ -91,7 +91,7 @@ exports[`Canonical Live Media Loader renders a figure caption 1`] = `
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove css-4vlf9b"
+    class="focusIndicatorRemove css-1qx1rpk"
     type="button"
   >
     <span
@@ -156,7 +156,7 @@ exports[`Canonical Live Media Loader renders a placeholder 1`] = `
   data-e2e="media-loader__placeholder"
 >
   <div
-    class="css-czokpf"
+    class="css-3r2diq"
     data-e2e="media-player__guidance"
   >
     <strong
@@ -174,7 +174,7 @@ exports[`Canonical Live Media Loader renders a placeholder 1`] = `
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove css-4vlf9b"
+    class="focusIndicatorRemove css-1qx1rpk"
     type="button"
   >
     <span
@@ -243,7 +243,7 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
     data-e2e="media-loader__placeholder"
   >
     <div
-      class="css-czokpf"
+      class="css-3r2diq"
       data-e2e="media-player__guidance"
     >
       <strong
@@ -261,7 +261,7 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
       </noscript>
     </div>
     <button
-      class="focusIndicatorRemove css-4vlf9b"
+      class="focusIndicatorRemove css-1qx1rpk"
       type="button"
     >
       <span
@@ -319,7 +319,7 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
     </div>
   </div>
   <figcaption
-    class="css-1dw163z"
+    class="css-1rtxzwr"
     dir="ltr"
   >
     <span
