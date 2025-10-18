@@ -5,8 +5,8 @@ exports[`PlayButton should render audio correctly without duration details 1`] =
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #222222;
   border: none;
   color: #FFFFFF;
@@ -132,8 +132,8 @@ exports[`PlayButton should render audio indicator correctly 1`] = `
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #222222;
   border: none;
   color: #FFFFFF;
@@ -282,8 +282,8 @@ exports[`PlayButton should render video by default 1`] = `
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #222222;
   border: none;
   color: #FFFFFF;
@@ -416,8 +416,8 @@ exports[`PlayButton should render video correctly with duration and guidance mes
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #222222;
   border: none;
   color: #FFFFFF;
@@ -573,8 +573,8 @@ exports[`PlayButton should render video correctly without duration details 1`] =
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #222222;
   border: none;
   color: #FFFFFF;
@@ -707,8 +707,8 @@ exports[`PlayButton should render video indicator correctly 1`] = `
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #222222;
   border: none;
   color: #FFFFFF;

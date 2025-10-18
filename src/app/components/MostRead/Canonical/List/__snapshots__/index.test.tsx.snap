@@ -267,8 +267,8 @@ exports[`MostReadList should render burmese most read with a one column layout 1
   font-size: 0.9375rem;
   line-height: 1.5625rem;
   font-family: Padauk,Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -773,8 +773,8 @@ exports[`MostReadList should render with ltr bengali items with correct dir 1`] 
   font-size: 0.9375rem;
   line-height: 1.4375rem;
   font-family: "Noto Serif Bengali",Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -1642,8 +1642,8 @@ exports[`MostReadList should render with ltr burmese items with correct dir 1`] 
   font-size: 0.9375rem;
   line-height: 1.5625rem;
   font-family: Padauk,Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -5629,8 +5629,8 @@ exports[`MostReadList should render with rtl persian items with correct dir 1`] 
   font-size: 0.9375rem;
   line-height: 1.5rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   position: static;
   color: #222222;
   -webkit-text-decoration: none;

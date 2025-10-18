@@ -1150,8 +1150,8 @@ exports[`OnDemand Radio Page  should match snapshot 1`] = `
   color: #006666;
   display: inline-block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
 }

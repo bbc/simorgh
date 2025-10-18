@@ -459,8 +459,8 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
   color: #006666;
   display: inline-block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
 }
@@ -1764,8 +1764,8 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
   color: #006666;
   display: inline-block;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
 }

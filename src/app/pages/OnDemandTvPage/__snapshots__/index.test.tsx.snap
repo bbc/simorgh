@@ -347,8 +347,8 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
   font-size: 0.75rem;
   line-height: 1.125rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #222222;
   border: none;
   color: #FFFFFF;

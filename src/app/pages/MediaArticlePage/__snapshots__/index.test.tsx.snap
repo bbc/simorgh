@@ -157,8 +157,8 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #222222;
   border: none;
   color: #FFFFFF;

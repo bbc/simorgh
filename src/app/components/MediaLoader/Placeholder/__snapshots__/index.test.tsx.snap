@@ -101,8 +101,8 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #222222;
   border: none;
   color: #FFFFFF;
@@ -455,8 +455,8 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #222222;
   border: none;
   color: #FFFFFF;
@@ -789,8 +789,8 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #222222;
   border: none;
   color: #FFFFFF;
@@ -1094,8 +1094,8 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #222222;
   border: none;
   color: #FFFFFF;
@@ -1415,8 +1415,8 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #222222;
   border: none;
   color: #FFFFFF;
@@ -1739,8 +1739,8 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #222222;
   border: none;
   color: #FFFFFF;

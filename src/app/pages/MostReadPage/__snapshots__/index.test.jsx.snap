@@ -465,8 +465,8 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   position: static;
   color: #222222;
   -webkit-text-decoration: none;

@@ -307,8 +307,8 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
 
 .emotion-16 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   color: #FFFFFF;
   padding: 0.75rem 0 0.75rem;
   -webkit-text-decoration: none;
@@ -334,8 +334,8 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
 
 .emotion-24 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   color: #FFFFFF;
   padding: 0.75rem 0 0.75rem;
   -webkit-text-decoration: none;

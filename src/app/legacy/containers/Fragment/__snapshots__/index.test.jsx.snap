@@ -11,8 +11,8 @@ exports[`Fragment with an unknown attribute should ignore the attribute 1`] = `
 exports[`Fragment with bold and italic attributes should render text wrapped in bold and italic DOM elements 1`] = `
 .emotion-0 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: italic;
   font-weight: 400;
+  font-style: italic;
   font-family: inherit;
   font-weight: inherit;
 }
@@ -57,8 +57,8 @@ exports[`Fragment with italic attributes in Farsi should render text wrapped in 
 exports[`Fragment with italic attributes should render text wrapped in an italic DOM element 1`] = `
 .emotion-0 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: italic;
   font-weight: 400;
+  font-style: italic;
   font-family: inherit;
   font-weight: inherit;
 }
