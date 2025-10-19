@@ -1261,10 +1261,10 @@ storiesOf(STORY_KIND, module)
 
         const Info = (
           <>
-            <Headline promoType={promoType} service={service}>
+            <Headline promoType={promoType}>
               <Link href="https://www.bbc.co.uk/news">{text}</Link>
             </Headline>
-            <Summary promoType={promoType} service={service}>
+            <Summary promoType={promoType}>
               {service === 'news'
                 ? 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
                 : text}
@@ -1278,10 +1278,7 @@ storiesOf(STORY_KIND, module)
             info={Info}
             promoType={promoType}
             dir={dir}
-            mediaIndicator={
-              mediaType &&
-              MediaIndicatorComponent({ script, service, mediaType })
-            }
+            mediaIndicator={mediaType && MediaIndicatorComponent({ mediaType })}
           />
         );
       };
