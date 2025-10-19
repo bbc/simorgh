@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 
 const Link = styled.a`
-  ${({ theme: { fontSizes } }) => fontSizes.longPrimer}
-  ${({ theme: { fontVariants } }) => fontVariants.sansBold}
+  ${({ theme: { fontSizes } }) => fontSizes.longPrimer};
+  ${({ theme: { fontVariants } }) => fontVariants.sansBold};
   ${({ dir }) =>
     dir === 'rtl' ? 'padding-left: 1rem;' : 'padding-right: 1rem;'}
   color: ${props => props.theme.palette.EBON};

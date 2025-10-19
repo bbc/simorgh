@@ -16,7 +16,7 @@ const BrandTitle = styled.span`
   width: 100%;
   padding-bottom: ${({ theme }) => `${theme.spacings.FULL}rem`};
   word-break: break-word;
-  ${({ theme }) => (theme.isDarkUi ? '' : theme.fontSizes.paragon)}
+  ${({ theme }) => (theme.isDarkUi ? '' : theme.fontSizes.paragon)};
   ${MEDIA_QUERY_TYPOGRAPHY.LAPTOP_AND_LARGER} {
     padding-bottom: ${({ theme }) => `${theme.spacings.DOUBLE}rem`};
     word-break: break-word;
@@ -27,8 +27,8 @@ const BrandTitle = styled.span`
 const Subheading = styled.span`
   display: inline-block;
   margin: 0;
-  ${({ theme: { fontSizes } }) => fontSizes.doublePica}
-  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
+  ${({ theme: { fontSizes } }) => fontSizes.doublePica};
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
   @media (max-width: 22.5rem) and (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
     font-size: 1.125rem;
     line-height: 1.375rem;

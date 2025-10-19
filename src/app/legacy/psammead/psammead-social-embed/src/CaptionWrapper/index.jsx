@@ -12,8 +12,8 @@ const Container = styled.div`
 `;
 
 const WarningText = styled.small`
-  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
-  ${({ theme: { fontSizes } }) => fontSizes.brevier}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
+  ${({ theme: { fontSizes } }) => fontSizes.brevier};
   display: block;
 
   ${({ isLive }) => `

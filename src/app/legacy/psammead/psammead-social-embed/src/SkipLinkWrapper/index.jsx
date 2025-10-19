@@ -17,8 +17,8 @@ const Wrapper = styled.div`
 `;
 
 const SkipLink = styled.a`
-  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
-  ${({ theme: { fontSizes } }) => fontSizes.brevier}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
+  ${({ theme: { fontSizes } }) => fontSizes.brevier};
   background-color: ${props => props.theme.palette.WHITE};
   border: ${BORDER_WEIGHT} solid ${props => props.theme.palette.EBON};
   display: block;

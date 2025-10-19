@@ -5,8 +5,8 @@ import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
 
 const EpisodesText = styled.p`
   display: inline;
-  ${({ theme: { fontSizes } }) => fontSizes.pica}
-  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
+  ${({ theme: { fontSizes } }) => fontSizes.pica};
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
   color: ${props => props.theme.palette.METAL};
   > svg {
     fill: currentColor;

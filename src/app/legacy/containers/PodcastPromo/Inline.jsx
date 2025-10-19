@@ -85,7 +85,7 @@ const StyledCardContentWrapper = styled(PromoComponent.Card.Content)`
 `;
 
 const StyledCardDescriptionWrapper = styled(PromoComponent.Card.Description)`
-  ${({ theme: { fontSizes } }) => fontSizes.brevier}
+  ${({ theme: { fontSizes } }) => fontSizes.brevier};
   margin: ${GEL_SPACING_HLF_TRPL} 0;
   overflow-wrap: break-word;
   color: ${props => props.theme.palette.GREY_10};
@@ -95,7 +95,7 @@ const StyledCardDescriptionWrapper = styled(PromoComponent.Card.Description)`
 `;
 
 const StyledEpisodeTextWrapper = styled(PromoComponent.Card.EpisodesText)`
-  ${({ theme: { fontSizes } }) => fontSizes.brevier}
+  ${({ theme: { fontSizes } }) => fontSizes.brevier};
 
   color: ${props => props.theme.palette.GREY_10};
 
@@ -120,14 +120,14 @@ const StyledEpisodeTextWrapper = styled(PromoComponent.Card.EpisodesText)`
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    ${({ theme: { fontSizes } }) => fontSizes.longPrimer}
+    ${({ theme: { fontSizes } }) => fontSizes.longPrimer};
     margin: 0 ${GEL_SPACING_HLF};
   }
 `;
 
 const StyledCardLink = styled(PromoComponent.Card.Link)`
-  ${({ theme: { fontSizes } }) => fontSizes.greatPrimer}
-  ${({ theme: { fontVariants } }) => fontVariants.serifMedium}
+  ${({ theme: { fontSizes } }) => fontSizes.greatPrimer};
+  ${({ theme: { fontVariants } }) => fontVariants.serifMedium};
   display: block;
   margin-top: ${GEL_SPACING_HLF_TRPL};
   color: ${props => props.theme.palette.GREY_10};
@@ -141,7 +141,7 @@ const StyledCardLink = styled(PromoComponent.Card.Link)`
     margin-top: ${GEL_SPACING_DBL};
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    ${({ theme: { fontSizes } }) => fontSizes.pica}
+    ${({ theme: { fontSizes } }) => fontSizes.pica};
   }
 `;
 

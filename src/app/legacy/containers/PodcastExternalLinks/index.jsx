@@ -43,8 +43,8 @@ const Wrapper = styled.aside`
 `;
 
 const ThirdPartyLinksTitle = styled.h2`
-  ${({ theme: { fontSizes } }) => fontSizes.greatPrimer}
-  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
+  ${({ theme: { fontSizes } }) => fontSizes.greatPrimer};
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
   color: ${props => props.theme.palette.SHADOW};
   margin: 0;
   margin-top: 1rem;

@@ -32,8 +32,8 @@ const StyledH3 = styled.h3`
 `;
 
 const SummaryWrapper = styled.p`
-  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
-  ${({ theme: { fontSizes } }) => fontSizes.brevier}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
+  ${({ theme: { fontSizes } }) => fontSizes.brevier};
   color: ${props => props.theme.palette.METAL};
   padding-top: ${GEL_SPACING};
   padding-bottom: ${GEL_SPACING_DBL};
@@ -41,8 +41,8 @@ const SummaryWrapper = styled.p`
 `;
 
 const ButtonWrapper = styled.div`
-  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
-  ${({ theme: { fontSizes } }) => fontSizes.minion}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
+  ${({ theme: { fontSizes } }) => fontSizes.minion};
   padding: ${GEL_SPACING};
   background-color: ${({ backgroundColor }) => backgroundColor};
   outline: 0.0625rem solid transparent;

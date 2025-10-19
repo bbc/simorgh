@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 const italic = styled.i`
-  ${({ theme: { fontVariants } }) => fontVariants.sansRegularItalic}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegularItalic};
   font-family: inherit;
   font-weight: inherit;
 `;

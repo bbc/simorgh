@@ -11,8 +11,8 @@ import {
 } from '#psammead/gel-foundations/src/spacings';
 
 const Paragraph = styled.p`
-  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
-  ${({ theme: { fontSizes } }) => fontSizes.greatPrimer}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
+  ${({ theme: { fontSizes } }) => fontSizes.greatPrimer};
   color: ${props => props.theme.palette.GREY_10};
   padding-top: ${GEL_SPACING_DBL};
   margin: 0;

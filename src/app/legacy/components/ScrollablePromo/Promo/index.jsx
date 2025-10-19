@@ -21,8 +21,8 @@ import LiveLabel from '../../../../components/LiveLabel';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 const StyledLink = styled(Link)`
-  ${({ theme: { fontSizes } }) => fontSizes.pica}
-  ${({ theme: { fontVariants } }) => fontVariants.serifBold}
+  ${({ theme: { fontSizes } }) => fontSizes.pica};
+  ${({ theme: { fontVariants } }) => fontVariants.serifBold};
   width: 100%;
   text-decoration: none;
 

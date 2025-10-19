@@ -7,7 +7,7 @@ import Grid, { GelPageGrid } from '#components/Grid';
 import { REITH_SANS } from '#app/components/ThemeProvider/fontFamilies';
 
 const StatusCode = styled.span`
-  ${({ theme: { fontSizes } }) => fontSizes.paragon}
+  ${({ theme: { fontSizes } }) => fontSizes.paragon};
   color: ${props => props.theme.palette.POSTBOX};
   display: block;
   font-family: ${REITH_SANS};
@@ -16,8 +16,8 @@ const StatusCode = styled.span`
 `;
 
 const Heading = styled.h1`
-  ${({ theme: { fontSizes } }) => fontSizes.canon}
-  ${({ theme: { fontVariants } }) => fontVariants.serifMedium}
+  ${({ theme: { fontSizes } }) => fontSizes.canon};
+  ${({ theme: { fontVariants } }) => fontVariants.serifMedium};
   color: ${props => props.theme.palette.SHADOW};
   margin-top: 0;
 `;

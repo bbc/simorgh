@@ -93,7 +93,7 @@ const StyledDropdownLi = styled.li`
 
 const StyledDropdownLink = styled.a`
   ${({ theme: { fontSizes } }) => fontSizes.pica};
-  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
   color: ${props => props.theme.palette.GREY_10};
   text-decoration: none;
   padding: ${GEL_SPACING_HLF_TRPL} 0;
@@ -174,7 +174,6 @@ const MenuButton = styled(Button)`
 
   ${({ dir }) => (dir === 'ltr' ? `float: left;` : `float: right;`)}
   ${({ theme: { fontSizes } }) =>
-    fontSizes?.pica?.lineHeight &&
     getButtonDimensions(fontSizes.pica.lineHeight)}
 
   &:hover,
@@ -194,7 +193,6 @@ const MenuButton = styled(Button)`
   }
   @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
     ${({ theme: { fontSizes, fontMq } }) =>
-      fontSizes?.pica?.[fontMq.GROUP_B_ONLY].lineHeight &&
       getButtonDimensions(fontSizes.pica[fontMq.GROUP_B_ONLY].lineHeight)}
   }
 

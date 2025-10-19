@@ -73,8 +73,8 @@ const PlayWrapper = withEpisodeContext(styled.div`
 `);
 
 const DurationWrapper = withEpisodeContext(styled.span`
-  ${({ theme: { fontSizes } }) => fontSizes.minion}
-  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
+  ${({ theme: { fontSizes } }) => fontSizes.minion};
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
   color: ${props => props.theme.palette.WHITE};
   ${({ dir }) =>
     dir === 'rtl'
