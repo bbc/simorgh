@@ -27,7 +27,7 @@ const hoverFocusStyles = ({ theme }) => `
 `;
 
 const Wrapper = styled.div`
-  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
   background-color: ${props => props.theme.palette.CONSENT_BACKGROUND};
   border-top: solid ${transparentBorderHeight} transparent;
 `;
