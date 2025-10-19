@@ -10,8 +10,8 @@ import { detokenise, dictionaryFactory } from '../utilities';
 const BORDER_WEIGHT = '0.0625rem';
 
 const Wrapper = styled.div`
-  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
-  ${({ theme: { fontSizes } }) => fontSizes.bodyCopy}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
+  ${({ theme: { fontSizes } }) => fontSizes.bodyCopy};
   border: ${BORDER_WEIGHT} solid ${props => props.theme.palette.PEBBLE};
   border-radius: ${GEL_SPACING};
   color: ${props => props.theme.palette.SHADOW};
@@ -28,7 +28,7 @@ const Wrapper = styled.div`
   }
 
   a {
-    ${({ theme: { fontVariants } }) => fontVariants.sansBold}
+    ${({ theme: { fontVariants } }) => fontVariants.sansBold};
     color: ${props => props.theme.palette.EBON};
     text-decoration: none;
 
@@ -44,7 +44,7 @@ const Wrapper = styled.div`
 
   small {
     margin-top: ${GEL_SPACING};
-    ${({ theme: { fontSizes } }) => fontSizes.minion}
+    ${({ theme: { fontSizes } }) => fontSizes.minion};
   }
 `;
 

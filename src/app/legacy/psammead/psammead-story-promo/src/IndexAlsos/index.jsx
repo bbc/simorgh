@@ -27,7 +27,7 @@ const StyledIndexAlsosUl = styled.ul`
 // `display: inline-block` has been used to resolve Focus Indicator bug in Firefox high contrast mode.
 const StyledIndexAlsosLink = styled.a`
   ${({ theme: { fontSizes } }) => fontSizes.brevier};
-  ${({ theme: { fontVariants } }) => fontVariants.serifMedium}
+  ${({ theme: { fontVariants } }) => fontVariants.serifMedium};
   color: ${props => props.theme.palette.EBON};
   text-decoration: none;
   display: inline-block;

@@ -29,8 +29,8 @@ const TopicsList = styled.ul`
 `;
 
 const SingleTopicTagItem = styled.div`
-  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
-  ${({ theme: { fontSizes } }) => fontSizes.brevier}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
+  ${({ theme: { fontSizes } }) => fontSizes.brevier};
 
   word-break: break-word;
   margin-top: ${GEL_SPACING};

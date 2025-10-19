@@ -6,8 +6,8 @@ import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
 const StyledMediaIndicator = styled.div`
   color: ${props => props.theme.palette.EBON};
   background-color: ${props => props.theme.palette.WHITE};
-  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
-  ${({ theme: { fontSizes } }) => fontSizes.minion}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
+  ${({ theme: { fontSizes } }) => fontSizes.minion};
 
   ${({ isInline, dir }) =>
     isInline

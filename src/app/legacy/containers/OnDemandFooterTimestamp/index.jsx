@@ -12,8 +12,8 @@ const smallScreenMargin = `
 `;
 
 const Wrapper = styled.time`
-  ${({ theme: { fontSizes } }) => fontSizes.longPrimer}
-  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
+  ${({ theme: { fontSizes } }) => fontSizes.longPrimer};
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
   color: ${({ theme }) =>
     theme.isDarkUi ? theme.palette.PEBBLE : theme.palette.METAL};
   display: inline-block;

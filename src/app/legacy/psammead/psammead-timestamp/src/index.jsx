@@ -13,11 +13,11 @@ const PADDING = `
 `;
 
 const StyledTimestamp = styled.time`
-  ${({ theme: { fontSizes } }) => fontSizes.brevier}
+  ${({ theme: { fontSizes } }) => fontSizes.brevier};
   color: ${({ theme }) =>
     theme.isDarkUi ? theme.palette.GREY_3 : theme.palette.GREY_6};
   display: block;
-  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
   ${props => props.padding && PADDING}
 `;
 

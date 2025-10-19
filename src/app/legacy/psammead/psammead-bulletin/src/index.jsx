@@ -39,12 +39,10 @@ const headingStyles = ({ theme }) => `
   color: ${theme.palette.EBON};
   margin: 0; /* Reset */
   padding: ${GEL_SPACING};
-  ${theme.fontVariants.getSerifMedium}
-`;
+  ${({ theme: { fontVariants } }) => fontVariants.serifMedium};`;
 
-const radioHeading = ({ theme, dir }) => `
-    ${theme.fontSizes.pica}
-
+const radioHeading = ({ dir }) => `
+  ${({ theme: { fontSizes } }) => fontSizes.pica};
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     padding-top: ${GEL_SPACING};
     padding-bottom: ${GEL_SPACING};
@@ -52,8 +50,8 @@ const radioHeading = ({ theme, dir }) => `
   }
 `;
 
-const tvHeading = ({ theme }) => `
-  ${theme.fontSizes.greatPrimer}
+const tvHeading = () => `
+  ${({ theme: { fontSizes } }) => fontSizes.greatPrimer};
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     padding: 0 0 ${GEL_SPACING} 0;
   }
@@ -100,9 +98,9 @@ const BulletinSummary = styled.p`
   color: ${props => props.theme.palette.SHADOW};
   margin: 0; /* Reset */
   padding: 0 ${GEL_SPACING} ${GEL_SPACING_DBL};
-  ${({ theme: { fontSizes } }) => fontSizes.longPrimer}
-  ${({ theme: { fontVariants } }) => fontVariants.sansRegular} 
-  ${({ bulletinType }) => bulletinSummaryStyles[bulletinType]}
+  ${({ theme: { fontSizes } }) => fontSizes.longPrimer};
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
+  ${({ bulletinType }) => bulletinSummaryStyles[bulletinType]};
 `;
 
 const IconWrapper = styled.span`
@@ -153,7 +151,7 @@ const PlayCTA = styled.div`
   justify-content: center;
   ${({ theme: { fontSizes } }) => fontSizes.pica};
   ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
-  ${({ bulletinType }) => playCtaStyles[bulletinType]}
+  ${({ bulletinType }) => playCtaStyles[bulletinType]};
 `;
 
 PlayCTA.defaultProps = {

@@ -10,10 +10,8 @@ import { MEDIA_QUERY_TYPOGRAPHY } from '#psammead/gel-foundations/src/breakpoint
 import { focusIndicatorThickness } from '#app/components/ThemeProvider/focusIndicator';
 
 export const Headline = styled.h1`
-  ${({ theme: { fontSizes } }) => fontSizes.canon}
-  ${({ theme: { fontVariants } }) => fontVariants.serifMedium}
-
-
+  ${({ theme: { fontSizes } }) => fontSizes.canon};
+  ${({ theme: { fontVariants } }) => fontVariants.serifMedium};
   color: ${({ theme }) =>
     theme.isDarkUi ? theme.palette.GREY_2 : theme.palette.GREY_10};
   display: block; /* Explicitly set */
@@ -27,8 +25,8 @@ export const Headline = styled.h1`
 const SUBHEADING_PADDING = '0.5rem';
 
 export const SubHeading = styled.h2`
-  ${({ theme: { fontSizes } }) => fontSizes.trafalgar}
-  ${({ theme: { fontVariants } }) => fontVariants.sansBold}
+  ${({ theme: { fontSizes } }) => fontSizes.trafalgar};
+  ${({ theme: { fontVariants } }) => fontVariants.sansBold};
 
   color: ${({ theme }) =>
     theme.isDarkUi ? theme.palette.GREY_2 : theme.palette.GREY_10};

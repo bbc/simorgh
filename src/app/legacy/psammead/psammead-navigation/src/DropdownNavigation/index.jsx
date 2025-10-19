@@ -93,7 +93,7 @@ const StyledDropdownLi = styled.li`
 
 const StyledDropdownLink = styled.a`
   ${({ theme: { fontSizes } }) => fontSizes.pica};
-  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
   color: ${props => props.theme.palette.GREY_10};
   text-decoration: none;
   padding: ${GEL_SPACING_HLF_TRPL} 0;
@@ -181,9 +181,8 @@ const MenuButton = styled(Button)`
   border: 0;
 
   ${({ dir }) => (dir === 'ltr' ? `float: left;` : `float: right;`)}
-  ${({ theme: fontSizes }) =>
-    fontSizes?.pica?.lineHeight &&
-    getButtonDimensions(fontSizes.pica.lineHeight)}
+  ${({ theme: { fontSizes } }) =>
+    getButtonDimensions(fontSizes.pica.lineHeight)};
 
   &:hover,
   &:focus {
@@ -201,11 +200,8 @@ const MenuButton = styled(Button)`
     visibility: hidden;
   }
   @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
-    ${({ theme }) =>
-      theme.fontSizes?.pica?.[theme.fontMq.GROUP_B_ONLY].lineHeight &&
-      getButtonDimensions(
-        theme.fontSizes.pica[theme.fontMq.GROUP_B_ONLY].lineHeight,
-      )}
+    ${({ theme: { fontSizes, fontMq } }) =>
+      getButtonDimensions(fontSizes.pica[fontMq.GROUP_B_ONLY].lineHeight)};
   }
 
   & svg {

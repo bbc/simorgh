@@ -17,8 +17,8 @@ const TitleWrapper = styled.span`
   padding: ${GEL_SPACING} 0 0 0;
   display: inline-block;
   width: 100%;
-  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
-  ${({ theme: { fontSizes } }) => fontSizes.pica}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
+  ${({ theme: { fontSizes } }) => fontSizes.pica};
 `;
 const StyledLink = styled(Link)`
   &:hover ${TitleWrapper} {
@@ -29,8 +29,8 @@ const StyledLink = styled(Link)`
   }
 `;
 const NextLabel = styled.span`
-  ${({ theme: { fontVariants } }) => fontVariants.sansBold}
-  ${({ theme: { fontSizes } }) => fontSizes.pica}
+  ${({ theme: { fontVariants } }) => fontVariants.sansBold};
+  ${({ theme: { fontSizes } }) => fontSizes.pica};
   color: ${props => props.theme.palette.POSTBOX};
   display: inline-block;
   ${({ dir }) =>

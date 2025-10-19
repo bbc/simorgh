@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const italic = styled.i`
-  ${({ theme: { fontVariants } }) => fontVariants.sansRegularItalic}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegularItalic};
   font-family: inherit;
   font-weight: inherit;
 `;

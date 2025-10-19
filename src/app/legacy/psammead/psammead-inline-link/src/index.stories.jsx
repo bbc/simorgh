@@ -8,25 +8,25 @@ import InlineLink from './index';
 import { POSTBOX } from '../../../../components/ThemeProvider/palette';
 
 const RegularParagraph = styled.p`
-  ${({ theme: { fontSizes } }) => fontSizes.bodyCopy}
-  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
+  ${({ theme: { fontSizes } }) => fontSizes.bodyCopy};
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
 `;
 const BoldParagraph = styled.p`
-  ${({ theme: { fontSizes } }) => fontSizes.bodyCopy}
-  ${({ theme: { fontVariants } }) => fontVariants.sansBold}
+  ${({ theme: { fontSizes } }) => fontSizes.bodyCopy};
+  ${({ theme: { fontVariants } }) => fontVariants.sansBold};
 `;
 const ItalicParagraph = styled.p`
-  ${({ theme: { fontSizes } }) => fontSizes.bodyCopy}
-  ${({ theme: { fontVariants } }) => fontVariants.sansRegularItalic}
+  ${({ theme: { fontSizes } }) => fontSizes.bodyCopy};
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegularItalic};
 `;
 const BoldItalicParagraph = styled.p`
-  ${({ theme: { fontSizes } }) => fontSizes.bodyCopy}
-  ${({ theme: { fontVariants } }) => fontVariants.sansBoldItalic}
+  ${({ theme: { fontSizes } }) => fontSizes.bodyCopy};
+  ${({ theme: { fontVariants } }) => fontVariants.sansBoldItalic};
 `;
 
 const Caption = styled.figcaption`
   ${({ theme: { fontSizes } }) => fontSizes.longPrimer};
-  ${({ theme: { fontVariants } }) => fontVariants.sansRegularItalic}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegularItalic};
 `;
 
 const textDecorationStyle = {

@@ -13,8 +13,8 @@ const Wrapper = styled.div`
 `;
 
 const SkipLink = styled.a`
-  ${({ theme: { fontVariants } }) => fontVariants.sansBold}
-  ${({ theme: { fontSizes } }) => fontSizes.brevier}
+  ${({ theme: { fontVariants } }) => fontVariants.sansBold};
+  ${({ theme: { fontSizes } }) => fontSizes.brevier};
   background-color: ${props => props.theme.palette.WHITE};
   border: ${BORDER_WIDTH} solid ${props => props.theme.palette.EBON};
   color: ${props => props.theme.palette.EBON};

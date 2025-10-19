@@ -74,7 +74,7 @@ const ScrollablePromoContainer = styled.div`
 const LabelComponent = styled.strong`
   display: block;
   ${({ theme: { fontSizes } }) => fontSizes.doublePica};
-  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
   margin-bottom: ${GEL_SPACING_DBL};
   color: ${({ theme }) =>
     theme.isDarkUi ? theme.palette.GREY_2 : theme.palette.SHADOW};
@@ -97,7 +97,7 @@ const LabelComponentOJTopBar = styled(({ ariaLabel, ...props }) => (
   <strong aria-label={ariaLabel} {...props} />
 ))`
   ${({ theme: { fontSizes } }) => fontSizes.brevier};
-  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
   display: inline-block;
   margin-bottom: ${GEL_SPACING_DBL};
   color: ${({ theme }) =>

@@ -4,8 +4,8 @@ import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
 
 const Heading = styled.h2`
-  ${({ theme: { fontSizes } }) => fontSizes.greatPrimer}
-  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
+  ${({ theme: { fontSizes } }) => fontSizes.greatPrimer};
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
   display: inline;
   color: ${props => props.theme.palette.EBON};
 

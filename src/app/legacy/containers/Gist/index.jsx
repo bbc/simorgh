@@ -32,8 +32,8 @@ const GistWrapper = styled.div`
 `;
 
 const GistIntroduction = styled.strong`
-  ${({ theme: { fontVariants } }) => fontVariants.sansBold}
-  ${({ theme: { fontSizes } }) => fontSizes.doublePica}
+  ${({ theme: { fontVariants } }) => fontVariants.sansBold};
+  ${({ theme: { fontSizes } }) => fontSizes.doublePica};
   display: inline-block;
   padding-bottom: ${GEL_SPACING_TRPL};
   color: ${({ theme }) => theme.isDarkUi && theme.palette.GREY_8};
@@ -58,8 +58,8 @@ const GistList = styled(UnorderedList)`
   }
 
   li {
-    ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
-    ${({ theme: { fontSizes } }) => fontSizes.greatPrimer}
+    ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
+    ${({ theme: { fontSizes } }) => fontSizes.greatPrimer};
     ${({ direction }) => `padding-${direction}: ${GEL_SPACING_HLF_TRPL};`}
     margin-bottom: ${GEL_SPACING_DBL};
 

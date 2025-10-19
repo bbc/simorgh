@@ -19,8 +19,8 @@ ${
 `;
 
 const DateTimeDuration = styled.span`
-  ${({ theme: { fontSizes } }) => fontSizes.brevier}
-  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
+  ${({ theme: { fontSizes } }) => fontSizes.brevier};
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
   color: ${({ theme }) =>
     theme.isDarkUi ? theme.palette.PEBBLE : theme.palette.METAL};
   ${({ hasBorder, dir }) => hasBorder && borderStyling(dir)}

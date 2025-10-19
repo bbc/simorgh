@@ -146,7 +146,7 @@ const summaryStyles = {
 
 export const Summary = styled.p`
   ${({ theme: { fontSizes } }) => fontSizes.longPrimer};
-  ${({ theme: { fontVariants } }) => fontVariants.sansRegular}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
   color: ${props => props.theme.palette.SHADOW};
   margin: 0; /* Reset */
   padding-bottom: ${GEL_SPACING};
