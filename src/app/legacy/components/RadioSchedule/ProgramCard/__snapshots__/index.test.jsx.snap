@@ -131,8 +131,8 @@ exports[`ProgramCard should render correctly for live 1`] = `
   color: #006666;
   display: inline-block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
 }
@@ -1388,8 +1388,8 @@ exports[`ProgramCard should render correctly without summary 1`] = `
   color: #006666;
   display: inline-block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
 }

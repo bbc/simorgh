@@ -26,8 +26,8 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 
 .emotion-3 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   background-color: #323232;
   border-top: solid 0.0625rem transparent;
 }
@@ -932,8 +932,8 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   background-color: #222222;
   padding: 0 1rem;
 }
@@ -1067,8 +1067,8 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 
 .emotion-155 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   color: #FFFFFF;
   padding: 0.75rem 0 0.75rem;
   -webkit-text-decoration: none;
@@ -1094,8 +1094,8 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 
 .emotion-163 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   color: #FFFFFF;
   padding: 0.75rem 0 0.75rem;
   -webkit-text-decoration: none;

@@ -202,8 +202,8 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -225,8 +225,8 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   margin: 0;
   margin: 1rem 0;
 }
@@ -268,8 +268,8 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #FFFFFF;
   border: 0.0625rem solid #8A8C8E;
   border-radius: 0;
@@ -1319,8 +1319,8 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1342,8 +1342,8 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   margin: 0;
   margin: 1rem 0;
 }
@@ -1385,8 +1385,8 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #FFFFFF;
   border: 0.0625rem solid #8A8C8E;
   border-radius: 0;
@@ -2078,8 +2078,8 @@ min-height:7.0625rem .no-js .emotion-2 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -2101,8 +2101,8 @@ min-height:7.0625rem .no-js .emotion-2 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   margin: 0;
   margin: 1rem 0;
 }
@@ -2144,8 +2144,8 @@ min-height:7.0625rem .no-js .emotion-2 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   background-color: #FFFFFF;
   border: 0.0625rem solid #8A8C8E;
   border-radius: 0;

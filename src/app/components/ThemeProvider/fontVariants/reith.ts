@@ -4,55 +4,55 @@ const reith = {
   sans: {
     regular: {
       fontFamily: REITH_SANS,
-      fontStyle: 'normal',
       fontWeight: 400,
+      fontStyle: 'normal',
     },
     regularItalic: {
       fontFamily: REITH_SANS,
-      fontStyle: 'italic',
       fontWeight: 400,
+      fontStyle: 'italic',
     },
     bold: {
       fontFamily: REITH_SANS,
-      fontStyle: 'normal',
       fontWeight: 700,
+      fontStyle: 'normal',
     },
     boldItalic: {
       fontFamily: REITH_SANS,
-      fontStyle: 'italic',
       fontWeight: 700,
+      fontStyle: 'italic',
     },
     light: {
       fontFamily: REITH_SANS,
-      fontStyle: 'normal',
       fontWeight: 300,
+      fontStyle: 'normal',
     },
   },
   serif: {
     regular: {
       fontFamily: REITH_SERIF,
-      fontStyle: 'normal',
       fontWeight: 400,
+      fontStyle: 'normal',
     },
     medium: {
       fontFamily: REITH_SERIF,
-      fontStyle: 'normal',
       fontWeight: 500,
+      fontStyle: 'normal',
     },
     mediumItalic: {
       fontFamily: REITH_SERIF,
-      fontStyle: 'italic',
       fontWeight: 500,
+      fontStyle: 'italic',
     },
     bold: {
       fontFamily: REITH_SERIF,
-      fontStyle: 'normal',
       fontWeight: 700,
+      fontStyle: 'normal',
     },
     light: {
       fontFamily: REITH_SERIF,
-      fontStyle: 'normal',
       fontWeight: 300,
+      fontStyle: 'normal',
     },
   },
 };

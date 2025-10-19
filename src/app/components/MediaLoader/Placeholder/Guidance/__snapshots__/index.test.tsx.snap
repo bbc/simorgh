@@ -5,8 +5,8 @@ exports[`Media Player: Guidance should render Guidance 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -116,8 +116,8 @@ exports[`Media Player: Guidance should render no-js styles when noJsClassName pr
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   width: 100%;
   height: 100%;
   position: absolute;

@@ -4,13 +4,13 @@ const reithQalam = {
   sans: {
     regular: {
       fontFamily: REITH_QALAM,
-      fontStyle: 'normal',
       fontWeight: 400,
+      fontStyle: 'normal',
     },
     bold: {
       fontFamily: REITH_QALAM,
-      fontStyle: 'normal',
       fontWeight: 700,
+      fontStyle: 'normal',
     },
   },
 };
