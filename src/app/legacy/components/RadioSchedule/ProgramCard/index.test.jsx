@@ -31,6 +31,7 @@ describe('ProgramCard', () => {
         durationLabel: 'المدة الزمنية',
         service: 'arabic',
       }),
+      { service: 'arabic' },
     );
     expect(container).toMatchSnapshot();
   });
