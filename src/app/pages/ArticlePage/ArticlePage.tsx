@@ -73,9 +73,7 @@ import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
 import styles from './ArticlePage.styles';
 import { ComponentToRenderProps, TimeStampProps } from './types';
-import ContinueReadingButton, {
-  Props as ContinueReadingProps,
-} from './ContinueReadingButton';
+import ContinueReadingButton from './ContinueReadingButton';
 import ArticleHeadline from './ArticleHeadline';
 import {
   isPortraitVideo,
@@ -359,15 +357,13 @@ const promoImage = promoImageRawBlock?.model?.locator;
 const showTopics = Boolean(showRelatedTopics && topics.length > 0);
 const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
-const showContinueReadingButton = Boolean(
-  !isAmp &&
-    !isLite &&
-    !isApp &&
-    experimentVariant &&
-    ['read-more-a', 'read-more-b', 'read-more-a-and-top-stories'].includes(
-      experimentVariant,
-    ),
-);
+  const showContinueReadingButton = Boolean(
+    !isAmp &&
+      !isLite &&
+      !isApp &&
+      experimentVariant &&
+      ['read-more-b'].includes(experimentVariant),
+  );
 
 return (
   <div css={styles.pageWrapper}>
@@ -444,15 +440,43 @@ return (
         {showTopics && (
           <RelatedTopics
             css={[
-              styles.relatedTopics,
+              styles.mainContent,
               ...(showContinueReadingButton
                 ? [!showAllContent && styles.hideRelatedTopics]
                 : []),
             ]}
-            topics={topics}
-            mobileDivider={false}
-            backgroundColour={GREY_2}
-            tagBackgroundColour={WHITE}
+            role="main"
+          >
+            <Blocks
+              blocks={articleBlocks}
+              componentsToRender={componentsToRender}
+            />
+            {showContinueReadingButton && (
+              <ContinueReadingButton
+                showAllContent={showAllContent}
+                setShowAllContent={() => setShowAllContent(true)}
+              />
+            )}
+            <OptimizelyPageMetrics trackPageComplete />
+          </main>
+          <OptimizelyPageMetrics trackPageView trackPageDepth />
+          {showTopics && (
+            <RelatedTopics
+              css={[
+                styles.relatedTopics,
+                ...(showContinueReadingButton
+                  ? [!showAllContent && styles.hideRelatedTopics]
+                  : []),
+              ]}
+              topics={topics}
+              mobileDivider={false}
+              backgroundColour={GREY_2}
+              tagBackgroundColour={WHITE}
+            />
+          )}
+          <RelatedContentSection
+            content={blocks}
+            sendOptimizelyEvents={false}
           />
         )}
         <RelatedContentSection content={blocks} sendOptimizelyEvents={false} />
