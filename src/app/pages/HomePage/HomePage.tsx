@@ -203,7 +203,9 @@ const HomePage = ({ pageData }: HomePageProps) => {
           </div>
         </div>
       </main>
-      {timeOfDayVariant && <OptimizelyPageMetrics trackPageView />}
+      {timeOfDayVariant && (
+        <OptimizelyPageMetrics trackPageView trackPageDepth />
+      )}
     </>
   );
 };

@@ -104,7 +104,7 @@ export const service: DefaultServiceConfig = {
             'Elnézését kérjük, de a keresett oldal jelenleg nem elérhető. Kérjük, próbálja meg:',
           solutions: ['ellenőrizni az URL-t', 'újratölteni a böngészőt'],
           callToActionFirst: 'Vagy látogassa meg a ',
-          callToActionLinkText: 'BBC Magyarul',
+          callToActionLinkText: 'BBC News Magyarul',
           callToActionLast: ' weboldalát. ',
           callToActionLinkUrl: 'https://www.bbc.com/magyarul',
         },

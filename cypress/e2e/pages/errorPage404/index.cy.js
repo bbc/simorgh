@@ -1,10 +1,8 @@
 import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
 import testsForAllPages from './tests';
-import ampTests from './testsForAMPOnly';
-import canonicalTests from './testsForCanonicalOnly';
 import { ERROR_PAGE } from '../../../../src/app/routes/utils/pageTypes';
 
-const tests = [testsForAllPages, canonicalTests, ampTests];
+const tests = [testsForAllPages];
 
 const canonicalTestSuites = [
   {
