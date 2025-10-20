@@ -17,7 +17,7 @@ const attributeComponents = {
 
 const fallbackAttributeComponent = ({ children }) => children;
 
-const Fragment = ({ text, attributes }) => {
+const Fragment = ({ text, attributes = [] }) => {
   /*
     Iterates through the attribute array and returns a component based on the attribute type (i.e. 'italic' or 'bold').
     These components are nested inside each other as children as the array is iterated through.
