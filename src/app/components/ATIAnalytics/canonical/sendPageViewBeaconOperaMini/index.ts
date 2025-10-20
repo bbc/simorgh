@@ -7,7 +7,7 @@ export default (atiPageViewUrlString: string) => `
 
       var atiPageViewUrl = "${atiPageViewUrlString}";
       atiPageViewUrl += document.referrer ? "&ref=" + document.referrer : '';
-      console.log("CHECK", atiPageViewUrlString);
+      console.log("CHECK", ${atiPageViewUrlString});
       window.sendStaticBeacon(atiPageViewUrl);
     }
 `;
