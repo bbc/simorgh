@@ -182,7 +182,7 @@ const MenuButton = styled(Button)`
 
   ${({ dir }) => (dir === 'ltr' ? `float: left;` : `float: right;`)}
   ${({ theme: { fontSizes } }) =>
-    getButtonDimensions(fontSizes.pica.lineHeight)};
+    getButtonDimensions(fontSizes.pica.lineHeight)}
 
   &:hover,
   &:focus {
@@ -201,7 +201,7 @@ const MenuButton = styled(Button)`
   }
   @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
     ${({ theme: { fontSizes, fontMq } }) =>
-      getButtonDimensions(fontSizes.pica[fontMq.GROUP_B_ONLY].lineHeight)};
+      getButtonDimensions(fontSizes.pica[fontMq.GROUP_B_ONLY].lineHeight)}
   }
 
   & svg {
