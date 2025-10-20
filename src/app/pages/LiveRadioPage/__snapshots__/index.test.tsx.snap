@@ -179,9 +179,9 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 .emotion-5 {
   font-size: 1.75rem;
   line-height: 2rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   color: #141414;
   display: block;
   margin: 0;
@@ -211,7 +211,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 .emotion-7 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
   color: #141414;
@@ -363,7 +363,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 .emotion-22 {
   font-size: 1.125rem;
   line-height: 1.375rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
   background-color: #F2F2F2;
@@ -701,7 +701,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   color: #5A5A5A;
   font-size: 0.75rem;
   line-height: 1rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
 }
@@ -733,7 +733,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   line-height: 1.125rem;
   color: #545658;
   display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
 }
@@ -775,9 +775,9 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 }
 
 .emotion-48 {
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #6E6E73;
@@ -810,7 +810,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 }
 
 .emotion-51 {
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 0.9375rem;
@@ -839,7 +839,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   padding: 0.5rem 0 0 0;
   display: inline-block;
   width: 100%;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 0.9375rem;
@@ -861,7 +861,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 }
 
 .emotion-57 {
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 0.875rem;
@@ -887,7 +887,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 }
 
 .emotion-59 {
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 0.75rem;
@@ -947,9 +947,9 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 }
 
 .emotion-86 {
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #222222;
@@ -1016,7 +1016,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   padding: 0.5rem 0 0 0;
   display: inline-block;
   width: 100%;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 0.9375rem;
@@ -1038,7 +1038,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 }
 
 .emotion-97 {
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 0.75rem;

@@ -83,7 +83,7 @@ exports[`Related Topics Expected use should render correctly with a single tag 1
 
 .emotion-11 {
   font-size: 1.125rem;
-  line-height: 1.375rem;
+  line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -103,14 +103,14 @@ exports[`Related Topics Expected use should render correctly with a single tag 1
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-11 {
     font-size: 1.25rem;
-    line-height: 1.5rem;
+    line-height: 1.625rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-11 {
     font-size: 1.5rem;
-    line-height: 1.75rem;
+    line-height: 2rem;
   }
 }
 
@@ -327,7 +327,7 @@ exports[`Related Topics Expected use should render correctly with multiple tags 
 
 .emotion-11 {
   font-size: 1.125rem;
-  line-height: 1.375rem;
+  line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -347,14 +347,14 @@ exports[`Related Topics Expected use should render correctly with multiple tags 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-11 {
     font-size: 1.25rem;
-    line-height: 1.5rem;
+    line-height: 1.625rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-11 {
     font-size: 1.5rem;
-    line-height: 1.75rem;
+    line-height: 2rem;
   }
 }
 

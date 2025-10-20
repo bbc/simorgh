@@ -37,9 +37,9 @@ exports[`Index Heading should render correctly 1`] = `
 
 exports[`Index Heading should render correctly with arabic script typography values 1`] = `
 .emotion-0 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-style: normal;
   font-weight: 400;
   color: #6E6E73;
@@ -49,14 +49,14 @@ exports[`Index Heading should render correctly with arabic script typography val
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-0 {
     font-size: 1.25rem;
-    line-height: 1.5rem;
+    line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-0 {
     font-size: 1.5rem;
-    line-height: 1.75rem;
+    line-height: 2rem;
   }
 }
 
