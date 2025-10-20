@@ -215,6 +215,8 @@ describe('cspHeader', () => {
         "'self'",
         "'unsafe-inline'",
         "'unsafe-eval'",
+        'blob:',
+        'data:',
         `'nonce-${nonce}'`,
       ].sort(),
       styleSrcExpectation: [
@@ -412,6 +414,8 @@ describe('cspHeader', () => {
         "'self'",
         "'unsafe-inline'",
         "'unsafe-eval'",
+        'blob:',
+        'data:',
         `'nonce-${nonce}'`,
       ].sort(),
       styleSrcExpectation: [
