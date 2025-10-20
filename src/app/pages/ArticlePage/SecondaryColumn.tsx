@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import { jsx, useTheme, Theme, useMediaQuery } from '@emotion/react';
+import { jsx, useTheme, Theme } from '@emotion/react';
 import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
 import { Article } from '#app/models/types/optimo';
 import Curation from '#app/components/Curation';
@@ -147,14 +147,10 @@ const SecondaryColumn = ({
   const theme = useTheme();
   const {
     palette: { GREY_2 },
-    mq,
   } = theme;
 
-  // Detect if we're in GROUP_4_MIN_WIDTH (desktop and up)
-  const isGroup4Up = useMediaQuery(mq.GROUP_4_MIN_WIDTH);
-
   if (!topStoriesContent && !featuresContent && !tvBulletinContent) return null;
-  const showAdaptiveSection = experimentVariant === 'variant_a' && !isGroup4Up;
+  const showAdaptiveSection = experimentVariant === 'variant_a';
   // ask about putting the curations in a curationList in secondary Column data so that we can map over the list below when rendering curations
 
   return (
