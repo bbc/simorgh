@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import { jsx, useTheme, Theme } from '@emotion/react';
+import { jsx, useTheme, Theme, useMediaQuery } from '@emotion/react';
 import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
 import { Article } from '#app/models/types/optimo';
 import Curation from '#app/components/Curation';
@@ -9,7 +9,6 @@ import {
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
 import TopStoriesSection from './PagePromoSections/TopStoriesSection';
-
 import styles from './ArticlePage.styles';
 
 const adaptiveCurationsSectionStyles = ({ spacings, mq }: Theme) => ({
@@ -148,10 +147,15 @@ const SecondaryColumn = ({
   const theme = useTheme();
   const {
     palette: { GREY_2 },
-  } = useTheme();
+    mq,
+  } = theme;
+
+  // Detect if we're in GROUP_4_MIN_WIDTH (desktop and up)
+  const isGroup4Up = useMediaQuery(mq.GROUP_4_MIN_WIDTH);
 
   if (!topStoriesContent && !featuresContent && !tvBulletinContent) return null;
-  const shouldShowAdaptiveSection = experimentVariant === 'variant_a';
+  const shouldShowAdaptiveSection =
+    experimentVariant === 'variant_a' && !isGroup4Up;
   // ask about putting the curations in a curationList in secondary Column data so that we can map over the list below when rendering curations
 
   return (
@@ -163,15 +167,6 @@ const SecondaryColumn = ({
           data-testid="adaptive-curations-section"
         >
           <Curation
-            visualStyle={VISUAL_STYLE.BANNER}
-            visualProminence={VISUAL_PROMINENCE.MAXIMUM}
-            summaries={dummyTvBulletinContent.summaries}
-            title={dummyTvBulletinContent.title}
-            position={dummyTvBulletinContent.position}
-            curationId={dummyTvBulletinContent.curationId}
-            link={dummyTvBulletinContent.link}
-          />
-          <Curation
             visualStyle={VISUAL_STYLE.FEED}
             visualProminence={VISUAL_PROMINENCE.NORMAL}
             summaries={dummySimpleCurationGridContent.summaries}
@@ -180,6 +175,14 @@ const SecondaryColumn = ({
             curationId={dummySimpleCurationGridContent.curationId}
             curationLength={4}
             link={dummySimpleCurationGridContent.link}
+          />
+          <Curation
+            visualStyle={VISUAL_STYLE.BANNER}
+            visualProminence={VISUAL_PROMINENCE.MAXIMUM}
+            summaries={dummyTvBulletinContent.summaries}
+            title={dummyTvBulletinContent.title}
+            position={dummyTvBulletinContent.position}
+            curationId={dummyTvBulletinContent.curationId}
           />
         </section>
       )}
