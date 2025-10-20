@@ -5,8 +5,8 @@ exports[`Script Link should render correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   display: inline-block;
   color: #FFFFFF;
   -webkit-text-decoration: none;

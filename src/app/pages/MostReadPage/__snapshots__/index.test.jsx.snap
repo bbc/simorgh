@@ -41,8 +41,8 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #6E6E73;
   margin: 0;
   padding-bottom: 1.5rem;
@@ -425,8 +425,8 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 
 .emotion-17 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   position: relative;
   color: #B80000;
   margin: 0;
@@ -465,8 +465,8 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -537,8 +537,8 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {

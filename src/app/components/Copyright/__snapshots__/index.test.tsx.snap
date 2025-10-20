@@ -6,8 +6,8 @@ exports[`should render Copyright with news service context 1`] = `
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   background-color: rgba(34, 34, 34, 0.75);
   text-transform: uppercase;
   color: #FFFFFF;
@@ -70,8 +70,8 @@ exports[`should render Copyright with persian service context 1`] = `
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   background-color: rgba(34, 34, 34, 0.75);
   text-transform: uppercase;
   color: #FFFFFF;

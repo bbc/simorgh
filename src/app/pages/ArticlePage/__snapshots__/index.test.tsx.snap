@@ -145,8 +145,8 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   color: #141414;
   display: block;
   margin: 0;
@@ -282,8 +282,8 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #141414;
   padding-bottom: 1.5rem;
   margin: 0;
@@ -419,8 +419,8 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   background-color: #F6F6F6;
   margin: 1rem 0;
   padding-right: 0.5rem;
@@ -698,8 +698,8 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
 
 .emotion-29 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   position: relative;
   color: #B80000;
   margin: 0;
@@ -738,8 +738,8 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -810,8 +810,8 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1267,8 +1267,8 @@ exports[`Article Page should render a news article correctly 1`] = `
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   color: #141414;
   display: block;
   margin: 0;
@@ -1404,8 +1404,8 @@ exports[`Article Page should render a news article correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #141414;
   padding-bottom: 1.5rem;
   margin: 0;
@@ -1600,8 +1600,8 @@ exports[`Article Page should render a news article correctly 1`] = `
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   background-color: #F6F6F6;
   margin: 1rem 0;
   padding-right: 0.5rem;
@@ -1879,8 +1879,8 @@ exports[`Article Page should render a news article correctly 1`] = `
 
 .emotion-33 {
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 300;
   font-style: normal;
+  font-weight: 300;
   position: relative;
   color: #B80000;
   margin: 0;
@@ -1919,8 +1919,8 @@ exports[`Article Page should render a news article correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -1991,8 +1991,8 @@ exports[`Article Page should render a news article correctly 1`] = `
   color: #545658;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -2928,8 +2928,8 @@ exports[`Article Page should render a news article with headline in the middle c
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #141414;
   padding-bottom: 1.5rem;
   margin: 0;
@@ -3059,8 +3059,8 @@ exports[`Article Page should render a news article with headline in the middle c
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   color: #141414;
   display: block;
   margin: 0;
@@ -3314,8 +3314,8 @@ exports[`Article Page should render a news article without headline correctly 1`
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #141414;
   padding-bottom: 1.5rem;
   margin: 0;
@@ -3531,8 +3531,8 @@ exports[`Article Page should render a rtl article (persian) with most read corre
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   color: #141414;
   display: block;
   margin: 0;
@@ -3668,8 +3668,8 @@ exports[`Article Page should render a rtl article (persian) with most read corre
   font-size: 0.9375rem;
   line-height: 1.5rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #141414;
   padding-bottom: 1.5rem;
   margin: 0;
@@ -3805,8 +3805,8 @@ exports[`Article Page should render a rtl article (persian) with most read corre
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   background-color: #F6F6F6;
   margin: 1rem 0;
   padding-left: 0.5rem;
@@ -4084,8 +4084,8 @@ exports[`Article Page should render a rtl article (persian) with most read corre
 
 .emotion-29 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   position: relative;
   color: #B80000;
   margin: 0;
@@ -4124,8 +4124,8 @@ exports[`Article Page should render a rtl article (persian) with most read corre
   font-size: 0.9375rem;
   line-height: 1.5rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -4196,8 +4196,8 @@ exports[`Article Page should render a rtl article (persian) with most read corre
   color: #545658;
   display: block;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {

@@ -162,8 +162,8 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
 
 .emotion-4 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   position: relative;
   color: #B80000;
   margin: 0;
@@ -202,8 +202,8 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -960,8 +960,8 @@ exports[`MostReadItemWrapper should render rtl correctly with 10 items 1`] = `
 
 .emotion-4 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   position: relative;
   color: #B80000;
   margin: 0;
@@ -1000,8 +1000,8 @@ exports[`MostReadItemWrapper should render rtl correctly with 10 items 1`] = `
   font-size: 0.9375rem;
   line-height: 1.5rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -1613,8 +1613,8 @@ exports[`MostReadLink should render ltr correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -1707,8 +1707,8 @@ exports[`MostReadLink should render rtl correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.5rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -1801,8 +1801,8 @@ exports[`MostReadLink should render with last updated date correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -1873,8 +1873,8 @@ exports[`MostReadLink should render with last updated date correctly 1`] = `
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {

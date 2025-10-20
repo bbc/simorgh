@@ -105,8 +105,8 @@ exports[`Headings in the middle of articles should render correctly 1`] = `
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   color: #141414;
   display: block;
   margin: 0;
@@ -257,8 +257,8 @@ exports[`Headings with headline data should render correctly 1`] = `
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   color: #141414;
   display: block;
   margin: 0;
@@ -411,8 +411,8 @@ exports[`Headings with plain text headline should render h1 containing correct t
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   color: #141414;
   display: block;
   margin: 0;
@@ -565,8 +565,8 @@ exports[`Headings with plain text subheadline should render h2 containing correc
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   color: #141414;
   padding: 0.5rem 0;
   margin: calc(1.5rem - 0.5rem) 0;
@@ -721,8 +721,8 @@ exports[`Headings with rich text headline with bold text should render h1 with <
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   color: #141414;
   display: block;
   margin: 0;
@@ -877,8 +877,8 @@ exports[`Headings with rich text headline with italic text should render h1 with
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   color: #141414;
   display: block;
   margin: 0;
@@ -912,8 +912,8 @@ exports[`Headings with rich text headline with italic text should render h1 with
 
 .emotion-4 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: italic;
+  font-weight: 400;
   font-family: inherit;
   font-weight: inherit;
 }
@@ -1043,8 +1043,8 @@ exports[`Headings with rich text should render headline with bold & italic text 
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   color: #141414;
   display: block;
   margin: 0;
@@ -1078,8 +1078,8 @@ exports[`Headings with rich text should render headline with bold & italic text 
 
 .emotion-4 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: italic;
+  font-weight: 400;
   font-family: inherit;
   font-weight: inherit;
 }
@@ -1211,8 +1211,8 @@ exports[`Headings with rich text should render headline with italic & bold text 
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   color: #141414;
   display: block;
   margin: 0;
@@ -1246,8 +1246,8 @@ exports[`Headings with rich text should render headline with italic & bold text 
 
 .emotion-4 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: italic;
+  font-weight: 400;
   font-family: inherit;
   font-weight: inherit;
 }
@@ -1379,8 +1379,8 @@ exports[`Headings with rich text with different attributes should render headlin
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   color: #141414;
   display: block;
   margin: 0;
@@ -1414,8 +1414,8 @@ exports[`Headings with rich text with different attributes should render headlin
 
 .emotion-4 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: italic;
+  font-weight: 400;
   font-family: inherit;
   font-weight: inherit;
 }
@@ -1547,8 +1547,8 @@ exports[`Headings with subheadline data should render correctly 1`] = `
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   color: #141414;
   padding: 0.5rem 0;
   margin: calc(1.5rem - 0.5rem) 0;

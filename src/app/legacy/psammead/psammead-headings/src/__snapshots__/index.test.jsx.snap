@@ -5,8 +5,8 @@ exports[`Headline component should render correctly 1`] = `
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   color: #141414;
   display: block;
   margin: 0;
@@ -47,8 +47,8 @@ exports[`Headline component should render correctly on page types that support a
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   color: #F6F6F6;
   display: block;
   margin: 0;
@@ -89,8 +89,8 @@ exports[`Headline component should render correctly with arabic script typograph
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   color: #141414;
   display: block;
   margin: 0;
@@ -131,8 +131,8 @@ exports[`SubHeading component should render correctly 1`] = `
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   color: #141414;
   padding: 0.5rem 0;
   margin: calc(1.5rem - 0.5rem) 0;
@@ -181,8 +181,8 @@ exports[`SubHeading component should render correctly on page types that support
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   color: #F6F6F6;
   padding: 0.5rem 0;
   margin: calc(1.5rem - 0.5rem) 0;
@@ -231,8 +231,8 @@ exports[`SubHeading component should render correctly with an ID 1`] = `
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   color: #141414;
   padding: 0.5rem 0;
   margin: calc(1.5rem - 0.5rem) 0;
@@ -282,8 +282,8 @@ exports[`SubHeading component should render correctly with arabic script typogra
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   color: #141414;
   padding: 0.5rem 0;
   margin: calc(1.5rem - 0.5rem) 0;

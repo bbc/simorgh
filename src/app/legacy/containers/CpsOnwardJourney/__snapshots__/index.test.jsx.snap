@@ -763,8 +763,8 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
@@ -1144,8 +1144,8 @@ exports[`CpsOnwardJourney renders section label with with alternative background
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   background-color: #222222;
   margin: 1rem 0;
   padding-right: 0.5rem;
@@ -1527,8 +1527,8 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
@@ -1829,8 +1829,8 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
 
 .emotion-8 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 0.875rem;
   line-height: 1.125rem;
   background-color: #FFFFFF;
@@ -1959,8 +1959,8 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
@@ -2305,8 +2305,8 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
 
 .emotion-8 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 0.875rem;
   line-height: 1.125rem;
   background-color: #FFFFFF;
@@ -2435,8 +2435,8 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;

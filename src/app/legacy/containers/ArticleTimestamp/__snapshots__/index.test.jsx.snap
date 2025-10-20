@@ -117,8 +117,8 @@ exports[`ArticleTimestamp should render a 'created' Timestamp correctly 1`] = `
   color: #545658;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   padding-bottom: 0.25rem;
 }
 
@@ -272,8 +272,8 @@ exports[`ArticleTimestamp should render both a 'created' and an 'updated' Timest
   color: #545658;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   padding-bottom: 0.25rem;
 }
 
@@ -435,8 +435,8 @@ exports[`ArticleTimestamp should render with a prefix 1`] = `
   color: #545658;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   padding-bottom: 0.25rem;
 }
 
@@ -598,8 +598,8 @@ exports[`ArticleTimestamp should render with a suffix 1`] = `
   color: #545658;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   padding-bottom: 0.25rem;
 }
 
@@ -761,8 +761,8 @@ exports[`ArticleTimestamp should render with no suffix or prefix 1`] = `
   color: #545658;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   padding-bottom: 0.25rem;
 }
 
