@@ -4,13 +4,13 @@ const japanese = {
   sans: {
     regular: {
       fontFamily: HIRAGINO_KAGU_GOTHIC_PRO,
-      fontWeight: 400,
       fontStyle: 'normal',
+      fontWeight: 400,
     },
     bold: {
       fontFamily: HIRAGINO_KAGU_GOTHIC_PRO,
-      fontWeight: 700,
       fontStyle: 'normal',
+      fontWeight: 700,
     },
   },
 };

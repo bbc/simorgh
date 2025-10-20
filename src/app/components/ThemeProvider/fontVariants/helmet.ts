@@ -4,23 +4,23 @@ const helmet = {
   sans: {
     regular: {
       fontFamily: HELMET,
-      fontWeight: 400,
       fontStyle: 'normal',
+      fontWeight: 400,
     },
     regularItalic: {
       fontFamily: HELMET,
-      fontWeight: 400,
       fontStyle: 'italic',
+      fontWeight: 400,
     },
     bold: {
       fontFamily: HELMET,
-      fontWeight: 700,
       fontStyle: 'normal',
+      fontWeight: 700,
     },
     boldItalic: {
       fontFamily: HELMET,
-      fontWeight: 700,
       fontStyle: 'italic',
+      fontWeight: 700,
     },
   },
 };

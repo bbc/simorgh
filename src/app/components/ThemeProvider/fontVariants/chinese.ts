@@ -4,13 +4,13 @@ const chinese = {
   sans: {
     regular: {
       fontFamily: HELVETICA_CHINESE,
-      fontWeight: 400,
       fontStyle: 'normal',
+      fontWeight: 400,
     },
     bold: {
       fontFamily: HELVETICA_CHINESE,
-      fontWeight: 700,
       fontStyle: 'normal',
+      fontWeight: 700,
     },
   },
 };
