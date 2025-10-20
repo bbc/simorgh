@@ -47,6 +47,13 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      readTime: {
+        readTimePrefix: 'Okuma süresi',
+        quick: 'Kısa haber',
+        long: 'Uzun haber',
+        minute: 'dk',
+        minutes: 'dk',
+      },
       pagination: {
         previousPage: 'Önceki',
         nextPage: 'Sonraki',
@@ -57,6 +64,7 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Hepsini görüntüle',
       home: 'Ana sayfa',
+      continueReading: 'Okumaya devam edin',
       currentPage: 'Bulunduğunuz sayfa',
       skipLinkText: 'İçeriğe götür',
       relatedContent: 'İlgili haberler',
@@ -230,6 +238,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Duration',
         recentEpisodes: 'Diğerleri',
         closeVideo: 'Çıkış',
+        endOfContentClose: 'Bu içerik sona erdi. Çıkış',
       },
       socialEmbed: {
         caption: {
@@ -286,7 +295,7 @@ export const service: DefaultServiceConfig = {
         text: "Neden BBC'ye güvenebilirsiniz",
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Link verilen internet sitelerine yaklaşımımız.',
       },
       links: [

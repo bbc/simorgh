@@ -11,15 +11,13 @@ import {
 } from './helpers';
 import shouldDisplayLastUpdatedTimestamp from './shouldDisplayLastUpdatedTimestamp';
 
-const FirstPublishedTimestamp = Timestamp;
-const LastUpdatedTimestamp = Timestamp;
-
 const ArticleTimestamp = ({
   firstPublished,
   lastPublished,
   popOut = true,
   minutesTolerance = 0,
   className = '',
+  showReadTimeBelowTimestamp = false,
 }) => {
   const {
     articleTimestampPrefix,
@@ -71,11 +69,21 @@ const ArticleTimestamp = ({
 
   return (
     <GridWrapper {...(className ? { className } : undefined)}>
-      <FirstPublishedTimestamp {...timestampProps} {...firstPublishedProps} />
+      <Timestamp // First Published Timestamp
+        {...timestampProps}
+        {...firstPublishedProps}
+        // EXPERIMENT: Article Read Time
+        {...(showReadTimeBelowTimestamp && { padding: false })}
+      />
       {displayLastUpdatedTimestamp && (
         // Div has been used for No CSS formatting see #5554
         <div>
-          <LastUpdatedTimestamp {...timestampProps} {...lastPublishedProps} />
+          <Timestamp // Last Published Timestamp
+            {...timestampProps}
+            {...lastPublishedProps}
+            // EXPERIMENT: Article Read Time
+            {...(showReadTimeBelowTimestamp && { padding: false })}
+          />
         </div>
       )}
     </GridWrapper>

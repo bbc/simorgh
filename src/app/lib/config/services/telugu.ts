@@ -240,6 +240,7 @@ export const service: DefaultServiceConfig = {
         duration: 'వ్యవధి',
         recentEpisodes: 'ఇటీవలి ఎపిసోడ్లు',
         closeVideo: 'నిష్క్రమించు',
+        endOfContentClose: 'ఇక్కడితో కంటెంట్ ముగిసింది. మూసివేయండి',
       },
       socialEmbed: {
         caption: {
@@ -297,7 +298,7 @@ export const service: DefaultServiceConfig = {
         text: 'మీరు బీబీసీని ఎందుకు నమ్ముతారు?',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'ఇతర వెబ్‌సైట్లకు మా లింకింగ్ విధానం గురించి తెలుసుకోండి.',
       },
       links: [

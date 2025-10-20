@@ -59,10 +59,12 @@ export default {
     css({
       paddingBottom: `${spacings.TRIPLE}rem`,
 
-      '.continueReadingFocusedElement': {
-        outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
-        boxShadow: `0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE}`,
-        outlineOffset: `${pixelsToRem(3)}rem`,
+      '[data-first-hidden-element="true"]': {
+        ':focus-visible': {
+          outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
+          boxShadow: `0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE}`,
+          outlineOffset: `${pixelsToRem(3)}rem`,
+        },
       },
     }),
   contentHidden:
@@ -176,4 +178,9 @@ export default {
     }),
     commonMarginSpacing,
   ],
+  // EXPERIMENT: Article Read Time
+  readTimePlaceholderBelowTimestamp: () =>
+    css({
+      marginBottom: `${pixelsToRem(18.5)}rem`,
+    }),
 };

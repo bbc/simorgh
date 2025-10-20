@@ -1,6 +1,6 @@
 export default () => {
   describe('Ads', () => {
-    const ads = document.querySelectorAll('amp-ad');
+    const ads = Array.from(document.querySelectorAll('amp-ad'));
 
     ads.forEach(ad => {
       it('should be displayed', () => {

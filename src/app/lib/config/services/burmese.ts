@@ -271,6 +271,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'ဒီပေါ့ဒ်ကတ်စ်ကို နောက်ထပ်ရနိုင်သည့်နေရာ',
         download: 'ဒေါင်းလုပ်လုပ် ရယူရန်',
         closeVideo: 'ပိတ်မယ်',
+        endOfContentClose: 'ဤအကြောင်းအရာ၏ အဆုံးဖြစ်သည်။ ပိတ်မယ်',
       },
       socialEmbed: {
         caption: {
@@ -331,7 +332,7 @@ export const service: DefaultServiceConfig = {
         text: 'ဘီဘီစီကို ဘာကြောင့် ယုံကြည်နိုင်သလဲ။',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'ပြင်ပဝက်ဆိုက်များကို လင့် ထည့်ပေးခြင်းနှင့် ပတ်သက်သော ဘီဘီစီလုပ်ထုံးလုပ်နည်းကို ဖတ်ရန်။',
       },
       links: [

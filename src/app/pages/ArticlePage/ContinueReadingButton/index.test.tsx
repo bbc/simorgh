@@ -19,7 +19,6 @@ describe('ContinueReadingButton', () => {
       <ContinueReadingButton
         showAllContent={false}
         setShowAllContent={mockSetShowAllContent}
-        variation="read-more-a"
       />,
     );
 
@@ -31,37 +30,10 @@ describe('ContinueReadingButton', () => {
       <ContinueReadingButton
         showAllContent
         setShowAllContent={mockSetShowAllContent}
-        variation="read-more-a"
       />,
     );
 
     expect(queryByTestId('read-more-button')).not.toBeInTheDocument();
-  });
-
-  it('applies the correct styles for variation read-more-a', () => {
-    const { getByTestId } = render(
-      <ContinueReadingButton
-        showAllContent={false}
-        setShowAllContent={mockSetShowAllContent}
-        variation="read-more-a"
-      />,
-    );
-
-    const button = getByTestId('read-more-button');
-    expect(button).toHaveStyle('background-color: #141414');
-  });
-
-  it('applies the correct styles for variation read-more-a-and-top-stories', () => {
-    const { getByTestId } = render(
-      <ContinueReadingButton
-        showAllContent={false}
-        setShowAllContent={mockSetShowAllContent}
-        variation="read-more-a-and-top-stories"
-      />,
-    );
-
-    const button = getByTestId('read-more-button');
-    expect(button).toHaveStyle('background-color: #141414');
   });
 
   it('applies the correct styles for variation read-more-b', () => {
@@ -69,7 +41,6 @@ describe('ContinueReadingButton', () => {
       <ContinueReadingButton
         showAllContent={false}
         setShowAllContent={mockSetShowAllContent}
-        variation="read-more-b"
       />,
     );
 
@@ -82,7 +53,6 @@ describe('ContinueReadingButton', () => {
       <ContinueReadingButton
         showAllContent={false}
         setShowAllContent={mockSetShowAllContent}
-        variation="read-more-b"
       />,
     );
 
@@ -90,43 +60,16 @@ describe('ContinueReadingButton', () => {
     expect(svg).toBeInTheDocument();
   });
 
-  it('does not render the SVG icon when variation is read-more-a', () => {
-    const { container } = render(
-      <ContinueReadingButton
-        showAllContent={false}
-        setShowAllContent={mockSetShowAllContent}
-        variation="read-more-a"
-      />,
-    );
-
-    const svg = container.querySelector('svg');
-    expect(svg).not.toBeInTheDocument();
-  });
-
   it('applies border-bottom for variation read-more-b', () => {
     const { getByTestId } = render(
       <ContinueReadingButton
         showAllContent={false}
         setShowAllContent={mockSetShowAllContent}
-        variation="read-more-b"
       />,
     );
 
     const button = getByTestId('read-more-button');
     expect(button).toHaveStyle('border-bottom: 0.0625rem solid #B0B2B4');
-  });
-
-  it('does not apply border-bottom for variation read-more-a', () => {
-    const { getByTestId } = render(
-      <ContinueReadingButton
-        showAllContent={false}
-        setShowAllContent={mockSetShowAllContent}
-        variation="read-more-a"
-      />,
-    );
-
-    const button = getByTestId('read-more-button');
-    expect(button.style.borderBottom).toBe('');
   });
 
   describe('Event Tracking', () => {
@@ -145,7 +88,6 @@ describe('ContinueReadingButton', () => {
           <ContinueReadingButton
             showAllContent={false}
             setShowAllContent={mockSetShowAllContent}
-            variation="read-more-a"
           />,
         );
 
@@ -169,7 +111,6 @@ describe('ContinueReadingButton', () => {
           <ContinueReadingButton
             showAllContent={false}
             setShowAllContent={mockSetShowAllContent}
-            variation="read-more-a"
           />,
         );
 
@@ -181,12 +122,11 @@ describe('ContinueReadingButton', () => {
           <ContinueReadingButton
             showAllContent={false}
             setShowAllContent={mockSetShowAllContent}
-            variation="read-more-a"
           />,
         );
 
         const button = getByTestId('read-more-button') as HTMLElement;
-        fireEvent.mouseDown(button);
+        fireEvent.click(button);
 
         // Verify that the mockSetShowAllContent function is called
         expect(mockSetShowAllContent).toHaveBeenCalledTimes(1);

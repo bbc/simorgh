@@ -13,12 +13,17 @@ export type SMPEvent = {
   playlist?: {
     items: PlaylistItem[];
   };
+  direction?: string;
+  method?: 'swipe' | 'wheel';
+  ended?: boolean;
 };
 
 export type MediaPlayerEvents =
   | 'playlistLoaded'
   | 'pluginLoaded'
-  | 'fullscreenExit';
+  | 'fullscreenExit'
+  | 'statsNavigation'
+  | 'pause';
 
 export type EventMapping = Partial<
   Record<MediaPlayerEvents, (_e: SMPEvent) => void>
@@ -152,7 +157,10 @@ export type Player = {
   ): void;
   load: () => void;
   play: () => void;
+  playlist: () => Playlist;
   pause: () => void;
+  previous: () => void;
+  next: () => void;
   bind: (event: MediaPlayerEvents, callback: (e: SMPEvent) => void) => void;
   loadPlugin: (
     pluginName: { [key: string]: string },
@@ -169,7 +177,7 @@ export type Player = {
     playlist: Playlist,
     options?: Partial<PlayerConfig>,
   ) => void;
-  player: { paused: () => boolean };
+  settings: () => PlayerConfig;
 };
 
 export type BumpType = {
@@ -265,15 +273,18 @@ export type PortraitClipMediaBlock = {
     images: {
       source: string;
       urlTemplate?: string;
+      altText?: string;
     }[];
     video: {
       id: string;
       title: string;
+      holdingImageURL?: string;
       version: {
         id: string;
         duration: string;
         kind: string;
         guidance: string | null;
+        territories?: string[];
       };
       isEmbeddingAllowed: boolean;
     };
@@ -323,6 +334,7 @@ export type MediaCollection = {
     };
     imageUrlTemplate: string;
     title: string;
+    overtypedTitle?: string;
   };
 };
 

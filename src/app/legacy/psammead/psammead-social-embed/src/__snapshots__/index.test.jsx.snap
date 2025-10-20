@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`AmpSocialEmbed should render a notice when the provider is unsupported 1`] = `
 .emotion-0 {
@@ -1383,8 +1383,6 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
 </div>
 `;
 
-exports[`AmpSocialEmbed should render null when no social embed ID is provided 1`] = `<div />`;
-
 exports[`CanonicalSocialEmbed Instagram should render correctly for Instagram 1`] = `
 .emotion-0 {
   position: relative;
@@ -1940,7 +1938,7 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
   class="emotion-0 emotion-1"
 >
   <a
-    aria-describedby="«r9»"
+    aria-describedby="_r_9_"
     class="focusIndicatorRemove emotion-2 emotion-3"
     href="#skip-youtube-content"
   >
@@ -1965,7 +1963,7 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
     </div>
     <small
       class="emotion-8 emotion-9"
-      id="«r9»"
+      id="_r_9_"
     >
       undefined
     </small>

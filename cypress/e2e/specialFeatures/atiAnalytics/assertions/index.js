@@ -32,6 +32,7 @@ const assertATIPageViewEventParamsExist = ({
   applicationType,
 }) => {
   expect(params).to.have.property('s'); // destination
+  expect(params).to.have.property('s2'); // Level 2 Site / Producer ID
   expect(params).to.have.property('p'); // page identifier
   expect(params).to.have.property('x2'); // application type
   expect(params).to.have.property('x3'); // application name
@@ -52,7 +53,7 @@ const assertATIPageViewEventParamsExist = ({
     expect(params).to.have.property('idclient');
   }
 
-  if (contentType !== 'list-datadriven') {
+  if (!['list-datadriven', 'static'].includes(contentType)) {
     expect(params).to.have.property('x1'); // content ID
   }
 
@@ -135,15 +136,83 @@ const getViewClickDetailsRegex = ({ contentType, component, pageIdentifier }) =>
     'g',
   );
 
-const getViewabilityEventDetailsRegex = ({
-  contentType,
-  component,
-  actionType,
-}) =>
-  new RegExp(
-    `\\[\\{"name":"viewability\\.${actionType}","data":\\{"group":\\{"name":"${contentType}(.*)?"\\},"event":\\{"category":"viewability","action":"${actionType}"\\}(?:.*)?"item":\\{(?:.*)?"name":"${component}(.*)?"(?:.*)?\\}\\}\\}\\]`,
-    'g',
-  );
+const fieldIsValidString = field =>
+  typeof field === 'string' && field.trim().length > 0;
+
+const validateViewabilityEventDetails = ({ payload, actionType }) => {
+  const arr = JSON.parse(payload);
+
+  return arr.some(event => {
+    if (event.name !== `viewability.${actionType}`) return false;
+
+    const group = event.data?.group ?? {};
+    const ev = event.data?.event ?? {};
+    const item = event.data?.item ?? {};
+
+    // strict checks
+    if (ev.category !== 'viewability' || ev.action !== actionType) return false;
+
+    // required fields in Group
+    const groupNameOk = fieldIsValidString(group.name);
+
+    const groupTypeOk = fieldIsValidString(group.type);
+
+    // optional fields in Group
+    const groupLinkOk = !group.link || fieldIsValidString(group.link);
+
+    const groupItemCountOk =
+      !group.item_count || Number.isInteger(group.item_count);
+
+    const groupResourceOk =
+      !group.resource_id || fieldIsValidString(group.resource_id);
+
+    const groupPositionOk = !group.position || Number.isInteger(group.position);
+
+    // required fields in Item
+    const itemNameOk = fieldIsValidString(item.name);
+
+    // optional fields in Item
+    const itemLinkOk = !item.link || fieldIsValidString(item.link);
+
+    const itemAdvertiserIdOk =
+      !item.advertiser_id || fieldIsValidString(item.advertiser_id);
+
+    const itemTypeOk = !item.type || fieldIsValidString(item.type);
+
+    const itemTextOk = !item.text || fieldIsValidString(item.text);
+
+    const itemPositionOk = !item.position || Number.isInteger(item.position);
+
+    const itemDurationOk = !item.duration || Number.isInteger(item.duration);
+
+    const itemMediaTypeOk =
+      !item.media_type || fieldIsValidString(item.media_type);
+
+    const itemLabelOk = !item.label || fieldIsValidString(item.label);
+
+    const itemResourceIdOk =
+      !item.resource_id || fieldIsValidString(item.resource_id);
+
+    return (
+      groupNameOk &&
+      groupTypeOk &&
+      groupLinkOk &&
+      groupItemCountOk &&
+      groupResourceOk &&
+      groupPositionOk &&
+      itemNameOk &&
+      itemLinkOk &&
+      itemAdvertiserIdOk &&
+      itemTypeOk &&
+      itemTextOk &&
+      itemPositionOk &&
+      itemDurationOk &&
+      itemMediaTypeOk &&
+      itemLabelOk &&
+      itemResourceIdOk
+    );
+  });
+};
 
 export const assertPageView = ({
   useReverb,
@@ -152,8 +221,9 @@ export const assertPageView = ({
   contentType,
   service,
   path,
+  siteId,
 }) => {
-  it(`should send a page view event with service = ${service}, page identifier = ${pageIdentifier}, application type = ${applicationType} and content type = ${contentType}`, () => {
+  it(`should send a page view event with service = ${service}, page identifier = ${pageIdentifier}, site ID = ${siteId}, application type = ${applicationType} and content type = ${contentType}`, () => {
     interceptATIAnalyticsBeacons();
     cy.visit(path, { retryOnStatusCodeFailure: true });
 
@@ -179,6 +249,10 @@ export const assertPageView = ({
       }
 
       expect(params.p).to.equal(pageIdentifier, 'params.p (page identifier)');
+      expect(parseInt(params.s2, 10)).to.equal(
+        siteId,
+        'params.s2 (Level 2 site / Producer ID)',
+      );
       expect(params.x2).to.equal(
         `[${applicationType}]`,
         'params.x2 (application type)',
@@ -206,6 +280,7 @@ const assertClickPerViewModelViewEvent = ({
   useReverb,
   params,
   applicationType,
+  siteId,
 }) => {
   assertATIComponentViewEventParamsExist({ params, useReverb });
 
@@ -220,6 +295,11 @@ const assertClickPerViewModelViewEvent = ({
     expect(params.p).to.equal(pageIdentifier, 'params.p (page identifier)');
   }
 
+  expect(parseInt(params.s2, 10)).to.equal(
+    siteId,
+    'params.s2 (Level 2 site / Producer ID)',
+  );
+
   expect(params.app_type).to.equal(applicationType, 'params.app_type');
 
   expect(params.ati).to.match(
@@ -233,17 +313,14 @@ const assertClickPerViewModelViewEvent = ({
 };
 
 const assertViewabilityModelViewEvent = ({
-  component,
   pageIdentifier,
-  contentType,
   params,
   applicationType,
+  siteId,
 }) => {
   const eventContext = JSON.parse(params.context);
 
-  assertReverbViewabilityComponentEventParamsExist({
-    params,
-  });
+  assertReverbViewabilityComponentEventParamsExist({ params });
 
   if (['responsive', 'lite'].includes(applicationType)) {
     expect(params.idclient).to.equal(
@@ -252,16 +329,14 @@ const assertViewabilityModelViewEvent = ({
     );
   }
 
-  expect(params.events).to.match(
-    getViewabilityEventDetailsRegex({
-      contentType,
-      component,
-      actionType: VIEW_EVENT,
-    }),
+  expect(params.events).to.satisfy(
+    payload =>
+      validateViewabilityEventDetails({ payload, actionType: VIEW_EVENT }),
     'params.events (publisher impression)',
   );
 
   expect(eventContext[0].data.page.$).to.equal(pageIdentifier);
+  expect(parseInt(eventContext[0].data.site.level2_id, 10)).to.equal(siteId);
 };
 
 export const assertATIComponentViewEvent = ({
@@ -270,6 +345,7 @@ export const assertATIComponentViewEvent = ({
   contentType,
   useReverb,
   applicationType,
+  siteId,
 }) => {
   const useViewabilty = usesReverbViewabilityModel(applicationType);
   const requestAlias = useViewabilty
@@ -287,6 +363,7 @@ export const assertATIComponentViewEvent = ({
           pageIdentifier,
           contentType,
           params,
+          siteId,
         });
       } else {
         assertClickPerViewModelViewEvent({
@@ -296,6 +373,7 @@ export const assertATIComponentViewEvent = ({
           useReverb,
           params,
           applicationType,
+          siteId,
         });
       }
     });
@@ -344,11 +422,10 @@ const assertClickPerViewModelClickEvent = ({
 };
 
 const assertViewabilityModelClickEvent = ({
-  component,
-  contentType,
   pageIdentifier,
   params,
   applicationType,
+  siteId,
 }) => {
   const eventContext = JSON.parse(params.context);
 
@@ -363,16 +440,17 @@ const assertViewabilityModelClickEvent = ({
     );
   }
 
-  expect(params.events).to.match(
-    getViewabilityEventDetailsRegex({
-      contentType,
-      component,
-      actionType: VIEWABILITY_CLICK_EVENT,
-    }),
+  expect(params.events).to.satisfy(
+    payload =>
+      validateViewabilityEventDetails({
+        payload,
+        actionType: VIEWABILITY_CLICK_EVENT,
+      }),
     'params.events (publisher click)',
   );
 
   expect(eventContext[0].data.page.$).to.equal(pageIdentifier);
+  expect(parseInt(eventContext[0].data.site.level2_id, 10)).to.equal(siteId);
 };
 
 export const assertATIComponentClickEvent = ({
@@ -381,9 +459,10 @@ export const assertATIComponentClickEvent = ({
   pageIdentifier,
   applicationType,
   useReverb,
+  siteId,
 }) => {
-  const useViewabilty = usesReverbViewabilityModel(applicationType);
-  const requestAlias = useViewabilty
+  const useViewability = usesReverbViewabilityModel(applicationType);
+  const requestAlias = useViewability
     ? `@${component}-viewability-click`
     : `@${component}-ati-click`;
 
@@ -392,12 +471,13 @@ export const assertATIComponentClickEvent = ({
     .then(url => {
       const params = getATIParamsFromURL(url);
 
-      if (useViewabilty) {
+      if (useViewability) {
         assertViewabilityModelClickEvent({
           component,
           contentType,
           pageIdentifier,
           params,
+          siteId,
         });
       } else {
         assertClickPerViewModelClickEvent({
@@ -407,6 +487,7 @@ export const assertATIComponentClickEvent = ({
           applicationType,
           useReverb,
           params,
+          siteId,
         });
       }
     });

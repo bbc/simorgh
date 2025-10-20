@@ -247,6 +247,7 @@ const baseServiceConfig = {
       podcastExternalLinks: 'Цей подкаст доступний у',
       download: 'Завантажити епізод',
       closeVideo: 'Вийти',
+      endOfContentClose: 'Кінець контенту. Вийти',
     },
     socialEmbed: {
       caption: {
@@ -304,7 +305,7 @@ const baseServiceConfig = {
       text: 'Чому BBC заслуговує на довіру',
     },
     externalLink: {
-      href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+      href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
       text: 'Ознайомтеся з нашими правилами зовнішніх посилань.',
     },
     links: [

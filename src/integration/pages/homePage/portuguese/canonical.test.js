@@ -4,31 +4,35 @@
  */
 
 import numberOfCurationsTest from '#src/integration/pages/homePage/numberOfCurations';
-import { data as pageData } from '../../../../../data/portuguese/homePage/index.json';
+import portugueseData from '#data/portuguese/homePage/index.json';
 
 describe('Canonical', () => {
+  const { data: pageData } = portugueseData;
+
   numberOfCurationsTest(pageData);
 
   const portraitVideoCurations = pageData.curations.filter(
     curation =>
-      curation.portraitVideo && Array.isArray(curation.portraitVideo.items),
+      curation.portraitVideo && Array.isArray(curation.portraitVideo.blocks),
   );
 
   const getPortraitCarousels = () =>
-    document.querySelectorAll(
-      '[data-testid="portrait-video-carousel"] ul[data-testid="pv-carousel"]',
+    Array.from(
+      document.querySelectorAll(
+        '[data-testid="portrait-video-carousel"] ul[data-testid="pv-carousel"]',
+      ),
     );
 
   it('should have an unordered list of videos with the correct number of promos for each portrait video carousel', () => {
-    const videoCarousels = document.querySelectorAll(
-      '[data-testid="portrait-video-carousel"] ul',
+    const videoCarousels = Array.from(
+      document.querySelectorAll('[data-testid="portrait-video-carousel"] ul'),
     );
 
     expect(videoCarousels.length).toEqual(portraitVideoCurations.length);
 
     portraitVideoCurations.forEach((curation, index) => {
       const videoList = videoCarousels[index];
-      const numberOfItems = curation.portraitVideo.items.length;
+      const numberOfItems = curation.portraitVideo.blocks.length;
 
       expect(videoList).toBeInTheDocument();
       expect(videoList.tagName).toBe('UL');
@@ -38,8 +42,8 @@ describe('Canonical', () => {
   });
 
   it('should have left and right scroll buttons', () => {
-    const carousels = document.querySelectorAll(
-      '[data-testid="portrait-video-carousel"]',
+    const carousels = Array.from(
+      document.querySelectorAll('[data-testid="portrait-video-carousel"]'),
     );
     carousels.forEach(carousel => {
       const scrollLeftButton = carousel.querySelector(
@@ -60,18 +64,18 @@ describe('Canonical', () => {
     const carousels = getPortraitCarousels();
 
     carousels.forEach((carousel, carouselIndex) => {
-      const promoButtons = carousel.querySelectorAll(
-        '[data-testid="promo-button"]',
+      const promoButtons = Array.from(
+        carousel.querySelectorAll('[data-testid="promo-button"]'),
       );
       const videoItems =
-        portraitVideoCurations[carouselIndex]?.portraitVideo?.items || [];
+        portraitVideoCurations[carouselIndex]?.portraitVideo?.blocks || [];
 
       promoButtons.forEach((button, buttonIndex) => {
         const textContents = button.querySelector(
           '[data-testid="text-contents"]',
         );
         expect(textContents).toBeInTheDocument();
-        const expectedTitle = videoItems[buttonIndex]?.headlines?.promoHeadline;
+        const expectedTitle = videoItems[buttonIndex]?.model?.video?.title;
 
         expect(textContents?.textContent).toContain(expectedTitle);
       });
@@ -82,8 +86,8 @@ describe('Canonical', () => {
     const carousels = getPortraitCarousels();
 
     carousels.forEach(carousel => {
-      const promoButtons = carousel.querySelectorAll(
-        '[data-testid="promo-button"]',
+      const promoButtons = Array.from(
+        carousel.querySelectorAll('[data-testid="promo-button"]'),
       );
       promoButtons.forEach(button => {
         const duration = button.querySelector('time > span');
@@ -97,15 +101,15 @@ describe('Canonical', () => {
     const carousels = getPortraitCarousels();
 
     carousels.forEach((carousel, carouselIndex) => {
-      const promoItems = carousel.querySelectorAll('li');
+      const promoItems = Array.from(carousel.querySelectorAll('li'));
       const videoItems =
-        portraitVideoCurations[carouselIndex]?.portraitVideo?.items || [];
+        portraitVideoCurations[carouselIndex]?.portraitVideo?.blocks || [];
 
       promoItems.forEach((item, itemIndex) => {
         const image = item.querySelector('img');
         expect(image).toBeInTheDocument();
 
-        const [expectedImage] = videoItems[itemIndex]?.images || [];
+        const [expectedImage] = videoItems[itemIndex]?.model?.images || [];
         const { altText } = expectedImage || {};
         expect(image?.getAttribute('alt')).toBe(altText);
       });

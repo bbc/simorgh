@@ -50,13 +50,13 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
-      title: 'Whatsapp',
+      title: 'Whatsapp!',
       brandTitle: 'No WhatsApp',
       brandDescription:
-        'Agora você pode receber as notícias da BBC News Brasil no seu celular',
+        'Agora você pode receber as notícias da BBC News Brasil no seu celular.',
       image: {
-        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0hvq254.png',
-        alt: 'BBC Brasil no WhatsApp',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0lq77dv.png',
+        alt: 'BBC Brasil no WhatsAp',
       },
       linkLabel: {
         text: 'Clique para se inscrever',
@@ -79,6 +79,7 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Ver todos',
       home: 'Início',
+      continueReading: 'Continue lendo',
       currentPage: 'Página atual',
       skipLinkText: 'Vá para o conteúdo',
       relatedContent: 'Histórias relacionadas',
@@ -252,6 +253,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'O podcast está disponível em',
         download: 'Baixar episódio',
         closeVideo: 'Sair',
+        endOfContentClose: 'Fim deste conteúdo. Sair',
       },
       carousel: {
         previous: 'Scroll to previous item',
@@ -384,7 +386,7 @@ export const service: DefaultServiceConfig = {
         text: 'Por que você pode confiar na BBC',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Leia sobre nossa política em relação a links externos.',
       },
       links: [

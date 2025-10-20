@@ -26,6 +26,19 @@ const mundoPromos = [
     isLive: true,
   },
   {
+    type: 'article',
+    title: 'Recently published promo',
+    firstPublished: '2022-11-22T17:23:05.000Z',
+    lastPublished: '2025-09-16T11:00:20.000Z',
+    link: 'https://www.test.bbc.com/mundo/live/23539555',
+    imageUrl:
+      'https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/6847/test/_63959662_rogerio-toledo-redjtvanyh8-unsplash.jpg',
+    description: 'Testing image gallery for Tipo',
+    imageAlt: 'test',
+    id: '5756bb09-a257-455a-a5c3-622702785bff',
+    isLive: false,
+  },
+  {
     type: 'video',
     title: 'Test video article',
     firstPublished: '2022-05-12T10:41:14.000Z',

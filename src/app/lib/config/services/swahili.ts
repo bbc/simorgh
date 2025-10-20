@@ -76,7 +76,7 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Tazama zote',
       home: 'Habari',
-      continueReading: 'Endelea kusoma',
+      continueReading: 'Soma zaidi',
       currentPage: 'Ukurasa uliopo ',
       skipLinkText: 'Ruka hadi maelezo',
       relatedContent: 'Maelezo zaidi kuhusu taarifa hii',
@@ -271,6 +271,8 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Kipindi kijacho cha redio',
         duration: 'Muda',
         recentEpisodes: 'Vipindi vilivyopita',
+        closeVideo: 'Funga',
+        endOfContentClose: 'Mwisho wa maudhui. Funga',
       },
       socialEmbed: {
         caption: {
@@ -327,7 +329,7 @@ export const service: DefaultServiceConfig = {
         text: 'Kwanini unaweza kuiamini BBC News',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Soma kuhusu mtazamo wetu wa viambatanishi vya nje.',
       },
       links: [
@@ -369,6 +371,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Habari',
         url: '/swahili',
+      },
+      {
+        title: 'Uchaguzi Tanzania',
+        url: '/swahili/topics/c5y9ng5gqert',
       },
       {
         title: 'Michezo',

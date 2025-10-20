@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`InlineLinkContainer external link accessibility should be explicitly marked "external" for screen reader users & localised 1`] = `
 .emotion-0 {

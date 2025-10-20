@@ -5,7 +5,7 @@ import partition from 'ramda/src/partition';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 import Image from './image';
-import MediaIcon, { TYPES } from './media-icon';
+import MediaIcon from './media-icon';
 import Heading from './heading';
 import Body from './body';
 import Footer from './footer';
@@ -56,5 +56,4 @@ Promo.Footer = withPromoContext(Footer);
 Promo.A = withPromoContext(A);
 Promo.Timestamp = withPromoContext(Timestamp);
 
-export const MEDIA_TYPES = TYPES;
 export default Promo;

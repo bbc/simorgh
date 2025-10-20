@@ -9,6 +9,7 @@ export const assertRadioScheduleComponentView = ({
   useReverb,
   path,
   applicationType,
+  siteId,
 }) => {
   it('should send a view event for the Radio Schedule component', () => {
     interceptATIAnalyticsBeacons();
@@ -24,6 +25,7 @@ export const assertRadioScheduleComponentView = ({
       contentType,
       useReverb,
       applicationType,
+      siteId,
     });
   });
 };
@@ -34,6 +36,7 @@ export const assertRadioScheduleComponentClick = ({
   useReverb,
   path,
   applicationType,
+  siteId,
 }) => {
   it('should send a click event for the Radio Schedule component', () => {
     interceptATIAnalyticsBeacons();
@@ -52,6 +55,7 @@ export const assertRadioScheduleComponentClick = ({
       contentType,
       useReverb,
       applicationType,
+      siteId,
     });
   });
 };
