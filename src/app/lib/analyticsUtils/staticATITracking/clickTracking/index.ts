@@ -4,6 +4,7 @@ export default () => {
   const STATIC_ATI_CLICK_TRACKING = 'data-static-ati-click';
 
   document.addEventListener('click', (event: MouseEvent) => {
+    console.log('CLICK DETECTED...');
     let targetElement;
     const clickedElement = event.target as HTMLElement;
 

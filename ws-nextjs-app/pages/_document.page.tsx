@@ -203,11 +203,11 @@ export default class AppDocument extends Document<DocProps> {
               {title}
               {helmetMetaTags}
               {helmetLinkTags}
-              {helmetScriptTags}
               <ComponentTracking
                 trackComponentViews={false}
                 enableStaticClickTrackingOnOperaMiniOnly
               />
+              {helmetScriptTags}
               <style
                 data-emotion={ids.join(' ')}
                 dangerouslySetInnerHTML={{ __html: css }}

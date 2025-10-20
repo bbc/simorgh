@@ -1,6 +1,7 @@
 /* istanbul ignore next */
 export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
   window.processClientDeviceAndSendStaticBeacon = (atiURL, reverbURL) => {
+    console.log('SEND SCRIPT ADDED');
     const {
       screen: { width, height, colorDepth, pixelDepth },
       innerWidth,

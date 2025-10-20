@@ -7,9 +7,10 @@ import { useState, useEffect } from 'react';
  */
 export default (): boolean => {
   const [isHydrated, setIsHydrated] = useState(false);
-
+  console.log('CHECK NOT HYDRATED');
   useEffect(() => {
     // setIsHydrated(true);
+    console.log('CHECK HAS HYDRATED');
   }, []);
 
   return isHydrated;
