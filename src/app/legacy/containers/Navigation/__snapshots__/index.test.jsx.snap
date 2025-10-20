@@ -53,8 +53,8 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   background-color: transparent;
   border: 0;
   float: left;
-  height: 2.75rem;
-  width: 2.75rem;
+  height: NaNrem;
+  width: NaNrem;
 }
 
 .emotion-4:hover,
@@ -83,8 +83,8 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
 
 @media (min-width: 20rem) {
   .emotion-4 {
-    height: 2.75rem;
-    width: 2.75rem;
+    height: NaNrem;
+    width: NaNrem;
   }
 }
 
@@ -147,8 +147,8 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -281,8 +281,8 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -357,8 +357,8 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -894,8 +894,8 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   background-color: transparent;
   border: 0;
   float: left;
-  height: 2.75rem;
-  width: 2.75rem;
+  height: NaNrem;
+  width: NaNrem;
 }
 
 .emotion-4:hover,
@@ -924,8 +924,8 @@ exports[`Navigation Container should correctly render amp navigation on non-home
 
 @media (min-width: 20rem) {
   .emotion-4 {
-    height: 2.75rem;
-    width: 2.75rem;
+    height: NaNrem;
+    width: NaNrem;
   }
 }
 
@@ -988,8 +988,8 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1117,8 +1117,8 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -1634,8 +1634,8 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   background-color: transparent;
   border: 0;
   float: left;
-  height: 2.75rem;
-  width: 2.75rem;
+  height: NaNrem;
+  width: NaNrem;
 }
 
 .emotion-4:hover,
@@ -1664,8 +1664,8 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
 
 @media (min-width: 20rem) {
   .emotion-4 {
-    height: 2.75rem;
-    width: 2.75rem;
+    height: NaNrem;
+    width: NaNrem;
   }
 }
 
@@ -1728,8 +1728,8 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1857,8 +1857,8 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -2372,8 +2372,8 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   background-color: transparent;
   border: 0;
   float: left;
-  height: 2.75rem;
-  width: 2.75rem;
+  height: NaNrem;
+  width: NaNrem;
 }
 
 .emotion-6:hover,
@@ -2402,8 +2402,8 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
 
 @media (min-width: 20rem) {
   .emotion-6 {
-    height: 2.75rem;
-    width: 2.75rem;
+    height: NaNrem;
+    width: NaNrem;
   }
 }
 
@@ -2525,8 +2525,8 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -2601,8 +2601,8 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -2709,8 +2709,8 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3218,8 +3218,8 @@ exports[`Navigation Container should correctly render canonical navigation on no
   background-color: transparent;
   border: 0;
   float: left;
-  height: 2.75rem;
-  width: 2.75rem;
+  height: NaNrem;
+  width: NaNrem;
 }
 
 .emotion-6:hover,
@@ -3248,8 +3248,8 @@ exports[`Navigation Container should correctly render canonical navigation on no
 
 @media (min-width: 20rem) {
   .emotion-6 {
-    height: 2.75rem;
-    width: 2.75rem;
+    height: NaNrem;
+    width: NaNrem;
   }
 }
 
@@ -3371,8 +3371,8 @@ exports[`Navigation Container should correctly render canonical navigation on no
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -3479,8 +3479,8 @@ exports[`Navigation Container should correctly render canonical navigation on no
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3963,8 +3963,8 @@ exports[`Navigation Container should correctly render canonical navigation on no
   background-color: transparent;
   border: 0;
   float: left;
-  height: 2.75rem;
-  width: 2.75rem;
+  height: NaNrem;
+  width: NaNrem;
 }
 
 .emotion-6:hover,
@@ -3993,8 +3993,8 @@ exports[`Navigation Container should correctly render canonical navigation on no
 
 @media (min-width: 20rem) {
   .emotion-6 {
-    height: 2.75rem;
-    width: 2.75rem;
+    height: NaNrem;
+    width: NaNrem;
   }
 }
 
@@ -4116,8 +4116,8 @@ exports[`Navigation Container should correctly render canonical navigation on no
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -4224,8 +4224,8 @@ exports[`Navigation Container should correctly render canonical navigation on no
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;

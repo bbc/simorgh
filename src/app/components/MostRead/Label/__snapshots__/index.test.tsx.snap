@@ -77,11 +77,11 @@ exports[`MostReadSectionLabel assertion should render most-read section label wi
 }
 
 .emotion-8 {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-style: normal;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
+  font-style: normal;
   background-color: #F6F6F6;
   margin: 1rem 0;
   padding-left: 0.5rem;
@@ -98,14 +98,14 @@ exports[`MostReadSectionLabel assertion should render most-read section label wi
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-8 {
     font-size: 1.25rem;
-    line-height: 1.75rem;
+    line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-8 {
     font-size: 1.5rem;
-    line-height: 2rem;
+    line-height: 1.75rem;
   }
 }
 

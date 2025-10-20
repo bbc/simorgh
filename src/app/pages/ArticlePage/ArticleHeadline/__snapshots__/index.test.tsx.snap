@@ -105,8 +105,8 @@ exports[`ArticleHeadline - Lite Site CTA with toggle disabled should not be disp
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   color: #141414;
   display: block;
   margin: 0;
@@ -259,8 +259,8 @@ exports[`ArticleHeadline - Lite Site CTA with toggle enabled should be displayed
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   color: #141414;
   display: block;
   margin: 0;

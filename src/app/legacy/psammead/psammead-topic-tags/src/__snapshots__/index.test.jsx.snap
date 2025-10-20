@@ -18,11 +18,11 @@ exports[`TopicTags should correctly render a single topic tag for burmese 1`] = 
 }
 
 .emotion-2 {
-  font-family: Padauk,Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-style: normal;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
+  font-style: normal;
   font-size: 0.875rem;
-  line-height: 1.375rem;
+  line-height: 1.125rem;
   word-break: break-word;
   margin-top: 0.5rem;
   margin-left: 0.25rem;
@@ -32,14 +32,14 @@ exports[`TopicTags should correctly render a single topic tag for burmese 1`] = 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-2 {
     font-size: 0.875rem;
-    line-height: 1.375rem;
+    line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-2 {
-    font-size: 0.875rem;
-    line-height: 1.375rem;
+    font-size: 0.8125rem;
+    line-height: 1rem;
   }
 }
 
@@ -106,8 +106,8 @@ exports[`TopicTags should correctly render a single topic tag for news 1`] = `
 
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   font-size: 0.875rem;
   line-height: 1.125rem;
   word-break: break-word;
@@ -192,11 +192,11 @@ exports[`TopicTags should correctly render a single topic tag for persian 1`] = 
 }
 
 .emotion-2 {
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-style: normal;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
+  font-style: normal;
   font-size: 0.875rem;
-  line-height: 1.25rem;
+  line-height: 1.125rem;
   word-break: break-word;
   margin-top: 0.5rem;
   margin-left: 0.25rem;
@@ -206,14 +206,14 @@ exports[`TopicTags should correctly render a single topic tag for persian 1`] = 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-2 {
     font-size: 0.875rem;
-    line-height: 1.25rem;
+    line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-2 {
     font-size: 0.8125rem;
-    line-height: 1.25rem;
+    line-height: 1rem;
   }
 }
 
@@ -280,11 +280,11 @@ exports[`TopicTags should correctly render multiple topic tags for arabic 1`] = 
 }
 
 .emotion-2 {
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-style: normal;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
+  font-style: normal;
   font-size: 0.875rem;
-  line-height: 1.25rem;
+  line-height: 1.125rem;
   word-break: break-word;
   margin-top: 0.5rem;
   margin-left: 0.25rem;
@@ -294,14 +294,14 @@ exports[`TopicTags should correctly render multiple topic tags for arabic 1`] = 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-2 {
     font-size: 0.875rem;
-    line-height: 1.25rem;
+    line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-2 {
     font-size: 0.8125rem;
-    line-height: 1.25rem;
+    line-height: 1rem;
   }
 }
 
@@ -397,8 +397,8 @@ exports[`TopicTags should correctly render multiple topic tags for news 1`] = `
 
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   font-size: 0.875rem;
   line-height: 1.125rem;
   word-break: break-word;
