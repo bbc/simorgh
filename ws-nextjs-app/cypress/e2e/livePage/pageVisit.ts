@@ -1,7 +1,11 @@
-export default ({ path }) => {
+import { ServiceParametersType } from '../../types';
+
+export default ({ path }: ServiceParametersType) => {
   describe('Live page visit', () => {
     it('visits page and passes', () => {
-      cy.visit(path);
+      if (path) {
+        cy.visit(path);
+      }
     });
   });
 };

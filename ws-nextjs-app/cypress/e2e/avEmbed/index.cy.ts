@@ -1,8 +1,9 @@
+import { AV_EMBEDS } from '#app/routes/utils/pageTypes';
 import pageVisit from './pageVisit';
 import runTestsForPage from '../../support/helpers/runTestsForPage';
 
 const testDetails = {
-  pageType: 'avEmbed',
+  pageType: AV_EMBEDS,
   testSuites: [
     {
       path: '/russian/av-embeds/media-38886884',
