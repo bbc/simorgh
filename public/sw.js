@@ -152,7 +152,7 @@ self.addEventListener('message', async event => {
               console.log(`[SW] Cached most read URL: ${url}`);
             } catch (err) {
               // eslint-disable-next-line no-console
-              console.error(`[SW] Failed to cache most read URL: ${url}`, err);
+              console.error('[SW] Failed to cache most read URL: %s', url, err);
             }
           }),
         );
