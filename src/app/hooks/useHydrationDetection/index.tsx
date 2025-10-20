@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 
 /**
  * Detects whether the component has been hydrated.
@@ -6,12 +6,12 @@ import { useState, useEffect } from 'react';
  * @returns {boolean} True if the component is hydrated (client-side), false otherwise (server-side).
  */
 export default (): boolean => {
-  const [isHydrated, setIsHydrated] = useState(false);
+  //  const [isHydrated, setIsHydrated] = useState(false);
   console.log('CHECK NOT HYDRATED');
   useEffect(() => {
     // setIsHydrated(true);
     console.log('CHECK HAS HYDRATED');
   }, []);
 
-  return isHydrated;
+  return false;
 };
