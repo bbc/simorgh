@@ -154,13 +154,12 @@ const SecondaryColumn = ({
   const isGroup4Up = useMediaQuery(mq.GROUP_4_MIN_WIDTH);
 
   if (!topStoriesContent && !featuresContent && !tvBulletinContent) return null;
-  const shouldShowAdaptiveSection =
-    experimentVariant === 'variant_a' && !isGroup4Up;
+  const showAdaptiveSection = experimentVariant === 'variant_a' && !isGroup4Up;
   // ask about putting the curations in a curationList in secondary Column data so that we can map over the list below when rendering curations
 
   return (
     <div css={styles.secondaryColumn}>
-      {shouldShowAdaptiveSection && (
+      {showAdaptiveSection && (
         <section
           css={adaptiveCurationsSectionStyles(theme)}
           aria-label="Adaptive Experience"
