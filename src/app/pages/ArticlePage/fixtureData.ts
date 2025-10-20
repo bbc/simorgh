@@ -747,7 +747,7 @@ export const articleDataPidginWithByline = articleDataBuilder(
 ) as unknown as Article;
 
 export const articlePglDataPidgin = articleDataBuilder(
-  'cwl08rd38l6o',
+  'cr5el5kw591o',
   'Pidgin',
   'pcm',
   'http://www.bbc.co.uk/ontologies/passport/home/Pidgin',
@@ -771,6 +771,32 @@ export const articlePglDataPidgin = articleDataBuilder(
     pageTitle: 'Article Headline for SEO in Pidgin',
   },
   'PGL',
+) as unknown as Article;
+
+export const articleDataHindi = articleDataBuilder(
+  'c0469479x9xo',
+  'Hindi',
+  'hi',
+  'http://www.bbc.co.uk/ontologies/passport/home/Hindi',
+  ['आर्टिकल हेडलाइन हिंदी में', 'हिंदी में एक पैराग्राफ.'],
+  'आर्टिकल हेडलाइन SEO के लिए हिंदी में',
+  'आर्टिकल हेडलाइन प्रोमो के लिए हिंदी में',
+  'आर्टिकल सारांश हिंदी में',
+  emptyThings,
+  false,
+  blocksWithHeadlineAndText,
+  {
+    categoryName: null,
+    contentId: 'urn:bbc:optimo:c0000000001h',
+    language: 'hi',
+    ldpThingIds: null,
+    ldpThingLabels: null,
+    nationsProducer: null,
+    pageIdentifier: null,
+    pageTitle: 'आर्टिकल हेडलाइन SEO के लिए हिंदी में',
+    timePublished: '2018-01-01T12:01:00.000Z',
+    timeUpdated: '2018-01-01T14:00:00.000Z',
+  },
 ) as unknown as Article;
 
 export const articleStyDataPidgin = articleDataBuilder(

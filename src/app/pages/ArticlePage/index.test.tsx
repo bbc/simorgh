@@ -17,6 +17,7 @@ import {
   promoSample,
   articlePglDataPidgin,
   articleStyDataPidgin,
+  articleDataHindi,
 } from '#pages/ArticlePage/fixtureData';
 import { data as newsMostReadData } from '#data/news/mostRead/index.json';
 import { data as persianMostReadData } from '#data/persian/mostRead/index.json';
@@ -33,6 +34,7 @@ import { Services } from '#app/models/types/global';
 import { Article } from '#app/models/types/optimo';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import * as viewTracking from '#app/hooks/useViewTracker';
+import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 import {
   render,
   screen,
@@ -976,6 +978,35 @@ describe('Article Page', () => {
       );
 
       expect(queryByTestId('read-time')).not.toBeInTheDocument();
+    });
+  });
+
+  describe('Adaptive curations in secondary column', () => {
+    it("should render adaptive curations when variant is 'variant_a'", async () => {
+      (useOptimizelyVariation as jest.Mock).mockReturnValue('variant_a');
+
+      const pageDataWithSecondaryColumn = {
+        ...articleDataHindi,
+        secondaryColumn: {
+          topStories: [],
+          features: [],
+        },
+      };
+      const { queryByTestId, container } = render(
+        <Context service="pidgin">
+          <ArticlePage pageData={pageDataWithSecondaryColumn} />
+        </Context>,
+      );
+      console.log(container.innerHTML);
+
+      // Check the adaptive curations section is present
+      expect(queryByTestId('adaptive-curations-section')).toBeInTheDocument();
+
+      // Check for the billboard component
+      expect(queryByTestId('billboard-1')).toBeInTheDocument();
+
+      // Check for the simple curation grid component
+      expect(queryByTestId('curation-grid-normal')).toBeInTheDocument();
     });
   });
 });
