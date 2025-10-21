@@ -88,9 +88,13 @@ export default {
           },
         },
       }),
-  hideRelatedTopics: () =>
+  hideRelatedTopics: ({ mq }: Theme) =>
     css({
       display: 'none',
+
+      [mq.GROUP_4_MIN_WIDTH]: {
+        display: 'block',
+      },
     }),
   adContainer: ({ spacings }: Theme) =>
     css({
