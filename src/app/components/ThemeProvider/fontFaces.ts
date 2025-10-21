@@ -6,25 +6,16 @@ import { Font, FontFace, FontName } from '#app/models/types/theming';
  */
 
 const REITH_BASE_URL = 'https://static.files.bbci.co.uk/fonts/';
-
 export const REITH_FONTS_DIR = `${REITH_BASE_URL}reith/r2.512/`;
 
 const FONTS_BASE_URL = `https://static.files.bbci.co.uk/ws/simorgh-assets/public/fonts/`;
-
 const NOTO_SERIF_SINHALA_FONTS_DIR = `${FONTS_BASE_URL}NotoSerifSinhala/v1.00/`;
-
 const NOTO_SANS_TAMIL_FONTS_DIR = `${FONTS_BASE_URL}NotoSansTamil/v1.00/`;
-
 const NOTO_SANS_TELUGU_FONTS_DIR = `${FONTS_BASE_URL}NotoSansTelugu/v1.00/`;
-
 const NOTO_SANS_GUJARATI_FONTS_DIR = `${FONTS_BASE_URL}NotoSansGujarati/v1.00/`;
-
 const NOTO_SANS_ETHIOPIC_FONTS_DIR = `${FONTS_BASE_URL}NotoSansEthiopic/v1.901/`;
-
 const PADAUK_FONTS_DIR = `${FONTS_BASE_URL}Padauk/v2.8/`;
-
 const NOTO_SERIF_BENGALI_FONTS_DIR = `${FONTS_BASE_URL}NotoSerifBengali/v1.00/`;
-
 const REITH_QALAM_FONTS_DIR = `${REITH_BASE_URL}reith-qalam/1.310/`;
 
 /**
