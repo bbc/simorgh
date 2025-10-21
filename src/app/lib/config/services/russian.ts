@@ -116,6 +116,7 @@ export const mainTranslations = {
     advertisementLabel: 'Реклама',
   },
   seeAll: 'Посмотреть все',
+  continueReading: 'Читать дальше',
   skipLinkText: 'Перейти к содержанию',
   relatedContent: 'Читайте также',
   relatedTopics: 'Темы',
