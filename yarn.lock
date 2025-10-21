@@ -2856,10 +2856,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bbc/reverb-url-helper@file:/Users/ahchos01/Desktop/WORLD NEWS/reverb-url-helper/dist/bbc-reverb-url-helper-1.2.0.tgz::locator=simorgh%40workspace%3A.":
+"@bbc/reverb-url-helper@file:/Users/matsil01/reverb-url-helper/dist/bbc-reverb-url-helper-1.2.0.tgz::locator=simorgh%40workspace%3A.":
   version: 1.2.0
-  resolution: "@bbc/reverb-url-helper@file:/Users/ahchos01/Desktop/WORLD NEWS/reverb-url-helper/dist/bbc-reverb-url-helper-1.2.0.tgz#/Users/ahchos01/Desktop/WORLD NEWS/reverb-url-helper/dist/bbc-reverb-url-helper-1.2.0.tgz::hash=22deae&locator=simorgh%40workspace%3A."
-  checksum: 10/9dc8e16cdcfe502f00ea42be675e5f619374c6bc8cc16d3963d0615e3cb0ed554934a8e8372d2a28c11d0ec5c3f6f4a9a72d381e474daf50338fb610993e9f73
+  resolution: "@bbc/reverb-url-helper@file:/Users/matsil01/reverb-url-helper/dist/bbc-reverb-url-helper-1.2.0.tgz#/Users/matsil01/reverb-url-helper/dist/bbc-reverb-url-helper-1.2.0.tgz::hash=1a1fd9&locator=simorgh%40workspace%3A."
+  checksum: 10/30277593fc192f38ab613fe311a7fe2a1c210aef9372b557b96608e1eb9d712243be7c837c77ba750f26414172716afb3c3639c26066d844e5994dd370e22c94
   languageName: node
   linkType: hard
 
@@ -16431,7 +16431,7 @@ __metadata:
     "@babel/preset-react": "npm:7.27.1"
     "@babel/preset-typescript": "npm:7.27.1"
     "@babel/runtime": "npm:7.27.6"
-    "@bbc/reverb-url-helper": "file:/Users/ahchos01/Desktop/WORLD NEWS/reverb-url-helper/dist/bbc-reverb-url-helper-1.2.0.tgz"
+    "@bbc/reverb-url-helper": "file:/Users/matsil01/reverb-url-helper/dist/bbc-reverb-url-helper-1.2.0.tgz"
     "@bbc/web-vitals": "npm:2.5.3"
     "@cypress/webpack-preprocessor": "npm:6.0.4"
     "@emotion/babel-plugin": "npm:11.13.5"

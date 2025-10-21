@@ -72,7 +72,9 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
 
     params.ref = document.referrer || '';
 
-    if (isLiteSite && window.location.search.length) {
+    const containsMarketingAtUtcParams = window.location.search.length;
+    
+    if (isLiteSite && containsMarketingAtUtcParams) {
       const kvpairs: Record<string, string> = window.location.search
         .substring(1)
         .split('&')
