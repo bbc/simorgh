@@ -1,28 +1,23 @@
 import React from 'react';
 import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
-import liveTvFixture from '#data/dari/watch/bbc_afghan_tv/live.json';
-import { ServiceContextProvider } from '#app/contexts/ServiceContext';
-import { Services } from '#app/models/types/global';
-import { RequestContextProvider } from '#app/contexts/RequestContext';
+import { StoryProps, StoryArgs } from '#app/models/types/storybook';
+import { data as liveTvFixture } from '#data/dari/watch/bbc_afghan_tv/live.json';
 import { LIVE_TV_PAGE } from '#app/routes/utils/pageTypes';
 import LiveTvLayout from './LiveTvPageLayout';
-import { LiveTVPageProps } from './types';
 
-const service = 'dari' as Services;
-
-const Component = ({ pageData }: LiveTVPageProps) => (
-  <ServiceContextProvider service={service}>
-    <RequestContextProvider
+const Component = ({ service }: StoryProps) => (
+  // @ts-expect-error partial data required for storybook
+  <PageLayoutWrapper pageData={liveTvFixture} status={200}>
+    <LiveTvLayout
       pageType={LIVE_TV_PAGE}
-      pathname=""
       service={service}
-    >
-      <PageLayoutWrapper pageData={pageData} status={200}>
-        {/* @ts-expect-error partial data required for storybook */}
-        <LiveTvLayout pageData={pageData} />
-      </PageLayoutWrapper>
-    </RequestContextProvider>
-  </ServiceContextProvider>
+      // @ts-expect-error partial data required for storybook
+      pageData={liveTvFixture}
+      pathname=""
+      status={200}
+      timeOnServer={0}
+    />
+  </PageLayoutWrapper>
 );
 
 export default {
@@ -30,7 +25,6 @@ export default {
   Component,
 };
 
-export const Example = () => (
-  // @ts-expect-error partial data required for storybook
-  <Component pageData={liveTvFixture.data} />
+export const Example = (_: StoryArgs, { service, variant }: StoryProps) => (
+  <Component service={service} variant={variant} />
 );
