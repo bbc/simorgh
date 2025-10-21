@@ -356,7 +356,9 @@ export const generateScriptSrc = ({
 }) => {
   if (shouldServeLimitedCsp)
     return ["https: 'unsafe-inline' 'unsafe-eval' blob: data: 'self'"];
-  const insertedNonce = nonce ? [`'nonce-${nonce}'`, "'unsafe-eval'"] : [];
+  const insertedNonce = nonce
+    ? [`'nonce-${nonce}'`, 'blob:', 'data:', "'unsafe-eval'"]
+    : [];
   if (!isLive && isAmp) return directives.scriptSrc.ampNonLive.sort();
   if (!isLive && !isAmp)
     return [
