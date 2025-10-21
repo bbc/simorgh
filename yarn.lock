@@ -2908,18 +2908,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@happy-dom/jest-environment@npm:20.0.2":
-  version: 20.0.2
-  resolution: "@happy-dom/jest-environment@npm:20.0.2"
+"@happy-dom/jest-environment@npm:20.0.7":
+  version: 20.0.7
+  resolution: "@happy-dom/jest-environment@npm:20.0.7"
   dependencies:
-    happy-dom: "npm:^20.0.2"
+    happy-dom: "npm:^20.0.7"
   peerDependencies:
     "@jest/environment": ">=25.0.0"
     "@jest/fake-timers": ">=25.0.0"
     "@jest/types": ">=25.0.0"
     jest-mock: ">=25.0.0"
     jest-util: ">=25.0.0"
-  checksum: 10/64d11ef3476bf638763c39b3670200f914b5f090e553d66ceab8ec95b73dc1a20721e42dfb2b2b7573c9f94d8442ed03c315e7e0540a4bd88f2e15ce37c405ee
+  checksum: 10/c0c1951f5796f2a7bf68156a0f6d017da5cd75b183b0336d1b18037a21dd5fc3fa5b40c830228555258c89713c9ff9c04dfecfe0a0c2a521dbf130ea36d6c4f3
   languageName: node
   linkType: hard
 
@@ -10446,7 +10446,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"happy-dom@npm:20.0.2, happy-dom@npm:^20.0.2":
+"happy-dom@npm:20.0.2":
   version: 20.0.2
   resolution: "happy-dom@npm:20.0.2"
   dependencies:
@@ -10454,6 +10454,17 @@ __metadata:
     "@types/whatwg-mimetype": "npm:^3.0.2"
     whatwg-mimetype: "npm:^3.0.0"
   checksum: 10/dd0d739ac51477038822afaf5a1435a2715e661c449ff1f85467992ed5fc44b290863a8c1eaeb805ce83c30f85146f719268120ead63d72dc0bf9f1a2759b594
+  languageName: node
+  linkType: hard
+
+"happy-dom@npm:^20.0.7":
+  version: 20.0.7
+  resolution: "happy-dom@npm:20.0.7"
+  dependencies:
+    "@types/node": "npm:^20.0.0"
+    "@types/whatwg-mimetype": "npm:^3.0.2"
+    whatwg-mimetype: "npm:^3.0.0"
+  checksum: 10/1161bfe8fcac0fd093b8fbe8af29e8a6525437f17424be97b21401f0741e6473541b30b080066a32990b884eae4b83a1fd1f948a52607975bc98d1b90b394509
   languageName: node
   linkType: hard
 
@@ -15901,7 +15912,7 @@ __metadata:
     "@esbuild/linux-x64": "npm:0.25.10"
     "@esbuild/win32-arm64": "npm:0.25.10"
     "@esbuild/win32-x64": "npm:0.25.10"
-    "@happy-dom/jest-environment": "npm:20.0.2"
+    "@happy-dom/jest-environment": "npm:20.0.7"
     "@jest/environment": "npm:30.2.0"
     "@jest/globals": "npm:30.2.0"
     "@loadable/babel-plugin": "npm:5.16.1"
