@@ -9,10 +9,12 @@ const styles = {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      cursor: 'pointer',
       zIndex: 1000,
       backgroundColor: '#4D0B0B',
       padding: `${pixelsToRem(16)}rem`,
+      minHeight: `${pixelsToRem(170)}rem`,
+      maxHeight: `${pixelsToRem(370)}rem`,
+      height: 'auto',
 
       width: '100%',
       maxWidth: `${pixelsToRem(1008)}rem`,
@@ -43,10 +45,13 @@ const styles = {
       weight: 700,
     }),
 
-  StyledDescription: () =>
+  StyledDescription: ({ mq }: Theme) =>
     css({
       color: '#F6F6F6',
       height: `${pixelsToRem(22)}rem`, // Class/Line Height/Index Headline Small
+      [mq.GROUP_0_MAX_WIDTH]: {
+        display: 'none',
+      },
     }),
 
   CTAWrapper: () =>
@@ -65,6 +70,7 @@ const styles = {
       border: 'none',
       height: `${pixelsToRem(44)}rem`,
       padding: `${pixelsToRem(12)}rem`, // change to correct
+      cursor: 'pointer',
     }),
 
   StyledText: () =>
@@ -84,6 +90,7 @@ const styles = {
       textDecoration: 'underline',
       height: `${pixelsToRem(44)}rem`,
       padding: `${pixelsToRem(12)}rem`, // change to correct
+      cursor: 'pointer',
     }),
 
   subNavCloseButton: ({ palette }: Theme) =>
@@ -119,6 +126,7 @@ const styles = {
       fill: 'currentColor',
       width: `${pixelsToRem(18)}rem`,
       height: `${pixelsToRem(18)}rem`,
+      pointerEvents: 'none',
     }),
 };
 

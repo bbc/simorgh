@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './PWAUpsellBanner.styles';
 import { Close } from '../icons';
 
@@ -9,9 +9,17 @@ export const PWAUpsellBanner = ({
   buttonOne,
   buttonTwo,
 }) => {
+  const [isVisible, setIsVisible] = useState(true);
+
   const handleClose = event => {
     event.preventDefault();
+    setIsVisible(false);
   };
+
+  if (!isVisible) {
+    return null;
+  }
+
   return (
     <div css={styles.ColoredContainer}>
       <div css={styles.Wrap}>
@@ -32,7 +40,11 @@ export const PWAUpsellBanner = ({
 
             <text css={styles.StyledText}>or</text>
 
-            <button type="button" css={styles.StyledButtonTwo}>
+            <button
+              type="button"
+              css={styles.StyledButtonTwo}
+              onClick={handleClose}
+            >
               {buttonTwo}
             </button>
           </div>
