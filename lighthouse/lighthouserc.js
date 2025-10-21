@@ -108,7 +108,7 @@ module.exports = {
           'error',
           { aggregationMethod: 'optimistic', minScore: 0.6 },
         ],
-        'uses-third-party-cookies': 'off',
+        'third-party-cookies': 'off',
       },
     },
     upload: {
