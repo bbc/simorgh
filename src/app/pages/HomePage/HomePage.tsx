@@ -26,6 +26,7 @@ import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
 import getIndexOfFirstNonBanner from '../utils/getIndexOfFirstNonBanner';
 import reorderCurations from './utils/reorderCurations';
+import PWAUpsellBanner from '../../components/PWAUpsellBanner';
 
 export interface HomePageProps {
   pageData: {
@@ -73,6 +74,9 @@ const HomePage = ({ pageData }: HomePageProps) => {
     });
   }
 
+  const handleClose = () => {
+    console.log('PWA Upsell Banner closed');
+  };
   const itemList = getItemList({ curations, name: brandName });
 
   return (
@@ -93,6 +97,18 @@ const HomePage = ({ pageData }: HomePageProps) => {
       />
       <Ad slotType="leaderboard" />
       <main role="main" css={styles.main}>
+        {serviceLocalizedName === 'Mundo' && (
+          <PWAUpsellBanner
+            serviceBackground="mundo"
+            title="Accede a BBC Noticias con un solo toque"
+            description="Agrega un acceso directo de BBC Mundo a tu pantalla de inicio para un acceso rápido y sencillo."
+            handleClose={() => {
+              handleClose();
+            }}
+            buttonOne="Agregar con un toque"
+            buttonTwo="No Ahora"
+          />
+        )}
         <ATIAnalytics atiData={atiAnalytics} />
         <VisuallyHiddenText id="content" tabIndex={-1} as="h1">
           {/* eslint-disable-next-line jsx-a11y/aria-role */}
