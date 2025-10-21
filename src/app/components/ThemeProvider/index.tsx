@@ -51,20 +51,20 @@ export const ThemeProvider = ({
 
   const variant: Variants = rest.variant || defaultServiceVariants[service];
 
-  let serviceVariants;
-  let serviceNoVariants;
+  let themeWithVariant;
+  let themeNoVariant;
 
   if (service in variantThemes) {
-    serviceVariants =
+    themeWithVariant =
       variantThemes[service as ServicesWithVariants['service']][variant];
   } else {
-    serviceNoVariants =
+    themeNoVariant =
       nonVariantThemes[service as ServicesWithNoVariants['service']];
   }
 
-  if (serviceNoVariants || serviceVariants) {
+  if (themeNoVariant || themeWithVariant) {
     LoadableContextProvider =
-      serviceNoVariants || serviceVariants || fallBackTheme;
+      themeNoVariant || themeWithVariant || fallBackTheme;
   } else {
     logger.error(
       THEME_PROVIDER_ERROR,
