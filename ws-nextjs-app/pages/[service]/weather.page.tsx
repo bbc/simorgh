@@ -117,11 +117,32 @@ const pageLayout = () => {
       case 'azeri':
         return 587084; // Baku
         break;
+      case 'hindi':
+        return 1261481; // Delhi
+        break;
+      case 'gujarati':
+        return 1279233; // Ahmedabad
+        break;
+      case 'marathi':
+        return 1259229; // Pune
+        break;
       case 'mundo':
         return 3530597; // Mexico City
         break;
       case 'portuguese':
         return 3469058; // Brasilia
+        break;
+      case 'sinhala':
+        return 1248991; // Colombo
+        break;
+      case 'tamil':
+        return 1264527; // Chennai
+        break;
+      case 'telugu':
+        return 1269843; // Hyderabad
+        break;
+      case 'urdu':
+        return 1176615; // Hyderabad
         break;
       default:
         return 3469058; // Brasilia
