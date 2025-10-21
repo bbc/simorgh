@@ -2110,12 +2110,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-<<<<<<< HEAD
-"@bbc/reverb-url-helper@file:/Users/matsil01/reverb-url-helper/dist/bbc-reverb-url-helper-1.2.0.tgz::locator=simorgh%40workspace%3A.":
-  version: 1.2.0
-  resolution: "@bbc/reverb-url-helper@file:/Users/matsil01/reverb-url-helper/dist/bbc-reverb-url-helper-1.2.0.tgz#/Users/matsil01/reverb-url-helper/dist/bbc-reverb-url-helper-1.2.0.tgz::hash=1a1fd9&locator=simorgh%40workspace%3A."
-  checksum: 10/30277593fc192f38ab613fe311a7fe2a1c210aef9372b557b96608e1eb9d712243be7c837c77ba750f26414172716afb3c3639c26066d844e5994dd370e22c94
-=======
 "@babel/types@npm:^7.28.4":
   version: 7.28.4
   resolution: "@babel/types@npm:7.28.4"
@@ -2126,11 +2120,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bbc/reverb-url-helper@https://mybbc-analytics.files.bbci.co.uk/reverb-url-helper/bbc-reverb-url-helper-1.1.1.tgz":
-  version: 1.1.1
-  resolution: "@bbc/reverb-url-helper@https://mybbc-analytics.files.bbci.co.uk/reverb-url-helper/bbc-reverb-url-helper-1.1.1.tgz"
-  checksum: 10/d1605aa0f18b856c7ec58c2fa9c1d9d807a27de7a581907db66315a8818001599b44f6907069de532c7179c77e0b3eb4dd14344e38e3bbdecad3ab1cab7e6ffd
->>>>>>> origin
+"@bbc/reverb-url-helper@file:/Users/matsil01/reverb-url-helper/dist/bbc-reverb-url-helper-1.2.0.tgz::locator=simorgh%40workspace%3A.":
+  version: 1.2.0
+  resolution: "@bbc/reverb-url-helper@file:/Users/matsil01/reverb-url-helper/dist/bbc-reverb-url-helper-1.2.0.tgz#/Users/matsil01/reverb-url-helper/dist/bbc-reverb-url-helper-1.2.0.tgz::hash=1a1fd9&locator=simorgh%40workspace%3A."
+  checksum: 10/30277593fc192f38ab613fe311a7fe2a1c210aef9372b557b96608e1eb9d712243be7c837c77ba750f26414172716afb3c3639c26066d844e5994dd370e22c94
   languageName: node
   linkType: hard
 
@@ -16096,7 +16089,7 @@ __metadata:
     "@babel/preset-env": "npm:7.28.3"
     "@babel/preset-react": "npm:7.27.1"
     "@babel/preset-typescript": "npm:7.27.1"
-    "@babel/runtime": "npm:7.27.6"
+    "@babel/runtime": "npm:7.28.4"
     "@bbc/reverb-url-helper": "file:/Users/matsil01/reverb-url-helper/dist/bbc-reverb-url-helper-1.2.0.tgz"
     "@bbc/web-vitals": "npm:2.5.3"
     "@cypress/webpack-preprocessor": "npm:7.0.1"
