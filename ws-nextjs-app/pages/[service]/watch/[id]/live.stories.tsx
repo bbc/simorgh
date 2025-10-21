@@ -18,10 +18,8 @@ const Component = ({ pageData }: LiveTVPageProps) => (
       service={service}
     >
       <PageLayoutWrapper pageData={pageData} status={200}>
-        {
-          // @ts-expect-error partial data required for storybook
-          <LiveTvLayout pageData={pageData} />
-        }
+        {/* @ts-expect-error partial data required for storybook */}
+        <LiveTvLayout pageData={pageData} />
       </PageLayoutWrapper>
     </RequestContextProvider>
   </ServiceContextProvider>
