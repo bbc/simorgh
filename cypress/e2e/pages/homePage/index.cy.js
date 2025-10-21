@@ -109,6 +109,13 @@ if (Cypress.env('SMOKE')) {
   });
 }
 
+const atiAnalyticsNavigationComponentTestsAssertions = [
+  assertPageView,
+  assertScrollableNavigationComponentView,
+  assertScrollableNavigationComponentClick,
+  assertDropdownNavigationComponentView,
+  assertDropdownNavigationComponentClick,
+];
 const atiAnalyticsCanonicalTestSuites = [
   {
     path: '/afrique',
@@ -135,11 +142,7 @@ const atiAnalyticsCanonicalTestSuites = [
     contentType: 'index-home',
     useReverb: true,
     tests: [
-      assertPageView,
-      assertScrollableNavigationComponentView,
-      assertScrollableNavigationComponentClick,
-      assertDropdownNavigationComponentView,
-      assertDropdownNavigationComponentClick,
+      atiAnalyticsNavigationComponentTestsAssertions,
       assertMessageBannerComponentView,
       assertMessageBannerComponentClick,
     ],
@@ -154,11 +157,7 @@ const atiAnalyticsCanonicalTestSuites = [
     contentType: 'index-home',
     useReverb: true,
     tests: [
-      assertPageView,
-      assertScrollableNavigationComponentView,
-      assertScrollableNavigationComponentClick,
-      assertDropdownNavigationComponentView,
-      assertDropdownNavigationComponentClick,
+      atiAnalyticsNavigationComponentTestsAssertions,
       assertMostReadComponentView,
       assertMostReadComponentClick,
     ],
@@ -173,11 +172,7 @@ const atiAnalyticsCanonicalTestSuites = [
     contentType: 'index-home',
     useReverb: true,
     tests: [
-      assertPageView,
-      assertScrollableNavigationComponentView,
-      assertScrollableNavigationComponentClick,
-      assertDropdownNavigationComponentView,
-      assertDropdownNavigationComponentClick,
+      atiAnalyticsNavigationComponentTestsAssertions,
       assertMessageBannerComponentView,
       assertMessageBannerComponentClick,
       assertMostReadComponentView,
@@ -221,11 +216,7 @@ const atiAnalyticsCanonicalTestSuites = [
     componentTrackingContentType: 'topic-page',
     useReverb: true,
     tests: [
-      assertPageView,
-      assertScrollableNavigationComponentView,
-      assertScrollableNavigationComponentClick,
-      assertDropdownNavigationComponentView,
-      assertDropdownNavigationComponentClick,
+      atiAnalyticsNavigationComponentTestsAssertions,
       assertMessageBannerComponentView,
       assertMessageBannerComponentClick,
     ],
