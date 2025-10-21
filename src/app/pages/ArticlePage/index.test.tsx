@@ -983,6 +983,7 @@ describe('Article Page', () => {
 
   describe('Adaptive curations in secondary column', () => {
     it("should render adaptive curations when variant is 'variant_a'", async () => {
+      // negative tests possible when override removed
       (useOptimizelyVariation as jest.Mock).mockReturnValue('variant_a');
       const dummyBillboardCurationData = {
         summaries: [
@@ -1099,13 +1100,11 @@ describe('Article Page', () => {
           features: [],
         },
       };
-      const { queryByTestId, container } = render(
+      const { queryByTestId } = render(
         <Context service="hindi">
           <ArticlePage pageData={pageDataWithSecondaryColumn} />
         </Context>,
       );
-      console.log(container.innerHTML);
-
       // Check the adaptive curations section is present
       expect(queryByTestId('adaptive-curations-section')).toBeInTheDocument();
 
