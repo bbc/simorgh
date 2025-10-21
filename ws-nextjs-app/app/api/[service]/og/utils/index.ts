@@ -11,9 +11,13 @@ const logger = nodeLogger(__filename);
 
 export const pageTypeToLog = 'og-image';
 
-export const responseNotFound = ({ url }: { url: string }) => {
+export const responseNotFound = ({
+  pathname,
+}: {
+  pathname: URL['pathname'];
+}) => {
   logger.error(ROUTING_INFORMATION, {
-    url,
+    url: pathname,
     status: NOT_FOUND,
     pageType: pageTypeToLog,
   });
@@ -21,9 +25,13 @@ export const responseNotFound = ({ url }: { url: string }) => {
   return new Response('Not found', { status: NOT_FOUND });
 };
 
-export const responseServerError = ({ url }: { url: string }) => {
+export const responseServerError = ({
+  pathname,
+}: {
+  pathname: URL['pathname'];
+}) => {
   logger.error(ROUTING_INFORMATION, {
-    url,
+    url: pathname,
     status: INTERNAL_SERVER_ERROR,
     pageType: pageTypeToLog,
   });

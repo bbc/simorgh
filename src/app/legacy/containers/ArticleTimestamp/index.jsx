@@ -11,9 +11,6 @@ import {
 } from './helpers';
 import shouldDisplayLastUpdatedTimestamp from './shouldDisplayLastUpdatedTimestamp';
 
-const FirstPublishedTimestamp = Timestamp;
-const LastUpdatedTimestamp = Timestamp;
-
 const ArticleTimestamp = ({
   firstPublished,
   lastPublished,
@@ -72,7 +69,7 @@ const ArticleTimestamp = ({
 
   return (
     <GridWrapper {...(className ? { className } : undefined)}>
-      <FirstPublishedTimestamp
+      <Timestamp // First Published Timestamp
         {...timestampProps}
         {...firstPublishedProps}
         // EXPERIMENT: Article Read Time
@@ -81,7 +78,7 @@ const ArticleTimestamp = ({
       {displayLastUpdatedTimestamp && (
         // Div has been used for No CSS formatting see #5554
         <div>
-          <LastUpdatedTimestamp
+          <Timestamp // Last Published Timestamp
             {...timestampProps}
             {...lastPublishedProps}
             // EXPERIMENT: Article Read Time

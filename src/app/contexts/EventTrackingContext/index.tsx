@@ -23,21 +23,11 @@ import {
   AUDIO_PAGE,
   LIVE_TV_PAGE,
 } from '../../routes/utils/pageTypes';
-import { PageTypes, Platforms } from '../../models/types/global';
+import { PageTypes } from '../../models/types/global';
+import { EventTrackingContextProps } from '../../models/types/eventTracking';
 import { buildATIEventTrackingParams } from '../../components/ATIAnalytics/params';
 import { ServiceContext } from '../ServiceContext';
 import { ATIData } from '../../components/ATIAnalytics/types';
-
-type EventTrackingContextProps =
-  | {
-      campaignID: string;
-      pageIdentifier: string;
-      platform: Platforms;
-      producerId: string;
-      statsDestination: string;
-      producerName: string;
-    }
-  | Record<string, never>;
 
 export const EventTrackingContext = createContext<EventTrackingContextProps>(
   {} as EventTrackingContextProps,

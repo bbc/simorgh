@@ -1,5 +1,6 @@
 import React from 'react';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { render, screen } from '../../react-testing-library-with-providers';
 
 import CurationPromo from '.';
@@ -12,8 +13,9 @@ interface FixtureProps {
   duration?: number;
   link?: string;
   isLive?: boolean;
-  readTime?: number;
-  readTimeVariant?: string;
+  position?: number;
+  resourceId?: string;
+  eventTrackingData?: EventTrackingData;
 }
 
 const Fixture = ({
@@ -22,8 +24,9 @@ const Fixture = ({
   duration,
   link = 'https://www.bbc.com/mundo/noticias-america-latina-60742314',
   isLive,
-  readTime,
-  readTimeVariant,
+  position = 1,
+  resourceId = 'e2263a1c-8d5a-4a73-a00c-881acfa34381',
+  eventTrackingData,
 }: FixtureProps) => (
   <CurationPromo
     lazy={lazy}
@@ -37,8 +40,9 @@ const Fixture = ({
     type={type}
     duration={duration}
     isLive={isLive}
-    readTime={readTime}
-    readTimeVariant={readTimeVariant}
+    position={position}
+    id={resourceId}
+    eventTrackingData={eventTrackingData}
   />
 );
 
@@ -133,18 +137,6 @@ describe('Curation Promo', () => {
         { service: 'mundo' },
       );
       expect(container.queryByText('17 abril 2023')).not.toBeInTheDocument();
-    });
-
-    it('should display read time when readTime is provided in summary data', () => {
-      const container = render(
-        <Fixture readTime={1} readTimeVariant="variant1" />,
-      );
-      expect(container.queryByTestId('read-time')).toBeInTheDocument();
-    });
-
-    it('should not display read time when readTime is not provided in summary data', () => {
-      const container = render(<Fixture />);
-      expect(container.queryByTestId('read-time')).not.toBeInTheDocument();
     });
   });
 });

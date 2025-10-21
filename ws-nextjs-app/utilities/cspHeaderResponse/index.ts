@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { cspDirectives } from '#server/utilities/cspHeader/directives';
 import fallbackServiceParam from '#app/routes/utils/fetchPageData/utils/getRouteProps/fallbackServiceParam';
-import isAmpPath from '#app/routes/utils/isAmpPath';
+import getPathExtension from '#app/utilities/getPathExtension';
 import isLiveEnv from '#lib/utilities/isLive';
 
 const setReportTo = (header: Headers) => {
@@ -35,7 +35,7 @@ const directiveToString = (directives: Record<string, string | string[]>) => {
 };
 
 const cspHeaderResponse = ({ request }: { request: NextRequest }) => {
-  const isAmp = isAmpPath(request.url);
+  const { isAmp } = getPathExtension(request.url);
   const service = fallbackServiceParam(request.url);
   const isLive = isLiveEnv();
 

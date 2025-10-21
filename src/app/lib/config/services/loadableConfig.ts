@@ -1,3 +1,4 @@
+import { Services } from '#app/models/types/global';
 import loadable from '@loadable/component';
 
 const loadableConfig = {
@@ -20,6 +21,7 @@ const loadableConfig = {
   japanese: loadable(() => import('./japanese')),
   korean: loadable(() => import('./korean')),
   kyrgyz: loadable(() => import('./kyrgyz')),
+  magyarul: loadable(() => import('./magyarul')),
   marathi: loadable(() => import('./marathi')),
   mundo: loadable(() => import('./mundo')),
   naidheachdan: loadable(() => import('./naidheachdan')),
@@ -32,6 +34,7 @@ const loadableConfig = {
   polska: loadable(() => import('./polska')),
   portuguese: loadable(() => import('./portuguese')),
   punjabi: loadable(() => import('./punjabi')),
+  romania: loadable(() => import('./romania')),
   russian: loadable(() => import('./russian')),
   scotland: loadable(() => import('./scotland')),
   serbian: loadable(() => import('./serbian')),
@@ -53,5 +56,7 @@ const loadableConfig = {
   yoruba: loadable(() => import('./yoruba')),
   zhongwen: loadable(() => import('./zhongwen')),
 };
+
+export const services = Object.keys(loadableConfig) as Services[];
 
 export default loadableConfig;

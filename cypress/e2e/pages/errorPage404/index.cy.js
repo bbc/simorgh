@@ -1,10 +1,8 @@
 import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
 import testsForAllPages from './tests';
-import ampTests from './testsForAMPOnly';
-import canonicalTests from './testsForCanonicalOnly';
 import { ERROR_PAGE } from '../../../../src/app/routes/utils/pageTypes';
 
-const tests = [testsForAllPages, canonicalTests, ampTests];
+const tests = [testsForAllPages];
 
 const canonicalTestSuites = [
   {
@@ -20,14 +18,14 @@ const canonicalTestSuites = [
     tests,
   },
   {
-    path: '/serbian/articles/cabcdefghijo/cyr',
+    path: '/serbian/articles/c123456abcdo/cyr',
     service: 'serbian',
     runforEnv: ['local', 'test', 'live'],
     variant: 'cyr',
     tests,
   },
   {
-    path: '/serbian/articles/cabcdefghijo/lat',
+    path: '/serbian/articles/c123456abcdo/lat',
     service: 'serbian',
     runforEnv: ['local', 'test', 'live'],
     variant: 'lat',

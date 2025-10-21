@@ -1,9 +1,11 @@
-/* eslint-disable no-underscore-dangle */
+import { jest } from '@jest/globals';
 import fetch from 'jest-fetch-mock';
 import path from 'path';
 import { TextEncoder, TextDecoder } from 'util';
 import { ReadableStream } from 'node:stream/web';
 import { MessageChannel, MessagePort } from 'node:worker_threads';
+
+global.jest = jest;
 
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;

@@ -3,9 +3,10 @@ import React from 'react';
 export type InlineScriptProps = {
   script: string | { toString: () => string };
   parameters?: string | string[];
+  nonce?: string | null;
 };
 
-export default ({ script, parameters }: InlineScriptProps) => {
+export default ({ script, parameters, nonce }: InlineScriptProps) => {
   let inlineScript = script;
   const stringifiedParams = [parameters]
     .flat()
@@ -21,5 +22,9 @@ export default ({ script, parameters }: InlineScriptProps) => {
     inlineScript = `(${script.toString()})(${paramLiteral})`;
   }
 
-  return <script type="text/javascript">{inlineScript as string}</script>;
+  return (
+    <script type="text/javascript" {...(nonce ? { nonce } : {})}>
+      {inlineScript as string}
+    </script>
+  );
 };
