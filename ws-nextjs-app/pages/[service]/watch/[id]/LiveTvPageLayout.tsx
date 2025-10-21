@@ -7,11 +7,7 @@ import { LiveTVPageProps } from './types';
 // import ATIAnalytics from '#app/components/ATIAnalytics';
 // import MetadataContainer from '#app/components/Metadata';
 
-export default function LiveTvLayout({
-  pageType,
-  service,
-  pageData,
-}: LiveTVPageProps) {
+export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
   const { curations, mediaBlock } = pageData;
   console.log('LiveTvLayout pageData:', pageData);
   return (
@@ -27,26 +23,21 @@ export default function LiveTvLayout({
       /> */}
       <main role="main">
         <h1 id="content">
-          HELLO WORLD pageType: {pageType} service: {service}
+          {pageData.title}
+          {pageData.description}
         </h1>
         {curations.map(
-          (
-            {
-              visualProminence,
-              summaries,
-              curationId,
-              title: curationTitle,
-              link,
-              position,
-              visualStyle,
-              ...curationProps
-            }: Curation,
-            index: number,
-          ) => {
+          ({
+            summaries,
+            curationId,
+            title: curationTitle,
+            link,
+            position,
+            ...curationProps
+          }: Curation) => {
             return (
               <React.Fragment key={`${curationId}-${position}`}>
                 <LiveTVCuration
-                  visualProminence=""
                   summaries={summaries || []}
                   title={curationTitle}
                   position={position}
