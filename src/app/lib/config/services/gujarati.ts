@@ -258,6 +258,7 @@ export const service: DefaultServiceConfig = {
         download: 'ડાઉનલોડકરો',
         recentEpisodes: 'તાજેતરનાં એપિસોડ્સ',
         closeVideo: 'બહાર નીકળો',
+        endOfContentClose: 'આ કન્ટેન્ટનો અંત. બહાર નીકળો',
       },
       socialEmbed: {
         caption: {
@@ -314,7 +315,7 @@ export const service: DefaultServiceConfig = {
         text: 'બીબીસી વિશ્વાસપાત્ર કેમ?',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'બહારની વેબસાઇટ્સની લિંક આપવા અંગેની અમારી નીતિ વિશે વાંચો',
       },
       links: [

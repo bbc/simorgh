@@ -249,6 +249,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Duration',
         recentEpisodes: 'Daha ətraflı',
         closeVideo: 'Bağla',
+        endOfContentClose: 'Bu məzmunun sonu. Bağla',
       },
       socialEmbed: {
         caption: {
@@ -336,7 +337,7 @@ export const service: DefaultServiceConfig = {
         text: 'BBC News-a niyə etibar etməlisiniz',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Bizim kənar keçidlərə dair yanaşmamız barədə oxuyun.',
       },
       links: [
@@ -392,8 +393,12 @@ export const service: DefaultServiceConfig = {
         url: '/azeri/topics/cde15l4vn02t',
       },
       {
-        title: 'COP29',
-        url: '/azeri/topics/cv2dz9j8ywyt',
+        title: 'Sağlamlıq',
+        url: '/azeri/topics/c6vzyk7592nt',
+      },
+      {
+        title: 'Sizin hekayələriniz',
+        url: '/azeri/topics/cd9y5yjez4lt',
       },
     ],
   },

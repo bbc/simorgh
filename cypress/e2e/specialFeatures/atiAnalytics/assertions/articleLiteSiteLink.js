@@ -9,6 +9,7 @@ export const assertArticleLiteSiteLinkComponentView = ({
   useReverb,
   path,
   applicationType,
+  siteId,
 }) => {
   it('should send a view event for the Article Lite Site Link component', () => {
     interceptATIAnalyticsBeacons();
@@ -24,6 +25,7 @@ export const assertArticleLiteSiteLinkComponentView = ({
       contentType,
       useReverb,
       applicationType,
+      siteId,
     });
   });
 };
@@ -34,6 +36,7 @@ export const assertArticleLiteSiteLinkComponentClick = ({
   useReverb,
   path,
   applicationType,
+  siteId,
 }) => {
   it('should send a click event for the Article Lite Site Link component', () => {
     interceptATIAnalyticsBeacons();
@@ -52,6 +55,7 @@ export const assertArticleLiteSiteLinkComponentClick = ({
       contentType,
       useReverb,
       applicationType,
+      siteId,
     });
   });
 };

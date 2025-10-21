@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, useTheme } from '@emotion/react';
 import useViewTracker from '#app/hooks/useViewTracker';
-import { EventTrackingMetadata } from '#app/models/types/eventTracking';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import Paragraph from '../Paragraph';
 import Heading from '../Heading';
 import Image from '../Image';
@@ -15,7 +15,7 @@ interface MessageBannerProps {
   linkText: string;
   image?: string;
   id?: string;
-  eventTrackingData?: EventTrackingMetadata;
+  eventTrackingData?: EventTrackingData;
 }
 const MessageBanner = ({
   heading,
@@ -26,7 +26,17 @@ const MessageBanner = ({
   id = 'message-banner-1',
   eventTrackingData,
 }: MessageBannerProps) => {
-  const viewTracker = useViewTracker(eventTrackingData);
+  // Remove itemCount from groupTracker as it's not needed for MessageBanner
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { itemCount, ...groupTrackerRest } =
+    eventTrackingData?.groupTracker || {};
+
+  const eventTrackingDataWithoutItemCount = eventTrackingData && {
+    ...eventTrackingData,
+    groupTracker: groupTrackerRest,
+  };
+
+  const viewTracker = useViewTracker(eventTrackingDataWithoutItemCount);
 
   const { mq } = useTheme();
 
@@ -61,7 +71,7 @@ const MessageBanner = ({
           <CallToActionLink
             url={link}
             className="focusIndicatorInvert"
-            eventTrackingData={eventTrackingData}
+            eventTrackingData={eventTrackingDataWithoutItemCount}
             css={styles.callToActionLink}
           >
             <CallToActionLink.ButtonLikeWrapper>

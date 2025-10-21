@@ -253,6 +253,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'هذا البودكاست متاح عبر',
         download: 'تحميل الحلقة',
         closeVideo: 'خروج',
+        endOfContentClose: 'نهاية هذا المحتوى. خروج',
       },
       socialEmbed: {
         caption: {
@@ -378,7 +379,7 @@ export const service: DefaultServiceConfig = {
         text: 'لماذا يمكنك الاعتماد على أخبار بي بي سي',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'سياستنا بخصوص الروابط الخارجية.',
       },
       links: [

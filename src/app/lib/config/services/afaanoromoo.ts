@@ -261,6 +261,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Turtii',
         recentEpisodes: 'Sagantaawwan darban',
         closeVideo: 'Bahi',
+        endOfContentClose: 'Xumura qabiyyee kanaa. Bahi',
       },
       socialEmbed: {
         caption: {
@@ -319,7 +320,7 @@ export const service: DefaultServiceConfig = {
         text: 'BBC News maaliif amanuu dandeessa',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Gara geessituu alaatti akkaataa itti hojjennu dubbisi.',
       },
       links: [

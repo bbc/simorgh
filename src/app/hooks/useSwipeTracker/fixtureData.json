@@ -1,0 +1,1856 @@
+{
+  "title": "BBC News हिंदी",
+  "description": "हिंदी में ताज़ा समाचार, ब्रेकिंग न्यूज़, वीडियो, ऑडियो और फ़ीचर. बीबीसी हिंदी डॉटकॉम पर भारत, पाकिस्तान और चीन सहित दुनिया भर की ताज़ा ख़बरें. BBC HINDI for up-to-the-minute news, breaking news, video, audio and feature stories.",
+  "pageType": "home",
+  "curations": [
+    {
+      "summaries": [
+        {
+          "type": "article",
+          "isLive": false,
+          "title": "सुप्रीम कोर्ट में चीफ़ जस्टिस पर हमले की कोशिश, पीएम मोदी ने कहा, 'घटना से हर भारतीय आक्रोशित'",
+          "firstPublished": "2025-10-06T11:47:15.578Z",
+          "lastPublished": "2025-10-06T15:22:22.361Z",
+          "link": "https://www.bbc.com/hindi/articles/cvg4yp98vk4o",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/853b/live/079f2460-a2d1-11f0-928c-71dbb8619e94.jpg.webp",
+          "description": "हमले के चश्मदीद का कहना है कि हमलावर को कोर्ट से जब बाहर निकाला जा रहा था तो उन्होंने कहा- सनातन का अपमान नहीं सहेगा हिंदुस्तान. घटना के बाद सीजेआई ने मामलों की सुनवाई जारी रखी.",
+          "imageAlt": "सीजेआई गवई",
+          "id": "cvg4yp98vk4o",
+          "readTime": 6,
+          "visualProminence": "NORMAL"
+        },
+        {
+          "type": "commentary",
+          "isLive": true,
+          "title": "ग़ज़ा पीस प्लान पर बातचीत के लिए मिस्र पहुंचे हमास और इसराइल के प्रतिनिधि",
+          "firstPublished": "",
+          "lastPublished": "",
+          "link": "https://www.bbc.com/hindi/live/cj6x4ed5z5zt",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/32f4/live/473cce70-a2d0-11f0-928c-71dbb8619e94.jpg.webp",
+          "description": "मिस्र और क़तर इस समझौता वार्ता की मध्यस्थता कर रहे हैं.",
+          "imageAlt": "इसराइल हमास बैठक",
+          "id": "cj6x4ed5z5zt",
+          "visualProminence": "NORMAL"
+        },
+        {
+          "type": "article",
+          "isLive": false,
+          "title": "पाकिस्तान के ख़िलाफ़ छा जाने वाली क्रांति गौड़ जिन्हें क्रिकेट खिलाने के लिए उनकी मां को गहने बेचने पड़े",
+          "firstPublished": "2025-10-06T15:15:13.811Z",
+          "lastPublished": "2025-10-06T15:15:13.811Z",
+          "link": "https://www.bbc.com/hindi/articles/c931eke9qxyo",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/f90c/live/c7f60240-a2c9-11f0-9ae4-2361d42405e2.png.webp",
+          "description": "महिला वर्ल्ड कप में क्रांति ने पाकिस्तान के ख़िलाफ़ जोरदार गेंदबाज़ी की. इसी साल इंग्लैंड के ख़िलाफ़ एक मैच में उन्होंने छह विकेट लिए. उनको बचपन में क्रिकेट खेलने के लिए बेहद मुश्किलों का सामना करना पड़ा.",
+          "imageAlt": "क्रांति गौड़",
+          "id": "c931eke9qxyo",
+          "readTime": 7,
+          "visualProminence": "NORMAL"
+        },
+        {
+          "type": "article",
+          "isLive": false,
+          "title": "बिहार विधानसभा चुनाव : 6 और 11 नवंबर को वोटिंग, 14 को नतीजों का एलान, जानिए अहम बातें",
+          "firstPublished": "2025-10-03T02:47:56.937Z",
+          "lastPublished": "2025-10-06T16:42:41.361Z",
+          "link": "https://www.bbc.com/hindi/articles/cj07p08zpq2o",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/f82e/live/1e037080-a2a9-11f0-928c-71dbb8619e94.jpg.webp",
+          "description": "केंद्रीय चुनाव आयोग ने बिहार चुनाव की तारीख़ों का एलान कर दिया है. साथ ही कई नए क़दम उठाने की भी घोषणा की है. ",
+          "imageAlt": "बिहार चुनाव",
+          "id": "cj07p08zpq2o",
+          "readTime": 8,
+          "visualProminence": "NORMAL"
+        },
+        {
+          "type": "article",
+          "isLive": false,
+          "title": "क्या डेटिंग और रिश्तों के बारे में सलाह के लिए एआई का इस्तेमाल सही है?",
+          "firstPublished": "2025-10-06T13:12:18.393Z",
+          "lastPublished": "2025-10-06T13:12:18.393Z",
+          "link": "https://www.bbc.com/hindi/articles/c5y8zdd6y6zo",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7f8e/live/906ca900-8a37-11f0-a26a-51aa2f3dec3f.jpg.webp",
+          "description": "अब कई युवा अपने रिश्तों में मदद के लिए एआई की ओर रुख कर रहे हैं, लेकिन क्या यह एक अच्छा विचार है?",
+          "imageAlt": "एक युवा महिला चिंतित होकर अपने स्मार्टफोन को देख रही है",
+          "id": "c5y8zdd6y6zo",
+          "readTime": 9,
+          "visualProminence": "NORMAL"
+        },
+        {
+          "type": "article",
+          "isLive": false,
+          "title": "अमेरिका के साथ ट्रेड डील पर बोले जयशंकर- 'रेड लाइन्स का हो सम्मान', इसका क्या मतलब है?",
+          "firstPublished": "2025-10-06T10:09:44.998Z",
+          "lastPublished": "2025-10-06T10:09:44.998Z",
+          "link": "https://www.bbc.com/hindi/articles/cy4jz841jwko",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d169/live/f3e42d20-a286-11f0-8255-dda89af0baef.jpg.webp",
+          "description": "विदेश मंत्री एस. जयशंकर ने कहा कि व्यापार समझौते तक पहुंचने के लिए 'साझा आधार' तलाश किए जा रहे हैं. उन्होंने ट्रेड डील्स में 'रेड लाइन्स' पर भी बात की. ये क्या होती है.",
+          "imageAlt": "विदेश मंत्री एस. जयशंकर ",
+          "id": "cy4jz841jwko",
+          "readTime": 4,
+          "visualProminence": "NORMAL"
+        },
+        {
+          "type": "article",
+          "isLive": false,
+          "title": "UPSC इंटरव्यू में फ़ेल होने के बावजूद ऐसे मिल सकती है सरकारी नौकरी",
+          "firstPublished": "2025-10-06T08:17:48.507Z",
+          "lastPublished": "2025-10-06T08:17:48.507Z",
+          "link": "https://www.bbc.com/hindi/articles/cwyq9wdy9v8o",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/eec6/live/de12a390-a28c-11f0-b5fb-09dc1426da0e.jpg.webp",
+          "description": "हर साल यूपीएससी की परीक्षा देने वालों की संख्या लाखों में होती है. मगर सफल होने वाले उम्मीदवार कुछ हज़ार ही रह जाते हैं. ",
+          "imageAlt": "यूपीएसएसी प्रतिभा सेतु",
+          "id": "cwyq9wdy9v8o",
+          "readTime": 6,
+          "visualProminence": "NORMAL"
+        },
+        {
+          "type": "article",
+          "isLive": false,
+          "title": "बिहार चुनाव से पहले नीतीश कुमार ने कितनी 'फ़्री' घोषणाएं की ,विपक्ष ने पूछा- पैसा कहां से आएगा?",
+          "firstPublished": "2025-10-06T07:52:13.778Z",
+          "lastPublished": "2025-10-06T07:52:13.778Z",
+          "link": "https://www.bbc.com/hindi/articles/czjvlzj99l4o",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/78ea/live/c69c0ba0-a289-11f0-928c-71dbb8619e94.jpg.webp",
+          "description": "दो दशकों से बिहार के मुख्यमंत्री के तौर पर नीतीश कुमार का ये पहला चुनाव है जब वो लगातार ऐसी घोषणाएं कर रहे हैं जिन्हें चुनावी 'रेवड़ी' या 'फ़्रीबीज़' बताया जा रहा है.",
+          "imageAlt": "बिहार के सीएम नीतीश कुमार ",
+          "id": "czjvlzj99l4o",
+          "readTime": 9,
+          "visualProminence": "NORMAL"
+        },
+        {
+          "type": "article",
+          "isLive": false,
+          "title": "'वो सेक्स और समलैंगिकता पर चुटकुले सुना रहे हैं':  सऊदी अरब के विवादास्पद कॉमेडी फ़ेस्टिवल में क्या-क्या हुआ?",
+          "firstPublished": "2025-10-06T05:47:08.465Z",
+          "lastPublished": "2025-10-06T05:47:08.465Z",
+          "link": "https://www.bbc.com/hindi/articles/cwywzlpgmrpo",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7fdd/live/cbc6b290-a277-11f0-b741-177e3e2c2fc7.jpg.webp",
+          "description": "सऊदी अरब में चल रहे एक कॉमेडी फ़ेस्टिवल को लेकर विवाद हो गया है. आइए जानते हैं क्या कहना है वहां के लोगों का और मानवाधिकार संगठन क्यों सवाल उठा रहे हैं.",
+          "imageAlt": "आलोचकों का कहना है कि सऊदी अरब सरकार इस तरह के आयोजन मानवाधिकार संबंधी शिकायतों से ध्यान भटकाने के लिए कर रही है",
+          "id": "cwywzlpgmrpo",
+          "readTime": 7,
+          "visualProminence": "NORMAL"
+        }
+      ],
+      "activePage": 1,
+      "pageCount": 1,
+      "curationId": "urn:bbc:tipo:list:c5c30d41-8bb5-4681-8cd3-0d9231d9034a",
+      "curationType": "tipo-curation",
+      "position": 0,
+      "title": "प्रमुख समाचार",
+      "visualProminence": "HIGH",
+      "visualStyle": "COLLECTION"
+    },
+    {
+      "curationId": "urn:bbc:tipo:list:62d1e3f4-b727-4b7f-a351-e1100a2fd4f5",
+      "curationType": "tipo-curation",
+      "position": 1,
+      "title": "शॉर्ट वीडियो",
+      "visualProminence": "NORMAL",
+      "visualStyle": "INSITU",
+      "portraitVideo": {
+        "blocks": [
+          {
+            "type": "portraitClipMedia",
+            "model": {
+              "type": "video",
+              "images": [
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m6zztz.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m6zztz.jpg",
+                  "altText": "टेलर स्विफ़्ट ने अपने इस डर का किया ज़िक्र"
+                },
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m6zztz.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m6zztz.jpg",
+                  "altText": "टेलर स्विफ़्ट ने अपने इस डर का किया ज़िक्र"
+                }
+              ],
+              "video": {
+                "id": "urn:bbc:pips:pid:p0m6zysd",
+                "title": "टेलर स्विफ़्ट ने अपने इस डर का किया ज़िक्र",
+                "holdingImageURL": "https://ichef.bbci.co.uk/images/ic/512xn/p0m6zztz.jpg",
+                "version": {
+                  "id": "p0m6zysn",
+                  "duration": "PT22S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": ["nonuk", "uk"]
+                },
+                "isEmbeddingAllowed": true
+              }
+            }
+          },
+          {
+            "type": "portraitClipMedia",
+            "model": {
+              "type": "video",
+              "images": [
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m701s3.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m701s3.jpg",
+                  "altText": "बिहार की छापा आर्ट आख़िर बनती कैसे है?"
+                },
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m701s3.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m701s3.jpg",
+                  "altText": "बिहार की छापा आर्ट आख़िर बनती कैसे है?"
+                }
+              ],
+              "video": {
+                "id": "urn:bbc:pips:pid:p0m700j6",
+                "title": "बिहार की छापा आर्ट आख़िर बनती कैसे है?",
+                "holdingImageURL": "https://ichef.bbci.co.uk/images/ic/512xn/p0m701s3.jpg",
+                "version": {
+                  "id": "p0m700jj",
+                  "duration": "PT1M28S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": ["nonuk", "uk"]
+                },
+                "isEmbeddingAllowed": true
+              }
+            }
+          },
+          {
+            "type": "portraitClipMedia",
+            "model": {
+              "type": "video",
+              "images": [
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m700hc.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m700hc.jpg",
+                  "altText": "नेपाल में भारी बारिश से कई इलाकों में बाढ़ और लैंडस्लाइड"
+                },
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m700hc.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m700hc.jpg",
+                  "altText": "नेपाल में भारी बारिश से कई इलाकों में बाढ़ और लैंडस्लाइड"
+                }
+              ],
+              "video": {
+                "id": "urn:bbc:pips:pid:p0m6zzp6",
+                "title": "नेपाल में भारी बारिश से कई इलाकों में बाढ़ और लैंडस्लाइड",
+                "holdingImageURL": "https://ichef.bbci.co.uk/images/ic/512xn/p0m700hc.jpg",
+                "version": {
+                  "id": "p0m6zzpb",
+                  "duration": "PT1M4S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": ["nonuk", "uk"]
+                },
+                "isEmbeddingAllowed": true
+              }
+            }
+          },
+          {
+            "type": "portraitClipMedia",
+            "model": {
+              "type": "video",
+              "images": [
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m700b4.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m700b4.jpg",
+                  "altText": "V शेप और सैकड़ों किलोमीटर का सफ़र करते पंछियों से मिलिए"
+                },
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m700b4.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m700b4.jpg",
+                  "altText": "V शेप और सैकड़ों किलोमीटर का सफ़र करते पंछियों से मिलिए"
+                }
+              ],
+              "video": {
+                "id": "urn:bbc:pips:pid:p0m6zz0p",
+                "title": "V शेप और सैकड़ों किलोमीटर का सफ़र करते पंछियों से मिलिए",
+                "holdingImageURL": "https://ichef.bbci.co.uk/images/ic/512xn/p0m700b4.jpg",
+                "version": {
+                  "id": "p0m6zz12",
+                  "duration": "PT38S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": ["nonuk", "uk"]
+                },
+                "isEmbeddingAllowed": true
+              }
+            }
+          },
+          {
+            "type": "portraitClipMedia",
+            "model": {
+              "type": "video",
+              "images": [
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m70817.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m70817.jpg",
+                  "altText": "बिहार में चली मेट्रो, जनता के लिए मंगलवार से सेवा शुरू"
+                },
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m70817.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m70817.jpg",
+                  "altText": "बिहार में चली मेट्रो, जनता के लिए मंगलवार से सेवा शुरू"
+                }
+              ],
+              "video": {
+                "id": "urn:bbc:pips:pid:p0m707n3",
+                "title": "बिहार में चली मेट्रो, जनता के लिए मंगलवार से सेवा शुरू",
+                "holdingImageURL": "https://ichef.bbci.co.uk/images/ic/512xn/p0m70817.jpg",
+                "version": {
+                  "id": "p0m707n7",
+                  "duration": "PT1M13S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": ["nonuk", "uk"]
+                },
+                "isEmbeddingAllowed": true
+              }
+            }
+          },
+          {
+            "type": "portraitClipMedia",
+            "model": {
+              "type": "video",
+              "images": [
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m70mcz.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m70mcz.jpg",
+                  "altText": "बिहार विधानसभा चुनाव 2025 की तारीखों का हुआ एलान"
+                },
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m70mcz.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m70mcz.jpg",
+                  "altText": "बिहार विधानसभा चुनाव 2025 की तारीखों का हुआ एलान"
+                }
+              ],
+              "video": {
+                "id": "urn:bbc:pips:pid:p0m70lm1",
+                "title": "बिहार विधानसभा चुनाव 2025 की तारीखों का हुआ एलान",
+                "holdingImageURL": "https://ichef.bbci.co.uk/images/ic/512xn/p0m70mcz.jpg",
+                "version": {
+                  "id": "p0m70lm9",
+                  "duration": "PT1M1S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": ["nonuk", "uk"]
+                },
+                "isEmbeddingAllowed": true
+              }
+            }
+          },
+          {
+            "type": "portraitClipMedia",
+            "model": {
+              "type": "video",
+              "images": [
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m6x3cf.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m6x3cf.jpg",
+                  "altText": "महिला वर्ल्ड कप के मैच के दौरान खिलाड़ियों को 'स्प्रे' क्यों करना पड़ा?"
+                },
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m6x3cf.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m6x3cf.jpg",
+                  "altText": "महिला वर्ल्ड कप के मैच के दौरान खिलाड़ियों को 'स्प्रे' क्यों करना पड़ा?"
+                }
+              ],
+              "video": {
+                "id": "urn:bbc:pips:pid:p0m6x2lm",
+                "title": "महिला वर्ल्ड कप के मैच के दौरान खिलाड़ियों को 'स्प्रे' क्यों करना पड़ा?",
+                "holdingImageURL": "https://ichef.bbci.co.uk/images/ic/512xn/p0m6x3cf.jpg",
+                "version": {
+                  "id": "p0m6x2lr",
+                  "duration": "PT42S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": ["nonuk", "uk"]
+                },
+                "isEmbeddingAllowed": true
+              }
+            }
+          },
+          {
+            "type": "portraitClipMedia",
+            "model": {
+              "type": "video",
+              "images": [
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m6x36v.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m6x36v.jpg",
+                  "altText": "इसराइली बंधकों की रिहाई पर बोले नेतन्याहू"
+                },
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m6x36v.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m6x36v.jpg",
+                  "altText": "इसराइली बंधकों की रिहाई पर बोले नेतन्याहू"
+                }
+              ],
+              "video": {
+                "id": "urn:bbc:pips:pid:p0m6x2l7",
+                "title": "इसराइली बंधकों की रिहाई पर बोले नेतन्याहू",
+                "holdingImageURL": "https://ichef.bbci.co.uk/images/ic/512xn/p0m6x36v.jpg",
+                "version": {
+                  "id": "p0m6x2lc",
+                  "duration": "PT1M7S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": ["nonuk", "uk"]
+                },
+                "isEmbeddingAllowed": true
+              }
+            }
+          },
+          {
+            "type": "portraitClipMedia",
+            "model": {
+              "type": "video",
+              "images": [
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m6x328.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m6x328.jpg",
+                  "altText": "कफ़ सिरप पीने के बाद 11 बच्चों की मौत, डॉक्टर, दवा कंपनी पर एफ़आईआर"
+                },
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m6x328.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m6x328.jpg",
+                  "altText": "कफ़ सिरप पीने के बाद 11 बच्चों की मौत, डॉक्टर, दवा कंपनी पर एफ़आईआर"
+                }
+              ],
+              "video": {
+                "id": "urn:bbc:pips:pid:p0m6x2kb",
+                "title": "कफ़ सिरप पीने के बाद 11 बच्चों की मौत, डॉक्टर, दवा कंपनी पर एफ़आईआर",
+                "holdingImageURL": "https://ichef.bbci.co.uk/images/ic/512xn/p0m6x328.jpg",
+                "version": {
+                  "id": "p0m6x2kg",
+                  "duration": "PT1M29S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": ["nonuk", "uk"]
+                },
+                "isEmbeddingAllowed": true
+              }
+            }
+          },
+          {
+            "type": "portraitClipMedia",
+            "model": {
+              "type": "video",
+              "images": [
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m6x2xc.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m6x2xc.jpg",
+                  "altText": "आधार कार्ड पर बोले मुख्य चुनाव आयुक्त"
+                },
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m6x2xc.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m6x2xc.jpg",
+                  "altText": "आधार कार्ड पर बोले मुख्य चुनाव आयुक्त"
+                }
+              ],
+              "video": {
+                "id": "urn:bbc:pips:pid:p0m6x2k2",
+                "title": "आधार कार्ड पर बोले मुख्य चुनाव आयुक्त",
+                "holdingImageURL": "https://ichef.bbci.co.uk/images/ic/512xn/p0m6x2xc.jpg",
+                "version": {
+                  "id": "p0m6x2k6",
+                  "duration": "PT1M26S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": ["nonuk", "uk"]
+                },
+                "isEmbeddingAllowed": true
+              }
+            }
+          },
+          {
+            "type": "portraitClipMedia",
+            "model": {
+              "type": "video",
+              "images": [
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m6rjph.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m6rjph.jpg",
+                  "altText": "दूसरों के घरों के आगे रंगोली बनाते हैं 80 साल के बुज़ुर्ग"
+                },
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m6rjph.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m6rjph.jpg",
+                  "altText": "दूसरों के घरों के आगे रंगोली बनाते हैं 80 साल के बुज़ुर्ग"
+                }
+              ],
+              "video": {
+                "id": "urn:bbc:pips:pid:p0m6rjmh",
+                "title": "दूसरों के घरों के आगे रंगोली बनाते हैं 80 साल के बुज़ुर्ग",
+                "holdingImageURL": "https://ichef.bbci.co.uk/images/ic/512xn/p0m6rjph.jpg",
+                "version": {
+                  "id": "p0m6rjmm",
+                  "duration": "PT1M18S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": ["nonuk", "uk"]
+                },
+                "isEmbeddingAllowed": true
+              }
+            }
+          },
+          {
+            "type": "portraitClipMedia",
+            "model": {
+              "type": "video",
+              "images": [
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m6rhts.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m6rhts.jpg",
+                  "altText": "ग़ज़ा शांति योजना: हमास के राज़ी होने पर ये बोले नेतन्याहू"
+                },
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m6rhts.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m6rhts.jpg",
+                  "altText": "ग़ज़ा शांति योजना: हमास के राज़ी होने पर ये बोले नेतन्याहू"
+                }
+              ],
+              "video": {
+                "id": "urn:bbc:pips:pid:p0m6rhpl",
+                "title": "ग़ज़ा शांति योजना: हमास के राज़ी होने पर ये बोले नेतन्याहू",
+                "holdingImageURL": "https://ichef.bbci.co.uk/images/ic/512xn/p0m6rhts.jpg",
+                "version": {
+                  "id": "p0m6rhpq",
+                  "duration": "PT1M19S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": ["nonuk", "uk"]
+                },
+                "isEmbeddingAllowed": true
+              }
+            }
+          },
+          {
+            "type": "portraitClipMedia",
+            "model": {
+              "type": "video",
+              "images": [
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m6rjm1.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m6rjm1.jpg",
+                  "altText": "ग़ज़ा शांति योजना: हमास की प्रतिक्रिया पर बोले ट्रंप"
+                },
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m6rjm1.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m6rjm1.jpg",
+                  "altText": "ग़ज़ा शांति योजना: हमास की प्रतिक्रिया पर बोले ट्रंप"
+                }
+              ],
+              "video": {
+                "id": "urn:bbc:pips:pid:p0m6rjjq",
+                "title": "ग़ज़ा शांति योजना: हमास की प्रतिक्रिया पर बोले ट्रंप",
+                "holdingImageURL": "https://ichef.bbci.co.uk/images/ic/512xn/p0m6rjm1.jpg",
+                "version": {
+                  "id": "p0m6rjjv",
+                  "duration": "PT1M5S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": ["nonuk", "uk"]
+                },
+                "isEmbeddingAllowed": true
+              }
+            }
+          },
+          {
+            "type": "portraitClipMedia",
+            "model": {
+              "type": "video",
+              "images": [
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m6rjg8.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m6rjg8.jpg",
+                  "altText": "ज़ुबिन गर्ग की मौत की जांच पर बोलीं उनकी पत्नी"
+                },
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m6rjg8.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m6rjg8.jpg",
+                  "altText": "ज़ुबिन गर्ग की मौत की जांच पर बोलीं उनकी पत्नी"
+                }
+              ],
+              "video": {
+                "id": "urn:bbc:pips:pid:p0m6rhwz",
+                "title": "ज़ुबिन गर्ग की मौत की जांच पर बोलीं उनकी पत्नी",
+                "holdingImageURL": "https://ichef.bbci.co.uk/images/ic/512xn/p0m6rjg8.jpg",
+                "version": {
+                  "id": "p0m6rhx5",
+                  "duration": "PT1M11S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": ["nonuk", "uk"]
+                },
+                "isEmbeddingAllowed": true
+              }
+            }
+          },
+          {
+            "type": "portraitClipMedia",
+            "model": {
+              "type": "video",
+              "images": [
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m6j6vp.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m6j6vp.jpg",
+                  "altText": "पुतिन बोले- रूस से तेल नहीं खरीदने पर भारत को होगा ये नुकसान"
+                },
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m6j6vp.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m6j6vp.jpg",
+                  "altText": "पुतिन बोले- रूस से तेल नहीं खरीदने पर भारत को होगा ये नुकसान"
+                }
+              ],
+              "video": {
+                "id": "urn:bbc:pips:pid:p0m6j5b6",
+                "title": "पुतिन बोले- रूस से तेल नहीं खरीदने पर भारत को होगा ये नुकसान",
+                "holdingImageURL": "https://ichef.bbci.co.uk/images/ic/512xn/p0m6j6vp.jpg",
+                "version": {
+                  "id": "p0m6j5bb",
+                  "duration": "PT34S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": ["nonuk", "uk"]
+                },
+                "isEmbeddingAllowed": true
+              }
+            }
+          },
+          {
+            "type": "portraitClipMedia",
+            "model": {
+              "type": "video",
+              "images": [
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m6j76g.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m6j76g.jpg",
+                  "altText": "ग्रेटा थनबर्ग का पहले से रिकॉर्ड किया गया वीडियो हुआ जारी"
+                },
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m6j76g.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m6j76g.jpg",
+                  "altText": "ग्रेटा थनबर्ग का पहले से रिकॉर्ड किया गया वीडियो हुआ जारी"
+                }
+              ],
+              "video": {
+                "id": "urn:bbc:pips:pid:p0m6j65d",
+                "title": "ग्रेटा थनबर्ग का पहले से रिकॉर्ड किया गया वीडियो हुआ जारी",
+                "holdingImageURL": "https://ichef.bbci.co.uk/images/ic/512xn/p0m6j76g.jpg",
+                "version": {
+                  "id": "p0m6j65l",
+                  "duration": "PT45S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": ["nonuk", "uk"]
+                },
+                "isEmbeddingAllowed": true
+              }
+            }
+          },
+          {
+            "type": "portraitClipMedia",
+            "model": {
+              "type": "video",
+              "images": [
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m6h6w9.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m6h6w9.jpg",
+                  "altText": "समंदर में इन 3 शार्क का ये वीडियो हुआ वायरल"
+                },
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m6h6w9.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m6h6w9.jpg",
+                  "altText": "समंदर में इन 3 शार्क का ये वीडियो हुआ वायरल"
+                }
+              ],
+              "video": {
+                "id": "urn:bbc:pips:pid:p0m6h68z",
+                "title": "समंदर में इन 3 शार्क का ये वीडियो हुआ वायरल",
+                "holdingImageURL": "https://ichef.bbci.co.uk/images/ic/512xn/p0m6h6w9.jpg",
+                "version": {
+                  "id": "p0m6h69h",
+                  "duration": "PT49S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": ["nonuk", "uk"]
+                },
+                "isEmbeddingAllowed": true
+              }
+            }
+          },
+          {
+            "type": "portraitClipMedia",
+            "model": {
+              "type": "video",
+              "images": [
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m6h7jw.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m6h7jw.jpg",
+                  "altText": "बिना ऑक्सीजन टैंक के माउंट एवरेस्ट पर पहुंचा ये शख़्स"
+                },
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m6h7jw.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m6h7jw.jpg",
+                  "altText": "बिना ऑक्सीजन टैंक के माउंट एवरेस्ट पर पहुंचा ये शख़्स"
+                }
+              ],
+              "video": {
+                "id": "urn:bbc:pips:pid:p0m6h79b",
+                "title": "बिना ऑक्सीजन टैंक के माउंट एवरेस्ट पर पहुंचा ये शख़्स",
+                "holdingImageURL": "https://ichef.bbci.co.uk/images/ic/512xn/p0m6h7jw.jpg",
+                "version": {
+                  "id": "p0m6h79j",
+                  "duration": "PT30S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": ["nonuk", "uk"]
+                },
+                "isEmbeddingAllowed": true
+              }
+            }
+          },
+          {
+            "type": "portraitClipMedia",
+            "model": {
+              "type": "video",
+              "images": [
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m689lg.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m689lg.jpg",
+                  "altText": "ग़ज़ा राहत साम्रगी ले जातीं ग्रेटा इसराइल की हिरासत में"
+                },
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m689lg.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m689lg.jpg",
+                  "altText": "ग़ज़ा राहत साम्रगी ले जातीं ग्रेटा इसराइल की हिरासत में"
+                }
+              ],
+              "video": {
+                "id": "urn:bbc:pips:pid:p0m6890b",
+                "title": "ग़ज़ा राहत साम्रगी ले जातीं ग्रेटा इसराइल की हिरासत में",
+                "holdingImageURL": "https://ichef.bbci.co.uk/images/ic/512xn/p0m689lg.jpg",
+                "version": {
+                  "id": "p0m6890n",
+                  "duration": "PT48S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": ["nonuk", "uk"]
+                },
+                "isEmbeddingAllowed": true
+              }
+            }
+          },
+          {
+            "type": "portraitClipMedia",
+            "model": {
+              "type": "video",
+              "images": [
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m688y0.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m688y0.jpg",
+                  "altText": "इमारत के मलबे से 24 घंटे बाद ज़िंदा निकले 3 बच्चे"
+                },
+                {
+                  "source": "https://ichef.bbci.co.uk/images/ic/1024xn/p0m688y0.jpg",
+                  "urlTemplate": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0m688y0.jpg",
+                  "altText": "इमारत के मलबे से 24 घंटे बाद ज़िंदा निकले 3 बच्चे"
+                }
+              ],
+              "video": {
+                "id": "urn:bbc:pips:pid:p0m688hz",
+                "title": "इमारत के मलबे से 24 घंटे बाद ज़िंदा निकले 3 बच्चे",
+                "holdingImageURL": "https://ichef.bbci.co.uk/images/ic/512xn/p0m688y0.jpg",
+                "version": {
+                  "id": "p0m688j3",
+                  "duration": "PT48S",
+                  "kind": "programme",
+                  "guidance": null,
+                  "territories": ["nonuk", "uk"]
+                },
+                "isEmbeddingAllowed": true
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "summaries": [
+        {
+          "type": "article",
+          "isLive": false,
+          "title": "जगह बदली, इवेंट बदला... लेकिन भारत-पाकिस्तान क्रिकेट में नहीं बदली विवाद की तस्वीर ",
+          "firstPublished": "2025-10-06T01:57:24.393Z",
+          "lastPublished": "2025-10-06T01:57:24.393Z",
+          "link": "https://www.bbc.com/hindi/articles/cly79dyk3pdo",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/409b/live/ca571740-a21a-11f0-b400-e9f6acab7c58.jpg.webp",
+          "description": "भारत और पाकिस्तान की महिला क्रिकेटर्स की तस्वीरें दोस्ती की मिसाल के तौर पर पेश की जाती थीं. लेकिन दोनों देशों की क्रिकेटर्स के बीच दोस्ती का सिलसिला रविवार को खेले गए मुक़ाबले में थमता सा दिखा. ",
+          "imageAlt": "हरमनप्रीत कौर, फ़ातिमा सना",
+          "id": "cly79dyk3pdo",
+          "readTime": 6,
+          "visualProminence": "NORMAL"
+        },
+        {
+          "type": "article",
+          "isLive": false,
+          "title": "भूमि पेडनेकर जूझ रही हैं स्किन की इस बीमारी से, जानिए क्या है इसका इलाज",
+          "firstPublished": "2025-10-06T02:38:02.619Z",
+          "lastPublished": "2025-10-06T02:38:02.619Z",
+          "link": "https://www.bbc.com/hindi/articles/cy0v7zp8v7yo",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d3a8/live/acd517b0-a25d-11f0-aa56-872bcc255edb.jpg.webp",
+          "description": "भूमि पेडनेकर ने अपनी इंस्टाग्राम स्टोरी में बताया है कि उन्हें एक स्किन कंडीशन है जिससे काफी दर्द होता है. ",
+          "imageAlt": "बॉलीवुड अभिनेत्री भूमि पेडनेकर ने बताया कि वो एक्ज़िमा से जूझ रही हैं",
+          "id": "cy0v7zp8v7yo",
+          "readTime": 6,
+          "visualProminence": "NORMAL"
+        },
+        {
+          "type": "article",
+          "isLive": false,
+          "title": "भारी बारिश से दार्जिलिंग में 23 की मौत, कई पर्यटक फंसे, स्थानीय लोग बोले, '27 साल में ऐसी तबाही नहीं देखी'",
+          "firstPublished": "2025-10-05T14:52:36.163Z",
+          "lastPublished": "2025-10-05T14:52:36.163Z",
+          "link": "https://www.bbc.com/hindi/articles/c62lx1jdjr1o",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/bcac/live/d8fe3640-a1fa-11f0-92db-77261a15b9d2.jpg.webp",
+          "description": "दार्जिलिंग के साथ ही सिक्किम का संपर्क भी देश के अन्य हिस्सों से कट गया है. उत्तर बंगाल की नदियों का जलस्तर अचानक बढ़ने से कई इलाके डूब गए हैं, जिससे हजारों पर्यटक फंस गए हैं.",
+          "imageAlt": "बाढ़",
+          "id": "c62lx1jdjr1o",
+          "readTime": 6,
+          "visualProminence": "NORMAL"
+        },
+        {
+          "type": "article",
+          "isLive": false,
+          "title": "तालिबान सरकार के विदेश मंत्री मुत्तकी का भारत आना दोनों देशों के लिए कितना फ़ायदेमंद",
+          "firstPublished": "2025-10-05T13:02:21.503Z",
+          "lastPublished": "2025-10-05T13:02:21.503Z",
+          "link": "https://www.bbc.com/hindi/articles/cnvrngn29rmo",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/55bc/live/d40dc180-a1b1-11f0-9fd2-579c9a6035d2.jpg.webp",
+          "description": "अगस्त 2021 में तालिबान के अफ़ग़ानिस्तान पर कब्जा करने के बाद से यह तालिबान सरकार के किसी मंत्री की पहली आधिकारिक भारत यात्रा होगी.",
+          "imageAlt": "अफ़ग़ानिस्तान में तालिबान शासन के विदेश मंत्री आमिर ख़ान मुत्तकी ",
+          "id": "cnvrngn29rmo",
+          "readTime": 7,
+          "visualProminence": "NORMAL"
+        },
+        {
+          "type": "article",
+          "isLive": false,
+          "title": "महमूद ग़ज़नवी ने जब सोमनाथ मंदिर पर हमला करके लूटा 'छह टन सोना' - विवेचना",
+          "firstPublished": "2025-10-05T06:32:24.471Z",
+          "lastPublished": "2025-10-05T06:32:24.471Z",
+          "link": "https://www.bbc.com/hindi/articles/cpvlwnng9vmo",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/f597/live/fb807e20-a1b5-11f0-b741-177e3e2c2fc7.jpg.webp",
+          "description": "पिछली कई शताब्दियों में सोमनाथ के मंदिर को कई बार बनाया और बर्बाद किया गया. भारत के आज़ाद होने के बाद नए सिरे से सोमनाथ मंदिर को बनाने की मुहिम शुरू हुई. आज विवेचना में महमूद ग़ज़नवी के हमले और सोमनाथ मंदिर के दोबारा बनाए जाने की कहानी.",
+          "imageAlt": "सोमनाथ मंदिर",
+          "id": "cpvlwnng9vmo",
+          "readTime": 11,
+          "visualProminence": "NORMAL"
+        },
+        {
+          "type": "article",
+          "isLive": false,
+          "title": "ट्रंप इसराइल को नाराज़ करने का रिस्क लेकर क़तर के लिए इस हद तक क्यों जा रहे हैं?",
+          "firstPublished": "2025-10-05T11:23:50.019Z",
+          "lastPublished": "2025-10-05T11:23:50.019Z",
+          "link": "https://www.bbc.com/hindi/articles/c1ed1207q7go",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/9719/live/d59f7ab0-a1d5-11f0-88d2-67f0fdc7ff28.jpg.webp",
+          "description": "अमेरिका ने क़तर को पूरी सुरक्षा का भरोसा दिलाया है. यह लगभग नेटो गठबंधन की तरह दिखता है. आख़िर ट्रंप, क़तर की ढाल बनकर क्यों खड़े हो गए हैं?",
+          "imageAlt": "डोनाल्ड ट्रंप",
+          "id": "c1ed1207q7go",
+          "readTime": 6,
+          "visualProminence": "NORMAL"
+        },
+        {
+          "type": "article",
+          "isLive": false,
+          "title": "महिला वनडे वर्ल्ड कप: भारत ने पाकिस्तान को 88 रन से हराया",
+          "firstPublished": "2025-10-05T10:38:34.640Z",
+          "lastPublished": "2025-10-06T01:00:20.289Z",
+          "link": "https://www.bbc.com/hindi/articles/cj9zdpe2y7jo",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/3484/live/f12ef140-a20f-11f0-8493-b191e68f6c5a.jpg.webp",
+          "description": "महिला वनडे वर्ल्ड कप के ग्रुप स्टेज मुकाबले में भारत की ओर से मिले 248 रन के लक्ष्य का पीछा करते हुए पाकिस्तान की टीम 43 ओवर में 159 रन बनाकर ऑलआउट हो गई.",
+          "imageAlt": "भारतीय टीम ने पाकिस्तान के खिलाफ वनडे में 12वीं जीत दर्ज की",
+          "id": "cj9zdpe2y7jo",
+          "readTime": 5,
+          "visualProminence": "NORMAL"
+        },
+        {
+          "type": "article",
+          "isLive": false,
+          "title": "क्रिकेट के वो 10 रिकॉर्ड जो पुरुषों से पहले महिलाओं ने बनाए",
+          "firstPublished": "2025-10-05T07:47:15.078Z",
+          "lastPublished": "2025-10-05T07:47:15.078Z",
+          "link": "https://www.bbc.com/hindi/articles/c62nqw4vrreo",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/8d00/live/42412450-a101-11f0-b741-177e3e2c2fc7.jpg.webp",
+          "description": "इंटरनेशनल क्रिकेट में ऐसे कई रिकॉर्ड हैं जो महिलाओं ने पुरुषों से पहले बनाए हैं. इनमें से कुछ रिकॉर्ड भारतीय महिला खिलाड़ियों के नाम भी हैं.",
+          "imageAlt": "भारत की ऑलराउंडर दीप्ति शर्मा",
+          "id": "c62nqw4vrreo",
+          "readTime": 7,
+          "visualProminence": "NORMAL"
+        },
+        {
+          "type": "article",
+          "isLive": false,
+          "title": "सेना प्रमुख जनरल उपेंद्र द्विवेदी के भूगोल वाले बयान पर बोली पाकिस्तान की सेना",
+          "firstPublished": "2025-10-05T04:22:39.880Z",
+          "lastPublished": "2025-10-05T04:22:39.880Z",
+          "link": "https://www.bbc.com/hindi/articles/c5y50d1lj22o",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/33f3/live/9f3f8740-a1a2-11f0-abd0-75687b3219fc.jpg.webp",
+          "description": "भारतीय सेना के प्रमुख जनरल उपेंद्र द्विवेदी ने हाल ही में सेना के एक कार्यक्रम में 'ऑपरेशन सिंदूर' को लेकर बयान दिया था. इस पर अब पाकिस्तानी सेना ने बयान जारी किया है.",
+          "imageAlt": "भारत के सेना प्रमुख उपेंद्र द्विवेदी के ऑपरेशन सिंदूर पर दिए गए ताज़ा बयान सुर्खियों में है. ",
+          "id": "c5y50d1lj22o",
+          "readTime": 8,
+          "visualProminence": "NORMAL"
+        }
+      ],
+      "activePage": 1,
+      "pageCount": 1,
+      "curationId": "urn:bbc:tipo:list:907e1c33-e9dc-4b9f-b6f2-6615e886bf74",
+      "curationType": "tipo-curation",
+      "position": 3,
+      "title": "बीबीसी विशेष",
+      "visualProminence": "HIGH",
+      "visualStyle": "COLLECTION"
+    },
+    {
+      "summaries": [
+        {
+          "type": "link",
+          "isLive": false,
+          "title": "व्हाट्सऐप चैनल से जुड़ें",
+          "firstPublished": "",
+          "lastPublished": "",
+          "link": "https://whatsapp.com/channel/0029Vaf8zY1ElagsEvZ4Gp1I",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/3bc3/live/e712bd90-225e-11ef-80aa-699d54c46324.png.webp",
+          "imageAlt": "व्हाट्सऐप चैनल से जुड़ें\n",
+          "id": "https%3A%2F%2Fwhatsapp.com%2Fchannel%2F0029Vaf8zY1ElagsEvZ4Gp1I",
+          "visualProminence": "NORMAL"
+        }
+      ],
+      "activePage": 1,
+      "pageCount": 1,
+      "link": "https://whatsapp.com/channel/0029Vaf8zY1ElagsEvZ4Gp1I",
+      "curationId": "urn:bbc:tipo:list:d160b864-7600-48fc-9793-58d11df10018",
+      "curationType": "tipo-curation",
+      "position": 4,
+      "title": "बीबीसी हिंदी अब व्हाट्सऐप चैनल पर",
+      "visualProminence": "NORMAL",
+      "visualStyle": "BANNER"
+    },
+    {
+      "summaries": [
+        {
+          "type": "video",
+          "duration": "PT4M20S",
+          "isLive": false,
+          "title": "बिहार विधानसभा चुनाव 2025 की तारीखों का एलान होते ही क्या बोले राजनीतिक दलों के कार्यकर्ता?",
+          "firstPublished": "2025-10-06T16:36:33.129Z",
+          "lastPublished": "2025-10-06T16:36:33.129Z",
+          "link": "https://www.bbc.com/hindi/articles/cly7l7z3kzeo",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/520a/live/91cac380-a2cf-11f0-928c-71dbb8619e94.jpg.webp",
+          "description": "बिहार विधानसभा चुनाव 2025 की तारीखों का एलान हो गया है. 6 और 11 नवंबर को दो चरणों में मतदान होगा और 14 नवंबर को नतीजे घोषित होंगे. \n",
+          "imageAlt": "पटना में बीजेपी कार्यकर्ता",
+          "id": "cly7l7z3kzeo",
+          "readTime": 1
+        },
+        {
+          "type": "video",
+          "duration": "PT10M25S",
+          "isLive": false,
+          "title": "अवध में आज भी नवाबों के वंशजों को मिल रही है पेंशन, लेकिन रकम जानकर रह जाएंगे हैरान",
+          "firstPublished": "2025-10-06T16:28:32.821Z",
+          "lastPublished": "2025-10-06T16:28:32.821Z",
+          "link": "https://www.bbc.com/hindi/articles/cp3vkv5zv3no",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/8ed3/live/0b544f10-a2cf-11f0-928c-71dbb8619e94.jpg.webp",
+          "description": "इस पेंशन को ही वसीका कहते हैं. सन् 1857 की लड़ाई के बाद 1874 में ईस्ट इंडिया कंपनी बंद हो गई. सात दशक बाद 1947 में भारत आज़ाद हुआ. अंग्रेज़ चले गए, मगर यह परंपरा आज भी जारी है.\n",
+          "imageAlt": "अवध के नवाबों के वंशज",
+          "id": "cp3vkv5zv3no",
+          "readTime": 1
+        },
+        {
+          "type": "video",
+          "duration": "PT16M17S",
+          "isLive": false,
+          "title": "अमेरिका को पानी देने के लिए क्यों बाध्य है ये देश, क्या है इनके बीच समझौता- दुनिया जहान",
+          "firstPublished": "2025-10-06T09:43:53.481Z",
+          "lastPublished": "2025-10-06T09:43:53.481Z",
+          "link": "https://www.bbc.com/hindi/articles/crkj3xnydryo",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/dfe3/live/81dbb8a0-a296-11f0-b741-177e3e2c2fc7.jpg.webp",
+          "description": "इसलिए इस सप्ताह हम दुनिया जहान में यही जानने की कोशिश करेंगे कि मेक्सिको, अमेरिका को पानी देने के लिए बाध्य क्यों है?",
+          "imageAlt": "अमेरिका-मेक्सिको जल संधि",
+          "id": "crkj3xnydryo",
+          "readTime": 1
+        },
+        {
+          "type": "video",
+          "duration": "PT4M40S",
+          "isLive": false,
+          "title": "जयपुर के सवाई मानसिंह अस्पताल के ट्रॉमा सेंटर में आग लगी, परिजन क्या बोले",
+          "firstPublished": "2025-10-06T09:10:37.975Z",
+          "lastPublished": "2025-10-06T09:10:37.975Z",
+          "link": "https://www.bbc.com/hindi/articles/cy7pzxr85l1o",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/edc5/live/78bf3580-a291-11f0-92db-77261a15b9d2.jpg.webp",
+          "description": "जयपुर के पुलिस कमिश्नर बीजू जॉर्ज जोसेफ़ ने कहा कि पहली नज़र में ये शॉर्ट सर्किट का मामला लग रहा है",
+          "imageAlt": "जलकर खाक हुआ जयपुर के सवाई मानसिंह अस्पताल का ट्रॉमा सेंटर",
+          "id": "cy7pzxr85l1o",
+          "readTime": 1
+        },
+        {
+          "type": "video",
+          "duration": "PT16M56S",
+          "isLive": false,
+          "title": "'बैंडिट क्वीन' से डेब्यू करने वाले गजराज राव ने सुनाए करियर के दिलचस्प किस्से",
+          "firstPublished": "2025-10-05T15:28:31.351Z",
+          "lastPublished": "2025-10-05T15:28:31.351Z",
+          "link": "https://www.bbc.com/hindi/articles/c62nq163d1ko",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/231e/live/88d59e60-a1e1-11f0-92db-77261a15b9d2.jpg.webp",
+          "description": "शेखर कपूर की फ़िल्म बैंडिट क्वीन में एक छोटे से किरदार से अपना सफ़र शुरू करने वाले गजराज राव इंडस्ट्री का एक जाना-माना चेहरा हैं.",
+          "imageAlt": "गजराज राव",
+          "id": "c62nq163d1ko",
+          "readTime": 1
+        },
+        {
+          "type": "video",
+          "duration": "PT3M57S",
+          "isLive": false,
+          "title": "पाकिस्तान प्रशासित कश्मीर में पुराना है प्रदर्शनों का दौर, क्या चाहते हैं यहां के लोग?-वुसअत की डायरी",
+          "firstPublished": "2025-10-05T13:40:03.708Z",
+          "lastPublished": "2025-10-05T13:40:03.708Z",
+          "link": "https://www.bbc.com/hindi/articles/clyxl07ylz0o",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/6a3a/live/302a8860-a1e2-11f0-b741-177e3e2c2fc7.jpg.webp",
+          "description": "पाकिस्तान प्रशासित कश्मीर में प्रदर्शनों के इतिहास और सरकार के साथ लोगों के टकराव पर आधारित है आज की वुसअत की डायरी.",
+          "imageAlt": "वुसअत की डायरी",
+          "id": "clyxl07ylz0o",
+          "readTime": 1
+        },
+        {
+          "type": "video",
+          "duration": "PT15M7S",
+          "isLive": false,
+          "title": "महमूद गज़नवी ने सोमनाथ मंदिर पर कैसे किया था हमला? विवेचना",
+          "firstPublished": "2025-10-05T13:37:32.278Z",
+          "lastPublished": "2025-10-05T13:37:32.278Z",
+          "link": "https://www.bbc.com/hindi/articles/cj6x3g87k6zo",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/2d2b/live/d881ee40-a1e2-11f0-92db-77261a15b9d2.jpg.webp",
+          "description": "विवेचना में रेहान फ़ज़ल बता रहे हैं सोमनाथ मंदिर के तोड़े जाने और दोबारा बनाए जाने की कहानी.",
+          "imageAlt": "सन् 1847 में बना सोमनाथ मंदिर का एक चित्र ",
+          "id": "cj6x3g87k6zo",
+          "readTime": 1
+        },
+        {
+          "type": "video",
+          "duration": "PT32M14S",
+          "isLive": false,
+          "title": "क्या अपने साझीदारों का भरोसा खो रहे हैं ट्रंप?- द लेंस",
+          "firstPublished": "2025-10-04T07:33:18.973Z",
+          "lastPublished": "2025-10-04T07:33:18.973Z",
+          "link": "https://www.bbc.com/hindi/articles/cly1q66dvw2o",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a8f9/live/cac05ee0-a0f2-11f0-928c-71dbb8619e94.png.webp",
+          "description": "ट्रंप की विदेश नीति को लेकर कई सवाल हैं, जैसे ट्रंप के स्टाइल का अमेरिका के लिए लंबे समय में क्या मतलब होगा? भारत क्या ट्रंप की विदेश नीति को समझने में चूक गया या भारत के सामने इस विषय में कोई और विकल्प नहीं था? और दुनिया के लिए ट्रंप की इस विदेश नीति के क्या सबक हैं? द लेंस के आज के एपिसोड में इन सभी मुद्दों पर चर्चा की गई.",
+          "imageAlt": "द लेंस में ट्रंप की विदेश नीति से जुड़े सवालों पर विस्तार से चर्चा ",
+          "id": "cly1q66dvw2o",
+          "readTime": 1
+        }
+      ],
+      "activePage": 1,
+      "pageCount": 40,
+      "link": "https://www.bbc.com/hindi/topics/cw9kv0kpxydt",
+      "curationId": "urn:bbc:vivo:curation:23b426a2-6119-4c26-9c6b-b19d468186fd",
+      "curationType": "vivo-stream",
+      "position": 6,
+      "title": "मल्टीमीडिया",
+      "visualProminence": "NORMAL",
+      "visualStyle": "FEED"
+    },
+    {
+      "summaries": [
+        {
+          "type": "link",
+          "isLive": false,
+          "title": "बीबीसी दुनिया देखने के लिए यहाँ क्लिक करें",
+          "firstPublished": "",
+          "lastPublished": "",
+          "link": "https://www.bbc.com/hindi/bbc_hindi_tv/tv_programmes/w13xttlw",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c5f6/live/11c27630-24a7-11ef-a13a-0b8c563da930.png.webp",
+          "description": "देखिए सोमवार से शुक्रवार हर रात 10 बजे से BBC News Hindi  के होम पेज पर.",
+          "imageAlt": "बीबीसी दुनिया देखने के लिए यहाँ क्लिक करें",
+          "id": "https%3A%2F%2Fwww.bbc.com%2Fkyrgyz%2Fbbc_kyrgyz_tv%2Ftv_programmes%2Fw13xttqx%3Flimit%3D4",
+          "visualProminence": "NORMAL"
+        }
+      ],
+      "activePage": 1,
+      "pageCount": 1,
+      "curationId": "urn:bbc:tipo:list:2323cbdf-5d76-425c-94e0-fe743831ce17",
+      "curationType": "tipo-curation",
+      "position": 7,
+      "title": "बीबीसी दुनिया",
+      "visualProminence": "MAXIMUM",
+      "visualStyle": "BANNER"
+    },
+    {
+      "summaries": [
+        {
+          "type": "article",
+          "isLive": false,
+          "title": "रवींद्र जडेजा ने सिर्फ़ तीन दिन में वेस्टइंडीज़ के ख़िलाफ़ कैसे लिख दी जीत की पटकथा",
+          "firstPublished": "2025-10-04T11:47:03.475Z",
+          "lastPublished": "2025-10-04T11:47:03.475Z",
+          "link": "https://www.bbc.com/hindi/articles/ce3yq288epjo",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a00a/live/a0e87100-a10d-11f0-807b-c1a7ae4b635d.jpg.webp",
+          "description": "रवींद्र जडेजा ने एक बार फिर साबित कर दिया कि वह टीम के अहम खिलाड़ियों में से एक हैं. चाहे गेंदबाज़ी हो, बल्लेबाजी या फ़ील्डिंग, जडेजा ने हर डिपार्टमेंट में अपने शानदार प्रदर्शन से जीत में अहम भूमिका निभाई.",
+          "imageAlt": "रवींद्र जडेजा",
+          "id": "ce3yq288epjo",
+          "readTime": 7
+        },
+        {
+          "type": "article",
+          "isLive": false,
+          "title": "पाकिस्तान की पूर्व क्रिकेटर सना मीर के किस बयान पर विवाद हो गया",
+          "firstPublished": "2025-10-03T06:49:53.471Z",
+          "lastPublished": "2025-10-03T06:49:53.471Z",
+          "link": "https://www.bbc.com/hindi/articles/cm2d0108lmno",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/6bc5/live/5d82b160-a01c-11f0-a161-ab40661a802f.jpg.webp",
+          "description": "महिला क्रिकेट वर्ल्ड कप के दौरान पाकिस्तान की पूर्व कप्तान और अब कमेंटेंटर सना मीर ने ऐसी टिप्पणी की, जिसे लोग क्रिकेट में सियासत घुसाने की कोशिश कह रहे हैं. ",
+          "imageAlt": "पाकिस्तान की महिला क्रिकेट टीम की पूर्व कप्तान और अब कमेंटेंटर सना मीर",
+          "id": "cm2d0108lmno",
+          "readTime": 9
+        },
+        {
+          "type": "article",
+          "isLive": false,
+          "title": "मोहसिन नक़वी ने एशिया कप ट्रॉफ़ी भारत को सौंपने को लेकर ये कहा",
+          "firstPublished": "2025-10-02T05:25:34.709Z",
+          "lastPublished": "2025-10-02T05:25:34.709Z",
+          "link": "https://www.bbc.com/hindi/articles/cq65pdejg18o",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c947/live/8e71fd70-9cee-11f0-92db-77261a15b9d2.jpg.webp",
+          "description": "भारतीय टीम ने एशिया कप जीतने के बाद ट्रॉफ़ी लेने से इनकार कर दिया था. ट्रॉफ़ी एशियाई क्रिकेट परिषद के अध्यक्ष मोहसिन नक़वी देने वाले थे.",
+          "imageAlt": "तस्वीर में नज़र आ रहे शख़्स मोहसिन नक़वी हैं.",
+          "id": "cq65pdejg18o",
+          "readTime": 6
+        },
+        {
+          "type": "article",
+          "isLive": false,
+          "title": "तिलक वर्मा की कहानी: पिता बनाना चाहते थे डॉक्टर, वो बन गए क्रिकेटर",
+          "firstPublished": "2025-10-01T15:20:31.017Z",
+          "lastPublished": "2025-10-01T15:20:31.017Z",
+          "link": "https://www.bbc.com/hindi/articles/cjedpdjgy1po",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/14f6/live/c55e0350-9ed9-11f0-928c-71dbb8619e94.jpg.webp",
+          "description": "तिलक वर्मा ने 11 साल की उम्र में क्रिकेट खेलना शुरू किया और साथ ही अपनी पढ़ाई भी जारी रखी. पिता चाहते थे कि बेटा डॉक्टर बने लेकिन तिलक ने क्रिकेट की राह चुनी.",
+          "imageAlt": "अपने पिता के साथ तिलक वर्मा",
+          "id": "cjedpdjgy1po",
+          "readTime": 5
+        }
+      ],
+      "activePage": 1,
+      "pageCount": 40,
+      "link": "https://www.bbc.com/hindi/topics/cwr9j8g1kj9t",
+      "curationId": "urn:bbc:vivo:curation:082ded67-cb5f-4606-8769-5b1cf48e44a1",
+      "curationType": "vivo-stream",
+      "position": 11,
+      "title": "खेल",
+      "visualProminence": "LOW",
+      "visualStyle": "FEED"
+    },
+    {
+      "summaries": [
+        {
+          "type": "link",
+          "isLive": false,
+          "title": "WhatsApp",
+          "firstPublished": "",
+          "lastPublished": "",
+          "link": "https://bit.ly/4gA4bwJ",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7a76/live/81f7b470-eac7-11ee-9410-0f893255c2a0.png.webp",
+          "imageAlt": "WhatsApp",
+          "id": "https%3A%2F%2Fwhatsapp.com%2Fchannel%2F0029VaUm1Ss3WHTbgIXrjw3D",
+          "visualProminence": "NORMAL"
+        },
+        {
+          "type": "link",
+          "isLive": false,
+          "title": "Facebook",
+          "firstPublished": "",
+          "lastPublished": "",
+          "link": "https://www.facebook.com/bbchindi",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c624/live/0631c950-5ee2-11ee-954a-413268577267.png.webp",
+          "imageAlt": "Facebook logo",
+          "id": "https%3A%2F%2Fwww.facebook.com%2Fbbcnewsbrasil%2F",
+          "visualProminence": "NORMAL"
+        },
+        {
+          "type": "link",
+          "isLive": false,
+          "title": "X",
+          "firstPublished": "",
+          "lastPublished": "",
+          "link": "https://x.com/BBCHindi",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/ea9e/live/bb332d90-5ee1-11ee-954a-413268577267.png.webp",
+          "imageAlt": "X logo",
+          "id": "https%3A%2F%2Ftwitter.com%2Fbbcbrasil%3Flang%3Den",
+          "visualProminence": "NORMAL"
+        },
+        {
+          "type": "link",
+          "isLive": false,
+          "title": "YouTube",
+          "firstPublished": "",
+          "lastPublished": "",
+          "link": "https://www.youtube.com/user/bbchindi",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/048e/live/ef849480-5ee1-11ee-8feb-1f7179b2c49b.png.webp",
+          "imageAlt": "YouTube logo",
+          "id": "https%3A%2F%2Fwww.youtube.com%2Fuser%2FBBCBrasil",
+          "visualProminence": "NORMAL"
+        },
+        {
+          "type": "link",
+          "isLive": false,
+          "title": "Instagram",
+          "firstPublished": "",
+          "lastPublished": "",
+          "link": "https://www.instagram.com/bbchindi/",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/df6c/live/d34c7580-5ee1-11ee-954a-413268577267.png.webp",
+          "imageAlt": "Instagram logo",
+          "id": "https%3A%2F%2Fwww.instagram.com%2Fbbcbrasil%2F%3Fhl%3Den",
+          "visualProminence": "NORMAL"
+        }
+      ],
+      "activePage": 1,
+      "pageCount": 1,
+      "curationId": "urn:bbc:tipo:list:fb0b42ad-56c3-4482-b0fc-0d03fd43c963",
+      "curationType": "tipo-curation",
+      "position": 14,
+      "title": "सोशल मीडिया पर फ़ॉलो करें",
+      "visualProminence": "NORMAL",
+      "visualStyle": "LINKS"
+    },
+    {
+      "curationId": "urn:bbc:onward-journeys:most:read?=site=News",
+      "curationType": "most-popular",
+      "position": 15,
+      "title": "सबसे अधिक पढ़ी गईं",
+      "visualProminence": "NORMAL",
+      "visualStyle": "RANKED",
+      "link": "https://www.bbc.com/hindi/popular/read",
+      "mostRead": {
+        "generated": "2025-10-06T20:10:02.020944642Z",
+        "lastRecordTimeStamp": "2025-10-06T20:08:00Z",
+        "firstRecordTimeStamp": "2025-10-06T19:53:00Z",
+        "items": [
+          {
+            "id": "urn:bbc:optimo:asset:cvg4yp98vk4o",
+            "rank": 1,
+            "title": "सुप्रीम कोर्ट में चीफ़ जस्टिस पर हमले की कोशिश, पीएम मोदी ने कहा, 'घटना से हर भारतीय आक्रोशित'",
+            "href": "https://www.bbc.com/hindi/articles/cvg4yp98vk4o",
+            "timestamp": "2025-10-06T15:22:22.361Z",
+            "images": {
+              "defaultPromoImage": {
+                "blocks": [
+                  {
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "सीजेआई गवई",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "सीजेआई गवई",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "rawImage",
+                    "model": {
+                      "width": 1916,
+                      "height": 1078,
+                      "locator": "853b/live/079f2460-a2d1-11f0-928c-71dbb8619e94.jpg",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "ANI",
+                      "suitableForSyndication": false
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "6c5dc3a4-3bcf-4a9e-92bc-07943b5c9e9b",
+            "rank": 2,
+            "title": "सेक्स वर्कर अलीशा कैसे बनीं ट्रांसजेंडरों की हेल्थ वर्कर",
+            "href": "/hindi/india-64963343",
+            "timestamp": "2023-03-20T05:31:30.000Z",
+            "indexImage": {
+              "id": "129034164",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/B43F/production/_129034164_6.png",
+              "path": "/cpsprodpb/B43F/production/_129034164_6.png",
+              "height": 549,
+              "width": 976,
+              "altText": "अलीशा",
+              "caption": "बचपन में यौन हिंसा का शिकार हुई थी अलीशा",
+              "copyrightHolder": "BBC",
+              "originCode": "cpsprodpb",
+              "allowSyndication": true,
+              "type": "image"
+            }
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cy4jz841jwko",
+            "rank": 3,
+            "title": "अमेरिका के साथ ट्रेड डील पर बोले जयशंकर- 'रेड लाइन्स का हो सम्मान', इसका क्या मतलब है?",
+            "href": "https://www.bbc.com/hindi/articles/cy4jz841jwko",
+            "timestamp": "2025-10-06T10:09:44.998Z",
+            "images": {
+              "defaultPromoImage": {
+                "blocks": [
+                  {
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "विदेश मंत्री एस. जयशंकर ",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "विदेश मंत्री एस. जयशंकर ",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "विदेश मंत्री एस. जयशंकर ",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "विदेश मंत्री एस. जयशंकर ",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "rawImage",
+                    "model": {
+                      "width": 863,
+                      "height": 486,
+                      "locator": "d169/live/f3e42d20-a286-11f0-8255-dda89af0baef.jpg",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "Getty Images",
+                      "suitableForSyndication": true
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cwywzlpgmrpo",
+            "rank": 4,
+            "title": "'वो सेक्स और समलैंगिकता पर चुटकुले सुना रहे हैं':  सऊदी अरब के विवादास्पद कॉमेडी फ़ेस्टिवल में क्या-क्या हुआ?",
+            "href": "https://www.bbc.com/hindi/articles/cwywzlpgmrpo",
+            "timestamp": "2025-10-06T05:47:08.465Z",
+            "images": {
+              "defaultPromoImage": {
+                "blocks": [
+                  {
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "आलोचकों का कहना है कि सऊदी अरब सरकार इस तरह के आयोजन मानवाधिकार संबंधी शिकायतों से ध्यान भटकाने के लिए कर रही है",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "आलोचकों का कहना है कि सऊदी अरब सरकार इस तरह के आयोजन मानवाधिकार संबंधी शिकायतों से ध्यान भटकाने के लिए कर रही है",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "आलोचकों का कहना है कि सऊदी अरब सरकार इस तरह के आयोजन मानवाधिकार संबंधी शिकायतों से ध्यान भटकाने के लिए कर रही है",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "आलोचकों का कहना है कि सऊदी अरब सरकार इस तरह के आयोजन मानवाधिकार संबंधी शिकायतों से ध्यान भटकाने के लिए कर रही है",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "rawImage",
+                    "model": {
+                      "width": 1024,
+                      "height": 576,
+                      "locator": "7fdd/live/cbc6b290-a277-11f0-b741-177e3e2c2fc7.jpg",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "AFP via Getty Images",
+                      "suitableForSyndication": true
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c931eke9qxyo",
+            "rank": 5,
+            "title": "पाकिस्तान के ख़िलाफ़ छा जाने वाली क्रांति गौड़ जिन्हें क्रिकेट खिलाने के लिए उनकी मां को गहने बेचने पड़े",
+            "href": "https://www.bbc.com/hindi/articles/c931eke9qxyo",
+            "timestamp": "2025-10-06T15:15:13.811Z",
+            "images": {
+              "defaultPromoImage": {
+                "blocks": [
+                  {
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "क्रांति गौड़",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "क्रांति गौड़",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "rawImage",
+                    "model": {
+                      "width": 562,
+                      "height": 316,
+                      "locator": "f90c/live/c7f60240-a2c9-11f0-9ae4-2361d42405e2.png",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "Action Images/Reuters",
+                      "suitableForSyndication": true
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c5y50d1lj22o",
+            "rank": 6,
+            "title": "सेना प्रमुख जनरल उपेंद्र द्विवेदी के भूगोल वाले बयान पर बोली पाकिस्तान की सेना",
+            "href": "https://www.bbc.com/hindi/articles/c5y50d1lj22o",
+            "timestamp": "2025-10-05T04:22:39.880Z",
+            "images": {
+              "defaultPromoImage": {
+                "blocks": [
+                  {
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "भारत के सेना प्रमुख जनरल उपेंद्र द्विवेदी के 'ऑपरेशन सिंदूर' पर दिया गया ताज़ा बयान सुर्ख़ियों में है",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "भारत के सेना प्रमुख जनरल उपेंद्र द्विवेदी के 'ऑपरेशन सिंदूर' पर दिया गया ताज़ा बयान सुर्ख़ियों में है",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "भारत के सेना प्रमुख उपेंद्र द्विवेदी के ऑपरेशन सिंदूर पर दिए गए ताज़ा बयान सुर्खियों में है. ",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "भारत के सेना प्रमुख उपेंद्र द्विवेदी के ऑपरेशन सिंदूर पर दिए गए ताज़ा बयान सुर्खियों में है. ",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "rawImage",
+                    "model": {
+                      "width": 1024,
+                      "height": 576,
+                      "locator": "33f3/live/9f3f8740-a1a2-11f0-abd0-75687b3219fc.jpg",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "Getty Images",
+                      "suitableForSyndication": true
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c0ez2z5wd7qo",
+            "rank": 7,
+            "title": "महात्मा गांधी और उनके सबसे बड़े बेटे हरिलाल के बीच क्यों थी इतनी दूरियाँ?",
+            "href": "https://www.bbc.com/hindi/articles/c0ez2z5wd7qo",
+            "timestamp": "2025-10-02T02:03:38.538Z",
+            "images": {
+              "defaultPromoImage": {
+                "blocks": [
+                  {
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "महात्मा गांधी सिर्फ़ 19 साल के थे जब उनके सबसे बड़े बेटे हरिलाल गांधी का जन्म हुआ था",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "महात्मा गांधी सिर्फ़ 19 साल के थे जब उनके सबसे बड़े बेटे हरिलाल गांधी का जन्म हुआ था",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "महात्मा गांधी और हरिलाल",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "महात्मा गांधी और हरिलाल",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "rawImage",
+                    "model": {
+                      "width": 1920,
+                      "height": 1080,
+                      "locator": "8216/live/ba6b06f0-9ede-11f0-b741-177e3e2c2fc7.jpg",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "Getty Image/Roli Books",
+                      "suitableForSyndication": true
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "607dcb7f-77a9-f245-801a-cf72ed034c2d",
+            "rank": 8,
+            "title": "सेक्स को लेकर हैं परेशान? जानें ये चार बातें",
+            "href": "/hindi/science-38787031",
+            "timestamp": "2017-01-29T04:56:22.000Z",
+            "indexImage": {
+              "id": "93856198",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/15C4D/production/_93856198_43c0d5f8-2042-4da5-98cc-01cd9d553bbf.jpg",
+              "path": "/cpsprodpb/15C4D/production/_93856198_43c0d5f8-2042-4da5-98cc-01cd9d553bbf.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "युवा जोड़ी",
+              "copyrightHolder": "Getty Images",
+              "originCode": "cpsprodpb",
+              "type": "image"
+            }
+          },
+          {
+            "id": "9e6bfeed-0448-644c-af75-83ceea471b2e",
+            "rank": 9,
+            "title": "8 साल तक 'सेक्स स्लेव', कैमरे से रिकॉर्डिंग",
+            "href": "/hindi/international-39519416",
+            "timestamp": "2017-04-09T14:38:26.000Z",
+            "indexImage": {
+              "id": "95490465",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/DC59/production/_95490465_fotorcreated.jpg",
+              "path": "/cpsprodpb/DC59/production/_95490465_fotorcreated.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "कीथ बेकर और कैरोलिन बेकर",
+              "caption": "महिला को सेक्स स्लेव बनाकर उत्पीड़न करने वाले बेकर दंपती",
+              "copyrightHolder": "PACEMAKER/PSNI",
+              "originCode": "cpsprodpb",
+              "type": "image"
+            }
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cy0v7zp8v7yo",
+            "rank": 10,
+            "title": "भूमि पेडनेकर जूझ रही हैं स्किन की इस बीमारी से, जानिए क्या है इसका इलाज",
+            "href": "https://www.bbc.com/hindi/articles/cy0v7zp8v7yo",
+            "timestamp": "2025-10-06T02:38:02.619Z",
+            "images": {
+              "defaultPromoImage": {
+                "blocks": [
+                  {
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "बॉलीवुड अभिनेत्री भूमि पेडनेकर ने बताया कि वो एक्ज़िमा से जूझ रही हैं",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "बॉलीवुड अभिनेत्री भूमि पेडनेकर ने बताया कि वो एक्ज़िमा से जूझ रही हैं",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "बॉलीवुड अभिनेत्री भूमि पेडनेकर ने बताया कि वो एक्ज़िमा से जूझ रही हैं",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "बॉलीवुड अभिनेत्री भूमि पेडनेकर ने बताया कि वो एक्ज़िमा से जूझ रही हैं",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "rawImage",
+                    "model": {
+                      "width": 886,
+                      "height": 498,
+                      "locator": "d3a8/live/acd517b0-a25d-11f0-aa56-872bcc255edb.jpg",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "Getty Images",
+                      "suitableForSyndication": true
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "atiAnalytics": {
+      "contentId": "urn:bbc:tipo:topic:c6z8lgd39q7t",
+      "contentType": "index-home",
+      "pageIdentifier": "hindi.page",
+      "pageTitle": "BBC News हिंदी"
+    },
+    "type": "home"
+  }
+}

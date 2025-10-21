@@ -83,6 +83,16 @@ export const service: DefaultServiceConfig = {
       relatedContent: 'এই খবর নিয়ে আরো তথ্য',
       relatedTopics: 'সম্পর্কিত বিষয়',
       moreOnThis: '',
+      liteSite: {
+        onboardingMessage:
+          'আপনি এই ওয়েবসাইটের একটি টেক্সট(লিখিত) সংস্করণ দেখছেন, যা কম ডেটা ব্যবহার করছে। ছবি ও ভিডিওসহ মূল সংস্করণ দেখতে এখানে ক্লিক করুন',
+        toMainSite: 'আমাকে মূল ওয়েবসাইটে/সংস্করণে নিয়ে যান',
+        informationPage: 'এই ডেটা-সাশ্রয়ী সংস্করণ সম্পর্কে আরও জানুন',
+        informationPageLink:
+          'https://www.bbc.com/bengali/articles/c4g0e7v63ywo',
+        dataSaving: 'কম ডেটা ব্যবহার করতে শুধু টেক্সট পড়ুনs',
+        articleDataSavingLinkText: 'কম ডেটা ব্যবহার করতে শুধু টেক্সট পড়ুন',
+      },
       navMenuText: 'সেকশন',
       mediaAssetPage: {
         mediaPlayer: 'মিডিয়া প্লেয়ার',
@@ -249,6 +259,7 @@ export const service: DefaultServiceConfig = {
         duration: 'স্থিতিকাল',
         recentEpisodes: 'পুরনো অনুষ্ঠান',
         closeVideo: 'বন্ধ করুন',
+        endOfContentClose: 'এই কনটেন্টের শেষ। বন্ধ করুন',
       },
       socialEmbed: {
         caption: {
@@ -308,7 +319,7 @@ export const service: DefaultServiceConfig = {
         text: 'বিবিসির ওপর কেন আপনি আস্থা রাখতে পারেন',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'বাইরের লিংক সম্পর্কে বিবিসির দৃষ্টিভঙ্গি সম্বন্ধে পড়ুন।',
       },
       links: [

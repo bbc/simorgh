@@ -294,8 +294,8 @@ describe('buildSettings', () => {
             skin: 'classic',
             controls: {
               enabled: true,
-              includeNextButton: true,
-              includePreviousButton: true,
+              includeNextButton: false,
+              includePreviousButton: false,
             },
             locale: { lang: 'sr-latn' },
             subtitles: { defaultOn: true, enabled: true },

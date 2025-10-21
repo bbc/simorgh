@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`should render SansBold correctly for afaanoromoo 1`] = `
 "
@@ -68,6 +68,14 @@ exports[`should render SansBold correctly for cymrufyw 1`] = `
 "
    font-family: ReithSans, Helvetica, Arial, sans-serif;
    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for dari 1`] = `
+"
+    font-family: "BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
    font-style: normal;
   "
 `;
@@ -145,6 +153,14 @@ exports[`should render SansBold correctly for kyrgyz 1`] = `
 `;
 
 exports[`should render SansBold correctly for learningenglish 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for magyarul 1`] = `
 "
    font-family: ReithSans, Helvetica, Arial, sans-serif;
    font-weight: 700;
@@ -488,6 +504,14 @@ exports[`should render SansBoldItalic correctly for cymrufyw 1`] = `
   "
 `;
 
+exports[`should render SansBoldItalic correctly for dari 1`] = `
+"
+    font-family: "BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
 exports[`should render SansBoldItalic correctly for gahuza 1`] = `
 "
     font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
@@ -561,6 +585,14 @@ exports[`should render SansBoldItalic correctly for kyrgyz 1`] = `
 `;
 
 exports[`should render SansBoldItalic correctly for learningenglish 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for magyarul 1`] = `
 "
    font-family: ReithSans, Helvetica, Arial, sans-serif;
    font-weight: 700;
@@ -904,6 +936,14 @@ exports[`should render SansLight correctly for cymrufyw 1`] = `
   "
 `;
 
+exports[`should render SansLight correctly for dari 1`] = `
+"
+    font-family: "BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
 exports[`should render SansLight correctly for gahuza 1`] = `
 "
     font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
@@ -977,6 +1017,14 @@ exports[`should render SansLight correctly for kyrgyz 1`] = `
 `;
 
 exports[`should render SansLight correctly for learningenglish 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for magyarul 1`] = `
 "
    font-family: ReithSans, Helvetica, Arial, sans-serif;
    font-weight: 300;
@@ -1320,6 +1368,14 @@ exports[`should render SansRegular correctly for cymrufyw 1`] = `
   "
 `;
 
+exports[`should render SansRegular correctly for dari 1`] = `
+"
+    font-family: "BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
 exports[`should render SansRegular correctly for gahuza 1`] = `
 "
     font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
@@ -1393,6 +1449,14 @@ exports[`should render SansRegular correctly for kyrgyz 1`] = `
 `;
 
 exports[`should render SansRegular correctly for learningenglish 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for magyarul 1`] = `
 "
    font-family: ReithSans, Helvetica, Arial, sans-serif;
    font-weight: 400;
@@ -1736,6 +1800,14 @@ exports[`should render SansRegularItalic correctly for cymrufyw 1`] = `
   "
 `;
 
+exports[`should render SansRegularItalic correctly for dari 1`] = `
+"
+    font-family: "BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
 exports[`should render SansRegularItalic correctly for gahuza 1`] = `
 "
     font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
@@ -1809,6 +1881,14 @@ exports[`should render SansRegularItalic correctly for kyrgyz 1`] = `
 `;
 
 exports[`should render SansRegularItalic correctly for learningenglish 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for magyarul 1`] = `
 "
    font-family: ReithSans, Helvetica, Arial, sans-serif;
    font-weight: 400;
@@ -2152,6 +2232,14 @@ exports[`should render SerifBold correctly for cymrufyw 1`] = `
   "
 `;
 
+exports[`should render SerifBold correctly for dari 1`] = `
+"
+    font-family: "BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
 exports[`should render SerifBold correctly for gahuza 1`] = `
 "
     font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
@@ -2225,6 +2313,14 @@ exports[`should render SerifBold correctly for kyrgyz 1`] = `
 `;
 
 exports[`should render SerifBold correctly for learningenglish 1`] = `
+"
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for magyarul 1`] = `
 "
     font-family: ReithSerif, Helvetica, Arial, sans-serif;
     font-weight: 700;
@@ -2568,6 +2664,14 @@ exports[`should render SerifLight correctly for cymrufyw 1`] = `
   "
 `;
 
+exports[`should render SerifLight correctly for dari 1`] = `
+"
+    font-family: "BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
 exports[`should render SerifLight correctly for gahuza 1`] = `
 "
     font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
@@ -2641,6 +2745,14 @@ exports[`should render SerifLight correctly for kyrgyz 1`] = `
 `;
 
 exports[`should render SerifLight correctly for learningenglish 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for magyarul 1`] = `
 "
    font-family: ReithSerif, Helvetica, Arial, sans-serif;
    font-weight: 300;
@@ -2984,6 +3096,14 @@ exports[`should render SerifMedium correctly for cymrufyw 1`] = `
   "
 `;
 
+exports[`should render SerifMedium correctly for dari 1`] = `
+"
+    font-family: "BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
 exports[`should render SerifMedium correctly for gahuza 1`] = `
 "
     font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
@@ -3057,6 +3177,14 @@ exports[`should render SerifMedium correctly for kyrgyz 1`] = `
 `;
 
 exports[`should render SerifMedium correctly for learningenglish 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for magyarul 1`] = `
 "
    font-family: ReithSerif, Helvetica, Arial, sans-serif;
    font-weight: 500;
@@ -3400,6 +3528,14 @@ exports[`should render SerifMediumItalic correctly for cymrufyw 1`] = `
   "
 `;
 
+exports[`should render SerifMediumItalic correctly for dari 1`] = `
+"
+    font-family: "BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
 exports[`should render SerifMediumItalic correctly for gahuza 1`] = `
 "
     font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
@@ -3473,6 +3609,14 @@ exports[`should render SerifMediumItalic correctly for kyrgyz 1`] = `
 `;
 
 exports[`should render SerifMediumItalic correctly for learningenglish 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for magyarul 1`] = `
 "
    font-family: ReithSerif, Helvetica, Arial, sans-serif;
    font-weight: 500;
@@ -3816,6 +3960,14 @@ exports[`should render SerifRegular correctly for cymrufyw 1`] = `
   "
 `;
 
+exports[`should render SerifRegular correctly for dari 1`] = `
+"
+    font-family: "BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
 exports[`should render SerifRegular correctly for gahuza 1`] = `
 "
     font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
@@ -3889,6 +4041,14 @@ exports[`should render SerifRegular correctly for kyrgyz 1`] = `
 `;
 
 exports[`should render SerifRegular correctly for learningenglish 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for magyarul 1`] = `
 "
    font-family: ReithSerif, Helvetica, Arial, sans-serif;
    font-weight: 400;

@@ -34,7 +34,7 @@ const useCustomEventTracker = ({ eventName }: CustomEventData) => {
   const { service, useReverb } = use(ServiceContext);
 
   const trackEvent = useCallback(
-    async (stringifiedData?: string) => {
+    async (stringifiedData: string) => {
       if (!trackingIsEnabled || !eventName) return;
 
       const shouldSendEvent = [

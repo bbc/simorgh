@@ -90,6 +90,7 @@ const CanonicalRadioSchedule = ({
   radioSchedule,
   lang = null,
   className = '',
+  eventTrackingData,
 }) => {
   const {
     service,
@@ -128,7 +129,11 @@ const CanonicalRadioSchedule = ({
         {header}
       </RadioScheduleSectionLabel>
       <RadioScheduleWrapper data-e2e="radio-schedule">
-        <RadioSchedule schedule={radioSchedule} durationLabel={durationLabel} />
+        <RadioSchedule
+          schedule={radioSchedule}
+          durationLabel={durationLabel}
+          eventTrackingData={eventTrackingData}
+        />
         {frequenciesPageUrl && (
           <RadioFrequencyLink
             href={frequenciesPageUrl}

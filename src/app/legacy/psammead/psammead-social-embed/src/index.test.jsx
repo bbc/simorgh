@@ -469,6 +469,6 @@ describe('AmpSocialEmbed', () => {
         service="news"
       />,
     );
-    expect(container).toMatchSnapshot();
+    expect(container.firstChild).toBeNull();
   });
 });

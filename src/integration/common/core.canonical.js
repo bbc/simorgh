@@ -7,9 +7,9 @@ export default () => {
       'g',
     );
     const bbcOriginScripts = Array.from(
-      document.querySelectorAll('script[src]'),
+      Array.from(document.querySelectorAll('script[src]')),
     ).filter(script =>
-      script.getAttribute('src').startsWith('http://localhost:7080'),
+      script.getAttribute('src').startsWith('http://localhost'),
     );
 
     bbcOriginScripts.forEach(bbcOriginScript => {
@@ -23,9 +23,9 @@ export default () => {
       'g',
     );
     const bbcOriginScripts = Array.from(
-      document.querySelectorAll('script[src]'),
+      Array.from(document.querySelectorAll('script[src]')),
     ).filter(script =>
-      script.getAttribute('src').startsWith('http://localhost:7080'),
+      script.getAttribute('src').startsWith('http://localhost'),
     );
     const serviceScripts = bbcOriginScripts.filter(script =>
       bundleScriptMatcher.test(script.getAttribute('src')),

@@ -172,66 +172,7 @@ export const topStoriesMediaContentItem = {
 } as unknown as TopStoryItem;
 
 export const topStoriesList = [
-  {
-    headlines: {
-      headline: 'Covid antibodies in 1 in 10 people in December',
-    },
-    locators: {
-      assetUri: '/news/health-55718213',
-      cpsUrn: 'urn:bbc:content:assetUri:news/health-55718213',
-      curie: 'http://www.bbc.co.uk/asset/79594850-7b04-4cd8-9bd4-be7c7f777b63',
-      assetId: '55718213',
-    },
-    summary:
-      'Some 10% of the UK population is showing signs of recent infection, a doubling since October, says ONS.',
-    timestamp: 1611056806000,
-    language: 'en-gb',
-    byline: {
-      name: 'By Rachel Schraer',
-      title: 'Health reporter ',
-      persons: [
-        {
-          name: 'Rachel Schraer',
-          function: 'Health reporter',
-          twitterName: 'rachelschraer',
-        },
-      ],
-    },
-    passport: {
-      category: {
-        categoryId:
-          'http://www.bbc.co.uk/ontologies/applicationlogic-news/News',
-        categoryName: 'News',
-      },
-      taggings: [],
-    },
-    cpsType: 'STY',
-    indexImage: {
-      id: '116575818',
-      subType: 'index',
-      href: 'http://c.files.bbci.co.uk/13FC1/production/_116575818_gettyimages-1219867193.jpg',
-      path: '/cpsprodpb/13FC1/production/_116575818_gettyimages-1219867193.jpg',
-      height: 549,
-      width: 976,
-      altText: 'test tubes',
-      copyrightHolder: 'Getty Images',
-      type: 'image',
-    },
-    options: {
-      isBreakingNews: false,
-      isFactCheck: false,
-    },
-    prominence: 'standard',
-    section: {
-      subType: 'IDX',
-      name: 'Health',
-      uri: '/news/health',
-      type: 'simple',
-    },
-    includeComments: true,
-    id: 'urn:bbc:ares::asset:news/health-55718213',
-    type: 'cps',
-  },
+  { ...topStoriesItem },
   {
     headlines: {
       headline: "Covid death toll in UK 'now close to 96,000'",
@@ -345,66 +286,7 @@ export const topStoriesList = [
 ] as unknown as TopStoryItem[];
 
 export const topStoriesSingleItem = [
-  {
-    headlines: {
-      headline: 'Covid antibodies in 1 in 10 people in December',
-    },
-    locators: {
-      assetUri: '/news/health-55718213',
-      cpsUrn: 'urn:bbc:content:assetUri:news/health-55718213',
-      curie: 'http://www.bbc.co.uk/asset/79594850-7b04-4cd8-9bd4-be7c7f777b63',
-      assetId: '55718213',
-    },
-    summary:
-      'Some 10% of the UK population is showing signs of recent infection, a doubling since October, says ONS.',
-    timestamp: 1611056806000,
-    language: 'en-gb',
-    byline: {
-      name: 'By Rachel Schraer',
-      title: 'Health reporter ',
-      persons: [
-        {
-          name: 'Rachel Schraer',
-          function: 'Health reporter',
-          twitterName: 'rachelschraer',
-        },
-      ],
-    },
-    passport: {
-      category: {
-        categoryId:
-          'http://www.bbc.co.uk/ontologies/applicationlogic-news/News',
-        categoryName: 'News',
-      },
-      taggings: [],
-    },
-    cpsType: 'STY',
-    indexImage: {
-      id: '116575818',
-      subType: 'index',
-      href: 'http://c.files.bbci.co.uk/13FC1/production/_116575818_gettyimages-1219867193.jpg',
-      path: '/cpsprodpb/13FC1/production/_116575818_gettyimages-1219867193.jpg',
-      height: 549,
-      width: 976,
-      altText: 'test tubes',
-      copyrightHolder: 'Getty Images',
-      type: 'image',
-    },
-    options: {
-      isBreakingNews: false,
-      isFactCheck: false,
-    },
-    prominence: 'standard',
-    section: {
-      subType: 'IDX',
-      name: 'Health',
-      uri: '/news/health',
-      type: 'simple',
-    },
-    includeComments: true,
-    id: 'urn:bbc:ares::asset:news/health-55718213',
-    type: 'cps',
-  },
+  { ...topStoriesItem },
 ] as unknown as TopStoryItem[];
 
 export const topStoriesListRtl = [

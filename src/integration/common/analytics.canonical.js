@@ -1,17 +1,10 @@
 /* eslint-disable no-restricted-syntax */
 export default () => {
   describe('Analytics', () => {
-    const noscriptImage = document.querySelector('noscript');
+    const noscriptImage = document.querySelector('noscript#analytics-noscript');
 
-    const parser = new DOMParser();
-    const [img] = parser.parseFromString(
-      noscriptImage.innerHTML,
-      'text/html',
-    ).images;
-    const src = img.getAttribute('src');
-    const srcUrl = new URL(src);
-
-    img.removeAttribute('src');
+    const src = noscriptImage.innerHTML.match(/src="([^"]+)"/)?.[1];
+    const srcUrl = new URL(src.replaceAll('&amp;', '&'));
 
     describe('ATI', () => {
       describe('tracking pixel', () => {
@@ -20,6 +13,7 @@ export default () => {
         });
 
         it('excluding src', () => {
+          const img = noscriptImage.innerHTML.replaceAll(`src="${src}"`, '');
           expect(img).toMatchSnapshot();
         });
 

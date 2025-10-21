@@ -230,6 +230,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Thời lượng',
         recentEpisodes: 'Xem thêm',
         closeVideo: 'Thoát',
+        endOfContentClose: 'Kết thúc nội dung. Thoát',
       },
       socialEmbed: {
         caption: {
@@ -286,7 +287,7 @@ export const service: DefaultServiceConfig = {
         text: 'Tại sao bạn có thể tin tưởng BBC News',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài',
       },
       links: [

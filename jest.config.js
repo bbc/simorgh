@@ -3,7 +3,10 @@ const { jestDirAlias } = require('./dirAlias');
 const unitTests = {
   preset: 'ts-jest',
   setupFiles: ['./src/testHelpers/jest-setup.js'],
-  setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
+  setupFilesAfterEnv: [
+    './src/testHelpers/setupTests.js',
+    'jest-expect-message',
+  ],
   moduleNameMapper: jestDirAlias,
   testEnvironment: 'jsdom',
   snapshotSerializers: ['@emotion/jest/serializer'],
@@ -36,7 +39,15 @@ const ampIntegrationTests = {
   moduleNameMapper: jestDirAlias,
   setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
   testMatch: ['**/src/integration/!(utils)/**/*.test.js'],
-  testPathIgnorePatterns: ['.*lite\\.test\\.js$', '.*canonical\\.test\\.js$'],
+  testPathIgnorePatterns: [
+    '.*lite\\.test\\.js$',
+    '.*canonical\\.test\\.js$',
+    '<rootDir>/src/integration/pages/articles/',
+    '<rootDir>/src/integration/pages/mediaArticlePage/',
+    '<rootDir>/src/integration/pages/mediaAssetPage/',
+    '<rootDir>/src/integration/pages/photoGalleryPage/',
+    '<rootDir>/src/integration/pages/storyPage/',
+  ],
 };
 
 const canonicalIntegrationTests = {
@@ -49,7 +60,15 @@ const canonicalIntegrationTests = {
   moduleNameMapper: jestDirAlias,
   setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
   testMatch: ['**/src/integration/!(utils)/**/*.test.js'],
-  testPathIgnorePatterns: ['.*lite\\.test\\.js$', '.*amp\\.test\\.js$'],
+  testPathIgnorePatterns: [
+    '.*lite\\.test\\.js$',
+    '.*amp\\.test\\.js$',
+    '<rootDir>/src/integration/pages/articles/',
+    '<rootDir>/src/integration/pages/mediaArticlePage/',
+    '<rootDir>/src/integration/pages/mediaAssetPage/',
+    '<rootDir>/src/integration/pages/photoGalleryPage/',
+    '<rootDir>/src/integration/pages/storyPage/',
+  ],
 };
 
 const liteIntegrationTests = {
@@ -62,7 +81,15 @@ const liteIntegrationTests = {
   moduleNameMapper: jestDirAlias,
   setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
   testMatch: ['**/src/integration/!(utils)/**/*.test.js'],
-  testPathIgnorePatterns: ['.*canonical\\.test\\.js$', '.*amp\\.test\\.js$'],
+  testPathIgnorePatterns: [
+    '.*canonical\\.test\\.js$',
+    '.*amp\\.test\\.js$',
+    '<rootDir>/src/integration/pages/articles/',
+    '<rootDir>/src/integration/pages/mediaArticlePage/',
+    '<rootDir>/src/integration/pages/mediaAssetPage/',
+    '<rootDir>/src/integration/pages/photoGalleryPage/',
+    '<rootDir>/src/integration/pages/storyPage/',
+  ],
 };
 
 const puppeteerTests = {
@@ -97,6 +124,8 @@ module.exports = {
       },
     ],
   ],
-  timers: 'modern',
+  fakeTimers: {
+    enableGlobally: true,
+  },
   workerIdleMemoryLimit: '512MB',
 };

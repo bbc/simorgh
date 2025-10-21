@@ -12,7 +12,7 @@ const usePWAInstallTracker = () => {
   useEffect(() => {
     const handleAppInstalled = () => {
       if (!trackRef.current) {
-        trackEvent();
+        trackEvent('');
         trackRef.current = true;
       }
     };

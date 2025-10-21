@@ -165,8 +165,8 @@ export default () => {
     });
 
     describe('Linked data', () => {
-      const schemaScripts = document.querySelectorAll(
-        'head > script[type="application/ld+json"]',
+      const schemaScripts = Array.from(
+        document.querySelectorAll('head > script[type="application/ld+json"]'),
       );
 
       schemaScripts.forEach(script => {
@@ -187,11 +187,11 @@ export default () => {
     });
 
     describe('Apple Touch Icon', () => {
-      const touchIconScript = document.querySelectorAll(
-        'head > link[rel="apple-touch-icon"]',
+      const touchIconScripts = Array.from(
+        document.querySelectorAll('head > link[rel="apple-touch-icon"]'),
       );
 
-      touchIconScript.forEach(script => {
+      touchIconScripts.forEach(script => {
         const url = script.getAttribute('href');
         const sizes = script.getAttribute('sizes');
 

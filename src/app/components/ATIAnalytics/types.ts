@@ -34,6 +34,7 @@ export interface ATIData {
   ampExperimentName?: string;
   experimentName?: string | null;
   experimentVariant?: string | null;
+  readTimeMilliseconds?: number | null;
 }
 
 export interface PageData {
@@ -149,7 +150,7 @@ export interface ATIAnalyticsProps {
 
 export interface ATIEventTrackingProps {
   campaignID?: string;
-  componentName?: string;
+  componentName: string;
   format?: string;
   pageIdentifier?: string;
   platform?: Platforms;
@@ -178,11 +179,17 @@ export interface ItemTracker {
   position?: number;
   duration?: number;
   resourceId?: string;
+  label?: string;
+  mediaType?: string;
 }
 
 export interface GroupTracker {
-  itemCount?: number;
+  name?: string;
+  type?: string;
+  position?: string | number;
   resourceId?: string;
+  itemCount?: number;
+  link?: string;
 }
 
 export interface ATIPageTrackingProps {
@@ -207,6 +214,7 @@ export interface ATIPageTrackingProps {
   ampExperimentName?: string;
   experimentName?: string | null;
   experimentVariant?: string | null;
+  readTimeMilliseconds?: number | null;
 }
 
 export interface ATIProps {

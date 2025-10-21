@@ -196,7 +196,6 @@ const directives = {
     ],
     canonicalLive: [
       ...bbcDomains,
-      'https://*.wearehearken.eu',
       'https://*.chartbeat.com',
       'https://*.twitter.com', // Social Embeds
       'https://www.instagram.com', // Social Embeds
@@ -226,10 +225,10 @@ const directives = {
     ],
     canonicalNonLive: [
       ...bbcDomains,
-      'https://*.wearehearken.eu',
       'https://*.chartbeat.com',
       'http://*.chartbeat.com', // for localhost canonical connecting via http
       'http://localhost:1124', // for localhost canonical JavaScript
+      'http://localhost:7080', // for localhost self-hosted Reverb JavaScript
       'https://*.twitter.com', // Social Embeds
       'https://www.instagram.com', // Social Embeds
       'https://www.tiktok.com', // Social Embeds
@@ -245,6 +244,7 @@ const directives = {
       ...advertisingDirectives.scriptSrc,
       "'self'",
       "'unsafe-inline'",
+      "'unsafe-eval'",
     ],
   },
   styleSrc: {
@@ -285,79 +285,136 @@ const directives = {
   },
 };
 
-export const generateChildSrc = ({ isAmp }) => (isAmp ? ['blob:'] : ["'self'"]);
+export const generateChildSrc = ({ isAmp, shouldServeLimitedCsp = false }) => {
+  if (shouldServeLimitedCsp) return ["blob: https: 'self'"];
 
-export const generateConnectSrc = () => {
-  return ["'self' https:"];
+  return isAmp ? ['blob:'] : ["'self'"];
 };
 
-export const generateDefaultSrc = () => {
+export const generateConnectSrc = ({
+  isLive,
+  shouldServeLimitedCsp = false,
+}) => {
+  if (shouldServeLimitedCsp) return ["'self' https: ws:"];
+
+  return isLive ? ["'self' https:"] : ["'self' https: ws:"];
+};
+
+export const generateDefaultSrc = ({ shouldServeLimitedCsp = false }) => {
+  if (shouldServeLimitedCsp) {
+    return [...bbcDomains, 'https:'].sort();
+  }
   return [...advertisingDirectives.defaultSrc, "'self'"].sort();
 };
 
-export const generateFontSrc = ({ isAmp, isLive }) => {
+export const generateFontSrc = ({
+  isAmp,
+  isLive,
+  shouldServeLimitedCsp = false,
+}) => {
+  if (shouldServeLimitedCsp) return ["https:  data: blob: 'self'"];
   if (!isLive && isAmp) return directives.fontSrc.ampNonLive.sort();
   if (!isLive && !isAmp) return directives.fontSrc.canonicalNonLive.sort();
   if (isLive && isAmp) return directives.fontSrc.ampLive.sort();
   return directives.fontSrc.canonicalLive.sort();
 };
 
-export const generateFrameSrc = ({ isAmp, isLive }) => {
+export const generateFrameSrc = ({
+  isAmp,
+  isLive,
+  shouldServeLimitedCsp = false,
+}) => {
+  if (shouldServeLimitedCsp) return ['https: data:'];
   if (!isLive && isAmp) return directives.frameSrc.ampNonLive.sort();
   if (!isLive && !isAmp) return directives.frameSrc.canonicalNonLive.sort();
   if (isLive && isAmp) return directives.frameSrc.ampLive.sort();
   return directives.frameSrc.canonicalLive.sort();
 };
 
-export const generateImgSrc = ({ isAmp, isLive }) => {
+export const generateImgSrc = ({
+  isAmp,
+  isLive,
+  shouldServeLimitedCsp = false,
+}) => {
+  if (shouldServeLimitedCsp) return ['https: data: blob:'];
   if (!isLive && isAmp) return directives.imgSrc.ampNonLive.sort();
   if (!isLive && !isAmp) return directives.imgSrc.canonicalNonLive.sort();
   if (isLive && isAmp) return directives.imgSrc.ampLive.sort();
   return directives.imgSrc.canonicalLive.sort();
 };
 
-export const generateMediaSrc = () => {
+export const generateMediaSrc = ({ shouldServeLimitedCsp = false }) => {
+  if (shouldServeLimitedCsp) return ["'self' blob: data: https:"];
   return ["'self' blob: https:"];
 };
 
-export const generateScriptSrc = ({ isAmp, isLive }) => {
+export const generateScriptSrc = ({
+  isAmp,
+  isLive,
+  nonce,
+  shouldServeLimitedCsp = false,
+}) => {
+  if (shouldServeLimitedCsp)
+    return ["https: 'unsafe-inline' 'unsafe-eval' blob: data: 'self'"];
+  const insertedNonce = nonce
+    ? [`'nonce-${nonce}'`, 'blob:', 'data:', "'unsafe-eval'"]
+    : [];
   if (!isLive && isAmp) return directives.scriptSrc.ampNonLive.sort();
-  if (!isLive && !isAmp) return directives.scriptSrc.canonicalNonLive.sort();
+  if (!isLive && !isAmp)
+    return [
+      ...new Set([...insertedNonce, ...directives.scriptSrc.canonicalNonLive]),
+    ].sort();
   if (isLive && isAmp) return directives.scriptSrc.ampLive.sort();
-  return directives.scriptSrc.canonicalLive.sort();
+  return [...insertedNonce, ...directives.scriptSrc.canonicalLive].sort();
 };
 
-export const generateStyleSrc = ({ isAmp, isLive }) => {
+export const generateStyleSrc = ({
+  isAmp,
+  isLive,
+  shouldServeLimitedCsp = false,
+}) => {
+  if (shouldServeLimitedCsp) return ["https: 'unsafe-inline'"];
   if (!isLive && isAmp) return directives.styleSrc.ampNonLive.sort();
   if (!isLive && !isAmp) return directives.styleSrc.canonicalNonLive.sort();
   if (isLive && isAmp) return directives.styleSrc.ampLive.sort();
   return directives.styleSrc.canonicalLive.sort();
 };
 
-export const generateWorkerSrc = ({ isAmp }) =>
-  isAmp
+export const generateWorkerSrc = ({ isAmp, shouldServeLimitedCsp = false }) => {
+  if (shouldServeLimitedCsp)
+    return ['blob:', 'data:', "'self'", '*.bbc.co.uk', '*.bbc.com'];
+  return isAmp
     ? ['blob:', '*.bbc.co.uk', '*.bbc.com']
     : ['blob:', "'self'", '*.bbc.co.uk', '*.bbc.com'];
+};
 
 /*
  * On localhost these CSP headers currently only apply on the production build.
  * `yarn build && yarn start` & visit a localhost URL.
  * View the developer console for errors.
  */
-export const cspDirectives = ({ isAmp, isLive, service }) => ({
-  directives: {
-    'default-src': generateDefaultSrc(),
-    'child-src': generateChildSrc({ isAmp }),
-    'connect-src': generateConnectSrc(),
-    'font-src': generateFontSrc({ isAmp, isLive }),
-    'frame-src': generateFrameSrc({ isAmp, isLive }),
-    'img-src': generateImgSrc({ isAmp, isLive }),
-    'script-src': generateScriptSrc({ isAmp, isLive }),
-    'style-src': generateStyleSrc({ isAmp, isLive }),
-    'media-src': generateMediaSrc(),
-    'worker-src': generateWorkerSrc({ isAmp }),
-    'report-to': 'worldsvc',
-    'upgrade-insecure-requests': [],
-  },
-  reportOnly: service === 'japanese',
-});
+export const cspDirectives = ({ isAmp, isLive, service, nonce = null }) => {
+  const shouldServeLimitedCsp = service === 'japanese';
+
+  return {
+    directives: {
+      'default-src': generateDefaultSrc(shouldServeLimitedCsp),
+      'child-src': generateChildSrc({ isAmp, shouldServeLimitedCsp }),
+      'connect-src': generateConnectSrc({ isLive, shouldServeLimitedCsp }),
+      'font-src': generateFontSrc({ isAmp, isLive, shouldServeLimitedCsp }),
+      'frame-src': generateFrameSrc({ isAmp, isLive, shouldServeLimitedCsp }),
+      'img-src': generateImgSrc({ isAmp, isLive, shouldServeLimitedCsp }),
+      'script-src': generateScriptSrc({
+        isAmp,
+        isLive,
+        nonce,
+        shouldServeLimitedCsp,
+      }),
+      'style-src': generateStyleSrc({ isAmp, isLive, shouldServeLimitedCsp }),
+      'media-src': generateMediaSrc({ shouldServeLimitedCsp }),
+      'worker-src': generateWorkerSrc({ isAmp, shouldServeLimitedCsp }),
+      'report-to': 'worldsvc',
+      'upgrade-insecure-requests': [],
+    },
+  };
+};

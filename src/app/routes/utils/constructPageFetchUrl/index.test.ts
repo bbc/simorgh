@@ -5,6 +5,7 @@ import {
   HOME_PAGE,
   LIVE_PAGE,
   LIVE_RADIO_PAGE,
+  LIVE_TV_PAGE,
   TOPIC_PAGE,
   TV_PAGE,
   UGC_PAGE,
@@ -68,18 +69,18 @@ describe('constructPageFetchUrl', () => {
 
   it.each`
     pageType           | serviceOverride | variant    | environment | pathname                                              | expected
-    ${ARTICLE_PAGE}    | ${null}         | ${null}    | ${'local'}  | ${'/ukrainian/articles/c0000000000o'}                 | ${'http://localhost/ukrainian/articles/c0000000000o'}
+    ${ARTICLE_PAGE}    | ${null}         | ${null}    | ${'local'}  | ${'/ukrainian/articles/c0000000000o'}                 | ${'http://localhost/api/local/ukrainian/articles/c0000000000o'}
     ${ARTICLE_PAGE}    | ${null}         | ${null}    | ${'test'}   | ${'/ukrainian/articles/c0000000000o'}                 | ${'https://mock-bff-path/?id=c0000000000o&service=ukrainian&pageType=article&serviceEnv=test'}
     ${ARTICLE_PAGE}    | ${null}         | ${null}    | ${'live'}   | ${'/ukrainian/articles/c0000000000o'}                 | ${'https://mock-bff-path/?id=c0000000000o&service=ukrainian&pageType=article&serviceEnv=live'}
-    ${ARTICLE_PAGE}    | ${null}         | ${'ru-UA'} | ${'local'}  | ${'/ukrainian/articles/c0000000000o'}                 | ${'http://localhost/ukrainian/articles/c0000000000o/ru-UA'}
+    ${ARTICLE_PAGE}    | ${null}         | ${'ru-UA'} | ${'local'}  | ${'/ukrainian/articles/c0000000000o'}                 | ${'http://localhost/api/local/ukrainian/articles/c0000000000o/ru-UA'}
     ${ARTICLE_PAGE}    | ${null}         | ${'ru-UA'} | ${'test'}   | ${'/ukrainian/articles/c0000000000o'}                 | ${'https://mock-bff-path/?id=c0000000000o&service=ukrainian&pageType=article&variant=ru-UA&serviceEnv=test'}
     ${ARTICLE_PAGE}    | ${null}         | ${'ru-UA'} | ${'live'}   | ${'/ukrainian/articles/c0000000000o'}                 | ${'https://mock-bff-path/?id=c0000000000o&service=ukrainian&pageType=article&variant=ru-UA&serviceEnv=live'}
-    ${ARTICLE_PAGE}    | ${null}         | ${'ru-UA'} | ${'local'}  | ${'/ukrainian/articles/c00000000000o'}                | ${'http://localhost/ukrainian/articles/c00000000000o/ru-UA'}
+    ${ARTICLE_PAGE}    | ${null}         | ${'ru-UA'} | ${'local'}  | ${'/ukrainian/articles/c00000000000o'}                | ${'http://localhost/api/local/ukrainian/articles/c00000000000o/ru-UA'}
     ${ARTICLE_PAGE}    | ${null}         | ${'ru-UA'} | ${'test'}   | ${'/ukrainian/articles/c00000000000o'}                | ${'https://mock-bff-path/?id=c00000000000o&service=ukrainian&pageType=article&variant=ru-UA&serviceEnv=test'}
     ${ARTICLE_PAGE}    | ${null}         | ${'ru-UA'} | ${'live'}   | ${'/ukrainian/articles/c00000000000o'}                | ${'https://mock-bff-path/?id=c00000000000o&service=ukrainian&pageType=article&variant=ru-UA&serviceEnv=live'}
     ${ARTICLE_PAGE}    | ${'kyrgyz'}     | ${null}    | ${'test'}   | ${'/kyrgyz/world-68767501'}                           | ${'https://mock-bff-path/?id=kyrgyz%2Fworld-68767501&service=kyrgyz&pageType=article&serviceEnv=test'}
     ${ARTICLE_PAGE}    | ${'kyrgyz'}     | ${null}    | ${'live'}   | ${'/kyrgyz/world-68767501'}                           | ${'https://mock-bff-path/?id=kyrgyz%2Fworld-68767501&service=kyrgyz&pageType=article&serviceEnv=live'}
-    ${ARTICLE_PAGE}    | ${'hausa'}      | ${null}    | ${'local'}  | ${'/hausa/news/2010/10/101020_majalisa_shugabankasa'} | ${'http://localhost/hausa/news/2010/10/101020_majalisa_shugabankasa'}
+    ${ARTICLE_PAGE}    | ${'hausa'}      | ${null}    | ${'local'}  | ${'/hausa/news/2010/10/101020_majalisa_shugabankasa'} | ${'http://localhost/api/local/hausa/legacyAssets/news/2010/10/101020_majalisa_shugabankasa'}
     ${ARTICLE_PAGE}    | ${'hausa'}      | ${null}    | ${'test'}   | ${'/hausa/news/2010/10/101020_majalisa_shugabankasa'} | ${'https://mock-bff-path/?id=hausa%2Fnews%2F2010%2F10%2F101020_majalisa_shugabankasa&service=hausa&pageType=article&serviceEnv=test'}
     ${ARTICLE_PAGE}    | ${'hausa'}      | ${null}    | ${'live'}   | ${'/hausa/news/2010/10/101020_majalisa_shugabankasa'} | ${'https://mock-bff-path/?id=hausa%2Fnews%2F2010%2F10%2F101020_majalisa_shugabankasa&service=hausa&pageType=article&serviceEnv=live'}
     ${ARTICLE_PAGE}    | ${'cymrufyw'}   | ${null}    | ${'live'}   | ${'/cymrufyw/erthyglau/c0000000000o'}                 | ${'https://mock-bff-path/?id=c0000000000o&service=cymrufyw&pageType=article&serviceEnv=live'}
@@ -88,8 +89,8 @@ describe('constructPageFetchUrl', () => {
     ${CPS_ASSET}       | ${null}         | ${null}    | ${'live'}   | ${'/ukrainian/23263889'}                              | ${'https://mock-bff-path/?id=ukrainian%2F23263889&service=ukrainian&pageType=cpsAsset&serviceEnv=live'}
     ${CPS_ASSET}       | ${null}         | ${null}    | ${'local'}  | ${'/ukrainian'}                                       | ${'http://localhost/ukrainian'}
     ${CPS_ASSET}       | ${'serbian'}    | ${'cyr'}   | ${'local'}  | ${'/serbian/cyr'}                                     | ${'http://localhost/serbian/cyr'}
-    ${HOME_PAGE}       | ${null}         | ${null}    | ${'test'}   | ${'c0000000000t'}                                     | ${'https://mock-bff-path/?id=cl13j7792ljt&service=ukrainian&pageType=home&serviceEnv=test'}
-    ${HOME_PAGE}       | ${null}         | ${null}    | ${'live'}   | ${'c0000000000t'}                                     | ${'https://mock-bff-path/?id=c3eg5kglplrt&service=ukrainian&pageType=home&serviceEnv=live'}
+    ${HOME_PAGE}       | ${null}         | ${null}    | ${'test'}   | ${'c0000000000t'}                                     | ${'https://mock-bff-path/?id=ukrainian&service=ukrainian&pageType=home&serviceEnv=test'}
+    ${HOME_PAGE}       | ${null}         | ${null}    | ${'live'}   | ${'c0000000000t'}                                     | ${'https://mock-bff-path/?id=ukrainian&service=ukrainian&pageType=home&serviceEnv=live'}
     ${LIVE_PAGE}       | ${null}         | ${null}    | ${'local'}  | ${'c0000000000t'}                                     | ${'http://localhost/api/local/ukrainian/live/c0000000000t'}
     ${LIVE_PAGE}       | ${null}         | ${null}    | ${'local'}  | ${'c0000000000t.lite'}                                | ${'http://localhost/api/local/ukrainian/live/c0000000000t'}
     ${LIVE_PAGE}       | ${'serbian'}    | ${'cyr'}   | ${'local'}  | ${'c0000000000t'}                                     | ${'http://localhost/api/local/serbian/live/c0000000000t/cyr'}
@@ -137,6 +138,9 @@ describe('constructPageFetchUrl', () => {
     ${LIVE_RADIO_PAGE} | ${'afrique'}    | ${null}    | ${'local'}  | ${'/afrique/bbc_afrique_radio/liveradio'}             | ${'http://localhost/afrique/bbc_afrique_radio/liveradio'}
     ${LIVE_RADIO_PAGE} | ${'afrique'}    | ${null}    | ${'test'}   | ${'/afrique/bbc_afrique_radio/liveradio'}             | ${'https://mock-bff-path/?id=bbc_afrique_radio&service=afrique&pageType=liveRadio&serviceEnv=test'}
     ${LIVE_RADIO_PAGE} | ${'afrique'}    | ${null}    | ${'live'}   | ${'/afrique/bbc_afrique_radio/liveradio'}             | ${'https://mock-bff-path/?id=bbc_afrique_radio&service=afrique&pageType=liveRadio&serviceEnv=live'}
+    ${LIVE_TV_PAGE}    | ${'dari'}       | ${null}    | ${'local'}  | ${'/dari/watch/bbc_afghan_tv/live'}                   | ${'http://localhost/api/local/dari/watch/bbc_afghan_tv/live'}
+    ${LIVE_TV_PAGE}    | ${'dari'}       | ${null}    | ${'test'}   | ${'/dari/watch/bbc_afghan_tv/live'}                   | ${'https://mock-bff-path/?id=bbc_afghan_tv&service=dari&pageType=liveTV&serviceEnv=test'}
+    ${LIVE_TV_PAGE}    | ${'dari'}       | ${null}    | ${'live'}   | ${'/dari/watch/bbc_afghan_tv/live'}                   | ${'https://mock-bff-path/?id=bbc_afghan_tv&service=dari&pageType=liveTV&serviceEnv=live'}
   `(
     `on $environment environment, should return $expected when path is $pathname, pageType is $pageType, service is $serviceOverride and variant is $variant`,
     ({
@@ -163,11 +167,11 @@ describe('constructPageFetchUrl', () => {
 
   it.each`
     pageType           | service        | pathname                            | expected
-    ${HOME_PAGE}       | ${'foo'}       | ${'/foo/c0000000000t'}              | ${'Home ID is invalid'}
     ${LIVE_PAGE}       | ${'ukrainian'} | ${'foo'}                            | ${'Live ID is invalid'}
     ${TOPIC_PAGE}      | ${'ukrainian'} | ${'/ukrainian/topics/foo'}          | ${'Topic ID is invalid'}
     ${TOPIC_PAGE}      | ${'ukrainian'} | ${'/ukrainian/topics/c000000000t'}  | ${'Topic ID is invalid'}
     ${LIVE_RADIO_PAGE} | ${'afrique'}   | ${'/foo'}                           | ${'LiveRadio ID is invalid'}
+    ${LIVE_TV_PAGE}    | ${'afrique'}   | ${'/afrique'}                       | ${'LiveTV ID is invalid'}
     ${'foo'}           | ${'ukrainian'} | ${'/ukrainian/topics/c0000000000t'} | ${'Foo ID is invalid'}
   `(
     `should throw a 500 with message $expected, when pageType $pageType asset ID is incorrect with service of $service`,

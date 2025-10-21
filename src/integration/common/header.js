@@ -5,7 +5,13 @@ export default service => {
 
       expect(logo).toBeInTheDocument();
       expect(logo.parentNode.textContent).toBeTruthy();
-      expect(logo.parentNode.textContent).toMatchSnapshot();
+
+      const svg = logo.querySelector('g path');
+
+      expect({
+        svg,
+        brandLink: logo.parentNode.textContent,
+      }).toMatchSnapshot();
     });
 
     if (service !== 'news' && service !== 'scotland') {
@@ -19,9 +25,11 @@ export default service => {
 
     if (service !== 'scotland') {
       describe('Navigation link', () => {
-        const navigationLinks = document
-          .querySelector('header nav [role="list"]')
-          .querySelectorAll('a');
+        const navigationLinks = Array.from(
+          document
+            .querySelector('header nav [role="list"]')
+            .querySelectorAll('a'),
+        );
 
         navigationLinks.forEach(navigationLink => {
           const linkText = navigationLink.textContent;

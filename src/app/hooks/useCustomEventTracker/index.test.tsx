@@ -99,14 +99,14 @@ describe('useCustomEventTracker', () => {
     });
 
     await act(async () => {
-      await result.current.trackEvent();
+      await result.current.trackEvent('');
     });
 
     expect(mockSendEventBeacon).toHaveBeenCalledTimes(1);
     expect(mockSendEventBeacon).toHaveBeenCalledWith({
       type: VIEW_EVENT,
       eventGroupingName: eventName,
-      componentName: undefined,
+      componentName: '',
       campaignID: 'article-sty',
       pageIdentifier: 'news::pidgin.news.story.51745682.page',
       platform: 'canonical',
@@ -150,7 +150,7 @@ describe('useCustomEventTracker', () => {
     });
 
     await act(async () => {
-      await result.current.trackEvent();
+      await result.current.trackEvent('');
     });
 
     expect(mockSendEventBeacon).not.toHaveBeenCalled();
@@ -165,7 +165,7 @@ describe('useCustomEventTracker', () => {
     );
 
     await act(async () => {
-      await result.current.trackEvent();
+      await result.current.trackEvent('');
     });
 
     expect(mockSendEventBeacon).not.toHaveBeenCalled();
@@ -179,7 +179,7 @@ describe('useCustomEventTracker', () => {
     });
 
     await act(async () => {
-      await result.current.trackEvent();
+      await result.current.trackEvent('');
     });
 
     expect(mockSendEventBeacon).not.toHaveBeenCalled();
