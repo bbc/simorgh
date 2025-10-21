@@ -38,6 +38,7 @@ const {
   USEFUL_LINKS,
   SOCIAL_LINKS,
   MEDIA_COLLECTION,
+  LIVE_TV_PLAYER,
 } = COMPONENT_NAMES;
 
 const { NONE } = VISUAL_STYLE;
@@ -71,6 +72,7 @@ export default ({
   curationId,
   timeOfDayVariant,
   mediaCollection,
+  liveTvPlayer,
 }: Curation) => {
   const componentName = getComponentName({
     visualStyle,
@@ -78,6 +80,7 @@ export default ({
     radioSchedule,
     embed,
     mediaCollection,
+    liveTvPlayer,
   });
 
   const GridComponent = getGridComponent(componentName);
@@ -212,6 +215,9 @@ export default ({
           <MediaLoader blocks={mediaCollection} />
         </section>
       ) : null;
+    }
+    case LIVE_TV_PLAYER: {
+      return mediaCollection ? <MediaLoader blocks={mediaCollection} /> : null;
     }
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
