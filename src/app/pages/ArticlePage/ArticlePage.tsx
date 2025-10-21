@@ -209,7 +209,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     showRelatedTopics,
     brandName,
     translations,
-    service,
   } = use(ServiceContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
@@ -218,19 +217,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
-  let experimentName;
-  if (service === 'hindi' || service === 'tamil') {
-    experimentName = 'newswb_ws_tod_article';
-  } else {
-    experimentName = 'newswb_ws_read_more_b';
-  }
-  let experimentVariant = useOptimizelyVariation({
+  const experimentName = 'newswb_ws_read_more_b';
+  const experimentVariant = useOptimizelyVariation({
     experimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
-
-  // temporarily override variant for dev
-  experimentVariant = 'variant_a';
 
   const isInServerSideExperiment =
     experimentVariant && experimentVariant !== 'off';
@@ -368,84 +359,59 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       ['read-more-b'].includes(experimentVariant),
   );
 
-return (
-  <div css={styles.pageWrapper}>
-    <ATIAnalytics atiData={atiData} />
-    <ChartbeatAnalytics
-      sectionName={pageData?.relatedContent?.section?.name}
-      title={headline}
-      authors={authors}
-    />
-    <ComscoreAnalytics />
-    <NielsenAnalytics />
-    <ArticleMetadata
-      articleId={getArticleId(pageData)}
-      title={headline}
-      author={articleAuthor}
-      twitterHandle={articleAuthorTwitterHandle}
-      firstPublished={firstPublished}
-      lastPublished={lastPublished}
-      section={getArticleSection(pageData)}
-      aboutTags={aboutTags}
-      mentionsTags={getMentions(pageData)}
-      lang={getLang(pageData)}
-      description={description}
-      imageLocator={promoImage}
-      imageAltText={promoImageAltText}
-      hasAmpPage={!isTC2Asset}
-    />
-    <LinkedData
-      showAuthor
-      bylineLinkedData={bylineLinkedData}
-      type={
-        !isPGL
-          ? categoryName(isTrustProjectParticipant, taggings, formats)
-          : 'Article'
-      }
-      seoTitle={headline}
-      headline={headline}
-      description={description}
-      datePublished={firstPublished}
-      dateModified={lastPublished}
-      aboutTags={aboutTags}
-      imageLocator={promoImage}
-    />
-    {allowAdvertising && (
-      <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
-    )}
-    <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
-    <div css={styles.grid}>
-      <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
-        <main
-          css={[
-            styles.mainContent(liteCTAShows),
-            ...(showContinueReadingButton
-              ? [!showAllContent && styles.contentHidden(liteCTAShows)]
-              : []),
-          ]}
-          role="main"
-        >
-          <Blocks
-            blocks={articleBlocks}
-            componentsToRender={componentsToRender}
-          />
-          {showContinueReadingButton && (
-            <ContinueReadingButton
-              showAllContent={showAllContent}
-              setShowAllContent={() => setShowAllContent(true)}
-              variation={experimentVariant as ContinueReadingProps['variation']}
-              liteCTAShows={liteCTAShows}
-            />
-          )}
-          <OptimizelyPageMetrics trackPageComplete />
-        </main>
-        <OptimizelyPageMetrics trackPageView trackPageDepth />
-        {showTopics && (
-          <RelatedTopics
+  return (
+    <div css={styles.pageWrapper}>
+      <ATIAnalytics atiData={atiData} />
+      <ChartbeatAnalytics
+        sectionName={pageData?.relatedContent?.section?.name}
+        title={headline}
+        authors={authors}
+      />
+      <ComscoreAnalytics />
+      <NielsenAnalytics />
+      <ArticleMetadata
+        articleId={getArticleId(pageData)}
+        title={headline}
+        author={articleAuthor}
+        twitterHandle={articleAuthorTwitterHandle}
+        firstPublished={firstPublished}
+        lastPublished={lastPublished}
+        section={getArticleSection(pageData)}
+        aboutTags={aboutTags}
+        mentionsTags={getMentions(pageData)}
+        lang={getLang(pageData)}
+        description={description}
+        imageLocator={promoImage}
+        imageAltText={promoImageAltText}
+        hasAmpPage={!isTC2Asset}
+      />
+      <LinkedData
+        showAuthor
+        bylineLinkedData={bylineLinkedData}
+        type={
+          !isPGL
+            ? categoryName(isTrustProjectParticipant, taggings, formats)
+            : 'Article'
+        }
+        seoTitle={headline}
+        headline={headline}
+        description={description}
+        datePublished={firstPublished}
+        dateModified={lastPublished}
+        aboutTags={aboutTags}
+        imageLocator={promoImage}
+      />
+      {allowAdvertising && (
+        <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
+      )}
+      <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
+      <div css={styles.grid}>
+        <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
+          <main
             css={[
               styles.mainContent,
               ...(showContinueReadingButton
-                ? [!showAllContent && styles.hideRelatedTopics]
+                ? [!showAllContent && styles.contentHidden(liteCTAShows)]
                 : []),
             ]}
             role="main"
@@ -481,30 +447,28 @@ return (
             content={blocks}
             sendOptimizelyEvents={false}
           />
+        </div>
+        {!isApp && !isPGL && (
+          <SecondaryColumn
+            pageData={pageData}
+            sendOptimizelyEvents={false}
+            experimentVariant={experimentVariant}
+          />
         )}
-        <RelatedContentSection content={blocks} sendOptimizelyEvents={false} />
       </div>
       {!isApp && !isPGL && (
-        <SecondaryColumn
-          pageData={pageData}
+        <MostRead
+          css={styles.mostReadSection}
+          data={mostReadInitialData}
+          columnLayout="multiColumn"
+          size="default"
+          headingBackgroundColour={GREY_2}
+          mobileDivider={showTopics}
           sendOptimizelyEvents={false}
-          experimentVariant={experimentVariant}
         />
       )}
     </div>
-    {!isApp && !isPGL && (
-      <MostRead
-        css={styles.mostReadSection}
-        data={mostReadInitialData}
-        columnLayout="multiColumn"
-        size="default"
-        headingBackgroundColour={GREY_2}
-        mobileDivider={showTopics}
-        sendOptimizelyEvents={false}
-      />
-    )}
-  </div>
-);
+  );
 };
 
 export default ArticlePage;
