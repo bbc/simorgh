@@ -267,7 +267,7 @@ server.get(
       data.cspHeader = res.get('Content-Security-Policy');
 
       // Temporary dummy curation data for adaptive curations
-      const dummySimpleCurationGridContent = {
+      const dummyMediaCurationContent = {
         summaries: [
           {
             type: 'video',
@@ -352,7 +352,7 @@ server.get(
         visualStyle: 'FEED',
       };
 
-      const dummyTvBulletinContent = {
+      const dummyBillboardCurationContent = {
         summaries: [
           {
             type: 'link',
@@ -383,12 +383,10 @@ server.get(
         data.pageData.secondaryColumn = {
           ...data.pageData.secondaryColumn,
           billboardCuration: {
-            ...dummyTvBulletinContent,
-            type: 'billboardCuration',
+            ...dummyBillboardCurationContent,
           },
           multimediaCuration: {
-            ...dummySimpleCurationGridContent,
-            type: 'multimediaCuration',
+            ...dummyMediaCurationContent,
           },
         };
       }
