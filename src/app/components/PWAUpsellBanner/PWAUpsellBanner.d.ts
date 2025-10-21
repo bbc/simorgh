@@ -9,9 +9,9 @@ export declare const PWAUpsellBanner: (props: {
 
   description: string;
 
-  buttonOne: string;
+  buttonOne: object;
 
-  buttonTwo: string;
+  buttonTwo: object;
 
   isDismissible?: boolean;
 }) => JSX.Element;

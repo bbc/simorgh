@@ -1,6 +1,6 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
-import React, { use } from 'react';
+import React, { use, useState } from 'react';
 import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import useOptimizelyVariation, {
@@ -74,8 +74,15 @@ const HomePage = ({ pageData }: HomePageProps) => {
     });
   }
 
-  const handleClose = () => {
-    console.log('PWA Upsell Banner closed');
+  // PWA Upsell Banner handling
+  const [isBannerVisible, setIsBannerVisible] = useState(true);
+  const handleClose = (event?: React.MouseEvent) => {
+    event?.preventDefault();
+    setIsBannerVisible(false);
+  };
+
+  const handleAddShortcut = () => {
+    console.log('Add to Home Screen clicked');
   };
   const itemList = getItemList({ curations, name: brandName });
 
@@ -97,7 +104,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
       />
       <Ad slotType="leaderboard" />
       <main role="main" css={styles.main}>
-        {serviceLocalizedName === 'Mundo' && (
+        {serviceLocalizedName === 'Mundo' && isBannerVisible && (
           <PWAUpsellBanner
             serviceBackground="mundo"
             title="Accede a BBC Noticias con un solo toque"
@@ -105,8 +112,11 @@ const HomePage = ({ pageData }: HomePageProps) => {
             handleClose={() => {
               handleClose();
             }}
-            buttonOne="Agregar con un toque"
-            buttonTwo="No Ahora"
+            buttonOne={{
+              text: 'Agregar con un toque',
+              onclick: handleAddShortcut,
+            }}
+            buttonTwo={{ text: 'No Ahora', onClick: handleClose }}
           />
         )}
         <ATIAnalytics atiData={atiAnalytics} />

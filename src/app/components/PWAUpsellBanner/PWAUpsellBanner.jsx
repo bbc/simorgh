@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './PWAUpsellBanner.styles';
 import { Close } from '../icons';
 
@@ -9,17 +9,6 @@ export const PWAUpsellBanner = ({
   buttonOne,
   buttonTwo,
 }) => {
-  const [isVisible, setIsVisible] = useState(true);
-
-  const handleClose = event => {
-    event.preventDefault();
-    setIsVisible(false);
-  };
-
-  if (!isVisible) {
-    return null;
-  }
-
   return (
     <div css={styles.ColoredContainer}>
       <div css={styles.Wrap}>
@@ -34,8 +23,12 @@ export const PWAUpsellBanner = ({
           </div>
 
           <div css={styles.CTAWrapper}>
-            <button type="button" css={styles.StyledButtonOne}>
-              {buttonOne}
+            <button
+              type="button"
+              css={styles.StyledButtonOne}
+              onClick={buttonOne?.onClick}
+            >
+              {buttonOne?.text}
             </button>
 
             <text css={styles.StyledText}>or</text>
@@ -43,19 +36,18 @@ export const PWAUpsellBanner = ({
             <button
               type="button"
               css={styles.StyledButtonTwo}
-              onClick={handleClose}
+              onClick={buttonTwo?.onClick}
             >
-              {buttonTwo}
+              {buttonTwo.text}
             </button>
           </div>
 
           {isDismissible && (
             <div css={styles.CloseButtonWrapper}>
-              <a
-                aria-label="Close submenu"
+              <button
+                type="button"
                 css={styles.subNavCloseButton}
-                href="closeButton"
-                onClick={handleClose}
+                onClick={buttonTwo?.onClick}
               />
               <Close css={styles.subNavCloseButtonIcon} />
             </div>
