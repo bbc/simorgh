@@ -48,6 +48,12 @@ const SecondaryColumn = ({
   const showAdaptiveSection = experimentVariant === 'variant_a';
   // ask about putting the curations in a curationList in secondary Column data so that we can map over the list below when rendering curations
 
+  // ideally we would want to be agnostic about the type of Curation we want to render here and have the decision made in the BFF
+  // however, we cannot do this with the billboard curation as we would need to fetch the whole topic it is in, which is the whole home page,
+  // in order to get its visual prominence and style.
+  // we can do this with the media curation as it is a vivo stream from a topic page, and so a topic fetch for that returns
+  // the outer data of the curation (containing the title and the visual style and prominence) and only the data from the first page of that vivo-stream, which is acceptable
+  // this would be the case for every vivo stream curation. Every non-vivo-stream that we can't just call a topic for would need the whole home page fetched.
   return (
     <div css={styles.secondaryColumn}>
       {showAdaptiveSection && (
