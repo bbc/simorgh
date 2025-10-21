@@ -87,29 +87,57 @@ exports[`Canonical Send Header Navigation link should match text and url 1`] = `
 
 exports[`Canonical Send Header Navigation link should match text and url 2`] = `
 {
-  "text": "Ganacsi",
-  "url": "/somali/topics/c2dwqd32v4yt",
+  "text": "Siyaasad",
+  "url": "/somali/topics/cwr9jry737xt",
 }
 `;
 
 exports[`Canonical Send Header Navigation link should match text and url 3`] = `
 {
-  "text": "Cayaaraha",
-  "url": "/somali/topics/cpzd4zj1pn2t",
+  "text": "Soomaali",
+  "url": "/somali/topics/cpzd4zk7qrjt",
 }
 `;
 
 exports[`Canonical Send Header Navigation link should match text and url 4`] = `
+{
+  "text": "Raadiye",
+  "url": "/somali/topics/cn6rqlrkm0pt",
+}
+`;
+
+exports[`Canonical Send Header Navigation link should match text and url 5`] = `
 {
   "text": "Muuqaal",
   "url": "/somali/topics/c7pl4k5r9xxt",
 }
 `;
 
-exports[`Canonical Send Header Navigation link should match text and url 5`] = `
+exports[`Canonical Send Header Navigation link should match text and url 6`] = `
 {
-  "text": "Barnaamijyada Idaacadda",
-  "url": "/somali/topics/cn6rqlrkm0pt",
+  "text": "Haween",
+  "url": "/somali/topics/cxnykn5732gt",
+}
+`;
+
+exports[`Canonical Send Header Navigation link should match text and url 7`] = `
+{
+  "text": "Ciyaaro",
+  "url": "/somali/topics/cpzd4zj1pn2t",
+}
+`;
+
+exports[`Canonical Send Header Navigation link should match text and url 8`] = `
+{
+  "text": "Saynis iyo Caafimaad",
+  "url": "/somali/topics/c2dr4lek2r9t",
+}
+`;
+
+exports[`Canonical Send Header Navigation link should match text and url 9`] = `
+{
+  "text": "Fan iyo Dhaqan",
+  "url": "/somali/topics/cwy5g18443dt",
 }
 `;
 
