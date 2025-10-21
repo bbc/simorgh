@@ -170,7 +170,7 @@ const HiearchicalGrid = ({
                   {promo.description}
                 </Promo.Body>
                 {!isLive ? (
-                  <Promo.Timestamp className="promo-timestamp" showPrefix>
+                  <Promo.Timestamp className="promo-timestamp">
                     {promo.lastPublished}
                   </Promo.Timestamp>
                 ) : null}
