@@ -3,13 +3,13 @@ import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import canonicalTests from './testsForCanonicalOnly';
 import urlValidationTest from '../../../support/helpers/urlValidationTest';
 import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
-// import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
+import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
 import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
 import {
   assertBillboardComponentView,
   assertBillboardComponentClick,
 } from '../../specialFeatures/atiAnalytics/assertions/billboard';
-// import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
+import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
 import {
   assertMessageBannerComponentClick,
   assertMessageBannerComponentView,
@@ -32,10 +32,14 @@ import {
 } from '../../specialFeatures/atiAnalytics/assertions/radioSchedule';
 import { setUserIDCookie } from '../../specialFeatures/atiAnalytics/helpers';
 
-const tests = [canonicalTests, urlValidationTest, testsForAllCanonicalPages];
-
-const atiAnalyticsNavigationComponentTestsAssertions = [
+const tests = [
+  canonicalTests,
+  urlValidationTest,
+  testsForAllCanonicalPages,
   assertPageView,
+];
+
+const atiAnalyticsNavigationComponentTests = [
   assertScrollableNavigationComponentView,
   assertScrollableNavigationComponentClick,
   assertDropdownNavigationComponentView,
@@ -47,6 +51,11 @@ const testSuites = [
     path: '/arabic',
     runforEnv: ['local', 'test', 'live'],
     service: 'arabic',
+    pageIdentifier: 'arabic.page',
+    siteId: 5,
+    applicationType: 'responsive',
+    contentType: 'index-home',
+    useReverb: true,
     tests,
   },
   {
@@ -60,7 +69,7 @@ const testSuites = [
     useReverb: true,
     tests: [
       ...tests,
-      ...atiAnalyticsNavigationComponentTestsAssertions,
+      ...atiAnalyticsNavigationComponentTests,
       assertMessageBannerComponentView,
       assertMessageBannerComponentClick,
     ],
@@ -76,7 +85,7 @@ const testSuites = [
     useReverb: true,
     tests: [
       ...tests,
-      ...atiAnalyticsNavigationComponentTestsAssertions,
+      ...atiAnalyticsNavigationComponentTests,
       assertMessageBannerComponentView,
       assertMessageBannerComponentClick,
       assertMostReadComponentView,
@@ -92,7 +101,7 @@ const testSuites = [
     applicationType: 'responsive',
     contentType: 'index-home',
     useReverb: true,
-    tests: [...tests, assertPageView],
+    tests,
   },
   {
     path: '/pashto',
@@ -118,12 +127,7 @@ const testSuites = [
     applicationType: 'responsive',
     contentType: 'index-home',
     useReverb: true,
-    tests: [
-      ...tests,
-      assertPageView,
-      assertMessageBannerComponentView,
-      assertMessageBannerComponentClick,
-    ],
+    tests,
   },
   {
     path: '/portuguese',
@@ -136,7 +140,6 @@ const testSuites = [
     useReverb: true,
     tests: [
       ...tests,
-      assertPageView,
       assertPortraitVideoCarouselComponentView,
       assertPortraitVideoModalComponentView,
     ],
@@ -152,7 +155,6 @@ const testSuites = [
     useReverb: true,
     tests: [
       ...tests,
-      assertPageView,
       assertMostReadComponentView,
       assertMostReadComponentClick,
     ],
@@ -160,13 +162,23 @@ const testSuites = [
   {
     path: '/serbian/cyr',
     runforEnv: ['local', 'test', 'live'],
-    service: '/serbian/cyr',
+    service: 'serbian',
+    pageIdentifier: 'serbiancyr.page',
+    siteId: 81,
+    applicationType: 'responsive',
+    contentType: 'index-home',
+    useReverb: true,
     tests,
   },
   {
     path: '/uzbek/lat',
     runforEnv: ['local', 'test', 'live'],
-    service: '/uzbek/lat',
+    service: 'uzbek',
+    pageIdentifier: 'uzbeklat.page',
+    siteId: 96,
+    applicationType: 'responsive',
+    contentType: 'index-home',
+    useReverb: true,
     tests,
   },
   {
@@ -180,7 +192,6 @@ const testSuites = [
     useReverb: true,
     tests: [
       ...tests,
-      assertPageView,
       assertMessageBannerComponentView,
       assertMessageBannerComponentClick,
       assertMostReadComponentView,
@@ -197,11 +208,7 @@ const testSuites = [
     applicationType: 'responsive',
     contentType: 'index-home',
     useReverb: true,
-    tests: [
-      assertPageView,
-      assertBillboardComponentView,
-      assertBillboardComponentClick,
-    ],
+    tests: [assertBillboardComponentView, assertBillboardComponentClick],
   },
 ];
 
@@ -217,33 +224,35 @@ if (Cypress.env('SMOKE')) {
   });
 }
 
-// const atiAnalyticsliteTestSuites = testSuites
-//   .filter(({ path }) => !path.startsWith('/persian/afghanistan'))
-//   .map(testSuite => {
-//     const excludedLiteTests = [
-//       assertDropdownNavigationComponentView, // Dropdown navigation removed from all pages, as it requires JS
-//       assertDropdownNavigationComponentClick, // Dropdown navigation removed from all pages, as it requires JS
-//     ];
+const atiAnalyticsliteTestSuites = testSuites
+  .filter(({ path }) => !path.startsWith('/persian/afghanistan'))
+  .map(testSuite => {
+    const excludedLiteTests = [
+      assertDropdownNavigationComponentView, // Dropdown navigation removed from all pages, as it requires JS
+      assertDropdownNavigationComponentClick, // Dropdown navigation removed from all pages, as it requires JS
+    ];
 
-//     const liteSiteTests = testSuite.tests.filter(
-//       test => !excludedLiteTests.includes(test),
-//     );
+    const liteSiteTests = testSuite.tests.filter(
+      test => !excludedLiteTests.includes(test),
+    );
 
-//     // All lite enabled pages should have the Lite Site Summary component
-//     liteSiteTests.push(assertLiteSiteSummaryComponentToMainSiteClick);
+    // All lite enabled pages should have the Lite Site Summary component
+    liteSiteTests.push(assertLiteSiteSummaryComponentToMainSiteClick);
 
-//     return {
-//       ...testSuite,
-//       path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
-//       applicationType: 'lite',
-//       useReverb: false,
-//       siteId: testSuite.service === 'magyarul' ? 134 : testSuite.siteId,
-//       tests: [...liteSiteTests],
-//     };
-//   });
+    return {
+      ...testSuite,
+      path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
+      applicationType: 'lite',
+      useReverb: false,
+      siteId: testSuite.service === 'magyarul' ? 134 : testSuite.siteId,
+      tests: [...liteSiteTests],
+    };
+  });
 
 runTestsForPage({
   pageType: HOME_PAGE,
-  testSuites: Cypress.env('SMOKE') ? smokeTests : testSuites,
+  testSuites: Cypress.env('SMOKE')
+    ? [...smokeTests, ...atiAnalyticsliteTestSuites]
+    : [...testSuites, ...atiAnalyticsliteTestSuites],
   beforeAll: [setUserIDCookie],
 });

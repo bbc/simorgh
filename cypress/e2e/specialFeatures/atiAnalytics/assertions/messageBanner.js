@@ -59,5 +59,6 @@ export const assertMessageBannerComponentClick = ({
       applicationType,
       siteId,
     });
+    cy.visit(path);
   });
 };

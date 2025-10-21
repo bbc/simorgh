@@ -68,5 +68,7 @@ export const assertMostReadComponentClick = ({
       applicationType,
       siteId,
     });
+
+    cy.visit(path);
   });
 };
