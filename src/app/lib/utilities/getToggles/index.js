@@ -16,7 +16,6 @@ const logger = nodeLogger(__filename);
 const NS_PER_SEC = 1e9;
 
 const logResponseTime = async (url, origin, service, timeout) => {
-  console.log({ onClient, fn: onClient() });
   if (onClient()) {
     return fetch(url, { headers: { origin }, timeout });
   }
