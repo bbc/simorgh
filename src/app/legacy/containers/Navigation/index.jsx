@@ -120,7 +120,7 @@ const NavigationContainer = ({ propsForTopBarOJComponent }) => {
   );
 
   const dropdownListItems = (
-    <DropdownUl>
+    <DropdownUl role="list">
       {renderListItems(
         DropdownLi,
         navigation,

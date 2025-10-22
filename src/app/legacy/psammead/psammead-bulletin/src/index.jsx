@@ -163,10 +163,6 @@ const PlayCTA = styled.div`
   ${({ bulletinType }) => playCtaStyles[bulletinType]}
 `;
 
-PlayCTA.defaultProps = {
-  'aria-hidden': true,
-};
-
 const Bulletin = ({
   script,
   service,
@@ -189,7 +185,7 @@ const Bulletin = ({
   const BulletinWrapper = isAudio ? RadioBulletinWrapper : TVBulletinWrapper;
   // aria-labelledby in <Link..., and id={`bulletin-${sanitisedAriaId}`} in LiveLabel and span are temporary fixes for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
   return (
-    (<BulletinWrapper>
+    <BulletinWrapper>
       {image && (
         <ImageGridItem bulletinType={bulletinType}>{image}</ImageGridItem>
       )}
@@ -216,14 +212,14 @@ const Bulletin = ({
               </LiveLabel>
             ) : (
               // eslint-disable-next-line jsx-a11y/aria-role
-              (<span role="text" id={`bulletin-${sanitisedAriaId}`}>
+              <span role="text" id={`bulletin-${sanitisedAriaId}`}>
                 {offScreenText && (
                   <VisuallyHiddenText lang={lang}>
                     {`${offScreenText}, `}
                   </VisuallyHiddenText>
                 )}
                 <span>{headlineText}</span>
-              </span>)
+              </span>
             )}
           </Link>
         </BulletinHeading>
@@ -243,12 +239,13 @@ const Bulletin = ({
           script={script}
           bulletinType={bulletinType}
           dir={dir}
+          aria-hidden="true"
         >
           <IconWrapper dir={dir}>{mediaIcons[mediaType]}</IconWrapper>
           {ctaText}
         </PlayCTA>
       </TextGridItem>
-    </BulletinWrapper>)
+    </BulletinWrapper>
   );
 };
 

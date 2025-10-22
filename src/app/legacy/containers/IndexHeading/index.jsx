@@ -35,7 +35,13 @@ const IndexHeadingContainer = ({ children = null, ...props }) => {
   const { script, service, dir } = use(ServiceContext);
 
   return (
-    <StyledIndexHeading script={script} service={service} dir={dir} {...props}>
+    <StyledIndexHeading
+      tabIndex={-1}
+      script={script}
+      service={service}
+      dir={dir}
+      {...props}
+    >
       {children}
     </StyledIndexHeading>
   );

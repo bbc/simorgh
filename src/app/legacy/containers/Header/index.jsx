@@ -65,9 +65,10 @@ const HeaderContainer = ({ propsForTopBarOJComponent }) => {
     <SkipLink
       service={service}
       script={script}
-      dir={dir}
+      dir={dir || 'ltr'}
       href="#content"
       lang={serviceLang && lang}
+      className="focusIndicatorRemove"
     >
       <div>{skipLinkText}</div>
     </SkipLink>
