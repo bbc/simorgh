@@ -23,6 +23,7 @@ const renderDocument = async ({
   service,
   url,
   nonce,
+  toggles,
 }) => {
   const isDev = process.env.NODE_ENV === 'development';
   const cache = createCache({ key: 'bbc' });
@@ -78,6 +79,16 @@ const renderDocument = async ({
       </ChunkExtractorManager>,
     ),
   );
+
+  const { enabled: shouldRedirectHomepage, value: redirectTo } =
+    toggles.redirectHomepage || {
+      enabled: false,
+      value: null,
+    };
+
+  if (!shouldRedirectHomepage && url === `/${service}` && redirectTo) {
+    return { redirectUrl: redirectTo, html: null };
+  }
 
   if (context.url) {
     /**

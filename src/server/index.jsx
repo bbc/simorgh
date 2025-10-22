@@ -302,6 +302,7 @@ server.get(
           url,
           variant,
           nonce,
+          toggles,
         });
       } catch (error) {
         const { message } = error;

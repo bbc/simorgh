@@ -66,6 +66,9 @@ export default {
   scriptLink: {
     enabled: true,
   },
+  redirectHomepage: {
+    enabled: false,
+  },
   variantCookie: {
     enabled: true,
   },
