@@ -1,4 +1,3 @@
-src/app/components/MediaLoader/utils/buildSettings.test.ts
 src/app/components/ATIAnalytics/index.test.tsx
 src/app/lib/analyticsUtils/index.test.js
 src/app/hooks/useClickTrackerHandler/index.test.jsx
