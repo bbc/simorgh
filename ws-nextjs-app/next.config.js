@@ -35,9 +35,6 @@ module.exports = {
       },
     ];
   },
-  compiler: {
-    emotion: true,
-  },
   reactStrictMode: true,
   distDir: 'build',
   output: 'standalone',
