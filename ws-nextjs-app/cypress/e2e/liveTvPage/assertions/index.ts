@@ -1,13 +1,15 @@
 import { PageTypes, Services } from '#app/models/types/global';
+import liveTvFixture from '#data/dari/watch/bbc_afghan_tv/live.json';
 
 type LiveTvPageParams = {
   service: Services;
   pageType: PageTypes;
 };
 
-export const assertLiveTvPage = ({ service, pageType }: LiveTvPageParams) => {
-  it(`should render the Live TV Page with a h1 containing Hello World for ${service}`, () => {
-    const expectedHeading = `HELLO WORLD pageType: ${pageType} service: ${service}`;
+// eslint-disable-next-line import/prefer-default-export
+export const assertLiveTvPage = ({ service }: LiveTvPageParams) => {
+  it(`should render the Live TV Page with the correct h1 for ${service}`, () => {
+    const expectedHeading = liveTvFixture.data.title;
     cy.get('h1').should('have.text', expectedHeading);
   });
 };
