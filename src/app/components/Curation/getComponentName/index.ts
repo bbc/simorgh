@@ -34,7 +34,6 @@ const {
   USEFUL_LINKS,
   SOCIAL_LINKS,
   MEDIA_COLLECTION,
-  LIVE_TV_PLAYER,
 } = COMPONENT_NAMES;
 
 export default ({
@@ -43,13 +42,10 @@ export default ({
   radioSchedule,
   embed,
   mediaCollection,
-  liveTvPlayer,
 }: Partial<Curation>) => {
   if (radioSchedule) return RADIO_SCHEDULE;
   if (embed) return EMBED;
   if (mediaCollection) return MEDIA_COLLECTION;
-  // does the TV player need to be passed here instead of below via visualStyle and visualProminence?
-  if (liveTvPlayer) return LIVE_TV_PLAYER;
 
   const componentsByVisualStyleAndProminence = {
     [`${BANNER}_${MINIMUM}`]: NOT_SUPPORTED,
