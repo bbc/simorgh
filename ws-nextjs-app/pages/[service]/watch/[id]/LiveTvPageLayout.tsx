@@ -23,8 +23,6 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
   }
   const { curations } = pageData;
 
-  console.log('LiveTvLayout pageData:', pageData);
-  // console.log('LiveTvLayout curations:', curations);
   return (
     <>
       {/* <ATIAnalytics atiData={atiAnalytics} />
