@@ -747,7 +747,7 @@ export const articleDataPidginWithByline = articleDataBuilder(
 ) as unknown as Article;
 
 export const articlePglDataPidgin = articleDataBuilder(
-  'cr5el5kw591o',
+  'cwl08rd38l6o',
   'Pidgin',
   'pcm',
   'http://www.bbc.co.uk/ontologies/passport/home/Pidgin',
