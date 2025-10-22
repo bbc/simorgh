@@ -11,6 +11,8 @@ jest.mock('#app/lib/utilities/getUUID', () =>
   jest.fn().mockImplementation(() => 'some-random-uuid'),
 );
 
+const windowLocationHrefSpy = jest.spyOn(window.location, 'href', 'get');
+
 const {
   getDestination,
   getScreenInfo,
@@ -71,6 +73,14 @@ const returnsNullWhenOffClient = func => {
 };
 
 describe('analyticsUtils', () => {
+  beforeEach(() => {
+    windowLocationHrefSpy.mockImplementation(() => 'http://localhost');
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   describe('getDestination', () => {
     it.each`
       platform       | statsDestination
@@ -161,21 +171,13 @@ describe('analyticsUtils', () => {
   });
 
   describe('getScreenInfo', () => {
-    const windowScreen = window.screen;
-
-    afterEach(() => {
-      window.screen = windowScreen;
-    });
-
     returnsNullWhenOffClient(getScreenInfo);
 
     it('should concat screen values, joined by "x"', () => {
-      window.screen = {
-        width: 1,
-        height: 2,
-        colorDepth: 3,
-        pixelDepth: 4,
-      };
+      jest.replaceProperty(window.screen, 'width', 1);
+      jest.replaceProperty(window.screen, 'height', 2);
+      jest.replaceProperty(window.screen, 'colorDepth', 3);
+      jest.replaceProperty(window.screen, 'pixelDepth', 4);
 
       const screenInfo = getScreenInfo();
 
@@ -183,12 +185,10 @@ describe('analyticsUtils', () => {
     });
 
     it('should use 0 to fill unknown values', () => {
-      window.screen = {
-        width: 1,
-        height: 2,
-        colorDepth: null,
-        pixelDepth: null,
-      };
+      jest.replaceProperty(window.screen, 'width', 1);
+      jest.replaceProperty(window.screen, 'height', 2);
+      jest.replaceProperty(window.screen, 'colorDepth', null);
+      jest.replaceProperty(window.screen, 'pixelDepth', null);
 
       const screenInfo = getScreenInfo();
 
@@ -217,8 +217,8 @@ describe('analyticsUtils', () => {
     });
 
     it('should use 0 to fill unknown values', () => {
-      window.innerWidth = null;
-      window.innerHeight = 4321;
+      jest.spyOn(window, 'innerWidth', 'get').mockImplementation(() => null);
+      jest.spyOn(window, 'innerHeight', 'get').mockImplementation(() => 4321);
 
       const browserViewPort = getBrowserViewPort();
 
@@ -250,18 +250,12 @@ describe('analyticsUtils', () => {
   });
 
   describe('getDeviceLanguage', () => {
-    const windowNavigator = window.navigator;
-
-    afterEach(() => {
-      window.navigator = windowNavigator;
-    });
-
     returnsNullWhenOffClient(getDeviceLanguage);
 
     it('should return navigator language', () => {
-      window.navigator = {
-        language: 'abc',
-      };
+      jest
+        .spyOn(window.navigator, 'language', 'get')
+        .mockImplementation(() => 'abc');
 
       const deviceLanguage = getDeviceLanguage();
 
@@ -269,9 +263,9 @@ describe('analyticsUtils', () => {
     });
 
     it('should return null if language is not set', () => {
-      window.navigator = {
-        language: null,
-      };
+      jest
+        .spyOn(window.navigator, 'language', 'get')
+        .mockImplementation(() => null);
 
       const deviceLanguage = getDeviceLanguage();
 
@@ -328,19 +322,23 @@ describe('analyticsUtils', () => {
     returnsNullWhenOffClient(getHref);
 
     it('should return location href', () => {
+      windowLocationHrefSpy.mockImplementation(() => 'https://href.com');
       const href = getHref();
 
       expect(href).toEqual('https://href.com');
     });
 
     it('should return null if href isnt set', () => {
+      windowLocationHrefSpy.mockImplementation(() => null);
       const href = getHref();
 
       expect(href).toEqual(null);
     });
 
     it('should return href with anchor text', () => {
-      window.location.assign('https://www.example.com/#anchortext');
+      windowLocationHrefSpy.mockImplementation(
+        () => 'https://www.example.com/#anchortext',
+      );
 
       const href = getHref();
       expect(href).toEqual('https://www.example.com/#anchortext');
@@ -541,12 +539,6 @@ describe('analyticsUtils', () => {
   });
 
   describe('getCampaignType', () => {
-    const windowLocation = window.location;
-
-    afterEach(() => {
-      resetWindowValue('location', windowLocation);
-    });
-
     test.each`
       qsValue                   | expected
       ${'?at_medium=email'}     | ${'email'}
@@ -557,7 +549,9 @@ describe('analyticsUtils', () => {
       ${'?xtor=123'}            | ${'XTOR'}
       ${'?at_medium=RSS'}       | ${'RSS'}
     `('should return a campaign type of $expected', ({ qsValue, expected }) => {
-      window.location.href = `https://www.bbc.com/mundo${qsValue}`;
+      windowLocationHrefSpy.mockImplementation(
+        () => `https://www.bbc.com/mundo${qsValue}`,
+      );
 
       const campaignType = getCampaignType();
 
@@ -565,9 +559,9 @@ describe('analyticsUtils', () => {
     });
 
     it('should return campaign type of XTOR', () => {
-      window.location = {
-        href: 'https://www.bbc.com/mundo#xtor',
-      };
+      windowLocationHrefSpy.mockImplementation(
+        () => 'https://www.bbc.com/mundo#xtor',
+      );
 
       const campaignType = getCampaignType();
 
@@ -816,6 +810,8 @@ describe('analyticsUtils', () => {
       `(
         'should return $expectedValue for campaign type of $campaignType when href is $href',
         ({ href, expectedValue, campaignType }) => {
+          windowLocationHrefSpy.mockImplementation(() => href);
+
           expect(getATIMarketingString(href, campaignType)).toEqual(
             expectedValue,
           );

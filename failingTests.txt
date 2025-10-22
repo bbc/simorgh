@@ -1,5 +1,3 @@
-src/app/components/ATIAnalytics/index.test.tsx
-src/app/lib/analyticsUtils/index.test.js
 src/app/hooks/useClickTrackerHandler/index.test.jsx
 src/app/components/ATIAnalytics/atiUrl/index.test.ts
 src/app/legacy/containers/ConsentBanner/useConsentBanners/index.test.js
