@@ -257,6 +257,7 @@ const atiAnalyticsliteTestSuites = atiAnalyticsTestSuitesOnly
 runTestsForPage({
   pageType: HOME_PAGE,
   testSuites: Cypress.env('SMOKE') ? smokeTests : testSuites,
+  beforeAll: [setUserIDCookie],
 });
 
 runTestsForPage({
