@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
-import {
+import React, {
   FC,
   PropsWithChildren,
   HTMLAttributes,

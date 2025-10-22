@@ -1,7 +1,4 @@
 /* eslint-disable jsx-a11y/aria-role */
-/** @jsx jsx */
-/** @jsxFrag */
-import { jsx } from '@emotion/react';
 import React, { use, PropsWithChildren } from 'react';
 import { OptimoBylineBlock } from '#app/models/types/optimo';
 import { ServiceContext } from '../../contexts/ServiceContext';
