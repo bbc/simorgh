@@ -209,7 +209,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     showRelatedTopics,
     brandName,
     translations,
-    service,
   } = use(ServiceContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
@@ -217,18 +216,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const {
     palette: { GREY_2, WHITE },
   } = useTheme();
-  let experimentName;
-  if (service === 'hindi' || service === 'tamil') {
-    experimentName = 'newswb_ws_tod_article';
-  } else {
-    experimentName = 'newswb_ws_read_more_b';
-  }
-  let experimentVariant = useOptimizelyVariation({
+
+  // Continue Reading Button Experiment
+  const experimentName = 'newswb_ws_read_more_b';
+  const experimentVariant = useOptimizelyVariation({
     experimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
-  // temporarily override variant for dev
-  experimentVariant = 'variant_a';
   const isInServerSideExperiment =
     experimentVariant && experimentVariant !== 'off';
 
@@ -238,6 +232,16 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     experimentName: readTimeExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
+
+  // EXPERIMENT: Time of Day Experiment
+  const timeOfDayExperimentName = 'newswb_ws_tod_article';
+  let timeOfDayExperimentVariant = useOptimizelyVariation({
+    experimentName: timeOfDayExperimentName,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
+
+  // TEMPORARY OVERRIDE FOR DEV/TESTING PURPOSES - REMOVE LATER
+  timeOfDayExperimentVariant = 'variant_a';
 
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
@@ -458,7 +462,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           <SecondaryColumn
             pageData={pageData}
             sendOptimizelyEvents={false}
-            experimentVariant={experimentVariant}
+            experimentVariant={timeOfDayExperimentVariant}
           />
         )}
       </div>
