@@ -51,9 +51,12 @@ const SecondaryColumn = ({
   // ideally we would want to be agnostic about the type of Curation we want to render here and have the decision made in the BFF
   // however, we cannot do this with the billboard curation as we would need to fetch the whole topic it is in, which is the whole home page,
   // in order to get its visual prominence and style.
-  // we can do this with the media curation as it is a vivo stream from a topic page, and so a topic fetch for that returns
-  // the outer data of the curation (containing the title and the visual style and prominence) and only the data from the first page of that vivo-stream, which is acceptable
-  // this would be the case for every vivo stream curation. Every non-vivo-stream that we can't just call a topic for would need the whole home page fetched.
+  // The other way would be to hard code the visual prominence and style in the bff and include it in the data
+  // just for speed we will just keep the hardcoded style and prominence here for now, and can be improved later if we do more experiments with curations like this
+
+  // it is possible to get the prominence and style for the media curation in the bff and send it through to simorgh, but as we are not doing that for the billboard one
+  // we can just keep that hardcoded here too
+
   return (
     <div css={styles.secondaryColumn}>
       {showAdaptiveSection && (
@@ -67,7 +70,7 @@ const SecondaryColumn = ({
             visualProminence={VISUAL_PROMINENCE.NORMAL}
             summaries={multimediaCurationData?.summaries}
             title={multimediaCurationData?.title}
-            position={multimediaCurationData?.position ?? 0}
+            position={1} // this isn't needed but is a mandatory value. Do we make it optional now we might be using curations in article pages?
             curationId={multimediaCurationData?.curationId}
             curationLength={4}
             link={multimediaCurationData?.link}
@@ -77,7 +80,7 @@ const SecondaryColumn = ({
             visualProminence={VISUAL_PROMINENCE.MAXIMUM}
             summaries={billboardCurationData?.summaries}
             title={billboardCurationData?.title}
-            position={billboardCurationData?.position ?? 0}
+            position={1} // this isn't needed but is a mandatory value. Do we make it optional now we might be using curations in article pages?
             curationId={billboardCurationData?.curationId}
           />
         </section>
