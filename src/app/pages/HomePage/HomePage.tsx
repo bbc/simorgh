@@ -116,7 +116,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
               text: 'Agregar con un toque',
               onclick: handleAddShortcut,
             }}
-            buttonTwo={{ text: 'No Ahora', onClick: handleClose }}
+            buttonTwo={{ text: 'No ahora', onClick: handleClose }}
           />
         )}
         <ATIAnalytics atiData={atiAnalytics} />

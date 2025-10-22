@@ -10,6 +10,7 @@ const styles = {
       alignItems: 'center',
       justifyContent: 'center',
       zIndex: 1000,
+
       backgroundColor: '#4D0B0B',
       backgroundImage: `url('/banner_gradient.jpg')`,
       backgroundRepeat: 'no-repeat',
@@ -37,36 +38,44 @@ const styles = {
       display: 'grid',
       position: 'relative',
       width: '100%',
+      gap: `${pixelsToRem(8)}rem`,
     }),
 
   TextWrapper: () =>
     css({
       display: 'grid',
+      marginRight: `${pixelsToRem(44)}rem`,
     }),
 
   StyledTitle: () =>
     css({
       color: '#F6F6F6',
-      height: `${pixelsToRem(32)}rem`, // change to correct height - Class/Line Height/Index Headline Large
+      height: 'auto',
       weight: 700,
+      margin: 0,
     }),
 
   StyledDescription: ({ mq }: Theme) =>
     css({
       color: '#F6F6F6',
-      height: `${pixelsToRem(22)}rem`, // Class/Line Height/Index Headline Small
+      marginBottom: 0,
+      height: 'auto',
       [mq.GROUP_0_MAX_WIDTH]: {
         display: 'none',
       },
     }),
 
-  CTAWrapper: () =>
+  CTAWrapper: ({ mq }: Theme) =>
     css({
       display: 'flex',
-      alignContent: 'center',
+      alignItems: 'center',
       justifyContent: 'flex-start',
       gap: `${pixelsToRem(12)}rem`,
       lineHeight: 1,
+      [mq.GROUP_1_MAX_WIDTH]: {
+        flexDirection: 'column',
+        alignItems: 'flex-start',
+      },
     }),
 
   StyledButtonOne: ({ palette }: Theme) =>
@@ -75,35 +84,41 @@ const styles = {
       backgroundColor: palette.SERVICE_NEUTRAL_CORE,
       border: 'none',
       height: `${pixelsToRem(44)}rem`,
-      padding: `${pixelsToRem(12)}rem`, // change to correct
+      padding: `${pixelsToRem(12)}rem`,
       cursor: 'pointer',
+      whiteSpace: 'nowrap',
     }),
 
   StyledText: () =>
     css({
       color: '#F6F6F6',
       fontSize: `${pixelsToRem(18)}rem`,
-      height: `${pixelsToRem(22)}rem`, // Class/Line Height/Index Headline Small
+      height: `${pixelsToRem(22)}rem`,
       margin: 0,
       alignText: 'center',
     }),
 
-  StyledButtonTwo: () =>
+  StyledButtonTwo: ({ mq }: Theme) =>
     css({
       color: '#73B5FF',
       backgroundColor: 'transparent',
       border: 'none',
       textDecoration: 'underline',
       height: `${pixelsToRem(44)}rem`,
-      padding: `${pixelsToRem(12)}rem`, // change to correct
+      padding: `${pixelsToRem(6)}rem`,
       cursor: 'pointer',
+      whiteSpace: 'nowrap',
+      [mq.GROUP_1_MAX_WIDTH]: {
+        padding: 0,
+        marginTop: `${pixelsToRem(-6)}rem`,
+      },
     }),
 
   subNavCloseButton: ({ palette }: Theme) =>
     css({
       position: 'absolute',
-      top: 0, // change to correct
-      right: 0, // change to correct
+      top: `${pixelsToRem(-16)}rem`,
+      right: `${pixelsToRem(-10)}rem`,
       border: 'none',
       background: 'transparent',
       padding: 0,
@@ -126,8 +141,8 @@ const styles = {
   subNavCloseButtonIcon: ({ palette }: Theme) =>
     css({
       position: 'absolute',
-      top: `${pixelsToRem(14)}rem`, // change to correct
-      right: `${pixelsToRem(14)}rem`, // change to correct
+      top: `${pixelsToRem(-2)}rem`,
+      right: `${pixelsToRem(3)}rem`,
       color: palette.WHITE,
       fill: 'currentColor',
       width: `${pixelsToRem(18)}rem`,
