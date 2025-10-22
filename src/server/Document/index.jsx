@@ -86,7 +86,7 @@ const renderDocument = async ({
       value: null,
     };
 
-  if (!shouldRedirectHomepage && url === `/${service}` && redirectTo) {
+  if (shouldRedirectHomepage && url === `/${service}` && redirectTo) {
     return { redirectUrl: redirectTo, html: null };
   }
 
