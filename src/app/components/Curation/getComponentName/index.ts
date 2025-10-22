@@ -17,7 +17,6 @@ export const COMPONENT_NAMES = {
   USEFUL_LINKS: 'useful-links',
   SOCIAL_LINKS: 'social-links',
   MEDIA_COLLECTION: 'media-collection',
-  LIVE_TV_PLAYER: 'live-tv-player',
 } as const;
 
 const { NONE, BANNER, COLLECTION, RANKED, INSITU, LINKS } = VISUAL_STYLE;
