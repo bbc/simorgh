@@ -15,13 +15,7 @@ const styles = {
   margins: ({ spacings, mq }: Theme) =>
     css({
       margin: `${spacings.TRIPLE}rem 0`,
-      [mq.GROUP_0_MAX_WIDTH]: {
-        margin: `${spacings.TRIPLE}rem 0`,
-      },
-      [mq.GROUP_1_ONLY]: {
-        margin: `${spacings.QUADRUPLE}rem 0`,
-      },
-      [mq.GROUP_2_ONLY]: {
+      [(mq.GROUP_1_ONLY, mq.GROUP_2_ONLY)]: {
         margin: `${spacings.QUADRUPLE}rem 0`,
       },
       [mq.GROUP_3_ONLY]: {
