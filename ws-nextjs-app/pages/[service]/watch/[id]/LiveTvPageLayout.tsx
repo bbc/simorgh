@@ -37,7 +37,7 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
         <div css={styles.inner}>
           <div css={styles.margins}>
             <Heading id="content" level={1}>
-              {title}
+              Live TV Page with schedule
             </Heading>
             <Text>{description}</Text>
 
