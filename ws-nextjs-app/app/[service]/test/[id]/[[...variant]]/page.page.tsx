@@ -13,8 +13,7 @@ import { notFound } from 'next/navigation';
 import nodeLogger from '#lib/logger.node';
 import { OK } from '#app/lib/statusCodes.const';
 import { Services, Variants } from '#app/models/types/global';
-
-export const dynamic = 'force-dynamic';
+import MetadataContainer from '#app/components/Metadata';
 
 interface PageProps {
   params: {
@@ -113,6 +112,12 @@ export default async function LivePage({ params, searchParams }: PageProps) {
 
   return (
     <div>
+      <MetadataContainer
+        title="test"
+        lang="en"
+        openGraphType="website"
+        hasAmpPage={false}
+      />
       hello<p>{JSON.stringify(props, null, 2)}</p>
     </div>
   );

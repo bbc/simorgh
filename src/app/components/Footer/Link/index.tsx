@@ -1,6 +1,5 @@
-/** @jsx jsx */
-import { css, jsx } from '@emotion/react';
-import { useState, useEffect, MouseEvent } from 'react';
+import { css } from '@emotion/react';
+import React, { useState, useEffect, MouseEvent } from 'react';
 import { FooterLink } from '#app/models/types/serviceConfig';
 import styles from './index.styles';
 

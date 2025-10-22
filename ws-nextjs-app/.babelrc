@@ -1,14 +1,5 @@
 {
-  "presets": [
-    [
-      "next/babel",
-      {
-        "preset-react": {
-          "runtime": "classic"
-        }
-      }
-    ]
-  ],
+  "presets": ["next/babel"],
   "plugins": [
     "@emotion/babel-plugin",
     "@babel/plugin-proposal-export-default-from",

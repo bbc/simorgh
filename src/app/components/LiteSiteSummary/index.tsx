@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { use } from 'react';
-import { jsx } from '@emotion/react';
+import React, { use } from 'react';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import Paragraph from '../Paragraph';
 import Text from '../Text';

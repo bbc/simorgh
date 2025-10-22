@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { use } from 'react';
-import { jsx } from '@emotion/react';
+import React, { use } from 'react';
 import useToggle from '#hooks/useToggle';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
