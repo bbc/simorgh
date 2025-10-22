@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+import React from 'react';
 import Blocks from '#app/legacy/containers/Blocks';
 import { OptimoBlock } from '#app/models/types/optimo';
 import fragment from '../Fragment';

@@ -1,5 +1,5 @@
-/** @jsx jsx */
-import { Global, jsx } from '@emotion/react';
+import React from 'react';
+import { Global } from '@emotion/react';
 import MediaLoader from '#app/components/MediaLoader';
 import { AvEmbedsPageProps } from './types';
 import styles from './styles';

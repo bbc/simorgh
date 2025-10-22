@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+import React from 'react';
 import styled from '@emotion/styled';
 import detokenise from '#psammead/psammead-detokeniser/src';
 import { getSansBold } from '#psammead/psammead-styles/src/font-styles';

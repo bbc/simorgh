@@ -1,6 +1,5 @@
 /* eslint-disable react/destructuring-assignment */
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+import React from 'react';
 import AmpIframe from '../../AmpIframe';
 import { ampParams } from '../types';
 import styles from './index.styles';

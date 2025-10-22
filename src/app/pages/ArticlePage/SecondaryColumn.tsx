@@ -1,6 +1,6 @@
-/** @jsx jsx */
+import React from 'react';
 
-import { jsx, useTheme } from '@emotion/react';
+import { useTheme } from '@emotion/react';
 
 import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
 import { Article } from '#app/models/types/optimo';

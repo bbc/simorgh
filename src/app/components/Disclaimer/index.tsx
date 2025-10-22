@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
-import { use, PropsWithChildren } from 'react';
+import React, { use, PropsWithChildren } from 'react';
 import isEmpty from 'ramda/src/isEmpty';
 import { GridItemLarge } from '../../legacy/components/Grid';
 import { ServiceContext } from '../../contexts/ServiceContext';

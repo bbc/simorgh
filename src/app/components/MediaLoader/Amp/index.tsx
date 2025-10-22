@@ -1,6 +1,4 @@
-/** @jsx jsx */
-
-import { jsx } from '@emotion/react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import Message from '../Message';
 import styles from './index.styles';

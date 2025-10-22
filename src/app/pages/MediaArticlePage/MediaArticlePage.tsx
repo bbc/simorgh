@@ -1,7 +1,5 @@
-/** @jsx jsx */
-
-import { use } from 'react';
-import { jsx, useTheme, Theme } from '@emotion/react';
+import React, { use } from 'react';
+import { useTheme, Theme } from '@emotion/react';
 import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';

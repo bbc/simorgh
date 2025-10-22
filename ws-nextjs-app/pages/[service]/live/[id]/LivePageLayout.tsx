@@ -1,7 +1,4 @@
-/** @jsx jsx */
-
 import React, { use } from 'react';
-import { jsx } from '@emotion/react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Pagination from '#app/components/Pagination';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
@@ -23,6 +20,7 @@ import KeyPoints from './KeyPoints';
 import styles from './styles';
 import { StreamResponse } from './Post/types';
 import { KeyPointsResponse } from './KeyPoints/types';
+import Test from './test';
 
 interface LivePromoImage {
   url: string;
@@ -162,6 +160,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
         {...(liveBlogPostingSchema && { entities: [liveBlogPostingSchema] })}
       />
       <main>
+        <Test />
         <Header
           showLiveLabel={isLive}
           title={title}

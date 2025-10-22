@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
-import { use, MouseEvent } from 'react';
+import React, { use, MouseEvent } from 'react';
 import pathOr from 'ramda/src/pathOr';
 
 import { RequestContext } from '#app/contexts/RequestContext';

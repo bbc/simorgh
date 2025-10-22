@@ -1,7 +1,5 @@
-/** @jsx jsx */
-
-import { use } from 'react';
-import { jsx, useTheme } from '@emotion/react';
+import React, { use } from 'react';
+import { useTheme } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import LegacyText from '#app/legacy/containers/Text';
 import LegacyParagraph from '#app/legacy/containers/Paragraph';

@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
-import { PropsWithChildren, use } from 'react';
+import React, { PropsWithChildren, use } from 'react';
 import {
   GROUP_2_MIN_WIDTH_BP,
   GROUP_2_MAX_WIDTH_BP,

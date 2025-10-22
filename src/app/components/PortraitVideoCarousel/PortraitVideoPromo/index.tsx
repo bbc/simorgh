@@ -1,12 +1,11 @@
-/** @jsx jsx */
-import { jsx, useTheme } from '@emotion/react';
+import React, { use, FocusEvent } from 'react';
+import { useTheme } from '@emotion/react';
 import Image from '#app/components/Image';
 import Text from '#app/components/Text';
 import { Play } from '#app/components/icons';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import moment from 'moment';
 import formatDuration from '#app/lib/utilities/formatDuration';
-import { use, FocusEvent } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';

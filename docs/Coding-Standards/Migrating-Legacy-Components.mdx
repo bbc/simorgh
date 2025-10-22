@@ -11,8 +11,13 @@ import {
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
   GEL_GROUP_0_SCREEN_WIDTH_MAX,
 } from '../../src/app/legacy/psammead/gel-foundations/src/breakpoints';
-import * as spacings from '../../src/app/components/ThemeProvider/spacings'
-import {MARGIN_BELOW_400PX, MARGIN_ABOVE_400PX, GUTTER_BELOW_600PX, GUTTER_ABOVE_600PX} from '../../src/app/components/ThemeProvider/spacings'
+import * as spacings from '../../src/app/components/ThemeProvider/spacings';
+import {
+  MARGIN_BELOW_400PX,
+  MARGIN_ABOVE_400PX,
+  GUTTER_BELOW_600PX,
+  GUTTER_ABOVE_600PX,
+} from '../../src/app/components/ThemeProvider/spacings';
 
 <Meta title="Coding Standards/Migrating Legacy Components" />
 
@@ -154,10 +159,6 @@ _Ensure that the `jsx` function is imported from the `@emotion/react` library, p
 **(index.tsx)**
 
 ```jsx
-
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import { jsx } from '@emotion/react';
 
 import styles from './index.styles';
 

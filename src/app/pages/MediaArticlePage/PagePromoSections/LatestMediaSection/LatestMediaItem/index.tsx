@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { forwardRef } from 'react';
-import { jsx } from '@emotion/react';
+import React, { forwardRef } from 'react';
 
 import Promo from '../../../../../legacy/components/OptimoPromos';
 import { LatestMediaItemProp } from '../types';

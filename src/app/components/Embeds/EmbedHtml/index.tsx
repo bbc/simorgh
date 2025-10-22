@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
-import { PropsWithChildren, use } from 'react';
+import React, { PropsWithChildren, use } from 'react';
 import useToggle from '#app/hooks/useToggle';
 import { RequestContext } from '../../../contexts/RequestContext';
 import styles from './index.styles';

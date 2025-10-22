@@ -1,7 +1,5 @@
-/** @jsx jsx */
-
-import { use, FC, HTMLAttributes } from 'react';
-import { jsx, Theme } from '@emotion/react';
+import React, { use, FC, HTMLAttributes } from 'react';
+import { Theme } from '@emotion/react';
 import Url from 'url-parse';
 
 import { FontVariant, GelFontSize } from '../../models/types/theming';

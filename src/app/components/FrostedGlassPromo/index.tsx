@@ -1,6 +1,4 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import React, { PropsWithChildren, use } from 'react';
 import pick from 'ramda/src/pick';
 import Lazyload from 'react-lazyload';
@@ -60,7 +58,7 @@ const FrostedGlassPromo = ({
   });
 
   const promoText = (
-    <React.Fragment>
+    <>
       <h3 css={styles.header}>
         <a
           css={theme => [
@@ -80,7 +78,7 @@ const FrostedGlassPromo = ({
         </a>
       </h3>
       {footer}
-    </React.Fragment>
+    </>
   );
 
   // The ClickableArea component is an anchor ("a") element

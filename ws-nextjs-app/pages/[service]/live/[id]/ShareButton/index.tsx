@@ -1,7 +1,5 @@
 /* eslint-disable jsx-a11y/aria-role */
-/** @jsx jsx */
-import { use, useRef } from 'react';
-import { jsx } from '@emotion/react';
+import React, { use, useRef } from 'react';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';

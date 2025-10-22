@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+import React from 'react';
 import styles from './index.styles';
 import InlineLink from '../../InlineLink';
 import Text from '../../Text';

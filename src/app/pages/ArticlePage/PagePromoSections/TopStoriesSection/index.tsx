@@ -1,7 +1,5 @@
-/** @jsx jsx */
-
-import { jsx, useTheme } from '@emotion/react';
-import { use } from 'react';
+import { useTheme } from '@emotion/react';
+import React, { use } from 'react';
 import useViewTracker from '#hooks/useViewTracker';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import PromoItem from '#components/OptimoPromos/PromoItem/index.styles';

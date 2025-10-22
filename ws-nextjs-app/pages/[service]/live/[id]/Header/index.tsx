@@ -1,12 +1,10 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+import React, { useState } from 'react';
 import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
 import LiveHeaderMedia from '#app/components/LiveHeaderMedia';
 import { MediaCollection } from '#app/components/MediaLoader/types';
 
 import MaskedImage from '#app/components/MaskedImage';
-import { useState } from 'react';
 import LiveLabelHeader from './LiveLabelHeader';
 import styles from './styles';
 

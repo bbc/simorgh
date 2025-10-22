@@ -1,6 +1,3 @@
-/** @jsx jsx */
-/** @jsxFrag */
-import { jsx } from '@emotion/react';
 import React, { memo, use, useState } from 'react';
 import Text from '#app/components/Text';
 import { MediaCollection } from '#app/components/MediaLoader/types';

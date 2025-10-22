@@ -1,6 +1,5 @@
-/** @jsx jsx */
-import { jsx, useTheme } from '@emotion/react';
-import { PropsWithChildren } from 'react';
+import { useTheme } from '@emotion/react';
+import React, { PropsWithChildren } from 'react';
 
 import useImageColour from '../../hooks/useImageColour';
 

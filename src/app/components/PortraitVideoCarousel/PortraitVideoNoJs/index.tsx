@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { Warning } from '#app/components/icons';
 import { service as newsConfig } from '#lib/config/services/news';

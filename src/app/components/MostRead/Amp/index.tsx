@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
-import { use } from 'react';
+import React, { use } from 'react';
 import { Helmet } from 'react-helmet';
 import {
   AMP_LIST_JS,

@@ -1,6 +1,4 @@
-/** @jsx jsx */
-
-import { jsx } from '@emotion/react';
+import React from 'react';
 import styles from './index.styles';
 
 type Props = {

@@ -1,9 +1,7 @@
-/** @jsx jsx */
 // @ts-nocheck
 
 import { GetServerSideProps } from 'next';
-import { useEffect, use } from 'react';
-import { jsx } from '@emotion/react';
+import React, { useEffect, use } from 'react';
 import { ParsedUrlQuery } from 'querystring';
 import omit from 'ramda/src/omit';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -26,9 +24,8 @@ import {
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
 } from '#app/lib/logger.const';
 import { Services, Variants } from '#models/types/global';
+import extractHeaders from '#server/utilities/extractHeaders';
 import styles from './wrappedStyles';
-
-import extractHeaders from '../../../src/server/utilities/extractHeaders';
 
 interface PageDataParams extends ParsedUrlQuery {
   id: string;
@@ -238,46 +235,44 @@ const pageLayout = () => {
     }
   }, []);
   return (
-    <>
-      <main>
-        <div css={styles.outerGrid}>
-          <div css={styles.wideSection}>
-            <h1 css={styles.h1}>
-              <Calculator /> 2024
-            </h1>
-            <div>
-              <h2 css={styles.h2}>
-                <Clock /> <span id="timespent" />
-              </h2>
-              <h2 css={styles.h2}>
-                <Book />
-              </h2>
-              <ul css={styles.ul}>
-                <li>
-                  <Words /> <span id="words" />{' '}
-                </li>
-                <li>
-                  <Articles /> <span id="article" />{' '}
-                </li>
-              </ul>
-              <h2 css={styles.h2}>
-                <Favourites />
-              </h2>
-              <ol id="topiclist" />
-              <h2 css={styles.h2}>
-                <Calendar />
-              </h2>
-              <canvas
-                id="my_canvas"
-                width="100%"
-                height="290"
-                style={{ border: '2px solid #000000' }}
-              />
-            </div>
+    <main>
+      <div css={styles.outerGrid}>
+        <div css={styles.wideSection}>
+          <h1 css={styles.h1}>
+            <Calculator /> 2024
+          </h1>
+          <div>
+            <h2 css={styles.h2}>
+              <Clock /> <span id="timespent" />
+            </h2>
+            <h2 css={styles.h2}>
+              <Book />
+            </h2>
+            <ul css={styles.ul}>
+              <li>
+                <Words /> <span id="words" />{' '}
+              </li>
+              <li>
+                <Articles /> <span id="article" />{' '}
+              </li>
+            </ul>
+            <h2 css={styles.h2}>
+              <Favourites />
+            </h2>
+            <ol id="topiclist" />
+            <h2 css={styles.h2}>
+              <Calendar />
+            </h2>
+            <canvas
+              id="my_canvas"
+              width="100%"
+              height="290"
+              style={{ border: '2px solid #000000' }}
+            />
           </div>
         </div>
-      </main>
-    </>
+      </div>
+    </main>
   );
 };
 
