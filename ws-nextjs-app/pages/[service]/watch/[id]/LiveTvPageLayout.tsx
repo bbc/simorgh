@@ -1,32 +1,45 @@
-import React from 'react';
+import React, { use } from 'react';
 import MediaLoader from '#app/components/MediaLoader';
 import { Curation } from '#app/models/types/curationData';
 import LiveTVCuration from '#app/components/Curation';
+import { data as liveTvFixture } from '#data/dari/watch/bbc_afghan_tv/live.json';
 import { LiveTVPageProps } from './types';
+import Heading from '#app/components/Heading';
+import Text from '#app/components/Text';
+import MetadataContainer from '#app/components/Metadata';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 // import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 // import ATIAnalytics from '#app/components/ATIAnalytics';
 // import MetadataContainer from '#app/components/Metadata';
 
 export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
+  const { lang } = use(ServiceContext);
+  if (!pageData) {
+    // @ts-expect-error liveTvFixture used for development purposes only
+    // eslint-disable-next-line no-param-reassign
+    pageData = liveTvFixture;
+  }
   const { curations, mediaBlock } = pageData;
+
   console.log('LiveTvLayout pageData:', pageData);
+  // console.log('LiveTvLayout curations:', curations);
   return (
     <>
       {/* <ATIAnalytics atiData={atiAnalytics} />
-      <ChartbeatAnalytics title={pageTitle} />
+      <ChartbeatAnalytics title={pageTitle} /> */}
       <MetadataContainer
-        title={pageTitle}
+        title={pageData.title}
         lang={lang}
-        description={pageDescription}
+        description={pageData.description}
         openGraphType="website"
         hasAmpPage={false}
-      /> */}
+      />
       <main role="main">
-        <h1 id="content">
+        <Heading id="content" level={1}>
           {pageData.title}
-          {pageData.description}
-        </h1>
-        {curations.map(
+        </Heading>
+        <Text>{pageData.description}</Text>
+        {curations?.map(
           ({
             summaries,
             curationId,
