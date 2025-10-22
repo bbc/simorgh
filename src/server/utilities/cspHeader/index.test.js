@@ -215,6 +215,8 @@ describe('cspHeader', () => {
         "'self'",
         "'unsafe-inline'",
         "'unsafe-eval'",
+        'blob:',
+        'data:',
         `'nonce-${nonce}'`,
       ].sort(),
       styleSrcExpectation: [
@@ -379,6 +381,7 @@ describe('cspHeader', () => {
         'https://*.chartbeat.com',
         'http://*.chartbeat.com',
         'http://localhost:1124',
+        'http://localhost:7080',
         'https://*.twitter.com',
         'https://www.instagram.com',
         'https://*.twimg.com',
@@ -411,6 +414,8 @@ describe('cspHeader', () => {
         "'self'",
         "'unsafe-inline'",
         "'unsafe-eval'",
+        'blob:',
+        'data:',
         `'nonce-${nonce}'`,
       ].sort(),
       styleSrcExpectation: [
@@ -486,7 +491,7 @@ describe('cspHeader', () => {
         });
 
         it(`Then it has this mediaSrc`, () => {
-          expect(generateMediaSrc()).toEqual(mediaSrcExpectation);
+          expect(generateMediaSrc({})).toEqual(mediaSrcExpectation);
         });
 
         it(`Then it has this workerSrc`, () => {

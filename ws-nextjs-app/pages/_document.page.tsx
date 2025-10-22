@@ -14,13 +14,12 @@ import { CacheProvider } from '@emotion/react';
 import createEmotionServer from '@emotion/server/create-instance';
 import createCache from '@emotion/cache';
 
-import getPathExtension from '#app/utilities/getPathExtension';
-
 import {
   EnvConfig,
   getProcessEnvAppVariables,
 } from '#lib/utilities/getEnvConfig';
 
+import AmpRenderer from '#server/Document/Renderers/AmpRenderer';
 import LiteRenderer from '#server/Document/Renderers/LiteRenderer';
 import litePageTransforms from '#server/Document/Renderers/litePageTransforms';
 import sendCustomMetric from '#server/utilities/customMetrics';
@@ -34,16 +33,24 @@ import {
 import { OK, INTERNAL_SERVER_ERROR } from '#app/lib/statusCodes.const';
 import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 
+import getPathExtension from '#app/utilities/getPathExtension';
 import ReverbTemplate from '#src/server/Document/Renderers/ReverbTemplate';
+import { PageTypes } from '#app/models/types/global';
+import ComponentTracking from '#src/server/Document/Renderers/ComponentTracking';
 import removeSensitiveHeaders from '../utilities/removeSensitiveHeaders';
 import derivePageType from '../utilities/derivePageType';
 
 const logger = nodeLogger(__filename);
 
-const handleServerLogging = (ctx: DocumentContext) => {
+const handleServerLogging = ({
+  ctx,
+  pageType,
+}: {
+  ctx: DocumentContext;
+  pageType: PageTypes | 'Unknown';
+}) => {
   const url = ctx.asPath || '';
   const headers = removeSensitiveHeaders(ctx.req?.headers);
-  const pageType = derivePageType(url);
   const { statusCode } = ctx.res || {};
   const { cause, message, name, stack } = ctx.err || {};
 
@@ -81,6 +88,8 @@ type DocProps = {
   helmet: HelmetData;
   htmlAttrs: HTMLAttributes<HTMLHtmlElement>;
   ids: string[];
+  pageType: string;
+  isAmp: boolean;
   isApp: boolean;
   isLite: boolean;
   title: ReactElement;
@@ -89,8 +98,9 @@ type DocProps = {
 export default class AppDocument extends Document<DocProps> {
   static async getInitialProps(ctx: DocumentContext) {
     const url = ctx.asPath || '';
+    const pageType = derivePageType(url);
 
-    const { isApp, isLite } = getPathExtension(url);
+    const { isApp, isAmp, isLite } = getPathExtension(url);
 
     const cache = createCache({ key: 'css' });
     const { extractCritical } = createEmotionServer(cache);
@@ -116,7 +126,7 @@ export default class AppDocument extends Document<DocProps> {
     // Read env variables from the server and expose them to the client
     const clientSideEnvVariables = getProcessEnvAppVariables();
 
-    handleServerLogging(ctx);
+    handleServerLogging({ ctx, pageType });
 
     return {
       ...initialProps,
@@ -124,14 +134,24 @@ export default class AppDocument extends Document<DocProps> {
       css,
       helmet: Helmet.renderStatic(),
       ids,
+      pageType,
+      isAmp,
       isApp,
       isLite,
     };
   }
 
   render() {
-    const { clientSideEnvVariables, css, helmet, ids, isApp, isLite } =
-      this.props;
+    const {
+      clientSideEnvVariables,
+      css,
+      helmet,
+      ids,
+      pageType,
+      isAmp,
+      isApp,
+      isLite,
+    } = this.props;
 
     const htmlAttrs = helmet.htmlAttributes.toComponent();
     const title = helmet.title.toComponent();
@@ -140,6 +160,19 @@ export default class AppDocument extends Document<DocProps> {
     const helmetScriptTags = helmet.script.toComponent();
 
     switch (true) {
+      case isAmp && pageType === 'article':
+        return (
+          <AmpRenderer
+            bodyContent={<Main />}
+            helmetLinkTags={helmetLinkTags}
+            helmetMetaTags={helmetMetaTags}
+            helmetScriptTags={helmetScriptTags}
+            htmlAttrs={htmlAttrs}
+            ids={ids}
+            styles={css}
+            title={title}
+          />
+        );
       case isLite:
         return (
           <LiteRenderer
@@ -170,6 +203,10 @@ export default class AppDocument extends Document<DocProps> {
               {title}
               {helmetMetaTags}
               {helmetLinkTags}
+              <ComponentTracking
+                trackComponentViews={false}
+                enableStaticClickTrackingOnOperaMiniOnly
+              />
               {helmetScriptTags}
               <style
                 data-emotion={ids.join(' ')}

@@ -64,7 +64,14 @@ exports[`AMP Articles Footer I can click on the BBC branding and it would take m
 
 exports[`AMP Articles Footer Paragraphs should match text 1`] = `"© 2025 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
 
-exports[`AMP Articles Header I can see the branding 1`] = `"BBC Scotland"`;
+exports[`AMP Articles Header I can see the branding 1`] = `
+{
+  "brandLink": "BBC Scotland",
+  "svg": <path
+    d="M48.82 15.91v.01-.01zM58.76 0v24h25.5V0zm20.42 19.3l-.15.07a14 14 0 01-6.56 1.5A10 10 0 0165 17.93a8.45 8.45 0 01-2.37-5.68 8.68 8.68 0 012.84-6.54 10.56 10.56 0 017.19-2.57 16.52 16.52 0 016.2 1.4l.17.06v3.22l-.4-.22a12 12 0 00-6-1.71c-4 0-6.84 2.53-6.83 6.14s2.74 6.1 6.94 6.1a11.9 11.9 0 006.08-1.85l.41-.25zM29.38 24h25.5V0h-25.5zm6.69-20.65h5.45a6.3 6.3 0 014.36 1.42 4.2 4.2 0 011.39 3.15 3.75 3.75 0 01-.71 2.34 4.26 4.26 0 01-1.49 1.2 4.62 4.62 0 013.77 4.46 4.26 4.26 0 01-1.47 3.2 7.19 7.19 0 01-4.9 1.53h-6.4z"
+  />,
+}
+`;
 
 exports[`AMP Articles Image Caption should match text 1`] = `"Image caption, This test image, copyright BBC, shows a map of France.  The image is in the first three blocks and has this caption."`;
 
@@ -223,7 +230,7 @@ exports[`AMP Articles SEO Linked data should match text 2`] = `
   "@type": "VideoObject",
   "description": "They may be tiny, but us humans could learn a thing or two from ants.",
   "duration": "PT3M11S",
-  "embedURL": "https://www.test.bbc.com/ws/av-embeds/articles/czwj5l0n210o/p01k6msp/en-GB",
+  "embedURL": "https://www.test.bbc.com/ws/av-embeds/articles/czwj5l0n210o/p01k6msm/en-GB",
   "name": "Five things ants can teach us about management",
   "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg",
   "uploadDate": "2018-10-22T14:35:32.000Z",
