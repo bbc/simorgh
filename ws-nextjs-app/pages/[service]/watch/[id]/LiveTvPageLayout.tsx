@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import React, { use } from 'react';
 import MediaLoader from '#app/components/MediaLoader';
 import { Curation } from '#app/models/types/curationData';
@@ -8,6 +10,7 @@ import Text from '#app/components/Text';
 import MetadataContainer from '#app/components/Metadata';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { LiveTVPageProps } from './types';
+import styles from './styles';
 // import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 // import ATIAnalytics from '#app/components/ATIAnalytics';
 
@@ -33,37 +36,42 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
         openGraphType="website"
         hasAmpPage={false}
       />
-      <main role="main">
-        <Heading id="content" level={1}>
-          {pageData.title}
-        </Heading>
-        <Text>{pageData.description}</Text>
-        {curations?.map(
-          ({
-            summaries,
-            curationId,
-            title: curationTitle,
-            link,
-            position,
-            ...curationProps
-          }: Curation) => {
-            return (
-              <React.Fragment key={`${curationId}-${position}`}>
-                <LiveTVCuration
-                  summaries={summaries || []}
-                  title={curationTitle}
-                  position={position}
-                  link={link}
-                  curationLength={curations?.length}
-                  renderVisuallyHiddenH2Title={position === 0}
-                  curationId={curationId}
-                  {...curationProps}
-                />
-              </React.Fragment>
-            );
-          },
-        )}
-        <MediaLoader blocks={mediaBlock} />
+      <main role="main" css={styles.main}>
+        <div css={styles.inner}>
+          <div css={styles.margins}>
+            <Heading id="content" level={1}>
+              {pageData.title}
+            </Heading>
+            <Text>{pageData.description}</Text>
+
+            {curations?.map(
+              ({
+                summaries,
+                curationId,
+                title: curationTitle,
+                link,
+                position,
+                ...curationProps
+              }: Curation) => {
+                return (
+                  <React.Fragment key={`${curationId}-${position}`}>
+                    <LiveTVCuration
+                      summaries={summaries || []}
+                      title={curationTitle}
+                      position={position}
+                      link={link}
+                      curationLength={curations?.length}
+                      renderVisuallyHiddenH2Title={position === 0}
+                      curationId={curationId}
+                      {...curationProps}
+                    />
+                  </React.Fragment>
+                );
+              },
+            )}
+            <MediaLoader blocks={mediaBlock} />
+          </div>
+        </div>
       </main>
     </>
   );
