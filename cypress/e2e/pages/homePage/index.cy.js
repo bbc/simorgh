@@ -33,13 +33,14 @@ import {
 import { setUserIDCookie } from '../../specialFeatures/atiAnalytics/helpers';
 
 const tests = [
+  assertPageView,
   canonicalTests,
   urlValidationTest,
   testsForAllCanonicalPages,
-  assertPageView,
 ];
 
 const atiAnalyticsNavigationComponentTests = [
+  assertPageView,
   assertScrollableNavigationComponentView,
   assertScrollableNavigationComponentClick,
   assertDropdownNavigationComponentView,
@@ -59,40 +60,6 @@ const testSuites = [
     tests,
   },
   {
-    path: '/dari',
-    runforEnv: ['local', 'test'],
-    service: 'dari',
-    pageIdentifier: 'dari.page',
-    siteId: 142,
-    applicationType: 'responsive',
-    contentType: 'index-home',
-    useReverb: true,
-    tests: [
-      ...tests,
-      ...atiAnalyticsNavigationComponentTests,
-      assertMessageBannerComponentView,
-      assertMessageBannerComponentClick,
-    ],
-  },
-  {
-    path: '/kyrgyz',
-    runforEnv: ['local', 'live'],
-    service: 'kyrgyz',
-    pageIdentifier: 'kyrgyz.page',
-    siteId: 58,
-    applicationType: 'responsive',
-    contentType: 'index-home',
-    useReverb: true,
-    tests: [
-      ...tests,
-      ...atiAnalyticsNavigationComponentTests,
-      assertMessageBannerComponentView,
-      assertMessageBannerComponentClick,
-      assertMostReadComponentView,
-      assertMostReadComponentClick,
-    ],
-  },
-  {
     path: '/magyarul',
     runforEnv: ['local', 'test'],
     service: 'magyarul',
@@ -104,23 +71,8 @@ const testSuites = [
     tests,
   },
   {
-    path: '/pashto',
-    runforEnv: ['local', 'live'],
-    service: 'pashto',
-    pageIdentifier: 'pashto.page',
-    siteId: 68,
-    applicationType: 'responsive',
-    contentType: 'index-home',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertRadioScheduleComponentView,
-      assertRadioScheduleComponentClick,
-    ],
-  },
-  {
     path: '/polska',
-    runforEnv: ['local'],
+    runforEnv: ['local', 'test', 'live'],
     service: 'polska',
     pageIdentifier: 'polska.page',
     siteId: 135,
@@ -128,36 +80,6 @@ const testSuites = [
     contentType: 'index-home',
     useReverb: true,
     tests,
-  },
-  {
-    path: '/portuguese',
-    runforEnv: ['local'],
-    service: 'portuguese',
-    pageIdentifier: 'portuguese.page',
-    siteId: 33,
-    applicationType: 'responsive',
-    contentType: 'index-home',
-    useReverb: true,
-    tests: [
-      ...tests,
-      assertPortraitVideoCarouselComponentView,
-      assertPortraitVideoModalComponentView,
-    ],
-  },
-  {
-    path: '/serbian/lat',
-    runforEnv: ['local', 'test', 'live'],
-    service: 'serbian',
-    pageIdentifier: 'serbianlat.page',
-    siteId: 81,
-    applicationType: 'responsive',
-    contentType: 'index-home',
-    useReverb: true,
-    tests: [
-      ...tests,
-      assertMostReadComponentView,
-      assertMostReadComponentClick,
-    ],
   },
   {
     path: '/serbian/cyr',
@@ -181,6 +103,101 @@ const testSuites = [
     useReverb: true,
     tests,
   },
+];
+
+const atiAnalyticsTestSuitesOnly = [
+  {
+    path: '/afrique',
+    runforEnv: ['local', 'test'],
+    service: 'afrique',
+    pageIdentifier: 'afrique.page',
+    siteId: 3,
+    applicationType: 'responsive',
+    contentType: 'index-home',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertBillboardComponentView,
+      assertBillboardComponentClick,
+    ],
+  },
+  {
+    path: '/dari',
+    runforEnv: ['local', 'test'],
+    service: 'dari',
+    pageIdentifier: 'dari.page',
+    siteId: 142,
+    applicationType: 'responsive',
+    contentType: 'index-home',
+    useReverb: true,
+    tests: [
+      ...atiAnalyticsNavigationComponentTests,
+      assertMessageBannerComponentView,
+      assertMessageBannerComponentClick,
+    ],
+  },
+  {
+    path: '/kyrgyz',
+    runforEnv: ['local', 'live'],
+    service: 'kyrgyz',
+    pageIdentifier: 'kyrgyz.page',
+    siteId: 58,
+    applicationType: 'responsive',
+    contentType: 'index-home',
+    useReverb: true,
+    tests: [
+      ...atiAnalyticsNavigationComponentTests,
+      assertMessageBannerComponentView,
+      assertMessageBannerComponentClick,
+      assertMostReadComponentView,
+      assertMostReadComponentClick,
+    ],
+  },
+  {
+    path: '/pashto',
+    runforEnv: ['local', 'live'],
+    service: 'pashto',
+    pageIdentifier: 'pashto.page',
+    siteId: 68,
+    applicationType: 'responsive',
+    contentType: 'index-home',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertRadioScheduleComponentView,
+      assertRadioScheduleComponentClick,
+    ],
+  },
+  {
+    path: '/portuguese',
+    runforEnv: ['local'],
+    service: 'portuguese',
+    pageIdentifier: 'portuguese.page',
+    siteId: 33,
+    applicationType: 'responsive',
+    contentType: 'index-home',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertPortraitVideoCarouselComponentView,
+      assertPortraitVideoModalComponentView,
+    ],
+  },
+  {
+    path: '/serbian/lat',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'serbian',
+    pageIdentifier: 'serbianlat.page',
+    siteId: 81,
+    applicationType: 'responsive',
+    contentType: 'index-home',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertMostReadComponentView,
+      assertMostReadComponentClick,
+    ],
+  },
   {
     path: '/uzbek/cyr',
     runforEnv: ['test', 'live'],
@@ -191,24 +208,12 @@ const testSuites = [
     contentType: 'index-home',
     useReverb: true,
     tests: [
-      ...tests,
+      assertPageView,
       assertMessageBannerComponentView,
       assertMessageBannerComponentClick,
       assertMostReadComponentView,
       assertMostReadComponentClick,
     ],
-  },
-  // analytics test only
-  {
-    path: '/afrique',
-    runforEnv: ['local', 'test'],
-    service: 'afrique',
-    pageIdentifier: 'afrique.page',
-    siteId: 3,
-    applicationType: 'responsive',
-    contentType: 'index-home',
-    useReverb: true,
-    tests: [assertBillboardComponentView, assertBillboardComponentClick],
   },
 ];
 
@@ -224,7 +229,7 @@ if (Cypress.env('SMOKE')) {
   });
 }
 
-const atiAnalyticsliteTestSuites = testSuites
+const atiAnalyticsliteTestSuites = atiAnalyticsTestSuitesOnly
   .filter(({ path }) => !path.startsWith('/persian/afghanistan'))
   .map(testSuite => {
     const excludedLiteTests = [
@@ -251,8 +256,11 @@ const atiAnalyticsliteTestSuites = testSuites
 
 runTestsForPage({
   pageType: HOME_PAGE,
-  testSuites: Cypress.env('SMOKE')
-    ? [...smokeTests, ...atiAnalyticsliteTestSuites]
-    : [...testSuites, ...atiAnalyticsliteTestSuites],
+  testSuites: Cypress.env('SMOKE') ? smokeTests : testSuites,
+});
+
+runTestsForPage({
+  pageType: HOME_PAGE,
+  testSuites: [...atiAnalyticsTestSuitesOnly, ...atiAnalyticsliteTestSuites],
   beforeAll: [setUserIDCookie],
 });
