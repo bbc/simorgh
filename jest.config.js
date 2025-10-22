@@ -13,7 +13,7 @@ const unitTests = {
   transform: {
     '^.+\\.[tj]sx?$': 'babel-jest',
   },
-  displayName: 'Unit Tests (Server)',
+  displayName: 'Unit Tests',
   collectCoverageFrom: [
     '**/(src|scripts)/**/*.{js,jsx,ts,tsx}',
     '!**/src/testHelpers/**',
