@@ -376,7 +376,6 @@ server.get(
         curationType: 'tipo-curation',
         position: 7,
         visualStyle: 'BANNER',
-        title: 'बीबीसी दुनिया',
       };
 
       if (data && data.pageData && data.pageData.secondaryColumn) {
