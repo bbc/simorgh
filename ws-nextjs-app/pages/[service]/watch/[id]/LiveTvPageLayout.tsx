@@ -3,14 +3,13 @@ import MediaLoader from '#app/components/MediaLoader';
 import { Curation } from '#app/models/types/curationData';
 import LiveTVCuration from '#app/components/Curation';
 import { data as liveTvFixture } from '#data/dari/watch/bbc_afghan_tv/live.json';
-import { LiveTVPageProps } from './types';
 import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
 import MetadataContainer from '#app/components/Metadata';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import { LiveTVPageProps } from './types';
 // import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 // import ATIAnalytics from '#app/components/ATIAnalytics';
-// import MetadataContainer from '#app/components/Metadata';
 
 export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
   const { lang } = use(ServiceContext);
