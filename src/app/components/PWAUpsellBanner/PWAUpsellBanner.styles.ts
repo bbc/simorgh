@@ -11,6 +11,12 @@ const styles = {
       justifyContent: 'center',
       zIndex: 1000,
       backgroundColor: '#4D0B0B',
+      backgroundImage: `url('/banner_gradient.jpg')`,
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundBlendMode: 'overlay',
+
       padding: `${pixelsToRem(16)}rem`,
       minHeight: `${pixelsToRem(170)}rem`,
       maxHeight: `${pixelsToRem(370)}rem`,
