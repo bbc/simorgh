@@ -21,7 +21,7 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
     // eslint-disable-next-line no-param-reassign
     pageData = liveTvFixture;
   }
-  const { curations, mediaBlock } = pageData;
+  const { curations } = pageData;
 
   console.log('LiveTvLayout pageData:', pageData);
   // console.log('LiveTvLayout curations:', curations);
@@ -69,7 +69,6 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
                 );
               },
             )}
-            <MediaLoader blocks={mediaBlock} />
           </div>
         </div>
       </main>
