@@ -67,6 +67,9 @@ export default {
   scriptLink: {
     enabled: true,
   },
+  siteIsLiveToAudience: {
+    enabled: true,
+  },
   variantCookie: {
     enabled: true,
   },

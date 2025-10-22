@@ -4,6 +4,7 @@ import mergeAll from 'ramda/src/mergeAll';
 import path from 'ramda/src/path';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import routes from '#app/routes';
+import errorNoRouteMatch from '#app/routes/errorNoRouteMatch';
 
 const mapToState = ({ pathname, initialData, routeProps, toggles }) => {
   const pageType = path(['route', 'pageType'], routeProps);
@@ -65,7 +66,27 @@ export const App = ({ initialData, bbcOrigin }) => {
     toggles,
   });
 
-  return renderRoutes(routes, {
+  const { enabled: siteIsLiveToAudience, value: permittedPathString } =
+    toggles.siteIsLiveToAudience || {
+      enabled: true,
+      value: '',
+    };
+
+  let permittedPaths = [];
+  if (siteIsLiveToAudience) {
+    permittedPaths = [pathname];
+  } else {
+    permittedPaths = permittedPathString?.split(',');
+  }
+
+  console.log({ siteIsLiveToAudience, permittedPathString, permittedPaths });
+
+  const routesToRender =
+    siteIsLiveToAudience && permittedPaths.includes(pathname)
+      ? routes
+      : [errorNoRouteMatch];
+
+  return renderRoutes(routesToRender, {
     ...state,
     country,
     bbcOrigin,

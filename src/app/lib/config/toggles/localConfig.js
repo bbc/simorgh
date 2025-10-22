@@ -14,7 +14,7 @@ export default {
     enabled: true,
   },
   enableFetchingToggles: {
-    enabled: process?.env.FETCH_TOGGLES === 'true' || false,
+    enabled: process?.env.FETCH_TOGGLES === 'true' || true,
     value:
       '(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|dari|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|magyarul|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|romania|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|ws|vietnamese|yoruba|zhongwen)',
   },
@@ -64,6 +64,9 @@ export default {
     value: 4,
   },
   scriptLink: {
+    enabled: true,
+  },
+  siteIsLiveToAudience: {
     enabled: true,
   },
   variantCookie: {
