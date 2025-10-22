@@ -154,6 +154,17 @@ const atiAnalyticsTestSuites = [
     ],
   },
   {
+    path: '/magyarul',
+    runforEnv: ['local', 'test'],
+    service: 'magyarul',
+    pageIdentifier: 'magyarul.page',
+    siteId: 30,
+    applicationType: 'responsive',
+    contentType: 'index-home',
+    useReverb: true,
+    tests: [assertPageView],
+  },
+  {
     path: '/pashto',
     runforEnv: ['local', 'live'],
     service: 'pashto',
@@ -229,35 +240,32 @@ if (Cypress.env('SMOKE')) {
   });
 }
 
-const atiAnalyticsliteTestSuites = atiAnalyticsTestSuites
-  .filter(({ path }) => !path.startsWith('/persian/afghanistan'))
-  .map(testSuite => {
-    const excludedLiteTests = [
-      assertDropdownNavigationComponentView, // Dropdown navigation removed from all pages, as it requires JS
-      assertDropdownNavigationComponentClick, // Dropdown navigation removed from all pages, as it requires JS
-    ];
+const atiAnalyticsliteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
+  const excludedLiteTests = [
+    assertDropdownNavigationComponentView, // Dropdown navigation removed from all pages, as it requires JS
+    assertDropdownNavigationComponentClick, // Dropdown navigation removed from all pages, as it requires JS
+  ];
 
-    const liteSiteTests = testSuite.tests.filter(
-      test => !excludedLiteTests.includes(test),
-    );
+  const liteSiteTests = testSuite.tests.filter(
+    test => !excludedLiteTests.includes(test),
+  );
 
-    // All lite enabled pages should have the Lite Site Summary component
-    liteSiteTests.push(assertLiteSiteSummaryComponentToMainSiteClick);
+  // All lite enabled pages should have the Lite Site Summary component
+  liteSiteTests.push(assertLiteSiteSummaryComponentToMainSiteClick);
 
-    return {
-      ...testSuite,
-      path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
-      applicationType: 'lite',
-      useReverb: false,
-      siteId: testSuite.service === 'magyarul' ? 134 : testSuite.siteId,
-      tests: [...liteSiteTests],
-    };
-  });
+  return {
+    ...testSuite,
+    path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
+    applicationType: 'lite',
+    useReverb: false,
+    siteId: testSuite.service === 'magyarul' ? 134 : testSuite.siteId,
+    tests: [...liteSiteTests],
+  };
+});
 
 runTestsForPage({
   pageType: HOME_PAGE,
   testSuites: Cypress.env('SMOKE') ? smokeTests : testSuites,
-  beforeAll: [setUserIDCookie],
 });
 
 runTestsForPage({
