@@ -21,16 +21,16 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
     // eslint-disable-next-line no-param-reassign
     pageData = liveTvFixture;
   }
-  const { curations } = pageData;
+  const { curations, description, title } = pageData;
 
   return (
     <>
       {/* <ATIAnalytics atiData={atiAnalytics} />
       <ChartbeatAnalytics title={pageTitle} /> */}
       <MetadataContainer
-        title={pageData.title}
+        title={title}
         lang={lang}
-        description={pageData.description}
+        description={description}
         openGraphType="website"
         hasAmpPage={false}
       />
@@ -38,9 +38,9 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
         <div css={styles.inner}>
           <div css={styles.margins}>
             <Heading id="content" level={1}>
-              {pageData.title}
+              {title}
             </Heading>
-            <Text>{pageData.description}</Text>
+            <Text>{description}</Text>
 
             {curations?.map(
               ({
