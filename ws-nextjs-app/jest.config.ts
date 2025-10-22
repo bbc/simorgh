@@ -18,13 +18,7 @@ const canonicalIntegrationTests = {
   },
   setupFilesAfterEnv: ['./setupTests.ts'],
   transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': [
-      'babel-jest',
-      {
-        configFile: './.babelrc',
-        presets: ['next/babel'],
-      },
-    ],
+    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { configFile: './.babelrc' }],
   },
   testMatch: ['**/integration/!(utils)/**/*.test.ts'],
   testPathIgnorePatterns: ['.*lite\\.test\\.ts$', '.*amp\\.test\\.ts$'],
@@ -42,13 +36,7 @@ const ampIntegrationTests = {
   },
   setupFilesAfterEnv: ['./setupTests.ts'],
   transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': [
-      'babel-jest',
-      {
-        configFile: './.babelrc',
-        presets: ['next/babel'],
-      },
-    ],
+    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { configFile: './.babelrc' }],
   },
   testMatch: ['**/integration/!(utils)/**/*.test.ts'],
   testPathIgnorePatterns: ['.*lite\\.test\\.ts$', '.*canonical\\.test\\.ts$'],
@@ -66,13 +54,7 @@ const liteIntegrationTests = {
   },
   setupFilesAfterEnv: ['./setupTests.ts'],
   transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': [
-      'babel-jest',
-      {
-        configFile: './.babelrc',
-        presets: ['next/babel'],
-      },
-    ],
+    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { configFile: './.babelrc' }],
   },
   testMatch: ['**/integration/!(utils)/**/*.test.ts'],
   testPathIgnorePatterns: ['.*canonical\\.test\\.ts$', '.*amp\\.test\\.ts$'],
@@ -88,13 +70,7 @@ const unitTests = {
   snapshotSerializers: ['@emotion/jest/serializer'],
   testEnvironment: 'jest-environment-jsdom',
   transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': [
-      'babel-jest',
-      {
-        configFile: './.babelrc',
-        presets: ['next/babel'],
-      },
-    ],
+    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { configFile: './.babelrc' }],
   },
   testMatch: [
     '**/__tests__/**/*.{js,jsx,ts,tsx}',
