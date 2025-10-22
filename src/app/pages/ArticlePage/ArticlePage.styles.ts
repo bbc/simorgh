@@ -55,22 +55,18 @@ export default {
       gridColumn: '1 / span 12',
       paddingBottom: '2rem',
     }),
-  mainContent:
-    (liteCTAShows: boolean) =>
-    ({ palette, spacings }: Theme) =>
-      css({
-        paddingBottom: `${spacings.TRIPLE}rem`,
+  mainContent: ({ palette, spacings }: Theme) =>
+    css({
+      paddingBottom: `${spacings.TRIPLE}rem`,
 
-        [liteCTAShows
-          ? '> *:nth-child(n + 9):not(button)'
-          : '> *:nth-child(n + 8):not(button)']: {
-          ':focus-visible': {
-            outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
-            boxShadow: `0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE}`,
-            outlineOffset: `${pixelsToRem(3)}rem`,
-          },
+      '[data-first-hidden-element="true"]': {
+        ':focus-visible': {
+          outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
+          boxShadow: `0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE}`,
+          outlineOffset: `${pixelsToRem(3)}rem`,
         },
-      }),
+      },
+    }),
   contentHidden:
     (liteCTAShows: boolean) =>
     ({ mq }: Theme) =>
@@ -92,9 +88,13 @@ export default {
           },
         },
       }),
-  hideRelatedTopics: () =>
+  hideRelatedTopics: ({ mq }: Theme) =>
     css({
       display: 'none',
+
+      [mq.GROUP_4_MIN_WIDTH]: {
+        display: 'block',
+      },
     }),
   adContainer: ({ spacings }: Theme) =>
     css({
