@@ -340,16 +340,12 @@ server.get(
             readTime: 1,
           },
         ],
-        activePage: 1,
-        pageCount: 40,
         link: 'https://www.bbc.com/hindi/topics/cw9kv0kpxydt',
         curationId:
           'urn:bbc:vivo:curation:23b426a2-6119-4c26-9c6b-b19d468186fd',
         curationType: 'vivo-stream',
-        position: 6,
         visualProminence: 'NORMAL',
         title: 'मल्टीमीडिया',
-        visualStyle: 'FEED',
       };
 
       const dummyBillboardCurationContent = {
@@ -368,14 +364,8 @@ server.get(
             imageAlt: 'बीबीसी दुनिया देखने के लिए यहाँ क्लिक करें',
           },
         ],
-        id: 'https%3A%2F%2Fwww.bbc.com%2Fkyrgyz%2Fbbc_kyrgyz_tv%2Ftv_programmes%2Fw13xttqx%3Flimit%3D4',
-        visualProminence: 'MAXIMUM',
-        activePage: 1,
-        pageCount: 1,
         curationId: 'urn:bbc:tipo:list:2323cbdf-5d76-425c-94e0-fe743831ce17',
         curationType: 'tipo-curation',
-        position: 7,
-        visualStyle: 'BANNER',
       };
 
       if (data && data.pageData && data.pageData.secondaryColumn) {

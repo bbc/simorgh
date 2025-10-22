@@ -72,6 +72,7 @@ const SecondaryColumn = ({
             title={multimediaCurationData?.title}
             position={0}
             curationId={multimediaCurationData?.curationId}
+            curationLength={multimediaCurationData?.summaries?.length}
             link={multimediaCurationData?.link}
             timeOfDayExperimentName={timeOfDayExperimentName || undefined}
             timeOfDayVariant={experimentVariant || undefined}
