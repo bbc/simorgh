@@ -463,6 +463,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             pageData={pageData}
             sendOptimizelyEvents={false}
             experimentVariant={timeOfDayExperimentVariant}
+            timeOfDayExperimentName={timeOfDayExperimentName}
           />
         )}
       </div>

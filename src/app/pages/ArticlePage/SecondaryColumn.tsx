@@ -23,10 +23,12 @@ const SecondaryColumn = ({
   pageData,
   sendOptimizelyEvents,
   experimentVariant,
+  timeOfDayExperimentName,
 }: {
   pageData: Article;
   sendOptimizelyEvents: boolean;
   experimentVariant: string | null;
+  timeOfDayExperimentName?: string | null;
 }) => {
   const topStoriesContent = pageData?.secondaryColumn?.topStories;
   const featuresContent = pageData?.secondaryColumn?.features;
@@ -72,6 +74,8 @@ const SecondaryColumn = ({
             curationId={multimediaCurationData?.curationId}
             curationLength={4}
             link={multimediaCurationData?.link}
+            timeOfDayExperimentName={timeOfDayExperimentName || undefined}
+            timeOfDayVariant={experimentVariant || undefined}
           />
           <Curation
             visualStyle={VISUAL_STYLE.BANNER}
@@ -79,6 +83,8 @@ const SecondaryColumn = ({
             summaries={billboardCurationData?.summaries}
             position={1}
             curationId={billboardCurationData?.curationId}
+            timeOfDayExperimentName={timeOfDayExperimentName || undefined}
+            timeOfDayVariant={experimentVariant || undefined}
           />
         </section>
       )}
