@@ -32,11 +32,69 @@ import {
 } from '../../specialFeatures/atiAnalytics/assertions/radioSchedule';
 import { setUserIDCookie } from '../../specialFeatures/atiAnalytics/helpers';
 
-const tests = [
-  assertPageView,
-  canonicalTests,
-  urlValidationTest,
-  testsForAllCanonicalPages,
+const tests = [canonicalTests, urlValidationTest, testsForAllCanonicalPages];
+
+const testSuites = [
+  {
+    path: '/arabic',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'arabic',
+    tests,
+  },
+  {
+    path: '/dari',
+    runforEnv: ['local', 'test'],
+    service: 'dari',
+    tests,
+  },
+  {
+    path: '/kyrgyz',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'kyrgyz',
+    tests,
+  },
+  {
+    path: '/magyarul',
+    runforEnv: ['local', 'test'],
+    service: 'magyarul',
+    tests,
+  },
+  {
+    path: '/polska',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'polska',
+    tests,
+  },
+  {
+    path: '/portuguese',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'portuguese',
+    tests,
+  },
+  {
+    path: '/serbian/lat',
+    runforEnv: ['local', 'test', 'live'],
+    service: '/serbian/lat',
+    tests,
+  },
+  {
+    path: '/serbian/cyr',
+    runforEnv: ['local', 'test', 'live'],
+    service: '/serbian/cyr',
+    tests,
+  },
+  {
+    path: '/uzbek/lat',
+    runforEnv: ['local', 'test', 'live'],
+    service: '/uzbek/lat',
+    tests,
+  },
+  {
+    path: '/uzbek/cyr',
+    runforEnv: ['local', 'test', 'live'],
+    service: '/uzbek/cyr',
+    tests,
+  },
 ];
 
 const atiAnalyticsNavigationComponentTests = [
@@ -47,65 +105,7 @@ const atiAnalyticsNavigationComponentTests = [
   assertDropdownNavigationComponentClick,
 ];
 
-const testSuites = [
-  {
-    path: '/arabic',
-    runforEnv: ['local', 'test', 'live'],
-    service: 'arabic',
-    pageIdentifier: 'arabic.page',
-    siteId: 5,
-    applicationType: 'responsive',
-    contentType: 'index-home',
-    useReverb: true,
-    tests,
-  },
-  {
-    path: '/magyarul',
-    runforEnv: ['local', 'test'],
-    service: 'magyarul',
-    pageIdentifier: 'magyarul.page',
-    siteId: 30,
-    applicationType: 'responsive',
-    contentType: 'index-home',
-    useReverb: true,
-    tests,
-  },
-  {
-    path: '/polska',
-    runforEnv: ['local', 'test', 'live'],
-    service: 'polska',
-    pageIdentifier: 'polska.page',
-    siteId: 135,
-    applicationType: 'responsive',
-    contentType: 'index-home',
-    useReverb: true,
-    tests,
-  },
-  {
-    path: '/serbian/cyr',
-    runforEnv: ['local', 'test', 'live'],
-    service: 'serbian',
-    pageIdentifier: 'serbiancyr.page',
-    siteId: 81,
-    applicationType: 'responsive',
-    contentType: 'index-home',
-    useReverb: true,
-    tests,
-  },
-  {
-    path: '/uzbek/lat',
-    runforEnv: ['local', 'test', 'live'],
-    service: 'uzbek',
-    pageIdentifier: 'uzbeklat.page',
-    siteId: 96,
-    applicationType: 'responsive',
-    contentType: 'index-home',
-    useReverb: true,
-    tests,
-  },
-];
-
-const atiAnalyticsTestSuitesOnly = [
+const atiAnalyticsTestSuites = [
   {
     path: '/afrique',
     runforEnv: ['local', 'test'],
@@ -229,7 +229,7 @@ if (Cypress.env('SMOKE')) {
   });
 }
 
-const atiAnalyticsliteTestSuites = atiAnalyticsTestSuitesOnly
+const atiAnalyticsliteTestSuites = atiAnalyticsTestSuites
   .filter(({ path }) => !path.startsWith('/persian/afghanistan'))
   .map(testSuite => {
     const excludedLiteTests = [
@@ -262,6 +262,13 @@ runTestsForPage({
 
 runTestsForPage({
   pageType: HOME_PAGE,
-  testSuites: [...atiAnalyticsTestSuitesOnly, ...atiAnalyticsliteTestSuites],
+  testSuites: atiAnalyticsTestSuites,
+  beforeAll: [setUserIDCookie],
+  testIsolation: true,
+});
+
+runTestsForPage({
+  pageType: HOME_PAGE,
+  testSuites: atiAnalyticsliteTestSuites,
   beforeAll: [setUserIDCookie],
 });

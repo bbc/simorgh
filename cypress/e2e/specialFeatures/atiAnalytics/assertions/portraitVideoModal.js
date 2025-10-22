@@ -34,8 +34,6 @@ export const assertPortraitVideoModalComponentView = ({
         applicationType,
         siteId,
       });
-
-      cy.get('button[data-testid="close-modal-button"]').click();
     },
   );
 };
