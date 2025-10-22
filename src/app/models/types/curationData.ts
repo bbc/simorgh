@@ -83,7 +83,6 @@ export interface BaseCuration {
   contentType?: string;
   pageTitle?: string;
   mediaCollection?: MediaCollection[];
-  liveTvPlayer?: MediaCollection[];
 }
 
 export interface Curation extends BaseCuration {
