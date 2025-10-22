@@ -66,7 +66,7 @@ const SecondaryColumn = ({
           data-testid="adaptive-curations-section"
         >
           <Curation
-            visualStyle={VISUAL_STYLE.FEED}
+            visualStyle={VISUAL_STYLE.FEED} // this is a vivo stream in. a simple-curation-grid
             visualProminence={VISUAL_PROMINENCE.NORMAL}
             summaries={multimediaCurationData?.summaries}
             title={multimediaCurationData?.title}
@@ -77,7 +77,7 @@ const SecondaryColumn = ({
             timeOfDayVariant={experimentVariant || undefined}
           />
           <Curation
-            visualStyle={VISUAL_STYLE.BANNER}
+            visualStyle={VISUAL_STYLE.BANNER} // this is a billboard
             visualProminence={VISUAL_PROMINENCE.MAXIMUM}
             summaries={billboardCurationData?.summaries}
             position={1}
