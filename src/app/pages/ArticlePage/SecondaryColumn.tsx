@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { useTheme } from '@emotion/react';
 
 import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';

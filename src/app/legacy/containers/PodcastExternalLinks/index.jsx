@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/aria-role */
-import React, { use } from 'react';
+import { use } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';

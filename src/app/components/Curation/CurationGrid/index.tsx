@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import { VISUAL_PROMINENCE, Summary } from '#app/models/types/curationData';
 import extractWorldServiceFromUrl from '#app/lib/utilities/extractWorldServiceFromUrl';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';

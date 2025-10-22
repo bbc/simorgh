@@ -1,5 +1,3 @@
-import React from 'react';
-
 const height = 24.34;
 const width = 206.487;
 const archive = {

@@ -1,4 +1,4 @@
-import React, { SetStateAction, use, useEffect, useState } from 'react';
+import { SetStateAction, use, useEffect, useState } from 'react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { useLiveRegionContext } from '#app/components/LiveRegion/LiveRegionContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';

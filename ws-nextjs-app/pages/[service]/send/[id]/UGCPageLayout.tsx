@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import Metadata from '#app/components/Metadata';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './styles';

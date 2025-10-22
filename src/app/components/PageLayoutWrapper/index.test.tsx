@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { services } from '#app/lib/config/services/loadableConfig';
 import { Services } from '#app/models/types/global';
 import { act, render } from '../react-testing-library-with-providers';

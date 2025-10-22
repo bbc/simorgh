@@ -1,4 +1,3 @@
-import React from 'react';
 import { AmpChartbeatProps, AmpChartbeatConfig } from '../types';
 
 const chartbeatAmpConfigOptions = (options: AmpChartbeatConfig) => ({

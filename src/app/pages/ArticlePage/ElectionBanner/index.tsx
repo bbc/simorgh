@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
 import AmpIframe from '#app/components/AmpIframe';
 import useToggle from '#app/hooks/useToggle';

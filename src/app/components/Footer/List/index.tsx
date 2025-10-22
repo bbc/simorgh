@@ -1,5 +1,5 @@
 import { FooterLink } from '#app/models/types/serviceConfig';
-import React, { ReactElement } from 'react';
+import { ReactElement } from 'react';
 import Link from '../Link';
 import styles, { gridTemplateRows } from './index.styles';
 
@@ -13,7 +13,7 @@ export default ({
   extraLinks?: boolean;
 }) => {
   return (
-    <ul
+    (<ul
       role="list"
       css={[
         styles.list,
@@ -37,8 +37,8 @@ export default ({
       )}
       {elements.map((elem, index) => (
         // eslint-disable-next-line react/no-array-index-key
-        <li key={index}>{elem}</li>
+        (<li key={index}>{elem}</li>)
       ))}
-    </ul>
+    </ul>)
   );
 };

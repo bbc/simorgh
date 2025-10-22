@@ -1,5 +1,4 @@
 /* eslint-disable react/destructuring-assignment */
-import React from 'react';
 import AmpIframe from '../../AmpIframe';
 import { ampParams } from '../types';
 import styles from './index.styles';

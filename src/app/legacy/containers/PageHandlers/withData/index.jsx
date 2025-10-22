@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import ErrorPage from '#pages/ErrorPage/ErrorPage';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import { RequestContext } from '../../../../contexts/RequestContext';

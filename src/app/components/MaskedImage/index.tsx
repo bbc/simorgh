@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Image from '#app/components/Image';
 import { createSrcsets } from '#app/lib/utilities/srcSet';

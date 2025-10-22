@@ -1,4 +1,5 @@
-import React, { PropsWithChildren, use } from 'react';
+import type { ElementType } from 'react';
+import { PropsWithChildren, use } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import pick from 'ramda/src/pick';
@@ -169,7 +170,7 @@ const validate = (props: FormattedPromo) => {
 
 const withData =
   (
-    Component: React.ElementType,
+    Component: ElementType,
     propsToPassThrough: (keyof PromoProps | 'children')[] = [],
   ) =>
   (props: PropsWithChildren<PromoProps>) => {

@@ -1,4 +1,3 @@
-import React from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import CallToActionLink from '#app/components/CallToActionLink';

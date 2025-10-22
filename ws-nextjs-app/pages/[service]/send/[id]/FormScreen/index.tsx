@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, use } from 'react';
+import { useEffect, useRef, use } from 'react';
 import Heading from '#app/components/Heading';
 import { LiveRegionContextProvider } from '#app/components/LiveRegion/LiveRegionContext';
 import LiveRegion from '#app/components/LiveRegion';

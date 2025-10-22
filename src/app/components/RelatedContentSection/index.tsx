@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import { useTheme } from '@emotion/react';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import pathOr from 'ramda/src/pathOr';

@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, use } from 'react';
+import { PropsWithChildren, use } from 'react';
 import Grid from '../../../../legacy/psammead/psammead-grid/src';
 import { mostReadListGridProps } from '../../utilities/gridProps';
 import * as styles from './index.styles';
@@ -17,7 +17,7 @@ const MostReadList = ({
 
   return (
     // @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags
-    <Grid
+    (<Grid
       css={[
         styles[columnLayout],
         styles.gridTemplateRows(numberOfItems),
@@ -31,7 +31,7 @@ const MostReadList = ({
       role="list"
     >
       {children}
-    </Grid>
+    </Grid>)
   );
 };
 

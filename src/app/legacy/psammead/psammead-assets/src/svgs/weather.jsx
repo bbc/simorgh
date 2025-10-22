@@ -1,5 +1,3 @@
-import React from 'react';
-
 const height = 24.188;
 const width = 214.889;
 const weather = {

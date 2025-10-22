@@ -1,4 +1,4 @@
-import React, { use, useRef, useState } from 'react';
+import { use, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { RequestContext } from '#app/contexts/RequestContext';
 import useViewTracker from '#app/hooks/useViewTracker';

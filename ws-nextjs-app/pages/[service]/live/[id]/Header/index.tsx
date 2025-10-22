@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
 import LiveHeaderMedia from '#app/components/LiveHeaderMedia';

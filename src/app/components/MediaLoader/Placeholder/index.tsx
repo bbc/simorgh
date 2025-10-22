@@ -1,4 +1,4 @@
-import React from 'react';
+import type { MouseEventHandler } from 'react';
 import Image from '../../Image';
 import styles from './index.styles';
 import PlayButton from './PlayButton';
@@ -6,7 +6,7 @@ import Guidance from './Guidance';
 import { MediaInfo } from '../types';
 
 interface Props {
-  onClick: React.MouseEventHandler<HTMLDivElement>;
+  onClick: MouseEventHandler<HTMLDivElement>;
   src?: string;
   srcSet?: string;
   mediaInfo?: MediaInfo;
@@ -33,7 +33,7 @@ const MediaPlayerPlaceholder = ({
 
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
-    <div
+    (<div
       onClick={onClick}
       css={styles.placeholder}
       data-e2e="media-loader__placeholder"
@@ -61,7 +61,7 @@ const MediaPlayerPlaceholder = ({
         srcSet={srcSet}
         isPortraitOrientation={isPortraitOrientation}
       />
-    </div>
+    </div>)
   );
 };
 

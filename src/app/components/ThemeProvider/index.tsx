@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 import defaultServiceVariants from '../../lib/config/services/defaultServiceVariants';
 import { Services, Variants } from '../../models/types/global';
 import themes from './themes/loadableConfig';

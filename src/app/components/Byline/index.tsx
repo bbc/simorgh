@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/aria-role */
-import React, { use, PropsWithChildren } from 'react';
+import { Children, use, PropsWithChildren } from 'react';
 import { OptimoBylineBlock } from '#app/models/types/optimo';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import VisuallyHiddenText from '../VisuallyHiddenText';
@@ -176,25 +176,21 @@ const Byline = ({
           );
         });
 
-  return (
-    contributors?.[0] && (
-      <section role="region" aria-labelledby="article-byline">
-        <VisuallyHiddenText as="strong" id="article-byline" aria-hidden>
-          {articleInformation}
-        </VisuallyHiddenText>
-        <ul css={BylineCss.bylineList}>
-          <li css={BylineCss.bylineContainer}>{contributors}</li>
-          {/* EXPERIMENT: Article Read Time */}
-          {children &&
-            React.Children.map(children, (child, index) => (
-              <li key={index} css={BylineCss.timestampLineBreak}>
-                {child}
-              </li>
-            ))}
-        </ul>
-      </section>
-    )
-  );
+  return (contributors?.[0] && (<section role="region" aria-labelledby="article-byline">
+    <VisuallyHiddenText as="strong" id="article-byline" aria-hidden>
+      {articleInformation}
+    </VisuallyHiddenText>
+    <ul css={BylineCss.bylineList}>
+      <li css={BylineCss.bylineContainer}>{contributors}</li>
+      {/* EXPERIMENT: Article Read Time */}
+      {children &&
+        Children.map(children, (child, index) => (
+          <li key={index} css={BylineCss.timestampLineBreak}>
+            {child}
+          </li>
+        ))}
+    </ul>
+  </section>));
 };
 
 export default Byline;

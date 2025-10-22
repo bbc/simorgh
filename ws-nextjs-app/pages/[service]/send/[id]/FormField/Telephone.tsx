@@ -1,4 +1,3 @@
-import React from 'react';
 import { InputProps } from '../types';
 import Label from './FieldLabel';
 import styles from './styles';

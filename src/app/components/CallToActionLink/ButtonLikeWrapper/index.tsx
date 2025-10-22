@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 import styles from './index.styles';
 
 type ButtonLikeWrapperProps = {

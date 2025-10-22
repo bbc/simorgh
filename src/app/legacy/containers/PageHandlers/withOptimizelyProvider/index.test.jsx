@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import * as optimizelyReactSdk from '@optimizely/react-sdk';
 import { render } from '@testing-library/react';
 import Cookie from 'js-cookie';

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const height = 24.018;
 const width = 198.515;
 const cymrufyw = {

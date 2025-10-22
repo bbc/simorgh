@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-import React from 'react';
+import type { ReactNode } from 'react';
 import { LIVE_LIGHT } from '#app/components/ThemeProvider/palette';
 import { REITH_FONTS_DIR } from '#app/components/ThemeProvider/fontFaces';
 import { Services } from '#app/models/types/global';
@@ -59,7 +59,7 @@ const NON_LATIN_SERVICES: Services[] = ['arabic', 'hindi'] as const;
 type SVGBadgesMap = {
   [S in (typeof NON_LATIN_SERVICES)[number]]: Record<
     'Live' | 'MostRead' | 'TopStories',
-    () => React.ReactNode
+    () => ReactNode
   >;
 };
 
@@ -152,7 +152,7 @@ export async function GET(
     const mostReadText = mostRead?.header || 'Most read';
     const topStoriesText = translations?.topStoriesTitle || 'Top stories';
 
-    let badge: React.ReactNode;
+    let badge: ReactNode;
 
     /* 
       Badge priority order:

@@ -1,5 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
-import React, { PropsWithChildren, use } from 'react';
+import type { ReactNode } from 'react';
+
+import { PropsWithChildren, use } from 'react';
 import pick from 'ramda/src/pick';
 import Lazyload from 'react-lazyload';
 
@@ -30,7 +32,7 @@ type FrostedGlassPromoProps = {
     width: number;
     height: number;
   };
-  footer: React.ReactNode | null;
+  footer: ReactNode | null;
   url: string;
   eventTrackingData: EventTrackingBlock | null;
   index: number;

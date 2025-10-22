@@ -1,5 +1,3 @@
-import React from 'react';
-
 const ArabicLiveSVG = () => (
   <svg
     width="130"

@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import TEXT_VARIANTS from '#storybook/withServicesDecorator/text-variants';
 import Timestamp from '../../../legacy/psammead/psammead-timestamp/src';
@@ -18,14 +18,13 @@ const lastUpdated = ({
   service: Services;
 }) => (
   // This will return the provided english translations
-  <Timestamp
+  (<Timestamp
     datetime="2019-03-01T14:00+00:00"
     script={script}
     padding={false}
     service={service}
-  >
-    Last updated: 5th November 2016
-  </Timestamp>
+  >Last updated: 5th November 2016
+      </Timestamp>)
 );
 
 const WithContexts = ({ children }: PropsWithChildren) => (

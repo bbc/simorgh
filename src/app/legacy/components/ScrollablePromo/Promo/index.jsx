@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import styled from '@emotion/styled';
 import path from 'ramda/src/path';
 import { getPica } from '#psammead/gel-foundations/src/typography';

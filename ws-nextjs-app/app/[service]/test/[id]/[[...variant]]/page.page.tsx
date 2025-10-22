@@ -1,4 +1,3 @@
-import React from 'react';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import getPathExtension from '#app/utilities/getPathExtension';
 import deriveVariant from '#nextjs/utilities/deriveVariant';

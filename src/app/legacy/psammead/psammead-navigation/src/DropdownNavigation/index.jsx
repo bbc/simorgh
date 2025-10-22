@@ -1,4 +1,4 @@
-import React, { cloneElement, useRef } from 'react';
+import { cloneElement, useRef } from 'react';
 import styled from '@emotion/styled';
 import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
 import {
@@ -132,7 +132,7 @@ export const DropdownLi = ({
     .toLowerCase()}`;
   return (
     // aria-labelledby is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
-    <StyledDropdownLi role="listitem" {...viewTracker}>
+    (<StyledDropdownLi role="listitem" {...viewTracker}>
       <StyledDropdownLink
         script={script}
         service={service}
@@ -142,16 +142,16 @@ export const DropdownLi = ({
       >
         {active && currentPageText ? (
           // ID is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
-          <StyledCurrentLink dir={dir} id={ariaId}>
+          (<StyledCurrentLink dir={dir} id={ariaId}>
             <VisuallyHiddenText>{`${currentPageText}, `}</VisuallyHiddenText>
             {children}
-          </StyledCurrentLink>
+          </StyledCurrentLink>)
         ) : (
           // ID is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
-          <span id={ariaId}>{children}</span>
+          (<span id={ariaId}>{children}</span>)
         )}
       </StyledDropdownLink>
-    </StyledDropdownLi>
+    </StyledDropdownLi>)
   );
 };
 

@@ -1,4 +1,5 @@
-import React, { use } from 'react';
+import type { MouseEvent } from 'react';
+import { use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import pathOr from 'ramda/src/pathOr';
 import Blocks from '#app/legacy/containers/Blocks';
@@ -38,7 +39,7 @@ type Props = {
   locator: string;
   isExternal: boolean;
   blocks: OptimoBlock[];
-  onClick?: (event: React.MouseEvent) => void;
+  onClick?: (event: MouseEvent) => void;
 };
 
 export default DecoratedInlineLink;

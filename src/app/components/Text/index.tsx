@@ -1,9 +1,5 @@
-import React, {
-  ElementType,
-  ComponentPropsWithoutRef,
-  forwardRef,
-  ForwardedRef,
-} from 'react';
+import { ElementType, ComponentPropsWithoutRef, forwardRef, ForwardedRef } from 'react';
+import * as React from 'react';
 import { Theme } from '@emotion/react';
 
 import { GelFontSize, FontVariant } from '../../models/types/theming';

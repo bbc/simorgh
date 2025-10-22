@@ -1,4 +1,4 @@
-import React, { use, FC, HTMLAttributes } from 'react';
+import { use, FC, HTMLAttributes } from 'react';
 import { Theme } from '@emotion/react';
 import Url from 'url-parse';
 

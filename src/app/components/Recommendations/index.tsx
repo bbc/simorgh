@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import { useTheme } from '@emotion/react';
 
 import useToggle from '#hooks/useToggle';

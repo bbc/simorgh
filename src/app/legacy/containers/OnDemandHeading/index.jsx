@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { Fragment, use } from 'react';
 import styled from '@emotion/styled';
 import { Headline } from '#psammead/psammead-headings/src';
 import {
@@ -66,7 +66,7 @@ const OnDemandHeadingContainer = ({
     isRelative: false,
   });
 
-  const TextWrapper = ariaHidden ? React.Fragment : 'span';
+  const TextWrapper = ariaHidden ? Fragment : 'span';
 
   return (
     <Headline

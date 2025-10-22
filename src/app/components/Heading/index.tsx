@@ -1,11 +1,12 @@
-import React, { FC, HTMLAttributes, ForwardedRef, forwardRef } from 'react';
+import type { ReactNode } from 'react';
+import { FC, HTMLAttributes, ForwardedRef, forwardRef } from 'react';
 
 import { GelFontSize, FontVariant } from '../../models/types/theming';
 import Text from '../Text';
 
 interface Props extends HTMLAttributes<HTMLElement> {
   className?: string;
-  children: React.ReactNode;
+  children: ReactNode;
   fontVariant?: FontVariant;
   level: 1 | 2 | 3 | 4;
   size?: GelFontSize;

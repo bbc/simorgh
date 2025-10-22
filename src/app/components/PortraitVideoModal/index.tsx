@@ -1,5 +1,5 @@
 import { Global } from '@emotion/react';
-import React, { use, useEffect, useRef } from 'react';
+import { use, useEffect, useRef } from 'react';
 import moment from 'moment-timezone';
 import MediaLoader from '#app/components/MediaLoader';
 import {

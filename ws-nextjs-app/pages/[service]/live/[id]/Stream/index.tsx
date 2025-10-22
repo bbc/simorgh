@@ -1,4 +1,4 @@
-import React, { use, useEffect, useState } from 'react';
+import { use, useEffect, useState } from 'react';
 import Heading from '#app/components/Heading';
 import Paragraph from '#app/components/Paragraph';
 import { ServiceContext } from '#contexts/ServiceContext';

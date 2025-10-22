@@ -1,4 +1,5 @@
-import React, { memo, use, useState } from 'react';
+import { memo, use, useState } from 'react';
+import * as React from 'react';
 import Text from '#app/components/Text';
 import { MediaCollection } from '#app/components/MediaLoader/types';
 import MediaLoader from '#app/components/MediaLoader';

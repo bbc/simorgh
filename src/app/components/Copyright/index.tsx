@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/aria-role */
-import React, { PropsWithChildren, use } from 'react';
+import { PropsWithChildren, use } from 'react';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import Text from '../Text';

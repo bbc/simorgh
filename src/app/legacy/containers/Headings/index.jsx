@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import { Headline, SubHeading } from '#psammead/psammead-headings/src';

@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import Paragraph from '#app/components/Paragraph';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { InputProps } from '../types';

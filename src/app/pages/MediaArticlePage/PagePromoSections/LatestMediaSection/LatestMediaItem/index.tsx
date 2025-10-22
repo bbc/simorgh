@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 
 import Promo from '../../../../../legacy/components/OptimoPromos';
 import { LatestMediaItemProp } from '../types';

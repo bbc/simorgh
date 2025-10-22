@@ -1,5 +1,5 @@
 /* eslint-disable camelcase */
-import React, { use } from 'react';
+import { use } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '../../../contexts/RequestContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';

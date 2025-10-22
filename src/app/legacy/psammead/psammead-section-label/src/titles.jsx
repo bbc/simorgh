@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/aria-role */
-import React from 'react';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,

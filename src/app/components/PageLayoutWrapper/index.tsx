@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, use } from 'react';
+import { PropsWithChildren, use } from 'react';
 import { Helmet } from 'react-helmet';
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
 import { PageTypes } from '#app/models/types/global';

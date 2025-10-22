@@ -1,4 +1,3 @@
-import React from 'react';
 import { Global } from '@emotion/react';
 import MediaLoader from '#app/components/MediaLoader';
 import { AvEmbedsPageProps } from './types';

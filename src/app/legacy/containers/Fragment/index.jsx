@@ -1,4 +1,4 @@
-import React from 'react';
+import { use } from 'react';
 import { getSansRegularItalic } from '#psammead/psammead-styles/src/font-styles';
 import styled from '@emotion/styled';
 import { ServiceContext } from '../../../contexts/ServiceContext';
@@ -24,7 +24,7 @@ const Fragment = ({ text, attributes }) => {
     These components are nested inside each other as children as the array is iterated through.
     The text string is passed in as the initial value, so it is the first child or the returned value if there are no attributes.
   */
-  const { service } = React.use(ServiceContext);
+  const { service } = use(ServiceContext);
   return (
     attributes.reduce((previousAttribute, attribute) => {
       const Attribute =

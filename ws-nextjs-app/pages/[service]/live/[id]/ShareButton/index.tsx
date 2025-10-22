@@ -1,5 +1,7 @@
 /* eslint-disable jsx-a11y/aria-role */
-import React, { use, useRef } from 'react';
+import type { MouseEvent } from 'react';
+
+import { use, useRef } from 'react';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
@@ -44,7 +46,7 @@ const ShareButton = ({
     },
   } = use(ServiceContext);
 
-  const handleShare = async (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleShare = async (event: MouseEvent<HTMLButtonElement>) => {
     if (clickTrackerHandler) clickTrackerHandler(event);
     try {
       const currentUrlNoHash = new URL(window.location.href.split('#')[0]);

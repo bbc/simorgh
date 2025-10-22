@@ -1,4 +1,5 @@
-import React, { use } from 'react';
+import { use } from 'react';
+import * as React from 'react';
 import { render } from '@testing-library/react';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import * as getStatsDestination from './getStatsDestination';

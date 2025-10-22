@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,

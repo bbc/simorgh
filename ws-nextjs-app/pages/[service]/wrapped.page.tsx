@@ -1,7 +1,7 @@
 // @ts-nocheck
 
 import { GetServerSideProps } from 'next';
-import React, { useEffect, use } from 'react';
+import { useEffect, use } from 'react';
 import { ParsedUrlQuery } from 'querystring';
 import omit from 'ramda/src/omit';
 import { ServiceContext } from '#contexts/ServiceContext';

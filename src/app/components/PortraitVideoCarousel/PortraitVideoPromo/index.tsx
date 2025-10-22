@@ -1,4 +1,5 @@
-import React, { use, FocusEvent } from 'react';
+import { use, FocusEvent } from 'react';
+import * as React from 'react';
 import { useTheme } from '@emotion/react';
 import Image from '#app/components/Image';
 import Text from '#app/components/Text';

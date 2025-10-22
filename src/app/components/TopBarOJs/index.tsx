@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import isEmpty from 'ramda/src/isEmpty';
 import useViewTracker from '#hooks/useViewTracker';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';

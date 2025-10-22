@@ -1,4 +1,5 @@
-import React, { use } from 'react';
+import type { PropsWithChildren } from 'react';
+import { use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '#app/hooks/useViewTracker';
@@ -113,7 +114,7 @@ export const ReadTimeArticleExperiment = ({
 };
 
 // EXPERIMENT - Placeholder for control variants
-const HomepagePlaceholder = (props: React.PropsWithChildren) => (
+const HomepagePlaceholder = (props: PropsWithChildren) => (
   <div
     {...props}
     css={styles.readTimeHomepagePlaceholderControl}

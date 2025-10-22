@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet';
 import styles from './index.styles';
 import { OEmbedData } from '../types';

@@ -1,4 +1,5 @@
-import React, { useState, useRef, ElementType } from 'react';
+import { useState, useRef, ElementType } from 'react';
+import * as React from 'react';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import styles from './index.styles';
 import { Close } from '../icons';

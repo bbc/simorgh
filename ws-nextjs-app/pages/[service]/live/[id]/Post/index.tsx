@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { OptimoBlock } from '#models/types/optimo';
 import Heading from '#app/components/Heading';

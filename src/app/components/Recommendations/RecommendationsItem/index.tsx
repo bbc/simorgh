@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 
 import { RequestContext } from '#contexts/RequestContext';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';

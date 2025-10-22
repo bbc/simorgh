@@ -1,5 +1,3 @@
-import React from 'react';
-
 const BackgroundImage = ({ image }: { image: string }) => (
   <img
     src={image.replace('.webp', '')}

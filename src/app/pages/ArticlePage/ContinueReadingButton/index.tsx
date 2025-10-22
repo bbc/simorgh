@@ -1,4 +1,4 @@
-import React, { use, useEffect, useState, MouseEvent } from 'react';
+import { use, useEffect, useState, MouseEvent } from 'react';
 import Text from '#app/components/Text';
 import { TriangleDown } from '#app/components/icons';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';

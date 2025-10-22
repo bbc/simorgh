@@ -1,4 +1,3 @@
-import React from 'react';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';

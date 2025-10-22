@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import Timestamp from '#psammead/psammead-timestamp-container/src';
 import { GridItemMedium, PopOutGridItemMedium } from '#components/Grid';
 import { ServiceContext } from '../../../contexts/ServiceContext';
@@ -68,7 +68,7 @@ const ArticleTimestamp = ({
   });
 
   return (
-    <GridWrapper {...(className ? { className } : undefined)}>
+    (<GridWrapper {...(className ? { className } : undefined)}>
       <Timestamp // First Published Timestamp
         {...timestampProps}
         {...firstPublishedProps}
@@ -77,16 +77,16 @@ const ArticleTimestamp = ({
       />
       {displayLastUpdatedTimestamp && (
         // Div has been used for No CSS formatting see #5554
-        <div>
+        (<div>
           <Timestamp // Last Published Timestamp
             {...timestampProps}
             {...lastPublishedProps}
             // EXPERIMENT: Article Read Time
             {...(showReadTimeBelowTimestamp && { padding: false })}
           />
-        </div>
+        </div>)
       )}
-    </GridWrapper>
+    </GridWrapper>)
   );
 };
 

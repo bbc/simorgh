@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { Fragment, use } from 'react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import useOptimizelyVariation, {
   ExperimentType,
@@ -72,88 +72,86 @@ const HomePage = ({ pageData }: HomePageProps) => {
 
   const itemList = getItemList({ curations, name: brandName });
 
-  return (
-    <>
-      <ChartbeatAnalytics title={title} />
-      <MetadataContainer
-        title={homePageTitle}
-        lang={lang}
-        description={description}
-        openGraphType="website"
-        hasAmpPage={false}
-      />
-      <LinkedData
-        type="CollectionPage"
-        seoTitle={title}
-        headline={title}
-        entities={[itemList]}
-      />
-      <Ad slotType="leaderboard" />
-      <main role="main" css={styles.main}>
-        <ATIAnalytics atiData={atiAnalytics} />
-        <VisuallyHiddenText id="content" tabIndex={-1} as="h1">
-          {/* eslint-disable-next-line jsx-a11y/aria-role */}
-          <span role="text">
-            <span lang="en-GB">{product}</span>, {serviceLocalizedName} - {home}
-          </span>
-        </VisuallyHiddenText>
-        <div css={styles.inner}>
-          <div css={styles.margins}>
-            {curations.map(
-              (
-                {
-                  visualProminence,
-                  summaries,
-                  curationId,
-                  title: curationTitle,
-                  link,
+  return (<>
+    <ChartbeatAnalytics title={title} />
+    <MetadataContainer
+      title={homePageTitle}
+      lang={lang}
+      description={description}
+      openGraphType="website"
+      hasAmpPage={false}
+    />
+    <LinkedData
+      type="CollectionPage"
+      seoTitle={title}
+      headline={title}
+      entities={[itemList]}
+    />
+    <Ad slotType="leaderboard" />
+    <main role="main" css={styles.main}>
+      <ATIAnalytics atiData={atiAnalytics} />
+      <VisuallyHiddenText id="content" tabIndex={-1} as="h1">
+        {/* eslint-disable-next-line jsx-a11y/aria-role */}
+        <span role="text">
+          <span lang="en-GB">{product}</span>, {serviceLocalizedName} - {home}
+        </span>
+      </VisuallyHiddenText>
+      <div css={styles.inner}>
+        <div css={styles.margins}>
+          {curations.map(
+            (
+              {
+                visualProminence,
+                summaries,
+                curationId,
+                title: curationTitle,
+                link,
+                position,
+                visualStyle,
+                ...curationProps
+              }: Curation,
+              index: number,
+            ) => {
+              const nthCurationByStyleAndProminence =
+                getNthCurationByStyleAndProminence({
+                  curations,
                   position,
                   visualStyle,
-                  ...curationProps
-                }: Curation,
-                index: number,
-              ) => {
-                const nthCurationByStyleAndProminence =
-                  getNthCurationByStyleAndProminence({
-                    curations,
-                    position,
-                    visualStyle,
-                    visualProminence,
-                  });
-                const indexOfFirstNonBanner =
-                  getIndexOfFirstNonBanner(curations);
-                return (
-                  <React.Fragment key={`${curationId}-${position}`}>
-                    <HomeCuration
-                      visualStyle={visualStyle as VisualStyle}
-                      visualProminence={visualProminence as VisualProminence}
-                      summaries={summaries || []}
-                      title={curationTitle}
-                      topStoriesTitle={topStoriesTitle}
-                      position={position}
-                      link={link}
-                      curationLength={curations?.length}
-                      nthCurationByStyleAndProminence={
-                        nthCurationByStyleAndProminence
-                      }
-                      renderVisuallyHiddenH2Title={position === 0}
-                      curationId={curationId}
-                      timeOfDayVariant={timeOfDayVariant}
-                      {...curationProps}
-                    />
-                    {index === indexOfFirstNonBanner && <MPU />}
-                  </React.Fragment>
-                );
-              },
-            )}
-          </div>
+                  visualProminence,
+                });
+              const indexOfFirstNonBanner =
+                getIndexOfFirstNonBanner(curations);
+              return (
+                (<Fragment key={`${curationId}-${position}`}>
+                  <HomeCuration
+                    visualStyle={visualStyle as VisualStyle}
+                    visualProminence={visualProminence as VisualProminence}
+                    summaries={summaries || []}
+                    title={curationTitle}
+                    topStoriesTitle={topStoriesTitle}
+                    position={position}
+                    link={link}
+                    curationLength={curations?.length}
+                    nthCurationByStyleAndProminence={
+                      nthCurationByStyleAndProminence
+                    }
+                    renderVisuallyHiddenH2Title={position === 0}
+                    curationId={curationId}
+                    timeOfDayVariant={timeOfDayVariant}
+                    {...curationProps}
+                  />
+                  {index === indexOfFirstNonBanner && <MPU />}
+                </Fragment>)
+              );
+            },
+          )}
         </div>
-      </main>
-      {timeOfDayVariant && (
-        <OptimizelyPageMetrics trackPageView trackPageDepth />
-      )}
-    </>
-  );
+      </div>
+    </main>
+    {timeOfDayVariant && (
+      <OptimizelyPageMetrics trackPageView trackPageDepth />
+    )}
+  </>);
 };
 
 export default HomePage;

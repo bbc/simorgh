@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import PromoItem from '../../../../legacy/components/OptimoPromos/PromoItem/index.styles';

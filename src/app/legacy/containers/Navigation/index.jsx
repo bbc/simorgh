@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import { NavigationUl, NavigationLi } from '#psammead/psammead-navigation/src';
 import {
   DropdownUl,

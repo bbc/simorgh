@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './styles';
 import fallbackTranslations from '../fallbackTranslations';

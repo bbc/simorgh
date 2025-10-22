@@ -1,4 +1,3 @@
-import React from 'react';
 import compose from 'ramda/src/compose';
 import {
   shouldMatchSnapshot,

@@ -1,5 +1,4 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react-webpack5'; // eslint-disable-line import/no-extraneous-dependencies
+import { storiesOf } from '@storybook/react-webpack5';
 import { text, select, boolean, withKnobs } from '@storybook/addon-knobs';
 import * as typography from '#psammead/gel-foundations/src/typography';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';

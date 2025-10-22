@@ -1,4 +1,4 @@
-import React, { use, ForwardedRef, forwardRef, PropsWithChildren } from 'react';
+import { use, ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import Text from '#app/components/Text';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';

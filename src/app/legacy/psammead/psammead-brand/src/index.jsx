@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_0_SCREEN_WIDTH_MAX,
@@ -133,10 +133,10 @@ const LocalisedBrandName = ({
   return serviceLocalisedName ? (
     // id={`BrandLink-${linkId}` is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     // eslint-disable-next-line jsx-a11y/aria-role
-    <VisuallyHiddenText role="text" id={brandId}>
+    (<VisuallyHiddenText role="text" id={brandId}>
       <span lang="en-GB">{`${product}, `}</span>
       <span>{serviceLocalisedName}</span>
-    </VisuallyHiddenText>
+    </VisuallyHiddenText>)
   ) : (
     <VisuallyHiddenText id={brandId}>{product}</VisuallyHiddenText>
   );

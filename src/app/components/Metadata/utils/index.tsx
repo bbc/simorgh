@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import React from 'react';
 import { Services } from '#app/models/types/global';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { AppleItunesApp, AlternateLink, IconSizes, IconType } from '../types';
@@ -33,7 +32,7 @@ const createIconLinks = (
 
     return (
       /* @ts-ignore:   Property 'key' does not exist on type 'LinkProps & { css?: Interpolation<Theme>; }'.ts(2322) */
-      <link key={key} rel="apple-touch-icon" sizes={size} href={iconAssetUrl} />
+      (<link key={key} rel="apple-touch-icon" sizes={size} href={iconAssetUrl} />)
     );
   });
 };

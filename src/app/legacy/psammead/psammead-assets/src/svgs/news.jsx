@@ -1,5 +1,3 @@
-import React from 'react';
-
 const height = 22.19;
 const width = 153.2569;
 const news = {

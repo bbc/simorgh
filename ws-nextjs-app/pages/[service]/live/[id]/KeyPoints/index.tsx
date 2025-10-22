@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import { useTheme } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import LegacyText from '#app/legacy/containers/Text';

@@ -1,4 +1,4 @@
-import React, { ChangeEvent, use, useEffect, useRef } from 'react';
+import { ChangeEvent, use, useEffect, useRef } from 'react';
 import { useLiveRegionContext } from '#app/components/LiveRegion/LiveRegionContext';
 import Text from '#app/components/Text';
 import { ServiceContext } from '#app/contexts/ServiceContext';

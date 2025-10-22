@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import buildIChefURL from '../../lib/utilities/ichefURL';
 import urlWithPageAnchor from '../../lib/utilities/pageAnchor';
 import { createSrcsets } from '../../lib/utilities/srcSet';

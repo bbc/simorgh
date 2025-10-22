@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 import { TV_PAGE } from '#app/routes/utils/pageTypes';
@@ -53,7 +52,7 @@ export default {
   decorators: [
     (story: () => unknown) => (
       // @ts-expect-error use default params
-      <WithTimeMachine>{story()}</WithTimeMachine>
+      (<WithTimeMachine>{story()}</WithTimeMachine>)
     ),
   ],
 };

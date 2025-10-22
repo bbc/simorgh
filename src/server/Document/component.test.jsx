@@ -1,4 +1,3 @@
-import React from 'react';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server.node';
 import { Helmet } from 'react-helmet';
 import { JSDOM } from 'jsdom';
@@ -20,15 +19,15 @@ jest.mock(
 );
 
 jest.mock('#app/lib/analyticsUtils/staticATITracking/clickTracking', () =>
-  function clickTracking() {
+  (function clickTracking() {
     return 'Click tracking placeholder';
-  }.toString(),
+  }).toString(),
 );
 
 jest.mock('#app/lib/analyticsUtils/staticATITracking/viewTracking', () =>
-  function viewTracking() {
+  (function viewTracking() {
     return 'View tracking placeholder';
-  }.toString(),
+  }).toString(),
 );
 
 describe('Document Component', () => {

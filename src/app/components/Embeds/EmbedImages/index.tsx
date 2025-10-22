@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, use } from 'react';
+import { PropsWithChildren, use } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import styles from './index.styles';

@@ -1,9 +1,9 @@
-import React from 'react';
+import type { ReactNode } from 'react';
 import { BLACK, WHITE } from '#app/components/ThemeProvider/palette';
 
 type BadgeProps = {
   text: string;
-  icon?: React.ReactNode;
+  icon?: ReactNode;
   textColour?: string;
   uppercase?: boolean;
   bold?: boolean;

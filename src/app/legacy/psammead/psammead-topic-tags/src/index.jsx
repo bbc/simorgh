@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import styled from '@emotion/styled';
 import { LUNAR } from '#app/components/ThemeProvider/palette';
 import {
