@@ -1033,20 +1033,15 @@ describe('buildSettings', () => {
         `(
           'when hostname is $hostname and renderer_env is $rendererEnv because $reason',
           ({ hostname, rendererEnv }) => {
-            const mockWindowObj = {
-              location: {
-                hostname,
-                ...(rendererEnv && {
-                  search: {
-                    renderer_env: rendererEnv,
-                  },
-                }),
-              },
-            } as Window & typeof globalThis;
-
             jest
-              .spyOn(window, 'window', 'get')
-              .mockImplementation(() => mockWindowObj);
+              .spyOn(window.location, 'hostname', 'get')
+              .mockImplementation(() => hostname);
+
+            if (rendererEnv) {
+              jest
+                .spyOn(window.location, 'search', 'get')
+                .mockImplementation(() => `renderer_env=${rendererEnv}`);
+            }
 
             const result = buildSettings({
               ...baseSettings,
@@ -1073,20 +1068,15 @@ describe('buildSettings', () => {
         `(
           'when hostname is $hostname and renderer_env is $rendererEnv because $reason',
           ({ hostname, rendererEnv }) => {
-            const mockWindowObj = {
-              location: {
-                hostname,
-                ...(rendererEnv && {
-                  search: {
-                    renderer_env: rendererEnv,
-                  },
-                }),
-              },
-            } as Window & typeof globalThis;
-
             jest
-              .spyOn(window, 'window', 'get')
-              .mockImplementation(() => mockWindowObj);
+              .spyOn(window.location, 'hostname', 'get')
+              .mockImplementation(() => hostname);
+
+            if (rendererEnv) {
+              jest
+                .spyOn(window.location, 'search', 'get')
+                .mockImplementation(() => `renderer_env=${rendererEnv}`);
+            }
 
             const result = buildSettings({
               ...baseSettings,
