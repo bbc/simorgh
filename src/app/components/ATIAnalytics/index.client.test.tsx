@@ -40,6 +40,12 @@ const defaultRenderProps = {
 
 describe('ATI Analytics Container', () => {
   beforeEach(() => {
+    jest
+      .spyOn(window.location, 'href', 'get')
+      .mockImplementation(() => 'http://localhost/');
+  });
+
+  afterEach(() => {
     jest.clearAllMocks();
   });
 
@@ -73,7 +79,7 @@ describe('ATI Analytics Container', () => {
         s: '598286',
         s2: '64',
         p: 'news.articles.c0000000001o.page',
-        r: '0x0x24x24',
+        r: '1024x768x24x24',
         re: '1024x768',
         hl: '00-00-00',
         lng: 'en-US',
@@ -185,7 +191,7 @@ describe('ATI Analytics Container', () => {
         s: '598286',
         s2: '64',
         p: 'news.articles.c0000000001o.page',
-        r: '0x0x24x24',
+        r: '1024x768x24x24',
         re: '1024x768',
         hl: '00-00-00',
         lng: 'en-US',
@@ -358,7 +364,7 @@ describe('ATI Analytics Container', () => {
         s: '598343',
         s2: '6',
         p: 'azerbaijan::azeri.azerbaijan.photo_gallery.44208474.page',
-        r: '0x0x24x24',
+        r: '1024x768x24x24',
         re: '1024x768',
         hl: '00-00-00',
         lng: 'en-US',
@@ -469,7 +475,7 @@ describe('ATI Analytics Container', () => {
         s: '598343',
         s2: '62',
         p: 'mundo.story.23263889.page',
-        r: '0x0x24x24',
+        r: '1024x768x24x24',
         re: '1024x768',
         hl: '00-00-00',
         lng: 'en-US',
@@ -636,7 +642,7 @@ describe('ATI Analytics Container', () => {
         s: '598343',
         s2: '94',
         p: 'news::ukrainian.news.story.53561143.page',
-        r: '0x0x24x24',
+        r: '1024x768x24x24',
         re: '1024x768',
         hl: '00-00-00',
         lng: 'en-US',
@@ -746,7 +752,7 @@ describe('ATI Analytics Container', () => {
         s: '598343',
         s2: '94',
         p: 'russian_features::ukrainian.russian_features.story.53477115.page',
-        r: '0x0x24x24',
+        r: '1024x768x24x24',
         re: '1024x768',
         hl: '00-00-00',
         lng: 'en-US',
@@ -826,8 +832,12 @@ describe('ATI Analytics Container', () => {
 
   describe('XTO Marketing string', () => {
     it('should include the xto marketing string for a valid campaign type', () => {
-      window.location.href =
-        'https://localhost?at_medium=email&at_emailtype=acquisition&at_creation=my_creation';
+      jest
+        .spyOn(window.location, 'href', 'get')
+        .mockImplementation(
+          () =>
+            'https://localhost?at_medium=email&at_emailtype=acquisition&at_creation=my_creation',
+        );
 
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
@@ -861,7 +871,7 @@ describe('ATI Analytics Container', () => {
         s: '598343',
         s2: '62',
         p: 'mundo.story.23263889.page',
-        r: '0x0x24x24',
+        r: '1024x768x24x24',
         re: '1024x768',
         hl: '00-00-00',
         lng: 'en-US',
@@ -883,8 +893,6 @@ describe('ATI Analytics Container', () => {
       });
     });
     it('should not include the xto marketing string when a campaign type is not specified', () => {
-      window.location.href = 'http://localhost?foo=bar';
-
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       canonical.default = mockCanonical;
@@ -917,7 +925,7 @@ describe('ATI Analytics Container', () => {
         s: '598343',
         s2: '62',
         p: 'mundo.story.23263889.page',
-        r: '0x0x24x24',
+        r: '1024x768x24x24',
         re: '1024x768',
         hl: '00-00-00',
         lng: 'en-US',
@@ -925,7 +933,7 @@ describe('ATI Analytics Container', () => {
         x2: '[responsive]',
         x3: '[news-mundo]',
         x4: '[es]',
-        x5: '[http%3A%2F%2Flocalhost%3Ffoo%3Dbar]',
+        x5: '[http%3A%2F%2Flocalhost%2F]',
         x7: '[article]',
         x8: '[simorgh]',
         x9: '[WS%20STY%20TEST%20-%20Full%20Headline%20-%20BBC%20News%20Mundo]',

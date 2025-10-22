@@ -10,9 +10,6 @@ global.jest = jest;
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 global.fetch = fetch;
-global.AbortSignal = {
-  timeout: jest.fn(),
-};
 global.ReadableStream = ReadableStream;
 global.MessageChannel = MessageChannel;
 global.MessagePort = MessagePort;
