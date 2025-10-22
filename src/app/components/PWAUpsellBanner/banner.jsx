@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './PWAUpsellBanner.styles';
+import styles from './banner.styles';
 import { Close } from '../icons';
 
 export const PWAUpsellBanner = ({

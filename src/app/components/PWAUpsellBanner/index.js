@@ -1,2 +1,3 @@
+// @ts-nocheck
 // eslint-disable-next-line no-restricted-exports
-export { default } from './PWAUpsellBanner';
+export { default } from './banner';
