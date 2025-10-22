@@ -1,9 +1,5 @@
 import onClient from '#lib/utilities/onClient';
 
-jest.mock('#app/lib/utilities/onClient', () =>
-  jest.fn().mockImplementation(() => false),
-);
-
 const mockUrl =
   'https://mock-config-endpoint?application=simorgh&service=mundo&__amp_source_origin=http://localhost';
 const mockResponse = {
@@ -12,7 +8,13 @@ const mockResponse = {
   },
 };
 
+jest.mock('#app/lib/utilities/onClient', () =>
+  jest.fn().mockImplementation(() => false),
+);
+
 describe('getToggles', () => {
+  const originalConfigURL = process.env.SIMORGH_CONFIG_URL;
+
   beforeEach(async () => {
     process.env.SIMORGH_CONFIG_URL = 'https://mock-config-endpoint';
     fetch.mockResponse(JSON.stringify(mockResponse));
@@ -22,6 +24,7 @@ describe('getToggles', () => {
     jest.resetModules();
     jest.clearAllMocks();
     fetch.resetMocks();
+    process.env.SIMORGH_CONFIG_URL = originalConfigURL;
   });
 
   it('should return defaultToggles if enableFetchingToggles is not enabled', async () => {
