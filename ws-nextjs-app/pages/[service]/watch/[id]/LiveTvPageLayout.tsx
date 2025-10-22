@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import React, { use } from 'react';
-import MediaLoader from '#app/components/MediaLoader';
 import { Curation } from '#app/models/types/curationData';
 import LiveTVCuration from '#app/components/Curation';
 import { data as liveTvFixture } from '#data/dari/watch/bbc_afghan_tv/live.json';
