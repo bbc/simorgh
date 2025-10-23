@@ -107,6 +107,10 @@ const HomePage = ({ pageData }: HomePageProps) => {
     };
   }, []);
 
+  useEffect(() => {
+    console.log('deferredPrompt updated:', deferredPrompt);
+  }, [deferredPrompt]);
+
   const handleAddShortcut = async () => {
     if (!deferredPrompt) {
       console.log('Install prompt not available yet');
