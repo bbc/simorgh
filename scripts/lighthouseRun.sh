@@ -3,11 +3,11 @@ set -e
 
 mkdir -p lighthouse-reports
 
-  lighthouse http://localhost:7081/pidgin/articles/ce9wk6glg4lo \
+  lighthouse http://localhost:7081/news/articles/cn7k01xp8kxo \
   --chrome-flags="--no-sandbox --headless --disable-gpu" --output json --output html \
-  --output-path lighthouse-reports/pidgin-article \
+  --output-path lighthouse-reports/news-article \
   --config-path scripts/lighthouseConfig.js && \
-  node scripts/lighthouseBudget.js run lighthouse-reports/pidgin-article.report.json
+  node scripts/lighthouseBudget.js run lighthouse-reports/news-article.report.json
 
 # lighthouse http://localhost:7080/hindi \
 #   --chrome-flags="--no-sandbox --headless --disable-gpu" \
