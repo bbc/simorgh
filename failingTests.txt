@@ -1,9 +1,7 @@
-src/app/hooks/useClickTrackerHandler/index.test.jsx
 src/app/components/ATIAnalytics/atiUrl/index.test.ts
 src/app/legacy/containers/ConsentBanner/useConsentBanners/index.test.js
 src/app/routes/utils/fetchPageData/index.test.js
 src/app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon/index.test.ts
-src/app/lib/utilities/getToggles/index.test.js
 src/app/components/ATIAnalytics/canonical/sendPageViewBeaconOperaMini/index.test.ts
 src/app/lib/analyticsUtils/staticATITracking/clickTracking/index.test.ts
 src/app/lib/utilities/setCookie/index.test.jsx
@@ -12,3 +10,4 @@ src/app/legacy/containers/ConsentBanner/useConsentBanners/setCookieOven.test.js
 src/client.test.jsx
 src/app/lib/utilities/getEnvConfig/index.test.ts
 src/app/lib/utilities/onClient/index.test.js
+src/app/lib/utilities/getToggles/index.test.js

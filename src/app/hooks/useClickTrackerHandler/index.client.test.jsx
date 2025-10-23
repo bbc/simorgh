@@ -23,7 +23,8 @@ import useClickTrackerHandler from '.';
 
 const trackingToggleSpy = jest.spyOn(trackingToggle, 'default');
 
-const { location } = window;
+const windowLocationAssignSpy = jest.spyOn(window.location, 'assign');
+
 const { error } = console;
 
 const urlToObject = url => {
@@ -127,11 +128,14 @@ beforeEach(() => {
 });
 
 afterEach(() => {
-  window.location = location;
   console.error = error;
 });
 
 describe('useClickTrackerHandler', () => {
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   describe('Click tracking', () => {
     it('should return a function', () => {
       const { result } = renderHook(
@@ -185,7 +189,7 @@ describe('useClickTrackerHandler', () => {
           idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
           lng: 'en-US',
           p: 'news::pidgin.news.story.51745682.page',
-          r: '0x0x24x24',
+          r: '1024x768x24x24',
           re: '1024x768',
           s: '598343',
           s2: '70',
@@ -250,15 +254,13 @@ describe('useClickTrackerHandler', () => {
           idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
           lng: 'en-US',
           p: 'news::pidgin.news.story.51745682.page',
-          r: '0x0x24x24',
+          r: '1024x768x24x24',
           re: '1024x768',
           s: '598343',
           s2: '70',
           type: 'AT',
         },
       });
-
-      jest.restoreAllMocks();
     });
 
     it('should send tracking request with the URL of the next page on click of a link', async () => {
@@ -305,15 +307,13 @@ describe('useClickTrackerHandler', () => {
           idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
           lng: 'en-US',
           p: 'news::pidgin.news.story.51745682.page',
-          r: '0x0x24x24',
+          r: '1024x768x24x24',
           re: '1024x768',
           s: '598343',
           s2: '70',
           type: 'AT',
         },
       });
-
-      jest.restoreAllMocks();
     });
 
     it('should only track clicks on the child component if clicks are tracked on both a parent and child', async () => {
@@ -359,15 +359,13 @@ describe('useClickTrackerHandler', () => {
           idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
           lng: 'en-US',
           p: 'news::pidgin.news.story.51745682.page',
-          r: '0x0x24x24',
+          r: '1024x768x24x24',
           re: '1024x768',
           s: '598343',
           s2: '70',
           type: 'AT',
         },
       });
-
-      jest.restoreAllMocks();
     });
 
     it('should allow the user to navigate after clicking on a tracked link even if the tracking request fails', async () => {
@@ -400,10 +398,8 @@ describe('useClickTrackerHandler', () => {
       expect(global.fetch).toHaveBeenCalledTimes(1);
       expect(global.fetch).toThrow('Failed to fetch');
 
-      await waitFor(() => {
-        expect(window.location.assign).toHaveBeenCalledTimes(1);
-        expect(window.location.assign).toHaveBeenCalledWith(url);
-      });
+      expect(windowLocationAssignSpy).toHaveBeenCalledTimes(1);
+      expect(windowLocationAssignSpy).toHaveBeenCalledWith(url);
     });
 
     it('should not send tracking request on right click', () => {
@@ -457,7 +453,7 @@ describe('useClickTrackerHandler', () => {
       await act(() => userEvent.click(getByText('Link')));
 
       await waitFor(() => {
-        expect(window.location.assign).not.toHaveBeenCalled();
+        expect(windowLocationAssignSpy).not.toHaveBeenCalled();
       });
     });
 
@@ -588,218 +584,216 @@ describe('useClickTrackerHandler', () => {
       expect(mockOptimizelyTrack).toHaveBeenCalledTimes(0);
     });
   });
-});
 
-describe('Click tracking - Reverb', () => {
-  beforeEach(() => {
-    jest.replaceProperty(
-      serviceContextModule,
-      'ServiceContext',
-      createContext({
-        atiAnalyticsProducerId: '70',
-        atiAnalyticsProducerName: 'PIDGIN',
-        service: 'pidgin',
-        useReverb: true,
-      }),
-    );
-  });
-
-  it.each([
-    {
-      title: 'should trigger a beacon for a click event',
-      trackingData: { ...eventTrackingData },
-      expectedItemEvent: {
-        link: 'https://www.bbc.com/pidgin/articles/c93gd1yxng1o',
-        name: 'brand',
-      },
-    },
-    {
-      title: 'should trigger a beacon for an item level click event',
-      trackingData: {
-        ...eventTrackingData,
-        componentName: 'portrait-video',
-        itemTracker: {
-          type: 'portrait-video-promo',
-          text: 'Rollercoaster facts... while riding a rollercoaster',
-          position: 1,
-          duration: 73000,
-          resourceId: 'test-resource-id',
-        },
-      },
-      expectedItemEvent: {
-        duration: 73000,
-        link: 'https://www.bbc.com/pidgin/articles/c93gd1yxng1o',
-        name: 'portrait-video',
-        position: 1,
-        resource_id: 'test-resource-id',
-        text: 'Rollercoaster facts... while riding a rollercoaster',
-        type: 'portrait-video-promo',
-      },
-    },
-  ])('$title', async ({ trackingData, expectedItemEvent }) => {
-    const {
-      metadata: { atiAnalytics },
-    } = pidginData;
-
-    const TestLink = () => {
-      const { onClick: handleClick } = useClickTrackerHandler(trackingData);
-
-      return (
-        <div>
-          <a
-            href="https://www.bbc.com/pidgin/articles/c93gd1yxng1o"
-            onClick={handleClick}
-          >
-            Link
-          </a>
-        </div>
+  describe('Click tracking - Reverb', () => {
+    beforeEach(() => {
+      jest.replaceProperty(
+        serviceContextModule,
+        'ServiceContext',
+        createContext({
+          atiAnalyticsProducerId: '70',
+          atiAnalyticsProducerName: 'PIDGIN',
+          service: 'pidgin',
+          useReverb: true,
+        }),
       );
-    };
-
-    const { getByText } = render(<TestLink />, {
-      atiData: atiAnalytics,
-      pageData: pidginData,
-      pageType: STORY_PAGE,
-      pathname: '/pidgin',
-      service: 'pidgin',
-      toggles: defaultToggles,
     });
 
-    await act(() => userEvent.click(getByText('Link')));
-
-    expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
-    expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
-      'viewability',
-      '',
+    it.each([
       {
-        event: { action: 'select', category: 'viewability' },
-        group: { name: 'article-sty', type: trackingData.componentName },
-        item: expectedItemEvent,
+        title: 'should trigger a beacon for a click event',
+        trackingData: { ...eventTrackingData },
+        expectedItemEvent: {
+          link: 'https://www.bbc.com/pidgin/articles/c93gd1yxng1o',
+          name: 'brand',
+        },
       },
-      undefined,
-      undefined,
-      true,
-    );
-
-    jest.restoreAllMocks();
-  });
-});
-
-describe('Error handling', () => {
-  it('should not throw error and not send event to ATI when no tracking data passed into hook', async () => {
-    const {
-      metadata: { atiAnalytics },
-    } = pidginData;
-
-    const { container, getByText } = render(
-      <TestComponent hookProps={undefined} />,
       {
-        atiData: atiAnalytics,
-        pageData: pidginData,
-        pageType: STORY_PAGE,
-        pathname: '/pidgin',
-        service: 'pidgin',
-        toggles: defaultToggles,
-      },
-    );
-
-    await act(() => userEvent.click(getByText('Button')));
-
-    expect(container.error).toBeUndefined();
-    expect(global.fetch).not.toHaveBeenCalled();
-  });
-
-  it('should not throw error and not send event to ATI when no pageData is provided from context providers', async () => {
-    const { container, getByText } = render(
-      <TestComponent hookProps={eventTrackingData} />,
-      {
-        atiData: undefined,
-        pageData: undefined,
-        pageType: STORY_PAGE,
-        pathname: '/pidgin',
-        service: 'pidgin',
-        toggles: defaultToggles,
-      },
-    );
-
-    await act(() => userEvent.click(getByText('Button')));
-
-    expect(container.error).toBeUndefined();
-    expect(global.fetch).not.toHaveBeenCalled();
-  });
-
-  it('should not throw error and not send event to ATI when unexpected data passed into hook', async () => {
-    const trackingData = {
-      foo: 'bar',
-    };
-
-    const {
-      metadata: { atiAnalytics },
-    } = pidginData;
-
-    const { container, getByText } = render(
-      <TestComponent hookProps={trackingData} />,
-      {
-        atiData: atiAnalytics,
-        pageData: pidginData,
-        pageType: STORY_PAGE,
-        pathname: '/pidgin',
-        service: 'pidgin',
-        toggles: defaultToggles,
-      },
-    );
-
-    await act(() => userEvent.click(getByText('Button')));
-
-    expect(container.error).toBeUndefined();
-    expect(global.fetch).not.toHaveBeenCalled();
-  });
-
-  it('should not throw error and not send event to ATI when unexpected data type passed into hook', async () => {
-    const trackingData = ['unexpected data type'];
-
-    const {
-      metadata: { atiAnalytics },
-    } = pidginData;
-
-    const { container, getByText } = render(
-      <TestComponent hookProps={trackingData} />,
-      {
-        atiData: atiAnalytics,
-        pageData: pidginData,
-        pageType: STORY_PAGE,
-        pathname: '/pidgin',
-        service: 'pidgin',
-        toggles: defaultToggles,
-      },
-    );
-
-    await act(() => userEvent.click(getByText('Button')));
-
-    expect(container.error).toBeUndefined();
-    expect(global.fetch).not.toHaveBeenCalled();
-  });
-});
-
-describe('Lite Site - Click tracking', () => {
-  it('Returns a valid ati tracking url given the input props', () => {
-    const { result } = renderHook(
-      () =>
-        constructATIUrl({
-          eventTrackingData: {
-            ...eventTrackingData,
-            campaignID: 'custom-campaign',
+        title: 'should trigger a beacon for an item level click event',
+        trackingData: {
+          ...eventTrackingData,
+          componentName: 'portrait-video',
+          itemTracker: {
+            type: 'portrait-video-promo',
+            text: 'Rollercoaster facts... while riding a rollercoaster',
+            position: 1,
+            duration: 73000,
+            resourceId: 'test-resource-id',
           },
-          eventType: 'click',
-          isStatic: true,
-        }),
-      {
-        wrapper,
+        },
+        expectedItemEvent: {
+          duration: 73000,
+          link: 'https://www.bbc.com/pidgin/articles/c93gd1yxng1o',
+          name: 'portrait-video',
+          position: 1,
+          resource_id: 'test-resource-id',
+          text: 'Rollercoaster facts... while riding a rollercoaster',
+          type: 'portrait-video-promo',
+        },
       },
-    );
+    ])('$title', async ({ trackingData, expectedItemEvent }) => {
+      const {
+        metadata: { atiAnalytics },
+      } = pidginData;
 
-    expect(result.current).toContain(
-      'atc=PUB-[custom-campaign]-[brand]-[]-[CHD=promo::2]-[]-[]-[]-[]&type=AT',
-    );
+      const TestLink = () => {
+        const { onClick: handleClick } = useClickTrackerHandler(trackingData);
+
+        return (
+          <div>
+            <a
+              href="https://www.bbc.com/pidgin/articles/c93gd1yxng1o"
+              onClick={handleClick}
+            >
+              Link
+            </a>
+          </div>
+        );
+      };
+
+      const { getByText } = render(<TestLink />, {
+        atiData: atiAnalytics,
+        pageData: pidginData,
+        pageType: STORY_PAGE,
+        pathname: '/pidgin',
+        service: 'pidgin',
+        toggles: defaultToggles,
+      });
+
+      await act(() => userEvent.click(getByText('Link')));
+
+      expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+      expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+        'viewability',
+        '',
+        {
+          event: { action: 'select', category: 'viewability' },
+          group: { name: 'article-sty', type: trackingData.componentName },
+          item: expectedItemEvent,
+        },
+        undefined,
+        undefined,
+        true,
+      );
+    });
+  });
+
+  describe('Error handling', () => {
+    it('should not throw error and not send event to ATI when no tracking data passed into hook', async () => {
+      const {
+        metadata: { atiAnalytics },
+      } = pidginData;
+
+      const { container, getByText } = render(
+        <TestComponent hookProps={undefined} />,
+        {
+          atiData: atiAnalytics,
+          pageData: pidginData,
+          pageType: STORY_PAGE,
+          pathname: '/pidgin',
+          service: 'pidgin',
+          toggles: defaultToggles,
+        },
+      );
+
+      await act(() => userEvent.click(getByText('Button')));
+
+      expect(container.error).toBeUndefined();
+      expect(global.fetch).not.toHaveBeenCalled();
+    });
+
+    it('should not throw error and not send event to ATI when no pageData is provided from context providers', async () => {
+      const { container, getByText } = render(
+        <TestComponent hookProps={eventTrackingData} />,
+        {
+          atiData: undefined,
+          pageData: undefined,
+          pageType: STORY_PAGE,
+          pathname: '/pidgin',
+          service: 'pidgin',
+          toggles: defaultToggles,
+        },
+      );
+
+      await act(() => userEvent.click(getByText('Button')));
+
+      expect(container.error).toBeUndefined();
+      expect(global.fetch).not.toHaveBeenCalled();
+    });
+
+    it('should not throw error and not send event to ATI when unexpected data passed into hook', async () => {
+      const trackingData = {
+        foo: 'bar',
+      };
+
+      const {
+        metadata: { atiAnalytics },
+      } = pidginData;
+
+      const { container, getByText } = render(
+        <TestComponent hookProps={trackingData} />,
+        {
+          atiData: atiAnalytics,
+          pageData: pidginData,
+          pageType: STORY_PAGE,
+          pathname: '/pidgin',
+          service: 'pidgin',
+          toggles: defaultToggles,
+        },
+      );
+
+      await act(() => userEvent.click(getByText('Button')));
+
+      expect(container.error).toBeUndefined();
+      expect(global.fetch).not.toHaveBeenCalled();
+    });
+
+    it('should not throw error and not send event to ATI when unexpected data type passed into hook', async () => {
+      const trackingData = ['unexpected data type'];
+
+      const {
+        metadata: { atiAnalytics },
+      } = pidginData;
+
+      const { container, getByText } = render(
+        <TestComponent hookProps={trackingData} />,
+        {
+          atiData: atiAnalytics,
+          pageData: pidginData,
+          pageType: STORY_PAGE,
+          pathname: '/pidgin',
+          service: 'pidgin',
+          toggles: defaultToggles,
+        },
+      );
+
+      await act(() => userEvent.click(getByText('Button')));
+
+      expect(container.error).toBeUndefined();
+      expect(global.fetch).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('Lite Site - Click tracking', () => {
+    it('Returns a valid ati tracking url given the input props', () => {
+      const { result } = renderHook(
+        () =>
+          constructATIUrl({
+            eventTrackingData: {
+              ...eventTrackingData,
+              campaignID: 'custom-campaign',
+            },
+            eventType: 'click',
+            isStatic: true,
+          }),
+        {
+          wrapper,
+        },
+      );
+
+      expect(result.current).toContain(
+        'atc=PUB-[custom-campaign]-[brand]-[]-[CHD=promo::2]-[]-[]-[]-[]&type=AT',
+      );
+    });
   });
 });
