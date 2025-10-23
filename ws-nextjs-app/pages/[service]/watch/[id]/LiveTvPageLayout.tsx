@@ -37,7 +37,7 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
           title={curationTitle}
           position={position}
           link={link}
-          curationLength={curations.length}
+          // curationLength={curations.length}
           renderVisuallyHiddenH2Title={position === 0}
           curationId={curationId}
           {...curationProps}
@@ -50,6 +50,10 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
 
   const mediaCollectionCuration = curations?.find(
     curation => curation.mediaCollection,
+  );
+
+  const radioScheduleCuration = curations?.find(
+    curations => curations.radioSchedule,
   );
 
   return (
@@ -72,32 +76,8 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
               Live TV Page with schedule
             </Heading>
             <Text>{description}</Text>
-
-            {/* {curations?.map(
-              ({
-                summaries,
-                curationId,
-                title: curationTitle,
-                link,
-                position,
-                ...curationProps
-              }: Curation) => {
-                return (
-                  <React.Fragment key={`${curationId}-${position}`}>
-                    <LiveTVCuration
-                      summaries={summaries || []}
-                      title={curationTitle}
-                      position={position}
-                      link={link}
-                      curationLength={curations?.length}
-                      renderVisuallyHiddenH2Title={position === 0}
-                      curationId={curationId}
-                      {...curationProps}
-                    />
-                  </React.Fragment>
-                );
-              },
-            )} */}
+            {radioScheduleCuration &&
+              renderCuration({ curation: radioScheduleCuration })}
           </div>
         </div>
       </main>
