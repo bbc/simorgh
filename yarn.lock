@@ -891,17 +891,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-syntax-jsx@npm:^7.17.12, @babel/plugin-syntax-jsx@npm:^7.27.1":
-  version: 7.27.1
-  resolution: "@babel/plugin-syntax-jsx@npm:7.27.1"
-  dependencies:
-    "@babel/helper-plugin-utils": "npm:^7.27.1"
-  peerDependencies:
-    "@babel/core": ^7.0.0-0
-  checksum: 10/c6d1324cff286a369aa95d99b8abd21dd07821b5d3affd5fe7d6058c84cff9190743287826463ee57a7beecd10fa1e4bc99061df532ee14e188c1c8937b13e3a
-  languageName: node
-  linkType: hard
-
 "@babel/plugin-syntax-jsx@npm:^7.25.9":
   version: 7.25.9
   resolution: "@babel/plugin-syntax-jsx@npm:7.25.9"
@@ -910,6 +899,17 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.0.0-0
   checksum: 10/bb609d1ffb50b58f0c1bac8810d0e46a4f6c922aa171c458f3a19d66ee545d36e782d3bffbbc1fed0dc65a558bdce1caf5279316583c0fff5a2c1658982a8563
+  languageName: node
+  linkType: hard
+
+"@babel/plugin-syntax-jsx@npm:^7.27.1":
+  version: 7.27.1
+  resolution: "@babel/plugin-syntax-jsx@npm:7.27.1"
+  dependencies:
+    "@babel/helper-plugin-utils": "npm:^7.27.1"
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  checksum: 10/c6d1324cff286a369aa95d99b8abd21dd07821b5d3affd5fe7d6058c84cff9190743287826463ee57a7beecd10fa1e4bc99061df532ee14e188c1c8937b13e3a
   languageName: node
   linkType: hard
 
@@ -1545,7 +1545,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-react-jsx@npm:^7.17.12, @babel/plugin-transform-react-jsx@npm:^7.27.1":
+"@babel/plugin-transform-react-jsx@npm:^7.27.1":
   version: 7.27.1
   resolution: "@babel/plugin-transform-react-jsx@npm:7.27.1"
   dependencies:
@@ -2361,18 +2361,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/babel-plugin-jsx-pragmatic@npm:^0.3.0":
-  version: 0.3.0
-  resolution: "@emotion/babel-plugin-jsx-pragmatic@npm:0.3.0"
-  dependencies:
-    "@babel/plugin-syntax-jsx": "npm:^7.17.12"
-  peerDependencies:
-    "@babel/core": ^7.0.0
-  checksum: 10/752124c6fd0f88c9820c9861988068de50ff7728268d77f0d0f3f4086b063ec033ece5ef4cd3c312962f003ec6f115df5c255dd79ca6aa05f8072ddc51eb05f4
-  languageName: node
-  linkType: hard
-
-"@emotion/babel-plugin@npm:11.13.5, @emotion/babel-plugin@npm:^11.12.0, @emotion/babel-plugin@npm:^11.13.5":
+"@emotion/babel-plugin@npm:11.13.5, @emotion/babel-plugin@npm:^11.13.5":
   version: 11.13.5
   resolution: "@emotion/babel-plugin@npm:11.13.5"
   dependencies:
@@ -2388,20 +2377,6 @@ __metadata:
     source-map: "npm:^0.5.7"
     stylis: "npm:4.2.0"
   checksum: 10/cd310568314d886ca328e504f84c4f7f9c7f092ea34a2b43fdb61f84665bf301ba2ef49e0fd1e7ded3d81363d9bbefbb32674ce88b317cfb64db2b65e5ff423f
-  languageName: node
-  linkType: hard
-
-"@emotion/babel-preset-css-prop@npm:11.12.0":
-  version: 11.12.0
-  resolution: "@emotion/babel-preset-css-prop@npm:11.12.0"
-  dependencies:
-    "@babel/plugin-transform-react-jsx": "npm:^7.17.12"
-    "@babel/runtime": "npm:^7.18.3"
-    "@emotion/babel-plugin": "npm:^11.12.0"
-    "@emotion/babel-plugin-jsx-pragmatic": "npm:^0.3.0"
-  peerDependencies:
-    "@babel/core": ^7.0.0
-  checksum: 10/baf01251e84cc403045265b477fcb93f7e710a19fe0c44a286550ff43c5ea2cbe2489933f28fae382497c374c9c62e2c52570ae0371df44e8bb4c9cdaef9771f
   languageName: node
   linkType: hard
 
@@ -2444,7 +2419,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/jest@npm:11.13.0, @emotion/jest@npm:^11.11.0":
+"@emotion/jest@npm:11.13.0":
   version: 11.13.0
   resolution: "@emotion/jest@npm:11.13.0"
   dependencies:
@@ -16049,7 +16024,7 @@ __metadata:
     "@babel/preset-react": "npm:7.27.1"
     "@cypress/webpack-preprocessor": "npm:7.0.1"
     "@emotion/babel-plugin": "npm:11.13.5"
-    "@emotion/jest": "npm:^11.11.0"
+    "@emotion/jest": "npm:11.13.0"
     "@jest/environment": "npm:30.2.0"
     "@jest/types": "npm:30.0.5"
     "@next/swc-darwin-arm64": "npm:15.5.2"
@@ -16094,7 +16069,6 @@ __metadata:
     "@bbc/web-vitals": "npm:2.5.3"
     "@cypress/webpack-preprocessor": "npm:7.0.1"
     "@emotion/babel-plugin": "npm:11.13.5"
-    "@emotion/babel-preset-css-prop": "npm:11.12.0"
     "@emotion/cache": "npm:11.14.0"
     "@emotion/jest": "npm:11.13.0"
     "@emotion/react": "npm:11.14.0"
