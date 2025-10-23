@@ -2,7 +2,7 @@ name: Simorgh CI - AMP Validation, Lighthouse, & Puppeteer Tests
 on:
   pull_request:
     branches:
-      - "**"
+      - '**'
 permissions:
   contents: read
 
@@ -14,7 +14,7 @@ jobs:
         node-version: [22.x]
     env:
       CI: true
-      LOG_LEVEL: "error"
+      LOG_LEVEL: 'error'
       LIGHTHOUSE_BUILD: true
 
     steps:
@@ -56,6 +56,12 @@ jobs:
 
       - name: Run Lighthouse
         run: yarn lighthouse
+
+      - name: Upload Lighthouse Reports
+        uses: actions/upload-artifact@v3
+        with:
+          name: lighthouse-reports
+          path: lighthouse-reports/
 
       - name: Run Puppeteer Tests
         run: |
