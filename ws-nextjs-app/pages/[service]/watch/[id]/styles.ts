@@ -27,7 +27,7 @@ const styles = {
     }),
   description: ({ spacings }: Theme) =>
     css({
-      paddingBottom: `${spacings.QUADRUPLE}rem`,
+      paddingBottom: `${spacings.DOUBLE}rem`,
       display: 'block',
     }),
 };
