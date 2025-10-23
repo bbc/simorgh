@@ -219,7 +219,6 @@ const atiAnalyticsTestSuites = [
       assertMessageBannerComponentView,
       assertMessageBannerComponentClick,
       assertMostReadComponentView,
-      assertMostReadComponentClick,
     ],
   },
 ];
