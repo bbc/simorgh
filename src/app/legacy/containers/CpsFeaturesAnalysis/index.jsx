@@ -82,13 +82,14 @@ const PromoListComponent = ({
   const viewTracker = useViewTracker(eventTrackingDataWithOptimizely.block);
 
   return (
-    <StoryPromoUlFeatures>
+    <StoryPromoUlFeatures role="list">
       {promoItems.map((item, promoIndex) => {
         return (
           <StoryPromoLiFeatures
             key={item.id || item.uri}
             {...viewTracker}
             border={false}
+            role="listitem"
           >
             <FrostedGlassPromo
               item={item}
