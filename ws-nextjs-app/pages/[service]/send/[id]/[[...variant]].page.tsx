@@ -4,7 +4,7 @@ import PageDataParams from '#models/types/pageDataParams';
 import { UGC_PAGE } from '#app/routes/utils/pageTypes';
 import getPathExtension from '#app/utilities/getPathExtension';
 import deriveVariant from '#nextjs/utilities/deriveVariant';
-import extractHeaders from '../../../../../src/server/utilities/extractHeaders';
+import extractHeaders from '#server/utilities/extractHeaders';
 import getPageData from '../../../../utilities/pageRequests/getPageData';
 
 const UGCPageLayout = dynamic(() => import('./UGCPageLayout'));
@@ -14,6 +14,9 @@ export const getServerSideProps: GetServerSideProps = async context => {
     'Cache-Control',
     'public, stale-if-error=300, stale-while-revalidate=120, max-age=30',
   );
+
+  // Remove x-frame-options header to allow embedding
+  context.res.removeHeader('x-frame-options');
 
   const { headers: reqHeaders } = context.req;
   const { isLite, isApp } = getPathExtension(context.resolvedUrl);

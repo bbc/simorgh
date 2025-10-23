@@ -65,18 +65,19 @@ const Feedback = () => {
         </>
       )}
       {formOpen && (
-        <div css={{ display: 'flex', flexDirection: 'column' }}>
+        <div css={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
           <Text as="p" fontVariant="sansBold" css={{ display: 'block' }}>
             Please tell us what we can do better.
           </Text>
-          <div>
+          <iframe src="/mundo/send/u50853489.app" css={styles.iframe} />
+          {/* <div>
             <form css={{ display: 'block', flexDirection: 'column' }}>
               <textarea css={{ display: 'block', width: '100%' }} />
               <button type="submit" css={{ margin: '12px 0' }}>
                 Submit
               </button>
             </form>
-          </div>
+          </div> */}
         </div>
       )}
     </section>

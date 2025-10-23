@@ -52,4 +52,11 @@ export default {
         fill: palette.GREY_8,
       },
     }),
+  iframe: ({ spacings }: Theme) =>
+    css({
+      border: 'none',
+      width: '90%',
+      height: '1430px',
+      marginTop: `${spacings.FULL}rem`,
+    }),
 };

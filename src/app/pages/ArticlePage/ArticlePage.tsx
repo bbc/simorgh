@@ -79,6 +79,7 @@ import {
   isPortraitVideo,
   isPortraitVideoUnderHeadline,
 } from '../utils/portraitVideo';
+import Feedback from './Feedback';
 
 // EXPERIMENT: Article Read Time
 interface ReadTimeData {
@@ -416,6 +417,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             ]}
             role="main"
           >
+            <Feedback />
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
