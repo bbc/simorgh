@@ -3,7 +3,7 @@ const dotenv = require('dotenv');
 const MomentTimezoneInclude = require('../src/app/legacy/psammead/moment-timezone-include/src');
 const { getClientEnvVars } = require('../src/clientEnvVars');
 
-const DOT_ENV_CONFIG = dotenv.config();
+const DOT_ENV_CONFIG = dotenv.config({ quiet: true });
 
 const assetPrefix =
   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
@@ -57,6 +57,9 @@ module.exports = {
   */
   pageExtensions: ['page.tsx', 'page.ts', 'api.tsx', 'api.ts'],
   webpack: (config, { webpack, isServer }) => {
+    // TODO: Come back to this
+    config.ignoreWarnings = [{ module: /@emotion/ }];
+
     config.resolve.fallback = {
       ...config.resolve.fallback,
       fs: false,
