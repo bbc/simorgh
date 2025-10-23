@@ -17,25 +17,33 @@ const DEFAULT_POLICY_COOKIE = '111';
 jest.mock('#hooks/useToggle');
 const cookieSetterSpy = jest.spyOn(Cookies, 'set');
 
-beforeEach(() => {
-  Cookies.set(PRIVACY_COOKIE, DEFAULT_PRIVACY_COOKIE);
-  Cookies.set(EXPLICIT_COOKIE, DEFAULT_EXPLICIT_COOKIE);
-  Cookies.set(POLICY_COOKIE, DEFAULT_POLICY_COOKIE);
-});
-
 describe('useConsentBanners', () => {
-  afterEach(() => {
-    jest.clearAllMocks();
+  beforeEach(() => {
+    Cookies.set(PRIVACY_COOKIE, DEFAULT_PRIVACY_COOKIE);
+    Cookies.set(EXPLICIT_COOKIE, DEFAULT_EXPLICIT_COOKIE);
+    Cookies.set(POLICY_COOKIE, DEFAULT_POLICY_COOKIE);
+
+    jest
+      .spyOn(window.location, 'hostname', 'get')
+      .mockImplementation(() => 'www.bbc.com');
+
+    jest
+      .spyOn(window.location, 'origin', 'get')
+      .mockImplementation(() => 'https://www.bbc.com');
+    jest
+      .spyOn(window.location, 'protocol', 'get')
+      .mockImplementation(() => 'https:');
   });
 
-  afterAll(() => {
-    jest.restoreAllMocks();
+  afterEach(() => {
+    jest.clearAllMocks();
   });
 
   describe('on initial mount', () => {
     it('should return showPrivacyBanner=FALSE when privacyToggle is enabled and PRIVACY_COOKIE is equal to the privacyToggleValue', () => {
       Cookies.set(PRIVACY_COOKIE, DEFAULT_PRIVACY_COOKIE);
       cookieSetterSpy.mockClear();
+
       useToggle.mockReturnValue({
         enabled: true,
         value: DEFAULT_PRIVACY_COOKIE,
@@ -48,6 +56,7 @@ describe('useConsentBanners', () => {
     it('should return showPrivacyBanner=TRUE  when privacyToggle is enabled and PRIVACY_COOKIE is different to the privacyToggleValue', () => {
       Cookies.set(PRIVACY_COOKIE, 'anythingelse');
       cookieSetterSpy.mockClear();
+
       useToggle.mockReturnValue({
         enabled: true,
         value: DEFAULT_PRIVACY_COOKIE,
@@ -133,7 +142,10 @@ describe('useConsentBanners', () => {
     });
 
     it('sets PRIVACY_COOKIE without domain restrictions', () => {
-      global.window.location = new URL('https://www.bbc.co.uk');
+      jest
+        .spyOn(window.location, 'hostname', 'get')
+        .mockImplementation(() => 'www.bbc.co.uk');
+
       Cookies.set(PRIVACY_COOKIE, null);
       cookieSetterSpy.mockClear();
 
@@ -216,7 +228,6 @@ describe('useConsentBanners', () => {
 
     it('does not set POLICY_COOKIE when its already set', () => {
       cookieSetterSpy.mockClear();
-
       useToggle.mockReturnValue({
         enabled: true,
         value: DEFAULT_PRIVACY_COOKIE,
@@ -257,7 +268,10 @@ describe('useConsentBanners', () => {
     });
 
     it('sets POLICY_COOKIE without domain restrictions', () => {
-      global.window.location = new URL('https://www.test.bbc.com');
+      // jest
+      //   .spyOn(window.location, 'origin', 'get')
+      //   .mockImplementation(() => 'https://www.test.bbc.com');
+
       Cookies.set(EXPLICIT_COOKIE, '0');
       Cookies.set(POLICY_COOKIE, null);
       cookieSetterSpy.mockClear();
