@@ -46,7 +46,7 @@ export default ({
   const { images, video } = block.model;
 
   const imageUrl = images?.[0]?.source ?? defaultImage;
-  const imageUrlTemplate = images?.[0]?.urlTemplate || '';
+  const imageUrlTemplate = images?.[0]?.urlTemplate;
   const alt = images?.[0]?.altText || defaultImageAltText;
   const headline = video?.title || '';
   const mediaISO8601Duration = video?.version?.duration;
@@ -88,8 +88,8 @@ export default ({
     imageWidthLarge: 256,
   });
 
-  const fallbackSrcSet = getSrcSets({
-    imageUrlTemplate: imageUrlTemplate.replace('.webp', ''),
+  const fallbackSrcSets = getSrcSets({
+    imageUrlTemplate: imageUrlTemplate?.replace('.webp', ''),
     mq,
     imageWidthSmall: 64,
     imageWidthLarge: 256,
@@ -129,7 +129,7 @@ export default ({
         src={imageUrl}
         aspectRatio={[9, 16]}
         srcSet={srcSets?.srcSet}
-        fallbackSrcSet={fallbackSrcSet?.srcSet}
+        fallbackSrcSet={fallbackSrcSets?.srcSet}
         sizes={srcSets?.sizes}
         lazyLoad
       />
