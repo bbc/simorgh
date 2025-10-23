@@ -56,6 +56,10 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
     curation => curation.radioSchedule,
   );
 
+  const portraitVideoCuration = curations?.find(
+    curation => curation.portraitVideo,
+  );
+
   return (
     <>
       {/* <ATIAnalytics atiData={atiAnalytics} />
@@ -76,6 +80,8 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
               Live TV Page with schedule
             </Heading>
             <Text>{description}</Text>
+            {portraitVideoCuration &&
+              renderCuration({ curation: portraitVideoCuration })}
             {radioScheduleCuration &&
               renderCuration({ curation: radioScheduleCuration })}
           </div>
