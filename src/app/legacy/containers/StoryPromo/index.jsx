@@ -232,8 +232,8 @@ const StoryPromoContainer = ({
       <Headline
         script={script}
         service={service}
-        promoType={promoType}
-        promoHasImage={displayImage}
+        promoType={promoType || 'regular'}
+        promoHasImage={displayImage || true}
         as={headingTagOverride}
       >
         <StyledLink
@@ -261,8 +261,8 @@ const StoryPromoContainer = ({
         <Summary
           script={script}
           service={service}
-          promoType={promoType}
-          promoHasImage={displayImage}
+          promoType={promoType || 'regular'}
+          promoHasImage={displayImage || true}
         >
           {promoSummary}
         </Summary>
