@@ -1,0 +1,114 @@
+{
+  "data": {
+    "title": "Live TV Page with schedule",
+    "description": "Test for live tv page with multiple media collections & radio schedule",
+    "curations": [
+      {
+        "mediaCollection": [
+          {
+            "type": "liveMedia",
+            "model": {
+              "urn": "urn:bbc:pips:sid:bbc_afghan_tv",
+              "title": "Tvdar25 Afghan Edu Girls 36",
+              "type": "episode",
+              "synopses": {
+                "short": "",
+                "medium": "",
+                "long": ""
+              },
+              "mediaType": "audio_video",
+              "imageUrlTemplate": "https://ichef.bbci.co.uk/images/ic/$recipe/p0k8v8q1.png",
+              "masterbrand": {
+                "id": "bbc_dari_tv",
+                "name": "BBC Dari TV",
+                "networkName": "BBC Dari TV",
+                "type": "",
+                "imageUrlTemplate": null
+              },
+              "version": {
+                "vpid": "w4hr3ltd",
+                "duration": "PT30M",
+                "availabilityType": "simulcast",
+                "versionTypes": [
+                  {
+                    "type": "Original",
+                    "name": "Original version"
+                  }
+                ],
+                "schedule": null,
+                "serviceId": "bbc_afghan_tv",
+                "authToken": null,
+                "status": "LIVE",
+                "warnings": null
+              },
+              "overtypedTitle": "BBC Afghan TV",
+              "leadMedia": true
+            }
+          }
+        ],
+        "curationId": "urn:bbc:tipo:list:7aa12492-4236-4190-8161-5b109355e94f",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "Afghan TV Stream",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE",
+        "intent": "MEDIA_PLAYER"
+      },
+      {
+        "radioSchedule": [
+          {
+            "id": "p0lv337m",
+            "state": "next",
+            "startTime": "2025-09-08T14:00:00.000Z",
+            "link": "/dari/bbc_dari_radio/w3ct7ryj",
+            "brandTitle": "مجله شامگاهی",
+            "summary": "برنامه خبری و تحلیلی شامگاهی \n",
+            "duration": "PT30M"
+          },
+          {
+            "id": "p0lv11y1",
+            "state": "onDemand",
+            "startTime": "2025-09-08T08:30:00.000Z",
+            "link": "/dari/bbc_dari_radio/w173046n14h6fy1",
+            "brandTitle": "Second Eye",
+            "summary": "تازه ترین اخبار از افغانستان، منطقه و جهان ",
+            "duration": "PT14M30S"
+          },
+          {
+            "id": "p0ltynxx",
+            "state": "onDemand",
+            "startTime": "2025-09-07T17:00:00.000Z",
+            "link": "/dari/bbc_dari_radio/w3ct7mfl",
+            "brandTitle": "غږیز کتاب",
+            "summary": "خوشحال خان خټک د خپل شعر په نړۍ کې ـ  د خوشحال خټک د شعرونو غږيز کتاب پر بي بي سي راډیو د داود جنبش او زمزمې نيازۍ په غږ کې.",
+            "duration": "PT30M"
+          },
+          {
+            "id": "p0ltyj9w",
+            "state": "onDemand",
+            "startTime": "2025-09-07T16:30:00.000Z",
+            "link": "/dari/bbc_dari_radio/w3ct7qtg",
+            "brandTitle": "Just One Thing/Art",
+            "summary": "یوازې یو شی=  داسې څه اورئ چې ستاسو فزیکي او رواني روغتیا ته ګټه رسوي",
+            "duration": "PT30M"
+          }
+        ],
+        "curationId": "urn:bbc:programmes:available-episodes:bbc_dari_radio",
+        "curationType": "available-episodes",
+        "position": 1,
+        "title": "Afghan TV Schedule",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:cje2rl6z78xxt",
+        "contentType": "live-tv",
+        "pageIdentifier": "dari.live_tv.page",
+        "pageTitle": "Live TV Page with Schedule"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

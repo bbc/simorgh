@@ -58,7 +58,7 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Arag dhammaan',
       home: 'War',
-      continueReading: 'Ka sii wad akhrinta',
+      continueReading: 'Sii Akhri',
       currentPage: 'Bogga hadda',
       skipLinkText: 'U gudub qaybta macluumaadka',
       relatedContent: 'Warar kale oo dheeraad ah oo la xiriira qodobkan',
@@ -277,7 +277,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Arrimhii u danbeeyey',
     },
     mostRead: {
-      header: 'Popular Reads',
+      header: 'Ugu Aqris Badan',
       lastUpdated: 'Markii ugu dambeysay ee la cusbooneysiiyay:',
       numberOfItems: 5,
       hasMostRead: true,
@@ -300,7 +300,7 @@ export const service: DefaultServiceConfig = {
         text: 'Sababta aad ku aamini kartid BBC News',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda.',
       },
       links: [
@@ -345,20 +345,36 @@ export const service: DefaultServiceConfig = {
         url: '/somali',
       },
       {
-        title: 'Ganacsi',
-        url: '/somali/topics/c2dwqd32v4yt',
+        title: 'Siyaasad',
+        url: '/somali/topics/cwr9jry737xt',
       },
       {
-        title: 'Cayaaraha',
-        url: '/somali/topics/cpzd4zj1pn2t',
+        title: 'Soomaali',
+        url: '/somali/topics/cpzd4zk7qrjt',
+      },
+      {
+        title: 'Raadiye',
+        url: '/somali/topics/cn6rqlrkm0pt',
       },
       {
         title: 'Muuqaal',
         url: '/somali/topics/c7pl4k5r9xxt',
       },
       {
-        title: 'Barnaamijyada Idaacadda',
-        url: '/somali/topics/cn6rqlrkm0pt',
+        title: 'Haween',
+        url: '/somali/topics/cxnykn5732gt',
+      },
+      {
+        title: 'Ciyaaro',
+        url: '/somali/topics/cpzd4zj1pn2t',
+      },
+      {
+        title: 'Saynis iyo Caafimaad',
+        url: '/somali/topics/c2dr4lek2r9t',
+      },
+      {
+        title: 'Fan iyo Dhaqan',
+        url: '/somali/topics/cwy5g18443dt',
       },
     ],
   },

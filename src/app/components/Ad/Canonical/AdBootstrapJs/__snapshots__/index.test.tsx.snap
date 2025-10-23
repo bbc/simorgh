@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`AdBootstrapJs Snapshots should push dotcom bootstrap and configuration to a head script 1`] = `
 {
@@ -9,6 +9,7 @@ exports[`AdBootstrapJs Snapshots should push dotcom bootstrap and configuration 
       playerAds: false
     };
     ",
+  "nonce": undefined,
   "type": "text/javascript",
 }
 `;
@@ -23,6 +24,7 @@ exports[`AdBootstrapJs Snapshots should push dotcom bootstrap and configuration 
       adcampaign: 'test-ad-campaign'
     };
     ",
+  "nonce": undefined,
   "type": "text/javascript",
 }
 `;

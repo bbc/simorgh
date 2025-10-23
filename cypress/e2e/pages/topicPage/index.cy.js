@@ -1,8 +1,14 @@
 import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
 import crossPlatformTests from './tests';
 import { TOPIC_PAGE } from '../../../../src/app/routes/utils/pageTypes';
+import urlValidationTest from '../../../support/helpers/urlValidationTest';
+import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
 
-const tests = [crossPlatformTests];
+const tests = [
+  crossPlatformTests,
+  urlValidationTest,
+  testsForAllCanonicalPages,
+];
 
 const testSuites = [
   {
@@ -12,10 +18,22 @@ const testSuites = [
     tests,
   },
   {
+    path: '/persian/topics/cw9qgeqd1zqt',
+    service: 'persian',
+    runforEnv: ['test', 'live'],
+    tests: [urlValidationTest],
+  },
+  {
     path: '/pidgin/topics/c95y35941vrt',
     service: 'pidgin',
     runforEnv: ['local', 'test', 'live'],
     tests,
+  },
+  {
+    path: '/portuguese/topics/cx2ggnx4j72t',
+    service: 'portuguese',
+    runforEnv: ['test', 'live'],
+    tests: [urlValidationTest],
   },
   {
     path: '/serbian/topics/c1gd303q6y6t/lat',

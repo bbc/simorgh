@@ -137,7 +137,7 @@ const getViewClickDetailsRegex = ({ contentType, component, pageIdentifier }) =>
   );
 
 const fieldIsValidString = field =>
-  typeof field === 'string' && /^[^"]+$/.test(field);
+  typeof field === 'string' && field.trim().length > 0;
 
 const validateViewabilityEventDetails = ({ payload, actionType }) => {
   const arr = JSON.parse(payload);

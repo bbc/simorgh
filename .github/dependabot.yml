@@ -6,6 +6,8 @@ updates:
       interval: 'weekly'
       day: 'wednesday'
       time: '16:00'
+    cooldown:
+      default-days: 7
     ignore:
       # https://bbc.atlassian.net/browse/WS-106 - Replace `winston` logger because we currently have a workaround patch to fix a memory leak
       - dependency-name: 'winston'
@@ -26,6 +28,11 @@ updates:
         patterns:
           - '@babel/*'
           - 'babel-*'
+      happy-dom:
+        patterns:
+          - 'happy-dom'
+          - 'happy-dom*'
+          - '@happy-dom/*'
       bbc:
         patterns:
           - '@bbc/*'

@@ -1,10 +1,12 @@
 /* eslint-disable jsx-a11y/aria-role */
 /** @jsx jsx */
+/* @jsxFrag React.Fragment */
 import { use } from 'react';
 import { css, jsx, Theme } from '@emotion/react';
 import moment from 'moment';
 import path from 'ramda/src/path';
-import useClickTrackerHandler from '../../../hooks/useClickTrackerHandler';
+import isMediaType from '#app/lib/utilities/isMedia';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import formatDuration from '../../../lib/utilities/formatDuration';
 import Promo from '../../../legacy/components/Promo';
@@ -32,21 +34,19 @@ const getStyles = (promoCount: number, i: number, mq: Theme['mq']) => {
     },
   });
 };
-
 const HiearchicalGrid = ({
   summaries,
   headingLevel,
   isFirstCuration,
   eventTrackingData,
+  timeOfDayVariant,
 }: CurationGridProps) => {
   const { isAmp } = use(RequestContext);
   const { translations } = use(ServiceContext);
-
   const audioTranslation = path(['media', 'audio'], translations);
   const videoTranslation = path(['media', 'video'], translations);
   const photoGalleryTranslation = path(['media', 'photogallery'], translations);
   const durationTranslation = path(['media', 'duration'], translations);
-
   if (!summaries || summaries.length < 3) return null;
 
   const promoItems = summaries.slice(0, 12);
@@ -78,7 +78,6 @@ const HiearchicalGrid = ({
           const separator = ',';
           const formattedDuration = formatDuration({ duration, separator });
           const durationString = `, ${durationTranslation} ${formattedDuration}`;
-
           const useLargeImages = i === 0 && promoItems.length >= 3;
           const isFirstPromo = i === 0;
           const lazyLoadImages = !(isFirstPromo && isFirstCuration);
@@ -86,9 +85,7 @@ const HiearchicalGrid = ({
             isFirstPromo && isFirstCuration ? 'high' : undefined;
           const showDuration =
             promo.duration && ['video', 'audio'].includes(promo.type);
-          const isMedia = ['video', 'audio', 'photogallery'].includes(
-            promo.type,
-          );
+          const isMedia = isMediaType(promo.type);
           const typeTranslated =
             (promo.type === 'audio' && `${audioTranslation}, `) ||
             (promo.type === 'video' && `${videoTranslation}, `) ||
@@ -96,9 +93,12 @@ const HiearchicalGrid = ({
           const { isLive } = promo;
 
           const promoEventTrackingData = buildPromoEventTrackingData(promo, i);
-          const clickTrackerHandler = getClickTrackerHandler(
-            promoEventTrackingData,
-          );
+          const clickTrackerHandler = getClickTrackerHandler({
+            ...promoEventTrackingData,
+            sendOptimizelyEvents: true,
+            experimentName: 'newswb_ws_tod_homepage',
+            experimentVariant: timeOfDayVariant,
+          });
 
           return (
             <li
@@ -182,5 +182,4 @@ const HiearchicalGrid = ({
     </div>
   );
 };
-
 export default HiearchicalGrid;

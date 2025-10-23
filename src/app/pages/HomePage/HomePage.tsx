@@ -3,6 +3,10 @@
 import React, { use } from 'react';
 import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import useOptimizelyVariation, {
+  ExperimentType,
+} from '#app/hooks/useOptimizelyVariation';
+import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import {
   Curation,
@@ -21,6 +25,7 @@ import getItemList from '../../lib/seoUtils/getItemList';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
 import getIndexOfFirstNonBanner from '../utils/getIndexOfFirstNonBanner';
+import reorderCurations from './utils/reorderCurations';
 
 export interface HomePageProps {
   pageData: {
@@ -43,14 +48,30 @@ const HomePage = ({ pageData }: HomePageProps) => {
     homePageTitle,
     lang,
     brandName,
+    service,
   } = use(ServiceContext);
   const { topStoriesTitle, home } = translations;
   const {
     title,
     description,
-    curations,
     metadata: { atiAnalytics },
   } = pageData;
+  let { curations } = pageData;
+
+  // EXPERIMENT: Homepage Time of Day Adaptive Curations
+  const timeOfDayExperimentName = 'newswb_ws_tod_homepage';
+  const timeOfDayVariant = useOptimizelyVariation({
+    experimentName: timeOfDayExperimentName,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
+
+  // if service is Hindi or Tamil and optimizely variant is set to 'variantA' then reorder curations
+  if (timeOfDayVariant === 'homepage_time_of_day_a') {
+    curations = reorderCurations({
+      curations,
+      service,
+    });
+  }
 
   const itemList = getItemList({ curations, name: brandName });
 
@@ -91,12 +112,9 @@ const HomePage = ({ pageData }: HomePageProps) => {
                   link,
                   position,
                   visualStyle,
-                  mostRead,
-                  radioSchedule,
-                  embed,
-                  portraitVideo,
-                },
-                index,
+                  ...curationProps
+                }: Curation,
+                index: number,
               ) => {
                 const nthCurationByStyleAndProminence =
                   getNthCurationByStyleAndProminence({
@@ -118,15 +136,13 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       position={position}
                       link={link}
                       curationLength={curations?.length}
-                      mostRead={mostRead}
-                      radioSchedule={radioSchedule}
                       nthCurationByStyleAndProminence={
                         nthCurationByStyleAndProminence
                       }
-                      embed={embed}
-                      portraitVideo={portraitVideo}
                       renderVisuallyHiddenH2Title={position === 0}
                       curationId={curationId}
+                      timeOfDayVariant={timeOfDayVariant}
+                      {...curationProps}
                     />
                     {index === indexOfFirstNonBanner && <MPU />}
                   </React.Fragment>
@@ -136,6 +152,9 @@ const HomePage = ({ pageData }: HomePageProps) => {
           </div>
         </div>
       </main>
+      {timeOfDayVariant && (
+        <OptimizelyPageMetrics trackPageView trackPageDepth />
+      )}
     </>
   );
 };

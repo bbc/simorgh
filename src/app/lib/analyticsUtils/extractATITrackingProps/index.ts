@@ -5,8 +5,10 @@ import { EventTrackingData, EventTrackingProps } from '../types';
 export default ({
   eventTrackingData,
   eventType,
+  eventTrackingContextFromHook,
 }: EventTrackingProps): EventTrackingData => {
-  const eventTrackingContext = use(EventTrackingContext);
+  const eventTrackingContext =
+    eventTrackingContextFromHook || use(EventTrackingContext);
 
   const {
     componentName = '',
@@ -21,6 +23,7 @@ export default ({
     itemTracker,
     groupTracker,
     viewThreshold,
+    alwaysInView,
   } = eventTrackingData || {};
 
   const {
@@ -54,5 +57,6 @@ export default ({
     itemTracker,
     groupTracker,
     viewThreshold,
+    alwaysInView,
   };
 };

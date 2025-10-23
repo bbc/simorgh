@@ -1,37 +1,104 @@
 import React from 'react';
 import { render } from '#app/components/react-testing-library-with-providers';
 import * as viewTracking from '../../hooks/useViewTracker';
-import ReadTime from '.';
+import { ReadTimeArticleExperiment, ReadTime } from '.';
 
 describe('ReadTime', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
-  it('should render when readTime is supplied', () => {
-    const { getByText } = render(
-      <ReadTime readTimeValue={4} readTimeVariant="minutes" />,
+  it.each([
+    {
+      variant: 'variant',
+      variantKey: 'below_headline_minutes_bold',
+      expectedCopy: 'Estimated Read Time: 4 minutes',
+    },
+    {
+      variant: 'variant',
+      variantKey: 'below_timestamp_quick_long_bold',
+      expectedCopy: 'Quick Read',
+    },
+  ])(
+    'should render $expectedCopy when readTime is supplied with a $variant variant',
+    ({ variantKey, expectedCopy }) => {
+      const { getByText } = render(
+        <ReadTime
+          readTimeValue={4}
+          promoId="12345"
+          readTimeVariant={variantKey}
+        />,
+      );
+      expect(getByText(expectedCopy)).toBeInTheDocument();
+    },
+  );
+  it('Optimizely - Should render a blank div for a control variant', () => {
+    const container = render(
+      <ReadTime readTimeValue={4} promoId="12345" readTimeVariant="control" />,
     );
-    expect(getByText('Estimated Read Time: 4 minutes')).toBeInTheDocument();
+    expect(container.queryByTestId('read-time')).not.toBeInTheDocument();
   });
   describe('view tracking', () => {
     const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
 
     it('should register view tracker', () => {
-      render(<ReadTime readTimeValue={4} readTimeVariant="minutes" />);
+      render(
+        <ReadTime
+          readTimeValue={4}
+          promoId="12345"
+          readTimeVariant="minutes"
+        />,
+      );
 
       const expected = {
-        componentName: 'read-time-on-article',
-        experimentName: 'newswb_ws_article_read_time',
+        componentName: 'read-time',
+        experimentName: 'newswb_ws_homepage_read_time',
         experimentVariant: 'minutes',
+        sendOptimizelyEvents: true,
         itemTracker: {
           duration: 240000,
           label: 'Read time: 4 minutes',
-          type: 'read-time',
+          resourceId: '12345',
         },
-        sendOptimizelyEvents: true,
       };
 
       expect(viewTrackerSpy).toHaveBeenCalledWith(expected);
+    });
+  });
+  describe('On Article Page Experiment', () => {
+    it('should render when readTime is supplied', () => {
+      const { getByText } = render(
+        <ReadTimeArticleExperiment
+          readTimeValue={4}
+          readTimeVariant="minutes"
+        />,
+      );
+      expect(getByText('Estimated Read Time: 4 minutes')).toBeInTheDocument();
+    });
+    describe('view tracking', () => {
+      const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+
+      it('should register view tracker', () => {
+        render(
+          <ReadTimeArticleExperiment
+            readTimeValue={4}
+            readTimeVariant="minutes"
+          />,
+        );
+
+        const expected = {
+          componentName: 'read-time-on-article',
+          experimentName: 'newswb_ws_article_read_time',
+          experimentVariant: 'minutes',
+          itemTracker: {
+            duration: 240000,
+            label: 'Read time: 4 minutes',
+            type: 'read-time',
+          },
+          sendOptimizelyEvents: true,
+        };
+
+        expect(viewTrackerSpy).toHaveBeenCalledWith(expected);
+      });
     });
   });
 });

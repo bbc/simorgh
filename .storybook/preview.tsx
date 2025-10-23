@@ -390,6 +390,10 @@ const preview: Preview = {
             title: 'kyrgyz',
           },
           {
+            value: { service: 'magyarul', variant: 'default' },
+            title: 'magyarul',
+          },
+          {
             value: { service: 'marathi', variant: 'default' },
             title: 'marathi',
           },
@@ -536,6 +540,10 @@ const preview: Preview = {
           {
             value: { service: 'ukrainian', variant: 'ru-UA' },
             title: 'ukrainian-ru-UA',
+          },
+          {
+            value: { service: 'ws', variant: 'default' },
+            title: 'ws',
           },
         ],
         dynamicTitle: true,

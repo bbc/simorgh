@@ -1,13 +1,60 @@
-import runTestsForPage from '../../../support/helpers/runTestsForPage';
-import { testsThatFollowSmokeTestConfig } from './tests';
-import { testsThatFollowSmokeTestConfigForAMPOnly } from './testsForAMPOnly';
-import { testsThatFollowSmokeTestConfigForCanonicalOnly } from './testsForCanonicalOnly';
+import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
+import testsForAllPages from './tests';
+import { ERROR_PAGE } from '../../../../src/app/routes/utils/pageTypes';
 
-const testsForPage = {
-  pageType: 'errorPage404',
-  testsThatFollowSmokeTestConfig,
-  testsThatFollowSmokeTestConfigForCanonicalOnly,
-  testsThatFollowSmokeTestConfigForAMPOnly,
-};
+const tests = [testsForAllPages];
 
-runTestsForPage(testsForPage);
+const canonicalTestSuites = [
+  {
+    path: '/arabic/articles/c123456abcdo',
+    service: 'arabic',
+    runforEnv: ['local', 'test', 'live'],
+    tests,
+  },
+  {
+    path: '/mundo/articles/c123456abcdo',
+    service: 'mundo',
+    runforEnv: ['local', 'test', 'live'],
+    tests,
+  },
+  {
+    path: '/serbian/articles/c123456abcdo/cyr',
+    service: 'serbian',
+    runforEnv: ['local', 'test', 'live'],
+    variant: 'cyr',
+    tests,
+  },
+  {
+    path: '/serbian/articles/c123456abcdo/lat',
+    service: 'serbian',
+    runforEnv: ['local', 'test', 'live'],
+    variant: 'lat',
+    tests,
+  },
+  {
+    path: '/ukrainian/articles/c123456abcdo',
+    service: 'ukrainian',
+    runforEnv: ['local', 'test', 'live'],
+    tests,
+  },
+];
+
+const ampTestSuites = [...canonicalTestSuites].map(testSuite => {
+  return {
+    ...testSuite,
+    path: `${testSuite.path}.amp`,
+  };
+});
+
+ampTestSuites.push({
+  path: '/news/articles/cxvxrj8tvppo.amp',
+  service: 'news',
+  runforEnv: ['local', 'test', 'live'],
+  tests,
+});
+
+runTestsForPage({
+  failOnStatusCode: false,
+  pageType: ERROR_PAGE,
+  testSuites: [...canonicalTestSuites, ...ampTestSuites],
+});

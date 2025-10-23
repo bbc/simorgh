@@ -393,7 +393,7 @@ export const service: DefaultServiceConfig = {
         text: 'आप बीबीसी पर क्यों भरोसा कर सकते हैं',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'बाहरी साइटों का लिंक देने की हमारी नीति के बारे में पढ़ें.',
       },
       links: [
@@ -442,6 +442,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'भारत',
         url: '/hindi/topics/ckdxnkz7607t',
+      },
+      {
+        title: 'बिहार विधानसभा चुनाव',
+        url: '/hindi/topics/c98yre1dg81t',
       },
       {
         title: 'विदेश',

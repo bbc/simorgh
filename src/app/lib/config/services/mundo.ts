@@ -91,6 +91,7 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Ver todo',
       home: 'Página de inicio',
+      continueReading: 'Continuar leyendo',
       currentPage: 'Página actual',
       skipLinkText: 'Ir al contenido',
       relatedContent: 'Contenido relacionado',
@@ -398,7 +399,7 @@ export const service: DefaultServiceConfig = {
         text: 'Por qué puedes confiar en la BBC',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Lee sobre nuestra postura acerca de enlaces externos.',
       },
       links: [

@@ -12,7 +12,7 @@ import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import getSrcSets from '#app/utilities/getSrcSets';
 import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
-import { GroupTracker } from '#app/components/ATIAnalytics/types';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import styles from './index.styles';
 
 const DEFAULT_TRANSLATION = {
@@ -23,16 +23,18 @@ const DEFAULT_TRANSLATION = {
 
 type PortraitVideoPromoProps = {
   block: PortraitClipMediaBlock;
+  eventTrackingData: EventTrackingData;
   blockPosition?: number;
-  groupTracker?: GroupTracker;
+  timeOfDayVariant?: string;
   onClick?: () => void;
 };
 
 export default ({
   block,
   blockPosition = 0,
-  groupTracker,
+  eventTrackingData,
   onClick,
+  timeOfDayVariant,
 }: PortraitVideoPromoProps) => {
   const { mq } = useTheme();
   const {
@@ -86,23 +88,27 @@ export default ({
     imageWidthLarge: 256,
   });
 
-  const adjustedBlockPosition = blockPosition + 1;
-  const eventTrackingData = {
-    componentName: `portrait-video-promo-${adjustedBlockPosition}`,
-    groupTracker,
+  const eventTrackingDataExtended = {
+    ...eventTrackingData,
+    ...(timeOfDayVariant && {
+      sendOptimizelyEvents: true,
+      experimentName: 'newswb_ws_tod_homepage',
+      experimentVariant: timeOfDayVariant,
+    }),
     viewThreshold: 1,
     itemTracker: {
-      ...(momentDuration && { duration: momentDuration.asSeconds() }),
       type: 'portrait-video-promo',
       text: headline,
-      position: adjustedBlockPosition,
+      position: blockPosition + 1,
       resourceId: video?.id,
+      ...(momentDuration && { duration: momentDuration.asMilliseconds() }),
     },
   };
 
-  const viewTracker = useViewTracker(eventTrackingData);
+  const viewTracker = useViewTracker(eventTrackingDataExtended);
+
   const { onClick: clickTrackerHandler } =
-    useClickTrackerHandler(eventTrackingData);
+    useClickTrackerHandler(eventTrackingDataExtended) ?? {};
 
   const handleClick = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
     if (clickTrackerHandler) clickTrackerHandler(e);

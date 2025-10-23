@@ -36,7 +36,8 @@ export default ({
 
   const originCode = source?.replace('Image', '');
 
-  const versionID = video?.version?.id;
+  // Referred to as 'vPID' or 'version PID'
+  const versionPID = video?.version?.id;
 
   const clipISO8601Duration = video?.version?.duration;
 
@@ -81,11 +82,13 @@ export default ({
     guidanceMessage,
   });
 
-  const items: PlaylistItem[] = [{ versionID, kind, duration: rawDuration }];
+  const items: PlaylistItem[] = [
+    { versionID: versionPID, kind, duration: rawDuration },
+  ];
 
   if (showAds) items.unshift({ kind: 'advert' });
 
-  const externalEmbedUrl = getExternalEmbedUrl({ id, versionID, lang });
+  const externalEmbedUrl = getExternalEmbedUrl({ id, versionPID, lang });
 
   const isAudio = type === 'audio';
 

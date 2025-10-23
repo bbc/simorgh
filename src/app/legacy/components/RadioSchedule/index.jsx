@@ -67,11 +67,21 @@ const programGridProps = {
 const RadioSchedule = ({ schedule, ...props }) => {
   const { dir } = use(ServiceContext);
 
-  const eventTrackingData = {
-    componentName: 'radio-schedule',
+  const {
+    eventTrackingData = {
+      componentName: 'radio-schedule',
+    },
+  } = props;
+
+  const eventTrackingDataExtended = {
+    ...eventTrackingData,
+    groupTracker: {
+      ...eventTrackingData?.groupTracker,
+      itemCount: schedule.length,
+    },
   };
 
-  const viewTracker = useViewTracker(eventTrackingData);
+  const viewTracker = useViewTracker(eventTrackingDataExtended);
 
   return (
     <StyledGrid
@@ -81,7 +91,7 @@ const RadioSchedule = ({ schedule, ...props }) => {
       role="list"
       {...viewTracker}
     >
-      {schedule.map(({ id, ...program }) => (
+      {schedule.map(({ id, ...program }, index) => (
         <StyledFlexGrid
           dir={dir}
           parentColumns={schedulesGridProps.columns}
@@ -97,6 +107,8 @@ const RadioSchedule = ({ schedule, ...props }) => {
           </StartTimeWrapper>
           <ProgramCard
             {...props}
+            eventTrackingData={eventTrackingDataExtended}
+            position={index}
             program={program}
             id={id} // This ID is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
           />

@@ -8,9 +8,6 @@ export default {
     value: 'es,mx',
   },
   articleLiteSiteLink: { enabled: true },
-  chartbeatAnalytics: {
-    enabled: true,
-  },
   comscoreAnalytics: {
     enabled: true,
   },
@@ -20,7 +17,7 @@ export default {
   enableFetchingToggles: {
     enabled: true,
     value:
-      '(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|dari|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|ws|vietnamese|yoruba|zhongwen)',
+      '(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|dari|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|magyarul|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|romania|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|ws|vietnamese|yoruba|zhongwen)',
   },
   eventTracking: {
     enabled: true,
@@ -51,6 +48,21 @@ export default {
   },
   prerollAds: {
     enabled: true,
+  },
+  podcastPromo: {
+    enabled: true,
+  },
+  recentAudioEpisodes: {
+    enabled: true,
+    value: 4,
+  },
+  recentPodcastEpisodes: {
+    enabled: true,
+    value: 8,
+  },
+  recentVideoEpisodes: {
+    enabled: true,
+    value: 4,
   },
   scriptLink: {
     enabled: true,

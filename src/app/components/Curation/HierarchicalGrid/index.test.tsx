@@ -1,5 +1,4 @@
 import React from 'react';
-import { suppressPropWarnings } from '../../../legacy/psammead/psammead-test-helpers/src';
 import { render } from '../../react-testing-library-with-providers';
 import { pidginPromos as fixture } from './fixtures';
 import mediaFixture from './mediaFixtures';
@@ -9,9 +8,16 @@ import HierarchicalGrid from '.';
 const minimalEventTrackingData = { componentName: 'test-component' };
 
 describe('Hierarchical Grid Curation', () => {
-  suppressPropWarnings(['children', 'string', 'MediaIcon']);
-
   const headingLevel = 2;
+
+  beforeAll(() => {
+    jest.useFakeTimers().setSystemTime(new Date('2025-09-16T11:34:20.000Z'));
+  });
+
+  afterAll(() => {
+    jest.useRealTimers();
+  });
+
   it('renders twelve promos when twelve items are provided', async () => {
     render(
       <HierarchicalGrid
@@ -50,10 +56,11 @@ describe('Hierarchical Grid Curation', () => {
   });
 
   it('returns null when less than three promos are in the data', async () => {
+    const splicedFixture = [...fixture].splice(0, 2);
     render(
       <HierarchicalGrid
         headingLevel={headingLevel}
-        summaries={fixture.splice(0, 2)}
+        summaries={splicedFixture}
         eventTrackingData={minimalEventTrackingData}
       />,
     );
@@ -116,6 +123,21 @@ describe('Hierarchical Grid Curation', () => {
     );
 
     expect(getByText('29 julio 2023')).toBeInTheDocument();
+  });
+
+  it('for articles pushed under 10 hours ago, it should render the last published date in a relative format', async () => {
+    const { container } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={mediaFixture}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+      {
+        service: 'mundo',
+      },
+    );
+    const timestampText = container.querySelectorAll('time')?.[2].innerHTML;
+    expect(timestampText).toBe('34 minutos');
   });
 
   it('should use role text when using nested spans', async () => {

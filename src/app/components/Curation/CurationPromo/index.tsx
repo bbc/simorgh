@@ -8,6 +8,7 @@ import formatDuration from '#app/lib/utilities/formatDuration';
 import Promo from '#components/Promo';
 import { Summary } from '#app/models/types/curationData';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import isMediaType from '#app/lib/utilities/isMedia';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
@@ -29,6 +30,7 @@ const CurationPromo = ({
   headingLevel = 2,
   isLive,
   eventTrackingData,
+  timeOfDayVariant,
 }: Summary) => {
   const { isAmp, isLite } = use(RequestContext);
   const { translations } = use(ServiceContext);
@@ -45,13 +47,20 @@ const CurationPromo = ({
   const durationString = `, ${durationTranslation} ${formattedDuration}`;
 
   const showDuration = mediaDuration && ['video', 'audio'].includes(type);
-  const isMedia = ['video', 'audio', 'photogallery'].includes(type);
+  const isMedia = isMediaType(type);
   const typeTranslated =
     (type === 'audio' && `${audioTranslation}, `) ||
     (type === 'video' && `${videoTranslation}, `) ||
     (type === 'photogallery' && `${photoGalleryTranslation}, `);
 
-  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+  const clickTrackerHandler = useClickTrackerHandler({
+    ...eventTrackingData,
+    ...(timeOfDayVariant && {
+      sendOptimizelyEvents: true,
+      experimentName: 'newswb_ws_tod_homepage',
+      experimentVariant: timeOfDayVariant,
+    }),
+  });
 
   return (
     <Promo css={styles.promo} className="">
@@ -89,7 +98,6 @@ const CurationPromo = ({
           </Promo.A>
         )}
       </Promo.Heading>
-
       {!isLive ? (
         <Promo.Timestamp className="promo-timestamp">
           {lastPublished}

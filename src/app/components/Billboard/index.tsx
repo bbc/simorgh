@@ -4,8 +4,8 @@ import { jsx } from '@emotion/react';
 import { use } from 'react';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import { Summary } from '#app/models/types/curationData';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import Heading from '../Heading';
 import MaskedImage from '../MaskedImage';
 import styles from './index.styles';
@@ -22,9 +22,10 @@ interface BillboardProps {
   image: string;
   altText: string;
   id?: string;
-  eventTrackingData?: EventTrackingMetadata;
+  eventTrackingData?: EventTrackingData;
   showLiveLabel?: boolean;
   summaries?: Summary[];
+  timeOfDayVariant?: string;
 }
 
 export default ({
@@ -34,14 +35,22 @@ export default ({
   image,
   altText,
   id = 'billboard',
-  eventTrackingData,
   showLiveLabel,
+  eventTrackingData = { componentName: 'billboard' },
   summaries = [],
+  timeOfDayVariant,
 }: BillboardProps) => {
-  const viewTracker = useViewTracker(eventTrackingData);
-  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
   const { translations } = use(ServiceContext);
   const showMoreOnThisTitle = translations.moreOnThis;
+  const viewTracker = useViewTracker(eventTrackingData);
+  const clickTrackerHandler = useClickTrackerHandler({
+    ...eventTrackingData,
+    ...(timeOfDayVariant && {
+      sendOptimizelyEvents: true,
+      experimentName: 'newswb_ws_tod_homepage',
+      experimentVariant: timeOfDayVariant,
+    }),
+  });
 
   return (
     <section role="region" aria-labelledby={id} data-testid={id}>
@@ -95,11 +104,7 @@ export default ({
 
               <BillboardCurationGrid
                 summaries={summaries.slice(1)}
-                eventTrackingData={
-                  eventTrackingData ?? {
-                    componentName: 'billboard',
-                  }
-                }
+                eventTrackingData={eventTrackingData}
               />
             </div>
           )}

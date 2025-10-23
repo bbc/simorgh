@@ -1,5 +1,9 @@
 import React from 'react';
-import Component, { playlistLoadedCallback } from '.';
+import Component, {
+  playlistLoadedCallback,
+  statsNavigationCallback,
+  playbackEndedCallback,
+} from '.';
 import {
   screen,
   render,
@@ -8,7 +12,14 @@ import {
 import blocks from './fixture';
 import { Player, SMPEvent } from '../MediaLoader/types';
 
+const eventTrackingData = {
+  componentName: 'portrait-video-modal',
+  alwaysInView: true,
+};
+
 const mockClose = jest.fn();
+
+const mockSwipeTracker = jest.fn();
 
 const mockPlayer = {
   queuePlaylist: jest.fn(),
@@ -21,7 +32,12 @@ const mockPlayer = {
 describe('PortraitVideoModal', () => {
   it('should render the modal when active', () => {
     render(
-      <Component selectedVideoIndex={0} blocks={blocks} onClose={mockClose} />,
+      <Component
+        selectedVideoIndex={0}
+        blocks={blocks}
+        onClose={mockClose}
+        eventTrackingData={eventTrackingData}
+      />,
     );
 
     const modal = screen.getByRole('dialog');
@@ -32,7 +48,12 @@ describe('PortraitVideoModal', () => {
   it('should set the root React element to "inert" when the modal is open', () => {
     render(
       <div id="root">
-        <Component selectedVideoIndex={0} blocks={blocks} onClose={mockClose} />
+        <Component
+          selectedVideoIndex={0}
+          blocks={blocks}
+          onClose={mockClose}
+          eventTrackingData={eventTrackingData}
+        />
       </div>,
     );
 
@@ -43,7 +64,12 @@ describe('PortraitVideoModal', () => {
 
   it('should close the modal when the close button is clicked', () => {
     render(
-      <Component selectedVideoIndex={0} blocks={blocks} onClose={mockClose} />,
+      <Component
+        selectedVideoIndex={0}
+        blocks={blocks}
+        onClose={mockClose}
+        eventTrackingData={eventTrackingData}
+      />,
     );
 
     const closeButton = screen.getByTestId('close-modal-button');
@@ -55,7 +81,12 @@ describe('PortraitVideoModal', () => {
 
   it('should close the modal when the escape key is pressed', () => {
     render(
-      <Component selectedVideoIndex={0} blocks={blocks} onClose={mockClose} />,
+      <Component
+        selectedVideoIndex={0}
+        blocks={blocks}
+        onClose={mockClose}
+        eventTrackingData={eventTrackingData}
+      />,
     );
 
     const dialog = screen.getByRole('dialog');
@@ -66,7 +97,12 @@ describe('PortraitVideoModal', () => {
 
   it('should not close the modal when clicking outside the modal with a mouse', () => {
     render(
-      <Component selectedVideoIndex={0} blocks={blocks} onClose={mockClose} />,
+      <Component
+        selectedVideoIndex={0}
+        blocks={blocks}
+        onClose={mockClose}
+        eventTrackingData={eventTrackingData}
+      />,
     );
 
     const dialog = screen.getByRole('dialog');
@@ -77,7 +113,12 @@ describe('PortraitVideoModal', () => {
 
   it('should not close the modal when clicking outside the modal with touch', () => {
     render(
-      <Component selectedVideoIndex={0} blocks={blocks} onClose={mockClose} />,
+      <Component
+        selectedVideoIndex={0}
+        blocks={blocks}
+        onClose={mockClose}
+        eventTrackingData={eventTrackingData}
+      />,
     );
 
     const dialog = screen.getByRole('dialog');
@@ -97,7 +138,12 @@ describe('PortraitVideoModal', () => {
     });
 
     const { unmount } = render(
-      <Component selectedVideoIndex={0} blocks={blocks} onClose={mockClose} />,
+      <Component
+        selectedVideoIndex={0}
+        blocks={blocks}
+        onClose={mockClose}
+        eventTrackingData={eventTrackingData}
+      />,
     );
 
     const dialog = screen.getByRole('dialog');
@@ -127,6 +173,7 @@ describe('PortraitVideoModal', () => {
           selectedVideoIndex={0}
           blocks={blocks}
           onClose={mockClose}
+          eventTrackingData={eventTrackingData}
         />,
       );
       const hiddenCloseButton = screen.getByTestId(
@@ -145,6 +192,7 @@ describe('PortraitVideoModal', () => {
           selectedVideoIndex={0}
           blocks={blocks}
           onClose={mockClose}
+          eventTrackingData={eventTrackingData}
         />,
       );
       const hiddenCloseButton = screen.getByTestId(
@@ -159,6 +207,7 @@ describe('PortraitVideoModal', () => {
           selectedVideoIndex={0}
           blocks={blocks}
           onClose={mockClose}
+          eventTrackingData={eventTrackingData}
         />,
       );
       const hiddenCloseButton = screen.getByTestId(
@@ -178,6 +227,7 @@ describe('PortraitVideoModal', () => {
           selectedVideoIndex={0}
           blocks={blocks}
           onClose={mockClose}
+          eventTrackingData={eventTrackingData}
         />,
       );
       const closeButton = screen.getByTestId('close-modal-button');
@@ -197,6 +247,7 @@ describe('PortraitVideoModal', () => {
           selectedVideoIndex={0}
           blocks={blocks}
           onClose={mockClose}
+          eventTrackingData={eventTrackingData}
         />,
       );
       const closeButton = screen.getByTestId('close-modal-button');
@@ -304,6 +355,273 @@ describe('PortraitVideoModal', () => {
     });
   });
 
+  describe('statsNavigationCallback', () => {
+    beforeEach(() => {
+      jest.clearAllMocks();
+    });
+
+    it('should call the statsNavigationCallback and call swipeTracker for the next video', () => {
+      const mockSMPEvent: SMPEvent = {
+        playlist: {
+          items: [{ versionID: blocks[0].model.video.version.id }],
+        },
+        direction: 'next',
+        method: 'wheel',
+      };
+
+      const mockSwipeEventTrackingData = {
+        ...eventTrackingData,
+        groupTracker: {
+          name: 'group name',
+          itemCount: 20,
+          resourceId: 'urn:bbc:tipo:list:fe4a1c8c-9a7c-4a50-845d-7da91aa65204',
+          position: 4,
+        },
+      };
+
+      statsNavigationCallback(
+        mockSMPEvent,
+        blocks,
+        mockSwipeEventTrackingData,
+        mockSwipeTracker,
+      );
+
+      const [_currentVideo, nextVideo] = blocks;
+
+      expect(mockSwipeTracker).toHaveBeenCalledWith({
+        ...eventTrackingData,
+        groupTracker: {
+          name: 'group name',
+          itemCount: 20,
+          resourceId: 'urn:bbc:tipo:list:fe4a1c8c-9a7c-4a50-845d-7da91aa65204',
+          position: 4,
+          type: 'portrait-video-modal',
+        },
+        itemTracker: {
+          type: 'portrait-video',
+          text: nextVideo.model.video.title,
+          mediaType: 'video',
+          position: 2,
+          duration: 165000,
+          resourceId: nextVideo.model.video.id,
+        },
+      });
+    });
+
+    it('should call the statsNavigationCallback and call swipeTracker for the previous video', () => {
+      const mockSMPEvent: SMPEvent = {
+        playlist: {
+          items: [{ versionID: blocks[1].model.video.version.id }],
+        },
+        direction: 'previous',
+        method: 'wheel',
+      };
+
+      const mockSwipeEventTrackingData = {
+        ...eventTrackingData,
+        groupTracker: {
+          name: 'group name',
+          itemCount: 20,
+          resourceId: 'urn:bbc:tipo:list:fe4a1c8c-9a7c-4a50-845d-7da91aa65204',
+          position: 4,
+        },
+      };
+
+      statsNavigationCallback(
+        mockSMPEvent,
+        blocks,
+        mockSwipeEventTrackingData,
+        mockSwipeTracker,
+      );
+
+      const [previousVideo] = blocks;
+
+      expect(mockSwipeTracker).toHaveBeenCalledWith({
+        ...eventTrackingData,
+        groupTracker: {
+          name: 'group name',
+          itemCount: 20,
+          resourceId: 'urn:bbc:tipo:list:fe4a1c8c-9a7c-4a50-845d-7da91aa65204',
+          position: 4,
+          type: 'portrait-video-modal',
+        },
+        itemTracker: {
+          type: 'portrait-video',
+          text: previousVideo.model.video.title,
+          mediaType: 'video',
+          position: 1,
+          duration: 150000,
+          resourceId: previousVideo.model.video.id,
+        },
+      });
+    });
+
+    it('should not call swipeTracker for the an unsupported navigation method', () => {
+      const mockSMPEvent: SMPEvent = {
+        playlist: {
+          items: [{ versionID: blocks[1].model.video.version.id }],
+        },
+        direction: 'previous',
+        // @ts-expect-error 'swipe' and 'wheel' are the supported methods
+        method: 'api',
+      };
+
+      const mockSwipeEventTrackingData = {
+        ...eventTrackingData,
+        groupTracker: {
+          name: 'group name',
+          itemCount: 20,
+          resourceId: 'urn:bbc:tipo:list:fe4a1c8c-9a7c-4a50-845d-7da91aa65204',
+          position: 4,
+        },
+      };
+
+      statsNavigationCallback(
+        mockSMPEvent,
+        blocks,
+        mockSwipeEventTrackingData,
+        mockSwipeTracker,
+      );
+
+      expect(mockSwipeTracker).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('playbackEndedCallback', () => {
+    beforeEach(() => {
+      jest.clearAllMocks();
+
+      Object.defineProperty(window, 'embeddedMedia', {
+        writable: true,
+        value: {
+          api: {
+            players: () => ({
+              bbcMediaPlayer0: {
+                ...mockPlayer,
+                settings: jest.fn(() => ({
+                  autoplay: true,
+                })),
+                playlist: jest.fn(() => ({
+                  items: [{ versionID: blocks[0].model.video.version.id }],
+                })),
+              },
+            }),
+          },
+        },
+      });
+    });
+
+    it('should call the playbackEndedCallback and call swipeTracker for the next video', () => {
+      const mockSMPEvent: SMPEvent = {
+        ended: true,
+      };
+
+      const mockSwipeEventTrackingData = {
+        ...eventTrackingData,
+        groupTracker: {
+          name: 'group name',
+          itemCount: 20,
+          resourceId: 'urn:bbc:tipo:list:fe4a1c8c-9a7c-4a50-845d-7da91aa65204',
+          position: 4,
+        },
+      };
+
+      playbackEndedCallback(
+        mockSMPEvent,
+        blocks,
+        mockSwipeEventTrackingData,
+        mockSwipeTracker,
+      );
+
+      const [_currentVideo, nextVideo] = blocks;
+
+      expect(mockSwipeTracker).toHaveBeenCalledWith({
+        ...eventTrackingData,
+        groupTracker: {
+          name: 'group name',
+          itemCount: 20,
+          resourceId: 'urn:bbc:tipo:list:fe4a1c8c-9a7c-4a50-845d-7da91aa65204',
+          position: 4,
+          type: 'portrait-video-modal',
+        },
+        itemTracker: {
+          type: 'portrait-video',
+          text: nextVideo.model.video.title,
+          mediaType: 'video',
+          position: 2,
+          duration: 165000,
+          resourceId: nextVideo.model.video.id,
+        },
+      });
+    });
+
+    it('should not call playbackEndedCallback when autoplay is disabled', () => {
+      Object.defineProperty(window, 'embeddedMedia', {
+        writable: true,
+        value: {
+          api: {
+            players: () => ({
+              bbcMediaPlayer0: {
+                ...mockPlayer,
+                settings: jest.fn(() => ({
+                  autoplay: false,
+                })),
+              },
+            }),
+          },
+        },
+      });
+
+      const mockSMPEvent: SMPEvent = {
+        ended: true,
+      };
+
+      const mockSwipeEventTrackingData = {
+        ...eventTrackingData,
+        groupTracker: {
+          name: 'group name',
+          itemCount: 20,
+          resourceId: 'urn:bbc:tipo:list:fe4a1c8c-9a7c-4a50-845d-7da91aa65204',
+          position: 4,
+        },
+      };
+
+      playbackEndedCallback(
+        mockSMPEvent,
+        blocks,
+        mockSwipeEventTrackingData,
+        mockSwipeTracker,
+      );
+
+      expect(mockSwipeTracker).not.toHaveBeenCalled();
+    });
+
+    it('should not call playbackEndedCallback when the video has not ended', () => {
+      const mockSMPEvent: SMPEvent = {
+        ended: false,
+      };
+
+      const mockSwipeEventTrackingData = {
+        ...eventTrackingData,
+        groupTracker: {
+          name: 'group name',
+          itemCount: 20,
+          resourceId: 'urn:bbc:tipo:list:fe4a1c8c-9a7c-4a50-845d-7da91aa65204',
+          position: 4,
+        },
+      };
+
+      playbackEndedCallback(
+        mockSMPEvent,
+        blocks,
+        mockSwipeEventTrackingData,
+        mockSwipeTracker,
+      );
+
+      expect(mockSwipeTracker).not.toHaveBeenCalled();
+    });
+  });
+
   describe('Navigation arrow buttons', () => {
     beforeEach(() => {
       jest.clearAllMocks();
@@ -324,6 +642,7 @@ describe('PortraitVideoModal', () => {
           selectedVideoIndex={0}
           blocks={blocks}
           onClose={mockClose}
+          eventTrackingData={eventTrackingData}
         />,
       );
 
@@ -344,6 +663,7 @@ describe('PortraitVideoModal', () => {
           selectedVideoIndex={blocks.length - 1}
           blocks={blocks}
           onClose={mockClose}
+          eventTrackingData={eventTrackingData}
         />,
       );
 
@@ -368,6 +688,7 @@ describe('PortraitVideoModal', () => {
           selectedVideoIndex={middleIndex}
           blocks={blocks}
           onClose={mockClose}
+          eventTrackingData={eventTrackingData}
         />,
       );
 
@@ -389,6 +710,7 @@ describe('PortraitVideoModal', () => {
           selectedVideoIndex={1}
           blocks={blocks}
           onClose={mockClose}
+          eventTrackingData={eventTrackingData}
         />,
       );
 
@@ -405,6 +727,7 @@ describe('PortraitVideoModal', () => {
           selectedVideoIndex={0}
           blocks={blocks}
           onClose={mockClose}
+          eventTrackingData={eventTrackingData}
         />,
       );
 

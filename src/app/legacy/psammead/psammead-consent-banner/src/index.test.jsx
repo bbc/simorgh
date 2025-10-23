@@ -33,7 +33,9 @@ describe('ConsentBanner', () => {
   });
 
   it('should correctly render for rtl service', () => {
-    const { container } = render(<ConsentBanner {...rtlProps} />);
+    const { container } = render(<ConsentBanner {...rtlProps} />, {
+      service: rtlProps.service,
+    });
     expect(container).toMatchSnapshot();
   });
 

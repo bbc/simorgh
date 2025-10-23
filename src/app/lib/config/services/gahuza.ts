@@ -70,6 +70,7 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Raba vyose',
       home: `Urupapuro rw'itangiriro`,
+      continueReading: 'Komeza usome',
       currentPage: 'Uru rupapuro',
       skipLinkText: 'Simbira ku birimwo',
       relatedContent: 'Ibindi bisa n’ibi',
@@ -319,7 +320,7 @@ export const service: DefaultServiceConfig = {
         text: 'Igituma ushobora kwizera BBC News',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: "Soma ibijanye n'aho duhagaze ku mihora ijana ahandi",
       },
       links: [

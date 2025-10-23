@@ -382,6 +382,7 @@ export const japanese = japaneseStyles;
 export const korean = koreanStyles;
 export const kyrgyz = helmetFontStyles;
 export const learningenglish = latinReithFontStyles;
+export const magyarul = latinReithFontStyles;
 export const marathi = marathiStyles;
 export const mundo = latinReithFontStyles;
 export const naidheachdan = latinReithFontStyles;

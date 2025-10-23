@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`should render SansBold correctly for afaanoromoo 1`] = `
 "
@@ -153,6 +153,14 @@ exports[`should render SansBold correctly for kyrgyz 1`] = `
 `;
 
 exports[`should render SansBold correctly for learningenglish 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for magyarul 1`] = `
 "
    font-family: ReithSans, Helvetica, Arial, sans-serif;
    font-weight: 700;
@@ -584,6 +592,14 @@ exports[`should render SansBoldItalic correctly for learningenglish 1`] = `
   "
 `;
 
+exports[`should render SansBoldItalic correctly for magyarul 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: italic;
+  "
+`;
+
 exports[`should render SansBoldItalic correctly for marathi 1`] = `
 "
     font-family: "Noto Sans Devanagari", Hind, "Mukta Vaani", Gautami, "Kohinoor Devanagari", sans-serif;
@@ -1001,6 +1017,14 @@ exports[`should render SansLight correctly for kyrgyz 1`] = `
 `;
 
 exports[`should render SansLight correctly for learningenglish 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for magyarul 1`] = `
 "
    font-family: ReithSans, Helvetica, Arial, sans-serif;
    font-weight: 300;
@@ -1432,6 +1456,14 @@ exports[`should render SansRegular correctly for learningenglish 1`] = `
   "
 `;
 
+exports[`should render SansRegular correctly for magyarul 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
 exports[`should render SansRegular correctly for marathi 1`] = `
 "
     font-family: "Noto Sans Devanagari", Hind, "Mukta Vaani", Gautami, "Kohinoor Devanagari", sans-serif;
@@ -1849,6 +1881,14 @@ exports[`should render SansRegularItalic correctly for kyrgyz 1`] = `
 `;
 
 exports[`should render SansRegularItalic correctly for learningenglish 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for magyarul 1`] = `
 "
    font-family: ReithSans, Helvetica, Arial, sans-serif;
    font-weight: 400;
@@ -2280,6 +2320,14 @@ exports[`should render SerifBold correctly for learningenglish 1`] = `
   "
 `;
 
+exports[`should render SerifBold correctly for magyarul 1`] = `
+"
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
 exports[`should render SerifBold correctly for marathi 1`] = `
 "
     font-family: "Noto Sans Devanagari", Hind, "Mukta Vaani", Gautami, "Kohinoor Devanagari", sans-serif;
@@ -2697,6 +2745,14 @@ exports[`should render SerifLight correctly for kyrgyz 1`] = `
 `;
 
 exports[`should render SerifLight correctly for learningenglish 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for magyarul 1`] = `
 "
    font-family: ReithSerif, Helvetica, Arial, sans-serif;
    font-weight: 300;
@@ -3128,6 +3184,14 @@ exports[`should render SerifMedium correctly for learningenglish 1`] = `
   "
 `;
 
+exports[`should render SerifMedium correctly for magyarul 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: normal;
+  "
+`;
+
 exports[`should render SerifMedium correctly for marathi 1`] = `
 "
     font-family: "Noto Sans Devanagari", Hind, "Mukta Vaani", Gautami, "Kohinoor Devanagari", sans-serif;
@@ -3552,6 +3616,14 @@ exports[`should render SerifMediumItalic correctly for learningenglish 1`] = `
   "
 `;
 
+exports[`should render SerifMediumItalic correctly for magyarul 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: italic;
+  "
+`;
+
 exports[`should render SerifMediumItalic correctly for marathi 1`] = `
 "
     font-family: "Noto Sans Devanagari", Hind, "Mukta Vaani", Gautami, "Kohinoor Devanagari", sans-serif;
@@ -3969,6 +4041,14 @@ exports[`should render SerifRegular correctly for kyrgyz 1`] = `
 `;
 
 exports[`should render SerifRegular correctly for learningenglish 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for magyarul 1`] = `
 "
    font-family: ReithSerif, Helvetica, Arial, sans-serif;
    font-weight: 400;

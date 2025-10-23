@@ -84,6 +84,8 @@ const expectedOutput = {
   service: 'service',
   pathname: '/current-path',
   serverSideExperiments: input.serverSideExperiments,
+  nonce: null,
+  cspHeader: null,
 };
 
 describe('RequestContext', () => {

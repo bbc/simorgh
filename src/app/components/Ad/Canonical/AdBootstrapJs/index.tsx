@@ -1,7 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-const AdBootstrapJs = ({ adcampaign }: { adcampaign?: string }) => {
+const AdBootstrapJs = ({
+  adcampaign,
+  nonce,
+}: {
+  adcampaign?: string;
+  nonce?: string | null;
+}) => {
   let innerHTML;
 
   if (adcampaign) {
@@ -30,6 +36,7 @@ const AdBootstrapJs = ({ adcampaign }: { adcampaign?: string }) => {
         {
           type: 'text/javascript',
           innerHTML,
+          nonce,
         },
       ]}
     />

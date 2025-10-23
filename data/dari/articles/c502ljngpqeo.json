@@ -1,0 +1,1900 @@
+{
+  "data": {
+    "article": {
+      "metadata": {
+        "atiAnalytics": {
+          "categoryName": null,
+          "contentId": "urn:bbc:optimo:asset:c502ljngpqeo",
+          "contentType": "article",
+          "language": "fa-af",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "nationsProducer": null,
+          "pageIdentifier": "dari.articles.c502ljngpqeo.page",
+          "pageTitle": "آزمایش مقاله چهار",
+          "timePublished": "2025-08-07T09:50:24.054Z",
+          "timeUpdated": "2025-08-07T09:50:24.054Z"
+        },
+        "id": "urn:bbc:ares::article:c502ljngpqeo",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:c502ljngpqeo",
+          "canonicalUrl": "https://www.bbc.com/dari/articles/c502ljngpqeo"
+        },
+        "type": "article",
+        "createdBy": "Dari",
+        "language": "fa-af",
+        "firstPublished": 1754560224054,
+        "lastPublished": 1754560224054,
+        "isOppm": false,
+        "options": { "includeComments": false },
+        "analyticsLabels": {
+          "contentId": "urn:bbc:optimo:asset:c502ljngpqeo",
+          "producer": "Dari",
+          "page": "dari.articles.c502ljngpqeo.page",
+          "irisKeyword": null
+        },
+        "passport": {
+          "language": "fa-af",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Dari",
+          "taggings": [
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+              "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+              "value": "2025-08-07T09:50:24.054Z"
+            }
+          ],
+          "predicates": {
+            "assetType": [
+              {
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                "type": "assetType"
+              }
+            ],
+            "dateFirstReleased": [
+              {
+                "value": "2025-08-07T09:50:24.054Z",
+                "type": "dateFirstReleased"
+              }
+            ]
+          }
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "image",
+          "altText",
+          "rawImage"
+        ],
+        "includeComments": false,
+        "consumableAsSFV": false,
+        "allowAdvertising": true,
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false,
+        "breakingNews": { "isBreaking": false },
+        "useSensitiveOnwardJourneys": false,
+        "stats": { "readTime": 1, "wordCount": 138 },
+        "isTransliterated": false,
+        "isKeyPointsFormatAsset": false
+      },
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "ee3f701f",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "495b7825",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "619fe084",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "آزمایش مقاله چها",
+                            "blocks": [
+                              {
+                                "id": "3096e94f",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "آزمایش مقاله چها",
+                                  "attributes": []
+                                },
+                                "position": [1, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [1, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [1, 1]
+                  }
+                ]
+              },
+              "position": [1]
+            },
+            {
+              "id": "fd47daf0",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "310484d8",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "b1b2f58c",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "2407c7e7",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "کاپیتان صنعت",
+                                  "blocks": [
+                                    {
+                                      "id": "c952763d",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "کاپیتان صنعت",
+                                        "attributes": []
+                                      },
+                                      "position": [2, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [2, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [2, 1]
+                  },
+                  {
+                    "id": "055bb168",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 1024,
+                      "height": 576,
+                      "locator": "a7e3/test/6bb2c830-7e69-11f0-a6d0-5d585b139c80.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "BBC",
+                      "suitableForSyndication": true
+                    },
+                    "position": [2, 2]
+                  }
+                ]
+              },
+              "position": [2]
+            },
+            {
+              "id": "8eb8b270",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1754560224054,
+                "lastPublished": 1754560224054
+              },
+              "position": [3]
+            },
+            {
+              "id": "63bd2ff9",
+              "type": "text",
+              "model": {
+                "suitableForAbridgement": false,
+                "blocks": [
+                  {
+                    "id": "044e97d0",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.",
+                      "blocks": [
+                        {
+                          "id": "927e8fcd",
+                          "type": "fragment",
+                          "model": {
+                            "text": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.",
+                            "attributes": []
+                          },
+                          "position": [4, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [4, 1]
+                  }
+                ]
+              },
+              "position": [4]
+            },
+            { "id": "9c8457ea", "type": "mpu", "model": {}, "position": [5] },
+            {
+              "id": "ac662d7b",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations",
+                "data": [
+                  {
+                    "id": "urn:bbc:optimo:cz5qlq3vj71o",
+                    "title": "Test Dari article",
+                    "href": "https://www.bbc.com/dari/articles/cz5qlq3vj71o"
+                  },
+                  {
+                    "id": "urn:bbc:optimo:cx3ge1q6193o",
+                    "title": "Testing Dari",
+                    "href": "https://www.bbc.com/dari/articles/cx3ge1q6193o"
+                  },
+                  {
+                    "id": "urn:bbc:optimo:cr8w87z86l6o",
+                    "title": "BBC Dari Test",
+                    "href": "https://www.bbc.com/dari/articles/cr8w87z86l6o"
+                  },
+                  {
+                    "id": "urn:bbc:optimo:cm35dk7k66do",
+                    "title": "داستان های تاین ساید که ممکن این هفته از دست داده باشید",
+                    "href": "https://www.bbc.com/dari/articles/cm35dk7k66do",
+                    "image": {
+                      "width": 3393,
+                      "height": 1908,
+                      "altText": "گلوریا ستاپیلتون (چپ) موهای کوتاه سفید دارد و لبخند میزند. او یک گردنبند مروارید و یک ژاکت سفید میپوشد. او یک نسخه از مجله صحت زنان را در دست دارد که روی آن یک تصویر لوسی برنز نوشته شده است. جولی تاف (راست) موهای کوتاه زنجبیل دارد و یک سگ کوچک سفید و یک روزنامه را در دست دارد. یک برش مقوایی لوسی در عقب آنها است.",
+                      "copyrightHolder": "BBC",
+                      "originCode": "cpsdevpb",
+                      "locator": "e498/test/e97f7bd0-6bc9-11f0-82ec-0b95afadde24.jpg"
+                    }
+                  }
+                ]
+              },
+              "position": [6]
+            }
+          ]
+        }
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "آزمایش مقاله چهار",
+          "promoHeadline": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "آزمایش مقاله چها",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "آزمایش مقاله چها",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "کاپیتان صنعت",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "کاپیتان صنعت",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 1024,
+                  "height": 576,
+                  "locator": "a7e3/test/6bb2c830-7e69-11f0-a6d0-5d585b139c80.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        },
+        "summary": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": { "text": "", "attributes": [] }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "serviceIdentifier": "Dari",
+        "breakingNews": { "isBreaking": false },
+        "consumableAsSFV": false
+      }
+    },
+    "secondaryData": {
+      "topStories": [
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:c3kr439dnzgo",
+            "canonicalUrl": "https://www.bbc.com/persian/articles/c3kr439dnzgo"
+          },
+          "timestamp": 1689170388943,
+          "suitableForSyndication": true,
+          "language": "fa",
+          "headlines": {
+            "seoHeadline": "اعدام ها در ایران؛ واکنش اتحادیه اروپا به اعدام و سرکوب معترضان در ایران",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "واکنش اتحادیه اروپا به اعدام و سرکوب معترضان در ایران",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "واکنش اتحادیه اروپا به اعدام و سرکوب معترضان در ایران",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "زط",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": { "text": "زط", "attributes": [] }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 604,
+                    "height": 340,
+                    "locator": "5eef/test/334864d0-f8a8-11ed-9bd3-b1ae82702c11.jpg",
+                    "originCode": "cpsdevpb",
+                    "copyrightHolder": "AFP",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "اتحادیه اروپا روز دوشنبه یکم خرداد در تازه‌ترین اقدام در ارتباط با نقض «جدی» حقوق بشر در ایران از جمله سرکوب «خشونت‌بار» اعتراضات دانشجویی در پاییز ۱۴۰۱، هشتمین بستۀ تحریمی خود را علیه پنج مقام و دو نهاد جمهوری اسلامی به تصویب رساند.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "اتحادیه اروپا روز دوشنبه یکم خرداد در تازه‌ترین اقدام در ارتباط با نقض «جدی» حقوق بشر در ایران از جمله سرکوب «خشونت‌بار» اعتراضات دانشجویی در پاییز ۱۴۰۱، هشتمین بستۀ تحریمی خود را علیه پنج مقام و دو نهاد جمهوری اسلامی به تصویب رساند.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "fa",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
+            "locator": "urn:bbc:optimo:asset:c3kr439dnzgo",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/abae81c4-3685-4c61-880f-cf1830a9b2d0#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/6725fbc6-794b-4751-8e26-37e4472843e0#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "about": [
+                {
+                  "value": "http://www.bbc.co.uk/things/6725fbc6-794b-4751-8e26-37e4472843e0#id",
+                  "thingLabel": "قوه قضائیه ایران",
+                  "thingUri": "http://www.bbc.co.uk/things/6725fbc6-794b-4751-8e26-37e4472843e0#id",
+                  "thingId": "6725fbc6-794b-4751-8e26-37e4472843e0",
+                  "thingType": [
+                    "core:Thing",
+                    "tagging:TagConcept",
+                    "core:Theme"
+                  ],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Iran judiciary",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/abae81c4-3685-4c61-880f-cf1830a9b2d0#id",
+                  "thingLabel": "مسائل امنیتی ایران",
+                  "thingUri": "http://www.bbc.co.uk/things/abae81c4-3685-4c61-880f-cf1830a9b2d0#id",
+                  "thingId": "abae81c4-3685-4c61-880f-cf1830a9b2d0",
+                  "thingType": [
+                    "core:Theme",
+                    "tagging:TagConcept",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Iran security",
+                  "type": "about"
+                }
+              ],
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ]
+            }
+          },
+          "id": "urn:bbc:ares::article:c3kr439dnzgo",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:cm3lvn8pmdgo",
+            "canonicalUrl": "https://www.bbc.com/dari/articles/cm3lvn8pmdgo"
+          },
+          "timestamp": 1755598232171,
+          "suitableForSyndication": true,
+          "language": "fa-af",
+          "headlines": {
+            "seoHeadline": "«وکیل مجردها»؛ چگونه نماینده پیشین افغانستان ازدواج هزاران زوج را ممکن ساخت؟",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "«وکیل مجردها»؛ چگونه نماینده پیشین افغانستان ازدواج هزاران زوج را ممکن ساخت؟",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "«وکیل مجردها»؛ چگونه نماینده پیشین افغانستان ازدواج هزاران زوج را ممکن ساخت؟",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "caption",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": { "text": "", "attributes": [] }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "test",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "test",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 1920,
+                    "height": 1080,
+                    "locator": "20bb/test/adb826c0-7ce4-11f0-8028-69db1d4c9c81.jpg",
+                    "originCode": "cpsdevpb",
+                    "copyrightHolder": "BBC",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "در افغانستان، دوران نامزدی معمولاً سال‌ها طول می‌کشد، گاهی بیش از یک دهه، تا زمانی که داماد بتواند هزینه‌های عروسی را پس‌انداز کند.\n\n",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "در افغانستان، دوران نامزدی معمولاً سال‌ها طول می‌کشد، گاهی بیش از یک دهه، تا زمانی که داماد بتواند هزینه‌های عروسی را پس‌انداز کند.\n\n",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "fa-af",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Dari",
+            "locator": "urn:bbc:optimo:asset:cm3lvn8pmdgo",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+                "value": "2025-08-19T10:10:32.171Z"
+              }
+            ],
+            "schemaVersion": "1.5.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ],
+              "dateFirstReleased": [
+                {
+                  "value": "2025-08-19T10:10:32.171Z",
+                  "type": "dateFirstReleased"
+                }
+              ]
+            }
+          },
+          "serviceIdentifier": "Dari",
+          "breakingNews": { "isBreaking": false },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:cm3lvn8pmdgo",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:czm0vwkr0p6o",
+            "canonicalUrl": "https://www.bbc.com/persian/articles/czm0vwkr0p6o"
+          },
+          "timestamp": 1689170332043,
+          "suitableForSyndication": true,
+          "language": "fa",
+          "headlines": {
+            "seoHeadline": "مولوی عبدالحمید به رهبران جمهوری اسلامی: نمی‌توانید فریاد زنان را خاموش کنید  ",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "مولوی عبدالحمید به رهبران جمهوری اسلامی: نمی‌توانید فریاد زنان را خاموش کنید  ",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "مولوی عبدالحمید به رهبران جمهوری اسلامی: نمی‌توانید فریاد زنان را خاموش کنید  ",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "مولوی عبدالحمید ",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "مولوی عبدالحمید ",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 1284,
+                    "height": 742,
+                    "locator": "6cbc/test/c6e521d0-0c56-11ee-a81d-07e4fe474984.jpg",
+                    "originCode": "cpsdevpb",
+                    "copyrightHolder": "BBC",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": { "text": "", "attributes": [] }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "fa",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
+            "locator": "urn:bbc:optimo:asset:czm0vwkr0p6o",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ]
+            }
+          },
+          "id": "urn:bbc:ares::article:czm0vwkr0p6o",
+          "type": "optimo"
+        }
+      ],
+      "features": [
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:c3kr439dnzgo",
+            "canonicalUrl": "https://www.bbc.com/persian/articles/c3kr439dnzgo"
+          },
+          "timestamp": 1689170388943,
+          "suitableForSyndication": true,
+          "language": "fa",
+          "headlines": {
+            "seoHeadline": "اعدام ها در ایران؛ واکنش اتحادیه اروپا به اعدام و سرکوب معترضان در ایران",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "واکنش اتحادیه اروپا به اعدام و سرکوب معترضان در ایران",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "واکنش اتحادیه اروپا به اعدام و سرکوب معترضان در ایران",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "زط",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": { "text": "زط", "attributes": [] }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 604,
+                    "height": 340,
+                    "locator": "5eef/test/334864d0-f8a8-11ed-9bd3-b1ae82702c11.jpg",
+                    "originCode": "cpsdevpb",
+                    "copyrightHolder": "AFP",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "اتحادیه اروپا روز دوشنبه یکم خرداد در تازه‌ترین اقدام در ارتباط با نقض «جدی» حقوق بشر در ایران از جمله سرکوب «خشونت‌بار» اعتراضات دانشجویی در پاییز ۱۴۰۱، هشتمین بستۀ تحریمی خود را علیه پنج مقام و دو نهاد جمهوری اسلامی به تصویب رساند.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "اتحادیه اروپا روز دوشنبه یکم خرداد در تازه‌ترین اقدام در ارتباط با نقض «جدی» حقوق بشر در ایران از جمله سرکوب «خشونت‌بار» اعتراضات دانشجویی در پاییز ۱۴۰۱، هشتمین بستۀ تحریمی خود را علیه پنج مقام و دو نهاد جمهوری اسلامی به تصویب رساند.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "fa",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
+            "locator": "urn:bbc:optimo:asset:c3kr439dnzgo",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/abae81c4-3685-4c61-880f-cf1830a9b2d0#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/6725fbc6-794b-4751-8e26-37e4472843e0#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "about": [
+                {
+                  "value": "http://www.bbc.co.uk/things/6725fbc6-794b-4751-8e26-37e4472843e0#id",
+                  "thingLabel": "قوه قضائیه ایران",
+                  "thingUri": "http://www.bbc.co.uk/things/6725fbc6-794b-4751-8e26-37e4472843e0#id",
+                  "thingId": "6725fbc6-794b-4751-8e26-37e4472843e0",
+                  "thingType": [
+                    "core:Thing",
+                    "tagging:TagConcept",
+                    "core:Theme"
+                  ],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Iran judiciary",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/abae81c4-3685-4c61-880f-cf1830a9b2d0#id",
+                  "thingLabel": "مسائل امنیتی ایران",
+                  "thingUri": "http://www.bbc.co.uk/things/abae81c4-3685-4c61-880f-cf1830a9b2d0#id",
+                  "thingId": "abae81c4-3685-4c61-880f-cf1830a9b2d0",
+                  "thingType": [
+                    "core:Theme",
+                    "tagging:TagConcept",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Iran security",
+                  "type": "about"
+                }
+              ],
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ]
+            }
+          },
+          "id": "urn:bbc:ares::article:c3kr439dnzgo",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:cm3lvn8pmdgo",
+            "canonicalUrl": "https://www.bbc.com/dari/articles/cm3lvn8pmdgo"
+          },
+          "timestamp": 1755598232171,
+          "suitableForSyndication": true,
+          "language": "fa-af",
+          "headlines": {
+            "seoHeadline": "«وکیل مجردها»؛ چگونه نماینده پیشین افغانستان ازدواج هزاران زوج را ممکن ساخت؟",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "«وکیل مجردها»؛ چگونه نماینده پیشین افغانستان ازدواج هزاران زوج را ممکن ساخت؟",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "«وکیل مجردها»؛ چگونه نماینده پیشین افغانستان ازدواج هزاران زوج را ممکن ساخت؟",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "caption",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": { "text": "", "attributes": [] }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "test",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "test",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 1920,
+                    "height": 1080,
+                    "locator": "20bb/test/adb826c0-7ce4-11f0-8028-69db1d4c9c81.jpg",
+                    "originCode": "cpsdevpb",
+                    "copyrightHolder": "BBC",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "در افغانستان، دوران نامزدی معمولاً سال‌ها طول می‌کشد، گاهی بیش از یک دهه، تا زمانی که داماد بتواند هزینه‌های عروسی را پس‌انداز کند.\n\n",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "در افغانستان، دوران نامزدی معمولاً سال‌ها طول می‌کشد، گاهی بیش از یک دهه، تا زمانی که داماد بتواند هزینه‌های عروسی را پس‌انداز کند.\n\n",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "fa-af",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Dari",
+            "locator": "urn:bbc:optimo:asset:cm3lvn8pmdgo",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+                "value": "2025-08-19T10:10:32.171Z"
+              }
+            ],
+            "schemaVersion": "1.5.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ],
+              "dateFirstReleased": [
+                {
+                  "value": "2025-08-19T10:10:32.171Z",
+                  "type": "dateFirstReleased"
+                }
+              ]
+            }
+          },
+          "serviceIdentifier": "Dari",
+          "breakingNews": { "isBreaking": false },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:cm3lvn8pmdgo",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:czm0vwkr0p6o",
+            "canonicalUrl": "https://www.bbc.com/persian/articles/czm0vwkr0p6o"
+          },
+          "timestamp": 1689170332043,
+          "suitableForSyndication": true,
+          "language": "fa",
+          "headlines": {
+            "seoHeadline": "مولوی عبدالحمید به رهبران جمهوری اسلامی: نمی‌توانید فریاد زنان را خاموش کنید  ",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "مولوی عبدالحمید به رهبران جمهوری اسلامی: نمی‌توانید فریاد زنان را خاموش کنید  ",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "مولوی عبدالحمید به رهبران جمهوری اسلامی: نمی‌توانید فریاد زنان را خاموش کنید  ",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "مولوی عبدالحمید ",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "مولوی عبدالحمید ",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 1284,
+                    "height": 742,
+                    "locator": "6cbc/test/c6e521d0-0c56-11ee-a81d-07e4fe474984.jpg",
+                    "originCode": "cpsdevpb",
+                    "copyrightHolder": "BBC",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": { "text": "", "attributes": [] }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "fa",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
+            "locator": "urn:bbc:optimo:asset:czm0vwkr0p6o",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ]
+            }
+          },
+          "id": "urn:bbc:ares::article:czm0vwkr0p6o",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:c5w94n80j0ro",
+            "canonicalUrl": "https://www.bbc.com/persian/articles/c5w94n80j0ro"
+          },
+          "timestamp": 1689170448248,
+          "suitableForSyndication": true,
+          "language": "fa",
+          "headlines": {
+            "seoHeadline": "احتمال مبادله حمید نوری",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "احتمال مبادله حمید نوری",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "احتمال مبادله حمید نوری",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "حمید نوری",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "حمید نوری",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 800,
+                    "height": 450,
+                    "locator": "d5ce/test/4501e810-fed7-11ed-8c89-9991f028d1f0.jpg",
+                    "originCode": "cpsdevpb",
+                    "copyrightHolder": "BBC",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": { "text": "", "attributes": [] }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "fa",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
+            "locator": "urn:bbc:optimo:asset:c5w94n80j0ro",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                "value": "http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/814465c5-404b-4c88-889f-45907ba1f402#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ],
+              "motivation": [],
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "formats": [
+                {
+                  "value": "http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id",
+                  "thingLabel": "Analysis",
+                  "thingUri": "http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id",
+                  "thingId": "170f311e-fd87-4255-85db-8b4aee12594d",
+                  "thingType": ["tagging:Format", "tagging:TagConcept"],
+                  "thingSameAs": [
+                    "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis"
+                  ],
+                  "thingEnglishLabel": "Analysis",
+                  "thingPreferredLabel": "Analysis",
+                  "thingLabelLanguage": "fa",
+                  "type": "formats"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingLabel": "News report",
+                  "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                  "thingType": ["tagging:TagConcept", "tagging:Format"],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Report",
+                  "thingPreferredLabel": "Report",
+                  "thingLabelLanguage": "fa",
+                  "type": "formats"
+                }
+              ],
+              "about": [
+                {
+                  "value": "http://www.bbc.co.uk/things/814465c5-404b-4c88-889f-45907ba1f402#id",
+                  "thingLabel": "سلامت روانی",
+                  "thingUri": "http://www.bbc.co.uk/things/814465c5-404b-4c88-889f-45907ba1f402#id",
+                  "thingId": "814465c5-404b-4c88-889f-45907ba1f402",
+                  "thingType": [
+                    "core:Thing",
+                    "tagging:TagConcept",
+                    "core:Theme"
+                  ],
+                  "thingSameAs": [
+                    "http://dbpedia.org/resource/Mental_health",
+                    "http://www.wikidata.org/entity/Q317309",
+                    "http://www.bbc.com/bitesize/tags/z7qg6v4#id"
+                  ],
+                  "thingEnglishLabel": "Mental health",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+                  "thingLabel": "بهداشت و درمان",
+                  "thingUri": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+                  "thingId": "c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+                  "thingType": [
+                    "core:Thing",
+                    "tagging:TagConcept",
+                    "core:Theme"
+                  ],
+                  "thingSameAs": [
+                    "http://dbpedia.org/resource/Health",
+                    "http://www.wikidata.org/entity/Q12147"
+                  ],
+                  "thingEnglishLabel": "Health",
+                  "type": "about"
+                }
+              ]
+            }
+          },
+          "id": "urn:bbc:ares::article:c5w94n80j0ro",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:c0n15xl50mdo",
+            "canonicalUrl": "https://www.bbc.com/persian/articles/c0n15xl50mdo"
+          },
+          "timestamp": 1689171072356,
+          "suitableForSyndication": true,
+          "language": "fa",
+          "headlines": {
+            "seoHeadline": "تحقیقات در مورد سندرم «کودک تکان خورده» در بریتانیا",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "تحقیقات در مورد سندرم «کودک تکان‌خورده» در بریتانیا",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "تحقیقات در مورد سندرم «کودک تکان‌خورده» در بریتانیا",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "سندرم کودک تکان خورده نوعی از آسیب مغزی جدی ناشی از تکان دادن شدید نوزاد است. ",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "سندرم کودک تکان خورده نوعی از آسیب مغزی جدی ناشی از تکان دادن شدید نوزاد است. ",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 5127,
+                    "height": 3412,
+                    "locator": "07f6/test/ffb033a0-c9b3-11ed-8319-9b394d8ed0dd.jpg",
+                    "originCode": "cpsdevpb",
+                    "copyrightHolder": "Getty Images",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": { "text": "", "attributes": [] }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "fa",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
+            "locator": "urn:bbc:optimo:asset:c0n15xl50mdo",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ]
+            }
+          },
+          "id": "urn:bbc:ares::article:c0n15xl50mdo",
+          "type": "optimo"
+        }
+      ],
+      "mostRead": {
+        "generated": "2025-08-22T09:44:02.434911048Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
+        "items": [
+          {
+            "id": "urn:bbc:optimo:cz5qlq3vj71o",
+            "rank": 1,
+            "title": "Test Dari article",
+            "href": "https://www.bbc.com/dari/articles/cz5qlq3vj71o",
+            "timestamp": "2025-07-21T10:08:42.726Z",
+            "images": {}
+          },
+          {
+            "id": "urn:bbc:optimo:cx3ge1q6193o",
+            "rank": 2,
+            "title": "Testing Dari",
+            "href": "https://www.bbc.com/dari/articles/cx3ge1q6193o",
+            "timestamp": "2025-07-23T16:11:14.627Z",
+            "images": {}
+          },
+          {
+            "id": "urn:bbc:optimo:cr8w87z86l6o",
+            "rank": 3,
+            "title": "BBC Dari Test",
+            "href": "https://www.bbc.com/dari/articles/cr8w87z86l6o",
+            "timestamp": "2025-07-24T09:44:17.351Z",
+            "images": {}
+          },
+          {
+            "id": "urn:bbc:optimo:cm35dk7k66do",
+            "rank": 4,
+            "title": "داستان های تاین ساید که ممکن این هفته از دست داده باشید",
+            "href": "https://www.bbc.com/dari/articles/cm35dk7k66do",
+            "timestamp": "2025-07-28T15:50:23.698Z",
+            "images": {
+              "defaultPromoImage": {
+                "blocks": [
+                  {
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "نان گلوریا استاپیلتون از لوسی برونز و عمه جولی تاف میگویند که آنها با تماشای فینال روز یکشنبه عصبی خواهند شد",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "نان گلوریا استاپیلتون از لوسی برونز و عمه جولی تاف میگویند که آنها با تماشای فینال روز یکشنبه عصبی خواهند شد",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "گلوریا ستاپیلتون (چپ) موهای کوتاه سفید دارد و لبخند میزند. او یک گردنبند مروارید و یک ژاکت سفید میپوشد. او یک نسخه از مجله صحت زنان را در دست دارد که روی آن یک تصویر لوسی برنز نوشته شده است. جولی تاف (راست) موهای کوتاه زنجبیل دارد و یک سگ کوچک سفید و یک روزنامه را در دست دارد. یک برش مقوایی لوسی در عقب آنها است.",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "گلوریا ستاپیلتون (چپ) موهای کوتاه سفید دارد و لبخند میزند. او یک گردنبند مروارید و یک ژاکت سفید میپوشد. او یک نسخه از مجله صحت زنان را در دست دارد که روی آن یک تصویر لوسی برنز نوشته شده است. جولی تاف (راست) موهای کوتاه زنجبیل دارد و یک سگ کوچک سفید و یک روزنامه را در دست دارد. یک برش مقوایی لوسی در عقب آنها است.",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "rawImage",
+                    "model": {
+                      "width": 3393,
+                      "height": 1908,
+                      "locator": "e498/test/e97f7bd0-6bc9-11f0-82ec-0b95afadde24.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "BBC",
+                      "suitableForSyndication": true
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "urn:bbc:optimo:c502ljngpqeo",
+            "rank": 5,
+            "title": "آزمایش مقاله چها",
+            "href": "https://www.bbc.com/dari/articles/c502ljngpqeo",
+            "timestamp": "2025-08-07T09:50:24.054Z",
+            "images": {
+              "defaultPromoImage": {
+                "blocks": [
+                  {
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "کاپیتان صنعت",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "کاپیتان صنعت",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "rawImage",
+                    "model": {
+                      "width": 1024,
+                      "height": 576,
+                      "locator": "a7e3/test/6bb2c830-7e69-11f0-a6d0-5d585b139c80.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "BBC",
+                      "suitableForSyndication": true
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "latestMedia": null
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}
