@@ -58,7 +58,7 @@ jobs:
         run: yarn lighthouse
 
       - name: Upload Lighthouse Reports
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: lighthouse-reports
           path: lighthouse-reports/
