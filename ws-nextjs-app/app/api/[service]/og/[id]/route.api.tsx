@@ -57,7 +57,7 @@ const getPageType = (id: string) => {
 const NON_LATIN_SERVICES: Services[] = ['arabic', 'hindi'] as const;
 
 type SVGBadgesMap = {
-  [S in (typeof NON_LATIN_SERVICES)[number]]: Record<
+  [_S in (typeof NON_LATIN_SERVICES)[number]]: Record<
     'Live' | 'MostRead' | 'TopStories',
     () => ReactNode
   >;
