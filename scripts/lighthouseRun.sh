@@ -3,10 +3,9 @@ set -e
 
 mkdir -p lighthouse-reports
 
-lighthouse http://localhost:7081/pidgin/articles/ce9wk6glg4lo \
-  --chrome-flags="--no-sandbox --headless --disable-gpu" \
-  --output json --output html \
-  --output-path lighthouse-reports/pidgin-article.report \
+  lighthouse http://localhost:7081/pidgin/articles/ce9wk6glg4lo \
+  --chrome-flags="--no-sandbox --headless --disable-gpu" --output json --output html \
+  --output-path lighthouse-reports/pidgin-article \
   --config-path scripts/lighthouseConfig.js && \
   node scripts/lighthouseBudget.js run lighthouse-reports/pidgin-article.report.json
 
