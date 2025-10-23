@@ -1,6 +1,6 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
-import React, { use, useState } from 'react';
+import React, { use, useState, useEffect } from 'react';
 import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import useOptimizelyVariation, {
@@ -39,6 +39,12 @@ export interface HomePageProps {
       type: string;
     };
   };
+}
+
+interface BeforeInstallPromptEvent extends Event {
+  readonly platforms: string[];
+  prompt(): Promise<void>;
+  userChoice: Promise<{ outcome: 'accepted' | 'dismissed'; platform: string }>;
 }
 
 const HomePage = ({ pageData }: HomePageProps) => {
@@ -81,9 +87,40 @@ const HomePage = ({ pageData }: HomePageProps) => {
     setIsBannerVisible(false);
   };
 
-  const handleAddShortcut = () => {
-    console.log('Add to Home Screen clicked');
+  const [deferredPrompt, setDeferredPrompt] =
+    useState<BeforeInstallPromptEvent | null>(null);
+
+  useEffect(() => {
+    const handleBeforeInstallPrompt = (e: Event) => {
+      e.preventDefault();
+      console.log('beforeinstallprompt event captured');
+      setDeferredPrompt(e as BeforeInstallPromptEvent);
+    };
+
+    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+
+    return () => {
+      window.removeEventListener(
+        'beforeinstallprompt',
+        handleBeforeInstallPrompt,
+      );
+    };
+  }, []);
+
+  const handleAddShortcut = async () => {
+    if (!deferredPrompt) {
+      console.log('Install prompt not available yet');
+      return;
+    }
+
+    await deferredPrompt.prompt();
+    const { outcome } = await deferredPrompt.userChoice;
+    console.log(`User response: ${outcome}`);
+
+    setDeferredPrompt(null);
+    setIsBannerVisible(false);
   };
+
   const itemList = getItemList({ curations, name: brandName });
 
   return (
@@ -114,7 +151,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
             }}
             buttonOne={{
               text: 'Agregar con un toque',
-              onclick: handleAddShortcut,
+              onClick: handleAddShortcut,
             }}
             buttonTwo={{ text: 'No ahora', onClick: handleClose }}
           />
