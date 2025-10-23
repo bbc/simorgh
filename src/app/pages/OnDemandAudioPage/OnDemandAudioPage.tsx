@@ -105,106 +105,108 @@ const OnDemandAudioPage = ({
       }
     : {};
 
-  return (<>
-    <ATIAnalytics atiData={pageData?.metadata.atiAnalytics} />
-    <ChartbeatAnalytics
-      mediaPageType={isPodcast ? 'Podcasts' : 'Radio'}
-      title={headline}
-      contentType={
-        pageData?.metadata.atiAnalytics?.contentType as ContentType
-      }
-    />
-    <ComscoreAnalytics />
-    <MetadataContainer
-      openGraphType="website"
-      lang={language}
-      title={metadataTitle}
-      description={shortSynopsis}
-      {...metadataImageProps}
-      hasAmpPage={false}
-    />
-    <div css={styles.grid}>
-      <div css={styles.contentWrapper}>
-        <main role="main">
-          <div css={styles.flexWrapper}>
-            <div css={styles.text}>
-              <StyledRadioHeadingContainer
-                idAttr={idAttr}
-                brandTitle={brandTitle}
-                episodeTitle={episodeTitle}
-                releaseDateTimeStamp={releaseDateTimeStamp}
-              />
-              <OnDemandParagraphContainer testid="summary" text={summary} />
-              {episodeTitle && (
-                <FooterTimestamp
+  return (
+    <>
+      <ATIAnalytics atiData={pageData?.metadata.atiAnalytics} />
+      <ChartbeatAnalytics
+        mediaPageType={isPodcast ? 'Podcasts' : 'Radio'}
+        title={headline}
+        contentType={
+          pageData?.metadata.atiAnalytics?.contentType as ContentType
+        }
+      />
+      <ComscoreAnalytics />
+      <MetadataContainer
+        openGraphType="website"
+        lang={language}
+        title={metadataTitle}
+        description={shortSynopsis}
+        {...metadataImageProps}
+        hasAmpPage={false}
+      />
+      <div css={styles.grid}>
+        <div css={styles.contentWrapper}>
+          <main role="main">
+            <div css={styles.flexWrapper}>
+              <div css={styles.text}>
+                <StyledRadioHeadingContainer
+                  idAttr={idAttr}
+                  brandTitle={brandTitle}
+                  episodeTitle={episodeTitle}
                   releaseDateTimeStamp={releaseDateTimeStamp}
                 />
-              )}
+                <OnDemandParagraphContainer testid="summary" text={summary} />
+                {episodeTitle && (
+                  <FooterTimestamp
+                    releaseDateTimeStamp={releaseDateTimeStamp}
+                  />
+                )}
+              </div>
+              <EpisodeImage
+                imageUrl={imageUrl}
+                alt={imageAltText}
+                css={styles.image}
+                className="imageStyles"
+              />
             </div>
-            <EpisodeImage
-              imageUrl={imageUrl}
-              alt={imageAltText}
-              css={styles.image}
-              className="imageStyles"
+            {mediaIsAvailable ? (
+              <MediaLoader blocks={pageData?.mediaBlocks} />
+            ) : (
+              //  @ts-expect-error allow rendering of MediaError component when media is not available
+              <MediaError skin="audio" />
+            )}
+
+            <LinkedData
+              type="WebPage"
+              seoTitle={metadataTitle}
+              entities={
+                mediaIsAvailable
+                  ? [
+                      {
+                        '@type': 'AudioObject',
+                        name: promoBrandTitle,
+                        description: shortSynopsis,
+                        thumbnailUrl: thumbnailImageUrl,
+                        duration: durationISO8601,
+                        uploadDate: new Date(
+                          releaseDateTimeStamp,
+                        ).toISOString(),
+                      },
+                    ]
+                  : []
+              }
             />
-          </div>
-          {mediaIsAvailable ? (
-            <MediaLoader blocks={pageData?.mediaBlocks} />
-          ) : (
-            //  @ts-expect-error allow rendering of MediaError component when media is not available
-            (<MediaError skin="audio" />)
+          </main>
+
+          {isPodcast && (
+            <div css={styles.aside}>
+              <PodcastExternalLinks
+                links={externalLinks}
+                brandTitle={brandTitle}
+              />
+            </div>
           )}
-
-          <LinkedData
-            type="WebPage"
-            seoTitle={metadataTitle}
-            entities={
-              mediaIsAvailable
-                ? [
-                    {
-                      '@type': 'AudioObject',
-                      name: promoBrandTitle,
-                      description: shortSynopsis,
-                      thumbnailUrl: thumbnailImageUrl,
-                      duration: durationISO8601,
-                      uploadDate: new Date(
-                        releaseDateTimeStamp,
-                      ).toISOString(),
-                    },
-                  ]
-                : []
-            }
-          />
-        </main>
-
-        {isPodcast && (
-          <div css={styles.aside}>
-            <PodcastExternalLinks
-              links={externalLinks}
-              brandTitle={brandTitle}
-            />
-          </div>
-        )}
-        {hasRecentEpisodes && (
-          <div css={styles.aside}>
-            <RecentAudioEpisodes
-              masterBrand={masterBrand}
-              episodes={recentEpisodes}
-              brandId={brandId}
-              pageType={pageType}
-            />
-          </div>
-        )}
+          {hasRecentEpisodes && (
+            <div css={styles.aside}>
+              <RecentAudioEpisodes
+                masterBrand={masterBrand}
+                episodes={recentEpisodes}
+                brandId={brandId}
+                pageType={pageType}
+              />
+            </div>
+          )}
+        </div>
       </div>
-    </div>
-    {radioScheduleData && (
-      <RadioScheduleContainer
-        initialData={radioScheduleData}
-        toggleName="onDemandRadioSchedule"
-        eventTrackingData={{ componentName: 'radio-schedule' }}
-      />
-    )}
-  </>);
+      {radioScheduleData && (
+        <RadioScheduleContainer
+          initialData={radioScheduleData}
+          toggleName="onDemandRadioSchedule"
+          eventTrackingData={{ componentName: 'radio-schedule' }}
+        />
+      )}
+    </>
+  );
 };
 
 export default OnDemandAudioPage;

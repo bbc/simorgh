@@ -1,5 +1,9 @@
 /* eslint-disable no-template-curly-in-string */
-import { render, screen, within } from '../react-testing-library-with-providers';
+import {
+  render,
+  screen,
+  within,
+} from '../react-testing-library-with-providers';
 import Byline from '.';
 import ArticleTimestamp from '../../legacy/containers/ArticleTimestamp';
 import {

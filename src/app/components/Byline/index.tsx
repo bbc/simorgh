@@ -176,21 +176,26 @@ const Byline = ({
           );
         });
 
-  return (contributors?.[0] && (<section role="region" aria-labelledby="article-byline">
-    <VisuallyHiddenText as="strong" id="article-byline" aria-hidden>
-      {articleInformation}
-    </VisuallyHiddenText>
-    <ul css={BylineCss.bylineList}>
-      <li css={BylineCss.bylineContainer}>{contributors}</li>
-      {/* EXPERIMENT: Article Read Time */}
-      {children &&
-        Children.map(children, (child, index) => (
-          <li key={index} css={BylineCss.timestampLineBreak}>
-            {child}
-          </li>
-        ))}
-    </ul>
-  </section>));
+  return (
+    contributors?.[0] && (
+      <section role="region" aria-labelledby="article-byline">
+        <VisuallyHiddenText as="strong" id="article-byline" aria-hidden>
+          {articleInformation}
+        </VisuallyHiddenText>
+        <ul css={BylineCss.bylineList}>
+          <li css={BylineCss.bylineContainer}>{contributors}</li>
+          {/* EXPERIMENT: Article Read Time */}
+          {children &&
+            Children.map(children, (child, index) => (
+              // eslint-disable-next-line react/no-array-index-key
+              <li key={index} css={BylineCss.timestampLineBreak}>
+                {child}
+              </li>
+            ))}
+        </ul>
+      </section>
+    )
+  );
 };
 
 export default Byline;

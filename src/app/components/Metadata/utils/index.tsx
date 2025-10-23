@@ -32,7 +32,7 @@ const createIconLinks = (
 
     return (
       /* @ts-ignore:   Property 'key' does not exist on type 'LinkProps & { css?: Interpolation<Theme>; }'.ts(2322) */
-      (<link key={key} rel="apple-touch-icon" sizes={size} href={iconAssetUrl} />)
+      <link key={key} rel="apple-touch-icon" sizes={size} href={iconAssetUrl} />
     );
   });
 };

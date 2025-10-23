@@ -12,7 +12,7 @@ const LanguageNavigation = () => {
   }
 
   return (
-    (<Navigation script={script} service={service} dir={dir}>
+    <Navigation script={script} service={service} dir={dir}>
       <VisuallyHiddenText>
         Navigation, BBC World Service regions
       </VisuallyHiddenText>
@@ -20,7 +20,7 @@ const LanguageNavigation = () => {
         navigationSections={collapsibleNavigation}
         as={Fragment}
       />
-    </Navigation>)
+    </Navigation>
   );
 };
 

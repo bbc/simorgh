@@ -74,25 +74,27 @@ const SocialLink = ({
   const linkLabelId = useId();
   const hasDescription = Boolean(summary.description);
 
-  return (<>
-    <SocialLinkImage imageUrl={summary.imageUrl} />
-    <a
-      href={summary.link}
-      css={styles.link}
-      {...(hasDescription && { 'aria-labelledby': linkLabelId })}
-      {...clickTrackerHandler}
-    >
-      {hasDescription ? (
-        // eslint-disable-next-line jsx-a11y/aria-role
-        (<span id={linkLabelId}>
-          {summary.title}
-          <VisuallyHiddenText>{`, ${summary.description}`}</VisuallyHiddenText>
-        </span>)
-      ) : (
-        summary.title
-      )}
-    </a>
-  </>);
+  return (
+    <>
+      <SocialLinkImage imageUrl={summary.imageUrl} />
+      <a
+        href={summary.link}
+        css={styles.link}
+        {...(hasDescription && { 'aria-labelledby': linkLabelId })}
+        {...clickTrackerHandler}
+      >
+        {hasDescription ? (
+          // eslint-disable-next-line jsx-a11y/aria-role
+          <span id={linkLabelId}>
+            {summary.title}
+            <VisuallyHiddenText>{`, ${summary.description}`}</VisuallyHiddenText>
+          </span>
+        ) : (
+          summary.title
+        )}
+      </a>
+    </>
+  );
 };
 
 const SocialLinks = ({

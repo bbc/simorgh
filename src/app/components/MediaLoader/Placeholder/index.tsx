@@ -33,7 +33,7 @@ const MediaPlayerPlaceholder = ({
 
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
-    (<div
+    <div
       onClick={onClick}
       css={styles.placeholder}
       data-e2e="media-loader__placeholder"
@@ -61,7 +61,7 @@ const MediaPlayerPlaceholder = ({
         srcSet={srcSet}
         isPortraitOrientation={isPortraitOrientation}
       />
-    </div>)
+    </div>
   );
 };
 

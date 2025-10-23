@@ -102,7 +102,7 @@ const OnDemandTvPage = ({
     : headline;
 
   return (
-    (<div css={styles.wrapper}>
+    <div css={styles.wrapper}>
       <ChartbeatAnalytics
         mediaPageType="TV"
         title={headline}
@@ -161,7 +161,7 @@ const OnDemandTvPage = ({
             />
           ) : (
             //  @ts-expect-error allow rendering of MediaError component when media is not available
-            (<MediaError skin="video" />)
+            <MediaError skin="video" />
           )}
 
           <StyledTvHeadingContainer
@@ -190,7 +190,7 @@ const OnDemandTvPage = ({
       </GelPageGrid>
       {hasRecentEpisodes && (
         // @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags
-        (<GelPageGrid
+        <GelPageGrid
           columns={getGroups(6, 6, 6, 6, 8, 20)}
           enableGelGutters
           css={styles.pageGrid}
@@ -207,9 +207,9 @@ const OnDemandTvPage = ({
               episodes={recentEpisodes}
             />
           </Grid>
-        </GelPageGrid>)
+        </GelPageGrid>
       )}
-    </div>)
+    </div>
   );
 };
 

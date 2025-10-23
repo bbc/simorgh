@@ -82,7 +82,7 @@ export const MostReadItemWrapper = forwardRef(
     ref,
   ) => (
     // @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags
-    (<Grid
+    <Grid
       css={styles.grid}
       {...mostReadItemGridProps(columnLayout)}
       parentColumns={getParentColumns(columnLayout)} // parentColumns is required here because on IE, this component would be rendered before it's parent therefore not receiving the parent's grid columns values so we have to explicitly pass it as a prop here so it works on IE
@@ -92,6 +92,6 @@ export const MostReadItemWrapper = forwardRef(
       role="listitem"
     >
       <div css={styles.item}>{children}</div>
-    </Grid>)
+    </Grid>
   ),
 );

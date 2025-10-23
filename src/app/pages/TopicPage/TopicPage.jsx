@@ -45,83 +45,85 @@ const TopicPage = ({ pageData }) => {
 
   const itemList = getItemList({ curations, name: brandName });
 
-  return (<>
-    <AdContainer slotType="leaderboard" />
-    <main css={styles.main} role="main">
-      <div css={styles.inner}>
-        <ATIAnalytics atiData={atiAnalytics} />
-        <ChartbeatAnalytics title={title} />
-        <MetadataContainer
-          title={activePage >= 2 ? pageTitle : title}
-          socialHeadline={title}
-          lang={lang}
-          description={description}
-          openGraphType="website"
-          hasAmpPage={false}
-        />
-        <LinkedData
-          type="CollectionPage"
-          seoTitle={title}
-          headline={title}
-          entities={[itemList]}
-        />
-        <div css={styles.title}>
-          <div css={styles.inline}>
-            {imageData && <TopicImage image={imageData.url} />}
-            <TopicTitle>{title}</TopicTitle>
+  return (
+    <>
+      <AdContainer slotType="leaderboard" />
+      <main css={styles.main} role="main">
+        <div css={styles.inner}>
+          <ATIAnalytics atiData={atiAnalytics} />
+          <ChartbeatAnalytics title={title} />
+          <MetadataContainer
+            title={activePage >= 2 ? pageTitle : title}
+            socialHeadline={title}
+            lang={lang}
+            description={description}
+            openGraphType="website"
+            hasAmpPage={false}
+          />
+          <LinkedData
+            type="CollectionPage"
+            seoTitle={title}
+            headline={title}
+            entities={[itemList]}
+          />
+          <div css={styles.title}>
+            <div css={styles.inline}>
+              {imageData && <TopicImage image={imageData.url} />}
+              <TopicTitle>{title}</TopicTitle>
+            </div>
+            {description && <TopicDescription>{description}</TopicDescription>}
           </div>
-          {description && <TopicDescription>{description}</TopicDescription>}
-        </div>
-        {curations.map(
-          ({
-            visualProminence,
-            summaries,
-            curationId,
-            title: curationTitle,
-            link,
-            position,
-            visualStyle,
-            ...curationProps
-          }) => {
-            const nthCurationByStyleAndProminence =
-              getNthCurationByStyleAndProminence({
-                curations,
-                position,
-                visualStyle,
-                visualProminence,
-              });
+          {curations.map(
+            ({
+              visualProminence,
+              summaries,
+              curationId,
+              title: curationTitle,
+              link,
+              position,
+              visualStyle,
+              ...curationProps
+            }) => {
+              const nthCurationByStyleAndProminence =
+                getNthCurationByStyleAndProminence({
+                  curations,
+                  position,
+                  visualStyle,
+                  visualProminence,
+                });
 
-            return (
-              (<Fragment key={`${curationId}-${position}`}>
-                <Curation
-                  visualStyle={visualStyle}
-                  visualProminence={visualProminence}
-                  summaries={summaries}
-                  title={curationTitle}
-                  topStoriesTitle={topStoriesTitle}
-                  position={position}
-                  link={link}
-                  curationLength={curations && curations.length}
-                  nthCurationByStyleAndProminence={
-                    nthCurationByStyleAndProminence
-                  }
-                  {...curationProps}
-                />
-              </Fragment>)
-            );
-          },
-        )}
-        <Pagination
-          activePage={activePage}
-          pageCount={pageCount}
-          pageXOfY={pageXOfY}
-          previousPage={previousPage}
-          nextPage={nextPage}
-          page={page}
-        />
-      </div>
-    </main>
-  </>);
+              return (
+                <Fragment key={`${curationId}-${position}`}>
+                  <Curation
+                    visualStyle={visualStyle}
+                    visualProminence={visualProminence}
+                    summaries={summaries}
+                    title={curationTitle}
+                    topStoriesTitle={topStoriesTitle}
+                    position={position}
+                    link={link}
+                    curationLength={curations && curations.length}
+                    nthCurationByStyleAndProminence={
+                      nthCurationByStyleAndProminence
+                    }
+                    {...curationProps}
+                  />
+                </Fragment>
+              );
+            },
+          )}
+          <Pagination
+            activePage={activePage}
+            pageCount={pageCount}
+            pageXOfY={pageXOfY}
+            previousPage={previousPage}
+            nextPage={nextPage}
+            page={page}
+          />
+        </div>
+      </main>
+    </>
+  );
 };
 
 export default TopicPage;
