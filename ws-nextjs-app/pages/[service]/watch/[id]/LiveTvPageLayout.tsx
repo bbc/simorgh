@@ -79,7 +79,7 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
             <Heading id="content" level={1}>
               Live TV Page with schedule
             </Heading>
-            <Text>{description}</Text>
+            <Text css={styles.description}>{description}</Text>
             {portraitVideoCuration &&
               renderCuration({ curation: portraitVideoCuration })}
             {radioScheduleCuration &&
