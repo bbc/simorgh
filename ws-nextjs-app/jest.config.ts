@@ -3,8 +3,7 @@ import { pathsToModuleNameMapper } from 'ts-jest';
 import type { Config } from '@jest/types';
 import { compilerOptions } from '../tsconfig.json';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const { react, ...compilerOptionsPaths } = compilerOptions.paths;
+const { ...compilerOptionsPaths } = compilerOptions.paths;
 
 const canonicalIntegrationTests = {
   displayName: 'Integration Tests - Canonical',
