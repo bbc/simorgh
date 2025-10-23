@@ -53,7 +53,7 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
   );
 
   const radioScheduleCuration = curations?.find(
-    curations => curations.radioSchedule,
+    curation => curation.radioSchedule,
   );
 
   return (
