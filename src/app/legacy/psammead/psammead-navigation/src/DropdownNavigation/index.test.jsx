@@ -15,7 +15,7 @@ import {
 import pidginNavData from '../../testHelpers/pidgin';
 
 const dropdownList = (
-  <DropdownUl>
+  <DropdownUl role="list">
     {pidginNavData.map((item, index) => {
       const active = index === 3;
       const { title, url } = item;
