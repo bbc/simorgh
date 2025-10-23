@@ -20,6 +20,32 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
     // eslint-disable-next-line no-param-reassign
     pageData = liveTvFixture;
   }
+
+  const renderCuration = ({ curation }: { curation: Curation }) => {
+    const {
+      summaries,
+      curationId,
+      title: curationTitle,
+      link,
+      position,
+      ...curationProps
+    } = curation;
+    return (
+      <React.Fragment key={`${curationId}-${position}`}>
+        <LiveTVCuration
+          summaries={summaries || []}
+          title={curationTitle}
+          position={position}
+          link={link}
+          curationLength={curations.length}
+          renderVisuallyHiddenH2Title={position === 0}
+          curationId={curationId}
+          {...curationProps}
+        />
+      </React.Fragment>
+    );
+  };
+
   const { curations, description, title } = pageData;
 
   return (
@@ -41,7 +67,7 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
             </Heading>
             <Text>{description}</Text>
 
-            {curations?.map(
+            {/* {curations?.map(
               ({
                 summaries,
                 curationId,
@@ -65,7 +91,7 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
                   </React.Fragment>
                 );
               },
-            )}
+            )} */}
           </div>
         </div>
       </main>
