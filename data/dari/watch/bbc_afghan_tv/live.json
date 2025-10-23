@@ -55,7 +55,7 @@
         "intent": "MEDIA_PLAYER"
       },
       {
-        "radioScheduleData": [
+        "radioSchedule": [
           {
             "id": "p0lv337m",
             "state": "next",
