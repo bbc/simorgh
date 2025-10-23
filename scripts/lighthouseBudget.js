@@ -79,8 +79,8 @@ const budget = {
 
 const testableProperties = ['ally', 'bestPractises', 'seo'];
 
-const run = () => {
-  const report = readReport('simorgh.report.json');
+const run = (reportPath = 'simorgh.report.json') => {
+  const report = readReport(reportPath);
   const extractedCategories = getCategoryScores(report);
 
   const result = compareToBudget(
@@ -106,8 +106,10 @@ module.exports = {
 // A 'run' argument need to be passed in for the script to work
 // This was done to make the script unit testable without spliting
 // it to different files.
+
 const args = process.argv.slice(2);
 
 if (args[0] === 'run') {
-  run();
+  const reportPath = args[1] || 'simorgh.report.json';
+  run(reportPath);
 }
