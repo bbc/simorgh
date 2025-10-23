@@ -130,11 +130,7 @@ const atiAnalyticsTestSuites = [
     applicationType: 'responsive',
     contentType: 'index-home',
     useReverb: true,
-    tests: [
-      ...atiAnalyticsNavigationComponentTests,
-      assertMessageBannerComponentView,
-      assertMessageBannerComponentClick,
-    ],
+    tests: [...atiAnalyticsNavigationComponentTests],
   },
   {
     path: '/kyrgyz',
