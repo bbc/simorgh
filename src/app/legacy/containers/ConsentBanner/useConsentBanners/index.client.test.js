@@ -39,6 +39,10 @@ describe('useConsentBanners', () => {
     jest.clearAllMocks();
   });
 
+  afterAll(() => {
+    jest.restoreAllMocks();
+  });
+
   describe('on initial mount', () => {
     it('should return showPrivacyBanner=FALSE when privacyToggle is enabled and PRIVACY_COOKIE is equal to the privacyToggleValue', () => {
       Cookies.set(PRIVACY_COOKIE, DEFAULT_PRIVACY_COOKIE);
@@ -268,10 +272,6 @@ describe('useConsentBanners', () => {
     });
 
     it('sets POLICY_COOKIE without domain restrictions', () => {
-      // jest
-      //   .spyOn(window.location, 'origin', 'get')
-      //   .mockImplementation(() => 'https://www.test.bbc.com');
-
       Cookies.set(EXPLICIT_COOKIE, '0');
       Cookies.set(POLICY_COOKIE, null);
       cookieSetterSpy.mockClear();
@@ -324,7 +324,7 @@ describe('useConsentBanners', () => {
         value: DEFAULT_PRIVACY_COOKIE,
       });
 
-      const { result } = renderHook(() => useConsentBanners());
+      const { result } = renderHook(() => useConsentBanners(true));
 
       act(() => {
         result.current.handleCookieBannerAccepted();
@@ -397,7 +397,7 @@ describe('useConsentBanners', () => {
         value: DEFAULT_PRIVACY_COOKIE,
       });
 
-      const { result } = renderHook(() => useConsentBanners());
+      const { result } = renderHook(() => useConsentBanners(true));
 
       act(() => {
         result.current.handleCookieBannerRejected();
