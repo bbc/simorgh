@@ -22,7 +22,7 @@ jest.mock('#app/lib/utilities/isLocal', () => jest.fn());
 
 jest.mock('#app/lib/utilities/onClient', () => ({
   __esModule: true,
-  default: jest.fn().mockImplementation(() => false),
+  default: jest.fn(),
 }));
 
 const onClientSpy = jest.spyOn(onClient, 'default');
@@ -249,9 +249,9 @@ describe('fetchPageData', () => {
 
   describe('Request returns a non-200, non-404 status code', () => {
     describe('on server', () => {
-      // beforeEach(() => {
-      //   jest.spyOn(window.location, 'get').mockImplementation(() => undefined);
-      // });
+      beforeEach(() => {
+        onClientSpy.mockImplementation(() => false);
+      });
 
       it('should log, and return the status code as 500', async () => {
         fetch.mockResponse("I'm a teapot", { status: 418 });
