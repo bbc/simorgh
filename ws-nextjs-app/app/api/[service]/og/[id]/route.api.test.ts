@@ -3,7 +3,7 @@
  */
 
 import * as fetchPageData from '#app/routes/utils/fetchPageData';
-import { GET as api } from './route.api';
+import { GET as api } from './routeOLD.api';
 
 jest.mock('next/og', () => {
   return {
