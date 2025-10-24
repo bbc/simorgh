@@ -234,21 +234,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     experimentType: ExperimentType.CLIENT_SIDE,
   });
 
-  const readTimeLocation = (() => {
-    if (!readTimeExperimentVariant) return 'off';
-
-    if (readTimeExperimentVariant.includes('headline')) {
-      return 'headline';
-    }
-    if (readTimeExperimentVariant.includes('timestamp')) {
-      return 'timestamp';
-    }
-    if (readTimeExperimentVariant.includes('control')) {
-      return 'control';
-    }
-    return 'off';
-  })();
-
   // EXPERIMENT: Personalised Content Rail
   const personalisedContentExperimentName = 'newswb_ws_personalised_content';
   let personalisedContentExperimentVariant = useOptimizelyVariation({
