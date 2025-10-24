@@ -26,6 +26,7 @@ const { warn } = console;
 
 /**
  * Suppress JSDOM errors relating to navigation not implemented
+ * https://github.com/jsdom/jsdom/issues/2112 -> code snippet from https://github.com/jsdom/jsdom/issues/2112#issuecomment-673540137
  *  */
 if (!process.env.PUPPETEER_APP_ENV) {
   if (window?._virtualConsole) {
