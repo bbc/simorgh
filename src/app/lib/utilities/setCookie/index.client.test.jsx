@@ -1,8 +1,4 @@
 import Cookie from 'js-cookie';
-import {
-  setWindowValue,
-  resetWindowValue,
-} from '#psammead/psammead-test-helpers/src';
 import setCookie, { getCookieDomain } from '.';
 
 const cookieSpy = jest.spyOn(Cookie, 'set');
@@ -49,16 +45,10 @@ describe('setCookie Assertion Tests', () => {
   });
 
   describe('Setting cookie with sameSite and secure attribute when https', () => {
-    const windowLocation = window.location;
-
-    afterEach(() => {
-      resetWindowValue('location', windowLocation);
-    });
-
     it('should return cookie with domain, expiration of 1 year, sameSite=None and secure=true', () => {
-      setWindowValue('location', {
-        protocol: 'https:',
-      });
+      jest
+        .spyOn(window.location, 'protocol', 'get')
+        .mockImplementation(() => 'https:');
 
       setCookie({ name: 'test', value: '111', sameSite: 'None' });
 
