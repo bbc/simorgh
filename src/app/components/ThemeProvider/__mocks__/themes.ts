@@ -198,15 +198,15 @@ export const themes = [
   if (Object.keys(themesNoVariants).includes(service)) {
     // @ts-expect-error service theme
     themeConfig[service] = getThemeConfig({
-      ...serviceTheme,
       ...defaultThemeProps,
+      ...serviceTheme,
     });
   } else {
     Object.entries(serviceTheme).forEach(([variant, variantTheme]) => {
       // @ts-expect-error service with variant theme
       themeConfig[service][variant] = getThemeConfig({
-        ...variantTheme,
         ...defaultThemeProps,
+        ...variantTheme,
       });
     });
   }
@@ -281,8 +281,8 @@ export const pwaThemes = [
 
       // @ts-expect-error service theme
       pwaThemeConfig[service] = getThemeConfig({
-        ...themeWithPWA,
         ...defaultThemeProps,
+        ...themeWithPWA,
       });
     } else {
       Object.entries(pwaTheme).forEach(([variant, variantPWATheme]) => {
@@ -304,8 +304,8 @@ export const pwaThemes = [
 
         // @ts-expect-error service with variant theme
         pwaThemeConfig[service][variant] = getThemeConfig({
-          ...themeWithPWA,
           ...defaultThemeProps,
+          ...themeWithPWA,
         });
       });
     }
