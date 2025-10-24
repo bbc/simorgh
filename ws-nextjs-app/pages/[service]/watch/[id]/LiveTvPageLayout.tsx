@@ -13,11 +13,13 @@ import styles from './styles';
 
 export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
   const { lang } = use(ServiceContext);
-  if (!pageData) {
+
+  if (!pageData.title) {
     // @ts-expect-error liveTvFixture used for development purposes only
     // eslint-disable-next-line no-param-reassign
     pageData = liveTvFixture;
   }
+
   const { curations, description, title } = pageData;
 
   return (
