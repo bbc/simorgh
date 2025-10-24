@@ -1,13 +1,6 @@
 /* eslint-disable no-console */
 import setCookieOven from './setCookieOven';
 
-const { origin } = window.location;
-delete window.location;
-
-beforeEach(() => {
-  window.location = new URL(origin);
-});
-
 describe('setCookieOven', () => {
   afterEach(() => {
     jest.clearAllMocks();
@@ -23,7 +16,9 @@ describe('setCookieOven', () => {
   });
 
   it('should hit the correct outside UK and UK cookie oven endpoints when on the test environment', () => {
-    window.location = new URL('https://www.test.bbc.com');
+    jest
+      .spyOn(window.location, 'origin', 'get')
+      .mockImplementation(() => 'https://www.test.bbc.com');
 
     setCookieOven('value');
 
@@ -39,7 +34,9 @@ describe('setCookieOven', () => {
   });
 
   it('should hit the correct outside UK and UK cookie oven endpoints when on the live environment', () => {
-    window.location = new URL('https://www.bbc.com');
+    jest
+      .spyOn(window.location, 'origin', 'get')
+      .mockImplementation(() => 'https://www.bbc.com');
 
     setCookieOven('value');
 

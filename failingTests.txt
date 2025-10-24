@@ -1,4 +1,3 @@
-src/app/legacy/containers/ConsentBanner/useConsentBanners/setCookieOven.test.js
 src/app/lib/utilities/getEnvConfig/index.test.ts
 src/app/lib/utilities/getToggles/index.test.js
 src/app/routes/utils/fetchPageData/index.test.js
