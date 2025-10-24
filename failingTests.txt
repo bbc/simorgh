@@ -1,9 +1,7 @@
-src/app/routes/utils/fetchPageData/index.test.js
-src/app/lib/analyticsUtils/staticATITracking/clickTracking/index.test.ts
 src/app/lib/utilities/setCookie/index.test.jsx
-src/app/contexts/RequestContext/getOriginContext/index.test.ts
 src/app/legacy/containers/ConsentBanner/useConsentBanners/setCookieOven.test.js
 src/client.test.jsx
 src/app/lib/utilities/getEnvConfig/index.test.ts
 src/app/lib/utilities/onClient/index.test.js
 src/app/lib/utilities/getToggles/index.test.js
+src/app/routes/utils/fetchPageData/index.test.js

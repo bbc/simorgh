@@ -1,16 +1,9 @@
-import {
-  setWindowValue,
-  resetWindowValue,
-} from '#psammead/psammead-test-helpers/src';
-
-const windowLocation = window.location;
-
 describe('getOriginContext', () => {
   beforeEach(() => {
     process.env.SIMORGH_APP_ENV = 'test';
   });
   afterEach(() => {
-    resetWindowValue('location', windowLocation);
+    jest.clearAllMocks();
   });
 
   const tests = [
@@ -31,9 +24,10 @@ describe('getOriginContext', () => {
 
   tests.forEach(({ bbcOrigin, location, expected, assertion }) => {
     it(assertion, () => {
-      setWindowValue('location', {
-        origin: location,
-      });
+      jest
+        .spyOn(window.location, 'origin', 'get')
+        // @ts-expect-error location can be undefined
+        .mockImplementation(() => location);
 
       // eslint-disable-next-line @typescript-eslint/no-var-requires
       const getOriginContext = require('./index').default; // eslint-disable-line global-require
