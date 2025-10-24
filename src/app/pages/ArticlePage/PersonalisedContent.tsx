@@ -7,6 +7,7 @@ import Subheading from '#app/components/Curation/Subhead';
 import { Summary } from '#app/models/types/curationData';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '#app/hooks/useViewTracker';
+import styles from '#app/components/RelatedContentSection/index.styles';
 
 const PersonalisedContent = ({
   pageData,
@@ -83,7 +84,12 @@ const PersonalisedContent = ({
   }
 
   return (
-    <section aria-labelledby={id} role="region" {...viewTracker}>
+    <section
+      aria-labelledby={id}
+      role="region"
+      {...viewTracker}
+      css={styles.relatedContentSection}
+    >
       {title && (
         <Subheading id={id} link={link}>
           {title}
