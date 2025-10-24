@@ -1,6 +1,6 @@
 import { Services } from '#app/models/types/global';
 
-import loadable from '#app/utilities/universalLoadable';
+import loadable from 'next/dynamic';
 
 const loadableConfig = {
   afaanoromoo: loadable(() => import('./afaanoromoo')),

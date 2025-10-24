@@ -5,6 +5,10 @@ const plugins = [
   '@babel/plugin-proposal-export-default-from',
   '@babel/plugin-transform-runtime',
   '@loadable/babel-plugin',
+  [
+    'transform-rename-import',
+    { original: 'next/dynamic', replacement: '@loadable/component' },
+  ],
 ];
 
 // allows dynamic `import()` in Node tests.
