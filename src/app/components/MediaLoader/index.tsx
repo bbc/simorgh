@@ -121,63 +121,66 @@ const MediaContainer = ({
 }: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
   const isAudio = isAudioPlayer(playerConfig);
-
   useEffect(() => {
     try {
-      window.requirejs(['bump-4'], async (Bump: BumpType) => {
+      window.requirejs(['bump-4'], (Bump: BumpType) => {
         if (playerElementRef?.current && playerConfig) {
-          const mediaPlayer = Bump.player(
-            playerElementRef.current,
-            playerConfig,
-          );
-
-          if (uniqueId != null) {
-            const { mediaPlayers } = window;
-            if (mediaPlayers == null) {
-              window.mediaPlayers = { [uniqueId]: mediaPlayer };
-            } else {
-              mediaPlayers[uniqueId] = mediaPlayer;
-            }
-          }
-
-          // Bind any events passed in to the player
-          if (eventMapping && Object.keys(eventMapping || {}).length > 0) {
-            Object.keys(eventMapping).forEach(bindingKey => {
-              const key = bindingKey as MediaPlayerEvents;
-              const handler = eventMapping[key];
-
-              if (handler) mediaPlayer.bind(key, handler);
-            });
-          }
-
-          if (showAds) {
-            const adTag = await window.dotcom.ads.getAdTag();
-            mediaPlayer.loadPlugin(
-              {
-                swf: 'name:dfpAds.swf',
-                html: 'name:dfpAds.js',
-              },
-              {
-                name: 'AdsPluginParameters',
-                data: {
-                  adTag,
-                  debug: true,
-                },
-              },
+          const initPlayer = async () => {
+            const mediaPlayer = Bump.player(
+              playerElementRef.current,
+              playerConfig,
             );
 
-            mediaPlayer.bind('playlistLoaded', async () => {
-              const updatedAdTag = await window.dotcom.ads.getAdTag();
-              mediaPlayer.dispatchEvent(
-                'bbc.smp.plugins.ads.event.updateAdTag',
+            if (uniqueId != null) {
+              const { mediaPlayers } = window;
+              if (mediaPlayers == null) {
+                window.mediaPlayers = { [uniqueId]: mediaPlayer };
+              } else {
+                mediaPlayers[uniqueId] = mediaPlayer;
+              }
+            }
+
+            // Bind any events passed in to the player
+            if (eventMapping && Object.keys(eventMapping || {}).length > 0) {
+              Object.keys(eventMapping).forEach(bindingKey => {
+                const key = bindingKey as MediaPlayerEvents;
+                const handler = eventMapping[key];
+
+                if (handler) mediaPlayer.bind(key, handler);
+              });
+            }
+
+            if (showAds) {
+              const adTag = await window.dotcom.ads.getAdTag();
+              mediaPlayer.loadPlugin(
                 {
-                  updatedAdTag,
+                  swf: 'name:dfpAds.swf',
+                  html: 'name:dfpAds.js',
+                },
+                {
+                  name: 'AdsPluginParameters',
+                  data: {
+                    adTag,
+                    debug: true,
+                  },
                 },
               );
-            });
-          }
 
-          mediaPlayer.load();
+              mediaPlayer.bind('playlistLoaded', async () => {
+                const updatedAdTag = await window.dotcom.ads.getAdTag();
+                mediaPlayer.dispatchEvent(
+                  'bbc.smp.plugins.ads.event.updateAdTag',
+                  {
+                    updatedAdTag,
+                  },
+                );
+              });
+            }
+
+            mediaPlayer.load();
+          };
+
+          initPlayer();
         }
       });
     } catch (error) {
