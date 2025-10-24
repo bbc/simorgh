@@ -344,7 +344,7 @@ export const service: DefaultServiceConfig = {
 
         // Messaging
         removalGuidelineText:
-          'Si has enviado algo para un programa o en línea, no podremos eliminarlo una vez que lo usemos.',
+          'Si has enviado algo para un programa o nuestras plataformas digitales, no podremos eliminarlo una vez que lo usemos.',
         retentionPeriodDays:
           'La información enviada la guardaremos durante {{days}} días y, en caso de no usarla, la eliminaremos.',
         referenceNumber: 'Número de referencia',
