@@ -3,7 +3,7 @@ import { GetServerSideProps } from 'next';
 import { LIVE_TV_PAGE } from '#app/routes/utils/pageTypes';
 import PageDataParams from '#app/models/types/pageDataParams';
 import { PageTypes } from '#app/models/types/global';
-import { data as liveTvFixture } from '#data/dari/watch/bbc_afghan_tv/live.json';
+import liveTvFixture from '#data/dari/watch/bbc_afghan_tv/live.json';
 
 const LiveTvLayout = dynamic(() => import('./LiveTvPageLayout'));
 
@@ -20,7 +20,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     pageType: LIVE_TV_PAGE as PageTypes,
     service,
     pageData: {
-      ...liveTvFixture,
+      ...liveTvFixture.data,
       metadata: {
         type: LIVE_TV_PAGE,
         atiAnalytics: {},
