@@ -22,3 +22,9 @@ global.console = {
   warn: jest.fn(),
   error: jest.fn(),
 };
+
+global.setImmediate =
+  global.setImmediate ||
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  ((fn: (...args: any[]) => void, ...args: any) =>
+    global.setTimeout(fn, 0, ...args));
