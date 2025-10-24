@@ -83,7 +83,7 @@ const PersonalisedContent = ({
       aria-labelledby={id}
       role="region"
       {...viewTracker}
-      css={styles.relatedContentSection}
+      css={styles.relatedContentSection} // use the same style as related content for padding unless we want to make it look different
     >
       {title && (
         <Subheading id={id} link={link}>

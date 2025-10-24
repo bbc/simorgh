@@ -1,0 +1,109 @@
+import React from 'react';
+import { render, screen } from '../react-testing-library-with-providers';
+import PersonalisedContent from '.';
+
+const mockPersonalisedContent = [
+  {
+    title: 'Personalised Title',
+    summaries: [
+      {
+        type: 'promo',
+        title: 'Promo Title',
+        description: 'Promo Description',
+        link: '/promo-link',
+        imageUrl: 'promo-image.jpg',
+        imageAlt: 'Promo Image',
+        isLive: false,
+      },
+    ],
+    id: 'personalised-content',
+    link: '/personalised-link',
+    isFirstCuration: true,
+    topicId: 'topic-1',
+  },
+  {
+    title: 'Default Title',
+    summaries: [
+      {
+        type: 'promo',
+        title: 'Default Promo',
+        description: 'Default Description',
+        link: '/default-link',
+        imageUrl: 'default-image.jpg',
+        imageAlt: 'Default Image',
+        isLive: false,
+      },
+    ],
+    id: 'default-content',
+    link: '/default-link',
+    isFirstCuration: false,
+    topicId: 'topic-2',
+  },
+];
+
+const basePageData = {
+  secondaryColumn: {
+    PersonalisedContent: mockPersonalisedContent,
+    topStories: [],
+    features: [],
+  },
+};
+
+describe('PersonalisedContent', () => {
+  it('renders nothing if there is no personalised content data', () => {
+    render(
+      <PersonalisedContent
+        // @ts-expect-error: Test fixture data does not need to match Article type exactly
+        pageData={{ secondaryColumn: { topStories: [], features: [] } }}
+        personalisedTopicCurationExperimentVariant="personalised"
+      />,
+    );
+    expect(screen.queryByRole('region')).not.toBeInTheDocument();
+  });
+
+  it('renders personalised content when variant is "personalised"', () => {
+    render(
+      <PersonalisedContent
+        // @ts-expect-error: Test fixture data does not need to match Article type exactly
+        pageData={basePageData}
+        personalisedTopicCurationExperimentVariant="personalised"
+      />,
+    );
+    expect(screen.getByRole('region')).toHaveAttribute(
+      'aria-labelledby',
+      'personalised-content',
+    );
+    expect(screen.getByText('Personalised Title')).toBeInTheDocument();
+    expect(screen.getByText('Promo Title')).toBeInTheDocument();
+  });
+
+  it('renders default content when variant is "default"', () => {
+    render(
+      <PersonalisedContent
+        // @ts-expect-error: Test fixture data does not need to match Article type exactly
+        pageData={basePageData}
+        personalisedTopicCurationExperimentVariant="default"
+      />,
+    );
+    expect(screen.getByRole('region')).toHaveAttribute(
+      'aria-labelledby',
+      'default-content',
+    );
+    expect(screen.getByText('Default Title')).toBeInTheDocument();
+    expect(screen.getByText('Default Promo')).toBeInTheDocument();
+  });
+
+  it('renders the subheading as a link if link is provided', () => {
+    render(
+      <PersonalisedContent
+        // @ts-expect-error: Test fixture data does not need to match Article type exactly
+        pageData={basePageData}
+        personalisedTopicCurationExperimentVariant="personalised"
+      />,
+    );
+    const subheadingLink = screen.getByRole('link', {
+      name: 'Personalised Title',
+    });
+    expect(subheadingLink).toHaveAttribute('href', '/personalised-link');
+  });
+});
