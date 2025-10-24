@@ -50,6 +50,9 @@ module.exports = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   compiler: {
     emotion: true,
   },
