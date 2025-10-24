@@ -41,6 +41,7 @@ import getAssetOrigins from './utilities/getAssetOrigins';
 import extractHeaders from './utilities/extractHeaders';
 import addPlatformToRequestChainHeader from './utilities/addPlatformToRequestChainHeader';
 import serviceConfigs from './utilities/serviceConfigs';
+import createAdNonce from '../app/utilities/createAdNonce';
 
 const morgan = require('morgan');
 
@@ -74,13 +75,6 @@ const server = express();
 /*
  * Default headers, compression, logging, status route
  */
-
-const skipMiddleware = (_req, _res, next) => {
-  next();
-};
-
-const injectCspHeaderProdBuild =
-  process.env.NODE_ENV !== 'production' ? skipMiddleware : injectCspHeader;
 
 server
   .disable('x-powered-by')
@@ -201,7 +195,6 @@ const injectReferrerPolicyHeader = (req, res, next) => {
 server.get(
   '/*',
   [
-    injectCspHeaderProdBuild,
     injectDefaultCacheHeader,
     injectReferrerPolicyHeader,
     injectResourceHintsHeader,
@@ -362,6 +355,19 @@ server.get(
         'sliced data',
         data.pageData?.secondaryColumn?.PersonalisedContent,
       );
+      const nonce = createAdNonce({
+        toggles,
+        country: data.country,
+        showAdsBasedOnLocation: data.showAdsBasedOnLocation,
+        isLite,
+        isAmp,
+      });
+
+      injectCspHeader({ isAmp, service, nonce, res });
+
+      data.nonce = nonce;
+      data.cspHeader = res.get('Content-Security-Policy');
+
       let { status } = data;
       // Set derivedPageType based on returned page data
       if (status === OK) {
@@ -370,8 +376,9 @@ server.get(
         serverSideExperiments = getServerExperiments({
           headers,
           service,
-          derivedPageType,
+          pageType: derivedPageType,
         });
+
         data.serverSideExperiments = serverSideExperiments;
       } else {
         sendCustomMetric({
@@ -396,6 +403,7 @@ server.get(
           service,
           url,
           variant,
+          nonce,
         });
       } catch (error) {
         const { message } = error;
@@ -430,6 +438,7 @@ server.get(
           service,
           url,
           variant,
+          nonce,
         });
       }
 

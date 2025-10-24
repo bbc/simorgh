@@ -19,7 +19,8 @@ export const service: DefaultServiceConfig = {
     chartbeatDomain: 'dari.bbc.co.uk',
     brandName: 'BBC News فارسی',
     serviceLocalizedName: 'فارسی',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/dari.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/dari/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News فارسی',
     dir: 'rtl',
     externalLinkText: '، خارجی',
@@ -239,9 +240,9 @@ export const service: DefaultServiceConfig = {
         video: 'ویدیو',
         recentEpisodes: 'برنامه قبلی',
         bbc_dari_radio: {
-          title: 'بی بی سی افغانستان (برنامه های دری)',
+          title: 'برنامه‌های رادیو بی‌بی‌سی‌دری',
           subtitle:
-            'بی بی سی برای افغانستان تازه ترین و دقیق ترین خبرهای افغانستان ، منطقه و جهان را با تحلیل های همه جانبه ارایه می کند. برنامه های مختلف سیاسی، اجتماعی، فرهنگی و آموزشی از ساعت پنج صبح تا دوازده شب به زبان های دری و پشتو از بی بی سی برای افغانستان.',
+            'برنامه‌های رادیویی بی‌بی‌سی‌دری تازه‌ترین و دقیق‌ترین خبرهای افغانستان، منطقه و جهان را با تحلیل‌ همه‌جانبه ارائه می‌کند. برنامه‌های خبری، اجتماعی، فرهنگی و آموزشی از ساعت پنج صبح تا دوازده شب به وقت افغانستان به دری و پشتو روی امواج اف‌ام، موج متوسط و امواج کوتاه.',
         },
         listen: 'بشنوید',
         watch: 'ببینید',

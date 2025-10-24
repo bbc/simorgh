@@ -23,6 +23,7 @@ import PortraitVideoCarousel from '../PortraitVideoCarousel';
 import UsefulLinks from '../UsefulLinks';
 import SocialLinks from '../SocialLinks';
 import styles from './index.styles';
+import MediaLoader from '../MediaLoader';
 
 const {
   SIMPLE_CURATION_GRID,
@@ -36,6 +37,7 @@ const {
   PORTRAIT_VIDEO_CAROUSEL,
   USEFUL_LINKS,
   SOCIAL_LINKS,
+  MEDIA_COLLECTION,
 } = COMPONENT_NAMES;
 
 const { NONE } = VISUAL_STYLE;
@@ -67,13 +69,15 @@ export default ({
   portraitVideo,
   renderVisuallyHiddenH2Title = false,
   curationId,
-  readTimeVariant,
+  timeOfDayVariant,
+  mediaCollection,
 }: Curation) => {
   const componentName = getComponentName({
     visualStyle,
     visualProminence,
     radioSchedule,
     embed,
+    mediaCollection,
   });
 
   const GridComponent = getGridComponent(componentName);
@@ -125,6 +129,7 @@ export default ({
               showLiveLabel={summaryIsLive}
               altText={imageAlt}
               summaries={summaries}
+              timeOfDayVariant={timeOfDayVariant ?? undefined}
             />
           </div>
         );
@@ -172,6 +177,7 @@ export default ({
             title={title}
             blocks={portraitVideo.blocks}
             eventTrackingData={eventTrackingData}
+            timeOfDayVariant={timeOfDayVariant ?? undefined}
           />
         );
       }
@@ -194,6 +200,19 @@ export default ({
           eventTrackingData={eventTrackingData}
         />
       );
+    case MEDIA_COLLECTION: {
+      const mediaCollectionId = `media-collection-${nthCurationByStyleAndProminence}`;
+
+      return mediaCollection ? (
+        <section
+          role="region"
+          aria-labelledby="bbcMediaPlayer0"
+          data-testid={mediaCollectionId}
+        >
+          <MediaLoader blocks={mediaCollection} />
+        </section>
+      ) : null;
+    }
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:
@@ -228,9 +247,7 @@ export default ({
                 headingLevel={3}
                 isFirstCuration={isFirstCuration}
                 eventTrackingData={eventTrackingData}
-                {...(readTimeVariant && {
-                  readTimeVariant,
-                })}
+                timeOfDayVariant={timeOfDayVariant ?? undefined}
               />
             </div>
           </section>
@@ -241,9 +258,7 @@ export default ({
               headingLevel={2} // if there is only one curation, all promos should be h2, and no subheading
               isFirstCuration={isFirstCuration}
               eventTrackingData={eventTrackingData}
-              {...(readTimeVariant && {
-                readTimeVariant,
-              })}
+              timeOfDayVariant={timeOfDayVariant ?? undefined}
             />
           </div>
         );

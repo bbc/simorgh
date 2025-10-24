@@ -500,6 +500,61 @@ exports[`Psammead Styles - Font Families should match learningenglish 1`] = `
 }
 `;
 
+exports[`Psammead Styles - Font Families should match magyarul 1`] = `
+{
+  "sansBold": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: normal;
+  ",
+  "sansBoldItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: italic;
+  ",
+  "sansLight": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  ",
+  "sansRegular": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  ",
+  "sansRegularItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: italic;
+  ",
+  "serifBold": "
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  ",
+  "serifLight": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  ",
+  "serifMedium": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: normal;
+  ",
+  "serifMediumItalic": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: italic;
+  ",
+  "serifRegular": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  ",
+}
+`;
+
 exports[`Psammead Styles - Font Families should match marathi 1`] = `
 {
   "sansBold": "

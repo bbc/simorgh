@@ -34,6 +34,7 @@ const SOCIAL_EMBED = 'social-consent-banner';
 const LIVE_MEDIA = 'live-header-media';
 const SHARE = 'asset:';
 const PORTRAIT_VIDEO_CAROUSEL = 'portrait-video-carousel';
+const PORTRAIT_VIDEO_MODAL = 'portrait-video-modal';
 
 export const COMPONENTS = {
   ARTICLE_LITE_SITE_LINK,
@@ -58,6 +59,7 @@ export const COMPONENTS = {
   SOCIAL_EMBED,
   TOP_STORIES,
   PORTRAIT_VIDEO_CAROUSEL,
+  PORTRAIT_VIDEO_MODAL,
 };
 
 export const interceptATIAnalyticsBeacons = () => {
@@ -164,7 +166,9 @@ export const interceptATIAnalyticsBeacons = () => {
 };
 
 export const setUserIDCookie = () => {
-  cy.setCookie('atuserid', JSON.stringify({ val: ATI_USER_ID_COOKIE }));
+  cy.session('user-session', () => {
+    cy.setCookie('atuserid', JSON.stringify({ val: ATI_USER_ID_COOKIE }));
+  });
 };
 
 export const getExpectedAtiDestination = ({ service, applicationEnv }) => {

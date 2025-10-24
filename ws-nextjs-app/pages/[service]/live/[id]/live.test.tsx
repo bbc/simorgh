@@ -12,6 +12,12 @@ import { GetServerSidePropsContext } from 'next';
 import Live from './LivePageLayout';
 import { getServerSideProps } from './[[...variant]].page';
 
+type HelmetMetaTag = {
+  property?: string;
+  content?: string;
+  name?: string;
+};
+
 const mockPageData = {
   ...liveFixture.data,
   someResponse: {
@@ -432,5 +438,100 @@ describe('Live Page', () => {
     );
 
     expect(container).toMatchSnapshot();
+  });
+
+  it('sets the correct og:image meta tag from the post with assetId', () => {
+    const assetId = 'asset:18d24593-b615-4c84-867c-ac1fdec87136';
+    const pageData = liveFixture.data;
+
+    render(<Live pageData={pageData} assetId={assetId} />);
+
+    const expectedImageUrl =
+      'https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/vivo/test/images/2023/12/7/0781b49d-0b5b-43b5-9b39-605b189c2136.jpg';
+
+    const helmetMetaTags = Helmet.peek().metaTags;
+    const ogImageMeta = helmetMetaTags.find(
+      meta => (meta as HelmetMetaTag).property === 'og:image',
+    );
+    expect((ogImageMeta as HelmetMetaTag)?.content).toEqual(expectedImageUrl);
+  });
+  it('sets the correct og:title meta tag from the post with assetId', () => {
+    const assetId = 'asset:18d24593-b615-4c84-867c-ac1fdec87136';
+    const pageData = liveFixture.data;
+
+    render(<Live pageData={pageData} assetId={assetId} />);
+    // - BBC News gets appended to the end of the title for og:title
+    const expectedOgTitle =
+      'UK looking at more routes for aid to reach Gaza - BBC News';
+
+    const helmetMetaTags = Helmet.peek().metaTags;
+    const ogTitleMeta = helmetMetaTags.find(
+      meta => (meta as HelmetMetaTag).property === 'og:title',
+    );
+    expect((ogTitleMeta as HelmetMetaTag)?.content).toEqual(expectedOgTitle);
+  });
+
+  it('sets og:image meta tag to the page promoImage when assetId matches a post without an image, and still uses the posts title', () => {
+    const assetId = 'asset:ec227190-49f3-43eb-b373-e52b6e1ba035';
+    const pageData = liveFixture.data;
+
+    render(<Live pageData={pageData} assetId={assetId} />);
+
+    const expectedImageUrl = pageData.promoImage.url;
+    const expectedOgTitle = 'test - BBC News';
+
+    const helmetMetaTags = Helmet.peek().metaTags;
+    const ogImageMeta = helmetMetaTags.find(
+      meta => (meta as HelmetMetaTag).property === 'og:image',
+    );
+    const ogTitleMeta = helmetMetaTags.find(
+      meta => (meta as HelmetMetaTag).property === 'og:title',
+    );
+
+    expect((ogImageMeta as HelmetMetaTag)?.content).toEqual(expectedImageUrl);
+    expect((ogTitleMeta as HelmetMetaTag)?.content).toEqual(expectedOgTitle);
+  });
+  it('sets og:title and og:image meta tags to pageTitle and promoImage when assetId does not match any post', () => {
+    const assetId = 'asset:non-existent-id';
+    const pageData = liveFixture.data;
+
+    render(<Live pageData={pageData} assetId={assetId} />);
+    // when we are using a title for the page and not a post, seoTitle is used as priority
+    // and page title is a back up if seoTitle is not available.
+    // See LivePageLayout.tsx for where this happens
+    // the brand name is appended in component/Metadata/index.tsx
+    const expectedOgTitle = `${pageData.seo.seoTitle} - BBC News`;
+    const expectedOgImage = pageData.promoImage.url;
+
+    const helmetMetaTags = Helmet.peek().metaTags;
+    const ogTitleMeta = helmetMetaTags.find(
+      meta => (meta as HelmetMetaTag).property === 'og:title',
+    );
+    const ogImageMeta = helmetMetaTags.find(
+      meta => (meta as HelmetMetaTag).property === 'og:image',
+    );
+
+    expect((ogTitleMeta as HelmetMetaTag)?.content).toEqual(expectedOgTitle);
+    expect((ogImageMeta as HelmetMetaTag)?.content).toEqual(expectedOgImage);
+  });
+
+  it('sets og:title and og:image meta tags to pageTitle and promoImage when assetId is not provided', () => {
+    const pageData = liveFixture.data;
+
+    render(<Live pageData={pageData} />);
+
+    const expectedOgTitle = `${pageData.seo.seoTitle} - BBC News`;
+    const expectedOgImage = pageData.promoImage.url;
+
+    const helmetMetaTags = Helmet.peek().metaTags;
+    const ogTitleMeta = helmetMetaTags.find(
+      meta => (meta as HelmetMetaTag).property === 'og:title',
+    );
+    const ogImageMeta = helmetMetaTags.find(
+      meta => (meta as HelmetMetaTag).property === 'og:image',
+    );
+
+    expect((ogTitleMeta as HelmetMetaTag)?.content).toEqual(expectedOgTitle);
+    expect((ogImageMeta as HelmetMetaTag)?.content).toEqual(expectedOgImage);
   });
 });

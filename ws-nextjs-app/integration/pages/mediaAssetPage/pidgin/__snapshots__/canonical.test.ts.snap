@@ -1,0 +1,380 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Canonical Media Asset Page A11y I can see the skip to content link 1`] = `"Waka go wetin de inside"`;
+
+exports[`Canonical Media Asset Page Analytics ATI tracking pixel excluding src 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" >"`;
+
+exports[`Canonical Media Asset Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
+
+exports[`Canonical Media Asset Page Analytics ATI tracking pixel search params 1`] = `
+[
+  {
+    "s": "598343",
+  },
+  {
+    "s2": "70",
+  },
+  {
+    "p": "pidgin.media_asset.23248703.page",
+  },
+  {
+    "x1": "[urn:bbc:cps:curie:asset:5679389a-3ea6-0b40-9de4-f4d33d6bcd9f]",
+  },
+  {
+    "x2": "[responsive]",
+  },
+  {
+    "x3": "[news-pidgin]",
+  },
+  {
+    "x4": "[pcm]",
+  },
+  {
+    "x7": "[article-media-asset]",
+  },
+  {
+    "x8": "[simorgh-nojs]",
+  },
+  {
+    "x9": "[DO%20NOT%20EDIT%20THIS%20IS%20AN%20AUTOMATED%20TEST%20dolor%20sit%20amet,%20consectetur%20Lorem%20'ipsum'%20dolor%20sit%20amet,%20consectetur%20Lorem%20ipsum%20dolor%20sit<em>amet</em>,%20consectetur%20-%20BBC%20News%20Pidgin]",
+  },
+  {
+    "x11": "[2019-09-13T15:31:44.000Z]",
+  },
+  {
+    "x12": "[2020-06-10T14:24:07.000Z]",
+  },
+  {
+    "x16": "[Inspire me~Give me perspective~Keep me on trend]",
+  },
+  {
+    "x17": "[Opinion]",
+  },
+]
+`;
+
+exports[`Canonical Media Asset Page Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, Pidgin",
+  "url": "/pidgin",
+}
+`;
+
+exports[`Canonical Media Asset Page Footer Anchors should match text and url 2`] = `
+{
+  "text": "Why you fit trust BBC News",
+  "url": "https://www.bbc.com/pidgin/institutional-48528766",
+}
+`;
+
+exports[`Canonical Media Asset Page Footer Anchors should match text and url 3`] = `
+{
+  "text": "How dem dey take use am",
+  "url": "https://www.bbc.com/usingthebbc/terms/",
+}
+`;
+
+exports[`Canonical Media Asset Page Footer Anchors should match text and url 4`] = `
+{
+  "text": "As e concern BBC",
+  "url": "https://www.bbc.com/aboutthebbc",
+}
+`;
+
+exports[`Canonical Media Asset Page Footer Anchors should match text and url 5`] = `
+{
+  "text": "Privacy Policy",
+  "url": "https://www.bbc.com/usingthebbc/privacy/",
+}
+`;
+
+exports[`Canonical Media Asset Page Footer Anchors should match text and url 6`] = `
+{
+  "text": "Cookies",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical Media Asset Page Footer Anchors should match text and url 7`] = `
+{
+  "text": "Call BBC",
+  "url": "https://www.bbc.co.uk/pidgin/send/u50853577",
+}
+`;
+
+exports[`Canonical Media Asset Page Footer Anchors should match text and url 8`] = `
+{
+  "text": "BBC News for oda languages",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`Canonical Media Asset Page Footer Anchors should match text and url 9`] = `
+{
+  "text": "De way wey we de take go external link.",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
+}
+`;
+
+exports[`Canonical Media Asset Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
+
+exports[`Canonical Media Asset Page Footer Paragraphs should match text 1`] = `"© 2025 BBC. De external site no concern BBC. De way wey we de take go external link."`;
+
+exports[`Canonical Media Asset Page Header I can see the branding 1`] = `
+{
+  "brandLink": "BBC News, Pidgin",
+  "svg": <path
+    d="M759.928 265.75a4646.67 4646.67 0 00-23.49-37.242 2633.129 2633.129 0 00-23.49-36.2v73.442h-22.003V159.452h23.192a2668.556 2668.556 0 0123.713 36.052 2774.159 2774.159 0 0123.267 36.647v-72.699h22.003V265.75h-23.193zM804.186 159.452h73.146v19.03h-50.25v23.044h44.6v19.029h-44.6v26.166h53.075v19.03h-75.97V159.451zM982.1 265.75a3174.441 3174.441 0 01-9.886-35.978 3159.855 3159.855 0 01-9.44-35.977 2391.54 2391.54 0 01-9.218 35.977 2452.296 2452.296 0 01-9.812 35.978h-24.233a2032.839 2032.839 0 01-14.57-52.628c-4.66-17.74-9.068-35.63-13.231-53.67h24.976a2003.215 2003.215 0 007.88 41.33 1444.404 1444.404 0 008.771 40.586 3259.894 3259.894 0 0018.881-77.456h22.3a3251.95 3251.95 0 0018.733 75.821 1999.976 1999.976 0 008.623-39.843 1455.41 1455.41 0 007.73-40.438h24.53a1845.28 1845.28 0 01-13.23 53.67 2041.61 2041.61 0 01-14.57 52.628H982.1zM1077.47 267.98c-5.848 0-11.62-.645-17.32-1.932a66.227 66.227 0 01-16.427-6.096v-20.516c10.604 6.444 21.854 9.663 33.748 9.663 6.739 0 11.868-1.138 15.387-3.419 3.517-2.28 5.278-5.45 5.278-9.515 0-3.07-.869-5.475-2.602-7.21-1.735-1.733-4.04-3.122-6.913-4.163-2.876-1.04-6.095-2.007-9.663-2.899-5.85-1.387-11.002-2.974-15.462-4.757-4.46-1.784-8.228-3.889-11.299-6.319-3.073-2.427-5.403-5.352-6.987-8.771-1.587-3.42-2.38-7.508-2.38-12.265 0-6.74 1.71-12.537 5.13-17.395 3.42-4.855 8.251-8.597 14.495-11.225 6.244-2.624 13.678-3.939 22.3-3.939 5.65 0 11.2.646 16.652 1.933 5.45 1.289 10.355 3.024 14.718 5.203v20.22c-4.363-2.677-9.292-4.758-14.793-6.245-5.5-1.487-11.027-2.23-16.576-2.23-6.047 0-10.73 1.04-14.05 3.122-3.321 2.081-4.98 5.055-4.98 8.92 0 2.776.792 4.98 2.379 6.616 1.584 1.635 3.84 2.973 6.764 4.014 2.922 1.04 6.367 2.058 10.333 3.047 5.054 1.29 9.76 2.702 14.123 4.238 4.36 1.537 8.2 3.493 11.522 5.872 3.32 2.379 5.895 5.403 7.73 9.069 1.834 3.668 2.75 8.177 2.75 13.529 0 7.038-1.734 13.06-5.202 18.063-3.47 5.006-8.475 8.823-15.016 11.447-6.541 2.626-14.42 3.94-23.638 3.94z"
+  />,
+}
+`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 1`] = `
+{
+  "text": "Home",
+  "url": "/pidgin",
+}
+`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 2`] = `
+{
+  "text": "Nigeria",
+  "url": "/pidgin/topics/c2dwqd1zr92t",
+}
+`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 3`] = `
+{
+  "text": "Africa",
+  "url": "/pidgin/topics/c404v061z85t",
+}
+`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 4`] = `
+{
+  "text": "World",
+  "url": "/pidgin/topics/c0823e52dd0t",
+}
+`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 5`] = `
+{
+  "text": "Video",
+  "url": "/pidgin/topics/c3l19z3k1ert",
+}
+`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 6`] = `
+{
+  "text": "Sport",
+  "url": "/pidgin/topics/cjgn7gv77vrt",
+}
+`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 7`] = `
+{
+  "text": "Entertainment",
+  "url": "/pidgin/topics/cqywjyzk2vyt",
+}
+`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 8`] = `
+{
+  "text": "Most popular",
+  "url": "/pidgin/popular/read",
+}
+`;
+
+exports[`Canonical Media Asset Page I can see a bulleted list item 1`] = `"this is the link text"`;
+
+exports[`Canonical Media Asset Page I can see a bulleted list item with link 1`] = `"/afrique/23248423"`;
+
+exports[`Canonical Media Asset Page Main heading should match text 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sitamet, consectetur"`;
+
+exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 1`] = `
+{
+  "sizes": null,
+  "url": "http://localhost:7081/pidgin/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 2`] = `
+{
+  "sizes": "72x72",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 3`] = `
+{
+  "sizes": "96x96",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 4`] = `
+{
+  "sizes": "128x128",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 5`] = `
+{
+  "sizes": "144x144",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 6`] = `
+{
+  "sizes": "152x152",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 7`] = `
+{
+  "sizes": "180x180",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 8`] = `
+{
+  "sizes": "192x192",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 9`] = `
+{
+  "sizes": "384x384",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 10`] = `
+{
+  "sizes": "512x512",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-512x512.png",
+}
+`;
+
+exports[`Canonical Media Asset Page SEO Canonical link 1`] = `"http://localhost:7081/pidgin/23248703"`;
+
+exports[`Canonical Media Asset Page SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical Media Asset Page SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical Media Asset Page SEO Heading level 1 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sitamet, consectetur"`;
+
+exports[`Canonical Media Asset Page SEO Lang attribute 1`] = `"pcm"`;
+
+exports[`Canonical Media Asset Page SEO Linked data should match text 1`] = `
+{
+  "@context": "http://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "author": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
+          "width": 1024,
+        },
+        "name": "BBC News Pidgin",
+        "noBylinesPolicy": "https://www.bbc.com/pidgin/institutional-48528766#authorexpertise",
+      },
+      "dateModified": "2020-06-10T14:24:07.000Z",
+      "datePublished": "2019-09-13T15:31:44.000Z",
+      "headline": "DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur",
+      "image": {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://ichef.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg",
+        "width": 1024,
+      },
+      "inLanguage": {
+        "@type": "Language",
+        "alternateName": "pcm",
+        "name": "Nigerian Pidgin",
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:7081/pidgin/23248703",
+        "@type": "WebPage",
+        "name": "DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur",
+      },
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
+          "width": 1024,
+        },
+        "name": "BBC News Pidgin",
+        "publishingPrinciples": "https://www.bbc.com/pidgin/institutional-48528766",
+      },
+      "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg",
+      "url": "http://localhost:7081/pidgin/23248703",
+    },
+  ],
+}
+`;
+
+exports[`Canonical Media Asset Page SEO Linked data should match text 2`] = `
+{
+  "@context": "http://schema.org",
+  "@type": "VideoObject",
+  "description": "トランプ氏、香港人権法案に署名　中国は反発",
+  "duration": "PT5S",
+  "embedURL": "https://www.test.bbc.com/pidgin/av-embeds/23248703/vpid/p01kx42v",
+  "name": "トランプ氏、香港人権法案に署名　中国は反発",
+  "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p012zl0f.jpg",
+  "uploadDate": "2018-12-20T11:06:51.000Z",
+}
+`;
+
+exports[`Canonical Media Asset Page SEO OG description 1`] = `"Lorem ipsum dolor sit amet, consectetur this is a change"`;
+
+exports[`Canonical Media Asset Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"`;
+
+exports[`Canonical Media Asset Page SEO OG image alt 1`] = `"connectionAltText"`;
+
+exports[`Canonical Media Asset Page SEO OG locale 1`] = `"pcm"`;
+
+exports[`Canonical Media Asset Page SEO OG site name 1`] = `"BBC News Pidgin"`;
+
+exports[`Canonical Media Asset Page SEO OG title 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur - BBC News Pidgin"`;
+
+exports[`Canonical Media Asset Page SEO OG type 1`] = `"article"`;
+
+exports[`Canonical Media Asset Page SEO OG url 1`] = `"http://localhost:7081/pidgin/23248703"`;
+
+exports[`Canonical Media Asset Page SEO Page title 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sitamet, consectetur - BBC News Pidgin"`;
+
+exports[`Canonical Media Asset Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
+
+exports[`Canonical Media Asset Page SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical Media Asset Page SEO Twitter creator 1`] = `"@BBCNews"`;
+
+exports[`Canonical Media Asset Page SEO Twitter description 1`] = `"Lorem ipsum dolor sit amet, consectetur this is a change"`;
+
+exports[`Canonical Media Asset Page SEO Twitter image alt 1`] = `"connectionAltText"`;
+
+exports[`Canonical Media Asset Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"`;
+
+exports[`Canonical Media Asset Page SEO Twitter site 1`] = `"@BBCNews"`;
+
+exports[`Canonical Media Asset Page SEO Twitter title 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur - BBC News Pidgin"`;
+
+exports[`Canonical Media Asset Page Timestamp should match text and date 1`] = `
+{
+  "date": "2019-09-13",
+  "text": "13 September 2019",
+}
+`;

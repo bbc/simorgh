@@ -4,15 +4,16 @@ import { use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '#app/hooks/useViewTracker';
-import isLive from '#app/lib/utilities/isLive';
 import Text from '#app/components/Text';
 import styles from './index.styles';
 
 type ReadTimeProps = {
   readTimeValue?: number;
   className?: string;
-  readTimeVariant?: string;
+  readTimeVariant?: string | null;
   promoId?: string;
+  promoType?: string;
+  promoPosition?: number;
 };
 
 const DEFAULT_TRANSLATIONS = {
@@ -73,7 +74,7 @@ export const ReadTimeArticleExperiment = ({
     readTimeVariant,
   });
 
-  // EXPERIMENT: Read Time
+  // EXPERIMENT: Article Read Time
   const fontSize = readTimeVariant.includes('bold') ? 'pica' : 'brevier';
   const fontVariant = readTimeVariant.includes('bold')
     ? 'sansBold'
@@ -113,50 +114,74 @@ export const ReadTimeArticleExperiment = ({
   );
 };
 
+// EXPERIMENT - Placeholder for control variants
+const HomepagePlaceholder = (props: React.PropsWithChildren) => (
+  <div
+    {...props}
+    css={styles.readTimeHomepagePlaceholderControl}
+    className="placeholder"
+  />
+);
+
 export const ReadTime = ({
   readTimeValue,
   readTimeVariant,
   promoId,
+  promoType,
+  promoPosition,
   className,
 }: ReadTimeProps) => {
+  const { service } = use(ServiceContext);
+
   const validRender = [
-    !isLive(),
     readTimeValue,
     readTimeVariant,
     readTimeVariant !== 'off',
   ].every(Boolean);
 
+  // EXPERIMENT: Homepage Read Time
+  const experimentEnabledServices = ['turkce', 'mundo'];
+
+  if (readTimeVariant === null && experimentEnabledServices.includes(service))
+    return <HomepagePlaceholder />;
+
   if (!validRender) return null;
 
-  const { readTimeInMilliseconds, minutesLabel, copy } = ProcessReadTime({
+  const { readTimeInMilliseconds, copy } = ProcessReadTime({
     readTimeValue: readTimeValue as number,
     readTimeVariant: readTimeVariant as string,
   });
 
-  const eventTrackingData: EventTrackingData = {
+  const optimizelyTrackingData: EventTrackingData = {
     componentName: 'read-time',
     sendOptimizelyEvents: true,
     experimentName: 'newswb_ws_homepage_read_time',
     experimentVariant: readTimeVariant,
+  };
+
+  const eventTrackingData: EventTrackingData = {
+    ...optimizelyTrackingData,
     itemTracker: {
-      label: `Read time: ${readTimeValue} ${minutesLabel}`,
+      type: promoType,
+      position: promoPosition,
+      label: `Read time: ${readTimeValue} ${readTimeValue === 1 ? 'minute' : 'minutes'}`,
       duration: readTimeInMilliseconds,
       resourceId: promoId,
     },
   };
 
+  const isControlVariant = readTimeVariant === 'control';
+
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const viewRef = useViewTracker(eventTrackingData);
 
-  const isControlVariant = readTimeVariant === 'control';
-
-  if (isControlVariant) return <div {...viewRef} />;
+  if (isControlVariant) return <HomepagePlaceholder {...viewRef} />;
 
   return (
-    <span className={className} data-testid="read-time" {...viewRef}>
+    <div className={className} data-testid="read-time" {...viewRef}>
       <Text css={styles.readTimeText} size="brevier">
         {copy}
       </Text>
-    </span>
+    </div>
   );
 };
