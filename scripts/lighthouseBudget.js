@@ -79,8 +79,8 @@ const budget = {
 
 const testableProperties = ['ally', 'bestPractises', 'seo'];
 
-const run = (reportPath = 'simorgh.report.json') => {
-  const report = readReport(reportPath);
+const run = () => {
+  const report = readReport('simorgh.report.json');
   const extractedCategories = getCategoryScores(report);
 
   const result = compareToBudget(
@@ -110,6 +110,5 @@ module.exports = {
 const args = process.argv.slice(2);
 
 if (args[0] === 'run') {
-  const reportPath = args[1] || 'simorgh.report.json';
-  run(reportPath);
+  run();
 }

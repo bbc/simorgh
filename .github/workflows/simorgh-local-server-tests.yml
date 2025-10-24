@@ -57,12 +57,6 @@ jobs:
       - name: Run Lighthouse
         run: yarn lighthouse
 
-      - name: Upload Lighthouse Reports
-        uses: actions/upload-artifact@v4
-        with:
-          name: lighthouse-reports
-          path: lighthouse-reports/
-
       - name: Run Puppeteer Tests
         run: |
           npx puppeteer browsers install chrome
