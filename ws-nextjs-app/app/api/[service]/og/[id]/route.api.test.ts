@@ -13,6 +13,8 @@ jest.mock('next/og', () => {
   };
 });
 
+jest.mock('#app/routes/utils/fetchPageData');
+
 const mockResponse = (status: number) => {
   global.Response = jest.fn().mockImplementation(() => {
     return { status };

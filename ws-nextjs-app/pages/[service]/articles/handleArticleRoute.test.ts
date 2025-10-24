@@ -4,6 +4,17 @@ import * as fetchPageData from '#app/routes/utils/fetchPageData';
 import * as shouldRender from '#app/legacy/containers/PageHandlers/withData/shouldRender';
 import handleArticleRoute from './handleArticleRoute';
 
+jest.mock('#app/routes/utils/fetchPageData');
+jest.mock('#app/legacy/containers/PageHandlers/withData/shouldRender', () => {
+  const originalModule = jest.requireActual(
+    '#app/legacy/containers/PageHandlers/withData/shouldRender',
+  );
+  return {
+    __esModule: true,
+    ...originalModule,
+  };
+});
+
 describe('handleArticleRoute', () => {
   const mockGetServerSidePropsContext = {
     req: {

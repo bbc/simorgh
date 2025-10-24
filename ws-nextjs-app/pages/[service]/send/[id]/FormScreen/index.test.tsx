@@ -21,6 +21,14 @@ jest.mock('next/router', () => ({
   }),
 }));
 
+jest.mock('../FormContext', () => {
+  const originalModule = jest.requireActual('../FormContext');
+  return {
+    __esModule: true,
+    ...originalModule,
+  };
+});
+
 const mockContextValue = {
   formState: {},
   handleChange: jest.fn(),
@@ -38,8 +46,8 @@ describe('Form', () => {
   it('should render and match snapshot', async () => {
     jest
       .spyOn(FormContextModule, 'useFormContext')
-      .mockImplementationOnce(() => mockContextValue)
       .mockImplementationOnce(() => mockContextValue);
+
     const { container } = await act(() => {
       return render(
         <Form
