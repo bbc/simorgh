@@ -241,7 +241,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   });
 
   // TEMPORARY OVERRIDE FOR DEV/TESTING PURPOSES - REMOVE LATER
-  timeOfDayExperimentVariant = 'variant_a';
+  timeOfDayExperimentVariant = 'morning';
 
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;

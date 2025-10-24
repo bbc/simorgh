@@ -46,7 +46,8 @@ const SecondaryColumn = ({
     !multimediaCurationData
   )
     return null;
-  const showAdaptiveSection = experimentVariant === 'variant_a'; // change when we know the actual variant name
+  const showAdaptiveSection =
+    experimentVariant === 'morning' || experimentVariant === 'evening';
 
   // ideally we would want to be agnostic about the type of Curation we want to render here and have the decision made in the BFF
   // however, we cannot do this with the billboard curation as we would need to fetch the whole topic it is in, which is the whole home page,
