@@ -16698,7 +16698,6 @@ __metadata:
   resolution: "simorgh-nextjs@workspace:ws-nextjs-app"
   dependencies:
     "@babel/core": "npm:7.28.4"
-    "@babel/plugin-proposal-export-default-from": "npm:7.27.1"
     "@babel/preset-react": "npm:7.27.1"
     "@cypress/webpack-preprocessor": "npm:7.0.1"
     "@emotion/babel-plugin": "npm:11.13.5"
