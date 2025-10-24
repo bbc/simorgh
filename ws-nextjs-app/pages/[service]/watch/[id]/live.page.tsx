@@ -16,9 +16,14 @@ export const getServerSideProps: GetServerSideProps = async context => {
     isAmp: false,
     isNextJs: true,
     status: 200,
-    timeOnServer: Date.now(),
     pageType: LIVE_TV_PAGE as PageTypes,
     service,
+    pageData: {
+      metadata: {
+        type: LIVE_TV_PAGE,
+        atiAnalytics: {},
+      },
+    },
     pathname: context?.resolvedUrl,
   };
   return {
