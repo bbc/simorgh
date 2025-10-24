@@ -76,11 +76,6 @@ describe('sendPageViewBeaconOperaMini', () => {
     });
 
     it('should NOT send more than 1 beacon with XHR', () => {
-      Object.defineProperty(window, 'hasOperaMiniScriptRan', {
-        writable: true,
-        value: false,
-      });
-
       const multipleCalls =
         sendPageViewBeaconOperaMini('https://ati-host.example.com') +
         sendPageViewBeaconOperaMini('https://ati-host.example.com') +

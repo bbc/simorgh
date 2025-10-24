@@ -893,6 +893,10 @@ describe('ATI Analytics Container', () => {
       });
     });
     it('should not include the xto marketing string when a campaign type is not specified', () => {
+      jest
+        .spyOn(window.location, 'href', 'get')
+        .mockImplementation(() => 'http://localhost?foo=bar');
+
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       canonical.default = mockCanonical;
@@ -933,7 +937,7 @@ describe('ATI Analytics Container', () => {
         x2: '[responsive]',
         x3: '[news-mundo]',
         x4: '[es]',
-        x5: '[http%3A%2F%2Flocalhost%2F]',
+        x5: '[http%3A%2F%2Flocalhost%3Ffoo%3Dbar]',
         x7: '[article]',
         x8: '[simorgh]',
         x9: '[WS%20STY%20TEST%20-%20Full%20Headline%20-%20BBC%20News%20Mundo]',

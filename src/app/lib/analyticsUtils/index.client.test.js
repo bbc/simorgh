@@ -79,6 +79,7 @@ describe('analyticsUtils', () => {
 
   afterEach(() => {
     jest.clearAllMocks();
+    windowLocationHrefSpy.mockClear();
   });
 
   describe('getDestination', () => {
@@ -197,19 +198,11 @@ describe('analyticsUtils', () => {
   });
 
   describe('getBrowserViewPort', () => {
-    const windowInnerWidth = window.innerWidth;
-    const windowInnerHeight = window.innerHeight;
-
-    afterEach(() => {
-      window.innerWidth = windowInnerWidth;
-      window.innerHeight = windowInnerHeight;
-    });
-
     returnsNullWhenOffClient(getBrowserViewPort);
 
     it('should concat values, joined by "x"', () => {
-      window.innerWidth = 1234;
-      window.innerHeight = 4321;
+      jest.spyOn(window, 'innerWidth', 'get').mockImplementation(() => 1234);
+      jest.spyOn(window, 'innerHeight', 'get').mockImplementation(() => 4321);
 
       const browserViewPort = getBrowserViewPort();
 
@@ -820,15 +813,6 @@ describe('analyticsUtils', () => {
     });
 
     describe('onOnionTld', () => {
-      const { location } = window;
-
-      beforeEach(() => {
-        delete window.location;
-      });
-      afterEach(() => {
-        window.location = location;
-      });
-
       it.each`
         expectation               | currentUrl                                                                                            | expectedValue
         ${'true for onion TLD'}   | ${'https://www.bbcnewsd73hkzno2ini43t4gblxvycyac5aw4gnv7t2rccijh7745uqd.onion/news'}                  | ${true}
@@ -838,7 +822,11 @@ describe('analyticsUtils', () => {
         ${'false for .com TLD'}   | ${'https://www.bbc.com/news'}                                                                         | ${false}
         ${'false for .com TLD'}   | ${'https://www.bbcrussian.com/russian/live/news-60661774'}                                            | ${false}
       `('should return $expectation', ({ currentUrl, expectedValue }) => {
-        window.location = new URL(currentUrl);
+        const { host } = new URL(currentUrl);
+
+        jest
+          .spyOn(window.location, 'host', 'get')
+          .mockImplementation(() => host);
 
         expect(onOnionTld()).toEqual(expectedValue);
       });
