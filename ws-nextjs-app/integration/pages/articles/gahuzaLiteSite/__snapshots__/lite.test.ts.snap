@@ -23,23 +23,23 @@ exports[`Lite Site Articles Lite Site Summary should match snapshot 1`] = `
       Uriko ubona ku rubuga aherekana amakuru mu nyandiko gusa, hakoresha uburyo buke. Ja ku rubuga nyamukuru ubone amakuru mu nyandiko iherekejwe n'amasanamu.
     </p>
     <p
-      class="css-e7m1on"
+      class="css-vit5au"
       data-e2e="to-main-site"
     >
       <a
-        class="css-x4gdjv"
+        class="css-o9pupk"
         data-ignore-lite="true"
         data-static-ati-click="https://logws1363.ati-host.net?s=598285&atc=PUB-[]-[lite-site-summary]-[]-[]-[]-[]-[]-[]&type=AT"
         href="http://localhost:7081/gahuza/articles/cey23zx8wx8o"
       >
         <span
-          class="css-1hza8cj"
+          class="css-rl8nrg"
         >
           Njana ku rubuga nyamukuru canke aho gusoma gusa
         </span>
         <svg
           aria-hidden="true"
-          class="css-1xkt713"
+          class="css-1uu836y"
           focusable="false"
           height="12"
           viewBox="0 0 32 32"
@@ -52,15 +52,15 @@ exports[`Lite Site Articles Lite Site Summary should match snapshot 1`] = `
       </a>
     </p>
     <p
-      class="css-e7m1on"
+      class="css-vit5au"
       data-e2e="information-page"
     >
       <a
-        class="css-2tkjgn"
+        class="css-1vcjvhj"
         href="https://www.bbc.com/gahuza/articles/cn7y7pvem0vo.lite"
       >
         <span
-          class="css-h4fwue"
+          class="css-1fsdgr1"
         >
           Ibindi vyerekeye ingene urwo rubuga rugutwara uburyo (ama mega) buke
         </span>
