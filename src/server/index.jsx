@@ -330,7 +330,7 @@ server.get(
             {
               title: countrySpecificData.json.data.title,
               description: countrySpecificData.json.data.description,
-              articles: Array.isArray(countryArticles)
+              summaries: Array.isArray(countryArticles)
                 ? countryArticles.slice(0, 4)
                 : [],
               topicId: countrySpecificTopics[data.country],
@@ -338,7 +338,7 @@ server.get(
             {
               title: defaultTopicData.json.data.title,
               description: defaultTopicData.json.data.description,
-              articles: Array.isArray(defaultArticles)
+              summaries: Array.isArray(defaultArticles)
                 ? defaultArticles.slice(0, 4)
                 : [],
               topicId: defaultTopicId,
@@ -350,7 +350,7 @@ server.get(
             {
               title: defaultTopicData.json.data.title,
               description: defaultTopicData.json.data.description,
-              articles: Array.isArray(defaultArticles)
+              summaries: Array.isArray(defaultArticles)
                 ? defaultArticles.slice(0, 4)
                 : [],
               topicId: defaultTopicId,

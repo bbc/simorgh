@@ -499,15 +499,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                 liteCTAShows={liteCTAShows}
               />
             )}
-            {/* EXPERIMENT: Personalised Content */}
-            {showPersonalisedContent && (
-              <PersonalisedContent
-                pageData={pageData}
-                personalisedTopicCurationExperimentVariant={
-                  personalisedContentExperimentVariant ?? ''
-                }
-              />
-            )}
             {/* EXPERIMENT: Read Time & Continue Reading */}
             {(readTimeValue || experimentVariant) && (
               <OptimizelyPageMetrics trackPageComplete />
@@ -535,6 +526,15 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             content={blocks}
             sendOptimizelyEvents={false}
           />
+          {/* EXPERIMENT: Personalised Content */}
+          {showPersonalisedContent && (
+            <PersonalisedContent
+              pageData={pageData}
+              personalisedTopicCurationExperimentVariant={
+                personalisedContentExperimentVariant ?? ''
+              }
+            />
+          )}
         </div>
         {!isApp && !isPGL && (
           <SecondaryColumn pageData={pageData} sendOptimizelyEvents={false} />

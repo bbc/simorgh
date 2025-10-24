@@ -17,7 +17,7 @@ const PersonalisedContent = ({
 }) => {
   type PersonalisedContentType = {
     title?: string;
-    articles?: Summary[];
+    summaries?: Summary[];
     curationLength?: number;
     id?: string;
     link?: string;
@@ -61,7 +61,7 @@ const PersonalisedContent = ({
   console.log('yyy', personalisedContentData);
   const {
     title,
-    articles = [],
+    summaries = [],
     id = 'personalised-content',
     link = '',
     isFirstCuration = false,
@@ -78,7 +78,7 @@ const PersonalisedContent = ({
       type: 'personalised-topic-curation',
       ...(link && { link }),
       ...(topicId && { resourceId: topicId }),
-      ...(articles?.length > 0 && { itemCount: articles.length }),
+      ...(summaries?.length > 0 && { itemCount: summaries.length }),
     },
   };
   const viewTracker = useViewTracker(eventTrackingData);
@@ -95,7 +95,7 @@ const PersonalisedContent = ({
         </Subheading>
       )}
       <CurationGrid
-        summaries={articles}
+        summaries={summaries}
         headingLevel={3}
         isFirstCuration={isFirstCuration}
         eventTrackingData={eventTrackingData}
