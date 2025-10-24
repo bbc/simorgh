@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-// @ts-nocheck
 import { addProcessClientDeviceAndSendStaticBeaconToWindow } from '.';
 
 describe('addProcessClientDeviceAndSendStaticBeaconToWindow script', () => {
@@ -115,7 +113,12 @@ describe('addProcessClientDeviceAndSendStaticBeaconToWindow script', () => {
   });
 
   describe('on lite pages', () => {
-    window.location.assign('http://localhost#persian.lite');
+    beforeEach(() => {
+      jest
+        .spyOn(window.location, 'pathname', 'get')
+        .mockImplementation(() => '/persian.lite');
+    });
+
     it.each([
       {
         atiUrl: 'https://logws1363.ati-host.net/?',
@@ -155,17 +158,13 @@ describe('addProcessClientDeviceAndSendStaticBeaconToWindow script', () => {
           value: 'https://www.bbc.com',
         });
 
-        window.screen = {
-          width: 100,
-          height: 400,
-          colorDepth: 24,
-          pixelDepth: 24,
-          availWidth: 400,
-          availHeight: 100,
-          orientation: 'landscape' as unknown as ScreenOrientation,
-        };
-        window.innerWidth = 4060;
-        window.innerHeight = 1080;
+        jest.replaceProperty(window.screen, 'width', 100);
+        jest.replaceProperty(window.screen, 'height', 400);
+        jest.replaceProperty(window.screen, 'colorDepth', 24);
+        jest.replaceProperty(window.screen, 'pixelDepth', 24);
+
+        jest.spyOn(window, 'innerWidth', 'get').mockReturnValue(4060);
+        jest.spyOn(window, 'innerHeight', 'get').mockReturnValue(1080);
 
         window.processClientDeviceAndSendStaticBeacon(atiUrl, reverbUrl);
 
