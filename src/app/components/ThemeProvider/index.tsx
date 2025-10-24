@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import React, { PropsWithChildren } from 'react';
 import type { LoadableComponent } from '@loadable/component';
 import nodeLogger from '#lib/logger.node';
@@ -42,14 +43,14 @@ const variantThemes = Object.fromEntries(
 export const ThemeProvider = ({
   children,
   service,
-  ...rest
+  variant,
 }: PropsWithChildren<ServicesVariantsProps>) => {
   let LoadableContextProvider:
     | ThemeComponentLoadable
     | FallbackThemeComponent
     | null = null;
 
-  const variant: Variants = rest.variant || defaultServiceVariants[service];
+  variant = variant || defaultServiceVariants[service];
 
   let themeWithVariant;
   let themeNoVariant;
