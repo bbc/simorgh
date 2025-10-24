@@ -61,6 +61,21 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
     curation => curation.portraitVideo,
   );
 
+  const getSynopses = (
+    synopses: { short: string; medium: string; long: string } | undefined,
+  ) => {
+    if (!synopses) return '';
+    return synopses.short || synopses.medium || synopses.long;
+  };
+
+  const synopses = getSynopses(
+    pageData?.curations?.[0].mediaCollection?.[0].model.synopses,
+  );
+
+  // Had this originally but thought it best to cater to all of the available options? i.e in case editorial don't provide a medium option etc
+  // const synopses =
+  //   pageData?.curations?.[0].mediaCollection?.[0].model.synopses.medium;
+
   return (
     <>
       {/* <ATIAnalytics atiData={atiAnalytics} />
@@ -81,6 +96,7 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
               Live TV Page with schedule
             </Heading>
             <Text css={styles.description}>{description}</Text>
+            <Text>{synopses}</Text>
             {portraitVideoCuration &&
               renderCuration({ curation: portraitVideoCuration })}
             {radioScheduleCuration &&
