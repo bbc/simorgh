@@ -78,18 +78,6 @@ exports[`Document Component should render APP version correctly 1`] = `
       data-react-helmet="true"
       name="viewport"
     />
-    <link
-      href="modern.main.js"
-      rel="modulepreload"
-    />
-    <link
-      href="modern.vendor.js"
-      rel="modulepreload"
-    />
-    <link
-      href="modern.igbo.js"
-      rel="modulepreload"
-    />
     <meta
       content="noindex"
       name="robots"
@@ -103,6 +91,18 @@ exports[`Document Component should render APP version correctly 1`] = `
       data-react-helmet="true"
       href="https://www.bbc.com/news/articles/c6v11qzyv8po"
       rel="canonical"
+    />
+    <link
+      href="modern.main.js"
+      rel="modulepreload"
+    />
+    <link
+      href="modern.vendor.js"
+      rel="modulepreload"
+    />
+    <link
+      href="modern.igbo.js"
+      rel="modulepreload"
     />
     <script>
       
@@ -287,6 +287,16 @@ exports[`Document Component should render correctly 1`] = `
       data-react-helmet="true"
       name="viewport"
     />
+    <title
+      data-react-helmet="true"
+    >
+      Test title
+    </title>
+    <link
+      data-react-helmet="true"
+      href="https://www.bbc.com/news/articles/c6v11qzyv8po"
+      rel="canonical"
+    />
     <link
       href="modern.main.js"
       rel="modulepreload"
@@ -298,16 +308,6 @@ exports[`Document Component should render correctly 1`] = `
     <link
       href="modern.igbo.js"
       rel="modulepreload"
-    />
-    <title
-      data-react-helmet="true"
-    >
-      Test title
-    </title>
-    <link
-      data-react-helmet="true"
-      href="https://www.bbc.com/news/articles/c6v11qzyv8po"
-      rel="canonical"
     />
     <script>
       

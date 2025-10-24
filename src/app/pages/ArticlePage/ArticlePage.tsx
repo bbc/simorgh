@@ -73,9 +73,7 @@ import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
 import styles from './ArticlePage.styles';
 import { ComponentToRenderProps, TimeStampProps } from './types';
-import ContinueReadingButton, {
-  Props as ContinueReadingProps,
-} from './ContinueReadingButton';
+import ContinueReadingButton from './ContinueReadingButton';
 import ArticleHeadline from './ArticleHeadline';
 import {
   isPortraitVideo,
@@ -358,9 +356,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       !isLite &&
       !isApp &&
       experimentVariant &&
-      ['read-more-a', 'read-more-b', 'read-more-a-and-top-stories'].includes(
-        experimentVariant,
-      ),
+      ['read-more-b'].includes(experimentVariant),
   );
 
   return (
@@ -428,10 +424,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               <ContinueReadingButton
                 showAllContent={showAllContent}
                 setShowAllContent={() => setShowAllContent(true)}
-                variation={
-                  experimentVariant as ContinueReadingProps['variation']
-                }
-                liteCTAShows={liteCTAShows}
               />
             )}
             <OptimizelyPageMetrics trackPageComplete />
