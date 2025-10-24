@@ -1,4 +1,4 @@
-import loadable from '@loadable/component';
+import loadable from '#app/utilities/universalLoadable';
 
 export const ArticlePage = loadable(() => import('./ArticlePage'));
 export const MediaArticlePage = loadable(() => import('./MediaArticlePage'));

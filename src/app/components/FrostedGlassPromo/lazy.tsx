@@ -1,4 +1,4 @@
-import loadable from '@loadable/component';
+import loadable from '#app/utilities/universalLoadable';
 
 export default loadable(
   () =>

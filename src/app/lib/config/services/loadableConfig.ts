@@ -1,5 +1,6 @@
 import { Services } from '#app/models/types/global';
-import loadable from '@loadable/component';
+
+import loadable from '#app/utilities/universalLoadable';
 
 const loadableConfig = {
   afaanoromoo: loadable(() => import('./afaanoromoo')),
