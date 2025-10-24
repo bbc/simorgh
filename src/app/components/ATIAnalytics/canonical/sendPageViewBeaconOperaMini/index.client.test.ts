@@ -2,12 +2,6 @@
 import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
 import sendPageViewBeaconOperaMini from '.';
 
-interface WindowOperaMini extends Window {
-  hasOperaMiniScriptRan?: boolean;
-  operamini?: object;
-}
-
-let windowSpy: jest.SpyInstance<Window | undefined, []>;
 let XMLHttpRequestSpy: jest.SpyInstance<XMLHttpRequest | undefined, []>;
 let documentReferrerSpy: jest.SpyInstance;
 
@@ -25,10 +19,9 @@ describe('sendPageViewBeaconOperaMini', () => {
     send: jest.fn(),
   };
 
-  const sendStaticBeacon = eval(addSendStaticBeaconToWindow());
+  eval(addSendStaticBeaconToWindow());
 
   beforeEach(() => {
-    windowSpy = jest.spyOn(window, 'window', 'get');
     documentReferrerSpy = jest.spyOn(document, 'referrer', 'get');
     XMLHttpRequestSpy = (
       jest.spyOn(window, 'XMLHttpRequest') as jest.Mock
@@ -36,7 +29,6 @@ describe('sendPageViewBeaconOperaMini', () => {
   });
 
   afterEach(() => {
-    windowSpy.mockRestore();
     XMLHttpRequestSpy.mockRestore();
     documentReferrerSpy.mockRestore();
     jest.clearAllMocks();
@@ -44,13 +36,21 @@ describe('sendPageViewBeaconOperaMini', () => {
 
   describe('when browser is Opera Mini', () => {
     beforeEach(() => {
-      windowSpy.mockImplementation(
-        () =>
-          ({
-            operamini: new OperaMiniMock(),
-            sendStaticBeacon,
-          }) as WindowOperaMini,
-      );
+      Object.defineProperty(window, 'operamini', {
+        writable: true,
+        value: new OperaMiniMock(),
+      });
+      Object.defineProperty(window, 'hasOperaMiniScriptRan', {
+        writable: true,
+        value: false,
+      });
+    });
+
+    afterEach(() => {
+      // @ts-expect-error Property 'operamini' does not exist on type 'Window & typeof globalThis'.
+      delete window.operamini;
+      // @ts-expect-error Property 'hasOperaMiniScriptRan' does not exist on type 'Window & typeof globalThis'.
+      delete window.hasOperaMiniScriptRan;
     });
 
     it('should send beacon with XHR', () => {
@@ -76,13 +76,10 @@ describe('sendPageViewBeaconOperaMini', () => {
     });
 
     it('should NOT send more than 1 beacon with XHR', () => {
-      const check = {
-        hasOperaMiniScriptRan: false,
-        operamini: new OperaMiniMock(),
-        sendStaticBeacon,
-      } as WindowOperaMini;
-
-      windowSpy.mockImplementation(() => check);
+      Object.defineProperty(window, 'hasOperaMiniScriptRan', {
+        writable: true,
+        value: false,
+      });
 
       const multipleCalls =
         sendPageViewBeaconOperaMini('https://ati-host.example.com') +

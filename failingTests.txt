@@ -1,6 +1,4 @@
 src/app/routes/utils/fetchPageData/index.test.js
-src/app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon/index.test.ts
-src/app/components/ATIAnalytics/canonical/sendPageViewBeaconOperaMini/index.test.ts
 src/app/lib/analyticsUtils/staticATITracking/clickTracking/index.test.ts
 src/app/lib/utilities/setCookie/index.test.jsx
 src/app/contexts/RequestContext/getOriginContext/index.test.ts
