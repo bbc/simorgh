@@ -1,1 +1,1 @@
-export default () => typeof window !== 'undefined' && window.location;
+export default () => Boolean(typeof window) && Boolean(window.location);

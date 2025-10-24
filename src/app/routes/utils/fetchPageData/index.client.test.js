@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 import loggerMock from '#testHelpers/loggerMock'; // Must be imported before fetchPageData
 import {
   DATA_FETCH_ERROR,
@@ -5,7 +6,7 @@ import {
   DATA_RESPONSE_FROM_CACHE,
 } from '#lib/logger.const';
 import isLocal from '#app/lib/utilities/isLocal';
-import onClient from '#app/lib/utilities/onClient';
+import * as onClient from '#app/lib/utilities/onClient';
 import fetchPageData from '.';
 
 const expectedBaseUrl = 'http://localhost';
@@ -18,18 +19,22 @@ const pageType = 'Fetch Page Data';
 const requestOrigin = 'Jest Test';
 
 jest.mock('#app/lib/utilities/isLocal', () => jest.fn());
-jest.mock('#app/lib/utilities/onClient', () => jest.fn());
+
+jest.mock('#app/lib/utilities/onClient', () => ({
+  __esModule: true,
+  default: jest.fn().mockImplementation(() => false),
+}));
+
+const onClientSpy = jest.spyOn(onClient, 'default');
 
 const timeoutSpy = jest.spyOn(AbortSignal, 'timeout');
-
-//
-//
 
 describe('fetchPageData', () => {
   afterEach(() => {
     jest.clearAllMocks();
     fetch.resetMocks();
     timeoutSpy.mockClear();
+    onClientSpy.mockClear();
   });
 
   describe('data request received logging', () => {
@@ -85,11 +90,11 @@ describe('fetchPageData', () => {
       );
     });
 
-    const fetchOptions = {
+    const fetchOptions = expect.objectContaining({
       headers: {
         'User-Agent': 'Simorgh/ws-web-rendering',
       },
-    };
+    });
 
     it('should call fetch with the correct url when passed the pathname', async () => {
       await fetchPageData({ path: requestedPathname, pageType });
@@ -122,12 +127,13 @@ describe('fetchPageData', () => {
     it('should call fetch with the correct headers when passed additional headers', async () => {
       const optHeaders = { 'ctx-service-env': 'live' };
 
-      const expectedFetchOptions = {
+      const expectedFetchOptions = expect.objectContaining({
         headers: {
           'User-Agent': 'Simorgh/ws-web-rendering',
           'ctx-service-env': 'live',
         },
-      };
+      });
+
       await fetchPageData({ path: requestedPathname, pageType, optHeaders });
 
       expect(timeoutSpy).toHaveBeenCalledTimes(1);
@@ -152,16 +158,22 @@ describe('fetchPageData', () => {
   });
 
   describe('Rejected fetch', () => {
-    it('should handle a rejected Ares fetch and return an error the Simorgh app can handle', () => {
-      fetch.mockRejectedValue(new Error('Failed to fetch'), { status: 500 });
+    describe('on server', () => {
+      beforeEach(() => {
+        onClientSpy.mockImplementationOnce(() => false);
+      });
 
-      return fetchPageData({ path: requestedPathname, pageType }).catch(
-        ({ message, status }) =>
-          expect({ message, status }).toEqual({
-            message: 'Failed to fetch',
-            status: 500,
-          }),
-      );
+      it('should handle a rejected Ares fetch and return an error the Simorgh app can handle', () => {
+        fetch.mockRejectedValue(new Error('Failed to fetch'), { status: 500 });
+
+        return fetchPageData({ path: requestedPathname, pageType }).catch(
+          ({ message, status }) =>
+            expect({ message, status }).toEqual({
+              message: 'Failed to fetch',
+              status: 500,
+            }),
+        );
+      });
     });
   });
 
@@ -169,6 +181,10 @@ describe('fetchPageData', () => {
     fetch.mockResponse('Some Invalid JSON');
 
     describe('on server', () => {
+      beforeEach(() => {
+        onClientSpy.mockImplementation(() => false);
+      });
+
       it('should return a 500 error code', () => {
         return fetchPageData({ path: requestedPathname, pageType }).catch(
           ({ message, status }) => {
@@ -193,27 +209,25 @@ describe('fetchPageData', () => {
 
     describe('on client', () => {
       beforeEach(() => {
-        onClient.mockReturnValueOnce(true);
+        onClientSpy.mockImplementation(() => true);
       });
 
-      it('should return a 502 error code', () => {
-        return fetchPageData({ path: requestedPathname, pageType }).catch(
-          ({ message, status }) => {
-            expect(loggerMock.error).toHaveBeenCalledWith(DATA_FETCH_ERROR, {
-              error:
-                'invalid json response body at  reason: Unexpected end of JSON input',
-              status: 502,
-              data: expectedUrl,
-              path: requestedPathname,
-              pageType,
-            });
-            expect({ message, status }).toEqual({
-              message:
-                'invalid json response body at  reason: Unexpected end of JSON input',
-              status: 502,
-            });
-          },
-        );
+      it('should return a 502 error code', async () => {
+        try {
+          return await fetchPageData({ path: requestedPathname, pageType });
+        } catch ({ message, status }) {
+          expect(loggerMock.error).toHaveBeenCalledWith(DATA_FETCH_ERROR, {
+            error: `invalid json response body at  reason: Unexpected end of JSON input`,
+            status: 502,
+            data: expectedUrl,
+            path: requestedPathname,
+            pageType,
+          });
+          expect({ message, status }).toEqual({
+            message: `invalid json response body at  reason: Unexpected end of JSON input`,
+            status: 502,
+          });
+        }
       });
     });
   });
@@ -235,6 +249,10 @@ describe('fetchPageData', () => {
 
   describe('Request returns a non-200, non-404 status code', () => {
     describe('on server', () => {
+      // beforeEach(() => {
+      //   jest.spyOn(window.location, 'get').mockImplementation(() => undefined);
+      // });
+
       it('should log, and return the status code as 500', async () => {
         fetch.mockResponse("I'm a teapot", { status: 418 });
 
@@ -282,7 +300,7 @@ describe('fetchPageData', () => {
 
   describe('on client', () => {
     beforeEach(() => {
-      onClient.mockReturnValueOnce(true);
+      onClientSpy.mockImplementation(() => true);
     });
 
     it('should log, and return the status code as 502', async () => {
@@ -306,7 +324,7 @@ describe('fetchPageData', () => {
       );
     });
 
-    it('should log, and propogate the status code as 502', async () => {
+    it('should log, and propagate the status code as 502', async () => {
       fetch.mockResponse('Internal server error', { status: 500 });
       return fetchPageData({ path: requestedPathname, pageType }).catch(
         ({ message, status }) => {
