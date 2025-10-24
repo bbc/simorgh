@@ -1,9 +1,5 @@
 import React from 'react';
 import * as reactDom from 'react-dom/client';
-import {
-  resetWindowValue,
-  setWindowValue,
-} from '#psammead/psammead-test-helpers/src';
 import '#testHelpers/loggerMock';
 
 jest.mock('react-dom/client');
@@ -29,13 +25,15 @@ jest.mock('./app/routes/utils/fetchPageData/utils/getRouteProps');
 const mockRootElement = <div />;
 document.getElementById = jest.fn().mockReturnValue(mockRootElement);
 
-const windowLocation = window.location;
 const pathname = '/foobar/articles/c0000000001o';
 const unknownPathName = '/search?foo=bar';
 
 describe('Client', () => {
   beforeAll(() => {
-    setWindowValue('SIMORGH_DATA', { pageData: 'some data', path: pathname });
+    Object.defineProperty(window, 'SIMORGH_DATA', {
+      pageData: 'some data',
+      path: pathname,
+    });
   });
 
   beforeEach(() => {
@@ -43,12 +41,13 @@ describe('Client', () => {
   });
 
   afterAll(() => {
-    resetWindowValue('SIMORGH_DATA', null);
-    resetWindowValue('location', windowLocation);
+    delete window.SIMORGH_DATA;
   });
 
   it('should hydrate client once routes are ready', async () => {
-    setWindowValue('location', { pathname });
+    jest
+      .spyOn(window.location, 'pathname', 'get')
+      .mockImplementation(() => pathname);
 
     await new Promise(resolve => {
       jest.isolateModules(async () => {
@@ -61,7 +60,9 @@ describe('Client', () => {
   });
 
   it('should not hydrate client if no routes match', async () => {
-    setWindowValue('location', { pathname: unknownPathName });
+    jest
+      .spyOn(window.location, 'pathname', 'get')
+      .mockImplementation(() => unknownPathName);
 
     await new Promise(resolve => {
       jest.isolateModules(async () => {
