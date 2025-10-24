@@ -124,31 +124,34 @@ describe('getToggles', () => {
       expect(toggles).toEqual(mockDefaultToggles.local);
     });
 
-    it('should calculate and log response time of toggles call when called on server', async () => {
-      const { default: getToggles } = await import('.');
+    describe('when called', () => {
+      describe('on server', () => {
+        it('should calculate and log response time', async () => {
+          const { default: getToggles } = await import('.');
 
-      const hrtTimeSpy = jest
-        .spyOn(process, 'hrtime')
-        .mockReturnValue([10, 1000]);
+          const hrtTimeSpy = jest
+            .spyOn(process, 'hrtime')
+            .mockReturnValue([10, 1000]);
 
-      await getToggles('mundo');
+          await getToggles('mundo');
 
-      expect(hrtTimeSpy).toHaveBeenCalledTimes(2);
-    });
-
-    describe('on client', () => {
-      beforeEach(() => {
-        onClientSpy.mockClear();
-        onClientSpy.mockImplementation(() => true);
+          expect(hrtTimeSpy).toHaveBeenCalledTimes(2);
+        });
       });
 
-      it('should not calculate and log response', async () => {
-        const { default: getToggles } = await import('.');
-        const hrtTimeSpy = jest.spyOn(process, 'hrtime');
+      describe('on client', () => {
+        beforeEach(() => {
+          onClientSpy.mockImplementation(() => true);
+        });
 
-        await getToggles('mundo');
+        it('should not calculate and log response time', async () => {
+          const { default: getToggles } = await import('.');
+          const hrtTimeSpy = jest.spyOn(process, 'hrtime');
 
-        expect(hrtTimeSpy).toHaveBeenCalledTimes(0);
+          await getToggles('mundo');
+
+          expect(hrtTimeSpy).toHaveBeenCalledTimes(0);
+        });
       });
     });
   });
