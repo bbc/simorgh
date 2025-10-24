@@ -1,7 +1,6 @@
 import React, { use } from 'react';
 import { Curation } from '#app/models/types/curationData';
 import LiveTVCuration from '#app/components/Curation';
-import { data as liveTvFixture } from '#data/dari/watch/bbc_afghan_tv/live.json';
 import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
 import MetadataContainer from '#app/components/Metadata';
@@ -13,12 +12,6 @@ import styles from './styles';
 
 export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
   const { lang } = use(ServiceContext);
-
-  if (!pageData.title) {
-    // @ts-expect-error liveTvFixture used for development purposes only
-    // eslint-disable-next-line no-param-reassign
-    pageData = liveTvFixture;
-  }
 
   const { curations, description, title } = pageData;
 
