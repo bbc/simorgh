@@ -32,7 +32,7 @@ import { Services } from '#app/models/types/global';
 import { Article } from '#app/models/types/optimo';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import * as viewTracking from '#app/hooks/useViewTracker';
-import PersonalisedContent from './PersonalisedContent';
+import PersonalisedContent from '../../components/PersonalisedContent';
 import {
   render,
   screen,

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, useTheme } from '@emotion/react';
+import { jsx } from '@emotion/react';
 
 import { Article } from '#app/models/types/optimo';
 import CurationGrid from '#app/components/Curation/CurationGrid';
@@ -28,10 +28,6 @@ const PersonalisedContent = ({
     topicId?: string;
   };
 
-  // const {
-  //   palette: { GREY_2 },
-  // } = useTheme();
-
   const personalisedContentArray = pageData.secondaryColumn
     ?.PersonalisedContent as PersonalisedContentType[] | undefined;
 
@@ -54,7 +50,6 @@ const PersonalisedContent = ({
   };
 
   const personalisedContentData = getPersonalisedContentData();
-  console.log('yyy', personalisedContentData);
   const {
     title,
     summaries = [],
