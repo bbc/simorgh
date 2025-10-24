@@ -313,11 +313,7 @@ const getQueryParamsFromURL = href => {
   const { searchParams, hash } = new URL(href, 'https://www.bbc.com');
   const query = Object.fromEntries(searchParams);
 
-  let hashParams = {};
-
-  if (hash) {
-    hashParams = parameteriseHash(hash);
-  }
+  const hashParams = hash ? parameteriseHash(hash) : {};
 
   return { ...query, ...hashParams };
 };

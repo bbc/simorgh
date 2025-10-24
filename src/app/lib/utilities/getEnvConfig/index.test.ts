@@ -13,6 +13,7 @@ describe('getEnvConfig', () => {
 
   afterEach(() => {
     jest.clearAllMocks();
+    onClientSpy.mockClear();
     // @ts-expect-error The operand of a 'delete' operator must be optional.ts(2790)
     delete window.SIMORGH_ENV_VARS;
   });
