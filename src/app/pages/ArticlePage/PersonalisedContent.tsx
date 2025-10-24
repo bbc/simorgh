@@ -30,11 +30,6 @@ const PersonalisedContent = ({
   // const {
   //   palette: { GREY_2 },
   // } = useTheme();
-  console.log(
-    'xxx',
-    typeof pageData.secondaryColumn?.PersonalisedContent,
-    pageData.secondaryColumn?.PersonalisedContent,
-  );
 
   const personalisedContentArray = pageData.secondaryColumn
     ?.PersonalisedContent as PersonalisedContentType[] | undefined;
