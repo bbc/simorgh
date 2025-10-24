@@ -10,6 +10,11 @@ export type TestDataType = {
   tests: TestType[];
   runforEnv: string[];
   service: string;
+  useReverb?: boolean;
+  contentType?: string;
+  applicationType?: string;
+  siteId?: string;
+  pageIdentifier?: string;
 };
 
 type FunctionProps = {
@@ -102,7 +107,6 @@ export default ({
             pageType,
             ...params,
           } as unknown as ServiceParametersType;
-
           tests.forEach(test => {
             test(testParams);
           });
