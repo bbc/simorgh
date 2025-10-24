@@ -142,6 +142,7 @@ const ScheduleItemHeader = ({
       <TitleWrapper
         service={service}
         script={script}
+        suppressHydrationWarning
         {...programStateConfig[state]}
       >
         {episodeTitle}
