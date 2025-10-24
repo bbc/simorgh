@@ -84,7 +84,6 @@ const getToggles = async (service, cache) => {
       ...toggles,
     };
   } catch (error) {
-    console.warn(expect.getState().currentTestName, { error });
     logger.error(CONFIG_ERROR, { error: error.toString(), url, service });
     return localToggles;
   }
