@@ -2,7 +2,7 @@
 import fs from 'node:fs/promises';
 import path from 'path';
 import { PageTypes, Services } from '#app/models/types/global';
-import { FetchError } from '#app/models/types/fetch';
+import { NextApiRequest, NextApiResponse } from 'next';
 
 type RequestPathParts = {
   service: Services;
@@ -37,23 +37,18 @@ const constructDataFilePath = ({
       );
 };
 
-export async function GET(
-  _req: Request,
-  {
-    params,
-  }: RouteContext<'/api/local/[service]/[pageType]/[id]/[[...optionalParams]]'>,
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
 ) {
   try {
-    const { ...routeParams } = await params;
-
-    const dataFilePath = constructDataFilePath(routeParams as RequestPathParts);
+    const dataFilePath = constructDataFilePath(req.query as RequestPathParts);
     const pageData = await fs.readFile(dataFilePath, {
       encoding: 'utf8',
     });
 
-    return Response.json(JSON.parse(pageData));
+    return res.status(200).send(pageData);
   } catch (error) {
-    const { message } = error as FetchError;
-    return new Response(message, { status: 404 });
+    return res.status(404).send({ error: `Data not found. ${error}` });
   }
 }

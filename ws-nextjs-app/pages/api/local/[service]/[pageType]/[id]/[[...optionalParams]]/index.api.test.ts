@@ -7,12 +7,12 @@ import dualScriptLivePageData from '#data/zhongwen/live/c0000000000t/simp.json';
 import ugFormData from '#data/mundo/send/u50853489.json';
 import russianAvEmbedData from '#data/russian/av-embeds/features-49881797.json';
 import russianAvEmbedDataWithPid from '#data/russian/av-embeds/features-49881797/pid/p07q3wwl.json';
-import * as appHandler from './route.api';
+import * as pagesHandler from './index.api';
 
 describe('API Routes', () => {
   it('should return Live Page data', async () => {
     await testApiHandler({
-      appHandler,
+      pagesHandler,
       params: {
         service: 'pidgin',
         pageType: 'live',
@@ -30,7 +30,7 @@ describe('API Routes', () => {
 
   it('should return Live Page data for a dual script service', async () => {
     await testApiHandler({
-      appHandler,
+      pagesHandler,
       params: {
         service: 'zhongwen',
         pageType: 'live',
@@ -49,7 +49,7 @@ describe('API Routes', () => {
 
   it('should return UGC Uploader form data', async () => {
     await testApiHandler({
-      appHandler,
+      pagesHandler,
       params: {
         service: 'mundo',
         pageType: 'send',
@@ -67,7 +67,7 @@ describe('API Routes', () => {
 
   it('should return AV Embeds data', async () => {
     await testApiHandler({
-      appHandler,
+      pagesHandler,
       params: {
         service: 'russian',
         pageType: 'av-embeds',
@@ -85,7 +85,7 @@ describe('API Routes', () => {
 
   it('should return AV Embeds data with specific media ID', async () => {
     await testApiHandler({
-      appHandler,
+      pagesHandler,
       params: {
         service: 'russian',
         pageType: 'av-embeds',
@@ -106,7 +106,7 @@ describe('API Routes', () => {
 
   it('should return a 404 when the requested fixture does not exist', async () => {
     await testApiHandler({
-      appHandler,
+      pagesHandler,
       params: {
         service: 'swahili',
         pageType: 'invalidType',
