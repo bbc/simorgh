@@ -6,6 +6,7 @@ import { Services } from '#app/models/types/global';
 import { Article } from '#app/models/types/optimo';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import nodeLogger from '#lib/logger.node';
+import { NextApiResponse } from 'next';
 
 const logger = nodeLogger(__filename);
 
@@ -13,8 +14,10 @@ export const pageTypeToLog = 'og-image';
 
 export const responseNotFound = ({
   pathname,
+  res,
 }: {
   pathname: URL['pathname'];
+  res: NextApiResponse;
 }) => {
   logger.error(ROUTING_INFORMATION, {
     url: pathname,
@@ -22,13 +25,15 @@ export const responseNotFound = ({
     pageType: pageTypeToLog,
   });
 
-  return new Response('Not found', { status: NOT_FOUND });
+  return res.status(NOT_FOUND).send('Not Found');
 };
 
 export const responseServerError = ({
   pathname,
+  res,
 }: {
   pathname: URL['pathname'];
+  res: NextApiResponse;
 }) => {
   logger.error(ROUTING_INFORMATION, {
     url: pathname,
@@ -36,7 +41,7 @@ export const responseServerError = ({
     pageType: pageTypeToLog,
   });
 
-  return new Response('Server error', { status: INTERNAL_SERVER_ERROR });
+  return res.status(INTERNAL_SERVER_ERROR).send('Internal Server Error');
 };
 
 const getDefaultImage = (service: Services) =>

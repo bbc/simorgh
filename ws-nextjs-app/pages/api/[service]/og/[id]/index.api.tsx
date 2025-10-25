@@ -96,14 +96,14 @@ export default async function handler(
 
   try {
     const { id, service } = req.query as { id: string; service: Services };
-    if (!id || !service) return responseNotFound({ pathname });
+    if (!id || !service) return responseNotFound({ pathname, res });
 
     const rendererEnv =
       searchParams.get('renderer_env') || process.env.SIMORGH_APP_ENV;
 
     const pageType = getPageType(id);
 
-    if (!pageType) return responseNotFound({ pathname });
+    if (!pageType) return responseNotFound({ pathname, res });
 
     const [{ data }, sansMediumBuffer, sansBoldBuffer] = await Promise.all([
       // Fetch asset
@@ -121,9 +121,9 @@ export default async function handler(
       fetch(REITH_SANS_BOLD_FONT_URL).then(response => response.arrayBuffer()),
     ]);
 
-    if (data.status === NOT_FOUND) return responseNotFound({ pathname });
+    if (data.status === NOT_FOUND) return responseNotFound({ pathname, res });
     if (data.status === INTERNAL_SERVER_ERROR)
-      return responseServerError({ pathname });
+      return responseServerError({ pathname, res });
 
     const dataExtractor = {
       live: extractLiveData,
@@ -249,7 +249,6 @@ export default async function handler(
         fonts,
       },
     );
-
     const buffer = await imageResponse.arrayBuffer();
 
     const compressedImage = await compressArrayBuffer(buffer);
@@ -267,7 +266,7 @@ export default async function handler(
       'public, stale-if-error=3600, stale-while-revalidate=3600, max-age=600',
     );
 
-    return res.status(200).end(Buffer.from(compressedImage));
+    return res.status(200).send(Buffer.from(compressedImage));
   } catch (error: unknown) {
     const { message } = error as FetchError;
 
@@ -286,6 +285,6 @@ export default async function handler(
       pageType: pageTypeToLog,
     });
 
-    return res.status(INTERNAL_SERVER_ERROR).end(message);
+    return res.status(INTERNAL_SERVER_ERROR).send(message);
   }
 }
