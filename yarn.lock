@@ -16697,11 +16697,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "simorgh-nextjs@workspace:ws-nextjs-app"
   dependencies:
-    "@babel/core": "npm:7.28.4"
-    "@babel/preset-react": "npm:7.27.1"
     "@cypress/webpack-preprocessor": "npm:7.0.1"
-    "@emotion/babel-plugin": "npm:11.13.5"
-    "@emotion/jest": "npm:11.13.0"
     "@jest/environment": "npm:30.2.0"
     "@jest/types": "npm:30.0.5"
     "@next/swc-darwin-arm64": "npm:15.5.2"
