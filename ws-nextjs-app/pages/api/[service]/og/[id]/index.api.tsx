@@ -24,6 +24,7 @@ import {
   SERVER_SIDE_REQUEST_FAILED,
 } from '#app/lib/logger.const';
 import sharp from 'sharp';
+import { NextApiRequest, NextApiResponse } from 'next';
 import Badge from '../Badge';
 import {
   extractArticleData,
@@ -84,19 +85,17 @@ const compressArrayBuffer = async (
   return new Uint8Array(compressedBuffer).buffer;
 };
 
-export async function GET(
-  req: Request,
-  { params }: { params: { id: string; service: Services } },
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
 ) {
   const { searchParams, pathname } = new URL(
     req.url ?? '',
-    `https://${req.headers.get('host')}`,
+    `https://${req.headers.host}`,
   );
 
   try {
-    // https://nextjs.org/docs/messages/sync-dynamic-apis
-    const { id, service } = await params;
-
+    const { id, service } = req.query as { id: string; service: Services };
     if (!id || !service) return responseNotFound({ pathname });
 
     const rendererEnv =
@@ -116,8 +115,10 @@ export async function GET(
         pageType,
       }),
       // Fetch fonts
-      fetch(REITH_SANS_MEDIUM_FONT_URL).then(res => res.arrayBuffer()),
-      fetch(REITH_SANS_BOLD_FONT_URL).then(res => res.arrayBuffer()),
+      fetch(REITH_SANS_MEDIUM_FONT_URL).then(response =>
+        response.arrayBuffer(),
+      ),
+      fetch(REITH_SANS_BOLD_FONT_URL).then(response => response.arrayBuffer()),
     ]);
 
     if (data.status === NOT_FOUND) return responseNotFound({ pathname });
@@ -259,14 +260,14 @@ export async function GET(
       pageType: pageTypeToLog,
     });
 
-    return new Response(compressedImage, {
-      headers: {
-        'Content-Type': 'image/jpeg',
-        'Content-Length': compressedImage.byteLength.toString(),
-        'Cache-Control':
-          'public, stale-if-error=3600, stale-while-revalidate=3600, max-age=600',
-      },
-    });
+    res.setHeader('Content-Type', 'image/jpeg');
+    res.setHeader('Content-Length', compressedImage.byteLength.toString());
+    res.setHeader(
+      'Cache-Control',
+      'public, stale-if-error=3600, stale-while-revalidate=3600, max-age=600',
+    );
+
+    return res.status(200).end(Buffer.from(compressedImage));
   } catch (error: unknown) {
     const { message } = error as FetchError;
 
@@ -285,6 +286,6 @@ export async function GET(
       pageType: pageTypeToLog,
     });
 
-    return new Response(message, { status: INTERNAL_SERVER_ERROR });
+    return res.status(INTERNAL_SERVER_ERROR).end(message);
   }
 }

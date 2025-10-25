@@ -9,7 +9,14 @@ const { ...compilerOptionsPaths } = compilerOptions.paths;
 const createJestConfig = nextJest({ dir: './' });
 
 const buildConfig = async (config: Config): Promise<Config> => {
-  return createJestConfig(config)();
+  return createJestConfig({
+    ...config,
+    testPathIgnorePatterns: [
+      ...(config.testPathIgnorePatterns || []),
+      'build',
+      'node_modules',
+    ],
+  })();
 };
 
 export default async (): Promise<Config> => {
