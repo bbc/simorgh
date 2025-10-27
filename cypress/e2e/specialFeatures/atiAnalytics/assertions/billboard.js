@@ -39,6 +39,11 @@ export const assertBillboardComponentClick = ({
   siteId,
 }) => {
   it('should send a click event for the Billboard component', () => {
+    // This will ignore 'TypeError: window.sendStaticBeacon is not a function' as lite 404 pages do not utilise the sendStaticBeacon yet.
+    Cypress.on('uncaught:exception', () => {
+      return false;
+    });
+
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
