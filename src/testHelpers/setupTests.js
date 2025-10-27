@@ -6,23 +6,21 @@ import '@testing-library/jest-dom';
  * Suppress JSDOM errors relating to navigation not implemented
  * https://github.com/jsdom/jsdom/issues/2112 -> code snippet from https://github.com/jsdom/jsdom/issues/2112#issuecomment-673540137
  *  */
-if (!process.env.PUPPETEER_APP_ENV) {
-  if (window?._virtualConsole) {
-    const listeners = window._virtualConsole.listeners('jsdomError');
-    const originalListener = listeners && listeners[0];
+if (window?._virtualConsole) {
+  const listeners = window._virtualConsole.listeners('jsdomError');
+  const originalListener = listeners && listeners[0];
 
-    window._virtualConsole.removeAllListeners('jsdomError');
+  window._virtualConsole.removeAllListeners('jsdomError');
 
-    // Add a new listener to swallow JSDOM errors
-    window._virtualConsole.addListener('jsdomError', error => {
-      if (
-        error.message !== 'Not implemented: navigation (except hash changes)' &&
-        originalListener
-      ) {
-        originalListener(error);
-      }
-    });
-  }
+  // Add a new listener to swallow JSDOM errors
+  window._virtualConsole.addListener('jsdomError', error => {
+    if (
+      error.message !== 'Not implemented: navigation (except hash changes)' &&
+      originalListener
+    ) {
+      originalListener(error);
+    }
+  });
 }
 
 global.originalWindowLocation = window.location;
