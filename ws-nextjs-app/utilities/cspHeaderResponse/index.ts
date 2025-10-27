@@ -3,6 +3,8 @@ import { cspDirectives } from '#server/utilities/cspHeader/directives';
 import fallbackServiceParam from '#app/routes/utils/fetchPageData/utils/getRouteProps/fallbackServiceParam';
 import getPathExtension from '#app/utilities/getPathExtension';
 import isLiveEnv from '#lib/utilities/isLive';
+import getToggles from '#app/lib/utilities/getToggles';
+import { ToggleDefinition, Toggles } from '#app/models/types/global';
 
 const setReportTo = (header: Headers) => {
   header.set(
@@ -34,17 +36,49 @@ const directiveToString = (directives: Record<string, string | string[]>) => {
   return cspValue;
 };
 
-const cspHeaderResponse = ({ request }: { request: NextRequest }) => {
+const getToggleDefintions = (
+  toggles: Toggles = {},
+): Record<string, ToggleDefinition> => {
+  const { _environment, ...toggleDefinitions } = toggles;
+  return toggleDefinitions;
+};
+
+const isRelaxedCspEnabled = (
+  omittedCountries: string | number | undefined,
+  country: string,
+): boolean => {
+  if (!omittedCountries || omittedCountries.toString().trim() === '') {
+    return true;
+  }
+
+  const allowedCountries = omittedCountries
+    .toString()
+    .split(',')
+    .map(s => s.trim().toLowerCase())
+    .filter(Boolean);
+
+  return !allowedCountries.includes(country.toLowerCase());
+};
+
+const cspHeaderResponse = async ({ request }: { request: NextRequest }) => {
   const { isAmp } = getPathExtension(request.url);
   const service = fallbackServiceParam(request.url);
   const isLive = isLiveEnv();
-
+  const toggles = await getToggles(service);
+  const toggleDefinitions = getToggleDefintions(toggles);
+  const { enabled: hasAdsScripts, value: omittedCountries = '' } =
+    toggleDefinitions.adsNonce || {};
   const requestHeaders = new Headers(request.headers);
+  const country =
+    requestHeaders.get('x-country') || requestHeaders.get('x-bbc-edge-country');
+
+  const shouldServeRelaxedCsp =
+    hasAdsScripts && isRelaxedCspEnabled(omittedCountries, country || '');
 
   const { directives } = cspDirectives({
     isAmp,
     isLive,
-    service,
+    shouldServeRelaxedCsp,
   });
 
   const BUMP4SpecificConditions = {
