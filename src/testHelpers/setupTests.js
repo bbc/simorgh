@@ -55,7 +55,12 @@ beforeAll(() => {
 
 afterAll(() => {
   // restore `window.location` to the original `jsdom` Location` object
-  window.location = global.originalWindowLocation;
+  Object.defineProperties(
+    {},
+    {
+      ...Object.getOwnPropertyDescriptors(global.originalWindowLocation),
+    },
+  );
 });
 
 // Errors

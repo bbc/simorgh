@@ -1,5 +1,3 @@
-import * as onClient from '#lib/utilities/onClient';
-
 const mockUrl =
   'https://mock-config-endpoint?application=simorgh&service=mundo&__amp_source_origin=http://localhost';
 const mockResponse = {
@@ -7,13 +5,6 @@ const mockResponse = {
     testToggle: { enabled: true },
   },
 };
-
-jest.mock('#lib/utilities/onClient', () => ({
-  __esModule: true,
-  default: jest.fn(),
-}));
-
-const onClientSpy = jest.spyOn(onClient, 'default');
 
 describe('getToggles', () => {
   const originalConfigURL = process.env.SIMORGH_CONFIG_URL;
@@ -28,7 +19,6 @@ describe('getToggles', () => {
     jest.clearAllMocks();
     fetch.resetMocks();
     process.env.SIMORGH_CONFIG_URL = originalConfigURL;
-    onClientSpy.mockClear();
   });
 
   it('should return defaultToggles if enableFetchingToggles is not enabled', async () => {
@@ -126,6 +116,10 @@ describe('getToggles', () => {
 
     describe('when called', () => {
       describe('on server', () => {
+        beforeEach(() => {
+          jest.spyOn(window, 'location', 'get').mockImplementation(() => null);
+        });
+
         it('should calculate and log response time', async () => {
           const { default: getToggles } = await import('.');
 
@@ -141,9 +135,10 @@ describe('getToggles', () => {
 
       describe('on client', () => {
         beforeEach(() => {
-          onClientSpy.mockImplementation(() => true);
+          jest
+            .spyOn(window, 'location', 'get')
+            .mockImplementation(() => 'https://localhost');
         });
-
         it('should not calculate and log response time', async () => {
           const { default: getToggles } = await import('.');
           const hrtTimeSpy = jest.spyOn(process, 'hrtime');
