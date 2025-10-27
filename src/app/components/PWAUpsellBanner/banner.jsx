@@ -9,7 +9,7 @@ export const PWAUpsellBanner = ({
   buttonPrimary,
   buttonSecondary,
   serviceBackground,
-  handleClose, // New prop added
+  handleClose,
 }) => {
   return (
     <div css={[styles.ColoredContainer, styles[serviceBackground]]}>
@@ -37,7 +37,7 @@ export const PWAUpsellBanner = ({
 
             <button
               type="button"
-              css={styles.StyledButtonTwo}
+              css={styles.StyledbuttonSecondary}
               onClick={buttonSecondary?.onClick}
             >
               {buttonSecondary.text}
