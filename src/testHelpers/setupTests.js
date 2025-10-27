@@ -55,7 +55,7 @@ beforeAll(() => {
 
 afterAll(() => {
   // restore `window.location` to the original `jsdom` Location` object
-  Object.defineProperties(
+  window.location = Object.defineProperties(
     {},
     {
       ...Object.getOwnPropertyDescriptors(global.originalWindowLocation),
