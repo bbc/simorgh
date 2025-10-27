@@ -33,7 +33,7 @@ export const PWAUpsellBanner = ({
               {buttonPrimary?.text}
             </button>
 
-            <text css={styles.StyledText}>or</text>
+            <span css={styles.StyledText}>or</span>
 
             <button
               type="button"
@@ -48,6 +48,7 @@ export const PWAUpsellBanner = ({
             <div css={styles.CloseButtonWrapper}>
               <button
                 type="button"
+                aria-label="close"
                 css={styles.subNavCloseButton}
                 onClick={handleClose}
               />
