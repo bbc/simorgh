@@ -79,7 +79,6 @@ describe('analyticsUtils', () => {
 
   afterEach(() => {
     jest.clearAllMocks();
-    windowLocationHrefSpy.mockClear();
   });
 
   describe('getDestination', () => {
