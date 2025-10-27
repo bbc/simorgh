@@ -53,16 +53,6 @@ beforeAll(() => {
   );
 });
 
-afterAll(() => {
-  // restore `window.location` to the original `jsdom` Location` object
-  window.location = Object.defineProperties(
-    {},
-    {
-      ...Object.getOwnPropertyDescriptors(global.originalWindowLocation),
-    },
-  );
-});
-
 // Errors
 const FAILED_PROP = 'Failed prop';
 
