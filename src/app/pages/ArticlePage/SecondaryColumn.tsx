@@ -25,7 +25,7 @@ const SecondaryColumn = ({
   timeOfDayExperimentName,
 }: {
   pageData: Article;
-  experimentVariant?: string;
+  experimentVariant?: string | null;
   timeOfDayExperimentName?: string;
 }) => {
   const topStoriesContent = pageData?.secondaryColumn?.topStories;
@@ -45,7 +45,10 @@ const SecondaryColumn = ({
   )
     return null;
   const showAdaptiveSection =
-    experimentVariant === 'morning' || experimentVariant === 'evening';
+    // Morning
+    experimentVariant === 'article_time_of_day_a' ||
+    // Evening
+    experimentVariant === 'article_time_of_day_b';
 
   // ideally we would want to be agnostic about the type of Curation we want to render here and have the decision made in the BFF
   // however, we cannot do this with the billboard curation as we would need to fetch the whole topic it is in, which is the whole home page,

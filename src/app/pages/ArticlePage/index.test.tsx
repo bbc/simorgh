@@ -982,9 +982,11 @@ describe('Article Page', () => {
   });
 
   describe('Adaptive curations in secondary column', () => {
-    it("should render adaptive curations when variant is 'variant_a'", async () => {
+    it("should render adaptive curations when variant is 'article_time_of_day_a'", async () => {
       // negative tests possible when override removed
-      (useOptimizelyVariation as jest.Mock).mockReturnValue('variant_a');
+      (useOptimizelyVariation as jest.Mock).mockReturnValue(
+        'article_time_of_day_a',
+      );
       const dummyBillboardCurationData = {
         summaries: [
           {

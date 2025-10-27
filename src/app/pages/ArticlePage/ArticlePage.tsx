@@ -233,13 +233,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   // EXPERIMENT: Time of Day Experiment
   const timeOfDayExperimentName = 'newswb_ws_tod_article';
-  let timeOfDayExperimentVariant = useOptimizelyVariation({
+  const timeOfDayExperimentVariant = useOptimizelyVariation({
     experimentName: timeOfDayExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
-
-  // TEMPORARY OVERRIDE FOR DEV/TESTING PURPOSES - REMOVE LATER
-  timeOfDayExperimentVariant = 'morning';
 
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
