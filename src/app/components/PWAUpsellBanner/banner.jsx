@@ -8,9 +8,11 @@ export const PWAUpsellBanner = ({
   isDismissible = true,
   buttonPrimary,
   buttonSecondary,
+  serviceBackground,
+  handleClose, // New prop added
 }) => {
   return (
-    <div css={styles.ColoredContainer}>
+    <div css={[styles.ColoredContainer, styles[serviceBackground]]}>
       <div css={styles.Wrap}>
         <div css={styles.StyledContent}>
           <div css={styles.TextWrapper}>
@@ -47,7 +49,7 @@ export const PWAUpsellBanner = ({
               <button
                 type="button"
                 css={styles.subNavCloseButton}
-                onClick={buttonSecondary?.onClick}
+                onClick={handleClose}
               />
               <Close css={styles.subNavCloseButtonIcon} />
             </div>
