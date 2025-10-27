@@ -2,28 +2,6 @@
 import colours from 'colors';
 import '@testing-library/jest-dom';
 
-// Errors
-const FAILED_PROP = 'Failed prop';
-
-// Warnings
-const PSEUDO_CLASS_FIRST_CHILD = 'The pseudo class ":first-child"';
-const PSEUDO_CLASS_NTH_CHILD = 'The pseudo class ":nth-child"';
-const UNMATCHED_GET = 'Unmatched GET to /undefined';
-const REACT_UNMOUNTED = 'React state update on an unmounted component';
-const TAG_HUNDEFINED = 'The tag <hundefined';
-
-const SUPPRESSED_WARNINGS = [
-  PSEUDO_CLASS_FIRST_CHILD,
-  PSEUDO_CLASS_NTH_CHILD,
-  UNMATCHED_GET,
-  REACT_UNMOUNTED,
-  TAG_HUNDEFINED,
-];
-
-const SUPPRESSED_REGEX = new RegExp(SUPPRESSED_WARNINGS.join('|'));
-
-const { warn } = console;
-
 /**
  * Suppress JSDOM errors relating to navigation not implemented
  * https://github.com/jsdom/jsdom/issues/2112 -> code snippet from https://github.com/jsdom/jsdom/issues/2112#issuecomment-673540137
@@ -45,35 +23,64 @@ if (!process.env.PUPPETEER_APP_ENV) {
       }
     });
   }
-
-  const oldWindowLocation = window.location;
-
-  beforeAll(() => {
-    delete window.location;
-
-    window.location = Object.defineProperties(
-      {},
-      {
-        ...Object.getOwnPropertyDescriptors(oldWindowLocation),
-        assign: {
-          configurable: true,
-          value: jest.fn(),
-        },
-        href: {
-          configurable: true,
-        },
-        pathname: {
-          configurable: true,
-        },
-      },
-    );
-  });
-
-  afterAll(() => {
-    // restore `window.location` to the original `jsdom` Location` object
-    window.location = oldWindowLocation;
-  });
 }
+
+global.originalWindowLocation = window.location;
+
+beforeAll(() => {
+  window.location = Object.defineProperties(
+    {},
+    {
+      ...Object.getOwnPropertyDescriptors(global.originalWindowLocation),
+      assign: {
+        configurable: true,
+        value: jest.fn(),
+      },
+      host: {
+        configurable: true,
+      },
+      hostname: {
+        configurable: true,
+      },
+      href: {
+        configurable: true,
+      },
+      origin: {
+        configurable: true,
+      },
+      pathname: {
+        configurable: true,
+      },
+    },
+  );
+});
+
+afterAll(() => {
+  // restore `window.location` to the original `jsdom` Location` object
+  window.location = global.originalWindowLocation;
+});
+
+// Errors
+const FAILED_PROP = 'Failed prop';
+
+// Warnings
+const PSEUDO_CLASS_FIRST_CHILD = 'The pseudo class ":first-child"';
+const PSEUDO_CLASS_NTH_CHILD = 'The pseudo class ":nth-child"';
+const UNMATCHED_GET = 'Unmatched GET to /undefined';
+const REACT_UNMOUNTED = 'React state update on an unmounted component';
+const TAG_HUNDEFINED = 'The tag <hundefined';
+
+const SUPPRESSED_WARNINGS = [
+  PSEUDO_CLASS_FIRST_CHILD,
+  PSEUDO_CLASS_NTH_CHILD,
+  UNMATCHED_GET,
+  REACT_UNMOUNTED,
+  TAG_HUNDEFINED,
+];
+
+const SUPPRESSED_REGEX = new RegExp(SUPPRESSED_WARNINGS.join('|'));
+
+const { warn } = console;
 
 const getFormattedMessage = (message, rest) => {
   let theMessage = message;
