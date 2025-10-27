@@ -21,12 +21,10 @@ const adaptiveCurationsSectionStyles = ({ spacings, mq }: Theme) => ({
 
 const SecondaryColumn = ({
   pageData,
-  sendOptimizelyEvents,
   experimentVariant,
   timeOfDayExperimentName,
 }: {
   pageData: Article;
-  sendOptimizelyEvents: boolean;
   experimentVariant: string | null;
   timeOfDayExperimentName?: string | null;
 }) => {
@@ -95,17 +93,13 @@ const SecondaryColumn = ({
           data-testid="top-stories"
           data-experiment-position="secondaryColumn"
         >
-          <TopStoriesSection
-            content={topStoriesContent}
-            sendOptimizelyEvents={sendOptimizelyEvents}
-          />
+          <TopStoriesSection content={topStoriesContent} />
         </div>
       )}
       {featuresContent && (
         <div css={styles.featuresSection} data-testid="features">
           <FeaturesAnalysis
             content={featuresContent}
-            sendOptimizelyEvents={sendOptimizelyEvents}
             parentColumns={{}}
             sectionLabelBackground={GREY_2}
           />

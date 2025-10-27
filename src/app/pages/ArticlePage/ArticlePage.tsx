@@ -453,15 +453,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               tagBackgroundColour={WHITE}
             />
           )}
-          <RelatedContentSection
-            content={blocks}
-            sendOptimizelyEvents={false}
-          />
+          <RelatedContentSection content={blocks} />
         </div>
         {!isApp && !isPGL && (
           <SecondaryColumn
             pageData={pageData}
-            sendOptimizelyEvents={false}
             experimentVariant={timeOfDayExperimentVariant}
             timeOfDayExperimentName={timeOfDayExperimentName}
           />
@@ -475,7 +471,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           size="default"
           headingBackgroundColour={GREY_2}
           mobileDivider={showTopics}
-          sendOptimizelyEvents={false}
         />
       )}
     </div>

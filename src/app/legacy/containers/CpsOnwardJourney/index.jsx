@@ -128,7 +128,6 @@ const CpsOnwardJourney = ({
   columnType,
   skipLink = null,
   eventTrackingData = null,
-  sendOptimizelyEvents = false,
 }) => {
   const { script, service, dir } = use(ServiceContext);
 
@@ -171,7 +170,6 @@ const CpsOnwardJourney = ({
               promo={singleContent}
               dir={dir}
               eventTrackingData={eventTrackingData}
-              sendOptimizelyEvents={sendOptimizelyEvents}
             />
           </SingleContentWrapper>
         ) : (
@@ -180,7 +178,6 @@ const CpsOnwardJourney = ({
             dir={dir}
             isMediaContent={isMediaContent}
             eventTrackingData={eventTrackingData}
-            sendOptimizelyEvents={sendOptimizelyEvents}
           />
         )}
       </OptionallyRenderedSkipWrapper>

@@ -11,7 +11,6 @@ import identity from 'ramda/src/identity';
 import last from 'ramda/src/last';
 import filter from 'ramda/src/filter';
 import pipe from 'ramda/src/pipe';
-import { OptimizelyContext } from '@optimizely/react-sdk';
 import useViewTracker from '#hooks/useViewTracker';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
@@ -38,12 +37,10 @@ const isHeadlineFirst = (item: object) => {
 
 type Props = {
   content: OptimoBlock[];
-  sendOptimizelyEvents?: boolean;
 };
 
-const RelatedContentSection = ({ content, sendOptimizelyEvents }: Props) => {
+const RelatedContentSection = ({ content }: Props) => {
   const { translations, script, service } = use(ServiceContext);
-  const { optimizely } = use(OptimizelyContext);
 
   const {
     palette: { GREY_2 },
@@ -53,9 +50,6 @@ const RelatedContentSection = ({ content, sendOptimizelyEvents }: Props) => {
   const eventTrackingData = {
     block: {
       componentName: 'related-content',
-      ...(sendOptimizelyEvents && {
-        optimizely,
-      }),
     },
   };
   const viewTracker = useViewTracker(eventTrackingData.block);
