@@ -60,12 +60,13 @@ const StoryPromoLiFeatures = styled(StoryPromoLi)`
   }
 `;
 
-const PromoListComponent = ({ promoItems, dir = 'ltr' }) => {
+const PromoListComponent = ({ promoItems, dir = 'ltr', experimentProps }) => {
   const { serviceDatetimeLocale } = use(ServiceContext);
 
   const eventTrackingDataWithOptimizely = {
     block: {
       ...eventTrackingData.block,
+      ...(experimentProps && experimentProps),
     },
   };
 
@@ -97,12 +98,13 @@ const PromoListComponent = ({ promoItems, dir = 'ltr' }) => {
   );
 };
 
-const PromoComponent = ({ promo, dir = 'ltr' }) => {
+const PromoComponent = ({ promo, dir = 'ltr', experimentProps }) => {
   const { serviceDatetimeLocale } = use(ServiceContext);
 
   const eventTrackingDataWithOptimizely = {
     block: {
       ...eventTrackingData.block,
+      ...(experimentProps && experimentProps),
     },
   };
 
@@ -126,6 +128,7 @@ const FeaturesAnalysis = ({
   content,
   parentColumns,
   sectionLabelBackground,
+  experimentProps = {},
 }) => {
   const { translations } = use(ServiceContext);
 
@@ -145,6 +148,7 @@ const FeaturesAnalysis = ({
       promoListComponent={PromoListComponent}
       columnType="secondary"
       sectionLabelBackground={sectionLabelBackground}
+      experimentProps={experimentProps}
     />
   );
 };

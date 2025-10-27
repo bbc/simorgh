@@ -25,8 +25,8 @@ const SecondaryColumn = ({
   timeOfDayExperimentName,
 }: {
   pageData: Article;
-  experimentVariant: string | null;
-  timeOfDayExperimentName?: string | null;
+  experimentVariant?: string;
+  timeOfDayExperimentName?: string;
 }) => {
   const topStoriesContent = pageData?.secondaryColumn?.topStories;
   const featuresContent = pageData?.secondaryColumn?.features;
@@ -93,7 +93,16 @@ const SecondaryColumn = ({
           data-testid="top-stories"
           data-experiment-position="secondaryColumn"
         >
-          <TopStoriesSection content={topStoriesContent} />
+          <TopStoriesSection
+            content={topStoriesContent}
+            {...(experimentVariant && {
+              experimentProps: {
+                sendOptimizelyEvents: true,
+                experimentName: timeOfDayExperimentName,
+                experimentVariant,
+              },
+            })}
+          />
         </div>
       )}
       {featuresContent && (
@@ -102,6 +111,13 @@ const SecondaryColumn = ({
             content={featuresContent}
             parentColumns={{}}
             sectionLabelBackground={GREY_2}
+            {...(experimentVariant && {
+              experimentProps: {
+                sendOptimizelyEvents: true,
+                experimentName: timeOfDayExperimentName,
+                experimentVariant,
+              },
+            })}
           />
         </div>
       )}

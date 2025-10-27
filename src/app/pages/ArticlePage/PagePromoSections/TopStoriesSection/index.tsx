@@ -6,18 +6,26 @@ import useViewTracker from '#hooks/useViewTracker';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import PromoItem from '#components/OptimoPromos/PromoItem/index.styles';
 import PromoList from '#components/OptimoPromos/PromoList';
+import { ComponentExperimentProps } from '#app/models/types/global';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import styles from './index.styles';
 import TopStoriesItem from './TopStoriesItem';
 import generatePromoId from '../../../../lib/utilities/generatePromoId';
 import { TopStoryItem } from './types';
 
-const TopStoriesSection = ({ content = [] }: { content: TopStoryItem[] }) => {
+const TopStoriesSection = ({
+  content = [],
+  experimentProps,
+}: {
+  content: TopStoryItem[];
+  experimentProps?: ComponentExperimentProps;
+}) => {
   const { translations, script, service } = use(ServiceContext);
 
   const eventTrackingData = {
     block: {
       componentName: 'top-stories',
+      ...(experimentProps && experimentProps),
     },
   };
   const eventTrackingDataSend = eventTrackingData?.block;
