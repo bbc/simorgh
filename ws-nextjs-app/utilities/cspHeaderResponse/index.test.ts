@@ -20,8 +20,8 @@ const policies = [
 ];
 
 describe('cspHeaderResponse', () => {
-  it.each(policies)('should set %s in the request CSP', policy => {
-    const response = cspHeaderResponse({
+  it.each(policies)('should set %s in the request CSP', async policy => {
+    const response = await cspHeaderResponse({
       request: {
         url: 'https://www.test.bbc.com/pidgin/live/c7p765ynk9qt',
       } as NextRequest,
@@ -34,8 +34,8 @@ describe('cspHeaderResponse', () => {
     expect(requestCsp?.includes(policy)).toBe(true);
   });
 
-  it.each(policies)('should set %s in the response CSP', policy => {
-    const response = cspHeaderResponse({
+  it.each(policies)('should set %s in the response CSP', async policy => {
+    const response = await cspHeaderResponse({
       request: {
         url: 'https://www.test.bbc.com/pidgin/live/c7p765ynk9qt',
       } as NextRequest,
