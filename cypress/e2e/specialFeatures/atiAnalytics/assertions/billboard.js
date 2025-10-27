@@ -6,7 +6,6 @@ const { BILLBOARD } = COMPONENTS;
 export const assertBillboardComponentView = ({
   pageIdentifier,
   contentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -23,7 +22,7 @@ export const assertBillboardComponentView = ({
       component: BILLBOARD,
       pageIdentifier,
       contentType,
-      useReverb,
+      useReverb: true,
       applicationType,
       siteId,
     });
@@ -33,7 +32,6 @@ export const assertBillboardComponentView = ({
 export const assertBillboardComponentClick = ({
   pageIdentifier,
   contentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -53,7 +51,7 @@ export const assertBillboardComponentClick = ({
       component: BILLBOARD,
       pageIdentifier,
       contentType,
-      useReverb,
+      useReverb: true,
       applicationType,
       siteId,
     });

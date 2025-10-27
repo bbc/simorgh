@@ -101,13 +101,19 @@ export const interceptATIAnalyticsBeacons = () => {
 
   // Component Views & Clicks - Viewability Model
   Object.values(COMPONENTS).forEach(component => {
+    const responsiveViewabilityViewRegex = `\\[\\{"name":"viewability\\.view","data":\\{(?:.*)?"event":\\{"category":"viewability","action":"view"\\}(?:.*)?"item":\\{(?:.*)?"name":"${component}(.*)?"(?:.*)?\\}\\}\\}\\]`;
+    const staticViewabilityViewRegex = `\\[\\{"name":"viewability\\.view","data":\\{"item":\\{"name":"${component}","link":""\\},"event":\\{"category":"viewability","action":"view"\\},"group":\\{"name":"(?:.*)?","type":"${component}","link":"(?:.*)?","item_count":\\d+,"resource_id":"(?:.*)?","position":\\d+\\},"user":\\{"id":null\\},"app":\\{"type":"(?:.*)?","name":"(?:.*)?"\\}\\}\\}\\]`;
+
+    const responsiveViewabilityClickRegex = `\\[\\{"name":"viewability\\.select","data":\\{(?:.*)?"event":\\{"category":"viewability","action":"select"\\}(?:.*)?"item":\\{(?:.*)?"name":"${component}(.*)?"(?:.*)?\\}\\}\\}\\]`;
+    const staticViewabilityClickRegex = `\\[\\{"name":"viewability\\.select","data":\\{"item":\\{"name":"${component}","link":"(?:.*)?"\\},"event":\\{"category":"viewability","action":"select"\\},"group":\\{"name":"(?:.*)?","type":"${component}","link":"(?:.*)?","item_count":\\d+,"resource_id":"(?:.*)?","position":\\d+\\},"user":\\{"id":null\\},"app":\\{"type":"(?:.*)?","name":"(?:.*)?"\\}\\}\\}\\]`;
+
     const viewabilityViewRegex = new RegExp(
-      `\\[\\{"name":"viewability\\.view","data":\\{(?:.*)?"event":\\{"category":"viewability","action":"view"\\}(?:.*)?"item":\\{(?:.*)?"name":"${component}(.*)?"(?:.*)?\\}\\}\\}\\]`,
+      `${responsiveViewabilityViewRegex}|${staticViewabilityViewRegex}`,
       'g',
     );
 
     const viewabilityClickRegex = new RegExp(
-      `\\[\\{"name":"viewability\\.select","data":\\{(?:.*)?"event":\\{"category":"viewability","action":"select"\\}(?:.*)?"item":\\{(?:.*)?"name":"${component}(.*)?"(?:.*)?\\}\\}\\}\\]`,
+      `${responsiveViewabilityClickRegex}|${staticViewabilityClickRegex}`,
       'g',
     );
 
