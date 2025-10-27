@@ -1,6 +1,6 @@
 {
   "reporterEnabled": "spec, mocha-junit-reporter",
   "mochaJunitReporterReporterOptions": {
-    "mochaFile": "cypress/results/simorgh-[hash].xml"
+    "mochaFile": "../cypress/results/nextjs-[hash].xml"
   }
 }

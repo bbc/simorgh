@@ -11,6 +11,8 @@ cypress/downloads
 cypress/results
 cypress/fixtures/toggles
 ws-nextjs-app/cypress/fixtures/toggles
+ws-nextjs-app/cypress/downloads
+ws-nextjs-app/cypress/results
 pack
 storybook_dist
 simorgh.report.html
