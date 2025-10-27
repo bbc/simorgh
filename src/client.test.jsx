@@ -4,6 +4,8 @@ import '#testHelpers/loggerMock';
 
 jest.mock('react-dom/client');
 
+const reactDomClientHydrateRootSpy = jest.spyOn(reactDom, 'hydrateRoot');
+
 jest.mock('react-router-dom');
 
 jest.mock('./app/legacy/containers/App');
@@ -29,18 +31,18 @@ const pathname = '/foobar/articles/c0000000001o';
 const unknownPathName = '/search?foo=bar';
 
 describe('Client', () => {
-  beforeAll(() => {
-    Object.defineProperty(window, 'SIMORGH_DATA', {
-      pageData: 'some data',
-      path: pathname,
-    });
-  });
-
   beforeEach(() => {
+    Object.defineProperty(window, 'SIMORGH_DATA', {
+      writable: true,
+      value: {
+        pageData: 'some data',
+        path: pathname,
+      },
+    });
     jest.clearAllMocks();
   });
 
-  afterAll(() => {
+  afterEach(() => {
     delete window.SIMORGH_DATA;
   });
 
@@ -49,14 +51,9 @@ describe('Client', () => {
       .spyOn(window.location, 'pathname', 'get')
       .mockImplementation(() => pathname);
 
-    await new Promise(resolve => {
-      jest.isolateModules(async () => {
-        await import('./client');
+    await import('./client');
 
-        expect(reactDom.hydrateRoot).toHaveBeenCalled();
-        resolve();
-      });
-    });
+    expect(reactDomClientHydrateRootSpy).toHaveBeenCalled();
   });
 
   it('should not hydrate client if no routes match', async () => {
@@ -64,13 +61,7 @@ describe('Client', () => {
       .spyOn(window.location, 'pathname', 'get')
       .mockImplementation(() => unknownPathName);
 
-    await new Promise(resolve => {
-      jest.isolateModules(async () => {
-        await import('./client');
-
-        expect(reactDom.hydrateRoot).not.toHaveBeenCalled();
-        resolve();
-      });
-    });
+    await import('./client');
+    expect(reactDomClientHydrateRootSpy).not.toHaveBeenCalled();
   });
 });
