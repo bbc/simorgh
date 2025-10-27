@@ -153,11 +153,11 @@ const HomePage = ({ pageData }: HomePageProps) => {
             handleClose={() => {
               handleClose();
             }}
-            buttonOne={{
+            buttonPrimary={{
               text: 'Agregar con un toque',
               onClick: handleAddShortcut,
             }}
-            buttonTwo={{ text: 'No ahora', onClick: handleClose }}
+            buttonSecondary={{ text: 'No ahora', onClick: handleClose }}
           />
         )}
         <ATIAnalytics atiData={atiAnalytics} />

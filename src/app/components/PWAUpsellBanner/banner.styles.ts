@@ -72,7 +72,7 @@ const styles = {
       },
     }),
 
-  StyledButtonOne: ({ palette }: Theme) =>
+  StyledButtonPrimary: ({ palette }: Theme) =>
     css({
       color: '#FFFFFF',
       backgroundColor: palette.SERVICE_NEUTRAL_CORE,
@@ -92,7 +92,7 @@ const styles = {
       alignText: 'center',
     }),
 
-  StyledButtonTwo: ({ mq }: Theme) =>
+  StyledbuttonSecondary: ({ mq }: Theme) =>
     css({
       color: '#73B5FF',
       backgroundColor: 'transparent',

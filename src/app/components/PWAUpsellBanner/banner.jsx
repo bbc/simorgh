@@ -6,8 +6,8 @@ export const PWAUpsellBanner = ({
   title,
   description,
   isDismissible = true,
-  buttonOne,
-  buttonTwo,
+  buttonPrimary,
+  buttonSecondary,
 }) => {
   return (
     <div css={styles.ColoredContainer}>
@@ -25,10 +25,10 @@ export const PWAUpsellBanner = ({
           <div css={styles.CTAWrapper}>
             <button
               type="button"
-              css={styles.StyledButtonOne}
-              onClick={buttonOne?.onClick}
+              css={styles.StyledButtonPrimary}
+              onClick={buttonPrimary?.onClick}
             >
-              {buttonOne?.text}
+              {buttonPrimary?.text}
             </button>
 
             <text css={styles.StyledText}>or</text>
@@ -36,9 +36,9 @@ export const PWAUpsellBanner = ({
             <button
               type="button"
               css={styles.StyledButtonTwo}
-              onClick={buttonTwo?.onClick}
+              onClick={buttonSecondary?.onClick}
             >
-              {buttonTwo.text}
+              {buttonSecondary.text}
             </button>
           </div>
 
@@ -47,7 +47,7 @@ export const PWAUpsellBanner = ({
               <button
                 type="button"
                 css={styles.subNavCloseButton}
-                onClick={buttonTwo?.onClick}
+                onClick={buttonSecondary?.onClick}
               />
               <Close css={styles.subNavCloseButtonIcon} />
             </div>
