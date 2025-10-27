@@ -96,7 +96,14 @@ export default async (context: GetServerSidePropsContext) => {
 
   const { article, secondaryData } = data?.pageData || {};
 
-  const { topStories, features, latestMedia, mostRead } = secondaryData;
+  const {
+    topStories,
+    features,
+    latestMedia,
+    mostRead,
+    billboardCuration,
+    multimediaCuration,
+  } = secondaryData;
 
   const transformedArticleData = transformPageData(toggles)(article);
 
@@ -127,6 +134,8 @@ export default async (context: GetServerSidePropsContext) => {
           topStories: topStories || null,
           features: features || null,
           latestMedia: latestMedia || null,
+          billboardCuration: billboardCuration || null,
+          multimediaCuration: multimediaCuration || null,
         },
         mostRead,
       },
