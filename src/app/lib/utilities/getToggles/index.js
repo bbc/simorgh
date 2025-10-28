@@ -22,9 +22,9 @@ const logResponseTime = async (url, origin, service, timeout) => {
     return fetch(url, { headers: { origin }, timeout });
   }
 
-  logger.info(CONFIG_REQUEST_RECEIVED, { url, service });
   const startHrTime = process.hrtime();
   const response = await fetch(url, { headers: { origin }, timeout });
+  logger.info(CONFIG_REQUEST_RECEIVED, { url, service, response });
   const elapsedHrTime = process.hrtime(startHrTime);
   logger.info(TOGGLE_API_RESPONSE_TIME, {
     nanoseconds: elapsedHrTime[0] * NS_PER_SEC + elapsedHrTime[1],
