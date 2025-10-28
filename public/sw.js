@@ -35,7 +35,84 @@ const CACHEABLE_FILES = [
 const WEBP_IMAGE =
   /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|images|ace\/(standard|ws))\/.+.webp$/;
 
+// Analytics offline tracking - NEW CODE
+const ANALYTICS_QUEUE_KEY = 'analytics_queue';
+const MAX_QUEUE_SIZE = 100;
+
+const ANALYTICS_PATTERN =
+  /^https:\/\/(.*\.)?ati-host|^https:\/\/(.*\.)?chartbeat\.net/;
+
+const isAnalyticsRequest = url => ANALYTICS_PATTERN.test(url);
+
+const getQueue = () => {
+  try {
+    const queue = JSON.parse(localStorage.getItem(ANALYTICS_QUEUE_KEY) || '[]');
+    return Array.isArray(queue) ? queue : [];
+  } catch {
+    return [];
+  }
+};
+
+const saveToQueue = url => {
+  try {
+    // eslint-disable-next-line no-console
+    console.log('[SW] saveToQueue called for:', url.substring(0, 100));
+    const queue = getQueue();
+    queue.push({ url, timestamp: Date.now() });
+    if (queue.length > MAX_QUEUE_SIZE) queue.shift();
+    localStorage.setItem(ANALYTICS_QUEUE_KEY, JSON.stringify(queue));
+    // eslint-disable-next-line no-console
+    console.log('[SW] Queue saved. Length:', queue.length);
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error('[SW] Failed to save queue:', error);
+  }
+};
+
+const replayQueue = async () => {
+  const queue = getQueue();
+  if (queue.length === 0) return;
+
+  const results = await Promise.allSettled(
+    queue.map(item => fetch(item.url, { credentials: 'include' })),
+  );
+
+  const failedItems = queue.filter(
+    (_, index) => results[index].status === 'rejected',
+  );
+  try {
+    localStorage.setItem(ANALYTICS_QUEUE_KEY, JSON.stringify(failedItems));
+  } catch {
+    // noop
+  }
+};
+
 const fetchEventHandler = async event => {
+  const requestUrl = event.request.url;
+    console.log('requestUrl>>>>>>>>', requestUrl)
+    console.log('isAnalyticsRequest(requestUrl)<<<<<<<<<<<<<', isAnalyticsRequest(requestUrl))
+  // Handle analytics requests - NEW CODE, ADDED BEFORE EXISTING LOGIC
+  if (isAnalyticsRequest(requestUrl)) {
+    // eslint-disable-next-line no-console
+    console.log('[SW] Intercepting analytics:', requestUrl.substring(0, 100));
+    event.respondWith(
+      fetch(event.request.clone())
+        .then(response => {
+          // eslint-disable-next-line no-console
+          console.log('[SW] Analytics succeeded (online)');
+          return response;
+        })
+        .catch(() => {
+          // eslint-disable-next-line no-console
+          console.log('[SW] Analytics failed (offline) - queueing');
+          saveToQueue(requestUrl);
+          return new Response(null, { status: 200, statusText: 'Queued' });
+        }),
+    );
+    return;
+  }
+
+  // ORIGINAL CODE BELOW - UNCHANGED
   const isRequestForCacheableFile = CACHEABLE_FILES.some(cacheableFile =>
     new RegExp(cacheableFile).test(event.request.url),
   );

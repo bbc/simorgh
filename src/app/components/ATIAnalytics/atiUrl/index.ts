@@ -55,6 +55,7 @@ export const buildATIPageTrackPath = ({
   ampExperimentName,
   experimentVariant,
   readTimeMilliseconds,
+  networkType,
 }: ATIPageTrackingProps) => {
   const href = getHref(platform);
   const referrer = getReferrer(platform);
@@ -216,6 +217,12 @@ export const buildATIPageTrackPath = ({
       key: 'x18',
       description: 'boolean - if locserve cookie value is defined',
       value: isLocServeCookieSet(),
+      wrap: true,
+    },
+    {
+      key: 'x19',
+      description: 'effective network type',
+      value: networkType,
       wrap: true,
     },
     {
@@ -461,6 +468,7 @@ export const buildReverbAnalyticsModel = ({
   experimentName,
   experimentVariant,
   readTimeMilliseconds,
+  networkType,
 }: ATIPageTrackingProps): ReverbBeaconConfig => {
   const href = getHref(platform);
   const referrer = getReferrer(platform);
@@ -499,6 +507,7 @@ export const buildReverbAnalyticsModel = ({
           x16: aggregatedCampaigns,
           x17: categoryName,
           x18: isLocServeCookieSet(),
+          x19: networkType,
           item_duration: readTimeMilliseconds,
           ...(experimentVariant &&
             experimentName && {

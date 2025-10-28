@@ -33,6 +33,7 @@ export const buildPageATIParams = ({
     experimentName,
     experimentVariant,
     readTimeMilliseconds,
+    networkType,
   } = atiData;
 
   return {
@@ -60,6 +61,7 @@ export const buildPageATIParams = ({
     ...(ampExperimentName && { ampExperimentName }),
     ...(experimentName && { experimentName }),
     ...(experimentVariant && { experimentVariant }),
+    ...(networkType && { networkType }),
   };
 };
 

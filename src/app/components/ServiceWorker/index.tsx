@@ -6,6 +6,7 @@ import onClient from '#lib/utilities/onClient';
 import { RequestContext } from '#contexts/RequestContext';
 import { jsx } from '@emotion/react';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import { setupOnlineListener } from '#app/lib/analyticsUtils/offlineAnalyticsSync';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 interface AmpServiceWorkerProps {
@@ -44,7 +45,8 @@ export default () => {
       swPath && onClient() && 'serviceWorker' in navigator;
 
     if (shouldInstallServiceWorker) {
-      navigator.serviceWorker.register(`/${service}${swPath}`);
+      navigator.serviceWorker.register(swPath, { scope: `/${service}/` });
+      setupOnlineListener();
     }
   }, [swPath, service]);
 

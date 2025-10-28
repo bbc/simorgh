@@ -1,4 +1,5 @@
 /* eslint-disable camelcase */
+import { EffectiveNetworkType } from '#app/hooks/useNetworkStatusTracker/type';
 import { PageTypes, Platforms, Services } from '../../models/types/global';
 import { RequestContextProps } from '../../contexts/RequestContext';
 import { ServiceConfig } from '../../models/types/serviceConfig';
@@ -35,6 +36,7 @@ export interface ATIData {
   experimentName?: string | null;
   experimentVariant?: string | null;
   readTimeMilliseconds?: number | null;
+  networkType?: EffectiveNetworkType;
 }
 
 export interface PageData {
@@ -215,6 +217,7 @@ export interface ATIPageTrackingProps {
   experimentName?: string | null;
   experimentVariant?: string | null;
   readTimeMilliseconds?: number | null;
+  networkType?: EffectiveNetworkType;
 }
 
 export interface ATIProps {

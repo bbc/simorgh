@@ -9,4 +9,3 @@ export const LiveRadioPage = loadable(() => import('./LiveRadioPage'));
 export const OnDemandAudioPage = loadable(() => import('./OnDemandAudioPage'));
 export const OnDemandTvPage = loadable(() => import('./OnDemandTvPage'));
 export const TopicPage = loadable(() => import('./TopicPage'));
-export const AnalyticsTestPage = loadable(() => import('./AnalyticsTestPage'));
