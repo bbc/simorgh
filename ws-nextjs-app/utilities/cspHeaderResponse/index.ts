@@ -82,7 +82,6 @@ const cspHeaderResponse = async ({ request }: { request: NextRequest }) => {
   const { enabled: hasAdsScripts, value: omittedCountries = '' } =
     toggleDefinitions?.adsNonce || {};
   const requestHeaders = new Headers(request.headers);
-  console.log(request);
   const country =
     requestHeaders.get('x-country') || requestHeaders.get('x-bbc-edge-country');
   const shouldServeRelaxedCsp =
