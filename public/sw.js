@@ -36,33 +36,72 @@ const WEBP_IMAGE =
   /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|images|ace\/(standard|ws))\/.+.webp$/;
 
 // Analytics offline tracking - NEW CODE
-const ANALYTICS_QUEUE_KEY = 'analytics_queue';
 const MAX_QUEUE_SIZE = 100;
+const DB_NAME = 'analyticsDB';
+const DB_VERSION = 1;
+const STORE_NAME = 'queue';
 
 const ANALYTICS_PATTERN =
   /^https:\/\/(.*\.)?ati-host|^https:\/\/(.*\.)?chartbeat\.net/;
 
 const isAnalyticsRequest = url => ANALYTICS_PATTERN.test(url);
 
-const getQueue = () => {
+const openDB = () =>
+  new Promise((resolve, reject) => {
+    const request = indexedDB.open(DB_NAME, DB_VERSION);
+    request.onerror = () => reject(request.error);
+    request.onsuccess = () => resolve(request.result);
+    request.onupgradeneeded = event => {
+      const db = event.target.result;
+      if (!db.objectStoreNames.contains(STORE_NAME)) {
+        db.createObjectStore(STORE_NAME, { keyPath: 'id', autoIncrement: true });
+      }
+    };
+  });
+
+const getQueue = async () => {
   try {
-    const queue = JSON.parse(localStorage.getItem(ANALYTICS_QUEUE_KEY) || '[]');
-    return Array.isArray(queue) ? queue : [];
+    const db = await openDB();
+    return new Promise((resolve, reject) => {
+      const transaction = db.transaction([STORE_NAME], 'readonly');
+      const store = transaction.objectStore(STORE_NAME);
+      const request = store.getAll();
+      request.onsuccess = () => resolve(request.result || []);
+      request.onerror = () => reject(request.error);
+    });
   } catch {
     return [];
   }
 };
 
-const saveToQueue = url => {
+const saveToQueue = async url => {
   try {
     // eslint-disable-next-line no-console
     console.log('[SW] saveToQueue called for:', url.substring(0, 100));
-    const queue = getQueue();
-    queue.push({ url, timestamp: Date.now() });
-    if (queue.length > MAX_QUEUE_SIZE) queue.shift();
-    localStorage.setItem(ANALYTICS_QUEUE_KEY, JSON.stringify(queue));
+    const db = await openDB();
+    const transaction = db.transaction([STORE_NAME], 'readwrite');
+    const store = transaction.objectStore(STORE_NAME);
+    
+    const allItems = await new Promise((resolve, reject) => {
+      const request = store.getAll();
+      request.onsuccess = () => resolve(request.result || []);
+      request.onerror = () => reject(request.error);
+    });
+
+    if (allItems.length >= MAX_QUEUE_SIZE) {
+      const oldestId = allItems[0]?.id;
+      if (oldestId) store.delete(oldestId);
+    }
+
+    store.add({ url, timestamp: Date.now() });
+    
+    await new Promise((resolve, reject) => {
+      transaction.oncomplete = () => resolve();
+      transaction.onerror = () => reject(transaction.error);
+    });
+    
     // eslint-disable-next-line no-console
-    console.log('[SW] Queue saved. Length:', queue.length);
+    console.log('[SW] Queue saved. Length:', allItems.length + 1);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('[SW] Failed to save queue:', error);
@@ -70,27 +109,43 @@ const saveToQueue = url => {
 };
 
 const replayQueue = async () => {
-  const queue = getQueue();
-  if (queue.length === 0) return;
-
-  const results = await Promise.allSettled(
-    queue.map(item => fetch(item.url, { credentials: 'include' })),
-  );
-
-  const failedItems = queue.filter(
-    (_, index) => results[index].status === 'rejected',
-  );
   try {
-    localStorage.setItem(ANALYTICS_QUEUE_KEY, JSON.stringify(failedItems));
-  } catch {
-    // noop
+    const queue = await getQueue();
+    if (queue.length === 0) return;
+
+    // eslint-disable-next-line no-console
+    console.log('[SW] Replaying queue. Length:', queue.length);
+
+    const results = await Promise.allSettled(
+      queue.map(item => fetch(item.url, { credentials: 'include' })),
+    );
+
+    const db = await openDB();
+    const transaction = db.transaction([STORE_NAME], 'readwrite');
+    const store = transaction.objectStore(STORE_NAME);
+
+    queue.forEach((item, index) => {
+      if (results[index].status === 'fulfilled') {
+        store.delete(item.id);
+      }
+    });
+
+    await new Promise((resolve, reject) => {
+      transaction.oncomplete = () => resolve();
+      transaction.onerror = () => reject(transaction.error);
+    });
+
+    const successCount = results.filter(r => r.status === 'fulfilled').length;
+    // eslint-disable-next-line no-console
+    console.log(`[SW] Replayed ${successCount}/${queue.length} items successfully`);
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error('[SW] Failed to replay queue:', error);
   }
 };
 
 const fetchEventHandler = async event => {
   const requestUrl = event.request.url;
-    console.log('requestUrl>>>>>>>>', requestUrl)
-    console.log('isAnalyticsRequest(requestUrl)<<<<<<<<<<<<<', isAnalyticsRequest(requestUrl))
   // Handle analytics requests - NEW CODE, ADDED BEFORE EXISTING LOGIC
   if (isAnalyticsRequest(requestUrl)) {
     // eslint-disable-next-line no-console
@@ -104,10 +159,10 @@ const fetchEventHandler = async event => {
           replayQueue();
           return response;
         })
-        .catch(() => {
+        .catch(async () => {
           // eslint-disable-next-line no-console
           console.log('[SW] Analytics failed (offline) - queueing');
-          saveToQueue(requestUrl);
+          await saveToQueue(requestUrl);
           return new Response(null, { status: 200, statusText: 'Queued' });
         }),
     );
