@@ -11,10 +11,19 @@ const hasOfflinePageFunctionality = false;
 const OFFLINE_PAGE = `/${service}/offline`;
 
 self.addEventListener('install', event => {
+  // eslint-disable-next-line no-console
+  console.log('[SW] Installing...');
+  self.skipWaiting();
   event.waitUntil(async () => {
     const cache = await caches.open(cacheName);
     if (hasOfflinePageFunctionality) await cache.add(OFFLINE_PAGE);
   });
+});
+
+self.addEventListener('activate', event => {
+  // eslint-disable-next-line no-console
+  console.log('[SW] Activating...');
+  event.waitUntil(self.clients.claim());
 });
 
 const CACHEABLE_FILES = [
@@ -35,137 +44,130 @@ const CACHEABLE_FILES = [
 const WEBP_IMAGE =
   /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|images|ace\/(standard|ws))\/.+.webp$/;
 
-// Analytics offline tracking - NEW CODE
+// Analytics offline tracking
+const ANALYTICS_QUEUE_CACHE = 'analytics-queue-v1';
 const MAX_QUEUE_SIZE = 100;
-const DB_NAME = 'analyticsDB';
-const DB_VERSION = 1;
-const STORE_NAME = 'queue';
 
 const ANALYTICS_PATTERN =
   /^https:\/\/(.*\.)?ati-host|^https:\/\/(.*\.)?chartbeat\.net/;
 
 const isAnalyticsRequest = url => ANALYTICS_PATTERN.test(url);
 
-const openDB = () =>
-  new Promise((resolve, reject) => {
-    const request = indexedDB.open(DB_NAME, DB_VERSION);
-    request.onerror = () => reject(request.error);
-    request.onsuccess = () => resolve(request.result);
-    request.onupgradeneeded = event => {
-      const db = event.target.result;
-      if (!db.objectStoreNames.contains(STORE_NAME)) {
-        db.createObjectStore(STORE_NAME, { keyPath: 'id', autoIncrement: true });
-      }
-    };
-  });
-
-const getQueue = async () => {
-  try {
-    const db = await openDB();
-    return new Promise((resolve, reject) => {
-      const transaction = db.transaction([STORE_NAME], 'readonly');
-      const store = transaction.objectStore(STORE_NAME);
-      const request = store.getAll();
-      request.onsuccess = () => resolve(request.result || []);
-      request.onerror = () => reject(request.error);
-    });
-  } catch {
-    return [];
-  }
-};
-
-const saveToQueue = async url => {
+const queueRequest = async request => {
   try {
     // eslint-disable-next-line no-console
-    console.log('[SW] saveToQueue called for:', url.substring(0, 100));
-    const db = await openDB();
-    const transaction = db.transaction([STORE_NAME], 'readwrite');
-    const store = transaction.objectStore(STORE_NAME);
-    
-    const allItems = await new Promise((resolve, reject) => {
-      const request = store.getAll();
-      request.onsuccess = () => resolve(request.result || []);
-      request.onerror = () => reject(request.error);
-    });
+    console.log('[SW] Queueing request:', request.url.substring(0, 100));
+    const cache = await caches.open(ANALYTICS_QUEUE_CACHE);
+    const keys = await cache.keys();
 
-    if (allItems.length >= MAX_QUEUE_SIZE) {
-      const oldestId = allItems[0]?.id;
-      if (oldestId) store.delete(oldestId);
+    // Enforce queue size limit
+    if (keys.length >= MAX_QUEUE_SIZE) {
+      // eslint-disable-next-line no-console
+      console.log('[SW] Queue full, removing oldest');
+      await cache.delete(keys[0]);
     }
 
-    store.add({ url, timestamp: Date.now() });
-    
-    await new Promise((resolve, reject) => {
-      transaction.oncomplete = () => resolve();
-      transaction.onerror = () => reject(transaction.error);
-    });
-    
+    const queuedData = {
+      url: request.url,
+      method: request.method,
+      headers: Object.fromEntries(request.headers.entries()),
+      timestamp: Date.now(),
+    };
+
+    const cacheKey = `${ANALYTICS_QUEUE_CACHE}-${Date.now()}-${Math.random()}`;
+    await cache.put(cacheKey, new Response(JSON.stringify(queuedData)));
+
     // eslint-disable-next-line no-console
-    console.log('[SW] Queue saved. Length:', allItems.length + 1);
+    console.log('[SW] Queue saved. Length:', keys.length + 1);
   } catch (error) {
     // eslint-disable-next-line no-console
-    console.error('[SW] Failed to save queue:', error);
+    console.error('[SW] Failed to queue request:', error);
   }
 };
 
-const replayQueue = async () => {
+let queueProcessTimeout;
+
+const processQueue = async () => {
   try {
-    const queue = await getQueue();
-    if (queue.length === 0) return;
+    const cache = await caches.open(ANALYTICS_QUEUE_CACHE);
+    const requests = await cache.keys();
+
+    if (requests.length === 0) return;
 
     // eslint-disable-next-line no-console
-    console.log('[SW] Replaying queue. Length:', queue.length);
+    console.log('[SW] Processing queue. Length:', requests.length);
 
-    const results = await Promise.allSettled(
-      queue.map(item => fetch(item.url, { credentials: 'include' })),
-    );
+    let successCount = 0;
 
-    const db = await openDB();
-    const transaction = db.transaction([STORE_NAME], 'readwrite');
-    const store = transaction.objectStore(STORE_NAME);
+    for (const cacheKey of requests) {
+      try {
+        const response = await cache.match(cacheKey);
+        const queuedData = await response.json();
 
-    queue.forEach((item, index) => {
-      if (results[index].status === 'fulfilled') {
-        store.delete(item.id);
+        const originalRequest = new Request(queuedData.url, {
+          method: queuedData.method,
+          headers: queuedData.headers,
+        });
+
+        const result = await fetch(originalRequest);
+
+        if (result.ok) {
+          await cache.delete(cacheKey);
+          successCount += 1;
+        }
+      } catch {
+        // Leave in queue to retry later
       }
-    });
+    }
 
-    await new Promise((resolve, reject) => {
-      transaction.oncomplete = () => resolve();
-      transaction.onerror = () => reject(transaction.error);
-    });
-
-    const successCount = results.filter(r => r.status === 'fulfilled').length;
     // eslint-disable-next-line no-console
-    console.log(`[SW] Replayed ${successCount}/${queue.length} items successfully`);
+    console.log(`[SW] Processed ${successCount}/${requests.length} items successfully`);
   } catch (error) {
     // eslint-disable-next-line no-console
-    console.error('[SW] Failed to replay queue:', error);
+    console.error('[SW] Failed to process queue:', error);
+  }
+};
+
+const debouncedProcessQueue = () => {
+  clearTimeout(queueProcessTimeout);
+  queueProcessTimeout = setTimeout(() => {
+    // eslint-disable-next-line no-console
+    console.log('[SW] Debounced queue processing triggered');
+    processQueue();
+  }, 1000);
+};
+
+const handleAnalyticsRequest = async request => {
+  try {
+    const response = await fetch(request.clone());
+
+    if (response.ok) {
+      // Debounce queue processing to avoid rapid-fire requests
+      debouncedProcessQueue();
+    }
+
+    return response;
+  } catch {
+    // eslint-disable-next-line no-console
+    console.log('[SW] Analytics failed (offline) - queueing');
+    await queueRequest(request);
+
+    return new Response(JSON.stringify({ queued: true }), {
+      status: 202,
+      statusText: 'Accepted (Queued)',
+      headers: { 'Content-Type': 'application/json' },
+    });
   }
 };
 
 const fetchEventHandler = async event => {
   const requestUrl = event.request.url;
-  // Handle analytics requests - NEW CODE, ADDED BEFORE EXISTING LOGIC
+
+  // Handle analytics requests
   if (isAnalyticsRequest(requestUrl)) {
     // eslint-disable-next-line no-console
     console.log('[SW] Intercepting analytics:', requestUrl.substring(0, 100));
-    event.respondWith(
-      fetch(event.request.clone())
-        .then(response => {
-          // eslint-disable-next-line no-console
-          console.log('[SW] Analytics succeeded (online)');
-          // Replay any queued analytics since we're back online
-          replayQueue();
-          return response;
-        })
-        .catch(async () => {
-          // eslint-disable-next-line no-console
-          console.log('[SW] Analytics failed (offline) - queueing');
-          await saveToQueue(requestUrl);
-          return new Response(null, { status: 200, statusText: 'Queued' });
-        }),
-    );
+    event.respondWith(handleAnalyticsRequest(event.request));
     return;
   }
 
@@ -227,3 +229,13 @@ const fetchEventHandler = async event => {
 };
 
 onfetch = fetchEventHandler;
+
+// Listen for messages from the main thread
+self.addEventListener('message', event => {
+  if (event.data === 'PROCESS_ANALYTICS_QUEUE') {
+    // eslint-disable-next-line no-console
+    console.log('[SW] Received message to process queue');
+    // Use direct processQueue() for manual triggers (no debounce)
+    processQueue();
+  }
+});
