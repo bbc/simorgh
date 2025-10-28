@@ -82,8 +82,8 @@ exports[`Navigation should render correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -169,8 +169,8 @@ exports[`Navigation should render correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -402,8 +402,8 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -489,8 +489,8 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -716,8 +716,8 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -803,8 +803,8 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -1080,8 +1080,8 @@ exports[`Scrollable Navigation should render correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -1167,8 +1167,8 @@ exports[`Scrollable Navigation should render correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
