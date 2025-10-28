@@ -117,7 +117,7 @@ export const NOTO_SANS_TELUGU_REGULAR: Font = {
     fontFamily: 'Noto Sans Telugu',
     fontWeight: 400,
     fontStyle: 'normal',
-    src: `url('${NOTO_SANS_TELUGU_FONTS_DIR}normal.woff') format('woff'), url('${NOTO_SANS_TELUGU_FONTS_DIR}normal.eot') format('eot'), url('${NOTO_SANS_TELUGU_FONTS_DIR}normal.ttf') format('ttf')`,
+    src: `url('${NOTO_SANS_TELUGU_FONTS_DIR}normal.woff2') format('woff2'), url('${NOTO_SANS_TELUGU_FONTS_DIR}normal.woff') format('woff'), url('${NOTO_SANS_TELUGU_FONTS_DIR}normal.eot') format('eot'), url('${NOTO_SANS_TELUGU_FONTS_DIR}normal.ttf') format('ttf')`,
     fontDisplay: 'swap',
   },
 };
@@ -128,7 +128,7 @@ export const NOTO_SANS_TELUGU_BOLD: Font = {
     fontFamily: 'Noto Sans Telugu',
     fontWeight: 700,
     fontStyle: 'normal',
-    src: `url('${NOTO_SANS_TELUGU_FONTS_DIR}bold.woff') format('woff'), url('${NOTO_SANS_TELUGU_FONTS_DIR}bold.eot') format('eot'), url('${NOTO_SANS_TELUGU_FONTS_DIR}bold.ttf') format('ttf')`,
+    src: `url('${NOTO_SANS_TELUGU_FONTS_DIR}bold.woff2') format('woff2'),  url('${NOTO_SANS_TELUGU_FONTS_DIR}bold.eot') format('eot'), url('${NOTO_SANS_TELUGU_FONTS_DIR}bold.ttf') format('ttf')`,
     fontDisplay: 'swap',
   },
 };
@@ -140,7 +140,7 @@ export const NOTO_SANS_GUJARATI_REGULAR: Font = {
     fontFamily: 'Noto Sans Gujarati',
     fontWeight: 400,
     fontStyle: 'normal',
-    src: `url('${NOTO_SANS_GUJARATI_FONTS_DIR}normal.woff') format('woff'), url('${NOTO_SANS_GUJARATI_FONTS_DIR}normal.eot') format('eot'), url('${NOTO_SANS_GUJARATI_FONTS_DIR}normal.ttf') format('ttf')`,
+    src: `url('${NOTO_SANS_GUJARATI_FONTS_DIR}normal.woff2') format('woff2') url('${NOTO_SANS_GUJARATI_FONTS_DIR}normal.woff') format('woff'), url('${NOTO_SANS_GUJARATI_FONTS_DIR}normal.eot') format('eot'), url('${NOTO_SANS_GUJARATI_FONTS_DIR}normal.ttf') format('ttf')`,
     fontDisplay: 'swap',
   },
 };
@@ -151,7 +151,7 @@ export const NOTO_SANS_GUJARATI_BOLD: Font = {
     fontFamily: 'Noto Sans Gujarati',
     fontWeight: 700,
     fontStyle: 'normal',
-    src: `url('${NOTO_SANS_GUJARATI_FONTS_DIR}bold.woff') format('woff'), url('${NOTO_SANS_GUJARATI_FONTS_DIR}bold.eot') format('eot'), url('${NOTO_SANS_GUJARATI_FONTS_DIR}bold.ttf') format('ttf')`,
+    src: `url('${NOTO_SANS_GUJARATI_FONTS_DIR}bold.woff2') format('woff2'), url('${NOTO_SANS_GUJARATI_FONTS_DIR}bold.woff') format('woff'), url('${NOTO_SANS_GUJARATI_FONTS_DIR}bold.eot') format('eot'), url('${NOTO_SANS_GUJARATI_FONTS_DIR}bold.ttf') format('ttf')`,
     fontDisplay: 'swap',
   },
 };
@@ -163,7 +163,7 @@ export const NOTO_SANS_ETHIOPIC_REGULAR: Font = {
     fontFamily: 'Noto Sans Ethiopic',
     fontWeight: 400,
     fontStyle: 'normal',
-    src: `url('${NOTO_SANS_ETHIOPIC_FONTS_DIR}normal.woff') format('woff'), url('${NOTO_SANS_ETHIOPIC_FONTS_DIR}normal.eot') format('eot'), url('${NOTO_SANS_ETHIOPIC_FONTS_DIR}normal.ttf') format('ttf')`,
+    src: `url('${NOTO_SANS_ETHIOPIC_FONTS_DIR}normal.woff2') format('woff2'), url('${NOTO_SANS_ETHIOPIC_FONTS_DIR}normal.woff') format('woff'), url('${NOTO_SANS_ETHIOPIC_FONTS_DIR}normal.eot') format('eot'), url('${NOTO_SANS_ETHIOPIC_FONTS_DIR}normal.ttf') format('ttf')`,
     fontDisplay: 'swap',
   },
 };
@@ -174,7 +174,7 @@ export const NOTO_SANS_ETHIOPIC_BOLD: Font = {
     fontFamily: 'Noto Sans Ethiopic',
     fontWeight: 700,
     fontStyle: 'normal',
-    src: `url('${NOTO_SANS_ETHIOPIC_FONTS_DIR}bold.woff') format('woff'), url('${NOTO_SANS_ETHIOPIC_FONTS_DIR}bold.eot') format('eot'), url('${NOTO_SANS_ETHIOPIC_FONTS_DIR}bold.ttf') format('ttf')`,
+    src: `url('${NOTO_SANS_ETHIOPIC_FONTS_DIR}bold.woff2') format('woff2'), url('${NOTO_SANS_ETHIOPIC_FONTS_DIR}bold.woff') format('woff'), url('${NOTO_SANS_ETHIOPIC_FONTS_DIR}bold.eot') format('eot'), url('${NOTO_SANS_ETHIOPIC_FONTS_DIR}bold.ttf') format('ttf')`,
     fontDisplay: 'swap',
   },
 };
@@ -186,7 +186,7 @@ export const PADAUK_REGULAR: Font = {
     fontFamily: 'Padauk',
     fontWeight: 400,
     fontStyle: 'normal',
-    src: `url('${PADAUK_FONTS_DIR}normal.woff') format('woff'), url('${PADAUK_FONTS_DIR}normal.eot') format('eot'), url('${PADAUK_FONTS_DIR}normal.ttf') format('ttf')`,
+    src: `url('${PADAUK_FONTS_DIR}normal.woff2') format('woff2'), url('${PADAUK_FONTS_DIR}normal.woff') format('woff'), url('${PADAUK_FONTS_DIR}normal.eot') format('eot'), url('${PADAUK_FONTS_DIR}normal.ttf') format('ttf')`,
     fontDisplay: 'swap',
   },
 };
@@ -197,7 +197,7 @@ export const PADAUK_BOLD: Font = {
     fontFamily: 'Padauk',
     fontWeight: 700,
     fontStyle: 'normal',
-    src: `url('${PADAUK_FONTS_DIR}bold.woff') format('woff'), url('${PADAUK_FONTS_DIR}bold.eot') format('eot'), url('${PADAUK_FONTS_DIR}bold.ttf') format('ttf')`,
+    src: `url('${PADAUK_FONTS_DIR}bold.woff2') format('woff2'), url('${PADAUK_FONTS_DIR}bold.woff') format('woff'), url('${PADAUK_FONTS_DIR}bold.eot') format('eot'), url('${PADAUK_FONTS_DIR}bold.ttf') format('ttf')`,
     fontDisplay: 'swap',
   },
 };
@@ -290,7 +290,7 @@ const fontInfo: Record<FontName, FontInfo> = {
   },
   Noto_Sans_Ethiopic_Bold: {
     ...NOTO_SANS_ETHIOPIC_BOLD['@font-face'],
-    downloadSrc: `${NOTO_SANS_ETHIOPIC_FONTS_DIR}bold.woff`,
+    downloadSrc: `${NOTO_SANS_ETHIOPIC_FONTS_DIR}bold.woff2`,
   },
   Noto_Sans_Gujarati: {
     ...NOTO_SANS_GUJARATI_REGULAR['@font-face'],
