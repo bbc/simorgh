@@ -33,7 +33,7 @@ export default ({ service, pageType }: ServiceParametersType) => {
         retries: 3,
       },
       () => {
-        const pageTypesNoImages = ['liveRadio', 'errorPage404', 'live'];
+        const pageTypesNoImages = ['liveRadio', 'errorPage404'];
         // live radio pages and error pages do not have an image
         if (pageType && !pageTypesNoImages.includes(pageType)) {
           it('should have webp images on pages', () => {
