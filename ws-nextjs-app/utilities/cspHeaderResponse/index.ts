@@ -5,6 +5,7 @@ import getPathExtension from '#app/utilities/getPathExtension';
 import isLiveEnv from '#lib/utilities/isLive';
 import getToggles from '#app/lib/utilities/getToggles';
 import { ToggleDefinition, Toggles } from '#app/models/types/global';
+import Url from 'url-parse';
 
 const setReportTo = (header: Headers) => {
   header.set(
@@ -62,7 +63,8 @@ const isRelaxedCspEnabled = (
 
 const cspHeaderResponse = async ({ request }: { request: NextRequest }) => {
   const { isAmp } = getPathExtension(request.url);
-  const service = fallbackServiceParam(request.url);
+  const { pathname } = new Url(request.url, true);
+  const service = fallbackServiceParam(pathname);
   const isLive = isLiveEnv();
   const toggles = await getToggles(service);
   const toggleDefinitions = getToggleDefintions(toggles);
