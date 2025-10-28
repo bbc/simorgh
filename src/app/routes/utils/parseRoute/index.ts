@@ -7,7 +7,7 @@ type Platform = 'cps' | 'articles' | 'tipo';
 // Asset ID regexes
 const TC2_ID_REGEX = /^[a-z0-9-_]{1,}$/;
 const TC2_MONTH_REGEX = /^(0[1-9]|1[0-2])$/;
-const CPS_ID_REGEX = /([0-9]{5,9}|[a-z0-9\-_]+-[0-9]{5,9})$/;
+const CPS_ID_REGEX = /(?:[a-z0-9-]+-)?[0-9]{5,9}$/;
 const OPTIMO_ID_REGEX = /^c[a-zA-Z0-9]{10,}o$/;
 const TIPO_ID_REGEX =
   /^(c[a-zA-Z0-9]{10,11}t)|([a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})$/;

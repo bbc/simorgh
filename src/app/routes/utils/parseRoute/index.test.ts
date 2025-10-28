@@ -2,6 +2,14 @@ import parseRoute from '.';
 
 const EXAMPLE_ROUTES = [
   {
+    route: '/mundo/67303123',
+    expectedOutput: {
+      service: 'mundo',
+      platform: 'cps',
+      assetId: '67303123',
+    },
+  },
+  {
     route: '/news/av-embeds/67303123',
     expectedOutput: {
       service: 'news',
