@@ -30,6 +30,7 @@ const CurationPromo = ({
   headingLevel = 2,
   isLive,
   eventTrackingData,
+  timeOfDayExperimentName,
   timeOfDayVariant,
 }: Summary) => {
   const { isAmp, isLite } = use(RequestContext);
@@ -57,7 +58,7 @@ const CurationPromo = ({
     ...eventTrackingData,
     ...(timeOfDayVariant && {
       sendOptimizelyEvents: true,
-      experimentName: 'newswb_ws_tod_homepage',
+      experimentName: timeOfDayExperimentName,
       experimentVariant: timeOfDayVariant,
     }),
   });
