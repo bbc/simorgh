@@ -118,17 +118,17 @@ export const interceptATIAnalyticsBeacons = () => {
     );
 
     // Component Views
-    // cy.intercept(
-    //   {
-    //     url: `${atiUrl}/*`,
-    //     query: {
-    //       events: viewabilityViewRegex,
-    //     },
-    //   },
-    //   request => {
-    //     request.reply({ statusCode: 200 });
-    //   },
-    // ).as(`${component}-viewability-view`);
+    cy.intercept(
+      {
+        url: `${atiUrl}/*`,
+        query: {
+          events: viewabilityViewRegex,
+        },
+      },
+      request => {
+        request.reply({ statusCode: 200 });
+      },
+    ).as(`${component}-viewability-view`);
 
     // Component Clicks
     cy.intercept(
