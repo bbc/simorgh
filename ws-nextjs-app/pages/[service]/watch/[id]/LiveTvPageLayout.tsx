@@ -53,14 +53,6 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
     curation => curation.mediaCollection,
   );
 
-  const radioScheduleCuration = curations?.find(
-    curation => curation.radioSchedule,
-  );
-
-  const portraitVideoCuration = curations?.find(
-    curation => curation.portraitVideo,
-  );
-
   const getSynopses = (
     synopses: { short: string; medium: string; long: string } | undefined,
   ) => {
@@ -93,10 +85,6 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
             </Heading>
             <Text css={styles.description}>{description}</Text>
             <Text>{synopses}</Text>
-            {portraitVideoCuration &&
-              renderCuration({ curation: portraitVideoCuration })}
-            {radioScheduleCuration &&
-              renderCuration({ curation: radioScheduleCuration })}
           </div>
         </div>
       </main>
