@@ -104,6 +104,18 @@ const testSuites = [
     tests,
   },
   {
+    path: '/dari/bbc_dari_radio/programmes/p0340v0s', // On Demand Brand Dari
+    service: 'dari',
+    runforEnv: ['test'],
+    tests,
+  },
+  {
+    path: '/dari/bbc_dari_radio/w172y2n5p9pfj6x', // On Demand Episode Dari
+    service: 'persian',
+    runforEnv: ['test'],
+    tests,
+  },
+  {
     path: '/gahuza/bbc_gahuza_radio/programmes/p0340x2m', // On Demand Brand
     service: 'gahuza',
     runforEnv: ['test', 'live'],
@@ -262,13 +274,13 @@ const testSuites = [
   {
     path: '/persian/bbc_dari_radio/programmes/p0340v0s', // On Demand Brand Dari
     service: 'persian',
-    runforEnv: ['test', 'live'],
+    runforEnv: ['live'],
     tests,
   },
   {
     path: '/persian/bbc_dari_radio/w172y2n5p9pfj6x', // On Demand Episode Dari
     service: 'persian',
-    runforEnv: ['test', 'live'],
+    runforEnv: ['live'],
     tests,
   },
   {

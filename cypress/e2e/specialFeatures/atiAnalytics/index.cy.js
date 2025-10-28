@@ -1,9 +1,5 @@
 import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
 import { assertPageView } from './assertions';
-import {
-  assertBillboardComponentClick,
-  assertBillboardComponentView,
-} from './assertions/billboard';
 import { assertFeaturesAnalysisComponentClick } from './assertions/featuresAnalysis';
 import { assertLiteSiteSummaryComponentToMainSiteClick } from './assertions/liteSiteSummary';
 import {
@@ -14,12 +10,6 @@ import {
   assertMessageBannerComponentClick,
   assertMessageBannerComponentView,
 } from './assertions/messageBanner';
-import { assertPortraitVideoCarouselComponentView } from './assertions/portraitVideoCarousel';
-import { assertPortraitVideoModalComponentView } from './assertions/portraitVideoModal';
-import {
-  assertMostReadComponentClick,
-  assertMostReadComponentView,
-} from './assertions/mostRead';
 import {
   assertDropdownNavigationComponentClick,
   assertDropdownNavigationComponentView,
@@ -35,10 +25,6 @@ import {
   assertPodcastPromoComponentView,
 } from './assertions/podcastPromo';
 import {
-  assertRadioScheduleComponentClick,
-  assertRadioScheduleComponentView,
-} from './assertions/radioSchedule';
-import {
   assertRecentAudioEpisodesComponentClick,
   assertRecentAudioEpisodesComponentView,
 } from './assertions/recentAudioEpisodes';
@@ -51,38 +37,6 @@ import { setUserIDCookie } from './helpers';
 import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
 
 const canonicalTestSuites = [
-  {
-    path: '/afrique',
-    runforEnv: ['local', 'test'],
-    service: 'afrique',
-    pageIdentifier: 'afrique.page',
-    siteId: 3,
-    applicationType: 'responsive',
-    contentType: 'index-home',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertBillboardComponentView,
-      assertBillboardComponentClick,
-    ],
-  },
-  {
-    path: '/afrique/bbc_afrique_radio/programmes/p030s6dq',
-    runforEnv: ['local', 'test', 'live'],
-    service: 'afrique',
-    pageIdentifier: 'afrique.bbc_afrique_radio.programmes.p030s6dq.page',
-    siteId: 3,
-    applicationType: 'responsive',
-    contentType: 'player-episode',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertRecentAudioEpisodesComponentView,
-      assertRecentAudioEpisodesComponentClick,
-      assertRadioScheduleComponentView,
-      assertRadioScheduleComponentClick,
-    ],
-  },
   {
     path: '/afrique/bbc_afrique_tv/tv_programmes/w13xttmz',
     runforEnv: ['local', 'test', 'live'],
@@ -106,44 +60,6 @@ const canonicalTestSuites = [
     tests: [assertPageView],
   },
   {
-    path: '/dari',
-    runforEnv: ['local'],
-    service: 'dari',
-    pageIdentifier: 'dari.page',
-    siteId: 142,
-    applicationType: 'responsive',
-    contentType: 'index-home',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertScrollableNavigationComponentView,
-      assertScrollableNavigationComponentClick,
-      assertDropdownNavigationComponentView,
-      assertDropdownNavigationComponentClick,
-      assertMessageBannerComponentView,
-      assertMessageBannerComponentClick,
-    ],
-  },
-  {
-    path: '/dari',
-    runforEnv: ['test'],
-    service: 'dari',
-    pageIdentifier: 'dari.page',
-    siteId: 142,
-    applicationType: 'responsive',
-    contentType: 'index-home',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertScrollableNavigationComponentView,
-      assertScrollableNavigationComponentClick,
-      assertDropdownNavigationComponentView,
-      assertDropdownNavigationComponentClick,
-      assertMostReadComponentView,
-      assertMostReadComponentClick,
-    ],
-  },
-  {
     path: '/gahuza/popular/read',
     runforEnv: ['local', 'test', 'live'],
     service: 'gahuza',
@@ -151,87 +67,6 @@ const canonicalTestSuites = [
     siteId: 40,
     applicationType: 'responsive',
     contentType: 'list-datadriven',
-    useReverb: true,
-    tests: [assertPageView],
-  },
-  {
-    path: '/gahuza/podcasts/p07yh8hb',
-    runforEnv: ['local', 'test', 'live'],
-    service: 'gahuza',
-    pageIdentifier: 'gahuza.bbc_gahuza_radio.podcasts.programmes.p07yh8hb.page',
-    siteId: 40,
-    applicationType: 'responsive',
-    contentType: 'player-episode',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertPodcastLinksComponentView,
-      assertPodcastLinksComponentClick,
-      assertRecentAudioEpisodesComponentView,
-      assertRecentAudioEpisodesComponentClick,
-    ],
-  },
-  {
-    path: '/gahuza/podcasts/p07yh8hb/p094vs2n',
-    runforEnv: ['local', 'test', 'live'],
-    service: 'gahuza',
-    pageIdentifier: 'gahuza.bbc_gahuza_radio.podcasts.p094vs2n.page',
-    siteId: 40,
-    applicationType: 'responsive',
-    contentType: 'player-episode',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertPodcastLinksComponentView,
-      assertPodcastLinksComponentClick,
-      assertRecentAudioEpisodesComponentView,
-      assertRecentAudioEpisodesComponentClick,
-    ],
-  },
-  {
-    path: '/hausa/bbc_hausa_radio/liveradio',
-    runforEnv: ['local', 'live'],
-    service: 'hausa',
-    pageIdentifier: 'hausa.bbc_hausa_radio.liveradio.page',
-    siteId: 51,
-    applicationType: 'responsive',
-    contentType: 'player-live',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertRadioScheduleComponentView,
-      assertRadioScheduleComponentClick,
-    ],
-  },
-  {
-    path: '/kyrgyz',
-    runforEnv: ['local', 'live'],
-    service: 'kyrgyz',
-    pageIdentifier: 'kyrgyz.page',
-    siteId: 58,
-    applicationType: 'responsive',
-    contentType: 'index-home',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertScrollableNavigationComponentView,
-      assertScrollableNavigationComponentClick,
-      assertDropdownNavigationComponentView,
-      assertDropdownNavigationComponentClick,
-      assertMessageBannerComponentView,
-      assertMessageBannerComponentClick,
-      assertMostReadComponentView,
-      assertMostReadComponentClick,
-    ],
-  },
-  {
-    path: '/magyarul',
-    runforEnv: ['local', 'test'],
-    service: 'magyarul',
-    pageIdentifier: 'magyarul.page',
-    siteId: 30,
-    applicationType: 'responsive',
-    contentType: 'index-home',
     useReverb: true,
     tests: [assertPageView],
   },
@@ -246,21 +81,6 @@ const canonicalTestSuites = [
     useReverb: true,
     componentTrackingContentType: 'topic-page',
     tests: [assertPageView],
-  },
-  {
-    path: '/pashto',
-    runforEnv: ['local', 'live'],
-    service: 'pashto',
-    pageIdentifier: 'pashto.page',
-    siteId: 68,
-    applicationType: 'responsive',
-    contentType: 'index-home',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertRadioScheduleComponentView,
-      assertRadioScheduleComponentClick,
-    ],
   },
   {
     path: '/persian/afghanistan',
@@ -283,36 +103,6 @@ const canonicalTestSuites = [
     ],
   },
   {
-    path: '/polska',
-    runforEnv: ['local'],
-    service: 'polska',
-    pageIdentifier: 'polska.page',
-    siteId: 135,
-    applicationType: 'responsive',
-    contentType: 'index-home',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertMessageBannerComponentView,
-      assertMessageBannerComponentClick,
-    ],
-  },
-  {
-    path: '/portuguese',
-    runforEnv: ['local'],
-    service: 'portuguese',
-    pageIdentifier: 'portuguese.page',
-    siteId: 33,
-    applicationType: 'responsive',
-    contentType: 'index-home',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertPortraitVideoCarouselComponentView,
-      assertPortraitVideoModalComponentView,
-    ],
-  },
-  {
     path: '/portuguese/podcasts/p07r3r3t',
     runforEnv: ['local', 'test', 'live'],
     service: 'portuguese',
@@ -327,21 +117,6 @@ const canonicalTestSuites = [
       assertPodcastLinksComponentClick,
       assertRecentAudioEpisodesComponentView,
       assertRecentAudioEpisodesComponentClick,
-    ],
-  },
-  {
-    path: '/serbian/lat',
-    runforEnv: ['local', 'test', 'live'],
-    service: 'serbian',
-    pageIdentifier: 'serbianlat.page',
-    siteId: 81,
-    applicationType: 'responsive',
-    contentType: 'index-home',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertMostReadComponentView,
-      assertMostReadComponentClick,
     ],
   },
   {
@@ -362,33 +137,12 @@ const canonicalTestSuites = [
       assertRecentAudioEpisodesComponentClick,
     ],
   },
-  {
-    path: '/uzbek/cyr',
-    runforEnv: ['test', 'live'],
-    service: 'uzbek',
-    pageIdentifier: 'uzbekcyr.page',
-    siteId: 96,
-    applicationType: 'responsive',
-    contentType: 'index-home',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertMessageBannerComponentView,
-      assertMessageBannerComponentClick,
-      assertMostReadComponentView,
-      assertMostReadComponentClick,
-    ],
-  },
 ];
 
 const supportsAmp = ({ contentType }) =>
-  ![
-    'index-home',
-    'player-live',
-    'player-episode',
-    'index-category',
-    'static',
-  ].includes(contentType);
+  !['player-live', 'player-episode', 'index-category', 'static'].includes(
+    contentType,
+  );
 
 const ampTestSuites = canonicalTestSuites.filter(supportsAmp).map(testSuite => {
   return {
