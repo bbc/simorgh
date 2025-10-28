@@ -84,7 +84,7 @@ const getToggles = async (service, cache) => {
     if (toggles === '' || toggles === '""') {
       logger.error(CONFIG_ERROR, {
         status: response.status,
-        error: toggles,
+        error: `${toggles}`,
         url,
         service,
       });
