@@ -4,7 +4,7 @@ import useViewTracker from '#hooks/useViewTracker';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import PromoItem from '#components/OptimoPromos/PromoItem/index.styles';
 import PromoList from '#components/OptimoPromos/PromoList';
-import { OptimizelyContext } from '@optimizely/react-sdk';
+import { ComponentExperimentProps } from '#app/models/types/global';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import styles from './index.styles';
 import TopStoriesItem from './TopStoriesItem';
@@ -13,20 +13,17 @@ import { TopStoryItem } from './types';
 
 const TopStoriesSection = ({
   content = [],
-  sendOptimizelyEvents,
+  experimentProps,
 }: {
   content: TopStoryItem[];
-  sendOptimizelyEvents?: boolean;
+  experimentProps?: ComponentExperimentProps;
 }) => {
   const { translations, script, service } = use(ServiceContext);
-  const { optimizely } = use(OptimizelyContext);
 
   const eventTrackingData = {
     block: {
       componentName: 'top-stories',
-      ...(sendOptimizelyEvents && {
-        optimizely,
-      }),
+      ...(experimentProps && experimentProps),
     },
   };
   const eventTrackingDataSend = eventTrackingData?.block;

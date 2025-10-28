@@ -22,6 +22,7 @@ interface BillboardProps {
   eventTrackingData?: EventTrackingData;
   showLiveLabel?: boolean;
   summaries?: Summary[];
+  timeOfDayExperimentName?: string;
   timeOfDayVariant?: string;
 }
 
@@ -35,19 +36,25 @@ export default ({
   showLiveLabel,
   eventTrackingData = { componentName: 'billboard' },
   summaries = [],
+  timeOfDayExperimentName,
   timeOfDayVariant,
 }: BillboardProps) => {
   const { translations } = use(ServiceContext);
   const showMoreOnThisTitle = translations.moreOnThis;
-  const viewTracker = useViewTracker(eventTrackingData);
-  const clickTrackerHandler = useClickTrackerHandler({
+  // this curation type is used in the home page experiment as well.
+  // if they will not be running at the same time (?) we can make it so the experiment name is only for the current experiment
+  const eventTrackingDataWithOptimizelyEvents = {
     ...eventTrackingData,
     ...(timeOfDayVariant && {
       sendOptimizelyEvents: true,
-      experimentName: 'newswb_ws_tod_homepage',
+      experimentName: timeOfDayExperimentName, // might want to change this to just the article page experiment name and not need to pass it into this component
       experimentVariant: timeOfDayVariant,
     }),
-  });
+  };
+  const viewTracker = useViewTracker(eventTrackingDataWithOptimizelyEvents);
+  const clickTrackerHandler = useClickTrackerHandler(
+    eventTrackingDataWithOptimizelyEvents,
+  );
 
   return (
     <section role="region" aria-labelledby={id} data-testid={id}>
