@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import { jsx, useTheme, Theme } from '@emotion/react';
+import { jsx, useTheme, Theme, css } from '@emotion/react';
 import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
 import { Article } from '#app/models/types/optimo';
 import Curation from '#app/components/Curation';
@@ -11,13 +11,14 @@ import {
 import TopStoriesSection from './PagePromoSections/TopStoriesSection';
 import styles from './ArticlePage.styles';
 
-const adaptiveCurationsSectionStyles = ({ spacings, mq }: Theme) => ({
-  marginBottom: `${spacings.TRIPLE}rem`,
-  padding: `${spacings.DOUBLE}rem`,
-  [mq.GROUP_4_MIN_WIDTH]: {
-    display: 'none',
-  },
-});
+const adaptiveCurationsSectionStyles = ({ spacings, mq }: Theme) =>
+  css({
+    marginBottom: `${spacings.TRIPLE}rem`,
+    padding: `${spacings.DOUBLE}rem`,
+    [mq.GROUP_4_MIN_WIDTH]: {
+      display: 'none',
+    },
+  });
 
 const SecondaryColumn = ({
   pageData,
@@ -31,19 +32,19 @@ const SecondaryColumn = ({
   const topStoriesContent = pageData?.secondaryColumn?.topStories;
   const featuresContent = pageData?.secondaryColumn?.features;
   const billboardCurationData = pageData?.secondaryColumn?.billboardCuration;
-  const multimediaCurationData = pageData?.secondaryColumn?.multimediaCuration;
-  const theme = useTheme();
+  const mediaCurationData = pageData?.secondaryColumn?.mediaCuration;
   const {
     palette: { GREY_2 },
-  } = theme;
+  } = useTheme();
 
   if (
     !topStoriesContent &&
     !featuresContent &&
     !billboardCurationData &&
-    !multimediaCurationData
+    !mediaCurationData
   )
     return null;
+
   const showAdaptiveSection =
     // Morning
     experimentVariant === 'article_time_of_day_a' ||
@@ -63,19 +64,19 @@ const SecondaryColumn = ({
     <div css={styles.secondaryColumn}>
       {showAdaptiveSection && (
         <section
-          css={adaptiveCurationsSectionStyles(theme)}
+          css={adaptiveCurationsSectionStyles}
           aria-label="Adaptive Experience" // can change this name if people want
           data-testid="adaptive-curations-section"
         >
           <Curation
             visualStyle={VISUAL_STYLE.FEED} // this is a vivo stream in. a simple-curation-grid
             visualProminence={VISUAL_PROMINENCE.NORMAL}
-            summaries={multimediaCurationData?.summaries}
-            title={multimediaCurationData?.title}
+            summaries={mediaCurationData?.summaries}
+            title={mediaCurationData?.title}
             position={0}
-            curationId={multimediaCurationData?.curationId}
-            curationLength={multimediaCurationData?.summaries?.length}
-            link={multimediaCurationData?.link}
+            curationId={mediaCurationData?.curationId}
+            curationLength={mediaCurationData?.summaries?.length}
+            link={mediaCurationData?.link}
             timeOfDayExperimentName={timeOfDayExperimentName || undefined}
             timeOfDayVariant={experimentVariant || undefined}
           />

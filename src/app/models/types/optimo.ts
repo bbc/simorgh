@@ -132,7 +132,7 @@ export type ArticlePromo = {
 
 export type SecondaryColumn = {
   billboardCuration?: Curation;
-  multimediaCuration?: Curation;
+  mediaCuration?: Curation;
   topStories: TopStoryItem[];
   features: object[];
   latestMedia?: LatestMedia[];

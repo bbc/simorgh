@@ -1097,7 +1097,7 @@ describe('Article Page', () => {
         ...articleDataHindi,
         secondaryColumn: {
           billboardCuration: dummyBillboardCurationData,
-          multimediaCuration: dummyMediaCurationData,
+          mediaCuration: dummyMediaCurationData,
           topStories: [],
           features: [],
         },
