@@ -217,19 +217,24 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
-  const experimentName = 'newswb_ws_read_more_b';
-  const experimentVariant = useOptimizelyVariation({
-    experimentName,
+  // Continue Reading Button Experiment
+  const readMoreExperimentName = 'newswb_ws_read_more_b';
+  const readMoreExperimentVariant = useOptimizelyVariation({
+    experimentName: readMoreExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
-
-  const isInServerSideExperiment =
-    experimentVariant && experimentVariant !== 'off';
 
   // EXPERIMENT: Article Read Time
   const readTimeExperimentName = 'newswb_ws_article_read_time';
   const readTimeExperimentVariant = useOptimizelyVariation({
     experimentName: readTimeExperimentName,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
+
+  // EXPERIMENT: Time of Day Experiment
+  const timeOfDayExperimentName = 'newswb_ws_tod_article';
+  const timeOfDayExperimentVariant = useOptimizelyVariation({
+    experimentName: timeOfDayExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
 
@@ -282,10 +287,22 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const atiData = {
     ...atiAnalytics,
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
-    ...(isInServerSideExperiment && {
-      experimentName,
-      experimentVariant,
-    }),
+    // Better way to handle this?
+    ...(readMoreExperimentVariant &&
+      readMoreExperimentVariant !== 'off' && {
+        experimentName: readMoreExperimentName,
+        experimentVariant: readMoreExperimentVariant,
+      }),
+    ...(readTimeExperimentVariant &&
+      readTimeExperimentVariant !== 'off' && {
+        experimentName: readTimeExperimentName,
+        experimentVariant: readTimeExperimentVariant,
+      }),
+    ...(timeOfDayExperimentVariant &&
+      timeOfDayExperimentVariant !== 'off' && {
+        experimentName: timeOfDayExperimentName,
+        experimentVariant: timeOfDayExperimentVariant,
+      }),
   };
 
   // EXPERIMENT: Article Read Time
@@ -355,8 +372,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     !isAmp &&
       !isLite &&
       !isApp &&
-      experimentVariant &&
-      ['read-more-b'].includes(experimentVariant),
+      readMoreExperimentVariant &&
+      ['read-more-b'].includes(readMoreExperimentVariant),
   );
 
   return (
@@ -445,11 +462,23 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           )}
           <RelatedContentSection
             content={blocks}
-            sendOptimizelyEvents={false}
+            // EXPERIMENT: Time of Day Experiment
+            {...(timeOfDayExperimentVariant && {
+              experimentProps: {
+                sendOptimizelyEvents: true,
+                experimentName: timeOfDayExperimentName,
+                experimentVariant: timeOfDayExperimentVariant,
+              },
+            })}
           />
         </div>
         {!isApp && !isPGL && (
-          <SecondaryColumn pageData={pageData} sendOptimizelyEvents={false} />
+          <SecondaryColumn
+            pageData={pageData}
+            // EXPERIMENT: Time of Day Experiment
+            experimentVariant={timeOfDayExperimentVariant}
+            timeOfDayExperimentName={timeOfDayExperimentName}
+          />
         )}
       </div>
       {!isApp && !isPGL && (
@@ -460,7 +489,15 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           size="default"
           headingBackgroundColour={GREY_2}
           mobileDivider={showTopics}
-          sendOptimizelyEvents={false}
+          // EXPERIMENT: Time of Day Experiment
+          eventTrackingData={{
+            componentName: 'most-read',
+            ...(timeOfDayExperimentVariant && {
+              sendOptimizelyEvents: true,
+              experimentName: timeOfDayExperimentName,
+              experimentVariant: timeOfDayExperimentVariant,
+            }),
+          }}
         />
       )}
     </div>
