@@ -72,10 +72,6 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
     pageData?.curations?.[0].mediaCollection?.[0].model.synopses,
   );
 
-  // Had this originally but thought it best to cater to all of the available options? i.e in case editorial don't provide a medium option etc
-  // const synopses =
-  //   pageData?.curations?.[0].mediaCollection?.[0].model.synopses.medium;
-
   return (
     <>
       {/* <ATIAnalytics atiData={atiAnalytics} />
