@@ -9,7 +9,7 @@ import isLocal from '#app/lib/utilities/isLocal';
 import * as onClient from '#app/lib/utilities/onClient';
 import fetchPageData from '.';
 
-const expectedBaseUrl = 'http://localhost';
+const expectedBaseUrl = 'http://localhost:7080';
 const requestedPathname = '/path/to/asset';
 const fullTestPath =
   'https://test.mock-bff.api.bbc.com/simorgh-bff?pageType=bob';
@@ -260,7 +260,7 @@ describe('fetchPageData', () => {
           ({ message, status }) => {
             expect(loggerMock.error).toHaveBeenCalledWith(DATA_FETCH_ERROR, {
               error:
-                'Unexpected upstream response (HTTP status code 418) when requesting http://localhost/path/to/asset.json',
+                'Unexpected upstream response (HTTP status code 418) when requesting http://localhost:7080/path/to/asset.json',
               status: 500,
               data: expectedUrl,
               path: requestedPathname,
@@ -353,7 +353,7 @@ describe('fetchPageData', () => {
     });
 
     const cache = new Map();
-    cache.set('http://localhost/path/to/asset.json', response);
+    cache.set('http://localhost:7080/path/to/asset.json', response);
 
     beforeEach(() => {
       fetch.mockResponse(response);
