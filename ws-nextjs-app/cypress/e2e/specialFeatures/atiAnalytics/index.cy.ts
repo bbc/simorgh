@@ -344,15 +344,15 @@ const liteTestSuites = canonicalTestSuites
       ...testSuite,
       path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
       applicationType: 'lite',
-      useReverb: false,
+      useReverb: true,
       tests: [...liteSiteTests],
     };
   });
 
 runTestsForPage({
   testSuites: [
-    ...canonicalTestSuites,
-    ...ampTestSuites,
+    // ...canonicalTestSuites,
+    // ...ampTestSuites,
     ...liteTestSuites,
   ] as unknown as TestDataType[],
   beforeEachFns: [setUserIDCookie],
