@@ -73,7 +73,7 @@ const cspHeaderResponse = async ({ request }: { request: NextRequest }) => {
   let toggles = null;
   let toggleDefinitions = null;
 
-  if (!isValidService(urlPath)) {
+  if (isValidService(urlPath)) {
     const service = fallbackServiceParam(request.nextUrl.pathname);
     toggles = await getToggles(service);
     toggleDefinitions = getToggleDefintions(toggles);
