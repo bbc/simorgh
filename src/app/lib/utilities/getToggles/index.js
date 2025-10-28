@@ -22,15 +22,9 @@ const logResponseTime = async (url, origin, service, timeout) => {
     return fetch(url, { headers: { origin }, timeout });
   }
 
+  logger.info(CONFIG_REQUEST_RECEIVED, { url, service });
   const startHrTime = process.hrtime();
   const response = await fetch(url, { headers: { origin }, timeout });
-  const { data } = response;
-  logger.info(CONFIG_REQUEST_RECEIVED, {
-    url,
-    service,
-    response,
-    data,
-  });
   const elapsedHrTime = process.hrtime(startHrTime);
   logger.info(TOGGLE_API_RESPONSE_TIME, {
     nanoseconds: elapsedHrTime[0] * NS_PER_SEC + elapsedHrTime[1],
@@ -42,7 +36,7 @@ const logResponseTime = async (url, origin, service, timeout) => {
 };
 
 const getToggles = async (service, cache) => {
-  const environment = 'test';
+  const environment = getEnvConfig().SIMORGH_APP_ENV || 'local';
   const timeout =
     parseInt(getEnvConfig().SIMORGH_CONFIG_TIMEOUT_SECONDS, 10) * 1000;
   const localToggles = defaultToggles[environment];

@@ -4,7 +4,8 @@ import fallbackServiceParam from '#app/routes/utils/fetchPageData/utils/getRoute
 import getPathExtension from '#app/utilities/getPathExtension';
 import isLiveEnv from '#lib/utilities/isLive';
 import getToggles from '#app/lib/utilities/getToggles';
-import { ToggleDefinition, Toggles } from '#app/models/types/global';
+import { Services, ToggleDefinition, Toggles } from '#app/models/types/global';
+import { services } from '#app/lib/config/services/loadableConfig';
 
 const setReportTo = (header: Headers) => {
   header.set(
@@ -60,18 +61,29 @@ const isRelaxedCspEnabled = (
   return !allowedCountries.includes(country.toLowerCase());
 };
 
+const isValidService = (str: string) => {
+  const [service] = str.split('/').filter(Boolean);
+  return service && services.includes(service as Services);
+};
+
 const cspHeaderResponse = async ({ request }: { request: NextRequest }) => {
   const { isAmp } = getPathExtension(request.url);
-  const service = fallbackServiceParam(request.url);
   const isLive = isLiveEnv();
-  const toggles = await getToggles(service);
-  const toggleDefinitions = getToggleDefintions(toggles);
+  const urlPath = request.nextUrl.pathname;
+  let toggles = null;
+  let toggleDefinitions = null;
+
+  if (!isValidService(urlPath)) {
+    const service = fallbackServiceParam(request.nextUrl.pathname);
+    toggles = await getToggles(service);
+    toggleDefinitions = getToggleDefintions(toggles);
+  }
+
   const { enabled: hasAdsScripts, value: omittedCountries = '' } =
-    toggleDefinitions.adsNonce || {};
+    toggleDefinitions?.adsNonce || {};
   const requestHeaders = new Headers(request.headers);
   const country =
     requestHeaders.get('x-country') || requestHeaders.get('x-bbc-edge-country');
-
   const shouldServeRelaxedCsp =
     hasAdsScripts && isRelaxedCspEnabled(omittedCountries, country || '');
 
