@@ -44,6 +44,13 @@ export const assertBillboardComponentClick = ({
       return false;
     });
 
+    // This will ignore cross origin errors from localhost to bbc.com.
+    cy.origin('https://www.bbc.com', () => {
+      cy.on('uncaught:exception', () => {
+        return false;
+      });
+    });
+
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
