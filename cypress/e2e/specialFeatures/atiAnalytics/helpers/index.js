@@ -37,29 +37,29 @@ const PORTRAIT_VIDEO_CAROUSEL = 'portrait-video-carousel';
 const PORTRAIT_VIDEO_MODAL = 'portrait-video-modal';
 
 export const COMPONENTS = {
-  ARTICLE_LITE_SITE_LINK,
+  // ARTICLE_LITE_SITE_LINK,
   BILLBOARD,
-  DROPDOWN_NAVIGATION,
-  FEATURES,
-  LATEST_MEDIA,
-  LITE_SITE_SUMMARY,
-  LIVE_MEDIA,
-  MESSAGE_BANNER,
-  MOST_READ,
-  PODCAST_LINKS,
-  PODCAST_PROMO,
-  RADIO_SCHEDULE,
-  RECENT_AUDIO_EPISODES,
-  RECOMMENDATIONS,
-  RELATED_CONTENT,
-  RELATED_TOPICS,
-  SCROLLABLE_NAVIGATION,
-  SCROLLABLE_PROMO,
-  SHARE,
-  SOCIAL_EMBED,
-  TOP_STORIES,
-  PORTRAIT_VIDEO_CAROUSEL,
-  PORTRAIT_VIDEO_MODAL,
+  // DROPDOWN_NAVIGATION,
+  // FEATURES,
+  // LATEST_MEDIA,
+  // LITE_SITE_SUMMARY,
+  // LIVE_MEDIA,
+  // MESSAGE_BANNER,
+  // MOST_READ,
+  // PODCAST_LINKS,
+  // PODCAST_PROMO,
+  // RADIO_SCHEDULE,
+  // RECENT_AUDIO_EPISODES,
+  // RECOMMENDATIONS,
+  // RELATED_CONTENT,
+  // RELATED_TOPICS,
+  // SCROLLABLE_NAVIGATION,
+  // SCROLLABLE_PROMO,
+  // SHARE,
+  // SOCIAL_EMBED,
+  // TOP_STORIES,
+  // PORTRAIT_VIDEO_CAROUSEL,
+  // PORTRAIT_VIDEO_MODAL,
 };
 
 export const interceptATIAnalyticsBeacons = () => {
@@ -67,7 +67,7 @@ export const interceptATIAnalyticsBeacons = () => {
 
   // Component Views & Clicks - Viewability Model
   Object.values(COMPONENTS).forEach(component => {
-    cy.intercept('GET', `https://logws1363.ati-host.net/**`, request => {
+    cy.intercept('GET', `${atiUrl}/**`, request => {
       const { query } = request;
       const viewabilityModelString = query.events;
       if (viewabilityModelString) {
@@ -80,6 +80,13 @@ export const interceptATIAnalyticsBeacons = () => {
 
         const containsExpectedComponent =
           viewabilityModelString.includes(component);
+
+        console.log(
+          'CHECK CY',
+          viewabilityModelString,
+          isClickEvent,
+          containsExpectedComponent,
+        );
 
         if (isViewEvent && containsExpectedComponent) {
           request.alias = `${component}-viewability-view`;
