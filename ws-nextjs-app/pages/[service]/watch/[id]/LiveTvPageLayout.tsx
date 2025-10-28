@@ -38,7 +38,6 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
           title={curationTitle}
           position={position}
           link={link}
-          // curationLength={curations.length}
           renderVisuallyHiddenH2Title={position === 0}
           curationId={curationId}
           {...curationProps}
@@ -51,6 +50,10 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
 
   const mediaCollectionCuration = curations?.find(
     curation => curation.mediaCollection,
+  );
+
+  const filteredCurations = curations?.filter(
+    curation => curation !== mediaCollectionCuration,
   );
 
   const getSynopses = (
