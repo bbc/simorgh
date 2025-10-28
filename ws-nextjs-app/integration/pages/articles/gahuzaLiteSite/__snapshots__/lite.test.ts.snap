@@ -8,7 +8,7 @@ exports[`Lite Site Articles Lite Site Summary should match snapshot 1`] = `
   role="region"
 >
   <strong
-    class="css-1tqaulv"
+    class="css-ory9gk"
     hidden=""
     id="LiteSiteSummary"
   >
@@ -18,12 +18,12 @@ exports[`Lite Site Articles Lite Site Summary should match snapshot 1`] = `
     class="css-zudp5j"
   >
     <p
-      class="css-1x40dze"
+      class="css-11k1lfi"
     >
       Uriko ubona ku rubuga aherekana amakuru mu nyandiko gusa, hakoresha uburyo buke. Ja ku rubuga nyamukuru ubone amakuru mu nyandiko iherekejwe n'amasanamu.
     </p>
     <p
-      class="css-1hkd7ak"
+      class="css-e7m1on"
       data-e2e="to-main-site"
     >
       <a
@@ -33,7 +33,7 @@ exports[`Lite Site Articles Lite Site Summary should match snapshot 1`] = `
         href="http://localhost:7081/gahuza/articles/cey23zx8wx8o"
       >
         <span
-          class="css-1clt7u3"
+          class="css-1hza8cj"
         >
           Njana ku rubuga nyamukuru canke aho gusoma gusa
         </span>
@@ -52,7 +52,7 @@ exports[`Lite Site Articles Lite Site Summary should match snapshot 1`] = `
       </a>
     </p>
     <p
-      class="css-1hkd7ak"
+      class="css-e7m1on"
       data-e2e="information-page"
     >
       <a
@@ -60,7 +60,7 @@ exports[`Lite Site Articles Lite Site Summary should match snapshot 1`] = `
         href="https://www.bbc.com/gahuza/articles/cn7y7pvem0vo.lite"
       >
         <span
-          class="css-baf38v"
+          class="css-h4fwue"
         >
           Ibindi vyerekeye ingene urwo rubuga rugutwara uburyo (ama mega) buke
         </span>

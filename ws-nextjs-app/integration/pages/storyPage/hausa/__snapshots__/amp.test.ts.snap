@@ -234,7 +234,7 @@ exports[`AMP Story Page Image should match snapshot 1`] = `
       srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01b7w9z.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01b7w9z.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01b7w9z.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01b7w9z.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01b7w9z.jpg.webp 800w"
     />
     <div
-      class="css-1kgb7ah"
+      class="css-1mgo2mg"
     >
       <strong
         class="css-pow7hy"

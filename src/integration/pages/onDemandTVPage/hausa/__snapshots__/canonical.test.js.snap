@@ -182,7 +182,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] 
   data-e2e="media-loader__placeholder"
 >
   <div
-    class="bbc-7lwtom"
+    class="bbc-1xawjgp"
     data-e2e="media-player__guidance"
   >
     <noscript
@@ -194,7 +194,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] 
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove bbc-1qx1rpk"
+    class="focusIndicatorRemove bbc-4vlf9b"
     type="button"
   >
     <span
@@ -259,7 +259,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
   data-e2e="media-loader__placeholder"
 >
   <div
-    class="bbc-7lwtom"
+    class="bbc-1xawjgp"
     data-e2e="media-player__guidance"
   >
     <noscript
@@ -271,7 +271,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove bbc-1qx1rpk"
+    class="focusIndicatorRemove bbc-4vlf9b"
     type="button"
   >
     <span
@@ -340,7 +340,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`]
     data-e2e="media-loader__placeholder"
   >
     <div
-      class="bbc-7lwtom"
+      class="bbc-1xawjgp"
       data-e2e="media-player__guidance"
     >
       <noscript
@@ -352,7 +352,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`]
       </noscript>
     </div>
     <button
-      class="focusIndicatorRemove bbc-1qx1rpk"
+      class="focusIndicatorRemove bbc-4vlf9b"
       type="button"
     >
       <span

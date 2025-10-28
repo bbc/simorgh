@@ -6,7 +6,7 @@ exports[`AMP Articles Embed HTML should match snapshot 1`] = `
   data-e2e="embed-error"
 >
   <strong
-    class="css-14rqp36"
+    class="css-ayvsvz"
   >
     Sorry, we can’t display this part of the story on this lightweight mobile page.
   </strong>
@@ -14,7 +14,7 @@ exports[`AMP Articles Embed HTML should match snapshot 1`] = `
     class="css-yzszhh"
   >
     <a
-      class="css-r7x05n"
+      class="css-gu9ena"
       href="http://localhost:7081/pidgin/articles/c39rjygpmv1o"
     >
       View the full version of the page to see all the content.
