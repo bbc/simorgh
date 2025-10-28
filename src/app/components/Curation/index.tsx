@@ -69,6 +69,7 @@ export default ({
   portraitVideo,
   renderVisuallyHiddenH2Title = false,
   curationId,
+  timeOfDayExperimentName,
   timeOfDayVariant,
   mediaCollection,
 }: Curation) => {
@@ -129,6 +130,7 @@ export default ({
               showLiveLabel={summaryIsLive}
               altText={imageAlt}
               summaries={summaries}
+              timeOfDayExperimentName={timeOfDayExperimentName || undefined}
               timeOfDayVariant={timeOfDayVariant ?? undefined}
             />
           </div>
@@ -217,9 +219,17 @@ export default ({
     case HIERARCHICAL_CURATION_GRID:
     default:
       if (summaries.length > 0) {
+        // we are currently not tracking views on this component for the home page time of day experiment in optimizely
+        // so I have only added the optimizely events in the case that it is the article time of day experiment
         const viewTracker = useViewTracker({
           ...eventTrackingData,
           viewThreshold: 0.2,
+          ...(timeOfDayExperimentName === 'newswb_ws_tod_article' &&
+            timeOfDayVariant && {
+              sendOptimizelyEvents: true,
+              experimentName: timeOfDayExperimentName,
+              experimentVariant: timeOfDayVariant,
+            }),
         });
 
         const curationSubheadingClickTracker =
@@ -247,6 +257,7 @@ export default ({
                 headingLevel={3}
                 isFirstCuration={isFirstCuration}
                 eventTrackingData={eventTrackingData}
+                timeOfDayExperimentName={timeOfDayExperimentName || undefined}
                 timeOfDayVariant={timeOfDayVariant ?? undefined}
               />
             </div>
@@ -258,6 +269,7 @@ export default ({
               headingLevel={2} // if there is only one curation, all promos should be h2, and no subheading
               isFirstCuration={isFirstCuration}
               eventTrackingData={eventTrackingData}
+              timeOfDayExperimentName={timeOfDayExperimentName || undefined}
               timeOfDayVariant={timeOfDayVariant ?? undefined}
             />
           </div>
