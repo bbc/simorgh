@@ -9,7 +9,7 @@ const testSuites = [
     path: '/amharic',
     runforEnv: ['local', 'test', 'live'],
     service: 'amharic',
-    expectedFonts: ['Noto_Sans_Ethiopic', 'Noto_Sans_Ethiopic_Bold'],
+    expectedFonts: ['Noto_Sans_Ethiopic_Bold', 'Noto_Sans_Ethiopic'],
     tests,
   },
   {
