@@ -81,13 +81,6 @@ export const interceptATIAnalyticsBeacons = () => {
         const containsExpectedComponent =
           viewabilityModelString.includes(component);
 
-        console.log(
-          'CHECK CY',
-          viewabilityModelString,
-          isClickEvent,
-          containsExpectedComponent,
-        );
-
         if (isViewEvent && containsExpectedComponent) {
           request.alias = `${component}-viewability-view`;
           request.reply({ statusCode: 200 });

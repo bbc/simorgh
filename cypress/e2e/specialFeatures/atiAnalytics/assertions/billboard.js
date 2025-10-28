@@ -39,9 +39,9 @@ export const assertBillboardComponentClick = ({
   siteId,
 }) => {
   it('should send a click event for the Billboard component', () => {
+    interceptATIAnalyticsBeacons();
     cy.visit(path);
 
-    interceptATIAnalyticsBeacons();
     cy.get('[data-testid="billboard-1"]').scrollIntoView({
       duration: 1000,
     });
