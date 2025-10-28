@@ -44,29 +44,20 @@ const getToggleDefintions = (
 };
 
 const isRelaxedCspEnabled = (
-  countriesList: string | number | undefined,
+  omittedCountries: string | number | undefined,
   country: string,
 ): boolean => {
-  if (!countriesList || countriesList.toString().trim() === '') {
+  if (!omittedCountries || omittedCountries.toString().trim() === '') {
     return true;
   }
 
-  console.log('initial condition', countriesList.toString().trim() === '');
-
-  const omittedCountries = countriesList
+  const allowedCountries = omittedCountries
     .toString()
     .split(',')
     .map(s => s.trim().toLowerCase())
     .filter(Boolean);
 
-  console.log('extracting countries', omittedCountries);
-
-  console.log(
-    'check if country is in array',
-    !omittedCountries.includes(country.toLowerCase()),
-  );
-
-  return !omittedCountries.includes(country.toLowerCase());
+  return !allowedCountries.includes(country.toLowerCase());
 };
 
 const cspHeaderResponse = async ({ request }: { request: NextRequest }) => {
@@ -75,18 +66,14 @@ const cspHeaderResponse = async ({ request }: { request: NextRequest }) => {
   const isLive = isLiveEnv();
   const toggles = await getToggles(service);
   const toggleDefinitions = getToggleDefintions(toggles);
-  const { enabled: isToggleEnabled, value: countriesList = '' } =
+  const { enabled: hasAdsScripts, value: omittedCountries = '' } =
     toggleDefinitions.adsNonce || {};
   const requestHeaders = new Headers(request.headers);
   const country =
     requestHeaders.get('x-country') || requestHeaders.get('x-bbc-edge-country');
 
-  console.log(country);
-
   const shouldServeRelaxedCsp =
-    isToggleEnabled && isRelaxedCspEnabled(countriesList, country || '');
-
-  console.log('final condition', shouldServeRelaxedCsp);
+    hasAdsScripts && isRelaxedCspEnabled(omittedCountries, country || '');
 
   const { directives } = cspDirectives({
     isAmp,

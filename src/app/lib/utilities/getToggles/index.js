@@ -86,16 +86,6 @@ const getToggles = async (service, cache) => {
     if (cache) {
       cache.set(url, toggles);
     }
-
-    if (toggles === '' || toggles === '""') {
-      logger.error(CONFIG_ERROR, {
-        status: response.status,
-        error: `${toggles}`,
-        url,
-        service,
-      });
-    }
-
     return {
       ...localToggles,
       ...toggles,
