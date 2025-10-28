@@ -121,8 +121,8 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
 
 .emotion-6 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
@@ -322,8 +322,8 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
 
 .emotion-14 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height: 1rem;
   display: block;
@@ -570,8 +570,8 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Post block and 
 
 .emotion-6 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
@@ -657,8 +657,8 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Post block and 
 
 .emotion-12 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height: 1rem;
   display: block;
@@ -905,8 +905,8 @@ min-height:55.5rem .no-js .emotion-2 {
 
 .emotion-6 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
@@ -992,8 +992,8 @@ min-height:55.5rem .no-js .emotion-2 {
 
 .emotion-12 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height: 1rem;
   display: block;
@@ -1238,8 +1238,8 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
 
 .emotion-6 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
@@ -1439,8 +1439,8 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
 
 .emotion-14 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height: 1rem;
   display: block;
@@ -1687,8 +1687,8 @@ exports[`SocialEmbedContainer Canonical should render a Twitter block and unmoun
 
 .emotion-6 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
@@ -1764,8 +1764,8 @@ exports[`SocialEmbedContainer Canonical should render a Twitter block and unmoun
 
 .emotion-12 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height: 1rem;
   display: block;
@@ -1997,8 +1997,8 @@ min-height:7.0625rem .no-js .emotion-2 {
 
 .emotion-6 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
@@ -2198,8 +2198,8 @@ min-height:7.0625rem .no-js .emotion-2 {
 
 .emotion-14 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height: 1rem;
   display: block;
@@ -2446,8 +2446,8 @@ exports[`SocialEmbedContainer Canonical should render an Instagram block and unm
 
 .emotion-6 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
@@ -2520,8 +2520,8 @@ exports[`SocialEmbedContainer Canonical should render an Instagram block and unm
 
 .emotion-12 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height: 1rem;
   display: block;
