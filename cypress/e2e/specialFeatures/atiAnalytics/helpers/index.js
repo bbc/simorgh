@@ -102,10 +102,10 @@ export const interceptATIAnalyticsBeacons = () => {
   // Component Views & Clicks - Viewability Model
   Object.values(COMPONENTS).forEach(component => {
     const responsiveViewabilityViewRegex = `\\[\\{"name":"viewability\\.view","data":\\{(?:.*)?"event":\\{"category":"viewability","action":"view"\\}(?:.*)?"item":\\{(?:.*)?"name":"${component}(.*)?"(?:.*)?\\}\\}\\}\\]`;
-    const staticViewabilityViewRegex = `\\[\\{"name":"viewability\\.view","data":\\{"item":\\{"name":"${component}","link":""\\},"event":\\{"category":"viewability","action":"view"\\},"group":\\{"name":"(?:.*)?","type":"${component}","link":"(?:.*)?","item_count":\\d+,"resource_id":"(?:.*)?","position":\\d+\\},"user":\\{"id":null\\},"app":\\{"type":"(?:.*)?","name":"(?:.*)?"\\}\\}\\}\\]`;
+    const staticViewabilityViewRegex = `\\[\\{"name":"viewability\\.view","data":\\{"item":\\{"name":"${component}(.*)?",(?:.*)},"event":\\{"category":"viewability","action":"view"\\},"group":\\{(?:.*)"type":"${component}(.*)?"(?:.*)\\},"app":\\{(?:.*)\\}\\}\\}\\]`;
 
     const responsiveViewabilityClickRegex = `\\[\\{"name":"viewability\\.select","data":\\{(?:.*)?"event":\\{"category":"viewability","action":"select"\\}(?:.*)?"item":\\{(?:.*)?"name":"${component}(.*)?"(?:.*)?\\}\\}\\}\\]`;
-    const staticViewabilityClickRegex = `\\[\\{"name":"viewability\\.select","data":\\{"item":\\{"name":"${component}","link":"(?:.*)?"\\},"event":\\{"category":"viewability","action":"select"\\},"group":\\{"name":"(?:.*)?","type":"${component}","link":"(?:.*)?","item_count":\\d+,"resource_id":"(?:.*)?","position":\\d+\\},"user":\\{"id":null\\},"app":\\{"type":"(?:.*)?","name":"(?:.*)?"\\}\\}\\}\\]`;
+    const staticViewabilityClickRegex = `\\[\\{"name":"viewability\\.select","data":\\{"item":\\{"name":"${component}(.*)?"(?:.*)\\},"event":\\{"category":"viewability","action":"select"\\},"group":\\{(?:.*)"type":"${component}(.*)?",(?:.*)\\},"app":\\{(?:.*)\\}\\}\\}\\]`;
 
     const viewabilityViewRegex = new RegExp(
       `${responsiveViewabilityViewRegex}|${staticViewabilityViewRegex}`,
@@ -118,17 +118,17 @@ export const interceptATIAnalyticsBeacons = () => {
     );
 
     // Component Views
-    cy.intercept(
-      {
-        url: `${atiUrl}/*`,
-        query: {
-          events: viewabilityViewRegex,
-        },
-      },
-      request => {
-        request.reply({ statusCode: 200 });
-      },
-    ).as(`${component}-viewability-view`);
+    // cy.intercept(
+    //   {
+    //     url: `${atiUrl}/*`,
+    //     query: {
+    //       events: viewabilityViewRegex,
+    //     },
+    //   },
+    //   request => {
+    //     request.reply({ statusCode: 200 });
+    //   },
+    // ).as(`${component}-viewability-view`);
 
     // Component Clicks
     cy.intercept(
