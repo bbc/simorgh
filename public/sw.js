@@ -100,6 +100,8 @@ const fetchEventHandler = async event => {
         .then(response => {
           // eslint-disable-next-line no-console
           console.log('[SW] Analytics succeeded (online)');
+          // Replay any queued analytics since we're back online
+          replayQueue();
           return response;
         })
         .catch(() => {
