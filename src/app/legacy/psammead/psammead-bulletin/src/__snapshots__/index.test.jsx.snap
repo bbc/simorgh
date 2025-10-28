@@ -78,8 +78,8 @@ exports[`Bulletin should render audio correctly 1`] = `
   margin: 0;
   padding: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -155,8 +155,8 @@ exports[`Bulletin should render audio correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -199,8 +199,8 @@ exports[`Bulletin should render audio correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -415,8 +415,8 @@ exports[`Bulletin should render audio correctly with lang prop passed in 1`] = `
   margin: 0;
   padding: 0.5rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.5rem;
 }
@@ -492,8 +492,8 @@ exports[`Bulletin should render audio correctly with lang prop passed in 1`] = `
   font-size: 0.9375rem;
   line-height: 1.375rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -536,8 +536,8 @@ exports[`Bulletin should render audio correctly with lang prop passed in 1`] = `
   font-size: 0.9375rem;
   line-height: 1.5rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -767,8 +767,8 @@ exports[`Bulletin should render live audio correctly 1`] = `
   margin: 0;
   padding: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -879,8 +879,8 @@ exports[`Bulletin should render live audio correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -923,8 +923,8 @@ exports[`Bulletin should render live audio correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1183,8 +1183,8 @@ exports[`Bulletin should render live video correctly 1`] = `
   margin: 0;
   padding: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   font-size: 1.125rem;
   line-height: 1.375rem;
 }
@@ -1293,8 +1293,8 @@ exports[`Bulletin should render live video correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1338,8 +1338,8 @@ exports[`Bulletin should render live video correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1585,8 +1585,8 @@ exports[`Bulletin should render radio bulletin without ariaId 1`] = `
   margin: 0;
   padding: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -1662,8 +1662,8 @@ exports[`Bulletin should render radio bulletin without ariaId 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1706,8 +1706,8 @@ exports[`Bulletin should render radio bulletin without ariaId 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1922,8 +1922,8 @@ exports[`Bulletin should render radio bulletin without summary correctly 1`] = `
   margin: 0;
   padding: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -2012,8 +2012,8 @@ exports[`Bulletin should render radio bulletin without summary correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -2227,8 +2227,8 @@ exports[`Bulletin should render video correctly 1`] = `
   margin: 0;
   padding: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   font-size: 1.125rem;
   line-height: 1.375rem;
 }
@@ -2302,8 +2302,8 @@ exports[`Bulletin should render video correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -2347,8 +2347,8 @@ exports[`Bulletin should render video correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
