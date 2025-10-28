@@ -42,7 +42,7 @@ const logResponseTime = async (url, origin, service, timeout) => {
 };
 
 const getToggles = async (service, cache) => {
-  const environment = getEnvConfig().SIMORGH_APP_ENV || 'local';
+  const environment = 'test';
   const timeout =
     parseInt(getEnvConfig().SIMORGH_CONFIG_TIMEOUT_SECONDS, 10) * 1000;
   const localToggles = defaultToggles[environment];
