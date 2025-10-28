@@ -34,7 +34,7 @@ const useCustomEventTracker = ({ eventName }: CustomEventData) => {
   const { service, useReverb } = use(ServiceContext);
 
   const trackEvent = useCallback(
-    async (stringifiedData: string) => {
+    async (stringifiedData = '') => {
       if (!trackingIsEnabled || !eventName) return;
 
       const shouldSendEvent = [
@@ -83,6 +83,7 @@ const useCustomEventTracker = ({ eventName }: CustomEventData) => {
     ],
   );
 
+  // TODO - should it just return a function?
   return {
     trackEvent,
   };
