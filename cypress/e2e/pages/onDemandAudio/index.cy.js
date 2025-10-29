@@ -511,7 +511,7 @@ const atiAnalyticsTestSuites = [
   },
   {
     path: '/portuguese/podcasts/p07r3r3t',
-    runforEnv: ['test', 'live'],
+    runforEnv: ['local', 'test', 'live'],
     service: 'portuguese',
     pageIdentifier: 'portuguese.bbc_brasil.podcasts.programmes.p07r3r3t.page',
     siteId: 33,
@@ -522,7 +522,7 @@ const atiAnalyticsTestSuites = [
   },
   {
     path: '/portuguese/podcasts/p07r3r3t/p0ldy4p8',
-    runforEnv: ['local', 'test', 'live'],
+    runforEnv: ['test', 'live'],
     service: 'portuguese',
     pageIdentifier: 'portuguese.bbc_brasil.podcasts.p0ldy4p8.page',
     siteId: 33,
