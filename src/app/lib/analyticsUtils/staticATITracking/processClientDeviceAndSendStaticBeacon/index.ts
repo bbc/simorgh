@@ -97,12 +97,7 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
     }
 
     if (reverbUrl) {
-      const marketingString = Object.keys(params)
-        .filter(key => key.startsWith('src_') || key.startsWith('utm_'))
-        .map(key => `${key}=${params[key]}`)
-        .join('&');
-
-      const processedReverbUrl = reverbUrl
+      let processedReverbUrl = reverbUrl
         .replace('{screenResolutionColourDepth}', params.r)
         .replace('{browserViewportResolution}', params.re)
         .replace('{timestamp}', params.hl)
@@ -112,9 +107,19 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
         .replace('{epochTimestamp}', epochTimestamp)
         .replace('{forwardingLink}', forwardingUrl);
 
-      window.sendStaticBeacon(
-        `${processedReverbUrl}${marketingString ? `&${marketingString}` : ''}`,
-      );
+      const searchParams = new URLSearchParams(window.location.search);
+
+      searchParams.forEach((value, key) => {
+        if (key.startsWith('utm_') || key.startsWith('at_')) {
+          processedReverbUrl +=
+            `&${encodeURIComponent(key)}=${encodeURIComponent(value)}`.replace(
+              'at_',
+              'src_',
+            );
+        }
+      });
+
+      window.sendStaticBeacon(processedReverbUrl);
     } else if (atiUrl) {
       const paramValues = Object.keys(params)
         .map(key => `${key}=${params[key]}`)
