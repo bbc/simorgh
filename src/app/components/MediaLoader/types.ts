@@ -153,7 +153,7 @@ export type MediaInfo = {
 export type Player = {
   dispatchEvent(
     dispatchEvent: string,
-    parameters?: { updatedAdTag: string },
+    parameters?: { adTag: string | null },
   ): void;
   load: () => void;
   play: () => void;
