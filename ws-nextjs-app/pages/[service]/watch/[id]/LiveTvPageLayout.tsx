@@ -13,6 +13,37 @@ import styles from './styles';
 // import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 // import ATIAnalytics from '#app/components/ATIAnalytics';
 
+const renderCuration = ({ curation }: { curation: CurationType }) => {
+  const {
+    summaries,
+    curationId,
+    title: curationTitle,
+    link,
+    position,
+    ...curationProps
+  } = curation;
+  return (
+    <React.Fragment key={`${curationId}-${position}`}>
+      <Curation
+        summaries={summaries || []}
+        title={curationTitle}
+        position={position}
+        link={link}
+        renderVisuallyHiddenH2Title={position === 0}
+        curationId={curationId}
+        {...curationProps}
+      />
+    </React.Fragment>
+  );
+};
+
+const getSynopses = (
+  synopses: { short: string; medium: string; long: string } | undefined,
+) => {
+  if (!synopses) return '';
+  return synopses.short || synopses.medium || synopses.long;
+};
+
 export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
   const { lang } = use(ServiceContext);
 
@@ -21,30 +52,6 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
     // eslint-disable-next-line no-param-reassign
     pageData = liveTvFixture;
   }
-
-  const renderCuration = ({ curation }: { curation: CurationType }) => {
-    const {
-      summaries,
-      curationId,
-      title: curationTitle,
-      link,
-      position,
-      ...curationProps
-    } = curation;
-    return (
-      <React.Fragment key={`${curationId}-${position}`}>
-        <Curation
-          summaries={summaries || []}
-          title={curationTitle}
-          position={position}
-          link={link}
-          renderVisuallyHiddenH2Title={position === 0}
-          curationId={curationId}
-          {...curationProps}
-        />
-      </React.Fragment>
-    );
-  };
 
   const { curations, description, title } = pageData;
 
@@ -56,19 +63,12 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
     curation => curation !== mediaCollectionCuration,
   );
 
-  const getSynopses = (
-    synopses: { short: string; medium: string; long: string } | undefined,
-  ) => {
-    if (!synopses) return '';
-    return synopses.short || synopses.medium || synopses.long;
-  };
-
   const synopses = getSynopses(
     pageData?.curations?.[0].mediaCollection?.[0].model.synopses,
   );
 
   return (
-    <>
+    <div css={styles.pageWrapper}>
       {/* <ATIAnalytics atiData={atiAnalytics} />
       <ChartbeatAnalytics title={pageTitle} /> */}
       <MetadataContainer
@@ -92,6 +92,6 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
           </div>
         </div>
       </main>
-    </>
+    </div>
   );
 }
