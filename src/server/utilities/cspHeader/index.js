@@ -1,7 +1,7 @@
 import isLiveEnv from '#lib/utilities/isLive';
 import { cspDirectives } from './directives';
 
-const injectCspHeader = ({ isAmp, service, nonce, res }) => {
+const injectCspHeader = ({ isAmp, nonce, res }) => {
   res.setHeader(
     'report-to',
     JSON.stringify({
@@ -20,7 +20,6 @@ const injectCspHeader = ({ isAmp, service, nonce, res }) => {
   const { directives } = cspDirectives({
     isAmp,
     isLive: isLiveEnv(),
-    service,
     nonce,
   });
 

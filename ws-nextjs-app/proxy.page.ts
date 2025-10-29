@@ -5,7 +5,7 @@ import cspHeaderResponse from './utilities/cspHeaderResponse';
 
 const LOCALHOST_DOMAINS = ['localhost', '127.0.0.1'];
 
-export default function proxy(request: NextRequest) {
+export default async function proxy(request: NextRequest) {
   const hostname = request.headers.get('host') ?? request.nextUrl.hostname;
   let response = NextResponse.next();
 
@@ -24,7 +24,7 @@ export default function proxy(request: NextRequest) {
   }
 
   if (PRODUCTION_ONLY) {
-    response = cspHeaderResponse({ request });
+    response = await cspHeaderResponse({ request });
   }
 
   response.headers.set(
@@ -36,3 +36,7 @@ export default function proxy(request: NextRequest) {
 
   return response;
 }
+
+export const config = {
+  runtime: 'nodejs',
+};
