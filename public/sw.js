@@ -49,7 +49,7 @@ const ANALYTICS_QUEUE_CACHE = 'analytics-queue-v1';
 const MAX_QUEUE_SIZE = 100;
 
 const ANALYTICS_PATTERN =
-  /^https:\/\/(.*\.)?ati-host|^https:\/\/(.*\.)?chartbeat\.net/;
+  /^https:\/\/(.*\.)?(ati-host\.net|chartbeat\.net)/;
 
 const isAnalyticsRequest = url => ANALYTICS_PATTERN.test(url);
 
@@ -107,14 +107,15 @@ const processQueue = async () => {
         const originalRequest = new Request(queuedData.url, {
           method: queuedData.method,
           headers: queuedData.headers,
+          mode: 'no-cors',
         });
 
-        const result = await fetch(originalRequest);
+        await fetch(originalRequest);
 
-        if (result.ok) {
-          await cache.delete(cacheKey);
-          successCount += 1;
-        }
+        // With no-cors mode, we can't check response status
+        // Assume success if no error thrown
+        await cache.delete(cacheKey);
+        successCount += 1;
       } catch {
         // Leave in queue to retry later
       }

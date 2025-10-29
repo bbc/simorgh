@@ -52,10 +52,15 @@ export default () => {
     if (!onClient()) return undefined;
 
     const handleOnline = () => {
+      // eslint-disable-next-line no-console
+      console.log('[Client] Online event detected, posting message to SW');
       if (navigator.serviceWorker.controller) {
         navigator.serviceWorker.controller.postMessage(
           'PROCESS_ANALYTICS_QUEUE',
         );
+      } else {
+        // eslint-disable-next-line no-console
+        console.log('[Client] No service worker controller found');
       }
     };
 
