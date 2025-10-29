@@ -25,6 +25,11 @@ const styles = {
         margin: `${spacings.QUINTUPLE}rem 0`,
       },
     }),
+  description: ({ spacings }: Theme) =>
+    css({
+      paddingBottom: `${spacings.DOUBLE}rem`,
+      display: 'block',
+    }),
 };
 
 export default styles;
