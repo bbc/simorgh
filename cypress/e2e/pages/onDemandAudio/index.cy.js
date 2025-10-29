@@ -12,6 +12,12 @@ import {
   assertRecentAudioEpisodesComponentClick,
   assertRecentAudioEpisodesComponentView,
 } from '../../specialFeatures/atiAnalytics/assertions/recentAudioEpisodes';
+import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
+import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
+import {
+  assertPodcastPromoComponentClick,
+  assertPodcastPromoComponentView,
+} from '../../specialFeatures/atiAnalytics/assertions/podcastPromo';
 
 const pageType = 'onDemandAudio';
 
@@ -451,7 +457,37 @@ const testSuites = [
   },
 ];
 
+const atiAnalyticsPodcastComponentTests = [
+  assertPageView,
+  assertPodcastLinksComponentView,
+  assertPodcastLinksComponentClick,
+  assertRecentAudioEpisodesComponentView,
+  assertRecentAudioEpisodesComponentClick,
+];
+
 const atiAnalyticsTestSuites = [
+  {
+    path: '/gahuza/podcasts/p07yh8hb',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'gahuza',
+    pageIdentifier: 'gahuza.bbc_gahuza_radio.podcasts.programmes.p07yh8hb.page',
+    siteId: 40,
+    applicationType: 'responsive',
+    contentType: 'player-episode',
+    useReverb: true,
+    tests: [...atiAnalyticsPodcastComponentTests],
+  },
+  {
+    path: '/gahuza/podcasts/p07yh8hb/p094vs2n',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'gahuza',
+    pageIdentifier: 'gahuza.bbc_gahuza_radio.podcasts.p094vs2n.page',
+    siteId: 40,
+    applicationType: 'responsive',
+    contentType: 'player-episode',
+    useReverb: true,
+    tests: [...atiAnalyticsPodcastComponentTests],
+  },
   {
     path: '/portuguese/podcasts/p07r3r3t',
     runforEnv: ['local', 'test', 'live'],
@@ -461,13 +497,18 @@ const atiAnalyticsTestSuites = [
     applicationType: 'responsive',
     contentType: 'player-episode',
     useReverb: true,
-    tests: [
-      assertPageView,
-      assertPodcastLinksComponentView,
-      assertPodcastLinksComponentClick,
-      assertRecentAudioEpisodesComponentView,
-      assertRecentAudioEpisodesComponentClick,
-    ],
+    tests: [...atiAnalyticsPodcastComponentTests],
+  },
+  {
+    path: '/portuguese/podcasts/p07r3r3t/p0ldy4p8',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'portuguese',
+    pageIdentifier: 'portuguese.bbc_brasil.podcasts.p0ldy4p8.page',
+    siteId: 33,
+    applicationType: 'responsive',
+    contentType: 'player-episode',
+    useReverb: true,
+    tests: [...atiAnalyticsPodcastComponentTests],
   },
   {
     path: '/ukrainian/podcasts/p09jsy3h',
@@ -479,15 +520,32 @@ const atiAnalyticsTestSuites = [
     applicationType: 'responsive',
     contentType: 'player-episode',
     useReverb: true,
-    tests: [
-      assertPageView,
-      assertPodcastLinksComponentView,
-      assertPodcastLinksComponentClick,
-      assertRecentAudioEpisodesComponentView,
-      assertRecentAudioEpisodesComponentClick,
-    ],
+    tests: [...atiAnalyticsPodcastComponentTests],
   },
 ];
+
+const atiAnalyticsliteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
+  const excludedLiteTests = [
+    assertPodcastPromoComponentView, // Podcast promo removed from lite article pages
+    assertPodcastPromoComponentClick, // Podcast promo removed from lite article pages
+  ];
+
+  const liteSiteTests = testSuite.tests.filter(
+    test => !excludedLiteTests.includes(test),
+  );
+
+  // All lite enabled pages should have the Lite Site Summary component
+  liteSiteTests.push(assertLiteSiteSummaryComponentToMainSiteClick);
+
+  return {
+    ...testSuite,
+    path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
+    applicationType: 'lite',
+    useReverb: false,
+    siteId: testSuite.service === 'magyarul' ? 134 : testSuite.siteId,
+    tests: [...liteSiteTests],
+  };
+});
 
 runTestsForPage({
   pageType,
@@ -499,4 +557,10 @@ runTestsForPage({
   testSuites: atiAnalyticsTestSuites,
   beforeAll: [setUserIDCookie],
   testIsolation: true,
+});
+
+runTestsForPage({
+  pageType,
+  testSuites: atiAnalyticsliteTestSuites,
+  beforeAll: [setUserIDCookie],
 });

@@ -12,10 +12,6 @@ import {
   assertRadioScheduleComponentClick,
   assertRadioScheduleComponentView,
 } from '../../specialFeatures/atiAnalytics/assertions/radioSchedule';
-import {
-  assertPodcastLinksComponentClick,
-  assertPodcastLinksComponentView,
-} from '../../specialFeatures/atiAnalytics/assertions/podcastLinks';
 
 const pageType = 'liveRadio';
 
@@ -136,40 +132,6 @@ const atiAnalyticsTestSuites = [
       assertRecentAudioEpisodesComponentClick,
       assertRadioScheduleComponentView,
       assertRadioScheduleComponentClick,
-    ],
-  },
-  {
-    path: '/gahuza/podcasts/p07yh8hb',
-    runforEnv: ['local', 'test', 'live'],
-    service: 'gahuza',
-    pageIdentifier: 'gahuza.bbc_gahuza_radio.podcasts.programmes.p07yh8hb.page',
-    siteId: 40,
-    applicationType: 'responsive',
-    contentType: 'player-episode',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertPodcastLinksComponentView,
-      assertPodcastLinksComponentClick,
-      assertRecentAudioEpisodesComponentView,
-      assertRecentAudioEpisodesComponentClick,
-    ],
-  },
-  {
-    path: '/gahuza/podcasts/p07yh8hb/p094vs2n',
-    runforEnv: ['local', 'test', 'live'],
-    service: 'gahuza',
-    pageIdentifier: 'gahuza.bbc_gahuza_radio.podcasts.p094vs2n.page',
-    siteId: 40,
-    applicationType: 'responsive',
-    contentType: 'player-episode',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertPodcastLinksComponentView,
-      assertPodcastLinksComponentClick,
-      assertRecentAudioEpisodesComponentView,
-      assertRecentAudioEpisodesComponentClick,
     ],
   },
   {

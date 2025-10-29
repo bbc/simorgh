@@ -17,10 +17,6 @@ import {
   assertScrollableNavigationComponentView,
 } from './assertions/navigation';
 import {
-  assertPodcastPromoComponentClick,
-  assertPodcastPromoComponentView,
-} from './assertions/podcastPromo';
-import {
   assertSocialEmbedComponentClick,
   assertSocialEmbedComponentView,
 } from './assertions/socialEmbed';
@@ -95,8 +91,6 @@ const liteTestSuites = canonicalTestSuites
   .filter(supportsLite)
   .map(testSuite => {
     const excludedLiteTests = [
-      assertPodcastPromoComponentView, // Podcast promo removed from lite article pages
-      assertPodcastPromoComponentClick, // Podcast promo removed from lite article pages
       assertDropdownNavigationComponentView, // Dropdown navigation removed from all pages, as it requires JS
       assertDropdownNavigationComponentClick, // Dropdown navigation removed from all pages, as it requires JS
       assertSocialEmbedComponentView, // Social embeds removed from lite article pages
