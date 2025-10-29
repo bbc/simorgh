@@ -72,4 +72,7 @@ export default {
   webVitalsMonitoring: {
     enabled: true,
   },
+  topBarOJs: {
+    enabled: true,
+  },
 };
