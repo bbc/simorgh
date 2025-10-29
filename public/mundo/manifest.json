@@ -59,6 +59,12 @@
       "sizes": "512x512",
       "type": "image/png",
       "form_factor": "wide"
+    },
+    {
+      "src": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/screenshots/screenshot-512x512.png?v=1",
+      "sizes": "512x512",
+      "type": "image/png",
+      "form_factor": "narrow"
     }
   ],
   "splash_pages": null,
