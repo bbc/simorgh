@@ -1139,7 +1139,7 @@ describe('Home Page', () => {
       },
     );
 
-    it.each(['control', null])(
+    it.each(['control', null, undefined])(
       'does not call reorderCurations when variation is %s',
       variant => {
         const spy = jest.spyOn(reorderCurations, 'default');
