@@ -202,14 +202,8 @@ const getVideoComponent =
   };
 
 const getContinueReadingButton =
-  ({
-    showAllContent,
-    setShowAllContent,
-    showContinueReadingButton,
-  }: ContinueReadingButtonProps & { showContinueReadingButton: boolean }) =>
+  ({ showAllContent, setShowAllContent }: ContinueReadingButtonProps) =>
   () => {
-    if (!showContinueReadingButton) return null;
-
     return (
       <ContinueReadingButton
         showAllContent={showAllContent}
@@ -365,10 +359,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     wsoj: getWsojComponent,
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
-    continueReading: getContinueReadingButton({
-      showAllContent,
-      setShowAllContent,
-      showContinueReadingButton,
+    ...(showContinueReadingButton && {
+      continueReading: getContinueReadingButton({
+        showAllContent,
+        setShowAllContent,
+      }),
     }),
   };
 
