@@ -51,8 +51,7 @@ const ContinueReadingButton = ({
     if (maybeKeyboardEvent) {
       const button = document.getElementById('continue-reading-button');
 
-      const firstHiddenElementSibling =
-        button?.nextElementSibling as HTMLElement | null;
+      const firstHiddenElementSibling = button?.nextElementSibling;
 
       firstHiddenElementSibling?.setAttribute(
         'data-first-hidden-element',
