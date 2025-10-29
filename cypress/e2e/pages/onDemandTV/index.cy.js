@@ -1,6 +1,8 @@
 import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
 import e2eTests from './tests';
 import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
+import { setUserIDCookie } from '../../specialFeatures/atiAnalytics/helpers';
+import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
 
 const pageType = 'onDemandTV';
 
@@ -194,6 +196,31 @@ const testSuites = [
   },
 ];
 
+const atiAnalyticsTestSuites = [
+  {
+    path: '/afrique/bbc_afrique_tv/tv_programmes/w13xttmz',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'afrique',
+    pageIdentifier: 'afrique.bbc_afrique_tv.tv_programmes.w13xttmz.page',
+    siteId: 3,
+    applicationType: 'responsive',
+    contentType: 'player-episode',
+    useReverb: true,
+    tests: [assertPageView],
+  },
+  {
+    path: '/afrique/bbc_afrique_tv/tv/w3ct05mp',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'afrique',
+    pageIdentifier: 'afrique.bbc_afrique_tv.tv.w3ct05mp.page',
+    siteId: 3,
+    applicationType: 'responsive',
+    contentType: 'player-episode',
+    useReverb: true,
+    tests: [assertPageView],
+  },
+];
+
 const liteTestSuites = testSuites.map(testSuite => {
   return {
     ...testSuite,
@@ -205,4 +232,11 @@ const liteTestSuites = testSuites.map(testSuite => {
 runTestsForPage({
   pageType,
   testSuites: [...testSuites, ...liteTestSuites],
+});
+
+runTestsForPage({
+  pageType,
+  testSuites: atiAnalyticsTestSuites,
+  beforeAll: [setUserIDCookie],
+  testIsolation: true,
 });
