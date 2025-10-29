@@ -12,7 +12,7 @@ export async function middleware(request: NextRequest) {
 
   const isLocalhost = LOCALHOST_DOMAINS.includes(hostname.split(':')?.[0]);
 
-  // const PRODUCTION_ONLY = !isLocalhost && process.env.NODE_ENV === 'production';
+  const PRODUCTION_ONLY = !isLocalhost && process.env.NODE_ENV === 'production';
 
   const LOCAL_DEV_ONLY = isLocalhost && process.env.NODE_ENV !== 'production';
 
@@ -24,7 +24,9 @@ export async function middleware(request: NextRequest) {
     }
   }
 
-  response = await cspHeaderResponse({ request });
+  if (PRODUCTION_ONLY) {
+    response = await cspHeaderResponse({ request });
+  }
 
   response.headers.set(
     'req-svc-chain',
