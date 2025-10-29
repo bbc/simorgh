@@ -5,10 +5,6 @@ import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
 import { setUserIDCookie } from '../../specialFeatures/atiAnalytics/helpers';
 import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
 import {
-  assertRecentAudioEpisodesComponentClick,
-  assertRecentAudioEpisodesComponentView,
-} from '../../specialFeatures/atiAnalytics/assertions/recentAudioEpisodes';
-import {
   assertRadioScheduleComponentClick,
   assertRadioScheduleComponentView,
 } from '../../specialFeatures/atiAnalytics/assertions/radioSchedule';
@@ -117,23 +113,6 @@ const testSuites = [
 ];
 
 const atiAnalyticsTestSuites = [
-  {
-    path: '/afrique/bbc_afrique_radio/programmes/p030s6dq',
-    runforEnv: ['local', 'test', 'live'],
-    service: 'afrique',
-    pageIdentifier: 'afrique.bbc_afrique_radio.programmes.p030s6dq.page',
-    siteId: 3,
-    applicationType: 'responsive',
-    contentType: 'player-episode',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertRecentAudioEpisodesComponentView,
-      assertRecentAudioEpisodesComponentClick,
-      assertRadioScheduleComponentView,
-      assertRadioScheduleComponentClick,
-    ],
-  },
   {
     path: '/hausa/bbc_hausa_radio/liveradio',
     runforEnv: ['local', 'live'],

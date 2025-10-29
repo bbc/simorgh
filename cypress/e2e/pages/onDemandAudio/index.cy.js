@@ -18,6 +18,10 @@ import {
   assertPodcastPromoComponentClick,
   assertPodcastPromoComponentView,
 } from '../../specialFeatures/atiAnalytics/assertions/podcastPromo';
+import {
+  assertRadioScheduleComponentClick,
+  assertRadioScheduleComponentView,
+} from '../../specialFeatures/atiAnalytics/assertions/radioSchedule';
 
 const pageType = 'onDemandAudio';
 
@@ -467,6 +471,23 @@ const atiAnalyticsPodcastComponentTests = [
 
 const atiAnalyticsTestSuites = [
   {
+    path: '/afrique/bbc_afrique_radio/programmes/p030s6dq',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'afrique',
+    pageIdentifier: 'afrique.bbc_afrique_radio.programmes.p030s6dq.page',
+    siteId: 3,
+    applicationType: 'responsive',
+    contentType: 'player-episode',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertRecentAudioEpisodesComponentView,
+      assertRecentAudioEpisodesComponentClick,
+      assertRadioScheduleComponentView,
+      assertRadioScheduleComponentClick,
+    ],
+  },
+  {
     path: '/gahuza/podcasts/p07yh8hb',
     runforEnv: ['local', 'test', 'live'],
     service: 'gahuza',
@@ -490,7 +511,7 @@ const atiAnalyticsTestSuites = [
   },
   {
     path: '/portuguese/podcasts/p07r3r3t',
-    runforEnv: ['local', 'test', 'live'],
+    runforEnv: ['test', 'live'],
     service: 'portuguese',
     pageIdentifier: 'portuguese.bbc_brasil.podcasts.programmes.p07r3r3t.page',
     siteId: 33,
@@ -524,7 +545,7 @@ const atiAnalyticsTestSuites = [
   },
 ];
 
-const atiAnalyticsliteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
+const atiAnalyticsLiteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
   const excludedLiteTests = [
     assertPodcastPromoComponentView, // Podcast promo removed from lite article pages
     assertPodcastPromoComponentClick, // Podcast promo removed from lite article pages
@@ -542,7 +563,7 @@ const atiAnalyticsliteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
     path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
     applicationType: 'lite',
     useReverb: false,
-    siteId: testSuite.service === 'magyarul' ? 134 : testSuite.siteId,
+    siteId: testSuite.siteId,
     tests: [...liteSiteTests],
   };
 });
@@ -561,6 +582,6 @@ runTestsForPage({
 
 runTestsForPage({
   pageType,
-  testSuites: atiAnalyticsliteTestSuites,
+  testSuites: atiAnalyticsLiteTestSuites,
   beforeAll: [setUserIDCookie],
 });

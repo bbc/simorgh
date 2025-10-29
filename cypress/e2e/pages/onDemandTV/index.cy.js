@@ -235,7 +235,7 @@ const liteTestSuites = testSuites.map(testSuite => {
   };
 });
 
-const atiAnalyticsliteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
+const atiAnalyticsLiteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
   const excludedLiteTests = [
     assertDropdownNavigationComponentView, // Dropdown navigation removed from all pages, as it requires JS
     assertDropdownNavigationComponentClick, // Dropdown navigation removed from all pages, as it requires JS
@@ -253,7 +253,7 @@ const atiAnalyticsliteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
     path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
     applicationType: 'lite',
     useReverb: false,
-    siteId: testSuite.service === 'magyarul' ? 134 : testSuite.siteId,
+    siteId: testSuite.siteId,
     tests: [...liteSiteTests],
   };
 });
@@ -272,6 +272,6 @@ runTestsForPage({
 
 runTestsForPage({
   pageType,
-  testSuites: atiAnalyticsliteTestSuites,
+  testSuites: atiAnalyticsLiteTestSuites,
   beforeAll: [setUserIDCookie],
 });
