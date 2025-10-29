@@ -41,6 +41,20 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
   outline-offset: 0.1875rem;
 }
 
+.emotion-3 [id="continue-reading-button"]~* {
+  display: none;
+}
+
+.no-js .emotion-3 [id="continue-reading-button"]~* {
+  display: block;
+}
+
+@media (min-width: 63rem) {
+  .emotion-3 [id="continue-reading-button"]~* {
+    display: block;
+  }
+}
+
 @media (max-width: 14.9375rem) {
   .emotion-4 {
     padding: 0 0.5rem;
@@ -1161,6 +1175,20 @@ exports[`Article Page should render a news article correctly 1`] = `
   outline: 0.1875rem solid #000000;
   box-shadow: 0 0 0 0.1875rem #FFFFFF;
   outline-offset: 0.1875rem;
+}
+
+.emotion-3 [id="continue-reading-button"]~* {
+  display: none;
+}
+
+.no-js .emotion-3 [id="continue-reading-button"]~* {
+  display: block;
+}
+
+@media (min-width: 63rem) {
+  .emotion-3 [id="continue-reading-button"]~* {
+    display: block;
+  }
 }
 
 @media (max-width: 14.9375rem) {
@@ -2813,6 +2841,20 @@ exports[`Article Page should render a news article with headline in the middle c
   outline-offset: 0.1875rem;
 }
 
+.emotion-3 [id="continue-reading-button"]~* {
+  display: none;
+}
+
+.no-js .emotion-3 [id="continue-reading-button"]~* {
+  display: block;
+}
+
+@media (min-width: 63rem) {
+  .emotion-3 [id="continue-reading-button"]~* {
+    display: block;
+  }
+}
+
 .emotion-4 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -3199,6 +3241,20 @@ exports[`Article Page should render a news article without headline correctly 1`
   outline-offset: 0.1875rem;
 }
 
+.emotion-3 [id="continue-reading-button"]~* {
+  display: none;
+}
+
+.no-js .emotion-3 [id="continue-reading-button"]~* {
+  display: block;
+}
+
+@media (min-width: 63rem) {
+  .emotion-3 [id="continue-reading-button"]~* {
+    display: block;
+  }
+}
+
 .emotion-4 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -3425,6 +3481,20 @@ exports[`Article Page should render a rtl article (persian) with most read corre
   outline: 0.1875rem solid #000000;
   box-shadow: 0 0 0 0.1875rem #FFFFFF;
   outline-offset: 0.1875rem;
+}
+
+.emotion-3 [id="continue-reading-button"]~* {
+  display: none;
+}
+
+.no-js .emotion-3 [id="continue-reading-button"]~* {
+  display: block;
+}
+
+@media (min-width: 63rem) {
+  .emotion-3 [id="continue-reading-button"]~* {
+    display: block;
+  }
 }
 
 @media (max-width: 14.9375rem) {
