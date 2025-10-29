@@ -72,30 +72,6 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
 
     params.ref = document.referrer || '';
 
-    const containsMarketingAtUtcParams = window.location.search.length;
-    if (isLiteSite && containsMarketingAtUtcParams) {
-      const kvpairs: Record<string, string> = window.location.search
-        .substring(1)
-        .split('&')
-        .map((param): [string, string] => {
-          const pieces = param.split('=');
-          return [decodeURIComponent(pieces[0]), decodeURIComponent(pieces[1])];
-        })
-        .reduce<Record<string, string>>((values, kv) => {
-          // eslint-disable-next-line no-param-reassign, prefer-destructuring
-          values[kv[0]] = kv[1];
-          return values;
-        }, {});
-
-      Object.keys(kvpairs).forEach(keyName => {
-        if (keyName.indexOf('at_') === 0) {
-          params[keyName.replace('at_', 'src_')] = kvpairs[keyName];
-        } else if (keyName.indexOf('utm_') === 0) {
-          params[keyName] = kvpairs[keyName];
-        }
-      });
-    }
-
     if (reverbUrl) {
       let processedReverbUrl = reverbUrl
         .replace('{screenResolutionColourDepth}', params.r)
@@ -121,6 +97,33 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
 
       window.sendStaticBeacon(processedReverbUrl);
     } else if (atiUrl) {
+      const containsMarketingAtUtcParams = window.location.search.length;
+      if (isLiteSite && containsMarketingAtUtcParams) {
+        const kvpairs: Record<string, string> = window.location.search
+          .substring(1)
+          .split('&')
+          .map((param): [string, string] => {
+            const pieces = param.split('=');
+            return [
+              decodeURIComponent(pieces[0]),
+              decodeURIComponent(pieces[1]),
+            ];
+          })
+          .reduce<Record<string, string>>((values, kv) => {
+            // eslint-disable-next-line no-param-reassign, prefer-destructuring
+            values[kv[0]] = kv[1];
+            return values;
+          }, {});
+
+        Object.keys(kvpairs).forEach(keyName => {
+          if (keyName.indexOf('at_') === 0) {
+            params[keyName.replace('at_', 'src_')] = kvpairs[keyName];
+          } else if (keyName.indexOf('utm_') === 0) {
+            params[keyName] = kvpairs[keyName];
+          }
+        });
+      }
+
       const paramValues = Object.keys(params)
         .map(key => `${key}=${params[key]}`)
         .join('&');
