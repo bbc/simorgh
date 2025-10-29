@@ -37,7 +37,7 @@ const directiveToString = (directives: Record<string, string | string[]>) => {
   return cspValue;
 };
 
-const getToggleDefintions = (
+const getToggleDefinitions = (
   toggles: Toggles = {},
 ): Record<string, ToggleDefinition> => {
   const { _environment, ...toggleDefinitions } = toggles;
@@ -45,20 +45,20 @@ const getToggleDefintions = (
 };
 
 const isRelaxedCspEnabled = (
-  omittedCountries: string | number | undefined,
+  countryList: string | number | undefined,
   country: string,
 ): boolean => {
-  if (!omittedCountries || omittedCountries.toString().trim() === '') {
+  if (!countryList || countryList.toString().trim() === '') {
     return true;
   }
 
-  const allowedCountries = omittedCountries
+  const omittedCountriesList = countryList
     .toString()
     .split(',')
     .map(s => s.trim().toLowerCase())
     .filter(Boolean);
 
-  return !allowedCountries.includes(country.toLowerCase());
+  return !omittedCountriesList.includes(country.toLowerCase());
 };
 
 const isValidService = (str: string) => {
@@ -76,16 +76,16 @@ const cspHeaderResponse = async ({ request }: { request: NextRequest }) => {
   if (isValidService(urlPath)) {
     const service = fallbackServiceParam(request.nextUrl.pathname);
     toggles = await getToggles(service);
-    toggleDefinitions = getToggleDefintions(toggles);
+    toggleDefinitions = getToggleDefinitions(toggles);
   }
 
-  const { enabled: hasAdsScripts, value: omittedCountries = '' } =
+  const { enabled: hasAdsScripts, value: countryList = '' } =
     toggleDefinitions?.adsNonce || {};
   const requestHeaders = new Headers(request.headers);
   const country =
     requestHeaders.get('x-country') || requestHeaders.get('x-bbc-edge-country');
   const shouldServeRelaxedCsp =
-    hasAdsScripts && isRelaxedCspEnabled(omittedCountries, country || '');
+    hasAdsScripts && isRelaxedCspEnabled(countryList, country || '');
 
   const { directives } = cspDirectives({
     isAmp,
