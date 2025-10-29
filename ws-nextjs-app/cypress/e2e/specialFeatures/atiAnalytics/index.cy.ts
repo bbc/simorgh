@@ -351,8 +351,8 @@ const liteTestSuites = canonicalTestSuites
 
 runTestsForPage({
   testSuites: [
-    // ...canonicalTestSuites,
-    // ...ampTestSuites,
+    ...canonicalTestSuites,
+    ...ampTestSuites,
     ...liteTestSuites,
   ] as unknown as TestDataType[],
   beforeEachFns: [setUserIDCookie],
