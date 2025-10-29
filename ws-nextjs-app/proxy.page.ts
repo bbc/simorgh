@@ -36,7 +36,3 @@ export default async function proxy(request: NextRequest) {
 
   return response;
 }
-
-export const config = {
-  runtime: 'nodejs',
-};
