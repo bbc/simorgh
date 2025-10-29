@@ -38,28 +38,6 @@ import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
 
 const canonicalTestSuites = [
   {
-    path: '/afrique/bbc_afrique_tv/tv_programmes/w13xttmz',
-    runforEnv: ['local', 'test', 'live'],
-    service: 'afrique',
-    pageIdentifier: 'afrique.bbc_afrique_tv.tv_programmes.w13xttmz.page',
-    siteId: 3,
-    applicationType: 'responsive',
-    contentType: 'player-episode',
-    useReverb: true,
-    tests: [assertPageView],
-  },
-  {
-    path: '/afrique/bbc_afrique_tv/tv/w3ct05mp',
-    runforEnv: ['local', 'test', 'live'],
-    service: 'afrique',
-    pageIdentifier: 'afrique.bbc_afrique_tv.tv.w3ct05mp.page',
-    siteId: 3,
-    applicationType: 'responsive',
-    contentType: 'player-episode',
-    useReverb: true,
-    tests: [assertPageView],
-  },
-  {
     path: '/gahuza/popular/read',
     runforEnv: ['local', 'test', 'live'],
     service: 'gahuza',
