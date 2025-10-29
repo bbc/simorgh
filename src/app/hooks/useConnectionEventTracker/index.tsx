@@ -6,42 +6,15 @@ import { NetworkStatus } from '../useNetworkStatusTracker/type';
 const ONLINE_EVENT_NAME = 'network-connection-online';
 const OFFLINE_EVENT_NAME = 'network-connection-offline';
 const NETWORK_TYPE_EVENT_NAME = 'network-effective-type';
-const STORAGE_KEY = 'simorgh-network-status';
-
-interface StoredNetworkData {
-  networkType: string;
-  isOnline: boolean;
-  timestamp: number;
-}
-
-const getStoredNetworkData = (): StoredNetworkData | null => {
-  try {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    return stored ? JSON.parse(stored) : null;
-  } catch (error) {
-    // eslint-disable-next-line no-console
-    console.warn('Failed to read network status from localStorage:', error);
-    return null;
-  }
-};
-
-const storeNetworkData = (data: StoredNetworkData): void => {
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-  } catch (error) {
-    // eslint-disable-next-line no-console
-    console.warn('Failed to store network status to localStorage:', error);
-  }
-};
+const DEBOUNCE_DELAY = 5000;
 
 /**
  * A specialized hook for tracking network connection status changes.
- * Tracks network type only on page load and online/offline status changes during session.
- * Uses localStorage to persist network state between sessions.
- *
- * @returns {Object} An object containing connection status tracking functionality
+ * Tracks network type on page load and online/offline status changes.
+ * Uses debouncing for online and offline events to prevent excessive event firing during rapid connection changes.
  */
-const useConnectionEventTracker = (): object => {
+
+const useConnectionEventTracker = () => {
   const networkStatus = useNetworkStatusTracker();
 
   const { trackEvent: trackOnlineEvent } = useCustomEventTracker({
@@ -55,52 +28,52 @@ const useConnectionEventTracker = (): object => {
   });
 
   const initializedRef = useRef(false);
+  const previousOnlineStatusRef = useRef<boolean>(true); // Assume online on mount
+  const lastOfflineEventTimeRef = useRef<number>(0);
+  const lastOnlineEventTimeRef = useRef<number>(0);
 
   const handleOnlineStatusChange = useCallback(
-    (currentStatus: NetworkStatus, storedData: StoredNetworkData | null) => {
-      // TODO: should we still track it if storedData is missing?
-      // TODO - add debounce;
-      if (!storedData) return;
-
+    (currentStatus: NetworkStatus) => {
+      const now = Date.now();
       const hasOnlineStatusChanged =
-        storedData.isOnline !== currentStatus.isOnline;
+        previousOnlineStatusRef.current !== currentStatus.isOnline;
+      const timeSinceLastOnlineEvent = now - lastOnlineEventTimeRef.current;
+      const timeSinceLastOfflineEvent = now - lastOfflineEventTimeRef.current;
 
-      if (hasOnlineStatusChanged) {
-        if (currentStatus.isOnline) {
-          // Back online - pass effective type
-          trackOnlineEvent(currentStatus.networkType);
-        } else {
-          // Going offline
-          trackOfflineEvent();
-        }
+      if (!hasOnlineStatusChanged) return;
 
-        // Update localStorage;
-        storeNetworkData({
-          networkType: currentStatus.networkType,
-          isOnline: currentStatus.isOnline,
-          timestamp: Date.now(),
-        });
+      if (
+        currentStatus.isOnline &&
+        timeSinceLastOnlineEvent >= DEBOUNCE_DELAY
+      ) {
+        lastOnlineEventTimeRef.current = now;
+        previousOnlineStatusRef.current = true;
+        // Track network type to identify the connection quality user returned with (e.g., 4g, 3g, slow-2g)
+        trackOnlineEvent(currentStatus.networkType);
+        return;
+      }
+
+      // Going offline
+      if (
+        !currentStatus.isOnline &&
+        timeSinceLastOfflineEvent >= DEBOUNCE_DELAY
+      ) {
+        lastOfflineEventTimeRef.current = now;
+        previousOnlineStatusRef.current = false;
+        trackOfflineEvent();
       }
     },
     [trackOnlineEvent, trackOfflineEvent],
   );
 
-  // Track network type only on initial load
+  // Track network type on initial load
   useEffect(() => {
     if (!initializedRef.current) {
       initializedRef.current = true;
 
-      // Track network type only on page load
       if (networkStatus.networkType) {
         trackNetworkTypeEvent(networkStatus.networkType);
       }
-
-      // Store initial data
-      storeNetworkData({
-        networkType: networkStatus.networkType,
-        isOnline: networkStatus.isOnline,
-        timestamp: Date.now(),
-      });
     }
   }, [networkStatus, trackNetworkTypeEvent]);
 
@@ -110,15 +83,8 @@ const useConnectionEventTracker = (): object => {
       return;
     }
 
-    const storedData = getStoredNetworkData();
-    handleOnlineStatusChange(networkStatus, storedData);
+    handleOnlineStatusChange(networkStatus);
   }, [networkStatus.isOnline, handleOnlineStatusChange, networkStatus]);
-
-  return {
-    currentStatus: networkStatus,
-    isOnline: networkStatus.isOnline,
-    networkType: networkStatus.networkType,
-  };
 };
 
 export default useConnectionEventTracker;

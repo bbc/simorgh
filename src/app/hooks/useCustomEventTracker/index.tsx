@@ -35,6 +35,7 @@ const useCustomEventTracker = ({ eventName }: CustomEventData) => {
 
   const trackEvent = useCallback(
     async (stringifiedData = '') => {
+      console.log(`📌 ${eventName}, ${stringifiedData}`);
       if (!trackingIsEnabled || !eventName) return;
 
       const shouldSendEvent = [
