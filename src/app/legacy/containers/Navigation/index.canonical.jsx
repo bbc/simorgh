@@ -11,6 +11,7 @@ import useMediaQuery from '#hooks/useMediaQuery';
 import { RequestContext } from '#app/contexts/RequestContext';
 import TopBarOJs from '#app/components/TopBarOJs';
 import isLive from '#app/lib/utilities/isLive';
+import useToggle from '#app/hooks/useToggle';
 
 const ScrollableWrapper = styled.div`
   position: relative;
@@ -45,6 +46,7 @@ const CanonicalNavigationContainer = ({
   blocks,
 }) => {
   const { isLite } = use(RequestContext);
+  const { enabled } = useToggle('topBarOJs');
   const [isOpen, setIsOpen] = useState(false);
   useMediaQuery(`(max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX})`, event => {
     if (!event.matches) {
@@ -71,7 +73,7 @@ const CanonicalNavigationContainer = ({
       </ScrollableWrapper>
       <CanonicalDropdown isOpen={isOpen}>{dropdownListItems}</CanonicalDropdown>
       <Divider />
-      {!isLive() && <TopBarOJs blocks={blocks} />}
+      {!isLive() && enabled && <TopBarOJs blocks={blocks} />}
     </Navigation>
   );
 };
