@@ -17,13 +17,13 @@ const DEBOUNCE_DELAY = 5000;
 const useConnectionEventTracker = () => {
   const networkStatus = useNetworkStatusTracker();
 
-  const { trackEvent: trackOnlineEvent } = useCustomEventTracker({
+  const trackOnlineEvent = useCustomEventTracker({
     eventName: ONLINE_EVENT_NAME,
   });
-  const { trackEvent: trackOfflineEvent } = useCustomEventTracker({
+  const trackOfflineEvent = useCustomEventTracker({
     eventName: OFFLINE_EVENT_NAME,
   });
-  const { trackEvent: trackNetworkTypeEvent } = useCustomEventTracker({
+  const trackNetworkTypeEvent = useCustomEventTracker({
     eventName: NETWORK_TYPE_EVENT_NAME,
   });
 

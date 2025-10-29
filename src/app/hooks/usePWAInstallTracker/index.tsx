@@ -5,7 +5,7 @@ import useCustomEventTracker from '../useCustomEventTracker';
  * A hook to track PWA installation events using Reverb Analytics
  */
 const usePWAInstallTracker = () => {
-  const { trackEvent } = useCustomEventTracker({ eventName: 'pwa-installed' });
+  const trackEvent = useCustomEventTracker({ eventName: 'pwa-installed' });
 
   const trackRef = useRef(false);
 
