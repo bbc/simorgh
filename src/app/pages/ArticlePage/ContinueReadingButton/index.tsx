@@ -1,12 +1,5 @@
 /** @jsx jsx */
-import {
-  use,
-  useEffect,
-  useState,
-  MouseEvent,
-  SetStateAction,
-  Dispatch,
-} from 'react';
+import { use, useEffect, MouseEvent, SetStateAction, Dispatch } from 'react';
 import { jsx } from '@emotion/react';
 import Text from '#app/components/Text';
 import { TriangleDown } from '#app/components/icons';
@@ -33,21 +26,22 @@ const ContinueReadingButton = ({
     translations: { continueReading = 'Continue reading' },
   } = use(ServiceContext);
 
-  const [firstHiddenElement, setFirstHiddenElement] = useState<
-    HTMLElement | undefined
-  >(undefined);
-
   const viewRef = useViewTracker(eventTrackingData);
   const { onClick: clickTrackerHandler } =
     useClickTrackerHandler(eventTrackingData);
 
   useEffect(() => {
-    if (showAllContent && firstHiddenElement) {
-      // Apply the custom focus style dynamically
-      firstHiddenElement.tabIndex = 0;
-      firstHiddenElement.focus();
+    if (showAllContent) {
+      const firstHiddenElementSibling = document.querySelector(
+        '[data-first-hidden-element="true"]',
+      ) as HTMLElement | null;
+
+      if (firstHiddenElementSibling) {
+        firstHiddenElementSibling.tabIndex = 0;
+        firstHiddenElementSibling.focus();
+      }
     }
-  }, [firstHiddenElement, showAllContent]);
+  }, [showAllContent]);
 
   const handleEvent = (event: MouseEvent<HTMLButtonElement>) => {
     clickTrackerHandler?.(event);
@@ -55,13 +49,15 @@ const ContinueReadingButton = ({
     const maybeKeyboardEvent = event.detail === 0;
 
     if (maybeKeyboardEvent) {
-      const main = document.querySelector('main');
-      const hiddenElement = Array.from(main?.children || []).find(
-        child => getComputedStyle(child).display === 'none',
-      ) as HTMLElement | undefined;
+      const button = document.getElementById('continue-reading-button');
 
-      hiddenElement?.setAttribute('data-first-hidden-element', 'true');
-      setFirstHiddenElement(hiddenElement);
+      const firstHiddenElementSibling =
+        button?.nextElementSibling as HTMLElement | null;
+
+      firstHiddenElementSibling?.setAttribute(
+        'data-first-hidden-element',
+        'true',
+      );
     }
 
     setShowAllContent(true);
