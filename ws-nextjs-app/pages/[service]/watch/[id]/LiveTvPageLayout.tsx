@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import React, { use } from 'react';
-import { Curation } from '#app/models/types/curationData';
-import LiveTVCuration from '#app/components/Curation';
+import { Curation as CurationType } from '#app/models/types/curationData';
+import Curation from '#app/components/Curation';
 import { data as liveTvFixture } from '#data/dari/watch/bbc_afghan_tv/live.json';
 import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
@@ -12,6 +12,37 @@ import { LiveTVPageProps } from './types';
 import styles from './styles';
 // import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 // import ATIAnalytics from '#app/components/ATIAnalytics';
+
+const renderCuration = ({ curation }: { curation: CurationType }) => {
+  const {
+    summaries,
+    curationId,
+    title: curationTitle,
+    link,
+    position,
+    ...curationProps
+  } = curation;
+  return (
+    <React.Fragment key={`${curationId}-${position}`}>
+      <Curation
+        summaries={summaries || []}
+        title={curationTitle}
+        position={position}
+        link={link}
+        renderVisuallyHiddenH2Title={position === 0}
+        curationId={curationId}
+        {...curationProps}
+      />
+    </React.Fragment>
+  );
+};
+
+const getSynopses = (
+  synopses: { short: string; medium: string; long: string } | undefined,
+) => {
+  if (!synopses) return '';
+  return synopses.short || synopses.medium || synopses.long;
+};
 
 export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
   const { lang } = use(ServiceContext);
@@ -23,6 +54,18 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
   }
 
   const { curations, description, title } = pageData;
+
+  const mediaCollectionCuration = curations?.find(
+    curation => curation.mediaCollection,
+  );
+
+  const filteredCurations = curations?.filter(
+    curation => curation !== mediaCollectionCuration,
+  );
+
+  const synopses = getSynopses(
+    pageData?.curations?.[0].mediaCollection?.[0].model.synopses,
+  );
 
   return (
     <>
@@ -38,36 +81,14 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
       <main role="main" css={styles.main}>
         <div css={styles.inner}>
           <div css={styles.margins}>
+            {mediaCollectionCuration &&
+              renderCuration({ curation: mediaCollectionCuration })}
             <Heading id="content" level={1}>
               Live TV Page with schedule
             </Heading>
-            <Text>{description}</Text>
-
-            {curations?.map(
-              ({
-                summaries,
-                curationId,
-                title: curationTitle,
-                link,
-                position,
-                ...curationProps
-              }: Curation) => {
-                return (
-                  <React.Fragment key={`${curationId}-${position}`}>
-                    <LiveTVCuration
-                      summaries={summaries || []}
-                      title={curationTitle}
-                      position={position}
-                      link={link}
-                      curationLength={curations?.length}
-                      renderVisuallyHiddenH2Title={position === 0}
-                      curationId={curationId}
-                      {...curationProps}
-                    />
-                  </React.Fragment>
-                );
-              },
-            )}
+            <Text css={styles.description}>{description}</Text>
+            <Text>{synopses}</Text>
+            {filteredCurations.map(curation => renderCuration({ curation }))}
           </div>
         </div>
       </main>

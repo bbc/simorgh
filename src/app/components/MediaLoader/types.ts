@@ -322,6 +322,8 @@ export type MediaCollection = {
   model: {
     synopses: {
       short: string;
+      medium: string;
+      long: string;
     };
     masterbrand: {
       networkName: string;
