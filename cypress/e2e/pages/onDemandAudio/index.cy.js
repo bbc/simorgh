@@ -2,6 +2,16 @@ import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
 import e2eTests from './tests';
 import testsForAllPages from '../testsForAllPages';
 import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
+import { setUserIDCookie } from '../../specialFeatures/atiAnalytics/helpers';
+import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
+import {
+  assertPodcastLinksComponentClick,
+  assertPodcastLinksComponentView,
+} from '../../specialFeatures/atiAnalytics/assertions/podcastLinks';
+import {
+  assertRecentAudioEpisodesComponentClick,
+  assertRecentAudioEpisodesComponentView,
+} from '../../specialFeatures/atiAnalytics/assertions/recentAudioEpisodes';
 
 const pageType = 'onDemandAudio';
 
@@ -441,7 +451,52 @@ const testSuites = [
   },
 ];
 
+const atiAnalyticsTestSuites = [
+  {
+    path: '/portuguese/podcasts/p07r3r3t',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'portuguese',
+    pageIdentifier: 'portuguese.bbc_brasil.podcasts.programmes.p07r3r3t.page',
+    siteId: 33,
+    applicationType: 'responsive',
+    contentType: 'player-episode',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertPodcastLinksComponentView,
+      assertPodcastLinksComponentClick,
+      assertRecentAudioEpisodesComponentView,
+      assertRecentAudioEpisodesComponentClick,
+    ],
+  },
+  {
+    path: '/ukrainian/podcasts/p09jsy3h',
+    runforEnv: ['test', 'live'],
+    service: 'ukrainian',
+    pageIdentifier:
+      'ukrainian.bbc_ukrainian_audio.podcasts.programmes.p09jsy3h.page',
+    siteId: 94,
+    applicationType: 'responsive',
+    contentType: 'player-episode',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertPodcastLinksComponentView,
+      assertPodcastLinksComponentClick,
+      assertRecentAudioEpisodesComponentView,
+      assertRecentAudioEpisodesComponentClick,
+    ],
+  },
+];
+
 runTestsForPage({
   pageType,
   testSuites,
+});
+
+runTestsForPage({
+  pageType,
+  testSuites: atiAnalyticsTestSuites,
+  beforeAll: [setUserIDCookie],
+  testIsolation: true,
 });

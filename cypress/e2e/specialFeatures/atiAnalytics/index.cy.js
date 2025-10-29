@@ -17,17 +17,9 @@ import {
   assertScrollableNavigationComponentView,
 } from './assertions/navigation';
 import {
-  assertPodcastLinksComponentClick,
-  assertPodcastLinksComponentView,
-} from './assertions/podcastLinks';
-import {
   assertPodcastPromoComponentClick,
   assertPodcastPromoComponentView,
 } from './assertions/podcastPromo';
-import {
-  assertRecentAudioEpisodesComponentClick,
-  assertRecentAudioEpisodesComponentView,
-} from './assertions/recentAudioEpisodes';
 import {
   assertSocialEmbedComponentClick,
   assertSocialEmbedComponentView,
@@ -78,41 +70,6 @@ const canonicalTestSuites = [
       assertDropdownNavigationComponentClick,
       assertMessageBannerComponentView,
       assertMessageBannerComponentClick,
-    ],
-  },
-  {
-    path: '/portuguese/podcasts/p07r3r3t',
-    runforEnv: ['local', 'test', 'live'],
-    service: 'portuguese',
-    pageIdentifier: 'portuguese.bbc_brasil.podcasts.programmes.p07r3r3t.page',
-    siteId: 33,
-    applicationType: 'responsive',
-    contentType: 'player-episode',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertPodcastLinksComponentView,
-      assertPodcastLinksComponentClick,
-      assertRecentAudioEpisodesComponentView,
-      assertRecentAudioEpisodesComponentClick,
-    ],
-  },
-  {
-    path: '/ukrainian/podcasts/p09jsy3h',
-    runforEnv: ['test', 'live'],
-    service: 'ukrainian',
-    pageIdentifier:
-      'ukrainian.bbc_ukrainian_audio.podcasts.programmes.p09jsy3h.page',
-    siteId: 94,
-    applicationType: 'responsive',
-    contentType: 'player-episode',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertPodcastLinksComponentView,
-      assertPodcastLinksComponentClick,
-      assertRecentAudioEpisodesComponentView,
-      assertRecentAudioEpisodesComponentClick,
     ],
   },
 ];
