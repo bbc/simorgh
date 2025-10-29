@@ -1,5 +1,12 @@
 /** @jsx jsx */
-import { use, useEffect, useState, MouseEvent } from 'react';
+import {
+  use,
+  useEffect,
+  useState,
+  MouseEvent,
+  SetStateAction,
+  Dispatch,
+} from 'react';
 import { jsx } from '@emotion/react';
 import Text from '#app/components/Text';
 import { TriangleDown } from '#app/components/icons';
@@ -9,15 +16,19 @@ import useViewTracker from '#app/hooks/useViewTracker';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
 
-type Props = {
+export type ContinueReadingButtonProps = {
   showAllContent: boolean;
-  setShowAllContent: () => void;
+  setShowAllContent: Dispatch<SetStateAction<boolean>>;
+};
+
+const eventTrackingData: EventTrackingData = {
+  componentName: 'continue-reading-button',
 };
 
 const ContinueReadingButton = ({
   showAllContent,
   setShowAllContent,
-}: Props) => {
+}: ContinueReadingButtonProps) => {
   const {
     translations: { continueReading = 'Continue reading' },
   } = use(ServiceContext);
@@ -25,13 +36,6 @@ const ContinueReadingButton = ({
   const [firstHiddenElement, setFirstHiddenElement] = useState<
     HTMLElement | undefined
   >(undefined);
-
-  const eventTrackingData: EventTrackingData = {
-    componentName: 'read-more-button',
-    sendOptimizelyEvents: true,
-    experimentName: 'newswb_ws_read_more_b',
-    experimentVariant: 'read-more-b',
-  };
 
   const viewRef = useViewTracker(eventTrackingData);
   const { onClick: clickTrackerHandler } =
@@ -60,7 +64,7 @@ const ContinueReadingButton = ({
       setFirstHiddenElement(hiddenElement);
     }
 
-    setShowAllContent();
+    setShowAllContent(true);
   };
 
   // Hide button when all content is shown
@@ -68,10 +72,11 @@ const ContinueReadingButton = ({
 
   return (
     <button
+      id="continue-reading-button"
       css={styles.continueReadingButton}
       type="button"
       onClick={handleEvent}
-      data-testid="read-more-button"
+      data-testid="continue-reading-button"
       {...viewRef}
     >
       <Text fontVariant="sansBold">{continueReading}</Text>

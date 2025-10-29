@@ -73,7 +73,9 @@ import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
 import styles from './ArticlePage.styles';
 import { ComponentToRenderProps, TimeStampProps } from './types';
-import ContinueReadingButton from './ContinueReadingButton';
+import ContinueReadingButton, {
+  ContinueReadingButtonProps,
+} from './ContinueReadingButton';
 import ArticleHeadline from './ArticleHeadline';
 import {
   isPortraitVideo,
@@ -199,6 +201,23 @@ const getVideoComponent =
     );
   };
 
+const getContinueReadingButton =
+  ({
+    showAllContent,
+    setShowAllContent,
+    showContinueReadingButton,
+  }: ContinueReadingButtonProps & { showContinueReadingButton: boolean }) =>
+  () => {
+    if (!showContinueReadingButton) return null;
+
+    return (
+      <ContinueReadingButton
+        showAllContent={showAllContent}
+        setShowAllContent={setShowAllContent}
+      />
+    );
+  };
+
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const { isApp, isAmp, isLite } = use(RequestContext);
@@ -247,7 +266,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   } = pageData;
 
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
-  const { enabled: liteCTAShows } = useToggle('liteSiteCTA');
 
   // EXPERIMENT: Article Read Time
   const readTimeValue = pageData?.metadata?.stats?.readTime;
@@ -311,6 +329,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     readTimeVariant: readTimeExperimentVariant || 'off',
   };
 
+  const showContinueReadingButton = Boolean(!isAmp && !isLite && !isApp);
+
   const componentsToRender = {
     visuallyHiddenHeadline,
     headline: getHeadlineComponent,
@@ -339,6 +359,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     wsoj: getWsojComponent,
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
+    continueReading: getContinueReadingButton({
+      showAllContent,
+      setShowAllContent,
+      showContinueReadingButton,
+    }),
   };
 
   const visuallyHiddenBlock = {
@@ -367,14 +392,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const showTopics = Boolean(showRelatedTopics && topics.length > 0);
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
-
-  const showContinueReadingButton = Boolean(
-    !isAmp &&
-      !isLite &&
-      !isApp &&
-      readMoreExperimentVariant &&
-      ['read-more-b'].includes(readMoreExperimentVariant),
-  );
 
   return (
     <div css={styles.pageWrapper}>
@@ -428,7 +445,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             css={[
               styles.mainContent,
               ...(showContinueReadingButton
-                ? [!showAllContent && styles.contentHidden(liteCTAShows)]
+                ? [
+                    !showAllContent &&
+                      styles.contentHiddenByContinueReadingButton,
+                  ]
                 : []),
             ]}
             role="main"
@@ -437,12 +457,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
             />
-            {showContinueReadingButton && (
-              <ContinueReadingButton
-                showAllContent={showAllContent}
-                setShowAllContent={() => setShowAllContent(true)}
-              />
-            )}
             <OptimizelyPageMetrics trackPageComplete />
           </main>
           <OptimizelyPageMetrics trackPageView trackPageDepth />
