@@ -6,8 +6,8 @@ const reithSans = `font-family: ReithSans, ${reithFallback}`;
 const reithSerif = `font-family: ReithSerif, ${reithFallback}`;
 
 const getFontStyleAndWeight = (style, weight) =>
-  `font-weight: ${weight};
-   font-style: ${style};`;
+  `font-style: ${style};
+   font-weight: ${weight};`;
 
 const latinReithFontStyles = {
   sansRegular: `
