@@ -171,7 +171,7 @@ const MediaContainer = ({
                 mediaPlayer.dispatchEvent(
                   'bbc.smp.plugins.ads.event.updateAdTag',
                   {
-                    updatedAdTag,
+                    adTag: updatedAdTag,
                   },
                 );
               });

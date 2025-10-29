@@ -53,6 +53,7 @@ const Header = ({
               imageUrl={imageUrl}
               imageUrlTemplate={imageUrlTemplate}
               imageWidth={imageWidth}
+              isLivePageHeaderImage
             />
           ) : null}
         </div>

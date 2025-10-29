@@ -1,18 +1,20 @@
 import { use } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Image from '#app/components/Image';
+import buildIChefURL from '#app/lib/utilities/ichefURL';
 import { createSrcsets } from '#app/lib/utilities/srcSet';
 import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#app/lib/utilities/imageSrcHelpers/locator';
 import styles from './styles';
 
 type Props = {
-  imageUrl: string;
+  imageUrl?: string;
   imageUrlTemplate: string;
   imageWidth: number;
   altText?: string;
   showPlaceholder?: boolean;
   showVignette?: boolean;
+  isLivePageHeaderImage?: boolean;
 };
 
 const getGradientStyles = ({
@@ -36,6 +38,7 @@ const MaskedImage = ({
   altText = '',
   showPlaceholder = true,
   showVignette = false,
+  isLivePageHeaderImage = false,
 }: Props) => {
   const { dir } = use(ServiceContext);
   const isRtl = dir === 'rtl';
@@ -52,13 +55,20 @@ const MaskedImage = ({
       originalImageWidth: imageWidth,
     });
 
+  const DEFAULT_IMAGE_RES = 480;
+  const srcWebp = buildIChefURL({
+    originCode,
+    locator,
+    resolution: DEFAULT_IMAGE_RES,
+  });
+
   const gradientStyles = getGradientStyles({ isRtl, showVignette });
 
   return (
     <div css={[styles.maskedImageWrapper, gradientStyles]}>
       <Image
         alt={altText}
-        src={imageUrl}
+        src={isLivePageHeaderImage ? srcWebp : imageUrl}
         srcSet={primarySrcset || undefined}
         fallbackSrcSet={fallbackSrcset || undefined}
         mediaType={primaryMimeType || undefined}
