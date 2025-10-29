@@ -155,7 +155,7 @@ const handleAnalyticsRequest = async request => {
     return new Response(JSON.stringify({ queued: true }), {
       status: 202,
       statusText: 'Accepted (Queued)',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'image/gif' },
     });
   }
 };

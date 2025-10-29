@@ -48,6 +48,24 @@ export default () => {
     }
   }, [swPath, service]);
 
+  useEffect(() => {
+    if (!onClient()) return undefined;
+
+    const handleOnline = () => {
+      if (navigator.serviceWorker.controller) {
+        navigator.serviceWorker.controller.postMessage(
+          'PROCESS_ANALYTICS_QUEUE',
+        );
+      }
+    };
+
+    window.addEventListener('online', handleOnline);
+
+    return () => {
+      window.removeEventListener('online', handleOnline);
+    };
+  }, []);
+
   return isAmp && swPath ? (
     <>
       <AmpHead />
