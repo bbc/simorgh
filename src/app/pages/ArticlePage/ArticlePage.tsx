@@ -447,18 +447,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
       <div css={styles.grid}>
         <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
-          <main
-            css={[
-              styles.mainContent,
-              ...(showContinueReadingButton
-                ? [
-                    !showAllContent &&
-                      styles.contentHiddenByContinueReadingButton,
-                  ]
-                : []),
-            ]}
-            role="main"
-          >
+          <main css={styles.mainContent} role="main">
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}

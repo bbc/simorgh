@@ -55,20 +55,11 @@ export default {
       gridColumn: '1 / span 12',
       paddingBottom: '2rem',
     }),
-  mainContent: ({ palette, spacings }: Theme) =>
+  mainContent: ({ palette, spacings, mq }: Theme) =>
     css({
       paddingBottom: `${spacings.TRIPLE}rem`,
 
-      '[data-first-hidden-element="true"]': {
-        ':focus-visible': {
-          outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
-          boxShadow: `0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE}`,
-          outlineOffset: `${pixelsToRem(3)}rem`,
-        },
-      },
-    }),
-  contentHiddenByContinueReadingButton: ({ mq }: Theme) =>
-    css({
+      // Hide content after Continue Reading button
       '[id="continue-reading-button"] ~ *': {
         display: 'none',
 
@@ -78,6 +69,15 @@ export default {
 
         [mq.GROUP_4_MIN_WIDTH]: {
           display: 'block',
+        },
+      },
+
+      // Focus styles for first hidden element when Continue Reading is clicked
+      '[data-first-hidden-element="true"]': {
+        ':focus-visible': {
+          outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
+          boxShadow: `0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE}`,
+          outlineOffset: `${pixelsToRem(3)}rem`,
         },
       },
     }),
