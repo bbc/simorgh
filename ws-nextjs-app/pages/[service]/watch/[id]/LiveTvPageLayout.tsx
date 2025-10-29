@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import React, { use } from 'react';
-import { Curation } from '#app/models/types/curationData';
-import LiveTVCuration from '#app/components/Curation';
+import { Curation as CurationType } from '#app/models/types/curationData';
+import Curation from '#app/components/Curation';
 import { data as liveTvFixture } from '#data/dari/watch/bbc_afghan_tv/live.json';
 import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
@@ -22,7 +22,7 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
     pageData = liveTvFixture;
   }
 
-  const renderCuration = ({ curation }: { curation: Curation }) => {
+  const renderCuration = ({ curation }: { curation: CurationType }) => {
     const {
       summaries,
       curationId,
@@ -33,7 +33,7 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
     } = curation;
     return (
       <React.Fragment key={`${curationId}-${position}`}>
-        <LiveTVCuration
+        <Curation
           summaries={summaries || []}
           title={curationTitle}
           position={position}
