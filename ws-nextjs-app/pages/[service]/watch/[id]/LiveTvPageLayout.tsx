@@ -68,7 +68,7 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
   );
 
   return (
-    <div css={styles.pageWrapper}>
+    <>
       {/* <ATIAnalytics atiData={atiAnalytics} />
       <ChartbeatAnalytics title={pageTitle} /> */}
       <MetadataContainer
@@ -92,6 +92,6 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
           </div>
         </div>
       </main>
-    </div>
+    </>
   );
 }
