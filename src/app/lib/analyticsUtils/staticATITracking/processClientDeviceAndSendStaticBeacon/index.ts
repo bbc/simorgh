@@ -68,13 +68,25 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
     params.ref = document.referrer || '';
 
     if (reverbURL) {
-      const processedReverbUrl = reverbURL
+      let processedReverbUrl = reverbURL
         .replace('{screenResolutionColourDepth}', params.r)
         .replace('{browserViewportResolution}', params.re)
         .replace('{timestamp}', params.hl)
         .replace('{language}', params.lng)
         .replaceAll('{referrer}', params.ref)
         .replace('{idclient}', params.idclient);
+
+      const searchParams = new URLSearchParams(window.location.search);
+
+      searchParams.forEach((value, key) => {
+        if (key.startsWith('utm_') || key.startsWith('at_')) {
+          processedReverbUrl +=
+            `&${encodeURIComponent(key)}=${encodeURIComponent(value)}`.replace(
+              'at_',
+              'src_',
+            );
+        }
+      });
 
       window.sendStaticBeacon(processedReverbUrl);
     } else if (atiURL) {
