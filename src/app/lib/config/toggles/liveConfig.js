@@ -31,7 +31,7 @@ export default {
     enabled: false,
   },
   midArticleOnwardJourney: {
-    enabled: true,
+    enabled: false,
   },
   mostRead: {
     enabled: false,
