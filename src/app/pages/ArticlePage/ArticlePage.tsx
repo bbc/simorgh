@@ -329,7 +329,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     readTimeVariant: readTimeExperimentVariant || 'off',
   };
 
-  const showContinueReadingButton = Boolean(!isAmp && !isLite && !isApp);
+  const hasContinueReadingBlock = blocks.some(
+    block => block.type === 'continueReading',
+  );
+
+  const showContinueReadingButton = Boolean(
+    !isAmp && !isLite && !isApp && hasContinueReadingBlock,
+  );
 
   const componentsToRender = {
     visuallyHiddenHeadline,
