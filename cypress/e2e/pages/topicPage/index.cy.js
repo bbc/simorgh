@@ -92,11 +92,11 @@ const atiAnalyticsTestSuites = [
     tests: [assertPageView],
   },
   {
-    path: '/persian/afghanistan',
-    runforEnv: ['local', 'live'],
-    service: 'persian',
-    pageIdentifier: 'persian.topics.crezq2dg9zwt.page',
-    siteId: 69,
+    path: '/portuguese/topics/cx2ggnx4j72t',
+    runforEnv: ['test', 'live'],
+    service: 'portuguese',
+    pageIdentifier: 'portuguese.topics.cx2ggnx4j72t.page',
+    siteId: 33,
     applicationType: 'responsive',
     contentType: 'index-category',
     componentTrackingContentType: 'topic-page',
@@ -113,32 +113,32 @@ const atiAnalyticsTestSuites = [
   },
 ];
 
-const supportsLite = ({ path }) => !path.startsWith('/persian/afghanistan');
+const atiAnalyticsLiteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
+  const excludedLiteTests = [
+    assertScrollableNavigationComponentView,
+    assertScrollableNavigationComponentClick,
+    assertDropdownNavigationComponentView, // Dropdown navigation removed from all pages, as it requires JS
+    assertDropdownNavigationComponentClick, // Dropdown navigation removed from all pages, as it requires JS
+    assertMessageBannerComponentView,
+    assertMessageBannerComponentClick,
+  ];
 
-const atiAnalyticsLiteTestSuites = atiAnalyticsTestSuites
-  .filter(supportsLite)
-  .map(testSuite => {
-    const excludedLiteTests = [
-      assertDropdownNavigationComponentView, // Dropdown navigation removed from all pages, as it requires JS
-      assertDropdownNavigationComponentClick, // Dropdown navigation removed from all pages, as it requires JS
-    ];
+  const liteSiteTests = testSuite.tests.filter(
+    test => !excludedLiteTests.includes(test),
+  );
 
-    const liteSiteTests = testSuite.tests.filter(
-      test => !excludedLiteTests.includes(test),
-    );
+  // All lite enabled pages should have the Lite Site Summary component
+  liteSiteTests.push(assertLiteSiteSummaryComponentToMainSiteClick);
 
-    // All lite enabled pages should have the Lite Site Summary component
-    liteSiteTests.push(assertLiteSiteSummaryComponentToMainSiteClick);
-
-    return {
-      ...testSuite,
-      path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
-      applicationType: 'lite',
-      useReverb: false,
-      siteId: testSuite.siteId,
-      tests: [...liteSiteTests],
-    };
-  });
+  return {
+    ...testSuite,
+    path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
+    applicationType: 'lite',
+    useReverb: false,
+    siteId: testSuite.siteId,
+    tests: [...liteSiteTests],
+  };
+});
 
 runTestsForPage({
   pageType: TOPIC_PAGE,
