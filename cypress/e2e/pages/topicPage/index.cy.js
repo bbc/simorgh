@@ -115,12 +115,8 @@ const atiAnalyticsTestSuites = [
 
 const atiAnalyticsLiteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
   const excludedLiteTests = [
-    assertScrollableNavigationComponentView,
-    assertScrollableNavigationComponentClick,
     assertDropdownNavigationComponentView, // Dropdown navigation removed from all pages, as it requires JS
     assertDropdownNavigationComponentClick, // Dropdown navigation removed from all pages, as it requires JS
-    assertMessageBannerComponentView,
-    assertMessageBannerComponentClick,
   ];
 
   const liteSiteTests = testSuite.tests.filter(
