@@ -2,13 +2,13 @@
 import { use, useCallback, useState } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
-import constructStaticATIUrl from '#app/lib/analyticsUtils/staticATITracking/constructATIUrl';
 import {
   CLICK_EVENT,
-  STATIC_ATI_CLICK_TRACKING,
+  STATIC_REVERB_CLICK_TRACKING,
 } from '#app/lib/analyticsUtils/analytics.const';
 import { RequestContext } from '#app/contexts/RequestContext';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
+import constructReverbUrl from '#app/lib/analyticsUtils/staticATITracking/constructReverbUrl';
 import useTrackingToggle from '../useTrackingToggle';
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon/index';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -150,19 +150,17 @@ export default (eventTrackingData = {}) => {
   const isHydrated = useHydrationDetection();
 
   const clickTracker = useClickTrackerHandler(eventTrackingData);
-  const staticAtiUrl = constructStaticATIUrl({
-    eventTrackingData,
-    eventType: CLICK_EVENT,
-    isStatic: !isHydrated,
-  });
 
   const enableStaticTracking = !isHydrated && !isAmp;
+  const reverbStaticUrl = constructReverbUrl({
+    eventTrackingData,
+    eventType: CLICK_EVENT,
+  });
 
   return {
     ...(enableStaticTracking && {
-      [STATIC_ATI_CLICK_TRACKING]: staticAtiUrl,
+      [STATIC_REVERB_CLICK_TRACKING]: reverbStaticUrl,
     }),
-
     ...(isHydrated && { onClick: clickTracker }),
   };
 };
