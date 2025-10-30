@@ -488,6 +488,17 @@ const atiAnalyticsTestSuites = [
     ],
   },
   {
+    path: '/arabic/bbc_arabic_radio/w3ct01yb',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'arabic',
+    pageIdentifier: 'arabic.bbc_arabic_radio.w3ct01yb.page',
+    siteId: 5,
+    applicationType: 'responsive',
+    contentType: 'player-episode',
+    useReverb: true,
+    tests: [assertPageView],
+  },
+  {
     path: '/gahuza/podcasts/p07yh8hb',
     runforEnv: ['local', 'test', 'live'],
     service: 'gahuza',
