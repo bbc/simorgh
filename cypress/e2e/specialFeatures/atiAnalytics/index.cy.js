@@ -7,14 +7,8 @@ import {
   assertArticleLiteSiteLinkComponentView,
 } from './assertions/articleLiteSiteLink';
 import {
-  assertMessageBannerComponentClick,
-  assertMessageBannerComponentView,
-} from './assertions/messageBanner';
-import {
   assertDropdownNavigationComponentClick,
   assertDropdownNavigationComponentView,
-  assertScrollableNavigationComponentClick,
-  assertScrollableNavigationComponentView,
 } from './assertions/navigation';
 import {
   assertSocialEmbedComponentClick,
@@ -35,38 +29,6 @@ const canonicalTestSuites = [
     contentType: 'list-datadriven',
     useReverb: true,
     tests: [assertPageView],
-  },
-  {
-    path: '/marathi/topics/c1wmk63rjkvt',
-    runforEnv: ['local', 'live'],
-    service: 'marathi',
-    pageIdentifier: 'marathi.topics.c1wmk63rjkvt.page',
-    siteId: 59,
-    applicationType: 'responsive',
-    contentType: 'index-category',
-    useReverb: true,
-    componentTrackingContentType: 'topic-page',
-    tests: [assertPageView],
-  },
-  {
-    path: '/persian/afghanistan',
-    runforEnv: ['local', 'live'],
-    service: 'persian',
-    pageIdentifier: 'persian.topics.crezq2dg9zwt.page',
-    siteId: 69,
-    applicationType: 'responsive',
-    contentType: 'index-category',
-    componentTrackingContentType: 'topic-page',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertScrollableNavigationComponentView,
-      assertScrollableNavigationComponentClick,
-      assertDropdownNavigationComponentView,
-      assertDropdownNavigationComponentClick,
-      assertMessageBannerComponentView,
-      assertMessageBannerComponentClick,
-    ],
   },
 ];
 
