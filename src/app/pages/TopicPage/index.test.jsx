@@ -328,6 +328,60 @@ describe('Topic Page', () => {
   });
 
   describe('SEO', () => {
+    it('should prioritise seoTitle and seoDescription for metadata when available', () => {
+      const seoTitle = 'Custom SEO Title';
+      const seoDescription = 'Custom SEO Description';
+
+      render(
+        <TopicPage
+          pageData={{
+            ...pidginMultipleItems,
+            seoTitle,
+            seoDescription,
+          }}
+        />,
+        getOptionParams(),
+      );
+
+      const helmetContent = Helmet.peek();
+
+      expect(helmetContent.title).toEqual(
+        `${seoTitle} - BBC News Pidgin`,
+      );
+
+      const descriptionMeta = helmetContent.metaTags.find(
+        ({ name }) => name === 'description',
+      );
+      expect(descriptionMeta?.content).toEqual(seoDescription);
+
+      const ogDescriptionMeta = helmetContent.metaTags.find(
+        ({ property }) => property === 'og:description',
+      );
+      expect(ogDescriptionMeta?.content).toEqual(seoDescription);
+
+      const twitterDescriptionMeta = helmetContent.metaTags.find(
+        ({ name }) => name === 'twitter:description',
+      );
+      expect(twitterDescriptionMeta?.content).toEqual(seoDescription);
+    });
+
+    it('should fall back to title and description when seo metadata is missing', () => {
+      render(<TopicPage pageData={pidginMultipleItems} />, getOptionParams());
+
+      const helmetContent = Helmet.peek();
+
+      expect(helmetContent.title).toEqual(
+        `${pidginMultipleItems.title} - BBC News Pidgin`,
+      );
+
+      const descriptionMeta = helmetContent.metaTags.find(
+        ({ name }) => name === 'description',
+      );
+      expect(descriptionMeta?.content).toEqual(
+        pidginMultipleItems.description,
+      );
+    });
+
     it('should correctly render linked data', () => {
       render(<TopicPage pageData={pidginMultipleItems} />, getOptionParams());
 
