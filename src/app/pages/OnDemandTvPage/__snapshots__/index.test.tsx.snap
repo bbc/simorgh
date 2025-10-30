@@ -495,8 +495,8 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   color: #F6F6F6;
   display: block;
   margin: 0;
@@ -557,8 +557,8 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -700,8 +700,8 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
   font-size: 0.9375rem;
   line-height: 1.5rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #F6F6F6;
   padding-bottom: 1.5rem;
   margin: 0;
@@ -732,8 +732,8 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
   font-size: 0.9375rem;
   line-height: 1.375rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #AEAEB5;
   display: inline-block;
 }
@@ -1204,8 +1204,8 @@ exports[`OnDemand TV Page  should show the expired content message if episode is
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   color: #F6F6F6;
   display: block;
   margin: 0;
@@ -1266,8 +1266,8 @@ exports[`OnDemand TV Page  should show the expired content message if episode is
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1409,8 +1409,8 @@ exports[`OnDemand TV Page  should show the expired content message if episode is
   font-size: 0.9375rem;
   line-height: 1.5rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #F6F6F6;
   padding-bottom: 1.5rem;
   margin: 0;
@@ -1441,8 +1441,8 @@ exports[`OnDemand TV Page  should show the expired content message if episode is
   font-size: 0.9375rem;
   line-height: 1.375rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #AEAEB5;
   display: inline-block;
 }
@@ -1854,8 +1854,8 @@ exports[`OnDemand TV Page  should show the future content message if episode is 
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   color: #F6F6F6;
   display: block;
   margin: 0;
@@ -1916,8 +1916,8 @@ exports[`OnDemand TV Page  should show the future content message if episode is 
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -2059,8 +2059,8 @@ exports[`OnDemand TV Page  should show the future content message if episode is 
   font-size: 0.9375rem;
   line-height: 1.5rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #F6F6F6;
   padding-bottom: 1.5rem;
   margin: 0;
@@ -2091,8 +2091,8 @@ exports[`OnDemand TV Page  should show the future content message if episode is 
   font-size: 0.9375rem;
   line-height: 1.375rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #AEAEB5;
   display: inline-block;
 }

@@ -11,6 +11,7 @@ import {
   generateStyleSrc,
   generateMediaSrc,
   generateWorkerSrc,
+  cspDirectives,
 } from './directives';
 
 import { bbcDomains, advertisingServiceCountryDomains } from './domainLists';
@@ -545,4 +546,36 @@ describe('cspHeader', () => {
       });
     },
   );
+});
+
+describe('cspHeader with relaxedCsp', () => {
+  it('should serve relaxed CSP when shouldServeRelaxedCsp is true', () => {
+    expect(
+      cspDirectives({ isAmp: true, isLive: true, shouldServeRelaxedCsp: true }),
+    ).toEqual({
+      directives: {
+        'child-src': ["blob: https: 'self'"],
+        'connect-src': ["'self' https: ws:"],
+        'default-src': [
+          "'self'",
+          '*.bbc.co.uk',
+          '*.bbc.com',
+          '*.bbci.co.uk',
+          '*.bbci.com',
+          'https://*.googlesyndication.com',
+        ],
+        'font-src': ["https:  data: blob: 'self'"],
+        'frame-src': ['https: data:'],
+        'img-src': ['https: data: blob:'],
+        'media-src': ["'self' blob: data: https:"],
+        'report-to': 'worldsvc',
+        'script-src': [
+          "https: 'unsafe-inline' 'unsafe-eval' blob: data: 'self'",
+        ],
+        'style-src': ["https: 'unsafe-inline'"],
+        'upgrade-insecure-requests': [],
+        'worker-src': ['blob:', 'data:', "'self'", '*.bbc.co.uk', '*.bbc.com'],
+      },
+    });
+  });
 });
