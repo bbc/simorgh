@@ -1,4 +1,5 @@
 import React from 'react';
+import { ToggleContext } from '#contexts/ToggleContext';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import CanonicalNavigation from './index.canonical';
 import {
@@ -11,6 +12,22 @@ import {
   render,
   fireEvent,
 } from '../../../components/react-testing-library-with-providers';
+
+const blocks = [{ id: '1', title: 'Story' }];
+
+const createToggleContextValue = enabled => ({
+  toggleState: {
+    topBarOJs: { enabled },
+  },
+  toggleDispatch: jest.fn(),
+});
+
+const renderWithToggle = (ui, enabled) =>
+  render(
+    <ToggleContext.Provider value={createToggleContextValue(enabled)}>
+      {ui}
+    </ToggleContext.Provider>,
+  );
 
 const navigation = (
   <CanonicalNavigation
@@ -49,6 +66,56 @@ describe('Canonical Navigation', () => {
       const scrollableNav = queryByTestId(scrollableTestId);
       expect(scrollableNav).toBeNull();
       expect(dropdown.innerHTML).toBe('<li>Dropdown Items</li>');
+    });
+
+    describe('Top Bar OJs', () => {
+      it('should not render TopBarOJs when toggle is off', () => {
+        const { queryByTestId } = renderWithToggle(
+          <CanonicalNavigation
+            scrollableListItems={scrollableListItems}
+            dropdownListItems={dropdownListItems}
+            menuAnnouncedText="menu"
+            script={latin}
+            service="pidgin"
+            dir="ltr"
+            blocks={blocks}
+          />,
+          false,
+        );
+        expect(queryByTestId('top-bar-onward-journeys')).toBeNull();
+      });
+
+      it('should render TopBarOJs when toggle is on and blocks are provided', () => {
+        const { queryByTestId } = renderWithToggle(
+          <CanonicalNavigation
+            scrollableListItems={scrollableListItems}
+            dropdownListItems={dropdownListItems}
+            menuAnnouncedText="menu"
+            script={latin}
+            service="pidgin"
+            dir="ltr"
+            blocks={blocks}
+          />,
+          true,
+        );
+        expect(queryByTestId('top-bar-onward-journeys')).not.toBeNull();
+      });
+
+      it('should not render TopBarOJs when blocks are empty even if toggle is on', () => {
+        const { queryByTestId } = renderWithToggle(
+          <CanonicalNavigation
+            scrollableListItems={scrollableListItems}
+            dropdownListItems={dropdownListItems}
+            menuAnnouncedText="menu"
+            script={latin}
+            service="pidgin"
+            dir="ltr"
+            blocks={[]}
+          />,
+          true,
+        );
+        expect(queryByTestId('top-bar-onward-journeys')).toBeNull();
+      });
     });
   });
 });
