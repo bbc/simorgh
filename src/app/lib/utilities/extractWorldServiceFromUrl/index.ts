@@ -1,6 +1,6 @@
 import type { Services } from '#app/models/types/global';
 import { getUrlPath } from '#lib/utilities/urlParser';
-import { services } from '#app/lib/config/services/loadableConfig';
+import services from '#lib/config/services/serviceList';
 
 /**
  * Extracts the service from a URL

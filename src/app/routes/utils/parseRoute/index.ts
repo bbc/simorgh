@@ -1,4 +1,4 @@
-import services from '#lib/config/services/loadableConfig';
+import SERVICES from '#lib/config/services/serviceList';
 import { Services, Variants } from '#app/models/types/global';
 
 type Query = string[];
@@ -74,7 +74,6 @@ const LANGS = [
 
 const LANGS_REGEX = new RegExp(`^(${LANGS.join('|')})$`);
 
-const SERVICES = Object.keys(services) as Services[];
 const VARIANTS = ['lat', 'cyr', 'trad', 'simp'] as Variants[];
 
 const extractService = (query: Query): Services | null => {

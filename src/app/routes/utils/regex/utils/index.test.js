@@ -1,4 +1,4 @@
-import { services } from '#app/lib/config/services/loadableConfig';
+import services from '#lib/config/services/serviceList';
 import * as regexGenerators from '.';
 
 jest.mock('#app/lib/utilities/isLive', () => jest.fn());

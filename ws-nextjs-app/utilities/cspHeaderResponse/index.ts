@@ -5,7 +5,7 @@ import getPathExtension from '#app/utilities/getPathExtension';
 import isLiveEnv from '#lib/utilities/isLive';
 import getToggles from '#app/lib/utilities/getToggles';
 import { Services, ToggleDefinition, Toggles } from '#app/models/types/global';
-import { services } from '#app/lib/config/services/loadableConfig';
+import services from '#lib/config/services/serviceList';
 
 const setReportTo = (header: Headers) => {
   header.set(

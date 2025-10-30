@@ -1,5 +1,5 @@
 import { matchPath } from 'react-router-dom';
-import { services } from '#app/lib/config/services/loadableConfig';
+import services from '#lib/config/services/serviceList';
 import {
   articleDataPath,
   articlePath,

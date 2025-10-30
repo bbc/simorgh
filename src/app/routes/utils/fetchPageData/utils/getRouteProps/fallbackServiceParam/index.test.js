@@ -1,15 +1,12 @@
 import fallbackServiceParam from '.';
 
-jest.mock('#lib/config/services/loadableConfig', () => ({
-  default: {
-    dasher: 'data',
-    dancer: 'data',
-    prancer: 'data',
-    vixen: 'data',
-    comet: 'data',
-  },
-  services: ['dasher', 'dancer', 'prancer', 'vixen', 'comet'],
-}));
+jest.mock('#lib/config/services/serviceList', () => [
+  'dasher',
+  'dancer',
+  'prancer',
+  'vixen',
+  'comet',
+]);
 
 describe('fallbackServiceParam', () => {
   [

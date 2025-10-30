@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-expressions */
-import { services } from '#app/lib/config/services/loadableConfig';
+import services from '#lib/config/services/serviceList';
 
 export default () => {
   it('all BBC links should contain a World Service', () => {

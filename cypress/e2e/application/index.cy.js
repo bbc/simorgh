@@ -1,4 +1,4 @@
-import loadableConfig from '#app/lib/config/services/loadableConfig';
+import services from '#lib/config/services/serviceList';
 import appConfig from '../../../src/server/utilities/serviceConfigs';
 
 const PUBLIC_SERVICES = [
@@ -17,7 +17,7 @@ const NOT_LIVE_SERVICES = ['magyarul', 'romania', 'dari'];
 const servicesToIgnore = [...PUBLIC_SERVICES, ...NOT_LIVE_SERVICES];
 
 describe('Application', () => {
-  Object.keys(loadableConfig)
+  services
     .filter(service => !servicesToIgnore.includes(service))
     .forEach(service => {
       it(`should return a 200 status code for ${service}'s service worker`, () => {

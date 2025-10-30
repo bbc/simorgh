@@ -1,8 +1,9 @@
 import { Services } from '#app/models/types/global';
-
 import loadable from 'next/dynamic';
+import { ComponentType } from 'react';
 
-const loadableConfig = {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const loadableConfig: Record<Services, ComponentType<any>> = {
   afaanoromoo: loadable(() => import('./afaanoromoo')),
   afrique: loadable(() => import('./afrique')),
   amharic: loadable(() => import('./amharic')),
@@ -57,7 +58,5 @@ const loadableConfig = {
   yoruba: loadable(() => import('./yoruba')),
   zhongwen: loadable(() => import('./zhongwen')),
 };
-
-export const services = Object.keys(loadableConfig) as Services[];
 
 export default loadableConfig;
