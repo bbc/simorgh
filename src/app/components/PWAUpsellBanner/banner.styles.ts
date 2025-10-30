@@ -2,14 +2,13 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
 const styles = {
-  ColoredContainer: () =>
+  ColoredContainer: ({ mq }: Theme) =>
     css({
       position: 'relative',
       margin: '0 auto',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      zIndex: 1000,
       background:
         'linear-gradient(to bottom left, #bb1919 0%, #000 50%, #bb1919 100%)',
       padding: `${pixelsToRem(16)}rem`,
@@ -20,33 +19,47 @@ const styles = {
       width: '100%',
       maxWidth: `${pixelsToRem(1008)}rem`,
       minWidth: `${pixelsToRem(288)}rem`,
+
+      [mq.GROUP_0_MAX_WIDTH]: {
+        minWidth: 'auto',
+      },
+      [mq.GROUP_1_MIN_WIDTH]: {
+        minWidth: 'auto',
+      },
     }),
 
   Wrap: () =>
     css({
       width: '100%',
+      padding: 0,
     }),
 
   StyledContent: () =>
     css({
-      display: 'grid',
+      display: 'flex',
+      flexDirection: 'column',
       position: 'relative',
       width: '100%',
       gap: `${pixelsToRem(8)}rem`,
     }),
 
-  TextWrapper: () =>
+  TextWrapper: () => {
     css({
-      display: 'grid',
+      display: 'flex',
+      flexDirection: 'column',
       marginRight: `${pixelsToRem(44)}rem`,
-    }),
+    });
+  },
 
-  StyledTitle: () =>
+  StyledTitle: ({ palette, fontVariants }: Theme) =>
     css({
-      color: '#F6F6F6',
+      color: palette.WHITE,
       height: 'auto',
-      weight: 700,
       margin: 0,
+      fontFamily: fontVariants.sansBold.fontFamily,
+      fontWeight: fontVariants.sansBold.fontWeight,
+      fontSize: `${pixelsToRem(28)}rem`,
+      lineHeight: `${pixelsToRem(32)}rem`,
     }),
 
   StyledDescription: ({ mq }: Theme) =>
@@ -54,8 +67,10 @@ const styles = {
       color: '#F6F6F6',
       marginBottom: 0,
       height: 'auto',
-      [mq.GROUP_0_MAX_WIDTH]: {
-        display: 'none',
+      fontFamily: 'ReithSans, Helvetica, Arial, sans-serif',
+      display: 'none',
+      [mq.GROUP_2_MIN_WIDTH]: {
+        display: 'block',
       },
     }),
 
@@ -66,45 +81,73 @@ const styles = {
       justifyContent: 'flex-start',
       gap: `${pixelsToRem(12)}rem`,
       lineHeight: 1,
+      marginBottom: 0,
+      marginTop: `${pixelsToRem(16)}rem`,
       [mq.GROUP_1_MAX_WIDTH]: {
-        flexDirection: 'column',
-        alignItems: 'flex-start',
+        flexDirection: 'row',
+        width: `${pixelsToRem(172)}rem`,
+        height: `${pixelsToRem(8)}rem`,
       },
     }),
 
-  StyledButtonPrimary: ({ palette }: Theme) =>
+  StyledButtonPrimary: ({ mq }: Theme) =>
     css({
-      color: '#FFFFFF',
-      backgroundColor: palette.SERVICE_NEUTRAL_CORE,
+      color: '#000000',
+      backgroundColor: '#FFFFFF',
       border: 'none',
-      height: `${pixelsToRem(44)}rem`,
-      padding: `${pixelsToRem(12)}rem`,
+      width: 'auto',
+      height: `${pixelsToRem(28)}rem`,
+      padding: `${pixelsToRem(4)}rem`,
       cursor: 'pointer',
       whiteSpace: 'nowrap',
+      fontFamily: 'ReithSans, Helvetica, Arial, sans-serif',
+      fontSize: `${pixelsToRem(15)}rem`,
+      lineHeight: `${pixelsToRem(20)}rem`,
+      fontWeight: 'bold',
+      position: 'relative',
+
+      '& .short-text': {
+        display: 'inline',
+        [mq.GROUP_2_MIN_WIDTH]: {
+          display: 'none',
+        },
+      },
+
+      '& .long-text': {
+        display: 'none',
+        [mq.GROUP_2_MIN_WIDTH]: {
+          display: 'inline',
+        },
+      },
     }),
 
   StyledText: () =>
     css({
       color: '#F6F6F6',
-      fontSize: `${pixelsToRem(18)}rem`,
-      height: `${pixelsToRem(22)}rem`,
+      fontSize: `${pixelsToRem(15)}rem`,
+      height: `${pixelsToRem(28)}rem`,
+      lineHeight: `${pixelsToRem(28)}rem`,
+      fontWeight: 700,
       margin: 0,
       alignText: 'center',
+      fontFamily: 'ReithSans, Helvetica, Arial, sans-serif',
     }),
 
   StyledbuttonSecondary: ({ mq }: Theme) =>
     css({
-      color: '#73B5FF',
+      color: '#FFFFFF',
       backgroundColor: 'transparent',
       border: 'none',
       textDecoration: 'underline',
-      height: `${pixelsToRem(44)}rem`,
-      padding: `${pixelsToRem(6)}rem`,
+      textDecorationColor: '#B0B2B4',
+      fontWeight: 'bold',
+      height: `${pixelsToRem(28)}rem`,
+      padding: `${pixelsToRem(4)}rem`,
       cursor: 'pointer',
       whiteSpace: 'nowrap',
+      fontFamily: 'ReithSans, Helvetica, Arial, sans-serif',
       [mq.GROUP_1_MAX_WIDTH]: {
         padding: 0,
-        marginTop: `${pixelsToRem(-6)}rem`,
       },
     }),
 
