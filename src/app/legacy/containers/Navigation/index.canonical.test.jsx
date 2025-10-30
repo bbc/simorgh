@@ -1,5 +1,4 @@
 import React from 'react';
-import { ToggleContext } from '#contexts/ToggleContext';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import CanonicalNavigation from './index.canonical';
 import {
@@ -15,19 +14,14 @@ import {
 
 const blocks = [{ id: '1', title: 'Story' }];
 
-const createToggleContextValue = enabled => ({
-  toggleState: {
-    topBarOJs: { enabled },
-  },
-  toggleDispatch: jest.fn(),
-});
-
-const renderWithToggle = (ui, enabled) =>
-  render(
-    <ToggleContext.Provider value={createToggleContextValue(enabled)}>
-      {ui}
-    </ToggleContext.Provider>,
-  );
+const navigationProps = {
+  scrollableListItems,
+  dropdownListItems,
+  menuAnnouncedText: 'menu',
+  script: latin,
+  service: 'pidgin',
+  dir: 'ltr',
+};
 
 const navigation = (
   <CanonicalNavigation
@@ -69,52 +63,34 @@ describe('Canonical Navigation', () => {
     });
 
     describe('Top Bar OJs', () => {
-      it('should not render TopBarOJs when toggle is off', () => {
-        const { queryByTestId } = renderWithToggle(
-          <CanonicalNavigation
-            scrollableListItems={scrollableListItems}
-            dropdownListItems={dropdownListItems}
-            menuAnnouncedText="menu"
-            script={latin}
-            service="pidgin"
-            dir="ltr"
-            blocks={blocks}
-          />,
-          false,
-        );
-        expect(queryByTestId('top-bar-onward-journeys')).toBeNull();
-      });
-
-      it('should render TopBarOJs when toggle is on and blocks are provided', () => {
-        const { queryByTestId } = renderWithToggle(
-          <CanonicalNavigation
-            scrollableListItems={scrollableListItems}
-            dropdownListItems={dropdownListItems}
-            menuAnnouncedText="menu"
-            script={latin}
-            service="pidgin"
-            dir="ltr"
-            blocks={blocks}
-          />,
-          true,
-        );
-        expect(queryByTestId('top-bar-onward-journeys')).not.toBeNull();
-      });
-
-      it('should not render TopBarOJs when blocks are empty even if toggle is on', () => {
-        const { queryByTestId } = renderWithToggle(
-          <CanonicalNavigation
-            scrollableListItems={scrollableListItems}
-            dropdownListItems={dropdownListItems}
-            menuAnnouncedText="menu"
-            script={latin}
-            service="pidgin"
-            dir="ltr"
-            blocks={[]}
-          />,
-          true,
-        );
-        expect(queryByTestId('top-bar-onward-journeys')).toBeNull();
+      it.each([
+        [
+          'should not render TopBarOJs when toggle is off',
+          { ...navigationProps, blocks },
+          { topBarOJs: { enabled: false } },
+          queryByTestId =>
+            expect(queryByTestId('top-bar-onward-journeys')).toBeNull(),
+        ],
+        [
+          'should render TopBarOJs when toggle is on and blocks are provided',
+          { ...navigationProps, blocks },
+          { topBarOJs: { enabled: true } },
+          queryByTestId =>
+            expect(queryByTestId('top-bar-onward-journeys')).not.toBeNull(),
+        ],
+        [
+          'should not render TopBarOJs when blocks are empty even if toggle is on',
+          { ...navigationProps, blocks: [] },
+          { topBarOJs: { enabled: true } },
+          queryByTestId =>
+            expect(queryByTestId('top-bar-onward-journeys')).toBeNull(),
+        ],
+      ])('%s', (_, props, toggles, assertion) => {
+        const { queryByTestId } = render(<CanonicalNavigation {...props} />, {
+          toggles,
+          service: props.service,
+        });
+        assertion(queryByTestId);
       });
     });
   });
