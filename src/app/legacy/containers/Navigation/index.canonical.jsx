@@ -10,7 +10,6 @@ import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/brea
 import useMediaQuery from '#hooks/useMediaQuery';
 import { RequestContext } from '#app/contexts/RequestContext';
 import TopBarOJs from '#app/components/TopBarOJs';
-import isLive from '#app/lib/utilities/isLive';
 import useToggle from '#app/hooks/useToggle';
 
 const ScrollableWrapper = styled.div`
@@ -73,7 +72,7 @@ const CanonicalNavigationContainer = ({
       </ScrollableWrapper>
       <CanonicalDropdown isOpen={isOpen}>{dropdownListItems}</CanonicalDropdown>
       <Divider />
-      {!isLive() && enabled && <TopBarOJs blocks={blocks} />}
+      {enabled && <TopBarOJs blocks={blocks} />}
     </Navigation>
   );
 };
