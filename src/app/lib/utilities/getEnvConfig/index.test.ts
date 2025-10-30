@@ -8,14 +8,11 @@ describe('getEnvConfig', () => {
 
   beforeEach(() => {
     onClientSpy.mockImplementation(() => false);
-    process.env = originalProcessEnv;
   });
 
   afterEach(() => {
     jest.clearAllMocks();
-    onClientSpy.mockClear();
-    // @ts-expect-error The operand of a 'delete' operator must be optional.ts(2790)
-    delete window.SIMORGH_ENV_VARS;
+    process.env = originalProcessEnv;
   });
 
   it('server side - should return values from "getEnvConfig"', () => {
@@ -47,5 +44,7 @@ describe('getEnvConfig', () => {
       SIMORGH_APP_ENV: 'test',
       SIMORGH_BASE_URL: 'https://test.com',
     });
+    // @ts-expect-error The operand of a 'delete' operator must be optional.ts(2790)
+    delete window.SIMORGH_ENV_VARS;
   });
 });
