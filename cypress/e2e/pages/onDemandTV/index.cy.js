@@ -3,6 +3,12 @@ import e2eTests from './tests';
 import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
 import { setUserIDCookie } from '../../specialFeatures/atiAnalytics/helpers';
 import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
+import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
+import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
+import {
+  assertDropdownNavigationComponentClick,
+  assertDropdownNavigationComponentView,
+} from '../../specialFeatures/atiAnalytics/assertions/navigation';
 
 const pageType = 'onDemandTV';
 
@@ -229,6 +235,29 @@ const liteTestSuites = testSuites.map(testSuite => {
   };
 });
 
+const atiAnalyticsLiteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
+  const excludedLiteTests = [
+    assertDropdownNavigationComponentView, // Dropdown navigation removed from all pages, as it requires JS
+    assertDropdownNavigationComponentClick, // Dropdown navigation removed from all pages, as it requires JS
+  ];
+
+  const liteSiteTests = testSuite.tests.filter(
+    test => !excludedLiteTests.includes(test),
+  );
+
+  // All lite enabled pages should have the Lite Site Summary component
+  liteSiteTests.push(assertLiteSiteSummaryComponentToMainSiteClick);
+
+  return {
+    ...testSuite,
+    path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
+    applicationType: 'lite',
+    useReverb: false,
+    siteId: testSuite.siteId,
+    tests: [...liteSiteTests],
+  };
+});
+
 runTestsForPage({
   pageType,
   testSuites: [...testSuites, ...liteTestSuites],
@@ -239,4 +268,10 @@ runTestsForPage({
   testSuites: atiAnalyticsTestSuites,
   beforeAll: [setUserIDCookie],
   testIsolation: true,
+});
+
+runTestsForPage({
+  pageType,
+  testSuites: atiAnalyticsLiteTestSuites,
+  beforeAll: [setUserIDCookie],
 });

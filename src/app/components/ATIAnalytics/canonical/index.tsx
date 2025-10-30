@@ -67,7 +67,7 @@ const CanonicalATIAnalytics = ({
       {isLite &&
         addScript({
           script: sendPageViewBeaconLite,
-          parameters: [atiPageViewUrlString, liteSiteReverbURL],
+          parameters: [liteSiteReverbURL],
           nonce,
         })}
       {!isLite &&
