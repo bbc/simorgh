@@ -79,7 +79,7 @@ export const interceptATIAnalyticsBeacons = () => {
         );
 
         const containsExpectedComponent = viewabilityModelString.includes(
-          `"name":"${component}"`,
+          `"name":"${component}`,
         );
 
         if (isViewEvent && containsExpectedComponent) {
