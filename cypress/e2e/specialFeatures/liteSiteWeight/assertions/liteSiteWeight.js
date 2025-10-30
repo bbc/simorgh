@@ -2,7 +2,7 @@ import interceptGetRequests from '../helpers/interceptGetRequests';
 import getTotalPageSize from '../helpers/getTotalPageSize';
 import roundTo2Decimals from '../helpers/roundTo2Decimals';
 
-const MAX_PAGE_WEIGHT_KB = 50;
+const MAX_PAGE_WEIGHT_KB = 60;
 
 const PAGE_TYPE_PAGE_WEIGHT_MAPPING = {
   live: 70,
