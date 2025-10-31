@@ -37,7 +37,7 @@ describe('Click tracking script', () => {
     window.processClientDeviceAndSendStaticBeacon = jest.fn();
   });
 
-  it('STATIC_ATI_CLICK_TRACKING variable is correct', () => {
+  it('STATIC_REVERB_CLICK_TRACKING variable is correct', () => {
     const clickTrackerString = clickTracking.toString();
 
     const pattern = /STATIC_REVERB_CLICK_TRACKING = '([^']+)'/;
