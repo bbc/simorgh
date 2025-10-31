@@ -1,6 +1,6 @@
 {
-  "name": "BBC News romania",
-  "short_name": "BBC romania",
+  "name": "BBC News Romania",
+  "short_name": "BBC Romania",
   "scope": "/romania",
   "background_color": "#b80000",
   "display": "standalone",

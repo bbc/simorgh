@@ -259,7 +259,7 @@ server.get(
         isAmp,
       });
 
-      injectCspHeader({ isAmp, service, nonce, res });
+      injectCspHeader({ isAmp, nonce, res });
 
       data.nonce = nonce;
       data.cspHeader = res.get('Content-Security-Policy');
@@ -272,8 +272,9 @@ server.get(
         serverSideExperiments = getServerExperiments({
           headers,
           service,
-          derivedPageType,
+          pageType: derivedPageType,
         });
+
         data.serverSideExperiments = serverSideExperiments;
       } else {
         sendCustomMetric({

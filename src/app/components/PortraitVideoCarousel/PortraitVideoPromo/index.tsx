@@ -88,6 +88,13 @@ export default ({
     imageWidthLarge: 256,
   });
 
+  const fallbackSrcSets = getSrcSets({
+    imageUrlTemplate: imageUrlTemplate?.replace('.webp', ''),
+    mq,
+    imageWidthSmall: 64,
+    imageWidthLarge: 256,
+  });
+
   const eventTrackingDataExtended = {
     ...eventTrackingData,
     ...(timeOfDayVariant && {
@@ -122,6 +129,7 @@ export default ({
         src={imageUrl}
         aspectRatio={[9, 16]}
         srcSet={srcSets?.srcSet}
+        fallbackSrcSet={fallbackSrcSets?.srcSet}
         sizes={srcSets?.sizes}
         lazyLoad
       />

@@ -271,6 +271,7 @@ const supportsAmp = ({ contentType }: { contentType: string }) =>
     'player-episode',
     'index-category',
     'live-coverage',
+    'static',
   ].includes(contentType);
 
 const ampTestSuites = canonicalTestSuites
@@ -343,7 +344,7 @@ const liteTestSuites = canonicalTestSuites
       ...testSuite,
       path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
       applicationType: 'lite',
-      useReverb: false,
+      useReverb: true,
       tests: [...liteSiteTests],
     };
   });

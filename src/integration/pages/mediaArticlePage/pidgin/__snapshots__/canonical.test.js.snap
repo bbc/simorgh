@@ -406,7 +406,7 @@ exports[`Canonical Media Article Page SEO Linked data should match text 2`] = `
   "@type": "VideoObject",
   "description": "INEC boss interview",
   "duration": "PT6M17S",
-  "embedURL": "https://www.test.bbc.com/ws/av-embeds/articles/cw0x29n2pvqo/p0dxnwbk/pcm",
+  "embedURL": "https://www.test.bbc.com/ws/av-embeds/articles/cw0x29n2pvqo/p0dxnwb5/pcm",
   "name": "INEC",
   "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p0dxnxnv.jpg",
   "uploadDate": "2023-01-20T09:07:40.000Z",
