@@ -27,18 +27,21 @@ export const getServerSideProps: GetServerSideProps = async context => {
   });
 
   const baseProps = {
-    isAmp: false,
     isNextJs: true,
     status: data.status,
     pageType: LIVE_TV_PAGE as PageTypes,
     service,
     toggles,
-    pageData: {
-      metadata: {
-        type: LIVE_TV_PAGE,
-        atiAnalytics: {},
-      },
-    },
+    pageData: data?.pageData
+      ? {
+          ...data.pageData,
+          metadata: {
+            ...data.pageData.metadata,
+            type: LIVE_TV_PAGE,
+            atiAnalytics: {},
+          },
+        }
+      : null,
     pathname: context?.resolvedUrl,
   };
   return {
