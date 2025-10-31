@@ -84,6 +84,6 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
           </div>
         </div>
       </main>
-    </div>
+    </>
   );
 }
